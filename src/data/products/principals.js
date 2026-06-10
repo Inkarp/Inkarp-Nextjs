@@ -133,8 +133,6 @@ export const productPrincipals = [
     {
         "slug":  "heidolph",
         "principalName":  "Heidolph",
-        "group":  "G1",
-        "productManager":  "Praveen Reddy",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -162,8 +160,6 @@ export const productPrincipals = [
     {
         "slug":  "radleys",
         "principalName":  "Radleys",
-        "group":  "",
-        "productManager":  "Praveen Reddy",
         "countryOfOrigin":  "United Kingdom",
         "products":  [
                          {
@@ -191,8 +187,6 @@ export const productPrincipals = [
     {
         "slug":  "rotzmeier",
         "principalName":  "Rotzmeier",
-        "group":  "",
-        "productManager":  "Praveen Reddy",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -228,8 +222,6 @@ export const productPrincipals = [
     {
         "slug":  "polyscience",
         "principalName":  "PolyScience",
-        "group":  "",
-        "productManager":  "Praveen Reddy",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -261,8 +253,6 @@ export const productPrincipals = [
     {
         "slug":  "vacuubrand",
         "principalName":  "Vacuubrand",
-        "group":  "",
-        "productManager":  "Praveen Reddy",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -290,8 +280,6 @@ export const productPrincipals = [
     {
         "slug":  "thalesnano",
         "principalName":  "ThalesNano",
-        "group":  "",
-        "productManager":  "K. Sreedhar",
         "countryOfOrigin":  "Hungary",
         "products":  [
                          {
@@ -319,8 +307,6 @@ export const productPrincipals = [
     {
         "slug":  "sp-genevac",
         "principalName":  "SP Genevac",
-        "group":  "",
-        "productManager":  "K. Sreedhar",
         "countryOfOrigin":  "United Kingdom",
         "products":  [
                          {
@@ -340,8 +326,6 @@ export const productPrincipals = [
     {
         "slug":  "bruker",
         "principalName":  "Bruker",
-        "group":  "",
-        "productManager":  "B. Krishna",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -373,8 +357,6 @@ export const productPrincipals = [
     {
         "slug":  "nanalysis",
         "principalName":  "Nanalysis",
-        "group":  "G2",
-        "productManager":  "M. Madhusudhan",
         "countryOfOrigin":  "Canada",
         "products":  [
                          {
@@ -386,8 +368,6 @@ export const productPrincipals = [
     {
         "slug":  "ecom",
         "principalName":  "ECOM",
-        "group":  "",
-        "productManager":  "M. Madhusudhan",
         "countryOfOrigin":  "Czech Republic",
         "products":  [
                          {
@@ -415,8 +395,6 @@ export const productPrincipals = [
     {
         "slug":  "advion-interchim-scientific",
         "principalName":  "Advion Interchim Scientific",
-        "group":  "",
-        "productManager":  "K. Natesh",
         "countryOfOrigin":  "United States of America \u0026 France",
         "products":  [
                          {
@@ -452,8 +430,6 @@ export const productPrincipals = [
     {
         "slug":  "labomatic",
         "principalName":  "Labomatic",
-        "group":  "",
-        "productManager":  "M. Madhusudhan",
         "countryOfOrigin":  "Switzerland",
         "products":  [
                          {
@@ -493,8 +469,6 @@ export const productPrincipals = [
     {
         "slug":  "brookfield",
         "principalName":  "Brookfield",
-        "group":  "",
-        "productManager":  "Varun Bajpai",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -510,8 +484,6 @@ export const productPrincipals = [
     {
         "slug":  "khimod",
         "principalName":  "Khimod",
-        "group":  "",
-        "productManager":  "M. Madhusudhan",
         "countryOfOrigin":  "France",
         "products":  [
                          {
@@ -539,8 +511,6 @@ export const productPrincipals = [
     {
         "slug":  "rotachrom",
         "principalName":  "RotaChrom",
-        "group":  "",
-        "productManager":  "M. Madhusudhan",
         "countryOfOrigin":  "Hungary",
         "products":  [
                          {
@@ -552,8 +522,6 @@ export const productPrincipals = [
     {
         "slug":  "hohsen-corp",
         "principalName":  "Hohsen Corp",
-        "group":  "G3",
-        "productManager":  "K. Sreedhar",
         "countryOfOrigin":  "Japan",
         "products":  [
                          {
@@ -585,8 +553,6 @@ export const productPrincipals = [
     {
         "slug":  "maccor",
         "principalName":  "Maccor",
-        "group":  "",
-        "productManager":  "K. Sreedhar",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -606,8 +572,6 @@ export const productPrincipals = [
     {
         "slug":  "fom-technologies",
         "principalName":  "FOM Technologies",
-        "group":  "",
-        "productManager":  "K. Sreedhar",
         "countryOfOrigin":  "Denmark",
         "products":  [
                          {
@@ -643,8 +607,6 @@ export const productPrincipals = [
     {
         "slug":  "labstation-i",
         "principalName":  "Labstation i",
-        "group":  "",
-        "productManager":  "K. Natesh",
         "countryOfOrigin":  "India",
         "products":  [
                          {
@@ -660,8 +622,6 @@ export const productPrincipals = [
     {
         "slug":  "luzchem",
         "principalName":  "Luzchem",
-        "group":  "G4",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "Canada",
         "products":  [
                          {
@@ -685,8 +645,6 @@ export const productPrincipals = [
     {
         "slug":  "robot-coupe",
         "principalName":  "Robot Coupe",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "France",
         "products":  [
                          {
@@ -714,8 +672,6 @@ export const productPrincipals = [
     {
         "slug":  "bandelin",
         "principalName":  "Bandelin",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -727,8 +683,6 @@ export const productPrincipals = [
     {
         "slug":  "kubota",
         "principalName":  "Kubota",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "Japan",
         "products":  [
                          {
@@ -748,8 +702,6 @@ export const productPrincipals = [
     {
         "slug":  "jeiotech",
         "principalName":  "JeioTech",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "South Korea",
         "products":  [
                          {
@@ -793,8 +745,6 @@ export const productPrincipals = [
     {
         "slug":  "sonics-and-materials",
         "principalName":  "Sonics \u0026 Materials",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -806,8 +756,6 @@ export const productPrincipals = [
     {
         "slug":  "zeiss",
         "principalName":  "Zeiss",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -827,8 +775,6 @@ export const productPrincipals = [
     {
         "slug":  "dara-lyo",
         "principalName":  "Dara-Lyo",
-        "group":  "",
-        "productManager":  "K. Pavan Kumar",
         "countryOfOrigin":  "Spain",
         "products":  [
                          {
@@ -840,8 +786,6 @@ export const productPrincipals = [
     {
         "slug":  "photon-etc",
         "principalName":  "Photon Etc",
-        "group":  "G5",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Canada",
         "products":  [
                          {
@@ -857,8 +801,6 @@ export const productPrincipals = [
     {
         "slug":  "nenovision-s-r-o",
         "principalName":  "NenoVision s.r.o.",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Czech Republic",
         "products":  [
                          {
@@ -870,8 +812,6 @@ export const productPrincipals = [
     {
         "slug":  "implen",
         "principalName":  "Implen",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -883,8 +823,6 @@ export const productPrincipals = [
     {
         "slug":  "lumicks",
         "principalName":  "Lumicks",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Netherlands",
         "products":  [
                          {
@@ -896,8 +834,6 @@ export const productPrincipals = [
     {
         "slug":  "nanosurf",
         "principalName":  "Nanosurf",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Switzerland",
         "products":  [
                          {
@@ -909,8 +845,6 @@ export const productPrincipals = [
     {
         "slug":  "bwb-technologies",
         "principalName":  "BWB Technologies",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "United Kingdom",
         "products":  [
                          {
@@ -922,8 +856,6 @@ export const productPrincipals = [
     {
         "slug":  "reichert-technologies",
         "principalName":  "Reichert Technologies",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -935,8 +867,6 @@ export const productPrincipals = [
     {
         "slug":  "affinite-instruments",
         "principalName":  "Affinite Instruments",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Canada",
         "products":  [
                          {
@@ -948,8 +878,6 @@ export const productPrincipals = [
     {
         "slug":  "sbt-instruments",
         "principalName":  "SBT Instruments",
-        "group":  "",
-        "productManager":  "R. LakshmiNarayanan",
         "countryOfOrigin":  "Denmark",
         "products":  [
                          {
@@ -969,8 +897,6 @@ export const productPrincipals = [
     {
         "slug":  "evonik",
         "principalName":  "Evonik",
-        "group":  "G6",
-        "productManager":  "M. S. Reddy",
         "countryOfOrigin":  "Canada",
         "products":  [
                          {
@@ -982,8 +908,6 @@ export const productPrincipals = [
     {
         "slug":  "gea",
         "principalName":  "Gea",
-        "group":  "",
-        "productManager":  "M. S. Reddy",
         "countryOfOrigin":  "Italy",
         "products":  [
                          {
@@ -999,8 +923,6 @@ export const productPrincipals = [
     {
         "slug":  "hitachi",
         "principalName":  "Hitachi",
-        "group":  "",
-        "productManager":  "Sivakumar Ganapathy",
         "countryOfOrigin":  "Japan",
         "products":  [
                          {
@@ -1024,8 +946,6 @@ export const productPrincipals = [
     {
         "slug":  "proscientific",
         "principalName":  "ProScientific",
-        "group":  "",
-        "productManager":  "M. S. Reddy",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -1037,8 +957,6 @@ export const productPrincipals = [
     {
         "slug":  "thermofisher-scientific",
         "principalName":  "ThermoFisher Scientific",
-        "group":  "",
-        "productManager":  "Sivakumar Ganapathy",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -1054,8 +972,6 @@ export const productPrincipals = [
     {
         "slug":  "chemspeed",
         "principalName":  "Chemspeed",
-        "group":  "G7",
-        "productManager":  "Stanley Thomas",
         "countryOfOrigin":  "Switzerland",
         "products":  [
                          {
@@ -1079,8 +995,6 @@ export const productPrincipals = [
     {
         "slug":  "being",
         "principalName":  "Being",
-        "group":  "G8",
-        "productManager":  "Anantha Chakravarthi",
         "countryOfOrigin":  "China",
         "products":  [
                          {
@@ -1176,8 +1090,6 @@ export const productPrincipals = [
     {
         "slug":  "waters",
         "principalName":  "Waters",
-        "group":  "",
-        "productManager":  "Anantha Chakravarthi",
         "countryOfOrigin":  "United States of America",
         "products":  [
                          {
@@ -1193,8 +1105,6 @@ export const productPrincipals = [
     {
         "slug":  "sartorius",
         "principalName":  "Sartorius",
-        "group":  "",
-        "productManager":  "Anantha Chakravarthi",
         "countryOfOrigin":  "Germany",
         "products":  [
                          {
@@ -1206,8 +1116,6 @@ export const productPrincipals = [
     {
         "slug":  "buchi",
         "principalName":  "Buchi",
-        "group":  "",
-        "productManager":  "Anantha Chakravarthi",
         "countryOfOrigin":  "Switzerland",
         "products":  [
                          {
@@ -1231,8 +1139,6 @@ export const productPrincipals = [
     {
         "slug":  "dlab",
         "principalName":  "DLAB",
-        "group":  "",
-        "productManager":  "Anantha Chakravarthi",
         "countryOfOrigin":  "China",
         "products":  [
                          {
@@ -1292,8 +1198,6 @@ export const productPrincipals = [
     {
         "slug":  "mettler-toledo",
         "principalName":  "Mettler Toledo",
-        "group":  "",
-        "productManager":  "Durga Prasad",
         "countryOfOrigin":  "Switzerland",
         "products":  [
                          {
@@ -1325,8 +1229,6 @@ export const productPrincipals = [
     {
         "slug":  "inkarp-usb",
         "principalName":  "Inkarp USB",
-        "group":  "",
-        "productManager":  "Saravanan Natarajan",
         "countryOfOrigin":  "India",
         "products":  [
                          {
@@ -1349,7 +1251,9 @@ export function getPrincipalBySlug(slug) {
   }
 
   return {
-    ...principal,
+    slug: principal.slug,
+    principalName: principal.principalName,
+    countryOfOrigin: principal.countryOfOrigin,
     products: principal.products.map((product) => ({
       ...getProductByPrincipalAndSlug(principal.slug, product.slug),
     })),
@@ -1377,8 +1281,6 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
       : taxonomy.applications,
     principalSlug: principal.slug,
     principalName: principal.principalName,
-    group: principal.group,
-    productManager: principal.productManager,
     countryOfOrigin: principal.countryOfOrigin,
     href: `/products/${product.slug}`,
     apiPath: `/api/products/${principal.slug}/${product.slug}`,
@@ -1425,7 +1327,6 @@ export function getProductFilterOptions() {
     applications: uniqueValues(
       products.flatMap((product) => product.applications ?? [])
     ),
-    groups: uniqueValues(products.map((product) => product.group)),
   };
 }
 
@@ -1438,8 +1339,6 @@ export function searchProducts(filters = {}) {
       product.slug,
       product.principalName,
       product.countryOfOrigin,
-      product.productManager,
-      product.group,
       product.industry,
       product.category,
       product.overview,
@@ -1457,7 +1356,6 @@ export function searchProducts(filters = {}) {
       (!filters.industry || product.industry === filters.industry) &&
       (!filters.application ||
         (product.applications ?? []).includes(filters.application)) &&
-      (!filters.group || product.group === filters.group) &&
       (!filters.details || product.hasDetails)
     );
   });

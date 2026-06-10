@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
+import { FiChevronDown, FiDownload, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import { getAllProducts } from "@/data/products/principals";
 import { siteConfig } from "@/data/siteConfig";
@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="font-maxot sticky top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-24 max-w-[1500px] items-center justify-between gap-5 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-24 max-w-full items-center justify-between gap-5 px-4 sm:px-6 lg:px-4">
         <Link
           aria-label={`${company.name} home`}
           className="relative block h-16 w-64 shrink-0"
@@ -54,6 +54,7 @@ export default function Header() {
                         alt={item.label}
                         className="object-contain"
                         fill
+                        loading="eager"
                         sizes="128px"
                         src={item.logo}
                       />
@@ -93,6 +94,15 @@ export default function Header() {
           Search products...
         </button>
 
+        <a
+          className="hidden shrink-0 items-center gap-2 whitespace-nowrap rounded-md bg-[#BE0010] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#9a000d] xl:flex"
+          download
+          href="/assets/productProfile/Inkarp_product_profile_2026.pdf"
+        >
+          <FiDownload className="text-base" />
+          Product Profile
+        </a>
+
         <button
           aria-expanded={isMenuOpen}
           aria-label="Toggle menu"
@@ -110,13 +120,22 @@ export default function Header() {
           className="border-t border-zinc-200 bg-white px-4 py-4 xl:hidden"
         >
           <button
-            className="mb-4 flex h-12 w-full items-center gap-3 rounded-md border border-zinc-200 bg-white px-4 text-left text-sm text-zinc-500"
+            className="mb-3 flex h-12 w-full items-center gap-3 rounded-md border border-zinc-200 bg-white px-4 text-left text-sm text-zinc-500"
             onClick={() => setIsSearchOpen(true)}
             type="button"
           >
             <FiSearch className="text-lg text-zinc-400" />
             Search products...
           </button>
+
+          <a
+            className="mb-4 flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#BE0010] px-4 text-sm font-semibold text-white"
+            download
+            href="/assets/productProfile/Inkarp_product_profile_2026.pdf"
+          >
+            <FiDownload className="text-base" />
+            Download Product Profile
+          </a>
 
           <ul className="space-y-1">
             {navigation.map((item) => {

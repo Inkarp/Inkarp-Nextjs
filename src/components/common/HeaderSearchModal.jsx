@@ -30,28 +30,38 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] bg-white px-4 py-6 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
-        <div>
-          <p className="font-maxot text-sm font-semibold uppercase text-[#BE0010]">
-            Search
-          </p>
-          <h2 className="font-maxot mt-1 text-2xl font-bold text-zinc-950">
-            Find products instantly
-          </h2>
-        </div>
-        <button
-          aria-label="Close search"
-          className="inline-flex size-11 items-center justify-center rounded-md border border-zinc-200 text-2xl text-zinc-800 transition hover:border-[#BE0010] hover:text-[#BE0010]"
-          onClick={onClose}
-          type="button"
-        >
-          <FiX />
-        </button>
-      </div>
+    <div className="fixed inset-x-0 bottom-0 top-24 z-40">
+      {/* semi-transparent backdrop — click to close */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+      />
 
-      <div className="mx-auto mt-8 max-w-5xl">
-        <ProductSearchBox products={products} variant="modal" />
+      {/* search panel sits at the top, above the backdrop */}
+      <div className="relative border-b border-zinc-200 bg-white px-4 py-6 shadow-xl sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
+          <div>
+            <p className="font-maxot text-sm font-semibold uppercase text-[#BE0010]">
+              Search
+            </p>
+            <h2 className="font-maxot mt-1 text-2xl font-bold text-zinc-950">
+              Find products instantly
+            </h2>
+          </div>
+          <button
+            aria-label="Close search"
+            className="inline-flex size-11 items-center justify-center rounded-md border border-zinc-200 text-2xl text-zinc-800 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+            onClick={onClose}
+            type="button"
+          >
+            <FiX />
+          </button>
+        </div>
+
+        <div className="mx-auto mt-6 max-w-5xl">
+          <ProductSearchBox onClose={onClose} products={products} variant="modal" />
+        </div>
       </div>
     </div>
   );

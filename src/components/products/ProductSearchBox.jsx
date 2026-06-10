@@ -11,7 +11,6 @@ function getSearchText(product) {
     product.countryOfOrigin,
     product.industry,
     product.category,
-    product.productManager,
     ...(product.applications ?? []),
   ]
     .filter(Boolean)
@@ -19,7 +18,7 @@ function getSearchText(product) {
     .toLowerCase();
 }
 
-function ProductResultLink({ product, compact = false }) {
+function ProductResultLink({ product, compact = false, onClose }) {
   return (
     <Link
       className={
@@ -28,6 +27,7 @@ function ProductResultLink({ product, compact = false }) {
           : "rounded-md border border-zinc-200 p-4 transition hover:border-[#BE0010] hover:bg-zinc-50"
       }
       href={product.href}
+      onClick={onClose}
     >
       <div className="flex items-start justify-between gap-3">
         <div>
@@ -55,6 +55,7 @@ export default function ProductSearchBox({
   products,
   defaultValue = "",
   variant = "page",
+  onClose,
 }) {
   const [query, setQuery] = useState(defaultValue);
   const trimmedQuery = query.trim();
@@ -111,6 +112,7 @@ export default function ProductSearchBox({
                   <ProductResultLink
                     compact
                     key={`${product.principalSlug}-${product.slug}`}
+                    onClose={onClose}
                     product={product}
                   />
                 ))}
@@ -152,6 +154,7 @@ export default function ProductSearchBox({
               {results.map((product) => (
                 <ProductResultLink
                   key={`${product.principalSlug}-${product.slug}`}
+                  onClose={onClose}
                   product={product}
                 />
               ))}

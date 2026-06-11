@@ -59,7 +59,7 @@ export const siteConfig = {
   ],
   contact: {
     phone: "+91 00000 00000",
-    email: "info@inkarp.com",
+    email: "info@inkarp.co.in",
     address: "Hyderabad, Telangana, India",
   },
   socials: {

@@ -3,20 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FiSearch } from "react-icons/fi";
-
-function getSearchText(product) {
-  return [
-    product.name,
-    product.principalName,
-    product.countryOfOrigin,
-    product.industry,
-    product.category,
-    ...(product.applications ?? []),
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-}
+import { productMatchesSearch } from "@/lib/productSearch";
 
 function ProductResultLink({ product, compact = false, onClose }) {
   return (
@@ -66,10 +53,8 @@ export default function ProductSearchBox({
       return [];
     }
 
-    const normalizedQuery = trimmedQuery.toLowerCase();
-
     return products
-      .filter((product) => getSearchText(product).includes(normalizedQuery))
+      .filter((product) => productMatchesSearch(product, trimmedQuery))
       .slice(0, isHeader ? 6 : 12);
   }, [isHeader, products, trimmedQuery]);
 

@@ -1,15 +1,11 @@
 import Link from "next/link";
-import {
-  getAllProducts,
-  getProductFilterOptions,
-  searchProducts,
-} from "@/data/products/principals";
+import { getAllProducts, searchProducts } from "@/data/products/principals";
 import ProductFilterForm from "@/components/products/ProductFilterForm";
 
 export const metadata = {
   title: "Products - Inkarp Instruments Pvt Ltd",
   description:
-    "Search and filter Inkarp products by principal, country of origin, industry, application, and product details.",
+    "Search Inkarp products by product, principal, country of origin, industry, application, and tags.",
 };
 
 function getParam(searchParams, key) {
@@ -21,39 +17,36 @@ export default async function ProductsPage({ searchParams }) {
   const params = await searchParams;
   const filters = {
     q: getParam(params, "q"),
-    principal: getParam(params, "principal"),
-    country: getParam(params, "country"),
-    industry: getParam(params, "industry"),
-    application: getParam(params, "application"),
-    details: getParam(params, "details") === "true",
   };
-  const options = getProductFilterOptions();
+  const totalProducts = getAllProducts().length;
   const products = searchProducts(filters);
 
   return (
     <main className="bg-zinc-50 min-h-screen">
       {/* Page header */}
-      <section className="border-b border-zinc-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="border-b border-zinc-200 bg-white px-4 py-5 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl flex flex-col items-center justify-center gap-2">
           <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
             Products
           </p>
-          <h1 className="font-maxot mt-2 text-3xl font-bold text-zinc-950 sm:text-4xl">
+          <h1 className="font-maxot  text-3xl text-zinc-950 sm:text-4xl">
             Explore Inkarp products
           </h1>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500">
-            Search and filter across principals, countries, industries, and applications.
+            Type a product, principal, country, industry, application, or tag to
+            see matching products instantly.
           </p>
         </div>
       </section>
 
-      {/* Sticky search + filter toolbar */}
+      {/* Sticky search toolbar */}
       <div className="sticky top-24 z-30 border-b border-zinc-200 bg-zinc-50/95 px-4 py-3 backdrop-blur sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <ProductFilterForm
-            filters={filters}
-            options={options}
+            key={filters.q}
             productCount={products.length}
+            query={filters.q}
+            totalCount={totalProducts}
           />
         </div>
       </div>
@@ -74,7 +67,7 @@ export default async function ProductsPage({ searchParams }) {
                       {product.principalName}
                     </p>
                     <span className="shrink-0 rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] font-semibold text-zinc-500">
-                      {product.countryOfOrigin || "—"}
+                      {product.countryOfOrigin || "-"}
                     </span>
                   </div>
 
@@ -134,13 +127,14 @@ export default async function ProductsPage({ searchParams }) {
                 No products found
               </h2>
               <p className="mt-2 text-sm text-zinc-500">
-                Try changing the search text or removing one of the filters.
+                Try another product, principal, country, industry, application,
+                or tag.
               </p>
               <Link 
                 className="mt-4 inline-flex h-9 items-center rounded-lg bg-[#BE0010] px-4 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
                 href="/products"
               >
-                Clear all filters
+                Clear search
               </Link>
             </div>
           )}

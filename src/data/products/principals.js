@@ -2,11 +2,20 @@ import {
   getProductDetailByPrincipalAndSlug,
   getProductDetailBySlug,
 } from "./productDetails";
+import { productMatchesSearch } from "@/lib/productSearch";
 
 function uniqueValues(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) =>
     a.localeCompare(b)
   );
+}
+
+function toArray(value) {
+  if (!value) {
+    return [];
+  }
+
+  return Array.isArray(value) ? value.filter(Boolean) : [value];
 }
 
 function getProductTaxonomy(productName, detail) {
@@ -1269,19 +1278,21 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
   }
 
   const detail = getProductDetailByPrincipalAndSlug(principalSlug, productSlug);
-  const taxonomy = getProductTaxonomy(product.name, detail);
+  const metadata = { ...product, ...detail };
+  const taxonomy = getProductTaxonomy(product.name, metadata);
+  const applications = toArray(metadata.applications);
+  const tags = uniqueValues([...toArray(product.tags), ...toArray(detail?.tags)]);
 
   return {
     ...product,
     ...detail,
-    category: detail?.category ?? taxonomy.industry,
-    industry: detail?.industry ?? detail?.category ?? taxonomy.industry,
-    applications: detail?.applications?.length
-      ? detail.applications
-      : taxonomy.applications,
+    category: metadata.category ?? taxonomy.industry,
+    industry: metadata.industry ?? metadata.category ?? taxonomy.industry,
+    applications: applications.length ? applications : taxonomy.applications,
+    tags,
     principalSlug: principal.slug,
     principalName: principal.principalName,
-    countryOfOrigin: principal.countryOfOrigin,
+    countryOfOrigin: metadata.countryOfOrigin ?? principal.countryOfOrigin,
     href: `/products/${product.slug}`,
     apiPath: `/api/products/${principal.slug}/${product.slug}`,
     hasDetails: Boolean(detail),
@@ -1334,23 +1345,8 @@ export function searchProducts(filters = {}) {
   const query = filters.q?.trim().toLowerCase();
 
   return getAllProducts().filter((product) => {
-    const searchableText = [
-      product.name,
-      product.slug,
-      product.principalName,
-      product.countryOfOrigin,
-      product.industry,
-      product.category,
-      product.overview,
-      ...(product.applications ?? []),
-      ...(product.features ?? []),
-    ]
-      .filter(Boolean)
-      .join(" ")
-      .toLowerCase();
-
     return (
-      (!query || searchableText.includes(query)) &&
+      productMatchesSearch(product, query) &&
       (!filters.principal || product.principalSlug === filters.principal) &&
       (!filters.country || product.countryOfOrigin === filters.country) &&
       (!filters.industry || product.industry === filters.industry) &&

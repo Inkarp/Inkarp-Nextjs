@@ -1,47 +1,66 @@
+export const homeBannerConfig = {
+  autoSlideDelay: 5000,
+  videoEndDelay: 1600,
+  linkedin: {
+    label: "Follow Us",
+    href: "https://www.linkedin.com/company/inkarp-instruments/",
+  },
+  search: {
+    label: "Search for Products",
+    badge: "NEW",
+  },
+  watchMore: {
+    label: "Watch More",
+    href: "https://www.youtube.com/@InkarpInstrument/videos",
+    slideIndex: 0,
+  },
+};
+
 export const heroSlides = [
   {
-    eyebrow: "Laboratory Solutions",
-    title: "Advanced instruments for modern laboratories",
-    description:
-      "Explore analytical instruments, laboratory equipment, consumables, and application support from Inkarp.",
-    href: "/products",
-    cta: "Know More",
+    id: "sbt-collaboration",
+    title: "",
+    subtitle: "",
     media: {
-      type: "image",
-      src: "/InkarpLogo.svg",
-      alt: "Inkarp Instruments",
-      fit: "contain",
+      type: "video",
+      src: "/assets/home/SBT_Collab_Video.mp4",
+      poster: "/assets/home/CatalystTeamInkarp.webp",
+      alt: "SBT Instruments collaboration video",
     },
-    theme: "bg-[#f7f9fc]",
   },
   {
-    eyebrow: "CatalystCue",
-    title: "Insights, magazines, and application resources",
-    description:
-      "Read curated resources designed for researchers, laboratories, and technical teams.",
-    href: "/catalystcue/magazines",
-    cta: "Know More",
+    id: "catalyst-2026",
+    title: "Catalyst 2026",
+    subtitle: "Inkarp Team",
+    href: "/catalystcue/application-resources",
     media: {
       type: "image",
-      src: "/CatalystNew.svg",
-      alt: "CatalystCue",
-      fit: "contain",
+      src: "/assets/home/CatalystTeamInkarp.webp",
+      alt: "Inkarp Catalyst 2026 team",
+      sizes: "98vw",
     },
-    theme: "bg-[#f4f7fb]",
   },
   {
-    eyebrow: "News and Events",
-    title: "Stay connected with the latest from Inkarp",
-    description:
-      "Follow updates, events, announcements, and new application stories from our team.",
-    href: "/news-and-events",
-    cta: "Know More",
+    id: "hitachi-nexta-dsc",
+    title: "Click Here to Know More",
+    subtitle: "",
+    href: "/products/dsc-differential-scanning-calorimeters",
     media: {
       type: "image",
-      src: "/favicon.png",
-      alt: "Inkarp updates",
-      fit: "contain",
+      src: "/assets/home/BannerHitachi.jpg",
+      alt: "Hitachi NEXTA DSC banner",
+      sizes: "98vw",
     },
-    theme: "bg-[#fff7f7]",
+  },
+  {
+    id: "rotachrom-intro",
+    title: "",
+    subtitle: "",
+    media: {
+      type: "video",
+      src: "/assets/home/RC-intro.webm",
+      poster: "/assets/home/BannerHitachi.jpg",
+      alt: "RotaChrom introduction video",
+    },
   },
 ];

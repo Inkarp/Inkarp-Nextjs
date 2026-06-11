@@ -31,3 +31,46 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto), sans-serif;
 }
+
+@keyframes company-orbit {
+  from {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(315deg);
+  }
+}
+
+@keyframes company-card {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-315deg);
+  }
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes logo-marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="animate-[company-"],
+  [class*="animate-[logo-marquee"] {
+    animation: none !important;
+  }
+}

@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
+import ScrollAnimations from "@/components/common/ScrollAnimations";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -27,9 +28,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${roboto.variable} h-full antialiased`}
     >
-      <body className="min-h-full w-[90%] mx-auto flex flex-col" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <ScrollAnimations />
         <Header />
-        <div className="flex-1">{children}</div>
+        <div className="flex-1 w-[90%] mx-auto">{children}</div>
         <Footer />
       </body>
     </html>

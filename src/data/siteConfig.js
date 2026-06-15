@@ -31,12 +31,12 @@ export const siteConfig = {
     },
     {
       label: "CatalystCue",
-      href: "/catalystcue",
+      href: "",
       logo: "/CatalystNew.svg",
       children: [
         {
           label: "Magazines",
-          href: "/catalystcue/magazines",
+          href: "/catalystcue",
         },
         {
           label: "Application Resources",

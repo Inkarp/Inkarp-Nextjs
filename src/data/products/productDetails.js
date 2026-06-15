@@ -1,6 +1,6 @@
 export const productDetails = [
   {
-    slug: "hyperspectral-imaging-systems",
+    slug: "hei-vap-core-rotary-Evaporator",
     principalSlug: "photon-etc",
     principalName: "Photon Etc",
     name: "Hyperspectral Imaging Systems",

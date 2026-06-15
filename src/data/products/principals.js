@@ -2,6 +2,13 @@ import {
   getProductDetailByPrincipalAndSlug,
   getProductDetailBySlug,
 } from "./productDetails";
+import {
+  getJsonCatalogPrincipalBySlug,
+  getJsonCatalogPrincipalSummaries,
+  getJsonCatalogProductByPrincipalAndSlug,
+  getJsonCatalogProductBySlug,
+  getJsonCatalogProducts,
+} from "@/data/principals/catalog";
 import { productMatchesSearch } from "@/lib/productSearch";
 
 function uniqueValues(values) {
@@ -137,6 +144,16 @@ function getProductTaxonomy(productName, detail) {
       "Industrial testing",
     ],
   };
+}
+
+function mergeProductsByKey(products) {
+  const merged = new Map();
+
+  products.filter(Boolean).forEach((product) => {
+    merged.set(`${product.principalSlug}:${product.slug}`, product);
+  });
+
+  return [...merged.values()];
 }
 export const productPrincipals = [
     {
@@ -1249,27 +1266,52 @@ export const productPrincipals = [
 ];
 
 export function getAllPrincipals() {
-  return productPrincipals.map((principal) => getPrincipalBySlug(principal.slug));
+  const slugs = uniqueValues([
+    ...productPrincipals.map((principal) => principal.slug),
+    ...getJsonCatalogPrincipalSummaries().map((principal) => principal.slug),
+  ]);
+
+  return slugs.map((slug) => getPrincipalBySlug(slug)).filter(Boolean);
 }
 
 export function getPrincipalBySlug(slug) {
   const principal = productPrincipals.find((item) => item.slug === slug);
+  const jsonPrincipal = getJsonCatalogPrincipalBySlug(slug);
 
-  if (!principal) {
+  if (!principal && !jsonPrincipal) {
     return undefined;
   }
 
+  const legacyProducts = principal
+    ? principal.products.map((product) => ({
+        ...getProductByPrincipalAndSlug(principal.slug, product.slug),
+      }))
+    : [];
+  const products = mergeProductsByKey([
+    ...legacyProducts,
+    ...(jsonPrincipal?.products ?? []),
+  ]);
+
   return {
-    slug: principal.slug,
-    principalName: principal.principalName,
-    countryOfOrigin: principal.countryOfOrigin,
-    products: principal.products.map((product) => ({
-      ...getProductByPrincipalAndSlug(principal.slug, product.slug),
-    })),
+    slug: principal?.slug ?? jsonPrincipal.slug,
+    principalName: principal?.principalName ?? jsonPrincipal.principalName,
+    countryOfOrigin:
+      principal?.countryOfOrigin ?? jsonPrincipal.countryOfOrigin,
+    categories: jsonPrincipal?.categories ?? [],
+    products,
   };
 }
 
 export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
+  const jsonProduct = getJsonCatalogProductByPrincipalAndSlug(
+    principalSlug,
+    productSlug
+  );
+
+  if (jsonProduct) {
+    return jsonProduct;
+  }
+
   const principal = productPrincipals.find((item) => item.slug === principalSlug);
   const product = principal?.products.find((item) => item.slug === productSlug);
 
@@ -1300,6 +1342,12 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
 }
 
 export function getProductBySlug(productSlug) {
+  const jsonProduct = getJsonCatalogProductBySlug(productSlug);
+
+  if (jsonProduct) {
+    return jsonProduct;
+  }
+
   const detail = getProductDetailBySlug(productSlug);
 
   if (detail) {
@@ -1318,11 +1366,13 @@ export function getProductBySlug(productSlug) {
 }
 
 export function getAllProducts() {
-  return productPrincipals.flatMap((principal) =>
+  const legacyProducts = productPrincipals.flatMap((principal) =>
     principal.products.map((product) =>
       getProductByPrincipalAndSlug(principal.slug, product.slug)
     )
   );
+
+  return mergeProductsByKey([...legacyProducts, ...getJsonCatalogProducts()]);
 }
 
 export function getProductFilterOptions() {
@@ -1338,6 +1388,7 @@ export function getProductFilterOptions() {
     applications: uniqueValues(
       products.flatMap((product) => product.applications ?? [])
     ),
+    categories: uniqueValues(products.map((product) => product.category)),
   };
 }
 

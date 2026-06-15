@@ -5,7 +5,7 @@ export default function SectionHeading({ eyebrow, title, description }) {
         {eyebrow}
       </span>
       {title ? (
-        <h2 className="font-maxot text-2xl font-bold leading-tight text-[#BE0010] sm:text-3xl">
+        <h2 className="font-maxot text-2xl leading-tight text-[#BE0010] sm:text-3xl">
           {title}
         </h2>
       ) : null}

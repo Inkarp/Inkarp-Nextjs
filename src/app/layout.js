@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${roboto.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+      <body className="min-h-full w-[90%] mx-auto flex flex-col" suppressHydrationWarning>
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

@@ -40,7 +40,7 @@ export const siteConfig = {
         },
         {
           label: "Application Resources",
-          href: "/catalystcue/application-resources",
+          href: "/application-resources",
         },
       ],
     },

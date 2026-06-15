@@ -180,30 +180,6 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-black/10" />
         </div>
 
-        <a
-          className="absolute left-4 top-4 z-20 hidden items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-zinc-900/20 transition hover:bg-blue-700 md:flex"
-          href={homeBannerConfig.linkedin.href}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {homeBannerConfig.linkedin.label}
-          <span className="inline-flex size-8 items-center justify-center rounded-lg bg-white text-blue-600">
-            <FaLinkedinIn />
-          </span>
-        </a>
-
-        <button
-          className="absolute right-3 top-3 z-20 inline-flex h-11 min-w-44 items-center justify-center gap-2 rounded-xl border-2 border-[#BE0010] bg-white/85 px-4 text-sm font-semibold text-zinc-800 shadow-md backdrop-blur transition hover:bg-white hover:text-[#BE0010] sm:right-5 sm:top-5 sm:min-w-60"
-          onClick={() => setIsSearchOpen(true)}
-          type="button"
-        >
-          <span className="absolute -right-2 -top-2 rounded-full bg-[#BE0010] px-2 py-0.5 text-[10px] font-bold text-white shadow">
-            {homeBannerConfig.search.badge}
-          </span>
-          <FiSearch className="text-base" />
-          {homeBannerConfig.search.label}
-        </button>
-
         {isVideoSlide ? (
           <button
             aria-label={isMuted ? "Unmute video" : "Mute video"}

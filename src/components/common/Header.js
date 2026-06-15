@@ -23,10 +23,10 @@ export default function Header() {
 
   return (
     <header className="font-maxot sticky top-0 z-50 border-b border-zinc-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-24 max-w-full items-center justify-between gap-5 px-4 sm:px-6 lg:px-4">
+      <div className="mx-auto flex h-24 max-w-full items-center justify-between gap-5 px-4= sm:px-0 lg:px-4">
         <Link
           aria-label={`${company.name} home`}
-          className="relative block h-16 w-64 shrink-0"
+          className="relative block h-16 w-72 shrink-0"
           href="/"
           onClick={closeMenu}
         >

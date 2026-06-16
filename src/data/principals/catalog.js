@@ -1,7 +1,8 @@
 import heidolphCatalog from "./heidolph/products.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
+import beingCatalog from "./being/products.json";
 
-const principalCatalogs = [heidolphCatalog, rotzmeierCatalog];
+const principalCatalogs = [heidolphCatalog, rotzmeierCatalog, beingCatalog];
 
 function toArray(value) {
   if (!value) {

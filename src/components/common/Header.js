@@ -97,7 +97,7 @@ export default function Header() {
                     <Link
                       className={`flex h-11 items-center gap-1 rounded-lg px-3 text-sm font-medium transition ${
                         active
-                          ? "bg-zinc-950 text-white"
+                          ? "bg-[#BE0010] text-white"
                           : "text-zinc-700 hover:bg-zinc-100 hover:text-[#BE0010]"
                       }`}
                       href={getNavHref(item)}
@@ -167,7 +167,7 @@ export default function Header() {
             <button
               aria-expanded={isMenuOpen}
               aria-label="Toggle menu"
-              className="inline-flex size-11 items-center justify-center rounded-lg bg-zinc-950 text-2xl text-white transition hover:bg-[#BE0010]"
+              className="inline-flex size-11 items-center justify-center rounded-lg bg-[#BE0010] text-2xl text-white transition hover:bg-[#9a000d]"
               onClick={() => setIsMenuOpen((current) => !current)}
               type="button"
             >
@@ -202,7 +202,7 @@ export default function Header() {
                     <Link
                       className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium transition ${
                         active
-                          ? "bg-zinc-950 text-white"
+                          ? "bg-[#BE0010] text-white"
                           : "text-zinc-800 hover:bg-zinc-50 hover:text-[#BE0010]"
                       }`}
                       href={getNavHref(item)}

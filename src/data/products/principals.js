@@ -1,1409 +1,1409 @@
 import {
-  getProductDetailByPrincipalAndSlug,
-  getProductDetailBySlug,
+    getProductDetailByPrincipalAndSlug,
+    getProductDetailBySlug,
 } from "./productDetails";
 import {
-  getJsonCatalogPrincipalBySlug,
-  getJsonCatalogPrincipalSummaries,
-  getJsonCatalogProductByPrincipalAndSlug,
-  getJsonCatalogProductBySlug,
-  getJsonCatalogProducts,
+    getJsonCatalogPrincipalBySlug,
+    getJsonCatalogPrincipalSummaries,
+    getJsonCatalogProductByPrincipalAndSlug,
+    getJsonCatalogProductBySlug,
+    getJsonCatalogProducts,
 } from "@/data/principals/catalog";
 import { productMatchesSearch } from "@/lib/productSearch";
 
 function uniqueValues(values) {
-  return [...new Set(values.filter(Boolean))].sort((a, b) =>
-    a.localeCompare(b)
-  );
+    return [...new Set(values.filter(Boolean))].sort((a, b) =>
+        a.localeCompare(b)
+    );
 }
 
 function toArray(value) {
-  if (!value) {
-    return [];
-  }
+    if (!value) {
+        return [];
+    }
 
-  return Array.isArray(value) ? value.filter(Boolean) : [value];
+    return Array.isArray(value) ? value.filter(Boolean) : [value];
 }
 
 function getProductTaxonomy(productName, detail) {
-  const name = productName.toLowerCase();
+    const name = productName.toLowerCase();
 
-  if (detail?.applications?.length) {
+    if (detail?.applications?.length) {
+        return {
+            industry: detail.category ?? "Research and Analytical Labs",
+            applications: detail.applications,
+        };
+    }
+
+    if (
+        name.includes("chromatography") ||
+        name.includes("hplc") ||
+        name.includes("lc-ms") ||
+        name.includes("columns") ||
+        name.includes("fraction")
+    ) {
+        return {
+            industry: "Chromatography and Separation",
+            applications: [
+                "Analytical testing",
+                "Purification",
+                "Method development",
+            ],
+        };
+    }
+
+    if (
+        name.includes("battery") ||
+        name.includes("cell") ||
+        name.includes("electrode")
+    ) {
+        return {
+            industry: "Battery and Energy Research",
+            applications: [
+                "Battery testing",
+                "Cell development",
+                "Material research",
+            ],
+        };
+    }
+
+    if (
+        name.includes("imaging") ||
+        name.includes("microscope") ||
+        name.includes("spectrometer") ||
+        name.includes("spectrophotometer") ||
+        name.includes("raman") ||
+        name.includes("nmr")
+    ) {
+        return {
+            industry: "Spectroscopy and Imaging",
+            applications: [
+                "Material characterization",
+                "Research analysis",
+                "Quality testing",
+            ],
+        };
+    }
+
+    if (
+        name.includes("incubator") ||
+        name.includes("biosafety") ||
+        name.includes("laminar") ||
+        name.includes("microbial") ||
+        name.includes("bacteria")
+    ) {
+        return {
+            industry: "Life Sciences and Microbiology",
+            applications: [
+                "Cell culture",
+                "Microbiology",
+                "Contamination control",
+            ],
+        };
+    }
+
+    if (
+        name.includes("reactor") ||
+        name.includes("flow chemistry") ||
+        name.includes("hydrogen") ||
+        name.includes("pilot")
+    ) {
+        return {
+            industry: "Chemistry and Process Development",
+            applications: [
+                "Chemical synthesis",
+                "Process development",
+                "Scale-up studies",
+            ],
+        };
+    }
+
+    if (
+        name.includes("centrifuge") ||
+        name.includes("bath") ||
+        name.includes("shaker") ||
+        name.includes("stirrer") ||
+        name.includes("oven") ||
+        name.includes("freezer")
+    ) {
+        return {
+            industry: "General Laboratory Equipment",
+            applications: [
+                "Sample preparation",
+                "Routine lab workflows",
+                "Research laboratories",
+            ],
+        };
+    }
+
     return {
-      industry: detail.category ?? "Research and Analytical Labs",
-      applications: detail.applications,
+        industry: "Laboratory and Analytical Instruments",
+        applications: [
+            "Research laboratories",
+            "Quality control",
+            "Industrial testing",
+        ],
     };
-  }
-
-  if (
-    name.includes("chromatography") ||
-    name.includes("hplc") ||
-    name.includes("lc-ms") ||
-    name.includes("columns") ||
-    name.includes("fraction")
-  ) {
-    return {
-      industry: "Chromatography and Separation",
-      applications: [
-        "Analytical testing",
-        "Purification",
-        "Method development",
-      ],
-    };
-  }
-
-  if (
-    name.includes("battery") ||
-    name.includes("cell") ||
-    name.includes("electrode")
-  ) {
-    return {
-      industry: "Battery and Energy Research",
-      applications: [
-        "Battery testing",
-        "Cell development",
-        "Material research",
-      ],
-    };
-  }
-
-  if (
-    name.includes("imaging") ||
-    name.includes("microscope") ||
-    name.includes("spectrometer") ||
-    name.includes("spectrophotometer") ||
-    name.includes("raman") ||
-    name.includes("nmr")
-  ) {
-    return {
-      industry: "Spectroscopy and Imaging",
-      applications: [
-        "Material characterization",
-        "Research analysis",
-        "Quality testing",
-      ],
-    };
-  }
-
-  if (
-    name.includes("incubator") ||
-    name.includes("biosafety") ||
-    name.includes("laminar") ||
-    name.includes("microbial") ||
-    name.includes("bacteria")
-  ) {
-    return {
-      industry: "Life Sciences and Microbiology",
-      applications: [
-        "Cell culture",
-        "Microbiology",
-        "Contamination control",
-      ],
-    };
-  }
-
-  if (
-    name.includes("reactor") ||
-    name.includes("flow chemistry") ||
-    name.includes("hydrogen") ||
-    name.includes("pilot")
-  ) {
-    return {
-      industry: "Chemistry and Process Development",
-      applications: [
-        "Chemical synthesis",
-        "Process development",
-        "Scale-up studies",
-      ],
-    };
-  }
-
-  if (
-    name.includes("centrifuge") ||
-    name.includes("bath") ||
-    name.includes("shaker") ||
-    name.includes("stirrer") ||
-    name.includes("oven") ||
-    name.includes("freezer")
-  ) {
-    return {
-      industry: "General Laboratory Equipment",
-      applications: [
-        "Sample preparation",
-        "Routine lab workflows",
-        "Research laboratories",
-      ],
-    };
-  }
-
-  return {
-    industry: "Laboratory and Analytical Instruments",
-    applications: [
-      "Research laboratories",
-      "Quality control",
-      "Industrial testing",
-    ],
-  };
 }
 
 function mergeProductsByKey(products) {
-  const merged = new Map();
+    const merged = new Map();
 
-  products.filter(Boolean).forEach((product) => {
-    merged.set(`${product.principalSlug}:${product.slug}`, product);
-  });
+    products.filter(Boolean).forEach((product) => {
+        merged.set(`${product.principalSlug}:${product.slug}`, product);
+    });
 
-  return [...merged.values()];
+    return [...merged.values()];
 }
 export const productPrincipals = [
     {
-        "slug":  "heidolph",
-        "principalName":  "Heidolph",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Magnetic Stirrers",
-                             "slug":  "magnetic-stirrers"
-                         },
-                         {
-                             "name":  "Overhead Stirrers",
-                             "slug":  "overhead-stirrers"
-                         },
-                         {
-                             "name":  "Orbital Shakers",
-                             "slug":  "orbital-shakers"
-                         },
-                         {
-                             "name":  "Peristaltic Pumps",
-                             "slug":  "peristaltic-pumps"
-                         },
-                         {
-                             "name":  "Rotary Evaporators",
-                             "slug":  "rotary-evaporators"
-                         }
-                     ]
+        "slug": "heidolph",
+        "principalName": "Heidolph",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Magnetic Stirrers",
+                "slug": "magnetic-stirrers"
+            },
+            {
+                "name": "Overhead Stirrers",
+                "slug": "overhead-stirrers"
+            },
+            {
+                "name": "Orbital Shakers",
+                "slug": "orbital-shakers"
+            },
+            {
+                "name": "Peristaltic Pumps",
+                "slug": "peristaltic-pumps"
+            },
+            {
+                "name": "Rotary Evaporators",
+                "slug": "rotary-evaporators"
+            }
+        ]
     },
     {
-        "slug":  "radleys",
-        "principalName":  "Radleys",
-        "countryOfOrigin":  "United Kingdom",
-        "products":  [
-                         {
-                             "name":  "Automated Reaction Stations",
-                             "slug":  "automated-reaction-stations"
-                         },
-                         {
-                             "name":  "Parallel Reaction Systems",
-                             "slug":  "parallel-reaction-systems"
-                         },
-                         {
-                             "name":  "Heat-On Systems",
-                             "slug":  "heat-on-systems"
-                         },
-                         {
-                             "name":  "Air Cooled Condensers",
-                             "slug":  "air-cooled-condensers"
-                         },
-                         {
-                             "name":  "Pilot Reactors",
-                             "slug":  "pilot-reactors"
-                         }
-                     ]
+        "slug": "radleys",
+        "principalName": "Radleys",
+        "countryOfOrigin": "United Kingdom",
+        "products": [
+            {
+                "name": "Automated Reaction Stations",
+                "slug": "automated-reaction-stations"
+            },
+            {
+                "name": "Parallel Reaction Systems",
+                "slug": "parallel-reaction-systems"
+            },
+            {
+                "name": "Heat-On Systems",
+                "slug": "heat-on-systems"
+            },
+            {
+                "name": "Air Cooled Condensers",
+                "slug": "air-cooled-condensers"
+            },
+            {
+                "name": "Pilot Reactors",
+                "slug": "pilot-reactors"
+            }
+        ]
     },
     {
-        "slug":  "rotzmeier",
-        "principalName":  "Rotzmeier",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Safety Containers",
-                             "slug":  "safety-containers"
-                         },
-                         {
-                             "name":  "Safety Cans",
-                             "slug":  "safety-cans"
-                         },
-                         {
-                             "name":  "Safety Canisters",
-                             "slug":  "safety-canisters"
-                         },
-                         {
-                             "name":  "Safety Barrels",
-                             "slug":  "safety-barrels"
-                         },
-                         {
-                             "name":  "Transport Containers",
-                             "slug":  "transport-containers"
-                         },
-                         {
-                             "name":  "Safety Funnels",
-                             "slug":  "safety-funnels"
-                         },
-                         {
-                             "name":  "Chemical Handling Accessories",
-                             "slug":  "chemical-handling-accessories"
-                         }
-                     ]
+        "slug": "rotzmeier",
+        "principalName": "Rotzmeier",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Safety Containers",
+                "slug": "safety-containers"
+            },
+            {
+                "name": "Safety Cans",
+                "slug": "safety-cans"
+            },
+            {
+                "name": "Safety Canisters",
+                "slug": "safety-canisters"
+            },
+            {
+                "name": "Safety Barrels",
+                "slug": "safety-barrels"
+            },
+            {
+                "name": "Transport Containers",
+                "slug": "transport-containers"
+            },
+            {
+                "name": "Safety Funnels",
+                "slug": "safety-funnels"
+            },
+            {
+                "name": "Chemical Handling Accessories",
+                "slug": "chemical-handling-accessories"
+            }
+        ]
     },
     {
-        "slug":  "polyscience",
-        "principalName":  "PolyScience",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "Circulating Baths",
-                             "slug":  "circulating-baths"
-                         },
-                         {
-                             "name":  "Heated Circulators",
-                             "slug":  "heated-circulators"
-                         },
-                         {
-                             "name":  "Cryoprecipitate Baths",
-                             "slug":  "cryoprecipitate-baths"
-                         },
-                         {
-                             "name":  "Chillers",
-                             "slug":  "chillers"
-                         },
-                         {
-                             "name":  "Recirculating Chillers",
-                             "slug":  "recirculating-chillers"
-                         },
-                         {
-                             "name":  "Low Temperature Coolers",
-                             "slug":  "low-temperature-coolers"
-                         }
-                     ]
+        "slug": "polyscience",
+        "principalName": "PolyScience",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "Circulating Baths",
+                "slug": "circulating-baths"
+            },
+            {
+                "name": "Heated Circulators",
+                "slug": "heated-circulators"
+            },
+            {
+                "name": "Cryoprecipitate Baths",
+                "slug": "cryoprecipitate-baths"
+            },
+            {
+                "name": "Chillers",
+                "slug": "chillers"
+            },
+            {
+                "name": "Recirculating Chillers",
+                "slug": "recirculating-chillers"
+            },
+            {
+                "name": "Low Temperature Coolers",
+                "slug": "low-temperature-coolers"
+            }
+        ]
     },
     {
-        "slug":  "vacuubrand",
-        "principalName":  "Vacuubrand",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Screw Vacuum Pumps",
-                             "slug":  "screw-vacuum-pumps"
-                         },
-                         {
-                             "name":  "Rotary Vane Vacuum Pumps",
-                             "slug":  "rotary-vane-vacuum-pumps"
-                         },
-                         {
-                             "name":  "Vacuum Controllers",
-                             "slug":  "vacuum-controllers"
-                         },
-                         {
-                             "name":  "Vacuum Gauges",
-                             "slug":  "vacuum-gauges"
-                         },
-                         {
-                             "name":  "Vacuum Systems",
-                             "slug":  "vacuum-systems"
-                         }
-                     ]
+        "slug": "vacuubrand",
+        "principalName": "Vacuubrand",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Screw Vacuum Pumps",
+                "slug": "screw-vacuum-pumps"
+            },
+            {
+                "name": "Rotary Vane Vacuum Pumps",
+                "slug": "rotary-vane-vacuum-pumps"
+            },
+            {
+                "name": "Vacuum Controllers",
+                "slug": "vacuum-controllers"
+            },
+            {
+                "name": "Vacuum Gauges",
+                "slug": "vacuum-gauges"
+            },
+            {
+                "name": "Vacuum Systems",
+                "slug": "vacuum-systems"
+            }
+        ]
     },
     {
-        "slug":  "thalesnano",
-        "principalName":  "ThalesNano",
-        "countryOfOrigin":  "Hungary",
-        "products":  [
-                         {
-                             "name":  "Flow Chemistry Reactors",
-                             "slug":  "flow-chemistry-reactors"
-                         },
-                         {
-                             "name":  "Continuous Flow Reactors",
-                             "slug":  "continuous-flow-reactors"
-                         },
-                         {
-                             "name":  "Hydrogenation Flow Reactors",
-                             "slug":  "hydrogenation-flow-reactors"
-                         },
-                         {
-                             "name":  "Hydrogen Generators",
-                             "slug":  "hydrogen-generators"
-                         },
-                         {
-                             "name":  "Photochemistry Reactors",
-                             "slug":  "photochemistry-reactors"
-                         }
-                     ]
+        "slug": "thalesnano",
+        "principalName": "ThalesNano",
+        "countryOfOrigin": "Hungary",
+        "products": [
+            {
+                "name": "Flow Chemistry Reactors",
+                "slug": "flow-chemistry-reactors"
+            },
+            {
+                "name": "Continuous Flow Reactors",
+                "slug": "continuous-flow-reactors"
+            },
+            {
+                "name": "Hydrogenation Flow Reactors",
+                "slug": "hydrogenation-flow-reactors"
+            },
+            {
+                "name": "Hydrogen Generators",
+                "slug": "hydrogen-generators"
+            },
+            {
+                "name": "Photochemistry Reactors",
+                "slug": "photochemistry-reactors"
+            }
+        ]
     },
     {
-        "slug":  "sp-genevac",
-        "principalName":  "SP Genevac",
-        "countryOfOrigin":  "United Kingdom",
-        "products":  [
-                         {
-                             "name":  "Centrifugal Vacuum Evaporators",
-                             "slug":  "centrifugal-vacuum-evaporators"
-                         },
-                         {
-                             "name":  "Evaporation Systems",
-                             "slug":  "evaporation-systems"
-                         },
-                         {
-                             "name":  "Sample Concentration Systems",
-                             "slug":  "sample-concentration-systems"
-                         }
-                     ]
+        "slug": "sp-genevac",
+        "principalName": "SP Genevac",
+        "countryOfOrigin": "United Kingdom",
+        "products": [
+            {
+                "name": "Centrifugal Vacuum Evaporators",
+                "slug": "centrifugal-vacuum-evaporators"
+            },
+            {
+                "name": "Evaporation Systems",
+                "slug": "evaporation-systems"
+            },
+            {
+                "name": "Sample Concentration Systems",
+                "slug": "sample-concentration-systems"
+            }
+        ]
     },
     {
-        "slug":  "bruker",
-        "principalName":  "Bruker",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "FT-IR Spectrometers",
-                             "slug":  "ft-ir-spectrometers"
-                         },
-                         {
-                             "name":  "FT-NIR Spectrometers",
-                             "slug":  "ft-nir-spectrometers"
-                         },
-                         {
-                             "name":  "FT-IR Microscopes",
-                             "slug":  "ft-ir-microscopes"
-                         },
-                         {
-                             "name":  "Handheld Raman Spectrometers",
-                             "slug":  "handheld-raman-spectrometers"
-                         },
-                         {
-                             "name":  "Gas Analyzers",
-                             "slug":  "gas-analyzers"
-                         },
-                         {
-                             "name":  "Process Monitoring Systems",
-                             "slug":  "process-monitoring-systems"
-                         }
-                     ]
+        "slug": "bruker",
+        "principalName": "Bruker",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "FT-IR Spectrometers",
+                "slug": "ft-ir-spectrometers"
+            },
+            {
+                "name": "FT-NIR Spectrometers",
+                "slug": "ft-nir-spectrometers"
+            },
+            {
+                "name": "FT-IR Microscopes",
+                "slug": "ft-ir-microscopes"
+            },
+            {
+                "name": "Handheld Raman Spectrometers",
+                "slug": "handheld-raman-spectrometers"
+            },
+            {
+                "name": "Gas Analyzers",
+                "slug": "gas-analyzers"
+            },
+            {
+                "name": "Process Monitoring Systems",
+                "slug": "process-monitoring-systems"
+            }
+        ]
     },
     {
-        "slug":  "nanalysis",
-        "principalName":  "Nanalysis",
-        "countryOfOrigin":  "Canada",
-        "products":  [
-                         {
-                             "name":  "Benchtop NMR Spectrometers",
-                             "slug":  "benchtop-nmr-spectrometers"
-                         }
-                     ]
+        "slug": "nanalysis",
+        "principalName": "Nanalysis",
+        "countryOfOrigin": "Canada",
+        "products": [
+            {
+                "name": "Benchtop NMR Spectrometers",
+                "slug": "benchtop-nmr-spectrometers"
+            }
+        ]
     },
     {
-        "slug":  "ecom",
-        "principalName":  "ECOM",
-        "countryOfOrigin":  "Czech Republic",
-        "products":  [
-                         {
-                             "name":  "Analytical HPLC Systems (Modular / Budget-Friendly)",
-                             "slug":  "analytical-hplc-systems-modular-budget-friendly"
-                         },
-                         {
-                             "name":  "Preparative HPLC Systems (Entry-Level Scale-Up)",
-                             "slug":  "preparative-hplc-systems-entry-level-scale-up"
-                         },
-                         {
-                             "name":  "Chromatography Columns (Analytical \u0026 Prep – Cost Range)",
-                             "slug":  "chromatography-columns-analytical-and-prep-cost-range"
-                         },
-                         {
-                             "name":  "Autosamplers (Standalone / Basic Integration)",
-                             "slug":  "autosamplers-standalone-basic-integration"
-                         },
-                         {
-                             "name":  "Fraction Collectors (Standalone / Simple Systems)",
-                             "slug":  "fraction-collectors-standalone-simple-systems"
-                         }
-                     ]
+        "slug": "ecom",
+        "principalName": "ECOM",
+        "countryOfOrigin": "Czech Republic",
+        "products": [
+            {
+                "name": "Analytical HPLC Systems (Modular / Budget-Friendly)",
+                "slug": "analytical-hplc-systems-modular-budget-friendly"
+            },
+            {
+                "name": "Preparative HPLC Systems (Entry-Level Scale-Up)",
+                "slug": "preparative-hplc-systems-entry-level-scale-up"
+            },
+            {
+                "name": "Chromatography Columns (Analytical \u0026 Prep – Cost Range)",
+                "slug": "chromatography-columns-analytical-and-prep-cost-range"
+            },
+            {
+                "name": "Autosamplers (Standalone / Basic Integration)",
+                "slug": "autosamplers-standalone-basic-integration"
+            },
+            {
+                "name": "Fraction Collectors (Standalone / Simple Systems)",
+                "slug": "fraction-collectors-standalone-simple-systems"
+            }
+        ]
     },
     {
-        "slug":  "advion-interchim-scientific",
-        "principalName":  "Advion Interchim Scientific",
-        "countryOfOrigin":  "United States of America \u0026 France",
-        "products":  [
-                         {
-                             "name":  "Mass Spectrometers (Compact \u0026 Single Quadrupole)",
-                             "slug":  "mass-spectrometers-compact-and-single-quadrupole"
-                         },
-                         {
-                             "name":  "LC-MS Systems",
-                             "slug":  "lc-ms-systems"
-                         },
-                         {
-                             "name":  "Flash Chromatography Systems",
-                             "slug":  "flash-chromatography-systems"
-                         },
-                         {
-                             "name":  "Preparative Chromatography Systems",
-                             "slug":  "preparative-chromatography-systems"
-                         },
-                         {
-                             "name":  "Chromatography Systems (Analytical \u0026 Preparative)",
-                             "slug":  "chromatography-systems-analytical-and-preparative"
-                         },
-                         {
-                             "name":  "Chromatography Columns (Analytical \u0026 Preparative)",
-                             "slug":  "chromatography-columns-analytical-and-preparative"
-                         },
-                         {
-                             "name":  "Fraction Collectors",
-                             "slug":  "fraction-collectors"
-                         }
-                     ]
+        "slug": "advion-interchim-scientific",
+        "principalName": "Advion Interchim Scientific",
+        "countryOfOrigin": "United States of America \u0026 France",
+        "products": [
+            {
+                "name": "Mass Spectrometers (Compact \u0026 Single Quadrupole)",
+                "slug": "mass-spectrometers-compact-and-single-quadrupole"
+            },
+            {
+                "name": "LC-MS Systems",
+                "slug": "lc-ms-systems"
+            },
+            {
+                "name": "Flash Chromatography Systems",
+                "slug": "flash-chromatography-systems"
+            },
+            {
+                "name": "Preparative Chromatography Systems",
+                "slug": "preparative-chromatography-systems"
+            },
+            {
+                "name": "Chromatography Systems (Analytical \u0026 Preparative)",
+                "slug": "chromatography-systems-analytical-and-preparative"
+            },
+            {
+                "name": "Chromatography Columns (Analytical \u0026 Preparative)",
+                "slug": "chromatography-columns-analytical-and-preparative"
+            },
+            {
+                "name": "Fraction Collectors",
+                "slug": "fraction-collectors"
+            }
+        ]
     },
     {
-        "slug":  "labomatic",
-        "principalName":  "Labomatic",
-        "countryOfOrigin":  "Switzerland",
-        "products":  [
-                         {
-                             "name":  "Custom Analytical Chromatography Systems (Application-Specific Design)",
-                             "slug":  "custom-analytical-chromatography-systems-application-specific-design"
-                         },
-                         {
-                             "name":  "Custom Preparative Chromatography Systems (Process-Oriented)",
-                             "slug":  "custom-preparative-chromatography-systems-process-oriented"
-                         },
-                         {
-                             "name":  "Flash Chromatography Systems (Customized Workflows)",
-                             "slug":  "flash-chromatography-systems-customized-workflows"
-                         },
-                         {
-                             "name":  "Process Chromatography Systems (Pilot to Production Scale)",
-                             "slug":  "process-chromatography-systems-pilot-to-production-scale"
-                         },
-                         {
-                             "name":  "Skid-Mounted Chromatography Systems (Integrated Process Units)",
-                             "slug":  "skid-mounted-chromatography-systems-integrated-process-units"
-                         },
-                         {
-                             "name":  "Multi-Column Chromatography Systems (Continuous Separation)",
-                             "slug":  "multi-column-chromatography-systems-continuous-separation"
-                         },
-                         {
-                             "name":  "Fully Integrated Chromatography Platforms (End-to-End Systems)",
-                             "slug":  "fully-integrated-chromatography-platforms-end-to-end-systems"
-                         },
-                         {
-                             "name":  "Automation \u0026 Control Systems (PLC / Software Driven)",
-                             "slug":  "automation-and-control-systems-plc-software-driven"
-                         }
-                     ]
+        "slug": "labomatic",
+        "principalName": "Labomatic",
+        "countryOfOrigin": "Switzerland",
+        "products": [
+            {
+                "name": "Custom Analytical Chromatography Systems (Application-Specific Design)",
+                "slug": "custom-analytical-chromatography-systems-application-specific-design"
+            },
+            {
+                "name": "Custom Preparative Chromatography Systems (Process-Oriented)",
+                "slug": "custom-preparative-chromatography-systems-process-oriented"
+            },
+            {
+                "name": "Flash Chromatography Systems (Customized Workflows)",
+                "slug": "flash-chromatography-systems-customized-workflows"
+            },
+            {
+                "name": "Process Chromatography Systems (Pilot to Production Scale)",
+                "slug": "process-chromatography-systems-pilot-to-production-scale"
+            },
+            {
+                "name": "Skid-Mounted Chromatography Systems (Integrated Process Units)",
+                "slug": "skid-mounted-chromatography-systems-integrated-process-units"
+            },
+            {
+                "name": "Multi-Column Chromatography Systems (Continuous Separation)",
+                "slug": "multi-column-chromatography-systems-continuous-separation"
+            },
+            {
+                "name": "Fully Integrated Chromatography Platforms (End-to-End Systems)",
+                "slug": "fully-integrated-chromatography-platforms-end-to-end-systems"
+            },
+            {
+                "name": "Automation \u0026 Control Systems (PLC / Software Driven)",
+                "slug": "automation-and-control-systems-plc-software-driven"
+            }
+        ]
     },
     {
-        "slug":  "brookfield",
-        "principalName":  "Brookfield",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "Rheometers",
-                             "slug":  "rheometers"
-                         },
-                         {
-                             "name":  "Viscometers (Rotational / Viscosity)",
-                             "slug":  "viscometers-rotational-viscosity"
-                         }
-                     ]
+        "slug": "brookfield",
+        "principalName": "Brookfield",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "Rheometers",
+                "slug": "rheometers"
+            },
+            {
+                "name": "Viscometers (Rotational / Viscosity)",
+                "slug": "viscometers-rotational-viscosity"
+            }
+        ]
     },
     {
-        "slug":  "khimod",
-        "principalName":  "Khimod",
-        "countryOfOrigin":  "France",
-        "products":  [
-                         {
-                             "name":  "Continuous Flow Reactors",
-                             "slug":  "continuous-flow-reactors"
-                         },
-                         {
-                             "name":  "Flow Chemistry Reactors",
-                             "slug":  "flow-chemistry-reactors"
-                         },
-                         {
-                             "name":  "Hydrogenation Flow Reactors",
-                             "slug":  "hydrogenation-flow-reactors"
-                         },
-                         {
-                             "name":  "Heat Exchanger Reactors",
-                             "slug":  "heat-exchanger-reactors"
-                         },
-                         {
-                             "name":  "Pilot Plants \u0026 Pilot Reactors",
-                             "slug":  "pilot-plants-and-pilot-reactors"
-                         }
-                     ]
+        "slug": "khimod",
+        "principalName": "Khimod",
+        "countryOfOrigin": "France",
+        "products": [
+            {
+                "name": "Continuous Flow Reactors",
+                "slug": "continuous-flow-reactors"
+            },
+            {
+                "name": "Flow Chemistry Reactors",
+                "slug": "flow-chemistry-reactors"
+            },
+            {
+                "name": "Hydrogenation Flow Reactors",
+                "slug": "hydrogenation-flow-reactors"
+            },
+            {
+                "name": "Heat Exchanger Reactors",
+                "slug": "heat-exchanger-reactors"
+            },
+            {
+                "name": "Pilot Plants \u0026 Pilot Reactors",
+                "slug": "pilot-plants-and-pilot-reactors"
+            }
+        ]
     },
     {
-        "slug":  "rotachrom",
-        "principalName":  "RotaChrom",
-        "countryOfOrigin":  "Hungary",
-        "products":  [
-                         {
-                             "name":  "Centrifugal Partition Chromatography Systems",
-                             "slug":  "centrifugal-partition-chromatography-systems"
-                         }
-                     ]
+        "slug": "rotachrom",
+        "principalName": "RotaChrom",
+        "countryOfOrigin": "Hungary",
+        "products": [
+            {
+                "name": "Centrifugal Partition Chromatography Systems",
+                "slug": "centrifugal-partition-chromatography-systems"
+            }
+        ]
     },
     {
-        "slug":  "hohsen-corp",
-        "principalName":  "Hohsen Corp",
-        "countryOfOrigin":  "Japan",
-        "products":  [
-                         {
-                             "name":  "Battery Cell Assembly Systems",
-                             "slug":  "battery-cell-assembly-systems"
-                         },
-                         {
-                             "name":  "Electrode Coating Machines",
-                             "slug":  "electrode-coating-machines"
-                         },
-                         {
-                             "name":  "Electrode Mixing Systems",
-                             "slug":  "electrode-mixing-systems"
-                         },
-                         {
-                             "name":  "Calendering Roll Press Systems",
-                             "slug":  "calendering-roll-press-systems"
-                         },
-                         {
-                             "name":  "Coin Cell Crimpers",
-                             "slug":  "coin-cell-crimpers"
-                         },
-                         {
-                             "name":  "Winding Machines",
-                             "slug":  "winding-machines"
-                         }
-                     ]
+        "slug": "hohsen-corp",
+        "principalName": "Hohsen Corp",
+        "countryOfOrigin": "Japan",
+        "products": [
+            {
+                "name": "Battery Cell Assembly Systems",
+                "slug": "battery-cell-assembly-systems"
+            },
+            {
+                "name": "Electrode Coating Machines",
+                "slug": "electrode-coating-machines"
+            },
+            {
+                "name": "Electrode Mixing Systems",
+                "slug": "electrode-mixing-systems"
+            },
+            {
+                "name": "Calendering Roll Press Systems",
+                "slug": "calendering-roll-press-systems"
+            },
+            {
+                "name": "Coin Cell Crimpers",
+                "slug": "coin-cell-crimpers"
+            },
+            {
+                "name": "Winding Machines",
+                "slug": "winding-machines"
+            }
+        ]
     },
     {
-        "slug":  "maccor",
-        "principalName":  "Maccor",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "Battery Cyclers",
-                             "slug":  "battery-cyclers"
-                         },
-                         {
-                             "name":  "Battery Test Systems",
-                             "slug":  "battery-test-systems"
-                         },
-                         {
-                             "name":  "Battery Environmental Test Chambers",
-                             "slug":  "battery-environmental-test-chambers"
-                         }
-                     ]
+        "slug": "maccor",
+        "principalName": "Maccor",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "Battery Cyclers",
+                "slug": "battery-cyclers"
+            },
+            {
+                "name": "Battery Test Systems",
+                "slug": "battery-test-systems"
+            },
+            {
+                "name": "Battery Environmental Test Chambers",
+                "slug": "battery-environmental-test-chambers"
+            }
+        ]
     },
     {
-        "slug":  "fom-technologies",
-        "principalName":  "FOM Technologies",
-        "countryOfOrigin":  "Denmark",
-        "products":  [
-                         {
-                             "name":  "Roll-to-Roll Slot-Die Coating Systems",
-                             "slug":  "roll-to-roll-slot-die-coating-systems"
-                         },
-                         {
-                             "name":  "Sheet-Based Slot-Die Coating Systems",
-                             "slug":  "sheet-based-slot-die-coating-systems"
-                         },
-                         {
-                             "name":  "Laboratory-Scale Coating Systems",
-                             "slug":  "laboratory-scale-coating-systems"
-                         },
-                         {
-                             "name":  "Pilot-Scale Coating Systems",
-                             "slug":  "pilot-scale-coating-systems"
-                         },
-                         {
-                             "name":  "Slot-Die Coating Heads (Steel Series)",
-                             "slug":  "slot-die-coating-heads-steel-series"
-                         },
-                         {
-                             "name":  "Slot-Die Coating Heads (PEEK Series)",
-                             "slug":  "slot-die-coating-heads-peek-series"
-                         },
-                         {
-                             "name":  "Thin-Film Coating Machines",
-                             "slug":  "thin-film-coating-machines"
-                         }
-                     ]
+        "slug": "fom-technologies",
+        "principalName": "FOM Technologies",
+        "countryOfOrigin": "Denmark",
+        "products": [
+            {
+                "name": "Roll-to-Roll Slot-Die Coating Systems",
+                "slug": "roll-to-roll-slot-die-coating-systems"
+            },
+            {
+                "name": "Sheet-Based Slot-Die Coating Systems",
+                "slug": "sheet-based-slot-die-coating-systems"
+            },
+            {
+                "name": "Laboratory-Scale Coating Systems",
+                "slug": "laboratory-scale-coating-systems"
+            },
+            {
+                "name": "Pilot-Scale Coating Systems",
+                "slug": "pilot-scale-coating-systems"
+            },
+            {
+                "name": "Slot-Die Coating Heads (Steel Series)",
+                "slug": "slot-die-coating-heads-steel-series"
+            },
+            {
+                "name": "Slot-Die Coating Heads (PEEK Series)",
+                "slug": "slot-die-coating-heads-peek-series"
+            },
+            {
+                "name": "Thin-Film Coating Machines",
+                "slug": "thin-film-coating-machines"
+            }
+        ]
     },
     {
-        "slug":  "labstation-i",
-        "principalName":  "Labstation i",
-        "countryOfOrigin":  "India",
-        "products":  [
-                         {
-                             "name":  "Glovebox Workstations",
-                             "slug":  "glovebox-workstations"
-                         },
-                         {
-                             "name":  "Solvent Purification Systems",
-                             "slug":  "solvent-purification-systems"
-                         }
-                     ]
+        "slug": "labstation-i",
+        "principalName": "Labstation i",
+        "countryOfOrigin": "India",
+        "products": [
+            {
+                "name": "Glovebox Workstations",
+                "slug": "glovebox-workstations"
+            },
+            {
+                "name": "Solvent Purification Systems",
+                "slug": "solvent-purification-systems"
+            }
+        ]
     },
     {
-        "slug":  "luzchem",
-        "principalName":  "Luzchem",
-        "countryOfOrigin":  "Canada",
-        "products":  [
-                         {
-                             "name":  "Chamber Photoreactors",
-                             "slug":  "chamber-photoreactors"
-                         },
-                         {
-                             "name":  "ICH Photoreactors (Pharma Stability Testing Systems)",
-                             "slug":  "ich-photoreactors-pharma-stability-testing-systems"
-                         },
-                         {
-                             "name":  "Computer-Controlled Photoreactors",
-                             "slug":  "computer-controlled-photoreactors"
-                         },
-                         {
-                             "name":  "Xenon Photoreactors (Solar Simulation Systems)",
-                             "slug":  "xenon-photoreactors-solar-simulation-systems"
-                         }
-                     ]
+        "slug": "luzchem",
+        "principalName": "Luzchem",
+        "countryOfOrigin": "Canada",
+        "products": [
+            {
+                "name": "Chamber Photoreactors",
+                "slug": "chamber-photoreactors"
+            },
+            {
+                "name": "ICH Photoreactors (Pharma Stability Testing Systems)",
+                "slug": "ich-photoreactors-pharma-stability-testing-systems"
+            },
+            {
+                "name": "Computer-Controlled Photoreactors",
+                "slug": "computer-controlled-photoreactors"
+            },
+            {
+                "name": "Xenon Photoreactors (Solar Simulation Systems)",
+                "slug": "xenon-photoreactors-solar-simulation-systems"
+            }
+        ]
     },
     {
-        "slug":  "robot-coupe",
-        "principalName":  "Robot Coupe",
-        "countryOfOrigin":  "France",
-        "products":  [
-                         {
-                             "name":  "High-Speed Laboratory Blenders",
-                             "slug":  "high-speed-laboratory-blenders"
-                         },
-                         {
-                             "name":  "Immersion Homogenizers (Handheld High-Shear Mixers)",
-                             "slug":  "immersion-homogenizers-handheld-high-shear-mixers"
-                         },
-                         {
-                             "name":  "Cutter Mixers (Sample Preparation Systems)",
-                             "slug":  "cutter-mixers-sample-preparation-systems"
-                         },
-                         {
-                             "name":  "Blixer Systems (Fine Homogenization for Semi-Solid Samples)",
-                             "slug":  "blixer-systems-fine-homogenization-for-semi-solid-samples"
-                         },
-                         {
-                             "name":  "Sample Preparation Systems (Cutting, Slicing, Size Reduction)",
-                             "slug":  "sample-preparation-systems-cutting-slicing-size-reduction"
-                         }
-                     ]
+        "slug": "robot-coupe",
+        "principalName": "Robot Coupe",
+        "countryOfOrigin": "France",
+        "products": [
+            {
+                "name": "High-Speed Laboratory Blenders",
+                "slug": "high-speed-laboratory-blenders"
+            },
+            {
+                "name": "Immersion Homogenizers (Handheld High-Shear Mixers)",
+                "slug": "immersion-homogenizers-handheld-high-shear-mixers"
+            },
+            {
+                "name": "Cutter Mixers (Sample Preparation Systems)",
+                "slug": "cutter-mixers-sample-preparation-systems"
+            },
+            {
+                "name": "Blixer Systems (Fine Homogenization for Semi-Solid Samples)",
+                "slug": "blixer-systems-fine-homogenization-for-semi-solid-samples"
+            },
+            {
+                "name": "Sample Preparation Systems (Cutting, Slicing, Size Reduction)",
+                "slug": "sample-preparation-systems-cutting-slicing-size-reduction"
+            }
+        ]
     },
     {
-        "slug":  "bandelin",
-        "principalName":  "Bandelin",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Ultrasonic Baths",
-                             "slug":  "ultrasonic-baths"
-                         }
-                     ]
+        "slug": "bandelin",
+        "principalName": "Bandelin",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Ultrasonic Baths",
+                "slug": "ultrasonic-baths"
+            }
+        ]
     },
     {
-        "slug":  "kubota",
-        "principalName":  "Kubota",
-        "countryOfOrigin":  "Japan",
-        "products":  [
-                         {
-                             "name":  "Benchtop Centrifuges",
-                             "slug":  "benchtop-centrifuges"
-                         },
-                         {
-                             "name":  "High-Speed Refrigerated Centrifuges",
-                             "slug":  "high-speed-refrigerated-centrifuges"
-                         },
-                         {
-                             "name":  "Floor-Standing Refrigerated Centrifuges",
-                             "slug":  "floor-standing-refrigerated-centrifuges"
-                         }
-                     ]
+        "slug": "kubota",
+        "principalName": "Kubota",
+        "countryOfOrigin": "Japan",
+        "products": [
+            {
+                "name": "Benchtop Centrifuges",
+                "slug": "benchtop-centrifuges"
+            },
+            {
+                "name": "High-Speed Refrigerated Centrifuges",
+                "slug": "high-speed-refrigerated-centrifuges"
+            },
+            {
+                "name": "Floor-Standing Refrigerated Centrifuges",
+                "slug": "floor-standing-refrigerated-centrifuges"
+            }
+        ]
     },
     {
-        "slug":  "jeiotech",
-        "principalName":  "JeioTech",
-        "countryOfOrigin":  "South Korea",
-        "products":  [
-                         {
-                             "name":  "Incubators",
-                             "slug":  "incubators"
-                         },
-                         {
-                             "name":  "Drying Ovens",
-                             "slug":  "drying-ovens"
-                         },
-                         {
-                             "name":  "Vacuum Ovens",
-                             "slug":  "vacuum-ovens"
-                         },
-                         {
-                             "name":  "Environmental Chambers",
-                             "slug":  "environmental-chambers"
-                         },
-                         {
-                             "name":  "Heated Circulators",
-                             "slug":  "heated-circulators"
-                         },
-                         {
-                             "name":  "Orbital Shakers",
-                             "slug":  "orbital-shakers"
-                         },
-                         {
-                             "name":  "Refrigerated Shakers",
-                             "slug":  "refrigerated-shakers"
-                         },
-                         {
-                             "name":  "Vortex Mixers",
-                             "slug":  "vortex-mixers"
-                         },
-                         {
-                             "name":  "Auto Desiccator Cabinets",
-                             "slug":  "auto-desiccator-cabinets"
-                         }
-                     ]
+        "slug": "jeiotech",
+        "principalName": "JeioTech",
+        "countryOfOrigin": "South Korea",
+        "products": [
+            {
+                "name": "Incubators",
+                "slug": "incubators"
+            },
+            {
+                "name": "Drying Ovens",
+                "slug": "drying-ovens"
+            },
+            {
+                "name": "Vacuum Ovens",
+                "slug": "vacuum-ovens"
+            },
+            {
+                "name": "Environmental Chambers",
+                "slug": "environmental-chambers"
+            },
+            {
+                "name": "Heated Circulators",
+                "slug": "heated-circulators"
+            },
+            {
+                "name": "Orbital Shakers",
+                "slug": "orbital-shakers"
+            },
+            {
+                "name": "Refrigerated Shakers",
+                "slug": "refrigerated-shakers"
+            },
+            {
+                "name": "Vortex Mixers",
+                "slug": "vortex-mixers"
+            },
+            {
+                "name": "Auto Desiccator Cabinets",
+                "slug": "auto-desiccator-cabinets"
+            }
+        ]
     },
     {
-        "slug":  "sonics-and-materials",
-        "principalName":  "Sonics \u0026 Materials",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "Ultrasonic Probe Sonicators",
-                             "slug":  "ultrasonic-probe-sonicators"
-                         }
-                     ]
+        "slug": "sonics-and-materials",
+        "principalName": "Sonics \u0026 Materials",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "Ultrasonic Probe Sonicators",
+                "slug": "ultrasonic-probe-sonicators"
+            }
+        ]
     },
     {
-        "slug":  "zeiss",
-        "principalName":  "Zeiss",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Optical Microscopes",
-                             "slug":  "optical-microscopes"
-                         },
-                         {
-                             "name":  "Confocal Microscopes",
-                             "slug":  "confocal-microscopes"
-                         },
-                         {
-                             "name":  "Field Emission Scanning Electron Microscopes (FESEM)",
-                             "slug":  "field-emission-scanning-electron-microscopes-fesem"
-                         }
-                     ]
+        "slug": "zeiss",
+        "principalName": "Zeiss",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Optical Microscopes",
+                "slug": "optical-microscopes"
+            },
+            {
+                "name": "Confocal Microscopes",
+                "slug": "confocal-microscopes"
+            },
+            {
+                "name": "Field Emission Scanning Electron Microscopes (FESEM)",
+                "slug": "field-emission-scanning-electron-microscopes-fesem"
+            }
+        ]
     },
     {
-        "slug":  "dara-lyo",
-        "principalName":  "Dara-Lyo",
-        "countryOfOrigin":  "Spain",
-        "products":  [
-                         {
-                             "name":  "Pilot Freeze Dryers\nPilot Filling Lines",
-                             "slug":  "pilot-freeze-dryers-pilot-filling-lines"
-                         }
-                     ]
+        "slug": "dara-lyo",
+        "principalName": "Dara-Lyo",
+        "countryOfOrigin": "Spain",
+        "products": [
+            {
+                "name": "Pilot Freeze Dryers\nPilot Filling Lines",
+                "slug": "pilot-freeze-dryers-pilot-filling-lines"
+            }
+        ]
     },
     {
-        "slug":  "photon-etc",
-        "principalName":  "Photon Etc",
-        "countryOfOrigin":  "Canada",
-        "products":  [
-                         {
-                             "name":  "Hyperspectral Imaging Systems",
-                             "slug":  "hyperspectral-imaging-systems"
-                         },
-                         {
-                             "name":  "Preclinical Imaging Systems",
-                             "slug":  "preclinical-imaging-systems"
-                         }
-                     ]
+        "slug": "photon-etc",
+        "principalName": "Photon Etc",
+        "countryOfOrigin": "Canada",
+        "products": [
+            {
+                "name": "Hyperspectral Imaging Systems",
+                "slug": "hyperspectral-imaging-systems"
+            },
+            {
+                "name": "Preclinical Imaging Systems",
+                "slug": "preclinical-imaging-systems"
+            }
+        ]
     },
     {
-        "slug":  "nenovision-s-r-o",
-        "principalName":  "NenoVision s.r.o.",
-        "countryOfOrigin":  "Czech Republic",
-        "products":  [
-                         {
-                             "name":  "AFM-in-SEM Systems",
-                             "slug":  "afm-in-sem-systems"
-                         }
-                     ]
+        "slug": "nenovision-s-r-o",
+        "principalName": "NenoVision s.r.o.",
+        "countryOfOrigin": "Czech Republic",
+        "products": [
+            {
+                "name": "AFM-in-SEM Systems",
+                "slug": "afm-in-sem-systems"
+            }
+        ]
     },
     {
-        "slug":  "implen",
-        "principalName":  "Implen",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Microvolume UV/VIS Spectrophotometers",
-                             "slug":  "microvolume-uv-vis-spectrophotometers"
-                         }
-                     ]
+        "slug": "implen",
+        "principalName": "Implen",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Microvolume UV/VIS Spectrophotometers",
+                "slug": "microvolume-uv-vis-spectrophotometers"
+            }
+        ]
     },
     {
-        "slug":  "lumicks",
-        "principalName":  "Lumicks",
-        "countryOfOrigin":  "Netherlands",
-        "products":  [
-                         {
-                             "name":  "Optical Tweezers Systems",
-                             "slug":  "optical-tweezers-systems"
-                         }
-                     ]
+        "slug": "lumicks",
+        "principalName": "Lumicks",
+        "countryOfOrigin": "Netherlands",
+        "products": [
+            {
+                "name": "Optical Tweezers Systems",
+                "slug": "optical-tweezers-systems"
+            }
+        ]
     },
     {
-        "slug":  "nanosurf",
-        "principalName":  "Nanosurf",
-        "countryOfOrigin":  "Switzerland",
-        "products":  [
-                         {
-                             "name":  "Atomic Force Microscopes (AFM)",
-                             "slug":  "atomic-force-microscopes-afm"
-                         }
-                     ]
+        "slug": "nanosurf",
+        "principalName": "Nanosurf",
+        "countryOfOrigin": "Switzerland",
+        "products": [
+            {
+                "name": "Atomic Force Microscopes (AFM)",
+                "slug": "atomic-force-microscopes-afm"
+            }
+        ]
     },
     {
-        "slug":  "bwb-technologies",
-        "principalName":  "BWB Technologies",
-        "countryOfOrigin":  "United Kingdom",
-        "products":  [
-                         {
-                             "name":  "Flame Photometers",
-                             "slug":  "flame-photometers"
-                         }
-                     ]
+        "slug": "bwb-technologies",
+        "principalName": "BWB Technologies",
+        "countryOfOrigin": "United Kingdom",
+        "products": [
+            {
+                "name": "Flame Photometers",
+                "slug": "flame-photometers"
+            }
+        ]
     },
     {
-        "slug":  "reichert-technologies",
-        "principalName":  "Reichert Technologies",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "High-Sensitivity Surface Plasmon Resonance (SPR) Systems",
-                             "slug":  "high-sensitivity-surface-plasmon-resonance-spr-systems"
-                         }
-                     ]
+        "slug": "reichert-technologies",
+        "principalName": "Reichert Technologies",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "High-Sensitivity Surface Plasmon Resonance (SPR) Systems",
+                "slug": "high-sensitivity-surface-plasmon-resonance-spr-systems"
+            }
+        ]
     },
     {
-        "slug":  "affinite-instruments",
-        "principalName":  "Affinite Instruments",
-        "countryOfOrigin":  "Canada",
-        "products":  [
-                         {
-                             "name":  "Compact Surface Plasmon Resonance (SPR) Systems",
-                             "slug":  "compact-surface-plasmon-resonance-spr-systems"
-                         }
-                     ]
+        "slug": "affinite-instruments",
+        "principalName": "Affinite Instruments",
+        "countryOfOrigin": "Canada",
+        "products": [
+            {
+                "name": "Compact Surface Plasmon Resonance (SPR) Systems",
+                "slug": "compact-surface-plasmon-resonance-spr-systems"
+            }
+        ]
     },
     {
-        "slug":  "sbt-instruments",
-        "principalName":  "SBT Instruments",
-        "countryOfOrigin":  "Denmark",
-        "products":  [
-                         {
-                             "name":  "Bacteria Enumeration Systems",
-                             "slug":  "bacteria-enumeration-systems"
-                         },
-                         {
-                             "name":  "Microbial Analysis Systems",
-                             "slug":  "microbial-analysis-systems"
-                         },
-                         {
-                             "name":  "Process Monitoring Systems",
-                             "slug":  "process-monitoring-systems"
-                         }
-                     ]
+        "slug": "sbt-instruments",
+        "principalName": "SBT Instruments",
+        "countryOfOrigin": "Denmark",
+        "products": [
+            {
+                "name": "Bacteria Enumeration Systems",
+                "slug": "bacteria-enumeration-systems"
+            },
+            {
+                "name": "Microbial Analysis Systems",
+                "slug": "microbial-analysis-systems"
+            },
+            {
+                "name": "Process Monitoring Systems",
+                "slug": "process-monitoring-systems"
+            }
+        ]
     },
     {
-        "slug":  "evonik",
-        "principalName":  "Evonik",
-        "countryOfOrigin":  "Canada",
-        "products":  [
-                         {
-                             "name":  "Liposome Extrusion Systems",
-                             "slug":  "liposome-extrusion-systems"
-                         }
-                     ]
+        "slug": "evonik",
+        "principalName": "Evonik",
+        "countryOfOrigin": "Canada",
+        "products": [
+            {
+                "name": "Liposome Extrusion Systems",
+                "slug": "liposome-extrusion-systems"
+            }
+        ]
     },
     {
-        "slug":  "gea",
-        "principalName":  "Gea",
-        "countryOfOrigin":  "Italy",
-        "products":  [
-                         {
-                             "name":  "High-Pressure Homogenizers",
-                             "slug":  "high-pressure-homogenizers"
-                         },
-                         {
-                             "name":  "Pilot \u0026 Production Homogenizers",
-                             "slug":  "pilot-and-production-homogenizers"
-                         }
-                     ]
+        "slug": "gea",
+        "principalName": "Gea",
+        "countryOfOrigin": "Italy",
+        "products": [
+            {
+                "name": "High-Pressure Homogenizers",
+                "slug": "high-pressure-homogenizers"
+            },
+            {
+                "name": "Pilot \u0026 Production Homogenizers",
+                "slug": "pilot-and-production-homogenizers"
+            }
+        ]
     },
     {
-        "slug":  "hitachi",
-        "principalName":  "Hitachi",
-        "countryOfOrigin":  "Japan",
-        "products":  [
-                         {
-                             "name":  "DSC (Differential Scanning Calorimeters)",
-                             "slug":  "dsc-differential-scanning-calorimeters"
-                         },
-                         {
-                             "name":  "DMA (Dynamic Mechanical Analyzers)",
-                             "slug":  "dma-dynamic-mechanical-analyzers"
-                         },
-                         {
-                             "name":  "TGA (Thermogravimetric Analyzers)",
-                             "slug":  "tga-thermogravimetric-analyzers"
-                         },
-                         {
-                             "name":  "TMA (Thermal Mechanical Analyzers)",
-                             "slug":  "tma-thermal-mechanical-analyzers"
-                         }
-                     ]
+        "slug": "hitachi",
+        "principalName": "Hitachi",
+        "countryOfOrigin": "Japan",
+        "products": [
+            {
+                "name": "DSC (Differential Scanning Calorimeters)",
+                "slug": "dsc-differential-scanning-calorimeters"
+            },
+            {
+                "name": "DMA (Dynamic Mechanical Analyzers)",
+                "slug": "dma-dynamic-mechanical-analyzers"
+            },
+            {
+                "name": "TGA (Thermogravimetric Analyzers)",
+                "slug": "tga-thermogravimetric-analyzers"
+            },
+            {
+                "name": "TMA (Thermal Mechanical Analyzers)",
+                "slug": "tma-thermal-mechanical-analyzers"
+            }
+        ]
     },
     {
-        "slug":  "proscientific",
-        "principalName":  "ProScientific",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "Hand-Held Rotor-Stator Homogenizers",
-                             "slug":  "hand-held-rotor-stator-homogenizers"
-                         }
-                     ]
+        "slug": "proscientific",
+        "principalName": "ProScientific",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "Hand-Held Rotor-Stator Homogenizers",
+                "slug": "hand-held-rotor-stator-homogenizers"
+            }
+        ]
     },
     {
-        "slug":  "thermofisher-scientific",
-        "principalName":  "ThermoFisher Scientific",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Rheometers",
-                             "slug":  "rheometers"
-                         },
-                         {
-                             "name":  "Viscometers",
-                             "slug":  "viscometers"
-                         }
-                     ]
+        "slug": "thermofisher-scientific",
+        "principalName": "ThermoFisher Scientific",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Rheometers",
+                "slug": "rheometers"
+            },
+            {
+                "name": "Viscometers",
+                "slug": "viscometers"
+            }
+        ]
     },
     {
-        "slug":  "chemspeed",
-        "principalName":  "Chemspeed",
-        "countryOfOrigin":  "Switzerland",
-        "products":  [
-                         {
-                             "name":  "Automated Laboratory Platforms",
-                             "slug":  "automated-laboratory-platforms"
-                         },
-                         {
-                             "name":  "Liquid Handling \u0026 Dispensing Systems",
-                             "slug":  "liquid-handling-and-dispensing-systems"
-                         },
-                         {
-                             "name":  "Automated Powder Dispensing Systems",
-                             "slug":  "automated-powder-dispensing-systems"
-                         },
-                         {
-                             "name":  "Pilot Plants \u0026 Pilot Reactors",
-                             "slug":  "pilot-plants-and-pilot-reactors"
-                         }
-                     ]
+        "slug": "chemspeed",
+        "principalName": "Chemspeed",
+        "countryOfOrigin": "Switzerland",
+        "products": [
+            {
+                "name": "Automated Laboratory Platforms",
+                "slug": "automated-laboratory-platforms"
+            },
+            {
+                "name": "Liquid Handling \u0026 Dispensing Systems",
+                "slug": "liquid-handling-and-dispensing-systems"
+            },
+            {
+                "name": "Automated Powder Dispensing Systems",
+                "slug": "automated-powder-dispensing-systems"
+            },
+            {
+                "name": "Pilot Plants \u0026 Pilot Reactors",
+                "slug": "pilot-plants-and-pilot-reactors"
+            }
+        ]
     },
     {
-        "slug":  "being",
-        "principalName":  "Being",
-        "countryOfOrigin":  "China",
-        "products":  [
-                         {
-                             "name":  "Biological Safety Cabinets",
-                             "slug":  "biological-safety-cabinets"
-                         },
-                         {
-                             "name":  "Laminar Flow Cabinets",
-                             "slug":  "laminar-flow-cabinets"
-                         },
-                         {
-                             "name":  "CO₂ Incubators",
-                             "slug":  "co-incubators"
-                         },
-                         {
-                             "name":  "Heating Incubator",
-                             "slug":  "heating-incubator"
-                         },
-                         {
-                             "name":  "Cooling Incubator",
-                             "slug":  "cooling-incubator"
-                         },
-                         {
-                             "name":  "Shaking Incubator",
-                             "slug":  "shaking-incubator"
-                         },
-                         {
-                             "name":  "Drying Ovens",
-                             "slug":  "drying-ovens"
-                         },
-                         {
-                             "name":  "Vacuum Ovens",
-                             "slug":  "vacuum-ovens"
-                         },
-                         {
-                             "name":  "Muffle Furnaces",
-                             "slug":  "muffle-furnaces"
-                         },
-                         {
-                             "name":  "Environmental Chambers",
-                             "slug":  "environmental-chambers"
-                         },
-                         {
-                             "name":  "Plant Growth Chambers",
-                             "slug":  "plant-growth-chambers"
-                         },
-                         {
-                             "name":  "Chillers",
-                             "slug":  "chillers"
-                         },
-                         {
-                             "name":  "Recirculating Chillers",
-                             "slug":  "recirculating-chillers"
-                         },
-                         {
-                             "name":  "Circulating Baths",
-                             "slug":  "circulating-baths"
-                         },
-                         {
-                             "name":  "Heated Circulators",
-                             "slug":  "heated-circulators"
-                         },
-                         {
-                             "name":  "Water Baths",
-                             "slug":  "water-baths"
-                         },
-                         {
-                             "name":  "Orbital \u0026 Linear Shakers",
-                             "slug":  "orbital-and-linear-shakers"
-                         },
-                         {
-                             "name":  "Refrigerated Shakers",
-                             "slug":  "refrigerated-shakers"
-                         },
-                         {
-                             "name":  "Oil Vacuum Pumps",
-                             "slug":  "oil-vacuum-pumps"
-                         },
-                         {
-                             "name":  "Diaphragm Vacuum Pumps",
-                             "slug":  "diaphragm-vacuum-pumps"
-                         },
-                         {
-                             "name":  "Deep Freezers (-25°C / -40°C)",
-                             "slug":  "deep-freezers-25-c-40-c"
-                         },
-                         {
-                             "name":  "ULT Freezers (-86°C)",
-                             "slug":  "ult-freezers-86-c"
-                         }
-                     ]
+        "slug": "being",
+        "principalName": "Being",
+        "countryOfOrigin": "China",
+        "products": [
+            {
+                "name": "Biological Safety Cabinets",
+                "slug": "biological-safety-cabinets"
+            },
+            {
+                "name": "Laminar Flow Cabinets",
+                "slug": "laminar-flow-cabinets"
+            },
+            {
+                "name": "CO₂ Incubators",
+                "slug": "co-incubators"
+            },
+            {
+                "name": "Heating Incubator",
+                "slug": "heating-incubator"
+            },
+            {
+                "name": "Cooling Incubator",
+                "slug": "cooling-incubator"
+            },
+            {
+                "name": "Shaking Incubator",
+                "slug": "shaking-incubator"
+            },
+            {
+                "name": "Drying Ovens",
+                "slug": "drying-ovens"
+            },
+            {
+                "name": "Vacuum Ovens",
+                "slug": "vacuum-ovens"
+            },
+            {
+                "name": "Muffle Furnaces",
+                "slug": "muffle-furnaces"
+            },
+            {
+                "name": "Environmental Chambers",
+                "slug": "environmental-chambers"
+            },
+            {
+                "name": "Plant Growth Chambers",
+                "slug": "plant-growth-chambers"
+            },
+            {
+                "name": "Chillers",
+                "slug": "chillers"
+            },
+            {
+                "name": "Recirculating Chillers",
+                "slug": "recirculating-chillers"
+            },
+            {
+                "name": "Circulating Baths",
+                "slug": "circulating-baths"
+            },
+            {
+                "name": "Heated Circulators",
+                "slug": "heated-circulators"
+            },
+            {
+                "name": "Water Baths",
+                "slug": "water-baths"
+            },
+            {
+                "name": "Orbital \u0026 Linear Shakers",
+                "slug": "orbital-and-linear-shakers"
+            },
+            {
+                "name": "Refrigerated Shakers",
+                "slug": "refrigerated-shakers"
+            },
+            {
+                "name": "Oil Vacuum Pumps",
+                "slug": "oil-vacuum-pumps"
+            },
+            {
+                "name": "Diaphragm Vacuum Pumps",
+                "slug": "diaphragm-vacuum-pumps"
+            },
+            {
+                "name": "Deep Freezers (-25°C / -40°C)",
+                "slug": "deep-freezers-25-c-40-c"
+            },
+            {
+                "name": "ULT Freezers (-86°C)",
+                "slug": "ult-freezers-86-c"
+            }
+        ]
     },
     {
-        "slug":  "waters",
-        "principalName":  "Waters",
-        "countryOfOrigin":  "United States of America",
-        "products":  [
-                         {
-                             "name":  "Advanced Analytical HPLC / UPLC Systems (High Performance, GMP Ready)",
-                             "slug":  "advanced-analytical-hplc-uplc-systems-high-performance-gmp-ready"
-                         },
-                         {
-                             "name":  "LC-MS Systems (High Sensitivity, Regulatory Compliant)",
-                             "slug":  "lc-ms-systems-high-sensitivity-regulatory-compliant"
-                         }
-                     ]
+        "slug": "waters",
+        "principalName": "Waters",
+        "countryOfOrigin": "United States of America",
+        "products": [
+            {
+                "name": "Advanced Analytical HPLC / UPLC Systems (High Performance, GMP Ready)",
+                "slug": "advanced-analytical-hplc-uplc-systems-high-performance-gmp-ready"
+            },
+            {
+                "name": "LC-MS Systems (High Sensitivity, Regulatory Compliant)",
+                "slug": "lc-ms-systems-high-sensitivity-regulatory-compliant"
+            }
+        ]
     },
     {
-        "slug":  "sartorius",
-        "principalName":  "Sartorius",
-        "countryOfOrigin":  "Germany",
-        "products":  [
-                         {
-                             "name":  "Lab Water Purification Systems (Type I, II, III)",
-                             "slug":  "lab-water-purification-systems-type-i-ii-iii"
-                         }
-                     ]
+        "slug": "sartorius",
+        "principalName": "Sartorius",
+        "countryOfOrigin": "Germany",
+        "products": [
+            {
+                "name": "Lab Water Purification Systems (Type I, II, III)",
+                "slug": "lab-water-purification-systems-type-i-ii-iii"
+            }
+        ]
     },
     {
-        "slug":  "buchi",
-        "principalName":  "Buchi",
-        "countryOfOrigin":  "Switzerland",
-        "products":  [
-                         {
-                             "name":  "Freeze Dryer (Lyophilizer)",
-                             "slug":  "freeze-dryer-lyophilizer"
-                         },
-                         {
-                             "name":  "Kjeldahl Systems",
-                             "slug":  "kjeldahl-systems"
-                         },
-                         {
-                             "name":  "Soxhlet Apparatus",
-                             "slug":  "soxhlet-apparatus"
-                         },
-                         {
-                             "name":  "Melting Point Apparatus",
-                             "slug":  "melting-point-apparatus"
-                         }
-                     ]
+        "slug": "buchi",
+        "principalName": "Buchi",
+        "countryOfOrigin": "Switzerland",
+        "products": [
+            {
+                "name": "Freeze Dryer (Lyophilizer)",
+                "slug": "freeze-dryer-lyophilizer"
+            },
+            {
+                "name": "Kjeldahl Systems",
+                "slug": "kjeldahl-systems"
+            },
+            {
+                "name": "Soxhlet Apparatus",
+                "slug": "soxhlet-apparatus"
+            },
+            {
+                "name": "Melting Point Apparatus",
+                "slug": "melting-point-apparatus"
+            }
+        ]
     },
     {
-        "slug":  "dlab",
-        "principalName":  "DLAB",
-        "countryOfOrigin":  "China",
-        "products":  [
-                         {
-                             "name":  "Benchtop Centrifuges",
-                             "slug":  "benchtop-centrifuges"
-                         },
-                         {
-                             "name":  "High-Speed Refrigerated Centrifuges",
-                             "slug":  "high-speed-refrigerated-centrifuges"
-                         },
-                         {
-                             "name":  "Microcentrifuges",
-                             "slug":  "microcentrifuges"
-                         },
-                         {
-                             "name":  "Dry Baths \u0026 Heating Blocks",
-                             "slug":  "dry-baths-and-heating-blocks"
-                         },
-                         {
-                             "name":  "Incubators",
-                             "slug":  "incubators"
-                         },
-                         {
-                             "name":  "Magnetic Stirrers",
-                             "slug":  "magnetic-stirrers"
-                         },
-                         {
-                             "name":  "Overhead Stirrers",
-                             "slug":  "overhead-stirrers"
-                         },
-                         {
-                             "name":  "Orbital Shakers",
-                             "slug":  "orbital-shakers"
-                         },
-                         {
-                             "name":  "Benchtop Rotary Evaporators",
-                             "slug":  "benchtop-rotary-evaporators"
-                         },
-                         {
-                             "name":  "UV/VIS Spectrophotometers",
-                             "slug":  "uv-vis-spectrophotometers"
-                         },
-                         {
-                             "name":  "Vortex Mixers",
-                             "slug":  "vortex-mixers"
-                         },
-                         {
-                             "name":  "Pipettes",
-                             "slug":  "pipettes"
-                         },
-                         {
-                             "name":  "Bottle-top Dispensers",
-                             "slug":  "bottle-top-dispensers"
-                         }
-                     ]
+        "slug": "dlab",
+        "principalName": "DLAB",
+        "countryOfOrigin": "China",
+        "products": [
+            {
+                "name": "Benchtop Centrifuges",
+                "slug": "benchtop-centrifuges"
+            },
+            {
+                "name": "High-Speed Refrigerated Centrifuges",
+                "slug": "high-speed-refrigerated-centrifuges"
+            },
+            {
+                "name": "Microcentrifuges",
+                "slug": "microcentrifuges"
+            },
+            {
+                "name": "Dry Baths \u0026 Heating Blocks",
+                "slug": "dry-baths-and-heating-blocks"
+            },
+            {
+                "name": "Incubators",
+                "slug": "incubators"
+            },
+            {
+                "name": "Magnetic Stirrers",
+                "slug": "magnetic-stirrers"
+            },
+            {
+                "name": "Overhead Stirrers",
+                "slug": "overhead-stirrers"
+            },
+            {
+                "name": "Orbital Shakers",
+                "slug": "orbital-shakers"
+            },
+            {
+                "name": "Benchtop Rotary Evaporators",
+                "slug": "benchtop-rotary-evaporators"
+            },
+            {
+                "name": "UV/VIS Spectrophotometers",
+                "slug": "uv-vis-spectrophotometers"
+            },
+            {
+                "name": "Vortex Mixers",
+                "slug": "vortex-mixers"
+            },
+            {
+                "name": "Pipettes",
+                "slug": "pipettes"
+            },
+            {
+                "name": "Bottle-top Dispensers",
+                "slug": "bottle-top-dispensers"
+            }
+        ]
     },
     {
-        "slug":  "mettler-toledo",
-        "principalName":  "Mettler Toledo",
-        "countryOfOrigin":  "Switzerland",
-        "products":  [
-                         {
-                             "name":  "Weighing Balances",
-                             "slug":  "weighing-balances"
-                         },
-                         {
-                             "name":  "pH Meters",
-                             "slug":  "ph-meters"
-                         },
-                         {
-                             "name":  "Titrators",
-                             "slug":  "titrators"
-                         },
-                         {
-                             "name":  "Moisture Analyzers",
-                             "slug":  "moisture-analyzers"
-                         },
-                         {
-                             "name":  "Melting Point Systems",
-                             "slug":  "melting-point-systems"
-                         },
-                         {
-                             "name":  "UV/VIS Spectrophotometers",
-                             "slug":  "uv-vis-spectrophotometers"
-                         }
-                     ]
+        "slug": "mettler-toledo",
+        "principalName": "Mettler Toledo",
+        "countryOfOrigin": "Switzerland",
+        "products": [
+            {
+                "name": "Weighing Balances",
+                "slug": "weighing-balances"
+            },
+            {
+                "name": "pH Meters",
+                "slug": "ph-meters"
+            },
+            {
+                "name": "Titrators",
+                "slug": "titrators"
+            },
+            {
+                "name": "Moisture Analyzers",
+                "slug": "moisture-analyzers"
+            },
+            {
+                "name": "Melting Point Systems",
+                "slug": "melting-point-systems"
+            },
+            {
+                "name": "UV/VIS Spectrophotometers",
+                "slug": "uv-vis-spectrophotometers"
+            }
+        ]
     },
     {
-        "slug":  "inkarp-usb",
-        "principalName":  "Inkarp USB",
-        "countryOfOrigin":  "India",
-        "products":  [
-                         {
-                             "name":  "Ultrasonic Baths",
-                             "slug":  "ultrasonic-baths"
-                         }
-                     ]
+        "slug": "inkarp-usb",
+        "principalName": "Inkarp USB",
+        "countryOfOrigin": "India",
+        "products": [
+            {
+                "name": "Ultrasonic Baths",
+                "slug": "ultrasonic-baths"
+            }
+        ]
     }
 ];
 
 export function getAllPrincipals() {
-  const slugs = uniqueValues([
-    ...productPrincipals.map((principal) => principal.slug),
-    ...getJsonCatalogPrincipalSummaries().map((principal) => principal.slug),
-  ]);
+    const slugs = uniqueValues([
+        ...productPrincipals.map((principal) => principal.slug),
+        ...getJsonCatalogPrincipalSummaries().map((principal) => principal.slug),
+    ]);
 
-  return slugs.map((slug) => getPrincipalBySlug(slug)).filter(Boolean);
+    return slugs.map((slug) => getPrincipalBySlug(slug)).filter(Boolean);
 }
 
 export function getPrincipalBySlug(slug) {
-  const principal = productPrincipals.find((item) => item.slug === slug);
-  const jsonPrincipal = getJsonCatalogPrincipalBySlug(slug);
+    const principal = productPrincipals.find((item) => item.slug === slug);
+    const jsonPrincipal = getJsonCatalogPrincipalBySlug(slug);
 
-  if (!principal && !jsonPrincipal) {
-    return undefined;
-  }
+    if (!principal && !jsonPrincipal) {
+        return undefined;
+    }
 
-  const legacyProducts = principal
-    ? principal.products.map((product) => ({
-        ...getProductByPrincipalAndSlug(principal.slug, product.slug),
-      }))
-    : [];
-  const products = mergeProductsByKey([
-    ...legacyProducts,
-    ...(jsonPrincipal?.products ?? []),
-  ]);
+    const legacyProducts = principal
+        ? principal.products.map((product) => ({
+            ...getProductByPrincipalAndSlug(principal.slug, product.slug),
+        }))
+        : [];
+    const products = mergeProductsByKey([
+        ...legacyProducts,
+        ...(jsonPrincipal?.products ?? []),
+    ]);
 
-  return {
-    slug: principal?.slug ?? jsonPrincipal.slug,
-    principalName: principal?.principalName ?? jsonPrincipal.principalName,
-    countryOfOrigin:
-      principal?.countryOfOrigin ?? jsonPrincipal.countryOfOrigin,
-    categories: jsonPrincipal?.categories ?? [],
-    products,
-  };
+    return {
+        slug: principal?.slug ?? jsonPrincipal.slug,
+        principalName: principal?.principalName ?? jsonPrincipal.principalName,
+        countryOfOrigin:
+            principal?.countryOfOrigin ?? jsonPrincipal.countryOfOrigin,
+        categories: jsonPrincipal?.categories ?? [],
+        products,
+    };
 }
 
 export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
-  const jsonProduct = getJsonCatalogProductByPrincipalAndSlug(
-    principalSlug,
-    productSlug
-  );
+    const jsonProduct = getJsonCatalogProductByPrincipalAndSlug(
+        principalSlug,
+        productSlug
+    );
 
-  if (jsonProduct) {
-    return jsonProduct;
-  }
+    if (jsonProduct) {
+        return jsonProduct;
+    }
 
-  const principal = productPrincipals.find((item) => item.slug === principalSlug);
-  const product = principal?.products.find((item) => item.slug === productSlug);
+    const principal = productPrincipals.find((item) => item.slug === principalSlug);
+    const product = principal?.products.find((item) => item.slug === productSlug);
 
-  if (!principal || !product) {
-    return undefined;
-  }
+    if (!principal || !product) {
+        return undefined;
+    }
 
-  const detail = getProductDetailByPrincipalAndSlug(principalSlug, productSlug);
-  const metadata = { ...product, ...detail };
-  const taxonomy = getProductTaxonomy(product.name, metadata);
-  const applications = toArray(metadata.applications);
-  const tags = uniqueValues([...toArray(product.tags), ...toArray(detail?.tags)]);
+    const detail = getProductDetailByPrincipalAndSlug(principalSlug, productSlug);
+    const metadata = { ...product, ...detail };
+    const taxonomy = getProductTaxonomy(product.name, metadata);
+    const applications = toArray(metadata.applications);
+    const tags = uniqueValues([...toArray(product.tags), ...toArray(detail?.tags)]);
 
-  return {
-    ...product,
-    ...detail,
-    category: metadata.category ?? taxonomy.industry,
-    industry: metadata.industry ?? metadata.category ?? taxonomy.industry,
-    applications: applications.length ? applications : taxonomy.applications,
-    tags,
-    principalSlug: principal.slug,
-    principalName: principal.principalName,
-    countryOfOrigin: metadata.countryOfOrigin ?? principal.countryOfOrigin,
-    href: `/products/${product.slug}`,
-    apiPath: `/api/products/${principal.slug}/${product.slug}`,
-    hasDetails: Boolean(detail),
-  };
+    return {
+        ...product,
+        ...detail,
+        category: metadata.category ?? taxonomy.industry,
+        industry: metadata.industry ?? metadata.category ?? taxonomy.industry,
+        applications: applications.length ? applications : taxonomy.applications,
+        tags,
+        principalSlug: principal.slug,
+        principalName: principal.principalName,
+        countryOfOrigin: metadata.countryOfOrigin ?? principal.countryOfOrigin,
+        href: `/products/${product.slug}`,
+        apiPath: `/api/products/${principal.slug}/${product.slug}`,
+        hasDetails: Boolean(detail),
+    };
 }
 
 export function getProductBySlug(productSlug) {
-  const jsonProduct = getJsonCatalogProductBySlug(productSlug);
+    const jsonProduct = getJsonCatalogProductBySlug(productSlug);
 
-  if (jsonProduct) {
-    return jsonProduct;
-  }
-
-  const detail = getProductDetailBySlug(productSlug);
-
-  if (detail) {
-    return getProductByPrincipalAndSlug(detail.principalSlug, detail.slug);
-  }
-
-  for (const principal of productPrincipals) {
-    const product = principal.products.find((item) => item.slug === productSlug);
-
-    if (product) {
-      return getProductByPrincipalAndSlug(principal.slug, product.slug);
+    if (jsonProduct) {
+        return jsonProduct;
     }
-  }
 
-  return undefined;
+    const detail = getProductDetailBySlug(productSlug);
+
+    if (detail) {
+        return getProductByPrincipalAndSlug(detail.principalSlug, detail.slug);
+    }
+
+    for (const principal of productPrincipals) {
+        const product = principal.products.find((item) => item.slug === productSlug);
+
+        if (product) {
+            return getProductByPrincipalAndSlug(principal.slug, product.slug);
+        }
+    }
+
+    return undefined;
 }
 
 export function getAllProducts() {
-  const legacyProducts = productPrincipals.flatMap((principal) =>
-    principal.products.map((product) =>
-      getProductByPrincipalAndSlug(principal.slug, product.slug)
-    )
-  );
+    const legacyProducts = productPrincipals.flatMap((principal) =>
+        principal.products.map((product) =>
+            getProductByPrincipalAndSlug(principal.slug, product.slug)
+        )
+    );
 
-  return mergeProductsByKey([...legacyProducts, ...getJsonCatalogProducts()]);
+    return mergeProductsByKey([...legacyProducts, ...getJsonCatalogProducts()]);
 }
 
 export function getProductFilterOptions() {
-  const products = getAllProducts();
+    const products = getAllProducts();
 
-  return {
-    principals: productPrincipals.map((principal) => ({
-      label: principal.principalName,
-      value: principal.slug,
-    })),
-    countries: uniqueValues(products.map((product) => product.countryOfOrigin)),
-    industries: uniqueValues(products.map((product) => product.industry)),
-    applications: uniqueValues(
-      products.flatMap((product) => product.applications ?? [])
-    ),
-    categories: uniqueValues(products.map((product) => product.category)),
-  };
+    return {
+        principals: productPrincipals.map((principal) => ({
+            label: principal.principalName,
+            value: principal.slug,
+        })),
+        countries: uniqueValues(products.map((product) => product.countryOfOrigin)),
+        industries: uniqueValues(products.map((product) => product.industry)),
+        applications: uniqueValues(
+            products.flatMap((product) => product.applications ?? [])
+        ),
+        categories: uniqueValues(products.map((product) => product.category)),
+    };
 }
 
 export function searchProducts(filters = {}) {
-  const query = filters.q?.trim().toLowerCase();
+    const query = filters.q?.trim().toLowerCase();
 
-  return getAllProducts().filter((product) => {
-    return (
-      productMatchesSearch(product, query) &&
-      (!filters.principal || product.principalSlug === filters.principal) &&
-      (!filters.country || product.countryOfOrigin === filters.country) &&
-      (!filters.industry || product.industry === filters.industry) &&
-      (!filters.application ||
-        (product.applications ?? []).includes(filters.application)) &&
-      (!filters.details || product.hasDetails)
-    );
-  });
+    return getAllProducts().filter((product) => {
+        return (
+            productMatchesSearch(product, query) &&
+            (!filters.principal || product.principalSlug === filters.principal) &&
+            (!filters.country || product.countryOfOrigin === filters.country) &&
+            (!filters.industry || product.industry === filters.industry) &&
+            (!filters.application ||
+                (product.applications ?? []).includes(filters.application)) &&
+            (!filters.details || product.hasDetails)
+        );
+    });
 }

@@ -35,7 +35,7 @@ export const siteConfig = {
       logo: "/CatalystNew.svg",
       children: [
         {
-          label: "Magazines",
+          label: "CatalystCue",
           href: "/catalystcue",
         },
         {
@@ -46,7 +46,23 @@ export const siteConfig = {
     },
     {
       label: "News and Events",
-      href: "/news-and-events",
+      href: "",
+       children: [
+        {
+          label: "Blogs",
+          href: "/blogs",
+        },
+        {
+          label: "Events",
+          href: "/events",
+        },
+        
+        {
+          label: "Webinars",
+          href: "/webinars",
+        },
+    
+      ],
     },
     {
       label: "Careers",
@@ -58,7 +74,7 @@ export const siteConfig = {
     },
   ],
   contact: {
-    phone: "+91 00000 00000",
+    phone: "+91 8125580808",
     email: "info@inkarp.co.in",
     address: "Hyderabad, Telangana, India",
   },

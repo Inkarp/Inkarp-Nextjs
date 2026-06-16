@@ -30,6 +30,10 @@ export const siteConfig = {
       href: "/products",
     },
     {
+      label: "Service",
+      href: "/contact-us?interest=service",
+    },
+    {
       label: "CatalystCue",
       href: "",
       logo: "/CatalystNew.svg",

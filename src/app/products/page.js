@@ -87,10 +87,10 @@ export default async function ProductsPage({ searchParams }) {
                   {/* Applications */}
                   {(product.applications ?? []).length > 0 ? (
                     <div className="mt-2.5 flex flex-wrap gap-1">
-                      {(product.applications ?? []).slice(0, 3).map((app) => (
+                      {(product.applications ?? []).slice(0, 3).map((app, index) => (
                         <span
                           className="rounded border border-zinc-200 px-1.5 py-0.5 text-[10px] text-zinc-500"
-                          key={app}
+                          key={`${product.principalSlug}-${product.slug}-app-${index}`}
                         >
                           {app}
                         </span>

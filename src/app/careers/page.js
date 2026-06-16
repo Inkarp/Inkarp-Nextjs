@@ -6,6 +6,8 @@ export const metadata = {
     "Build your career at Inkarp. Join a team where learning, ownership, and impact define growth.",
 };
 
-export default function Careers() {
+export default async function Careers() {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   return <CareersPage />;
 }

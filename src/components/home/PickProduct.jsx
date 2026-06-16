@@ -2,43 +2,63 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { FiArrowRight } from "react-icons/fi";
-import SectionHeading from "@/components/home/SectionHeading";
+import { useEffect, useMemo, useState } from "react";
+import { FiArrowLeft, FiArrowRight, FiCheckCircle } from "react-icons/fi";
 
 const productData = [
   {
     name: "ALPHA II Compact FT-IR Spectrometer",
+    category: "Molecular Spectroscopy",
+    summary:
+      "Compact FT-IR analysis for reliable material identification and everyday QC workflows.",
     image: "/assets/images/productImages/Bruker/banner-alpha.png",
     link: "/products?q=ALPHA%20II%20Compact%20FT-IR%20Spectrometer",
   },
   {
     name: "Mya 4 Reaction Station",
+    category: "Reaction Chemistry",
+    summary:
+      "Parallel reaction control for chemists who need repeatable heating, stirring, and scale flexibility.",
     image: "/assets/images/productImages/radleys/mya-4.png",
     link: "/products?q=Mya%204%20Reaction%20Station",
   },
   {
     name: "Alliance HPLC System",
+    category: "Chromatography",
+    summary:
+      "Trusted liquid chromatography performance for analytical labs and routine separation methods.",
     image: "/assets/images/productImages/Waters/hpcl.png",
     link: "/products?q=Alliance%20HPLC%20System",
   },
   {
     name: "Labstation I",
+    category: "Controlled Atmosphere",
+    summary:
+      "A controlled glovebox environment for sensitive materials, synthesis, and sample handling.",
     image: "/assets/images/productImages/Labstation/labstation.png",
     link: "/products?q=Labstation%20I",
   },
   {
     name: "Hei-VAP Ultimate Control",
+    category: "Evaporation",
+    summary:
+      "Advanced rotary evaporation with precise control for dependable solvent removal.",
     image: "/assets/images/productImages/heidolph/Hei-VAP-Expert-Control.webp",
     link: "/products?q=Hei-VAP%20Ultimate%20Control",
   },
   {
     name: "Arium Comfort II",
+    category: "Water Purification",
+    summary:
+      "Consistent purified water delivery for analytical, life science, and general lab needs.",
     image: "/assets/images/productImages/Sotorius/comfort-II.png",
     link: "/products?q=Arium%20Comfort%20II",
   },
   {
     name: "Freeze Dryer Lyovapor L-300",
+    category: "Lyophilization",
+    summary:
+      "Efficient freeze drying for protecting sample integrity from research to process development.",
     image: "/assets/images/productImages/Buchi/L-300-2.png",
     link: "/products?q=Freeze%20Dryer%20Lyovapor%20L-300",
   },
@@ -46,11 +66,7 @@ const productData = [
 
 export default function PickProduct() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-  const [glare, setGlare] = useState(50);
-  const cardRef = useRef(null);
   const selectedProduct = productData[selectedIndex];
-
   const productOptions = useMemo(() => productData, []);
 
   useEffect(() => {
@@ -70,148 +86,179 @@ export default function PickProduct() {
     return () => window.removeEventListener("keydown", onKey);
   }, [productOptions.length]);
 
-  function handleMouseMove(event) {
-    const rect = cardRef.current?.getBoundingClientRect();
-
-    if (!rect) {
-      return;
-    }
-
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
-
-    setTilt({
-      x: Math.max(-10, Math.min(10, -y / 18)),
-      y: Math.max(-10, Math.min(10, x / 18)),
-    });
-    setGlare(Math.max(0, Math.min(100, ((x + rect.width / 2) / rect.width) * 100)));
+  function goToPrevious() {
+    setSelectedIndex(
+      (index) => (index - 1 + productOptions.length) % productOptions.length
+    );
   }
 
-  function handleMouseLeave() {
-    setTilt({ x: 0, y: 0 });
-    setGlare(50);
+  function goToNext() {
+    setSelectedIndex((index) => (index + 1) % productOptions.length);
   }
 
   return (
-    <section className="relative mx-auto w-full overflow-hidden py-10">
-      <SectionHeading
-        eyebrow="Precision Picks"
-        title="Explore Our Top Lab Solutions"
-        description="Expert-curated equipment engineered for accuracy, reliability, and ease."
+    <section className="relative overflow-hidden bg-zinc-950 px-4 py-20 sm:px-6 lg:px-8">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[#BE0010]/20 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 -right-24 h-[28rem] w-[28rem] rounded-full bg-[#BE0010]/15 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:56px_56px]"
       />
 
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12">
-          <div className="lg:col-span-3">
-            <div className="lg:hidden">
-              <label
-                className="mb-2 block text-sm font-medium text-zinc-700"
-                htmlFor="pick-product-select"
-              >
-                Select a product
-              </label>
-              <div className="rounded-xl bg-gradient-to-r from-[#BE0010] to-[#E63946] p-px">
-                <select
-                  className="w-full rounded-[11px] border border-white bg-white px-4 py-3 text-sm font-semibold text-zinc-950 outline-none focus:ring-2 focus:ring-[#E63946]/40"
-                  id="pick-product-select"
-                  onChange={(event) => setSelectedIndex(Number(event.target.value))}
-                  value={selectedIndex}
+      <div className="relative mx-auto max-w-7xl">
+        {/* Heading */}
+        <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center gap-3 text-center">
+          <span className="rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white/70">
+            Precision Picks
+          </span>
+          <h2 className="font-maxot text-3xl leading-tight text-white sm:text-4xl">
+            Explore Our <span className="text-[#ff6b75]">Top Lab Solutions</span>
+          </h2>
+          <p className="max-w-2xl text-sm leading-6 text-white/50 sm:text-base">
+            Expert-curated instruments for research, quality control, and
+            scale-up teams.
+          </p>
+        </div>
+
+        {/* Spotlight panel */}
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur sm:p-10">
+          <span
+            aria-hidden="true"
+            className="font-maxot pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 text-[180px] font-bold leading-none text-white/[0.04] sm:text-[260px]"
+          >
+            {String(selectedIndex + 1).padStart(2, "0")}
+          </span>
+
+          <div className="relative grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            {/* Info */}
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/50">
+                Featured Solution
+                <span className="text-[#ff6b75]">
+                  {String(selectedIndex + 1).padStart(2, "0")}/
+                  {String(productOptions.length).padStart(2, "0")}
+                </span>
+              </span>
+
+              <h3 className="font-maxot mt-4 text-3xl leading-tight text-white sm:text-4xl">
+                {selectedProduct.name}
+              </h3>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-[#ff6b75]">
+                {selectedProduct.category}
+              </p>
+              <p className="mt-4 max-w-md text-sm leading-6 text-white/60">
+                {selectedProduct.summary}
+              </p>
+
+              <div className="mt-6 grid grid-cols-2 gap-3 text-sm sm:max-w-sm">
+                <div className="rounded-lg border border-white/10 bg-white/5 p-3">
+                  <p className="text-white/40">Focus</p>
+                  <p className="mt-1 font-semibold text-white">Lab efficiency</p>
+                </div>
+                <div className="rounded-lg border border-white/10 bg-white/5 p-3">
+                  <p className="text-white/40">Support</p>
+                  <p className="mt-1 font-semibold text-white">India-wide</p>
+                </div>
+              </div>
+
+              <div className="mt-7 flex items-center gap-2">
+                <button
+                  aria-label="Previous product"
+                  className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-white/40 hover:bg-white/10"
+                  onClick={goToPrevious}
+                  type="button"
                 >
-                  {productOptions.map((item, index) => (
-                    <option key={item.name} value={index}>
-                      {item.name}
-                    </option>
-                  ))}
-                </select>
+                  <FiArrowLeft />
+                </button>
+                <Link
+                  className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d] sm:flex-none"
+                  href={selectedProduct.link}
+                >
+                  Explore
+                  <FiArrowRight aria-hidden="true" />
+                </Link>
+                <button
+                  aria-label="Next product"
+                  className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-white/40 hover:bg-white/10"
+                  onClick={goToNext}
+                  type="button"
+                >
+                  <FiArrowRight />
+                </button>
               </div>
             </div>
 
-            <div className="hidden h-full min-h-[250px] rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm lg:flex lg:flex-col">
-              <ul className="max-h-[294px] flex-1 space-y-2 overflow-y-auto pr-1">
-                {productOptions.map((item, index) => (
-                  <li key={item.name}>
-                    <button
-                      className={`group w-full rounded-xl border p-3 text-left transition ${
-                        index === selectedIndex
-                          ? "border-[#E63946]/30 bg-[#E63946]/5 text-[#E63946] shadow-sm"
-                          : "border-zinc-200 bg-white text-zinc-900 hover:border-[#E63946]/30 hover:bg-[#E63946]/5"
-                      }`}
-                      onClick={() => setSelectedIndex(index)}
-                      type="button"
-                    >
-                      <span className="flex items-center gap-3">
-                        <span
-                          className={`h-2.5 w-2.5 shrink-0 rounded-full transition ${
-                            index === selectedIndex
-                              ? "bg-[#E63946]"
-                              : "bg-zinc-300 group-hover:bg-[#E63946]/60"
-                          }`}
-                        />
-                        <span className="text-sm font-medium leading-5">
-                          {item.name}
-                        </span>
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
+            {/* Image stage */}
+            <div className="relative flex aspect-square items-center justify-center">
+              <div className="absolute left-1/2 top-1/2 h-[88%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10" />
+              <div className="absolute left-1/2 top-1/2 h-[68%] w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#BE0010]/25" />
+              <div className="absolute bottom-6 left-1/2 h-12 w-[70%] -translate-x-1/2 rounded-[50%] bg-[#BE0010]/10 blur-xl" />
+
+              <div className="relative flex h-[78%] w-[78%] items-center justify-center">
+                <Image
+                  alt={selectedProduct.name}
+                  className="object-contain p-4 drop-shadow-[0_30px_40px_rgba(190,0,16,0.25)] transition duration-500"
+                  fill
+                  key={selectedProduct.image}
+                  priority={selectedIndex === 0}
+                  sizes="(min-width: 1024px) 40vw, 85vw"
+                  src={selectedProduct.image}
+                />
+              </div>
+
+              <div className="absolute bottom-2 left-2 flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
+                <FiCheckCircle className="text-[#ff6b75]" />
+                Curated by specialists
+              </div>
+
+              <div className="absolute -right-3 -top-3 size-24 overflow-hidden rounded-full border-2 border-[#BE0010] bg-white shadow-lg shadow-[#BE0010]/30 sm:size-32">
+                <Image
+                  alt="Dr Dexter"
+                  className="object-contain"
+                  fill
+                  sizes="128px"
+                  src="/assets/home/Dexter-2.0.gif"
+                  unoptimized
+                />
+              </div>
             </div>
           </div>
+        </div>
 
-          <div className="lg:col-span-9">
-            <div className="grid h-full grid-cols-1 gap-6 px-0 py-2 lg:grid-cols-5">
-              <div
-                className="relative lg:col-span-3 lg:min-h-[360px]"
-                onMouseLeave={handleMouseLeave}
-                onMouseMove={handleMouseMove}
-                ref={cardRef}
+        {/* Thumbnail dock */}
+        <div className="mt-8 flex items-end justify-center gap-3 overflow-x-auto px-1 pb-2">
+          {productOptions.map((item, index) => {
+            const active = index === selectedIndex;
+
+            return (
+              <button
+                aria-label={item.name}
+                aria-pressed={active}
+                className={`relative shrink-0 overflow-hidden rounded-2xl border-2 bg-white transition-all duration-300 ${
+                  active
+                    ? "size-20 border-[#BE0010] shadow-lg shadow-[#BE0010]/30 sm:size-24"
+                    : "size-14 border-white/10 opacity-60 hover:opacity-100 hover:border-white/30 sm:size-16"
+                }`}
+                key={item.name}
+                onClick={() => setSelectedIndex(index)}
+                type="button"
               >
-                <div
-                  className="relative flex h-[280px] w-full items-center justify-center overflow-hidden rounded-2xl border border-zinc-200 bg-gradient-to-br from-white to-zinc-50 transition-transform duration-200 sm:h-[360px]"
-                  style={{
-                    transform: `perspective(900px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-                  }}
-                >
-                  <div className="absolute -inset-10 bg-[radial-gradient(500px_200px_at_50%_20%,rgba(230,57,70,0.10),transparent)]" />
-                  <Image
-                    alt={selectedProduct.name}
-                    className="object-contain p-8 drop-shadow-[0_20px_25px_rgba(0,0,0,0.15)]"
-                    fill
-                    key={selectedProduct.image}
-                    sizes="(min-width: 1024px) 50vw, 96vw"
-                    src={selectedProduct.image}
-                  />
-                  <div
-                    className="pointer-events-none absolute top-0 h-full w-1/5 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent transition-[left] duration-200"
-                    style={{ left: `${glare}%` }}
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col justify-center gap-4 px-4 lg:col-span-2">
-                <div className="relative mx-auto aspect-[4/3] w-[80%] max-w-[280px] overflow-hidden rounded-lg bg-white">
-                  <Image
-                    alt="Dr Dexter"
-                    className="object-contain"
-                    fill
-                    sizes="280px"
-                    src="/assets/home/Dexter-2.0.gif"
-                    unoptimized
-                  />
-                </div>
-
-                <div className="flex justify-center">
-                  <Link
-                    className="inline-flex items-center gap-2 rounded-full bg-[#E63946] px-5 py-2.5 font-semibold text-white shadow transition hover:-translate-y-0.5 hover:bg-red-700"
-                    href={selectedProduct.link}
-                  >
-                    Explore
-                    <FiArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+                <Image
+                  alt=""
+                  className="object-contain p-1.5"
+                  fill
+                  sizes="96px"
+                  src={item.image}
+                />
+              </button>
+            );
+          })}
         </div>
       </div>
     </section>

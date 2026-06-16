@@ -1,6 +1,9 @@
 import { Roboto } from "next/font/google";
 import Footer from "@/components/common/Footer";
+import FloatingQuickActions from "@/components/common/FloatingQuickActions";
 import Header from "@/components/common/Header";
+import PromoPopup from "@/components/common/PromoPopup";
+import ProductProfileFloat from "@/components/common/ProductProfileFloat";
 import ScrollAnimations from "@/components/common/ScrollAnimations";
 import "./globals.css";
 
@@ -33,6 +36,9 @@ export default function RootLayout({ children }) {
         <Header />
         <div className="flex-1 w-[90%] mx-auto">{children}</div>
         <Footer />
+        <ProductProfileFloat />
+        <PromoPopup />
+        <FloatingQuickActions />
       </body>
     </html>
   );

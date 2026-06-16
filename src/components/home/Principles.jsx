@@ -57,9 +57,7 @@ function OrbitRing({ logos, ringIndex }) {
 
 export default function Principles() {
   return (
-    <section className="relative min-h-screen overflow-hidden py-10">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)]" />
-
+    <section className="relative min-h-screen overflow-hidden bg-white py-10">
       <SectionHeading
         eyebrow="Our Principles"
         title="Strategic Alliances with Global Scientific Leaders"
@@ -75,7 +73,7 @@ export default function Principles() {
             />
           ))}
 
-          <div className="absolute left-1/2 top-1/2 z-20 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white p-2 shadow-[0_0_25px_rgba(230,57,70,0.3)] sm:h-28 sm:w-28">
+          <div className="absolute left-1/2 top-1/2 z-20 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full sm:h-28 sm:w-28">
             <Image
               alt="Inkarp"
               className="object-contain p-2"

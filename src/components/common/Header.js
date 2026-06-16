@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
   FiChevronDown,
-  FiDownload,
   FiMenu,
   FiSearch,
   FiX,
@@ -65,12 +64,12 @@ export default function Header() {
   };
 
   return (
-    <header className="font-maxot sticky top-0 z-50 px-3 py-3 sm:px-5">
-      <div className="mx-auto max-w-[1480px]">
-        <div className="relative flex min-h-20 items-center gap-3 rounded-lg border border-zinc-200/80 bg-white/90 px-3 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+    <header className="font-maxot sticky top-0 z-50 backdrop-blur-2xl ">
+      <div className="mx-auto max-w-[1480px] ">
+        <div className="relative flex min-h-14 items-center gap-3 ">
           <Link
             aria-label={`${company.name} home`}
-            className="relative flex h-14 w-52 shrink-0 items-center rounded-lg bg-white px-3  sm:w-60"
+            className="relative flex h-14 w-52 shrink-0 items-center rounded-lg px-3  sm:w-60"
             href="/"
             onClick={closeMenu}
           >
@@ -143,15 +142,6 @@ export default function Header() {
               <span className="truncate">Search products...</span>
             </button>
 
-            <a
-              aria-label="Download product profile"
-              className="inline-flex h-12 items-center gap-2 rounded-lg bg-[#BE0010] px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-[#9a000d]"
-              download
-              href="/assets/productProfile/Inkarp_product_profile_2026.pdf"
-            >
-              <FiDownload className="text-base" />
-              Profile
-            </a>
           </div>
 
           <div className="ml-auto flex items-center gap-2 2xl:hidden">
@@ -182,15 +172,6 @@ export default function Header() {
           aria-label="Mobile navigation"
           className="mx-auto mt-3 max-w-[1480px] rounded-lg border border-zinc-200 bg-white p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] 2xl:hidden"
         >
-          <a
-            className="mb-3 flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#BE0010] px-4 text-sm font-semibold text-white"
-            download
-            href="/assets/productProfile/Inkarp_product_profile_2026.pdf"
-          >
-            <FiDownload className="text-base" />
-            Download Product Profile
-          </a>
-
           <ul className="space-y-1">
             {navigation.map((item) => {
               const isOpen = openMobileItem === item.label;

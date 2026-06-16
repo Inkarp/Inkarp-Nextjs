@@ -70,7 +70,7 @@ export default function Header() {
         <div className="relative flex min-h-20 items-center gap-3 rounded-lg border border-zinc-200/80 bg-white/90 px-3 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-xl">
           <Link
             aria-label={`${company.name} home`}
-            className="relative flex h-14 w-52 shrink-0 items-center rounded-lg bg-white px-3 ring-1 ring-zinc-200 transition hover:ring-[#BE0010]/30 sm:w-60"
+            className="relative flex h-14 w-52 shrink-0 items-center rounded-lg bg-white px-3  sm:w-60"
             href="/"
             onClick={closeMenu}
           >

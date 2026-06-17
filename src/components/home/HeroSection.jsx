@@ -146,8 +146,8 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative bg-white py-2 sm:py-3">
-      <div className="relative mx-auto h-[320px] w-[98%] max-w-[98vw] overflow-hidden rounded-xl bg-zinc-950 shadow-xl shadow-zinc-900/10 sm:h-[450px] md:h-[520px] lg:h-[680px]">
+    <section className="relative sm:py-3">
+      <div className="relative mx-auto h-[320px] overflow-hidden rounded-xl sm:h-[450px] md:h-[520px] lg:h-[680px]">
         <div className="absolute inset-0">
           {isVideoSlide ? (
             <video

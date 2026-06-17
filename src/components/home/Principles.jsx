@@ -59,7 +59,7 @@ export default function Principles() {
   const mobileLogos = principalLogoRows.flat();
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 lg:min-h-screen lg:px-8 lg:py-16">
+    <section className="relative overflow-hidden px-4 py-12 sm:px-6 lg:min-h-screen lg:px-8 lg:py-16">
       <SectionHeading
         eyebrow="Our Principles"
         title="Strategic Alliances with Global Scientific Leaders"

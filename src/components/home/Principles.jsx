@@ -12,7 +12,7 @@ function PrincipalOrbitLogo({ logo, angle }) {
   return (
     <Link
       aria-label={logo.name}
-      className="absolute flex h-[45px] w-[60px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg bg-white p-2 shadow-[0_8px_24px_rgba(15,23,42,0.12)] transition duration-300 hover:z-30 hover:scale-125 sm:h-[58px] sm:w-[78px] lg:h-[64px] lg:w-[88px]"
+      className="absolute flex h-[68px] w-[96px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg bg-white p-2.5  transition duration-300 hover:z-30 hover:scale-110 xl:h-[76px] xl:w-[108px]"
       href={logo.href ?? "/products"}
       style={{
         left: `${x}%`,
@@ -23,7 +23,7 @@ function PrincipalOrbitLogo({ logo, angle }) {
         alt={logo.name}
         className="object-contain"
         fill
-        sizes="(min-width: 1024px) 88px, (min-width: 640px) 78px, 60px"
+        sizes="(min-width: 1280px) 108px, 96px"
         src={logo.logo}
         unoptimized={logo.logo.endsWith(".gif")}
       />
@@ -56,15 +56,39 @@ function OrbitRing({ logos, ringIndex }) {
 }
 
 export default function Principles() {
+  const mobileLogos = principalLogoRows.flat();
+
   return (
-    <section className="relative min-h-screen overflow-hidden bg-white py-10">
+    <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 lg:min-h-screen lg:px-8 lg:py-16">
       <SectionHeading
         eyebrow="Our Principles"
         title="Strategic Alliances with Global Scientific Leaders"
       />
 
-      <div className="relative mx-auto h-[520px] w-full max-w-7xl overflow-visible sm:h-[640px] lg:h-[780px]">
-        <div className="absolute left-1/2 top-1/2 aspect-square w-[min(94vw,850px)] -translate-x-1/2 -translate-y-1/2">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">
+        {mobileLogos.map((logo, index) => (
+          <Link
+            aria-label={logo.name}
+            className="flex min-h-24 items-center justify-center rounded-lg border border-zinc-200 bg-white p-3 shadow-sm shadow-zinc-900/5"
+            href={logo.href ?? "/products"}
+            key={`${logo.name}-${index}`}
+          >
+            <span className="relative h-14 w-full">
+              <Image
+                alt={logo.name}
+                className="object-contain"
+                fill
+                sizes="(min-width: 640px) 30vw, 45vw"
+                src={logo.logo}
+                unoptimized={logo.logo.endsWith(".gif")}
+              />
+            </span>
+          </Link>
+        ))}
+      </div>
+
+      <div className="relative mx-auto hidden h-[900px] w-full max-w-7xl overflow-visible lg:block xl:h-[980px]">
+        <div className="absolute left-1/2 top-1/2 aspect-square w-[min(88vw,980px)] -translate-x-1/2 -translate-y-1/2">
           {principalLogoRows.map((logos, ringIndex) => (
             <OrbitRing
               key={`orbit-ring-${ringIndex}`}
@@ -73,14 +97,14 @@ export default function Principles() {
             />
           ))}
 
-          <div className="absolute left-1/2 top-1/2 z-20 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full sm:h-28 sm:w-28">
+          <div className="absolute left-1/2 top-1/2 z-20 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 p-4 shadow-xl shadow-zinc-900/10">
             <Image
               alt="Inkarp"
-              className="object-contain p-2"
+              className="object-contain"
               fill
               priority
-              sizes="112px"
-              src="/inkarpLogo.svg"
+              sizes="128px"
+              src="/InkarpLogo.svg"
             />
           </div>
         </div>

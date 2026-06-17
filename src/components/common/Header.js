@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   FiChevronDown,
   FiMenu,
@@ -57,14 +57,46 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [openMobileItem, setOpenMobileItem] = useState(null);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const previousScrollY = useRef(0);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
     setOpenMobileItem(null);
   };
 
+  useEffect(() => {
+    previousScrollY.current = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 24) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > previousScrollY.current) {
+        setIsHeaderVisible(false);
+      } else if (currentScrollY < previousScrollY.current) {
+        setIsHeaderVisible(true);
+      }
+
+      previousScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const shouldShowHeader = isHeaderVisible || isMenuOpen || isSearchOpen;
+
   return (
-    <header className="font-maxot sticky top-0 z-50 backdrop-blur-2xl ">
+    <header
+      className={`font-maxot sticky top-0 z-50 backdrop-blur-2xl transition-transform duration-300 ease-out ${
+        shouldShowHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="mx-auto max-w-[1480px] ">
         <div className="relative flex min-h-14 items-center gap-3 ">
           <Link

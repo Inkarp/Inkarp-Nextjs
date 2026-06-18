@@ -5,11 +5,7 @@ import { useEffect } from "react";
 const revealSelector = [
   "[data-reveal]",
   "main section",
-  "main article",
-  "main h1",
-  "main h2",
-  "main h3",
-  "main p",
+  'main article[data-scroll-reveal="true"]',
 ].join(",");
 
 export default function ScrollAnimations() {
@@ -34,7 +30,8 @@ export default function ScrollAnimations() {
     const observeRevealItems = () => {
       const revealItems = Array.from(document.querySelectorAll(revealSelector))
         .filter((item) => !item.closest("header"))
-        .filter((item) => !item.closest("footer"));
+        .filter((item) => !item.closest("footer"))
+        .filter((item) => !item.closest("[data-scroll-skip]"));
 
       revealItems.forEach((item) => {
         if (observedItems.has(item) || item.dataset.scrollVisible === "true") {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllProducts, searchProducts } from "@/data/products/principals";
 import ProductFilterForm from "@/components/products/ProductFilterForm";
+import StickyProductSearch from "@/components/products/StickyProductSearch";
 
 export const metadata = {
   title: "Products - Inkarp Instruments Pvt Ltd",
@@ -22,7 +23,7 @@ export default async function ProductsPage({ searchParams }) {
   const products = searchProducts(filters);
 
   return (
-    <main className="bg-zinc-50 min-h-screen">
+    <main className="bg-zinc-50 min-h-screen" data-scroll-skip>
       {/* Page header */}
       <section className="border-b border-zinc-200 bg-white px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-center gap-2">
@@ -40,19 +41,17 @@ export default async function ProductsPage({ searchParams }) {
       </section>
 
       {/* Sticky search toolbar */}
-      <div className="sticky top-24 z-30 border-b border-zinc-200 bg-zinc-50/95 px-4 py-3 backdrop-blur sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <ProductFilterForm
-            key={filters.q}
-            productCount={products.length}
-            query={filters.q}
-            totalCount={totalProducts}
-          />
-        </div>
-      </div>
+      <StickyProductSearch>
+        <ProductFilterForm
+          key={filters.q}
+          productCount={products.length}
+          query={filters.q}
+          totalCount={totalProducts}
+        />
+      </StickyProductSearch>
 
       {/* Product grid */}
-      <section className="px-4 py-6 sm:px-6 lg:px-8">
+      <section className="relative px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {products.length > 0 ? (
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

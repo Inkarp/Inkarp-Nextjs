@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const BASE_URL = "https://ribbit.dk";
@@ -137,7 +138,7 @@ function AnimatedFigure({ figure }) {
       </picture>
 
       <div className={isPlaying ? "animation-layer is-visible" : "animation-layer"}>
-        <img
+        <Image
           className="sequence-image"
           src={getFramePath(figure.path, frame)}
           width={figure.frameWidth}

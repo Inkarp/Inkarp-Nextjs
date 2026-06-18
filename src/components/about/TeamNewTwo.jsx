@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 import SectionHeading from "@/components/home/SectionHeading";
 
 const directors = [
@@ -37,55 +41,129 @@ const directors = [
   },
 ];
 
-function DirectorCard({ director }) {
+function DirectorTab({ director, index, isActive, onSelect }) {
   return (
-    <article
-      className="group flex h-full flex-col rounded-lg border border-zinc-200 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-[#E63946] hover:shadow-md"
-      data-scroll-reveal="true"
+    <button
+      className={`group flex w-full items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition duration-300 ${
+        isActive
+          ? "border-[#BE0010] bg-[#BE0010] shadow-lg shadow-[#BE0010]/20"
+          : "border-zinc-200 bg-white hover:border-[#BE0010]/40 hover:bg-[#fff3f4]"
+      }`}
+      onClick={() => onSelect(index)}
+      type="button"
     >
-      <div className="p-3">
-        <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-lg bg-zinc-50">
-          <Image
-            alt={director.name}
-            className="object-contain transition duration-300 group-hover:scale-[1.02]"
-            fill
-            sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
-            src={director.img}
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-1 flex-col px-4 pb-5 text-center">
-        <h3 className="font-maxot text-xl text-[#BE0010]">{director.name}</h3>
-        <p className="mt-1 font-maxot text-sm text-zinc-500">
-          {director.title}
-        </p>
-        <p className="mt-3 flex-1 text-left text-sm leading-6 text-zinc-700">
-          {director.message}
-        </p>
-        <a
-          aria-label={`${director.name} on LinkedIn`}
-          className="mx-auto mt-4 inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-blue-600 shadow-sm transition hover:text-blue-800 hover:shadow"
-          href={director.link}
-          rel="noopener noreferrer"
-          target="_blank"
+      <span
+        className={`font-maxot text-xl font-bold tabular-nums ${
+          isActive ? "text-white/60" : "text-zinc-300 group-hover:text-[#BE0010]/40"
+        }`}
+      >
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span
+          className={`block truncate font-maxot text-sm font-bold ${
+            isActive ? "text-white" : "text-zinc-950"
+          }`}
         >
-          <FaLinkedin aria-hidden="true" className="size-5" />
-        </a>
-      </div>
-    </article>
+          {director.name}
+        </span>
+        <span
+          className={`block truncate text-xs ${
+            isActive ? "text-white/75" : "text-zinc-500"
+          }`}
+        >
+          {director.title}
+        </span>
+      </span>
+      <FiArrowUpRight
+        aria-hidden="true"
+        className={`shrink-0 text-lg transition ${
+          isActive
+            ? "text-white"
+            : "text-zinc-300 group-hover:translate-x-0.5 group-hover:text-[#BE0010]"
+        }`}
+      />
+    </button>
   );
 }
 
 export default function TeamNewTwo() {
-  return (
-    <section className="relative px-4 py-12 sm:px-6 lg:px-10">
-      <SectionHeading eyebrow="Our Directors" />
+  const [activeIndex, setActiveIndex] = useState(0);
+  const active = directors[activeIndex];
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {directors.map((director) => (
-          <DirectorCard director={director} key={director.name} />
-        ))}
+  return (
+    <section className="relative overflow-hidden bg-[#fff3f4] px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+      <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(30deg,#BE0010_1px,transparent_1px),linear-gradient(150deg,#BE0010_1px,transparent_1px)] [background-size:46px_46px]" />
+
+      <div className="relative mx-auto max-w-6xl">
+        <SectionHeading
+          description="Meet the people steering operations, service, and growth across every region we serve."
+          eyebrow="Our Directors"
+        />
+
+        <div className="grid gap-6 lg:grid-cols-[360px_1fr]">
+          <div className="flex flex-col gap-3">
+            {directors.map((director, index) => (
+              <DirectorTab
+                director={director}
+                index={index}
+                isActive={index === activeIndex}
+                key={director.name}
+                onSelect={setActiveIndex}
+              />
+            ))}
+          </div>
+
+          <article
+            className="relative overflow-hidden rounded-2xl bg-white shadow-2xl shadow-zinc-950/10"
+            data-scroll-reveal="true"
+            key={active.name}
+          >
+            <div className="grid sm:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr]">
+              <div className="relative aspect-square overflow-hidden bg-zinc-50 sm:aspect-auto">
+                <Image
+                  alt={active.name}
+                  className="object-cover"
+                  fill
+                  sizes="(min-width: 1024px) 260px, (min-width: 640px) 220px, 100vw"
+                  src={active.img}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent sm:bg-gradient-to-r" />
+                <span className="absolute bottom-3 left-3 font-maxot text-5xl font-bold text-white/25 sm:hidden">
+                  {String(activeIndex + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              <div className="flex flex-col p-6 sm:p-8">
+                <span className="hidden font-maxot text-6xl font-bold text-[#BE0010]/10 sm:block">
+                  {String(activeIndex + 1).padStart(2, "0")}
+                </span>
+
+                <h3 className="font-maxot mt-1 text-2xl text-zinc-950 sm:text-3xl">
+                  {active.name}
+                </h3>
+                <p className="mt-1 font-maxot text-sm font-semibold text-[#BE0010]">
+                  {active.title}
+                </p>
+
+                <p className="mt-4 flex-1 text-sm leading-7 text-zinc-600 sm:text-base">
+                  {active.message}
+                </p>
+
+                <a
+                  aria-label={`${active.name} on LinkedIn`}
+                  className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-xs font-semibold text-zinc-700 transition hover:border-blue-600 hover:text-blue-700"
+                  href={active.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FaLinkedin aria-hidden="true" className="size-4 text-blue-600" />
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   );

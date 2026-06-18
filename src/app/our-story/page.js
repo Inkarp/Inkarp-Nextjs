@@ -1,7 +1,8 @@
+import Directors from "@/components/about/Directors";
+import DirectorsShowcase from "@/components/about/DirectorsShowcase";
 import EmpathyTeam from "@/components/about/EmpathyTeam";
 import InkarpBio from "@/components/about/InkarpBio";
 import MissionVision from "@/components/about/MissionVision";
-import TeamNewTwo from "@/components/about/TeamNewTwo";
 import TrustedClients from "@/components/about/TrustedClients";
 
 export const metadata = {
@@ -25,7 +26,8 @@ export default function OurStory() {
         <div className="absolute inset-0  backdrop-blur-[1px]" />
         <div className="relative z-10">
           <EmpathyTeam />
-          <TeamNewTwo />
+          <Directors />
+          <DirectorsShowcase />
         </div>
       </section>
     </main>

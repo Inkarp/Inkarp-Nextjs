@@ -110,16 +110,6 @@ export const principalLogoRows = [
       logo: "/assets/images/PrincipalLogos/RowOne/dara-lyo.svg",
       href: "/products?q=daralyo",
     },
-    {
-      name: "SP Scientific",
-      logo: "/assets/images/PrincipalLogos/RowOne/SP-Scientific.png",
-      href: "/products?q=sp scientific",
-    },
-    {
-      name: "FOM Technologies",
-      logo: "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
-      href: "/products?q=fom",
-    },
   ],
   [
     {
@@ -137,11 +127,7 @@ export const principalLogoRows = [
       logo: "/assets/images/PrincipalLogos/RowTwo/waters.svg",
       href: "/products?q=waters",
     },
-    {
-      name: "Maccor",
-      logo: "/assets/images/PrincipalLogos/RowTwo/Maccor.jpg",
-      href: "/products?q=maccor",
-    },
+    
     {
       name: "Labstation",
       logo: "/assets/images/PrincipalLogos/RowTwo/labstation.svg",
@@ -157,18 +143,9 @@ export const principalLogoRows = [
       logo: "/assets/images/PrincipalLogos/RowThree/bandelin.jpg",
       href: "/products?q=bandelin",
     },
-    {
-      name: "Kubota",
-      logo: "/assets/images/PrincipalLogos/RowThree/Kubota.png",
-      href: "/products?q=kubota",
-    },
+
   ],
   [
-    {
-      name: "Jeiotech",
-      logo: "/assets/images/PrincipalLogos/RowThree/Jeiotch.png",
-      href: "/products?q=jeiotech",
-    },
     {
       name: "Luzchem",
       logo: "/assets/images/PrincipalLogos/RowThree/Luzchem.png",
@@ -178,11 +155,6 @@ export const principalLogoRows = [
       name: "Sonics",
       logo: "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
       href: "/products?q=sonics",
-    },
-    {
-      name: "Being",
-      logo: "/assets/images/PrincipalLogos/RowThree/Being.svg",
-      href: "/products?q=being",
     },
     {
       name: "Robot Coupe",
@@ -298,55 +270,31 @@ export const principalLogoRows = [
     },
   ],
   [
-    {
-      name: "AP",
-      logo: "/assets/images/PrincipalLogos/RowSix/AP.png",
-      href: "/products?q=ap",
-    },
-    {
-      name: "Azenta",
-      logo: "/assets/images/PrincipalLogos/RowSix/Azenta.jpg",
-      href: "/products?q=azenta",
-    },
-    {
-      name: "Imina Technologies",
-      logo: "/assets/images/PrincipalLogos/RowSix/Imina.svg",
-      href: "/products?q=imina",
+   {
+      name: "Maccor",
+      logo: "/assets/images/PrincipalLogos/RowTwo/Maccor.jpg",
+      href: "/products?q=maccor",
     },
     {
       name: "LUMICKS",
       logo: "/assets/images/PrincipalLogos/RowSix/LUMICKS.png",
       href: "/products?q=lumicks",
     },
-    {
-      name: "Hawk",
-      logo: "/assets/images/PrincipalLogos/RowSeven/hawk.png",
-      href: "/products?q=hawk",
+    
+   {
+      name: "Kubota",
+      logo: "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+      href: "/products?q=kubota",
     },
     {
-      name: "Hermle",
-      logo: "/assets/images/PrincipalLogos/RowSeven/hermle.jpg",
-      href: "/products?q=hermle",
+      name: "SP Scientific",
+      logo: "/assets/images/PrincipalLogos/RowOne/SP-Scientific.png",
+      href: "/products?q=sp scientific",
     },
     {
-      name: "RareCyte",
-      logo: "/assets/images/PrincipalLogos/RowSeven/RareCyte.png",
-      href: "/products?q=rarecyte",
-    },
-    {
-      name: "Airtech",
-      logo: "/assets/images/PrincipalLogos/RowFour/Airtech.png",
-      href: "/products?q=airtech",
-    },
-    {
-      name: "Anvajo",
-      logo: "/assets/images/PrincipalLogos/RowFour/Anvajo.svg",
-      href: "/products?q=anvajo",
-    },
-    {
-      name: "Innova",
-      logo: "/assets/images/PrincipalLogos/RowFour/Innova.png",
-      href: "/products?q=innova",
+      name: "FOM Technologies",
+      logo: "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+      href: "/products?q=fom",
     },
   ],
 ];

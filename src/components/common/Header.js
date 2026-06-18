@@ -132,17 +132,13 @@ export default function Header() {
       >
         <div className="mx-auto flex max-w-[1480px] flex-col gap-3 px-4 py-3 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/80">
-            {/* <span className="inline-flex items-center gap-2">
-              <FiMapPin className="text-[#BE0010]" />
-              {contact.addressNav}
-            </span> */}
-            <a
-              className="inline-flex items-center gap-2 transition hover:text-[#BE0010] hover:underline"
+            <Link
+              className="inline-flex items-center gap-2 transition hover:text-[#BE0010] hover:underline "
               href={`mailto:${contact.email}`}
             >
               <FiMail className="text-[#BE0010]" />
               {contact.email}
-            </a>
+            </Link>
             <span className="hidden items-center gap-2 xl:inline-flex">
               <FiPhoneCall className="text-[#BE0010]" />
               {contact.phone}
@@ -214,7 +210,7 @@ export default function Header() {
                   return (
                     <li className="group relative" key={item.label}>
                       <Link
-                        className={`flex h-11 items-center gap-1 px-3 text-base font-semibold transition ${active
+                        className={`flex h-11 items-center gap-1 px-3 text-base  transition ${active
                             ? "text-[#BE0010]"
                             : "text-zinc-600 hover:text-[#BE0010]"
                           }`}

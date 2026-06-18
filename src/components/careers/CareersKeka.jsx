@@ -151,18 +151,18 @@ function JobCard({ job }) {
 
   return (
     <article className="mt-4 rounded-lg border border-zinc-200">
-      <div className="flex flex-col justify-between gap-3 p-4 sm:flex-row sm:items-center sm:p-6">
-        <div className="min-w-0">
-          <h3 className="font-maxot mb-1 text-lg sm:text-xl">
+      <div className="flex flex-col justify-between gap-5 p-4 sm:flex-row sm:items-center sm:p-6">
+        <div className="flex min-w-0 flex-1 flex-col gap-3">
+          <h3 className="font-maxot text-lg leading-snug text-zinc-950 sm:text-xl">
             {title || "Untitled role"}
           </h3>
 
-          <div className="mt-1 flex flex-wrap gap-2 text-xs text-zinc-700 sm:text-sm">
-            <span className="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-[#F5F5F5] px-2.5 py-1">
+          <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-700 sm:text-sm">
+            <span className="inline-flex min-h-7 items-center gap-1 rounded-full border border-zinc-200 bg-[#F5F5F5] px-2.5 py-1 leading-none">
               <FiMapPin aria-hidden="true" className="size-3.5 text-[#E63946]" />
               <span className="font-medium">{shownLocation}</span>
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-[#F5F5F5] px-2.5 py-1">
+            <span className="inline-flex min-h-7 items-center gap-1 rounded-full border border-zinc-200 bg-[#F5F5F5] px-2.5 py-1 leading-none">
               <FiBriefcase
                 aria-hidden="true"
                 className="size-3.5 text-[#E63946]"

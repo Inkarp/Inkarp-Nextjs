@@ -261,25 +261,7 @@ export default function AwardsRecognition() {
 
       <RecognitionDifference />
 
-      <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col gap-5 rounded-lg border border-[#BE0010]/15 bg-[#fff3f4] p-6 shadow-xl shadow-[#BE0010]/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
-              More milestones
-            </p>
-            <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">
-              Share new awards and we can keep expanding this page.
-            </h2>
-          </div>
-          <Link
-            className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
-            href="/contact-us"
-          >
-            Contact Inkarp
-            <FiArrowRight aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
+   
     </main>
   );
 }

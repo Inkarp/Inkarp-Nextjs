@@ -80,7 +80,8 @@ export const siteConfig = {
   contact: {
     phone: "+91 8125580808",
     email: "info@inkarp.co.in",
-    address: "Hyderabad, Telangana, India",
+    address: "Plot No - 5A/10-11 3rd Floor, IDA Nacharam Road, 1, Chilka Nagar Main Rd, Nacharam, Hyderabad, Telangana 500076",
+    addressNav: "Hyderabad, Telangana 500076",
   },
   socials: {
     linkedin: "https://www.linkedin.com/company/inkarp",

@@ -121,25 +121,23 @@ export default function Header() {
 
   return (
     <header
-      className={`font-maxot sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${
-        shouldShowHeader ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`font-maxot sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <div
-        className={`overflow-hidden bg-black text-white transition-[max-height,opacity] duration-300 ease-out ${
-          isAtTop || isMenuOpen || isSearchOpen
+        className={`overflow-hidden bg-black text-white transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
             ? "max-h-40 opacity-100"
             : "max-h-0 opacity-0"
-        }`}
+          }`}
       >
         <div className="mx-auto flex max-w-[1480px] flex-col gap-3 px-4 py-3 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/80">
-            <span className="inline-flex items-center gap-2">
+            {/* <span className="inline-flex items-center gap-2">
               <FiMapPin className="text-[#BE0010]" />
-              {contact.address}
-            </span>
+              {contact.addressNav}
+            </span> */}
             <a
-              className="inline-flex items-center gap-2 transition hover:text-white"
+              className="inline-flex items-center gap-2 transition hover:text-[#BE0010] hover:underline"
               href={`mailto:${contact.email}`}
             >
               <FiMail className="text-[#BE0010]" />
@@ -155,7 +153,7 @@ export default function Header() {
             <nav aria-label="Quick links" className="flex items-center gap-3">
               {topLinks.map((link) => (
                 <Link
-                  className="text-white/80 transition hover:text-[#14c878]"
+                  className="text-white/80 transition hover:text-[#BE0010]"
                   href={link.href}
                   key={link.href}
                 >
@@ -171,7 +169,7 @@ export default function Header() {
                 return (
                   <Link
                     aria-label={item.label}
-                    className="text-white text-xl transition hover:text-[#9f000d]"
+                    className="text-white text-xl transition hover:text-[#BE0010]"
                     href={item.href}
                     key={item.label}
                     rel="noreferrer"
@@ -187,91 +185,81 @@ export default function Header() {
       </div>
 
       <div className="bg-white">
-        <div className="mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-8">
-        <div className="relative flex min-h-20 items-center gap-4">
-          <Link
-            aria-label={`${company.name} home`}
-            className="relative flex h-16 w-48 shrink-0 items-center rounded-lg sm:w-56"
-            href="/"
-            onClick={closeMenu}
-          >
-            <Image
-              alt={`${company.name} logo`}
-              className="object-contain"
-              fill
-              priority
-              sizes="240px"
-              src={company.logo}
-            />
-          </Link>
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
+          <div className="relative flex min-h-20 items-center gap-4">
+            <Link
+              aria-label={`${company.name} home`}
+              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg sm:w-56"
+              href="/"
+              onClick={closeMenu}
+            >
+              <Image
+                alt={`${company.name} logo`}
+                className="object-contain"
+                fill
+                priority
+                sizes="240px"
+                src={company.logo}
+              />
+            </Link>
 
-          <nav
-            aria-label="Primary navigation"
-            className="hidden min-w-0 flex-1 xl:block"
-          >
-            <ul className="flex items-center justify-center gap-2">
-              {mainNavigation.map((item) => {
-                const active = isNavActive(item, pathname);
+            <nav
+              aria-label="Primary navigation"
+              className="hidden min-w-0 flex-1 xl:block"
+            >
+              <ul className="flex items-center justify-center gap-2">
+                {mainNavigation.map((item) => {
+                  const active = isNavActive(item, pathname);
 
-                return (
-                  <li className="group relative" key={item.label}>
-                    <Link
-                      className={`flex h-11 items-center gap-1 px-3 text-base font-semibold transition ${
-                        active
-                          ? "text-[#BE0010]"
-                          : "text-zinc-600 hover:text-[#BE0010]"
-                      }`}
-                      href={getNavHref(item)}
-                    >
-                      <NavLabel item={item} />
-                      {item.children ? (
-                        <FiChevronDown
-                          className={`text-base transition group-hover:rotate-180 ${
-                            active ? "text-[#BE0010]" : "text-zinc-400"
+                  return (
+                    <li className="group relative" key={item.label}>
+                      <Link
+                        className={`flex h-11 items-center gap-1 px-3 text-base font-semibold transition ${active
+                            ? "text-[#BE0010]"
+                            : "text-zinc-600 hover:text-[#BE0010]"
                           }`}
-                        />
+                        href={getNavHref(item)}
+                      >
+                        <NavLabel item={item} />
+                        {item.children ? (
+                          <FiChevronDown
+                            className={`text-base transition group-hover:rotate-180 ${active ? "text-[#BE0010]" : "text-zinc-400"
+                              }`}
+                          />
+                        ) : null}
+                      </Link>
+
+                      {item.children ? (
+                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 translate-y-3 rounded-lg border border-zinc-200 bg-white p-2 opacity-0 shadow-[0_24px_60px_rgba(15,23,42,0.14)] transition group-hover:visible group-hover:translate-y-2 group-hover:opacity-100">
+                          {item.children.map((child) => (
+                            <Link
+                              className="block rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010]"
+                              href={child.href}
+                              key={child.label}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
                       ) : null}
-                    </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
 
-                    {item.children ? (
-                      <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 translate-y-3 rounded-lg border border-zinc-200 bg-white p-2 opacity-0 shadow-[0_24px_60px_rgba(15,23,42,0.14)] transition group-hover:visible group-hover:translate-y-2 group-hover:opacity-100">
-                        {item.children.map((child) => (
-                          <Link
-                            className="block rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010]"
-                            href={child.href}
-                            key={child.label}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : null}
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+            <div className="ml-auto hidden shrink-0 items-stretch xl:flex">
 
-          <div className="ml-auto hidden shrink-0 items-stretch xl:flex">
-            <a
-              aria-label="Download product profile"
-              className="inline-flex h-12 items-center justify-center gap-2 bg-zinc-100 px-7 text-sm font-bold text-[#071f3d] transition hover:bg-[#fff3f4] hover:text-[#BE0010]"
-              download
-              href={productProfileUrl}
-            >
-              <FaDownload className="text-base animate-bounce" />
-              Product Profile
-            </a>
-            <div className="mx-6 w-px bg-zinc-200" />
-            <button
-              aria-label="Search products"
-              className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-[#BE0010]"
-              onClick={() => setIsSearchOpen(true)}
-              type="button"
-            >
-              <FiSearch />
-            </button>
-            <a
+              <div className="mx-6 w-px bg-zinc-200" />
+              <button
+                aria-label="Search products"
+                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-[#BE0010]"
+                onClick={() => setIsSearchOpen(true)}
+                type="button"
+              >
+                <FiSearch />
+              </button>
+              {/* <a
               className="ml-5 inline-flex items-center gap-3 bg-[#BE0010] px-5 py-2 text-white transition hover:bg-[#9f000d]"
               href={`tel:${contact.phone.replaceAll(" ", "")}`}
             >
@@ -282,40 +270,48 @@ export default function Header() {
                 <span className="text-xs font-semibold">Call Us Anytime</span>
                 <span className="text-lg font-bold">{contact.phone}</span>
               </span>
-            </a>
+            </a> */}
+              <Link
+                aria-label="Download product profile"
+                className="inline-flex h-12 items-center justify-center gap-2 bg-zinc-100 px-7 text-sm font-bold text-[#071f3d] transition hover:bg-[#fff3f4] hover:text-[#BE0010]"
+                download
+                href={productProfileUrl}
+              >
+                <FaDownload className="text-base animate-bounce" />
+                Product Profile
+              </Link>
+            </div>
 
+            <div className="ml-auto flex items-center gap-2 xl:hidden">
+              <a
+                aria-label="Download product profile"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
+                download
+                href={productProfileUrl}
+              >
+                <FaDownload />
+              </a>
+
+              <button
+                aria-label="Search products"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
+                onClick={() => setIsSearchOpen(true)}
+                type="button"
+              >
+                <FiSearch />
+              </button>
+
+              <button
+                aria-expanded={isMenuOpen}
+                aria-label="Toggle menu"
+                className="inline-flex size-11 items-center justify-center rounded-lg bg-[#BE0010] text-2xl text-white transition hover:bg-[#9a000d]"
+                onClick={() => setIsMenuOpen((current) => !current)}
+                type="button"
+              >
+                {isMenuOpen ? <FiX /> : <FiMenu />}
+              </button>
+            </div>
           </div>
-
-          <div className="ml-auto flex items-center gap-2 xl:hidden">
-            <a
-              aria-label="Download product profile"
-              className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
-              download
-              href={productProfileUrl}
-            >
-              <FaDownload />
-            </a>
-
-            <button
-              aria-label="Search products"
-              className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
-              onClick={() => setIsSearchOpen(true)}
-              type="button"
-            >
-              <FiSearch />
-            </button>
-
-            <button
-              aria-expanded={isMenuOpen}
-              aria-label="Toggle menu"
-              className="inline-flex size-11 items-center justify-center rounded-lg bg-[#BE0010] text-2xl text-white transition hover:bg-[#9a000d]"
-              onClick={() => setIsMenuOpen((current) => !current)}
-              type="button"
-            >
-              {isMenuOpen ? <FiX /> : <FiMenu />}
-            </button>
-          </div>
-        </div>
         </div>
       </div>
 
@@ -333,11 +329,10 @@ export default function Header() {
                 <li key={item.label}>
                   <div className="flex items-center gap-2">
                     <Link
-                      className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium transition ${
-                        active
+                      className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium transition ${active
                           ? "bg-[#BE0010] text-white"
                           : "text-zinc-800 hover:bg-zinc-50 hover:text-[#BE0010]"
-                      }`}
+                        }`}
                       href={getNavHref(item)}
                       onClick={item.children ? undefined : closeMenu}
                     >
@@ -355,9 +350,8 @@ export default function Header() {
                         type="button"
                       >
                         <FiChevronDown
-                          className={`text-lg transition ${
-                            isOpen ? "rotate-180" : ""
-                          }`}
+                          className={`text-lg transition ${isOpen ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
                     ) : null}

@@ -59,7 +59,7 @@ export default function Principles() {
   const mobileLogos = principalLogoRows.flat();
 
   return (
-    <section className="relative overflow-hidden px-4 py-12 sm:px-6 lg:min-h-screen lg:px-8 lg:py-16">
+    <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 lg:min-h-screen lg:px-8 lg:py-16">
       <SectionHeading
         eyebrow="Our Principles"
         title="Strategic Alliances with Global Scientific Leaders"
@@ -76,9 +76,9 @@ export default function Principles() {
             <span className="relative h-14 w-full">
               <Image
                 alt={logo.name}
-                className="object-contain"
+                className="object-contain p-3"
                 fill
-                sizes="(min-width: 640px) 30vw, 45vw"
+                sizes="(min-width: 600px) 30vw, 45vw"
                 src={logo.logo}
                 unoptimized={logo.logo.endsWith(".gif")}
               />
@@ -87,7 +87,7 @@ export default function Principles() {
         ))}
       </div>
 
-      <div className="relative mx-auto hidden h-[900px] w-full max-w-7xl overflow-visible lg:block xl:h-[980px]">
+      <div className="relative mx-auto hidden h-[900px] w-full max-w-7xl overflow-visible lg:block xl:h-[980px] ">
         <div className="absolute left-1/2 top-1/2 aspect-square w-[min(88vw,980px)] -translate-x-1/2 -translate-y-1/2">
           {principalLogoRows.map((logos, ringIndex) => (
             <OrbitRing
@@ -100,7 +100,7 @@ export default function Principles() {
           <div className="absolute left-1/2 top-1/2 z-20 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 p-4 shadow-xl shadow-zinc-900/10">
             <Image
               alt="Inkarp"
-              className="object-contain"
+              className="object-contain p-3"
               fill
               priority
               sizes="128px"

@@ -5,14 +5,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import {
+  FiClock,
   FiChevronDown,
+  FiFacebook,
+  FiInstagram,
+  FiLinkedin,
+  FiMail,
   FiMenu,
+  FiMapPin,
+  FiPhoneCall,
   FiSearch,
   FiX,
+  FiYoutube,
 } from "react-icons/fi";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import { getAllProducts } from "@/data/products/principals";
 import { siteConfig } from "@/data/siteConfig";
+import { FaDownload } from "react-icons/fa";
 
 const headerSearchProducts = getAllProducts();
 
@@ -52,13 +61,31 @@ function NavLabel({ item, mobile = false }) {
 }
 
 export default function Header() {
-  const { company, navigation } = siteConfig;
+  const { company, contact, navigation, socials } = siteConfig;
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [openMobileItem, setOpenMobileItem] = useState(null);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isAtTop, setIsAtTop] = useState(true);
   const previousScrollY = useRef(0);
+  const topLinks = [
+    { label: "Our Story", href: "/our-story" },
+    { label: "Awards and Recognitions", href: "/awards-and-recognitions" },
+    { label: "Service", href: "/service" },
+    { label: "Careers", href: "/careers" },
+  ];
+  const mainNavigation = navigation.filter(
+    (item) => !["About Us", "Service", "Careers"].includes(item.label)
+  );
+  const productProfileUrl = "/assets/productProfile/Inkarp_product_profile_2026.pdf";
+
+  const socialLinks = [
+    { label: "LinkedIn", href: socials.linkedin, icon: FiLinkedin },
+    { label: "Facebook", href: socials.facebook, icon: FiFacebook },
+    { label: "Instagram", href: socials.instagram, icon: FiInstagram },
+    { label: "YouTube", href: socials.youtube, icon: FiYoutube },
+  ];
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -70,6 +97,7 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      setIsAtTop(currentScrollY <= 24);
 
       if (currentScrollY <= 24) {
         setIsHeaderVisible(true);
@@ -93,15 +121,77 @@ export default function Header() {
 
   return (
     <header
-      className={`font-maxot sticky top-0 z-50 backdrop-blur-2xl transition-transform duration-300 ease-out ${
+      className={`font-maxot sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${
         shouldShowHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="mx-auto max-w-[1480px] ">
-        <div className="relative flex min-h-14 items-center gap-3 ">
+      <div
+        className={`overflow-hidden bg-black text-white transition-[max-height,opacity] duration-300 ease-out ${
+          isAtTop || isMenuOpen || isSearchOpen
+            ? "max-h-40 opacity-100"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="mx-auto flex max-w-[1480px] flex-col gap-3 px-4 py-3 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/80">
+            <span className="inline-flex items-center gap-2">
+              <FiMapPin className="text-[#BE0010]" />
+              {contact.address}
+            </span>
+            <a
+              className="inline-flex items-center gap-2 transition hover:text-white"
+              href={`mailto:${contact.email}`}
+            >
+              <FiMail className="text-[#BE0010]" />
+              {contact.email}
+            </a>
+            <span className="hidden items-center gap-2 xl:inline-flex">
+              <FiClock className="text-[#BE0010]" />
+              Mon - Sat 9:30 AM to 6:00 PM
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <nav aria-label="Quick links" className="flex items-center gap-3">
+              {topLinks.map((link) => (
+                <Link
+                  className="text-white/80 transition hover:text-[#14c878]"
+                  href={link.href}
+                  key={link.href}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="hidden h-5 w-px bg-white/20 sm:block" />
+            <div className="flex items-center gap-3">
+              {socialLinks.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <Link
+                    aria-label={item.label}
+                    className="text-white text-xl transition hover:text-[#9f000d]"
+                    href={item.href}
+                    key={item.label}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <Icon aria-hidden="true" className="text-xl" />
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white">
+        <div className="mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-8">
+        <div className="relative flex min-h-20 items-center gap-4">
           <Link
             aria-label={`${company.name} home`}
-            className="relative flex h-14 w-52 shrink-0 items-center rounded-lg px-3  sm:w-60"
+            className="relative flex h-16 w-48 shrink-0 items-center rounded-lg sm:w-56"
             href="/"
             onClick={closeMenu}
           >
@@ -117,19 +207,19 @@ export default function Header() {
 
           <nav
             aria-label="Primary navigation"
-            className="hidden min-w-0 flex-1 2xl:block"
+            className="hidden min-w-0 flex-1 xl:block"
           >
-            <ul className="flex items-center justify-center gap-1">
-              {navigation.map((item) => {
+            <ul className="flex items-center justify-center gap-2">
+              {mainNavigation.map((item) => {
                 const active = isNavActive(item, pathname);
 
                 return (
                   <li className="group relative" key={item.label}>
                     <Link
-                      className={`flex h-11 items-center gap-1 rounded-lg px-3 text-sm font-medium transition ${
+                      className={`flex h-11 items-center gap-1 px-3 text-base font-semibold transition ${
                         active
-                          ? "bg-[#BE0010] text-white"
-                          : "text-zinc-700 hover:bg-zinc-100 hover:text-[#BE0010]"
+                          ? "text-[#BE0010]"
+                          : "text-zinc-600 hover:text-[#BE0010]"
                       }`}
                       href={getNavHref(item)}
                     >
@@ -137,7 +227,7 @@ export default function Header() {
                       {item.children ? (
                         <FiChevronDown
                           className={`text-base transition group-hover:rotate-180 ${
-                            active ? "text-white/80" : "text-zinc-400"
+                            active ? "text-[#BE0010]" : "text-zinc-400"
                           }`}
                         />
                       ) : null}
@@ -162,21 +252,50 @@ export default function Header() {
             </ul>
           </nav>
 
-          <div className="ml-auto hidden shrink-0 items-center gap-2 2xl:flex">
+          <div className="ml-auto hidden shrink-0 items-stretch xl:flex">
+            <a
+              aria-label="Download product profile"
+              className="inline-flex h-12 items-center justify-center gap-2 bg-zinc-100 px-7 text-sm font-bold text-[#071f3d] transition hover:bg-[#fff3f4] hover:text-[#BE0010]"
+              download
+              href={productProfileUrl}
+            >
+              <FaDownload className="text-base animate-bounce" />
+              Product Profile
+            </a>
+            <div className="mx-6 w-px bg-zinc-200" />
             <button
-              className="group flex h-12 w-72 items-center gap-3 rounded-lg border border-zinc-200 bg-zinc-50 px-4 text-left text-sm text-zinc-500 transition hover:border-[#BE0010]/40 hover:bg-white hover:text-zinc-800"
+              aria-label="Search products"
+              className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-[#BE0010]"
               onClick={() => setIsSearchOpen(true)}
               type="button"
             >
-              <span className="inline-flex size-8 items-center justify-center rounded-md bg-white text-zinc-500 ring-1 ring-zinc-200 transition group-hover:text-[#BE0010]">
-                <FiSearch className="text-base" />
-              </span>
-              <span className="truncate">Search products...</span>
+              <FiSearch />
             </button>
+            <a
+              className="ml-5 inline-flex items-center gap-3 bg-[#BE0010] px-5 py-2 text-white transition hover:bg-[#9f000d]"
+              href={`tel:${contact.phone.replaceAll(" ", "")}`}
+            >
+              <span className="inline-flex size-11 items-center justify-center rounded-full bg-white text-xl text-[#BE0010]">
+                <FiPhoneCall />
+              </span>
+              <span className="grid leading-tight">
+                <span className="text-xs font-semibold">Call Us Anytime</span>
+                <span className="text-lg font-bold">{contact.phone}</span>
+              </span>
+            </a>
 
           </div>
 
-          <div className="ml-auto flex items-center gap-2 2xl:hidden">
+          <div className="ml-auto flex items-center gap-2 xl:hidden">
+            <a
+              aria-label="Download product profile"
+              className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
+              download
+              href={productProfileUrl}
+            >
+              <FaDownload />
+            </a>
+
             <button
               aria-label="Search products"
               className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
@@ -197,15 +316,16 @@ export default function Header() {
             </button>
           </div>
         </div>
+        </div>
       </div>
 
       {isMenuOpen ? (
         <nav
           aria-label="Mobile navigation"
-          className="mx-auto mt-3 max-w-[1480px] rounded-lg border border-zinc-200 bg-white p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] 2xl:hidden"
+          className="mx-auto max-w-[1480px] border-t border-zinc-200 bg-white p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] xl:hidden"
         >
           <ul className="space-y-1">
-            {navigation.map((item) => {
+            {mainNavigation.map((item) => {
               const isOpen = openMobileItem === item.label;
               const active = isNavActive(item, pathname);
 

@@ -31,7 +31,7 @@ export const siteConfig = {
     },
     {
       label: "Service",
-      href: "/contact-us?interest=service",
+      href: "/service",
     },
     {
       label: "CatalystCue",

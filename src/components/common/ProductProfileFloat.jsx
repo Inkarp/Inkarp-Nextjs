@@ -9,8 +9,8 @@ export default function ProductProfileFloat() {
       download
       href="/assets/productProfile/Inkarp_product_profile_2026.pdf"
     >
-      <FiDownload className="text-base animate-bounce" />
       <span className="font-maxot tracking-wide">Product<br/> Profile</span>
+      <FiDownload className="text-base animate-bounce" />
     </Link>
   );
 }

@@ -34,13 +34,13 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <ScrollAnimations />
         <Header />
-        <div className="relative flex-1 overflow-hidden bg-[#fff5f6]">
+        {/* <div className="relative flex-1 overflow-hidden bg-[#fff5f6]">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(190,0,16,0.045)_1px,transparent_1px),linear-gradient(180deg,rgba(190,0,16,0.045)_1px,transparent_1px)] bg-[size:56px_56px]"
-          />
-          <div className="relative z-10 w-[90%] mx-auto">{children}</div>
-        </div>
+          /> */}
+        <div className="relative z-10 w-[90%] mx-auto">{children}</div>
+        {/* </div> */}
         <Footer />
         <ProductProfileFloat />
         <PromoPopup />

@@ -1,116 +1,235 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { FiCalendar, FiMinimize2, FiMonitor, FiUsers, FiX } from "react-icons/fi";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import {
+  FiArrowRight,
+  FiBookOpen,
+  FiBox,
+  FiMessageCircle,
+  FiMonitor,
+  FiX,
+} from "react-icons/fi";
+
+function getPopupConfig(pathname) {
+  if (pathname === "/") {
+    return {
+      id: "home-webinar-products",
+      threshold: 0,
+      switchThreshold: 50,
+      initial: {
+        icon: <FiMonitor aria-hidden="true" />,
+        eyebrow: "Live webinar",
+        title: "Join our upcoming scientific webinar",
+        description:
+          "Get practical ideas for modern lab workflows, better product selection, and application-focused decisions.",
+        primary: {
+          label: "Register Now",
+          href: "/contact-us",
+        },
+        secondary: {
+          label: "Explore Products",
+          href: "/products",
+        },
+      },
+      switched: {
+        icon: <FiBox aria-hidden="true" />,
+        eyebrow: "Explore products",
+        title: "Find the right lab solution faster",
+        description:
+          "Browse curated instruments, principal brands, and application-ready solutions from Inkarp.",
+        primary: {
+          label: "Explore Products",
+          href: "/products",
+        },
+        secondary: {
+          label: "Talk to Specialist",
+          href: "/contact-us",
+        },
+      },
+    };
+  }
+
+  if (pathname === "/products") {
+    return {
+      id: "products-quote",
+      threshold: 14,
+      icon: <FiMessageCircle aria-hidden="true" />,
+      eyebrow: "Need pricing?",
+      title: "Do you want to request a quote?",
+      description:
+        "Share your requirement and our team will help with product fit, configuration, and current pricing.",
+      primary: {
+        label: "Request Quote",
+        href: "/contact-us?interest=quote",
+      },
+      secondary: {
+        label: "Continue Browsing",
+        action: "close",
+      },
+    };
+  }
+
+  if (pathname.startsWith("/products/")) {
+    return {
+      id: "product-detail-interest",
+      threshold: 15,
+      icon: <FiBookOpen aria-hidden="true" />,
+      eyebrow: "Worth a closer look",
+      title: "Want the useful details before you decide?",
+      description:
+        "Read more about applications, configuration choices, and support options, or ask Inkarp for a quote.",
+      primary: {
+        label: "Read More",
+        href: `${pathname}#product-details`,
+      },
+      secondary: {
+        label: "Request Quote",
+        href: `/contact-us?interest=quote&product=${encodeURIComponent(pathname.split("/").pop() ?? "")}`,
+      },
+    };
+  }
+
+  return null;
+}
+
+function getActiveConfig(config, scrollPercent) {
+  if (config?.initial && config?.switched) {
+    return scrollPercent >= config.switchThreshold
+      ? config.switched
+      : config.initial;
+  }
+
+  return config;
+}
 
 export default function PromoPopup() {
-  const [state, setState] = useState("collapsed");
+  const pathname = usePathname();
+  const config = useMemo(() => getPopupConfig(pathname), [pathname]);
+  const [scrollPercent, setScrollPercent] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+  const activeConfig = getActiveConfig(config, scrollPercent);
 
-  if (state === "dismissed") {
+  useEffect(() => {
+    setScrollPercent(0);
+    setIsVisible(false);
+    setIsDismissed(false);
+
+    if (!config) {
+      return;
+    }
+
+    const storageKey = `inkarp-bottom-popup:${config.id}`;
+    const dismissed = window.sessionStorage.getItem(storageKey) === "dismissed";
+
+    if (dismissed) {
+      setIsDismissed(true);
+      return;
+    }
+
+    function updateVisibility() {
+      const scrollableHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress =
+        scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 100;
+      const nextScrollPercent = Math.min(100, Math.max(0, progress));
+
+      setScrollPercent(nextScrollPercent);
+
+      if (nextScrollPercent >= config.threshold) {
+        setIsVisible(true);
+      }
+    }
+
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    window.addEventListener("resize", updateVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", updateVisibility);
+      window.removeEventListener("resize", updateVisibility);
+    };
+  }, [config]);
+
+  if (!config || !activeConfig || isDismissed) {
     return null;
   }
 
-  if (state === "expanded") {
+  function closePopup() {
+    window.sessionStorage.setItem(
+      `inkarp-bottom-popup:${config.id}`,
+      "dismissed"
+    );
+    setIsDismissed(true);
+  }
+
+  function renderButton(button, variant) {
+    const className =
+      variant === "primary"
+        ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full bg-[#BE0010] px-5 text-sm font-semibold text-white transition hover:bg-[#9f000d] sm:flex-none"
+        : "inline-flex h-10 flex-1 items-center justify-center rounded-full border border-zinc-200 bg-white px-5 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010]/35 hover:text-[#BE0010] sm:flex-none";
+
+    if (button.action === "close") {
+      return (
+        <button className={className} onClick={closePopup} type="button">
+          {button.label}
+        </button>
+      );
+    }
+
     return (
-      <div className="fixed left-4 top-1/2 z-50 w-[min(22rem,calc(100vw-2rem))] -translate-y-1/2 rounded-2xl border border-zinc-200 bg-white p-5 shadow-2xl shadow-zinc-900/15">
-        <div className="flex items-start justify-between gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#BE0010]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#BE0010]">
-            <FiMonitor />
-            Live webinar
-          </span>
-
-          <div className="flex items-center gap-1">
-            <button
-              aria-label="Minimize webinar popup"
-              className="rounded-full p-1.5 text-zinc-400 transition hover:bg-zinc-100 hover:text-zinc-700"
-              onClick={() => setState("collapsed")}
-              type="button"
-            >
-              <FiMinimize2 />
-            </button>
-            <button
-              aria-label="Close webinar popup"
-              className="rounded-full p-1.5 text-zinc-400 transition hover:bg-zinc-100 hover:text-zinc-700"
-              onClick={() => setState("dismissed")}
-              type="button"
-            >
-              <FiX />
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-3 overflow-hidden rounded-xl border border-[#BE0010]/15 bg-zinc-950 text-white">
-          <div className="border-b border-white/10 bg-[#BE0010] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em]">
-            Expert Session
-          </div>
-          <div className="p-4">
-            <p className="font-maxot text-xl leading-tight">
-              Modern Lab Workflows
-            </p>
-            <p className="mt-1 text-sm leading-6 text-white/75">
-              Practical ideas for productivity, accuracy, and better scientific
-              instrument selection.
-            </p>
-          </div>
-        </div>
-
-        <h3 className="font-maxot mt-4 text-lg font-bold text-zinc-950">
-          Join our upcoming scientific webinar
-        </h3>
-        <p className="mt-1 text-sm leading-6 text-zinc-500">
-          Explore application-focused approaches for research, QC, and scale-up
-          teams, followed by a live discussion with Inkarp specialists.
-        </p>
-
-        <div className="mt-4 space-y-2 text-sm text-zinc-700">
-          <p className="flex items-center gap-2">
-            <FiCalendar className="shrink-0 text-[#BE0010]" />
-            Date and time shared after registration
-          </p>
-          <p className="flex items-center gap-2">
-            <FiUsers className="shrink-0 text-[#BE0010]" />
-            Includes live Q&amp;A with product experts
-          </p>
-        </div>
-
-        <Link
-          className="mt-4 inline-flex h-10 w-full items-center justify-center rounded-lg bg-[#BE0010] text-sm font-semibold text-white transition hover:bg-[#9f000d]"
-          href="/contact-us?interest=webinar"
-        >
-          Register for Webinar
-        </Link>
-      </div>
+      <Link className={className} href={button.href} onClick={closePopup}>
+        {button.label}
+        {variant === "primary" ? <FiArrowRight aria-hidden="true" /> : null}
+      </Link>
     );
   }
 
   return (
     <div
-      className="fixed left-2 top-1/2 z-50 flex -translate-y-1/2 cursor-pointer items-center gap-2 rounded-full border border-l-0 border-[#BE0010]/30 bg-white px-3 py-3 shadow-lg shadow-zinc-900/10 transition hover:border-[#BE0010] hover:shadow-xl"
-      onClick={() => setState("expanded")}
-      onKeyDown={(event) => {
-        if (event.key === "Enter") {
-          setState("expanded");
-        }
-      }}
-      role="button"
-      tabIndex={0}
+      className={`fixed inset-x-3 bottom-4 z-[60] mx-auto w-[min(44rem,calc(100vw-1.5rem))] transition duration-500 ease-out sm:bottom-6 ${
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none translate-y-[140%] opacity-0"
+      }`}
     >
-      <FiMonitor className="text-[#BE0010]" />
-      <span className=" font-maxot text-sm font-semibold tracking-wide text-zinc-800">
-        Register for Webinar
-      </span>
-      <button
-        aria-label="Dismiss webinar popup"
-        className="rounded-full p-0.5 text-zinc-400 transition hover:bg-zinc-100 hover:text-zinc-700"
-        onClick={(event) => {
-          event.stopPropagation();
-          setState("dismissed");
-        }}
-        type="button"
-      >
-        <FiX />
-      </button>
+      <div className="overflow-hidden rounded-2xl border border-[#BE0010]/15 bg-white shadow-2xl shadow-zinc-950/20">
+        <div className="h-1 bg-[#BE0010]" />
+        <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:p-5">
+          <div className="flex items-start gap-3 sm:flex-1">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-[#BE0010]/10 text-xl text-[#BE0010]">
+              {activeConfig.icon}
+            </span>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wide text-[#BE0010]">
+                {activeConfig.eyebrow}
+              </p>
+              <h2 className="font-maxot mt-1 text-lg leading-tight text-zinc-950 sm:text-xl">
+                {activeConfig.title}
+              </h2>
+              <p className="mt-1 text-sm leading-5 text-zinc-500">
+                {activeConfig.description}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-2 sm:shrink-0">
+            {renderButton(activeConfig.primary, "primary")}
+            {renderButton(activeConfig.secondary, "secondary")}
+          </div>
+
+          <button
+            aria-label="Close popup"
+            className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full text-zinc-400 transition hover:bg-zinc-100 hover:text-zinc-700"
+            onClick={closePopup}
+            type="button"
+          >
+            <FiX aria-hidden="true" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

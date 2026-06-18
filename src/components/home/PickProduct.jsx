@@ -97,7 +97,7 @@ export default function PickProduct() {
   }
 
   return (
-    <section className="relative h-[100svh] overflow-hidden bg-[#fff5f6] px-3 py-3 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
+    <section className="relative h-[100svh] overflow-hidden bg-[#fff3f4] px-3 py-3 sm:px-6 sm:py-5 lg:px-8 lg:py-6">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[#BE0010]/10 blur-3xl"
@@ -105,10 +105,6 @@ export default function PickProduct() {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-40 -right-24 h-[28rem] w-[28rem] rounded-full bg-[#BE0010]/10 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(190,0,16,0.045)_1px,transparent_1px),linear-gradient(180deg,rgba(190,0,16,0.045)_1px,transparent_1px)] bg-[size:56px_56px]"
       />
 
       <div className="relative mx-auto flex h-full w-full max-w-7xl flex-col">

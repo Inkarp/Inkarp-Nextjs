@@ -1,0 +1,118 @@
+'use client';
+import { useState } from 'react';
+
+function getRecommendation(recommendations, solventType, priority) {
+  return (
+    recommendations.find((r) => {
+      if (!r.when) return false;
+      const { when } = r;
+      const sMatch = !when.solventType || when.solventType === solventType;
+      const pMatch = !when.priority || when.priority === priority;
+      return sMatch && pMatch;
+    }) ??
+    recommendations.find((r) => r.when?.solventType === solventType) ??
+    recommendations.find((r) => r.default) ??
+    null
+  );
+}
+
+export default function VacuumChillerPairing({ data }) {
+  const { solventTypes = [], priorities = [], recommendations = [], eyebrow, title } = data ?? {};
+  const [solventType, setSolventType] = useState('');
+  const [priority, setPriority] = useState('');
+
+  const rec = solventType ? getRecommendation(recommendations, solventType, priority) : null;
+
+  return (
+    <section id="pairing" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{eyebrow ?? 'Pairing guide'}</p>
+        <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">{title ?? 'Pair the right vacuum pump and chiller'}</h2>
+        <p className="mt-3 mb-8 text-sm leading-7 text-zinc-500 max-w-3xl">
+          The rotary evaporator performs best when the vacuum and cooling setup are matched to your solvent behaviour.
+        </p>
+
+        <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          {/* Selectors */}
+          <div className="space-y-6">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+              <p className="font-maxot font-semibold text-sm text-zinc-700 mb-3">What solvent type do you primarily use?</p>
+              <div className="flex flex-col gap-2">
+                {solventTypes.map((s) => (
+                  <button
+                    key={s.val}
+                    onClick={() => setSolventType(s.val)}
+                    className={`rounded-xl border-2 px-4 py-3 text-sm font-semibold text-left transition ${
+                      solventType === s.val ? 'border-[#BE0010] bg-[#BE0010]/5 text-[#BE0010]' : 'border-zinc-200 text-zinc-700 hover:border-[#BE0010]/30'
+                    }`}
+                  >
+                    {s.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {solventType && (
+              <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+                <p className="font-maxot font-semibold text-sm text-zinc-700 mb-3">What is your priority?</p>
+                <div className="flex flex-col gap-2">
+                  {priorities.map((p) => (
+                    <button
+                      key={p.val}
+                      onClick={() => setPriority(p.val)}
+                      className={`rounded-xl border-2 px-4 py-3 text-sm font-semibold text-left transition ${
+                        priority === p.val ? 'border-[#BE0010] bg-[#BE0010]/5 text-[#BE0010]' : 'border-zinc-200 text-zinc-700 hover:border-[#BE0010]/30'
+                      }`}
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Recommendation */}
+          <div>
+            {rec ? (
+              <div className="rounded-2xl border-2 border-[#BE0010]/30 bg-white p-6 shadow-sm">
+                <div className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700 mb-4">✓ Recommended configuration</div>
+
+                <div className="space-y-4">
+                  <div className="rounded-xl bg-zinc-50 p-4">
+                    <div className="text-xs font-semibold uppercase tracking-wide text-zinc-400 mb-1">Vacuum pump</div>
+                    <div className="font-maxot font-bold text-lg text-zinc-950">{rec.pump}</div>
+                    {rec.pumpNote && <div className="text-xs text-zinc-500 mt-1">{rec.pumpNote}</div>}
+                  </div>
+
+                  <div className="rounded-xl bg-zinc-50 p-4">
+                    <div className="text-xs font-semibold uppercase tracking-wide text-zinc-400 mb-1">Chiller</div>
+                    <div className="font-maxot font-bold text-lg text-zinc-950">{rec.chiller}</div>
+                    {rec.chillerNote && <div className="text-xs text-zinc-500 mt-1">{rec.chillerNote}</div>}
+                  </div>
+
+                  {rec.accessory && (
+                    <div className="rounded-xl bg-[#BE0010]/5 border border-[#BE0010]/20 p-4">
+                      <div className="text-xs font-semibold uppercase tracking-wide text-[#BE0010] mb-1">Recommended accessory</div>
+                      <div className="font-maxot font-bold text-zinc-950">{rec.accessory}</div>
+                      {rec.accessoryNote && <div className="text-xs text-zinc-500 mt-1">{rec.accessoryNote}</div>}
+                    </div>
+                  )}
+                </div>
+
+                <a href="/contact-us" className="mt-5 inline-flex items-center rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#9f000d] transition">
+                  Request this pairing quote →
+                </a>
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-zinc-200 bg-zinc-50 p-10 text-center h-full min-h-[300px]">
+                <div className="text-4xl mb-3">⚗️</div>
+                <p className="font-maxot text-zinc-400">Select your solvent type to see the recommended vacuum and chiller pairing.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

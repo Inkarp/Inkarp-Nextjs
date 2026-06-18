@@ -144,8 +144,8 @@ export default function Header() {
               {contact.email}
             </a>
             <span className="hidden items-center gap-2 xl:inline-flex">
-              <FiClock className="text-[#BE0010]" />
-              Mon - Sat 9:30 AM to 6:00 PM
+              <FiPhoneCall className="text-[#BE0010]" />
+              {contact.phone}
             </span>
           </div>
 
@@ -248,7 +248,7 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div className="ml-auto hidden shrink-0 items-stretch xl:flex">
+            <div className="ml-auto gap-4 hidden shrink-0 items-stretch xl:flex">
 
               <div className="mx-6 w-px bg-zinc-200" />
               <button
@@ -273,7 +273,7 @@ export default function Header() {
             </a> */}
               <Link
                 aria-label="Download product profile"
-                className="inline-flex h-12 items-center justify-center gap-2 bg-zinc-100 px-7 text-sm font-bold text-[#071f3d] transition hover:bg-[#fff3f4] hover:text-[#BE0010]"
+                className="inline-flex h-12 items-center justify-center gap-2 bg-[#BE0010] px-7 text-sm font-bold text-white transition hover:bg-[#fff3f4] hover:text-black"
                 download
                 href={productProfileUrl}
               >

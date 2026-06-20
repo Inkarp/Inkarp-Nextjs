@@ -5,6 +5,7 @@ import {
   FiShield, FiSliders, FiFileText, FiMonitor, FiTool,
   FiTarget, FiSun, FiLayers, FiSettings,
 } from 'react-icons/fi';
+import SectionHeader from './SectionHeader';
 
 /* ── Tab config ─────────────────────────────────────── */
 const TABS = [
@@ -218,7 +219,7 @@ export default function ProductInfoTabs({ product }) {
                   <div>
                     <div className="font-semibold text-sm text-zinc-900">{c.title}</div>
                     <div className="text-xs text-zinc-500 mt-0.5">{c.description}</div>
-                    <a href="/contact-us" className="mt-2 inline-block text-xs font-semibold text-[#BE0010] hover:underline">
+                    <a href={`mailto:info@inkarp.com?subject=${encodeURIComponent(`Request: Hei-VAP Core ${c.title}`)}`} className="mt-2 inline-block text-xs font-semibold text-[#BE0010] hover:underline">
                       Request →
                     </a>
                   </div>
@@ -237,28 +238,12 @@ export default function ProductInfoTabs({ product }) {
     <section id="overview" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
 
-        {/* Header row with watermark number */}
-        <div className="relative mb-8">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute -top-4 right-0 select-none font-maxot text-[120px] font-bold leading-none text-zinc-100 sm:text-[160px]"
-          >
-            01
-          </span>
-
-          {/* Eyebrow with red dot */}
-          <p className="flex items-center gap-2 font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#BE0010]" />
-            Product information
-          </p>
-          <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">
-            Hei-VAP Core at a glance
-          </h2>
-          <p className="mt-2 max-w-3xl text-sm leading-7 text-zinc-500">
-            Everything you need to evaluate the rotary evaporator — overview, features, applications, specifications,
-            quality &amp; compliance, configurations &amp; packages, and documentation.
-          </p>
-        </div>
+        <SectionHeader
+          number="01"
+          eyebrow="Product information"
+          title="Hei-VAP Core at a glance"
+          description="Everything you need to evaluate the rotary evaporator — overview, features, applications, specifications, quality & compliance, configurations & packages, and documentation."
+        />
 
         {/* Pill tabs */}
         <div className="mb-6 flex flex-wrap gap-2">

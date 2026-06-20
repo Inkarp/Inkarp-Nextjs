@@ -35,7 +35,7 @@ export default function FloatingQuickActions() {
   }
 
   return (
-    <div className="fixed right-0 top-1/2 z-50 flex -translate-y-1/2 flex-col items-end gap-3">
+    <div className="fixed right-0 top-2/3 z-50 flex -translate-y-1/2 flex-col items-end gap-3">
       <a
         aria-label="Chat with Inkarp on WhatsApp"
         className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-[#25D366] text-white shadow-lg shadow-zinc-900/15 transition hover:bg-[#1fb85a]"

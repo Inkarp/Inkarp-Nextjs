@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import CatalystLatestIssue from "@/components/catalystcue/CatalystLatestIssue";
 import CatalystModal from "@/components/catalystcue/CatalystModal";
 import { catalystCards } from "@/data/catalystCue";
 
@@ -31,6 +32,10 @@ export default function CatalystPage() {
     });
   }, [groupedByVolume]);
 
+  const latestIssue = useMemo(() => {
+    return [...catalystCards].sort((a, b) => b.id - a.id)[0];
+  }, []);
+
   return (
     <main className="relative">
       <Image
@@ -43,7 +48,9 @@ export default function CatalystPage() {
         width={1920}
       />
 
-      <div className="p-5">
+      <CatalystLatestIssue issue={latestIssue} />
+
+      <div className="p-5" id="catalyst-archive">
         {sortedVolumeKeys.map((volume) => {
           const volumeCards = [...groupedByVolume[volume]].sort(
             (a, b) => b.id - a.id

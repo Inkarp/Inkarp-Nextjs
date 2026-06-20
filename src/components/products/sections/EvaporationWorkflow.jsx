@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
+import SectionHeader from './SectionHeader';
 
 const STEP_DURATION = 4000; // ms per step
 
@@ -39,19 +40,25 @@ function Connector({ active }) {
 
 /* ── Single step card ────────────────────────────────── */
 function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
+  // Three visual tiers: active (current step), past (already cycled through,
+  // shown in the normal brand style) and future (not yet reached, muted out).
+  const isFuture = !isActive && !isPast;
+
   return (
     <button
       onClick={onClick}
-      className={`relative flex-1 min-w-[160px] rounded-2xl border-2 p-5 text-left transition-all duration-300 ${
+      className={`relative flex h-full w-full min-w-[160px] flex-col border-2 pt-9 px-5 pb-5 text-left transition-all duration-300 ${
         isActive
           ? 'border-[#BE0010] shadow-lg shadow-[#BE0010]/15'
-          : 'border-zinc-200 bg-white hover:border-zinc-300'
+          : isFuture
+            ? 'border-zinc-100 bg-white hover:border-zinc-200'
+            : 'border-zinc-200 bg-white hover:border-zinc-300'
       }`}
       style={isActive ? { background: 'linear-gradient(135deg, #fff5f5 0%, #ffffff 100%)' } : {}}
     >
       {/* Progress bar at top — only on active card */}
       {isActive && (
-        <div className="absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl overflow-hidden bg-[#BE0010]/15">
+        <div className="absolute -top-0.5 -left-0.5 -right-0.5 h-1 rounded-t-2xl overflow-hidden bg-[#BE0010]/15">
           <div
             key={`progress-${index}`}
             className="h-full bg-[#BE0010] rounded-full"
@@ -65,20 +72,28 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
         {index + 1}
       </span>
 
-      {/* Icon circle */}
-      <div className={`mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl transition-colors ${
-        isActive ? 'bg-[#BE0010] text-white' : 'bg-[#BE0010]/10 text-[#BE0010]'
-      }`}>
+      {/* Floating icon badge — overlaps the card's top edge, pops when it becomes active */}
+      <div
+        className={`absolute -top-6 left-5 inline-flex h-12 w-12 items-center justify-center rounded-full ring-4 ring-white transition-colors duration-300 ${
+          isActive
+            ? 'bg-[#BE0010] text-white shadow-md shadow-[#BE0010]/30'
+            : isFuture
+              ? 'bg-zinc-100 text-zinc-300'
+              : 'bg-[#BE0010]/10 text-[#BE0010]'
+        }`}
+        key={`badge-${index}-${isActive}`}
+        style={isActive ? { animation: 'hvc-badge-pop 420ms cubic-bezier(0.34,1.56,0.64,1)' } : {}}
+      >
         {STEP_ICONS[index] ?? <span className="text-sm font-bold">{index + 1}</span>}
       </div>
 
       {/* Title */}
-      <h3 className={`font-maxot font-bold text-sm mb-2 ${isActive ? 'text-zinc-950' : 'text-zinc-700'}`}>
+      <h3 className={`font-maxot font-bold text-sm mb-2 mt-2 ${isActive ? 'text-zinc-950' : isFuture ? 'text-zinc-400' : 'text-zinc-700'}`}>
         {step.title}
       </h3>
 
       {/* Description */}
-      <p className={`text-xs leading-5 ${isActive ? 'text-[#BE0010]' : 'text-zinc-500'}`}>
+      <p className={`text-xs leading-5 ${isActive ? 'text-[#BE0010]' : isFuture ? 'text-zinc-400' : 'text-zinc-500'}`}>
         {step.description}
       </p>
     </button>
@@ -105,31 +120,17 @@ export default function EvaporationWorkflow({ steps = [], disclaimer }) {
     <section id="workflow" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
 
-        {/* Header with watermark */}
-        <div className="relative mb-10">
-          <span
-            aria-hidden
-            className="pointer-events-none absolute -top-4 right-0 select-none font-maxot text-[120px] font-bold leading-none text-zinc-100 sm:text-[160px]"
-          >
-            02
-          </span>
-
-          <p className="flex items-center gap-2 font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#BE0010]" />
-            How it works
-          </p>
-          <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">
-            The rotary evaporation cycle
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-500">
-            How the Hei-VAP Core gently removes solvent — a continuous loop of rotate, heat, evaporate, condense and collect.
-          </p>
-        </div>
+        <SectionHeader
+          number="02"
+          eyebrow="How it works"
+          title="The rotary evaporation cycle"
+          description="How the Hei-VAP Core gently removes solvent — a continuous loop of rotate, heat, evaporate, condense and collect."
+        />
 
         {/* Cards with connectors */}
-        <div className="flex items-stretch gap-0 overflow-x-auto pb-2 lg:overflow-visible">
+        <div className="flex items-stretch gap-0 overflow-x-auto pt-6 pb-2 lg:overflow-visible lg:pt-0">
           {steps.map((step, i) => (
-            <div key={step.title} className="flex items-center flex-1 min-w-[160px]">
+            <div key={step.title} className="flex items-stretch flex-1 min-w-[160px]">
               <StepCard
                 step={step}
                 index={i}

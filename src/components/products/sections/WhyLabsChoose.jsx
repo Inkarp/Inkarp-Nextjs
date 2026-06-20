@@ -1,15 +1,17 @@
 'use client';
+import SectionHeader from './SectionHeader';
 
 export default function WhyLabsChoose({ cards = [] }) {
   if (!cards.length) return null;
   return (
     <section id="benefits" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">Benefits</p>
-        <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">What you gain with the Hei-VAP Core</h2>
-        <p className="mt-3 mb-8 text-sm leading-7 text-zinc-500 max-w-3xl">
-          A concise summary of the practical value in day-to-day laboratory use.
-        </p>
+      <div className="relative mx-auto max-w-7xl">
+        <SectionHeader
+          number="15"
+          eyebrow="Benefits"
+          title="What you gain with the Hei-VAP Core"
+          description="A concise summary of the practical value in day-to-day laboratory use."
+        />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((c, i) => {

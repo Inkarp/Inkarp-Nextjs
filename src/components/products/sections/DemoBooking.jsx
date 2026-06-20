@@ -1,126 +1,169 @@
 'use client';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import SectionHeader from './SectionHeader';
+
+const EXTRA_FIELDS = [
+  { key: 'designation', label: 'Designation', type: 'text', required: false },
+  { key: 'department', label: 'Department', type: 'text', required: false },
+  {
+    key: 'industry',
+    label: 'Industry',
+    type: 'select',
+    required: false,
+    options: ['Pharmaceuticals', 'Chemical research', 'Academic / teaching', 'Food & beverage', 'Environmental', 'Biotech / life sciences', 'Other'],
+  },
+  { key: 'state', label: 'State', type: 'text', required: false },
+];
+
+const WHY_ITEMS = [
+  { title: 'See it with your solvents', body: 'Discuss real distillation conditions, evaporation rate and recovery expectations for your samples.' },
+  { title: 'Get the right package', body: 'Confirm glassware set, vacuum pump, chiller, coating and Woulff bottle requirements.' },
+  { title: 'Safety and training built in', body: 'Review safe operation, glassware handling, bath setup and consistent results.' },
+  { title: 'Reach us directly', body: '+91 40 2717 2293 - info@inkarp.com - Mon-Sat, 9am-6pm IST' },
+];
 
 export default function DemoBooking({ data }) {
   const { fields = [], submitLabel, successMessage, eyebrow, title, description } = data ?? {};
   const [form, setForm] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const set = (key, val) => setForm((f) => ({ ...f, [key]: val }));
+  const enhancedFields = useMemo(() => {
+    const keys = new Set(fields.map((field) => field.key));
+    return [...fields, ...EXTRA_FIELDS.filter((field) => !keys.has(field.key))];
+  }, [fields]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const set = (key, val) => {
+    setError('');
+    setForm((current) => ({ ...current, [key]: val }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formEl = event.currentTarget;
+
+    if (!formEl.checkValidity()) {
+      setError('Please fill all required fields with valid details before submitting.');
+      formEl.reportValidity();
+      return;
+    }
+
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
+    await new Promise((resolve) => setTimeout(resolve, 800));
     setLoading(false);
     setSubmitted(true);
+    window.dispatchEvent(new CustomEvent('product-demo-submitted'));
   };
+
+  const visibleFields = enhancedFields.filter((field) => field.type !== 'textarea');
+  const textareaFields = enhancedFields.filter((field) => field.type === 'textarea');
 
   return (
     <section id="booking" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-start">
-          {/* Left */}
-          <div>
-            <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{eyebrow ?? 'Book a demo'}</p>
-            <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">{title ?? 'See it in action'}</h2>
-            {description && <p className="mt-4 text-sm leading-7 text-zinc-600">{description}</p>}
+      <div className="relative mx-auto max-w-7xl">
+        <SectionHeader
+          number="19"
+          eyebrow={eyebrow ?? 'Book a demo'}
+          title={title ?? 'See it in action'}
+          description={description}
+        />
 
-            <div className="mt-8 space-y-4">
-              {[
-                { title: 'Why book a demo?', body: 'A demo lets your team see the control concept, review glassware choices and discuss your solvent-specific workflow.' },
-                { title: 'What Inkarp will confirm', body: 'Lift type, glassware, coating, vacuum pump, chiller, Woulff bottle, installation needs and current pricing.' },
-                { title: 'What to prepare', body: 'Solvents, batch volume, batches per week, recovery goals, space constraints and safety expectations.' },
-              ].map((item) => (
-                <div key={item.title} className="flex gap-3">
-                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#BE0010] text-white text-xs">✓</div>
-                  <div>
-                    <div className="font-semibold text-sm text-zinc-900">{item.title}</div>
-                    <div className="text-xs text-zinc-500 mt-0.5">{item.body}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Form */}
+        <div className="grid gap-8 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
           <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
             {submitted ? (
-              <div className="text-center py-8">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 mx-auto mb-4">
+              <div className="flex min-h-[420px] flex-col items-center justify-center py-8 text-center">
+                <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-100">
                   <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-maxot text-xl text-zinc-950 mb-2">Enquiry sent!</h3>
-                <p className="text-sm text-zinc-600">{successMessage ?? 'Inkarp will be in touch within 1 business day.'}</p>
-                <button onClick={() => { setSubmitted(false); setForm({}); }} className="mt-5 text-sm font-semibold text-[#BE0010] hover:underline">
-                  Send another enquiry
-                </button>
+                <h3 className="font-maxot mb-2 text-xl text-zinc-950">Enquiry sent!</h3>
+                <p className="max-w-md text-sm leading-6 text-zinc-600">
+                  {successMessage ?? 'An Inkarp specialist will call you back shortly. You can also browse the FAQ while we review your request.'}
+                </p>
+                <div className="mt-5 flex flex-wrap justify-center gap-3">
+                  <button className="text-sm font-semibold text-[#BE0010] hover:underline" onClick={() => { setSubmitted(false); setForm({}); }} type="button">
+                    Send another enquiry
+                  </button>
+                  <a className="text-sm font-semibold text-[#BE0010] hover:underline" href="#faq">Browse FAQ</a>
+                </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="grid gap-4 sm:grid-cols-2 mb-4">
-                  {fields.map((field) => {
-                    if (field.type === 'textarea') return null;
-                    return (
-                      <div key={field.key} className={field.key === 'message' ? 'sm:col-span-2' : ''}>
-                        <label className="block text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-1">
-                          {field.label}{field.required && <span className="text-[#BE0010] ml-0.5">*</span>}
-                        </label>
-                        {field.type === 'select' ? (
-                          <select
-                            required={field.required}
-                            value={form[field.key] ?? ''}
-                            onChange={(e) => set(field.key, e.target.value)}
-                            className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
-                          >
-                            <option value="">Select…</option>
-                            {(field.options ?? []).map((o) => <option key={o} value={o}>{o}</option>)}
-                          </select>
-                        ) : (
-                          <input
-                            type={field.type}
-                            required={field.required}
-                            value={form[field.key] ?? ''}
-                            onChange={(e) => set(field.key, e.target.value)}
-                            placeholder={field.label}
-                            className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
-                          />
-                        )}
-                      </div>
-                    );
-                  })}
+              <form noValidate onSubmit={handleSubmit}>
+                <div className="mb-4 grid gap-4 sm:grid-cols-2">
+                  {visibleFields.map((field) => (
+                    <div className={['message', 'notes'].includes(field.key) ? 'sm:col-span-2' : ''} key={field.key}>
+                      <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                        {field.label}{field.required && <span className="ml-0.5 text-[#BE0010]">*</span>}
+                      </label>
+                      {field.type === 'select' ? (
+                        <select
+                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
+                          onChange={(e) => set(field.key, e.target.value)}
+                          required={field.required}
+                          value={form[field.key] ?? ''}
+                        >
+                          <option value="">Select...</option>
+                          {(field.options ?? []).map((option) => <option key={option} value={option}>{option}</option>)}
+                        </select>
+                      ) : (
+                        <input
+                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
+                          onChange={(e) => set(field.key, e.target.value)}
+                          placeholder={field.label}
+                          required={field.required}
+                          type={field.type}
+                          value={form[field.key] ?? ''}
+                        />
+                      )}
+                    </div>
+                  ))}
                 </div>
 
-                {/* Textarea separately */}
-                {fields.filter((f) => f.type === 'textarea').map((field) => (
-                  <div key={field.key} className="mb-4">
-                    <label className="block text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-1">{field.label}</label>
+                {textareaFields.map((field) => (
+                  <div className="mb-4" key={field.key}>
+                    <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-zinc-500">{field.label}</label>
                     <textarea
-                      rows={3}
-                      value={form[field.key] ?? ''}
+                      className="w-full resize-none rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
                       onChange={(e) => set(field.key, e.target.value)}
-                      placeholder={field.label}
-                      className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 resize-none"
+                      placeholder="Solvents used, sample volume, lift preference, glassware needs..."
+                      rows={4}
+                      value={form[field.key] ?? ''}
                     />
                   </div>
                 ))}
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full rounded-xl bg-[#BE0010] py-3.5 text-sm font-semibold text-white transition hover:bg-[#9f000d] disabled:opacity-60"
-                >
-                  {loading ? 'Sending…' : (submitLabel ?? 'Send enquiry')}
+                {error ? (
+                  <div className="mb-4 rounded-lg border border-[#BE0010]/20 bg-[#BE0010]/5 px-4 py-3 text-xs font-semibold text-[#BE0010]">
+                    {error}
+                  </div>
+                ) : null}
+
+                <button className="w-full rounded-xl bg-[#BE0010] py-3.5 text-sm font-semibold text-white transition hover:bg-[#9f000d] disabled:opacity-60" disabled={loading} type="submit">
+                  {loading ? 'Sending...' : (submitLabel ?? 'Request demo - we will call you back')}
                 </button>
-                <p className="mt-3 text-xs text-zinc-400 text-center">
+                <p className="mt-3 text-center text-xs text-zinc-400">
                   Your information is handled in accordance with our privacy policy. No spam.
                 </p>
               </form>
             )}
           </div>
+
+          <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <h3 className="font-maxot text-xl text-zinc-950">Why book a demo?</h3>
+            <div className="mt-5 divide-y divide-zinc-100">
+              {WHY_ITEMS.map((item) => (
+                <div className="flex gap-3 py-4 first:pt-0 last:pb-0" key={item.title}>
+                  <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 text-sm font-bold text-[#BE0010]">i</div>
+                  <div>
+                    <div className="text-sm font-semibold text-zinc-900">{item.title}</div>
+                    <div className="mt-1 text-xs leading-5 text-zinc-500">{item.body}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </div>
     </section>

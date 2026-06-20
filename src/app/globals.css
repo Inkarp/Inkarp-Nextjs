@@ -89,7 +89,8 @@ article[data-scroll-reveal="true"] {
 
 @media (prefers-reduced-motion: reduce) {
   [class*="animate-[company-"],
-  [class*="animate-[logo-marquee"] {
+  [class*="animate-[logo-marquee"],
+  [class*="animate-[header-search-"] {
     animation: none !important;
   }
 
@@ -100,7 +101,7 @@ article[data-scroll-reveal="true"] {
   }
 }
 
-/* ── Hei-VAP Core product page animations ── */
+/* â”€â”€ Hei-VAP Core product page animations â”€â”€ */
 @keyframes hvc-blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
@@ -138,4 +139,30 @@ article[data-scroll-reveal="true"] {
 @keyframes hvc-progress-fill {
   from { width: 0%; }
   to   { width: 100%; }
+}
+
+@keyframes hvc-badge-pop {
+  0%   { transform: scale(0.55); opacity: 0.5; }
+  60%  { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes header-search-backdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes header-search-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-48px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }

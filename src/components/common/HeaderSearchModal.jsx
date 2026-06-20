@@ -1,10 +1,15 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
-import { FiX } from "react-icons/fi";
+import { createPortal } from "react-dom";
 import ProductSearchBox from "@/components/products/ProductSearchBox";
+import { siteConfig } from "@/data/siteConfig";
 
 export default function HeaderSearchModal({ isOpen, onClose, products }) {
+  const { company } = siteConfig;
+
   useEffect(() => {
     if (!isOpen) {
       return undefined;
@@ -25,44 +30,52 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen) {
+  if (!isOpen || typeof document === "undefined") {
     return null;
   }
 
-  return (
-    <div className="fixed inset-x-0 bottom-0 top-24 z-40">
-      {/* semi-transparent backdrop — click to close */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
-      />
+  return createPortal(
+    <div
+      aria-modal="true"
+      className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-[#BE0010] animate-[header-search-backdrop_320ms_ease-out]"
+      role="dialog"
+    >
+      <div className="flex items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
+        <Link
+          aria-label={`${company.name} home`}
+          className="relative block h-9 w-32 shrink-0 sm:h-10 sm:w-40"
+          href="/"
+          onClick={onClose}
+        >
+          <Image
+            alt={`${company.name} logo`}
+            className="object-contain object-left brightness-0 invert"
+            fill
+            sizes="160px"
+            src={company.logo}
+          />
+        </Link>
 
-      {/* search panel sits at the top, above the backdrop */}
-      <div className="relative border-b border-zinc-200 bg-white px-4 py-6 shadow-xl sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
-          <div>
-            <p className="font-maxot text-sm font-semibold uppercase text-[#BE0010]">
-              Search
-            </p>
-            <h2 className="font-maxot mt-1 text-2xl font-bold text-zinc-950">
-              Find products instantly
-            </h2>
-          </div>
-          <button
-            aria-label="Close search"
-            className="inline-flex size-11 items-center justify-center rounded-md border border-zinc-200 text-2xl text-zinc-800 transition hover:border-[#BE0010] hover:text-[#BE0010]"
-            onClick={onClose}
-            type="button"
-          >
-            <FiX />
-          </button>
-        </div>
+        <button
+          aria-label="Close search"
+          className="text-sm font-semibold uppercase tracking-wide text-white/80 transition hover:text-white"
+          onClick={onClose}
+          type="button"
+        >
+          Close Search
+        </button>
+      </div>
 
-        <div className="mx-auto mt-6 max-w-5xl">
-          <ProductSearchBox onClose={onClose} products={products} variant="modal" />
+      <div className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:px-8">
+        <h2 className="font-maxot text-4xl font-bold text-white sm:text-6xl">
+          Search
+        </h2>
+
+        <div className="mt-10">
+          <ProductSearchBox onClose={onClose} products={products} variant="fullscreen" />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -1,20 +1,37 @@
 'use client';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import { FiCheck, FiHelpCircle } from 'react-icons/fi';
+import SectionHeader from './SectionHeader';
 
-function getResult(fields, selections, results) {
-  for (const r of results) {
-    if (r.condition === 'default') continue;
-    const cond = r.condition;
-    const matches = Object.entries(cond).every(([k, v]) => selections[k] === v);
-    if (matches) return r;
+const FIELD_LABELS = {
+  type: 'Main use',
+  volume: 'Typical batch volume',
+  throughput: 'Throughput',
+  automation: 'Do you need automation (auto lift, end-point detection)?',
+};
+
+const OPTION_LABELS = {
+  low: 'A few batches/day',
+  mid: 'Many batches/day',
+  high: 'Continuous / all day',
+  no: 'No - manual is fine',
+};
+
+function getResult(selections, results) {
+  for (const result of results) {
+    if (result.condition === 'default') continue;
+    const condition = result.condition;
+    const matches = Object.entries(condition).every(([key, value]) => selections[key] === value);
+    if (matches) return result;
   }
-  return results.find((r) => r.condition === 'default') ?? null;
+  return results.find((result) => result.condition === 'default') ?? null;
 }
 
-function VerdictBadge({ verdict }) {
-  if (verdict === 'yes') return <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700"><span>✓</span>Good fit</span>;
-  if (verdict === 'check') return <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700"><span>⚠</span>Check first</span>;
-  return null;
+function normaliseText(value = '') {
+  return value
+    .replaceAll('–', '-')
+    .replaceAll('²', '2')
+    .replaceAll('°C', 'deg C');
 }
 
 export default function SuitabilityChecker({ data }) {
@@ -23,82 +40,128 @@ export default function SuitabilityChecker({ data }) {
   const [selections, setSelections] = useState({});
   const [checked, setChecked] = useState(false);
 
-  const allAnswered = fields.every((f) => selections[f.key]);
-  const result = checked ? getResult(fields, selections, results) : null;
+  const allAnswered = fields.every((field) => selections[field.key]);
+  const result = allAnswered ? getResult(selections, results) : null;
+  const isCheckResult = result?.verdict === 'check';
 
   const select = (key, val) => {
-    setSelections((s) => ({ ...s, [key]: val }));
-    setChecked(false);
+    const nextSelections = { ...selections, [key]: val };
+    setSelections(nextSelections);
+    setChecked(fields.every((field) => nextSelections[field.key]));
   };
 
-  return (
-    <section id="config" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">Suitability checker</p>
-        <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">Will the Hei-VAP Core fit your workflow?</h2>
-        <p className="mt-3 mb-8 text-sm leading-7 text-zinc-500 max-w-3xl">
-          Answer 4 quick questions about your workflow to get an instant fit assessment.
-        </p>
+  const handleCheck = () => {
+    setChecked(true);
+    window.dispatchEvent(new CustomEvent('product-suitability-checked'));
+  };
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          {/* Questions */}
-          <div className="space-y-5">
-            {fields.map((field) => (
-              <div key={field.key} className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-                <p className="font-maxot text-sm font-semibold text-zinc-900 mb-3">{field.label}</p>
-                <div className="flex flex-wrap gap-2">
-                  {field.options.map((opt) => (
-                    <button
-                      key={opt.val}
-                      onClick={() => select(field.key, opt.val)}
-                      className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
-                        selections[field.key] === opt.val
-                          ? 'bg-[#BE0010] text-white'
-                          : 'bg-zinc-100 text-zinc-700 hover:bg-zinc-200'
-                      }`}
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
+  const completion = useMemo(() => {
+    if (!fields.length) return 0;
+    return Math.round((Object.keys(selections).length / fields.length) * 100);
+  }, [fields.length, selections]);
+
+  return (
+    <section id="suitability" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl">
+        <SectionHeader
+          number="09"
+          eyebrow="Suitability checker"
+          title="Will the Hei-VAP Core fit your workflow?"
+          description="Tell us about your evaporation needs and we will tell you if this model is the right fit - or point you to a better Heidolph option."
+        />
+
+        <div className="relative mt-9 grid gap-7 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className="mb-7 h-1.5 overflow-hidden rounded-full bg-zinc-100">
+              <div className="h-full rounded-full bg-[#BE0010] transition-all duration-300" style={{ width: `${completion}%` }} />
+            </div>
+
+            <div className="space-y-7">
+              {fields.map((field) => (
+                <div key={field.key}>
+                  <p className="mb-3 text-sm font-semibold text-zinc-700">
+                    {FIELD_LABELS[field.key] ?? field.label}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {field.options.map((option) => {
+                      const active = selections[field.key] === option.val;
+                      return (
+                        <button
+                          className={`rounded-full border px-5 py-3 text-sm font-semibold transition ${
+                            active
+                              ? 'border-black bg-black text-white'
+                              : 'border-zinc-200 bg-white text-zinc-700 hover:border-zinc-400 hover:text-zinc-950'
+                          }`}
+                          key={option.val}
+                          onClick={() => select(field.key, option.val)}
+                          type="button"
+                        >
+                          {OPTION_LABELS[option.val] ?? normaliseText(option.label)}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
             <button
+              className="mt-8 h-14 w-full rounded-full bg-[#D30013] px-6 text-left text-base font-bold text-white transition hover:bg-[#BE0010] disabled:cursor-not-allowed disabled:opacity-45"
               disabled={!allAnswered}
-              onClick={() => setChecked(true)}
-              className="w-full rounded-xl bg-[#BE0010] py-3 text-sm font-semibold text-white transition hover:bg-[#9f000d] disabled:opacity-40 disabled:cursor-not-allowed"
+              onClick={handleCheck}
+              type="button"
             >
-              Check suitability →
+              Check suitability
             </button>
           </div>
 
-          {/* Result */}
-          <div className="flex flex-col justify-center">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 lg:flex lg:items-center">
             {result ? (
-              <div className={`rounded-2xl border-2 p-6 shadow-sm ${result.verdict === 'yes' ? 'border-emerald-200 bg-emerald-50' : 'border-amber-200 bg-amber-50'}`}>
-                <div className="mb-3">
-                  <VerdictBadge verdict={result.verdict} />
+              <div className="w-full">
+                <div className={`mb-6 inline-flex size-14 items-center justify-center rounded-2xl border text-2xl ${isCheckResult ? 'border-amber-200 bg-amber-50 text-amber-700' : 'border-[#BE0010]/15 bg-[#BE0010]/5 text-[#BE0010]'}`}>
+                  <FiCheck />
                 </div>
-                <h3 className="font-maxot text-xl text-zinc-950 mb-3">{result.title}</h3>
-                <p className="text-sm leading-7 text-zinc-600 mb-5">{result.body}</p>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {(result.tags ?? []).map((tag) => (
-                    <span key={tag} className="rounded-full border border-zinc-300 bg-white px-3 py-1 text-xs font-semibold text-zinc-700">{tag}</span>
-                  ))}
-                </div>
-                <a href="/contact-us" className="inline-flex items-center gap-1 rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#9f000d] transition">
-                  Talk to Inkarp →
+                <h3 className="font-maxot text-2xl font-bold leading-tight text-zinc-950">
+                  {normaliseText(result.title)}
+                </h3>
+                <p className="mt-4 max-w-xl text-base leading-8 text-zinc-600">
+                  {normaliseText(result.body)}
+                </p>
+                {result.tags?.length ? (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {result.tags.map((tag) => (
+                      <span className="rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-semibold text-zinc-600" key={tag}>
+                        {normaliseText(tag)}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+                <a
+                  className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-white transition hover:bg-[#BE0010]"
+                  href="#booking"
+                >
+                  Discuss your needs with us
                 </a>
               </div>
             ) : (
-              <div className="rounded-2xl border-2 border-dashed border-zinc-200 bg-white p-8 text-center">
-                <div className="text-4xl mb-3">🔬</div>
-                <p className="font-maxot text-zinc-400">Answer the questions and click "Check suitability" to get your result.</p>
+              <div className="mx-auto max-w-sm text-center">
+                <div className="mx-auto mb-5 inline-flex size-14 items-center justify-center rounded-2xl border border-zinc-200 bg-zinc-50 text-2xl text-zinc-400">
+                  <FiHelpCircle />
+                </div>
+                <h3 className="font-maxot text-2xl font-bold text-zinc-950">Answer the questions</h3>
+                <p className="mt-3 text-sm leading-7 text-zinc-500">
+                  Select one option in each group to generate a suitability recommendation dynamically.
+                </p>
               </div>
             )}
           </div>
         </div>
+
+        {checked && result ? (
+          <p className="relative mt-5 text-center text-xs text-zinc-400">
+            This is a quick fit check. Inkarp can confirm the final model, glassware, vacuum pump and chiller based on your real workflow.
+          </p>
+        ) : null}
       </div>
     </section>
   );

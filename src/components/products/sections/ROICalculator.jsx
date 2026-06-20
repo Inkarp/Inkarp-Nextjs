@@ -1,87 +1,160 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { FiMail } from 'react-icons/fi';
+import SectionHeader from './SectionHeader';
 
-export default function ROICalculator({ cards = [], disclaimer }) {
-  const [price, setPrice] = useState(250000);
-  const [volPerBatch, setVolPerBatch] = useState(1);
-  const [batches, setBatches] = useState(5);
-  const [weeks, setWeeks] = useState(48);
-  const [solventCost, setSolventCost] = useState(1500);
-  const [reusePercent, setReusePercent] = useState(70);
+function formatCurrency(value) {
+  return `\u20B9${Math.round(value || 0).toLocaleString('en-IN')}`;
+}
 
-  const annualVol = volPerBatch * batches * weeks;
-  const recoveredVol = (annualVol * reusePercent) / 100;
-  const annualSaving = (recoveredVol * solventCost).toFixed(0);
-  const paybackMonths = price > 0 && parseFloat(annualSaving) > 0
-    ? Math.ceil((price / parseFloat(annualSaving)) * 12)
-    : null;
+function cleanNumber(value) {
+  const nextValue = Number(value);
+  if (!Number.isFinite(nextValue)) return 0;
+  return Math.max(0, Math.round(nextValue));
+}
+
+function RoiInput({ label, value, onChange }) {
+  return (
+    <label className="block">
+      <span className="text-sm font-medium text-zinc-600">{label}</span>
+      <input
+        className="mt-3 h-12 w-full rounded-2xl border border-zinc-200 bg-zinc-50 px-4 font-maxot text-lg font-bold text-zinc-950 outline-none transition focus:border-[#BE0010] focus:bg-white focus:ring-4 focus:ring-[#BE0010]/10"
+        min="0"
+        onChange={(event) => onChange(cleanNumber(event.target.value))}
+        step="1000"
+        type="number"
+        value={value}
+      />
+    </label>
+  );
+}
+
+export default function ROICalculator({ disclaimer }) {
+  const [purchasePrice, setPurchasePrice] = useState(450000);
+  const [recoveredSolventValue, setRecoveredSolventValue] = useState(180000);
+  const [disposalSavings, setDisposalSavings] = useState(60000);
+  const [otherAnnualValue, setOtherAnnualValue] = useState(40000);
+
+  useEffect(() => {
+    const applyCalculatorValue = (payload) => {
+      const nextValue = cleanNumber(payload?.annualRecoveredValue);
+      if (nextValue > 0) setRecoveredSolventValue(nextValue);
+    };
+
+    try {
+      const storedPayload = JSON.parse(window.sessionStorage.getItem('product-solvent-calculator-update') || 'null');
+      applyCalculatorValue(storedPayload);
+    } catch {
+      // Ignore malformed session data and keep the editable default.
+    }
+
+    const handleCalculatorUpdate = (event) => applyCalculatorValue(event.detail);
+    window.addEventListener('product-solvent-calculator-update', handleCalculatorUpdate);
+    return () => window.removeEventListener('product-solvent-calculator-update', handleCalculatorUpdate);
+  }, []);
+
+  const results = useMemo(() => {
+    const totalAnnualValue = recoveredSolventValue + disposalSavings + otherAnnualValue;
+    const paybackMonths = totalAnnualValue > 0 ? Math.max(1, Math.round((purchasePrice / totalAnnualValue) * 12)) : null;
+    const fiveYearNetValue = (totalAnnualValue * 5) - purchasePrice;
+
+    return { totalAnnualValue, paybackMonths, fiveYearNetValue };
+  }, [disposalSavings, otherAnnualValue, purchasePrice, recoveredSolventValue]);
+
+  const emailResults = () => {
+    const body = [
+      'Hei-VAP Core ROI estimate',
+      '',
+      `Estimated purchase price: INR ${purchasePrice.toLocaleString('en-IN')}`,
+      `Annual recovered solvent value: INR ${recoveredSolventValue.toLocaleString('en-IN')}`,
+      `Annual disposal / waste savings: INR ${disposalSavings.toLocaleString('en-IN')}`,
+      `Other annual value: INR ${otherAnnualValue.toLocaleString('en-IN')}`,
+      '',
+      `Estimated payback period: ${results.paybackMonths ? `${results.paybackMonths} months` : '-'}`,
+      `Total annual value: INR ${results.totalAnnualValue.toLocaleString('en-IN')}`,
+      `5-year net value after purchase: INR ${results.fiveYearNetValue.toLocaleString('en-IN')}`,
+      '',
+      'Please review these numbers and share a configured quote.',
+    ].join('\n');
+
+    window.dispatchEvent(new CustomEvent('product-roi-results'));
+    window.location.href = `mailto:info@inkarp.com?subject=${encodeURIComponent('Hei-VAP Core - ROI estimate')}&body=${encodeURIComponent(body)}`;
+  };
 
   return (
-    <section id="roi" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">ROI &amp; payback</p>
-        <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">When does it pay for itself?</h2>
-        <p className="mt-3 mb-8 text-sm leading-7 text-zinc-500 max-w-3xl">
-          Estimate your annual solvent savings from recovery. Adjust the sliders to match your workflow.
-        </p>
+    <section id="roi" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl">
+        <SectionHeader
+          number="06"
+          eyebrow="ROI & payback"
+          title="When does it pay for itself?"
+          description="Reliable evaporation with solvent recovery cuts spend on fresh solvent and disposal. Combine those savings with a rough purchase price - Inkarp will give you exact pricing."
+        />
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
-          {/* Inputs */}
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm space-y-5">
-            {[
-              { label: 'Equipment price (₹)', val: price, set: setPrice, min: 50000, max: 1000000, step: 10000, fmt: (v) => `₹${v.toLocaleString('en-IN')}` },
-              { label: 'Solvent per batch (L)', val: volPerBatch, set: setVolPerBatch, min: 0.1, max: 3, step: 0.1, fmt: (v) => `${v} L` },
-              { label: 'Batches per day', val: batches, set: setBatches, min: 1, max: 20, step: 1, fmt: (v) => v },
-              { label: 'Working weeks / year', val: weeks, set: setWeeks, min: 10, max: 52, step: 1, fmt: (v) => `${v} weeks` },
-              { label: 'Solvent cost (₹/L)', val: solventCost, set: setSolventCost, min: 100, max: 10000, step: 100, fmt: (v) => `₹${v.toLocaleString('en-IN')}` },
-              { label: 'Estimated reuse %', val: reusePercent, set: setReusePercent, min: 10, max: 100, step: 5, fmt: (v) => `${v}%` },
-            ].map(({ label, val, set, min, max, step, fmt }) => (
-              <div key={label}>
-                <div className="flex justify-between text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-1">
-                  <span>{label}</span><span className="text-zinc-800">{fmt(val)}</span>
-                </div>
-                <input type="range" min={min} max={max} step={step} value={val}
-                  onChange={(e) => set(parseFloat(e.target.value))}
-                  className="w-full accent-[#BE0010]" />
-              </div>
-            ))}
-          </div>
-
-          {/* Results */}
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <h3 className="font-maxot text-sm font-semibold uppercase tracking-wide text-zinc-500 mb-5">Estimated savings</h3>
-            <div className="space-y-3 mb-6">
-              {[
-                { label: 'Annual solvent used', value: `${annualVol.toFixed(0)} L` },
-                { label: 'Annual recovered volume', value: `${recoveredVol.toFixed(0)} L` },
-                { label: 'Annual solvent saving', value: `₹${parseInt(annualSaving).toLocaleString('en-IN')}` },
-                { label: 'Estimated payback', value: paybackMonths ? `${paybackMonths} months` : '–' },
-              ].map((r) => (
-                <div key={r.label} className={`flex items-center justify-between rounded-xl px-4 py-3 ${r.label === 'Estimated payback' ? 'bg-[#BE0010]/5 border border-[#BE0010]/20' : 'bg-zinc-50'}`}>
-                  <span className={`text-xs font-semibold uppercase tracking-wide ${r.label === 'Estimated payback' ? 'text-[#BE0010]' : 'text-zinc-400'}`}>{r.label}</span>
-                  <span className={`font-maxot font-bold text-lg ${r.label === 'Estimated payback' ? 'text-[#BE0010]' : 'text-zinc-950'}`}>{r.value}</span>
-                </div>
-              ))}
+        <div className="relative mt-9 grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className="space-y-5">
+              <RoiInput
+                label="Estimated purchase price (\u20B9) - ask Inkarp for your quote"
+                onChange={setPurchasePrice}
+                value={purchasePrice}
+              />
+              <RoiInput
+                label="Annual value of recovered solvent (\u20B9) - see the calculator above"
+                onChange={setRecoveredSolventValue}
+                value={recoveredSolventValue}
+              />
+              <RoiInput
+                label="Annual solvent-disposal / waste savings (\u20B9)"
+                onChange={setDisposalSavings}
+                value={disposalSavings}
+              />
+              <RoiInput
+                label="Other annual value - time saved, fewer reruns (\u20B9)"
+                onChange={setOtherAnnualValue}
+                value={otherAnnualValue}
+              />
             </div>
 
-            {cards.length > 0 && (
-              <div className="space-y-3">
-                {cards.map((c) => (
-                  <div key={c.title} className="rounded-xl border border-zinc-200 p-4">
-                    <div className="font-semibold text-sm text-zinc-900 mb-1">{c.title}</div>
-                    <div className="text-xs text-zinc-500">{c.description}</div>
-                  </div>
-                ))}
+            <button
+              className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-zinc-900 transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white"
+              onClick={emailResults}
+              type="button"
+            >
+              <FiMail className="text-base" />
+              Email my ROI numbers to Inkarp
+            </button>
+          </div>
+
+          <div className="space-y-4">
+            <div className="rounded-2xl bg-[#D30013] p-7 text-white shadow-sm sm:p-8">
+              <p className="text-sm font-semibold text-white/75">Estimated payback period</p>
+              <div className="font-maxot mt-5 text-4xl font-bold leading-none sm:text-5xl">
+                {results.paybackMonths ? `${results.paybackMonths} months` : '-'}
               </div>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8">
+              <p className="text-sm font-semibold text-zinc-500">Total annual value</p>
+              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-zinc-950 sm:text-4xl">
+                {formatCurrency(results.totalAnnualValue)}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8">
+              <p className="text-sm font-semibold text-zinc-500">5-year net value (after purchase)</p>
+              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-zinc-950 sm:text-4xl">
+                {formatCurrency(results.fiveYearNetValue)}
+              </div>
+            </div>
+
+            {disclaimer && (
+              <p className="text-sm leading-6 text-zinc-500">
+                Disclaimer: {disclaimer}
+              </p>
             )}
           </div>
         </div>
-
-        {disclaimer && (
-          <p className="mt-6 rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 p-4 text-xs leading-6 text-zinc-600">
-            {disclaimer}
-          </p>
-        )}
       </div>
     </section>
   );

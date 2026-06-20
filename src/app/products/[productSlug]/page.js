@@ -53,7 +53,7 @@ export default async function ProductPage({ params }) {
           <div>
             {/* Pill badges row */}
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              {/* Principal logo pill — white background */}
+              {/* Principal logo pill â€” white background */}
               <div className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1.5">
                 <Image
                   alt={product.principalName}
@@ -64,14 +64,14 @@ export default async function ProductPage({ params }) {
                 />
               </div>
 
-              {/* Category pill — red */}
+              {/* Category pill â€” red */}
               {product.category && (
                 <span className="inline-flex items-center rounded-full bg-[#BE0010] px-3 py-1.5 text-xs font-semibold text-white">
                   {product.category}
                 </span>
               )}
 
-              {/* Country pill — dark gray */}
+              {/* Country pill â€” dark gray */}
               {product.countryOfOrigin && (
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-[#BE0010]/20 bg-white px-3 py-1.5 text-xs font-semibold text-[#BE0010]">
                   <FiGlobe className="h-3.5 w-3.5" />
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }) {
               {product.name}
             </h1>
 
-             {/* Distributor note — from JSON, omitted if not set */}
+             {/* Distributor note â€” from JSON, omitted if not set */}
             {product.distributorNote && (
               <p className="mt-3 text-lg font-medium text-[#BE0010]">
                 {product.distributorNote}
@@ -99,13 +99,13 @@ export default async function ProductPage({ params }) {
             {/* Buttons */}
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/contact-us"
+                href={isRichPage ? "#booking" : "/contact-us"}
                 className="inline-flex h-11 items-center justify-center rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
               >
                 Request Quote
               </Link>
               <Link
-                href="/contact-us"
+                href={isRichPage ? "#booking" : "/contact-us"}
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[#BE0010]/25 bg-white px-6 text-sm font-semibold text-[#BE0010] transition hover:border-[#BE0010]/40 hover:bg-[#BE0010]/5"
               >
                 <FiMail className="h-4 w-4" />
@@ -134,14 +134,14 @@ export default async function ProductPage({ params }) {
             </div>
             {/* Caption */}
             <p className="mt-2 text-center text-xs text-zinc-500">
-              {product.principalName} {product.name} · hand-lift &amp; motor-lift options
+              {product.principalName} {product.name} Â· hand-lift &amp; motor-lift options
             </p>
           </div>
 
         </div>
       </section>
 
-      {/* ── Rich universal page sections OR legacy longForm ── */}
+      {/* â”€â”€ Rich universal page sections OR legacy longForm â”€â”€ */}
       <div id="product-details">
         {isRichPage ? (
           <UniversalProductPage product={product} />
@@ -191,7 +191,7 @@ export default async function ProductPage({ params }) {
   );
 }
 
-/* ── Legacy layout for products without rich sections ── */
+/* â”€â”€ Legacy layout for products without rich sections â”€â”€ */
 function LegacyProductContent({ product }) {
   const lf = product.longForm;
   if (!lf) return null;

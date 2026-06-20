@@ -21,6 +21,8 @@ import ServiceMap from './sections/ServiceMap';
 import FAQSection from './sections/FAQSection';
 import DemoBooking from './sections/DemoBooking';
 import SupportStrip from './sections/SupportStrip';
+import ProductMicrositeLayer from './ProductMicrositeLayer';
+import ProductEngagementPopups from './ProductEngagementPopups';
 
 export default function UniversalProductPage({ product }) {
   if (!product) return null;
@@ -37,6 +39,12 @@ export default function UniversalProductPage({ product }) {
 
   return (
     <div className="w-full">
+      <ProductMicrositeLayer
+        links={product.inPageNav ?? []}
+        productName={product.name}
+      />
+      <ProductEngagementPopups productName={product.name} />
+
       {/* Sticky in-page navigation */}
       {product.inPageNav?.length > 0 && (
         <InPageNav links={product.inPageNav} />
@@ -89,7 +97,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Configuration wizard */}
       {product.configWizard && (
-        <ConfigWizard data={product.configWizard} />
+        <ConfigWizard data={product.configWizard} productName={product.name} />
       )}
 
       {/* Suitability checker */}

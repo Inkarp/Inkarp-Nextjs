@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import SectionHeader from './SectionHeader';
 
 function getRecommendation(recommendations, solventType, priority) {
   return (
@@ -25,12 +26,13 @@ export default function VacuumChillerPairing({ data }) {
 
   return (
     <section id="pairing" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{eyebrow ?? 'Pairing guide'}</p>
-        <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">{title ?? 'Pair the right vacuum pump and chiller'}</h2>
-        <p className="mt-3 mb-8 text-sm leading-7 text-zinc-500 max-w-3xl">
-          The rotary evaporator performs best when the vacuum and cooling setup are matched to your solvent behaviour.
-        </p>
+      <div className="relative mx-auto max-w-7xl">
+        <SectionHeader
+          number="14"
+          eyebrow={eyebrow ?? 'Pairing guide'}
+          title={title ?? 'Pair the right vacuum pump and chiller'}
+          description="The rotary evaporator performs best when the vacuum and cooling setup are matched to your solvent behaviour."
+        />
 
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
           {/* Selectors */}

@@ -8,7 +8,6 @@ function scrollToSection(id) {
 }
 
 export default function ProductMicrositeLayer({ links = [], productName }) {
-  const [active, setActive] = useState(links[0]?.id ?? "");
   const [showStickyCta, setShowStickyCta] = useState(false);
   const [stickyDismissed, setStickyDismissed] = useState(false);
 
@@ -31,15 +30,6 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
         booking && window.scrollY + window.innerHeight > booking.offsetTop + 120;
       setShowStickyCta(nextProgress > 22 && !nearBooking);
 
-      const marker = window.scrollY + 130;
-      let current = trackedLinks[0]?.id ?? "";
-      trackedLinks.forEach((link) => {
-        const section = document.getElementById(link.id);
-        if (section && section.offsetTop <= marker) {
-          current = link.id;
-        }
-      });
-      setActive(current);
     };
 
     update();
@@ -60,7 +50,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
 
   return (
     <>
-      <nav
+      {/* <nav
         aria-label="Product page progress"
         className="fixed right-3 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-2 rounded-full border border-zinc-200 bg-white/90 p-2 shadow-lg shadow-zinc-900/10 backdrop-blur lg:flex"
       >
@@ -78,7 +68,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             type="button"
           />
         ))}
-      </nav>
+      </nav> */}
 
       <div
         className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl rounded-md border border-zinc-200 bg-white/95 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur transition ${

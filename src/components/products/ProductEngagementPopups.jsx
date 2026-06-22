@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { FiMessageCircle, FiX } from "react-icons/fi";
+import { FiCpu, FiFastForward, FiMessageCircle, FiX } from "react-icons/fi";
 
 const POPUPS = {
   welcome: {
@@ -55,10 +55,20 @@ const POPUPS = {
   },
   exit: {
     title: "Before you go...",
-    body: "Book a free demo or ask for the product documents before leaving the page.",
+    body: "Talk through your own samples with a specialist — a free, no-obligation consultation, anywhere in India.",
+    icon: FiCpu,
     actions: [
       { label: "Book a free demo", target: "booking" },
-      { label: "Email for brochure", href: "mailto:info@inkarp.com?subject=Request%3A%20Hei-VAP%20Core%20brochure" },
+      { label: "Email me the brochure", href: "mailto:info@inkarp.com?subject=Request%3A%20Hei-VAP%20Core%20brochure" },
+    ],
+  },
+  welcomeBack: {
+    title: "Welcome back",
+    body: "Pick up where you left off.",
+    icon: FiFastForward,
+    actions: [
+      { label: "Continue reading", target: "overview", resumeTab: true },
+      { label: "Start from the top", target: "overview", resetTab: true, closeOnly: true },
     ],
   },
 };
@@ -69,6 +79,7 @@ function scrollToSection(id) {
 
 export default function ProductEngagementPopups({ productName }) {
   const [activePopup, setActivePopup] = useState(null);
+  const [lastTab, setLastTab] = useState(null);
   const cooldownUntil = useRef(0);
   const shown = useRef(new Set());
 
@@ -92,6 +103,52 @@ export default function ProductEngagementPopups({ productName }) {
     window.sessionStorage.setItem(storageKey, "1");
     setActivePopup(id);
   }, [productName]);
+
+  const showWelcomeBack = useCallback((tabInfo) => {
+    const id = "welcomeBack";
+    if (shown.current.has(id) || Date.now() < cooldownUntil.current) {
+      return;
+    }
+
+    const storageKey = `inkarp-product-popup:${productName ?? "product"}:${id}`;
+    if (typeof window !== "undefined" && window.sessionStorage.getItem(storageKey)) {
+      shown.current.add(id);
+      return;
+    }
+
+    shown.current.add(id);
+    window.sessionStorage.setItem(storageKey, "1");
+    setLastTab(tabInfo);
+    setActivePopup(id);
+  }, [productName]);
+
+  useEffect(() => {
+    let hiddenAt = 0;
+
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        hiddenAt = Date.now();
+        return;
+      }
+      if (!hiddenAt || Date.now() - hiddenAt < 5000) return;
+
+      const tabStorageKey = `inkarp-product-last-tab:${productName ?? "product"}`;
+      const raw = window.sessionStorage.getItem(tabStorageKey);
+      if (!raw) return;
+
+      try {
+        const tabInfo = JSON.parse(raw);
+        if (tabInfo?.tab && tabInfo.tab !== "overview") {
+          showWelcomeBack(tabInfo);
+        }
+      } catch {
+        // ignore malformed storage
+      }
+    };
+
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", onVisibilityChange);
+  }, [productName, showWelcomeBack]);
 
   useEffect(() => {
     const timers = [
@@ -187,12 +244,19 @@ export default function ProductEngagementPopups({ productName }) {
           <FiX />
         </button>
         <div className="mb-4 inline-flex size-11 items-center justify-center rounded-md bg-[#BE0010]/10 text-[#BE0010]">
-          <FiMessageCircle />
+          {(() => {
+            const Icon = popup.icon ?? FiMessageCircle;
+            return <Icon />;
+          })()}
         </div>
         <h2 className="font-maxot pr-8 text-2xl font-bold leading-tight text-zinc-950">
           {popup.title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-zinc-600">{popup.body}</p>
+        <p className="mt-3 text-sm leading-6 text-zinc-600">
+          {activePopup === "welcomeBack" && lastTab?.label
+            ? <>Pick up where you left off — you were reading &quot;{lastTab.label}&quot;.</>
+            : popup.body}
+        </p>
         <div className="mt-6 flex flex-wrap gap-3">
           {popup.actions.map((action) => {
             const className =
@@ -221,6 +285,11 @@ export default function ProductEngagementPopups({ productName }) {
                 key={action.label}
                 onClick={() => {
                   close();
+                  if (action.resumeTab && lastTab?.tab) {
+                    window.dispatchEvent(new CustomEvent("product-set-tab", { detail: { tab: lastTab.tab } }));
+                  } else if (action.resetTab) {
+                    window.dispatchEvent(new CustomEvent("product-set-tab", { detail: { tab: "overview" } }));
+                  }
                   if (action.target) {
                     window.setTimeout(() => scrollToSection(action.target), 80);
                   }

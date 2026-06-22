@@ -657,58 +657,88 @@
               {
                 "eyebrow": "Benefits",
                 "title": "What you gain with the Hei-VAP Core",
-                "description": "A concise summary of the practical value in day-to-day laboratory use.",
+                "description": "Concrete, capability-based benefits drawn from the product's real specifications - not customer testimonials. Ask Inkarp for verifiable references in your field.",
                 "cards": [
                   {
-                    "title": "Simpler training",
-                    "description": "The focused control concept reduces the learning curve for new users."
+                    "title": "Simple, repeatable control",
+                    "description": "Two dynamic-control knobs and a clear digital display (actual + set values) let every operator hit the same rotation speed and bath temperature, run after run - with +/-1 deg C control accuracy.",
+                    "tag": "Repeatability",
+                    "accent": true
                   },
                   {
-                    "title": "Better confidence",
-                    "description": "Actual and set values plus LED ring feedback make status easier to verify."
+                    "title": "Built-in safety",
+                    "description": "Lock function, standby, residual-heat warning above 50 deg C, over-temperature cut-off and 250 deg C overheat protection reduce day-to-day risk in busy labs.",
+                    "tag": "Safety"
                   },
                   {
-                    "title": "Safer operation",
-                    "description": "Residual-heat warning, standby and lock function support safer lab routines."
+                    "title": "Efficient solvent recovery",
+                    "description": "Up to 8.5 L/h on toluene and a 0.22 m2 condenser surface mean fast evaporation and high recovery - reclaiming solvent and cutting consumable and disposal costs.",
+                    "tag": "Recovery"
                   },
                   {
-                    "title": "Adaptable setup",
-                    "description": "Lift, glassware, coating, pump and chiller can be selected around the workflow."
+                    "title": "Gentle on sensitive samples",
+                    "description": "Vacuum-assisted distillation removes solvent at low temperatures, protecting heat-sensitive products - with a 20-210 deg C bath range to suit a wide solvent set.",
+                    "tag": "Sample care"
                   },
                   {
-                    "title": "Service-backed purchase",
-                    "description": "Inkarp provides consultation, installation, training and after-sales support in India."
+                    "title": "Configurable to your workflow",
+                    "description": "Hand-lift or motor-lift, five glassware sets (G3, G3 XL, G5 dry-ice, G6, G1 diagonal) and coated-glass options adapt the system to your solvents and bench.",
+                    "tag": "Flexibility"
+                  },
+                  {
+                    "title": "German build & local support",
+                    "description": "Made in Germany, CE-marked, NRTL-certified and rated for continuous operation - installed, trained and serviced by Inkarp across 14 branches in India.",
+                    "tag": "Reliability",
+                    "accent": true
                   }
                 ]
               },
               {
                 "eyebrow": "Quality and safety",
-                "title": "Quality, safety and certification",
-                "description": "Documentation and engineering details that support regulated and safety-conscious laboratories.",
+                "title": "Quality, safety & certification",
+                "description": "The certifications and safety standards behind the Hei-VAP Core.",
                 "cards": [
                   {
-                    "title": "CE marked",
-                    "description": "EU Declaration of Conformity for Heidolph rotary evaporators is available on request."
+                    "title": "CE marking (EU Declaration of Conformity)",
+                    "description": "Heidolph rotary evaporators carry CE marking; the EU Declaration of Conformity is available on request.",
+                    "badge": "CE",
+                    "category": "certifications",
+                    "tags": ["EU", "Conformity"]
                   },
                   {
-                    "title": "NRTL certified",
-                    "description": "NRTL safety certification supports use in regulated laboratory environments."
+                    "title": "NRTL certification",
+                    "description": "Nationally Recognized Testing Laboratory safety certification for rotary evaporators, supporting use in regulated environments.",
+                    "badge": "NRTL",
+                    "category": "certifications",
+                    "tags": ["Safety", "North America"]
                   },
                   {
-                    "title": "Continuous operation",
-                    "description": "Continuous-operation certificate supports demanding daily lab use."
+                    "title": "Continuous-operation certificate",
+                    "description": "Certified for continuous operation - backed by a Heidolph continuous-operation certificate.",
+                    "badge": "Continuous",
+                    "category": "certifications",
+                    "tags": ["24/7", "Reliability"]
                   },
                   {
                     "title": "Thermal protection",
-                    "description": "Over-temperature cut-off at 5 deg C above set point, 250 deg C overheat protection and residual-heat warning above 50 deg C."
+                    "description": "Over-temperature cut-off at 5 deg C above set point, 250 deg C overheat protection and residual-heat warning above 50 deg C.",
+                    "badge": "50 deg C",
+                    "category": "safety",
+                    "tags": ["Protection", "Bath safety"]
                   },
                   {
                     "title": "V4A bath",
-                    "description": "4.5 L V4A stainless-steel bath is durable, corrosion-resistant and easy to clean."
+                    "description": "4.5 L V4A stainless-steel bath is durable, corrosion-resistant and easy to clean.",
+                    "badge": "V4A",
+                    "category": "quality",
+                    "tags": ["Durability", "Cleanability"]
                   },
                   {
                     "title": "Made in Germany",
-                    "description": "Designed and manufactured by Heidolph Scientific Products to German quality standards."
+                    "description": "Designed and manufactured by Heidolph Scientific Products to German quality standards.",
+                    "badge": "DE",
+                    "category": "quality",
+                    "tags": ["German build", "Quality"]
                   }
                 ]
               },

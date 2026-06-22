@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   FiInfo, FiZap, FiGrid, FiBarChart2, FiTrendingUp,
   FiShield, FiSliders, FiFileText, FiMonitor, FiTool,
@@ -91,6 +91,22 @@ function KPIRow({ kpis }) {
 export default function ProductInfoTabs({ product }) {
   const [active, setActive] = useState('overview');
   const lf = product.longForm ?? {};
+  const storageKey = `inkarp-product-last-tab:${product.name ?? 'product'}`;
+
+  useEffect(() => {
+    if (active === 'overview') return;
+    const label = TABS.find((t) => t.key === active)?.label;
+    window.sessionStorage.setItem(storageKey, JSON.stringify({ tab: active, label }));
+    window.dispatchEvent(new CustomEvent('product-tab-changed', { detail: { tab: active, label } }));
+  }, [active, storageKey]);
+
+  useEffect(() => {
+    const onSetTab = (event) => {
+      if (event.detail?.tab) setActive(event.detail.tab);
+    };
+    window.addEventListener('product-set-tab', onSetTab);
+    return () => window.removeEventListener('product-set-tab', onSetTab);
+  }, []);
 
   const section = (eyebrow) => lf.sections?.find((s) => s.eyebrow === eyebrow);
   const overviewSec  = lf.sections?.[0];

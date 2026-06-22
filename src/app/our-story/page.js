@@ -1,5 +1,4 @@
 import Directors from "@/components/about/Directors";
-import DirectorsShowcase from "@/components/about/DirectorsShowcase";
 import EmpathyTeam from "@/components/about/EmpathyTeam";
 import InkarpBio from "@/components/about/InkarpBio";
 import MissionVision from "@/components/about/MissionVision";
@@ -27,7 +26,7 @@ export default function OurStory() {
         <div className="relative z-10">
           <EmpathyTeam />
           <Directors />
-          <DirectorsShowcase />
+       
         </div>
       </section>
     </main>

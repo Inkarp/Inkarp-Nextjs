@@ -132,12 +132,12 @@ export default function UniversalProductPage({ product }) {
 
       {/* Why labs choose (benefits) */}
       {benefitsSection?.cards?.length > 0 && (
-        <WhyLabsChoose cards={benefitsSection.cards} />
+        <WhyLabsChoose cards={benefitsSection.cards} section={benefitsSection} productName={product.name} />
       )}
 
       {/* Standards & certs */}
       {certsSection?.cards?.length > 0 && (
-        <StandardsCerts cards={certsSection.cards} />
+        <StandardsCerts cards={certsSection.cards} section={certsSection} productName={product.name} />
       )}
 
       {/* India service map */}
@@ -178,7 +178,7 @@ export default function UniversalProductPage({ product }) {
       )}
 
       {/* Support strip */}
-      <SupportStrip productName={product.name} />
+      {/* <SupportStrip productName={product.name} /> */}
     </div>
   );
 }

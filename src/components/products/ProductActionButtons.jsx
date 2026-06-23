@@ -32,7 +32,7 @@ export default function ProductActionButtons({ productName, productPath }) {
   return (
     <div className="flex flex-wrap gap-3">
       <button
-        className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 px-4 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+        className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-700 px-4 text-sm font-semibold text-zinc-700 dark:text-zinc-300 transition hover:border-[#BE0010] hover:text-[#BE0010]"
         onClick={handleShare}
         type="button"
       >
@@ -41,7 +41,7 @@ export default function ProductActionButtons({ productName, productPath }) {
       </button>
 
       <button
-        className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 px-4 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+        className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-700 px-4 text-sm font-semibold text-zinc-700 dark:text-zinc-300 transition hover:border-[#BE0010] hover:text-[#BE0010]"
         type="button"
       >
         <FiSliders />
@@ -49,7 +49,7 @@ export default function ProductActionButtons({ productName, productPath }) {
       </button>
 
       <Link
-        className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 px-4 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+        className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-700 px-4 text-sm font-semibold text-zinc-700 dark:text-zinc-300 transition hover:border-[#BE0010] hover:text-[#BE0010]"
         href="/contact-us"
       >
         <FiUser />

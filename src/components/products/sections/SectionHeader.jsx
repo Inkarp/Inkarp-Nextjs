@@ -6,7 +6,7 @@ export default function SectionHeader({ number, eyebrow, title, description, dar
       {number && (
         <span
           aria-hidden
-          className="pointer-events-none absolute -top-4 right-0 select-none font-maxot text-[90px] font-bold leading-none text-zinc-100 sm:text-[120px]"
+          className="pointer-events-none absolute -top-4 right-0 select-none font-maxot text-[90px] font-bold leading-none text-zinc-100 dark:text-zinc-800 sm:text-[120px]"
         >
           {number}
         </span>
@@ -20,13 +20,13 @@ export default function SectionHeader({ number, eyebrow, title, description, dar
       )}
 
       {title && (
-        <h2 className={`font-maxot relative mt-2 text-xl leading-tight sm:text-2xl ${dark ? 'text-white' : 'text-zinc-950'}`}>
+        <h2 className={`font-maxot relative mt-2 text-xl leading-tight sm:text-2xl ${dark ? 'text-white' : 'text-black dark:text-zinc-100'}`}>
           {title}
         </h2>
       )}
 
       {description && (
-        <p className={`relative mt-3 text-sm leading-7 ${dark ? 'text-white/60' : 'text-zinc-500'}`}>
+        <p className={`relative mt-3 text-sm leading-7 ${dark ? 'text-white/60' : 'text-black dark:text-zinc-400'}`}>
           {description}
         </p>
       )}

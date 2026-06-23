@@ -60,7 +60,7 @@ export default function DemoBooking({ data }) {
   const textareaFields = enhancedFields.filter((field) => field.type === 'textarea');
 
   return (
-    <section id="booking" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8">
+    <section id="booking" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="19"
@@ -70,16 +70,16 @@ export default function DemoBooking({ data }) {
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             {submitted ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center py-8 text-center">
-                <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-100">
-                  <svg className="h-8 w-8 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-950/40">
+                  <svg className="h-8 w-8 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-maxot mb-2 text-xl text-zinc-950">Enquiry sent!</h3>
-                <p className="max-w-md text-sm leading-6 text-zinc-600">
+                <h3 className="font-maxot mb-2 text-xl text-black dark:text-zinc-100">Enquiry sent!</h3>
+                <p className="max-w-md text-sm leading-6 text-black dark:text-zinc-400">
                   {successMessage ?? 'An Inkarp specialist will call you back shortly. You can also browse the FAQ while we review your request.'}
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3">
@@ -94,12 +94,12 @@ export default function DemoBooking({ data }) {
                 <div className="mb-4 grid gap-4 sm:grid-cols-2">
                   {visibleFields.map((field) => (
                     <div className={['message', 'notes'].includes(field.key) ? 'sm:col-span-2' : ''} key={field.key}>
-                      <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                      <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">
                         {field.label}{field.required && <span className="ml-0.5 text-[#BE0010]">*</span>}
                       </label>
                       {field.type === 'select' ? (
                         <select
-                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
+                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
                           onChange={(e) => set(field.key, e.target.value)}
                           required={field.required}
                           value={form[field.key] ?? ''}
@@ -109,7 +109,7 @@ export default function DemoBooking({ data }) {
                         </select>
                       ) : (
                         <input
-                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
+                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-black placeholder:text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
                           onChange={(e) => set(field.key, e.target.value)}
                           placeholder={field.label}
                           required={field.required}
@@ -123,9 +123,9 @@ export default function DemoBooking({ data }) {
 
                 {textareaFields.map((field) => (
                   <div className="mb-4" key={field.key}>
-                    <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-zinc-500">{field.label}</label>
+                    <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{field.label}</label>
                     <textarea
-                      className="w-full resize-none rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20"
+                      className="w-full resize-none rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-black placeholder:text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
                       onChange={(e) => set(field.key, e.target.value)}
                       placeholder="Solvents used, sample volume, lift preference, glassware needs..."
                       rows={4}
@@ -143,22 +143,22 @@ export default function DemoBooking({ data }) {
                 <button className="w-full rounded-xl bg-[#BE0010] py-3.5 text-sm font-semibold text-white transition hover:bg-[#9f000d] disabled:opacity-60" disabled={loading} type="submit">
                   {loading ? 'Sending...' : (submitLabel ?? 'Request demo - we will call you back')}
                 </button>
-                <p className="mt-3 text-center text-xs text-zinc-400">
+                <p className="mt-3 text-center text-xs text-black dark:text-zinc-400">
                   Your information is handled in accordance with our privacy policy. No spam.
                 </p>
               </form>
             )}
           </div>
 
-          <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-            <h3 className="font-maxot text-xl text-zinc-950">Why book a demo?</h3>
-            <div className="mt-5 divide-y divide-zinc-100">
+          <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <h3 className="font-maxot text-xl text-black dark:text-zinc-100">Why book a demo?</h3>
+            <div className="mt-5 divide-y divide-zinc-100 dark:divide-zinc-800">
               {WHY_ITEMS.map((item) => (
                 <div className="flex gap-3 py-4 first:pt-0 last:pb-0" key={item.title}>
                   <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 text-sm font-bold text-[#BE0010]">i</div>
                   <div>
-                    <div className="text-sm font-semibold text-zinc-900">{item.title}</div>
-                    <div className="mt-1 text-xs leading-5 text-zinc-500">{item.body}</div>
+                    <div className="text-sm font-semibold text-black dark:text-zinc-100">{item.title}</div>
+                    <div className="mt-1 text-xs leading-5 text-black dark:text-zinc-400">{item.body}</div>
                   </div>
                 </div>
               ))}

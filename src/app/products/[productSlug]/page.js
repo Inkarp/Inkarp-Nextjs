@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { FiChevronRight, FiMail, FiArrowRight, FiGlobe } from 'react-icons/fi';
 import { getAllProducts, getProductBySlug } from '@/data/products/principals';
 import UniversalProductPage from '@/components/products/UniversalProductPage';
+import CustomerReviews from '@/components/products/sections/CustomerReviews';
 import { FaHome } from 'react-icons/fa';
 
 export async function generateMetadata({ params }) {
@@ -33,15 +34,15 @@ export default async function ProductPage({ params }) {
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
 
   return (
-    <main className="bg-white">
+    <main className="bg-white dark:bg-zinc-950">
       {/* Breadcrumb */}
-      <nav className="border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-500 sm:px-6 lg:px-8">
+      <nav className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm text-zinc-500 dark:text-zinc-400 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center gap-2">
           <Link className="inline-flex size-8 items-center justify-center rounded-full border border-[#BE0010]/15 bg-[#fff3f4] text-[#BE0010] transition hover:border-[#BE0010]/35 hover:bg-white" href="/"><FaHome /></Link>
-          <FiChevronRight className="text-zinc-400" />
+          <FiChevronRight className="text-zinc-400 dark:text-zinc-500" />
           <Link className="transition hover:text-[#BE0010]" href="/products">Products</Link>
-          <FiChevronRight className="text-zinc-400" />
-          <span className="truncate text-zinc-900">{product.name}</span>
+          <FiChevronRight className="text-zinc-400 dark:text-zinc-500" />
+          <span className="truncate text-zinc-900 dark:text-zinc-100">{product.name}</span>
         </div>
       </nav>
 
@@ -54,7 +55,7 @@ export default async function ProductPage({ params }) {
             {/* Pill badges row */}
             <div className="mb-4 flex flex-wrap items-center gap-2">
               {/* Principal logo pill â€” white background */}
-              <div className="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1.5">
+              <div className="inline-flex items-center rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1.5">
                 <Image
                   alt={product.principalName}
                   className="h-5 w-auto object-contain"
@@ -81,7 +82,7 @@ export default async function ProductPage({ params }) {
             </div>
 
            <div className="flex flex-col gap-1">
-            <h1 className="font-maxot text-3xl leading-tight text-zinc-950 drop-shadow-[0_16px_36px_rgba(190,0,16,0.12)] sm:text-4xl lg:text-5xl">
+            <h1 className="font-maxot text-3xl leading-tight text-zinc-950 dark:text-zinc-100 drop-shadow-[0_16px_36px_rgba(190,0,16,0.12)] sm:text-4xl lg:text-5xl">
               {product.name}
             </h1>
 
@@ -92,7 +93,7 @@ export default async function ProductPage({ params }) {
               </p>
             )}
             </div>
-            <p className="mt-5 max-w-xl text-base leading-7 text-zinc-600">
+            <p className="mt-5 max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
               {product.longForm?.heroLead ?? product.overview}
             </p>
 
@@ -106,7 +107,7 @@ export default async function ProductPage({ params }) {
               </Link>
               <Link
                 href={isRichPage ? "#booking" : "/contact-us"}
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[#BE0010]/25 bg-white px-6 text-sm font-semibold text-[#BE0010] transition hover:border-[#BE0010]/40 hover:bg-[#BE0010]/5"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[#BE0010]/25 bg-white dark:bg-zinc-900 px-6 text-sm font-semibold text-[#BE0010] transition hover:border-[#BE0010]/40 hover:bg-[#BE0010]/5"
               >
                 <FiMail className="h-4 w-4" />
                 Enquiry Now
@@ -116,7 +117,7 @@ export default async function ProductPage({ params }) {
 
           {/* Right: product image */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl border border-[#BE0010]/15 bg-white shadow-2xl shadow-[#BE0010]/15">
+            <div className="overflow-hidden rounded-2xl border border-[#BE0010]/15 bg-white dark:bg-zinc-900 shadow-2xl shadow-[#BE0010]/15">
               {product.image ? (
                 <Image
                   alt={product.name}
@@ -127,13 +128,13 @@ export default async function ProductPage({ params }) {
                   priority
                 />
               ) : (
-                <div className="flex aspect-square w-full items-center justify-center text-sm text-zinc-400">
+                <div className="flex aspect-square w-full items-center justify-center text-sm text-zinc-400 dark:text-zinc-500">
                   Product image coming soon
                 </div>
               )}
             </div>
             {/* Caption */}
-            <p className="mt-2 text-center text-xs text-zinc-500">
+            <p className="mt-2 text-center text-xs text-zinc-500 dark:text-zinc-400">
               {product.principalName} {product.name} Â· hand-lift &amp; motor-lift options
             </p>
           </div>
@@ -150,18 +151,21 @@ export default async function ProductPage({ params }) {
         )}
       </div>
 
+      {/* Customer reviews */}
+      <CustomerReviews reviews={product.reviews} />
+
       {/* Related products */}
       {relatedProducts.length > 0 && (
-        <section className="border-t border-zinc-200 bg-zinc-50 px-4 py-14 sm:px-6 lg:px-8">
+        <section className="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <h2 className="font-maxot text-2xl font-bold text-zinc-950">Related Products</h2>
+            <h2 className="font-maxot text-2xl font-bold text-zinc-950 dark:text-zinc-100">Related Products</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedProducts.map((item) => (
                 <article
                   key={`${item.principalSlug}-${item.slug}`}
-                  className="group flex flex-col rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:border-[#BE0010]/40 hover:shadow-lg"
+                  className="group flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 shadow-sm transition hover:-translate-y-1 hover:border-[#BE0010]/40 hover:shadow-lg"
                 >
-                  <div className="aspect-square w-full overflow-hidden rounded-lg bg-zinc-50">
+                  <div className="aspect-square w-full overflow-hidden rounded-lg bg-zinc-50 dark:bg-zinc-800">
                     {item.image ? (
                       <Image
                         alt={item.name}
@@ -171,10 +175,10 @@ export default async function ProductPage({ params }) {
                         width={300}
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-xs text-zinc-400">No image</div>
+                      <div className="flex h-full w-full items-center justify-center text-xs text-zinc-400 dark:text-zinc-500">No image</div>
                     )}
                   </div>
-                  <h3 className="font-maxot mt-3 text-sm font-bold text-zinc-950">{item.name}</h3>
+                  <h3 className="font-maxot mt-3 text-sm font-bold text-zinc-950 dark:text-zinc-100">{item.name}</h3>
                   <Link
                     className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-[#BE0010]/20 bg-[#fff3f4] text-xs font-semibold text-[#BE0010] transition hover:border-[#BE0010]/40 hover:bg-white"
                     href={item.href}
@@ -199,16 +203,16 @@ function LegacyProductContent({ product }) {
   return (
     <>
       {product.technicalSpecs?.length > 0 && (
-        <section className="border-b border-zinc-200 bg-zinc-50 px-4 py-14 sm:px-6 lg:px-8">
+        <section className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">Specifications</p>
-            <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">Technical specifications</h2>
-            <div className="mt-6 overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm">
-              <dl className="divide-y divide-zinc-100">
+            <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">Technical specifications</h2>
+            <div className="mt-6 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm">
+              <dl className="divide-y divide-zinc-100 dark:divide-zinc-800">
                 {product.technicalSpecs.map((row) => (
                   <div key={row.label} className="grid gap-2 px-5 py-3 text-sm sm:grid-cols-[0.38fr_0.62fr]">
-                    <dt className="font-semibold text-zinc-500">{row.label}</dt>
-                    <dd className="text-zinc-900">{row.value}</dd>
+                    <dt className="font-semibold text-zinc-500 dark:text-zinc-400">{row.label}</dt>
+                    <dd className="text-zinc-900 dark:text-zinc-100">{row.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -218,24 +222,24 @@ function LegacyProductContent({ product }) {
       )}
 
       {lf.sections?.map((section, i) => (
-        <section key={section.title} className={`px-4 py-14 sm:px-6 lg:px-8 ${i % 2 === 1 ? 'bg-zinc-50' : 'bg-white'}`}>
+        <section key={section.title} className={`px-4 py-14 sm:px-6 lg:px-8 ${i % 2 === 1 ? 'bg-zinc-50 dark:bg-zinc-950' : 'bg-white dark:bg-zinc-900'}`}>
           <div className="mx-auto max-w-7xl">
             {section.eyebrow && (
               <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{section.eyebrow}</p>
             )}
-            <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">{section.title}</h2>
+            <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">{section.title}</h2>
             {section.description && (
-              <p className="mt-3 mb-7 max-w-3xl text-sm leading-7 text-zinc-500">{section.description}</p>
+              <p className="mt-3 mb-7 max-w-3xl text-sm leading-7 text-zinc-500 dark:text-zinc-400">{section.description}</p>
             )}
             {section.body?.map((p, pi) => (
-              <p key={pi} className="mb-4 max-w-4xl text-sm leading-7 text-zinc-600">{p}</p>
+              <p key={pi} className="mb-4 max-w-4xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">{p}</p>
             ))}
             {section.cards?.length > 0 && (
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {section.cards.map((c) => (
-                  <div key={c.title} className="rounded-xl border border-zinc-200 bg-white p-5 shadow-sm">
-                    <h3 className="font-maxot text-base text-zinc-950">{c.title}</h3>
-                    {c.description && <p className="mt-2 text-sm leading-6 text-zinc-600">{c.description}</p>}
+                  <div key={c.title} className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 shadow-sm">
+                    <h3 className="font-maxot text-base text-zinc-950 dark:text-zinc-100">{c.title}</h3>
+                    {c.description && <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{c.description}</p>}
                   </div>
                 ))}
               </div>
@@ -245,12 +249,12 @@ function LegacyProductContent({ product }) {
       ))}
 
       {lf.cta && (
-        <section className="bg-[#fff3f4] px-4 py-14 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-[#BE0010]/15 bg-white p-6 shadow-xl shadow-[#BE0010]/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+        <section className="bg-[#fff3f4] dark:bg-zinc-900 px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-[#BE0010]/15 dark:border-[#BE0010]/30 bg-white dark:bg-zinc-950 p-6 shadow-xl shadow-[#BE0010]/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{lf.cta.eyebrow}</p>
-              <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 sm:text-3xl">{lf.cta.title}</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600">{lf.cta.description}</p>
+              <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">{lf.cta.title}</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">{lf.cta.description}</p>
             </div>
             <Link
               href={lf.cta.href ?? '/contact-us'}

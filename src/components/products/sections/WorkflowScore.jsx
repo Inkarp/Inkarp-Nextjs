@@ -53,7 +53,7 @@ function ScoreRing({ percent }) {
           strokeWidth="10"
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center font-maxot text-3xl font-bold text-zinc-950">
+      <div className="absolute inset-0 flex items-center justify-center font-maxot text-3xl font-bold text-black dark:text-zinc-100">
         {percent}%
       </div>
     </div>
@@ -79,7 +79,7 @@ export default function WorkflowScore({ data }) {
   };
 
   return (
-    <section id="workflow-score" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <section id="workflow-score" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="10"
@@ -96,8 +96,8 @@ export default function WorkflowScore({ data }) {
                 <button
                   className={`flex min-h-14 w-full items-center gap-4 rounded-2xl border px-5 py-3 text-left transition ${
                     isSelected
-                      ? 'border-[#D30013] bg-[#D30013]/[0.07] text-zinc-950'
-                      : 'border-zinc-200 bg-white text-zinc-800 hover:border-zinc-300'
+                      ? 'border-[#D30013] bg-[#D30013]/[0.07] text-black dark:text-zinc-100'
+                      : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-300'
                   }`}
                   key={step.label}
                   onClick={() => toggleStep(index)}
@@ -106,7 +106,7 @@ export default function WorkflowScore({ data }) {
                   <span className={`flex size-7 shrink-0 items-center justify-center rounded-lg border text-sm ${
                     isSelected
                       ? 'border-[#D30013] bg-[#D30013] text-white'
-                      : 'border-zinc-200 bg-white text-zinc-400'
+                      : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100'
                   }`}
                   >
                     {isSelected ? <FiCheck /> : <FiPlus />}
@@ -117,31 +117,31 @@ export default function WorkflowScore({ data }) {
             })}
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <ScoreRing percent={percent} />
-              <p className="max-w-xs text-base leading-7 text-zinc-600">
+              <p className="max-w-xs text-base leading-7 text-black dark:text-zinc-400">
                 of your selected steps are simplified by the Hei-VAP Core
               </p>
             </div>
 
             <div className="mt-7">
-              <h3 className="font-maxot text-base font-bold text-zinc-950">How the Hei-VAP Core simplifies your selected steps:</h3>
+              <h3 className="font-maxot text-base font-bold text-black dark:text-zinc-100">How the Hei-VAP Core simplifies your selected steps:</h3>
               {selectedSteps.length ? (
                 <div className="mt-4 space-y-3">
                   {selectedSteps.map((step) => (
-                    <div className="flex items-start gap-3 text-sm leading-6 text-zinc-600" key={step.label}>
+                    <div className="flex items-start gap-3 text-sm leading-6 text-black dark:text-zinc-400" key={step.label}>
                       <span className="mt-1 flex size-4 shrink-0 items-center justify-center rounded-full border border-[#D30013] text-[#D30013]">
                         <FiCheck className="text-[10px]" />
                       </span>
                       <p>
-                        <span className="font-bold text-zinc-950">{getStepLabel(step)}:</span> {makeCoreCopy(step.core)}
+                        <span className="font-bold text-black dark:text-zinc-100">{getStepLabel(step)}:</span> {makeCoreCopy(step.core)}
                       </p>
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="mt-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm leading-6 text-zinc-500">
+                <p className="mt-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 p-4 text-sm leading-6 text-black dark:text-zinc-400">
                   Select one or more manual steps to see the matched Hei-VAP Core improvement.
                 </p>
               )}
@@ -149,7 +149,7 @@ export default function WorkflowScore({ data }) {
 
             <div className="mt-6 flex flex-wrap gap-2">
               {BENEFIT_TAGS.map(({ icon: Icon, label }) => (
-                <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-xs font-bold text-zinc-600" key={label}>
+                <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
                   <Icon className="text-[#D30013]" />
                   {label}
                 </span>
@@ -157,7 +157,7 @@ export default function WorkflowScore({ data }) {
             </div>
 
             <button
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-sm font-semibold text-zinc-600 transition hover:bg-zinc-50"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-4 py-2 text-sm font-semibold text-black dark:text-zinc-100 transition hover:bg-zinc-50 dark:hover:bg-zinc-800"
               onClick={() => setSelected(initialSelected)}
               type="button"
             >

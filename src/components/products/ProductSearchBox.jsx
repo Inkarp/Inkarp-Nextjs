@@ -26,21 +26,21 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
     <Link
       className={
         compact
-          ? "block rounded-md p-3 transition hover:bg-zinc-50"
-          : "rounded-md border border-zinc-200 bg-white/80 p-4 transition hover:border-[#BE0010] hover:bg-white"
+          ? "block rounded-md p-3 transition hover:bg-zinc-50 dark:hover:bg-zinc-800"
+          : "rounded-md border border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-900/80 p-4 transition hover:border-[#BE0010] hover:bg-white dark:hover:bg-zinc-900"
       }
       href={product.href}
       onClick={onClose}
     >
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-sm font-semibold text-zinc-950">{product.name}</p>
-          <p className="mt-1 text-xs text-zinc-500">
+          <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">{product.name}</p>
+          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
             {product.principalName} - {product.countryOfOrigin}
           </p>
         </div>
         {compact ? (
-          <span className="shrink-0 rounded-md bg-zinc-100 px-2 py-1 text-[11px] font-semibold text-zinc-600">
+          <span className="shrink-0 rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-1 text-[11px] font-semibold text-zinc-600 dark:text-zinc-400">
             {product.industry}
           </span>
         ) : null}
@@ -138,7 +138,7 @@ export default function ProductSearchBox({
       <form action="/products" role="search">
         <div className="relative">
           <FiSearch
-            className={`pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 ${
+            className={`pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500 ${
               isHeader ? "text-lg" : isModal ? "text-2xl" : "text-xl"
             }`}
           />
@@ -146,7 +146,7 @@ export default function ProductSearchBox({
             aria-label="Search products"
             autoComplete="off"
             autoFocus={isHeader || isModal}
-            className={`w-full rounded-md border border-zinc-200 bg-white text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-[#BE0010] focus:ring-2 focus:ring-[#BE0010]/10 ${
+            className={`w-full rounded-md border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 outline-none transition placeholder:text-zinc-400 dark:placeholder:text-zinc-500 focus:border-[#BE0010] focus:ring-2 focus:ring-[#BE0010]/10 ${
               isHeader
                 ? "h-12 pl-11 pr-4 text-sm"
                 : isModal
@@ -167,7 +167,7 @@ export default function ProductSearchBox({
       </form>
 
       {trimmedQuery && isHeader ? (
-        <div className="absolute left-0 right-0 z-50 mt-2 max-h-[440px] overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-2xl shadow-zinc-900/15">
+        <div className="absolute left-0 right-0 z-50 mt-2 max-h-[440px] overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-2xl shadow-zinc-900/15">
           <div className="max-h-[inherit] overflow-y-auto p-2">
             {results.length ? (
               <div className="space-y-1">
@@ -181,12 +181,12 @@ export default function ProductSearchBox({
                 ))}
               </div>
             ) : (
-              <div className="p-4 text-sm text-zinc-600">
+              <div className="p-4 text-sm text-zinc-600 dark:text-zinc-400">
                 No related products found.
               </div>
             )}
 
-            <div className="border-t border-zinc-100 p-2">
+            <div className="border-t border-zinc-100 dark:border-zinc-800 p-2">
               <Link
                 className="block w-full rounded-md bg-[#BE0010] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#9f000d]"
                 href={`/products?q=${encodeURIComponent(trimmedQuery)}`}
@@ -204,11 +204,11 @@ export default function ProductSearchBox({
           className={
             isModal
               ? "mt-4 max-h-[min(62vh,560px)] overflow-y-auto rounded-md border border-white/60 bg-white/85 p-4 shadow-[0_18px_55px_rgba(15,23,42,0.12)]"
-              : "mt-3 rounded-lg border border-zinc-200 bg-white p-4"
+              : "mt-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4"
           }
         >
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-sm font-semibold text-zinc-950">
+            <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">
               Related products for <span>{trimmedQuery}</span>
             </p>
             <Link
@@ -231,7 +231,7 @@ export default function ProductSearchBox({
               ))}
             </div>
           ) : (
-            <p className="mt-4 text-sm text-zinc-600">
+            <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
               No related products found.
             </p>
           )}

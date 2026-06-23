@@ -35,7 +35,7 @@ export default function StickyProductSearch({ children }) {
 
   return (
     <div
-      className={`sticky z-40 border-b border-zinc-200 bg-white px-4 py-3 shadow-sm shadow-zinc-950/5 transition-[top,transform] duration-300 ease-out sm:px-6 lg:px-8 ${
+      className={`sticky z-40 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 shadow-sm shadow-zinc-950/5 transition-[top,transform] duration-300 ease-out sm:px-6 lg:px-8 ${
         isAtTop ? "top-24" : "top-0"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >

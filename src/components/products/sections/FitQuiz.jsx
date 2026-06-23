@@ -21,7 +21,7 @@ function ScoreRing({ percent }) {
   return (
     <div className="relative size-32 shrink-0">
       <svg className="size-full -rotate-90" viewBox="0 0 120 120" aria-hidden="true">
-        <circle cx="60" cy="60" fill="none" r={radius} stroke="#ECECEC" strokeWidth="10" />
+        <circle className="dark:stroke-zinc-800" cx="60" cy="60" fill="none" r={radius} stroke="#ECECEC" strokeWidth="10" />
         <circle
           cx="60"
           cy="60"
@@ -34,7 +34,7 @@ function ScoreRing({ percent }) {
           strokeWidth="10"
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center font-maxot text-3xl font-bold text-zinc-950">
+      <div className="absolute inset-0 flex items-center justify-center font-maxot text-3xl font-bold text-black dark:text-zinc-100">
         {percent}%
       </div>
     </div>
@@ -78,7 +78,7 @@ export default function FitQuiz({ data }) {
   };
 
   return (
-    <section id="quiz" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <section id="quiz" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="12"
@@ -87,29 +87,29 @@ export default function FitQuiz({ data }) {
           description="Five quick questions for a fit score and a recommendation. (A faster, lighter version of the suitability checker above.)"
         />
 
-        <div className="mt-8 rounded-2xl border border-zinc-200 bg-white px-5 py-8 shadow-sm sm:px-9">
-          <div className="h-1 overflow-hidden rounded-full bg-zinc-100">
+        <div className="mt-8 rounded-2xl border border-zinc-200 bg-white px-5 py-8 shadow-sm sm:px-9 dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="h-1 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
             <div className="h-full rounded-full bg-[#D30013] transition-all duration-300" style={{ width: `${progressPercent}%` }} />
           </div>
 
           {!submitted ? (
             <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-start">
               <div>
-                <p className="font-maxot text-sm font-bold uppercase tracking-widest text-zinc-500">Question {currentIndex + 1} of {total}</p>
-                <h3 className="font-maxot mt-4 text-2xl font-bold leading-tight text-zinc-950">{cleanText(currentQuestion.text)}</h3>
-                <p className="mt-4 text-sm text-zinc-500">Pick the answer closest to your lab today.</p>
+                <p className="font-maxot text-sm font-bold uppercase tracking-widest text-black dark:text-zinc-100">Question {currentIndex + 1} of {total}</p>
+                <h3 className="font-maxot mt-4 text-2xl font-bold leading-tight text-black dark:text-zinc-100">{cleanText(currentQuestion.text)}</h3>
+                <p className="mt-4 text-sm text-black dark:text-zinc-400">Pick the answer closest to your lab today.</p>
               </div>
 
               <div className="space-y-3">
                 {(currentQuestion.options ?? []).map((option) => (
                   <button
-                    className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl border border-zinc-200 bg-white px-5 py-3 text-left text-base font-medium text-zinc-900 transition hover:border-[#D30013] hover:bg-[#D30013]/[0.03]"
+                    className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl border border-zinc-200 bg-white px-5 py-3 text-left text-base font-medium text-black transition hover:border-[#D30013] hover:bg-[#D30013]/[0.03] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
                     key={option.text}
                     onClick={() => answerQuestion(option)}
                     type="button"
                   >
                     <span>{cleanText(option.text)}</span>
-                    <FiArrowRight className="shrink-0 text-zinc-300" />
+                    <FiArrowRight className="shrink-0 text-black dark:text-zinc-100" />
                   </button>
                 ))}
               </div>
@@ -117,8 +117,8 @@ export default function FitQuiz({ data }) {
           ) : (
             <div className="mx-auto mt-8 max-w-2xl text-center">
               <ScoreRing percent={scorePercent} />
-              <h3 className="font-maxot mt-7 text-2xl font-bold text-zinc-950">{cleanText(result?.title ?? 'Recommendation ready')}</h3>
-              <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-zinc-600">
+              <h3 className="font-maxot mt-7 text-2xl font-bold text-black dark:text-zinc-100">{cleanText(result?.title ?? 'Recommendation ready')}</h3>
+              <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-black dark:text-zinc-400">
                 {cleanText(result?.body ?? 'Your answers have been scored. Talk to Inkarp to confirm the best configuration for your workflow.')}
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -126,7 +126,7 @@ export default function FitQuiz({ data }) {
                   Get my recommendation
                 </a>
                 <button
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-200 bg-white px-7 text-sm font-semibold text-zinc-600 transition hover:border-zinc-300 hover:text-zinc-950"
+                  className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-200 bg-white px-7 text-sm font-semibold text-black transition hover:border-zinc-300 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:text-zinc-100"
                   onClick={reset}
                   type="button"
                 >
@@ -137,7 +137,7 @@ export default function FitQuiz({ data }) {
           )}
         </div>
 
-        <div className="mt-5 max-w-6xl rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-xs leading-6 text-zinc-500">
+        <div className="mt-5 max-w-6xl rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
           <FiInfo className="mr-2 inline-block text-sm" />
           Disclaimer: this quiz produces an indicative fit score for guidance and discussion only - it is not a formal recommendation. Inkarp will confirm the best model for your needs.
         </div>

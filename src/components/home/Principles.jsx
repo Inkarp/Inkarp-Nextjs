@@ -44,7 +44,7 @@ function PrincipalOrbitLogo({ logo, angle }) {
   return (
     <Link
       aria-label={logo.name}
-      className="absolute flex h-12 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg bg-white transition duration-300 hover:z-30 hover:scale-110 xl:h-14 xl:w-20"
+      className="absolute flex h-12 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg bg-white transition duration-300 hover:z-30 hover:scale-110 xl:h-14 xl:w-20 dark:bg-zinc-900"
       href={logo.href ?? "/products"}
       style={{
         left: `${x}%`,
@@ -92,7 +92,7 @@ export default function Principles() {
   const orbits = buildOrbits(principalLogos);
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section className="relative overflow-hidden bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16 dark:bg-zinc-950">
       <SectionHeading
         eyebrow="Our Principles"
         title="Strategic Alliances with Global Scientific Leaders"
@@ -102,7 +102,7 @@ export default function Principles() {
         {principalLogos.map((logo, index) => (
           <Link
             aria-label={logo.name}
-            className="flex min-h-24 items-center justify-center rounded-lg border border-zinc-200 bg-white p-3 shadow-sm shadow-zinc-900/5"
+            className="flex min-h-24 items-center justify-center rounded-lg border border-zinc-200 bg-white p-3 shadow-sm shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900"
             href={logo.href ?? "/products"}
             key={`${logo.name}-${index}`}
           >
@@ -140,7 +140,7 @@ export default function Principles() {
             );
           })}
 
-          <div className="absolute left-1/2 top-1/2 z-20 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 p-3 shadow-xl shadow-zinc-900/10">
+          <div className="absolute left-1/2 top-1/2 z-20 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 p-3 shadow-xl shadow-zinc-900/10 dark:bg-zinc-900/85">
             <Image
               alt="Inkarp"
               className="object-contain p-2"

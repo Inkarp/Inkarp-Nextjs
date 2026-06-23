@@ -180,7 +180,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="bg-white">
+      <div className="bg-white dark:bg-zinc-950">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="relative flex min-h-20 items-center gap-4">
             <Link
@@ -212,7 +212,7 @@ export default function Header() {
                       <Link
                         className={`flex h-11 items-center gap-1 px-3 text-base  transition ${active
                             ? "text-[#BE0010]"
-                            : "text-zinc-600 hover:text-[#BE0010]"
+                            : "text-zinc-600 hover:text-[#BE0010] dark:text-zinc-300"
                           }`}
                         href={getNavHref(item)}
                       >
@@ -226,10 +226,10 @@ export default function Header() {
                       </Link>
 
                       {item.children ? (
-                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 translate-y-3 rounded-lg border border-zinc-200 bg-white p-2 opacity-0 shadow-[0_24px_60px_rgba(15,23,42,0.14)] transition group-hover:visible group-hover:translate-y-2 group-hover:opacity-100">
+                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 translate-y-3 rounded-lg border border-zinc-200 bg-white p-2 opacity-0 shadow-[0_24px_60px_rgba(15,23,42,0.14)] transition group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-900">
                           {item.children.map((child) => (
                             <Link
-                              className="block rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010]"
+                              className="block rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-800"
                               href={child.href}
                               key={child.label}
                             >
@@ -249,7 +249,7 @@ export default function Header() {
               <div className="mx-6 w-px bg-zinc-200" />
               <button
                 aria-label="Search products"
-                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-[#BE0010]"
+                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-[#BE0010] dark:text-zinc-200"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -281,7 +281,7 @@ export default function Header() {
             <div className="ml-auto flex items-center gap-2 xl:hidden">
               <a
                 aria-label="Download product profile"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010] dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
                 download
                 href={productProfileUrl}
               >
@@ -290,7 +290,7 @@ export default function Header() {
 
               <button
                 aria-label="Search products"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010]"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010] dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -314,7 +314,7 @@ export default function Header() {
       {isMenuOpen ? (
         <nav
           aria-label="Mobile navigation"
-          className="mx-auto max-w-[1480px] border-t border-zinc-200 bg-white p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] xl:hidden"
+          className="mx-auto max-w-[1480px] border-t border-zinc-200 bg-white p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] xl:hidden dark:border-zinc-800 dark:bg-zinc-950"
         >
           <ul className="space-y-1">
             {mainNavigation.map((item) => {
@@ -327,7 +327,7 @@ export default function Header() {
                     <Link
                       className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium transition ${active
                           ? "bg-[#BE0010] text-white"
-                          : "text-zinc-800 hover:bg-zinc-50 hover:text-[#BE0010]"
+                          : "text-zinc-800 hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-200 dark:hover:bg-zinc-900"
                         }`}
                       href={getNavHref(item)}
                       onClick={item.children ? undefined : closeMenu}
@@ -339,7 +339,7 @@ export default function Header() {
                       <button
                         aria-expanded={isOpen}
                         aria-label={`Toggle ${item.label} submenu`}
-                        className="inline-flex size-12 items-center justify-center rounded-lg border border-zinc-200 text-zinc-700"
+                        className="inline-flex size-12 items-center justify-center rounded-lg border border-zinc-200 text-zinc-700 dark:border-zinc-800 dark:text-zinc-200"
                         onClick={() =>
                           setOpenMobileItem(isOpen ? null : item.label)
                         }
@@ -354,10 +354,10 @@ export default function Header() {
                   </div>
 
                   {item.children && isOpen ? (
-                    <div className="mt-1 space-y-1 border-l border-zinc-200 pl-4">
+                    <div className="mt-1 space-y-1 border-l border-zinc-200 pl-4 dark:border-zinc-800">
                       {item.children.map((child) => (
                         <Link
-                          className="block rounded-lg px-3 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-50 hover:text-[#BE0010]"
+                          className="block rounded-lg px-3 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-900"
                           href={child.href}
                           key={child.label}
                           onClick={closeMenu}

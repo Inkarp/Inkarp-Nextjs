@@ -228,16 +228,16 @@ export default function ProductEngagementPopups({ productName }) {
   return (
     <div
       aria-modal="true"
-      className="fixed inset-0 z-[90] flex items-center justify-center bg-zinc-950/35 px-4 backdrop-blur-[2px]"
+      className="fixed inset-0 z-[90] flex items-center justify-center bg-zinc-950/35 dark:bg-zinc-950/60 px-4 backdrop-blur-[2px]"
       onClick={(event) => {
         if (event.target === event.currentTarget) close();
       }}
       role="dialog"
     >
-      <div className="relative w-full max-w-md rounded-md border border-zinc-200 bg-white p-6 shadow-[0_28px_90px_rgba(15,23,42,0.28)]">
+      <div className="relative w-full max-w-md rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-[0_28px_90px_rgba(15,23,42,0.28)]">
         <button
           aria-label="Close product prompt"
-          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md text-zinc-500 transition hover:bg-zinc-100 hover:text-zinc-950"
+          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md text-zinc-500 dark:text-zinc-400 transition hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-100"
           onClick={close}
           type="button"
         >
@@ -249,10 +249,10 @@ export default function ProductEngagementPopups({ productName }) {
             return <Icon />;
           })()}
         </div>
-        <h2 className="font-maxot pr-8 text-2xl font-bold leading-tight text-zinc-950">
+        <h2 className="font-maxot pr-8 text-2xl font-bold leading-tight text-zinc-950 dark:text-zinc-100">
           {popup.title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-zinc-600">
+        <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
           {activePopup === "welcomeBack" && lastTab?.label
             ? <>Pick up where you left off — you were reading &quot;{lastTab.label}&quot;.</>
             : popup.body}
@@ -261,7 +261,7 @@ export default function ProductEngagementPopups({ productName }) {
           {popup.actions.map((action) => {
             const className =
               action.href && !action.href.startsWith("mailto:")
-                ? "inline-flex h-11 items-center justify-center rounded-md bg-zinc-950 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800"
+                ? "inline-flex h-11 items-center justify-center rounded-md bg-zinc-950 dark:bg-zinc-800 px-4 text-sm font-semibold text-white transition hover:bg-zinc-800 dark:hover:bg-zinc-700"
                 : "inline-flex h-11 items-center justify-center rounded-md bg-[#BE0010] px-4 text-sm font-semibold text-white transition hover:bg-[#9f000d]";
 
             if (action.href) {
@@ -281,7 +281,7 @@ export default function ProductEngagementPopups({ productName }) {
 
             return (
               <button
-                className={action.closeOnly ? "inline-flex h-11 items-center justify-center rounded-md border border-zinc-200 bg-white px-4 text-sm font-semibold text-zinc-800 transition hover:border-[#BE0010] hover:text-[#BE0010]" : className}
+                className={action.closeOnly ? "inline-flex h-11 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-4 text-sm font-semibold text-zinc-800 dark:text-zinc-100 transition hover:border-[#BE0010] hover:text-[#BE0010]" : className}
                 key={action.label}
                 onClick={() => {
                   close();

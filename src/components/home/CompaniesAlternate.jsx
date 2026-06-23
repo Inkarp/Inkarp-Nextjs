@@ -93,7 +93,7 @@ function CompanyCard({ company, index }) {
   return (
     <Link
       href={company.href}
-      className="group relative flex h-[126px] w-[300px] overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-200/80 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+      className="group relative flex h-[126px] w-[300px] overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-200/80 transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-zinc-900 dark:shadow-none"
     >
       <div
         className={`flex w-[82px] shrink-0 items-center justify-center bg-gradient-to-br ${placement.color}`}
@@ -104,7 +104,7 @@ function CompanyCard({ company, index }) {
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col justify-center px-6">
-        <p className="mb-3 text-[11px] font-bold uppercase tracking-wide text-slate-500">
+        <p className="mb-3 text-[11px] font-bold uppercase tracking-wide text-slate-500 dark:text-zinc-400">
           {relationshipTag}
         </p>
 
@@ -133,7 +133,7 @@ function MobileCompanyCard({ company, index }) {
   return (
     <Link
       href={company.href}
-      className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1"
+      className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none"
     >
       <div className="mb-4 flex items-center justify-between">
         <span className="rounded-full bg-[#BE0010]/7 px-3 py-1 text-xs font-bold text-[#BE0010]">
@@ -155,7 +155,7 @@ function MobileCompanyCard({ company, index }) {
         />
       </div>
 
-      <p className="mt-4 text-center text-xs font-bold uppercase tracking-wide text-slate-500">
+      <p className="mt-4 text-center text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-zinc-400">
         {relationshipTag}
       </p>
     </Link>
@@ -164,8 +164,8 @@ function MobileCompanyCard({ company, index }) {
 
 function CenterHub() {
   return (
-    <div className="absolute left-1/2 top-1/2 z-20 flex size-[250px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)]">
-      <div className="absolute inset-5 rounded-full border border-white bg-gradient-to-br from-slate-50 to-white shadow-inner" />
+    <div className="absolute left-1/2 top-1/2 z-20 flex size-[250px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)] dark:bg-zinc-900">
+      <div className="absolute inset-5 rounded-full border border-white bg-gradient-to-br from-slate-50 to-white shadow-inner dark:border-zinc-800 dark:from-zinc-900 dark:to-zinc-900" />
 
       <div className="relative z-10 text-center">
         <span className="block text-4xl font-black uppercase leading-[0.9] tracking-tight text-[#BE0010]">
@@ -186,7 +186,7 @@ function CenterHub() {
 
 export default function CompaniesAlternate() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f8fbff] to-[#eef5ff] px-4 py-16 sm:px-6 lg:px-8 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f8fbff] to-[#eef5ff] px-4 py-16 sm:px-6 lg:px-8 lg:py-28 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-900">
       <div className="pointer-events-none absolute left-1/2 top-1/2 size-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#BE0010]/5 blur-3xl" />
       <div className="pointer-events-none absolute right-0 top-0 size-[420px] rounded-full bg-blue-100/70 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-0 size-[420px] rounded-full bg-red-100/60 blur-3xl" />
@@ -198,11 +198,11 @@ export default function CompaniesAlternate() {
             {groupCompanies.heading || "Our Group"}
           </span>
 
-          <h2 className="font-maxot text-3xl font-bold leading-tight text-slate-950 sm:text-4xl lg:text-5xl">
+          <h2 className="font-maxot text-3xl font-bold leading-tight text-slate-950 sm:text-4xl lg:text-5xl dark:text-zinc-100">
             {groupCompanies.title || "INKARP"}
           </h2>
 
-          <p className="mt-6 max-w-lg text-base leading-7 text-slate-700">
+          <p className="mt-6 max-w-lg text-base leading-7 text-slate-700 dark:text-zinc-400">
             {groupCompanies.description ||
               "Explore our subsidiaries and joint ventures that drive our shared vision forward."}
           </p>
@@ -210,15 +210,15 @@ export default function CompaniesAlternate() {
           <div className="mt-12 space-y-5">
             {featureItems.map((item) => (
               <div key={item.title} className="flex gap-4">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-white text-xl text-[#BE0010] shadow-lg shadow-slate-200/80">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-white text-xl text-[#BE0010] shadow-lg shadow-slate-200/80 dark:bg-zinc-900 dark:shadow-none">
                   {item.icon}
                 </div>
 
-                <div className="border-l border-slate-200 pl-4">
-                  <h3 className="text-sm font-bold uppercase tracking-wide text-slate-950">
+                <div className="border-l border-slate-200 pl-4 dark:border-zinc-800">
+                  <h3 className="text-sm font-bold uppercase tracking-wide text-slate-950 dark:text-zinc-100">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">
+                  <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-zinc-400">
                     {item.description}
                   </p>
                 </div>
@@ -229,7 +229,7 @@ export default function CompaniesAlternate() {
 
         <div className="lg:hidden">
           <div className="mb-12 flex justify-center">
-            <div className="flex size-56 items-center justify-center rounded-full bg-white shadow-2xl shadow-slate-200">
+            <div className="flex size-56 items-center justify-center rounded-full bg-white shadow-2xl shadow-slate-200 dark:bg-zinc-900 dark:shadow-none">
               <div className="text-center">
                 <span className="block text-3xl font-black uppercase leading-tight text-[#BE0010]">
                   Our
@@ -237,7 +237,7 @@ export default function CompaniesAlternate() {
                 <span className="block text-3xl font-black uppercase leading-tight text-[#BE0010]">
                   Group
                 </span>
-                <span className="mt-2 block text-xs font-bold uppercase tracking-wide text-slate-400">
+                <span className="mt-2 block text-xs font-bold uppercase tracking-wide text-slate-400 dark:text-zinc-500">
                   Ecosystem
                 </span>
               </div>
@@ -256,11 +256,11 @@ export default function CompaniesAlternate() {
         </div>
 
         <div className="relative hidden h-[800px] lg:block">
-          <div className="absolute left-1/2 top-1/2 size-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80 bg-white/35 shadow-inner backdrop-blur-sm" />
+          <div className="absolute left-1/2 top-1/2 size-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80 bg-white/35 shadow-inner backdrop-blur-sm dark:border-zinc-800/80 dark:bg-zinc-900/35" />
 
           <div className="absolute left-1/2 top-1/2 size-[465px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-blue-400/50" />
 
-          <div className="absolute left-1/2 top-1/2 size-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[28px] border-white/70" />
+          <div className="absolute left-1/2 top-1/2 size-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[28px] border-white/70 dark:border-zinc-800/70" />
 
           <div className="absolute left-1/2 top-1/2 size-[620px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-100" />
 
@@ -282,7 +282,7 @@ export default function CompaniesAlternate() {
             return (
               <span
                 key={`dot-${company.name}-${index}`}
-                className="absolute z-20 flex size-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg"
+                className="absolute z-20 flex size-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg dark:bg-zinc-900"
                 style={{
                   left: `${placement.x}%`,
                   top: `${placement.y}%`,

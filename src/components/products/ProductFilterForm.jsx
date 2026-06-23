@@ -59,13 +59,13 @@ export default function ProductFilterForm({ productCount, query, totalCount }) {
 
   return (
     <form action="/products" onSubmit={handleSubmit} role="search">
-      <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 bg-white p-2 shadow-sm sm:flex-row sm:items-center">
+      <div className="flex flex-col gap-2 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-2 shadow-sm sm:flex-row sm:items-center">
         <div className="relative flex min-w-0 flex-1 items-center">
-          <FiSearch className="pointer-events-none absolute left-3 text-base text-zinc-400" />
+          <FiSearch className="pointer-events-none absolute left-3 text-base text-zinc-400 dark:text-zinc-500" />
           <input
             aria-label="Search products"
             autoComplete="off"
-            className="h-11 w-full rounded-lg bg-zinc-50 pl-9 pr-3 text-sm text-zinc-900 outline-none transition placeholder:text-zinc-400 hover:bg-zinc-100 focus:bg-white focus:ring-2 focus:ring-[#BE0010]/15"
+            className="h-11 w-full rounded-lg bg-zinc-50 dark:bg-zinc-800 pl-9 pr-3 text-sm text-zinc-900 dark:text-zinc-100 outline-none transition placeholder:text-zinc-400 dark:placeholder:text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-700 focus:bg-white dark:focus:bg-zinc-900 focus:ring-2 focus:ring-[#BE0010]/15"
             name="q"
             onChange={(event) => setSearch(event.target.value)}
             placeholder="Search product, principal, country, industry, application, tag..."
@@ -77,7 +77,7 @@ export default function ProductFilterForm({ productCount, query, totalCount }) {
         <div className="flex items-center justify-between gap-2 sm:justify-end">
           {hasActiveSearch ? (
             <Link
-              className="inline-flex h-9 items-center rounded-lg px-2.5 text-xs font-medium text-zinc-400 transition hover:text-[#BE0010]"
+              className="inline-flex h-9 items-center rounded-lg px-2.5 text-xs font-medium text-zinc-400 dark:text-zinc-500 transition hover:text-[#BE0010]"
               href="/products"
             >
               Clear
@@ -93,10 +93,10 @@ export default function ProductFilterForm({ productCount, query, totalCount }) {
       </div>
 
       {hasActiveSearch ? (
-        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
           <span>
             Showing matches for{" "}
-            <span className="font-semibold text-zinc-800">{trimmedSearch}</span>
+            <span className="font-semibold text-zinc-800 dark:text-zinc-200">{trimmedSearch}</span>
           </span>
           <Link
             className="font-semibold text-[#BE0010] transition hover:text-[#9f000d]"

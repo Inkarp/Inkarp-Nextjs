@@ -16,9 +16,9 @@ function cleanNumber(value) {
 function RoiInput({ label, value, onChange }) {
   return (
     <label className="block">
-      <span className="text-sm font-medium text-zinc-600">{label}</span>
+      <span className="text-sm font-medium text-black dark:text-zinc-100">{label}</span>
       <input
-        className="mt-3 h-12 w-full rounded-2xl border border-zinc-200 bg-zinc-50 px-4 font-maxot text-lg font-bold text-zinc-950 outline-none transition focus:border-[#BE0010] focus:bg-white focus:ring-4 focus:ring-[#BE0010]/10"
+        className="mt-3 h-12 w-full rounded-2xl border border-zinc-200 bg-zinc-50 px-4 font-maxot text-lg font-bold text-black outline-none transition focus:border-[#BE0010] focus:bg-white focus:ring-4 focus:ring-[#BE0010]/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:focus:bg-zinc-900"
         min="0"
         onChange={(event) => onChange(cleanNumber(event.target.value))}
         step="1000"
@@ -82,7 +82,7 @@ export default function ROICalculator({ disclaimer }) {
   };
 
   return (
-    <section id="roi" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <section id="roi" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="06"
@@ -92,7 +92,7 @@ export default function ROICalculator({ disclaimer }) {
         />
 
         <div className="relative mt-9 grid gap-6 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
             <div className="space-y-5">
               <RoiInput
                 label="Estimated purchase price (\u20B9) - ask Inkarp for your quote"
@@ -117,7 +117,7 @@ export default function ROICalculator({ disclaimer }) {
             </div>
 
             <button
-              className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-zinc-900 transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white"
+              className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-zinc-100 dark:bg-zinc-900 dark:text-zinc-100"
               onClick={emailResults}
               type="button"
             >
@@ -134,22 +134,22 @@ export default function ROICalculator({ disclaimer }) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8">
-              <p className="text-sm font-semibold text-zinc-500">Total annual value</p>
-              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-zinc-950 sm:text-4xl">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+              <p className="text-sm font-semibold text-black dark:text-zinc-100">Total annual value</p>
+              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
                 {formatCurrency(results.totalAnnualValue)}
               </div>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8">
-              <p className="text-sm font-semibold text-zinc-500">5-year net value (after purchase)</p>
-              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-zinc-950 sm:text-4xl">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+              <p className="text-sm font-semibold text-black dark:text-zinc-100">5-year net value (after purchase)</p>
+              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
                 {formatCurrency(results.fiveYearNetValue)}
               </div>
             </div>
 
             {disclaimer && (
-              <p className="text-sm leading-6 text-zinc-500">
+              <p className="text-sm leading-6 text-black dark:text-zinc-400">
                 Disclaimer: {disclaimer}
               </p>
             )}

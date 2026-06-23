@@ -72,7 +72,7 @@ export default function SolventGuide({ cards = [], disclaimer }) {
   const card = enrichedCards[active];
 
   return (
-    <section id="solvents" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-16 sm:px-6 lg:px-8">
+    <section id="solvents" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-[#F6F6F6] dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="05"
@@ -87,22 +87,22 @@ export default function SolventGuide({ cards = [], disclaimer }) {
               <button
                 className={`flex min-h-12 w-full items-center justify-between rounded-2xl border px-5 py-3 text-left transition ${
                   active === index
-                    ? 'border-[#BE0010] bg-[#BE0010]/5 text-zinc-950'
-                    : 'border-zinc-200 bg-white text-zinc-900 hover:border-zinc-300'
+                    ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
+                    : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-300'
                 }`}
                 key={item.title}
                 onClick={() => setActive(index)}
                 type="button"
               >
                 <span className="text-sm font-bold">{item.title}</span>
-                <span className="text-xs text-zinc-500">{item.boilingPoint ? `${item.boilingPoint} deg C bp` : 'setup'}</span>
+                <span className="text-xs text-black dark:text-zinc-100">{item.boilingPoint ? `${item.boilingPoint} deg C bp` : 'setup'}</span>
               </button>
             ))}
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
-            <h3 className="font-maxot text-2xl font-bold text-zinc-950">{card.title}</h3>
-            <p className="mt-2 text-sm text-zinc-500">
+          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
+            <h3 className="font-maxot text-2xl font-bold text-black dark:text-zinc-100">{card.title}</h3>
+            <p className="mt-2 text-sm text-black dark:text-zinc-400">
               {[
                 card.parsed.bath && `bath ${card.parsed.bath}`,
                 card.parsed.vapour && `vapour ~${card.parsed.vapour}`,
@@ -120,16 +120,16 @@ export default function SolventGuide({ cards = [], disclaimer }) {
                       <Icon className="text-base" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">{DETAIL_LABELS[index]}</p>
-                      <p className="mt-1 text-sm leading-6 text-zinc-700">{row}</p>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{DETAIL_LABELS[index]}</p>
+                      <p className="mt-1 text-sm leading-6 text-black dark:text-zinc-400">{row}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm leading-6 text-zinc-500">
-              Tip - the <span className="font-semibold text-zinc-700">20/40/60 rule</span>: ~40 deg C bath, ~20 deg C coolant and a ~60 deg C gap to the vapour temperature for safe, efficient evaporation.
+            <div className="mt-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm leading-6 text-black dark:text-zinc-400">
+              Tip - the <span className="font-semibold text-black dark:text-zinc-100">20/40/60 rule</span>: ~40 deg C bath, ~20 deg C coolant and a ~60 deg C gap to the vapour temperature for safe, efficient evaporation.
             </div>
 
             <a
@@ -142,8 +142,8 @@ export default function SolventGuide({ cards = [], disclaimer }) {
         </div>
 
         {disclaimer && (
-          <div className="relative mt-6 max-w-5xl rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-xs leading-6 text-zinc-500">
-            <span className="mr-2 inline-flex size-4 items-center justify-center rounded-full border border-zinc-300 text-[10px] font-bold text-zinc-500">i</span>
+          <div className="relative mt-6 max-w-5xl rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-5 py-4 text-xs leading-6 text-black dark:text-zinc-400">
+            <span className="mr-2 inline-flex size-4 items-center justify-center rounded-full border border-zinc-300 dark:border-zinc-700 text-[10px] font-bold text-black dark:text-zinc-100">i</span>
             Disclaimer: {normaliseText(disclaimer)}
           </div>
         )}

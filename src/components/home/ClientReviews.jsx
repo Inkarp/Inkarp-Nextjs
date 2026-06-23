@@ -52,10 +52,10 @@ export default function ClientReviews() {
   });
 
   return (
-    <section className="relative flex h-screen items-center overflow-hidden bg-[#fff3f4] px-4 py-8 sm:px-6 lg:px-8">
+    <section className="relative flex h-screen items-center overflow-hidden bg-[#fff3f4] px-4 py-8 sm:px-6 lg:px-8 dark:bg-zinc-950">
       <div className="relative mx-auto w-full max-w-7xl">
         <div className="mx-auto mb-8 flex max-w-3xl flex-col items-center text-center">
-          <p className="rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-800">
+          <p className="rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
             Testimonials
           </p>
           <h2 className="font-maxot mt-3 text-2xl leading-tight text-[#BE0010] sm:text-3xl">
@@ -74,24 +74,24 @@ export default function ClientReviews() {
               className="group relative flex min-h-[300px] flex-col"
               key={`${review.name}-${review.message.slice(0, 20)}`}
             >
-              <blockquote className="relative flex flex-1 flex-col justify-center bg-white px-7 py-10 shadow-lg shadow-[#BE0010]/10 transition duration-300 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#BE0010]/15 sm:px-9">
-                <span className="absolute left-0 top-0 h-14 w-14 bg-[#fff3f4] [clip-path:polygon(0_0,100%_0,0_100%)]" />
+              <blockquote className="relative flex flex-1 flex-col justify-center bg-white px-7 py-10 shadow-lg shadow-[#BE0010]/10 transition duration-300 group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-[#BE0010]/15 sm:px-9 dark:bg-zinc-900">
+                <span className="absolute left-0 top-0 h-14 w-14 bg-[#fff3f4] [clip-path:polygon(0_0,100%_0,0_100%)] dark:bg-zinc-950" />
                 <span
                   aria-hidden="true"
                   className="font-maxot absolute left-6 top-3 text-7xl leading-none text-[#BE0010]"
                 >
                   &ldquo;
                 </span>
-                <p className="mx-auto max-w-sm pt-8 text-center text-sm italic leading-8 text-zinc-600 sm:text-base">
+                <p className="mx-auto max-w-sm pt-8 text-center text-sm italic leading-8 text-zinc-600 sm:text-base dark:text-zinc-400">
                   {review.message}
                 </p>
-                <span className="absolute -bottom-9 left-14 h-10 w-20 bg-white [clip-path:polygon(0_0,100%_0,0_100%)]" />
+                <span className="absolute -bottom-9 left-14 h-10 w-20 bg-white [clip-path:polygon(0_0,100%_0,0_100%)] dark:bg-zinc-900" />
               </blockquote>
               <figcaption className="mt-14 pl-0 sm:pl-1">
                 <p className="font-maxot text-xl font-bold text-[#BE0010]">
                   {review.name}
                 </p>
-                <p className="mt-2 text-sm italic text-zinc-500">
+                <p className="mt-2 text-sm italic text-zinc-500 dark:text-zinc-400">
                   Inkarp Customer
                 </p>
               </figcaption>

@@ -14,16 +14,16 @@ export default function SupportStrip({ productName }) {
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 text-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-[#BE0010]">Inkarp support for {productName ?? 'this product'}</p>
-          <h2 className="font-maxot mt-1 text-xl text-zinc-950 sm:text-2xl">How can we help?</h2>
+          <h2 className="font-maxot mt-1 text-xl text-black dark:text-zinc-100 sm:text-2xl">How can we help?</h2>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item) => (
             <Link key={item.label} href={item.href}
-              className="flex items-center gap-3 rounded-xl border border-[#BE0010]/15 bg-white px-4 py-3.5 shadow-sm shadow-[#BE0010]/5 transition hover:border-[#BE0010]/35 hover:bg-[#BE0010]/5">
+              className="flex items-center gap-3 rounded-xl border border-[#BE0010]/15 bg-white dark:bg-zinc-900 px-4 py-3.5 shadow-sm shadow-[#BE0010]/5 transition hover:border-[#BE0010]/35 hover:bg-[#BE0010]/5">
               <span className="text-xl">{item.icon}</span>
               <div>
-                <div className="text-sm font-semibold text-zinc-950">{item.label}</div>
-                <div className="text-xs text-zinc-500">{item.sub}</div>
+                <div className="text-sm font-semibold text-black dark:text-zinc-100">{item.label}</div>
+                <div className="text-xs text-black dark:text-zinc-400">{item.sub}</div>
               </div>
             </Link>
           ))}

@@ -71,7 +71,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
       </nav> */}
 
       <div
-        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl rounded-md border border-zinc-200 bg-white/95 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur transition ${
+        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl rounded-md border border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-900/95 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur transition ${
           shouldShowSticky
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-6 opacity-0"
@@ -82,7 +82,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             <p className="text-xs font-semibold uppercase tracking-wide text-[#BE0010]">
               Need help configuring it?
             </p>
-            <p className="text-sm font-semibold text-zinc-950">
+            <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">
               Book a demo for {productName ?? "this product"}.
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             </button>
             <button
               aria-label="Dismiss sticky product CTA"
-              className="inline-flex size-10 items-center justify-center rounded-md border border-zinc-200 text-zinc-500 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+              className="inline-flex size-10 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400 transition hover:border-[#BE0010] hover:text-[#BE0010]"
               onClick={() => setStickyDismissed(true)}
               type="button"
             >

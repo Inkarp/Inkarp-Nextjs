@@ -51,7 +51,7 @@ export const siteConfig = {
     {
       label: "News and Events",
       href: "",
-       children: [
+      children: [
         {
           label: "Blogs",
           href: "/blogs",
@@ -60,12 +60,12 @@ export const siteConfig = {
           label: "Events",
           href: "/events",
         },
-        
+
         {
           label: "Webinars",
           href: "/webinars",
         },
-    
+
       ],
     },
     {
@@ -89,4 +89,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/inkarp",
     youtube: "https://www.youtube.com/@inkarp",
   },
+
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5601922545243!2d78.55536867462791!3d17.432881801493995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993f40000001%3A0x534548d1d6e2d4bd!2sInkarp%20Instruments%20Private%20Limited!5e0!3m2!1sen!2sin!4v1782193121677!5m2!1sen!2sin"
+
 };

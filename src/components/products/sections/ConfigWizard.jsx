@@ -104,8 +104,8 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
   };
 
   return (
-    <section id="config" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-10 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-[28px] border border-zinc-200 bg-[#F6F6F6] px-5 py-12 sm:px-8 lg:px-12">
+    <section id="config" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-10 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mx-auto max-w-7xl rounded-[28px] border border-zinc-200 bg-[#F6F6F6] px-5 py-12 sm:px-8 lg:px-12 dark:border-zinc-800 dark:bg-zinc-900">
         <div className="relative overflow-hidden">
           <SectionHeader number="08" eyebrow={eyebrow} title={heading} description={intro} />
 
@@ -119,10 +119,10 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     aria-label={`Go to ${getStepLabel(item, index)}`}
                     className={`flex size-9 items-center justify-center rounded-full text-sm font-bold transition ${
                       isComplete
-                        ? 'bg-black text-white'
+                        ? 'bg-black text-white dark:bg-zinc-100 dark:text-zinc-950'
                         : isActive
                           ? 'bg-[#D30013] text-white shadow-[0_0_0_6px_rgba(211,0,19,0.10)]'
-                          : 'bg-white text-zinc-400 ring-1 ring-zinc-200'
+                          : 'bg-white text-black ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700'
                     }`}
                     disabled={!isComplete && !isActive}
                     onClick={() => {
@@ -133,18 +133,18 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   >
                     {isComplete ? <FiCheck className="text-sm" /> : index + 1}
                   </button>
-                  <span className={`text-sm ${isActive ? 'font-bold text-zinc-950' : 'text-zinc-500'}`}>
+                  <span className={`text-sm ${isActive ? 'font-bold text-black dark:text-zinc-100' : 'text-black dark:text-zinc-100'}`}>
                     {getStepLabel(item, index)}
                   </span>
-                  {index < steps.length - 1 && <span className="hidden h-px w-10 bg-zinc-300 sm:block" />}
+                  {index < steps.length - 1 && <span className="hidden h-px w-10 bg-zinc-300 sm:block dark:bg-zinc-700" />}
                 </div>
               );
             })}
           </div>
 
           <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
-              <h3 className="font-maxot text-lg font-bold text-zinc-950">{cleanText(current.question)}</h3>
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="font-maxot text-lg font-bold text-black dark:text-zinc-100">{cleanText(current.question)}</h3>
               <div className="mt-5 space-y-3">
                 {(current.options ?? []).map((option) => {
                   const isSelected = selections[current.key] === option.val;
@@ -152,15 +152,15 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     <button
                       className={`w-full rounded-2xl border px-4 py-3 text-left transition ${
                         isSelected
-                          ? 'border-[#BE0010] bg-[#BE0010]/5 text-zinc-950'
-                          : 'border-zinc-200 bg-white text-zinc-800 hover:border-zinc-400'
+                          ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
+                          : 'border-zinc-200 bg-white text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500'
                       }`}
                       key={option.val}
                       onClick={() => select(option.val)}
                       type="button"
                     >
                       <span className="block text-base font-medium">{cleanText(option.label)}</span>
-                      {option.desc && <span className="mt-1 block text-sm leading-6 text-zinc-500">{cleanText(option.desc)}</span>}
+                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black dark:text-zinc-400">{cleanText(option.desc)}</span>}
                     </button>
                   );
                 })}
@@ -168,7 +168,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
 
               <div className="mt-6 flex items-center justify-between gap-3">
                 <button
-                  className="text-sm font-semibold text-zinc-500 transition hover:text-zinc-950 disabled:cursor-not-allowed disabled:opacity-30"
+                  className="text-sm font-semibold text-black transition hover:text-black disabled:cursor-not-allowed disabled:opacity-30 dark:text-zinc-100 dark:hover:text-zinc-100"
                   disabled={step === 0 && !done}
                   onClick={() => {
                     setDone(false);
@@ -179,7 +179,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   Back
                 </button>
                 <button
-                  className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-sm font-semibold text-zinc-600 transition hover:bg-zinc-50"
+                  className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-sm font-semibold text-black transition hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
                   onClick={reset}
                   type="button"
                 >
@@ -189,10 +189,10 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
               </div>
             </div>
 
-            <div className="flex min-h-[270px] items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className="flex min-h-[270px] items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
               {!done ? (
-                <div className="text-center text-zinc-500">
-                  <FiSettings className="mx-auto text-4xl text-zinc-300" />
+                <div className="text-center text-black dark:text-zinc-100">
+                  <FiSettings className="mx-auto text-4xl text-black dark:text-zinc-100" />
                   <p className="mt-4 text-sm leading-6">{emptyState}</p>
                 </div>
               ) : (
@@ -201,19 +201,19 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     <FiCheck />
                     Configuration ready
                   </div>
-                  <h3 className="font-maxot mt-4 text-2xl font-bold text-zinc-950">{result.title ?? recommendedTitle}</h3>
+                  <h3 className="font-maxot mt-4 text-2xl font-bold text-black dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
                   <div className="mt-5 space-y-2">
                     {selectedRows.map((row) => (
-                      <div className="rounded-2xl border border-zinc-100 bg-zinc-50 px-4 py-3" key={row.key}>
+                      <div className="rounded-2xl border border-zinc-100 bg-zinc-50 px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900" key={row.key}>
                         <div className="flex items-center justify-between gap-4">
-                          <span className="text-xs font-bold uppercase tracking-wide text-zinc-400">{row.label}</span>
-                          <span className="text-right text-sm font-bold text-zinc-950">{row.value}</span>
+                          <span className="text-xs font-bold uppercase tracking-wide text-black dark:text-zinc-100">{row.label}</span>
+                          <span className="text-right text-sm font-bold text-black dark:text-zinc-100">{row.value}</span>
                         </div>
-                        {row.desc && <p className="mt-1 text-xs leading-5 text-zinc-500">{row.desc}</p>}
+                        {row.desc && <p className="mt-1 text-xs leading-5 text-black dark:text-zinc-400">{row.desc}</p>}
                       </div>
                     ))}
                   </div>
-                  {result.ctaNote && <p className="mt-4 text-sm leading-6 text-zinc-500">{result.ctaNote}</p>}
+                  {result.ctaNote && <p className="mt-4 text-sm leading-6 text-black dark:text-zinc-400">{result.ctaNote}</p>}
                   <div className="mt-5 flex flex-wrap gap-3">
                     <button
                       className="inline-flex items-center gap-2 rounded-full bg-[#D30013] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#BE0010]"
@@ -223,7 +223,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                       <FiMail />
                       Email this configuration
                     </button>
-                    <a className="rounded-full border border-zinc-900 px-5 py-3 text-sm font-bold text-zinc-900 transition hover:border-[#BE0010] hover:text-[#BE0010]" href="#booking">
+                    <a className="rounded-full border border-zinc-900 px-5 py-3 text-sm font-bold text-black transition hover:border-[#BE0010] hover:text-[#BE0010] dark:border-zinc-100 dark:text-zinc-100" href="#booking">
                       {result.ctaLabel ?? 'Request quote'}
                     </a>
                   </div>
@@ -232,7 +232,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
             </div>
           </div>
 
-          <div className="relative mt-5 max-w-5xl rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-xs leading-6 text-zinc-500">
+          <div className="relative mt-5 max-w-5xl rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
             <FiInfo className="mr-2 inline-block text-sm" />
             Disclaimer: {disclaimer}
           </div>

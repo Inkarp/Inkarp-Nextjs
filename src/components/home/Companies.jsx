@@ -28,13 +28,13 @@ export default function Companies() {
 
       <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.8fr] lg:gap-12">
         <div className="mx-auto max-w-md text-center lg:mx-0">
-          <p className="font-maxot text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl">
+          <p className="font-maxot text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl dark:text-zinc-100">
             INKARP
           </p>
           <h2 className="font-maxot mt-4 text-xl leading-tight text-[#BE0010] sm:text-2xl">
             {groupCompanies.title}
           </h2>
-          <p className="mt-4 text-sm leading-6 text-zinc-600 sm:text-base">
+          <p className="mt-4 text-sm leading-6 text-zinc-600 sm:text-base dark:text-zinc-400">
             {groupCompanies.description}
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function Companies() {
               <div className="mt-3 grid grid-cols-2 gap-3">
                 {companies.map((company) => (
                   <Link
-                    className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-lg border border-zinc-200 bg-white p-4 text-center shadow-sm shadow-zinc-900/5"
+                    className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-lg border border-zinc-200 bg-white p-4 text-center shadow-sm shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900"
                     href={company.href}
                     key={`${category}-${company.logo}`}
                   >
@@ -76,7 +76,7 @@ export default function Companies() {
         </div>
 
         <div className="relative mx-auto hidden h-[620px] w-full max-w-5xl lg:block xl:h-[680px]">
-          <div className="absolute left-1/2 top-1/2 size-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted border-zinc-500 bg-zinc-100/60" />
+          <div className="absolute left-1/2 top-1/2 size-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted border-zinc-500 bg-zinc-100/60 dark:bg-zinc-900/60" />
           {/* <div className="absolute left-1/2 top-1/2 size-[44%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-200" /> */}
 
           <div className="absolute left-1/2 top-1/2 z-10 flex size-[34%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full backdrop-blur">
@@ -102,13 +102,13 @@ export default function Companies() {
                 }}
               >
                 <Link
-                  className="flex w-[42%] min-w-32 max-w-56 animate-[company-card_38s_linear_infinite] flex-col items-center justify-center gap-3 rounded-lg bg-white p-4 text-center shadow-lg shadow-zinc-900/10 transition hover:shadow-xl sm:w-[36%] lg:w-[30%]"
+                  className="flex w-[42%] min-w-32 max-w-56 animate-[company-card_38s_linear_infinite] flex-col items-center justify-center gap-3 rounded-lg bg-white p-4 text-center shadow-lg shadow-zinc-900/10 transition hover:shadow-xl sm:w-[36%] lg:w-[30%] dark:bg-zinc-900"
                   href={company.href}
                   style={{
                     animationDelay: `-${(38 / itemCount) * index}s`,
                   }}
                 >
-                  <span className="font-maxot text-xs font-bold uppercase text-zinc-800">
+                  <span className="font-maxot text-xs font-bold uppercase text-zinc-800 dark:text-zinc-200">
                     {company.name}
                   </span>
                   <span className="flex h-16 w-full items-center justify-center gap-3">

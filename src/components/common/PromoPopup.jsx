@@ -29,8 +29,8 @@ function getPopupConfig(pathname) {
           href: "/contact-us",
         },
         secondary: {
-          label: "Explore Products",
-          href: "/products",
+          label: "",
+          href: "",
         },
       },
       switched: {
@@ -166,6 +166,10 @@ export default function PromoPopup() {
   }
 
   function renderButton(button, variant) {
+    if (!button?.label || (!button.href && !button.action)) {
+      return null;
+    }
+
     const className =
       variant === "primary"
         ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full bg-[#BE0010] px-5 text-sm font-semibold text-white transition hover:bg-[#9f000d] sm:flex-none"

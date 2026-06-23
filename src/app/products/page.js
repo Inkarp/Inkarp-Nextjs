@@ -23,17 +23,17 @@ export default async function ProductsPage({ searchParams }) {
   const products = searchProducts(filters);
 
   return (
-    <main className="bg-zinc-50 min-h-screen" data-scroll-skip>
+    <main className="bg-zinc-50 dark:bg-zinc-950 min-h-screen" data-scroll-skip>
       {/* Page header */}
-      <section className="border-b border-zinc-200 bg-white px-4 py-5 sm:px-6 lg:px-8">
+      <section className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-center gap-2">
           <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
             Products
           </p>
-          <h1 className="font-maxot  text-3xl text-zinc-950 sm:text-4xl">
+          <h1 className="font-maxot  text-3xl text-zinc-950 dark:text-zinc-100 sm:text-4xl">
             Explore Inkarp products
           </h1>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500 dark:text-zinc-400">
             Type a product, principal, country, industry, application, or tag to
             see matching products instantly.
           </p>
@@ -57,7 +57,7 @@ export default async function ProductsPage({ searchParams }) {
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {products.map((product) => (
                 <article
-                  className="group flex flex-col rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition hover:border-[#BE0010]/40 hover:shadow-md"
+                  className="group flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 shadow-sm transition hover:border-[#BE0010]/40 hover:shadow-md"
                   key={`${product.principalSlug}-${product.slug}`}
                 >
                   {/* Principal + country */}
@@ -65,13 +65,13 @@ export default async function ProductsPage({ searchParams }) {
                     <p className="truncate text-[11px] font-semibold uppercase tracking-wide text-[#BE0010]">
                       {product.principalName}
                     </p>
-                    <span className="shrink-0 rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] font-semibold text-zinc-500">
+                    <span className="shrink-0 rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-[10px] font-semibold text-zinc-500 dark:text-zinc-400">
                       {product.countryOfOrigin || "-"}
                     </span>
                   </div>
 
                   {/* Product name */}
-                  <h2 className="font-maxot mt-1.5 text-base font-bold leading-snug text-zinc-950">
+                  <h2 className="font-maxot mt-1.5 text-base font-bold leading-snug text-zinc-950 dark:text-zinc-100">
                     <Link
                       className="transition group-hover:text-[#BE0010]"
                       href={product.href}
@@ -81,21 +81,21 @@ export default async function ProductsPage({ searchParams }) {
                   </h2>
 
                   {/* Industry */}
-                  <p className="mt-1 text-[11px] text-zinc-400">{product.industry}</p>
+                  <p className="mt-1 text-[11px] text-zinc-400 dark:text-zinc-500">{product.industry}</p>
 
                   {/* Applications */}
                   {(product.applications ?? []).length > 0 ? (
                     <div className="mt-2.5 flex flex-wrap gap-1">
                       {(product.applications ?? []).slice(0, 3).map((app, index) => (
                         <span
-                          className="rounded border border-zinc-200 px-1.5 py-0.5 text-[10px] text-zinc-500"
+                          className="rounded border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-500 dark:text-zinc-400"
                           key={`${product.principalSlug}-${product.slug}-app-${index}`}
                         >
                           {app}
                         </span>
                       ))}
                       {(product.applications ?? []).length > 3 ? (
-                        <span className="rounded border border-zinc-200 px-1.5 py-0.5 text-[10px] text-zinc-400">
+                        <span className="rounded border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400 dark:text-zinc-500">
                           +{product.applications.length - 3}
                         </span>
                       ) : null}
@@ -105,13 +105,13 @@ export default async function ProductsPage({ searchParams }) {
                   {/* Actions */}
                   <div className="mt-auto flex gap-2 pt-3">
                     <Link
-                      className="flex h-8 flex-1 items-center justify-center rounded-lg bg-zinc-950 text-xs font-semibold text-white transition hover:bg-[#BE0010]"
+                      className="flex h-8 flex-1 items-center justify-center rounded-lg bg-zinc-950 dark:bg-zinc-800 text-xs font-semibold text-white transition hover:bg-[#BE0010]"
                       href={product.href}
                     >
                       View
                     </Link>
                     <Link
-                      className="inline-flex h-8 items-center rounded-lg border border-zinc-200 px-3 text-xs font-semibold text-zinc-600 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+                      className="inline-flex h-8 items-center rounded-lg border border-zinc-200 dark:border-zinc-800 px-3 text-xs font-semibold text-zinc-600 dark:text-zinc-400 transition hover:border-[#BE0010] hover:text-[#BE0010]"
                       href={product.apiPath}
                     >
                       API
@@ -121,11 +121,11 @@ export default async function ProductsPage({ searchParams }) {
               ))}
             </div>
           ) : (
-            <div className="mt-4 rounded-xl border border-dashed border-zinc-300 p-12 text-center">
-              <h2 className="font-maxot text-2xl font-bold text-zinc-950">
+            <div className="mt-4 rounded-xl border border-dashed border-zinc-300 dark:border-zinc-700 p-12 text-center">
+              <h2 className="font-maxot text-2xl font-bold text-zinc-950 dark:text-zinc-100">
                 No products found
               </h2>
-              <p className="mt-2 text-sm text-zinc-500">
+              <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
                 Try another product, principal, country, industry, application,
                 or tag.
               </p>

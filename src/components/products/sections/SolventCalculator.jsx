@@ -30,11 +30,11 @@ function RecoverySlider({ label, value, display, min, max, step = 1, onChange })
   return (
     <div>
       <div className="mb-5 flex items-center justify-between gap-4">
-        <label className="text-sm font-semibold text-zinc-700">{label}</label>
+        <label className="text-sm font-semibold text-black dark:text-zinc-100">{label}</label>
         <span className="min-w-24 text-right text-base font-bold text-[#BE0010]">{display}</span>
       </div>
       <input
-        className="h-1 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-[#BE0010]"
+        className="h-1 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-[#BE0010] dark:bg-zinc-700"
         max={max}
         min={min}
         onChange={(event) => onChange(Number(event.target.value))}
@@ -106,7 +106,7 @@ export default function SolventCalculator({ data }) {
   };
 
   return (
-    <section id="calculator" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8">
+    <section id="calculator" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="04"
@@ -116,16 +116,16 @@ export default function SolventCalculator({ data }) {
         />
 
         <div className="relative mt-9 grid gap-7 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
             <div>
-              <p className="mb-4 text-sm font-semibold text-zinc-700">Solvent</p>
+              <p className="mb-4 text-sm font-semibold text-black dark:text-zinc-100">Solvent</p>
               <div className="flex flex-wrap gap-2">
                 {solvents.map((item, index) => (
                   <button
                     className={`min-w-24 rounded-full border px-5 py-3 text-sm font-semibold transition ${
                       selIdx === index
-                        ? 'border-black bg-black text-white'
-                        : 'border-zinc-200 bg-white text-zinc-700 hover:border-zinc-400 hover:text-zinc-950'
+                        ? 'border-black bg-black text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-950'
+                        : 'border-zinc-200 bg-white text-black hover:border-zinc-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:text-zinc-100'
                     }`}
                     key={item.name}
                     onClick={() => setSelIdx(index)}
@@ -177,16 +177,16 @@ export default function SolventCalculator({ data }) {
           </div>
 
           <div className="space-y-4">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
               {[
                 { label: 'Distillation time per batch', value: `${distillationMinutes} min (${solvent.name})`, accent: false },
                 { label: 'Solvent processed per week', value: formatLitres(processedPerWeek), accent: true },
                 { label: 'Solvent recovered per week', value: formatLitres(recoveredPerWeek), accent: false },
                 { label: 'Annual recovered-solvent value (\u20B9, 48 wks)', value: formatCurrency(annualRecoveredValue), accent: true },
               ].map((row, index, rows) => (
-                <div className={`flex items-center justify-between gap-6 py-5 ${index < rows.length - 1 ? 'border-b border-zinc-100' : ''}`} key={row.label}>
-                  <span className="text-base text-zinc-600">{row.label}</span>
-                  <span className={`text-right font-maxot text-lg font-bold ${row.accent ? 'text-[#BE0010]' : 'text-zinc-950'}`}>{row.value}</span>
+                <div className={`flex items-center justify-between gap-6 py-5 ${index < rows.length - 1 ? 'border-b border-zinc-100 dark:border-zinc-800' : ''}`} key={row.label}>
+                  <span className="text-base text-black dark:text-zinc-100">{row.label}</span>
+                  <span className={`text-right font-maxot text-lg font-bold ${row.accent ? 'text-[#BE0010]' : 'text-black dark:text-zinc-100'}`}>{row.value}</span>
                 </div>
               ))}
             </div>
@@ -201,7 +201,7 @@ export default function SolventCalculator({ data }) {
             </div>
 
             <button
-              className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-zinc-900 transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white"
+              className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-zinc-100 dark:bg-zinc-900 dark:text-zinc-100"
               onClick={emailResults}
               type="button"
             >
@@ -211,7 +211,7 @@ export default function SolventCalculator({ data }) {
           </div>
         </div>
 
-        <p className="relative mt-6 text-center text-xs text-zinc-400">
+        <p className="relative mt-6 text-center text-xs text-black dark:text-zinc-400">
           Indicative estimate only. Actual recovery depends on solvent purity, vacuum level, condenser efficiency, cooling and operating practice.
         </p>
       </div>

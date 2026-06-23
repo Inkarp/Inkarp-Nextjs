@@ -194,16 +194,16 @@ export default function HeroSection() {
         {hasCaption ? (
           <div className="absolute inset-x-0 bottom-0 z-20 flex justify-center px-4">
             <Link
-              className="max-w-4xl rounded-t-2xl bg-white/90 px-5 py-4 text-center shadow-lg backdrop-blur transition hover:bg-white sm:px-8"
+              className="max-w-4xl rounded-t-2xl bg-white/90 px-5 py-4 text-center shadow-lg backdrop-blur transition hover:bg-white sm:px-8 dark:bg-zinc-900/90 dark:hover:bg-zinc-900"
               href={activeSlide.href ?? "/products"}
             >
               {activeSlide.title?.trim() ? (
-                <p className="inline-flex rounded-full border border-[#BE0010]/20 bg-white px-3 py-1 text-sm font-bold uppercase tracking-widest text-[#BE0010] sm:text-base">
+                <p className="inline-flex rounded-full border border-[#BE0010]/20 bg-white px-3 py-1 text-sm font-bold uppercase tracking-widest text-[#BE0010] sm:text-base dark:bg-zinc-900">
                   {activeSlide.title}
                 </p>
               ) : null}
               {activeSlide.subtitle?.trim() ? (
-                <h1 className="font-maxot mt-2 text-lg font-bold uppercase leading-tight text-zinc-950 sm:text-2xl">
+                <h1 className="font-maxot mt-2 text-lg font-bold uppercase leading-tight text-zinc-950 sm:text-2xl dark:text-zinc-100">
                   {activeSlide.subtitle}
                 </h1>
               ) : null}
@@ -211,10 +211,10 @@ export default function HeroSection() {
           </div>
         ) : null}
 
-        <div className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-3 rounded-l-xl bg-zinc-50 p-2 shadow-lg shadow-zinc-900/15 sm:p-3">
+        <div className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-3 rounded-l-xl bg-zinc-50 p-2 shadow-lg shadow-zinc-900/15 sm:p-3 dark:bg-zinc-900">
           <button
             aria-label="Previous banner"
-            className="inline-flex size-9 items-center justify-center rounded-full bg-zinc-200 text-lg text-zinc-950 transition hover:bg-red-100 hover:text-[#BE0010] sm:size-10"
+            className="inline-flex size-9 items-center justify-center rounded-full bg-zinc-200 text-lg text-zinc-950 transition hover:bg-red-100 hover:text-[#BE0010] sm:size-10 dark:bg-zinc-800 dark:text-zinc-100"
             onClick={goToPreviousSlide}
             type="button"
           >
@@ -222,7 +222,7 @@ export default function HeroSection() {
           </button>
           <button
             aria-label="Next banner"
-            className="inline-flex size-9 items-center justify-center rounded-full bg-zinc-200 text-lg text-zinc-950 transition hover:bg-red-100 hover:text-[#BE0010] sm:size-10"
+            className="inline-flex size-9 items-center justify-center rounded-full bg-zinc-200 text-lg text-zinc-950 transition hover:bg-red-100 hover:text-[#BE0010] sm:size-10 dark:bg-zinc-800 dark:text-zinc-100"
             onClick={goToNextSlide}
             type="button"
           >
@@ -248,7 +248,7 @@ export default function HeroSection() {
 
         {activeIndex === homeBannerConfig.watchMore.slideIndex ? (
           <a
-            className="absolute bottom-4 right-4 z-20 hidden items-center gap-2 rounded-full bg-red-50 px-4 py-3 text-sm font-semibold text-zinc-950 shadow-lg transition hover:bg-[#BE0010] hover:text-white sm:flex"
+            className="absolute bottom-4 right-4 z-20 hidden items-center gap-2 rounded-full bg-red-50 px-4 py-3 text-sm font-semibold text-zinc-950 shadow-lg transition hover:bg-[#BE0010] hover:text-white sm:flex dark:bg-zinc-900 dark:text-zinc-100"
             href={homeBannerConfig.watchMore.href}
             rel="noopener noreferrer"
             target="_blank"

@@ -40,7 +40,7 @@ export default function TrustedClients() {
         title="Trusted by Industry Leaders"
       />
 
-      <div className="mx-auto max-w-7xl overflow-hidden border-y border-zinc-100 bg-white/85 py-4 shadow-sm">
+      <div className="mx-auto max-w-7xl overflow-hidden border-y border-zinc-100 bg-white/85 py-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/85">
         <div className="flex w-max animate-[logo-marquee_42s_linear_infinite] items-center gap-8 pr-8 hover:[animation-play-state:paused]">
           {marqueeLogos.map((logo, index) => (
             <div

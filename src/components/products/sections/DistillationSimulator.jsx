@@ -156,7 +156,7 @@ export default function DistillationSimulator({ data }) {
   };
 
   return (
-    <section id="simulator" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8">
+    <section id="simulator" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           number="03"
@@ -166,30 +166,30 @@ export default function DistillationSimulator({ data }) {
         />
 
         <div className="grid gap-6 lg:grid-cols-[330px_1fr]">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
-            <div className="rounded-xl bg-zinc-950 p-4 text-white">
-              <div className="mb-3 flex items-center justify-between text-[10px] uppercase tracking-widest text-zinc-400">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="rounded-xl bg-zinc-950 p-4 text-white dark:bg-black">
+              <div className="mb-3 flex items-center justify-between text-[10px] uppercase tracking-widest text-black dark:text-zinc-400">
                 <span>Hei-VAP Core monitor</span>
                 <span>{formatTime(elapsed)}</span>
               </div>
-              <div className="font-maxot text-3xl font-bold">{recoveredPct}<span className="text-base text-zinc-400">% recovered</span></div>
-              <p className="mt-2 min-h-5 text-xs text-zinc-300">{monitorStatus}</p>
+              <div className="font-maxot text-3xl font-bold">{recoveredPct}<span className="text-base text-black dark:text-zinc-400">% recovered</span></div>
+              <p className="mt-2 min-h-5 text-xs text-black dark:text-zinc-400">{monitorStatus}</p>
               <div className="mt-4 grid grid-cols-3 gap-2 text-xs">
-                <div className="rounded-lg bg-white/10 p-2"><span className="block text-[9px] uppercase text-zinc-500">Bath</span>{bathTemp} deg C</div>
-                <div className="rounded-lg bg-white/10 p-2"><span className="block text-[9px] uppercase text-zinc-500">Speed</span>180 rpm</div>
-                <div className="rounded-lg bg-white/10 p-2"><span className="block text-[9px] uppercase text-zinc-500">Vacuum</span>{recommendedVacuum} mbar</div>
+                <div className="rounded-lg bg-white/10 p-2"><span className="block text-[9px] uppercase text-black dark:text-zinc-400">Bath</span>{bathTemp} deg C</div>
+                <div className="rounded-lg bg-white/10 p-2"><span className="block text-[9px] uppercase text-black dark:text-zinc-400">Speed</span>180 rpm</div>
+                <div className="rounded-lg bg-white/10 p-2"><span className="block text-[9px] uppercase text-black dark:text-zinc-400">Vacuum</span>{recommendedVacuum} mbar</div>
               </div>
             </div>
 
             <div className="mt-5">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500">Solvent</p>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">Solvent</p>
               <div className="space-y-2">
                 {solvents.map((s, i) => (
                   <button
                     className={`flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${
                       selIdx === i
-                        ? 'border-[#BE0010] bg-[#BE0010]/5 text-zinc-950'
-                        : 'border-zinc-200 bg-zinc-50 text-zinc-600 hover:border-zinc-300'
+                        ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
+                        : 'border-zinc-200 bg-zinc-50 text-black hover:border-zinc-300 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600'
                     } ${running ? 'cursor-not-allowed opacity-55' : ''}`}
                     disabled={running}
                     key={s.name}
@@ -197,16 +197,16 @@ export default function DistillationSimulator({ data }) {
                     type="button"
                   >
                     <span className="font-semibold">{s.name}</span>
-                    <span className="text-xs text-zinc-400">{s.rate} L/h</span>
+                    <span className="text-xs text-black dark:text-zinc-400">{s.rate} L/h</span>
                   </button>
                 ))}
               </div>
             </div>
 
             <div className="mt-5">
-              <label className="mb-2 flex justify-between text-xs font-semibold uppercase tracking-wide text-zinc-500">
+              <label className="mb-2 flex justify-between text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">
                 <span>Bath temperature</span>
-                <span className="text-zinc-900">{bathTemp} deg C</span>
+                <span className="text-black dark:text-zinc-400">{bathTemp} deg C</span>
               </label>
               <input
                 className="w-full accent-[#BE0010]"
@@ -221,33 +221,33 @@ export default function DistillationSimulator({ data }) {
 
             <div className="mt-5 flex gap-2">
               <button
-                className={`flex-1 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition ${running ? 'bg-zinc-900 hover:bg-black' : 'bg-[#BE0010] hover:bg-[#9f000d]'}`}
+                className={`flex-1 rounded-full px-5 py-2.5 text-sm font-semibold text-white transition ${running ? 'bg-zinc-900 hover:bg-black dark:bg-zinc-700 dark:hover:bg-zinc-600' : 'bg-[#BE0010] hover:bg-[#9f000d]'}`}
                 disabled={finished}
                 onClick={() => setRunning((current) => !current)}
                 type="button"
               >
                 {running ? 'Pause' : finished ? 'Done' : 'Start'}
               </button>
-              <button className="rounded-full bg-zinc-100 px-5 py-2.5 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-200" onClick={reset} type="button">
+              <button className="rounded-full bg-zinc-100 px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700" onClick={reset} type="button">
                 Reset
               </button>
             </div>
           </div>
 
           <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
               <EvaporatorStage recovered={recoveredPct} remaining={fill} running={running} />
             </div>
 
             <div className="space-y-4">
-              <div className="h-[210px] rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm">
+              <div className="h-[210px] rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
                 <RecoveryChart points={points} />
               </div>
 
-              <div className={`rounded-2xl border p-5 shadow-sm ${finished ? 'border-[#BE0010]/30 bg-[#BE0010]/5' : 'border-zinc-200 bg-white'}`}>
+              <div className={`rounded-2xl border p-5 shadow-sm ${finished ? 'border-[#BE0010]/30 bg-[#BE0010]/5' : 'border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900'}`}>
                 <div className="mb-4 flex items-center justify-between gap-3">
-                  <h3 className="font-maxot text-lg font-semibold text-zinc-950">Run result</h3>
-                  <span className={`rounded-full px-3 py-1 text-xs font-bold uppercase ${finished ? 'bg-[#BE0010] text-white' : 'bg-zinc-100 text-zinc-500'}`}>
+                  <h3 className="font-maxot text-lg font-semibold text-black dark:text-zinc-100">Run result</h3>
+                  <span className={`rounded-full px-3 py-1 text-xs font-bold uppercase ${finished ? 'bg-[#BE0010] text-white' : 'bg-zinc-100 text-black dark:bg-zinc-800 dark:text-zinc-100'}`}>
                     {finished ? 'Recovered' : 'In progress'}
                   </span>
                 </div>
@@ -258,13 +258,13 @@ export default function DistillationSimulator({ data }) {
                     { label: 'Estimated rate', value: `${adjustedRate} L/h` },
                     { label: 'Recommended vacuum', value: `${recommendedVacuum} mbar` },
                   ].map((item) => (
-                    <div className="rounded-xl bg-white p-3 text-sm" key={item.label}>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">{item.label}</p>
-                      <p className="mt-1 font-maxot text-base font-bold text-zinc-950">{item.value}</p>
+                    <div className="rounded-xl bg-white p-3 text-sm dark:bg-zinc-900" key={item.label}>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{item.label}</p>
+                      <p className="mt-1 font-maxot text-base font-bold text-black dark:text-zinc-100">{item.value}</p>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-xs leading-5 text-zinc-500">
+                <p className="mt-4 text-xs leading-5 text-black dark:text-zinc-400">
                   This simulation is for workflow discussion only. Inkarp can verify real rates with your solvents, vacuum pump, chiller and glassware setup.
                 </p>
               </div>

@@ -32,8 +32,8 @@ const STEP_ICONS = [
 function Connector({ active }) {
   return (
     <div className="hidden lg:flex items-center gap-1 shrink-0">
-      <div className={`h-px w-6 ${active ? 'bg-[#BE0010]' : 'bg-zinc-200'}`} />
-      <div className={`h-2.5 w-2.5 rounded-full border-2 ${active ? 'border-[#BE0010] bg-[#BE0010]' : 'border-zinc-200 bg-white'}`} />
+      <div className={`h-px w-6 ${active ? 'bg-[#BE0010]' : 'bg-zinc-200 dark:bg-zinc-800'}`} />
+      <div className={`h-2.5 w-2.5 rounded-full border-2 ${active ? 'border-[#BE0010] bg-[#BE0010]' : 'border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900'}`} />
     </div>
   );
 }
@@ -51,8 +51,8 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
         isActive
           ? 'border-[#BE0010] shadow-lg shadow-[#BE0010]/15'
           : isFuture
-            ? 'border-zinc-100 bg-white hover:border-zinc-200'
-            : 'border-zinc-200 bg-white hover:border-zinc-300'
+            ? 'border-zinc-100 bg-white hover:border-zinc-200 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700'
+            : 'border-zinc-200 bg-white hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600'
       }`}
       style={isActive ? { background: 'linear-gradient(135deg, #fff5f5 0%, #ffffff 100%)' } : {}}
     >
@@ -68,17 +68,17 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
       )}
 
       {/* Step number */}
-      <span className={`absolute top-3 right-4 text-xs font-bold tabular-nums ${isActive ? 'text-[#BE0010]' : 'text-zinc-300'}`}>
+      <span className={`absolute top-3 right-4 text-xs font-bold tabular-nums ${isActive ? 'text-[#BE0010]' : 'text-black dark:text-zinc-100'}`}>
         {index + 1}
       </span>
 
       {/* Floating icon badge — overlaps the card's top edge, pops when it becomes active */}
       <div
-        className={`absolute -top-6 left-5 inline-flex h-12 w-12 items-center justify-center rounded-full ring-4 ring-white transition-colors duration-300 ${
+        className={`absolute -top-6 left-5 inline-flex h-12 w-12 items-center justify-center rounded-full ring-4 ring-white transition-colors duration-300 dark:ring-zinc-900 ${
           isActive
             ? 'bg-[#BE0010] text-white shadow-md shadow-[#BE0010]/30'
             : isFuture
-              ? 'bg-zinc-100 text-zinc-300'
+              ? 'bg-zinc-100 text-black dark:bg-zinc-800 dark:text-zinc-100'
               : 'bg-[#BE0010]/10 text-[#BE0010]'
         }`}
         key={`badge-${index}-${isActive}`}
@@ -88,12 +88,12 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
       </div>
 
       {/* Title */}
-      <h3 className={`font-maxot font-bold text-sm mb-2 mt-2 ${isActive ? 'text-zinc-950' : isFuture ? 'text-zinc-400' : 'text-zinc-700'}`}>
+      <h3 className={`font-maxot font-bold text-sm mb-2 mt-2 ${isActive ? 'text-black dark:text-zinc-100' : isFuture ? 'text-black dark:text-zinc-100' : 'text-black dark:text-zinc-100'}`}>
         {step.title}
       </h3>
 
       {/* Description */}
-      <p className={`text-xs leading-5 ${isActive ? 'text-[#BE0010]' : isFuture ? 'text-zinc-400' : 'text-zinc-500'}`}>
+      <p className={`text-xs leading-5 ${isActive ? 'text-[#BE0010]' : isFuture ? 'text-black dark:text-zinc-400' : 'text-black dark:text-zinc-400'}`}>
         {step.description}
       </p>
     </button>
@@ -117,7 +117,7 @@ export default function EvaporationWorkflow({ steps = [], disclaimer }) {
   if (!steps.length) return null;
 
   return (
-    <section id="workflow" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8">
+    <section id="workflow" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto max-w-7xl">
 
         <SectionHeader
@@ -152,13 +152,13 @@ export default function EvaporationWorkflow({ steps = [], disclaimer }) {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`h-2 rounded-full transition-all ${active === i ? 'w-6 bg-[#BE0010]' : 'w-2 bg-zinc-200'}`}
+              className={`h-2 rounded-full transition-all ${active === i ? 'w-6 bg-[#BE0010]' : 'w-2 bg-zinc-200 dark:bg-zinc-800'}`}
             />
           ))}
         </div>
 
         {disclaimer && (
-          <p className="mt-8 rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 p-4 text-xs leading-6 text-zinc-500">
+          <p className="mt-8 rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 p-4 text-xs leading-6 text-black dark:text-zinc-100">
             {disclaimer}
           </p>
         )}

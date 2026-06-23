@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <Link
               aria-label={`${company.name} home`}
-              className="relative block h-12 w-48"
+              className="relative block h-12 w-48 rounded-md p-1.5 dark:bg-white"
               href="/"
             >
               <Image

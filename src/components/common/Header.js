@@ -47,7 +47,9 @@ function NavLabel({ item, mobile = false }) {
   }
 
   return (
-    <span className={`relative block ${mobile ? "h-8 w-36" : "h-7 w-28"}`}>
+    <span
+      className={`relative block rounded-md dark:bg-white dark:p-1 ${mobile ? "h-8 w-36" : "h-7 w-28"}`}
+    >
       <Image
         alt={item.label}
         className="object-contain"
@@ -185,7 +187,7 @@ export default function Header() {
           <div className="relative flex min-h-20 items-center gap-4">
             <Link
               aria-label={`${company.name} home`}
-              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg sm:w-56"
+              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg p-1.5 sm:w-56 dark:bg-white"
               href="/"
               onClick={closeMenu}
             >

@@ -47,7 +47,7 @@ export default async function ProductPage({ params }) {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-[#BE0010]/15 bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-[#BE0010]/15 bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8 dark:bg-zinc-950">
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
 
           {/* Left */}

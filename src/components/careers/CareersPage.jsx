@@ -108,7 +108,7 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-10">
             <div
               className="flex flex-col items-start justify-center gap-2 rounded-lg p-6 lg:col-span-4"
-              data-scroll-reveal="true"
+              data-reveal
             >
               <h1 className="font-maxot mt-1 text-4xl font-bold leading-tight text-[#E63946]">
                 We are hiring
@@ -125,7 +125,7 @@ export default function CareersPage() {
 
             <div
               className="overflow-hidden rounded-lg bg-white p-5 shadow-lg lg:col-span-6"
-              data-scroll-reveal="true"
+              data-reveal
             >
               <div className="flex justify-center">
                 <span className="font-maxot rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-zinc-800 md:text-sm">

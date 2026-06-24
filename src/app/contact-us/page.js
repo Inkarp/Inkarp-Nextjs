@@ -12,8 +12,8 @@ export const metadata = {
 export default function ContactUs() {
   return (
     <main className="overflow-hidden">
-      <ServiceMap />
       <LocationCards />
+      <ServiceMap />
       <SupportSection />
       <ContactForm />
     </main>

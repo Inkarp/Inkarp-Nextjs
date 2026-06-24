@@ -62,7 +62,9 @@ export default function LocationCards() {
 
             return (
               <div
-                className="absolute"
+                className={`absolute ${
+                  hoveredBranch === index ? "z-[9000]" : "z-10"
+                }`}
                 key={branch.name}
                 onMouseEnter={() => setHoveredBranch(index)}
                 onMouseLeave={() => {

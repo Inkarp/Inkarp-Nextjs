@@ -97,14 +97,18 @@ export default function ContactForm() {
       icon: FiMail,
     },
     {
-      label: "Visit anytime",
-      value: contact.addressNav,
+      label: "Head office",
+      value: contact.address,
       href: "https://maps.google.com/?q=Inkarp%20Instruments%20Hyderabad",
       icon: FiMapPin,
     },
     {
-      label: "Working hours",
-      value: "Mon-Fri, 09:30am - 05:30pm",
+      label: "Working days",
+      value: [
+        "Mon-Fri · 09:30am - 05:30pm",
+        "1st & 3rd Sat · 09:30am - 01:30pm",
+        "2nd & 4th Sat · Holiday",
+      ],
       icon: FiClock,
     },
   ];
@@ -166,6 +170,7 @@ export default function ContactForm() {
           <div className="space-y-7">
             {contactItems.map((item) => {
               const Icon = item.icon;
+              const isMultiline = Array.isArray(item.value);
               const content = (
                 <>
                   <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-white/15 text-xl text-white ring-1 ring-white/20">
@@ -175,9 +180,19 @@ export default function ContactForm() {
                     <span className="block text-sm font-semibold text-white/80">
                       {item.label}
                     </span>
-                    <span className="mt-1 block text-lg font-bold leading-snug text-white">
-                      {item.value}
-                    </span>
+                    {isMultiline ? (
+                      <span className="mt-1 block space-y-0.5 text-sm font-semibold leading-snug text-white">
+                        {item.value.map((line) => (
+                          <span className="block" key={line}>
+                            {line}
+                          </span>
+                        ))}
+                      </span>
+                    ) : (
+                      <span className="mt-1 block text-base font-bold leading-snug text-white">
+                        {item.value}
+                      </span>
+                    )}
                   </span>
                 </>
               );

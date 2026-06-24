@@ -1,7 +1,5 @@
 import { FaRupeeSign, FaTruckLoading } from "react-icons/fa";
 import { MdEmail, MdLocalPhone, MdOutlineMail } from "react-icons/md";
-import ContactForm from "@/components/contact/ContactForm";
-import ContactNew from "@/components/contact/ContactNew";
 
 const supportData = [
   {
@@ -27,20 +25,20 @@ const supportData = [
 export default function SupportSection() {
   return (
     <section className="relative mx-auto flex w-[98%] flex-col justify-center px-4 py-8">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)] dark:bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.12),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.12),transparent)]" />
 
       <div className="relative mx-auto w-[98%] max-w-4xl space-y-6">
         <div
           className="flex flex-col items-center justify-center gap-3 text-center"
-          data-scroll-reveal="true"
+          data-reveal
         >
-          <span className="font-maxot rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs uppercase text-zinc-950 sm:text-sm">
+          <span className="font-maxot rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs uppercase text-zinc-950 sm:text-sm dark:bg-zinc-900 dark:text-zinc-100">
             Contact Us
           </span>
           <h2 className="font-maxot text-3xl text-[#E63946]">
             For Support &amp; Enquiries
           </h2>
-          <p className="text-base text-zinc-800">
+          <p className="text-base text-zinc-800 dark:text-zinc-400">
             For smooth coordination, please reach out to the respective teams
             for any of the following queries:
           </p>
@@ -53,18 +51,21 @@ export default function SupportSection() {
             return (
               <article
                 aria-label={item.title.replace(/\n/g, " ")}
-                className="group relative rounded-lg border border-zinc-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#E63946]/45 hover:shadow-[0_14px_40px_rgba(230,57,70,0.15)]"
+                className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(230,57,70,0.15)] dark:border-zinc-800 dark:bg-zinc-900"
                 data-scroll-reveal="true"
                 key={item.title}
               >
-                <div className="flex flex-col items-center gap-3 p-6 text-center text-[#111827]">
-                  <div className="inline-grid size-12 place-items-center rounded-lg bg-[#BE0010]">
-                    <span className="block will-change-transform group-hover:animate-[spin_0.6s_linear_1]">
-                      <Icon className="size-7 text-white" />
-                    </span>
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-[#BE0010] to-[#E63946]"
+                />
+
+                <div className="flex flex-col items-center gap-3 p-6 pt-7 text-center">
+                  <div className="inline-flex size-14 items-center justify-center rounded-full bg-gradient-to-br from-[#BE0010] to-[#E63946] text-white shadow-lg shadow-[#BE0010]/20 ring-4 ring-[#fff3f4] dark:ring-zinc-800">
+                    <Icon className="size-6" />
                   </div>
 
-                  <h3 className="font-maxot text-lg leading-snug text-[#E63946]">
+                  <h3 className="font-maxot text-lg leading-snug text-zinc-950 dark:text-zinc-100">
                     {item.title.split("\n").map((line) => (
                       <span className="block" key={line}>
                         {line}
@@ -72,24 +73,24 @@ export default function SupportSection() {
                     ))}
                   </h3>
 
-                  <ul className="space-y-2">
-                    <li className="text-sm">
+                  <ul className="mt-1 w-full space-y-2">
+                    <li>
                       <a
                         aria-label={`Email ${item.email}`}
-                        className="inline-flex items-center gap-2 font-semibold text-[#333] hover:text-[#E63946] hover:underline"
+                        className="flex items-center gap-2.5 rounded-lg bg-[#fef2f2] px-3 py-2.5 text-left text-xs font-semibold text-zinc-700 transition hover:bg-[#BE0010] hover:text-white dark:bg-zinc-800 dark:text-zinc-200"
                         href={`mailto:${item.email}`}
                       >
-                        <MdEmail className="shrink-0 text-base text-[#E63946]" />
-                        {item.email}
+                        <MdEmail className="shrink-0 text-base text-[#E63946] transition group-hover:text-current" />
+                        <span className="truncate">{item.email}</span>
                       </a>
                     </li>
-                    <li className="text-sm">
+                    <li>
                       <a
                         aria-label={`Call +91 ${item.phone}`}
-                        className="inline-flex items-center gap-2 font-semibold text-[#333] hover:text-[#E63946] hover:underline"
+                        className="flex items-center gap-2.5 rounded-lg bg-[#f5f5f5] px-3 py-2.5 text-left text-xs font-semibold text-zinc-700 transition hover:bg-[#BE0010] hover:text-white dark:bg-zinc-800/70 dark:text-zinc-200"
                         href={`tel:+91${item.phone}`}
                       >
-                        <MdLocalPhone className="shrink-0 text-base text-[#E63946]" />
+                        <MdLocalPhone className="shrink-0 text-base text-[#E63946] transition group-hover:text-current" />
                         +91 {item.phone}
                       </a>
                     </li>
@@ -100,9 +101,6 @@ export default function SupportSection() {
           })}
         </div>
       </div>
-
-      <ContactNew />
-      <ContactForm />
     </section>
   );
 }

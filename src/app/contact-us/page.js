@@ -1,5 +1,7 @@
+import ContactForm from "@/components/contact/ContactForm";
 import LocationCards from "@/components/contact/LocationCards";
 import SupportSection from "@/components/contact/SupportSection";
+import ServiceMap from "@/components/products/sections/ServiceMap";
 
 export const metadata = {
   title: "Contact Us - Inkarp Instruments",
@@ -10,8 +12,10 @@ export const metadata = {
 export default function ContactUs() {
   return (
     <main className="overflow-hidden">
+      <ServiceMap />
       <LocationCards />
       <SupportSection />
+      <ContactForm />
     </main>
   );
 }

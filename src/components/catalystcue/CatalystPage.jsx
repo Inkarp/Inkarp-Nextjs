@@ -44,7 +44,7 @@ export default function CatalystPage() {
         height={980}
         priority
         src="/assets/catalyst/CatalystcueBannerVolume02Issue02.jpeg"
-        style={{ borderRadius: "0 0 85% 85% / 30%" }}
+        // style={{ borderRadius: "0 0 85% 85% / 30%" }}
         width={1920}
       />
 

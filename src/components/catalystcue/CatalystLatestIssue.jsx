@@ -28,16 +28,13 @@ export default function CatalystLatestIssue({ issue }) {
             sizes="(min-width: 1024px) 44vw, 100vw"
             src={issue.image}
           />
-          <div className="absolute left-5 top-5 rounded-md bg-[#BE0010] px-4 py-2 text-sm font-bold uppercase text-white shadow-lg">
-            Latest Issue
-          </div>
         </Link>
 
         <div className="flex flex-col justify-center bg-[#f8fafc] p-6 sm:p-10 lg:p-12">
-          <p className="font-maxot text-sm font-bold uppercase text-[#BE0010]">
-            CatalystCue Magazine
-          </p>
-          <h1 className="font-maxot mt-4 text-3xl font-bold leading-tight text-zinc-950 sm:text-5xl">
+          <div className="w-fit rounded-md bg-[#BE0010] px-4 py-2 text-sm font-bold uppercase text-white shadow-lg">
+            Latest Issue
+          </div>
+          <h1 className="font-maxot mt-4 text-xl leading-tight ">
             {issue.metaTitle || issue.title}
           </h1>
           <div className="mt-5 flex flex-wrap items-center gap-3 text-sm font-semibold text-zinc-600">

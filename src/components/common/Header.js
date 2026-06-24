@@ -20,10 +20,12 @@ import {
 } from "react-icons/fi";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import { getAllProducts } from "@/data/products/principals";
+import { getUpcomingWebinarsCount } from "@/data/webinars";
 import { siteConfig } from "@/data/siteConfig";
 import { FaDownload } from "react-icons/fa";
 
 const headerSearchProducts = getAllProducts();
+const upcomingWebinarsCount = getUpcomingWebinarsCount();
 
 function getNavHref(item) {
   return item.href || "#";
@@ -231,11 +233,18 @@ export default function Header() {
                         <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 translate-y-3 rounded-lg border border-zinc-200 bg-white p-2 opacity-0 shadow-[0_24px_60px_rgba(15,23,42,0.14)] transition group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-900">
                           {item.children.map((child) => (
                             <Link
-                              className="block rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-800"
+                              className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-800"
                               href={child.href}
                               key={child.label}
                             >
                               {child.label}
+                              {child.label === "Webinars" &&
+                              upcomingWebinarsCount > 0 ? (
+                                <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                                  <span className="size-1.5 animate-pulse rounded-full bg-white" />
+                                  Live
+                                </span>
+                              ) : null}
                             </Link>
                           ))}
                         </div>
@@ -359,12 +368,19 @@ export default function Header() {
                     <div className="mt-1 space-y-1 border-l border-zinc-200 pl-4 dark:border-zinc-800">
                       {item.children.map((child) => (
                         <Link
-                          className="block rounded-lg px-3 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-900"
+                          className="flex items-center justify-between gap-2 rounded-lg px-3 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-900"
                           href={child.href}
                           key={child.label}
                           onClick={closeMenu}
                         >
                           {child.label}
+                          {child.label === "Webinars" &&
+                          upcomingWebinarsCount > 0 ? (
+                            <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                              <span className="size-1.5 animate-pulse rounded-full bg-white" />
+                              Live
+                            </span>
+                          ) : null}
                         </Link>
                       ))}
                     </div>

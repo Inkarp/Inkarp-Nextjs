@@ -1,6 +1,8 @@
+import LoadingScreen from "@/components/common/LoadingScreen";
+
 export default function LoadingMark() {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
+    <LoadingScreen>
       <svg
         aria-hidden="true"
         className="h-28 w-28 sm:h-36 sm:w-36"
@@ -22,16 +24,6 @@ export default function LoadingMark() {
         />
       </svg>
 
-      <p className="font-maxot text-sm font-bold uppercase tracking-[0.28em] text-zinc-950">
-        Loading
-        <span
-          className="inline-block overflow-hidden align-bottom"
-          style={{ animation: "loading-dot 1.2s steps(4, end) infinite" }}
-        >
-          ...
-        </span>
-      </p>
-
       <style>{`
         @keyframes inkarp-loader-draw {
           0% {
@@ -47,16 +39,7 @@ export default function LoadingMark() {
             opacity: 0.35;
           }
         }
-
-        @keyframes loading-dot {
-          0% {
-            width: 0;
-          }
-          100% {
-            width: 1.5em;
-          }
-        }
       `}</style>
-    </div>
+    </LoadingScreen>
   );
 }

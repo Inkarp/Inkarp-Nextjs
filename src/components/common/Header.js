@@ -75,7 +75,7 @@ export default function Header() {
   const previousScrollY = useRef(0);
   const topLinks = [
     { label: "Our Story", href: "/our-story" },
-    { label: "Awards and Recognitions", href: "/awards-and-recognitions" },
+    { label: "Awards and Recognitions", href: "/awards" },
     { label: "Service", href: "/service" },
     { label: "Careers", href: "/careers" },
   ];
@@ -230,23 +230,25 @@ export default function Header() {
                       </Link>
 
                       {item.children ? (
-                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 translate-y-3 rounded-lg border border-zinc-200 bg-white p-2 opacity-0 shadow-[0_24px_60px_rgba(15,23,42,0.14)] transition group-hover:visible group-hover:translate-y-2 group-hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-900">
-                          {item.children.map((child) => (
-                            <Link
-                              className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-800"
-                              href={child.href}
-                              key={child.label}
-                            >
-                              {child.label}
-                              {child.label === "Webinars" &&
-                              upcomingWebinarsCount > 0 ? (
-                                <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
-                                  <span className="size-1.5 animate-pulse rounded-full bg-white" />
-                                  Live
-                                </span>
-                              ) : null}
-                            </Link>
-                          ))}
+                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
+                          <div className="rounded-lg border border-zinc-200 bg-white p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)] dark:border-zinc-800 dark:bg-zinc-900">
+                            {item.children.map((child) => (
+                              <Link
+                                className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-800"
+                                href={child.href}
+                                key={child.label}
+                              >
+                                {child.label}
+                                {child.label === "Webinars" &&
+                                upcomingWebinarsCount > 0 ? (
+                                  <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
+                                    <span className="size-1.5 animate-pulse rounded-full bg-white" />
+                                    Live
+                                  </span>
+                                ) : null}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       ) : null}
                     </li>

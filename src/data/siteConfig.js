@@ -21,7 +21,7 @@ export const siteConfig = {
         },
         {
           label: "Awards and Recognitions",
-          href: "/awards-and-recognitions",
+          href: "/awards",
         },
       ],
     },
@@ -40,7 +40,7 @@ export const siteConfig = {
       children: [
         {
           label: "CatalystCue",
-          href: "/catalystcue",
+          href: "/magazine",
         },
         {
           label: "Application Resources",
@@ -54,7 +54,7 @@ export const siteConfig = {
       children: [
         {
           label: "Blogs",
-          href: "/blogs",
+          href: "/blog",
         },
         {
           label: "Events",
@@ -74,7 +74,7 @@ export const siteConfig = {
     },
     {
       label: "Contact Us",
-      href: "/contact-us",
+      href: "/contact",
     },
   ],
   contact: {

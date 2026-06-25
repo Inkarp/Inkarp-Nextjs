@@ -102,7 +102,7 @@ export default function VacuumChillerPairing({ data }) {
                   )}
                 </div>
 
-                <a href="/contact-us" className="mt-5 inline-flex items-center rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#9f000d] transition">
+                <a href="/contact" className="mt-5 inline-flex items-center rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#9f000d] transition">
                   Request this pairing quote →
                 </a>
               </div>

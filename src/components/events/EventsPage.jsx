@@ -207,7 +207,7 @@ export default function EventsPage() {
         </p>
         <Link
           className="font-maxot mt-3 inline-flex items-center gap-2 rounded-full border border-[#E63946] px-6 py-3 text-sm text-[#E63946] transition hover:bg-[#E63946] hover:text-white"
-          href="/contact-us"
+          href="/contact"
         >
           Get in Touch
           <FiArrowRight className="size-4" />
@@ -279,7 +279,7 @@ export default function EventsPage() {
 
             <Link
               className="font-maxot mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#BE0010] px-5 py-3 text-sm text-white transition hover:bg-[#E63946]"
-              href="/contact-us"
+              href="/contact"
             >
               Schedule a Meeting
               <FiArrowRight className="size-4" />

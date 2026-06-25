@@ -18,7 +18,7 @@ export default function CatalystLatestIssue({ issue }) {
         <Link
           aria-label={`Read ${issue.title}`}
           className="group relative min-h-[460px] overflow-hidden bg-[#1A2D51] sm:min-h-[560px] lg:min-h-[640px]"
-          href={`/catalystcue/${encodeURIComponent(issue.slug)}`}
+          href={`/magazine/${encodeURIComponent(issue.slug)}`}
         >
           <Image
             alt={issue.subTitle}
@@ -57,7 +57,7 @@ export default function CatalystLatestIssue({ issue }) {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               className="inline-flex h-12 items-center justify-center rounded-md bg-[#BE0010] px-6 text-sm font-bold text-white transition hover:bg-[#9f000d]"
-              href={`/catalystcue/${encodeURIComponent(issue.slug)}`}
+              href={`/magazine/${encodeURIComponent(issue.slug)}`}
             >
               Read Latest Issue
             </Link>

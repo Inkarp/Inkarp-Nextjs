@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 export default function SupportStrip({ productName }) {
   const items = [
-    { icon: '📞', label: 'Call Inkarp', sub: 'Speak to a specialist', href: '/contact-us' },
+    { icon: '📞', label: 'Call Inkarp', sub: 'Speak to a specialist', href: '/contact' },
     { icon: '✉️', label: 'Email enquiry', sub: 'info@inkarp.co.in', href: 'mailto:info@inkarp.co.in' },
-    { icon: '📄', label: 'Request brochure', sub: 'PDF + datasheet', href: '/contact-us' },
-    { icon: '🔧', label: 'Service support', sub: 'Installation & maintenance', href: '/contact-us' },
+    { icon: '📄', label: 'Request brochure', sub: 'PDF + datasheet', href: '/contact' },
+    { icon: '🔧', label: 'Service support', sub: 'Installation & maintenance', href: '/contact' },
   ];
 
   return (

@@ -152,7 +152,7 @@ export default function ServiceMap({ data }) {
             <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
               <p className="font-semibold text-sm text-black mb-1 dark:text-zinc-100">Don&apos;t see your city?</p>
               <p className="text-xs text-black mb-3 dark:text-zinc-400">Inkarp covers all major cities and institutes across India. Contact us to confirm service availability in your location.</p>
-              <a href="/contact-us" className="inline-flex items-center rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#9f000d] transition">
+              <a href="/contact" className="inline-flex items-center rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#9f000d] transition">
                 Contact Inkarp →
               </a>
             </div>

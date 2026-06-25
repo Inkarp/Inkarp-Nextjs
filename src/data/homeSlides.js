@@ -32,7 +32,7 @@ export const heroSlides = [
     id: "catalyst-2026",
     title: "Catalyst 2026",
     subtitle: "Inkarp Team",
-    href: "/catalystcue/application-resources",
+    href: "/application-resources",
     media: {
       type: "image",
       src: "/assets/home/CatalystTeamInkarp.webp",

@@ -1,8 +1,14 @@
 import heidolphCatalog from "./heidolph/products.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
+import workbookProductsCatalog from "./workbook-products.json";
 
-const principalCatalogs = [heidolphCatalog, rotzmeierCatalog, beingCatalog];
+const principalCatalogs = [
+  heidolphCatalog,
+  rotzmeierCatalog,
+  beingCatalog,
+  ...toCatalogList(workbookProductsCatalog),
+];
 
 function toArray(value) {
   if (!value) {
@@ -20,6 +26,14 @@ function uniqueValues(values) {
 
 function getPrincipal(catalog) {
   return catalog.principal ?? {};
+}
+
+function toCatalogList(catalog) {
+  if (Array.isArray(catalog?.principals)) {
+    return catalog.principals;
+  }
+
+  return [catalog];
 }
 
 function getCategories(catalog) {
@@ -102,16 +116,13 @@ export function getJsonCatalogPrincipalBySlug(principalSlug) {
 }
 
 export function getJsonCatalogPrincipalSummaries() {
-  return principalCatalogs.map((catalog) => {
-    const principal = getPrincipal(catalog);
-    const categories = getJsonCatalogCategories(principal.slug);
+  const slugs = uniqueValues(
+    principalCatalogs.map((catalog) => getPrincipal(catalog).slug)
+  );
 
-    return {
-      ...principal,
-      categories,
-      products: categories.flatMap((category) => category.products),
-    };
-  });
+  return slugs
+    .map((slug) => getJsonCatalogPrincipalBySlug(slug))
+    .filter(Boolean);
 }
 
 export function getJsonCatalogProductByPrincipalAndSlug(

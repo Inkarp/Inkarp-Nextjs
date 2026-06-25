@@ -68,7 +68,7 @@ export default function CatalystPage() {
                 {volumeCards.map((card) => (
                   <Link
                     className="flex w-[270px] flex-col overflow-hidden border border-white bg-[#1A2D51] text-white transition-transform duration-500 hover:scale-105"
-                    href={`/catalystcue/${encodeURIComponent(card.slug)}`}
+                    href={`/magazine/${encodeURIComponent(card.slug)}`}
                     key={card.slug}
                   >
                     <Image

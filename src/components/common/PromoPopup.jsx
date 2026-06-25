@@ -26,7 +26,7 @@ function getPopupConfig(pathname) {
           "Get practical ideas for modern lab workflows, better product selection, and application-focused decisions.",
         primary: {
           label: "Register Now",
-          href: "/contact-us",
+          href: "/contact",
         },
         secondary: {
           label: "",
@@ -45,7 +45,7 @@ function getPopupConfig(pathname) {
         },
         secondary: {
           label: "Talk to Specialist",
-          href: "/contact-us",
+          href: "/contact",
         },
       },
     };
@@ -62,7 +62,7 @@ function getPopupConfig(pathname) {
         "Share your requirement and our team will help with product fit, configuration, and current pricing.",
       primary: {
         label: "Request Quote",
-        href: "/contact-us?interest=quote",
+        href: "/contact?interest=quote",
       },
       secondary: {
         label: "Continue Browsing",
@@ -86,7 +86,7 @@ function getPopupConfig(pathname) {
       },
       secondary: {
         label: "Request Quote",
-        href: `/contact-us?interest=quote&product=${encodeURIComponent(pathname.split("/").pop() ?? "")}`,
+        href: `/contact?interest=quote&product=${encodeURIComponent(pathname.split("/").pop() ?? "")}`,
       },
     };
   }

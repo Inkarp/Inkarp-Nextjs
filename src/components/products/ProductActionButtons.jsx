@@ -50,7 +50,7 @@ export default function ProductActionButtons({ productName, productPath }) {
 
       <Link
         className="inline-flex h-10 items-center gap-2 rounded-lg border border-zinc-200 dark:border-zinc-700 px-4 text-sm font-semibold text-zinc-700 dark:text-zinc-300 transition hover:border-[#BE0010] hover:text-[#BE0010]"
-        href="/contact-us"
+        href="/contact"
       >
         <FiUser />
         Meet Expert
@@ -58,7 +58,7 @@ export default function ProductActionButtons({ productName, productPath }) {
 
       <Link
         className="inline-flex h-10 items-center gap-2 rounded-lg bg-[#BE0010] px-4 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
-        href="/contact-us"
+        href="/contact"
       >
         <FiMail />
         Enquiry

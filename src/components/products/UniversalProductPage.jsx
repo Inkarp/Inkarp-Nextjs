@@ -165,7 +165,7 @@ export default function UniversalProductPage({ product }) {
               <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">{lf.cta.description}</p>
             </div>
             <a
-              href={lf.cta.href ?? '/contact-us'}
+              href={lf.cta.href ?? '/contact'}
               className="inline-flex h-12 items-center justify-center rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d] shrink-0"
             >
               {lf.cta.label}

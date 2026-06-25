@@ -513,7 +513,7 @@ export default function FlipbookPage({ file, title }) {
       <div className="relative z-20 grid min-h-[60px] grid-cols-[auto_1fr] items-center gap-3 border-b border-white/10 bg-black/70 px-3 py-2 shadow-lg shadow-black/30 backdrop-blur sm:grid-cols-[auto_1fr_auto] sm:px-6">
         <a
           className="inline-flex h-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 px-3 text-sm font-semibold text-white transition hover:bg-white hover:text-zinc-950 sm:px-4"
-          href="/catalystcue"
+          href="/magazine"
         >
           Back
         </a>

@@ -1,4 +1,5 @@
 import { Roboto } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/common/Footer";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
 import Header from "@/components/common/Header";
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
           <PromoPopup />
           <FloatingQuickActions />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -110,12 +110,42 @@ function TableSection({ section }) {
   );
 }
 
+function FaqSection({ section }) {
+  return (
+    <div className="space-y-3">
+      {section.heading ? (
+        <h2 className="font-maxot text-xl font-semibold leading-snug text-zinc-900 dark:text-zinc-100">
+          {section.heading}
+        </h2>
+      ) : null}
+      <div className="space-y-2">
+        {section.content.map((item, index) => (
+          <details
+            className="group rounded-xl border border-zinc-200 px-4 py-3 dark:border-zinc-800"
+            key={index}
+          >
+            <summary className="font-maxot cursor-pointer list-none text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+              {item.q}
+            </summary>
+            <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Section({ section, index }) {
   if (section.type === "image") {
     return <ImageSection section={section} />;
   }
   if (section.type === "table") {
     return <TableSection section={section} />;
+  }
+  if (section.type === "faq") {
+    return <FaqSection section={section} />;
   }
   return <TextSection section={section} />;
 }

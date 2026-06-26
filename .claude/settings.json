@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(node -e \"require\\('./src/data/blogs.js'\\)\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(npx --yes acorn --ecma2022 src/data/blogs.js)",
+      "Bash(echo \"acorn-exit:$?\")",
+      "Bash(cp src/data/blogs.js __TRACKED_VAR__/blogs.js.bak)",
+      "Bash(cp src/data/blogs.js /tmp/blogs.js.bak)",
+      "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\440eaf95-eaac-478b-951a-cd0e8db49129\\\\scratchpad\\\\dedupe-blogs.js\" src/data/blogs.js)",
+      "Bash(grep -n \"^\\\\];\\\\];$\" src/data/blogs.js)"
+    ]
+  }
+}

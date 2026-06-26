@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllProducts, searchProducts } from "@/data/products/principals";
 import ProductFilterForm from "@/components/products/ProductFilterForm";
 import StickyProductSearch from "@/components/products/StickyProductSearch";
+import PrincipalLogo from "@/components/products/PrincipalLogo";
 
 export const metadata = {
   title: "Products - Inkarp Instruments Pvt Ltd",
@@ -62,9 +63,11 @@ export default async function ProductsPage({ searchParams }) {
                 >
                   {/* Principal + country */}
                   <div className="flex items-start justify-between gap-2">
-                    <p className="truncate text-[11px] font-semibold uppercase tracking-wide text-[#BE0010]">
-                      {product.principalName}
-                    </p>
+                    <PrincipalLogo
+                      className="h-5 w-20 shrink-0 text-[11px] font-semibold uppercase tracking-wide text-[#BE0010]"
+                      principalName={product.principalName}
+                      principalSlug={product.principalSlug}
+                    />
                     <span className="shrink-0 rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-[10px] font-semibold text-zinc-500 dark:text-zinc-400">
                       {product.countryOfOrigin || "-"}
                     </span>

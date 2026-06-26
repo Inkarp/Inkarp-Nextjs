@@ -1,15 +1,17 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { FiArrowRight, FiCalendar, FiChevronLeft, FiChevronRight, FiUser } from "react-icons/fi";
+import { FiArrowRight, FiCalendar, FiUser } from "react-icons/fi";
 import {
   categories,
   formatPostDate,
   getPostsByCategory,
 } from "@/data/blogs";
+
+const PAGE_SIZE = 10;
 
 function BlogCard({ post }) {
   return (
@@ -63,48 +65,43 @@ export default function BlogsPage() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") || "All";
   const [activeCategory, setActiveCategory] = useState(initialCategory);
-  const scrollRef = useRef(null);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [renderedCategory, setRenderedCategory] = useState(initialCategory);
+  const loadMoreRef = useRef(null);
 
   const filteredPosts = useMemo(
     () => getPostsByCategory(activeCategory),
     [activeCategory]
   );
 
-  const scrollByCard = (direction) => {
-    const container = scrollRef.current;
-    if (!container) return;
-    const card = container.querySelector("[data-card]");
-    const cardWidth = card ? card.getBoundingClientRect().width + 24 : 320;
-    container.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
-  };
+  if (activeCategory !== renderedCategory) {
+    setRenderedCategory(activeCategory);
+    setVisibleCount(PAGE_SIZE);
+  }
+
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredPosts.length;
+
+  useEffect(() => {
+    if (!hasMore) return;
+    const target = loadMoreRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((count) => count + PAGE_SIZE);
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [hasMore]);
 
   return (
     <main className="overflow-hidden">
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(230,57,70,0.08),transparent)]" />
-
-        <div className="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
-          <span
-            className="font-maxot inline-flex rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-zinc-800 md:text-sm dark:bg-zinc-900 dark:text-zinc-100"
-            data-reveal
-          >
-            From the Lab
-          </span>
-          <h1
-            className="font-maxot mt-4 text-3xl font-bold leading-tight text-[#E63946] sm:text-4xl"
-            data-reveal
-          >
-            Inkarp Blog
-          </h1>
-          <p
-            className="mx-auto mt-3 max-w-2xl text-base text-zinc-700 sm:text-lg dark:text-zinc-300"
-            data-reveal
-          >
-            Application notes, industry insights, and updates from our team —
-            written for the people running the instruments.
-          </p>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-2 pb-10" data-reveal>
@@ -129,38 +126,18 @@ export default function BlogsPage() {
             No posts in this category yet.
           </p>
         ) : (
-          <div className="relative" data-reveal>
-            <div
-              className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              ref={scrollRef}
-            >
-              {filteredPosts.map((post) => (
-                <div
-                  className="w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[calc((100%-3rem)/3)]"
-                  data-card
-                  key={post.id}
-                >
-                  <BlogCard post={post} />
-                </div>
+          <div data-reveal>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {visiblePosts.map((post) => (
+                <BlogCard key={post.id} post={post} />
               ))}
             </div>
 
-            <button
-              aria-label="Previous posts"
-              className="absolute -left-3 top-1/2 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-md transition hover:border-[#E63946]/50 hover:text-[#E63946] sm:flex dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
-              onClick={() => scrollByCard(-1)}
-              type="button"
-            >
-              <FiChevronLeft className="size-5" />
-            </button>
-            <button
-              aria-label="Next posts"
-              className="absolute -right-3 top-1/2 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-700 shadow-md transition hover:border-[#E63946]/50 hover:text-[#E63946] sm:flex dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
-              onClick={() => scrollByCard(1)}
-              type="button"
-            >
-              <FiChevronRight className="size-5" />
-            </button>
+            {hasMore && (
+              <div className="flex justify-center pt-10" ref={loadMoreRef}>
+                <div className="size-8 animate-spin rounded-full border-2 border-zinc-300 border-t-[#E63946]" />
+              </div>
+            )}
           </div>
         )}
       </section>

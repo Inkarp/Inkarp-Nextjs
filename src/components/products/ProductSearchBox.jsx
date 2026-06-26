@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { productMatchesSearch } from "@/lib/productSearch";
+import PrincipalLogo from "@/components/products/PrincipalLogo";
 
 function ProductResultLink({ product, compact = false, onDark = false, onClose }) {
   if (onDark) {
@@ -14,9 +15,14 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
         onClick={onClose}
       >
         <p className="text-sm font-semibold ">{product.name}</p>
-        <p className="mt-1 text-xs ">
-          {product.principalName} - {product.countryOfOrigin}
-        </p>
+        <div className="mt-1 flex items-center gap-1.5 text-xs">
+          <PrincipalLogo
+            className="h-4 w-16"
+            principalName={product.principalName}
+            principalSlug={product.principalSlug}
+          />
+          <span>- {product.countryOfOrigin}</span>
+        </div>
         <p className="mt-3 text-xs font-medium ">{product.industry}</p>
       </Link>
     );
@@ -35,9 +41,14 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">{product.name}</p>
-          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
-            {product.principalName} - {product.countryOfOrigin}
-          </p>
+          <div className="mt-1 flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+            <PrincipalLogo
+              className="h-4 w-16"
+              principalName={product.principalName}
+              principalSlug={product.principalSlug}
+            />
+            <span>- {product.countryOfOrigin}</span>
+          </div>
         </div>
         {compact ? (
           <span className="shrink-0 rounded-md bg-zinc-100 dark:bg-zinc-800 px-2 py-1 text-[11px] font-semibold text-zinc-600 dark:text-zinc-400">

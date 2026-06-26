@@ -3,12 +3,10 @@ import { getAllProducts, searchProducts } from "@/data/products/principals";
 import ProductFilterForm from "@/components/products/ProductFilterForm";
 import StickyProductSearch from "@/components/products/StickyProductSearch";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Products - Inkarp Instruments Pvt Ltd",
-  description:
-    "Search Inkarp products by product, principal, country of origin, industry, application, and tags.",
-};
+export const metadata = buildPageMetadata("/products");
 
 function getParam(searchParams, key) {
   const value = searchParams[key];
@@ -25,6 +23,8 @@ export default async function ProductsPage({ searchParams }) {
 
   return (
     <main className="bg-zinc-50 dark:bg-zinc-950 min-h-screen" data-scroll-skip>
+      <BreadcrumbJsonLd path="/products" />
+      <PageBreadcrumbs path="/products" />
       {/* Page header */}
       <section className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-center gap-2">

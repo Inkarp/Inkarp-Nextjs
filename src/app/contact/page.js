@@ -2,16 +2,16 @@ import ContactForm from "@/components/contact/ContactForm";
 import LocationCards from "@/components/contact/LocationCards";
 import SupportSection from "@/components/contact/SupportSection";
 import ServiceMap from "@/components/products/sections/ServiceMap";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Contact Us - Inkarp Instruments",
-  description:
-    "Get in touch with Inkarp Instruments for sales, service, and support across India. Find our branches and contact details here.",
-};
+export const metadata = buildPageMetadata("/contact");
 
 export default function ContactUs() {
   return (
     <main className="overflow-hidden">
+      <BreadcrumbJsonLd path="/contact" />
+      <PageBreadcrumbs path="/contact" />
       <LocationCards />
       <ServiceMap />
       <SupportSection />

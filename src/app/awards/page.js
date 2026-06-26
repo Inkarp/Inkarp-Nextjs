@@ -1,11 +1,15 @@
 import AwardsRecognition from "@/components/about/AwardsRecognition";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Awards and Recognitions - Inkarp Instruments Private Ltd",
-  description:
-    "Explore Inkarp's awards, recognitions, partner milestones, and commitment to scientific instrumentation excellence.",
-};
+export const metadata = buildPageMetadata("/awards");
 
 export default function AwardsAndRecognitionsPage() {
-  return <AwardsRecognition />;
+  return (
+    <>
+      <BreadcrumbJsonLd path="/awards" />
+      <PageBreadcrumbs path="/awards" />
+      <AwardsRecognition />
+    </>
+  );
 }

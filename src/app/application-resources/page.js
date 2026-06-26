@@ -1,11 +1,15 @@
 import ApplicationResourcesClient from "@/components/catalystcue/ApplicationResourcesClient";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Application Resources - Inkarp Instruments Pvt Ltd",
-  description:
-    "Explore Inkarp application resource PDFs, technical notes, and application-focused documents from CatalystCue.",
-};
+export const metadata = buildPageMetadata("/application-resources");
 
 export default function ApplicationResourcesPage() {
-  return <ApplicationResourcesClient />;
+  return (
+    <>
+      <BreadcrumbJsonLd path="/application-resources" />
+      <PageBreadcrumbs path="/application-resources" />
+      <ApplicationResourcesClient />
+    </>
+  );
 }

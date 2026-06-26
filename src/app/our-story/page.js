@@ -3,16 +3,16 @@ import EmpathyTeam from "@/components/about/EmpathyTeam";
 import InkarpBio from "@/components/about/InkarpBio";
 import MissionVision from "@/components/about/MissionVision";
 import TrustedClients from "@/components/about/TrustedClients";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Our Story - Inkarp Instruments Private Ltd",
-  description:
-    "Discover Inkarp Instruments Pvt Ltd, our mission, values, leadership, and commitment to quality.",
-};
+export const metadata = buildPageMetadata("/our-story");
 
 export default function OurStory() {
   return (
     <main className="overflow-hidden">
+      <BreadcrumbJsonLd path="/our-story" />
+      <PageBreadcrumbs path="/our-story" />
       <MissionVision />
       <InkarpBio />
       <TrustedClients />

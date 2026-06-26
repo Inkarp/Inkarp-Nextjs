@@ -3,19 +3,16 @@ import ProductHandlingGuide from "@/components/service/ProductHandlingGuide";
 import ServiceAbout from "@/components/service/ServiceAbout";
 import ServiceContactForm from "@/components/service/ServiceContactForm";
 import ServiceTabs from "@/components/service/ServiceTabs";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Inkarp Services | Scientific Instrument Installation, Maintenance & Support in India",
-  description:
-    "Discover Inkarp's trusted service solutions for scientific instruments in India. From product installation and technical support to preventive maintenance, AMCs, and genuine spare parts, we ensure reliable performance and smooth research operations. Backed by 40+ years of expertise and nationwide service teams.",
-  alternates: {
-    canonical: "https://inkarp.co.in/service",
-  },
-};
+export const metadata = buildPageMetadata("/service");
 
 export default function ServicePage() {
   return (
     <main className="relative w-full overflow-hidden">
+      <BreadcrumbJsonLd path="/service" />
+      <PageBreadcrumbs path="/service" />
       {/* Banner */}
       <div className="relative mb-6 h-56 w-full overflow-hidden rounded-2xl sm:h-72 lg:h-96">
         <Image

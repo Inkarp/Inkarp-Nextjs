@@ -1,11 +1,15 @@
 import EventsPage from "@/components/events/EventsPage";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Events - Inkarp Instruments",
-  description:
-    "Find Inkarp Instruments at upcoming exhibitions, conferences, and trade shows across India. See dates, venues, and what we're showcasing.",
-};
+export const metadata = buildPageMetadata("/events");
 
 export default function Events() {
-  return <EventsPage />;
+  return (
+    <>
+      <BreadcrumbJsonLd path="/events" />
+      <PageBreadcrumbs path="/events" />
+      <EventsPage />
+    </>
+  );
 }

@@ -7,10 +7,15 @@ import OrderServiceSteps from "@/components/home/OrderServiceSteps";
 import PickProduct from "@/components/home/PickProduct";
 import Principles from "@/components/home/Principles";
 import PrinciplesAlternate from "@/components/home/PrinciplesAlternate";
+import { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
+
+export const metadata = buildPageMetadata("/");
 
 export default function Home() {
   return (
     <main>
+      <BreadcrumbJsonLd path="/" />
       <HeroSection />
       <PickProduct />
       <CompaniesAlternate />    

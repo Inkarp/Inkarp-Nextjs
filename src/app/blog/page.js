@@ -1,16 +1,18 @@
 import { Suspense } from "react";
 import BlogsPage from "@/components/blogs/BlogsPage";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title: "Blog - Inkarp Instruments",
-  description:
-    "Application notes, industry insights, and updates from Inkarp Instruments — written for the people running the instruments.",
-};
+export const metadata = buildPageMetadata("/blog");
 
 export default function Blogs() {
   return (
-    <Suspense fallback={null}>
-      <BlogsPage />
-    </Suspense>
+    <>
+      <BreadcrumbJsonLd path="/blog" />
+      <PageBreadcrumbs path="/blog" />
+      <Suspense fallback={null}>
+        <BlogsPage />
+      </Suspense>
+    </>
   );
 }

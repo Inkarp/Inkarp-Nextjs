@@ -35,7 +35,7 @@ const productData = [
     category: "Controlled Atmosphere",
     summary:
       "A controlled glovebox environment for sensitive materials, synthesis, and sample handling.",
-    image: "/assets/images/productImages/Labstation/labstation.png",
+    image: "/assets/images/productImages/Labstation/labstation-i-solvent-purification-system-sps.png",
     link: "/products?q=Labstation%20I",
   },
   {
@@ -43,7 +43,7 @@ const productData = [
     category: "Evaporation",
     summary:
       "Advanced rotary evaporation with precise control for dependable solvent removal.",
-    image: "/assets/images/productImages/heidolph/Hei-VAP-Expert-Control.webp",
+    image: "/assets/images/productImages/heidolph/hei-vap-expert-control-rotary-evaporator.webp",
     link: "/products?q=Hei-VAP%20Ultimate%20Control",
   },
   {

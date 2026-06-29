@@ -64,7 +64,7 @@ const productData = [
   },
   {
     name: "Labstation I Glovebox Analyzer",
-    image: "/assets/images/productImages/Labstation/labstation.png",
+    image: "/assets/images/productImages/Labstation/labstation-i-solvent-purification-system-sps.png",
     description: "Advanced inert-atmosphere control with safety features",
     dos: [
       "Purge and maintain inert atmosphere per SOP.",
@@ -83,7 +83,7 @@ const productData = [
   },
   {
     name: "Hei-VAP Ultimate Control Rotary Evaporator",
-    image: "/assets/images/productImages/heidolph/Hei-VAP-Expert-Control.webp",
+    image: "/assets/images/productImages/heidolph/hei-vap-expert-control-rotary-evaporator.webp",
     description: "Fully automated rotary evaporator for complex workflows",
     dos: [
       "Check glassware integrity; secure clamps before run.",

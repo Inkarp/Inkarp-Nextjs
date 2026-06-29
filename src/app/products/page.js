@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { getAllProducts, searchProducts } from "@/data/products/principals";
+import { getAllPrincipals, getAllProducts, searchProducts } from "@/data/products/principals";
 import ProductFilterForm from "@/components/products/ProductFilterForm";
 import StickyProductSearch from "@/components/products/StickyProductSearch";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
@@ -13,13 +14,30 @@ function getParam(searchParams, key) {
   return Array.isArray(value) ? value[0] : value ?? "";
 }
 
+function getParams(searchParams, key) {
+  const value = searchParams[key];
+  return (Array.isArray(value) ? value : [value]).filter(Boolean);
+}
+
 export default async function ProductsPage({ searchParams }) {
   const params = await searchParams;
+  const selectedBrands = getParams(params, "brand");
   const filters = {
     q: getParam(params, "q"),
+    principals: selectedBrands,
   };
-  const totalProducts = getAllProducts().length;
+  const allProducts = getAllProducts();
+  const totalProducts = allProducts.length;
   const products = searchProducts(filters);
+  const productCountsByBrand = allProducts.reduce((counts, product) => {
+    counts.set(product.principalSlug, (counts.get(product.principalSlug) ?? 0) + 1);
+    return counts;
+  }, new Map());
+  const brandOptions = getAllPrincipals().map((principal) => ({
+    label: principal.principalName,
+    value: principal.slug,
+    count: productCountsByBrand.get(principal.slug) ?? 0,
+  }));
 
   return (
     <main className="bg-zinc-50 dark:bg-zinc-950 min-h-screen" data-scroll-skip>
@@ -44,9 +62,11 @@ export default async function ProductsPage({ searchParams }) {
       {/* Sticky search toolbar */}
       <StickyProductSearch>
         <ProductFilterForm
-          key={filters.q}
+          key={`${filters.q}-${selectedBrands.join("|")}`}
+          brandOptions={brandOptions}
           productCount={products.length}
           query={filters.q}
+          selectedBrands={selectedBrands}
           totalCount={totalProducts}
         />
       </StickyProductSearch>
@@ -61,6 +81,28 @@ export default async function ProductsPage({ searchParams }) {
                   className="group flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 shadow-sm transition hover:border-[#BE0010]/40 hover:shadow-md"
                   key={`${product.principalSlug}-${product.slug}`}
                 >
+                  <Link
+                    aria-label={`View ${product.name}`}
+                    className="mb-3 flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-lg bg-zinc-50 dark:bg-zinc-800"
+                    href={product.href}
+                  >
+                    {product.image ? (
+                      <Image
+                        alt={product.imageAlt ?? product.name}
+                        className="h-full w-full object-contain p-3 transition duration-500 group-hover:scale-105"
+                        height={240}
+                        src={product.image}
+                        width={320}
+                      />
+                    ) : (
+                      <PrincipalLogo
+                        className="h-10 w-32 object-center text-center text-xs font-semibold uppercase tracking-wide text-[#BE0010]"
+                        principalName={product.principalName}
+                        principalSlug={product.principalSlug}
+                      />
+                    )}
+                  </Link>
+
                   {/* Principal + country */}
                   <div className="flex items-start justify-between gap-2">
                     <PrincipalLogo

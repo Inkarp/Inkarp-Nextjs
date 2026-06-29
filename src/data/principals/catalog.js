@@ -2,6 +2,11 @@ import heidolphCatalog from "./heidolph/products.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
+import {
+  principalFallbackImages,
+  productImageMap,
+} from "@/data/products/productImageMap";
+import { getPrincipalLogo } from "@/data/products/principalLogos";
 
 const principalCatalogs = [
   heidolphCatalog,
@@ -40,6 +45,17 @@ function getCategories(catalog) {
   return toArray(catalog.categories);
 }
 
+function getProductImage(product, principal) {
+  const mappedImage = productImageMap[`${principal.slug}:${product.slug}`];
+  return (
+    product.image ||
+    mappedImage ||
+    principalFallbackImages[principal.slug] ||
+    getPrincipalLogo(principal.slug) ||
+    ""
+  );
+}
+
 function normalizeProduct(product, category, principal) {
   const applications = toArray(product.applications).length
     ? toArray(product.applications)
@@ -48,6 +64,7 @@ function normalizeProduct(product, category, principal) {
 
   return {
     ...product,
+    image: getProductImage(product, principal),
     category: categoryName,
     categorySlug: product.categorySlug ?? category.slug,
     industry: product.industry ?? category.industry ?? categoryName,
@@ -138,3 +155,4 @@ export function getJsonCatalogProductByPrincipalAndSlug(
 export function getJsonCatalogProductBySlug(productSlug) {
   return getJsonCatalogProducts().find((product) => product.slug === productSlug);
 }
+

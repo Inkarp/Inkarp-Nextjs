@@ -81,6 +81,107 @@ const recognitionJourney = [
   "Built trusted customer relationships across India",
 ];
 
+const showcaseCorners = [
+  {
+    key: "br",
+    pos: "bottom-0 right-0",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_100%_100%)]",
+    textPad: "lg:pr-52",
+  },
+  {
+    key: "bl",
+    pos: "bottom-0 left-0",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_0%_100%)]",
+    textPad: "lg:pl-48",
+  },
+  {
+    key: "tr",
+    pos: "top-0 right-0",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_100%_0%)]",
+    textPad: "lg:pr-44",
+  },
+  {
+    key: "tl",
+    pos: "top-0 left-0",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_0%_0%)]",
+    textPad: "lg:pl-48",
+  },
+];
+
+const showcaseCards = [
+  {
+    title: "customer-first",
+    titleBreak: "service excellence",
+    description:
+      "Recognition that reflects the confidence laboratories, hospitals, and research teams place in our people and support.",
+    image: "/assets/our-story/InkarpBuilding.jpg",
+  },
+  {
+    title: "strong global",
+    titleBreak: "partner network",
+    description:
+      "Honoured by leading global technology principals for representing their instruments with technical depth and care.",
+    image: "/assets/our-story/evolution/Commitment.webp",
+  },
+  {
+    title: "pan-india",
+    titleBreak: "service reach",
+    description:
+      "Celebrating a service and installation network that keeps scientific teams supported across every branch we serve.",
+    image: "/assets/our-story/evolution/OldImagesCollage.webp",
+  },
+  {
+    title: "future-ready",
+    titleBreak: "lab innovation",
+    description:
+      "Recognised for dependable instruments and workflow guidance that help scientific teams move faster, with confidence.",
+    image: "/assets/our-story/evolution/Philosophy.webp",
+  },
+];
+
+function RecognitionShowcaseGrid() {
+  return (
+    <section className="bg-gray-900 px-8 py-20 text-center xl:px-0">
+      <span className="mx-auto mb-2 flex max-w-lg items-center justify-center gap-3 text-lg capitalize text-gray-400">
+        what recognition reflects
+        <FiArrowRight aria-hidden="true" className="text-[#BE0010]" />
+      </span>
+      <h2 className="font-maxot mx-auto mb-16 max-w-3xl text-4xl font-semibold leading-snug text-white md:text-5xl xl:text-6xl">
+        Awards That Mirror Trust, Service, and Partnership
+      </h2>
+
+      <div className="mx-auto grid max-w-5xl gap-5 text-left sm:grid-cols-2 md:grid-cols-2">
+        {showcaseCards.map((card, index) => {
+          const corner = showcaseCorners[index % showcaseCorners.length];
+
+          return (
+            <div
+              className="group relative overflow-hidden bg-gray-800 p-10 shadow-none transition-shadow duration-300 hover:shadow-[0.063rem_0.063rem_1.25rem_0.375rem_rgba(0,0,0,0.53)]"
+              key={card.title}
+            >
+              <div
+                className={`absolute hidden h-full w-full bg-cover bg-center lg:block ${corner.pos} ${corner.clip}`}
+                style={{ backgroundImage: `url(${card.image})` }}
+              />
+              <div
+                className={`absolute inset-0 z-[1] bg-[#BE0010] transition-[clip-path] duration-700 ${corner.clip} group-hover:[clip-path:circle(110vw_at_100%_100%)]`}
+              />
+              <div className={`relative z-[2] ${corner.textPad}`}>
+                <h3 className="font-maxot mb-4 text-2xl capitalize text-white xl:text-3xl">
+                  {card.title} <br /> {card.titleBreak}
+                </h3>
+                <p className="text-gray-400 transition-colors duration-700 group-hover:text-white">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 function AwardRow({ award, index }) {
   const isLightRed = index % 2 === 0;
   const isCenter = award.imageSide === "center";
@@ -255,13 +356,13 @@ export default function AwardsRecognition() {
         />
       </section>
 
+      <RecognitionShowcaseGrid />
+
       {awards.map((award, index) => (
         <AwardRow award={award} index={index} key={award.title} />
       ))}
 
-      <RecognitionDifference />
-
-   
+      <RecognitionDifference />  
     </main>
   );
 }

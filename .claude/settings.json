@@ -9,7 +9,11 @@
       "Bash(cp src/data/blogs.js __TRACKED_VAR__/blogs.js.bak)",
       "Bash(cp src/data/blogs.js /tmp/blogs.js.bak)",
       "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\440eaf95-eaac-478b-951a-cd0e8db49129\\\\scratchpad\\\\dedupe-blogs.js\" src/data/blogs.js)",
-      "Bash(grep -n \"^\\\\];\\\\];$\" src/data/blogs.js)"
+      "Bash(grep -n \"^\\\\];\\\\];$\" src/data/blogs.js)",
+      "Bash(command -v chromium-cli)",
+      "Bash(curl -s -o /tmp/magazine.html -w \"%{http_code}\\\\n\" http://localhost:3000/magazine)",
+      "Read(//tmp/**)",
+      "Bash(grep -o \"Latest Issue\\\\|catalyst-archive\\\\|Volume 1\" /tmp/magazine.html | sort -u; echo \"---errors check---\"; grep -i \"error\" /tmp/magazine.html | head -5)"
     ]
   }
 }

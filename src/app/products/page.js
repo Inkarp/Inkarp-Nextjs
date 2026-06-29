@@ -150,10 +150,12 @@ export default async function ProductsPage({ searchParams }) {
                   {/* Actions */}
                   <div className="mt-auto flex gap-2 pt-3">
                     <Link
-                      className="flex h-8 flex-1 items-center justify-center rounded-lg bg-zinc-950 dark:bg-zinc-800 text-xs font-semibold text-white transition hover:bg-[#BE0010]"
+                      className="group relative flex h-8 flex-1 items-center justify-center overflow-hidden rounded-lg bg-zinc-950 dark:bg-zinc-800 text-xs font-semibold text-white"
                       href={product.href}
                     >
-                      View
+                      <span className="absolute inset-y-0 left-0 w-1/2 origin-left scale-x-0 bg-[#BE0010] transition-transform duration-300 group-hover:scale-x-100" />
+                      <span className="absolute inset-y-0 right-0 w-1/2 origin-right scale-x-0 bg-[#BE0010] transition-transform duration-300 group-hover:scale-x-100" />
+                      <span className="relative z-10">View</span>
                     </Link>
                     <Link
                       className="inline-flex h-8 items-center rounded-lg border border-zinc-200 dark:border-zinc-800 px-3 text-xs font-semibold text-zinc-600 dark:text-zinc-400 transition hover:border-[#BE0010] hover:text-[#BE0010]"

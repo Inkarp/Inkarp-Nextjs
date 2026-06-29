@@ -12,42 +12,75 @@ import {
 } from "react-icons/fi";
 import SectionHeading from "@/components/home/SectionHeading";
 
+const timelineMilestones = [
+  {
+    year: "2013",
+    title: "Heidolph Premium Distributor",
+    image: "/assets/awards/award-2013-heidolph-premium-distributor-a.png",
+  },
+  {
+    year: "2013",
+    title: "Heidolph Premium Distributor",
+    image: "/assets/awards/award-2013-heidolph-premium-distributor-b.png",
+  },
+  {
+    year: "2013",
+    title: "Heidolph Premium Distributor",
+    image: "/assets/awards/award-2013-heidolph-premium-distributor-c.png",
+  },
+  {
+    year: "2016",
+    title: "Heidolph Premium Distributor",
+    image: "/assets/awards/award-2016-heidolph-premium-distributor.png",
+  },
+  {
+    year: "2022",
+    title: "Jeio Tech Plaque of Appreciation",
+    image: "/assets/awards/award-2022-jeiotech-plaque-of-appreciation.png",
+  },
+  {
+    year: "2023",
+    title: "Exceptional International Distributor",
+    image: "/assets/awards/award-2023-exceptional-international-distributor.png",
+  },
+];
+
 const awards = [
   {
-    title: "Trusted Scientific Solutions Partner",
+    title: "Exceptional International Distributor",
     description:
-      "Recognition for building long-term partnerships with laboratories, research institutions, hospitals, and industry teams across India.",
-    image: "/assets/our-story/InkarpBuilding.jpg",
+      "Awarded for outstanding performance as an international distribution partner, recognizing the consistency and reach of our distribution network.",
+    image: "/assets/awards/award-2023-exceptional-international-distributor.png",
     imageSide: "left",
-    meta: "Customer trust",
-    year: "40+ years",
+    meta: "International Distribution",
+    year: "2023",
   },
   {
-    title: "Excellence in Application Support",
+    title: "Heidolph Premium Distributor",
     description:
-      "Celebrating the teams that help customers choose, install, validate, and sustain high-performance scientific and analytical instruments.",
-    image: "/assets/our-story/evolution/Commitment.webp",
+      "Certified by Heidolph, a global leader in laboratory technology since 1880, for successfully earning approval as a Premium Distributor in India.",
+    image: "/assets/awards/award-2016-heidolph-premium-distributor.png",
     imageSide: "right",
-    meta: "Service excellence",
-    year: "Pan India",
+    meta: "Principal Partnership",
+    year: "2016",
   },
   {
-    title: "Partner Recognition for Growth",
+    title: "Jeio Tech Plaque of Appreciation",
     description:
-      "A milestone that reflects our commitment to representing global technology leaders with technical depth, care, and market reach.",
-    image: "/assets/our-story/evolution/OldImagesCollage.webp",
+      "A Plaque of Appreciation from Jeio Tech (Lab Companion), recognizing the support, dedication, and collaboration shown toward the growth of their business in India.",
+    image: "/assets/awards/award-2022-jeiotech-plaque-of-appreciation.png",
     imageSide: "center",
-    meta: "Global partners",
-    year: "Strategic growth",
+    meta: "Partner Appreciation",
+    year: "March 2022",
   },
   {
-    title: "Innovation in Laboratory Enablement",
+    title: "Heidolph Premium Distributor",
     description:
-      "Honoring our focus on dependable instruments, workflow guidance, and practical support that helps scientific teams move faster.",
-    image: "/assets/our-story/evolution/Philosophy.webp",
+      "Our earliest Heidolph Premium Distributor certification, marking the start of a partnership with one of our longest-standing global principals.",
+    image: "/assets/awards/award-2013-heidolph-premium-distributor-a.png",
     imageSide: "left",
-    meta: "Innovation",
-    year: "Future ready",
+    meta: "Founding Partnership",
+    year: "2013",
   },
 ];
 
@@ -146,7 +179,7 @@ function RecognitionShowcaseGrid() {
         what recognition reflects
         <FiArrowRight aria-hidden="true" className="text-[#BE0010]" />
       </span>
-      <h2 className="font-maxot mx-auto mb-16 max-w-3xl text-4xl font-semibold leading-snug text-white md:text-5xl xl:text-6xl">
+      <h2 className="font-maxot mx-auto max-w-3xl text-xl leading-snug text-white md:text-5xl xl:text-6xl">
         Awards That Mirror Trust, Service, and Partnership
       </h2>
 
@@ -209,12 +242,12 @@ function AwardRow({ award, index }) {
           </div>
 
           <div className="relative mx-auto mt-8 max-w-4xl overflow-hidden rounded-lg border border-[#BE0010]/15 bg-white shadow-2xl shadow-[#BE0010]/10">
-            <div className="relative h-72 sm:h-96">
+            <div className="relative mx-auto h-[260px] w-[195px] overflow-hidden rounded-md border border-zinc-200">
               <Image
                 alt={award.title}
-                className="object-cover"
+                className="object-contain"
                 fill
-                sizes="(min-width: 1024px) 896px, 92vw"
+                sizes="195px"
                 src={award.image}
               />
             </div>
@@ -241,12 +274,12 @@ function AwardRow({ award, index }) {
       <article className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className={`${imageFirst ? "lg:order-1" : "lg:order-2"}`}>
           <div className="relative overflow-hidden rounded-lg border border-[#BE0010]/15 bg-white p-3 shadow-xl shadow-[#BE0010]/10">
-            <div className="relative min-h-[300px] overflow-hidden rounded-md sm:min-h-[380px]">
+            <div className="relative mx-auto aspect-[1086/1448] w-full max-w-[280px] overflow-hidden rounded-md border border-zinc-200">
               <Image
                 alt={award.title}
-                className="object-cover transition duration-500 hover:scale-105"
+                className="object-contain transition duration-500 hover:scale-105"
                 fill
-                sizes="(min-width: 1024px) 520px, 92vw"
+                sizes="280px"
                 src={award.image}
               />
             </div>
@@ -344,6 +377,60 @@ function RecognitionDifference() {
   );
 }
 
+function AwardsRoadTimeline() {
+  return (
+    <section className="relative bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8">
+      <SectionHeading
+        description="Every milestone on this road marks a moment our partners and principals chose to recognize Inkarp's work."
+        eyebrow="Our Journey"
+        title="Years of Recognition, Mapped Out"
+      />
+
+      <div className="mx-auto mt-12 max-w-6xl overflow-x-auto pb-6">
+        <div className="relative flex min-w-[1600px] items-center gap-6 px-6">
+          <div className="absolute left-0 right-0 top-1/2 h-0 -translate-y-1/2 border-t-2 border-dashed border-[#BE0010]/40" />
+
+          {timelineMilestones.map((milestone, index) => {
+            const isUp = index % 2 === 0;
+            const card = (
+              <div className="w-fit rounded-lg border border-[#BE0010]/15 bg-white p-3 shadow-lg shadow-[#BE0010]/10">
+                <div className="relative h-64 w-48 overflow-hidden rounded-md border border-zinc-200">
+                  <Image
+                    alt={milestone.title}
+                    className="object-contain"
+                    fill
+                    sizes="192px"
+                    src={milestone.image}
+                  />
+                </div>
+                <p className="font-maxot mt-3 w-48 text-center text-sm leading-5 text-zinc-700">
+                  {milestone.title}
+                </p>
+              </div>
+            );
+
+            return (
+              <div
+                className="relative flex flex-1 flex-col items-center"
+                key={`${milestone.year}-${milestone.title}-${index}`}
+              >
+                {isUp ? <div className="mb-4">{card}</div> : null}
+
+                <span className="relative z-10 flex size-4 shrink-0 items-center justify-center rounded-full border-2 border-white bg-[#BE0010] shadow-md shadow-[#BE0010]/30" />
+                <span className="font-maxot mt-2 text-base font-bold text-[#BE0010]">
+                  {milestone.year}
+                </span>
+
+                {!isUp ? <div className="mt-4">{card}</div> : null}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function AwardsRecognition() {
   return (
     <main className="overflow-hidden bg-white">
@@ -362,7 +449,9 @@ export default function AwardsRecognition() {
         <AwardRow award={award} index={index} key={award.title} />
       ))}
 
-      <RecognitionDifference />  
+      <RecognitionDifference />
+
+      <AwardsRoadTimeline />
     </main>
   );
 }

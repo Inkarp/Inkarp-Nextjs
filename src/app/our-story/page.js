@@ -1,6 +1,7 @@
 import Directors from "@/components/about/Directors";
 import EmpathyTeam from "@/components/about/EmpathyTeam";
 import InkarpBio from "@/components/about/InkarpBio";
+import LeadershipRecognition from "@/components/about/LeadershipRecognition";
 import MissionVision from "@/components/about/MissionVision";
 import TrustedClients from "@/components/about/TrustedClients";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
@@ -26,9 +27,10 @@ export default function OurStory() {
         <div className="relative z-10">
           <EmpathyTeam />
           <Directors />
-       
         </div>
       </section>
+
+      <LeadershipRecognition />
     </main>
   );
 }

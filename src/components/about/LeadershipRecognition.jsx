@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { FiAward } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import SectionHeading from "@/components/home/SectionHeading";
 
 const directors = [
@@ -33,62 +32,68 @@ const directors = [
   },
 ];
 
-const directorAwardCards = directors.map((director, index) => ({
+const directorAwardCards = directors.map((director) => ({
   title: director.name,
+  titleBreak: director.title,
   description: director.message,
   image: director.img,
-  imageSide: index % 2 === 0 ? "right" : "left",
-  meta: director.title,
-  year: "Inkarp Leadership",
 }));
 
-function LeadershipRow({ award, index }) {
-  const isLightRed = index % 2 === 0;
-  const imageFirst = award.imageSide === "left";
+const leadershipCorners = [
+  {
+    key: "br",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_100%_100%)]",
+    textPad: "lg:pr-52",
+  },
+  {
+    key: "bl",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_0%_100%)]",
+    textPad: "lg:pl-48",
+  },
+  {
+    key: "tr",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_100%_0%)]",
+    textPad: "lg:pr-44",
+  },
+  {
+    key: "tl",
+    clip: "[clip-path:circle(calc(6.25rem_+_7.5vw)_at_0%_0%)]",
+    textPad: "lg:pl-48",
+  },
+];
 
+function LeadershipShowcaseGrid() {
   return (
-    <section
-      className={`px-4 py-14 sm:px-6 lg:px-8 ${
-        isLightRed ? "bg-[#fff3f4]" : "bg-white"
-      }`}
-    >
-      <article className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div className={`${imageFirst ? "lg:order-1" : "lg:order-2"}`}>
-          <div className="relative overflow-hidden rounded-lg border border-[#BE0010]/15 bg-white p-3 shadow-xl shadow-[#BE0010]/10">
-            <div className="relative min-h-[300px] overflow-hidden rounded-md sm:min-h-[380px]">
-              <Image
-                alt={award.title}
-                className="object-cover transition duration-500 hover:scale-105"
-                fill
-                sizes="(min-width: 1024px) 520px, 92vw"
-                src={award.image}
-              />
-            </div>
-            <div className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-wide text-[#BE0010] shadow-lg shadow-zinc-950/10">
-              <FiAward aria-hidden="true" />
-              {String(index + 1).padStart(2, "0")}
-            </div>
-          </div>
-        </div>
+    <section className="bg-gray-900 px-8 py-20 text-center xl:px-0">
+    
+      <div className="mx-auto grid max-w-5xl gap-5 text-left sm:grid-cols-2 md:grid-cols-2">
+        {directorAwardCards.map((card, index) => {
+          const corner = leadershipCorners[index % leadershipCorners.length];
 
-        <div className={`${imageFirst ? "lg:order-2" : "lg:order-1"}`}>
-          <div className="max-w-xl">
-            <span className="inline-flex rounded-full border border-[#BE0010]/20 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-[#BE0010]">
-              {award.meta}
-            </span>
-            <p className="font-maxot mt-6 text-sm font-semibold uppercase tracking-[0.24em] text-zinc-400">
-              {award.year}
-            </p>
-            <h2 className="font-maxot mt-3 text-3xl leading-tight text-zinc-950 sm:text-4xl">
-              {award.title}
-            </h2>
-            <p className="mt-5 text-sm leading-7 text-zinc-600 sm:text-base">
-              {award.description}
-            </p>
-            <div className="mt-7 h-1 w-24 rounded-full bg-[#BE0010]" />
-          </div>
-        </div>
-      </article>
+          return (
+            <div
+              className="group relative overflow-hidden p-5 shadow-none transition-shadow duration-300 hover:shadow-[0.063rem_0.063rem_1.25rem_0.375rem_rgba(0,0,0,0.53)]"
+              key={card.title}
+            >
+              <div
+                className={`absolute inset-0 z-0 bg-[#BE0010] transition-[clip-path] duration-700 ${corner.clip} group-hover:[clip-path:circle(110vw_at_100%_100%)]`}
+              />
+              <div
+                className={`absolute inset-0 z-[1] bg-cover bg-center ${corner.clip}`}
+                style={{ backgroundImage: `url(${card.image})` }}
+              />
+              <div className={`relative z-[2] ${corner.textPad}`}>
+                <h3 className="font-maxot mb-2 text-xl text-white xl:text-xl">
+                  {card.title} <br /> {card.titleBreak}
+                </h3>
+                <p className="text-gray-400 transition-colors duration-700 group-hover:text-white">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
@@ -103,10 +108,7 @@ export default function LeadershipRecognition() {
           title="The People Behind Every Award"
         />
       </section>
-
-      {directorAwardCards.map((award, index) => (
-        <LeadershipRow award={award} index={index} key={award.title} />
-      ))}
+      <LeadershipShowcaseGrid />
     </div>
   );
 }

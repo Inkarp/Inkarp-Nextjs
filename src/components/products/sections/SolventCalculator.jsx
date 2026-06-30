@@ -3,41 +3,30 @@ import { useEffect, useMemo, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 
-const PUBLISHED_RATES = {
-  Toluene: 8.5,
-  Acetone: 5.8,
-  Ethanol: 3.5,
-  Water: 1.2,
-};
-
-const DEFAULT_SOLVENTS = [
-  { name: 'Toluene', rate: 8.5 },
-  { name: 'Acetone', rate: 5.8 },
-  { name: 'Ethanol', rate: 3.5 },
-  { name: 'Water', rate: 1.2 },
-];
-
 function formatLitres(value) {
   if (value >= 100) return `${Math.round(value).toLocaleString('en-IN')} L`;
   return `${Number(value.toFixed(1)).toLocaleString('en-IN')} L`;
 }
 
 function formatCurrency(value) {
-  return `\u20B9${Math.round(value).toLocaleString('en-IN')}`;
+  return `₹${Math.round(value).toLocaleString('en-IN')}`;
 }
 
 function RecoverySlider({ label, value, display, min, max, step = 1, onChange }) {
   return (
     <div>
-      <div className="mb-5 flex items-center justify-between gap-4">
-        <label className="text-sm font-semibold text-black dark:text-zinc-100">{label}</label>
+      <div className="mb-3 flex items-center justify-between gap-4">
+        <label className="text-sm font-semibold text-black dark:text-white">{label}</label>
         <span className="min-w-24 text-right text-base font-bold text-[#BE0010]">{display}</span>
       </div>
       <input
         className="h-1 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-[#BE0010] dark:bg-zinc-700"
         max={max}
         min={min}
-        onChange={(event) => onChange(Number(event.target.value))}
+        onChange={(event) => {
+          window.dispatchEvent(new CustomEvent('product-calc-input'));
+          onChange(Number(event.target.value));
+        }}
         step={step}
         type="range"
         value={value}
@@ -46,28 +35,31 @@ function RecoverySlider({ label, value, display, min, max, step = 1, onChange })
   );
 }
 
-export default function SolventCalculator({ data }) {
-  const sourceSolvents = data?.solvents?.length ? data.solvents : DEFAULT_SOLVENTS;
+export default function SolventCalculator({ calculatorData, simulatorData }) {
+  const sl = calculatorData?.sliders ?? {};
+
   const solvents = useMemo(() => {
-    const primaryNames = ['Toluene', 'Acetone', 'Ethanol', 'Water'];
+    const primaryNames = calculatorData?.primarySolvents ?? [];
+    const simSolvents = simulatorData?.solvents ?? [];
     return primaryNames.map((name) => {
-      const match = sourceSolvents.find((item) => item.name === name) ?? {};
-      return { ...match, name, rate: match.rate ?? PUBLISHED_RATES[name] };
+      const match = simSolvents.find((s) => s.name === name) ?? {};
+      return { ...match, name, rate: match.rate ?? null };
     });
-  }, [sourceSolvents]);
+  }, [calculatorData?.primarySolvents, simulatorData?.solvents]);
 
   const [selIdx, setSelIdx] = useState(0);
-  const [volumeMl, setVolumeMl] = useState(1000);
-  const [batchesPerWeek, setBatchesPerWeek] = useState(23);
-  const [solventCost, setSolventCost] = useState(600);
-  const [recoveryShare, setRecoveryShare] = useState(70);
+  const [volumeMl, setVolumeMl] = useState(sl.volumeMl?.default ?? 1000);
+  const [batchesPerWeek, setBatchesPerWeek] = useState(sl.batchesPerWeek?.default ?? 23);
+  const [solventCost, setSolventCost] = useState(sl.solventCost?.default ?? 600);
+  const [recoveryShare, setRecoveryShare] = useState(sl.recoveryShare?.default ?? 70);
 
-  const solvent = solvents[selIdx] ?? solvents[0];
+  const solvent = solvents[selIdx] ?? solvents[0] ?? { name: '', rate: 1 };
+  const annualWeeks = calculatorData?.annualWeeks ?? 48;
   const volumeL = volumeMl / 1000;
   const distillationMinutes = Math.max(1, Math.round((volumeL / (solvent.rate || 1)) * 60));
   const processedPerWeek = volumeL * batchesPerWeek;
   const recoveredPerWeek = processedPerWeek * (recoveryShare / 100);
-  const annualRecoveredLitres = recoveredPerWeek * 48;
+  const annualRecoveredLitres = recoveredPerWeek * annualWeeks;
   const annualRecoveredValue = annualRecoveredLitres * solventCost;
 
   useEffect(() => {
@@ -102,33 +94,44 @@ export default function SolventCalculator({ data }) {
     ].join('\n');
 
     window.dispatchEvent(new CustomEvent('product-calculator-results'));
-    window.location.href = `mailto:info@inkarp.com?subject=${encodeURIComponent('Hei-VAP Core - solvent recovery estimate')}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@inkarp.com?subject=${encodeURIComponent(calculatorData?.emailSubject ?? '')}&body=${encodeURIComponent(body)}`;
   };
 
+  const rl = calculatorData?.resultLabels ?? {};
+  const resultRows = [
+    { label: rl.distillationTime ?? 'Distillation time per batch', value: `${distillationMinutes} min (${solvent.name})`, accent: false },
+    { label: rl.processedPerWeek ?? 'Solvent processed per week', value: formatLitres(processedPerWeek), accent: true },
+    { label: rl.recoveredPerWeek ?? 'Solvent recovered per week', value: formatLitres(recoveredPerWeek), accent: false },
+    { label: rl.annualValue ?? `Annual recovered-solvent value (₹, ${annualWeeks} wks)`, value: formatCurrency(annualRecoveredValue), accent: true },
+  ];
+
   return (
-    <section id="calculator" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="relative mx-auto max-w-7xl">
+    <section id="calculator" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-0 dark:border-zinc-800 dark:bg-zinc-950 lg:h-screen lg:flex lg:flex-col lg:justify-center">
+      <div className="relative w-full">
         <SectionHeader
-          number="04"
-          eyebrow="Interactive calculator"
-          title="How much time & solvent could you recover?"
-          description="Estimate distillation time and the value of recovered solvent on the Hei-VAP Core, based on Heidolph&apos;s published evaporation rates."
+          number={calculatorData?.sectionNumber ?? '04'}
+          eyebrow={calculatorData?.eyebrow ?? ''}
+          title={calculatorData?.title ?? ''}
+          description={calculatorData?.description ?? ''}
         />
 
-        <div className="relative mt-9 grid gap-7 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="relative mt-6 grid gap-5 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <div>
-              <p className="mb-4 text-sm font-semibold text-black dark:text-zinc-100">Solvent</p>
+              <p className="mb-3 text-sm font-semibold text-black dark:text-white">Solvent</p>
               <div className="flex flex-wrap gap-2">
                 {solvents.map((item, index) => (
                   <button
-                    className={`min-w-24 rounded-full border px-5 py-3 text-sm font-semibold transition ${
-                      selIdx === index
-                        ? 'border-black bg-black text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-950'
-                        : 'border-zinc-200 bg-white text-black hover:border-zinc-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:text-zinc-100'
+                    className={`min-w-24 rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
+                      item.rate === null
+                        ? 'cursor-not-allowed border-zinc-100 bg-zinc-50 text-black/30 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white/25'
+                        : selIdx === index
+                        ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
+                        : 'border-zinc-200 bg-white text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:border-zinc-500'
                     }`}
+                    disabled={item.rate === null}
                     key={item.name}
-                    onClick={() => setSelIdx(index)}
+                    onClick={() => item.rate !== null && setSelIdx(index)}
                     type="button"
                   >
                     {item.name}
@@ -137,82 +140,78 @@ export default function SolventCalculator({ data }) {
               </div>
             </div>
 
-            <div className="mt-8 space-y-8">
+            <div className="mt-5 space-y-5">
               <RecoverySlider
                 display={`${volumeMl} mL`}
-                label="Volume per batch (mL)"
-                max={3000}
-                min={100}
+                label={sl.volumeMl?.label ?? 'Volume per batch (mL)'}
+                max={sl.volumeMl?.max ?? 3000}
+                min={sl.volumeMl?.min ?? 100}
                 onChange={setVolumeMl}
-                step={100}
+                step={sl.volumeMl?.step ?? 100}
                 value={volumeMl}
               />
               <RecoverySlider
                 display={batchesPerWeek}
-                label="Batches per week"
-                max={60}
-                min={1}
+                label={sl.batchesPerWeek?.label ?? 'Batches per week'}
+                max={sl.batchesPerWeek?.max ?? 60}
+                min={sl.batchesPerWeek?.min ?? 1}
                 onChange={setBatchesPerWeek}
+                step={sl.batchesPerWeek?.step ?? 1}
                 value={batchesPerWeek}
               />
               <RecoverySlider
-                display={`\u20B9${solventCost}`}
-                label={"Solvent cost (\u20B9 / litre)"}
-                max={3000}
-                min={100}
+                display={`₹${solventCost}`}
+                label={sl.solventCost?.label ?? 'Solvent cost (₹ / litre)'}
+                max={sl.solventCost?.max ?? 3000}
+                min={sl.solventCost?.min ?? 100}
                 onChange={setSolventCost}
-                step={50}
+                step={sl.solventCost?.step ?? 50}
                 value={solventCost}
               />
               <RecoverySlider
                 display={`${recoveryShare}%`}
-                label="Share of solvent recovered & reused (%)"
-                max={90}
-                min={0}
+                label={sl.recoveryShare?.label ?? 'Share of solvent recovered & reused (%)'}
+                max={sl.recoveryShare?.max ?? 90}
+                min={sl.recoveryShare?.min ?? 0}
                 onChange={setRecoveryShare}
-                step={5}
+                step={sl.recoveryShare?.step ?? 5}
                 value={recoveryShare}
               />
             </div>
           </div>
 
-          <div className="space-y-4">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
-              {[
-                { label: 'Distillation time per batch', value: `${distillationMinutes} min (${solvent.name})`, accent: false },
-                { label: 'Solvent processed per week', value: formatLitres(processedPerWeek), accent: true },
-                { label: 'Solvent recovered per week', value: formatLitres(recoveredPerWeek), accent: false },
-                { label: 'Annual recovered-solvent value (\u20B9, 48 wks)', value: formatCurrency(annualRecoveredValue), accent: true },
-              ].map((row, index, rows) => (
-                <div className={`flex items-center justify-between gap-6 py-5 ${index < rows.length - 1 ? 'border-b border-zinc-100 dark:border-zinc-800' : ''}`} key={row.label}>
-                  <span className="text-base text-black dark:text-zinc-100">{row.label}</span>
-                  <span className={`text-right font-maxot text-lg font-bold ${row.accent ? 'text-[#BE0010]' : 'text-black dark:text-zinc-100'}`}>{row.value}</span>
+          <div className="space-y-3">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              {resultRows.map((row, index, rows) => (
+                <div className={`flex items-center justify-between gap-6 py-3 ${index < rows.length - 1 ? 'border-b border-zinc-100 dark:border-zinc-800' : ''}`} key={row.label}>
+                  <span className="text-sm text-black dark:text-white">{row.label}</span>
+                  <span className={`text-right font-maxot text-base font-bold ${row.accent ? 'text-[#BE0010]' : 'text-black dark:text-white'}`}>{row.value}</span>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-2xl bg-[#D30013] px-6 py-9 text-center text-white shadow-sm">
-              <div className="font-maxot text-6xl font-bold leading-none sm:text-7xl">
+            <div className="rounded-2xl bg-[#D30013] px-6 py-6 text-center text-white shadow-sm">
+              <div className="font-maxot text-5xl font-bold leading-none sm:text-6xl">
                 {Math.round(annualRecoveredLitres).toLocaleString('en-IN')}
               </div>
-              <p className="mt-3 text-sm font-semibold text-white/90">
-                litres of solvent recovered per year
+              <p className="mt-2 text-sm font-semibold text-white/90">
+                {calculatorData?.heroLabel ?? ''}
               </p>
             </div>
 
             <button
-              className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-zinc-100 dark:bg-zinc-900 dark:text-zinc-100"
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-white dark:bg-zinc-900 dark:text-white"
               onClick={emailResults}
               type="button"
             >
               <FiMail className="text-base" />
-              Email these results to Inkarp for a tailored quote
+              {calculatorData?.ctaLabel ?? ''}
             </button>
           </div>
         </div>
 
-        <p className="relative mt-6 text-center text-xs text-black dark:text-zinc-400">
-          Indicative estimate only. Actual recovery depends on solvent purity, vacuum level, condenser efficiency, cooling and operating practice.
+        <p className="relative mt-4 text-center text-xs text-black/50 dark:text-white/40">
+          {calculatorData?.disclaimer ?? ''}
         </p>
       </div>
     </section>

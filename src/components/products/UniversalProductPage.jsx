@@ -46,22 +46,19 @@ export default function UniversalProductPage({ product }) {
       <ProductEngagementPopups productName={product.name} />
 
       {/* Sticky in-page navigation */}
-      {product.inPageNav?.length > 0 && (
+      {/* {product.inPageNav?.length > 0 && (
         <InPageNav links={product.inPageNav} />
-      )}
+      )} */}
 
       {/* Stats bar */}
-      <StatsBar stats={lf.stats ?? []} />
+      {/* <StatsBar stats={lf.stats ?? []} /> */}
 
       {/* Product info tabs (overview, features, specs, etc.) */}
       <ProductInfoTabs product={product} />
 
       {/* Evaporation workflow animation */}
       {workflowSection?.steps?.length > 0 && (
-        <EvaporationWorkflow
-          steps={workflowSection.steps}
-          disclaimer={workflowSection.disclaimer}
-        />
+        <EvaporationWorkflow section={workflowSection} />
       )}
 
       {/* Distillation simulator */}
@@ -71,23 +68,26 @@ export default function UniversalProductPage({ product }) {
 
       {/* Recovery calculator */}
       {product.calculator && (
-        <SolventCalculator data={product.calculator} />
+        <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} />
+      )}
+
+      {/* Suitability checker */}
+      {product.suitability && (
+        <SuitabilityChecker data={product.suitability} />
       )}
 
       {/* Solvent setup guide */}
       {solventSection?.cards?.length > 0 && (
         <SolventGuide
-          cards={solventSection.cards}
-          disclaimer={solventSection.disclaimer}
+          data={solventSection}
+          simulatorData={product.simulator}
+          sectionNumber="06"
         />
       )}
 
       {/* ROI calculator */}
       {roiSection && (
-        <ROICalculator
-          cards={roiSection.cards ?? []}
-          disclaimer={roiSection.disclaimer}
-        />
+        <ROICalculator data={roiSection} sectionNumber="07" />
       )}
 
       {/* Applications explorer */}
@@ -100,10 +100,7 @@ export default function UniversalProductPage({ product }) {
         <ConfigWizard data={product.configWizard} productName={product.name} />
       )}
 
-      {/* Suitability checker */}
-      {product.suitability && (
-        <SuitabilityChecker data={product.suitability} />
-      )}
+      
 
       {/* Workflow score comparison */}
       {product.workflowScore && (

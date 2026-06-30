@@ -4,38 +4,115 @@ import {
   FiInfo, FiZap, FiGrid, FiBarChart2, FiTrendingUp,
   FiShield, FiSliders, FiFileText, FiMonitor, FiTool,
   FiTarget, FiSun, FiLayers, FiSettings,
+  FiMove, FiThermometer, FiDollarSign,
+  FiAward, FiCheckCircle, FiBookOpen, FiDroplet, FiCoffee,
+  FiWind, FiClock, FiDownload, FiBook, FiActivity,
 } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 
 /* ── Tab config ─────────────────────────────────────── */
 const TABS = [
-  { key: 'overview',     label: 'Overview',                Icon: FiInfo       },
-  { key: 'features',     label: 'Features',                Icon: FiZap        },
-  { key: 'applications', label: 'Applications',            Icon: FiGrid       },
-  { key: 'specs',        label: 'Technical Specs',         Icon: FiBarChart2  },
-  { key: 'performance',  label: 'Performance',             Icon: FiTrendingUp },
-  { key: 'compliance',   label: 'Compliance',              Icon: FiShield     },
-  { key: 'config',       label: 'Configurations',          Icon: FiSliders    },
-  { key: 'docs',         label: 'Documentation & Resources', Icon: FiFileText },
+  { key: 'overview',     label: 'Overview',                  Icon: FiInfo       },
+  { key: 'features',     label: 'Features',                  Icon: FiZap        },
+  { key: 'applications', label: 'Applications',              Icon: FiGrid       },
+  { key: 'specs',        label: 'Technical Specs',           Icon: FiBarChart2  },
+  { key: 'performance',  label: 'Performance',               Icon: FiTrendingUp },
+  { key: 'compliance',   label: 'Compliance',                Icon: FiShield     },
+  { key: 'config',       label: 'Configurations',            Icon: FiSliders    },
+  { key: 'docs',         label: 'Documentation & Resources', Icon: FiFileText   },
 ];
 
-/* ── Icon map for overview cards ────────────────────── */
-const CARD_ICON = {
-  'Simple operation':             FiSliders,
-  'Clear visibility':             FiMonitor,
-  'Flexible setup':               FiTool,
-  'Reliable safety':              FiShield,
-  'LED ring light system':        FiSun,
-  'Precision control':            FiTarget,
-  'Space-saving vertical glassware': FiLayers,
-};
+/* ════════════════════════════════════════════════════════
+   ICON RESOLUTION
+   ════════════════════════════════════════════════════════ */
 
-/* ── Icon card ──────────────────────────────────────── */
-function IconCard({ title, description, items }) {
-  const Icon = CARD_ICON[title] ?? FiSettings;
+function resolveIcon(text, rules, fallback = FiSettings) {
+  const t = (text ?? '').toLowerCase();
+  for (const rule of rules) {
+    if (rule.match(t)) return rule.icon;
+  }
+  return fallback;
+}
+
+/* Shared by Features tab AND Overview card resolution */
+const FEATURE_ICON_RULES = [
+  { match: (t) => t.includes('display'),                                                     icon: FiMonitor     },
+  { match: (t) => t.includes('precision'),                                                   icon: FiTarget      },
+  { match: (t) => t.includes('knob') || t.includes('control') || t.includes('tuning'),      icon: FiSliders     },
+  { match: (t) => t.includes('operation') || t.includes('simplif'),                         icon: FiSliders     },
+  { match: (t) => t.includes('led') || t.includes('light'),                                 icon: FiSun         },
+  { match: (t) => t.includes('immersion') || t.includes('inclination') || t.includes('adjustable'), icon: FiMove },
+  { match: (t) => t.includes('standby') || t.includes('heat warning') || t.includes('residual'),    icon: FiThermometer },
+  { match: (t) => t.includes('lift'),                                                        icon: FiMove        },
+  { match: (t) => t.includes('glassware') || t.includes('space-saving'),                   icon: FiLayers      },
+  { match: (t) => t.includes('safety') || t.includes('visibility'),                        icon: FiShield      },
+  { match: (t) => t.includes('setup') || t.includes('flexible') || t.includes('adapt'),   icon: FiTool        },
+  { match: (t) => t.includes('cost'),                                                        icon: FiDollarSign  },
+];
+
+const APPLICATION_ICON_RULES = [
+  { match: (t) => t.includes('pharmaceutical'),                                               icon: FiTarget   },
+  { match: (t) => t.includes('chemical research') || t.includes('organic synthesis'),        icon: FiActivity },
+  { match: (t) => t.includes('academic') || t.includes('teaching'),                          icon: FiBookOpen },
+  { match: (t) => t.includes('food and beverage') || t.includes('food & beverage'),          icon: FiCoffee  },
+  { match: (t) => t.includes('environmental'),                                                icon: FiDroplet },
+  { match: (t) => t.includes('biotech') || t.includes('life science'),                       icon: FiActivity },
+];
+
+/* category-based (exact equality on category string) */
+const COMPLIANCE_ICON_RULES = [
+  { match: (t) => t === 'certifications', icon: FiAward       },
+  { match: (t) => t === 'safety',         icon: FiShield      },
+  { match: (t) => t === 'quality',        icon: FiCheckCircle },
+];
+
+const CONFIG_ICON_RULES = [
+  { match: (t) => t.includes('lift'),      icon: FiMove   },
+  { match: (t) => t.includes('glassware'), icon: FiLayers },
+  { match: (t) => t.includes('coating'),   icon: FiShield },
+  { match: (t) => t.includes('accessor'),  icon: FiTool   },
+];
+
+const DOCS_ICON_RULES = [
+  { match: (t) => t.includes('brochure'),                                icon: FiDownload    },
+  { match: (t) => t.includes('data sheet'),                              icon: FiFileText    },
+  { match: (t) => t.includes('operating') || t.includes('instructions'), icon: FiBook        },
+  { match: (t) => t.includes('safety'),                                  icon: FiShield      },
+  { match: (t) => t.includes('chiller'),                                 icon: FiThermometer },
+  { match: (t) => t.includes('vacuum'),                                  icon: FiWind        },
+  { match: (t) => t.includes('declaration') || t.includes('conformity'), icon: FiAward      },
+  { match: (t) => t.includes('nrtl'),                                    icon: FiAward       },
+  { match: (t) => t.includes('continuous'),                              icon: FiClock       },
+];
+
+/* Derives a short display title from a plain application sentence */
+function deriveAppTitle(sentence) {
+  const t = sentence.toLowerCase();
+  if (t.includes('pharmaceutical'))                               return 'Pharmaceutical labs';
+  if (t.includes('chemical research') || t.includes('organic synthesis')) return 'Chemical research labs';
+  if (t.includes('academic') || t.includes('teaching'))          return 'Academic & teaching labs';
+  if (t.includes('food and beverage') || t.includes('food & beverage')) return 'Food & beverage testing';
+  if (t.includes('environmental'))                                return 'Environmental labs';
+  if (t.includes('biotech') || t.includes('life science'))       return 'Biotech & life science';
+  return sentence.split('.')[0].trim();
+}
+
+/* ════════════════════════════════════════════════════════
+   CARD COMPONENTS
+   ════════════════════════════════════════════════════════ */
+
+function IconCard({ title, description, items, icon: IconProp, badge }) {
+  const Icon = IconProp ?? FiSettings;
   return (
     <div className="rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-[#BE0010]/25 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-      <Icon className="mb-3 h-5 w-5 text-[#BE0010]" />
+      <div className="mb-3 flex items-center gap-2">
+        <Icon className="h-5 w-5 text-[#BE0010]" />
+        {badge && (
+          <span className="ml-auto text-[10px] font-bold uppercase tracking-wide text-[#BE0010] bg-[#BE0010]/10 rounded-full px-2 py-0.5">
+            {badge}
+          </span>
+        )}
+      </div>
       <h3 className="font-semibold text-sm text-black mb-1 dark:text-zinc-100">{title}</h3>
       {description && <p className="text-sm leading-6 text-black dark:text-zinc-100">{description}</p>}
       {items?.length > 0 && (
@@ -52,7 +129,6 @@ function IconCard({ title, description, items }) {
   );
 }
 
-/* ── Simple card (no icon) ──────────────────────────── */
 function PlainCard({ title, description, items }) {
   return (
     <div className="rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-[#BE0010]/25 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
@@ -72,7 +148,6 @@ function PlainCard({ title, description, items }) {
   );
 }
 
-/* ── KPI row ────────────────────────────────────────── */
 function KPIRow({ kpis }) {
   if (!kpis?.length) return null;
   return (
@@ -87,7 +162,10 @@ function KPIRow({ kpis }) {
   );
 }
 
-/* ── Main component ─────────────────────────────────── */
+/* ════════════════════════════════════════════════════════
+   MAIN COMPONENT
+   ════════════════════════════════════════════════════════ */
+
 export default function ProductInfoTabs({ product }) {
   const [active, setActive] = useState('overview');
   const lf = product.longForm ?? {};
@@ -109,16 +187,17 @@ export default function ProductInfoTabs({ product }) {
   }, []);
 
   const section = (eyebrow) => lf.sections?.find((s) => s.eyebrow === eyebrow);
-  const overviewSec  = lf.sections?.[0];
-  const perfSec      = section('Performance');
-  const complianceSec= section('Quality and safety');
-  const configSec    = section('Configuration');
-  const docsSec      = section('Documentation');
+  const overviewSec   = lf.sections?.[0];
+  const perfSec       = section('Performance');
+  const complianceSec = section('Quality and safety');
+  const configSec     = section('Configuration');
+  const docsSec       = section('Documentation');
 
   /* ── Tab content ─────────────────────────────────── */
   const renderContent = () => {
     switch (active) {
 
+      /* ── 1. OVERVIEW ─────────────────────────────── */
       case 'overview':
         return (
           <div>
@@ -130,12 +209,20 @@ export default function ProductInfoTabs({ product }) {
             ))}
             {overviewSec?.cards?.length > 0 && (
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {overviewSec.cards.slice(0, 4).map((c) => <IconCard key={c.title} {...c} />)}
+                {overviewSec.cards.slice(0, 4).map((c) => (
+                  <IconCard
+                    key={c.title}
+                    {...c}
+                    icon={resolveIcon(c.title, FEATURE_ICON_RULES)}
+                  />
+                ))}
               </div>
             )}
+            <KPIRow kpis={lf.stats} />
           </div>
         );
 
+      /* ── 2. FEATURES ─────────────────────────────── */
       case 'features':
         return (
           <div>
@@ -144,26 +231,41 @@ export default function ProductInfoTabs({ product }) {
             </h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(product.features ?? []).slice(0, 9).map((f) => {
-                const [title, ...rest] = f.split(':');
-                return <PlainCard key={f} title={title.trim()} description={rest.join(':').trim()} />;
+                const colonIdx = f.indexOf(':');
+                const title       = colonIdx > -1 ? f.slice(0, colonIdx).trim() : f.trim();
+                const description = colonIdx > -1 ? f.slice(colonIdx + 1).trim() : '';
+                return (
+                  <IconCard
+                    key={f}
+                    title={title}
+                    description={description}
+                    icon={resolveIcon(title, FEATURE_ICON_RULES)}
+                  />
+                );
               })}
             </div>
           </div>
         );
 
+      /* ── 3. APPLICATIONS ─────────────────────────── */
       case 'applications':
         return (
           <div>
             <h3 className="font-maxot text-lg font-semibold text-black mb-4 dark:text-zinc-100">Where it&apos;s used</h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {(product.applications ?? []).map((a, i) => {
-                const [title, ...rest] = a.split(',');
-                return <PlainCard key={i} title={title.trim()} description={a} />;
-              })}
+              {(product.applications ?? []).map((sentence, i) => (
+                <IconCard
+                  key={i}
+                  title={deriveAppTitle(sentence)}
+                  description={sentence}
+                  icon={resolveIcon(sentence, APPLICATION_ICON_RULES)}
+                />
+              ))}
             </div>
           </div>
         );
 
+      /* ── 4. SPECS ────────────────────────────────── */
       case 'specs':
         return (
           <div>
@@ -178,9 +280,13 @@ export default function ProductInfoTabs({ product }) {
                 ))}
               </dl>
             </div>
+            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">
+              * Per Heidolph published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering.
+            </p>
           </div>
         );
 
+      /* ── 5. PERFORMANCE ──────────────────────────── */
       case 'performance':
         return (
           <div>
@@ -188,25 +294,44 @@ export default function ProductInfoTabs({ product }) {
             {perfSec?.body?.map((p, i) => (
               <p key={i} className="mb-4 text-sm leading-7 text-black dark:text-zinc-100">{p}</p>
             ))}
-            <KPIRow kpis={(perfSec?.metrics ?? lf.stats ?? [])} />
+            <KPIRow kpis={perfSec?.metrics ?? lf.stats ?? []} />
             {perfSec?.disclaimer && (
               <p className="mt-5 rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 p-4 text-xs leading-6 text-black dark:text-zinc-100">
                 {perfSec.disclaimer}
               </p>
             )}
+            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">
+              Use the{' '}
+              <a href="#simulator" className="text-[#BE0010] hover:underline">distillation simulator</a>
+              {' '}and the{' '}
+              <a href="#solvents" className="text-[#BE0010] hover:underline">solvent guide</a>
+              {' '}below to explore performance.
+            </p>
           </div>
         );
 
+      /* ── 6. COMPLIANCE ───────────────────────────── */
       case 'compliance':
         return (
           <div>
             <h3 className="font-maxot text-lg font-semibold text-black mb-4 dark:text-zinc-100">Quality, safety &amp; certification</h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {(complianceSec?.cards ?? []).map((c) => <IconCard key={c.title} {...c} />)}
+              {(complianceSec?.cards ?? []).map((c) => (
+                <IconCard
+                  key={c.title}
+                  {...c}
+                  icon={resolveIcon(c.category ?? '', COMPLIANCE_ICON_RULES)}
+                />
+              ))}
             </div>
+            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">
+              See the related standards and certificates in{' '}
+              <a href="#standards" className="text-[#BE0010] hover:underline">Standards &amp; certificates</a>.
+            </p>
           </div>
         );
 
+      /* ── 7. CONFIGURATIONS ───────────────────────── */
       case 'config':
         return (
           <div>
@@ -214,12 +339,28 @@ export default function ProductInfoTabs({ product }) {
               Configure the Hei-VAP Core around your workflow
             </h3>
             <div className="grid gap-3 sm:grid-cols-2">
-              {(configSec?.cards ?? []).map((c) => <PlainCard key={c.title} {...c} />)}
+              {(configSec?.cards ?? []).map((c) => (
+                <IconCard
+                  key={c.title}
+                  {...c}
+                  icon={resolveIcon(c.title, CONFIG_ICON_RULES)}
+                />
+              ))}
             </div>
+            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-400">
+              Not sure which to choose? Use the{' '}
+              <a href="#config" className="text-[#BE0010] hover:underline">configuration wizard</a>
+              , the{' '}
+              <a href="#glassware" className="text-[#BE0010] hover:underline">glassware guide</a>
+              {' '}or the{' '}
+              <a href="#pairing" className="text-[#BE0010] hover:underline">vacuum &amp; chiller pairing helper</a>
+              {' '}below.
+            </p>
           </div>
         );
 
-      case 'docs':
+      /* ── 8. DOCS ─────────────────────────────────── */
+      case 'docs': {
         return (
           <div>
             <h3 className="font-maxot text-lg font-semibold text-black mb-2 dark:text-zinc-100">Documentation &amp; Resources</h3>
@@ -227,23 +368,30 @@ export default function ProductInfoTabs({ product }) {
               Product and compliance documents for internal evaluation, purchase and safety review. Request any from Inkarp.
             </p>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {(docsSec?.cards ?? []).map((c) => (
-                <div key={c.title} className="flex items-start gap-3 rounded-xl border border-zinc-200 bg-white p-4 transition hover:border-[#BE0010]/25 dark:border-zinc-800 dark:bg-zinc-900">
-                  <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#BE0010]/10">
-                    <FiFileText className="h-4 w-4 text-[#BE0010]" />
+              {(docsSec?.cards ?? []).map((c) => {
+                const DocIcon = resolveIcon(c.title, DOCS_ICON_RULES);
+                return (
+                  <div key={c.title} className="flex items-start gap-3 rounded-xl border border-zinc-200 bg-white p-4 transition hover:border-[#BE0010]/25 dark:border-zinc-800 dark:bg-zinc-900">
+                    <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#BE0010]/10">
+                      <DocIcon className="h-4 w-4 text-[#BE0010]" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-black dark:text-zinc-100">{c.title}</div>
+                      <div className="text-xs text-black mt-0.5 dark:text-zinc-400">{c.description}</div>
+                      <a
+                        href={`mailto:info@inkarp.co.in?subject=${encodeURIComponent(`Request: Hei-VAP Core ${c.title}`)}`}
+                        className="mt-2 inline-block text-xs font-semibold text-[#BE0010] hover:underline"
+                      >
+                        Request →
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-semibold text-sm text-black dark:text-zinc-100">{c.title}</div>
-                    <div className="text-xs text-black mt-0.5 dark:text-zinc-400">{c.description}</div>
-                    <a href={`mailto:info@inkarp.com?subject=${encodeURIComponent(`Request: Hei-VAP Core ${c.title}`)}`} className="mt-2 inline-block text-xs font-semibold text-[#BE0010] hover:underline">
-                      Request →
-                    </a>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         );
+      }
 
       default:
         return null;
@@ -261,7 +409,7 @@ export default function ProductInfoTabs({ product }) {
           description="Everything you need to evaluate the rotary evaporator — overview, features, applications, specifications, quality & compliance, configurations & packages, and documentation."
         />
 
-        {/* Pill tabs */}
+        {/* Pill tabs — active uses brand red */}
         <div className="mb-6 flex flex-wrap gap-2">
           {TABS.map(({ key, label, Icon }) => (
             <button
@@ -269,7 +417,7 @@ export default function ProductInfoTabs({ product }) {
               onClick={() => setActive(key)}
               className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-xs font-semibold transition ${
                 active === key
-                  ? 'border-zinc-950 bg-zinc-950 text-white dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-950'
+                  ? 'border-[#BE0010] bg-[#BE0010] text-white dark:border-[#BE0010] dark:bg-[#BE0010] dark:text-white'
                   : 'border-zinc-200 bg-white text-black hover:border-zinc-400 hover:text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:text-zinc-100'
               }`}
             >

@@ -326,6 +326,7 @@
                     "items": [
                       "Standard G3 vertical glassware works well; choose G3 XL for higher throughput.",
                       "Standard chiller cooling around 10-15 deg C is usually sufficient.",
+                      "Moderate vacuum around 77 mbar with a Hei-VAC Valve Tec pump.",
                       "Hei-VAC Valve Tec pump plus Hei-CHILL Peltier chiller."
                     ]
                   },
@@ -335,6 +336,7 @@
                     "items": [
                       "Standard G3 vertical glassware.",
                       "Stronger cooling helps capture volatile vapour.",
+                      "Reduced vacuum around 556 mbar; use a Hei-VAC Vario pump for fine control over volatile evaporation.",
                       "Hei-VAC Vario pump, Hei-CHILL chiller and Woulff bottle."
                     ]
                   },
@@ -344,6 +346,7 @@
                     "items": [
                       "Standard G3 vertical glassware.",
                       "Standard cooling around 5-10 deg C.",
+                      "Moderate vacuum around 175 mbar with a Hei-VAC Valve Tec or Vario pump.",
                       "Hei-VAC Valve Tec or Vario pump plus Hei-CHILL chiller."
                     ]
                   },
@@ -353,6 +356,7 @@
                     "items": [
                       "Standard G3 vertical glassware; G3 XL can help slow aqueous evaporation.",
                       "Standard cooling is usually fine.",
+                      "Low vacuum around 72 mbar with a Hei-VAC Valve Tec pump.",
                       "Hei-VAC Valve Tec pump plus Hei-CHILL chiller."
                     ]
                   },
@@ -362,6 +366,7 @@
                     "items": [
                       "Standard G3; consider G5 dry-ice condenser for lower losses.",
                       "Stronger cooling recommended.",
+                      "Reduced vacuum around 337 mbar with a Hei-VAC Vario pump for stable control.",
                       "Hei-VAC Vario pump, deep Hei-CHILL chiller and Woulff bottle."
                     ]
                   },
@@ -371,6 +376,7 @@
                     "items": [
                       "G5 dry-ice condenser strongly recommended.",
                       "Strong or dry-ice cooling to capture fugitive vapour.",
+                      "Near-atmospheric operation around 850 mbar; Hei-VAC Vario pump recommended.",
                       "Hei-VAC Vario pump with deep cooling."
                     ]
                   },
@@ -380,6 +386,7 @@
                     "items": [
                       "Standard G3 vertical glassware.",
                       "Standard to stronger cooling.",
+                      "Moderate vacuum around 230 mbar with a Hei-VAC Vario pump.",
                       "Hei-VAC Vario pump plus Hei-CHILL chiller."
                     ]
                   }
@@ -423,6 +430,12 @@
                     "description": "Simpler operation, fewer reruns and safer handling can add operational value beyond solvent savings."
                   }
                 ],
+                "defaults": {
+                  "purchasePrice": 450000,
+                  "recoveredSolventValue": 180000,
+                  "disposalSavings": 60000,
+                  "otherAnnualValue": 40000
+                },
                 "disclaimer": "ROI and payback figures are indicative only and depend on your purchase price, solvent usage, disposal cost and operating practice. Request a configured quote from Inkarp for actual pricing."
               },
               {
@@ -963,6 +976,28 @@
             ]
           },
           "calculator": {
+            "eyebrow": "Interactive calculator",
+            "sectionNumber": "04",
+            "title": "How much time & solvent could you recover?",
+            "description": "Estimate distillation time and the value of recovered solvent on the Hei-VAP Core, based on Heidolph's published evaporation rates.",
+            "primarySolvents": ["Toluene", "Acetone", "Ethanol", "Water"],
+            "sliders": {
+              "volumeMl": { "label": "Volume per batch (mL)", "min": 100, "max": 3000, "step": 100, "default": 1000 },
+              "batchesPerWeek": { "label": "Batches per week", "min": 1, "max": 60, "step": 1, "default": 23 },
+              "solventCost": { "label": "Solvent cost (₹ / litre)", "min": 100, "max": 3000, "step": 50, "default": 600 },
+              "recoveryShare": { "label": "Share of solvent recovered & reused (%)", "min": 0, "max": 90, "step": 5, "default": 70 }
+            },
+            "annualWeeks": 48,
+            "resultLabels": {
+              "distillationTime": "Distillation time per batch",
+              "processedPerWeek": "Solvent processed per week",
+              "recoveredPerWeek": "Solvent recovered per week",
+              "annualValue": "Annual recovered-solvent value (₹, 48 wks)"
+            },
+            "heroLabel": "litres of solvent recovered per year",
+            "ctaLabel": "Email these results to Inkarp for a tailored quote",
+            "emailSubject": "Hei-VAP Core - solvent recovery estimate",
+            "disclaimer": "Indicative estimate only. Actual recovery depends on solvent purity, vacuum level, condenser efficiency, cooling and operating practice.",
             "solvents": [
               {
                 "name": "Toluene",
@@ -1009,6 +1044,7 @@
             ]
           },
           "suitability": {
+            "sectionNumber": "05",
             "fields": [
               {
                 "key": "type",
@@ -1175,24 +1211,35 @@
               {
                 "name": "Pharmaceuticals",
                 "shortName": "Pharma",
+                "icon": "pill",
                 "tasks": [
                   "API concentration",
                   "Solvent removal",
                   "Reaction work-up",
                   "Purification support"
                 ],
+                "bullets": [
+                  "Controlled evaporation",
+                  "Repeatable temperature and speed settings",
+                  "Safe heated-bath operation",
+                  "Suitable condenser and glassware setup"
+                ],
+                "tags": ["Solvent Recovery", "API Work-up", "Sample Concentration", "Routine Evaporation"],
                 "highlights": [
                   {
-                    "label": "Typical solvents",
-                    "value": "EtOH, DCM, EtOAc"
+                    "label": "Control accuracy",
+                    "value": "±1°C",
+                    "fill": 95
                   },
                   {
-                    "label": "Typical batch",
-                    "value": "0.5–2 L"
+                    "label": "rpm range",
+                    "value": "10-280",
+                    "fill": 90
                   },
                   {
-                    "label": "Key feature",
-                    "value": "Repeatable temp & speed"
+                    "label": "Bath range (oil)",
+                    "value": "20-210°C",
+                    "fill": 90
                   }
                 ],
                 "note": "Digital control and consistent bath temperature support repeatable API concentration workflows."
@@ -1200,49 +1247,71 @@
               {
                 "name": "Chemical Research",
                 "shortName": "Chemistry",
+                "icon": "flask",
                 "tasks": [
                   "Organic synthesis",
                   "Solvent removal",
                   "Distillation",
                   "Compound concentration"
                 ],
+                "bullets": [
+                  "Flexible glassware selection",
+                  "Wide speed and bath-temperature range",
+                  "Vacuum-supported solvent removal",
+                  "Reliable distillation and compound concentration"
+                ],
+                "tags": ["Organic Synthesis", "Distillation", "Compound Concentration", "Flexible Setup"],
                 "highlights": [
                   {
-                    "label": "Typical solvents",
-                    "value": "Toluene, Hexane, MeOH"
+                    "label": "rpm range",
+                    "value": "10-280",
+                    "fill": 90
                   },
                   {
-                    "label": "Typical batch",
-                    "value": "0.2–3 L"
+                    "label": "Bath range (oil)",
+                    "value": "20-210°C",
+                    "fill": 90
                   },
                   {
-                    "label": "Key feature",
-                    "value": "Flexible glassware"
+                    "label": "Condenser surface",
+                    "value": "0.22 m²",
+                    "fill": 82
                   }
                 ],
                 "note": "Multiple glassware options and wide speed/temperature range support diverse synthesis workflows."
               },
               {
-                "name": "Academic / Teaching",
+                "name": "Academic Labs",
                 "shortName": "Academic",
+                "icon": "school",
                 "tasks": [
                   "Lab demonstrations",
                   "Student training",
                   "Research support",
                   "Sample prep"
                 ],
+                "bullets": [
+                  "Easy two-knob operation",
+                  "Visible LED status feedback",
+                  "Safe residual-heat awareness",
+                  "Robust setup for repeated student use"
+                ],
+                "tags": ["Teaching Labs", "Student Training", "Simple Operation", "Safe Handling"],
                 "highlights": [
                   {
-                    "label": "Priority",
-                    "value": "Safety + simplicity"
+                    "label": "Core controls",
+                    "value": "2 knobs",
+                    "fill": 86
                   },
                   {
-                    "label": "Users",
-                    "value": "Students & researchers"
+                    "label": "Status visibility",
+                    "value": "LED ring",
+                    "fill": 88
                   },
                   {
-                    "label": "Key feature",
-                    "value": "Intuitive 2-knob control"
+                    "label": "Residual heat warning",
+                    "value": ">50°C",
+                    "fill": 74
                   }
                 ],
                 "note": "Focused control interface and LED status ring make it easy for new users to learn safely."
@@ -1250,24 +1319,35 @@
               {
                 "name": "Food & Beverage",
                 "shortName": "Food",
+                "icon": "coffee",
                 "tasks": [
                   "Extract concentration",
                   "Solvent removal",
                   "Sample prep",
                   "Flavour isolation"
                 ],
+                "bullets": [
+                  "Controlled heating for extract concentration",
+                  "Gentle evaporation for quality-sensitive samples",
+                  "Repeatable temperature and speed settings",
+                  "Suitable glassware for ethanol and aqueous workflows"
+                ],
+                "tags": ["Extracts", "Flavour Isolation", "EtOH / Water", "Sample Prep"],
                 "highlights": [
                   {
-                    "label": "Typical solvents",
-                    "value": "EtOH, Water"
+                    "label": "Control accuracy",
+                    "value": "±1°C",
+                    "fill": 95
                   },
                   {
-                    "label": "Typical batch",
-                    "value": "0.5–2 L"
+                    "label": "Water-bath range",
+                    "value": "20-100°C",
+                    "fill": 78
                   },
                   {
-                    "label": "Key feature",
-                    "value": "Controlled heating"
+                    "label": "Bath volume",
+                    "value": "4.5 L",
+                    "fill": 70
                   }
                 ],
                 "note": "Temperature-controlled bath ensures consistent concentrate quality for food testing samples."
@@ -1275,24 +1355,35 @@
               {
                 "name": "Environmental",
                 "shortName": "Environ.",
+                "icon": "droplet",
                 "tasks": [
                   "Sample concentration",
                   "Solvent evaporation",
                   "Pre-analysis prep",
                   "Matrix removal"
                 ],
+                "bullets": [
+                  "Consistent sample concentration before analysis",
+                  "Vacuum evaporation for mixed solvent workflows",
+                  "Repeatable runs across routine preparation",
+                  "Accessory support for pump and condenser protection"
+                ],
+                "tags": ["Pre-analysis Prep", "Matrix Removal", "Solvent Evaporation", "Repeatability"],
                 "highlights": [
                   {
-                    "label": "Typical solvents",
-                    "value": "Hexane, DCM, Acetone"
+                    "label": "rpm range",
+                    "value": "10-280",
+                    "fill": 90
                   },
                   {
-                    "label": "Typical batch",
-                    "value": "0.1–1 L"
+                    "label": "Condenser surface",
+                    "value": "0.22 m²",
+                    "fill": 82
                   },
                   {
-                    "label": "Key feature",
-                    "value": "Repeatable evaporation"
+                    "label": "Bath cable protection",
+                    "value": "IP 67",
+                    "fill": 72
                   }
                 ],
                 "note": "Reliable evaporation repeatability supports consistent pre-analytical sample concentration."
@@ -1300,24 +1391,35 @@
               {
                 "name": "Biotech / Life Sciences",
                 "shortName": "Biotech",
+                "icon": "cpu",
                 "tasks": [
                   "Sample concentration",
                   "Buffer exchange",
                   "Extract processing",
                   "Purification"
                 ],
+                "bullets": [
+                  "Gentle low-temperature concentration",
+                  "Vacuum control for temperature-sensitive samples",
+                  "Reliable bath and rotation settings",
+                  "Configurable glassware and cooling options"
+                ],
+                "tags": ["Gentle Handling", "Low-temp Evaporation", "Sample Concentration", "Vacuum Control"],
                 "highlights": [
                   {
-                    "label": "Priority",
-                    "value": "Gentle handling"
+                    "label": "Control accuracy",
+                    "value": "±1°C",
+                    "fill": 95
                   },
                   {
-                    "label": "Temperature",
-                    "value": "Low-temp vacuum evap"
+                    "label": "Water-bath range",
+                    "value": "20-100°C",
+                    "fill": 78
                   },
                   {
-                    "label": "Key feature",
-                    "value": "Vacuum + bath control"
+                    "label": "rpm range",
+                    "value": "10-280",
+                    "fill": 90
                   }
                 ],
                 "note": "Vacuum reduces boiling points for gentle concentration of temperature-sensitive biological samples."
@@ -1325,6 +1427,11 @@
             ]
           },
           "configWizard": {
+            "eyebrow": "Configuration",
+            "title": "Which Hei-VAP Core setup should I start from?",
+            "description": "The final setup depends on lift preference, glassware, coating, solvent volatility, recovery needs and cooling strategy.",
+            "disclaimer": "This helper gives a generic starting point only. Your final package, glassware set, vacuum pump and chiller are confirmed with Inkarp specialists.",
+            "emptyState": "Complete the steps to see your recommended package",
             "steps": [
               {
                 "key": "lift",

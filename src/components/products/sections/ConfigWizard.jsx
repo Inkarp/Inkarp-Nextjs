@@ -104,10 +104,10 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
   };
 
   return (
-    <section id="config" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-10 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+    <section id="config" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto max-w-7xl rounded-[28px] border border-zinc-200 bg-[#F6F6F6] px-5 py-12 sm:px-8 lg:px-12 dark:border-zinc-800 dark:bg-zinc-900">
         <div className="relative overflow-hidden">
-          <SectionHeader number="08" eyebrow={eyebrow} title={heading} description={intro} />
+          <SectionHeader number="09" eyebrow={eyebrow} title={heading} description={intro} />
 
           <div className="relative mt-8 flex flex-wrap items-center gap-x-3 gap-y-4">
             {steps.map((item, index) => {

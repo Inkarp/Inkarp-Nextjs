@@ -1,35 +1,27 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiAlertTriangle, FiInfo, FiPlus, FiCloudSnow, FiThermometer } from 'react-icons/fi';
+import { FiInfo, FiPlus, FiCloudSnow, FiThermometer } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 
-const BOILING_POINTS = {
-  Toluene: 111,
-  Acetone: 56,
-  Ethanol: 78,
-  Water: 100,
-  Methanol: 65,
-  Dichloromethane: 40,
-  Acetonitrile: 82,
-};
+// Bridges the naming gap between solvent guide cards and simulator/calculator entries
+const SOLVENT_NAME_ALIASES = { Dichloromethane: 'DCM' };
 
-const DETAIL_ICONS = [FiThermometer, FiCloudSnow, FiInfo, FiAlertTriangle, FiPlus];
+const DETAIL_ICONS = [FiThermometer, FiCloudSnow, FiInfo, FiPlus];
 const DETAIL_LABELS = [
   'Suggested glassware',
   'Cooling approach',
   'Vacuum setup',
-  'Safety note',
   'Accessory recommendation',
 ];
 
 function normaliseText(value = '') {
   return String(value)
-    .replace(/\u00e2\u20ac[\u201c\u201d]/g, '-')
-    .replace(/\u00c2\u00b2/g, '2')
-    .replace(/\u00c2\u00b0C/g, 'deg C')
-    .replace(/\u00c2\u00b7/g, '-')
-    .replace(/\u00b0C/g, 'deg C')
-    .replace(/\u00b7/g, '-');
+    .replace(/â€[“”]/g, '-')
+    .replace(/Â²/g, '2')
+    .replace(/Â°C/g, 'deg C')
+    .replace(/Â·/g, '-')
+    .replace(/°C/g, 'deg C')
+    .replace(/·/g, '-');
 }
 
 function parseDescription(description = '') {
@@ -45,40 +37,43 @@ function parseDescription(description = '') {
 
 function makeDetailRows(card) {
   const items = (card.items ?? []).map(normaliseText);
-  const description = parseDescription(card.description);
-
   return [
     items[0] ?? 'Standard G3 vertical glassware works well for routine evaporation.',
     items[1] ?? 'Choose cooling based on vapour temperature and volatility.',
-    description.vacuum
-      ? `Moderate vacuum - around ${description.vacuum} with a suitable Hei-VAC pump.`
-      : items[2] ?? 'Select a compatible Hei-VAC pump based on solvent behaviour.',
-    `${card.title} handling depends on volatility and lab safety practice; verify bath, vacuum and condenser setup before running.`,
-    items[2] ?? 'Confirm pump, chiller and protective accessories with Inkarp.',
+    items[2] ?? 'Select a compatible Hei-VAC pump based on solvent behaviour.',
+    items[3] ?? 'Confirm pump, chiller and protective accessories with Inkarp.',
   ];
 }
 
-export default function SolventGuide({ cards = [], disclaimer }) {
+function lookupBp(cardTitle, simulatorSolvents = []) {
+  const lookupName = SOLVENT_NAME_ALIASES[cardTitle] ?? cardTitle;
+  return simulatorSolvents.find((s) => s.name === lookupName)?.bp ?? null;
+}
+
+export default function SolventGuide({ data, simulatorData, sectionNumber = '06' }) {
+  const cards = data?.cards ?? [];
+  const disclaimer = data?.disclaimer;
+  const simulatorSolvents = simulatorData?.solvents ?? [];
   const [active, setActive] = useState(0);
 
   const enrichedCards = useMemo(() => cards.map((card) => ({
     ...card,
     parsed: parseDescription(card.description),
-    boilingPoint: BOILING_POINTS[card.title],
+    boilingPoint: lookupBp(card.title, simulatorSolvents),
     rows: makeDetailRows(card),
-  })), [cards]);
+  })), [cards, simulatorSolvents]);
 
   if (!cards.length) return null;
   const card = enrichedCards[active];
 
   return (
-    <section id="solvents" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-[#F6F6F6] dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-7xl">
+    <section id="solvents" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-[#F6F6F6] dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+      <div className="relative mx-auto max-w-7xl w-full">
         <SectionHeader
-          number="05"
-          eyebrow="Interactive - solvent setup guide"
-          title="Which solvent are you evaporating?"
-          description="Pick your solvent and we will suggest a starting setup - glassware direction, cooling approach, vacuum, a safety note and accessory recommendations."
+          number={sectionNumber}
+          eyebrow={data?.eyebrow}
+          title={data?.title}
+          description={data?.description}
         />
 
         <div className="relative mt-9 grid gap-6 lg:grid-cols-[294px_1fr]">
@@ -95,7 +90,9 @@ export default function SolventGuide({ cards = [], disclaimer }) {
                 type="button"
               >
                 <span className="text-sm font-bold">{item.title}</span>
-                <span className="text-xs text-black dark:text-zinc-100">{item.boilingPoint ? `${item.boilingPoint} deg C bp` : 'setup'}</span>
+                <span className="text-xs text-black dark:text-zinc-100">
+                  {item.boilingPoint ? `${item.boilingPoint} deg C bp` : 'setup'}
+                </span>
               </button>
             ))}
           </div>

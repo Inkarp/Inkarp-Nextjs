@@ -9,6 +9,7 @@ import Principles from "@/components/home/Principles";
 import PrinciplesAlternate from "@/components/home/PrinciplesAlternate";
 import { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { buildPageMetadata } from "@/data/pageSeo";
+import Testing from "@/components/common/Testing";
 
 export const metadata = buildPageMetadata("/");
 
@@ -16,10 +17,15 @@ export default function Home() {
   return (
     <main>
       <BreadcrumbJsonLd path="/" />
-      <HeroSection />
+      {/* Mobile / tablet: plain hero, no scroll animation */}
+      <div className="lg:hidden">
+        <HeroSection />
+      </div>
+      {/* Desktop: full scroll-push animation */}
+      <Testing />
       <PickProduct />
-      <CompaniesAlternate />    
-      <Companies />  
+      <CompaniesAlternate />
+      <Companies />
       <PrinciplesAlternate />
       <Principles />
       <OrderServiceSteps />

@@ -4,7 +4,7 @@ import { FiMail } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 
 function formatCurrency(value) {
-  return `\u20B9${Math.round(value || 0).toLocaleString('en-IN')}`;
+  return `₹${Math.round(value || 0).toLocaleString('en-IN')}`;
 }
 
 function cleanNumber(value) {
@@ -18,7 +18,7 @@ function RoiInput({ label, value, onChange }) {
     <label className="block">
       <span className="text-sm font-medium text-black dark:text-zinc-100">{label}</span>
       <input
-        className="mt-3 h-12 w-full rounded-2xl border border-zinc-200 bg-zinc-50 px-4 font-maxot text-lg font-bold text-black outline-none transition focus:border-[#BE0010] focus:bg-white focus:ring-4 focus:ring-[#BE0010]/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:focus:bg-zinc-900"
+        className="mt-2 h-11 w-full rounded-2xl border border-zinc-200 bg-zinc-50 px-4 font-maxot text-lg font-bold text-black outline-none transition focus:border-[#BE0010] focus:bg-white focus:ring-4 focus:ring-[#BE0010]/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:focus:bg-zinc-900"
         min="0"
         onChange={(event) => onChange(cleanNumber(event.target.value))}
         step="1000"
@@ -29,11 +29,12 @@ function RoiInput({ label, value, onChange }) {
   );
 }
 
-export default function ROICalculator({ disclaimer }) {
-  const [purchasePrice, setPurchasePrice] = useState(450000);
-  const [recoveredSolventValue, setRecoveredSolventValue] = useState(180000);
-  const [disposalSavings, setDisposalSavings] = useState(60000);
-  const [otherAnnualValue, setOtherAnnualValue] = useState(40000);
+export default function ROICalculator({ data, sectionNumber = '07' }) {
+  const defaults = data?.defaults ?? {};
+  const [purchasePrice, setPurchasePrice] = useState(defaults.purchasePrice ?? 450000);
+  const [recoveredSolventValue, setRecoveredSolventValue] = useState(defaults.recoveredSolventValue ?? 180000);
+  const [disposalSavings, setDisposalSavings] = useState(defaults.disposalSavings ?? 60000);
+  const [otherAnnualValue, setOtherAnnualValue] = useState(defaults.otherAnnualValue ?? 40000);
 
   useEffect(() => {
     const applyCalculatorValue = (payload) => {
@@ -81,43 +82,56 @@ export default function ROICalculator({ disclaimer }) {
     window.location.href = `mailto:info@inkarp.com?subject=${encodeURIComponent('Hei-VAP Core - ROI estimate')}&body=${encodeURIComponent(body)}`;
   };
 
+  const cards = data?.cards ?? [];
+
   return (
-    <section id="roi" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="relative mx-auto max-w-7xl">
+    <section id="roi" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="relative mx-auto w-full max-w-7xl">
         <SectionHeader
-          number="06"
-          eyebrow="ROI & payback"
-          title="When does it pay for itself?"
-          description="Reliable evaporation with solvent recovery cuts spend on fresh solvent and disposal. Combine those savings with a rough purchase price - Inkarp will give you exact pricing."
+          number={sectionNumber}
+          eyebrow={data?.eyebrow}
+          title={data?.title}
+          description={data?.description}
         />
 
-        <div className="relative mt-9 grid gap-6 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
-            <div className="space-y-5">
+        {cards.length > 0 && (
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            {cards.map((card) => (
+              <div key={card.title} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                <p className="text-sm font-semibold text-black dark:text-zinc-100">{card.title}</p>
+                <p className="mt-1.5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div className="relative mt-6 grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="space-y-4">
               <RoiInput
-                label="Estimated purchase price (\u20B9) - ask Inkarp for your quote"
+                label="Estimated purchase price (₹) - ask Inkarp for your quote"
                 onChange={setPurchasePrice}
                 value={purchasePrice}
               />
               <RoiInput
-                label="Annual value of recovered solvent (\u20B9) - see the calculator above"
+                label="Annual value of recovered solvent (₹) - see the calculator above"
                 onChange={setRecoveredSolventValue}
                 value={recoveredSolventValue}
               />
               <RoiInput
-                label="Annual solvent-disposal / waste savings (\u20B9)"
+                label="Annual solvent-disposal / waste savings (₹)"
                 onChange={setDisposalSavings}
                 value={disposalSavings}
               />
               <RoiInput
-                label="Other annual value - time saved, fewer reruns (\u20B9)"
+                label="Other annual value - time saved, fewer reruns (₹)"
                 onChange={setOtherAnnualValue}
                 value={otherAnnualValue}
               />
             </div>
 
             <button
-              className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-zinc-100 dark:bg-zinc-900 dark:text-zinc-100"
+              className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-zinc-100 dark:bg-zinc-900 dark:text-zinc-100"
               onClick={emailResults}
               type="button"
             >
@@ -126,31 +140,31 @@ export default function ROICalculator({ disclaimer }) {
             </button>
           </div>
 
-          <div className="space-y-4">
-            <div className="rounded-2xl bg-[#D30013] p-7 text-white shadow-sm sm:p-8">
+          <div className="space-y-3">
+            <div className="rounded-2xl bg-[#D30013] p-5 text-white shadow-sm sm:p-6">
               <p className="text-sm font-semibold text-white/75">Estimated payback period</p>
-              <div className="font-maxot mt-5 text-4xl font-bold leading-none sm:text-5xl">
+              <div className="font-maxot mt-4 text-4xl font-bold leading-none sm:text-5xl">
                 {results.paybackMonths ? `${results.paybackMonths} months` : '-'}
               </div>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6 dark:border-zinc-800 dark:bg-zinc-900">
               <p className="text-sm font-semibold text-black dark:text-zinc-100">Total annual value</p>
-              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
+              <div className="font-maxot mt-4 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
                 {formatCurrency(results.totalAnnualValue)}
               </div>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6 dark:border-zinc-800 dark:bg-zinc-900">
               <p className="text-sm font-semibold text-black dark:text-zinc-100">5-year net value (after purchase)</p>
-              <div className="font-maxot mt-5 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
+              <div className="font-maxot mt-4 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
                 {formatCurrency(results.fiveYearNetValue)}
               </div>
             </div>
 
-            {disclaimer && (
+            {data?.disclaimer && (
               <p className="text-sm leading-6 text-black dark:text-zinc-400">
-                Disclaimer: {disclaimer}
+                Disclaimer: {data.disclaimer}
               </p>
             )}
           </div>

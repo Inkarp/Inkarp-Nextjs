@@ -519,45 +519,6 @@
                 ]
               },
               {
-                "eyebrow": "Workflow simplification",
-                "title": "How much of your evaporation workflow can be simplified?",
-                "description": "The Hei-VAP Core focuses on the repeated manual steps that matter every day.",
-                "cards": [
-                  {
-                    "title": "Bath temperature",
-                    "description": "Set precisely on the digital display with +/-1 deg C electronic control."
-                  },
-                  {
-                    "title": "Rotation speed",
-                    "description": "Dial in 10-280 rpm with a dedicated dynamic control knob."
-                  },
-                  {
-                    "title": "Flask immersion",
-                    "description": "Adjust immersion depth up to 155 mm and angle from 20 deg to 80 deg."
-                  },
-                  {
-                    "title": "Heating status",
-                    "description": "Actual and set values are shown clearly, while the LED ring shows active functions."
-                  },
-                  {
-                    "title": "Accidental changes",
-                    "description": "Lock function helps prevent unwanted value changes during a run."
-                  },
-                  {
-                    "title": "Residual heat risk",
-                    "description": "Residual-heat warning above 50 deg C and standby function improve safety."
-                  },
-                  {
-                    "title": "Condensing solvent vapour",
-                    "description": "Up to 0.22 m2 condenser surface; choose the glassware set to match."
-                  },
-                  {
-                    "title": "Collecting recovered solvent",
-                    "description": "Recovered solvent drains into the receiving flask; add a Woulff bottle for added recovery and pump protection."
-                  }
-                ]
-              },
-              {
                 "eyebrow": "Comparison",
                 "title": "Hei-VAP Core vs a basic manual evaporation setup",
                 "description": "Why Core is a stronger daily-lab option than an unassisted manual evaporation workflow.",
@@ -1588,6 +1549,11 @@
                 "manual": "Depends on setup",
                 "core": "Receiving flask + optional Woulff bottle"
               }
+            ],
+            "benefits": [
+              { "icon": "target", "label": "Manual effort reduced" },
+              { "icon": "shield", "label": "Safety improved" },
+              { "icon": "zap", "label": "Repeatability improved" }
             ]
           },
           "comparison": {

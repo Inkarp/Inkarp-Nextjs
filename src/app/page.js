@@ -1,4 +1,5 @@
 import TrustedClients from "@/components/about/TrustedClients";
+import AboutUs from "@/components/home/AboutUs";
 import ClientReviews from "@/components/home/ClientReviews";
 import Companies from "@/components/home/Companies";
 import CompaniesAlternate from "@/components/home/CompaniesAlternate";
@@ -23,6 +24,7 @@ export default function Home() {
       </div>
       {/* Desktop: full scroll-push animation */}
       <Testing />
+      <AboutUs />
       <PickProduct />
       <CompaniesAlternate />
       <Companies />

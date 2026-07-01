@@ -13,7 +13,21 @@
       "Bash(command -v chromium-cli)",
       "Bash(curl -s -o /tmp/magazine.html -w \"%{http_code}\\\\n\" http://localhost:3000/magazine)",
       "Read(//tmp/**)",
-      "Bash(grep -o \"Latest Issue\\\\|catalyst-archive\\\\|Volume 1\" /tmp/magazine.html | sort -u; echo \"---errors check---\"; grep -i \"error\" /tmp/magazine.html | head -5)"
+      "Bash(grep -o \"Latest Issue\\\\|catalyst-archive\\\\|Volume 1\" /tmp/magazine.html | sort -u; echo \"---errors check---\"; grep -i \"error\" /tmp/magazine.html | head -5)",
+      "WebFetch(domain:inkarpinstrument.keka.com)",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(npx playwright *)",
+      "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\25fa6029-d50d-486b-897a-4d07e25ccbd1\\\\scratchpad\\\\verify-careers.js\")",
+      "Bash(npm root *)",
+      "Bash(find 'C:\\\\Users\\\\Sharath/AppData/Local/npm-cache/_npx' -maxdepth 2 -iname playwright*)",
+      "Bash(npx --yes -p playwright node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node verify-careers.js)",
+      "Bash(node verify-careers2.js)",
+      "Bash(ls src/components/about)",
+      "Bash(ls src/components/home)",
+      "Bash(node verify-about.js)"
     ]
   }
 }

@@ -174,7 +174,7 @@ export default function CareersPage() {
       <CareersKeka />
 
       <section className="px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 rounded-lg bg-[#E63946] p-6 text-white md:flex-row md:p-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 rounded-lg bg-[#E63946] p-6 text-white md:flex-row md:p-10">
           <div className="space-y-2 text-center md:text-left">
             <h4 className="font-maxot text-xl md:text-2xl">
               Don&apos;t see a perfect role?

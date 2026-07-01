@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   FiArrowRight,
   FiBriefcase,
   FiMapPin,
+  FiSearch,
+  FiTag,
 } from "react-icons/fi";
 
 const KEKA_IDENTIFIER = "357ac919-3c5b-4878-922a-e01bc5fd29cd";
@@ -17,6 +19,9 @@ export default function CareersKeka() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [departmentFilter, setDepartmentFilter] = useState("All");
+  const [locationFilter, setLocationFilter] = useState("All");
 
   useEffect(() => {
     if (containerRef.current) {
@@ -77,6 +82,32 @@ export default function CareersKeka() {
     };
   }, []);
 
+  const departmentOptions = useMemo(
+    () =>
+      Array.from(new Set(jobs.map((job) => job.department).filter(Boolean))).sort(),
+    [jobs]
+  );
+
+  const locationOptions = useMemo(
+    () =>
+      Array.from(new Set(jobs.map((job) => job.location).filter(Boolean))).sort(),
+    [jobs]
+  );
+
+  const filteredJobs = useMemo(() => {
+    const query = searchTerm.trim().toLowerCase();
+
+    return jobs.filter((job) => {
+      const matchesSearch = !query || (job.title || "").toLowerCase().includes(query);
+      const matchesDepartment =
+        departmentFilter === "All" || job.department === departmentFilter;
+      const matchesLocation =
+        locationFilter === "All" || job.location === locationFilter;
+
+      return matchesSearch && matchesDepartment && matchesLocation;
+    });
+  }, [jobs, searchTerm, departmentFilter, locationFilter]);
+
   return (
     <section className="relative mx-auto py-10 md:px-10 lg:px-20">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)]" />
@@ -114,10 +145,67 @@ export default function CareersKeka() {
         ) : null}
 
         {!loading && jobs.length > 0 ? (
-          <div className="mx-auto max-w-5xl">
-            {jobs.map((job, index) => (
-              <JobCard job={job} key={`${job.title}-${index}`} />
-            ))}
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-6 flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
+              <div className="relative w-full sm:max-w-md sm:flex-1">
+                <FiSearch
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-zinc-400"
+                />
+                <input
+                  aria-label="Search job titles"
+                  className="w-full rounded-full border border-zinc-200 bg-white py-3 pl-11 pr-4 text-sm text-zinc-800 focus:border-[#E63946] focus:outline-none"
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                  placeholder="Search by job title..."
+                  type="text"
+                  value={searchTerm}
+                />
+              </div>
+
+              {departmentOptions.length > 0 ? (
+                <select
+                  aria-label="Filter by department"
+                  className="w-full rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-800 focus:border-[#E63946] focus:outline-none sm:w-64"
+                  onChange={(event) => setDepartmentFilter(event.target.value)}
+                  value={departmentFilter}
+                >
+                  <option value="All">All Departments</option>
+                  {departmentOptions.map((department) => (
+                    <option key={department} value={department}>
+                      {department}
+                    </option>
+                  ))}
+                </select>
+              ) : null}
+
+              {locationOptions.length > 0 ? (
+                <select
+                  aria-label="Filter by location"
+                  className="w-full rounded-full border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-800 focus:border-[#E63946] focus:outline-none sm:w-80"
+                  onChange={(event) => setLocationFilter(event.target.value)}
+                  value={locationFilter}
+                >
+                  <option value="All">All Locations</option>
+                  {locationOptions.map((location) => (
+                    <option key={location} value={location}>
+                      {location}
+                    </option>
+                  ))}
+                </select>
+              ) : null}
+            </div>
+
+            {filteredJobs.length > 0 ? (
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {filteredJobs.map((job, index) => (
+                  <JobCard job={job} key={`${job.title}-${index}`} />
+                ))}
+              </div>
+            ) : (
+              <div className="py-10 text-center text-sm text-zinc-700">
+                No roles match your filters. Try adjusting your search or filters.
+              </div>
+            )}
 
             <div className="mt-8 text-center">
               <a
@@ -145,12 +233,13 @@ export default function CareersKeka() {
 }
 
 function JobCard({ job }) {
-  const { title, location, type, url } = job || {};
+  const { title, location, type, department, url } = job || {};
   const shownLocation = location?.trim() || "Remote / Not specified";
   const shownType = type?.trim() || "Not specified";
+  const shownDepartment = department?.trim();
 
   return (
-    <article className="mt-4 rounded-lg border border-zinc-200">
+    <article className="rounded-lg border border-zinc-200">
       <div className="flex flex-col justify-between gap-5 p-4 sm:flex-row sm:items-center sm:p-6">
         <div className="flex min-w-0 flex-1 flex-col gap-3">
           <h3 className="font-maxot text-lg leading-snug text-zinc-950 sm:text-xl">
@@ -169,6 +258,12 @@ function JobCard({ job }) {
               />
               <span className="font-medium">{shownType}</span>
             </span>
+            {shownDepartment ? (
+              <span className="inline-flex min-h-7 items-center gap-1 rounded-full border border-zinc-200 bg-[#F5F5F5] px-2.5 py-1 leading-none">
+                <FiTag aria-hidden="true" className="size-3.5 text-[#E63946]" />
+                <span className="font-medium">{shownDepartment}</span>
+              </span>
+            ) : null}
           </div>
         </div>
 
@@ -190,8 +285,10 @@ function JobCard({ job }) {
 }
 
 function parseJobsFromContainer(rootEl) {
+  const kekaCards = Array.from(rootEl.querySelectorAll(".kh-job-card"));
   const anchors = Array.from(rootEl.querySelectorAll("a[href]"));
-  const cards = groupByCard(anchors);
+  const cards = kekaCards.length ? kekaCards : groupByCard(anchors);
+  const departmentByCard = mapDepartmentsByHeading(rootEl);
   const skipPatterns = /(keka\s*hire|powered\s*by|view\s+all\s+openings)/i;
 
   const jobs = cards
@@ -202,7 +299,9 @@ function parseJobsFromContainer(rootEl) {
       }
 
       let url =
-        cardEl.querySelector("a[href]")?.getAttribute?.("href") || undefined;
+        cardEl.getAttribute?.("href") ||
+        cardEl.querySelector("a[href]")?.getAttribute?.("href") ||
+        undefined;
 
       if (url && !/careers\/(job|jobs|opening|apply|details)/i.test(url)) {
         url = undefined;
@@ -218,11 +317,14 @@ function parseJobsFromContainer(rootEl) {
 
       const location = cleanupLocation(extractLocationFromCard(cardEl, textAll));
       const type = extractTypeFromCard(cardEl, textAll);
+      const department =
+        extractDepartmentFromCard(cardEl, textAll) || departmentByCard.get(cardEl) || "";
 
       return {
         title: cleanup(title),
         location: cleanup(location)?.replace(/\s+/g, " "),
         type: cleanup(type)?.replace(/-/g, " ").toUpperCase(),
+        department: cleanup(department),
         url,
       };
     })
@@ -269,8 +371,34 @@ function groupByCard(anchors) {
 }
 
 function extractTitle(cardEl) {
-  const titleEl = cardEl.querySelector("h1, h2, h3, h4, .title, .job-title");
+  const titleEl = cardEl.querySelector(
+    ".kh-job-title, h1, h2, h3, h4, .title, .job-title"
+  );
   return titleEl ? titleEl.innerText || titleEl.textContent || "" : null;
+}
+
+function mapDepartmentsByHeading(rootEl) {
+  const map = new Map();
+  const headingSelector = 'h1[class*="kh-font-weight-600"], h2[class*="kh-font-weight-600"]';
+  const cardSelector = '.kh-job-card, [class*="kh-job-card"]';
+  const nodes = rootEl.querySelectorAll(`${headingSelector}, ${cardSelector}`);
+
+  let currentDepartment = "";
+  nodes.forEach((el) => {
+    if (el.matches(headingSelector)) {
+      const text = firstNonEmptyLine(
+        normalizeText(el.innerText || el.textContent || "")
+      ).replace(/\s*\d+\s*jobs?\s*$/i, "");
+      if (text) {
+        currentDepartment = text;
+      }
+      return;
+    }
+
+    map.set(el, currentDepartment);
+  });
+
+  return map;
 }
 
 function firstNonEmptyLine(text) {
@@ -330,6 +458,27 @@ function extractLocationFromCard(cardEl, textAll) {
   return (
     tokens.find((token) => lowerText.includes(token.toLowerCase())) || ""
   );
+}
+
+function extractDepartmentFromCard(cardEl, textAll) {
+  const text = (textAll || "").trim();
+  const explicitDepartment = text.match(/Department\s*:\s*([^\n\r]+)/i);
+  if (explicitDepartment?.[1]) {
+    return explicitDepartment[1].trim();
+  }
+
+  const deptNode = cardEl.querySelector(
+    '[data-department],[class*="department"],[class*="category"]'
+  );
+
+  if (deptNode) {
+    const deptText = (deptNode.innerText || deptNode.textContent || "").trim();
+    if (deptText) {
+      return deptText.replace(/^\s*department[:\s]*/i, "").trim();
+    }
+  }
+
+  return "";
 }
 
 function extractTypeFromCard(cardEl, textAll) {

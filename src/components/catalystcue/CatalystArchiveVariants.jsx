@@ -3,7 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
+import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
+
+function formatVolumeLabel(volume = "") {
+  return volume.replace("-", " ");
+}
+
+function parseDate(dateStr = "") {
+  const parts = dateStr.trim().split(" ");
+  return { month: parts[0] || "", year: parts[1] || "" };
+}
 
 function useGroupedVolumes(catalystCards) {
   const groupedByVolume = useMemo(() => {
@@ -25,8 +34,169 @@ function useGroupedVolumes(catalystCards) {
   return { groupedByVolume, sortedVolumeKeys };
 }
 
-function formatVolumeLabel(volume = "") {
-  return volume.replace("-", " ");
+function useFilteredCards(catalystCards, filters) {
+  return useMemo(() => {
+    const { search, volume, issue, year, month } = filters;
+    return catalystCards.filter((card) => {
+      if (search) {
+        const s = search.toLowerCase();
+        const hit =
+          (card.title || "").toLowerCase().includes(s) ||
+          (card.subTitle || "").toLowerCase().includes(s) ||
+          (card.Date || "").toLowerCase().includes(s) ||
+          (card.Volume || "").toLowerCase().includes(s);
+        if (!hit) return false;
+      }
+      if (volume && card.Volume !== volume) return false;
+      if (issue && card.subTitle !== issue) return false;
+      const { month: cardMonth, year: cardYear } = parseDate(card.Date);
+      if (year && cardYear !== year) return false;
+      if (month && cardMonth !== month) return false;
+      return true;
+    });
+  }, [catalystCards, filters]);
+}
+
+const MONTH_ORDER = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+const SELECT_CLASS =
+  "h-9 appearance-none cursor-pointer rounded-full border border-zinc-200 bg-white pl-3 pr-8 text-sm text-zinc-700 focus:border-[#BE0010] focus:outline-none focus:ring-1 focus:ring-[#BE0010]/30 transition";
+
+function FilterBar({ allCards, filters, setFilters }) {
+  const { search, volume, issue, year, month } = filters;
+
+  const volumes = useMemo(
+    () =>
+      [...new Set(allCards.map((c) => c.Volume))].sort((a, b) => {
+        const na = Number.parseInt(a.split("-")[1], 10);
+        const nb = Number.parseInt(b.split("-")[1], 10);
+        return na - nb;
+      }),
+    [allCards],
+  );
+
+  const issues = useMemo(
+    () =>
+      [...new Set(allCards.map((c) => c.subTitle))].sort((a, b) => {
+        const na = Number.parseInt(a.split(" ")[1], 10);
+        const nb = Number.parseInt(b.split(" ")[1], 10);
+        return na - nb;
+      }),
+    [allCards],
+  );
+
+  const years = useMemo(
+    () =>
+      [...new Set(allCards.map((c) => parseDate(c.Date).year))]
+        .filter(Boolean)
+        .sort(),
+    [allCards],
+  );
+
+  const months = useMemo(
+    () =>
+      [...new Set(allCards.map((c) => parseDate(c.Date).month))]
+        .filter(Boolean)
+        .sort((a, b) => MONTH_ORDER.indexOf(a) - MONTH_ORDER.indexOf(b)),
+    [allCards],
+  );
+
+  const hasFilters = search || volume || issue || year || month;
+  const clear = () =>
+    setFilters({ search: "", volume: "", issue: "", year: "", month: "" });
+
+  return (
+    <div className="mb-8 flex flex-wrap items-center gap-3">
+      <div className="relative min-w-[180px] flex-1">
+        <FiSearch className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
+        <input
+          className="h-9 w-full rounded-full border border-zinc-200 bg-white pl-9 pr-4 text-sm placeholder-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-1 focus:ring-[#BE0010]/30 transition"
+          onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
+          placeholder="Search issues…"
+          type="text"
+          value={search}
+        />
+      </div>
+
+      <div className="relative">
+        <select
+          className={SELECT_CLASS}
+          onChange={(e) => setFilters((f) => ({ ...f, volume: e.target.value }))}
+          value={volume}
+        >
+          <option value="">All Volumes</option>
+          {volumes.map((v) => (
+            <option key={v} value={v}>
+              {formatVolumeLabel(v)}
+            </option>
+          ))}
+        </select>
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+      </div>
+
+      <div className="relative">
+        <select
+          className={SELECT_CLASS}
+          onChange={(e) => setFilters((f) => ({ ...f, issue: e.target.value }))}
+          value={issue}
+        >
+          <option value="">All Issues</option>
+          {issues.map((i) => (
+            <option key={i} value={i}>
+              {i}
+            </option>
+          ))}
+        </select>
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+      </div>
+
+      <div className="relative">
+        <select
+          className={SELECT_CLASS}
+          onChange={(e) => setFilters((f) => ({ ...f, year: e.target.value }))}
+          value={year}
+        >
+          <option value="">All Years</option>
+          {years.map((y) => (
+            <option key={y} value={y}>
+              {y}
+            </option>
+          ))}
+        </select>
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+      </div>
+
+      <div className="relative">
+        <select
+          className={SELECT_CLASS}
+          onChange={(e) => setFilters((f) => ({ ...f, month: e.target.value }))}
+          value={month}
+        >
+          <option value="">All Months</option>
+          {months.map((m) => (
+            <option key={m} value={m}>
+              {m}
+            </option>
+          ))}
+        </select>
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+      </div>
+
+      {hasFilters ? (
+        <button
+          className="inline-flex h-9 items-center gap-1.5 rounded-full border border-zinc-200 px-3 text-sm text-zinc-500 transition hover:border-zinc-400 hover:text-zinc-700"
+          onClick={clear}
+          type="button"
+        >
+          <FiX className="size-3.5" />
+          Clear
+        </button>
+      ) : null}
+    </div>
+  );
 }
 
 function IssueCard({ card }) {
@@ -51,6 +221,15 @@ function IssueCard({ card }) {
   );
 }
 
+function EmptyState() {
+  return (
+    <div className="py-16 text-center text-sm text-zinc-500">
+      No issues match your filters.{" "}
+      <span className="text-zinc-400">Try clearing some filters.</span>
+    </div>
+  );
+}
+
 export function ArchiveTabbed({ catalystCards }) {
   const { groupedByVolume, sortedVolumeKeys } = useGroupedVolumes(catalystCards);
   const [activeVolume, setActiveVolume] = useState(sortedVolumeKeys[0]);
@@ -58,6 +237,8 @@ export function ArchiveTabbed({ catalystCards }) {
   const activeCards = useMemo(() => {
     return [...(groupedByVolume[activeVolume] || [])].sort((a, b) => b.id - a.id);
   }, [groupedByVolume, activeVolume]);
+
+  if (!catalystCards.length) return <EmptyState />;
 
   return (
     <div>
@@ -77,17 +258,23 @@ export function ArchiveTabbed({ catalystCards }) {
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap justify-center gap-8">
-        {activeCards.map((card) => (
-          <IssueCard card={card} key={card.slug} />
-        ))}
-      </div>
+      {activeCards.length ? (
+        <div className="flex flex-wrap justify-center gap-8">
+          {activeCards.map((card) => (
+            <IssueCard card={card} key={card.slug} />
+          ))}
+        </div>
+      ) : (
+        <EmptyState />
+      )}
     </div>
   );
 }
 
 export function ArchiveShelves({ catalystCards }) {
   const { groupedByVolume, sortedVolumeKeys } = useGroupedVolumes(catalystCards);
+
+  if (!catalystCards.length) return <EmptyState />;
 
   return (
     <div className="space-y-12">
@@ -117,6 +304,8 @@ export function ArchiveShelves({ catalystCards }) {
 export function ArchiveAccordion({ catalystCards }) {
   const { groupedByVolume, sortedVolumeKeys } = useGroupedVolumes(catalystCards);
   const [openVolume, setOpenVolume] = useState(sortedVolumeKeys[0]);
+
+  if (!catalystCards.length) return <EmptyState />;
 
   return (
     <div className="mx-auto max-w-5xl divide-y divide-zinc-200 border border-zinc-200">
@@ -156,8 +345,10 @@ export function ArchiveAccordion({ catalystCards }) {
 export function ArchiveTimeline({ catalystCards }) {
   const sorted = useMemo(
     () => [...catalystCards].sort((a, b) => b.id - a.id),
-    [catalystCards]
+    [catalystCards],
   );
+
+  if (!catalystCards.length) return <EmptyState />;
 
   return (
     <div className="mx-auto max-w-3xl">
@@ -199,10 +390,21 @@ const variants = [
 
 export default function CatalystArchiveSwitcher({ catalystCards }) {
   const [variant, setVariant] = useState(variants[0].key);
+  const [filters, setFilters] = useState({
+    search: "",
+    volume: "",
+    issue: "",
+    year: "",
+    month: "",
+  });
+
+  const filteredCards = useFilteredCards(catalystCards, filters);
   const Active = variants.find((item) => item.key === variant).Component;
 
   return (
     <div>
+      <FilterBar allCards={catalystCards} filters={filters} setFilters={setFilters} />
+
       <div className="mb-10 flex flex-wrap justify-center gap-2">
         {variants.map((item) => (
           <button
@@ -219,7 +421,8 @@ export default function CatalystArchiveSwitcher({ catalystCards }) {
           </button>
         ))}
       </div>
-      <Active catalystCards={catalystCards} />
+
+      <Active catalystCards={filteredCards} />
     </div>
   );
 }

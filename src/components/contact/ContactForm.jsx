@@ -177,7 +177,7 @@ export default function ContactForm() {
                     <Icon aria-hidden="true" />
                   </span>
                   <span>
-                    <span className="block text-sm font-semibold text-white/80">
+                    <span className="block text-base font-maxot font-semibold text-white/80">
                       {item.label}
                     </span>
                     {isMultiline ? (
@@ -221,28 +221,9 @@ export default function ContactForm() {
               className="object-cover"
               fill
               sizes="(min-width: 1024px) 420px, 100vw"
-              src="/assets/images/productImages/Bruker/hyperion-FTIR-microscope.jpeg"
+              src="/assets/our-story/InkarpBuilding.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#5f0008]/50 via-transparent to-transparent" />
-          </div>
-
-          <div className="relative mx-auto -mt-9 flex w-[min(15.5rem,90%)] items-center justify-center gap-3 rounded-md bg-white px-5 py-4 text-zinc-950 shadow-xl">
-            {Object.entries(socials).map(([name, href]) => {
-              const Icon = socialIcons[name];
-              return Icon ? (
-                <a
-                  aria-label={name}
-                  className="inline-flex size-9 items-center justify-center rounded-md text-sm transition hover:bg-[#BE0010] hover:text-white"
-                  href={href}
-                  key={name}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Icon aria-hidden="true" />
-                </a>
-              ) : null;
-            })}
-          </div>
+          </div>      
         </aside>
 
         <div className="py-2 lg:py-4">

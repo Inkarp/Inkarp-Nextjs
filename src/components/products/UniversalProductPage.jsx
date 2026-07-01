@@ -100,8 +100,6 @@ export default function UniversalProductPage({ product }) {
         <ConfigWizard data={product.configWizard} productName={product.name} />
       )}
 
-      
-
       {/* Workflow score comparison */}
       {product.workflowScore && (
         <WorkflowScore data={product.workflowScore} />

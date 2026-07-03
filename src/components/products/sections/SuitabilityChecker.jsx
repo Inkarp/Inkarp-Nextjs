@@ -46,7 +46,7 @@ export default function SuitabilityChecker({ data }) {
   }, [fields.length, selections]);
 
   return (
-    <section id="suitability" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:py-12 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id="suitability" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:py-12 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
       <div className="relative mx-auto max-w-7xl w-full">
         <SectionHeader
           number={data?.sectionNumber ?? '05'}
@@ -56,9 +56,9 @@ export default function SuitabilityChecker({ data }) {
         />
 
         <div className="relative mt-6 grid gap-5 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 shadow-sm">
-            <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
-              <div className="h-full rounded-full bg-[#BE0010] transition-all duration-300" style={{ width: `${completion}%` }} />
+          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm">
+            <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-parchment-alt dark:bg-zinc-800">
+              <div className="h-full rounded-full bg-red transition-all duration-300" style={{ width: `${completion}%` }} />
             </div>
 
             <div className="space-y-5">
@@ -74,8 +74,8 @@ export default function SuitabilityChecker({ data }) {
                         <button
                           className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
                             active
-                              ? 'border-black dark:border-zinc-100 bg-black dark:bg-zinc-100 text-white dark:text-zinc-900'
-                              : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400 hover:text-black dark:hover:text-zinc-100'
+                              ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
+                              : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400 hover:text-black dark:hover:text-zinc-100'
                           }`}
                           key={option.val}
                           onClick={() => select(field.key, option.val)}
@@ -91,7 +91,7 @@ export default function SuitabilityChecker({ data }) {
             </div>
 
             <button
-              className="mt-6 h-12 w-full rounded-full bg-[#D30013] px-6 text-left text-sm font-bold text-white transition hover:bg-[#BE0010] disabled:cursor-not-allowed disabled:opacity-45"
+              className="mt-6 h-12 w-full rounded-full bg-[#D30013] px-6 text-left text-sm font-bold text-parchment transition hover:bg-red disabled:cursor-not-allowed disabled:opacity-45"
               disabled={!allAnswered}
               onClick={handleCheck}
               type="button"
@@ -100,10 +100,10 @@ export default function SuitabilityChecker({ data }) {
             </button>
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 shadow-sm lg:flex lg:items-center">
+          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm lg:flex lg:items-center">
             {checked && result ? (
               <div className="w-full">
-                <div className={`mb-4 inline-flex size-11 items-center justify-center rounded-2xl border text-xl ${isCheckResult ? 'border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400' : 'border-[#BE0010]/15 bg-[#BE0010]/5 text-[#BE0010]'}`}>
+                <div className={`mb-4 inline-flex size-11 items-center justify-center rounded-2xl border text-xl ${isCheckResult ? 'border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400' : 'border-red/15 bg-red/5 text-red'}`}>
                   <FiCheck />
                 </div>
                 <h3 className="font-maxot text-xl font-bold leading-tight text-black dark:text-zinc-100">
@@ -115,14 +115,14 @@ export default function SuitabilityChecker({ data }) {
                 {result.tags?.length ? (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {result.tags.map((tag) => (
-                      <span className="rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-1.5 text-xs font-semibold text-black dark:text-zinc-100" key={tag}>
+                      <span className="rounded-full border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-1.5 text-xs font-semibold text-black dark:text-zinc-100" key={tag}>
                         {normaliseText(tag)}
                       </span>
                     ))}
                   </div>
                 ) : null}
                 <a
-                  className="mt-5 inline-flex h-10 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-white transition hover:bg-[#BE0010]"
+                  className="mt-5 inline-flex h-10 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-parchment transition hover:bg-red"
                   href="#booking"
                 >
                   Discuss your needs with us
@@ -131,7 +131,7 @@ export default function SuitabilityChecker({ data }) {
             ) : (
               <div className="mx-auto max-w-sm text-center">
                 <FiDroplet className="mx-auto mb-3 text-zinc-300 dark:text-zinc-600" size={44} />
-                <p className="text-sm text-zinc-400 dark:text-zinc-500">Select your needs and click check</p>
+                <p className="text-sm text-ink-soft dark:text-zinc-500">Select your needs and click check</p>
               </div>
             )}
           </div>

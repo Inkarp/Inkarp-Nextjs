@@ -172,8 +172,8 @@ export default function PromoPopup() {
 
     const className =
       variant === "primary"
-        ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full bg-[#BE0010] px-5 text-sm font-semibold text-white transition hover:bg-[#9f000d] sm:flex-none"
-        : "inline-flex h-10 flex-1 items-center justify-center rounded-full border border-zinc-200 bg-white px-5 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010]/35 hover:text-[#BE0010] sm:flex-none";
+        ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full bg-red px-5 text-sm font-semibold text-parchment transition hover:bg-[#9f000d] sm:flex-none"
+        : "inline-flex h-10 flex-1 items-center justify-center rounded-full border border-line-light bg-parchment px-5 text-sm font-semibold text-ink-soft transition hover:border-red/35 hover:text-red sm:flex-none";
 
     if (button.action === "close") {
       return (
@@ -199,21 +199,21 @@ export default function PromoPopup() {
           : "pointer-events-none translate-y-[140%] opacity-0"
       }`}
     >
-      <div className="overflow-hidden rounded-2xl border border-[#BE0010]/15 bg-white shadow-2xl shadow-zinc-950/20">
-        <div className="h-1 bg-[#BE0010]" />
+      <div className="overflow-hidden rounded-2xl border border-red/15 bg-parchment shadow-2xl shadow-zinc-950/20">
+        <div className="h-1 bg-red" />
         <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:p-5">
           <div className="flex items-start gap-3 sm:flex-1">
-            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-[#BE0010]/10 text-xl text-[#BE0010]">
+            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-red/10 text-xl text-red">
               {activeConfig.icon}
             </span>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-[#BE0010]">
+              <p className="text-xs font-bold uppercase tracking-wide text-red">
                 {activeConfig.eyebrow}
               </p>
               <h2 className="font-maxot mt-1 text-lg leading-tight text-zinc-950 sm:text-xl">
                 {activeConfig.title}
               </h2>
-              <p className="mt-1 text-sm leading-5 text-zinc-500">
+              <p className="mt-1 text-sm leading-5 text-ink-soft">
                 {activeConfig.description}
               </p>
             </div>
@@ -226,7 +226,7 @@ export default function PromoPopup() {
 
           <button
             aria-label="Close popup"
-            className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full text-zinc-400 transition hover:bg-zinc-100 hover:text-zinc-700"
+            className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full text-ink-soft transition hover:bg-parchment-alt hover:text-ink-soft"
             onClick={closePopup}
             type="button"
           >

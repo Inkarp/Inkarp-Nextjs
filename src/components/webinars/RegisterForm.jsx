@@ -59,10 +59,10 @@ function InputField({ name, label, value, onChange, required = false, type = "te
   return (
     <div className="group relative">
       {Icon ? (
-        <Icon className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-zinc-400 transition group-focus-within:text-[#BE0010]" />
+        <Icon className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-ink-soft transition group-focus-within:text-red" />
       ) : null}
       <input
-        className={`peer w-full rounded-md border border-zinc-200 bg-white pb-2 pt-5 text-sm text-zinc-900 outline-none transition-all duration-300 placeholder:text-transparent hover:border-zinc-300 focus:border-[#BE0010] focus:ring-2 focus:ring-[#BE0010]/15 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 ${
+        className={`peer w-full rounded-md border border-line-light bg-parchment pb-2 pt-5 text-sm text-ink outline-none transition-all duration-300 placeholder:text-transparent hover:border-zinc-300 focus:border-red focus:ring-2 focus:ring-red/15 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 ${
           Icon ? "pl-11 pr-4" : "px-4"
         }`}
         name={name}
@@ -73,7 +73,7 @@ function InputField({ name, label, value, onChange, required = false, type = "te
         value={value}
       />
       <label
-        className={`absolute top-2 text-xs text-zinc-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-zinc-400 peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#BE0010] dark:text-zinc-400 ${
+        className={`absolute top-2 text-xs text-ink-soft transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-ink-soft peer-focus:top-2 peer-focus:text-xs peer-focus:text-red dark:text-zinc-400 ${
           Icon ? "left-11" : "left-4"
         }`}
       >
@@ -227,12 +227,12 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
       ref={backdropRef}
     >
       <div className="flex min-h-screen items-center justify-center p-3 sm:p-5">
-        <div className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-md border border-white/60 bg-white shadow-2xl dark:border-zinc-700 dark:bg-zinc-900">
-          <div className="relative overflow-hidden border-b border-zinc-200 bg-zinc-100 px-5 py-5 sm:px-7 dark:border-zinc-700 dark:bg-zinc-800">
-            <div className="absolute inset-x-0 top-0 h-1 bg-[#BE0010]" />
+        <div className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-md border border-white/60 bg-parchment shadow-2xl dark:border-zinc-700 dark:bg-zinc-900">
+          <div className="relative overflow-hidden border-b border-line-light bg-parchment-alt px-5 py-5 sm:px-7 dark:border-zinc-700 dark:bg-zinc-800">
+            <div className="absolute inset-x-0 top-0 h-1 bg-red" />
             <button
               aria-label="Close registration form"
-              className="absolute right-4 top-4 grid size-9 place-items-center rounded-md border border-zinc-200 bg-white text-zinc-600 shadow-sm transition hover:border-[#BE0010] hover:text-[#BE0010] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
+              className="absolute right-4 top-4 grid size-9 place-items-center rounded-md border border-line-light bg-parchment text-ink-soft shadow-sm transition hover:border-red hover:text-red dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
               onClick={onClose}
               type="button"
             >
@@ -240,13 +240,13 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
             </button>
 
             <div className="pr-11">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-normal text-[#BE0010]">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-normal text-red">
                 Reserve Your Seat
               </p>
               <h2 className="font-maxot text-2xl leading-tight text-zinc-950 sm:text-3xl dark:text-zinc-100">
                 Webinar Registration
               </h2>
-              <p className="mt-2 max-w-xl text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+              <p className="mt-2 max-w-xl text-sm leading-6 text-ink-soft dark:text-zinc-400">
                 Share a few details and our team will send the joining information to your inbox.
               </p>
             </div>
@@ -267,18 +267,18 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
             </div>
           ) : null}
 
-          <div className="flex-1 overflow-y-auto bg-white dark:bg-zinc-900">
+          <div className="flex-1 overflow-y-auto bg-parchment dark:bg-zinc-900">
             <form
               className="grid grid-cols-1 gap-4 px-5 py-5 sm:px-7 md:grid-cols-2"
               onSubmit={handleSubmit}
             >
-              <div className="rounded-md border border-[#BE0010]/15 bg-[#BE0010]/5 px-4 py-4 md:col-span-2 dark:border-[#BE0010]/30 dark:bg-[#BE0010]/10">
+              <div className="rounded-md border border-red/15 bg-red/5 px-4 py-4 md:col-span-2 dark:border-[#BE0010]/30 dark:bg-[#BE0010]/10">
                 <div className="flex items-start gap-3">
-                  <div className="grid size-10 shrink-0 place-items-center rounded-md bg-white text-[#BE0010] shadow-sm dark:bg-zinc-900">
+                  <div className="grid size-10 shrink-0 place-items-center rounded-md bg-parchment text-red shadow-sm dark:bg-zinc-900">
                     <FiCalendar size={18} />
                   </div>
                   <div>
-                    <p className="mb-1 text-xs font-semibold uppercase tracking-normal text-[#BE0010]">
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-normal text-red">
                       Selected Webinar
                     </p>
                     <p className="font-maxot text-base leading-snug text-zinc-950 dark:text-zinc-100">
@@ -288,7 +288,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
                 </div>
               </div>
 
-              <p className="text-xs font-semibold uppercase tracking-normal text-zinc-500 md:col-span-2 dark:text-zinc-400">
+              <p className="text-xs font-semibold uppercase tracking-normal text-ink-soft md:col-span-2 dark:text-zinc-400">
                 Contact Details
               </p>
               {contactFields.map(([field, label, type, icon]) => (
@@ -304,7 +304,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
                 />
               ))}
 
-              <p className="mt-1 text-xs font-semibold uppercase tracking-normal text-zinc-500 md:col-span-2 dark:text-zinc-400">
+              <p className="mt-1 text-xs font-semibold uppercase tracking-normal text-ink-soft md:col-span-2 dark:text-zinc-400">
                 Professional Information
               </p>
               {profileFields.map(([field, label, icon]) => (
@@ -320,7 +320,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
               ))}
 
               <button
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-[#BE0010] px-5 py-3 text-sm font-semibold text-white shadow-md shadow-[#BE0010]/15 transition hover:bg-[#E63946] disabled:cursor-not-allowed disabled:opacity-70 md:col-span-2"
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-red px-5 py-3 text-sm font-semibold text-parchment shadow-md shadow-red/15 transition hover:bg-[#E63946] disabled:cursor-not-allowed disabled:opacity-70 md:col-span-2"
                 disabled={isSubmitting}
                 type="submit"
               >

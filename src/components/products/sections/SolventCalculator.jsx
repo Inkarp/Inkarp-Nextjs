@@ -17,10 +17,10 @@ function RecoverySlider({ label, value, display, min, max, step = 1, onChange })
     <div>
       <div className="mb-3 flex items-center justify-between gap-4">
         <label className="text-sm font-semibold text-black dark:text-white">{label}</label>
-        <span className="min-w-24 text-right text-base font-bold text-[#BE0010]">{display}</span>
+        <span className="min-w-24 text-right text-base font-bold text-red">{display}</span>
       </div>
       <input
-        className="h-1 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-[#BE0010] dark:bg-zinc-700"
+        className="h-1 w-full cursor-pointer appearance-none rounded-full bg-zinc-200 accent-red dark:bg-zinc-700"
         max={max}
         min={min}
         onChange={(event) => {
@@ -106,7 +106,7 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
   ];
 
   return (
-    <section id="calculator" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-0 dark:border-zinc-800 dark:bg-zinc-950 lg:h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id="calculator" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-0 dark:border-zinc-800 dark:bg-zinc-950 lg:h-screen lg:flex lg:flex-col lg:justify-center">
       <div className="relative w-full">
         <SectionHeader
           number={calculatorData?.sectionNumber ?? '04'}
@@ -116,7 +116,7 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
         />
 
         <div className="relative mt-6 grid gap-5 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="rounded-2xl border border-line-light bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <div>
               <p className="mb-3 text-sm font-semibold text-black dark:text-white">Solvent</p>
               <div className="flex flex-wrap gap-2">
@@ -124,10 +124,10 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
                   <button
                     className={`min-w-24 rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
                       item.rate === null
-                        ? 'cursor-not-allowed border-zinc-100 bg-zinc-50 text-black/30 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white/25'
+                        ? 'cursor-not-allowed border-line-light bg-parchment-alt text-black/30 dark:border-zinc-800 dark:bg-zinc-900 dark:text-white/25'
                         : selIdx === index
-                        ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
-                        : 'border-zinc-200 bg-white text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:border-zinc-500'
+                        ? 'border-black bg-navy text-parchment dark:border-white dark:bg-white dark:text-black'
+                        : 'border-line-light bg-parchment text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:hover:border-zinc-500'
                     }`}
                     disabled={item.rate === null}
                     key={item.name}
@@ -181,26 +181,26 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
           </div>
 
           <div className="space-y-3">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="rounded-2xl border border-line-light bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
               {resultRows.map((row, index, rows) => (
-                <div className={`flex items-center justify-between gap-6 py-3 ${index < rows.length - 1 ? 'border-b border-zinc-100 dark:border-zinc-800' : ''}`} key={row.label}>
+                <div className={`flex items-center justify-between gap-6 py-3 ${index < rows.length - 1 ? 'border-b border-line-light dark:border-zinc-800' : ''}`} key={row.label}>
                   <span className="text-sm text-black dark:text-white">{row.label}</span>
-                  <span className={`text-right font-maxot text-base font-bold ${row.accent ? 'text-[#BE0010]' : 'text-black dark:text-white'}`}>{row.value}</span>
+                  <span className={`text-right font-maxot text-base font-bold ${row.accent ? 'text-red' : 'text-black dark:text-white'}`}>{row.value}</span>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-2xl bg-[#D30013] px-6 py-6 text-center text-white shadow-sm">
+            <div className="rounded-2xl bg-[#D30013] px-6 py-6 text-center text-parchment shadow-sm">
               <div className="font-maxot text-5xl font-bold leading-none sm:text-6xl">
                 {Math.round(annualRecoveredLitres).toLocaleString('en-IN')}
               </div>
-              <p className="mt-2 text-sm font-semibold text-white/90">
+              <p className="mt-2 text-sm font-semibold text-parchment/90">
                 {calculatorData?.heroLabel ?? ''}
               </p>
             </div>
 
             <button
-              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-white px-6 text-sm font-semibold text-black transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-white dark:bg-zinc-900 dark:text-white"
+              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-zinc-900 bg-parchment px-6 text-sm font-semibold text-black transition hover:border-red hover:bg-red hover:text-parchment dark:border-white dark:bg-zinc-900 dark:text-white"
               onClick={emailResults}
               type="button"
             >

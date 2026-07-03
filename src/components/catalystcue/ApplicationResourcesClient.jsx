@@ -26,20 +26,20 @@ function ResourceCard({ resource }) {
   const whatsappHref = `https://wa.me/?text=${encodeURIComponent(`${shareText}\n${absoluteUrl}`)}`;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm transition hover:border-[#BE0010]/40 hover:shadow-md">
+    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-line-light bg-parchment shadow-sm transition hover:border-red/40 hover:shadow-md">
       {/* PDF preview */}
-      <div className="relative aspect-[205/270] w-full overflow-hidden border-b border-zinc-100 bg-zinc-50">
+      <div className="relative aspect-[205/270] w-full overflow-hidden border-b border-line-light bg-parchment-alt">
         {!previewLoaded && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-zinc-50">
-            <FiFileText className="h-8 w-8 text-[#BE0010]" />
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-parchment-alt">
+            <FiFileText className="h-8 w-8 text-red" />
             <div className="h-1.5 w-28 overflow-hidden rounded-full bg-zinc-200">
-              <div className="h-full w-1/2 animate-pulse rounded-full bg-[#BE0010]/50" />
+              <div className="h-full w-1/2 animate-pulse rounded-full bg-red/50" />
             </div>
-            <span className="text-xs font-medium text-zinc-400">Loading preview…</span>
+            <span className="text-xs font-medium text-ink-soft">Loading preview…</span>
           </div>
         )}
         <iframe
-          className={`pointer-events-none h-full w-[calc(100%+16px)] max-w-none border-0 bg-white transition-opacity duration-300 ${
+          className={`pointer-events-none h-full w-[calc(100%+16px)] max-w-none border-0 bg-parchment transition-opacity duration-300 ${
             previewLoaded ? "opacity-100" : "opacity-0"
           }`}
           loading="lazy"
@@ -53,10 +53,10 @@ function ResourceCard({ resource }) {
 
       {/* Card body */}
       <div className="flex flex-1 flex-col p-5">
-        <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-zinc-400">
+        <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-soft">
           {resource.group}
         </p>
-        <h2 className="font-maxot text-base leading-snug text-zinc-900">
+        <h2 className="font-maxot text-base leading-snug text-ink">
           {resource.title}
         </h2>
 
@@ -64,7 +64,7 @@ function ResourceCard({ resource }) {
         <div className="mt-auto flex flex-wrap gap-2 pt-5">
           <button
             aria-expanded={shareOpen}
-            className="inline-flex items-center gap-2 rounded-lg bg-[#BE0010] px-3 py-2 text-sm font-semibold text-white transition hover:bg-[#9a000d]"
+            className="inline-flex items-center gap-2 rounded-lg bg-red px-3 py-2 text-sm font-semibold text-parchment transition hover:bg-[#9a000d]"
             onClick={() => setShareOpen((v) => !v)}
             type="button"
           >
@@ -72,7 +72,7 @@ function ResourceCard({ resource }) {
             {shareOpen ? "Close" : "Share"}
           </button>
           <a
-            className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 px-3 py-2 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+            className="inline-flex items-center gap-2 rounded-lg border border-line-light px-3 py-2 text-sm font-semibold text-ink-soft transition hover:border-red hover:text-red"
             download
             href={resource.url}
           >
@@ -84,7 +84,7 @@ function ResourceCard({ resource }) {
         {shareOpen && (
           <div className="mt-3 flex flex-wrap gap-2">
             <a
-              className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 px-3 py-2 text-sm font-semibold text-zinc-700 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+              className="inline-flex items-center gap-2 rounded-lg border border-line-light px-3 py-2 text-sm font-semibold text-ink-soft transition hover:border-red hover:text-red"
               href={emailHref}
             >
               <FiMail size={15} />
@@ -127,18 +127,18 @@ export default function ApplicationResourcesClient() {
   }, [searchTerm, selectedVolume, selectedIssue]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-parchment">
       {/* Page header + filters */}
-      <section className="border-b border-zinc-200 bg-zinc-50 px-4 py-10 sm:px-6 lg:px-8">
+      <section className="border-b border-line-light bg-parchment-alt px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 text-center">
-            <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
+            <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">
               CatalystCue
             </p>
-            <h1 className="font-maxot mt-2 text-3xl text-zinc-900 sm:text-4xl">
+            <h1 className="font-maxot mt-2 text-3xl text-ink sm:text-4xl">
               Application Resources
             </h1>
-            <p className="mt-3 text-base leading-7 text-zinc-600">
+            <p className="mt-3 text-base leading-7 text-ink-soft">
               Browse application notes and downloadable PDFs from Inkarp's application library.
             </p>
           </div>
@@ -146,9 +146,9 @@ export default function ApplicationResourcesClient() {
           {/* Search + filters */}
           <div className="grid gap-3 lg:grid-cols-[1fr_200px_200px]">
             <div className="relative flex items-center">
-              <FiSearch className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+              <FiSearch className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft" />
               <input
-                className="w-full rounded-lg border border-zinc-300 bg-white py-3 pl-10 pr-4 text-sm text-zinc-900 outline-none transition focus:border-[#BE0010] focus:ring-2 focus:ring-[#BE0010]/20"
+                className="w-full rounded-lg border border-zinc-300 bg-parchment py-3 pl-10 pr-4 text-sm text-ink outline-none transition focus:border-red focus:ring-2 focus:ring-red/20"
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search resources…"
                 type="search"
@@ -158,7 +158,7 @@ export default function ApplicationResourcesClient() {
 
             <select
               aria-label="Filter by volume"
-              className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none transition focus:border-[#BE0010] focus:ring-2 focus:ring-[#BE0010]/20"
+              className="w-full rounded-lg border border-zinc-300 bg-parchment px-4 py-3 text-sm text-ink outline-none transition focus:border-red focus:ring-2 focus:ring-red/20"
               onChange={(e) => {
                 setSelectedVolume(e.target.value);
                 setSelectedIssue("");
@@ -175,7 +175,7 @@ export default function ApplicationResourcesClient() {
 
             <select
               aria-label="Filter by issue"
-              className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none transition focus:border-[#BE0010] focus:ring-2 focus:ring-[#BE0010]/20"
+              className="w-full rounded-lg border border-zinc-300 bg-parchment px-4 py-3 text-sm text-ink outline-none transition focus:border-red focus:ring-2 focus:ring-red/20"
               onChange={(e) => setSelectedIssue(e.target.value)}
               value={selectedIssue}
             >
@@ -192,7 +192,7 @@ export default function ApplicationResourcesClient() {
 
       {/* Grid */}
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <p className="mb-6 text-sm text-zinc-500">
+        <p className="mb-6 text-sm text-ink-soft">
           Showing {filtered.length} of {applicationResources.length} resources
         </p>
 
@@ -203,9 +203,9 @@ export default function ApplicationResourcesClient() {
             ))}
           </div>
         ) : (
-          <div className="rounded-xl border border-dashed border-zinc-300 bg-zinc-50 p-12 text-center">
-            <FiFileText className="mx-auto mb-3 h-8 w-8 text-zinc-400" />
-            <p className="text-sm text-zinc-500">
+          <div className="rounded-xl border border-dashed border-zinc-300 bg-parchment-alt p-12 text-center">
+            <FiFileText className="mx-auto mb-3 h-8 w-8 text-ink-soft" />
+            <p className="text-sm text-ink-soft">
               No resources match your search.
             </p>
           </div>

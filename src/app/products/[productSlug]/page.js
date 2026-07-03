@@ -34,20 +34,20 @@ export default async function ProductPage({ params }) {
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
 
   return (
-    <main className="bg-white dark:bg-zinc-950">
+    <main className="bg-parchment dark:bg-zinc-950">
       {/* Breadcrumb */}
-      <nav className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm text-zinc-500 dark:text-zinc-400 sm:px-6 lg:px-8">
+      <nav className="border-b border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-sm text-ink-soft dark:text-zinc-400 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center gap-2">
-          <Link className="inline-flex size-8 items-center justify-center rounded-full border border-[#BE0010]/15 bg-[#fff3f4] text-[#BE0010] transition hover:border-[#BE0010]/35 hover:bg-white" href="/"><FaHome /></Link>
-          <FiChevronRight className="text-zinc-400 dark:text-zinc-500" />
-          <Link className="transition hover:text-[#BE0010]" href="/products">Products</Link>
-          <FiChevronRight className="text-zinc-400 dark:text-zinc-500" />
-          <span className="truncate text-zinc-900 dark:text-zinc-100">{product.name}</span>
+          <Link className="inline-flex size-8 items-center justify-center rounded-full border border-red/15 bg-[#fff3f4] text-red transition hover:border-red/35 hover:bg-parchment" href="/"><FaHome /></Link>
+          <FiChevronRight className="text-ink-soft dark:text-zinc-500" />
+          <Link className="transition hover:text-red" href="/products">Products</Link>
+          <FiChevronRight className="text-ink-soft dark:text-zinc-500" />
+          <span className="truncate text-ink dark:text-zinc-100">{product.name}</span>
         </div>
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-[#BE0010]/15 bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8 dark:bg-zinc-950">
+      <section className="relative overflow-hidden border-b border-red/15 bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8 dark:bg-zinc-950">
         <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
 
           {/* Left */}
@@ -55,7 +55,7 @@ export default async function ProductPage({ params }) {
             {/* Pill badges row */}
             <div className="mb-4 flex flex-wrap items-center gap-2">
               {/* Principal logo pill */}
-              <div className="inline-flex items-center rounded-full border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-1.5">
+              <div className="inline-flex items-center rounded-full border border-line-light dark:border-zinc-700 bg-parchment dark:bg-zinc-900 px-3 py-1.5">
                 {product.principalImage ? (
                   <Image
                     alt={product.principalName}
@@ -65,7 +65,7 @@ export default async function ProductPage({ params }) {
                     width={80}
                   />
                 ) : (
-                  <span className="max-w-[180px] truncate text-xs font-semibold text-zinc-700 dark:text-zinc-200">
+                  <span className="max-w-[180px] truncate text-xs font-semibold text-ink-soft dark:text-zinc-200">
                     {product.principalName}
                   </span>
                 )}
@@ -73,14 +73,14 @@ export default async function ProductPage({ params }) {
 
               {/* Category pill */}
               {product.category && (
-                <span className="inline-flex items-center rounded-full bg-[#BE0010] px-3 py-1.5 text-xs font-semibold text-white">
+                <span className="inline-flex items-center rounded-full bg-red px-3 py-1.5 text-xs font-semibold text-parchment">
                   {product.category}
                 </span>
               )}
 
               {/* Country pill */}
               {product.countryOfOrigin && (
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#BE0010]/20 bg-white px-3 py-1.5 text-xs font-semibold text-[#BE0010]">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-red/20 bg-parchment px-3 py-1.5 text-xs font-semibold text-red">
                   <FiGlobe className="h-3.5 w-3.5" />
                   Made in {product.countryOfOrigin}
                 </span>
@@ -94,12 +94,12 @@ export default async function ProductPage({ params }) {
 
              {/* Distributor note from JSON, omitted if not set */}
             {product.distributorNote && (
-              <p className="mt-3 text-lg font-medium text-[#BE0010]">
+              <p className="mt-3 text-lg font-medium text-red">
                 {product.distributorNote}
               </p>
             )}
             </div>
-            <p className="mt-5 max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
+            <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft dark:text-zinc-400">
               {product.longForm?.heroLead ?? product.overview}
             </p>
 
@@ -107,13 +107,13 @@ export default async function ProductPage({ params }) {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href={isRichPage ? "#booking" : "/contact"}
-                className="inline-flex h-11 items-center justify-center rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
+                className="inline-flex h-11 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
               >
                 Request Quote
               </Link>
               <Link
                 href={isRichPage ? "#booking" : "/contact"}
-                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-[#BE0010]/25 bg-white dark:bg-zinc-900 px-6 text-sm font-semibold text-[#BE0010] transition hover:border-[#BE0010]/40 hover:bg-[#BE0010]/5"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-red/25 bg-parchment dark:bg-zinc-900 px-6 text-sm font-semibold text-red transition hover:border-red/40 hover:bg-red/5"
               >
                 <FiMail className="h-4 w-4" />
                 Enquiry Now
@@ -123,7 +123,7 @@ export default async function ProductPage({ params }) {
 
           {/* Right: product image */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl border border-[#BE0010]/15 bg-white dark:bg-zinc-900 shadow-2xl shadow-[#BE0010]/15">
+            <div className="overflow-hidden rounded-2xl border border-red/15 bg-parchment dark:bg-zinc-900 shadow-2xl shadow-[#BE0010]/15">
               {product.image ? (
                 <Image
                   alt={product.name}
@@ -134,13 +134,13 @@ export default async function ProductPage({ params }) {
                   priority
                 />
               ) : (
-                <div className="flex aspect-square w-full items-center justify-center text-sm text-zinc-400 dark:text-zinc-500">
+                <div className="flex aspect-square w-full items-center justify-center text-sm text-ink-soft dark:text-zinc-500">
                   Product image coming soon
                 </div>
               )}
             </div>
             {/* Caption */}
-            <p className="mt-2 text-center text-xs text-zinc-500 dark:text-zinc-400">
+            <p className="mt-2 text-center text-xs text-ink-soft dark:text-zinc-400">
               {product.imageAlt ?? `${product.principalName} ${product.name}`}
             </p>
           </div>
@@ -162,16 +162,16 @@ export default async function ProductPage({ params }) {
 
       {/* Related products */}
       {relatedProducts.length > 0 && (
-        <section className="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
+        <section className="border-t border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="font-maxot text-2xl font-bold text-zinc-950 dark:text-zinc-100">Related Products</h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {relatedProducts.map((item) => (
                 <article
                   key={`${item.principalSlug}-${item.slug}`}
-                  className="group flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 shadow-sm transition hover:-translate-y-1 hover:border-[#BE0010]/40 hover:shadow-lg"
+                  className="group flex flex-col rounded-xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-4 shadow-sm transition hover:-translate-y-1 hover:border-red/40 hover:shadow-lg"
                 >
-                  <div className="aspect-square w-full overflow-hidden rounded-lg bg-zinc-50 dark:bg-zinc-800">
+                  <div className="aspect-square w-full overflow-hidden rounded-lg bg-parchment-alt dark:bg-zinc-800">
                     {item.image ? (
                       <Image
                         alt={item.name}
@@ -181,12 +181,12 @@ export default async function ProductPage({ params }) {
                         width={300}
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center text-xs text-zinc-400 dark:text-zinc-500">No image</div>
+                      <div className="flex h-full w-full items-center justify-center text-xs text-ink-soft dark:text-zinc-500">No image</div>
                     )}
                   </div>
                   <h3 className="font-maxot mt-3 text-sm font-bold text-zinc-950 dark:text-zinc-100">{item.name}</h3>
                   <Link
-                    className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-[#BE0010]/20 bg-[#fff3f4] text-xs font-semibold text-[#BE0010] transition hover:border-[#BE0010]/40 hover:bg-white"
+                    className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-red/20 bg-[#fff3f4] text-xs font-semibold text-red transition hover:border-red/40 hover:bg-parchment"
                     href={item.href}
                   >
                     View details <FiArrowRight />
@@ -209,16 +209,16 @@ function LegacyProductContent({ product }) {
   return (
     <>
       {product.technicalSpecs?.length > 0 && (
-        <section className="border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
+        <section className="border-b border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">Specifications</p>
+            <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">Specifications</p>
             <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">Technical specifications</h2>
-            <div className="mt-6 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm">
-              <dl className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            <div className="mt-6 overflow-hidden rounded-xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 shadow-sm">
+              <dl className="divide-y divide-line-light dark:divide-zinc-800">
                 {product.technicalSpecs.map((row) => (
                   <div key={row.label} className="grid gap-2 px-5 py-3 text-sm sm:grid-cols-[0.38fr_0.62fr]">
-                    <dt className="font-semibold text-zinc-500 dark:text-zinc-400">{row.label}</dt>
-                    <dd className="text-zinc-900 dark:text-zinc-100">{row.value}</dd>
+                    <dt className="font-semibold text-ink-soft dark:text-zinc-400">{row.label}</dt>
+                    <dd className="text-ink dark:text-zinc-100">{row.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -228,24 +228,24 @@ function LegacyProductContent({ product }) {
       )}
 
       {lf.sections?.map((section, i) => (
-        <section key={section.title} className={`px-4 py-14 sm:px-6 lg:px-8 ${i % 2 === 1 ? 'bg-zinc-50 dark:bg-zinc-950' : 'bg-white dark:bg-zinc-900'}`}>
+        <section key={section.title} className={`px-4 py-14 sm:px-6 lg:px-8 ${i % 2 === 1 ? 'bg-parchment-alt dark:bg-zinc-950' : 'bg-parchment dark:bg-zinc-900'}`}>
           <div className="mx-auto max-w-7xl">
             {section.eyebrow && (
-              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{section.eyebrow}</p>
+              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">{section.eyebrow}</p>
             )}
             <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">{section.title}</h2>
             {section.description && (
-              <p className="mt-3 mb-7 max-w-3xl text-sm leading-7 text-zinc-500 dark:text-zinc-400">{section.description}</p>
+              <p className="mt-3 mb-7 max-w-3xl text-sm leading-7 text-ink-soft dark:text-zinc-400">{section.description}</p>
             )}
             {section.body?.map((p, pi) => (
-              <p key={pi} className="mb-4 max-w-4xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">{p}</p>
+              <p key={pi} className="mb-4 max-w-4xl text-sm leading-7 text-ink-soft dark:text-zinc-400">{p}</p>
             ))}
             {section.cards?.length > 0 && (
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {section.cards.map((c) => (
-                  <div key={c.title} className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 shadow-sm">
+                  <div key={c.title} className="rounded-xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm">
                     <h3 className="font-maxot text-base text-zinc-950 dark:text-zinc-100">{c.title}</h3>
-                    {c.description && <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{c.description}</p>}
+                    {c.description && <p className="mt-2 text-sm leading-6 text-ink-soft dark:text-zinc-400">{c.description}</p>}
                   </div>
                 ))}
               </div>
@@ -256,15 +256,15 @@ function LegacyProductContent({ product }) {
 
       {lf.cta && (
         <section className="bg-[#fff3f4] dark:bg-zinc-900 px-4 py-14 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-[#BE0010]/15 dark:border-[#BE0010]/30 bg-white dark:bg-zinc-950 p-6 shadow-xl shadow-[#BE0010]/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-red/15 dark:border-[#BE0010]/30 bg-parchment dark:bg-zinc-950 p-6 shadow-xl shadow-[#BE0010]/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{lf.cta.eyebrow}</p>
+              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">{lf.cta.eyebrow}</p>
               <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">{lf.cta.title}</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">{lf.cta.description}</p>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft dark:text-zinc-400">{lf.cta.description}</p>
             </div>
             <Link
               href={lf.cta.href ?? '/contact'}
-              className="inline-flex h-12 items-center justify-center rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
             >
               {lf.cta.label} <FiArrowRight className="ml-2" />
             </Link>

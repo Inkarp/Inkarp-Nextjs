@@ -39,12 +39,12 @@ export default function AboutUs() {
             />
           </div>
 
-          <div className="absolute -bottom-6 left-1/2 flex w-[92%] -translate-x-1/2 items-center gap-4 rounded-xl border border-zinc-100 bg-white p-4 shadow-xl sm:w-auto sm:max-w-xs">
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#BE0010] to-[#E63946] text-white">
+          <div className="absolute -bottom-6 left-1/2 flex w-[92%] -translate-x-1/2 items-center gap-4 rounded-xl border border-line-light bg-parchment p-4 shadow-xl sm:w-auto sm:max-w-xs">
+            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-red to-[#E63946] text-parchment">
               <FiPhoneCall aria-hidden="true" className="size-5" />
             </span>
             <div className="min-w-0">
-              <p className="text-xs uppercase tracking-wide text-zinc-500">
+              <p className="text-xs uppercase tracking-wide text-ink-soft">
                 Call us anytime
               </p>
               <a
@@ -58,13 +58,13 @@ export default function AboutUs() {
         </div>
 
         <div>
-          <span className="rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-wide text-zinc-800">
+          <span className="rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs font-semibold uppercase tracking-wide text-ink">
             About Us
           </span>
-          <h2 className="font-maxot mt-4 text-2xl leading-tight text-[#BE0010] sm:text-3xl">
+          <h2 className="font-maxot mt-4 text-2xl leading-tight text-red sm:text-3xl">
             Diverse Technologies with Global Impact
           </h2>
-          <p className="mt-4 text-sm leading-7 text-zinc-600 sm:text-base">
+          <p className="mt-4 text-sm leading-7 text-ink-soft sm:text-base">
             With over four decades of experience, we partner with global
             leaders to empower research, diagnostics, and industry through
             reliable, precise instrumentation and personalized support.
@@ -76,13 +76,13 @@ export default function AboutUs() {
 
               return (
                 <div key={feature.title}>
-                  <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-[#BE0010]/10 text-[#BE0010]">
+                  <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-red/10 text-red">
                     <Icon aria-hidden="true" className="size-5" />
                   </div>
                   <h4 className="font-maxot text-base text-zinc-950">
                     {feature.title}
                   </h4>
-                  <p className="mt-2 text-sm leading-6 text-zinc-600">
+                  <p className="mt-2 text-sm leading-6 text-ink-soft">
                     {feature.body}
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export default function AboutUs() {
 
           <ul className="mt-8 space-y-3">
             {checklist.map((item) => (
-              <li className="flex items-start gap-2 text-sm text-zinc-700" key={item}>
+              <li className="flex items-start gap-2 text-sm text-ink-soft" key={item}>
                 <FiCheckCircle
                   aria-hidden="true"
                   className="mt-0.5 size-4 shrink-0 text-[#E63946]"
@@ -103,7 +103,7 @@ export default function AboutUs() {
           </ul>
 
           <Link
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#BE0010] to-[#E63946] px-6 py-3 text-sm font-semibold text-white shadow hover:opacity-95"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red to-[#E63946] px-6 py-3 text-sm font-semibold text-parchment shadow hover:opacity-95"
             href="/our-story"
           >
             Discover More

@@ -129,22 +129,22 @@ export default function Header() {
         }`}
     >
       <div
-        className={`overflow-hidden bg-black text-white transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
+        className={`overflow-hidden bg-navy text-parchment transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
             ? "max-h-40 opacity-100"
             : "max-h-0 opacity-0"
           }`}
       >
         <div className="mx-auto flex max-w-[1480px] flex-col gap-3 px-4 py-3 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/80">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-parchment/80">
             <Link
-              className="inline-flex items-center gap-2 transition hover:text-[#BE0010] hover:underline "
+              className="inline-flex items-center gap-2 transition hover:text-red hover:underline "
               href={`mailto:${contact.email}`}
             >
-              <FiMail className="text-[#BE0010]" />
+              <FiMail className="text-red" />
               {contact.email}
             </Link>
             <span className="hidden items-center gap-2 xl:inline-flex">
-              <FiPhoneCall className="text-[#BE0010]" />
+              <FiPhoneCall className="text-red" />
               {contact.phone}
             </span>
           </div>
@@ -153,7 +153,7 @@ export default function Header() {
             <nav aria-label="Quick links" className="flex items-center gap-3">
               {topLinks.map((link) => (
                 <Link
-                  className="text-white/80 transition hover:text-[#BE0010]"
+                  className="text-parchment/80 transition hover:text-red"
                   href={link.href}
                   key={link.href}
                 >
@@ -161,7 +161,7 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <div className="hidden h-5 w-px bg-white/20 sm:block" />
+            <div className="hidden h-5 w-px bg-parchment/20 sm:block" />
             <div className="flex items-center gap-3">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
@@ -169,7 +169,7 @@ export default function Header() {
                 return (
                   <Link
                     aria-label={item.label}
-                    className="text-white text-xl transition hover:text-[#BE0010]"
+                    className="text-parchment text-xl transition hover:text-red"
                     href={item.href}
                     key={item.label}
                     rel="noreferrer"
@@ -184,7 +184,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-zinc-950">
+      <div className="bg-parchment dark:bg-zinc-950">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="relative flex min-h-20 items-center gap-4">
             <Link
@@ -215,15 +215,15 @@ export default function Header() {
                     <li className="group relative" key={item.label}>
                       <Link
                         className={`flex h-11 items-center gap-1 px-3 text-base  transition ${active
-                            ? "text-[#BE0010]"
-                            : "text-zinc-600 hover:text-[#BE0010] dark:text-zinc-300"
+                            ? "text-red"
+                            : "text-ink-soft hover:text-red dark:text-zinc-300"
                           }`}
                         href={getNavHref(item)}
                       >
                         <NavLabel item={item} />
                         {item.children ? (
                           <FiChevronDown
-                            className={`text-base transition group-hover:rotate-180 ${active ? "text-[#BE0010]" : "text-zinc-400"
+                            className={`text-base transition group-hover:rotate-180 ${active ? "text-red" : "text-ink-soft"
                               }`}
                           />
                         ) : null}
@@ -231,18 +231,18 @@ export default function Header() {
 
                       {item.children ? (
                         <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
-                          <div className="rounded-lg border border-zinc-200 bg-white p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)] dark:border-zinc-800 dark:bg-zinc-900">
+                          <div className="rounded-lg border border-line-light bg-parchment p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)] dark:border-zinc-800 dark:bg-zinc-900">
                             {item.children.map((child) => (
                               <Link
-                                className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-800"
+                                className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red dark:text-zinc-300 dark:hover:bg-zinc-800"
                                 href={child.href}
                                 key={child.label}
                               >
                                 {child.label}
                                 {child.label === "Webinars" &&
                                 upcomingWebinarsCount > 0 ? (
-                                  <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
-                                    <span className="size-1.5 animate-pulse rounded-full bg-white" />
+                                  <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-parchment">
+                                    <span className="size-1.5 animate-pulse rounded-full bg-parchment" />
                                     Live
                                   </span>
                                 ) : null}
@@ -262,7 +262,7 @@ export default function Header() {
               <div className="mx-6 w-px bg-zinc-200" />
               <button
                 aria-label="Search products"
-                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-[#BE0010] dark:text-zinc-200"
+                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-red dark:text-zinc-200"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -282,7 +282,7 @@ export default function Header() {
             </a> */}
               <Link
                 aria-label="Download product profile"
-                className="inline-flex h-12 items-center justify-center gap-2 bg-[#BE0010] px-7 text-sm font-bold text-white transition hover:bg-[#fff3f4] hover:text-black"
+                className="inline-flex h-12 items-center justify-center gap-2 bg-red px-7 text-sm font-bold text-parchment transition hover:bg-[#fff3f4] hover:text-black"
                 download
                 href={productProfileUrl}
               >
@@ -294,7 +294,7 @@ export default function Header() {
             <div className="ml-auto flex items-center gap-2 xl:hidden">
               <a
                 aria-label="Download product profile"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010] dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-red/40 hover:text-red dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
                 download
                 href={productProfileUrl}
               >
@@ -303,7 +303,7 @@ export default function Header() {
 
               <button
                 aria-label="Search products"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-zinc-200 bg-white text-xl text-zinc-700 transition hover:border-[#BE0010]/40 hover:text-[#BE0010] dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-red/40 hover:text-red dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -313,7 +313,7 @@ export default function Header() {
               <button
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle menu"
-                className="inline-flex size-11 items-center justify-center rounded-lg bg-[#BE0010] text-2xl text-white transition hover:bg-[#9a000d]"
+                className="inline-flex size-11 items-center justify-center rounded-lg bg-red text-2xl text-parchment transition hover:bg-[#9a000d]"
                 onClick={() => setIsMenuOpen((current) => !current)}
                 type="button"
               >
@@ -327,7 +327,7 @@ export default function Header() {
       {isMenuOpen ? (
         <nav
           aria-label="Mobile navigation"
-          className="mx-auto max-w-[1480px] border-t border-zinc-200 bg-white p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] xl:hidden dark:border-zinc-800 dark:bg-zinc-950"
+          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] xl:hidden dark:border-zinc-800 dark:bg-zinc-950"
         >
           <ul className="space-y-1">
             {mainNavigation.map((item) => {
@@ -339,8 +339,8 @@ export default function Header() {
                   <div className="flex items-center gap-2">
                     <Link
                       className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium transition ${active
-                          ? "bg-[#BE0010] text-white"
-                          : "text-zinc-800 hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-200 dark:hover:bg-zinc-900"
+                          ? "bg-red text-parchment"
+                          : "text-ink hover:bg-parchment-alt hover:text-red dark:text-zinc-200 dark:hover:bg-zinc-900"
                         }`}
                       href={getNavHref(item)}
                       onClick={item.children ? undefined : closeMenu}
@@ -352,7 +352,7 @@ export default function Header() {
                       <button
                         aria-expanded={isOpen}
                         aria-label={`Toggle ${item.label} submenu`}
-                        className="inline-flex size-12 items-center justify-center rounded-lg border border-zinc-200 text-zinc-700 dark:border-zinc-800 dark:text-zinc-200"
+                        className="inline-flex size-12 items-center justify-center rounded-lg border border-line-light text-ink-soft dark:border-zinc-800 dark:text-zinc-200"
                         onClick={() =>
                           setOpenMobileItem(isOpen ? null : item.label)
                         }
@@ -367,10 +367,10 @@ export default function Header() {
                   </div>
 
                   {item.children && isOpen ? (
-                    <div className="mt-1 space-y-1 border-l border-zinc-200 pl-4 dark:border-zinc-800">
+                    <div className="mt-1 space-y-1 border-l border-line-light pl-4 dark:border-zinc-800">
                       {item.children.map((child) => (
                         <Link
-                          className="flex items-center justify-between gap-2 rounded-lg px-3 py-3 text-sm font-medium text-zinc-600 transition hover:bg-zinc-50 hover:text-[#BE0010] dark:text-zinc-300 dark:hover:bg-zinc-900"
+                          className="flex items-center justify-between gap-2 rounded-lg px-3 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red dark:text-zinc-300 dark:hover:bg-zinc-900"
                           href={child.href}
                           key={child.label}
                           onClick={closeMenu}
@@ -378,8 +378,8 @@ export default function Header() {
                           {child.label}
                           {child.label === "Webinars" &&
                           upcomingWebinarsCount > 0 ? (
-                            <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-white">
-                              <span className="size-1.5 animate-pulse rounded-full bg-white" />
+                            <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-parchment">
+                              <span className="size-1.5 animate-pulse rounded-full bg-parchment" />
                               Live
                             </span>
                           ) : null}

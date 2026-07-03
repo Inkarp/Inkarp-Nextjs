@@ -46,15 +46,15 @@ function DirectorTab({ director, index, isActive, onSelect }) {
     <button
       className={`group flex w-full items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition duration-300 ${
         isActive
-          ? "border-[#BE0010] bg-[#BE0010] shadow-lg shadow-[#BE0010]/20"
-          : "border-zinc-200 bg-white hover:border-[#BE0010]/40 hover:bg-[#fff3f4]"
+          ? "border-red bg-red shadow-lg shadow-red/20"
+          : "border-line-light bg-parchment hover:border-red/40 hover:bg-[#fff3f4]"
       }`}
       onClick={() => onSelect(index)}
       type="button"
     >
       <span
         className={`font-maxot text-xl font-bold tabular-nums ${
-          isActive ? "text-white/60" : "text-zinc-300 group-hover:text-[#BE0010]/40"
+          isActive ? "text-parchment/60" : "text-zinc-300 group-hover:text-red/40"
         }`}
       >
         {String(index + 1).padStart(2, "0")}
@@ -62,14 +62,14 @@ function DirectorTab({ director, index, isActive, onSelect }) {
       <span className="min-w-0 flex-1">
         <span
           className={`block truncate font-maxot text-sm font-bold ${
-            isActive ? "text-white" : "text-zinc-950"
+            isActive ? "text-parchment" : "text-zinc-950"
           }`}
         >
           {director.name}
         </span>
         <span
           className={`block truncate text-xs ${
-            isActive ? "text-white/75" : "text-zinc-500"
+            isActive ? "text-parchment/75" : "text-ink-soft"
           }`}
         >
           {director.title}
@@ -79,8 +79,8 @@ function DirectorTab({ director, index, isActive, onSelect }) {
         aria-hidden="true"
         className={`shrink-0 text-lg transition ${
           isActive
-            ? "text-white"
-            : "text-zinc-300 group-hover:translate-x-0.5 group-hover:text-[#BE0010]"
+            ? "text-parchment"
+            : "text-zinc-300 group-hover:translate-x-0.5 group-hover:text-red"
         }`}
       />
     </button>
@@ -115,12 +115,12 @@ export default function TeamNewTwo() {
           </div>
 
           <article
-            className="relative overflow-hidden rounded-2xl bg-white shadow-2xl shadow-zinc-950/10"
+            className="relative overflow-hidden rounded-2xl bg-parchment shadow-2xl shadow-zinc-950/10"
             data-scroll-reveal="true"
             key={active.name}
           >
             <div className="grid sm:grid-cols-[220px_1fr] lg:grid-cols-[260px_1fr]">
-              <div className="relative aspect-square overflow-hidden bg-zinc-50 sm:aspect-auto">
+              <div className="relative aspect-square overflow-hidden bg-parchment-alt sm:aspect-auto">
                 <Image
                   alt={active.name}
                   className="object-cover"
@@ -129,30 +129,30 @@ export default function TeamNewTwo() {
                   src={active.img}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent sm:bg-gradient-to-r" />
-                <span className="absolute bottom-3 left-3 font-maxot text-5xl font-bold text-white/25 sm:hidden">
+                <span className="absolute bottom-3 left-3 font-maxot text-5xl font-bold text-parchment/25 sm:hidden">
                   {String(activeIndex + 1).padStart(2, "0")}
                 </span>
               </div>
 
               <div className="flex flex-col p-6 sm:p-8">
-                <span className="hidden font-maxot text-6xl font-bold text-[#BE0010]/10 sm:block">
+                <span className="hidden font-maxot text-6xl font-bold text-red/10 sm:block">
                   {String(activeIndex + 1).padStart(2, "0")}
                 </span>
 
                 <h3 className="font-maxot mt-1 text-2xl text-zinc-950 sm:text-3xl">
                   {active.name}
                 </h3>
-                <p className="mt-1 font-maxot text-sm font-semibold text-[#BE0010]">
+                <p className="mt-1 font-maxot text-sm font-semibold text-red">
                   {active.title}
                 </p>
 
-                <p className="mt-4 flex-1 text-sm leading-7 text-zinc-600 sm:text-base">
+                <p className="mt-4 flex-1 text-sm leading-7 text-ink-soft sm:text-base">
                   {active.message}
                 </p>
 
                 <a
                   aria-label={`${active.name} on LinkedIn`}
-                  className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-xs font-semibold text-zinc-700 transition hover:border-blue-600 hover:text-blue-700"
+                  className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-line-light px-4 py-2 text-xs font-semibold text-ink-soft transition hover:border-blue-600 hover:text-blue-700"
                   href={active.link}
                   rel="noopener noreferrer"
                   target="_blank"

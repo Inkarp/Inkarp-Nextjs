@@ -3,8 +3,8 @@ import { TbError404 } from "react-icons/tb";
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-zinc-950 px-6 text-white">
-      <div className="max-w-md rounded-lg border border-white/10 bg-white/5 p-6 text-center">
+    <main className="flex min-h-screen items-center justify-center bg-navy px-6 text-parchment">
+      <div className="max-w-md rounded-lg border border-white/10 bg-parchment/5 p-6 text-center">
         <TbError404 className="mx-auto mb-4 text-6xl text-cyan-300" />
         <h1 className="text-2xl font-semibold">Page not found</h1>
         <p className="mt-3 text-sm leading-6 text-zinc-300">

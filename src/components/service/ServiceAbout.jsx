@@ -72,10 +72,10 @@ function StatCard({ icon: Icon, number, plus, label, info }) {
   const value = useCountUp(number, 0, 1600, inView);
 
   return (
-    <div className="group relative flex items-center rounded-2xl border border-zinc-100 bg-white/90 p-1 pr-4 shadow backdrop-blur transition-all duration-300 hover:scale-[1.015] dark:border-zinc-800 dark:bg-zinc-900/90">
+    <div className="group relative flex items-center rounded-2xl border border-line-light bg-parchment/90 p-1 pr-4 shadow backdrop-blur transition-all duration-300 hover:scale-[1.015] dark:border-zinc-800 dark:bg-zinc-900/90">
       <div
         aria-hidden="true"
-        className="ml-2 mr-4 inline-flex size-14 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(90deg,#BE0010,#E63946)] text-2xl text-white shadow-md transition group-hover:opacity-90"
+        className="ml-2 mr-4 inline-flex size-14 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(90deg,#BE0010,#E63946)] text-2xl text-parchment shadow-md transition group-hover:opacity-90"
       >
         <Icon className="size-6" />
       </div>
@@ -103,7 +103,7 @@ export default function ServiceAbout() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)] dark:bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.12),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.12),transparent)]" />
 
       <div className="flex flex-col items-center justify-center gap-3 text-center">
-        <span className="font-maxot rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs uppercase sm:text-sm dark:bg-zinc-900 dark:text-zinc-100">
+        <span className="font-maxot rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs uppercase sm:text-sm dark:bg-zinc-900 dark:text-zinc-100">
           Our Impact
         </span>
         <h2 className="font-maxot text-xl leading-tight text-[#E63946] sm:text-2xl">

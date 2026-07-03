@@ -28,7 +28,7 @@ export default function Footer() {
   ]);
 
   return (
-    <footer className="font-maxot border-t border-zinc-200 bg-zinc-50 text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
+    <footer className="font-maxot border-t border-line-light bg-parchment-alt text-ink dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[7fr_3fr] lg:px-8">
         <div className="space-y-6 ">
           <div>
@@ -45,7 +45,7 @@ export default function Footer() {
                 src={company.logo}
               />
             </Link>
-            <p className="mt-3 max-w-md text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            <p className="mt-3 max-w-md text-sm leading-6 text-ink-soft dark:text-zinc-400">
               {company.description}
             </p>
           </div>
@@ -54,10 +54,10 @@ export default function Footer() {
             <h2 className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">
               Quick Links
             </h2>
-            <div className="mt-2.5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+            <div className="mt-2.5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-soft dark:text-zinc-400">
               {quickLinks.map((link) => (
                 <Link
-                  className="transition hover:text-[#BE0010]"
+                  className="transition hover:text-red"
                   href={link.href}
                   key={`${link.label}-${link.href}`}
                 >
@@ -69,16 +69,16 @@ export default function Footer() {
 
           <div>
             <h2 className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">Contact</h2>
-            <div className="mt-2.5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+            <div className="mt-2.5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft dark:text-zinc-400">
               <a
-                className="flex items-center gap-2 transition hover:text-[#BE0010]"
+                className="flex items-center gap-2 transition hover:text-red"
                 href={`tel:${contact.phone.replaceAll(" ", "")}`}
               >
                 <FiPhone className="shrink-0" />
                 {contact.phone}
               </a>
               <a
-                className="flex items-center gap-2 transition hover:text-[#BE0010]"
+                className="flex items-center gap-2 transition hover:text-red"
                 href={`mailto:${contact.email}`}
               >
                 <FiMail className="shrink-0" />
@@ -97,7 +97,7 @@ export default function Footer() {
               {Object.entries(socials).map(([name, href]) => (
                 <a
                   aria-label={name}
-                  className="inline-flex size-8 items-center justify-center rounded-md border border-zinc-200 bg-white text-zinc-800 transition hover:border-[#BE0010] hover:bg-[#BE0010] hover:text-white dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
+                  className="inline-flex size-8 items-center justify-center rounded-md border border-line-light bg-parchment text-ink transition hover:border-red hover:bg-red hover:text-parchment dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200"
                   href={href}
                   key={name}
                   rel="noopener noreferrer"
@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div>
           <h2 className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">Find Us</h2>
-          <div className="mt-2.5 h-40 overflow-hidden rounded-md border border-zinc-200 bg-white lg:h-full lg:min-h-[200px] dark:border-zinc-700">
+          <div className="mt-2.5 h-40 overflow-hidden rounded-md border border-line-light bg-parchment lg:h-full lg:min-h-[200px] dark:border-zinc-700">
             <iframe
               allowFullScreen
               className="h-full w-full border-0"
@@ -128,21 +128,21 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-zinc-200 px-4 py-5 sm:px-6 lg:px-8 dark:border-zinc-800">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
+      <div className="border-t border-line-light px-4 py-5 sm:px-6 lg:px-8 dark:border-zinc-800">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
           <p>
             Copyright {new Date().getFullYear()} {company.name}. All rights
             reserved.
           </p>
           <div className="flex gap-4">
             <Link
-              className="text-black transition hover:text-[#BE0010] dark:text-zinc-200"
+              className="text-black transition hover:text-red dark:text-zinc-200"
               href="/terms-and-conditions"
             >
               Terms & Conditions
             </Link>
             <Link
-              className="text-black transition hover:text-[#BE0010] dark:text-zinc-200"
+              className="text-black transition hover:text-red dark:text-zinc-200"
               href="/privacy-policy"
             >
               Privacy Policy

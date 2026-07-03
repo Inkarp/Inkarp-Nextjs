@@ -37,7 +37,7 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
   return createPortal(
     <div
       aria-modal="true"
-      className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-[#BE0010] animate-[header-search-backdrop_320ms_ease-out]"
+      className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-red animate-[header-search-backdrop_320ms_ease-out]"
       role="dialog"
     >
       <div className="flex items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
@@ -58,7 +58,7 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
 
         <button
           aria-label="Close search"
-          className="text-sm font-semibold uppercase tracking-wide text-white/80 transition hover:text-white"
+          className="text-sm font-semibold uppercase tracking-wide text-parchment/80 transition hover:text-parchment"
           onClick={onClose}
           type="button"
         >
@@ -67,7 +67,7 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
       </div>
 
       <div className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:px-8">
-        <h2 className="font-maxot text-4xl font-bold text-white sm:text-6xl">
+        <h2 className="font-maxot text-4xl font-bold text-parchment sm:text-6xl">
           Search
         </h2>
 

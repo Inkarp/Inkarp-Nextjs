@@ -215,7 +215,7 @@ export default function DistillationSimulator({ data }) {
   };
 
   return (
-    <section id="simulator" className={`scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-5 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950 lg:min-h-screen lg:flex lg:flex-col ${finished ? 'lg:justify-start' : 'lg:justify-center'}`}>
+    <section id="simulator" className={`scroll-mt-16 border-b border-line-light bg-[#F6F6F6] px-4 py-5 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950 lg:min-h-screen lg:flex lg:flex-col ${finished ? 'lg:justify-start' : 'lg:justify-center'}`}>
       <div className="mx-auto w-full">
         <SectionHeader
           number="03"
@@ -226,8 +226,8 @@ export default function DistillationSimulator({ data }) {
 
         <div className="grid gap-6 lg:grid-cols-[330px_1fr]">
           {/* Left controls panel */}
-          <div className="rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <div className="rounded-xl bg-zinc-950 p-3 text-white dark:bg-black">
+          <div className="rounded-2xl border border-line-light bg-parchment p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="rounded-xl bg-navy p-3 text-parchment dark:bg-black">
               <div className="mb-1.5 flex items-center justify-between text-[9px] uppercase tracking-widest text-black dark:text-zinc-400">
                 <span>Hei-VAP Core monitor</span>
                 <span>{formatTime(elapsed)}</span>
@@ -235,9 +235,9 @@ export default function DistillationSimulator({ data }) {
               <div className="font-maxot text-2xl font-bold">{recoveredPct}<span className="text-sm text-black dark:text-zinc-400">% recovered</span></div>
               <p className="mt-1 text-[10px] leading-4 text-black dark:text-zinc-400">{monitorStatus}</p>
               <div className="mt-2 grid grid-cols-3 gap-1.5 text-[10px]">
-                <div className="rounded-lg bg-white/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Bath</span>{bathTemp}°C</div>
-                <div className="rounded-lg bg-white/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Speed</span>180 rpm</div>
-                <div className="rounded-lg bg-white/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Vacuum</span>{recommendedVacuum} mbar</div>
+                <div className="rounded-lg bg-parchment/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Bath</span>{bathTemp}°C</div>
+                <div className="rounded-lg bg-parchment/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Speed</span>180 rpm</div>
+                <div className="rounded-lg bg-parchment/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Vacuum</span>{recommendedVacuum} mbar</div>
               </div>
             </div>
 
@@ -248,8 +248,8 @@ export default function DistillationSimulator({ data }) {
                   <button
                     className={`flex w-full items-center justify-between rounded-lg border px-3 py-1.5 text-left text-xs transition ${
                       selIdx === i
-                        ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
-                        : 'border-zinc-200 bg-zinc-50 text-black hover:border-zinc-300 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600'
+                        ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                        : 'border-line-light bg-parchment-alt text-black hover:border-zinc-300 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600'
                     } ${running ? 'cursor-not-allowed opacity-55' : ''}`}
                     disabled={running}
                     key={s.name}
@@ -269,7 +269,7 @@ export default function DistillationSimulator({ data }) {
                 <span className="text-black dark:text-zinc-400">{bathTemp}°C</span>
               </label>
               <input
-                className="w-full accent-[#BE0010]"
+                className="w-full accent-red"
                 disabled={running}
                 max={100}
                 min={30}
@@ -281,14 +281,14 @@ export default function DistillationSimulator({ data }) {
 
             <div className="mt-3 flex gap-2">
               <button
-                className={`flex-1 rounded-full px-4 py-1.5 text-xs font-semibold text-white transition ${running ? 'bg-zinc-900 hover:bg-black dark:bg-zinc-700 dark:hover:bg-zinc-600' : 'bg-[#BE0010] hover:bg-[#9f000d]'}`}
+                className={`flex-1 rounded-full px-4 py-1.5 text-xs font-semibold text-parchment transition ${running ? 'bg-zinc-900 hover:bg-navy dark:bg-zinc-700 dark:hover:bg-zinc-600' : 'bg-red hover:bg-[#9f000d]'}`}
                 disabled={finished}
                 onClick={() => setRunning((current) => !current)}
                 type="button"
               >
                 {running ? 'Pause' : finished ? 'Done' : 'Start'}
               </button>
-              <button className="rounded-full bg-zinc-100 px-4 py-1.5 text-xs font-semibold text-black transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700" onClick={reset} type="button">
+              <button className="rounded-full bg-parchment-alt px-4 py-1.5 text-xs font-semibold text-black transition hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700" onClick={reset} type="button">
                 Reset
               </button>
             </div>
@@ -296,7 +296,7 @@ export default function DistillationSimulator({ data }) {
 
           {/* Right column — stacked */}
           <div className="space-y-6">
-            <div className="flex h-[380px] gap-4 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex h-[380px] gap-4 rounded-2xl border border-line-light bg-parchment p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
               <div className="flex h-full w-1/2 items-center">
                 <EvaporatorStage remaining={fill} running={running} recoveredPct={recoveredPct} />
               </div>
@@ -306,10 +306,10 @@ export default function DistillationSimulator({ data }) {
             </div>
 
             {finished && (
-              <div className="rounded-2xl border border-[#BE0010]/30 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <div className="rounded-2xl border border-red/30 bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <h3 className="font-maxot text-lg font-semibold text-black dark:text-zinc-100">Distillation complete</h3>
-                  <span className="rounded-full bg-[#BE0010] px-3 py-1 text-xs font-bold uppercase text-white">
+                  <span className="rounded-full bg-red px-3 py-1 text-xs font-bold uppercase text-parchment">
                     RECOVERED
                   </span>
                 </div>
@@ -320,15 +320,15 @@ export default function DistillationSimulator({ data }) {
                     { label: 'Evaporation rate', value: `${adjustedRate} L/h`, highlight: false },
                     { label: 'Recommended vacuum', value: `${recommendedVacuum} mbar`, highlight: false },
                   ].map((item) => (
-                    <div className="rounded-xl border border-zinc-100 bg-zinc-50 p-3 text-sm dark:border-zinc-700 dark:bg-zinc-800" key={item.label}>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">{item.label}</p>
-                      <p className={`mt-1 font-maxot text-base font-bold ${item.highlight ? 'text-[#BE0010]' : 'text-black dark:text-zinc-100'}`}>{item.value}</p>
+                    <div className="rounded-xl border border-line-light bg-parchment-alt p-3 text-sm dark:border-zinc-700 dark:bg-zinc-800" key={item.label}>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">{item.label}</p>
+                      <p className={`mt-1 font-maxot text-base font-bold ${item.highlight ? 'text-red' : 'text-black dark:text-zinc-100'}`}>{item.value}</p>
                     </div>
                   ))}
                 </div>
-                <p className="mt-4 text-xs leading-5 text-zinc-500 dark:text-zinc-400">
+                <p className="mt-4 text-xs leading-5 text-ink-soft dark:text-zinc-400">
                   Illustrative figures based on Heidolph evaporation-rate data (ΔT 40°C). Want to see it with your real solvents?{' '}
-                  <a className="font-semibold text-[#BE0010] hover:underline" href="#contact">Book a demo</a>
+                  <a className="font-semibold text-red hover:underline" href="#contact">Book a demo</a>
                   {' '}at inkarp.co.in.
                 </p>
               </div>

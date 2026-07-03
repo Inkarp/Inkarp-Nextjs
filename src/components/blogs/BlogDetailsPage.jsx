@@ -29,11 +29,11 @@ function TextSection({ section }) {
   return (
     <div className="space-y-3">
       {section.heading ? (
-        <h2 className="font-maxot text-xl font-semibold leading-snug text-zinc-900 dark:text-zinc-100">
+        <h2 className="font-maxot text-xl font-semibold leading-snug text-ink dark:text-zinc-100">
           {section.heading}
         </h2>
       ) : null}
-      <div className="space-y-4 text-base leading-7 text-zinc-700 dark:text-zinc-300">
+      <div className="space-y-4 text-base leading-7 text-ink-soft dark:text-zinc-300">
         {section.content.split("\n").map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
@@ -45,7 +45,7 @@ function TextSection({ section }) {
 function ImageSection({ section }) {
   return (
     <figure>
-      <div className="relative h-56 overflow-hidden rounded-2xl bg-zinc-100 sm:h-72 dark:bg-zinc-800">
+      <div className="relative h-56 overflow-hidden rounded-2xl bg-parchment-alt sm:h-72 dark:bg-zinc-800">
         <Image
           alt={section.caption || "Blog figure"}
           className="object-contain"
@@ -55,7 +55,7 @@ function ImageSection({ section }) {
         />
       </div>
       {section.caption ? (
-        <figcaption className="mt-2 text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <figcaption className="mt-2 text-center text-sm text-ink-soft dark:text-zinc-400">
           {section.caption}
         </figcaption>
       ) : null}
@@ -66,14 +66,14 @@ function ImageSection({ section }) {
 function TableSection({ section }) {
   return (
     <figure>
-      <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <div className="overflow-x-auto rounded-xl border border-line-light dark:border-zinc-800">
         <table className="w-full min-w-[480px] text-left text-sm">
           {section.columns ? (
-            <thead className="bg-zinc-50 dark:bg-zinc-900">
+            <thead className="bg-parchment-alt dark:bg-zinc-900">
               <tr>
                 {section.columns.map((column, index) => (
                   <th
-                    className="whitespace-nowrap px-4 py-3 font-maxot font-semibold text-zinc-800 dark:text-zinc-200"
+                    className="whitespace-nowrap px-4 py-3 font-maxot font-semibold text-ink dark:text-zinc-200"
                     key={index}
                   >
                     {column}
@@ -85,12 +85,12 @@ function TableSection({ section }) {
           <tbody>
             {section.rows.map((row, rowIndex) => (
               <tr
-                className="border-t border-zinc-200 dark:border-zinc-800"
+                className="border-t border-line-light dark:border-zinc-800"
                 key={rowIndex}
               >
                 {row.map((cell, cellIndex) => (
                   <td
-                    className="px-4 py-3 text-zinc-600 dark:text-zinc-400"
+                    className="px-4 py-3 text-ink-soft dark:text-zinc-400"
                     key={cellIndex}
                   >
                     {cell}
@@ -102,7 +102,7 @@ function TableSection({ section }) {
         </table>
       </div>
       {section.caption ? (
-        <figcaption className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+        <figcaption className="mt-2 text-sm text-ink-soft dark:text-zinc-400">
           {section.caption}
         </figcaption>
       ) : null}
@@ -114,20 +114,20 @@ function FaqSection({ section }) {
   return (
     <div className="space-y-3">
       {section.heading ? (
-        <h2 className="font-maxot text-xl font-semibold leading-snug text-zinc-900 dark:text-zinc-100">
+        <h2 className="font-maxot text-xl font-semibold leading-snug text-ink dark:text-zinc-100">
           {section.heading}
         </h2>
       ) : null}
       <div className="space-y-2">
         {section.content.map((item, index) => (
           <details
-            className="group rounded-xl border border-zinc-200 px-4 py-3 dark:border-zinc-800"
+            className="group rounded-xl border border-line-light px-4 py-3 dark:border-zinc-800"
             key={index}
           >
-            <summary className="font-maxot cursor-pointer list-none text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+            <summary className="font-maxot cursor-pointer list-none text-sm font-semibold text-ink dark:text-zinc-200">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            <p className="mt-2 text-sm leading-6 text-ink-soft dark:text-zinc-400">
               {item.a}
             </p>
           </details>
@@ -164,10 +164,10 @@ export default function BlogDetailsPage({ post }) {
           <span className="inline-flex rounded-full bg-[#E63946]/10 px-3 py-1 text-xs font-semibold uppercase text-[#E63946]">
             {post.category}
           </span>
-          <h1 className="font-maxot mx-auto mt-4 max-w-3xl text-2xl font-bold leading-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">
+          <h1 className="font-maxot mx-auto mt-4 max-w-3xl text-2xl font-bold leading-tight text-ink sm:text-3xl dark:text-zinc-100">
             {post.title}
           </h1>
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-ink-soft dark:text-zinc-400">
             <Link className="hover:text-[#E63946]" href="/">
               Home
             </Link>
@@ -176,7 +176,7 @@ export default function BlogDetailsPage({ post }) {
               Blog
             </Link>
             <span>/</span>
-            <span className="text-zinc-700 dark:text-zinc-300">{post.title}</span>
+            <span className="text-ink-soft dark:text-zinc-300">{post.title}</span>
           </div>
         </div>
       </section>
@@ -195,7 +195,7 @@ export default function BlogDetailsPage({ post }) {
               />
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center gap-5 text-sm text-zinc-500 dark:text-zinc-400">
+            <div className="mt-5 flex flex-wrap items-center gap-5 text-sm text-ink-soft dark:text-zinc-400">
               <span className="flex items-center gap-1.5">
                 <FiUser className="size-4 text-[#E63946]" />
                 {post.author}
@@ -217,14 +217,14 @@ export default function BlogDetailsPage({ post }) {
             </div>
 
             {post.tags?.length ? (
-              <div className="mt-8 flex flex-wrap items-center gap-2 border-t border-zinc-200 pt-6 dark:border-zinc-800">
-                <span className="font-maxot flex items-center gap-1.5 text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+              <div className="mt-8 flex flex-wrap items-center gap-2 border-t border-line-light pt-6 dark:border-zinc-800">
+                <span className="font-maxot flex items-center gap-1.5 text-sm font-semibold text-ink dark:text-zinc-200">
                   <FiTag className="size-4" />
                   Tags:
                 </span>
                 {post.tags.map((tag) => (
                   <span
-                    className="rounded-full border border-zinc-200 px-3 py-1 text-xs font-medium text-zinc-600 transition hover:border-[#E63946]/60 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
+                    className="rounded-full border border-line-light px-3 py-1 text-xs font-medium text-ink-soft transition hover:border-[#E63946]/60 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
                     key={tag}
                   >
                     {tag}
@@ -233,14 +233,14 @@ export default function BlogDetailsPage({ post }) {
               </div>
             ) : null}
 
-            <div className="mt-10 border-t border-zinc-200 pt-8 dark:border-zinc-800">
-              <h2 className="font-maxot text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+            <div className="mt-10 border-t border-line-light pt-8 dark:border-zinc-800">
+              <h2 className="font-maxot text-xl font-semibold text-ink dark:text-zinc-100">
                 {post.comments.length} Comments
               </h2>
 
               <div className="mt-5 space-y-6">
                 {post.comments.length === 0 ? (
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                  <p className="text-sm text-ink-soft dark:text-zinc-400">
                     Be the first to comment on this article.
                   </p>
                 ) : (
@@ -251,14 +251,14 @@ export default function BlogDetailsPage({ post }) {
                       </span>
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-maxot text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                          <span className="font-maxot text-sm font-semibold text-ink dark:text-zinc-100">
                             {comment.name}
                           </span>
-                          <span className="text-xs text-zinc-400">
+                          <span className="text-xs text-ink-soft">
                             {formatPostDate(comment.date)}
                           </span>
                         </div>
-                        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                        <p className="mt-1 text-sm text-ink-soft dark:text-zinc-400">
                           {comment.text}
                         </p>
                       </div>
@@ -268,28 +268,28 @@ export default function BlogDetailsPage({ post }) {
               </div>
             </div>
 
-            <div className="mt-10 border-t border-zinc-200 pt-8 dark:border-zinc-800">
-              <h2 className="font-maxot text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+            <div className="mt-10 border-t border-line-light pt-8 dark:border-zinc-800">
+              <h2 className="font-maxot text-xl font-semibold text-ink dark:text-zinc-100">
                 Leave a Comment
               </h2>
               <form className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
-                  className="rounded-lg border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-[#E63946] dark:border-zinc-700 dark:bg-zinc-900"
+                  className="rounded-lg border border-line-light px-4 py-3 text-sm outline-none transition focus:border-[#E63946] dark:border-zinc-700 dark:bg-zinc-900"
                   placeholder="Your Name"
                   type="text"
                 />
                 <input
-                  className="rounded-lg border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-[#E63946] dark:border-zinc-700 dark:bg-zinc-900"
+                  className="rounded-lg border border-line-light px-4 py-3 text-sm outline-none transition focus:border-[#E63946] dark:border-zinc-700 dark:bg-zinc-900"
                   placeholder="Your Email"
                   type="email"
                 />
                 <textarea
-                  className="col-span-1 rounded-lg border border-zinc-200 px-4 py-3 text-sm outline-none transition focus:border-[#E63946] sm:col-span-2 dark:border-zinc-700 dark:bg-zinc-900"
+                  className="col-span-1 rounded-lg border border-line-light px-4 py-3 text-sm outline-none transition focus:border-[#E63946] sm:col-span-2 dark:border-zinc-700 dark:bg-zinc-900"
                   placeholder="Your Message"
                   rows={4}
                 />
                 <button
-                  className="font-maxot col-span-1 w-fit rounded-full bg-[#E63946] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#BE0010] sm:col-span-2"
+                  className="font-maxot col-span-1 w-fit rounded-full bg-[#E63946] px-6 py-3 text-sm font-semibold text-parchment transition hover:bg-red sm:col-span-2"
                   type="button"
                 >
                   Post Comment
@@ -299,8 +299,8 @@ export default function BlogDetailsPage({ post }) {
           </article>
 
           <aside className="space-y-8">
-            <div className="rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
-              <h3 className="font-maxot mb-4 text-base font-semibold text-zinc-900 dark:text-zinc-100">
+            <div className="rounded-2xl border border-line-light p-5 dark:border-zinc-800">
+              <h3 className="font-maxot mb-4 text-base font-semibold text-ink dark:text-zinc-100">
                 Recent Posts
               </h3>
               <div className="space-y-4">
@@ -320,10 +320,10 @@ export default function BlogDetailsPage({ post }) {
                       />
                     </span>
                     <div>
-                      <p className="font-maxot line-clamp-2 text-sm font-medium text-zinc-800 transition group-hover:text-[#E63946] dark:text-zinc-200">
+                      <p className="font-maxot line-clamp-2 text-sm font-medium text-ink transition group-hover:text-[#E63946] dark:text-zinc-200">
                         {recent.title}
                       </p>
-                      <span className="text-xs text-zinc-400">
+                      <span className="text-xs text-ink-soft">
                         {formatPostDate(recent.date)}
                       </span>
                     </div>
@@ -332,36 +332,36 @@ export default function BlogDetailsPage({ post }) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
-              <h3 className="font-maxot mb-4 text-base font-semibold text-zinc-900 dark:text-zinc-100">
+            <div className="rounded-2xl border border-line-light p-5 dark:border-zinc-800">
+              <h3 className="font-maxot mb-4 text-base font-semibold text-ink dark:text-zinc-100">
                 Categories
               </h3>
               <ul className="space-y-1">
                 {categoryCounts.map(({ category, count }) => (
                   <li key={category}>
                     <Link
-                      className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-zinc-600 transition hover:bg-[#E63946]/10 hover:text-[#E63946] dark:text-zinc-300"
+                      className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-ink-soft transition hover:bg-[#E63946]/10 hover:text-[#E63946] dark:text-zinc-300"
                       href={`/blog?category=${encodeURIComponent(category)}`}
                     >
                       <span className="flex items-center gap-2">
                         <FiFolder className="size-3.5" />
                         {category}
                       </span>
-                      <span className="text-xs text-zinc-400">{count}</span>
+                      <span className="text-xs text-ink-soft">{count}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
-              <h3 className="font-maxot mb-4 text-base font-semibold text-zinc-900 dark:text-zinc-100">
+            <div className="rounded-2xl border border-line-light p-5 dark:border-zinc-800">
+              <h3 className="font-maxot mb-4 text-base font-semibold text-ink dark:text-zinc-100">
                 Tags
               </h3>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
                   <span
-                    className="rounded-full border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-600 transition hover:border-[#E63946]/60 hover:bg-[#E63946]/10 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
+                    className="rounded-full border border-line-light px-3 py-1.5 text-xs font-medium text-ink-soft transition hover:border-[#E63946]/60 hover:bg-[#E63946]/10 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
                     key={tag}
                   >
                     {tag}

@@ -60,7 +60,7 @@ export default function DemoBooking({ data }) {
   const textareaFields = enhancedFields.filter((field) => field.type === 'textarea');
 
   return (
-    <section id="booking" className="scroll-mt-16 border-b border-zinc-200 bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+    <section id="booking" className="scroll-mt-16 border-b border-line-light bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="19"
@@ -70,7 +70,7 @@ export default function DemoBooking({ data }) {
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             {submitted ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center py-8 text-center">
                 <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-950/40">
@@ -83,10 +83,10 @@ export default function DemoBooking({ data }) {
                   {successMessage ?? 'An Inkarp specialist will call you back shortly. You can also browse the FAQ while we review your request.'}
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3">
-                  <button className="text-sm font-semibold text-[#BE0010] hover:underline" onClick={() => { setSubmitted(false); setForm({}); }} type="button">
+                  <button className="text-sm font-semibold text-red hover:underline" onClick={() => { setSubmitted(false); setForm({}); }} type="button">
                     Send another enquiry
                   </button>
-                  <a className="text-sm font-semibold text-[#BE0010] hover:underline" href="#faq">Browse FAQ</a>
+                  <a className="text-sm font-semibold text-red hover:underline" href="#faq">Browse FAQ</a>
                 </div>
               </div>
             ) : (
@@ -95,11 +95,11 @@ export default function DemoBooking({ data }) {
                   {visibleFields.map((field) => (
                     <div className={['message', 'notes'].includes(field.key) ? 'sm:col-span-2' : ''} key={field.key}>
                       <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">
-                        {field.label}{field.required && <span className="ml-0.5 text-[#BE0010]">*</span>}
+                        {field.label}{field.required && <span className="ml-0.5 text-red">*</span>}
                       </label>
                       {field.type === 'select' ? (
                         <select
-                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+                          className="w-full rounded-lg border border-line-light bg-parchment-alt px-3 py-2.5 text-sm text-black focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
                           onChange={(e) => set(field.key, e.target.value)}
                           required={field.required}
                           value={form[field.key] ?? ''}
@@ -109,7 +109,7 @@ export default function DemoBooking({ data }) {
                         </select>
                       ) : (
                         <input
-                          className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-black placeholder:text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
+                          className="w-full rounded-lg border border-line-light bg-parchment-alt px-3 py-2.5 text-sm text-black placeholder:text-black focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
                           onChange={(e) => set(field.key, e.target.value)}
                           placeholder={field.label}
                           required={field.required}
@@ -125,7 +125,7 @@ export default function DemoBooking({ data }) {
                   <div className="mb-4" key={field.key}>
                     <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{field.label}</label>
                     <textarea
-                      className="w-full resize-none rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-black placeholder:text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
+                      className="w-full resize-none rounded-lg border border-line-light bg-parchment-alt px-3 py-2.5 text-sm text-black placeholder:text-black focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
                       onChange={(e) => set(field.key, e.target.value)}
                       placeholder="Solvents used, sample volume, lift preference, glassware needs..."
                       rows={4}
@@ -135,12 +135,12 @@ export default function DemoBooking({ data }) {
                 ))}
 
                 {error ? (
-                  <div className="mb-4 rounded-lg border border-[#BE0010]/20 bg-[#BE0010]/5 px-4 py-3 text-xs font-semibold text-[#BE0010]">
+                  <div className="mb-4 rounded-lg border border-red/20 bg-red/5 px-4 py-3 text-xs font-semibold text-red">
                     {error}
                   </div>
                 ) : null}
 
-                <button className="w-full rounded-xl bg-[#BE0010] py-3.5 text-sm font-semibold text-white transition hover:bg-[#9f000d] disabled:opacity-60" disabled={loading} type="submit">
+                <button className="w-full rounded-xl bg-red py-3.5 text-sm font-semibold text-parchment transition hover:bg-[#9f000d] disabled:opacity-60" disabled={loading} type="submit">
                   {loading ? 'Sending...' : (submitLabel ?? 'Request demo - we will call you back')}
                 </button>
                 <p className="mt-3 text-center text-xs text-black dark:text-zinc-400">
@@ -150,12 +150,12 @@ export default function DemoBooking({ data }) {
             )}
           </div>
 
-          <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <aside className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <h3 className="font-maxot text-xl text-black dark:text-zinc-100">Why book a demo?</h3>
             <div className="mt-5 divide-y divide-zinc-100 dark:divide-zinc-800">
               {WHY_ITEMS.map((item) => (
                 <div className="flex gap-3 py-4 first:pt-0 last:pb-0" key={item.title}>
-                  <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 text-sm font-bold text-[#BE0010]">i</div>
+                  <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-red/15 bg-red/5 text-sm font-bold text-red">i</div>
                   <div>
                     <div className="text-sm font-semibold text-black dark:text-zinc-100">{item.title}</div>
                     <div className="mt-1 text-xs leading-5 text-black dark:text-zinc-400">{item.body}</div>

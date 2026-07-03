@@ -153,15 +153,15 @@ export default function UniversalProductPage({ product }) {
       {/* CTA strip */}
       {lf.cta && (
         <section className="bg-[#fff3f4] dark:bg-zinc-900 px-4 py-14 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-[#BE0010]/15 dark:border-[#BE0010]/30 bg-white dark:bg-zinc-950 p-6 shadow-xl shadow-[#BE0010]/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-red/15 dark:border-[#BE0010]/30 bg-parchment dark:bg-zinc-950 p-6 shadow-xl shadow-red/10 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">{lf.cta.eyebrow}</p>
+              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">{lf.cta.eyebrow}</p>
               <h2 className="font-maxot mt-2 text-2xl leading-tight text-zinc-950 dark:text-zinc-100 sm:text-3xl">{lf.cta.title}</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">{lf.cta.description}</p>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft dark:text-zinc-400">{lf.cta.description}</p>
             </div>
             <a
               href={lf.cta.href ?? '/contact'}
-              className="inline-flex h-12 items-center justify-center rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d] shrink-0"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d] shrink-0"
             >
               {lf.cta.label}
               <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

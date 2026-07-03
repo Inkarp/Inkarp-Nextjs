@@ -67,7 +67,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
   const card = enrichedCards[active];
 
   return (
-    <section id="solvents" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-[#F6F6F6] dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id="solvents" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-[#F6F6F6] dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
       <div className="relative mx-auto max-w-7xl w-full">
         <SectionHeader
           number={sectionNumber}
@@ -82,8 +82,8 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
               <button
                 className={`flex min-h-12 w-full items-center justify-between rounded-2xl border px-5 py-3 text-left transition ${
                   active === index
-                    ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
-                    : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-300'
+                    ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                    : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-300'
                 }`}
                 key={item.title}
                 onClick={() => setActive(index)}
@@ -97,7 +97,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
             ))}
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
+          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
             <h3 className="font-maxot text-2xl font-bold text-black dark:text-zinc-100">{card.title}</h3>
             <p className="mt-2 text-sm text-black dark:text-zinc-400">
               {[
@@ -113,7 +113,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
                 const Icon = DETAIL_ICONS[index] ?? FiInfo;
                 return (
                   <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${card.title}-${DETAIL_LABELS[index]}`}>
-                    <div className="flex size-9 items-center justify-center rounded-xl border border-[#BE0010]/15 bg-[#BE0010]/5 text-[#BE0010]">
+                    <div className="flex size-9 items-center justify-center rounded-xl border border-red/15 bg-red/5 text-red">
                       <Icon className="text-base" />
                     </div>
                     <div>
@@ -125,12 +125,12 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
               })}
             </div>
 
-            <div className="mt-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-sm leading-6 text-black dark:text-zinc-400">
+            <div className="mt-6 rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-sm leading-6 text-black dark:text-zinc-400">
               Tip - the <span className="font-semibold text-black dark:text-zinc-100">20/40/60 rule</span>: ~40 deg C bath, ~20 deg C coolant and a ~60 deg C gap to the vapour temperature for safe, efficient evaporation.
             </div>
 
             <a
-              className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-white transition hover:bg-[#BE0010]"
+              className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-parchment transition hover:bg-red"
               href="#booking"
             >
               Ask Inkarp for solvent-specific configuration
@@ -139,7 +139,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
         </div>
 
         {disclaimer && (
-          <div className="relative mt-6 max-w-5xl rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-5 py-4 text-xs leading-6 text-black dark:text-zinc-400">
+          <div className="relative mt-6 max-w-5xl rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-5 py-4 text-xs leading-6 text-black dark:text-zinc-400">
             <span className="mr-2 inline-flex size-4 items-center justify-center rounded-full border border-zinc-300 dark:border-zinc-700 text-[10px] font-bold text-black dark:text-zinc-100">i</span>
             Disclaimer: {normaliseText(disclaimer)}
           </div>

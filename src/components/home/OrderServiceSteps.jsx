@@ -31,7 +31,7 @@ const steps = [
 function StepHexagon({ number }) {
   return (
     <span
-      className="relative flex size-14 shrink-0 items-center justify-center bg-white font-maxot text-base font-bold text-[#BE0010] shadow-sm shadow-zinc-950/5 [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)] dark:bg-zinc-900"
+      className="relative flex size-14 shrink-0 items-center justify-center bg-parchment font-maxot text-base font-bold text-red shadow-sm shadow-zinc-950/5 [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)] dark:bg-zinc-900"
       aria-hidden="true"
     >
       {number}
@@ -65,13 +65,13 @@ export default function OrderServiceSteps() {
               <div className="mt-5 flex gap-3 pr-4">
                 <FiChevronRight
                   aria-hidden="true"
-                  className="mt-1 shrink-0 text-2xl text-[#BE0010]"
+                  className="mt-1 shrink-0 text-2xl text-red"
                 />
                 <div>
                   <h3 className="font-maxot text-base font-bold text-zinc-950 dark:text-zinc-100">
                     {step.title}
                   </h3>
-                  <p className="mt-1.5 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+                  <p className="mt-1.5 text-sm leading-6 text-ink-soft dark:text-zinc-400">
                     {step.description}
                   </p>
                 </div>
@@ -83,7 +83,7 @@ export default function OrderServiceSteps() {
         <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
           {steps.map((step) => (
             <div
-              className="flex gap-3 rounded-xl border border-white/60 bg-white p-4 shadow-sm shadow-zinc-950/5 dark:border-zinc-800/60 dark:bg-zinc-900"
+              className="flex gap-3 rounded-xl border border-white/60 bg-parchment p-4 shadow-sm shadow-zinc-950/5 dark:border-zinc-800/60 dark:bg-zinc-900"
               key={step.number}
             >
               <StepHexagon number={step.number} />
@@ -91,7 +91,7 @@ export default function OrderServiceSteps() {
                 <h3 className="font-maxot text-base font-bold text-zinc-950 dark:text-zinc-100">
                   {step.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+                <p className="mt-1.5 text-sm leading-6 text-ink-soft dark:text-zinc-400">
                   {step.description}
                 </p>
               </div>

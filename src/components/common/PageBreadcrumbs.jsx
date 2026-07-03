@@ -22,15 +22,15 @@ export default function PageBreadcrumbs({ path }) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-zinc-500 sm:px-6 lg:px-8 dark:text-zinc-400"
+      className="mx-auto flex max-w-7xl items-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:px-6 lg:px-8 dark:text-zinc-400"
     >
-      <Link className="transition hover:text-[#BE0010]" href="/">
+      <Link className="transition hover:text-red" href="/">
         Home
       </Link>
       <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-700">
         /
       </span>
-      <span className="text-[#BE0010]">{current.label}</span>
+      <span className="text-red">{current.label}</span>
     </nav>
   );
 }

@@ -60,21 +60,21 @@ export default function EmpathyTeam() {
                   isTextRight ? "justify-end" : "justify-start"
                 }`}
               >
-                <div className="w-full rounded-lg bg-white/90 p-5 text-zinc-950 shadow-lg backdrop-blur sm:max-w-[62%] lg:max-w-[45%]">
-                  <p className="text-sm leading-7 text-zinc-700 sm:text-base">
+                <div className="w-full rounded-lg bg-parchment/90 p-5 text-zinc-950 shadow-lg backdrop-blur sm:max-w-[62%] lg:max-w-[45%]">
+                  <p className="text-sm leading-7 text-ink-soft sm:text-base">
                     {person.quote}
                   </p>
                   <div className="mt-4">
-                    <h3 className="font-maxot text-2xl text-[#BE0010]">
+                    <h3 className="font-maxot text-2xl text-red">
                       {person.author}
                     </h3>
-                    <p className="text-sm font-semibold text-zinc-600">
+                    <p className="text-sm font-semibold text-ink-soft">
                       {person.role}
                     </p>
                   </div>
                   <a
                     aria-label={`${person.author} on LinkedIn`}
-                    className="mt-4 inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-blue-600 shadow-sm transition hover:text-blue-800 hover:shadow"
+                    className="mt-4 inline-flex size-10 items-center justify-center rounded-full border border-line-light bg-parchment text-blue-600 shadow-sm transition hover:text-blue-800 hover:shadow"
                     href={person.link}
                     rel="noopener noreferrer"
                     target="_blank"

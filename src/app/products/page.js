@@ -40,19 +40,19 @@ export default async function ProductsPage({ searchParams }) {
   }));
 
   return (
-    <main className="bg-zinc-50 dark:bg-zinc-950 min-h-screen" data-scroll-skip>
+    <main className="bg-parchment-alt dark:bg-zinc-950 min-h-screen" data-scroll-skip>
       <BreadcrumbJsonLd path="/products" />
       <PageBreadcrumbs path="/products" />
       {/* Page header */}
-      <section className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-5 sm:px-6 lg:px-8">
+      <section className="border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-center gap-2">
-          <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
+          <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">
             Products
           </p>
           <h1 className="font-maxot  text-3xl text-zinc-950 dark:text-zinc-100 sm:text-4xl">
             Explore Inkarp products
           </h1>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+          <p className="mt-2 max-w-2xl text-sm leading-6 text-ink-soft dark:text-zinc-400">
             Type a product, principal, country, industry, application, or tag to
             see matching products instantly.
           </p>
@@ -78,12 +78,12 @@ export default async function ProductsPage({ searchParams }) {
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {products.map((product) => (
                 <article
-                  className="group flex flex-col rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 shadow-sm transition hover:border-[#BE0010]/40 hover:shadow-md"
+                  className="group flex flex-col rounded-xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-4 shadow-sm transition hover:border-red/40 hover:shadow-md"
                   key={`${product.principalSlug}-${product.slug}`}
                 >
                   <Link
                     aria-label={`View ${product.name}`}
-                    className="mb-3 flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-lg bg-zinc-50 dark:bg-zinc-800"
+                    className="mb-3 flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-lg bg-parchment-alt dark:bg-zinc-800"
                     href={product.href}
                   >
                     {product.image ? (
@@ -96,7 +96,7 @@ export default async function ProductsPage({ searchParams }) {
                       />
                     ) : (
                       <PrincipalLogo
-                        className="h-10 w-32 object-center text-center text-xs font-semibold uppercase tracking-wide text-[#BE0010]"
+                        className="h-10 w-32 object-center text-center text-xs font-semibold uppercase tracking-wide text-red"
                         principalName={product.principalName}
                         principalSlug={product.principalSlug}
                       />
@@ -106,11 +106,11 @@ export default async function ProductsPage({ searchParams }) {
                   {/* Principal + country */}
                   <div className="flex items-start justify-between gap-2">
                     <PrincipalLogo
-                      className="h-5 w-20 shrink-0 text-[11px] font-semibold uppercase tracking-wide text-[#BE0010]"
+                      className="h-5 w-20 shrink-0 text-[11px] font-semibold uppercase tracking-wide text-red"
                       principalName={product.principalName}
                       principalSlug={product.principalSlug}
                     />
-                    <span className="shrink-0 rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-[10px] font-semibold text-zinc-500 dark:text-zinc-400">
+                    <span className="shrink-0 rounded bg-parchment-alt dark:bg-zinc-800 px-1.5 py-0.5 text-[10px] font-semibold text-ink-soft dark:text-zinc-400">
                       {product.countryOfOrigin || "-"}
                     </span>
                   </div>
@@ -118,7 +118,7 @@ export default async function ProductsPage({ searchParams }) {
                   {/* Product name */}
                   <h2 className="font-maxot mt-1.5 text-base font-bold leading-snug text-zinc-950 dark:text-zinc-100">
                     <Link
-                      className="transition group-hover:text-[#BE0010]"
+                      className="transition group-hover:text-red"
                       href={product.href}
                     >
                       {product.name}
@@ -126,21 +126,21 @@ export default async function ProductsPage({ searchParams }) {
                   </h2>
 
                   {/* Industry */}
-                  <p className="mt-1 text-[11px] text-zinc-400 dark:text-zinc-500">{product.industry}</p>
+                  <p className="mt-1 text-[11px] text-ink-soft dark:text-zinc-500">{product.industry}</p>
 
                   {/* Applications */}
                   {(product.applications ?? []).length > 0 ? (
                     <div className="mt-2.5 flex flex-wrap gap-1">
                       {(product.applications ?? []).slice(0, 3).map((app, index) => (
                         <span
-                          className="rounded border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-500 dark:text-zinc-400"
+                          className="rounded border border-line-light dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-ink-soft dark:text-zinc-400"
                           key={`${product.principalSlug}-${product.slug}-app-${index}`}
                         >
                           {app}
                         </span>
                       ))}
                       {(product.applications ?? []).length > 3 ? (
-                        <span className="rounded border border-zinc-200 dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-400 dark:text-zinc-500">
+                        <span className="rounded border border-line-light dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-ink-soft dark:text-zinc-500">
                           +{product.applications.length - 3}
                         </span>
                       ) : null}
@@ -150,15 +150,15 @@ export default async function ProductsPage({ searchParams }) {
                   {/* Actions */}
                   <div className="mt-auto flex gap-2 pt-3">
                     <Link
-                      className="group relative flex h-8 flex-1 items-center justify-center overflow-hidden rounded-lg bg-zinc-950 dark:bg-zinc-800 text-xs font-semibold text-white"
+                      className="group relative flex h-8 flex-1 items-center justify-center overflow-hidden rounded-lg bg-navy dark:bg-zinc-800 text-xs font-semibold text-parchment"
                       href={product.href}
                     >
-                      <span className="absolute inset-y-0 left-0 w-1/2 origin-left scale-x-0 bg-[#BE0010] transition-transform duration-300 group-hover:scale-x-100" />
-                      <span className="absolute inset-y-0 right-0 w-1/2 origin-right scale-x-0 bg-[#BE0010] transition-transform duration-300 group-hover:scale-x-100" />
+                      <span className="absolute inset-y-0 left-0 w-1/2 origin-left scale-x-0 bg-red transition-transform duration-300 group-hover:scale-x-100" />
+                      <span className="absolute inset-y-0 right-0 w-1/2 origin-right scale-x-0 bg-red transition-transform duration-300 group-hover:scale-x-100" />
                       <span className="relative z-10">View</span>
                     </Link>
                     <Link
-                      className="inline-flex h-8 items-center rounded-lg border border-zinc-200 dark:border-zinc-800 px-3 text-xs font-semibold text-zinc-600 dark:text-zinc-400 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+                      className="inline-flex h-8 items-center rounded-lg border border-line-light dark:border-zinc-800 px-3 text-xs font-semibold text-ink-soft dark:text-zinc-400 transition hover:border-red hover:text-red"
                       href={product.apiPath}
                     >
                       API
@@ -172,12 +172,12 @@ export default async function ProductsPage({ searchParams }) {
               <h2 className="font-maxot text-2xl font-bold text-zinc-950 dark:text-zinc-100">
                 No products found
               </h2>
-              <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+              <p className="mt-2 text-sm text-ink-soft dark:text-zinc-400">
                 Try another product, principal, country, industry, application,
                 or tag.
               </p>
-              <Link 
-                className="mt-4 inline-flex h-9 items-center rounded-lg bg-[#BE0010] px-4 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
+              <Link
+                className="mt-4 inline-flex h-9 items-center rounded-lg bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
                 href="/products"
               >
                 Clear search

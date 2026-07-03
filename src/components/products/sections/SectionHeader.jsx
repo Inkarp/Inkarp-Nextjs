@@ -13,20 +13,20 @@ export default function SectionHeader({ number, eyebrow, title, description, dar
       )}
 
       {eyebrow && (
-        <p className="font-maxot flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-[#BE0010]">
-          <span className="inline-block h-2 w-2 rounded-full bg-[#BE0010]" />
+        <p className="font-maxot flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-red">
+          <span className="inline-block h-2 w-2 rounded-full bg-red" />
           {eyebrow}
         </p>
       )}
 
       {title && (
-        <h2 className={`font-maxot relative mt-2 text-xl leading-tight sm:text-2xl ${dark ? 'text-white' : 'text-black dark:text-zinc-100'}`}>
+        <h2 className={`font-maxot relative mt-2 text-xl leading-tight sm:text-2xl ${dark ? 'text-parchment' : 'text-black dark:text-zinc-100'}`}>
           {title}
         </h2>
       )}
 
       {description && (
-        <p className={`relative mt-3 text-sm leading-7 ${dark ? 'text-white/60' : 'text-black dark:text-zinc-400'}`}>
+        <p className={`relative mt-3 text-sm leading-7 ${dark ? 'text-parchment/60' : 'text-black dark:text-zinc-400'}`}>
           {description}
         </p>
       )}

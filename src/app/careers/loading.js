@@ -3,7 +3,7 @@ import LoadingScreen from "@/components/common/LoadingScreen";
 
 export default function Loading() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white">
+    <main className="flex min-h-screen items-center justify-center bg-parchment">
       <LoadingScreen>
         <AnimatedLoading size={160} />
       </LoadingScreen>

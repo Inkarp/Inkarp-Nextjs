@@ -89,13 +89,13 @@ export default function CatalystModal({ onClose }) {
   return (
     <div
       aria-modal="true"
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 px-4 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-navy/70 px-4 backdrop-blur-sm"
       onClick={handleBackdropClick}
       ref={backdropRef}
       role="dialog"
     >
       <div className="relative z-10 mx-auto max-w-md">
-        <div className="relative space-y-2 rounded-lg bg-white/90 p-6 shadow-lg">
+        <div className="relative space-y-2 rounded-lg bg-parchment/90 p-6 shadow-lg">
           <h2 className="font-maxot text-lg font-semibold md:text-xl">
             Request a Physical Copy
           </h2>
@@ -106,7 +106,7 @@ export default function CatalystModal({ onClose }) {
 
           <button
             aria-label="Close"
-            className="absolute right-4 top-4 cursor-pointer rounded-full border border-black/30 p-1 transition hover:border-black hover:bg-white/20"
+            className="absolute right-4 top-4 cursor-pointer rounded-full border border-black/30 p-1 transition hover:border-black hover:bg-parchment/20"
             onClick={onClose}
             type="button"
           >
@@ -163,7 +163,7 @@ export default function CatalystModal({ onClose }) {
             />
 
             <button
-              className="w-full rounded-full bg-[#BE0010] py-2.5 text-white hover:bg-[#e01b2a] disabled:opacity-60"
+              className="w-full rounded-full bg-red py-2.5 text-parchment hover:bg-[#e01b2a] disabled:opacity-60"
               disabled={isSubmitting}
               type="submit"
             >

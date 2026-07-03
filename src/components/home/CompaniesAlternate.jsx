@@ -59,7 +59,7 @@ const nodePlacements = [
     x: 86,
     y: 67,
     icon: <FiCpu aria-hidden="true" />,
-    color: "from-[#BE0010] to-red-700",
+    color: "from-red to-red-700",
     connector: "left-[63%] top-[57%] h-px w-[170px] rotate-[22deg]",
   },
   {
@@ -93,12 +93,12 @@ function CompanyCard({ company, index }) {
   return (
     <Link
       href={company.href}
-      className="group relative flex h-[126px] w-[300px] overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-200/80 transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-zinc-900 dark:shadow-none"
+      className="group relative flex h-[126px] w-[300px] overflow-hidden rounded-[28px] bg-parchment shadow-xl shadow-slate-200/80 transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-zinc-900 dark:shadow-none"
     >
       <div
         className={`flex w-[82px] shrink-0 items-center justify-center bg-gradient-to-br ${placement.color}`}
       >
-        <span className="flex size-11 items-center justify-center rounded-full border border-white/30 text-2xl text-white">
+        <span className="flex size-11 items-center justify-center rounded-full border border-white/30 text-2xl text-parchment">
           {company.badge ? badgeIcons[company.badge] : placement.icon}
         </span>
       </div>
@@ -118,7 +118,7 @@ function CompanyCard({ company, index }) {
           />
         </div>
 
-        <span className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#BE0010]/7 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#BE0010] opacity-0 transition group-hover:opacity-100">
+        <span className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-red/7 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-red opacity-0 transition group-hover:opacity-100">
           View Details
           <FiArrowUpRight aria-hidden="true" />
         </span>
@@ -133,14 +133,14 @@ function MobileCompanyCard({ company, index }) {
   return (
     <Link
       href={company.href}
-      className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none"
+      className="group rounded-3xl border border-slate-200 bg-parchment p-5 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none"
     >
       <div className="mb-4 flex items-center justify-between">
-        <span className="rounded-full bg-[#BE0010]/7 px-3 py-1 text-xs font-bold text-[#BE0010]">
+        <span className="rounded-full bg-red/7 px-3 py-1 text-xs font-bold text-red">
           {String(index + 1).padStart(2, "0")}
         </span>
 
-        <span className="flex size-9 items-center justify-center rounded-full bg-[#BE0010] text-white">
+        <span className="flex size-9 items-center justify-center rounded-full bg-red text-parchment">
           <FiArrowUpRight aria-hidden="true" />
         </span>
       </div>
@@ -164,18 +164,18 @@ function MobileCompanyCard({ company, index }) {
 
 function CenterHub() {
   return (
-    <div className="absolute left-1/2 top-1/2 z-20 flex size-[250px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_24px_80px_rgba(15,23,42,0.12)] dark:bg-zinc-900">
+    <div className="absolute left-1/2 top-1/2 z-20 flex size-[250px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-parchment shadow-[0_24px_80px_rgba(15,23,42,0.12)] dark:bg-zinc-900">
       <div className="absolute inset-5 rounded-full border border-white bg-gradient-to-br from-slate-50 to-white shadow-inner dark:border-zinc-800 dark:from-zinc-900 dark:to-zinc-900" />
 
       <div className="relative z-10 text-center">
-        <span className="block text-4xl font-black uppercase leading-[0.9] tracking-tight text-[#BE0010]">
+        <span className="block text-4xl font-black uppercase leading-[0.9] tracking-tight text-red">
           Our
         </span>
-        <span className="block text-4xl font-black uppercase leading-[0.9] tracking-tight text-[#BE0010]">
+        <span className="block text-4xl font-black uppercase leading-[0.9] tracking-tight text-red">
           Group
         </span>
 
-        <span className="mx-auto mt-5 flex w-fit items-center gap-1.5 rounded-full bg-[#BE0010]/7 px-4 py-1.5 text-[10px] font-bold uppercase tracking-wide text-[#BE0010]">
+        <span className="mx-auto mt-5 flex w-fit items-center gap-1.5 rounded-full bg-red/7 px-4 py-1.5 text-[10px] font-bold uppercase tracking-wide text-red">
           Ecosystem
           <FiArrowUpRight aria-hidden="true" />
         </span>
@@ -187,14 +187,14 @@ function CenterHub() {
 export default function CompaniesAlternate() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f8fbff] to-[#eef5ff] px-4 py-16 sm:px-6 lg:px-8 lg:py-28 dark:from-zinc-950 dark:via-zinc-950 dark:to-zinc-900">
-      <div className="pointer-events-none absolute left-1/2 top-1/2 size-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#BE0010]/5 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 size-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-red/5 blur-3xl" />
       <div className="pointer-events-none absolute right-0 top-0 size-[420px] rounded-full bg-blue-100/70 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-0 size-[420px] rounded-full bg-red-100/60 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-4 lg:grid-cols-[0.38fr_0.62fr] lg:gap-12">
         <div>
-          <span className="mb-5 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.28em] text-[#BE0010]">
-            <span className="h-px w-8 bg-[#BE0010]" />
+          <span className="mb-5 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.28em] text-red">
+            <span className="h-px w-8 bg-red" />
             {groupCompanies.heading || "Our Group"}
           </span>
 
@@ -210,7 +210,7 @@ export default function CompaniesAlternate() {
           <div className="mt-12 space-y-5">
             {featureItems.map((item) => (
               <div key={item.title} className="flex gap-4">
-                <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-white text-xl text-[#BE0010] shadow-lg shadow-slate-200/80 dark:bg-zinc-900 dark:shadow-none">
+                <div className="flex size-14 shrink-0 items-center justify-center rounded-full bg-parchment text-xl text-red shadow-lg shadow-slate-200/80 dark:bg-zinc-900 dark:shadow-none">
                   {item.icon}
                 </div>
 
@@ -229,12 +229,12 @@ export default function CompaniesAlternate() {
 
         <div className="lg:hidden">
           <div className="mb-12 flex justify-center">
-            <div className="flex size-56 items-center justify-center rounded-full bg-white shadow-2xl shadow-slate-200 dark:bg-zinc-900 dark:shadow-none">
+            <div className="flex size-56 items-center justify-center rounded-full bg-parchment shadow-2xl shadow-slate-200 dark:bg-zinc-900 dark:shadow-none">
               <div className="text-center">
-                <span className="block text-3xl font-black uppercase leading-tight text-[#BE0010]">
+                <span className="block text-3xl font-black uppercase leading-tight text-red">
                   Our
                 </span>
-                <span className="block text-3xl font-black uppercase leading-tight text-[#BE0010]">
+                <span className="block text-3xl font-black uppercase leading-tight text-red">
                   Group
                 </span>
                 <span className="mt-2 block text-xs font-bold uppercase tracking-wide text-slate-400 dark:text-zinc-500">
@@ -256,7 +256,7 @@ export default function CompaniesAlternate() {
         </div>
 
         <div className="relative hidden h-[800px] lg:block">
-          <div className="absolute left-1/2 top-1/2 size-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80 bg-white/35 shadow-inner backdrop-blur-sm dark:border-zinc-800/80 dark:bg-zinc-900/35" />
+          <div className="absolute left-1/2 top-1/2 size-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80 bg-parchment/35 shadow-inner backdrop-blur-sm dark:border-zinc-800/80 dark:bg-zinc-900/35" />
 
           <div className="absolute left-1/2 top-1/2 size-[465px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-blue-400/50" />
 
@@ -282,14 +282,14 @@ export default function CompaniesAlternate() {
             return (
               <span
                 key={`dot-${company.name}-${index}`}
-                className="absolute z-20 flex size-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg dark:bg-zinc-900"
+                className="absolute z-20 flex size-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-parchment shadow-lg dark:bg-zinc-900"
                 style={{
                   left: `${placement.x}%`,
                   top: `${placement.y}%`,
                 }}
                 aria-hidden="true"
               >
-                <span className="size-3 rounded-full bg-[#BE0010]" />
+                <span className="size-3 rounded-full bg-red" />
               </span>
             );
           })}

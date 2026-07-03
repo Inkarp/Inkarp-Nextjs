@@ -78,15 +78,15 @@ export default function LocationCards() {
               >
                 <div className="relative z-[10000] size-6">
                   <div className="location-ping absolute left-1/2 top-1/2 z-0 size-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500" />
-                  <MdLocationPin className="relative z-10 size-6 text-white drop-shadow" />
+                  <MdLocationPin className="relative z-10 size-6 text-parchment drop-shadow" />
                 </div>
-                <span className="font-maxot mt-1 rounded-md border border-zinc-200 bg-white px-2 py-0.5 text-sm font-medium text-zinc-950 shadow">
+                <span className="font-maxot mt-1 rounded-md border border-line-light bg-parchment px-2 py-0.5 text-sm font-medium text-zinc-950 shadow">
                   {branch.name}
                 </span>
 
                 {hoveredBranch === index ? (
                   <div
-                    className="absolute left-[110%] top-1/2 z-[9999] w-[320px] max-w-xs rounded-lg border-2 border-[#E63946] bg-white p-4 shadow-2xl"
+                    className="absolute left-[110%] top-1/2 z-[9999] w-[320px] max-w-xs rounded-lg border-2 border-[#E63946] bg-parchment p-4 shadow-2xl"
                     onMouseEnter={() => setCardHovered(true)}
                     onMouseLeave={() => {
                       setCardHovered(false);

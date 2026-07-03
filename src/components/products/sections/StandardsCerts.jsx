@@ -71,7 +71,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
   if (!cards.length) return null;
 
   return (
-    <section id="standards" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
+    <section id="standards" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
         <span
           aria-hidden
@@ -82,7 +82,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
 
         <div className="relative max-w-3xl">
           <p className="font-maxot flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-black dark:text-zinc-100">
-            <span className="inline-block size-2 rounded-full bg-[#BE0010]" />
+            <span className="inline-block size-2 rounded-full bg-red" />
             Standards &amp; certificates
           </p>
           <h2 className="font-maxot mt-4 text-3xl font-bold leading-tight text-black dark:text-zinc-100 sm:text-4xl">
@@ -101,8 +101,8 @@ export default function StandardsCerts({ cards = [], section, productName }) {
               <button
                 className={`h-10 rounded-full border px-5 text-sm font-semibold transition ${
                   isActive
-                    ? 'border-[#BE0010] bg-[#BE0010] text-white shadow-sm shadow-[#BE0010]/20'
-                    : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-[#BE0010]/30 hover:text-[#BE0010]'
+                    ? 'border-red bg-red text-parchment shadow-sm shadow-[#BE0010]/20'
+                    : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-red/30 hover:text-red'
                 }`}
                 key={filter.key}
                 onClick={() => setActiveFilter(filter.key)}
@@ -117,11 +117,11 @@ export default function StandardsCerts({ cards = [], section, productName }) {
         <div className="relative mt-6 space-y-3">
           {visibleCards.map((card) => (
             <article
-              className="flex flex-col gap-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-5 transition hover:border-[#BE0010]/25 hover:shadow-lg hover:shadow-zinc-900/5 md:flex-row md:items-center md:justify-between"
+              className="flex flex-col gap-4 rounded-lg border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 transition hover:border-red/25 hover:shadow-lg hover:shadow-zinc-900/5 md:flex-row md:items-center md:justify-between"
               key={card.title}
             >
               <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:items-start">
-                <div className="inline-flex h-9 min-w-12 shrink-0 items-center justify-center rounded-full border border-[#BE0010]/20 bg-[#fff3f4] px-3 text-xs font-bold text-[#BE0010]">
+                <div className="inline-flex h-9 min-w-12 shrink-0 items-center justify-center rounded-full border border-red/20 bg-[#fff3f4] px-3 text-xs font-bold text-red">
                   {card.badge}
                 </div>
                 <div className="min-w-0">
@@ -140,7 +140,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
                 <div className="flex shrink-0 flex-wrap gap-2 md:justify-end">
                   {card.tags.map((tag) => (
                     <span
-                      className="inline-flex h-9 items-center rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-3 text-sm font-medium text-black dark:text-zinc-100"
+                      className="inline-flex h-9 items-center rounded-full border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-3 text-sm font-medium text-black dark:text-zinc-100"
                       key={tag}
                     >
                       {tag}
@@ -152,7 +152,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
           ))}
         </div>
 
-        <div className="relative mt-5 flex max-w-4xl gap-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 px-4 py-3 text-xs leading-5 text-black dark:text-zinc-400">
+        <div className="relative mt-5 flex max-w-4xl gap-3 rounded-lg border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-xs leading-5 text-black dark:text-zinc-400">
           <FiInfo className="mt-0.5 size-4 shrink-0 text-black dark:text-zinc-400" />
           <p>
             Disclaimer: certifications and documentation are provided on request for product evaluation and compliance review. Final regulatory compliance remains your organisation's responsibility.

@@ -70,9 +70,9 @@ export default function ServiceTabs() {
 
   return (
     <section className="mx-auto my-10 w-[95%]">
-      <div className="rounded-2xl border border-zinc-200 bg-[#F5F5F5] p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="rounded-2xl border border-line-light bg-[#F5F5F5] p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
         <div className="mb-6 text-center">
-          <span className="font-maxot inline-block rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs uppercase sm:text-sm dark:bg-zinc-950 dark:text-zinc-100">
+          <span className="font-maxot inline-block rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs uppercase sm:text-sm dark:bg-zinc-950 dark:text-zinc-100">
             Services We Provide
           </span>
         </div>
@@ -82,8 +82,8 @@ export default function ServiceTabs() {
             <button
               className={`font-maxot rounded-full border px-5 py-2 transition ${
                 activeService.id === service.id
-                  ? "border-[#BE0010] bg-[#BE0010] text-white"
-                  : "border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-800"
+                  ? "border-red bg-red text-parchment"
+                  : "border-zinc-300 bg-parchment text-ink-soft hover:bg-parchment-alt dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-300 dark:hover:bg-zinc-800"
               }`}
               key={service.id}
               onClick={() => setActiveService(service)}
@@ -94,23 +94,23 @@ export default function ServiceTabs() {
           ))}
         </div>
 
-        <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="rounded-xl border border-line-light bg-parchment p-6 dark:border-zinc-800 dark:bg-zinc-950">
           <h3 className="font-maxot mb-3 text-xl text-[#E63946] sm:text-2xl">
             {activeService.title}
           </h3>
 
-          <p className="mb-4 leading-relaxed text-zinc-700 dark:text-zinc-400">
+          <p className="mb-4 leading-relaxed text-ink-soft dark:text-zinc-400">
             {activeService.intro}
           </p>
 
-          <ul className="ml-6 list-disc space-y-2 text-zinc-700 dark:text-zinc-400">
+          <ul className="ml-6 list-disc space-y-2 text-ink-soft dark:text-zinc-400">
             {activeService.points.map((point) => (
               <li key={point}>{point}</li>
             ))}
           </ul>
 
           {activeService.note ? (
-            <p className="font-maxot mt-4 font-medium text-zinc-800 dark:text-zinc-200">
+            <p className="font-maxot mt-4 font-medium text-ink dark:text-zinc-200">
               {activeService.note}
             </p>
           ) : null}

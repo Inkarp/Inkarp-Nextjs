@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body
-        className="min-h-full flex flex-col bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100"
+        className="min-h-full flex flex-col bg-parchment text-ink dark:bg-zinc-950 dark:text-zinc-100"
         suppressHydrationWarning
       >
         <ThemeProvider>

@@ -3,7 +3,7 @@
 export default function StatsBar({ stats = [] }) {
   if (!stats.length) return null;
   return (
-    <section className="border-y border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+    <section className="border-y border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid divide-y divide-zinc-100 dark:divide-zinc-800 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
           {stats.map((s) => (

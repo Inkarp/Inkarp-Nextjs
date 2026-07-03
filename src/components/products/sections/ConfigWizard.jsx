@@ -104,8 +104,8 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
   };
 
   return (
-    <section id="config" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto max-w-7xl rounded-[28px] border border-zinc-200 bg-[#F6F6F6] px-5 py-12 sm:px-8 lg:px-12 dark:border-zinc-800 dark:bg-zinc-900">
+    <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mx-auto max-w-7xl rounded-[28px] border border-line-light bg-[#F6F6F6] px-5 py-12 sm:px-8 lg:px-12 dark:border-zinc-800 dark:bg-zinc-900">
         <div className="relative overflow-hidden">
           <SectionHeader number="09" eyebrow={eyebrow} title={heading} description={intro} />
 
@@ -119,10 +119,10 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     aria-label={`Go to ${getStepLabel(item, index)}`}
                     className={`flex size-9 items-center justify-center rounded-full text-sm font-bold transition ${
                       isComplete
-                        ? 'bg-black text-white dark:bg-zinc-100 dark:text-zinc-950'
+                        ? 'bg-navy text-parchment dark:bg-zinc-100 dark:text-zinc-950'
                         : isActive
-                          ? 'bg-[#D30013] text-white shadow-[0_0_0_6px_rgba(211,0,19,0.10)]'
-                          : 'bg-white text-black ring-1 ring-zinc-200 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700'
+                          ? 'bg-[#D30013] text-parchment shadow-[0_0_0_6px_rgba(211,0,19,0.10)]'
+                          : 'bg-parchment text-black ring-1 ring-line-light dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700'
                     }`}
                     disabled={!isComplete && !isActive}
                     onClick={() => {
@@ -143,7 +143,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
           </div>
 
           <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
               <h3 className="font-maxot text-lg font-bold text-black dark:text-zinc-100">{cleanText(current.question)}</h3>
               <div className="mt-5 space-y-3">
                 {(current.options ?? []).map((option) => {
@@ -152,8 +152,8 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     <button
                       className={`w-full rounded-2xl border px-4 py-3 text-left transition ${
                         isSelected
-                          ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
-                          : 'border-zinc-200 bg-white text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500'
+                          ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                          : 'border-line-light bg-parchment text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500'
                       }`}
                       key={option.val}
                       onClick={() => select(option.val)}
@@ -179,7 +179,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   Back
                 </button>
                 <button
-                  className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-2 text-sm font-semibold text-black transition hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                  className="inline-flex items-center gap-2 rounded-full border border-line-light px-4 py-2 text-sm font-semibold text-black transition hover:bg-parchment-alt dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
                   onClick={reset}
                   type="button"
                 >
@@ -189,7 +189,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
               </div>
             </div>
 
-            <div className="flex min-h-[270px] items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex min-h-[270px] items-center justify-center rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
               {!done ? (
                 <div className="text-center text-black dark:text-zinc-100">
                   <FiSettings className="mx-auto text-4xl text-black dark:text-zinc-100" />
@@ -197,14 +197,14 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                 </div>
               ) : (
                 <div className="w-full">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-[#BE0010]/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#BE0010]">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-red/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red">
                     <FiCheck />
                     Configuration ready
                   </div>
                   <h3 className="font-maxot mt-4 text-2xl font-bold text-black dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
                   <div className="mt-5 space-y-2">
                     {selectedRows.map((row) => (
-                      <div className="rounded-2xl border border-zinc-100 bg-zinc-50 px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900" key={row.key}>
+                      <div className="rounded-2xl border border-line-light bg-parchment-alt px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900" key={row.key}>
                         <div className="flex items-center justify-between gap-4">
                           <span className="text-xs font-bold uppercase tracking-wide text-black dark:text-zinc-100">{row.label}</span>
                           <span className="text-right text-sm font-bold text-black dark:text-zinc-100">{row.value}</span>
@@ -216,14 +216,14 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   {result.ctaNote && <p className="mt-4 text-sm leading-6 text-black dark:text-zinc-400">{result.ctaNote}</p>}
                   <div className="mt-5 flex flex-wrap gap-3">
                     <button
-                      className="inline-flex items-center gap-2 rounded-full bg-[#D30013] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#BE0010]"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#D30013] px-5 py-3 text-sm font-bold text-parchment transition hover:bg-red"
                       onClick={emailConfiguration}
                       type="button"
                     >
                       <FiMail />
                       Email this configuration
                     </button>
-                    <a className="rounded-full border border-zinc-900 px-5 py-3 text-sm font-bold text-black transition hover:border-[#BE0010] hover:text-[#BE0010] dark:border-zinc-100 dark:text-zinc-100" href="#booking">
+                    <a className="rounded-full border border-zinc-900 px-5 py-3 text-sm font-bold text-black transition hover:border-red hover:text-red dark:border-zinc-100 dark:text-zinc-100" href="#booking">
                       {result.ctaLabel ?? 'Request quote'}
                     </a>
                   </div>
@@ -232,7 +232,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
             </div>
           </div>
 
-          <div className="relative mt-5 max-w-5xl rounded-2xl border border-zinc-200 bg-white px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+          <div className="relative mt-5 max-w-5xl rounded-2xl border border-line-light bg-parchment px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
             <FiInfo className="mr-2 inline-block text-sm" />
             Disclaimer: {disclaimer}
           </div>

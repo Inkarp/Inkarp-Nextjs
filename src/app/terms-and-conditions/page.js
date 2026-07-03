@@ -164,20 +164,20 @@ const sections = [
 
 export default function TermsAndConditions() {
   return (
-    <main className="bg-white text-zinc-900">
+    <main className="bg-parchment text-ink">
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <header className="rounded-lg border border-zinc-200 bg-zinc-50 p-6 text-center shadow-sm sm:p-8">
+        <header className="rounded-lg border border-line-light bg-parchment-alt p-6 text-center shadow-sm sm:p-8">
           <h1 className="font-maxot text-3xl text-[#E63946] sm:text-4xl">
             Inkarp Instruments - Terms & Conditions
           </h1>
-          <p className="mt-3 text-sm text-zinc-700 sm:text-base">
+          <p className="mt-3 text-sm text-ink-soft sm:text-base">
             <strong>Effective Date:</strong> 27 May 2026 |{" "}
             <strong>Last Updated:</strong> 27 May 2026
           </p>
         </header>
 
-        <div className="mt-8 space-y-8 rounded-lg border border-zinc-200 bg-white p-5 shadow-sm sm:p-8">
-          <p className="text-base leading-8 text-zinc-700">
+        <div className="mt-8 space-y-8 rounded-lg border border-line-light bg-parchment p-5 shadow-sm sm:p-8">
+          <p className="text-base leading-8 text-ink-soft">
             These Terms & Conditions govern all quotations, orders, supplies,
             and services issued or rendered by Inkarp Instruments Pvt. Ltd. and
             Inkarp Instruments Services (collectively, "Inkarp"). By requesting
@@ -190,20 +190,20 @@ export default function TermsAndConditions() {
           </p>
 
           {sections.map((section) => (
-            <article className="border-t border-zinc-100 pt-7" key={section.title}>
+            <article className="border-t border-line-light pt-7" key={section.title}>
               <h2 className="font-maxot text-xl text-[#E63946]">
                 {section.title}
               </h2>
 
               {section.body ? (
-                <p className="mt-3 text-base leading-8 text-zinc-700">
+                <p className="mt-3 text-base leading-8 text-ink-soft">
                   {section.body}
                 </p>
               ) : null}
 
               {section.paragraphs?.map((paragraph, index) => (
                 <p
-                  className="mt-3 text-base leading-8 text-zinc-700"
+                  className="mt-3 text-base leading-8 text-ink-soft"
                   key={`${section.title}-paragraph-${index}`}
                 >
                   {paragraph.map((line, lineIndex) => (
@@ -220,7 +220,7 @@ export default function TermsAndConditions() {
               ))}
 
               {section.items ? (
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-8 text-zinc-700 marker:text-[#BE0010]">
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-8 text-ink-soft marker:text-red">
                   {section.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}

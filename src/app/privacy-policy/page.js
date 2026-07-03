@@ -68,18 +68,18 @@ const sections = [
 
 export default function PrivacyPolicy() {
   return (
-    <main className="bg-white text-zinc-900">
+    <main className="bg-parchment text-ink">
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <header className="rounded-lg border border-zinc-200 bg-zinc-50 p-6 text-center shadow-sm sm:p-8">
+        <header className="rounded-lg border border-line-light bg-parchment-alt p-6 text-center shadow-sm sm:p-8">
           <h1 className="font-maxot text-3xl text-[#E63946] sm:text-4xl">
             Privacy Policy
           </h1>
         </header>
 
-        <div className="mt-8 space-y-8 rounded-lg border border-zinc-200 bg-white p-5 shadow-sm sm:p-8">
+        <div className="mt-8 space-y-8 rounded-lg border border-line-light bg-parchment p-5 shadow-sm sm:p-8">
           <article>
             <h2 className="font-maxot text-xl text-[#E63946]">Overview</h2>
-            <p className="mt-3 text-base leading-8 text-zinc-700">
+            <p className="mt-3 text-base leading-8 text-ink-soft">
               At Inkarp we are committed to protecting the privacy and
               security of our website visitors and customers. This Privacy
               Policy explains how we collect, use, and safeguard your
@@ -93,19 +93,19 @@ export default function PrivacyPolicy() {
           </article>
 
           {sections.map((section) => (
-            <article className="border-t border-zinc-100 pt-7" key={section.title}>
+            <article className="border-t border-line-light pt-7" key={section.title}>
               <h2 className="font-maxot text-xl text-[#E63946]">
                 {section.title}
               </h2>
 
               {section.body ? (
-                <p className="mt-3 text-base leading-8 text-zinc-700">
+                <p className="mt-3 text-base leading-8 text-ink-soft">
                   {section.body}
                 </p>
               ) : null}
 
               {section.items ? (
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-8 text-zinc-700 marker:text-[#BE0010]">
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-8 text-ink-soft marker:text-red">
                   {section.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}

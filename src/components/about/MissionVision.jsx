@@ -37,19 +37,19 @@ export default function MissionVision() {
 
           return (
             <article
-              className={`h-full rounded-lg border border-zinc-200 bg-white/85 p-6 text-center shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md ${
+              className={`h-full rounded-lg border border-line-light bg-parchment/85 p-6 text-center shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:shadow-md ${
                 pillar.featured ? "md:scale-[1.03] md:shadow-md" : ""
               }`}
               data-scroll-reveal="true"
               key={pillar.title}
             >
-              <div className="mx-auto mb-5 flex size-14 items-center justify-center rounded-full bg-gradient-to-r from-[#BE0010] to-[#E63946] text-white">
+              <div className="mx-auto mb-5 flex size-14 items-center justify-center rounded-full bg-gradient-to-r from-red to-[#E63946] text-parchment">
                 <Icon aria-hidden="true" className="size-6" />
               </div>
               <h3 className="font-maxot text-xl text-zinc-950">
                 {pillar.title}
               </h3>
-              <p className="mt-3 text-sm leading-7 text-zinc-700">
+              <p className="mt-3 text-sm leading-7 text-ink-soft">
                 {pillar.body}
               </p>
             </article>

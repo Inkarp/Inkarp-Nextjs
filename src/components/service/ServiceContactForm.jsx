@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 
 const inputClass =
-  "w-full rounded-full border border-zinc-200 bg-white px-5 py-3 text-zinc-900 outline-none transition focus:ring-2 focus:ring-[#E63946] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100";
+  "w-full rounded-full border border-line-light bg-parchment px-5 py-3 text-ink outline-none transition focus:ring-2 focus:ring-[#E63946] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100";
 
 function getInitialForm() {
   return {
@@ -91,7 +91,7 @@ export default function ServiceContactForm() {
         <h3 className="font-maxot mb-2 text-center text-2xl text-[#E63946]">
           Service &amp; Installation Request
         </h3>
-        <p className="mb-5 text-center text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="mb-5 text-center text-sm text-ink-soft dark:text-zinc-400">
           Fill out the form and our Service Team will get back to you shortly. Fields marked * are required.
         </p>
 
@@ -99,31 +99,31 @@ export default function ServiceContactForm() {
           {/* Left: contact info */}
           <div className="flex flex-col items-center rounded-2xl p-7">
             <div className="w-full">
-              <div className="flex flex-col items-center rounded-2xl border-l-4 border-[#BE0010] bg-gradient-to-b from-zinc-50 to-zinc-100 p-7 text-center shadow-lg dark:from-zinc-900 dark:to-zinc-950">
+              <div className="flex flex-col items-center rounded-2xl border-l-4 border-red bg-gradient-to-b from-zinc-50 to-zinc-100 p-7 text-center shadow-lg dark:from-zinc-900 dark:to-zinc-950">
                 <div className="mb-5 flex flex-col items-center gap-4">
                   <span className="inline-flex items-center gap-3 text-base">
-                    <MdEmail className="text-xl text-[#BE0010]" />
-                    <span className="font-maxot font-semibold text-[#BE0010]">Email:</span>
+                    <MdEmail className="text-xl text-red" />
+                    <span className="font-maxot font-semibold text-red">Email:</span>
                     <a
-                      className="text-zinc-700 underline transition hover:text-[#E63946] dark:text-zinc-200"
+                      className="text-ink-soft underline transition hover:text-[#E63946] dark:text-zinc-200"
                       href="mailto:service@inkarp.co.in"
                     >
                       service@inkarp.co.in
                     </a>
                   </span>
                   <span className="inline-flex items-center gap-3 text-base">
-                    <MdLocalPhone className="text-xl text-[#BE0010]" />
-                    <span className="font-maxot font-semibold text-[#BE0010]">Contact:</span>
+                    <MdLocalPhone className="text-xl text-red" />
+                    <span className="font-maxot font-semibold text-red">Contact:</span>
                     <a
-                      className="text-zinc-700 underline transition hover:text-[#E63946] dark:text-zinc-200"
+                      className="text-ink-soft underline transition hover:text-[#E63946] dark:text-zinc-200"
                       href="tel:+917330731315"
                     >
                       7330731315
                     </a>
                   </span>
                 </div>
-                <div className="mb-3 h-2 w-24 rounded-full bg-gradient-to-r from-[#BE0010] via-[#E63946] to-transparent opacity-60" />
-                <div className="text-xs italic text-zinc-500 dark:text-zinc-400">
+                <div className="mb-3 h-2 w-24 rounded-full bg-gradient-to-r from-red via-[#E63946] to-transparent opacity-60" />
+                <div className="text-xs italic text-ink-soft dark:text-zinc-400">
                   For urgent requests, call or email us directly.
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function ServiceContactForm() {
           </div>
 
           {/* Right: form */}
-          <div className="rounded-2xl border border-zinc-200 bg-white p-7 shadow dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="rounded-2xl border border-line-light bg-parchment p-7 shadow dark:border-zinc-800 dark:bg-zinc-900">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-4 md:flex-row">
                 <input
@@ -200,7 +200,7 @@ export default function ServiceContactForm() {
                   value={form.instrumentName}
                 />
                 <select
-                  className={`${inputClass} bg-white dark:bg-zinc-900`}
+                  className={`${inputClass} bg-parchment dark:bg-zinc-900`}
                   name="warranty"
                   onChange={handleChange}
                   required
@@ -232,7 +232,7 @@ export default function ServiceContactForm() {
               >
                 {isSubmitting ? (
                   <>
-                    <svg className="-ml-1 mr-2 size-5 animate-spin text-white" fill="none" viewBox="0 0 24 24">
+                    <svg className="-ml-1 mr-2 size-5 animate-spin text-parchment" fill="none" viewBox="0 0 24 24">
                       <circle
                         className="opacity-30"
                         cx="12"

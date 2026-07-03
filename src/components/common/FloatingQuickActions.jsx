@@ -44,7 +44,7 @@ export default function FloatingQuickActions() {
       {showThemeToggle ? (
         <button
           aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-          className="inline-flex size-12 items-center justify-center rounded-full bg-zinc-950 text-lg text-white shadow-lg shadow-zinc-900/15 transition hover:bg-[#BE0010] dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-[#BE0010] dark:hover:text-white"
+          className="inline-flex size-12 items-center justify-center rounded-full bg-navy text-lg text-parchment shadow-lg shadow-zinc-900/15 transition hover:bg-red dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-[#BE0010] dark:hover:text-white"
           onClick={toggleTheme}
           type="button"
         >
@@ -54,7 +54,7 @@ export default function FloatingQuickActions() {
 
       <a
         aria-label="Chat with Inkarp on WhatsApp"
-        className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-[#25D366] text-white shadow-lg shadow-zinc-900/15 transition hover:bg-[#1fb85a]"
+        className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-[#25D366] text-parchment shadow-lg shadow-zinc-900/15 transition hover:bg-[#1fb85a]"
         href={`https://wa.me/${whatsappNumber}`}
         rel="noreferrer"
         target="_blank"
@@ -69,7 +69,7 @@ export default function FloatingQuickActions() {
 
       <a
         aria-label="Call Inkarp"
-        className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-zinc-950 text-white shadow-lg shadow-zinc-900/15 transition hover:bg-[#BE0010]"
+        className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-navy text-parchment shadow-lg shadow-zinc-900/15 transition hover:bg-red"
         href={`tel:${phoneNumber}`}
       >
         <span className="inline-flex size-12 items-center justify-center text-xl">
@@ -89,7 +89,7 @@ export default function FloatingQuickActions() {
         }}
         type="button"
       >
-        <span className="flex size-11 flex-col items-center justify-center rounded-full bg-white text-zinc-950 transition hover:text-[#BE0010] dark:bg-zinc-900 dark:text-zinc-100">
+        <span className="flex size-11 flex-col items-center justify-center rounded-full bg-parchment text-zinc-950 transition hover:text-red dark:bg-zinc-900 dark:text-zinc-100">
           <FiArrowUp className="text-base" />
           <span className="text-[10px] font-bold leading-none">
             {scrollPercent}%

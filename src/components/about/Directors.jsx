@@ -59,9 +59,6 @@ function DirectorCard({ director, index }) {
         </div>
 
         <div className="flex flex-col p-4 sm:p-5">
-          <span className="hidden font-maxot text-4xl font-bold text-[#BE0010]/10 sm:block">
-            {String(index + 1).padStart(2, "0")}
-          </span>
 
           <h3 className="font-maxot mt-1 text-lg text-zinc-950 sm:text-xl">
             {director.name}

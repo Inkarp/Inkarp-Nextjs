@@ -42,12 +42,12 @@ function DirectorRow({ director, index }) {
 
   return (
     <article
-      className="relative grid items-center gap-6 border-b border-zinc-200 py-10 last:border-b-0 sm:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] lg:gap-10"
+      className="relative grid items-center gap-6 border-b border-line-light py-10 last:border-b-0 sm:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] lg:gap-10"
       data-scroll-reveal="true"
     >
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute -top-6 font-maxot text-7xl font-bold text-zinc-900/[0.04] sm:text-8xl ${
+        className={`pointer-events-none absolute -top-6 font-maxot text-7xl font-bold text-ink/[0.04] sm:text-8xl ${
           isReversed ? "right-0" : "left-0"
         }`}
       >
@@ -55,7 +55,7 @@ function DirectorRow({ director, index }) {
       </span>
 
       <div
-        className={`relative mx-auto aspect-square w-40 overflow-hidden rounded-2xl bg-zinc-50 shadow-md shadow-zinc-950/10 sm:mx-0 sm:w-full ${
+        className={`relative mx-auto aspect-square w-40 overflow-hidden rounded-2xl bg-parchment-alt shadow-md shadow-zinc-950/10 sm:mx-0 sm:w-full ${
           isReversed ? "sm:order-2" : ""
         }`}
       >
@@ -71,11 +71,11 @@ function DirectorRow({ director, index }) {
       <div className={`relative ${isReversed ? "sm:order-1 sm:text-right" : ""}`}>
         <FaQuoteLeft
           aria-hidden="true"
-          className={`text-xl text-[#BE0010]/20 ${
+          className={`text-xl text-red/20 ${
             isReversed ? "ml-auto" : ""
           }`}
         />
-        <p className="mt-3 text-sm leading-7 text-zinc-600 sm:text-base">
+        <p className="mt-3 text-sm leading-7 text-ink-soft sm:text-base">
           {director.message}
         </p>
 
@@ -86,7 +86,7 @@ function DirectorRow({ director, index }) {
         >
           <a
             aria-label={`${director.name} on LinkedIn`}
-            className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-zinc-200 bg-white text-blue-600 shadow-sm transition hover:border-blue-600 hover:text-blue-800"
+            className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-light bg-parchment text-blue-600 shadow-sm transition hover:border-blue-600 hover:text-blue-800"
             href={director.link}
             rel="noopener noreferrer"
             target="_blank"
@@ -97,7 +97,7 @@ function DirectorRow({ director, index }) {
             <h3 className="font-maxot text-lg text-zinc-950 sm:text-xl">
               {director.name}
             </h3>
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#BE0010]">
+            <p className="text-xs font-semibold uppercase tracking-wide text-red">
               {director.title}
             </p>
           </div>
@@ -109,7 +109,7 @@ function DirectorRow({ director, index }) {
 
 export default function DirectorsShowcase() {
   return (
-    <section className="relative bg-white px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <section className="relative bg-parchment px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           description="Meet the people steering operations, service, and growth across every region we serve."

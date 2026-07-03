@@ -26,8 +26,8 @@ export default function ServicePage() {
       </div>
 
       {/* Intro */}
-      <div className="mx-auto mb-8 w-[95%] rounded-xl border-l-4 border-[#E63946] bg-white p-3 shadow-sm dark:bg-zinc-900">
-        <p className="font-maxot text-lg leading-relaxed text-zinc-900 dark:text-zinc-100">
+      <div className="mx-auto mb-8 w-[95%] rounded-xl border-l-4 border-[#E63946] bg-parchment p-3 shadow-sm dark:bg-zinc-900">
+        <p className="font-maxot text-lg leading-relaxed text-ink dark:text-zinc-100">
           At Inkarp Instruments, service is more than just support — it is the
           backbone of our partnership with scientists, researchers, and
           industries across India. For over 40 years, we have delivered
@@ -46,7 +46,7 @@ export default function ServicePage() {
           partnership built on performance, reliability, and trust.
         </p>
 
-        <p className="mt-4 text-lg font-medium leading-relaxed text-zinc-800 dark:text-zinc-300">
+        <p className="mt-4 text-lg font-medium leading-relaxed text-ink dark:text-zinc-300">
           Below are the five major types of services we provide, each crafted
           to meet the real-world demands of laboratories and industries
           across India.

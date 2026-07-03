@@ -10,7 +10,7 @@ function PrincipalLogoTile({ logo, index }) {
   return (
     <Link
       aria-label={logo.name}
-      className="group flex h-20 items-center justify-center rounded-md border border-zinc-200 bg-zinc-50 px-3 py-2 shadow-sm shadow-zinc-950/5 transition duration-300 hover:-translate-y-1 hover:border-[#BE0010]/35 hover:bg-white hover:shadow-md hover:shadow-[#BE0010]/10 sm:h-24 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800"
+      className="group flex h-20 items-center justify-center rounded-md border border-line-light bg-parchment-alt px-3 py-2 shadow-sm shadow-zinc-950/5 transition duration-300 hover:-translate-y-1 hover:border-red/35 hover:bg-parchment hover:shadow-md hover:shadow-[#BE0010]/10 sm:h-24 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800"
       href={logo.href ?? "/products"}
     >
       <span className="relative h-full w-full">
@@ -31,7 +31,7 @@ function PrincipalLogoTile({ logo, index }) {
 function FrameDot({ className }) {
   return (
     <span
-      className={`absolute size-3 rounded-full bg-[#BE0010] shadow-sm shadow-[#BE0010]/30 ${className}`}
+      className={`absolute size-3 rounded-full bg-red shadow-sm shadow-[#BE0010]/30 ${className}`}
     />
   );
 }
@@ -43,21 +43,21 @@ export default function PrinciplesAlternate() {
 
       <div className="relative mx-auto max-w-6xl">
         <div className="mx-auto mb-8 flex max-w-3xl flex-col items-center text-center">
-          <span className="mb-3 rounded-full border border-[#BE0010]/25 bg-white px-4 py-1 text-xs font-semibold uppercase text-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+          <span className="mb-3 rounded-full border border-red/25 bg-parchment px-4 py-1 text-xs font-semibold uppercase text-ink dark:bg-zinc-900 dark:text-zinc-100">
             Our Principals
           </span>
-          <h2 className="font-maxot text-2xl leading-tight text-[#BE0010] sm:text-3xl">
+          <h2 className="font-maxot text-2xl leading-tight text-red sm:text-3xl">
             Strategic Alliances with Global Scientific Leaders
           </h2>
         </div>
 
         <div className="mx-auto w-full">
-          <div className="relative rounded-2xl bg-white px-4 pb-5 pt-14 shadow-2xl shadow-zinc-950/10 sm:px-6 sm:pb-8 sm:pt-16 lg:px-10 dark:bg-zinc-900">
+          <div className="relative rounded-2xl bg-parchment px-4 pb-5 pt-14 shadow-2xl shadow-zinc-950/10 sm:px-6 sm:pb-8 sm:pt-16 lg:px-10 dark:bg-zinc-900">
             {/* <div className="absolute left-1/2 top-11 hidden h-px w-[82%] -translate-x-1/2 bg-zinc-300 sm:block" />
             <span className="absolute left-[9%] top-[38px] hidden size-3 rounded-full bg-[#BE0010] sm:block" />
             <span className="absolute right-[9%] top-[38px] hidden size-3 rounded-full bg-[#BE0010] sm:block" /> */}
 
-            <div className="absolute left-1/2 top-5 z-20 flex h-16 w-32 -translate-x-1/2 items-center justify-center rounded-lg border border-zinc-200 bg-white p-3 shadow-lg shadow-zinc-950/10 sm:h-20 sm:w-40 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="absolute left-1/2 top-5 z-20 flex h-16 w-32 -translate-x-1/2 items-center justify-center rounded-lg border border-line-light bg-parchment p-3 shadow-lg shadow-zinc-950/10 sm:h-20 sm:w-40 dark:border-zinc-800 dark:bg-zinc-900">
               <Image
                 alt="Inkarp"
                 className="object-contain p-1"

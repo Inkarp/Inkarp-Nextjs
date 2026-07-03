@@ -71,7 +71,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
       </nav> */}
 
       <div
-        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl rounded-md border border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-900/95 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur transition ${
+        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl rounded-md border border-line-light dark:border-zinc-800 bg-parchment/95 dark:bg-zinc-900/95 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur transition ${
           shouldShowSticky
             ? "translate-y-0 opacity-100"
             : "pointer-events-none translate-y-6 opacity-0"
@@ -79,7 +79,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#BE0010]">
+            <p className="text-xs font-semibold uppercase tracking-wide text-red">
               Need help configuring it?
             </p>
             <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">
@@ -88,7 +88,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
           </div>
           <div className="flex items-center gap-2">
             <button
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[#BE0010] px-4 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
               onClick={() => scrollToSection("booking")}
               type="button"
             >
@@ -96,7 +96,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             </button>
             <button
               aria-label="Dismiss sticky product CTA"
-              className="inline-flex size-10 items-center justify-center rounded-md border border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400 transition hover:border-[#BE0010] hover:text-[#BE0010]"
+              className="inline-flex size-10 items-center justify-center rounded-md border border-line-light dark:border-zinc-700 text-ink-soft dark:text-zinc-400 transition hover:border-red hover:text-red"
               onClick={() => setStickyDismissed(true)}
               type="button"
             >

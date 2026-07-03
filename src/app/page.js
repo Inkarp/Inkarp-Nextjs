@@ -4,6 +4,10 @@ import ClientReviews from "@/components/home/ClientReviews";
 import Companies from "@/components/home/Companies";
 import CompaniesAlternate from "@/components/home/CompaniesAlternate";
 import HeroSection from "@/components/home/HeroSection";
+import HomeAboutHero from "@/components/home/HomeAboutHero";
+import HomeAchievements from "@/components/home/HomeAchievements";
+import HomeShowcaseSlider from "@/components/home/HomeShowcaseSlider";
+import HomeWorkflows from "@/components/home/HomeWorkflows";
 import OrderServiceSteps from "@/components/home/OrderServiceSteps";
 import PickProduct from "@/components/home/PickProduct";
 import Principles from "@/components/home/Principles";
@@ -19,20 +23,24 @@ export default function Home() {
     <main>
       <BreadcrumbJsonLd path="/" />
       {/* Mobile / tablet: plain hero, no scroll animation */}
-      <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         <HeroSection />
-      </div>
+      </div> */}
       {/* Desktop: full scroll-push animation */}
-      <Testing />
-      <AboutUs />
-      <PickProduct />
-      <CompaniesAlternate />
-      <Companies />
-      <PrinciplesAlternate />
-      <Principles />
-      <OrderServiceSteps />
+      {/* <Testing />
+      <AboutUs /> */}
+      {/* <PickProduct /> */}
+      {/* <CompaniesAlternate />
+      <Companies /> */}
+      {/* <PrinciplesAlternate /> */}  
+      {/* <OrderServiceSteps />
       <TrustedClients />
-      <ClientReviews />
+      <ClientReviews /> */}
+      <HomeAboutHero />
+      <HomeWorkflows />
+      <HomeShowcaseSlider />
+      <HomeAchievements />
+      <Principles />     
     </main>
   );
 }

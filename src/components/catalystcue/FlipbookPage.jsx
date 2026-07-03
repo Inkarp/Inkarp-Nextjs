@@ -177,31 +177,31 @@ function MobileMagazineReader({ file, title }) {
   };
 
   return (
-    <div className="flex h-full min-h-0 w-full flex-col bg-black/20">
+    <div className="flex h-full min-h-0 w-full flex-col bg-navy/20">
       <div
         className="min-h-0 flex-1 overflow-y-auto px-3 py-4"
         ref={stageRef}
       >
         <div className="mx-auto flex min-h-full w-full items-start justify-center">
           {error ? (
-            <div className="mt-10 rounded-lg bg-black/70 px-4 py-3 text-sm text-white/80">
+            <div className="mt-10 rounded-lg bg-navy/70 px-4 py-3 text-sm text-parchment/80">
               {error}
             </div>
           ) : null}
           {!error ? (
             <canvas
               aria-label={`${title} page ${pageNumber}`}
-              className="block max-w-full bg-white shadow-2xl shadow-black/40"
+              className="block max-w-full bg-parchment shadow-2xl shadow-black/40"
               ref={canvasRef}
             />
           ) : null}
         </div>
       </div>
 
-      <div className="relative z-20 flex min-h-[64px] items-center justify-between gap-3 border-t border-white/10 bg-black/75 px-3 py-2 backdrop-blur">
+      <div className="relative z-20 flex min-h-[64px] items-center justify-between gap-3 border-t border-white/10 bg-navy/75 px-3 py-2 backdrop-blur">
         <button
           aria-label="Previous page"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-white disabled:opacity-35"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-parchment/10 text-2xl text-parchment disabled:opacity-35"
           disabled={pageNumber <= 1 || loading}
           onClick={goToPrevious}
           type="button"
@@ -209,16 +209,16 @@ function MobileMagazineReader({ file, title }) {
           &#8249;
         </button>
         <div className="min-w-0 text-center">
-          <p className="font-maxot text-sm font-semibold text-white">
+          <p className="font-maxot text-sm font-semibold text-parchment">
             {loading ? "Loading..." : `${pageNumber} / ${pageCount || "-"}`}
           </p>
-          <p className="mt-0.5 text-[11px] uppercase tracking-wide text-white/50">
+          <p className="mt-0.5 text-[11px] uppercase tracking-wide text-parchment/50">
             Mobile Reader
           </p>
         </div>
         <button
           aria-label="Next page"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-white/10 text-2xl text-white disabled:opacity-35"
+          className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-parchment/10 text-2xl text-parchment disabled:opacity-35"
           disabled={!pageCount || pageNumber >= pageCount || loading}
           onClick={goToNext}
           type="button"
@@ -436,7 +436,7 @@ export default function FlipbookPage({ file, title }) {
 
   const content = (
     <main
-      className="fixed inset-0 z-[9999] flex flex-col bg-black text-white"
+      className="fixed inset-0 z-[9999] flex flex-col bg-navy text-parchment"
       id="flipbook-page"
       style={{
         backgroundImage: "url('/assets/catalyst/BgCatalyst.jpg')",
@@ -447,7 +447,7 @@ export default function FlipbookPage({ file, title }) {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-black/35"
+        className="pointer-events-none absolute inset-0 bg-navy/35"
       />
 
       <style jsx global>{`
@@ -505,23 +505,23 @@ export default function FlipbookPage({ file, title }) {
       `}</style>
 
       {err ? (
-        <div className="pointer-events-none absolute left-4 top-24 z-20 rounded-md bg-black/70 px-3 py-2 text-xs text-white/80">
+        <div className="pointer-events-none absolute left-4 top-24 z-20 rounded-md bg-navy/70 px-3 py-2 text-xs text-parchment/80">
           {err}
         </div>
       ) : null}
 
-      <div className="relative z-20 grid min-h-[60px] grid-cols-[auto_1fr] items-center gap-3 border-b border-white/10 bg-black/70 px-3 py-2 shadow-lg shadow-black/30 backdrop-blur sm:grid-cols-[auto_1fr_auto] sm:px-6">
+      <div className="relative z-20 grid min-h-[60px] grid-cols-[auto_1fr] items-center gap-3 border-b border-white/10 bg-navy/70 px-3 py-2 shadow-lg shadow-black/30 backdrop-blur sm:grid-cols-[auto_1fr_auto] sm:px-6">
         <a
-          className="inline-flex h-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 px-3 text-sm font-semibold text-white transition hover:bg-white hover:text-zinc-950 sm:px-4"
+          className="inline-flex h-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-parchment/10 px-3 text-sm font-semibold text-parchment transition hover:bg-parchment hover:text-zinc-950 sm:px-4"
           href="/magazine"
         >
           Back
         </a>
         <div className="min-w-0 text-center sm:pr-[72px]">
-          <p className="font-maxot text-[11px] uppercase tracking-wide text-white/60 sm:text-xs">
+          <p className="font-maxot text-[11px] uppercase tracking-wide text-parchment/60 sm:text-xs">
             Magazine
           </p>
-          <h1 className="truncate font-maxot text-sm font-semibold text-white sm:text-lg">
+          <h1 className="truncate font-maxot text-sm font-semibold text-parchment sm:text-lg">
             {title}
           </h1>
         </div>

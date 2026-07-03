@@ -9,8 +9,8 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-zinc-950 px-6 text-white">
-      <div className="max-w-md rounded-lg border border-red-400/20 bg-white/5 p-6">
+    <main className="flex min-h-screen items-center justify-center bg-navy px-6 text-parchment">
+      <div className="max-w-md rounded-lg border border-red-400/20 bg-parchment/5 p-6">
         <MdOutlineErrorOutline className="mb-4 text-4xl text-red-300" />
         <h1 className="text-2xl font-semibold">Something went wrong</h1>
         <p className="mt-3 text-sm leading-6 text-zinc-300">

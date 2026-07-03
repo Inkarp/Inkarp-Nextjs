@@ -50,15 +50,15 @@ export default function CustomerReviews({ reviews = [] }) {
       : reviews.filter((review) => review.category === activeFilter);
 
   return (
-    <section className="border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+    <section className="border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto max-w-7xl">
-        <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">
+        <p className="text-xs font-semibold uppercase tracking-widest text-ink-soft dark:text-zinc-500">
           Section 08 — Customer Reviews
         </p>
         <h2 className="font-maxot mt-2 text-2xl font-bold leading-tight text-zinc-950 sm:text-3xl dark:text-zinc-100">
           What Indian labs are saying
         </h2>
-        <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-600 sm:text-base dark:text-zinc-400">
+        <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft sm:text-base dark:text-zinc-400">
           Filter by your industry to find relevant experiences from labs across India.
         </p>
 
@@ -67,8 +67,8 @@ export default function CustomerReviews({ reviews = [] }) {
             <button
               className={`inline-flex h-9 items-center justify-center rounded-full border px-4 text-sm font-semibold transition ${
                 activeFilter === filter
-                  ? 'border-[#BE0010] bg-[#BE0010] text-white'
-                  : 'border-zinc-200 bg-white text-zinc-700 hover:border-[#BE0010]/40 hover:text-[#BE0010] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200'
+                  ? 'border-red bg-red text-parchment'
+                  : 'border-line-light bg-parchment text-ink-soft hover:border-red/40 hover:text-red dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200'
               }`}
               key={filter}
               onClick={() => setActiveFilter(filter)}
@@ -83,13 +83,13 @@ export default function CustomerReviews({ reviews = [] }) {
           {visibleReviews.map((review) => {
             const style = CATEGORY_STYLES[review.category] ?? {
               badge: review.category,
-              badgeClass: 'bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300',
-              avatarClass: 'bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300',
+              badgeClass: 'bg-parchment-alt text-ink-soft dark:bg-zinc-800 dark:text-zinc-300',
+              avatarClass: 'bg-parchment-alt text-ink-soft dark:bg-zinc-800 dark:text-zinc-300',
             };
 
             return (
               <article
-                className="flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
+                className="flex flex-col rounded-xl border border-line-light bg-parchment p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
                 key={`${review.name}-${review.location}`}
               >
                 <div className="flex items-center justify-between">
@@ -108,7 +108,7 @@ export default function CustomerReviews({ reviews = [] }) {
                   </span>
                 </div>
 
-                <p className="mt-4 flex-1 text-sm italic leading-7 text-zinc-700 dark:text-zinc-300">
+                <p className="mt-4 flex-1 text-sm italic leading-7 text-ink-soft dark:text-zinc-300">
                   &ldquo;{review.quote}&rdquo;
                 </p>
 
@@ -122,7 +122,7 @@ export default function CustomerReviews({ reviews = [] }) {
                     <p className="text-sm font-bold text-zinc-950 dark:text-zinc-100">
                       {review.name}
                     </p>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                    <p className="text-xs text-ink-soft dark:text-zinc-400">
                       {review.role} · {review.location}
                     </p>
                   </div>

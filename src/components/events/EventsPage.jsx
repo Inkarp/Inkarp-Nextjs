@@ -32,7 +32,7 @@ export default function EventsPage() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
           <span
-            className="font-maxot inline-flex rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-zinc-800 md:text-sm dark:bg-zinc-900 dark:text-zinc-100"
+            className="font-maxot inline-flex rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs font-semibold uppercase text-ink md:text-sm dark:bg-zinc-900 dark:text-zinc-100"
             data-reveal
           >
             On the Road
@@ -44,7 +44,7 @@ export default function EventsPage() {
             Meet Us at Industry Events
           </h1>
           <p
-            className="mx-auto mt-3 max-w-2xl text-base text-zinc-700 sm:text-lg dark:text-zinc-300"
+            className="mx-auto mt-3 max-w-2xl text-base text-ink-soft sm:text-lg dark:text-zinc-300"
             data-reveal
           >
             Catch our team and instrument demos at exhibitions, conferences,
@@ -56,7 +56,7 @@ export default function EventsPage() {
       {spotlightEvent ? (
         <section className="mx-auto max-w-5xl px-4 pb-4 sm:px-6 lg:px-8">
           <div
-            className="relative overflow-hidden rounded-3xl bg-[#0F2A33] text-white shadow-2xl"
+            className="relative overflow-hidden rounded-3xl bg-[#0F2A33] text-parchment shadow-2xl"
             data-reveal
           >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_90%_-10%,rgba(230,57,70,0.35),transparent)]" />
@@ -90,7 +90,7 @@ export default function EventsPage() {
               </div>
 
               <div className="flex shrink-0 flex-col items-center gap-3">
-                <div className="relative flex size-28 items-center justify-center rounded-full border-4 border-[#E63946] bg-white/5 sm:size-32">
+                <div className="relative flex size-28 items-center justify-center rounded-full border-4 border-[#E63946] bg-parchment/5 sm:size-32">
                   <div className="text-center">
                     <p className="font-maxot text-3xl leading-none sm:text-4xl">
                       {Math.max(getDaysToStart(spotlightEvent), 0)}
@@ -152,14 +152,14 @@ export default function EventsPage() {
                     <button
                       className={`group inline-block w-full rounded-2xl border p-5 text-left transition hover:-translate-y-0.5 hover:shadow-lg ${
                         status === "past"
-                          ? "border-zinc-200 bg-zinc-50 opacity-70 dark:border-zinc-800 dark:bg-zinc-900/60"
-                          : "border-zinc-200 bg-white shadow-sm dark:border-zinc-700 dark:bg-zinc-900"
+                          ? "border-line-light bg-parchment-alt opacity-70 dark:border-zinc-800 dark:bg-zinc-900/60"
+                          : "border-line-light bg-parchment shadow-sm dark:border-zinc-700 dark:bg-zinc-900"
                       } ${alignRight ? "text-left" : "sm:text-right"}`}
                       onClick={() => setSelectedEvent(event)}
                       type="button"
                     >
                       <div
-                        className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 ${
+                        className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400 ${
                           alignRight ? "" : "sm:justify-end"
                         }`}
                       >
@@ -177,12 +177,12 @@ export default function EventsPage() {
                         <span>{formatDateRange(event)}</span>
                       </div>
 
-                      <h3 className="font-maxot mt-2 text-lg text-zinc-900 group-hover:text-[#E63946] dark:text-zinc-100">
+                      <h3 className="font-maxot mt-2 text-lg text-ink group-hover:text-[#E63946] dark:text-zinc-100">
                         {event.title}
                       </h3>
 
                       <p
-                        className={`mt-1 flex items-center gap-1.5 text-sm text-zinc-600 dark:text-zinc-400 ${
+                        className={`mt-1 flex items-center gap-1.5 text-sm text-ink-soft dark:text-zinc-400 ${
                           alignRight ? "" : "sm:justify-end"
                         }`}
                       >
@@ -201,12 +201,12 @@ export default function EventsPage() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-6 text-center sm:px-6 lg:px-8">
-        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-sm text-ink-soft dark:text-zinc-400">
           Want to schedule a dedicated meeting with our team at any of these
           events?
         </p>
         <Link
-          className="font-maxot mt-3 inline-flex items-center gap-2 rounded-full border border-[#E63946] px-6 py-3 text-sm text-[#E63946] transition hover:bg-[#E63946] hover:text-white"
+          className="font-maxot mt-3 inline-flex items-center gap-2 rounded-full border border-[#E63946] px-6 py-3 text-sm text-[#E63946] transition hover:bg-[#E63946] hover:text-parchment"
           href="/contact"
         >
           Get in Touch
@@ -216,10 +216,10 @@ export default function EventsPage() {
 
       {selectedEvent ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg dark:bg-zinc-900">
+          <div className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-parchment p-6 shadow-lg dark:bg-zinc-900">
             <button
               aria-label="Close event details"
-              className="absolute right-4 top-4 text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white"
+              className="absolute right-4 top-4 text-ink-soft hover:text-black dark:text-zinc-400 dark:hover:text-white"
               onClick={() => setSelectedEvent(null)}
               type="button"
             >
@@ -227,7 +227,7 @@ export default function EventsPage() {
             </button>
 
             <div className="flex items-center gap-3">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-zinc-50 p-2 dark:bg-zinc-800">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-parchment-alt p-2 dark:bg-zinc-800">
                 <Image
                   alt=""
                   className="h-full w-full object-contain"
@@ -240,13 +240,13 @@ export default function EventsPage() {
                 <p className="text-xs font-semibold uppercase tracking-wide text-[#E63946]">
                   {selectedEvent.type}
                 </p>
-                <h3 className="font-maxot text-lg text-zinc-900 dark:text-zinc-100">
+                <h3 className="font-maxot text-lg text-ink dark:text-zinc-100">
                   {selectedEvent.title}
                 </h3>
               </div>
             </div>
 
-            <div className="mt-4 space-y-1 rounded-xl bg-zinc-50 p-4 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
+            <div className="mt-4 space-y-1 rounded-xl bg-parchment-alt p-4 text-sm text-ink-soft dark:bg-zinc-800 dark:text-zinc-300">
               <p className="flex items-center gap-2">
                 <FiCalendar className="size-4 shrink-0 text-[#E63946]" />
                 {formatDateRange(selectedEvent)}
@@ -256,18 +256,18 @@ export default function EventsPage() {
                 {selectedEvent.venue}, {selectedEvent.city}
               </p>
               {selectedEvent.boothNo ? (
-                <p className="pl-6 text-xs text-zinc-500 dark:text-zinc-400">
+                <p className="pl-6 text-xs text-ink-soft dark:text-zinc-400">
                   {selectedEvent.boothNo}
                 </p>
               ) : null}
             </div>
 
-            <p className="mt-4 text-sm text-zinc-700 dark:text-zinc-300">
+            <p className="mt-4 text-sm text-ink-soft dark:text-zinc-300">
               {selectedEvent.description}
             </p>
 
             {selectedEvent.highlights?.length ? (
-              <ul className="mt-4 space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
+              <ul className="mt-4 space-y-2 text-sm text-ink-soft dark:text-zinc-300">
                 {selectedEvent.highlights.map((highlight) => (
                   <li className="flex items-start gap-2" key={highlight}>
                     <FiCheck className="mt-0.5 size-4 shrink-0 text-green-600" />
@@ -278,7 +278,7 @@ export default function EventsPage() {
             ) : null}
 
             <Link
-              className="font-maxot mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#BE0010] px-5 py-3 text-sm text-white transition hover:bg-[#E63946]"
+              className="font-maxot mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-red px-5 py-3 text-sm text-parchment transition hover:bg-[#E63946]"
               href="/contact"
             >
               Schedule a Meeting

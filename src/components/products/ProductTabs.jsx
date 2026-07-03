@@ -27,16 +27,16 @@ function getTextHeading(text) {
 
 function EmptyState({ icon: Icon, text }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-900 px-6 py-16 text-center">
+    <div className="flex flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-zinc-300 dark:border-zinc-700 bg-parchment-alt dark:bg-zinc-900 px-6 py-16 text-center">
       <Icon className="text-3xl text-zinc-300 dark:text-zinc-600" />
-      <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400">{text}</p>
+      <p className="text-sm font-medium text-ink-soft dark:text-zinc-400">{text}</p>
     </div>
   );
 }
 
 function ExpandableItem({ badge, body, heading, itemKey, onToggle, open }) {
   return (
-    <article className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 transition hover:border-[#BE0010]/35 hover:shadow-sm">
+    <article className="overflow-hidden rounded-xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 transition hover:border-red/35 hover:shadow-sm">
       <button
         aria-expanded={open}
         className="flex w-full items-center justify-between gap-4 p-4 text-left"
@@ -44,7 +44,7 @@ function ExpandableItem({ badge, body, heading, itemKey, onToggle, open }) {
         type="button"
       >
         <span className="flex items-center gap-3">
-          <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-[#BE0010]/10 text-xs font-bold text-[#BE0010]">
+          <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-red/10 text-xs font-bold text-red">
             {badge}
           </span>
           <span className="font-maxot text-base font-bold leading-6 text-zinc-950 dark:text-zinc-100">
@@ -53,7 +53,7 @@ function ExpandableItem({ badge, body, heading, itemKey, onToggle, open }) {
         </span>
         <FiChevronDown
           className={`shrink-0 text-lg text-zinc-400 dark:text-zinc-500 transition-transform duration-300 ${
-            open ? "rotate-180 text-[#BE0010]" : ""
+            open ? "rotate-180 text-red" : ""
           }`}
         />
       </button>
@@ -64,7 +64,7 @@ function ExpandableItem({ badge, body, heading, itemKey, onToggle, open }) {
         }`}
       >
         <div className="min-h-0">
-          <p className="border-t border-zinc-100 dark:border-zinc-800 px-4 pb-4 pt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+          <p className="border-t border-line-light dark:border-zinc-800 px-4 pb-4 pt-3 text-sm leading-6 text-ink-soft dark:text-zinc-400">
             {body}
           </p>
         </div>
@@ -108,8 +108,8 @@ export default function ProductTabs({ technicalSpecs, features, applications, fa
               aria-selected={isActive}
               className={`flex shrink-0 items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-semibold transition sm:px-5 ${
                 isActive
-                  ? "border-[#BE0010] bg-[#BE0010]/5 text-[#BE0010]"
-                  : "border-transparent text-zinc-500 dark:text-zinc-400 hover:border-zinc-200 dark:hover:border-zinc-700 hover:text-zinc-900 dark:hover:text-zinc-100"
+                  ? "border-red bg-red/5 text-red"
+                  : "border-transparent text-ink-soft dark:text-zinc-400 hover:border-line-light dark:hover:border-zinc-700 hover:text-ink dark:hover:text-zinc-100"
               }`}
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -123,19 +123,19 @@ export default function ProductTabs({ technicalSpecs, features, applications, fa
         })}
       </div>
 
-      <div className="mt-4 w-full rounded-xl border border-[#BE0010]/30 bg-white dark:bg-zinc-900 p-4 sm:p-6">
+      <div className="mt-4 w-full rounded-xl border border-red/30 bg-parchment dark:bg-zinc-900 p-4 sm:p-6">
         {activeTab === "Specifications" ? (
           (technicalSpecs ?? []).length > 0 ? (
             <dl className="grid gap-3 sm:grid-cols-2">
               {(technicalSpecs ?? []).map((spec) => (
                 <div
-                  className="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/70 dark:bg-zinc-800/70 p-4 transition hover:border-[#BE0010]/30 hover:bg-white dark:hover:bg-zinc-900"
+                  className="rounded-lg border border-line-light dark:border-zinc-800 bg-parchment-alt/70 dark:bg-zinc-800/70 p-4 transition hover:border-red/30 hover:bg-parchment dark:hover:bg-zinc-900"
                   key={spec.label}
                 >
-                  <dt className="text-xs font-semibold uppercase tracking-wide text-zinc-400 dark:text-zinc-500">
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-500">
                     {spec.label}
                   </dt>
-                  <dd className="mt-1 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  <dd className="mt-1 text-sm font-semibold text-ink dark:text-zinc-100">
                     {spec.value}
                   </dd>
                 </div>

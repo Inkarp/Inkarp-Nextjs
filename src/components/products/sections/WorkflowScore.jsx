@@ -77,7 +77,7 @@ export default function WorkflowScore({ data }) {
   };
 
   return (
-    <section id="workflow-score" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id="workflow-score" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="10"
@@ -94,8 +94,8 @@ export default function WorkflowScore({ data }) {
                 <button
                   className={`flex min-h-14 w-full items-center gap-4 rounded-2xl border px-5 py-3 text-left transition ${
                     isSelected
-                      ? 'border-[#BE0010] bg-[#BE0010]/5 text-black dark:text-zinc-100'
-                      : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400'
+                      ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                      : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400'
                   }`}
                   key={step.label}
                   onClick={() => toggleStep(index)}
@@ -103,8 +103,8 @@ export default function WorkflowScore({ data }) {
                 >
                   <span className={`flex size-7 shrink-0 items-center justify-center rounded-lg border text-sm ${
                     isSelected
-                      ? 'border-[#BE0010] bg-[#BE0010] text-white'
-                      : 'border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-black dark:text-zinc-100'
+                      ? 'border-red bg-red text-parchment'
+                      : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100'
                   }`}
                   >
                     {isSelected ? <FiCheck /> : <FiPlus />}
@@ -115,7 +115,7 @@ export default function WorkflowScore({ data }) {
             })}
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
+          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <ScoreRing percent={percent} />
               <p className="max-w-xs text-base leading-7 text-black dark:text-zinc-400">
@@ -131,12 +131,12 @@ export default function WorkflowScore({ data }) {
                     <div className="text-sm leading-6" key={step.label}>
                       <p className="font-bold text-black dark:text-zinc-100">{step.label}</p>
                       <p className="text-zinc-400 dark:text-zinc-500">Manually: {step.manual}</p>
-                      <p className="font-semibold text-[#BE0010]">With Hei-VAP Core: {makeCoreCopy(step.core)}</p>
+                      <p className="font-semibold text-red">With Hei-VAP Core: {makeCoreCopy(step.core)}</p>
                     </div>
                   ))}
                 </div>
               ) : (
-                <div className="mt-4 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 p-6 text-center">
+                <div className="mt-4 rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 p-6 text-center">
                   <FiTarget className="mx-auto mb-3 text-zinc-300 dark:text-zinc-600" size={36} />
                   <p className="text-sm leading-6 text-zinc-400 dark:text-zinc-500">
                     Select one or more manual steps to see the matched Hei-VAP Core improvement.
@@ -149,8 +149,8 @@ export default function WorkflowScore({ data }) {
               {benefits.map(({ icon, label }) => {
                 const Icon = ICON_MAP[icon];
                 return (
-                  <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
-                    {Icon && <Icon className="text-[#BE0010]" />}
+                  <span className="inline-flex items-center gap-2 rounded-full border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
+                    {Icon && <Icon className="text-red" />}
                     {label}
                   </span>
                 );
@@ -158,7 +158,7 @@ export default function WorkflowScore({ data }) {
             </div>
 
             <button
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-4 py-2 text-sm font-semibold text-black dark:text-zinc-100 transition hover:bg-zinc-50 dark:hover:bg-zinc-800"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-line-light dark:border-zinc-800 px-4 py-2 text-sm font-semibold text-black dark:text-zinc-100 transition hover:bg-parchment-alt dark:hover:bg-zinc-800"
               onClick={() => setSelected([])}
               type="button"
             >
@@ -167,7 +167,7 @@ export default function WorkflowScore({ data }) {
             </button>
 
             <a
-              className="mt-4 flex h-12 w-full items-center justify-center rounded-full bg-[#BE0010] px-6 text-sm font-semibold text-white transition hover:bg-[#9f000d]"
+              className="mt-4 flex h-12 w-full items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
               href="#booking"
             >
               Map my evaporation workflow with an expert

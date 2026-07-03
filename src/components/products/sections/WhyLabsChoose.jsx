@@ -20,7 +20,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
     "Concrete, capability-based benefits drawn from the product's real specifications - not customer testimonials. Ask Inkarp for verifiable references in your field.";
 
   return (
-    <section id="benefits" className="scroll-mt-16 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
+    <section id="benefits" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
         <span
           aria-hidden
@@ -31,7 +31,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
 
         <div className="relative mb-8 max-w-3xl">
           <p className="font-maxot flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-black dark:text-zinc-100">
-            <span className="inline-block size-2 rounded-full bg-[#BE0010]" />
+            <span className="inline-block size-2 rounded-full bg-red" />
             Why labs choose it
           </p>
           <h2 className="font-maxot mt-4 text-3xl font-bold leading-tight text-black dark:text-zinc-100 sm:text-4xl">
@@ -50,17 +50,17 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
 
             return (
               <article
-                className="group relative flex min-h-[278px] flex-col overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 transition hover:border-[#BE0010]/25 hover:shadow-lg hover:shadow-zinc-900/5"
+                className="group relative flex min-h-[278px] flex-col overflow-hidden rounded-lg border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 transition hover:border-red/25 hover:shadow-lg hover:shadow-zinc-900/5"
                 key={c.title}
               >
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute right-5 top-1 font-serif text-7xl font-bold leading-none text-zinc-100 dark:text-zinc-800 transition group-hover:text-[#BE0010]/10"
+                  className="pointer-events-none absolute right-5 top-1 font-serif text-7xl font-bold leading-none text-zinc-100 dark:text-zinc-800 transition group-hover:text-red/10"
                 >
                   &ldquo;
                 </span>
 
-                <div className="relative inline-flex size-12 items-center justify-center rounded-lg border border-[#BE0010]/20 bg-[#fff3f4] text-[#BE0010]">
+                <div className="relative inline-flex size-12 items-center justify-center rounded-lg border border-red/20 bg-[#fff3f4] text-red">
                   <Icon className="size-5" />
                 </div>
 
@@ -76,8 +76,8 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
                 <div
                   className={`relative mt-auto flex h-7 items-center rounded-full px-3 text-xs font-bold ${
                     isAccent
-                      ? 'bg-[#fff0f1] text-[#BE0010]'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-black dark:text-zinc-100'
+                      ? 'bg-[#fff0f1] text-red'
+                      : 'bg-parchment-alt dark:bg-zinc-800 text-black dark:text-zinc-100'
                   }`}
                 >
                   {tag}

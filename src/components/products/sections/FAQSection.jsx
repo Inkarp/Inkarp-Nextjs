@@ -38,7 +38,7 @@ export default function FAQSection({ faqs = [] }) {
   });
 
   return (
-    <section id="faq" className="scroll-mt-16 border-b border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
+    <section id="faq" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="18"
@@ -53,7 +53,7 @@ export default function FAQSection({ faqs = [] }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
-              className="w-full rounded-full border border-zinc-200 bg-zinc-50 py-2.5 pl-9 pr-4 text-sm text-black placeholder:text-black focus:border-[#BE0010] focus:outline-none focus:ring-2 focus:ring-[#BE0010]/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
+              className="w-full rounded-full border border-line-light bg-parchment-alt py-2.5 pl-9 pr-4 text-sm text-black placeholder:text-black focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder:text-zinc-400"
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search questions..."
               type="search"
@@ -64,7 +64,7 @@ export default function FAQSection({ faqs = [] }) {
           <div className="flex flex-wrap gap-2">
             {CATEGORIES.map((item) => (
               <button
-                className={`rounded-full border px-3 py-2 text-xs font-semibold transition ${category === item.key ? 'border-[#BE0010] bg-[#BE0010] text-white' : 'border-zinc-200 bg-white text-black hover:border-zinc-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:text-zinc-100'}`}
+                className={`rounded-full border px-3 py-2 text-xs font-semibold transition ${category === item.key ? 'border-red bg-red text-parchment' : 'border-line-light bg-parchment text-black hover:border-zinc-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:text-zinc-100'}`}
                 key={item.key}
                 onClick={() => { setCategory(item.key); setOpen(null); }}
                 type="button"
@@ -80,24 +80,24 @@ export default function FAQSection({ faqs = [] }) {
             const faqId = `${faq.category}-${faq.question}`;
             const isOpen = open === faqId;
             return (
-              <div className={`rounded-xl border transition ${isOpen ? 'border-[#BE0010]/30 bg-[#BE0010]/5' : 'border-zinc-200 bg-white hover:border-[#BE0010]/20 dark:border-zinc-800 dark:bg-zinc-900'}`} key={faqId}>
+              <div className={`rounded-xl border transition ${isOpen ? 'border-red/30 bg-red/5' : 'border-line-light bg-parchment hover:border-red/20 dark:border-zinc-800 dark:bg-zinc-900'}`} key={faqId}>
                 <button className="flex w-full items-start justify-between px-5 py-4 text-left" onClick={() => setOpen(isOpen ? null : faqId)} type="button">
                   <span className="pr-4 text-sm font-semibold text-black dark:text-zinc-100">{faq.question}</span>
-                  <span className={`flex size-6 shrink-0 items-center justify-center rounded-full text-sm font-bold transition ${isOpen ? 'bg-[#BE0010] text-white' : 'bg-zinc-100 text-black dark:bg-zinc-800 dark:text-zinc-100'}`}>
+                  <span className={`flex size-6 shrink-0 items-center justify-center rounded-full text-sm font-bold transition ${isOpen ? 'bg-red text-parchment' : 'bg-parchment-alt text-black dark:bg-zinc-800 dark:text-zinc-100'}`}>
                     {isOpen ? '-' : '+'}
                   </span>
                 </button>
                 {isOpen && (
                   <div className="px-5 pb-4 text-sm leading-7 text-black dark:text-zinc-100">
                     <p>{faq.answer}</p>
-                    <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-zinc-200 pt-3 text-xs text-black dark:border-zinc-800 dark:text-zinc-400">
+                    <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-line-light pt-3 text-xs text-black dark:border-zinc-800 dark:text-zinc-400">
                       {votes[faqId] !== undefined ? (
                         <span className="font-semibold text-emerald-600 dark:text-emerald-400">Thanks for the feedback.</span>
                       ) : (
                         <>
                           <span>Was this helpful?</span>
-                          <button className="rounded-full border border-zinc-200 px-3 py-1 font-semibold text-black hover:border-[#BE0010] hover:text-[#BE0010] dark:border-zinc-700 dark:text-zinc-100" onClick={() => setVotes((current) => ({ ...current, [faqId]: 1 }))} type="button">Yes</button>
-                          <button className="rounded-full border border-zinc-200 px-3 py-1 font-semibold text-black hover:border-[#BE0010] hover:text-[#BE0010] dark:border-zinc-700 dark:text-zinc-100" onClick={() => setVotes((current) => ({ ...current, [faqId]: 0 }))} type="button">No</button>
+                          <button className="rounded-full border border-line-light px-3 py-1 font-semibold text-black hover:border-red hover:text-red dark:border-zinc-700 dark:text-zinc-100" onClick={() => setVotes((current) => ({ ...current, [faqId]: 1 }))} type="button">Yes</button>
+                          <button className="rounded-full border border-line-light px-3 py-1 font-semibold text-black hover:border-red hover:text-red dark:border-zinc-700 dark:text-zinc-100" onClick={() => setVotes((current) => ({ ...current, [faqId]: 0 }))} type="button">No</button>
                         </>
                       )}
                     </div>
@@ -108,22 +108,22 @@ export default function FAQSection({ faqs = [] }) {
           })}
 
           {filtered.length === 0 && (
-            <div className="rounded-xl border border-dashed border-zinc-300 bg-zinc-50 p-6 text-sm text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100">
+            <div className="rounded-xl border border-dashed border-zinc-300 bg-parchment-alt p-6 text-sm text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100">
               <p>No questions match your search.</p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <button className="text-sm font-semibold text-[#BE0010] underline" onClick={() => { setSearch(''); setCategory('all'); }} type="button">Clear filters</button>
-                <a className="text-sm font-semibold text-[#BE0010] underline" href="#booking">Ask us directly</a>
+                <button className="text-sm font-semibold text-red underline" onClick={() => { setSearch(''); setCategory('all'); }} type="button">Clear filters</button>
+                <a className="text-sm font-semibold text-red underline" href="#booking">Ask us directly</a>
               </div>
             </div>
           )}
         </div>
 
-        <div className="mt-8 flex max-w-4xl flex-col justify-between gap-4 rounded-xl border border-zinc-200 bg-zinc-50 p-5 sm:flex-row sm:items-center dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="mt-8 flex max-w-4xl flex-col justify-between gap-4 rounded-xl border border-line-light bg-parchment-alt p-5 sm:flex-row sm:items-center dark:border-zinc-800 dark:bg-zinc-900">
           <div>
             <p className="text-sm font-semibold text-black dark:text-zinc-100">Have a question not listed here?</p>
             <p className="mt-0.5 text-xs text-black dark:text-zinc-400">Contact Inkarp for detailed technical discussions about the Hei-VAP Core and configurations.</p>
           </div>
-          <a className="shrink-0 rounded-full bg-[#BE0010] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#9f000d]" href="#booking">
+          <a className="shrink-0 rounded-full bg-red px-5 py-2.5 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]" href="#booking">
             Ask Inkarp
           </a>
         </div>

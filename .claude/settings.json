@@ -27,7 +27,8 @@
       "Bash(node verify-careers2.js)",
       "Bash(ls src/components/about)",
       "Bash(ls src/components/home)",
-      "Bash(node verify-about.js)"
+      "Bash(node verify-about.js)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/data/principals/being/products.json','utf8'\\)\\); console.log\\('valid json'\\)\")"
     ]
   }
 }

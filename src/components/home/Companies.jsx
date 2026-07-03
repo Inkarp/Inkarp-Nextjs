@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight, FiPhoneCall, FiTool } from "react-icons/fi";
+import RecTag from "./RecTag";
 import { groupCompanies } from "@/data/homeSections";
 
 const badgeIcons = {
@@ -40,12 +41,10 @@ export default function Companies() {
 
   return (
     <section className="bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-20" data-reveal>
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-red">
-            {groupCompanies.heading}
-          </p>
-          <h2 className="text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+          <RecTag>{groupCompanies.heading}</RecTag>
+          <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
             {groupCompanies.title}
           </h2>
           <p className="mt-4 text-sm leading-6 text-ink-soft sm:text-base">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FiGlobe } from "react-icons/fi";
+import RecTag from "./RecTag";
 import { countryGeo } from "@/data/countryGeo";
 import { getPrincipalLogo } from "@/data/products/principalLogos";
 import { productPrincipals } from "@/data/products/principals";
@@ -147,20 +148,18 @@ export default function PrincipalsGlobe() {
 
   return (
     <section className="bg-parchment px-4 py-12 sm:px-6 lg:px-8 lg:py-16" id="principals" data-reveal>
-      <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center gap-3 text-center">
-        <span className="rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs font-semibold uppercase tracking-wide text-ink">
-          Our Principals
-        </span>
-        <h2 className="text-2xl leading-tight text-red sm:text-3xl">
+      <div className="mx-auto mb-10 flex max-w-2xl flex-col items-center text-center">
+        <RecTag>Our Principals</RecTag>
+        <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
           A global network of scientific leaders
         </h2>
-        <p className="max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">
+        <p className="mt-3 text-sm leading-6 text-ink-soft sm:text-base">
           We represent {allPrincipals.length} principals across {countries.length} countries. Spin the
           globe or pick a country to see who we bring to Indian labs.
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 lg:grid-cols-[380px_1fr] lg:items-start">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[380px_1fr] lg:items-start">
         <div className="flex flex-col items-center gap-6">
           <div
             className="relative h-[300px] w-[300px] select-none rounded-full bg-[radial-gradient(circle_at_32%_28%,#f6f6f5,#d9d9d7_62%,#c6c6c3_100%)] shadow-[inset_-14px_-14px_44px_rgba(0,0,0,0.14),inset_8px_8px_24px_rgba(255,255,255,0.5)] sm:h-[340px] sm:w-[340px]"

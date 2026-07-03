@@ -24,14 +24,17 @@ export default function HomeWorkflows() {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
   }, []);
 
-  const rows = [workflowIndustries.slice(0, 2), workflowIndustries.slice(2, 4)];
+  const rows = [];
+  for (let i = 0; i < workflowIndustries.length; i += 3) {
+    rows.push(workflowIndustries.slice(i, i + 3));
+  }
 
   return (
     <section className="bg-parchment py-[78px]" id="categories" data-reveal>
       <div className="mx-auto max-w-[1180px] px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
           <div>
-            <RecTag variant="teal">Lab Workflows</RecTag>
+            <RecTag variant="teal text-[#Be0010]">Lab Workflows</RecTag>
             <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
               See how our workflows fit together, industry by industry
             </h2>
@@ -42,7 +45,7 @@ export default function HomeWorkflows() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-px border border-line-light bg-line-light md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-px border border-line-light bg-line-light md:grid-cols-3">
           {rows.map((row, ri) => (
             <Fragment key={ri}>
               {row.map((wf) => (

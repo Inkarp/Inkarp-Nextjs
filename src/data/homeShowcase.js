@@ -31,6 +31,41 @@ export const workflowIndustries = [
       "Raw material identification to formulation QC, keeping every batch within specification.",
     steps: 6,
   },
+  {
+    cat: "environmental",
+    industry: "Environmental & Water",
+    tagline:
+      "Trace contaminants, microplastics, and effluent testing, instrumented for regulatory compliance.",
+    steps: 6,
+  },
+  {
+    cat: "chemical",
+    industry: "Chemical & Petrochemical",
+    tagline:
+      "Purity, composition, and in-process control, built for continuous production quality.",
+    steps: 6,
+  },
+  {
+    cat: "academic",
+    industry: "Academic & Research",
+    tagline:
+      "Discovery science across every department, from teaching labs to grant-funded research.",
+    steps: 6,
+  },
+  {
+    cat: "materials",
+    industry: "Materials & Nanotechnology",
+    tagline:
+      "Surface, structure, and particle characterisation, for materials from bulk to nanoscale.",
+    steps: 6,
+  },
+  {
+    cat: "clinical",
+    industry: "Clinical & Diagnostics",
+    tagline:
+      "Molecular testing and diagnostic assays, equipped for accredited, audit-ready labs.",
+    steps: 6,
+  },
 ];
 
 export const workflowTopics = {
@@ -65,6 +100,46 @@ export const workflowTopics = {
     { tag: "authenticity testing", title: "Authenticity & adulteration testing", desc: "Detect substitution and adulteration against reference profiles." },
     { tag: "solvent extraction", title: "Solvent extraction & recovery", desc: "Concentrate extracts and recover solvents during sample preparation." },
     { tag: "formulation weighing", title: "Formulation weighing & QC", desc: "Precision balances for accurate batching and quality release testing." },
+  ],
+  environmental: [
+    { tag: "water quality", title: "Water quality & effluent testing", desc: "Multi-parameter analysis for discharge compliance and process water monitoring." },
+    { tag: "microplastics", title: "Microplastics screening", desc: "FT-IR and microscopy-based identification of microplastic contamination." },
+    { tag: "trace metals", title: "Trace & heavy metal analysis", desc: "ICP and AAS methods for regulatory-grade metal quantification." },
+    { tag: "air quality", title: "Air quality monitoring", desc: "Particulate and volatile compound sampling for ambient and stack testing." },
+    { tag: "soil contamination", title: "Soil & sediment contamination studies", desc: "Extraction and analysis of persistent organic pollutants and metals." },
+    { tag: "sample preservation", title: "Sample preservation & cold storage", desc: "Reliable low-temperature storage for time-sensitive environmental samples." },
+  ],
+  chemical: [
+    { tag: "purity analysis", title: "Purity & composition analysis", desc: "Chromatographic and spectroscopic methods for feedstock and product QC." },
+    { tag: "process control", title: "In-process quality control", desc: "Real-time monitoring that keeps production runs within specification." },
+    { tag: "distillation", title: "Distillation & solvent recovery", desc: "Efficient separation and recovery across the process chain." },
+    { tag: "viscosity", title: "Viscosity & rheology testing", desc: "Flow behaviour characterization for formulation and process design." },
+    { tag: "corrosion testing", title: "Corrosion & material compatibility", desc: "Assessing material resistance under process chemical exposure." },
+    { tag: "batch documentation", title: "Batch release documentation", desc: "Traceable QC records supporting release and compliance." },
+  ],
+  academic: [
+    { tag: "teaching labs", title: "Teaching lab instrumentation", desc: "Rugged, easy-to-operate instruments built for high-throughput student use." },
+    { tag: "research grants", title: "Grant-funded research equipment", desc: "Instrumentation sized and specified to funding scope and timelines." },
+    { tag: "thesis analytics", title: "Thesis & publication-grade analytics", desc: "Precision measurement that stands up to peer review." },
+    { tag: "shared facilities", title: "Interdisciplinary shared facilities", desc: "Multi-user platforms serving chemistry, biology, and materials departments." },
+    { tag: "student training", title: "Student training & method development", desc: "Hands-on protocols that build analytical skill alongside results." },
+    { tag: "equipment amc", title: "Equipment AMC & calibration", desc: "Scheduled maintenance that keeps departmental instruments audit-ready." },
+  ],
+  materials: [
+    { tag: "surface characterization", title: "Surface characterization", desc: "Topography and composition analysis at micro and nanoscale." },
+    { tag: "particle sizing", title: "Particle size & distribution analysis", desc: "Laser diffraction and imaging methods for powders and suspensions." },
+    { tag: "structural analysis", title: "Structural & crystallographic analysis", desc: "Phase identification and structural confirmation for novel materials." },
+    { tag: "thermal properties", title: "Thermal property characterization", desc: "DSC and TGA profiling of stability, transitions, and composition." },
+    { tag: "nanoparticle synthesis", title: "Nanoparticle synthesis support", desc: "Controlled reaction conditions for reproducible nanomaterial production." },
+    { tag: "mechanical testing", title: "Mechanical & tribological testing", desc: "Hardness, wear, and friction measurement for material qualification." },
+  ],
+  clinical: [
+    { tag: "molecular diagnostics", title: "Molecular diagnostics", desc: "PCR and sequencing-ready workflows for accurate pathogen and marker detection." },
+    { tag: "clinical sample prep", title: "Clinical sample preparation", desc: "Standardized extraction and homogenization ahead of downstream assays." },
+    { tag: "immunoassay", title: "Immunoassay & biomarker testing", desc: "Sensitive detection platforms for diagnostic and research biomarkers." },
+    { tag: "cold chain", title: "Cold chain sample storage", desc: "Ultra-low temperature storage protecting sample integrity." },
+    { tag: "calibration compliance", title: "Calibration & compliance documentation", desc: "Audit-ready records supporting diagnostic lab accreditation." },
+    { tag: "point of care", title: "Point-of-care testing support", desc: "Compact, reliable instrumentation for decentralized testing sites." },
   ],
 };
 

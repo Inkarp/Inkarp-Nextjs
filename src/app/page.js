@@ -8,6 +8,7 @@ import HomeAboutHero from "@/components/home/HomeAboutHero";
 import HomeAchievements from "@/components/home/HomeAchievements";
 import HomeClientReviews from "@/components/home/HomeClientReviews";
 import HomeEventsInsights from "@/components/home/HomeEventsInsights";
+import HomeQuoteWall from "@/components/home/HomeQuoteWall";
 import HomeShowcaseSlider from "@/components/home/HomeShowcaseSlider";
 import HomeWorkflows from "@/components/home/HomeWorkflows";
 import OrderServiceSteps from "@/components/home/OrderServiceSteps";
@@ -29,23 +30,24 @@ export default function Home() {
         <HeroSection />
       </div> */}
       {/* Desktop: full scroll-push animation */}
-      {/* <Testing />
-      <AboutUs /> */}
+      {/* <Testing /> */}
+      {/* <AboutUs /> */}
       {/* <PickProduct /> */}
-      {/* <CompaniesAlternate />
-      <Companies /> */}
+      {/* <CompaniesAlternate /> */}
+      {/* <Companies /> */}
       {/* <PrinciplesAlternate /> */}  
-      {/* <OrderServiceSteps />
-      <TrustedClients />
-      <ClientReviews /> */}
+      {/* <OrderServiceSteps /> */}
+      {/* <TrustedClients /> */}
+      {/* <ClientReviews /> */}
       <HomeAboutHero />   
       <HomeWorkflows />
       <HomeShowcaseSlider />
       <HomeAchievements />
       <Companies />
-      <Principles />
-      <HomeClientReviews />
+      <Principles /> 
       <HomeEventsInsights />
+      <HomeQuoteWall />
+      <HomeClientReviews />
     </main>
   );
 }

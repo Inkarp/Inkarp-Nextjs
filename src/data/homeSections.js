@@ -1,3 +1,33 @@
+export const googleReviewsSummary = {
+  rating: "4.8",
+  count: "120+",
+  href: "#",
+};
+
+export const googleReviews = [
+  {
+    name: "Sample Reviewer",
+    initials: "SR",
+    date: "2 weeks ago",
+    rating: 5,
+    text: "Sample review text — replace with a real Google review. Installation and support were prompt and professional.",
+  },
+  {
+    name: "Sample Reviewer",
+    initials: "SR",
+    date: "1 month ago",
+    rating: 5,
+    text: "Sample review text — replace with a real Google review. The team helped us choose the right instrument for our lab.",
+  },
+  {
+    name: "Sample Reviewer",
+    initials: "SR",
+    date: "2 months ago",
+    rating: 4,
+    text: "Sample review text — replace with a real Google review. Responsive service and genuine product knowledge.",
+  },
+];
+
 export const clientReviews = [
   {
     name: "Anil Pasunuti",
@@ -40,28 +70,38 @@ export const groupCompanies = {
   companies: [
     {
       name: "Group Company",
+      displayName: "Spark Scientific Private Ltd",
+      description: "Group company.",
       logo: "/assets/home/Spark.svg",
       href: "/",
     },
     {
       name: "Group Company",
+      displayName: "Inkarp Telecom",
+      description: "Communications arm of the group.",
       logo: "/assets/home/InkarpTelecom.svg",
       href: "/",
       badge: "Phone",
     },
     {
       name: "Group Company",
+      displayName: "Inkarp Instrument Services",
+      description: "Service and support division.",
       logo: "/assets/home/InkarpServices.svg",
       href: "/",
       badge: "Service",
     },
     {
       name: "Collaborative Venture",
+      displayName: "Advion Interchim Scientific",
+      description: "Collaboration partner.",
       logo: "/assets/images/PrincipalLogos/RowOne/advion.png",
       href: "/products?q=advion",
     },
     {
       name: "Collaborative Venture",
+      displayName: "Verder Scientific",
+      description: "Collaboration partner.",
       logo: "/assets/home/Verder.svg",
       href: "/",
     },

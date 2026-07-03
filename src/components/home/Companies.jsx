@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiPhoneCall, FiTool } from "react-icons/fi";
-import SectionHeading from "@/components/home/SectionHeading";
+import { FiArrowRight, FiPhoneCall, FiTool } from "react-icons/fi";
 import { groupCompanies } from "@/data/homeSections";
 
 const badgeIcons = {
@@ -9,129 +8,111 @@ const badgeIcons = {
   Service: <FiTool aria-hidden="true" />,
 };
 
-export default function Companies() {
-  const itemCount = groupCompanies.companies.length;
-  const companiesByCategory = groupCompanies.companies.reduce(
-    (categories, company) => {
-      const category = company.name;
-      return {
-        ...categories,
-        [category]: [...(categories[category] ?? []), company],
-      };
-    },
-    {},
+const featureIconPaths = {
+  diamond: <path d="M12 3l9 9-9 9-9-9 9-9z" />,
+  bolt: <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" strokeLinecap="round" strokeLinejoin="round" />,
+  hexagon: <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2z" strokeLinejoin="round" />,
+  target: (
+    <>
+      <circle cx="12" cy="12" r="8" />
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+    </>
+  ),
+};
+
+function FeatureIcon({ name, className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6}>
+      {featureIconPaths[name]}
+    </svg>
   );
+}
+
+const featureItems = [
+  { icon: "diamond", title: "Strong group", description: "A network of companies working together for growth." },
+  { icon: "bolt", title: "Innovation driven", description: "Focused on delivering advanced solutions worldwide." },
+  { icon: "hexagon", title: "Collaborative ventures", description: "Building global partnerships for a better tomorrow." },
+  { icon: "target", title: "Global presence", description: "Operating across industries and scientific markets." },
+];
+
+export default function Companies() {
+  const companies = groupCompanies.companies;
 
   return (
-    <section className="relative mx-auto w-[98%] overflow-hidden px-4 py-16 sm:px-6 lg:px-20 lg:py-20">
-      <SectionHeading eyebrow={groupCompanies.heading} />
-
-      <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.8fr] lg:gap-12">
-        <div className="mx-auto max-w-md text-center lg:mx-0">
-          <p className="font-maxot text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl dark:text-zinc-100">
-            INKARP
+    <section className="bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-20" data-reveal>
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-red">
+            {groupCompanies.heading}
           </p>
-          <h2 className="font-maxot mt-4 text-xl leading-tight text-red sm:text-2xl">
+          <h2 className="text-3xl font-semibold leading-tight text-ink sm:text-4xl">
             {groupCompanies.title}
           </h2>
-          <p className="mt-4 text-sm leading-6 text-ink-soft sm:text-base dark:text-zinc-400">
+          <p className="mt-4 text-sm leading-6 text-ink-soft sm:text-base">
             {groupCompanies.description}
           </p>
-        </div>
 
-        <div className="w-full space-y-6 lg:hidden">
-          {Object.entries(companiesByCategory).map(([category, companies]) => (
-            <div key={category}>
-              <h3 className="font-maxot text-sm font-bold uppercase tracking-wide text-red">
-                {category}
-              </h3>
-              <div className="mt-3 grid grid-cols-2 gap-3">
-                {companies.map((company) => (
-                  <Link
-                    className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-lg border border-line-light bg-parchment p-4 text-center shadow-sm shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900"
-                    href={company.href}
-                    key={`${category}-${company.logo}`}
-                  >
-                    <span className="flex h-14 w-full items-center justify-center gap-2">
-                      {company.badge ? (
-                        <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-red text-sm text-parchment">
-                          {badgeIcons[company.badge]}
-                        </span>
-                      ) : null}
-                      <span className="relative h-12 flex-1">
-                        <Image
-                          alt={category}
-                          className="object-contain"
-                          fill
-                          sizes="45vw"
-                          src={company.logo}
-                        />
-                      </span>
-                    </span>
-                  </Link>
-                ))}
+          <div className="mt-8 space-y-5">
+            {featureItems.map((item) => (
+              <div key={item.title} className="flex gap-4">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-red/8 text-red">
+                  <FeatureIcon name={item.icon} className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-sm font-semibold text-ink">{item.title}</h3>
+                  <p className="mt-0.5 text-sm text-ink-soft">{item.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="relative mx-auto hidden h-[620px] w-full max-w-5xl lg:block xl:h-[680px]">
-          <div className="absolute left-1/2 top-1/2 size-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dotted border-zinc-500 bg-parchment-alt/60 dark:bg-zinc-900/60" />
-          {/* <div className="absolute left-1/2 top-1/2 size-[44%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-200" /> */}
-
-          <div className="absolute left-1/2 top-1/2 z-10 flex size-[34%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full backdrop-blur">
-            <Image
-              alt="INKARP Group"
-              className="object-contain"
-              fill
-              sizes="(min-width: 1024px) 260px, 45vw"
-              src={groupCompanies.centerLogo}
-            />
+            ))}
           </div>
 
-          <ul
-            className="absolute inset-0 list-none"
-            style={{ "--company-count": itemCount }}
+          <Link
+            href="/our-story"
+            className="mt-9 inline-flex items-center gap-2 bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-red-soft"
           >
-            {groupCompanies.companies.map((company, index) => (
-              <li
-                className="absolute left-0 top-1/2 w-full -translate-y-1/2 animate-[company-orbit_38s_linear_infinite]"
-                key={`${company.name}-${company.logo}`}
-                style={{
-                  animationDelay: `-${(38 / itemCount) * index}s`,
-                }}
-              >
-                <Link
-                  className="flex w-[42%] min-w-32 max-w-56 animate-[company-card_38s_linear_infinite] flex-col items-center justify-center gap-3 rounded-lg bg-parchment p-4 text-center shadow-lg shadow-zinc-900/10 transition hover:shadow-xl sm:w-[36%] lg:w-[30%] dark:bg-zinc-900"
-                  href={company.href}
-                  style={{
-                    animationDelay: `-${(38 / itemCount) * index}s`,
-                  }}
-                >
-                  <span className="font-maxot text-xs font-bold uppercase text-ink dark:text-zinc-200">
-                    {company.name}
-                  </span>
-                  <span className="flex h-16 w-full items-center justify-center gap-3">
-                    {company.badge ? (
-                      <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-red text-sm text-parchment">
-                        {badgeIcons[company.badge]}
-                      </span>
-                    ) : null}
-                    <span className="relative h-12 flex-1">
-                      <Image
-                        alt={company.name}
-                        className="object-contain"
-                        fill
-                        sizes="180px"
-                        src={company.logo}
-                      />
-                    </span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+            About Inkarp
+            <FiArrowRight aria-hidden="true" />
+          </Link>
         </div>
+
+        <ul className="space-y-5">
+          {companies.map((company, index) => (
+            <li key={`${company.displayName}-${company.logo}`} className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <span className="mt-5 size-2.5 shrink-0 rounded-full bg-red" />
+                {index < companies.length - 1 ? (
+                  <span className="mt-1 w-px flex-1 bg-red/15" />
+                ) : null}
+              </div>
+
+              <Link
+                href={company.href}
+                className="flex-1 rounded-xl bg-parchment-alt p-5 transition hover:bg-parchment-alt/70"
+              >
+                {/* <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+                  {company.name}
+                </p> */}
+                <div className="mt-3 flex flex-wrap items-center gap-3">
+                  {company.badge ? (
+                    <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-red text-xs text-white">
+                      {badgeIcons[company.badge]}
+                    </span>
+                  ) : null}
+                  <span className="relative h-12 w-32 shrink-0">
+                    <Image
+                      src={company.logo}
+                      alt={company.displayName}
+                      fill
+                      sizes="180px"
+                      className="object-contain object-left"
+                    />
+                  </span>
+                  <span className="text-sm text-ink-soft">{company.description}</span>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

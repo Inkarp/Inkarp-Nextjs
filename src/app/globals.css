@@ -125,8 +125,7 @@ article[data-scroll-reveal="true"] {
   [class*="animate-[company-"],
   [class*="animate-[logo-marquee"],
   [class*="animate-[header-search-"],
-  [class*="animate-[topicReveal"],
-  [class*="animate-[slideIn"] {
+  [class*="animate-[topicReveal"] {
     animation: none !important;
   }
 
@@ -183,18 +182,10 @@ article[data-scroll-reveal="true"] {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* ── Home page workflow/showcase section animations ── */
+/* ── Home page workflow section animations ── */
 @keyframes topicReveal {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }
-}
-@keyframes slideInNext {
-  from { opacity: 0; transform: translateX(28px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideInPrev {
-  from { opacity: 0; transform: translateX(-28px); }
-  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes header-search-backdrop {

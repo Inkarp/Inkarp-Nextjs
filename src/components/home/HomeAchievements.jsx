@@ -3,9 +3,9 @@ import { achievements} from "@/data/homeShowcase";
 
 export default function HomeAchievements() {
   return (
-    <section className="bg-white py-20" id="testimonials" data-reveal>
+    <section className="bg-white py-10" id="testimonials" data-reveal>
       <div className="mx-auto max-w-[1180px] px-8">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+        <div className="flex mb-10 flex-wrap items-end justify-between gap-5">
           <div>
             <RecTag>Track Record</RecTag>
             <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
@@ -18,7 +18,7 @@ export default function HomeAchievements() {
           </p>
         </div>
 
-        <div className="mb-16 grid grid-cols-2 gap-px border border-line-light bg-line-light md:grid-cols-4">
+        <div className=" grid grid-cols-2 gap-px border border-line-light bg-line-light md:grid-cols-4">
           {achievements.map((item) => (
             <div key={item.label} className="bg-white p-6.5 px-5">
               <div className="text-[32px] font-semibold text-red">{item.num}</div>

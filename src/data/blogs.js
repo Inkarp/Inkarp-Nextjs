@@ -1641,7 +1641,7 @@ const rawPosts = [
     date: "2026-01-27",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogTwenty/Image1.jpeg",
+    image: "/assets/images/productImages/Nanosurf/driveafm.jpg",
     tags: [
       "AFM",
       "Semiconductor Wafers",
@@ -1797,7 +1797,7 @@ const rawPosts = [
     date: "2026-02-02",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/blogs/BlogTwentyTwo/Image1.jpeg",
+    image: "/assets/images/productImages/Nanalysis/100mhz-powerful-benchtop-nmr.png",
     tags: [
       "NMR Spectroscopy",
       "Kolbe-Schmitt Reaction",

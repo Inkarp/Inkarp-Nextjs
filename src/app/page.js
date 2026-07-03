@@ -6,6 +6,8 @@ import CompaniesAlternate from "@/components/home/CompaniesAlternate";
 import HeroSection from "@/components/home/HeroSection";
 import HomeAboutHero from "@/components/home/HomeAboutHero";
 import HomeAchievements from "@/components/home/HomeAchievements";
+import HomeClientReviews from "@/components/home/HomeClientReviews";
+import HomeEventsInsights from "@/components/home/HomeEventsInsights";
 import HomeShowcaseSlider from "@/components/home/HomeShowcaseSlider";
 import HomeWorkflows from "@/components/home/HomeWorkflows";
 import OrderServiceSteps from "@/components/home/OrderServiceSteps";
@@ -36,11 +38,14 @@ export default function Home() {
       {/* <OrderServiceSteps />
       <TrustedClients />
       <ClientReviews /> */}
-      <HomeAboutHero />
+      <HomeAboutHero />   
       <HomeWorkflows />
       <HomeShowcaseSlider />
       <HomeAchievements />
-      <Principles />     
+      <Companies />
+      <Principles />
+      <HomeClientReviews />
+      <HomeEventsInsights />
     </main>
   );
 }

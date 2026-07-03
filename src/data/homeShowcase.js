@@ -68,13 +68,6 @@ export const workflowTopics = {
   ],
 };
 
-export const badgeStats = [
-  { num: "40+", label: "Years in business" },
-  { num: "14", label: "Branch offices in India" },
-  { num: "45+", label: "Global principal brands" },
-  { num: "4", label: "Core markets served" },
-];
-
 export const achievements = [
   { num: "1985", label: "Founded by Mr. S. Balu" },
   { num: "14", label: "Branch offices pan-India" },

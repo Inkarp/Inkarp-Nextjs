@@ -9,6 +9,7 @@ export const events = [
     endDate: "2026-07-11",
     boothNo: "Hall 3, Booth B-42",
     logo: "/assets/images/PrincipalLogos/RowSeven/Bruker.svg",
+    image: "/assets/images/productImages/Bruker/atr-library.jpeg",
     description:
       "India's largest laboratory technology exhibition, bringing together analytical, scientific, and biotech instrumentation under one roof.",
     highlights: [
@@ -27,6 +28,7 @@ export const events = [
     endDate: "2026-08-22",
     boothNo: "Hall 1, Booth A-18",
     logo: "/assets/images/PrincipalLogos/RowTwo/waters.svg",
+    image: "/assets/images/productImages/Waters/alliance-hplc-system.jpg",
     description:
       "A premier platform for analytical, biotech, and laboratory technology, connecting manufacturers and end-users across pharma and life sciences.",
     highlights: [
@@ -45,6 +47,7 @@ export const events = [
     endDate: "2026-11-27",
     boothNo: "Hall 5, Booth C-09",
     logo: "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
+    image: "/assets/images/productImages/Chemspeed/crystal-powderdose.png",
     description:
       "The region's leading pharma ingredients and machinery exhibition, covering the full spectrum of pharmaceutical manufacturing and discovery.",
     highlights: [
@@ -63,6 +66,7 @@ export const events = [
     endDate: "2026-03-14",
     boothNo: "Hall 2, Booth D-05",
     logo: "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
+    image: "/assets/images/productImages/heidolph/Distimatic-Functional principle-sRGB.jpg",
     description:
       "A regional showcase of laboratory, biotechnology, and life sciences innovation for South India's research and manufacturing community.",
     highlights: [

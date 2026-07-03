@@ -11,6 +11,7 @@ import HomeEventsInsights from "@/components/home/HomeEventsInsights";
 import HomeQuoteWall from "@/components/home/HomeQuoteWall";
 import HomeShowcaseSlider from "@/components/home/HomeShowcaseSlider";
 import HomeWorkflows from "@/components/home/HomeWorkflows";
+import HomeWorkflowWheel from "@/components/home/HomeWorkflowWheel";
 import OrderServiceSteps from "@/components/home/OrderServiceSteps";
 import PickProduct from "@/components/home/PickProduct";
 import Principles from "@/components/home/Principles";
@@ -39,9 +40,10 @@ export default function Home() {
       {/* <OrderServiceSteps /> */}
       {/* <TrustedClients /> */}
       {/* <ClientReviews /> */}
-      <HomeAboutHero />   
+      <HomeAboutHero />
       <HomeWorkflows />
-      <HomeShowcaseSlider />
+      <HomeWorkflowWheel />
+      {/* <HomeShowcaseSlider /> */}
       <HomeAchievements />
       <Companies />
       <Principles /> 

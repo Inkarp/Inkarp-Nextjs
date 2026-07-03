@@ -6,6 +6,33 @@ export default function HomeAboutHero() {
   return (
     <section className="bg-white pb-15 pt-19" id="about" data-reveal>
       <div className="mx-auto max-w-[1180px] px-8">
+        <div className="mx-auto mb-16 flex max-w-3xl flex-col items-center border-b border-line-light pb-16 text-center">
+          <RecTag>Built Around Your Workflow</RecTag>
+          <h1 className="max-w-[18ch] text-[34px] font-semibold leading-[1.12] tracking-tight text-ink sm:text-5xl">
+            Your lab has a workflow.
+            <br />
+            We help build the right <em className="italic text-red">solution</em> around it.
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">
+            From global technologies to Inkarp&apos;s own solutions, we match your requirement with
+            the right fit, guidance, and support path.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3.5">
+            <Link
+              href="#categories"
+              className="border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+            >
+              Find My Industry
+            </Link>
+            <Link
+              href="#workflow-wheel"
+              className="border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+            >
+              See a Workflow
+            </Link>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <div className="mb-6 flex items-start gap-6">
@@ -16,19 +43,18 @@ export default function HomeAboutHero() {
               </div>
               <div>
                 <RecTag>About Inkarp</RecTag>
-                <h1 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
-                  Forty years of equipping
+                <h2 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+                  Four decades of supporting
                   <br />
                   India&apos;s <em className="italic text-red">laboratories.</em>
-                </h1>
+                </h2>
               </div>
             </div>
 
             <p className="my-4 max-w-[520px] text-base leading-relaxed text-ink-soft sm:text-lg">
-              Founded in 1985 by Mr. S. Balu, Inkarp Instruments has grown into one of India&apos;s most
-              established suppliers of scientific and analytical solutions — serving Pharma, Biotechnology,
-              Life Sciences, and Diagnostics laboratories from our Hyderabad headquarters and a network of
-              branch offices across the country.
+              Since 1985, Inkarp has helped Indian laboratories move from scientific need to supported
+              use — bringing together global principals, product lines, application guidance,
+              installation support, and service across India.
             </p>
 
             <div className="mb-11 flex flex-wrap gap-3.5">
@@ -62,14 +88,20 @@ export default function HomeAboutHero() {
               <span>Fig. 01 — Inkarp Scientific Solutions</span>
               <span>Pan-India Support</span>
             </div>
-            <div className="mt-6 flex flex-wrap gap-2.5">
-              {["40+ Years", "14 Branch Offices", "45+ Principal Brands", "Scientific Support"].map((chip) => (
-                <span
-                  key={chip}
-                  className="border border-line-light bg-white px-2.5 py-1.5 text-[10.5px] uppercase tracking-wide text-ink-soft"
-                >
-                  {chip}
-                </span>
+            <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-line-light pt-5">
+              {[
+                { num: "1985", label: "Serving Indian Science Since" },
+                { num: "49", label: "Global Principals" },
+                { num: "191", label: "Product Lines" },
+                { num: "18", label: "Offices Across India" },
+                { num: "All India", label: "Installation and Service", full: true },
+              ].map((stat) => (
+                <div key={stat.label} className={stat.full ? "col-span-2" : undefined}>
+                  <div className="text-lg font-semibold text-red">{stat.num}</div>
+                  <div className="mt-0.5 text-[9.5px] uppercase tracking-wide text-ink-soft">
+                    {stat.label}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

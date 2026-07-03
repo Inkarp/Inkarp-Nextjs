@@ -97,7 +97,7 @@ export default function Companies() {
                       {badgeIcons[company.badge]}
                     </span>
                   ) : null}
-                  <span className="relative h-12 w-32 shrink-0">
+                  <span className="relative h-12 w-24 shrink-0">
                     <Image
                       src={company.logo}
                       alt={company.displayName}

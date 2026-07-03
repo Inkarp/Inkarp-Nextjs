@@ -13,13 +13,13 @@ function getInitials(name) {
 
 export default function HomeQuoteWall() {
   return (
-    <section className="bg-navy px-4 py-16 sm:px-6 lg:px-8 lg:py-20" id="voices" data-reveal>
+    <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8 lg:py-20" id="voices" data-reveal>
       <div className="mx-auto max-w-[1180px]">
         <RecTag>In Their Words</RecTag>
-        <h2 className="text-[26px] font-semibold tracking-tight text-white sm:text-4xl">
+        <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
           What our customers tell us directly
         </h2>
-        <p className="mt-3 max-w-xl text-sm text-white/60">
+        <p className="mt-3 max-w-xl text-sm text-ink-soft">
           Unfiltered notes from the labs and engineers we work with every day.
         </p>
 
@@ -44,14 +44,14 @@ export default function HomeQuoteWall() {
               </div>
 
               <div className="ml-9 mt-6 flex items-center gap-3">
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-red text-sm font-bold text-white ring-4 ring-navy">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-red text-sm font-bold text-white ring-4 ring-parchment-alt">
                   {getInitials(review.name)}
                 </span>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-white">
+                  <p className="text-xs font-bold uppercase tracking-wide text-ink">
                     {review.name}
                   </p>
-                  <p className="text-xs text-white/50">Inkarp Customer</p>
+                  <p className="text-xs text-ink-soft">Inkarp Customer</p>
                 </div>
               </div>
             </div>

@@ -2,6 +2,15 @@
 // Brand names in featuredProducts map to real principals already served by
 // /products?q=<brand>; industry step counts/taglines are editorial copy.
 
+// URL-safe slug for a workflow topic tag, used in /workflows/[industry]/[topic] routes.
+export function topicSlug(tag) {
+  return tag
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export const workflowIndustries = [
   {
     cat: "pharma",

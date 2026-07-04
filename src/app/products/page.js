@@ -3,13 +3,12 @@ import { getAllPrincipals, getAllProducts, searchProducts } from "@/data/product
 import ProductFilterForm from "@/components/products/ProductFilterForm";
 import ProductResultsGrid from "@/components/products/ProductResultsGrid";
 import StickyProductSearch from "@/components/products/StickyProductSearch";
-import WorkflowExplorer from "@/components/products/WorkflowExplorer";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { buildPageMetadata } from "@/data/pageSeo";
 
 const VIEW_TABS = [
-  { value: "product", label: "By Product" },
-  { value: "workflow", label: "By Workflow" },
+  { href: "/products", label: "By Product", active: true },
+  { href: "/workflows", label: "By Workflow", active: false },
 ];
 
 export const metadata = buildPageMetadata("/products");
@@ -26,7 +25,6 @@ function getParams(searchParams, key) {
 
 export default async function ProductsPage({ searchParams }) {
   const params = await searchParams;
-  const view = getParam(params, "view") === "workflow" ? "workflow" : "product";
   const selectedBrands = getParams(params, "brand");
   const filters = {
     q: getParam(params, "q"),
@@ -66,10 +64,10 @@ export default async function ProductsPage({ searchParams }) {
           <div className="mt-3 inline-flex rounded-lg border border-line-light bg-parchment-alt p-1 dark:border-zinc-700 dark:bg-zinc-800">
             {VIEW_TABS.map((tab) => (
               <Link
-                key={tab.value}
-                href={tab.value === "product" ? "/products" : "/products?view=workflow"}
+                key={tab.href}
+                href={tab.href}
                 className={`rounded-md px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${
-                  view === tab.value
+                  tab.active
                     ? "bg-red text-white"
                     : "text-ink-soft hover:text-red dark:text-zinc-300"
                 }`}
@@ -81,30 +79,24 @@ export default async function ProductsPage({ searchParams }) {
         </div>
       </section>
 
-      {view === "workflow" ? (
-        <WorkflowExplorer industry={getParam(params, "industry")} topicTag={getParam(params, "topic")} />
-      ) : (
-        <>
-          {/* Sticky search toolbar */}
-          <StickyProductSearch>
-            <ProductFilterForm
-              key={`${filters.q}-${selectedBrands.join("|")}`}
-              brandOptions={brandOptions}
-              productCount={products.length}
-              query={filters.q}
-              selectedBrands={selectedBrands}
-              totalCount={totalProducts}
-            />
-          </StickyProductSearch>
+      {/* Sticky search toolbar */}
+      <StickyProductSearch>
+        <ProductFilterForm
+          key={`${filters.q}-${selectedBrands.join("|")}`}
+          brandOptions={brandOptions}
+          productCount={products.length}
+          query={filters.q}
+          selectedBrands={selectedBrands}
+          totalCount={totalProducts}
+        />
+      </StickyProductSearch>
 
-          {/* Product grid */}
-          <section className="relative px-4 py-6 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-7xl">
-              <ProductResultsGrid products={products} />
-            </div>
-          </section>
-        </>
-      )}
+      {/* Product grid */}
+      <section className="relative px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <ProductResultsGrid products={products} />
+        </div>
+      </section>
     </main>
   );
 }

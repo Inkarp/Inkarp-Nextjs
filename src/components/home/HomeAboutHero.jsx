@@ -41,7 +41,7 @@ function SlideWorkflow() {
                 Find My Industry
               </Link>
               <Link
-                href="/products?view=workflow"
+                href="/workflows"
                 className="border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
               >
                 See a Workflow

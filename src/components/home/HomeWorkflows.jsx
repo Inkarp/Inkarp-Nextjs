@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
 import RecTag from "./RecTag";
 import WorkflowIcon from "./WorkflowIcon";
-import { workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
 
 export default function HomeWorkflows() {
   const router = useRouter();
@@ -53,9 +53,9 @@ export default function HomeWorkflows() {
                   key={wf.cat}
                   role="link"
                   tabIndex={0}
-                  onClick={() => router.push(`/products?view=workflow&industry=${wf.cat}`)}
+                  onClick={() => router.push(`/workflows/${wf.cat}`)}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter") router.push(`/products?view=workflow&industry=${wf.cat}`);
+                    if (e.key === "Enter") router.push(`/workflows/${wf.cat}`);
                   }}
                   onMouseEnter={() => showTopics(wf.cat)}
                   onMouseLeave={hideTopics}
@@ -69,7 +69,7 @@ export default function HomeWorkflows() {
                       {wf.steps}-Step Workflow
                     </span>
                     <Link
-                      href={`/products?view=workflow&industry=${wf.cat}`}
+                      href={`/workflows/${wf.cat}`}
                       onClick={(e) => e.stopPropagation()}
                       className="whitespace-nowrap border-b border-transparent text-[11px] uppercase tracking-wide text-red transition-colors hover:border-red"
                     >
@@ -94,7 +94,7 @@ export default function HomeWorkflows() {
                         <h4 className="text-[15px] font-semibold leading-snug text-ink">{topic.title}</h4>
                         <p className="flex-grow text-[12.5px] text-ink-soft">{topic.desc}</p>
                         <Link
-                          href={`/products?view=workflow&industry=${hoveredCat}&topic=${encodeURIComponent(topic.tag)}`}
+                          href={`/workflows/${hoveredCat}/${topicSlug(topic.tag)}`}
                           className="self-start border-b border-transparent text-[11px] uppercase tracking-wide text-red transition-colors hover:border-red"
                         >
                           Open workflow →
@@ -110,7 +110,7 @@ export default function HomeWorkflows() {
 
         <div className="mt-8 text-center">
           <Link
-            href="/products?view=workflow"
+            href="/workflows"
             className="border-b border-line-light pb-0.5 text-xs text-ink-soft transition-colors hover:border-teal hover:text-teal"
           >
             Explore every workflow, with the Inkarp products used at each stage →

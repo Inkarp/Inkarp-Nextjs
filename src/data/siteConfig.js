@@ -30,6 +30,10 @@ export const siteConfig = {
       href: "/products",
     },
     {
+      label: "Workflows",
+      href: "/workflows",
+    },
+    {
       label: "Service",
       href: "/service",
     },

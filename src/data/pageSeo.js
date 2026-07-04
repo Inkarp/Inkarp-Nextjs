@@ -102,15 +102,21 @@ export const pageSeo = {
     keywords:
       "inkarp careers, lab equipment jobs india, scientific instrument jobs, careers hyderabad, inkarp recruitment",
   },
+  "/workflows": {
+    label: "Workflows",
+    title: "Lab Workflows by Industry — Inkarp Instruments",
+    description:
+      "Explore Inkarp's lab workflows industry by industry — from pharma to clinical diagnostics — and the instruments that support every step.",
+    keywords:
+      "lab workflow, laboratory workflow by industry, inkarp workflows, industry lab process",
+  },
 };
 
 export function getCanonicalUrl(path) {
   return `${SITE_URL}${path === "/" ? "" : path}`;
 }
 
-export function buildPageMetadata(path) {
-  const seo = pageSeo[path];
-
+function metadataFromSeo(seo, path) {
   return {
     title: seo.title,
     description: seo.description,
@@ -131,8 +137,25 @@ export function buildPageMetadata(path) {
   };
 }
 
-export function buildBreadcrumbJsonLd(path) {
-  const seo = pageSeo[path];
+export function buildPageMetadata(path) {
+  return metadataFromSeo(pageSeo[path], path);
+}
+
+// For dynamic routes (e.g. /workflows/[industry]/[topic]) that aren't in the
+// static pageSeo table — caller supplies title/description/keywords per-record.
+export function buildDynamicMetadata({ path, title, description, keywords }) {
+  return metadataFromSeo({ title, description, keywords }, path);
+}
+
+// Accepts either a static path (looked up in pageSeo) or an explicit trail of
+// { label, href } steps for pages nested deeper than the static table models.
+export function buildBreadcrumbJsonLd(pathOrTrail) {
+  const trail = Array.isArray(pathOrTrail)
+    ? pathOrTrail
+    : pathOrTrail === "/" || !pageSeo[pathOrTrail]
+      ? []
+      : [{ label: pageSeo[pathOrTrail].label, href: pathOrTrail }];
+
   const items = [
     {
       "@type": "ListItem",
@@ -140,16 +163,13 @@ export function buildBreadcrumbJsonLd(path) {
       name: pageSeo["/"].label,
       item: getCanonicalUrl("/"),
     },
-  ];
-
-  if (path !== "/") {
-    items.push({
+    ...trail.map((step, index) => ({
       "@type": "ListItem",
-      position: 2,
-      name: seo.label,
-      item: getCanonicalUrl(path),
-    });
-  }
+      position: index + 2,
+      name: step.label,
+      item: getCanonicalUrl(step.href),
+    })),
+  ];
 
   return {
     "@context": "https://schema.org",

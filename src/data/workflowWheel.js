@@ -1,5 +1,4 @@
-// Eight generic pipeline-stage labels per industry, used by the HomeWorkflowWheel
-// section. Keys must match the `cat` values in workflowIndustries (homeShowcase.js).
+
 export const workflowWheelSteps = {
   pharma: [
     "Sampling & weighing",

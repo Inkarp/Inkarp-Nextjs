@@ -67,11 +67,7 @@ function EventCard({ event, highlight }) {
     >
       <div className="relative aspect-[4/3] overflow-hidden border-b border-line-light bg-parchment-alt">
         <SafeImage src={event.image} alt={event.title} sizes="280px" className="object-cover" />
-        <span className="absolute bottom-3 left-3 flex h-9 w-20 items-center justify-center rounded-md bg-white/90 p-1.5 shadow-sm backdrop-blur">
-          <span className="relative h-full w-full">
-            <SafeImage src={event.logo} alt="" sizes="80px" className="object-contain" />
-          </span>
-        </span>
+       
       </div>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <span

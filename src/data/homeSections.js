@@ -62,48 +62,53 @@ export const clientReviews = [
 ];
 
 export const groupCompanies = {
-  heading: "Our Group Companies & Collaborations",
-  title: "Innovation is at the core of everything we do.",
+  heading: "Group Companies & Collaborations",
+  title: "Beyond Inkarp",
   description:
-    "Explore our subsidiaries and joint ventures that drive our shared vision forward.",
+    "Inkarp works through group companies, service divisions, and selected collaborations that strengthen how laboratories access scientific solutions, technical support, and long-term service.",
   centerLogo: "/assets/home/GroupLogo.png",
   companies: [
     {
       name: "Group Company",
       displayName: "Spark Scientific Private Ltd",
-      description: "Group company.",
+      description: "Group company supporting scientific and laboratory requirements.",
       logo: "/assets/home/Spark.svg",
       href: "/",
+      year: "2005", // dummy — replace with the real founding/start year
     },
     {
       name: "Group Company",
       displayName: "Inkarp Telecom",
-      description: "Communications arm of the group.",
+      description: "Group company supporting communication and connectivity needs.",
       logo: "/assets/home/InkarpTelecom.svg",
       href: "/",
       badge: "Phone",
+      year: "2010", // dummy — replace with the real founding/start year
     },
     {
       name: "Group Company",
       displayName: "Inkarp Instrument Services",
-      description: "Service and support division.",
+      description: "Service division supporting installed systems, maintenance, and technical care.",
       logo: "/assets/home/InkarpServices.svg",
       href: "/",
       badge: "Service",
+      year: "2012", // dummy — replace with the real founding/start year
     },
     {
       name: "Collaborative Venture",
       displayName: "Advion Interchim Scientific",
-      description: "Collaboration partner.",
+      description: "Collaboration partner for specialized analytical and purification technologies.",
       logo: "/assets/images/PrincipalLogos/RowOne/advion.png",
       href: "/products?q=advion",
+      year: "2015", // dummy — replace with the real partnership start year
     },
     {
       name: "Collaborative Venture",
       displayName: "Verder Scientific",
-      description: "Collaboration partner.",
+      description: "Collaboration partner supporting laboratory and material science solutions.",
       logo: "/assets/home/Verder.svg",
       href: "/",
+      year: "2018", // dummy — replace with the real partnership start year
     },
   ],
 };

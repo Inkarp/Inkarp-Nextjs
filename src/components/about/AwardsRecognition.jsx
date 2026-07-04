@@ -10,7 +10,7 @@ import {
   FiTrendingUp,
   FiUsers,
 } from "react-icons/fi";
-import SectionHeading from "@/components/home/SectionHeading";
+import RecTag from "@/components/home/RecTag";
 
 const timelineMilestones = [
   {
@@ -223,9 +223,8 @@ function AwardRow({ award, index }) {
   if (isCenter) {
     return (
       <section
-        className={`px-4 py-14 sm:px-6 lg:px-8 ${
-          isLightRed ? "bg-[#fff3f4]" : "bg-white"
-        }`}
+        className={`px-4 py-14 sm:px-6 lg:px-8 ${isLightRed ? "bg-[#fff3f4]" : "bg-white"
+          }`}
       >
         <article className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -267,9 +266,8 @@ function AwardRow({ award, index }) {
 
   return (
     <section
-      className={`px-4 py-14 sm:px-6 lg:px-8 ${
-        isLightRed ? "bg-[#fff3f4]" : "bg-white"
-      }`}
+      className={`px-4 py-14 sm:px-6 lg:px-8 ${isLightRed ? "bg-[#fff3f4]" : "bg-white"
+        }`}
     >
       <article className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div className={`${imageFirst ? "lg:order-1" : "lg:order-2"}`}>
@@ -316,37 +314,37 @@ function RecognitionSignalCard({ item, index }) {
   const Icon = item.icon;
 
   return (
-    <article className="group border border-zinc-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#BE0010]/35 hover:shadow-lg hover:shadow-[#BE0010]/10">
+    <article className="group border border-line-light bg-white p-5 transition hover:-translate-y-1 hover:border-red/35 hover:shadow-lg">
       <div className="flex items-start justify-between gap-4">
-        <div className="flex size-11 items-center justify-center rounded-lg bg-[#fff3f4] text-[#BE0010]">
+        <div className="flex size-11 items-center justify-center rounded-lg bg-red/8 text-red">
           <Icon aria-hidden="true" className="size-5" />
         </div>
-        <span className="font-maxot text-xs font-semibold text-zinc-300">
+        <span className="text-xs font-semibold text-ink-soft/40">
           0{index + 1}
         </span>
       </div>
-      <h3 className="font-maxot mt-5 text-xl leading-tight text-zinc-950">
+      <h3 className="mt-5 text-xl font-semibold leading-tight text-ink">
         {item.title}
       </h3>
-      <p className="mt-3 text-sm leading-7 text-zinc-600">{item.body}</p>
+      <p className="mt-3 text-sm leading-7 text-ink-soft">{item.body}</p>
     </article>
   );
 }
 
 function RecognitionDifference() {
   return (
-    <section className="border-y border-[#BE0010]/10 bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8">
+    <section className="border-y border-line-light bg-white px-4 py-16 sm:px-6 lg:px-8" data-reveal>
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
-        <aside className="flex flex-col justify-between bg-[#BE0010] p-6 text-white shadow-2xl shadow-[#BE0010]/20 sm:p-8">
+        <aside className="flex flex-col justify-between border border-line-light bg-parchment-alt p-6 sm:p-8">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white">
+            <span className="inline-flex items-center gap-2 border border-red/20 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-red">
               <FiLayers aria-hidden="true" />
               Why it matters
             </span>
-            <h2 className="font-maxot mt-6 text-3xl leading-tight sm:text-4xl">
+            <h2 className="mt-6 text-3xl font-semibold leading-tight text-ink sm:text-4xl">
               Recognition is not just a badge. It is proof of consistency.
             </h2>
-            <p className="mt-5 text-sm leading-7 text-white/80 sm:text-base">
+            <p className="mt-5 text-sm leading-7 text-ink-soft sm:text-base">
               Behind every milestone is a pattern of dependable support,
               technical clarity, and partnerships that keep scientific teams
               moving with confidence.
@@ -356,10 +354,10 @@ function RecognitionDifference() {
           <div className="mt-8 space-y-4">
             {recognitionJourney.map((item, index) => (
               <div className="grid grid-cols-[auto_1fr] gap-4" key={item}>
-                <span className="flex size-8 items-center justify-center rounded-full bg-white text-xs font-bold text-[#BE0010]">
+                <span className="flex size-8 items-center justify-center rounded-full border border-red/20 bg-white text-xs font-bold text-red">
                   {index + 1}
                 </span>
-                <p className="border-b border-white/20 pb-4 text-sm font-medium leading-6 text-white/90">
+                <p className="border-b border-line-light pb-4 text-sm font-medium leading-6 text-ink-soft">
                   {item}
                 </p>
               </div>
@@ -379,22 +377,27 @@ function RecognitionDifference() {
 
 function AwardsRoadTimeline() {
   return (
-    <section className="relative bg-[#fff3f4] px-4 py-16 sm:px-6 lg:px-8">
-      <SectionHeading
-        description="Every milestone on this road marks a moment our partners and principals chose to recognize Inkarp's work."
-        eyebrow="Our Journey"
-        title="Years of Recognition, Mapped Out"
-      />
+    <section className="relative bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8" data-reveal>
+      <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+        <RecTag>Our Journey</RecTag>
+        <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+          Years of Recognition, Mapped Out
+        </h2>
+        <p className="mt-3 text-sm leading-6 text-ink-soft sm:text-base">
+          Every milestone on this road marks a moment our partners and principals chose to
+          recognize Inkarp&apos;s work.
+        </p>
+      </div>
 
       <div className="mx-auto mt-12 max-w-6xl overflow-x-auto pb-6">
         <div className="relative flex min-w-[1600px] items-center gap-6 px-6">
-          <div className="absolute left-0 right-0 top-1/2 h-0 -translate-y-1/2 border-t-2 border-dashed border-[#BE0010]/40" />
+          <div className="absolute left-0 right-0 top-1/2 h-0 -translate-y-1/2 border-t-2 border-dashed border-red/30" />
 
           {timelineMilestones.map((milestone, index) => {
             const isUp = index % 2 === 0;
             const card = (
-              <div className="w-fit rounded-lg border border-[#BE0010]/15 bg-white p-3 shadow-lg shadow-[#BE0010]/10">
-                <div className="relative h-64 w-48 overflow-hidden rounded-md border border-zinc-200">
+              <div className="w-fit border border-line-light bg-white p-3 shadow-lg">
+                <div className="relative h-64 w-48 overflow-hidden border border-line-light">
                   <Image
                     alt={milestone.title}
                     className="object-contain"
@@ -403,7 +406,7 @@ function AwardsRoadTimeline() {
                     src={milestone.image}
                   />
                 </div>
-                <p className="font-maxot mt-3 w-48 text-center text-sm leading-5 text-zinc-700">
+                <p className="mt-3 w-48 text-center text-sm leading-5 text-ink-soft">
                   {milestone.title}
                 </p>
               </div>
@@ -416,8 +419,8 @@ function AwardsRoadTimeline() {
               >
                 {isUp ? <div className="mb-4">{card}</div> : null}
 
-                <span className="relative z-10 flex size-4 shrink-0 items-center justify-center rounded-full border-2 border-white bg-[#BE0010] shadow-md shadow-[#BE0010]/30" />
-                <span className="font-maxot mt-2 text-base font-bold text-[#BE0010]">
+                <span className="relative z-10 flex size-4 shrink-0 items-center justify-center rounded-full border-2 border-white bg-red shadow-md" />
+                <span className="mt-2 text-base font-semibold text-red">
                   {milestone.year}
                 </span>
 
@@ -434,24 +437,9 @@ function AwardsRoadTimeline() {
 export default function AwardsRecognition() {
   return (
     <main className="overflow-hidden bg-white">
-      <section className="relative px-4 pb-12 pt-14 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1000px_460px_at_18%_0%,rgba(190,0,16,0.08),transparent),radial-gradient(1000px_460px_at_82%_100%,rgba(230,57,70,0.08),transparent)]" />
-        <SectionHeading
-          eyebrow="Awards and Recognitions"
-          title="Milestones That Reflect Trust, Service, and Scientific Partnership"
-          description="A dedicated space to showcase the awards, recognitions, and partner milestones that represent Inkarp's commitment to dependable scientific solutions."
-        />
-      </section>
-
-      <RecognitionShowcaseGrid />
-
-      {awards.map((award, index) => (
-        <AwardRow award={award} index={index} key={award.title} />
-      ))}
-
-      <RecognitionDifference />
-
+      {/* <RecognitionShowcaseGrid /> */}
       <AwardsRoadTimeline />
+      <RecognitionDifference />
     </main>
   );
 }

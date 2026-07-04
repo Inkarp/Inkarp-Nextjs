@@ -195,7 +195,7 @@ export default function HomeWorkflowWheel() {
                     8-step workflow
                   </div>
                   <Link
-                    href={`/products?q=${active.cat}`}
+                    href={`/products?view=workflow&industry=${active.cat}`}
                     className="mt-2 border-b border-transparent text-[10.5px] uppercase tracking-wide text-red transition hover:border-red"
                   >
                     Open workflow →
@@ -245,7 +245,7 @@ export default function HomeWorkflowWheel() {
 
         <div className="mt-10 text-center">
           <Link
-            href="/products"
+            href="/products?view=workflow"
             className="border-b border-line-light pb-0.5 text-xs text-ink-soft transition-colors hover:border-teal hover:text-teal"
           >
             Explore every workflow, with the Inkarp products used at each stage →

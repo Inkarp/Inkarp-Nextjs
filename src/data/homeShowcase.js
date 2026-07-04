@@ -143,13 +143,6 @@ export const workflowTopics = {
   ],
 };
 
-export const achievements = [
-  { num: "1985", label: "Founded by Mr. S. Balu" },
-  { num: "14", label: "Branch offices pan-India" },
-  { num: "45+", label: "Global principal brands" },
-  { num: "HYD", label: "Headquartered in Hyderabad" },
-];
-
 export const testimonials = [
   {
     quote:
@@ -171,13 +164,60 @@ export const testimonials = [
   },
 ];
 
-export const featuredProducts = [
-  { cat: "pharma", tag: "HPLC System", name: "Alliance HPLC System", brand: "Waters", spec: "Impurity profiling & dissolution release testing", avail: "In stock — pan-India", quoteQuery: "waters" },
-  { cat: "pharma", tag: "Karl Fischer", name: "Titroline KF Titrator", brand: "Mettler Toledo", spec: "Moisture content to ICH Q3D limits", avail: "Ships in 2 weeks", quoteQuery: "mettler" },
-  { cat: "biotech", tag: "Bioreactor", name: "Orbital Shaking Incubator", brand: "Heidolph", spec: "Cell line development & bioprocess monitoring", avail: "In stock — pan-India", quoteQuery: "heidolph" },
-  { cat: "biotech", tag: "Purification", name: "Chromatography Workstation", brand: "Buchi", spec: "Protein purification & biomolecule recovery", avail: "Ships in 2 weeks", quoteQuery: "buchi" },
-  { cat: "rnd", tag: "Reaction Screening", name: "Parallel Synthesis Platform", brand: "Radleys", spec: "Reaction screening & route optimization", avail: "In stock — pan-India", quoteQuery: "radleys" },
-  { cat: "rnd", tag: "Thermal Analysis", name: "DSC/TGA Analyzer", brand: "Hitachi", spec: "Thermal stability & decomposition profiling", avail: "Ships in 2 weeks", quoteQuery: "hitachi" },
-  { cat: "food", tag: "FT-IR", name: "FT-IR Spectrometer", brand: "Bruker", spec: "Raw material identification & authenticity testing", avail: "In stock — pan-India", quoteQuery: "bruker" },
-  { cat: "food", tag: "Precision Balance", name: "Analytical Balance", brand: "Sartorius", spec: "Formulation weighing & QC release testing", avail: "Ships in 2 weeks", quoteQuery: "sartorius" },
+export const solutionAreaTabs = [
+  ["all", "All"],
+  ["sample-preparation", "Sample Preparation"],
+  ["analysis", "Analysis"],
+  ["moisture-titration", "Moisture & Titration"],
+  ["automation", "Automation"],
+  ["bioprocess", "Bioprocess"],
+  ["material-characterization", "Material Characterization"],
+];
+
+export const solutionAreas = [
+  {
+    cat: "analysis",
+    tag: "Chromatography",
+    name: "HPLC Systems",
+    description: "For impurity profiling, assay, method development, and release testing.",
+    query: "hplc",
+  },
+  {
+    cat: "moisture-titration",
+    tag: "Moisture Analysis",
+    name: "Karl Fischer Titrators",
+    description:
+      "For water content measurement where moisture affects stability, quality, or specification.",
+    query: "karl fischer",
+  },
+  {
+    cat: "bioprocess",
+    tag: "Bioprocess",
+    name: "Bioreactors",
+    description: "For cell culture, process monitoring, and controlled biological workflows.",
+    query: "bioreactor",
+  },
+  {
+    cat: "sample-preparation",
+    tag: "Sample Preparation",
+    name: "Rotary Evaporators",
+    description:
+      "For solvent evaporation, concentration, recovery, and routine preparation workflows.",
+    query: "rotary evaporator",
+  },
+  {
+    cat: "material-characterization",
+    tag: "Material Analysis",
+    name: "Particle Characterization",
+    description:
+      "For particle size, surface behaviour, dispersion quality, and formulation studies.",
+    query: "particle",
+  },
+  {
+    cat: "automation",
+    tag: "Automation",
+    name: "Lab Automation",
+    description: "For reducing manual steps, improving repeatability, and increasing throughput.",
+    query: "automation",
+  },
 ];

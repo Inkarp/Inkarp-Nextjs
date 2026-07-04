@@ -30,10 +30,10 @@ function FeatureIcon({ name, className }) {
 }
 
 const featureItems = [
-  { icon: "diamond", title: "Strong group", description: "A network of companies working together for growth." },
-  { icon: "bolt", title: "Innovation driven", description: "Focused on delivering advanced solutions worldwide." },
-  { icon: "hexagon", title: "Collaborative ventures", description: "Building global partnerships for a better tomorrow." },
-  { icon: "target", title: "Global presence", description: "Operating across industries and scientific markets." },
+  { icon: "diamond", title: "Connected Support", description: "Group companies that extend Inkarp's scientific and service capabilities." },
+  { icon: "bolt", title: "Service Focus", description: "Dedicated support teams for installation, maintenance, and long-term care." },
+  { icon: "hexagon", title: "Technology Access", description: "Collaborations that bring specialized global technologies closer to Indian labs." },
+  { icon: "target", title: "Wider Reach", description: "Working across scientific, service, communication, and industrial support areas." },
 ];
 
 export default function Companies() {
@@ -77,6 +77,9 @@ export default function Companies() {
         <ul className="space-y-5">
           {companies.map((company, index) => (
             <li key={`${company.displayName}-${company.logo}`} className="flex gap-4">
+              <span className="mt-4 w-12 shrink-0 text-right font-mono text-sm font-semibold text-red">
+                {company.year}
+              </span>
               <div className="flex flex-col items-center">
                 <span className="mt-5 size-2.5 shrink-0 rounded-full bg-red" />
                 {index < companies.length - 1 ? (
@@ -87,17 +90,9 @@ export default function Companies() {
               <Link
                 href={company.href}
                 className="flex-1 rounded-xl bg-parchment-alt p-5 transition hover:bg-parchment-alt/70"
-              >
-                {/* <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
-                  {company.name}
-                </p> */}
-                <div className="mt-3 flex flex-wrap items-center gap-3">
-                  {company.badge ? (
-                    <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-red text-xs text-white">
-                      {badgeIcons[company.badge]}
-                    </span>
-                  ) : null}
-                  <span className="relative h-12 w-24 shrink-0">
+              >            
+                <div className="mt-3 flex items-start gap-4">              
+                  <span className="relative bg-white p-2 rounded-xl h-12 w-24 shrink-0">
                     <Image
                       src={company.logo}
                       alt={company.displayName}
@@ -106,7 +101,9 @@ export default function Companies() {
                       className="object-contain object-left"
                     />
                   </span>
-                  <span className="text-sm text-ink-soft">{company.description}</span>
+                  <span className="line-clamp-2 flex-1 text-base leading-snug text-ink-soft">
+                    {company.description}
+                  </span>
                 </div>
               </Link>
             </li>

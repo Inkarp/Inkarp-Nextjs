@@ -42,8 +42,8 @@ export default function Home() {
       {/* <ClientReviews /> */}
       <HomeAboutHero />
       <HomeWorkflows />
-      <HomeWorkflowWheel />
-      {/* <HomeShowcaseSlider /> */}
+      {/* <HomeWorkflowWheel /> */}
+      <HomeShowcaseSlider />
       <HomeAchievements />
       <Companies />
       <Principles /> 

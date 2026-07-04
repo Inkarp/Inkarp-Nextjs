@@ -44,11 +44,11 @@ export default async function ProductsPage({ searchParams }) {
   }));
 
   return (
-    <main className="bg-parchment-alt dark:bg-zinc-950 min-h-screen" data-scroll-skip>
+    <main className="bg-white dark:bg-zinc-950 min-h-screen" data-scroll-skip>
       <BreadcrumbJsonLd path="/products" />
       <PageBreadcrumbs path="/products" />
       {/* Page header */}
-      <section className="border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-4 py-5 sm:px-6 lg:px-8">
+      <section className="border-b border-line-light dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-center gap-2">
           <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">
             Products
@@ -61,7 +61,7 @@ export default async function ProductsPage({ searchParams }) {
             see matching products instantly. Or browse by lab workflow, industry by industry.
           </p>
 
-          <div className="mt-3 inline-flex rounded-lg border border-line-light bg-parchment-alt p-1 dark:border-zinc-700 dark:bg-zinc-800">
+          <div className="mt-3 inline-flex rounded-lg border border-line-light bg-[whitesmoke] p-1 dark:border-zinc-700 dark:bg-zinc-800">
             {VIEW_TABS.map((tab) => (
               <Link
                 key={tab.href}

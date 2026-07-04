@@ -5,7 +5,7 @@ import PrincipalLogo from "@/components/products/PrincipalLogo";
 export default function ProductResultsGrid({ products, emptyHref = "/products", emptyLinkLabel = "Clear search" }) {
   if (!products.length) {
     return (
-      <div className="mt-4 rounded-xl border border-dashed border-zinc-300 dark:border-zinc-700 p-12 text-center">
+      <div className="mt-4 rounded-2xl border border-dashed border-zinc-300 bg-[whitesmoke] dark:border-zinc-700 dark:bg-zinc-900 p-12 text-center">
         <h2 className="font-maxot text-2xl font-bold text-zinc-950 dark:text-zinc-100">
           No products found
         </h2>
@@ -23,15 +23,15 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
   }
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {products.map((product) => (
         <article
-          className="group flex flex-col rounded-xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-4 shadow-sm transition hover:border-red/40 hover:shadow-md"
+          className="group flex flex-col rounded-2xl bg-[whitesmoke] dark:bg-zinc-900 p-4 shadow-sm ring-1 ring-black/[0.04] transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-red/20 dark:ring-white/[0.04]"
           key={`${product.principalSlug}-${product.slug}`}
         >
           <Link
             aria-label={`View ${product.name}`}
-            className="mb-3 flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-lg bg-parchment-alt dark:bg-zinc-800"
+            className="mb-3 flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl dark:bg-zinc-800"
             href={product.href}
           >
             {product.image ? (
@@ -58,7 +58,7 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
               principalName={product.principalName}
               principalSlug={product.principalSlug}
             />
-            <span className="shrink-0 rounded bg-parchment-alt dark:bg-zinc-800 px-1.5 py-0.5 text-[10px] font-semibold text-ink-soft dark:text-zinc-400">
+            <span className="shrink-0 rounded-full bg-white dark:bg-zinc-800 px-2 py-0.5 text-[10px] font-semibold text-ink-soft dark:text-zinc-400">
               {product.countryOfOrigin || "-"}
             </span>
           </div>
@@ -78,14 +78,14 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
             <div className="mt-2.5 flex flex-wrap gap-1">
               {(product.applications ?? []).slice(0, 3).map((app, index) => (
                 <span
-                  className="rounded border border-line-light dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-ink-soft dark:text-zinc-400"
+                  className="rounded-full bg-white dark:bg-zinc-800 px-2 py-0.5 text-[10px] text-ink-soft dark:text-zinc-400"
                   key={`${product.principalSlug}-${product.slug}-app-${index}`}
                 >
                   {app}
                 </span>
               ))}
               {(product.applications ?? []).length > 3 ? (
-                <span className="rounded border border-line-light dark:border-zinc-800 px-1.5 py-0.5 text-[10px] text-ink-soft dark:text-zinc-500">
+                <span className="rounded-full bg-white dark:bg-zinc-800 px-2 py-0.5 text-[10px] text-ink-soft dark:text-zinc-500">
                   +{product.applications.length - 3}
                 </span>
               ) : null}
@@ -95,7 +95,7 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
           {/* Actions */}
           <div className="mt-auto flex gap-2 pt-3">
             <Link
-              className="group relative flex h-8 flex-1 items-center justify-center overflow-hidden rounded-lg bg-navy dark:bg-zinc-800 text-xs font-semibold text-parchment"
+              className="group relative flex h-9 flex-1 items-center justify-center overflow-hidden rounded-xl bg-navy dark:bg-zinc-800 text-xs font-semibold text-parchment shadow-sm transition group-hover:shadow-md"
               href={product.href}
             >
               <span className="absolute inset-y-0 left-0 w-1/2 origin-left scale-x-0 bg-red transition-transform duration-300 group-hover:scale-x-100" />
@@ -103,7 +103,7 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
               <span className="relative z-10">View</span>
             </Link>
             <Link
-              className="inline-flex h-8 items-center rounded-lg border border-line-light dark:border-zinc-800 px-3 text-xs font-semibold text-ink-soft dark:text-zinc-400 transition hover:border-red hover:text-red"
+              className="inline-flex h-9 items-center rounded-xl bg-white dark:bg-zinc-800 px-3 text-xs font-semibold text-ink-soft dark:text-zinc-400 transition hover:text-red"
               href={product.apiPath}
             >
               API

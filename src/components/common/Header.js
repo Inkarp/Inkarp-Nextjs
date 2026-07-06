@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   FiClock,
   FiChevronDown,
@@ -72,7 +72,6 @@ export default function Header() {
   const [openMobileItem, setOpenMobileItem] = useState(null);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isAtTop, setIsAtTop] = useState(true);
-  const previousScrollY = useRef(0);
   const topLinks = [
     { label: "Our Story", href: "/our-story" },
     { label: "Awards and Recognitions", href: "/awards" },
@@ -97,21 +96,58 @@ export default function Header() {
   };
 
   useEffect(() => {
-    previousScrollY.current = window.scrollY;
+    // Hysteresis band for the "at top" check: once scrolled past TOP_EXIT we
+    // leave the top zone, but don't re-enter it until back below TOP_ENTER.
+    // A single hard threshold here would flap true/false rapidly whenever
+    // scrollY hovers right around it — which is exactly where every scroll
+    // gesture starts — retriggering the top bar's collapse/expand animation
+    // and producing the render-thrashing blur seen at the very start of a scroll.
+    const TOP_ENTER = 10;
+    const TOP_EXIT = 40;
+    // Minimum continuous travel (px) in one direction before we act on it.
+    // Raw scroll events aren't monotonic — trackpads/wheels emit jittery,
+    // slightly non-linear deltas even during a single steady gesture — so
+    // reacting to every event caused the header to flicker while scrolling.
+    // Direction only "commits" once it has traveled this far since the last
+    // reversal, which absorbs that jitter on both the hide and reveal side.
+    const DIRECTION_TOLERANCE = 30;
+
+    let lastScrollY = window.scrollY;
+    let anchorScrollY = window.scrollY;
+    let committedDirection = null; // 'up' | 'down' | null
+    let atTop = window.scrollY <= TOP_ENTER;
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsAtTop(currentScrollY <= 24);
+      atTop = atTop ? currentScrollY <= TOP_EXIT : currentScrollY <= TOP_ENTER;
+      setIsAtTop(atTop);
 
-      if (currentScrollY <= 24) {
+      if (atTop) {
         setIsHeaderVisible(true);
-      } else if (currentScrollY > previousScrollY.current) {
-        setIsHeaderVisible(false);
-      } else if (currentScrollY < previousScrollY.current) {
-        setIsHeaderVisible(true);
+        committedDirection = null;
+        anchorScrollY = currentScrollY;
+        lastScrollY = currentScrollY;
+        return;
       }
 
-      previousScrollY.current = currentScrollY;
+      const delta = currentScrollY - lastScrollY;
+      lastScrollY = currentScrollY;
+
+      if (delta === 0) return;
+
+      const direction = delta > 0 ? "down" : "up";
+
+      if (direction !== committedDirection) {
+        // Direction just reversed — start measuring fresh from here instead
+        // of acting immediately, so a brief wiggle can't flip visibility.
+        committedDirection = direction;
+        anchorScrollY = currentScrollY;
+        return;
+      }
+
+      if (Math.abs(currentScrollY - anchorScrollY) > DIRECTION_TOLERANCE) {
+        setIsHeaderVisible(direction === "up");
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });

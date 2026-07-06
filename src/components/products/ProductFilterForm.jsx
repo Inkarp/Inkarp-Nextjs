@@ -27,10 +27,11 @@ function getProductsUrl(pathname, searchParams, query, brands = []) {
   return queryString ? `${pathname}?${queryString}` : pathname;
 }
 
-// Fire-and-forget: records what people actually search for so it can inform
-// catalog/SEO priorities later. Never blocks navigation on the network call.
+// Awaited before the results fetch fires, so every search is on record in the
+// database first. A logging failure never blocks the actual search though —
+// it's swallowed so results still load even if the write fails.
 function logSearch({ query, brands, resultsCount }) {
-  fetch("/api/search-log", {
+  return fetch("/api/search-log", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, brands, resultsCount }),
@@ -52,6 +53,7 @@ export default function ProductFilterForm({
   const [isBrandOpen, setIsBrandOpen] = useState(false);
   const [brandSearch, setBrandSearch] = useState("");
   const [isPending, startTransition] = useTransition();
+  const [isLogging, setIsLogging] = useState(false);
   const trimmedSearch = search.trim();
   const hasActiveSearch = Boolean(trimmedSearch);
   const hasActiveBrands = selectedBrands.length > 0;
@@ -75,8 +77,14 @@ export default function ProductFilterForm({
   const showSearchButton = trimmedSearch.length >= 2;
   const canSubmitSearch = trimmedSearch.length === 0 || trimmedSearch.length >= 2;
 
-  const runSearch = () => {
+  const runSearch = async () => {
     if (!canSubmitSearch) return;
+
+    if (trimmedSearch) {
+      setIsLogging(true);
+      await logSearch({ query: trimmedSearch, brands: selectedBrands, resultsCount: productCount });
+      setIsLogging(false);
+    }
 
     startTransition(() => {
       router.replace(
@@ -84,10 +92,6 @@ export default function ProductFilterForm({
         { scroll: false }
       );
     });
-
-    if (trimmedSearch) {
-      logSearch({ query: trimmedSearch, brands: selectedBrands, resultsCount: productCount });
-    }
   };
 
   const handleSubmit = (event) => {
@@ -235,7 +239,7 @@ export default function ProductFilterForm({
           ) : null}
 
           <div className="shrink-0 rounded-full bg-red px-3 py-2 text-xs font-bold text-white">
-            {isPending
+            {isPending || isLogging
               ? "Searching..."
               : `${productCount}${hasActiveFilters ? "" : `/${totalCount}`} results`}
           </div>

@@ -3,19 +3,12 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FiArrowRight, FiClock, FiMail, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import { siteConfig } from "@/data/siteConfig";
-
-const socialIcons = {
-  facebook: FaFacebookF,
-  instagram: FaInstagram,
-  linkedin: FaLinkedinIn,
-  youtube: FaYoutube,
-};
+import RecTag from "@/components/home/RecTag";
 
 const inputClass =
-  "min-h-14 w-full rounded-md border border-transparent bg-zinc-100 px-5 text-sm font-semibold text-zinc-700 outline-none transition placeholder:text-zinc-500 focus:border-[#BE0010]/40 focus:bg-white focus:ring-4 focus:ring-[#BE0010]/10";
+  "min-h-14 w-full rounded-xl border border-line-light bg-[#faf7f5] px-5 text-sm font-medium text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/70 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/15";
 
 function getMetaInfo() {
   if (typeof window === "undefined") {
@@ -81,7 +74,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState(getInitialFormData);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { contact, socials } = siteConfig;
+  const { contact } = siteConfig;
 
   const contactItems = [
     {
@@ -160,25 +153,25 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="relative mx-auto w-full px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.86fr_1.34fr] lg:items-stretch">
-        <aside className="relative overflow-hidden rounded-md bg-[#BE0010] p-8 text-white shadow-[0_22px_70px_rgba(190,0,16,0.22)] sm:p-10">
-          <div className="absolute inset-x-0 top-0 h-1 bg-white/30" />
-          <div className="space-y-7">
+    <section className="border-b border-line-light bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.86fr_1.34fr] lg:items-stretch">
+        {/* Contact details */}
+        <aside className="flex flex-col rounded-2xl border border-line-light bg-white p-7 shadow-sm sm:p-8">
+          <div className="space-y-6">
             {contactItems.map((item) => {
               const Icon = item.icon;
               const isMultiline = Array.isArray(item.value);
               const content = (
                 <>
-                  <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-white/15 text-xl text-white ring-1 ring-white/20">
+                  <span className="inline-flex size-12 shrink-0 items-center justify-center rounded-full bg-[#faf7f5] text-xl text-red">
                     <Icon aria-hidden="true" />
                   </span>
-                  <span>
-                    <span className="block text-base font-maxot font-semibold text-white/80">
+                  <span className="min-w-0">
+                    <span className="block text-xs font-semibold uppercase tracking-wide text-ink-soft">
                       {item.label}
                     </span>
                     {isMultiline ? (
-                      <span className="mt-1 block space-y-0.5 text-sm font-semibold leading-snug text-white">
+                      <span className="mt-1 block space-y-0.5 text-sm font-medium leading-snug text-ink">
                         {item.value.map((line) => (
                           <span className="block" key={line}>
                             {line}
@@ -186,7 +179,7 @@ export default function ContactForm() {
                         ))}
                       </span>
                     ) : (
-                      <span className="mt-1 block text-base font-bold leading-snug text-white">
+                      <span className="mt-1 block text-sm font-semibold leading-snug text-ink">
                         {item.value}
                       </span>
                     )}
@@ -196,7 +189,7 @@ export default function ContactForm() {
 
               return item.href ? (
                 <a
-                  className="flex items-center gap-5 transition hover:translate-x-1"
+                  className="group flex items-start gap-4 rounded-xl outline-none transition-colors focus-visible:ring-2 focus-visible:ring-red/40 [&_span]:transition-colors hover:[&_.contact-value]:text-red"
                   href={item.href}
                   key={item.label}
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -205,44 +198,41 @@ export default function ContactForm() {
                   {content}
                 </a>
               ) : (
-                <div className="flex items-center gap-5" key={item.label}>
+                <div className="flex items-start gap-4" key={item.label}>
                   {content}
                 </div>
               );
             })}
           </div>
 
-          <div className="relative mt-10 h-72 overflow-hidden rounded-md border border-white/20 bg-white/10 sm:h-80">
+          <div className="relative mt-8 min-h-64 flex-1 overflow-hidden rounded-xl border border-line-light sm:min-h-72">
             <Image
-              alt="Laboratory instrument support from Inkarp"
+              alt="Inkarp Instruments head office building in Hyderabad"
               className="object-cover"
               fill
               sizes="(min-width: 1024px) 420px, 100vw"
               src="/assets/our-story/InkarpBuilding.jpg"
             />
-          </div>      
+          </div>
         </aside>
 
+        {/* Form */}
         <div className="py-2 lg:py-4">
           <div className="mb-9">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#BE0010]" />
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-[#BE0010]">
-                Contact with us
-              </span>
-            </div>
-            <h3 className="font-maxot text-2xl leading-tight text-zinc-950 sm:text-xl">
+            <RecTag>Contact with us</RecTag>
+            <h3 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
               Feel free to write us anytime
             </h3>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-600">
-              Share your requirement and our team will route it to the right sales,
-              service, or application specialist.
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">
+              Share your requirement and our team will route it to the right
+              sales, service, or application specialist.
             </p>
           </div>
 
           {status.message ? (
             <div
-              className={` rounded-md border p-2 text-sm ${
+              role="status"
+              className={`mb-5 rounded-xl border px-4 py-3 text-sm ${
                 status.type === "success"
                   ? "border-green-200 bg-green-50 text-green-700"
                   : "border-red-200 bg-red-50 text-red-700"
@@ -252,8 +242,8 @@ export default function ContactForm() {
             </div>
           ) : null}
 
-          <form className="grid gap-5" onSubmit={handleSubmit}>
-            <div className="grid gap-5 md:grid-cols-2">
+          <form className="grid gap-4" onSubmit={handleSubmit}>
+            <div className="grid gap-4 md:grid-cols-2">
               <input
                 autoComplete="name"
                 className={inputClass}
@@ -274,7 +264,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2">
               <input
                 autoComplete="tel"
                 className={inputClass}
@@ -294,7 +284,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2">
               <input
                 className={inputClass}
                 name="jobTitle"
@@ -313,7 +303,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2">
               <input
                 className={inputClass}
                 name="city"
@@ -342,15 +332,17 @@ export default function ContactForm() {
             />
 
             <textarea
-              className={`${inputClass} min-h-60 resize-y py-5`}
+              className={`${inputClass} min-h-48 resize-y py-4`}
               name="message"
               onChange={handleChange}
               placeholder="Write a message"
             />
 
             <button
-              className={`inline-flex h-14 w-full items-center justify-center gap-2 rounded-md bg-[#BE0010] px-7 text-sm font-bold text-white shadow-[0_16px_36px_rgba(190,0,16,0.22)] transition sm:w-fit ${
-                isSubmitting ? "cursor-not-allowed opacity-80" : "hover:bg-[#9f000d]"
+              className={`inline-flex h-13 w-full items-center justify-center gap-2 rounded-full bg-red px-8 py-3.5 text-sm font-semibold text-white transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-red/40 sm:w-fit ${
+                isSubmitting
+                  ? "cursor-not-allowed opacity-70"
+                  : "hover:bg-[#9f000d]"
               }`}
               disabled={isSubmitting}
               type="submit"
@@ -358,7 +350,7 @@ export default function ContactForm() {
               {isSubmitting ? (
                 <>
                   <svg
-                    className="size-5 animate-spin text-white"
+                    className="size-5 animate-spin text-white motion-reduce:hidden"
                     fill="none"
                     viewBox="0 0 24 24"
                   >

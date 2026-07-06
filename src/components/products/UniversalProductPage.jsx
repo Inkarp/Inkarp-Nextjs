@@ -147,7 +147,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Demo booking */}
       {product.booking && (
-        <DemoBooking data={product.booking} />
+        <DemoBooking data={product.booking} productName={product.name} />
       )}
 
       {/* CTA strip */}

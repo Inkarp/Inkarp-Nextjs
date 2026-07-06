@@ -29,7 +29,7 @@ export default function WorkflowIndustryGrid() {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3">
       {rows.map((row, ri) => {
         const activeIndex = row.findIndex((item) => item.cat === hoveredCat);
 
@@ -44,26 +44,26 @@ export default function WorkflowIndustryGrid() {
                   role="link"
                   tabIndex={0}
                   onClick={() => router.push(`/workflows/${item.cat}`)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") router.push(`/workflows/${item.cat}`);
-                  }}
+                  // onKeyDown={(e) => {
+                  //   if (e.key === "Enter") router.push(`/workflows/${item.cat}`);
+                  // }}
                   onMouseEnter={() => showTopics(item.cat)}
                   onMouseLeave={hideTopics}
                   onFocus={() => showTopics(item.cat)}
                   onBlur={hideTopics}
-                  className={`relative z-10 flex cursor-pointer flex-col gap-3 rounded-xl border p-5 transition ${
+                  className={`relative z-10 flex cursor-pointer flex-col gap-3  border p-5 transition ${
                     isActive
                       ? "border-red bg-white shadow-lg dark:bg-zinc-900"
                       : "border-line-light bg-[whitesmoke] hover:-translate-y-0.5 hover:border-red/40 dark:border-zinc-800 dark:bg-zinc-900"
                   }`}
                 >
-                  <WorkflowIcon cat={item.cat} className="h-8 w-8 text-red" />
-                  <h2 className="text-[15px] font-semibold leading-snug text-ink dark:text-zinc-100">
+                  <WorkflowIcon cat={item.cat} className="h-8 w-8 text-black" />
+                  <h2 className="text-[15px] font-semibold leading-snug text-black dark:text-zinc-100">
                     {item.industry}
                   </h2>
                   <p className="flex-1 text-[13px] text-ink-soft dark:text-zinc-400">{item.tagline}</p>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="w-fit rounded-full bg-red/10 px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-red">
+                    <span className="w-fit rounded-full bg-white px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-black">
                       {item.steps}-Step Workflow
                     </span>
                     <Link
@@ -80,7 +80,7 @@ export default function WorkflowIndustryGrid() {
 
             {activeIndex !== -1 && (
               <div
-                className="relative col-span-full -mt-2 animate-[topicReveal_.25s_ease] rounded-xl border border-red bg-white p-6 pt-8 shadow-lg dark:bg-zinc-900"
+                className="relative col-span-full -mt-2 animate-[topicReveal_.25s_ease]  border border-black bg-white p-6 pt-8 shadow-lg dark:bg-zinc-900"
                 onMouseEnter={() => showTopics(hoveredCat)}
                 onMouseLeave={hideTopics}
               >

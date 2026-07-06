@@ -181,12 +181,6 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "vacuubrand",
-        "principalName": "Vacuubrand",
-        "countryOfOrigin": "Germany",
-        "products": []
-    },
-    {
         "slug": "thalesnano",
         "principalName": "ThalesNano",
         "countryOfOrigin": "Hungary",
@@ -433,21 +427,9 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "dlab",
-        "principalName": "DLAB",
-        "countryOfOrigin": "China",
-        "products": []
-    },
-    {
         "slug": "mettler-toledo",
         "principalName": "Mettler Toledo",
         "countryOfOrigin": "Switzerland",
-        "products": []
-    },
-    {
-        "slug": "inkarp-usb",
-        "principalName": "Inkarp USB",
-        "countryOfOrigin": "India",
         "products": []
     }
 ];

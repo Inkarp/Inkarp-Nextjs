@@ -50,14 +50,11 @@ export default function ServiceContactForm() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        "https://inkarppersonal.vercel.app/api/service/enquiry",
-        {
-          body: JSON.stringify(form),
-          headers: { "Content-Type": "application/json" },
-          method: "POST",
-        }
-      );
+      const response = await fetch("/api/forms", {
+        body: JSON.stringify({ formType: "service", ...form }),
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+      });
 
       const data = await response.json().catch(() => ({}));
 

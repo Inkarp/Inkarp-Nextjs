@@ -124,16 +124,13 @@ export default function ContactForm() {
     setStatus({ type: "", message: "" });
 
     try {
-      const response = await fetch(
-        "https://inkarppersonal.vercel.app/api/contact/submit",
-        {
-          body: JSON.stringify(formData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "POST",
-        }
-      );
+      const response = await fetch("/api/forms", {
+        body: JSON.stringify({ formType: "contact", ...formData }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
 
       const data = await response.json().catch(() => ({}));
 

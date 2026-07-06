@@ -5,6 +5,7 @@ export const principalLogos = {
   rotzmeier: "/assets/images/PrincipalLogos/RowOne/Rotzmeier.gif",
   polyscience: "/assets/images/PrincipalLogos/RowOne/Polyscience.png",
   thalesnano: "/assets/images/PrincipalLogos/RowOne/ThalesNano.jpg",
+  "sp-genevac": "/assets/images/PrincipalLogos/RowOne/SP-genevac.png",
   bruker: "/assets/images/PrincipalLogos/RowSeven/Bruker.svg",
   nanalysis: "/assets/images/PrincipalLogos/RowOne/nanalysis.png",
   ecom: "/assets/images/PrincipalLogos/RowTwo/ECom.png",

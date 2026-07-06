@@ -22,7 +22,7 @@ const WHY_ITEMS = [
   { title: 'Reach us directly', body: '+91 40 2717 2293 - info@inkarp.com - Mon-Sat, 9am-6pm IST' },
 ];
 
-export default function DemoBooking({ data }) {
+export default function DemoBooking({ data, productName }) {
   const { fields = [], submitLabel, successMessage, eyebrow, title, description } = data ?? {};
   const [form, setForm] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -50,10 +50,27 @@ export default function DemoBooking({ data }) {
     }
 
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setLoading(false);
-    setSubmitted(true);
-    window.dispatchEvent(new CustomEvent('product-demo-submitted'));
+
+    try {
+      const response = await fetch('/api/forms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ formType: 'demo-booking', productName, ...form }),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result?.success) {
+        setError(result?.message || 'Something went wrong. Please try again.');
+        return;
+      }
+
+      setSubmitted(true);
+      window.dispatchEvent(new CustomEvent('product-demo-submitted'));
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const visibleFields = enhancedFields.filter((field) => field.type !== 'textarea');

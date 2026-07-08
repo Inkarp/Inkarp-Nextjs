@@ -42,7 +42,7 @@ export default function GlasswareGuide({ cards = [] }) {
                 )}
 
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-parchment-alt text-base font-bold text-ink dark:bg-zinc-800 dark:text-zinc-100">
-                  {codeFor(c.title).length > 3 ? <FiCheckCircle /> : codeFor(c.title)}
+                  {codeFor(c.title).length > 3 ? <FiCheckCircle className="text-red" /> : codeFor(c.title)}
                 </div>
 
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-black dark:text-zinc-100">{codeFor(c.title)}</p>

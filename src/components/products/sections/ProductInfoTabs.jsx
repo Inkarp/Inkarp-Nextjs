@@ -106,7 +106,7 @@ function IconCard({ title, description, items, icon: IconProp, badge }) {
   return (
     <div className="rounded-xl border border-line-light bg-parchment p-5 transition hover:border-zinc-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700">
       <div className="mb-3 flex items-center gap-2">
-        <Icon className="h-5 w-5 text-ink dark:text-zinc-100" />
+        <Icon className="h-5 w-5 text-red" />
         {badge && (
           <span className="ml-auto text-[10px] font-bold uppercase tracking-wide text-ink bg-parchment-alt rounded-full px-2 py-0.5 dark:text-zinc-100 dark:bg-zinc-800">
             {badge}
@@ -187,11 +187,13 @@ export default function ProductInfoTabs({ product }) {
   }, []);
 
   const section = (eyebrow) => lf.sections?.find((s) => s.eyebrow === eyebrow);
-  const overviewSec   = lf.sections?.[0];
-  const perfSec       = section('Performance');
-  const complianceSec = section('Quality and safety');
-  const configSec     = section('Configuration');
-  const docsSec       = section('Documentation');
+  const overviewSec      = lf.sections?.[0];
+  const keyFeaturesSec   = section('Key Features');
+  const applicationsSec  = section('Applications');
+  const perfSec          = section('Performance');
+  const complianceSec    = section('Quality and safety');
+  const configSec        = section('Configuration');
+  const docsSec          = section('Documentation');
 
   /* ── Tab content ─────────────────────────────────── */
   const renderContent = () => {
@@ -202,7 +204,7 @@ export default function ProductInfoTabs({ product }) {
         return (
           <div>
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">
-              Reliable rotary evaporation, focused on the essentials
+              {overviewSec?.subheading ?? 'Reliable rotary evaporation, focused on the essentials'}
             </h3>
             {overviewSec?.body?.map((p, i) => (
               <p key={i} className="mb-4 text-sm leading-7 text-black dark:text-zinc-100">{p}</p>
@@ -218,7 +220,6 @@ export default function ProductInfoTabs({ product }) {
                 ))}
               </div>
             )}
-            <KPIRow kpis={lf.stats} />
           </div>
         );
 
@@ -227,8 +228,11 @@ export default function ProductInfoTabs({ product }) {
         return (
           <div>
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">
-              Built around safe, visible and repeatable evaporation
+              {keyFeaturesSec?.title ?? 'Built around safe, visible and repeatable evaporation'}
             </h3>
+            {keyFeaturesSec?.description && (
+              <p className="mb-5 text-sm leading-7 text-black dark:text-zinc-100">{keyFeaturesSec.description}</p>
+            )}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(product.features ?? []).slice(0, 9).map((f) => {
                 const colonIdx = f.indexOf(':');
@@ -251,7 +255,9 @@ export default function ProductInfoTabs({ product }) {
       case 'applications':
         return (
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">Where it&apos;s used</h3>
+            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">
+              {applicationsSec?.title ?? "Where it's used"}
+            </h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(product.applications ?? []).map((sentence, i) => (
                 <IconCard
@@ -290,7 +296,9 @@ export default function ProductInfoTabs({ product }) {
       case 'performance':
         return (
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">Evaporation performance</h3>
+            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">
+              {perfSec?.title ?? 'Evaporation performance'}
+            </h3>
             {perfSec?.body?.map((p, i) => (
               <p key={i} className="mb-4 text-sm leading-7 text-black dark:text-zinc-100">{p}</p>
             ))}
@@ -314,7 +322,9 @@ export default function ProductInfoTabs({ product }) {
       case 'compliance':
         return (
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">Quality, safety &amp; certification</h3>
+            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">
+              {complianceSec?.title ?? 'Quality, safety & certification'}
+            </h3>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(complianceSec?.cards ?? []).map((c) => (
                 <IconCard
@@ -336,7 +346,7 @@ export default function ProductInfoTabs({ product }) {
         return (
           <div>
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4 dark:text-zinc-100">
-              Configure the Hei-VAP Core around your workflow
+              {configSec?.title ?? `Configure the ${product.name} around your workflow`}
             </h3>
             <div className="grid gap-3 sm:grid-cols-2">
               {(configSec?.cards ?? []).map((c) => (
@@ -363,9 +373,11 @@ export default function ProductInfoTabs({ product }) {
       case 'docs': {
         return (
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink mb-2 dark:text-zinc-100">Documentation &amp; Resources</h3>
+            <h3 className="text-lg font-semibold tracking-tight text-ink mb-2 dark:text-zinc-100">
+              {docsSec?.title ?? 'Documentation & Resources'}
+            </h3>
             <p className="mb-5 text-sm leading-7 text-black dark:text-zinc-100">
-              Product and compliance documents for internal evaluation, purchase and safety review. Request any from Inkarp.
+              {docsSec?.description ?? 'Product and compliance documents for internal evaluation, purchase and safety review. Request any from Inkarp.'}
             </p>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(docsSec?.cards ?? []).map((c) => {
@@ -373,7 +385,7 @@ export default function ProductInfoTabs({ product }) {
                 return (
                   <div key={c.title} className="flex items-start gap-3 rounded-xl border border-line-light bg-parchment p-4 transition hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700">
                     <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-parchment-alt dark:bg-zinc-800">
-                      <DocIcon className="h-4 w-4 text-ink dark:text-zinc-100" />
+                      <DocIcon className="h-4 w-4 text-red" />
                     </div>
                     <div>
                       <div className="font-semibold text-sm text-black dark:text-zinc-100">{c.title}</div>
@@ -404,9 +416,9 @@ export default function ProductInfoTabs({ product }) {
 
         <SectionHeader
           number="01"
-          eyebrow="Product information"
-          title="Hei-VAP Core at a glance"
-          description="Everything you need to evaluate the rotary evaporator — overview, features, applications, specifications, quality & compliance, configurations & packages, and documentation."
+          eyebrow={overviewSec?.eyebrow ?? 'Product information'}
+          title={overviewSec?.title ?? 'Product at a glance'}
+          description={overviewSec?.description ?? ''}
         />
 
         {/* Pill tabs */}
@@ -421,7 +433,7 @@ export default function ProductInfoTabs({ product }) {
                   : 'border-line-light bg-parchment text-black hover:border-zinc-400 hover:text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:text-zinc-100'
               }`}
             >
-              <Icon className="h-3.5 w-3.5" />
+              <Icon className={`h-3.5 w-3.5 ${active === key ? '' : 'text-red'}`} />
               {label}
             </button>
           ))}

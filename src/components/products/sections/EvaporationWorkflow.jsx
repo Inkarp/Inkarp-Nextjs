@@ -53,12 +53,12 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
   return (
     <button
       onClick={onClick}
-      className={`relative flex h-full w-full min-w-[160px] flex-col  border-2 pt-5 px-5 pb-5 text-left transition-all duration-300 ${
+      className={`relative flex h-full w-full min-w-[160px] flex-col  border-2 border-[#BE0010] pt-5 px-5 pb-5 text-left transition-all duration-300 ${
         isActive
-          ? 'border-ink dark:border-zinc-100 bg-parchment-alt dark:bg-zinc-800'
+          ? 'bg-parchment-alt dark:bg-zinc-800'
           : isFuture
-            ? 'border-line-light bg-parchment hover:border-line-light dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700'
-            : 'border-line-light bg-parchment hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600'
+            ? 'bg-parchment hover:bg-parchment-alt dark:bg-zinc-900 dark:hover:bg-zinc-800'
+            : 'bg-parchment hover:bg-parchment-alt dark:bg-zinc-900 dark:hover:bg-zinc-800'
       }`}
     >
       {/* Progress bar — hugs the top edge of the card, radius matches card */}

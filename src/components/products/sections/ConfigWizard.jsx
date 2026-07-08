@@ -184,7 +184,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   onClick={reset}
                   type="button"
                 >
-                  <FiRefreshCw className="text-sm" />
+                  <FiRefreshCw className="text-sm text-red" />
                   Reset
                 </button>
               </div>
@@ -193,7 +193,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
             <div className="flex min-h-[270px] items-center justify-center rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
               {!done ? (
                 <div className="text-center text-black dark:text-zinc-100">
-                  <FiSettings className="mx-auto text-4xl text-black dark:text-zinc-100" />
+                  <FiSettings className="mx-auto text-4xl text-red" />
                   <p className="mt-4 text-sm leading-6">{emptyState}</p>
                 </div>
               ) : (

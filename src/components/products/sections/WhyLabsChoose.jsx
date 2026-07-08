@@ -60,7 +60,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
                   &ldquo;
                 </span>
 
-                <div className="relative inline-flex size-12 items-center justify-center rounded-lg border border-line-light bg-parchment-alt text-ink dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
+                <div className="relative inline-flex size-12 items-center justify-center rounded-lg border border-line-light bg-parchment-alt text-red dark:border-zinc-800 dark:bg-zinc-800">
                   <Icon className="size-5" />
                 </div>
 

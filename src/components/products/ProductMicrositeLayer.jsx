@@ -96,7 +96,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             </button>
             <button
               aria-label="Dismiss sticky product CTA"
-              className="inline-flex size-10 items-center justify-center rounded-md border border-line-light dark:border-zinc-700 text-ink-soft dark:text-zinc-400 transition hover:border-red hover:text-red"
+              className="inline-flex size-10 items-center justify-center rounded-md border border-line-light dark:border-zinc-700 text-red transition hover:border-red"
               onClick={() => setStickyDismissed(true)}
               type="button"
             >

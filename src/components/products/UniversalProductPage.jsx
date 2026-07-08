@@ -51,7 +51,7 @@ export default function UniversalProductPage({ product }) {
       )} */}
 
       {/* Stats bar */}
-      {/* <StatsBar stats={lf.stats ?? []} /> */}
+      <StatsBar stats={lf.stats ?? []} />
 
       {/* Product info tabs (overview, features, specs, etc.) */}
       <ProductInfoTabs product={product} />
@@ -164,7 +164,7 @@ export default function UniversalProductPage({ product }) {
               className="inline-flex h-12 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d] shrink-0"
             >
               {lf.cta.label}
-              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="ml-2 h-4 w-4 text-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>

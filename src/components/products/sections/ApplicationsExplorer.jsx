@@ -68,7 +68,7 @@ export default function ApplicationsExplorer({ data }) {
                 onClick={() => setActive(index)}
                 type="button"
               >
-                <Icon className="text-base" />
+                <Icon className={`text-base ${isActive ? '' : 'text-red'}`} />
                 {item.name}
               </button>
             );

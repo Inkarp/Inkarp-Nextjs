@@ -95,7 +95,7 @@ export default function WorkflowScore({ data }) {
                 <button
                   className={`flex min-h-14 w-full items-center gap-4 rounded-2xl border px-5 py-3 text-left transition ${
                     isSelected
-                      ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
+                      ? 'border-[#BE0010] bg-[#BE0010] text-parchment'
                       : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400'
                   }`}
                   key={step.label}
@@ -104,8 +104,8 @@ export default function WorkflowScore({ data }) {
                 >
                   <span className={`flex size-7 shrink-0 items-center justify-center rounded-lg border text-sm ${
                     isSelected
-                      ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
-                      : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100'
+                      ? 'border-[#BE0010] bg-[#BE0010] text-parchment'
+                      : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-red'
                   }`}
                   >
                     {isSelected ? <FiCheck /> : <FiPlus />}
@@ -138,7 +138,7 @@ export default function WorkflowScore({ data }) {
                 </div>
               ) : (
                 <div className="mt-4 rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 p-6 text-center">
-                  <FiTarget className="mx-auto mb-3 text-zinc-300 dark:text-zinc-600" size={36} />
+                  <FiTarget className="mx-auto mb-3 text-red" size={36} />
                   <p className="text-sm leading-6 text-zinc-400 dark:text-zinc-500">
                     Select one or more manual steps to see the matched Hei-VAP Core improvement.
                   </p>
@@ -150,8 +150,8 @@ export default function WorkflowScore({ data }) {
               {benefits.map(({ icon, label }) => {
                 const Icon = ICON_MAP[icon];
                 return (
-                  <span className="inline-flex items-center gap-2 rounded-full border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
-                    {Icon && <Icon className="text-ink-soft dark:text-zinc-400" />}
+                  <span className="inline-flex items-center gap-2 rounded-full border border-[#BE0010] bg-parchment dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
+                    {Icon && <Icon className="text-red" />}
                     {label}
                   </span>
                 );
@@ -163,7 +163,7 @@ export default function WorkflowScore({ data }) {
               onClick={() => setSelected([])}
               type="button"
             >
-              <FiRefreshCw className="text-sm" />
+              <FiRefreshCw className="text-sm text-red" />
               Reset selected steps
             </button>
 

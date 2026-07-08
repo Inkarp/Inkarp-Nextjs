@@ -114,7 +114,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
                 const Icon = DETAIL_ICONS[index] ?? FiInfo;
                 return (
                   <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${card.title}-${DETAIL_LABELS[index]}`}>
-                    <div className="flex size-9 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-ink dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
+                    <div className="flex size-9 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-red dark:border-zinc-800 dark:bg-zinc-900">
                       <Icon className="text-base" />
                     </div>
                     <div>

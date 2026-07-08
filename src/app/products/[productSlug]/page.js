@@ -16,6 +16,7 @@ export async function generateMetadata({ params }) {
     description:
       product.metaDescription ??
       `Explore ${product.name} from ${product.principalName}.`,
+    keywords: product.metaKeywords,
   };
 }
 
@@ -38,10 +39,10 @@ export default async function ProductPage({ params }) {
       {/* Breadcrumb */}
       <nav className="border-b border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-sm text-ink-soft dark:text-zinc-400 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center gap-2">
-          <Link className="inline-flex size-8 items-center justify-center rounded-full border border-line-light dark:border-zinc-700 bg-parchment-alt dark:bg-zinc-800 text-ink-soft dark:text-zinc-400 transition hover:border-red/35 hover:text-red" href="/"><FaHome /></Link>
-          <FiChevronRight className="text-ink-soft dark:text-zinc-500" />
+          <Link className="inline-flex size-8 items-center justify-center rounded-full border border-line-light dark:border-zinc-700 bg-parchment-alt dark:bg-zinc-800 text-ink-soft dark:text-zinc-400 transition hover:border-red/35 hover:text-red" href="/"><FaHome className="text-red" /></Link>
+          <FiChevronRight className="text-red" />
           <Link className="transition hover:text-red" href="/products">Products</Link>
-          <FiChevronRight className="text-ink-soft dark:text-zinc-500" />
+          <FiChevronRight className="text-red" />
           <span className="truncate text-ink dark:text-zinc-100">{product.name}</span>
         </div>
       </nav>
@@ -55,7 +56,7 @@ export default async function ProductPage({ params }) {
             {/* Pill badges row */}
             <div className="mb-4 flex flex-wrap items-center gap-2">
               {/* Principal logo pill */}
-              <div className="inline-flex items-center rounded-full border border-line-light dark:border-zinc-700 bg-parchment dark:bg-zinc-900 px-3 py-1.5">
+              <div className="inline-flex items-center rounded-full border border-line-light dark:border-zinc-700 bg-parchment dark:bg-white px-3 py-1.5">
                 {product.principalImage ? (
                   <Image
                     alt={product.principalName}
@@ -81,7 +82,7 @@ export default async function ProductPage({ params }) {
               {/* Country pill */}
               {product.countryOfOrigin && (
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-line-light dark:border-zinc-700 bg-parchment dark:bg-zinc-900 px-3 py-1.5 text-xs font-semibold text-ink-soft dark:text-zinc-300">
-                  <FiGlobe className="h-3.5 w-3.5" />
+                  <FiGlobe className="h-3.5 w-3.5 text-red" />
                   Made in {product.countryOfOrigin}
                 </span>
               )}
@@ -94,9 +95,23 @@ export default async function ProductPage({ params }) {
 
              {/* Distributor note from JSON, omitted if not set */}
             {product.distributorNote && (
-              <p className="mt-3 text-lg font-medium text-red">
+              <h2 className="mt-3 text-lg font-medium text-red">
                 {product.distributorNote}
-              </p>
+              </h2>
+            )}
+
+            {/* Service pills from JSON, omitted if not set */}
+            {product.servicePills?.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {product.servicePills.map((pill) => (
+                  <span
+                    key={pill}
+                    className="inline-flex items-center rounded-full border border-[#BE0010] px-3 py-1 text-xs font-semibold text-[#BE0010]"
+                  >
+                    {pill}
+                  </span>
+                ))}
+              </div>
             )}
             </div>
             <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft dark:text-zinc-400">
@@ -115,7 +130,7 @@ export default async function ProductPage({ params }) {
                 href={isRichPage ? "#booking" : "/contact"}
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-line-light bg-white dark:border-zinc-700 dark:bg-zinc-900 px-6 text-sm font-semibold text-ink dark:text-zinc-100 transition hover:-translate-y-0.5 hover:border-red hover:text-red"
               >
-                <FiMail className="h-4 w-4" />
+                <FiMail className="h-4 w-4 text-red" />
                 Enquiry Now
               </Link>
             </div>
@@ -146,6 +161,39 @@ export default async function ProductPage({ params }) {
           </div>
 
         </div>
+
+        {/* Hero highlights */}
+        {/* {product.heroHighlights?.length > 0 && (
+          <div className="relative mx-auto mt-10 max-w-7xl rounded-2xl border border-line-light bg-parchment-alt p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
+            <dl className="grid grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3">
+              {product.heroHighlights.map((row) => (
+                <div key={row.label}>
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">
+                    {row.label}
+                  </dt>
+                  <dd className="mt-1 text-sm font-semibold text-ink dark:text-zinc-100">
+                    {row.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href={isRichPage ? "#booking" : "/contact"}
+                className="inline-flex h-11 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
+              >
+                Request Quote
+              </Link>
+              <Link
+                href={isRichPage ? "#config" : "/contact"}
+                className="inline-flex h-11 items-center justify-center rounded-full border border-line-light bg-white dark:border-zinc-700 dark:bg-zinc-900 px-6 text-sm font-semibold text-ink dark:text-zinc-100 transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+              >
+                Configure Your Hei-VAP
+              </Link>
+            </div>
+          </div>
+        )} */}
       </section>
 
       {/* Rich universal page sections OR legacy longForm */}
@@ -189,7 +237,7 @@ export default async function ProductPage({ params }) {
                     className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 rounded-lg border border-line-light dark:border-zinc-700 bg-parchment-alt dark:bg-zinc-800 text-xs font-semibold text-ink dark:text-zinc-100 transition hover:border-red/40 hover:text-red"
                     href={item.href}
                   >
-                    View details <FiArrowRight />
+                    View details <FiArrowRight className="text-red" />
                   </Link>
                 </article>
               ))}

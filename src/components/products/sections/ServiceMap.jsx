@@ -146,14 +146,14 @@ export default function ServiceMap({ data, calm = false }) {
               </div>
 
               <div className={`mb-3 flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
-                <MdLocationPin className="mt-0.5 size-4 shrink-0 text-ink dark:text-zinc-100" />
+                <MdLocationPin className="mt-0.5 size-4 shrink-0 text-red" />
                 <p className={`text-xs leading-snug ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>
                   {selectedBranch.address}
                 </p>
               </div>
 
               <div className={`mb-2 flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
-                <MdLocalPhone className="mt-0.5 size-4 shrink-0 text-ink dark:text-zinc-100" />
+                <MdLocalPhone className="mt-0.5 size-4 shrink-0 text-red" />
                 <div className="flex flex-col gap-1">
                   {selectedBranch.phone.split(',').map((phone, phoneIndex) => (
                     <a
@@ -168,7 +168,7 @@ export default function ServiceMap({ data, calm = false }) {
               </div>
 
               <div className={`flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
-                <MdEmail className="mt-0.5 size-4 shrink-0 text-ink dark:text-zinc-100" />
+                <MdEmail className="mt-0.5 size-4 shrink-0 text-red" />
                 <div className="flex flex-col gap-1">
                   {selectedBranch.email.split(',').map((email) => (
                     <a

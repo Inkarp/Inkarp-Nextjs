@@ -110,7 +110,7 @@ export default function FitQuiz({ data }) {
                     type="button"
                   >
                     <span>{cleanText(option.text)}</span>
-                    <FiArrowRight className="shrink-0 text-black dark:text-zinc-100" />
+                    <FiArrowRight className="shrink-0 text-red" />
                   </button>
                 ))}
               </div>

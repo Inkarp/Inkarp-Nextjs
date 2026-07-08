@@ -131,7 +131,7 @@ export default function SuitabilityChecker({ data }) {
               </div>
             ) : (
               <div className="mx-auto max-w-sm text-center">
-                <FiDroplet className="mx-auto mb-3 text-zinc-300 dark:text-zinc-600" size={44} />
+                <FiDroplet className="mx-auto mb-3 text-red" size={44} />
                 <p className="text-sm text-ink-soft dark:text-zinc-500">Select your needs and click check</p>
               </div>
             )}

@@ -295,14 +295,14 @@ export default function ProductEngagementPopups({ productName }) {
       <div className="nudge-box relative w-full max-w-md rounded-md border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 shadow-[0_28px_90px_rgba(15,23,42,0.28)]">
         <button
           aria-label="Close"
-          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md text-ink-soft dark:text-zinc-400 transition hover:bg-parchment-alt dark:hover:bg-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-100"
+          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md text-red transition hover:bg-parchment-alt dark:hover:bg-zinc-800"
           onClick={close}
           type="button"
         >
           <FiX />
         </button>
 
-        <div className="mb-4 inline-flex size-11 items-center justify-center rounded-md bg-parchment-alt text-ink dark:bg-zinc-800 dark:text-zinc-100">
+        <div className="mb-4 inline-flex size-11 items-center justify-center rounded-md bg-parchment-alt text-red dark:bg-zinc-800">
           {(() => { const Icon = popup.icon ?? FiMessageCircle; return <Icon />; })()}
         </div>
 

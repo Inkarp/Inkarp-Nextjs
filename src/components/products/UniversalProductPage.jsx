@@ -29,13 +29,17 @@ export default function UniversalProductPage({ product }) {
 
   const lf = product.longForm ?? {};
 
-  // Pull data from longForm sections by eyebrow/position
-  const workflowSection = lf.sections?.find((s) => s.eyebrow === 'Evaporation workflow');
-  const solventSection = lf.sections?.find((s) => s.eyebrow === 'Solvent setup guide');
-  const roiSection = lf.sections?.find((s) => s.eyebrow === 'ROI and payback');
-  const benefitsSection = lf.sections?.find((s) => s.eyebrow === 'Benefits');
-  const certsSection = lf.sections?.find((s) => s.eyebrow === 'Quality and safety');
-  const glasswareSection = lf.sections?.find((s) => s.eyebrow === 'Glassware guide');
+  // Pull data from longForm sections by a stable `key`, falling back to the
+  // legacy eyebrow-text match for older product JSON that predates `key`.
+  const findSection = (key, eyebrow) =>
+    lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
+
+  const workflowSection = findSection('workflow', 'Evaporation workflow');
+  const solventSection = findSection('solventGuide', 'Solvent setup guide');
+  const roiSection = findSection('roi', 'ROI and payback');
+  const benefitsSection = findSection('benefits', 'Benefits');
+  const certsSection = findSection('certs', 'Quality and safety');
+  const glasswareSection = findSection('glassware', 'Glassware guide');
 
   return (
     <div className="w-full">
@@ -43,7 +47,7 @@ export default function UniversalProductPage({ product }) {
         links={product.inPageNav ?? []}
         productName={product.name}
       />
-      <ProductEngagementPopups productName={product.name} />
+      <ProductEngagementPopups productName={product.name} popups={product.popups} />
 
       {/* Sticky in-page navigation */}
       {/* {product.inPageNav?.length > 0 && (
@@ -92,7 +96,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Applications explorer */}
       {product.applicationsExplorer && (
-        <ApplicationsExplorer data={product.applicationsExplorer} />
+        <ApplicationsExplorer data={product.applicationsExplorer} productName={product.name} />
       )}
 
       {/* Configuration wizard */}
@@ -102,7 +106,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Workflow score comparison */}
       {product.workflowScore && (
-        <WorkflowScore data={product.workflowScore} />
+        <WorkflowScore data={product.workflowScore} productName={product.name} />
       )}
 
       {/* Method comparison table */}
@@ -142,7 +146,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* FAQ */}
       {product.faqs?.length > 0 && (
-        <FAQSection faqs={product.faqs} />
+        <FAQSection faqs={product.faqs} productName={product.name} />
       )}
 
       {/* Demo booking */}

@@ -228,13 +228,13 @@ export default function DistillationSimulator({ data }) {
         <div className="grid gap-6 lg:grid-cols-[330px_1fr]">
           {/* Left controls panel */}
           <div className="rounded-2xl border border-line-light bg-parchment p-3 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <div className="rounded-xl bg-navy p-3 text-parchment dark:bg-black">
-              <div className="mb-1.5 flex items-center justify-between text-[9px] uppercase tracking-widest text-black dark:text-zinc-400">
+            <div className="rounded-xl bg-black p-3 text-parchment dark:bg-black">
+              <div className="mb-1.5 flex items-center justify-between text-[9px] uppercase tracking-widest text-white dark:text-zinc-400">
                 <span>Hei-VAP Core monitor</span>
                 <span>{formatTime(elapsed)}</span>
               </div>
-              <div className="text-2xl font-semibold tracking-tight">{recoveredPct}<span className="text-sm text-black dark:text-zinc-400">% recovered</span></div>
-              <p className="mt-1 text-[10px] leading-4 text-black dark:text-zinc-400">{monitorStatus}</p>
+              <div className="text-2xl font-semibold tracking-tight">{recoveredPct}<span className="text-sm text-white dark:text-zinc-400">% recovered</span></div>
+              <p className="mt-1 text-[10px] leading-4 text-white dark:text-zinc-400">{monitorStatus}</p>
               <div className="mt-2 grid grid-cols-3 gap-1.5 text-[10px]">
                 <div className="rounded-lg bg-parchment/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Bath</span>{bathTemp}°C</div>
                 <div className="rounded-lg bg-parchment/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Speed</span>180 rpm</div>

@@ -186,18 +186,27 @@ export default function ProductInfoTabs({ product }) {
     return () => window.removeEventListener('product-set-tab', onSetTab);
   }, []);
 
-  const section = (eyebrow) => lf.sections?.find((s) => s.eyebrow === eyebrow);
+  const section = (key, eyebrow) => lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
   const overviewSec      = lf.sections?.[0];
-  const keyFeaturesSec   = section('Key Features');
-  const applicationsSec  = section('Applications');
-  const perfSec          = section('Performance');
-  const complianceSec    = section('Quality and safety');
-  const configSec        = section('Configuration');
-  const docsSec          = section('Documentation');
+  const keyFeaturesSec   = section('features', 'Key Features');
+  const applicationsSec  = section('applications', 'Applications');
+  const perfSec          = section('performance', 'Performance');
+  const complianceSec    = section('certs', 'Quality and safety');
+  const configSec        = section('config', 'Configuration');
+  const docsSec          = section('docs', 'Documentation');
+  const solventGuideSec  = section('solventGuide', 'Solvent setup guide');
+  const glassSec         = section('glassware', 'Glassware guide');
+
+  const visibleTabs = TABS.filter(({ key }) => {
+    if (key === 'performance') return !!perfSec;
+    if (key === 'compliance') return !!complianceSec?.cards?.length;
+    return true;
+  });
+  const safeActive = visibleTabs.some((t) => t.key === active) ? active : 'overview';
 
   /* ── Tab content ─────────────────────────────────── */
   const renderContent = () => {
-    switch (active) {
+    switch (safeActive) {
 
       /* ── 1. OVERVIEW ─────────────────────────────── */
       case 'overview':
@@ -234,7 +243,7 @@ export default function ProductInfoTabs({ product }) {
               <p className="mb-5 text-sm leading-7 text-black dark:text-zinc-100">{keyFeaturesSec.description}</p>
             )}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {(product.features ?? []).slice(0, 9).map((f) => {
+              {(product.features ?? []).slice(0, 12).map((f) => {
                 const colonIdx = f.indexOf(':');
                 const title       = colonIdx > -1 ? f.slice(0, colonIdx).trim() : f.trim();
                 const description = colonIdx > -1 ? f.slice(colonIdx + 1).trim() : '';
@@ -308,13 +317,19 @@ export default function ProductInfoTabs({ product }) {
                 {perfSec.disclaimer}
               </p>
             )}
-            <p className="mt-4 text-xs text-ink-soft dark:text-zinc-400">
-              Use the{' '}
-              <a href="#simulator" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">distillation simulator</a>
-              {' '}and the{' '}
-              <a href="#solvents" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">solvent guide</a>
-              {' '}below to explore performance.
-            </p>
+            {(product.simulator || solventGuideSec?.cards?.length > 0) && (
+              <p className="mt-4 text-xs text-ink-soft dark:text-zinc-400">
+                Use the{' '}
+                {product.simulator && (
+                  <a href="#simulator" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">distillation simulator</a>
+                )}
+                {product.simulator && solventGuideSec?.cards?.length > 0 && ' and the '}
+                {solventGuideSec?.cards?.length > 0 && (
+                  <a href="#solvents" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">solvent guide</a>
+                )}
+                {' '}below to explore performance.
+              </p>
+            )}
           </div>
         );
 
@@ -357,15 +372,20 @@ export default function ProductInfoTabs({ product }) {
                 />
               ))}
             </div>
-            <p className="mt-4 text-xs text-ink-soft dark:text-zinc-400">
-              Not sure which to choose? Use the{' '}
-              <a href="#config" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">configuration wizard</a>
-              , the{' '}
-              <a href="#glassware" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">glassware guide</a>
-              {' '}or the{' '}
-              <a href="#pairing" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">vacuum &amp; chiller pairing helper</a>
-              {' '}below.
-            </p>
+            {(product.configWizard || glassSec?.cards?.length > 0 || product.pairing) && (
+              <p className="mt-4 text-xs text-ink-soft dark:text-zinc-400">
+                Not sure which to choose?{' '}
+                {product.configWizard && (
+                  <>Use the <a href="#config" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">configuration wizard</a>{glassSec?.cards?.length > 0 || product.pairing ? ', ' : '.'}</>
+                )}
+                {glassSec?.cards?.length > 0 && (
+                  <>the <a href="#glassware" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">glassware guide</a>{product.pairing ? ' or ' : '.'}</>
+                )}
+                {product.pairing && (
+                  <>the <a href="#pairing" className="font-semibold text-ink underline hover:text-red dark:text-zinc-100">vacuum &amp; chiller pairing helper</a> below.</>
+                )}
+              </p>
+            )}
           </div>
         );
 
@@ -391,7 +411,7 @@ export default function ProductInfoTabs({ product }) {
                       <div className="font-semibold text-sm text-black dark:text-zinc-100">{c.title}</div>
                       <div className="text-xs text-black mt-0.5 dark:text-zinc-400">{c.description}</div>
                       <a
-                        href={`mailto:info@inkarp.co.in?subject=${encodeURIComponent(`Request: Hei-VAP Core ${c.title}`)}`}
+                        href={`mailto:info@inkarp.co.in?subject=${encodeURIComponent(`Request: ${product.name} ${c.title}`)}`}
                         className="mt-2 inline-block text-xs font-semibold text-ink underline hover:text-red dark:text-zinc-100"
                       >
                         Request →
@@ -423,17 +443,17 @@ export default function ProductInfoTabs({ product }) {
 
         {/* Pill tabs */}
         <div className="mb-6 flex flex-wrap gap-2">
-          {TABS.map(({ key, label, Icon }) => (
+          {visibleTabs.map(({ key, label, Icon }) => (
             <button
               key={key}
               onClick={() => setActive(key)}
               className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-xs font-semibold transition ${
-                active === key
+                safeActive === key
                   ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                   : 'border-line-light bg-parchment text-black hover:border-zinc-400 hover:text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:text-zinc-100'
               }`}
             >
-              <Icon className={`h-3.5 w-3.5 ${active === key ? '' : 'text-red'}`} />
+              <Icon className={`h-3.5 w-3.5 ${safeActive === key ? '' : 'text-red'}`} />
               {label}
             </button>
           ))}

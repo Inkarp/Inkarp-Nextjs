@@ -20,7 +20,7 @@ function getCategory(faq) {
   return 'capability';
 }
 
-export default function FAQSection({ faqs = [] }) {
+export default function FAQSection({ faqs = [], productName }) {
   const [open, setOpen] = useState(null);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
@@ -75,7 +75,7 @@ export default function FAQSection({ faqs = [] }) {
           </div>
         </div>
 
-        <div className="max-w-4xl space-y-2">
+        <div className="max-w-7xl mx-auto space-y-2">
           {filtered.map((faq, i) => {
             const faqId = `${faq.category}-${faq.question}`;
             const isOpen = open === faqId;
@@ -90,17 +90,7 @@ export default function FAQSection({ faqs = [] }) {
                 {isOpen && (
                   <div className="px-5 pb-4 text-sm leading-7 text-black dark:text-zinc-100">
                     <p>{faq.answer}</p>
-                    <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-line-light pt-3 text-xs text-black dark:border-zinc-800 dark:text-zinc-400">
-                      {votes[faqId] !== undefined ? (
-                        <span className="font-semibold text-emerald-600 dark:text-emerald-400">Thanks for the feedback.</span>
-                      ) : (
-                        <>
-                          <span>Was this helpful?</span>
-                          <button className="rounded-full border border-line-light px-3 py-1 font-semibold text-black hover:border-red hover:text-red dark:border-zinc-700 dark:text-zinc-100" onClick={() => setVotes((current) => ({ ...current, [faqId]: 1 }))} type="button">Yes</button>
-                          <button className="rounded-full border border-line-light px-3 py-1 font-semibold text-black hover:border-red hover:text-red dark:border-zinc-700 dark:text-zinc-100" onClick={() => setVotes((current) => ({ ...current, [faqId]: 0 }))} type="button">No</button>
-                        </>
-                      )}
-                    </div>
+                 
                   </div>
                 )}
               </div>
@@ -118,10 +108,10 @@ export default function FAQSection({ faqs = [] }) {
           )}
         </div>
 
-        <div className="mt-8 flex max-w-4xl flex-col justify-between gap-4 rounded-xl border border-line-light bg-parchment-alt p-5 sm:flex-row sm:items-center dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="mt-8 flex max-w-7xl mx-auto flex-col justify-between gap-4 rounded-xl border border-line-light bg-parchment-alt p-5 sm:flex-row sm:items-center dark:border-zinc-800 dark:bg-zinc-900">
           <div>
             <p className="text-sm font-semibold text-black dark:text-zinc-100">Have a question not listed here?</p>
-            <p className="mt-0.5 text-xs text-black dark:text-zinc-400">Contact Inkarp for detailed technical discussions about the Hei-VAP Core and configurations.</p>
+            <p className="mt-0.5 text-xs text-black dark:text-zinc-400">Contact Inkarp for detailed technical discussions about {productName ?? 'this product'} and configurations.</p>
           </div>
           <a className="shrink-0 rounded-full bg-red px-5 py-2.5 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]" href="#booking">
             Ask Inkarp

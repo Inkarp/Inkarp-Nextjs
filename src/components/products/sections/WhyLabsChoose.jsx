@@ -22,13 +22,6 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
   return (
     <section id="benefits" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
-        <span
-          aria-hidden
-          className="pointer-events-none absolute -right-1 -top-8 select-none text-[120px] font-bold leading-none text-zinc-100 dark:text-zinc-900 sm:text-[150px]"
-        >
-          15
-        </span>
-
         <div className="relative mb-8 max-w-3xl">
           <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink dark:text-zinc-100">
             <span className="inline-block size-2 rounded-full bg-red" />

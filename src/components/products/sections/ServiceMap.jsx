@@ -8,7 +8,7 @@ import SectionHeader from './SectionHeader';
 // `calm` renders the plain white/no-dark-mode look used on the contact page.
 // Default (false) keeps the existing product-page appearance untouched.
 export default function ServiceMap({ data, calm = false }) {
-  const { title, description, eyebrow } = data ?? {};
+  const { title, description, eyebrow, supportAreas } = data ?? {};
   const [screenSize, setScreenSize] = useState('lg');
   const [selected, setSelected] = useState(0);
 
@@ -39,6 +39,26 @@ export default function ServiceMap({ data, calm = false }) {
           title={title ?? 'Inkarp service across India'}
           description={description}
         />
+
+        {supportAreas?.length > 0 && (
+          <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {supportAreas.map((area) => (
+              <div
+                className={
+                  calm
+                    ? 'rounded-xl border border-line-light bg-white p-4'
+                    : 'rounded-xl border border-line-light bg-parchment p-4 dark:border-zinc-800 dark:bg-zinc-900'
+                }
+                key={area.title}
+              >
+                <p className={`text-sm font-semibold ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>{area.title}</p>
+                {area.description && (
+                  <p className={`mt-1 text-xs leading-5 ${calm ? 'text-ink-soft' : 'text-black dark:text-zinc-400'}`}>{area.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
           {/* India map with all branch pins */}

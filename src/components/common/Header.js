@@ -165,7 +165,7 @@ export default function Header() {
         }`}
     >
       <div
-        className={`overflow-hidden bg-navy text-parchment transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
+        className={`overflow-hidden bg-black text-parchment transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
             ? "max-h-40 opacity-100"
             : "max-h-0 opacity-0"
           }`}

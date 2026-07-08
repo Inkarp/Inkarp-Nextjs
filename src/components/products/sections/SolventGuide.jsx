@@ -1,17 +1,28 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiInfo, FiPlus, FiCloudSnow, FiThermometer } from 'react-icons/fi';
+import { FiInfo, FiPlus, FiCloudSnow, FiShield, FiThermometer } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
 
 // Bridges the naming gap between solvent guide cards and simulator/calculator entries
 const SOLVENT_NAME_ALIASES = { Dichloromethane: 'DCM' };
 
-const DETAIL_ICONS = [FiThermometer, FiCloudSnow, FiInfo, FiPlus];
-const DETAIL_LABELS = [
+// Legacy cards ship 4 items (glassware/cooling/vacuum/accessory). Cards that also
+// provide a 5th item (safety note) get an extra row - existing 4-item cards are
+// unaffected.
+const DETAIL_ICONS_4 = [FiThermometer, FiCloudSnow, FiInfo, FiPlus];
+const DETAIL_LABELS_4 = [
   'Suggested glassware',
   'Cooling approach',
   'Vacuum setup',
+  'Accessory recommendation',
+];
+const DETAIL_ICONS_5 = [FiThermometer, FiCloudSnow, FiInfo, FiShield, FiPlus];
+const DETAIL_LABELS_5 = [
+  'Suggested glassware',
+  'Cooling approach',
+  'Vacuum setup',
+  'Safety note',
   'Accessory recommendation',
 ];
 
@@ -38,12 +49,19 @@ function parseDescription(description = '') {
 
 function makeDetailRows(card) {
   const items = (card.items ?? []).map(normaliseText);
-  return [
-    items[0] ?? 'Standard G3 vertical glassware works well for routine evaporation.',
-    items[1] ?? 'Choose cooling based on vapour temperature and volatility.',
-    items[2] ?? 'Select a compatible Hei-VAC pump based on solvent behaviour.',
-    items[3] ?? 'Confirm pump, chiller and protective accessories with Inkarp.',
-  ];
+  if (items.length >= 5) {
+    return { labels: DETAIL_LABELS_5, icons: DETAIL_ICONS_5, rows: items.slice(0, 5) };
+  }
+  return {
+    labels: DETAIL_LABELS_4,
+    icons: DETAIL_ICONS_4,
+    rows: [
+      items[0] ?? 'Standard G3 vertical glassware works well for routine evaporation.',
+      items[1] ?? 'Choose cooling based on vapour temperature and volatility.',
+      items[2] ?? 'Select a compatible Hei-VAC pump based on solvent behaviour.',
+      items[3] ?? 'Confirm pump, chiller and protective accessories with Inkarp.',
+    ],
+  };
 }
 
 function lookupBp(cardTitle, simulatorSolvents = []) {
@@ -61,7 +79,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
     ...card,
     parsed: parseDescription(card.description),
     boilingPoint: lookupBp(card.title, simulatorSolvents),
-    rows: makeDetailRows(card),
+    detail: makeDetailRows(card),
   })), [cards, simulatorSolvents]);
 
   if (!cards.length) return null;
@@ -110,15 +128,16 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
             </p>
 
             <div className="mt-6 space-y-4">
-              {card.rows.map((row, index) => {
-                const Icon = DETAIL_ICONS[index] ?? FiInfo;
+              {card.detail.rows.map((row, index) => {
+                const Icon = card.detail.icons[index] ?? FiInfo;
+                const label = card.detail.labels[index];
                 return (
-                  <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${card.title}-${DETAIL_LABELS[index]}`}>
+                  <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${card.title}-${label}`}>
                     <div className="flex size-9 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-red dark:border-zinc-800 dark:bg-zinc-900">
                       <Icon className="text-base" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{DETAIL_LABELS[index]}</p>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{label}</p>
                       <p className="mt-1 text-sm leading-6 text-black dark:text-zinc-400">{row}</p>
                     </div>
                   </div>
@@ -134,7 +153,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
               className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-red px-5 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
               href="#booking"
             >
-              Ask Inkarp for solvent-specific configuration
+              {card.cta ?? 'Ask Inkarp for solvent-specific configuration'}
             </a>
           </div>
         </div>

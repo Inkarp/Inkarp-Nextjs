@@ -2,6 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 
+// Short, pill-friendly labels for a product card. Prefers the industry names
+// from `applicationsExplorer` (e.g. "Biotechnology & Life Sciences") since
+// `applications` on rich-schema products is full descriptive sentences meant
+// for the product page tab, not compact tags. Falls back to `applications`
+// for products that don't have applicationsExplorer (where it's already short).
+function getIndustryPills(product) {
+  const industries = product.applicationsExplorer?.industries;
+  if (industries?.length) {
+    return industries.map((industry) => industry.name).filter(Boolean);
+  }
+  return product.applications ?? [];
+}
+
 export default function ProductResultsGrid({ products, emptyHref = "/products", emptyLinkLabel = "Clear search" }) {
   if (!products.length) {
     return (
@@ -73,24 +86,23 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
           {/* Industry */}
           <p className="mt-1 text-[11px] text-ink-soft dark:text-zinc-500">{product.industry}</p>
 
-          {/* Applications */}
-          {(product.applications ?? []).length > 0 ? (
-            <div className="mt-2.5 flex flex-wrap gap-1">
-              {(product.applications ?? []).slice(0, 3).map((app, index) => (
-                <span
-                  className="rounded-full bg-white dark:bg-zinc-800 px-2 py-0.5 text-[10px] text-ink-soft dark:text-zinc-400"
-                  key={`${product.principalSlug}-${product.slug}-app-${index}`}
-                >
-                  {app}
-                </span>
-              ))}
-              {(product.applications ?? []).length > 3 ? (
-                <span className="rounded-full bg-white dark:bg-zinc-800 px-2 py-0.5 text-[10px] text-ink-soft dark:text-zinc-500">
-                  +{product.applications.length - 3}
-                </span>
-              ) : null}
-            </div>
-          ) : null}
+          {/* Industries */}
+          {(() => {
+            const pills = getIndustryPills(product).slice(0, 5);
+            if (!pills.length) return null;
+            return (
+              <div className="mt-2.5 flex flex-wrap gap-1">
+                {pills.map((pill, index) => (
+                  <span
+                    className="rounded-full bg-white dark:bg-zinc-800 px-2 py-0.5 text-[10px] text-ink-soft dark:text-zinc-400"
+                    key={`${product.principalSlug}-${product.slug}-pill-${index}`}
+                  >
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            );
+          })()}
 
           {/* Actions */}
           <div className="mt-auto flex gap-2 pt-3">

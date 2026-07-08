@@ -1,14 +1,46 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiCheck, FiPlus, FiRefreshCw, FiShield, FiTarget, FiZap } from 'react-icons/fi';
+import {
+  FiArchive, FiCheck, FiClock, FiCpu, FiDroplet, FiEye, FiFileText, FiMove,
+  FiRefreshCw, FiRepeat, FiRotateCw, FiShield, FiTarget, FiThermometer, FiUsers, FiZap,
+} from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
 
+/* Benefit-pill icons, selectable by key from product JSON */
 const ICON_MAP = {
   target: FiTarget,
   shield: FiShield,
   zap: FiZap,
+  rotate: FiRotateCw,
+  clock: FiClock,
+  cpu: FiCpu,
+  repeat: FiRepeat,
+  users: FiUsers,
 };
+
+/* Step-badge icons, resolved dynamically from the step label so both
+   rotary-evaporator and orbital-shaker (and future) workflow steps get a
+   fitting icon without needing a per-product icon key in the JSON. */
+const STEP_ICON_RULES = [
+  { match: (t) => t.includes('speed') || t.includes('rotation') || t.includes('rpm'), icon: FiRotateCw },
+  { match: (t) => t.includes('timer') || t.includes('timing'), icon: FiClock },
+  { match: (t) => t.includes('temperature') || t.includes('bath') || t.includes('heat'), icon: FiThermometer },
+  { match: (t) => t.includes('immersion') || t.includes('flask') || t.includes('position') || t.includes('alignment'), icon: FiMove },
+  { match: (t) => t.includes('monitor') || t.includes('checking') || t.includes('progress') || t.includes('status'), icon: FiEye },
+  { match: (t) => t.includes('writing') || t.includes('logging') || t.includes('condition') || t.includes('document'), icon: FiFileText },
+  { match: (t) => t.includes('accidental') || t.includes('residual') || t.includes('risk') || t.includes('safety'), icon: FiShield },
+  { match: (t) => t.includes('condens'), icon: FiDroplet },
+  { match: (t) => t.includes('collect') || t.includes('recover'), icon: FiArchive },
+  { match: (t) => t.includes('re-entering') || t.includes('method') || t.includes('profile'), icon: FiRepeat },
+  { match: (t) => t.includes('automat') || t.includes('robotic') || t.includes('coordinat'), icon: FiCpu },
+  { match: (t) => t.includes('operator') || t.includes('result'), icon: FiUsers },
+];
+
+function resolveStepIcon(label = '') {
+  const t = label.toLowerCase();
+  return STEP_ICON_RULES.find((rule) => rule.match(t))?.icon ?? FiTarget;
+}
 
 function makeCoreCopy(value = '') {
   return String(value)
@@ -29,7 +61,7 @@ function ScoreRing({ percent }) {
       <svg
         aria-hidden="true"
         className="size-full -rotate-90"
-        style={percent > 0 ? { filter: `drop-shadow(0 0 ${glowPx}px rgba(22,22,22,0.25))` } : undefined}
+        style={percent > 0 ? { filter: `drop-shadow(0 0 ${glowPx}px rgba(190,0,16,0.35))` } : undefined}
         viewBox="0 0 120 120"
       >
         <circle
@@ -45,7 +77,7 @@ function ScoreRing({ percent }) {
           cy="60"
           fill="none"
           r={radius}
-          stroke="#161616"
+          stroke="#BE0010"
           strokeDasharray={circumference}
           strokeDashoffset={dashOffset}
           strokeLinecap="round"
@@ -59,7 +91,8 @@ function ScoreRing({ percent }) {
   );
 }
 
-export default function WorkflowScore({ data }) {
+export default function WorkflowScore({ data, productName }) {
+  const name = productName ?? 'this product';
   const steps = data?.steps ?? [];
   const benefits = data?.benefits ?? [];
   const [selected, setSelected] = useState([]);
@@ -83,19 +116,20 @@ export default function WorkflowScore({ data }) {
         <SectionHeader
           number="10"
           eyebrow="Interactive - workflow score"
-          title={data?.title ?? 'How much of your evaporation workflow can be simplified?'}
-          description="Tap the steps your team currently manages manually. We will show how the Hei-VAP Core improves visibility, safety and repeatability."
+          title={data?.title ?? `How much of your workflow can ${name} simplify?`}
+          description={data?.description ?? `Tap the steps your team currently manages manually. We will show how ${name} improves visibility, safety and repeatability.`}
         />
 
         <div className="relative mt-8 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="space-y-2">
             {steps.map((step, index) => {
               const isSelected = selected.includes(index);
+              const StepIcon = resolveStepIcon(step.label);
               return (
                 <button
                   className={`flex min-h-14 w-full items-center gap-4 rounded-2xl border px-5 py-3 text-left transition ${
                     isSelected
-                      ? 'border-[#BE0010] bg-[#BE0010] text-parchment'
+                      ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                       : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400'
                   }`}
                   key={step.label}
@@ -104,11 +138,11 @@ export default function WorkflowScore({ data }) {
                 >
                   <span className={`flex size-7 shrink-0 items-center justify-center rounded-lg border text-sm ${
                     isSelected
-                      ? 'border-[#BE0010] bg-[#BE0010] text-parchment'
-                      : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-red'
+                      ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
+                      : 'border-[#BE0010]/30 dark:border-[#BE0010]/40 bg-parchment dark:bg-zinc-900 text-[#BE0010]'
                   }`}
                   >
-                    {isSelected ? <FiCheck /> : <FiPlus />}
+                    {isSelected ? <FiCheck /> : <StepIcon />}
                   </span>
                   <span className="text-base font-semibold">{step.label}</span>
                 </button>
@@ -120,27 +154,27 @@ export default function WorkflowScore({ data }) {
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
               <ScoreRing percent={percent} />
               <p className="max-w-xs text-base leading-7 text-black dark:text-zinc-400">
-                of your selected steps are simplified by the Hei-VAP Core
+                of your selected steps are simplified by {name}
               </p>
             </div>
 
             <div className="mt-7">
-              <h3 className="text-base font-semibold tracking-tight text-ink dark:text-zinc-100">How the Hei-VAP Core simplifies your selected steps:</h3>
+              <h3 className="text-base font-semibold tracking-tight text-ink dark:text-zinc-100">How {name} simplifies your selected steps:</h3>
               {selectedSteps.length ? (
                 <div className="mt-4 max-h-56 space-y-4 overflow-y-auto pr-1">
                   {selectedSteps.map((step) => (
                     <div className="text-sm leading-6" key={step.label}>
                       <p className="font-bold text-black dark:text-zinc-100">{step.label}</p>
                       <p className="text-zinc-400 dark:text-zinc-500">Manually: {step.manual}</p>
-                      <p className="font-semibold text-ink dark:text-zinc-100">With Hei-VAP Core: {makeCoreCopy(step.core)}</p>
+                      <p className="font-semibold text-red">With {name}: {makeCoreCopy(step.core)}</p>
                     </div>
                   ))}
                 </div>
               ) : (
                 <div className="mt-4 rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 p-6 text-center">
-                  <FiTarget className="mx-auto mb-3 text-red" size={36} />
+                  <FiTarget className="mx-auto mb-3 text-zinc-300 dark:text-zinc-600" size={36} />
                   <p className="text-sm leading-6 text-zinc-400 dark:text-zinc-500">
-                    Select one or more manual steps to see the matched Hei-VAP Core improvement.
+                    Select one or more manual steps to see the matched improvement.
                   </p>
                 </div>
               )}
@@ -150,7 +184,7 @@ export default function WorkflowScore({ data }) {
               {benefits.map(({ icon, label }) => {
                 const Icon = ICON_MAP[icon];
                 return (
-                  <span className="inline-flex items-center gap-2 rounded-full border border-[#BE0010] bg-parchment dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
                     {Icon && <Icon className="text-red" />}
                     {label}
                   </span>
@@ -163,7 +197,7 @@ export default function WorkflowScore({ data }) {
               onClick={() => setSelected([])}
               type="button"
             >
-              <FiRefreshCw className="text-sm text-red" />
+              <FiRefreshCw className="text-sm" />
               Reset selected steps
             </button>
 
@@ -171,7 +205,7 @@ export default function WorkflowScore({ data }) {
               className="mt-4 flex h-12 w-full items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
               href="#booking"
             >
-              Map my evaporation workflow with an expert
+              {data?.ctaLabel ?? 'Map my workflow with an expert'}
             </a>
           </div>
         </div>

@@ -34,8 +34,24 @@ export default async function ProductPage({ params }) {
      - fallback: old products that only have longForm */
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
 
+  const faqJsonLd = product.faqs?.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: product.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  } : null;
+
   return (
     <main className="bg-parchment dark:bg-zinc-950">
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       {/* Breadcrumb */}
       <nav className="border-b border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-sm text-ink-soft dark:text-zinc-400 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center gap-2">
@@ -138,7 +154,18 @@ export default async function ProductPage({ params }) {
 
           {/* Right: product image */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl border border-line-light dark:border-zinc-700 bg-parchment dark:bg-zinc-900 shadow-lg">
+            <div className="relative overflow-hidden rounded-2xl border border-line-light dark:border-zinc-700 bg-parchment dark:bg-zinc-900 shadow-lg">
+              {/* Dr Dexter, standing fully inside the frame on the left, aligned to the image height */}
+              <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-2/5">
+                <Image
+                  alt="Dr Dexter"
+                  className="object-contain object-bottom"
+                  fill
+                  sizes="(min-width: 1024px) 240px, (min-width: 640px) 200px, 150px"
+                  src="/dexter.png"
+                />
+              </div>
+
               {product.image ? (
                 <Image
                   alt={product.name}

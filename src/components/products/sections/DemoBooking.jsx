@@ -15,7 +15,7 @@ const EXTRA_FIELDS = [
   { key: 'state', label: 'State', type: 'text', required: false },
 ];
 
-const WHY_ITEMS = [
+const DEFAULT_WHY_ITEMS = [
   { title: 'See it with your solvents', body: 'Discuss real distillation conditions, evaporation rate and recovery expectations for your samples.' },
   { title: 'Get the right package', body: 'Confirm glassware set, vacuum pump, chiller, coating and Woulff bottle requirements.' },
   { title: 'Safety and training built in', body: 'Review safe operation, glassware handling, bath setup and consistent results.' },
@@ -23,7 +23,9 @@ const WHY_ITEMS = [
 ];
 
 export default function DemoBooking({ data, productName }) {
-  const { fields = [], submitLabel, successMessage, eyebrow, title, description } = data ?? {};
+  const { fields = [], submitLabel, successMessage, eyebrow, title, description, whyItems } = data ?? {};
+  const whyHeading = data?.whyHeading ?? 'Why book a demo?';
+  const items = whyItems?.length ? whyItems : DEFAULT_WHY_ITEMS;
   const [form, setForm] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -168,9 +170,9 @@ export default function DemoBooking({ data, productName }) {
           </div>
 
           <aside className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <h3 className="text-xl font-semibold tracking-tight text-ink dark:text-zinc-100">Why book a demo?</h3>
+            <h3 className="text-xl font-semibold tracking-tight text-ink dark:text-zinc-100">{whyHeading}</h3>
             <div className="mt-5 divide-y divide-zinc-100 dark:divide-zinc-800">
-              {WHY_ITEMS.map((item) => (
+              {items.map((item) => (
                 <div className="flex gap-3 py-4 first:pt-0 last:pb-0" key={item.title}>
                   <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-sm font-bold text-ink dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">i</div>
                   <div>

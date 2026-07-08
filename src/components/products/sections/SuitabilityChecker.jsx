@@ -51,9 +51,9 @@ export default function SuitabilityChecker({ data }) {
       <div className="relative mx-auto max-w-7xl w-full">
         <SectionHeader
           number={data?.sectionNumber ?? '05'}
-          eyebrow="Suitability checker"
-          title="Will the Hei-VAP Core fit your workflow?"
-          description="Tell us about your evaporation needs and we will tell you if this model is the right fit - or point you to a better Heidolph option."
+          eyebrow={data?.eyebrow ?? 'Suitability checker'}
+          title={data?.title ?? 'Will this fit your workflow?'}
+          description={data?.description ?? 'Tell us about your needs and we will tell you if this model is the right fit - or point you to a better Heidolph option.'}
         />
 
         <div className="relative mt-6 grid gap-5 lg:grid-cols-[1fr_1fr]">

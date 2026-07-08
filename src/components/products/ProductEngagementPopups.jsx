@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FiCpu, FiMessageCircle, FiX } from 'react-icons/fi';
 
 /* ════════════════════════════════════════════════════════
@@ -9,89 +9,94 @@ import { FiCpu, FiMessageCircle, FiX } from 'react-icons/fi';
 
 const NUDGE_TABS = new Set(['features', 'applications', 'specs']);
 
-const POPUPS = {
-  /* 3. Welcome segmentation — 4 s after page load, bypasses cooldown */
-  welcome: {
-    ovId: 'welcome-overlay',
-    title: 'What are you exploring for?',
-    body: 'Choose a focus area and we will point you toward the most useful Hei-VAP Core sections.',
-    bypassCooldown: true,
-    actions: [
-      { label: 'Pharma workflows', target: 'industries' },
-      { label: 'Solvent recovery', target: 'calculator' },
-      { label: 'Just exploring', target: 'overview' },
-    ],
-  },
+/* Generic, product-agnostic defaults. Any product can override individual
+   popups (by key) via the `popups` prop — see buildPopups() below. */
+function buildDefaultPopups(productName) {
+  const name = productName ?? 'this product';
+  return {
+    /* 3. Welcome segmentation — 4 s after page load, bypasses cooldown */
+    welcome: {
+      ovId: 'welcome-overlay',
+      title: 'What are you exploring for?',
+      body: 'Choose a focus area and we will point you toward the most useful sections.',
+      bypassCooldown: true,
+      actions: [
+        { label: 'Applications', target: 'industries' },
+        { label: 'Suitability check', target: 'suitability' },
+        { label: 'Just exploring', target: 'overview' },
+      ],
+    },
 
-  /* 1. Scroll nudge — 5 s after opening Features / Applications / Specs tab, once per tab */
-  nudge: {
-    ovId: 'nudge-overlay',
-    title: 'There is something interesting here.',
-    body: 'The simulator shows how solvent moves from evaporation to condensation and recovery.',
-    actions: [{ label: 'Show me', target: 'simulator' }],
-  },
+    /* 1. Scroll nudge — 5 s after opening Features / Applications / Specs tab, once per tab */
+    nudge: {
+      ovId: 'nudge-overlay',
+      title: 'There is something interesting here.',
+      body: 'There is more worth seeing further down this page.',
+      actions: [{ label: 'Show me', target: 'workflow' }],
+    },
 
-  /* 2. Exit intent — mouseout with clientY ≤ 0, once */
-  exit: {
-    ovId: 'exit-overlay',
-    title: 'Before you go…',
-    body: 'Talk through your own samples with a specialist — a free, no-obligation consultation, anywhere in India.',
-    icon: FiCpu,
-    actions: [
-      { label: 'Book a free demo', target: 'booking' },
-      {
-        label: 'Email me the brochure',
-        href: 'mailto:info@inkarp.co.in?subject=Request%3A%20Hei-VAP%20Core%20brochure',
-      },
-    ],
-  },
+    /* 2. Exit intent — mouseout with clientY ≤ 0, once */
+    exit: {
+      ovId: 'exit-overlay',
+      title: 'Before you go…',
+      body: 'Talk through your own samples with a specialist — a free, no-obligation consultation, anywhere in India.',
+      icon: FiCpu,
+      actions: [
+        { label: 'Book a free demo', target: 'booking' },
+        {
+          label: 'Email me the brochure',
+          href: `mailto:info@inkarp.co.in?subject=${encodeURIComponent(`Request: ${name} brochure`)}`,
+        },
+      ],
+    },
 
-  /* 4. Calculator intent — 1.5 s after 4 slider interactions */
-  calcIntent: {
-    ovId: 'calcpop-overlay',
-    title: 'That estimate can become a quote.',
-    body: 'Send your calculated values to Inkarp and the team can tailor the glassware, pump and chiller package.',
-    actions: [{ label: 'Book a demo', target: 'booking' }],
-  },
+    /* 4. Calculator intent — 1.5 s after 4 slider interactions (only fires if a calculator section exists) */
+    calcIntent: {
+      ovId: 'calcpop-overlay',
+      title: 'That estimate can become a quote.',
+      body: 'Send your calculated values to Inkarp and the team can tailor a package to match.',
+      actions: [{ label: 'Book a demo', target: 'booking' }],
+    },
 
-  /* 5. Time-on-page assist — 1.2 s after clicking a chip or Check button in suitability checker */
-  assist: {
-    ovId: 'assist-overlay',
-    title: 'Need help choosing the right setup?',
-    body: 'Share your solvent, volume and recovery goal. We can help narrow the configuration.',
-    actions: [
-      {
-        label: 'Chat on WhatsApp',
-        href: 'https://wa.me/914027172293?text=Hi%20Inkarp%2C%20I%27m%20on%20the%20Hei-VAP%20Core%20page%20and%20have%20a%20question.',
-      },
-      { label: 'Book a demo', target: 'booking' },
-    ],
-  },
+    /* 5. Assist — 1.2 s after clicking a chip or Check button in suitability checker */
+    assist: {
+      ovId: 'assist-overlay',
+      title: 'Need help choosing the right setup?',
+      body: 'Share your requirements and we can help narrow the configuration.',
+      actions: [
+        {
+          label: 'Chat on WhatsApp',
+          href: `https://wa.me/914027172293?text=${encodeURIComponent(`Hi Inkarp, I'm on the ${name} page and have a question.`)}`,
+        },
+        { label: 'Book a demo', target: 'booking' },
+      ],
+    },
 
-  /* 6. Mini poll — 70 % scroll depth, auto-closes 1.4 s after answering */
-  poll: {
-    ovId: 'poll-overlay',
-    title: 'What matters most for your lab?',
-    body: 'Your answer helps frame the final recommendation.',
-    autoCloseDuration: 1400,
-    actions: [
-      { label: 'Higher throughput', target: 'calculator' },
-      { label: 'Simple control', target: 'overview' },
-      { label: 'Max recovery', target: 'pairing' },
-    ],
-  },
+    /* 6. Mini poll — 70 % scroll depth, auto-closes 1.4 s after answering */
+    poll: {
+      ovId: 'poll-overlay',
+      title: 'What matters most for your lab?',
+      body: 'Your answer helps frame the final recommendation.',
+      autoCloseDuration: 1400,
+      actions: [
+        { label: 'Consistent results', target: 'workflow-score' },
+        { label: 'Simple control', target: 'overview' },
+        { label: 'Automation-ready', target: 'suitability' },
+      ],
+    },
 
-  /* 7. Idle return — fires immediately when tab becomes visible again after being hidden */
-  idle: {
-    ovId: 'idle-overlay',
-    title: 'Still evaluating the Hei-VAP Core?',
-    body: 'Continue from the section you were reading, or jump straight to demo booking.',
-    actions: [
-      { label: 'Continue reading', closeOnly: true },
-      { label: 'Book a demo', target: 'booking' },
-    ],
-  },
-};
+    /* 7. Idle return — fires immediately when tab becomes visible again after being hidden */
+    idle: {
+      ovId: 'idle-overlay',
+      title: `Still evaluating ${name}?`,
+      body: 'Continue from the section you were reading, or jump straight to demo booking.',
+      actions: [
+        { label: 'Continue reading', closeOnly: true },
+        { label: 'Book a demo', target: 'booking' },
+      ],
+    },
+  };
+}
 
 const COOLDOWN_MS = 20000;
 
@@ -107,8 +112,18 @@ function scrollToSection(id) {
    COMPONENT
    ════════════════════════════════════════════════════════ */
 
-export default function ProductEngagementPopups({ productName }) {
+export default function ProductEngagementPopups({ productName, popups: popupOverrides }) {
   const [activePopup, setActivePopup] = useState(null);
+
+  const POPUPS = useMemo(() => {
+    const defaults = buildDefaultPopups(productName);
+    if (!popupOverrides) return defaults;
+    const merged = {};
+    for (const key of Object.keys(defaults)) {
+      merged[key] = { ...defaults[key], ...(popupOverrides[key] ?? {}) };
+    }
+    return merged;
+  }, [productName, popupOverrides]);
 
   /* anyPopOpen — true while any popup is visible */
   const anyPopOpen = () => activePopup !== null;
@@ -144,7 +159,7 @@ export default function ProductEngagementPopups({ productName }) {
     shown.current.add(id);
     window.sessionStorage.setItem(storageKey, '1');
     setActivePopup(id);
-  }, [productName]);
+  }, [productName, POPUPS]);
 
   /* nudge uses its own per-tab tracking instead of global shown */
   const showNudge = useCallback((tab) => {

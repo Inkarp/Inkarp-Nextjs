@@ -25,16 +25,17 @@ function getIndustryProfile(industry) {
   };
 }
 
-function getDescription(industry) {
-  if (!industry.tasks?.length) return industry.note;
+function getDescription(industry, productName) {
+  if (industry.note) return industry.note;
+  if (!industry.tasks?.length) return undefined;
   const tasks = industry.tasks.map((task) => task.toLowerCase());
   const lastTask = tasks.length > 1 ? ` and ${tasks.at(-1)}` : '';
   const firstTasks = tasks.slice(0, -1).join(', ');
   const taskCopy = tasks.length > 1 ? `${firstTasks}${lastTask}` : tasks[0];
-  return `${industry.name.replace(' Labs', '').replace(' / Teaching', '')} laboratories use the Hei-VAP Core for ${taskCopy}.`;
+  return `${industry.name.replace(' Labs', '').replace(' / Teaching', '')} laboratories use ${productName ?? 'this product'} for ${taskCopy}.`;
 }
 
-export default function ApplicationsExplorer({ data }) {
+export default function ApplicationsExplorer({ data, productName }) {
   const industries = data?.industries ?? [];
   const [active, setActive] = useState(0);
 
@@ -48,9 +49,9 @@ export default function ApplicationsExplorer({ data }) {
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
           number="08"
-          eyebrow="Applications explorer"
-          title="How is the Hei-VAP Core used in your industry?"
-          description="Select your field to see typical rotary-evaporation tasks and the capabilities that matter."
+          eyebrow={data?.eyebrow ?? 'Applications explorer'}
+          title={data?.title ?? `How is ${productName ?? 'this product'} used in your field?`}
+          description={data?.description ?? 'Select your field to see typical tasks and the capabilities that matter.'}
         />
 
         <div className="relative mt-8 flex flex-wrap gap-2">
@@ -79,7 +80,7 @@ export default function ApplicationsExplorer({ data }) {
           <div>
             <h3 className="text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{industry.name}</h3>
             <p className="mt-5 max-w-2xl text-base leading-8 text-black dark:text-zinc-100">
-              {getDescription(industry)}
+              {getDescription(industry, productName)}
             </p>
 
             <div className="mt-7 space-y-4">

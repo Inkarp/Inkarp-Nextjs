@@ -55,7 +55,7 @@ export default function CustomerReviews({ reviews = [] }) {
         <p className="text-xs font-semibold uppercase tracking-widest text-ink-soft dark:text-zinc-500">
           Section 08 — Customer Reviews
         </p>
-        <h2 className="font-maxot mt-2 text-2xl font-bold leading-tight text-zinc-950 sm:text-3xl dark:text-zinc-100">
+        <h2 className="mt-2 text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl dark:text-zinc-100">
           What Indian labs are saying
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft sm:text-base dark:text-zinc-400">
@@ -67,7 +67,7 @@ export default function CustomerReviews({ reviews = [] }) {
             <button
               className={`inline-flex h-9 items-center justify-center rounded-full border px-4 text-sm font-semibold transition ${
                 activeFilter === filter
-                  ? 'border-red bg-red text-parchment'
+                  ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                   : 'border-line-light bg-parchment text-ink-soft hover:border-red/40 hover:text-red dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200'
               }`}
               key={filter}

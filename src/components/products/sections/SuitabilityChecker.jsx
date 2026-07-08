@@ -2,6 +2,7 @@
 import { useMemo, useState } from 'react';
 import { FiCheck, FiDroplet } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 function getResult(selections, results) {
   for (const result of results) {
@@ -58,7 +59,7 @@ export default function SuitabilityChecker({ data }) {
         <div className="relative mt-6 grid gap-5 lg:grid-cols-[1fr_1fr]">
           <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm">
             <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-parchment-alt dark:bg-zinc-800">
-              <div className="h-full rounded-full bg-red transition-all duration-300" style={{ width: `${completion}%` }} />
+              <div className="h-full rounded-full bg-navy dark:bg-zinc-500 transition-all duration-300" style={{ width: `${completion}%` }} />
             </div>
 
             <div className="space-y-5">
@@ -91,7 +92,7 @@ export default function SuitabilityChecker({ data }) {
             </div>
 
             <button
-              className="mt-6 h-12 w-full rounded-full bg-[#D30013] px-6 text-left text-sm font-bold text-parchment transition hover:bg-red disabled:cursor-not-allowed disabled:opacity-45"
+              className="mt-6 h-12 w-full rounded-full bg-red px-6 text-left text-sm font-bold text-parchment transition hover:bg-[#9f000d] disabled:cursor-not-allowed disabled:opacity-45"
               disabled={!allAnswered}
               onClick={handleCheck}
               type="button"
@@ -103,10 +104,10 @@ export default function SuitabilityChecker({ data }) {
           <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm lg:flex lg:items-center">
             {checked && result ? (
               <div className="w-full">
-                <div className={`mb-4 inline-flex size-11 items-center justify-center rounded-2xl border text-xl ${isCheckResult ? 'border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400' : 'border-red/15 bg-red/5 text-red'}`}>
+                <div className={`mb-4 inline-flex size-11 items-center justify-center rounded-2xl border text-xl ${isCheckResult ? 'border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400' : 'border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400'}`}>
                   <FiCheck />
                 </div>
-                <h3 className="font-maxot text-xl font-bold leading-tight text-black dark:text-zinc-100">
+                <h3 className="text-xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100">
                   {normaliseText(result.title)}
                 </h3>
                 <p className="mt-3 max-w-xl text-sm leading-7 text-black dark:text-zinc-400">
@@ -122,7 +123,7 @@ export default function SuitabilityChecker({ data }) {
                   </div>
                 ) : null}
                 <a
-                  className="mt-5 inline-flex h-10 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-parchment transition hover:bg-red"
+                  className="mt-5 inline-flex h-10 items-center justify-center rounded-full bg-red px-5 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
                   href="#booking"
                 >
                   Discuss your needs with us
@@ -137,11 +138,9 @@ export default function SuitabilityChecker({ data }) {
           </div>
         </div>
 
-        {checked && result ? (
-          <p className="relative mt-4 text-center text-xs text-black dark:text-zinc-400">
-            This is a quick fit check. Inkarp can confirm the final model, glassware, vacuum pump and chiller based on your real workflow.
-          </p>
-        ) : null}
+        <SectionDisclaimer>
+          {data?.disclaimer ?? 'This is a quick fit check. Inkarp can confirm the final model, glassware, vacuum pump and chiller based on your real workflow.'}
+        </SectionDisclaimer>
       </div>
     </section>
   );

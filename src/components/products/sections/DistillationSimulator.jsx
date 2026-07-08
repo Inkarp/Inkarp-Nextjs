@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState, useEffect } from 'react';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 function clamp(value, min, max) {
   return Math.min(max, Math.max(min, value));
@@ -61,10 +62,10 @@ function RecoveryChart({ points }) {
       })}
 
       {/* Area fill */}
-      <polygon fill="#BE0010" fillOpacity="0.09" points={areaPoints} />
+      <polygon fill="#161616" fillOpacity="0.07" points={areaPoints} />
 
       {/* Line */}
-      <polyline fill="none" points={polyline} stroke="#BE0010" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
+      <polyline fill="none" points={polyline} stroke="#161616" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
 
       {/* Live dot */}
       <circle cx={Number(lastCoord[0])} cy={Number(lastCoord[1])} r="4" fill="#BE0010" />
@@ -107,7 +108,7 @@ function EvaporatorStage({ remaining, running, recoveredPct }) {
       {/* evaporation flask body */}
       <rect x="64" y="72" width="72" height="148" rx="16" fill="#F8FAFC" stroke="#D4D4D8" strokeWidth="2" />
       {/* liquid fill — very faint tint, drains as evaporation runs */}
-      <rect x="76" y={206 - sampleHeight} width="48" height={sampleHeight} rx="10" fill="#BE0010" opacity="0.1" />
+      <rect x="76" y={206 - sampleHeight} width="48" height={sampleHeight} rx="10" fill="#161616" opacity="0.08" />
       {/* flask circle */}
       <circle cx="100" cy="146" r="43" fill="none" stroke="#C4C4C8" strokeWidth="2" />
       {/* spinning rod */}
@@ -136,8 +137,8 @@ function EvaporatorStage({ remaining, running, recoveredPct }) {
         y={recvFillY}
         width="72"
         height={recvFillH}
-        fill="#BE0010"
-        opacity="0.18"
+        fill="#161616"
+        opacity="0.14"
         clipPath="url(#recv-clip)"
       />
       {/* receiving flask outline */}
@@ -216,7 +217,7 @@ export default function DistillationSimulator({ data }) {
 
   return (
     <section id="simulator" className={`scroll-mt-16 border-b border-line-light bg-[#F6F6F6] px-4 py-5 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950 lg:min-h-screen lg:flex lg:flex-col ${finished ? 'lg:justify-start' : 'lg:justify-center'}`}>
-      <div className="mx-auto w-full">
+      <div className="mx-auto max-w-7xl w-full">
         <SectionHeader
           number="03"
           eyebrow="Interactive simulator"
@@ -232,7 +233,7 @@ export default function DistillationSimulator({ data }) {
                 <span>Hei-VAP Core monitor</span>
                 <span>{formatTime(elapsed)}</span>
               </div>
-              <div className="font-maxot text-2xl font-bold">{recoveredPct}<span className="text-sm text-black dark:text-zinc-400">% recovered</span></div>
+              <div className="text-2xl font-semibold tracking-tight">{recoveredPct}<span className="text-sm text-black dark:text-zinc-400">% recovered</span></div>
               <p className="mt-1 text-[10px] leading-4 text-black dark:text-zinc-400">{monitorStatus}</p>
               <div className="mt-2 grid grid-cols-3 gap-1.5 text-[10px]">
                 <div className="rounded-lg bg-parchment/10 p-1.5"><span className="block text-[8px] uppercase text-black dark:text-zinc-400">Bath</span>{bathTemp}°C</div>
@@ -248,7 +249,7 @@ export default function DistillationSimulator({ data }) {
                   <button
                     className={`flex w-full items-center justify-between rounded-lg border px-3 py-1.5 text-left text-xs transition ${
                       selIdx === i
-                        ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                        ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                         : 'border-line-light bg-parchment-alt text-black hover:border-zinc-300 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600'
                     } ${running ? 'cursor-not-allowed opacity-55' : ''}`}
                     disabled={running}
@@ -257,7 +258,7 @@ export default function DistillationSimulator({ data }) {
                     type="button"
                   >
                     <span className="font-semibold">{s.name}</span>
-                    <span className="text-[10px] text-black dark:text-zinc-400">{s.rate} L/h · {s.vp} mbar</span>
+                    <span className={`text-[10px] ${selIdx === i ? 'text-parchment/70 dark:text-zinc-900/70' : 'text-black dark:text-zinc-400'}`}>{s.rate} L/h · {s.vp} mbar</span>
                   </button>
                 ))}
               </div>
@@ -306,10 +307,10 @@ export default function DistillationSimulator({ data }) {
             </div>
 
             {finished && (
-              <div className="rounded-2xl border border-red/30 bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <div className="rounded-2xl border border-line-light bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
                 <div className="mb-4 flex items-center justify-between gap-3">
-                  <h3 className="font-maxot text-lg font-semibold text-black dark:text-zinc-100">Distillation complete</h3>
-                  <span className="rounded-full bg-red px-3 py-1 text-xs font-bold uppercase text-parchment">
+                  <h3 className="text-lg font-semibold tracking-tight text-ink dark:text-zinc-100">Distillation complete</h3>
+                  <span className="rounded-full bg-navy px-3 py-1 text-xs font-bold uppercase text-parchment dark:bg-zinc-800">
                     RECOVERED
                   </span>
                 </div>
@@ -322,7 +323,7 @@ export default function DistillationSimulator({ data }) {
                   ].map((item) => (
                     <div className="rounded-xl border border-line-light bg-parchment-alt p-3 text-sm dark:border-zinc-700 dark:bg-zinc-800" key={item.label}>
                       <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">{item.label}</p>
-                      <p className={`mt-1 font-maxot text-base font-bold ${item.highlight ? 'text-red' : 'text-black dark:text-zinc-100'}`}>{item.value}</p>
+                      <p className={`mt-1 text-base font-semibold tracking-tight ${item.highlight ? 'text-red' : 'text-ink dark:text-zinc-100'}`}>{item.value}</p>
                     </div>
                   ))}
                 </div>
@@ -335,6 +336,10 @@ export default function DistillationSimulator({ data }) {
             )}
           </div>
         </div>
+
+        <SectionDisclaimer>
+          {data?.disclaimer ?? 'Simulation runs far faster than real time and is illustrative only. Actual evaporation rate depends on solvent purity, vacuum level, bath temperature, condenser setup and cooling efficiency.'}
+        </SectionDisclaimer>
       </div>
     </section>
   );

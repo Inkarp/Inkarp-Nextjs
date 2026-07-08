@@ -24,17 +24,17 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
       <div className="relative mx-auto max-w-7xl">
         <span
           aria-hidden
-          className="pointer-events-none absolute -right-1 -top-8 select-none font-maxot text-[120px] font-bold leading-none text-zinc-100 dark:text-zinc-900 sm:text-[150px]"
+          className="pointer-events-none absolute -right-1 -top-8 select-none text-[120px] font-bold leading-none text-zinc-100 dark:text-zinc-900 sm:text-[150px]"
         >
           15
         </span>
 
         <div className="relative mb-8 max-w-3xl">
-          <p className="font-maxot flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-black dark:text-zinc-100">
+          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink dark:text-zinc-100">
             <span className="inline-block size-2 rounded-full bg-red" />
             Why labs choose it
           </p>
-          <h2 className="font-maxot mt-4 text-3xl font-bold leading-tight text-black dark:text-zinc-100 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100 sm:text-4xl">
             {title}
           </h2>
           <p className="mt-4 text-base leading-7 text-black dark:text-zinc-400">
@@ -60,11 +60,11 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
                   &ldquo;
                 </span>
 
-                <div className="relative inline-flex size-12 items-center justify-center rounded-lg border border-red/20 bg-[#fff3f4] text-red">
+                <div className="relative inline-flex size-12 items-center justify-center rounded-lg border border-line-light bg-parchment-alt text-ink dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
                   <Icon className="size-5" />
                 </div>
 
-                <h3 className="font-maxot relative mt-6 text-lg font-bold leading-snug text-black dark:text-zinc-100">
+                <h3 className="relative mt-6 text-lg font-semibold leading-snug tracking-tight text-ink dark:text-zinc-100">
                   {c.title}
                 </h3>
                 {c.description && (
@@ -76,7 +76,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
                 <div
                   className={`relative mt-auto flex h-7 items-center rounded-full px-3 text-xs font-bold ${
                     isAccent
-                      ? 'bg-[#fff0f1] text-red'
+                      ? 'bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                       : 'bg-parchment-alt dark:bg-zinc-800 text-black dark:text-zinc-100'
                   }`}
                 >

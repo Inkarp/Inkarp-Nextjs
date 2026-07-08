@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 function formatLitres(value) {
   if (value >= 100) return `${Math.round(value).toLocaleString('en-IN')} L`;
@@ -107,7 +108,7 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
 
   return (
     <section id="calculator" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-0 dark:border-zinc-800 dark:bg-zinc-950 lg:h-screen lg:flex lg:flex-col lg:justify-center">
-      <div className="relative w-full">
+      <div className="relative mx-auto max-w-7xl w-full">
         <SectionHeader
           number={calculatorData?.sectionNumber ?? '04'}
           eyebrow={calculatorData?.eyebrow ?? ''}
@@ -185,16 +186,16 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
               {resultRows.map((row, index, rows) => (
                 <div className={`flex items-center justify-between gap-6 py-3 ${index < rows.length - 1 ? 'border-b border-line-light dark:border-zinc-800' : ''}`} key={row.label}>
                   <span className="text-sm text-black dark:text-white">{row.label}</span>
-                  <span className={`text-right font-maxot text-base font-bold ${row.accent ? 'text-red' : 'text-black dark:text-white'}`}>{row.value}</span>
+                  <span className={`text-right text-base font-semibold tracking-tight ${row.accent ? 'text-red' : 'text-ink dark:text-white'}`}>{row.value}</span>
                 </div>
               ))}
             </div>
 
-            <div className="rounded-2xl bg-[#D30013] px-6 py-6 text-center text-parchment shadow-sm">
-              <div className="font-maxot text-5xl font-bold leading-none sm:text-6xl">
+            <div className="rounded-2xl border border-line-light bg-parchment-alt px-6 py-6 text-center shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+              <div className="text-5xl font-semibold tracking-tight leading-none text-red sm:text-6xl">
                 {Math.round(annualRecoveredLitres).toLocaleString('en-IN')}
               </div>
-              <p className="mt-2 text-sm font-semibold text-parchment/90">
+              <p className="mt-2 text-sm font-semibold text-ink-soft dark:text-zinc-400">
                 {calculatorData?.heroLabel ?? ''}
               </p>
             </div>
@@ -210,9 +211,7 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
           </div>
         </div>
 
-        <p className="relative mt-4 text-center text-xs text-black/50 dark:text-white/40">
-          {calculatorData?.disclaimer ?? ''}
-        </p>
+        <SectionDisclaimer>{calculatorData?.disclaimer}</SectionDisclaimer>
       </div>
     </section>
   );

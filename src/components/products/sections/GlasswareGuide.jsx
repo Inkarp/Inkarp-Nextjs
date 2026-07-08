@@ -32,7 +32,7 @@ export default function GlasswareGuide({ cards = [] }) {
               <div
                 key={c.title}
                 className={`relative rounded-2xl border-2 p-5 text-left transition ${
-                  standard ? 'border-red shadow-lg shadow-[#BE0010]/10 dark:bg-zinc-900' : 'border-line-light bg-parchment hover:border-red/30 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900'
+                  standard ? 'border-ink shadow-sm dark:border-zinc-100 dark:bg-zinc-900' : 'border-line-light bg-parchment hover:border-red/30 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900'
                 }`}
               >
                 {standard && (
@@ -41,17 +41,17 @@ export default function GlasswareGuide({ cards = [] }) {
                   </span>
                 )}
 
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-red/10 text-base font-bold text-red">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-parchment-alt text-base font-bold text-ink dark:bg-zinc-800 dark:text-zinc-100">
                   {codeFor(c.title).length > 3 ? <FiCheckCircle /> : codeFor(c.title)}
                 </div>
 
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-black dark:text-zinc-100">{codeFor(c.title)}</p>
-                <h3 className="font-maxot mt-1 mb-2 text-base font-bold text-black dark:text-zinc-100">{c.title}</h3>
+                <h3 className="mt-1 mb-2 text-base font-semibold tracking-tight text-ink dark:text-zinc-100">{c.title}</h3>
                 <p className="mb-4 text-sm leading-6 text-black dark:text-zinc-100">{c.description}</p>
 
                 {c.best && (
                   <div className="flex items-start gap-2 rounded-lg bg-parchment-alt px-3 py-2.5 text-xs font-semibold text-black dark:bg-zinc-800 dark:text-zinc-100">
-                    <FiCheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red" />
+                    <FiCheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600 dark:text-emerald-400" />
                     {c.best}
                   </div>
                 )}

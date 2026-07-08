@@ -1,7 +1,8 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiCheck, FiInfo, FiMail, FiRefreshCw, FiSettings } from 'react-icons/fi';
+import { FiCheck, FiMail, FiRefreshCw, FiSettings } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 const STEP_LABEL_HINTS = [
   { match: /workflow|use|application/i, label: 'Workflow' },
@@ -121,7 +122,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                       isComplete
                         ? 'bg-navy text-parchment dark:bg-zinc-100 dark:text-zinc-950'
                         : isActive
-                          ? 'bg-[#D30013] text-parchment shadow-[0_0_0_6px_rgba(211,0,19,0.10)]'
+                          ? 'border-2 border-red bg-parchment text-red dark:bg-zinc-900'
                           : 'bg-parchment text-black ring-1 ring-line-light dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700'
                     }`}
                     disabled={!isComplete && !isActive}
@@ -144,7 +145,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
 
           <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
             <div className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
-              <h3 className="font-maxot text-lg font-bold text-black dark:text-zinc-100">{cleanText(current.question)}</h3>
+              <h3 className="text-lg font-semibold tracking-tight text-ink dark:text-zinc-100">{cleanText(current.question)}</h3>
               <div className="mt-5 space-y-3">
                 {(current.options ?? []).map((option) => {
                   const isSelected = selections[current.key] === option.val;
@@ -152,7 +153,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     <button
                       className={`w-full rounded-2xl border px-4 py-3 text-left transition ${
                         isSelected
-                          ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                          ? 'border-ink dark:border-zinc-100 bg-parchment-alt dark:bg-zinc-800 text-black dark:text-zinc-100'
                           : 'border-line-light bg-parchment text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500'
                       }`}
                       key={option.val}
@@ -201,7 +202,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     <FiCheck />
                     Configuration ready
                   </div>
-                  <h3 className="font-maxot mt-4 text-2xl font-bold text-black dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
+                  <h3 className="mt-4 text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
                   <div className="mt-5 space-y-2">
                     {selectedRows.map((row) => (
                       <div className="rounded-2xl border border-line-light bg-parchment-alt px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900" key={row.key}>
@@ -216,7 +217,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   {result.ctaNote && <p className="mt-4 text-sm leading-6 text-black dark:text-zinc-400">{result.ctaNote}</p>}
                   <div className="mt-5 flex flex-wrap gap-3">
                     <button
-                      className="inline-flex items-center gap-2 rounded-full bg-[#D30013] px-5 py-3 text-sm font-bold text-parchment transition hover:bg-red"
+                      className="inline-flex items-center gap-2 rounded-full bg-red px-5 py-3 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
                       onClick={emailConfiguration}
                       type="button"
                     >
@@ -232,10 +233,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
             </div>
           </div>
 
-          <div className="relative mt-5 max-w-5xl rounded-2xl border border-line-light bg-parchment px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
-            <FiInfo className="mr-2 inline-block text-sm" />
-            Disclaimer: {disclaimer}
-          </div>
+          <SectionDisclaimer>{disclaimer}</SectionDisclaimer>
         </div>
       </div>
     </section>

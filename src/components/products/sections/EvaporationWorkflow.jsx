@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useCallback } from 'react';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 const STEP_DURATION = 4000; // ms per step
 
@@ -39,8 +40,8 @@ const STEP_ICON_MAP = {
 function Connector({ active }) {
   return (
     <div className="hidden lg:flex items-center gap-1 shrink-0">
-      <div className={`h-px w-6 ${active ? 'bg-red' : 'bg-zinc-200 dark:bg-zinc-800'}`} />
-      <div className={`h-2.5 w-2.5 rounded-full border-2 ${active ? 'border-red bg-red' : 'border-line-light bg-parchment dark:border-zinc-800 dark:bg-zinc-900'}`} />
+      <div className={`h-px w-6 ${active ? 'bg-navy dark:bg-zinc-400' : 'bg-zinc-200 dark:bg-zinc-800'}`} />
+      <div className={`h-2.5 w-2.5 rounded-full border-2 ${active ? 'border-navy bg-navy dark:border-zinc-400 dark:bg-zinc-400' : 'border-line-light bg-parchment dark:border-zinc-800 dark:bg-zinc-900'}`} />
     </div>
   );
 }
@@ -54,46 +55,45 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
       onClick={onClick}
       className={`relative flex h-full w-full min-w-[160px] flex-col  border-2 pt-5 px-5 pb-5 text-left transition-all duration-300 ${
         isActive
-          ? 'border-red shadow-lg shadow-[#BE0010]/15'
+          ? 'border-ink dark:border-zinc-100 bg-parchment-alt dark:bg-zinc-800'
           : isFuture
             ? 'border-line-light bg-parchment hover:border-line-light dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700'
             : 'border-line-light bg-parchment hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-600'
       }`}
-      style={isActive ? { background: 'linear-gradient(135deg, #fff5f5 0%, #ffffff 100%)' } : {}}
     >
       {/* Progress bar — hugs the top edge of the card, radius matches card */}
       {isActive && (
-        <div className="absolute -top-0.5 -left-0.5 -right-0.5 h-1 rounded-t-2xl overflow-hidden bg-red/15">
+        <div className="absolute -top-0.5 -left-0.5 -right-0.5 h-1 rounded-t-2xl overflow-hidden bg-navy/15 dark:bg-zinc-700">
           <div
             key={`progress-${index}`}
-            className="h-full bg-red rounded-full"
+            className="h-full bg-navy dark:bg-zinc-400 rounded-full"
             style={{ animation: `hvc-progress-fill ${totalDuration}ms linear forwards` }}
           />
         </div>
       )}
 
       {/* Step number */}
-      <span className={`absolute top-3 right-4 text-xs font-bold tabular-nums ${isActive ? 'text-red' : 'text-black dark:text-zinc-100'}`}>
+      <span className="absolute top-3 right-4 text-xs font-bold tabular-nums text-black dark:text-zinc-100">
         {index + 1}
       </span>
 
-      {/* Icon chip — in-flow soft-square, light red tint on inactive, solid red on active */}
+      {/* Icon chip — in-flow soft-square, neutral tint on inactive, solid navy on active */}
       <div
         className={`inline-flex h-10 w-10 items-center justify-center rounded-xl mb-3 transition-colors duration-300 ${
-          isActive ? 'bg-red text-parchment' : 'bg-red/10 text-red'
+          isActive ? 'bg-navy text-parchment dark:bg-zinc-100 dark:text-zinc-900' : 'bg-parchment-alt text-ink dark:bg-zinc-800 dark:text-zinc-100'
         }`}
       >
         {STEP_ICON_MAP[step.title.toLowerCase()] ?? <span className="text-sm font-bold">{index + 1}</span>}
       </div>
 
       {/* Title */}
-      <h3 className="font-maxot font-bold text-sm mb-2 text-black dark:text-zinc-100">
+      <h3 className="font-semibold tracking-tight text-sm mb-2 text-ink dark:text-zinc-100">
         {step.title}
       </h3>
 
       {/* Description — min-h reserves 3 lines (3 × leading-5 = 60px) so all cards
           hold the same height even when shorter descriptions produce fewer lines. */}
-      <p className={`text-xs leading-5 min-h-[60px] ${isActive ? 'text-red' : 'text-black dark:text-zinc-400'}`}>
+      <p className="text-xs leading-5 min-h-[60px] text-black dark:text-zinc-400">
         {step.description}
       </p>
     </button>
@@ -156,16 +156,12 @@ export default function EvaporationWorkflow({ section = {} }) {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`h-2 rounded-full transition-all ${active === i ? 'w-6 bg-red' : 'w-2 bg-zinc-200 dark:bg-zinc-800'}`}
+              className={`h-2 rounded-full transition-all ${active === i ? 'w-6 bg-navy dark:bg-zinc-400' : 'w-2 bg-zinc-200 dark:bg-zinc-800'}`}
             />
           ))}
         </div>
 
-        {disclaimer && (
-          <p className="mt-8 rounded-xl border border-red/15 bg-red/5 p-4 text-xs leading-6 text-black dark:text-zinc-100">
-            {disclaimer}
-          </p>
-        )}
+        <SectionDisclaimer>{disclaimer}</SectionDisclaimer>
       </div>
     </section>
   );

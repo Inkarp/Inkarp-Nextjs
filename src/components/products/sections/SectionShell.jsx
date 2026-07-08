@@ -10,15 +10,15 @@ export default function SectionShell({ id, eyebrow, title, description, bg = 'wh
         {(eyebrow || title || description) && (
           <div className="mb-8 max-w-3xl">
             {eyebrow && (
-              <p className="font-maxot text-xs font-semibold uppercase tracking-widest text-red">{eyebrow}</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-red">{eyebrow}</p>
             )}
             {title && (
-              <h2 className={`font-maxot mt-2 text-2xl leading-tight sm:text-3xl ${bg === 'dark' ? 'text-parchment' : 'text-black dark:text-zinc-100'}`}>
+              <h2 className={`mt-2 text-2xl font-semibold leading-tight tracking-tight sm:text-3xl ${bg === 'dark' ? 'text-parchment' : 'text-ink dark:text-zinc-100'}`}>
                 {title}
               </h2>
             )}
             {description && (
-              <p className={`mt-3 text-sm leading-7 sm:text-base ${bg === 'dark' ? 'text-parchment/60' : 'text-black dark:text-zinc-400'}`}>
+              <p className={`mt-3 text-sm leading-7 sm:text-base ${bg === 'dark' ? 'text-parchment/60' : 'text-ink-soft dark:text-zinc-400'}`}>
                 {description}
               </p>
             )}

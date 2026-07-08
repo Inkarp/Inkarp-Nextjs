@@ -6,7 +6,7 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
   if (!products.length) {
     return (
       <div className="mt-4 rounded-2xl border border-dashed border-zinc-300 bg-[whitesmoke] dark:border-zinc-700 dark:bg-zinc-900 p-12 text-center">
-        <h2 className="font-maxot text-2xl font-bold text-zinc-950 dark:text-zinc-100">
+        <h2 className="text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">
           No products found
         </h2>
         <p className="mt-2 text-sm text-ink-soft dark:text-zinc-400">
@@ -64,7 +64,7 @@ export default function ProductResultsGrid({ products, emptyHref = "/products", 
           </div>
 
           {/* Product name */}
-          <h2 className="font-maxot mt-1.5 text-base font-bold leading-snug text-zinc-950 dark:text-zinc-100">
+          <h2 className="mt-1.5 text-base font-semibold leading-snug tracking-tight text-ink dark:text-zinc-100">
             <Link className="transition group-hover:text-red" href={product.href}>
               {product.name}
             </Link>

@@ -59,7 +59,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             aria-label={`Jump to ${link.label}`}
             className={`size-3 rounded-full transition ${
               active === link.id
-                ? "bg-[#BE0010] ring-4 ring-[#BE0010]/15"
+                ? "bg-[#161616] ring-4 ring-[#161616]/15"
                 : "bg-zinc-300 hover:bg-zinc-500"
             }`}
             key={link.id}
@@ -79,7 +79,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-red">
+            <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">
               Need help configuring it?
             </p>
             <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">

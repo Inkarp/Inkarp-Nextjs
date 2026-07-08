@@ -1,28 +1,33 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const ThemeContext = createContext(null);
 
-export const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="dark"&&t!=="light"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.classList.toggle("dark",t==="dark");}catch(e){}})();`;
+const PRODUCT_ROUTE_PATTERN = /^\/products(\/|$)/;
+
+// Dark mode is scoped to the products pages only — never applied on first paint
+// anywhere else, so other pages can never flash/stay dark.
+export const themeInitScript = `(function(){try{if(!/^\\/products(\\/|$)/.test(window.location.pathname))return;if(localStorage.getItem("theme")==="dark"){document.documentElement.classList.add("dark");}}catch(e){}})();`;
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
+  const pathname = usePathname();
+  const isProductRoute = PRODUCT_ROUTE_PATTERN.test(pathname ?? "");
 
   useEffect(() => {
     const stored = window.localStorage.getItem("theme");
-    const initial =
-      stored === "dark" || stored === "light"
-        ? stored
-        : window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-
-    setTheme(initial);
+    setTheme(stored === "dark" ? "dark" : "light");
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
+    // Only ever apply the dark class while on a /products route — leaving it
+    // removes the class immediately regardless of the stored preference.
+    document.documentElement.classList.toggle("dark", isProductRoute && theme === "dark");
+  }, [theme, isProductRoute]);
+
+  useEffect(() => {
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 
@@ -31,7 +36,7 @@ export function ThemeProvider({ children }) {
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isProductRoute }}>
       {children}
     </ThemeContext.Provider>
   );

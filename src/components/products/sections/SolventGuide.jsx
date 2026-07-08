@@ -2,6 +2,7 @@
 import { useMemo, useState } from 'react';
 import { FiInfo, FiPlus, FiCloudSnow, FiThermometer } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 // Bridges the naming gap between solvent guide cards and simulator/calculator entries
 const SOLVENT_NAME_ALIASES = { Dichloromethane: 'DCM' };
@@ -82,7 +83,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
               <button
                 className={`flex min-h-12 w-full items-center justify-between rounded-2xl border px-5 py-3 text-left transition ${
                   active === index
-                    ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                    ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                     : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-300'
                 }`}
                 key={item.title}
@@ -90,7 +91,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
                 type="button"
               >
                 <span className="text-sm font-bold">{item.title}</span>
-                <span className="text-xs text-black dark:text-zinc-100">
+                <span className={`text-xs ${active === index ? 'text-parchment/70 dark:text-zinc-900/70' : 'text-black dark:text-zinc-100'}`}>
                   {item.boilingPoint ? `${item.boilingPoint} deg C bp` : 'setup'}
                 </span>
               </button>
@@ -98,7 +99,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
           </div>
 
           <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
-            <h3 className="font-maxot text-2xl font-bold text-black dark:text-zinc-100">{card.title}</h3>
+            <h3 className="text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{card.title}</h3>
             <p className="mt-2 text-sm text-black dark:text-zinc-400">
               {[
                 card.parsed.bath && `bath ${card.parsed.bath}`,
@@ -113,7 +114,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
                 const Icon = DETAIL_ICONS[index] ?? FiInfo;
                 return (
                   <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${card.title}-${DETAIL_LABELS[index]}`}>
-                    <div className="flex size-9 items-center justify-center rounded-xl border border-red/15 bg-red/5 text-red">
+                    <div className="flex size-9 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-ink dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
                       <Icon className="text-base" />
                     </div>
                     <div>
@@ -130,7 +131,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
             </div>
 
             <a
-              className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-[#D30013] px-5 text-sm font-bold text-parchment transition hover:bg-red"
+              className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-red px-5 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
               href="#booking"
             >
               Ask Inkarp for solvent-specific configuration
@@ -138,12 +139,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
           </div>
         </div>
 
-        {disclaimer && (
-          <div className="relative mt-6 max-w-5xl rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-5 py-4 text-xs leading-6 text-black dark:text-zinc-400">
-            <span className="mr-2 inline-flex size-4 items-center justify-center rounded-full border border-zinc-300 dark:border-zinc-700 text-[10px] font-bold text-black dark:text-zinc-100">i</span>
-            Disclaimer: {normaliseText(disclaimer)}
-          </div>
-        )}
+        <SectionDisclaimer>{disclaimer && normaliseText(disclaimer)}</SectionDisclaimer>
       </div>
     </section>
   );

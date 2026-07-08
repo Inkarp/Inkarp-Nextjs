@@ -302,11 +302,11 @@ export default function ProductEngagementPopups({ productName }) {
           <FiX />
         </button>
 
-        <div className="mb-4 inline-flex size-11 items-center justify-center rounded-md bg-red/10 text-red">
+        <div className="mb-4 inline-flex size-11 items-center justify-center rounded-md bg-parchment-alt text-ink dark:bg-zinc-800 dark:text-zinc-100">
           {(() => { const Icon = popup.icon ?? FiMessageCircle; return <Icon />; })()}
         </div>
 
-        <h2 className="font-maxot pr-8 text-2xl font-bold leading-tight text-zinc-950 dark:text-zinc-100">
+        <h2 className="pr-8 text-2xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100">
           {popup.title}
         </h2>
         <p className="mt-3 text-sm leading-6 text-ink-soft dark:text-zinc-400">

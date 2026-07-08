@@ -78,15 +78,15 @@ export default function ServiceMap({ data, calm = false }) {
                           <span className="absolute left-1/2 top-1/2 z-0 size-5 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-red" />
                         )}
                         <MdLocationPin
-                          className={`relative z-10 text-red drop-shadow transition-all ${
-                            isSelected ? 'size-8' : 'size-6'
+                          className={`relative z-10 drop-shadow transition-all ${
+                            isSelected ? 'size-8 text-red' : 'size-6 text-black dark:text-zinc-300'
                           }`}
                         />
                       </div>
                       <span
                         className={`mt-1 block whitespace-nowrap rounded-md border px-2 py-0.5 text-[10px] font-semibold shadow transition ${
                           isSelected
-                            ? 'border-red bg-red text-parchment'
+                            ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                             : calm
                               ? 'border-line-light bg-white text-ink'
                               : 'border-line-light bg-parchment text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100'
@@ -118,7 +118,7 @@ export default function ServiceMap({ data, calm = false }) {
                     type="button"
                     className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
                       selected === i
-                        ? 'border-red bg-red/5 text-red'
+                        ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                         : calm
                           ? 'border-line-light text-ink hover:border-red/40'
                           : 'border-line-light text-black hover:border-red/40 dark:border-zinc-700 dark:text-zinc-100'
@@ -135,25 +135,25 @@ export default function ServiceMap({ data, calm = false }) {
               className={
                 calm
                   ? 'rounded-2xl border border-line-light bg-white p-5 shadow-sm'
-                  : 'rounded-2xl border-2 border-red/30 bg-parchment p-5 shadow-sm dark:bg-zinc-900'
+                  : 'rounded-2xl border border-line-light bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900'
               }
             >
               <div className="flex items-center gap-2 mb-3">
-                <div className="h-3 w-3 rounded-full bg-red" />
-                <h3 className={`font-maxot font-bold ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>
+                <div className="h-3 w-3 rounded-full bg-navy dark:bg-zinc-400" />
+                <h3 className={`font-semibold tracking-tight ${calm ? 'text-ink' : 'text-ink dark:text-zinc-100'}`}>
                   {selectedBranch.name} branch
                 </h3>
               </div>
 
-              <div className={`mb-3 flex items-start gap-2 rounded-lg bg-[#fef2f2] p-3 ${calm ? '' : 'dark:bg-red-950/40'}`}>
-                <MdLocationPin className="mt-0.5 size-4 shrink-0 text-red" />
+              <div className={`mb-3 flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
+                <MdLocationPin className="mt-0.5 size-4 shrink-0 text-ink dark:text-zinc-100" />
                 <p className={`text-xs leading-snug ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>
                   {selectedBranch.address}
                 </p>
               </div>
 
               <div className={`mb-2 flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
-                <MdLocalPhone className="mt-0.5 size-4 shrink-0 text-red" />
+                <MdLocalPhone className="mt-0.5 size-4 shrink-0 text-ink dark:text-zinc-100" />
                 <div className="flex flex-col gap-1">
                   {selectedBranch.phone.split(',').map((phone, phoneIndex) => (
                     <a
@@ -168,7 +168,7 @@ export default function ServiceMap({ data, calm = false }) {
               </div>
 
               <div className={`flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
-                <MdEmail className="mt-0.5 size-4 shrink-0 text-red" />
+                <MdEmail className="mt-0.5 size-4 shrink-0 text-ink dark:text-zinc-100" />
                 <div className="flex flex-col gap-1">
                   {selectedBranch.email.split(',').map((email) => (
                     <a

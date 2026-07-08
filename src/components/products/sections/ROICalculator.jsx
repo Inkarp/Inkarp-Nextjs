@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 function formatCurrency(value) {
   return `₹${Math.round(value || 0).toLocaleString('en-IN')}`;
@@ -18,7 +19,7 @@ function RoiInput({ label, value, onChange }) {
     <label className="block">
       <span className="text-sm font-medium text-black dark:text-zinc-100">{label}</span>
       <input
-        className="mt-2 h-11 w-full rounded-2xl border border-line-light bg-parchment-alt px-4 font-maxot text-lg font-bold text-black outline-none transition focus:border-red focus:bg-parchment focus:ring-4 focus:ring-red/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:focus:bg-zinc-900"
+        className="mt-2 h-11 w-full rounded-2xl border border-line-light bg-parchment-alt px-4 text-lg font-semibold tracking-tight text-ink outline-none transition focus:border-red focus:bg-parchment focus:ring-4 focus:ring-red/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:focus:bg-zinc-900"
         min="0"
         onChange={(event) => onChange(cleanNumber(event.target.value))}
         step="1000"
@@ -141,34 +142,30 @@ export default function ROICalculator({ data, sectionNumber = '07' }) {
           </div>
 
           <div className="space-y-3">
-            <div className="rounded-2xl bg-[#D30013] p-5 text-parchment shadow-sm sm:p-6">
-              <p className="text-sm font-semibold text-parchment/75">Estimated payback period</p>
-              <div className="font-maxot mt-4 text-4xl font-bold leading-none sm:text-5xl">
+            <div className="rounded-2xl border border-line-light bg-parchment-alt p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 sm:p-6">
+              <p className="text-sm font-semibold text-ink-soft dark:text-zinc-400">Estimated payback period</p>
+              <div className="mt-4 text-4xl font-semibold tracking-tight leading-none text-red sm:text-5xl">
                 {results.paybackMonths ? `${results.paybackMonths} months` : '-'}
               </div>
             </div>
 
             <div className="rounded-2xl border border-line-light bg-parchment p-5 shadow-sm sm:p-6 dark:border-zinc-800 dark:bg-zinc-900">
               <p className="text-sm font-semibold text-black dark:text-zinc-100">Total annual value</p>
-              <div className="font-maxot mt-4 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
+              <div className="mt-4 text-3xl font-semibold leading-none tracking-tight text-ink sm:text-4xl dark:text-zinc-100">
                 {formatCurrency(results.totalAnnualValue)}
               </div>
             </div>
 
             <div className="rounded-2xl border border-line-light bg-parchment p-5 shadow-sm sm:p-6 dark:border-zinc-800 dark:bg-zinc-900">
               <p className="text-sm font-semibold text-black dark:text-zinc-100">5-year net value (after purchase)</p>
-              <div className="font-maxot mt-4 text-3xl font-bold leading-none text-black sm:text-4xl dark:text-zinc-100">
+              <div className="mt-4 text-3xl font-semibold leading-none tracking-tight text-ink sm:text-4xl dark:text-zinc-100">
                 {formatCurrency(results.fiveYearNetValue)}
               </div>
             </div>
-
-            {data?.disclaimer && (
-              <p className="text-sm leading-6 text-black dark:text-zinc-400">
-                Disclaimer: {data.disclaimer}
-              </p>
-            )}
           </div>
         </div>
+
+        <SectionDisclaimer>{data?.disclaimer}</SectionDisclaimer>
       </div>
     </section>
   );

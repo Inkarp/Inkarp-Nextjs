@@ -1,6 +1,6 @@
 'use client';
-import { FiInfo } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 function cleanText(value = '') {
   return String(value)
@@ -41,13 +41,13 @@ export default function MethodComparison({ data }) {
                       <th
                         className={`px-4 py-5 text-center text-sm font-bold sm:px-6 ${
                           isHighlighted
-                            ? 'bg-[#D30013]/[0.08] text-[#D30013]'
+                            ? 'bg-parchment-alt text-ink dark:bg-zinc-800 dark:text-zinc-100'
                             : 'text-black dark:text-zinc-100'
                         }`}
                         key={column.label}
                       >
                         {isHighlighted && (
-                          <span className="mb-3 inline-flex rounded-full bg-[#D30013] px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-parchment">
+                          <span className="mb-3 inline-flex rounded-full bg-red px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-parchment">
                             Recommended
                           </span>
                         )}
@@ -69,7 +69,7 @@ export default function MethodComparison({ data }) {
                         <td
                           className={`px-4 py-4 text-center text-sm sm:px-6 ${
                             isHighlighted
-                              ? 'bg-[#D30013]/[0.08] font-bold text-black dark:text-zinc-100'
+                              ? 'bg-parchment-alt font-bold text-black dark:bg-zinc-800 dark:text-zinc-100'
                               : 'text-black dark:text-zinc-100'
                           }`}
                           key={`${row.feature}-${index}`}
@@ -85,10 +85,9 @@ export default function MethodComparison({ data }) {
           </div>
         </div>
 
-        <div className="relative mt-5 max-w-5xl rounded-2xl border border-line-light bg-parchment px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">
-          <FiInfo className="mr-2 inline-block text-sm" />
-          Disclaimer: {disclaimer ?? 'This is a generalised comparison with a typical basic manual setup for illustration - not a comparison with any specific competitor product. Capabilities depend on the exact equipment compared.'}
-        </div>
+        <SectionDisclaimer>
+          {disclaimer ?? 'This is a generalised comparison with a typical basic manual setup for illustration - not a comparison with any specific competitor product. Capabilities depend on the exact equipment compared.'}
+        </SectionDisclaimer>
       </div>
     </section>
   );

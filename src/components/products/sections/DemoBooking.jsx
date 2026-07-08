@@ -95,15 +95,15 @@ export default function DemoBooking({ data, productName }) {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-maxot mb-2 text-xl text-black dark:text-zinc-100">Enquiry sent!</h3>
+                <h3 className="mb-2 text-xl font-semibold tracking-tight text-ink dark:text-zinc-100">Enquiry sent!</h3>
                 <p className="max-w-md text-sm leading-6 text-black dark:text-zinc-400">
                   {successMessage ?? 'An Inkarp specialist will call you back shortly. You can also browse the FAQ while we review your request.'}
                 </p>
                 <div className="mt-5 flex flex-wrap justify-center gap-3">
-                  <button className="text-sm font-semibold text-red hover:underline" onClick={() => { setSubmitted(false); setForm({}); }} type="button">
+                  <button className="text-sm font-semibold text-ink underline hover:text-red dark:text-zinc-100" onClick={() => { setSubmitted(false); setForm({}); }} type="button">
                     Send another enquiry
                   </button>
-                  <a className="text-sm font-semibold text-red hover:underline" href="#faq">Browse FAQ</a>
+                  <a className="text-sm font-semibold text-ink underline hover:text-red dark:text-zinc-100" href="#faq">Browse FAQ</a>
                 </div>
               </div>
             ) : (
@@ -168,11 +168,11 @@ export default function DemoBooking({ data, productName }) {
           </div>
 
           <aside className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <h3 className="font-maxot text-xl text-black dark:text-zinc-100">Why book a demo?</h3>
+            <h3 className="text-xl font-semibold tracking-tight text-ink dark:text-zinc-100">Why book a demo?</h3>
             <div className="mt-5 divide-y divide-zinc-100 dark:divide-zinc-800">
               {WHY_ITEMS.map((item) => (
                 <div className="flex gap-3 py-4 first:pt-0 last:pb-0" key={item.title}>
-                  <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-red/15 bg-red/5 text-sm font-bold text-red">i</div>
+                  <div className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-sm font-bold text-ink dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100">i</div>
                   <div>
                     <div className="text-sm font-semibold text-black dark:text-zinc-100">{item.title}</div>
                     <div className="mt-1 text-xs leading-5 text-black dark:text-zinc-400">{item.body}</div>

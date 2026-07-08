@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { FiInfo } from 'react-icons/fi';
+import SectionDisclaimer from './SectionDisclaimer';
 
 const FILTERS = [
   { key: 'all', label: 'All' },
@@ -75,17 +75,17 @@ export default function StandardsCerts({ cards = [], section, productName }) {
       <div className="relative mx-auto max-w-7xl">
         <span
           aria-hidden
-          className="pointer-events-none absolute -right-1 -top-8 select-none font-maxot text-[120px] font-bold leading-none text-zinc-100 dark:text-zinc-900 sm:text-[150px]"
+          className="pointer-events-none absolute -right-1 -top-8 select-none text-[120px] font-bold leading-none text-zinc-100 dark:text-zinc-900 sm:text-[150px]"
         >
           16
         </span>
 
         <div className="relative max-w-3xl">
-          <p className="font-maxot flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-black dark:text-zinc-100">
+          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink dark:text-zinc-100">
             <span className="inline-block size-2 rounded-full bg-red" />
             Standards &amp; certificates
           </p>
-          <h2 className="font-maxot mt-4 text-3xl font-bold leading-tight text-black dark:text-zinc-100 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100 sm:text-4xl">
             {section?.title ?? 'Quality, safety & certification'}
           </h2>
           <p className="mt-4 text-base leading-7 text-black dark:text-zinc-400">
@@ -101,7 +101,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
               <button
                 className={`h-10 rounded-full border px-5 text-sm font-semibold transition ${
                   isActive
-                    ? 'border-red bg-red text-parchment shadow-sm shadow-[#BE0010]/20'
+                    ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900 shadow-sm'
                     : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-red/30 hover:text-red'
                 }`}
                 key={filter.key}
@@ -121,11 +121,11 @@ export default function StandardsCerts({ cards = [], section, productName }) {
               key={card.title}
             >
               <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:items-start">
-                <div className="inline-flex h-9 min-w-12 shrink-0 items-center justify-center rounded-full border border-red/20 bg-[#fff3f4] px-3 text-xs font-bold text-red">
+                <div className="inline-flex h-9 min-w-12 shrink-0 items-center justify-center rounded-full border border-line-light bg-parchment-alt px-3 text-xs font-bold text-ink dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
                   {card.badge}
                 </div>
                 <div className="min-w-0">
-                  <h3 className="font-maxot text-base font-bold leading-snug text-black dark:text-zinc-100">
+                  <h3 className="text-base font-semibold leading-snug tracking-tight text-ink dark:text-zinc-100">
                     {card.title}
                   </h3>
                   {card.description && (
@@ -152,12 +152,9 @@ export default function StandardsCerts({ cards = [], section, productName }) {
           ))}
         </div>
 
-        <div className="relative mt-5 flex max-w-4xl gap-3 rounded-lg border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-xs leading-5 text-black dark:text-zinc-400">
-          <FiInfo className="mt-0.5 size-4 shrink-0 text-black dark:text-zinc-400" />
-          <p>
-            Disclaimer: certifications and documentation are provided on request for product evaluation and compliance review. Final regulatory compliance remains your organisation's responsibility.
-          </p>
-        </div>
+        <SectionDisclaimer>
+          Certifications and documentation are provided on request for product evaluation and compliance review. Final regulatory compliance remains your organisation's responsibility.
+        </SectionDisclaimer>
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ function ExpandableItem({ badge, body, heading, itemKey, onToggle, open }) {
           <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-red/10 text-xs font-bold text-red">
             {badge}
           </span>
-          <span className="font-maxot text-base font-bold leading-6 text-zinc-950 dark:text-zinc-100">
+          <span className="text-base font-semibold leading-6 tracking-tight text-ink dark:text-zinc-100">
             {heading}
           </span>
         </span>

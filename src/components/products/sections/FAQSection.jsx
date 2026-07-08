@@ -64,7 +64,7 @@ export default function FAQSection({ faqs = [] }) {
           <div className="flex flex-wrap gap-2">
             {CATEGORIES.map((item) => (
               <button
-                className={`rounded-full border px-3 py-2 text-xs font-semibold transition ${category === item.key ? 'border-red bg-red text-parchment' : 'border-line-light bg-parchment text-black hover:border-zinc-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:text-zinc-100'}`}
+                className={`rounded-full border px-3 py-2 text-xs font-semibold transition ${category === item.key ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900' : 'border-line-light bg-parchment text-black hover:border-zinc-400 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:text-zinc-100'}`}
                 key={item.key}
                 onClick={() => { setCategory(item.key); setOpen(null); }}
                 type="button"
@@ -80,10 +80,10 @@ export default function FAQSection({ faqs = [] }) {
             const faqId = `${faq.category}-${faq.question}`;
             const isOpen = open === faqId;
             return (
-              <div className={`rounded-xl border transition ${isOpen ? 'border-red/30 bg-red/5' : 'border-line-light bg-parchment hover:border-red/20 dark:border-zinc-800 dark:bg-zinc-900'}`} key={faqId}>
+              <div className={`rounded-xl border transition ${isOpen ? 'border-line-light bg-parchment-alt dark:border-zinc-700 dark:bg-zinc-900' : 'border-line-light bg-parchment hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-700'}`} key={faqId}>
                 <button className="flex w-full items-start justify-between px-5 py-4 text-left" onClick={() => setOpen(isOpen ? null : faqId)} type="button">
                   <span className="pr-4 text-sm font-semibold text-black dark:text-zinc-100">{faq.question}</span>
-                  <span className={`flex size-6 shrink-0 items-center justify-center rounded-full text-sm font-bold transition ${isOpen ? 'bg-red text-parchment' : 'bg-parchment-alt text-black dark:bg-zinc-800 dark:text-zinc-100'}`}>
+                  <span className={`flex size-6 shrink-0 items-center justify-center rounded-full text-sm font-bold transition ${isOpen ? 'bg-navy text-parchment dark:bg-zinc-100 dark:text-zinc-900' : 'bg-parchment-alt text-black dark:bg-zinc-800 dark:text-zinc-100'}`}>
                     {isOpen ? '-' : '+'}
                   </span>
                 </button>
@@ -111,7 +111,7 @@ export default function FAQSection({ faqs = [] }) {
             <div className="rounded-xl border border-dashed border-zinc-300 bg-parchment-alt p-6 text-sm text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100">
               <p>No questions match your search.</p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <button className="text-sm font-semibold text-red underline" onClick={() => { setSearch(''); setCategory('all'); }} type="button">Clear filters</button>
+                <button className="text-sm font-semibold text-ink underline dark:text-zinc-100" onClick={() => { setSearch(''); setCategory('all'); }} type="button">Clear filters</button>
                 <a className="text-sm font-semibold text-red underline" href="#booking">Ask us directly</a>
               </div>
             </div>

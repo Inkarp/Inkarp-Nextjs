@@ -2,6 +2,7 @@
 import { useMemo, useState } from 'react';
 import { FiCheck, FiPlus, FiRefreshCw, FiShield, FiTarget, FiZap } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 const ICON_MAP = {
   target: FiTarget,
@@ -28,7 +29,7 @@ function ScoreRing({ percent }) {
       <svg
         aria-hidden="true"
         className="size-full -rotate-90"
-        style={percent > 0 ? { filter: `drop-shadow(0 0 ${glowPx}px rgba(190,0,16,0.35))` } : undefined}
+        style={percent > 0 ? { filter: `drop-shadow(0 0 ${glowPx}px rgba(22,22,22,0.25))` } : undefined}
         viewBox="0 0 120 120"
       >
         <circle
@@ -44,14 +45,14 @@ function ScoreRing({ percent }) {
           cy="60"
           fill="none"
           r={radius}
-          stroke="#BE0010"
+          stroke="#161616"
           strokeDasharray={circumference}
           strokeDashoffset={dashOffset}
           strokeLinecap="round"
           strokeWidth="10"
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center font-maxot text-3xl font-bold text-black dark:text-zinc-100">
+      <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold tracking-tight text-ink dark:text-zinc-100">
         {percent}%
       </div>
     </div>
@@ -94,7 +95,7 @@ export default function WorkflowScore({ data }) {
                 <button
                   className={`flex min-h-14 w-full items-center gap-4 rounded-2xl border px-5 py-3 text-left transition ${
                     isSelected
-                      ? 'border-red bg-red/5 text-black dark:text-zinc-100'
+                      ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                       : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400'
                   }`}
                   key={step.label}
@@ -103,7 +104,7 @@ export default function WorkflowScore({ data }) {
                 >
                   <span className={`flex size-7 shrink-0 items-center justify-center rounded-lg border text-sm ${
                     isSelected
-                      ? 'border-red bg-red text-parchment'
+                      ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
                       : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100'
                   }`}
                   >
@@ -124,14 +125,14 @@ export default function WorkflowScore({ data }) {
             </div>
 
             <div className="mt-7">
-              <h3 className="font-maxot text-base font-bold text-black dark:text-zinc-100">How the Hei-VAP Core simplifies your selected steps:</h3>
+              <h3 className="text-base font-semibold tracking-tight text-ink dark:text-zinc-100">How the Hei-VAP Core simplifies your selected steps:</h3>
               {selectedSteps.length ? (
                 <div className="mt-4 max-h-56 space-y-4 overflow-y-auto pr-1">
                   {selectedSteps.map((step) => (
                     <div className="text-sm leading-6" key={step.label}>
                       <p className="font-bold text-black dark:text-zinc-100">{step.label}</p>
                       <p className="text-zinc-400 dark:text-zinc-500">Manually: {step.manual}</p>
-                      <p className="font-semibold text-red">With Hei-VAP Core: {makeCoreCopy(step.core)}</p>
+                      <p className="font-semibold text-ink dark:text-zinc-100">With Hei-VAP Core: {makeCoreCopy(step.core)}</p>
                     </div>
                   ))}
                 </div>
@@ -150,7 +151,7 @@ export default function WorkflowScore({ data }) {
                 const Icon = ICON_MAP[icon];
                 return (
                   <span className="inline-flex items-center gap-2 rounded-full border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 px-4 py-2 text-xs font-bold text-black dark:text-zinc-100" key={label}>
-                    {Icon && <Icon className="text-red" />}
+                    {Icon && <Icon className="text-ink-soft dark:text-zinc-400" />}
                     {label}
                   </span>
                 );
@@ -174,6 +175,10 @@ export default function WorkflowScore({ data }) {
             </a>
           </div>
         </div>
+
+        <SectionDisclaimer>
+          {data?.disclaimer ?? "This tool gives an indicative simplification score based on the steps you select. Actual time, safety and repeatability gains depend on your lab's workflow and operating practice."}
+        </SectionDisclaimer>
       </div>
     </section>
   );

@@ -1,7 +1,8 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiArrowRight, FiInfo } from 'react-icons/fi';
+import { FiArrowRight } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import SectionDisclaimer from './SectionDisclaimer';
 
 function getResult(results, score) {
   return results.find((item) => score >= item.min && score <= item.max) ?? results[results.length - 1];
@@ -27,14 +28,14 @@ function ScoreRing({ percent }) {
           cy="60"
           fill="none"
           r={radius}
-          stroke="#D30013"
+          stroke="#161616"
           strokeDasharray={circumference}
           strokeDashoffset={dashOffset}
           strokeLinecap="round"
           strokeWidth="10"
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center font-maxot text-3xl font-bold text-black dark:text-zinc-100">
+      <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold tracking-tight text-ink dark:text-zinc-100">
         {percent}%
       </div>
     </div>
@@ -89,21 +90,21 @@ export default function FitQuiz({ data }) {
 
         <div className="mt-8 rounded-2xl border border-line-light bg-parchment px-5 py-8 shadow-sm sm:px-9 dark:border-zinc-800 dark:bg-zinc-900">
           <div className="h-1 overflow-hidden rounded-full bg-parchment-alt dark:bg-zinc-800">
-            <div className="h-full rounded-full bg-[#D30013] transition-all duration-300" style={{ width: `${progressPercent}%` }} />
+            <div className="h-full rounded-full bg-navy dark:bg-zinc-500 transition-all duration-300" style={{ width: `${progressPercent}%` }} />
           </div>
 
           {!submitted ? (
             <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-start">
               <div>
-                <p className="font-maxot text-sm font-bold uppercase tracking-widest text-black dark:text-zinc-100">Question {currentIndex + 1} of {total}</p>
-                <h3 className="font-maxot mt-4 text-2xl font-bold leading-tight text-black dark:text-zinc-100">{cleanText(currentQuestion.text)}</h3>
+                <p className="text-sm font-semibold uppercase tracking-widest text-ink dark:text-zinc-100">Question {currentIndex + 1} of {total}</p>
+                <h3 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100">{cleanText(currentQuestion.text)}</h3>
                 <p className="mt-4 text-sm text-black dark:text-zinc-400">Pick the answer closest to your lab today.</p>
               </div>
 
               <div className="space-y-3">
                 {(currentQuestion.options ?? []).map((option) => (
                   <button
-                    className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl border border-line-light bg-parchment px-5 py-3 text-left text-base font-medium text-black transition hover:border-[#D30013] hover:bg-[#D30013]/[0.03] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+                    className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl border border-line-light bg-parchment px-5 py-3 text-left text-base font-medium text-black transition hover:border-red hover:bg-red/[0.03] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
                     key={option.text}
                     onClick={() => answerQuestion(option)}
                     type="button"
@@ -117,12 +118,12 @@ export default function FitQuiz({ data }) {
           ) : (
             <div className="mx-auto mt-8 max-w-2xl text-center">
               <ScoreRing percent={scorePercent} />
-              <h3 className="font-maxot mt-7 text-2xl font-bold text-black dark:text-zinc-100">{cleanText(result?.title ?? 'Recommendation ready')}</h3>
+              <h3 className="mt-7 text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{cleanText(result?.title ?? 'Recommendation ready')}</h3>
               <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-black dark:text-zinc-400">
                 {cleanText(result?.body ?? 'Your answers have been scored. Talk to Inkarp to confirm the best configuration for your workflow.')}
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a className="inline-flex h-12 items-center justify-center rounded-full bg-[#D30013] px-8 text-sm font-bold text-parchment transition hover:bg-red" href="#booking">
+                <a className="inline-flex h-12 items-center justify-center rounded-full bg-red px-8 text-sm font-bold text-parchment transition hover:bg-[#9f000d]" href="#booking">
                   Get my recommendation
                 </a>
                 <button
@@ -137,10 +138,9 @@ export default function FitQuiz({ data }) {
           )}
         </div>
 
-        <div className="mt-5 max-w-6xl rounded-2xl border border-line-light bg-parchment px-5 py-4 text-xs leading-6 text-black dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
-          <FiInfo className="mr-2 inline-block text-sm" />
-          Disclaimer: this quiz produces an indicative fit score for guidance and discussion only - it is not a formal recommendation. Inkarp will confirm the best model for your needs.
-        </div>
+        <SectionDisclaimer>
+          {data?.disclaimer ?? 'This quiz produces an indicative fit score for guidance and discussion only - it is not a formal recommendation. Inkarp will confirm the best model for your needs.'}
+        </SectionDisclaimer>
       </div>
     </section>
   );

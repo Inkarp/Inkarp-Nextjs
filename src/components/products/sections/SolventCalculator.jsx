@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { FiMail } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import { buildTableEmailBody, openMailto } from './emailUtils';
 
 function formatLitres(value) {
   if (value >= 100) return `${Math.round(value).toLocaleString('en-IN')} L`;
@@ -36,7 +37,7 @@ function RecoverySlider({ label, value, display, min, max, step = 1, onChange })
   );
 }
 
-export default function SolventCalculator({ calculatorData, simulatorData }) {
+export default function SolventCalculator({ calculatorData, simulatorData, productName = 'this product' }) {
   const sl = calculatorData?.sliders ?? {};
 
   const solvents = useMemo(() => {
@@ -75,27 +76,27 @@ export default function SolventCalculator({ calculatorData, simulatorData }) {
   }, [annualRecoveredLitres, annualRecoveredValue, solvent.name]);
 
   const emailResults = () => {
-    const body = [
-      'Hei-VAP Core solvent recovery estimate',
-      '',
-      `Solvent: ${solvent.name}`,
-      `Published evaporation rate: ${solvent.rate} L/h`,
-      `Volume per batch: ${volumeMl} mL`,
-      `Batches per week: ${batchesPerWeek}`,
-      `Solvent cost: INR ${solventCost} / litre`,
-      `Share recovered and reused: ${recoveryShare}%`,
-      '',
-      `Distillation time per batch: ${distillationMinutes} min`,
-      `Solvent processed per week: ${formatLitres(processedPerWeek)}`,
-      `Solvent recovered per week: ${formatLitres(recoveredPerWeek)}`,
-      `Annual recovered solvent value: ${formatCurrency(annualRecoveredValue)}`,
-      `Litres recovered per year: ${Math.round(annualRecoveredLitres).toLocaleString('en-IN')} L`,
-      '',
-      'Please help me turn this estimate into a tailored Hei-VAP Core quote.',
-    ].join('\n');
+    const body = buildTableEmailBody({
+      productName: `${productName} solvent recovery estimate`,
+      sectionName: 'Solvent Recovery Calculator',
+      rows: [
+        { label: 'Solvent', value: solvent.name },
+        { label: 'Published evaporation rate', value: `${solvent.rate} L/h` },
+        { label: 'Volume per batch', value: `${volumeMl} mL` },
+        { label: 'Batches per week', value: batchesPerWeek },
+        { label: 'Solvent cost', value: `INR ${solventCost} / litre` },
+        { label: 'Share recovered and reused', value: `${recoveryShare}%` },
+        { label: 'Distillation time per batch', value: `${distillationMinutes} min` },
+        { label: 'Solvent processed per week', value: formatLitres(processedPerWeek) },
+        { label: 'Solvent recovered per week', value: formatLitres(recoveredPerWeek) },
+        { label: 'Annual recovered solvent value', value: formatCurrency(annualRecoveredValue) },
+        { label: 'Litres recovered per year', value: `${Math.round(annualRecoveredLitres).toLocaleString('en-IN')} L` },
+      ],
+      note: `Please help me turn this estimate into a tailored ${productName} quote.`,
+    });
 
     window.dispatchEvent(new CustomEvent('product-calculator-results'));
-    window.location.href = `mailto:info@inkarp.com?subject=${encodeURIComponent(calculatorData?.emailSubject ?? '')}&body=${encodeURIComponent(body)}`;
+    openMailto({ subject: calculatorData?.emailSubject ?? `${productName} - solvent recovery estimate`, body });
   };
 
   const rl = calculatorData?.resultLabels ?? {};

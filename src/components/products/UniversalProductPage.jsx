@@ -74,7 +74,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Recovery calculator */}
       {product.calculator && (
-        <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} />
+        <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} productName={product.name} />
       )}
 
       {/* Suitability checker */}
@@ -98,7 +98,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* ROI calculator */}
       {roiSection && (
-        <ROICalculator data={roiSection} sectionNumber="07" />
+        <ROICalculator data={roiSection} sectionNumber="07" productName={product.name} />
       )}
 
       {/* Applications explorer */}

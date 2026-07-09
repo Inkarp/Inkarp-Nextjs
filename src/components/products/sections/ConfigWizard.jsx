@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { FiCheck, FiMail, FiRefreshCw, FiSettings } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import { buildTableEmailBody, openMailto } from './emailUtils';
 
 const STEP_LABEL_HINTS = [
   { match: /workflow|use|application/i, label: 'Workflow' },
@@ -95,16 +96,18 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
   };
 
   const emailConfiguration = () => {
-    const body = [
-      `${productName} configuration request`,
-      '',
-      ...selectedRows.map((row) => `${row.label}: ${row.value}`),
-      '',
-      result.ctaNote ?? 'Please confirm availability and current pricing for this setup.',
-    ].join('\n');
+    const body = buildTableEmailBody({
+      productName: `${productName} configuration request`,
+      sectionName: 'Configuration Wizard',
+      rows: selectedRows.map((row) => ({
+        label: row.label,
+        value: row.desc ? `${row.value} (${row.desc})` : row.value,
+      })),
+      note: result.ctaNote ?? 'Please confirm availability and current pricing for this setup.',
+    });
 
     window.dispatchEvent(new CustomEvent('product-config-ready'));
-    window.location.href = `mailto:info@inkarp.com?subject=${encodeURIComponent(`${productName} - my configuration`)}&body=${encodeURIComponent(body)}`;
+    openMailto({ subject: `${productName} - my configuration`, body });
   };
 
   return (

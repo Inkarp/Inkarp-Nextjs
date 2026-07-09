@@ -96,20 +96,10 @@ export default function Header() {
   };
 
   useEffect(() => {
-    // Hysteresis band for the "at top" check: once scrolled past TOP_EXIT we
-    // leave the top zone, but don't re-enter it until back below TOP_ENTER.
-    // A single hard threshold here would flap true/false rapidly whenever
-    // scrollY hovers right around it — which is exactly where every scroll
-    // gesture starts — retriggering the top bar's collapse/expand animation
-    // and producing the render-thrashing blur seen at the very start of a scroll.
+   
     const TOP_ENTER = 10;
     const TOP_EXIT = 40;
-    // Minimum continuous travel (px) in one direction before we act on it.
-    // Raw scroll events aren't monotonic — trackpads/wheels emit jittery,
-    // slightly non-linear deltas even during a single steady gesture — so
-    // reacting to every event caused the header to flicker while scrolling.
-    // Direction only "commits" once it has traveled this far since the last
-    // reversal, which absorbs that jitter on both the hide and reveal side.
+    
     const DIRECTION_TOLERANCE = 30;
 
     let lastScrollY = window.scrollY;
@@ -161,7 +151,7 @@ export default function Header() {
 
   return (
     <header
-      className={`font-maxot sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
+      className={` sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
         }`}
     >
       <div
@@ -304,18 +294,7 @@ export default function Header() {
               >
                 <FiSearch />
               </button>
-              {/* <a
-              className="ml-5 inline-flex items-center gap-3 bg-[#BE0010] px-5 py-2 text-white transition hover:bg-[#9f000d]"
-              href={`tel:${contact.phone.replaceAll(" ", "")}`}
-            >
-              <span className="inline-flex size-11 items-center justify-center rounded-full bg-white text-xl text-[#BE0010]">
-                <FiPhoneCall />
-              </span>
-              <span className="grid leading-tight">
-                <span className="text-xs font-semibold">Call Us Anytime</span>
-                <span className="text-lg font-bold">{contact.phone}</span>
-              </span>
-            </a> */}
+             
               <Link
                 aria-label="Download product profile"
                 className="inline-flex h-12 items-center justify-center gap-2 bg-red px-7 text-sm font-bold text-parchment transition hover:bg-[#fff3f4] hover:text-black"

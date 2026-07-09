@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaBuilding } from "react-icons/fa";
 import { FiTool } from "react-icons/fi";
+import RecTag from "@/components/home/RecTag";
 
 function useCountUp(end, start = 0, duration = 1500, inView) {
   const [value, setValue] = useState(start);
@@ -55,14 +56,14 @@ const statisticsData = [
     number: 39,
     plus: "k+",
     label: "Installations",
-    info: "Serving pharma, biotech, diagnostics, academia, and more.",
+    info: "Serving pharma, biotech, diagnostics, academia, and industrial laboratories.",
   },
   {
     icon: FiTool,
     number: 184,
     plus: "k+",
-    label: "Service",
-    info: "Global leaders across instruments, automation, and workflows.",
+    label: "Service Touchpoints",
+    info: "Installation, maintenance, troubleshooting, AMC, and spares support across India.",
   },
 ];
 
@@ -72,49 +73,46 @@ function StatCard({ icon: Icon, number, plus, label, info }) {
   const value = useCountUp(number, 0, 1600, inView);
 
   return (
-    <div className="group relative flex items-center rounded-2xl border border-line-light bg-parchment/90 p-1 pr-4 shadow backdrop-blur transition-all duration-300 hover:scale-[1.015] dark:border-zinc-800 dark:bg-zinc-900/90">
-      <div
-        aria-hidden="true"
-        className="ml-2 mr-4 inline-flex size-14 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(90deg,#BE0010,#E63946)] text-2xl text-parchment shadow-md transition group-hover:opacity-90"
-      >
-        <Icon className="size-6" />
+    <div className="border border-line-light bg-white p-6">
+      <span className="flex size-11 items-center justify-center rounded-lg bg-red/8 text-red">
+        <Icon aria-hidden="true" className="h-5 w-5" />
+      </span>
+      <div className="mt-5 flex items-end gap-1">
+        <span className="text-4xl font-semibold leading-none text-ink" ref={ref}>
+          {value}
+        </span>
+        <span className="text-xl font-semibold text-red">{plus}</span>
       </div>
-      <div className="flex-1">
-        <div className="flex items-center gap-1">
-          <span className="font-bold text-2xl text-black dark:text-zinc-100" ref={ref}>
-            {value}
-          </span>
-          <span className="text-[#E63946]">{plus}</span>
-        </div>
-        <h3 className="font-maxot text-sm uppercase tracking-wider text-[#E63946] md:text-base">
-          {label}
-        </h3>
-        <p className="mt-1 text-xs font-light leading-tight text-black/70 md:text-sm dark:text-zinc-400">
-          {info}
-        </p>
-      </div>
+      <h3 className="mt-3 text-xs font-bold uppercase tracking-wide text-ink">
+        {label}
+      </h3>
+      <p className="mt-2 text-sm leading-6 text-ink-soft">{info}</p>
     </div>
   );
 }
 
 export default function ServiceAbout() {
   return (
-    <section className="relative mx-auto w-[95%] py-10 md:px-10 lg:px-20">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)] dark:bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.12),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.12),transparent)]" />
+    <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8" data-reveal>
+      <div className="mx-auto max-w-[1180px]">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <RecTag>Our Impact</RecTag>
+            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+              Proven service behind consistent results.
+            </h2>
+          </div>
+          <p className="max-w-[430px] text-sm leading-6 text-ink-soft">
+            Our service network is built for laboratories that need dependable uptime,
+            clear documentation, and engineers who understand scientific workflows.
+          </p>
+        </div>
 
-      <div className="flex flex-col items-center justify-center gap-3 text-center">
-        <span className="font-maxot rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs uppercase sm:text-sm dark:bg-zinc-900 dark:text-zinc-100">
-          Our Impact
-        </span>
-        <h2 className="font-maxot text-xl leading-tight text-[#E63946] sm:text-2xl">
-          Ensuring Consistent Results Through Proven Service
-        </h2>
-      </div>
-
-      <div className="mx-auto mt-6 grid max-w-4xl grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 sm:gap-5">
-        {statisticsData.map((stat) => (
-          <StatCard key={stat.label} {...stat} />
-        ))}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {statisticsData.map((stat) => (
+            <StatCard key={stat.label} {...stat} />
+          ))}
+        </div>
       </div>
     </section>
   );

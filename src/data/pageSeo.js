@@ -48,11 +48,11 @@ export const pageSeo = {
   },
   "/events": {
     label: "Events",
-    title: "Events & Exhibitions — Meet Inkarp Instruments",
+    title: "News & Events | Inkarp Instruments Pvt Ltd",
     description:
-      "Find Inkarp Instruments at upcoming laboratory and scientific exhibitions, conferences and events across India.",
+      "Discover the latest from Inkarp Instruments. Visit our News & Events page for insights into industry trends, Scientific Expo, Scientific Equipment Exhibitions, New Product launches, Scientific Research Conferences and advancements in Scientific Technology.",
     keywords:
-      "lab equipment events india, scientific exhibitions, inkarp events, instrument trade shows",
+      "Scientific Expo, Scientific events, Scientific news, News and events, New Product Launch, Scientific Achievements, Scientific Product Launch, Scientific Industry Trends, Science Lab Events and Exhibitions, Latest Scientific Equipment News, Scientific Research Conferences, Scientific Equipment Exhibitions, Scientific Industry News and Updates, Upcoming Lab Equipment Events.",
   },
   "/webinars": {
     label: "Webinars",

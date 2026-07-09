@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
+import RecTag from "@/components/home/RecTag";
 
 const productData = [
   {
@@ -149,7 +150,7 @@ function TipsSlider({ selectedProduct }) {
         id: "image",
         title: name,
         content: (
-          <div className="relative flex h-[250px] w-full items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-white to-white/60 dark:from-zinc-800 dark:to-zinc-900">
+          <div className="relative flex h-[250px] w-full items-center justify-center overflow-hidden border border-line-light bg-parchment-alt">
             <Image
               alt={name}
               className="object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.15)]"
@@ -168,7 +169,7 @@ function TipsSlider({ selectedProduct }) {
           </span>
         ),
         content: (
-          <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+          <ul className="list-disc space-y-2 pl-5 text-sm text-ink-soft sm:text-base">
             {dos.map((d) => (
               <li key={d}>{d}</li>
             ))}
@@ -179,11 +180,11 @@ function TipsSlider({ selectedProduct }) {
         id: "donts",
         title: (
           <span className="inline-flex items-center gap-2">
-            <FiXCircle className="text-[#BE0010]" /> Don&apos;ts
+            <FiXCircle className="text-red" /> Don&apos;ts
           </span>
         ),
         content: (
-          <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-700 sm:text-base dark:text-zinc-300">
+          <ul className="list-disc space-y-2 pl-5 text-sm text-ink-soft sm:text-base">
             {donts.map((d) => (
               <li key={d}>{d}</li>
             ))}
@@ -210,9 +211,9 @@ function TipsSlider({ selectedProduct }) {
   }, [selectedProduct]);
 
   return (
-    <div className="relative rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm md:p-6 dark:border-zinc-800 dark:bg-zinc-900">
+    <div className="relative border border-line-light bg-white p-4 md:p-6">
       <div className="mb-3">
-        <h3 className="font-maxot text-base leading-snug text-[#E63946] sm:text-lg">
+        <h3 className="text-base font-semibold leading-snug text-ink sm:text-lg">
           {slides[idx].title}
         </h3>
       </div>
@@ -226,14 +227,14 @@ function TipsSlider({ selectedProduct }) {
 
       <div className="mt-4 flex items-center justify-center gap-2">
         <button
-          className="rounded-md border border-zinc-300 px-3 py-1.5 text-xs transition hover:border-[#E63946] hover:text-[#E63946] sm:text-sm dark:border-zinc-700 dark:text-zinc-200"
+          className="border border-line-light bg-white px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-red hover:text-red sm:text-sm"
           onClick={prev}
           type="button"
         >
           Prev
         </button>
         <button
-          className="rounded-md bg-[#E63946] px-3 py-1.5 text-xs text-white transition hover:bg-[#BE0010] sm:text-sm"
+          className="border border-red bg-red px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-transparent hover:text-red sm:text-sm"
           onClick={next}
           type="button"
         >
@@ -249,37 +250,35 @@ export default function ProductHandlingGuide() {
   const selectedProduct = productData[selectedIndex];
 
   return (
-    <section className="relative mx-auto w-[95%] overflow-hidden py-5">
-      <div className="flex flex-col items-center justify-center gap-3 text-center">
-        <span className="font-maxot rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs uppercase sm:text-sm dark:bg-zinc-900 dark:text-zinc-100">
-          Best Practices
-        </span>
-        <h2 className="font-maxot text-xl leading-tight text-[#E63946] sm:text-2xl">
-          Product Handling Guidelines
-        </h2>
-        <p className="max-w-2xl text-sm text-zinc-600 sm:text-base dark:text-zinc-400">
-          Clear, reliable, and safe handling practices designed to protect your
-          equipment, your team, and your research outcomes.
-        </p>
-      </div>
+    <section className="bg-white px-4 py-16 sm:px-6 lg:px-8" data-reveal>
+      <div className="mx-auto max-w-[1180px]">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <RecTag>Best Practices</RecTag>
+            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+              Product handling guidelines.
+            </h2>
+          </div>
+          <p className="max-w-[430px] text-sm leading-6 text-ink-soft">
+            Clear, reliable, and safe handling practices designed to protect your
+            equipment, your team, and your research outcomes.
+          </p>
+        </div>
 
-      <div className="relative mx-auto mt-8 w-full overflow-hidden rounded-3xl">
-        <div className="relative grid grid-cols-1 gap-6 border border-zinc-200 bg-white p-6 lg:grid-cols-12 dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="relative w-full overflow-hidden">
+          <div className="relative grid grid-cols-1 gap-6 border border-line-light bg-parchment-alt p-6 lg:grid-cols-12">
           {/* Product picker */}
           <div className="flex lg:col-span-3">
             <div className="w-full px-2 lg:hidden">
               <label
-                className="mb-2 block text-sm text-zinc-700 dark:text-zinc-300"
+                className="mb-2 block text-sm text-ink"
                 htmlFor="product-handling-select"
               >
                 Select a product
               </label>
-              <div
-                className="rounded-xl p-[1.5px]"
-                style={{ background: "linear-gradient(90deg,#BE0010,#E63946)" }}
-              >
+              <div className="border border-line-light bg-white p-1">
                 <select
-                  className="font-maxot w-full rounded-[10px] border border-white/60 bg-white px-4 py-3 text-sm text-zinc-900 outline-none focus:ring-2 focus:ring-[#E63946] dark:bg-zinc-950 dark:text-zinc-100"
+                  className="w-full border border-line-light bg-white px-4 py-3 text-sm text-ink outline-none focus:border-red focus:ring-2 focus:ring-red/20"
                   id="product-handling-select"
                   onChange={(event) => setSelectedIndex(Number(event.target.value))}
                   value={selectedIndex}
@@ -294,7 +293,7 @@ export default function ProductHandlingGuide() {
             </div>
 
             <div className="hidden w-full lg:block">
-              <div className="h-full rounded-3xl border border-zinc-200 p-2 shadow-sm dark:border-zinc-800">
+              <div className="h-full border border-line-light bg-white p-2">
                 <ul className="sticky top-4 max-h-[50vh] space-y-2 overflow-y-auto pr-1">
                   {productData.map((item, idx) => {
                     const isActive = idx === selectedIndex;
@@ -302,10 +301,10 @@ export default function ProductHandlingGuide() {
                     return (
                       <li key={item.name}>
                         <button
-                          className={`group w-full rounded-xl border p-3 text-left transition ${
+                          className={`group w-full border p-3 text-left transition ${
                             isActive
-                              ? "border-[#E63946]/30 bg-[#E63946]/5 text-[#E63946] shadow-sm"
-                              : "border-zinc-200 bg-white text-zinc-900 hover:border-[#E63946]/30 hover:bg-[#E63946]/5 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-200"
+                              ? "border-red bg-red text-white"
+                              : "border-line-light bg-white text-ink hover:border-red hover:text-red"
                           }`}
                           onClick={() => setSelectedIndex(idx)}
                           type="button"
@@ -314,8 +313,8 @@ export default function ProductHandlingGuide() {
                             <span
                               className={`size-2.5 shrink-0 rounded-full transition ${
                                 isActive
-                                  ? "bg-[#E63946]"
-                                  : "bg-zinc-300 group-hover:bg-[#E63946]/60 dark:bg-zinc-700"
+                                  ? "bg-white"
+                                  : "bg-ink-soft/30 group-hover:bg-red/60"
                               }`}
                             />
                             <p className="min-w-0 truncate text-sm">{item.name}</p>
@@ -333,11 +332,11 @@ export default function ProductHandlingGuide() {
           <div className="lg:col-span-9">
             <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <div className="flex h-full w-full flex-col items-center justify-center rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+                <div className="flex h-full w-full flex-col items-center justify-center border border-line-light bg-white p-4">
                   <div className="relative h-40 w-full">
                     <Image
                       alt="Dr. Dexter"
-                      className="rounded-lg object-contain"
+                      className="object-contain"
                       fill
                       sizes="240px"
                       src="/assets/home/Dexter-2.0.gif"
@@ -345,10 +344,10 @@ export default function ProductHandlingGuide() {
                     />
                   </div>
                   <div className="mt-3 text-center">
-                    <p className="font-maxot text-sm text-[#E63946] sm:text-base">
+                    <p className="text-sm font-semibold text-red sm:text-base">
                       Dr. Dexter&apos;s
                     </p>
-                    <p className="text-sm italic text-zinc-700 sm:text-base dark:text-zinc-400">
+                    <p className="text-sm italic text-ink-soft sm:text-base">
                       Product Handling Tips
                     </p>
                   </div>
@@ -361,6 +360,7 @@ export default function ProductHandlingGuide() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

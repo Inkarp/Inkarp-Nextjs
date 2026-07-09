@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiImage } from "react-icons/fi";
 import RecTag from "./RecTag";
-import { events, formatDateRange, getEventStatus } from "@/data/events";
+import { events, formatEventDate, getEventStatus } from "@/data/events";
 import { formatPostDate, getRecentPosts } from "@/data/blogs";
 
 function SafeImage({ src, alt, sizes, className }) {
@@ -48,11 +48,11 @@ function pickFeaturedEvents() {
 
   const nextUpcoming = withStatus
     .filter((event) => event.status !== "past")
-    .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))[0];
+    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
 
   const lastCompleted = withStatus
     .filter((event) => event.status === "past")
-    .sort((a, b) => new Date(b.endDate || b.startDate) - new Date(a.endDate || a.startDate))[0];
+    .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
 
   return [nextUpcoming, lastCompleted].filter(Boolean);
 }
@@ -66,8 +66,7 @@ function EventCard({ event, highlight }) {
       }`}
     >
       <div className="relative aspect-[4/3] overflow-hidden border-b border-line-light bg-parchment-alt">
-        <SafeImage src={event.image} alt={event.title} sizes="280px" className="object-cover" />
-       
+        <SafeImage src={event.image} alt={event.title ?? "Inkarp event"} sizes="280px" className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <span
@@ -75,11 +74,13 @@ function EventCard({ event, highlight }) {
         >
           {statusLabels[event.status]}
         </span>
-        <p className="text-xs text-ink-soft">
-          {event.city} · {formatDateRange(event)}
-        </p>
-        <h4 className="text-base font-semibold text-ink">{event.title}</h4>
-        <p className="line-clamp-2 flex-1 text-sm text-ink-soft">{event.description}</p>
+        <p className="text-xs text-ink-soft">{formatEventDate(event)}</p>
+        <h4 className="text-base font-semibold text-ink">{event.title ?? "Inkarp at this event"}</h4>
+        {event.description ? (
+          <p className="line-clamp-2 flex-1 text-sm text-ink-soft">{event.description}</p>
+        ) : (
+          <span className="flex-1" />
+        )}
         <span className="text-sm font-semibold text-red">Know more →</span>
       </div>
     </Link>

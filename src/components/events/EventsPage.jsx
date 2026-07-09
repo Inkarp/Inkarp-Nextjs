@@ -2,291 +2,154 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import {
-  FiArrowRight,
-  FiCalendar,
-  FiCheck,
-  FiMapPin,
-  FiX,
-} from "react-icons/fi";
-import {
-  events,
-  formatDateRange,
-  getDaysToStart,
-  getEventStatus,
-  getNextUpcomingEvent,
-} from "@/data/events";
+import { events, eventsBanner, eventYears, isPastEvent } from "@/data/events";
 
-export default function EventsPage() {
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const spotlightEvent = getNextUpcomingEvent();
-  const timelineEvents = [...events].sort(
-    (a, b) => new Date(a.startDate) - new Date(b.startDate)
-  );
+function LabCard({ title, image, collageImage, date, formLink }) {
+  const isPast = isPastEvent({ date });
+  const alt = title || "Inkarp event";
 
   return (
-    <main className="overflow-hidden">
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(230,57,70,0.08),transparent)]" />
-
-        <div className="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
-          <span
-            className="font-maxot inline-flex rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs font-semibold uppercase text-ink md:text-sm dark:bg-zinc-900 dark:text-zinc-100"
-            data-reveal
-          >
-            On the Road
-          </span>
-          <h1
-            className="font-maxot mt-4 text-3xl font-bold leading-tight text-[#E63946] sm:text-4xl"
-            data-reveal
-          >
-            Meet Us at Industry Events
-          </h1>
-          <p
-            className="mx-auto mt-3 max-w-2xl text-base text-ink-soft sm:text-lg dark:text-zinc-300"
-            data-reveal
-          >
-            Catch our team and instrument demos at exhibitions, conferences,
-            and trade shows across India.
-          </p>
-        </div>
-      </section>
-
-      {spotlightEvent ? (
-        <section className="mx-auto max-w-5xl px-4 pb-4 sm:px-6 lg:px-8">
-          <div
-            className="relative overflow-hidden rounded-3xl bg-[#0F2A33] text-parchment shadow-2xl"
-            data-reveal
-          >
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(800px_400px_at_90%_-10%,rgba(230,57,70,0.35),transparent)]" />
-
-            <div className="relative flex flex-col gap-6 p-6 sm:p-10 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E63946]">
-                  Next Up
-                </p>
-                <h2 className="font-maxot mt-2 text-2xl leading-snug sm:text-3xl">
-                  {spotlightEvent.title}
-                </h2>
-                <p className="mt-3 flex flex-wrap items-center gap-4 text-sm text-white/80">
-                  <span className="flex items-center gap-1.5">
-                    <FiCalendar className="size-4" />
-                    {formatDateRange(spotlightEvent)}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <FiMapPin className="size-4" />
-                    {spotlightEvent.venue}, {spotlightEvent.city}
-                  </span>
-                </p>
-                <button
-                  className="font-maxot mt-6 inline-flex items-center gap-2 rounded-full bg-[#E63946] px-6 py-3 text-sm text-white transition hover:bg-white hover:text-[#0F2A33]"
-                  onClick={() => setSelectedEvent(spotlightEvent)}
-                  type="button"
-                >
-                  View Details
-                  <FiArrowRight className="size-4" />
-                </button>
-              </div>
-
-              <div className="flex shrink-0 flex-col items-center gap-3">
-                <div className="relative flex size-28 items-center justify-center rounded-full border-4 border-[#E63946] bg-parchment/5 sm:size-32">
-                  <div className="text-center">
-                    <p className="font-maxot text-3xl leading-none sm:text-4xl">
-                      {Math.max(getDaysToStart(spotlightEvent), 0)}
-                    </p>
-                    <p className="text-[10px] uppercase tracking-wide text-white/70">
-                      days to go
-                    </p>
-                  </div>
-                </div>
-                <div className="flex size-14 items-center justify-center rounded-xl bg-white p-2">
-                  <Image
-                    alt=""
-                    className="h-full w-full object-contain"
-                    height={48}
-                    src={spotlightEvent.logo}
-                    width={48}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      ) : null}
-
-      <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="relative">
-          <div
-            aria-hidden="true"
-            className="absolute left-4 top-0 h-full w-px bg-zinc-200 sm:left-1/2 dark:bg-zinc-700"
+    <div className="flex h-full flex-col">
+      <div className="group relative overflow-hidden rounded-3xl bg-[#F5F5F5] p-2 shadow-md transition-all duration-300 dark:bg-zinc-900">
+        <div className="relative h-[360px] w-full overflow-hidden rounded-2xl sm:h-[400px] lg:h-[440px]">
+          <Image
+            alt={alt}
+            className={`object-cover transition duration-300 ${
+              isPast && !collageImage ? "group-hover:blur-sm group-hover:brightness-75" : ""
+            }`}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            src={image}
           />
-
-          <div className="space-y-10">
-            {timelineEvents.map((event, index) => {
-              const status = getEventStatus(event);
-              const alignRight = index % 2 === 1;
-
-              return (
-                <div
-                  className="relative flex flex-col gap-4 pl-12 sm:grid sm:grid-cols-2 sm:gap-10 sm:pl-0"
-                  data-reveal
-                  key={event.id}
-                >
-                  <span
-                    aria-hidden="true"
-                    className={`absolute left-4 top-1.5 -translate-x-1/2 rounded-full border-4 border-white shadow sm:left-1/2 dark:border-zinc-900 ${
-                      status === "past"
-                        ? "size-3 bg-zinc-400"
-                        : status === "ongoing"
-                          ? "size-4 bg-green-500"
-                          : "size-4 bg-[#E63946]"
-                    }`}
-                  />
-
-                  <div
-                    className={`${
-                      alignRight ? "sm:order-2 sm:pl-10" : "sm:order-1 sm:pr-10 sm:text-right"
-                    }`}
-                  >
-                    <button
-                      className={`group inline-block w-full rounded-2xl border p-5 text-left transition hover:-translate-y-0.5 hover:shadow-lg ${
-                        status === "past"
-                          ? "border-line-light bg-parchment-alt opacity-70 dark:border-zinc-800 dark:bg-zinc-900/60"
-                          : "border-line-light bg-parchment shadow-sm dark:border-zinc-700 dark:bg-zinc-900"
-                      } ${alignRight ? "text-left" : "sm:text-right"}`}
-                      onClick={() => setSelectedEvent(event)}
-                      type="button"
-                    >
-                      <div
-                        className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400 ${
-                          alignRight ? "" : "sm:justify-end"
-                        }`}
-                      >
-                        <span
-                          className={`rounded-full px-2 py-0.5 ${
-                            status === "past"
-                              ? "bg-zinc-200 dark:bg-zinc-800"
-                              : status === "ongoing"
-                                ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400"
-                                : "bg-[#E63946]/10 text-[#E63946]"
-                          }`}
-                        >
-                          {status === "ongoing" ? "Happening now" : event.type}
-                        </span>
-                        <span>{formatDateRange(event)}</span>
-                      </div>
-
-                      <h3 className="font-maxot mt-2 text-lg text-ink group-hover:text-[#E63946] dark:text-zinc-100">
-                        {event.title}
-                      </h3>
-
-                      <p
-                        className={`mt-1 flex items-center gap-1.5 text-sm text-ink-soft dark:text-zinc-400 ${
-                          alignRight ? "" : "sm:justify-end"
-                        }`}
-                      >
-                        <FiMapPin className="size-3.5 shrink-0" />
-                        {event.venue}, {event.city}
-                      </p>
-                    </button>
-                  </div>
-
-                  <div className={alignRight ? "sm:order-1" : "sm:order-2"} />
-                </div>
-              );
-            })}
-          </div>
+          {isPast && collageImage ? (
+            <Image
+              alt={`${alt} collage`}
+              className="object-cover opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              src={collageImage}
+            />
+          ) : null}
         </div>
-      </section>
+      </div>
 
-      <section className="mx-auto max-w-4xl px-4 py-6 text-center sm:px-6 lg:px-8">
-        <p className="text-sm text-ink-soft dark:text-zinc-400">
-          Want to schedule a dedicated meeting with our team at any of these
-          events?
-        </p>
-        <Link
-          className="font-maxot mt-3 inline-flex items-center gap-2 rounded-full border border-[#E63946] px-6 py-3 text-sm text-[#E63946] transition hover:bg-[#E63946] hover:text-parchment"
-          href="/contact"
-        >
-          Get in Touch
-          <FiArrowRight className="size-4" />
-        </Link>
-      </section>
-
-      {selectedEvent ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-parchment p-6 shadow-lg dark:bg-zinc-900">
+      <div className="mt-4 flex h-10 items-start justify-center">
+        {!isPast && formLink ? (
+          <a href={formLink} rel="noopener noreferrer" target="_blank">
             <button
-              aria-label="Close event details"
-              className="absolute right-4 top-4 text-ink-soft hover:text-black dark:text-zinc-400 dark:hover:text-white"
-              onClick={() => setSelectedEvent(null)}
+              className="cursor-pointer rounded-md bg-[#BE0010] px-6 py-2 text-sm font-medium text-white transition-transform duration-300 hover:scale-105 hover:bg-[#E63946]"
               type="button"
             >
-              <FiX className="size-5" />
+              Join Us
             </button>
+          </a>
+        ) : null}
+      </div>
+    </div>
+  );
+}
 
-            <div className="flex items-center gap-3">
-              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-parchment-alt p-2 dark:bg-zinc-800">
-                <Image
-                  alt=""
-                  className="h-full w-full object-contain"
-                  height={40}
-                  src={selectedEvent.logo}
-                  width={40}
-                />
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-[#E63946]">
-                  {selectedEvent.type}
-                </p>
-                <h3 className="font-maxot text-lg text-ink dark:text-zinc-100">
-                  {selectedEvent.title}
-                </h3>
-              </div>
-            </div>
+export default function EventsPage() {
+  const [filterMonth, setFilterMonth] = useState("");
+  const [filterYear, setFilterYear] = useState("");
+  const [upcomingOnly, setUpcomingOnly] = useState(false);
 
-            <div className="mt-4 space-y-1 rounded-xl bg-parchment-alt p-4 text-sm text-ink-soft dark:bg-zinc-800 dark:text-zinc-300">
-              <p className="flex items-center gap-2">
-                <FiCalendar className="size-4 shrink-0 text-[#E63946]" />
-                {formatDateRange(selectedEvent)}
-              </p>
-              <p className="flex items-center gap-2">
-                <FiMapPin className="size-4 shrink-0 text-[#E63946]" />
-                {selectedEvent.venue}, {selectedEvent.city}
-              </p>
-              {selectedEvent.boothNo ? (
-                <p className="pl-6 text-xs text-ink-soft dark:text-zinc-400">
-                  {selectedEvent.boothNo}
-                </p>
-              ) : null}
-            </div>
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-            <p className="mt-4 text-sm text-ink-soft dark:text-zinc-300">
-              {selectedEvent.description}
-            </p>
+  const resetFilters = () => {
+    setFilterMonth("");
+    setFilterYear("");
+    setUpcomingOnly(false);
+  };
 
-            {selectedEvent.highlights?.length ? (
-              <ul className="mt-4 space-y-2 text-sm text-ink-soft dark:text-zinc-300">
-                {selectedEvent.highlights.map((highlight) => (
-                  <li className="flex items-start gap-2" key={highlight}>
-                    <FiCheck className="mt-0.5 size-4 shrink-0 text-green-600" />
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+  const filteredEvents = events
+    .filter((event) => {
+      const eventDate = new Date(event.date);
+      const matchesMonth = filterMonth ? eventDate.getMonth() + 1 === parseInt(filterMonth, 10) : true;
+      const matchesYear = filterYear ? eventDate.getFullYear() === parseInt(filterYear, 10) : true;
+      const isUpcoming = upcomingOnly ? eventDate >= today : true;
+      return matchesMonth && matchesYear && isUpcoming;
+    })
+    .sort((a, b) => b.id - a.id);
 
-            <Link
-              className="font-maxot mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-red px-5 py-3 text-sm text-parchment transition hover:bg-[#E63946]"
-              href="/contact"
-            >
-              Schedule a Meeting
-              <FiArrowRight className="size-4" />
-            </Link>
-          </div>
+  return (
+    <main>
+      <div className="relative h-[220px] w-full overflow-hidden rounded-2xl sm:h-[300px] lg:h-[380px]">
+        <Image
+          alt="Inkarp events"
+          className="object-cover object-center"
+          fill
+          priority
+          sizes="100vw"
+          src={eventsBanner}
+        />
+      </div>
+
+      <div className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 rounded-xl border border-line-light bg-gradient-to-br from-parchment to-parchment-alt py-8 shadow-xl dark:border-zinc-800 dark:from-zinc-900 dark:to-zinc-950 sm:flex-row">
+        <div className="flex w-full flex-col items-center gap-3 px-3 sm:w-auto sm:flex-row sm:gap-5">
+          <label className="min-w-[80px] text-lg font-semibold text-ink dark:text-zinc-100">Month</label>
+          <select
+            className="w-full rounded-lg border border-line-light bg-parchment px-4 py-2 text-sm shadow-sm outline-none transition focus:border-red focus:ring-2 focus:ring-red/40 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 sm:w-44"
+            onChange={(event) => setFilterMonth(event.target.value)}
+            value={filterMonth}
+          >
+            <option value="">All Months</option>
+            {Array.from({ length: 12 }, (_, i) => (
+              <option key={i} value={i + 1}>
+                {new Date(0, i).toLocaleString("default", { month: "long" })}
+              </option>
+            ))}
+          </select>
         </div>
-      ) : null}
+
+        <div className="flex w-full flex-col items-center gap-3 px-3 sm:w-auto sm:flex-row sm:gap-5">
+          <label className="min-w-[80px] text-lg font-semibold text-ink dark:text-zinc-100">Year</label>
+          <select
+            className="w-full rounded-lg border border-line-light bg-parchment px-4 py-2 text-sm shadow-sm outline-none transition focus:border-red focus:ring-2 focus:ring-red/40 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 sm:w-36"
+            onChange={(event) => setFilterYear(event.target.value)}
+            value={filterYear}
+          >
+            <option value="">All Years</option>
+            {eventYears.map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex w-full select-none items-center gap-3 px-5 sm:w-auto">
+          <input
+            checked={upcomingOnly}
+            className="size-5 rounded-md border border-line-light accent-red shadow-inner outline-none transition focus:ring-2 focus:ring-red/40"
+            id="upcoming"
+            onChange={() => setUpcomingOnly((current) => !current)}
+            type="checkbox"
+          />
+          <label className="cursor-pointer text-lg font-semibold text-ink dark:text-zinc-100" htmlFor="upcoming">
+            Upcoming Only
+          </label>
+        </div>
+
+        <button
+          className="w-full rounded-lg bg-gradient-to-r from-red to-[#9f000d] px-5 py-2 font-semibold text-parchment shadow-lg transition-transform active:scale-95 sm:w-auto"
+          onClick={resetFilters}
+          type="button"
+        >
+          Reset Filters
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 items-stretch gap-4 px-2 py-4 sm:grid-cols-2 sm:gap-6 sm:px-4 md:px-6 lg:grid-cols-3 lg:gap-8 lg:px-10">
+        {filteredEvents.length === 0 ? (
+          <div className="col-span-full py-8 text-center text-ink-soft dark:text-zinc-400">
+            <p className="text-sm sm:text-base">No events found for selected filters.</p>
+          </div>
+        ) : (
+          filteredEvents.map((event) => <LabCard key={event.id} {...event} />)
+        )}
+      </div>
     </main>
   );
 }

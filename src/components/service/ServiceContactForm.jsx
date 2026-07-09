@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
+import RecTag from "@/components/home/RecTag";
 
 const inputClass =
-  "w-full rounded-full border border-line-light bg-parchment px-5 py-3 text-ink outline-none transition focus:ring-2 focus:ring-[#E63946] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100";
+  "w-full border border-line-light bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20";
 
 function getInitialForm() {
   return {
@@ -81,68 +82,66 @@ export default function ServiceContactForm() {
   };
 
   return (
-    <section className="relative mx-auto w-[95%] rounded-xl py-10 md:px-10 lg:px-20">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.08),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.08),transparent)] dark:bg-[radial-gradient(1200px_600px_at_20%_-10%,rgba(230,57,70,0.12),transparent),radial-gradient(1200px_600px_at_80%_110%,rgba(230,57,70,0.12),transparent)]" />
-
-      <div className="mx-auto max-w-6xl">
-        <h3 className="font-maxot mb-2 text-center text-2xl text-[#E63946]">
-          Service &amp; Installation Request
-        </h3>
-        <p className="mb-5 text-center text-sm text-ink-soft dark:text-zinc-400">
-          Fill out the form and our Service Team will get back to you shortly. Fields marked * are required.
-        </p>
-
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          {/* Left: contact info */}
-          <div className="flex flex-col items-center rounded-2xl p-7">
-            <div className="w-full">
-              <div className="flex flex-col items-center rounded-2xl border-l-4 border-red bg-gradient-to-b from-zinc-50 to-zinc-100 p-7 text-center shadow-lg dark:from-zinc-900 dark:to-zinc-950">
-                <div className="mb-5 flex flex-col items-center gap-4">
-                  <span className="inline-flex items-center gap-3 text-base">
-                    <MdEmail className="text-xl text-red" />
-                    <span className="font-maxot font-semibold text-red">Email:</span>
-                    <a
-                      className="text-ink-soft underline transition hover:text-[#E63946] dark:text-zinc-200"
-                      href="mailto:service@inkarp.co.in"
-                    >
-                      service@inkarp.co.in
-                    </a>
-                  </span>
-                  <span className="inline-flex items-center gap-3 text-base">
-                    <MdLocalPhone className="text-xl text-red" />
-                    <span className="font-maxot font-semibold text-red">Contact:</span>
-                    <a
-                      className="text-ink-soft underline transition hover:text-[#E63946] dark:text-zinc-200"
-                      href="tel:+917330731315"
-                    >
-                      7330731315
-                    </a>
-                  </span>
-                </div>
-                <div className="mb-3 h-2 w-24 rounded-full bg-gradient-to-r from-red via-[#E63946] to-transparent opacity-60" />
-                <div className="text-xs italic text-ink-soft dark:text-zinc-400">
-                  For urgent requests, call or email us directly.
-                </div>
-              </div>
-
-              {status.message ? (
-                <div
-                  className={`mt-6 rounded-xl border-2 p-4 text-center transition ${
-                    status.type === "success"
-                      ? "border-green-300 bg-gradient-to-r from-green-50 to-green-100 text-green-800 dark:border-green-700 dark:from-green-950 dark:to-green-900 dark:text-green-300"
-                      : "border-red-300 bg-gradient-to-r from-red-50 to-red-100 text-red-800 dark:border-red-700 dark:from-red-950 dark:to-red-900 dark:text-red-300"
-                  }`}
-                >
-                  {status.message}
-                </div>
-              ) : null}
-            </div>
+    <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8" id="service-request" data-reveal>
+      <div className="mx-auto max-w-[1180px]">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <RecTag>Service Request</RecTag>
+            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+              Tell us what your instrument needs.
+            </h2>
           </div>
+          <p className="max-w-[430px] text-sm leading-6 text-ink-soft">
+            Fill out the form and our service team will get back to you shortly.
+            Fields marked * are required.
+          </p>
+        </div>
 
-          {/* Right: form */}
-          <div className="rounded-2xl border border-line-light bg-parchment p-7 shadow dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.38fr_0.62fr]">
+          <aside className="border border-line-light bg-white p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-red">
+              Direct Support
+            </p>
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-ink">
+              Reach the service desk.
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-ink-soft">
+              For urgent breakdowns or installation coordination, contact us directly.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              <a
+                className="flex items-center gap-3 border border-line-light bg-parchment-alt p-4 text-sm text-ink transition hover:border-red hover:text-red"
+                href="mailto:service@inkarp.co.in"
+              >
+                <MdEmail className="size-5 shrink-0 text-red" />
+                service@inkarp.co.in
+              </a>
+              <a
+                className="flex items-center gap-3 border border-line-light bg-parchment-alt p-4 text-sm text-ink transition hover:border-red hover:text-red"
+                href="tel:+917330731315"
+              >
+                <MdLocalPhone className="size-5 shrink-0 text-red" />
+                7330731315
+              </a>
+            </div>
+
+            {status.message ? (
+              <div
+                className={`mt-6 border p-4 text-sm leading-6 ${
+                  status.type === "success"
+                    ? "border-green-300 bg-green-50 text-green-800"
+                    : "border-red/30 bg-red/8 text-red"
+                }`}
+              >
+                {status.message}
+              </div>
+            ) : null}
+          </aside>
+
+          <div className="border border-line-light bg-white p-6 sm:p-8">
             <form className="space-y-4" onSubmit={handleSubmit}>
-              <div className="flex flex-col gap-4 md:flex-row">
+              <div className="grid gap-4 md:grid-cols-2">
                 <input
                   autoComplete="name"
                   className={inputClass}
@@ -164,7 +163,7 @@ export default function ServiceContactForm() {
                 />
               </div>
 
-              <div className="flex flex-col gap-4 md:flex-row">
+              <div className="grid gap-4 md:grid-cols-2">
                 <input
                   autoComplete="tel"
                   className={inputClass}
@@ -186,7 +185,7 @@ export default function ServiceContactForm() {
                 />
               </div>
 
-              <div className="flex flex-col gap-4 md:flex-row">
+              <div className="grid gap-4 md:grid-cols-2">
                 <input
                   className={inputClass}
                   name="instrumentName"
@@ -197,7 +196,7 @@ export default function ServiceContactForm() {
                   value={form.instrumentName}
                 />
                 <select
-                  className={`${inputClass} bg-parchment dark:bg-zinc-900`}
+                  className={inputClass}
                   name="warranty"
                   onChange={handleChange}
                   required
@@ -220,35 +219,13 @@ export default function ServiceContactForm() {
               />
 
               <button
-                className={`mt-2 inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold text-white shadow transition ${
-                  isSubmitting ? "cursor-not-allowed opacity-80" : "hover:opacity-95"
+                className={`mt-2 inline-flex border border-red bg-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red ${
+                  isSubmitting ? "cursor-not-allowed opacity-70" : "hover:-translate-y-0.5"
                 }`}
                 disabled={isSubmitting}
-                style={{ background: "linear-gradient(90deg,#BE0010,#E63946)" }}
                 type="submit"
               >
-                {isSubmitting ? (
-                  <>
-                    <svg className="-ml-1 mr-2 size-5 animate-spin text-parchment" fill="none" viewBox="0 0 24 24">
-                      <circle
-                        className="opacity-30"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      />
-                      <path
-                        className="opacity-80"
-                        d="M4 12a8 8 0 018-8V0a12 12 0 100 24v-4a8 8 0 01-8-8z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    Submitting...
-                  </>
-                ) : (
-                  <>Submit →</>
-                )}
+                {isSubmitting ? "Submitting..." : "Submit Request"}
               </button>
             </form>
           </div>

@@ -106,8 +106,8 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
   const card = enrichedCards[active];
 
   return (
-    <section id="solvents" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-[#F6F6F6] dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
-      <div className="relative mx-auto max-w-7xl w-full">
+    <section id="solvents" className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+      <div className="relative mx-auto max-w-[1180px] w-full">
         <SectionHeader
           number={sectionNumber}
           eyebrow={data?.eyebrow}
@@ -119,26 +119,26 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
           <div className="space-y-2">
             {enrichedCards.map((item, index) => (
               <button
-                className={`flex min-h-12 w-full items-center justify-between rounded-2xl border px-5 py-3 text-left transition ${
+                className={`flex min-h-12 w-full items-center justify-between border px-5 py-3 text-left transition ${
                   active === index
-                    ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
-                    : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-300'
+                    ? 'border-black bg-red text-white'
+                    : 'border-line-light bg-parchment text-black hover:border-line-light'
                 }`}
                 key={item.title}
                 onClick={() => setActive(index)}
                 type="button"
               >
                 <span className="text-sm font-bold">{item.title}</span>
-                <span className={`text-xs ${active === index ? 'text-parchment/70 dark:text-zinc-900/70' : 'text-black dark:text-zinc-100'}`}>
+                <span className={`text-xs ${active === index ? 'text-white/70' : 'text-black'}`}>
                   {item.boilingPoint ? `${item.boilingPoint} deg C bp` : 'setup'}
                 </span>
               </button>
             ))}
           </div>
 
-          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 shadow-sm sm:p-8">
-            <h3 className="text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{card.title}</h3>
-            <p className="mt-2 text-sm text-black dark:text-zinc-400">
+          <div className="border border-line-light bg-parchment p-6 sm:p-8">
+            <h3 className="text-2xl font-semibold tracking-tight text-ink">{card.title}</h3>
+            <p className="mt-2 text-sm text-black">
               {[
                 card.parsed.bath && `bath ${card.parsed.bath}`,
                 card.parsed.vapour && `vapour ~${card.parsed.vapour}`,
@@ -153,24 +153,24 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
                 const label = card.detail.labels[index];
                 return (
                   <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${card.title}-${label}`}>
-                    <div className="flex size-9 items-center justify-center rounded-xl border border-line-light bg-parchment-alt text-red dark:border-zinc-800 dark:bg-zinc-900">
+                    <div className="flex size-9 items-center justify-center border border-line-light bg-parchment-alt text-red">
                       <Icon className="text-base" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-black dark:text-zinc-100">{label}</p>
-                      <p className="mt-1 text-sm leading-6 text-black dark:text-zinc-400">{row}</p>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-black">{label}</p>
+                      <p className="mt-1 text-sm leading-6 text-black">{row}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            <div className="mt-6 rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-3 text-sm leading-6 text-black dark:text-zinc-400">
-              Tip - the <span className="font-semibold text-black dark:text-zinc-100">20/40/60 rule</span>: ~40 deg C bath, ~20 deg C coolant and a ~60 deg C gap to the vapour temperature for safe, efficient evaporation.
+            <div className="mt-6 border border-line-light bg-parchment-alt px-4 py-3 text-sm leading-6 text-black">
+              Tip - the <span className="font-semibold text-black">20/40/60 rule</span>: ~40 deg C bath, ~20 deg C coolant and a ~60 deg C gap to the vapour temperature for safe, efficient evaporation.
             </div>
 
             <a
-              className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-red px-5 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
+              className="mt-6 inline-flex h-11 items-center justify-center bg-red px-5 text-sm font-bold text-white transition hover:bg-transparent hover:text-red"
               href="#booking"
             >
               {card.cta ?? 'Ask Inkarp for solvent-specific configuration'}

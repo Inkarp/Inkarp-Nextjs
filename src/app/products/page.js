@@ -3,6 +3,7 @@ import { FiBox, FiGitBranch } from "react-icons/fi";
 import { getAllPrincipals, getAllProducts, searchProducts } from "@/data/products/principals";
 import ProductFilterForm from "@/components/products/ProductFilterForm";
 import ProductResultsGrid from "@/components/products/ProductResultsGrid";
+import RecTag from "@/components/home/RecTag";
 import StickyProductSearch from "@/components/products/StickyProductSearch";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { buildPageMetadata } from "@/data/pageSeo";
@@ -68,73 +69,66 @@ export default async function ProductsPage({ searchParams }) {
   }));
 
   return (
-    <main className="bg-white dark:bg-zinc-950 min-h-screen" data-scroll-skip>
+    <main className="min-h-screen bg-white text-ink" data-scroll-skip>
       <BreadcrumbJsonLd path="/products" />
       <PageBreadcrumbs path="/products" />
-      {/* Page header */}
-      <section className="border-b border-line-light dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14">
+
+      <section className="bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16">
+        <div className="mx-auto max-w-[1180px]">
+          <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-red">
-                Scientific Instruments for Research and Industry
-              </p>
-              <h1 className="mt-3 text-4xl font-semibold leading-[1.05] tracking-tight text-ink dark:text-zinc-100 sm:text-5xl lg:text-6xl">
-                Products &amp; Solutions
+              <RecTag>Scientific Instruments</RecTag>
+              <h1 className="max-w-[13ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+                Products and solutions
+                <em className="italic text-red"> for every lab workflow.</em>
               </h1>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft dark:text-zinc-400 sm:text-lg">
+              <p className="my-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg">
                 Find the right instrument by product category, application, industry, or
                 principal brand. Built for scientists, lab managers, and procurement teams who
                 need clear choices quickly.
               </p>
+
+              <div className="mt-8 flex flex-wrap gap-3.5">
+                {VIEW_TABS.map((tab) => (
+                  <Link
+                    key={tab.href}
+                    href={tab.href}
+                    className={`inline-flex items-center gap-2 border px-6 py-3.5 text-sm font-semibold transition hover:-translate-y-0.5 ${
+                      tab.active
+                        ? "border-red bg-red text-white hover:bg-transparent hover:text-red"
+                        : "border-line-light bg-white text-ink hover:border-red hover:text-red"
+                    }`}
+                  >
+                    <tab.Icon aria-hidden className="h-4 w-4" />
+                    {tab.label}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div className="rounded-2xl border border-line-light bg-white p-3 dark:border-zinc-700 dark:bg-zinc-800/40 sm:p-4">
-              <div className="flex flex-col gap-3">
+            <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+              <div className="grid gap-3">
                 {HOW_TO_FIND_STEPS.map((step) => (
-                  <div
-                    key={step.num}
-                    className="flex items-start gap-4 rounded-xl border border-line-light bg-white p-4 dark:border-zinc-700 dark:bg-zinc-900"
-                  >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-red/10 text-sm font-semibold text-red">
+                  <div key={step.num} className="flex items-start gap-4 border border-line-light bg-white p-4">
+                    <span className="text-lg font-semibold leading-none text-red">
                       {step.num}
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-ink dark:text-zinc-100">
-                        {step.title}
-                      </p>
-                      <p className="mt-0.5 text-sm leading-snug text-ink-soft dark:text-zinc-400">
-                        {step.description}
-                      </p>
+                      <p className="text-sm font-semibold text-ink">{step.title}</p>
+                      <p className="mt-1 text-sm leading-snug text-ink-soft">{step.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-
-          <div className="mt-8 flex justify-center lg:justify-start">
-            <div className="inline-flex rounded-lg border border-line-light bg-[whitesmoke] p-1 dark:border-zinc-700 dark:bg-zinc-800">
-              {VIEW_TABS.map((tab) => (
-                <Link
-                  key={tab.href}
-                  href={tab.href}
-                  className={`inline-flex items-center gap-1.5 rounded-md px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${
-                    tab.active
-                      ? "bg-red text-white"
-                      : "text-ink-soft hover:text-red dark:text-zinc-300"
-                  }`}
-                >
-                  <tab.Icon aria-hidden className="h-4 w-4" />
-                  {tab.label}
-                </Link>
-              ))}
+              <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
+                <span>{totalProducts} products indexed</span>
+                <span>{brandOptions.length} principal brands</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sticky search toolbar */}
       <StickyProductSearch>
         <ProductFilterForm
           key={`${filters.q}-${selectedBrands.join("|")}`}
@@ -146,9 +140,8 @@ export default async function ProductsPage({ searchParams }) {
         />
       </StickyProductSearch>
 
-      {/* Product grid */}
-      <section className="relative px-4 py-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-parchment-alt px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1180px]">
           <ProductResultsGrid products={products} />
         </div>
       </section>

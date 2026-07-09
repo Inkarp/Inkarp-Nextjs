@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import CatalystArchiveSwitcher from "@/components/catalystcue/CatalystArchiveVariants";
-import CatalystLatestIssue from "@/components/catalystcue/CatalystLatestIssue";
-import CatalystModal from "@/components/catalystcue/CatalystModal";
-import { catalystCards } from "@/data/catalystCue";
+import { useEffect, useMemo, useState } from"react";
+import CatalystArchiveSwitcher from"@/components/catalystcue/CatalystArchiveVariants";
+import CatalystLatestIssue from"@/components/catalystcue/CatalystLatestIssue";
+import CatalystModal from"@/components/catalystcue/CatalystModal";
+import { catalystCards } from"@/data/catalystCue";
 
 export default function CatalystPage() {
   const [showCatalystModal, setShowCatalystModal] = useState(false);

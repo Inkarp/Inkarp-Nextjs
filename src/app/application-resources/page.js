@@ -1,6 +1,6 @@
-import ApplicationResourcesClient from "@/components/catalystcue/ApplicationResourcesClient";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
-import { buildPageMetadata } from "@/data/pageSeo";
+import ApplicationResourcesClient from"@/components/catalystcue/ApplicationResourcesClient";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from"@/data/pageSeo";
 
 export const metadata = buildPageMetadata("/application-resources");
 

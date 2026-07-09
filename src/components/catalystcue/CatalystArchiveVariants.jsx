@@ -1,17 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useMemo, useState } from "react";
-import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
+import Image from"next/image";
+import Link from"next/link";
+import { useMemo, useState } from"react";
+import { FiChevronDown, FiSearch, FiX } from"react-icons/fi";
 
-function formatVolumeLabel(volume = "") {
-  return volume.replace("-", " ");
+function formatVolumeLabel(volume ="") {
+  return volume.replace("-","");
 }
 
-function parseDate(dateStr = "") {
-  const parts = dateStr.trim().split(" ");
-  return { month: parts[0] || "", year: parts[1] || "" };
+function parseDate(dateStr ="") {
+  const parts = dateStr.trim().split("");
+  return { month: parts[0] ||"", year: parts[1] ||"" };
 }
 
 function useGroupedVolumes(catalystCards) {
@@ -41,10 +41,10 @@ function useFilteredCards(catalystCards, filters) {
       if (search) {
         const s = search.toLowerCase();
         const hit =
-          (card.title || "").toLowerCase().includes(s) ||
-          (card.subTitle || "").toLowerCase().includes(s) ||
-          (card.Date || "").toLowerCase().includes(s) ||
-          (card.Volume || "").toLowerCase().includes(s);
+          (card.title ||"").toLowerCase().includes(s) ||
+          (card.subTitle ||"").toLowerCase().includes(s) ||
+          (card.Date ||"").toLowerCase().includes(s) ||
+          (card.Volume ||"").toLowerCase().includes(s);
         if (!hit) return false;
       }
       if (volume && card.Volume !== volume) return false;
@@ -57,13 +57,10 @@ function useFilteredCards(catalystCards, filters) {
   }, [catalystCards, filters]);
 }
 
-const MONTH_ORDER = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
+const MONTH_ORDER = ["January","February","March","April","May","June","July","August","September","October","November","December",
 ];
 
-const SELECT_CLASS =
-  "h-9 appearance-none cursor-pointer rounded-full border border-zinc-200 bg-white pl-3 pr-8 text-sm text-zinc-700 focus:border-[#BE0010] focus:outline-none focus:ring-1 focus:ring-[#BE0010]/30 transition";
+const SELECT_CLASS ="h-9 appearance-none cursor-pointer border border-line-light bg-white pl-3 pr-8 text-sm text-ink-soft focus:border-red focus:outline-none focus:ring-1 focus:ring-red/30 transition";
 
 function FilterBar({ allCards, filters, setFilters }) {
   const { search, volume, issue, year, month } = filters;
@@ -81,8 +78,8 @@ function FilterBar({ allCards, filters, setFilters }) {
   const issues = useMemo(
     () =>
       [...new Set(allCards.map((c) => c.subTitle))].sort((a, b) => {
-        const na = Number.parseInt(a.split(" ")[1], 10);
-        const nb = Number.parseInt(b.split(" ")[1], 10);
+        const na = Number.parseInt(a.split("")[1], 10);
+        const nb = Number.parseInt(b.split("")[1], 10);
         return na - nb;
       }),
     [allCards],
@@ -106,14 +103,14 @@ function FilterBar({ allCards, filters, setFilters }) {
 
   const hasFilters = search || volume || issue || year || month;
   const clear = () =>
-    setFilters({ search: "", volume: "", issue: "", year: "", month: "" });
+    setFilters({ search:"", volume:"", issue:"", year:"", month:"" });
 
   return (
     <div className="mb-8 flex flex-wrap items-center gap-3">
       <div className="relative min-w-[180px] flex-1">
-        <FiSearch className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
+        <FiSearch className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-soft" />
         <input
-          className="h-9 w-full rounded-full border border-zinc-200 bg-white pl-9 pr-4 text-sm placeholder-zinc-400 focus:border-[#BE0010] focus:outline-none focus:ring-1 focus:ring-[#BE0010]/30 transition"
+          className="h-9 w-full border border-line-light bg-white pl-9 pr-4 text-sm placeholder:text-ink-muted focus:border-red focus:outline-none focus:ring-1 focus:ring-red/30 transition"
           onChange={(e) => setFilters((f) => ({ ...f, search: e.target.value }))}
           placeholder="Search issues…"
           type="text"
@@ -134,7 +131,7 @@ function FilterBar({ allCards, filters, setFilters }) {
             </option>
           ))}
         </select>
-        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-ink-soft" />
       </div>
 
       <div className="relative">
@@ -150,7 +147,7 @@ function FilterBar({ allCards, filters, setFilters }) {
             </option>
           ))}
         </select>
-        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-ink-soft" />
       </div>
 
       <div className="relative">
@@ -166,7 +163,7 @@ function FilterBar({ allCards, filters, setFilters }) {
             </option>
           ))}
         </select>
-        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-ink-soft" />
       </div>
 
       <div className="relative">
@@ -182,12 +179,12 @@ function FilterBar({ allCards, filters, setFilters }) {
             </option>
           ))}
         </select>
-        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400" />
+        <FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-xs text-ink-soft" />
       </div>
 
       {hasFilters ? (
         <button
-          className="inline-flex h-9 items-center gap-1.5 rounded-full border border-zinc-200 px-3 text-sm text-zinc-500 transition hover:border-zinc-400 hover:text-zinc-700"
+          className="inline-flex h-9 items-center gap-1.5 border border-line-light px-3 text-sm text-ink-soft transition hover:border-line-light hover:text-ink-soft"
           onClick={clear}
           type="button"
         >
@@ -202,7 +199,7 @@ function FilterBar({ allCards, filters, setFilters }) {
 function IssueCard({ card }) {
   return (
     <Link
-      className="flex w-[220px] shrink-0 flex-col overflow-hidden border border-white bg-[#1A2D51] text-white transition-transform duration-500 hover:scale-105"
+      className="flex w-[220px] shrink-0 flex-col overflow-hidden border border-white bg-[#1A2D51] text-parchment transition-transform duration-500 hover:scale-105"
       href={`/magazine/${encodeURIComponent(card.slug)}`}
     >
       <Image
@@ -223,9 +220,9 @@ function IssueCard({ card }) {
 
 function EmptyState() {
   return (
-    <div className="py-16 text-center text-sm text-zinc-500">
-      No issues match your filters.{" "}
-      <span className="text-zinc-400">Try clearing some filters.</span>
+    <div className="py-16 text-center text-sm text-ink-soft">
+      No issues match your filters.{""}
+      <span className="text-ink-soft">Try clearing some filters.</span>
     </div>
   );
 }
@@ -245,10 +242,10 @@ export function ArchiveTabbed({ catalystCards }) {
       <div className="mb-8 flex flex-wrap justify-center gap-3">
         {sortedVolumeKeys.map((volume) => (
           <button
-            className={`rounded-full px-5 py-2 text-sm font-bold uppercase transition ${
+            className={`px-5 py-2 text-sm font-bold uppercase transition ${
               activeVolume === volume
-                ? "bg-[#BE0010] text-white"
-                : "border border-zinc-300 text-zinc-600 hover:border-[#BE0010] hover:text-[#BE0010]"
+                ?"bg-red text-parchment"
+                :"border border-line-light text-ink-soft hover:border-red hover:text-red"
             }`}
             key={volume}
             onClick={() => setActiveVolume(volume)}
@@ -284,10 +281,10 @@ export function ArchiveShelves({ catalystCards }) {
         return (
           <section key={volume}>
             <div className="mb-4 flex items-center justify-between">
-              <h3 className="text-xl font-bold uppercase text-[#1A2D51]">
+              <h3 className="text-xl font-bold uppercase text-ink">
                 {formatVolumeLabel(volume)}
               </h3>
-              <span className="text-sm text-zinc-500">{cards.length} issues</span>
+              <span className="text-sm text-ink-soft">{cards.length} issues</span>
             </div>
             <div className="flex gap-5 overflow-x-auto pb-4">
               {cards.map((card) => (
@@ -308,7 +305,7 @@ export function ArchiveAccordion({ catalystCards }) {
   if (!catalystCards.length) return <EmptyState />;
 
   return (
-    <div className="mx-auto max-w-5xl divide-y divide-zinc-200 border border-zinc-200">
+    <div className="mx-auto max-w-[1180px] divide-y divide-line-light border border-line-light">
       {sortedVolumeKeys.map((volume) => {
         const cards = [...groupedByVolume[volume]].sort((a, b) => b.id - a.id);
         const isOpen = openVolume === volume;
@@ -316,15 +313,15 @@ export function ArchiveAccordion({ catalystCards }) {
         return (
           <div key={volume}>
             <button
-              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-bold uppercase text-[#1A2D51]"
+              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-bold uppercase text-ink"
               onClick={() => setOpenVolume(isOpen ? null : volume)}
               type="button"
             >
               <span>{formatVolumeLabel(volume)}</span>
-              <span className="flex items-center gap-3 text-sm font-medium text-zinc-500">
+              <span className="flex items-center gap-3 text-sm font-medium text-ink-soft">
                 {cards.length} issues
                 <FiChevronDown
-                  className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform ${isOpen ?"rotate-180" :""}`}
                 />
               </span>
             </button>
@@ -352,10 +349,10 @@ export function ArchiveTimeline({ catalystCards }) {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <ol className="relative space-y-10 border-l border-zinc-200 pl-6">
+      <ol className="relative space-y-10 border-l border-line-light pl-6">
         {sorted.map((card) => (
           <li className="relative" key={card.slug}>
-            <span className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full bg-[#BE0010]" />
+            <span className="absolute -left-[31px] top-1.5 h-3 w-3 bg-red" />
             <Link className="group flex gap-5" href={`/magazine/${encodeURIComponent(card.slug)}`}>
               <Image
                 alt={card.subTitle}
@@ -365,13 +362,13 @@ export function ArchiveTimeline({ catalystCards }) {
                 width={80}
               />
               <div>
-                <span className="text-xs font-bold uppercase text-[#BE0010]">
+                <span className="text-xs font-bold uppercase text-red">
                   {formatVolumeLabel(card.Volume)} &middot; {card.subTitle}
                 </span>
-                <h3 className="mt-1 font-semibold text-[#1A2D51] transition-colors group-hover:text-[#BE0010]">
+                <h3 className="mt-1 font-semibold text-ink transition-colors group-hover:text-red">
                   {card.metaTitle || card.title}
                 </h3>
-                <p className="text-sm text-zinc-500">{card.Date}</p>
+                <p className="text-sm text-ink-soft">{card.Date}</p>
               </div>
             </Link>
           </li>
@@ -382,20 +379,20 @@ export function ArchiveTimeline({ catalystCards }) {
 }
 
 const variants = [
-  { key: "tabbed", label: "Tabbed Volumes", Component: ArchiveTabbed },
-  { key: "shelves", label: "Horizontal Shelves", Component: ArchiveShelves },
-  { key: "accordion", label: "Accordion List", Component: ArchiveAccordion },
-  { key: "timeline", label: "Timeline View", Component: ArchiveTimeline },
+  { key:"tabbed", label:"Tabbed Volumes", Component: ArchiveTabbed },
+  { key:"shelves", label:"Horizontal Shelves", Component: ArchiveShelves },
+  { key:"accordion", label:"Accordion List", Component: ArchiveAccordion },
+  { key:"timeline", label:"Timeline View", Component: ArchiveTimeline },
 ];
 
 export default function CatalystArchiveSwitcher({ catalystCards }) {
   const [variant, setVariant] = useState(variants[0].key);
   const [filters, setFilters] = useState({
-    search: "",
-    volume: "",
-    issue: "",
-    year: "",
-    month: "",
+    search:"",
+    volume:"",
+    issue:"",
+    year:"",
+    month:"",
   });
 
   const filteredCards = useFilteredCards(catalystCards, filters);
@@ -408,10 +405,10 @@ export default function CatalystArchiveSwitcher({ catalystCards }) {
       <div className="mb-10 flex flex-wrap justify-center gap-2">
         {variants.map((item) => (
           <button
-            className={`rounded-md px-4 py-2 text-xs font-bold uppercase tracking-wide transition ${
+            className={`px-4 py-2 text-xs font-bold uppercase tracking-wide transition ${
               variant === item.key
-                ? "bg-[#1A2D51] text-white"
-                : "border border-zinc-300 text-zinc-600 hover:border-[#1A2D51] hover:text-[#1A2D51]"
+                ?"bg-[#1A2D51] text-parchment"
+                :"border border-line-light text-ink-soft hover:border-red hover:text-ink"
             }`}
             key={item.key}
             onClick={() => setVariant(item.key)}

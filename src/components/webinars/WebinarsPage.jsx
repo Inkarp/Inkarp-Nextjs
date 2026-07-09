@@ -1,14 +1,14 @@
-﻿"use client";
+"use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import { FiX } from "react-icons/fi";
-import { getDaysLeft, webinars } from "@/data/webinars";
-import RegisterForm from "./RegisterForm";
+import { useState } from"react";
+import Image from"next/image";
+import { FiX } from"react-icons/fi";
+import { getDaysLeft, webinars } from"@/data/webinars";
+import RegisterForm from"./RegisterForm";
 
 const tabs = [
-  { key: "upcoming", label: "Upcoming" },
-  { key: "past", label: "Past / On-Demand" },
+  { key:"upcoming", label:"Upcoming" },
+  { key:"past", label:"Past / On-Demand" },
 ];
 
 export default function WebinarsPage() {
@@ -22,7 +22,7 @@ export default function WebinarsPage() {
   };
 
   const visibleWebinars = webinars.filter((webinar) =>
-    activeTab === "upcoming"
+    activeTab ==="upcoming"
       ? getDaysLeft(webinar.date) > 0
       : getDaysLeft(webinar.date) === 0
   );
@@ -30,23 +30,21 @@ export default function WebinarsPage() {
   return (
     <main className="overflow-hidden">
       {/* <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(230,57,70,0.08),transparent)]" />
-
-        <div className="relative mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
+        <div className="relative mx-auto max-w-[1180px] px-4 py-14 text-center sm:px-6 lg:px-8 lg:py-20">
           <span
-            className="font-maxot inline-flex rounded-full border border-[#BE0010]/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-zinc-800 md:text-sm dark:bg-zinc-900 dark:text-zinc-100"
+            className="inline-flex border border-red/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-ink-soft md:text-sm"
             data-reveal
           >
             Live & On-Demand
           </span>
           <h1
-            className="font-maxot mt-4 text-3xl font-bold leading-tight text-[#E63946] sm:text-4xl"
+            className="mt-4 text-3xl font-bold leading-tight text-red sm:text-4xl"
             data-reveal
           >
             Expert-Led Webinars
           </h1>
           <p
-            className="mx-auto mt-3 max-w-2xl text-base text-zinc-700 sm:text-lg dark:text-zinc-300"
+            className="mx-auto mt-3 max-w-2xl text-base text-ink-soft sm:text-lg"
             data-reveal
           >
             Stay informed on industry trends, best practices, and innovative
@@ -55,17 +53,17 @@ export default function WebinarsPage() {
         </div>
       </section> */}
 
-      <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-8">
         <div
-          className="mb-8 flex w-fit gap-1 rounded-full border border-line-light bg-parchment-alt p-1 dark:border-zinc-700 dark:bg-zinc-900"
+          className="mb-8 flex w-fit gap-1 border border-line-light bg-parchment-alt p-1"
           data-reveal
         >
           {tabs.map((tab) => (
             <button
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`px-4 py-2 text-sm font-medium transition ${
                 activeTab === tab.key
-                  ? "bg-[#E63946] text-parchment shadow"
-                  : "text-ink-soft hover:text-[#E63946] dark:text-zinc-300"
+                  ?"bg-red text-parchment"
+                  :"text-ink-soft hover:text-red"
               }`}
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
@@ -77,8 +75,8 @@ export default function WebinarsPage() {
         </div>
 
         {visibleWebinars.length === 0 ? (
-          <p className="rounded-xl border border-dashed border-zinc-300 px-4 py-10 text-center text-sm text-ink-soft dark:border-zinc-700 dark:text-zinc-400">
-            No {activeTab === "upcoming" ? "upcoming" : "past"} webinars right
+          <p className="border border-dashed border-line-light px-4 py-10 text-center text-sm text-ink-soft">
+            No {activeTab ==="upcoming" ?"upcoming" :"past"} webinars right
             now. Check back soon.
           </p>
         ) : (
@@ -88,14 +86,14 @@ export default function WebinarsPage() {
 
               return (
                 <div
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-line-light bg-parchment shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-zinc-700 dark:bg-zinc-900"
+                  className="group flex flex-col overflow-hidden border border-line-light bg-parchment transition hover:-translate-y-1 hover:border-red/35"
                   data-reveal
                   key={webinar.id}
                 >
-                  <div className="relative flex h-36 items-center justify-center bg-parchment-alt p-6 dark:bg-zinc-800">
+                  <div className="relative flex h-36 items-center justify-center bg-parchment-alt p-6">
                     <span
                       aria-hidden="true"
-                      className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-red to-[#E63946]"
+                      className="absolute inset-x-0 top-0 h-1 bg-red"
                     />
                     <Image
                       alt={`${webinar.title} principal logo`}
@@ -105,30 +103,30 @@ export default function WebinarsPage() {
                       width={140}
                     />
                     <span
-                      className={`absolute right-3 top-3 rounded-full px-3 py-1 text-xs font-semibold ${
+                      className={`absolute right-3 top-3 px-3 py-1 text-xs font-semibold ${
                         daysLeft > 0
-                          ? "bg-[#E63946] text-parchment"
-                          : "bg-zinc-200 text-ink-soft dark:bg-zinc-700 dark:text-zinc-300"
+                          ?"bg-red text-parchment"
+                          :"bg-parchment-alt text-ink-soft"
                       }`}
                     >
-                      {daysLeft > 0 ? `${daysLeft}d left` : "On-Demand"}
+                      {daysLeft > 0 ? `${daysLeft}d left` :"On-Demand"}
                     </span>
                   </div>
 
                   <div className="flex flex-1 flex-col gap-3 p-5">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
                       {webinar.date1}
                     </p>
-                    <h3 className="font-maxot line-clamp-2 text-base text-[#E63946]">
+                    <h3 className="line-clamp-2 text-base text-red">
                       {webinar.title}
                     </h3>
-                    <p className="line-clamp-3 flex-1 text-sm text-ink-soft dark:text-zinc-300">
+                    <p className="line-clamp-3 flex-1 text-sm text-ink-soft">
                       {webinar.description}
                     </p>
 
                     <div className="mt-2 flex gap-3">
                       <button
-                        className="flex-1 rounded-lg border border-[#E63946] px-3 py-2 text-sm font-medium text-[#E63946] transition hover:bg-[#E63946] hover:text-parchment"
+                        className="flex-1 border border-red px-3 py-2 text-sm font-medium text-red transition hover:bg-red hover:text-parchment"
                         onClick={() => setSelectedWebinar(webinar)}
                         type="button"
                       >
@@ -136,7 +134,7 @@ export default function WebinarsPage() {
                       </button>
                       {daysLeft > 0 ? (
                         <button
-                          className="font-maxot flex-1 rounded-lg bg-[#E63946] px-3 py-2 text-sm text-parchment transition hover:bg-red"
+                          className="flex-1 bg-red px-3 py-2 text-sm text-parchment transition hover:bg-red"
                           onClick={() => {
                             setSelectedWebinar(webinar);
                             setShowRegister(true);
@@ -157,23 +155,23 @@ export default function WebinarsPage() {
 
       {selectedWebinar && !showRegister ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-navy/50 p-4">
-          <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-xl bg-parchment p-6 shadow-lg dark:bg-zinc-900">
+          <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto bg-parchment p-6">
             <button
               aria-label="Close webinar details"
-              className="absolute right-4 top-4 text-ink-soft hover:text-black dark:text-zinc-400 dark:hover:text-white"
+              className="absolute right-4 top-4 text-ink-soft hover:text-ink"
               onClick={handleCloseModal}
               type="button"
             >
               <FiX className="size-5" />
             </button>
             <div
-              className="mb-3 text-base text-ink dark:text-zinc-200"
+              className="mb-3 text-base text-ink"
               dangerouslySetInnerHTML={{ __html: selectedWebinar.details }}
             />
             {getDaysLeft(selectedWebinar.date) > 0 ? (
               <div className="mt-6 text-center">
                 <button
-                  className="font-maxot rounded-lg bg-red px-6 py-2 text-sm text-parchment transition hover:bg-[#E63946]"
+                  className="bg-red px-6 py-2 text-sm text-parchment transition hover:bg-red"
                   onClick={() => setShowRegister(true)}
                   type="button"
                 >

@@ -1,24 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from"next/image";
+import Link from"next/link";
 import {
   FiCalendar,
   FiFolder,
   FiMessageCircle,
   FiTag,
   FiUser,
-} from "react-icons/fi";
+} from"react-icons/fi";
 import {
   formatPostDate,
   getCategoryCounts,
   getAllTags,
   getRecentPosts,
-} from "@/data/blogs";
+} from"@/data/blogs";
 
 function initials(name) {
   return name
-    .split(" ")
+    .split("")
     .map((part) => part[0])
     .slice(0, 2)
     .join("")
@@ -29,11 +29,11 @@ function TextSection({ section }) {
   return (
     <div className="space-y-3">
       {section.heading ? (
-        <h2 className="font-maxot text-xl font-semibold leading-snug text-ink dark:text-zinc-100">
+        <h2 className="text-xl font-semibold leading-snug text-ink">
           {section.heading}
         </h2>
       ) : null}
-      <div className="space-y-4 text-base leading-7 text-ink-soft dark:text-zinc-300">
+      <div className="space-y-4 text-base leading-7 text-ink-soft">
         {section.content.split("\n").map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
@@ -45,9 +45,9 @@ function TextSection({ section }) {
 function ImageSection({ section }) {
   return (
     <figure>
-      <div className="relative h-56 overflow-hidden rounded-2xl bg-parchment-alt sm:h-72 dark:bg-zinc-800">
+      <div className="relative h-56 overflow-hidden bg-parchment-alt sm:h-72">
         <Image
-          alt={section.caption || "Blog figure"}
+          alt={section.caption ||"Blog figure"}
           className="object-contain"
           fill
           sizes="(min-width: 1024px) 66vw, 100vw"
@@ -55,7 +55,7 @@ function ImageSection({ section }) {
         />
       </div>
       {section.caption ? (
-        <figcaption className="mt-2 text-center text-sm text-ink-soft dark:text-zinc-400">
+        <figcaption className="mt-2 text-center text-sm text-ink-soft">
           {section.caption}
         </figcaption>
       ) : null}
@@ -66,14 +66,14 @@ function ImageSection({ section }) {
 function TableSection({ section }) {
   return (
     <figure>
-      <div className="overflow-x-auto rounded-xl border border-line-light dark:border-zinc-800">
+      <div className="overflow-x-auto border border-line-light">
         <table className="w-full min-w-[480px] text-left text-sm">
           {section.columns ? (
-            <thead className="bg-parchment-alt dark:bg-zinc-900">
+            <thead className="bg-parchment-alt">
               <tr>
                 {section.columns.map((column, index) => (
                   <th
-                    className="whitespace-nowrap px-4 py-3 font-maxot font-semibold text-ink dark:text-zinc-200"
+                    className="whitespace-nowrap px-4 py-3  font-semibold text-ink"
                     key={index}
                   >
                     {column}
@@ -85,12 +85,12 @@ function TableSection({ section }) {
           <tbody>
             {section.rows.map((row, rowIndex) => (
               <tr
-                className="border-t border-line-light dark:border-zinc-800"
+                className="border-t border-line-light"
                 key={rowIndex}
               >
                 {row.map((cell, cellIndex) => (
                   <td
-                    className="px-4 py-3 text-ink-soft dark:text-zinc-400"
+                    className="px-4 py-3 text-ink-soft"
                     key={cellIndex}
                   >
                     {cell}
@@ -102,7 +102,7 @@ function TableSection({ section }) {
         </table>
       </div>
       {section.caption ? (
-        <figcaption className="mt-2 text-sm text-ink-soft dark:text-zinc-400">
+        <figcaption className="mt-2 text-sm text-ink-soft">
           {section.caption}
         </figcaption>
       ) : null}
@@ -114,20 +114,20 @@ function FaqSection({ section }) {
   return (
     <div className="space-y-3">
       {section.heading ? (
-        <h2 className="font-maxot text-xl font-semibold leading-snug text-ink dark:text-zinc-100">
+        <h2 className="text-xl font-semibold leading-snug text-ink">
           {section.heading}
         </h2>
       ) : null}
       <div className="space-y-2">
         {section.content.map((item, index) => (
           <details
-            className="group rounded-xl border border-line-light px-4 py-3 dark:border-zinc-800"
+            className="group border border-line-light px-4 py-3"
             key={index}
           >
-            <summary className="font-maxot cursor-pointer list-none text-sm font-semibold text-ink dark:text-zinc-200">
+            <summary className="cursor-pointer list-none text-sm font-semibold text-ink">
               {item.q}
             </summary>
-            <p className="mt-2 text-sm leading-6 text-ink-soft dark:text-zinc-400">
+            <p className="mt-2 text-sm leading-6 text-ink-soft">
               {item.a}
             </p>
           </details>
@@ -138,13 +138,13 @@ function FaqSection({ section }) {
 }
 
 function Section({ section, index }) {
-  if (section.type === "image") {
+  if (section.type ==="image") {
     return <ImageSection section={section} />;
   }
-  if (section.type === "table") {
+  if (section.type ==="table") {
     return <TableSection section={section} />;
   }
-  if (section.type === "faq") {
+  if (section.type ==="faq") {
     return <FaqSection section={section} />;
   }
   return <TextSection section={section} />;
@@ -158,33 +158,31 @@ export default function BlogDetailsPage({ post }) {
   return (
     <main className="overflow-hidden">
       <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(230,57,70,0.08),transparent)]" />
-
-        <div className="relative mx-auto max-w-7xl px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
-          <span className="inline-flex rounded-full bg-[#E63946]/10 px-3 py-1 text-xs font-semibold uppercase text-[#E63946]">
+        <div className="relative mx-auto max-w-[1180px] px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
+          <span className="inline-flex bg-red/10 px-3 py-1 text-xs font-semibold uppercase text-red">
             {post.category}
           </span>
-          <h1 className="font-maxot mx-auto mt-4 max-w-3xl text-2xl font-bold leading-tight text-ink sm:text-3xl dark:text-zinc-100">
+          <h1 className="mx-auto mt-4 max-w-3xl text-2xl font-bold leading-tight text-ink sm:text-3xl">
             {post.title}
           </h1>
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-ink-soft dark:text-zinc-400">
-            <Link className="hover:text-[#E63946]" href="/">
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-ink-soft">
+            <Link className="hover:text-red" href="/">
               Home
             </Link>
             <span>/</span>
-            <Link className="hover:text-[#E63946]" href="/blog">
+            <Link className="hover:text-red" href="/blog">
               Blog
             </Link>
             <span>/</span>
-            <span className="text-ink-soft dark:text-zinc-300">{post.title}</span>
+            <span className="text-ink-soft">{post.title}</span>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-[1180px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_1fr]">
           <article>
-            <div className="relative h-64 overflow-hidden rounded-2xl sm:h-80">
+            <div className="relative h-64 overflow-hidden sm:h-80">
               <Image
                 alt={post.title}
                 className="object-cover"
@@ -195,17 +193,17 @@ export default function BlogDetailsPage({ post }) {
               />
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center gap-5 text-sm text-ink-soft dark:text-zinc-400">
+            <div className="mt-5 flex flex-wrap items-center gap-5 text-sm text-ink-soft">
               <span className="flex items-center gap-1.5">
-                <FiUser className="size-4 text-[#E63946]" />
+                <FiUser className="size-4 text-red" />
                 {post.author}
               </span>
               <span className="flex items-center gap-1.5">
-                <FiCalendar className="size-4 text-[#E63946]" />
+                <FiCalendar className="size-4 text-red" />
                 {formatPostDate(post.date)}
               </span>
               <span className="flex items-center gap-1.5">
-                <FiMessageCircle className="size-4 text-[#E63946]" />
+                <FiMessageCircle className="size-4 text-red" />
                 {post.comments.length} Comments
               </span>
             </div>
@@ -217,14 +215,14 @@ export default function BlogDetailsPage({ post }) {
             </div>
 
             {post.tags?.length ? (
-              <div className="mt-8 flex flex-wrap items-center gap-2 border-t border-line-light pt-6 dark:border-zinc-800">
-                <span className="font-maxot flex items-center gap-1.5 text-sm font-semibold text-ink dark:text-zinc-200">
+              <div className="mt-8 flex flex-wrap items-center gap-2 border-t border-line-light pt-6">
+                <span className="flex items-center gap-1.5 text-sm font-semibold text-ink">
                   <FiTag className="size-4" />
                   Tags:
                 </span>
                 {post.tags.map((tag) => (
                   <span
-                    className="rounded-full border border-line-light px-3 py-1 text-xs font-medium text-ink-soft transition hover:border-[#E63946]/60 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
+                    className="border border-line-light px-3 py-1 text-xs font-medium text-ink-soft transition hover:border-red/60 hover:text-red"
                     key={tag}
                   >
                     {tag}
@@ -233,32 +231,32 @@ export default function BlogDetailsPage({ post }) {
               </div>
             ) : null}
 
-            <div className="mt-10 border-t border-line-light pt-8 dark:border-zinc-800">
-              <h2 className="font-maxot text-xl font-semibold text-ink dark:text-zinc-100">
+            <div className="mt-10 border-t border-line-light pt-8">
+              <h2 className="text-xl font-semibold text-ink">
                 {post.comments.length} Comments
               </h2>
 
               <div className="mt-5 space-y-6">
                 {post.comments.length === 0 ? (
-                  <p className="text-sm text-ink-soft dark:text-zinc-400">
+                  <p className="text-sm text-ink-soft">
                     Be the first to comment on this article.
                   </p>
                 ) : (
                   post.comments.map((comment) => (
                     <div className="flex gap-4" key={comment.id}>
-                      <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#E63946]/10 text-sm font-semibold text-[#E63946]">
+                      <span className="flex size-11 shrink-0 items-center justify-center bg-red/10 text-sm font-semibold text-red">
                         {initials(comment.name)}
                       </span>
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-maxot text-sm font-semibold text-ink dark:text-zinc-100">
+                          <span className="text-sm font-semibold text-ink">
                             {comment.name}
                           </span>
                           <span className="text-xs text-ink-soft">
                             {formatPostDate(comment.date)}
                           </span>
                         </div>
-                        <p className="mt-1 text-sm text-ink-soft dark:text-zinc-400">
+                        <p className="mt-1 text-sm text-ink-soft">
                           {comment.text}
                         </p>
                       </div>
@@ -268,28 +266,28 @@ export default function BlogDetailsPage({ post }) {
               </div>
             </div>
 
-            <div className="mt-10 border-t border-line-light pt-8 dark:border-zinc-800">
-              <h2 className="font-maxot text-xl font-semibold text-ink dark:text-zinc-100">
+            <div className="mt-10 border-t border-line-light pt-8">
+              <h2 className="text-xl font-semibold text-ink">
                 Leave a Comment
               </h2>
               <form className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
-                  className="rounded-lg border border-line-light px-4 py-3 text-sm outline-none transition focus:border-[#E63946] dark:border-zinc-700 dark:bg-zinc-900"
+                  className="border border-line-light px-4 py-3 text-sm outline-none transition focus:border-red"
                   placeholder="Your Name"
                   type="text"
                 />
                 <input
-                  className="rounded-lg border border-line-light px-4 py-3 text-sm outline-none transition focus:border-[#E63946] dark:border-zinc-700 dark:bg-zinc-900"
+                  className="border border-line-light px-4 py-3 text-sm outline-none transition focus:border-red"
                   placeholder="Your Email"
                   type="email"
                 />
                 <textarea
-                  className="col-span-1 rounded-lg border border-line-light px-4 py-3 text-sm outline-none transition focus:border-[#E63946] sm:col-span-2 dark:border-zinc-700 dark:bg-zinc-900"
+                  className="col-span-1 border border-line-light px-4 py-3 text-sm outline-none transition focus:border-red sm:col-span-2"
                   placeholder="Your Message"
                   rows={4}
                 />
                 <button
-                  className="font-maxot col-span-1 w-fit rounded-full bg-[#E63946] px-6 py-3 text-sm font-semibold text-parchment transition hover:bg-red sm:col-span-2"
+                  className="col-span-1 w-fit bg-red px-6 py-3 text-sm font-semibold text-parchment transition hover:bg-red sm:col-span-2"
                   type="button"
                 >
                   Post Comment
@@ -299,8 +297,8 @@ export default function BlogDetailsPage({ post }) {
           </article>
 
           <aside className="space-y-8">
-            <div className="rounded-2xl border border-line-light p-5 dark:border-zinc-800">
-              <h3 className="font-maxot mb-4 text-base font-semibold text-ink dark:text-zinc-100">
+            <div className="border border-line-light p-5">
+              <h3 className="mb-4 text-base font-semibold text-ink">
                 Recent Posts
               </h3>
               <div className="space-y-4">
@@ -310,7 +308,7 @@ export default function BlogDetailsPage({ post }) {
                     href={`/blog/${recent.slug}`}
                     key={recent.id}
                   >
-                    <span className="relative size-16 shrink-0 overflow-hidden rounded-lg">
+                    <span className="relative size-16 shrink-0 overflow-hidden">
                       <Image
                         alt={recent.title}
                         className="object-cover transition duration-300 group-hover:scale-110"
@@ -320,7 +318,7 @@ export default function BlogDetailsPage({ post }) {
                       />
                     </span>
                     <div>
-                      <p className="font-maxot line-clamp-2 text-sm font-medium text-ink transition group-hover:text-[#E63946] dark:text-zinc-200">
+                      <p className="line-clamp-2 text-sm font-medium text-ink transition group-hover:text-red">
                         {recent.title}
                       </p>
                       <span className="text-xs text-ink-soft">
@@ -332,15 +330,15 @@ export default function BlogDetailsPage({ post }) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-line-light p-5 dark:border-zinc-800">
-              <h3 className="font-maxot mb-4 text-base font-semibold text-ink dark:text-zinc-100">
+            <div className="border border-line-light p-5">
+              <h3 className="mb-4 text-base font-semibold text-ink">
                 Categories
               </h3>
               <ul className="space-y-1">
                 {categoryCounts.map(({ category, count }) => (
                   <li key={category}>
                     <Link
-                      className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-ink-soft transition hover:bg-[#E63946]/10 hover:text-[#E63946] dark:text-zinc-300"
+                      className="flex items-center justify-between px-3 py-2 text-sm text-ink-soft transition hover:bg-red/10 hover:text-red"
                       href={`/blog?category=${encodeURIComponent(category)}`}
                     >
                       <span className="flex items-center gap-2">
@@ -354,14 +352,14 @@ export default function BlogDetailsPage({ post }) {
               </ul>
             </div>
 
-            <div className="rounded-2xl border border-line-light p-5 dark:border-zinc-800">
-              <h3 className="font-maxot mb-4 text-base font-semibold text-ink dark:text-zinc-100">
+            <div className="border border-line-light p-5">
+              <h3 className="mb-4 text-base font-semibold text-ink">
                 Tags
               </h3>
               <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
                   <span
-                    className="rounded-full border border-line-light px-3 py-1.5 text-xs font-medium text-ink-soft transition hover:border-[#E63946]/60 hover:bg-[#E63946]/10 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
+                    className="border border-line-light px-3 py-1.5 text-xs font-medium text-ink-soft transition hover:border-red/60 hover:bg-red/10 hover:text-red"
                     key={tag}
                   >
                     {tag}

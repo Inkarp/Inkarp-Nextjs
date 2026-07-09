@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Fragment, useEffect, useRef, useState } from "react";
-import WorkflowIcon from "@/components/home/WorkflowIcon";
-import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import Link from"next/link";
+import { useRouter } from"next/navigation";
+import { Fragment, useEffect, useRef, useState } from"react";
+import WorkflowIcon from"@/components/home/WorkflowIcon";
+import { topicSlug, workflowIndustries, workflowTopics } from"@/data/homeShowcase";
 
 export default function WorkflowIndustryGrid() {
   const router = useRouter();
@@ -45,7 +45,7 @@ export default function WorkflowIndustryGrid() {
                   tabIndex={0}
                   onClick={() => router.push(`/workflows/${item.cat}`)}
                   // onKeyDown={(e) => {
-                  //   if (e.key === "Enter") router.push(`/workflows/${item.cat}`);
+                  //   if (e.key ==="Enter") router.push(`/workflows/${item.cat}`);
                   // }}
                   onMouseEnter={() => showTopics(item.cat)}
                   onMouseLeave={hideTopics}
@@ -53,17 +53,17 @@ export default function WorkflowIndustryGrid() {
                   onBlur={hideTopics}
                   className={`relative z-10 flex cursor-pointer flex-col gap-3  border p-5 transition ${
                     isActive
-                      ? "border-red bg-white shadow-lg dark:bg-zinc-900"
-                      : "border-line-light bg-[whitesmoke] hover:-translate-y-0.5 hover:border-red/40 dark:border-zinc-800 dark:bg-zinc-900"
+                      ?"border-red bg-white"
+                      :"border-line-light bg-parchment-alt hover:-translate-y-0.5 hover:border-red/40"
                   }`}
                 >
-                  <WorkflowIcon cat={item.cat} className="h-8 w-8 text-black" />
-                  <h2 className="text-[15px] font-semibold leading-snug text-black dark:text-zinc-100">
+                  <WorkflowIcon cat={item.cat} className="h-8 w-8 text-ink" />
+                  <h2 className="text-[15px] font-semibold leading-snug text-ink">
                     {item.industry}
                   </h2>
-                  <p className="flex-1 text-[13px] text-ink-soft dark:text-zinc-400">{item.tagline}</p>
+                  <p className="flex-1 text-[13px] text-ink-soft">{item.tagline}</p>
                   <div className="flex items-center justify-between gap-3">
-                    <span className="w-fit rounded-full bg-white px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-black">
+                    <span className="w-fit bg-white px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wide text-ink">
                       {item.steps}-Step Workflow
                     </span>
                     <Link
@@ -80,14 +80,14 @@ export default function WorkflowIndustryGrid() {
 
             {activeIndex !== -1 && (
               <div
-                className="relative col-span-full -mt-2 animate-[topicReveal_.25s_ease]  border border-black bg-white p-6 pt-8 shadow-lg dark:bg-zinc-900"
+                className="relative col-span-full -mt-2 animate-[topicReveal_.25s_ease]  border border-black bg-white p-6 pt-8"
                 onMouseEnter={() => showTopics(hoveredCat)}
                 onMouseLeave={hideTopics}
               >
                 {/* Caret linking this panel back to the hovered industry card above */}
                 <span
                   aria-hidden="true"
-                  className="absolute -top-[9px] h-4 w-4 -translate-x-1/2 rotate-45 border-l border-t border-red bg-white dark:bg-zinc-900"
+                  className="absolute -top-[9px] h-4 w-4 -translate-x-1/2 rotate-45 border-l border-t border-red bg-white"
                   style={{ left: `calc((100% / 3) * ${activeIndex + 0.5})` }}
                 />
 
@@ -100,13 +100,13 @@ export default function WorkflowIndustryGrid() {
                     <Link
                       key={topic.tag}
                       href={`/workflows/${hoveredCat}/${topicSlug(topic.tag)}`}
-                      className="flex flex-col gap-2 rounded-lg border border-line-light bg-[whitesmoke] p-5 transition hover:-translate-y-0.5 hover:border-red dark:border-zinc-700 dark:bg-zinc-800"
+                      className="flex flex-col gap-2 border border-line-light bg-parchment-alt p-5 transition hover:-translate-y-0.5 hover:border-red"
                     >
                       <div className="text-[10px] uppercase tracking-wide text-red">{topic.tag}</div>
-                      <h4 className="text-[15px] font-semibold leading-snug text-ink dark:text-zinc-100">
+                      <h4 className="text-[15px] font-semibold leading-snug text-ink">
                         {topic.title}
                       </h4>
-                      <p className="flex-grow text-[12.5px] text-ink-soft dark:text-zinc-400">{topic.desc}</p>
+                      <p className="flex-grow text-[12.5px] text-ink-soft">{topic.desc}</p>
                       <span className="self-start border-b border-transparent text-[11px] uppercase tracking-wide text-red transition-colors hover:border-red">
                         Open workflow →
                       </span>

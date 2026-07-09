@@ -1,22 +1,22 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { FiArrowRight, FiCalendar, FiUser } from "react-icons/fi";
+import { useEffect, useMemo, useRef, useState } from"react";
+import Image from"next/image";
+import Link from"next/link";
+import { useSearchParams } from"next/navigation";
+import { FiArrowRight, FiCalendar, FiUser } from"react-icons/fi";
 import {
   categories,
   formatPostDate,
   getPostsByCategory,
-} from "@/data/blogs";
+} from"@/data/blogs";
 
 const PAGE_SIZE = 10;
 
 function BlogCard({ post }) {
   return (
     <Link
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line-light bg-parchment shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-zinc-700 dark:bg-zinc-900"
+      className="group flex h-full flex-col overflow-hidden border border-line-light bg-parchment transition hover:-translate-y-1 hover:border-red/35"
       href={`/blog/${post.slug}`}
     >
       <div className="relative h-48 overflow-hidden">
@@ -27,13 +27,13 @@ function BlogCard({ post }) {
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           src={post.image}
         />
-        <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-[#E63946] px-3 py-1 text-xs font-semibold uppercase text-parchment">
+        <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 bg-red px-3 py-1 text-xs font-semibold uppercase text-parchment">
           {post.category}
         </span>
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <div className="flex items-center gap-4 text-xs text-ink-soft dark:text-zinc-400">
+        <div className="flex items-center gap-4 text-xs text-ink-soft">
           <span className="flex items-center gap-1.5">
             <FiUser className="size-3.5" />
             {post.author}
@@ -44,15 +44,15 @@ function BlogCard({ post }) {
           </span>
         </div>
 
-        <h3 className="font-maxot line-clamp-2 text-lg leading-snug text-ink transition group-hover:text-[#E63946] dark:text-zinc-100">
+        <h3 className="line-clamp-2 text-lg leading-snug text-ink transition group-hover:text-red">
           {post.title}
         </h3>
 
-        <p className="line-clamp-2 flex-1 text-sm text-ink-soft dark:text-zinc-400">
+        <p className="line-clamp-2 flex-1 text-sm text-ink-soft">
           {post.excerpt}
         </p>
 
-        <span className="font-maxot mt-1 inline-flex items-center gap-2 text-sm font-semibold text-red">
+        <span className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-red">
           Read More
           <FiArrowRight className="size-4 transition group-hover:translate-x-1" />
         </span>
@@ -63,7 +63,7 @@ function BlogCard({ post }) {
 
 export default function BlogsPage() {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "All";
+  const initialCategory = searchParams.get("category") ||"All";
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [renderedCategory, setRenderedCategory] = useState(initialCategory);
@@ -93,7 +93,7 @@ export default function BlogsPage() {
           setVisibleCount((count) => count + PAGE_SIZE);
         }
       },
-      { rootMargin: "200px" }
+      { rootMargin:"200px" }
     );
 
     observer.observe(target);
@@ -103,14 +103,14 @@ export default function BlogsPage() {
   return (
     <main className="overflow-hidden">
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-[1180px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-2 pb-10" data-reveal>
           {categories.map((category) => (
             <button
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`px-4 py-2 text-sm font-medium transition ${
                 activeCategory === category
-                  ? "bg-[#E63946] text-parchment shadow"
-                  : "border border-line-light text-ink-soft hover:border-[#E63946]/60 hover:text-[#E63946] dark:border-zinc-700 dark:text-zinc-300"
+                  ?"bg-red text-parchment"
+                  :"border border-line-light text-ink-soft hover:border-red/60 hover:text-red"
               }`}
               key={category}
               onClick={() => setActiveCategory(category)}
@@ -122,7 +122,7 @@ export default function BlogsPage() {
         </div>
 
         {filteredPosts.length === 0 ? (
-          <p className="rounded-xl border border-dashed border-zinc-300 px-4 py-10 text-center text-sm text-ink-soft dark:border-zinc-700 dark:text-zinc-400">
+          <p className="border border-dashed border-line-light px-4 py-10 text-center text-sm text-ink-soft">
             No posts in this category yet.
           </p>
         ) : (
@@ -135,7 +135,7 @@ export default function BlogsPage() {
 
             {hasMore && (
               <div className="flex justify-center pt-10" ref={loadMoreRef}>
-                <div className="size-8 animate-spin rounded-full border-2 border-zinc-300 border-t-[#E63946]" />
+                <div className="size-8 animate-spin border-2 border-line-light border-t-red" />
               </div>
             )}
           </div>

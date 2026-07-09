@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { MdOutlineErrorOutline } from "react-icons/md";
+import { useEffect } from"react";
+import { MdOutlineErrorOutline } from"react-icons/md";
 
 export default function Error({ error, reset }) {
   useEffect(() => {
@@ -9,15 +9,15 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-navy px-6 text-parchment">
-      <div className="max-w-md rounded-lg border border-red-400/20 bg-parchment/5 p-6">
-        <MdOutlineErrorOutline className="mb-4 text-4xl text-red-300" />
-        <h1 className="text-2xl font-semibold">Something went wrong</h1>
-        <p className="mt-3 text-sm leading-6 text-zinc-300">
+    <main className="flex min-h-screen items-center justify-center bg-parchment px-6 text-ink">
+      <div className="max-w-md border border-line-light bg-white p-8">
+        <MdOutlineErrorOutline className="mb-4 text-4xl text-red" />
+        <h1 className="text-2xl font-semibold text-ink">Something went wrong</h1>
+        <p className="mt-3 text-sm leading-6 text-ink-soft">
           The page had a problem while loading. You can try again from here.
         </p>
         <button
-          className="mt-6 rounded-md bg-cyan-300 px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-cyan-200"
+          className="mt-6 border border-red bg-red px-5 py-2.5 text-sm font-semibold text-parchment transition hover:bg-transparent hover:text-red"
           onClick={reset}
           type="button"
         >

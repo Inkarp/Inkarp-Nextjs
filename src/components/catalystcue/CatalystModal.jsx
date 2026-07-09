@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { MdClose } from "react-icons/md";
+import { useEffect, useRef, useState } from"react";
+import { MdClose } from"react-icons/md";
 
 const initialFormData = {
-  name: "",
-  designation: "",
-  email: "",
-  department: "",
-  institutionName: "",
-  mobileNumber: "",
+  name:"",
+  designation:"",
+  email:"",
+  department:"",
+  institutionName:"",
+  mobileNumber:"",
 };
 
 export default function CatalystModal({ onClose }) {
@@ -19,12 +19,12 @@ export default function CatalystModal({ onClose }) {
   const backdropRef = useRef(null);
 
   useEffect(() => {
-    if (status !== "success") {
+    if (status !=="success") {
       return undefined;
     }
 
     const timer = window.setTimeout(() => {
-      window.location.href = "/thank-you";
+      window.location.href ="/thank-you";
     }, 300);
 
     return () => window.clearTimeout(timer);
@@ -32,7 +32,7 @@ export default function CatalystModal({ onClose }) {
 
   useEffect(() => {
     const onKey = (event) => {
-      if (event.key === "Escape") {
+      if (event.key ==="Escape") {
         onClose?.();
       }
     };
@@ -62,12 +62,11 @@ export default function CatalystModal({ onClose }) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(
-        "https://inkarppersonal.vercel.app/api/catalyst/register",
+      const response = await fetch("https://inkarppersonal.vercel.app/api/catalyst/register",
         {
           body: JSON.stringify(formData),
-          headers: { "Content-Type": "application/json" },
-          method: "POST",
+          headers: {"Content-Type":"application/json" },
+          method:"POST",
         }
       );
       const data = await response.json().catch(() => ({}));
@@ -95,18 +94,18 @@ export default function CatalystModal({ onClose }) {
       role="dialog"
     >
       <div className="relative z-10 mx-auto max-w-md">
-        <div className="relative space-y-2 rounded-lg bg-parchment/90 p-6 shadow-lg">
-          <h2 className="font-maxot text-lg font-semibold md:text-xl">
+        <div className="relative space-y-2 bg-parchment/90 p-6">
+          <h2 className="text-lg font-semibold md:text-xl">
             Request a Physical Copy
           </h2>
-          <p className="mb-4 text-sm text-neutral-600">
+          <p className="mb-4 text-sm text-ink-soft">
             Fill in your details and our team will contact you for delivery
             confirmation.
           </p>
 
           <button
             aria-label="Close"
-            className="absolute right-4 top-4 cursor-pointer rounded-full border border-black/30 p-1 transition hover:border-black hover:bg-parchment/20"
+            className="absolute right-4 top-4 cursor-pointer border border-black/30 p-1 transition hover:border-black hover:bg-parchment/20"
             onClick={onClose}
             type="button"
           >
@@ -115,7 +114,7 @@ export default function CatalystModal({ onClose }) {
 
           <form className="grid grid-cols-1 gap-3 sm:grid-cols-2" onSubmit={handleSubmit}>
             <input
-              className="w-full rounded-full border border-zinc-400 px-3 py-2"
+              className="w-full border border-line-light px-3 py-2"
               name="name"
               onChange={handleChange}
               placeholder="Full Name"
@@ -123,14 +122,14 @@ export default function CatalystModal({ onClose }) {
               value={formData.name}
             />
             <input
-              className="w-full rounded-full border border-zinc-400 px-3 py-2"
+              className="w-full border border-line-light px-3 py-2"
               name="designation"
               onChange={handleChange}
               placeholder="Designation"
               value={formData.designation}
             />
             <input
-              className="w-full rounded-full border border-zinc-400 px-3 py-2"
+              className="w-full border border-line-light px-3 py-2"
               name="email"
               onChange={handleChange}
               placeholder="Email"
@@ -139,14 +138,14 @@ export default function CatalystModal({ onClose }) {
               value={formData.email}
             />
             <input
-              className="w-full rounded-full border border-zinc-400 px-3 py-2"
+              className="w-full border border-line-light px-3 py-2"
               name="department"
               onChange={handleChange}
               placeholder="Department"
               value={formData.department}
             />
             <input
-              className="w-full rounded-full border border-zinc-400 px-3 py-2"
+              className="w-full border border-line-light px-3 py-2"
               name="institutionName"
               onChange={handleChange}
               placeholder="Institution Name"
@@ -154,7 +153,7 @@ export default function CatalystModal({ onClose }) {
               value={formData.institutionName}
             />
             <input
-              className="w-full rounded-full border border-zinc-400 px-3 py-2"
+              className="w-full border border-line-light px-3 py-2"
               name="mobileNumber"
               onChange={handleChange}
               placeholder="Mobile Number"
@@ -163,21 +162,21 @@ export default function CatalystModal({ onClose }) {
             />
 
             <button
-              className="w-full rounded-full bg-red py-2.5 text-parchment hover:bg-[#e01b2a] disabled:opacity-60"
+              className="w-full bg-red py-2.5 text-parchment hover:bg-transparent hover:text-red disabled:opacity-60"
               disabled={isSubmitting}
               type="submit"
             >
-              {isSubmitting ? "Submitting..." : "Submit"}
+              {isSubmitting ?"Submitting..." :"Submit"}
             </button>
 
-            {status === "success" ? (
-              <div className="rounded-md border border-green-200 bg-green-50 px-3 py-2 text-center text-sm text-green-700">
+            {status ==="success" ? (
+              <div className="border border-green-200 bg-green-50 px-3 py-2 text-center text-sm text-green-700">
                 Registration successful! Redirecting...
               </div>
             ) : null}
 
-            {status === "error" ? (
-              <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-center text-sm text-red-700">
+            {status ==="error" ? (
+              <div className="border border-red/20 bg-red/5 px-3 py-2 text-center text-sm text-red">
                 Something went wrong. Please try again.
               </div>
             ) : null}

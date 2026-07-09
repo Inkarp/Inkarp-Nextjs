@@ -31,8 +31,8 @@ export default function InPageNav({ links = [] }) {
   if (!links.length) return null;
 
   return (
-    <div className="sticky top-0 z-40 border-b border-line-light bg-parchment/95 backdrop-blur-sm shadow-sm dark:border-zinc-800 dark:bg-zinc-950/95">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="sticky top-0 z-40 border-b border-line-light bg-parchment/95 backdrop-blur-sm">
+      <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <nav className="flex gap-0 overflow-x-auto scrollbar-none">
           {links.map(({ id, label }) => (
             <button
@@ -41,7 +41,7 @@ export default function InPageNav({ links = [] }) {
               className={`shrink-0 border-b-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide transition-colors whitespace-nowrap ${
                 active === id
                   ? 'border-red text-red'
-                  : 'border-transparent text-black hover:text-black dark:text-zinc-400 dark:hover:text-zinc-100'
+                  : 'border-transparent text-black hover:text-black'
               }`}
             >
               {label}

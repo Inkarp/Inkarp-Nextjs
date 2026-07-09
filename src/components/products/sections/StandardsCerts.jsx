@@ -71,17 +71,17 @@ export default function StandardsCerts({ cards = [], section, productName }) {
   if (!cards.length) return null;
 
   return (
-    <section id="standards" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-14 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-7xl">
+    <section id="standards" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1180px]">
         <div className="relative max-w-3xl">
-          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink dark:text-zinc-100">
-            <span className="inline-block size-2 rounded-full bg-red" />
+          <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink">
+            <span className="inline-block size-2 bg-red" />
             Standards &amp; certificates
           </p>
-          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100 sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
             {section?.title ?? 'Quality, safety & certification'}
           </h2>
-          <p className="mt-4 text-base leading-7 text-black dark:text-zinc-400">
+          <p className="mt-4 text-base leading-7 text-black">
             {section?.description ?? `The certifications and safety standards behind ${productName ?? 'this product'}.`}
           </p>
         </div>
@@ -92,10 +92,10 @@ export default function StandardsCerts({ cards = [], section, productName }) {
 
             return (
               <button
-                className={`h-10 rounded-full border px-5 text-sm font-semibold transition ${
+                className={`h-10 border px-5 text-sm font-semibold transition ${
                   isActive
-                    ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900 shadow-sm'
-                    : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-red/30 hover:text-red'
+                    ? 'border-black bg-red text-white'
+                    : 'border-line-light bg-parchment text-black hover:border-red/30 hover:text-red'
                 }`}
                 key={filter.key}
                 onClick={() => setActiveFilter(filter.key)}
@@ -110,19 +110,19 @@ export default function StandardsCerts({ cards = [], section, productName }) {
         <div className="relative mt-6 space-y-3">
           {visibleCards.map((card) => (
             <article
-              className="flex flex-col gap-4 rounded-lg border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 transition hover:border-red/25 hover:shadow-lg hover:shadow-zinc-900/5 md:flex-row md:items-center md:justify-between"
+              className="flex flex-col gap-4 border border-line-light bg-parchment p-5 transition hover:border-red/25-900/5 md:flex-row md:items-center md:justify-between"
               key={card.title}
             >
               <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:items-start">
-                <div className="inline-flex h-9 min-w-12 shrink-0 items-center justify-center rounded-full border border-line-light bg-parchment-alt px-3 text-xs font-bold text-ink dark:border-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
+                <div className="inline-flex h-9 min-w-12 shrink-0 items-center justify-center border border-line-light bg-parchment-alt px-3 text-xs font-bold text-ink">
                   {card.badge}
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-base font-semibold leading-snug tracking-tight text-ink dark:text-zinc-100">
+                  <h3 className="text-base font-semibold leading-snug tracking-tight text-ink">
                     {card.title}
                   </h3>
                   {card.description && (
-                    <p className="mt-2 text-sm leading-6 text-black dark:text-zinc-400">
+                    <p className="mt-2 text-sm leading-6 text-black">
                       {card.description}
                     </p>
                   )}
@@ -133,7 +133,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
                 <div className="flex shrink-0 flex-wrap gap-2 md:justify-end">
                   {card.tags.map((tag) => (
                     <span
-                      className="inline-flex h-9 items-center rounded-full border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-3 text-sm font-medium text-black dark:text-zinc-100"
+                      className="inline-flex h-9 items-center border border-line-light bg-parchment-alt px-3 text-sm font-medium text-black"
                       key={tag}
                     >
                       {tag}

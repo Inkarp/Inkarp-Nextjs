@@ -304,27 +304,27 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
       id={popup.ovId}
       aria-modal="true"
       role="dialog"
-      className="nudge-overlay fixed inset-0 z-[90] flex items-center justify-center bg-navy/35 dark:bg-zinc-950/60 px-4 backdrop-blur-[2px]"
+      className="nudge-overlay fixed inset-0 z-[90] flex items-center justify-center bg-navy/35 px-4 backdrop-blur-[2px]"
       onClick={(event) => { if (event.target === event.currentTarget) close(); }}
     >
-      <div className="nudge-box relative w-full max-w-md rounded-md border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-6 shadow-[0_28px_90px_rgba(15,23,42,0.28)]">
+      <div className="nudge-box relative w-full max-w-md border border-line-light bg-parchment p-6">
         <button
           aria-label="Close"
-          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md text-red transition hover:bg-parchment-alt dark:hover:bg-zinc-800"
+          className="absolute right-3 top-3 inline-flex size-9 items-center justify-center text-red transition hover:bg-parchment-alt"
           onClick={close}
           type="button"
         >
           <FiX />
         </button>
 
-        <div className="mb-4 inline-flex size-11 items-center justify-center rounded-md bg-parchment-alt text-red dark:bg-zinc-800">
+        <div className="mb-4 inline-flex size-11 items-center justify-center bg-parchment-alt text-red">
           {(() => { const Icon = popup.icon ?? FiMessageCircle; return <Icon />; })()}
         </div>
 
-        <h2 className="pr-8 text-2xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100">
+        <h2 className="pr-8 text-2xl font-semibold leading-tight tracking-tight text-ink">
           {popup.title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-ink-soft dark:text-zinc-400">
+        <p className="mt-3 text-sm leading-6 text-ink-soft">
           {popup.body}
         </p>
 
@@ -337,8 +337,8 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
                   key={action.label}
                   className={
                     isExternal
-                      ? 'inline-flex h-11 items-center justify-center rounded-md bg-navy dark:bg-zinc-800 px-4 text-sm font-semibold text-parchment transition hover:bg-zinc-800 dark:hover:bg-zinc-700'
-                      : 'inline-flex h-11 items-center justify-center rounded-md bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]'
+                      ? 'inline-flex h-11 items-center justify-center bg-navy px-4 text-sm font-semibold text-parchment transition hover:bg-parchment-alt '
+                      : 'inline-flex h-11 items-center justify-center bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]'
                   }
                   href={action.href}
                   onClick={close}
@@ -355,8 +355,8 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
                 key={action.label}
                 className={
                   action.closeOnly
-                    ? 'inline-flex h-11 items-center justify-center rounded-md border border-line-light dark:border-zinc-700 bg-parchment dark:bg-zinc-900 px-4 text-sm font-semibold text-ink dark:text-zinc-100 transition hover:border-red hover:text-red'
-                    : 'inline-flex h-11 items-center justify-center rounded-md bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]'
+                    ? 'inline-flex h-11 items-center justify-center border border-line-light bg-parchment px-4 text-sm font-semibold text-ink transition hover:border-red hover:text-red'
+                    : 'inline-flex h-11 items-center justify-center bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]'
                 }
                 onClick={() => {
                   if (action.closeOnly) { close(); return; }

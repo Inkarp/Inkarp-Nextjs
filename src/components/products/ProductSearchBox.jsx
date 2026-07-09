@@ -1,17 +1,17 @@
 "use client";
 
-import Link from "next/link";
-import { useMemo, useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import { productMatchesSearch } from "@/lib/productSearch";
-import PrincipalLogo from "@/components/products/PrincipalLogo";
+import Link from"next/link";
+import { useMemo, useState } from"react";
+import { FiSearch } from"react-icons/fi";
+import { productMatchesSearch } from"@/lib/productSearch";
+import PrincipalLogo from"@/components/products/PrincipalLogo";
 
 // Same tracking endpoint the /products search uses — every submitted global
 // search is on record before results are shown, whichever entry point it came from.
 function logSearch({ query, resultsCount }) {
   return fetch("/api/search-log", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
+    method:"POST",
+    headers: {"Content-Type":"application/json" },
     body: JSON.stringify({ query, brands: [], resultsCount }),
     keepalive: true,
   }).catch(() => {});
@@ -21,7 +21,7 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
   if (onDark) {
     return (
       <Link
-        className="block rounded-xl border border-white/10 bg-white p-4 outline-none transition-colors duration-200 hover:border-red/40 focus-visible:ring-2 focus-visible:ring-white/60"
+        className="block border border-line-light bg-white p-4 outline-none transition-colors duration-200 hover:border-red/40 focus-visible:ring-2 focus-visible:ring-red/40"
         href={product.href}
         onClick={onClose}
       >
@@ -43,8 +43,8 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
     <Link
       className={
         compact
-          ? "block rounded-xl p-3 outline-none transition-colors duration-200 hover:bg-[#faf7f5] focus-visible:ring-2 focus-visible:ring-red/40"
-          : "block rounded-xl border border-line-light bg-white p-4 outline-none transition-colors duration-200 hover:border-red/40 hover:bg-[#faf7f5] focus-visible:ring-2 focus-visible:ring-red/40"
+          ?"block p-3 outline-none transition-colors duration-200 hover:bg-parchment-alt focus-visible:ring-2 focus-visible:ring-red/40"
+          :"block border border-line-light bg-white p-4 outline-none transition-colors duration-200 hover:border-red/40 hover:bg-parchment-alt focus-visible:ring-2 focus-visible:ring-red/40"
       }
       href={product.href}
       onClick={onClose}
@@ -62,7 +62,7 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
           </div>
         </div>
         {compact ? (
-          <span className="shrink-0 rounded-full bg-[#faf7f5] px-2.5 py-1 text-[11px] font-semibold text-ink-soft">
+          <span className="shrink-0 bg-parchment-alt px-2.5 py-1 text-[11px] font-semibold text-ink-soft">
             {product.industry}
           </span>
         ) : null}
@@ -76,8 +76,8 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
 
 export default function ProductSearchBox({
   products,
-  defaultValue = "",
-  variant = "page",
+  defaultValue ="",
+  variant ="page",
   onClose,
 }) {
   const [query, setQuery] = useState(defaultValue);
@@ -85,9 +85,9 @@ export default function ProductSearchBox({
   // so every result set shown corresponds to a search word actually captured.
   const [submittedQuery, setSubmittedQuery] = useState(defaultValue.trim());
   const trimmedQuery = query.trim();
-  const isHeader = variant === "header";
-  const isModal = variant === "modal";
-  const isFullscreen = variant === "fullscreen";
+  const isHeader = variant ==="header";
+  const isModal = variant ==="modal";
+  const isFullscreen = variant ==="fullscreen";
 
   const showSearchButton = trimmedQuery.length >= 2;
   const canSubmit = trimmedQuery.length === 0 || trimmedQuery.length >= 2;
@@ -120,12 +120,12 @@ export default function ProductSearchBox({
     return (
       <div className="relative">
         <form onSubmit={handleSubmit} role="search">
-          <div className="relative flex items-center gap-3 border-b border-white/30 transition-colors focus-within:border-white">
+          <div className="relative flex items-center gap-3 border-b border-line-light transition-colors focus-within:border-red">
             <input
               aria-label="Search products"
               autoComplete="off"
               autoFocus
-              className="w-full bg-transparent py-4 text-xl text-white outline-none placeholder:text-white/50 sm:text-2xl"
+              className="w-full bg-transparent py-4 text-xl text-white outline-none placeholder:text-ink-muted/70 sm:text-2xl"
               name="q"
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Type your search keywords here"
@@ -134,8 +134,8 @@ export default function ProductSearchBox({
             />
             <button
               aria-label="Search"
-              className={`shrink-0 overflow-hidden whitespace-nowrap rounded-full bg-white text-sm font-bold text-red transition-all duration-300 ease-out disabled:cursor-not-allowed disabled:opacity-40 ${
-                showSearchButton ? "h-11 max-w-[120px] px-5 opacity-100" : "h-11 max-w-0 px-0 opacity-0"
+              className={`shrink-0 overflow-hidden whitespace-nowrap bg-white text-sm font-bold text-red transition-all duration-300 ease-out disabled:cursor-not-allowed disabled:opacity-40 ${
+                showSearchButton ?"h-11 max-w-[120px] px-5 opacity-100" :"h-11 max-w-0 px-0 opacity-0"
               }`}
               disabled={!showSearchButton}
               type="submit"
@@ -148,12 +148,12 @@ export default function ProductSearchBox({
         {submittedQuery ? (
           <div className="mt-8">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm font-medium text-white/70">
-                Related products for{" "}
-                <span className="font-semibold text-white">{submittedQuery}</span>
+              <p className="text-sm font-medium text-ink-soft">
+                Related products for{""}
+                <span className="font-semibold text-ink">{submittedQuery}</span>
               </p>
               <Link
-                className="text-sm font-semibold text-white underline-offset-4 outline-none hover:underline focus-visible:underline"
+                className="text-sm font-semibold text-ink underline-offset-4 outline-none hover:underline focus-visible:underline"
                 href={`/products?q=${encodeURIComponent(submittedQuery)}`}
                 onClick={onClose}
               >
@@ -173,7 +173,7 @@ export default function ProductSearchBox({
                 ))}
               </div>
             ) : (
-              <p className="mt-5 text-sm text-white/60">
+              <p className="mt-5 text-sm text-ink-soft">
                 No related products found. Try a product name, principal, or industry.
               </p>
             )}
@@ -190,26 +190,26 @@ export default function ProductSearchBox({
           <div className="relative min-w-0 flex-1">
             <FiSearch
               className={`pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-soft ${
-                isHeader ? "text-lg" : isModal ? "text-2xl" : "text-xl"
+                isHeader ?"text-lg" : isModal ?"text-2xl" :"text-xl"
               }`}
             />
             <input
               aria-label="Search products"
               autoComplete="off"
               autoFocus={isHeader || isModal}
-              className={`w-full rounded-xl border border-line-light bg-[#faf7f5] text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/70 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/15 ${
+              className={`w-full border border-line-light bg-parchment-alt text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/70 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/15 ${
                 isHeader
-                  ? "h-12 pl-11 pr-4 text-sm"
+                  ?"h-12 pl-11 pr-4 text-sm"
                   : isModal
-                    ? "h-16 pl-14 pr-4 text-lg shadow-sm"
-                    : "h-14 pl-12 pr-4 text-base"
+                    ?"h-16 pl-14 pr-4 text-lg"
+                    :"h-14 pl-12 pr-4 text-base"
               }`}
               name="q"
               onChange={(event) => setQuery(event.target.value)}
               placeholder={
                 isHeader
-                  ? "Search products..."
-                  : "Type product, principal, country, industry, application..."
+                  ?"Search products..."
+                  :"Type product, principal, country, industry, application..."
               }
               type="search"
               value={query}
@@ -218,12 +218,12 @@ export default function ProductSearchBox({
 
           <button
             aria-label="Search"
-            className={`shrink-0 overflow-hidden whitespace-nowrap rounded-full bg-red font-bold text-white transition-all duration-300 ease-out hover:bg-[#9f000d] disabled:cursor-not-allowed disabled:opacity-40 ${
-              isHeader ? "text-xs" : "text-sm"
+            className={`shrink-0 overflow-hidden whitespace-nowrap border border-red bg-red font-bold text-parchment transition-all duration-300 ease-out hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-40 ${
+              isHeader ?"text-xs" :"text-sm"
             } ${
               showSearchButton
-                ? `${isHeader ? "h-12" : isModal ? "h-16" : "h-14"} max-w-[110px] px-5 opacity-100`
-                : `${isHeader ? "h-12" : isModal ? "h-16" : "h-14"} max-w-0 px-0 opacity-0`
+                ? `${isHeader ?"h-12" : isModal ?"h-16" :"h-14"} max-w-[110px] px-5 opacity-100`
+                : `${isHeader ?"h-12" : isModal ?"h-16" :"h-14"} max-w-0 px-0 opacity-0`
             }`}
             disabled={!showSearchButton}
             type="submit"
@@ -234,7 +234,7 @@ export default function ProductSearchBox({
       </form>
 
       {submittedQuery && isHeader ? (
-        <div className="absolute left-0 right-0 z-50 mt-2 max-h-[440px] overflow-hidden rounded-2xl border border-line-light bg-white shadow-lg">
+        <div className="absolute left-0 right-0 z-50 mt-2 max-h-[440px] overflow-hidden border border-line-light bg-white">
           <div className="max-h-[inherit] overflow-y-auto p-2">
             {results.length ? (
               <div className="space-y-1">
@@ -255,7 +255,7 @@ export default function ProductSearchBox({
 
             <div className="border-t border-line-light p-2">
               <Link
-                className="block w-full rounded-full bg-red px-4 py-2.5 text-center text-sm font-semibold text-white outline-none transition-colors duration-200 hover:bg-[#9f000d] focus-visible:ring-2 focus-visible:ring-red/40"
+                className="block w-full border border-red bg-red px-4 py-2.5 text-center text-sm font-semibold text-parchment outline-none transition-colors duration-200 hover:bg-transparent hover:text-red focus-visible:ring-2 focus-visible:ring-red/40"
                 href={`/products?q=${encodeURIComponent(submittedQuery)}`}
                 onClick={onClose}
               >
@@ -270,13 +270,13 @@ export default function ProductSearchBox({
         <div
           className={
             isModal
-              ? "mt-4 max-h-[min(62vh,560px)] overflow-y-auto rounded-2xl border border-line-light bg-white p-4 shadow-md"
-              : "mt-3 rounded-2xl border border-line-light bg-white p-4 shadow-sm"
+              ?"mt-4 max-h-[min(62vh,560px)] overflow-y-auto border border-line-light bg-white p-4"
+              :"mt-3 border border-line-light bg-white p-4"
           }
         >
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-sm font-medium text-ink-soft">
-              Related products for{" "}
+              Related products for{""}
               <span className="font-semibold text-ink">{submittedQuery}</span>
             </p>
             <Link

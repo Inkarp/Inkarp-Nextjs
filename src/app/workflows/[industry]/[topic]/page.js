@@ -1,8 +1,8 @@
-import { notFound } from "next/navigation";
-import WorkflowExplorer from "@/components/products/WorkflowExplorer";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
-import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
-import { buildDynamicMetadata } from "@/data/pageSeo";
+import { notFound } from"next/navigation";
+import WorkflowExplorer from"@/components/products/WorkflowExplorer";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
+import { topicSlug, workflowIndustries, workflowTopics } from"@/data/homeShowcase";
+import { buildDynamicMetadata } from"@/data/pageSeo";
 
 function resolve(industry, topic) {
   const activeIndustry = workflowIndustries.find((item) => item.cat === industry);
@@ -15,7 +15,7 @@ function resolve(industry, topic) {
 export async function generateMetadata({ params }) {
   const { industry, topic } = await params;
   const { activeIndustry, activeTopic } = resolve(industry, topic);
-  if (!activeIndustry || !activeTopic) return { title: "Workflow Not Found - Inkarp" };
+  if (!activeIndustry || !activeTopic) return { title:"Workflow Not Found - Inkarp" };
 
   return buildDynamicMetadata({
     path: `/workflows/${industry}/${topic}`,
@@ -40,13 +40,13 @@ export default async function WorkflowTopicPage({ params }) {
   if (!activeIndustry || !activeTopic) notFound();
 
   const trail = [
-    { label: "Workflows", href: "/workflows" },
+    { label:"Workflows", href:"/workflows" },
     { label: activeIndustry.industry, href: `/workflows/${industry}` },
     { label: activeTopic.title, href: `/workflows/${industry}/${topic}` },
   ];
 
   return (
-    <main className="bg-parchment-alt dark:bg-zinc-950 min-h-screen" data-scroll-skip>
+    <main className="bg-parchment-alt min-h-screen" data-scroll-skip>
       <BreadcrumbJsonLd trail={trail} />
       <PageBreadcrumbs trail={trail} />
       <WorkflowExplorer industry={industry} topicSlug={topic} />

@@ -1,24 +1,24 @@
-import { FaRupeeSign, FaTruckLoading } from "react-icons/fa";
-import { MdEmail, MdLocalPhone, MdOutlineMail } from "react-icons/md";
-import RecTag from "@/components/home/RecTag";
+import { FaRupeeSign, FaTruckLoading } from"react-icons/fa";
+import { MdEmail, MdLocalPhone, MdOutlineMail } from"react-icons/md";
+import RecTag from"@/components/home/RecTag";
 
 const supportData = [
   {
-    title: "Import / Logistics / Customs\nRelated Enquiries",
-    email: "saritha@inkarp.co.in",
-    phone: "9949018605",
+    title:"Import / Logistics / Customs\nRelated Enquiries",
+    email:"saritha@inkarp.co.in",
+    phone:"9949018605",
     icon: FaTruckLoading,
   },
   {
-    title: "Accounts / Finance Enquiries",
-    email: "sundar@inkarp.co.in",
-    phone: "7032221890",
+    title:"Accounts / Finance Enquiries",
+    email:"sundar@inkarp.co.in",
+    phone:"7032221890",
     icon: FaRupeeSign,
   },
   {
-    title: "HR Enquiries",
-    email: "hrd@inkarp.co.in",
-    phone: "8886277717",
+    title:"HR Enquiries",
+    email:"hrd@inkarp.co.in",
+    phone:"8886277717",
     icon: MdOutlineMail,
   },
 ];
@@ -26,7 +26,7 @@ const supportData = [
 export default function SupportSection() {
   return (
     <section className="border-b border-line-light bg-white px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-5xl space-y-10">
+      <div className="mx-auto max-w-[1180px] space-y-10">
         {/* Heading */}
         <div
           className="flex flex-col items-center justify-center gap-3 text-center"
@@ -49,13 +49,13 @@ export default function SupportSection() {
 
             return (
               <article
-                aria-label={item.title.replace(/\n/g, " ")}
-                className="flex flex-col rounded-2xl border border-line-light bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                aria-label={item.title.replace(/\n/g,"")}
+                className="flex flex-col border border-line-light bg-white p-6 transition duration-200 hover:border-red/35"
                 data-scroll-reveal="true"
                 key={item.title}
               >
                 <div className="flex flex-col items-center gap-3 text-center">
-                  <div className="inline-flex size-14 items-center justify-center rounded-full bg-[#faf7f5] text-red">
+                  <div className="inline-flex size-14 items-center justify-center bg-parchment-alt text-red">
                     <Icon className="size-6" />
                   </div>
 
@@ -72,20 +72,20 @@ export default function SupportSection() {
                   <li>
                     <a
                       aria-label={`Email ${item.email}`}
-                      className="group/link flex items-center gap-3 rounded-xl bg-[#faf7f5] px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-white focus-visible:ring-2 focus-visible:ring-red/40"
+                      className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-parchment focus-visible:ring-2 focus-visible:ring-red/40"
                       href={`mailto:${item.email}`}
                     >
-                      <MdEmail className="size-4 shrink-0 text-red transition-colors duration-200 group-hover/link:text-white" />
+                      <MdEmail className="size-4 shrink-0 text-red transition-colors duration-200 group-hover/link:text-parchment" />
                       <span className="truncate">{item.email}</span>
                     </a>
                   </li>
                   <li>
                     <a
                       aria-label={`Call +91 ${item.phone}`}
-                      className="group/link flex items-center gap-3 rounded-xl bg-[#faf7f5] px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-white focus-visible:ring-2 focus-visible:ring-red/40"
+                      className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-parchment focus-visible:ring-2 focus-visible:ring-red/40"
                       href={`tel:+91${item.phone}`}
                     >
-                      <MdLocalPhone className="size-4 shrink-0 text-red transition-colors duration-200 group-hover/link:text-white" />
+                      <MdLocalPhone className="size-4 shrink-0 text-red transition-colors duration-200 group-hover/link:text-parchment" />
                       +91 {item.phone}
                     </a>
                   </li>

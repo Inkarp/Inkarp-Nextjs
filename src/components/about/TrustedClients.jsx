@@ -1,28 +1,28 @@
-import Image from "next/image";
-import SectionHeading from "@/components/home/SectionHeading";
+import Image from"next/image";
+import SectionHeading from"@/components/home/SectionHeading";
 
 const logos = [
-  ["Alembic.png", "Alembic"],
-  ["Aragen.png", "Aragen"],
-  ["Aurobindo.png", "Aurobindo"],
-  ["Basf.png", "BASF"],
-  ["Biocon.png", "Biocon"],
-  ["Divis.png", "Divis"],
-  ["Eisai.png", "Eisai"],
-  ["Gland.png", "Gland"],
-  ["Granuals.png", "Granules"],
-  ["GVK.png", "GVK"],
-  ["Hikal.png", "Hikal"],
-  ["Macleods.png", "Macleods"],
-  ["Mylan.png", "Mylan"],
-  ["Natco.png", "Natco"],
-  ["Pi.png", "PI Industries"],
-  ["Reddy.png", "Dr. Reddy's"],
-  ["Sai.png", "Sai Life Sciences"],
-  ["Srigene.png", "Srigene"],
-  ["Syngene.png", "Syngene"],
-  ["Syngenta.png", "Syngenta"],
-  ["Tcg.png", "TCG"],
+  ["Alembic.png","Alembic"],
+  ["Aragen.png","Aragen"],
+  ["Aurobindo.png","Aurobindo"],
+  ["Basf.png","BASF"],
+  ["Biocon.png","Biocon"],
+  ["Divis.png","Divis"],
+  ["Eisai.png","Eisai"],
+  ["Gland.png","Gland"],
+  ["Granuals.png","Granules"],
+  ["GVK.png","GVK"],
+  ["Hikal.png","Hikal"],
+  ["Macleods.png","Macleods"],
+  ["Mylan.png","Mylan"],
+  ["Natco.png","Natco"],
+  ["Pi.png","PI Industries"],
+  ["Reddy.png","Dr. Reddy's"],
+  ["Sai.png","Sai Life Sciences"],
+  ["Srigene.png","Srigene"],
+  ["Syngene.png","Syngene"],
+  ["Syngenta.png","Syngenta"],
+  ["Tcg.png","TCG"],
 ].map(([file, alt]) => ({
   alt,
   src: `/assets/our-story/clients/${file}`,
@@ -40,7 +40,7 @@ export default function TrustedClients() {
         title="Trusted by Industry Leaders"
       />
 
-      <div className="mx-auto max-w-7xl overflow-hidden border-y border-line-light bg-parchment/85 py-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/85">
+      <div className="mx-auto max-w-[1180px] overflow-hidden border-y border-line-light bg-parchment/85 py-4">
         <div className="flex w-max animate-[logo-marquee_42s_linear_infinite] items-center gap-8 pr-8 hover:[animation-play-state:paused]">
           {marqueeLogos.map((logo, index) => (
             <div

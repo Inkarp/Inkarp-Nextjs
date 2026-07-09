@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useRef, useState } from"react";
+import { createPortal } from"react-dom";
 
-const DFLIP_BASE = "/assets/vendor/dflip";
+const DFLIP_BASE ="/assets/vendor/dflip";
 
 function loadStylesheet(href) {
   if (document.querySelector(`link[href="${href}"]`)) {
@@ -12,7 +12,7 @@ function loadStylesheet(href) {
 
   const link = document.createElement("link");
   link.href = href;
-  link.rel = "stylesheet";
+  link.rel ="stylesheet";
   document.head.appendChild(link);
 }
 
@@ -20,7 +20,7 @@ function loadScript(src) {
   return new Promise((resolve, reject) => {
     const existing = document.querySelector(`script[src="${src}"]`);
     if (existing) {
-      if (existing.dataset.loaded === "true") {
+      if (existing.dataset.loaded ==="true") {
         resolve();
       } else {
         existing.addEventListener("load", resolve, { once: true });
@@ -32,11 +32,10 @@ function loadScript(src) {
     const script = document.createElement("script");
     script.src = src;
     script.async = true;
-    script.dataset.cfasync = "false";
-    script.addEventListener(
-      "load",
+    script.dataset.cfasync ="false";
+    script.addEventListener("load",
       () => {
-        script.dataset.loaded = "true";
+        script.dataset.loaded ="true";
         resolve();
       },
       { once: true }
@@ -154,7 +153,7 @@ function MobileMagazineReader({ file, title }) {
 
         await renderTaskRef.current.promise;
       } catch (renderError) {
-        if (!cancelled && renderError?.name !== "RenderingCancelledException") {
+        if (!cancelled && renderError?.name !=="RenderingCancelledException") {
           setError("Could not render this page.");
         }
       }
@@ -184,14 +183,14 @@ function MobileMagazineReader({ file, title }) {
       >
         <div className="mx-auto flex min-h-full w-full items-start justify-center">
           {error ? (
-            <div className="mt-10 rounded-lg bg-navy/70 px-4 py-3 text-sm text-parchment/80">
+            <div className="mt-10 bg-navy/70 px-4 py-3 text-sm text-parchment/80">
               {error}
             </div>
           ) : null}
           {!error ? (
             <canvas
               aria-label={`${title} page ${pageNumber}`}
-              className="block max-w-full bg-parchment shadow-2xl shadow-black/40"
+              className="block max-w-full bg-parchment"
               ref={canvasRef}
             />
           ) : null}
@@ -201,7 +200,7 @@ function MobileMagazineReader({ file, title }) {
       <div className="relative z-20 flex min-h-[64px] items-center justify-between gap-3 border-t border-white/10 bg-navy/75 px-3 py-2 backdrop-blur">
         <button
           aria-label="Previous page"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-parchment/10 text-2xl text-parchment disabled:opacity-35"
+          className="inline-flex size-11 items-center justify-center border border-white/15 bg-parchment/10 text-2xl text-parchment disabled:opacity-35"
           disabled={pageNumber <= 1 || loading}
           onClick={goToPrevious}
           type="button"
@@ -209,8 +208,8 @@ function MobileMagazineReader({ file, title }) {
           &#8249;
         </button>
         <div className="min-w-0 text-center">
-          <p className="font-maxot text-sm font-semibold text-parchment">
-            {loading ? "Loading..." : `${pageNumber} / ${pageCount || "-"}`}
+          <p className="text-sm font-semibold text-parchment">
+            {loading ?"Loading..." : `${pageNumber} / ${pageCount ||"-"}`}
           </p>
           <p className="mt-0.5 text-[11px] uppercase tracking-wide text-parchment/50">
             Mobile Reader
@@ -218,7 +217,7 @@ function MobileMagazineReader({ file, title }) {
         </div>
         <button
           aria-label="Next page"
-          className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 bg-parchment/10 text-2xl text-parchment disabled:opacity-35"
+          className="inline-flex size-11 items-center justify-center border border-white/15 bg-parchment/10 text-2xl text-parchment disabled:opacity-35"
           disabled={!pageCount || pageNumber >= pageCount || loading}
           onClick={goToNext}
           type="button"
@@ -244,16 +243,15 @@ export default function FlipbookPage({ file, title }) {
       return;
     }
 
-    const wrappers = shell.querySelectorAll(
-      ".df-book-wrapper, .df-book-stage, .df-container"
+    const wrappers = shell.querySelectorAll(".df-book-wrapper, .df-book-stage, .df-container"
     );
 
     wrappers.forEach((wrapper) => {
-      wrapper.classList.remove("close-left", "close-right");
-      wrapper.style.left = "0";
-      wrapper.style.right = "0";
-      wrapper.style.marginLeft = "auto";
-      wrapper.style.marginRight = "auto";
+      wrapper.classList.remove("close-left","close-right");
+      wrapper.style.left ="0";
+      wrapper.style.right ="0";
+      wrapper.style.marginLeft ="auto";
+      wrapper.style.marginRight ="auto";
     });
   };
 
@@ -285,7 +283,7 @@ export default function FlipbookPage({ file, title }) {
     }
 
     const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow ="hidden";
 
     return () => {
       document.body.style.overflow = previousOverflow;
@@ -295,7 +293,7 @@ export default function FlipbookPage({ file, title }) {
   useEffect(() => {
     let cancelled = false;
 
-    fetch(file, { method: "GET", headers: { Range: "bytes=0-0" } })
+    fetch(file, { method:"GET", headers: { Range:"bytes=0-0" } })
       .then((response) => {
         if (!cancelled && !response.ok) {
           setErr(`Could not prefetch PDF (HTTP ${response.status}).`);
@@ -344,11 +342,10 @@ export default function FlipbookPage({ file, title }) {
         }
 
         const book = document.createElement("div");
-        book.className = "_df_book h-full w-full";
-        book.id = "flipbook_embed";
+        book.className ="_df_book h-full w-full";
+        book.id ="flipbook_embed";
         book.setAttribute("source", file);
-        book.addEventListener(
-          "df-error",
+        book.addEventListener("df-error",
           () => {
             if (!cancelled) {
               setErr("DearFlip failed to render the PDF.");
@@ -362,7 +359,7 @@ export default function FlipbookPage({ file, title }) {
 
         window.option_flipbook_embed = {
           webgl: false,
-          backgroundColor: "transparent",
+          backgroundColor:"transparent",
           duration: 800,
           pageMode: 2,
           singlePageMode: 1,
@@ -374,13 +371,12 @@ export default function FlipbookPage({ file, title }) {
           soundEnable: false,
           scrollWheel: false,
           forceFit: true,
-          height: "100%",
+          height:"100%",
           paddingTop: 16,
           paddingRight: 44,
           paddingBottom: 104,
           paddingLeft: 44,
-          hideControls:
-            "outline,thumbnail,sound,pageMode,download,search,startPage,endPage",
+          hideControls:"outline,thumbnail,sound,pageMode,download,search,startPage,endPage",
           onReady: () => {
             window.setTimeout(recenterBook, 120);
             window.setTimeout(recenterBook, 680);
@@ -392,7 +388,7 @@ export default function FlipbookPage({ file, title }) {
           pdfjs: { disableRange: false, cMapPacked: true },
         };
 
-        if (window.DFLIP && typeof window.DFLIP.parseBooks === "function") {
+        if (window.DFLIP && typeof window.DFLIP.parseBooks ==="function") {
           window.DFLIP.parseBooks();
           initedRef.current = true;
         } else {
@@ -439,10 +435,10 @@ export default function FlipbookPage({ file, title }) {
       className="fixed inset-0 z-[9999] flex flex-col bg-navy text-parchment"
       id="flipbook-page"
       style={{
-        backgroundImage: "url('/assets/catalyst/BgCatalyst.jpg')",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundImage:"url('/assets/catalyst/BgCatalyst.jpg')",
+        backgroundPosition:"center center",
+        backgroundRepeat:"no-repeat",
+        backgroundSize:"cover",
       }}
     >
       <div
@@ -505,23 +501,23 @@ export default function FlipbookPage({ file, title }) {
       `}</style>
 
       {err ? (
-        <div className="pointer-events-none absolute left-4 top-24 z-20 rounded-md bg-navy/70 px-3 py-2 text-xs text-parchment/80">
+        <div className="pointer-events-none absolute left-4 top-24 z-20 bg-navy/70 px-3 py-2 text-xs text-parchment/80">
           {err}
         </div>
       ) : null}
 
-      <div className="relative z-20 grid min-h-[60px] grid-cols-[auto_1fr] items-center gap-3 border-b border-white/10 bg-navy/70 px-3 py-2 shadow-lg shadow-black/30 backdrop-blur sm:grid-cols-[auto_1fr_auto] sm:px-6">
+      <div className="relative z-20 grid min-h-[60px] grid-cols-[auto_1fr] items-center gap-3 border-b border-white/10 bg-navy/70 px-3 py-2 backdrop-blur sm:grid-cols-[auto_1fr_auto] sm:px-6">
         <a
-          className="inline-flex h-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-parchment/10 px-3 text-sm font-semibold text-parchment transition hover:bg-parchment hover:text-zinc-950 sm:px-4"
+          className="inline-flex h-10 shrink-0 items-center justify-center border border-line-light bg-parchment/10 px-3 text-sm font-semibold text-parchment transition hover:bg-parchment hover:text-ink-soft sm:px-4"
           href="/magazine"
         >
           Back
         </a>
         <div className="min-w-0 text-center sm:pr-[72px]">
-          <p className="font-maxot text-[11px] uppercase tracking-wide text-parchment/60 sm:text-xs">
+          <p className="text-[11px] uppercase tracking-wide text-parchment/60 sm:text-xs">
             Magazine
           </p>
-          <h1 className="truncate font-maxot text-sm font-semibold text-parchment sm:text-lg">
+          <h1 className="truncate  text-sm font-semibold text-parchment sm:text-lg">
             {title}
           </h1>
         </div>
@@ -532,11 +528,11 @@ export default function FlipbookPage({ file, title }) {
           <MobileMagazineReader file={file} title={title} />
         ) : !fallbackMode ? (
           <div
-            className="h-full min-h-0 w-full overflow-hidden rounded-lg"
+            className="h-full min-h-0 w-full overflow-hidden"
             ref={shellRef}
           />
         ) : (
-          <object className="h-full min-h-0 w-full rounded-lg" data={file} type="application/pdf">
+          <object className="h-full min-h-0 w-full" data={file} type="application/pdf">
             <iframe className="h-full w-full border-0" src={file} title={title} />
           </object>
         )}

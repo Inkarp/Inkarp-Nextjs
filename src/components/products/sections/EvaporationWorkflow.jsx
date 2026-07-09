@@ -40,8 +40,8 @@ const STEP_ICON_MAP = {
 function Connector({ active }) {
   return (
     <div className="hidden lg:flex items-center gap-1 shrink-0">
-      <div className={`h-px w-6 ${active ? 'bg-navy dark:bg-zinc-400' : 'bg-zinc-200 dark:bg-zinc-800'}`} />
-      <div className={`h-2.5 w-2.5 rounded-full border-2 ${active ? 'border-navy bg-navy dark:border-zinc-400 dark:bg-zinc-400' : 'border-line-light bg-parchment dark:border-zinc-800 dark:bg-zinc-900'}`} />
+      <div className={`h-px w-6 ${active ? 'bg-red' : 'bg-parchment-alt'}`} />
+      <div className={`h-2.5 w-2.5 border-2 ${active ? 'border-navy bg-red' : 'border-line-light bg-parchment'}`} />
     </div>
   );
 }
@@ -53,47 +53,47 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
   return (
     <button
       onClick={onClick}
-      className={`relative flex h-full w-full min-w-[160px] flex-col  border-2 border-[#BE0010] pt-5 px-5 pb-5 text-left transition-all duration-300 ${
+      className={`relative flex h-full w-full min-w-[160px] flex-col  border-2 border-red pt-5 px-5 pb-5 text-left transition-all duration-300 ${
         isActive
-          ? 'bg-parchment-alt dark:bg-zinc-800'
+          ? 'bg-parchment-alt'
           : isFuture
-            ? 'bg-parchment hover:bg-parchment-alt dark:bg-zinc-900 dark:hover:bg-zinc-800'
-            : 'bg-parchment hover:bg-parchment-alt dark:bg-zinc-900 dark:hover:bg-zinc-800'
+            ? 'bg-parchment hover:bg-parchment-alt'
+            : 'bg-parchment hover:bg-parchment-alt'
       }`}
     >
       {/* Progress bar — hugs the top edge of the card, radius matches card */}
       {isActive && (
-        <div className="absolute -top-0.5 -left-0.5 -right-0.5 h-1 rounded-t-2xl overflow-hidden bg-navy/15 dark:bg-zinc-700">
+        <div className="absolute -top-0.5 -left-0.5 -right-0.5 h-1-2xl overflow-hidden bg-red/15">
           <div
             key={`progress-${index}`}
-            className="h-full bg-navy dark:bg-zinc-400 rounded-full"
+            className="h-full bg-red"
             style={{ animation: `hvc-progress-fill ${totalDuration}ms linear forwards` }}
           />
         </div>
       )}
 
       {/* Step number */}
-      <span className="absolute top-3 right-4 text-xs font-bold tabular-nums text-black dark:text-zinc-100">
+      <span className="absolute top-3 right-4 text-xs font-bold tabular-nums text-black">
         {index + 1}
       </span>
 
       {/* Icon chip — in-flow soft-square, neutral tint on inactive, solid navy on active */}
       <div
-        className={`inline-flex h-10 w-10 items-center justify-center rounded-xl mb-3 transition-colors duration-300 ${
-          isActive ? 'bg-navy text-parchment dark:bg-zinc-100 dark:text-zinc-900' : 'bg-parchment-alt text-ink dark:bg-zinc-800 dark:text-zinc-100'
+        className={`inline-flex h-10 w-10 items-center justify-center mb-3 transition-colors duration-300 ${
+          isActive ? 'bg-red text-white' : 'bg-parchment-alt text-ink'
         }`}
       >
         {STEP_ICON_MAP[step.title.toLowerCase()] ?? <span className="text-sm font-bold">{index + 1}</span>}
       </div>
 
       {/* Title */}
-      <h3 className="font-semibold tracking-tight text-sm mb-2 text-ink dark:text-zinc-100">
+      <h3 className="font-semibold tracking-tight text-sm mb-2 text-ink">
         {step.title}
       </h3>
 
       {/* Description — min-h reserves 3 lines (3 × leading-5 = 60px) so all cards
           hold the same height even when shorter descriptions produce fewer lines. */}
-      <p className="text-xs leading-5 min-h-[60px] text-black dark:text-zinc-400">
+      <p className="text-xs leading-5 min-h-[60px] text-black">
         {step.description}
       </p>
     </button>
@@ -110,11 +110,11 @@ function RateStrip({ metrics }) {
     <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
       {metrics.map((m) => (
         <div
-          className="rounded-xl border border-line-light bg-parchment-alt p-3 text-center dark:border-zinc-800 dark:bg-zinc-900"
+          className="border border-line-light bg-parchment-alt p-3 text-center"
           key={m.label}
         >
           <div className="text-lg font-semibold tracking-tight text-red">{m.value}</div>
-          <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-wide text-black dark:text-zinc-400">{m.label}</p>
+          <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-wide text-black">{m.label}</p>
         </div>
       ))}
     </div>
@@ -141,8 +141,8 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
   if (!steps.length) return null;
 
   return (
-    <section id="workflow" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto max-w-7xl">
+    <section id="workflow" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1180px]">
 
         {/* number="02" is fixed for now; derive from section position once a
             master sections array drives page assembly. */}
@@ -178,7 +178,7 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`h-2 rounded-full transition-all ${active === i ? 'w-6 bg-navy dark:bg-zinc-400' : 'w-2 bg-zinc-200 dark:bg-zinc-800'}`}
+              className={`h-2 transition-all ${active === i ? 'w-6 bg-red' : 'w-2 bg-parchment-alt'}`}
             />
           ))}
         </div>

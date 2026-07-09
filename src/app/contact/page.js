@@ -1,8 +1,8 @@
-import ContactForm from "@/components/contact/ContactForm";
-import LocationCards from "@/components/contact/LocationCards";
-import SupportSection from "@/components/contact/SupportSection";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
-import { buildPageMetadata } from "@/data/pageSeo";
+import ContactForm from"@/components/contact/ContactForm";
+import LocationCards from"@/components/contact/LocationCards";
+import SupportSection from"@/components/contact/SupportSection";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from"@/data/pageSeo";
 
 export const metadata = buildPageMetadata("/contact");
 

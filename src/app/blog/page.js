@@ -1,7 +1,7 @@
-import { Suspense } from "react";
-import BlogsPage from "@/components/blogs/BlogsPage";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
-import { buildPageMetadata } from "@/data/pageSeo";
+import { Suspense } from"react";
+import BlogsPage from"@/components/blogs/BlogsPage";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from"@/data/pageSeo";
 
 export const metadata = buildPageMetadata("/blog");
 

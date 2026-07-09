@@ -1,6 +1,6 @@
-import { notFound } from "next/navigation";
-import BlogDetailsPage from "@/components/blogs/BlogDetailsPage";
-import { getPostBySlug, posts } from "@/data/blogs";
+import { notFound } from"next/navigation";
+import BlogDetailsPage from"@/components/blogs/BlogDetailsPage";
+import { getPostBySlug, posts } from"@/data/blogs";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const post = getPostBySlug(slug);
 
   if (!post) {
-    return { title: "Blog - Inkarp Instruments" };
+    return { title:"Blog - Inkarp Instruments" };
   }
 
   return {

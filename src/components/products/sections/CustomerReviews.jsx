@@ -2,73 +2,38 @@
 
 import { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-
-const CATEGORY_STYLES = {
-  Pharma: {
-    badge: 'Pharma',
-    badgeClass:
-      'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300',
-    avatarClass:
-      'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300',
-  },
-  Food: {
-    badge: 'Food',
-    badgeClass:
-      'bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300',
-    avatarClass:
-      'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
-  },
-  Plastics: {
-    badge: 'Plastics',
-    badgeClass:
-      'bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-300',
-    avatarClass:
-      'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300',
-  },
-  Chemicals: {
-    badge: 'Chem',
-    badgeClass:
-      'bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300',
-    avatarClass:
-      'bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300',
-  },
-};
+import RecTag from '@/components/home/RecTag';
 
 export default function CustomerReviews({ reviews = [] }) {
   const [activeFilter, setActiveFilter] = useState('All');
 
   if (!reviews.length) return null;
 
-  const filters = [
-    'All',
-    ...Array.from(new Set(reviews.map((review) => review.category))).filter(Boolean),
-  ];
-
-  const visibleReviews =
-    activeFilter === 'All'
-      ? reviews
-      : reviews.filter((review) => review.category === activeFilter);
+  const filters = ['All', ...Array.from(new Set(reviews.map((review) => review.category))).filter(Boolean)];
+  const visibleReviews = activeFilter === 'All' ? reviews : reviews.filter((review) => review.category === activeFilter);
 
   return (
-    <section className="border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto max-w-7xl">
-        <p className="text-xs font-semibold uppercase tracking-widest text-ink-soft dark:text-zinc-500">
-          Section 08 — Customer Reviews
-        </p>
-        <h2 className="mt-2 text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl dark:text-zinc-100">
-          What Indian labs are saying
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft sm:text-base dark:text-zinc-400">
-          Filter by your industry to find relevant experiences from labs across India.
-        </p>
+    <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1180px]">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <RecTag>Customer Reviews</RecTag>
+            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+              What Indian labs are saying.
+            </h2>
+          </div>
+          <p className="max-w-[430px] text-sm leading-6 text-ink-soft">
+            Filter by your industry to find relevant experiences from labs across India.
+          </p>
+        </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="mb-8 flex flex-wrap gap-2">
           {filters.map((filter) => (
             <button
-              className={`inline-flex h-9 items-center justify-center rounded-full border px-4 text-sm font-semibold transition ${
+              className={`inline-flex h-10 items-center justify-center border px-4 text-sm font-semibold transition ${
                 activeFilter === filter
-                  ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
-                  : 'border-line-light bg-parchment text-ink-soft hover:border-red/40 hover:text-red dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200'
+                  ? 'border-red bg-red text-white'
+                  : 'border-line-light bg-white text-ink-soft hover:border-red hover:text-red'
               }`}
               key={filter}
               onClick={() => setActiveFilter(filter)}
@@ -79,57 +44,35 @@ export default function CustomerReviews({ reviews = [] }) {
           ))}
         </div>
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {visibleReviews.map((review) => {
-            const style = CATEGORY_STYLES[review.category] ?? {
-              badge: review.category,
-              badgeClass: 'bg-parchment-alt text-ink-soft dark:bg-zinc-800 dark:text-zinc-300',
-              avatarClass: 'bg-parchment-alt text-ink-soft dark:bg-zinc-800 dark:text-zinc-300',
-            };
-
-            return (
-              <article
-                className="flex flex-col rounded-xl border border-line-light bg-parchment p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900"
-                key={`${review.name}-${review.location}`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-0.5 text-amber-400">
-                    {Array.from({ length: 5 }, (_, i) => (
-                      <FaStar
-                        className={i < review.rating ? '' : 'text-zinc-200 dark:text-zinc-700'}
-                        key={i}
-                      />
-                    ))}
-                  </div>
-                  <span
-                    className={`inline-flex h-6 items-center rounded-full px-2.5 text-xs font-semibold ${style.badgeClass}`}
-                  >
-                    {style.badge}
-                  </span>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {visibleReviews.map((review) => (
+            <article className="flex flex-col border border-line-light bg-parchment-alt p-6" key={`${review.name}-${review.location}`}>
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-0.5 text-red">
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <FaStar className={i < review.rating ? '' : 'text-line-light'} key={i} />
+                  ))}
                 </div>
+                <span className="border border-line-light bg-white px-2.5 py-1 text-xs font-semibold text-ink-soft">
+                  {review.category ?? 'Lab'}
+                </span>
+              </div>
 
-                <p className="mt-4 flex-1 text-sm italic leading-7 text-ink-soft dark:text-zinc-300">
-                  &ldquo;{review.quote}&rdquo;
-                </p>
+              <p className="mt-4 flex-1 text-sm italic leading-7 text-ink-soft">
+                &ldquo;{review.quote}&rdquo;
+              </p>
 
-                <div className="mt-6 flex items-center gap-3">
-                  <span
-                    className={`inline-flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${style.avatarClass}`}
-                  >
-                    {review.initials}
-                  </span>
-                  <div>
-                    <p className="text-sm font-bold text-zinc-950 dark:text-zinc-100">
-                      {review.name}
-                    </p>
-                    <p className="text-xs text-ink-soft dark:text-zinc-400">
-                      {review.role} · {review.location}
-                    </p>
-                  </div>
+              <div className="mt-6 flex items-center gap-3">
+                <span className="inline-flex size-10 shrink-0 items-center justify-center bg-red text-sm font-bold text-white">
+                  {review.initials}
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-ink">{review.name}</p>
+                  <p className="text-xs text-ink-soft">{review.role} - {review.location}</p>
                 </div>
-              </article>
-            );
-          })}
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

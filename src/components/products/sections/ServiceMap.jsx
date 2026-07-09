@@ -29,10 +29,10 @@ export default function ServiceMap({ data, calm = false }) {
       className={
         calm
           ? 'scroll-mt-16 border-b border-line-light bg-white px-4 py-14 sm:px-6 lg:px-8'
-          : 'scroll-mt-16 border-b border-line-light bg-[#F6F6F6] px-4 py-14 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950'
+          : 'scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-14 sm:px-6 lg:px-8'
       }
     >
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-[1180px]">
         <SectionHeader
           number="17"
           eyebrow={eyebrow ?? 'Service'}
@@ -46,14 +46,14 @@ export default function ServiceMap({ data, calm = false }) {
               <div
                 className={
                   calm
-                    ? 'rounded-xl border border-line-light bg-white p-4'
-                    : 'rounded-xl border border-line-light bg-parchment p-4 dark:border-zinc-800 dark:bg-zinc-900'
+                    ? 'border border-line-light bg-white p-4'
+                    : 'border border-line-light bg-parchment p-4'
                 }
                 key={area.title}
               >
-                <p className={`text-sm font-semibold ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>{area.title}</p>
+                <p className={`text-sm font-semibold ${calm ? 'text-ink' : 'text-black'}`}>{area.title}</p>
                 {area.description && (
-                  <p className={`mt-1 text-xs leading-5 ${calm ? 'text-ink-soft' : 'text-black dark:text-zinc-400'}`}>{area.description}</p>
+                  <p className={`mt-1 text-xs leading-5 ${calm ? 'text-ink-soft' : 'text-black'}`}>{area.description}</p>
                 )}
               </div>
             ))}
@@ -65,8 +65,8 @@ export default function ServiceMap({ data, calm = false }) {
           <div
             className={
               calm
-                ? 'relative aspect-square w-full overflow-hidden rounded-2xl border border-line-light bg-white shadow-sm'
-                : 'relative aspect-square w-full overflow-hidden rounded-2xl border border-line-light bg-parchment shadow-sm dark:border-zinc-800 dark:bg-zinc-900'
+                ? 'relative aspect-square w-full overflow-hidden border border-line-light bg-white'
+                : 'relative aspect-square w-full overflow-hidden border border-line-light bg-parchment'
             }
           >
             <div className="absolute inset-0">
@@ -95,21 +95,21 @@ export default function ServiceMap({ data, calm = false }) {
                     >
                       <div className="relative z-[100] size-6">
                         {isSelected && (
-                          <span className="absolute left-1/2 top-1/2 z-0 size-5 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-red" />
+                          <span className="absolute left-1/2 top-1/2 z-0 size-5 -translate-x-1/2 -translate-y-1/2 animate-ping bg-red" />
                         )}
                         <MdLocationPin
-                          className={`relative z-10 drop-shadow transition-all ${
-                            isSelected ? 'size-8 text-red' : 'size-6 text-black dark:text-zinc-300'
+                          className={`relative z-10 transition-all ${
+                            isSelected ? 'size-8 text-red' : 'size-6 text-black'
                           }`}
                         />
                       </div>
                       <span
-                        className={`mt-1 block whitespace-nowrap rounded-md border px-2 py-0.5 text-[10px] font-semibold shadow transition ${
+                        className={`mt-1 block whitespace-nowrap border px-2 py-0.5 text-[10px] font-semibold transition ${
                           isSelected
-                            ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
+                            ? 'border-black bg-red text-white'
                             : calm
                               ? 'border-line-light bg-white text-ink'
-                              : 'border-line-light bg-parchment text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100'
+                              : 'border-line-light bg-parchment text-black'
                         }`}
                       >
                         {branch.name}
@@ -126,8 +126,8 @@ export default function ServiceMap({ data, calm = false }) {
             <div
               className={
                 calm
-                  ? 'rounded-2xl border border-line-light bg-white p-4 shadow-sm'
-                  : 'rounded-2xl border border-line-light bg-parchment p-4 shadow-sm dark:border-zinc-800 dark:bg-zinc-900'
+                  ? 'border border-line-light bg-white p-4'
+                  : 'border border-line-light bg-parchment p-4'
               }
             >
               <div className="flex flex-wrap gap-2">
@@ -136,12 +136,12 @@ export default function ServiceMap({ data, calm = false }) {
                     key={branch.name}
                     onClick={() => setSelected(i)}
                     type="button"
-                    className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
+                    className={`border px-3 py-1.5 text-xs font-semibold transition ${
                       selected === i
-                        ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
+                        ? 'border-black bg-red text-white'
                         : calm
                           ? 'border-line-light text-ink hover:border-red/40'
-                          : 'border-line-light text-black hover:border-red/40 dark:border-zinc-700 dark:text-zinc-100'
+                          : 'border-line-light text-black hover:border-red/40'
                     }`}
                   >
                     {branch.name}
@@ -154,32 +154,32 @@ export default function ServiceMap({ data, calm = false }) {
             <div
               className={
                 calm
-                  ? 'rounded-2xl border border-line-light bg-white p-5 shadow-sm'
-                  : 'rounded-2xl border border-line-light bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900'
+                  ? 'border border-line-light bg-white p-5'
+                  : 'border border-line-light bg-parchment p-5'
               }
             >
               <div className="flex items-center gap-2 mb-3">
-                <div className="h-3 w-3 rounded-full bg-navy dark:bg-zinc-400" />
-                <h3 className={`font-semibold tracking-tight ${calm ? 'text-ink' : 'text-ink dark:text-zinc-100'}`}>
+                <div className="h-3 w-3 bg-red" />
+                <h3 className={`font-semibold tracking-tight ${calm ? 'text-ink' : 'text-ink'}`}>
                   {selectedBranch.name} branch
                 </h3>
               </div>
 
-              <div className={`mb-3 flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
+              <div className={`mb-3 flex items-start gap-2 bg-parchment-alt p-3 ${calm ? '' : ''}`}>
                 <MdLocationPin className="mt-0.5 size-4 shrink-0 text-red" />
-                <p className={`text-xs leading-snug ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>
+                <p className={`text-xs leading-snug ${calm ? 'text-ink' : 'text-black'}`}>
                   {selectedBranch.address}
                 </p>
               </div>
 
-              <div className={`mb-2 flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
+              <div className={`mb-2 flex items-start gap-2 bg-parchment-alt p-3 ${calm ? '' : ''}`}>
                 <MdLocalPhone className="mt-0.5 size-4 shrink-0 text-red" />
                 <div className="flex flex-col gap-1">
                   {selectedBranch.phone.split(',').map((phone, phoneIndex) => (
                     <a
                       key={`${selectedBranch.name}-phone-${phoneIndex}`}
                       href={`tel:${phoneHref(phone)}`}
-                      className={`text-xs font-medium underline hover:text-red ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}
+                      className={`text-xs font-medium underline hover:text-red ${calm ? 'text-ink' : 'text-black'}`}
                     >
                       {phone.trim()}
                     </a>
@@ -187,14 +187,14 @@ export default function ServiceMap({ data, calm = false }) {
                 </div>
               </div>
 
-              <div className={`flex items-start gap-2 rounded-lg bg-[#f5f5f5] p-3 ${calm ? '' : 'dark:bg-zinc-800'}`}>
+              <div className={`flex items-start gap-2 bg-parchment-alt p-3 ${calm ? '' : ''}`}>
                 <MdEmail className="mt-0.5 size-4 shrink-0 text-red" />
                 <div className="flex flex-col gap-1">
                   {selectedBranch.email.split(',').map((email) => (
                     <a
                       key={`${selectedBranch.name}-${email}`}
                       href={`mailto:${email.trim()}`}
-                      className={`text-xs font-medium underline hover:text-red ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}
+                      className={`text-xs font-medium underline hover:text-red ${calm ? 'text-ink' : 'text-black'}`}
                     >
                       {email.trim()}
                     </a>
@@ -207,17 +207,17 @@ export default function ServiceMap({ data, calm = false }) {
             <div
               className={
                 calm
-                  ? 'rounded-2xl border border-line-light bg-white p-5 shadow-sm'
-                  : 'rounded-2xl border border-line-light bg-parchment p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-900'
+                  ? 'border border-line-light bg-white p-5'
+                  : 'border border-line-light bg-parchment p-5'
               }
             >
-              <p className={`font-semibold text-sm mb-1 ${calm ? 'text-ink' : 'text-black dark:text-zinc-100'}`}>
+              <p className={`font-semibold text-sm mb-1 ${calm ? 'text-ink' : 'text-black'}`}>
                 Don&apos;t see your city?
               </p>
-              <p className={`text-xs mb-3 ${calm ? 'text-ink-soft' : 'text-black dark:text-zinc-400'}`}>
+              <p className={`text-xs mb-3 ${calm ? 'text-ink-soft' : 'text-black'}`}>
                 Inkarp covers all major cities and institutes across India. Contact us to confirm service availability in your location.
               </p>
-              <a href="/contact" className="inline-flex items-center rounded-full bg-red px-5 py-2.5 text-sm font-semibold text-parchment hover:bg-[#9f000d] transition">
+              <a href="/contact" className="inline-flex items-center bg-red px-5 py-2.5 text-sm font-semibold text-white hover:bg-transparent hover:text-red transition">
                 Contact Inkarp →
               </a>
             </div>

@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { FiX } from "react-icons/fi";
+import { useEffect, useMemo, useState } from"react";
+import { FiX } from"react-icons/fi";
 
 function scrollToSection(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  document.getElementById(id)?.scrollIntoView({ behavior:"smooth", block:"start" });
 }
 
 export default function ProductMicrositeLayer({ links = [], productName }) {
@@ -12,7 +12,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
   const [stickyDismissed, setStickyDismissed] = useState(false);
 
   const trackedLinks = useMemo(
-    () => links.filter((link) => typeof link.id === "string" && link.id.trim()),
+    () => links.filter((link) => typeof link.id ==="string" && link.id.trim()),
     [links]
   );
 
@@ -52,15 +52,15 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
     <>
       {/* <nav
         aria-label="Product page progress"
-        className="fixed right-3 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-2 rounded-full border border-zinc-200 bg-white/90 p-2 shadow-lg shadow-zinc-900/10 backdrop-blur lg:flex"
+        className="fixed right-3 top-1/2 z-40 hidden -translate-y-1/2 flex-col gap-2 border border-line-light bg-white p-2 -900/10 backdrop-blur lg:flex"
       >
         {trackedLinks.map((link) => (
           <button
             aria-label={`Jump to ${link.label}`}
-            className={`size-3 rounded-full transition ${
+            className={`size-3 transition ${
               active === link.id
-                ? "bg-[#161616] ring-4 ring-[#161616]/15"
-                : "bg-zinc-300 hover:bg-zinc-500"
+                ?"bg-[#161616] ring-4 ring-[#161616]/15"
+                :"bg-parchment-alt hover:bg-parchment-alt"
             }`}
             key={link.id}
             onClick={() => scrollToSection(link.id)}
@@ -71,24 +71,24 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
       </nav> */}
 
       <div
-        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl rounded-md border border-line-light dark:border-zinc-800 bg-parchment/95 dark:bg-zinc-900/95 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.18)] backdrop-blur transition ${
+        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl border border-line-light bg-parchment/95 p-3 backdrop-blur transition ${
           shouldShowSticky
-            ? "translate-y-0 opacity-100"
-            : "pointer-events-none translate-y-6 opacity-0"
+            ?"translate-y-0 opacity-100"
+            :"pointer-events-none translate-y-6 opacity-0"
         }`}
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">
+            <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
               Need help configuring it?
             </p>
-            <p className="text-sm font-semibold text-zinc-950 dark:text-zinc-100">
-              Book a demo for {productName ?? "this product"}.
+            <p className="text-sm font-semibold text-ink-soft">
+              Book a demo for {productName ??"this product"}.
             </p>
           </div>
           <div className="flex items-center gap-2">
             <button
-              className="inline-flex h-10 items-center justify-center rounded-md bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
+              className="inline-flex h-10 items-center justify-center bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
               onClick={() => scrollToSection("booking")}
               type="button"
             >
@@ -96,7 +96,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
             </button>
             <button
               aria-label="Dismiss sticky product CTA"
-              className="inline-flex size-10 items-center justify-center rounded-md border border-line-light dark:border-zinc-700 text-red transition hover:border-red"
+              className="inline-flex size-10 items-center justify-center border border-line-light text-red transition hover:border-red"
               onClick={() => setStickyDismissed(true)}
               type="button"
             >

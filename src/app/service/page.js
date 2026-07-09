@@ -17,11 +17,6 @@ const servicePromises = [
   "Genuine spares and AMC support",
 ];
 
-const serviceStats = [
-  { value: "40+", label: "Years of scientific support" },
-  { value: "18", label: "Offices across India" },
-  { value: "184k+", label: "Service touchpoints" },
-];
 
 export default function ServicePage() {
   return (
@@ -90,16 +85,7 @@ export default function ServicePage() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-3">
-            {serviceStats.map((stat) => (
-              <div key={stat.label} className="flex items-center gap-3 border border-line-light bg-parchment-alt px-5 py-3">
-                <span className="text-lg font-semibold text-red">{stat.value}</span>
-                <span className="text-[9.5px] uppercase leading-tight tracking-wide text-ink-soft">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
+
         </div>
       </section>
 

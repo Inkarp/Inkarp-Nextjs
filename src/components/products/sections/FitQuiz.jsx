@@ -22,7 +22,7 @@ function ScoreRing({ percent }) {
   return (
     <div className="relative size-32 shrink-0">
       <svg className="size-full -rotate-90" viewBox="0 0 120 120" aria-hidden="true">
-        <circle className="dark:stroke-zinc-800" cx="60" cy="60" fill="none" r={radius} stroke="#ECECEC" strokeWidth="10" />
+        <circle className="" cx="60" cy="60" fill="none" r={radius} stroke="#ECECEC" strokeWidth="10" />
         <circle
           cx="60"
           cy="60"
@@ -35,7 +35,7 @@ function ScoreRing({ percent }) {
           strokeWidth="10"
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold tracking-tight text-ink dark:text-zinc-100">
+      <div className="absolute inset-0 flex items-center justify-center text-3xl font-semibold tracking-tight text-ink">
         {percent}%
       </div>
     </div>
@@ -79,8 +79,8 @@ export default function FitQuiz({ data }) {
   };
 
   return (
-    <section id="quiz" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="relative mx-auto max-w-7xl">
+    <section id="quiz" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1180px]">
         <SectionHeader
           number="12"
           eyebrow="Interactive - 60-second quiz"
@@ -88,23 +88,23 @@ export default function FitQuiz({ data }) {
           description="Five quick questions for a fit score and a recommendation. (A faster, lighter version of the suitability checker above.)"
         />
 
-        <div className="mt-8 rounded-2xl border border-line-light bg-parchment px-5 py-8 shadow-sm sm:px-9 dark:border-zinc-800 dark:bg-zinc-900">
-          <div className="h-1 overflow-hidden rounded-full bg-parchment-alt dark:bg-zinc-800">
-            <div className="h-full rounded-full bg-navy dark:bg-zinc-500 transition-all duration-300" style={{ width: `${progressPercent}%` }} />
+        <div className="mt-8 border border-line-light bg-parchment px-5 py-8 sm:px-9">
+          <div className="h-1 overflow-hidden bg-parchment-alt">
+            <div className="h-full bg-red transition-all duration-300" style={{ width: `${progressPercent}%` }} />
           </div>
 
           {!submitted ? (
             <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-start">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-widest text-ink dark:text-zinc-100">Question {currentIndex + 1} of {total}</p>
-                <h3 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100">{cleanText(currentQuestion.text)}</h3>
-                <p className="mt-4 text-sm text-black dark:text-zinc-400">Pick the answer closest to your lab today.</p>
+                <p className="text-sm font-semibold uppercase tracking-widest text-ink">Question {currentIndex + 1} of {total}</p>
+                <h3 className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-ink">{cleanText(currentQuestion.text)}</h3>
+                <p className="mt-4 text-sm text-black">Pick the answer closest to your lab today.</p>
               </div>
 
               <div className="space-y-3">
                 {(currentQuestion.options ?? []).map((option) => (
                   <button
-                    className="flex min-h-14 w-full items-center justify-between gap-4 rounded-2xl border border-line-light bg-parchment px-5 py-3 text-left text-base font-medium text-black transition hover:border-red hover:bg-red/[0.03] dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+                    className="flex min-h-14 w-full items-center justify-between gap-4 border border-line-light bg-parchment px-5 py-3 text-left text-base font-medium text-black transition hover:border-red hover:bg-red/[0.03]"
                     key={option.text}
                     onClick={() => answerQuestion(option)}
                     type="button"
@@ -118,16 +118,16 @@ export default function FitQuiz({ data }) {
           ) : (
             <div className="mx-auto mt-8 max-w-2xl text-center">
               <ScoreRing percent={scorePercent} />
-              <h3 className="mt-7 text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{cleanText(result?.title ?? 'Recommendation ready')}</h3>
-              <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-black dark:text-zinc-400">
+              <h3 className="mt-7 text-2xl font-semibold tracking-tight text-ink">{cleanText(result?.title ?? 'Recommendation ready')}</h3>
+              <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-black">
                 {cleanText(result?.body ?? 'Your answers have been scored. Talk to Inkarp to confirm the best configuration for your workflow.')}
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a className="inline-flex h-12 items-center justify-center rounded-full bg-red px-8 text-sm font-bold text-parchment transition hover:bg-[#9f000d]" href="#booking">
+                <a className="inline-flex h-12 items-center justify-center bg-red px-8 text-sm font-bold text-white transition hover:bg-transparent hover:text-red" href="#booking">
                   Get my recommendation
                 </a>
                 <button
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-line-light bg-parchment px-7 text-sm font-semibold text-black transition hover:border-zinc-300 hover:text-black dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-600 dark:hover:text-zinc-100"
+                  className="inline-flex h-12 items-center justify-center border border-line-light bg-parchment px-7 text-sm font-semibold text-black transition hover:border-line-light hover:text-black"
                   onClick={reset}
                   type="button"
                 >

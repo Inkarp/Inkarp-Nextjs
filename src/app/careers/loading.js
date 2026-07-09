@@ -1,5 +1,5 @@
-import AnimatedLoading from "@/components/common/AnimatedLoading";
-import LoadingScreen from "@/components/common/LoadingScreen";
+import AnimatedLoading from"@/components/common/AnimatedLoading";
+import LoadingScreen from"@/components/common/LoadingScreen";
 
 export default function Loading() {
   return (

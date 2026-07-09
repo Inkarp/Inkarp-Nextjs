@@ -111,8 +111,8 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
   };
 
   return (
-    <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8 dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto max-w-7xl rounded-[28px] border border-line-light bg-[#F6F6F6] px-5 py-12 sm:px-8 lg:px-12 dark:border-zinc-800 dark:bg-zinc-900">
+    <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8">
+      <div className="mx-auto max-w-[1180px] border border-line-light bg-parchment-alt px-5 py-12 sm:px-8 lg:px-12">
         <div className="relative overflow-hidden">
           <SectionHeader number="09" eyebrow={eyebrow} title={heading} description={intro} />
 
@@ -124,12 +124,12 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                 <div className="flex items-center gap-3" key={item.key ?? index}>
                   <button
                     aria-label={`Go to ${getStepLabel(item, index)}`}
-                    className={`flex size-9 items-center justify-center rounded-full text-sm font-bold transition ${
+                    className={`flex size-9 items-center justify-center text-sm font-bold transition ${
                       isComplete
-                        ? 'bg-navy text-parchment dark:bg-zinc-100 dark:text-zinc-950'
+                        ? 'bg-red text-white'
                         : isActive
-                          ? 'border-2 border-red bg-parchment text-red dark:bg-zinc-900'
-                          : 'bg-parchment text-black ring-1 ring-line-light dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700'
+                          ? 'border-2 border-red bg-parchment text-red'
+                          : 'bg-parchment text-black ring-1 ring-line-light'
                     }`}
                     disabled={!isComplete && !isActive}
                     onClick={() => {
@@ -140,34 +140,34 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   >
                     {isComplete ? <FiCheck className="text-sm" /> : index + 1}
                   </button>
-                  <span className={`text-sm ${isActive ? 'font-bold text-black dark:text-zinc-100' : 'text-black dark:text-zinc-100'}`}>
+                  <span className={`text-sm ${isActive ? 'font-bold text-black' : 'text-black'}`}>
                     {getStepLabel(item, index)}
                   </span>
-                  {index < steps.length - 1 && <span className="hidden h-px w-10 bg-zinc-300 sm:block dark:bg-zinc-700" />}
+                  {index < steps.length - 1 && <span className="hidden h-px w-10 bg-parchment-alt sm:block" />}
                 </div>
               );
             })}
           </div>
 
           <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-stretch">
-            <div className="flex h-[520px] flex-col rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
-              <h3 className="shrink-0 text-lg font-semibold tracking-tight text-ink dark:text-zinc-100">{cleanText(current.question)}</h3>
+            <div className="flex h-[520px] flex-col border border-line-light bg-parchment p-6 sm:p-8">
+              <h3 className="shrink-0 text-lg font-semibold tracking-tight text-ink">{cleanText(current.question)}</h3>
               <div className="mt-5 min-h-0 flex-1 space-y-3 overflow-y-auto pr-1">
                 {(current.options ?? []).map((option) => {
                   const isSelected = selections[current.key] === option.val;
                   return (
                     <button
-                      className={`w-full rounded-2xl border px-4 py-3 text-left transition ${
+                      className={`w-full border px-4 py-3 text-left transition ${
                         isSelected
-                          ? 'border-ink dark:border-zinc-100 bg-parchment-alt dark:bg-zinc-800 text-black dark:text-zinc-100'
-                          : 'border-line-light bg-parchment text-black hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-zinc-500'
+                          ? 'border-ink bg-parchment-alt text-black'
+                          : 'border-line-light bg-parchment text-black hover:border-line-light'
                       }`}
                       key={option.val}
                       onClick={() => select(option.val)}
                       type="button"
                     >
                       <span className="block text-base font-medium">{cleanText(option.label)}</span>
-                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black dark:text-zinc-400">{cleanText(option.desc)}</span>}
+                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black">{cleanText(option.desc)}</span>}
                     </button>
                   );
                 })}
@@ -175,7 +175,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
 
               <div className="mt-auto flex items-center justify-between gap-3 pt-6">
                 <button
-                  className="text-sm font-semibold text-black transition hover:text-black disabled:cursor-not-allowed disabled:opacity-30 dark:text-zinc-100 dark:hover:text-zinc-100"
+                  className="text-sm font-semibold text-black transition hover:text-black disabled:cursor-not-allowed disabled:opacity-30"
                   disabled={step === 0 && !done}
                   onClick={() => {
                     setDone(false);
@@ -186,7 +186,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   Back
                 </button>
                 <button
-                  className="inline-flex items-center gap-2 rounded-full border border-line-light px-4 py-2 text-sm font-semibold text-black transition hover:bg-parchment-alt dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800"
+                  className="inline-flex items-center gap-2 border border-line-light px-4 py-2 text-sm font-semibold text-black transition hover:bg-parchment-alt"
                   onClick={reset}
                   type="button"
                 >
@@ -196,41 +196,41 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
               </div>
             </div>
 
-            <div className="flex h-[520px] flex-col overflow-y-auto rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex h-[520px] flex-col overflow-y-auto border border-line-light bg-parchment p-6 sm:p-8">
               {!done ? (
-                <div className="flex h-full flex-col items-center justify-center text-center text-black dark:text-zinc-100">
+                <div className="flex h-full flex-col items-center justify-center text-center text-black">
                   <FiSettings className="mx-auto text-4xl text-red" />
                   <p className="mt-4 text-sm leading-6">{emptyState}</p>
                 </div>
               ) : (
                 <div className="flex h-full w-full flex-col">
-                  <div className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-red/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red">
+                  <div className="inline-flex shrink-0 items-center gap-2 self-start bg-red/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red">
                     <FiCheck />
                     Configuration ready
                   </div>
-                  <h3 className="mt-4 shrink-0 text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
+                  <h3 className="mt-4 shrink-0 text-2xl font-semibold tracking-tight text-ink">{result.title ?? recommendedTitle}</h3>
                   <div className="mt-5 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
                     {selectedRows.map((row) => (
-                      <div className="rounded-2xl border border-line-light bg-parchment-alt px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900" key={row.key}>
+                      <div className="border border-line-light bg-parchment-alt px-4 py-3" key={row.key}>
                         <div className="flex items-center justify-between gap-4">
-                          <span className="text-xs font-bold uppercase tracking-wide text-black dark:text-zinc-100">{row.label}</span>
-                          <span className="text-right text-sm font-bold text-black dark:text-zinc-100">{row.value}</span>
+                          <span className="text-xs font-bold uppercase tracking-wide text-black">{row.label}</span>
+                          <span className="text-right text-sm font-bold text-black">{row.value}</span>
                         </div>
-                        {row.desc && <p className="mt-1 text-xs leading-5 text-black dark:text-zinc-400">{row.desc}</p>}
+                        {row.desc && <p className="mt-1 text-xs leading-5 text-black">{row.desc}</p>}
                       </div>
                     ))}
                   </div>
-                  {result.ctaNote && <p className="mt-4 shrink-0 text-sm leading-6 text-black dark:text-zinc-400">{result.ctaNote}</p>}
+                  {result.ctaNote && <p className="mt-4 shrink-0 text-sm leading-6 text-black">{result.ctaNote}</p>}
                   <div className="mt-5 flex shrink-0 flex-wrap gap-3">
                     <button
-                      className="inline-flex items-center gap-2 rounded-full bg-red px-5 py-3 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
+                      className="inline-flex items-center gap-2 bg-red px-5 py-3 text-sm font-bold text-white transition hover:bg-transparent hover:text-red"
                       onClick={emailConfiguration}
                       type="button"
                     >
                       <FiMail />
                       Email this configuration
                     </button>
-                    <a className="rounded-full border border-zinc-900 px-5 py-3 text-sm font-bold text-black transition hover:border-red hover:text-red dark:border-zinc-100 dark:text-zinc-100" href="#booking">
+                    <a className="border border-line-light px-5 py-3 text-sm font-bold text-black transition hover:border-red hover:text-red" href="#booking">
                       {result.ctaLabel ?? 'Request quote'}
                     </a>
                   </div>

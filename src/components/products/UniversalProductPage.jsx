@@ -24,6 +24,7 @@ import DemoBooking from './sections/DemoBooking';
 import SupportStrip from './sections/SupportStrip';
 import ProductMicrositeLayer from './ProductMicrositeLayer';
 import ProductEngagementPopups from './ProductEngagementPopups';
+import RecTag from '@/components/home/RecTag';
 
 export default function UniversalProductPage({ product }) {
   if (!product) return null;
@@ -163,19 +164,19 @@ export default function UniversalProductPage({ product }) {
 
       {/* CTA strip */}
       {lf.cta && (
-        <section className="bg-parchment-alt dark:bg-zinc-900 px-4 py-14 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 p-6 shadow-sm sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+        <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 border border-line-light bg-white p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-red">{lf.cta.eyebrow}</p>
-              <h2 className="mt-2 text-2xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100 sm:text-3xl">{lf.cta.title}</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft dark:text-zinc-400">{lf.cta.description}</p>
+              <RecTag>{lf.cta.eyebrow}</RecTag>
+              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">{lf.cta.title}</h2>
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft">{lf.cta.description}</p>
             </div>
             <a
               href={lf.cta.href ?? '/contact'}
-              className="inline-flex h-12 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d] shrink-0"
+              className="inline-flex items-center justify-center border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red shrink-0"
             >
               {lf.cta.label}
-              <svg className="ml-2 h-4 w-4 text-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>

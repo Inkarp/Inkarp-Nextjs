@@ -47,8 +47,8 @@ export default function SuitabilityChecker({ data }) {
   }, [fields.length, selections]);
 
   return (
-    <section id="suitability" className="scroll-mt-16 border-b border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-950 px-4 py-16 sm:px-6 lg:px-8 lg:py-12 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
-      <div className="relative mx-auto max-w-7xl w-full">
+    <section id="suitability" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-12 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+      <div className="relative mx-auto max-w-[1180px] w-full">
         <SectionHeader
           number={data?.sectionNumber ?? '05'}
           eyebrow={data?.eyebrow ?? 'Suitability checker'}
@@ -57,15 +57,15 @@ export default function SuitabilityChecker({ data }) {
         />
 
         <div className="relative mt-6 grid gap-5 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm">
-            <div className="mb-5 h-1.5 overflow-hidden rounded-full bg-parchment-alt dark:bg-zinc-800">
-              <div className="h-full rounded-full bg-navy dark:bg-zinc-500 transition-all duration-300" style={{ width: `${completion}%` }} />
+          <div className="border border-line-light bg-parchment p-5">
+            <div className="mb-5 h-1.5 overflow-hidden bg-parchment-alt">
+              <div className="h-full bg-red transition-all duration-300" style={{ width: `${completion}%` }} />
             </div>
 
             <div className="space-y-5">
               {fields.map((field) => (
                 <div key={field.key}>
-                  <p className="mb-2.5 text-sm font-semibold text-black dark:text-zinc-100">
+                  <p className="mb-2.5 text-sm font-semibold text-black">
                     {field.label}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -73,10 +73,10 @@ export default function SuitabilityChecker({ data }) {
                       const active = selections[field.key] === option.val;
                       return (
                         <button
-                          className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition ${
+                          className={`border px-5 py-2.5 text-sm font-semibold transition ${
                             active
-                              ? 'border-black dark:border-zinc-100 bg-navy dark:bg-zinc-100 text-parchment dark:text-zinc-900'
-                              : 'border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 text-black dark:text-zinc-100 hover:border-zinc-400 hover:text-black dark:hover:text-zinc-100'
+                              ? 'border-black bg-red text-white'
+                              : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'
                           }`}
                           key={option.val}
                           onClick={() => select(field.key, option.val)}
@@ -92,7 +92,7 @@ export default function SuitabilityChecker({ data }) {
             </div>
 
             <button
-              className="mt-6 h-12 w-full rounded-full bg-red px-6 text-left text-sm font-bold text-parchment transition hover:bg-[#9f000d] disabled:cursor-not-allowed disabled:opacity-45"
+              className="mt-6 h-12 w-full bg-red px-6 text-left text-sm font-bold text-white transition hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-45"
               disabled={!allAnswered}
               onClick={handleCheck}
               type="button"
@@ -101,29 +101,29 @@ export default function SuitabilityChecker({ data }) {
             </button>
           </div>
 
-          <div className="rounded-2xl border border-line-light dark:border-zinc-800 bg-parchment dark:bg-zinc-900 p-5 shadow-sm lg:flex lg:items-center">
+          <div className="border border-line-light bg-parchment p-5 lg:flex lg:items-center">
             {checked && result ? (
               <div className="w-full">
-                <div className={`mb-4 inline-flex size-11 items-center justify-center rounded-2xl border text-xl ${isCheckResult ? 'border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400' : 'border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400'}`}>
+                <div className={`mb-4 inline-flex size-11 items-center justify-center border text-xl ${isCheckResult ? 'border-amber-200 bg-amber-50 text-amber-700' : 'border-emerald-200 bg-emerald-50 text-emerald-700'}`}>
                   <FiCheck />
                 </div>
-                <h3 className="text-xl font-semibold leading-tight tracking-tight text-ink dark:text-zinc-100">
+                <h3 className="text-xl font-semibold leading-tight tracking-tight text-ink">
                   {normaliseText(result.title)}
                 </h3>
-                <p className="mt-3 max-w-xl text-sm leading-7 text-black dark:text-zinc-400">
+                <p className="mt-3 max-w-xl text-sm leading-7 text-black">
                   {normaliseText(result.body)}
                 </p>
                 {result.tags?.length ? (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {result.tags.map((tag) => (
-                      <span className="rounded-full border border-line-light dark:border-zinc-800 bg-parchment-alt dark:bg-zinc-900 px-4 py-1.5 text-xs font-semibold text-black dark:text-zinc-100" key={tag}>
+                      <span className="border border-line-light bg-parchment-alt px-4 py-1.5 text-xs font-semibold text-black" key={tag}>
                         {normaliseText(tag)}
                       </span>
                     ))}
                   </div>
                 ) : null}
                 <a
-                  className="mt-5 inline-flex h-10 items-center justify-center rounded-full bg-red px-5 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
+                  className="mt-5 inline-flex h-10 items-center justify-center bg-red px-5 text-sm font-bold text-white transition hover:bg-transparent hover:text-red"
                   href="#booking"
                 >
                   Discuss your needs with us
@@ -132,7 +132,7 @@ export default function SuitabilityChecker({ data }) {
             ) : (
               <div className="mx-auto max-w-sm text-center">
                 <FiDroplet className="mx-auto mb-3 text-red" size={44} />
-                <p className="text-sm text-ink-soft dark:text-zinc-500">Select your needs and click check</p>
+                <p className="text-sm text-ink-soft">Select your needs and click check</p>
               </div>
             )}
           </div>

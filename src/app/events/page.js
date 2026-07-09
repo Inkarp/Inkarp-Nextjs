@@ -1,6 +1,6 @@
-import EventsPage from "@/components/events/EventsPage";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
-import { buildPageMetadata } from "@/data/pageSeo";
+import EventsPage from"@/components/events/EventsPage";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
+import { buildPageMetadata } from"@/data/pageSeo";
 
 export const metadata = buildPageMetadata("/events");
 

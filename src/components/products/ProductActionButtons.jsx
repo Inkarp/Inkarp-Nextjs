@@ -32,7 +32,7 @@ export default function ProductActionButtons({ productName, productPath }) {
   return (
     <div className="flex flex-wrap gap-3">
       <button
-        className="inline-flex h-10 items-center gap-2 rounded-lg border border-line-light dark:border-zinc-700 px-4 text-sm font-semibold text-ink-soft dark:text-zinc-300 transition hover:border-red hover:text-red"
+        className="inline-flex h-10 items-center gap-2 border border-line-light bg-white px-4 text-sm font-semibold text-ink-soft transition hover:border-red hover:text-red"
         onClick={handleShare}
         type="button"
       >
@@ -41,7 +41,7 @@ export default function ProductActionButtons({ productName, productPath }) {
       </button>
 
       <button
-        className="inline-flex h-10 items-center gap-2 rounded-lg border border-line-light dark:border-zinc-700 px-4 text-sm font-semibold text-ink-soft dark:text-zinc-300 transition hover:border-red hover:text-red"
+        className="inline-flex h-10 items-center gap-2 border border-line-light bg-white px-4 text-sm font-semibold text-ink-soft transition hover:border-red hover:text-red"
         type="button"
       >
         <FiSliders />
@@ -49,7 +49,7 @@ export default function ProductActionButtons({ productName, productPath }) {
       </button>
 
       <Link
-        className="inline-flex h-10 items-center gap-2 rounded-lg border border-line-light dark:border-zinc-700 px-4 text-sm font-semibold text-ink-soft dark:text-zinc-300 transition hover:border-red hover:text-red"
+        className="inline-flex h-10 items-center gap-2 border border-line-light bg-white px-4 text-sm font-semibold text-ink-soft transition hover:border-red hover:text-red"
         href="/contact"
       >
         <FiUser />
@@ -57,7 +57,7 @@ export default function ProductActionButtons({ productName, productPath }) {
       </Link>
 
       <Link
-        className="inline-flex h-10 items-center gap-2 rounded-lg bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
+        className="inline-flex h-10 items-center gap-2 border border-red bg-red px-4 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red"
         href="/contact"
       >
         <FiMail />

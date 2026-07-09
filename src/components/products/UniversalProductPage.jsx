@@ -7,6 +7,7 @@ import DistillationSimulator from './sections/DistillationSimulator';
 import SolventCalculator from './sections/SolventCalculator';
 import SuitabilityChecker from './sections/SuitabilityChecker';
 import SolventGuide from './sections/SolventGuide';
+import ConnectivityPlanner from './sections/ConnectivityPlanner';
 import ROICalculator from './sections/ROICalculator';
 import ApplicationsExplorer from './sections/ApplicationsExplorer';
 import ConfigWizard from './sections/ConfigWizard';
@@ -35,6 +36,7 @@ export default function UniversalProductPage({ product }) {
     lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
 
   const workflowSection = findSection('workflow', 'Evaporation workflow');
+  const performanceSection = findSection('performance', 'Performance');
   const solventSection = findSection('solventGuide', 'Solvent setup guide');
   const roiSection = findSection('roi', 'ROI and payback');
   const benefitsSection = findSection('benefits', 'Benefits');
@@ -62,7 +64,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Evaporation workflow animation */}
       {workflowSection?.steps?.length > 0 && (
-        <EvaporationWorkflow section={workflowSection} />
+        <EvaporationWorkflow section={workflowSection} metrics={performanceSection?.metrics} />
       )}
 
       {/* Distillation simulator */}
@@ -87,6 +89,11 @@ export default function UniversalProductPage({ product }) {
           simulatorData={product.simulator}
           sectionNumber="06"
         />
+      )}
+
+      {/* Connectivity & control planner */}
+      {product.connectivityPlanner && (
+        <ConnectivityPlanner data={product.connectivityPlanner} productName={product.name} />
       )}
 
       {/* ROI calculator */}

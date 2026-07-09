@@ -15,6 +15,7 @@ const STEP_LABEL_HINTS = [
 
 function titleCase(value = '') {
   return String(value)
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
     .replace(/[-_]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
@@ -24,8 +25,10 @@ function titleCase(value = '') {
 function getStepLabel(stepDef, index) {
   if (stepDef.shortLabel || stepDef.label) return stepDef.shortLabel ?? stepDef.label;
 
-  const source = `${stepDef.key ?? ''} ${stepDef.question ?? ''}`;
-  const hinted = STEP_LABEL_HINTS.find((item) => item.match.test(source));
+  // Match against the step `key` only - matching the full question text let
+  // coincidental words (e.g. "application" inside a package question, or
+  // "glassware" inside a coating question) hijack unrelated steps' labels.
+  const hinted = STEP_LABEL_HINTS.find((item) => item.match.test(stepDef.key ?? ''));
   return hinted?.label ?? titleCase(stepDef.key) ?? `Step ${index + 1}`;
 }
 
@@ -143,10 +146,10 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
             })}
           </div>
 
-          <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <div className="rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
-              <h3 className="text-lg font-semibold tracking-tight text-ink dark:text-zinc-100">{cleanText(current.question)}</h3>
-              <div className="mt-5 space-y-3">
+          <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-stretch">
+            <div className="flex h-[520px] flex-col rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+              <h3 className="shrink-0 text-lg font-semibold tracking-tight text-ink dark:text-zinc-100">{cleanText(current.question)}</h3>
+              <div className="mt-5 min-h-0 flex-1 space-y-3 overflow-y-auto pr-1">
                 {(current.options ?? []).map((option) => {
                   const isSelected = selections[current.key] === option.val;
                   return (
@@ -167,7 +170,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                 })}
               </div>
 
-              <div className="mt-6 flex items-center justify-between gap-3">
+              <div className="mt-auto flex items-center justify-between gap-3 pt-6">
                 <button
                   className="text-sm font-semibold text-black transition hover:text-black disabled:cursor-not-allowed disabled:opacity-30 dark:text-zinc-100 dark:hover:text-zinc-100"
                   disabled={step === 0 && !done}
@@ -190,20 +193,20 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
               </div>
             </div>
 
-            <div className="flex min-h-[270px] items-center justify-center rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex h-[520px] flex-col overflow-y-auto rounded-2xl border border-line-light bg-parchment p-6 shadow-sm sm:p-8 dark:border-zinc-800 dark:bg-zinc-900">
               {!done ? (
-                <div className="text-center text-black dark:text-zinc-100">
+                <div className="flex h-full flex-col items-center justify-center text-center text-black dark:text-zinc-100">
                   <FiSettings className="mx-auto text-4xl text-red" />
                   <p className="mt-4 text-sm leading-6">{emptyState}</p>
                 </div>
               ) : (
-                <div className="w-full">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-red/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red">
+                <div className="flex h-full w-full flex-col">
+                  <div className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-red/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red">
                     <FiCheck />
                     Configuration ready
                   </div>
-                  <h3 className="mt-4 text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
-                  <div className="mt-5 space-y-2">
+                  <h3 className="mt-4 shrink-0 text-2xl font-semibold tracking-tight text-ink dark:text-zinc-100">{result.title ?? recommendedTitle}</h3>
+                  <div className="mt-5 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
                     {selectedRows.map((row) => (
                       <div className="rounded-2xl border border-line-light bg-parchment-alt px-4 py-3 dark:border-zinc-800 dark:bg-zinc-900" key={row.key}>
                         <div className="flex items-center justify-between gap-4">
@@ -214,8 +217,8 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                       </div>
                     ))}
                   </div>
-                  {result.ctaNote && <p className="mt-4 text-sm leading-6 text-black dark:text-zinc-400">{result.ctaNote}</p>}
-                  <div className="mt-5 flex flex-wrap gap-3">
+                  {result.ctaNote && <p className="mt-4 shrink-0 text-sm leading-6 text-black dark:text-zinc-400">{result.ctaNote}</p>}
+                  <div className="mt-5 flex shrink-0 flex-wrap gap-3">
                     <button
                       className="inline-flex items-center gap-2 rounded-full bg-red px-5 py-3 text-sm font-bold text-parchment transition hover:bg-[#9f000d]"
                       onClick={emailConfiguration}

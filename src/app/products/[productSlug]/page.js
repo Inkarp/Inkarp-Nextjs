@@ -188,39 +188,6 @@ export default async function ProductPage({ params }) {
           </div>
 
         </div>
-
-        {/* Hero highlights */}
-        {/* {product.heroHighlights?.length > 0 && (
-          <div className="relative mx-auto mt-10 max-w-7xl rounded-2xl border border-line-light bg-parchment-alt p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
-            <dl className="grid grid-cols-2 gap-x-8 gap-y-5 sm:grid-cols-3">
-              {product.heroHighlights.map((row) => (
-                <div key={row.label}>
-                  <dt className="text-xs font-semibold uppercase tracking-wide text-ink-soft dark:text-zinc-400">
-                    {row.label}
-                  </dt>
-                  <dd className="mt-1 text-sm font-semibold text-ink dark:text-zinc-100">
-                    {row.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href={isRichPage ? "#booking" : "/contact"}
-                className="inline-flex h-11 items-center justify-center rounded-full bg-red px-6 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
-              >
-                Request Quote
-              </Link>
-              <Link
-                href={isRichPage ? "#config" : "/contact"}
-                className="inline-flex h-11 items-center justify-center rounded-full border border-line-light bg-white dark:border-zinc-700 dark:bg-zinc-900 px-6 text-sm font-semibold text-ink dark:text-zinc-100 transition hover:-translate-y-0.5 hover:border-red hover:text-red"
-              >
-                Configure Your Hei-VAP
-              </Link>
-            </div>
-          </div>
-        )} */}
       </section>
 
       {/* Rich universal page sections OR legacy longForm */}

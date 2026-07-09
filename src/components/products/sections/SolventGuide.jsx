@@ -1,6 +1,6 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiInfo, FiPlus, FiCloudSnow, FiShield, FiThermometer } from 'react-icons/fi';
+import { FiCheckCircle, FiInfo, FiPlus, FiCloudSnow, FiShield, FiThermometer } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
 
@@ -8,8 +8,8 @@ import SectionDisclaimer from './SectionDisclaimer';
 const SOLVENT_NAME_ALIASES = { Dichloromethane: 'DCM' };
 
 // Legacy cards ship 4 items (glassware/cooling/vacuum/accessory). Cards that also
-// provide a 5th item (safety note) get an extra row - existing 4-item cards are
-// unaffected.
+// provide a 5th item (safety note) get an extra row, and a 6th item (end result)
+// gets one more on top of that - existing 4/5-item cards are unaffected.
 const DETAIL_ICONS_4 = [FiThermometer, FiCloudSnow, FiInfo, FiPlus];
 const DETAIL_LABELS_4 = [
   'Suggested glassware',
@@ -25,6 +25,18 @@ const DETAIL_LABELS_5 = [
   'Safety note',
   'Accessory recommendation',
 ];
+const DETAIL_ICONS_6 = [FiThermometer, FiCloudSnow, FiInfo, FiShield, FiPlus, FiCheckCircle];
+const DETAIL_LABELS_6 = [
+  'Suggested glassware',
+  'Cooling approach',
+  'Vacuum setup',
+  'Safety note',
+  'Accessory recommendation',
+  'End result',
+];
+// Generic icon cycle used when a section supplies its own `detailLabels`
+// (column headings that don't match the glassware-guide wording above).
+const GENERIC_ICONS = [FiThermometer, FiCloudSnow, FiInfo, FiShield, FiPlus, FiCheckCircle];
 
 function normaliseText(value = '') {
   return String(value)
@@ -47,8 +59,15 @@ function parseDescription(description = '') {
   };
 }
 
-function makeDetailRows(card) {
+function makeDetailRows(card, customLabels) {
   const items = (card.items ?? []).map(normaliseText);
+  if (customLabels?.length) {
+    const n = Math.min(items.length, customLabels.length);
+    return { labels: customLabels.slice(0, n), icons: GENERIC_ICONS.slice(0, n), rows: items.slice(0, n) };
+  }
+  if (items.length >= 6) {
+    return { labels: DETAIL_LABELS_6, icons: DETAIL_ICONS_6, rows: items.slice(0, 6) };
+  }
   if (items.length >= 5) {
     return { labels: DETAIL_LABELS_5, icons: DETAIL_ICONS_5, rows: items.slice(0, 5) };
   }
@@ -72,6 +91,7 @@ function lookupBp(cardTitle, simulatorSolvents = []) {
 export default function SolventGuide({ data, simulatorData, sectionNumber = '06' }) {
   const cards = data?.cards ?? [];
   const disclaimer = data?.disclaimer;
+  const customLabels = data?.detailLabels;
   const simulatorSolvents = simulatorData?.solvents ?? [];
   const [active, setActive] = useState(0);
 
@@ -79,8 +99,8 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
     ...card,
     parsed: parseDescription(card.description),
     boilingPoint: lookupBp(card.title, simulatorSolvents),
-    detail: makeDetailRows(card),
-  })), [cards, simulatorSolvents]);
+    detail: makeDetailRows(card, customLabels),
+  })), [cards, simulatorSolvents, customLabels]);
 
   if (!cards.length) return null;
   const card = enrichedCards[active];

@@ -94,6 +94,8 @@ function deriveAppTitle(sentence) {
   if (t.includes('food and beverage') || t.includes('food & beverage')) return 'Food & beverage testing';
   if (t.includes('environmental'))                                return 'Environmental labs';
   if (t.includes('biotech') || t.includes('life science'))       return 'Biotech & life science';
+  const colonIdx = sentence.indexOf(':');
+  if (colonIdx > -1) return sentence.slice(0, colonIdx).trim();
   return sentence.split('.')[0].trim();
 }
 

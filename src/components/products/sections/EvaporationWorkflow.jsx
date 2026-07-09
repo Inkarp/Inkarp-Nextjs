@@ -100,10 +100,32 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
   );
 }
 
+/* ── Evaporation-rate reference strip ────────────────── */
+// Reuses the same metrics feeding the Performance tab/table, so the
+// workflow section never carries its own copy of the numbers.
+function RateStrip({ metrics }) {
+  if (!metrics?.length) return null;
+
+  return (
+    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {metrics.map((m) => (
+        <div
+          className="rounded-xl border border-line-light bg-parchment-alt p-3 text-center dark:border-zinc-800 dark:bg-zinc-900"
+          key={m.label}
+        >
+          <div className="text-lg font-semibold tracking-tight text-red">{m.value}</div>
+          <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-wide text-black dark:text-zinc-400">{m.label}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /* ── Main component ──────────────────────────────────── */
-export default function EvaporationWorkflow({ section = {} }) {
+export default function EvaporationWorkflow({ section = {}, metrics }) {
   const steps = section.steps ?? [];
   const disclaimer = section.disclaimer;
+  const rateMetrics = metrics ?? section.metrics;
   const [active, setActive] = useState(0);
 
   const advance = useCallback(() => {

@@ -2732,6 +2732,10 @@
               "label": "Overview"
             },
             {
+              "id": "simulator",
+              "label": "Simulator"
+            },
+            {
               "id": "solvents",
               "label": "Solvent Guide"
             },
@@ -2760,6 +2764,15 @@
               "label": "Book Demo"
             }
           ],
+          "simulator": {
+            "disclaimer": "Simulation runs far faster than real time and is illustrative only. Actual evaporation rate depends on solvent purity, vacuum level, bath temperature, condenser setup and cooling efficiency.",
+            "solvents": [
+              { "name": "Toluene", "bp": 111, "vp": 77, "rate": 8.5, "bathTemp": 80, "condTemp": 10 },
+              { "name": "Acetone", "bp": 56, "vp": 556, "rate": 5.8, "bathTemp": 40, "condTemp": 5 },
+              { "name": "Ethanol", "bp": 78, "vp": 175, "rate": 3.5, "bathTemp": 50, "condTemp": 10 },
+              { "name": "Water", "bp": 100, "vp": 72, "rate": 1.2, "bathTemp": 80, "condTemp": 15 }
+            ]
+          },
           "applicationsExplorer": {
             "disclaimer": "Application highlights are indicative summaries based on manufacturer-published capabilities. Confirm specifics for your samples and safety requirements with Inkarp.",
             "title": "How is the Hei-VAP Expert used in your industry?",
@@ -2867,33 +2880,27 @@
                 "options": [
                   {
                     "val": "routine",
-                    "label": "Routine solvent evaporation",
-                    "desc": "Hei-VAP Expert with G3 vertical glassware, suitable vacuum support, and standard cooling selected around the solvent"
+                    "label": "Routine solvent evaporation"
                   },
                   {
                     "val": "recovery",
-                    "label": "Solvent recovery",
-                    "desc": "Hei-VAP Expert with vacuum pump, chiller or thermostat, receiving flask capacity check, and glassware selected around condensation need"
+                    "label": "Solvent recovery"
                   },
                   {
                     "val": "concentration",
-                    "label": "Sample concentration",
-                    "desc": "Hei-VAP Expert with glassware matched to sample volume, controlled heating, and vacuum support selected around solvent sensitivity"
+                    "label": "Sample concentration"
                   },
                   {
                     "val": "distillation",
-                    "label": "Distillation",
-                    "desc": "Hei-VAP Expert with suitable condenser glassware, optional vapor temperature display, reliable cooling, and controlled vacuum support"
+                    "label": "Distillation"
                   },
                   {
                     "val": "lowBoiling",
-                    "label": "Low-boiling solvent evaporation",
-                    "desc": "Hei-VAP Expert with G5 dry ice condenser or stronger cooling support, controlled vacuum, and accessory review"
+                    "label": "Low-boiling solvent evaporation"
                   },
                   {
                     "val": "teaching",
-                    "label": "Teaching or academic use",
-                    "desc": "Hei-VAP Expert with simple operation, visible status indication, hand lift or motor lift based on user preference, and glassware selected around common teaching applications"
+                    "label": "Teaching or academic use"
                   }
                 ]
               },
@@ -3158,6 +3165,1143 @@
                 "type": "textarea",
                 "required": false
               }
+            ],
+            "submitLabel": "Send enquiry to Inkarp",
+            "successMessage": "Thank you. Inkarp will be in touch within 1 business day."
+          }
+        },
+        {
+          "name": "Hei-VAP Ultimate Rotary Evaporator",
+          "slug": "hei-vap-ultimate-rotary-evaporator",
+          "image": "/assets/images/productImages/heidolph/hei-vap-ultimate-rotary-evaporator.webp",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
+          "distributorNote": "Distributor and Service Provider in India",
+          "metaTitle": "Hei-VAP Ultimate Rotary Evaporator | Heidolph | Inkarp",
+          "metaDescription": "Inkarp offers the Heidolph Hei-VAP Ultimate Rotary Evaporator in India with a 7-inch touch display, handlift configuration, G3 vertical glassware, integrated solvent library, USB, Micro SD, LAN and RS 232 interfaces, and an upgrade path to vacuum and chiller control.",
+          "metaKeywords": [
+            "Hei-VAP Ultimate",
+            "Heidolph Rotary Evaporator",
+            "Rotary Evaporator India",
+            "Heidolph India",
+            "Hei-VAP Ultimate Handlift",
+            "G3 Vertical Glassware",
+            "Solvent Evaporation",
+            "Solvent Recovery",
+            "Sample Concentration",
+            "Laboratory Rotary Evaporator",
+            "Hei-VAP Ultimate Control",
+            "Inkarp Heidolph"
+          ],
+          "overview": "Advanced rotary evaporation with 7-inch control visibility and Lab 4.0-ready connectivity.",
+          "features": [
+            "7-Inch Touch Display: The central operating panel gives users a larger display for viewing and adjusting process values in Basic and Advanced modes.",
+            "Rotation & Heating Control: Dedicated knobs allow quick adjustment of rotation speed and heating bath temperature during active operation.",
+            "Lockable Control Knobs: The locking function helps prevent accidental readjustment of selected values during operation.",
+            "Timer & Temperature Limit: Timer function and maximum temperature limitation support controlled daily operation.",
+            "Multilingual Error Display: Text-based error messages and multilingual menu support clearer operation and faster response to system alerts.",
+            "LED Status Indicators: LED ring lights and pictograms show activity status clearly, even from a distance.",
+            "Integrated Solvent Library: The solvent library helps users identify the required vacuum setting when using an external vacuum controller.",
+            "Lab 4.0 Interfaces: USB, Micro SD, LAN, and RS 232 interfaces support Lab 4.0-ready connectivity and connection with compatible external systems.",
+            "Optional Vapor Temperature Display: The system can be configured with vapor temperature display for closer process visibility.",
+            "Vacuum & Chiller Upgrade: The Hei-VAP Ultimate can be upgraded to Hei-VAP Ultimate Control, including vacuum and chiller control."
+          ],
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Hei-VAP Ultimate Standard G3 vertical glassware Handlift" },
+            { "label": "Part Number", "value": "575-01300-00" },
+            { "label": "Drive", "value": "EC motor" },
+            { "label": "Speed Range", "value": "10 to 280 rpm" },
+            { "label": "Display", "value": "7-inch touch display, Basic and Advanced modes" },
+            { "label": "Heating Power", "value": "1300 W" },
+            { "label": "Power Input", "value": "1400 W max." },
+            { "label": "Rated Voltage", "value": "230 V 50/60 Hz or 115 V 50/60 Hz" },
+            { "label": "Connection", "value": "L+N+PE" },
+            { "label": "Acoustic Pressure", "value": "Less than 85 dB(A), according to IEC 61010" },
+            { "label": "Protection Class", "value": "Device IP20; Control panel IP42; Control box IP42; heating bath connection cable IP67; Class I according to IEC 61140" },
+            { "label": "Overvoltage Category", "value": "II" },
+            { "label": "Degree of Pollution", "value": "2" },
+            { "label": "Operating Temperature", "value": "5 °C to 31 °C at up to 80% RH; 32 °C to 40 °C at up to 50% RH, linearly reducing" },
+            { "label": "Installation Altitude", "value": "Up to 2000 m above sea level" },
+            { "label": "Stroke Flask Lift", "value": "155 mm" },
+            { "label": "Lifting Speed Flask Lift", "value": "55 mm/s" },
+            { "label": "Evaporation Rate, Toluene", "value": "8.5 L/h" },
+            { "label": "Evaporation Rate, Acetone", "value": "5.8 L/h" },
+            { "label": "Evaporation Rate, Ethanol", "value": "3.5 L/h" },
+            { "label": "Evaporation Rate, Water", "value": "1.2 L/h" },
+            { "label": "Maximum Cooling Surface", "value": "0.22 m², depending on glass set" },
+            { "label": "Heating Bath", "value": "Inner Ø 253 mm; outer Ø 291 mm; V4A steel 1.4404, X2CrNiMo 17-12-2; volume 6 L" },
+            { "label": "Heating Bath Temperature Range", "value": "20 to 100 °C water; 20 to 210 °C oil" },
+            { "label": "Overtemperature Protection", "value": "Cut-off at 5 °C deviation from the set temperature" },
+            { "label": "Overheat Protection", "value": "Threshold value 250 °C" },
+            { "label": "Control", "value": "Electronic" },
+            { "label": "Control Accuracy", "value": "±1 °C" },
+            { "label": "Interfaces", "value": "USB, Micro SD, LAN, RS 232" },
+            { "label": "Weight", "value": "Approx. 15 kg without glassware" },
+            { "label": "Dimensions, motor lift variant with G3 glassware", "value": "739 × 887 × 477 mm" },
+            { "label": "Dimensions, manual lift variant with G3 glassware", "value": "739 × 887 × 532 mm" },
+            { "label": "Storage Conditions", "value": "5 °C to 31 °C at up to 80% RH; 32 °C to 40 °C at up to 50% RH, linearly reducing" }
+          ],
+          "applications": [
+            "Pharmaceutical Laboratories: Solvent removal, API concentration, purification support, reaction work-up, and formulation development.",
+            "Chemical Research Laboratories: Organic synthesis workflows, compound concentration, distillation, and solvent recovery.",
+            "Academic and Teaching Laboratories: Controlled evaporation and distillation where clear operation and visibility are important.",
+            "Food and Beverage Testing: Sample preparation, extract concentration, and solvent removal before analysis.",
+            "Environmental Laboratories: Solvent evaporation and sample concentration for analytical workflows.",
+            "Biotechnology and Life Science Laboratories: Controlled concentration steps where sample handling and process visibility matter."
+          ],
+          "faqs": [
+            { "question": "Is the Hei-VAP Ultimate suitable for routine solvent evaporation?", "answer": "Yes. The Hei-VAP Ultimate supports routine and more demanding solvent evaporation, sample concentration, distillation, and solvent recovery workflows." },
+            { "question": "What is the confirmed model on this page?", "answer": "This page focuses on the Hei-VAP Ultimate Standard G3 vertical glassware Handlift, P/N 575-01300-00." },
+            { "question": "Which display does the Hei-VAP Ultimate have?", "answer": "The Hei-VAP Ultimate has a 7-inch touch display with Basic and Advanced modes." },
+            { "question": "What is the speed range?", "answer": "The Hei-VAP Ultimate supports a speed range of 10 to 280 rpm." },
+            { "question": "What is the heating bath temperature range?", "answer": "The heating bath supports 20 to 100 °C with water and 20 to 210 °C with oil." },
+            { "question": "What is the heating bath volume?", "answer": "The heating bath volume is 6 L." },
+            { "question": "Which interfaces are available?", "answer": "The Hei-VAP Ultimate includes USB, Micro SD, LAN, and RS 232 interfaces." },
+            { "question": "What does the integrated solvent library do?", "answer": "It helps identify the required vacuum setting for the solvent in use when working with an external vacuum controller." },
+            { "question": "Can the Hei-VAP Ultimate be upgraded later?", "answer": "Yes. The system can be upgraded to Hei-VAP Ultimate Control, including vacuum and chiller control." },
+            { "question": "What safety and usability functions are included?", "answer": "The system includes a timer, maximum temperature limitation, multilingual menu, text-based error messages, locking function, LED ring lights, pictogram status display, overtemperature protection, and overheat protection." },
+            { "question": "Can Inkarp help select the right configuration?", "answer": "Yes. Inkarp can help select the right lift type, glassware, coating, vacuum pump, chiller, interfaces, control level, and accessories based on the laboratory requirements." }
+          ],
+          "longForm": {
+            "heroLead": "Advanced rotary evaporation with 7-inch control visibility and Lab 4.0-ready connectivity. The Heidolph Hei-VAP Ultimate Rotary Evaporator is designed for laboratories that need controlled evaporation, distillation, sample concentration, and solvent recovery with larger process visibility and stronger connectivity. A central 7-inch touch display gives users access to operating values in Basic and Advanced modes. Dedicated knobs for rotation and heating allow quick adjustment during active operation, while the locking function helps prevent accidental changes. This page focuses on the Hei-VAP Ultimate Standard G3 vertical glassware Handlift, P/N 575-01300-00, with handlift operation, G3 vertical glassware, and no coated condenser or receiving flask. Other lift, glassware, coating, and control configurations can be confirmed with Inkarp based on the application.",
+            "stats": [
+              { "label": "Controlled rotation speed", "value": "10 to 280 rpm" },
+              { "label": "Heating power", "value": "1300 W" },
+              { "label": "Touch display", "value": "7-inch" },
+              { "label": "Stroke flask lift", "value": "155 mm" },
+              { "label": "Lab 4.0 ready", "value": "USB, Micro SD, LAN, RS 232" }
+            ],
+            "sections": [
+              {
+                "eyebrow": "Product information",
+                "title": "Hei-VAP Ultimate at a Glance",
+                "description": "Everything you need to evaluate the Hei-VAP Ultimate Rotary Evaporator: overview, features, applications, specifications, evaporation performance, configurations, documentation, connectivity, and support.",
+                "subheading": "Controlled rotary evaporation with larger visibility and Lab 4.0-ready connectivity",
+                "body": [
+                  "The Hei-VAP Ultimate from Heidolph is built for laboratories that need controlled rotary evaporation with larger process visibility, flexible operation, and digital connectivity.",
+                  "The 7-inch touch display shows values clearly and supports Basic and Advanced modes. Users can manage rotation speed and heating bath temperature through the display or make quick changes during a run using the dedicated control knobs.",
+                  "The system includes a timer, maximum temperature limitation, multilingual menu, text-based error messages, LED ring lights, pictogram status display, and a locking function to prevent accidental readjustment.",
+                  "An integrated solvent library helps identify the required vacuum setting when working with an external vacuum controller. USB, Micro SD, LAN, and RS 232 interfaces support Lab 4.0-ready connectivity for laboratories that need stronger digital integration.",
+                  "The Hei-VAP Ultimate can be upgraded to Hei-VAP Ultimate Control, including vacuum and chiller control. Inkarp supports laboratories in India with product consultation, configuration guidance, installation, user training, application support, genuine spares, and after-sales service."
+                ],
+                "cards": [
+                  { "title": "Larger Control Visibility", "description": "7-inch touch display with Basic and Advanced modes" },
+                  { "title": "Lab 4.0 Ready", "description": "USB, Micro SD, LAN, and RS 232 interfaces" },
+                  { "title": "Solvent Library", "description": "Helps adjust the required vacuum using an external vacuum controller" },
+                  { "title": "Upgrade-Ready", "description": "Upgrade path to Hei-VAP Ultimate Control with vacuum and chiller control" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Built around connected, visible, and controlled evaporation",
+                "description": "The Hei-VAP Ultimate is designed for laboratories that need precise evaporation control, clear operating feedback, and stronger digital connectivity."
+              },
+              {
+                "key": "workflow",
+                "eyebrow": "Evaporation workflow",
+                "title": "The rotary evaporation cycle",
+                "description": "How the Hei-VAP Ultimate moves solvent through a continuous loop of rotate, heat, evaporate, condense and collect, at rates matched to Heidolph's published performance data.",
+                "steps": [
+                  { "title": "Rotate", "description": "The flask spins (10-280 rpm), spreading a thin film across the glass for a larger surface area." },
+                  { "title": "Heat", "description": "The 6 L water/oil bath (20-210 °C) warms the sample under 7-inch display control." },
+                  { "title": "Evaporate", "description": "Under vacuum, solvent boils off at a reduced temperature - up to 8.5 L/h for toluene under continuous operation." },
+                  { "title": "Condense", "description": "Vapour cools across the condenser (0.22 m² surface) and returns to liquid." },
+                  { "title": "Collect", "description": "Recovered solvent drains into the receiving flask while the sample stays behind." }
+                ],
+                "disclaimer": "This workflow explanation is illustrative. Real rates depend on solvent type, vacuum level, bath temperature, condenser setup, cooling efficiency and sample volume."
+              },
+              {
+                "key": "solventGuide",
+                "eyebrow": "Solvent and vacuum guide",
+                "title": "Which solvent are you evaporating?",
+                "description": "This section helps users choose the right starting setup based on the solvent. The Hei-VAP Ultimate includes an integrated solvent library that helps adjust the required vacuum when working with an external vacuum controller.",
+                "disclaimer": "Settings are indicative and depend on solvent purity, vacuum level, cooling efficiency, glassware, bath temperature, and operating practice.",
+                "cards": [
+                  {
+                    "title": "Toluene",
+                    "description": "G3 vertical glassware for routine work; confirm larger condensation need if sample volume is high",
+                    "items": [
+                      "G3 vertical glassware for routine work; confirm larger condensation need if sample volume is high",
+                      "Reliable cooling is important because toluene can evaporate quickly under suitable conditions",
+                      "Use a compatible vacuum pump and external vacuum controller; confirm setting through the solvent library",
+                      "Confirm ventilation, solvent handling practice, and receiving flask capacity",
+                      "Chiller or thermostat, vacuum tubing, receiving flask, and coated glassware if required and available for the selected configuration",
+                      "Recommended starting setup: Hei-VAP Ultimate with G3 glassware, vacuum control, and cooling support"
+                    ]
+                  },
+                  {
+                    "title": "Acetone",
+                    "description": "G3 vertical glassware for routine work; confirm condenser direction if lower-temperature condensation is needed",
+                    "items": [
+                      "G3 vertical glassware for routine work; confirm condenser direction if lower-temperature condensation is needed",
+                      "Stronger cooling may be needed because acetone evaporates readily",
+                      "Use a compatible vacuum pump and controller; confirm setting through the solvent library",
+                      "Confirm ventilation, vapor recovery path, and cooling capacity",
+                      "Chiller or stronger cooling setup, vacuum pump, tubing, receiving flask",
+                      "Recommended starting setup: Hei-VAP Ultimate with cooling selected around acetone volatility"
+                    ]
+                  },
+                  {
+                    "title": "Ethanol",
+                    "description": "G3 vertical glassware for routine evaporation and concentration",
+                    "items": [
+                      "G3 vertical glassware for routine evaporation and concentration",
+                      "Standard cooling may be suitable depending on solvent load and recovery expectation",
+                      "Use an external vacuum controller with compatible pump; confirm setting through the solvent library",
+                      "Confirm solvent volume, bath temperature, and recovery setup",
+                      "Vacuum pump, chiller or thermostat, tubing, and receiving flask",
+                      "Recommended starting setup: Hei-VAP Ultimate with G3 glassware and standard vacuum and cooling review"
+                    ]
+                  },
+                  {
+                    "title": "Water",
+                    "description": "G3 vertical glassware for routine work; confirm condensation capacity for larger volumes",
+                    "items": [
+                      "G3 vertical glassware for routine work; confirm condensation capacity for larger volumes",
+                      "Dependable cooling is important because water is slower to evaporate under routine conditions",
+                      "Stronger vacuum direction is usually required compared with more volatile solvents",
+                      "Confirm bath temperature, vacuum capacity, and expected evaporation time",
+                      "Vacuum pump with suitable capacity, chiller or thermostat, and glassware matched to sample volume",
+                      "Recommended starting setup: Hei-VAP Ultimate with stronger vacuum review and dependable cooling"
+                    ]
+                  },
+                  {
+                    "title": "Methanol",
+                    "description": "G3 vertical glassware for routine evaporation; confirm condenser direction for low-temperature recovery",
+                    "items": [
+                      "G3 vertical glassware for routine evaporation; confirm condenser direction for low-temperature recovery",
+                      "Efficient cooling is important because methanol is volatile",
+                      "Use a compatible vacuum pump and external controller; confirm setting through the solvent library",
+                      "Confirm ventilation, solvent recovery route, and receiving flask capacity",
+                      "Chiller or stronger cooling setup, vacuum pump, tubing, receiving flask",
+                      "Recommended starting setup: Hei-VAP Ultimate with cooling and recovery path confirmed before operation"
+                    ]
+                  },
+                  {
+                    "title": "Dichloromethane",
+                    "description": "Confirm glassware and condenser direction with Inkarp because it is a low-boiling solvent",
+                    "items": [
+                      "Confirm glassware and condenser direction with Inkarp because it is a low-boiling solvent",
+                      "Stronger or lower-temperature cooling may be required",
+                      "Use controlled vacuum carefully; confirm with solvent library and application guidance",
+                      "Requires careful handling, ventilation, and solvent recovery planning",
+                      "Condenser setup selected for low-boiling solvent work, vacuum pump, tubing, and receiving flask",
+                      "Recommended starting setup: Hei-VAP Ultimate with low-boiling solvent configuration reviewed by Inkarp"
+                    ]
+                  },
+                  {
+                    "title": "Acetonitrile",
+                    "description": "G3 vertical glassware or reviewed glassware direction based on solvent load",
+                    "items": [
+                      "G3 vertical glassware or reviewed glassware direction based on solvent load",
+                      "Reliable cooling is needed for condensation and collection",
+                      "Use an external vacuum controller and confirm setting through the solvent library",
+                      "Confirm solvent volume, ventilation, bath temperature, and receiving flask capacity",
+                      "Chiller or thermostat, vacuum pump, tubing, receiving flask",
+                      "Recommended starting setup: Hei-VAP Ultimate with solvent-specific vacuum and cooling guidance"
+                    ]
+                  },
+                  {
+                    "title": "Other or Mixed Solvents",
+                    "description": "Confirm based on solvent components, boiling behaviour, sample volume, and condensation need",
+                    "items": [
+                      "Confirm based on solvent components, boiling behaviour, sample volume, and condensation need",
+                      "Cooling may need adjustment because mixtures can evaporate in stages",
+                      "Use the solvent library where applicable; for mixtures, confirm with Inkarp",
+                      "Confirm components, volatility, compatibility, ventilation, and recovery requirement",
+                      "Vacuum pump, controller, chiller or condenser setup, tubing, receiving flask, and suitable glassware",
+                      "Recommended starting setup: Hei-VAP Ultimate with solvent-specific configuration review"
+                    ]
+                  }
+                ]
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "The Hei-VAP Ultimate Rotary Evaporator supports evaporation work across research, quality control, teaching, and process-support laboratories."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Performance",
+                "title": "Evaporation Performance",
+                "body": [
+                  "The Hei-VAP Ultimate supports evaporation performance for commonly used laboratory solvents under continuous operation conditions.",
+                  "Performance values are based on a temperature difference of 40 °C under continuous operation conditions."
+                ],
+                "metrics": [
+                  { "label": "Toluene", "value": "8.5 L/h" },
+                  { "label": "Acetone", "value": "5.8 L/h" },
+                  { "label": "Ethanol", "value": "3.5 L/h" },
+                  { "label": "Water", "value": "1.2 L/h" }
+                ],
+                "disclaimer": "Actual evaporation performance depends on solvent type, vacuum level, bath temperature, condenser setup, cooling efficiency, glassware, and sample volume. Inkarp can help laboratories select the right vacuum pump, chiller, glassware, and accessory setup for the application."
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configurations",
+                "title": "Configure the Hei-VAP Ultimate around your application",
+                "description": "The Hei-VAP Ultimate Rotary Evaporator is available in configuration variants based on lift preference, glassware requirement, condenser coating, and control level. Final configuration should be confirmed with Inkarp before quoting.",
+                "cards": [
+                  { "title": "Model", "description": "Hei-VAP Ultimate Standard G3 vertical glassware Handlift" },
+                  { "title": "Part Number", "description": "575-01300-00" },
+                  { "title": "Lift", "description": "Handlift" },
+                  { "title": "Glassware", "description": "G3 vertical glassware" },
+                  { "title": "Coating Condenser and Receiving Flask", "description": "No" },
+                  { "title": "Upgrade Path", "description": "Hei-VAP Ultimate Control possible" },
+                  { "title": "Handlift", "description": "Choose handlift if the laboratory prefers direct manual flask movement and a simple routine setup" },
+                  { "title": "Motor Lift", "description": "Choose motor lift if powered flask movement is preferred for handling convenience" },
+                  { "title": "G3 Vertical Glassware", "description": "Standard vertical setup for routine evaporation and solvent recovery" },
+                  { "title": "Other Glassware Configurations", "description": "Should be confirmed with Inkarp based on solvent, cooling requirement, condensation load, and application" },
+                  { "title": "Without Coated Condenser and Receiving Flask", "description": "Confirmed on this page and suitable for general laboratory use" },
+                  { "title": "With Coated Condenser and Receiving Flask", "description": "Availability and suitability should be confirmed with Inkarp where additional protection around glass components is preferred" },
+                  { "title": "Hei-VAP Ultimate", "description": "Rotation, heating, safety functions, 7-inch display, solvent library, and Lab 4.0-ready interfaces" },
+                  { "title": "Hei-VAP Ultimate Control Upgrade", "description": "Adds vacuum and chiller control to the setup" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation & Resources",
+                "title": "Documents available on request",
+                "description": "All relevant documents can be requested from Inkarp, subject to availability from the principal.",
+                "cards": [
+                  { "title": "Technical Data Sheet", "description": "Available on request" },
+                  { "title": "Operating Instructions, Hei-VAP Expert and Ultimate", "description": "Available on request" },
+                  { "title": "At a Glance, Hei-VAP", "description": "Available on request" },
+                  { "title": "Hei-VAP continuous operation certificate", "description": "Available on request" },
+                  { "title": "EU Declaration of Conformity, Hei-VAP", "description": "Available on request" },
+                  { "title": "Vacuum Configurator Matrix", "description": "Available on request" },
+                  { "title": "Chiller Selection Matrix", "description": "Available on request" },
+                  { "title": "Hei-VOLUME Distimatic", "description": "Available on request" },
+                  { "title": "Safety Guide, Rotary Evaporators", "description": "Available on request" },
+                  { "title": "Matrix Sustainability", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Final CTA Section",
+              "title": "Need help choosing the right Hei-VAP Ultimate configuration?",
+              "description": "Tell Inkarp about your solvent, sample volume, evaporation work, preferred lift type, glassware requirement, connectivity need, and whether you want vacuum and chiller control. Our team will help you configure the right Heidolph Hei-VAP Ultimate Rotary Evaporator for your laboratory.",
+              "label": "Request Quote",
+              "href": "/contact"
+            }
+          },
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "workflow", "label": "Workflow" },
+            { "id": "simulator", "label": "Simulator" },
+            { "id": "solvents", "label": "Solvent Guide" },
+            { "id": "connectivity", "label": "Connectivity" },
+            { "id": "config", "label": "Configure" },
+            { "id": "comparison", "label": "Compare" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Book Demo" }
+          ],
+          "simulator": {
+            "disclaimer": "Simulation runs far faster than real time and is illustrative only. Actual evaporation rate depends on solvent purity, vacuum level, bath temperature, condenser setup and cooling efficiency.",
+            "solvents": [
+              { "name": "Toluene", "bp": 111, "vp": 77, "rate": 8.5, "bathTemp": 80, "condTemp": 10 },
+              { "name": "Acetone", "bp": 56, "vp": 556, "rate": 5.8, "bathTemp": 40, "condTemp": 5 },
+              { "name": "Ethanol", "bp": 78, "vp": 175, "rate": 3.5, "bathTemp": 50, "condTemp": 10 },
+              { "name": "Water", "bp": 100, "vp": 72, "rate": 1.2, "bathTemp": 80, "condTemp": 15 }
+            ]
+          },
+          "applicationsExplorer": {
+            "disclaimer": "Application highlights are indicative summaries based on manufacturer-published capabilities. Confirm specifics for your samples and safety requirements with Inkarp.",
+            "title": "How is the Hei-VAP Ultimate used in your industry?",
+            "description": "Select your field to see typical rotary-evaporation tasks and the capabilities that matter.",
+            "industries": [
+              {
+                "name": "Pharmaceuticals",
+                "shortName": "Pharma",
+                "icon": "pill",
+                "bullets": ["Controlled evaporation", "Repeatable temperature and speed settings", "Safe bath operation", "Clear display", "Suitable condenser setup"],
+                "tags": ["Solvent Recovery", "API Work-up", "Sample Concentration", "Distillation"],
+                "note": "Solvent removal, API concentration, purification support, formulation development, and reaction work-up"
+              },
+              {
+                "name": "Chemical Research",
+                "shortName": "Chemistry",
+                "icon": "flask",
+                "bullets": ["Reliable rotation control", "Efficient bath heating", "Solvent-specific configuration", "Vacuum and cooling review"],
+                "tags": ["Organic Synthesis", "Solvent Evaporation", "Distillation", "Compound Concentration"],
+                "note": "Organic synthesis workflows, compound concentration, distillation, and solvent recovery"
+              },
+              {
+                "name": "Academic Laboratories",
+                "shortName": "Academic",
+                "icon": "school",
+                "bullets": ["Clear display", "Visible active functions", "Safe daily operation", "Simple training path"],
+                "tags": ["Teaching Lab", "Research Lab", "Clear Operation", "Safety"],
+                "note": "Teaching and research use where clear operation and visible status are important"
+              },
+              {
+                "name": "Food and Beverage Testing",
+                "shortName": "Food",
+                "icon": "coffee",
+                "bullets": ["Consistent evaporation", "Controlled heating", "Sample concentration", "Solvent recovery"],
+                "tags": ["Extract Concentration", "Sample Preparation", "Food Testing", "QC"],
+                "note": "Sample preparation, extract concentration, and solvent removal before analysis"
+              },
+              {
+                "name": "Environmental Laboratories",
+                "shortName": "Environ.",
+                "icon": "droplet",
+                "bullets": ["Repeatable evaporation", "Reliable solvent recovery", "Safe operation", "Accessory compatibility"],
+                "tags": ["Environmental Testing", "Sample Concentration", "Analysis Support"],
+                "note": "Solvent evaporation and concentration of samples in analytical workflows"
+              },
+              {
+                "name": "Biotechnology and Life Science Laboratories",
+                "shortName": "Biotech",
+                "icon": "cpu",
+                "bullets": ["Gentle concentration", "Solvent removal", "Repeatable operation", "Setup review"],
+                "tags": ["Sample Handling", "Concentration", "Controlled Evaporation"],
+                "note": "Controlled concentration steps where sample handling and process visibility matter"
+              }
+            ]
+          },
+          "configWizard": {
+            "eyebrow": "Configuration wizard",
+            "title": "Which Hei-VAP Ultimate setup should I start from?",
+            "description": "Answer a few quick questions and get a recommended starting configuration. This wizard gives Inkarp a starting point to confirm the exact configuration, part number, glassware, vacuum, cooling, and accessories.",
+            "steps": [
+              {
+                "key": "workflow",
+                "question": "What is your main workflow?",
+                "options": [
+                  { "val": "routine", "label": "Routine solvent evaporation", "desc": "Recommended starting direction: Hei-VAP Ultimate with G3 vertical glassware, handlift or motor lift based on preference, and vacuum and cooling selected around the solvent" },
+                  { "val": "recovery", "label": "Solvent recovery", "desc": "Recommended starting direction: Hei-VAP Ultimate with vacuum pump, chiller or thermostat, receiving flask capacity check, and solvent-specific configuration review" },
+                  { "val": "concentration", "label": "Sample concentration", "desc": "Recommended starting direction: Hei-VAP Ultimate with glassware matched to sample volume, controlled heating, vacuum support, and cooling selected around solvent sensitivity" },
+                  { "val": "distillation", "label": "Distillation", "desc": "Recommended starting direction: Hei-VAP Ultimate with suitable condenser direction, optional vapor temperature display, reliable cooling, and controlled vacuum support" },
+                  { "val": "lowBoiling", "label": "Low-boiling solvent evaporation", "desc": "Recommended starting direction: Hei-VAP Ultimate with stronger cooling or condenser setup selected for low-boiling solvents, controlled vacuum, and accessory review" },
+                  { "val": "teaching", "label": "Teaching or academic use", "desc": "Recommended starting direction: Hei-VAP Ultimate with clear 7-inch display, visible status indication, selected lift preference, and G3 vertical glassware for routine teaching use" }
+                ]
+              },
+              {
+                "key": "lift",
+                "question": "How do you prefer flask movement?",
+                "options": [
+                  { "val": "hand", "label": "Manual handlift" },
+                  { "val": "motor", "label": "Motor lift" }
+                ]
+              },
+              {
+                "key": "glassware",
+                "question": "Which glassware direction do you need?",
+                "options": [
+                  { "val": "g3", "label": "G3 vertical glassware" },
+                  { "val": "other", "label": "Application-specific glassware to confirm" }
+                ]
+              },
+              {
+                "key": "coating",
+                "question": "Do you need coated glassware?",
+                "options": [
+                  { "val": "no", "label": "No" },
+                  { "val": "yes", "label": "Yes" }
+                ]
+              },
+              {
+                "key": "controlLevel",
+                "question": "Which control level do you need?",
+                "options": [
+                  { "val": "ultimate", "label": "Hei-VAP Ultimate" },
+                  { "val": "ultimateControl", "label": "Hei-VAP Ultimate Control" }
+                ]
+              },
+              {
+                "key": "connectivity",
+                "question": "Do you need digital connectivity?",
+                "options": [
+                  { "val": "basic", "label": "Basic data handling" },
+                  { "val": "external", "label": "External system connection" },
+                  { "val": "lab4", "label": "Lab 4.0-ready connection review" }
+                ]
+              }
+            ],
+            "result": {
+              "title": "Configuration ready for review.",
+              "ctaLabel": "Request Quote",
+              "ctaNote": "Final configuration should be confirmed with Inkarp against solvent type, sample volume, evaporation rate, vacuum requirement, cooling need, glassware preference, coating requirement, connectivity need, and daily usage pattern."
+            }
+          },
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Hei-VAP Ultimate vs Hei-VAP Ultimate Control",
+            "description": "Both share the same core evaporation platform. The comparison below shows what the Ultimate Control upgrade adds, so laboratories can decide whether to start with the Ultimate or move to the Control configuration.",
+            "disclaimer": "This is a feature comparison between the Hei-VAP Ultimate and the Hei-VAP Ultimate Control upgrade path. Confirm the exact configuration and part numbers with Inkarp.",
+            "columns": [
+              { "label": "Hei-VAP Ultimate", "highlight": false },
+              { "label": "Hei-VAP Ultimate Control", "highlight": true }
+            ],
+            "rows": [
+              { "feature": "Display", "values": ["7-inch touch display for the evaporator", "7-inch touch display with expanded control of connected components"] },
+              { "feature": "Rotation and Heating Control", "values": ["Yes", "Yes"] },
+              { "feature": "Vacuum Control", "values": ["Through an external vacuum controller", "Vacuum control included in the upgraded setup"] },
+              { "feature": "Cooling and Chiller Control", "values": ["Separate", "Chiller control included in the upgraded setup"] },
+              { "feature": "Solvent Library", "values": ["Integrated", "Integrated with expanded control direction"] },
+              { "feature": "Interfaces", "values": ["USB, Micro SD, LAN, RS 232", "USB, Micro SD, LAN, RS 232"] },
+              { "feature": "Best For", "values": ["Labs that want advanced evaporation control with Lab 4.0-ready connectivity", "Labs that want evaporation, vacuum, and cooling control managed in a more connected setup"] }
+            ]
+          },
+          "serviceMap": {
+            "eyebrow": "Service",
+            "title": "Heidolph support across India",
+            "description": "Inkarp supports laboratories across India with complete sales, application, and service assistance for Heidolph Rotary Evaporators.",
+            "supportAreas": [
+              { "title": "Product Consultation", "description": "Helps users understand whether the Hei-VAP Ultimate fits their requirement" },
+              { "title": "Configuration Guidance", "description": "Supports selection of lift type, glassware, coating, vacuum, cooling, interfaces, and accessories" },
+              { "title": "Installation Support", "description": "Helps laboratories set up the system correctly after delivery" },
+              { "title": "User Training", "description": "Supports users with operation, basic handling, and setup guidance" },
+              { "title": "Preventive Maintenance", "description": "Helps reduce avoidable downtime and performance drift" },
+              { "title": "Service Support", "description": "Supports troubleshooting, breakdown service, and long-term care" },
+              { "title": "Accessory Recommendation", "description": "Helps select glassware, tubing, vacuum, cooling, receiving flask, and related accessories" },
+              { "title": "Application Support", "description": "Helps match the setup to solvent, sample, evaporation requirement, and control need" }
+            ]
+          },
+          "connectivityPlanner": {
+            "eyebrow": "Connectivity & control planner",
+            "title": "How connected should your evaporation setup be?",
+            "description": "The Hei-VAP Ultimate includes USB, Micro SD, LAN, and RS 232 interfaces. Select how your lab wants to manage control, data, and future upgrade needs.",
+            "disclaimer": "Inkarp should confirm interface compatibility, vacuum and cooling accessories, and application requirements before final configuration.",
+            "options": [
+              {
+                "title": "Local Operation",
+                "meaning": "The evaporator is mainly operated from the instrument",
+                "support": "7-inch touch display, dedicated knobs, Basic and Advanced modes, lock function, LED status indication",
+                "confirm": "User preference, operating mode, training requirement",
+                "result": "Recommended path: Hei-VAP Ultimate for direct operation with clear display and local controls",
+                "cta": "Discuss Local Setup"
+              },
+              {
+                "title": "Data Handling and Updates",
+                "meaning": "The lab wants data handling, updates, or device-level file support",
+                "support": "USB and Micro SD interfaces",
+                "confirm": "Data handling requirement, update process, internal documentation needs",
+                "result": "Recommended path: Hei-VAP Ultimate with USB and Micro SD support reviewed for lab documentation needs",
+                "cta": "Ask About Data Handling"
+              },
+              {
+                "title": "External System Connection",
+                "meaning": "The lab wants stronger digital connectivity",
+                "support": "LAN and RS 232 interfaces support Lab 4.0-ready integration direction",
+                "confirm": "External system compatibility, communication requirement, IT or lab integration needs",
+                "result": "Recommended path: Hei-VAP Ultimate with LAN and RS 232 connection review",
+                "cta": "Request Connectivity Review"
+              },
+              {
+                "title": "Vacuum and Chiller Control Upgrade",
+                "meaning": "The lab wants vacuum and cooling control included in the setup",
+                "support": "Upgrade to Hei-VAP Ultimate Control possible, including vacuum and chiller control",
+                "confirm": "Vacuum pump, chiller, solvent type, cooling capacity, process control requirement",
+                "result": "Recommended path: Hei-VAP Ultimate Control upgrade review with vacuum and chiller configuration",
+                "cta": "Configure Ultimate Control"
+              }
+            ]
+          },
+          "booking": {
+            "eyebrow": "Book a demo",
+            "title": "See the Hei-VAP Ultimate in action",
+            "description": "Book a demonstration with Inkarp. Tell us your solvent, sample volume, evaporation work, preferred lift type, glassware requirement, connectivity need, and whether you want vacuum and chiller control, and the team will configure the right setup for your needs.",
+            "fields": [
+              { "key": "name", "label": "Your name", "type": "text", "required": true },
+              { "key": "email", "label": "Email address", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone number", "type": "tel", "required": false },
+              { "key": "organisation", "label": "Organisation / Institute", "type": "text", "required": false },
+              { "key": "city", "label": "City", "type": "text", "required": false },
+              { "key": "solvent", "label": "Primary solvent", "type": "text", "required": false },
+              {
+                "key": "volume",
+                "label": "Typical batch volume",
+                "type": "select",
+                "required": false,
+                "options": ["Under 0.5 L", "0.5–1 L", "1–2 L", "2–3 L", "Above 3 L"]
+              },
+              {
+                "key": "requestType",
+                "label": "Request type",
+                "type": "select",
+                "required": true,
+                "options": ["Demo request", "Quote request", "Technical question", "Service enquiry", "General enquiry"]
+              },
+              { "key": "message", "label": "Additional details (optional)", "type": "textarea", "required": false }
+            ],
+            "submitLabel": "Send enquiry to Inkarp",
+            "successMessage": "Thank you. Inkarp will be in touch within 1 business day."
+          }
+        },
+        {
+          "name": "Hei-VAP Expert Control Rotary Evaporator",
+          "slug": "hei-vap-expert-control-rotary-evaporator",
+          "image": "/assets/images/productImages/heidolph/hei-vap-expert-control-rotary-evaporator.webp",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
+          "distributorNote": "Distributor and Service Provider in India",
+          "metaTitle": "Hei-VAP Expert Control Rotary Evaporator | Heidolph | Inkarp",
+          "metaDescription": "Inkarp offers the Heidolph Hei-VAP Expert Control Rotary Evaporator in India with a 5-inch touch display, integrated vacuum and cooling temperature control, Dynamic AUTOaccurate Program, saved evaporation ramps, expandable solvent library, USB and Micro SD interfaces, and complete application and service support.",
+          "metaKeywords": [
+            "Hei-VAP Expert Control",
+            "Heidolph Rotary Evaporator",
+            "Rotary Evaporator India",
+            "Heidolph India",
+            "Hei-VAP Expert Control Handlift",
+            "G3 Vertical Glassware",
+            "Solvent Evaporation",
+            "Solvent Recovery",
+            "Sample Concentration",
+            "Vacuum Distillation",
+            "Rotary Vacuum Evaporator",
+            "Dynamic AUTO accurate Program",
+            "DAA",
+            "Inkarp Heidolph"
+          ],
+          "overview": "Integrated evaporation control with vacuum, cooling, saved methods, and automated process guidance.",
+          "features": [
+            "5-Inch Touch Display: The central display controls the entire system, including vacuum and cooling temperature, and gives users an overview of parameters and the current process.",
+            "Rotation & Vacuum Control: Separate quick-access knobs support direct control of rotation and vacuum during active operation.",
+            "Process Pictograms: The display uses pictograms to show active functions clearly, helping users monitor the process status.",
+            "Favorite Access: Two favorites can be accessed directly from the start screen for faster repeat operation.",
+            "Expandable Solvent Library: The solvent library supports solvent-guided vacuum setup and can be expanded based on user requirements.",
+            "USB Favorites Transfer: Individual favorites can be transferred from one device to another using a USB stick.",
+            "Evaporation Ramps: Users can define and save their own evaporation processes as ramps for controlled and repeatable operation.",
+            "Dynamic AUTOaccurate Program: DAA supports automatic evaporation with customizable settings, from foam avoidance to efficient evaporation.",
+            "USB & Micro SD Interfaces: USB and Micro SD interfaces support software updates and transfer of individual favorites between devices.",
+            "Vacuum & Cooling Control: The Expert Control version is built to control compatible vacuum and cooling components from the system interface."
+          ],
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Hei-VAP Expert Control Standard Handlift" },
+            { "label": "Part Number", "value": "573-02300-00" },
+            { "label": "Drive", "value": "EC motor" },
+            { "label": "Speed Range", "value": "10 to 280 rpm" },
+            { "label": "Display", "value": "5-inch touch display" },
+            { "label": "Heating Power", "value": "1300 W" },
+            { "label": "Power Input", "value": "1400 W max." },
+            { "label": "Rated Voltage", "value": "230 V 50/60 Hz or 115 V 50/60 Hz" },
+            { "label": "Connection", "value": "L+N+PE" },
+            { "label": "Acoustic Pressure", "value": "Less than 85 dB(A), according to IEC 61010" },
+            { "label": "Protection Class", "value": "Device IP20; Control panel IP42; Control box IP42; heating bath connection cable IP67; Class I according to IEC 61140" },
+            { "label": "Overvoltage Category", "value": "II" },
+            { "label": "Degree of Pollution", "value": "2" },
+            { "label": "Operating Temperature", "value": "5 °C to 31 °C at up to 80% RH; 32 °C to 40 °C at up to 50% RH, linearly reducing" },
+            { "label": "Installation Altitude", "value": "Up to 2000 m above sea level" },
+            { "label": "Stroke Flask Lift", "value": "155 mm" },
+            { "label": "Lifting Speed Flask Lift", "value": "55 mm/s" },
+            { "label": "Evaporation Rate, Toluene", "value": "8.5 L/h" },
+            { "label": "Evaporation Rate, Acetone", "value": "5.8 L/h" },
+            { "label": "Evaporation Rate, Ethanol", "value": "3.5 L/h" },
+            { "label": "Evaporation Rate, Water", "value": "1.2 L/h" },
+            { "label": "Maximum Cooling Surface", "value": "0.22 m², depending on glass set" },
+            { "label": "Heating Bath", "value": "Inner Ø 253 mm; outer Ø 291 mm; V4A steel 1.4404, X2CrNiMo 17-12-2; volume 6 L" },
+            { "label": "Heating Bath Temperature Range", "value": "20 to 100 °C water; 20 to 210 °C oil" },
+            { "label": "Overtemperature Protection", "value": "Cut-off at 5 °C deviation from the set temperature" },
+            { "label": "Overheat Protection", "value": "Threshold value 250 °C" },
+            { "label": "Control", "value": "Electronic" },
+            { "label": "Control Accuracy", "value": "±1 °C" },
+            { "label": "Interfaces", "value": "USB and Micro SD" },
+            { "label": "Weight", "value": "Approx. 15 kg without glassware" },
+            { "label": "Dimensions, motor lift variant with G3 glassware", "value": "739 × 887 × 477 mm" },
+            { "label": "Dimensions, manual lift variant with G3 glassware", "value": "739 × 887 × 532 mm" },
+            { "label": "Storage Conditions", "value": "5 °C to 31 °C at up to 80% RH; 32 °C to 40 °C at up to 50% RH, linearly reducing" }
+          ],
+          "applications": [
+            "Solvent Recovery with Vacuum Control: Supports solvent recovery workflows where vacuum control and cooling coordination are important.",
+            "Sample Concentration with Saved Ramps: Helps users define and repeat evaporation steps for controlled sample concentration.",
+            "Foam-Sensitive Evaporation: DAA supports customizable evaporation where foam avoidance is important.",
+            "Distillation Process Control: Supports distillation workflows where rotation, vacuum, cooling, and process visibility must be managed together.",
+            "Reaction Work-Up and Purification Support: Useful for post-reaction solvent removal, concentration, and purification support.",
+            "Routine Evaporation with Favorites: Helps laboratories repeat commonly used methods faster through favorite access and saved settings."
+          ],
+          "faqs": [
+            { "question": "What is the confirmed model on this page?", "answer": "This page focuses on the Hei-VAP Expert Control Standard Handlift, P/N 573-02300-00." },
+            { "question": "What makes Hei-VAP Expert Control different from Hei-VAP Expert?", "answer": "Hei-VAP Expert Control adds integrated control of the complete system, including vacuum and cooling temperature, along with saved ramps, favorites, an expandable solvent library, and DAA automatic evaporation." },
+            { "question": "Which display does the Hei-VAP Expert Control have?", "answer": "It has a 5-inch touch display for controlling the complete system, including vacuum and cooling temperature." },
+            { "question": "Which knobs are available for quick access?", "answer": "The right knob supports direct vacuum control, and the left knob supports rotation control." },
+            { "question": "What is DAA?", "answer": "DAA stands for Dynamic AUTOaccurate Program. It supports automatic evaporation with customizable settings, including foam avoidance and efficient evaporation." },
+            { "question": "Can users save evaporation processes?", "answer": "Yes. Users can define and save their own evaporation processes as ramps." },
+            { "question": "Can favorites be used?", "answer": "Yes. Two favorites can be accessed directly from the start screen, and favorites can be transferred to other devices using a USB stick." },
+            { "question": "What is the speed range?", "answer": "The Hei-VAP Expert Control supports a speed range of 10 to 280 rpm." },
+            { "question": "What is the heating bath volume?", "answer": "The heating bath volume is 6 L." },
+            { "question": "What is the heating bath temperature range?", "answer": "The heating bath supports 20 to 100 °C with water and 20 to 210 °C with oil." },
+            { "question": "Which interfaces are available?", "answer": "The system includes USB and Micro SD interfaces." },
+            { "question": "Can Inkarp help select the right configuration?", "answer": "Yes. Inkarp can help select the lift type, glassware, coating, package, vacuum pump, chiller or thermostat, accessories, and application setup based on the laboratory requirement." }
+          ],
+          "longForm": {
+            "heroLead": "Integrated evaporation control with vacuum, cooling, saved methods, and automated process guidance. The Heidolph Hei-VAP Expert Control Rotary Evaporator is designed for laboratories that need more control over evaporation, distillation, sample concentration, and solvent recovery. A 5-inch touch display controls the complete evaporation system, including vacuum and cooling temperature. Separate quick-access knobs allow direct control of rotation and vacuum, while the display gives users an overview of all key parameters and the current process. This page focuses on the Hei-VAP Expert Control Standard Handlift, P/N 573-02300-00, with handlift operation, G3 vertical glassware, and no coated condenser or receiving flask. Other lift, glassware, coating, package, vacuum, and cooling configurations should be confirmed with Inkarp before quoting.",
+            "stats": [
+              { "label": "Touch display", "value": "5-inch" },
+              { "label": "Controlled rotation speed", "value": "10 to 280 rpm" },
+              { "label": "Heating power", "value": "1300 W" },
+              { "label": "Heating bath volume", "value": "6 L" },
+              { "label": "Stroke flask lift", "value": "155 mm" },
+              { "label": "Dynamic AUTOaccurate Program", "value": "DAA" }
+            ],
+            "sections": [
+              {
+                "eyebrow": "Product information",
+                "title": "Hei-VAP Expert Control at a Glance",
+                "description": "Everything you need to evaluate the Hei-VAP Expert Control Rotary Evaporator: overview, features, applications, specifications, evaporation performance, configurations, automation, packages, documentation, and service support.",
+                "subheading": "Integrated control of evaporation, vacuum, and cooling from one display",
+                "body": [
+                  "The Hei-VAP Expert Control from Heidolph is built for laboratories that need integrated control of rotary evaporation parameters from one operating interface.",
+                  "Unlike standard rotary evaporator setups where vacuum and cooling may be managed separately, the Expert Control version brings evaporation system control into the 5-inch touch display, including vacuum and cooling temperature.",
+                  "The display gives users a clear overview of values and the current process. Active functions are shown through pictograms, while quick-access knobs support direct control of rotation and vacuum without navigating through multiple menu layers.",
+                  "The system supports two favorites on the start screen, an expandable solvent library, user-defined evaporation ramps, and automated evaporation through the Dynamic AUTOaccurate Program, also called DAA. These functions help laboratories improve process repeatability and reduce manual intervention during evaporation work.",
+                  "As a Heidolph Distributor and Service Provider in India, Inkarp supports laboratories with product consultation, configuration guidance, vacuum and cooling accessory selection, installation, user training, application support, and after-sales service."
+                ],
+                "cards": [
+                  { "title": "Integrated System Control", "description": "Controls evaporation, vacuum, and cooling temperature from the display" },
+                  { "title": "Direct Vacuum Access", "description": "Right quick-access knob supports direct vacuum control" },
+                  { "title": "Saved Processes", "description": "Users can define and save evaporation ramps" },
+                  { "title": "Automated Evaporation", "description": "DAA supports customizable automatic evaporation" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Built around integrated, automated, and repeatable evaporation",
+                "description": "The Hei-VAP Expert Control is designed for laboratories that need system-level evaporation control, saved methods, solvent-guided setup, and automated evaporation support."
+              },
+              {
+                "key": "solventGuide",
+                "eyebrow": "Solvent and vacuum program guide",
+                "title": "Which solvent and vacuum path should your process start with?",
+                "description": "This interactive section helps users choose a starting setup based on solvent type and evaporation behaviour. The Hei-VAP Expert Control includes an expandable solvent library, direct vacuum control, and DAA automatic evaporation support.",
+                "disclaimer": "Settings are indicative and depend on solvent purity, vacuum level, cooling efficiency, glassware, bath temperature, sample volume, and operating practice.",
+                "detailLabels": ["Vacuum direction", "Cooling approach", "DAA use case", "Accessory recommendation", "End result"],
+                "cards": [
+                  {
+                    "title": "Toluene",
+                    "description": "Confirm setting through the expandable solvent library and control vacuum directly from the system",
+                    "items": [
+                      "Confirm setting through the expandable solvent library and control vacuum directly from the system",
+                      "Reliable cooling is important because toluene can evaporate quickly under suitable conditions",
+                      "Useful where efficient evaporation and controlled vacuum response are required",
+                      "Vacuum pump, chiller or thermostat, tubing, receiving flask, G3 glassware, and coated glassware if required and available for the selected configuration",
+                      "Recommended setup: Expert Control with solvent-guided vacuum, cooling support, and saved method review"
+                    ]
+                  },
+                  {
+                    "title": "Acetone",
+                    "description": "Use controlled vacuum and confirm the starting point through the solvent library",
+                    "items": [
+                      "Use controlled vacuum and confirm the starting point through the solvent library",
+                      "Stronger cooling may be needed because acetone evaporates readily",
+                      "Useful where foam avoidance and controlled evaporation behaviour are important",
+                      "Vacuum pump, cooling support, receiving flask, tubing, and suitable condenser direction",
+                      "Recommended setup: Expert Control with DAA review and cooling selected around acetone volatility"
+                    ]
+                  },
+                  {
+                    "title": "Ethanol",
+                    "description": "Use solvent-guided vacuum setting and confirm cooling based on solvent load",
+                    "items": [
+                      "Use solvent-guided vacuum setting and confirm cooling based on solvent load",
+                      "Standard cooling may be suitable depending on volume and recovery expectation",
+                      "Useful for repeatable solvent evaporation and recovery workflows",
+                      "Vacuum pump, chiller or thermostat, tubing, receiving flask, and G3 vertical glassware",
+                      "Recommended setup: Expert Control with saved favorite or ramp for repeated ethanol evaporation"
+                    ]
+                  },
+                  {
+                    "title": "Water",
+                    "description": "Stronger vacuum direction is usually required compared with more volatile solvents",
+                    "items": [
+                      "Stronger vacuum direction is usually required compared with more volatile solvents",
+                      "Dependable cooling and sufficient process time should be considered",
+                      "Useful where controlled evaporation and longer process management are needed",
+                      "Vacuum pump with suitable capacity, chiller or thermostat, receiving flask, and glassware matched to sample volume",
+                      "Recommended setup: Expert Control with vacuum capacity review and controlled process ramp"
+                    ]
+                  },
+                  {
+                    "title": "Methanol",
+                    "description": "Use controlled vacuum with solvent library guidance",
+                    "items": [
+                      "Use controlled vacuum with solvent library guidance",
+                      "Efficient cooling is important because methanol is volatile",
+                      "Useful for automated evaporation where solvent recovery and foam control must be managed",
+                      "Vacuum pump, cooling support, tubing, receiving flask, and suitable condenser direction",
+                      "Recommended setup: Expert Control with solvent-guided vacuum and DAA review"
+                    ]
+                  },
+                  {
+                    "title": "Dichloromethane",
+                    "description": "Confirm vacuum and condenser direction carefully because it is a low-boiling solvent",
+                    "items": [
+                      "Confirm vacuum and condenser direction carefully because it is a low-boiling solvent",
+                      "Stronger or lower-temperature cooling may be required",
+                      "Useful where careful vacuum control and foam avoidance are needed",
+                      "Condenser setup selected for low-boiling solvent work, vacuum pump, cooling support, tubing, and receiving flask",
+                      "Recommended setup: Expert Control with low-boiling solvent configuration reviewed by Inkarp"
+                    ]
+                  },
+                  {
+                    "title": "Acetonitrile",
+                    "description": "Use solvent-guided vacuum setting and confirm cooling capacity",
+                    "items": [
+                      "Use solvent-guided vacuum setting and confirm cooling capacity",
+                      "Reliable cooling is needed for condensation and collection",
+                      "Useful for repeatable solvent removal and concentration work",
+                      "Vacuum pump, chiller or thermostat, tubing, receiving flask, and glassware direction review",
+                      "Recommended setup: Expert Control with solvent-specific vacuum and cooling guidance"
+                    ]
+                  },
+                  {
+                    "title": "Other or Mixed Solvents",
+                    "description": "Confirm based on solvent components, boiling behaviour, sample volume, and condensation need",
+                    "items": [
+                      "Confirm based on solvent components, boiling behaviour, sample volume, and condensation need",
+                      "Cooling may need adjustment because mixtures can evaporate in stages",
+                      "DAA and saved ramps may help manage staged evaporation behaviour",
+                      "Vacuum pump, controller integration, cooling support, tubing, receiving flask, and suitable glassware",
+                      "Recommended setup: Expert Control with application-specific configuration review"
+                    ]
+                  }
+                ]
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "The Hei-VAP Expert Control Rotary Evaporator supports controlled and automated evaporation workflows across research, testing, quality control, and process-support laboratories."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Performance",
+                "title": "Evaporation Performance",
+                "body": [
+                  "The Hei-VAP Expert Control supports evaporation performance for commonly used laboratory solvents under continuous operation conditions.",
+                  "Performance values are based on a temperature difference of 40 °C under continuous operation conditions."
+                ],
+                "metrics": [
+                  { "label": "Toluene", "value": "8.5 L/h" },
+                  { "label": "Acetone", "value": "5.8 L/h" },
+                  { "label": "Ethanol", "value": "3.5 L/h" },
+                  { "label": "Water", "value": "1.2 L/h" }
+                ],
+                "disclaimer": "Actual evaporation performance depends on solvent type, vacuum level, bath temperature, condenser setup, cooling efficiency, glassware, and sample volume. Inkarp can help laboratories select the right vacuum pump, chiller or thermostat, glassware, tubing, receiving flask, and accessory setup for the application."
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configurations",
+                "title": "Configure the Hei-VAP Expert Control around your evaporation process",
+                "description": "The Hei-VAP Expert Control Rotary Evaporator is available in configuration variants based on lift preference, glassware requirement, condenser coating, package selection, vacuum setup, and cooling requirement. Final configuration should be confirmed with Inkarp before quoting.",
+                "cards": [
+                  { "title": "Model", "description": "Hei-VAP Expert Control Standard Handlift" },
+                  { "title": "Part Number", "description": "573-02300-00" },
+                  { "title": "Lift", "description": "Handlift" },
+                  { "title": "Glassware", "description": "G3 vertical glassware" },
+                  { "title": "Coating Condenser and Receiving Flask", "description": "No" },
+                  { "title": "Control Level", "description": "Expert Control with vacuum and cooling temperature control" },
+                  { "title": "Handlift", "description": "Choose handlift if the laboratory prefers direct manual flask movement and a simple routine setup" },
+                  { "title": "Motor Lift", "description": "Choose motor lift if powered flask movement is preferred for handling convenience" },
+                  { "title": "G3 Vertical Glassware", "description": "Confirmed on this page and suitable for routine evaporation and solvent recovery" },
+                  { "title": "Other Glassware Configurations", "description": "Should be confirmed with Inkarp based on solvent, cooling requirement, condensation load, and application" },
+                  { "title": "Without Coated Condenser and Receiving Flask", "description": "Confirmed on this page and suitable for general laboratory use" },
+                  { "title": "With Coated Condenser and Receiving Flask", "description": "Availability and suitability should be confirmed with Inkarp where additional protection around glass components is preferred" },
+                  { "title": "Hei-VAP Expert Control", "description": "Rotation, vacuum, cooling temperature, saved ramps, favorites, solvent library, DAA, USB, and Micro SD" },
+                  { "title": "Package-Based Configuration", "description": "Adds package-specific accessories based on evaporation, powder drying, reaction, extraction, or Twin VAP requirements" },
+                  { "title": "Automatic Evaporation Package", "description": "For laboratories that want automated evaporation support" },
+                  { "title": "Automatic Evaporation Plus Package", "description": "For enhanced automatic evaporation setup needs" },
+                  { "title": "Powder Drying Package", "description": "For workflows involving drying of powder-like materials" },
+                  { "title": "Powder Drying-Chill Package", "description": "For powder drying workflows where cooling support is required" },
+                  { "title": "Reaction / Extraction Package", "description": "For reaction or extraction-related evaporation workflows" },
+                  { "title": "Reaction / Extraction-Chill Package", "description": "For reaction or extraction workflows requiring cooling support" },
+                  { "title": "Twin VAP Package", "description": "For workflows requiring Twin VAP-based configuration" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation & Resources",
+                "title": "Documents available on request",
+                "description": "All relevant documents can be requested from Inkarp, subject to availability from the principal.",
+                "cards": [
+                  { "title": "Technical Data Sheet", "description": "Available on request" },
+                  { "title": "Operating Instructions, Hei-VAP Expert and Ultimate", "description": "Available on request" },
+                  { "title": "At a Glance, Hei-VAP", "description": "Available on request" },
+                  { "title": "Hei-VAP continuous operation certificate", "description": "Available on request" },
+                  { "title": "EU Declaration of Conformity, Hei-VAP", "description": "Available on request" },
+                  { "title": "Vacuum Configurator Matrix", "description": "Available on request" },
+                  { "title": "Chiller Selection Matrix", "description": "Available on request" },
+                  { "title": "Hei-VOLUME Distimatic", "description": "Available on request" },
+                  { "title": "Safety Guide, Rotary Evaporators", "description": "Available on request" },
+                  { "title": "Matrix Sustainability", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Final CTA Section",
+              "title": "Need help choosing the right Hei-VAP Expert Control configuration?",
+              "description": "Tell Inkarp about your solvent, sample volume, evaporation behaviour, preferred lift type, glassware requirement, package need, vacuum setup, cooling requirement, and whether you want favorites, ramps, or DAA automatic evaporation. Our team will help you configure the right Heidolph Hei-VAP Expert Control Rotary Evaporator for your laboratory.",
+              "label": "Request Quote",
+              "href": "/contact"
+            }
+          },
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "solvents", "label": "Solvent Guide" },
+            { "id": "automation", "label": "Automation" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configure" },
+            { "id": "comparison", "label": "Compare" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Book Demo" }
+          ],
+          "applicationsExplorer": {
+            "disclaimer": "Application highlights are indicative summaries based on manufacturer-published capabilities. Confirm specifics for your samples and safety requirements with Inkarp.",
+            "title": "How is the Hei-VAP Expert Control used in your industry?",
+            "description": "Select your field to see typical rotary-evaporation tasks and the capabilities that matter.",
+            "industries": [
+              {
+                "name": "Pharmaceuticals",
+                "shortName": "Pharma",
+                "icon": "pill",
+                "bullets": ["Repeatable process control", "Saved methods", "Foam avoidance", "Vacuum and cooling coordination"],
+                "tags": ["API Work-Up", "Solvent Recovery", "Saved Ramps", "DAA"],
+                "note": "Solvent removal, API concentration, purification support, formulation work, and reaction work-up"
+              },
+              {
+                "name": "Chemical Research",
+                "shortName": "Chemistry",
+                "icon": "flask",
+                "bullets": ["Direct vacuum control", "Solvent-guided setup", "Saved process ramps", "Package flexibility"],
+                "tags": ["Organic Synthesis", "Vacuum Distillation", "Ramps", "Solvent Library"],
+                "note": "Organic synthesis workflows, distillation, compound concentration, and solvent recovery"
+              },
+              {
+                "name": "Academic Laboratories",
+                "shortName": "Academic",
+                "icon": "school",
+                "bullets": ["Simple access to favorites", "Clear display", "Controlled parameters", "Training support"],
+                "tags": ["Teaching Lab", "Research Lab", "Favorites", "Process Control"],
+                "note": "Research and teaching workflows where clear control and repeat operation are useful"
+              },
+              {
+                "name": "Food and Beverage Testing",
+                "shortName": "Food",
+                "icon": "coffee",
+                "bullets": ["Repeatable evaporation", "Solvent recovery", "Controlled bath and vacuum settings"],
+                "tags": ["Extract Concentration", "Sample Preparation", "QC"],
+                "note": "Sample preparation, extract concentration, and solvent removal before analysis"
+              },
+              {
+                "name": "Environmental Laboratories",
+                "shortName": "Environ.",
+                "icon": "droplet",
+                "bullets": ["Controlled evaporation", "Safe recovery", "Vacuum and cooling review", "Repeatable setup"],
+                "tags": ["Environmental Testing", "Sample Concentration", "Solvent Recovery"],
+                "note": "Solvent evaporation and sample concentration for downstream analysis"
+              },
+              {
+                "name": "Biotech and Life Science Laboratories",
+                "shortName": "Biotech",
+                "icon": "cpu",
+                "bullets": ["Gentle concentration", "Foam-sensitive evaporation", "Repeatable ramps", "Process visibility"],
+                "tags": ["Controlled Concentration", "DAA", "Sample Handling"],
+                "note": "Controlled concentration where sample handling and evaporation behaviour need monitoring"
+              }
+            ]
+          },
+          "configWizard": {
+            "eyebrow": "Configuration wizard",
+            "title": "Which Hei-VAP Expert Control setup should I start from?",
+            "description": "Answer a few questions and get a recommended starting configuration. This wizard gives Inkarp a starting point to confirm the exact model, package, glassware, vacuum pump, cooling system, accessories, and application fit.",
+            "steps": [
+              {
+                "key": "workflow",
+                "question": "What is your main workflow?",
+                "options": [
+                  { "val": "routine", "label": "Routine solvent evaporation", "desc": "Recommended starting direction: Hei-VAP Expert Control with G3 vertical glassware, saved favorites for repeated settings, and vacuum and cooling selected around the solvent" },
+                  { "val": "recovery", "label": "Solvent recovery", "desc": "Recommended starting direction: Expert Control with vacuum pump, chiller or thermostat, receiving flask capacity check, and solvent-specific vacuum setup" },
+                  { "val": "concentration", "label": "Sample concentration", "desc": "Recommended starting direction: Expert Control with saved ramps, controlled heating, vacuum support, and cooling selected around sample sensitivity" },
+                  { "val": "foamSensitive", "label": "Foam-sensitive evaporation", "desc": "Recommended starting direction: Expert Control with DAA review for foam avoidance and controlled evaporation behaviour" },
+                  { "val": "distillation", "label": "Distillation", "desc": "Recommended starting direction: Expert Control with vacuum control, cooling temperature control, suitable condenser direction, and optional accessory review" },
+                  { "val": "reactionExtraction", "label": "Reaction or extraction support", "desc": "Recommended starting direction: Expert Control with reaction or extraction package review and vacuum and cooling accessories selected around process need" },
+                  { "val": "powderDrying", "label": "Powder drying", "desc": "Recommended starting direction: Expert Control with powder drying package review, vacuum support, and cooling requirement confirmed with Inkarp" }
+                ]
+              },
+              {
+                "key": "controlNeed",
+                "question": "What level of process control do you need?",
+                "options": [
+                  { "val": "manual", "label": "Manual parameter setting" },
+                  { "val": "favorites", "label": "Saved favorites" },
+                  { "val": "ramps", "label": "Saved ramps" },
+                  { "val": "daa", "label": "DAA automatic evaporation" }
+                ]
+              },
+              {
+                "key": "lift",
+                "question": "How do you prefer flask movement?",
+                "options": [
+                  { "val": "hand", "label": "Manual handlift" },
+                  { "val": "motor", "label": "Motor lift" }
+                ]
+              },
+              {
+                "key": "glassware",
+                "question": "Which glassware direction do you need?",
+                "options": [
+                  { "val": "g3", "label": "G3 vertical glassware" },
+                  { "val": "other", "label": "Application-specific glassware to confirm" }
+                ]
+              },
+              {
+                "key": "coating",
+                "question": "Do you need coated glassware?",
+                "options": [
+                  { "val": "no", "label": "No" },
+                  { "val": "yes", "label": "Yes, confirm availability and suitability" }
+                ]
+              },
+              {
+                "key": "package",
+                "question": "Which package direction fits your application?",
+                "options": [
+                  { "val": "automaticEvap", "label": "Automatic Evaporation" },
+                  { "val": "automaticEvapPlus", "label": "Automatic Evaporation Plus" },
+                  { "val": "powderDrying", "label": "Powder Drying" },
+                  { "val": "powderDryingChill", "label": "Powder Drying-Chill" },
+                  { "val": "reactionExtraction", "label": "Reaction / Extraction" },
+                  { "val": "reactionExtractionChill", "label": "Reaction / Extraction-Chill" },
+                  { "val": "twinVap", "label": "Twin VAP" }
+                ]
+              },
+              {
+                "key": "cooling",
+                "question": "What cooling support do you need?",
+                "options": [
+                  { "val": "chiller", "label": "Chiller or thermostat to confirm" },
+                  { "val": "none", "label": "Cooling not yet selected" }
+                ]
+              },
+              {
+                "key": "methodTransfer",
+                "question": "Do you need method transfer?",
+                "options": [
+                  { "val": "no", "label": "No" },
+                  { "val": "yes", "label": "Yes, transfer favorites using USB" }
+                ]
+              }
+            ],
+            "result": {
+              "title": "Configuration ready for Expert Control review.",
+              "ctaLabel": "Request Quote",
+              "ctaNote": "Final configuration should be confirmed with Inkarp against solvent type, sample volume, evaporation behaviour, vacuum requirement, cooling capacity, glassware preference, package requirement, and daily usage pattern."
+            }
+          },
+          "connectivityPlanner": {
+            "sectionId": "automation",
+            "eyebrow": "Process automation planner",
+            "title": "How much process automation do you need?",
+            "description": "The Hei-VAP Expert Control supports direct vacuum control, saved favorites, saved evaporation ramps, and DAA automatic evaporation. Select the level of automation your lab needs and see the recommended control path.",
+            "disclaimer": "Inkarp should confirm package availability, accessory compatibility, solvent behaviour, and application requirements before final configuration.",
+            "options": [
+              {
+                "title": "Direct Manual Control",
+                "meaning": "User adjusts key parameters during operation",
+                "support": "5-inch display plus quick-access knobs for rotation and vacuum",
+                "confirm": "Solvent type, vacuum range, cooling setup, and user preference",
+                "result": "Recommended path: Expert Control for direct system operation with integrated vacuum and cooling control",
+                "cta": "Discuss Manual Control"
+              },
+              {
+                "title": "Favorite-Based Operation",
+                "meaning": "Lab repeats common settings frequently",
+                "support": "Two favorites available directly on the start screen",
+                "confirm": "Common solvents, routine setpoints, users, and repeat methods",
+                "result": "Recommended path: Expert Control with favorite setup for repeated evaporation work",
+                "cta": "Set Up Favorites"
+              },
+              {
+                "title": "Saved Evaporation Ramps",
+                "meaning": "Lab needs defined process stages",
+                "support": "Users can define and save evaporation ramps",
+                "confirm": "Process stages, solvent behaviour, temperature, vacuum, and timing needs",
+                "result": "Recommended path: Expert Control with ramp-based process setup",
+                "cta": "Build Ramp Method"
+              },
+              {
+                "title": "DAA Automatic Evaporation",
+                "meaning": "Lab wants automated evaporation support",
+                "support": "Dynamic AUTOaccurate Program supports customizable automatic evaporation",
+                "confirm": "Foam behaviour, evaporation efficiency target, solvent type, and sample sensitivity",
+                "result": "Recommended path: Expert Control with DAA setup review",
+                "cta": "Review DAA Setup"
+              },
+              {
+                "title": "Package-Based Automation",
+                "meaning": "Lab needs application-specific package support",
+                "support": "Package options are available for automatic evaporation, powder drying, reaction / extraction, and Twin VAP workflows",
+                "confirm": "Package suitability, accessories, cooling, vacuum, and application need",
+                "result": "Recommended path: Expert Control package configuration review",
+                "cta": "Choose Package"
+              }
+            ]
+          },
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Hei-VAP Expert vs Hei-VAP Expert Control",
+            "columns": [
+              { "label": "Hei-VAP Expert", "highlight": false },
+              { "label": "Hei-VAP Expert Control", "highlight": true }
+            ],
+            "rows": [
+              { "feature": "Display", "values": ["5-inch touch display for evaporator operation", "5-inch touch display for the complete system, including vacuum and cooling temperature"] },
+              { "feature": "Vacuum Control", "values": ["Through an external vacuum controller", "Integrated into the system control interface"] },
+              { "feature": "Cooling Temperature Control", "values": ["Managed separately", "Controlled through the system interface"] },
+              { "feature": "Quick-Access Knobs", "values": ["Rotation and heating adjustment", "Rotation and direct vacuum control"] },
+              { "feature": "Favorites", "values": ["Not the main focus", "Two favorites on the start screen"] },
+              { "feature": "Solvent Library", "values": ["Integrated solvent library", "Expandable solvent library"] },
+              { "feature": "Saved Evaporation Ramps", "values": ["Not the main focus", "Define and save own evaporation processes"] },
+              { "feature": "Automatic Evaporation", "values": ["Not the main focus", "Dynamic AUTOaccurate Program for automatic evaporation"] },
+              { "feature": "Interfaces", "values": ["USB and Micro SD", "USB and Micro SD"] },
+              { "feature": "Best For", "values": ["Labs that need precise evaporation with upgrade flexibility", "Labs that need integrated system control, automation, saved methods, and vacuum and cooling coordination"] }
+            ]
+          },
+          "serviceMap": {
+            "eyebrow": "Service",
+            "title": "Heidolph support across India",
+            "description": "Inkarp supports laboratories across India with sales, application, configuration, installation, and service assistance for Heidolph Rotary Evaporators.",
+            "supportAreas": [
+              { "title": "Product Consultation", "description": "Helps users understand whether the Hei-VAP Expert Control fits their application" },
+              { "title": "Configuration Guidance", "description": "Supports selection of lift type, glassware, coating, package, vacuum, cooling, and accessories" },
+              { "title": "Package Review", "description": "Helps evaluate automatic evaporation, powder drying, reaction / extraction, and Twin VAP package suitability" },
+              { "title": "Installation Support", "description": "Helps laboratories set up the system correctly after delivery" },
+              { "title": "User Training", "description": "Supports users with operation, favorites, ramps, DAA, and routine handling" },
+              { "title": "Preventive Maintenance", "description": "Helps reduce avoidable downtime and performance drift" },
+              { "title": "Service Support", "description": "Supports troubleshooting, breakdown service, and long-term care" },
+              { "title": "Accessory Recommendation", "description": "Helps select vacuum pumps, chillers, tubing, receiving flasks, sensors, and glassware" },
+              { "title": "Application Support", "description": "Helps match the setup to solvent, sample, evaporation behaviour, and workflow requirement" }
+            ]
+          },
+          "booking": {
+            "eyebrow": "Book a demo",
+            "title": "See the Hei-VAP Expert Control in action",
+            "description": "Book a demonstration with Inkarp. Tell us your solvent, sample volume, evaporation behaviour, preferred lift type, glassware requirement, package need, vacuum setup, cooling requirement, and whether you want favorites, ramps, or DAA automatic evaporation, and the team will configure the right setup for your needs.",
+            "fields": [
+              { "key": "name", "label": "Your name", "type": "text", "required": true },
+              { "key": "email", "label": "Email address", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone number", "type": "tel", "required": false },
+              { "key": "organisation", "label": "Organisation / Institute", "type": "text", "required": false },
+              { "key": "city", "label": "City", "type": "text", "required": false },
+              { "key": "solvent", "label": "Primary solvent", "type": "text", "required": false },
+              {
+                "key": "volume",
+                "label": "Typical batch volume",
+                "type": "select",
+                "required": false,
+                "options": ["Under 0.5 L", "0.5–1 L", "1–2 L", "2–3 L", "Above 3 L"]
+              },
+              {
+                "key": "requestType",
+                "label": "Request type",
+                "type": "select",
+                "required": true,
+                "options": ["Demo request", "Quote request", "Technical question", "Service enquiry", "General enquiry"]
+              },
+              { "key": "message", "label": "Additional details (optional)", "type": "textarea", "required": false }
             ],
             "submitLabel": "Send enquiry to Inkarp",
             "successMessage": "Thank you. Inkarp will be in touch within 1 business day."

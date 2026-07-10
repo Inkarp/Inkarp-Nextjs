@@ -110,8 +110,8 @@ export default function PrincipalsGlobe() {
       .attr("cx", GLOBE_SIZE / 2)
       .attr("cy", GLOBE_SIZE / 2)
       .attr("r", GLOBE_RADIUS)
-      .attr("fill", "#f7f7f6")
-      .attr("stroke", "#e5e5e5");
+      .attr("fill", "#bfe0f5")
+      .attr("stroke", "#8fc3e0");
 
     const landGroup = svg.append("g");
     const pinGroup = svg.append("g");
@@ -158,7 +158,7 @@ export default function PrincipalsGlobe() {
         if (cancelled) return;
 
         const land = topoFeature(world, world.objects.land);
-        landGroup.append("path").datum(land).attr("fill", "#d6d6d3").attr("opacity", 0.9);
+        landGroup.append("path").datum(land).attr("fill", "#4a9d5f").attr("opacity", 0.9);
 
         const pins = pinGroup
           .selectAll("g")

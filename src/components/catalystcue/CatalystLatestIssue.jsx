@@ -12,6 +12,9 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
     return null;
   }
 
+  const displayTitle = issue.themeTitle || issue.metaTitle || issue.title;
+  const imageAlt = issue.altText || issue.subTitle;
+
   if (variant === "aside") {
     return (
       <article className="overflow-hidden border border-red bg-white">
@@ -21,7 +24,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
           href={`/magazine/${encodeURIComponent(issue.slug)}`}
         >
           <Image
-            alt={issue.subTitle}
+            alt={imageAlt}
             className="object-contain p-3 transition duration-700 group-hover:scale-[1.02]"
             fill
             priority
@@ -38,7 +41,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
             {formatVolumeLabel(issue.Volume)} / {issue.subTitle}
           </p>
           <h1 className="mt-3 text-xl font-semibold leading-8 text-ink">
-            {issue.metaTitle || issue.title}
+            {displayTitle}
           </h1>
           <p className="mt-3 text-sm text-ink-soft">{issue.Date}</p>
           <Link
@@ -61,7 +64,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
           href={`/magazine/${encodeURIComponent(issue.slug)}`}
         >
           <Image
-            alt={issue.subTitle}
+            alt={imageAlt}
             className="object-contain p-3 transition duration-700 group-hover:scale-[1.02]"
             fill
             priority
@@ -75,7 +78,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
             Latest Issue
           </div>
           <h1 className="mt-4 text-xl leading-tight">
-            {issue.metaTitle || issue.title}
+            {displayTitle}
           </h1>
           <div className="mt-5 flex flex-wrap items-center gap-3 text-sm font-semibold text-ink-soft">
             <span className="border border-line-light bg-parchment px-3 py-1.5">

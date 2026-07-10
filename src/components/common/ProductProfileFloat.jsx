@@ -27,12 +27,13 @@ export default function ProductProfileFloat() {
     setStatus({ type: "", message: "" });
 
     try {
-      const response = await fetch("/api/contact/submit", {
+      const response = await fetch("/api/forms", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          formType: "feedback",
           ...formData,
           inquiryType: "Feedback Form",
           message: `Interests: ${formData.interests}\n\n${formData.message}`,

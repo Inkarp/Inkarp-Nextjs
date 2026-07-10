@@ -167,13 +167,11 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
     setStatus({ type:"", message:"" });
 
     try {
-      const response = await fetch("https://inkarppersonal.vercel.app/api/webinar/register",
-        {
-          body: JSON.stringify(formData),
-          headers: {"Content-Type":"application/json" },
-          method:"POST",
-        }
-      );
+      const response = await fetch("/api/forms", {
+        body: JSON.stringify({ formType:"webinar", ...formData }),
+        headers: {"Content-Type":"application/json" },
+        method:"POST",
+      });
 
       const data = await response.json().catch(() => ({}));
 

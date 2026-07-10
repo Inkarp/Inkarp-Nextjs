@@ -8,6 +8,7 @@ import HomeAboutHero from "@/components/home/HomeAboutHero";
 import HomeAchievements from "@/components/home/HomeAchievements";
 import HomeClientReviews from "@/components/home/HomeClientReviews";
 import HomeEventsInsights from "@/components/home/HomeEventsInsights";
+import HomeProductEnquiry from "@/components/home/HomeProductEnquiry";
 import HomeQuoteWall from "@/components/home/HomeQuoteWall";
 import HomeShowcaseSlider from "@/components/home/HomeShowcaseSlider";
 import HomeWorkflows from "@/components/home/HomeWorkflows";
@@ -47,6 +48,7 @@ export default function Home() {
       <HomeAchievements />
       <Companies />
       <Principles /> 
+      <HomeProductEnquiry />
       <HomeEventsInsights />
       <HomeQuoteWall />
       <HomeClientReviews />

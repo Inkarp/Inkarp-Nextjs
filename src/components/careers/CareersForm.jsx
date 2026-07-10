@@ -130,7 +130,7 @@ export default function CareersForm() {
       const controller = new AbortController();
       const timeoutId = window.setTimeout(() => controller.abort(), 15000);
 
-      const response = await fetch("https://inkarppersonal.vercel.app/api/careers/submit",
+      const response = await fetch("/api/careers/submit",
         {
           body: formDataToSend,
           method:"POST",

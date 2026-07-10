@@ -62,13 +62,16 @@ export default function CatalystModal({ onClose }) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://inkarppersonal.vercel.app/api/catalyst/register",
-        {
-          body: JSON.stringify(formData),
-          headers: {"Content-Type":"application/json" },
-          method:"POST",
-        }
-      );
+      const response = await fetch("/api/forms", {
+        body: JSON.stringify({
+          formType:"catalyst",
+          ...formData,
+          pageUrl: window.location.href,
+          referrer: document.referrer ||"",
+        }),
+        headers: {"Content-Type":"application/json" },
+        method:"POST",
+      });
       const data = await response.json().catch(() => ({}));
 
       if (response.ok && data?.success) {

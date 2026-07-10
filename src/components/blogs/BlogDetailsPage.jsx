@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from"react";
 import Image from"next/image";
 import Link from"next/link";
 import {
@@ -151,6 +152,50 @@ function Section({ section, index }) {
 }
 
 export default function BlogDetailsPage({ post }) {
+  const [commentForm, setCommentForm] = useState({ name:"", email:"", message:"" });
+  const [commentStatus, setCommentStatus] = useState({ type:"", message:"" });
+  const [isCommentSubmitting, setIsCommentSubmitting] = useState(false);
+
+  const handleCommentChange = (event) => {
+    const { name, value } = event.target;
+    setCommentForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleCommentSubmit = async (event) => {
+    event.preventDefault();
+    setCommentStatus({ type:"", message:"" });
+    setIsCommentSubmitting(true);
+
+    try {
+      const response = await fetch("/api/forms", {
+        body: JSON.stringify({
+          formType:"blog-comment",
+          ...commentForm,
+          postTitle: post.title,
+          postSlug: post.slug,
+          pageUrl: window.location.href,
+          referrer: document.referrer ||"",
+        }),
+        headers: { "Content-Type":"application/json" },
+        method:"POST",
+      });
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data?.success) {
+        setCommentStatus({ type:"success", message:"Comment submitted successfully." });
+        setCommentForm({ name:"", email:"", message:"" });
+      } else {
+        setCommentStatus({
+          type:"error",
+          message: data?.message ||"Could not submit your comment. Please try again.",
+        });
+      }
+    } catch {
+      setCommentStatus({ type:"error", message:"Could not submit your comment. Please try again." });
+    } finally {
+      setIsCommentSubmitting(false);
+    }
+  };
   const recentPosts = getRecentPosts(post.slug, 4);
   const categoryCounts = getCategoryCounts();
   const tags = getAllTags();
@@ -270,27 +315,51 @@ export default function BlogDetailsPage({ post }) {
               <h2 className="text-xl font-semibold text-ink">
                 Leave a Comment
               </h2>
-              <form className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <form className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2" onSubmit={handleCommentSubmit}>
                 <input
                   className="border border-line-light px-4 py-3 text-sm outline-none transition focus:border-red"
+                  name="name"
+                  onChange={handleCommentChange}
                   placeholder="Your Name"
+                  required
                   type="text"
+                  value={commentForm.name}
                 />
                 <input
                   className="border border-line-light px-4 py-3 text-sm outline-none transition focus:border-red"
+                  name="email"
+                  onChange={handleCommentChange}
                   placeholder="Your Email"
+                  required
                   type="email"
+                  value={commentForm.email}
                 />
                 <textarea
                   className="col-span-1 border border-line-light px-4 py-3 text-sm outline-none transition focus:border-red sm:col-span-2"
+                  name="message"
+                  onChange={handleCommentChange}
                   placeholder="Your Message"
+                  required
                   rows={4}
+                  value={commentForm.message}
                 />
+                {commentStatus.message ? (
+                  <div
+                    className={`col-span-1 border px-4 py-3 text-sm sm:col-span-2 ${
+                      commentStatus.type ==="success"
+                        ?"border-green-200 bg-green-50 text-green-700"
+                        :"border-red/20 bg-red/5 text-red"
+                    }`}
+                  >
+                    {commentStatus.message}
+                  </div>
+                ) : null}
                 <button
-                  className="col-span-1 w-fit bg-red px-6 py-3 text-sm font-semibold text-parchment transition hover:bg-red sm:col-span-2"
-                  type="button"
+                  className="col-span-1 w-fit bg-red px-6 py-3 text-sm font-semibold text-parchment transition hover:bg-red disabled:opacity-70 sm:col-span-2"
+                  disabled={isCommentSubmitting}
+                  type="submit"
                 >
-                  Post Comment
+                  {isCommentSubmitting ?"Posting..." :"Post Comment"}
                 </button>
               </form>
             </div>

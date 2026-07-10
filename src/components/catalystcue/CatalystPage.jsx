@@ -65,7 +65,7 @@ export default function CatalystPage() {
           loop
           muted
           playsInline
-          src="/assets/catalyst/post-lauch-v2-i6.mp4"
+          src="/assets/catalyst/Postlaunch_V2_issue_06.mp4"
         >
           <track kind="captions" />
         </video>

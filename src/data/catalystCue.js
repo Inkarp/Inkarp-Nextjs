@@ -143,6 +143,24 @@ export const catalystCards = [
     keywords:
       "Scientific Magazine, Scientific Applications, controlling variability in scientific workflows, lyophilization technology insights, Karl Fischer titration methods, flow chemistry hydrogenation, laboratory automation & AI, chromatography & spectroscopy applications, moisture analysis techniques, rheology & material characterization Inkarp, CATALYSTCue",
   },
+  {
+    id: 12,
+    Volume: "Volume-2",
+    subTitle: "Issue 06",
+    image: "/assets/catalyst/images/Issue6V2.png",
+    Date: "June 2026",
+    slug: "sample-to-insight-across-biological-workflows",
+    title: "CATALYSTCue Magazine - Volume 2 - Issue 6",
+    themeTitle: "SAMPLE-TO-INSIGHT ACROSS BIOLOGICAL WORKFLOWS",
+    metaTitle:
+      "CATALYSTCue Magazine Vol2 Issue 6 | Sample to Insight Across Biological Workflows",
+    metaDescription:
+      "Explore CATALYSTCue by Inkarp with expert insights on lab instruments, spectrophotometry, chromatography, life sciences, and reproducible biological workflows.",
+    keywords:
+      "laboratory instruments, scientific research instruments, life science solutions, CATALYSTCue magazine, Inkarp Instruments, NanoPhotometer, lab spectrophotometers, automated titration, chromatography consumables, laboratory water purification, reproducible biological workflows, sample-to-insight, in-vitro diagnostics, CRISPR analysis, protein studies, lab automation, scientific instruments India, general lab instruments, audit-ready spectrophotometers.",
+    altText:
+      "Inkarp CATALYSTCue Volume 2 Issue 6 Sample to Insight Across Biological Workflows",
+  },
 ];
 
 export function getCatalystCardBySlug(slug) {

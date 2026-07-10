@@ -28,7 +28,7 @@ export default function Footer() {
   ]);
 
   return (
-    <footer className="font-maxot border-t border-line-light bg-parchment-alt text-ink dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
+    <footer className="font-maxot border-t border-line-light bg-white text-ink dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-100">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[7fr_3fr] lg:px-8">
         <div className="space-y-6 ">
           <div>

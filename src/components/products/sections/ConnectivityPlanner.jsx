@@ -5,19 +5,20 @@ import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
 
 const DETAIL_ICONS = [FiCpu, FiInfo, FiCheckCircle];
-const DETAIL_LABELS = [
-  'What it supports',
-  'What the lab should confirm',
-  'End result',
+const DEFAULT_FIELDS = [
+  { key: 'support', label: 'What it supports' },
+  { key: 'confirm', label: 'What the lab should confirm' },
+  { key: 'result', label: 'End result' },
 ];
 
 export default function ConnectivityPlanner({ data, productName = 'this system' }) {
   const options = data?.options ?? [];
+  const fields = data?.fields?.length ? data.fields : DEFAULT_FIELDS;
   const [active, setActive] = useState(0);
 
   if (!options.length) return null;
   const option = options[active];
-  const rows = [option.support, option.confirm, option.result];
+  const rows = fields.map((field) => ({ label: field.label, value: option[field.key] }));
 
   return (
     <section id={data?.sectionId ?? 'connectivity'} className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
@@ -56,17 +57,16 @@ export default function ConnectivityPlanner({ data, productName = 'this system' 
 
             <div className="mt-6 space-y-4">
               {rows.map((row, index) => {
-                if (!row) return null;
+                if (!row.value) return null;
                 const Icon = DETAIL_ICONS[index] ?? FiInfo;
-                const label = DETAIL_LABELS[index];
                 return (
-                  <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${option.title}-${label}`}>
+                  <div className="grid gap-4 sm:grid-cols-[36px_1fr]" key={`${option.title}-${row.label}`}>
                     <div className="flex size-9 items-center justify-center border border-line-light bg-parchment-alt text-red">
                       <Icon className="text-base" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-black">{label}</p>
-                      <p className="mt-1 text-sm leading-6 text-black">{row}</p>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-black">{row.label}</p>
+                      <p className="mt-1 text-sm leading-6 text-black">{row.value}</p>
                     </div>
                   </div>
                 );

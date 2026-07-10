@@ -8,6 +8,7 @@ import SolventCalculator from './sections/SolventCalculator';
 import SuitabilityChecker from './sections/SuitabilityChecker';
 import SolventGuide from './sections/SolventGuide';
 import ConnectivityPlanner from './sections/ConnectivityPlanner';
+import ChecklistGuide from './sections/ChecklistGuide';
 import ROICalculator from './sections/ROICalculator';
 import ApplicationsExplorer from './sections/ApplicationsExplorer';
 import ConfigWizard from './sections/ConfigWizard';
@@ -92,10 +93,16 @@ export default function UniversalProductPage({ product }) {
         />
       )}
 
-      {/* Connectivity & control planner */}
-      {product.connectivityPlanner && (
-        <ConnectivityPlanner data={product.connectivityPlanner} productName={product.name} />
+      {/* Readiness / requirement checklist */}
+      {product.readinessGuide && (
+        <ChecklistGuide data={product.readinessGuide} sectionId={product.readinessGuide.sectionId ?? 'readiness'} />
       )}
+
+      {/* Connectivity, planner & selector tools - supports either a single
+          `connectivityPlanner` (legacy) or a `planners` array (multiple tools) */}
+      {(product.planners ?? (product.connectivityPlanner ? [product.connectivityPlanner] : [])).map((planner, index) => (
+        <ConnectivityPlanner key={planner.sectionId ?? index} data={planner} productName={product.name} />
+      ))}
 
       {/* ROI calculator */}
       {roiSection && (

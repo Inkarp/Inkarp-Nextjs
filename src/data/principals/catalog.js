@@ -1,5 +1,6 @@
 import heidolphCatalog from "./heidolph/products.json";
 import heidolphRotaryEvaporatorsCatalog from "./heidolph/rotary-evaporators.json";
+import heidolphLargeScaleRotaryEvaporatorsCatalog from "./heidolph/large-scale-rotary-evaporators.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
@@ -12,6 +13,7 @@ import { getPrincipalLogo } from "@/data/products/principalLogos";
 const principalCatalogs = [
   heidolphCatalog,
   heidolphRotaryEvaporatorsCatalog,
+  heidolphLargeScaleRotaryEvaporatorsCatalog,
   rotzmeierCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),

@@ -1,20 +1,60 @@
 "use client";
 
-import Image from"next/image";
-import Link from"next/link";
+import Image from "next/image";
+import Link from "next/link";
 
-function formatVolumeLabel(volume ="") {
-  return volume.replace("-","");
+function formatVolumeLabel(volume = "") {
+  return volume.replace("-", "");
 }
 
-export default function CatalystLatestIssue({ issue }) {
+export default function CatalystLatestIssue({ issue, variant = "wide" }) {
   if (!issue) {
     return null;
   }
 
+  if (variant === "aside") {
+    return (
+      <article className="overflow-hidden border border-red bg-white">
+        <Link
+          aria-label={`Read ${issue.title}`}
+          className="group relative block aspect-[468/620] w-full overflow-hidden bg-[#1A2D51]"
+          href={`/magazine/${encodeURIComponent(issue.slug)}`}
+        >
+          <Image
+            alt={issue.subTitle}
+            className="object-contain p-3 transition duration-700 group-hover:scale-[1.02]"
+            fill
+            priority
+            sizes="(min-width: 1280px) 468px, calc(100vw - 40px)"
+            src={issue.image}
+          />
+          <span className="absolute left-4 top-4 bg-red px-4 py-2 text-sm font-bold uppercase tracking-wide text-parchment">
+            Latest Issue
+          </span>
+        </Link>
+
+        <div className="border-t border-line-light bg-white p-5 sm:p-6">
+          <p className="text-sm font-bold uppercase tracking-wide text-red">
+            {formatVolumeLabel(issue.Volume)} / {issue.subTitle}
+          </p>
+          <h1 className="mt-3 text-xl font-semibold leading-8 text-ink">
+            {issue.metaTitle || issue.title}
+          </h1>
+          <p className="mt-3 text-sm text-ink-soft">{issue.Date}</p>
+          <Link
+            className="mt-5 inline-flex h-11 items-center justify-center border border-red bg-red px-5 text-sm font-bold text-parchment transition hover:bg-transparent hover:text-red"
+            href={`/magazine/${encodeURIComponent(issue.slug)}`}
+          >
+            Read Latest Issue
+          </Link>
+        </div>
+      </article>
+    );
+  }
+
   return (
-    <section className="px-5 py-10 sm:py-14">
-      <div className="mx-auto grid max-w-[1180px] overflow-hidden border border-line-light bg-parchment lg:grid-cols-[0.9fr_1.1fr]">
+    <section className="bg-parchment-alt px-5 py-12 sm:py-16">
+      <div className="mx-auto grid max-w-[1180px] overflow-hidden border border-line-light bg-white lg:grid-cols-[0.9fr_1.1fr]">
         <Link
           aria-label={`Read ${issue.title}`}
           className="group relative min-h-[460px] overflow-hidden bg-[#1A2D51] sm:min-h-[560px] lg:min-h-[640px]"
@@ -22,7 +62,7 @@ export default function CatalystLatestIssue({ issue }) {
         >
           <Image
             alt={issue.subTitle}
-            className="object-cover transition duration-700 group-hover:scale-105"
+            className="object-contain p-3 transition duration-700 group-hover:scale-[1.02]"
             fill
             priority
             sizes="(min-width: 1024px) 44vw, 100vw"
@@ -30,7 +70,7 @@ export default function CatalystLatestIssue({ issue }) {
           />
         </Link>
 
-        <div className="flex flex-col justify-center bg-[#f8fafc] p-6 sm:p-10 lg:p-12">
+        <div className="flex flex-col justify-center bg-white p-6 sm:p-10 lg:p-12">
           <div className="w-fit bg-red px-4 py-2 text-sm font-bold uppercase text-parchment">
             Latest Issue
           </div>
@@ -50,12 +90,12 @@ export default function CatalystLatestIssue({ issue }) {
           </div>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-ink-soft">
-            {issue.metaDescription ||"Explore the newest CatalystCue issue from Inkarp, featuring scientific workflows, laboratory insights, and application-focused innovations."}
+            {issue.metaDescription || "Explore the newest CatalystCue issue from Inkarp, featuring scientific workflows, laboratory insights, and application-focused innovations."}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
-              className="inline-flex h-12 items-center justify-center bg-red px-6 text-sm font-bold text-parchment transition hover:bg-transparent hover:text-red"
+              className="inline-flex h-12 items-center justify-center border border-red bg-red px-6 text-sm font-bold text-parchment transition hover:bg-transparent hover:text-red"
               href={`/magazine/${encodeURIComponent(issue.slug)}`}
             >
               Read Latest Issue

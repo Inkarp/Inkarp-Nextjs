@@ -10,8 +10,8 @@ function formatVolumeLabel(volume ="") {
 }
 
 function parseDate(dateStr ="") {
-  const parts = dateStr.trim().split("");
-  return { month: parts[0] ||"", year: parts[1] ||"" };
+  const [month = "", year = ""] = dateStr.trim().split(/\s+/);
+  return { month, year };
 }
 
 function useGroupedVolumes(catalystCards) {
@@ -59,6 +59,22 @@ function useFilteredCards(catalystCards, filters) {
 
 const MONTH_ORDER = ["January","February","March","April","May","June","July","August","September","October","November","December",
 ];
+
+function issueSortValue(card) {
+  const { month, year } = parseDate(card.Date);
+  const monthIndex = MONTH_ORDER.indexOf(month);
+  const parsedYear = Number.parseInt(year, 10);
+
+  if (monthIndex >= 0 && Number.isFinite(parsedYear)) {
+    return parsedYear * 12 + monthIndex;
+  }
+
+  return Number(card.id) || 0;
+}
+
+function newestFirst(a, b) {
+  return issueSortValue(b) - issueSortValue(a) || Number(b.id) - Number(a.id);
+}
 
 const SELECT_CLASS ="h-9 appearance-none cursor-pointer border border-line-light bg-white pl-3 pr-8 text-sm text-ink-soft focus:border-red focus:outline-none focus:ring-1 focus:ring-red/30 transition";
 
@@ -199,19 +215,19 @@ function FilterBar({ allCards, filters, setFilters }) {
 function IssueCard({ card }) {
   return (
     <Link
-      className="flex w-[220px] shrink-0 flex-col overflow-hidden border border-white bg-[#1A2D51] text-parchment transition-transform duration-500 hover:scale-105"
+      className="flex w-[260px] shrink-0 flex-col overflow-hidden border border-line-light bg-white text-ink transition hover:-translate-y-0.5 hover:border-red"
       href={`/magazine/${encodeURIComponent(card.slug)}`}
     >
       <Image
         alt={card.subTitle}
-        className="h-[310px] w-[220px] object-cover"
-        height={310}
+        className="h-[366px] w-[260px] object-cover"
+        height={366}
         src={card.image}
-        width={220}
+        width={260}
       />
-      <div className="flex min-h-10 items-center justify-center gap-2 p-2 text-center text-sm">
+      <div className="flex min-h-[54px] items-center justify-center gap-2 border-t border-line-light bg-parchment px-3 py-2 text-center text-sm">
         <h3>{card.subTitle}</h3>
-        <span>|</span>
+        <span className="text-red">|</span>
         <p>{card.Date}</p>
       </div>
     </Link>
@@ -232,7 +248,7 @@ export function ArchiveTabbed({ catalystCards }) {
   const [activeVolume, setActiveVolume] = useState(sortedVolumeKeys[0]);
 
   const activeCards = useMemo(() => {
-    return [...(groupedByVolume[activeVolume] || [])].sort((a, b) => b.id - a.id);
+    return [...(groupedByVolume[activeVolume] || [])].sort(newestFirst);
   }, [groupedByVolume, activeVolume]);
 
   if (!catalystCards.length) return <EmptyState />;
@@ -256,7 +272,7 @@ export function ArchiveTabbed({ catalystCards }) {
         ))}
       </div>
       {activeCards.length ? (
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap items-start justify-center gap-8 xl:justify-start">
           {activeCards.map((card) => (
             <IssueCard card={card} key={card.slug} />
           ))}
@@ -276,7 +292,7 @@ export function ArchiveShelves({ catalystCards }) {
   return (
     <div className="space-y-12">
       {sortedVolumeKeys.map((volume) => {
-        const cards = [...groupedByVolume[volume]].sort((a, b) => b.id - a.id);
+        const cards = [...groupedByVolume[volume]].sort(newestFirst);
 
         return (
           <section key={volume}>
@@ -286,7 +302,7 @@ export function ArchiveShelves({ catalystCards }) {
               </h3>
               <span className="text-sm text-ink-soft">{cards.length} issues</span>
             </div>
-            <div className="flex gap-5 overflow-x-auto pb-4">
+            <div className="flex items-start gap-6 overflow-x-auto pb-4">
               {cards.map((card) => (
                 <IssueCard card={card} key={card.slug} />
               ))}
@@ -307,7 +323,7 @@ export function ArchiveAccordion({ catalystCards }) {
   return (
     <div className="mx-auto max-w-[1180px] divide-y divide-line-light border border-line-light">
       {sortedVolumeKeys.map((volume) => {
-        const cards = [...groupedByVolume[volume]].sort((a, b) => b.id - a.id);
+        const cards = [...groupedByVolume[volume]].sort(newestFirst);
         const isOpen = openVolume === volume;
 
         return (
@@ -326,7 +342,7 @@ export function ArchiveAccordion({ catalystCards }) {
               </span>
             </button>
             {isOpen ? (
-              <div className="flex flex-wrap justify-center gap-8 p-5">
+              <div className="flex flex-wrap items-start justify-center gap-8 p-5 xl:justify-start">
                 {cards.map((card) => (
                   <IssueCard card={card} key={card.slug} />
                 ))}
@@ -341,7 +357,7 @@ export function ArchiveAccordion({ catalystCards }) {
 
 export function ArchiveTimeline({ catalystCards }) {
   const sorted = useMemo(
-    () => [...catalystCards].sort((a, b) => b.id - a.id),
+    () => [...catalystCards].sort(newestFirst),
     [catalystCards],
   );
 
@@ -396,6 +412,7 @@ export default function CatalystArchiveSwitcher({ catalystCards }) {
   });
 
   const filteredCards = useFilteredCards(catalystCards, filters);
+
   const Active = variants.find((item) => item.key === variant).Component;
 
   return (

@@ -314,6 +314,18 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-4 text-sm leading-7 text-black">{p}</p>
             ))}
             <KPIRow kpis={perfSec?.metrics ?? lf.stats ?? []} />
+            {perfSec?.utilityChecklist?.length > 0 && (
+              <div className="mt-6 overflow-hidden border border-line-light bg-parchment">
+                <dl className="divide-y divide-line-light">
+                  {perfSec.utilityChecklist.map((row) => (
+                    <div key={row.label} className="grid px-5 py-3 text-sm sm:grid-cols-[0.45fr_0.55fr]">
+                      <dt className="font-medium text-black">{row.label}</dt>
+                      <dd className="text-black">{row.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
             {perfSec?.disclaimer && (
               <p className="mt-5 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
                 {perfSec.disclaimer}

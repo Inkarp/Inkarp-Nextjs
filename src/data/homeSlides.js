@@ -18,14 +18,14 @@ export const homeBannerConfig = {
 
 export const heroSlides = [
   {
-    id: "sbt-collaboration",
+    id: "inkarp-lab-hero",
     title: "",
     subtitle: "",
     media: {
-      type: "video",
-      src: "/assets/home/SBT_Collab_Video.mp4",
-      poster: "/assets/home/CatalystTeamInkarp.webp",
-      alt: "SBT Instruments collaboration video",
+      type: "image",
+      src: "/assets/home/inkarp-lab-hero-generated.png",
+      alt: "Modern scientific laboratory with Inkarp instrumentation workflow",
+      sizes: "98vw",
     },
   },
   {

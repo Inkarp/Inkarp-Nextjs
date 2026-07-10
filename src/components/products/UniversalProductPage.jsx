@@ -46,7 +46,7 @@ export default function UniversalProductPage({ product }) {
   const glasswareSection = findSection('glassware', 'Glassware guide');
 
   return (
-    <div className="w-full">
+    <div className="w-full" data-product-page>
       <ProductMicrositeLayer
         links={product.inPageNav ?? []}
         productName={product.name}
@@ -115,9 +115,9 @@ export default function UniversalProductPage({ product }) {
       )}
 
       {/* Configuration wizard */}
-      {product.configWizard && (
+      {/* {product.configWizard && (
         <ConfigWizard data={product.configWizard} productName={product.name} />
-      )}
+      )} */}
 
       {/* Workflow score comparison */}
       {product.workflowScore && (

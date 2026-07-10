@@ -29,6 +29,12 @@
 .dark {
   --background: #0a0a0c;
   --foreground: #e4e4e7;
+  --teal: #b5bdc9;
+  --ink: #f5f7fb;
+  --ink-soft: #b5bdc9;
+  --line-dark: rgba(255, 255, 255, 0.18);
+  --line-light: rgba(255, 255, 255, 0.14);
+  --card: #121620;
 }
 
 @theme inline {
@@ -57,6 +63,81 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto), sans-serif;
   transition: background-color 200ms ease, color 200ms ease;
+}
+.dark [data-product-page] {
+  color-scheme: dark;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(190, 0, 16, 0.16), transparent 28rem),
+    linear-gradient(180deg, #07090d 0%, #0d1017 42%, #080a0f 100%);
+  color: var(--ink);
+}
+
+.dark [data-product-page].bg-white,
+.dark [data-product-page].bg-parchment,
+.dark [data-product-page] .bg-white,
+.dark [data-product-page] .bg-parchment {
+  background-color: var(--card) !important;
+}
+
+.dark [data-product-page].bg-parchment-alt,
+.dark [data-product-page] .bg-parchment-alt {
+  background-color: #171a22 !important;
+}
+
+.dark [data-product-page][class*="bg-parchment/95"],
+.dark [data-product-page] [class*="bg-parchment/95"] {
+  background-color: rgba(18, 22, 32, 0.95) !important;
+}
+
+.dark [data-product-page].text-black,
+.dark [data-product-page] .text-black,
+.dark [data-product-page][class*="text-black/"],
+.dark [data-product-page] [class*="text-black/"] {
+  color: var(--ink) !important;
+}
+
+.dark [data-product-page].text-ink,
+.dark [data-product-page] .text-ink {
+  color: var(--ink) !important;
+}
+
+.dark [data-product-page].text-ink-soft,
+.dark [data-product-page] .text-ink-soft {
+  color: var(--ink-soft) !important;
+}
+
+.dark [data-product-page].border-black,
+.dark [data-product-page] .border-black,
+.dark [data-product-page].border-line-light,
+.dark [data-product-page] .border-line-light {
+  border-color: var(--line-light) !important;
+}
+
+.dark [data-product-page].divide-line-light > :not([hidden]) ~ :not([hidden]),
+.dark [data-product-page] .divide-line-light > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--line-light) !important;
+}
+
+.dark [data-product-page].ring-line-light,
+.dark [data-product-page] .ring-line-light {
+  --tw-ring-color: var(--line-light) !important;
+}
+
+.dark [data-product-page] input,
+.dark [data-product-page] select,
+.dark [data-product-page] textarea {
+  background-color: #171a22;
+  border-color: var(--line-light);
+  color: var(--ink);
+}
+
+.dark [data-product-page] input::placeholder,
+.dark [data-product-page] textarea::placeholder {
+  color: rgba(181, 189, 201, 0.72);
+}
+
+.dark [data-product-page] img {
+  color: var(--ink-soft);
 }
 
 [data-scroll-reveal="true"] {
@@ -136,7 +217,7 @@ article[data-scroll-reveal="true"] {
   }
 }
 
-/* â”€â”€ Hei-VAP Core product page animations â”€â”€ */
+/* Hei-VAP Core product page animations */
 @keyframes hvc-blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.2; }
@@ -182,7 +263,7 @@ article[data-scroll-reveal="true"] {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* ── Home page workflow section animations ── */
+/* Home page workflow section animations */
 @keyframes topicReveal {
   from { opacity: 0; transform: translateY(-8px); }
   to { opacity: 1; transform: translateY(0); }

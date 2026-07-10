@@ -9,13 +9,6 @@ const AUTO_ROTATE_MS = 7000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
-const STAT_TAGS = [
-  { num: "1985", label: "Serving Indian Science Since" },
-  { num: "49", label: "Global Principals" },
-  { num: "191", label: "Product Lines" },
-  { num: "18", label: "Offices Across India" },
-  { num: "All India", label: "Installation and Service" },
-];
 
 function SlideWorkflow() {
   return (
@@ -132,20 +125,6 @@ function SlideAbout() {
               <span>Pan-India Support</span>
             </div>
           </div>
-        </div>
-
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
-          {STAT_TAGS.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex items-center gap-3 border border-line-light bg-parchment-alt px-5 py-3"
-            >
-              <span className="text-lg font-semibold text-red">{stat.num}</span>
-              <span className="text-[9.5px] uppercase leading-tight tracking-wide text-ink-soft">
-                {stat.label}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </div>

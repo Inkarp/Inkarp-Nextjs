@@ -26,6 +26,13 @@ const TABS = [
    ICON RESOLUTION
    ════════════════════════════════════════════════════════ */
 
+/* Paragraph(s) shown under a tab heading: prefers `body` (array), falls back to `description` (string) */
+function introText(sec) {
+  if (sec?.body?.length) return sec.body;
+  if (sec?.description) return [sec.description];
+  return [];
+}
+
 function resolveIcon(text, rules, fallback = FiSettings) {
   const t = (text ?? '').toLowerCase();
   for (const rule of rules) {
@@ -189,9 +196,10 @@ export default function ProductInfoTabs({ product }) {
   }, []);
 
   const section = (key, eyebrow) => lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
-  const overviewSec      = lf.sections?.[0];
+  const overviewSec      = section('overview', 'Product overview') ?? lf.sections?.[0];
   const keyFeaturesSec   = section('features', 'Key Features');
   const applicationsSec  = section('applications', 'Applications');
+  const specsSec         = section('specs', 'Technical Specs');
   const perfSec          = section('performance', 'Performance');
   const complianceSec    = section('certs', 'Quality and safety');
   const configSec        = section('config', 'Configuration');
@@ -241,9 +249,9 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {keyFeaturesSec?.title ?? 'Built around safe, visible and repeatable evaporation'}
             </h3>
-            {keyFeaturesSec?.description && (
-              <p className="mb-5 text-sm leading-7 text-black">{keyFeaturesSec.description}</p>
-            )}
+            {introText(keyFeaturesSec).map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+            ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(product.features ?? []).slice(0, 12).map((f) => {
                 const colonIdx = f.indexOf(':');
@@ -269,6 +277,9 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {applicationsSec?.title ?? "Where it's used"}
             </h3>
+            {introText(applicationsSec).map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+            ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(product.applications ?? []).map((sentence, i) => (
                 <IconCard
@@ -286,7 +297,12 @@ export default function ProductInfoTabs({ product }) {
       case 'specs':
         return (
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">Technical specifications</h3>
+            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
+              {specsSec?.title ?? 'Technical specifications'}
+            </h3>
+            {introText(specsSec).map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+            ))}
             <div className="overflow-hidden border border-line-light bg-parchment">
               <dl className="divide-y divide-line-light">
                 {(product.technicalSpecs ?? []).map((row) => (
@@ -354,6 +370,9 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {complianceSec?.title ?? 'Quality, safety & certification'}
             </h3>
+            {introText(complianceSec).map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+            ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(complianceSec?.cards ?? []).map((c) => (
                 <IconCard
@@ -377,6 +396,9 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {configSec?.title ?? `Configure the ${product.name} around your workflow`}
             </h3>
+            {introText(configSec).map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+            ))}
             <div className="grid gap-3 sm:grid-cols-2">
               {(configSec?.cards ?? []).map((c) => (
                 <IconCard
@@ -410,9 +432,9 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-2">
               {docsSec?.title ?? 'Documentation & Resources'}
             </h3>
-            <p className="mb-5 text-sm leading-7 text-black">
-              {docsSec?.description ?? 'Product and compliance documents for internal evaluation, purchase and safety review. Request any from Inkarp.'}
-            </p>
+            {(introText(docsSec).length ? introText(docsSec) : ['Product and compliance documents for internal evaluation, purchase and safety review. Request any from Inkarp.']).map((p, i) => (
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+            ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(docsSec?.cards ?? []).map((c) => {
                 const DocIcon = resolveIcon(c.title, DOCS_ICON_RULES);

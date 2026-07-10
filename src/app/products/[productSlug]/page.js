@@ -43,7 +43,7 @@ export default async function ProductPage({ params }) {
   } : null;
 
   return (
-    <main className="bg-white text-ink">
+    <main className="bg-white text-ink" data-product-page data-scroll-skip>
       {faqJsonLd && (
         <script
           type="application/ld+json"

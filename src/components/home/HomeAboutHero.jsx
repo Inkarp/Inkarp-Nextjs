@@ -7,6 +7,7 @@ import RecTag from "./RecTag";
 
 const AUTO_ROTATE_MS = 7000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
+const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
 const STAT_TAGS = [
   { num: "1985", label: "Serving Indian Science Since" },
@@ -52,8 +53,8 @@ function SlideWorkflow() {
           <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
             <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-white">
               <Image
-                src={BUILDING_IMAGE}
-                alt="Inkarp scientific solutions and support network"
+                src={LAB_IMAGE}
+                alt="Modern scientific laboratory with Inkarp instrumentation workflow"
                 loading="eager"
                 fill
                 sizes="(min-width: 1024px) 520px, 90vw"

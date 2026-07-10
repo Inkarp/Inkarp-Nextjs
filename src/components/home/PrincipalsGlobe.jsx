@@ -248,7 +248,7 @@ export default function PrincipalsGlobe() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[380px_1fr] lg:items-start">
         <div className="flex flex-col items-center gap-6">
           <div
-            className="relative h-[300px] w-[300px] select-none overflow-hidden rounded-full shadow-[inset_-14px_-14px_44px_rgba(0,0,0,0.14),inset_8px_8px_24px_rgba(255,255,255,0.5)] sm:h-[340px] sm:w-[340px]"
+            className="relative h-[300px] w-[300px] select-none overflow-hidden rounded-full shadow-[inset_8px_8px_24px_rgba(255,255,255,0.5)] sm:h-[340px] sm:w-[340px]"
             style={{ touchAction: "none" }}
           >
             <div className="absolute inset-0" ref={wrapRef} />

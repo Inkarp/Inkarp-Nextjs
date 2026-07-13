@@ -5,7 +5,7 @@ import SectionDisclaimer from './SectionDisclaimer';
 
 const STEP_DURATION = 4000; // ms per step
 
-/* ── Step icons as inline SVGs ───────────────────────── */
+/* Step icons as inline SVGs */
 // Keyed by step.title.toLowerCase() so icon assignment survives JSON reordering.
 // Falls back to a numbered circle if a title doesn't match any key.
 const STEP_ICON_MAP = {
@@ -36,34 +36,35 @@ const STEP_ICON_MAP = {
   ),
 };
 
-/* ── Connector between cards ─────────────────────────── */
-function Connector({ active }) {
+/* Connector between cards */
+function Connector({ complete }) {
   return (
-    <div className="hidden lg:flex items-center gap-1 shrink-0">
-      <div className={`h-px w-6 ${active ? 'bg-red' : 'bg-parchment-alt'}`} />
-      <div className={`h-2.5 w-2.5 border-2 ${active ? 'border-navy bg-red' : 'border-line-light bg-parchment'}`} />
+    <div className="hidden shrink-0 items-center gap-1 px-1 lg:flex">
+      <div className={`h-px w-7 transition-colors duration-300 ${complete ? 'bg-red' : 'bg-line-light'}`} />
+      <div className={`h-2.5 w-2.5 border-2 transition-colors duration-300 ${complete ? 'border-red bg-red' : 'border-line-light bg-parchment-alt'}`} />
     </div>
   );
 }
 
-/* ── Single step card ────────────────────────────────── */
+/* Single step card */
 function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
   const isFuture = !isActive && !isPast;
 
   return (
     <button
+      aria-pressed={isActive}
       onClick={onClick}
-      className={`relative flex h-full w-full min-w-[160px] flex-col  border-2 border-red pt-5 px-5 pb-5 text-left transition-all duration-300 ${
+      className={`group relative flex h-full w-full min-w-[160px] flex-col border-2 px-5 pb-5 pt-5 text-left transition-all duration-300 ${
         isActive
-          ? 'bg-parchment-alt'
+          ? 'z-10 scale-[1.02] border-red bg-white shadow-[0_18px_45px_rgba(190,0,16,0.16)] ring-4 ring-red/10'
           : isFuture
-            ? 'bg-parchment hover:bg-parchment-alt'
-            : 'bg-parchment hover:bg-parchment-alt'
+            ? 'border-line-light bg-parchment-alt opacity-45 saturate-0 hover:opacity-80 hover:saturate-100'
+            : 'border-line-light bg-parchment opacity-55 saturate-0 hover:opacity-85 hover:saturate-100'
       }`}
     >
-      {/* Progress bar — hugs the top edge of the card, radius matches card */}
+      {/* Progress bar at the top edge of the active card. */}
       {isActive && (
-        <div className="absolute -top-0.5 -left-0.5 -right-0.5 h-1-2xl overflow-hidden bg-red/15">
+        <div className="absolute -left-0.5 -right-0.5 -top-0.5 h-1 overflow-hidden bg-red/15">
           <div
             key={`progress-${index}`}
             className="h-full bg-red"
@@ -72,35 +73,30 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
         </div>
       )}
 
-      {/* Step number */}
-      <span className="absolute top-3 right-4 text-xs font-bold tabular-nums text-black">
-        {index + 1}
+      <span className={`absolute right-4 top-3 text-xs font-bold tabular-nums transition-colors ${isActive ? 'text-red' : 'text-ink-soft'}`}>
+        {isActive ? 'Active' : String(index + 1).padStart(2, '0')}
       </span>
 
-      {/* Icon chip — in-flow soft-square, neutral tint on inactive, solid navy on active */}
       <div
-        className={`inline-flex h-10 w-10 items-center justify-center mb-3 transition-colors duration-300 ${
-          isActive ? 'bg-red text-white' : 'bg-parchment-alt text-ink'
+        className={`mb-3 inline-flex h-10 w-10 items-center justify-center transition-colors duration-300 ${
+          isActive ? 'bg-red text-white' : 'bg-white text-ink-soft'
         }`}
       >
         {STEP_ICON_MAP[step.title.toLowerCase()] ?? <span className="text-sm font-bold">{index + 1}</span>}
       </div>
 
-      {/* Title */}
-      <h3 className="font-semibold tracking-tight text-sm mb-2 text-ink">
+      <h3 className={`mb-2 text-sm font-semibold tracking-tight transition-colors ${isActive ? 'text-ink' : 'text-ink-soft'}`}>
         {step.title}
       </h3>
 
-      {/* Description — min-h reserves 3 lines (3 × leading-5 = 60px) so all cards
-          hold the same height even when shorter descriptions produce fewer lines. */}
-      <p className="text-xs leading-5 min-h-[60px] text-black">
+      <p className={`min-h-[60px] text-xs leading-5 transition-colors ${isActive ? 'text-black' : 'text-ink-soft'}`}>
         {step.description}
       </p>
     </button>
   );
 }
 
-/* ── Evaporation-rate reference strip ────────────────── */
+/* Evaporation-rate reference strip */
 // Reuses the same metrics feeding the Performance tab/table, so the
 // workflow section never carries its own copy of the numbers.
 function RateStrip({ metrics }) {
@@ -121,7 +117,7 @@ function RateStrip({ metrics }) {
   );
 }
 
-/* ── Main component ──────────────────────────────────── */
+/* Main component */
 export default function EvaporationWorkflow({ section = {}, metrics }) {
   const steps = section.steps ?? [];
   const disclaimer = section.disclaimer;
@@ -154,9 +150,9 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
         />
 
         {/* Cards with connectors */}
-        <div className="flex items-stretch gap-0 overflow-x-auto pt-6 pb-2 lg:overflow-visible lg:pt-0">
+        <div className="flex items-stretch gap-2 overflow-x-auto pb-2 pt-6 lg:gap-0 lg:overflow-visible lg:pt-0">
           {steps.map((step, i) => (
-            <div key={`step-${i}`} className="flex items-stretch flex-1 min-w-[160px]">
+            <div key={`step-${i}`} className="flex min-w-[160px] flex-1 items-stretch">
               <StepCard
                 step={step}
                 index={i}
@@ -166,7 +162,7 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
                 totalDuration={STEP_DURATION}
               />
               {i < steps.length - 1 && (
-                <Connector active={i < active || active > i} />
+                <Connector complete={i < active} />
               )}
             </div>
           ))}

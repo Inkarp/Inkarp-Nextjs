@@ -21,7 +21,7 @@ export default function Home() {
       <HomeAboutHero />
       {/* <HomeWorkflows /> */}
       <HomeWorkflowWheel />
-      <HomeShowcaseSlider />
+      {/* <HomeShowcaseSlider /> */}
       <HomeAchievements />
       <Companies />
       <Principles /> 

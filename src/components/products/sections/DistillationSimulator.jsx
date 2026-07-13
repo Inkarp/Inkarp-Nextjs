@@ -147,7 +147,7 @@ function EvaporatorStage({ remaining, running, recoveredPct }) {
   );
 }
 
-export default function DistillationSimulator({ data }) {
+export default function DistillationSimulator({ data, productName = 'this evaporator' }) {
   const solvents = data?.solvents ?? [];
   const [selIdx, setSelIdx] = useState(0);
   const [running, setRunning] = useState(false);
@@ -222,7 +222,7 @@ export default function DistillationSimulator({ data }) {
           number="03"
           eyebrow="Interactive simulator"
           title="Run a simulated evaporation"
-          description="Pick a solvent, set the bath temperature and vacuum, then press Start and watch the Hei-VAP Core distil it off — flask spinning, vapour rising, solvent collecting. (Simulation runs far faster than real time and is illustrative only.)"
+          description={`Pick a solvent, set the bath temperature and vacuum, then press Start and watch ${productName} distil it off - flask spinning, vapour rising, solvent collecting. (Simulation runs far faster than real time and is illustrative only.)`}
         />
 
         <div className="grid gap-6 lg:grid-cols-[330px_1fr]">
@@ -230,7 +230,7 @@ export default function DistillationSimulator({ data }) {
           <div className="border border-line-light bg-parchment p-3">
             <div className="bg-black p-3 text-white">
               <div className="mb-1.5 flex items-center justify-between text-[9px] uppercase tracking-widest text-white">
-                <span>Hei-VAP Core monitor</span>
+                <span>{productName} monitor</span>
                 <span>{formatTime(elapsed)}</span>
               </div>
               <div className="text-2xl font-semibold tracking-tight">{recoveredPct}<span className="text-sm text-white">% recovered</span></div>

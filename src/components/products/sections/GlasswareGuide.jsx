@@ -12,17 +12,22 @@ function codeFor(title) {
   return '◈';
 }
 
-export default function GlasswareGuide({ cards = [] }) {
+export default function GlasswareGuide({ cards = [], section = {}, productName }) {
   if (!cards.length) return null;
+
+  const title = section.title ?? 'Choose the right glassware set';
+  const description =
+    section.description ??
+    `Pick the condenser and glassware direction that matches the solvents, recovery needs and bench space for ${productName ?? 'this product'}.`;
 
   return (
     <section id="glassware" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <SectionHeader
           number="13"
-          eyebrow="Glassware guide"
-          title="Choose the right glassware set"
-          description="Heidolph offers a range of condenser sets for the Hei-VAP Core. Pick the one that matches your solvents, recovery needs and bench space. This model ships with coated G3."
+          eyebrow={section.eyebrow ?? 'Glassware guide'}
+          title={title}
+          description={description}
         />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

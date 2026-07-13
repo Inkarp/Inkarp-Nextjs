@@ -57,14 +57,14 @@ function PrincipalCard({ principal }) {
     <Link
       href={`/products?brand=${principal.slug}`}
       aria-label={principal.principalName}
-      className="flex min-h-[72px] items-center justify-center rounded-lg border border-line-light bg-white p-3 text-center transition hover:-translate-y-0.5 hover:border-red/50 hover:shadow-md"
+      className="flex min-h-[56px] items-center justify-center rounded-lg border border-line-light bg-white p-2.5 text-center transition hover:-translate-y-0.5 hover:border-red/50 hover:shadow-md"
     >
       {logo ? (
-        <span className="relative h-10 w-full">
-          <Image src={logo} alt={principal.principalName} fill sizes="140px" className="object-contain" />
+        <span className="relative h-7 w-full">
+          <Image src={logo} alt={principal.principalName} fill sizes="120px" className="object-contain object-center" />
         </span>
       ) : (
-        <span className="text-sm font-semibold text-ink">{principal.principalName}</span>
+        <span className="text-xs font-semibold text-ink">{principal.principalName}</span>
       )}
     </Link>
   );
@@ -105,13 +105,36 @@ export default function PrincipalsGlobe() {
       .rotate(rotation);
     const path = geoPath(projection);
 
+    const defs = svg.append("defs");
+
+    const oceanGradient = defs
+      .append("radialGradient")
+      .attr("id", "globe-ocean")
+      .attr("cx", "35%")
+      .attr("cy", "32%")
+      .attr("r", "75%");
+    oceanGradient.append("stop").attr("offset", "0%").attr("stop-color", "#4f9fd6");
+    oceanGradient.append("stop").attr("offset", "55%").attr("stop-color", "#1f6fa8");
+    oceanGradient.append("stop").attr("offset", "100%").attr("stop-color", "#0b3d63");
+
+    const landGradient = defs
+      .append("radialGradient")
+      .attr("id", "globe-land")
+      .attr("cx", "35%")
+      .attr("cy", "32%")
+      .attr("r", "80%");
+    landGradient.append("stop").attr("offset", "0%").attr("stop-color", "#8bc36a");
+    landGradient.append("stop").attr("offset", "60%").attr("stop-color", "#4f8f3d");
+    landGradient.append("stop").attr("offset", "100%").attr("stop-color", "#2f5f28");
+
     svg
       .append("circle")
       .attr("cx", GLOBE_SIZE / 2)
       .attr("cy", GLOBE_SIZE / 2)
       .attr("r", GLOBE_RADIUS)
-      .attr("fill", "#bfe0f5")
-      .attr("stroke", "#8fc3e0");
+      .attr("fill", "url(#globe-ocean)")
+      .attr("stroke", "#0b3d63")
+      .attr("stroke-width", 0.75);
 
     const landGroup = svg.append("g");
     const pinGroup = svg.append("g");
@@ -158,7 +181,13 @@ export default function PrincipalsGlobe() {
         if (cancelled) return;
 
         const land = topoFeature(world, world.objects.land);
-        landGroup.append("path").datum(land).attr("fill", "#4a9d5f").attr("opacity", 0.9);
+        landGroup
+          .append("path")
+          .datum(land)
+          .attr("fill", "url(#globe-land)")
+          .attr("stroke", "#274a20")
+          .attr("stroke-width", 0.3)
+          .attr("opacity", 0.95);
 
         const pins = pinGroup
           .selectAll("g")
@@ -306,7 +335,7 @@ export default function PrincipalsGlobe() {
             </p>
           </div>
 
-          <div className="grid max-h-[440px] grid-cols-2 gap-3 overflow-y-auto pr-1 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
             {visiblePrincipals.map((principal) => (
               <PrincipalCard key={principal.slug} principal={principal} />
             ))}

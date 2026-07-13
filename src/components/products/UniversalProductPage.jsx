@@ -71,7 +71,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Distillation simulator */}
       {product.simulator && (
-        <DistillationSimulator data={product.simulator} />
+        <DistillationSimulator data={product.simulator} productName={product.name} />
       )}
 
       {/* Recovery calculator */}
@@ -136,7 +136,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Glassware guide */}
       {glasswareSection?.cards?.length > 0 && (
-        <GlasswareGuide cards={glasswareSection.cards} />
+        <GlasswareGuide cards={glasswareSection.cards} section={glasswareSection} productName={product.name} />
       )}
 
       {/* Vacuum & chiller pairing */}

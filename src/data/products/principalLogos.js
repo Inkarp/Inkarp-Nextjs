@@ -19,7 +19,7 @@ export const principalLogos = {
   "labstation-i": "/assets/images/PrincipalLogos/RowTwo/labstation.svg",
   luzchem: "/assets/images/PrincipalLogos/RowThree/Luzchem.png",
   "robot-coupe": "/assets/images/PrincipalLogos/RowThree/robot.png",
-  bandelin: "/assets/images/PrincipalLogos/RowThree/bandelin.jpg",
+  bandelin: "/assets/images/PrincipalLogos/RowThree/bandelin.png",
   kubota: "/assets/images/PrincipalLogos/RowThree/Kubota.png",
   jeiotech: "/assets/images/PrincipalLogos/RowThree/Jeiotch.png",
   "sonics-and-materials": "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",

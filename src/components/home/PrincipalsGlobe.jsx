@@ -57,11 +57,11 @@ function PrincipalCard({ principal }) {
     <Link
       href={`/products?brand=${principal.slug}`}
       aria-label={principal.principalName}
-      className="flex min-h-[56px] items-center justify-center rounded-lg border border-line-light bg-white p-2.5 text-center transition hover:-translate-y-0.5 hover:border-red/50 hover:shadow-md"
+      className="flex h-16 items-center justify-center rounded-lg border border-line-light bg-white p-3 transition hover:-translate-y-0.5 hover:border-red/50 hover:shadow-md"
     >
       {logo ? (
-        <span className="relative h-7 w-full">
-          <Image src={logo} alt={principal.principalName} fill sizes="120px" className="object-contain object-center" />
+        <span className="relative h-9 w-full">
+          <Image src={logo} alt={principal.principalName} fill sizes="140px" className="object-contain" />
         </span>
       ) : (
         <span className="text-xs font-semibold text-ink">{principal.principalName}</span>

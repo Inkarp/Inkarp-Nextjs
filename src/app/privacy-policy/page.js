@@ -1,6 +1,11 @@
+import { getCanonicalUrl } from "@/data/pageSeo";
+
 export const metadata = {
   title:"Privacy Policy - Inkarp Instruments Pvt Ltd",
   description:"How Inkarp Instruments Private Ltd collects, uses, and safeguards your personal information.",
+  alternates: {
+    canonical: getCanonicalUrl("/privacy-policy"),
+  },
 };
 
 const sections = [

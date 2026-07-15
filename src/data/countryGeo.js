@@ -1,8 +1,4 @@
-// Approximate lat/lon per principal country of origin, used to plot dots on the
-// rotating globe in PrincipalsGlobe. Hues are drawn from the site's validated
-// 8-color categorical set (reused across two countries each) — every dot and
-// pill always carries a visible text label, so color here is a reinforcing
-// accent, not the sole identifier.
+
 export const countryGeo = {
   Canada: { label: "Canada", lat: 56.13, lon: -106.35, hue: "#2a78d6" },
   China: { label: "China", lat: 35.86, lon: 104.2, hue: "#1baf7a" },

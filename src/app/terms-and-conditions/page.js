@@ -1,6 +1,11 @@
+import { getCanonicalUrl } from "@/data/pageSeo";
+
 export const metadata = {
   title:"Terms and Conditions - Inkarp Instruments Pvt Ltd",
   description:"Terms and conditions governing quotations, orders, supplies, and services from Inkarp Instruments Pvt Ltd.",
+  alternates: {
+    canonical: getCanonicalUrl("/terms-and-conditions"),
+  },
 };
 
 const sections = [

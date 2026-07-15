@@ -1,7 +1,15 @@
 import Link from"next/link";
+import { getCanonicalUrl } from"@/data/pageSeo";
 
 export const metadata = {
   title:"Thank You - Inkarp Instruments",
+  alternates: {
+    canonical: getCanonicalUrl("/thank-you"),
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function ThankYou() {

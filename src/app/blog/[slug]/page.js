@@ -1,6 +1,7 @@
 import { notFound } from"next/navigation";
 import BlogDetailsPage from"@/components/blogs/BlogDetailsPage";
 import { getPostBySlug, posts } from"@/data/blogs";
+import { buildDynamicMetadata } from"@/data/pageSeo";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
@@ -14,10 +15,12 @@ export async function generateMetadata({ params }) {
     return { title:"Blog - Inkarp Instruments" };
   }
 
-  return {
+  return buildDynamicMetadata({
+    path: `/blog/${post.slug}`,
     title: `${post.title} - Inkarp Instruments`,
     description: post.excerpt,
-  };
+    keywords: post.tags?.join(", "),
+  });
 }
 
 export default async function BlogDetails({ params }) {

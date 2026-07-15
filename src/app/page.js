@@ -27,7 +27,7 @@ export default function Home() {
       <Principles /> 
       <HomeProductEnquiry />
       <HomeEventsInsights />
-      <HomeQuoteWall />
+      {/* <HomeQuoteWall /> */}
       <HomeClientReviews />
     </main>
   );

@@ -3,6 +3,7 @@ import {
   getCatalystCardBySlug,
   getCatalystPdfPath,
 } from"@/data/catalystCue";
+import { buildDynamicMetadata } from"@/data/pageSeo";
 
 function slugFromParams(params) {
   const slugParts = Array.isArray(params?.slug) ? params.slug : [];
@@ -15,12 +16,13 @@ export async function generateMetadata({ params }) {
   const card = getCatalystCardBySlug(slug);
   const title = card?.title ||"CATALYSTCue Magazine";
 
-  return {
+  return buildDynamicMetadata({
+    path: `/magazine/${slug}`,
     title: card?.metaTitle || title,
     description:
       card?.metaDescription ||"Explore the latest edition of CATALYSTCue by Inkarp Instruments.",
     keywords: card?.keywords ||"CATALYSTCue, Inkarp, Scientific Magazine",
-  };
+  });
 }
 
 export default async function CatalystFlipbook({ params }) {

@@ -5,6 +5,7 @@ import { FiArrowRight, FiChevronRight, FiGlobe, FiMail } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
+import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
 
@@ -12,13 +13,14 @@ export async function generateMetadata({ params }) {
   const { productSlug } = await params;
   const product = getProductBySlug(productSlug);
   if (!product) return { title: "Product Not Found - Inkarp" };
-  return {
+  return buildDynamicMetadata({
+    path: `/products/${product.slug}`,
     title: product.metaTitle ?? `${product.name} - Inkarp`,
     description:
       product.metaDescription ??
       `Explore ${product.name} from ${product.principalName}.`,
     keywords: product.metaKeywords,
-  };
+  });
 }
 
 export default async function ProductPage({ params }) {

@@ -1,6 +1,8 @@
 import heidolphCatalog from "./heidolph/products.json";
 import heidolphRotaryEvaporatorsCatalog from "./heidolph/rotary-evaporators.json";
 import heidolphLargeScaleRotaryEvaporatorsCatalog from "./heidolph/large-scale-rotary-evaporators.json";
+import heidolphMagneticStirrersCatalog from "./heidolph/magnetic-stirrers.json";
+import heidolphOverheadStirrersCatalog from "./heidolph/overhead-stirrers.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
@@ -14,6 +16,8 @@ const principalCatalogs = [
   heidolphCatalog,
   heidolphRotaryEvaporatorsCatalog,
   heidolphLargeScaleRotaryEvaporatorsCatalog,
+  heidolphMagneticStirrersCatalog,
+  heidolphOverheadStirrersCatalog,
   rotzmeierCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),
@@ -159,4 +163,3 @@ export function getJsonCatalogProductByPrincipalAndSlug(
 export function getJsonCatalogProductBySlug(productSlug) {
   return getJsonCatalogProducts().find((product) => product.slug === productSlug);
 }
-

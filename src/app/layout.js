@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Footer from "@/components/common/Footer";
+import FloatingChatbot from "@/components/common/FloatingChatbot";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
 import Header from "@/components/common/Header";
 import PromoPopup from "@/components/common/PromoPopup";
@@ -25,6 +26,9 @@ export const metadata = {
   authors: [{ name: SITE_AUTHOR, url: SITE_URL }],
   creator: SITE_AUTHOR,
   publisher: SITE_PUBLISHER,
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
@@ -70,6 +74,7 @@ export default function RootLayout({ children }) {
           <Footer />
           <ProductProfileFloat />
           <PromoPopup />
+          <FloatingChatbot />
           <FloatingQuickActions />
           <SpeedInsights />
         </ThemeProvider>

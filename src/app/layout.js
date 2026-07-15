@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import Footer from "@/components/common/Footer";
 import FloatingChatbot from "@/components/common/FloatingChatbot";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
           <FloatingChatbot />
           <FloatingQuickActions />
           <SpeedInsights />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

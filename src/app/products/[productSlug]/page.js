@@ -9,6 +9,15 @@ import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
 
+const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor and Service Provider in India";
+
+const DEFAULT_PRODUCT_SERVICE_PILLS = [
+  "Installation",
+  "Training",
+  "AMC",
+  "Application support",
+  "HQ Support",
+];
 export async function generateMetadata({ params }) {
   const { productSlug } = await params;
   const product = getProductBySlug(productSlug);
@@ -33,6 +42,7 @@ export default async function ProductPage({ params }) {
     .slice(0, 4);
 
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
+  const servicePills = [...new Set([...DEFAULT_PRODUCT_SERVICE_PILLS, ...(product.servicePills ?? [])])];
 
   const faqJsonLd = product.faqs?.length > 0 ? {
     "@context": "https://schema.org",
@@ -66,7 +76,7 @@ export default async function ProductPage({ params }) {
       </nav>
 
       <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
             <RecTag>{product.principalName}</RecTag>
 
@@ -97,26 +107,20 @@ export default async function ProductPage({ params }) {
               )}
             </div>
 
-            <h1 className="max-w-[15ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <h1 className="max-w-[17ch] text-[30px] font-semibold leading-[1.12] tracking-tight text-ink sm:text-[42px] lg:text-[44px]">
               {product.name}
             </h1>
+            <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-red">
+              {PRODUCT_DISTRIBUTOR_NOTE}
+            </p>
 
-            {product.distributorNote && (
-              <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-red">
-                {product.distributorNote}
-              </p>
-            )}
-
-            {product.servicePills?.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-2">
-                {product.servicePills.map((pill) => (
-                  <span key={pill} className="border border-red px-3 py-1 text-xs font-semibold text-red">
-                    {pill}
-                  </span>
-                ))}
-              </div>
-            )}
-
+            <div className="mt-5 flex flex-wrap gap-2.5">
+              {servicePills.map((pill) => (
+                <span key={pill} className="border border-red px-4 py-2 text-xs font-semibold text-red">
+                  {pill}
+                </span>
+              ))}
+            </div>
             <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft sm:text-lg">
               {product.longForm?.heroLead ?? product.overview}
             </p>
@@ -138,8 +142,8 @@ export default async function ProductPage({ params }) {
             </div>
           </div>
 
-          <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-            <div className="relative overflow-hidden border border-line-light bg-white">
+          <div className="relative self-center border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+            <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
               <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-2/5">
                 <Image
                   alt="Dr Dexter"
@@ -153,7 +157,7 @@ export default async function ProductPage({ params }) {
               {product.image ? (
                 <Image
                   alt={product.name}
-                  className="h-full w-full object-contain p-6 transition duration-500 hover:scale-105"
+                  className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
                   height={600}
                   src={product.image}
                   width={600}

@@ -27,6 +27,7 @@ import ProductMicrositeLayer from './ProductMicrositeLayer';
 import ProductEngagementPopups from './ProductEngagementPopups';
 import RecTag from '@/components/home/RecTag';
 
+
 export default function UniversalProductPage({ product }) {
   if (!product) return null;
 

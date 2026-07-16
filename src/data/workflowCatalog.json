@@ -1,0 +1,180 @@
+{
+  "defaults": {
+    "seo": {
+      "keywords": "lab workflow problems, lab workflow solutions, workflow product matching, Inkarp instruments"
+    },
+    "workflowTags": ["workflow-mapping", "instrument-selection", "application-support"],
+    "problemSolutionTags": ["method-readiness", "sample-handling", "service-support"],
+    "problemSolutions": [
+      {
+        "title": "Workflow is not yet mapped to a product set",
+        "problem": "The lab knows the application, but the required instrument chain, support needs, and operating constraints are not fully mapped yet.",
+        "solution": "Use structured product tags for industry, workflow, and problem-solution fit so the page can surface relevant products automatically as the catalog grows.",
+        "tags": ["workflow-mapping", "instrument-selection", "application-support"],
+        "productTags": ["workflow-mapping", "instrument-selection"],
+        "productQueryTags": ["laboratory workflow", "instrument selection"]
+      }
+    ]
+  },
+  "industries": {
+    "pharma": {
+      "seo": {
+        "title": "Pharmaceutical Workflow Problems, Solutions & Lab Products | Inkarp",
+        "description": "Explore pharmaceutical workflow problems, practical lab solutions, and tagged products for QC, method validation, compliance, and repeatable sample preparation.",
+        "keywords": "pharmaceutical workflow, pharma qc instruments, method validation products, inkarp pharma workflows"
+      },
+      "workflowTags": ["pharma-qc", "regulated-lab", "method-validation"],
+      "problemSolutionTags": ["compliance-readiness", "repeatability", "traceability"],
+      "problemSolutions": [
+        {
+          "title": "Regulated labs need repeatable methods",
+          "problem": "Pharmaceutical workflows need consistent sample preparation, method control, documentation, and service support before release-critical data can be trusted.",
+          "solution": "Match products with pharma, QC, repeatability, and compliance tags so the workflow recommends instruments that support validated lab practice.",
+          "tags": ["pharma-qc", "method-validation", "repeatability"],
+          "productTags": ["pharma-qc", "method-validation", "repeatability"],
+          "productQueryTags": ["pharma qc", "method validation", "sample preparation"]
+        }
+      ]
+    },
+    "chemical": {
+      "seo": {
+        "title": "Chemical Workflow Problems, Solutions & Lab Products | Inkarp",
+        "description": "Browse chemical and petrochemical workflow problems with tagged solutions and related products for distillation, solvent recovery, process control, and QC.",
+        "keywords": "chemical workflow, petrochemical lab instruments, distillation products, solvent recovery instruments, inkarp chemical workflows"
+      },
+      "workflowTags": ["process-development", "distillation", "solvent-recovery"],
+      "problemSolutionTags": ["process-control", "solvent-loss", "operator-safety"],
+      "problemSolutions": [
+        {
+          "title": "Chemical workflows need controlled separation",
+          "problem": "Process and QC teams need repeatable separation, solvent recovery, and in-process checks without losing yield or operator time.",
+          "solution": "Prioritize products tagged for distillation, solvent recovery, process control, and vacuum-controlled workflows.",
+          "tags": ["distillation", "solvent-recovery", "process-control"],
+          "productTags": ["distillation", "solvent-recovery", "process-control"],
+          "productQueryTags": ["distillation", "solvent recovery", "process control"]
+        }
+      ]
+    },
+    "rnd": {
+      "seo": {
+        "title": "R&D Workflow Problems, Solutions & Research Products | Inkarp",
+        "description": "Find R&D workflow problems, practical solutions, and tagged products for method development, screening, solvent recovery, and fast research iteration.",
+        "keywords": "R&D lab workflow, research lab instruments, method development products, solvent recovery R&D, inkarp research workflows"
+      },
+      "workflowTags": ["research-workflow", "method-development", "solvent-recovery"],
+      "problemSolutionTags": ["fast-iteration", "sample-throughput", "method-repeatability"],
+      "problemSolutions": [
+        {
+          "title": "R&D teams need fast method iteration",
+          "problem": "Research labs change samples, solvents, and methods frequently, so product selection must support flexibility without slowing experiments.",
+          "solution": "Use workflow and problem-solution tags to recommend instruments that help screening, optimization, recovery, and documentation.",
+          "tags": ["research-workflow", "method-development", "fast-iteration"],
+          "productTags": ["research-workflow", "method-development", "fast-iteration"],
+          "productQueryTags": ["method development", "research workflow", "screening"]
+        }
+      ]
+    }
+  },
+  "topics": {
+    "chemical/distillation": {
+      "seo": {
+        "title": "Distillation & Solvent Recovery Problems, Solutions & Products | Inkarp",
+        "description": "Select distillation workflow problems to see practical solutions and related rotary evaporation, vacuum-control, and solvent-recovery products from Inkarp.",
+        "keywords": "distillation workflow, solvent recovery products, rotary evaporator, vacuum distillation, heat sensitive samples, inkarp"
+      },
+      "workflowTags": ["distillation", "vacuum-distillation", "rotary-evaporation", "solvent-recovery", "solvent-removal"],
+      "problemSolutionTags": ["bumping-control", "vacuum-control", "condensation-efficiency", "heat-sensitive-samples", "operator-safety"],
+      "productQueryTags": ["rotary evaporator", "distillation", "solvent recovery", "vacuum distillation"],
+      "problemSolutions": [
+        {
+          "title": "Solvent recovery can be slow or inconsistent",
+          "problem": "Labs lose time when bath temperature, rotation, vacuum, and condenser performance are not matched to the solvent and sample volume.",
+          "solution": "Use rotary evaporation and vacuum-control products tagged for solvent recovery, distillation, and condensation efficiency.",
+          "tags": ["solvent-recovery", "rotary-evaporation", "vacuum-control"],
+          "productTags": ["solvent-recovery", "rotary-evaporation", "vacuum-control", "condensation-efficiency"],
+          "productQueryTags": ["solvent recovery", "rotary evaporator", "vacuum control"],
+          "productSlugs": [
+            "hei-vap-ultimate-control-rotary-evaporator",
+            "hei-vap-expert-control-rotary-evaporator",
+            "hei-vap-industrial-rotary-evaporator",
+            "large-scale-hei-volume-distimatic-pro"
+          ]
+        },
+        {
+          "title": "Heat-sensitive samples need gentler removal",
+          "problem": "High bath temperatures can damage sensitive compounds when evaporation is not controlled under suitable vacuum conditions.",
+          "solution": "Match products tagged for heat-sensitive samples, controlled vacuum, and method repeatability to protect sample quality.",
+          "tags": ["heat-sensitive-samples", "vacuum-distillation", "method-repeatability"],
+          "productTags": ["heat-sensitive-samples", "vacuum-distillation", "method-repeatability", "bumping-control"],
+          "productQueryTags": ["heat sensitive samples", "vacuum distillation", "rotary evaporator"],
+          "productSlugs": [
+            "hei-vap-core-rotary-evaporator",
+            "hei-vap-expert-rotary-evaporator",
+            "hei-vap-ultimate-rotary-evaporator",
+            "hei-vap-ultimate-control-rotary-evaporator"
+          ]
+        }
+      ]
+    },
+    "rnd/solvent-recovery": {
+      "seo": {
+        "title": "R&D Solvent Recovery Problems, Solutions & Products | Inkarp",
+        "description": "Explore R&D solvent recovery problems with tagged solutions and rotary evaporation products for repeatable sample concentration and faster method iteration.",
+        "keywords": "R&D solvent recovery, rotary evaporation R&D, sample concentration products, method repeatability"
+      },
+      "workflowTags": ["solvent-recovery", "rotary-evaporation", "solvent-removal", "sample-concentration"],
+      "problemSolutionTags": ["method-repeatability", "fast-iteration", "vacuum-control", "bumping-control"],
+      "productQueryTags": ["rotary evaporator", "solvent recovery", "sample concentration"],
+      "problemSolutions": [
+        {
+          "title": "R&D solvent recovery changes from method to method",
+          "problem": "Changing solvents and batch sizes can make recovery unpredictable when teams do not have a repeatable evaporation setup.",
+          "solution": "Use products tagged for rotary evaporation, solvent recovery, sample concentration, and method repeatability.",
+          "tags": ["rotary-evaporation", "solvent-recovery", "method-repeatability"],
+          "productTags": ["rotary-evaporation", "solvent-recovery", "method-repeatability"],
+          "productQueryTags": ["rotary evaporator", "sample concentration", "solvent recovery"]
+        }
+      ]
+    },
+    "food/solvent-extraction": {
+      "seo": {
+        "title": "Food Solvent Extraction Problems, Solutions & Products | Inkarp",
+        "description": "See food and beverage solvent extraction problems, matching solutions, and tagged products for sample concentration and solvent removal.",
+        "keywords": "food solvent extraction, sample concentration, solvent removal products, food testing instruments"
+      },
+      "workflowTags": ["solvent-extraction", "solvent-removal", "rotary-evaporation", "sample-concentration"],
+      "problemSolutionTags": ["extract-concentration", "residue-control", "method-repeatability"],
+      "productQueryTags": ["rotary evaporator", "solvent extraction", "sample concentration"],
+      "problemSolutions": [
+        {
+          "title": "Extract concentration must protect sample quality",
+          "problem": "Food and beverage extracts can be sensitive to heat and solvent residue, especially before downstream analysis.",
+          "solution": "Recommend products tagged for solvent removal, sample concentration, heat-sensitive samples, and repeatable methods.",
+          "tags": ["solvent-removal", "sample-concentration", "heat-sensitive-samples"],
+          "productTags": ["solvent-removal", "sample-concentration", "heat-sensitive-samples"],
+          "productQueryTags": ["sample concentration", "solvent removal", "rotary evaporator"]
+        }
+      ]
+    },
+    "pharma/residual-solvents": {
+      "seo": {
+        "title": "Residual Solvent Workflow Problems, Solutions & Products | Inkarp",
+        "description": "Explore residual solvent sample-preparation problems, compliance-focused solutions, and related products tagged for pharma QC and solvent control.",
+        "keywords": "residual solvent workflow, pharma qc, solvent removal products, sample preparation instruments"
+      },
+      "workflowTags": ["residual-solvents", "solvent-removal", "sample-preparation", "pharma-qc"],
+      "problemSolutionTags": ["compliance-readiness", "repeatability", "traceability", "solvent-control"],
+      "productQueryTags": ["residual solvents", "solvent removal", "rotary evaporator", "sample preparation"],
+      "problemSolutions": [
+        {
+          "title": "Residual solvent workflows need controlled preparation",
+          "problem": "Sample preparation must avoid uncontrolled solvent loss, contamination, and inconsistent concentration before analytical testing.",
+          "solution": "Surface products tagged for pharma QC, solvent removal, repeatability, and traceable preparation support.",
+          "tags": ["residual-solvents", "solvent-removal", "pharma-qc"],
+          "productTags": ["residual-solvents", "solvent-removal", "pharma-qc", "repeatability"],
+          "productQueryTags": ["residual solvents", "solvent removal", "pharma qc"]
+        }
+      ]
+    }
+  }
+}

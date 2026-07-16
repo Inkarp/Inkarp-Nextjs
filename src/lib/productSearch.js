@@ -1,3 +1,5 @@
+const productSearchTextCache = new WeakMap();
+
 function normalizeSearchValue(value) {
   return String(value ?? "")
     .normalize("NFKD")
@@ -44,7 +46,15 @@ function getCountryAliases(countryOfOrigin) {
 }
 
 export function getProductSearchText(product) {
-  return normalizeSearchValue(
+  if (typeof product === "object" && product !== null) {
+    const cachedText = productSearchTextCache.get(product);
+
+    if (cachedText) {
+      return cachedText;
+    }
+  }
+
+  const searchText = normalizeSearchValue(
     flattenSearchValues([
       product.name,
       product.slug,
@@ -55,6 +65,9 @@ export function getProductSearchText(product) {
       product.industry,
       product.category,
       product.applications,
+      product.industryTags,
+      product.workflowTags,
+      product.problemSolutionTags,
       product.tags,
       product.searchTags,
       product.keywords,
@@ -67,6 +80,12 @@ export function getProductSearchText(product) {
       product.faqs,
     ]).join(" ")
   );
+
+  if (typeof product === "object" && product !== null) {
+    productSearchTextCache.set(product, searchText);
+  }
+
+  return searchText;
 }
 
 export function productMatchesSearch(product, query) {

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
 
@@ -27,9 +27,6 @@ function getProductsUrl(pathname, searchParams, query, brands = []) {
   return queryString ? `${pathname}?${queryString}` : pathname;
 }
 
-// Awaited before the results fetch fires, so every search is on record in the
-// database first. A logging failure never blocks the actual search though —
-// it's swallowed so results still load even if the write fails.
 function logSearch({ query, brands, resultsCount }) {
   return fetch("/api/search-log", {
     method: "POST",
@@ -53,7 +50,7 @@ export default function ProductFilterForm({
   const [isBrandOpen, setIsBrandOpen] = useState(false);
   const [brandSearch, setBrandSearch] = useState("");
   const [isPending, startTransition] = useTransition();
-  const [isLogging, setIsLogging] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
   const trimmedSearch = search.trim();
   const hasActiveSearch = Boolean(trimmedSearch);
   const hasActiveBrands = selectedBrands.length > 0;
@@ -71,19 +68,22 @@ export default function ProductFilterForm({
         option.label.toLowerCase().includes(trimmedBrandSearch)
       )
     : brandOptions;
+  const isLoading = isPending || isNavigating;
 
-  // Search only fires on an explicit action (button/Enter) — never as-you-type —
-  // so every logged query represents a real search intent, not a keystroke.
+  useEffect(() => {
+    setIsNavigating(false);
+  }, [searchParams]);
+
   const showSearchButton = trimmedSearch.length >= 2;
   const canSubmitSearch = trimmedSearch.length === 0 || trimmedSearch.length >= 2;
 
-  const runSearch = async () => {
+  const runSearch = () => {
     if (!canSubmitSearch) return;
 
+    setIsNavigating(true);
+
     if (trimmedSearch) {
-      setIsLogging(true);
-      await logSearch({ query: trimmedSearch, brands: selectedBrands, resultsCount: productCount });
-      setIsLogging(false);
+      logSearch({ query: trimmedSearch, brands: selectedBrands, resultsCount: productCount });
     }
 
     startTransition(() => {
@@ -108,6 +108,8 @@ export default function ProductFilterForm({
       ? selectedBrands.filter((item) => item !== brand)
       : [...selectedBrands, brand];
 
+    setIsNavigating(true);
+
     startTransition(() => {
       router.replace(getProductsUrl(pathname, searchParams, search, nextBrands), {
         scroll: false,
@@ -116,7 +118,7 @@ export default function ProductFilterForm({
   };
 
   return (
-    <form action="/products" onSubmit={handleSubmit} role="search">
+    <form action="/products" className="relative" onSubmit={handleSubmit} role="search">
       <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
         <div className="flex min-w-0 flex-1 items-center gap-2">
           <div className="relative flex min-w-0 flex-1 items-center">
@@ -233,14 +235,15 @@ export default function ProductFilterForm({
             <Link
               className="inline-flex h-9 items-center px-2.5 text-xs font-medium text-ink-soft transition hover:text-red"
               href="/products"
+              onClick={() => setIsNavigating(true)}
             >
               Clear
             </Link>
           ) : null}
 
           <div className="shrink-0 border border-red bg-red px-3 py-2 text-xs font-bold text-white">
-            {isPending || isLogging
-              ? "Searching..."
+            {isLoading
+              ? "Loading..."
               : `${productCount}${hasActiveFilters ? "" : `/${totalCount}`} results`}
           </div>
         </div>
@@ -267,9 +270,17 @@ export default function ProductFilterForm({
           <Link
             className="font-semibold text-red transition hover:text-ink"
             href="/products"
+            onClick={() => setIsNavigating(true)}
           >
             Clear filters
           </Link>
+        </div>
+      ) : null}
+
+      {isLoading ? (
+        <div className="pointer-events-none absolute inset-x-0 bottom-[-13px] h-1 overflow-hidden bg-red/10" aria-live="polite">
+          <span className="sr-only">Loading product results</span>
+          <span className="block h-full w-1/3 animate-pulse bg-red" />
         </div>
       ) : null}
     </form>

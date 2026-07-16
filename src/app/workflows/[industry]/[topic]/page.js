@@ -1,8 +1,9 @@
-import { notFound } from"next/navigation";
-import WorkflowExplorer from"@/components/products/WorkflowExplorer";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
-import { topicSlug, workflowIndustries, workflowTopics } from"@/data/homeShowcase";
-import { buildDynamicMetadata } from"@/data/pageSeo";
+import { notFound } from "next/navigation";
+import WorkflowExplorer from "@/components/products/WorkflowExplorer";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import { buildDynamicMetadata } from "@/data/pageSeo";
+import { buildWorkflowSeo } from "@/lib/workflowContent";
 
 function resolve(industry, topic) {
   const activeIndustry = workflowIndustries.find((item) => item.cat === industry);
@@ -15,13 +16,15 @@ function resolve(industry, topic) {
 export async function generateMetadata({ params }) {
   const { industry, topic } = await params;
   const { activeIndustry, activeTopic } = resolve(industry, topic);
-  if (!activeIndustry || !activeTopic) return { title:"Workflow Not Found - Inkarp" };
+  if (!activeIndustry || !activeTopic) return { title: "Workflow Not Found - Inkarp" };
+
+  const seo = buildWorkflowSeo({ activeIndustry, activeTopic, industry, topic });
 
   return buildDynamicMetadata({
     path: `/workflows/${industry}/${topic}`,
-    title: `${activeTopic.title} — Inkarp Instruments`,
-    description: activeTopic.desc,
-    keywords: `${activeTopic.tag}, ${activeIndustry.industry.toLowerCase()}, inkarp lab workflow`,
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
   });
 }
 
@@ -40,7 +43,7 @@ export default async function WorkflowTopicPage({ params }) {
   if (!activeIndustry || !activeTopic) notFound();
 
   const trail = [
-    { label:"Workflows", href:"/workflows" },
+    { label: "Workflows", href: "/workflows" },
     { label: activeIndustry.industry, href: `/workflows/${industry}` },
     { label: activeTopic.title, href: `/workflows/${industry}/${topic}` },
   ];

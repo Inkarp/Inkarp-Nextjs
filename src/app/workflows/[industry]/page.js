@@ -1,19 +1,22 @@
-import { notFound } from"next/navigation";
-import WorkflowExplorer from"@/components/products/WorkflowExplorer";
-import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
-import { workflowIndustries } from"@/data/homeShowcase";
-import { buildDynamicMetadata } from"@/data/pageSeo";
+import { notFound } from "next/navigation";
+import WorkflowExplorer from "@/components/products/WorkflowExplorer";
+import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { workflowIndustries } from "@/data/homeShowcase";
+import { buildDynamicMetadata } from "@/data/pageSeo";
+import { buildWorkflowSeo } from "@/lib/workflowContent";
 
 export async function generateMetadata({ params }) {
   const { industry } = await params;
   const activeIndustry = workflowIndustries.find((item) => item.cat === industry);
-  if (!activeIndustry) return { title:"Workflow Not Found - Inkarp" };
+  if (!activeIndustry) return { title: "Workflow Not Found - Inkarp" };
+
+  const seo = buildWorkflowSeo({ activeIndustry, industry });
 
   return buildDynamicMetadata({
     path: `/workflows/${industry}`,
-    title: `${activeIndustry.industry} Lab Workflows — Inkarp Instruments`,
-    description: activeIndustry.tagline,
-    keywords: `${activeIndustry.industry.toLowerCase()} lab workflow, ${activeIndustry.cat} laboratory instruments, inkarp ${activeIndustry.cat}`,
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
   });
 }
 
@@ -27,7 +30,7 @@ export default async function WorkflowIndustryPage({ params }) {
   if (!activeIndustry) notFound();
 
   const trail = [
-    { label:"Workflows", href:"/workflows" },
+    { label: "Workflows", href: "/workflows" },
     { label: activeIndustry.industry, href: `/workflows/${industry}` },
   ];
 

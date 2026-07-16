@@ -25,7 +25,7 @@ export default function Home() {
       <HomeAchievements />
       <Companies />
       <Principles /> 
-      <HomeProductEnquiry />
+      {/* <HomeProductEnquiry /> */}
       <HomeEventsInsights />
       {/* <HomeQuoteWall /> */}
       <HomeClientReviews />

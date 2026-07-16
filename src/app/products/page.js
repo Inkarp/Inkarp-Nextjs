@@ -43,6 +43,38 @@ function getParam(searchParams, key) {
   return Array.isArray(value) ? value[0] : value ?? "";
 }
 
+function toCardText(value) {
+  if (value && typeof value === "object") {
+    return value.title || value.name || value.label || value.description || "";
+  }
+
+  return value;
+}
+
+function toCardArray(value) {
+  if (!value) {
+    return [];
+  }
+
+  return (Array.isArray(value) ? value : [value]).map(toCardText).filter(Boolean);
+}
+function toProductCard(product) {
+  return {
+    slug: product.slug,
+    principalSlug: product.principalSlug,
+    principalName: product.principalName,
+    countryOfOrigin: product.countryOfOrigin,
+    href: product.href,
+    image: product.image,
+    imageAlt: product.imageAlt,
+    name: product.name,
+    industry: product.industry,
+    applications: toCardArray(product.applications),
+    industryTags: toCardArray(product.industryTags),
+    workflowTags: toCardArray(product.workflowTags),
+    problemSolutionTags: toCardArray(product.problemSolutionTags),
+  };
+}
 function getParams(searchParams, key) {
   const value = searchParams[key];
   return (Array.isArray(value) ? value : [value]).filter(Boolean);
@@ -58,6 +90,7 @@ export default async function ProductsPage({ searchParams }) {
   const allProducts = getAllProducts();
   const totalProducts = allProducts.length;
   const products = searchProducts(filters);
+  const productCards = products.map(toProductCard);
   const productCountsByBrand = allProducts.reduce((counts, product) => {
     counts.set(product.principalSlug, (counts.get(product.principalSlug) ?? 0) + 1);
     return counts;
@@ -142,7 +175,7 @@ export default async function ProductsPage({ searchParams }) {
 
       <section className="bg-parchment-alt px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1180px]">
-          <ProductResultsGrid products={products} />
+          <ProductResultsGrid products={productCards} />
         </div>
       </section>
     </main>

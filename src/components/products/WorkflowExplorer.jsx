@@ -1,11 +1,11 @@
-import Link from"next/link";
-import ChallengeAccordion from"@/components/products/ChallengeAccordion";
-import WorkflowIcon from"@/components/home/WorkflowIcon";
-import { topicSlug, workflowIndustries, workflowTopics } from"@/data/homeShowcase";
-import { searchProducts } from"@/data/products/principals";
-
-const CHALLENGE_SLOTS = 10;
-const MAX_INSTRUMENTS_SHOWN = 9;
+import Link from "next/link";
+import WorkflowIcon from "@/components/home/WorkflowIcon";
+import WorkflowProblemProductPanel from "@/components/products/WorkflowProblemProductPanel";
+import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import {
+  getProblemProductGroups,
+  mergeWorkflowContent,
+} from "@/lib/workflowContent";
 
 function IndustryTabs({ activeCat }) {
   return (
@@ -18,8 +18,8 @@ function IndustryTabs({ activeCat }) {
           aria-selected={item.cat === activeCat}
           className={`inline-flex items-center gap-2 border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition ${
             item.cat === activeCat
-              ?"border-red bg-red text-parchment"
-              :"border-line-light bg-white text-ink-soft hover:border-red/40 hover:text-red"
+              ? "border-red bg-red text-parchment"
+              : "border-line-light bg-white text-ink-soft hover:border-red/40 hover:text-red"
           }`}
         >
           <WorkflowIcon cat={item.cat} className="h-3.5 w-3.5" />
@@ -30,29 +30,11 @@ function IndustryTabs({ activeCat }) {
   );
 }
 
-// Workflow detail screen: one topic's description plus the real products that support it.
 function WorkflowDetail({ activeIndustry, topics, activeTopic }) {
-  const topicMatches = searchProducts({ q: activeTopic.tag });
-  // Topic tags are narrow multi-word phrases that often match zero real products
-  // (search requires every term to hit) — fall back to the broader industry term
-  // so opening a workflow always surfaces relevant products.
-  const matchingProducts = topicMatches.length ? topicMatches : searchProducts({ q: activeIndustry.cat });
   const topicIndex = topics.indexOf(activeTopic);
-
-  // Only this workflow's own topic is real content — the remaining slots mirror
-  // the reference's"to be added" placeholder pattern until more challenges are written.
-  const challenges = Array.from({ length: CHALLENGE_SLOTS }, (_, index) => {
-    if (index === 0) {
-      return {
-        title: activeTopic.title,
-        solution: activeTopic.desc,
-        products: matchingProducts.slice(0, MAX_INSTRUMENTS_SHOWN),
-        empty: false,
-      };
-    }
-
-    return { title: `Challenge ${index + 1} — to be added`, empty: true };
-  });
+  const workflowContent = mergeWorkflowContent(activeIndustry, activeTopic);
+  const problemGroups = getProblemProductGroups(workflowContent);
+  const productSearchTerm = workflowContent.productQueryTags[0] ?? activeTopic.tag;
 
   return (
     <div className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-8">
@@ -62,25 +44,25 @@ function WorkflowDetail({ activeIndustry, topics, activeTopic }) {
         href={`/workflows/${activeIndustry.cat}`}
         className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-red"
       >
-        ← Back to workflows
+        Back to workflows
       </Link>
 
       <p className="font-mono text-xs uppercase tracking-wide text-ink-soft">
-        Workflow #{topicIndex + 1} · {activeIndustry.industry}
+        Workflow #{topicIndex + 1} / {activeIndustry.industry}
       </p>
       <h2 className="mt-2 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
         {activeTopic.title}
       </h2>
       <p className="mt-3 max-w-2xl text-sm leading-6 text-ink-soft">{activeTopic.desc}</p>
 
-      <div className="mt-8 border-t border-line-light pt-8">
-        <ChallengeAccordion challenges={challenges} />
-      </div>
+      <WorkflowProblemProductPanel
+        problemGroups={problemGroups}
+        productSearchHref={`/products?q=${encodeURIComponent(productSearchTerm)}`}
+      />
     </div>
   );
 }
 
-// Workflow list screen: the industry's top workflows, ranked, each opening its own detail screen.
 function WorkflowList({ activeIndustry, topics }) {
   return (
     <div className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-8">
@@ -112,7 +94,7 @@ function WorkflowList({ activeIndustry, topics }) {
               href={`/workflows/${activeIndustry.cat}/${topicSlug(topic.tag)}`}
               className="mt-4 inline-flex w-fit items-center gap-2 bg-red px-4 py-2 text-xs font-semibold text-ink transition hover:bg-transparent hover:text-red"
             >
-              Open workflow →
+              Open workflow
             </Link>
           </div>
         ))}

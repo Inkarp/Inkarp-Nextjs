@@ -12,6 +12,10 @@ import {
 } from "@/data/products/productImageMap";
 import { getPrincipalLogo } from "@/data/products/principalLogos";
 
+let jsonCatalogCategoriesCache;
+let jsonCatalogProductsCache;
+let jsonCatalogPrincipalSummariesCache;
+
 const principalCatalogs = [
   heidolphCatalog,
   heidolphRotaryEvaporatorsCatalog,
@@ -35,6 +39,10 @@ function uniqueValues(values) {
   return [...new Set(values.filter(Boolean))].sort((a, b) =>
     a.localeCompare(b)
   );
+}
+
+function mergeTagValues(...values) {
+  return uniqueValues(values.flatMap(toArray));
 }
 
 function getPrincipal(catalog) {
@@ -69,6 +77,21 @@ function normalizeProduct(product, category, principal) {
     ? toArray(product.applications)
     : toArray(category.applications);
   const categoryName = product.category ?? category.name;
+  const industryTags = mergeTagValues(category.industryTags, product.industryTags);
+  const workflowTags = mergeTagValues(category.workflowTags, product.workflowTags);
+  const problemSolutionTags = mergeTagValues(
+    category.problemSolutionTags,
+    product.problemSolutionTags
+  );
+  const tags = uniqueValues([
+    ...toArray(category.tags),
+    ...toArray(product.tags),
+    ...industryTags,
+    ...workflowTags,
+    ...problemSolutionTags,
+    category.name,
+    principal.principalName,
+  ]);
 
   return {
     ...product,
@@ -76,13 +99,11 @@ function normalizeProduct(product, category, principal) {
     category: categoryName,
     categorySlug: product.categorySlug ?? category.slug,
     industry: product.industry ?? category.industry ?? categoryName,
+    industryTags,
+    workflowTags,
+    problemSolutionTags,
     applications,
-    tags: uniqueValues([
-      ...toArray(category.tags),
-      ...toArray(product.tags),
-      category.name,
-      principal.principalName,
-    ]),
+    tags,
     principalSlug: principal.slug,
     principalName: principal.principalName,
     countryOfOrigin: product.countryOfOrigin ?? principal.countryOfOrigin,
@@ -97,13 +118,9 @@ export function getJsonCatalogs() {
   return principalCatalogs;
 }
 
-export function getJsonCatalogCategories(principalSlug) {
-  return principalCatalogs
-    .filter((catalog) => {
-      const principal = getPrincipal(catalog);
-      return !principalSlug || principal.slug === principalSlug;
-    })
-    .flatMap((catalog) => {
+function getAllJsonCatalogCategories() {
+  if (!jsonCatalogCategoriesCache) {
+    jsonCatalogCategoriesCache = principalCatalogs.flatMap((catalog) => {
       const principal = getPrincipal(catalog);
 
       return getCategories(catalog).map((category) => ({
@@ -115,10 +132,29 @@ export function getJsonCatalogCategories(principalSlug) {
         ),
       }));
     });
+  }
+
+  return jsonCatalogCategoriesCache;
+}
+
+export function getJsonCatalogCategories(principalSlug) {
+  const categories = getAllJsonCatalogCategories();
+
+  if (!principalSlug) {
+    return categories;
+  }
+
+  return categories.filter((category) => category.principalSlug === principalSlug);
 }
 
 export function getJsonCatalogProducts() {
-  return getJsonCatalogCategories().flatMap((category) => category.products);
+  if (!jsonCatalogProductsCache) {
+    jsonCatalogProductsCache = getAllJsonCatalogCategories().flatMap(
+      (category) => category.products
+    );
+  }
+
+  return jsonCatalogProductsCache;
 }
 
 export function getJsonCatalogPrincipalBySlug(principalSlug) {
@@ -141,13 +177,17 @@ export function getJsonCatalogPrincipalBySlug(principalSlug) {
 }
 
 export function getJsonCatalogPrincipalSummaries() {
-  const slugs = uniqueValues(
-    principalCatalogs.map((catalog) => getPrincipal(catalog).slug)
-  );
+  if (!jsonCatalogPrincipalSummariesCache) {
+    const slugs = uniqueValues(
+      principalCatalogs.map((catalog) => getPrincipal(catalog).slug)
+    );
 
-  return slugs
-    .map((slug) => getJsonCatalogPrincipalBySlug(slug))
-    .filter(Boolean);
+    jsonCatalogPrincipalSummariesCache = slugs
+      .map((slug) => getJsonCatalogPrincipalBySlug(slug))
+      .filter(Boolean);
+  }
+
+  return jsonCatalogPrincipalSummariesCache;
 }
 
 export function getJsonCatalogProductByPrincipalAndSlug(

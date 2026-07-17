@@ -11,6 +11,8 @@ import ConnectivityPlanner from './sections/ConnectivityPlanner';
 import ChecklistGuide from './sections/ChecklistGuide';
 import ROICalculator from './sections/ROICalculator';
 import UnattendedHoursPlanner from './sections/UnattendedHoursPlanner';
+import BenchSpacePlanner from './sections/BenchSpacePlanner';
+import ServiceLifePlanner from './sections/ServiceLifePlanner';
 import ApplicationsExplorer from './sections/ApplicationsExplorer';
 import ConfigWizard from './sections/ConfigWizard';
 import WorkflowScore from './sections/WorkflowScore';
@@ -112,6 +114,14 @@ export default function UniversalProductPage({ product }) {
 
       {product.unattendedPlanner && (
         <UnattendedHoursPlanner data={product.unattendedPlanner} productName={product.name} />
+      )}
+
+      {product.benchPlanner && (
+        <BenchSpacePlanner data={product.benchPlanner} productName={product.name} />
+      )}
+
+      {product.serviceLifePlanner && (
+        <ServiceLifePlanner data={product.serviceLifePlanner} productName={product.name} />
       )}
 
       {/* ROI calculator */}

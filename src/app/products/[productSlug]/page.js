@@ -107,7 +107,7 @@ export default async function ProductPage({ params }) {
               )}
             </div>
 
-            <h1 className="max-w-[17ch] text-[30px] font-semibold leading-[1.12] tracking-tight text-ink sm:text-[42px] lg:text-[44px]">
+            <h1 className="max-w-[19ch] text-2xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[32px] lg:text-[34px]">
               {product.name}
             </h1>
             <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-red">

@@ -16,13 +16,15 @@ function resolveIcon(label = '') {
 }
 
 export default function StatsBar({ stats = [] }) {
-  if (!stats.length) return null;
+  const visibleStats = stats.slice(0, 4);
+
+  if (!visibleStats.length) return null;
 
   return (
     <section className="border-y border-line-light bg-parchment-alt px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {stats.map((s, index) => {
+          {visibleStats.map((s, index) => {
             const Icon = resolveIcon(s.label);
             const isHighlight = index === 0;
             return (

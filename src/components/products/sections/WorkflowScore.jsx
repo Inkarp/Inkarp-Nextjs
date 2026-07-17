@@ -6,6 +6,7 @@ import {
 } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadCaptureForm from './LeadCaptureForm';
 
 /* Benefit-pill icons, selectable by key from product JSON */
 const ICON_MAP = {
@@ -200,12 +201,20 @@ export default function WorkflowScore({ data, productName }) {
               Reset selected steps
             </button>
 
-            <a
-              className="mt-4 flex h-12 w-full items-center justify-center bg-red px-6 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red"
-              href="#booking"
-            >
-              {data?.ctaLabel ?? 'Map my workflow with an expert'}
-            </a>
+            {selectedSteps.length ? (
+              <LeadCaptureForm
+                className="mt-4 w-full"
+                formType="workflow-score"
+                productName={name}
+                successMessage={(contactName) =>
+                  `Thank you${contactName ? `, ${contactName}` : ''}. We have sent your workflow score to our team.`
+                }
+                summary={`Score: ${percent}%\n\nManual steps selected:\n${selectedSteps
+                  .map((step) => `- ${step.label} (manually: ${step.manual})`)
+                  .join('\n')}`}
+                triggerLabel={data?.ctaLabel ?? 'Map my workflow with an expert'}
+              />
+            ) : null}
           </div>
         </div>
 

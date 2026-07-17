@@ -1,9 +1,8 @@
 'use client';
 import { useEffect, useMemo, useState } from 'react';
-import { FiMail } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
-import { buildTableEmailBody, openMailto } from './emailUtils';
+import LeadCaptureForm from './LeadCaptureForm';
 
 function formatCurrency(value) {
   return `₹${Math.round(value || 0).toLocaleString('en-IN')}`;
@@ -64,25 +63,15 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
     return { totalAnnualValue, paybackMonths, fiveYearNetValue };
   }, [disposalSavings, otherAnnualValue, purchasePrice, recoveredSolventValue]);
 
-  const emailResults = () => {
-    const body = buildTableEmailBody({
-      productName: `${productName} ROI estimate`,
-      sectionName: 'ROI Calculator',
-      rows: [
-        { label: 'Estimated purchase price', value: `INR ${purchasePrice.toLocaleString('en-IN')}` },
-        { label: 'Annual recovered solvent value', value: `INR ${recoveredSolventValue.toLocaleString('en-IN')}` },
-        { label: 'Annual disposal / waste savings', value: `INR ${disposalSavings.toLocaleString('en-IN')}` },
-        { label: 'Other annual value', value: `INR ${otherAnnualValue.toLocaleString('en-IN')}` },
-        { label: 'Estimated payback period', value: results.paybackMonths ? `${results.paybackMonths} months` : '-' },
-        { label: 'Total annual value', value: `INR ${results.totalAnnualValue.toLocaleString('en-IN')}` },
-        { label: '5-year net value after purchase', value: `INR ${results.fiveYearNetValue.toLocaleString('en-IN')}` },
-      ],
-      note: 'Please review these numbers and share a configured quote.',
-    });
-
-    window.dispatchEvent(new CustomEvent('product-roi-results'));
-    openMailto({ subject: `${productName} - ROI estimate`, body });
-  };
+  const roiSummary = [
+    `Estimated purchase price: INR ${purchasePrice.toLocaleString('en-IN')}`,
+    `Annual recovered solvent value: INR ${recoveredSolventValue.toLocaleString('en-IN')}`,
+    `Annual disposal / waste savings: INR ${disposalSavings.toLocaleString('en-IN')}`,
+    `Other annual value: INR ${otherAnnualValue.toLocaleString('en-IN')}`,
+    `Estimated payback period: ${results.paybackMonths ? `${results.paybackMonths} months` : '-'}`,
+    `Total annual value: INR ${results.totalAnnualValue.toLocaleString('en-IN')}`,
+    `5-year net value after purchase: INR ${results.fiveYearNetValue.toLocaleString('en-IN')}`,
+  ].join('\n');
 
   const cards = data?.cards ?? [];
 
@@ -132,14 +121,16 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
               />
             </div>
 
-            <button
-              className="mt-5 inline-flex h-11 w-full items-center justify-center gap-2 border border-line-light bg-parchment px-6 text-sm font-semibold text-black transition hover:border-red hover:bg-red hover:text-white"
-              onClick={emailResults}
-              type="button"
-            >
-              <FiMail className="text-base" />
-              Email my ROI numbers to Inkarp
-            </button>
+            <LeadCaptureForm
+              className="mt-5 w-full"
+              formType="roi-calculator"
+              productName={productName}
+              successMessage={(name) =>
+                `Thank you${name ? `, ${name}` : ''}. We have sent your ROI numbers to our team.`
+              }
+              summary={roiSummary}
+              triggerLabel="Email my ROI numbers to Inkarp"
+            />
           </div>
 
           <div className="space-y-3">

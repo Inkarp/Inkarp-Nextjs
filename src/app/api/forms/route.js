@@ -1,6 +1,22 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 
+// Product-page "pick something, then send it to Inkarp" tools. They all
+// share the same required fields (name/email/configuration) and all route
+// to info@inkarp.co.in, so they're declared together rather than repeated
+// across the three maps below.
+const PRODUCT_TOOL_LABELS = {
+  "setup-configurator": "Setup configurator submission",
+  "scenario-picker": "Scenario planner submission",
+  "readiness-checklist": "Installation readiness checklist",
+  "workflow-score": "Workflow score submission",
+  "suitability-check": "Suitability checker submission",
+  "fit-quiz": "Fit quiz submission",
+  "config-wizard": "Configuration wizard submission",
+  "roi-calculator": "ROI calculator submission",
+  "solvent-calculator": "Solvent recovery calculator submission",
+};
+
 const FORM_LABELS = {
   contact: "Contact form",
   service: "Service & installation request",
@@ -9,6 +25,7 @@ const FORM_LABELS = {
   catalyst: "CATALYSTCue physical copy request",
   feedback: "Product profile feedback",
   "blog-comment": "Blog comment",
+  ...PRODUCT_TOOL_LABELS,
 };
 
 const REQUIRED_FIELDS = {
@@ -18,6 +35,13 @@ const REQUIRED_FIELDS = {
   catalyst: ["name", "email", "institutionName", "mobileNumber"],
   feedback: ["name", "email", "interests"],
   "blog-comment": ["name", "email", "message"],
+  ...Object.fromEntries(
+    Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, ["name", "email", "configuration"]])
+  ),
+};
+
+const FORM_RECIPIENTS = {
+  ...Object.fromEntries(Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, "info@inkarp.co.in"])),
 };
 
 function getClientIp(request) {
@@ -57,6 +81,24 @@ function acknowledgementFor(formType) {
       return "We have received your blog comment submission. Thank you for engaging with Inkarp.";
     case "service":
       return "We have received your service request. Our service team will contact you shortly.";
+    case "setup-configurator":
+      return "We have received your setup configuration. Our team will review it and get back to you with a complete quotation.";
+    case "scenario-picker":
+      return "We have received the scenario you selected. Our team will review it and get back to you with guidance.";
+    case "readiness-checklist":
+      return "We have received your installation readiness checklist. Our team will confirm what still needs to be arranged.";
+    case "workflow-score":
+      return "We have received your workflow score submission. Our team will get back to you on how to simplify the steps you selected.";
+    case "suitability-check":
+      return "We have received your suitability check results. Our team will confirm the best fit for your workflow.";
+    case "fit-quiz":
+      return "We have received your quiz results. Our team will confirm the best configuration for your workflow.";
+    case "config-wizard":
+      return "We have received your configuration. Our team will confirm availability and pricing.";
+    case "roi-calculator":
+      return "We have received your ROI estimate. Our team will follow up with a tailored quote.";
+    case "solvent-calculator":
+      return "We have received your solvent recovery estimate. Our team will follow up with a tailored quote.";
     default:
       return "We have received your enquiry and our team will get back to you soon.";
   }
@@ -106,6 +148,7 @@ export async function POST(request) {
       subject: `New ${FORM_LABELS[formType] ?? formType} submission`,
       fields: submission,
       replyTo: fields.email,
+      to: FORM_RECIPIENTS[formType],
     });
   } catch (error) {
     console.error("[forms] failed to send notification email:", error.message);

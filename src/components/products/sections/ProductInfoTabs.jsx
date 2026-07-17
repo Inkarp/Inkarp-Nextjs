@@ -113,22 +113,24 @@ function deriveAppTitle(sentence) {
 function IconCard({ title, description, items, icon: IconProp, badge }) {
   const Icon = IconProp ?? FiSettings;
   return (
-    <div className="border border-line-light bg-parchment p-5 transition hover:border-line-light">
-      <div className="mb-3 flex items-center gap-2">
-        <Icon className="h-5 w-5 text-red" />
+    <div className="border border-line-light bg-parchment p-3.5 transition hover:border-red/30">
+      <div className="mb-2 flex items-center gap-2">
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center bg-red/8 text-red">
+          <Icon className="h-3.5 w-3.5" />
+        </span>
         {badge && (
           <span className="ml-auto text-[10px] font-bold uppercase tracking-wide text-ink bg-parchment-alt px-2 py-0.5">
             {badge}
           </span>
         )}
       </div>
-      <h3 className="font-semibold text-sm text-black mb-1">{title}</h3>
-      {description && <p className="text-sm leading-6 text-black">{description}</p>}
+      <h3 className="font-semibold text-[13px] leading-snug text-black">{title}</h3>
+      {description && <p className="mt-1 text-xs leading-5 text-black">{description}</p>}
       {items?.length > 0 && (
-        <ul className="mt-2 space-y-1.5">
+        <ul className="mt-2 space-y-1">
           {items.map((item, i) => (
-            <li key={i} className="flex gap-2 text-xs text-black">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-ink-soft" />
+            <li key={i} className="flex gap-2 text-xs leading-5 text-black">
+              <span className="mt-1.5 h-1 w-1 shrink-0 bg-ink-soft" />
               {item}
             </li>
           ))}
@@ -229,7 +231,7 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-4 text-sm leading-7 text-black">{p}</p>
             ))}
             {overviewSec?.cards?.length > 0 && (
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <div className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
                 {overviewSec.cards.slice(0, 4).map((c) => (
                   <IconCard
                     key={c.title}
@@ -252,7 +254,7 @@ export default function ProductInfoTabs({ product }) {
             {introText(keyFeaturesSec).map((p, i) => (
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
               {(product.features ?? []).slice(0, 12).map((f) => {
                 const colonIdx = f.indexOf(':');
                 const title       = colonIdx > -1 ? f.slice(0, colonIdx).trim() : f.trim();
@@ -303,16 +305,20 @@ export default function ProductInfoTabs({ product }) {
             {introText(specsSec).map((p, i) => (
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
-            <div className="overflow-hidden border border-line-light bg-parchment">
-              <dl className="divide-y divide-line-light">
-                {(product.technicalSpecs ?? []).map((row) => (
-                  <div key={row.label} className="grid px-5 py-3 text-sm sm:grid-cols-[0.45fr_0.55fr]">
-                    <dt className="font-medium text-black">{row.label}</dt>
-                    <dd className="text-black">{row.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+            <dl className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+              {(product.technicalSpecs ?? []).map((row) => (
+                <div
+                  className="group border border-line-light bg-parchment px-4 py-3 transition hover:border-red/40 hover:bg-white"
+                  key={row.label}
+                >
+                  <dt className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wide text-ink-soft">
+                    <span className="h-1.5 w-1.5 shrink-0 bg-red/50 transition group-hover:bg-red" />
+                    {row.label}
+                  </dt>
+                  <dd className="mt-1.5 text-sm font-semibold leading-snug text-ink">{row.value}</dd>
+                </div>
+              ))}
+            </dl>
             <p className="mt-4 text-xs text-ink-soft">
               * Per Heidolph published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering.
             </p>

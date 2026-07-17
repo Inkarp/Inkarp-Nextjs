@@ -5,7 +5,7 @@ import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
 
-function getProductsUrl(pathname, searchParams, query, brands = []) {
+function getProductsUrl(pathname, searchParams, query, brands = [], industries = []) {
   const params = new URLSearchParams(searchParams.toString());
   const trimmedQuery = query.trim();
 
@@ -19,6 +19,13 @@ function getProductsUrl(pathname, searchParams, query, brands = []) {
   brands.forEach((brand) => {
     if (brand) {
       params.append("brand", brand);
+    }
+  });
+
+  params.delete("industry");
+  industries.forEach((industry) => {
+    if (industry) {
+      params.append("industry", industry);
     }
   });
 
@@ -36,11 +43,98 @@ function logSearch({ query, brands, resultsCount }) {
   }).catch(() => {});
 }
 
+function FilterDropdown({
+  allLabel,
+  isOpen,
+  label,
+  noMatchLabel,
+  onOptionToggle,
+  onSearchChange,
+  onToggleOpen,
+  options,
+  searchPlaceholder,
+  searchValue,
+  selectedValues,
+}) {
+  const selectedSet = new Set(selectedValues);
+  const buttonLabel = selectedValues.length ? `${selectedValues.length} selected` : allLabel;
+  const trimmedSearch = searchValue.trim().toLowerCase();
+  const filteredOptions = trimmedSearch
+    ? options.filter((option) => option.label.toLowerCase().includes(trimmedSearch))
+    : options;
+
+  return (
+    <div className="relative min-w-0 lg:w-64">
+      <button
+        aria-expanded={isOpen}
+        className="flex h-11 w-full items-center justify-between gap-3 border border-line-light bg-white px-4 text-left text-sm text-ink-soft transition hover:border-red focus:outline-none focus:ring-2 focus:ring-red/20"
+        onClick={onToggleOpen}
+        type="button"
+      >
+        <span className="min-w-0">
+          <span className="block text-[10px] font-bold uppercase tracking-wide text-ink-soft">
+            {label}
+          </span>
+          <span className="block truncate font-semibold">{buttonLabel}</span>
+        </span>
+        <FiChevronDown
+          className={`shrink-0 text-ink-soft transition ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {isOpen ? (
+        <div className="absolute right-0 z-30 mt-2 w-full min-w-72 border border-line-light bg-white p-2 shadow-xl shadow-zinc-900/10">
+          <div className="relative mb-2">
+            <FiSearch className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-sm text-ink-soft" />
+            <input
+              aria-label={`Search ${label.toLowerCase()}`}
+              autoComplete="off"
+              autoFocus
+              className="h-9 w-full border border-line-light bg-parchment-alt pl-8 pr-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:bg-white focus:ring-2 focus:ring-red/20"
+              onChange={(event) => onSearchChange(event.target.value)}
+              placeholder={searchPlaceholder}
+              type="text"
+              value={searchValue}
+            />
+          </div>
+
+          <div className="max-h-64 overflow-auto">
+            {filteredOptions.length > 0 ? (
+              filteredOptions.map((option) => (
+                <label
+                  className="flex cursor-pointer items-center gap-2 px-2 py-2 text-sm transition hover:bg-parchment-alt"
+                  key={option.value}
+                >
+                  <input
+                    checked={selectedSet.has(option.value)}
+                    className="size-4 border-line-light text-red focus:ring-red"
+                    onChange={() => onOptionToggle(option.value)}
+                    type="checkbox"
+                    value={option.value}
+                  />
+                  <span className="min-w-0 flex-1 truncate text-ink-soft">{option.label}</span>
+                  <span className="bg-parchment-alt px-1.5 py-0.5 text-[11px] font-semibold text-ink-soft">
+                    {option.count}
+                  </span>
+                </label>
+              ))
+            ) : (
+              <p className="px-2 py-3 text-center text-sm text-ink-soft">{noMatchLabel}</p>
+            )}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 export default function ProductFilterForm({
   brandOptions = [],
+  industryOptions = [],
   productCount,
   query,
   selectedBrands = [],
+  selectedIndustries = [],
   totalCount,
 }) {
   const router = useRouter();
@@ -49,25 +143,23 @@ export default function ProductFilterForm({
   const [search, setSearch] = useState(query);
   const [isBrandOpen, setIsBrandOpen] = useState(false);
   const [brandSearch, setBrandSearch] = useState("");
+  const [isIndustryOpen, setIsIndustryOpen] = useState(false);
+  const [industrySearch, setIndustrySearch] = useState("");
   const [isPending, startTransition] = useTransition();
   const [isNavigating, setIsNavigating] = useState(false);
   const trimmedSearch = search.trim();
   const hasActiveSearch = Boolean(trimmedSearch);
   const hasActiveBrands = selectedBrands.length > 0;
-  const hasActiveFilters = hasActiveSearch || hasActiveBrands;
+  const hasActiveIndustries = selectedIndustries.length > 0;
+  const hasActiveFilters = hasActiveSearch || hasActiveBrands || hasActiveIndustries;
   const selectedBrandSet = new Set(selectedBrands);
   const selectedBrandNames = brandOptions
     .filter((option) => selectedBrandSet.has(option.value))
     .map((option) => option.label);
-  const brandButtonLabel = hasActiveBrands
-    ? `${selectedBrands.length} selected`
-    : "All brands";
-  const trimmedBrandSearch = brandSearch.trim().toLowerCase();
-  const filteredBrandOptions = trimmedBrandSearch
-    ? brandOptions.filter((option) =>
-        option.label.toLowerCase().includes(trimmedBrandSearch)
-      )
-    : brandOptions;
+  const selectedIndustrySet = new Set(selectedIndustries);
+  const selectedIndustryNames = industryOptions
+    .filter((option) => selectedIndustrySet.has(option.value))
+    .map((option) => option.label);
   const isLoading = isPending || isNavigating;
 
   useEffect(() => {
@@ -88,7 +180,7 @@ export default function ProductFilterForm({
 
     startTransition(() => {
       router.replace(
-        getProductsUrl(pathname, searchParams, search, selectedBrands),
+        getProductsUrl(pathname, searchParams, search, selectedBrands, selectedIndustries),
         { scroll: false }
       );
     });
@@ -111,7 +203,21 @@ export default function ProductFilterForm({
     setIsNavigating(true);
 
     startTransition(() => {
-      router.replace(getProductsUrl(pathname, searchParams, search, nextBrands), {
+      router.replace(getProductsUrl(pathname, searchParams, search, nextBrands, selectedIndustries), {
+        scroll: false,
+      });
+    });
+  };
+
+  const handleIndustryToggle = (industry) => {
+    const nextIndustries = selectedIndustrySet.has(industry)
+      ? selectedIndustries.filter((item) => item !== industry)
+      : [...selectedIndustries, industry];
+
+    setIsNavigating(true);
+
+    startTransition(() => {
+      router.replace(getProductsUrl(pathname, searchParams, search, selectedBrands, nextIndustries), {
         scroll: false,
       });
     });
@@ -157,79 +263,47 @@ export default function ProductFilterForm({
         </div>
 
         <div className="flex items-center gap-2 lg:justify-end">
-          <div className="relative min-w-0 lg:w-64">
-            <button
-              aria-expanded={isBrandOpen}
-              className="flex h-11 w-full items-center justify-between gap-3 border border-line-light bg-white px-4 text-left text-sm text-ink-soft transition hover:border-red focus:outline-none focus:ring-2 focus:ring-red/20"
-              onClick={() =>
-                setIsBrandOpen((isOpen) => {
-                  if (isOpen) {
-                    setBrandSearch("");
-                  }
-                  return !isOpen;
-                })
-              }
-              type="button"
-            >
-              <span className="min-w-0">
-                <span className="block text-[10px] font-bold uppercase tracking-wide text-ink-soft">
-                  Brand
-                </span>
-                <span className="block truncate font-semibold">{brandButtonLabel}</span>
-              </span>
-              <FiChevronDown
-                className={`shrink-0 text-ink-soft transition ${isBrandOpen ? "rotate-180" : ""}`}
-              />
-            </button>
+          <FilterDropdown
+            allLabel="All industries"
+            isOpen={isIndustryOpen}
+            label="Industry"
+            noMatchLabel={`No industries match "${industrySearch}"`}
+            onOptionToggle={handleIndustryToggle}
+            onSearchChange={setIndustrySearch}
+            onToggleOpen={() =>
+              setIsIndustryOpen((isOpen) => {
+                if (isOpen) {
+                  setIndustrySearch("");
+                }
+                return !isOpen;
+              })
+            }
+            options={industryOptions}
+            searchPlaceholder="Search industry..."
+            searchValue={industrySearch}
+            selectedValues={selectedIndustries}
+          />
 
-            {isBrandOpen ? (
-              <div className="absolute right-0 z-30 mt-2 w-full min-w-72 border border-line-light bg-white p-2 shadow-xl shadow-zinc-900/10">
-                <div className="relative mb-2">
-                  <FiSearch className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-sm text-ink-soft" />
-                  <input
-                    aria-label="Search brands"
-                    autoComplete="off"
-                    autoFocus
-                    className="h-9 w-full border border-line-light bg-parchment-alt pl-8 pr-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:bg-white focus:ring-2 focus:ring-red/20"
-                    onChange={(event) => setBrandSearch(event.target.value)}
-                    placeholder="Search brand..."
-                    type="text"
-                    value={brandSearch}
-                  />
-                </div>
-
-                <div className="max-h-64 overflow-auto">
-                  {filteredBrandOptions.length > 0 ? (
-                    filteredBrandOptions.map((option) => (
-                      <label
-                        className="flex cursor-pointer items-center gap-2 px-2 py-2 text-sm transition hover:bg-parchment-alt"
-                        key={option.value}
-                      >
-                        <input
-                          checked={selectedBrandSet.has(option.value)}
-                          className="size-4 border-line-light text-red focus:ring-red"
-                          name="brand"
-                          onChange={() => handleBrandToggle(option.value)}
-                          type="checkbox"
-                          value={option.value}
-                        />
-                        <span className="min-w-0 flex-1 truncate text-ink-soft">
-                          {option.label}
-                        </span>
-                        <span className="bg-parchment-alt px-1.5 py-0.5 text-[11px] font-semibold text-ink-soft">
-                          {option.count}
-                        </span>
-                      </label>
-                    ))
-                  ) : (
-                    <p className="px-2 py-3 text-center text-sm text-ink-soft">
-                      No brands match &ldquo;{brandSearch}&rdquo;
-                    </p>
-                  )}
-                </div>
-              </div>
-            ) : null}
-          </div>
+          <FilterDropdown
+            allLabel="All brands"
+            isOpen={isBrandOpen}
+            label="Brand"
+            noMatchLabel={`No brands match "${brandSearch}"`}
+            onOptionToggle={handleBrandToggle}
+            onSearchChange={setBrandSearch}
+            onToggleOpen={() =>
+              setIsBrandOpen((isOpen) => {
+                if (isOpen) {
+                  setBrandSearch("");
+                }
+                return !isOpen;
+              })
+            }
+            options={brandOptions}
+            searchPlaceholder="Search brand..."
+            searchValue={brandSearch}
+            selectedValues={selectedBrands}
+          />
 
           {hasActiveFilters ? (
             <Link
@@ -264,6 +338,14 @@ export default function ProductFilterForm({
               Brand: {" "}
               <span className="font-semibold text-ink">
                 {selectedBrandNames.join(", ")}
+              </span>
+            </span>
+          ) : null}
+          {hasActiveIndustries ? (
+            <span>
+              Industry: {" "}
+              <span className="font-semibold text-ink">
+                {selectedIndustryNames.join(", ")}
               </span>
             </span>
           ) : null}

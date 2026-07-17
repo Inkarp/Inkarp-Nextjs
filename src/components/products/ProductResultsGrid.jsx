@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { FiCode, FiX } from "react-icons/fi";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 
 const INITIAL_VISIBLE_PRODUCTS = 24;
 const LOAD_MORE_COUNT = 24;
+const MAX_VISIBLE_PILLS = 3;
 
 function uniqueValues(values) {
   return [...new Set(values.filter(Boolean))];
@@ -53,9 +55,11 @@ function getProductHref(product) {
   return product.href || `/products/${product.slug}`;
 }
 
-function ProductCard({ product }) {
+function ProductCard({ product, onViewApi }) {
   const productHref = getProductHref(product);
-  const pills = getIndustryPills(product).slice(0, 5);
+  const pills = getIndustryPills(product);
+  const visiblePills = pills.slice(0, MAX_VISIBLE_PILLS);
+  const extraPillCount = pills.length - visiblePills.length;
 
   return (
     <article
@@ -106,27 +110,128 @@ function ProductCard({ product }) {
 
       <p className="mt-1 text-[11px] text-ink-soft">{product.industry}</p>
 
-      {pills.length ? (
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {pills.map((pill, index) => (
+      {visiblePills.length ? (
+        <div className="mt-3 flex flex-wrap gap-1">
+          {visiblePills.map((pill, index) => (
             <span
-              className="border border-line-light bg-parchment-alt px-2 py-0.5 text-[10px] text-ink-soft"
+              className="max-w-[110px] truncate rounded-full border border-line-light bg-parchment-alt px-2 py-0.5 text-[10px] leading-4 text-ink-soft"
               key={`${product.principalSlug}-${product.slug}-pill-${index}`}
+              title={pill}
             >
               {pill}
             </span>
           ))}
+          {extraPillCount > 0 ? (
+            <span className="rounded-full border border-line-light bg-parchment-alt px-2 py-0.5 text-[10px] leading-4 text-ink-soft">
+              +{extraPillCount}
+            </span>
+          ) : null}
         </div>
       ) : null}
 
-      <Link
-        className="mt-auto flex h-10 items-center justify-center border border-red bg-red text-xs font-semibold text-white transition hover:bg-transparent hover:text-red"
-        href={productHref}
-        prefetch={false}
-      >
-        View Details
-      </Link>
+      <div className="mt-auto flex gap-2 pt-4">
+        <Link
+          className="flex h-10 flex-1 items-center justify-center border border-red bg-red text-xs font-semibold text-white transition hover:bg-transparent hover:text-red"
+          href={productHref}
+          prefetch={false}
+        >
+          View Details
+        </Link>
+        {product.apiPath ? (
+          <button
+            aria-label={`View raw API data for ${product.name}`}
+            className="flex h-10 w-10 shrink-0 items-center justify-center border border-line-light bg-white text-ink-soft transition hover:border-red hover:text-red"
+            onClick={() => onViewApi(product)}
+            title="View backend product data"
+            type="button"
+          >
+            <FiCode className="h-4 w-4" />
+          </button>
+        ) : null}
+      </div>
     </article>
+  );
+}
+
+function ProductApiModal({ product, onClose }) {
+  const [state, setState] = useState({ status: "loading", data: null, error: null });
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetch(product.apiPath)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Request failed with status ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((json) => {
+        if (!cancelled) {
+          setState({ status: "loaded", data: json, error: null });
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setState({ status: "error", data: null, error: err.message });
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [product.apiPath]);
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      onClick={onClose}
+      role="presentation"
+    >
+      <div
+        className="flex max-h-[85vh] w-full max-w-2xl flex-col border border-line-light bg-white"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="flex items-center justify-between gap-3 border-b border-line-light px-4 py-3">
+          <div>
+            <p className="text-sm font-semibold text-ink">{product.name}</p>
+            <p className="font-mono text-[11px] text-ink-soft">{product.apiPath}</p>
+          </div>
+          <button
+            aria-label="Close"
+            className="flex h-8 w-8 shrink-0 items-center justify-center border border-line-light text-ink-soft transition hover:border-red hover:text-red"
+            onClick={onClose}
+            type="button"
+          >
+            <FiX className="h-4 w-4" />
+          </button>
+        </div>
+
+        <div className="overflow-auto p-4">
+          {state.status === "loading" ? (
+            <p className="text-sm text-ink-soft">Loading product data…</p>
+          ) : null}
+          {state.status === "error" ? (
+            <p className="text-sm text-red">Failed to load: {state.error}</p>
+          ) : null}
+          {state.status === "loaded" ? (
+            <pre className="whitespace-pre-wrap break-words bg-parchment-alt p-3 text-[11px] leading-5 text-ink">
+              {JSON.stringify(state.data, null, 2)}
+            </pre>
+          ) : null}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -137,6 +242,7 @@ export default function ProductResultsGrid({
   initialVisibleCount = INITIAL_VISIBLE_PRODUCTS,
 }) {
   const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
+  const [apiModalProduct, setApiModalProduct] = useState(null);
 
   useEffect(() => {
     setVisibleCount(initialVisibleCount);
@@ -179,7 +285,11 @@ export default function ProductResultsGrid({
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {visibleProducts.map((product) => (
-          <ProductCard key={`${product.principalSlug}-${product.slug}`} product={product} />
+          <ProductCard
+            key={`${product.principalSlug}-${product.slug}`}
+            onViewApi={setApiModalProduct}
+            product={product}
+          />
         ))}
       </div>
 
@@ -195,6 +305,14 @@ export default function ProductResultsGrid({
             Load more products
           </button>
         </div>
+      ) : null}
+
+      {apiModalProduct ? (
+        <ProductApiModal
+          key={apiModalProduct.apiPath}
+          onClose={() => setApiModalProduct(null)}
+          product={apiModalProduct}
+        />
       ) : null}
     </>
   );

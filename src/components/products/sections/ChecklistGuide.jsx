@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { FiCheck, FiClipboard, FiRefreshCw } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadCaptureForm from './LeadCaptureForm';
 
-export default function ChecklistGuide({ data, sectionId = 'readiness' }) {
+export default function ChecklistGuide({ data, productName, sectionId = 'readiness' }) {
   const items = data?.items ?? [];
   const [selected, setSelected] = useState([]);
 
@@ -92,12 +93,18 @@ export default function ChecklistGuide({ data, sectionId = 'readiness' }) {
               Reset selection
             </button>
 
-            <a
-              className="mt-4 flex h-12 w-full items-center justify-center bg-red px-6 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red"
-              href="#booking"
-            >
-              {data?.ctaLabel ?? 'Check my installation readiness'}
-            </a>
+            {selectedItems.length ? (
+              <LeadCaptureForm
+                className="mt-4 w-full"
+                formType="readiness-checklist"
+                productName={productName}
+                successMessage={(name) =>
+                  `Thank you${name ? `, ${name}` : ''}. We have sent your readiness checklist to our team.`
+                }
+                summary={`Items already in place:\n${selectedItems.map((item) => `- ${item.label}`).join('\n')}`}
+                triggerLabel={data?.ctaLabel ?? 'Check my installation readiness'}
+              />
+            ) : null}
           </div>
         </div>
 

@@ -1,9 +1,9 @@
 'use client';
 import { useMemo, useState } from 'react';
-import { FiCheck, FiMail, FiRefreshCw, FiSettings } from 'react-icons/fi';
+import { FiCheck, FiRefreshCw, FiSettings } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
-import { buildTableEmailBody, openMailto } from './emailUtils';
+import LeadCaptureForm from './LeadCaptureForm';
 
 const STEP_LABEL_HINTS = [
   { match: /workflow|use|application/i, label: 'Workflow' },
@@ -95,20 +95,9 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     window.dispatchEvent(new CustomEvent('product-config-ready'));
   };
 
-  const emailConfiguration = () => {
-    const body = buildTableEmailBody({
-      productName: `${productName} configuration request`,
-      sectionName: 'Configuration Wizard',
-      rows: selectedRows.map((row) => ({
-        label: row.label,
-        value: row.desc ? `${row.value} (${row.desc})` : row.value,
-      })),
-      note: result.ctaNote ?? 'Please confirm availability and current pricing for this setup.',
-    });
-
-    window.dispatchEvent(new CustomEvent('product-config-ready'));
-    openMailto({ subject: `${productName} - my configuration`, body });
-  };
+  const configurationSummary = selectedRows
+    .map((row) => `- ${row.label}: ${row.desc ? `${row.value} (${row.desc})` : row.value}`)
+    .join('\n');
 
   return (
     <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8">
@@ -221,16 +210,17 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                     ))}
                   </div>
                   {result.ctaNote && <p className="mt-4 shrink-0 text-sm leading-6 text-black">{result.ctaNote}</p>}
-                  <div className="mt-5 flex shrink-0 flex-wrap gap-3">
-                    <button
-                      className="inline-flex items-center gap-2 bg-red px-5 py-3 text-sm font-bold text-white transition hover:bg-transparent hover:text-red"
-                      onClick={emailConfiguration}
-                      type="button"
-                    >
-                      <FiMail />
-                      Email this configuration
-                    </button>
-                    <a className="border border-line-light px-5 py-3 text-sm font-bold text-black transition hover:border-red hover:text-red" href="#booking">
+                  <div className="mt-5 flex shrink-0 flex-wrap items-start gap-3">
+                    <LeadCaptureForm
+                      formType="config-wizard"
+                      productName={productName}
+                      successMessage={(name) =>
+                        `Thank you${name ? `, ${name}` : ''}. We have sent your configuration to our team.`
+                      }
+                      summary={configurationSummary}
+                      triggerLabel="Email this configuration"
+                    />
+                    <a className="inline-flex h-11 items-center justify-center border border-line-light px-5 text-sm font-bold text-black transition hover:border-red hover:text-red" href="#booking">
                       {result.ctaLabel ?? 'Request quote'}
                     </a>
                   </div>

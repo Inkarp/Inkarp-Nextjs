@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadCaptureForm from './LeadCaptureForm';
 
 function getResult(results, score) {
   return results.find((item) => score >= item.min && score <= item.max) ?? results[results.length - 1];
@@ -42,7 +43,7 @@ function ScoreRing({ percent }) {
   );
 }
 
-export default function FitQuiz({ data }) {
+export default function FitQuiz({ data, productName }) {
   const { questions = [], results = [], title } = data ?? {};
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -123,9 +124,17 @@ export default function FitQuiz({ data }) {
                 {cleanText(result?.body ?? 'Your answers have been scored. Talk to Inkarp to confirm the best configuration for your workflow.')}
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a className="inline-flex h-12 items-center justify-center bg-red px-8 text-sm font-bold text-white transition hover:bg-transparent hover:text-red" href="#booking">
-                  Get my recommendation
-                </a>
+                <LeadCaptureForm
+                  formType="fit-quiz"
+                  productName={productName}
+                  successMessage={(name) =>
+                    `Thank you${name ? `, ${name}` : ''}. We have sent your quiz result to our team.`
+                  }
+                  summary={`${questions
+                    .map((question, index) => `${index + 1}. ${cleanText(question.text)}\n   -> ${answers[index] ? cleanText(answers[index].text) : 'Not answered'}`)
+                    .join('\n\n')}\n\nResult: ${cleanText(result?.title ?? '')}\n${cleanText(result?.body ?? '')}`}
+                  triggerLabel="Get my recommendation"
+                />
                 <button
                   className="inline-flex h-12 items-center justify-center border border-line-light bg-parchment px-7 text-sm font-semibold text-black transition hover:border-line-light hover:text-black"
                   onClick={reset}

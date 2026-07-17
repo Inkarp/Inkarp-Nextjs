@@ -65,6 +65,7 @@ function toProductCard(product) {
     principalName: product.principalName,
     countryOfOrigin: product.countryOfOrigin,
     href: product.href,
+    apiPath: product.apiPath,
     image: product.image,
     imageAlt: product.imageAlt,
     name: product.name,
@@ -80,12 +81,29 @@ function getParams(searchParams, key) {
   return (Array.isArray(value) ? value : [value]).filter(Boolean);
 }
 
+const INDUSTRY_LABEL_OVERRIDES = {
+  rnd: "R&D",
+};
+
+function formatIndustryLabel(tag) {
+  if (INDUSTRY_LABEL_OVERRIDES[tag]) {
+    return INDUSTRY_LABEL_OVERRIDES[tag];
+  }
+
+  return String(tag)
+    .replace(/[-_]+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
 export default async function ProductsPage({ searchParams }) {
   const params = await searchParams;
   const selectedBrands = getParams(params, "brand");
+  const selectedIndustries = getParams(params, "industry");
   const filters = {
     q: getParam(params, "q"),
     principals: selectedBrands,
+    industries: selectedIndustries,
   };
   const allProducts = getAllProducts();
   const totalProducts = allProducts.length;
@@ -100,6 +118,19 @@ export default async function ProductsPage({ searchParams }) {
     value: principal.slug,
     count: productCountsByBrand.get(principal.slug) ?? 0,
   }));
+  const productCountsByIndustry = allProducts.reduce((counts, product) => {
+    (product.industryTags ?? []).forEach((tag) => {
+      counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    });
+    return counts;
+  }, new Map());
+  const industryOptions = [...productCountsByIndustry.keys()]
+    .sort()
+    .map((tag) => ({
+      label: formatIndustryLabel(tag),
+      value: tag,
+      count: productCountsByIndustry.get(tag),
+    }));
 
   return (
     <main className="min-h-screen bg-white text-ink" data-product-page data-scroll-skip>
@@ -164,11 +195,13 @@ export default async function ProductsPage({ searchParams }) {
 
       <StickyProductSearch>
         <ProductFilterForm
-          key={`${filters.q}-${selectedBrands.join("|")}`}
+          key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}`}
           brandOptions={brandOptions}
+          industryOptions={industryOptions}
           productCount={products.length}
           query={filters.q}
           selectedBrands={selectedBrands}
+          selectedIndustries={selectedIndustries}
           totalCount={totalProducts}
         />
       </StickyProductSearch>

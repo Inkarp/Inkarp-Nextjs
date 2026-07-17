@@ -10,6 +10,7 @@ import SolventGuide from './sections/SolventGuide';
 import ConnectivityPlanner from './sections/ConnectivityPlanner';
 import ChecklistGuide from './sections/ChecklistGuide';
 import ROICalculator from './sections/ROICalculator';
+import UnattendedHoursPlanner from './sections/UnattendedHoursPlanner';
 import ApplicationsExplorer from './sections/ApplicationsExplorer';
 import ConfigWizard from './sections/ConfigWizard';
 import WorkflowScore from './sections/WorkflowScore';
@@ -82,7 +83,7 @@ export default function UniversalProductPage({ product }) {
 
       {/* Suitability checker */}
       {product.suitability && (
-        <SuitabilityChecker data={product.suitability} />
+        <SuitabilityChecker data={product.suitability} productName={product.name} />
       )}
 
       {/* Solvent setup guide */}
@@ -96,7 +97,11 @@ export default function UniversalProductPage({ product }) {
 
       {/* Readiness / requirement checklist */}
       {product.readinessGuide && (
-        <ChecklistGuide data={product.readinessGuide} sectionId={product.readinessGuide.sectionId ?? 'readiness'} />
+        <ChecklistGuide
+          data={product.readinessGuide}
+          productName={product.name}
+          sectionId={product.readinessGuide.sectionId ?? 'readiness'}
+        />
       )}
 
       {/* Connectivity, planner & selector tools - supports either a single
@@ -104,6 +109,10 @@ export default function UniversalProductPage({ product }) {
       {(product.planners ?? (product.connectivityPlanner ? [product.connectivityPlanner] : [])).map((planner, index) => (
         <ConnectivityPlanner key={planner.sectionId ?? index} data={planner} productName={product.name} />
       ))}
+
+      {product.unattendedPlanner && (
+        <UnattendedHoursPlanner data={product.unattendedPlanner} productName={product.name} />
+      )}
 
       {/* ROI calculator */}
       {roiSection && (
@@ -116,9 +125,9 @@ export default function UniversalProductPage({ product }) {
       )}
 
       {/* Configuration wizard */}
-      {/* {product.configWizard && (
+      {product.configWizard && (
         <ConfigWizard data={product.configWizard} productName={product.name} />
-      )} */}
+      )}
 
       {/* Workflow score comparison */}
       {product.workflowScore && (
@@ -132,13 +141,13 @@ export default function UniversalProductPage({ product }) {
 
       {/* Fit quiz */}
       {product.quiz && (
-        <FitQuiz data={product.quiz} />
+        <FitQuiz data={product.quiz} productName={product.name} />
       )}
 
       {/* Glassware guide */}
-      {glasswareSection?.cards?.length > 0 && (
+      {/* {glasswareSection?.cards?.length > 0 && (
         <GlasswareGuide cards={glasswareSection.cards} section={glasswareSection} productName={product.name} />
-      )}
+      )} */}
 
       {/* Vacuum & chiller pairing */}
       {product.pairing && (

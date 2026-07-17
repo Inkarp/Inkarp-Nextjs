@@ -14,9 +14,14 @@ const ICON_MAP = {
 };
 
 function getIndustryProfile(industry) {
+  const bullets = industry.bullets ?? industry.tasks ?? [
+    industry.useCase,
+    industry.consideration ? `Consider: ${industry.consideration}` : undefined,
+  ].filter(Boolean);
+
   return {
-    bullets: industry.bullets ?? industry.tasks ?? [],
-    tags: industry.tags ?? [],
+    bullets,
+    tags: industry.tags ?? [industry.consideration].filter(Boolean),
     metrics: (industry.highlights ?? []).map((item) => ({
       value: item.value,
       label: item.label,
@@ -27,6 +32,7 @@ function getIndustryProfile(industry) {
 
 function getDescription(industry, productName) {
   if (industry.note) return industry.note;
+  if (industry.useCase) return `${industry.name} teams use ${productName ?? 'this product'} for ${industry.useCase.toLowerCase()}.`;
   if (!industry.tasks?.length) return undefined;
   const tasks = industry.tasks.map((task) => task.toLowerCase());
   const lastTask = tasks.length > 1 ? ` and ${tasks.at(-1)}` : '';

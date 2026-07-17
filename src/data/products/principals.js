@@ -623,12 +623,15 @@ export function getProductFilterOptions() {
 export function searchProducts(filters = {}) {
     const query = filters.q?.trim().toLowerCase();
     const selectedPrincipals = toArray(filters.principals ?? filters.principal);
+    const selectedIndustries = toArray(filters.industries);
 
     return getAllProducts().filter((product) => {
         return (
             productMatchesSearch(product, query) &&
             (!selectedPrincipals.length ||
                 selectedPrincipals.includes(product.principalSlug)) &&
+            (!selectedIndustries.length ||
+                (product.industryTags ?? []).some((tag) => selectedIndustries.includes(tag))) &&
             (!filters.country || product.countryOfOrigin === filters.country) &&
             (!filters.industry || product.industry === filters.industry) &&
             (!filters.application ||

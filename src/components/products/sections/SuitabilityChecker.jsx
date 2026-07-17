@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { FiCheck, FiDroplet } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadCaptureForm from './LeadCaptureForm';
 
 function getResult(selections, results) {
   for (const result of results) {
@@ -21,7 +22,7 @@ function normaliseText(value = '') {
     .replaceAll('°C', 'deg C');
 }
 
-export default function SuitabilityChecker({ data }) {
+export default function SuitabilityChecker({ data, productName }) {
   const fields = data?.fields ?? [];
   const results = data?.results ?? [];
   const [selections, setSelections] = useState({});
@@ -45,6 +46,8 @@ export default function SuitabilityChecker({ data }) {
     if (!fields.length) return 0;
     return Math.round((Object.keys(selections).length / fields.length) * 100);
   }, [fields.length, selections]);
+
+  if (!fields.length || !results.length) return null;
 
   return (
     <section id="suitability" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-12 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
@@ -122,12 +125,18 @@ export default function SuitabilityChecker({ data }) {
                     ))}
                   </div>
                 ) : null}
-                <a
-                  className="mt-5 inline-flex h-10 items-center justify-center bg-red px-5 text-sm font-bold text-white transition hover:bg-transparent hover:text-red"
-                  href="#booking"
-                >
-                  Discuss your needs with us
-                </a>
+                <LeadCaptureForm
+                  className="mt-5"
+                  formType="suitability-check"
+                  productName={productName}
+                  successMessage={(name) =>
+                    `Thank you${name ? `, ${name}` : ''}. We have sent your suitability check to our team.`
+                  }
+                  summary={`Selections:\n${fields
+                    .map((field) => `- ${field.label}: ${normaliseText(field.options.find((opt) => opt.val === selections[field.key])?.label ?? selections[field.key])}`)
+                    .join('\n')}\n\nResult: ${normaliseText(result.title)}\n${normaliseText(result.body)}`}
+                  triggerLabel="Discuss your needs with us"
+                />
               </div>
             ) : (
               <div className="mx-auto max-w-sm text-center">

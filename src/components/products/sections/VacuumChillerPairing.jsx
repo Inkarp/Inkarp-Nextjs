@@ -23,6 +23,8 @@ export default function VacuumChillerPairing({ data }) {
   const [solventType, setSolventType] = useState('');
   const [priority, setPriority] = useState('');
 
+  if (!solventTypes.length) return null;
+
   const rec = solventType ? getRecommendation(recommendations, solventType, priority) : null;
 
   return (

@@ -110,6 +110,7 @@ export default async function ProductPage({ params }) {
             <h1 className="max-w-[19ch] text-2xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[32px] lg:text-[34px]">
               {product.name}
             </h1>
+            <div className="mt-3 flex flex-wrap items-center gap-2 bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink-soft">
             <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-red">
               {PRODUCT_DISTRIBUTOR_NOTE}
             </p>
@@ -120,6 +121,7 @@ export default async function ProductPage({ params }) {
                   {pill}
                 </span>
               ))}
+            </div>
             </div>
             <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft sm:text-lg">
               {product.longForm?.heroLead ?? product.overview}

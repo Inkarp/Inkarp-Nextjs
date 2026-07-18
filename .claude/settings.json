@@ -28,7 +28,11 @@
       "Bash(ls src/components/about)",
       "Bash(ls src/components/home)",
       "Bash(node verify-about.js)",
-      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/data/principals/being/products.json','utf8'\\)\\); console.log\\('valid json'\\)\")"
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/data/principals/being/products.json','utf8'\\)\\); console.log\\('valid json'\\)\")",
+      "Bash(curl -s http://localhost:3000/products/hei-plate-mix-n-heat-core-expert-magnetic-stirrer -o /tmp/expert2.html)",
+      "Bash(node -e \"const d=require\\('./src/data/principals/heidolph/overhead-stirrers.json'\\); console.log\\(Array.isArray\\(d\\)?d.length:Object.keys\\(d\\)\\); console.log\\(Array.isArray\\(d\\)? d.map\\(p=>p.slug||p.name\\): Object.keys\\(d\\)\\)\")",
+      "Read(//c/tmp/**)",
+      "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\6d76857e-545f-4d3f-96bc-5bf00c7db0ff\\\\scratchpad\\\\patch.js\")"
     ]
   }
 }

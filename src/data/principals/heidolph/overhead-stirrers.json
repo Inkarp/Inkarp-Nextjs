@@ -31,14 +31,6 @@
           "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-Torque Core with RS232 Overhead Stirrer",
           "distributorNote": "Authorized Distributor & Service Provider in India",
-          "servicePills": [
-            "Authorized Distributor",
-            "Service Provider",
-            "Demo",
-            "Installation",
-            "AMC",
-            "Spare Parts"
-          ],
           "metaTitle": "Hei-Torque Core with RS232 Overhead Stirrer - Authorized Distributor & Service Provider in India | Inkarp | Heidolph",
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Heidolph Hei-Torque Core with RS232 Overhead Stirrer in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
           "metaKeywords": [
@@ -71,6 +63,7 @@
             "Software Motor Monitoring: The motor is monitored in software, and a fault produces an error message.",
             "2.3 kg, the Lightest Hei-TORQUE: The drive can be moved, mounted, and dismantled easily by one person.",
             "Electronic Speed Control to +/-1%: Speed runs from 20 to 2,000 rpm under electronic control.",
+            "Suitable for Continuous Operation: The duty cycle permits continuous operation, and a certificate for continuous operation is available for the Hei-TORQUE range.",
             "RS232 Interface: This configuration includes an RS232 interface."
           ],
           "applications": [
@@ -80,7 +73,8 @@
             "Homogenisation: A driven shaft with the right element homogenises where a stir bar cannot.",
             "Closed Systems: The 2.3 kg drive can be mounted into closed systems and enclosures.",
             "Fume Hood and Awkward Locations: Light enough to install and dismantle single-handed in tight spaces.",
-            "Continuous Stirring: Rated for continuous operation, with a certificate available."
+            "Continuous Stirring: Rated for continuous operation, with a certificate available.",
+            "Dispersing Added Components: The Max button distributes a component quickly into the medium."
           ],
           "technicalSpecs": [
             {
@@ -188,6 +182,14 @@
               "value": "105 W"
             },
             {
+              "label": "Overvoltage Category",
+              "value": "II"
+            },
+            {
+              "label": "Degree of Pollution",
+              "value": "2"
+            },
+            {
               "label": "Operating Temperature",
               "value": "5 deg C to 31 deg C at up to 80% RH; 32 deg C to 40 deg C at up to 50% RH, decreasing linearly"
             },
@@ -210,12 +212,40 @@
               "answer": "No. The Hei-Torque Core with RS232 Overhead Stirrer handles viscosities up to 10,000 mPas or volumes up to 25 litres in water. These are two separate ceilings on the same 65 Ncm drive, not a combined capability."
             },
             {
+              "question": "What viscosity can the Hei-Torque Core with RS232 Overhead Stirrer handle?",
+              "answer": "The Hei-Torque Core with RS232 Overhead Stirrer handles viscosities up to 10,000 mPas, at reduced volume. This is well beyond the point at which a magnetic stir bar decouples and stops turning."
+            },
+            {
               "question": "What is included with the Hei-Torque Core with RS232 Overhead Stirrer?",
               "answer": "The Hei-Torque Core with RS232 Overhead Stirrer is supplied as a drive unit. The stand, boss head, stirring shaft, and stirring element are separate items and are not included."
             },
             {
+              "question": "What shaft diameters fit the Hei-Torque Core with RS232 Overhead Stirrer?",
+              "answer": "The quick-action chuck on the Hei-Torque Core with RS232 Overhead Stirrer accepts stirring shafts from 0.5 mm to 10.5 mm in diameter. It is keyless, so no tool is needed to change a stirring element."
+            },
+            {
+              "question": "What is the Max button on the Hei-Torque Core with RS232 Overhead Stirrer?",
+              "answer": "The Max button on the Hei-Torque Core with RS232 Overhead Stirrer takes the drive to its maximum speed of 2,000 rpm immediately. It is designed for short bursts, such as reslurrying a settled suspension or distributing a component that has just been added to the medium."
+            },
+            {
+              "question": "What happens if the Hei-Torque Core with RS232 Overhead Stirrer is overloaded?",
+              "answer": "The Hei-Torque Core with RS232 Overhead Stirrer has automatic overload cut-out, which stops the motor rather than letting it stall under strain. The motor is also monitored in software, and a fault produces an error message."
+            },
+            {
+              "question": "What does the RS232 interface on the Hei-Torque Core do?",
+              "answer": "This configuration of the Hei-Torque Core includes an RS232 interface, and a version without RS232 is also available. Heidolph does not publish the specific control or data capability the interface provides, so confirm your intended use with Inkarp before purchase."
+            },
+            {
+              "question": "How heavy is the Hei-Torque Core with RS232 Overhead Stirrer?",
+              "answer": "The Hei-Torque Core with RS232 Overhead Stirrer weighs 2.3 kg, which makes it the lightest overhead stirrer Heidolph produces. It can be mounted on a stand or in a closed system and set up or dismantled by one person."
+            },
+            {
               "question": "What is the part number of the Hei-Torque Core with RS232 Overhead Stirrer?",
               "answer": "The part number of the Hei-Torque Core with RS232 Overhead Stirrer is 501-60430-00."
+            },
+            {
+              "question": "What is the price of the Hei-Torque Core with RS232 Overhead Stirrer in India?",
+              "answer": "The price of the Hei-Torque Core with RS232 Overhead Stirrer in India depends on the complete setup, including the stand, boss head, stirring shaft, and stirring element, none of which are included with the drive. Inkarp, the authorized distributor and service provider in India, quotes a working setup once your medium, viscosity, volume, and vessel are confirmed."
             },
             {
               "question": "Who is the authorized distributor of the Hei-Torque Core with RS232 Overhead Stirrer in India?",
@@ -228,12 +258,24 @@
               "label": "Overview"
             },
             {
-              "id": "planning",
-              "label": "Torque Planning"
+              "id": "fit-guide",
+              "label": "Torque Guide"
+            },
+            {
+              "id": "setup-planner",
+              "label": "Setup Configurator"
+            },
+            {
+              "id": "portability-planner",
+              "label": "Portability Planner"
             },
             {
               "id": "comparison",
               "label": "Method Comparison"
+            },
+            {
+              "id": "industries",
+              "label": "Industry Explorer"
             },
             {
               "id": "service",
@@ -291,7 +333,13 @@
                   "The Hei-Torque Core with RS232 Overhead Stirrer is Heidolph's lightest overhead stirrer at 2.3 kg, delivering 65 Ncm of torque across 20 to 2,000 rpm for viscosities up to 10,000 mPas.",
                   "A magnetic stirrer works until the medium gets thick, the volume gets large, or the solids settle. Then it stops working, quietly, and you find out later.",
                   "Torque where magnetic stirring gives up. A stir bar decouples in a viscous medium. A driven shaft does not.",
-                  "The stand, boss head, stirring shaft, and stirring element are NOT included."
+                  "The stand, boss head, stirring shaft, and stirring element are NOT included.",
+                  "The lightest drive in the range. At 2.3 kg it can be carried, mounted on a stand, or fitted into a closed system, and set up by one person in an awkward corner.",
+                  "A chuck you open with your hands. The quick-action chuck needs no key and no tool, which matters on the day you are changing stirring elements between runs.",
+                  "A Max button for the moment you need it. One press takes it to full speed, for reslurrying a suspension or dispersing a component you have just added.",
+                  "It stops before it damages itself. Overload protection cuts the motor out automatically, and software monitoring reports a fault rather than letting the motor labour.",
+                  "It is not a complete instrument on its own. A stand, a shaft, and a stirring element are separate items, and the right ones depend on your vessel and your medium.",
+                  "Confirmed model: Hei-TORQUE Core with RS232, P/N 501-60430-00. A version without the RS232 interface is also available. The chuck accepts shafts from 0.5 to 10.5 mm."
                 ],
                 "cards": [
                   {
@@ -420,6 +468,14 @@
                   {
                     "title": "Stirring Element",
                     "description": "Selected based on viscosity, solids loading, vessel diameter, and mixing objective."
+                  },
+                  {
+                    "title": "Closed System Mounting",
+                    "description": "Not included. The 2.3 kg drive can be mounted into closed systems and enclosures; confirm the interface before ordering."
+                  },
+                  {
+                    "title": "RS232 Cable and Software",
+                    "description": "Not confirmed. Heidolph does not publish the RS232 capability; confirm your intended use with Inkarp before purchase."
                   }
                 ]
               },
@@ -446,6 +502,22 @@
                   {
                     "title": "Stirring Tools Matrix",
                     "description": "Selection support for shaft and stirring element configuration."
+                  },
+                  {
+                    "title": "At a Glance, Hei-TORQUE Range",
+                    "description": "Overview of the full Hei-TORQUE range for comparison."
+                  },
+                  {
+                    "title": "Hei-TORQUE Configuration Tool",
+                    "description": "Selection support for drive, stand, shaft and stirring element."
+                  },
+                  {
+                    "title": "EU Declaration of Conformity",
+                    "description": "Compliance documentation for the Hei-TORQUE range."
+                  },
+                  {
+                    "title": "Safety Guide, Overhead Stirrers",
+                    "description": "Safe operation guidance for overhead stirring equipment."
                   }
                 ]
               }
@@ -465,47 +537,71 @@
             "description": "Use this as a quick guide before confirming the medium, viscosity, volume, and vessel with Inkarp.",
             "columns": [
               {
-                "label": "Hei-TORQUE Core"
-              },
-              {
-                "label": "This model",
+                "label": "Hei-TORQUE Core",
                 "highlight": true
               },
               {
-                "label": "Higher torque models"
+                "label": "Hei-TORQUE Expert range"
+              },
+              {
+                "label": "Hei-TORQUE Ultimate range"
               }
             ],
             "rows": [
               {
-                "feature": "Best fit",
+                "feature": "Maximum Torque",
                 "values": [
-                  "Lightweight overhead stirring",
                   "65 Ncm",
-                  "Higher viscosity or process control needs"
+                  "See product page",
+                  "See product page"
                 ]
               },
               {
-                "feature": "Torque visibility",
+                "feature": "Speed Range",
                 "values": [
-                  "Core display",
-                  "Display of application parameters",
-                  "Advanced monitoring on Ultimate range"
+                  "20 to 2,000 rpm",
+                  "See product page",
+                  "See product page"
                 ]
               },
               {
-                "feature": "Volume headline",
-                "values": [
-                  "25 L in water",
-                  "25 litres in water",
-                  "Model dependent"
-                ]
-              },
-              {
-                "feature": "Viscosity headline",
+                "feature": "Maximum Viscosity",
                 "values": [
                   "10,000 mPas",
-                  "10,000 mPas",
-                  "Up to higher model limits"
+                  "See product page",
+                  "See product page"
+                ]
+              },
+              {
+                "feature": "Maximum Volume, in water",
+                "values": [
+                  "25 litres",
+                  "See product page",
+                  "See product page"
+                ]
+              },
+              {
+                "feature": "Weight",
+                "values": [
+                  "2.3 kg, the lightest in the range",
+                  "See product page",
+                  "See product page"
+                ]
+              },
+              {
+                "feature": "Chuck",
+                "values": [
+                  "Quick-action, keyless, 0.5 to 10.5 mm",
+                  "See product page",
+                  "See product page"
+                ]
+              },
+              {
+                "feature": "Selection Direction",
+                "values": [
+                  "Select when the drive must be light, portable, or mounted in a closed system, and the load sits inside 65 Ncm",
+                  "Select when the load exceeds what the Core can deliver",
+                  "Select when the load, control, or measurement requirement exceeds the Expert"
                 ]
               }
             ],
@@ -658,7 +754,254 @@
               "value": "RS232",
               "label": "Interface, in this configuration"
             }
-          ]
+          ],
+          "planners": [
+            {
+              "sectionId": "fit-guide",
+              "eyebrow": "Viscosity, Volume and Torque Guide",
+              "title": "Will 65 Ncm actually turn what you are stirring?",
+              "description": "This is the only question that matters, and the headline figures do not answer it on their own. The viscosity limit and the volume limit are two different ceilings, not one capability.",
+              "fields": [
+                {
+                  "key": "watch",
+                  "label": "What to watch"
+                },
+                {
+                  "key": "direction",
+                  "label": "Direction"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Aqueous, low viscosity, up to 25 litres",
+                  "watch": "Comfortably inside the envelope",
+                  "direction": "The Core is a direct fit",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Viscous, near 10,000 mPas",
+                  "watch": "The volume you can turn drops sharply",
+                  "direction": "Reduce the volume, or move up the Hei-TORQUE range",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Viscous AND large volume",
+                  "watch": "Both ceilings are being approached at once",
+                  "direction": "65 Ncm will not be enough. Talk to our team",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Settling suspension",
+                  "watch": "Torque demand spikes when reslurrying",
+                  "direction": "Use the Max button, and size the element carefully",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "High solids loading",
+                  "watch": "Torque demand rises with the solids",
+                  "direction": "Confirm your loading with our team",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Shear-sensitive medium",
+                  "watch": "Speed and element type matter more than torque",
+                  "direction": "Select a gentle element and a low speed",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Vessel wider than the element reaches",
+                  "watch": "The medium turns near the shaft and not at the wall",
+                  "direction": "An anchor element, or a different vessel",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Viscosity may increase during the process",
+                  "watch": "The reaction thickens as it proceeds",
+                  "direction": "Buy torque headroom now, not a second drive later",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Medium above 10,000 mPas",
+                  "watch": "Beyond the stated limit",
+                  "direction": "Move up the Hei-TORQUE range",
+                  "cta": "Get Configuration Support"
+                }
+              ]
+            },
+            {
+              "sectionId": "setup-planner",
+              "eyebrow": "Complete Setup and Stand Configurator",
+              "title": "What is still missing from your order?",
+              "description": "The drive is one of four things you need. Work through the rest here, so nothing arrives that cannot be used.",
+              "fields": [
+                {
+                  "key": "choices",
+                  "label": "Options"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Do you already have a stand and boss head?",
+                  "choices": "Yes, and they fit a Hei-TORQUE; Yes, but unsure they fit; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Will the drive be on a stand or in a closed system?",
+                  "choices": "Stand; Closed system or enclosure; Both, it will move",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is your vessel volume?",
+                  "choices": "Under 5 L; 5 to 15 L; 15 to 25 L; Over 25 L",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is your medium?",
+                  "choices": "Aqueous; Medium viscosity; High viscosity; Suspension with solids",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is the vessel height and depth?",
+                  "choices": "Standard beaker; Tall vessel; Deep reactor; Not sure",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Do you already have a stirring shaft?",
+                  "choices": "Yes, within 0.5 to 10.5 mm; Yes, but larger than 10.5 mm; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is the stirring job?",
+                  "choices": "Blending; Suspending solids; Dispersing; Stirring near the wall",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Do you need the RS232 interface?",
+                  "choices": "Yes; No; Not sure what it does",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Will the drive move between locations?",
+                  "choices": "Yes, regularly; Occasionally; No, it stays put",
+                  "cta": "Plan My Setup"
+                }
+              ],
+              "disclaimer": "A working Hei-TORQUE Core installation consists of the drive, a stand and boss head, a stirring shaft within the 0.5 to 10.5 mm chuck range, and a stirring element matched to your medium and your job. Only the drive is supplied. Share your vessel, your medium, and your working volume, and our team will quote the complete setup rather than a drive unit that cannot be used on arrival."
+            },
+            {
+              "sectionId": "portability-planner",
+              "eyebrow": "Portability and Multi-Setup Planner",
+              "title": "How many stirring positions could one drive cover?",
+              "description": "At 2.3 kg and 70 mm wide, this drive moves. If your positions run at different times, you may not need one drive per position. Use your own numbers.",
+              "fields": [
+                {
+                  "key": "why",
+                  "label": "Why it matters"
+                }
+              ],
+              "options": [
+                {
+                  "title": "How many stirring positions you run across the laboratory",
+                  "why": "The number you are currently sizing your purchase against",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether those positions run at the same time or at different times",
+                  "why": "Positions that run at different times can share a drive",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "How many are inside a fume hood or an enclosure",
+                  "why": "The Core can be mounted in closed systems; a heavier drive cannot",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether any position is awkward to reach",
+                  "why": "2.3 kg can be installed and dismantled by one person",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "How often you currently move a stirrer between setups",
+                  "why": "Every move on a heavy drive is a two-person job",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether you already own stands and boss heads",
+                  "why": "A shared drive still needs a stand at each position",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether any position exceeds 65 Ncm, 10,000 mPas, or 25 litres",
+                  "why": "Those positions need a different Hei-TORQUE, not this one",
+                  "cta": "Talk to Product Expert"
+                }
+              ],
+              "disclaimer": "At 2.3 kg the Hei-TORQUE Core is the lightest drive in the Hei-TORQUE range, and it can be mounted on a stand or into a closed system and dismantled by one person. Whether one drive can serve several of your positions depends on whether those positions run at the same time, and whether any of them exceeds 65 Ncm. A stand is still needed at each position. Share your setup and our team will work out how many drives you actually need."
+            }
+          ],
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industries using the Hei-Torque Core with RS232 Overhead Stirrer include pharmaceutical R&D, chemical laboratories, cosmetics, paints and coatings, food and beverage, polymers, and academic research.",
+            "description": "Select your field to see typical use cases and what to consider.",
+            "industries": [
+              {
+                "name": "Pharmaceutical R&D",
+                "icon": "pill",
+                "note": "Suspensions, formulations, and viscous preparations",
+                "bullets": [
+                  "Viscosity against 65 Ncm, element selection, closed system mounting"
+                ]
+              },
+              {
+                "name": "Chemical Laboratories",
+                "icon": "flask",
+                "note": "Reaction stirring in media a stir bar cannot turn",
+                "bullets": [
+                  "Torque headroom if the reaction thickens"
+                ]
+              },
+              {
+                "name": "Cosmetics and Personal Care",
+                "icon": "coffee",
+                "note": "Emulsions, creams, and gels",
+                "bullets": [
+                  "High viscosity at reduced volume, element type"
+                ]
+              },
+              {
+                "name": "Paints, Coatings and Inks",
+                "icon": "droplet",
+                "note": "Dispersing pigments and solids",
+                "bullets": [
+                  "Dissolver element, solids loading, Max button"
+                ]
+              },
+              {
+                "name": "Food and Beverage",
+                "icon": "coffee",
+                "note": "Viscous preparations and suspensions",
+                "bullets": [
+                  "Cleanability, shaft material, volume"
+                ]
+              },
+              {
+                "name": "Polymers and Materials",
+                "icon": "flask",
+                "note": "Viscous solutions and slurries",
+                "bullets": [
+                  "Viscosity may exceed 10,000 mPas; check before ordering"
+                ]
+              },
+              {
+                "name": "Academic Research",
+                "icon": "school",
+                "note": "Shared drives across several benches",
+                "bullets": [
+                  "2.3 kg portability, stand at each position"
+                ]
+              }
+            ]
+          }
         },
         {
           "name": "Hei-Torque Expert-100 Overhead Stirrer",
@@ -667,14 +1010,6 @@
           "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-Torque Expert-100 Overhead Stirrer",
           "distributorNote": "Authorized Distributor & Service Provider in India",
-          "servicePills": [
-            "Authorized Distributor",
-            "Service Provider",
-            "Demo",
-            "Installation",
-            "AMC",
-            "Spare Parts"
-          ],
           "metaTitle": "Hei-Torque Expert-100 Overhead Stirrer - Authorized Distributor & Service Provider in India | Inkarp | Heidolph",
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Heidolph Hei-Torque Expert-100 Overhead Stirrer in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
           "metaKeywords": [
@@ -1861,14 +2196,6 @@
           "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-Torque Expert-200 Overhead Stirrer",
           "distributorNote": "Authorized Distributor & Service Provider in India",
-          "servicePills": [
-            "Authorized Distributor",
-            "Service Provider",
-            "Demo",
-            "Installation",
-            "AMC",
-            "Spare Parts"
-          ],
           "metaTitle": "Hei-Torque Expert-200 Overhead Stirrer - Authorized Distributor & Service Provider in India | Inkarp | Heidolph",
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Heidolph Hei-Torque Expert-200 Overhead Stirrer in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
           "metaKeywords": [
@@ -3047,6 +3374,2428 @@
                 "note": "Thick preparations and pastes",
                 "bullets": [
                   "Cleanability, shaft material, volume against viscosity"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "Hei-Torque Expert-400 Overhead Stirrer",
+          "slug": "hei-torque-expert-400-overhead-stirrer",
+          "image": "/assets/images/productImages/heidolph/hei-torque-expert-400-overhead-stirrer.webp",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
+          "imageAlt": "Heidolph Hei-Torque Expert-400 Overhead Stirrer",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "metaTitle": "Hei-Torque Expert-400 Overhead Stirrer - Authorized Distributor & Service Provider in India | Inkarp | Heidolph",
+          "metaDescription": "Inkarp is the authorized distributor & service provider for the Heidolph Hei-Torque Expert-400 Overhead Stirrer in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+          "metaKeywords": [
+            "Hei-Torque Expert-400 Overhead Stirrer",
+            "Hei-Torque Expert-400 Overhead Stirrer India",
+            "Hei-Torque Expert-400 Overhead Stirrer price in India",
+            "Hei-Torque Expert-400 Overhead Stirrer distributor India",
+            "Heidolph Overhead Stirrers",
+            "Heidolph distributor India",
+            "Heidolph authorized distributor",
+            "Overhead Stirrers India",
+            "Overhead Stirrers distributor and service provider in India",
+            "overhead mixer",
+            "mechanical stirrer",
+            "high viscosity stirrer",
+            "400 Ncm overhead stirrer",
+            "two gear overhead stirrer",
+            "250000 mPas overhead stirrer",
+            "100 litre overhead stirrer",
+            "Heidolph India",
+            "Inkarp"
+          ],
+          "overview": "The Hei-Torque Expert-400 Overhead Stirrer is the top of the Expert range, with a two-gear drive delivering 400 Ncm, for viscosities to 250,000 mPas and volumes to 100 litres in water.\nThe two lower Experts stall at the same 50 litre volume no matter how much torque you add. This one breaks that limit, because it does not just add torque. It adds a gearbox.\nThe only Expert with two gears. Gear I trades speed for torque and delivers full power below 400 rpm. Gear II opens up to 2,000 rpm for thinner media.\nThe stand, boss head, stirring shaft, and stirring element are NOT included.",
+          "features": [
+            "Two-Gear Transmission: The Expert 400 is the only model in the Expert range with two gears. Gear I concentrates the drive's power in the speed range up to 400 rpm, which is where highly viscous media must be mixed. Gear II runs up to 2,000 rpm for lighter work. One drive covers both regimes, which a single-gear stirrer cannot.",
+            "400 Ncm of Torque: Torque, not speed, decides whether an overhead stirrer can do your job. At 400 Ncm this is the most powerful drive in the Expert range, built for media that stall everything below it.",
+            "Viscosity to 250,000 mPas: The drive handles media up to 250,000 mPas, more than double the Expert 200. This is the territory of stiff pastes, heavy adhesives, and loaded slurries that behave more like solids than liquids.",
+            "Volume to 100 Litres: The maximum volume is 100 litres in water, double the two lower Experts. This is the only model in the Expert range that raises the volume ceiling, not just the viscosity ceiling.",
+            "Torque Trend Display: A bar indicator keeps the delivered torque visible for the whole run, so changes in the medium can be tracked, the speed adjusted in response, and the peak torque monitored. At 400 Ncm, watching the headroom matters.",
+            "Safety Start and Stop Touch Function: Starting or stopping is a swipe along the control panel. It works reliably through gloves, and it cannot be triggered accidentally by a knock, a sleeve, or a passing hand.",
+            "Quick-Action Chuck with Safety Ring: The chuck opens and closes by hand with no tools, and the safety ring holds the stirring tool securely. At 400 Ncm, a tool that slips in the chuck is a serious hazard, and the safety ring is there to prevent it.",
+            "2.4 Inch Display: Application parameters are set and the process controlled from a 2.4 inch display, including the torque trend bar and the gear selection.",
+            "Built for Fume Hoods and Reactor Superstructures: At IP54 and under 50 dB(A), the drive is sealed and quiet enough to work inside a fume hood, and it is rated as a drive for reactor superstructures.",
+            "Automatic Overload Cut-Out with Display: If the load exceeds what the drive can deliver, the motor cuts out automatically and the display tells you why.",
+            "KTY Motor Temperature Monitoring: The motor temperature is monitored directly, which protects the drive during long runs in the demanding media this model is built for.",
+            "Suitable for Continuous Operation: The duty cycle permits continuous operation, and a certificate for continuous operation is available for the Hei-TORQUE range."
+          ],
+          "applications": [
+            "Very High-Viscosity Media: 400 Ncm drives a shaft through media up to 250,000 mPas.",
+            "Stiff Pastes and Adhesives: Gear I delivers full torque at the low speeds these media require.",
+            "Large-Volume Mixing: Up to 100 litres in water, double the lower Experts.",
+            "Loaded Slurries: High solids loading demands both torque and low-speed control.",
+            "Monitored Reactions: The torque trend display shows the medium changing as it happens.",
+            "Low-Speed High-Torque Mixing: Gear I is built specifically for this regime.",
+            "Fume Hood Work: IP54 and under 50 dB(A), sealed and quiet enough for enclosed working.",
+            "Reactor Superstructures: Rated as a drive for reactor assemblies.",
+            "Continuous Stirring: Rated for continuous operation, with a certificate available."
+          ],
+          "technicalSpecs": [
+            {
+              "label": "Product Name",
+              "value": "Hei-TORQUE Expert 400"
+            },
+            {
+              "label": "Product Page Name",
+              "value": "Hei-Torque Expert-400 Overhead Stirrer"
+            },
+            {
+              "label": "Part Number",
+              "value": "501-64010-00"
+            },
+            {
+              "label": "Category",
+              "value": "Overhead Stirrers"
+            },
+            {
+              "label": "Maximum Torque",
+              "value": "400 Ncm"
+            },
+            {
+              "label": "Number of Gear Stages",
+              "value": "2"
+            },
+            {
+              "label": "Speed Range, Gear I",
+              "value": "10 to 400 rpm"
+            },
+            {
+              "label": "Speed Range, Gear II",
+              "value": "20 to 2,000 rpm"
+            },
+            {
+              "label": "Speed Accuracy",
+              "value": "+/-1%"
+            },
+            {
+              "label": "Speed Control",
+              "value": "Electronic"
+            },
+            {
+              "label": "Rotation",
+              "value": "Clockwise"
+            },
+            {
+              "label": "Maximum Viscosity",
+              "value": "250,000 mPas"
+            },
+            {
+              "label": "Maximum Volume",
+              "value": "100 litres, measured in water"
+            },
+            {
+              "label": "Stirrer Shaft Diameter",
+              "value": "2.5 to 10.5 mm"
+            },
+            {
+              "label": "Chuck",
+              "value": "Quick-action, with safety ring"
+            },
+            {
+              "label": "Display",
+              "value": "2.4 inch, with torque trend bar"
+            },
+            {
+              "label": "Torque Monitoring",
+              "value": "Live torque trend bar indicator"
+            },
+            {
+              "label": "Start and Stop",
+              "value": "Safety touch function, swipe, glove-compatible"
+            },
+            {
+              "label": "Drive",
+              "value": "EC motor"
+            },
+            {
+              "label": "Motor Protection",
+              "value": "KTY temperature monitoring"
+            },
+            {
+              "label": "Overload Protection",
+              "value": "Automatic cut-out with display"
+            },
+            {
+              "label": "Permissible Duty Cycle",
+              "value": "Suitable for continuous operation"
+            },
+            {
+              "label": "Dimensions, W x H x D",
+              "value": "93 x 350 x 247 mm"
+            },
+            {
+              "label": "Weight",
+              "value": "5.3 kg"
+            },
+            {
+              "label": "Protection Class, EN 60529",
+              "value": "IP54"
+            },
+            {
+              "label": "Protection Class",
+              "value": "I, IEC 61140"
+            },
+            {
+              "label": "Acoustic Pressure",
+              "value": "Less than 50 dB(A), based on IEC 61010"
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "100 to 240 V AC, 50/60 Hz"
+            },
+            {
+              "label": "Power Input",
+              "value": "150 W"
+            },
+            {
+              "label": "Overvoltage Category",
+              "value": "II"
+            },
+            {
+              "label": "Degree of Pollution",
+              "value": "2"
+            },
+            {
+              "label": "Operating Temperature",
+              "value": "5 deg C to 31 deg C at up to 80% RH; 32 deg C to 40 deg C at up to 50% RH, decreasing linearly"
+            },
+            {
+              "label": "Installation Altitude",
+              "value": "Up to 2,000 m above sea level"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "What is the Hei-Torque Expert-400 Overhead Stirrer used for?",
+              "answer": "The Hei-Torque Expert-400 Overhead Stirrer is Heidolph's most powerful Expert overhead stirrer, used for very high-viscosity media, large volumes, and low-speed high-torque mixing. It delivers 400 Ncm through a two-gear drive, for viscosities up to 250,000 mPas or volumes up to 100 litres in water."
+            },
+            {
+              "question": "What is the maximum torque of the Hei-Torque Expert-400 Overhead Stirrer?",
+              "answer": "The maximum torque of the Hei-Torque Expert-400 Overhead Stirrer is 400 Ncm, the highest in the Hei-TORQUE Expert range. Torque, rather than speed, determines whether an overhead stirrer can turn a given medium."
+            },
+            {
+              "question": "What is the two-gear design on the Hei-Torque Expert-400 Overhead Stirrer?",
+              "answer": "The Hei-Torque Expert-400 Overhead Stirrer is the only Expert model with a two-gear drive. Gear I runs from 10 to 400 rpm and concentrates the full torque at low speed, where highly viscous media must be stirred. Gear II runs from 20 to 2,000 rpm for thinner media."
+            },
+            {
+              "question": "What is the difference between the Hei-Torque Expert-200 and the Expert-400?",
+              "answer": "The Hei-Torque Expert-400 delivers 400 Ncm against the Expert-200's 200 Ncm, reaches 250,000 mPas against 100,000 mPas, and 100 litres against 50 litres in water. It is also the only Expert with a two-gear drive. Unlike the step from the 100 to the 200, the Expert-400 raises both the viscosity ceiling and the volume ceiling."
+            },
+            {
+              "question": "Can the Hei-Torque Expert-400 Overhead Stirrer handle larger volumes than the other Experts?",
+              "answer": "Yes. The Hei-Torque Expert-400 Overhead Stirrer reaches 100 litres in water, double the 50 litre ceiling of the Expert-100 and Expert-200. It is the only model in the Expert range that raises the volume ceiling."
+            },
+            {
+              "question": "Can the Hei-Torque Expert-400 Overhead Stirrer stir 100 litres of a viscous medium?",
+              "answer": "No. The Hei-Torque Expert-400 Overhead Stirrer handles viscosities up to 250,000 mPas or volumes up to 100 litres in water. These are two separate ceilings on the same 400 Ncm drive, not a combined capability. As viscosity rises, the volume the drive can turn falls."
+            },
+            {
+              "question": "What viscosity can the Hei-Torque Expert-400 Overhead Stirrer handle?",
+              "answer": "The Hei-Torque Expert-400 Overhead Stirrer handles viscosities up to 250,000 mPas, at reduced volume. That covers stiff pastes, heavy adhesives, and loaded slurries."
+            },
+            {
+              "question": "What is the torque trend display on the Hei-Torque Expert-400 Overhead Stirrer?",
+              "answer": "The torque trend display on the Hei-Torque Expert-400 Overhead Stirrer is a bar indicator that keeps the delivered torque visible throughout the run. Changes in the medium can be tracked as they happen, the stirring speed adjusted in response, and the peak torque monitored reliably."
+            },
+            {
+              "question": "What shaft diameters fit the Hei-Torque Expert-400 Overhead Stirrer?",
+              "answer": "The quick-action chuck on the Hei-Torque Expert-400 Overhead Stirrer accepts stirring shafts from 2.5 mm to 10.5 mm, and has a safety ring. At 400 Ncm the shaft must also be rated for the torque."
+            },
+            {
+              "question": "Can the Hei-Torque Expert-400 Overhead Stirrer be used in a fume hood?",
+              "answer": "Yes. The Hei-Torque Expert-400 Overhead Stirrer carries IP54 protection and operates below 50 dB(A), and Heidolph rates it for use in fume hoods and as a drive for reactor superstructures."
+            },
+            {
+              "question": "What is included with the Hei-Torque Expert-400 Overhead Stirrer?",
+              "answer": "The Hei-Torque Expert-400 Overhead Stirrer is supplied as a drive unit. The stand, boss head, stirring shaft, and stirring element are separate items and are not included. At 400 Ncm the stand, boss head, and shaft must all be rated for the reaction torque, so Inkarp quotes a complete working setup rated for the load."
+            },
+            {
+              "question": "What is the part number of the Hei-Torque Expert-400 Overhead Stirrer?",
+              "answer": "The part number of the Hei-Torque Expert-400 Overhead Stirrer is 501-64010-00. Inkarp is the authorized distributor for this Heidolph configuration in India."
+            },
+            {
+              "question": "What is the price of the Hei-Torque Expert-400 Overhead Stirrer in India?",
+              "answer": "The price of the Hei-Torque Expert-400 Overhead Stirrer in India depends on the complete setup, including a stand, boss head, shaft, and stirring element rated for the torque, none of which are included with the drive. Inkarp, the authorized distributor and service provider in India, quotes a working setup once your medium, viscosity, volume, and vessel are confirmed."
+            },
+            {
+              "question": "Who is the authorized distributor of the Hei-Torque Expert-400 Overhead Stirrer in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Heidolph Hei-Torque Expert-400 Overhead Stirrer in India. Inkarp supports torque assessment, heavy-duty setup quotation, demonstration, installation, training, spare parts, and AMC across its branch network."
+            }
+          ],
+          "inPageNav": [
+            {
+              "id": "overview",
+              "label": "Product Information"
+            },
+            {
+              "id": "fit-guide",
+              "label": "Torque Guide"
+            },
+            {
+              "id": "setup-planner",
+              "label": "Setup Configurator"
+            },
+            {
+              "id": "gear-planner",
+              "label": "Gear Selection Planner"
+            },
+            {
+              "id": "comparison",
+              "label": "Method Comparison"
+            },
+            {
+              "id": "industries",
+              "label": "Industry Explorer"
+            },
+            {
+              "id": "service",
+              "label": "Service"
+            },
+            {
+              "id": "booking",
+              "label": "Request Quote"
+            }
+          ],
+          "longForm": {
+            "heroLead": "The only Expert with a gearbox, and the only one that lifts both ceilings at once: 250,000 mPas and 100 litres. The Heidolph Hei-TORQUE Expert 400 is the top of the Expert range and the only one built with a two-gear transmission. It delivers 400 Ncm of torque, for viscosities up to 250,000 mPas or volumes up to 100 litres in water.",
+            "stats": [
+              {
+                "value": "400 Ncm",
+                "label": "Maximum torque"
+              },
+              {
+                "value": "Two gears",
+                "label": "Gear I: 10 to 400 rpm; Gear II: 20 to 2,000 rpm"
+              },
+              {
+                "value": "250,000 mPas",
+                "label": "Maximum viscosity"
+              },
+              {
+                "value": "100 L",
+                "label": "Maximum volume, measured in water"
+              },
+              {
+                "value": "Torque trend display",
+                "label": "Live bar indicator of delivered torque"
+              },
+              {
+                "value": "2.5 to 10.5 mm",
+                "label": "Shaft diameter, quick chuck with safety ring"
+              },
+              {
+                "value": "IP54",
+                "label": "Protection class, EN 60529"
+              },
+              {
+                "value": "Less than 50 dB(A)",
+                "label": "Acoustic pressure"
+              },
+              {
+                "value": "Automatic cut-out with display",
+                "label": "Overload protection"
+              },
+              {
+                "value": "5.3 kg",
+                "label": "Weight"
+              }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product information",
+                "title": "Hei-Torque Expert-400 Overhead Stirrer at a Glance",
+                "subheading": "Two-gear drive, torque ceiling, and required setup.",
+                "description": "Everything you need to evaluate the Expert 400: why it has a gearbox, what 400 Ncm reaches, what the drive does not include, technical specifications, documentation, and Inkarp support.",
+                "body": [
+                  "The Hei-Torque Expert-400 Overhead Stirrer is the top of the Expert range, with a two-gear drive delivering 400 Ncm, for viscosities to 250,000 mPas and volumes to 100 litres in water.",
+                  "The two lower Experts stall at the same 50 litre volume no matter how much torque you add. This one breaks that limit, because it does not just add torque. It adds a gearbox.",
+                  "The only Expert with two gears. Gear I trades speed for torque and delivers full power below 400 rpm. Gear II opens up to 2,000 rpm for thinner media.",
+                  "It lifts both ceilings. Unlike the step from the 100 to the 200, this model raises viscosity and volume together, to 250,000 mPas and 100 litres.",
+                  "Built for the low-speed grind. Very viscous media have to be stirred slowly, and Gear I is where the torque lives to do it.",
+                  "You can see the load. The torque trend bar shows what the medium is doing throughout the run.",
+                  "Start and stop with a swipe. The touch function works through gloves and cannot be triggered by accident.",
+                  "Built for the fume hood. IP54, quiet, and rated as a drive for reactor superstructures.",
+                  "Still not a complete instrument. The stand, the shaft, and the stirring element are separate items, and at 400 Ncm the stand is a serious one.",
+                  "Confirmed model: Hei-TORQUE Expert 400, P/N 501-64010-00. The same range offers 100 Ncm and 200 Ncm single-gear versions. The stand, boss head, stirring shaft, and stirring element are NOT included. The chuck accepts shafts from 2.5 to 10.5 mm.",
+                  "Product expert note Tell our team your medium, your viscosity, your volume, and your vessel, and we will quote a working setup rated for the torque."
+                ],
+                "cards": [
+                  {
+                    "title": "400 Ncm",
+                    "description": "Maximum torque, the highest in the Expert range"
+                  },
+                  {
+                    "title": "250,000 mPas",
+                    "description": "Maximum viscosity, at reduced volume"
+                  },
+                  {
+                    "title": "100 L",
+                    "description": "Maximum volume, measured in water, double the lower Experts"
+                  },
+                  {
+                    "title": "Two gears",
+                    "description": "Gear I for low-speed torque; Gear II for speed to 2,000 rpm"
+                  }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key features of the Hei-Torque Expert-400 Overhead Stirrer",
+                "body": [
+                  "The key features of the Hei-Torque Expert-400 Overhead Stirrer include a two-gear transmission, 400 Ncm of torque, a live torque trend display, and a safety touch start."
+                ]
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications for the Hei-Torque Expert-400 Overhead Stirrer",
+                "body": [
+                  "The applications of the Hei-Torque Expert-400 Overhead Stirrer include very high-viscosity media, large-volume mixing, and low-speed high-torque work."
+                ]
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specs",
+                "title": "Technical specifications of the Hei-Torque Expert-400 Overhead Stirrer",
+                "body": [
+                  "The technical specifications of the Hei-Torque Expert-400 Overhead Stirrer include 400 Ncm torque, a two-gear drive, 250,000 mPas viscosity, and 100 litres in water."
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Torque planning",
+                "title": "Torque, Viscosity and Volume Planning",
+                "body": [
+                  "Torque, viscosity and volume planning sets out what the Expert 400's two-gear drive delivers, and why the gearbox is what lifts both ceilings.",
+                  "The Expert 400 reaches 250,000 mPas and 100 litres in water, the first drive in the range to raise the volume ceiling as well as the viscosity ceiling. The reason is Gear I, which concentrates the full 400 Ncm below 400 rpm, where a stiff medium has to be turned slowly. Gear II opens the range up to 2,000 rpm for lighter work.",
+                  "The viscosity and volume ceilings mark the ends of one envelope; neither holds while the other is at maximum.",
+                  "Product expert note Give our team your medium, its viscosity, your working volume, and your vessel diameter, and we will confirm which gear your process runs in and whether 400 Ncm is enough."
+                ],
+                "metrics": [
+                  {
+                    "value": "400 Ncm",
+                    "label": "Maximum torque"
+                  },
+                  {
+                    "value": "Two gears",
+                    "label": "Gear I: 10 to 400 rpm; Gear II: 20 to 2,000 rpm"
+                  },
+                  {
+                    "value": "250,000 mPas",
+                    "label": "Maximum viscosity"
+                  },
+                  {
+                    "value": "100 L",
+                    "label": "Maximum volume, measured in water"
+                  },
+                  {
+                    "value": "Torque trend display",
+                    "label": "Live bar indicator of delivered torque"
+                  },
+                  {
+                    "value": "2.5 to 10.5 mm",
+                    "label": "Shaft diameter, quick chuck with safety ring"
+                  },
+                  {
+                    "value": "IP54",
+                    "label": "Protection class, EN 60529"
+                  },
+                  {
+                    "value": "Less than 50 dB(A)",
+                    "label": "Acoustic pressure"
+                  },
+                  {
+                    "value": "Automatic cut-out with display",
+                    "label": "Overload protection"
+                  },
+                  {
+                    "value": "5.3 kg",
+                    "label": "Weight"
+                  }
+                ],
+                "utilityChecklist": [
+                  {
+                    "label": "Maximum torque",
+                    "value": "400 Ncm - The drive's absolute ceiling"
+                  },
+                  {
+                    "label": "Maximum viscosity",
+                    "value": "250,000 mPas - At reduced volume"
+                  },
+                  {
+                    "label": "Maximum volume",
+                    "value": "100 litres - In water, at low viscosity"
+                  },
+                  {
+                    "label": "Speed, Gear I",
+                    "value": "10 to 400 rpm - Full torque, for viscous media"
+                  },
+                  {
+                    "label": "Speed, Gear II",
+                    "value": "20 to 2,000 rpm - For thinner media"
+                  }
+                ],
+                "cards": [
+                  {
+                    "title": "Viscosity of the medium",
+                    "description": "Rises steeply. Usually the binding constraint"
+                  },
+                  {
+                    "title": "Volume in the vessel",
+                    "description": "Rises with the mass being moved"
+                  },
+                  {
+                    "title": "Impeller diameter",
+                    "description": "Rises sharply"
+                  },
+                  {
+                    "title": "Impeller type",
+                    "description": "An anchor or paddle demands more than a propeller at the same speed"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Rises with rpm; Gear I keeps torque high at low speed"
+                  },
+                  {
+                    "title": "Solids loading",
+                    "description": "Rises, and rises further when solids have settled"
+                  },
+                  {
+                    "title": "A reaction that thickens",
+                    "description": "Rises during the run. This is what the trend display is for"
+                  }
+                ],
+                "disclaimer": "The 250,000 mPas and the 100 litres are two separate ceilings, not a combined capability."
+              },
+              {
+                "key": "config",
+                "eyebrow": "Complete Setup",
+                "title": "Complete Setup: Drive, Stand, Shaft and Element",
+                "body": [
+                  "A complete Hei-Torque Expert-400 installation requires a drive, a heavy-duty stand and boss head, a shaft, and a stirring element.",
+                  "The drive on its own cannot stir anything. It is a motor with a chuck. Below is what a working installation actually consists of.",
+                  "A safety statement specific to this model. At 400 Ncm the reaction force is the highest in the Expert range. An under-rated stand, boss head, or shaft is not a performance compromise, it is a hazard. The whole assembly must be rated for the torque, and the vessel must be secured. Our team specifies the stand against the torque, not just the vessel size.",
+                  "Configuration note Inkarp quotes a complete working setup rated for the torque, not a drive unit in isolation."
+                ],
+                "cards": [
+                  {
+                    "title": "Drive Unit",
+                    "description": "Included, P/N 501-64010-00",
+                    "items": [
+                      "Hei-TORQUE Expert 400"
+                    ]
+                  },
+                  {
+                    "title": "Stand",
+                    "description": "Not included",
+                    "items": [
+                      "Must be rated for 400 Ncm. This is the highest reaction torque in the Expert range"
+                    ]
+                  },
+                  {
+                    "title": "Boss Head or Clamp",
+                    "description": "Not included",
+                    "items": [
+                      "Must hold securely against 400 Ncm. Not a light-duty item"
+                    ]
+                  },
+                  {
+                    "title": "Stirring Shaft",
+                    "description": "Not included",
+                    "items": [
+                      "Diameter must fall within the 2.5 to 10.5 mm chuck range and be rated for the torque"
+                    ]
+                  },
+                  {
+                    "title": "Stirring Element",
+                    "description": "Not included",
+                    "items": [
+                      "Propeller, anchor, paddle, turbine or dissolver, by medium and job"
+                    ]
+                  },
+                  {
+                    "title": "Reactor Superstructure Mounting",
+                    "description": "Not included",
+                    "items": [
+                      "The drive is rated for this. Confirm the interface"
+                    ]
+                  },
+                  {
+                    "title": "Blending low-viscosity liquids",
+                    "description": "Propeller"
+                  },
+                  {
+                    "title": "Suspending or reslurrying solids",
+                    "description": "Propeller or turbine"
+                  },
+                  {
+                    "title": "Stirring close to the wall in a viscous medium",
+                    "description": "Anchor"
+                  },
+                  {
+                    "title": "General mixing in a medium-viscosity medium",
+                    "description": "Paddle"
+                  },
+                  {
+                    "title": "Dispersing",
+                    "description": "Dissolver disc"
+                  },
+                  {
+                    "title": "Stiff pastes at low speed",
+                    "description": "Anchor or paddle, in Gear I"
+                  },
+                  {
+                    "title": "Expert 100 Ncm",
+                    "description": "Viscosity to 60,000 mPas, volume to 50 litres in water, single gear"
+                  },
+                  {
+                    "title": "Expert 200 Ncm",
+                    "description": "Viscosity to 100,000 mPas, volume to 50 litres in water, single gear"
+                  },
+                  {
+                    "title": "Expert 400 Ncm",
+                    "description": "This page. Viscosity to 250,000 mPas, volume to 100 litres in water, two gears"
+                  }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "body": [
+                  "Documentation for the Hei-Torque Expert-400 Overhead Stirrer includes the data sheet, operating instructions, and stirring tools matrix."
+                ],
+                "cards": [
+                  {
+                    "title": "Technical Data Sheet, Hei-TORQUE Expert 400",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Operating Instructions, Hei-TORQUE Expert and Ultimate",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "At a Glance, Hei-TORQUE Range",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Hei-TORQUE Configuration Tool",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Matrix, Stirring Tools",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Certificate for Continuous Operation, Hei-TORQUE",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "EU Declaration of Conformity, Hei-TORQUE",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Safety Guide, Overhead Stirrers",
+                    "description": "Available on request"
+                  }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Request Quote",
+              "title": "Get the Hei-Torque Expert-400 Overhead Stirrer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Price, demonstration, installation, AMC, and spare parts. The Heidolph Hei-TORQUE Expert 400 is the only Expert with a two-gear drive, delivering 400 Ncm to 250,000 mPas and up to 100 litres in water, with the torque concentrated where a viscous medium needs it. Tell us your medium, your viscosity, your volume, and your vessel, and Inkarp will quote the drive, a stand rated for the torque, the shaft, and the stirring element together.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          },
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Compare the Hei-Torque Expert-400 with the Expert 200, the Expert 100, and the Hei-TORQUE Core.",
+            "description": "Compare the Hei-Torque Expert-400 with the Expert 200, the Expert 100, and the Hei-TORQUE Core.",
+            "columns": [
+              {
+                "label": "Expert 400",
+                "highlight": true
+              },
+              {
+                "label": "Expert 200"
+              },
+              {
+                "label": "Expert 100"
+              },
+              {
+                "label": "Hei-TORQUE Core"
+              }
+            ],
+            "rows": [
+              {
+                "feature": "Maximum Torque",
+                "values": [
+                  "400 Ncm",
+                  "200 Ncm",
+                  "100 Ncm",
+                  "65 Ncm"
+                ]
+              },
+              {
+                "feature": "Number of Gears",
+                "values": [
+                  "2",
+                  "1",
+                  "1",
+                  "1"
+                ]
+              },
+              {
+                "feature": "Speed Range",
+                "values": [
+                  "Gear I 10 to 400; Gear II 20 to 2,000 rpm",
+                  "10 to 2,000 rpm",
+                  "10 to 2,000 rpm",
+                  "20 to 2,000 rpm"
+                ]
+              },
+              {
+                "feature": "Maximum Viscosity",
+                "values": [
+                  "250,000 mPas",
+                  "100,000 mPas",
+                  "60,000 mPas",
+                  "10,000 mPas"
+                ]
+              },
+              {
+                "feature": "Maximum Volume, in water",
+                "values": [
+                  "100 litres",
+                  "50 litres",
+                  "50 litres",
+                  "25 litres"
+                ]
+              },
+              {
+                "feature": "Torque Trend Display",
+                "values": [
+                  "Yes",
+                  "Yes",
+                  "Yes",
+                  "No"
+                ]
+              },
+              {
+                "feature": "Chuck",
+                "values": [
+                  "Quick-action with safety ring",
+                  "Quick-action with safety ring",
+                  "Quick-action with safety ring",
+                  "Quick-action, keyless"
+                ]
+              },
+              {
+                "feature": "Shaft Diameter",
+                "values": [
+                  "2.5 to 10.5 mm",
+                  "2.5 to 10.5 mm",
+                  "2.5 to 10.5 mm",
+                  "0.5 to 10.5 mm"
+                ]
+              },
+              {
+                "feature": "Protection Class",
+                "values": [
+                  "IP54",
+                  "IP54",
+                  "IP54",
+                  "IP42"
+                ]
+              },
+              {
+                "feature": "Acoustic Pressure",
+                "values": [
+                  "Less than 50 dB(A)",
+                  "Less than 50 dB(A)",
+                  "Less than 50 dB(A)",
+                  "Less than 70 dB(A)"
+                ]
+              },
+              {
+                "feature": "Power Input",
+                "values": [
+                  "150 W",
+                  "120 W",
+                  "90 W",
+                  "105 W"
+                ]
+              },
+              {
+                "feature": "Weight",
+                "values": [
+                  "5.3 kg",
+                  "5.1 kg",
+                  "4.4 kg",
+                  "2.3 kg"
+                ]
+              },
+              {
+                "feature": "Dimensions",
+                "values": [
+                  "93 x 350 x 247 mm",
+                  "86 x 350 x 247 mm",
+                  "86 x 350 x 247 mm",
+                  "70 x 282 x 195 mm"
+                ]
+              },
+              {
+                "feature": "Selection Direction",
+                "values": [
+                  "Select for the highest viscosity, the largest volume, or low-speed high-torque work",
+                  "Select when the medium is too thick for 100 Ncm but volume stays within 50 litres",
+                  "Select when the medium is viscous but within 60,000 mPas",
+                  "Select when the drive must be light and portable"
+                ]
+              }
+            ],
+            "disclaimer": "What the ladder actually looks like. From the Core to the Expert 200, more torque buys more viscosity, and the volume ceiling holds at 50 litres from the Expert 100 onward. The Expert 400 is the break point: it is the only model that adds a second gear, and the only one that raises the volume ceiling, to 100 litres. If your problem is volume above 50 litres, or a viscous medium that must be stirred slowly, this is the only Expert that answers it."
+          },
+          "serviceMap": {
+            "eyebrow": "Inkarp Service Near You",
+            "title": "Inkarp supports the Hei-Torque Expert-400 Overhead Stirrer with torque assessment, heavy-duty setup quotation, and service.",
+            "description": "Inkarp supports the Hei-Torque Expert-400 Overhead Stirrer with torque assessment, heavy-duty setup quotation, and service.",
+            "supportAreas": [
+              {
+                "title": "Viscosity and Volume Assessment",
+                "description": "Establishes whether you need the torque, the volume, or the low-speed gear"
+              },
+              {
+                "title": "Gear Selection Advice",
+                "description": "Helps confirm which gear your process runs in"
+              },
+              {
+                "title": "Torque Tier Selection",
+                "description": "Helps decide between the 100, 200, and 400 Ncm versions"
+              },
+              {
+                "title": "Heavy-Duty Setup Quotation",
+                "description": "Quotes a stand, boss head, shaft, and element rated for 400 Ncm"
+              },
+              {
+                "title": "Stand Rating Check",
+                "description": "Confirms the whole load path can hold against 400 Ncm of reaction torque"
+              },
+              {
+                "title": "Stirring Element Selection",
+                "description": "Matches propeller, anchor, paddle, turbine, or dissolver to your medium"
+              },
+              {
+                "title": "Fume Hood and Reactor Mounting",
+                "description": "Supports installation into enclosures and reactor superstructures"
+              },
+              {
+                "title": "Torque Trend Training",
+                "description": "Helps operators read the trend bar as a process signal"
+              },
+              {
+                "title": "Installation Support",
+                "description": "Supports commissioning, stand assembly, and alignment"
+              },
+              {
+                "title": "Preventive Maintenance",
+                "description": "Supports long-term performance in continuous operation"
+              },
+              {
+                "title": "Spares and Accessories",
+                "description": "Supports shafts, stirring elements, stands, and boss heads"
+              },
+              {
+                "title": "Service Support",
+                "description": "Supports troubleshooting, maintenance visits, and AMC"
+              }
+            ]
+          },
+          "booking": {
+            "eyebrow": "Request Quote",
+            "title": "Get the Hei-Torque Expert-400 Overhead Stirrer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Price, demonstration, installation, AMC, and spare parts. The Heidolph Hei-TORQUE Expert 400 is the only Expert with a two-gear drive, delivering 400 Ncm to 250,000 mPas and up to 100 litres in water, with the torque concentrated where a viscous medium needs it. Tell us your medium, your viscosity, your volume, and your vessel, and Inkarp will quote the drive, a stand rated for the torque, the shaft, and the stirring element together.",
+            "fields": [
+              {
+                "key": "name",
+                "label": "Your name",
+                "type": "text",
+                "required": true
+              },
+              {
+                "key": "email",
+                "label": "Email address",
+                "type": "email",
+                "required": true
+              },
+              {
+                "key": "phone",
+                "label": "Phone number",
+                "type": "tel",
+                "required": false
+              },
+              {
+                "key": "organisation",
+                "label": "Organisation / Institute",
+                "type": "text",
+                "required": false
+              },
+              {
+                "key": "city",
+                "label": "City",
+                "type": "text",
+                "required": false
+              },
+              {
+                "key": "medium",
+                "label": "Medium / sample",
+                "type": "text",
+                "required": false
+              },
+              {
+                "key": "viscosity",
+                "label": "Viscosity range",
+                "type": "select",
+                "required": false,
+                "options": [
+                  "Unknown",
+                  "Up to 10,000 mPas",
+                  "10,000 to 60,000 mPas",
+                  "60,000 to 100,000 mPas",
+                  "Above 100,000 mPas"
+                ]
+              },
+              {
+                "key": "volume",
+                "label": "Working volume",
+                "type": "select",
+                "required": false,
+                "options": [
+                  "Under 5 L",
+                  "5 L to 25 L",
+                  "25 L to 50 L",
+                  "Above 50 L"
+                ]
+              },
+              {
+                "key": "requestType",
+                "label": "Request type",
+                "type": "select",
+                "required": true,
+                "options": [
+                  "Demo request",
+                  "Quote request",
+                  "Technical question",
+                  "Service enquiry",
+                  "General enquiry"
+                ]
+              },
+              {
+                "key": "message",
+                "label": "Additional details (optional)",
+                "type": "textarea",
+                "required": false
+              }
+            ],
+            "submitLabel": "Request Quote",
+            "successMessage": "Thanks. Inkarp will review your Hei-Torque Expert-400 Overhead Stirrer requirement and contact you."
+          },
+          "heroHighlights": [
+            {
+              "value": "400 Ncm",
+              "label": "Maximum torque"
+            },
+            {
+              "value": "Two gears",
+              "label": "Gear I: 10 to 400 rpm; Gear II: 20 to 2,000 rpm"
+            },
+            {
+              "value": "250,000 mPas",
+              "label": "Maximum viscosity"
+            },
+            {
+              "value": "100 L",
+              "label": "Maximum volume, measured in water"
+            },
+            {
+              "value": "Torque trend display",
+              "label": "Live bar indicator of delivered torque"
+            },
+            {
+              "value": "2.5 to 10.5 mm",
+              "label": "Shaft diameter, quick chuck with safety ring"
+            },
+            {
+              "value": "IP54",
+              "label": "Protection class, EN 60529"
+            },
+            {
+              "value": "5.3 kg",
+              "label": "Weight"
+            }
+          ],
+          "planners": [
+            {
+              "sectionId": "fit-guide",
+              "eyebrow": "Viscosity, Volume and Torque Guide",
+              "title": "Do you need the torque, the volume, or the low-speed gear?",
+              "description": "This model is the only Expert that offers all three. Work out which of them your process actually needs.",
+              "fields": [
+                {
+                  "key": "limit",
+                  "label": "What is limiting you"
+                },
+                {
+                  "key": "direction",
+                  "label": "Direction"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Medium above 100,000 mPas",
+                  "limit": "Beyond the Expert 200's viscosity ceiling",
+                  "direction": "The Expert 400 is the right step up",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Volume above 50 litres",
+                  "limit": "Beyond both lower Experts",
+                  "direction": "The Expert 400 is the only Expert that reaches 100 litres",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Very viscous medium that must be stirred slowly",
+                  "limit": "You need torque at low speed",
+                  "direction": "Gear I delivers full torque below 400 rpm",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Medium below 100,000 mPas and volume under 50 litres",
+                  "limit": "Inside the Expert 200's range",
+                  "direction": "The Expert 200 costs less and does the job",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Medium above 250,000 mPas",
+                  "limit": "Beyond this drive's stated limit",
+                  "direction": "Talk to our team about alternatives",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Volume above 100 litres",
+                  "limit": "Beyond this drive's stated limit",
+                  "direction": "Talk to our team about alternatives",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "A stiff paste or heavy adhesive",
+                  "limit": "High torque at low speed",
+                  "direction": "Gear I, with an anchor or paddle element",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "A medium that thickens as it reacts",
+                  "limit": "Torque demand rises during the run",
+                  "direction": "The trend display shows the headroom",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Shaft thinner than 2.5 mm",
+                  "limit": "Below the chuck range",
+                  "direction": "The Hei-TORQUE Core accepts shafts from 0.5 mm",
+                  "cta": "Get Configuration Support"
+                }
+              ]
+            },
+            {
+              "sectionId": "setup-planner",
+              "eyebrow": "Complete Setup and Stand Configurator",
+              "title": "What is still missing from your order, and is it rated for 400 Ncm?",
+              "description": "The drive is one of four things you need, and at 400 Ncm every one of them is a load-bearing safety item.",
+              "fields": [
+                {
+                  "key": "choices",
+                  "label": "Options"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Do you already have a stand and boss head?",
+                  "choices": "Yes, rated for 400 Ncm; Yes, but unsure of the rating; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Where will the drive be mounted?",
+                  "choices": "On a stand; In a fume hood; On a reactor superstructure",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is your vessel volume?",
+                  "choices": "Under 20 L; 20 to 50 L; 50 to 100 L; Over 100 L",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is your medium?",
+                  "choices": "High viscosity; Stiff paste; Heavy adhesive; Loaded slurry",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Which speed regime does your medium need?",
+                  "choices": "Low speed, high torque; Higher speed; Both, at different stages",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Do you already have a stirring shaft?",
+                  "choices": "Yes, within 2.5 to 10.5 mm and rated for the torque; Yes, but unsure; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is the stirring job?",
+                  "choices": "Blending; Suspending solids; Dispersing; Stirring near the wall",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Is your vessel secured against the torque?",
+                  "choices": "Yes, clamped; No; Not sure",
+                  "cta": "Plan My Setup"
+                }
+              ],
+              "disclaimer": "A working Expert 400 installation consists of the drive, a stand and boss head rated for 400 Ncm, a shaft within the 2.5 to 10.5 mm chuck range and rated for the torque, and a stirring element matched to your medium. Only the drive is supplied. At 400 Ncm the entire load path, from stand to shaft to vessel clamp, is safety-critical. Share your setup and our team will specify an installation rated for the torque."
+            },
+            {
+              "sectionId": "gear-planner",
+              "eyebrow": "Low-Speed Torque and Gear Selection Planner",
+              "title": "Does your medium need torque exactly where it is hardest to deliver?",
+              "description": "The hardest place to make torque is at low speed, and that is precisely where a viscous medium has to be stirred. The two-gear drive exists for that problem. Use your own process.",
+              "fields": [
+                {
+                  "key": "why",
+                  "label": "Why it matters"
+                }
+              ],
+              "options": [
+                {
+                  "title": "The viscosity of your worst-case medium",
+                  "why": "Above 100,000 mPas, the lower Experts run out",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "The speed at which your medium must be stirred",
+                  "why": "Very viscous media must run slow, in Gear I territory",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether a single-speed drive has ever stalled on your medium at low rpm",
+                  "why": "That is the low-speed torque gap the gearbox closes",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Your largest working volume",
+                  "why": "Above 50 litres, only the Expert 400 reaches it",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether the same process has both a slow viscous stage and a faster stage",
+                  "why": "Two gears cover both; a single-gear drive compromises on one",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether your medium thickens through the process",
+                  "why": "Gear I holds torque as the medium stiffens",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether you would otherwise buy two different drives",
+                  "why": "One two-gear drive may replace a low-speed and a high-speed unit",
+                  "cta": "Talk to Product Expert"
+                }
+              ],
+              "disclaimer": "The Expert 400 is the only Expert with a two-gear drive: Gear I delivers full torque below 400 rpm for viscous media, Gear II runs to 2,000 rpm for thinner work. It is also the only Expert that reaches 250,000 mPas and 100 litres. Whether you need it depends on your worst-case viscosity, your largest volume, and whether your process has both a slow and a fast stage. Share your process and our team will confirm the gear and the tier with you."
+            }
+          ],
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industries using the Hei-Torque Expert-400 Overhead Stirrer include adhesives and sealants, polymers, coatings, and large-scale process laboratories.",
+            "description": "Select your field to see typical use cases and what to consider.",
+            "industries": [
+              {
+                "name": "Adhesives and Sealants",
+                "icon": "flask",
+                "note": "Stiff, high-viscosity formulations",
+                "bullets": [
+                  "Gear I low-speed torque, stand rating, anchor element"
+                ]
+              },
+              {
+                "name": "Polymers and Materials",
+                "icon": "flask",
+                "note": "Viscous polymer solutions and melts",
+                "bullets": [
+                  "250,000 mPas ceiling, torque trend, headroom"
+                ]
+              },
+              {
+                "name": "Paints, Coatings and Inks",
+                "icon": "droplet",
+                "note": "Large-volume, heavily loaded dispersions",
+                "bullets": [
+                  "100 litre ceiling, dissolver element, solids loading"
+                ]
+              },
+              {
+                "name": "Cosmetics and Personal Care",
+                "icon": "coffee",
+                "note": "Thick creams, pastes, and large batches",
+                "bullets": [
+                  "Viscosity and volume together, Gear I"
+                ]
+              },
+              {
+                "name": "Chemical Process Laboratories",
+                "icon": "flask",
+                "note": "Large-volume reaction stirring",
+                "bullets": [
+                  "100 litre ceiling, reactor superstructure mounting"
+                ]
+              },
+              {
+                "name": "Food and Beverage",
+                "icon": "coffee",
+                "note": "Very thick preparations at scale",
+                "bullets": [
+                  "Cleanability, low-speed torque, volume"
+                ]
+              },
+              {
+                "name": "Pilot-Scale Development",
+                "icon": "cpu",
+                "note": "Bridging bench to production volumes",
+                "bullets": [
+                  "Two-gear flexibility, 100 litre capacity"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "Hei-Torque Ultimate-100 Overhead Stirrer",
+          "slug": "hei-torque-ultimate-100-overhead-stirrer",
+          "image": "/assets/images/productImages/heidolph/hei-torque-ultimate-100-overhead-stirrer.webp",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
+          "imageAlt": "Heidolph Hei-Torque Ultimate-100 Overhead Stirrer",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "metaTitle": "Hei-Torque Ultimate-100 Overhead Stirrer - Authorized Distributor & Service Provider in India | Inkarp | Heidolph",
+          "metaDescription": "Inkarp is the authorized distributor & service provider for the Heidolph Hei-Torque Ultimate-100 Overhead Stirrer in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+          "metaKeywords": [
+            "Hei-Torque Ultimate-100 Overhead Stirrer",
+            "Hei-Torque Ultimate-100 Overhead Stirrer India",
+            "Hei-Torque Ultimate-100 Overhead Stirrer price in India",
+            "Hei-Torque Ultimate-100 Overhead Stirrer distributor India",
+            "Heidolph Overhead Stirrers",
+            "Heidolph distributor India",
+            "Heidolph authorized distributor",
+            "Overhead Stirrers India",
+            "Overhead Stirrers distributor and service provider in India",
+            "overhead mixer",
+            "mechanical stirrer",
+            "high viscosity stirrer",
+            "programmable overhead stirrer",
+            "overhead stirrer with data logging",
+            "overhead stirrer RS232 USB",
+            "Heidolph India",
+            "Inkarp"
+          ],
+          "overview": "The Hei-Torque Ultimate-100 Overhead Stirrer is the connected, programmable Hei-TORQUE, delivering 100 Ncm with ramp programming, USB and RS232 interfaces, and free Hei-Control software.\nThe Ultimate 100 stirs exactly what the Expert 100 stirs: same torque, same viscosity, same volume. What you are buying is not more power. It is the ability to program, connect, and document.\nProgrammable methods. Ramp programming lets you define a stirring profile and repeat it exactly, run after run, operator after operator.\nThe stand, boss head, stirring shaft, and stirring element are NOT included.",
+          "features": [
+            "Ramp Programming: Ramp programming lets you define a stirring profile and repeat it exactly. A method written into the drive is a method that runs the same way every time, regardless of who is operating it. This is the single feature that separates the Ultimate line from the Expert line.",
+            "USB and RS232 Interfaces: Two interfaces connect the drive to a PC, a programmable logic controller, or an automation system such as LabManager. This is what lets an overhead stirrer become a controlled step in an automated process rather than a manual interruption in one.",
+            "Free Hei-Control Software: The scope of delivery includes the free Hei-Control software, which remotely controls up to four devices from a single PC. Remote control and data logging are quick to set up, at no extra cost.",
+            "Process Monitoring and Documentation: The drive reads out the torque trend as a value and includes a timer function, giving you the equipment to document your application parameters. A number can be recorded and audited; a bar on a screen cannot.",
+            "Torque to 100 Ncm: Torque, not speed, decides whether an overhead stirrer can do your job. The Ultimate 100 delivers 100 Ncm, for viscosities up to 60,000 mPas, the same working envelope as the Expert 100.",
+            "Change of Rotational Direction: Rotation runs clockwise or counterclockwise. The flow variation makes it easier to stir up suspensions and accelerates dissolution processes, which a single-direction drive cannot do.",
+            "Controllable Start-Up: After switch-on, the start-up intensity is adjustable from soft to fast. That lets you choose the right ramp for the application and prevents liquid from splashing at the start.",
+            "Safety Start and Stop Touch Function: Starting or stopping is a swipe along the control panel. It works reliably through gloves, and it cannot be triggered accidentally by a knock, a sleeve, or a passing hand.",
+            "Quick-Action Chuck with Safety Ring: The chuck opens and closes by hand with no tools, and the safety ring holds the stirring tool securely once clamped.",
+            "Built for Fume Hoods and Reactor Superstructures: At IP54 and under 50 dB(A), the drive is sealed and quiet enough to work inside a fume hood, and it is rated as a drive for reactor superstructures.",
+            "Automatic Overload Cut-Out with Display: If the load exceeds what the drive can deliver, the motor cuts out automatically and the display tells you why.",
+            "KTY Motor Temperature Monitoring: The motor temperature is monitored directly, which protects the drive during long runs.",
+            "Suitable for Continuous Operation: The duty cycle permits continuous operation, and a certificate for continuous operation is available for the Hei-TORQUE range."
+          ],
+          "applications": [
+            "Automated Laboratory Processes: USB and RS232 connect the drive to a PLC or automation system.",
+            "Documented Methods: Torque trend as a value and a timer support recording application parameters.",
+            "Reproducible Stirring: Ramp programming repeats a defined profile exactly.",
+            "Remote and Multi-Device Control: Hei-Control software runs up to four devices from one PC.",
+            "Suspensions: Bidirectional rotation stirs up settled solids.",
+            "Dissolution: Reversing the flow accelerates dissolution processes.",
+            "Fume Hood Work: IP54 and under 50 dB(A), sealed and quiet enough for enclosed working.",
+            "Reactor Superstructures: Rated as a drive for reactor assemblies.",
+            "Continuous Stirring: Rated for continuous operation, with a certificate available."
+          ],
+          "technicalSpecs": [
+            {
+              "label": "Product Name",
+              "value": "Hei-TORQUE Ultimate 100"
+            },
+            {
+              "label": "Product Page Name",
+              "value": "Hei-Torque Ultimate-100 Overhead Stirrer"
+            },
+            {
+              "label": "Part Number",
+              "value": "501-61020-00"
+            },
+            {
+              "label": "Category",
+              "value": "Overhead Stirrers"
+            },
+            {
+              "label": "Maximum Torque",
+              "value": "100 Ncm"
+            },
+            {
+              "label": "Speed Range",
+              "value": "10 to 2,000 rpm"
+            },
+            {
+              "label": "Speed Accuracy",
+              "value": "+/-1%"
+            },
+            {
+              "label": "Speed Control",
+              "value": "Electronic"
+            },
+            {
+              "label": "Number of Gear Stages",
+              "value": "1"
+            },
+            {
+              "label": "Rotation",
+              "value": "Clockwise and counterclockwise"
+            },
+            {
+              "label": "Maximum Viscosity",
+              "value": "60,000 mPas"
+            },
+            {
+              "label": "Maximum Volume",
+              "value": "50 litres, measured in water"
+            },
+            {
+              "label": "Stirrer Shaft Diameter",
+              "value": "2.5 to 10.5 mm"
+            },
+            {
+              "label": "Chuck",
+              "value": "Quick-action, with safety ring"
+            },
+            {
+              "label": "Interfaces",
+              "value": "USB and RS232"
+            },
+            {
+              "label": "Software",
+              "value": "Free Hei-Control, up to 4 devices via PC"
+            },
+            {
+              "label": "Programming",
+              "value": "Ramp programming"
+            },
+            {
+              "label": "Process Monitoring",
+              "value": "Timer function; torque trend displayed as a value"
+            },
+            {
+              "label": "Start-Up",
+              "value": "Adjustable, soft to fast"
+            },
+            {
+              "label": "Start and Stop",
+              "value": "Safety touch function, swipe, glove-compatible"
+            },
+            {
+              "label": "Drive",
+              "value": "EC motor"
+            },
+            {
+              "label": "Motor Protection",
+              "value": "KTY temperature monitoring"
+            },
+            {
+              "label": "Overload Protection",
+              "value": "Automatic cut-out with display"
+            },
+            {
+              "label": "Permissible Duty Cycle",
+              "value": "Suitable for continuous operation"
+            },
+            {
+              "label": "Dimensions, W x H x D",
+              "value": "86 x 350 x 247 mm"
+            },
+            {
+              "label": "Weight",
+              "value": "4.4 kg"
+            },
+            {
+              "label": "Protection Class, EN 60529",
+              "value": "IP54"
+            },
+            {
+              "label": "Protection Class",
+              "value": "I, IEC 61140"
+            },
+            {
+              "label": "Acoustic Pressure",
+              "value": "Less than 50 dB(A), based on IEC 61010"
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "100 to 240 V AC, 50/60 Hz"
+            },
+            {
+              "label": "Power Input",
+              "value": "90 W"
+            },
+            {
+              "label": "Overvoltage Category",
+              "value": "II"
+            },
+            {
+              "label": "Degree of Pollution",
+              "value": "2"
+            },
+            {
+              "label": "Operating Temperature",
+              "value": "5 deg C to 31 deg C at up to 80% RH; 32 deg C to 40 deg C at up to 50% RH, decreasing linearly"
+            },
+            {
+              "label": "Installation Altitude",
+              "value": "Up to 2,000 m above sea level"
+            }
+          ],
+          "faqs": [
+            {
+              "question": "What is the Hei-Torque Ultimate-100 Overhead Stirrer used for?",
+              "answer": "The Hei-Torque Ultimate-100 Overhead Stirrer is Heidolph's connected, programmable overhead stirrer, used for automated processes, documented methods, and reproducible stirring. It delivers 100 Ncm across 10 to 2,000 rpm, for viscosities up to 60,000 mPas or volumes up to 50 litres in water, with USB and RS232 interfaces and free Hei-Control software."
+            },
+            {
+              "question": "What is the difference between the Hei-Torque Expert-100 and the Ultimate-100?",
+              "answer": "The Hei-Torque Ultimate-100 and the Expert-100 share the same drive: 100 Ncm, 60,000 mPas, 50 litres in water, and the same chassis. The Ultimate-100 adds ramp programming, USB and RS232 interfaces, free Hei-Control software for up to four devices, bidirectional rotation, and a torque trend read out as a documentable value. The Expert-100 has the same torque without the automation."
+            },
+            {
+              "question": "What interfaces does the Hei-Torque Ultimate-100 Overhead Stirrer have?",
+              "answer": "The Hei-Torque Ultimate-100 Overhead Stirrer has two interfaces, USB and RS232. They connect the drive to a PC, a programmable logic controller, or an automation system such as LabManager."
+            },
+            {
+              "question": "What is the Hei-Control software included with the Hei-Torque Ultimate-100 Overhead Stirrer?",
+              "answer": "Hei-Control is the free software included in the scope of delivery of the Hei-Torque Ultimate-100 Overhead Stirrer. It provides remote control and data logging, and can control up to four devices from a single PC."
+            },
+            {
+              "question": "Can the Hei-Torque Ultimate-100 Overhead Stirrer be programmed?",
+              "answer": "Yes. The Hei-Torque Ultimate-100 Overhead Stirrer offers ramp programming, which lets you define a stirring profile and repeat it exactly. This is the main capability that distinguishes the Ultimate line from the Expert line."
+            },
+            {
+              "question": "What is the maximum torque of the Hei-Torque Ultimate-100 Overhead Stirrer?",
+              "answer": "The maximum torque of the Hei-Torque Ultimate-100 Overhead Stirrer is 100 Ncm. Torque, rather than speed, determines whether an overhead stirrer can turn a given medium."
+            },
+            {
+              "question": "Can the Hei-Torque Ultimate-100 Overhead Stirrer stir 50 litres of a viscous medium?",
+              "answer": "No. The Hei-Torque Ultimate-100 Overhead Stirrer handles viscosities up to 60,000 mPas or volumes up to 50 litres in water. These are two separate ceilings on the same 100 Ncm drive, not a combined capability. As viscosity rises, the volume the drive can turn falls."
+            },
+            {
+              "question": "Does the Hei-Torque Ultimate-100 Overhead Stirrer rotate in both directions?",
+              "answer": "Yes. The Hei-Torque Ultimate-100 Overhead Stirrer rotates clockwise and counterclockwise. Reversing the flow makes it easier to stir up suspensions and accelerates dissolution processes."
+            },
+            {
+              "question": "What shaft diameters fit the Hei-Torque Ultimate-100 Overhead Stirrer?",
+              "answer": "The quick-action chuck on the Hei-Torque Ultimate-100 Overhead Stirrer accepts stirring shafts from 2.5 mm to 10.5 mm, and has a safety ring. For shafts thinner than 2.5 mm, the Hei-TORQUE Core goes down to 0.5 mm."
+            },
+            {
+              "question": "What is included with the Hei-Torque Ultimate-100 Overhead Stirrer?",
+              "answer": "The Hei-Torque Ultimate-100 Overhead Stirrer is supplied as a drive unit with the free Hei-Control software. The stand, boss head, stirring shaft, and stirring element are separate items and are not included. Inkarp quotes a complete working setup rather than a drive alone."
+            },
+            {
+              "question": "What is the part number of the Hei-Torque Ultimate-100 Overhead Stirrer?",
+              "answer": "The part number of the Hei-Torque Ultimate-100 Overhead Stirrer is 501-61020-00. Inkarp is the authorized distributor for this Heidolph configuration in India."
+            },
+            {
+              "question": "What is the price of the Hei-Torque Ultimate-100 Overhead Stirrer in India?",
+              "answer": "The price of the Hei-Torque Ultimate-100 Overhead Stirrer in India depends on the complete setup, including the stand, boss head, shaft, and stirring element, none of which are included with the drive. Inkarp, the authorized distributor and service provider in India, quotes a working setup once your medium, viscosity, volume, and integration needs are confirmed."
+            },
+            {
+              "question": "Who is the authorized distributor of the Hei-Torque Ultimate-100 Overhead Stirrer in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Heidolph Hei-Torque Ultimate-100 Overhead Stirrer in India. Inkarp supports torque assessment, integration and software setup, complete setup quotation, demonstration, installation, training, spare parts, and AMC across its branch network."
+            }
+          ],
+          "inPageNav": [
+            {
+              "id": "overview",
+              "label": "Product Information"
+            },
+            {
+              "id": "fit-guide",
+              "label": "Programming Guide"
+            },
+            {
+              "id": "setup-planner",
+              "label": "Setup Configurator"
+            },
+            {
+              "id": "automation-planner",
+              "label": "Automation Planner"
+            },
+            {
+              "id": "comparison",
+              "label": "Method Comparison"
+            },
+            {
+              "id": "industries",
+              "label": "Industry Explorer"
+            },
+            {
+              "id": "service",
+              "label": "Service"
+            },
+            {
+              "id": "booking",
+              "label": "Request Quote"
+            }
+          ],
+          "longForm": {
+            "heroLead": "Same torque as the Expert-100. The difference is that this one can be programmed, logged, and run from your PC. The Heidolph Hei-TORQUE Ultimate 100 is the connected, programmable model in the Hei-TORQUE range. It delivers 100 Ncm of torque across a 10 to 2,000 rpm range, for viscosities up to 60,000 mPas or volumes up to 50 litres in water, and it adds the automation the Expert line does not carry.",
+            "stats": [
+              {
+                "value": "100 Ncm",
+                "label": "Maximum torque"
+              },
+              {
+                "value": "10 to 2,000 rpm",
+                "label": "Speed range, electronically controlled"
+              },
+              {
+                "value": "60,000 mPas",
+                "label": "Maximum viscosity"
+              },
+              {
+                "value": "50 L",
+                "label": "Maximum volume, measured in water"
+              },
+              {
+                "value": "USB and RS232",
+                "label": "Interfaces for PC, PLC, and automation"
+              },
+              {
+                "value": "Ramp programming",
+                "label": "Define and repeat a method"
+              },
+              {
+                "value": "Clockwise and counterclockwise",
+                "label": "Rotation direction"
+              },
+              {
+                "value": "Torque trend as a value",
+                "label": "Process monitoring readout"
+              },
+              {
+                "value": "2.5 to 10.5 mm",
+                "label": "Shaft diameter, quick chuck with safety ring"
+              },
+              {
+                "value": "4.4 kg",
+                "label": "Weight"
+              }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product information",
+                "title": "Hei-Torque Ultimate-100 Overhead Stirrer at a Glance",
+                "subheading": "Programming, connectivity, and required setup.",
+                "description": "Everything you need to evaluate the Ultimate 100: what it automates over the Expert 100, its interfaces and software, what the drive does not include, technical specifications, documentation, and Inkarp support.",
+                "body": [
+                  "The Hei-Torque Ultimate-100 Overhead Stirrer is the connected, programmable Hei-TORQUE, delivering 100 Ncm with ramp programming, USB and RS232 interfaces, and free Hei-Control software.",
+                  "The Ultimate 100 stirs exactly what the Expert 100 stirs: same torque, same viscosity, same volume. What you are buying is not more power. It is the ability to program, connect, and document.",
+                  "Programmable methods. Ramp programming lets you define a stirring profile and repeat it exactly, run after run, operator after operator.",
+                  "Two interfaces. USB and RS232 connect the drive to a PC, a PLC, or an automation system such as LabManager.",
+                  "Software included. The free Hei-Control software runs up to four devices from one computer, for remote control and data logging.",
+                  "Torque as a number. Process monitoring reads out the torque trend as a value, alongside a timer, for documenting your application parameters.",
+                  "It can spin both ways. Clockwise and counterclockwise rotation breaks up suspensions and speeds dissolution.",
+                  "Controllable start-up. The start-up intensity adjusts from soft to fast, to prevent splashing at the start.",
+                  "Still not a complete instrument. The stand, the shaft, and the stirring element are separate items.",
+                  "Confirmed model: Hei-TORQUE Ultimate 100, P/N 501-61020-00. The Ultimate line also offers 200 Ncm and 400 Ncm versions. The stand, boss head, stirring shaft, and stirring element are NOT included. If you do not need programming, connectivity, or logging, the Hei-TORQUE Expert 100 has the same torque for less.",
+                  "Product expert note Tell our team what you need to program, connect, or document, and we will quote a working setup rather than a drive unit on its own."
+                ],
+                "cards": [
+                  {
+                    "title": "100 Ncm",
+                    "description": "Maximum torque, the same as the Expert 100"
+                  },
+                  {
+                    "title": "60,000 mPas",
+                    "description": "Maximum viscosity, at reduced volume"
+                  },
+                  {
+                    "title": "50 L",
+                    "description": "Maximum volume, measured in water, at low viscosity"
+                  },
+                  {
+                    "title": "USB and RS232",
+                    "description": "Interfaces for PC, PLC, and automation, with free Hei-Control software"
+                  }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key features of the Hei-Torque Ultimate-100 Overhead Stirrer",
+                "body": [
+                  "The key features of the Hei-Torque Ultimate-100 Overhead Stirrer include ramp programming, USB and RS232 interfaces, free Hei-Control software, bidirectional rotation, and a controllable start-up."
+                ]
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications for the Hei-Torque Ultimate-100 Overhead Stirrer",
+                "body": [
+                  "The applications of the Hei-Torque Ultimate-100 Overhead Stirrer include automated processes, documented methods, and reproducible stirring."
+                ]
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specs",
+                "title": "Technical specifications of the Hei-Torque Ultimate-100 Overhead Stirrer",
+                "body": [
+                  "The technical specifications of the Hei-Torque Ultimate-100 Overhead Stirrer include 100 Ncm torque, USB and RS232 interfaces, 60,000 mPas viscosity, and 50 litres in water."
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Torque planning",
+                "title": "Torque, Viscosity and Volume Planning",
+                "body": [
+                  "Torque, viscosity and volume planning explains what 100 Ncm reaches, and why the viscosity and volume figures cannot be read together.",
+                  "Read this before you read any other number on this page.",
+                  "Heidolph states that the Ultimate 100 stirs viscosities up to 60,000 mPas or volumes up to 50 litres in water. Two separate ceilings on the same 100 Ncm drive. Not a combined specification. Fifty litres is what 100 Ncm reaches when the medium behaves like water. Sixty thousand mPas is what it reaches when the volume is small.",
+                  "The Ultimate 100 shares this envelope exactly with the Expert 100. The two drives have the same torque and the same limits. The Ultimate adds programming and connectivity, not stirring capacity.",
+                  "Product expert note Give our team your medium, its viscosity, your working volume, and your vessel diameter, and we will tell you whether 100 Ncm is enough or whether you need a higher Ultimate tier."
+                ],
+                "metrics": [
+                  {
+                    "value": "100 Ncm",
+                    "label": "Maximum torque"
+                  },
+                  {
+                    "value": "10 to 2,000 rpm",
+                    "label": "Speed range, electronically controlled"
+                  },
+                  {
+                    "value": "60,000 mPas",
+                    "label": "Maximum viscosity"
+                  },
+                  {
+                    "value": "50 L",
+                    "label": "Maximum volume, measured in water"
+                  },
+                  {
+                    "value": "USB and RS232",
+                    "label": "Interfaces for PC, PLC, and automation"
+                  },
+                  {
+                    "value": "Ramp programming",
+                    "label": "Define and repeat a method"
+                  },
+                  {
+                    "value": "Clockwise and counterclockwise",
+                    "label": "Rotation direction"
+                  },
+                  {
+                    "value": "Torque trend as a value",
+                    "label": "Process monitoring readout"
+                  },
+                  {
+                    "value": "2.5 to 10.5 mm",
+                    "label": "Shaft diameter, quick chuck with safety ring"
+                  },
+                  {
+                    "value": "4.4 kg",
+                    "label": "Weight"
+                  }
+                ],
+                "utilityChecklist": [
+                  {
+                    "label": "Maximum torque",
+                    "value": "100 Ncm - The drive's absolute ceiling"
+                  },
+                  {
+                    "label": "Maximum viscosity",
+                    "value": "60,000 mPas - At reduced volume"
+                  },
+                  {
+                    "label": "Maximum volume",
+                    "value": "50 litres - In water, at low viscosity"
+                  },
+                  {
+                    "label": "Speed range",
+                    "value": "10 to 2,000 rpm - Electronic, +/-1%"
+                  }
+                ],
+                "cards": [
+                  {
+                    "title": "Viscosity of the medium",
+                    "description": "Rises steeply. Usually the binding constraint"
+                  },
+                  {
+                    "title": "Volume in the vessel",
+                    "description": "Rises with the mass being moved"
+                  },
+                  {
+                    "title": "Impeller diameter",
+                    "description": "Rises sharply"
+                  },
+                  {
+                    "title": "Impeller type",
+                    "description": "An anchor or paddle demands more than a propeller at the same speed"
+                  },
+                  {
+                    "title": "Speed",
+                    "description": "Rises with rpm"
+                  },
+                  {
+                    "title": "Solids loading",
+                    "description": "Rises, and rises further when solids have settled"
+                  },
+                  {
+                    "title": "A reaction that thickens",
+                    "description": "Rises during the run. This is what the torque readout is for"
+                  }
+                ],
+                "disclaimer": "The 60,000 mPas and the 50 litres are two separate ceilings, not a combined capability."
+              },
+              {
+                "key": "config",
+                "eyebrow": "Complete Setup",
+                "title": "Complete Setup: Drive, Stand, Shaft and Element",
+                "body": [
+                  "A complete Hei-Torque Ultimate-100 installation requires a drive, a stand and boss head, a shaft, and a stirring element.",
+                  "The drive on its own cannot stir anything. It is a motor with a chuck. Below is what a working installation actually consists of.",
+                  "Configuration note Inkarp quotes a complete working setup, not a drive unit in isolation."
+                ],
+                "cards": [
+                  {
+                    "title": "Drive Unit",
+                    "description": "Included, P/N 501-61020-00",
+                    "items": [
+                      "Hei-TORQUE Ultimate 100"
+                    ]
+                  },
+                  {
+                    "title": "Hei-Control Software",
+                    "description": "Included, free",
+                    "items": [
+                      "Runs up to 4 devices from one PC"
+                    ]
+                  },
+                  {
+                    "title": "Stand",
+                    "description": "Not included",
+                    "items": [
+                      "Telescopic or plate stand, selected by vessel height and working volume"
+                    ]
+                  },
+                  {
+                    "title": "Boss Head or Clamp",
+                    "description": "Not included",
+                    "items": [
+                      "Holds the drive to the stand. Must match both"
+                    ]
+                  },
+                  {
+                    "title": "Stirring Shaft",
+                    "description": "Not included",
+                    "items": [
+                      "Diameter must fall within the 2.5 to 10.5 mm chuck range"
+                    ]
+                  },
+                  {
+                    "title": "Stirring Element",
+                    "description": "Not included",
+                    "items": [
+                      "Propeller, anchor, paddle, turbine or dissolver, by medium and job"
+                    ]
+                  },
+                  {
+                    "title": "Interface Cabling",
+                    "description": "Confirm",
+                    "items": [
+                      "USB or RS232 lead to your PC, PLC, or automation system"
+                    ]
+                  },
+                  {
+                    "title": "Reactor Superstructure Mounting",
+                    "description": "Not included",
+                    "items": [
+                      "The drive is rated for this. Confirm the interface"
+                    ]
+                  },
+                  {
+                    "title": "Blending low-viscosity liquids",
+                    "description": "Propeller"
+                  },
+                  {
+                    "title": "Suspending or reslurrying solids",
+                    "description": "Propeller or turbine, using bidirectional rotation"
+                  },
+                  {
+                    "title": "Stirring close to the wall in a viscous medium",
+                    "description": "Anchor"
+                  },
+                  {
+                    "title": "General mixing in a medium-viscosity medium",
+                    "description": "Paddle"
+                  },
+                  {
+                    "title": "Dispersing",
+                    "description": "Dissolver disc"
+                  },
+                  {
+                    "title": "Ultimate 100 Ncm",
+                    "description": "This page. Viscosity to 60,000 mPas, volume to 50 litres in water"
+                  },
+                  {
+                    "title": "Ultimate 200 Ncm",
+                    "description": "Select when 100 Ncm is not enough"
+                  },
+                  {
+                    "title": "Ultimate 400 Ncm",
+                    "description": "Select for the heaviest loads, with a two-gear drive"
+                  }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "body": [
+                  "Documentation for the Hei-Torque Ultimate-100 Overhead Stirrer includes the data sheet, operating instructions, and stirring tools matrix."
+                ],
+                "cards": [
+                  {
+                    "title": "Technical Data Sheet, Hei-TORQUE Ultimate 100",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Operating Instructions, Hei-TORQUE Expert and Ultimate",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "At a Glance, Hei-TORQUE Range",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Hei-TORQUE Configuration Tool",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Hei-Control Software",
+                    "description": "Included in scope of delivery"
+                  },
+                  {
+                    "title": "Matrix, Stirring Tools",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Certificate for Continuous Operation, Hei-TORQUE",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "EU Declaration of Conformity, Hei-TORQUE",
+                    "description": "Available on request"
+                  },
+                  {
+                    "title": "Safety Guide, Overhead Stirrers",
+                    "description": "Available on request"
+                  }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Request Quote",
+              "title": "Get the Hei-Torque Ultimate-100 Overhead Stirrer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Price, demonstration, installation, AMC, and spare parts. The Heidolph Hei-TORQUE Ultimate 100 delivers 100 Ncm to 60,000 mPas, and adds ramp programming, USB and RS232 connectivity, and free Hei-Control software for up to four devices. Tell us what you need to program, connect, or document, and Inkarp will quote the drive, the stand, the shaft, the stirring element, and the integration together.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          },
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Compare the Hei-Torque Ultimate-100 with the Expert-100, which shares its drive, and with the Hei-TORQUE Core.",
+            "description": "Compare the Hei-Torque Ultimate-100 with the Expert-100, which shares its drive, and with the Hei-TORQUE Core.",
+            "columns": [
+              {
+                "label": "Ultimate 100",
+                "highlight": true
+              },
+              {
+                "label": "Expert 100"
+              },
+              {
+                "label": "Hei-TORQUE Core"
+              }
+            ],
+            "rows": [
+              {
+                "feature": "Maximum Torque",
+                "values": [
+                  "100 Ncm",
+                  "100 Ncm",
+                  "65 Ncm"
+                ]
+              },
+              {
+                "feature": "Maximum Viscosity",
+                "values": [
+                  "60,000 mPas",
+                  "60,000 mPas",
+                  "10,000 mPas"
+                ]
+              },
+              {
+                "feature": "Maximum Volume, in water",
+                "values": [
+                  "50 litres",
+                  "50 litres",
+                  "25 litres"
+                ]
+              },
+              {
+                "feature": "Speed Range",
+                "values": [
+                  "10 to 2,000 rpm",
+                  "10 to 2,000 rpm",
+                  "20 to 2,000 rpm"
+                ]
+              },
+              {
+                "feature": "Ramp Programming",
+                "values": [
+                  "Yes",
+                  "No",
+                  "No"
+                ]
+              },
+              {
+                "feature": "USB and RS232 Interfaces",
+                "values": [
+                  "Yes",
+                  "No",
+                  "RS232 only, capability not documented"
+                ]
+              },
+              {
+                "feature": "Hei-Control Software",
+                "values": [
+                  "Included, up to 4 devices",
+                  "No",
+                  "No"
+                ]
+              },
+              {
+                "feature": "Process Documentation",
+                "values": [
+                  "Torque trend as a value, plus timer",
+                  "Torque trend bar",
+                  "No"
+                ]
+              },
+              {
+                "feature": "Rotation",
+                "values": [
+                  "Clockwise and counterclockwise",
+                  "Clockwise only",
+                  "Clockwise only"
+                ]
+              },
+              {
+                "feature": "Controllable Start-Up",
+                "values": [
+                  "Yes, soft to fast",
+                  "Safety touch start",
+                  "Max button"
+                ]
+              },
+              {
+                "feature": "Chuck",
+                "values": [
+                  "Quick-action with safety ring",
+                  "Quick-action with safety ring",
+                  "Quick-action, keyless"
+                ]
+              },
+              {
+                "feature": "Shaft Diameter",
+                "values": [
+                  "2.5 to 10.5 mm",
+                  "2.5 to 10.5 mm",
+                  "0.5 to 10.5 mm"
+                ]
+              },
+              {
+                "feature": "Weight",
+                "values": [
+                  "4.4 kg",
+                  "4.4 kg",
+                  "2.3 kg"
+                ]
+              },
+              {
+                "feature": "Power Input",
+                "values": [
+                  "90 W",
+                  "90 W",
+                  "105 W"
+                ]
+              },
+              {
+                "feature": "Selection Direction",
+                "values": [
+                  "Select when you need to program, connect, or document",
+                  "Select when you need the torque but not the automation",
+                  "Select when the drive must be light and portable"
+                ]
+              }
+            ],
+            "disclaimer": "What the table is really telling you. The Ultimate 100 and the Expert 100 are the same drive. Same torque, same viscosity, same volume, same chassis, same power. The Ultimate adds ramp programming, USB and RS232 connectivity, Hei-Control software, bidirectional rotation, and a documentable torque value. The choice between them is not about stirring, it is about whether you need automation. Anyone selling the Ultimate as \"the more powerful one\" is selling it wrongly."
+          },
+          "serviceMap": {
+            "eyebrow": "Inkarp Service Near You",
+            "title": "Inkarp supports the Hei-Torque Ultimate-100 Overhead Stirrer with torque assessment, integration and software setup, complete setup quotation, and service.",
+            "description": "Inkarp supports the Hei-Torque Ultimate-100 Overhead Stirrer with torque assessment, integration and software setup, complete setup quotation, and service.",
+            "supportAreas": [
+              {
+                "title": "Torque and Viscosity Assessment",
+                "description": "Checks your medium, viscosity, and volume against the 100 Ncm ceiling before you order"
+              },
+              {
+                "title": "Automation Advice",
+                "description": "Helps decide whether you need the Ultimate line or whether the Expert 100 suffices"
+              },
+              {
+                "title": "Integration Support",
+                "description": "Helps connect the drive over USB or RS232 to a PC, PLC, or automation system"
+              },
+              {
+                "title": "Hei-Control Setup",
+                "description": "Helps install and configure the software for single or multi-device control"
+              },
+              {
+                "title": "Complete Setup Quotation",
+                "description": "Quotes the drive, stand, boss head, shaft, and stirring element together"
+              },
+              {
+                "title": "Stirring Element Selection",
+                "description": "Matches propeller, anchor, paddle, turbine, or dissolver to your medium"
+              },
+              {
+                "title": "Shaft Selection",
+                "description": "Confirms the shaft falls within the 2.5 to 10.5 mm chuck range"
+              },
+              {
+                "title": "Fume Hood and Reactor Mounting",
+                "description": "Supports installation into enclosures and reactor superstructures"
+              },
+              {
+                "title": "Installation Support",
+                "description": "Supports commissioning, stand assembly, and alignment"
+              },
+              {
+                "title": "Preventive Maintenance",
+                "description": "Supports long-term performance in continuous operation"
+              },
+              {
+                "title": "Spares and Accessories",
+                "description": "Supports shafts, stirring elements, stands, and boss heads"
+              },
+              {
+                "title": "Service Support",
+                "description": "Supports troubleshooting, maintenance visits, and AMC"
+              }
+            ]
+          },
+          "booking": {
+            "eyebrow": "Request Quote",
+            "title": "Get the Hei-Torque Ultimate-100 Overhead Stirrer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Price, demonstration, installation, AMC, and spare parts. The Heidolph Hei-TORQUE Ultimate 100 delivers 100 Ncm to 60,000 mPas, and adds ramp programming, USB and RS232 connectivity, and free Hei-Control software for up to four devices. Tell us what you need to program, connect, or document, and Inkarp will quote the drive, the stand, the shaft, the stirring element, and the integration together.",
+            "fields": [
+              {
+                "key": "name",
+                "label": "Your name",
+                "type": "text",
+                "required": true
+              },
+              {
+                "key": "email",
+                "label": "Email address",
+                "type": "email",
+                "required": true
+              },
+              {
+                "key": "phone",
+                "label": "Phone number",
+                "type": "tel",
+                "required": false
+              },
+              {
+                "key": "organisation",
+                "label": "Organisation / Institute",
+                "type": "text",
+                "required": false
+              },
+              {
+                "key": "city",
+                "label": "City",
+                "type": "text",
+                "required": false
+              },
+              {
+                "key": "medium",
+                "label": "Medium / sample",
+                "type": "text",
+                "required": false
+              },
+              {
+                "key": "viscosity",
+                "label": "Viscosity range",
+                "type": "select",
+                "required": false,
+                "options": [
+                  "Unknown",
+                  "Up to 10,000 mPas",
+                  "10,000 to 60,000 mPas",
+                  "60,000 to 100,000 mPas",
+                  "Above 100,000 mPas"
+                ]
+              },
+              {
+                "key": "volume",
+                "label": "Working volume",
+                "type": "select",
+                "required": false,
+                "options": [
+                  "Under 5 L",
+                  "5 L to 25 L",
+                  "25 L to 50 L",
+                  "Above 50 L"
+                ]
+              },
+              {
+                "key": "requestType",
+                "label": "Request type",
+                "type": "select",
+                "required": true,
+                "options": [
+                  "Demo request",
+                  "Quote request",
+                  "Technical question",
+                  "Service enquiry",
+                  "General enquiry"
+                ]
+              },
+              {
+                "key": "message",
+                "label": "Additional details (optional)",
+                "type": "textarea",
+                "required": false
+              }
+            ],
+            "submitLabel": "Request Quote",
+            "successMessage": "Thanks. Inkarp will review your Hei-Torque Ultimate-100 Overhead Stirrer requirement and contact you."
+          },
+          "heroHighlights": [
+            {
+              "value": "100 Ncm",
+              "label": "Maximum torque"
+            },
+            {
+              "value": "10 to 2,000 rpm",
+              "label": "Speed range, electronically controlled"
+            },
+            {
+              "value": "60,000 mPas",
+              "label": "Maximum viscosity"
+            },
+            {
+              "value": "50 L",
+              "label": "Maximum volume, measured in water"
+            },
+            {
+              "value": "USB and RS232",
+              "label": "Interfaces for PC, PLC, and automation"
+            },
+            {
+              "value": "Ramp programming",
+              "label": "Define and repeat a method"
+            },
+            {
+              "value": "2.5 to 10.5 mm",
+              "label": "Shaft diameter, quick chuck with safety ring"
+            },
+            {
+              "value": "4.4 kg",
+              "label": "Weight"
+            }
+          ],
+          "planners": [
+            {
+              "sectionId": "fit-guide",
+              "eyebrow": "Programming, Connectivity and Torque Guide",
+              "title": "Do you need the automation, or just the torque?",
+              "description": "The Ultimate 100 and the Expert 100 stir identically. The only reason to choose this one is what it connects to and what it can record.",
+              "fields": [
+                {
+                  "key": "capability",
+                  "label": "The capability"
+                },
+                {
+                  "key": "direction",
+                  "label": "Direction"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Run the stirrer from laboratory software",
+                  "capability": "Automated control",
+                  "direction": "USB or RS232, with Hei-Control or your own system",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Repeat a stirring profile exactly",
+                  "capability": "Ramp programming",
+                  "direction": "The Ultimate line; the Expert line cannot program",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Keep a record of torque and speed",
+                  "capability": "Process documentation",
+                  "direction": "Torque trend as a value, plus timer, logged via Hei-Control",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Control several stirrers from one PC",
+                  "capability": "Multi-device control",
+                  "direction": "Hei-Control runs up to 4 devices",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Break up a stubborn suspension",
+                  "capability": "Bidirectional rotation",
+                  "direction": "Reverse the flow to stir up settled solids",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Only stir and heat is not needed, no automation",
+                  "capability": "None of the above",
+                  "direction": "The Expert 100 has the same torque for less",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Medium above 60,000 mPas",
+                  "capability": "Beyond this drive's viscosity limit",
+                  "direction": "Move to an Ultimate 200 or 400",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Volume above 50 litres",
+                  "capability": "Beyond this drive's volume limit",
+                  "direction": "Move to an Ultimate 400",
+                  "cta": "Get Configuration Support"
+                },
+                {
+                  "title": "Shaft thinner than 2.5 mm",
+                  "capability": "Below the chuck range",
+                  "direction": "The Hei-TORQUE Core accepts shafts from 0.5 mm",
+                  "cta": "Get Configuration Support"
+                }
+              ]
+            },
+            {
+              "sectionId": "setup-planner",
+              "eyebrow": "Complete Setup and Integration Configurator",
+              "title": "What is still missing from your order?",
+              "description": "The drive is one of several things you need, and on this model the interface connection is part of the setup.",
+              "fields": [
+                {
+                  "key": "choices",
+                  "label": "Options"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Do you already have a stand and boss head?",
+                  "choices": "Yes, and they fit a Hei-TORQUE; Yes, but unsure they fit; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Will the drive be controlled by software?",
+                  "choices": "Yes, via Hei-Control; Yes, via our own system or PLC; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Which interface will you use?",
+                  "choices": "USB; RS232; Not sure",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Do you need a torque and speed record?",
+                  "choices": "Yes, logged to a PC; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Where will the drive be mounted?",
+                  "choices": "On a stand; In a fume hood; On a reactor superstructure",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is your vessel volume?",
+                  "choices": "Under 10 L; 10 to 30 L; 30 to 50 L; Over 50 L",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is your medium?",
+                  "choices": "Aqueous; Medium viscosity; High viscosity; Suspension with solids",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "Do you already have a stirring shaft?",
+                  "choices": "Yes, within 2.5 to 10.5 mm; Yes, thinner than 2.5 mm; No",
+                  "cta": "Plan My Setup"
+                },
+                {
+                  "title": "What is the stirring job?",
+                  "choices": "Blending; Suspending solids; Dispersing; Stirring near the wall",
+                  "cta": "Plan My Setup"
+                }
+              ],
+              "disclaimer": "A working Ultimate 100 installation consists of the drive, a stand and boss head, a shaft within the 2.5 to 10.5 mm chuck range, a stirring element matched to your medium, and the interface connection to your PC, PLC, or automation system. The Hei-Control software is included. Share your setup and our team will quote the complete installation, integration included."
+            },
+            {
+              "sectionId": "automation-planner",
+              "eyebrow": "Automation and Documentation Planner",
+              "title": "What are you currently doing by hand that this drive could do for you?",
+              "description": "The Ultimate line is bought for what it automates and records, not for what it stirs. Use your own process.",
+              "fields": [
+                {
+                  "key": "why",
+                  "label": "Why it matters"
+                }
+              ],
+              "options": [
+                {
+                  "title": "Whether operators set stirring parameters by hand each time",
+                  "why": "Ramp programming replaces the manual setup with a stored profile",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether the same method gives different results between operators",
+                  "why": "A programmed profile removes the operator from the variation",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether you currently keep a torque or speed record",
+                  "why": "Torque trend as a value, logged via Hei-Control, is a documented record",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether the stirrer needs to be a step in an automated process",
+                  "why": "USB and RS232 connect it to a PLC or automation system",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "How many stirrers you would want to control centrally",
+                  "why": "Hei-Control runs up to 4 devices from one PC",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether your work must be auditable or reproducible",
+                  "why": "A logged number is auditable; an observed reading is not",
+                  "cta": "Talk to Product Expert"
+                },
+                {
+                  "title": "Whether the same torque without automation would do",
+                  "why": "If so, the Expert 100 costs less",
+                  "cta": "Talk to Product Expert"
+                }
+              ],
+              "disclaimer": "The Ultimate 100 adds ramp programming, USB and RS232 connectivity, free Hei-Control software for up to four devices, and a torque trend read out as a documentable value. It stirs exactly what the Expert 100 stirs. Whether the step up is worth it depends on whether you need to program, integrate, or document, not on the medium. Share your process and our team will work it through with you."
+            }
+          ],
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industries using the Hei-Torque Ultimate-100 Overhead Stirrer include pharmaceutical R&D, automated process laboratories, contract research, and regulated QC.",
+            "description": "Select your field to see typical use cases and what to consider.",
+            "industries": [
+              {
+                "name": "Pharmaceutical R&D",
+                "icon": "pill",
+                "note": "Documented, reproducible stirring methods",
+                "bullets": [
+                  "Ramp programming, logged torque, audit needs"
+                ]
+              },
+              {
+                "name": "Automated Process Laboratories",
+                "icon": "cpu",
+                "note": "The stirrer as a controlled step in a larger process",
+                "bullets": [
+                  "USB or RS232, PLC or LabManager integration"
+                ]
+              },
+              {
+                "name": "Contract Research",
+                "icon": "cpu",
+                "note": "Many methods, many operators, full traceability",
+                "bullets": [
+                  "Programmed profiles, logged records"
+                ]
+              },
+              {
+                "name": "Regulated QC",
+                "icon": "flask",
+                "note": "Methods that must be auditable and reproducible",
+                "bullets": [
+                  "Torque trend as a value, Hei-Control logging"
+                ]
+              },
+              {
+                "name": "Chemical Laboratories",
+                "icon": "flask",
+                "note": "Reaction stirring with recorded parameters",
+                "bullets": [
+                  "Documentation, fume hood mounting"
+                ]
+              },
+              {
+                "name": "Polymers and Materials",
+                "icon": "flask",
+                "note": "Monitored reactions within 60,000 mPas",
+                "bullets": [
+                  "Torque readout, headroom against the ceiling"
+                ]
+              },
+              {
+                "name": "Multi-Station Laboratories",
+                "icon": "cpu",
+                "note": "Central control of several drives",
+                "bullets": [
+                  "Hei-Control runs up to 4 devices from one PC"
                 ]
               }
             ]

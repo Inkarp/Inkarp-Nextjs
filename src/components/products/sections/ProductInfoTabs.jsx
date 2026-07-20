@@ -7,6 +7,7 @@ import {
   FiMove, FiThermometer, FiDollarSign,
   FiAward, FiCheckCircle, FiBookOpen, FiDroplet, FiCoffee,
   FiWind, FiClock, FiDownload, FiBook, FiActivity,
+  FiRotateCw, FiPackage, FiVolume2,
 } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 
@@ -78,6 +79,25 @@ const CONFIG_ICON_RULES = [
   { match: (t) => t.includes('glassware'), icon: FiLayers },
   { match: (t) => t.includes('coating'),   icon: FiShield },
   { match: (t) => t.includes('accessor'),  icon: FiTool   },
+];
+
+/* Stats/KPI row: solvent evaporation rates, drive specs, etc. */
+const METRIC_ICON_RULES = [
+  { match: (t) => t.includes('torque trend'),                                                icon: FiTrendingUp },
+  { match: (t) => t.includes('torque'),                                                       icon: FiZap        },
+  { match: (t) => t.includes('viscosity'),                                                    icon: FiActivity   },
+  { match: (t) => t.includes('gear') || t.includes('rpm') || t.includes('rotation') || t.includes('rotary') || t.includes('speed'), icon: FiRotateCw },
+  { match: (t) => t.includes('toluene') || t.includes('acetone') || t.includes('ethanol') || t.includes('methanol') || t.includes('water') || t.includes('volume') || t.includes('capacity') || t.includes('flask'), icon: FiDroplet },
+  { match: (t) => t.includes('usb') || t.includes('rs232') || t.includes('interface') || t.includes('plc') || t.includes('automation') || t.includes('lab 4.0') || t.includes('touch') || t.includes('display'), icon: FiMonitor },
+  { match: (t) => t.includes('program') || t.includes('method') || t.includes('favourites') || t.includes('cleaning'), icon: FiSliders },
+  { match: (t) => t.includes('protection') || /\bip\d{2}\b/.test(t),                          icon: FiShield     },
+  { match: (t) => t.includes('weight'),                                                        icon: FiPackage    },
+  { match: (t) => t.includes('shaft') || t.includes('chuck') || t.includes('kera-disk') || t.includes('plate'), icon: FiTool },
+  { match: (t) => t.includes('power') || t.includes('voltage') || t.includes('input'),        icon: FiZap        },
+  { match: (t) => t.includes('temperature') || t.includes('heating') || t.includes('bath'),   icon: FiThermometer },
+  { match: (t) => t.includes('acoustic') || t.includes('pressure'),                            icon: FiVolume2    },
+  { match: (t) => t.includes('warranty'),                                                      icon: FiAward      },
+  { match: (t) => t.includes('stir'),                                                          icon: FiRotateCw   },
 ];
 
 const DOCS_ICON_RULES = [
@@ -163,12 +183,18 @@ function KPIRow({ kpis }) {
   if (!kpis?.length) return null;
   return (
     <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-      {kpis.map((k) => (
-        <div key={k.label} className="border border-line-light bg-parchment p-4 text-center">
-          <div className="text-2xl font-semibold tracking-tight text-ink">{k.value}</div>
-          <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-black">{k.label}</div>
-        </div>
-      ))}
+      {kpis.map((k) => {
+        const Icon = resolveIcon(k.label, METRIC_ICON_RULES, FiBarChart2);
+        return (
+          <div key={k.label} className="border border-line-light bg-parchment p-4 text-center transition hover:border-red/30">
+            <span className="mx-auto mb-2 flex h-8 w-8 items-center justify-center bg-red/8 text-red">
+              <Icon className="h-4 w-4" />
+            </span>
+            <div className="text-2xl font-semibold tracking-tight text-ink">{k.value}</div>
+            <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-black">{k.label}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }

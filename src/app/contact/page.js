@@ -1,5 +1,6 @@
 import ContactForm from"@/components/contact/ContactForm";
 import LocationCards from"@/components/contact/LocationCards";
+import IndiaNetworkMap from"@/components/contact/IndiaNetworkMap";
 import SupportSection from"@/components/contact/SupportSection";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
 import { buildPageMetadata } from"@/data/pageSeo";
@@ -12,6 +13,7 @@ export default function ContactUs() {
       <BreadcrumbJsonLd path="/contact" />
       <PageBreadcrumbs path="/contact" />
       <LocationCards calm/>
+      <IndiaNetworkMap />
       <SupportSection />
       <ContactForm />
     </main>

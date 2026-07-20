@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FiArrowRight, FiChevronRight, FiGlobe, FiMail } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
@@ -107,21 +107,24 @@ export default async function ProductPage({ params }) {
               )}
             </div>
 
-            <h1 className="max-w-[19ch] text-2xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[32px] lg:text-[34px]">
+            <h1 className=" text-2xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[32px] lg:text-[34px]">
               {product.name}
             </h1>
-            <div className="mt-3 flex flex-wrap items-center gap-2 bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink-soft">
-            <p className="mt-4 max-w-xl text-base font-semibold leading-7 text-red">
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-red/30 bg-red/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red">
+              <FiShield className="h-4 w-4 shrink-0" />
               {PRODUCT_DISTRIBUTOR_NOTE}
-            </p>
+            </div>
 
-            <div className="mt-5 flex flex-wrap gap-2.5">
+            <div className="mt-4 flex flex-wrap gap-2.5">
               {servicePills.map((pill) => (
-                <span key={pill} className="border border-red px-4 py-2 text-xs font-semibold text-red">
+                <span
+                  key={pill}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-red/30 bg-red/5 px-3.5 py-1.5 text-xs font-semibold text-red"
+                >
+                  <FiCheck className="h-3 w-3 shrink-0" />
                   {pill}
                 </span>
               ))}
-            </div>
             </div>
             <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft sm:text-lg">
               {product.longForm?.heroLead ?? product.overview}

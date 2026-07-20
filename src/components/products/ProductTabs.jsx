@@ -9,6 +9,7 @@ import {
   FiStar,
   FiTarget,
 } from "react-icons/fi";
+import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 
 const TABS = ["Specifications", "Key Features", "Applications", "FAQs", "Blog"];
 
@@ -126,21 +127,7 @@ export default function ProductTabs({ technicalSpecs, features, applications, fa
       <div className="mt-4 w-full border border-line-light bg-white p-4 sm:p-6">
         {activeTab === "Specifications" ? (
           (technicalSpecs ?? []).length > 0 ? (
-            <dl className="grid gap-3 sm:grid-cols-2">
-              {(technicalSpecs ?? []).map((spec) => (
-                <div
-                  className="border border-line-light bg-parchment-alt p-4 transition hover:border-red/50"
-                  key={spec.label}
-                >
-                  <dt className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
-                    {spec.label}
-                  </dt>
-                  <dd className="mt-1 text-sm font-semibold text-ink">
-                    {spec.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <TechnicalSpecsTable specs={technicalSpecs ?? []} />
           ) : (
             <EmptyState icon={FiSettings} text="Specifications coming soon." />
           )

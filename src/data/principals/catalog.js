@@ -3,6 +3,7 @@ import heidolphRotaryEvaporatorsCatalog from "./heidolph/rotary-evaporators.json
 import heidolphLargeScaleRotaryEvaporatorsCatalog from "./heidolph/large-scale-rotary-evaporators.json";
 import heidolphMagneticStirrersCatalog from "./heidolph/magnetic-stirrers.json";
 import heidolphOverheadStirrersCatalog from "./heidolph/overhead-stirrers.json";
+import heidolphShakersAndMixersCatalog from "./heidolph/shakers-and-mixers.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
@@ -22,6 +23,7 @@ const principalCatalogs = [
   heidolphLargeScaleRotaryEvaporatorsCatalog,
   heidolphMagneticStirrersCatalog,
   heidolphOverheadStirrersCatalog,
+  heidolphShakersAndMixersCatalog,
   rotzmeierCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),

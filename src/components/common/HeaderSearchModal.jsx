@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { FiX } from "react-icons/fi";
 import ProductSearchBox from "@/components/products/ProductSearchBox";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -37,19 +38,21 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
   return createPortal(
     <div
       aria-modal="true"
-      className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-white opacity-80 animate-[header-search-backdrop_320ms_ease-out]"
+      className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-[#f7f7f7] text-ink animate-[header-search-backdrop_320ms_ease-out]"
       role="dialog"
     >
+      <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#be0010,#161616,#be0010)]" />
+
       <div className="flex items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
         <Link
           aria-label={`${company.name} home`}
-          className="relative block h-9 w-32 shrink-0 sm:h-10 sm:w-40"
+          className="relative block h-9 w-32 shrink-0 rounded-md bg-white p-1 shadow-sm sm:h-10 sm:w-40"
           href="/"
           onClick={onClose}
         >
           <Image
             alt={`${company.name} logo`}
-            className="object-contain object-left invert"
+            className="object-contain object-left"
             fill
             sizes="160px"
             src={company.logo}
@@ -58,20 +61,31 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
 
         <button
           aria-label="Close search"
-          className="text-sm font-semibold uppercase tracking-wide text-black transition hover:text-parchment"
+          className="inline-flex h-11 items-center gap-2 border border-line-light bg-white px-4 text-sm font-semibold text-ink shadow-sm transition hover:border-red/40 hover:text-red focus:outline-none focus:ring-2 focus:ring-red/20"
           onClick={onClose}
           type="button"
         >
-          Close Search
+          <FiX aria-hidden="true" className="text-lg" />
+          Close
         </button>
       </div>
 
-      <div className="mx-auto w-full max-w-4xl flex-1 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:px-8">
-        <h2 className="font-maxot text-4xl font-bold text-black sm:text-6xl">
-          Search
-        </h2>
+      <div className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16 pt-8 sm:px-6 sm:pt-14 lg:px-8">
+        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-red">
+              Inkarp finder
+            </p>
+            <h2 className="font-maxot mt-2 text-4xl font-bold text-ink sm:text-6xl">
+              Search products
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm font-medium leading-6 text-ink-soft">
+            Products, principals, applications, industries
+          </p>
+        </div>
 
-        <div className="mt-10">
+        <div>
           <ProductSearchBox onClose={onClose} products={products} variant="fullscreen" />
         </div>
       </div>

@@ -30,6 +30,7 @@ export const productImageMap = {
   "heidolph:hei-torque-ultimate-400-overhead-stirrer": "/assets/images/productImages/heidolph/hei-torque-ultimate-400-overhead-stirrer.webp",
   "heidolph:reax-top-vortex-mixer": "/assets/images/productImages/heidolph/reax-top-vortex-mixer.webp",
   "heidolph:reax-control-vortex-mixer": "/assets/images/productImages/heidolph/reax-control-vortex-mixer.webp",
+  "heidolph:multi-reax-vortex-mixer": "/assets/images/productImages/heidolph/Multi-Reax2.webp",
   "heidolph:titramax-101-vibrating-shaker": "/assets/images/productImages/heidolph/titramax-101-vibrating-shaker.webp",
   "heidolph:titramax-100-vibrating-shaker": "/assets/images/productImages/heidolph/titramax-100-vibrating-shaker.webp",
   "heidolph:titramax-1000-vibrating-shaker": "/assets/images/productImages/heidolph/titramax-1000-vibrating-shaker.webp",

@@ -16,7 +16,13 @@ export function BreadcrumbJsonLd({ path, trail }) {
 // Pass `path` for a static top-level page (label comes from the pageSeo table),
 // or `trail` — an array of { label, href } — for nested routes like
 // /workflows/[industry]/[topic] that aren't in that table.
-export default function PageBreadcrumbs({ path, trail }) {
+const DEFAULT_CLASSNAME =
+  "mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:px-6 lg:px-8 dark:text-zinc-400";
+
+// `className` lets a caller embed the breadcrumb trail inside its own row
+// (e.g. centered between a logo and a button) instead of the default
+// full-width, self-contained bar.
+export default function PageBreadcrumbs({ path, trail, className = DEFAULT_CLASSNAME }) {
   const steps = trail ?? (path && path !== "/" && pageSeo[path] ? [{ label: pageSeo[path].label, href: path }] : []);
 
   if (steps.length === 0) {
@@ -26,7 +32,7 @@ export default function PageBreadcrumbs({ path, trail }) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:px-6 lg:px-8 dark:text-zinc-400"
+      className={className}
     >
       <Link className="transition hover:text-red" href="/">
         Home

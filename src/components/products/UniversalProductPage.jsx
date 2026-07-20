@@ -3,6 +3,7 @@ import InPageNav from './sections/InPageNav';
 import StatsBar from './sections/StatsBar';
 import ProductInfoTabs from './sections/ProductInfoTabs';
 import EvaporationWorkflow from './sections/EvaporationWorkflow';
+import OrbitVisualizer from './sections/OrbitVisualizer';
 import DistillationSimulator from './sections/DistillationSimulator';
 import SolventCalculator from './sections/SolventCalculator';
 import SuitabilityChecker from './sections/SuitabilityChecker';
@@ -71,6 +72,11 @@ export default function UniversalProductPage({ product }) {
       {/* Evaporation workflow animation */}
       {workflowSection?.steps?.length > 0 && (
         <EvaporationWorkflow section={workflowSection} metrics={performanceSection?.metrics} />
+      )}
+
+      {/* Orbit / vortex mechanism visualiser */}
+      {product.orbitVisualizer && (
+        <OrbitVisualizer data={product.orbitVisualizer} productName={product.name} />
       )}
 
       {/* Distillation simulator */}

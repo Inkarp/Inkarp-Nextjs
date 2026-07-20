@@ -8,6 +8,7 @@ import { getAllProducts, getProductBySlug } from "@/data/products/principals";
 import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
+import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 
 const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor and Service Provider in India";
 
@@ -241,15 +242,11 @@ function LegacyProductContent({ product }) {
           <div className="mx-auto max-w-[1180px]">
             <RecTag>Specifications</RecTag>
             <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">Technical specifications.</h2>
-            <div className="mt-8 overflow-hidden border border-line-light bg-white">
-              <dl className="divide-y divide-line-light">
-                {product.technicalSpecs.map((row) => (
-                  <div key={row.label} className="grid gap-2 px-5 py-3 text-sm sm:grid-cols-[0.38fr_0.62fr]">
-                    <dt className="font-semibold text-ink-soft">{row.label}</dt>
-                    <dd className="text-ink">{row.value}</dd>
-                  </div>
-                ))}
-              </dl>
+            <div className="mt-8">
+              <TechnicalSpecsTable
+                note="Confirm final specifications, accessories, and configuration with Inkarp before ordering."
+                specs={product.technicalSpecs}
+              />
             </div>
           </div>
         </section>

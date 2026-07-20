@@ -1,12 +1,6 @@
 import { Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
-import Footer from "@/components/common/Footer";
-import FloatingChatbot from "@/components/common/FloatingChatbot";
-import FloatingQuickActions from "@/components/common/FloatingQuickActions";
-import Header from "@/components/common/Header";
-import PromoPopup from "@/components/common/PromoPopup";
-import ProductProfileFloat from "@/components/common/ProductProfileFloat";
 import ScrollAnimations from "@/components/common/ScrollAnimations";
 import { ThemeProvider, themeInitScript } from "@/components/common/ThemeProvider";
 import { SITE_AUTHOR, SITE_PUBLISHER, SITE_URL } from "@/data/pageSeo";
@@ -64,16 +58,10 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider>
           <ScrollAnimations />
-          <Header />
-          <div className="relative w-[90%] mx-auto">{children}</div>
-          <Footer />
-          <ProductProfileFloat />
-          <PromoPopup />
-          <FloatingChatbot />
-          <FloatingQuickActions />
-          <SpeedInsights />
-          <Analytics />
+          {children}
         </ThemeProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

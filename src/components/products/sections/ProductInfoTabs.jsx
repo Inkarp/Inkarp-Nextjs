@@ -10,6 +10,7 @@ import {
   FiRotateCw, FiPackage, FiVolume2,
 } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import TechnicalSpecsTable from '../TechnicalSpecsTable';
 
 /* ── Tab config ─────────────────────────────────────── */
 const TABS = [
@@ -331,23 +332,10 @@ export default function ProductInfoTabs({ product }) {
             {introText(specsSec).map((p, i) => (
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
-            <dl className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-              {(product.technicalSpecs ?? []).map((row) => (
-                <div
-                  className="group border border-line-light bg-parchment px-4 py-3 transition hover:border-red/40 hover:bg-white"
-                  key={row.label}
-                >
-                  <dt className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wide text-ink-soft">
-                    <span className="h-1.5 w-1.5 shrink-0 bg-red/50 transition group-hover:bg-red" />
-                    {row.label}
-                  </dt>
-                  <dd className="mt-1.5 text-sm font-semibold leading-snug text-ink">{row.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <p className="mt-4 text-xs text-ink-soft">
-              * Per Heidolph published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering.
-            </p>
+            <TechnicalSpecsTable
+              note="Per published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering."
+              specs={product.technicalSpecs ?? []}
+            />
           </div>
         );
 

@@ -225,16 +225,26 @@ export default function ProductInfoTabs({ product }) {
   }, []);
 
   const section = (key, eyebrow) => lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
+  const sectionAny = (keys = [], eyebrows = []) =>
+    lf.sections?.find((s) => keys.includes(s.key) || eyebrows.includes(s.eyebrow));
   const overviewSec      = section('overview', 'Product overview') ?? lf.sections?.[0];
   const keyFeaturesSec   = section('features', 'Key Features');
   const applicationsSec  = section('applications', 'Applications');
   const specsSec         = section('specs', 'Technical Specs');
   const perfSec          = section('performance', 'Performance');
   const complianceSec    = section('certs', 'Quality and safety');
-  const configSec        = section('config', 'Configuration');
-  const docsSec          = section('docs', 'Documentation');
+  const configSec        = sectionAny(['config', 'configuration'], ['Configuration', 'Configurations', 'Platform Capacity & Sample Compatibility', 'Platform Capacity / Sample Compatibility', 'Attachments', 'Platform Capacity']);
+  const docsSec          = sectionAny(['docs'], ['Documentation', 'Documentation & Resources', 'Documentation and Resources']);
   const solventGuideSec  = section('solventGuide', 'Solvent setup guide');
   const glassSec         = section('glassware', 'Glassware guide');
+  const configCards = configSec?.cards ?? configSec?.metrics?.map((item) => ({
+    title: item.label,
+    description: item.value,
+  })) ?? [];
+  const docsCards = docsSec?.cards ?? docsSec?.resources?.map((item) => ({
+    title: item.title,
+    description: item.description ?? item.note ?? item.type,
+  })) ?? [];
 
   const visibleTabs = TABS.filter(({ key }) => {
     if (key === 'performance') return !!perfSec;
@@ -420,7 +430,7 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2">
-              {(configSec?.cards ?? []).map((c) => (
+              {configCards.map((c) => (
                 <IconCard
                   key={c.title}
                   {...c}
@@ -456,7 +466,7 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {(docsSec?.cards ?? []).map((c) => {
+              {docsCards.map((c) => {
                 const DocIcon = resolveIcon(c.title, DOCS_ICON_RULES);
                 return (
                   <div key={c.title} className="flex items-start gap-3 border border-line-light bg-parchment p-4 transition hover:border-line-light">

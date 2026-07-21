@@ -290,7 +290,8 @@
                     "title": "Circular vibrating",
                     "description": "The movement that drives uniform mixing"
                   }
-                ]
+                ],
+                "key": "overview"
               },
               {
                 "key": "features",
@@ -331,6 +332,12 @@
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Where the Reax top is used"
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical specifications",
+                "description": "The technical specifications of the Reax top Vortex Mixer include a 5 mm orbit, two speed ranges to 3,200 rpm, circular vibrating movement, compact dimensions, low acoustic pressure, and a 51 W shaded-pole drive."
               },
               {
                 "key": "performance",
@@ -1211,7 +1218,115 @@
                 }
               ]
             }
-          }
+          },
+          "configWizard": {
+            "eyebrow": "Configuration helper",
+            "title": "Which Reax top setup should you start from?",
+            "description": "Answer a few questions about tube type, fill level, sample difficulty and operating mode so Inkarp can confirm the right tray, attachment and speed starting point.",
+            "emptyState": "Complete the steps to see the starting Reax top setup.",
+            "disclaimer": "This helper gives a starting point only. Inkarp confirms the final tube tray, attachment, speed range and operating mode for your actual samples.",
+            "steps": [
+              {
+                "key": "sample",
+                "label": "Sample task",
+                "question": "What are you mainly doing with the vortex mixer?",
+                "options": [
+                  {
+                    "val": "quick",
+                    "label": "Quick solution mix",
+                    "desc": "Use short-term press-to-mix operation for fast routine mixing."
+                  },
+                  {
+                    "val": "pellet",
+                    "label": "Cell pellet",
+                    "desc": "Use continuous operation for stubborn pellets that need hands-free dissolving."
+                  },
+                  {
+                    "val": "viscous",
+                    "label": "Viscous media",
+                    "desc": "Use the higher speed range and 5 mm orbit for powerful homogenization."
+                  },
+                  {
+                    "val": "foam",
+                    "label": "Foam-prone sample",
+                    "desc": "Use lower speeds and brief pulses to keep the vortex below the rim."
+                  }
+                ]
+              },
+              {
+                "key": "tube",
+                "label": "Tube fit",
+                "question": "Which vessel format should Inkarp check?",
+                "options": [
+                  {
+                    "val": "standard",
+                    "label": "Standard tubes",
+                    "desc": "Standard test tubes and centrifuge tubes can press directly to the tray."
+                  },
+                  {
+                    "val": "micro",
+                    "label": "Microtubes",
+                    "desc": "Microtubes or small vials may need a specific attachment."
+                  },
+                  {
+                    "val": "unusual",
+                    "label": "Unusual vessels",
+                    "desc": "Ask Inkarp to confirm the right tray or attachment before ordering."
+                  }
+                ]
+              },
+              {
+                "key": "fill",
+                "label": "Fill level",
+                "question": "How full are the tubes usually?",
+                "options": [
+                  {
+                    "val": "low",
+                    "label": "Low fill",
+                    "desc": "More headroom for vigorous vortexing."
+                  },
+                  {
+                    "val": "half",
+                    "label": "Half full",
+                    "desc": "Balance speed and headroom for routine mixing."
+                  },
+                  {
+                    "val": "nearfull",
+                    "label": "Near full",
+                    "desc": "Use lower speeds so the vortex does not climb the rim."
+                  }
+                ]
+              },
+              {
+                "key": "mode",
+                "label": "Operating mode",
+                "question": "How should the Reax top run?",
+                "options": [
+                  {
+                    "val": "touch",
+                    "label": "Short-term",
+                    "desc": "Press the tube to engage shaking and lift it to stop."
+                  },
+                  {
+                    "val": "continuous",
+                    "label": "Continuous",
+                    "desc": "Let the mixer run hands-free for longer dissolving work."
+                  }
+                ]
+              }
+            ],
+            "result": {
+              "title": "Reax top starting setup",
+              "ctaNote": "Send this summary to Inkarp with tube type, fill level, sample viscosity, pellet behavior and preferred mode so the team can confirm the tray, attachment and speed range.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+          "relatedProducts": [
+            "Reax control Vortex Mixer",
+            "Multi Reax Vortex Mixer",
+            "Titramax 101 Vibrating Shaker",
+            "Titramax 100 Vibrating Shaker"
+          ]
         },
         {
           "name": "Reax control Vortex Mixer",
@@ -15577,7 +15692,7 @@
           "name": "Hei-SHAKE Orbital Core Orbital Shaker",
           "slug": "hei-shake-orbital-core-orbital-shaker",
           "image": "/assets/images/productImages/heidolph/Hei-shake.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-SHAKE Orbital Core Orbital Shaker - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Hei-SHAKE Orbital Core Orbital Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/hei-shake-orbital-core-orbital-shaker",
@@ -16839,7 +16954,7 @@
           "name": "Hei-SHAKE Orbital Core 2000 Orbital Shaker",
           "slug": "hei-shake-orbital-core-2000-orbital-shaker",
           "image": "/assets/images/productImages/heidolph/Hei-shake.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-SHAKE Orbital Core 2000 Orbital Shaker - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Hei-SHAKE Orbital Core 2000 Orbital Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/hei-shake-orbital-core-2000-orbital-shaker",
@@ -18178,7 +18293,7 @@
           "name": "Hei-SHAKE Wave Core 3D Shaker",
           "slug": "hei-shake-wave-core-3d-shaker",
           "image": "/assets/images/productImages/heidolph/hei-shake-wave-core-3d-shaker.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-SHAKE Wave Core 3D Shaker 5 degree - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Hei-SHAKE Wave Core 3D Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/hei-shake-wave-core-3d-shaker",
@@ -19530,7 +19645,7 @@
           "name": "Hei-SHAKE Wave Core 2000 3D Shaker",
           "slug": "hei-shake-wave-core-2000-3d-shaker",
           "image": "/assets/images/productImages/heidolph/hei-shake-wave-core-2000-3d-shaker.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-SHAKE Wave Core 2000 3D Shaker 5 degree - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Hei-SHAKE Wave Core 2000 3D Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/hei-shake-wave-core-2000-3d-shaker",
@@ -20887,7 +21002,7 @@
           "name": "Hei-SHAKE Rock Core Rocking Shaker",
           "slug": "hei-shake-rock-core-rocking-shaker",
           "image": "/assets/images/productImages/heidolph/hei-shake-rock-core-rocking-shaker.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-SHAKE Rock Core Rocking Shaker 5 degree - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Hei-SHAKE Rock Core Rocking Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/hei-shake-rock-core-rocking-shaker",
@@ -22243,7 +22358,7 @@
           "name": "Hei-SHAKE Rock Core 2000 Rocking Shaker",
           "slug": "hei-shake-rock-core-2000-rocking-shaker",
           "image": "/assets/images/productImages/heidolph/hei-shake-rock-core-2000-rocking-shaker.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Hei-SHAKE Rock Core 2000 Rocking Shaker 5 degree - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Hei-SHAKE Rock Core 2000 Rocking Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/hei-shake-rock-core-2000-rocking-shaker",
@@ -23616,7 +23731,7 @@
           "name": "Duomax 1030 Rocking Shaker",
           "slug": "duomax-1030-rocking-shaker",
           "image": "/assets/images/productImages/heidolph/duomax-1030-rocking-shaker.webp",
-          "principalImage": "/assets/images/principals/heidolph.png",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
           "imageAlt": "Heidolph Duomax 1030 Rocking Shaker 5 degree tilt angle - authorized distributor and service provider in India",
           "distributorNote": "Inkarp Instruments is the authorized distributor and service provider for Heidolph Duomax 1030 Rocking Shaker in India.",
           "canonicalUrl": "https://www.inkarp.co.in/products/duomax-1030-rocking-shaker",

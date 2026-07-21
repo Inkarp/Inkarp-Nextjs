@@ -82,7 +82,7 @@ export const branches = [
   {
     name: "Vadodara",
     address:
-      "F-31 Yogeshwar Apartments - 1, Opp. Reliance Petrol Pump, Above Ajanta Faras Khana, High Tension Road, Subhanpura, Vadodara - 390023. Gujarat",
+      "435, 4th Floor, Atlantis K10,Sarabhai Campus, Vadodara : 390 007 Gujarat",
     phone: "Sales: 7780411299, Service: 9281014848",
     email: "salesbaroda@inkarp.co.in, servicegujarat@inkarp.co.in",
     position: { sm: ["45%", "32%"], md: ["60%", "18%"], lg: ["57%", "23%"] },

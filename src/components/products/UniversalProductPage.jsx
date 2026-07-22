@@ -202,6 +202,9 @@ export default function UniversalProductPage({ product }) {
             <div>
               <RecTag>{lf.cta.eyebrow}</RecTag>
               <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">{lf.cta.title}</h2>
+              {lf.cta.subheading && (
+                <p className="mt-2 max-w-2xl text-sm font-semibold text-ink">{lf.cta.subheading}</p>
+              )}
               <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft">{lf.cta.description}</p>
             </div>
             <a

@@ -5,6 +5,7 @@ import heidolphMagneticStirrersCatalog from "./heidolph/magnetic-stirrers.json";
 import heidolphOverheadStirrersCatalog from "./heidolph/overhead-stirrers.json";
 import heidolphShakersAndMixersCatalog from "./heidolph/shakers-and-mixers.json";
 import heidolphPeristalticPumpsCatalog from "./heidolph/peristaltic-pumps.json";
+import heidolphVacuumPumpsCatalog from "./heidolph/vacuum-pumps.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
@@ -26,6 +27,7 @@ const principalCatalogs = [
   heidolphOverheadStirrersCatalog,
   heidolphShakersAndMixersCatalog,
   heidolphPeristalticPumpsCatalog,
+  heidolphVacuumPumpsCatalog,
   rotzmeierCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),

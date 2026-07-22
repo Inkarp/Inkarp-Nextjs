@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   FiClock,
   FiChevronDown,
@@ -72,6 +72,7 @@ export default function Header() {
   const [openMobileItem, setOpenMobileItem] = useState(null);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isAtTop, setIsAtTop] = useState(true);
+  const headerRef = useRef(null);
   const topLinks = [
     { label: "Our Story", href: "/our-story" },
     { label: "Awards and Recognitions", href: "/awards" },
@@ -149,8 +150,43 @@ export default function Header() {
 
   const shouldShowHeader = isHeaderVisible || isMenuOpen || isSearchOpen;
 
+  // Publishes the header's real rendered height (0 when it's translated
+  // off-screen) so other sticky elements, like the products page search
+  // bar, can sit flush beneath it instead of guessing a fixed offset.
+  useLayoutEffect(() => {
+    const node = headerRef.current;
+    if (!node) return undefined;
+
+    let frameId;
+    const updateOffset = () => {
+      cancelAnimationFrame(frameId);
+      frameId = requestAnimationFrame(() => {
+        const height = shouldShowHeader ? node.getBoundingClientRect().height : 0;
+        document.documentElement.style.setProperty("--header-offset", `${Math.round(height)}px`);
+      });
+    };
+
+    updateOffset();
+
+    window.addEventListener("load", updateOffset);
+    window.addEventListener("resize", updateOffset);
+
+    const resizeObserver = typeof ResizeObserver !== "undefined"
+      ? new ResizeObserver(updateOffset)
+      : null;
+    resizeObserver?.observe(node);
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      window.removeEventListener("load", updateOffset);
+      window.removeEventListener("resize", updateOffset);
+      resizeObserver?.disconnect();
+    };
+  }, [isAtTop, shouldShowHeader]);
+
   return (
     <header
+      ref={headerRef}
       className={` sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
         }`}
     >

@@ -148,7 +148,7 @@ export default function ProductSearchBox({
                   name="q"
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Type your search keywords here"
-                  type="search"
+                  type="text"
                   value={query}
                 />
               </div>

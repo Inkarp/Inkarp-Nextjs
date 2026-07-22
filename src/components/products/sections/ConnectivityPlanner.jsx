@@ -4,6 +4,7 @@ import { FiArrowRight, FiCheckCircle, FiClipboard, FiCpu, FiInfo, FiWifi } from 
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
 import LeadCaptureForm from './LeadCaptureForm';
+import PeristalticPumpInteractive, { isPeristalticPumpTool } from './PeristalticPumpInteractive';
 
 const DETAIL_ICONS = [FiCpu, FiInfo, FiCheckCircle];
 const DEFAULT_FIELDS = [
@@ -20,6 +21,14 @@ function parseChoices(raw) {
 }
 
 export default function ConnectivityPlanner({ data, productName = 'this system' }) {
+  if (isPeristalticPumpTool(data)) {
+    return <PeristalticPumpInteractive data={data} productName={productName} />;
+  }
+
+  return <GenericConnectivityPlanner data={data} productName={productName} />;
+}
+
+function GenericConnectivityPlanner({ data, productName = 'this system' }) {
   const options = data?.options ?? [];
   const fields = data?.fields?.length ? data.fields : DEFAULT_FIELDS;
   const choicesField = fields.find((field) => field.key === 'choices');

@@ -236,7 +236,7 @@ export default function ProductFilterForm({
               name="q"
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search products, brands, applications..."
-              type="search"
+              type="text"
               value={search}
             />
             {search ? (

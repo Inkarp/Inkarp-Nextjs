@@ -43,7 +43,7 @@ export default async function ProductPage({ params }) {
     .slice(0, 4);
 
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
-  const servicePills = [...new Set([...DEFAULT_PRODUCT_SERVICE_PILLS, ...(product.servicePills ?? [])])];
+  const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
   const heroLead = product.longForm?.heroLead ?? product.overview;
   const heroHookMatch = product.overview?.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/);
   const heroHook = heroHookMatch?.[1]?.trim();

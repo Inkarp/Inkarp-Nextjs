@@ -6,6 +6,13 @@ import heidolphOverheadStirrersCatalog from "./heidolph/overhead-stirrers.json";
 import heidolphShakersAndMixersCatalog from "./heidolph/shakers-and-mixers.json";
 import heidolphPeristalticPumpsCatalog from "./heidolph/peristaltic-pumps.json";
 import heidolphVacuumPumpsCatalog from "./heidolph/vacuum-pumps.json";
+import brukerFtIrResearchSpectrometersCatalog from "./bruker/ft-ir-research-spectrometers.json";
+import brukerFtIrMicroscopesCatalog from "./bruker/ft-ir-microscopes.json";
+import brukerFtIrSpectrometerCatalog from "./bruker/ft-ir-spectrometer.json";
+import brukerFtNirSpectrometerCatalog from "./bruker/ft-nir-spectrometer.json";
+import brukerRamanSpectrometerCatalog from "./bruker/raman-spectrometer.json";
+import brukerRamanMicroscopesCatalog from "./bruker/raman-microscopes.json";
+import brukerProcessMonitoringSpectrometerCatalog from "./bruker/process-monitoring-spectrometer.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
@@ -28,6 +35,13 @@ const principalCatalogs = [
   heidolphShakersAndMixersCatalog,
   heidolphPeristalticPumpsCatalog,
   heidolphVacuumPumpsCatalog,
+  brukerFtIrResearchSpectrometersCatalog,
+  brukerFtIrMicroscopesCatalog,
+  brukerFtIrSpectrometerCatalog,
+  brukerFtNirSpectrometerCatalog,
+  brukerRamanSpectrometerCatalog,
+  brukerRamanMicroscopesCatalog,
+  brukerProcessMonitoringSpectrometerCatalog,
   rotzmeierCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),

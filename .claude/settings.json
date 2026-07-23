@@ -34,7 +34,16 @@
       "Read(//c/tmp/**)",
       "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\6d76857e-545f-4d3f-96bc-5bf00c7db0ff\\\\scratchpad\\\\patch.js\")",
       "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\0675fe77-652e-4789-b67b-f7f6edfe656d\\\\scratchpad\\\\update-seo.js\")",
-      "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\0675fe77-652e-4789-b67b-f7f6edfe656d\\\\scratchpad\\\\compare-seo.js\")"
+      "Bash(node \"C:\\\\Users\\\\Sharath\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-Sharath-Desktop-Inkarp-Nextjs\\\\0675fe77-652e-4789-b67b-f7f6edfe656d\\\\scratchpad\\\\compare-seo.js\")",
+      "Bash(node -e \"console.log\\('node ok'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('c:/Users/Sharath/Desktop/Inkarp-Nextjs/src/data/principals/bruker/ft-ir-research-spectrometers.json','utf8'\\)\\); console.log\\('valid JSON'\\)\")",
+      "Bash(curl -s http://localhost:3000/products/invenio-ft-ir-research-spectrometer -o /tmp/invenio.html)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s http://localhost:3000/products/vertex-80-80v-ft-ir-research-spectrometer -o /tmp/vertex.html)",
+      "Bash(curl -s -o /dev/null -w \"invenio status: %{http_code}\\\\n\" http://localhost:3000/products/invenio-ft-ir-research-spectrometer)",
+      "Bash(curl -s -o /dev/null -w \"tg-ftir stub status: %{http_code}\\\\n\" http://localhost:3000/products/tg-ftir-thermogravimetric-analysis-ft-ir-research-spectrometers)",
+      "Bash(curl -s -o /dev/null -w \"heidolph status: %{http_code}\\\\n\" http://localhost:3000/products/hei-vac-valve-control-vacuum-pump)",
+      "Bash(curl -s http://localhost:3000/products -o /tmp/products.html -w \"products listing status: %{http_code}\\\\n\")"
     ]
   }
 }

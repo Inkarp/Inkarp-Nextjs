@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiChevronRight, FiExternalLink, FiGlobe, FiMail, FiShield } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
@@ -87,15 +87,34 @@ export default async function ProductPage({ params }) {
 
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
-                <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">
-                  <Image
-                    alt={product.principalName}
-                    className="h-5 w-auto object-contain"
-                    height={20}
-                    src={product.principalImage}
-                    width={80}
-                  />
-                </div>
+                product.manufacturerUrl ? (
+                  <a
+                    href={product.manufacturerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`View ${product.name} on the ${product.principalName} website`}
+                    className="inline-flex items-center gap-1.5 border border-line-light bg-white px-3 py-2 transition hover:border-red"
+                  >
+                    <Image
+                      alt={product.principalName}
+                      className="h-5 w-auto object-contain"
+                      height={20}
+                      src={product.principalImage}
+                      width={80}
+                    />
+                    <FiExternalLink className="h-3 w-3 text-ink-soft" />
+                  </a>
+                ) : (
+                  <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">
+                    <Image
+                      alt={product.principalName}
+                      className="h-5 w-auto object-contain"
+                      height={20}
+                      src={product.principalImage}
+                      width={80}
+                    />
+                  </div>
+                )
               ) : null}
 
               {product.category && (

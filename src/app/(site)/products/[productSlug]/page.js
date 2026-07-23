@@ -171,7 +171,7 @@ export default async function ProductPage({ params }) {
 
               {product.image ? (
                 <Image
-                  alt={product.name}
+                  alt={product.imageAlt ?? product.name}
                   className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
                   height={600}
                   src={product.image}

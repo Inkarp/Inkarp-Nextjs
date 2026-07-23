@@ -26,7 +26,7 @@ function getPopupConfig(pathname) {
           "Get practical ideas for modern lab workflows, better product selection, and application-focused decisions.",
         primary: {
           label: "Register Now",
-          href: "/contact",
+          href: "/webinars",
         },
         secondary: {
           label: "",
@@ -45,7 +45,7 @@ function getPopupConfig(pathname) {
         },
         secondary: {
           label: "Talk to Specialist",
-          href: "/contact",
+          href: "/products",
         },
       },
     };

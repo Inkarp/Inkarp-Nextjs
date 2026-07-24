@@ -13,6 +13,10 @@ import brukerFtNirSpectrometerCatalog from "./bruker/ft-nir-spectrometer.json";
 import brukerRamanSpectrometerCatalog from "./bruker/raman-spectrometer.json";
 import brukerRamanMicroscopesCatalog from "./bruker/raman-microscopes.json";
 import brukerProcessMonitoringSpectrometerCatalog from "./bruker/process-monitoring-spectrometer.json";
+import brukerFtIrGasAnalyzerCatalog from "./bruker/ft-ir-gas-analyzer.json";
+import polyscienceChillersCatalog from "./polyscience/chillers.json";
+import polyscienceCirculatingBathsCatalog from "./polyscience/circulating-baths.json";
+import polyscienceWaterBathsCatalog from "./polyscience/water-baths.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
@@ -42,6 +46,10 @@ const principalCatalogs = [
   brukerRamanSpectrometerCatalog,
   brukerRamanMicroscopesCatalog,
   brukerProcessMonitoringSpectrometerCatalog,
+  brukerFtIrGasAnalyzerCatalog,
+  polyscienceChillersCatalog,
+  polyscienceCirculatingBathsCatalog,
+  polyscienceWaterBathsCatalog,
   rotzmeierCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),

@@ -21,6 +21,9 @@ import rotzmeierCatalog from "./rotzmeier/products.json";
 import rotzmeierSafetyBarrelsCatalog from "./rotzmeier/safety-barrels.json";
 import rotzmeierSafetyCanistersCatalog from "./rotzmeier/safety-canisters.json";
 import rotzmeierSafetyCansCatalog from "./rotzmeier/safety-cans.json";
+import rotzmeierAccessoriesCatalog from "./rotzmeier/accessories.json";
+import rotzmeierSafetyFunnelsCatalog from "./rotzmeier/safety-funnels.json";
+import rotzmeierTransportationContainersCatalog from "./rotzmeier/transportation-containers.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
@@ -57,6 +60,9 @@ const principalCatalogs = [
   rotzmeierSafetyBarrelsCatalog,
   rotzmeierSafetyCanistersCatalog,
   rotzmeierSafetyCansCatalog,
+  rotzmeierAccessoriesCatalog,
+  rotzmeierSafetyFunnelsCatalog,
+  rotzmeierTransportationContainersCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];

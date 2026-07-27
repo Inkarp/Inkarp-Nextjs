@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { FiCode, FiX } from "react-icons/fi";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
+import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
 
 const INITIAL_VISIBLE_PRODUCTS = 24;
 const LOAD_MORE_COUNT = 24;
@@ -219,7 +220,7 @@ function ProductApiModal({ product, onClose }) {
 
         <div className="overflow-auto p-4">
           {state.status === "loading" ? (
-            <p className="text-sm text-ink-soft">Loading product data…</p>
+            <p className="text-sm text-ink-soft">Loading product data...</p>
           ) : null}
           {state.status === "error" ? (
             <p className="text-sm text-red">Failed to load: {state.error}</p>
@@ -240,13 +241,11 @@ export default function ProductResultsGrid({
   emptyHref = "/products",
   emptyLinkLabel = "Clear search",
   initialVisibleCount = INITIAL_VISIBLE_PRODUCTS,
+  query = "",
 }) {
   const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
   const [apiModalProduct, setApiModalProduct] = useState(null);
 
-  useEffect(() => {
-    setVisibleCount(initialVisibleCount);
-  }, [initialVisibleCount, products]);
 
   const visibleProducts = useMemo(
     () => products.slice(0, visibleCount),
@@ -256,7 +255,7 @@ export default function ProductResultsGrid({
 
   if (!products.length) {
     return (
-      <div className="mt-4 border border-dashed border-line-light bg-white p-12 text-center">
+      <div className="mt-4 border border-dashed border-line-light bg-white p-5 text-center sm:p-8">
         <h2 className="text-2xl font-semibold tracking-tight text-ink">No products found</h2>
         <p className="mt-2 text-sm text-ink-soft">
           Try another product, principal, country, industry, application, or tag.
@@ -267,6 +266,11 @@ export default function ProductResultsGrid({
         >
           {emptyLinkLabel}
         </Link>
+        <SearchNoResultsForm
+          className="mx-auto mt-6 max-w-3xl"
+          query={query}
+          source="Products page no-result search"
+        />
       </div>
     );
   }

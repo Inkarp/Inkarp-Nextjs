@@ -25,6 +25,7 @@ const FORM_LABELS = {
   catalyst: "CATALYSTCue physical copy request",
   feedback: "Product profile feedback",
   "blog-comment": "Blog comment",
+  "product-search-no-results": "Product search no-result request",
   ...PRODUCT_TOOL_LABELS,
 };
 
@@ -35,12 +36,14 @@ const REQUIRED_FIELDS = {
   catalyst: ["name", "email", "institutionName", "mobileNumber"],
   feedback: ["name", "email", "interests"],
   "blog-comment": ["name", "email", "message"],
+  "product-search-no-results": ["searchQuery", "name", "email", "phone"],
   ...Object.fromEntries(
     Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, ["name", "email", "configuration"]])
   ),
 };
 
 const FORM_RECIPIENTS = {
+  "product-search-no-results": "info@inkarp.co.in",
   ...Object.fromEntries(Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, "info@inkarp.co.in"])),
 };
 
@@ -79,6 +82,8 @@ function acknowledgementFor(formType) {
       return "We have received your feedback. Thank you for sharing your interests with us.";
     case "blog-comment":
       return "We have received your blog comment submission. Thank you for engaging with Inkarp.";
+    case "product-search-no-results":
+      return "We have received your product search request. Our team will check the query and get back to you with suitable options.";
     case "service":
       return "We have received your service request. Our service team will contact you shortly.";
     case "setup-configurator":

@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import { FiArrowUpRight, FiSearch, FiX } from "react-icons/fi";
 import { productMatchesSearch } from "@/lib/productSearch";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
+import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
 
 // Same tracking endpoint the /products search uses. Every submitted global
 // search is recorded before results are shown, whichever entry point it came from.
@@ -212,9 +213,11 @@ export default function ProductSearchBox({
                 ))}
               </div>
             ) : (
-              <p className="mt-5 border border-line-light bg-parchment-alt p-4 text-sm text-ink-soft">
-                No related products found. Try a product name, principal, or industry.
-              </p>
+              <SearchNoResultsForm
+                className="mt-5"
+                query={submittedQuery}
+                source="Global fullscreen no-result search"
+              />
             )}
           </div>
         ) : null}
@@ -338,9 +341,11 @@ export default function ProductSearchBox({
               ))}
             </div>
           ) : (
-            <p className="mt-4 text-sm text-ink-soft">
-              No related products found.
-            </p>
+            <SearchNoResultsForm
+              className="mt-4"
+              query={submittedQuery}
+              source="Product search no-result search"
+            />
           )}
         </div>
       ) : null}

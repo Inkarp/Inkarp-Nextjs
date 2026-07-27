@@ -208,7 +208,11 @@ export default async function ProductsPage({ searchParams }) {
 
       <section className="bg-parchment-alt px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1180px]">
-          <ProductResultsGrid products={productCards} />
+          <ProductResultsGrid
+            key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}`}
+            products={productCards}
+            query={filters.q}
+          />
         </div>
       </section>
     </main>

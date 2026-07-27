@@ -18,6 +18,9 @@ import polyscienceChillersCatalog from "./polyscience/chillers.json";
 import polyscienceCirculatingBathsCatalog from "./polyscience/circulating-baths.json";
 import polyscienceWaterBathsCatalog from "./polyscience/water-baths.json";
 import rotzmeierCatalog from "./rotzmeier/products.json";
+import rotzmeierSafetyBarrelsCatalog from "./rotzmeier/safety-barrels.json";
+import rotzmeierSafetyCanistersCatalog from "./rotzmeier/safety-canisters.json";
+import rotzmeierSafetyCansCatalog from "./rotzmeier/safety-cans.json";
 import beingCatalog from "./being/products.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
@@ -51,6 +54,9 @@ const principalCatalogs = [
   polyscienceCirculatingBathsCatalog,
   polyscienceWaterBathsCatalog,
   rotzmeierCatalog,
+  rotzmeierSafetyBarrelsCatalog,
+  rotzmeierSafetyCanistersCatalog,
+  rotzmeierSafetyCansCatalog,
   beingCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];

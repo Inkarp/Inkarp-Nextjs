@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import { collectTracking } from '@/lib/tracking';
 
 export default function LeadCaptureForm({
   className = '',
@@ -36,6 +37,7 @@ export default function LeadCaptureForm({
           productName,
           productUrl: typeof window !== 'undefined' ? window.location.href : '',
           configuration: summary,
+          ...collectTracking(),
         }),
       });
 

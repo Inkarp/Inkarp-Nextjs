@@ -1,5 +1,18 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
+import { getServerTracking } from "@/lib/tracking";
+
+const TRACKING_KEYS = [
+  "_pageUrl",
+  "_referrerUrl",
+  "_trafficSource",
+  "_trafficMedium",
+  "_utmCampaign",
+  "_utmContent",
+  "_searchKeyword",
+  "_landingPageUrl",
+  "_landingCapturedAt",
+];
 
 export const runtime = "nodejs";
 
@@ -78,6 +91,7 @@ export async function POST(request) {
   }
 
   const { deviceType, userAgent } = getDeviceInfo(request);
+  const rawTracking = Object.fromEntries(TRACKING_KEYS.map((key) => [key, fieldValue(formData, key)]));
   const submission = {
     formType: "career",
     formLabel: "Career application",
@@ -85,6 +99,7 @@ export async function POST(request) {
     resumeName: resume.name,
     resumeType: resume.type,
     resumeSize: resume.size,
+    ...getServerTracking(request, rawTracking),
     clientIp: getClientIp(request),
     deviceType,
     userAgent,

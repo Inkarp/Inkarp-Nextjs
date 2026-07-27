@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FiArrowRight, FiCheckCircle, FiMail, FiMapPin, FiPhone, FiTool, FiUser } from "react-icons/fi";
 import RecTag from "./RecTag";
+import { collectTracking } from "@/lib/tracking";
 
 const initialForm = {
   productName: "",
@@ -24,17 +25,6 @@ const inquiryTypes = [
   "Service enquiry",
   "General enquiry",
 ];
-
-function getMetaInfo() {
-  if (typeof window === "undefined") {
-    return { pageUrl: "", referrer: "" };
-  }
-
-  return {
-    pageUrl: window.location.href,
-    referrer: document.referrer || "",
-  };
-}
 
 function Field({ icon: Icon, label, children }) {
   return (
@@ -74,7 +64,7 @@ export default function HomeProductEnquiry() {
           formType: "demo-booking",
           source: "Home page product demo/enquiry form",
           ...form,
-          ...getMetaInfo(),
+          ...collectTracking(),
         }),
       });
 

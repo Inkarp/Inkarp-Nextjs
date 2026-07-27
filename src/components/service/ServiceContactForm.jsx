@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import RecTag from "@/components/home/RecTag";
+import { collectTracking } from "@/lib/tracking";
 
 const inputClass =
   "w-full border border-line-light bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20";
@@ -52,7 +53,7 @@ export default function ServiceContactForm() {
 
     try {
       const response = await fetch("/api/forms", {
-        body: JSON.stringify({ formType: "service", ...form }),
+        body: JSON.stringify({ formType: "service", ...form, ...collectTracking() }),
         headers: { "Content-Type": "application/json" },
         method: "POST",
       });

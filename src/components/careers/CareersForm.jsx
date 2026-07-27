@@ -14,6 +14,7 @@ import {
   FiX,
   FiAlertCircle,
 } from"react-icons/fi";
+import { collectTracking } from"@/lib/tracking";
 
 const initialFormData = {
   name:"",
@@ -120,6 +121,9 @@ export default function CareersForm() {
     try {
       const formDataToSend = new FormData();
       Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value ??"");
+      });
+      Object.entries(collectTracking()).forEach(([key, value]) => {
         formDataToSend.append(key, value ??"");
       });
 

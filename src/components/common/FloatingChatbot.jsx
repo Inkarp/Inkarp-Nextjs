@@ -23,6 +23,7 @@ import {
   CHATBOT_WORKFLOW_RESULTS,
 } from "@/data/chatbotConfig";
 import Image from "next/image";
+import { collectTracking as collectBaseTracking } from "@/lib/tracking";
 
 const INPUT_CLASS =
   "w-full rounded-lg border border-line-light bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/10 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500";
@@ -83,34 +84,9 @@ function getDeviceType() {
   return "Desktop";
 }
 
-function getSearchKeyword(referrerUrl, params) {
-  const utmTerm = params.get("utm_term");
-  if (utmTerm) return utmTerm;
-  try {
-    const referrer = new URL(referrerUrl);
-    return referrer.searchParams.get("q") || referrer.searchParams.get("query") || referrer.searchParams.get("p") || "";
-  } catch {
-    return "";
-  }
-}
-
 function collectTracking() {
-  const params = new URLSearchParams(window.location.search);
-  const referrerUrl = document.referrer || "";
-  let referrerHost = "";
-  try {
-    referrerHost = referrerUrl ? new URL(referrerUrl).hostname : "";
-  } catch {
-    referrerHost = "";
-  }
   return {
-    _pageUrl: window.location.href,
-    _referrerUrl: referrerUrl,
-    _trafficSource: params.get("utm_source") || referrerHost || "Direct",
-    _trafficMedium: params.get("utm_medium") || (referrerHost ? "referral" : "direct"),
-    _utmCampaign: params.get("utm_campaign") || "",
-    _utmContent: params.get("utm_content") || "",
-    _searchKeyword: getSearchKeyword(referrerUrl, params),
+    ...collectBaseTracking(),
     _deviceType: getDeviceType(),
     _userAgent: navigator.userAgent || "",
   };

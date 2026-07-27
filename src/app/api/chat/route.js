@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import { getDb } from "@/lib/mongodb";
 import { CHATBOT_CONFIG, CHATBOT_FIELDS } from "@/data/chatbotConfig";
+import { getServerTracking as getBaseTracking } from "@/lib/tracking";
 
 const ALLOWED_CATEGORIES = new Set(["Product", "Service", "Quote", "Talk to expert", "Workflow quiz"]);
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -68,24 +69,11 @@ function getHostUrl(request) {
 
 function getServerTracking(request, payload = {}) {
   const userAgent = request.headers.get("user-agent") || payload._userAgent || "";
-  const referrerUrl = payload._referrerUrl || request.headers.get("referer") || "";
-  const pageUrl = payload._pageUrl || referrerUrl || getHostUrl(request);
-  let referrerHost = "";
-
-  try {
-    referrerHost = referrerUrl ? new URL(referrerUrl).hostname : "";
-  } catch {
-    referrerHost = "";
-  }
+  const base = getBaseTracking(request, payload);
 
   return {
-    _pageUrl: pageUrl,
-    _referrerUrl: referrerUrl,
-    _trafficSource: payload._trafficSource || referrerHost || "Direct",
-    _trafficMedium: payload._trafficMedium || (referrerHost ? "referral" : "direct"),
-    _utmCampaign: payload._utmCampaign || "",
-    _utmContent: payload._utmContent || "",
-    _searchKeyword: payload._searchKeyword || "",
+    ...base,
+    _pageUrl: base._pageUrl || getHostUrl(request),
     _deviceType: payload._deviceType || getDeviceTypeFromUserAgent(userAgent),
     _userAgent: userAgent,
     _trackingCapturedAt: new Date(),
@@ -217,6 +205,8 @@ async function sendChatEmail(submission) {
     ["utmCampaign", submission._utmCampaign],
     ["utmContent", submission._utmContent],
     ["searchKeyword", submission._searchKeyword],
+    ["landingPageUrl", submission._landingPageUrl],
+    ["landingCapturedAt", submission._landingCapturedAt],
     ["deviceType", submission._deviceType],
     ["ip", submission.visitorIp],
     ["userAgent", submission._userAgent],

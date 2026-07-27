@@ -1,5 +1,6 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
+import { getServerTracking } from "@/lib/tracking";
 
 // Product-page "pick something, then send it to Inkarp" tools. They all
 // share the same required fields (name/email/configuration) and all route
@@ -131,6 +132,7 @@ export async function POST(request) {
     formType,
     formLabel: FORM_LABELS[formType] ?? formType,
     ...fields,
+    ...getServerTracking(request, fields),
     clientIp: getClientIp(request),
     deviceType,
     userAgent,

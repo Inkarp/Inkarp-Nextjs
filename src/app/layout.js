@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import ScrollAnimations from "@/components/common/ScrollAnimations";
+import TrackingCapture from "@/components/common/TrackingCapture";
 import { ThemeProvider, themeInitScript } from "@/components/common/ThemeProvider";
 import { SITE_AUTHOR, SITE_PUBLISHER, SITE_URL } from "@/data/pageSeo";
 import "./globals.css";
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider>
           <ScrollAnimations />
+          <TrackingCapture />
           {children}
         </ThemeProvider>
         <SpeedInsights />

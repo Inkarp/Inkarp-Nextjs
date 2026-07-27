@@ -15,45 +15,13 @@ import {
   FiUsers,
   FiX,
 } from"react-icons/fi";
+import { collectTracking } from"@/lib/tracking";
 
 const startOfToday = () => {
   const d = new Date();
   d.setHours(0, 0, 0, 0);
   return d;
 };
-
-function getMetaInfo() {
-  if (typeof window ==="undefined") {
-    return { pageUrl:"", referrer:"", searchKeyword:"" };
-  }
-
-  const pageUrl = window.location.href;
-  const referrer = document.referrer ||"";
-  let searchKeyword ="";
-
-  try {
-    if (referrer && referrer.includes("google.")) {
-      const refUrl = new URL(referrer);
-      const q = refUrl.searchParams.get("q");
-      if (q) {
-        searchKeyword = q;
-      }
-    }
-
-    const currentUrl = new URL(pageUrl);
-    const utmTerm =
-      currentUrl.searchParams.get("utm_term") ||
-      currentUrl.searchParams.get("keyword");
-
-    if (!searchKeyword && utmTerm) {
-      searchKeyword = utmTerm;
-    }
-  } catch (error) {
-    console.warn("Error parsing search keyword:", error);
-  }
-
-  return { pageUrl, referrer, searchKeyword };
-}
 
 function InputField({ name, label, value, onChange, required = false, type ="text", icon: Icon }) {
   return (
@@ -108,7 +76,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
     country:"",
     state:"",
     city:"",
-    ...getMetaInfo(),
+    ...collectTracking(),
   });
 
   const [formData, setFormData] = useState(getInitialFormData);

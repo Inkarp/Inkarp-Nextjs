@@ -34,7 +34,10 @@ function escapeHtml(value = "") {
 }
 
 function renderRow([key, value]) {
-  const label = key.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase());
+  const label = key
+    .replace(/^_/, "")
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, (c) => c.toUpperCase());
   return `<tr><td style="padding:6px 12px;font-weight:600;color:#444;white-space:nowrap;vertical-align:top;border:1px solid #e6e6e6;background:#fafafa;">${escapeHtml(label)}</td><td style="padding:6px 12px;color:#111;border:1px solid #e6e6e6;white-space:pre-wrap;">${escapeHtml(value ?? "")}</td></tr>`;
 }
 

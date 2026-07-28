@@ -41,7 +41,7 @@ export default function Companies() {
 
   return (
     <section className="bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-20" data-reveal>
-      <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <div className="mx-auto grid max-w-[1180px] gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div>
           <RecTag>{groupCompanies.heading}</RecTag>
           <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">

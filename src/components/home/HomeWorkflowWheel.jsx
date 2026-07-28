@@ -84,8 +84,9 @@ export default function HomeWorkflowWheel() {
 
         <div className="flex flex-col-reverse items-center gap-8 lg:flex-row lg:items-center lg:gap-11">
           <div className="flex w-full flex-1 flex-col items-center">
-            <div className="mx-auto h-[310px] w-[620px] origin-top scale-[0.5] sm:h-[360px] sm:scale-[0.58] lg:h-[620px] lg:scale-100">
-              <div className="relative h-[620px] w-[620px]">
+            <div className="relative h-[310px] w-[310px] overflow-hidden sm:h-[360px] sm:w-[360px] lg:h-[620px] lg:w-[620px] lg:overflow-visible">
+              <div className="absolute left-1/2 top-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/2 scale-[0.5] sm:scale-[0.58] lg:scale-100">
+                <div className="relative h-[620px] w-[620px]">
                 <div
                   className="absolute inset-[10px] rounded-full border border-line-light bg-white transition-transform duration-1000 will-change-transform"
                   style={{ transform: `rotate(${rotation}deg)`, transitionTimingFunction: EASE }}
@@ -124,7 +125,7 @@ export default function HomeWorkflowWheel() {
                       >
                         <span
                           className={`relative mx-auto flex h-[66px] w-[66px] items-center justify-center rounded-full border-2 border-white shadow-sm ${
-                            i % 2 === 0 ? "bg-red/8 text-red" : "bg-teal/10 text-teal"
+                            i % 2 === 0 ? "bg-white text-red" : "bg-[#F5F5F5] text-teal"
                           }`}
                         >
                           <StepIcon index={i} className="h-6 w-6" />
@@ -150,7 +151,7 @@ export default function HomeWorkflowWheel() {
                       hubSwapping ? "opacity-0" : "opacity-100"
                     }`}
                   >
-                    <WorkflowIcon cat={active.cat} className="h-[22px] w-[22px]" />
+                    <WorkflowIcon cat={active.cat} className="h-[28px] w-[28px]" />
                   </span>
                   <div
                     className={`text-[15.5px] font-semibold leading-tight text-ink transition-opacity duration-300 ${
@@ -171,6 +172,7 @@ export default function HomeWorkflowWheel() {
                 </div>
               </div>
             </div>
+          </div>
 
             <ol className="mt-6 w-full max-w-md divide-y divide-line-light border-t border-line-light lg:hidden">
               {steps.map((step, i) => (

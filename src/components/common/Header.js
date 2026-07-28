@@ -73,6 +73,7 @@ export default function Header() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isAtTop, setIsAtTop] = useState(true);
   const headerRef = useRef(null);
+  const headerSpacerHeightRef = useRef(124);
   const topLinks = [
     { label: "Our Story", href: "/our-story" },
     { label: "Awards and Recognitions", href: "/awards" },
@@ -129,7 +130,7 @@ export default function Header() {
       const direction = delta > 0 ? "down" : "up";
 
       if (direction !== committedDirection) {
-        // Direction just reversed — start measuring fresh from here instead
+        // Direction just reversed - start measuring fresh from here instead
         // of acting immediately, so a brief wiggle can't flip visibility.
         committedDirection = direction;
         anchorScrollY = currentScrollY;
@@ -150,9 +151,8 @@ export default function Header() {
 
   const shouldShowHeader = isHeaderVisible || isMenuOpen || isSearchOpen;
 
-  // Publishes the header's real rendered height (0 when it's translated
-  // off-screen) so other sticky elements, like the products page search
-  // bar, can sit flush beneath it instead of guessing a fixed offset.
+  // Publishes the header's real visible height for sticky children while a
+  // stable spacer keeps the fixed header from moving page content on scroll.
   useLayoutEffect(() => {
     const node = headerRef.current;
     if (!node) return undefined;
@@ -161,8 +161,20 @@ export default function Header() {
     const updateOffset = () => {
       cancelAnimationFrame(frameId);
       frameId = requestAnimationFrame(() => {
-        const height = shouldShowHeader ? node.getBoundingClientRect().height : 0;
-        document.documentElement.style.setProperty("--header-offset", `${Math.round(height)}px`);
+        const height = Math.round(node.getBoundingClientRect().height);
+        const visibleHeight = shouldShowHeader ? height : 0;
+
+        if (isAtTop && height > 0) {
+          headerSpacerHeightRef.current = height;
+          document.documentElement.style.setProperty("--header-spacer", `${height}px`);
+        } else if (!document.documentElement.style.getPropertyValue("--header-spacer")) {
+          document.documentElement.style.setProperty(
+            "--header-spacer",
+            `${headerSpacerHeightRef.current}px`
+          );
+        }
+
+        document.documentElement.style.setProperty("--header-offset", `${visibleHeight}px`);
       });
     };
 
@@ -185,11 +197,12 @@ export default function Header() {
   }, [isAtTop, shouldShowHeader]);
 
   return (
-    <header
-      ref={headerRef}
-      className={` sticky top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
-        }`}
-    >
+    <>
+      <header
+        ref={headerRef}
+        className={`fixed inset-x-0 top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out will-change-transform ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
+          }`}
+      >
       <div
         className={`overflow-hidden bg-black text-parchment transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
             ? "max-h-40 opacity-100"
@@ -450,6 +463,12 @@ export default function Header() {
         onClose={() => setIsSearchOpen(false)}
         products={headerSearchProducts}
       />
-    </header>
+      </header>
+      <div
+        aria-hidden="true"
+        className="shrink-0"
+        style={{ height: "var(--header-spacer, 124px)" }}
+      />
+    </>
   );
 }

@@ -71,8 +71,8 @@ function SlideAbout() {
       <div className="mx-auto max-w-[1180px]">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <div className="mb-6 flex items-start gap-6">
-              <div className="relative flex h-[104px] w-[104px] shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red">
+            <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
+              <div className="relative flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:h-[104px] sm:w-[104px]">
                 <div className="absolute inset-2 rounded-full border border-dashed border-red/40" />
                 <span className="text-[19px] font-semibold tracking-wide">1985</span>
                 <span className="mt-0.5 text-[8.5px] uppercase tracking-[0.16em]">Est. &amp; Trusted</span>
@@ -134,7 +134,7 @@ function SlideAbout() {
 // Dummy copy — swap in real product details once the launch is finalised.
 function SlideFutureProducts() {
   return (
-    <div className="bg-parchment-alt px-4 pb-15 pt-19 sm:px-6 lg:px-8">
+    <div className="bg-white px-4 pb-15 pt-19 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>

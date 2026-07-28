@@ -115,7 +115,7 @@ export default function HomeEventsInsights() {
 
   return (
     <section className="bg-white py-[78px]" id="events-insights" data-reveal>
-      <div className="mx-auto max-w-[1180px] px-8">
+      <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <div className="mb-10">
           <RecTag>What&apos;s Happening</RecTag>
           <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">

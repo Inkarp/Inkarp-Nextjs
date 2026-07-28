@@ -27,7 +27,7 @@ const serviceCards = [
 export default function HomeAchievements() {
   return (
     <section className="bg-white py-16" id="service-support" data-reveal>
-      <div className="mx-auto max-w-[1180px] px-8">
+      <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
           <div>
             <RecTag>Service Support</RecTag>

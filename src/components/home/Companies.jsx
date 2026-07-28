@@ -91,7 +91,7 @@ export default function Companies() {
                 href={company.href}
                 className="flex-1 rounded-xl bg-parchment-alt p-5 transition hover:bg-parchment-alt/70"
               >            
-                <div className="mt-3 flex items-start gap-4">              
+                <div className="mt-3 flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
                   <span className="relative bg-white p-2 rounded-xl h-12 w-24 shrink-0">
                     <Image
                       src={company.logo}

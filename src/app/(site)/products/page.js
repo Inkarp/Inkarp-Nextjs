@@ -142,9 +142,9 @@ export default async function ProductsPage({ searchParams }) {
           <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
               <RecTag>Scientific Instruments</RecTag>
-              <h1 className="max-w-[13ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
-                Products and solutions
-                <em className="italic text-red"> for every lab workflow.</em>
+              <h1 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+                Products and solutions for 
+                <em className="italic text-red"> every lab workflow.</em>
               </h1>
               <p className="my-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg">
                 Find the right instrument by product category, application, industry, or

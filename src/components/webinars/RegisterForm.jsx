@@ -15,7 +15,7 @@ import {
   FiUsers,
   FiX,
 } from"react-icons/fi";
-import { collectTracking } from"@/lib/tracking";
+import { collectTracking } from"@/lib/browserTracking";
 
 const startOfToday = () => {
   const d = new Date();
@@ -76,7 +76,6 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
     country:"",
     state:"",
     city:"",
-    ...collectTracking(),
   });
 
   const [formData, setFormData] = useState(getInitialFormData);
@@ -136,7 +135,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
 
     try {
       const response = await fetch("/api/forms", {
-        body: JSON.stringify({ formType:"webinar", ...formData }),
+        body: JSON.stringify({ formType:"webinar", ...formData, ...collectTracking() }),
         headers: {"Content-Type":"application/json" },
         method:"POST",
       });

@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import { getDb } from "@/lib/mongodb";
 import { CHATBOT_CONFIG, CHATBOT_FIELDS } from "@/data/chatbotConfig";
-import { getServerTracking as getBaseTracking } from "@/lib/tracking";
+import { getClientIp, normalizeTracking, omitTrackingFields, buildTrackingEmailHtml } from "@/lib/serverTracking";
 
 const ALLOWED_CATEGORIES = new Set(["Product", "Service", "Quote", "Talk to expert", "Workflow quiz"]);
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -53,37 +53,6 @@ function formatValue(value) {
 
 function labelize(key) {
   return key.replace(/^_/, "").replace(/([A-Z])/g, " $1").replace(/^./, (letter) => letter.toUpperCase());
-}
-
-function getDeviceTypeFromUserAgent(userAgent = "") {
-  if (/ipad|tablet/i.test(userAgent)) return "Tablet";
-  if (/mobile|android|iphone|ipod/i.test(userAgent)) return "Mobile";
-  return "Desktop";
-}
-
-function getHostUrl(request) {
-  const proto = request.headers.get("x-forwarded-proto") || "https";
-  const host = request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
-  return host ? `${proto}://${host}` : "";
-}
-
-function getServerTracking(request, payload = {}) {
-  const userAgent = request.headers.get("user-agent") || payload._userAgent || "";
-  const base = getBaseTracking(request, payload);
-
-  return {
-    ...base,
-    _pageUrl: base._pageUrl || getHostUrl(request),
-    _deviceType: payload._deviceType || getDeviceTypeFromUserAgent(userAgent),
-    _userAgent: userAgent,
-    _trackingCapturedAt: new Date(),
-  };
-}
-
-function getClientIp(request) {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-  return request.headers.get("cf-connecting-ip") || request.headers.get("x-real-ip") || "Not available";
 }
 
 function checkRateLimit(ip) {
@@ -193,26 +162,25 @@ function getTransporter() {
   return transporter;
 }
 
+function renderTrackingTable(tracking, headerColor) {
+  return `
+    <table style="width:100%;border-collapse:collapse;margin:0 0 18px 0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111827;">
+      <thead>
+        <tr>
+          <th colspan="2" style="background:${headerColor};color:#ffffff;text-align:left;padding:10px 12px;border:1px solid #e5e7eb;font-size:15px;">Visitor &amp; Campaign Tracking</th>
+        </tr>
+      </thead>
+      <tbody>${buildTrackingEmailHtml(tracking)}</tbody>
+    </table>
+  `;
+}
+
 async function sendChatEmail(submission) {
   const to = process.env.COMPANY_EMAIL || process.env.MAIL_TO || "sharath@inkarp.co.in";
   const from = process.env.MAIL_FROM || process.env.SMTP_USER;
   const brandBlue = CHATBOT_CONFIG.colors.brandBlue;
-  const visitorRows = [
-    ["pageUrl", submission._pageUrl],
-    ["referrerUrl", submission._referrerUrl],
-    ["trafficSource", submission._trafficSource],
-    ["trafficMedium", submission._trafficMedium],
-    ["utmCampaign", submission._utmCampaign],
-    ["utmContent", submission._utmContent],
-    ["searchKeyword", submission._searchKeyword],
-    ["landingPageUrl", submission._landingPageUrl],
-    ["landingCapturedAt", submission._landingCapturedAt],
-    ["deviceType", submission._deviceType],
-    ["ip", submission.visitorIp],
-    ["userAgent", submission._userAgent],
-  ];
   const submissionRows = Object.entries(submission).filter(
-    ([key]) => !["_id", "submittedAt", "visitorIp"].includes(key) && !key.startsWith("_")
+    ([key]) => !["_id", "submittedAt", "tracking"].includes(key)
   );
 
   await getTransporter().sendMail({
@@ -224,8 +192,8 @@ async function sendChatEmail(submission) {
       <div style="background:#f3f4f6;padding:20px;">
         <div style="max-width:820px;margin:0 auto;background:#ffffff;padding:20px;border:1px solid #e5e7eb;">
           <h2 style="margin:0 0 16px 0;color:#111827;font-family:Arial,Helvetica,sans-serif;">${escapeHtml(CHATBOT_CONFIG.emailSubject)}</h2>
-          ${renderTable("Visitor Intelligence", visitorRows, brandBlue)}
           ${renderTable("Submission Details", submissionRows, brandBlue)}
+          ${renderTrackingTable(submission.tracking, brandBlue)}
         </div>
       </div>
     `,
@@ -252,10 +220,10 @@ export async function POST(request) {
   const cleanPayload = Object.fromEntries(
     Object.entries(payload).filter(([key]) => key !== "website")
   );
+  const tracking = normalizeTracking(cleanPayload, visitorIp);
   const submission = {
-    ...cleanPayload,
-    ...getServerTracking(request, cleanPayload),
-    visitorIp,
+    ...omitTrackingFields(cleanPayload),
+    tracking,
     submittedAt: new Date(),
   };
   let insertedId;

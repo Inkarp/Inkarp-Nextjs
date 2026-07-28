@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FiArrowRight, FiCheckCircle, FiMail, FiMapPin, FiPhone, FiTool, FiUser } from "react-icons/fi";
 import RecTag from "./RecTag";
-import { collectTracking } from "@/lib/tracking";
+import { collectTracking } from "@/lib/browserTracking";
 
 const initialForm = {
   productName: "",

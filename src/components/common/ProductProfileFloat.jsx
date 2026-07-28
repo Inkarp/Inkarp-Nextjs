@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FiMessageCircle, FiSend, FiX } from "react-icons/fi";
+import { collectTracking } from "@/lib/browserTracking";
 
 const initialFormData = {
   name: "",
@@ -37,6 +38,7 @@ export default function ProductProfileFloat() {
           ...formData,
           inquiryType: "Feedback Form",
           message: `Interests: ${formData.interests}\n\n${formData.message}`,
+          ...collectTracking(),
         }),
       });
 

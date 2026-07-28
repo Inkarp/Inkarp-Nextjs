@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState } from 'react';
 import SectionHeader from './SectionHeader';
+import { collectTracking } from '@/lib/browserTracking';
 
 const EXTRA_FIELDS = [
   { key: 'designation', label: 'Designation', type: 'text', required: false },
@@ -57,7 +58,7 @@ export default function DemoBooking({ data, productName }) {
       const response = await fetch('/api/forms', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ formType: 'demo-booking', productName, ...form }),
+        body: JSON.stringify({ formType: 'demo-booking', productName, ...form, ...collectTracking() }),
       });
       const result = await response.json().catch(() => ({}));
 

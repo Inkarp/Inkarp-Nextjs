@@ -1,6 +1,6 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
-import { getServerTracking } from "@/lib/tracking";
+import { normalizeTracking, omitTrackingFields } from "@/lib/serverTracking";
 
 // Product-page "pick something, then send it to Inkarp" tools. They all
 // share the same required fields (name/email/configuration) and all route
@@ -47,25 +47,6 @@ const FORM_RECIPIENTS = {
   "product-search-no-results": "info@inkarp.co.in",
   ...Object.fromEntries(Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, "info@inkarp.co.in"])),
 };
-
-function getClientIp(request) {
-  const cfIp = request.headers.get("cf-connecting-ip");
-  if (cfIp) return cfIp;
-
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-
-  return request.headers.get("x-real-ip") || "Not available";
-}
-
-function getDeviceInfo(request) {
-  const userAgent = request.headers.get("user-agent") || "";
-  const isMobile = /mobile|android|iphone|ipad|ipod/i.test(userAgent);
-  return {
-    deviceType: isMobile ? "Mobile / Tablet" : "Desktop / Laptop",
-    userAgent,
-  };
-}
 
 function validate(formType, fields) {
   const required = REQUIRED_FIELDS[formType] || [];
@@ -127,15 +108,12 @@ export async function POST(request) {
     );
   }
 
-  const { deviceType, userAgent } = getDeviceInfo(request);
+  const tracking = normalizeTracking(fields, request);
   const submission = {
     formType,
     formLabel: FORM_LABELS[formType] ?? formType,
-    ...fields,
-    ...getServerTracking(request, fields),
-    clientIp: getClientIp(request),
-    deviceType,
-    userAgent,
+    ...omitTrackingFields(fields),
+    tracking,
     submittedAt: new Date(),
   };
 
@@ -154,6 +132,7 @@ export async function POST(request) {
     await sendFormNotification({
       subject: `New ${FORM_LABELS[formType] ?? formType} submission`,
       fields: submission,
+      tracking,
       replyTo: fields.email,
       to: FORM_RECIPIENTS[formType],
     });

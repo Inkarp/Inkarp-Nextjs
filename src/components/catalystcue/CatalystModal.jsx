@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from"react";
 import { MdClose } from"react-icons/md";
+import { collectTracking } from"@/lib/browserTracking";
 
 const initialFormData = {
   name:"",
@@ -66,8 +67,7 @@ export default function CatalystModal({ onClose }) {
         body: JSON.stringify({
           formType:"catalyst",
           ...formData,
-          pageUrl: window.location.href,
-          referrer: document.referrer ||"",
+          ...collectTracking(),
         }),
         headers: {"Content-Type":"application/json" },
         method:"POST",

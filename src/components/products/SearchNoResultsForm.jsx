@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FiArrowRight, FiCheckCircle, FiMail, FiPhone, FiSearch, FiUser } from "react-icons/fi";
-import { collectTracking } from "@/lib/tracking";
+import { collectTracking } from "@/lib/browserTracking";
 
 const inputClass =
   "h-11 w-full border border-line-light bg-white px-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/20";

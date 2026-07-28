@@ -6,7 +6,7 @@ import { useState } from"react";
 import { FiArrowRight, FiClock, FiMail, FiMapPin, FiPhoneCall } from"react-icons/fi";
 import { siteConfig } from"@/data/siteConfig";
 import RecTag from"@/components/home/RecTag";
-import { collectTracking } from"@/lib/tracking";
+import { collectTracking } from"@/lib/browserTracking";
 
 const inputClass ="min-h-14 w-full border border-line-light bg-parchment-alt px-5 text-sm font-medium text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/70 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/15";
 
@@ -24,7 +24,6 @@ function getInitialFormData() {
     purchaseTimeline:"",
     application:"",
     message:"",
-    ...collectTracking(),
   };
 }
 
@@ -74,7 +73,7 @@ export default function ContactForm() {
 
     try {
       const response = await fetch("/api/forms", {
-        body: JSON.stringify({ formType:"contact", ...formData }),
+        body: JSON.stringify({ formType:"contact", ...formData, ...collectTracking() }),
         headers: {"Content-Type":"application/json",
         },
         method:"POST",

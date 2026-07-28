@@ -1,18 +1,6 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
-import { getServerTracking } from "@/lib/tracking";
-
-const TRACKING_KEYS = [
-  "_pageUrl",
-  "_referrerUrl",
-  "_trafficSource",
-  "_trafficMedium",
-  "_utmCampaign",
-  "_utmContent",
-  "_searchKeyword",
-  "_landingPageUrl",
-  "_landingCapturedAt",
-];
+import { TRACKING_FIELD_KEYS, normalizeTracking } from "@/lib/serverTracking";
 
 export const runtime = "nodejs";
 
@@ -24,25 +12,6 @@ const ALLOWED_TYPES = new Set([
 ]);
 const ALLOWED_EXTENSIONS = new Set([".pdf", ".doc", ".docx"]);
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
-
-function getClientIp(request) {
-  const cfIp = request.headers.get("cf-connecting-ip");
-  if (cfIp) return cfIp;
-
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-
-  return request.headers.get("x-real-ip") || "Not available";
-}
-
-function getDeviceInfo(request) {
-  const userAgent = request.headers.get("user-agent") || "";
-  const isMobile = /mobile|android|iphone|ipad|ipod/i.test(userAgent);
-  return {
-    deviceType: isMobile ? "Mobile / Tablet" : "Desktop / Laptop",
-    userAgent,
-  };
-}
 
 function extensionOf(filename = "") {
   const dotIndex = filename.lastIndexOf(".");
@@ -90,8 +59,8 @@ export async function POST(request) {
     return Response.json({ success: false, message: "File size should be less than 5MB" }, { status: 400 });
   }
 
-  const { deviceType, userAgent } = getDeviceInfo(request);
-  const rawTracking = Object.fromEntries(TRACKING_KEYS.map((key) => [key, fieldValue(formData, key)]));
+  const rawTracking = Object.fromEntries(TRACKING_FIELD_KEYS.map((key) => [key, fieldValue(formData, key)]));
+  const tracking = normalizeTracking(rawTracking, request);
   const submission = {
     formType: "career",
     formLabel: "Career application",
@@ -99,10 +68,7 @@ export async function POST(request) {
     resumeName: resume.name,
     resumeType: resume.type,
     resumeSize: resume.size,
-    ...getServerTracking(request, rawTracking),
-    clientIp: getClientIp(request),
-    deviceType,
-    userAgent,
+    tracking,
     submittedAt: new Date(),
   };
 
@@ -122,6 +88,7 @@ export async function POST(request) {
     await sendFormNotification({
       subject: `New Career Application: ${fields.role}`,
       fields: submission,
+      tracking,
       replyTo: fields.email,
       attachments: [
         {

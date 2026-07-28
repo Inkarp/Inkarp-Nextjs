@@ -14,7 +14,7 @@ import {
   FiX,
   FiAlertCircle,
 } from"react-icons/fi";
-import { collectTracking } from"@/lib/tracking";
+import { collectTracking } from"@/lib/browserTracking";
 
 const initialFormData = {
   name:"",

@@ -16,6 +16,7 @@ import {
   getAllTags,
   getRecentPosts,
 } from"@/data/blogs";
+import { collectTracking } from"@/lib/browserTracking";
 
 function initials(name) {
   return name
@@ -173,8 +174,7 @@ export default function BlogDetailsPage({ post }) {
           ...commentForm,
           postTitle: post.title,
           postSlug: post.slug,
-          pageUrl: window.location.href,
-          referrer: document.referrer ||"",
+          ...collectTracking(),
         }),
         headers: { "Content-Type":"application/json" },
         method:"POST",

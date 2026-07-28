@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
-import { collectTracking } from '@/lib/tracking';
+import { collectTracking } from '@/lib/browserTracking';
 
 export default function LeadCaptureForm({
   className = '',

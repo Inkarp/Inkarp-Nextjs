@@ -2,13 +2,13 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { captureLanding } from "@/lib/tracking";
+import { captureAttribution } from "@/lib/browserTracking";
 
 export default function TrackingCapture() {
   const pathname = usePathname();
 
   useEffect(() => {
-    captureLanding();
+    captureAttribution();
   }, [pathname]);
 
   return null;

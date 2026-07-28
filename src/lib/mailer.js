@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { buildTrackingEmailHtml, buildTrackingEmailText } from "./serverTracking";
 
 let transporter;
 
@@ -33,18 +34,28 @@ function escapeHtml(value = "") {
     .replace(/'/g, "&#039;");
 }
 
-function renderRow([key, value]) {
-  const label = key
+function labelize(key) {
+  return key
     .replace(/^_/, "")
     .replace(/([A-Z])/g, " $1")
     .replace(/^./, (c) => c.toUpperCase());
-  return `<tr><td style="padding:6px 12px;font-weight:600;color:#444;white-space:nowrap;vertical-align:top;border:1px solid #e6e6e6;background:#fafafa;">${escapeHtml(label)}</td><td style="padding:6px 12px;color:#111;border:1px solid #e6e6e6;white-space:pre-wrap;">${escapeHtml(value ?? "")}</td></tr>`;
 }
 
-export async function sendFormNotification({ subject, fields, to, replyTo, attachments = [] }) {
+function renderRow([key, value]) {
+  return `<tr><td style="padding:6px 12px;font-weight:600;color:#444;white-space:nowrap;vertical-align:top;border:1px solid #e6e6e6;background:#fafafa;">${escapeHtml(labelize(key))}</td><td style="padding:6px 12px;color:#111;border:1px solid #e6e6e6;white-space:pre-wrap;">${escapeHtml(value ?? "")}</td></tr>`;
+}
+
+export async function sendFormNotification({ subject, fields, tracking, to, replyTo, attachments = [] }) {
   const recipients = to || process.env.MAIL_TO || "sharath@inkarp.co.in";
   const from = process.env.MAIL_FROM || process.env.SMTP_USER;
-  const rows = Object.entries(fields).filter(([, value]) => value !== undefined && value !== "");
+  const rows = Object.entries(fields).filter(
+    ([, value]) => value !== undefined && value !== "" && typeof value !== "object"
+  );
+
+  const trackingHtml = tracking
+    ? `<h3 style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#444;margin:18px 0 8px;">Visitor &amp; Campaign Tracking</h3><table style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:14px;width:100%;max-width:760px;">${buildTrackingEmailHtml(tracking)}</table>`
+    : "";
+  const trackingText = tracking ? `\n\nVisitor & Campaign Tracking\n${buildTrackingEmailText(tracking)}` : "";
 
   await getTransporter().sendMail({
     from,
@@ -52,7 +63,8 @@ export async function sendFormNotification({ subject, fields, to, replyTo, attac
     replyTo,
     subject,
     attachments,
-    html: `<table style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:14px;width:100%;max-width:760px;">${rows.map(renderRow).join("")}</table>`,
+    html: `<table style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;font-size:14px;width:100%;max-width:760px;">${rows.map(renderRow).join("")}</table>${trackingHtml}`,
+    text: `${rows.map(([key, value]) => `${labelize(key)}: ${value}`).join("\n")}${trackingText}`,
   });
 }
 

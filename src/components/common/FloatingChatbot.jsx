@@ -23,7 +23,7 @@ import {
   CHATBOT_WORKFLOW_RESULTS,
 } from "@/data/chatbotConfig";
 import Image from "next/image";
-import { collectTracking as collectBaseTracking } from "@/lib/tracking";
+import { collectTracking } from "@/lib/browserTracking";
 
 const INPUT_CLASS =
   "w-full rounded-lg border border-line-light bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/10 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500";
@@ -75,22 +75,6 @@ const WORKFLOW_LEAD_INITIAL = {
   message: "",
 };
 
-function getDeviceType() {
-  if (typeof window === "undefined") return "Desktop";
-  const userAgent = navigator.userAgent || "";
-  const width = window.innerWidth || 1200;
-  if (/ipad|tablet/i.test(userAgent) || (width >= 768 && width <= 1024 && navigator.maxTouchPoints > 1)) return "Tablet";
-  if (/mobile|android|iphone|ipod/i.test(userAgent) || width < 768) return "Mobile";
-  return "Desktop";
-}
-
-function collectTracking() {
-  return {
-    ...collectBaseTracking(),
-    _deviceType: getDeviceType(),
-    _userAgent: navigator.userAgent || "",
-  };
-}
 
 function rememberChatbotSeen() {
   try {

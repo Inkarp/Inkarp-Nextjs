@@ -25,6 +25,8 @@ import rotzmeierSafetyFunnelsCatalog from "./rotzmeier/safety-funnels.json";
 import rotzmeierTransportationContainersCatalog from "./rotzmeier/transportation-containers.json";
 import thalesnanoCatalog from "./thalesnano/h-cube-systems.json";
 import thalesnanoHydrogenGasGeneratorsCatalog from "./thalesnano/hydrogen-gas-generators.json";
+import thalesnanoPhoenixFlowSystemsCatalog from "./thalesnano/phoenix-flow-systems.json";
+import thalesnanoPhotocubeCatalog from "./thalesnano/photocube.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -64,6 +66,8 @@ const principalCatalogs = [
   rotzmeierTransportationContainersCatalog,
   thalesnanoCatalog,
   thalesnanoHydrogenGasGeneratorsCatalog,
+  thalesnanoPhoenixFlowSystemsCatalog,
+  thalesnanoPhotocubeCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

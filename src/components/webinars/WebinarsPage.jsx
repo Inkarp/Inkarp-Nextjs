@@ -21,11 +21,13 @@ export default function WebinarsPage() {
     setShowRegister(false);
   };
 
-  const visibleWebinars = webinars.filter((webinar) =>
-    activeTab ==="upcoming"
-      ? getDaysLeft(webinar.date) > 0
-      : getDaysLeft(webinar.date) === 0
-  );
+  const visibleWebinars = webinars
+    .filter((webinar) =>
+      activeTab ==="upcoming"
+        ? getDaysLeft(webinar.date) > 0
+        : getDaysLeft(webinar.date) === 0
+    )
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
     <main className="overflow-hidden">

@@ -31,6 +31,7 @@ import spGenevacCentrifugalEvaporatorsCatalog from "./sp-genevac/centrifugal-eva
 import spGenevacBenchtopEvaporatorsCatalog from "./sp-genevac/benchtop-evaporators.json";
 import radleysAutomatedReactionStationsCatalog from "./radleys/automated-reaction-stations.json";
 import radleysJacketedLabReactorsCatalog from "./radleys/jacketed-lab-reactors.json";
+import radleysParallelReactionStationsCatalog from "./radleys/parallel-reaction-stations.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -76,6 +77,7 @@ const principalCatalogs = [
   spGenevacBenchtopEvaporatorsCatalog,
   radleysAutomatedReactionStationsCatalog,
   radleysJacketedLabReactorsCatalog,
+  radleysParallelReactionStationsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

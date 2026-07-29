@@ -29,6 +29,8 @@ import thalesnanoPhoenixFlowSystemsCatalog from "./thalesnano/phoenix-flow-syste
 import thalesnanoPhotocubeCatalog from "./thalesnano/photocube.json";
 import spGenevacCentrifugalEvaporatorsCatalog from "./sp-genevac/centrifugal-evaporators.json";
 import spGenevacBenchtopEvaporatorsCatalog from "./sp-genevac/benchtop-evaporators.json";
+import radleysAutomatedReactionStationsCatalog from "./radleys/automated-reaction-stations.json";
+import radleysJacketedLabReactorsCatalog from "./radleys/jacketed-lab-reactors.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -72,6 +74,8 @@ const principalCatalogs = [
   thalesnanoPhotocubeCatalog,
   spGenevacCentrifugalEvaporatorsCatalog,
   spGenevacBenchtopEvaporatorsCatalog,
+  radleysAutomatedReactionStationsCatalog,
+  radleysJacketedLabReactorsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

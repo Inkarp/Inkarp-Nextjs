@@ -1,5 +1,6 @@
 import Companies from "@/components/home/Companies";
 import HomeAboutHero from "@/components/home/HomeAboutHero";
+import HomeCampaignSlider from "@/components/home/HomeCampaignSlider";
 import HomeAchievements from "@/components/home/HomeAchievements";
 import HomeClientReviews from "@/components/home/HomeClientReviews";
 import HomeEventsInsights from "@/components/home/HomeEventsInsights";
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <main>
       <BreadcrumbJsonLd path="/" />
+      <HomeCampaignSlider />
       <HomeAboutHero />
       {/* <HomeWorkflows /> */}
       <HomeWorkflowWheel />

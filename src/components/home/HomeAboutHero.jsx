@@ -12,7 +12,7 @@ const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
 function SlideWorkflow() {
   return (
-    <div className="bg-white px-4 pb-15 pt-19 sm:px-6 lg:px-8">
+    <div className="bg-white px-4 pb-15 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
@@ -134,7 +134,7 @@ function SlideAbout() {
 // Dummy copy — swap in real product details once the launch is finalised.
 function SlideFutureProducts() {
   return (
-    <div className="bg-white px-4 pb-15 pt-19 sm:px-6 lg:px-8">
+    <div className="bg-white px-4 pb-15 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>

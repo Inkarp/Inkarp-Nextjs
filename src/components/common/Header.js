@@ -18,6 +18,9 @@ import {
   FiX,
   FiYoutube,
 } from "react-icons/fi";
+// Festival/launch top banner — re-enable by uncommenting this import and its
+// usage below once there's real content ready in src/data/campaigns.js.
+// import AnnouncementBar from "@/components/common/AnnouncementBar";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import { getAllProducts } from "@/data/products/principals";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
@@ -203,6 +206,7 @@ export default function Header() {
         className={`fixed inset-x-0 top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out will-change-transform ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
           }`}
       >
+      {/* <AnnouncementBar collapsed={!(isAtTop || isMenuOpen || isSearchOpen)} /> */}
       <div
         className={`overflow-hidden bg-black text-parchment transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
             ? "max-h-40 opacity-100"

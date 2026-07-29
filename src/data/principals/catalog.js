@@ -27,6 +27,8 @@ import thalesnanoCatalog from "./thalesnano/h-cube-systems.json";
 import thalesnanoHydrogenGasGeneratorsCatalog from "./thalesnano/hydrogen-gas-generators.json";
 import thalesnanoPhoenixFlowSystemsCatalog from "./thalesnano/phoenix-flow-systems.json";
 import thalesnanoPhotocubeCatalog from "./thalesnano/photocube.json";
+import spGenevacCentrifugalEvaporatorsCatalog from "./sp-genevac/centrifugal-evaporators.json";
+import spGenevacBenchtopEvaporatorsCatalog from "./sp-genevac/benchtop-evaporators.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -68,6 +70,8 @@ const principalCatalogs = [
   thalesnanoHydrogenGasGeneratorsCatalog,
   thalesnanoPhoenixFlowSystemsCatalog,
   thalesnanoPhotocubeCatalog,
+  spGenevacCentrifugalEvaporatorsCatalog,
+  spGenevacBenchtopEvaporatorsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

@@ -12,7 +12,33 @@
 // uncomment and update one when you actually want it live.
 export const campaigns = [
   {
+    id: "inkarp-41st-anniversary",
+    type: "milestone",
+    variant: "inkarp-anniversary",
+    icon: "🎉",
+    accent: "red",
+    title: "Celebrating 41 Years of Inkarp",
+    message: "Since 1985 — 41 years of powering India's laboratories with trusted instruments and support.",
+    cta: { label: "Our Story", href: "/our-story" },
+    start: "2026-01-01",
+    end: "2026-12-31",
+    priority: 3,
+  },
+  {
     id: "independence-day-2026",
+    type: "national-day",
+    variant: "flag-wave",
+    icon: "🇮🇳",
+    accent: "red",
+    title: "Celebrating India's 80th Independence Day",
+    message: "Jai Hind! Team Inkarp wishes you a proud and joyous Independence Day.",
+    cta: null,
+    start: "2026-08-14",
+    end: "2026-08-15",
+    priority: 5,
+  },
+  {
+    id: "independence-day-2026-classic",
     type: "national-day",
     icon: "🇮🇳",
     accent: "red",

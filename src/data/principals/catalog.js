@@ -32,6 +32,8 @@ import spGenevacBenchtopEvaporatorsCatalog from "./sp-genevac/benchtop-evaporato
 import radleysAutomatedReactionStationsCatalog from "./radleys/automated-reaction-stations.json";
 import radleysJacketedLabReactorsCatalog from "./radleys/jacketed-lab-reactors.json";
 import radleysParallelReactionStationsCatalog from "./radleys/parallel-reaction-stations.json";
+import radleysAvaLabControlSoftwareCatalog from "./radleys/ava-lab-control-software.json";
+import radleysBenchtopAndHotplateToolsCatalog from "./radleys/benchtop-and-hotplate-tools.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -78,6 +80,8 @@ const principalCatalogs = [
   radleysAutomatedReactionStationsCatalog,
   radleysJacketedLabReactorsCatalog,
   radleysParallelReactionStationsCatalog,
+  radleysAvaLabControlSoftwareCatalog,
+  radleysBenchtopAndHotplateToolsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

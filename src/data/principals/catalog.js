@@ -42,6 +42,11 @@ import advionInterchimPeripheralProductionDevicesCatalog from "./advion-interchi
 import advionInterchimPreparativePurificationSystemsCatalog from "./advion-interchim-scientific/preparative-purification-systems.json";
 import advionInterchimSolationIcpMsCatalog from "./advion-interchim-scientific/solation-icp-ms.json";
 import advionInterchimTriversaNanomateCatalog from "./advion-interchim-scientific/triversa-nanomate.json";
+import nanalysisAutomationSampleHandlingCatalog from "./nanalysis/automation-sample-handling.json";
+import nanalysisReactionMonitoringFlowNmrCatalog from "./nanalysis/reaction-monitoring-flow-nmr.json";
+import nanalysisBenchtopNmrCatalog from "./nanalysis/benchtop-nmr.json";
+import nanalysisNmrSpectroscopyAnalysisCatalog from "./nanalysis/nmr-spectroscopy-analysis.json";
+import nanalysisSoftwarePackagesCatalog from "./nanalysis/software-packages.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -98,6 +103,11 @@ const principalCatalogs = [
   advionInterchimPreparativePurificationSystemsCatalog,
   advionInterchimSolationIcpMsCatalog,
   advionInterchimTriversaNanomateCatalog,
+  nanalysisAutomationSampleHandlingCatalog,
+  nanalysisReactionMonitoringFlowNmrCatalog,
+  nanalysisBenchtopNmrCatalog,
+  nanalysisNmrSpectroscopyAnalysisCatalog,
+  nanalysisSoftwarePackagesCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

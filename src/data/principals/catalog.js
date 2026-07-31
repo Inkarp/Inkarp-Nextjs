@@ -34,6 +34,14 @@ import radleysJacketedLabReactorsCatalog from "./radleys/jacketed-lab-reactors.j
 import radleysParallelReactionStationsCatalog from "./radleys/parallel-reaction-stations.json";
 import radleysAvaLabControlSoftwareCatalog from "./radleys/ava-lab-control-software.json";
 import radleysBenchtopAndHotplateToolsCatalog from "./radleys/benchtop-and-hotplate-tools.json";
+import advionInterchimAvantUHplcCatalog from "./advion-interchim-scientific/avant-u-hplc.json";
+import advionInterchimExpressionCmsCatalog from "./advion-interchim-scientific/expression-cms.json";
+import advionInterchimPlateExpressCatalog from "./advion-interchim-scientific/plate-express.json";
+import advionInterchimFlashPurificationSystemsCatalog from "./advion-interchim-scientific/flash-purification-systems.json";
+import advionInterchimPeripheralProductionDevicesCatalog from "./advion-interchim-scientific/peripheral-production-devices.json";
+import advionInterchimPreparativePurificationSystemsCatalog from "./advion-interchim-scientific/preparative-purification-systems.json";
+import advionInterchimSolationIcpMsCatalog from "./advion-interchim-scientific/solation-icp-ms.json";
+import advionInterchimTriversaNanomateCatalog from "./advion-interchim-scientific/triversa-nanomate.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -82,6 +90,14 @@ const principalCatalogs = [
   radleysParallelReactionStationsCatalog,
   radleysAvaLabControlSoftwareCatalog,
   radleysBenchtopAndHotplateToolsCatalog,
+  advionInterchimAvantUHplcCatalog,
+  advionInterchimExpressionCmsCatalog,
+  advionInterchimPlateExpressCatalog,
+  advionInterchimFlashPurificationSystemsCatalog,
+  advionInterchimPeripheralProductionDevicesCatalog,
+  advionInterchimPreparativePurificationSystemsCatalog,
+  advionInterchimSolationIcpMsCatalog,
+  advionInterchimTriversaNanomateCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

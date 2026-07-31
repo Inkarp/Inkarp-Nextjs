@@ -9,6 +9,7 @@ import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
+import ProductImageGallery from "@/components/products/ProductImageGallery";
 
 const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor and Service Provider in India";
 
@@ -177,36 +178,42 @@ export default async function ProductPage({ params }) {
           </div>
 
           <div className="relative self-center border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-            <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
-              <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-2/5">
-                <Image
-                  alt="Dr Dexter"
-                  className="object-contain object-bottom"
-                  fill
-                  sizes="(min-width: 1024px) 240px, (min-width: 640px) 200px, 150px"
-                  src="/dexter.png"
-                />
-              </div>
+            {product.images?.length > 0 ? (
+              <ProductImageGallery images={product.images} productName={product.name} />
+            ) : (
+              <>
+                <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
+                  <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-2/5">
+                    <Image
+                      alt="Dr Dexter"
+                      className="object-contain object-bottom"
+                      fill
+                      sizes="(min-width: 1024px) 240px, (min-width: 640px) 200px, 150px"
+                      src="/dexter.png"
+                    />
+                  </div>
 
-              {product.image ? (
-                <Image
-                  alt={product.imageAlt ?? product.name}
-                  className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
-                  height={600}
-                  src={product.image}
-                  width={600}
-                  priority
-                />
-              ) : (
-                <div className="flex aspect-square w-full items-center justify-center text-sm text-ink-soft">
-                  Product image coming soon
+                  {product.image ? (
+                    <Image
+                      alt={product.imageAlt ?? product.name}
+                      className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
+                      height={600}
+                      src={product.image}
+                      width={600}
+                      priority
+                    />
+                  ) : (
+                    <div className="flex aspect-square w-full items-center justify-center text-sm text-ink-soft">
+                      Product image coming soon
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-            <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-              <span>Fig. 01 - Product Overview</span>
-              <span>{product.imageAlt ?? `${product.principalName} ${product.name}`}</span>
-            </div>
+                <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
+                  <span>Fig. 01 - Product Overview</span>
+                  <span>{product.imageAlt ?? `${product.principalName} ${product.name}`}</span>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>

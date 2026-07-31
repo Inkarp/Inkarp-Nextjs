@@ -52,6 +52,7 @@ import ecomPlcIndustrialSystemsCatalog from "./ecom/plc-industrial-systems.json"
 import labomaticIndustrialLiquidChromatographyCatalog from "./labomatic/industrial-liquid-chromatography.json";
 import labomaticLiquidHandlingCatalog from "./labomatic/liquid-handling.json";
 import hohsenCorpEquipmentForBatteryCatalog from "./hohsen-corp/equipment-for-battery.json";
+import maccorBatteryAndCellTestEquipmentCatalog from "./maccor/battery-and-cell-test-equipment.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -118,6 +119,7 @@ const principalCatalogs = [
   labomaticIndustrialLiquidChromatographyCatalog,
   labomaticLiquidHandlingCatalog,
   hohsenCorpEquipmentForBatteryCatalog,
+  maccorBatteryAndCellTestEquipmentCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

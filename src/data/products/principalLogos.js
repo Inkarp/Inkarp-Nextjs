@@ -45,6 +45,7 @@ export const principalLogos = {
   sartorius: "/assets/images/PrincipalLogos/RowFour/sartorius.svg",
   buchi: "/assets/images/PrincipalLogos/RowSeven/BUCHI.svg",
   "mettler-toledo": "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
+  "hohsen-corp": "/assets/images/PrincipalLogos/RowTwo/hohsencorp.png",
 };
 
 export function getPrincipalLogo(principalSlug) {

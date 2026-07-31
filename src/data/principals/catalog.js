@@ -47,6 +47,11 @@ import nanalysisReactionMonitoringFlowNmrCatalog from "./nanalysis/reaction-moni
 import nanalysisBenchtopNmrCatalog from "./nanalysis/benchtop-nmr.json";
 import nanalysisNmrSpectroscopyAnalysisCatalog from "./nanalysis/nmr-spectroscopy-analysis.json";
 import nanalysisSoftwarePackagesCatalog from "./nanalysis/software-packages.json";
+import ecomColumnsForPreparativeChromatographyCatalog from "./ecom/columns-for-preparative-chromatography.json";
+import ecomPlcIndustrialSystemsCatalog from "./ecom/plc-industrial-systems.json";
+import labomaticIndustrialLiquidChromatographyCatalog from "./labomatic/industrial-liquid-chromatography.json";
+import labomaticLiquidHandlingCatalog from "./labomatic/liquid-handling.json";
+import hohsenCorpEquipmentForBatteryCatalog from "./hohsen-corp/equipment-for-battery.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -108,6 +113,11 @@ const principalCatalogs = [
   nanalysisBenchtopNmrCatalog,
   nanalysisNmrSpectroscopyAnalysisCatalog,
   nanalysisSoftwarePackagesCatalog,
+  ecomColumnsForPreparativeChromatographyCatalog,
+  ecomPlcIndustrialSystemsCatalog,
+  labomaticIndustrialLiquidChromatographyCatalog,
+  labomaticLiquidHandlingCatalog,
+  hohsenCorpEquipmentForBatteryCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

@@ -172,6 +172,11 @@ export const principalLogoRows = [
       logo: "/assets/images/PrincipalLogos/RowTwo/waters.svg",
       href: "/products?q=waters",
     },
+    {
+      name: "Hohsen Corp",
+      logo: "/assets/images/PrincipalLogos/RowTwo/hohsencorp.png",
+      href: "/products?q=hohsen",
+    },
     
     {
       name: "Labstation",

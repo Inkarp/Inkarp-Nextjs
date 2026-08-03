@@ -47,7 +47,7 @@ export default async function ProductPage({ params }) {
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
   const heroLead = product.longForm?.heroLead ?? product.overview;
   const heroHookMatch = product.overview?.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/);
-  const heroHook = heroHookMatch?.[1]?.trim();
+  const heroHook = product.longForm?.heroHook ?? heroHookMatch?.[1]?.trim();
   const showHeroHook = Boolean(heroHook && heroLead && !heroLead.startsWith(heroHook));
 
   const faqJsonLd = product.faqs?.length > 0 ? {
@@ -135,11 +135,6 @@ export default async function ProductPage({ params }) {
             <h1 className=" text-2xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[32px] lg:text-[34px]">
               {product.name}
             </h1>
-            {showHeroHook ? (
-              <p className="mt-4 max-w-xl text-xl font-semibold leading-8 tracking-tight text-ink sm:text-2xl">
-                {heroHook}
-              </p>
-            ) : null}
             <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-red/30 bg-red/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red">
               <FiShield className="h-4 w-4 shrink-0" />
               {PRODUCT_DISTRIBUTOR_NOTE}
@@ -156,6 +151,11 @@ export default async function ProductPage({ params }) {
                 </span>
               ))}
             </div>
+            {showHeroHook ? (
+              <p className="mt-5 max-w-xl text-xl font-normal leading-8 tracking-tight text-ink sm:text-2xl">
+                {heroHook}
+              </p>
+            ) : null}
             <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft sm:text-lg">
               {heroLead}
             </p>

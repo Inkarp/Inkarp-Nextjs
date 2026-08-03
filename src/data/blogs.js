@@ -26,13 +26,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogOne/revolutionizingSample1.jpeg",
+    image: "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
     tags: [
       "Gravimetric Dosing",
       "Sample Preparation",
       "Pharma QC",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
+        caption: "METTLER TOLEDO — gravimetric dosing and weighing solutions",
+      },
       {
         type: "text",
         heading: "Revolutionizing Sample Preparation in Analytical Laboratories",
@@ -139,13 +144,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
-    image: "/assets/blogs/BlogTwo/AdvanceApplication.jpeg",
+    image: "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
     tags: [
       "DSC",
       "Lithium-ion Batteries",
       "Thermal Analysis",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
+        caption: "Hitachi NEXTA DSC Series — Differential Scanning Calorimeter",
+      },
       {
         type: "text",
         heading: "Advanced Application of Differential Scanning Calorimetry (DSC) in the Lithium-ion Battery Manufacturing Industry",
@@ -206,13 +216,18 @@ const rawPosts = [
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "5 min read",
-    image: "/assets/blogs/BlogThree/Image1.jpeg",
+    image: "/assets/images/productImages/Nanalysis/60mhz-powerful-benchtop-nmr.jpeg",
     tags: [
       "NMR Spectroscopy",
       "Crude Oil Analysis",
       "Petroleum Testing",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Nanalysis/60mhz-powerful-benchtop-nmr.jpeg",
+        caption: "Nanalysis 60 — Benchtop NMR Spectrometer",
+      },
       {
         type: "text",
         heading: "Precision Hydrogen Content in Crude Oil Analysis with NMR Spectroscopy",
@@ -334,13 +349,18 @@ const rawPosts = [
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "5 min read",
-    image: "/assets/blogs/BlogFive/Image1.jpeg",
+    image: "/assets/images/productImages/radleys/reactor-ready-flex-lab-reactor.jpg",
     tags: [
       "Polymer Synthesis",
       "Sustainability",
       "Reactor Technology",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/radleys/reactor-ready-flex-lab-reactor.jpg",
+        caption: "Radleys Reactor-Ready™ Flex Lab Reactor",
+      },
       {
         type: "text",
         heading: "Advancing Polymer Synthesis for a Sustainable Future",
@@ -398,13 +418,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogSix/Image1.jpeg",
+    image: "/assets/images/productImages/Nanovision/litescope-afm.png",
     tags: [
       "AFM-in-SEM",
       "Semiconductor Failure Analysis",
       "Dopant Profiling",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Nanovision/litescope-afm.png",
+        caption: "NenoVision LiteScope — AFM-in-SEM",
+      },
       {
         type: "text",
         heading: "Revolutionizing Semiconductor Failure Analysis with NenoVision's LiteScope AFM-in-SEM",
@@ -480,13 +505,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/blogs/BlogSeven/Image1.jpeg",
+    image: "/assets/images/productImages/Implen/diluphotometer-od600-new.jpg",
     tags: [
       "McFarland Standards",
       "OD600",
       "Microbiology",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Implen/diluphotometer-od600-new.jpg",
+        caption: "Implen OD600 — Optical Density Photometer",
+      },
       {
         type: "text",
         heading: "Streamlining Bacterial Culture Standardization with McFarland Standards and Implen OD600",
@@ -546,13 +576,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    image: "/assets/blogs/BlogEight/Image1.jpeg",
+    image: "/assets/images/productImages/Nanosurf/driveafm.jpg",
     tags: [
       "AFM",
       "WaveMode NMA",
       "Nanomechanics",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Nanosurf/driveafm.jpg",
+        caption: "Nanosurf DriveAFM — Atomic Force Microscope",
+      },
       {
         type: "text",
         heading: "Advancing Nanoscale Research with WaveMode NMA Technology",
@@ -628,13 +663,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    image: "/assets/blogs/BlogNine/Image1.jpeg",
+    image: "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
     tags: [
       "DSC",
       "TG/DTA",
       "Polylactic Acid",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
+        caption: "Hitachi NEXTA DSC Series — Differential Scanning Calorimeter",
+      },
       {
         type: "text",
         heading: "Exploring the Thermal Properties and Crystallinity of Polylactic Acid (PLA) through Advanced Analysis",
@@ -729,13 +769,18 @@ const rawPosts = [
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
-    image: "/assets/blogs/BlogTen/Image1.jpeg",
+    image: "/assets/images/PrincipalLogos/RowSeven/BUCHI.svg",
     tags: [
       "Kjeldahl Method",
       "Casein",
       "Dairy Quality Control",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/PrincipalLogos/RowSeven/BUCHI.svg",
+        caption: "BUCHI — Kjeldahl nitrogen determination systems",
+      },
       {
         type: "text",
         heading: "Accurate Determination of Casein Content in Milk Using the Kjeldahl Method",
@@ -796,13 +841,18 @@ const rawPosts = [
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogEleven/Image1.jpeg",
+    image: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
     tags: [
       "DMA",
       "Polypropylene",
       "Viscoelasticity",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
+        caption: "Hitachi — Dynamic Mechanical Analysis instrumentation",
+      },
       {
         type: "text",
         heading: "Dynamic Viscoelastic Analysis of Polypropylene Homopolymer and Block Copolymer",
@@ -875,13 +925,18 @@ const rawPosts = [
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/blogs/BlogTwelve/Image1.jpeg",
+    image: "/assets/images/productImages/Bruker/matrix-f-ii-banner-bruker.png",
     tags: [
       "FT-NIR",
       "Edible Oil",
       "Process Analytical Technology",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Bruker/matrix-f-ii-banner-bruker.png",
+        caption: "Bruker MATRIX-F II — FT-NIR Process Spectrometer",
+      },
       {
         type: "text",
         heading: "Advancing Edible Oil Quality Control with FT-NIR Spectroscopy",
@@ -1024,13 +1079,18 @@ const rawPosts = [
     date: "2025-06-05",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/blogs/BlogFourteen/Image1.jpg",
+    image: "/assets/images/productImages/Buchi/L-200-pro.webp",
     tags: [
       "Freeze Drying",
       "Lyophilisation",
       "Food Processing",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Buchi/L-200-pro.webp",
+        caption: "BUCHI Lyovapor™ L-200 Pro — Freeze Dryer",
+      },
       {
         type: "text",
         heading: "Optimizing the Lyophilisation Process for Banana Slices Using BUCHI Lyovapor™ L-200",
@@ -1227,13 +1287,18 @@ const rawPosts = [
     date: "2025-10-22",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogFifteen/Image.webp",
+    image: "/assets/images/productImages/Chemspeed/Flex-autoplant.png",
     tags: [
       "Chemspeed",
       "Polymer Recycling",
       "Automation",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Chemspeed/Flex-autoplant.png",
+        caption: "Chemspeed FLEX AUTOPLANT — Automated Synthesis Platform",
+      },
       {
         type: "text",
         heading: "The Challenge",
@@ -1315,13 +1380,18 @@ const rawPosts = [
     date: "2025-10-22",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/blogs/BlogSixteen/Image.jpg",
+    image: "/assets/images/PrincipalLogos/RowFour/Rotochrome.png",
     tags: [
       "Centrifugal Partition Chromatography",
       "Oligonucleotide Purification",
       "RotaChrom",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/PrincipalLogos/RowFour/Rotochrome.png",
+        caption: "RotaChrom — Centrifugal Partition Chromatography systems",
+      },
       {
         type: "text",
         content: "The starting material was a 20-mer single-stranded unmodified oligonucleotide (dT), with 88.5% purity (Figure 1).",
@@ -1456,13 +1526,18 @@ const rawPosts = [
     date: "2025-11-20",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
-    image: "/assets/blogs/BlogSeventeen/Image1.jpg",
+    image: "/assets/images/productImages/Waters/alliance-hplc-system.jpg",
     tags: [
       "UPLC",
       "Peptide Isolation",
       "Fraction Collection",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Waters/alliance-hplc-system.jpg",
+        caption: "Waters Alliance HPLC System",
+      },
       {
         type: "text",
         heading: "Introduction",
@@ -1718,13 +1793,18 @@ const rawPosts = [
     date: "2026-01-27",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogTwentyOne/Image1.jpeg",
+    image: "/assets/images/productImages/Nanosurf/driveafm.jpg",
     tags: [
       "AFM",
       "Metal Alloys",
       "Nanomechanics",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Nanosurf/driveafm.jpg",
+        caption: "Nanosurf DriveAFM — Atomic Force Microscope",
+      },
       {
         type: "text",
         content: "Transportation, energy production, healthcare, electronics — it is difficult to find any field untouched by material science. Metallurgy, in particular, has accompanied human progress for thousands of years. Bronze marked an entire age of human civilization. Steel powered the Industrial Revolution. Today, metal alloys continue to form the backbone of modern technology, especially in the semiconductor and electronics industries.\n\nBehind every silicon chip lies a network of carefully engineered metal alloys. Aluminum-silicon-copper interconnects ensure signal transmission, while titanium and tantalum barriers prevent atomic diffusion and improve reliability. Semiconductor materials themselves are evolving through alloy engineering, with silicon-germanium and III-V compounds such as gallium arsenide, indium phosphide, and aluminum gallium arsenide enabling faster, more efficient devices for the digital era.",
@@ -1869,13 +1949,18 @@ const rawPosts = [
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogTwentyThree/Image1.jpg",
+    image: "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
     tags: [
       "DSC",
       "Oxidation Induction Time",
       "Polyethylene",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
+        caption: "Hitachi NEXTA DSC Series — Differential Scanning Calorimeter",
+      },
       {
         type: "text",
         heading: "Introduction",
@@ -1941,13 +2026,18 @@ const rawPosts = [
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    image: "/assets/blogs/BlogTwentyFour/Image1.jpeg",
+    image: "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
     tags: [
       "HPLC",
       "Laboratory Water",
       "Cannabis Testing",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
+        caption: "Sartorius Arium® mini-plus — Lab Water Purification System",
+      },
       {
         type: "text",
         content: "High-performance liquid chromatography (HPLC) and ultra-high-performance liquid chromatography (UHPLC) demand consistently high laboratory water quality, especially during mobile phase preparation. The purity of water used directly impacts instrument sensitivity, reliability, and accuracy — particularly in critical applications like cannabis potency testing.\n\nTraditionally, laboratories have relied on HPLC-grade bottled water for such purposes. However, generating ultrapure water in-house using a robust water purification system offers a cost-effective and sustainable alternative. This study explores the use of the Arium® mini-plus in-house water purification system (producing ASTM Type 1 water) compared with commercial HPLC-grade bottled water for cannabinoid analysis in cannabis samples.",
@@ -2132,13 +2222,18 @@ const rawPosts = [
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    image: "/assets/blogs/BlogTwentySeven/Image1.jpeg",
+    image: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
     tags: [
       "DMA",
       "PTFE",
       "Viscoelasticity",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
+        caption: "Hitachi — Dynamic Mechanical Analysis instrumentation",
+      },
       {
         type: "text",
         content: "Polytetrafluoroethylene (PTFE), widely known as Teflon, is a high-performance polymer celebrated for its exceptional chemical resistance, low friction, and thermal stability. But what truly sets PTFE apart is its complex viscoelastic properties, which dictate how the material behaves under different stress, temperature, and frequency conditions. Understanding this behavior is crucial for optimizing PTFE's performance across industries, from aerospace to medical devices.",

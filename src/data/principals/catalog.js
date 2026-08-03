@@ -68,6 +68,7 @@ import fomTechnologiesSlotDieCoatingSystemsCatalog from "./fom-technologies/slot
 import fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog from "./fom-technologies/sheet-based-slot-die-coating-systems.json";
 import daralyoPilotFreezeDryersCatalog from "./daralyo/pilot-freeze-dryers.json";
 import nenovisionLitescopeCatalog from "./nenovision/litescope.json";
+import reichertHighSensitivitySurfacePlasmonResonanceSprSystemsCatalog from "./reichert/high-sensitivity-surface-plasmon-resonance-spr-systems.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -150,6 +151,7 @@ const principalCatalogs = [
   fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog,
   daralyoPilotFreezeDryersCatalog,
   nenovisionLitescopeCatalog,
+  reichertHighSensitivitySurfacePlasmonResonanceSprSystemsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

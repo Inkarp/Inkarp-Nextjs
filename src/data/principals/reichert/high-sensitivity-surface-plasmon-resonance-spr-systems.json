@@ -1,0 +1,1026 @@
+{
+  "principal": {
+    "slug": "reichert-technologies",
+    "principalName": "Reichert Technologies",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "High-Sensitivity Surface Plasmon Resonance (SPR) Systems",
+      "slug": "high-sensitivity-surface-plasmon-resonance-spr-systems",
+      "products": [
+        {
+          "name": "Reichert® 4SPR (Surface Plasmon Resonance)",
+          "slug": "reichert-4spr-surface-plasmon-resonance",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/reichert.png",
+          "imageAlt": "Reichert Technologies Reichert® 4SPR (Surface Plasmon Resonance) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/reichert-4spr-surface-plasmon-resonance",
+          "breadcrumbPath": "Home > Products > High-Sensitivity Surface Plasmon Resonance (SPR) Systems > Reichert® 4SPR (Surface Plasmon Resonance)",
+          "h1": "Reichert® 4SPR (Surface Plasmon Resonance)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most SPR systems lock critical parts behind a service contract and a locked chassis. Reichert 4SPR opens everything up: swap tubing in five minutes, clean the flow cell yourself, run crude samples without purifying them first.",
+
+          "features": [
+            "Four-Channel Simultaneous Analysis: Runs up to three experiments at once for faster method development.",
+            "High Sensitivity Down to ~100 Da: Captures weak and strong interactions across a 1 mM to 1 pM affinity range.",
+            "Industry-Leading Low Drift and Noise: 0.1 μRIU/min drift and 0.05 μRIU rms noise for cleaner, publication-ready data.",
+            "5-Minute Tubing Changes: Standard HPLC fittings swap in minutes, no service call required.",
+            "Self-Cleanable Flow Cells: Not a consumable cartridge, clean or replace it directly.",
+            "Crude Sample Compatibility: Runs whole cells, viruses, lysates, serum, and aggregates without purification.",
+            "Wide Sensor Chip Range: Carboxymethyl dextran, PEG/carboxyl, nickel NTA, streptavidin, protein A, plain gold, and specialized chips.",
+            "Fast Baseline Stabilization: Stabilizes 2 to 3x faster than competing systems through streamlined fluidics."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Reichert® 4SPR Surface Plasmon Resonance System" },
+            { "label": "Category", "value": "High-Sensitivity Surface Plasmon Resonance (SPR) Systems" },
+            { "label": "Channels", "value": "4" },
+            { "label": "Simultaneous Experiments", "value": "Up to 3" },
+            { "label": "Sensitivity", "value": "Down to ~100 Da" },
+            { "label": "Affinity Range", "value": "1 mM to 1 pM" },
+            { "label": "Drift", "value": "0.1 μRIU/min" },
+            { "label": "Noise", "value": "0.05 μRIU rms" },
+            { "label": "Baseline Stabilization", "value": "2 to 3x faster than competing systems" },
+            { "label": "Sample Capacity", "value": "Up to 768 samples per run" },
+            { "label": "Tubing", "value": "Standard, off-the-shelf HPLC fittings, 5-minute changes" },
+            { "label": "Flow Cells", "value": "Standard and specialized, user-cleanable, not a consumable" },
+            { "label": "Sensor Chips", "value": "Carboxymethyl dextran, PEG/carboxyl, nickel NTA, hydrophobic alkyl, streptavidin/NeutrAvidin, protein A, plain gold" }
+          ],
+
+          "applications": [
+            "Weak and Strong Affinity Measurement: Sensitivity spanning 1 mM to 1 pM",
+            "Binding Kinetics Studies: Real-time, label-free interaction data across four channels",
+            "Thermodynamic Parameter Determination: High sensitivity and low noise for precise measurement",
+            "Crude Sample Screening: Direct analysis of lysates, serum, and whole cells without purification",
+            "High-Throughput Method Development: Four channels testing multiple chemistries or schemes in parallel"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Sensor Chip Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Open System Savings" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "How should the four channels be split for this study?",
+            "description": "Select the experiment design, and see the recommended channel layout.",
+            "steps": [
+              {
+                "key": "analyteTargets",
+                "question": "How many analytes or targets need testing?",
+                "options": [
+                  { "val": "single", "label": "Single" },
+                  { "val": "multiple", "label": "Multiple" },
+                  { "val": "paired", "label": "Paired comparison" }
+                ]
+              },
+              {
+                "key": "referenceStrategy",
+                "question": "What reference strategy fits the study?",
+                "options": [
+                  { "val": "shared", "label": "Shared reference" },
+                  { "val": "separate", "label": "Separate per channel" }
+                ]
+              },
+              {
+                "key": "throughputNeed",
+                "question": "What's the throughput need?",
+                "options": [
+                  { "val": "simultaneous", "label": "Simultaneous runs" },
+                  { "val": "staggered", "label": "Staggered runs" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "suitability": {
+            "title": "Which sensor chip fits the immobilization chemistry?",
+            "description": "Select the target molecule and immobilization approach, and see the recommended chip type.",
+            "fields": [
+              {
+                "key": "targetMolecule",
+                "label": "Target molecule type",
+                "options": [
+                  { "val": "protein", "label": "Protein" },
+                  { "val": "small-molecule", "label": "Small molecule" },
+                  { "val": "nucleic-acid", "label": "Nucleic acid" },
+                  { "val": "custom", "label": "Custom" }
+                ]
+              },
+              {
+                "key": "immobilizationApproach",
+                "label": "Immobilization approach",
+                "options": [
+                  { "val": "amine-coupling", "label": "Amine coupling" },
+                  { "val": "his-tag", "label": "His-tag capture" },
+                  { "val": "biotin", "label": "Biotin capture" },
+                  { "val": "custom", "label": "Custom chemistry" }
+                ]
+              },
+              {
+                "key": "regenerationFrequency",
+                "label": "Regeneration frequency",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-frequency", "label": "High-frequency use" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Sensor Chips Are Available?",
+                "body": "Carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, plain gold, and specialized chips for custom applications.",
+                "tags": ["Wide Sensor Chip Range"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Reichert 4SPR vs. Reichert 3SPR vs. Reichert 2SPR",
+            "description": "Reichert 4SPR method comparison: 4-channel versus 3-channel versus 2-channel configurations.",
+            "columns": [
+              { "label": "Reichert 4SPR" },
+              { "label": "Reichert 3SPR" },
+              { "label": "Reichert 2SPR" }
+            ],
+            "rows": [
+              { "feature": "Channels", "values": ["4", "3", "2"] },
+              { "feature": "Simultaneous Experiments", "values": ["Up to 3", "Up to 2", "1 with reference"] },
+              { "feature": "Best For", "values": ["High-throughput method development", "Moderate parallel testing needs", "Individual labs with lower throughput needs"] },
+              { "feature": "Choose When", "values": ["Multiple chemistries or targets need parallel testing", "Some parallel capacity is needed without full 4-channel scale", "Simplicity and lowest cost of entry matter most"] }
+            ],
+            "disclaimer": "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Reichert 4SPR industries: pharmaceutical R&D, biotechnology, academic life sciences, and diagnostics development.",
+            "industries": [
+              { "name": "Pharmaceutical Drug Discovery", "useCase": "Screening compound binding affinity and kinetics", "consideration": "High sensitivity supports low molecular weight fragment screening" },
+              { "name": "Biotechnology Research", "useCase": "Antibody and protein interaction characterization", "consideration": "Four channels support parallel chemistry testing" },
+              { "name": "Academic Life Sciences Labs", "useCase": "Individual lab research on tight budgets", "consideration": "Lower total cost of ownership vs. equivalent systems" },
+              { "name": "Diagnostics Development", "useCase": "Crude sample interaction analysis", "consideration": "Direct analysis of serum and lysates without purification" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows sensitivity and channel configuration on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms channel layout, chip type, and flow cell setup" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with tubing changes, flow cell cleaning, and chip handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains fluidics, flow cells, and optical system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies sensor chips, tubing, flow cells, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Reichert 4SPR used for?", "answer": "It's a four-channel surface plasmon resonance system for real-time, label-free measurement of biomolecular binding kinetics and affinity." },
+            { "question": "How sensitive is the Reichert 4SPR?", "answer": "It detects interactions with low molecular weight compounds down to roughly 100 Da, across an affinity range from 1 mM to 1 pM." },
+            { "question": "Can the Reichert 4SPR run crude, unpurified samples?", "answer": "Yes, it runs whole cells, viruses, lysates, serum, and aggregates directly, without a purification step first." },
+            { "question": "How long does a tubing change take?", "answer": "About five minutes, using standard, off-the-shelf HPLC fittings, without needing a service call." },
+            { "question": "Do the flow cells need to be replaced regularly?", "answer": "No, flow cells clean or swap by hand and aren't treated as a disposable cartridge." },
+            { "question": "Is a service contract required?", "answer": "No, the open design allows in-house maintenance of the parts that typically need attention, though a service contract remains available as an option." },
+            { "question": "What sensor chips are available?", "answer": "Carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, plain gold, and specialized chips for custom applications." },
+            { "question": "How many samples can run per experiment?", "answer": "Up to 768 samples per run." },
+            { "question": "How is the 4SPR different from the 2SPR and 3SPR?", "answer": "The 4SPR offers four channels and up to three simultaneous experiments, while the 3SPR and 2SPR scale down channel count and throughput for labs with lower parallel testing needs, at a correspondingly lower cost of entry." },
+            { "question": "What is the price of Reichert 4SPR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the channel configuration and chip requirements needed." },
+            { "question": "Who is the authorized distributor of Reichert 4SPR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Reichert Technologies 4SPR in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Reichert 4SPR in India from Inkarp",
+            "description": "Share the channel configuration and sample types, and the right Reichert 4SPR configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your channel configuration and sample types, then confirm the right Reichert 4SPR configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "channelConfiguration", "label": "Channel configuration needed", "type": "text", "required": false },
+              { "key": "sampleType", "label": "Sample type (purified or crude)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right chip and flow cell setup", "body": "Share the target analyte size and typical sample type, purified or crude, and the right chip and flow cell setup gets confirmed from there." },
+              { "title": "Confirm the real cost comparison", "body": "Share the number of chips and tubing changes the lab expects annually, and the real cost comparison against the current setup gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Publication-ready SPR data. A fraction of the five-year cost.",
+            "heroLead": "Most SPR systems lock critical parts behind a service contract and a locked chassis. Reichert 4SPR opens everything up: swap tubing in five minutes, clean the flow cell yourself, run crude samples without purifying them first. Four channels mean up to three simultaneous experiments, sensitivity down to roughly 100 Da, industry-leading low drift at 0.1 μRIU/min, and sample capacity up to 768 runs. Total cost of ownership lands 30 to 70% below equivalent-performing systems over five years, without giving up data quality.",
+            "stats": [
+              { "value": "4 channels", "label": "Up to 3 simultaneous experiments" },
+              { "value": "~100 Da", "label": "Minimum detectable molecular weight" },
+              { "value": "1 mM to 1 pM", "label": "Affinity range measured" },
+              { "value": "0.1 μRIU/min", "label": "Drift, industry-leading low" },
+              { "value": "0.05 μRIU rms", "label": "Noise level" },
+              { "value": "Up to 768 samples", "label": "Per run capacity" },
+              { "value": "5 minutes", "label": "Tubing change time" },
+              { "value": "30 to 70% lower", "label": "Total cost of ownership vs. equivalent systems" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Reichert 4SPR product information: channel configuration, sensitivity specs, and open-system serviceability.",
+                "body": [
+                  "Four channels run up to three experiments at once, speeding up method development by testing different immobilization chemistries or regeneration schemes side by side.",
+                  "Sensitivity reaches low molecular weight compounds down to roughly 100 Da, supporting affinity measurements from 1 mM to 1 pM, precise thermodynamic parameter determination, and accurate concentration analysis.",
+                  "Drift sits at an industry-leading 0.1 μRIU/min with noise as low as 0.05 μRIU rms, and baseline stabilizes 2 to 3x faster than competing systems thanks to streamlined fluidics.",
+                  "Sample capacity reaches up to 768 samples per run.",
+                  "The system is genuinely open: tubing changes in five minutes using standard, off-the-shelf HPLC fittings, and flow cells clean or swap by hand rather than requiring a cartridge replacement.",
+                  "Crude samples run directly, whole cells, viruses, lysates, serum, and aggregates, without a purification step first.",
+                  "A full range of standard sensor chips ships alongside the system: carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, and plain gold for custom chemistry.",
+                  "No service contract is required to keep the system running. Accessible parts mean routine maintenance happens in-house, though a service contract remains available for labs that prefer it."
+                ],
+                "cards": [
+                  { "title": "4 channels", "description": "Up to 3 simultaneous experiments" },
+                  { "title": "~100 Da sensitivity", "description": "Detects low molecular weight binding events" },
+                  { "title": "0.1 μRIU/min drift", "description": "Industry-leading baseline stability" },
+                  { "title": "Open, self-serviceable", "description": "No mandatory service contract" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Channels", "description": "4, running up to 3 simultaneous experiments" },
+                  { "title": "Sensitivity", "description": "Down to ~100 Da, affinity range 1 mM to 1 pM" },
+                  { "title": "Drift / Noise", "description": "0.1 μRIU/min drift, 0.05 μRIU rms noise" },
+                  { "title": "Sample capacity", "description": "Up to 768 per run" },
+                  { "title": "Serviceability", "description": "Open system, standard HPLC tubing, self-cleanable flow cells" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Reichert 4SPR applications: affinity measurement, binding kinetics, and crude sample interaction analysis."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Reichert 4SPR technical specifications: sensitivity, drift, noise, and sample capacity."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Open System, Real Savings",
+                "title": "Open System, Real Savings",
+                "description": "SPR platforms that lock parts behind a service contract turn routine maintenance into a recurring, unpredictable cost. Reichert 4SPR puts the parts that need attention directly in reach. Tubing uses standard HPLC fittings, changeable in five minutes without waiting on a service call, and compatible with a wide range of sample viscosities and particulate matter. Flow cells clean by hand and aren't treated as a disposable cartridge, unlike systems that require replacement once or twice a year. Sensor chips run at often less than half the price of comparable chips elsewhere, meaningful given a typical lab burns through 75 to 200 chips annually. None of this requires a service contract to access. A contract remains available, but it's a choice, not a condition of ownership.",
+                "cards": [
+                  { "title": "Predictable, lower annual running costs", "description": "No mandatory service contract, in-house maintenance" },
+                  { "title": "Fast recovery from clogs or damaged tubing", "description": "5-minute tubing swaps with standard fittings" },
+                  { "title": "Lower per-experiment consumable cost", "description": "Sensor chips often under half the price of competitors" },
+                  { "title": "Flexibility as sample types change", "description": "Interchangeable tubing sizes and cleanable flow cells" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Four Channels, Flexible Experiment Design",
+                "title": "Four Channels, Flexible Experiment Design",
+                "description": "A single-channel system forces experiments into a queue. Four channels turn that queue into parallel throughput, running different immobilization chemistries or regeneration schemes side by side instead of one after another.",
+                "body": [
+                  "That flexibility isn't fixed to one layout. Configurations include three experimental channels against one shared reference, two experimental channels with their own separate references, four channels running as two independent pairs, or the same pairs run at different times entirely.",
+                  "For labs that don't need that level of throughput, two-channel and three-channel Reichert systems cover the same open, low-cost design at a smaller scale."
+                ],
+                "utilityChecklist": [
+                  { "label": "Testing one analyte against multiple targets", "value": "3 experimental channels, 1 shared reference" },
+                  { "label": "Two independent, fully referenced experiments", "value": "2 channels with separate references each" },
+                  { "label": "Maximum parallel throughput", "value": "4 channels or 2 independent pairs at once" },
+                  { "label": "Staggered experiments over time", "value": "2 pairs run at different times" }
+                ],
+                "disclaimer": "Share how many parallel experiments the study design calls for, and the right channel configuration gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Reichert 4SPR documentation: brochures, specifications, and software details.",
+                "cards": [
+                  { "title": "Reichert 4SPR Brochure", "description": "Available on request" },
+                  { "title": "Specs and Comparison Sheet", "description": "Available on request" },
+                  { "title": "Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Reichert 4SPR in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Four channels, industry-leading low drift, and an open design that keeps five-year costs well below equivalent systems. Share the study design and sample types, and the right Reichert 4SPR configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Reichert® 2SPR (Surface Plasmon Resonance)",
+          "slug": "reichert-2spr-surface-plasmon-resonance",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/reichert.png",
+          "imageAlt": "Reichert Technologies Reichert® 2SPR (Surface Plasmon Resonance) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/reichert-2spr-surface-plasmon-resonance",
+          "breadcrumbPath": "Home > Products > High-Sensitivity Surface Plasmon Resonance (SPR) Systems > Reichert® 2SPR (Surface Plasmon Resonance)",
+          "h1": "Reichert® 2SPR (Surface Plasmon Resonance)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Universities, academic facilities, and biotech startups don't need the biggest system, they need the most sensitive one at a price that doesn't eat the whole budget. Reichert 2SPR pushes detection and sensitivity limits while typically costing $25,000 less upfront than the leading competitor.",
+
+          "features": [
+            "High Sensitivity Down to ~100 Da: Captures weak and strong interactions across a 1 mM to 1 pM affinity range.",
+            "Industry-Leading Low Drift and Noise: 0.1 μRIU/min drift and 0.05 μRIU rms noise for cleaner, publication-ready data.",
+            "5-Minute Tubing Changes: Standard HPLC fittings swap in minutes, no service call required.",
+            "Self-Cleanable Flow Cells: Not a consumable cartridge, clean or replace it directly.",
+            "Crude Sample Compatibility: Runs whole cells, viruses, lysates, serum, and aggregates without purification.",
+            "Multi-Technique Coupling: Specialized flow cells combine SPR with electrochemistry, fluorescence, photochemistry, mass spectrometry, or liquid chromatography.",
+            "Wide Sensor Chip Range: Carboxymethyl dextran, PEG/carboxyl, nickel NTA, streptavidin, protein A, plain gold, and specialized chips.",
+            "Fast Baseline Stabilization: Stabilizes 2 to 3x faster than competing systems through streamlined fluidics."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Reichert® 2SPR Surface Plasmon Resonance System" },
+            { "label": "Category", "value": "High-Sensitivity Surface Plasmon Resonance (SPR) Systems" },
+            { "label": "Channels", "value": "2" },
+            { "label": "Sensitivity", "value": "Down to ~100 Da" },
+            { "label": "Affinity Range", "value": "1 mM to 1 pM" },
+            { "label": "Drift", "value": "0.1 μRIU/min" },
+            { "label": "Noise", "value": "0.05 μRIU rms" },
+            { "label": "Baseline Stabilization", "value": "2 to 3x faster than competing systems" },
+            { "label": "Sample Capacity", "value": "Up to 768 samples per run" },
+            { "label": "Tubing", "value": "Standard, off-the-shelf HPLC fittings, 5-minute changes" },
+            { "label": "Flow Cells", "value": "Standard and specialized, user-cleanable, not a consumable" },
+            { "label": "Technique Coupling", "value": "Electrochemistry, fluorescence, photochemistry, mass spectrometry, liquid chromatography" },
+            { "label": "Sensor Chips", "value": "Carboxymethyl dextran, PEG/carboxyl, nickel NTA, hydrophobic alkyl, streptavidin/NeutrAvidin, protein A, plain gold" }
+          ],
+
+          "applications": [
+            "High-Quality Kinetic Analysis: Real-time, label-free binding data with industry-leading low noise",
+            "Weak and Strong Affinity Measurement: Sensitivity spanning 1 mM to 1 pM",
+            "Thermodynamic Parameter Determination: High sensitivity and low drift for precise measurement",
+            "Crude Sample Screening: Direct analysis of lysates, serum, and whole cells without purification",
+            "Combined-Technique Experiments: Coupling with mass spectrometry, LC, fluorescence, or electrochemistry"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Sensor Chip Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Open System Savings" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Does the experiment need a second analytical technique alongside SPR?",
+            "description": "Select the secondary technique needed, and see the recommended flow cell configuration.",
+            "steps": [
+              {
+                "key": "secondaryTechnique",
+                "question": "Which secondary technique does the experiment need?",
+                "options": [
+                  { "val": "electrochemistry", "label": "Electrochemistry" },
+                  { "val": "fluorescence", "label": "Fluorescence" },
+                  { "val": "photochemistry", "label": "Photochemistry" },
+                  { "val": "mass-spec", "label": "Mass spectrometry" },
+                  { "val": "lc", "label": "Liquid chromatography" }
+                ]
+              },
+              {
+                "key": "couplingPurpose",
+                "question": "What's the coupling purpose?",
+                "options": [
+                  { "val": "confirmation", "label": "Confirmation" },
+                  { "val": "characterization", "label": "Characterization" },
+                  { "val": "additional-readout", "label": "Additional readout" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "question": "What sample type is being used?",
+                "options": [
+                  { "val": "purified", "label": "Purified solution" },
+                  { "val": "crude", "label": "Crude sample" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a coupling-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "suitability": {
+            "title": "Which sensor chip fits the immobilization chemistry?",
+            "description": "Select the target molecule and immobilization approach, and see the recommended chip type.",
+            "fields": [
+              {
+                "key": "targetMolecule",
+                "label": "Target molecule type",
+                "options": [
+                  { "val": "protein", "label": "Protein" },
+                  { "val": "small-molecule", "label": "Small molecule" },
+                  { "val": "nucleic-acid", "label": "Nucleic acid" },
+                  { "val": "custom", "label": "Custom" }
+                ]
+              },
+              {
+                "key": "immobilizationApproach",
+                "label": "Immobilization approach",
+                "options": [
+                  { "val": "amine-coupling", "label": "Amine coupling" },
+                  { "val": "his-tag", "label": "His-tag capture" },
+                  { "val": "biotin", "label": "Biotin capture" },
+                  { "val": "custom", "label": "Custom chemistry" }
+                ]
+              },
+              {
+                "key": "regenerationFrequency",
+                "label": "Regeneration frequency",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-frequency", "label": "High-frequency use" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Sensor Chips Are Available?",
+                "body": "Carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, plain gold, and specialized chips for custom applications.",
+                "tags": ["Wide Sensor Chip Range"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Reichert 2SPR vs. Reichert 3SPR vs. Reichert 4SPR",
+            "description": "Reichert 2SPR method comparison: 2-channel versus 3-channel versus 4-channel configurations.",
+            "columns": [
+              { "label": "Reichert 2SPR" },
+              { "label": "Reichert 3SPR" },
+              { "label": "Reichert 4SPR" }
+            ],
+            "rows": [
+              { "feature": "Channels", "values": ["2", "3", "4"] },
+              { "feature": "Simultaneous Experiments", "values": ["1 with reference", "Up to 2", "Up to 3"] },
+              { "feature": "Best For", "values": ["Individual labs with lower throughput needs", "Moderate parallel testing needs", "High-throughput method development"] },
+              { "feature": "Choose When", "values": ["Simplicity and lowest cost of entry matter most", "Some parallel capacity is needed without full 4-channel scale", "Multiple chemistries or targets need parallel testing"] }
+            ],
+            "disclaimer": "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Reichert 2SPR industries: academic life sciences, biotech startups, and pharmaceutical R&D.",
+            "industries": [
+              { "name": "Academic Life Sciences Labs", "useCase": "Individual lab research on tight budgets", "consideration": "Lower upfront and operating cost than leading competitors" },
+              { "name": "Biotech Startups", "useCase": "Early-stage binding and kinetics characterization", "consideration": "High sensitivity without the overhead of a large multi-channel system" },
+              { "name": "Pharmaceutical Drug Discovery", "useCase": "Fragment and compound affinity screening", "consideration": "Sensitivity down to ~100 Da supports low molecular weight screening" },
+              { "name": "Combined-Technique Research", "useCase": "Studies needing SPR alongside MS, LC, or fluorescence", "consideration": "Specialized flow cells couple SPR directly with a second technique" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows sensitivity and technique coupling on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms flow cell, chip, and coupling setup" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with tubing changes, flow cell cleaning, and chip handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains fluidics, flow cells, and optical system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies sensor chips, tubing, flow cells, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Reichert 2SPR used for?", "answer": "It's a two-channel surface plasmon resonance system for label-free measurement of biomolecular binding kinetics and affinity, built for individual labs." },
+            { "question": "How sensitive is the Reichert 2SPR?", "answer": "It detects interactions with low molecular weight compounds down to roughly 100 Da, across an affinity range from 1 mM to 1 pM." },
+            { "question": "How much does the Reichert 2SPR save compared to competitors?", "answer": "It typically costs $25,000 less upfront than the leading competitor, and a typical lab saves around $17,000 per year per system, roughly $85,000 over five years." },
+            { "question": "Can the Reichert 2SPR run crude, unpurified samples?", "answer": "Yes, it runs whole cells, viruses, lysates, serum, and aggregates directly, without a purification step first." },
+            { "question": "Can Reichert 2SPR be coupled with other analytical techniques?", "answer": "Yes, specialized flow cells combine it with electrochemistry, fluorescence, or photochemistry, or couple it with mass spectrometry or liquid chromatography." },
+            { "question": "How long does a tubing change take?", "answer": "About five minutes, using standard, off-the-shelf HPLC fittings, without needing a service call." },
+            { "question": "Do the flow cells need to be replaced regularly?", "answer": "No, flow cells clean or swap by hand and aren't treated as a disposable cartridge." },
+            { "question": "Is a service contract required?", "answer": "No, the open design allows in-house maintenance of the parts that typically need attention, though a service contract remains available as an option." },
+            { "question": "What sensor chips are available?", "answer": "Carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, plain gold, and specialized chips for custom applications." },
+            { "question": "How is the 2SPR different from the 4SPR?", "answer": "The 2SPR offers two channels at a lower cost of entry, built for individual labs, while the 4SPR adds four channels and up to three simultaneous experiments for higher-throughput method development." },
+            { "question": "What is the price of Reichert 2SPR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the flow cell, chip, and coupling requirements needed." },
+            { "question": "Who is the authorized distributor of Reichert 2SPR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Reichert Technologies 2SPR in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Reichert 2SPR in India from Inkarp",
+            "description": "Share the secondary technique and sample types, and the right Reichert 2SPR configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your secondary technique and sample types, then confirm the right Reichert 2SPR configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "secondaryTechnique", "label": "Secondary technique needed (if any)", "type": "text", "required": false },
+              { "key": "sampleType", "label": "Sample type (purified or crude)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right flow cell and chip setup", "body": "Share the target analyte size and whether the study needs a coupled technique like mass spec or fluorescence, and the right flow cell and chip setup gets confirmed from there." },
+              { "title": "Confirm the real cost comparison", "body": "Share the number of chips and tubing changes the lab expects annually, and the real cost comparison against the current setup gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "The best 2-channel SPR value on the market. Up to 30% less than the leading competitor.",
+            "heroLead": "Universities, academic facilities, and biotech startups don't need the biggest system, they need the most sensitive one at a price that doesn't eat the whole budget. Reichert 2SPR pushes detection and sensitivity limits while typically costing $25,000 less upfront than the leading competitor. Sensitivity reaches roughly 100 Da, affinity measurement spans 1 mM to 1 pM, drift sits at an industry-leading 0.1 μRIU/min, and the open, component-based design lets the system couple directly with electrochemistry, fluorescence, photochemistry, mass spectrometry, or liquid chromatography for combined experiments in a single run.",
+            "stats": [
+              { "value": "2 channels", "label": "Streamlined, focused SPR analysis" },
+              { "value": "Up to 30% less", "label": "Than the leading competitor's cost" },
+              { "value": "~100 Da", "label": "Minimum detectable molecular weight" },
+              { "value": "1 mM to 1 pM", "label": "Affinity range measured" },
+              { "value": "0.1 μRIU/min", "label": "Drift, industry-leading low" },
+              { "value": "0.05 μRIU rms", "label": "Noise level" },
+              { "value": "Up to 768 samples", "label": "Per run capacity" },
+              { "value": "5 minutes", "label": "Tubing change time" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Reichert 2SPR product information: sensitivity specs, open-system serviceability, and multi-technique coupling.",
+                "body": [
+                  "Sensitivity reaches low molecular weight compounds down to roughly 100 Da, supporting high-quality kinetic analysis, affinity measurements from 1 mM to 1 pM, precise thermodynamic parameter determination, and accurate concentration analysis.",
+                  "Drift sits at an industry-leading 0.1 μRIU/min with noise as low as 0.05 μRIU rms, and baseline stabilizes 2 to 3x faster than competing systems thanks to streamlined fluidics.",
+                  "Sample capacity reaches up to 768 samples per run.",
+                  "The system is fully open: tubing changes in five minutes using standard, off-the-shelf HPLC fittings, and flow cells clean or swap by hand rather than requiring a cartridge replacement.",
+                  "Crude samples run directly, whole cells, viruses, lysates, serum, and aggregates, without a purification step first.",
+                  "A full range of standard sensor chips ships alongside the system: carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, and plain gold for custom chemistry.",
+                  "The open, component-based design connects to specialized flow cells that combine SPR with electrochemistry, fluorescence, or photochemistry, or couple it with mass spectrometry or liquid chromatography.",
+                  "No service contract is required to keep the system running. Accessible parts mean routine maintenance happens in-house, though a service contract remains available for labs that prefer it."
+                ],
+                "cards": [
+                  { "title": "Up to 30% lower cost", "description": "Versus the leading competitor" },
+                  { "title": "~100 Da sensitivity", "description": "Detects low molecular weight binding events" },
+                  { "title": "0.1 μRIU/min drift", "description": "Industry-leading baseline stability" },
+                  { "title": "Multi-technique coupling", "description": "Electrochemistry, fluorescence, MS, LC" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Channels", "description": "2, focused format for individual labs" },
+                  { "title": "Sensitivity", "description": "Down to ~100 Da, affinity range 1 mM to 1 pM" },
+                  { "title": "Drift / Noise", "description": "0.1 μRIU/min drift, 0.05 μRIU rms noise" },
+                  { "title": "Sample capacity", "description": "Up to 768 per run" },
+                  { "title": "Technique coupling", "description": "Electrochemistry, fluorescence, photochemistry, mass spectrometry, liquid chromatography" },
+                  { "title": "Serviceability", "description": "Open system, standard HPLC tubing, self-cleanable flow cells" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Reichert 2SPR applications: kinetic analysis, affinity measurement, and combined-technique biomolecular studies."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Reichert 2SPR technical specifications: sensitivity, drift, noise, and sample capacity."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Open System, Real Savings",
+                "title": "Open System, Real Savings",
+                "description": "SPR platforms that lock parts behind a service contract turn routine maintenance into a recurring, unpredictable cost. Reichert 2SPR puts the parts that need attention directly in reach. Purchasing the system typically costs $25,000 less than the leading competitor, and a typical lab saves roughly $17,000 per year per system when equipment and operating costs are combined. Tubing uses standard HPLC fittings, changeable in five minutes without waiting on a service call, and compatible with a wide range of sample viscosities and particulate matter. Flow cells clean by hand and aren't treated as a disposable cartridge, unlike systems that require replacement once or twice a year. Sensor chips run at often less than half the price of comparable chips elsewhere, meaningful given a typical lab burns through 75 to 200 chips annually. None of this requires a service contract to access. A contract remains available, but it's a choice, not a condition of ownership.",
+                "cards": [
+                  { "title": "Lower upfront equipment cost", "description": "Typically $25,000 less than the leading competitor" },
+                  { "title": "Predictable, lower annual running costs", "description": "No mandatory service contract, in-house maintenance" },
+                  { "title": "Fast recovery from clogs or damaged tubing", "description": "5-minute tubing swaps with standard fittings" },
+                  { "title": "Lower per-experiment consumable cost", "description": "Sensor chips often under half the price of competitors" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Coupling SPR with Other Techniques",
+                "title": "Coupling SPR with Other Techniques",
+                "description": "A binding event tells one part of the story. Coupling SPR with a second analytical technique fills in the rest, all from the same experiment, without moving the sample to a separate instrument.",
+                "body": [
+                  "Specialized flow cells combine SPR directly with electrochemistry, fluorescence, or photochemistry, opening new investigation angles within the same run.",
+                  "The same open, component-based design also couples SPR with mass spectrometry or liquid chromatography, valuable when a binding event needs to be confirmed or characterized at the molecular level immediately after detection.",
+                  "This flexibility comes from the system's open architecture itself, not a separate model or upgrade path bolted on afterward."
+                ],
+                "utilityChecklist": [
+                  { "label": "Confirming binding events at the molecular level", "value": "Coupling with mass spectrometry or liquid chromatography" },
+                  { "label": "Investigating electrochemical or photochemical behavior alongside binding", "value": "Specialized flow cells for electrochemistry or photochemistry" },
+                  { "label": "Adding a fluorescence readout to a binding study", "value": "Specialized flow cells for fluorescence coupling" },
+                  { "label": "Expanding a single experiment's data output", "value": "Open, component-based system design" }
+                ],
+                "disclaimer": "Share which secondary technique the study needs, mass spec, LC, fluorescence, or electrochemistry, and the right flow cell configuration gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Reichert 2SPR documentation: brochures, specifications, and software details.",
+                "cards": [
+                  { "title": "Reichert 2SPR Brochure", "description": "Available on request" },
+                  { "title": "Specs and Comparison Sheet", "description": "Available on request" },
+                  { "title": "Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Reichert 2SPR in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "The most sensitive, affordable 2-channel SPR system available, open enough to couple with mass spec, LC, fluorescence, and more. Share the study design and sample types, and the right Reichert 2SPR configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Reichert® 3SPR (Surface Plasmon Resonance)",
+          "slug": "reichert-3spr-surface-plasmon-resonance",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/reichert.png",
+          "imageAlt": "Reichert Technologies Reichert® 3SPR (Surface Plasmon Resonance) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/reichert-3spr-surface-plasmon-resonance",
+          "breadcrumbPath": "Home > Products > High-Sensitivity Surface Plasmon Resonance (SPR) Systems > Reichert® 3SPR (Surface Plasmon Resonance)",
+          "h1": "Reichert® 3SPR (Surface Plasmon Resonance)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Two channels can feel limiting. Four can feel like paying for capacity you don't need. Reichert 3SPR sits right in the middle: immobilize different molecules on two channels while a third stays as reference, maximizing data output without the price tag of a full four-channel system, all while costing 20% less than a lower-throughput system from the leading competitor.",
+
+          "features": [
+            "Three-Channel Parallel Analysis: Runs up to two experiments at once for faster method development.",
+            "High Sensitivity Under 100 Da: Captures weak and strong interactions across a 1 mM to 1 pM affinity range.",
+            "Industry-Leading Low Drift and Noise: 0.1 μRIU/min drift and 0.05 μRIU rms noise for cleaner, publication-ready data.",
+            "5-Minute Tubing Changes: Standard HPLC fittings swap in minutes, no service call required.",
+            "Self-Cleanable Flow Cells: Not a consumable cartridge, clean or replace it directly.",
+            "Crude Sample Compatibility: Runs whole cells, viruses, lysates, serum, and aggregates without purification.",
+            "Wide Sensor Chip Range: Carboxymethyl dextran, PEG/carboxyl, nickel NTA, streptavidin, protein A, plain gold, and specialized chips.",
+            "Fast Baseline Stabilization: Stabilizes 2 to 3x faster than competing systems through streamlined fluidics."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Reichert® 3SPR Surface Plasmon Resonance System" },
+            { "label": "Category", "value": "High-Sensitivity Surface Plasmon Resonance (SPR) Systems" },
+            { "label": "Channels", "value": "3" },
+            { "label": "Simultaneous Experiments", "value": "Up to 2" },
+            { "label": "Sensitivity", "value": "Under 100 Da" },
+            { "label": "Affinity Range", "value": "1 mM to 1 pM" },
+            { "label": "Drift", "value": "0.1 μRIU/min" },
+            { "label": "Noise", "value": "0.05 μRIU rms" },
+            { "label": "Baseline Stabilization", "value": "2 to 3x faster than competing systems" },
+            { "label": "Sample Capacity", "value": "Up to 768 samples per run" },
+            { "label": "Tubing", "value": "Standard, off-the-shelf HPLC fittings, 5-minute changes" },
+            { "label": "Flow Cells", "value": "Standard and specialized, user-cleanable, not a consumable" },
+            { "label": "Sensor Chips", "value": "Carboxymethyl dextran, PEG/carboxyl, nickel NTA, hydrophobic alkyl, streptavidin/NeutrAvidin, protein A, plain gold" }
+          ],
+
+          "applications": [
+            "Multi-Target Binding Studies: Two experimental channels against one shared reference",
+            "High-Quality Kinetic Analysis: Real-time, label-free binding data with industry-leading low noise",
+            "Weak and Strong Affinity Measurement: Sensitivity spanning 1 mM to 1 pM",
+            "Crude Sample Screening: Direct analysis of lysates, serum, and whole cells without purification",
+            "Parallel Method Development: Testing multiple chemistries or regeneration schemes side by side"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Sensor Chip Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Open System Savings" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "How should the three channels be split for this study?",
+            "description": "Select the experiment design, and see the recommended channel layout.",
+            "steps": [
+              {
+                "key": "analyteTargets",
+                "question": "How many analytes or targets need testing?",
+                "options": [
+                  { "val": "single", "label": "Single" },
+                  { "val": "multiple", "label": "Multiple" },
+                  { "val": "paired", "label": "Paired comparison" }
+                ]
+              },
+              {
+                "key": "referenceStrategy",
+                "question": "What reference strategy fits the study?",
+                "options": [
+                  { "val": "shared", "label": "Shared reference" },
+                  { "val": "dual", "label": "Dual reference on one channel" }
+                ]
+              },
+              {
+                "key": "throughputNeed",
+                "question": "What's the throughput need?",
+                "options": [
+                  { "val": "simultaneous", "label": "Simultaneous runs" },
+                  { "val": "staggered", "label": "Staggered runs" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "suitability": {
+            "title": "Which sensor chip fits the immobilization chemistry?",
+            "description": "Select the target molecule and immobilization approach, and see the recommended chip type.",
+            "fields": [
+              {
+                "key": "targetMolecule",
+                "label": "Target molecule type",
+                "options": [
+                  { "val": "protein", "label": "Protein" },
+                  { "val": "small-molecule", "label": "Small molecule" },
+                  { "val": "nucleic-acid", "label": "Nucleic acid" },
+                  { "val": "custom", "label": "Custom" }
+                ]
+              },
+              {
+                "key": "immobilizationApproach",
+                "label": "Immobilization approach",
+                "options": [
+                  { "val": "amine-coupling", "label": "Amine coupling" },
+                  { "val": "his-tag", "label": "His-tag capture" },
+                  { "val": "biotin", "label": "Biotin capture" },
+                  { "val": "custom", "label": "Custom chemistry" }
+                ]
+              },
+              {
+                "key": "regenerationFrequency",
+                "label": "Regeneration frequency",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-frequency", "label": "High-frequency use" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Sensor Chips Are Available?",
+                "body": "Carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, plain gold, and specialized chips for custom applications.",
+                "tags": ["Wide Sensor Chip Range"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Reichert 3SPR vs. Reichert 2SPR vs. Reichert 4SPR",
+            "description": "Reichert 3SPR method comparison: 3-channel versus 2-channel versus 4-channel configurations.",
+            "columns": [
+              { "label": "Reichert 3SPR" },
+              { "label": "Reichert 2SPR" },
+              { "label": "Reichert 4SPR" }
+            ],
+            "rows": [
+              { "feature": "Channels", "values": ["3", "2", "4"] },
+              { "feature": "Simultaneous Experiments", "values": ["Up to 2", "1 with reference", "Up to 3"] },
+              { "feature": "Best For", "values": ["Balanced throughput and cost", "Individual labs with lower throughput needs", "High-throughput method development"] },
+              { "feature": "Choose When", "values": ["Some parallel capacity is needed without full 4-channel scale", "Simplicity and lowest cost of entry matter most", "Multiple chemistries or targets need parallel testing"] }
+            ],
+            "disclaimer": "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Reichert 3SPR industries: pharmaceutical R&D, biotechnology, academic core facilities, and diagnostics development.",
+            "industries": [
+              { "name": "Pharmaceutical Drug Discovery", "useCase": "Screening compound binding against multiple targets", "consideration": "Two experimental channels against one shared reference" },
+              { "name": "Biotechnology Research", "useCase": "Antibody and protein interaction characterization", "consideration": "Parallel chemistry testing without full 4-channel cost" },
+              { "name": "Academic Core Facilities", "useCase": "Serving multiple research groups on shared equipment", "consideration": "Best performance-to-cost ratio for shared, moderate-throughput use" },
+              { "name": "Diagnostics Development", "useCase": "Crude sample interaction analysis", "consideration": "Direct analysis of serum and lysates without purification" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows sensitivity and channel configuration on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms channel layout, chip type, and flow cell setup" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with tubing changes, flow cell cleaning, and chip handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains fluidics, flow cells, and optical system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies sensor chips, tubing, flow cells, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Reichert 3SPR used for?", "answer": "It's a three-channel surface plasmon resonance system for real-time, label-free measurement of biomolecular binding kinetics and affinity, built to balance throughput and cost." },
+            { "question": "How sensitive is the Reichert 3SPR?", "answer": "It detects interactions with low molecular weight compounds under 100 Da, across an affinity range from 1 mM to 1 pM." },
+            { "question": "How much does the Reichert 3SPR save compared to competitors?", "answer": "It typically costs 20% less than a lower-throughput system from the leading competitor, and a typical lab saves around $20,000 per year per system, roughly $100,000 over five years." },
+            { "question": "Can the Reichert 3SPR run crude, unpurified samples?", "answer": "Yes, it runs whole cells, viruses, lysates, serum, and aggregates directly, without a purification step first." },
+            { "question": "How long does a tubing change take?", "answer": "About five minutes, using standard, off-the-shelf HPLC fittings, without needing a service call." },
+            { "question": "Do the flow cells need to be replaced regularly?", "answer": "No, flow cells clean or swap by hand and aren't treated as a disposable cartridge." },
+            { "question": "Is a service contract required?", "answer": "No, the open design allows in-house maintenance of the parts that typically need attention, though a service contract remains available as an option." },
+            { "question": "What sensor chips are available?", "answer": "Carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, plain gold, and specialized chips for custom applications." },
+            { "question": "How is the 3SPR different from the 2SPR and 4SPR?", "answer": "The 3SPR offers three channels and up to two simultaneous experiments, sitting between the 2SPR's lower-cost, lower-throughput format and the 4SPR's higher-throughput, four-channel design." },
+            { "question": "What is the price of Reichert 3SPR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the channel configuration and chip requirements needed." },
+            { "question": "Who is the authorized distributor of Reichert 3SPR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Reichert Technologies 3SPR in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Reichert 3SPR in India from Inkarp",
+            "description": "Share the channel configuration and sample types, and the right Reichert 3SPR configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your channel configuration and sample types, then confirm the right Reichert 3SPR configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "channelConfiguration", "label": "Channel configuration needed", "type": "text", "required": false },
+              { "key": "sampleType", "label": "Sample type (purified or crude)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right channel and reference setup", "body": "Share the number of targets or chemistries the study needs to test in parallel, and the right channel and reference setup gets confirmed from there." },
+              { "title": "Confirm the real cost comparison", "body": "Share the number of chips and tubing changes the lab expects annually, and the real cost comparison against the current setup gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Three channels. Two experiments at once. The sweet spot between throughput and cost.",
+            "heroLead": "Two channels can feel limiting. Four can feel like paying for capacity you don't need. Reichert 3SPR sits right in the middle: immobilize different molecules on two channels while a third stays as reference, maximizing data output without the price tag of a full four-channel system, all while costing 20% less than a lower-throughput system from the leading competitor. Sensitivity reaches below 100 Da, affinity measurement spans 1 mM to 1 pM, drift sits at an industry-leading 0.1 μRIU/min, and the same open, self-serviceable design that defines the Reichert line keeps ongoing costs low too.",
+            "stats": [
+              { "value": "3 channels", "label": "Up to 2 simultaneous experiments" },
+              { "value": "20% less", "label": "Than a lower-throughput competitor system" },
+              { "value": "Under 100 Da", "label": "Minimum detectable molecular weight" },
+              { "value": "1 mM to 1 pM", "label": "Affinity range measured" },
+              { "value": "0.1 μRIU/min", "label": "Drift, industry-leading low" },
+              { "value": "0.05 μRIU rms", "label": "Noise level" },
+              { "value": "Up to 768 samples", "label": "Per run capacity" },
+              { "value": "5 minutes", "label": "Tubing change time" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Reichert 3SPR product information: channel flexibility, sensitivity specs, and open-system serviceability.",
+                "body": [
+                  "Three channels run up to two experiments at once, letting different immobilization chemistries or regeneration schemes get tested in parallel instead of one after another.",
+                  "Sensitivity reaches low molecular weight compounds under 100 Da, supporting high-quality kinetic analysis, affinity measurements from 1 mM to 1 pM, precise thermodynamic parameter determination, and accurate concentration analysis.",
+                  "Drift sits at an industry-leading 0.1 μRIU/min with noise as low as 0.05 μRIU rms, and baseline stabilizes 2 to 3x faster than competing systems thanks to streamlined fluidics.",
+                  "Sample capacity reaches up to 768 samples per run.",
+                  "The system is fully open: tubing changes in five minutes using standard, off-the-shelf HPLC fittings, and flow cells clean or swap by hand rather than requiring a cartridge replacement.",
+                  "Crude samples run directly, whole cells, viruses, lysates, serum, and aggregates, without a purification step first.",
+                  "A full range of standard sensor chips ships alongside the system: carboxymethyl dextran, planar PEG/carboxyl, nickel NTA, hydrophobic planar alkyl, streptavidin/NeutrAvidin, protein A, and plain gold for custom chemistry.",
+                  "No service contract is required to keep the system running. Accessible parts mean routine maintenance happens in-house, though a service contract remains available for labs that prefer it."
+                ],
+                "cards": [
+                  { "title": "3 channels", "description": "Up to 2 simultaneous experiments" },
+                  { "title": "20% lower cost", "description": "Versus a lower-throughput competitor system" },
+                  { "title": "0.1 μRIU/min drift", "description": "Industry-leading baseline stability" },
+                  { "title": "Open, self-serviceable", "description": "No mandatory service contract" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Channels", "description": "3, running up to 2 simultaneous experiments" },
+                  { "title": "Sensitivity", "description": "Under 100 Da, affinity range 1 mM to 1 pM" },
+                  { "title": "Drift / Noise", "description": "0.1 μRIU/min drift, 0.05 μRIU rms noise" },
+                  { "title": "Sample capacity", "description": "Up to 768 per run" },
+                  { "title": "Serviceability", "description": "Open system, standard HPLC tubing, self-cleanable flow cells" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Reichert 3SPR applications: multi-target binding studies, kinetic analysis, and crude sample interaction analysis."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Reichert 3SPR technical specifications: sensitivity, drift, noise, and sample capacity."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Open System, Real Savings",
+                "title": "Open System, Real Savings",
+                "description": "SPR platforms that lock parts behind a service contract turn routine maintenance into a recurring, unpredictable cost. Reichert 3SPR puts the parts that need attention directly in reach. Purchasing the system typically costs 20% less than a lower-throughput system from the leading competitor, and a typical lab saves around $20,000 per year per system, roughly $100,000 over five years. Tubing uses standard HPLC fittings, changeable in five minutes without waiting on a service call, and compatible with a wide range of sample viscosities and particulate matter. Flow cells clean by hand and aren't treated as a disposable cartridge, unlike systems that require replacement once or twice a year. Sensor chips run at often less than half the price of comparable chips elsewhere, meaningful given a typical lab burns through 75 to 200 chips annually. None of this requires a service contract to access. A contract remains available, but it's a choice, not a condition of ownership.",
+                "cards": [
+                  { "title": "More throughput without full 4-channel cost", "description": "3 channels at 20% below a lower-throughput competitor system" },
+                  { "title": "Predictable, lower annual running costs", "description": "No mandatory service contract, in-house maintenance" },
+                  { "title": "Fast recovery from clogs or damaged tubing", "description": "5-minute tubing swaps with standard fittings" },
+                  { "title": "Lower per-experiment consumable cost", "description": "Sensor chips often under half the price of competitors" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Three Channels, Flexible Experiment Design",
+                "title": "Three Channels, Flexible Experiment Design",
+                "description": "A single-channel system forces experiments into a queue. Three channels open up parallel throughput without the cost of a full four-channel platform.",
+                "body": [
+                  "That flexibility covers several layouts: two experimental channels against one shared reference, useful for testing an analyte's binding to multiple targets at once, one experimental channel run against two different references, or two paired runs executed at different times using the same reference.",
+                  "For labs that need even more parallel capacity, a four-channel system scales further. For labs that need less, a two-channel system covers the same open, low-cost design at a smaller scale."
+                ],
+                "utilityChecklist": [
+                  { "label": "Testing one analyte against multiple targets", "value": "2 experimental channels, 1 shared reference" },
+                  { "label": "Comparing a single analyte against two reference conditions", "value": "1 experimental channel, 2 separate references" },
+                  { "label": "Staggered experiments using a consistent reference", "value": "2 pairs run at different times, same reference" },
+                  { "label": "More or less throughput than 3 channels offers", "value": "Scale up to the 4SPR or down to the 2SPR" }
+                ],
+                "disclaimer": "Share how many targets or reference conditions the study design calls for, and the right channel configuration gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Reichert 3SPR documentation: brochures, specifications, and software details.",
+                "cards": [
+                  { "title": "Reichert 3SPR Brochure", "description": "Available on request" },
+                  { "title": "Specs and Comparison Sheet", "description": "Available on request" },
+                  { "title": "Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Reichert 3SPR in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Three channels, flexible referencing, and an open design that keeps costs 20% below lower-throughput competitor systems. Share the study design and sample types, and the right Reichert 3SPR configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

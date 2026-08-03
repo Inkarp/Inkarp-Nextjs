@@ -64,6 +64,8 @@ import luzchemSolarSimulatorsCatalog from "./luzchem/solar-simulators-300-800-nm
 import luzchemXenonIlluminatorCatalog from "./luzchem/xenon-illuminator.json";
 import bandelinUltrasonicBathsCatalog from "./bandelin/ultrasonic-baths.json";
 import robotCoupeBlixerSystemsCatalog from "./robot-coupe/blixer-systems.json";
+import fomTechnologiesSlotDieCoatingSystemsCatalog from "./fom-technologies/slot-die-coating-systems.json";
+import fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog from "./fom-technologies/sheet-based-slot-die-coating-systems.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -142,6 +144,8 @@ const principalCatalogs = [
   luzchemXenonIlluminatorCatalog,
   bandelinUltrasonicBathsCatalog,
   robotCoupeBlixerSystemsCatalog,
+  fomTechnologiesSlotDieCoatingSystemsCatalog,
+  fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

@@ -63,6 +63,7 @@ import luzchemLzcPhotoreactorCatalog from "./luzchem/lzc-photoreactor.json";
 import luzchemSolarSimulatorsCatalog from "./luzchem/solar-simulators-300-800-nm.json";
 import luzchemXenonIlluminatorCatalog from "./luzchem/xenon-illuminator.json";
 import bandelinUltrasonicBathsCatalog from "./bandelin/ultrasonic-baths.json";
+import robotCoupeBlixerSystemsCatalog from "./robot-coupe/blixer-systems.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -140,6 +141,7 @@ const principalCatalogs = [
   luzchemSolarSimulatorsCatalog,
   luzchemXenonIlluminatorCatalog,
   bandelinUltrasonicBathsCatalog,
+  robotCoupeBlixerSystemsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

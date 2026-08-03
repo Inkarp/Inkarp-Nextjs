@@ -1,0 +1,323 @@
+{
+  "principal": {
+    "slug": "luzchem",
+    "principalName": "Luzchem",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Well Plate Illuminator",
+      "slug": "well-plate-illuminator",
+      "products": [
+        {
+          "name": "Well Plate Illuminator (WPI)",
+          "slug": "well-plate-illuminator",
+          "manufacturerUrl": "https://luzchem.com/products/well-plate-illuminator",
+          "metaTitle": "Well Plate Illuminator — Authorized Distributor & Service Provider in India | Inkarp | Luzchem",
+          "metaDescription": "Inkarp is the authorized distributor & service provider for the Luzchem Well Plate Illuminator in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+          "metaKeywords": "Well Plate Illuminator, Well Plate Illuminator India, Well Plate Illuminator price in India, Well Plate Illuminator distributor India, Luzchem Well Plate Illuminator, Luzchem distributor India, Luzchem authorized distributor, Well Plate Illuminator India, Well Plate Illuminator distributor and service provider in India, well plate illuminator, microplate photoreactor, multiwell illuminator, plate irradiation, photochemistry plate, well plate light source, microplate illumination, screening illuminator, Luzchem India, Inkarp Instruments",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Luzchem.png",
+          "imageAlt": "Luzchem Well Plate Illuminator (WPI) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/well-plate-illuminator",
+          "breadcrumbPath": "Home > Products > Well Plate Illuminator > Well Plate Illuminator (WPI)",
+          "h1": "Well Plate Illuminator (WPI)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Running a photochemistry screen across a whole plate usually means one light source trying to cover 24 wells evenly, and it rarely does. WPI takes a different approach: every well gets its own LED.",
+
+          "features": [
+            "One LED Per Well: Custom optical guides direct each LED precisely into its own well, minimizing cross-exposure.",
+            "Bottom-Up Illumination: Delivers light efficiently through transparent well plates or vials.",
+            "4 mL Auto-Sampler Vial Compatible: Drop vials into the plate format for flexible sample handling.",
+            "Nine Wavelength Options: Near UV, blue, green, lime, amber, red, deep red, far red, and cool white.",
+            "Optional PWM Dimmer Module: Fine-tunes irradiance through duty cycle adjustment without affecting spectral output.",
+            "Dual Thermal Management: Anodized aluminum body plus an integrated cooling fan for extended runs.",
+            "Included Safety Glasses: LED-blocking glasses come standard.",
+            "Matched Optional Shields: Separate shields available for well plate and vial configurations."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Luzchem Well Plate Illuminator (WPI)" },
+            { "label": "Category", "value": "Well Plate Illuminator" },
+            { "label": "LED Count", "value": "24, one dedicated per well" },
+            { "label": "Plate Format", "value": "Standard 24-well plate" },
+            { "label": "Vial Compatibility", "value": "4 mL auto-sampler vials, placed inside the plate" },
+            { "label": "Illumination Direction", "value": "From below" },
+            { "label": "Wavelength Options", "value": "Near UV, Blue (460nm), Green (535nm), Lime (broad), Amber (590nm), Red (630nm), Deep Red (660nm), Far Red (730nm), Cool White (broad)" },
+            { "label": "Cooling", "value": "Anodized aluminum body plus integrated fan" },
+            { "label": "Safety", "value": "LED-blocking glasses included; optional shields for plates or vials" },
+            { "label": "Optional Intensity Control", "value": "PWM dimmer module (WPI-VP), duty cycle adjustment" }
+          ],
+
+          "applications": [
+            "High-Throughput Photochemical Screening: 24 simultaneous, uniformly illuminated wells",
+            "Photobiological Screening: Broad wavelength range from near UV to far red",
+            "Kinetic Studies: PWM dimmer holds spectral output steady while intensity varies",
+            "Photoredox Screening: Same PWM precision for controlled catalyst studies",
+            "Flexible Sample Formats: Well plates or 4 mL auto-sampler vials on the same instrument"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Shield Fit" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "WPI vs WPI-VP" },
+            { "id": "benefits", "label": "Illumination Design" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What wavelength does your screen need?",
+            "description": "Select your target wavelength region, and see which WPI option fits.",
+            "steps": [
+              {
+                "key": "wavelength",
+                "question": "What wavelength region do you need?",
+                "options": [
+                  { "val": "near-uv", "label": "Near UV" },
+                  { "val": "blue", "label": "Blue (460nm)" },
+                  { "val": "green", "label": "Green (535nm)" },
+                  { "val": "lime", "label": "Lime (broad)" },
+                  { "val": "amber", "label": "Amber (590nm)" },
+                  { "val": "red", "label": "Red (630nm)" },
+                  { "val": "deep-red", "label": "Deep Red (660nm)" },
+                  { "val": "far-red", "label": "Far Red (730nm)" },
+                  { "val": "cool-white", "label": "Cool White (broad)" }
+                ]
+              },
+              {
+                "key": "application",
+                "question": "What type of application is this for?",
+                "options": [
+                  { "val": "photochemistry", "label": "Photochemistry", "desc": "24 simultaneous, uniformly illuminated wells" },
+                  { "val": "photobiology", "label": "Photobiology", "desc": "Broad wavelength range from near UV to far red" },
+                  { "val": "kinetics", "label": "Kinetics", "desc": "PWM dimmer holds spectral output steady while intensity varies" },
+                  { "val": "photoredox", "label": "Photoredox", "desc": "Same PWM precision for controlled catalyst studies" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to us for a wavelength-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Well plates, vials, or both?",
+            "description": "Select your sample vessel type, and see which optional shield fits.",
+            "fields": [
+              {
+                "key": "vessel",
+                "label": "Vessel type",
+                "options": [
+                  { "val": "plate", "label": "Standard well plate" },
+                  { "val": "vial", "label": "4 mL auto-sampler vial" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Matched Optional Shields",
+                "body": "LED-blocking safety glasses are included as standard, with optional shields available for well plate or vial configurations.",
+                "tags": ["Optional shields available for well plate or vial use"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "title": "Method Comparison",
+            "description": "Standard WPI compared with the PWM-equipped WPI-VP.",
+            "columns": [
+              { "label": "Standard WPI" },
+              { "label": "WPI-VP (with PWM Dimmer)" }
+            ],
+            "rows": [
+              { "feature": "Intensity Control", "values": ["Fixed at LED rated output", "Adjustable via duty cycle"] },
+              { "feature": "Spectral Stability When Dimming", "values": ["Not applicable", "Held constant regardless of intensity setting"] },
+              { "feature": "Best For", "values": ["Standard exposure at full intensity", "Kinetic studies, photoredox screening, controlled exposure work"] },
+              { "feature": "Choose when", "values": ["The protocol runs at one fixed intensity", "Irradiance needs to vary without shifting wavelength"] }
+            ],
+            "disclaimer": "Both share the same 24-LED array and optics, so adding the PWM module never changes the core illumination architecture."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "WPI across pharmaceutical screening, photobiology, and materials science labs.",
+            "industries": [
+              { "name": "Pharmaceutical High-Throughput Screening", "useCase": "Parallel photocatalytic reaction screening", "consideration": "24-well simultaneous exposure for faster screening cycles" },
+              { "name": "Academic Photochemistry Research", "useCase": "Kinetic and mechanistic studies", "consideration": "PWM dimmer for precise, spectrally stable intensity control" },
+              { "name": "Photobiology Research", "useCase": "Multi-condition biological light response studies", "consideration": "Broad wavelength range from UV to far red" },
+              { "name": "Materials Science", "useCase": "Parallel photodegradation testing", "consideration": "Consistent irradiance across all 24 positions" },
+              { "name": "Contract Research Organizations", "useCase": "Varied client screening protocols", "consideration": "Wavelength and shield flexibility for different projects" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "WPI demonstration, installation, training, and AMC support from Inkarp in India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows uniform well-to-well illumination on your own plates" },
+              { "title": "Configuration Assessment", "description": "Confirms the right wavelength, shield, and PWM configuration" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident using wavelength selection and PWM control" },
+              { "title": "Preventive Maintenance", "description": "Maintains LED array, optics, and cooling fan performance" },
+              { "title": "Spares and Accessories", "description": "Supplies shields, safety glasses, and replacement components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Well Plate Illuminator used for?", "answer": "It's a high-throughput LED exposure system built for simultaneous, uniform irradiation of samples across a standard 24-well plate." },
+            { "question": "How does WPI keep illumination consistent across all 24 wells?", "answer": "Each well has its own dedicated LED paired with a custom optical guide and lens, aimed precisely into that well rather than shared across the whole plate." },
+            { "question": "Can vials be used instead of a well plate?", "answer": "Yes, 4 mL auto-sampler vials can be placed inside a well plate for flexible sample handling on the same instrument." },
+            { "question": "How is light intensity controlled without changing the wavelength?", "answer": "Add the optional PWM dimmer module, which adjusts intensity through duty cycle rather than current, keeping spectral output constant as irradiance changes." },
+            { "question": "What wavelengths are available?", "answer": "Near UV, blue, green, lime, amber, red, deep red, far red, and cool white, each fully characterized." },
+            { "question": "How does WPI stay cool during longer experiments?", "answer": "An anodized aluminum body dissipates heat passively, and an integrated cooling fan maintains stable temperature through extended runs." },
+            { "question": "What safety equipment comes with WPI?", "answer": "LED-blocking safety glasses are included as standard, with optional shields available for well plate or vial configurations." },
+            { "question": "What is the price of the Well Plate Illuminator in India?", "answer": "Get in touch and Inkarp will put together a quote around your wavelength and accessory configuration." },
+            { "question": "Who is the authorized distributor of the Well Plate Illuminator in India?", "answer": "Inkarp is the authorized distributor and service provider for the Luzchem Well Plate Illuminator in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Well Plate Illuminator in India from Inkarp",
+            "description": "Tell us your wavelength and sample format, and Inkarp will get you the right configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your wavelength and sample format requirements, then contact you with the right configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "wavelengthRequirement", "label": "Target wavelength", "type": "text", "required": false },
+              { "key": "vesselFormat", "label": "Well plate or vial format", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "The right wavelength and accessory configuration is matched to your screening application." },
+              { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
+              { "title": "Wavelength and PWM training", "body": "Get your team confident using wavelength selection and PWM control." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroLead": "24 wells. 24 dedicated LEDs, each precisely aimed at its own well.",
+            "stats": [
+              { "value": "24", "label": "Dedicated LEDs, one per well" },
+              { "value": "24-well", "label": "Standard plate format" },
+              { "value": "9", "label": "Wavelength options" },
+              { "value": "Bottom-up", "label": "Illumination direction" },
+              { "value": "4 mL", "label": "Compatible auto-sampler vial size" },
+              { "value": "Optional", "label": "PWM dimmer for spectral-safe intensity control" },
+              { "value": "Active + passive", "label": "Cooling fan plus anodized aluminum dissipation" },
+              { "value": "2", "label": "Optional shield types, plate and vial" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "WPI's 24-LED array, wavelength range, and PWM intensity control configuration.",
+                "subheading": "Why one LED per well solves the uniformity problem",
+                "body": [
+                  "WPI is built around a problem every high-throughput photochemistry screen runs into: getting the same light to land on well 1 and well 24 equally. A single light source spread across a plate almost never manages it. Twenty-four individual LEDs, one per well, each with its own optical guide and lens, does.",
+                  "Illumination comes from below rather than above, running straight through a transparent plate or vial bottom. That same bottom-up design lets 4 mL auto-sampler vials drop directly into the plate format when the workflow calls for it, without switching to a different instrument.",
+                  "Heat management runs on two fronts at once: the anodized aluminum body dissipates heat passively, and an integrated cooling fan keeps operating temperature stable through longer experiments, important with 24 LEDs running simultaneously rather than one."
+                ],
+                "cards": [
+                  { "title": "24 dedicated LEDs", "description": "One per well, no cross-exposure" },
+                  { "title": "9 wavelengths", "description": "Near UV through far red, plus broad white" },
+                  { "title": "PWM dimmer option", "description": "Adjust intensity without shifting spectral output" },
+                  { "title": "Dual cooling", "description": "Passive aluminum body plus active fan" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "description": "The right wavelength and accessory configuration is matched to your screening application.",
+                "cards": [
+                  { "title": "Standard configuration", "description": "24-LED array, one dedicated LED per well, bottom-up illumination" },
+                  { "title": "Wavelength options", "description": "Near UV, blue, green, lime (broad), amber, red, deep red, far red, cool white (broad)" },
+                  { "title": "Safety glasses", "description": "LED-blocking safety glasses included as standard" },
+                  { "title": "Optional shields", "description": "Available for well plate or vial use" },
+                  { "title": "Optional PWM dimmer module", "description": "WPI-VP, for spectral-safe intensity control" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "WPI's one-LED-per-well design, bottom-up illumination, and PWM dimmer."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "WPI supports high-throughput photochemical and photobiological screening."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "WPI LED count, wavelength options, cooling, and PWM dimmer specifications."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Illumination design",
+                "title": "One LED Per Well: Uniform Illumination Design",
+                "description": "Uniform illumination across 24 wells is harder than it sounds, and it comes down to a design choice most instruments don't make: giving every well its own dedicated light source instead of sharing one across the whole plate. Each LED pairs with a custom optical guide and lens that aims it directly into its corresponding well, keeping neighboring samples from picking up stray light meant for the well next door. Illuminating from below lets that light pass efficiently through a transparent plate or vial bottom, and because the design already works with standard plate geometry, dropping 4 mL auto-sampler vials into the same format extends that same precision to a different sample workflow entirely.",
+                "cards": [
+                  { "title": "Consistent irradiance across every well", "description": "24 dedicated LEDs, custom optics per well" },
+                  { "title": "No cross-exposure between neighboring samples", "description": "Individually aimed optical guides" },
+                  { "title": "Efficient light delivery through the plate", "description": "Bottom-up illumination design" },
+                  { "title": "Flexibility beyond standard well plates", "description": "4 mL auto-sampler vial compatibility" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Wavelength and intensity control",
+                "title": "Wavelength Selection and PWM Intensity Control",
+                "description": "Getting the right wavelength is only half the job in a screening experiment. The other half is controlling intensity without accidentally changing the wavelength that was just selected.",
+                "body": [
+                  "Nine wavelength options cover near UV through far red, plus lime and cool white as broad-spectrum choices, all fully characterized so exactly what's being delivered is never a guess. The optional PWM dimmer module solves the intensity problem specifically: instead of reducing current to dim the LED, which can shift its emission wavelength, PWM adjusts the duty cycle, how long the LED stays on during each rapid switching cycle, so spectral output stays exactly where it started even as irradiance changes."
+                ],
+                "utilityChecklist": [
+                  { "label": "A specific wavelength for the reaction", "value": "Nine options, near UV to far red" },
+                  { "label": "Dimming without shifting the spectrum", "value": "PWM dimmer, duty cycle based" },
+                  { "label": "Kinetic studies needing precise light control", "value": "PWM's fine-tuned irradiance adjustment" },
+                  { "label": "Photoredox screening across intensities", "value": "Same duty-cycle precision, spectral output held constant" }
+                ],
+                "disclaimer": "Tell us your target wavelength and whether intensity control matters for your work, and we'll get you the right standard WPI or PWM-equipped WPI-VP."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "WPI wavelengths comparison chart, available on request.",
+                "cards": [
+                  { "title": "WPI Wavelengths Comparison Chart", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Well Plate Illuminator in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "24 wells, 24 dedicated LEDs, and a PWM dimmer that adjusts intensity without shifting the spectrum. Tell us your wavelength and sample format, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

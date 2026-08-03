@@ -55,6 +55,14 @@ import hohsenCorpEquipmentForBatteryCatalog from "./hohsen-corp/equipment-for-ba
 import maccorBatteryAndCellTestEquipmentCatalog from "./maccor/battery-and-cell-test-equipment.json";
 import labstationIGloveboxWorkstationsCatalog from "./labstation-i/glovebox-workstations.json";
 import labstationISolventPurificationSystemsCatalog from "./labstation-i/solvent-purification-systems.json";
+import luzchemLaserFlashPhotolysisCatalog from "./luzchem/laser-flash-photolysis.json";
+import luzchemLedIlluminatorCatalog from "./luzchem/led-illuminator.json";
+import luzchemWellPlateIlluminatorCatalog from "./luzchem/well-plate-illuminator.json";
+import luzchemPhotoreactorXlCatalog from "./luzchem/photoreactor-xl.json";
+import luzchemLzcPhotoreactorCatalog from "./luzchem/lzc-photoreactor.json";
+import luzchemSolarSimulatorsCatalog from "./luzchem/solar-simulators-300-800-nm.json";
+import luzchemXenonIlluminatorCatalog from "./luzchem/xenon-illuminator.json";
+import bandelinUltrasonicBathsCatalog from "./bandelin/ultrasonic-baths.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -124,6 +132,14 @@ const principalCatalogs = [
   maccorBatteryAndCellTestEquipmentCatalog,
   labstationIGloveboxWorkstationsCatalog,
   labstationISolventPurificationSystemsCatalog,
+  luzchemLaserFlashPhotolysisCatalog,
+  luzchemLedIlluminatorCatalog,
+  luzchemWellPlateIlluminatorCatalog,
+  luzchemPhotoreactorXlCatalog,
+  luzchemLzcPhotoreactorCatalog,
+  luzchemSolarSimulatorsCatalog,
+  luzchemXenonIlluminatorCatalog,
+  bandelinUltrasonicBathsCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

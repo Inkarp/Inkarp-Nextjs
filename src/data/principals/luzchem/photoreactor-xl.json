@@ -1,0 +1,326 @@
+{
+  "principal": {
+    "slug": "luzchem",
+    "principalName": "Luzchem",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Extra Large Photoreactor with Heating",
+      "slug": "photoreactor-xl",
+      "products": [
+        {
+          "name": "Photoreactor XL",
+          "slug": "photoreactor-xl",
+          "manufacturerUrl": "https://luzchem.com/products/photoreactor-xl",
+          "metaTitle": "Extra Large Photoreactor with Heating — Authorized Distributor & Service Provider in India | Inkarp | Luzchem",
+          "metaDescription": "Inkarp is the authorized distributor & service provider for the Luzchem Extra Large Photoreactor with Heating in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+          "metaKeywords": "Extra Large Photoreactor with Heating, Extra Large Photoreactor with Heating India, Extra Large Photoreactor with Heating price in India, Extra Large Photoreactor with Heating distributor India, Luzchem Extra Large Photoreactor with Heating, Luzchem distributor India, Luzchem authorized distributor, Extra Large Photoreactor with Heating India, Extra Large Photoreactor with Heating distributor and service provider in India, lab reactor, process reactor, glass reactor, synthesis reactor, Luzchem India, Inkarp Instruments",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Luzchem.png",
+          "imageAlt": "Luzchem Photoreactor XL - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/photoreactor-xl",
+          "breadcrumbPath": "Home > Products > Extra Large Photoreactor with Heating > Photoreactor XL",
+          "h1": "Photoreactor XL",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most photoreactors give you light or heat, rarely both working together on a schedule you set once and reuse. Photoreactor XL runs both, and lets you program exactly how they overlap.",
+
+          "features": [
+            "Multi-Stage Program Sequences: Set and recall automated runs combining multiple stages of heating and lighting.",
+            "Forced Convection Heating: Keeps temperature consistent across the full chamber volume.",
+            "Dual Temperature Modes: Up to 40°C with light and heat concurrent, up to 60°C heat-only.",
+            "Large-Volume Chamber: 20 x 30 x 15 inches, roughly ten times a standard photoreactor chamber.",
+            "Up to 20-Lamp Capacity: Scales illumination for larger sample loads and production-level runs.",
+            "Removable Sample Carousel: Simplifies loading and unloading between runs.",
+            "Spacious Chamber Window: Monitor a run in progress without opening the door.",
+            "Door Safety Interlock: Standard protection built into every unit."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Luzchem Photoreactor XL" },
+            { "label": "Category", "value": "Extra Large Photoreactor with Heating" },
+            { "label": "Chamber Dimensions", "value": "20 x 30 x 15 inches, internal" },
+            { "label": "Chamber Size vs Standard Photoreactor", "value": "Approximately 10x larger" },
+            { "label": "Lamp Capacity", "value": "Up to 20 lamps" },
+            { "label": "Heater Type", "value": "Forced convection" },
+            { "label": "Max Temperature, Concurrent Heat + Light", "value": "40°C" },
+            { "label": "Max Temperature, Heat-Only", "value": "60°C" },
+            { "label": "Automation", "value": "Multi-stage program sequences, set and recalled onboard" },
+            { "label": "Sample Handling", "value": "Removable sample carousel" },
+            { "label": "Safety", "value": "Door safety interlock" },
+            { "label": "Chamber Window", "value": "Spacious, for run monitoring" }
+          ],
+
+          "applications": [
+            "Large-Scale Production: Up to 20-lamp capacity in a chamber ten times the standard size",
+            "Temperature-Dependent Photochemistry: Concurrent heating and lighting up to 40°C",
+            "Multi-Stage Reaction Protocols: Programmable automation across sequential heating and lighting stages",
+            "Routine Lab Tasks: Forced convection heating and a removable carousel for everyday use",
+            "Scale-Up from Standard Photoreactors: Roughly 10x the chamber volume for larger batches"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Sequence Fit" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Mode Comparison" },
+            { "id": "benefits", "label": "Chamber & Heating" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Do you need heat and light together, or separately?",
+            "description": "Select your protocol's temperature requirement, and see which mode fits.",
+            "steps": [
+              {
+                "key": "mode",
+                "question": "What operating mode do you need?",
+                "options": [
+                  { "val": "concurrent", "label": "Concurrent heat and light", "desc": "Up to 40°C" },
+                  { "val": "heat-only", "label": "Heat-only", "desc": "Up to 60°C" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to us for a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "How many stages does your protocol need?",
+            "description": "Select the number of heating and lighting stages your reaction requires, and see how the automation supports it.",
+            "fields": [
+              {
+                "key": "stageCount",
+                "label": "Number of stages",
+                "options": [
+                  { "val": "single", "label": "Single stage" },
+                  { "val": "multiple", "label": "Multiple sequential stages" }
+                ]
+              },
+              {
+                "key": "stageType",
+                "label": "Stage type",
+                "options": [
+                  { "val": "heating", "label": "Heating" },
+                  { "val": "lighting", "label": "Lighting" },
+                  { "val": "combined", "label": "Combined" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Multi-Stage Program Sequences",
+                "body": "Use the onboard automation to program each stage, heating, lighting, or both, in order, then save it to recall the exact same sequence on future runs.",
+                "tags": ["Programmable, recallable multi-stage sequences"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "title": "Method Comparison",
+            "description": "Photoreactor XL comparison: concurrent heat-and-light mode versus heat-only mode.",
+            "columns": [
+              { "label": "Concurrent Heat + Light" },
+              { "label": "Heat-Only" }
+            ],
+            "rows": [
+              { "feature": "Max Temperature", "values": ["40°C", "60°C"] },
+              { "feature": "Lighting", "values": ["Active during the run", "Off"] },
+              { "feature": "Best For", "values": ["Photochemistry requiring elevated temperature", "Thermal steps without a lighting requirement"] },
+              { "feature": "Choose when", "values": ["Your reaction needs both simultaneously", "Your protocol separates heating from irradiation"] }
+            ],
+            "disclaimer": "Both modes run through the same chamber and automation system, so switching between them is a program setting, not a hardware change."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Photoreactor XL industries: large-scale production, pharmaceutical process chemistry, materials science.",
+            "industries": [
+              { "name": "Large-Scale Production Facilities", "useCase": "High-volume photochemical processing", "consideration": "Up to 20-lamp capacity in a ~10x larger chamber" },
+              { "name": "Pharmaceutical Process Chemistry", "useCase": "Temperature-dependent photoreactions", "consideration": "Concurrent heat and light up to 40°C" },
+              { "name": "Materials Science", "useCase": "Multi-stage synthesis protocols", "consideration": "Programmable automation for repeatable sequences" },
+              { "name": "Academic Research Laboratories", "useCase": "Scale-up from standard photoreactor work", "consideration": "Roughly 10x the chamber volume for larger batches" },
+              { "name": "Contract Manufacturing", "useCase": "Varied client protocols requiring heat and light", "consideration": "Flexible multi-stage program configuration" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Photoreactor XL service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows multi-stage automation and heating performance on your own protocol" },
+              { "title": "Configuration Assessment", "description": "Confirms the right temperature mode and program sequence setup" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident programming and recalling multi-stage sequences" },
+              { "title": "Preventive Maintenance", "description": "Maintains heater, interlock, and lamp performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement lamps, carousels, and heating components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Photoreactor XL used for?", "answer": "It's a large-scale, closed-chamber photoreactor with active heating, built for large-scale production and routine lab tasks requiring combined light and temperature control." },
+            { "question": "What's the difference between concurrent and heat-only mode?", "answer": "Running heat and light together reaches up to 40°C, while heat-only mode without lighting reaches up to 60°C." },
+            { "question": "How do I set up a multi-stage heating and lighting sequence?", "answer": "Use the onboard automation to program each stage, heating, lighting, or both, in order, then save it to recall the exact same sequence on future runs." },
+            { "question": "How many lamps does the Photoreactor XL hold?", "answer": "Up to 20 lamps, inside a 20 x 30 x 15 inch chamber roughly ten times the size of a standard photoreactor." },
+            { "question": "Can I monitor a run without opening the chamber?", "answer": "Yes, a spacious chamber window lets you check progress visually while the door stays closed and the safety interlock stays engaged." },
+            { "question": "How does the sample carousel work?", "answer": "It's removable, making it straightforward to load samples before a run and unload them afterward without extra disassembly." },
+            { "question": "How is temperature kept even across such a large chamber?", "answer": "A forced convection heater circulates heat throughout the chamber volume rather than relying on a single fixed heat source." },
+            { "question": "What safety features come standard?", "answer": "A door safety interlock is standard, stopping operation the moment the chamber is opened." },
+            { "question": "What is the price of the Photoreactor XL in India?", "answer": "Get in touch and Inkarp will put together a quote around your temperature mode and lamp configuration." },
+            { "question": "Who is the authorized distributor of the Photoreactor XL in India?", "answer": "Inkarp is the authorized distributor and service provider for the Luzchem Photoreactor XL in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Photoreactor XL in India from Inkarp",
+            "description": "Tell us your temperature and program requirements, and Inkarp will get you the right configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your temperature mode and program sequence requirements, then contact you with the right configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "temperatureMode", "label": "Temperature mode (concurrent or heat-only)", "type": "text", "required": false },
+              { "key": "stageRequirement", "label": "Program stages needed", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Lamp and program configuration are matched to your specific protocol." },
+              { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
+              { "title": "Automation and sequencing training", "body": "Get your team confident programming and recalling multi-stage sequences." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroLead": "Light and heat, programmed in stages. Up to 20 lamps, up to 60°C, one sequence.",
+            "stats": [
+              { "value": "Up to 20", "label": "Lamp capacity" },
+              { "value": "40°C", "label": "Max temperature, concurrent heat and light" },
+              { "value": "60°C", "label": "Max temperature, heat-only mode" },
+              { "value": "20 x 30 x 15 in", "label": "Internal chamber dimensions" },
+              { "value": "~10x", "label": "Larger than a standard photoreactor chamber" },
+              { "value": "Multi-stage", "label": "Programmable automation sequences" },
+              { "value": "Forced convection", "label": "Heater type" },
+              { "value": "Standard", "label": "Door safety interlock" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Photoreactor XL product information: chamber capacity, heating performance, and programmable automation.",
+                "subheading": "Why combined heating and lighting changes what's possible",
+                "body": [
+                  "Most photoreactors give you light or heat, rarely both working together on a schedule you set once and reuse. Photoreactor XL runs both, and lets you program exactly how they overlap.",
+                  "Onboard automation sets and recalls program sequences with multiple stages of heating and lighting, so a reaction that needs light first and heat later, or both together, runs the same way every time without you standing over it. Running light and heat concurrently reaches up to 40°C, while heat-only mode pushes to 60°C, a distinction worth knowing before you plan your protocol.",
+                  "The chamber holds up to 20 lamps inside a 20 x 30 x 15 inch space, roughly ten times the volume of a standard photoreactor chamber, with a forced convection heater, a removable sample carousel, a spacious viewing window, and a door safety interlock standard."
+                ],
+                "cards": [
+                  { "title": "Large-Scale Photoirradiation", "description": "Photoreactor XL is designed for larger-volume photochemistry, bringing irradiation and controlled heating into one chamber." },
+                  { "title": "Programmable Heating + Lighting", "description": "Run heating and lighting in the sequence your protocol requires, with programmable multi-stage operation." },
+                  { "title": "Automated Protocols", "description": "Set and recall program sequences covering multiple heating and lighting stages for repeatable workflows." },
+                  { "title": "Extra-Large Chamber", "description": "The 20 × 30 × 15 inch internal chamber provides significantly more working space than a standard photoreactor." },
+                  { "title": "Up to 20 Lamps", "description": "The chamber can accommodate up to 20 lamps, supporting high-coverage irradiation for larger-scale experiments." },
+                  { "title": "Built for Scale-Up", "description": "With roughly 10× the volume of a standard photoreactor chamber, it suits both advanced laboratory work and larger production environments." },
+                  { "title": "Consistent Temperature Control", "description": "A forced-convection heater helps maintain even temperatures throughout the larger chamber." },
+                  { "title": "Heating Up to 60°C", "description": "Reach 60°C in heat-only mode or up to 40°C when heating and lighting operate together." },
+                  { "title": "Easy Sample Access", "description": "The removable sample carousel makes loading and unloading samples straightforward." },
+                  { "title": "Monitor Without Opening the Chamber", "description": "A large chamber window lets you observe the experiment while keeping the door closed." },
+                  { "title": "Built-In Safety", "description": "A standard door safety interlock helps ensure safer operation during photochemical runs." }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "description": "Lamp and program configuration are matched to your specific protocol.",
+                "cards": [
+                  { "title": "Lamp capacity", "description": "Up to 20 lamps" },
+                  { "title": "Heating", "description": "Forced convection, up to 60°C heat-only, up to 40°C with concurrent lighting" },
+                  { "title": "Chamber", "description": "20 x 30 x 15 inches internal, roughly 10x a standard photoreactor chamber" },
+                  { "title": "Automation", "description": "Multi-stage program sequences, set and recalled onboard" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Photoreactor XL key features: multi-stage automation, forced convection heating, large chamber capacity."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Photoreactor XL applications: large-scale production, temperature-dependent photochemistry, routine lab tasks."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Photoreactor XL technical specifications: chamber dimensions, lamp capacity, and heating range."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Chamber and heating",
+                "title": "Chamber Capacity and Heating Performance",
+                "description": "Scale changes what a photoreactor needs to do well, and Photoreactor XL is built around that. A chamber roughly ten times the volume of a standard photoreactor holds up to 20 lamps, and a forced convection heater keeps that larger space at a consistent temperature rather than letting heat pool unevenly. Temperature ceiling depends on what else is running. Heat-only mode reaches up to 60°C, useful for straightforward thermal steps. Running heat and light together caps at 40°C, the ceiling that keeps both systems working reliably at once rather than pushing one past what the combined load can sustain.",
+                "cards": [
+                  { "title": "Large sample volumes or production-scale batches", "description": "Up to 20 lamps in a ~10x larger chamber" },
+                  { "title": "A thermal step without lighting", "description": "Heat-only mode, up to 60°C" },
+                  { "title": "Simultaneous heating and photoirradiation", "description": "Concurrent mode, up to 40°C" },
+                  { "title": "Even heat distribution across a large chamber", "description": "Forced convection heating" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Automation and safety",
+                "title": "Programmable Automation and Safety Features",
+                "description": "A reaction that needs light for twenty minutes, then heat for ten, then both together, shouldn't require standing at the unit managing each transition manually. Photoreactor XL's onboard automation sets and recalls exactly that kind of sequence, so the same multi-stage protocol runs identically every time it's called up.",
+                "body": [
+                  "Safety and usability run alongside that automation rather than working against it. The door safety interlock stops operation the moment the chamber opens, the spacious window lets a run be checked visually without interrupting it, and the removable sample carousel makes loading and unloading between runs straightforward rather than fiddly."
+                ],
+                "utilityChecklist": [
+                  { "label": "Repeating a multi-step protocol exactly", "value": "Programmable, recallable multi-stage sequences" },
+                  { "label": "Checking progress without opening the chamber", "value": "Spacious viewing window" },
+                  { "label": "Fast loading and unloading between runs", "value": "Removable sample carousel" },
+                  { "label": "Preventing accidental exposure mid-run", "value": "Standard door safety interlock" }
+                ],
+                "disclaimer": "Tell us how many heating and lighting stages your protocol needs, and we'll get you a Photoreactor XL configuration that matches it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Photoreactor XL documentation: exposure standards, spectral data, and instrument manual.",
+                "cards": [
+                  { "title": "Published Exposure Standards", "description": "Available on request" },
+                  { "title": "Spectral Information", "description": "Available on request" },
+                  { "title": "Instrument Manual", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Photoreactor XL in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Up to 20 lamps, up to 60°C, and multi-stage sequences that run the same way every time. Tell us your temperature and program requirements, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "principal": {
+    "slug": "luzchem",
+    "principalName": "Luzchem",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Photoreactors & Exposure",
+      "slug": "lzc-photoreactor",
+      "products": [
+        {
+          "name": "LZC Photoreactor",
+          "slug": "lzc-photoreactor",
+          "manufacturerUrl": "https://luzchem.com/products/luzchem-lzc-photoreactor",
+          "metaTitle": "Photoreactors & Exposure — Authorized Distributor & Service Provider in India | Inkarp | Luzchem",
+          "metaDescription": "Inkarp is the authorized distributor & service provider for the Luzchem Photoreactors & Exposure in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+          "metaKeywords": "Photoreactors & Exposure, Photoreactors & Exposure India, Photoreactors & Exposure price in India, Photoreactors & Exposure distributor India, Luzchem Photoreactors & Exposure, Luzchem distributor India, Luzchem authorized distributor, Photoreactors & Exposure India, Photoreactors & Exposure distributor and service provider in India, lab reactor, process reactor, glass reactor, synthesis reactor, Luzchem India, Inkarp Instruments",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Luzchem.png",
+          "imageAlt": "Luzchem LZC Photoreactor - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/lzc-photoreactor",
+          "breadcrumbPath": "Home > Products > Photoreactors & Exposure > LZC Photoreactor",
+          "h1": "LZC Photoreactor",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most photoreactors lock you into one wavelength setup until you're ready to buy a new unit. LZC lamps pull out and swap in without a single tool, opening the same chamber to the complete LZC-Series UV and visible lamp range, and much of the Rayonet range too.",
+
+          "features": [
+            "Tool-Free Lamp Changes: Switch wavelengths in seconds without tools or system modification.",
+            "Broad Lamp Ecosystem: Compatible with the complete LZC-Series UV and visible lamp range, and many Rayonet reactors too.",
+            "Integrated Carousel and Turntable: One motor drive handles test tubes in the carousel and solid samples on the turntable.",
+            "Magnetic Stirrer: Built into the chamber for consistent sample mixing during irradiation.",
+            "Safety Interlock: Standard across every package, stopping irradiation when the chamber opens.",
+            "Integrated Timer and Hour Meter: Track exposure duration and cumulative lamp use directly on the unit.",
+            "Safe Exhaust System: Bulkhead gas connector and exhaust kit manage fumes and heat safely.",
+            "Dual Voltage Operation: Runs on 120/240V, ready for benchtop use without a separate converter."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Luzchem LZC Photoreactor" },
+            { "label": "Category", "value": "Photoreactors & Exposure" },
+            { "label": "Chamber Dimensions", "value": "12 x 12 x 8.5 inches, air-cooled" },
+            { "label": "Package Options", "value": "LZC-4V, LZC-1, LZC-ORG, LZC-4X" },
+            { "label": "LZC-4V Lamp Configuration", "value": "6 top + 8 side (14 total positions)" },
+            { "label": "LZC-4V Lamp Sets Included", "value": "14 UVA (367nm), 14 UVC (254nm)" },
+            { "label": "LZC-1 Lamp Configuration", "value": "8 top lamps" },
+            { "label": "LZC-ORG Lamp Configuration", "value": "10 side lamps" },
+            { "label": "Drive System", "value": "Integrated motor, carousel and turntable" },
+            { "label": "Standard Safety Features", "value": "Interlock, timer, hour meter, bulkhead gas connector, exhaust kit, safety glasses" },
+            { "label": "Power", "value": "120/240V" },
+            { "label": "Lamp Compatibility", "value": "Full LZC-Series range, many Rayonet reactors" }
+          ],
+
+          "applications": [
+            "Photochemistry Research: Uniform, reproducible irradiation across the chamber",
+            "Photobiology: UVA and UVC lamp sets for varied biological studies",
+            "Organic Synthesis: Carousel and turntable for parallel sample runs",
+            "Materials Science: Consistent exposure for photodegradation and stability testing",
+            "Teaching Laboratories: Tool-free lamp changes for varied classroom demonstrations"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Wavelength Fit" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Package Comparison" },
+            { "id": "benefits", "label": "Chamber Design" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "How do your samples need to be illuminated?",
+            "description": "Select your target irradiation geometry, and see which LZC package fits.",
+            "steps": [
+              {
+                "key": "geometry",
+                "question": "What illumination geometry do you need?",
+                "options": [
+                  { "val": "top", "label": "Top only", "desc": "Your experiment calls for top-down exposure only" },
+                  { "val": "side", "label": "Side only", "desc": "Your experiment calls for side exposure only" },
+                  { "val": "combined", "label": "Combined top-and-side", "desc": "You need combined geometry or dual wavelength sets" }
+                ]
+              },
+              {
+                "key": "sampleFormat",
+                "question": "What sample format are you using?",
+                "options": [
+                  { "val": "tubes", "label": "Test tubes (carousel)" },
+                  { "val": "solid", "label": "Solid samples (turntable)" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to us for a package-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "What wavelength does your work need?",
+            "description": "Select your target wavelength and application, and see which lamp set fits.",
+            "fields": [
+              {
+                "key": "wavelength",
+                "label": "Wavelength range",
+                "options": [
+                  { "val": "uva", "label": "UVA (367nm)" },
+                  { "val": "uvc", "label": "UVC (254nm)" },
+                  { "val": "other", "label": "Another LZC-Series lamp" }
+                ]
+              },
+              {
+                "key": "application",
+                "label": "Application type",
+                "options": [
+                  { "val": "photochemistry", "label": "Photochemistry" },
+                  { "val": "photobiology", "label": "Photobiology" },
+                  { "val": "organic-synthesis", "label": "Organic synthesis" },
+                  { "val": "teaching", "label": "Teaching" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Broad Lamp Ecosystem",
+                "body": "The same hardware accepts the complete LZC-Series UV and visible fluorescent and LED lamp lineup, and much of that range is also compatible with many Rayonet reactors, useful if your lab already has lamps on hand from elsewhere.",
+                "tags": ["14 UVA (367nm)", "14 UVC (254nm)"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "title": "Method Comparison",
+            "description": "LZC Photoreactor comparison: LZC-4V, LZC-1, and LZC-ORG package configurations.",
+            "columns": [
+              { "label": "LZC-4V" },
+              { "label": "LZC-1" },
+              { "label": "LZC-ORG" }
+            ],
+            "rows": [
+              { "feature": "Lamp Geometry", "values": ["Top + side (6+8)", "Top only (8)", "Side only (10)"] },
+              { "feature": "Lamp Sets Included", "values": ["UVA and UVC, 14 each", "Per configuration", "Per configuration"] },
+              { "feature": "Best For", "values": ["Full-coverage, most applications", "Top-down illumination needs", "Side-illumination-specific work"] },
+              { "feature": "Choose when", "values": ["You need combined geometry or dual wavelength sets", "Your experiment calls for top-down exposure only", "Your experiment calls for side exposure only"] }
+            ],
+            "disclaimer": "All three run on the same core chamber, carousel, and turntable, the difference is purely lamp placement and which wavelength sets ship standard."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "LZC Photoreactor industries: academic, pharmaceutical, and materials science photochemistry labs.",
+            "industries": [
+              { "name": "Academic Photochemistry Research", "useCase": "Reaction and mechanism studies", "consideration": "Tool-free lamp swapping for varied wavelength needs" },
+              { "name": "Pharmaceutical Process Chemistry", "useCase": "Organic synthesis under controlled light", "consideration": "LZC-4V's dual UVA/UVC sets for broad coverage" },
+              { "name": "Materials Science", "useCase": "Photodegradation and stability testing", "consideration": "Uniform chamber irradiation for consistent results" },
+              { "name": "Photobiology Research", "useCase": "Biological light response studies", "consideration": "UVA and UVC availability in one package" },
+              { "name": "Teaching Laboratories", "useCase": "Student experiments across varied conditions", "consideration": "Tool-free changes support multiple demonstrations" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "LZC Photoreactor service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows lamp swapping and irradiation uniformity on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms the right package and lamp set for your work" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with lamp changes and safety features" },
+              { "title": "Preventive Maintenance", "description": "Maintains motor drive, interlock, and exhaust system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement lamps, carousels, and turntables" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the LZC Photoreactor used for?", "answer": "It's a closed-chamber benchtop irradiation system built for photochemistry, photobiology, organic synthesis, materials science, and teaching applications requiring uniform light exposure across multiple samples." },
+            { "question": "How do I change the wavelength on my LZC Photoreactor?", "answer": "Lamps pull out and swap in without tools, so switching between UVA, UVC, or another wavelength in the LZC-Series range takes seconds, not a system rebuild." },
+            { "question": "What's the difference between the four LZC packages?", "answer": "They differ mainly in lamp geometry: LZC-4V combines top and side illumination, LZC-1 runs top lamps only, LZC-ORG runs side lamps only, and LZC-4X offers a fourth confirmed configuration." },
+            { "question": "Can I use lamps from a Rayonet reactor in my LZC Photoreactor?", "answer": "Many Rayonet-compatible lamps work with LZC hardware, since both platforms share compatibility across much of the same lamp range." },
+            { "question": "What comes standard with the LZC-4V package?", "answer": "Six top lamps and eight side lamps, two complete lamp sets (14 UVA at 367nm and 14 UVC at 254nm), a carousel and turntable, magnetic stirrer, timer, gas inlet, hour meter, safety interlock, UVA power meter, exhaust kit, and safety glasses." },
+            { "question": "How does the carousel and turntable work?", "answer": "Both run off the same integrated motor drive, with the carousel handling test tubes and the turntable handling solid samples." },
+            { "question": "What safety features are standard across all packages?", "answer": "A safety interlock, integrated timer, hour meter, bulkhead gas connector, safe exhaust system, and safety glasses ship with every LZC package." },
+            { "question": "What power supply does the LZC Photoreactor need?", "answer": "It runs on 120/240V, suited to benchtop use without a separate power converter." },
+            { "question": "What is the price of the LZC Photoreactor in India?", "answer": "Get in touch and Inkarp will put together a quote around your package and lamp configuration." },
+            { "question": "Who is the authorized distributor of the LZC Photoreactor in India?", "answer": "Inkarp is the authorized distributor and service provider for the Luzchem LZC Photoreactor in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the LZC Photoreactor in India from Inkarp",
+            "description": "Tell us your illumination needs, and Inkarp will get you the right configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your package and lamp configuration requirements, then contact you with the right setup.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "packageRequirement", "label": "Preferred package (LZC-4V, LZC-1, LZC-ORG, LZC-4X)", "type": "text", "required": false },
+              { "key": "wavelengthRequirement", "label": "Target wavelength", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right package", "body": "Package and lamp selection are matched to your irradiation geometry and wavelength needs." },
+              { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
+              { "title": "Lamp change and safety training", "body": "Get your team confident with lamp changes and safety features." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroLead": "Swap wavelengths in seconds, no tools needed. One reactor, the whole LZC lamp range.",
+            "stats": [
+              { "value": "12 x 12 x 8.5 in", "label": "Air-cooled chamber dimensions" },
+              { "value": "4", "label": "Package configurations" },
+              { "value": "14 top + side", "label": "LZC-4V lamp count (6 top, 8 side)" },
+              { "value": "UVA + UVC", "label": "Two complete lamp sets included with LZC-4V" },
+              { "value": "Tool-free", "label": "Lamp swapping" },
+              { "value": "LZC-Series + Rayonet compatible", "label": "Lamp ecosystem" },
+              { "value": "120/240V", "label": "Dual voltage operation" },
+              { "value": "Standard", "label": "Safety interlock, timer, hour meter, exhaust kit" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "LZC Photoreactor product information: chamber design, package options, and lamp compatibility.",
+                "subheading": "Why lamp flexibility defines this platform",
+                "body": [
+                  "Most photoreactors lock you into one wavelength setup until you're ready to buy a new unit. LZC lamps pull out and swap in without a single tool, opening the same chamber to the complete LZC-Series UV and visible lamp range, and much of the Rayonet range too.",
+                  "A 12 x 12 x 8.5 inch air-cooled chamber keeps every sample under uniform light, whether the package puts lamps overhead, along the sides, or both. The LZC-4V package, the most popular configuration, pairs six top lamps with eight side lamps and ships with two complete lamp sets, 14 UVA at 367nm and 14 UVC at 254nm, so switching wavelength families is a lamp change, not a new purchase.",
+                  "Every package runs the same safety backbone: an interlock, integrated timer, hour meter, bulkhead gas connector, safety glasses, and a safe exhaust system, on 120/240V power for straightforward benchtop use anywhere."
+                ],
+                "cards": [
+                  { "title": "Uniform Benchtop Irradiation", "description": "LZC Photoreactors are designed to deliver consistent light across multiple samples, helping avoid bright spots and edge falloff." },
+                  { "title": "Compact, Air-Cooled Chamber", "description": "The 12 × 12 × 8.5 inch chamber provides a practical benchtop setup with air cooling for controlled operation." },
+                  { "title": "Tool-Free Wavelength Changes", "description": "Change lamp configurations quickly without complicated tools or lengthy setup." },
+                  { "title": "LZC-4V — Full-Coverage Irradiation", "description": "The popular LZC-4V combines 6 top lamps + 8 side lamps for broad, uniform irradiation." },
+                  { "title": "Two Wavelength Sets Included", "description": "LZC-4V includes 14-lamp UVA (367 nm) and 14-lamp UVC (254 nm) sets, giving you two wavelength options in one reactor." },
+                  { "title": "Choose the Configuration for Your Application", "items": ["LZC-1: 8 top lamps", "LZC-ORG: 10 side lamps", "LZC-4X: Alternative lamp configuration", "LZC-ICH2: Additional configuration available on request"] },
+                  { "title": "Built for Multiple Sample Types", "description": "A test-tube carousel supports liquid samples, while a turntable accommodates solid samples." },
+                  { "title": "Integrated Sample Movement", "description": "Both the carousel and turntable are powered by the same integrated motor for consistent sample exposure." },
+                  { "title": "Complete Photoreactor Setup", "description": "Standard features include a magnetic stirrer, timer, gas inlet, and hour meter." },
+                  { "title": "Built-In Safety", "description": "A safety interlock helps prevent operation when the chamber is not properly secured." }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "description": "Package and lamp selection are matched to your irradiation geometry and wavelength needs.",
+                "cards": [
+                  { "title": "Package options", "description": "LZC-4V (6 top + 8 side lamps, most popular), LZC-1 (8 top lamps), LZC-ORG (10 side lamps), LZC-4X, LZC-ICH2 available on request" },
+                  { "title": "LZC-4V lamp sets", "description": "Two complete lamp sets: 14 UVA (367nm) and 14 UVC (254nm)" },
+                  { "title": "Standard across all packages", "description": "Safety interlock, timer, hour meter, bulkhead gas connector, safety glasses, exhaust kit" },
+                  { "title": "Power", "description": "Operates on 120/240V" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "LZC Photoreactor key features: tool-free lamp swapping, integrated carousel and turntable, safety interlock."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "LZC Photoreactor applications: photochemistry, photobiology, organic synthesis, and teaching labs."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "LZC Photoreactor technical specifications: chamber dimensions, package configurations, and lamp counts."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Chamber design",
+                "title": "Chamber Design and Package Configurations",
+                "description": "Getting uniform light across multiple samples starts with chamber geometry, and LZC solves it with a spacious, air-cooled 12 x 12 x 8.5 inch chamber that keeps every sample under consistent irradiation rather than a hot spot at the center. Where the four packages differ is lamp placement. LZC-4V combines top and side illumination for full-coverage work and doubles as a two-wavelength platform with its included UVA and UVC lamp sets. LZC-1 concentrates eight lamps overhead for applications that call for top-down exposure specifically, and LZC-ORG runs ten side lamps for a different geometry entirely. LZC-4X offers a fourth configuration, and a related LZC-ICH2 unit shows up in the broader product lineup for specialized needs.",
+                "cards": [
+                  { "title": "Full top-and-side coverage, most applications", "description": "LZC-4V" },
+                  { "title": "Top-down illumination specifically", "description": "LZC-1" },
+                  { "title": "Side illumination specifically", "description": "LZC-ORG" },
+                  { "title": "A fourth confirmed geometry option", "description": "LZC-4X" },
+                  { "title": "Specialized configuration", "description": "LZC-ICH2, available on request" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Lamp flexibility and safety",
+                "title": "Tool-Free Lamp Swapping and Safety Features",
+                "description": "A reactor that locks you into one wavelength stops being useful the moment your research changes direction. LZC lamps pull and swap without tools, so a new experiment with a different wavelength requirement doesn't mean a new reactor purchase.",
+                "body": [
+                  "That flexibility extends beyond Luzchem's own lamp range. The same hardware accepts the complete LZC-Series UV and visible fluorescent and LED lamp lineup, and much of that range is also compatible with many Rayonet reactors, useful if your lab already has lamps on hand from elsewhere. Every package backs that flexibility with the same safety foundation: an interlock that stops irradiation when the chamber opens, an integrated timer and hour meter for tracking exposure and lamp life, and a safe exhaust system for managing fumes during longer runs."
+                ],
+                "utilityChecklist": [
+                  { "label": "Switching wavelengths without buying new hardware", "value": "Tool-free lamp changes across the full LZC-Series range" },
+                  { "label": "Reusing existing lamp inventory", "value": "Compatibility with many Rayonet reactors" },
+                  { "label": "Preventing accidental exposure", "value": "Standard safety interlock" },
+                  { "label": "Tracking cumulative lamp usage", "value": "Integrated hour meter" }
+                ],
+                "disclaimer": "Tell us which lamps or wavelengths you already work with, and we'll confirm compatibility with your LZC package."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "LZC Photoreactor documentation: exposure standards, spectral data, and instrument manual.",
+                "cards": [
+                  { "title": "Published Exposure Standards", "description": "Available on request" },
+                  { "title": "Spectral Information", "description": "Available on request" },
+                  { "title": "Instrument Manual", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the LZC Photoreactor in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Swap wavelengths in seconds across a chamber built for uniform irradiation, with four package geometries to match. Tell us your illumination needs, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

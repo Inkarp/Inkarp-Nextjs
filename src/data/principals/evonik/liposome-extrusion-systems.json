@@ -1,0 +1,333 @@
+{
+  "principal": {
+    "slug": "evonik",
+    "principalName": "Evonik",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Liposome Extrusion Systems",
+      "slug": "liposome-extrusion-systems",
+      "products": [
+        {
+          "name": "LIPEX® Liposome Extruders",
+          "slug": "lipex-liposome-extruders",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Evonik.png",
+          "imageAlt": "Evonik LIPEX® Liposome Extruders - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/lipex-liposome-extruders",
+          "breadcrumbPath": "Home > Products > Liposome Extrusion Systems > LIPEX® Liposome Extruders",
+          "h1": "LIPEX® Liposome Extruders",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Achieving a specified vesicle size reproducibly, batch after batch, is what separates a viable liposomal drug product from an inconsistent one. LIPEX has been the industry's answer to that problem for decades.",
+
+          "features": [
+            "Controlled-Pressure Extrusion: Forces suspensions through defined-pore filters at 100 to 2400 psi for optimal particle size reduction.",
+            "316L Stainless Steel Construction: No moving parts, supporting minimal maintenance and consistent, high-quality production.",
+            "Homogeneous Vesicle Population: Converts heterogeneous multi-lamellar vesicles into uniform large unilamellar vesicles.",
+            "Novel Drain Cavity (LIPEX Flow): Increases throughput capacity without affecting particle size reduction.",
+            "Over 50% Reduced Extrusion Pressure (LIPEX Flow): Delivers higher flow rates at lower pressures.",
+            "Increased Operating Pressure to 2450 psi (LIPEX Flow): Supports difficult-to-extrude formulations like hydrophobics or concentrated lipid suspensions.",
+            "Reduced Filter Clogging and Changes: Extrudes more material per run, cutting downtime between filter replacements.",
+            "Lower Contamination and Safety Risk: Minimizes the need to open extruders, particularly relevant when handling HPAPIs."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Evonik LIPEX Liposome Extruders (LIPEX Flow platform)" },
+            { "label": "Category", "value": "Liposome Extrusion Systems" },
+            { "label": "Standard Extrusion Pressure", "value": "100 to 2400 psi" },
+            { "label": "LIPEX Flow Maximum Pressure", "value": "2450 psi (170 bar)" },
+            { "label": "Construction Material", "value": "316L stainless steel" },
+            { "label": "Moving Parts", "value": "None" },
+            { "label": "Filter Type", "value": "Polycarbonate, defined pore size" },
+            { "label": "Benchtop Unit Volume", "value": "10 mL" },
+            { "label": "Early Clinical Scale-Up Units", "value": "100 mL, 1000 mL" },
+            { "label": "GMP Production Filter Holders", "value": "142mm, 293mm, integrated into automated skid systems" },
+            { "label": "Total Volume Range", "value": "1 mL to hundreds of liters" }
+          ],
+
+          "applications": [
+            "Liposomal Drug Product Manufacturing: Reproducible, scalable vesicle sizing across pharmaceutical batches",
+            "Lipid Nanoparticle (LNP) Formulation: Controlled pressure extrusion supports consistent LNP particle size",
+            "Formulation Feasibility and Pre-Clinical Development: 10 mL benchtop units support small-scale batch requirements",
+            "Early-Stage Clinical Trial Scale-Up: 100 mL and 1000 mL units enable rapid volume increases",
+            "GMP Commercial Production: 142mm and 293mm filter holders integrate into turnkey automated skid systems",
+            "Difficult-to-Extrude Formulations: Higher LIPEX Flow operating pressure handles hydrophobics and concentrated suspensions"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Formulation Difficulty Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "benefits", "label": "Gentle Pressure Extrusion" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What stage is your formulation at?",
+            "description": "Select your development stage and target batch volume, and see the recommended extruder size.",
+            "steps": [
+              {
+                "key": "developmentStage",
+                "question": "What stage is your formulation at?",
+                "options": [
+                  { "val": "feasibility", "label": "Feasibility" },
+                  { "val": "clinical-scale-up", "label": "Clinical scale-up" },
+                  { "val": "commercial-gmp", "label": "Commercial GMP" }
+                ]
+              },
+              {
+                "key": "targetBatchVolume",
+                "question": "What's the target batch volume?",
+                "options": [
+                  { "val": "10ml", "label": "10 mL" },
+                  { "val": "100ml", "label": "100 mL" },
+                  { "val": "1000ml", "label": "1000 mL" },
+                  { "val": "gmp-scale", "label": "142mm/293mm filter holder (GMP scale)" }
+                ]
+              },
+              {
+                "key": "formulationDifficulty",
+                "question": "What's the formulation difficulty?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "hydrophobic", "label": "Hydrophobic" },
+                  { "val": "concentrated", "label": "Concentrated" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "How difficult is your formulation to extrude?",
+            "description": "Select your formulation characteristics, and see which pressure range fits.",
+            "fields": [
+              {
+                "key": "formulationType",
+                "label": "Formulation type",
+                "options": [
+                  { "val": "standard", "label": "Standard lipid suspension" },
+                  { "val": "hydrophobic", "label": "Hydrophobic" },
+                  { "val": "concentrated", "label": "Concentrated" }
+                ]
+              },
+              {
+                "key": "hpapiHandling",
+                "label": "HPAPI handling",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "filterCloggingConcerns",
+                "label": "Filter clogging concerns",
+                "options": [
+                  { "val": "low", "label": "Low" },
+                  { "val": "moderate", "label": "Moderate" },
+                  { "val": "high", "label": "High" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Standard LIPEX or LIPEX Flow — Which Fits?",
+                "body": "Its higher operating pressure of up to 2450 psi benefits formulations like hydrophobics or concentrated lipid suspensions that are harder to extrude.",
+                "tags": ["Increased Operating Pressure to 2450 psi (LIPEX Flow)", "Reduced Filter Clogging and Changes"]
+              }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Industries using LIPEX liposome extruders include pharmaceutical manufacturing, biotechnology, and mRNA/gene delivery research.",
+            "industries": [
+              { "name": "mRNA and Gene Delivery Development", "useCase": "Producing lipid nanoparticles for genetic therapeutics", "consideration": "LIPEX Flow's reduced pressure supports high-throughput LNP batch processing" },
+              { "name": "Liposomal Drug Product Manufacturing", "useCase": "Scaling from formulation feasibility to commercial batches", "consideration": "Standard sizes cover the full pathway from 10 mL to GMP production" },
+              { "name": "HPAPI Handling and Containment", "useCase": "Extruding formulations with high-potency active ingredients", "consideration": "Reduced need to open extruders lowers contamination and safety risk" },
+              { "name": "Biotechnology Formulation Development", "useCase": "Achieving reproducible vesicle sizing for novel therapeutics", "consideration": "Gentle, controlled pressure supports sensitive biological formulations" },
+              { "name": "Contract Manufacturing Organizations", "useCase": "Running varied client formulations across different scales", "consideration": "Full 1 mL to hundreds-of-liters range supports diverse client project sizes" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows extrusion performance and particle sizing on your own formulation" },
+              { "title": "Configuration Assessment", "description": "Confirms the right extruder size and filter setup for your process" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with filter handling and pressure operation" },
+              { "title": "Preventive Maintenance", "description": "Maintains extruder and filter holder performance" },
+              { "title": "Spares and Accessories", "description": "Supplies polycarbonate filters and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What are LIPEX liposome extruders used for?", "answer": "LIPEX extruders are used to produce uniform, size-controlled liposomes and lipid nanoparticles by forcing lipid suspensions through defined-pore filters, widely used across liposomal drug product manufacturing." },
+            { "question": "What pressure range does LIPEX operate at?", "answer": "Standard LIPEX extruders operate at 100 to 2400 psi, while the newer LIPEX Flow reaches up to 2450 psi (170 bar)." },
+            { "question": "What is LIPEX Flow, and how is it different?", "answer": "LIPEX Flow is the newly designed extruder incorporating a novel drain cavity, reducing extrusion pressure by over 50% while increasing maximum operating pressure, resulting in higher throughput and faster batch processing." },
+            { "question": "What batch volumes can LIPEX extruders handle?", "answer": "LIPEX extruders scale from 1 mL at the laboratory benchtop to hundreds of liters at commercial scale, with 10 mL, 100 mL, and 1000 mL standard units covering different development stages." },
+            { "question": "What is LIPEX made from?", "answer": "LIPEX extruders are manufactured from durable, high-quality 316L stainless steel, with no moving parts." },
+            { "question": "Can LIPEX Flow handle difficult-to-extrude formulations?", "answer": "Yes, its higher operating pressure of up to 2450 psi benefits formulations like hydrophobics or concentrated lipid suspensions that are harder to extrude." },
+            { "question": "Does LIPEX Flow reduce filter clogging?", "answer": "Yes, the combination of reduced extrusion pressure and increased operating pressure allows more material to be extruded with reduced filter clogging and less frequent filter changes." },
+            { "question": "Is LIPEX suitable for GMP commercial production?", "answer": "Yes, 142mm and 293mm stand-alone filter holders integrate into turnkey, automated skid systems for large-scale GMP production." },
+            { "question": "What is the price of LIPEX liposome extruders in India?", "answer": "The price depends on the extruder size and configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
+            { "question": "Who is the authorized distributor of LIPEX in India?", "answer": "Inkarp is the authorized distributor and service provider for the Evonik LIPEX Liposome Extruders in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get LIPEX Liposome Extruders in India from Inkarp",
+            "description": "Share your batch volume and formulation type, and the right LIPEX configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your batch volume and formulation type, then confirm the right LIPEX configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "batchVolume", "label": "Target batch volume", "type": "text", "required": false },
+              { "key": "formulationType", "label": "Formulation type", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right LIPEX extruder size", "body": "Tell our team your target batch volume and formulation type, and Inkarp will confirm the right LIPEX extruder size for your process." },
+              { "title": "Confirm the right filter and pressure setup", "body": "Tell our team about your target vesicle size and formulation sensitivity, and Inkarp will confirm the right filter and pressure setup." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Nearly 30 years setting the industry standard for liposomal drug product manufacturing.",
+            "heroLead": "Achieving a specified vesicle size reproducibly, batch after batch, is what separates a viable liposomal drug product from an inconsistent one. LIPEX has been the industry's answer to that problem for decades. Built from durable, high-quality 316L stainless steel with no moving parts, LIPEX liposome extruders force aqueous lipid suspensions through polycarbonate filters at pressures between 100 and 2400 psi, converting heterogeneous multi-lamellar vesicles into a homogeneous population of large unilamellar vesicles. The newly designed LIPEX Flow pushes that further, with a novel drain cavity, over 50% reduced extrusion pressure, and operating pressure up to 2450 psi, supporting higher throughput and faster batch processing without sacrificing particle quality.",
+            "stats": [
+              { "value": "100 to 2400 psi", "label": "Standard extrusion pressure range" },
+              { "value": "Up to 2450 psi (170 bar)", "label": "LIPEX Flow maximum operating pressure" },
+              { "value": "50%+ reduction", "label": "Extrusion pressure reduction on LIPEX Flow" },
+              { "value": "316L stainless steel", "label": "Construction material" },
+              { "value": "No moving parts", "label": "Minimal maintenance design" },
+              { "value": "1 mL to hundreds of liters", "label": "Production volume range" },
+              { "value": "10 mL to 1000 mL", "label": "Standard benchtop and scale-up unit sizes" },
+              { "value": "142mm / 293mm", "label": "Filter holder sizes for GMP production" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "LIPEX liposome extruders product information: extrusion mechanics, scale-up range, and LIPEX Flow improvements.",
+                "body": [
+                  "LIPEX extruders use a one-step process, forcing aqueous lipid suspensions through filters of a defined pore size to produce a homogeneous population of large unilamellar vesicles from a heterogeneous multi-lamellar starting suspension.",
+                  "Pressures of 100 to 2400 psi force vesicles through polycarbonate filters, with relatively gentle pressure and controlled temperature ensuring optimal particle size reduction, a homogeneous population, and high yield.",
+                  "Construction uses durable, high-quality 316L stainless steel, with no moving parts, keeping maintenance requirements minimal even under consistent production use.",
+                  "LIPEX Flow, the newly designed model, incorporates a novel drain cavity that increases throughput capacity without affecting the ability to reduce particle size.",
+                  "Extrusion pressure drops by more than 50% on LIPEX Flow, ensuring higher flow rates at lower pressures, while maximum operating pressure increases to 2450 psi (170 bar) for formulations that need it.",
+                  "That combination allows more material to be extruded with reduced filter clogging and less frequent filter changes, leading to faster batch processing without compromising particle quality.",
+                  "The new design also minimizes process risk by reducing the need to open extruders, lowering contamination or safety exposure when handling HPAPIs.",
+                  "Difficult-to-extrude formulations, including hydrophobics or concentrated lipid suspensions, benefit directly from the higher operating pressure LIPEX Flow makes available."
+                ],
+                "cards": [
+                  { "title": "100 to 2450 psi", "description": "Gentle-to-high pressure extrusion range" },
+                  { "title": "316L stainless steel, no moving parts", "description": "Minimal maintenance, durable construction" },
+                  { "title": "50%+ pressure reduction (LIPEX Flow)", "description": "Higher flow rates, less filter clogging" },
+                  { "title": "1 mL to hundreds of liters", "description": "Full lab-to-commercial scale range" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Evonik LIPEX Liposome Extruders (including LIPEX Flow)" },
+                  { "title": "Standard pressure range", "description": "100 to 2400 psi" },
+                  { "title": "LIPEX Flow maximum pressure", "description": "2450 psi (170 bar)" },
+                  { "title": "Construction", "description": "316L stainless steel, no moving parts" },
+                  { "title": "Volume range", "description": "1 mL benchtop through hundreds of liters at commercial scale" },
+                  { "title": "Custom sizing", "description": "Custom-sized units tailored to specific process requirements are available on request" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "LIPEX liposome extruder key features: gentle pressure extrusion, durable construction, and LIPEX Flow improvements."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "LIPEX liposome extruder applications: liposomal drug product manufacturing, LNP formulation, and pharmaceutical scale-up."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "LIPEX liposome extruder technical specifications: pressure range, construction, and scale-up sizing."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Gentle Pressure, Uniform Particles",
+                "title": "Gentle Pressure, Uniform Particles",
+                "description": "Some particle-sizing technologies achieve uniform vesicles by pushing formulations hard. LIPEX takes the opposite approach, using relatively gentle pressure at controlled temperature instead. That gentler process is what ensures optimal particle size reduction alongside a homogeneous population and high yield, rather than trading one of those outcomes off against another. The one-step extrusion process itself, forcing aqueous lipid suspensions through filters of a defined pore size, converts a heterogeneous starting population of multi-lamellar vesicles directly into uniform large unilamellar vesicles. With LIPEX Flow's novel drain cavity design, that same gentle-pressure principle now runs at higher throughput, since the pressure reduction of over 50% means more material moves through the system without pushing particle formation harder than necessary.",
+                "cards": [
+                  { "title": "Reproducible, defined vesicle size", "description": "Controlled pressure through defined-pore filters" },
+                  { "title": "High yield without particle damage", "description": "Gentle pressure at controlled temperature" },
+                  { "title": "Consistent results across a scaled batch", "description": "One-step, repeatable extrusion process" },
+                  { "title": "Higher throughput without harsher pressure", "description": "LIPEX Flow's novel drain cavity design" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Scaling from Lab to Commercial Production",
+                "title": "Scaling from Lab to Commercial Production",
+                "description": "How LIPEX extruders match batch volume to process stage, from 1 mL to commercial-scale production.",
+                "body": [
+                  "A liposomal formulation that works at 10 mL doesn't automatically translate to a 1000-liter batch, and matching extruder scale to process stage is what keeps that translation reliable.",
+                  "During initial R&D and pre-clinical work, 10 mL benchtop units support formulation feasibility and small-scale development directly. Moving into early-stage clinical trials, 100 mL and 1000 mL units enable rapid scale-up without a full process redesign. For large-scale GMP production supporting late-stage clinical trials or commercial batches, 142mm and 293mm stand-alone filter holders integrate into turnkey, automated skid systems using both nitrogen pressure and pharmaceutical-grade pumps. Standard sizes cover most process requirements, and customized, purpose-built equipment is available where a process calls for something tailored specifically to it."
+                ],
+                "utilityChecklist": [
+                  { "label": "Formulation feasibility at lab scale", "value": "10 mL benchtop units" },
+                  { "label": "Early clinical trial scale-up", "value": "100 mL and 1000 mL units" },
+                  { "label": "Large-scale GMP commercial production", "value": "142mm/293mm filter holders in automated skid systems" },
+                  { "label": "A process with non-standard requirements", "value": "Customized, purpose-built equipment" }
+                ],
+                "disclaimer": "Tell our team where your process currently sits, from feasibility through commercial production, and Inkarp will confirm the right LIPEX scale for that stage."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for LIPEX liposome extruders is available on request.",
+                "cards": [
+                  { "title": "LIPEX Flow Brochure", "description": "Available on request" },
+                  { "title": "Scale-Up Sizing Guide", "description": "Available on request" },
+                  { "title": "GMP Skid System Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get LIPEX Liposome Extruders in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Nearly 30 years of proven, scalable liposome extrusion, from 1 mL benchtop feasibility work to commercial GMP production. Tell us your batch volume and formulation type, and Inkarp will confirm the right LIPEX configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

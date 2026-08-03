@@ -1,0 +1,321 @@
+{
+  "principal": {
+    "slug": "sonics-and-materials",
+    "principalName": "Sonics & Materials",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Ultrasonic Probe Sonicators",
+      "slug": "ultrasonic-probe-sonicators",
+      "products": [
+        {
+          "name": "VC-50 Ultrasonic Probe Sonicator",
+          "slug": "vc-50-ultrasonic-probe-sonicator",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
+          "imageAlt": "Sonics & Materials VC-50 Ultrasonic Probe Sonicator - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/vc-50-ultrasonic-probe-sonicator",
+          "breadcrumbPath": "Home > Products > Ultrasonic Probe Sonicators > VC-50 Ultrasonic Probe Sonicator",
+          "h1": "VC-50 Ultrasonic Probe Sonicator",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Not every sonication job needs a programmable interface and a menu of settings. Sometimes the work just needs reliable ultrasonic energy, on demand, without a learning curve.",
+
+          "features": [
+            "Hand-Held Probe Operation: Direct physical control over probe placement in the sample.",
+            "Front Panel Amplitude Knob: Turns ultrasonic energy on and adjusts intensity directly, no menu navigation.",
+            "Standard 1/4\" Probe: Handles 0.5 to 15mL sample volumes for routine bench work.",
+            "Compact Footprint: Fits on a shared bench without dominating it.",
+            "Probe-Included or Probe-Free Ordering: VC-50-110 ships complete; VC-50A-110 ships without a probe for custom setups.",
+            "Converter Included: Standard on both confirmed SKU configurations.",
+            "Entry Point to the VC/VCX Range: Steps up to VCX-130 and beyond when higher power is needed.",
+            "Straightforward Maintenance: Simple mechanical design with fewer components to service."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sonics & Materials VC-50 Ultrasonic Probe Sonicator" },
+            { "label": "Category", "value": "Ultrasonic Probe Sonicators" },
+            { "label": "Power Output", "value": "50 W" },
+            { "label": "Operation", "value": "Hand-held probe, front panel amplitude knob" },
+            { "label": "Standard Probe Diameter", "value": "1/4 in" },
+            { "label": "Standard Probe Volume Range", "value": "0.5 to 15 mL" },
+            { "label": "SKU: VC-50-110", "value": "Converter and probe included (probe described as 1/8\", per this SKU's listing)" },
+            { "label": "SKU: VC-50A-110", "value": "Converter included, probe not included" }
+          ],
+
+          "applications": [
+            "Small-Volume Sample Disruption: 0.5-15mL probe range suited to routine bench samples",
+            "Mixing and Homogenization: Direct amplitude control for consistent energy input",
+            "De-Agglomeration: Hand-held probe placement for targeted sample contact",
+            "Routine Lab Sonication: Simple, knob-controlled operation without a learning curve",
+            "Teaching and Training Labs: Straightforward operation suited to varied user experience levels"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Power Fit Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Simple Operation" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What sample volume are you processing?",
+            "description": "Select your target sample volume, and see whether the standard VC-50 probe fits.",
+            "steps": [
+              {
+                "key": "sampleVolume",
+                "question": "What sample volume are you processing?",
+                "options": [
+                  { "val": "within-range", "label": "Within 0.5 to 15 mL" },
+                  { "val": "above-range", "label": "Larger than 15 mL" }
+                ]
+              },
+              {
+                "key": "probeNeed",
+                "question": "Do you already have a compatible probe?",
+                "options": [
+                  { "val": "need-probe", "label": "Starting fresh, need a complete system" },
+                  { "val": "have-probe", "label": "Already have a compatible probe, or building a custom setup" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Is VC-50 the right power level for your work?",
+            "description": "Select your typical sample volume and power need, and see whether VC-50 or a higher-power model fits.",
+            "fields": [
+              {
+                "key": "sampleVolume",
+                "label": "Sample volume",
+                "options": [
+                  { "val": "small", "label": "Small (under 15 mL)" },
+                  { "val": "larger", "label": "Larger batch" }
+                ]
+              },
+              {
+                "key": "powerRequirement",
+                "label": "Power requirement",
+                "options": [
+                  { "val": "entry-level", "label": "Entry-level" },
+                  { "val": "higher-intensity", "label": "Higher intensity" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Is VC-50 the Right Fit?",
+                "body": "Confirm your target sample volume and required intensity; volumes larger than 15mL or higher power needs may fit better with the VCX-130 range instead.",
+                "tags": ["Entry Point to the VC/VCX Range"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "VC-50-110 vs. VC-50A-110",
+            "description": "VC-50 compared with the VC-50A configuration.",
+            "columns": [
+              { "label": "VC-50-110" },
+              { "label": "VC-50A-110" }
+            ],
+            "rows": [
+              { "feature": "Converter", "values": ["Included", "Included"] },
+              { "feature": "Probe", "values": ["Included", "Not included"] },
+              { "feature": "Best For", "values": ["Labs needing a complete, ready-to-run system", "Labs with existing probes or custom setups"] },
+              { "feature": "Choose when", "values": ["You're starting without a compatible probe on hand", "You already have a probe or need a specific alternative"] }
+            ],
+            "disclaimer": "Both run on the same 50W platform, the difference is purely whether a probe ships with the system."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "VC-50 industries: academic research, quality control, and routine sample preparation labs.",
+            "industries": [
+              { "name": "Academic Research Labs", "useCase": "Routine sample disruption and mixing", "consideration": "Simple operation suits shared, multi-user lab settings" },
+              { "name": "Quality Control Laboratories", "useCase": "Consistent small-volume sample prep", "consideration": "Direct amplitude control for repeatable energy input" },
+              { "name": "Teaching Laboratories", "useCase": "Student-operated sonication exercises", "consideration": "Straightforward knob control, no software training needed" },
+              { "name": "Pharmaceutical Formulation Labs", "useCase": "Small-batch de-agglomeration", "consideration": "0.5-15mL range suited to formulation-scale samples" },
+              { "name": "Contract Testing Labs", "useCase": "Varied small-volume sample types", "consideration": "Probe-free SKU available for specialized probe needs" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows probe operation and amplitude control on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms the right probe size and SKU for your sample volume" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with hand-held probe operation" },
+              { "title": "Preventive Maintenance", "description": "Maintains converter and probe connection performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement probes and converter components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the VC-50 used for?", "answer": "It's a 50-watt hand-held ultrasonic processor for routine small-volume sample disruption, mixing, and de-agglomeration." },
+            { "question": "How do I control the ultrasonic power output?", "answer": "Turn the amplitude knob on the front panel; there's no programmed interface to navigate." },
+            { "question": "What sample volumes does the standard probe handle?", "answer": "0.5 to 15mL with the standard 1/4\" probe." },
+            { "question": "What's the difference between VC-50-110 and VC-50A-110?", "answer": "VC-50-110 includes both the converter and a probe; VC-50A-110 includes the converter only, without a probe." },
+            { "question": "Can I use my own probe with VC-50?", "answer": "Yes, order the VC-50A-110 configuration, which ships with the converter but not a probe, for use with your own compatible probe." },
+            { "question": "How do I know if VC-50 is powerful enough for my work?", "answer": "Confirm your target sample volume and required intensity; volumes larger than 15mL or higher power needs may fit better with the VCX-130 range instead." },
+            { "question": "Does VC-50 require any software or programming?", "answer": "No, operation is entirely manual through the front panel amplitude knob." },
+            { "question": "What is the price of the VC-50 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe and SKU configuration." },
+            { "question": "Who is the authorized distributor of the VC-50 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VC-50 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the VC-50 in India from Inkarp",
+            "description": "Share your sample volume and probe preference, and the right VC-50 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample volume and probe preference, then confirm the right VC-50 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolume", "label": "Typical sample volume", "type": "text", "required": false },
+              { "key": "skuPreference", "label": "Probe included or probe-free (VC-50-110 or VC-50A-110)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right VC-50 configuration", "body": "Tell us your target sample volume and whether you need a probe included, and we'll get you the right VC-50 configuration." },
+              { "title": "Confirm the right probe size and SKU", "body": "Tell us your typical sample volume, and we'll confirm the right probe size and SKU for your VC-50." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Hold the probe, turn the knob. That's the whole operation.",
+            "heroLead": "Not every sonication job needs a programmable interface and a menu of settings. Sometimes the work just needs reliable ultrasonic energy, on demand, without a learning curve. VC-50 delivers 50 watts of ultrasonic power through a hand-held probe, activated by turning the amplitude knob directly on the front panel. No software, no programmed sequences, just direct control over the energy going into your sample. The standard 1/4\" probe handles 0.5 to 15mL volumes, small enough for routine disruption, mixing, and de-agglomeration work at the bench. Order it complete with converter and probe, or choose the probe-free configuration if you're building your own setup or already have compatible probes on hand.",
+            "stats": [
+              { "value": "50 W", "label": "Ultrasonic power output" },
+              { "value": "1/4 in", "label": "Standard probe diameter" },
+              { "value": "0.5 to 15 mL", "label": "Standard probe volume range" },
+              { "value": "Knob-controlled", "label": "Amplitude adjustment" },
+              { "value": "Hand-held", "label": "Probe operation" },
+              { "value": "2", "label": "Confirmed SKU configurations" },
+              { "value": "Compact", "label": "Benchtop footprint" },
+              { "value": "Entry-level", "label": "Positioning within the VC/VCX range" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "VC-50 ultrasonic probe sonicator product information: operation, probe configuration, and ordering options.",
+                "body": [
+                  "Simple, knob controlled operation: Adjust ultrasonic amplitude directly from the front panel without using a programmable interface.",
+                  "Hand held ultrasonic processing: Designed for direct, flexible control during small volume laboratory work.",
+                  "Small volume processing: The standard configuration includes a 1/4\" probe for sample volumes from 0.5 to 15 mL.",
+                  "Direct amplitude control: Set the ultrasonic energy level using the front panel amplitude knob.",
+                  "Designed for routine bench work: Suitable for small volume sonication applications rather than large batch processing.",
+                  "Flexible probe configurations: VC-50-110 is described with a 1/8\" probe, while VC-50A-110 is available without a probe for custom setups or laboratories with compatible probes."
+                ],
+                "cards": [
+                  { "title": "50 W", "description": "Total ultrasonic power" },
+                  { "title": "0.5-15 mL", "description": "Standard probe volume range" },
+                  { "title": "Knob control", "description": "Direct amplitude adjustment, no programming" },
+                  { "title": "2 SKUs", "description": "With or without probe" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Power", "description": "50 watts" },
+                  { "title": "Standard probe", "description": "1/4\" diameter, 0.5-15mL volume range" },
+                  { "title": "Operation", "description": "Hand-held probe, amplitude controlled via front panel knob" },
+                  { "title": "SKU VC-50-110", "description": "Converter and probe included (described with a 1/8\" probe specifically)" },
+                  { "title": "SKU VC-50A-110", "description": "Converter included, probe not included" },
+                  { "title": "Full specifications", "description": "Frequency, duty cycle, and timer detail are available in the VC-50 datasheet" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "VC-50 ultrasonic probe sonicator key features: hand-held operation, direct amplitude control, compact design."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "VC-50 applications: sample disruption, mixing, and de-agglomeration for small-volume lab work."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "VC-50 ultrasonic probe sonicator technical specifications: power output, probe size, and configuration."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Simple Operation and Probe Configuration",
+                "title": "Simple Operation and Probe Configuration",
+                "description": "There's no interface to learn on VC-50. The probe is held by hand, positioned directly in the sample, and ultrasonic energy activates by turning the amplitude knob on the front panel, immediate, direct control over how much energy reaches the sample. The standard probe covers 0.5 to 15mL, matched to routine small-volume bench work rather than large-batch processing. Two ordering paths exist depending on what your lab already has: the complete VC-50-110 configuration ships with converter and probe together, while VC-50A-110 ships with the converter alone, letting you supply your own compatible probe.",
+                "cards": [
+                  { "title": "Direct, immediate control without programming", "description": "Front panel amplitude knob" },
+                  { "title": "Small-volume sample processing", "description": "0.5-15mL standard probe range" },
+                  { "title": "A complete out-of-box setup", "description": "VC-50-110, converter and probe included" },
+                  { "title": "Using existing or specialized probes", "description": "VC-50A-110, converter only" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Choosing Your VC-50 Configuration",
+                "title": "Choosing Your VC-50 Configuration",
+                "description": "VC-50 configuration: probe-included versus probe-free ordering, and the broader Sonics range.",
+                "body": [
+                  "Two confirmed SKUs cover most labs' starting point, and the choice comes down to whether you need a probe supplied or already have one in mind."
+                ],
+                "utilityChecklist": [
+                  { "label": "Starting fresh, need a complete system", "value": "VC-50-110, converter and probe included" },
+                  { "label": "Already have a compatible probe, or building a custom setup", "value": "VC-50A-110, converter only" },
+                  { "label": "Sample volumes larger than 15mL routinely", "value": "Confirm fit against the VCX-130 range instead" },
+                  { "label": "Uncertain about probe size for your sample volume", "value": "Confirm directly, since probe descriptions vary by SKU" }
+                ],
+                "disclaimer": "Send us your sample volume range and whether you already own a compatible probe, and we'll confirm the right VC-50 SKU."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "VC-50 documentation: full technical datasheet available on request.",
+                "cards": [
+                  { "title": "VC-50 Technical Datasheet", "description": "Available on request" },
+                  { "title": "VC-50 Probe Options Catalog", "description": "Available on request" },
+                  { "title": "VC-50 Accessories Catalog", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the VC-50 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Hold the probe, turn the knob, and get straightforward ultrasonic processing without a learning curve. Tell us your sample volume, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

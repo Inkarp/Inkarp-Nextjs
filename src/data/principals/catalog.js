@@ -69,6 +69,17 @@ import fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog from "./fom-technol
 import daralyoPilotFreezeDryersCatalog from "./daralyo/pilot-freeze-dryers.json";
 import nenovisionLitescopeCatalog from "./nenovision/litescope.json";
 import reichertHighSensitivitySurfacePlasmonResonanceSprSystemsCatalog from "./reichert/high-sensitivity-surface-plasmon-resonance-spr-systems.json";
+import sonicsLaboratoryScaleModelsVolume150ulTo150mlCatalog from "./sonics/laboratory-scale-models-volume-150ul-to-150ml.json";
+import sonicsUltrasonicProbeSonicatorsCatalog from "./sonics/ultrasonic-probe-sonicators.json";
+import sonicsLaboratoryScaleModelsVolume200ulTo2lCatalog from "./sonics/laboratory-scale-models-volume-200ul-to-2l.json";
+import sonicsLaboratoryScaleModelsVolume200ulTo1lCatalog from "./sonics/laboratory-scale-models-volume-200ul-to-1l.json";
+import sonicsUltrasonicProbeSonicatorsProductionScaleCatalog from "./sonics/ultrasonic-probe-sonicators-production-scale.json";
+import affiniteCompactSurfacePlasmonResonanceSprSystemsCatalog from "./affinite/compact-surface-plasmon-resonance-spr-systems.json";
+import affiniteSprInstrumentControlAndAnalysisSoftwareCatalog from "./affinite/spr-instrument-control-and-analysis-software.json";
+import sbtInstrumentsBacteriaEnumerationSystemsCatalog from "./sbt-instruments/bacteria-enumeration-systems.json";
+import evonikLiposomeExtrusionSystemsCatalog from "./evonik/liposome-extrusion-systems.json";
+import implenNanophotometerCatalog from "./implen/nanophotometer.json";
+import implenOd600Catalog from "./implen/od-600.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -152,6 +163,17 @@ const principalCatalogs = [
   daralyoPilotFreezeDryersCatalog,
   nenovisionLitescopeCatalog,
   reichertHighSensitivitySurfacePlasmonResonanceSprSystemsCatalog,
+  sonicsLaboratoryScaleModelsVolume150ulTo150mlCatalog,
+  sonicsUltrasonicProbeSonicatorsCatalog,
+  sonicsLaboratoryScaleModelsVolume200ulTo2lCatalog,
+  sonicsLaboratoryScaleModelsVolume200ulTo1lCatalog,
+  sonicsUltrasonicProbeSonicatorsProductionScaleCatalog,
+  affiniteCompactSurfacePlasmonResonanceSprSystemsCatalog,
+  affiniteSprInstrumentControlAndAnalysisSoftwareCatalog,
+  sbtInstrumentsBacteriaEnumerationSystemsCatalog,
+  evonikLiposomeExtrusionSystemsCatalog,
+  implenNanophotometerCatalog,
+  implenOd600Catalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

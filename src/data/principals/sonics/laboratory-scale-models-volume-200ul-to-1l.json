@@ -1,0 +1,323 @@
+{
+  "principal": {
+    "slug": "sonics-and-materials",
+    "principalName": "Sonics & Materials",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Laboratory Scale Models, Volume 200 µL to 1 L",
+      "slug": "laboratory-scale-models-volume-200ul-to-1l",
+      "products": [
+        {
+          "name": "VCX-500 Ultrasonic Probe Sonicator",
+          "slug": "vcx-500-ultrasonic-probe-sonicator",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
+          "imageAlt": "Sonics & Materials VCX-500 Ultrasonic Probe Sonicator - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/vcx-500-ultrasonic-probe-sonicator",
+          "breadcrumbPath": "Home > Products > Laboratory Scale Models, Volume 200 µL to 1 L > VCX-500 Ultrasonic Probe Sonicator",
+          "h1": "VCX-500 Ultrasonic Probe Sonicator",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Not every liquid processing job needs 750 watts behind it. VCX-500 delivers the same programmability and precision on a scale suited to small-to-medium volume work.",
+
+          "features": [
+            "Fully Programmable Control: Runs the same microprocessor-based operating system and screens as the VCX-750.",
+            "Energy Setpoint Dosing: Doses sonication by Joules delivered, removing run-to-run variability from timing alone.",
+            "Real-Time Wattage and Energy Display: Shows exactly how much power and energy a sample is receiving during processing.",
+            "Temperature Monitoring: Tracks sample temperature throughout the run, protecting heat-sensitive materials.",
+            "Pulse Mode: Runs intermittent sonication cycles to manage heat buildup during longer processes.",
+            "10-Hour Timer: Covers short bursts through extended processing runs in a single system.",
+            "Standard ½\" Titanium Alloy Probe: Ti6Al4V construction with a replaceable tip, included with the base configuration.",
+            "Dedicated Accessory Range: Probe options, microtips, cup horn, multi-element probes, and a flow cell built specifically for this model."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sonics & Materials VCX-500 Ultrasonic Probe Sonicator" },
+            { "label": "Category", "value": "Laboratory Scale Models, Volume 200 µL to 1 L" },
+            { "label": "Power Output", "value": "500 W maximum" },
+            { "label": "Frequency", "value": "20 kHz" },
+            { "label": "Dimensions (H x W x D)", "value": "9.25 x 7.5 x 13.5\" (235 x 190 x 340 mm)" },
+            { "label": "Ultrasonic Converter", "value": "Part #CV334, 2.5\" (64mm) diameter, 7.25\" (183mm) length" },
+            { "label": "Standard Probe", "value": "Part #630-0220, 0.5\" (13mm) tip diameter with replaceable tip" },
+            { "label": "Probe Length", "value": "5.5\" (139mm)" },
+            { "label": "Probe Material", "value": "Ti6Al4V titanium alloy" },
+            { "label": "Converter Cable", "value": "Part #201-0300, 6 ft (1.8m)" },
+            { "label": "Tool Kit", "value": "Part #381-0005, 2 spanner wrenches and 1 open-end wrench" },
+            { "label": "Optional Accessories", "value": "Stand with clamp, sound enclosure, temperature probe" }
+          ],
+
+          "applications": [
+            "Cell Lysis: Energy dosing supports consistent, reproducible lysis across small-to-medium batches",
+            "Homogenization: Programmable control adapts intensity to sample viscosity and volume",
+            "Emulsification: 500 W output drives sufficient energy for lab-scale emulsion formation",
+            "Nanoparticle Dispersion: Energy setpoint control supports consistent, repeatable particle dispersion",
+            "Microsample and Multi-Well Processing: Microtip accessories extend the system down to very small volumes"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Accessory Builder" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "benefits", "label": "Right-Sized Power" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What volume and power level does your application need?",
+            "description": "Enter your typical sample volume, and see whether VCX-500 fits or a higher-power model suits better.",
+            "steps": [
+              {
+                "key": "sampleVolume",
+                "question": "What's the typical sample volume?",
+                "options": [
+                  { "val": "general-purpose", "label": "General-purpose sonication (standard probe range)" },
+                  { "val": "small-precious", "label": "Small or precious sample volumes" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "cell-lysis", "label": "Cell lysis" },
+                  { "val": "homogenization", "label": "Homogenization" },
+                  { "val": "emulsification", "label": "Emulsification" },
+                  { "val": "nanoparticle-dispersion", "label": "Nanoparticle dispersion" }
+                ]
+              },
+              {
+                "key": "powerRequirement",
+                "question": "What's the power requirement?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-throughput", "label": "High-throughput" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "What does your sample format require?",
+            "description": "Select your sample type, and see the recommended accessory combination.",
+            "fields": [
+              {
+                "key": "sampleFormat",
+                "label": "Sample format",
+                "options": [
+                  { "val": "standard-batch", "label": "Standard batch" },
+                  { "val": "microsample", "label": "Microsample" },
+                  { "val": "sealed-vessel", "label": "Sealed vessel" },
+                  { "val": "continuous-flow", "label": "Continuous flow" }
+                ]
+              },
+              {
+                "key": "multiSampleNeed",
+                "label": "Multi-sample need",
+                "options": [
+                  { "val": "single", "label": "Single sample" },
+                  { "val": "multiple", "label": "Multiple simultaneous samples" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Which Accessory Fits Your Sample Format?",
+                "body": "A cup horn accessory allows indirect sonication for samples in sealed vessels, multi-element probes support processing multiple samples simultaneously, and a dedicated flow cell accessory adapts the system for continuous-flow sonication rather than batch processing alone.",
+                "tags": ["Dedicated Accessory Range"]
+              }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Industries using VCX-500 include pharmaceutical research, biotechnology, and academic laboratories.",
+            "industries": [
+              { "name": "Pharmaceutical and Biotech Research", "useCase": "Cell lysis and sample preparation for small-to-medium batches", "consideration": "Energy setpoint control keeps lysis consistent across sample runs" },
+              { "name": "Nanomaterials Research", "useCase": "Dispersing nanoparticles at lab scale", "consideration": "Microtip accessories support very small, precious sample volumes" },
+              { "name": "Academic and Teaching Laboratories", "useCase": "Training students on ultrasonic processing fundamentals", "consideration": "Shared VCX operating system keeps operation consistent and easy to teach" },
+              { "name": "Cosmetics and Personal Care Formulation", "useCase": "Emulsifying small-batch formulations", "consideration": "500 W output suits typical lab-scale formulation volumes" },
+              { "name": "Contract Research Organizations", "useCase": "Running varied client sonication protocols", "consideration": "Full accessory range covers microsamples through continuous-flow processing" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows energy setpoint dosing and pulse mode on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms the right probe and accessory package for your volume and application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with programmable control and probe handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains converter, probe, and temperature monitoring performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement tips, probes, and converter cables" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is VCX-500 used for?", "answer": "VCX-500 is a 500 W, 20 kHz ultrasonic processor used for cell lysis, homogenization, emulsification, and nanoparticle dispersion, processing volumes from 200 µL to 1 L depending on the probe or accessory used." },
+            { "question": "How is VCX-500 different from VCX-750?", "answer": "VCX-500 shares the identical operating system and programmability as VCX-750, but runs at a lower 500 W power ceiling suited to small-to-medium volume work rather than the largest batch applications." },
+            { "question": "What sample volumes can VCX-500 process?", "answer": "Processing volume ranges from 200 µL to 1 L, with the exact range depending on which probe or accessory is fitted." },
+            { "question": "What does energy setpoint control do?", "answer": "Energy setpoint control doses sonication in Joules delivered rather than time elapsed, keeping results reproducible across samples that absorb energy at different rates." },
+            { "question": "What probe comes standard with VCX-500?", "answer": "A ½\" diameter probe made from Ti6Al4V titanium alloy, with a replaceable tip, ships with the base configuration." },
+            { "question": "Can VCX-500 process very small sample volumes?", "answer": "Yes, dedicated microtip accessories extend processing down toward the 200 µL end of the range for small or precious samples." },
+            { "question": "Does VCX-500 support continuous-flow processing?", "answer": "Yes, a dedicated flow cell accessory adapts the system for continuous-flow sonication in addition to standard batch processing." },
+            { "question": "Can VCX-500 process multiple samples at once?", "answer": "Yes, multi-element probe accessories are available for processing several samples simultaneously." },
+            { "question": "What is the price of VCX-500 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe, accessory, and application requirements." },
+            { "question": "Who is the authorized distributor of VCX-500 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-500 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get VCX-500 in India from Inkarp",
+            "description": "Share your sample volume and application, and the right VCX-500 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample volume and application, then confirm the right VCX-500 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolume", "label": "Typical sample volume", "type": "text", "required": false },
+              { "key": "application", "label": "Application (cell lysis, homogenization, etc.)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm whether VCX-500 or VCX-750 fits", "body": "Tell us your typical sample volume and application, and we'll confirm whether VCX-500 or the higher-power VCX-750 fits your throughput needs." },
+              { "title": "Confirm the right power ceiling for your throughput", "body": "Tell us your typical sample volumes, and we'll confirm whether VCX-500's power ceiling fits or whether VCX-750 makes more sense for your throughput." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "500 watts of programmable ultrasonic power, from 200 µL microsamples up to 1 L batches.",
+            "heroLead": "Not every liquid processing job needs 750 watts behind it. VCX-500 delivers the same programmability and precision on a scale suited to small-to-medium volume work. A 500 W, 20 kHz microprocessor-based system, it runs the same operating system and programming screens as the VCX-750, so switching between the two involves no learning curve. A standard ½\" diameter titanium alloy probe with a replaceable tip ships with the system, and a full accessory line, probe options, microtips, cup horn, multi-element probes, and a flow cell, extends processing from 200 µL up to 1 L depending on what your application calls for.",
+            "stats": [
+              { "value": "500 W", "label": "Maximum power output" },
+              { "value": "20 kHz", "label": "Operating frequency" },
+              { "value": "200 µL to 1 L", "label": "Processing volume range, accessory-dependent" },
+              { "value": "Programmable", "label": "Same operating system as VCX-750" },
+              { "value": "10-hour", "label": "Timer range" },
+              { "value": "Pulse mode", "label": "Standard control feature" },
+              { "value": "Energy setpoint", "label": "Reproducible dosing control" },
+              { "value": "Ti6Al4V titanium alloy", "label": "Standard probe material" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "VCX-500 product information: power delivery, control features, and accessory ecosystem.",
+                "body": [
+                  "The system runs at 500 W maximum output and 20 kHz frequency, sized for small-to-medium volume liquid processing work.",
+                  "It shares the same microprocessor-based operating system and programming screens as the VCX-750, so the two systems feel identical to operate despite the power difference.",
+                  "Energy setpoint control doses sonication by Joules delivered rather than time alone, keeping results reproducible across samples that don't all absorb energy at the same rate.",
+                  "Temperature monitoring runs alongside energy dosing, tracking heat buildup during processing for heat-sensitive samples.",
+                  "A pulse mode handles applications needing intermittent rather than continuous sonication.",
+                  "Wattage and energy display in real time, showing exactly how much power and total energy a sample has received during a run.",
+                  "A 10-hour timer covers short bursts through extended processing runs.",
+                  "A standard ½\" diameter probe with a replaceable titanium alloy tip ships with the base configuration, and a dedicated accessory range, including probe options, microtips, a cup horn, multi-element probes, and a flow cell, extends the system across applications."
+                ],
+                "cards": [
+                  { "title": "500 W, 20 kHz", "description": "Core power and frequency output" },
+                  { "title": "200 µL to 1 L", "description": "Volume range across probes and accessories" },
+                  { "title": "Shared VCX operating system", "description": "Same programmability as the VCX-750" },
+                  { "title": "Full accessory ecosystem", "description": "Microtips, cup horn, multi-element probes, flow cell" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Sonics & Materials VCX-500 Ultrasonic Probe Sonicator" },
+                  { "title": "Power output", "description": "500 W maximum" },
+                  { "title": "Frequency", "description": "20 kHz" },
+                  { "title": "Processing volume", "description": "200 µL to 1 L, dependent on probe or accessory" },
+                  { "title": "Standard probe", "description": "½\" diameter, Ti6Al4V titanium alloy, replaceable tip" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "VCX-500 key features: shared programmability, energy dosing, and a dedicated accessory range."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "VCX-500 applications: cell lysis, homogenization, emulsification, and nanoparticle dispersion."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "VCX-500 technical specifications: power output, frequency, dimensions, and probe details."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Same Programmability, Right-Sized Power",
+                "title": "Same Programmability, Right-Sized Power",
+                "description": "Choosing between VCX-500 and VCX-750 isn't a choice between a full-featured and a stripped-down system. It's purely a question of how much power your application actually needs. VCX-500 runs the identical microprocessor-based operating system and programming screens found on the VCX-750, so every feature, energy setpoint dosing, pulse mode, temperature monitoring, real-time wattage and energy display, carries over without exception. What changes is the ceiling: 500 W maximum output, sized for small-to-medium volume liquid processing rather than the largest batch work. For labs whose typical runs stay within that range, VCX-500 delivers the same reproducibility and control without paying for headroom that won't get used.",
+                "cards": [
+                  { "title": "Full VCX programmability at a lower power ceiling", "description": "Identical operating system and screens to the VCX-750" },
+                  { "title": "Small-to-medium volume processing", "description": "500 W output, 200 µL to 1 L range" },
+                  { "title": "Reproducible energy dosing", "description": "Energy setpoint control, same as the VCX-750" },
+                  { "title": "Right-sized investment for typical run volumes", "description": "No premium for unused high-power headroom" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Probe, Microtip, and Accessory Range",
+                "title": "Probe, Microtip, and Accessory Range",
+                "description": "Matching VCX-500's dedicated accessory line to your sample volume and application.",
+                "body": [
+                  "VCX-500 carries its own dedicated accessory range, built specifically around the volumes and applications this model is sized for. The standard ½\" diameter probe, Ti6Al4V titanium alloy with a replaceable tip, ships with the base configuration and handles general-purpose work directly. Beyond that, a full set of probe options and microtips extends processing down toward the 200 µL end of the range, suited to small or precious samples. A cup horn accessory allows indirect sonication for samples in sealed vessels, multi-element probes support processing multiple samples simultaneously, and a dedicated flow cell accessory adapts the system for continuous-flow sonication rather than batch processing alone."
+                ],
+                "utilityChecklist": [
+                  { "label": "General-purpose sonication out of the box", "value": "Standard ½\" titanium alloy probe, included" },
+                  { "label": "Small or precious sample volumes", "value": "Probe options and microtip accessories" },
+                  { "label": "Indirect sonication for sealed samples", "value": "Cup horn accessory" },
+                  { "label": "Processing multiple samples at once", "value": "Multi-element probe accessories" },
+                  { "label": "Continuous-flow processing", "value": "Dedicated flow cell accessory" },
+                  { "label": "Hands-free or enclosed operation", "value": "Optional stand with clamp, sound enclosure" }
+                ],
+                "disclaimer": "Tell us your sample format, batch or continuous flow, and typical volume, and we'll put together the right probe and accessory package."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for VCX-500 is available on request.",
+                "cards": [
+                  { "title": "VCX-500 Data Sheet", "description": "Available on request" },
+                  { "title": "Probe and Accessory Compatibility Guide", "description": "Available on request" },
+                  { "title": "Energy Setpoint Protocol Guidance", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get VCX-500 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "500 W of programmable ultrasonic power with energy setpoint control, covering 200 µL to 1 L across a dedicated accessory range. Tell us your sample volume and application, and Inkarp will confirm the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

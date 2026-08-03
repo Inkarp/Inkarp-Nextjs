@@ -1,0 +1,351 @@
+{
+  "principal": {
+    "slug": "implen",
+    "principalName": "Implen",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "OD 600",
+      "slug": "od-600",
+      "products": [
+        {
+          "name": "NanoPhotometer OD600®",
+          "slug": "nanophotometer-od600",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
+          "imageAlt": "Implen NanoPhotometer OD600® - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/nanophotometer-od600",
+          "breadcrumbPath": "Home > Products > OD 600 > NanoPhotometer OD600®",
+          "h1": "NanoPhotometer OD600®",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Guessing whether a culture has hit the right growth stage costs time and, sometimes, a whole batch. NanoPhotometer OD600 removes the guesswork with two dedicated built-in programs, OD600 and McFarland, purpose-built for fast, reproducible cell density measurement.",
+
+          "features": [
+            "Built-In OD600 Program: Monitors bacterial growth in liquid culture by measuring optical density at 600 nm.",
+            "Built-In McFarland Program: Estimates cell suspension density against standard turbidity solutions.",
+            "Built-In Sample List Function: Manages and exports data directly, without extra manual steps.",
+            "Growth-Stage Precision: Identifies the correct growth stage for optimal harvesting timing.",
+            "Simplified Antimicrobial Workflow: Streamlines antimicrobial susceptibility testing and inoculum preparation."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Implen NanoPhotometer OD600®" },
+            { "label": "Category", "value": "OD 600" },
+            { "label": "Measurement Wavelength", "value": "600 nm" },
+            { "label": "Built-In Programs", "value": "OD600, McFarland" },
+            { "label": "Data Management", "value": "Built-in Sample list function" },
+            { "label": "Related Accessories", "value": "OD600 DiluCell™ (sample dilution/handling)" },
+            { "label": "Regulatory Support", "value": "IQ/OQ Package available" },
+            { "label": "Detection Range, Dimensions, Connectivity", "value": "Available on request" }
+          ],
+
+          "applications": [
+            "Bacterial Growth Monitoring: Dedicated OD600 program tracks culture density in real time",
+            "Optimal Harvest Timing: Growth-stage determination built into the OD600 workflow",
+            "Antimicrobial Susceptibility Testing: McFarland program standardizes turbidity-based comparisons",
+            "Bacterial Inoculum Preparation: McFarland program simplifies density matching to standard solutions",
+            "Data Management Across Samples: Built-in Sample list function for export and tracking"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Regulatory Checker" },
+            { "id": "growth-stage-timing-estimator", "label": "Harvest Timing" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Growth Monitoring" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Growth monitoring, susceptibility testing, or both?",
+            "description": "Select the primary lab task, and see which built-in program fits.",
+            "steps": [
+              {
+                "key": "primaryTask",
+                "question": "What's the primary lab task?",
+                "options": [
+                  { "val": "growth-monitoring", "label": "Bacterial growth monitoring" },
+                  { "val": "susceptibility-testing", "label": "McFarland/susceptibility testing" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "cultureType",
+                "question": "What's the culture type?",
+                "options": [
+                  { "val": "bacterial", "label": "Bacterial" },
+                  { "val": "yeast", "label": "Yeast" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "dataExportNeed",
+                "question": "What's the data export need?",
+                "options": [
+                  { "val": "standard", "label": "Standard export" },
+                  { "val": "lims-adjacent", "label": "LIMS-adjacent workflow" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to an application-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need IQ/OQ validation for this instrument?",
+            "description": "Select the lab's regulatory environment, and see if the IQ/OQ Package applies.",
+            "fields": [
+              {
+                "key": "regulatoryEnvironment",
+                "label": "Regulatory environment",
+                "options": [
+                  { "val": "research-use", "label": "Research use" },
+                  { "val": "clinical", "label": "Clinical" },
+                  { "val": "gmp-glp-regulated", "label": "GMP/GLP regulated" }
+                ]
+              },
+              {
+                "key": "documentationRequirement",
+                "label": "Documentation requirement",
+                "options": [
+                  { "val": "basic", "label": "Basic" },
+                  { "val": "full-iqoq", "label": "Full IQ/OQ validation" }
+                ]
+              },
+              {
+                "key": "auditFrequency",
+                "label": "Audit frequency",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "periodic", "label": "Periodic" },
+                  { "val": "frequent", "label": "Frequent" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Is This Instrument Suitable for Regulated Environments?",
+                "body": "An IQ/OQ Package is available to support regulatory validation needs; further compliance details are available on request.",
+                "tags": ["Regulatory Support"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "growth-stage-timing-estimator",
+              "eyebrow": "Growth Stage Timing Estimator",
+              "title": "When should the culture actually be harvested?",
+              "description": "Enter typical culture parameters, and see how OD600 tracking supports harvest timing decisions.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the culture type?", "choices": "Bacterial; Yeast; Other" },
+                { "title": "What's the target growth phase?", "choices": "Log phase; Stationary phase; Custom target" },
+                { "title": "What's the current monitoring method?", "choices": "Visual estimate; Timer-based; Instrument-based" }
+              ],
+              "disclaimer": "Routes to a workflow-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "OD600 Program vs. McFarland Program",
+            "description": "NanoPhotometer OD600 comparison: dedicated OD600 program versus McFarland program.",
+            "columns": [
+              { "label": "OD600 Program" },
+              { "label": "McFarland Program" }
+            ],
+            "rows": [
+              { "feature": "Measurement Basis", "values": ["Optical density at 600 nm", "Comparison against standard turbidity solutions"] },
+              { "feature": "Primary Purpose", "values": ["Tracking bacterial growth stage over time", "Estimating cell suspension density for standardization"] },
+              { "feature": "Best For", "values": ["Culture monitoring and harvest timing", "Antimicrobial susceptibility testing, inoculum prep"] },
+              { "feature": "Choose When", "values": ["The question is \"how much has this culture grown\"", "The question is \"does this suspension match a known standard\""] }
+            ],
+            "disclaimer": "Both programs run on the same instrument and share the built-in Sample list function for data management."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NanoPhotometer OD600 industries: microbiology research, clinical microbiology, and industrial fermentation.",
+            "industries": [
+              { "name": "Microbiology Research", "useCase": "Routine bacterial and yeast culture growth tracking", "consideration": "Dedicated OD600 program for consistent growth-stage measurement" },
+              { "name": "Clinical Microbiology", "useCase": "Antimicrobial susceptibility testing", "consideration": "McFarland program standardizes inoculum density" },
+              { "name": "Industrial Fermentation", "useCase": "Monitoring culture density for process timing", "consideration": "OD600 tracking supports optimal harvest decisions" },
+              { "name": "Regulated Lab Environments", "useCase": "Documented, audit-ready measurement processes", "consideration": "IQ/OQ Package available for validation needs" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows OD600 and McFarland program operation on real cultures" },
+              { "title": "Configuration Assessment", "description": "Confirms program and accessory setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with both built-in programs and the Sample list function" },
+              { "title": "Preventive Maintenance", "description": "Maintains optical performance and calibration" },
+              { "title": "Spares and Accessories", "description": "Supplies DiluCell™ components and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NanoPhotometer OD600 used for?", "answer": "It's a dedicated OD600 photometer for quick, reproducible measurement of bacterial and yeast cell density, with built-in OD600 and McFarland programs." },
+            { "question": "What does the OD600 program measure?", "answer": "Optical density at 600 nm, used to monitor bacterial growth in liquid culture and determine the stage of growth for optimal harvesting." },
+            { "question": "What is the McFarland program used for?", "answer": "It estimates cell suspension density by comparing a sample against standard turbidity solutions, simplifying antimicrobial susceptibility testing and inoculum preparation." },
+            { "question": "Does the instrument manage data automatically?", "answer": "Yes, a built-in Sample list function handles data management and export directly." },
+            { "question": "Is there an accessory for sample dilution?", "answer": "Yes, the OD600 DiluCell™ is part of the broader Implen OD600 ecosystem for sample handling." },
+            { "question": "Is this instrument suitable for regulated environments?", "answer": "An IQ/OQ Package is available to support regulatory validation needs; further compliance details are available on request." },
+            { "question": "What detection range or dimensions does the instrument have?", "answer": "Detailed technical specifications, including detection range and physical dimensions, are available on request from Inkarp." },
+            { "question": "Can this instrument be used for both bacteria and yeast?", "answer": "Yes, it's built for quick, reproducible cell density measurement across bacterial and yeast cultures." },
+            { "question": "What is the price of the NanoPhotometer OD600 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the application and accessory requirements needed." },
+            { "question": "Who is the authorized distributor of the NanoPhotometer OD600 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Implen NanoPhotometer OD600 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NanoPhotometer OD600 in India from Inkarp",
+            "description": "Share the application, growth monitoring or susceptibility testing, and the right NanoPhotometer OD600 setup gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your application and confirm the right NanoPhotometer OD600 setup.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "primaryTask", "label": "Primary task (growth monitoring, susceptibility testing, or both)", "type": "text", "required": false },
+              { "key": "complianceNeeds", "label": "Regulatory / IQ-OQ needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right NanoPhotometer OD600 setup", "body": "Share whether the priority is routine growth monitoring, antimicrobial susceptibility work, or both, and the right NanoPhotometer OD600 setup gets confirmed from there." },
+              { "title": "Confirm how the OD600 program fits your routine", "body": "Share the typical culture type and harvesting schedule, and how the OD600 program fits into that routine gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Two built-in programs. One purpose: know exactly where the culture stands.",
+            "heroLead": "Guessing whether a culture has hit the right growth stage costs time and, sometimes, a whole batch. NanoPhotometer OD600 removes the guesswork with two dedicated built-in programs, OD600 and McFarland, purpose-built for fast, reproducible cell density measurement. The OD600 program tracks bacterial growth in liquid culture at 600 nm, pinpointing the exact stage for optimal harvesting. The McFarland program estimates cell suspension density against standard turbidity solutions, simplifying antimicrobial susceptibility testing and inoculum prep. A built-in Sample list function handles data management and export without extra steps.",
+            "stats": [
+              { "value": "2", "label": "Built-in measurement programs (OD600, McFarland)" },
+              { "value": "600 nm", "label": "Core measurement wavelength" },
+              { "value": "Built-in", "label": "Sample list function for data management" },
+              { "value": "Dedicated", "label": "Purpose-built for microbial growth analysis" },
+              { "value": "Direct", "label": "Antimicrobial susceptibility and inoculum prep support" },
+              { "value": "Streamlined", "label": "Export-ready data handling" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NanoPhotometer OD600 product information: built-in growth monitoring programs and sample data management.",
+                "body": [
+                  "The OD600 program measures optical density at 600 nm directly, monitoring bacterial growth in liquid culture media to determine growth stage and confirm optimal harvesting timing.",
+                  "The McFarland program estimates cell suspension density by comparing a sample against a series of standard turbidity solutions, built specifically to simplify antimicrobial susceptibility testing and bacterial inoculum preparation.",
+                  "Both programs come built into the instrument as dedicated applications, not general-purpose absorbance tools repurposed for the job.",
+                  "A built-in Sample list function handles data management and export directly, reducing manual steps between measurement and usable results.",
+                  "The instrument is positioned as an indispensable tool for microbial growth analysis across research, clinical, and industrial lab settings.",
+                  "An OD600 DiluCell™ and an IQ/OQ Package are referenced as part of the broader Implen OD600 ecosystem for further sample handling and regulatory validation needs."
+                ],
+                "cards": [
+                  { "title": "Dedicated OD600 program", "description": "Purpose-built growth monitoring at 600 nm" },
+                  { "title": "Built-in McFarland program", "description": "Simplified antimicrobial testing and inoculum prep" },
+                  { "title": "Built-in Sample list", "description": "Streamlined data management and export" },
+                  { "title": "Purpose-built instrument", "description": "Not a general spectrophotometer repurposed for OD600" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Implen NanoPhotometer OD600®" },
+                  { "title": "Built-in programs", "description": "OD600 (bacterial growth monitoring), McFarland (turbidity-based density estimation)" },
+                  { "title": "Data management", "description": "Built-in Sample list function" },
+                  { "title": "Further specifications", "description": "Further technical specifications, dimensions, and detection ranges: available on request" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NanoPhotometer OD600 applications: bacterial growth monitoring, antimicrobial susceptibility testing, and inoculum preparation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NanoPhotometer OD600 technical specifications: confirmed program details, with further specs available on request."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Growth Monitoring Without the Guesswork",
+                "title": "Growth Monitoring Without the Guesswork",
+                "description": "Culture growth stage isn't something to eyeball. Missing the right window means either harvesting too early or letting a culture overgrow past its useful stage. The OD600 program measures optical density at 600 nm directly, the standard reference point for tracking bacterial growth in liquid culture media. That measurement translates directly into growth-stage information, letting a lab confirm optimal harvesting conditions rather than estimating them from experience or a clock.",
+                "cards": [
+                  { "title": "Confirming the correct growth stage before harvest", "description": "Dedicated OD600 program at 600 nm" },
+                  { "title": "Consistent, reproducible growth tracking", "description": "Purpose-built measurement, not a general absorbance workaround" },
+                  { "title": "Fast turnaround between measurement and decision", "description": "Built-in Sample list for immediate data access" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Standardized Turbidity, Simplified",
+                "title": "Standardized Turbidity, Simplified",
+                "description": "Comparing a cell suspension against a McFarland standard by eye introduces variability that a dedicated instrument removes entirely.",
+                "body": [
+                  "The McFarland program runs that comparison directly against a series of standard turbidity solutions, giving a consistent, reproducible density estimate every time.",
+                  "That consistency matters most in antimicrobial susceptibility testing and inoculum preparation, where an inaccurate starting density skews the entire downstream result."
+                ],
+                "utilityChecklist": [
+                  { "label": "Reproducible turbidity-based density estimates", "value": "Built-in McFarland program" },
+                  { "label": "Reliable starting density for susceptibility testing", "value": "Standardized comparison against turbidity solutions" },
+                  { "label": "Simplified inoculum preparation", "value": "McFarland program built directly into the instrument" }
+                ],
+                "disclaimer": "Share the specific antimicrobial testing protocol in use, and how the McFarland program fits that workflow gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NanoPhotometer OD600 documentation: applications guide, technical specifications, and IQ/OQ package details.",
+                "cards": [
+                  { "title": "Implen OD600® Applications Guide", "description": "Available on request" },
+                  { "title": "Implen OD600® Technical Specifications", "description": "Available on request" },
+                  { "title": "IQ/OQ Package Details", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NanoPhotometer OD600 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Two dedicated programs, OD600 and McFarland, built for fast, reproducible bacterial and yeast cell density measurement. Share the application, growth monitoring or susceptibility testing, and the right NanoPhotometer OD600 setup gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

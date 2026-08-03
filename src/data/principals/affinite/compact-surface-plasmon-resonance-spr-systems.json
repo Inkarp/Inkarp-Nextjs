@@ -1,0 +1,716 @@
+{
+  "principal": {
+    "slug": "affinite-instruments",
+    "principalName": "Affinite Instruments",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Compact Surface Plasmon Resonance (SPR) Systems",
+      "slug": "compact-surface-plasmon-resonance-spr-systems",
+      "products": [
+        {
+          "name": "p4pro and affipump (Surface Plasmon Resonance)",
+          "slug": "p4pro-and-affipump-surface-plasmon-resonance",
+          "principalImage": "/assets/images/PrincipalLogos/RowSeven/Affinite.webp",
+          "imageAlt": "Affinite Instruments p4pro and affipump (Surface Plasmon Resonance) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/p4pro-and-affipump-surface-plasmon-resonance",
+          "breadcrumbPath": "Home > Products > Compact Surface Plasmon Resonance (SPR) Systems > p4pro and affipump (Surface Plasmon Resonance)",
+          "h1": "p4pro and affipump (Surface Plasmon Resonance)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most labs end up choosing between fast static screening and precise flow-based kinetics, then buying two instruments to get both. P4PRO paired with the AffiPump does both on one bench, switching between static and flow mode without swapping hardware or rebuilding the setup.",
+
+          "features": [
+            "Hybrid Static and Flow Mode: Switches between screening and full kinetics without reconfiguring the setup.",
+            "Full Kinetic Characterization: Measures kon, koff, and KD directly, not estimated from binding curves alone.",
+            "Four Simultaneous Channels: Runs sample and controls together in a single injection.",
+            "Semi-Automated Injection: Minimizes hands-on time per run compared to fully manual systems.",
+            "Direct Inline Controls: Delivers real-time feedback during every run, not just at the end.",
+            "Low Sample Consumption: 5 to 100 µL per flow injection, precious for limited or hard-to-produce samples.",
+            "Disposable, Pre-Characterized Sensors: Covalent and capture-based gold chip chemistries, no cleaning or carry-over.",
+            "Shared Software Platform: Runs the same Affilabs.core software as the P4SPR 2.0, standardizing training and workflows."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Affinité Instruments P4PRO with AffiPump" },
+            { "label": "Category", "value": "Compact Surface Plasmon Resonance (SPR) Systems" },
+            { "label": "Detection Limit", "value": "fM (assay dependent)" },
+            { "label": "KD Range", "value": "≥ pM" },
+            { "label": "Channels", "value": "4 simultaneous" },
+            { "label": "Flow Rate Range", "value": "0.3 to 10,000 µL/min" },
+            { "label": "kon Range", "value": "10³ to 10⁷ M⁻¹s⁻¹" },
+            { "label": "koff Range", "value": "10⁻⁵ to 10⁻¹ s⁻¹" },
+            { "label": "Sample Volume", "value": "5 to 100 µL (flow mode), 300 µL (static mode)" },
+            { "label": "Run Time per Cycle", "value": "2 to 15 minutes" },
+            { "label": "Footprint", "value": "25 x 25 x 13.5 cm" },
+            { "label": "Operating Modes", "value": "Static and flow, switchable without reconfiguration" },
+            { "label": "Sensors", "value": "Disposable gold chips, covalent and capture-based chemistries" },
+            { "label": "Software", "value": "Affilabs.core, shared across the P4 platform" }
+          ],
+
+          "applications": [
+            "Full Kinetic Characterization: Direct kon, koff, and KD measurement in flow mode",
+            "Drug Discovery: fM detection limit for weak and strong compound binding",
+            "Biomanufacturing QC: Static mode for fast release testing, flow mode for detailed characterization",
+            "Antibody and Protein Interaction Studies: Four channels for sample and control comparison in one run",
+            "Assay Development: Rapid switching between static screening and flow-based validation"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Sensor Chemistry Selector" },
+            { "id": "kinetic-range-estimator", "label": "Kinetic Range Estimator" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Static & Flow" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Does the work need screening, full kinetics, or both?",
+            "description": "Select the experiment type, and see which mode fits.",
+            "steps": [
+              {
+                "key": "primaryNeed",
+                "question": "What's the primary need?",
+                "options": [
+                  { "val": "screening", "label": "Fast yes/no screening" },
+                  { "val": "full-kinetics", "label": "Full kinetics" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "sampleAvailability",
+                "question": "What's the sample availability?",
+                "options": [
+                  { "val": "limited", "label": "Limited" },
+                  { "val": "ample", "label": "Ample" }
+                ]
+              },
+              {
+                "key": "dataRequired",
+                "question": "What data is required?",
+                "options": [
+                  { "val": "binding-signal", "label": "Binding signal only" },
+                  { "val": "full-kinetic-data", "label": "kon/koff/KD" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a mode-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Which sensor surface fits the immobilization approach?",
+            "description": "Select the target molecule and coupling method, and see the recommended sensor chip.",
+            "fields": [
+              {
+                "key": "couplingType",
+                "label": "Coupling type",
+                "options": [
+                  { "val": "covalent", "label": "Covalent (EDC/NHS)" },
+                  { "val": "capture-based", "label": "Capture-based" }
+                ]
+              },
+              {
+                "key": "captureChemistry",
+                "label": "Capture chemistry",
+                "options": [
+                  { "val": "anti-his", "label": "Anti-His" },
+                  { "val": "nta", "label": "NTA" },
+                  { "val": "protein-ag", "label": "Protein A/G" },
+                  { "val": "streptavidin", "label": "Streptavidin" },
+                  { "val": "strep-tactin-xt", "label": "Strep-Tactin XT" },
+                  { "val": "anti-aavx", "label": "Anti-AAVX" }
+                ]
+              },
+              {
+                "key": "targetMolecule",
+                "label": "Target molecule",
+                "options": [
+                  { "val": "protein", "label": "Protein" },
+                  { "val": "antibody", "label": "Antibody" },
+                  { "val": "small-molecule", "label": "Small molecule" },
+                  { "val": "viral-vector", "label": "Viral vector" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Sensor Chemistries Are Available?",
+                "body": "Covalent surfaces like carboxyl, CMD, and AffiCoat for EDC/NHS coupling, plus capture-based surfaces including Anti-His, NTA, Protein A/G, Streptavidin, Strep-Tactin XT, and Anti-AAVX.",
+                "tags": ["Disposable, Pre-Characterized Sensors"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "kinetic-range-estimator",
+              "eyebrow": "Kinetic Range Estimator",
+              "title": "Where does the expected interaction fall on the kinetic scale?",
+              "description": "Enter the expected binding speed and affinity, and see if it falls within the measurable range.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the expected association rate (kon)?", "choices": "Slow; Moderate; Fast" },
+                { "title": "What's the expected dissociation rate (koff)?", "choices": "Slow; Moderate; Fast" },
+                { "title": "What's the target KD?", "choices": "Weak (mM-µM); Strong (nM-pM)" }
+              ],
+              "disclaimer": "Routes to an assay-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "P4PRO + AffiPump vs. P4SPR 2.0",
+            "description": "P4PRO and AffiPump method comparison: hybrid P4PRO versus static-only P4SPR 2.0.",
+            "columns": [
+              { "label": "P4PRO + AffiPump" },
+              { "label": "P4SPR 2.0" }
+            ],
+            "rows": [
+              { "feature": "Operating Modes", "values": ["Static and flow, hybrid", "Static only"] },
+              { "feature": "Channels", "values": ["4", "4"] },
+              { "feature": "Detection Limit", "values": ["fM (assay dependent)", "fM (assay dependent)"] },
+              { "feature": "kon / koff Measurement", "values": ["Yes", "No"] },
+              { "feature": "Sample Volume", "values": ["5-100 µL (flow) / 300 µL (static)", "150 µL"] },
+              { "feature": "Run Time per Cycle", "values": ["2-15 minutes", "Under 10 minutes"] },
+              { "feature": "Power", "values": ["Standard supply", "Laptop powered"] },
+              { "feature": "Best For", "values": ["Full kinetic characterization, drug discovery, QC", "Screening, yes/no binding, assay development"] }
+            ],
+            "disclaimer": "Both instruments run the same disposable sensors and Affilabs.core software. The difference is whether flow-based kinetics is part of the workflow."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "P4PRO and AffiPump industries: drug discovery, oncology, infectious disease, and biomanufacturing.",
+            "industries": [
+              { "name": "Drug Discovery", "useCase": "Full kinetic profiling of lead compounds", "consideration": "kon/koff measurement distinguishes fast binders from slow, tight ones" },
+              { "name": "Oncology and Infectious Disease Research", "useCase": "Antibody and target interaction characterization", "consideration": "fM detection limit captures weak and rare binding events" },
+              { "name": "Biomanufacturing QC", "useCase": "Batch release testing and detailed characterization", "consideration": "Static mode for speed, flow mode when full kinetics is required" },
+              { "name": "Therapeutic Drug Monitoring (TDM)", "useCase": "Measuring binding interactions in complex samples", "consideration": "Low sample volume requirements support limited clinical material" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows static and flow mode switching on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms sensor chemistry and flow setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with Affilabs.core software and mode switching" },
+              { "title": "Preventive Maintenance", "description": "Maintains AffiPump, flow cell, and sensor system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies sensor chips, reagent kits, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is P4PRO with AffiPump used for?", "answer": "It's a compact SPR system that runs both static screening and full flow-based kinetic characterization, kon, koff, and KD, on the same instrument." },
+            { "question": "How is P4PRO different from the P4SPR 2.0?", "answer": "P4PRO paired with the AffiPump adds flow mode and full kinetic measurement on top of the static screening capability the P4SPR 2.0 offers, without needing separate hardware." },
+            { "question": "Do I need to reconfigure the instrument to switch between static and flow mode?", "answer": "No, P4PRO switches between static and flow operation without reconfiguring the setup." },
+            { "question": "What kinetic parameters can P4PRO measure?", "answer": "Association rate (kon) from 10³ to 10⁷ M⁻¹s⁻¹, dissociation rate (koff) from 10⁻⁵ to 10⁻¹ s⁻¹, and KD calculated from both." },
+            { "question": "How much sample does a flow-mode run require?", "answer": "Between 5 and 100 µL per injection in flow mode, or 300 µL for static mode runs." },
+            { "question": "What sensor chemistries are available?", "answer": "Covalent surfaces like carboxyl, CMD, and AffiCoat for EDC/NHS coupling, plus capture-based surfaces including Anti-His, NTA, Protein A/G, Streptavidin, Strep-Tactin XT, and Anti-AAVX." },
+            { "question": "Do sensors need cleaning between runs?", "answer": "No, sensors are disposable and pre-characterized, eliminating cleaning and carry-over entirely." },
+            { "question": "What software does P4PRO run on?", "answer": "Affilabs.core, which includes Sparq, a built-in operation support assistant, and is shared across the P4 instrument platform." },
+            { "question": "What is the price of P4PRO and AffiPump in India?", "answer": "Get in touch and Inkarp will put together a quote based on the sensor chemistry and flow configuration needed." },
+            { "question": "Who is the authorized distributor of P4PRO and AffiPump in India?", "answer": "Inkarp is the authorized distributor and service provider for the Affinité Instruments P4PRO and AffiPump in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get P4PRO and AffiPump in India from Inkarp",
+            "description": "Share the assay type and kinetic range expected, and the right P4PRO and AffiPump configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your assay type and kinetic range, then confirm the right P4PRO and AffiPump configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "assayType", "label": "Assay type (screening, full kinetics, or both)", "type": "text", "required": false },
+              { "key": "kineticRange", "label": "Expected kinetic range", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right P4PRO and AffiPump configuration", "body": "Share whether the work needs full kon/koff kinetics or fast static screening, or both, and the right P4PRO plus AffiPump configuration gets confirmed from there." },
+              { "title": "Confirm the right AffiPump configuration", "body": "Share how often the work shifts between screening and full kinetic studies, and the right AffiPump configuration gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Static screening and full flow kinetics. One instrument, no reconfiguring.",
+            "heroLead": "Most labs end up choosing between fast static screening and precise flow-based kinetics, then buying two instruments to get both. P4PRO paired with the AffiPump does both on one bench, switching between static and flow mode without swapping hardware or rebuilding the setup. Flow mode delivers full kinetic characterization, kon, koff, and KD, across a detection limit down to fM, while the same platform runs quick static screening when speed matters more than depth. Four simultaneous channels, semi-automated injection, and sample volumes as low as 5 µL in flow mode keep every run lean.",
+            "stats": [
+              { "value": "fM", "label": "Detection limit" },
+              { "value": "4", "label": "Simultaneous channels" },
+              { "value": "0.3 to 10,000 µL/min", "label": "Flow rate range" },
+              { "value": "10³ to 10⁷ M⁻¹s⁻¹", "label": "kon range" },
+              { "value": "10⁻⁵ to 10⁻¹ s⁻¹", "label": "koff range" },
+              { "value": "5 to 100 µL", "label": "Flow injection sample volume" },
+              { "value": "25 x 25 x 13.5 cm", "label": "Footprint" },
+              { "value": "Hybrid static + flow", "label": "No reconfiguration needed to switch modes" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "P4PRO and AffiPump product information: hybrid static/flow operation, kinetic range, and sensor compatibility.",
+                "body": [
+                  "P4PRO with AffiPump runs both static and flow-based SPR experiments on one instrument, switching modes without reconfiguring the setup.",
+                  "Detection limit reaches fM, assay dependent, with KD measurable down to pM and beyond.",
+                  "Flow mode unlocks full kinetic characterization: kon from 10³ to 10⁷ M⁻¹s⁻¹, koff from 10⁻⁵ to 10⁻¹ s⁻¹, and KD calculated directly from both.",
+                  "Four simultaneous channels run sample and controls together in one injection, whether in static or flow mode.",
+                  "Flow injection uses just 5 to 100 µL of sample, and static mode uses 300 µL, keeping precious sample material to a minimum either way.",
+                  "Semi-automated injection cuts hands-on time per run, and direct inline controls give real-time feedback during every measurement.",
+                  "Disposable, pre-characterized gold sensor chips eliminate cleaning and carry-over between runs, available in covalent and capture-based chemistries.",
+                  "The same sensors and Affilabs.core software run across both P4PRO and the simpler P4SPR 2.0, so a lab can standardize on one software platform regardless of which instrument handles a given assay."
+                ],
+                "cards": [
+                  { "title": "Hybrid static + flow", "description": "One instrument, both experiment types" },
+                  { "title": "fM detection limit", "description": "Captures weak and rare binding events" },
+                  { "title": "Full kon/koff/KD kinetics", "description": "Complete kinetic characterization in flow mode" },
+                  { "title": "Disposable sensors", "description": "No cleaning, no carry-over between runs" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Detection limit", "description": "fM (assay dependent)" },
+                  { "title": "Channels", "description": "4 simultaneous" },
+                  { "title": "Kinetic range", "description": "kon 10³-10⁷ M⁻¹s⁻¹, koff 10⁻⁵-10⁻¹ s⁻¹" },
+                  { "title": "Sample volume", "description": "5-100 µL (flow), 300 µL (static)" },
+                  { "title": "Footprint", "description": "25 x 25 x 13.5 cm" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "P4PRO and AffiPump applications: full kinetic characterization, drug discovery, and biomanufacturing QC."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "P4PRO and AffiPump technical specifications: detection limit, flow rate, kinetic range, and footprint."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Static and Flow, No Reconfiguration",
+                "title": "Static and Flow, No Reconfiguration",
+                "description": "Buying two instruments to cover fast screening and precise kinetics means paying twice and training twice. P4PRO with AffiPump collapses that into one system. Static mode handles quick yes-or-no binding questions and early assay development, the same role the standalone P4SPR 2.0 fills. Flow mode, enabled by the AffiPump, switches on when the study needs actual rate constants rather than just a binding signal, and the switch happens on the same hardware, not a separate setup. Semi-automated injection and direct inline controls carry through both modes, so the workflow stays consistent regardless of which mode is running.",
+                "cards": [
+                  { "title": "Fast screening without buying a second instrument", "description": "Static mode on the same platform as flow kinetics" },
+                  { "title": "Full kinetic data when a study calls for it", "description": "Flow mode via AffiPump, switchable without reconfiguration" },
+                  { "title": "One workflow across both experiment types", "description": "Shared injection and control system in both modes" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Full Kinetic Characterization",
+                "title": "Full Kinetic Characterization",
+                "description": "A binding signal alone tells you two molecules interact. kon, koff, and KD tell you how fast, how tightly, and whether that interaction holds up under real conditions, information static screening alone can't provide.",
+                "body": [
+                  "Flow mode measures association rate (kon) from 10³ to 10⁷ M⁻¹s⁻¹ and dissociation rate (koff) from 10⁻⁵ to 10⁻¹ s⁻¹, covering everything from fast, weak interactions to slow, tight ones.",
+                  "Real acquisition data from a Protein A and IgG interaction shows full association and dissociation curves with a global fit, the kind of dataset drug discovery and QC teams need to defend a result.",
+                  "Four channels keep that kinetic work efficient, running test conditions and controls together rather than in separate sequential runs."
+                ],
+                "utilityChecklist": [
+                  { "label": "Association and dissociation rate constants", "value": "Direct kon and koff measurement in flow mode" },
+                  { "label": "Confidence in binding affinity data", "value": "KD calculated from measured kon/koff, not estimated" },
+                  { "label": "Efficient parallel kinetic testing", "value": "4 channels running conditions and controls together" },
+                  { "label": "Low sample use during kinetic runs", "value": "5 to 100 µL flow injection volume" }
+                ],
+                "disclaimer": "Share the expected binding affinity range and sample availability, and the right flow rate and channel setup gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "P4PRO and AffiPump documentation: sensor catalog, software overview, and application notes.",
+                "cards": [
+                  { "title": "Sensor and Kit Catalog", "description": "Available on request" },
+                  { "title": "Affilabs.core Software Overview", "description": "Available on request" },
+                  { "title": "Kinetic Sensorgram Application Note", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get P4PRO and AffiPump in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Static screening and full flow-based kinetics on one bench, no reconfiguration needed to switch between them. Share the assay type and kinetic range expected, and the right P4PRO and AffiPump configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "P4SPR 2.0 (Surface Plasmon Resonance)",
+          "slug": "p4spr-surface-plasmon-resonance",
+          "principalImage": "/assets/images/PrincipalLogos/RowSeven/Affinite.webp",
+          "imageAlt": "Affinite Instruments P4SPR 2.0 (Surface Plasmon Resonance) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/p4spr-surface-plasmon-resonance",
+          "breadcrumbPath": "Home > Products > Compact Surface Plasmon Resonance (SPR) Systems > P4SPR 2.0 (Surface Plasmon Resonance)",
+          "h1": "P4SPR 2.0 (Surface Plasmon Resonance)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Flow-based SPR systems come with a real setup cost: fluidics to manage, clogging to worry about, a specialist to run it. P4SPR 2.0 skips all of it. It's a compact, laptop-powered, 4-channel biosensor built for researchers who need real binding data fast, without flow complexity standing in the way.",
+
+          "features": [
+            "Static SPR, No Fluidics: Runs without a pump, eliminating clogging risk entirely.",
+            "Four Simultaneous Channels: Runs sample and controls together in a single injection.",
+            "Laptop Powered: No dedicated power supply required, works anywhere a laptop does.",
+            "150 µL Sample Volume: Minimal sample consumption per injection.",
+            "Sub-10-Minute Run Cycles: Fast enough for iterative assay development and condition screening.",
+            "Ultra-Compact Footprint: 25 x 25 x 6 cm, fits easily on a shared bench.",
+            "Disposable, Pre-Characterized Sensors: Covalent and capture-based gold chip chemistries, no cleaning or carry-over.",
+            "Shared Software Platform: Runs the same Affilabs.core software as P4PRO, easing any future upgrade path."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Affinité Instruments P4SPR 2.0" },
+            { "label": "Category", "value": "Compact Surface Plasmon Resonance (SPR) Systems" },
+            { "label": "Detection Limit", "value": "fM (assay dependent)" },
+            { "label": "KD Range", "value": "≥ pM" },
+            { "label": "Channels", "value": "4 simultaneous" },
+            { "label": "Sample Volume", "value": "150 µL per injection" },
+            { "label": "Run Time per Cycle", "value": "≤ 10 minutes" },
+            { "label": "Footprint", "value": "25 x 25 x 6 cm" },
+            { "label": "Operating Mode", "value": "Static SPR, no pump or fluidics" },
+            { "label": "Power", "value": "Laptop powered, no dedicated supply" },
+            { "label": "Sensors", "value": "Disposable gold chips, covalent and capture-based chemistries" },
+            { "label": "Software", "value": "Affilabs.core, shared across the P4 platform" }
+          ],
+
+          "applications": [
+            "Academic Binding Screening: Fast, static SPR results without flow complexity",
+            "Assay and Method Development: Sub-10-minute cycles support rapid condition testing",
+            "Teaching Laboratories: Simple, pump-free operation suited to student use",
+            "Clinical Sample Testing: fM detection limit on minimal sample volume",
+            "Environmental Monitoring: Compact, laptop-powered format for varied testing settings"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Sensor Chemistry Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "No Fluidics" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What kind of lab environment will run this instrument?",
+            "description": "Select the setting and user experience level, and see how P4SPR 2.0 fits.",
+            "steps": [
+              {
+                "key": "labType",
+                "question": "What's the lab type?",
+                "options": [
+                  { "val": "academic", "label": "Academic research" },
+                  { "val": "teaching", "label": "Teaching lab" },
+                  { "val": "clinical", "label": "Clinical" },
+                  { "val": "environmental", "label": "Environmental testing" }
+                ]
+              },
+              {
+                "key": "userExperience",
+                "question": "What's the user experience level?",
+                "options": [
+                  { "val": "new", "label": "New to SPR" },
+                  { "val": "experienced", "label": "Experienced" }
+                ]
+              },
+              {
+                "key": "spaceConstraints",
+                "question": "What are the power/space constraints?",
+                "options": [
+                  { "val": "fixed-bench", "label": "Fixed bench" },
+                  { "val": "mobile-shared", "label": "Mobile/shared space" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a setting-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Which sensor surface fits the immobilization approach?",
+            "description": "Select the target molecule and coupling method, and see the recommended sensor chip.",
+            "fields": [
+              {
+                "key": "couplingType",
+                "label": "Coupling type",
+                "options": [
+                  { "val": "covalent", "label": "Covalent (EDC/NHS)" },
+                  { "val": "capture-based", "label": "Capture-based" }
+                ]
+              },
+              {
+                "key": "captureChemistry",
+                "label": "Capture chemistry",
+                "options": [
+                  { "val": "anti-his", "label": "Anti-His" },
+                  { "val": "nta", "label": "NTA" },
+                  { "val": "protein-ag", "label": "Protein A/G" },
+                  { "val": "streptavidin", "label": "Streptavidin" },
+                  { "val": "strep-tactin-xt", "label": "Strep-Tactin XT" },
+                  { "val": "anti-aavx", "label": "Anti-AAVX" }
+                ]
+              },
+              {
+                "key": "targetMolecule",
+                "label": "Target molecule",
+                "options": [
+                  { "val": "protein", "label": "Protein" },
+                  { "val": "antibody", "label": "Antibody" },
+                  { "val": "small-molecule", "label": "Small molecule" },
+                  { "val": "viral-vector", "label": "Viral vector" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Sensor Chemistries Are Available?",
+                "body": "Covalent surfaces like carboxyl, CMD, and AffiCoat for EDC/NHS coupling, plus capture-based surfaces including Anti-His, NTA, Protein A/G, Streptavidin, Strep-Tactin XT, and Anti-AAVX.",
+                "tags": ["Disposable, Pre-Characterized Sensors"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "P4SPR 2.0 vs. P4PRO + AffiPump",
+            "description": "P4SPR 2.0 method comparison: static-only P4SPR 2.0 versus hybrid P4PRO with AffiPump.",
+            "columns": [
+              { "label": "P4SPR 2.0" },
+              { "label": "P4PRO + AffiPump" }
+            ],
+            "rows": [
+              { "feature": "Operating Modes", "values": ["Static only", "Static and flow, hybrid"] },
+              { "feature": "Channels", "values": ["4", "4"] },
+              { "feature": "Detection Limit", "values": ["fM (assay dependent)", "fM (assay dependent)"] },
+              { "feature": "kon / koff Measurement", "values": ["No", "Yes"] },
+              { "feature": "Sample Volume", "values": ["150 µL", "5-100 µL (flow) / 300 µL (static)"] },
+              { "feature": "Run Time per Cycle", "values": ["Under 10 minutes", "2-15 minutes"] },
+              { "feature": "Power", "values": ["Laptop powered", "Standard supply"] },
+              { "feature": "Best For", "values": ["Screening, yes/no binding, assay development", "Full kinetic characterization, drug discovery, QC"] }
+            ],
+            "disclaimer": "Both instruments run the same disposable sensors and Affilabs.core software. The difference is whether flow-based kinetics is part of the workflow."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "P4SPR 2.0 industries: academic research, teaching institutions, clinical diagnostics, and environmental monitoring.",
+            "industries": [
+              { "name": "Academic Research Labs", "useCase": "Binding screening and assay development", "consideration": "Fast cycles support high-iteration research schedules" },
+              { "name": "Teaching and Training Institutions", "useCase": "Hands-on SPR instruction", "consideration": "Simple static workflow suited to student operation" },
+              { "name": "Clinical Diagnostics", "useCase": "Rapid binding-based testing", "consideration": "fM detection limit on minimal sample volume" },
+              { "name": "Environmental Testing", "useCase": "Field-adjacent or mobile testing setups", "consideration": "Laptop-powered, compact footprint for varied locations" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows static SPR workflow and sensitivity on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms sensor chemistry and workflow setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with Affilabs.core software and manual workflow" },
+              { "title": "Preventive Maintenance", "description": "Maintains sensor connections and instrument performance" },
+              { "title": "Spares and Accessories", "description": "Supplies sensor chips, reagent kits, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is P4SPR 2.0 used for?", "answer": "It's a compact, static SPR biosensor for real-time, label-free binding data, built for method development, teaching, and screening without flow-based complexity." },
+            { "question": "How is P4SPR 2.0 different from P4PRO?", "answer": "P4SPR 2.0 runs static mode only, while P4PRO adds flow mode via the AffiPump for full kon/koff kinetic measurement on the same platform." },
+            { "question": "Does P4SPR 2.0 need a pump or fluidics?", "answer": "No, it runs entirely static, with no pump, no fluidics, and no clogging risk." },
+            { "question": "How long does one run cycle take?", "answer": "10 minutes or less, supporting fast iterative assay development and condition screening." },
+            { "question": "How much sample does each injection require?", "answer": "150 µL per injection." },
+            { "question": "Can P4SPR 2.0 run without a dedicated power supply?", "answer": "Yes, it's laptop powered and works wherever the laptop does, no separate power setup required." },
+            { "question": "What sensor chemistries are available?", "answer": "Covalent surfaces like carboxyl, CMD, and AffiCoat for EDC/NHS coupling, plus capture-based surfaces including Anti-His, NTA, Protein A/G, Streptavidin, Strep-Tactin XT, and Anti-AAVX." },
+            { "question": "Do sensors need cleaning between runs?", "answer": "No, sensors are disposable and pre-characterized, eliminating cleaning and carry-over entirely." },
+            { "question": "Can I upgrade to flow-based kinetics later?", "answer": "Yes, P4SPR 2.0 shares sensors and Affilabs.core software with the flow-capable P4PRO, easing any future move to kinetic characterization." },
+            { "question": "What is the price of P4SPR 2.0 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the sensor chemistry and workflow setup needed." },
+            { "question": "Who is the authorized distributor of P4SPR 2.0 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Affinité Instruments P4SPR 2.0 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get P4SPR 2.0 in India from Inkarp",
+            "description": "Share the assay type and sample volume, and the right P4SPR 2.0 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your assay type and sample volume, then confirm the right P4SPR 2.0 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "assayType", "label": "Assay type", "type": "text", "required": false },
+              { "key": "sampleVolume", "label": "Samples run per week", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right sensor chemistry and workflow", "body": "Share the assay type and how many samples run per week, and the right sensor chemistry and workflow setup gets confirmed from there." },
+              { "title": "Confirm the right training and workflow setup", "body": "Share who on the team will be running the instrument day to day, and the right training and workflow setup gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Real-time SPR. No pump, no fluidics, no clogging risk. Running in under an hour.",
+            "heroLead": "Flow-based SPR systems come with a real setup cost: fluidics to manage, clogging to worry about, a specialist to run it. P4SPR 2.0 skips all of it. It's a compact, laptop-powered, 4-channel biosensor built for researchers who need real binding data fast, without flow complexity standing in the way. Detection reaches fM, KD measures down to pM and beyond, and a full cycle runs in under 10 minutes on just 150 µL of sample. No dedicated power supply, no bench space commitment, works wherever the laptop goes.",
+            "stats": [
+              { "value": "fM", "label": "Detection limit" },
+              { "value": "≥ pM", "label": "KD range" },
+              { "value": "4", "label": "Simultaneous channels" },
+              { "value": "150 µL", "label": "Sample volume per injection" },
+              { "value": "≤ 10 min", "label": "Run time per cycle" },
+              { "value": "25 x 25 x 6 cm", "label": "Footprint" },
+              { "value": "Laptop powered", "label": "No dedicated power supply needed" },
+              { "value": "100+", "label": "Peer-reviewed publications citing the platform" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "P4SPR 2.0 product information: static SPR operation, sensitivity specs, and sensor compatibility.",
+                "body": [
+                  "P4SPR 2.0 runs static SPR, capturing sample and controls together in one injection across four simultaneous channels, with no pump or fluidics involved.",
+                  "Detection limit reaches fM, assay dependent, with KD measurable down to pM.",
+                  "Sample volume per injection is 150 µL, keeping material use low even across repeated screening runs.",
+                  "A full cycle completes in 10 minutes or less, fast enough for iterative assay development and condition screening without long waits between results.",
+                  "The instrument is laptop powered, with no dedicated power supply required, so it runs wherever the laptop does.",
+                  "A compact 25 x 25 x 6 cm footprint fits on a shared bench without dominating it.",
+                  "Disposable, pre-characterized gold sensor chips eliminate cleaning and carry-over, available in covalent and capture-based chemistries.",
+                  "The platform has 100+ peer-reviewed publications behind it, used across 12 countries and 10+ disease areas including drug discovery, oncology, infectious disease, therapeutic drug monitoring, and biomanufacturing QC.",
+                  "The same sensors and Affilabs.core software run across both P4SPR 2.0 and the flow-capable P4PRO, so a lab can add flow kinetics later without retraining on new software."
+                ],
+                "cards": [
+                  { "title": "fM detection limit", "description": "Captures weak and rare binding events" },
+                  { "title": "No pump, no fluidics", "description": "Zero clogging risk, simpler upkeep" },
+                  { "title": "Under 10-minute cycles", "description": "Fast iterative screening and development" },
+                  { "title": "Laptop powered", "description": "Runs anywhere, no dedicated power setup" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Detection limit", "description": "fM (assay dependent)" },
+                  { "title": "Channels", "description": "4 simultaneous" },
+                  { "title": "Sample volume", "description": "150 µL per injection" },
+                  { "title": "Run time", "description": "Under 10 minutes per cycle" },
+                  { "title": "Footprint", "description": "25 x 25 x 6 cm" },
+                  { "title": "Power", "description": "Laptop powered, no dedicated supply" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "P4SPR 2.0 applications: academic screening, method development, teaching labs, and clinical and environmental testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "P4SPR 2.0 technical specifications: detection limit, sample volume, and footprint."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Static SPR, No Fluidics to Manage",
+                "title": "Static SPR, No Fluidics to Manage",
+                "description": "Every pump and tubing line in a flow-based SPR system is one more thing that can clog, wear out, or need cleaning between runs. P4SPR 2.0 removes that entire category of failure by running static, not flow. The workflow follows three simple steps: manual injection, ELISA-like incubation, and manual wash, familiar territory for anyone who's run an ELISA before. Without fluidics, there's no clogging risk and no pump maintenance to schedule, just the instrument, the sensor, and the sample.",
+                "cards": [
+                  { "title": "Simple operation without a fluidics specialist", "description": "Static SPR, manual injection and wash" },
+                  { "title": "Zero clogging risk during routine use", "description": "No pump, no tubing lines" },
+                  { "title": "Familiar workflow for non-specialist users", "description": "ELISA-like incubation step" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Fast Enough for Real Screening Work",
+                "title": "Fast Enough for Real Screening Work",
+                "description": "Method development lives or dies on iteration speed. A cycle that takes an hour limits how many conditions actually get tested in a day; a cycle under 10 minutes changes that math entirely.",
+                "body": [
+                  "Four channels mean sample and controls run together in one injection, so a single cycle delivers a complete, controlled result rather than a partial one needing a follow-up run.",
+                  "150 µL of sample per injection keeps that speed from costing precious material, useful when the compound or biological sample in question isn't easy to replace.",
+                  "A platform with 100+ peer-reviewed publications behind it, spanning 12 countries and 10+ disease areas, backs that speed with a real track record across drug discovery, oncology, infectious disease, TDM, and biomanufacturing QC."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fast iteration during assay development", "value": "Sub-10-minute cycles" },
+                  { "label": "Complete, controlled results per run", "value": "4 channels, sample and controls together" },
+                  { "label": "Low sample burn during screening", "value": "150 µL per injection" },
+                  { "label": "Confidence backed by independent research", "value": "100+ peer-reviewed publications, 12 countries" }
+                ],
+                "disclaimer": "Share how many conditions or samples typically need screening per project, and the right channel and sensor setup gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "P4SPR 2.0 documentation: sensor catalog, software overview, and application notes.",
+                "cards": [
+                  { "title": "Sensor and Kit Catalog", "description": "Available on request" },
+                  { "title": "Affilabs.core Software Overview", "description": "Available on request" },
+                  { "title": "Workflow Application Note", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get P4SPR 2.0 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Real-time SPR with no pump, no fluidics, and no clogging risk, running full cycles in under 10 minutes. Share the assay type and sample volume, and the right P4SPR 2.0 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

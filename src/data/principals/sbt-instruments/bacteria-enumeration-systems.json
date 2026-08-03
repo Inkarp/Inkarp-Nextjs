@@ -1,0 +1,319 @@
+{
+  "principal": {
+    "slug": "sbt-instruments",
+    "principalName": "SBT Instruments",
+    "countryOfOrigin": "Denmark"
+  },
+  "categories": [
+    {
+      "name": "Bacteria Enumeration Systems",
+      "slug": "bacteria-enumeration-systems",
+      "products": [
+        {
+          "name": "BactoBox® Bacteria Enumeration System",
+          "slug": "bactobox-bacteria-enumeration-system",
+          "principalImage": "/assets/images/PrincipalLogos/RowSeven/SBT-Instruments.svg",
+          "imageAlt": "SBT Instruments BactoBox® Bacteria Enumeration System - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/bactobox-bacteria-enumeration-system",
+          "breadcrumbPath": "Home > Products > Bacteria Enumeration Systems > BactoBox® Bacteria Enumeration System",
+          "h1": "BactoBox® Bacteria Enumeration System",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Absorbance and turbidity readings estimate bacterial concentration. BactoBox counts the actual cells.",
+
+          "features": [
+            "Electrical Impedance Flow Cytometry: Counts individual bacterial cells directly as they pass through a microfluidic channel.",
+            "~2-Minute Measurement Time: Delivers a result fast enough to build real-time growth curves.",
+            "No Reagents, Staining, or Incubation: Simplifies sample preparation to dilution alone.",
+            "Live Growth Curve Visualization: Plots actual cell concentration over time as measurements are taken.",
+            "Certain Growth Phase Identification: Distinguishes lag, exponential, and stationary phases directly from cell count data.",
+            "Process Comparison Overlay: Compares strains, media, or conditions side by side within the same view.",
+            "Export-Ready Data: Downloads directly for further analysis in your preferred tools.",
+            "Compact Benchtop Form Factor: Fits directly into a process development lab at 23 x 16 x 6 cm."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "SBT Instruments BactoBox Bacteria Enumeration System" },
+            { "label": "Category", "value": "Bacteria Enumeration / Microbial Analysis" },
+            { "label": "Measurement Principle", "value": "Electrical impedance flow cytometry" },
+            { "label": "Target Organisms", "value": "Bacterial cells in suspension" },
+            { "label": "Measurement Time", "value": "~2 minutes per sample" },
+            { "label": "Sample Preparation", "value": "Dilution required; homogenization protocols provided for aggregated samples" },
+            { "label": "Linear Quantification Range", "value": "3 x 10⁴ to 5 x 10⁶ cells/mL" },
+            { "label": "Output Parameters", "value": "Cell concentration, cell size" },
+            { "label": "Form Factor", "value": "Benchtop instrument" },
+            { "label": "Dimensions (W x D x H)", "value": "23 x 16 x 6 cm (9.1 x 6.3 x 2.4 in)" },
+            { "label": "Software", "value": "Included, visualization, growth curves, data export" }
+          ],
+
+          "applications": [
+            "Strain Performance Comparison: Overlays growth curves from different strains for direct comparison",
+            "Culture Media Optimization: Compares growth kinetics across media formulations side by side",
+            "Bioprocess Development: Real-time cell concentration data supports process parameter tuning",
+            "Fermentation Monitoring: Fast, repeatable measurements track growth phases as a batch progresses",
+            "Quality Control in Microbial Production: Direct cell counts confirm culture health without indirect proxies"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Workflow Fit Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "benefits", "label": "How It Works" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What concentration range are you working with?",
+            "description": "Enter your typical culture concentration, and confirm fit with BactoBox.",
+            "steps": [
+              {
+                "key": "concentrationRange",
+                "question": "What concentration range are you working with?",
+                "options": [
+                  { "val": "below-range", "label": "Below 3 x 10⁴ cells/mL" },
+                  { "val": "within-range", "label": "Within 3 x 10⁴ to 5 x 10⁶ cells/mL" },
+                  { "val": "above-range", "label": "Above 5 x 10⁶ cells/mL" }
+                ]
+              },
+              {
+                "key": "sampleAggregation",
+                "question": "Do samples tend to arrive aggregated?",
+                "options": [
+                  { "val": "yes", "label": "Yes, homogenization needed" },
+                  { "val": "no", "label": "No" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "How does your lab currently monitor bacterial growth?",
+            "description": "Select your current method and sampling frequency, and see how BactoBox fits.",
+            "fields": [
+              {
+                "key": "currentMethod",
+                "label": "Current method",
+                "options": [
+                  { "val": "absorbance", "label": "Absorbance" },
+                  { "val": "plate-counts", "label": "Plate counts" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "samplingFrequency",
+                "label": "Sampling frequency",
+                "options": [
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "frequent", "label": "Frequent, real-time monitoring" }
+                ]
+              },
+              {
+                "key": "comparisonNeed",
+                "label": "Comparison need",
+                "options": [
+                  { "val": "single-culture", "label": "Single culture" },
+                  { "val": "multi-condition", "label": "Multi-condition comparison" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "How Does BactoBox Compare to Absorbance-Based Monitoring?",
+                "body": "A growth curve built from absorbance readings shows you a proxy signal changing over time. A growth curve built from BactoBox shows you the actual population.",
+                "tags": ["Live Growth Curve Visualization", "Process Comparison Overlay"]
+              }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Industries using BactoBox include bioprocess development, fermentation, and microbial quality control.",
+            "industries": [
+              { "name": "Industrial Biotechnology and Fermentation", "useCase": "Monitoring microbial growth during fermentation runs", "consideration": "Two-minute measurement time supports frequent, real-time sampling" },
+              { "name": "Probiotic and Food Microbiology", "useCase": "Verifying viable bacterial counts in production batches", "consideration": "Direct cell counts avoid absorbance-based inaccuracies" },
+              { "name": "Pharmaceutical Bioprocess Development", "useCase": "Optimizing culture media and process parameters", "consideration": "Process comparison overlay speeds up condition screening" },
+              { "name": "Water and Environmental Microbiology", "useCase": "Quantifying bacterial concentration in samples", "consideration": "Linear quantification range suits varied environmental sample loads" },
+              { "name": "Academic Microbiology Research", "useCase": "Teaching and studying bacterial growth kinetics", "consideration": "Live growth curve visualization makes phase identification straightforward for students" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows direct cell counting and live growth curves on your own culture" },
+              { "title": "Configuration Assessment", "description": "Confirms whether your concentration range and sample type fit BactoBox" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with dilution protocols and software use" },
+              { "title": "Preventive Maintenance", "description": "Maintains microfluidic channel and measurement performance" },
+              { "title": "Spares and Accessories", "description": "Supplies consumables and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is BactoBox used for?", "answer": "BactoBox is a benchtop impedance flow cytometer used to directly count bacterial cells and generate real growth kinetics, without reagents, staining, or incubation." },
+            { "question": "How long does a BactoBox measurement take?", "answer": "Each measurement takes approximately two minutes per sample." },
+            { "question": "Does BactoBox require reagents or staining?", "answer": "No, samples only need to be diluted into the working range before measurement; no reagents, staining, or incubation are required." },
+            { "question": "What concentration range can BactoBox measure?", "answer": "BactoBox has a linear quantification range of 3 x 10⁴ to 5 x 10⁶ cells/mL." },
+            { "question": "What does BactoBox actually measure?", "answer": "It measures cell concentration and cell size directly through electrical impedance as individual bacterial cells pass through a microfluidic channel." },
+            { "question": "Can I compare different strains or conditions with BactoBox?", "answer": "Yes, growth curves from different runs can be overlaid directly to compare strains, media, or conditions side by side." },
+            { "question": "Can BactoBox handle aggregated samples?", "answer": "Yes, homogenization protocols are provided for samples that arrive aggregated, ensuring accurate individual cell counting." },
+            { "question": "Can I export BactoBox data for further analysis?", "answer": "Yes, data downloads directly for use in your preferred analysis tools." },
+            { "question": "How big is the BactoBox instrument?", "answer": "It's a compact benchtop instrument measuring 23 x 16 x 6 cm (9.1 x 6.3 x 2.4 in)." },
+            { "question": "What is the price of BactoBox in India?", "answer": "The price depends on your configuration and accessory needs. Contact Inkarp for a quotation once your requirements are confirmed." },
+            { "question": "Who is the authorized distributor of BactoBox in India?", "answer": "Inkarp is the authorized distributor and service provider for the SBT Instruments BactoBox in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get BactoBox in India from Inkarp",
+            "description": "Share your typical culture concentration and monitoring needs, and the right BactoBox setup gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your culture concentration and monitoring needs, then confirm the right BactoBox setup.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "concentrationRange", "label": "Typical culture concentration range", "type": "text", "required": false },
+              { "key": "monitoringNeeds", "label": "Current monitoring method and needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right BactoBox configuration", "body": "Tell our team your typical bacterial concentration range and how often you sample during a run, and Inkarp will confirm whether BactoBox's quantification range fits your process." },
+              { "title": "Confirm the right sample prep approach", "body": "Tell our team about your typical culture type and whether samples tend to aggregate, and Inkarp will confirm the right sample prep approach." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Real growth curves from direct cell counts, in two minutes, no reagents required.",
+            "heroLead": "Absorbance and turbidity readings estimate bacterial concentration. BactoBox counts the actual cells. It's a benchtop impedance flow cytometer that electrically counts individual bacterial cells as they pass through a microfluidic channel, delivering true growth kinetics in around two minutes per sample. No staining, no reagents, and no incubation stand between your sample and a result, just actual cells per mL, feeding directly into a live growth curve you can use to identify lag, exponential, and stationary phases with certainty.",
+            "stats": [
+              { "value": "Electrical impedance flow cytometry", "label": "Measurement principle" },
+              { "value": "~2 minutes", "label": "Measurement time per sample" },
+              { "value": "3 x 10⁴ to 5 x 10⁶ cells/mL", "label": "Linear quantification range" },
+              { "value": "Cell concentration, cell size", "label": "Output parameters" },
+              { "value": "23 x 16 x 6 cm", "label": "Dimensions (W x D x H)" },
+              { "value": "Benchtop", "label": "Form factor" },
+              { "value": "Included", "label": "Visualization and growth curve software" },
+              { "value": "No reagents, staining, or incubation", "label": "Sample handling requirement" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "BactoBox product information: impedance measurement, growth curve visualization, and workflow fit.",
+                "body": [
+                  "BactoBox electrically counts individual bacterial cells as they pass through a microfluidic channel, rather than estimating concentration indirectly through absorbance or turbidity.",
+                  "A result comes back in around two minutes per sample, fast enough to build real growth curves from repeated direct measurements rather than sparse, delayed data points.",
+                  "The process runs in three steps: grab a sample, dilute it to fall within the working range, then insert it into BactoBox for a two-minute measurement.",
+                  "Every measurement feeds directly into a live growth curve, showing actual cell concentration over time, not absorbance units or turbidity estimates.",
+                  "Growth phases, lag, exponential, and stationary, become identifiable with certainty rather than inferred from indirect signal changes.",
+                  "Runs can be overlaid directly to compare strains, media, or conditions side by side within the same interface.",
+                  "Data exports for further analysis in your preferred tools, rather than staying locked inside the instrument's own software.",
+                  "The linear quantification range covers 3 x 10⁴ to 5 x 10⁶ cells/mL, with homogenization protocols provided for samples that arrive aggregated."
+                ],
+                "cards": [
+                  { "title": "~2 minutes per sample", "description": "Fast enough for real-time growth curves" },
+                  { "title": "Direct cell counts", "description": "Actual cells/mL, not absorbance estimates" },
+                  { "title": "No reagents, staining, or incubation", "description": "Simplified sample-to-result workflow" },
+                  { "title": "3 x 10⁴ to 5 x 10⁶ cells/mL", "description": "Linear quantification range" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "SBT Instruments BactoBox Bacteria Enumeration System" },
+                  { "title": "Measurement principle", "description": "Electrical impedance flow cytometry" },
+                  { "title": "Measurement time", "description": "~2 minutes per sample" },
+                  { "title": "Linear quantification range", "description": "3 x 10⁴ to 5 x 10⁶ cells/mL" },
+                  { "title": "Output parameters", "description": "Cell concentration, cell size" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "BactoBox key features: direct impedance counting, live growth curve visualization, and data export."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "BactoBox applications: strain comparison, media optimization, and bioprocess development."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "BactoBox technical specifications: measurement principle, quantification range, and form factor."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "How Impedance Flow Cytometry Works",
+                "title": "How Impedance Flow Cytometry Works",
+                "description": "Most bacterial concentration methods measure something correlated with cell count, like light absorbance, and infer the actual number from there. BactoBox measures the cells themselves. As bacterial cells pass individually through a microfluidic channel, they're counted electrically, based on the impedance each cell creates as it moves through. That's what makes the result a direct count rather than an inferred estimate. The full workflow takes three steps: sample your culture, dilute it to fall within BactoBox's working range, and insert it for a roughly two-minute measurement. Because the measurement is direct and fast, it's practical to sample repeatedly through a culture's growth, building an actual growth curve from real data points rather than a handful of widely spaced estimates.",
+                "cards": [
+                  { "title": "Accurate concentration without indirect proxies", "description": "Direct electrical counting of individual cells" },
+                  { "title": "Frequent sampling without a long turnaround", "description": "~2-minute measurement time" },
+                  { "title": "Simple sample prep", "description": "Dilution only, no reagents or staining" },
+                  { "title": "Reliable results from aggregated samples", "description": "Provided homogenization protocols" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Visualizing Real Growth Kinetics",
+                "title": "Visualizing Real Growth Kinetics",
+                "description": "A growth curve built from absorbance readings shows you a proxy signal changing over time. A growth curve built from BactoBox shows you the actual population.",
+                "body": [
+                  "Every measurement feeds directly into a live growth curve, plotting cell concentration in actual cells/mL rather than arbitrary absorbance units. That distinction matters directly for identifying lag, exponential, and stationary phases with certainty, since you're reading the real population dynamics rather than inferring them through an indirect signal. Runs can be overlaid to compare strains, media formulations, or process conditions side by side, and the underlying data exports cleanly for further analysis in whatever tools your team already uses."
+                ],
+                "utilityChecklist": [
+                  { "label": "Certainty about which growth phase a culture is in", "value": "Direct, real-time cell concentration data" },
+                  { "label": "Comparing conditions without re-running separately", "value": "Process comparison overlay across runs" },
+                  { "label": "Flexibility in downstream data analysis", "value": "Export-ready data in your preferred format" },
+                  { "label": "A visual, shareable record of growth kinetics", "value": "Live growth curve visualization built into the software" }
+                ],
+                "disclaimer": "Tell our team how your team currently visualizes or shares growth data, and Inkarp will confirm how BactoBox's export options fit that workflow."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for BactoBox is available on request.",
+                "cards": [
+                  { "title": "BactoBox Specification Sheet", "description": "Available on request" },
+                  { "title": "Homogenization Protocol Guide", "description": "Available on request" },
+                  { "title": "Software and Data Export Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get BactoBox in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Real growth curves from direct cell counts, in about two minutes per sample, no reagents required. Tell us your typical culture concentration and monitoring needs, and Inkarp will confirm the right BactoBox setup.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

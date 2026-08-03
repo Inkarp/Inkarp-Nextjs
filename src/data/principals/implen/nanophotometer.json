@@ -1,0 +1,1770 @@
+{
+  "principal": {
+    "slug": "implen",
+    "principalName": "Implen",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "NanoPhotometer",
+      "slug": "nanophotometer",
+      "products": [
+        {
+          "name": "NanoPhotometer® N120",
+          "slug": "nanophotometer-n120",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
+          "imageAlt": "Implen NanoPhotometer® N120 - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/nanophotometer-n120",
+          "breadcrumbPath": "Home > Products > NanoPhotometer > NanoPhotometer® N120",
+          "h1": "NanoPhotometer® N120",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Diluting a precious sample just to fit a spectrophotometer's minimum volume wastes material and introduces error before the measurement even starts. NanoPhotometer N120 skips that step entirely, reading sub-microlitre samples directly across a full 200 to 900 nm scan range.",
+
+          "features": [
+            "12-Channel Simultaneous Scanning: Completes a full run across 12 samples in just 20 seconds.",
+            "Broad Detection Range: dsDNA from 2 to 8,000 ng/µl, BSA from 0.06 to 230 mg/ml.",
+            "Built-In Web Application Server with REST API: Enables standalone operation or remote control across major platforms.",
+            "Cross-Platform Remote Operation: Controlled from Windows, Mac, Android, or iOS devices.",
+            "Portable, Compact Footprint: Just 20 x 20 x 12 cm, with an optional battery for field use.",
+            "GMP, GLP, GxP Ready: 21 CFR Part 11 compliant, with an IQOQ option available.",
+            "5-Star Customer Support: Live application support available 24 hours a day, 5 days a week.",
+            "Preprogrammed Application Library: Covers nucleic acids, proteins, OD600, protein assays, and full UV-Vis spectroscopy."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Implen NanoPhotometer® N120" },
+            { "label": "Category", "value": "NanoPhotometer, Microvolume UV/Vis Spectrophotometer" },
+            { "label": "Channels", "value": "12" },
+            { "label": "Run Time", "value": "20 seconds per full run" },
+            { "label": "Scan Range", "value": "200 to 900 nm" },
+            { "label": "dsDNA Detection Range", "value": "2 to 8,000 ng/µl" },
+            { "label": "BSA Detection Range", "value": "0.06 to 230 mg/ml" },
+            { "label": "Connectivity", "value": "Built-in web application server, REST API" },
+            { "label": "Operating Platforms", "value": "Standalone, Windows, Mac, Android, iOS" },
+            { "label": "Footprint", "value": "20 x 20 x 12 cm" },
+            { "label": "Power", "value": "Standard, with optional battery" },
+            { "label": "Compliance", "value": "GMP, GLP, GxP ready, 21 CFR Part 11, IQOQ option" },
+            { "label": "Support", "value": "Live application support, 24/5" }
+          ],
+
+          "applications": [
+            "Nucleic Acid Quantification: 260/280 and 260/230 QC ratios for DNA, RNA, mRNA, and oligos",
+            "Protein Quantification: Protein UV with 260/280 QC ratio",
+            "Fluorescent Dye-Labeled Sample Analysis: Absorbance-based measurement of labeled nucleic acids and proteins",
+            "Contaminant Screening: Potential contaminant identification built into the workflow",
+            "Cell Culture and Assay Work: OD600, Bradford, BCA, Biuret protein assays, and kinetics in a drop",
+            "General UV-Vis Spectroscopy: Wavelength scanning, wavescan, standard curve, concentration, and absorbance ratio"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Remote & Compliance" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "No Dilution" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Does the sample fall within N120's direct-read range?",
+            "description": "Select the sample type and expected concentration, and see if dilution is needed.",
+            "steps": [
+              {
+                "key": "sampleType",
+                "question": "What's the sample type?",
+                "options": [
+                  { "val": "dsdna", "label": "dsDNA" },
+                  { "val": "protein", "label": "Protein (BSA-equivalent)" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "expectedConcentration",
+                "question": "What's the expected concentration?",
+                "options": [
+                  { "val": "weak", "label": "Weak / low concentration" },
+                  { "val": "moderate", "label": "Moderate concentration" },
+                  { "val": "highly-concentrated", "label": "Highly concentrated" }
+                ]
+              },
+              {
+                "key": "measurementNeed",
+                "question": "What's the measurement need?",
+                "options": [
+                  { "val": "quantification-only", "label": "Quantification only" },
+                  { "val": "qc-ratio", "label": "QC ratio (260/280, 260/230)" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to an application-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need remote operation or regulatory documentation?",
+            "description": "Select the lab's setup and compliance requirements, and see the recommended configuration.",
+            "fields": [
+              {
+                "key": "operationMode",
+                "label": "Operation mode",
+                "options": [
+                  { "val": "standalone", "label": "Standalone" },
+                  { "val": "remote", "label": "Remote" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "platform",
+                "label": "Platform",
+                "options": [
+                  { "val": "windows", "label": "Windows" },
+                  { "val": "mac", "label": "Mac" },
+                  { "val": "android", "label": "Android" },
+                  { "val": "ios", "label": "iOS" }
+                ]
+              },
+              {
+                "key": "complianceRequirement",
+                "label": "Compliance requirement",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "gmp-glp-gxp", "label": "GMP/GLP/GxP" },
+                  { "val": "21-cfr-part-11", "label": "21 CFR Part 11 with IQOQ" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "How Does N120 Support Remote Access and Compliance?",
+                "body": "Regulated environments get built-in support too: GMP, GLP, and GxP readiness, 21 CFR Part 11 compliance, and an available IQOQ option mean documentation and audit needs are addressed from day one, not bolted on afterward.",
+                "tags": ["Built-In Web Application Server with REST API", "GMP, GLP, GxP Ready"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "N120 vs. NP80 vs. N60/N50",
+            "description": "NanoPhotometer N120 comparison: N120 versus NP80 versus N60/N50 configurations.",
+            "columns": [
+              { "label": "N120" },
+              { "label": "NP80" },
+              { "label": "N60/N50" }
+            ],
+            "rows": [
+              { "feature": "Channels", "values": ["12", "Single sample", "Single sample"] },
+              { "feature": "Run Time", "values": ["20 seconds (full 12-channel run)", "Per-sample", "Per-sample"] },
+              { "feature": "Best For", "values": ["High-throughput, multi-sample batches", "Standard bench quantification", "Entry-level quantification needs"] },
+              { "feature": "Choose When", "values": ["Many samples need processing in parallel", "One sample at a time is sufficient", "Budget or simplicity matters most"] }
+            ],
+            "disclaimer": "All models share the same dilution-free, microvolume reading principle. The difference is channel count and throughput."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NanoPhotometer N120 industries: molecular biology research, pharmaceutical QC, genomics, and academic core facilities.",
+            "industries": [
+              { "name": "Molecular Biology Research", "useCase": "Nucleic acid quantification and purity QC", "consideration": "260/280 and 260/230 ratios built into the workflow" },
+              { "name": "Pharmaceutical QC", "useCase": "Protein and nucleic acid batch testing", "consideration": "21 CFR Part 11 compliance and IQOQ option for audit readiness" },
+              { "name": "Genomics and Sequencing Labs", "useCase": "High-throughput sample prep quality checks", "consideration": "12-channel, 20-second runs support batch processing" },
+              { "name": "Academic Core Facilities", "useCase": "Shared instrument access across research groups", "consideration": "Remote operation via REST API across multiple platforms" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows 12-channel measurement and remote access on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms channel, compliance, and connectivity setup for the lab" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with preprogrammed applications and remote control" },
+              { "title": "Preventive Maintenance", "description": "Maintains optical and channel performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement parts and battery components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NanoPhotometer N120 used for?", "answer": "It's a 12-channel microvolume UV/Vis spectrophotometer for quantifying nucleic acids and proteins from sub-microlitre samples without dilution." },
+            { "question": "How many samples can it measure at once?", "answer": "Twelve, with a full run completing in 20 seconds across the 200 to 900 nm scan range." },
+            { "question": "Does the sample need to be diluted before measurement?", "answer": "No, the N120 reads sub-microlitre samples directly across a broad detection range." },
+            { "question": "What concentration ranges does it detect?", "answer": "dsDNA from 2 to 8,000 ng/µl, and BSA from 0.06 to 230 mg/ml." },
+            { "question": "Can the instrument be operated remotely?", "answer": "Yes, a built-in web application server with REST API enables standalone or remote operation from Windows, Mac, Android, or iOS devices." },
+            { "question": "Is the N120 suitable for regulated lab environments?", "answer": "Yes, it's built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available." },
+            { "question": "Can it be used outside a standard lab bench?", "answer": "Yes, its compact 20 x 20 x 12 cm footprint and optional battery support use in a glove box, under a fume hood, or in the field." },
+            { "question": "What preprogrammed applications are included?", "answer": "Nucleic acid quantification with QC ratios, protein UV analysis, fluorescent dye-labeled sample measurement, contaminant identification, OD600, protein assays, and general UV-Vis spectroscopy tools." },
+            { "question": "What support is available if something goes wrong?", "answer": "Live application support is available 24 hours a day, 5 days a week." },
+            { "question": "What is the price of the NanoPhotometer N120 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the channel and compliance configuration needed." },
+            { "question": "Who is the authorized distributor of the NanoPhotometer N120 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Implen NanoPhotometer N120 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NanoPhotometer N120 in India from Inkarp",
+            "description": "Share the sample types and compliance needs, and the right N120 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample types and compliance needs, then confirm the right N120 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleType", "label": "Sample type (nucleic acid or protein)", "type": "text", "required": false },
+              { "key": "complianceNeeds", "label": "Remote access / compliance needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right N120 configuration", "body": "Share the typical sample type, nucleic acid or protein, and whether remote or field operation matters for the lab, and the right N120 configuration gets confirmed from there." },
+              { "title": "Confirm the sample fits N120's direct-read window", "body": "Share the typical sample concentration range expected in the lab, and confirmation on whether it falls within N120's direct-read window comes back directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "12 channels. 20 seconds. Zero dilution.",
+            "heroLead": "Diluting a precious sample just to fit a spectrophotometer's minimum volume wastes material and introduces error before the measurement even starts. NanoPhotometer N120 skips that step entirely, reading sub-microlitre samples directly across a full 200 to 900 nm scan range. Twelve channels run a complete cycle in just 20 seconds, covering dsDNA from 2 to 8,000 ng/µl and BSA from 0.06 to 230 mg/ml in the same session. A built-in web application server with REST API means the instrument runs standalone or gets controlled remotely from Windows, Mac, Android, or iOS, and a 20 x 20 x 12 cm footprint with an optional battery lets it go wherever the work happens, glove box, fume hood, or field site.",
+            "stats": [
+              { "value": "12 channels", "label": "Simultaneous microvolume measurement" },
+              { "value": "20 seconds", "label": "Time per full run" },
+              { "value": "200 to 900 nm", "label": "Scan range" },
+              { "value": "2 to 8,000 ng/µl", "label": "dsDNA detection range" },
+              { "value": "0.06 to 230 mg/ml", "label": "BSA detection range" },
+              { "value": "20 x 20 x 12 cm", "label": "Footprint" },
+              { "value": "REST API", "label": "Built-in web application server" },
+              { "value": "21 CFR Part 11-ready", "label": "GMP, GLP, GxP compliant, IQOQ option" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NanoPhotometer N120 product information: channel throughput, detection range, and remote operation.",
+                "body": [
+                  "Twelve channels run a complete measurement cycle in 20 seconds, scanning the full 200 to 900 nm range without needing to dilute the sample first.",
+                  "dsDNA reads from 2 to 8,000 ng/µl and BSA from 0.06 to 230 mg/ml, covering a broad concentration span in a single instrument.",
+                  "A built-in web application server with REST API lets the instrument run standalone or get operated remotely from Windows, Mac, Android, or iOS devices.",
+                  "A compact 20 x 20 x 12 cm footprint, with an optional battery, means the unit moves easily between a glove box, fume hood, open bench, or field location.",
+                  "Preprogrammed applications cover nucleic acid quantification (DNA, RNA, mRNA, oligos) with 260/280 and 260/230 QC ratios, protein UV with 260/280 QC ratio, fluorescent dye-labeled nucleic acid and protein measurement via absorbance, and potential contaminant identification.",
+                  "Additional life science applications include OD600, protein assays (Bradford, BCA, Biuret), and kinetics measured directly in a drop.",
+                  "UV-Vis spectroscopy applications extend to wavelength scanning with a formula editor, wavescan, standard curve generation, concentration calculation, and absorbance ratio analysis.",
+                  "The system is built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available.",
+                  "Live application support runs 24 hours a day, 5 days a week."
+                ],
+                "cards": [
+                  { "title": "12-channel, 20-second runs", "description": "High throughput without sacrificing speed" },
+                  { "title": "No dilution required", "description": "Reads sub-microlitre samples directly" },
+                  { "title": "REST API, cross-platform control", "description": "Runs standalone or fully remote" },
+                  { "title": "21 CFR Part 11-ready", "description": "Built for regulated lab environments" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Channels", "description": "12" },
+                  { "title": "Run time", "description": "20 seconds per full cycle" },
+                  { "title": "Scan range", "description": "200 to 900 nm" },
+                  { "title": "dsDNA range", "description": "2 to 8,000 ng/µl" },
+                  { "title": "BSA range", "description": "0.06 to 230 mg/ml" },
+                  { "title": "Footprint", "description": "20 x 20 x 12 cm, battery option available" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "NanoPhotometer N120 key features: multi-channel scanning, remote access, portability, compliance."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NanoPhotometer N120 applications: nucleic acid quantification, protein analysis, dye-labeled sample measurement, and general UV-Vis spectroscopy."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NanoPhotometer N120 technical specifications: channels, scan range, detection range, and footprint."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "No Dilution, No Waiting",
+                "title": "No Dilution, No Waiting",
+                "description": "Manual dilution costs time and introduces a real source of error before a sample even reaches the instrument. NanoPhotometer N120 reads sub-microlitre volumes directly, so that step disappears entirely. A broad detection range, dsDNA from 2 to 8,000 ng/µl and BSA from 0.06 to 230 mg/ml, means most samples fall within a single measurable window without needing a dilution series to bring them into range. Twelve channels finish a full run in 20 seconds, turning what would be a sequential, one-sample-at-a-time process into a genuinely parallel one.",
+                "cards": [
+                  { "title": "No dilution errors before measurement", "description": "Direct sub-microlitre reading" },
+                  { "title": "Confidence across a wide concentration range", "description": "dsDNA and BSA ranges covering weak to highly concentrated samples" },
+                  { "title": "Fast turnaround on batches of samples", "description": "12-channel, 20-second full run" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Remote Access and Lab Compliance",
+                "title": "Remote Access and Lab Compliance",
+                "description": "A spectrophotometer tied to one bench limits who can use it and when. The built-in REST API and web application server let N120 run standalone or get accessed remotely, from Windows, Mac, Android, or iOS, without being tied to a single workstation.",
+                "body": [
+                  "That same flexibility supports effortless integration into any LIMS system, keeping data flowing into existing lab infrastructure rather than sitting isolated on the instrument.",
+                  "Regulated environments get built-in support too: GMP, GLP, and GxP readiness, 21 CFR Part 11 compliance, and an available IQOQ option mean documentation and audit needs are addressed from day one, not bolted on afterward. Live application support, available 24 hours a day, 5 days a week, backs all of this with real expert access whenever a question comes up."
+                ],
+                "utilityChecklist": [
+                  { "label": "Access to instrument data from anywhere", "value": "REST API and cross-platform remote operation" },
+                  { "label": "Smooth integration with existing lab systems", "value": "Built-in web application server, LIMS-compatible" },
+                  { "label": "Regulatory-ready documentation", "value": "21 CFR Part 11 compliance, IQOQ option" },
+                  { "label": "Expert help whenever it's needed", "value": "Live application support, 24/5" }
+                ],
+                "disclaimer": "Share the lab's LIMS setup and any regulatory documentation requirements, and the right compliance configuration gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NanoPhotometer N120 documentation: instrument comparison, demo booking, and quote requests.",
+                "cards": [
+                  { "title": "Compare Instruments Guide", "description": "Available on request" },
+                  { "title": "NanoPhotometer N120 Technical Datasheet", "description": "Available on request" },
+                  { "title": "Demo Booking", "description": "Available directly" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NanoPhotometer N120 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Twelve channels, 20-second runs, and zero dilution needed, ready for the bench, the glove box, or the field. Share the sample types and compliance needs, and the right N120 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "NanoPhotometer® NP80",
+          "slug": "nanophotometer-np80",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
+          "imageAlt": "Implen NanoPhotometer® NP80 - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/nanophotometer-np80",
+          "breadcrumbPath": "Home > Products > NanoPhotometer > NanoPhotometer® NP80",
+          "h1": "NanoPhotometer® NP80",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "A sub-microlitre sample and a full cuvette-based OD600 reading usually need two different instruments. NP80 runs both from a single device, starting measurement at just 0.3 µl and switching to cuvette mode when the assay calls for it.",
+
+          "features": [
+            "Microvolume Measurement from 0.3 µl: Reads sub-microlitre samples directly, without dilution.",
+            "Cuvette Mode for Full Dynamic Range: Extends sensitivity for OD600, kinetics, and low-concentration assays.",
+            "Broad Detection Range Across Both Modes: dsDNA and BSA coverage spanning weak to highly concentrated samples.",
+            "Sub-1.5 nm Bandwidth: Delivers sharp spectral resolution across the full scan range.",
+            "No Routine Calibration Checks Needed: Robust instrument design reduces ongoing maintenance demands.",
+            "Cross-Platform Remote Operation: Controlled from Windows, Mac, Android, or iOS devices.",
+            "Portable, Compact Footprint: Just 20 x 20 x 12 cm, with an optional battery for field use.",
+            "GMP, GLP, GxP Ready: 21 CFR Part 11 compliant, with an IQOQ option available."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Implen NanoPhotometer® NP80" },
+            { "label": "Category", "value": "NanoPhotometer, Microvolume + Cuvette UV/Vis Spectrophotometer" },
+            { "label": "Minimum Sample Volume", "value": "0.3 µl (microvolume mode)" },
+            { "label": "Scan Range", "value": "200 to 900 nm" },
+            { "label": "dsDNA Range, Microvolume", "value": "1 to 16,500 ng/µl" },
+            { "label": "dsDNA Range, Cuvette", "value": "0.1 to 130 ng/µl" },
+            { "label": "BSA Range, Microvolume", "value": "0.03 to 478 mg/ml" },
+            { "label": "BSA Range, Cuvette", "value": "0.003 to 3.7 mg/ml" },
+            { "label": "Bandwidth", "value": "Better than 1.5 nm" },
+            { "label": "Calibration", "value": "Robust design, no routine calibration checks required" },
+            { "label": "Operating Platforms", "value": "Standalone, Windows, Mac, Android, iOS" },
+            { "label": "Footprint", "value": "20 x 20 x 12 cm" },
+            { "label": "Power", "value": "Standard, with optional battery" },
+            { "label": "Compliance", "value": "GMP, GLP, GxP ready, 21 CFR Part 11, IQOQ option" },
+            { "label": "Support", "value": "Live application support, 24/5" }
+          ],
+
+          "applications": [
+            "Nucleic Acid Quantification: 260/280 and 260/230 QC ratios across both measurement modes",
+            "Protein Quantification: Protein UV with 260/280 QC ratio",
+            "OD600 and Cell Culture Monitoring: Cuvette mode's full dynamic range",
+            "Kinetics Assays: Kinetics measured directly in a drop",
+            "Fluorescent Dye-Labeled Sample Analysis: Absorbance-based measurement of labeled nucleic acids and proteins",
+            "Pharmaceutical Applications: Broad dynamic range suited to regulated assay work"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Remote & Compliance" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Two Measurement Modes" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Microvolume, cuvette, or both?",
+            "description": "Select the assay type and expected concentration, and see which measurement mode fits.",
+            "steps": [
+              {
+                "key": "assayType",
+                "question": "What's the assay type?",
+                "options": [
+                  { "val": "nucleic-acid", "label": "Nucleic acid quantification" },
+                  { "val": "od600", "label": "OD600" },
+                  { "val": "kinetics", "label": "Kinetics" },
+                  { "val": "protein-assay", "label": "Protein assay" }
+                ]
+              },
+              {
+                "key": "expectedConcentration",
+                "question": "What's the expected concentration?",
+                "options": [
+                  { "val": "weak", "label": "Weak / low concentration" },
+                  { "val": "moderate", "label": "Moderate concentration" },
+                  { "val": "highly-concentrated", "label": "Highly concentrated" }
+                ]
+              },
+              {
+                "key": "sampleVolumeAvailable",
+                "question": "What sample volume is available?",
+                "options": [
+                  { "val": "sub-microlitre", "label": "Sub-microlitre" },
+                  { "val": "standard-cuvette", "label": "Standard cuvette volume" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to an application-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need remote operation or regulatory documentation?",
+            "description": "Select the lab's setup and compliance requirements, and see the recommended configuration.",
+            "fields": [
+              {
+                "key": "operationMode",
+                "label": "Operation mode",
+                "options": [
+                  { "val": "standalone", "label": "Standalone" },
+                  { "val": "remote", "label": "Remote" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "platform",
+                "label": "Platform",
+                "options": [
+                  { "val": "windows", "label": "Windows" },
+                  { "val": "mac", "label": "Mac" },
+                  { "val": "android", "label": "Android" },
+                  { "val": "ios", "label": "iOS" }
+                ]
+              },
+              {
+                "key": "complianceRequirement",
+                "label": "Compliance requirement",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "gmp-glp-gxp", "label": "GMP/GLP/GxP" },
+                  { "val": "21-cfr-part-11", "label": "21 CFR Part 11 with IQOQ" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Is NP80 Suitable for Regulated Lab Environments?",
+                "body": "Yes, it's built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available.",
+                "tags": ["GMP, GLP, GxP Ready", "No Routine Calibration Checks Needed"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "NP80 vs. N120 vs. N60/N50",
+            "description": "NanoPhotometer NP80 comparison: NP80 versus N120 versus N60/N50 configurations.",
+            "columns": [
+              { "label": "NP80" },
+              { "label": "N120" },
+              { "label": "N60/N50" }
+            ],
+            "rows": [
+              { "feature": "Measurement Modes", "values": ["Microvolume + cuvette", "Microvolume, 12-channel", "Microvolume, single sample"] },
+              { "feature": "Minimum Sample Volume", "values": ["0.3 µl", "Sub-microlitre, per channel", "Sub-microlitre"] },
+              { "feature": "Best For", "values": ["Labs needing both microvolume and cuvette-based assays", "High-throughput, multi-sample batches", "Standard single-sample quantification"] },
+              { "feature": "Choose When", "values": ["OD600, kinetics, or full dynamic range work is part of the routine", "Many samples need processing in parallel", "Simplicity and single-sample workflow are enough"] }
+            ],
+            "disclaimer": "All models share the same dilution-free, microvolume reading principle. The difference is measurement mode and throughput."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NanoPhotometer NP80 industries: molecular biology research, pharmaceutical development, microbiology, and academic core facilities.",
+            "industries": [
+              { "name": "Molecular Biology Research", "useCase": "Nucleic acid quantification and purity QC", "consideration": "260/280 and 260/230 ratios in microvolume mode" },
+              { "name": "Pharmaceutical Development", "useCase": "Full dynamic range assays and regulated documentation", "consideration": "21 CFR Part 11 compliance and IQOQ option for audit readiness" },
+              { "name": "Microbiology and Cell Culture Labs", "useCase": "OD600 monitoring and growth kinetics", "consideration": "Cuvette mode's extended dynamic range" },
+              { "name": "Academic Core Facilities", "useCase": "Shared instrument covering multiple assay types", "consideration": "Dual-mode operation reduces the need for separate instruments" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows microvolume and cuvette mode switching on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms mode, compliance, and connectivity setup for the lab" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with preprogrammed applications and remote control" },
+              { "title": "Preventive Maintenance", "description": "Maintains optical performance across both measurement modes" },
+              { "title": "Spares and Accessories", "description": "Supplies cuvettes, replacement parts, and battery components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NanoPhotometer NP80 used for?", "answer": "It's a dual-mode UV/Vis spectrophotometer combining sub-microlitre nucleic acid and protein quantification with cuvette-based measurement for OD600 and kinetics." },
+            { "question": "What is the smallest sample volume it can read?", "answer": "0.3 µl in microvolume mode, without needing dilution." },
+            { "question": "What's the difference between microvolume and cuvette mode?", "answer": "Microvolume mode reads sub-microlitre samples directly for fast quantification, while cuvette mode extends sensitivity further for OD600, kinetics, and other full dynamic range assays." },
+            { "question": "What concentration ranges does it detect?", "answer": "dsDNA from 1 to 16,500 ng/µl and BSA from 0.03 to 478 mg/ml in microvolume mode; dsDNA from 0.1 to 130 ng/µl and BSA from 0.003 to 3.7 mg/ml in cuvette mode." },
+            { "question": "Does the instrument need routine calibration checks?", "answer": "No, its robust design is built to skip routine calibration checks entirely." },
+            { "question": "Can the instrument be operated remotely?", "answer": "Yes, standalone or remote operation is supported across Windows, Mac, Android, and iOS devices." },
+            { "question": "Is the NP80 suitable for regulated lab environments?", "answer": "Yes, it's built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available." },
+            { "question": "Can it be used outside a standard lab bench?", "answer": "Yes, its compact 20 x 20 x 12 cm footprint and optional battery support use in a glove box, under a fume hood, or in the field." },
+            { "question": "What support is available if something goes wrong?", "answer": "Live application support is available 24 hours a day, 5 days a week." },
+            { "question": "What is the price of the NanoPhotometer NP80 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the measurement mode and compliance configuration needed." },
+            { "question": "Who is the authorized distributor of the NanoPhotometer NP80 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Implen NanoPhotometer NP80 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NanoPhotometer NP80 in India from Inkarp",
+            "description": "Share the assay types and compliance needs, and the right NP80 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your assay types and compliance needs, then confirm the right NP80 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "assayType", "label": "Assay type", "type": "text", "required": false },
+              { "key": "complianceNeeds", "label": "Remote access / compliance needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right NP80 configuration", "body": "Share whether the work needs microvolume quantification, cuvette-based assays like OD600, or both, and the right NP80 configuration gets confirmed from there." },
+              { "title": "Confirm the right mode balance for your lab", "body": "Share the balance of microvolume versus cuvette-based work expected in the lab, and the right NP80 configuration gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Microvolume or cuvette. Same instrument, no compromise either way.",
+            "heroLead": "A sub-microlitre sample and a full cuvette-based OD600 reading usually need two different instruments. NP80 runs both from a single device, starting measurement at just 0.3 µl and switching to cuvette mode when the assay calls for it. Microvolume mode covers dsDNA from 1 to 16,500 ng/µl and BSA from 0.03 to 478 mg/ml, while cuvette mode extends sensitivity down to 0.1 ng/µl dsDNA and 0.003 mg/ml BSA. A bandwidth better than 1.5 nm and a robust design that skips routine calibration checks keep it accurate without the upkeep, and standalone or remote operation across Windows, Mac, Android, and iOS keeps it flexible wherever it sits.",
+            "stats": [
+              { "value": "0.3 µl", "label": "Minimum sample volume, microvolume mode" },
+              { "value": "200 to 900 nm", "label": "Scan range" },
+              { "value": "1 to 16,500 ng/µl", "label": "dsDNA range, microvolume mode" },
+              { "value": "0.1 to 130 ng/µl", "label": "dsDNA range, cuvette mode" },
+              { "value": "Better than 1.5 nm", "label": "Bandwidth" },
+              { "value": "No routine calibration checks", "label": "Robust instrument design" },
+              { "value": "20 x 20 x 12 cm", "label": "Footprint" },
+              { "value": "21 CFR Part 11-ready", "label": "GMP, GLP, GxP compliant, IQOQ option" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NanoPhotometer NP80 product information: dual-mode operation, detection range, and remote access.",
+                "body": [
+                  "Microvolume mode reads samples starting at just 0.3 µl across the full 200 to 900 nm scan range, with no dilution required.",
+                  "Detection spans dsDNA from 1 to 16,500 ng/µl and BSA from 0.03 to 478 mg/ml in microvolume mode, extending to 0.1 to 130 ng/µl dsDNA and 0.003 to 3.7 mg/ml BSA in cuvette mode.",
+                  "Bandwidth performs better than 1.5 nm, and the instrument's robust design removes the need for routine calibration checks altogether.",
+                  "A built-in web application server lets the instrument run standalone or get controlled remotely from Windows, Mac, Android, or iOS.",
+                  "A compact 20 x 20 x 12 cm footprint, with an optional battery, moves easily between a glove box, fume hood, open bench, or field location.",
+                  "Preprogrammed applications cover nucleic acid quantification (DNA, RNA, mRNA, oligos) with 260/280 and 260/230 QC ratios, protein UV with 260/280 QC ratio, fluorescent dye-labeled nucleic acid and protein measurement via absorbance, and potential contaminant identification.",
+                  "Additional life science applications include OD600, protein assays (Bradford, BCA, Biuret), and kinetics measured directly in a drop, made possible by cuvette mode's full dynamic range.",
+                  "UV-Vis spectroscopy applications extend to wavelength scanning with a formula editor, wavescan, standard curve generation, concentration calculation, and absorbance ratio analysis.",
+                  "The system runs GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available.",
+                  "Live application support runs 24 hours a day, 5 days a week, and the instrument carries a zero cost of ownership."
+                ],
+                "cards": [
+                  { "title": "Dual-mode instrument", "description": "Microvolume and cuvette measurement in one device" },
+                  { "title": "0.3 µl minimum sample", "description": "Reads precious, limited samples directly" },
+                  { "title": "No routine calibration checks", "description": "Robust design cuts ongoing upkeep" },
+                  { "title": "Zero cost of ownership", "description": "No hidden recurring service costs" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Minimum sample volume", "description": "0.3 µl (microvolume mode)" },
+                  { "title": "Scan range", "description": "200 to 900 nm" },
+                  { "title": "dsDNA range", "description": "1-16,500 ng/µl (microvolume), 0.1-130 ng/µl (cuvette)" },
+                  { "title": "BSA range", "description": "0.03-478 mg/ml (microvolume), 0.003-3.7 mg/ml (cuvette)" },
+                  { "title": "Bandwidth", "description": "Better than 1.5 nm" },
+                  { "title": "Footprint", "description": "20 x 20 x 12 cm, battery option available" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "NanoPhotometer NP80 key features: dual-mode measurement, bandwidth, remote access, portability."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NanoPhotometer NP80 applications: nucleic acid quantification, protein analysis, OD600, and kinetics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NanoPhotometer NP80 technical specifications: sample volume, scan range, detection range, and footprint."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "One Instrument, Two Measurement Modes",
+                "title": "One Instrument, Two Measurement Modes",
+                "description": "Nucleic acid quantification and cuvette-based assays like OD600 usually sit on separate instruments in separate parts of the lab. NP80 puts both modes on the same device. Microvolume mode starts at 0.3 µl, covering dsDNA up to 16,500 ng/µl and BSA up to 478 mg/ml, well suited to fast, dilution-free quantification of precious extracted samples. Cuvette mode extends sensitivity to the other end of the range, dsDNA down to 0.1 ng/µl and BSA down to 0.003 mg/ml, opening up full dynamic range work like OD600 monitoring and reaction kinetics. Switching between the two doesn't mean switching instruments, benches, or software, just changing the measurement mode on the same device.",
+                "cards": [
+                  { "title": "Fast, dilution-free nucleic acid quantification", "description": "Microvolume mode from 0.3 µl" },
+                  { "title": "Full dynamic range for OD600 or kinetics", "description": "Cuvette mode extending sensitivity further" },
+                  { "title": "One instrument covering both use cases", "description": "Dual-mode operation on shared hardware and software" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built for Zero-Hassle Accuracy",
+                "title": "Built for Zero-Hassle Accuracy",
+                "description": "Routine calibration checks eat into productive lab time and add another recurring task to the maintenance schedule. NP80's robust instrument design removes that requirement entirely.",
+                "body": [
+                  "Sub-1.5 nm bandwidth keeps spectral resolution sharp across the full 200 to 900 nm range, so accuracy doesn't come at the cost of ongoing upkeep.",
+                  "That reliability pairs with a genuinely zero cost of ownership, no hidden service fees stacking up over the life of the instrument. Live application support, available 24 hours a day, 5 days a week, backs the hardware with real expert access whenever a question comes up."
+                ],
+                "utilityChecklist": [
+                  { "label": "Less time spent on routine maintenance", "value": "Robust design, no routine calibration checks" },
+                  { "label": "Sharp spectral accuracy without extra upkeep", "value": "Sub-1.5 nm bandwidth" },
+                  { "label": "Predictable long-term running costs", "value": "Zero cost of ownership" },
+                  { "label": "Expert help whenever it's needed", "value": "Live application support, 24/5" }
+                ],
+                "disclaimer": "Share the lab's current calibration and maintenance routine, and how much of that NP80 removes gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NanoPhotometer NP80 documentation: instrument comparison, demo booking, and quote requests.",
+                "cards": [
+                  { "title": "Compare Instruments Guide", "description": "Available on request" },
+                  { "title": "NanoPhotometer NP80 Technical Datasheet", "description": "Available on request" },
+                  { "title": "Demo Booking", "description": "Available directly" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NanoPhotometer NP80 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Microvolume from 0.3 µl and full cuvette-mode range on one instrument, with no routine calibration checks to slow the lab down. Share the assay types and compliance needs, and the right NP80 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "NanoPhotometer® N60/N50",
+          "slug": "nanophotometer-n60-n50",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
+          "imageAlt": "Implen NanoPhotometer® N60/N50 - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/nanophotometer-n60-n50",
+          "breadcrumbPath": "Home > Products > NanoPhotometer > NanoPhotometer® N60/N50",
+          "h1": "NanoPhotometer® N60/N50",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Routine quantification shouldn't need routine dilution. N60/N50 reads samples starting at just 0.3 µl across the full 200 to 900 nm scan range, covering nucleic acids and proteins in one dependable instrument built for daily lab use.",
+
+          "features": [
+            "Microvolume Measurement from 0.3 µl: Reads sub-microlitre samples directly, without dilution.",
+            "Broad Detection Range: dsDNA and BSA coverage spanning weak to highly concentrated samples, wider on N60.",
+            "Built-In Low-Vibration Vortex (N60 Only): Improves sample homogeneity directly before measurement.",
+            "Cross-Platform Remote Operation: Controlled from Windows, Mac, Android, or iOS devices, on both models.",
+            "Portable, Compact Footprint: Just 20 x 20 x 12 cm, with an optional battery for field use.",
+            "GMP, GLP, GxP Ready (N60 Only): 21 CFR Part 11 compliant, with an IQOQ option available.",
+            "5-Star Customer Support: Live application support available 24 hours a day, 5 days a week.",
+            "Preprogrammed Application Library: Covers nucleic acids, proteins, OD600, protein assays, and full UV-Vis spectroscopy."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Implen NanoPhotometer® N60 / Implen NanoPhotometer® N50" },
+            { "label": "Category", "value": "NanoPhotometer, Microvolume UV/Vis Spectrophotometer" },
+            { "label": "Minimum Sample Volume", "value": "0.3 µl (both models)" },
+            { "label": "Scan Range", "value": "200 to 900 nm (both models)" },
+            { "label": "dsDNA Detection Range", "value": "1 to 16,500 ng/µl (N60), 5 to 7,500 ng/µl (N50)" },
+            { "label": "BSA Detection Range", "value": "0.03 to 478 mg/ml (N60), 0.15 to 217 mg/ml (N50)" },
+            { "label": "Built-In Vortex", "value": "Yes, low vibration, low energy (N60); not included (N50)" },
+            { "label": "Compliance", "value": "GMP, GLP, GxP ready, 21 CFR Part 11, IQOQ option (N60); not specified (N50)" },
+            { "label": "Operating Platforms", "value": "Standalone, Windows, Mac, Android, iOS (both models)" },
+            { "label": "Footprint", "value": "20 x 20 x 12 cm (both models)" },
+            { "label": "Power", "value": "Standard, with optional battery (both models)" },
+            { "label": "Support", "value": "Live application support, 24/5 (both models)" }
+          ],
+
+          "applications": [
+            "Nucleic Acid Quantification: 260/280 and 260/230 QC ratios for DNA, RNA, mRNA, and oligos",
+            "Protein Quantification: Protein UV with 260/280 QC ratio",
+            "Fluorescent Dye-Labeled Sample Analysis: Absorbance-based measurement of labeled nucleic acids and proteins",
+            "Contaminant Screening: Potential contaminant identification built into the workflow",
+            "Cell Culture and Assay Work: OD600, Bradford, BCA, Biuret protein assays, and kinetics in a drop",
+            "General UV-Vis Spectroscopy: Wavelength scanning, wavescan, standard curve, concentration, and absorbance ratio"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Remote & Compliance" },
+            { "id": "sample-type-and-range-checker", "label": "Range Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "N60 vs N50" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Which model matches the lab's concentration range and compliance needs?",
+            "description": "Select the expected sample concentration and compliance requirement, and see which model fits.",
+            "steps": [
+              {
+                "key": "typicalDsdnaConcentration",
+                "question": "What's the typical dsDNA concentration?",
+                "options": [
+                  { "val": "within-n50-range", "label": "Within N50 range (up to 7,500 ng/µl)" },
+                  { "val": "above-n50-within-n60", "label": "Above N50 range, within N60 range (7,500-16,500 ng/µl)" }
+                ]
+              },
+              {
+                "key": "regulatedDocumentation",
+                "question": "Is regulated documentation needed?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "sampleHomogeneityConcern",
+                "question": "Is there a sample homogeneity concern?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "viscous-uneven", "label": "Viscous/uneven samples" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a model-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need remote operation or regulatory documentation?",
+            "description": "Select the lab's setup and compliance requirements, and see the recommended configuration.",
+            "fields": [
+              {
+                "key": "operationMode",
+                "label": "Operation mode",
+                "options": [
+                  { "val": "standalone", "label": "Standalone" },
+                  { "val": "remote", "label": "Remote" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "platform",
+                "label": "Platform",
+                "options": [
+                  { "val": "windows", "label": "Windows" },
+                  { "val": "mac", "label": "Mac" },
+                  { "val": "android", "label": "Android" },
+                  { "val": "ios", "label": "iOS" }
+                ]
+              },
+              {
+                "key": "complianceRequirement",
+                "label": "Compliance requirement",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "21-cfr-part-11-n60", "label": "21 CFR Part 11 with IQOQ (N60)" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Which Model Offers Regulatory Compliance?",
+                "body": "N60 is built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option; this compliance path is specific to N60.",
+                "tags": ["GMP, GLP, GxP Ready (N60 Only)"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "sample-type-and-range-checker",
+              "eyebrow": "Sample Type and Range Checker",
+              "title": "Does the sample fall within N60 or N50's detection range?",
+              "description": "Select the sample type and expected concentration, and see which model reads it directly.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the sample type?", "choices": "dsDNA; Protein (BSA-equivalent); Other" },
+                { "title": "What's the expected concentration?", "choices": "Within N50 range (up to 7,500 ng/µl); Above N50, within N60 range (7,500-16,500 ng/µl)" },
+                { "title": "What's the measurement need?", "choices": "Quantification only; QC ratio (260/280, 260/230)" }
+              ],
+              "disclaimer": "Routes to an application-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "N60 vs. N50 vs. N120",
+            "description": "NanoPhotometer N60/N50 comparison: N60 versus N50 versus N120.",
+            "columns": [
+              { "label": "N60" },
+              { "label": "N50" },
+              { "label": "N120" }
+            ],
+            "rows": [
+              { "feature": "dsDNA Range", "values": ["1-16,500 ng/µl", "5-7,500 ng/µl", "2-8,000 ng/µl (per channel)"] },
+              { "feature": "Built-In Vortex", "values": ["Yes", "No", "No"] },
+              { "feature": "Channels", "values": ["1", "1", "12"] },
+              { "feature": "Compliance", "values": ["21 CFR Part 11, IQOQ option", "Not specified", "21 CFR Part 11, IQOQ option"] },
+              { "feature": "Best For", "values": ["Broad-range routine work needing compliance or homogenization", "Standard routine quantification within a moderate range", "High-throughput, multi-sample batches"] },
+              { "feature": "Choose When", "values": ["Range, homogeneity, or compliance matter", "Budget and simplicity matter most", "Many samples need processing in parallel"] }
+            ],
+            "disclaimer": "All models share the same 0.3 µl minimum sample volume and dilution-free reading principle. The difference is detection range, throughput, and available features."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NanoPhotometer N60/N50 industries: molecular biology research, academic teaching labs, and routine QC facilities.",
+            "industries": [
+              { "name": "Molecular Biology Research", "useCase": "Routine nucleic acid quantification and purity QC", "consideration": "N60's wider range suits varied sample concentrations" },
+              { "name": "Academic Teaching Labs", "useCase": "Everyday student quantification exercises", "consideration": "N50 offers a simpler, budget-friendly option" },
+              { "name": "Pharmaceutical QC", "useCase": "Regulated batch testing and documentation", "consideration": "N60's 21 CFR Part 11 compliance and IQOQ option" },
+              { "name": "Core Facility Sample Prep", "useCase": "Consistent readings across varied sample viscosities", "consideration": "N60's built-in vortex improves sample homogeneity" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows detection range and vortex function on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms N60 or N50 fit and compliance setup for the lab" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with preprogrammed applications and remote control" },
+              { "title": "Preventive Maintenance", "description": "Maintains optical and vortex performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement parts and battery components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NanoPhotometer N60/N50 used for?", "answer": "It's a microvolume UV/Vis spectrophotometer for routine nucleic acid and protein quantification across a wide concentration range, without needing dilution." },
+            { "question": "What's the difference between N60 and N50?", "answer": "N60 covers a wider dsDNA and BSA detection range, includes a built-in vortex for sample homogeneity, and offers 21 CFR Part 11 compliance with an IQOQ option; N50 covers a narrower range without these extras." },
+            { "question": "What is the smallest sample volume it can read?", "answer": "0.3 µl, on both N60 and N50, without dilution." },
+            { "question": "What concentration ranges does each model detect?", "answer": "N60 detects dsDNA from 1 to 16,500 ng/µl and BSA from 0.03 to 478 mg/ml; N50 detects dsDNA from 5 to 7,500 ng/µl and BSA from 0.15 to 217 mg/ml." },
+            { "question": "Does N50 include the built-in vortex?", "answer": "No, the built-in low-vibration vortex is exclusive to N60." },
+            { "question": "Is either model suitable for regulated lab environments?", "answer": "N60 is built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option; this compliance path is specific to N60." },
+            { "question": "Can the instrument be operated remotely?", "answer": "Yes, both N60 and N50 run standalone or remotely from Windows, Mac, Android, or iOS devices." },
+            { "question": "Can it be used outside a standard lab bench?", "answer": "Yes, its compact 20 x 20 x 12 cm footprint and optional battery support use in a glove box, under a fume hood, or in the field." },
+            { "question": "What support is available if something goes wrong?", "answer": "Live application support is available 24 hours a day, 5 days a week, on both models." },
+            { "question": "What is the price of the NanoPhotometer N60/N50 in India?", "answer": "Get in touch and Inkarp will put together a quote based on which model, N60 or N50, fits the lab's requirements." },
+            { "question": "Who is the authorized distributor of the NanoPhotometer N60/N50 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Implen NanoPhotometer N60/N50 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NanoPhotometer N60/N50 in India from Inkarp",
+            "description": "Share the sample types and compliance needs, and the right model gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample types and compliance needs, then confirm the right model.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "concentrationRange", "label": "Typical concentration range", "type": "text", "required": false },
+              { "key": "complianceNeeds", "label": "Compliance / documentation needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm whether N60 or N50 fits", "body": "Share the concentration range typically measured and whether regulated documentation is required, and confirmation on whether N60 or N50 fits gets sent directly." },
+              { "title": "Confirm the right model for your concentration range", "body": "Share the typical sample concentration range and whether regulated documentation is required, and the right model between N60 and N50 gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "From 0.3 µl to full nucleic acid QC. The reliable everyday choice.",
+            "heroLead": "Routine quantification shouldn't need routine dilution. N60/N50 reads samples starting at just 0.3 µl across the full 200 to 900 nm scan range, covering nucleic acids and proteins in one dependable instrument built for daily lab use. N60 detects dsDNA from 1 to 16,500 ng/µl and BSA from 0.03 to 478 mg/ml, with a built-in low-vibration vortex for better sample homogeneity and 21 CFR Part 11 compliance with an IQOQ option. N50 covers a slightly narrower dsDNA range of 5 to 7,500 ng/µl and BSA from 0.15 to 217 mg/ml. Both run standalone or remote across Windows, Mac, Android, and iOS, with live application support available 24/5.",
+            "stats": [
+              { "value": "0.3 µl", "label": "Minimum sample volume" },
+              { "value": "200 to 900 nm", "label": "Scan range" },
+              { "value": "1 to 16,500 ng/µl", "label": "dsDNA range, N60" },
+              { "value": "5 to 7,500 ng/µl", "label": "dsDNA range, N50" },
+              { "value": "Built-in vortex", "label": "N60 only, low vibration, low energy" },
+              { "value": "20 x 20 x 12 cm", "label": "Footprint" },
+              { "value": "Cross-platform", "label": "Windows, Mac, Android, iOS" },
+              { "value": "21 CFR Part 11-ready", "label": "N60 only, with IQOQ option" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NanoPhotometer N60/N50 product information: detection range, sample homogeneity, and remote operation.",
+                "body": [
+                  "Both models read samples starting at 0.3 µl, scanning the full 200 to 900 nm range without needing dilution first.",
+                  "N60 detects dsDNA from 1 to 16,500 ng/µl and BSA from 0.03 to 478 mg/ml. N50 covers a narrower range: dsDNA from 5 to 7,500 ng/µl and BSA from 0.15 to 217 mg/ml.",
+                  "N60 includes a built-in vortex, low vibration and low energy, that improves sample homogeneity directly before measurement. This feature is exclusive to N60.",
+                  "Both models run standalone or get controlled remotely from Windows, Mac, Android, or iOS.",
+                  "A compact 20 x 20 x 12 cm footprint, with an optional battery, means either unit moves easily between a glove box, fume hood, open bench, or field location.",
+                  "Preprogrammed applications cover nucleic acid quantification (DNA, RNA, mRNA, oligos) with 260/280 and 260/230 QC ratios, protein UV with 260/280 QC ratio, fluorescent dye-labeled nucleic acid and protein measurement via absorbance, and potential contaminant identification.",
+                  "Additional life science applications include OD600, protein assays (Bradford, BCA, Biuret), and kinetics measured directly in a drop.",
+                  "UV-Vis spectroscopy applications extend to wavelength scanning with a formula editor, wavescan, standard curve generation, concentration calculation, and absorbance ratio analysis.",
+                  "N60 is built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option, exclusive to this model.",
+                  "Live application support runs 24 hours a day, 5 days a week, on both models."
+                ],
+                "cards": [
+                  { "title": "0.3 µl minimum sample", "description": "Reads precious, limited samples directly" },
+                  { "title": "Wide detection range (N60)", "description": "Covers weak to highly concentrated samples" },
+                  { "title": "Built-in vortex (N60)", "description": "Improved sample homogeneity before measurement" },
+                  { "title": "21 CFR Part 11-ready (N60)", "description": "Built for regulated lab environments" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Minimum sample volume", "description": "0.3 µl (both models)" },
+                  { "title": "Scan range", "description": "200 to 900 nm (both models)" },
+                  { "title": "dsDNA range", "description": "1-16,500 ng/µl (N60), 5-7,500 ng/µl (N50)" },
+                  { "title": "BSA range", "description": "0.03-478 mg/ml (N60), 0.15-217 mg/ml (N50)" },
+                  { "title": "N60-exclusive", "description": "Built-in vortex, 21 CFR Part 11 with IQOQ option" },
+                  { "title": "Footprint", "description": "20 x 20 x 12 cm, battery option available" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "NanoPhotometer N60/N50 key features: built-in vortex, remote access, portability, compliance."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NanoPhotometer N60/N50 applications: routine nucleic acid quantification, protein analysis, and dye-labeled sample measurement."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NanoPhotometer N60/N50 technical specifications: sample volume, scan range, detection range, and footprint."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "N60 vs. N50: Choosing the Right Fit",
+                "title": "N60 vs. N50: Choosing the Right Fit",
+                "description": "Both models share the same 0.3 µl minimum sample volume and 200-900 nm scan range, so the real decision comes down to detection range and two extra N60 features. N60 covers a substantially wider concentration span, dsDNA up to 16,500 ng/µl versus N50's 7,500 ng/µl ceiling, meaningful for labs regularly working with highly concentrated preps. Only N60 includes the built-in vortex for sample homogenization and the 21 CFR Part 11 compliance path with an IQOQ option, relevant specifically for regulated environments. N50 remains a fully capable microvolume instrument for labs whose samples reliably fall within its narrower range and who don't need the regulatory documentation path.",
+                "cards": [
+                  { "title": "Routine quantification within a moderate concentration range", "description": "N50" },
+                  { "title": "Broader concentration coverage for varied sample types", "description": "N60" },
+                  { "title": "Built-in sample homogenization before measurement", "description": "N60" },
+                  { "title": "21 CFR Part 11 compliance and IQOQ documentation", "description": "N60" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Better Sample Homogeneity, Better Readings",
+                "title": "Better Sample Homogeneity, Better Readings",
+                "description": "A sample that isn't fully mixed before measurement introduces variability the instrument can't correct for after the fact. N60's built-in vortex addresses that directly, right before the reading happens.",
+                "body": [
+                  "Low vibration and low energy operation mean the vortex mixes the sample without introducing its own disruption or heat into a small, precious volume.",
+                  "Better homogeneity translates directly into more accurate, more consistent readings, particularly valuable for viscous or unevenly distributed sample types."
+                ],
+                "utilityChecklist": [
+                  { "label": "Consistent mixing before every reading", "value": "Built-in low-vibration, low-energy vortex" },
+                  { "label": "Accurate results on viscous or uneven samples", "value": "Improved sample homogeneity at the point of measurement" },
+                  { "label": "No added disruption to a small sample volume", "value": "Low-energy operation designed for microvolume use" }
+                ],
+                "disclaimer": "Share whether the samples typically measured are viscous or prone to settling, and whether N60's built-in vortex would meaningfully help gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NanoPhotometer N60/N50 documentation: instrument comparison, demo booking, and quote requests.",
+                "cards": [
+                  { "title": "Compare Instruments Guide", "description": "Available on request" },
+                  { "title": "NanoPhotometer N60/N50 Technical Datasheet", "description": "Available on request" },
+                  { "title": "Demo Booking", "description": "Available directly" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NanoPhotometer N60/N50 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Reliable microvolume quantification from 0.3 µl, with N60 adding wider range, built-in homogenization, and regulatory compliance. Share the sample types and compliance needs, and the right model gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "NanoPhotometer® C40",
+          "slug": "nanophotometer-c40",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
+          "imageAlt": "Implen NanoPhotometer® C40 - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/nanophotometer-c40",
+          "breadcrumbPath": "Home > Products > NanoPhotometer > NanoPhotometer® C40",
+          "h1": "NanoPhotometer® C40",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Being tied to one manufacturer's cuvettes is an easy way to end up paying more for less flexibility. C40 works with standard and microvolume cuvettes across quartz, glass, or plastic at an 8.5 mm z-height, so the lab isn't stuck sourcing a proprietary consumable for every measurement.",
+
+          "features": [
+            "Universal Cuvette Compatibility: Works with standard and microvolume cuvettes in quartz, glass, or plastic at 8.5 mm z-height.",
+            "Temperature-Controlled Measurement: Maintains stable conditions across the full scan range for sensitive assays.",
+            "Sub-1.5 nm Bandwidth: Delivers sharp spectral resolution across the 200 to 900 nm scan range.",
+            "Built-In Web Application Server with REST API: Enables standalone operation or remote control across major platforms.",
+            "Cross-Platform Remote Operation: Controlled from Windows, Mac, Android, or iOS devices.",
+            "Portable, Compact Footprint: Just 20 x 20 x 12 cm, with an optional battery for field use.",
+            "GMP, GLP, GxP Ready: 21 CFR Part 11 compliant, with an IQOQ option available.",
+            "5-Star Customer Support: Live application support available 24 hours a day, 5 days a week."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Implen NanoPhotometer® C40" },
+            { "label": "Category", "value": "NanoPhotometer, Cuvette-Based UV/Vis Spectrophotometer" },
+            { "label": "Cuvette Compatibility", "value": "Standard and microvolume, quartz, glass, or plastic" },
+            { "label": "Cuvette Z-Height", "value": "8.5 mm" },
+            { "label": "Scan Range", "value": "200 to 900 nm" },
+            { "label": "Bandwidth", "value": "Better than 1.5 nm" },
+            { "label": "Temperature Control", "value": "Included" },
+            { "label": "Connectivity", "value": "Built-in web application server, REST API" },
+            { "label": "Operating Platforms", "value": "Standalone, Windows, Mac, Android, iOS" },
+            { "label": "Footprint", "value": "20 x 20 x 12 cm" },
+            { "label": "Power", "value": "Standard, with optional battery" },
+            { "label": "Compliance", "value": "GMP, GLP, GxP ready, 21 CFR Part 11, IQOQ option" },
+            { "label": "Support", "value": "Live application support, 24/5" }
+          ],
+
+          "applications": [
+            "Nucleic Acid Quantification: 260/280 and 260/230 QC ratios for DNA, RNA, mRNA, and oligos",
+            "Protein Quantification: Protein UV with 260/280 QC ratio",
+            "Fluorescent Dye-Labeled Sample Analysis: Absorbance-based measurement of labeled nucleic acids and proteins",
+            "Temperature-Sensitive Assays: Built-in temperature control across the scan range",
+            "Cell Culture and Assay Work: OD600, Bradford, BCA, Biuret protein assays, and kinetics",
+            "General UV-Vis Spectroscopy: Wavelength scanning, wavescan, standard curve, concentration, and absorbance ratio"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Remote & Compliance" },
+            { "id": "assay-temperature-sensitivity-selector", "label": "Temperature Sensitivity" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "No Cuvette Lock-In" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Will the lab's existing cuvettes work with C40?",
+            "description": "Select the cuvette material and format in use, and see compatibility instantly.",
+            "steps": [
+              {
+                "key": "cuvetteMaterial",
+                "question": "What cuvette material is in use?",
+                "options": [
+                  { "val": "quartz", "label": "Quartz" },
+                  { "val": "glass", "label": "Glass" },
+                  { "val": "plastic", "label": "Plastic" }
+                ]
+              },
+              {
+                "key": "cuvetteFormat",
+                "question": "What cuvette format is in use?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "microvolume", "label": "Microvolume" }
+                ]
+              },
+              {
+                "key": "zHeight",
+                "question": "What's the cuvette z-height?",
+                "options": [
+                  { "val": "8.5mm", "label": "8.5 mm (standard)" },
+                  { "val": "other", "label": "Other" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need remote operation or regulatory documentation?",
+            "description": "Select the lab's setup and compliance requirements, and see the recommended configuration.",
+            "fields": [
+              {
+                "key": "operationMode",
+                "label": "Operation mode",
+                "options": [
+                  { "val": "standalone", "label": "Standalone" },
+                  { "val": "remote", "label": "Remote" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "platform",
+                "label": "Platform",
+                "options": [
+                  { "val": "windows", "label": "Windows" },
+                  { "val": "mac", "label": "Mac" },
+                  { "val": "android", "label": "Android" },
+                  { "val": "ios", "label": "iOS" }
+                ]
+              },
+              {
+                "key": "complianceRequirement",
+                "label": "Compliance requirement",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "gmp-glp-gxp", "label": "GMP/GLP/GxP" },
+                  { "val": "21-cfr-part-11", "label": "21 CFR Part 11 with IQOQ" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Is C40 Suitable for Regulated Lab Environments?",
+                "body": "Yes, it's built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available.",
+                "tags": ["GMP, GLP, GxP Ready", "Built-In Web Application Server with REST API"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "assay-temperature-sensitivity-selector",
+              "eyebrow": "Assay Temperature Sensitivity Selector",
+              "title": "Does the assay need temperature-controlled measurement?",
+              "description": "Select the assay type and temperature sensitivity, and see how C40's controlled measurement applies.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the assay type?", "choices": "Nucleic acid; Protein; OD600; Kinetics; Other" },
+                { "title": "What's the temperature sensitivity?", "choices": "Standard; Temperature-critical" },
+                { "title": "What cuvette material is required?", "choices": "Quartz; Glass; Plastic" }
+              ],
+              "disclaimer": "Routes to an application-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "C40 vs. NP80 vs. N60/N50",
+            "description": "NanoPhotometer C40 comparison: C40 versus NP80 versus N60/N50 configurations.",
+            "columns": [
+              { "label": "C40" },
+              { "label": "NP80" },
+              { "label": "N60/N50" }
+            ],
+            "rows": [
+              { "feature": "Primary Format", "values": ["Cuvette-based", "Microvolume + cuvette", "Microvolume only"] },
+              { "feature": "Cuvette Compatibility", "values": ["Universal, quartz/glass/plastic", "Standard cuvette mode", "Not applicable"] },
+              { "feature": "Temperature Control", "values": ["Included", "Not specified", "Not specified"] },
+              { "feature": "Best For", "values": ["Labs standardizing on their own cuvette stock", "Labs needing both microvolume and cuvette work", "Routine microvolume-only quantification"] },
+              { "feature": "Choose When", "values": ["Cuvette flexibility and temperature control matter most", "Both measurement modes are needed regularly", "Microvolume alone covers the workflow"] }
+            ],
+            "disclaimer": "All models share the same dilution-free, high-precision reading principle. The difference is measurement format and cuvette flexibility."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NanoPhotometer C40 industries: pharmaceutical QC, molecular biology research, and academic core facilities.",
+            "industries": [
+              { "name": "Pharmaceutical QC", "useCase": "Regulated cuvette-based assay testing", "consideration": "21 CFR Part 11 compliance and IQOQ option for audit readiness" },
+              { "name": "Molecular Biology Research", "useCase": "Nucleic acid and protein quantification with existing cuvette stock", "consideration": "Universal cuvette compatibility avoids new consumable sourcing" },
+              { "name": "Temperature-Sensitive Assay Development", "useCase": "Kinetics and reactions requiring stable conditions", "consideration": "Built-in temperature control across the scan range" },
+              { "name": "Academic Core Facilities", "useCase": "Shared instrument access across research groups", "consideration": "Remote operation via REST API across multiple platforms" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows cuvette flexibility and temperature control on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms cuvette, compliance, and connectivity setup for the lab" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with preprogrammed applications and remote control" },
+              { "title": "Preventive Maintenance", "description": "Maintains optical and temperature control performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement parts and battery components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NanoPhotometer C40 used for?", "answer": "It's a cuvette-based UV/Vis spectrophotometer offering flexible sample-volume measurement across nucleic acid, protein, and general life-science applications." },
+            { "question": "What cuvette types does it support?", "answer": "Standard and microvolume cuvettes in quartz, glass, or plastic, at an 8.5 mm z-height, without needing manufacturer-specific consumables." },
+            { "question": "Does the instrument include temperature control?", "answer": "Yes, measurement runs temperature controlled across the full 200 to 900 nm scan range." },
+            { "question": "Can the instrument be operated remotely?", "answer": "Yes, a built-in web application server with REST API enables standalone or remote operation from Windows, Mac, Android, or iOS devices." },
+            { "question": "Is the C40 suitable for regulated lab environments?", "answer": "Yes, it's built GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available." },
+            { "question": "Can it be used outside a standard lab bench?", "answer": "Yes, its compact 20 x 20 x 12 cm footprint and optional battery support use in a glove box, under a fume hood, or in the field." },
+            { "question": "What preprogrammed applications are included?", "answer": "Nucleic acid quantification with QC ratios, protein UV analysis, fluorescent dye-labeled sample measurement, contaminant identification, OD600, protein assays, and general UV-Vis spectroscopy tools." },
+            { "question": "What support is available if something goes wrong?", "answer": "Live application support is available 24 hours a day, 5 days a week." },
+            { "question": "How does C40 differ from NP80?", "answer": "C40 is built around cuvette-based measurement with universal material compatibility and temperature control, while NP80 combines microvolume measurement starting at 0.3 µl with cuvette mode on the same instrument." },
+            { "question": "What is the price of the NanoPhotometer C40 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the cuvette and compliance configuration needed." },
+            { "question": "Who is the authorized distributor of the NanoPhotometer C40 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Implen NanoPhotometer C40 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NanoPhotometer C40 in India from Inkarp",
+            "description": "Share the cuvette types and compliance needs, and the right C40 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your cuvette types and compliance needs, then confirm the right C40 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "cuvetteTypes", "label": "Cuvette types in use", "type": "text", "required": false },
+              { "key": "complianceNeeds", "label": "Remote access / compliance needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right C40 configuration", "body": "Share which cuvette types are already in use in the lab and whether temperature-sensitive assays are part of the routine, and the right C40 configuration gets confirmed from there." },
+              { "title": "Confirm cuvette compatibility", "body": "Share which cuvette types and materials the lab currently uses, and compatibility with C40 gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Any cuvette. Quartz, glass, or plastic. No manufacturer lock-in.",
+            "heroLead": "Being tied to one manufacturer's cuvettes is an easy way to end up paying more for less flexibility. C40 works with standard and microvolume cuvettes across quartz, glass, or plastic at an 8.5 mm z-height, so the lab isn't stuck sourcing a proprietary consumable for every measurement. Temperature-controlled measurement runs across the full 200 to 900 nm scan range with sub-1.5 nm bandwidth, and a built-in web application server with REST API keeps the instrument standalone-ready or fully remote across Windows, Mac, Android, and iOS. A 20 x 20 x 12 cm footprint with optional battery means it travels wherever the work does.",
+            "stats": [
+              { "value": "8.5 mm z-height", "label": "Standard and microvolume cuvette compatibility" },
+              { "value": "Quartz, glass, or plastic", "label": "Cuvette material flexibility" },
+              { "value": "200 to 900 nm", "label": "Scan range" },
+              { "value": "Better than 1.5 nm", "label": "Bandwidth" },
+              { "value": "Temperature controlled", "label": "Measurement stability" },
+              { "value": "20 x 20 x 12 cm", "label": "Footprint" },
+              { "value": "REST API", "label": "Built-in web application server" },
+              { "value": "21 CFR Part 11-ready", "label": "GMP, GLP, GxP compliant, IQOQ option" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NanoPhotometer C40 product information: cuvette compatibility, temperature control, and remote operation.",
+                "body": [
+                  "C40 is optimized for all standard and microvolume cuvettes, quartz, glass, or plastic, at an 8.5 mm z-height, removing the need for manufacturer-specific consumables.",
+                  "Measurement runs temperature controlled across the full 200 to 900 nm scan range, with bandwidth better than 1.5 nm.",
+                  "A built-in web application server with REST API lets the instrument run standalone or get operated remotely from Windows, Mac, Android, or iOS.",
+                  "A compact 20 x 20 x 12 cm footprint, with an optional battery, means the unit moves easily between a glove box, fume hood, open bench, or field location.",
+                  "Preprogrammed applications cover nucleic acid quantification (DNA, RNA, mRNA, oligos) with 260/280 and 260/230 QC ratios, protein UV with 260/280 QC ratio, fluorescent dye-labeled nucleic acid and protein measurement via absorbance, and potential contaminant identification.",
+                  "Additional life science applications include OD600, protein assays (Bradford, BCA, Biuret), and kinetics.",
+                  "UV-Vis spectroscopy applications extend to wavelength scanning with a formula editor, wavescan, standard curve generation, concentration calculation, and absorbance ratio analysis.",
+                  "The system runs GMP, GLP, and GxP ready, with 21 CFR Part 11 compliance and an IQOQ option available.",
+                  "Live application support runs 24 hours a day, 5 days a week."
+                ],
+                "cards": [
+                  { "title": "Universal cuvette support", "description": "No manufacturer-specific consumables required" },
+                  { "title": "Temperature controlled", "description": "Stable measurement conditions for sensitive assays" },
+                  { "title": "REST API, cross-platform control", "description": "Runs standalone or fully remote" },
+                  { "title": "21 CFR Part 11-ready", "description": "Built for regulated lab environments" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Cuvette compatibility", "description": "Standard and microvolume, quartz, glass, or plastic, 8.5 mm z-height" },
+                  { "title": "Scan range", "description": "200 to 900 nm" },
+                  { "title": "Bandwidth", "description": "Better than 1.5 nm" },
+                  { "title": "Temperature control", "description": "Included" },
+                  { "title": "Footprint", "description": "20 x 20 x 12 cm, battery option available" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "NanoPhotometer C40 key features: universal cuvette support, remote access, portability, compliance."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NanoPhotometer C40 applications: nucleic acid quantification, protein analysis, OD600, and kinetics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NanoPhotometer C40 technical specifications: cuvette compatibility, scan range, bandwidth, and footprint."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "No Manufacturer Lock-In",
+                "title": "No Manufacturer Lock-In",
+                "description": "Proprietary cuvettes are a quiet, recurring cost that adds up over the life of an instrument. C40 removes that cost by working with standard and microvolume cuvettes across quartz, glass, or plastic, at a standard 8.5 mm z-height. That flexibility means whatever cuvettes are already stocked in the lab likely already work, no new sourcing relationship required just to run the instrument. Pharmaceutical applications benefit directly from this openness too, since regulated workflows often already specify particular cuvette materials for particular assays.",
+                "cards": [
+                  { "title": "No dependency on one cuvette supplier", "description": "Compatibility across quartz, glass, and plastic" },
+                  { "title": "Using cuvettes already stocked in the lab", "description": "Standard 8.5 mm z-height support" },
+                  { "title": "Meeting pharmaceutical cuvette material requirements", "description": "Material flexibility built into the instrument" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Remote Access and Lab Compliance",
+                "title": "Remote Access and Lab Compliance",
+                "description": "An instrument tied to one bench limits who can use it and when. The built-in REST API and web application server let C40 run standalone or get accessed remotely, from Windows, Mac, Android, or iOS, without being tied to a single workstation.",
+                "body": [
+                  "That same flexibility supports effortless integration into any LIMS system, keeping data flowing into existing lab infrastructure rather than sitting isolated on the instrument.",
+                  "Regulated environments get built-in support too: GMP, GLP, and GxP readiness, 21 CFR Part 11 compliance, and an available IQOQ option mean documentation and audit needs are addressed from day one. Live application support, available 24 hours a day, 5 days a week, backs all of this with real expert access whenever a question comes up."
+                ],
+                "utilityChecklist": [
+                  { "label": "Access to instrument data from anywhere", "value": "REST API and cross-platform remote operation" },
+                  { "label": "Smooth integration with existing lab systems", "value": "Built-in web application server, LIMS-compatible" },
+                  { "label": "Regulatory-ready documentation", "value": "21 CFR Part 11 compliance, IQOQ option" },
+                  { "label": "Expert help whenever it's needed", "value": "Live application support, 24/5" }
+                ],
+                "disclaimer": "Share the lab's LIMS setup and any regulatory documentation requirements, and the right compliance configuration gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NanoPhotometer C40 documentation: instrument comparison, demo booking, and quote requests.",
+                "cards": [
+                  { "title": "Compare Instruments Guide", "description": "Available on request" },
+                  { "title": "NanoPhotometer C40 Technical Datasheet", "description": "Available on request" },
+                  { "title": "Demo Booking", "description": "Available directly" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NanoPhotometer C40 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Universal cuvette compatibility, temperature-controlled measurement, and no proprietary consumables required. Share the cuvette types and compliance needs, and the right C40 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "NanoPhotometer® N30-Touch",
+          "slug": "nanophotometer-n30-touch",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
+          "imageAlt": "Implen NanoPhotometer® N30-Touch - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/nanophotometer-n30-touch",
+          "breadcrumbPath": "Home > Products > NanoPhotometer > NanoPhotometer® N30-Touch",
+          "h1": "NanoPhotometer® N30-Touch",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Waiting for a lamp to warm up or scheduling a recalibration eats into lab time that should go to actual measurements. N30-Touch removes both.",
+
+          "features": [
+            "Sample Compression Technology™: Compresses samples into a capillary film between two quartz surfaces, from just 0.3 µl.",
+            "True Path Technology™: Fixed anchor points eliminate path length drift, guaranteeing lifetime accuracy without recalibration.",
+            "Instant Xenon Flash Lamp: No warm-up time, rated for 10⁹ flashes and up to 10 years of use.",
+            "7\" Color Touchscreen: Adjustable angle, glove-compatible, running the intuitive NPOS operating system.",
+            "Fast Full-Range Scanning: Completes a full scan in 2.5 to 4 seconds across the standard 200-650 nm range.",
+            "Modular Upgrade Packages: Performance, Applications, and Connectivity packages expand capability on your own timeline.",
+            "Easy-to-Clean, Solvent-Compatible Surfaces: Scratch-resistant quartz surfaces work with organic solvents and detergent buffers.",
+            "Convenient Local Data Management: Saves results directly to USB in Implen IDS, PDF, or Excel format."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Implen NanoPhotometer® N30-Touch" },
+            { "label": "Detection Range (dsDNA)", "value": "5-1,500 ng/µl (standard), 1-16,500 ng/µl (with Performance Package)" },
+            { "label": "Detection Range (BSA)", "value": "0.15-44 mg/ml (standard), 0.03-478 mg/ml (with Performance Package)" },
+            { "label": "Wavelength Scan Range", "value": "200-650 nm (standard), 200-900 nm (with Performance Package)" },
+            { "label": "Minimum Sample Volume", "value": "0.3 µl" },
+            { "label": "Photometric Range (10 mm equivalent)", "value": "0.1-30 A (standard), 0.02-330 A (with Performance Package)" },
+            { "label": "Path Length", "value": "0.67 and 0.07 mm" },
+            { "label": "Measure Time, Full Scan", "value": "2.5-4.0 sec" },
+            { "label": "Wavelength Reproducibility", "value": "± 0.2 nm" },
+            { "label": "Wavelength Accuracy", "value": "± 0.75 nm" },
+            { "label": "Bandwidth", "value": "Under 1.5 nm" },
+            { "label": "Stray Light", "value": "Under 0.5% @ 240 nm using NaI" },
+            { "label": "Lamp", "value": "Xenon flash lamp, 10⁹ flashes, up to 10 years" },
+            { "label": "Onboard Processor", "value": "Intel Celeron dual core 2.4 GHz" },
+            { "label": "Operating System", "value": "Linux-based NPOS" },
+            { "label": "Main Body Size", "value": "200 x 200 x 120 mm" },
+            { "label": "Weight", "value": "3.8-5.2 kg, depending on configuration" },
+            { "label": "Display", "value": "1024 x 600 pixels, glove-compatible touchscreen" },
+            { "label": "Certification", "value": "CE, IEC 61010-1:2012, EN 61326-1:2013" }
+          ],
+
+          "applications": [
+            "Nucleic Acid Quantification: Base dsDNA and protein UV measurement standard on every unit",
+            "Protein Assays: BCA, Bradford, and Lowry colorimetric assays with the Applications Package",
+            "OD600 Cell Density: Preprogrammed absorbance-to-cells/ml calculation",
+            "Reaction Kinetics: Change in absorbance over time at a fixed wavelength",
+            "Sample Purity and Contaminant Screening: Sample Control™ Technology flags impurities, turbidity, lint, and air bubbles",
+            "Custom Wavelength and Standard Curve Work: Wavescan, standard curve, and custom application modes"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Range Checker" },
+            { "id": "connectivity-and-workflow-planner", "label": "Connectivity Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Recalibration-Free Design" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Which capabilities does the lab need, now or later?",
+            "description": "Select the current and future needs, and see which upgrade packages fit.",
+            "steps": [
+              {
+                "key": "detectionRangeNeed",
+                "question": "What's the detection range need?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "expanded", "label": "Expanded (Performance Package)" }
+                ]
+              },
+              {
+                "key": "applicationNeeds",
+                "question": "What are the application needs?",
+                "options": [
+                  { "val": "basic", "label": "Basic nucleic acid/protein UV" },
+                  { "val": "full-suite", "label": "Full suite (Applications Package)" }
+                ]
+              },
+              {
+                "key": "connectivityNeed",
+                "question": "What's the connectivity need?",
+                "options": [
+                  { "val": "standalone-usb", "label": "Standalone/USB" },
+                  { "val": "remote-lims", "label": "Remote and LIMS-integrated (Connectivity Package)" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the sample fall within the standard or Performance Package range?",
+            "description": "Select the sample type and expected concentration, and see which configuration reads it directly.",
+            "fields": [
+              {
+                "key": "sampleType",
+                "label": "Sample type",
+                "options": [
+                  { "val": "dsdna", "label": "dsDNA" },
+                  { "val": "protein", "label": "Protein (BSA-equivalent)" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "expectedConcentration",
+                "label": "Expected concentration",
+                "options": [
+                  { "val": "within-standard", "label": "Within standard range" },
+                  { "val": "above-standard-within-performance", "label": "Above standard, within Performance Package range" }
+                ]
+              },
+              {
+                "key": "scanRangeNeed",
+                "label": "Scan range need",
+                "options": [
+                  { "val": "up-to-650nm", "label": "Up to 650 nm" },
+                  { "val": "up-to-900nm", "label": "Up to 900 nm" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Detection Range Does the Standard Unit Cover?",
+                "body": "dsDNA from 5 to 1,500 ng/µl and BSA from 0.15 to 44 mg/ml, expandable to 1-16,500 ng/µl and 0.03-478 mg/ml with the Performance Package.",
+                "tags": ["Modular Upgrade Packages"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "connectivity-and-workflow-planner",
+              "eyebrow": "Connectivity and Workflow Planner",
+              "title": "How does the instrument need to fit into the lab's existing systems?",
+              "description": "Select the connectivity and data management needs, and see how the Connectivity Package applies.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the control preference?", "choices": "Onboard touchscreen only; Remote via PC/tablet/smartphone" },
+                { "title": "What's the data management need?", "choices": "USB storage only; LIMS integration" },
+                { "title": "What's the network requirement?", "choices": "Standalone; Wi-Fi; LAN" }
+              ],
+              "disclaimer": "Routes to a connectivity-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "N30-Touch Standard vs. With Performance Package",
+            "description": "NanoPhotometer N30-Touch comparison: standard configuration versus Performance Package.",
+            "columns": [
+              { "label": "N30-Touch (Standard)" },
+              { "label": "With Performance Package" }
+            ],
+            "rows": [
+              { "feature": "dsDNA Detection Range", "values": ["5-1,500 ng/µl", "1-16,500 ng/µl"] },
+              { "feature": "BSA Detection Range", "values": ["0.15-44 mg/ml", "0.03-478 mg/ml"] },
+              { "feature": "Wavelength Scan Range", "values": ["200-650 nm", "200-900 nm"] },
+              { "feature": "Best For", "values": ["Routine, moderate-concentration samples", "Broader concentration range and extended UV-Vis work"] },
+              { "feature": "Choose When", "values": ["Standard nucleic acid and protein work covers the lab's needs", "Higher concentrations or extended spectrum scanning are required"] }
+            ],
+            "disclaimer": "Both configurations share the same core optics, touchscreen, and recalibration-free design. The difference is purely detection range and scan span."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NanoPhotometer N30-Touch industries: molecular biology research, pharmaceutical QC, and academic teaching labs.",
+            "industries": [
+              { "name": "Molecular Biology Research", "useCase": "Routine nucleic acid and protein quantification", "consideration": "Performance Package extends range for varied sample concentrations" },
+              { "name": "Pharmaceutical QC", "useCase": "Regulated, high-precision UV/Vis measurement", "consideration": "Recalibration-free optics support consistent long-term accuracy" },
+              { "name": "Academic Teaching Labs", "useCase": "Hands-on spectrophotometry instruction", "consideration": "Touchscreen interface and one-step Auto Sample simplify student use" },
+              { "name": "Multi-Site Research Organizations", "useCase": "Centralized data access and reporting", "consideration": "Connectivity Package enables remote control and LIMS integration" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows Sample Compression Technology and scan performance on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms base unit and upgrade package fit for the lab" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the touchscreen interface and preprogrammed applications" },
+              { "title": "Preventive Maintenance", "description": "Maintains optics, lamp, and touchscreen performance" },
+              { "title": "Spares and Accessories", "description": "Supplies power supplies, replacement parts, and upgrade package installation" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NanoPhotometer N30-Touch used for?", "answer": "It's an entry-level microvolume UV/Vis spectrophotometer for fast, reliable nucleic acid and protein quantification from samples as small as 0.3 µl." },
+            { "question": "Does the N30-Touch need regular recalibration?", "answer": "No, sealed optics with True Path Technology guarantee lifetime accuracy without recalibration." },
+            { "question": "How fast is a full scan?", "answer": "2.5 to 4 seconds across the standard 200-650 nm range, with no lamp warm-up time needed." },
+            { "question": "What detection range does the standard unit cover?", "answer": "dsDNA from 5 to 1,500 ng/µl and BSA from 0.15 to 44 mg/ml, expandable to 1-16,500 ng/µl and 0.03-478 mg/ml with the Performance Package." },
+            { "question": "What does the Performance Package add?", "answer": "An expanded detection range for DNA and protein measurement, plus a wider full spectrum scan mode extending to 900 nm." },
+            { "question": "What does the Applications Package add?", "answer": "Full access to protein assays (BCA, Bradford, Lowry), kinetics, OD600 cell density, wavescan, standard curve generation, and features like Sample Control™ Technology and dye label measurement." },
+            { "question": "What does the Connectivity Package add?", "answer": "Wi-Fi, USB, HDMI, and LAN connectivity, remote control via PC, tablet, or smartphone, LIMS integration via REST API and Push Service, and 64 GB of onboard data storage." },
+            { "question": "Can the upgrade packages be added later?", "answer": "Yes, Performance, Applications, and Connectivity packages can each be added independently, on the lab's own timeline." },
+            { "question": "How does Sample Compression Technology work?", "answer": "It compresses the sample into a capillary film between two fixed quartz surfaces, removing dependence on surface tension and preventing evaporation during measurement." },
+            { "question": "What is the price of the NanoPhotometer N30-Touch in India?", "answer": "Get in touch and Inkarp will put together a quote based on the base unit and any upgrade packages needed." },
+            { "question": "Who is the authorized distributor of the NanoPhotometer N30-Touch in India?", "answer": "Inkarp is the authorized distributor and service provider for the Implen NanoPhotometer N30-Touch in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NanoPhotometer N30-Touch in India from Inkarp",
+            "description": "Share the sample types and which capabilities matter most, and the right N30-Touch configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample types and priority capabilities, then confirm the right N30-Touch configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleType", "label": "Sample type and concentration range", "type": "text", "required": false },
+              { "key": "upgradePackages", "label": "Upgrade packages of interest", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right N30-Touch configuration", "body": "Share the typical sample concentration range and which upgrade packages might matter, extended range, more application modes, or remote connectivity, and the right N30-Touch configuration gets confirmed from there." },
+              { "title": "Confirm the difference sealed optics make", "body": "Share how often the current instrument needs recalibration and what that costs in downtime, and the difference N30-Touch's sealed optics make gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Power on. Measure instantly. No lamp warm-up, no recalibration, ever.",
+            "heroLead": "Waiting for a lamp to warm up or scheduling a recalibration eats into lab time that should go to actual measurements. N30-Touch removes both. A xenon flash lamp rated for 10⁹ flashes, up to 10 years, means instant measurement the moment it's powered on, and Sample Compression Technology with True Path Technology keeps path length fixed for life, no recalibration required. A full scan from 200 to 650 nm completes in 2.5 to 4 seconds from just 0.3 µl of sample, all controlled through a 7\" color touchscreen with an adjustable angle. Three modular upgrade packages, Performance, Applications, and Connectivity, let the instrument grow exactly when and how the lab needs it to.",
+            "stats": [
+              { "value": "0.3 µl", "label": "Minimum sample volume" },
+              { "value": "2.5 to 4 sec", "label": "Full scan measurement time" },
+              { "value": "200 to 650 nm", "label": "Standard scan range (up to 900 nm with Performance Package)" },
+              { "value": "5 to 1,500 ng/µl", "label": "Standard dsDNA detection range" },
+              { "value": "Recalibration-free", "label": "Sealed optics, lifetime accuracy" },
+              { "value": "10⁹ flashes", "label": "Xenon lamp lifetime, up to 10 years" },
+              { "value": "7\" touchscreen", "label": "Onboard, glove-compatible display" },
+              { "value": "3 upgrade packages", "label": "Performance, Applications, Connectivity" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NanoPhotometer N30-Touch product information: sample compression technology, upgrade packages, and touchscreen operation.",
+                "body": [
+                  "N30-Touch measures from just 0.3 µl, using Sample Compression Technology to form a capillary film between two scratch-resistant, metal-free quartz surfaces, eliminating surface tension issues and evaporation risk during measurement.",
+                  "True Path Technology holds two fixed anchor points for exact path length, giving recalibration-free accuracy for the lifetime of the instrument.",
+                  "Standard detection covers dsDNA from 5 to 1,500 ng/µl and BSA from 0.15 to 44 mg/ml, across a 200 to 650 nm scan range, expandable to 1 to 16,500 ng/µl, 0.03 to 478 mg/ml, and 200 to 900 nm with the Performance Package.",
+                  "A full scan completes in 2.5 to 4 seconds, with no lamp warm-up time needed thanks to the xenon flash lamp, rated for 10⁹ flashes and up to 10 years of service life.",
+                  "A 7\" color touchscreen with adjustable angle runs the onboard NPOS operating system, with an illuminated sample window and easy-to-clean surfaces, including compatibility with alcohol-based solvents.",
+                  "Three upgrade packages, Performance, Applications, and Connectivity, let the instrument's capabilities expand later without replacing the hardware.",
+                  "Over 10,000 units are installed globally, and the NanoPhotometer platform is referenced in more than 15,000 scientific publications worldwide.",
+                  "The instrument carries CE, IEC 61010-1:2012, and EN 61326-1:2013 certification, with a 12-month warranty as standard."
+                ],
+                "cards": [
+                  { "title": "0.3 µl minimum sample", "description": "Reads precious, limited samples directly" },
+                  { "title": "Recalibration-free optics", "description": "No costly, time-consuming recalibration needed" },
+                  { "title": "Instant measurement", "description": "No lamp warm-up time required" },
+                  { "title": "3 modular upgrade packages", "description": "Expands capability without replacing hardware" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Minimum sample volume", "description": "0.3 µl" },
+                  { "title": "Standard scan range", "description": "200-650 nm (200-900 nm with Performance Package)" },
+                  { "title": "Standard dsDNA range", "description": "5-1,500 ng/µl (1-16,500 ng/µl with Performance Package)" },
+                  { "title": "Measure time", "description": "2.5-4.0 sec per full scan" },
+                  { "title": "Upgrade packages", "description": "Performance, Applications, Connectivity" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "NanoPhotometer N30-Touch key features: Sample Compression Technology, True Path Technology, touchscreen."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NanoPhotometer N30-Touch applications: nucleic acid quantification, protein assays, OD600, and kinetics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NanoPhotometer N30-Touch technical specifications: detection range, optical performance, and general specifications."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Recalibration-Free by Design",
+                "title": "Recalibration-Free by Design",
+                "description": "Recalibration cycles cost time and, over the life of an instrument, money. N30-Touch's sealed optics remove that recurring task entirely, guaranteeing lifetime accuracy without it. Sample Compression Technology forms a contained capillary film between two fixed quartz surfaces, removing dependence on surface tension and preventing evaporation throughout the entire measurement. True Path Technology locks path length in place using two fixed anchor points, so there's no drift to correct for over time, and no costly recalibration visit required. Durable, inert, scratch-resistant surfaces also mean no reconditioning is needed to keep those surfaces performing accurately.",
+                "cards": [
+                  { "title": "No recurring recalibration cost or downtime", "description": "Sealed optics, True Path Technology" },
+                  { "title": "Accurate readings without surface tension issues", "description": "Sample Compression Technology, capillary film" },
+                  { "title": "Protection from evaporation during measurement", "description": "Contained sample environment between quartz surfaces" },
+                  { "title": "Long-term surface durability", "description": "Scratch-resistant, solvent-compatible quartz" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Growing the Instrument on Your Terms",
+                "title": "Growing the Instrument on Your Terms",
+                "description": "Buying capability the lab doesn't need yet, or being stuck without capability it grows into needing, are both real costs. N30-Touch's three upgrade packages let capability expand exactly when it's needed, not before.",
+                "body": [
+                  "The Performance Package extends detection range for both DNA and protein measurement, from 5-1,500 ng/µl to 1-16,500 ng/µl dsDNA, and expands the full spectrum scan mode from 200-650 nm to 200-900 nm.",
+                  "The Applications Package unlocks the full range of intuitive applications: protein assays (BCA, Bradford, Lowry), kinetics, OD600 cell density, wavescan, standard curve generation, and additional features like Sample Control™ Technology and dye label measurement.",
+                  "The Connectivity Package adds Wi-Fi, USB A/B, HDMI, and LAN connections, remote control via PC, tablet, or smartphone, LIMS integration through REST API and Push Service, and 64 GB of onboard data storage."
+                ],
+                "utilityChecklist": [
+                  { "label": "Broader detection range and extended scan mode", "value": "Performance Package" },
+                  { "label": "Full application suite: protein assays, kinetics, OD600, and more", "value": "Applications Package" },
+                  { "label": "Remote control, network printing, and LIMS integration", "value": "Connectivity Package" },
+                  { "label": "A device that scales without hardware replacement", "value": "All three packages, added independently or together" }
+                ],
+                "disclaimer": "Share which capabilities matter most right now versus later, wider detection range, more applications, or remote connectivity, and the right upgrade path gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NanoPhotometer N30-Touch documentation: brochure, technical datasheet, and upgrade package guides.",
+                "cards": [
+                  { "title": "NanoPhotometer N30-Touch Brochure", "description": "Available on request" },
+                  { "title": "Upgrade Package Configuration Guide", "description": "Available on request" },
+                  { "title": "Technical Datasheet", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NanoPhotometer N30-Touch in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Instant measurement, recalibration-free optics, and three upgrade packages that let the instrument grow exactly when the lab needs it to. Share the sample types and which capabilities matter most, and the right N30-Touch configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "principal": {
+    "slug": "sonics-and-materials",
+    "principalName": "Sonics & Materials",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Ultrasonic Probe Sonicators (Production Scale)",
+      "slug": "ultrasonic-probe-sonicators-production-scale",
+      "products": [
+        {
+          "name": "VCX-1500 Ultrasonic Probe Sonicator",
+          "slug": "vcx-1500-ultrasonic-probe-sonicator",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
+          "imageAlt": "Sonics & Materials VCX-1500 Ultrasonic Probe Sonicator - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/vcx-1500-ultrasonic-probe-sonicator",
+          "breadcrumbPath": "Home > Products > Ultrasonic Probe Sonicators (Production Scale) > VCX-1500 Ultrasonic Probe Sonicator",
+          "h1": "VCX-1500 Ultrasonic Probe Sonicator",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Production-scale sonication usually means picking your processing method before you buy the equipment. VCX-1500 keeps that choice open.",
+
+          "features": [
+            "Booster-Equipped Standard Probe: 1\" diameter, 10\" long, 100μm maximum amplitude, with booster included.",
+            "Flow Cell Inline Processing: Converts batch processing into continuous inline processing on the same platform.",
+            "Dedicated High-Volume Configuration: Pre-configured SKU ships with the flow cell built in for continuous-first workflows.",
+            "Compressed Air Cooling: Required converter cooling to prevent overheating during extended production runs.",
+            "220V Single-Phase Power: 20A electrical requirement suited to production floor installation.",
+            "Probe-Included or Probe-Free Ordering: Choose complete configuration or supply your own compatible probe and booster.",
+            "Production-Grade Durability: Positioned as a reliable, durable choice across varied high-volume applications.",
+            "Wide Probe Option Range: Beyond the standard probe, additional options support varied process needs."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sonics & Materials VCX-1500 Ultrasonic Probe Sonicator" },
+            { "label": "Category", "value": "Ultrasonic Probe Sonicators (Production Scale)" },
+            { "label": "Power Output", "value": "1,500 W" },
+            { "label": "Volume Range", "value": "10-50 L" },
+            { "label": "Standard Probe", "value": "1\" diameter, 10\" long" },
+            { "label": "Maximum Amplitude", "value": "100 μm" },
+            { "label": "Booster", "value": "Included, standard configuration" },
+            { "label": "Electrical Requirement", "value": "220V, 50/60Hz, single phase, 20A" },
+            { "label": "Cooling", "value": "Compressed air, required" },
+            { "label": "SKU: VCX-1500-220", "value": "Converter, 1\" probe, and booster included" },
+            { "label": "SKU: VCX-1500A-220", "value": "Converter only" },
+            { "label": "SKU: VCX-1500HV-220", "value": "High volume flow cell configuration" }
+          ],
+
+          "applications": [
+            "High-Volume Homogenization: 1500W power across 10-50L production volumes",
+            "Dispersion Processing: Booster-equipped probe for enhanced displacement",
+            "Emulsification: Consistent ultrasonic energy at production scale",
+            "Continuous Inline Processing: Flow cell accessory or dedicated HV configuration",
+            "Batch Production Runs: Standard probe configuration for dip-style processing"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Facility Readiness" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Configuration Options" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Batch processing, or continuous flow?",
+            "description": "Select your process type, and see which VCX-1500 configuration fits.",
+            "steps": [
+              {
+                "key": "processType",
+                "question": "What's your process type?",
+                "options": [
+                  { "val": "batch", "label": "Batch" },
+                  { "val": "continuous", "label": "Continuous inline" },
+                  { "val": "add-later", "label": "Planning to add flow cell later" }
+                ]
+              },
+              {
+                "key": "probeRequirement",
+                "question": "Do you need the probe included?",
+                "options": [
+                  { "val": "included", "label": "Included" },
+                  { "val": "own", "label": "Supplying your own" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Is your facility ready for VCX-1500?",
+            "description": "Confirm your compressed air and electrical supply, and see whether your site is ready for installation.",
+            "fields": [
+              {
+                "key": "compressedAirSupply",
+                "label": "Compressed air supply",
+                "options": [
+                  { "val": "available", "label": "Available" },
+                  { "val": "not-yet", "label": "Not yet in place" }
+                ]
+              },
+              {
+                "key": "electricalCircuit",
+                "label": "Electrical circuit",
+                "options": [
+                  { "val": "confirmed", "label": "220V single-phase, 20A confirmed" },
+                  { "val": "not-confirmed", "label": "Not yet confirmed" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Does Your Facility Need?",
+                "body": "Confirm compressed air availability for converter cooling and a 220V single-phase, 20A electrical circuit before installation.",
+                "tags": ["Compressed Air Cooling", "220V Single-Phase Power"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "VC-50 vs. VCX-1500",
+            "description": "VCX-1500 compared with the entry-level VC-50 across the Sonics & Materials range.",
+            "columns": [
+              { "label": "VC-50" },
+              { "label": "VCX-1500" }
+            ],
+            "rows": [
+              { "feature": "Power Output", "values": ["50 W", "1,500 W"] },
+              { "feature": "Volume Range", "values": ["0.5-15 mL", "10-50 L"] },
+              { "feature": "Probe", "values": ["1/4\" (or 1/8\" per SKU)", "1\" x 10\", with booster"] },
+              { "feature": "Cooling", "values": ["Not stated as required", "Compressed air, required"] },
+              { "feature": "Processing Mode", "values": ["Batch, hand-held", "Batch or continuous, via flow cell"] },
+              { "feature": "Best For", "values": ["Routine bench-scale lab work", "Production-scale processing"] },
+              { "feature": "Choose when", "values": ["Sample volumes stay under 15mL", "Production volumes reach 10-50L"] }
+            ],
+            "disclaimer": "These sit at opposite ends of the same manufacturer's range, entry-level bench work versus full production-scale processing."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "VCX-1500 industries: pharmaceutical manufacturing, food and beverage processing, and materials production.",
+            "industries": [
+              { "name": "Pharmaceutical Manufacturing", "useCase": "Production-scale dispersion and emulsification", "consideration": "Flow cell configuration for continuous batch runs" },
+              { "name": "Food and Beverage Processing", "useCase": "High-volume homogenization", "consideration": "Compressed air cooling for extended production shifts" },
+              { "name": "Materials and Nanotechnology Production", "useCase": "Consistent dispersion at production scale", "consideration": "100μm amplitude for demanding process requirements" },
+              { "name": "Chemical Processing", "useCase": "Continuous inline treatment", "consideration": "High-volume flow cell configuration" },
+              { "name": "Contract Manufacturing", "useCase": "Varied client production volumes", "consideration": "10-50L range with batch or continuous flexibility" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows batch and continuous processing on your own material" },
+              { "title": "Configuration Assessment", "description": "Confirms the right SKU and flow cell configuration" },
+              { "title": "Installation Support", "description": "Confirms facility readiness, compressed air and electrical, before setup" },
+              { "title": "Operator Training", "description": "Gets your team confident with probe operation and flow cell setup" },
+              { "title": "Preventive Maintenance", "description": "Maintains converter, probe, and cooling system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement probes, boosters, and flow cell components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the VCX-1500 used for?", "answer": "It's a 1,500-watt production-scale ultrasonic processor for high-volume homogenization, dispersion, and emulsification across 10 to 50 liter volumes." },
+            { "question": "Can VCX-1500 run continuous processing, not just batch?", "answer": "Yes, the flow cell inline processing accessory converts it to continuous operation, or you can order the dedicated VCX-1500HV-220 configuration with the flow cell already included." },
+            { "question": "What cooling does VCX-1500 need?", "answer": "Compressed air cooling of the converter is required to prevent overheating during operation, not an optional accessory." },
+            { "question": "What electrical supply does VCX-1500 require?", "answer": "220V, 50/60Hz, single phase, at 20A." },
+            { "question": "What's the difference between the three confirmed SKUs?", "answer": "VCX-1500-220 includes the converter, probe, and booster; VCX-1500A-220 includes the converter only; VCX-1500HV-220 includes the high volume flow cell configuration for continuous processing." },
+            { "question": "Can I use my own probe with VCX-1500?", "answer": "Yes, order the VCX-1500A-220 configuration, which ships with the converter but without a probe or booster." },
+            { "question": "What's the maximum probe amplitude?", "answer": "100 micrometers on the standard 1\" diameter, 10\" long probe." },
+            { "question": "How do I confirm my facility is ready for installation?", "answer": "Confirm compressed air availability for converter cooling and a 220V single-phase, 20A electrical circuit before installation." },
+            { "question": "What is the price of the VCX-1500 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your process type and configuration." },
+            { "question": "Who is the authorized distributor of the VCX-1500 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-1500 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the VCX-1500 in India from Inkarp",
+            "description": "Share your process type and facility details, and the right VCX-1500 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your process type and facility details, then confirm the right VCX-1500 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "processType", "label": "Process type (batch, continuous, or mixed)", "type": "text", "required": false },
+              { "key": "facilityDetails", "label": "Compressed air and electrical supply details", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right VCX-1500 configuration", "body": "Tell us whether your process is batch or continuous, and we'll get you the right VCX-1500 configuration." },
+              { "title": "Confirm the right VCX-1500 SKU", "body": "Tell us whether your process runs batch, continuous, or a mix of both, and we'll get you the right VCX-1500 SKU." },
+              { "title": "Installation and first-run support", "body": "Confirms facility readiness, compressed air and electrical, before setup." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "From batch processing to continuous inline flow. Same 1500W processor, your choice.",
+            "heroLead": "Production-scale sonication usually means picking your processing method before you buy the equipment. VCX-1500 keeps that choice open. A 1500-watt ultrasonic processor drives a 1\" diameter, 10\" long probe rated to 100μm maximum amplitude, with a booster included as standard for the extra displacement production volumes need. When your process calls for continuous rather than batch processing, the flow cell inline accessory turns the same platform into a continuous processing line, available as a dedicated pre-configured high-volume unit if that's your primary use case from day one. Running at this power level means real facility requirements: 220V single-phase power at 20A, and compressed air cooling of the converter, required, not optional, to prevent overheating during extended runs.",
+            "stats": [
+              { "value": "1,500 W", "label": "Ultrasonic power output" },
+              { "value": "10-50 L", "label": "Production-scale volume range" },
+              { "value": "1 in x 10 in", "label": "Standard probe diameter and length" },
+              { "value": "100 μm", "label": "Maximum probe amplitude" },
+              { "value": "Included", "label": "Booster (standard configuration)" },
+              { "value": "220V, 20A", "label": "Electrical requirement" },
+              { "value": "Required", "label": "Compressed air cooling" },
+              { "value": "3", "label": "Confirmed SKU configurations" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "VCX-1500 ultrasonic probe sonicator product information: probe specifications, flow cell capability, and facility requirements.",
+                "body": [
+                  "1500 W production scale processing: Designed for high power ultrasonic processing across demanding batch and continuous workflows.",
+                  "Batch and continuous processing: Use the same 1500 W platform for batch sonication or switch to continuous inline processing with the flow cell accessory.",
+                  "Production scale probe: The standard configuration includes a 1\" diameter, 10\" long probe with a maximum amplitude of 100 μm.",
+                  "Booster included: The supplied booster provides additional displacement required for production volume processing.",
+                  "Flexible probe options: A range of probe configurations is available to match different processing requirements.",
+                  "Inline processing capability: The flow cell accessory converts the system from batch dipping to continuous inline processing.",
+                  "Dedicated high volume configuration: A dedicated configuration is available with the flow cell already integrated for applications where continuous flow is the primary requirement.",
+                  "Compressed air cooling required: The converter requires compressed air cooling to prevent overheating during operation.",
+                  "Electrical requirement: Requires a 220 V, single phase, 20 A electrical supply."
+                ],
+                "cards": [
+                  { "title": "1,500 W", "description": "Production-scale ultrasonic power" },
+                  { "title": "100 μm", "description": "Maximum probe amplitude" },
+                  { "title": "Flow cell capable", "description": "Continuous inline processing option" },
+                  { "title": "3 SKUs", "description": "Standard, probe-free, or high-volume flow cell" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Power", "description": "1,500 W" },
+                  { "title": "Standard probe", "description": "1\" diameter, 10\" long, 100μm maximum amplitude, booster included" },
+                  { "title": "Electrical requirement", "description": "220V, 50/60Hz, single phase, 20A" },
+                  { "title": "Cooling", "description": "Compressed air cooling of the converter, required" },
+                  { "title": "SKU VCX-1500-220", "description": "Converter, probe, and booster included" },
+                  { "title": "SKU VCX-1500A-220", "description": "Converter only, probe and booster not included" },
+                  { "title": "SKU VCX-1500HV-220", "description": "Includes the high volume flow cell configuration" },
+                  { "title": "Full specifications", "description": "Frequency and duty cycle detail are available in the VCX-1500 datasheet" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "VCX-1500 ultrasonic probe sonicator key features: booster-equipped probe, flow cell capability, compressed air cooling."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "VCX-1500 applications: high-volume homogenization, dispersion, and emulsification."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "VCX-1500 ultrasonic probe sonicator technical specifications: power output, probe dimensions, and electrical requirements."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Batch and Continuous Processing Configurations",
+                "title": "Batch and Continuous Processing Configurations",
+                "description": "Three confirmed configurations cover the range from straightforward batch processing to fully continuous inline workflows. The standard VCX-1500-220 ships complete, converter, 1\" probe, and booster, ready for batch-style processing out of the box. VCX-1500A-220 drops the probe and booster for labs supplying their own compatible hardware or building a custom setup. VCX-1500HV-220 goes the other direction entirely, shipping with the high volume flow cell pre-configured for labs whose process is continuous inline from the start rather than an added-later accessory.",
+                "cards": [
+                  { "title": "Standard batch processing, ready out of the box", "description": "VCX-1500-220" },
+                  { "title": "Custom setup with your own probe and booster", "description": "VCX-1500A-220" },
+                  { "title": "Continuous inline processing as the primary workflow", "description": "VCX-1500HV-220" },
+                  { "title": "Batch now, considering flow cell later", "description": "VCX-1500-220, with the flow cell added as an accessory when needed" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Facility Requirements and Cooling",
+                "title": "Facility Requirements and Cooling",
+                "description": "VCX-1500 facility requirements: compressed air cooling and 220V electrical supply.",
+                "body": [
+                  "Production-scale ultrasonic power generates real heat, and VCX-1500 is built around a specific answer to that: compressed air cooling of the converter, stated as required rather than optional, to prevent overheating during extended runs.",
+                  "Electrical supply matters just as much before installation. The system runs on 220V, 50/60Hz, single-phase power at 20A, worth confirming against your facility's available circuits before the unit arrives rather than after."
+                ],
+                "utilityChecklist": [
+                  { "label": "Compressed air supply availability", "value": "Required for converter cooling" },
+                  { "label": "Electrical circuit capacity", "value": "220V, single phase, 20A" },
+                  { "label": "Continuous versus batch processing plans", "value": "Determines standard versus flow cell configuration" },
+                  { "label": "Existing probe or booster inventory", "value": "Confirms whether VCX-1500A-220 fits" }
+                ],
+                "disclaimer": "Send us your facility's compressed air and electrical supply details, and we'll confirm your site is ready before installation."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "VCX-1500 documentation: full technical datasheet available on request.",
+                "cards": [
+                  { "title": "VCX-1500 Technical Datasheet", "description": "Available on request" },
+                  { "title": "VCX-1500 Accessories Catalog", "description": "Available on request" },
+                  { "title": "VCX-1500 Flow Cell Specification", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the VCX-1500 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Batch or continuous processing on the same 1500W platform, with a dedicated high-volume configuration when flow processing is the priority. Tell us your process type and facility details, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "VCX-2000 Ultrasonic Probe Sonicator",
+          "slug": "vcx-2000-ultrasonic-probe-sonicator",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
+          "imageAlt": "Sonics & Materials VCX-2000 Ultrasonic Probe Sonicator - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/vcx-2000-ultrasonic-probe-sonicator",
+          "breadcrumbPath": "Home > Products > Ultrasonic Probe Sonicators (Production Scale) > VCX-2000 Ultrasonic Probe Sonicator",
+          "h1": "VCX-2000 Ultrasonic Probe Sonicator",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Once your production volume crosses 10 liters, more power stops being a nice-to-have and starts being the deciding factor. VCX-2000 is built for exactly that threshold.",
+
+          "features": [
+            "Standard 38mm Probe with Booster: 1.5\" diameter probe included with booster for production-scale volumes.",
+            "Optional 25mm Probe: Extends useful flexibility down into the 1-10L range.",
+            "Faster Flow Cell Processing: The 630-0705 flow cell with 630-0676 probe outpaces the flow cell used with the VCX-1500.",
+            "Continuous Processing for 5L and Above: Confirmed flow cell compatibility for samples at or beyond 5L.",
+            "Dedicated Flow Cell Package SKU: VCX-2000FP-220 ships with the flow cell configuration pre-included.",
+            "220V Single-Phase Power: 20A electrical requirement, consistent with the rest of the production range.",
+            "Probe-Included or Probe-Free Ordering: Choose complete configuration or supply your own compatible probe and booster.",
+            "Positioned Above VCX-1500: Explicitly the better choice once volumes cross 10L."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sonics & Materials VCX-2000 Ultrasonic Probe Sonicator" },
+            { "label": "Category", "value": "Ultrasonic Probe Sonicators (Production Scale)" },
+            { "label": "Power Output", "value": "2,000 W" },
+            { "label": "Standard Probe", "value": "38mm (1.5\") diameter, with booster" },
+            { "label": "Optional Probe", "value": "25mm, for 1-10L flexibility" },
+            { "label": "Positioned Volume Range", "value": "10L and above (primary), 1-10L (with optional probe)" },
+            { "label": "Electrical Requirement", "value": "220V, 50/60Hz, single phase, 20A" },
+            { "label": "Flow Cell", "value": "630-0705, for continuous processing, samples ≥5L" },
+            { "label": "Flow Cell Probe", "value": "630-0676, 38mm" },
+            { "label": "Flow Cell Performance", "value": "Faster than the 630-0549 flow cell used with the VCX-1500" },
+            { "label": "SKU: VCX-2000-220", "value": "Converter, 1.5\" probe, and booster included" },
+            { "label": "SKU: VCX-2000A-220", "value": "Converter only" },
+            { "label": "SKU: VCX-2000FP-220", "value": "Flow cell package included" }
+          ],
+
+          "applications": [
+            "Large-Batch Homogenization: 2000W power positioned for 10L and larger volumes",
+            "Dispersion at Production Scale: Booster-equipped 38mm probe for consistent output",
+            "Continuous Inline Processing: 630-0705 flow cell, faster than the VCX-1500 equivalent",
+            "Mid-Range Volume Flexibility: Optional 25mm probe for 1-10L work on the same platform",
+            "Emulsification: Consistent ultrasonic energy across large production batches"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Flow Cell Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Probe Options" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What volume are you processing?",
+            "description": "Select your target batch volume, and see which VCX-2000 probe fits.",
+            "steps": [
+              {
+                "key": "batchVolume",
+                "question": "What's your target batch volume?",
+                "options": [
+                  { "val": "10l-plus", "label": "10L and above" },
+                  { "val": "1-10l", "label": "1-10L, on the same platform" },
+                  { "val": "mixed", "label": "Mixed batch sizes across projects" },
+                  { "val": "uncertain", "label": "Uncertain, evaluating processor tier" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a probe-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Batch processing, or continuous flow?",
+            "description": "Select your process type, and see which VCX-2000 SKU fits.",
+            "fields": [
+              {
+                "key": "processType",
+                "label": "Process type",
+                "options": [
+                  { "val": "batch", "label": "Batch" },
+                  { "val": "continuous", "label": "Continuous" },
+                  { "val": "add-later", "label": "Planning to add flow cell later" }
+                ]
+              },
+              {
+                "key": "volumeThreshold",
+                "label": "Volume",
+                "options": [
+                  { "val": "above-5l", "label": "Above 5L" },
+                  { "val": "below-5l", "label": "Below 5L" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "Which VCX-2000 SKU Fits?",
+                "body": "VCX-2000-220 includes the converter, 1.5\" probe, and booster; VCX-2000A-220 includes the converter only; VCX-2000FP-220 includes the flow cell package for continuous processing.",
+                "tags": ["Dedicated Flow Cell Package SKU"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "VCX-1500 vs. VCX-2000",
+            "description": "VCX-2000 compared directly with the VCX-1500 across the production-scale range.",
+            "columns": [
+              { "label": "VCX-1500" },
+              { "label": "VCX-2000" }
+            ],
+            "rows": [
+              { "feature": "Power Output", "values": ["1,500 W", "2,000 W"] },
+              { "feature": "Standard Probe", "values": ["1\" x 10\"", "38mm (1.5\")"] },
+              { "feature": "Optional Probe", "values": ["Not stated", "25mm, for 1-10L flexibility"] },
+              { "feature": "Positioned Volume Range", "values": ["10-50L", "10L+ primary, 1-10L with optional probe"] },
+              { "feature": "Flow Cell Part Number", "values": ["630-0549", "630-0705"] },
+              { "feature": "Flow Cell Probe", "values": ["Not separately numbered", "630-0676, 38mm"] },
+              { "feature": "Flow Cell Speed", "values": ["Baseline", "Confirmed faster than VCX-1500's flow cell"] },
+              { "feature": "Cooling", "values": ["Compressed air, required", "Not separately restated, confirm directly"] },
+              { "feature": "Best For", "values": ["10-50L production, standard throughput", "10L+ with higher power, or 1-10L flexibility via optional probe"] },
+              { "feature": "Choose when", "values": ["Standard production throughput meets your needs", "You need more power, faster flow processing, or probe flexibility"] }
+            ],
+            "disclaimer": "Both share the same 220V/20A electrical requirement and SKU structure (standard, probe-free, flow cell package), with VCX-2000 sitting a tier above on power and flow cell speed."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "VCX-2000 industries: large-scale pharmaceutical manufacturing, industrial materials processing, and food production.",
+            "industries": [
+              { "name": "Large-Scale Pharmaceutical Manufacturing", "useCase": "High-volume dispersion and emulsification", "consideration": "Faster flow cell processing for continuous production lines" },
+              { "name": "Industrial Materials Processing", "useCase": "Nanomaterial and particle dispersion at scale", "consideration": "Optional 25mm probe for mixed-volume project work" },
+              { "name": "Food and Beverage Production", "useCase": "High-throughput homogenization", "consideration": "Standard 38mm probe for consistent large-batch output" },
+              { "name": "Chemical Processing", "useCase": "Continuous inline treatment at higher volumes", "consideration": "Flow cell package for dedicated continuous workflows" },
+              { "name": "Contract Manufacturing", "useCase": "Varied client volumes from 1L to 50L+", "consideration": "Dual probe options cover a wider range than VCX-1500 alone" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows probe options and flow cell processing on your own material" },
+              { "title": "Configuration Assessment", "description": "Confirms the right probe, SKU, and flow cell configuration" },
+              { "title": "Installation Support", "description": "Confirms facility readiness before setup" },
+              { "title": "Operator Training", "description": "Gets your team confident with probe swaps and flow cell operation" },
+              { "title": "Preventive Maintenance", "description": "Maintains converter, probe, and flow cell performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement probes, boosters, and flow cell components" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the VCX-2000 used for?", "answer": "It's a 2,000-watt production-scale ultrasonic processor, positioned as the better choice once processing volumes reach 10 liters or more." },
+            { "question": "How is VCX-2000 different from VCX-1500?", "answer": "VCX-2000 delivers more power, 2000W versus 1500W, and its flow cell configuration processes faster than the flow cell used with the VCX-1500." },
+            { "question": "Can VCX-2000 handle smaller volumes too?", "answer": "Yes, the optional 25mm probe extends flexibility down into the 1-10L range on the same processor." },
+            { "question": "How fast is the flow cell compared to VCX-1500?", "answer": "The 630-0705 flow cell with its 38mm flow-cell probe (630-0676) processes faster than the 630-0549 flow cell used with the VCX-1500." },
+            { "question": "What electrical supply does VCX-2000 require?", "answer": "220V, 50/60Hz, single phase, at 20A, the same requirement as the VCX-1500." },
+            { "question": "What's the difference between the three confirmed SKUs?", "answer": "VCX-2000-220 includes the converter, 1.5\" probe, and booster; VCX-2000A-220 includes the converter only; VCX-2000FP-220 includes the flow cell package for continuous processing." },
+            { "question": "What's the minimum sample volume for flow cell processing?", "answer": "5 liters and above for the 630-0705 flow cell configuration." },
+            { "question": "Should I choose VCX-1500 or VCX-2000?", "answer": "Choose VCX-2000 for volumes at or above 10L where higher power and faster flow processing matter, or when you need the flexibility to also handle 1-10L work with the optional 25mm probe." },
+            { "question": "What is the price of the VCX-2000 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your process type and configuration." },
+            { "question": "Who is the authorized distributor of the VCX-2000 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-2000 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the VCX-2000 in India from Inkarp",
+            "description": "Share your batch volume and process type, and the right VCX-2000 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your batch volume and process type, then confirm the right VCX-2000 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "batchVolume", "label": "Typical batch volume", "type": "text", "required": false },
+              { "key": "processType", "label": "Process type (batch, continuous, or mixed)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right VCX-2000 configuration", "body": "Tell us your typical batch volume and whether continuous flow processing matters, and we'll get you the right VCX-2000 configuration." },
+              { "title": "Confirm the right probe configuration", "body": "Tell us your typical and largest batch volumes, and we'll get you the right probe configuration for your VCX-2000." },
+              { "title": "Installation and first-run support", "body": "Confirms facility readiness before setup." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "More power than the VCX-1500. Faster flow-cell processing too.",
+            "heroLead": "Once your production volume crosses 10 liters, more power stops being a nice-to-have and starts being the deciding factor. VCX-2000 is built for exactly that threshold. A 2,000-watt processor drives a standard 38mm (1.5\") probe with booster included, positioned as the better choice once volumes reach 10L and beyond. An optional 25mm probe brings genuine flexibility back down into the 1-10L range, so the same processor covers more ground than its production-scale positioning alone suggests. When continuous processing is the goal, the compatible 630-0705 flow cell with its 38mm flow-cell probe (630-0676) processes faster than the flow cell used with the VCX-1500, a real, direct advantage at this power tier. Electrical requirements match the rest of the production range: 220V, single-phase, 20A.",
+            "stats": [
+              { "value": "2,000 W", "label": "Ultrasonic power output" },
+              { "value": "38 mm (1.5\")", "label": "Standard probe diameter" },
+              { "value": "25 mm", "label": "Optional probe for 1-10L flexibility" },
+              { "value": "10 L+", "label": "Primary positioned volume range" },
+              { "value": "Faster", "label": "Flow-cell processing vs the VCX-1500" },
+              { "value": "220V, 20A", "label": "Electrical requirement" },
+              { "value": "Included", "label": "Booster (standard configuration)" },
+              { "value": "3", "label": "Confirmed SKU configurations" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "VCX-2000 ultrasonic probe sonicator product information: probe options, flow cell performance, and configuration.",
+                "body": [
+                  "2000 W production scale processing: Designed for high power ultrasonic processing, with a recommended processing range of 10 L and above.",
+                  "Higher power for larger volumes: Provides greater processing capacity than the VCX 1500 for applications requiring larger batch volumes.",
+                  "Standard 38 mm probe: The standard configuration includes a 38 mm probe with a booster, providing the confirmed starting setup for larger volume processing.",
+                  "Flexible 1 to 10 L processing: An optional 25 mm probe extends the system's flexibility for applications ranging from 1 to 10 L, allowing different batch sizes to be handled on the same processor.",
+                  "Continuous processing capability: The compatible 630 0705 flow cell supports continuous inline processing when paired with the dedicated 38 mm flow cell probe (630 0676).",
+                  "Faster inline processing: The 630 0676 probe and 630 0705 flow cell combination provides faster processing than the 630 0549 flow cell used with the VCX 1500."
+                ],
+                "cards": [
+                  { "title": "2,000 W", "description": "Above the VCX-1500 in the production range" },
+                  { "title": "38mm / 25mm", "description": "Standard and optional probe sizes" },
+                  { "title": "Faster flow cell", "description": "Confirmed processing speed advantage vs VCX-1500" },
+                  { "title": "3 SKUs", "description": "Standard, probe-free, or flow cell package" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Power", "description": "2,000 W" },
+                  { "title": "Standard probe", "description": "38mm (1.5\"), booster included" },
+                  { "title": "Optional probe", "description": "25mm, for 1-10L flexibility" },
+                  { "title": "Electrical requirement", "description": "220V, 50/60Hz, single phase, 20A" },
+                  { "title": "Flow cell", "description": "630-0705, with 630-0676 flow-cell probe (38mm), for continuous processing of samples 5L and above" },
+                  { "title": "SKU VCX-2000-220", "description": "Converter, 1.5\" probe, and booster included" },
+                  { "title": "SKU VCX-2000A-220", "description": "Converter only" },
+                  { "title": "SKU VCX-2000FP-220", "description": "Flow cell package included" },
+                  { "title": "Full specifications", "description": "Frequency and duty cycle detail are available in the VCX-2000 datasheet" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "VCX-2000 ultrasonic probe sonicator key features: dual probe options, faster flow cell, booster-equipped standard configuration."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "VCX-2000 applications: large-volume homogenization, dispersion, and emulsification at 10L and above."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "VCX-2000 ultrasonic probe sonicator technical specifications: power output, probe options, and flow cell part numbers."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Probe Options and Volume Flexibility",
+                "title": "Probe Options and Volume Flexibility",
+                "description": "Two probe sizes shape how far this platform actually stretches. The standard 38mm probe, included with booster, is built for the primary positioning: 10 liters and above, where the larger probe diameter delivers the throughput a big batch needs. The optional 25mm probe changes that math, bringing genuine flexibility down into the 1-10L range without requiring a different processor entirely.",
+                "cards": [
+                  { "title": "10L and above", "description": "Standard 38mm probe" },
+                  { "title": "1-10L, on the same platform", "description": "Optional 25mm probe" },
+                  { "title": "Mixed batch sizes across projects", "description": "Both probes, swapped as needed" },
+                  { "title": "Uncertain, evaluating processor tier", "description": "Confirm against the VCX-1500's own volume range first" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Flow Cell Processing and Configuration Options",
+                "title": "Flow Cell Processing and Configuration Options",
+                "description": "VCX-2000 flow cell: faster continuous processing than the VCX-1500, with a dedicated package configuration.",
+                "body": [
+                  "Continuous processing on VCX-2000 runs through the 630-0705 flow cell, built for samples 5L and above, paired with a dedicated 38mm flow-cell probe (630-0676). That combination processes faster than the flow cell configuration used with the VCX-1500, a genuine speed advantage worth weighing against the higher power tier's cost if continuous throughput is the priority.",
+                  "Three SKUs cover the practical configuration choices: complete with standard probe and booster, converter-only for custom builds, and a dedicated flow cell package for labs whose primary use case is continuous processing from the start."
+                ],
+                "utilityChecklist": [
+                  { "label": "Standard batch processing at 10L+", "value": "VCX-2000-220" },
+                  { "label": "Custom setup with existing probe and booster", "value": "VCX-2000A-220" },
+                  { "label": "Continuous flow processing as the primary workflow", "value": "VCX-2000FP-220" },
+                  { "label": "Comparing flow cell speed against the VCX-1500", "value": "630-0705/630-0676 confirmed faster than VCX-1500's 630-0549" }
+                ],
+                "disclaimer": "Tell us whether continuous flow speed matters for your process, and we'll confirm whether VCX-2000's flow cell configuration is worth the step up from VCX-1500."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "VCX-2000 documentation: full technical datasheet available on request.",
+                "cards": [
+                  { "title": "VCX-2000 Technical Datasheet", "description": "Available on request" },
+                  { "title": "VCX-2000 Accessories Catalog", "description": "Available on request" },
+                  { "title": "VCX-2000 Flow Cell Specification", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the VCX-2000 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "More power than the VCX-1500, with faster flow-cell processing and the flexibility of an optional probe for smaller volumes. Tell us your batch volume and process type, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

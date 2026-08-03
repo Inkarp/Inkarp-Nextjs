@@ -1,0 +1,370 @@
+{
+  "principal": {
+    "slug": "affinite-instruments",
+    "principalName": "Affinite Instruments",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "SPR Instrument Control and Analysis Software",
+      "slug": "spr-instrument-control-and-analysis-software",
+      "products": [
+        {
+          "name": "Affilabs.core Software",
+          "slug": "affilabs-core-software",
+          "principalImage": "/assets/images/PrincipalLogos/RowSeven/Affinite.webp",
+          "imageAlt": "Affinite Instruments Affilabs.core Software - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/affilabs-core-software",
+          "breadcrumbPath": "Home > Products > SPR Instrument Control and Analysis Software > Affilabs.core Software",
+          "h1": "Affilabs.core Software",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "SPR software usually means juggling separate tools for calibration, acquisition, analysis, and export. Affilabs.core handles all of it in one desktop application, built specifically for the P4SPR and P4PRO instruments, with Sparq, a smart operation support assistant, built directly in.",
+
+          "features": [
+            "Real-Time Sensorgram: Live 4-channel wavelength plot with automatic injection flags and cycle markers.",
+            "Automated Calibration: One-click servo alignment, LED calibration, and S-pol reference capture.",
+            "Method Queue: Multi-step sequences with templates, and steps can be added mid-run.",
+            "Edits & Analysis: Alignment, ΔSPR cursors, KD fitting, and cycle comparison in one view.",
+            "Excel & Data Export: Excel, CSV for Origin and Prism, sensorgram images, and clipboard export.",
+            "Optical Fault Detection: Leak and bubble detection with real-time signal quality scoring.",
+            "Experiment Notebook: Tag, annotate, rate, and search the full experiment history.",
+            "IQ/OQ Validation: Timestamped qualification reports for regulatory and lab audits.",
+            "ML-Powered Calibration: Machine learning optimizes LED settings and convergence automatically."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Affinité Instruments Affilabs.core" },
+            { "label": "Category", "value": "SPR Instrument Control and Analysis Software" },
+            { "label": "Compatible Instruments", "value": "P4SPR, P4PRO" },
+            { "label": "Operating System", "value": "Windows 10 or 11 (64-bit)" },
+            { "label": "USB", "value": "USB 2.0 port, direct connection (avoid hubs)" },
+            { "label": "RAM", "value": "4 GB minimum, 8 GB recommended" },
+            { "label": "Storage", "value": "500 MB free disk space" },
+            { "label": "Display", "value": "1280 x 800 minimum resolution" },
+            { "label": "Internet Requirement", "value": "Not required to run experiments" },
+            { "label": "IQ Validation", "value": "12 automated checks" },
+            { "label": "OQ Validation", "value": "43 tests across 6 suites" },
+            { "label": "Built-In Assistant", "value": "Sparq" }
+          ],
+
+          "applications": [
+            "Kinetic Data Analysis: KD fitting, ΔSPR cursors, and cycle comparison in one application",
+            "Regulated Lab Documentation: Included IQ/OQ validation with timestamped reports",
+            "Teaching and Training Labs: Live sensorgram view and built-in Sparq guidance for new users",
+            "Multi-Step Method Development: Method queue with templates and mid-run step additions",
+            "Instrument Troubleshooting: Sparq resolves calibration, connectivity, and setup issues instantly"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Validation & Compliance" },
+            { "id": "troubleshooting-scenario-guide", "label": "Troubleshooting Guide" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "One Application" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Is the lab's computer ready to run Affilabs.core?",
+            "description": "Enter the computer's specs, and see if it meets the requirements.",
+            "steps": [
+              {
+                "key": "operatingSystem",
+                "question": "What operating system is installed?",
+                "options": [
+                  { "val": "windows-10", "label": "Windows 10" },
+                  { "val": "windows-11", "label": "Windows 11" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "ramAvailable",
+                "question": "How much RAM is available?",
+                "options": [
+                  { "val": "below-4gb", "label": "Below 4 GB" },
+                  { "val": "4gb-or-more", "label": "4 GB or more" }
+                ]
+              },
+              {
+                "key": "usbPortType",
+                "question": "What USB port type is available?",
+                "options": [
+                  { "val": "usb2-direct", "label": "USB 2.0 direct" },
+                  { "val": "usb-hub", "label": "USB hub" },
+                  { "val": "other", "label": "Other" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a setup-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need regulatory-ready documentation?",
+            "description": "Select the lab's compliance requirement, and see how IQ/OQ validation fits.",
+            "fields": [
+              {
+                "key": "regulatoryEnvironment",
+                "label": "Regulatory environment",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "internal-qc", "label": "Internal QC" },
+                  { "val": "formal-audit", "label": "Formal audit requirement" }
+                ]
+              },
+              {
+                "key": "documentationNeed",
+                "label": "Documentation need",
+                "options": [
+                  { "val": "basic-logs", "label": "Basic logs" },
+                  { "val": "full-iq-oq", "label": "Full IQ/OQ reports" }
+                ]
+              },
+              {
+                "key": "instrumentInUse",
+                "label": "Instrument in use",
+                "options": [
+                  { "val": "p4spr", "label": "P4SPR" },
+                  { "val": "p4pro", "label": "P4PRO" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Does IQ/OQ Validation Include?",
+                "body": "Yes, IQ (12 automated checks) and OQ (43 tests across 6 suites) come included with every installation, generating timestamped reports for audits.",
+                "tags": ["IQ/OQ Validation"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "troubleshooting-scenario-guide",
+              "eyebrow": "Troubleshooting Scenario Guide",
+              "title": "What's the issue, and how does Sparq help?",
+              "description": "Select the type of problem encountered, and see how Sparq resolves it.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What type of issue is it?", "choices": "First-time install; Spectrometer not detected; Update needed; Driver issue" },
+                { "title": "How urgent is it?", "choices": "Immediate; General question" },
+                { "title": "Is a log file available?", "choices": "Yes; No" }
+              ],
+              "disclaimer": "Routes to direct support if escalation is needed."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Affilabs.core vs. ezControl (Legacy)",
+            "description": "Affilabs.core comparison: Affilabs.core versus the discontinued ezControl software.",
+            "columns": [
+              { "label": "Affilabs.core" },
+              { "label": "ezControl (Legacy)" }
+            ],
+            "rows": [
+              { "feature": "Support Status", "values": ["Actively supported", "No longer supported"] },
+              { "feature": "Built-In Assistant", "values": ["Sparq, integrated troubleshooting", "Not available"] },
+              { "feature": "Calibration", "values": ["One-click, ML-optimized", "Manual"] },
+              { "feature": "IQ/OQ Validation", "values": ["Included with every installation", "Not available"] },
+              { "feature": "Compatible Instruments", "values": ["P4SPR, P4PRO", "Legacy P4SPR only"] },
+              { "feature": "Choose When", "values": ["Running any current P4SPR or P4PRO instrument", "Never, for new deployments, upgrade path available"] }
+            ],
+            "disclaimer": "Labs still running ezControl are encouraged to reach out about upgrading to an Affilabs.core-compatible instrument."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Affilabs.core industries: pharmaceutical R&D, academic and teaching labs, and regulated diagnostics.",
+            "industries": [
+              { "name": "Pharmaceutical R&D", "useCase": "Kinetic analysis and method development on P4PRO", "consideration": "ML-powered calibration and KD fitting in one application" },
+              { "name": "Academic and Teaching Labs", "useCase": "Training new users on SPR technique", "consideration": "Sparq's built-in guidance reduces the need for dedicated IT support" },
+              { "name": "Regulated Diagnostics and QC", "useCase": "Audit-ready experiment documentation", "consideration": "Included IQ/OQ validation with timestamped reports" },
+              { "name": "Multi-User Core Facilities", "useCase": "Managing experiment history across users", "consideration": "Experiment notebook with tagging, rating, and search" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows live sensorgram acquisition and Sparq support on real workflows" },
+              { "title": "Configuration Assessment", "description": "Confirms system compatibility and validation setup" },
+              { "title": "Installation Support", "description": "Supports software setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with method queues, analysis tools, and Sparq" },
+              { "title": "Preventive Maintenance", "description": "Maintains software updates and calibration performance" },
+              { "title": "Spares and Accessories", "description": "Coordinates upgrade paths for legacy ezControl users" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "Is ezControl Software still supported?", "answer": "No, ezControl is no longer supported. Current P4SPR and P4PRO instruments run Affilabs.core instead; labs still on ezControl are encouraged to reach out about upgrading to a compatible instrument." },
+            { "question": "What is Affilabs.core used for?", "answer": "It's the instrument control, data acquisition, and analysis software built for the P4SPR and P4PRO, covering an SPR experiment from first connection through exported data." },
+            { "question": "What is Sparq?", "answer": "Sparq stands for Surface Plasmon Analysis Result Quality, a smart operation support assistant built directly into Affilabs.core that troubleshoots issues step by step without a support ticket." },
+            { "question": "Does Affilabs.core include regulatory validation?", "answer": "Yes, IQ (12 automated checks) and OQ (43 tests across 6 suites) come included with every installation, generating timestamped reports for audits." },
+            { "question": "Does Affilabs.core need an internet connection to run experiments?", "answer": "No, it runs experiments without requiring an internet connection." },
+            { "question": "What computer specs does Affilabs.core need?", "answer": "Windows 10 or 11 (64-bit), a direct USB 2.0 port, 4 GB RAM minimum (8 GB recommended), 500 MB storage, and a 1280 x 800 minimum display resolution." },
+            { "question": "What formats can data export to?", "answer": "Excel, CSV for Origin and Prism, sensorgram images, or directly to the clipboard." },
+            { "question": "Can I add steps to a method mid-run?", "answer": "Yes, the method queue supports multi-step sequences with templates, and steps can be added mid-run." },
+            { "question": "How does the software catch a bad run in progress?", "answer": "Optical fault detection flags leaks and bubbles with a real-time signal quality score as the run happens." },
+            { "question": "What is the price of Affilabs.core in India?", "answer": "Affilabs.core is included with every P4SPR and P4PRO instrument; get in touch and Inkarp will confirm details as part of the instrument quote." },
+            { "question": "Who is the authorized distributor of Affilabs.core in India?", "answer": "Inkarp is the authorized distributor and service provider for Affinité Instruments' Affilabs.core in India, providing demonstration, installation, training, AMC, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Affilabs.core in India from Inkarp",
+            "description": "Share the instrument in use and any compliance needs, and the right Affilabs.core setup gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the instrument in use and your compliance needs, then confirm the right Affilabs.core setup.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "instrumentInUse", "label": "Instrument in use (P4SPR or P4PRO)", "type": "text", "required": false },
+              { "key": "complianceNeeds", "label": "Compliance / IQ-OQ needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right software setup", "body": "Share which instrument the software will run, P4SPR or P4PRO, and whether regulated IQ/OQ documentation is needed, and the right setup gets confirmed from there." },
+              { "title": "Confirm the right export format setup", "body": "Share how experiment data currently gets exported and analyzed downstream, and the right export format setup gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports software setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "One application, every step. Connection to export, with a built-in assistant that never leaves you stuck.",
+            "heroLead": "SPR software usually means juggling separate tools for calibration, acquisition, analysis, and export. Affilabs.core handles all of it in one desktop application, built specifically for the P4SPR and P4PRO instruments, with Sparq, a smart operation support assistant, built directly in. A live four-channel sensorgram tracks every cycle in real time, one-click calibration handles servo alignment and LED tuning automatically, and machine learning optimizes those settings further without manual tweaking. IQ/OQ validation ships included with every installation, and when something doesn't work, Sparq walks through the fix step by step, no ticket, no wait.",
+            "stats": [
+              { "value": "4-channel", "label": "Live sensorgram tracking" },
+              { "value": "One-click", "label": "Automated calibration" },
+              { "value": "12 checks", "label": "IQ, included with every installation" },
+              { "value": "43 tests, 6 suites", "label": "OQ, included with every installation" },
+              { "value": "Built-in", "label": "Sparq smart operation assistant" },
+              { "value": "ML-powered", "label": "Calibration optimization" },
+              { "value": "No internet required", "label": "To run experiments" },
+              { "value": "Included", "label": "With every P4SPR and P4PRO instrument" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Affilabs.core product information: acquisition, calibration, analysis, and built-in support.",
+                "body": [
+                  "Affilabs.core handles instrument control, data acquisition, and analysis in one desktop application built specifically for the P4SPR and P4PRO instruments.",
+                  "A live four-channel wavelength plot tracks every run in real time, with automatic injection flags and cycle markers built directly into the view.",
+                  "Automated calibration handles servo alignment, LED calibration, and S-pol reference capture with a single click, and machine learning further optimizes LED settings and convergence without manual adjustment.",
+                  "A method queue supports multi-step sequences with templates, and steps can be added mid-run rather than requiring a full restart.",
+                  "Analysis tools include alignment, ΔSPR cursors, KD fitting, and cycle comparison, all inside the same application used for acquisition.",
+                  "Data exports directly to Excel, CSV for Origin and Prism, sensorgram images, or the clipboard, no separate conversion step required.",
+                  "Optical fault detection flags leaks and bubbles with real-time signal quality scoring, catching problems as they happen rather than after a run is wasted.",
+                  "An experiment notebook tags, annotates, rates, and makes past experiments searchable, keeping a full history without a separate logging system.",
+                  "IQ/OQ validation ships included with every installation, 12 automated checks for IQ and 43 tests across 6 suites for OQ, generating timestamped qualification reports for regulatory and lab audits.",
+                  "Sparq, built directly into the software, guides first-time installation, troubleshoots calibration and connectivity issues, answers workflow questions, and escalates to the Affinité team when needed, all without leaving the application."
+                ],
+                "cards": [
+                  { "title": "All-in-one application", "description": "Control, acquisition, and analysis in one place" },
+                  { "title": "Sparq built-in assistant", "description": "Instant troubleshooting, no ticket system" },
+                  { "title": "IQ/OQ included", "description": "Regulatory-ready validation with every install" },
+                  { "title": "ML-powered calibration", "description": "Optimized settings without manual tuning" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Core functions", "description": "Instrument control, data acquisition, analysis, export" },
+                  { "title": "Compatible instruments", "description": "P4SPR, P4PRO" },
+                  { "title": "Built-in assistant", "description": "Sparq" },
+                  { "title": "Validation", "description": "IQ (12 checks) and OQ (43 tests, 6 suites) included" },
+                  { "title": "Operating system", "description": "Windows 10 or 11 (64-bit)" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Affilabs.core applications: kinetic data analysis, regulated lab documentation, teaching, and instrument troubleshooting."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Affilabs.core technical specifications: system requirements and validation coverage."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "One Application, Every Step",
+                "title": "One Application, Every Step",
+                "description": "Switching between separate tools for calibration, acquisition, and analysis costs time and introduces version mismatches between them. Affilabs.core keeps every step of an SPR experiment in one application, from first connection to exported data. The live sensorgram, method queue, and analysis tools all draw from the same running session, so a cycle comparison or KD fit happens on the exact data just acquired, not a re-imported copy. Data leaves the application in whatever format the next step needs, Excel or CSV for Origin and Prism, sensorgram images, or a direct clipboard copy, without a separate export utility. Optical fault detection runs alongside acquisition itself, catching leaks or bubbles with a real-time quality score instead of surfacing the problem only after the run is already wasted.",
+                "cards": [
+                  { "title": "No switching between separate tools", "description": "Control, acquisition, and analysis in one application" },
+                  { "title": "Data ready for the next analysis step", "description": "Direct Excel, CSV, and image export" },
+                  { "title": "Catching a bad run before it's wasted", "description": "Real-time optical fault detection with quality scoring" },
+                  { "title": "A searchable record of past experiments", "description": "Built-in experiment notebook with tagging and annotation" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Sparq: Support Built Into the Software",
+                "title": "Sparq: Support Built Into the Software",
+                "description": "A greyed-out button or an unexpected error usually means a support ticket and a wait. Sparq removes that wait entirely by living inside the software itself.",
+                "body": [
+                  "It guides first-time installation and driver setup, troubleshoots calibration issues, hardware detection, and connectivity, and answers questions about experimental setup and workflow, all without leaving Affilabs.core.",
+                  "Log files can be uploaded directly to Sparq to speed up diagnosis, and when a problem needs a human, Sparq escalates to the Affinité team rather than leaving the user stuck. No account is required to get an answer. A greyed-out Start Calibration button, for example, usually just means the software needs updating, and Sparq walks through exactly that fix on the spot."
+                ],
+                "utilityChecklist": [
+                  { "label": "Instant help without a support ticket", "value": "Built-in assistant, no account needed" },
+                  { "label": "Faster diagnosis of hardware issues", "value": "Direct log file upload within the app" },
+                  { "label": "Guidance for new users during setup", "value": "Step-by-step first-time installation support" },
+                  { "label": "Escalation when the issue needs a person", "value": "Direct escalation to the Affinité team" }
+                ],
+                "disclaimer": "Share how the team currently handles software or hardware troubleshooting, and how Sparq fits into that workflow gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Affilabs.core documentation: system requirements and IQ/OQ report samples.",
+                "cards": [
+                  { "title": "System Requirements Sheet", "description": "Available on request" },
+                  { "title": "Sample IQ/OQ Validation Report", "description": "Available on request" },
+                  { "title": "Sparq Feature Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Affilabs.core in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "One application for the entire SPR workflow, with a built-in assistant that never leaves you stuck. Share the instrument in use and any compliance needs, and the right Affilabs.core setup gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

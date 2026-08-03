@@ -66,6 +66,8 @@ import bandelinUltrasonicBathsCatalog from "./bandelin/ultrasonic-baths.json";
 import robotCoupeBlixerSystemsCatalog from "./robot-coupe/blixer-systems.json";
 import fomTechnologiesSlotDieCoatingSystemsCatalog from "./fom-technologies/slot-die-coating-systems.json";
 import fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog from "./fom-technologies/sheet-based-slot-die-coating-systems.json";
+import daralyoPilotFreezeDryersCatalog from "./daralyo/pilot-freeze-dryers.json";
+import nenovisionLitescopeCatalog from "./nenovision/litescope.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -146,6 +148,8 @@ const principalCatalogs = [
   robotCoupeBlixerSystemsCatalog,
   fomTechnologiesSlotDieCoatingSystemsCatalog,
   fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog,
+  daralyoPilotFreezeDryersCatalog,
+  nenovisionLitescopeCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

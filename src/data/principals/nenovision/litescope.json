@@ -1,0 +1,337 @@
+{
+  "principal": {
+    "slug": "nenovision-s-r-o",
+    "principalName": "NenoVision s.r.o.",
+    "countryOfOrigin": "Czech Republic"
+  },
+  "categories": [
+    {
+      "name": "Litescope",
+      "slug": "litescope",
+      "products": [
+        {
+          "name": "LiteScope AFM",
+          "slug": "litescope-afm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Nenovision.svg",
+          "imageAlt": "NenoVision s.r.o. LiteScope AFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/litescope-afm",
+          "breadcrumbPath": "Home > Products > Litescope > LiteScope AFM",
+          "h1": "LiteScope AFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Correlating AFM and SEM data usually means moving a sample between two instruments and hoping the region of interest survives the trip. LiteScope removes that gap entirely, mounting a full atomic force microscope directly inside your SEM chamber for simultaneous, correlated imaging of the exact same spot.",
+
+          "features": [
+            "Correlative Probe and Electron Microscopy (CPEM): Captures AFM and SEM data simultaneously and merges them into 3D correlative images.",
+            "Precise SEM-Guided Navigation: Uses SEM imaging to locate the region of interest fast, then guides the AFM tip directly to it.",
+            "Self-Sensing Probes: Skips optical detection and laser adjustment entirely, cutting setup time and drift.",
+            "Fast SEM Integration: Mounts or removes from most SEM systems in under five minutes.",
+            "Open-Hardware DSP Controller: Built for customer modification, opening the door to non-standard experiments.",
+            "AI-Driven Topographic Correction: Corrects scan data automatically, reducing manual intervention during measurement.",
+            "Single-Click Operation: Automated probe tuning and streamlined controls eliminate repetitive manual steps.",
+            "Broad Accessory Compatibility: Works alongside FIB, GIS, EDX, and other standard SEM tools without conflict."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "NenoVision LiteScope AFM-in-SEM" },
+            { "label": "Category", "value": "Correlative Probe and Electron Microscopy (CPEM)" },
+            { "label": "Dimensions (XYZ)", "value": "118 mm x 84 mm x 35.7-48.4 mm" },
+            { "label": "Total Weight", "value": "460 g" },
+            { "label": "Vacuum Working Range", "value": "10⁵ Pa to 10⁻⁵ Pa" },
+            { "label": "Operating Temperature", "value": "+10°C to +35°C" },
+            { "label": "Maximal Scanned Sample Area (XYZ)", "value": "21 mm x 11 mm x 8 mm" },
+            { "label": "Scan Range, Open Loop (XYZ, ±10%)", "value": "100 µm x 100 µm x 20 µm" },
+            { "label": "Scan Range, Closed Loop (XYZ)", "value": "80 µm x 80 µm x 16 µm" },
+            { "label": "Resolution (XYZ, up to)", "value": "0.2 nm x 0.2 nm x 0.04 nm" },
+            { "label": "Maximum Sample Height", "value": "8 mm" },
+            { "label": "Maximum Sample Weight", "value": "100 g" },
+            { "label": "Installation Package", "value": "Scan head, NenoBox control unit, NenoView software, SEM adaptation plate, vacuum feedthrough, cabling" }
+          ],
+
+          "applications": [
+            "Materials Science Research: Correlated topography, elasticity, and hardness data on one platform",
+            "Semiconductor Characterization: Conductivity mapping and local electrical property analysis",
+            "Battery and Energy Materials: In-situ mechanical and electrical characterization under real conditions",
+            "Life Science Research: Sub-nanometer topography for biological and soft material surfaces",
+            "Magnetic and Piezoelectric Material Studies: Magnetic domain and piezoelectric domain imaging"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Material Properties" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "benefits", "label": "CPEM Imaging" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Will LiteScope integrate with the SEM already in the lab?",
+            "description": "Select the SEM manufacturer and accessories in use, and see compatibility and mounting details.",
+            "steps": [
+              {
+                "key": "existingAccessories",
+                "question": "What accessories are already in use?",
+                "options": [
+                  { "val": "fib", "label": "FIB" },
+                  { "val": "gis", "label": "GIS" },
+                  { "val": "edx", "label": "EDX" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "chamberSpace",
+                "question": "How much chamber space is available?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "constrained", "label": "Constrained" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to an integration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Which material properties does the research need to characterize?",
+            "description": "Select the properties of interest, and see which LiteScope measurement modes apply.",
+            "fields": [
+              {
+                "key": "propertyCategory",
+                "label": "Property category",
+                "options": [
+                  { "val": "mechanical", "label": "Mechanical" },
+                  { "val": "magnetic", "label": "Magnetic" },
+                  { "val": "electro-mechanical", "label": "Electro-mechanical" },
+                  { "val": "electrical", "label": "Electrical" }
+                ]
+              },
+              {
+                "key": "measurementType",
+                "label": "Measurement type",
+                "options": [
+                  { "val": "topographic", "label": "Topographic" },
+                  { "val": "non-topographic", "label": "Non-topographic" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "label": "Sample type",
+                "options": [
+                  { "val": "semiconductor", "label": "Semiconductor" },
+                  { "val": "battery-material", "label": "Battery material" },
+                  { "val": "biological", "label": "Biological" },
+                  { "val": "other", "label": "Other" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Material Properties Can LiteScope Measure?",
+                "body": "Mechanical properties like topography, elasticity, and hardness, along with magnetic domain imaging, piezoelectric domain imaging, and electrical properties including conductivity mapping.",
+                "tags": ["Correlative Probe and Electron Microscopy (CPEM)", "AI-Driven Topographic Correction"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "LiteScope AFM-in-SEM vs. Separate AFM and SEM Instruments",
+            "description": "LiteScope AFM method comparison: correlative AFM-in-SEM versus separate AFM and SEM instrumentation.",
+            "columns": [
+              { "label": "LiteScope AFM-in-SEM" },
+              { "label": "Separate AFM and SEM Instruments" }
+            ],
+            "rows": [
+              { "feature": "Data Correlation", "values": ["Simultaneous, same spot, same conditions", "Sequential, requires manual relocation"] },
+              { "feature": "Region-of-Interest Location", "values": ["SEM-guided, fast and precise", "Manual search under AFM alone"] },
+              { "feature": "Setup Time", "values": ["Under 5 minutes, no laser alignment", "Varies, includes optical alignment"] },
+              { "feature": "Best For", "values": ["True correlative, multi-property analysis", "Independent AFM or SEM sessions"] },
+              { "feature": "Choose When", "values": ["The same region needs both datasets together", "AFM and SEM work happen separately, on different samples or timelines"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "LiteScope AFM industries: semiconductor manufacturing, battery and energy research, materials science, and life science.",
+            "industries": [
+              { "name": "Semiconductor Manufacturing", "useCase": "Conductivity mapping and defect characterization", "consideration": "Non-topographic electrical property imaging, including insulated areas" },
+              { "name": "Battery and Energy Materials Research", "useCase": "In-situ mechanical and electrical property analysis", "consideration": "Depth-dependent characterization for layered materials" },
+              { "name": "Materials Science", "useCase": "Correlated topography and mechanical property studies", "consideration": "Local elastic and hardness measurement in tapping or contact mode" },
+              { "name": "Life Science Research", "useCase": "Sub-nanometer surface imaging of soft or biological samples", "consideration": "Self-sensing probes reduce disturbance to delicate samples" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows CPEM imaging and SEM integration on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms SEM compatibility and measurement mode setup" },
+              { "title": "Installation Support", "description": "Supports mounting, calibration, and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with NenoView software and probe tuning" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, controller, and probe performance" },
+              { "title": "Spares and Accessories", "description": "Supplies probes, adaptation plates, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is LiteScope AFM used for?", "answer": "It's an AFM built to integrate directly inside an SEM chamber, capturing correlated AFM and SEM data on the same sample spot simultaneously, using Correlative Probe and Electron Microscopy (CPEM) technology." },
+            { "question": "How does CPEM differ from standard correlative microscopy?", "answer": "CPEM captures AFM and SEM data at the same time, on the same location, under the same conditions, removing the manual relocation and re-imaging steps standard correlative workflows require." },
+            { "question": "How long does it take to mount LiteScope in an SEM?", "answer": "Under five minutes, thanks to a compact scan head and adaptation plate built for fast SEM integration." },
+            { "question": "Does LiteScope require laser alignment like standard AFMs?", "answer": "No, self-sensing probes eliminate the need for optical detection or laser adjustment entirely." },
+            { "question": "Can LiteScope work alongside FIB, GIS, or EDX accessories?", "answer": "Yes, it's compatible with FIB, GIS, EDX, and other standard SEM accessories." },
+            { "question": "What material properties can LiteScope measure?", "answer": "Mechanical properties like topography, elasticity, and hardness, along with magnetic domain imaging, piezoelectric domain imaging, and electrical properties including conductivity mapping." },
+            { "question": "Can LiteScope be used as a standalone AFM outside the SEM?", "answer": "Yes, it operates as a standalone AFM as well as inside an SEM chamber." },
+            { "question": "Is the LiteScope controller customizable?", "answer": "Yes, the NenoBox control unit is built on an open-hardware DSP controller, allowing customer modifications for non-standard experiments." },
+            { "question": "What is the price of LiteScope AFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the SEM system and measurement modes required." },
+            { "question": "Who is the authorized distributor of LiteScope AFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the NenoVision LiteScope AFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get LiteScope AFM in India from Inkarp",
+            "description": "Share the SEM system and target properties, and the right LiteScope configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your SEM system and target properties, then confirm the right LiteScope configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "semModel", "label": "SEM model", "type": "text", "required": false },
+              { "key": "materialProperties", "label": "Material properties that matter most", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right LiteScope configuration", "body": "Share the SEM model and the material properties that matter most for the work, and the right LiteScope configuration gets confirmed from there." },
+              { "title": "Confirm the right measurement mode setup", "body": "Share which material properties matter most for the work, mechanical, magnetic, or electrical, and the right measurement mode setup gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports mounting, calibration, and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "AFM and SEM, on the same spot, at the same time. No sample transfer, no lost location.",
+            "heroLead": "Correlating AFM and SEM data usually means moving a sample between two instruments and hoping the region of interest survives the trip. LiteScope removes that gap entirely, mounting a full atomic force microscope directly inside your SEM chamber for simultaneous, correlated imaging of the exact same spot. Correlative Probe and Electron Microscopy (CPEM) technology captures AFM and SEM data together, in situ, under identical conditions, then merges them into three-dimensional correlative images. SEM navigation finds the region of interest fast, self-sensing probes skip the laser alignment most AFMs need, and the whole scan head mounts or removes from your SEM in under five minutes.",
+            "stats": [
+              { "value": "0.2 nm x 0.2 nm x 0.04 nm", "label": "Resolution, XYZ" },
+              { "value": "Under 5 minutes", "label": "SEM mounting or removal time" },
+              { "value": "460 g", "label": "Total scan head weight" },
+              { "value": "100 µm x 100 µm x 20 µm", "label": "Open-loop scan range" },
+              { "value": "10⁵ Pa to 10⁻⁵ Pa", "label": "Vacuum working range" },
+              { "value": "Self-sensing probes", "label": "No laser alignment required" },
+              { "value": "Open-hardware DSP controller", "label": "Customer-modifiable" },
+              { "value": "FIB, GIS, EDX compatible", "label": "Works alongside existing SEM accessories" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "LiteScope AFM product information: CPEM technology, SEM integration, and multi-property surface characterization.",
+                "body": [
+                  "LiteScope mounts a complete AFM inside an SEM chamber, capturing AFM and SEM data on the same spot at the same time, under the same conditions, rather than stitching together two separate sessions.",
+                  "CPEM technology merges topography, material contrast, and mechanical or electrical property data into three-dimensional correlative images, eliminating the repetitive re-locating and re-imaging that separate AFM and SEM sessions normally require.",
+                  "SEM navigation locates the region of interest first, then guides the AFM tip directly to it, a fast, precise alternative to hunting for a feature blind under an AFM alone.",
+                  "Self-sensing probes remove the need for optical detection or laser adjustment, a common source of setup time and drift in conventional AFM systems.",
+                  "The scan head mounts to or removes from most SEM systems in under five minutes, and stays compatible with FIB, GIS, EDX, and other standard SEM accessories.",
+                  "An open-hardware DSP controller, developed with the Czech Metrology Institute, lets customers modify the system directly rather than working within a closed platform.",
+                  "LiteScope also runs as a standalone AFM outside the SEM chamber when that's what the work calls for."
+                ],
+                "cards": [
+                  { "title": "Simultaneous AFM + SEM", "description": "True correlative imaging, same spot, same conditions" },
+                  { "title": "Under 5-minute mounting", "description": "Fast integration with most SEM systems" },
+                  { "title": "Self-sensing probes", "description": "No laser alignment, less setup drift" },
+                  { "title": "Open-hardware controller", "description": "Customer-modifiable for non-standard experiments" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Core technology", "description": "Correlative Probe and Electron Microscopy (CPEM)" },
+                  { "title": "Installation package", "description": "LiteScope scan head, NenoBox control unit, NenoView software, SEM adaptation plate, vacuum feedthrough, cabling" },
+                  { "title": "Probe type", "description": "Self-sensing, no optical detection required" },
+                  { "title": "Mounting time", "description": "Under 5 minutes" },
+                  { "title": "Compatibility", "description": "FIB, GIS, EDX, and most standard SEM systems" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "LiteScope AFM applications: material science, semiconductors, battery and energy materials, and life science."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "LiteScope AFM technical specifications: resolution, scan range, dimensions, and vacuum operating range."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "CPEM: True Correlative Imaging",
+                "title": "CPEM: True Correlative Imaging",
+                "description": "Traditional correlative microscopy means imaging with one instrument, moving the sample, then trying to relocate the exact same region under a second instrument, a process that eats time and introduces positional error. CPEM removes both problems at once: AFM and SEM data get captured together, on the same spot, under identical conditions, so there's no relocation step and no guessing whether the two datasets actually line up. That simultaneous capture extends across a genuinely broad property set: topography, local elasticity, hardness, magnetic domains, piezoelectric domains, conductivity, and surface potential all combine into a single three-dimensional dataset.",
+                "cards": [
+                  { "title": "AFM and SEM data that actually correlate", "description": "Simultaneous capture under CPEM" },
+                  { "title": "No repetitive relocation between instruments", "description": "Same spot, same session, same conditions" },
+                  { "title": "Multiple material properties in one dataset", "description": "Mechanical, magnetic, electrical, and topographic data combined" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Fast Mounting, Broad Property Access",
+                "title": "Fast Mounting, Broad Property Access",
+                "description": "An AFM that takes hours to integrate into an SEM defeats the purpose of correlative imaging before the first scan even starts. LiteScope's scan head mounts or removes in under five minutes, keeping the SEM available for other work between sessions.",
+                "body": [
+                  "Self-sensing probes are a big part of why that's possible: no optical detection system, no laser to align, no extra setup step standing between mounting the unit and starting a scan. Once running, LiteScope reaches well beyond basic topography, covering local elastic properties, depth-dependent characterization, magnetic domain imaging, piezoelectric domain imaging, and conductivity mapping, including in insulated areas."
+                ],
+                "utilityChecklist": [
+                  { "label": "Minimal SEM downtime for AFM integration", "value": "Under 5-minute mounting or removal" },
+                  { "label": "Faster setup with less alignment drift", "value": "Self-sensing probes, no laser adjustment" },
+                  { "label": "Access to properties beyond topography", "value": "Mechanical, magnetic, electro-mechanical, and electrical measurement modes" }
+                ],
+                "disclaimer": "Share how frequently the SEM needs to switch between AFM and standard use, and the right integration setup gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "LiteScope AFM documentation: brochure, product note, and application examples.",
+                "cards": [
+                  { "title": "LiteScope Brochure", "description": "Available for download" },
+                  { "title": "LiteScope Product Note", "description": "Available for download" },
+                  { "title": "Application Examples (Materials, Semiconductors, Battery, Life Science)", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get LiteScope AFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Correlated AFM and SEM data, on the same spot, at the same time, mounted inside the SEM in under five minutes. Share the SEM system and target properties, and the right LiteScope configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

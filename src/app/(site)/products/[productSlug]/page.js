@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FiArrowRight, FiCheck, FiChevronRight, FiExternalLink, FiGlobe, FiMail, FiShield } from "react-icons/fi";
+import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
+import * as CountryFlagIcons from "country-flag-icons/react/3x2";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
+import { getCountryFlagCodes } from "@/data/products/countryFlags";
 import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
@@ -45,6 +47,7 @@ export default async function ProductPage({ params }) {
 
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
+  const countryFlagCodes = getCountryFlagCodes(product.countryOfOrigin);
   const heroLead = product.longForm?.heroLead ?? product.overview;
   const heroHookMatch = product.overview?.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/);
   const heroHook = product.longForm?.heroHook ?? heroHookMatch?.[1]?.trim();
@@ -88,45 +91,49 @@ export default async function ProductPage({ params }) {
 
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
+                <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">
+                  <Image
+                    alt={product.principalName}
+                    className="h-5 w-auto object-contain"
+                    height={20}
+                    src={product.principalImage}
+                    width={80}
+                  />
+                </div>
+              ) : null}
+
+              {product.category && (
                 product.manufacturerUrl ? (
                   <a
                     href={product.manufacturerUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     title={`View ${product.name} on the ${product.principalName} website`}
-                    className="inline-flex items-center gap-1.5 border border-line-light bg-white px-3 py-2 transition hover:border-red"
+                    className="border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink-soft"
                   >
-                    <Image
-                      alt={product.principalName}
-                      className="h-5 w-auto object-contain"
-                      height={20}
-                      src={product.principalImage}
-                      width={80}
-                    />
-                    <FiExternalLink className="h-3 w-3 text-ink-soft" />
+                    {product.category}
                   </a>
                 ) : (
-                  <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">
-                    <Image
-                      alt={product.principalName}
-                      className="h-5 w-auto object-contain"
-                      height={20}
-                      src={product.principalImage}
-                      width={80}
-                    />
-                  </div>
+                  <span className="border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink-soft">
+                    {product.category}
+                  </span>
                 )
-              ) : null}
-
-              {product.category && (
-                <span className="border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink-soft">
-                  {product.category}
-                </span>
               )}
 
               {product.countryOfOrigin && (
                 <span className="inline-flex items-center gap-1.5 border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink-soft">
-                  <FiGlobe className="h-3.5 w-3.5 text-red" />
+                  {countryFlagCodes.length > 0 ? (
+                    <span className="inline-flex items-center gap-1">
+                      {countryFlagCodes.map((code) => {
+                        const FlagIcon = CountryFlagIcons[code];
+                        return FlagIcon ? (
+                          <FlagIcon key={code} className="h-3 w-4 shrink-0 rounded-[1px]" title={code} />
+                        ) : null;
+                      })}
+                    </span>
+                  ) : (
+                    <FiGlobe className="h-3.5 w-3.5 text-red" />
+                  )}
                   Made in {product.countryOfOrigin}
                 </span>
               )}

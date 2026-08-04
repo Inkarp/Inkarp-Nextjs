@@ -264,9 +264,22 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {overviewSec?.subheading ?? 'Reliable rotary evaporation, focused on the essentials'}
             </h3>
-            {overviewSec?.body?.map((p, i) => (
-              <p key={i} className="mb-4 text-sm leading-7 text-black">{p}</p>
-            ))}
+            {overviewSec?.body?.map((p, i) => {
+              const colonIdx = p.indexOf(':');
+              const heading = colonIdx > -1 ? p.slice(0, colonIdx).trim() : null;
+              const rest = colonIdx > -1 ? p.slice(colonIdx + 1).trim() : p;
+              return (
+                <p key={i} className="mb-4 flex items-start gap-3 text-sm leading-7 text-black">
+                  <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center bg-parchment-alt text-red">
+                    <FiCheckCircle aria-hidden="true" className="text-sm" />
+                  </span>
+                  <span>
+                    {heading && <strong className="font-semibold text-ink">{heading}: </strong>}
+                    {rest}
+                  </span>
+                </p>
+              );
+            })}
             {overviewSec?.cards?.length > 0 && (
               <div className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
                 {overviewSec.cards.slice(0, 4).map((c) => (
@@ -292,13 +305,14 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
             <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-              {(product.features ?? []).slice(0, 12).map((f) => {
-                const colonIdx = f.indexOf(':');
-                const title       = colonIdx > -1 ? f.slice(0, colonIdx).trim() : f.trim();
-                const description = colonIdx > -1 ? f.slice(colonIdx + 1).trim() : '';
+              {(product.features ?? []).slice(0, 12).map((f, i) => {
+                const isObject = f && typeof f === 'object';
+                const colonIdx = isObject ? -1 : f.indexOf(':');
+                const title       = isObject ? (f.title ?? '') : (colonIdx > -1 ? f.slice(0, colonIdx).trim() : f.trim());
+                const description = isObject ? (f.description ?? '') : (colonIdx > -1 ? f.slice(colonIdx + 1).trim() : '');
                 return (
                   <IconCard
-                    key={f}
+                    key={isObject ? title || i : f}
                     title={title}
                     description={description}
                     icon={resolveIcon(title, FEATURE_ICON_RULES)}
@@ -320,14 +334,19 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {(product.applications ?? []).map((sentence, i) => (
-                <IconCard
-                  key={i}
-                  title={deriveAppTitle(sentence)}
-                  description={sentence}
-                  icon={resolveIcon(sentence, APPLICATION_ICON_RULES)}
-                />
-              ))}
+              {(product.applications ?? []).map((app, i) => {
+                const isObject = app && typeof app === 'object';
+                const title = isObject ? (app.title ?? '') : deriveAppTitle(app);
+                const description = isObject ? (app.description ?? '') : app;
+                return (
+                  <IconCard
+                    key={i}
+                    title={title}
+                    description={description}
+                    icon={resolveIcon(description, APPLICATION_ICON_RULES)}
+                  />
+                );
+              })}
             </div>
           </div>
         );

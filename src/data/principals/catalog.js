@@ -92,6 +92,7 @@ import thermofisherViscometersCatalog from "./thermofisher/viscometers.json";
 import sartoriusAriumComfortCatalog from "./sartorius/arium-comfort.json";
 import sartoriusAriumMiniPlusCatalog from "./sartorius/arium-mini-plus.json";
 import sartoriusAriumProCatalog from "./sartorius/arium-pro.json";
+import buchiFreezeDryerLyophilizerCatalog from "./buchi/freeze-dryer-lyophilizer.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -198,6 +199,7 @@ const principalCatalogs = [
   sartoriusAriumComfortCatalog,
   sartoriusAriumMiniPlusCatalog,
   sartoriusAriumProCatalog,
+  buchiFreezeDryerLyophilizerCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

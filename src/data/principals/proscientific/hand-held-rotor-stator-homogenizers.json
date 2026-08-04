@@ -1,0 +1,654 @@
+{
+  "principal": {
+    "slug": "proscientific",
+    "principalName": "ProScientific",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Hand-Held Rotor-Stator Homogenizers",
+      "slug": "hand-held-rotor-stator-homogenizers",
+      "products": [
+        {
+          "name": "Bio-Gen PRO200 Homogenizer",
+          "slug": "bio-gen-pro200-homogenizer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Proscientific.png",
+          "imageAlt": "ProScientific Bio-Gen PRO200 Homogenizer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/bio-gen-pro200-homogenizer",
+          "breadcrumbPath": "Home > Products > Hand-Held Rotor-Stator Homogenizers > Bio-Gen PRO200 Homogenizer",
+          "h1": "Bio-Gen PRO200 Homogenizer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Rotor-stator homogenization works on a different principle than ultrasonic probes entirely: material gets drawn directly into the generator probe and exposed to intense mechanical and hydraulic shear as it passes through, not broken apart by cavitation bubbles.",
+
+          "features": [
+            "High-Shear Rotor-Stator Technology: Draws material into the probe for intense mechanical and hydraulic shear.",
+            "144W High-Torque Motor: Delivers fast, repeatable performance across the full 5,000-35,000 rpm range.",
+            "Thumb-Operated Variable Speed Control: Precise speed adjustment during genuinely one-handed operation.",
+            "PRO Quick Connect Probe System: Secure coupling, reduced vibration, and easy cleaning on every probe change.",
+            "Backward-Compatible Probe Design: Existing Quick Connect probes work with the redesigned motor unit.",
+            "Redesigned Ergonomic Housing: Lightweight construction for comfortable extended use.",
+            "Wide Sample Volume Range: 0.03mL to 500mL confirmed, extending toward 1L with certain probes.",
+            "2-Year Warranty with Factory Support: Individually performance tested, backed by direct technical assistance."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "ProScientific Bio-Gen PRO200 Homogenizer" },
+            { "label": "Category", "value": "Hand-Held Rotor-Stator Homogenizers" },
+            { "label": "Motor Power", "value": "144 W" },
+            { "label": "Speed Range", "value": "5,000 to 35,000 rpm" },
+            { "label": "Sample Volume", "value": "0.03-500mL (confirmed directly); up to 1L per broader specification, probe and viscosity dependent" },
+            { "label": "Speed Control", "value": "Thumb-operated, variable" },
+            { "label": "Probe System", "value": "PRO Quick Connect, stainless steel" },
+            { "label": "Probe Compatibility", "value": "Backward compatible with earlier PRO200 generations" },
+            { "label": "Warranty", "value": "2 years" },
+            { "label": "Manufacturing", "value": "Made in USA, individually performance tested" }
+          ],
+
+          "applications": [
+            "Cell Disruption and Lysis: High-shear rotor-stator action for consistent breakdown",
+            "Tissue Homogenization: Mechanical and hydraulic shear across varied tissue types",
+            "Protein and Nucleic Acid Extraction: Consistent disruption suited to RNA/DNA workflows",
+            "Emulsification and Dispersion: Repeatable shear for stable emulsions",
+            "Particle-Size Reduction: Variable speed control for tuning shear intensity"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "hand-held-vs-stand-mounted-planner", "label": "Setup Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Rotor-Stator Shear" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What sample volume are you processing?",
+            "description": "Select your sample viscosity and application type, and see which PRO200 probe configuration fits. Share your exact target sample volume with Inkarp for final probe sizing.",
+            "steps": [
+              {
+                "key": "sampleViscosity",
+                "question": "What's the sample viscosity?",
+                "options": [
+                  { "val": "low", "label": "Low viscosity" },
+                  { "val": "moderate", "label": "Moderate viscosity" },
+                  { "val": "high", "label": "High viscosity" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "cell-disruption-lysis", "label": "Cell disruption and lysis" },
+                  { "val": "tissue-homogenization", "label": "Tissue homogenization" },
+                  { "val": "protein-nucleic-acid-extraction", "label": "Protein and nucleic acid extraction" },
+                  { "val": "emulsification-dispersion", "label": "Emulsification and dispersion" },
+                  { "val": "particle-size-reduction", "label": "Particle-size reduction" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your exact target sample volume, and this routes to a probe-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "hand-held-vs-stand-mounted-planner",
+              "eyebrow": "Hand-Held vs Stand-Mounted Planner",
+              "title": "Hand-held, or hands-free bench-top?",
+              "description": "Select your preferred operating style, and see whether the base unit or a stand assembly package fits.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What operating style fits your workflow?", "choices": "Hand-held; Hands-free bench-top" },
+                { "title": "What's your setup stage?", "choices": "New setup; Upgrading an existing unit" }
+              ],
+              "disclaimer": "Routes to a package-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Bio-Gen PRO200 vs. PRO250",
+            "description": "Bio-Gen PRO200 compared with PRO250 across the ProScientific hand-held homogenizer range.",
+            "columns": [
+              { "label": "Bio-Gen PRO200" },
+              { "label": "PRO250" }
+            ],
+            "rows": [
+              { "feature": "Motor Power", "values": ["144 W", "576 W"] },
+              { "feature": "Speed Range", "values": ["5,000-35,000 rpm", "10,000-30,000 rpm"] },
+              { "feature": "Probe System", "values": ["PRO Quick Connect", "PRO Quick Connect"] },
+              { "feature": "Best For", "values": ["Routine lab-scale rotor-stator homogenization", "Larger, viscous, or demanding samples up to 5L"] },
+              { "feature": "Choose when", "values": ["Your work fits within the confirmed PRO200 volume and speed range", "You need more power, larger volumes, or post-mounted operation"] }
+            ],
+            "disclaimer": "Both share the same PRO Quick Connect probe system and 2-year warranty; the choice comes down to sample volume and how much power your material actually needs."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Bio-Gen PRO200 industries: biological, pharmaceutical, biotechnology, and quality-control laboratories.",
+            "industries": [
+              { "name": "Biological and Biotechnology Research", "useCase": "Cell disruption and nucleic acid extraction", "consideration": "Wide speed range for varied tissue and cell types" },
+              { "name": "Pharmaceutical Development", "useCase": "Emulsification and formulation work", "consideration": "Quick Connect probes for varied sample types across projects" },
+              { "name": "Food and Cosmetic Testing", "useCase": "Particle-size reduction and dispersion", "consideration": "0.03-500mL range suited to formulation-scale samples" },
+              { "name": "Environmental Testing Labs", "useCase": "Sample preparation for varied matrices", "consideration": "Legacy support for long-term equipment reliability" },
+              { "name": "Academic Research Laboratories", "useCase": "Routine tissue homogenization", "consideration": "Thumb-operated control suited to varied user experience" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows probe operation and shear performance on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms the right probe, speed range, and package for your application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with thumb-operated speed control and probe changes" },
+              { "title": "Preventive Maintenance", "description": "Maintains motor, probe coupling, and stand assembly performance" },
+              { "title": "Spares and Accessories", "description": "Supplies generator probes, stand assemblies, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC, including legacy unit support" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Bio-Gen PRO200 used for?", "answer": "It's a hand-held rotor-stator homogenizer for cell disruption, tissue homogenization, nucleic acid extraction, emulsification, and particle-size reduction." },
+            { "question": "How is rotor-stator homogenization different from ultrasonic disruption?", "answer": "Material is drawn directly into the generator probe and exposed to mechanical and hydraulic shear as it passes through, rather than broken apart by ultrasonic cavitation." },
+            { "question": "What sample volumes can PRO200 handle?", "answer": "0.03mL to 500mL as directly confirmed, with some probe and viscosity combinations extending toward 1L." },
+            { "question": "Can I use my existing probes with the redesigned PRO200 motor?", "answer": "Yes, existing PRO Quick Connect generator probes remain compatible with the redesigned motor unit." },
+            { "question": "How do I set up hands-free operation?", "answer": "Pair the motor with a PRO200 Stand Assembly for stable, hands-free bench-top use." },
+            { "question": "What support is available for an earlier-generation PRO200?", "answer": "Factory technical assistance, repair services, replacement parts, compatibility guidance, and upgrade support continue for legacy PRO200 units wherever possible." },
+            { "question": "How fast does the probe spin?", "answer": "Variable speed from 5,000 to 35,000 rpm, controlled by the thumb-operated speed control." },
+            { "question": "What comes with a complete homogenizing package?", "answer": "The motor unit, generator probe, stand assembly, and accessories needed to begin processing samples." },
+            { "question": "What is the price of the Bio-Gen PRO200 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe and package configuration." },
+            { "question": "Who is the authorized distributor of the Bio-Gen PRO200 in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific Bio-Gen PRO200 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Bio-Gen PRO200 in India from Inkarp",
+            "description": "Tell us your sample volume and application, and Inkarp will get you the right configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample volume and application, then confirm the right Bio-Gen PRO200 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolumeApplication", "label": "Sample volume and target application", "type": "text", "required": false },
+              { "key": "setupPreference", "label": "Hand-held or stand-mounted preference", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right probe and configuration", "body": "Tell us your typical sample volume, viscosity, and target application, and we'll get you the right PRO200 probe and configuration." },
+              { "title": "Confirm the right generator probe for your throughput", "body": "Tell us your sample type and typical throughput, and we'll get you the right generator probe for your PRO200." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Draws material into the probe, then shears it apart. No cavitation, no ultrasonic complexity.",
+            "heroLead": "Rotor-stator homogenization works on a different principle than ultrasonic probes entirely: material gets drawn directly into the generator probe and exposed to intense mechanical and hydraulic shear as it passes through, not broken apart by cavitation bubbles. A 144W high-torque motor drives speeds from 5,000 to 35,000 rpm, processing 0.03mL to 500mL samples (up to 1L depending on probe and viscosity) through the PRO Quick Connect stainless-steel probe system. New thumb-operated speed control and a redesigned ergonomic housing keep operation one-handed, while the quick-connect system delivers secure coupling, reduced vibration, and easy cleaning every time a probe swaps out. Existing PRO Quick Connect probes stay compatible with this redesigned motor unit, so current ProScientific users can upgrade without replacing probes or accessories already on hand.",
+            "stats": [
+              { "value": "144 W", "label": "Motor power" },
+              { "value": "5,000-35,000 rpm", "label": "Variable speed range" },
+              { "value": "0.03-500 mL", "label": "Confirmed sample volume range (up to 1L per some configurations)" },
+              { "value": "Thumb-operated", "label": "Speed control" },
+              { "value": "Quick Connect", "label": "Stainless-steel probe system" },
+              { "value": "2-Year", "label": "Warranty" },
+              { "value": "Made in USA", "label": "Manufacturing origin" },
+              { "value": "Legacy-compatible", "label": "Probes carry over from earlier PRO200 generations" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Bio-Gen PRO200 homogenizer product information: rotor-stator mechanism, probe system, and configuration options.",
+                "body": [
+                  "High-shear rotor-stator homogenization is designed for efficient laboratory sample preparation using mechanical and hydraulic shear rather than ultrasonic cavitation.",
+                  "Versatile sample processing supports tissue disruption, cell lysis, emulsification, dispersion, mixing, and particle size reduction using the same rotor-stator principle.",
+                  "A 144W high-torque motor provides variable speed operation from 5,000 to 35,000 rpm for controlled processing across different sample types.",
+                  "A wide sample volume range processes samples from 0.03 mL to 500 mL as standard, with some probe and viscosity combinations supporting volumes up to 1 L.",
+                  "One-handed operation comes from thumb-operated variable speed control and an ergonomic housing, making the PRO200 easy to operate with one hand during routine sample preparation.",
+                  "The PRO Quick Connect probe system lets stainless steel probes be changed quickly while maintaining a secure connection and helping reduce vibration during operation.",
+                  "Simplified cleaning between samples comes from the quick-connect probe system, making probe changes and cleanup more convenient when processing multiple samples.",
+                  "Existing PRO Quick Connect probes remain compatible with the redesigned motor, allowing laboratories to upgrade without replacing their current probe collection."
+                ],
+                "cards": [
+                  { "title": "Rotor-stator shear", "description": "Mechanical and hydraulic disruption, not ultrasonic" },
+                  { "title": "5,000-35,000 rpm", "description": "Full variable speed range" },
+                  { "title": "Quick Connect probes", "description": "Secure, low-vibration, easy-clean swaps" },
+                  { "title": "Legacy-compatible", "description": "Existing probes work with the redesigned motor" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "description": "Full probe selection and package configuration details are matched to your specific sample type and volume.",
+                "cards": [
+                  { "title": "Motor", "description": "144W, 5,000-35,000 rpm variable speed" },
+                  { "title": "Sample volume", "description": "0.03-500mL confirmed directly, up to 1L depending on probe and viscosity" },
+                  { "title": "Probe system", "description": "PRO Quick Connect, stainless steel, backward compatible with earlier PRO200 generations" },
+                  { "title": "Control", "description": "Thumb-operated variable speed" },
+                  { "title": "Warranty", "description": "2 years, factory technical support included" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Bio-Gen PRO200 applications: cell disruption, tissue homogenization, and nucleic acid extraction."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Bio-Gen PRO200 homogenizer technical specifications: motor power, speed range, and probe compatibility."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Rotor-Stator Shear Mechanism and Quick Connect Probes",
+                "title": "Rotor-Stator Shear Mechanism and Quick Connect Probes",
+                "description": "Understanding how rotor-stator homogenization actually works explains why it handles certain samples differently than an ultrasonic probe would. The generator probe draws material directly into itself, where it passes through the narrow gap between a rotating rotor and a fixed stator, experiencing both mechanical shear from the blade action and hydraulic shear from the turbulent flow that gap creates. The PRO Quick Connect probe system is what makes switching between applications practical rather than a maintenance chore. Coupling stays secure during operation, vibration drops compared to less precise connection systems, and cleaning between samples is straightforward since the stainless-steel probe disconnects cleanly.",
+                "cards": [
+                  { "title": "Consistent tissue and cell disruption", "description": "Mechanical and hydraulic shear via rotor-stator action" },
+                  { "title": "Fast switching between sample types", "description": "PRO Quick Connect probe system" },
+                  { "title": "Minimal vibration during extended runs", "description": "Secure Quick Connect coupling" },
+                  { "title": "Easy cleanup between samples", "description": "Quick-disconnect stainless-steel probes" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Configuration Options and Long-Term Support",
+                "title": "Configuration Options and Long-Term Support",
+                "body": [
+                  "Hand-held operation covers most routine work, but a PRO200 Stand Assembly turns the same motor into a stable, hands-free bench-top setup when that's what a protocol calls for. Complete homogenizing packages bundle the motor unit, generator probe, stand assembly, and accessories together for labs starting from scratch.",
+                  "Worth knowing if your lab already runs an earlier-generation Bio-Gen PRO200: factory technical assistance, repair services, replacement parts, compatibility guidance, and upgrade support continue for legacy units wherever possible, and because the redesigned motor stays compatible with existing Quick Connect probes, upgrading often doesn't mean replacing everything at once."
+                ],
+                "utilityChecklist": [
+                  { "label": "Starting fresh, need a complete setup", "value": "Complete homogenizing package, motor + probe + stand" },
+                  { "label": "Need stable, hands-free operation", "value": "PRO200 Stand Assembly" },
+                  { "label": "Running an earlier-generation PRO200", "value": "Legacy support, repair, and upgrade options available" },
+                  { "label": "Upgrading the motor, keeping existing probes", "value": "Confirmed compatible with the redesigned motor unit" }
+                ],
+                "disclaimer": "Tell us whether you're setting up new or upgrading an existing PRO200, and we'll confirm the right configuration and support path."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Bio-Gen PRO200 documentation: applications data, probe compatibility, and literature available on request.",
+                "cards": [
+                  { "title": "Bio-Gen PRO200 Literature and Specifications", "description": "Available on request" },
+                  { "title": "Generator Probe Compatibility Guide", "description": "Available on request" },
+                  { "title": "Applications Data Sheet", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Bio-Gen PRO200 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Mechanical and hydraulic shear from a probe that draws your sample straight in, with Quick Connect probes that swap fast and stay secure. Tell us your sample volume and application, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "PRO250 Homogenizer",
+          "slug": "pro250-homogenizer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Proscientific.png",
+          "imageAlt": "ProScientific PRO250 Homogenizer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/pro250-homogenizer",
+          "breadcrumbPath": "Home > Products > Hand-Held Rotor-Stator Homogenizers > PRO250 Homogenizer",
+          "h1": "PRO250 Homogenizer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Bigger samples and tougher material need more than just a faster spin, they need power behind it. PRO250 brings 576 watts to the same rotor-stator platform, handling 0.03mL up to 5L where smaller units run out of headroom.",
+
+          "features": [
+            "576W High-Power Motor: Handles demanding, viscous, and larger-volume samples with real headroom.",
+            "Separate ON/OFF Switch: Keeps the speed dial locked at your preferred setting across repeat runs.",
+            "Hand-Held or Post-Mounted Operation: Works either way without needing a different unit.",
+            "Wide Probe Dimension Range: 5×75mm to 30×200mm covers small formulation batches through 5L volumes.",
+            "Variable Speed Control: 10,000 to 30,000 rpm, precisely adjustable.",
+            "Compact, Durable Design: Built for repeat use in demanding lab and industrial settings.",
+            "Quick Connect Stainless-Steel Probes: Same fast-swap probe philosophy as the rest of the PRO range.",
+            "2-Year Warranty, Individually Tested: Every unit meets strict performance standards before shipping."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "ProScientific PRO250 Homogenizer" },
+            { "label": "Category", "value": "Hand-Held Rotor-Stator Homogenizers" },
+            { "label": "Motor Power", "value": "576 W" },
+            { "label": "Speed Range", "value": "10,000 to 30,000 rpm" },
+            { "label": "Sample Volume", "value": "0.03mL to 5L (higher volumes viscosity-dependent)" },
+            { "label": "Probe Range", "value": "5×75mm to 30×200mm" },
+            { "label": "Probe System", "value": "PRO Quick Connect, stainless steel" },
+            { "label": "Operation", "value": "Hand-held or post-mounted" },
+            { "label": "Speed Control", "value": "Variable, separate ON/OFF switch preserves setting" },
+            { "label": "Warranty", "value": "2 years" },
+            { "label": "Manufacturing", "value": "Made in USA, individually tested" }
+          ],
+
+          "applications": [
+            "Pharmaceutical Formulations: High-power shear for viscous formulation work",
+            "Emulsions: Consistent, repeatable emulsification at larger volumes",
+            "Small-Scale Industrial Testing: 5L volume ceiling suited to pilot-scale batches",
+            "Research and Development: Repeatable speed settings across iterative testing",
+            "General Laboratory Homogenization: Wide probe range covers varied sample types"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "PRO200 vs PRO250" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Speed-Lock Control" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What sample volume are you processing?",
+            "description": "Select your sample viscosity and application type, and see which PRO250 probe fits. Share your exact target sample volume with Inkarp for final probe sizing.",
+            "steps": [
+              {
+                "key": "sampleViscosity",
+                "question": "What's the sample viscosity?",
+                "options": [
+                  { "val": "low", "label": "Low viscosity" },
+                  { "val": "moderate", "label": "Moderate viscosity" },
+                  { "val": "high", "label": "High viscosity" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "pharmaceutical-formulations", "label": "Pharmaceutical formulations" },
+                  { "val": "emulsions", "label": "Emulsions" },
+                  { "val": "small-scale-industrial-testing", "label": "Small-scale industrial testing" },
+                  { "val": "research-development", "label": "Research and development" },
+                  { "val": "general-lab-homogenization", "label": "General laboratory homogenization" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your exact target sample volume, and this routes to a probe-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Which ProScientific homogenizer fits your work?",
+            "description": "Select your typical sample volume and power need, and see whether PRO200 or PRO250 fits.",
+            "fields": [
+              {
+                "key": "typicalSampleVolume",
+                "label": "Typical sample volume",
+                "options": [
+                  { "val": "under-500ml", "label": "Under 500mL" },
+                  { "val": "up-to-5l", "label": "Up to 5L" }
+                ]
+              },
+              {
+                "key": "powerRequirement",
+                "label": "Power requirement",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-power", "label": "High-power, for viscous material" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "powerRequirement": "high-power" },
+                "title": "PRO250 Fits Your Power Requirement",
+                "body": "PRO250's 576W motor and up to 5L capacity are built for viscous, demanding material, with a separate ON/OFF switch that preserves your speed setting between runs.",
+                "tags": ["576 W High-Power Motor"]
+              },
+              {
+                "condition": { "typicalSampleVolume": "up-to-5l" },
+                "title": "PRO250 Fits Your Sample Volume",
+                "body": "PRO250 processes up to 5L, well beyond PRO200's confirmed 500mL-1L range.",
+                "tags": ["0.03mL to 5L Capacity"]
+              },
+              {
+                "condition": { "typicalSampleVolume": "under-500ml", "powerRequirement": "standard" },
+                "title": "PRO200 Fits Your Requirements",
+                "body": "For routine bench-scale samples under 500mL at standard power, PRO200's 144W motor and up to 35,000 rpm top speed cover the work directly.",
+                "tags": ["Routine Bench-Scale Homogenization"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Model With Inkarp",
+                "body": "Share your typical sample volume and power needs, and Inkarp will confirm whether PRO200 or PRO250 fits your work.",
+                "tags": ["PRO200 / PRO250"]
+              }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Bio-Gen PRO200 vs. PRO250",
+            "description": "PRO250 compared directly with the Bio-Gen PRO200 across the ProScientific hand-held homogenizer range.",
+            "columns": [
+              { "label": "Bio-Gen PRO200" },
+              { "label": "PRO250" }
+            ],
+            "rows": [
+              { "feature": "Motor Power", "values": ["144 W", "576 W"] },
+              { "feature": "Speed Range", "values": ["5,000-35,000 rpm", "10,000-30,000 rpm"] },
+              { "feature": "Sample Volume", "values": ["0.03-500mL (up to 1L per some configurations)", "0.03mL-5L"] },
+              { "feature": "Probe Dimensions", "values": ["Not separately specified", "5×75mm to 30×200mm"] },
+              { "feature": "Speed Control", "values": ["Thumb-operated variable", "Variable, separate ON/OFF preserves setting"] },
+              { "feature": "Operation", "values": ["Hand-held", "Hand-held or post-mounted"] },
+              { "feature": "Best For", "values": ["Routine bench-scale samples up to 500mL-1L", "Larger, viscous, or demanding samples up to 5L"] },
+              { "feature": "Choose when", "values": ["Your work stays within PRO200's confirmed range", "You need more power, larger volumes, or post-mounted operation"] }
+            ],
+            "disclaimer": "Both share the same PRO Quick Connect probe system and 2-year warranty; the choice comes down to sample volume and how much power your material actually needs."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "PRO250 industries: pharmaceutical formulation, small-scale industrial testing, and research and development.",
+            "industries": [
+              { "name": "Pharmaceutical Formulation", "useCase": "Viscous formulation development and emulsions", "consideration": "576W power for demanding formulation work" },
+              { "name": "Small-Scale Industrial Testing", "useCase": "Pilot-batch processing up to 5L", "consideration": "Post-mounted operation for stable, hands-free runs" },
+              { "name": "Research and Development", "useCase": "Iterative testing requiring repeatable conditions", "consideration": "Speed-lock ON/OFF for consistent repeat runs" },
+              { "name": "Cosmetic and Personal Care", "useCase": "Emulsion and dispersion development", "consideration": "Wide probe range for varied formulation volumes" },
+              { "name": "Contract Formulation Labs", "useCase": "Varied client sample volumes and viscosities", "consideration": "5L ceiling covers most pilot-scale project needs" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows probe operation and shear performance on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms the right probe, power tier, and package for your application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with speed-lock operation and probe changes" },
+              { "title": "Preventive Maintenance", "description": "Maintains motor, probe coupling, and stand assembly performance" },
+              { "title": "Spares and Accessories", "description": "Supplies generator probes, stand assemblies, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the PRO250 used for?", "answer": "It's a high-power hand-held rotor-stator homogenizer for pharmaceutical formulations, emulsions, small-scale industrial testing, and general laboratory homogenization." },
+            { "question": "How is PRO250 different from PRO200?", "answer": "PRO250 delivers more power, 576W versus 144W, and handles larger volumes, up to 5L versus PRO200's 500mL-1L range, though PRO200's top speed reaches higher at 35,000 rpm versus PRO250's 30,000 rpm." },
+            { "question": "How does the separate ON/OFF switch improve repeatability?", "answer": "The speed dial stays at your chosen setting independent of the ON/OFF switch, so switching off between samples and back on returns you to the exact same speed without re-adjusting." },
+            { "question": "What sample volumes can PRO250 handle?", "answer": "0.03mL to 5L, with higher volumes dependent on sample viscosity." },
+            { "question": "Can PRO250 be used post-mounted rather than hand-held?", "answer": "Yes, it works both hand-held and post-mounted; pair it with a PRO250 Stand Assembly for stable, hands-free operation." },
+            { "question": "What probe sizes are available?", "answer": "PRO Quick Connect stainless-steel probes ranging from 5×75mm to 30×200mm." },
+            { "question": "How fast does PRO250 run?", "answer": "Variable speed from 10,000 to 30,000 rpm." },
+            { "question": "What's included in the homogenizing package?", "answer": "Everything needed to begin homogenizing; contact us to confirm the exact package contents for your application." },
+            { "question": "What is the price of the PRO250 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe and package configuration." },
+            { "question": "Who is the authorized distributor of the PRO250 in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO250 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the PRO250 in India from Inkarp",
+            "description": "Tell us your sample volume and viscosity, and Inkarp will get you the right configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample volume and viscosity, then confirm the right PRO250 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolumeViscosity", "label": "Sample volume and viscosity", "type": "text", "required": false },
+              { "key": "repeatabilityNeeds", "label": "Run frequency and repeatability needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right probe and configuration", "body": "Tell us your typical sample volume and viscosity, and we can help identify the right PRO250 probe and configuration." },
+              { "title": "Confirm the right speed and probe setup", "body": "Tell us your typical run frequency and whether repeatability between samples matters most, and we'll get you the right PRO250 speed and probe setup." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "576 watts, up to 5 liters. Set your speed once, then just switch on and off.",
+            "heroLead": "Bigger samples and tougher material need more than just a faster spin, they need power behind it. PRO250 brings 576 watts to the same rotor-stator platform, handling 0.03mL up to 5L where smaller units run out of headroom. A separate ON/OFF switch keeps your speed dial locked at whatever setting you've dialed in, so repeat runs stay at exactly the same condition without resetting anything between samples. Variable speed runs 10,000 to 30,000 rpm, hand-held or post-mounted, with Quick Connect stainless-steel probes ranging from 5×75mm up to 30×200mm to match your vessel and volume.",
+            "stats": [
+              { "value": "576 W", "label": "Motor power" },
+              { "value": "10,000-30,000 rpm", "label": "Variable speed range" },
+              { "value": "0.03 mL-5 L", "label": "Sample volume range" },
+              { "value": "5×75mm-30×200mm", "label": "Quick Connect probe dimension range" },
+              { "value": "Hand-held or post-mounted", "label": "Operating modes" },
+              { "value": "Separate ON/OFF switch", "label": "Preserves speed dial setting" },
+              { "value": "2-Year", "label": "Warranty" },
+              { "value": "Made in USA", "label": "Manufacturing origin" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "PRO250 homogenizer product information: power tier, probe dimensions, and configuration options.",
+                "body": [
+                  "576W high-power homogenization is designed for demanding laboratory and small-scale industrial applications, including viscous and challenging samples.",
+                  "High-speed rotor-stator processing runs variable speed operation from 10,000 to 30,000 rpm, providing control across different sample types and processing requirements.",
+                  "A wide sample volume range processes samples from 0.03 mL to 5 L, with maximum volume depending on sample viscosity.",
+                  "Flexible probe selection comes from PRO Quick Connect stainless steel generator probes, available from 5 × 75 mm to 30 × 200 mm to match different sample volumes and applications.",
+                  "Hand-held or post-mounted operation lets you use PRO250 manually for flexible processing, or mount it to a stand for consistent, hands-free operation.",
+                  "A separate ON/OFF switch keeps the speed dial at the selected setting when the unit is switched off, allowing the same speed to be restored without readjustment between samples.",
+                  "The Quick Connect probe system, in stainless steel, allows probes to be matched to the specific sample and processing requirement.",
+                  "Each unit is individually tested and supplied with a 2-year warranty.",
+                  "Configuration is matched to your application, since probe selection and package configuration depend on the sample type, volume, and viscosity."
+                ],
+                "cards": [
+                  { "title": "576 W", "description": "High-power rotor-stator homogenization" },
+                  { "title": "0.03mL-5L", "description": "Full sample volume range" },
+                  { "title": "Speed-lock ON/OFF", "description": "Repeatable settings across runs" },
+                  { "title": "5×75mm-30×200mm", "description": "Confirmed probe dimension range" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "ProScientific PRO250 Homogenizer" },
+                  { "title": "Motor", "description": "576 W, 10,000-30,000 rpm variable speed" },
+                  { "title": "Sample volume", "description": "0.03mL to 5L, viscosity-dependent" },
+                  { "title": "Probe range", "description": "PRO Quick Connect, 5×75mm to 30×200mm" },
+                  { "title": "Speed control", "description": "Variable, separate ON/OFF switch preserves setting" },
+                  { "title": "Warranty", "description": "2 years, individually tested" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "PRO250 applications: pharmaceutical formulations, emulsions, and small-scale industrial testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "PRO250 homogenizer technical specifications: motor power, speed range, and probe dimensions."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Power, Volume Range, and Repeatable Speed Control",
+                "title": "Power, Volume Range, and Repeatable Speed Control",
+                "description": "More power on its own doesn't guarantee repeatable results, it just processes faster. The separate ON/OFF switch is what actually delivers repeatability here: dial in your speed once, and every subsequent run starts at exactly that same setting, since switching off between samples doesn't reset the dial. That power translates directly into volume headroom. 0.03mL to 5L is a genuinely wide range for one hand-held unit, and the 5×75mm to 30×200mm probe range gives you the physical reach to match probe size to sample volume rather than forcing every job through one probe geometry.",
+                "cards": [
+                  { "title": "Consistent settings across repeat runs", "description": "Speed dial stays fixed independent of ON/OFF" },
+                  { "title": "Processing larger or more viscous samples", "description": "576W motor, 0.03mL-5L range" },
+                  { "title": "Matching probe size to sample volume", "description": "5×75mm-30×200mm confirmed probe range" },
+                  { "title": "Flexibility between hand-held and mounted use", "description": "Both operating modes on the same unit" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Choosing Between PRO200 and PRO250",
+                "title": "Choosing Between PRO200 and PRO250",
+                "body": [
+                  "Both share the same Quick Connect probe philosophy and rotor-stator mechanism, so the choice comes down to how much volume and power your work actually needs."
+                ],
+                "utilityChecklist": [
+                  { "label": "Samples under 500mL, routine bench work", "value": "PRO200" },
+                  { "label": "Samples up to 5L, viscous or demanding material", "value": "PRO250" },
+                  { "label": "Need the widest possible speed range (up to 35,000 rpm)", "value": "PRO200" },
+                  { "label": "Need higher power and repeatable speed-lock operation", "value": "PRO250" },
+                  { "label": "Upgrading from an earlier-generation PRO200", "value": "Confirm legacy support directly, specific to PRO200" }
+                ],
+                "disclaimer": "Send us your sample volume, viscosity, and whether repeatability between runs is a priority, and we'll confirm whether PRO200 or PRO250 is the right fit."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "PRO250 documentation: applications data, probe compatibility, and literature available on request.",
+                "cards": [
+                  { "title": "PRO250 Literature and Specifications", "description": "Available on request" },
+                  { "title": "Generator Probe Compatibility Guide", "description": "Available on request" },
+                  { "title": "Applications Data Sheet", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the PRO250 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "576 watts of power, up to 5 liters of capacity, and a speed dial that stays exactly where you set it. Tell us your sample volume and viscosity, and Inkarp will get you the right configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "principal": {
+    "slug": "proscientific",
+    "principalName": "ProScientific",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Digital Homogenizer",
+      "slug": "digital-homogenizer",
+      "products": [
+        {
+          "name": "PRO25D Digital Homogenizer",
+          "slug": "pro25d-digital-homogenizer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Proscientific.png",
+          "imageAlt": "ProScientific PRO25D Digital Homogenizer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/pro25d-digital-homogenizer",
+          "breadcrumbPath": "Home > Products > Digital Homogenizer > PRO25D Digital Homogenizer",
+          "h1": "PRO25D Digital Homogenizer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Low-viscosity and high-viscosity samples don't behave the same way under a rotor-stator, and PRO25D is built to handle both without losing precision at either end.",
+
+          "features": [
+            "Precisely Adjustable 0 to 30,000 RPM Range: Fine-tunes speed throughout the entire range, not just at fixed steps.",
+            "Wide Processing Volume Range: Handles 0.05 mL to 3.5 L on a single unit.",
+            "High-Viscosity Capability: Processes samples up to 50,000 mPas, well beyond thin liquid samples.",
+            "Wide Probe Diameter Compatibility: Accepts PRO generator probes from 5mm to 30mm in diameter.",
+            "Included U-Shape Stand Assembly: Comes standard with the unit, no separate stand purchase needed.",
+            "Bright LED Display: Shows current speed clearly for user-friendly control.",
+            "Deflector Head Compatibility: Improves sample movement and increases max volume homogenized when added."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "ProScientific PRO25D Digital Homogenizer" },
+            { "label": "Category", "value": "Digital Homogenizers" },
+            { "label": "Speed Range", "value": "0 to 30,000 RPM" },
+            { "label": "Speed Control", "value": "Digital, precisely adjustable" },
+            { "label": "Processing Volume Range", "value": "0.05 mL to 3.5 L" },
+            { "label": "Viscosity Handling", "value": "Up to 50,000 mPas" },
+            { "label": "Compatible Probe Diameter", "value": "5mm to 30mm" },
+            { "label": "Stand", "value": "U-shape Stand Assembly, included" },
+            { "label": "Display", "value": "Bright LED" },
+            { "label": "Warranty", "value": "2 years, made in the USA" },
+            { "label": "Generator Probe", "value": "Required, sold separately" }
+          ],
+
+          "applications": [
+            "Compounding: Wide RPM range and probe compatibility suit varied compounding needs",
+            "Emulsions and Suspensions: Precise speed control across the full range supports stable emulsion formation",
+            "Cell Disruption: High-torque motor and fine speed adjustment support consistent disruption",
+            "Protein Extraction: Precision speed control supports repeatable extraction protocols",
+            "Medical Research: Wide volume range covers varied research sample sizes",
+            "Pharmaceutical Processing: High-viscosity handling up to 50,000 mPas suits demanding formulation work"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Application Fit Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "benefits", "label": "Speed Control" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What speed and volume does your process require?",
+            "description": "Select your sample viscosity and application type, and see the recommended probe. Share your exact target speed and sample volume with Inkarp for final configuration.",
+            "steps": [
+              {
+                "key": "sampleViscosity",
+                "question": "What's the sample viscosity level?",
+                "options": [
+                  { "val": "low", "label": "Low viscosity" },
+                  { "val": "medium", "label": "Medium viscosity" },
+                  { "val": "high", "label": "High viscosity, up to 50,000 mPas", "desc": "May need a Deflector Head to maintain effective volume" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "compounding", "label": "Compounding" },
+                  { "val": "emulsions-suspensions", "label": "Emulsions and suspensions" },
+                  { "val": "cell-disruption", "label": "Cell disruption" },
+                  { "val": "protein-extraction", "label": "Protein extraction" },
+                  { "val": "medical-research", "label": "Medical research" },
+                  { "val": "pharmaceutical-processing", "label": "Pharmaceutical processing" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your exact target speed and sample volume, and this routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "What are you processing?",
+            "description": "Select your application type, and see how PRO25D fits.",
+            "fields": [
+              {
+                "key": "applicationType",
+                "label": "Application type",
+                "options": [
+                  { "val": "compounding", "label": "Compounding" },
+                  { "val": "emulsion", "label": "Emulsion" },
+                  { "val": "cell-disruption", "label": "Cell disruction" },
+                  { "val": "protein-extraction", "label": "Protein extraction" },
+                  { "val": "pharmaceutical-processing", "label": "Pharmaceutical processing" }
+                ]
+              },
+              {
+                "key": "sampleSensitivity",
+                "label": "Sample sensitivity",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "delicate", "label": "Delicate, requires fine speed control" }
+                ]
+              },
+              {
+                "key": "viscosityLevel",
+                "label": "Viscosity level",
+                "options": [
+                  { "val": "low", "label": "Low" },
+                  { "val": "medium", "label": "Medium" },
+                  { "val": "high", "label": "High, up to 50,000 mPas" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "How Does PRO25D Fit Your Application?",
+                "body": "PRO25D's precisely adjustable 0 to 30,000 RPM range and viscosity handling up to 50,000 mPas cover compounding, emulsions, cell disruption, protein extraction, and pharmaceutical processing on the same unit, with probe diameter matched to your sample.",
+                "tags": ["0 to 30,000 RPM, Precisely Adjustable"]
+              }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Industries using PRO25D include pharmaceutical processing, medical research, and cosmetics formulation.",
+            "industries": [
+              { "name": "Pharmaceutical Processing", "useCase": "Formulating and compounding drug products at lab scale", "consideration": "Viscosity handling up to 50,000 mPas suits demanding formulation work" },
+              { "name": "Medical Research", "useCase": "Cell disruption and protein extraction for downstream analysis", "consideration": "Precise RPM control supports repeatable extraction protocols" },
+              { "name": "Cosmetics and Personal Care Formulation", "useCase": "Developing stable emulsions and suspensions", "consideration": "Fine speed adjustment supports delicate emulsion formation" },
+              { "name": "Academic Research Laboratories", "useCase": "Running varied sample types across different volumes and viscosities", "consideration": "Wide 0.05 mL to 3.5 L range covers most research-scale needs on one unit" },
+              { "name": "Contract Compounding Laboratories", "useCase": "Processing varied client formulations", "consideration": "5mm to 30mm probe range adapts the same unit to different batch sizes" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows precision speed control and high-viscosity processing on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms the right probe diameter and accessories for your application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with digital speed control and probe handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains motor and speed control performance" },
+              { "title": "Spares and Accessories", "description": "Supplies generator probes, deflector heads, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is PRO25D used for?", "answer": "PRO25D is a digital homogenizer used for compounding, emulsions and suspensions, cell disruption, protein extraction, medical research, and pharmaceutical processing." },
+            { "question": "What is the speed range on PRO25D?", "answer": "Speed is precisely adjustable throughout the full 0 to 30,000 RPM range via digital control." },
+            { "question": "What sample volumes can PRO25D handle?", "answer": "It processes samples from 0.05 mL up to 3.5 L, with higher volumes dependent on viscosity." },
+            { "question": "What viscosity can PRO25D handle?", "answer": "PRO25D handles viscosity up to 50,000 mPas, suited to thick suspensions and compounds." },
+            { "question": "What probe sizes are compatible with PRO25D?", "answer": "Compatible PRO generator probes range from 5mm to 30mm in diameter." },
+            { "question": "Does PRO25D include a stand?", "answer": "Yes, a U-shape Stand Assembly is included with the unit." },
+            { "question": "Does PRO25D include a generator probe?", "answer": "No, a generator probe is required to operate the unit and is sold separately." },
+            { "question": "Can PRO25D handle viscous samples effectively?", "answer": "Yes, though viscous samples reduce maximum capacity. Adding a Deflector Head to the generator probe helps facilitate sample movement and increase max volume homogenized." },
+            { "question": "What is the price of PRO25D in India?", "answer": "The price depends on the probe and accessory configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
+            { "question": "Who is the authorized distributor of PRO25D in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO25D in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get PRO25D in India from Inkarp",
+            "description": "Tell us your sample volume and viscosity, and Inkarp will confirm the right PRO25D configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample volume and viscosity, then confirm the right PRO25D configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolumeViscosity", "label": "Sample volume and viscosity", "type": "text", "required": false },
+              { "key": "speedProbeNeeds", "label": "Target speed and probe needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right probe diameter and configuration", "body": "Tell our team your typical sample volume and viscosity, and Inkarp will confirm the right probe diameter and configuration for your PRO25D." },
+              { "title": "Confirm the right setup for your RPM range", "body": "Tell our team the RPM range your protocols typically operate in, and Inkarp will confirm the right probe and setup for that range." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Fine RPM control from 0 to 30,000, handling samples from a drop to 3.5 liters.",
+            "heroLead": "Low-viscosity and high-viscosity samples don't behave the same way under a rotor-stator, and PRO25D is built to handle both without losing precision at either end. A digital display and speed control fine-tune speed anywhere across the full 0 to 30,000 RPM range, precisely adjustable throughout, not just at fixed steps. Compatible generator probes range from 5mm to 30mm in diameter, letting the unit process anything from 0.05 mL up to 3.5 L, with viscosity handling up to 50,000 mPas covering thick suspensions well beyond what many benchtop homogenizers can manage.",
+            "stats": [
+              { "value": "0 to 30,000 RPM", "label": "Speed range, precisely adjustable" },
+              { "value": "0.05 mL to 3.5 L", "label": "Volume processing range" },
+              { "value": "Up to 50,000 mPas", "label": "Viscosity handling" },
+              { "value": "5mm to 30mm", "label": "Compatible probe diameter range" },
+              { "value": "U-shape stand", "label": "Included with the unit" },
+              { "value": "Made in USA", "label": "2-year warranty" },
+              { "value": "Bright LED display", "label": "Digital speed control" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "PRO25D product information: speed control, viscosity handling, and probe compatibility.",
+                "body": [
+                  "Digital display and speed control fine-tune speed anywhere between 0 and 30,000 RPM, with precise adjustment available throughout the entire range rather than only at fixed increments.",
+                  "Processing volume spans 0.05 mL up to 3.5 L, giving genuine flexibility from tiny research samples to larger lab-scale batches on the same unit.",
+                  "Viscosity handling reaches up to 50,000 mPas, covering thick suspensions and compounds well beyond thin liquid samples.",
+                  "Compatible PRO generator probes range from 5mm to 30mm in diameter, matched to the sample volume and viscosity being processed.",
+                  "A U-shape Stand Assembly is included with the homogenizer, so no separate stand purchase is needed to get the unit running.",
+                  "The unit is versatile enough for compounding, emulsions and suspensions, cell disruption, protein extractions, medical research, and pharmaceutical processing.",
+                  "A generator probe is required to operate the unit and is sold separately, and viscous samples will reduce maximum processing capacity.",
+                  "Adding a Deflector Head to a generator probe facilitates sample movement during homogenization and helps increase max volume homogenized."
+                ],
+                "cards": [
+                  { "title": "0 to 30,000 RPM", "description": "Precise speed control across the full range" },
+                  { "title": "0.05 mL to 3.5 L", "description": "Wide processing volume flexibility" },
+                  { "title": "Up to 50,000 mPas", "description": "Genuine high-viscosity capability" },
+                  { "title": "5mm to 30mm probes", "description": "Matched to sample size and viscosity" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "ProScientific PRO25D Digital Homogenizer" },
+                  { "title": "Speed range", "description": "0 to 30,000 RPM, precisely adjustable" },
+                  { "title": "Processing volume", "description": "0.05 mL to 3.5 L" },
+                  { "title": "Viscosity handling", "description": "Up to 50,000 mPas" },
+                  { "title": "Probe diameter range", "description": "5mm to 30mm" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "PRO25D applications: compounding, emulsions, cell disruption, and pharmaceutical processing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "PRO25D technical specifications: speed range, volume capacity, and probe compatibility."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Precision Speed Control",
+                "title": "Precision Speed Control",
+                "description": "Some processes need brute force at high RPM. Others need delicate control at the low end where a heavier touch would damage a sample. PRO25D is built to deliver both precisely, not just broadly. Digital speed control allows precise adjustment throughout the entire 0 to 30,000 RPM range, rather than snapping between fixed speed steps that might overshoot what a sensitive sample or delicate emulsion actually needs. That level of control matters directly for protocols like cell disruption or protein extraction, where consistency between runs depends on hitting the exact same speed every time, not an approximate one.",
+                "cards": [
+                  { "title": "Gentle, precise control at low speeds", "description": "Fine-tuned adjustment throughout the full RPM range" },
+                  { "title": "High-torque performance at maximum speed", "description": "Full range extends up to 30,000 RPM" },
+                  { "title": "Consistent results across repeated runs", "description": "Precise, repeatable speed setting via digital control" },
+                  { "title": "Clear visibility into current settings", "description": "Bright LED display" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "High-Viscosity Processing",
+                "title": "High-Viscosity Processing",
+                "body": [
+                  "Thick, viscous samples push most rotor-stator homogenizers to their limits, and that's exactly where PRO25D's 50,000 mPas rating earns its place.",
+                  "Viscosity handling up to 50,000 mPas means compounds, thick suspensions, and dense formulations process on the same unit that handles thin liquid samples, without needing separate equipment for each viscosity range. That capability, combined with generator probes ranging from 5mm to 30mm in diameter, lets the probe itself be matched to how thick and how large the sample actually is. Where viscosity does reduce maximum processing capacity, adding a Deflector Head to the generator probe helps move sample material more effectively, increasing the maximum volume that can still be homogenized."
+                ],
+                "utilityChecklist": [
+                  { "label": "Processing thick compounds or suspensions", "value": "Viscosity handling up to 50,000 mPas" },
+                  { "label": "Probe sizing matched to sample thickness", "value": "5mm to 30mm probe diameter range" },
+                  { "label": "Recovering capacity lost to high viscosity", "value": "Optional Deflector Head accessory" }
+                ],
+                "disclaimer": "Tell our team your typical sample viscosity and volume, and Inkarp will confirm whether a Deflector Head or specific probe diameter fits your process."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for PRO25D is available on request.",
+                "cards": [
+                  { "title": "Technical Specification Sheet", "description": "Available on request" },
+                  { "title": "Probe and Deflector Head Compatibility Guide", "description": "Available on request" },
+                  { "title": "Applications Literature", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get PRO25D in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Precisely adjustable 0 to 30,000 RPM speed control, handling up to 50,000 mPas viscosity across 0.05 mL to 3.5 L. Tell us your sample volume and viscosity, and Inkarp will confirm the right PRO25D configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "principal": {
+    "slug": "proscientific",
+    "principalName": "ProScientific",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Automated Homogenizer",
+      "slug": "automated-homogenizer",
+      "products": [
+        {
+          "name": "Multi-Prep Rapid Homogenizer",
+          "slug": "multi-prep-rapid-homogenizer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Proscientific.png",
+          "imageAlt": "ProScientific Multi-Prep Rapid Homogenizer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/multi-prep-rapid-homogenizer",
+          "breadcrumbPath": "Home > Products > Automated Homogenizer > Multi-Prep Rapid Homogenizer",
+          "h1": "Multi-Prep Rapid Homogenizer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Homogenizing one sample at a time doesn't scale when your day has dozens of them lined up. Multi-Prep is built to process six simultaneously and let you walk away while it does.",
+
+          "features": [
+            "Simultaneous 6-Sample Processing: Homogenizes up to 6 samples at once, in seconds, for up to 300 samples per hour.",
+            "Automated Probe Engagement and Disengagement: Runs as a genuinely walk-away system, with no manual probe handling required mid-run.",
+            "Oscillating Spider Tube Rack: Mimics hand-held homogenizing motion at 60 oscillations per minute.",
+            "Reusable 316 Stainless Steel and PTFE Probes: Eliminates cross-contamination and handles tough tissue or frozen samples.",
+            "Sterilizable by Any Method: Probes clean via flaming, autoclaving, or chemical cleaning, and reuse indefinitely.",
+            "10-Program Memory Storage: Saves varied homogenizing protocols for consistent, repeatable runs.",
+            "Manual Mode for Individual Runs: Supports new trials or quick, single-sample processing outside automated batches.",
+            "Flexible Tube Compatibility: Works with existing 5 mL to 50 mL tubes via small or large Spider Tube Racks.",
+            "Sound-Abating Enclosure with Clear View: Contains noise while a rounded polycarbonate door keeps the process visible."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "ProScientific Multi-Prep Rapid Homogenizer" },
+            { "label": "Category", "value": "Automated Homogenizer, Multi-Sample" },
+            { "label": "Simultaneous Sample Capacity", "value": "Up to 6" },
+            { "label": "Maximum Throughput", "value": "Up to 300 samples per hour" },
+            { "label": "Oscillation Rate", "value": "60 oscillations per minute" },
+            { "label": "Program Memory", "value": "Up to 10 stored programs" },
+            { "label": "Tube Compatibility", "value": "5 mL to 50 mL (10 mL through 15/50 mL centrifuge tubes)" },
+            { "label": "Probe Diameter Options", "value": "7mm or 10mm" },
+            { "label": "Probe Material", "value": "316 stainless steel and PTFE" },
+            { "label": "Probe Pack Size", "value": "12-pack" },
+            { "label": "Enclosure", "value": "Sound-abating, clear polycarbonate door" },
+            { "label": "Control", "value": "LCD and control panel" },
+            { "label": "Warranty", "value": "2-year limited coverage, made in the USA" }
+          ],
+
+          "applications": [
+            "High-Throughput Sample Preparation: Processes up to 300 samples per hour across 6 simultaneous positions",
+            "Tough Tissue Homogenization: Durable 316 stainless steel and PTFE probes handle difficult tissue types",
+            "Frozen Sample Processing: Reusable probe design supports processing frozen samples directly",
+            "Cross-Contamination-Sensitive Workflows: A clean probe used per sample removes contamination risk between runs",
+            "Standardized, Repeatable Protocols: 10-program memory keeps homogenizing conditions consistent across a lab"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Probe & Rack Builder" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "benefits", "label": "Automated Processing" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "How many samples do you process daily?",
+            "description": "Select your tube size and sample type, and see how Multi-Prep fits. Share your exact daily sample volume with Inkarp for final throughput confirmation.",
+            "steps": [
+              {
+                "key": "tubeSize",
+                "question": "What tube size does your work use?",
+                "options": [
+                  { "val": "small-5-15ml", "label": "Small, 5-15 mL" },
+                  { "val": "large-15-50ml", "label": "Large, 15-50 mL" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "question": "What sample type are you processing?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "tough-tissue", "label": "Tough tissue" },
+                  { "val": "frozen", "label": "Frozen" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your typical daily sample volume, and this routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "What tubes and probe diameter does your work need?",
+            "description": "Select your tube size and probe preference, and see the recommended combination.",
+            "fields": [
+              {
+                "key": "tubeSize",
+                "label": "Tube size",
+                "options": [
+                  { "val": "small-5-15ml", "label": "Small, 5-15 mL" },
+                  { "val": "large-15-50ml", "label": "Large, 15-50 mL" }
+                ]
+              },
+              {
+                "key": "probeDiameter",
+                "label": "Probe diameter",
+                "options": [
+                  { "val": "7mm", "label": "7mm" },
+                  { "val": "10mm", "label": "10mm" }
+                ]
+              },
+              {
+                "key": "programStorageNeed",
+                "label": "Program storage need",
+                "options": [
+                  { "val": "within-10", "label": "10 or fewer protocols" },
+                  { "val": "more-than-10", "label": "More than 10 protocols" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Probe and Rack Configuration Does Multi-Prep Support?",
+                "body": "Multi-Prep pairs a 12-pack of 7mm or 10mm probes with a small or large Spider Tube Rack, covering 5 mL to 50 mL tubes, with up to 10 stored programs for repeatable protocols.",
+                "tags": ["12-Pack Probe Compatibility"]
+              }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Industries using Multi-Prep include pharmaceutical QC, academic research, and contract testing laboratories.",
+            "industries": [
+              { "name": "Pharmaceutical Quality Control", "useCase": "Running high-volume sample prep for routine QC testing", "consideration": "300 samples per hour throughput clears large daily batches efficiently" },
+              { "name": "Academic Research Laboratories", "useCase": "Processing tissue samples across multiple research protocols", "consideration": "10-program memory keeps varied research protocols consistent" },
+              { "name": "Contract Research and Testing Labs", "useCase": "Handling client sample batches with minimal cross-contamination risk", "consideration": "Reusable, sterilizable probes eliminate contamination between client samples" },
+              { "name": "Forensic and Toxicology Laboratories", "useCase": "Processing tough or frozen tissue samples for analysis", "consideration": "316 stainless steel probes handle difficult sample types reliably" },
+              { "name": "Environmental Testing Laboratories", "useCase": "Preparing multiple environmental samples for downstream analysis", "consideration": "Flexible tube compatibility fits existing 5 mL to 50 mL sample tubes" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows six-sample parallel processing and automated engagement on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms probe diameter, rack size, and program storage for your workflow" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with program storage and manual mode operation" },
+              { "title": "Preventive Maintenance", "description": "Maintains probe engagement mechanism and oscillating rack performance" },
+              { "title": "Spares and Accessories", "description": "Supplies probe 12-packs and Spider Tube Racks" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is Multi-Prep used for?", "answer": "Multi-Prep is an automated multi-sample homogenizer used for high-throughput parallel processing, homogenizing up to 6 samples at once for reproducible results." },
+            { "question": "How many samples can Multi-Prep process at once?", "answer": "Up to 6 samples process simultaneously, in mere seconds, reaching a maximum throughput of up to 300 samples per hour." },
+            { "question": "Does Multi-Prep require manual probe handling?", "answer": "No, the Multi-Prep Probes self-engage and self-disengage automatically, making it a genuinely walk-away system." },
+            { "question": "How does Multi-Prep prevent cross-contamination?", "answer": "A clean probe from the 12-pack is used for each sample, removing the need to stop and clean a single generator between samples." },
+            { "question": "What are the probes made from?", "answer": "Probes are made from 316 stainless steel and PTFE, a more durable, reusable alternative to disposable plastic generator probes, capable of handling tough tissue and frozen samples." },
+            { "question": "Can Multi-Prep probes be reused?", "answer": "Yes, probes are infinitely reusable and can be sterilized by flaming, autoclaving, or chemical cleaning." },
+            { "question": "What tube sizes does Multi-Prep support?", "answer": "Small or large Spider Tube Racks accommodate tubes from 5 mL to 50 mL, so existing tubes don't need to be changed." },
+            { "question": "How many programs can Multi-Prep store?", "answer": "Up to 10 different homogenizing programs store in memory, with a manual mode available for new trials or individual runs." },
+            { "question": "What is the price of Multi-Prep in India?", "answer": "The price depends on the probe pack and rack configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
+            { "question": "Who is the authorized distributor of Multi-Prep in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific Multi-Prep Rapid Homogenizer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Multi-Prep in India from Inkarp",
+            "description": "Tell us your daily sample volume and tube sizes, and Inkarp will confirm the right Multi-Prep configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your daily sample volume and tube sizes, then confirm the right Multi-Prep configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "dailySampleVolume", "label": "Daily sample volume and tube sizes", "type": "text", "required": false },
+              { "key": "probeRackNeeds", "label": "Probe diameter and rack needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right probe pack and rack configuration", "body": "Tell our team your typical daily sample volume and tube sizes, and Inkarp will confirm the right probe pack and Spider Tube Rack configuration for your lab." },
+              { "title": "Confirm the right probe diameter for your samples", "body": "Tell our team your typical sample type, especially if you're processing frozen or particularly tough tissue, and Inkarp will confirm the right probe diameter for your work." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Six samples at once, up to 300 an hour, walk-away automated.",
+            "heroLead": "Homogenizing one sample at a time doesn't scale when your day has dozens of them lined up. Multi-Prep is built to process six simultaneously and let you walk away while it does. Fully automated multi-sample homogenizing runs up to 6 samples at once, in seconds, reaching a maximum throughput of 300 samples per hour, with self-engaging and self-disengaging Multi-Prep Probes making the whole process genuinely hands-off. An oscillating Spider Tube Rack mimics the up-down motion of hand-held homogenizing at 60 oscillations per minute, and up to 10 different homogenizing programs store directly in memory for consistent, repeatable protocols across your lab.",
+            "stats": [
+              { "value": "6 samples", "label": "Processed simultaneously" },
+              { "value": "Up to 300/hour", "label": "Maximum sample throughput" },
+              { "value": "60 oscillations/min", "label": "Spider Tube Rack motion" },
+              { "value": "10 programs", "label": "Stored in memory" },
+              { "value": "5 mL to 50 mL", "label": "Compatible tube sizes" },
+              { "value": "7mm or 10mm", "label": "Multi-Prep Probe diameter, 12-pack" },
+              { "value": "Automated", "label": "Self-engaging and self-disengaging probes" },
+              { "value": "Made in USA", "label": "2-year limited warranty" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Multi-Prep product information: parallel processing, probe design, and containment.",
+                "body": [
+                  "Up to 6 samples process simultaneously, in mere seconds, giving a maximum throughput of 300 samples per hour.",
+                  "Automation runs through stress-free self-engagement and disengagement of the Multi-Prep Probes, making this a genuinely walk-away homogenizing system.",
+                  "The oscillating Spider Tube Rack mimics the up-down motion of hand-held homogenizing at 60 oscillations per minute for enhanced homogenizing performance.",
+                  "A 12-pack of 7mm or 10mm Multi-Prep Probes eliminates cross-contamination and removes the time-consuming need to stop and clean a generator between samples, since a clean probe is used each time.",
+                  "Probes are made from 316 stainless steel and PTFE, a more durable alternative to disposable plastic generator probes, capable of processing tougher tissues and frozen samples.",
+                  "Probes are infinitely reusable and can be sterilized by any cleaning method, including flaming, autoclaving, and chemical cleaning.",
+                  "No need to change or alter the tubes already in use in your research, since small or large tube Spider Tube Racks accommodate 5 mL to 50 mL tubes, from 10 mL tubes up through 15/50 mL centrifuge tubes.",
+                  "Up to 10 different homogenizing programs store in memory, and a manual mode is available for new homogenizing trials or quick, individual sample runs.",
+                  "Processing takes place inside a sound-abating enclosure with a rounded, clear polycarbonate door for a full view of the process, alongside an ergonomically arranged LCD and control panel.",
+                  "A 12-Pack of Multi-Prep Probes and a Spider Tube Rack are required to operate the unit and are sold separately."
+                ],
+                "cards": [
+                  { "title": "6 samples at once", "description": "Up to 300 per hour throughput" },
+                  { "title": "Self-engaging probes", "description": "Genuinely walk-away automation" },
+                  { "title": "316 stainless steel probes", "description": "Reusable, sterilizable, tough-sample capable" },
+                  { "title": "10 stored programs", "description": "Consistent, repeatable protocols" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "ProScientific Multi-Prep Rapid Homogenizer" },
+                  { "title": "Sample capacity", "description": "Up to 6 simultaneous samples" },
+                  { "title": "Throughput", "description": "Up to 300 samples per hour" },
+                  { "title": "Oscillation rate", "description": "60 oscillations per minute" },
+                  { "title": "Tube compatibility", "description": "5 mL to 50 mL" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Multi-Prep applications: high-throughput sample prep, tough tissue processing, and frozen sample handling."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Multi-Prep technical specifications: sample capacity, oscillation rate, and tube compatibility."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Automated, Cross-Contamination-Free Processing",
+                "title": "Automated, Cross-Contamination-Free Processing",
+                "description": "Stopping to clean a probe between every sample is one of the biggest hidden time costs in manual homogenizing, and it's exactly what Multi-Prep removes from the workflow. Self-engagement and disengagement of the Multi-Prep Probes happens automatically, meaning no manual probe handling interrupts a run once it starts. Because the system draws from a 12-pack of probes, a clean probe engages for every sample position, eliminating both cross-contamination risk and the time normally spent cleaning a single generator between runs. Built from 316 stainless steel and PTFE rather than disposable plastic, those probes hold up to tougher tissue types and frozen samples, and clean fully afterward by flaming, autoclaving, or chemical methods, ready for indefinite reuse.",
+                "cards": [
+                  { "title": "No manual probe swapping mid-run", "description": "Automated self-engagement and disengagement" },
+                  { "title": "Zero cross-contamination between samples", "description": "A clean probe from the 12-pack per sample position" },
+                  { "title": "Handling tough or frozen samples reliably", "description": "Durable 316 stainless steel and PTFE construction" },
+                  { "title": "Probes that last", "description": "Sterilizable, infinitely reusable design" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Programmability and Manual Mode",
+                "title": "Programmability and Manual Mode",
+                "body": [
+                  "Different labs run different protocols, and Multi-Prep is built to hold onto those differences rather than forcing everyone through a single fixed setting.",
+                  "Up to 10 different homogenizing programs store directly in the system's memory, so established protocols run consistently every time without needing to be re-entered or re-calibrated. For situations that fall outside a stored program, new homogenizing trials or a quick, single-sample run, manual mode handles individual sample processing directly, without needing to build a new program first. Both modes run through the same ergonomically arranged LCD and control panel, keeping programming parameters fully visible whichever mode is active."
+                ],
+                "utilityChecklist": [
+                  { "label": "Consistent protocols across routine runs", "value": "Up to 10 stored homogenizing programs" },
+                  { "label": "Flexibility for new trials or quick tests", "value": "Manual mode for individual sample processing" },
+                  { "label": "Clear visibility into current settings", "value": "Ergonomically arranged LCD and control panel" }
+                ],
+                "disclaimer": "Tell our team how many distinct protocols your lab typically runs, and Inkarp will confirm whether Multi-Prep's 10-program memory covers your needs."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for Multi-Prep is available on request.",
+                "cards": [
+                  { "title": "Technical Specification Sheet", "description": "Available on request" },
+                  { "title": "Probe and Spider Tube Rack Compatibility Guide", "description": "Available on request" },
+                  { "title": "Applications Literature", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Multi-Prep in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Six samples at once, up to 300 an hour, fully walk-away automated with zero cross-contamination. Tell us your daily sample volume and tube sizes, and Inkarp will confirm the right Multi-Prep configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

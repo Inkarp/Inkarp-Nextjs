@@ -80,6 +80,14 @@ import sbtInstrumentsBacteriaEnumerationSystemsCatalog from "./sbt-instruments/b
 import evonikLiposomeExtrusionSystemsCatalog from "./evonik/liposome-extrusion-systems.json";
 import implenNanophotometerCatalog from "./implen/nanophotometer.json";
 import implenOd600Catalog from "./implen/od-600.json";
+import geaIndustrialHomogenizersCatalog from "./gea/industrial-homogenizers.json";
+import geaLaboratoryHomogenizersCatalog from "./gea/laboratory-homogenizers.json";
+import geaSkidMountedHomogenizersCatalog from "./gea/skid-mounted-homogenizers.json";
+import proscientificDigitalBenchtopHomogenizersCatalog from "./proscientific/digital-benchtop-homogenizers.json";
+import proscientificAutomatedHomogenizerCatalog from "./proscientific/automated-homogenizer.json";
+import proscientificDigitalHomogenizerCatalog from "./proscientific/digital-homogenizer.json";
+import proscientificHandHeldRotorStatorHomogenizersCatalog from "./proscientific/hand-held-rotor-stator-homogenizers.json";
+import proscientificProgrammableBenchtopHomogenizersCatalog from "./proscientific/programmable-benchtop-homogenizers.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -174,6 +182,14 @@ const principalCatalogs = [
   evonikLiposomeExtrusionSystemsCatalog,
   implenNanophotometerCatalog,
   implenOd600Catalog,
+  geaIndustrialHomogenizersCatalog,
+  geaLaboratoryHomogenizersCatalog,
+  geaSkidMountedHomogenizersCatalog,
+  proscientificDigitalBenchtopHomogenizersCatalog,
+  proscientificAutomatedHomogenizerCatalog,
+  proscientificDigitalHomogenizerCatalog,
+  proscientificHandHeldRotorStatorHomogenizersCatalog,
+  proscientificProgrammableBenchtopHomogenizersCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

@@ -1,0 +1,702 @@
+{
+  "principal": {
+    "slug": "gea",
+    "principalName": "GEA",
+    "countryOfOrigin": "Italy"
+  },
+  "categories": [
+    {
+      "name": "Laboratory Homogenizers",
+      "slug": "laboratory-homogenizers",
+      "products": [
+        {
+          "name": "GEA XStream Lab Homogenizer",
+          "slug": "gea-xstream-lab-homogenizer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/GEA.png",
+          "imageAlt": "GEA XStream Lab Homogenizer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/gea-xstream-lab-homogenizer",
+          "breadcrumbPath": "Home > Products > Laboratory Homogenizers > GEA XStream Lab Homogenizer",
+          "h1": "GEA XStream Lab Homogenizer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "metaTitle": "GEA XStream Lab Homogenizer — Distributor & Service Provider in India | Inkarp | GEA",
+          "metaDescription": "Inkarp is the authorized distributor & service provider for the GEA XStream Lab Homogenizer in India. Get price, demo, installation, AMC & spare parts. Request a quote.",
+          "metaKeywords": "GEA XStream Lab Homogenizer, GEA XStream Lab Homogenizer India, GEA XStream Lab Homogenizer price in India, GEA XStream Lab Homogenizer distributor India, GEA Laboratory Homogenizers, GEA distributor India, GEA authorized distributor, Laboratory Homogenizers India, Laboratory Homogenizers distributor and service provider in India, GEA India, Inkarp Instruments",
+          "overview": "Lab results that don't translate to industrial scale waste months of development time. XStream Lab Homogenizer exists specifically to close that gap, built to test and scale the benefits of the NiSoX-Valve in a compact tabletop unit while guaranteeing the results reproduce reliably at industrial scale.",
+
+          "features": [
+            "NiSoX-Valve Technology: Delivers the best performance across the homogenizer's pressure range.",
+            "Ergonomic Tabletop Design: Fits perfectly on laboratory desks without sacrificing performance.",
+            "7\" HMI Touchscreen Control: Handles easy operation with a clear, intuitive interface.",
+            "Automatic Pressure Set-Up and Adjustment: Removes manual guesswork from every test run.",
+            "Easy Reproduction and Scalability: Test results carry over reliably to industrial-scale production.",
+            "cGMP, CFR21, and GAMP Certifications: Built in for a straightforward validation process.",
+            "Two Pressure-Class Models: 1000 bar and 2000 bar variants cover different application needs.",
+            "Full Option List Available: Adapts the unit to specific requirements per application."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "GEA XStream Lab Homogenizer 1000 / GEA XStream Lab Homogenizer 2000" },
+            { "label": "Category", "value": "Laboratory Homogenizers" },
+            { "label": "Max Pressure", "value": "1000 bar (Model 1000), 2000 bar (Model 2000)" },
+            { "label": "Max Flow Rate", "value": "20 l/h (Model 1000), 9 l/h (Model 2000)" },
+            { "label": "Core Technology", "value": "NiSoX-Valve (both models)" },
+            { "label": "Control", "value": "7\" HMI touchscreen, automatic pressure set-up (both models)" },
+            { "label": "Certifications", "value": "cGMP, CFR21, GAMP (both models)" },
+            { "label": "Design", "value": "Ergonomic tabletop (both models)" }
+          ],
+
+          "applications": [
+            "Process Development and Scale-Up Testing: Guaranteed reproducibility from lab to industrial scale",
+            "Formulation and Recipe Testing: NiSoX-Valve performance across two pressure classes",
+            "Pharmaceutical and Biotech R&D: cGMP, CFR21, and GAMP certifications for regulated testing",
+            "Cell Disruption Research: High-pressure homogenization at up to 2000 bar",
+            "Academic and Industrial Lab Testing: Compact, ergonomic footprint suited to any lab desk"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Validation Checker" },
+            { "id": "lab-to-scale-readiness-planner", "label": "Scale-Up Readiness" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Reproducible Scale-Up" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "1000 bar or 2000 bar? Which model fits the application?",
+            "description": "Enter the target pressure and flow rate, and see which XStream model fits.",
+            "steps": [
+              {
+                "key": "targetPressure",
+                "question": "What's the target pressure?",
+                "options": [
+                  { "val": "up-to-1000-bar", "label": "Up to 1000 bar" },
+                  { "val": "up-to-2000-bar", "label": "Up to 2000 bar" }
+                ]
+              },
+              {
+                "key": "flowVsPressurePriority",
+                "question": "What matters more for the process?",
+                "options": [
+                  { "val": "flow-rate", "label": "Flow rate matters more than peak pressure" },
+                  { "val": "peak-pressure", "label": "Peak pressure matters more than flow rate" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "formulation-testing", "label": "Formulation testing" },
+                  { "val": "cell-disruption", "label": "Cell disruption" },
+                  { "val": "process-development", "label": "Process development" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a model-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Does the lab need cGMP, CFR21, or GAMP documentation?",
+            "description": "Select the regulatory environment, and see how XStream's certification stack applies.",
+            "fields": [
+              {
+                "key": "regulatoryEnvironment",
+                "label": "Regulatory environment",
+                "options": [
+                  { "val": "research-use", "label": "Research use" },
+                  { "val": "pharma-rd", "label": "Pharma R&D" },
+                  { "val": "biotech-regulated", "label": "Biotech regulated" }
+                ]
+              },
+              {
+                "key": "documentationRequirement",
+                "label": "Documentation requirement",
+                "options": [
+                  { "val": "basic", "label": "Basic" },
+                  { "val": "full-validation", "label": "Full validation package" }
+                ]
+              },
+              {
+                "key": "auditFrequency",
+                "label": "Audit frequency",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "periodic", "label": "Periodic" },
+                  { "val": "frequent", "label": "Frequent" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "What Certifications Does the XStream Lab Homogenizer Carry?",
+                "body": "cGMP, CFR21, and GAMP certifications, keeping the validation process straightforward for regulated environments.",
+                "tags": ["cGMP, CFR21, and GAMP Certifications"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "lab-to-scale-readiness-planner",
+              "eyebrow": "Lab-to-Scale Readiness Planner",
+              "title": "Where is this process headed after lab testing?",
+              "description": "Select the target industrial-scale equipment, and see how XStream results carry forward.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the target production scale?", "choices": "Pilot plant; Full industrial line" },
+                { "title": "What's the current development stage?", "choices": "Early formulation; Pre-scale-up validation" },
+                { "title": "What industrial homogenizer is in mind?", "choices": "GEA Ariete Series; Other" }
+              ],
+              "disclaimer": "Routes to a scale-up-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "XStream Lab Homogenizer 1000 vs. 2000",
+            "description": "XStream Lab Homogenizer comparison: Model 1000 versus Model 2000.",
+            "columns": [
+              { "label": "XStream Lab Homogenizer 1000" },
+              { "label": "XStream Lab Homogenizer 2000" }
+            ],
+            "rows": [
+              { "feature": "Max Pressure", "values": ["1000 bar", "2000 bar"] },
+              { "feature": "Max Flow Rate", "values": ["20 l/h", "9 l/h"] },
+              { "feature": "Best For", "values": ["Higher-throughput testing at moderate pressure", "Higher-pressure applications with lower flow needs"] },
+              { "feature": "Choose When", "values": ["Flow rate matters more than peak pressure", "Peak pressure matters more than flow rate"] }
+            ],
+            "disclaimer": "Both models share the same NiSoX-Valve technology, touchscreen control, and certification stack. The difference is purely the pressure-flow trade-off."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "XStream Lab Homogenizer industries: pharmaceutical R&D, biotech process development, and academic research.",
+            "industries": [
+              { "name": "Pharmaceutical R&D", "useCase": "Formulation testing ahead of production scale-up", "consideration": "cGMP, CFR21, and GAMP certifications for regulated testing" },
+              { "name": "Biotech Process Development", "useCase": "Cell disruption and process parameter testing", "consideration": "NiSoX-Valve technology matches industrial-scale performance" },
+              { "name": "Academic Research Labs", "useCase": "Homogenization method development and testing", "consideration": "Compact, ergonomic design fits standard lab desks" },
+              { "name": "Food and Cosmetic Formulation Labs", "useCase": "Early-stage recipe and stability testing", "consideration": "Reproducible results support confident scale-up decisions" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows NiSoX-Valve performance and touchscreen control on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms model and options setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the touchscreen interface and automatic pressure control" },
+              { "title": "Preventive Maintenance", "description": "Maintains valve, pump, and touchscreen performance" },
+              { "title": "Spares and Accessories", "description": "Supplies NiSoX-Valve components and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the GEA XStream Lab Homogenizer used for?", "answer": "It's a tabletop high-pressure homogenizer built to test and scale the benefits of the NiSoX-Valve, ensuring lab results reproduce reliably at industrial production scale." },
+            { "question": "What models are available?", "answer": "Two models: the 1000, running up to 1000 bar at 20 l/h, and the 2000, running up to 2000 bar at 9 l/h." },
+            { "question": "How is the unit controlled?", "answer": "Through a 7\" HMI touchscreen, with automatic pressure set-up and adjustment." },
+            { "question": "Does this unit guarantee results scale to industrial production?", "answer": "Yes, the design specifically ensures easy reproduction and scalability of test results from lab to industrial scale." },
+            { "question": "What certifications does the XStream Lab Homogenizer carry?", "answer": "cGMP, CFR21, and GAMP certifications, keeping the validation process straightforward for regulated environments." },
+            { "question": "How is pressure adjusted during testing?", "answer": "Automatically, through the built-in pressure set-up and adjustment system, removing manual guesswork between runs." },
+            { "question": "Is the unit suitable for a standard lab bench?", "answer": "Yes, its ergonomic, specifically designed geometry fits perfectly on laboratory desks." },
+            { "question": "Can the unit be customized?", "answer": "Yes, a full list of options is available on both models to match specific application requirements." },
+            { "question": "How is the 1000 model different from the 2000?", "answer": "The 1000 reaches up to 1000 bar at 20 l/h, while the 2000 reaches up to 2000 bar at a lower 9 l/h, trading flow rate for higher peak pressure." },
+            { "question": "What is the price of the GEA XStream Lab Homogenizer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the model and options needed." },
+            { "question": "Who is the authorized distributor of the GEA XStream Lab Homogenizer in India?", "answer": "Inkarp is the authorized distributor and service provider for the GEA XStream Lab Homogenizer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the GEA XStream Lab Homogenizer in India from Inkarp",
+            "description": "Share the target pressure, flow rate, and validation needs, and the right XStream model gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your target pressure, flow rate, and validation needs, then confirm the right XStream model.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "targetPressureFlow", "label": "Target pressure and flow rate", "type": "text", "required": false },
+              { "key": "validationNeeds", "label": "Validation / documentation needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right XStream model", "body": "Share the target pressure and flow rate for the application, and the right XStream model gets confirmed from there." },
+              { "title": "Confirm the right model for your scale-up target", "body": "Share the industrial-scale homogenizer the process is ultimately headed toward, and the right XStream model to match it gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Test on the benchtop. Scale to production with the exact same result.",
+            "heroLead": "Lab results that don't translate to industrial scale waste months of development time. XStream Lab Homogenizer exists specifically to close that gap, built to test and scale the benefits of the NiSoX-Valve in a compact tabletop unit while guaranteeing the results reproduce reliably at industrial scale. An ergonomic, specifically designed footprint fits any lab desk, with a 7\" HMI touchscreen handling easy operation and automatic pressure setup. Two models cover pressures up to 2000 bar, and cGMP, CFR21, and GAMP certifications keep the validation process straightforward from day one.",
+            "stats": [
+              { "value": "2 models", "label": "1000 and 2000 bar variants" },
+              { "value": "Up to 2000 bar", "label": "Maximum pressure" },
+              { "value": "7\" HMI touchscreen", "label": "Operation and control" },
+              { "value": "Automatic", "label": "Pressure set-up and adjustment" },
+              { "value": "cGMP, CFR21, GAMP", "label": "Certifications included" },
+              { "value": "Ergonomic tabletop", "label": "Fits any lab desk" },
+              { "value": "NiSoX-Valve", "label": "Core homogenization technology" },
+              { "value": "Scalable", "label": "Results reproduce directly at industrial scale" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "XStream Lab Homogenizer product information: NiSoX-Valve technology, model range, and validation readiness.",
+                "body": [
+                  "XStream Lab Homogenizer is a tabletop unit built specifically to test and scale the benefits of the NiSoX-Valve across a wide range of applications.",
+                  "An innovative ergonomic geometry and design fits perfectly on laboratory desks, while ensuring results carry over reliably to industrial-scale production.",
+                  "Two models are available: XStream Lab Homogenizer 1000, running up to 1000 bar at 20 l/h, and XStream Lab Homogenizer 2000, running up to 2000 bar at 9 l/h.",
+                  "Operation runs through a 7\" HMI touchscreen, with automatic pressure set-up and adjustment removing manual guesswork from every test run.",
+                  "Easy reproduction and scalability of test results are built into the design itself, not added as an afterthought.",
+                  "cGMP, CFR21, and GAMP certifications come standard, keeping the validation process straightforward for regulated environments.",
+                  "A full list of options is available on both models, letting the unit adapt to specific application requirements."
+                ],
+                "cards": [
+                  { "title": "NiSoX-Valve technology", "description": "Best performance for the given pressure class" },
+                  { "title": "7\" HMI touchscreen", "description": "Easy operation and automatic pressure control" },
+                  { "title": "cGMP, CFR21, GAMP ready", "description": "Straightforward path to validation" },
+                  { "title": "Lab-to-scale reproducibility", "description": "Test results carry over to production directly" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "GEA XStream Lab Homogenizer" },
+                  { "title": "Models", "description": "1000 (1000 bar, 20 l/h) and 2000 (2000 bar, 9 l/h)" },
+                  { "title": "Core technology", "description": "NiSoX-Valve" },
+                  { "title": "Control", "description": "7\" HMI touchscreen, automatic pressure set-up" },
+                  { "title": "Certifications", "description": "cGMP, CFR21, GAMP" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "XStream Lab Homogenizer applications: process development, formulation testing, and scalable industrial validation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "XStream Lab Homogenizer technical specifications: pressure, flow rate, and model comparison."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built for Reproducible Scale-Up",
+                "title": "Built for Reproducible Scale-Up",
+                "description": "A test result that doesn't reproduce at industrial scale is a false start, not real progress. XStream Lab Homogenizer is designed around exactly that risk, ensuring what's proven on the benchtop carries over to full production. The NiSoX-Valve at the core of the system is the same technology behind GEA's industrial-scale homogenizers, so a lab test isn't approximating a different underlying process, it's running the actual one at smaller scale. Automatic pressure set-up and adjustment removes operator-to-operator variability from test runs, so a result reproduced next month, or by a different technician, matches the original.",
+                "cards": [
+                  { "title": "Confidence that lab results scale to production", "description": "Same NiSoX-Valve technology as industrial units" },
+                  { "title": "Consistent, repeatable test conditions", "description": "Automatic pressure set-up and adjustment" },
+                  { "title": "Testing across different pressure requirements", "description": "Two models covering 1000 and 2000 bar" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Validation-Ready From Day One",
+                "title": "Validation-Ready From Day One",
+                "description": "Regulated R&D environments need equipment that doesn't become a validation bottleneck. XStream Lab Homogenizer ships with cGMP, CFR21, and GAMP certifications built in, rather than requiring a separate compliance retrofit.",
+                "body": [
+                  "That certification stack keeps the validation process easy, addressing pharmaceutical and biotech documentation needs directly at the point of purchase.",
+                  "Combined with a 7\" HMI touchscreen for operation, the instrument stays straightforward to use even as it meets a demanding compliance bar."
+                ],
+                "utilityChecklist": [
+                  { "label": "Regulated environment compliance out of the box", "value": "cGMP, CFR21, and GAMP certifications included" },
+                  { "label": "An easy validation process", "value": "Certifications built directly into the base unit" },
+                  { "label": "Simple operation despite compliance demands", "value": "7\" HMI touchscreen control" }
+                ],
+                "disclaimer": "Share the specific validation and documentation standards the lab needs to meet, and confirmation on how XStream Lab Homogenizer fits gets sent directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "XStream Lab Homogenizer documentation: NiSoX Valve brochure and technical datasheet.",
+                "cards": [
+                  { "title": "GEA Homogenizing NiSoX Valve Brochure", "description": "Available for download" },
+                  { "title": "GEA XStream Lab Homogenizer Datasheet", "description": "Available for download" },
+                  { "title": "Validation and Certification Documentation", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the GEA XStream Lab Homogenizer in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "NiSoX-Valve performance on the benchtop, with results that scale directly to industrial production. Share the target pressure, flow rate, and validation needs, and the right XStream model gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "GEA PandaPLUS Table-Top Homogenizer",
+          "slug": "gea-pandaplus-table-top-homogenizer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/GEA.png",
+          "imageAlt": "GEA PandaPLUS Table-Top Homogenizer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/gea-pandaplus-table-top-homogenizer",
+          "breadcrumbPath": "Home > Products > Laboratory Homogenizers > GEA PandaPLUS Table-Top Homogenizer",
+          "h1": "GEA PandaPLUS Table-Top Homogenizer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Precious samples shouldn't be the reason a homogenization test never happens. PandaPLUS runs on a minimum volume of just 100 ml, guaranteeing results equal in quality to what an industrial homogenizer would deliver, so a small-batch test tells the real story before committing to production scale.",
+
+          "features": [
+            "100 ml Minimum Sample Volume: Runs meaningful tests on small, precious sample quantities.",
+            "Guaranteed Result Scalability: Delivers quality equal to industrial-scale homogenization output.",
+            "Two Pressure-Class Models: 1000 bar and 2000 bar variants match different process requirements.",
+            "Compact Table-Top Footprint: Fits comfortably into any lab space without sacrificing performance.",
+            "Essential Component Design: Simplifies installation, day-to-day use, and ongoing maintenance.",
+            "Nanoparticle and Nanoemulsion Processing: Built specifically for treating nanoparticles, nanodispersions, and nanoemulsions.",
+            "Cell Disruption Capability: Handles cell disruption applications alongside nanoscale processing.",
+            "Extended Food and Dairy Processing: Also processes milk, dairy products, fruit juices, and general food formulations."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "GEA Lab Homogenizer PandaPLUS 1000 / GEA Lab Homogenizer PandaPLUS 2000" },
+            { "label": "Category", "value": "Laboratory Homogenizers" },
+            { "label": "Max Pressure", "value": "1000 bar (PandaPLUS 1000), 2000 bar (PandaPLUS 2000)" },
+            { "label": "Flow Rate", "value": "20 l/h (PandaPLUS 1000), 9 l/h (PandaPLUS 2000)" },
+            { "label": "Minimum Sample Volume", "value": "100 ml (both models)" },
+            { "label": "Design", "value": "Compact table-top, essential components (both models)" },
+            { "label": "Result Scalability", "value": "Equal to industrial-scale output (both models)" }
+          ],
+
+          "applications": [
+            "Nanoparticle and Nanoemulsion Development: Purpose-built treatment of nanoparticles, nanodispersions, and nanoemulsions",
+            "Cell Disruption Research: High-pressure homogenization suited to breaking down cell structures",
+            "Dairy and Milk Product Testing: Direct processing of milk and dairy formulations at lab scale",
+            "Fruit Juice Processing: Stabilization and homogenization testing for juice products",
+            "General Food Formulation Testing: Broad food-processing compatibility on the same compact unit"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "PandaPLUS vs TwinPANDA" },
+            { "id": "sample-volume-and-scalability-planner", "label": "Scale-Up Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Full-Scale Confidence" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "1000 bar or 2000 bar? Which model fits the application?",
+            "description": "Enter the target pressure and flow rate, and see which PandaPLUS model fits.",
+            "steps": [
+              {
+                "key": "targetPressure",
+                "question": "What's the target pressure?",
+                "options": [
+                  { "val": "up-to-1000-bar", "label": "Up to 1000 bar" },
+                  { "val": "up-to-2000-bar", "label": "Up to 2000 bar" }
+                ]
+              },
+              {
+                "key": "targetFlowRate",
+                "question": "What's the target flow rate?",
+                "options": [
+                  { "val": "around-20lh", "label": "Around 20 l/h" },
+                  { "val": "9lh-or-lower", "label": "9 l/h or lower" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "nanoemulsion", "label": "Nanoemulsion" },
+                  { "val": "cell-disruption", "label": "Cell disruption" },
+                  { "val": "dairy-food", "label": "Dairy/food" },
+                  { "val": "other", "label": "Other" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Routes to a model-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "PandaPLUS or TwinPANDA? Which family fits the process?",
+            "description": "Select the pressure and flow priorities, and see which table-top family fits.",
+            "fields": [
+              {
+                "key": "priority",
+                "label": "Priority",
+                "options": [
+                  { "val": "higher-pressure", "label": "Higher pressure" },
+                  { "val": "higher-flow-rate", "label": "Higher flow rate" }
+                ]
+              },
+              {
+                "key": "targetPressureRange",
+                "label": "Target pressure",
+                "options": [
+                  { "val": "up-to-600-bar", "label": "Up to 600 bar (TwinPANDA range)" },
+                  { "val": "1000-to-2000-bar", "label": "1000 to 2000 bar (PandaPLUS range)" }
+                ]
+              },
+              {
+                "key": "targetFlowRange",
+                "label": "Target flow rate",
+                "options": [
+                  { "val": "higher-flow-30-55", "label": "Higher flow, 30-55 l/h (TwinPANDA range)" },
+                  { "val": "lower-flow-9-20", "label": "Lower flow, 9-20 l/h (PandaPLUS range)" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": "default",
+                "title": "How Is PandaPLUS Different From TwinPANDA?",
+                "body": "PandaPLUS models reach higher peak pressures (1000-2000 bar) at lower flow rates, while TwinPANDA models (400-600 bar) trade pressure for higher flow rates, up to 55 l/h.",
+                "tags": ["Two Pressure-Class Models"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "sample-volume-and-scalability-planner",
+              "eyebrow": "Sample Volume and Scalability Planner",
+              "title": "How much sample is available, and where is this headed at scale?",
+              "description": "Enter the available sample volume and target production scale, and see how PandaPLUS results transfer.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "How much sample is available for testing?", "choices": "100 ml (minimum); More than 100 ml available" },
+                { "title": "What's the target production scale?", "choices": "Pilot plant; Full industrial line" },
+                { "title": "What industrial homogenizer is the target?", "choices": "GEA Ariete Series; Other" }
+              ],
+              "disclaimer": "Routes to a scale-up-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "PandaPLUS vs. TwinPANDA",
+            "description": "PandaPLUS comparison: PandaPLUS versus TwinPANDA table-top models.",
+            "columns": [
+              { "label": "PandaPLUS 1000" },
+              { "label": "PandaPLUS 2000" },
+              { "label": "TwinPANDA 400" },
+              { "label": "TwinPANDA 600" }
+            ],
+            "rows": [
+              { "feature": "Max Pressure", "values": ["1000 bar", "2000 bar", "400 bar", "600 bar"] },
+              { "feature": "Flow Rate", "values": ["20 l/h", "9 l/h", "55 l/h", "30 l/h"] },
+              { "feature": "Best For", "values": ["Moderate pressure, moderate flow", "Highest pressure needs", "High flow at lower pressure", "Balanced flow and pressure"] },
+              { "feature": "Choose When", "values": ["A standard pressure/flow balance fits the test", "Peak pressure is the priority", "Higher throughput matters more than pressure", "A middle ground between flow and pressure is needed"] }
+            ],
+            "disclaimer": "All four models share the same 100 ml minimum sample volume, essential-component design, and guaranteed scalability to industrial output. The difference is purely the pressure-flow trade-off."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "PandaPLUS industries: dairy processing, nanotechnology research, and food and beverage development.",
+            "industries": [
+              { "name": "Nanotechnology and Nanoemulsion Research", "useCase": "Developing and testing nanoparticle formulations", "consideration": "Purpose-built for nanodispersion and nanoemulsion treatment" },
+              { "name": "Dairy Processing", "useCase": "Testing milk and dairy formulations before scale-up", "consideration": "Direct compatibility with dairy product processing" },
+              { "name": "Fruit Juice and Beverage Development", "useCase": "Stabilization testing for juice and beverage products", "consideration": "Small-batch testing at 100 ml minimum volume" },
+              { "name": "Biotech and Cell Disruption Research", "useCase": "Breaking down cell structures for downstream analysis", "consideration": "High-pressure capability up to 2000 bar" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows small-batch testing and result scalability on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms model and pressure setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with day-to-day operation and maintenance" },
+              { "title": "Preventive Maintenance", "description": "Maintains pump and valve performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement parts and consumables" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the GEA PandaPLUS Table-Top Homogenizer used for?", "answer": "It's a compact lab homogenizer for treating nanoparticles, nanodispersions, and nanoemulsions, with guaranteed result quality matching industrial-scale homogenizers, and also used for cell disruption, dairy, juice, and food processing." },
+            { "question": "What is the minimum sample volume required?", "answer": "100 ml, letting meaningful tests run without wasting precious sample material." },
+            { "question": "What models are available?", "answer": "PandaPLUS 1000, reaching 1000 bar at 20 l/h, and PandaPLUS 2000, reaching 2000 bar at 9 l/h." },
+            { "question": "Do results actually scale to industrial production?", "answer": "Yes, PandaPLUS guarantees results equal in quality to those achievable with industrial homogenizers." },
+            { "question": "Is this unit suitable for a standard lab bench?", "answer": "Yes, it's a compact table-top design built for laboratory space, with essential components that simplify installation, use, and maintenance." },
+            { "question": "Can PandaPLUS process dairy or food products?", "answer": "Yes, alongside nanoparticle and cell disruption work, it also processes milk and dairy products, fruit juices, and food in general." },
+            { "question": "How is PandaPLUS different from TwinPANDA?", "answer": "PandaPLUS models reach higher peak pressures (1000-2000 bar) at lower flow rates, while TwinPANDA models (400-600 bar) trade pressure for higher flow rates, up to 55 l/h." },
+            { "question": "How is the 1000 model different from the 2000?", "answer": "The 1000 reaches up to 1000 bar at 20 l/h, while the 2000 reaches up to 2000 bar at a lower 9 l/h, trading flow rate for higher peak pressure." },
+            { "question": "What is the price of the GEA PandaPLUS Table-Top Homogenizer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the model and application requirements needed." },
+            { "question": "Who is the authorized distributor of the GEA PandaPLUS Table-Top Homogenizer in India?", "answer": "Inkarp is the authorized distributor and service provider for the GEA PandaPLUS Table-Top Homogenizer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the GEA PandaPLUS Table-Top Homogenizer in India from Inkarp",
+            "description": "Share the pressure, flow rate, and application, and the right PandaPLUS model gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your pressure, flow rate, and application, then confirm the right PandaPLUS model.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "targetPressureFlow", "label": "Target pressure and flow rate", "type": "text", "required": false },
+              { "key": "sampleVolumeApplication", "label": "Sample volume and application type", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right PandaPLUS model", "body": "Share the target pressure, sample volume, and application type, and the right PandaPLUS model gets confirmed from there." },
+              { "title": "Confirm the right model for your sample volume and pressure", "body": "Share the sample volume typically available for testing and the target industrial pressure, and the right PandaPLUS model gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "100 ml is all it takes. Same quality as the industrial line.",
+            "heroLead": "Precious samples shouldn't be the reason a homogenization test never happens. PandaPLUS runs on a minimum volume of just 100 ml, guaranteeing results equal in quality to what an industrial homogenizer would deliver, so a small-batch test tells the real story before committing to production scale. Two pressure classes cover different application needs: PandaPLUS 1000 reaches 1000 bar at 20 l/h, PandaPLUS 2000 reaches 2000 bar at 9 l/h. Both handle cell disruption, nanoparticles, nanodispersions, and nanoemulsions, and both extend naturally into milk, dairy, fruit juice, and general food processing.",
+            "stats": [
+              { "value": "100 ml", "label": "Minimum sample volume" },
+              { "value": "2 models", "label": "1000 and 2000 bar variants" },
+              { "value": "Up to 2000 bar", "label": "Maximum pressure" },
+              { "value": "Total scalability", "label": "Results match industrial-scale quality" },
+              { "value": "Compact", "label": "Table-top footprint" },
+              { "value": "Essential components", "label": "Easy install, use, and maintenance" },
+              { "value": "Nanoparticles, nanodispersions, nanoemulsions", "label": "Core application focus" },
+              { "value": "Cell disruption", "label": "Also supported" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "PandaPLUS product information: sample volume, model range, and scalability to industrial homogenization.",
+                "body": [
+                  "PandaPLUS runs tests with a minimum sample volume of just 100 ml, guaranteeing results equal in quality to those achievable with industrial homogenizers.",
+                  "Two models cover different pressure needs: PandaPLUS 1000 reaches 1000 bar at 20 l/h, and PandaPLUS 2000 reaches 2000 bar at 9 l/h.",
+                  "The unit is compact and table-top, ideal for treating nanoparticles, nanodispersions, and nanoemulsions in limited lab space.",
+                  "Cell disruption is a core supported application, alongside processing milk and dairy products, fruit juices, and food in general.",
+                  "Essential, streamlined components keep installation, operation, and maintenance genuinely easy, without a complex support infrastructure required.",
+                  "Total scalability of results is built into the design, meaning a 100 ml test run isn't a rough estimate of industrial performance, it's a direct preview of it."
+                ],
+                "cards": [
+                  { "title": "100 ml minimum sample", "description": "Tests real formulations without wasting precious material" },
+                  { "title": "Total result scalability", "description": "Lab test quality matches industrial output directly" },
+                  { "title": "Two pressure classes", "description": "1000 bar or 2000 bar, matched to the application" },
+                  { "title": "Essential component design", "description": "Easy installation, operation, and maintenance" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "GEA PandaPLUS Table-Top Homogenizer" },
+                  { "title": "Models", "description": "PandaPLUS 1000 (1000 bar, 20 l/h) and PandaPLUS 2000 (2000 bar, 9 l/h)" },
+                  { "title": "Minimum sample volume", "description": "100 ml" },
+                  { "title": "Core applications", "description": "Nanoparticles, nanodispersions, nanoemulsions, cell disruption" },
+                  { "title": "Extended applications", "description": "Dairy, fruit juice, general food processing" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "PandaPLUS applications: nanoparticle processing, cell disruption, dairy, juice, and food formulation testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "PandaPLUS technical specifications: pressure, flow rate, and model comparison."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Small Sample, Full-Scale Confidence",
+                "title": "Small Sample, Full-Scale Confidence",
+                "description": "Testing a formulation at industrial volumes before it's proven is expensive and risky. PandaPLUS removes that risk with a minimum sample volume of just 100 ml. That small volume doesn't come with a quality trade-off. Results are guaranteed equal to what an industrial homogenizer would produce, so a 100 ml test genuinely predicts full-scale performance rather than approximating it. Two pressure classes mean that guarantee holds whether the application needs 1000 bar or the full 2000 bar ceiling, matching the actual industrial process being tested toward.",
+                "cards": [
+                  { "title": "Testing without wasting precious sample material", "description": "100 ml minimum sample volume" },
+                  { "title": "Confidence that lab results predict production quality", "description": "Total scalability guarantee" },
+                  { "title": "Matching the test conditions to the target industrial process", "description": "Choice between 1000 bar and 2000 bar models" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built for Simplicity",
+                "title": "Built for Simplicity",
+                "description": "A lab instrument that demands constant specialist attention slows down exactly the kind of fast, iterative testing a table-top homogenizer exists to enable. PandaPLUS avoids that by keeping its structure essential and streamlined.",
+                "body": [
+                  "Fewer, simpler components translate directly into easier installation, more straightforward day-to-day operation, and maintenance that doesn't require a dedicated technician on standby.",
+                  "That simplicity doesn't come at the cost of performance, the same guaranteed result scalability applies regardless of how easy the unit is to run."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fast installation without extended setup time", "value": "Essential, streamlined component design" },
+                  { "label": "Day-to-day operation without specialist training", "value": "Simplified, easy-to-use structure" },
+                  { "label": "Low-maintenance long-term ownership", "value": "Fewer components, less to service" }
+                ],
+                "disclaimer": "Share who on the team will be running the instrument day to day, and how PandaPLUS's simplified design fits that setup gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "PandaPLUS documentation: technical datasheet and related brochures.",
+                "cards": [
+                  { "title": "Panda Plus Technical Datasheet", "description": "Available for download" },
+                  { "title": "Table-Top Homogenizer Model Comparison", "description": "Available on request" },
+                  { "title": "Scale-Up Compatibility Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the GEA PandaPLUS Table-Top Homogenizer in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "100 ml is all it takes to test at guaranteed industrial-scale quality. Share the pressure, flow rate, and application, and the right PandaPLUS model gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

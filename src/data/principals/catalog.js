@@ -88,6 +88,10 @@ import proscientificAutomatedHomogenizerCatalog from "./proscientific/automated-
 import proscientificDigitalHomogenizerCatalog from "./proscientific/digital-homogenizer.json";
 import proscientificHandHeldRotorStatorHomogenizersCatalog from "./proscientific/hand-held-rotor-stator-homogenizers.json";
 import proscientificProgrammableBenchtopHomogenizersCatalog from "./proscientific/programmable-benchtop-homogenizers.json";
+import thermofisherViscometersCatalog from "./thermofisher/viscometers.json";
+import sartoriusAriumComfortCatalog from "./sartorius/arium-comfort.json";
+import sartoriusAriumMiniPlusCatalog from "./sartorius/arium-mini-plus.json";
+import sartoriusAriumProCatalog from "./sartorius/arium-pro.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -190,6 +194,10 @@ const principalCatalogs = [
   proscientificDigitalHomogenizerCatalog,
   proscientificHandHeldRotorStatorHomogenizersCatalog,
   proscientificProgrammableBenchtopHomogenizersCatalog,
+  thermofisherViscometersCatalog,
+  sartoriusAriumComfortCatalog,
+  sartoriusAriumMiniPlusCatalog,
+  sartoriusAriumProCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

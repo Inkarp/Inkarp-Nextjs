@@ -1,0 +1,734 @@
+{
+  "principal": {
+    "slug": "sartorius",
+    "principalName": "Sartorius",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "Arium Comfort",
+      "slug": "arium-comfort",
+      "products": [
+        {
+          "name": "Arium® Comfort I Lab Water Purification System",
+          "slug": "arium-comfort-1-lab-water-purification-system",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/sartorius.svg",
+          "imageAlt": "Sartorius Arium Comfort I Lab Water Purification System - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/arium-comfort-1-lab-water-purification-system",
+          "breadcrumbPath": "Home > Products > Arium Comfort > Arium® Comfort I Lab Water Purification System",
+          "h1": "Arium® Comfort I Lab Water Purification System",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Running separate systems for ultrapure and pure water doubles the footprint and the maintenance. Arium Comfort I delivers both from a single unit, connecting directly to potable feed water and producing ASTM Type 1 ultrapure water alongside Type 3 pure water on demand.",
+
+          "features": [
+            "Combined Type 1 and Type 3 Water Production: Delivers ultrapure and pure water from one connected system.",
+            "iJust Intelligent Software: Optimizes water usage and calculates optimal cleaning cycles automatically.",
+            "185/254 nm Integrated UV Lamp (Optional): Prevents microbial growth and minimizes TOC to under 2 ppb.",
+            "Real-Time TOC Monitoring (Optional): Continuously checks and displays TOC readings as water is produced.",
+            "Closed Arium Bagtank Storage: Protects purified water from secondary contamination reliably.",
+            "Glove-Compatible Touch Display: Clearly structured menu navigation for error-free control.",
+            "Flexible RO Module Configuration: 1 or 2 RO modules match Type 3 output to 8 or 16 L/h.",
+            "Multiple Installation Options: Benchtop, wall-mounted, or built-in, fitting any lab layout."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sartorius Arium® Comfort I Lab Water Purification System" },
+            { "label": "Category", "value": "Arium Comfort, Ultrapure Water Systems" },
+            { "label": "Type 1 Dispensing Flow Rate", "value": "Up to 2 L/min, exceeds ASTM Type 1" },
+            { "label": "Type 3 Production Flow Rate", "value": "8 L/h (1 RO module) or 16 L/h (2 RO modules)" },
+            { "label": "TOC (with UV lamp)", "value": "Under 2 ppb" },
+            { "label": "UV Lamp", "value": "Optional, 185/254 nm" },
+            { "label": "TOC Monitor", "value": "Optional, real-time continuous display" },
+            { "label": "Storage", "value": "Closed Arium Bagtank system" },
+            { "label": "Software", "value": "iJust, water usage optimization and cleaning cycle calculation" },
+            { "label": "Installation Options", "value": "Benchtop, wall-mounted, or built-in" },
+            { "label": "Item Numbers", "value": "H2O-I-1-B (1 RO, wall-mounted), H2O-I-2-T (2 RO, benchtop), H2O-I-1-UV-T / H2O-I-2-UV-T (with UV lamp), H2O-I-1-TOC-T / H2O-I-2-TOC-T (with UV lamp and TOC monitor)" }
+          ],
+
+          "applications": [
+            "HPLC and GC-MS, AAS, ICP-MS: Type 1 water exceeding ASTM specifications for analytical accuracy",
+            "Ion Chromatography and TOC Analysis: Low-TOC water with optional real-time monitoring",
+            "Photometry: Consistent, reproducible water quality for optical measurement",
+            "Buffer and pH Solution Preparation: Type 1 water for precise reagent preparation",
+            "Feed Water for Downstream Ultrapure Systems: Type 3 water purification extends life of downstream systems",
+            "Glassware Rinsing and Instrument Feed Water: Type 3 output supplies autoclaves, humidifiers, and dishwashers"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Savings Estimator" },
+            { "id": "toc-and-uv-lamp-planner", "label": "TOC Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Two Water Grades" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "How much Type 1 and Type 3 water does the lab need?",
+            "description": "Select the Type 3 water demand and RO module preference, and see the recommended configuration. Share your exact Type 1 water demand with Inkarp for final confirmation.",
+            "steps": [
+              {
+                "key": "type3Demand",
+                "question": "How much Type 3 water does the lab need?",
+                "options": [
+                  { "val": "8lh", "label": "8 L/h" },
+                  { "val": "16lh", "label": "16 L/h" }
+                ]
+              },
+              {
+                "key": "roModulePreference",
+                "question": "How many RO modules does the setup need?",
+                "options": [
+                  { "val": "1-module", "label": "1 module" },
+                  { "val": "2-modules", "label": "2 modules" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your exact Type 1 water demand, and this routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "How much could iJust software actually save?",
+            "description": "Select the current cleaning routine and downstream connections, and see the potential savings with iJust optimization.",
+            "fields": [
+              {
+                "key": "cleaningCycleFrequency",
+                "label": "Current cleaning cycle frequency",
+                "options": [
+                  { "val": "weekly", "label": "Weekly" },
+                  { "val": "monthly", "label": "Monthly" },
+                  { "val": "as-needed", "label": "As-needed" }
+                ]
+              },
+              {
+                "key": "downstreamSystemsConnected",
+                "label": "Downstream systems connected",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "downstreamSystemsConnected": "yes" },
+                "title": "iJust Extends Your Downstream System Life Too",
+                "body": "iJust software optimizes water usage and cleaning cycles for Arium Comfort I itself, and the cleaner Type 3 output it manages also extends the operational life of any downstream ultrapure systems it feeds.",
+                "tags": ["iJust Intelligent Software"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm Your Potential Savings With Inkarp",
+                "body": "Share your current daily water consumption and cleaning routine, and Inkarp will confirm how much iJust software could optimize for your lab.",
+                "tags": ["Automated Cleaning Cycle Calculation"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "toc-and-uv-lamp-planner",
+              "eyebrow": "TOC and UV Lamp Planner",
+              "title": "Does the application need the lowest possible TOC?",
+              "description": "Select the analytical requirement, and see whether the UV lamp and TOC monitor apply.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "How sensitive is the application to TOC?", "choices": "Standard; Lowest-possible (under 2 ppb)" },
+                { "title": "Is continuous TOC monitoring needed?", "choices": "Yes; No" },
+                { "title": "What's the application type?", "choices": "HPLC/GC-MS; TOC analysis; General lab use" }
+              ],
+              "disclaimer": "Routes to a compliance-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "1 RO Module vs. 2 RO Modules",
+            "description": "Arium Comfort I comparison: 1 RO module versus 2 RO module configurations.",
+            "columns": [
+              { "label": "1 RO Module (H2O-I-1-B)" },
+              { "label": "2 RO Modules (H2O-I-2-T)" }
+            ],
+            "rows": [
+              { "feature": "Type 1 Flow Rate", "values": ["2 L/min", "2 L/min"] },
+              { "feature": "Type 3 Flow Rate", "values": ["8 L/h", "16 L/h"] },
+              { "feature": "Installation", "values": ["Wall-mounted", "Benchtop"] },
+              { "feature": "Best For", "values": ["Lower Type 3 demand, wall-mounted setups", "Higher Type 3 demand, benchtop labs"] },
+              { "feature": "Choose When", "values": ["Type 3 usage is moderate and wall space is available", "Type 3 usage is higher and benchtop space is available"] }
+            ],
+            "disclaimer": "Both configurations share the same Type 1 output rate, iJust software, and Bagtank storage system. The difference is Type 3 flow rate and installation type, with UV lamp and TOC monitor available as add-ons on either."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Arium Comfort I industries: pharmaceutical analytical labs, academic research, and industrial QC.",
+            "industries": [
+              { "name": "Pharmaceutical Analytical Labs", "useCase": "HPLC, GC-MS, ICP-MS sample and mobile phase preparation", "consideration": "UV lamp option brings TOC under 2 ppb for demanding methods" },
+              { "name": "Academic Research Labs", "useCase": "Multi-purpose lab water for buffers, glassware, and instruments", "consideration": "Combined Type 1/Type 3 output covers varied daily needs" },
+              { "name": "Industrial QC and Testing Labs", "useCase": "TOC analysis, ion chromatography, and instrument feed water", "consideration": "iJust software optimizes usage across high-volume daily operation" },
+              { "name": "Facilities With Downstream Ultrapure Systems", "useCase": "Feed water purification for other lab water systems", "consideration": "Type 3 output extends downstream system life" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows combined Type 1/Type 3 output and iJust software on-site" },
+              { "title": "Configuration Assessment", "description": "Confirms RO module count, UV lamp, and TOC monitor setup" },
+              { "title": "Installation Support", "description": "Supports benchtop, wall-mounted, or built-in setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the touch display and iJust software" },
+              { "title": "Preventive Maintenance", "description": "Maintains RO modules, UV lamp, and Bagtank system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies RO modules, bags, UV lamps, and replacement cartridges" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Arium Comfort I used for?", "answer": "It's a combined water purification system delivering both ASTM Type 1 ultrapure water and Type 3 pure water from a single unit connected directly to potable feed water." },
+            { "question": "What flow rates does it produce?", "answer": "Up to 2 L/min for Type 1 water, and either 8 or 16 L/h for Type 3 water, depending on the RO module configuration." },
+            { "question": "What does the iJust software actually do?", "answer": "It optimizes water usage, enhances purified water quality, and automatically calculates the optimal cleaning cycles for the system." },
+            { "question": "How does the system protect against contamination?", "answer": "Purified water is stored in the closed Arium Bagtank system, which reliably protects it from secondary contamination." },
+            { "question": "What TOC level can this system achieve?", "answer": "Under 2 ppb, when configured with the optional 185/254 nm UV lamp." },
+            { "question": "Can water quality be monitored continuously?", "answer": "Yes, an optional TOC monitor checks and displays readings continuously in real time." },
+            { "question": "What installation options are available?", "answer": "Benchtop, wall-mounted, or built-in, depending on the lab's available space." },
+            { "question": "Can the display be operated with lab gloves?", "answer": "Yes, the touch-function display with clearly structured menu navigation ensures error-free control even while wearing gloves." },
+            { "question": "What is the difference between the 1 RO module and 2 RO module versions?", "answer": "The 1 RO module configuration produces 8 L/h of Type 3 water and is wall-mounted, while the 2 RO module configuration produces 16 L/h and is benchtop, with the same Type 1 output rate on both." },
+            { "question": "What is the price of the Arium Comfort I in India?", "answer": "Get in touch and Inkarp will put together a quote based on the RO module count, UV lamp, and TOC monitor configuration needed." },
+            { "question": "Who is the authorized distributor of the Arium Comfort I in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Comfort I in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Arium Comfort I in India from Inkarp",
+            "description": "Share the daily water demand and purity requirements, and the right Arium Comfort I configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your daily water demand and purity requirements, then confirm the right Arium Comfort I configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "waterDemand", "label": "Type 1 and Type 3 daily water demand", "type": "text", "required": false },
+              { "key": "tocRequirements", "label": "TOC monitoring and UV lamp needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right Arium Comfort I configuration", "body": "Share the lab's typical Type 1 and Type 3 water demand, along with whether TOC monitoring matters for the application, and the right Arium Comfort I configuration gets confirmed from there." },
+              { "title": "Confirm the right RO module configuration", "body": "Share the lab's daily Type 1 and Type 3 water demand, and whether a single or dual RO module configuration fits gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports benchtop, wall-mounted, or built-in setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Type 1 and Type 3 water. One system, one tap connection.",
+            "heroLead": "Running separate systems for ultrapure and pure water doubles the footprint and the maintenance. Arium Comfort I delivers both from a single unit, connecting directly to potable feed water and producing ASTM Type 1 ultrapure water alongside Type 3 pure water on demand. Type 1 water dispenses at up to 2 L/min, exceeding ASTM Type 1 specifications, while Type 3 output runs at 8 or 16 L/h depending on configuration. Intelligent iJust software optimizes water usage and calculates cleaning cycles automatically, and every drop of purified water sits protected in the closed Arium Bagtank system against secondary contamination.",
+            "stats": [
+              { "value": "Up to 2 L/min", "label": "Type 1 ultrapure water dispensing rate" },
+              { "value": "8 or 16 L/h", "label": "Type 3 pure water production rate" },
+              { "value": "Under 2 ppb", "label": "TOC with UV lamp option" },
+              { "value": "185/254 nm", "label": "Optional integrated UV lamp" },
+              { "value": "iJust software", "label": "Automated water usage optimization" },
+              { "value": "Closed Bagtank system", "label": "Contamination protection" },
+              { "value": "Benchtop, wall-mounted, or built-in", "label": "Installation flexibility" },
+              { "value": "Glove-compatible", "label": "Touch display control" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Arium Comfort I product information: dual water grade output, iJust software, and TOC performance.",
+                "body": [
+                  "Arium Comfort I produces both ASTM Type 1 ultrapure water and Type 3 pure water from a single system, connected directly to a potable feed water source.",
+                  "Type 1 water dispenses at rates up to 2 L/min, with quality that exceeds ASTM Type 1 specifications, not just meets them.",
+                  "Type 3 pure water production runs at either 8 or 16 L/h, depending on the RO module configuration selected.",
+                  "The system uses the latest reverse osmosis technology alongside a unique ion-exchange cartridge, consistently delivering purified water of the highest reproducible quality.",
+                  "Intelligent iJust software makes the best use of water resources: enhancing purified water quality, reducing overall water usage, and calculating optimal cleaning cycles automatically.",
+                  "Purified water is stored in the unique, closed Arium Bagtank system, reliably protecting it from secondary contamination and ensuring consistently reproducible results.",
+                  "A 185/254 nm UV lamp, available as an option, prevents microbiological growth and minimizes TOC, bringing levels under 2 ppb; an optional TOC monitor checks and displays readings continuously in real time.",
+                  "A touch-function display with clearly structured menu navigation ensures error-free control with a light touch, even while wearing lab gloves.",
+                  "Installation adapts to available lab space: benchtop, wall-mounted, or built-in configurations are all supported."
+                ],
+                "cards": [
+                  { "title": "Type 1 and Type 3 in one system", "description": "No separate units needed for two water grades" },
+                  { "title": "Up to 2 L/min Type 1 output", "description": "Exceeds ASTM Type 1 specifications" },
+                  { "title": "iJust intelligent software", "description": "Optimized water use and automated cleaning cycles" },
+                  { "title": "Closed Bagtank storage", "description": "Reliable protection from secondary contamination" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Sartorius Arium® Comfort I Lab Water Purification System" },
+                  { "title": "Type 1 output", "description": "Up to 2 L/min, exceeds ASTM Type 1" },
+                  { "title": "Type 3 output", "description": "8 or 16 L/h, depending on RO module configuration" },
+                  { "title": "Optional add-ons", "description": "UV lamp (185/254 nm), TOC monitor" },
+                  { "title": "Software", "description": "iJust, automated optimization and cleaning cycle calculation" },
+                  { "title": "Installation", "description": "Benchtop, wall-mounted, or built-in" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Arium Comfort I applications: HPLC, GC-MS, TOC analysis, and general lab water needs."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Arium Comfort I technical specifications: flow rates, TOC levels, and configuration options."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "One System, Two Water Grades",
+                "title": "One System, Two Water Grades",
+                "description": "Most labs need both ultrapure water for sensitive analytical work and pure water for routine tasks like glassware rinsing or feeding an autoclave. Running two separate systems for that means double the footprint, double the maintenance, and double the feed connections. Arium Comfort I collapses that into one system, connected directly to a potable feed water source and producing both grades from the same unit. Type 1 water reaches up to 2 L/min at a quality that exceeds ASTM Type 1 specifications, while Type 3 output runs at 8 or 16 L/h depending on whether the system is configured with one or two RO modules. That Type 3 output also serves a quiet but valuable secondary role: purifying the feed water used to supply other ultrapure water systems downstream, extending their operational life.",
+                "cards": [
+                  { "title": "Both ultrapure and pure water from one connection", "description": "Combined Type 1 and Type 3 output" },
+                  { "title": "Fast Type 1 water for analytical work", "description": "Up to 2 L/min dispensing rate" },
+                  { "title": "Feed water for autoclaves, dishwashers, or humidifiers", "description": "Type 3 output at 8 or 16 L/h" },
+                  { "title": "Longer life for downstream ultrapure systems", "description": "Type 3 water used to purify their feed supply" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "iJust: Smarter Water Management",
+                "title": "iJust: Smarter Water Management",
+                "body": [
+                  "Conventional water systems run on fixed schedules and generic settings, wasting water and shortening system life in the process. iJust software takes a genuinely intelligent approach instead.",
+                  "It enhances purified water quality actively, rather than holding it at a static baseline, while simultaneously reducing overall water usage across daily operation.",
+                  "Optimal cleaning cycles get calculated automatically by the software itself, removing the guesswork, and the risk of over- or under-cleaning, from routine maintenance. The combined effect extends beyond convenience: guaranteed longer life for downstream ultrapure water systems that rely on Comfort I's output as feed water."
+                ],
+                "utilityChecklist": [
+                  { "label": "Consistently high water quality without manual tuning", "value": "Active quality enhancement built into the software" },
+                  { "label": "Lower day-to-day water consumption", "value": "Optimized, lean water usage calculations" },
+                  { "label": "No guesswork on cleaning schedules", "value": "Automatically calculated optimal cleaning cycles" },
+                  { "label": "Longer service life for connected downstream systems", "value": "Cleaner, better-managed feed water output" }
+                ],
+                "disclaimer": "Share the lab's current water consumption and cleaning routine, and how much iJust software could optimize gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Arium Comfort I documentation: specifications, accessories, and consumables.",
+                "cards": [
+                  { "title": "Arium Comfort I Specifications", "description": "Available on request" },
+                  { "title": "Accessories & Consumables Guide", "description": "Available on request" },
+                  { "title": "iJust Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Arium Comfort I in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Type 1 and Type 3 water from one system, managed intelligently by iJust software. Share the daily water demand and purity requirements, and the right Arium Comfort I configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Arium Comfort - II Lab Water Purification System",
+          "slug": "arium-comfort-2-lab-water-purification-system",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/sartorius.svg",
+          "imageAlt": "Sartorius Arium Comfort II Lab Water Purification System - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/arium-comfort-2-lab-water-purification-system",
+          "breadcrumbPath": "Home > Products > Arium Comfort > Arium Comfort - II Lab Water Purification System",
+          "h1": "Arium Comfort - II Lab Water Purification System",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most labs end up running two water systems: one producing Type 2 for autoclaves, dishwashers and media prep, another polishing to Type 1 for HPLC and ion chromatography. Two footprints, two consumable schedules, two things to service.",
+
+          "features": [
+            "Combined Type 1 and Type 2 Output: Delivers ASTM Type 1 ultrapure and Type 2 pure water from a single potable feed connection.",
+            "Three-Stage Purification Train: Advanced RO membranes, patented EDI, and a high-efficiency ion-exchange cartridge in sequence.",
+            "Integrated 185 | 254 nm UV Lamp: Optional dual-wavelength lamp suppressing microbial growth and reducing TOC in the same step.",
+            "Real-Time TOC Monitoring: Optional monitor built specifically for this system, displaying readings continuously.",
+            "Closed arium® Bagtank Storage: Keeps purified water isolated from secondary contamination after production.",
+            "iJust Intelligent Software: Improves water quality, cuts consumption, and calculates cleaning cycles based on actual need.",
+            "Glove-Compatible Touch Display: Responds to a light touch through gloves, with structured menu navigation.",
+            "Three Installation Formats: Fits as a benchtop, wall-mounted, or built-in unit depending on available lab space."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sartorius Arium Comfort II Combined Lab Water System" },
+            { "label": "Category", "value": "Ultrapure Water Systems, Combined Type 1 and Type 2" },
+            { "label": "Water Grades Produced", "value": "ASTM Type 1 ultrapure and Type 2 pure" },
+            { "label": "Feed Water Source", "value": "Direct potable water connection" },
+            { "label": "Purification Technologies", "value": "Reverse osmosis, patented electrodeionization (EDI), ion-exchange cartridge" },
+            { "label": "Type 1 Dispensing Flow Rate", "value": "2 L/min" },
+            { "label": "Type 2 Production Flow Rate", "value": "5 L/h or 10 L/h, by configuration" },
+            { "label": "TOC Level", "value": "< 2 ppb" },
+            { "label": "UV Lamp", "value": "185 | 254 nm, integrated option" },
+            { "label": "TOC Monitor", "value": "Optional, integrated, continuous real-time display" },
+            { "label": "Water Storage", "value": "Closed arium® bagtank system" },
+            { "label": "Control Interface", "value": "Touch-active display, glove-compatible, structured menu" },
+            { "label": "Software", "value": "iJust — water quality optimization, consumption reduction, cleaning cycle calculation" },
+            { "label": "Installation Options", "value": "Benchtop, wall-mounted, or built-in" },
+            { "label": "Item Numbers", "value": "H2O-II-1-UV-T, H2O-II-2-UV-T, H2O-II-2-T" }
+          ],
+
+          "applications": [
+            "HPLC: Type 1 ultrapure water with TOC below 2 ppb for low-background mobile phases",
+            "Atomic Absorption Spectroscopy (AAS): Consistent ultrapure quality for trace-level elemental work",
+            "Ion Chromatography: EDI and ion-exchange stages remove the ionic background that compromises IC",
+            "Photometry: Reproducible optical blanks from consistently produced Type 1 water",
+            "Microbiological Media and Reagent Prep: Type 2 pure water at 5 or 10 L/h for routine bulk preparation",
+            "Histology: Reliable pure water supply for staining and processing workflows",
+            "ELISA and RIA: Ultrapure water for buffer and assay preparation",
+            "Buffer and pH Solution Preparation: Low ionic and organic background for stable, reproducible solutions",
+            "Laboratory Instrument Feed Water: Purified feed for autoclaves, glassware washers, humidifiers, and water baths"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "TOC & UV Checker" },
+            { "id": "water-grade-and-volume-planner", "label": "Volume Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Purification Train" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Where will the system physically sit?",
+            "description": "Select the available space and point-of-use pattern, and see which installation format works. Share the feed water connection's distance and access with Inkarp for final confirmation.",
+            "steps": [
+              {
+                "key": "availableSpace",
+                "question": "What space is available for the system?",
+                "options": [
+                  { "val": "free-bench-run", "label": "Free bench run" },
+                  { "val": "wall-space-only", "label": "Wall space only" },
+                  { "val": "cabinet-built-in-cavity", "label": "Cabinet / built-in cavity" }
+                ]
+              },
+              {
+                "key": "pointOfUse",
+                "question": "Is this a single dispensing point, or distributed?",
+                "options": [
+                  { "val": "single-point", "label": "Single dispensing point" },
+                  { "val": "distributed", "label": "Distributed across the lab" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the feed water connection's distance and access, and this routes to an installation-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Do the methods in use need TOC control and live monitoring?",
+            "description": "Select the analytical techniques running on this water, and see which options are needed.",
+            "fields": [
+              {
+                "key": "analyticalMethod",
+                "label": "Analytical methods",
+                "options": [
+                  { "val": "hplc", "label": "HPLC" },
+                  { "val": "aas", "label": "AAS" },
+                  { "val": "ion-chromatography", "label": "Ion chromatography" },
+                  { "val": "photometry", "label": "Photometry" },
+                  { "val": "elisa-ria", "label": "ELISA/RIA" },
+                  { "val": "general-prep", "label": "General prep" }
+                ]
+              },
+              {
+                "key": "tocSensitivity",
+                "label": "TOC sensitivity",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "trace-level-critical", "label": "Trace-level organic background critical" }
+                ]
+              },
+              {
+                "key": "documentationNeed",
+                "label": "Documentation need",
+                "options": [
+                  { "val": "periodic-verification", "label": "Periodic verification" },
+                  { "val": "continuous-recorded", "label": "Continuous recorded readings" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "documentationNeed": "continuous-recorded" },
+                "title": "The TOC Monitor Fits Your Documentation Need",
+                "body": "The optional real-time TOC monitor displays continuous readings rather than requiring periodic offline checks, matching a continuous-recording requirement directly.",
+                "tags": ["Real-Time TOC Monitor"]
+              },
+              {
+                "condition": { "tocSensitivity": "trace-level-critical" },
+                "title": "The UV Lamp Fits Your TOC Sensitivity",
+                "body": "The integrated 185 | 254 nm UV lamp brings TOC below 2 ppb, suited to trace-level analytical work where organic background matters.",
+                "tags": ["185 | 254 nm UV Lamp"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Options With Inkarp",
+                "body": "Share the analytical methods running on this water, and Inkarp will confirm whether the UV lamp and TOC monitor are needed.",
+                "tags": ["UV Lamp / TOC Monitor"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "water-grade-and-volume-planner",
+              "eyebrow": "Water Grade and Volume Planner",
+              "title": "How much of each water grade does the lab actually use?",
+              "description": "Select the lab's demand pattern, and see which production rate fits. Share your exact daily Type 1 and Type 2 volumes with Inkarp for final configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the peak demand pattern?", "choices": "Steady through the day; Concentrated in bursts" }
+              ],
+              "disclaimer": "Routes to a volume-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "H2O-II-2-T vs. H2O-II-1-UV-T vs. H2O-II-2-UV-T",
+            "description": "Arium Comfort II method comparison: available system configurations and their specified differences.",
+            "columns": [
+              { "label": "H2O-II-2-T" },
+              { "label": "H2O-II-1-UV-T" },
+              { "label": "H2O-II-2-UV-T" }
+            ],
+            "rows": [
+              { "feature": "Type 1 Dispensing Rate", "values": ["2 L/min", "Confirm on configuration", "Confirm on configuration"] },
+              { "feature": "Type 2 Production Rate", "values": ["10 L/h", "5 L/h", "10 L/h"] },
+              { "feature": "Integrated UV Lamp", "values": ["Yes", "Yes", "Yes"] },
+              { "feature": "TOC Monitor", "values": ["No", "Confirm on configuration", "Confirm on configuration"] },
+              { "feature": "Installation", "values": ["Benchtop", "Confirm on configuration", "Confirm on configuration"] },
+              { "feature": "Best For", "values": ["Standard combined-grade lab supply", "Lower Type 2 throughput requirements", "Higher Type 2 throughput requirements"] },
+              { "feature": "Choose when", "values": ["Continuous TOC display isn't required", "Bulk pure water demand is modest", "Bulk pure water demand is heavier"] }
+            ],
+            "disclaimer": "All three run the same RO, EDI, and ion-exchange purification train and the same closed bagtank storage — the differences sit in production rate and which monitoring options are specified. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Arium Comfort II industries: pharmaceutical QC, analytical testing, clinical laboratories, and academic research.",
+            "industries": [
+              { "name": "Pharmaceutical QC and Analytical Labs", "useCase": "HPLC and IC mobile phase and standard preparation", "consideration": "TOC below 2 ppb keeps organic background out of trace-level chromatography" },
+              { "name": "Contract Testing Laboratories", "useCase": "Varied methods across a single shared water supply", "consideration": "One system covering both Type 1 and Type 2 simplifies the lab's water infrastructure" },
+              { "name": "Clinical and Diagnostic Laboratories", "useCase": "ELISA, RIA, and reagent preparation", "consideration": "Closed bagtank storage protects water quality between production and use" },
+              { "name": "Academic Research Laboratories", "useCase": "Mixed analytical and general preparative work", "consideration": "Type 2 at 5 or 10 L/h covers media prep alongside analytical Type 1 demand" },
+              { "name": "Histopathology Laboratories", "useCase": "Staining and tissue processing workflows", "consideration": "Consistent pure water supply supports reproducible staining results" },
+              { "name": "Facilities Feeding Multiple Instruments", "useCase": "Autoclaves, glassware washers, humidifiers, water baths", "consideration": "Purified feed water extends downstream instrument service life" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows Type 1 and Type 2 output and TOC performance against the lab's requirements" },
+              { "title": "Configuration Assessment", "description": "Confirms production rate, UV, TOC monitor, and installation format" },
+              { "title": "Feed Water Assessment", "description": "Reviews incoming potable water quality against system requirements" },
+              { "title": "Installation Support", "description": "Handles benchtop, wall-mounted, or built-in setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the touch display, iJust menu, and bagtank handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains RO modules, EDI, ion-exchange cartridge, UV lamp, and ultrafilter" },
+              { "title": "Spares and Consumables", "description": "Supplies RO modules, cartridges, ultrafilters, bagtank bags, and comfort kits" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is Arium Comfort II used for?", "answer": "It's a combined lab water system producing ASTM Type 1 ultrapure and Type 2 pure water from a potable feed, used for HPLC, AAS, ion chromatography, photometry, ELISA and RIA, media and buffer preparation, histology, and feeding laboratory instruments." },
+            { "question": "Does Arium Comfort II produce both Type 1 and Type 2 water?", "answer": "Yes. Both grades come from the same system and the same potable feed connection — Type 1 dispenses at 2 L/min, Type 2 is produced at 5 or 10 L/h depending on configuration." },
+            { "question": "What purification technologies does it use?", "answer": "Advanced reverse osmosis membranes, Sartorius's patented electrodeionization (EDI), and a cartridge with highly efficient ion-exchange resin, working in sequence." },
+            { "question": "What TOC level does the system achieve?", "answer": "Below 2 ppb in arium® water, with the 185 | 254 nm UV lamp minimizing total organic compounds as part of the purification process." },
+            { "question": "What does the UV lamp do?", "answer": "The integrated 185 | 254 nm lamp prevents microbiological growth and reduces total organic carbon in the purified water at the same time." },
+            { "question": "Can TOC be monitored continuously?", "answer": "Yes, with the optional integrated TOC monitor developed specifically for this system, which displays readings in real time." },
+            { "question": "What is iJust?", "answer": "It's the system's intelligent software — it enhances purified water quality, reduces water usage compared with conventional systems, and calculates optimal cleaning cycles rather than running them on a fixed schedule." },
+            { "question": "How is purified water stored?", "answer": "In the closed arium® bagtank system, which protects the water from secondary contamination after production." },
+            { "question": "Can the display be operated while wearing gloves?", "answer": "Yes. The touch-active display responds to a light touch through gloves, with structured menu navigation for error-free control." },
+            { "question": "How can the system be installed?", "answer": "Three ways — as a benchtop unit, wall-mounted, or built-in — so it fits the space the lab actually has available." },
+            { "question": "Does it extend the life of downstream instruments?", "answer": "Yes. Feeding autoclaves, glassware dishwashers, humidifiers, water baths, and downstream ultrapure systems with purified water lengthens their working life." },
+            { "question": "What is the price of Arium Comfort II in India?", "answer": "Get in touch and Inkarp will put together a quote based on the production rate, UV, TOC monitor, and installation format required." },
+            { "question": "Who is the authorized distributor of Arium Comfort II in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Comfort II Lab Water Purification System in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Arium Comfort II in India from Inkarp",
+            "description": "Share the daily volumes and the methods the water feeds, and the right Arium Comfort II configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your daily volumes and analytical methods, then confirm the right Arium Comfort II configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "dailyVolumes", "label": "Daily Type 1 and Type 2 volumes", "type": "text", "required": false },
+              { "key": "analyticalMethods", "label": "Analytical methods and TOC requirements", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right flow rate and options", "body": "Share the daily Type 1 and Type 2 volumes the lab consumes and which analytical methods the water feeds, and the right flow rate, UV, and TOC monitor combination gets confirmed from there." },
+              { "title": "Confirm the right production rate and UV specification", "body": "Share which analytical methods the Type 1 water feeds and what the Type 2 demand looks like across a typical day, and the right production rate and UV specification gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Handles benchtop, wall-mounted, or built-in setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Type 1 and Type 2 water from one system, straight off the tap feed.",
+            "heroLead": "Most labs end up running two water systems: one producing Type 2 for autoclaves, dishwashers and media prep, another polishing to Type 1 for HPLC and ion chromatography. Two footprints, two consumable schedules, two things to service. Arium Comfort II produces both from a single unit connected directly to potable feed water. Reverse osmosis membranes, patented electrodeionization, and a high-efficiency ion-exchange cartridge work in sequence, so ASTM Type 1 ultrapure dispenses at 2 L/min while Type 2 pure water is produced continuously at 5 or 10 L/h depending on configuration. Purified water is held in the closed arium® bagtank, which keeps it away from the airborne contamination an open reservoir invites. And iJust software runs underneath all of it, tuning water usage and calculating cleaning cycles rather than running fixed intervals regardless of what the system actually needs.",
+            "stats": [
+              { "value": "ASTM Type 1 + Type 2", "label": "Both grades from one system" },
+              { "value": "2 L/min", "label": "Type 1 ultrapure dispensing rate" },
+              { "value": "5 or 10 L/h", "label": "Type 2 production rate, by configuration" },
+              { "value": "< 2 ppb", "label": "TOC level in arium® water" },
+              { "value": "185 | 254 nm", "label": "Dual-wavelength UV lamp, integrated option" },
+              { "value": "RO + EDI + ion exchange", "label": "Three-stage purification train" },
+              { "value": "Closed bagtank", "label": "Storage protected from secondary contamination" },
+              { "value": "Benchtop, wall-mounted, or built-in", "label": "Three installation options" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Arium Comfort II product information: dual water grades, purification technologies, and installation options.",
+                "body": [
+                  "Arium Comfort II connects directly to a potable feed water source and produces ASTM Type 1 ultrapure and Type 2 pure water from that single connection.",
+                  "Three technologies work in sequence: advanced reverse osmosis membranes, Sartorius's patented electrodeionization (EDI), and a cartridge with highly efficient ion-exchange resin.",
+                  "Type 1 water dispenses at 2 L/min; Type 2 production runs at 5 L/h or 10 L/h depending on the configuration selected.",
+                  "The optional integrated 185 | 254 nm UV lamp does two jobs at once — suppressing microbiological growth and reducing total organic carbon, bringing TOC below 2 ppb.",
+                  "An optional TOC monitor, developed specifically for this system, displays readings continuously in real time rather than requiring a separate offline check.",
+                  "Purified water is stored in the closed arium® bagtank system, which protects it from secondary contamination between production and use.",
+                  "iJust software enhances purified water quality, reduces overall water consumption, and calculates optimal cleaning cycles rather than running them on a fixed schedule.",
+                  "The touch-active display responds through gloves, so navigating the menu doesn't mean breaking sterile technique or stopping to de-glove.",
+                  "Installation works three ways — benchtop, wall-mounted, or built-in — so the system fits the bench space that exists rather than requiring a bench to be cleared for it.",
+                  "Feeding downstream instruments and ultrapure systems with Type 2 water extends their service life by keeping feed water quality consistent."
+                ],
+                "cards": [
+                  { "title": "Type 1 and Type 2 in one unit", "description": "One footprint, one service schedule" },
+                  { "title": "< 2 ppb TOC", "description": "Organic background low enough for trace analysis" },
+                  { "title": "Closed bagtank storage", "description": "Purified water protected after production" },
+                  { "title": "iJust optimization", "description": "Water usage and cleaning cycles calculated, not fixed" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Sartorius Arium Comfort II Combined Lab Water System" },
+                  { "title": "Water grades", "description": "ASTM Type 1 ultrapure and Type 2 pure" },
+                  { "title": "Purification", "description": "Reverse osmosis, patented EDI, ion-exchange cartridge" },
+                  { "title": "Type 1 dispensing", "description": "2 L/min" },
+                  { "title": "Type 2 production", "description": "5 L/h or 10 L/h, by configuration" },
+                  { "title": "Options", "description": "Integrated 185 | 254 nm UV lamp, real-time TOC monitor" },
+                  { "title": "Installation", "description": "Benchtop, wall-mounted, or built-in" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Arium Comfort II applications: HPLC, AAS, ion chromatography, media preparation, and instrument feed water."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Arium Comfort II technical specifications: flow rates, TOC level, UV wavelengths, and installation options."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Three Technologies, Two Water Grades",
+                "title": "Three Technologies, Two Water Grades",
+                "description": "Reverse osmosis handles the bulk removal first, taking dissolved salts, organics, and particulates out of the potable feed before anything downstream has to deal with them. Patented electrodeionization then polishes continuously without regeneration chemicals, holding purity steady rather than degrading between service intervals the way a resin-only system does. The ion-exchange cartridge with highly efficient resin provides the final polish that takes water to ASTM Type 1 rather than stopping at Type 2. Because the stages run in sequence rather than as separate machines, Type 2 water is available at 5 or 10 L/h for bulk work while Type 1 dispenses at 2 L/min for analytical work — from the same unit, on the same feed line. Adding the 185 | 254 nm UV lamp puts organic reduction and microbial control into the same step: 185 nm breaks organics down to bring TOC below 2 ppb, 254 nm suppresses microbiological growth. Feeding autoclaves, glassware washers, and downstream ultrapure systems with this Type 2 water extends their working life, since scale and fouling are what usually shorten it.",
+                "cards": [
+                  { "title": "Both water grades without two systems", "description": "RO, EDI, and ion exchange in one purification train" },
+                  { "title": "Bulk volume for media and instrument feed", "description": "Type 2 production at 5 or 10 L/h" },
+                  { "title": "Analytical-grade water on demand", "description": "Type 1 dispensing at 2 L/min" },
+                  { "title": "Low organic background for trace methods", "description": "185 nm UV reducing TOC below 2 ppb" },
+                  { "title": "Microbial control without a separate treatment step", "description": "254 nm UV in the same integrated lamp" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "iJust and Water Economy",
+                "title": "iJust and Water Economy",
+                "body": [
+                  "A purification system that runs fixed cleaning cycles rejects water on a schedule, whether or not the membrane condition actually calls for it. That reject water is a real, recurring operating cost.",
+                  "iJust calculates optimal cleaning cycles from actual system condition instead, so cleaning happens when it's needed rather than when a timer says so.",
+                  "The same software reduces overall water usage compared with conventional systems, which matters most where feed water is metered, restricted, or expensive.",
+                  "Product water quality improves alongside that economy — iJust enhances purified water quality rather than trading purity for consumption savings.",
+                  "Downstream ultrapure systems fed by this water are guaranteed longer life, because consistent feed quality is what determines how hard their own consumables have to work. The closed bagtank protects that carefully produced water after the fact, so quality achieved at production isn't lost to airborne contamination in storage."
+                ],
+                "utilityChecklist": [
+                  { "label": "Lower recurring water consumption", "value": "iJust optimization versus conventional fixed-cycle systems" },
+                  { "label": "Cleaning based on real condition", "value": "Calculated optimal cleaning cycles" },
+                  { "label": "Longer consumable life downstream", "value": "Consistent purified feed to downstream ultrapure systems" },
+                  { "label": "Water quality preserved after production", "value": "Closed arium® bagtank storage" }
+                ],
+                "disclaimer": "Share current feed water cost and consumption if they're tracked, and the practical impact of iJust optimization gets mapped against the lab's actual usage pattern."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Arium Comfort II documentation: specifications, consumables list, and installation guidance.",
+                "cards": [
+                  { "title": "Arium Comfort II Specification Sheet", "description": "Available on request" },
+                  { "title": "Consumables and Accessories List (RO modules, ultrafilter, bags, comfort kit)", "description": "Available on request" },
+                  { "title": "Installation and Feed Water Requirements Guide", "description": "Available on request" },
+                  { "title": "iJust Software and TOC Monitor Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Arium Comfort II in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "ASTM Type 1 and Type 2 water from one system, with TOC below 2 ppb and iJust keeping consumption and cleaning cycles in check. Share the daily volumes and the methods the water feeds, and the right Arium Comfort II configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

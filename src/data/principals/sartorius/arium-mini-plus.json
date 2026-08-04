@@ -1,0 +1,371 @@
+{
+  "principal": {
+    "slug": "sartorius",
+    "principalName": "Sartorius",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "Arium Mini Plus",
+      "slug": "arium-mini-plus",
+      "products": [
+        {
+          "name": "Arium® Mini Plus Lab Water Purification System",
+          "slug": "arium-mini-plus-lab-water-purification-system",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/sartorius.svg",
+          "imageAlt": "Sartorius Arium Mini Plus Lab Water Purification System - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/arium-mini-plus-lab-water-purification-system",
+          "breadcrumbPath": "Home > Products > Arium Mini Plus > Arium® Mini Plus Lab Water Purification System",
+          "h1": "Arium® Mini Plus Lab Water Purification System",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "A bulky water purification setup shouldn't be the price of ultrapure water in a small lab. Arium Mini Plus delivers ASTM Type 1 water from an innovative Bagtank storage system, in a footprint just 28 centimeters wide, easily integrating into any lab environment regardless of available bench space.",
+
+          "features": [
+            "Bagtank Storage Technology: Delivers ASTM Type 1 water from a closed, pressure-regulated storage system.",
+            "Touch-Activated Glove-Compatible Display: Shows dispensed volume, water quality, and temperature, operable with lab gloves.",
+            "Flexible Dispensing Control: Manual or 50 mL incremental dispensing to match different sample needs.",
+            "5-Liter Quick-Connect Bag: No chemical cleaning required, swaps out via a leak-tight coupling.",
+            "Multi-Stage Purification: Carbon pretreatment and reverse osmosis remove impurities before point-of-use filtration.",
+            "Optional Point-of-Use Filters: Sterile Plus for bacteria removal, Cell Plus for endotoxins, RNase, DNase, and particles.",
+            "Continuous Contamination Protection: Closed-system pressure regulation blocks CO2 penetration and biofilm formation.",
+            "Optional Integrated UV Lamp: Available for applications needing additional purification assurance."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sartorius Arium® Mini Plus Lab Water Purification System" },
+            { "label": "Category", "value": "Arium Mini Plus, Ultrapure Water Systems" },
+            { "label": "Item Number", "value": "H2O-MA-T" },
+            { "label": "Water Quality", "value": "ASTM Type 1/Ultrapure" },
+            { "label": "Daily Output", "value": "Up to approximately 10 liters" },
+            { "label": "Storage", "value": "5-liter Bagtank, quick-connect coupling" },
+            { "label": "Footprint", "value": "28 cm (11 in) width" },
+            { "label": "Dispensing", "value": "Manual or 50 mL increments" },
+            { "label": "Pretreatment", "value": "High-quality carbon cartridge" },
+            { "label": "Primary Purification", "value": "Reverse osmosis" },
+            { "label": "Optional Filtration", "value": "Arium Sterile Plus (0.001 CFU/mL, 0.22 μm), Arium Cell Plus (endotoxins, RNase, DNase, microorganisms, particles)" },
+            { "label": "UV Lamp", "value": "Available with or without" },
+            { "label": "Bag Replacement Interval", "value": "Typically every 6 months, depending on lab requirements" },
+            { "label": "Display", "value": "Touch-activated, glove-compatible color display" }
+          ],
+
+          "applications": [
+            "Sample, Media, and Buffer Preparation: Type 1 water on demand, dispensed in flexible increments",
+            "Cell and Tissue Culture: Cell Plus ultrafilter removes endotoxins and microorganisms",
+            "Gas Chromatography: Consistent ultrapure water quality for analytical work",
+            "General Lab Water Use: Compact footprint suits multi-purpose lab environments",
+            "Contamination-Sensitive Workflows: Closed Bagtank system prevents secondary contamination"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Contamination Risk" },
+            { "id": "footprint-and-integration-planner", "label": "Footprint Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Contamination Protection" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "How much water does the lab need, and what purity level?",
+            "description": "Select the application type and filtration requirement, and see the recommended configuration. Share your exact daily water demand with Inkarp for final confirmation.",
+            "steps": [
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "sample-prep", "label": "Sample prep" },
+                  { "val": "cell-culture", "label": "Cell culture" },
+                  { "val": "gc", "label": "Gas chromatography" },
+                  { "val": "general-use", "label": "General use" }
+                ]
+              },
+              {
+                "key": "bacteriaEndotoxinRemoval",
+                "question": "Does the application need bacteria or endotoxin removal?",
+                "options": [
+                  { "val": "yes", "label": "Yes (Sterile Plus/Cell Plus)" },
+                  { "val": "standard", "label": "Standard" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your exact daily water demand, and this routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "How exposed is the current water system to contamination risk?",
+            "description": "Select the lab's current setup, and see how Bagtank technology compares.",
+            "fields": [
+              {
+                "key": "currentStorageType",
+                "label": "Current storage type",
+                "options": [
+                  { "val": "open-reservoir", "label": "Open reservoir" },
+                  { "val": "tank", "label": "Tank" },
+                  { "val": "none", "label": "None" }
+                ]
+              },
+              {
+                "key": "currentCleaningMethod",
+                "label": "Current cleaning method",
+                "options": [
+                  { "val": "chemical-cleaning", "label": "Chemical cleaning" },
+                  { "val": "none", "label": "None" }
+                ]
+              },
+              {
+                "key": "contaminationIncidents",
+                "label": "Contamination incidents in past year",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "frequent", "label": "Frequent" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "contaminationIncidents": "frequent" },
+                "title": "Bagtank Directly Addresses Frequent Contamination Issues",
+                "body": "The closed Bagtank system, with automatic pressure regulation blocking CO2 and biofilm formation, removes the open-reservoir conditions that typically cause frequent contamination incidents.",
+                "tags": ["Closed Bagtank System"]
+              },
+              {
+                "condition": { "currentStorageType": "open-reservoir" },
+                "title": "Bagtank Eliminates Your Open-Reservoir Risk",
+                "body": "An open reservoir is exposed to secondary contamination the moment it's exposed to air. Arium Mini Plus's closed Bagtank system removes that exposure entirely.",
+                "tags": ["No Open-Reservoir Exposure"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Contamination Risk Reduction With Inkarp",
+                "body": "Share your lab's current storage and cleaning setup, and Inkarp will confirm how much risk the closed Bagtank design removes.",
+                "tags": ["Chemical-Free, Closed System"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "footprint-and-integration-planner",
+              "eyebrow": "Footprint and Integration Planner",
+              "title": "Will the unit fit into the available lab space?",
+              "description": "Select the available bench space and connection type, and confirm installation fit.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "Is at least 28 cm of bench width available?", "choices": "Yes, 28 cm or more; No, less than 28 cm" },
+                { "title": "What's the water connection type?", "choices": "Direct tap connection; Other" },
+                { "title": "UV lamp preference?", "choices": "With UV lamp; Without UV lamp" }
+              ],
+              "disclaimer": "Routes to an installation-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Standard vs. With Integrated UV Lamp",
+            "description": "Arium Mini Plus comparison: standard configuration versus with integrated UV lamp.",
+            "columns": [
+              { "label": "Arium Mini Plus (Standard)" },
+              { "label": "Arium Mini Plus (With UV)" }
+            ],
+            "rows": [
+              { "feature": "Purification Stages", "values": ["Carbon pretreatment, reverse osmosis, optional filters", "Same, plus integrated UV lamp"] },
+              { "feature": "Best For", "values": ["Standard sample prep and general lab use", "Applications needing additional purification assurance"] },
+              { "feature": "Choose When", "values": ["Water quality needs are met by RO and optional filters alone", "The application calls for UV-based purification as well"] }
+            ],
+            "disclaimer": "Both configurations share the same Bagtank storage, display, and dispensing system. The difference is purely the presence of the integrated UV lamp."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Arium Mini Plus industries: molecular biology, cell culture research, and analytical chemistry.",
+            "industries": [
+              { "name": "Molecular Biology Research", "useCase": "Preparing buffers, media, and reagent solutions", "consideration": "Type 1 water quality supports sensitive downstream applications" },
+              { "name": "Cell and Tissue Culture Labs", "useCase": "Water for culture media and washing steps", "consideration": "Cell Plus ultrafilter removes endotoxins and microorganisms" },
+              { "name": "Analytical Chemistry", "useCase": "Gas chromatography and other analytical workflows", "consideration": "Consistent ultrapure water quality supports reproducible results" },
+              { "name": "Small and Space-Constrained Labs", "useCase": "General-purpose ultrapure water needs", "consideration": "28 cm footprint fits into limited bench space" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows Bagtank operation and dispensing on-site" },
+              { "title": "Configuration Assessment", "description": "Confirms UV option and filter setup for the application" },
+              { "title": "Installation Support", "description": "Supports tap connection setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the touch display and bag replacement" },
+              { "title": "Preventive Maintenance", "description": "Maintains cartridge, RO membrane, and filter performance" },
+              { "title": "Spares and Accessories", "description": "Supplies replacement bags, cartridges, and filters" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Arium Mini Plus used for?", "answer": "It's a compact lab water purification system delivering ASTM Type 1 ultrapure water for general and analytical applications, including sample prep, cell culture, and gas chromatography." },
+            { "question": "How much water can it produce per day?", "answer": "Up to approximately 10 liters of Type 1 water daily." },
+            { "question": "How compact is the unit?", "answer": "Just 28 centimeters (11 inches) wide, designed to integrate easily into any lab environment." },
+            { "question": "Does the storage bag need chemical cleaning?", "answer": "No, the 5-liter bag requires no chemical cleaning, lowering contamination risk and simplifying maintenance." },
+            { "question": "How often does the bag need replacing?", "answer": "Typically every six months, depending on specific laboratory requirements." },
+            { "question": "What purification stages does the system use?", "answer": "A high-quality carbon pretreatment cartridge, reverse osmosis, and optional point-of-use filters, Arium Sterile Plus for bacteria removal and Arium Cell Plus for endotoxins, RNase, DNase, and particles." },
+            { "question": "Is a UV lamp included?", "answer": "It's available either with or without an integrated UV lamp, depending on the configuration selected." },
+            { "question": "How does the display work with lab gloves?", "answer": "The touch-activated color display is designed to function seamlessly with laboratory gloves." },
+            { "question": "How is dispensing controlled?", "answer": "Manually, or in 50 mL increments for added flexibility." },
+            { "question": "What is the price of the Arium Mini Plus in India?", "answer": "Get in touch and Inkarp will put together a quote based on the filter and UV configuration needed." },
+            { "question": "Who is the authorized distributor of the Arium Mini Plus in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Mini Plus in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Arium Mini Plus in India from Inkarp",
+            "description": "Share the daily demand and filtration needs, and the right Arium Mini Plus configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your daily demand and filtration needs, then confirm the right Arium Mini Plus configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "dailyWaterDemand", "label": "Daily water demand and application type", "type": "text", "required": false },
+              { "key": "filtrationNeeds", "label": "Bacteria/endotoxin removal and UV lamp needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right filter and UV configuration", "body": "Share the lab's daily water demand and whether applications require bacteria or endotoxin removal, and the right Arium Mini Plus configuration gets confirmed from there." },
+              { "title": "Confirm how Bagtank addresses your contamination history", "body": "Share how often the lab currently deals with water quality drift or contamination issues, and how the closed Bagtank design addresses that gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports tap connection setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "28 centimeters wide. Up to 10 liters of Type 1 water a day, on demand.",
+            "heroLead": "A bulky water purification setup shouldn't be the price of ultrapure water in a small lab. Arium Mini Plus delivers ASTM Type 1 water from an innovative Bagtank storage system, in a footprint just 28 centimeters wide, easily integrating into any lab environment regardless of available bench space. A touch-activated color display works seamlessly through laboratory gloves, showing last dispensed volume, water quality, and temperature at a glance. Dispensing runs manually or in 50 mL increments, a 5-liter bag needs no chemical cleaning, and the closed Bagtank system blocks CO2 and biofilm formation continuously. It's available with or without an integrated UV lamp.",
+            "stats": [
+              { "value": "Up to 10 L/day", "label": "Type 1 ultrapure water output" },
+              { "value": "28 cm (11 in)", "label": "Unit width, compact footprint" },
+              { "value": "5 L", "label": "Storage bag capacity" },
+              { "value": "0.001 CFU/mL", "label": "Bacteria removal (with Sterile Plus filter, 0.22 μm)" },
+              { "value": "6 months", "label": "Typical bag replacement interval" },
+              { "value": "Touch-activated", "label": "Glove-compatible color display" },
+              { "value": "50 mL increments", "label": "Manual or incremental dispensing" },
+              { "value": "With or without UV", "label": "Configurable lamp option" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Arium Mini Plus product information: purification stages, Bagtank technology, and display operation.",
+                "body": [
+                  "Arium Mini Plus provides ASTM Type 1/ultrapure water from Sartorius's innovative Bagtank storage, purified from pretreated water held in an internal storage bag.",
+                  "Daily output covers up to approximately 10 liters of Type 1 water, suited to general and analytical lab applications.",
+                  "The unit measures just 28 centimeters (11 inches) wide, a compact design with minimal footprint that integrates easily into any lab environment.",
+                  "A touch-activated color display works seamlessly with laboratory gloves, showing the last volume dispensed, purified water quality, and water temperature directly.",
+                  "Dispensing runs manually or in 50 mL increments, adding flexibility for different sample prep needs.",
+                  "The 5-liter bag requires no chemical cleaning, lowering contamination risk, and swaps out easily via a leak-tight quick-connect coupling that preserves the closed system.",
+                  "Purification runs through multiple stages: a pretreatment cartridge using high-quality carbon for effective absorption, reverse osmosis to retain impurities, and optional point-of-use filters, Arium Sterile Plus for bacteria removal down to 0.001 CFU/mL via a 0.22 μm membrane, and Arium Cell Plus for endotoxins, RNase, DNase, microorganisms, and particles.",
+                  "The unit is available with or without an integrated UV lamp, depending on application needs.",
+                  "Bagtank technology maintains a closed system throughout, automatically regulating pressure so no CO2 penetrates, preserving low conductivity and preventing biofilm formation."
+                ],
+                "cards": [
+                  { "title": "Up to 10 L/day Type 1 water", "description": "Covers general and analytical daily lab demand" },
+                  { "title": "28 cm footprint", "description": "Fits into any lab, regardless of bench space" },
+                  { "title": "Closed Bagtank system", "description": "Continuous protection against secondary contamination" },
+                  { "title": "Chemical-free bag maintenance", "description": "Lower contamination risk, minimal upkeep" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Sartorius Arium Mini Plus Lab Water Purification System" },
+                  { "title": "Output", "description": "Up to 10 L/day, ASTM Type 1 water" },
+                  { "title": "Storage", "description": "5-liter Bagtank, quick-connect, no chemical cleaning" },
+                  { "title": "Purification stages", "description": "Carbon pretreatment, reverse osmosis, optional Sterile Plus and Cell Plus filters" },
+                  { "title": "UV option", "description": "Available with or without integrated UV lamp" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Arium Mini Plus applications: sample and media preparation, cell and tissue culture, and gas chromatography."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Arium Mini Plus technical specifications: output capacity, footprint, and purification stages."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Continuous Contamination Protection",
+                "title": "Continuous Contamination Protection",
+                "description": "Open water storage systems are vulnerable to secondary contamination the moment they're exposed to air. Arium Mini Plus avoids that risk entirely with a closed Bagtank system. Pressure inside the system regulates automatically, keeping CO2 from penetrating the stored water, which directly preserves low conductivity readings over time. That same closed environment prevents biofilm formation, a common failure point in lab water systems that rely on open reservoirs or infrequently cleaned tanks. The bag itself needs replacing roughly every six months depending on lab requirements, a predictable, low-effort maintenance cycle rather than an open-ended cleaning routine.",
+                "cards": [
+                  { "title": "Protection against secondary contamination", "description": "Closed Bagtank system, automatic pressure regulation" },
+                  { "title": "Stable, low conductivity water quality over time", "description": "CO2 exclusion built into the closed design" },
+                  { "title": "No biofilm buildup in storage", "description": "Sealed system prevents the conditions biofilm needs" },
+                  { "title": "Predictable maintenance scheduling", "description": "Bag replacement roughly every 6 months" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Low-Maintenance by Design",
+                "title": "Low-Maintenance by Design",
+                "body": [
+                  "Cleaning a water system with chemicals introduces exactly the kind of contamination risk a purification system exists to eliminate. Arium Mini Plus sidesteps that entirely.",
+                  "The 5-liter bag requires no chemical cleaning at all, removing both the contamination risk and the recurring task from the maintenance routine.",
+                  "A quick-connect coupling makes bag replacement fast and leak-tight, keeping the closed system intact through every swap rather than reopening it to potential contamination. Combined with a carbon pretreatment cartridge for effective absorption and reverse osmosis for impurity retention, the system's core purification stages need minimal day-to-day operator intervention."
+                ],
+                "utilityChecklist": [
+                  { "label": "No chemical handling during routine maintenance", "value": "Chemical-free 5-liter bag" },
+                  { "label": "Fast, low-risk bag replacement", "value": "Leak-tight quick-connect coupling" },
+                  { "label": "Minimal day-to-day operator attention", "value": "Automated carbon pretreatment and reverse osmosis stages" }
+                ],
+                "disclaimer": "Share the lab's current maintenance routine for water purification, and how much of that Arium Mini Plus removes gets confirmed directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Arium Mini Plus documentation: specifications, accessories, and replacement parts.",
+                "cards": [
+                  { "title": "Arium Mini Plus Specifications", "description": "Available on request" },
+                  { "title": "Accessories & Consumables Guide", "description": "Available on request" },
+                  { "title": "Replacement Parts List", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Arium Mini Plus in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Up to 10 liters of Type 1 water a day, from a closed system just 28 cm wide. Share the daily demand and filtration needs, and the right Arium Mini Plus configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

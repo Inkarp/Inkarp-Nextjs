@@ -23,7 +23,7 @@ export const principalLogos = {
   kubota: "/assets/images/PrincipalLogos/RowThree/Kubota.png",
   jeiotech: "/assets/images/PrincipalLogos/RowThree/Jeiotch.png",
   "sonics-and-materials": "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
-  zeiss: "/assets/images/PrincipalLogos/RowSix/zeiss.png",
+  zeiss: "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
   "dara-lyo": "/assets/images/PrincipalLogos/RowOne/dara-lyo.svg",
   "photon-etc": "/assets/images/PrincipalLogos/RowFive/Photon.jpeg",
   "nenovision-s-r-o": "/assets/images/PrincipalLogos/RowFive/Nenovision.svg",

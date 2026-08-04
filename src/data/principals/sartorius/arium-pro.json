@@ -1,0 +1,381 @@
+{
+  "principal": {
+    "slug": "sartorius",
+    "principalName": "Sartorius",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "Arium Pro",
+      "slug": "arium-pro",
+      "products": [
+        {
+          "name": "Arium® Pro Lab Water Purification System",
+          "slug": "arium-pro-lab-water-purification-system",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/sartorius.svg",
+          "imageAlt": "Sartorius Arium Pro Lab Water Purification System - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/arium-pro-lab-water-purification-system",
+          "breadcrumbPath": "Home > Products > Arium Pro > Arium® Pro Lab Water Purification System",
+          "h1": "Arium® Pro Lab Water Purification System",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "A one-size-fits-all water system either overshoots the budget or undershoots the application. Arium Pro solves that with genuine modular design, letting a UV lamp, ultrafilter, and TOC monitor combine exactly as the application demands, across five distinct configurations built on the same core platform.",
+
+          "features": [
+            "Genuine Modular Design: UV lamp, ultrafilter, and TOC monitor combine exactly to the application.",
+            "185/254 nm Integrated UV Lamp (Optional): Prevents microbial growth and minimizes TOC to under 2 ppb.",
+            "Real-Time TOC Monitoring (Optional): Continuously checks and displays TOC readings as water is produced.",
+            "Crossflow Ultrafiltration (UF/VF Models): Removes endotoxins, microorganisms, particles, DNase, and RNase.",
+            "Glove-Compatible Touch Display: Glass display with intuitive menu navigation for error-free operation.",
+            "Flexible Dispensing Options: Multiple dispensing modes to match different lab workflows.",
+            "Data-Saving and Printout Functions: Supports documentation and traceability requirements directly.",
+            "Color-Coded Alert Messaging: Flags system status and issues at a glance."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Sartorius Arium® Pro Lab Water Purification System" },
+            { "label": "Category", "value": "Arium Pro, Ultrapure Water Systems" },
+            { "label": "Item Numbers", "value": "H2OPRO-UV-T(-TOC), H2OPRO-UV-B (UV); H2OPRO-VF-T(-TOC), H2OPRO-VF-B (VF); H2OPRO-UF-T (UF); H2OBASIC-T (Basic)" },
+            { "label": "Total Organic Carbon (TOC)", "value": "≤ 2 ppb (UV, VF), < 5 ppb (UF, Basic)" },
+            { "label": "UV Source", "value": "Yes (UV, VF), No (UF, Basic)" },
+            { "label": "Ultrafilter (Crossflow)", "value": "Yes (VF, UF), No (UV, Basic)" },
+            { "label": "TOC Monitor", "value": "Optional (UV, VF), not available (UF, Basic)" },
+            { "label": "Installation Option", "value": "Benchtop or wall-mounted (UV, VF), Benchtop only (UF, Basic)" }
+          ],
+
+          "applications": [
+            "HPLC and GC-MS, AAS, ICP-MS: Type 1 water quality with low TOC for analytical accuracy",
+            "Ion Chromatography and TOC Analysis: Reproducible ultrapure water quality across runs",
+            "PCR and Electrophoresis: Contamination-free water for molecular biology workflows",
+            "Cell Culture Media and Monoclonal Antibody Production: Crossflow ultrafilter removes endotoxins, DNase, and RNase",
+            "Endotoxin Analysis and Immunocytochemistry: Ultrafiltered configurations suited to sensitive biological work",
+            "Photometry: Consistent, low-TOC water for optical measurement accuracy"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Installation Fit Checker" },
+            { "id": "toc-monitoring-planner", "label": "TOC Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Lowest TOC, Verified" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Which Arium Pro configuration fits the application?",
+            "description": "Select the application type, TOC requirement, and biological contaminant removal need, and see the recommended configuration.",
+            "steps": [
+              {
+                "key": "applicationType",
+                "question": "What's the application type?",
+                "options": [
+                  { "val": "hplc-gcms", "label": "HPLC/GC-MS" },
+                  { "val": "cell-culture", "label": "Cell culture" },
+                  { "val": "endotoxin-analysis", "label": "Endotoxin analysis" },
+                  { "val": "general-lab-use", "label": "General lab use" }
+                ]
+              },
+              {
+                "key": "tocRequirement",
+                "question": "What's the TOC requirement?",
+                "options": [
+                  { "val": "standard", "label": "Standard, under 5 ppb" },
+                  { "val": "lowest-possible", "label": "Lowest possible, under 2 ppb" }
+                ]
+              },
+              {
+                "key": "biologicalContaminantRemoval",
+                "question": "Does the application need biological contaminant removal?",
+                "options": [
+                  { "val": "yes", "label": "Yes (ultrafilter)" },
+                  { "val": "no", "label": "No" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the target application and purity requirements, and this routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Benchtop or wall-mounted? What fits the lab space?",
+            "description": "Select the available space and installation preference, and see which models fit.",
+            "fields": [
+              {
+                "key": "availableInstallationType",
+                "label": "Available installation type",
+                "options": [
+                  { "val": "benchtop-space", "label": "Benchtop space" },
+                  { "val": "wall-mounting", "label": "Wall-mounting option" }
+                ]
+              },
+              {
+                "key": "waterConnectionPoint",
+                "label": "Water connection point",
+                "options": [
+                  { "val": "direct", "label": "Direct" },
+                  { "val": "existing-plumbing", "label": "Via existing plumbing" }
+                ]
+              },
+              {
+                "key": "configurationPreference",
+                "label": "Configuration preference",
+                "options": [
+                  { "val": "uv", "label": "UV" },
+                  { "val": "vf", "label": "VF" },
+                  { "val": "uf", "label": "UF" },
+                  { "val": "basic", "label": "Basic" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "availableInstallationType": "wall-mounting" },
+                "title": "UV or VF Fits Your Wall-Mounted Installation",
+                "body": "Wall-mounted installation is available on the UV and VF configurations. UF and Basic configurations are benchtop only.",
+                "tags": ["Wall-Mounted: UV or VF Only"]
+              },
+              {
+                "condition": { "availableInstallationType": "benchtop-space" },
+                "title": "All Four Configurations Fit Your Benchtop Space",
+                "body": "UV, VF, UF, and Basic configurations are all available as benchtop installations.",
+                "tags": ["Benchtop: All Configurations"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Installation Fit With Inkarp",
+                "body": "Share the available installation type and configuration preference, and Inkarp will confirm which item numbers match.",
+                "tags": ["Benchtop or Wall-Mounted"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "toc-monitoring-planner",
+              "eyebrow": "TOC Monitoring Planner",
+              "title": "Does the lab need continuous, documented TOC verification?",
+              "description": "Select the QC and documentation requirements, and see if the TOC monitor add-on applies.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the QC documentation requirement?", "choices": "Basic; Regulated/audit-tracked" },
+                { "title": "What's the current TOC verification method?", "choices": "Manual/periodic; None" },
+                { "title": "What's the base configuration?", "choices": "UV; VF" }
+              ],
+              "disclaimer": "Routes to a compliance-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "UV vs. VF vs. UF vs. Basic",
+            "description": "Arium Pro comparison: UV, VF, UF, and Basic configurations.",
+            "columns": [
+              { "label": "Arium Pro UV" },
+              { "label": "Arium Pro VF" },
+              { "label": "Arium Pro UF" },
+              { "label": "Arium Pro (Basic)" }
+            ],
+            "rows": [
+              { "feature": "TOC", "values": ["≤ 2 ppb", "≤ 2 ppb", "< 5 ppb", "< 5 ppb"] },
+              { "feature": "UV Lamp", "values": ["Yes", "Yes", "No", "No"] },
+              { "feature": "Ultrafilter", "values": ["No", "Yes", "Yes", "No"] },
+              { "feature": "TOC Monitor Option", "values": ["Yes", "Yes", "No", "No"] },
+              { "feature": "Best For", "values": ["Lowest-TOC analytical work", "Lowest TOC plus biological contaminant removal", "Cell culture and biological sample prep", "Standard, essential-performance lab use"] },
+              { "feature": "Choose When", "values": ["TOC is the primary purity concern", "Both TOC and biological purity matter", "Endotoxin/DNase/RNase removal matters most", "Budget and essential performance are the priority"] }
+            ],
+            "disclaimer": "All four configurations share the same core platform, exceeding ASTM Type 1 standards, glove-compatible touch display, and dispensing options. The difference is which purification modules are included."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Arium Pro industries: pharmaceutical analytical labs, molecular biology, and cell culture research.",
+            "industries": [
+              { "name": "Pharmaceutical Analytical Labs", "useCase": "HPLC, GC-MS, ICP-MS sample and mobile phase preparation", "consideration": "UV configuration for lowest TOC and analytical reproducibility" },
+              { "name": "Molecular Biology Research", "useCase": "PCR, electrophoresis, and reagent preparation", "consideration": "Low-TOC water supports contamination-sensitive protocols" },
+              { "name": "Cell Culture and Biologics Production", "useCase": "Media prep and monoclonal antibody production", "consideration": "UF or VF configuration for endotoxin, DNase, RNase removal" },
+              { "name": "Environmental and Industrial Testing Labs", "useCase": "TOC analysis and ion chromatography", "consideration": "Real-time TOC monitor supports documented QC processes" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows TOC performance and ultrafiltration on-site" },
+              { "title": "Configuration Assessment", "description": "Confirms UV, VF, UF, or Basic setup for the application" },
+              { "title": "Installation Support", "description": "Supports benchtop or wall-mounted setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the touch display and dispensing options" },
+              { "title": "Preventive Maintenance", "description": "Maintains UV lamp, ultrafilter, and TOC monitor performance" },
+              { "title": "Spares and Accessories", "description": "Supplies UV lamps, ultrafilters, and replacement cartridges" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Arium Pro used for?", "answer": "It's a modular ultrapure water purification system that meets and exceeds ASTM Type 1 standards, used across HPLC, GC-MS, PCR, cell culture, and other demanding analytical applications." },
+            { "question": "What configurations are available?", "answer": "Four core systems: arium® pro (Basic), pro UF (with ultrafilter), pro UV (with UV lamp), and pro VF (UV lamp plus ultrafilter), with an optional TOC monitor on UV and VF models." },
+            { "question": "What TOC level does Arium Pro achieve?", "answer": "Under 2 ppb with the UV lamp option, or under 5 ppb on the UF and Basic configurations." },
+            { "question": "What does the ultrafilter remove?", "answer": "Endotoxins, microorganisms, particles, DNase, and RNase, using advanced crossflow technology." },
+            { "question": "Does the system monitor water quality in real time?", "answer": "Yes, an optionally integrated TOC monitor continuously checks and displays TOC readings in real time on UV and VF configurations." },
+            { "question": "Is the display easy to use with lab gloves?", "answer": "Yes, the glass touch display with intuitive menu navigation is designed for error-free operation while wearing gloves." },
+            { "question": "Which configuration suits cell culture work?", "answer": "arium® pro UF or VF, since both include the crossflow ultrafilter that removes endotoxins, DNase, and RNase." },
+            { "question": "Can the system be wall-mounted?", "answer": "Yes, wall-mounted installation is available on select UV and VF models, alongside benchtop options." },
+            { "question": "How is Arium Pro different from Arium Mini Plus?", "answer": "Arium Pro offers a genuinely modular range of five configurations with options like UV lamps, crossflow ultrafiltration, and real-time TOC monitoring, positioned for more demanding analytical applications than the compact, single-configuration Arium Mini Plus." },
+            { "question": "What is the price of the Arium Pro in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration, UV, VF, UF, or Basic, needed." },
+            { "question": "Who is the authorized distributor of the Arium Pro in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Pro in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Arium Pro in India from Inkarp",
+            "description": "Share the application and purity requirements, and the right Arium Pro configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your application and purity requirements, then confirm the right Arium Pro configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "applicationTOC", "label": "Target application and TOC requirement", "type": "text", "required": false },
+              { "key": "installationPreference", "label": "Benchtop or wall-mounted preference", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right Arium Pro configuration", "body": "Share the target application, HPLC, cell culture, endotoxin analysis, or general lab use, and the right Arium Pro configuration gets confirmed from there." },
+              { "title": "Confirm how the TOC monitor fits your QC process", "body": "Share whether the lab currently documents water TOC as part of its QC process, and how the real-time TOC monitor fits that requirement gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports benchtop or wall-mounted setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Five modular configurations. One system that exceeds Type 1 standards, every time.",
+            "heroLead": "A one-size-fits-all water system either overshoots the budget or undershoots the application. Arium Pro solves that with genuine modular design, letting a UV lamp, ultrafilter, and TOC monitor combine exactly as the application demands, across five distinct configurations built on the same core platform. Every Arium Pro system meets and exceeds ASTM Type 1 water quality, with TOC as low as under 2 ppb when the UV lamp option is included. A glass touch display with intuitive menu navigation runs error-free even in gloves, and the same platform scales from an essential wall-mounted unit through a full benchtop system with real-time TOC monitoring and crossflow ultrafiltration.",
+            "stats": [
+              { "value": "5 configurations", "label": "UV, VF, UF, Basic, and TOC-monitored variants" },
+              { "value": "Under 2 ppb", "label": "TOC with UV lamp option" },
+              { "value": "Under 5 ppb", "label": "TOC on UF and standard configurations" },
+              { "value": "185/254 nm", "label": "Optional integrated UV lamp wavelengths" },
+              { "value": "Real-time", "label": "Optional TOC monitoring and display" },
+              { "value": "Crossflow ultrafiltration", "label": "Removes endotoxins, DNase, RNase" },
+              { "value": "Benchtop or wall-mounted", "label": "Installation flexibility" },
+              { "value": "Glove-compatible", "label": "Touch-activated glass display" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Arium Pro product information: modular configuration options, TOC performance, and ultrafiltration.",
+                "body": [
+                  "Every Arium Pro system meets and exceeds the ASTM Type 1 standard, ensuring best-in-class reproducibility of results across demanding analytical applications.",
+                  "The range is genuinely modular, unlike competitive systems, letting components combine exactly to the application rather than forcing a fixed configuration.",
+                  "Four core system types are available: arium® pro (essential/Basic), arium® pro UF (with ultrafilter), arium® pro UV (with integrated UV lamp), and arium® pro VF (UV lamp plus ultrafilter combined).",
+                  "A 185/254 nm UV lamp, available as an option, prevents microbiological growth and minimizes total organic compounds, bringing TOC down to under 2 ppb.",
+                  "An optionally integrated TOC monitor checks and displays TOC readings continuously in real time, purpose-built for this ultrapure water system.",
+                  "A built-in ultrafilter using advanced crossflow technology reliably removes endotoxins, microorganisms, particles, DNase, and RNase, making the ultrafiltered configurations well suited to cell cultivation work.",
+                  "A glass display with touch-activated functions and intuitive menu navigation ensures error-free operation, even while wearing lab gloves.",
+                  "Additional standard features include a choice of dispensing options, data-saving and printout functions, and color-coded alert messaging.",
+                  "Installation options span benchtop and wall-mounted configurations, depending on the specific model chosen."
+                ],
+                "cards": [
+                  { "title": "5 modular configurations", "description": "Matched exactly to application needs" },
+                  { "title": "Exceeds ASTM Type 1", "description": "Best-in-class result reproducibility" },
+                  { "title": "Under 2 ppb TOC (UV)", "description": "Supports the most demanding analytical work" },
+                  { "title": "Crossflow ultrafiltration", "description": "Removes endotoxins, DNase, RNase reliably" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Sartorius Arium® Pro Lab Water Purification System" },
+                  { "title": "Core configurations", "description": "arium® pro (Basic), pro UF, pro UV, pro VF" },
+                  { "title": "TOC performance", "description": "Under 2 ppb (UV lamp), under 5 ppb (UF/Basic)" },
+                  { "title": "Optional add-ons", "description": "UV lamp (185/254 nm), crossflow ultrafilter, real-time TOC monitor" },
+                  { "title": "Installation", "description": "Benchtop or wall-mounted, depending on model" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Arium Pro applications: HPLC, GC-MS, PCR, cell culture, and endotoxin analysis."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Arium Pro technical specifications: configuration options, TOC performance, and installation type."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Lowest TOC, Verified in Real Time",
+                "title": "Lowest TOC, Verified in Real Time",
+                "description": "Reproducibility in analytical work depends directly on water purity, and total organic carbon is one of the most sensitive variables to get wrong. The 185/254 nm UV lamp does double duty: preventing microbiological growth in the system while actively minimizing TOC in the purified water, bringing it down to under 2 ppb. That low TOC level directly supports reproducibility and reliability across lab results, not just a specification on paper. The optional TOC monitor closes the loop, checking and displaying TOC readings continuously in real time, so water quality is confirmed at the point of use rather than assumed.",
+                "cards": [
+                  { "title": "The lowest achievable TOC for sensitive methods", "description": "185/254 nm UV lamp, TOC under 2 ppb" },
+                  { "title": "Confidence that water quality holds during a run", "description": "Real-time, continuously displayed TOC monitoring" },
+                  { "title": "Reliable, reproducible results across sessions", "description": "Consistent Type 1-exceeding water quality" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Choosing the Right Configuration",
+                "title": "Choosing the Right Configuration",
+                "body": [
+                  "Not every application needs every feature, and Arium Pro's modular lineup is built specifically to avoid paying for capability the work doesn't require.",
+                  "arium® pro (Basic) covers the essential performance features needed in a standard lab water purification system, with TOC under 5 ppb.",
+                  "arium® pro UF adds crossflow ultrafiltration, reliably removing endotoxins, DNase, RNase, microorganisms, and particles, ideal for cell cultivation and other sensitive biological applications.",
+                  "arium® pro UV adds the 185/254 nm UV lamp instead, bringing TOC down to under 2 ppb and preventing microbial growth, suited to analytical work where organic carbon content matters most. arium® pro VF combines both, UV lamp and ultrafilter together, for applications demanding the lowest TOC and the most thorough biological contaminant removal in one system. A TOC monitor can be added to either the UV or VF configuration for continuous, real-time verification of water quality."
+                ],
+                "utilityChecklist": [
+                  { "label": "Essential Type 1 water, standard budget", "value": "arium® pro (Basic)" },
+                  { "label": "Endotoxin, DNase, RNase removal for cell culture", "value": "arium® pro UF" },
+                  { "label": "Lowest TOC for sensitive analytical work", "value": "arium® pro UV" },
+                  { "label": "Both lowest TOC and biological contaminant removal", "value": "arium® pro VF" },
+                  { "label": "Continuous, documented TOC verification", "value": "Add the TOC monitor to UV or VF" }
+                ],
+                "disclaimer": "Share the target TOC requirement and whether the application involves biological samples, cell culture, or endotoxin-sensitive work, and the right Arium Pro configuration gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Arium Pro documentation: specifications, accessories, and consumables.",
+                "cards": [
+                  { "title": "Arium Pro Specifications", "description": "Available on request" },
+                  { "title": "Accessories & Consumables Guide", "description": "Available on request" },
+                  { "title": "Configuration Comparison Sheet", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Arium Pro in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Five modular configurations, TOC as low as under 2 ppb, and real-time verification built in. Share the application and purity requirements, and the right Arium Pro configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -265,7 +265,7 @@ export const principalLogoRows = [
     },
     {
       name: "ZEISS",
-      logo: "/assets/images/PrincipalLogos/RowSix/zeiss.png",
+      logo: "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
       href: "/products?q=zeiss",
     },
     {

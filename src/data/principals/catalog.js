@@ -95,6 +95,7 @@ import sartoriusAriumComfortCatalog from "./sartorius/arium-comfort.json";
 import sartoriusAriumMiniPlusCatalog from "./sartorius/arium-mini-plus.json";
 import sartoriusAriumProCatalog from "./sartorius/arium-pro.json";
 import sartoriusAriumAdvanceCatalog from "./sartorius/arium-advance.json";
+import inkarpUsbUltrasonicCleanersBathsCatalog from "./inkarp-usb/ultrasonic-cleaners-baths.json";
 import buchiFreezeDryerLyophilizerCatalog from "./buchi/freeze-dryer-lyophilizer.json";
 import nanosurfResearchCatalog from "./nanosurf/research.json";
 import nanosurfAdvancedResearchCatalog from "./nanosurf/advanced-research.json";
@@ -213,6 +214,7 @@ const principalCatalogs = [
   sartoriusAriumMiniPlusCatalog,
   sartoriusAriumProCatalog,
   sartoriusAriumAdvanceCatalog,
+  inkarpUsbUltrasonicCleanersBathsCatalog,
   buchiFreezeDryerLyophilizerCatalog,
   nanosurfResearchCatalog,
   nanosurfAdvancedResearchCatalog,

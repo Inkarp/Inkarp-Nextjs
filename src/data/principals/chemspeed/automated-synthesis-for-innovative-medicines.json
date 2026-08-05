@@ -688,6 +688,407 @@
               "href": "#booking"
             }
           }
+        },
+        {
+          "name": "Swing Sp",
+          "slug": "swing-sp",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
+          "imageAlt": "Swing Sp - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/swing-sp",
+          "breadcrumbPath": "Home > Products > Automated Synthesis for Innovative Medicines > Swing Sp",
+          "h1": "Swing Sp",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Every gravimetric dispensing platform faces the same bottleneck: weighing means getting the vessel onto a balance. Move the plate, move the vial, move the reactor, weigh, move it back. Multiply that across a few hundred samples and the transfer steps cost more time than the dispensing does.",
+
+          "features": [
+            "Patented Overhead Gravimetric Dispensing: The balance travels to the destination, so vials, plates, and reactors never move during dispensing.",
+            "Selectable Balance Resolution: 1 mg, 0.1 mg, or 0.01 mg, matched to the precision the application actually needs.",
+            "Wide Dispensing Range: From a few milligrams up to several grams on the same platform, without changing approach.",
+            "Broad Material Compatibility: Liquids, solids, powders, granulates, spheres, low- and high-viscosity materials, and waxes.",
+            "4-Needle Head for Liquid Handling: Volumetric liquid handling and sampling alongside the gravimetric dispensing capability.",
+            "Any Destination Format: Vials, tubes, plates, and reactors, in the rack or reactor format of the user's choice.",
+            "Combinable Robotic Tooling: The dispensing tool pairs with other tools so one system covers multiple workflows.",
+            "Read-Only Process Logging: Dispensed amount, mixing speed, temperature, time, and more captured automatically.",
+            "AUTOSUITE Drag-and-Drop Design: Design, execute, analyze, and report experiments without programming.",
+            "Prebuilt and Custom Workflows: Start from a prebuilt workflow or assemble predefined tasks into a bespoke application.",
+            "Broad Integration Interfaces: DOE, ML, AI, LIMS, ELN, and ERP connectivity out of the platform.",
+            "ARKSUITE Lab Orchestration: Coordinates multiple Chemspeed systems and manual processes within one centralized environment."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Chemspeed Swing Sp Automated Sample Preparation Platform" },
+            { "label": "Category", "value": "Automated Synthesis for Innovative Medicines / Automated Sample Preparation" },
+            { "label": "Dispensing Technology", "value": "Gravimetric dispensing and aspiration with patented overhead balance capability" },
+            { "label": "Balance Movement", "value": "Balance moves to the destination; destination remains stationary" },
+            { "label": "Balance Resolution", "value": "1 mg, 0.1 mg, or 0.01 mg" },
+            { "label": "Dispensing Range", "value": "A few milligrams up to several grams" },
+            { "label": "Material Compatibility", "value": "Liquids, solids, powders, granulates, spheres, low-viscous and highly-viscous materials, waxes" },
+            { "label": "Liquid Handling", "value": "4-needle head for volumetric liquid handling and sampling" },
+            { "label": "Destination Formats", "value": "Vials, tubes, plates, reactors, in the rack or reactor format of choice" },
+            { "label": "Tooling", "value": "Dispensing/dosing robotic tool, combinable with other tools" },
+            { "label": "Data Logging", "value": "Read-only log file capturing dispensed amount, mixing speed, temperature, time, and more" },
+            { "label": "Control Software", "value": "AUTOSUITE, drag-and-drop experiment design with data analysis interface" },
+            { "label": "Orchestration Software", "value": "ARKSUITE, coordinating multiple Chemspeed systems and manual processes" },
+            { "label": "Integration Interfaces", "value": "DOE, ML, AI, LIMS, ELN, ERP" },
+            { "label": "Detailed System Specifications", "value": "Available on request — deck capacity, throughput, and dimensions not published on the product page" }
+          ],
+
+          "applications": [
+            "Analytical Sample Preparation: Gravimetric dispensing into vials and plates without moving the destination",
+            "Quality Control Testing: Read-only logging with LIMS integration for traceable, repeatable preparation",
+            "Preformulation Studies: Wide dispensing range and material compatibility across formulation components",
+            "High-Throughput Sample Prep: Moving balance removes transfer steps from every dispensing operation",
+            "Powder and Solid Dispensing: Gravimetric handling of powders, granulates, and spheres",
+            "Viscous and Wax Material Handling: Dispensing across low-viscous through highly-viscous materials and waxes",
+            "Design of Experiments (DOE) Workflows: DOE interface feeding experimental designs directly into execution",
+            "Machine Learning and AI-Driven Research: ML and AI interfaces connecting automated execution to model-driven design",
+            "Standard Solution and Standard Preparation: 0.01 mg resolution for precise standard preparation",
+            "Multi-Workflow Laboratories: Combinable tooling accommodating several workflows on one platform"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Dispensing Selector" },
+            { "id": "workflow-and-tooling-planner", "label": "Workflow Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Data Integration Scope" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Overhead Gravimetric Dispensing" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What's being dispensed, and how precisely?",
+            "description": "Select the material types and precision required, and see the recommended configuration.",
+            "fields": [
+              {
+                "key": "materialTypes",
+                "label": "Material types",
+                "options": [
+                  { "val": "liquids", "label": "Liquids" },
+                  { "val": "powders", "label": "Powders" },
+                  { "val": "granulates", "label": "Granulates" },
+                  { "val": "spheres", "label": "Spheres" },
+                  { "val": "viscous-materials", "label": "Viscous materials" },
+                  { "val": "waxes", "label": "Waxes" },
+                  { "val": "mixed", "label": "Mixed" }
+                ]
+              },
+              {
+                "key": "precisionRequired",
+                "label": "Precision required",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high", "label": "High" },
+                  { "val": "highest", "label": "Highest, for the smallest amounts" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "precisionRequired": "highest" }, "title": "0.01 mg Resolution Fits This Precision", "body": "Balance resolution is selectable down to 0.01 mg, matched to the smallest routinely dispensed amounts.", "tags": ["0.01 mg Resolution"] },
+              { "condition": { "materialTypes": "waxes" }, "title": "Waxes Are Within Dispensing Range", "body": "Gravimetric dispensing covers low-viscous through highly-viscous materials and waxes on the same platform.", "tags": ["Liquids to Waxes"] },
+              { "condition": { "materialTypes": "powders" }, "title": "Powder and Solid Dispensing Is Supported", "body": "Gravimetric handling covers powders, granulates, and spheres directly.", "tags": ["Broad Material Compatibility"] },
+              { "condition": "default", "title": "Confirm the Right Balance Resolution With Inkarp", "body": "Share the material types and precision required, and Inkarp will confirm the recommended balance resolution.", "tags": ["1 mg / 0.1 mg / 0.01 mg"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Where does the data need to go?",
+            "description": "Select the systems in use and the compliance requirement, and see the recommended integration scope.",
+            "steps": [
+              {
+                "key": "systemsOfRecord",
+                "question": "What systems of record are in use?",
+                "options": [
+                  { "val": "lims", "label": "LIMS" },
+                  { "val": "eln", "label": "ELN" },
+                  { "val": "erp", "label": "ERP" },
+                  { "val": "none", "label": "None currently" }
+                ]
+              },
+              {
+                "key": "experimentalDesignApproach",
+                "question": "What's the experimental design approach?",
+                "options": [
+                  { "val": "manual", "label": "Manual design" },
+                  { "val": "doe", "label": "DOE" },
+                  { "val": "ml-ai-driven", "label": "ML/AI-driven" }
+                ]
+              },
+              {
+                "key": "complianceRequirement",
+                "question": "What's the compliance requirement?",
+                "options": [
+                  { "val": "research-use", "label": "Research use" },
+                  { "val": "regulated", "label": "Regulated, with audit-ready records" }
+                ]
+              },
+              {
+                "key": "multiSystemCoordination",
+                "question": "Is multi-system coordination needed?",
+                "options": [
+                  { "val": "single-platform", "label": "Single platform" },
+                  { "val": "multiple-systems", "label": "Multiple systems and manual steps" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms the interface set required and whether ARKSUITE orchestration applies, then routes to an integration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "workflow-and-tooling-planner",
+              "eyebrow": "Workflow and Tooling Planner",
+              "title": "How many workflows does one platform need to carry?",
+              "description": "Select the workflows and destination formats, and see the recommended tooling combination.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the primary workflow?", "choices": "Analytical sample prep; QC testing; Preformulation; Multiple" },
+                { "title": "What destination format is needed?", "choices": "Vials; Tubes; Plates; Reactors; Mixed formats" },
+                { "title": "Is liquid handling needed alongside dispensing?", "choices": "Gravimetric only; Volumetric handling and sampling alongside" },
+                { "title": "Is additional processing needed?", "choices": "Dispensing only; Mixing, tempering, and downstream processing" }
+              ],
+              "disclaimer": "Recommends the dispensing tool plus complementary tooling for the workflow set, then routes to a workflow-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Swing Sp Automated Dispensing vs. Manual Sample Preparation",
+            "description": "Swing Sp method comparison: automated gravimetric dispensing versus manual sample preparation.",
+            "columns": [
+              { "label": "Swing Sp Automated Dispensing" },
+              { "label": "Manual Sample Preparation" }
+            ],
+            "rows": [
+              { "feature": "Weighing Approach", "values": ["Gravimetric, balance moves to the destination", "Destination transferred to a fixed balance"] },
+              { "feature": "Transfer Steps per Dispense", "values": ["None — the destination stays in place", "Two, in and out of the balance, every time"] },
+              { "feature": "Precision Control", "values": ["Selectable 1 mg, 0.1 mg, or 0.01 mg resolution", "Dependent on balance available and operator technique"] },
+              { "feature": "Consistency Across Operators", "values": ["Identical execution from a defined workflow", "Varies with individual technique and fatigue"] },
+              { "feature": "Difficult Materials", "values": ["Powders, granulates, spheres, viscous materials, waxes handled", "Handling difficulty varies substantially by material"] },
+              { "feature": "Record of Conditions", "values": ["Read-only log of amount, mixing speed, temperature, time", "Manual notebook or form entry"] },
+              { "feature": "Data Integrity", "values": ["Inherent, captured automatically and unalterable", "Dependent on transcription accuracy and procedural control"] },
+              { "feature": "Connection to Lab Systems", "values": ["LIMS, ELN, ERP, DOE, ML, AI interfaces", "Manual entry or separate export"] },
+              { "feature": "Throughput", "values": ["High throughput by design", "Limited by operator hours available"] },
+              { "feature": "Best For", "values": ["Repeatable, documented, high-volume preparation", "Occasional one-off preparation, method exploration"] }
+            ],
+            "disclaimer": "The case for automation here isn't only speed. It's that consistency and documentation arrive as properties of the system rather than as things procedure has to enforce — which is precisely what a QC or regulated environment spends effort maintaining manually."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Swing Sp industries: pharmaceutical R&D, quality control, formulation development, and materials research.",
+            "industries": [
+              { "name": "Pharmaceutical R&D", "useCase": "Automated sample preparation supporting discovery and development", "consideration": "DOE, ML, and AI interfaces feed designs directly into execution" },
+              { "name": "Quality Control Laboratories", "useCase": "Repeatable, documented sample and standard preparation", "consideration": "Read-only logging with LIMS integration supports traceability" },
+              { "name": "Preformulation Development", "useCase": "Screening formulation components across a wide dispensing range", "consideration": "Handles liquids, powders, viscous materials, and waxes on one platform" },
+              { "name": "Analytical Services Laboratories", "useCase": "High-volume sample preparation ahead of analysis", "consideration": "Moving balance removes transfer steps from every operation" },
+              { "name": "Formulation and Product Development", "useCase": "Multi-component formulation across varied material types", "consideration": "Any destination format supported, in the lab's own labware" },
+              { "name": "Materials and Specialty Chemicals", "useCase": "Dispensing granulates, spheres, and difficult solids", "consideration": "Gravimetric handling across challenging physical forms" },
+              { "name": "High-Throughput Screening Operations", "useCase": "Large sample sets prepared consistently", "consideration": "Combinable tooling accommodating multiple workflows" },
+              { "name": "Digitally Integrated Laboratories", "useCase": "Connecting preparation to the wider data estate", "consideration": "LIMS, ELN, ERP, and ML/AI interfaces available" },
+              { "name": "Multi-System Automated Laboratories", "useCase": "Coordinating several platforms and manual steps", "consideration": "ARKSUITE orchestration across systems and manual processes" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials and destination formats on the platform" },
+              { "title": "Feasibility Assessment", "description": "Confirms dispensing feasibility for difficult materials before commitment" },
+              { "title": "Configuration Assessment", "description": "Confirms balance resolution, tooling, and rack format for the workflow" },
+              { "title": "Integration Assessment", "description": "Reviews LIMS, ELN, and ERP connectivity against the existing data estate" },
+              { "title": "Site Preparation Support", "description": "Reviews bench space, utilities, and environmental requirements ahead of delivery" },
+              { "title": "Installation Support", "description": "Handles setup, first-run checks, and initial system verification" },
+              { "title": "Workflow Development Support", "description": "Assists building AUTOSUITE workflows for the lab's specific applications" },
+              { "title": "Operator Training", "description": "Builds confidence with AUTOSUITE drag-and-drop design and routine operation" },
+              { "title": "Qualification Support", "description": "Supports IQ/OQ/PQ activities in regulated environments" },
+              { "title": "Preventive Maintenance", "description": "Maintains dispensing tools, balance, needle head, and robotic system performance" },
+              { "title": "Spares and Consumables", "description": "Supplies needles, dispensing tool components, racks, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is Swing Sp used for?", "answer": "It's an automated sample preparation platform for analytics, QC, and preformulation, dispensing virtually any ingredient or compound into vials, tubes, plates, or reactors with high throughput and inherent data integrity." },
+            { "question": "What makes the gravimetric dispensing different?", "answer": "Chemspeed's patented overhead capability moves the balance to the destination rather than moving the destination to the balance, which increases speed and efficiency by removing transfer steps from every dispense." },
+            { "question": "What balance resolutions are available?", "answer": "1 mg, 0.1 mg, or 0.01 mg, selectable according to the precision the application requires." },
+            { "question": "What is the dispensing range?", "answer": "From a few milligrams up to several grams, covering trace-level and bulk preparation on the same platform." },
+            { "question": "Which materials can Swing Sp dispense?", "answer": "Liquids, solids, powders, granulates, spheres, low-viscous and highly-viscous materials, and waxes." },
+            { "question": "Does the destination need to move during dispensing?", "answer": "No. The destination — vial, tube, plate, or reactor — stays in place while the balance moves to it." },
+            { "question": "What destination formats are supported?", "answer": "Vials, tubes, plates, and reactors, in the rack or reactor format of the user's choice rather than a fixed proprietary layout." },
+            { "question": "Does the system handle liquid handling as well as gravimetric dispensing?", "answer": "Yes. A 4-needle head provides volumetric liquid handling and sampling alongside the gravimetric dispensing capability." },
+            { "question": "Can the system run more than one type of workflow?", "answer": "Yes. The dispensing and dosing robotic tool can be combined with other tools to accommodate multiple workflows on the same platform." },
+            { "question": "What data does the system record?", "answer": "Dispensed amount, mixing speed, temperature, time, and other parameters are stored in a read-only log file." },
+            { "question": "Why does the log being read-only matter?", "answer": "A record that cannot be edited after the fact removes the question of post-hoc modification, which is what data integrity requirements in regulated environments are designed to address." },
+            { "question": "Which systems can Swing Sp integrate with?", "answer": "Interfaces are available for DOE, ML, AI, LIMS, ELN, and ERP integration." },
+            { "question": "Does building a workflow require programming?", "answer": "No. AUTOSUITE uses drag-and-drop experimentation — start from a prebuilt workflow or assemble predefined tasks into a custom application." },
+            { "question": "What is ARKSUITE?", "answer": "Software that coordinates and orchestrates laboratory workflows across any number of Chemspeed systems and manual lab processes, centralizing workflows, experiments, messaging, status, and inventory management." },
+            { "question": "Can Swing Sp work alongside other Chemspeed systems?", "answer": "Yes. ARKSUITE is built to coordinate multiple Chemspeed systems within one centralized environment, alongside manual processes." },
+            { "question": "What is the price of Swing Sp in India?", "answer": "Get in touch and Inkarp will put together a quote based on the balance resolution, tooling, rack format, and integration requirements." },
+            { "question": "Who is the authorized distributor of Swing Sp in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed Swing Sp in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get Swing Sp in India from Inkarp",
+            "description": "Share the materials, the destination format, and where the data needs to go, and the right Swing Sp configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your dispensing and integration requirements, then confirm the right Swing Sp configuration and tooling combination.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "materialDetails", "label": "Materials being dispensed and destination format", "type": "text", "required": false },
+              { "key": "integrationDetails", "label": "What the data needs to connect to downstream", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration and tooling combination", "body": "Share the materials being dispensed, the destination format, the precision required, and what the data needs to connect to downstream, and the right Swing Sp configuration and tooling combination gets confirmed from there." },
+              { "title": "Confirm the right balance resolution", "body": "Share the smallest and largest amounts routinely dispensed and the precision the method requires, and the right balance resolution gets confirmed against them." },
+              { "title": "Confirm feasibility for difficult materials", "body": "Share the specific materials in the workflow, including anything that has resisted automation before, and feasibility gets assessed against the dispensing technology directly." },
+              { "title": "Confirm the right orchestration fit", "body": "Share how many systems and manual steps the workflow spans, and whether ARKSUITE orchestration fits alongside the AUTOSUITE deployment gets confirmed." },
+              { "title": "Installation and first-run support", "body": "Handles setup, first-run checks, and initial system verification." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "The balance goes to the sample. Not the other way around.",
+            "heroLead": "Every gravimetric dispensing platform faces the same bottleneck: weighing means getting the vessel onto a balance. Move the plate, move the vial, move the reactor, weigh, move it back. Multiply that across a few hundred samples and the transfer steps cost more time than the dispensing does. Chemspeed's patented overhead gravimetric capability turns it around. The balance moves to the destination, so vials, tubes, plates, and reactors stay exactly where they are while material is dispensed and weighed in place. Speed and efficiency both come from removing motion nobody needed. What gets dispensed is the other half of the story. Liquids, solids, powders, granulates, spheres, low-viscous and highly-viscous materials, waxes — into whatever rack or reactor format the work calls for, at balance resolutions down to 0.01 mg and across a range from a few milligrams up to several grams. A 4-needle head handles volumetric liquid handling and sampling alongside it. And every run writes itself down. Dispensed amount, mixing speed, temperature, time and more land in a read-only log file, with interfaces out to DOE, ML, AI, LIMS, ELN, and ERP. AUTOSUITE makes building the experiment a drag-and-drop exercise rather than a programming one.",
+            "stats": [
+              { "value": "Patented", "label": "Overhead gravimetric dispensing, balance moves to destination" },
+              { "value": "1 mg, 0.1 mg, or 0.01 mg", "label": "Selectable balance resolution" },
+              { "value": "Few mg to several grams", "label": "Dispensing range" },
+              { "value": "4-needle head", "label": "Volumetric liquid handling and sampling" },
+              { "value": "Liquids to waxes", "label": "Powders, granulates, spheres, low and high viscosity" },
+              { "value": "Any destination format", "label": "Vials, tubes, plates, reactors, without moving them" },
+              { "value": "Read-only log file", "label": "Dispensed amount, mixing speed, temperature, time" },
+              { "value": "AUTOSUITE", "label": "Drag-and-drop experiment design" },
+              { "value": "DOE, ML, AI, LIMS, ELN, ERP", "label": "Available integration interfaces" },
+              { "value": "Combinable tooling", "label": "Dispensing tool pairs with others for multiple workflows" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Swing Sp product information: gravimetric dispensing technology, material range, and data integrity.",
+                "body": [
+                  "Automated sample preparation: Designed for high throughput analytics, QC and preformulation workflows with built in data integrity.",
+                  "Flexible gravimetric dispensing: Handles liquids, solids, powders, granulates, spheres, low and high viscosity materials and waxes.",
+                  "Dispense directly into the destination: The balance moves to the vial, tube, plate or reactor instead of moving the destination, improving speed and efficiency.",
+                  "Wide dispensing range: Handles quantities from a few milligrams to several grams, with selectable balance resolution of 1 mg, 0.1 mg or 0.01 mg.",
+                  "Flexible formats and workflows: Works with user selected racks and reactor formats, while a 4 needle head supports volumetric liquid handling and sampling.",
+                  "Integrated processing: Dispensing, mixing and subsequent sample processing for analytics and preformulation can be performed on the same platform.",
+                  "Traceable data and software control: AUTOSUITE enables drag and drop workflow creation, while read only log files record dispensing amounts, mixing, temperature, time and other process data.",
+                  "Connected laboratory workflows: Supports integration with DOE, ML, AI, LIMS, ELN and ERP systems, while ARKSUITE coordinates workflows, experiments, inventory and status across multiple Chemspeed systems and manual processes."
+                ],
+                "cards": [
+                  { "title": "Balance moves to destination", "description": "Transfer steps removed from every dispense" },
+                  { "title": "Down to 0.01 mg resolution", "description": "Precision selectable to the work, not fixed" },
+                  { "title": "Liquids through waxes", "description": "One platform across genuinely difficult materials" },
+                  { "title": "Read-only logging", "description": "Data integrity built in, not bolted on" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Chemspeed Swing Sp Automated Sample Preparation Platform" },
+                  { "title": "Dispensing", "description": "Gravimetric, with patented overhead balance capability" },
+                  { "title": "Balance resolution", "description": "1 mg, 0.1 mg, or 0.01 mg" },
+                  { "title": "Dispensing range", "description": "A few mg up to several grams" },
+                  { "title": "Liquid handling", "description": "4-needle head for volumetric handling and sampling" },
+                  { "title": "Destinations", "description": "Vials, tubes, plates, reactors, in the rack format of choice" },
+                  { "title": "Software", "description": "AUTOSUITE, with ARKSUITE for lab-wide orchestration" },
+                  { "title": "Integration", "description": "DOE, ML, AI, LIMS, ELN, ERP interfaces available" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Swing Sp applications: analytical sample preparation, QC testing, preformulation, and high-throughput workflows."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Swing Sp technical specifications: balance resolution, dispensing range, and material compatibility."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Overhead Gravimetric Dispensing",
+                "title": "Overhead Gravimetric Dispensing",
+                "description": "Dose with measured mass, not calculated volume, using patented overhead gravimetric dispensing that delivers precision from milligrams to grams without moving the destination.",
+                "cards": [
+                  { "title": "Measured mass, not calculated volume", "description": "Gravimetric dispensing and aspiration" },
+                  { "title": "Weighing without transfer steps", "description": "Patented overhead balance moving to the destination" },
+                  { "title": "Precision matched to the application", "description": "Selectable 1 mg, 0.1 mg, or 0.01 mg resolution" },
+                  { "title": "Trace through bulk on one platform", "description": "Dispensing range from a few mg to several grams" },
+                  { "title": "Destinations left undisturbed", "description": "Vials, plates, and reactors never move during dispensing" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Data Integrity and System Integration",
+                "title": "Data Integrity and System Integration",
+                "body": [
+                  "Built-in data integrity with read-only process records and seamless LIMS, ELN, ERP, DOE, ML and AI integration keeps every experiment traceable and connected."
+                ],
+                "utilityChecklist": [
+                  { "label": "A record that can't be altered", "value": "Read-only log file for every run" },
+                  { "label": "Process conditions captured, not just amounts", "value": "Mixing speed, temperature, and time logged alongside dispensed mass" },
+                  { "label": "Data reaching the lab's systems of record", "value": "LIMS, ELN, and ERP integration interfaces" },
+                  { "label": "Designs feeding into execution", "value": "DOE, ML, and AI interfaces" },
+                  { "label": "Analysis without manual export", "value": "AUTOSUITE interface to data analysis" }
+                ],
+                "disclaimer": "Share which LIMS, ELN, or ERP the lab runs and what the data integrity requirements are, and the integration scope gets mapped before installation."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Swing Sp documentation: system specifications, workflow guides, and integration details.",
+                "cards": [
+                  { "title": "Swing Sp System Specification Sheet", "description": "Available on request" },
+                  { "title": "Gravimetric Dispensing Technology Overview", "description": "Available on request" },
+                  { "title": "Material Compatibility Guide", "description": "Available on request" },
+                  { "title": "AUTOSUITE Software Overview", "description": "Available on request" },
+                  { "title": "ARKSUITE Orchestration Overview", "description": "Available on request" },
+                  { "title": "LIMS, ELN, and ERP Integration Details", "description": "Available on request" },
+                  { "title": "Data Integrity and Logging Documentation", "description": "Available on request" },
+                  { "title": "Prebuilt Workflow Library", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get Swing Sp in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "A balance that travels to the sample, dispensing from a few milligrams to several grams across liquids through waxes, with every run written to a read-only log. Share the materials, the destination format, and where the data needs to go, and the right Swing Sp configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
         }
       ]
     }

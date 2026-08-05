@@ -66,6 +66,8 @@ import bandelinUltrasonicBathsCatalog from "./bandelin/ultrasonic-baths.json";
 import robotCoupeBlixerSystemsCatalog from "./robot-coupe/blixer-systems.json";
 import fomTechnologiesSlotDieCoatingSystemsCatalog from "./fom-technologies/slot-die-coating-systems.json";
 import fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog from "./fom-technologies/sheet-based-slot-die-coating-systems.json";
+import fomTechnologiesSlotDieCoatingHeadsPeekSeriesCatalog from "./fom-technologies/slot-die-coating-heads-peek-series.json";
+import fomTechnologiesSlotDieCoatingHeadsSteelSeriesCatalog from "./fom-technologies/slot-die-coating-heads-steel-series.json";
 import daralyoPilotFreezeDryersCatalog from "./daralyo/pilot-freeze-dryers.json";
 import nenovisionLitescopeCatalog from "./nenovision/litescope.json";
 import reichertHighSensitivitySurfacePlasmonResonanceSprSystemsCatalog from "./reichert/high-sensitivity-surface-plasmon-resonance-spr-systems.json";
@@ -99,6 +101,8 @@ import nanosurfIndustryCatalog from "./nanosurf/industry.json";
 import nanosurfIntegrationCatalog from "./nanosurf/integration.json";
 import chemspeedAutomatedSynthesisForInnovativeMedicinesCatalog from "./chemspeed/automated-synthesis-for-innovative-medicines.json";
 import chemspeedAutomatedExtractionQuechersCatalog from "./chemspeed/automated-extraction-quechers.json";
+import chemspeedCrystalBenchtopSolutionCatalog from "./chemspeed/crystal-benchtop-solution.json";
+import bwbTechnologiesFlamePhotometersCatalog from "./bwb-technologies/flame-photometers.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -179,6 +183,8 @@ const principalCatalogs = [
   robotCoupeBlixerSystemsCatalog,
   fomTechnologiesSlotDieCoatingSystemsCatalog,
   fomTechnologiesSheetBasedSlotDieCoatingSystemsCatalog,
+  fomTechnologiesSlotDieCoatingHeadsPeekSeriesCatalog,
+  fomTechnologiesSlotDieCoatingHeadsSteelSeriesCatalog,
   daralyoPilotFreezeDryersCatalog,
   nenovisionLitescopeCatalog,
   reichertHighSensitivitySurfacePlasmonResonanceSprSystemsCatalog,
@@ -212,6 +218,8 @@ const principalCatalogs = [
   nanosurfIntegrationCatalog,
   chemspeedAutomatedSynthesisForInnovativeMedicinesCatalog,
   chemspeedAutomatedExtractionQuechersCatalog,
+  chemspeedCrystalBenchtopSolutionCatalog,
+  bwbTechnologiesFlamePhotometersCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

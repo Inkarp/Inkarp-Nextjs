@@ -1,0 +1,339 @@
+{
+  "principal": {
+    "slug": "chemspeed",
+    "principalName": "Chemspeed",
+    "countryOfOrigin": "Switzerland"
+  },
+  "categories": [
+    {
+      "name": "Crystal Benchtop Solution",
+      "slug": "crystal-benchtop-solution",
+      "products": [
+        {
+          "name": "Chemspeed CRYSTAL POWDERDOSE",
+          "slug": "crystal-powder-dose",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
+          "imageAlt": "Chemspeed CRYSTAL POWDERDOSE - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/crystal-powder-dose",
+          "breadcrumbPath": "Home > Products > Crystal Benchtop Solution > Chemspeed CRYSTAL POWDERDOSE",
+          "h1": "Chemspeed CRYSTAL POWDERDOSE",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Manual powder weighing eats hours that should go to actual science. CRYSTAL POWDERDOSE ends that, a fully automated, compact benchtop system that doses solids directly into vial racks and well plates with genuine gravimetric accuracy, from milligrams up to 20 g, in one continuous run.",
+
+          "features": [
+            "Direct Dispensing to the Vessel: Doses straight into vial racks and well plates, cutting cycle time significantly.",
+            "Fully Automated Walk-Away Operation: Handles repetitive dosing tasks without operator attendance.",
+            "21 CFR Part 11 Compliant Software: Ensures consistent, easy-to-use, and fully traceable dispensing runs.",
+            "Gradient and Incremental Dispensing: Built for fast, intuitive DoE study setup through a clear GUI.",
+            "Storage Extension (Optional): Holds up to 48 ready-to-dispense compounds for extended unattended operation.",
+            "ARKSUITE Integration: Manages data, inventory, product, and run tracking natively.",
+            "Web and Mobile Access: Enables remote configuration and system status monitoring.",
+            "Multi-Language, Multi-Format Software: Exports data in various formats and connects to third-party software."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Chemspeed CRYSTAL POWDERDOSE" },
+            { "label": "Category", "value": "Crystal Benchtop Solution" },
+            { "label": "Dispensing Range", "value": "Milligrams to 20 g" },
+            { "label": "Dosing Target", "value": "Direct into vials (various sizes) and well plates" },
+            { "label": "Automation", "value": "Fully automated, walk-away operation" },
+            { "label": "Software Compliance", "value": "21 CFR Part 11" },
+            { "label": "Software Integration", "value": "Native ARKSUITE (data, inventory, product, run management)" },
+            { "label": "Remote Access", "value": "Web and mobile" },
+            { "label": "Storage Extension (Optional)", "value": "Up to 48 ready-to-dispense solid compounds" },
+            { "label": "Format", "value": "Compact benchtop" }
+          ],
+
+          "applications": [
+            "Sample Preparation: Direct, accurate dosing from milligrams to 20 g",
+            "Reaction Screening: Multiple solids dosed precisely across vial or well plate formats",
+            "Formulation Development: Flexible handling of multiple compounds in one automated run",
+            "Design of Experiments (DoE): Gradient and incremental dispensing through an intuitive GUI",
+            "High-Throughput, Unattended Workflows: Storage Extension enables longer runs without manual reloading"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Compliance & DoE Fit" },
+            { "id": "unattended-throughput-planner", "label": "Throughput Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Vessel Selector" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Direct Dosing" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the lab need audit-ready records or DoE-style dosing?",
+            "description": "Select the documentation and study design needs, and see how the software supports them.",
+            "fields": [
+              {
+                "key": "regulatoryDocumentationNeed",
+                "label": "Regulatory documentation need",
+                "options": [
+                  { "val": "21-cfr-part-11", "label": "Yes (21 CFR Part 11)" },
+                  { "val": "standard-logging", "label": "Standard logging" }
+                ]
+              },
+              {
+                "key": "doeStudyDesign",
+                "label": "DoE study design",
+                "options": [
+                  { "val": "gradient-dosing", "label": "Gradient dosing" },
+                  { "val": "incremental-dosing", "label": "Incremental dosing" },
+                  { "val": "standard-fixed-dose", "label": "Standard fixed dose" }
+                ]
+              },
+              {
+                "key": "remoteMonitoringNeed",
+                "label": "Remote monitoring need",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "regulatoryDocumentationNeed": "21-cfr-part-11" }, "title": "21 CFR Part 11 Compliance Is Built In", "body": "Software supports consistent, traceable operation designed for regulated workflows, with audit-ready records by default.", "tags": ["21 CFR Part 11"] },
+              { "condition": { "doeStudyDesign": "gradient-dosing" }, "title": "Gradient Dosing Is Built for This", "body": "Gradient and incremental dispensing run through an intuitive GUI built to speed up DoE setup.", "tags": ["DoE-Ready GUI"] },
+              { "condition": { "remoteMonitoringNeed": "yes" }, "title": "Remote Monitoring Is Supported", "body": "Web and mobile access supports remote configuration and system status checks.", "tags": ["Web and Mobile Access"] },
+              { "condition": "default", "title": "Confirm the Right Software and Access Configuration With Inkarp", "body": "Share the documentation and study design needs, and Inkarp will confirm the right software and access configuration.", "tags": ["ARKSUITE-Integrated"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What's being dosed, and into what?",
+            "description": "Select the vessel format, and confirm CRYSTAL POWDERDOSE fits.",
+            "steps": [
+              {
+                "key": "vesselType",
+                "question": "What vessel type is needed?",
+                "options": [
+                  { "val": "vials", "label": "Vials" },
+                  { "val": "well-plates", "label": "Well plates" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms configuration fit for the dosing task, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "unattended-throughput-planner",
+              "eyebrow": "Unattended Throughput Planner",
+              "title": "How much unattended runtime does the workflow need?",
+              "description": "Select the compounds per run and run frequency, and see whether the Storage Extension fits.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "How many compounds are dispensed per run?", "choices": "Under 12 compounds (standalone fits); 12–48 compounds (Storage Extension recommended); Over 48 (multiple unattended sessions needed)" },
+                { "title": "What's the run frequency?", "choices": "Daily; Weekly; As-needed" }
+              ],
+              "disclaimer": "Confirms whether the Storage Extension is advised, then routes to a throughput-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "CRYSTAL POWDERDOSE (Standalone) vs. With Storage Extension",
+            "description": "CRYSTAL POWDERDOSE comparison: standalone system versus with Storage Extension.",
+            "columns": [
+              { "label": "CRYSTAL POWDERDOSE (Standalone)" },
+              { "label": "With Storage Extension" }
+            ],
+            "rows": [
+              { "feature": "Compound Capacity", "values": ["Manual reload between compounds", "Up to 48 ready-to-dispense compounds"] },
+              { "feature": "Unattended Run Length", "values": ["Shorter, limited by manual reload", "Extended, high-throughput unattended operation"] },
+              { "feature": "Best For", "values": ["Lower-volume, occasional dosing needs", "High-throughput, multi-compound workflows"] },
+              { "feature": "Choose When", "values": ["Dosing needs are simple and infrequent", "The lab runs frequent, multi-compound unattended sessions"] }
+            ],
+            "disclaimer": "Both configurations share the same dispensing range, direct-to-vessel dosing, and 21 CFR Part 11 compliant software. The difference is unattended capacity."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "CRYSTAL POWDERDOSE industries: pharmaceutical R&D, materials science, and formulation development.",
+            "industries": [
+              { "name": "Pharmaceutical R&D", "useCase": "Compound screening and formulation dosing", "consideration": "21 CFR Part 11 compliant software for regulated documentation" },
+              { "name": "Materials Science Research", "useCase": "Multi-solid reaction and formulation prep", "consideration": "Storage Extension supports high-throughput screening" },
+              { "name": "Crystallization Research", "useCase": "Precise gravimetric dosing across vial formats", "consideration": "Direct-to-vessel dosing reduces manual handling error" },
+              { "name": "DoE-Driven Process Development", "useCase": "Gradient and incremental compound studies", "consideration": "Intuitive GUI simplifies DoE run setup" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows direct dosing and walk-away operation on real compounds" },
+              { "title": "Configuration Assessment", "description": "Confirms dispensing range, vessel type, and Storage Extension fit" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with the GUI, ARKSUITE, and remote access" },
+              { "title": "Preventive Maintenance", "description": "Maintains dosing accuracy and system performance" },
+              { "title": "Spares and Accessories", "description": "Supplies Storage Extension components and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Chemspeed CRYSTAL POWDERDOSE used for?", "answer": "It's a fully automated, compact benchtop system for gravimetric solid dispensing, used for sample, reaction, and formulation preparation, dosing directly into vials and well plates." },
+            { "question": "What's the dispensing range?", "answer": "From milligrams up to 20 g, on the same system." },
+            { "question": "Does it dose directly into the vial, or does it require a manual transfer step?", "answer": "It doses directly into the vial rack or well plate, drastically reducing dosing cycle time compared to weigh-then-transfer methods." },
+            { "question": "Is the system fully automated?", "answer": "Yes, it automates repetitive dosing tasks and supports genuine walk-away operation." },
+            { "question": "Is the software regulatory-compliant?", "answer": "Yes, the software is 21 CFR Part 11 compliant, built for consistent and traceable operation." },
+            { "question": "Can it support DoE-style dosing studies?", "answer": "Yes, gradient and incremental value dispensing run through a clear, intuitive GUI built to speed up DoE setup." },
+            { "question": "What does the Storage Extension add?", "answer": "Capacity for up to 48 ready-to-dispense solid compounds, enabling longer unattended operation and greater experimental flexibility." },
+            { "question": "Can the system be monitored remotely?", "answer": "Yes, web and mobile access supports remote configuration and system status checks." },
+            { "question": "Does it integrate with other software?", "answer": "Yes, native ARKSUITE integration handles data, inventory, product, and run management, and the system connects to third-party software as well." },
+            { "question": "What is the price of the CRYSTAL POWDERDOSE in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration and Storage Extension needed." },
+            { "question": "Who is the authorized distributor of the CRYSTAL POWDERDOSE in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed CRYSTAL POWDERDOSE in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the CRYSTAL POWDERDOSE in India from Inkarp",
+            "description": "Share the dosing range and throughput needs, and the right CRYSTAL POWDERDOSE configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your dosing and throughput requirements, then confirm the right CRYSTAL POWDERDOSE configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "dosingDetails", "label": "Typical batch sizes and vessel formats", "type": "text", "required": false },
+              { "key": "complianceDetails", "label": "Regulatory documentation and unattended session needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the dosing cycle time recovered", "body": "Share the typical batch sizes and vessel formats the lab dispenses into, and how much dosing cycle time CRYSTAL POWDERDOSE could recover gets confirmed directly." },
+              { "title": "Confirm the right software and Storage Extension setup", "body": "Share whether the lab's dosing workflows need regulatory documentation and how many compounds typically run per unattended session, and the right software and Storage Extension setup gets confirmed against it." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Milligrams to 20 grams. Dosed straight into the vial. Walk away.",
+            "heroLead": "Manual powder weighing eats hours that should go to actual science. CRYSTAL POWDERDOSE ends that, a fully automated, compact benchtop system that doses solids directly into vial racks and well plates with genuine gravimetric accuracy, from milligrams up to 20 g, in one continuous run. Dispensing straight into the vessel cuts dosing cycle time dramatically, and 21 CFR Part 11 compliant software makes every run traceable without extra paperwork. Gradient and incremental dispensing built into an intuitive GUI turns DoE studies from a manual chore into a few clicks, and an optional Storage Extension holds up to 48 ready-to-dispense compounds for genuinely unattended, high-throughput operation.",
+            "stats": [
+              { "value": "Milligrams to 20 g", "label": "Dispensing range" },
+              { "value": "Direct-to-vessel", "label": "Dosing straight into vials and well plates" },
+              { "value": "21 CFR Part 11", "label": "Compliant software, built in" },
+              { "value": "Up to 48 compounds", "label": "Storage capacity with the optional extension" },
+              { "value": "Fully automated", "label": "Walk-away sample preparation" },
+              { "value": "Gradient and incremental dosing", "label": "Built for DoE workflows" },
+              { "value": "ARKSUITE-integrated", "label": "Data, inventory, and run management" },
+              { "value": "Web and mobile access", "label": "Remote configuration and monitoring" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "CRYSTAL POWDERDOSE product information: dispensing range, automation, and traceable software.",
+                "body": [
+                  "Automated solid dosing: Compact benchtop system for fast, accurate sample, reaction and formulation preparation.",
+                  "Milligrams to 20 g: Dispenses multiple solid materials directly into vials and well plates across a wide dosing range.",
+                  "Direct-to-vessel dosing: Eliminates the weigh-and-transfer step, reducing dosing time and manual handling.",
+                  "Walk-away operation: Automates repetitive dosing tasks, giving laboratory teams more time for higher-value work.",
+                  "21 CFR Part 11 compliant: Supports consistent, traceable operation with software designed for regulated workflows.",
+                  "Built for DoE: Gradient and incremental dispensing with an intuitive GUI simplifies experimental setup.",
+                  "Up to 48 compounds: Optional Storage Extension enables longer unattended runs with up to 48 ready-to-dispense solids.",
+                  "Connected workflow management: Native ARKSUITE integration brings together data, inventory, product and run management, with web and mobile access for remote monitoring and configuration."
+                ],
+                "cards": [
+                  { "title": "Mg to 20 g dispensing range", "description": "Handles trace and larger-batch dosing in one system" },
+                  { "title": "Direct-to-vessel dosing", "description": "Cuts dosing cycle time dramatically" },
+                  { "title": "21 CFR Part 11 software", "description": "Built-in traceability, audit-ready by default" },
+                  { "title": "Up to 48-compound storage", "description": "Longer unattended, high-throughput runs" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Chemspeed CRYSTAL POWDERDOSE Benchtop Gravimetric Solid Dispensing System" },
+                  { "title": "Dispensing range", "description": "Milligrams to 20 g" },
+                  { "title": "Dosing target", "description": "Direct into vials and well plates" },
+                  { "title": "Software", "description": "21 CFR Part 11 compliant, ARKSUITE-integrated" },
+                  { "title": "Optional add-on", "description": "Storage Extension, up to 48 compounds" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "CRYSTAL POWDERDOSE applications: sample preparation, reaction screening, formulation development, and DoE studies."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "CRYSTAL POWDERDOSE technical specifications: dispensing range, storage, and software."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Direct Dosing, Real Time Saved",
+                "title": "Direct Dosing, Real Time Saved",
+                "description": "Dose powders directly into vials and well plates from milligram quantities to 20 g, eliminating manual transfer and saving valuable preparation time.",
+                "cards": [
+                  { "title": "No manual transfer step between weighing and vial", "description": "Direct dosing into vials and well plates" },
+                  { "title": "One system for trace and larger-batch dosing", "description": "Milligrams to 20 g dispensing range" },
+                  { "title": "Time back for higher-value work", "description": "Fully automated, walk-away dosing" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built for Walk-Away, Audit-Ready Operation",
+                "title": "Built for Walk-Away, Audit-Ready Operation",
+                "body": [
+                  "Run longer, traceable dosing workflows with 21 CFR Part 11 compliant software, storage for up to 48 compounds, and remote access through ARKSUITE."
+                ],
+                "utilityChecklist": [
+                  { "label": "Audit-ready dosing records without extra paperwork", "value": "Built-in 21 CFR Part 11 compliant software" },
+                  { "label": "Longer unattended runs across multiple compounds", "value": "Storage Extension, up to 48 compounds" },
+                  { "label": "One place for data, inventory, and run tracking", "value": "Native ARKSUITE integration" },
+                  { "label": "Checking on a run without being at the bench", "value": "Web and mobile remote access" }
+                ],
+                "disclaimer": "Share whether the lab's dosing workflows need regulatory documentation and how many compounds typically run per unattended session, and the right software and Storage Extension setup gets confirmed against it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "CRYSTAL POWDERDOSE documentation: product page and specifications.",
+                "cards": [
+                  { "title": "CRYSTAL POWDERDOSE Product Overview", "description": "Available on request" },
+                  { "title": "Storage Extension Specification Sheet", "description": "Available on request" },
+                  { "title": "ARKSUITE Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the CRYSTAL POWDERDOSE in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Milligrams to 20 grams, dosed straight into the vial, fully traceable, fully walk-away. Share the dosing range and throughput needs, and the right CRYSTAL POWDERDOSE configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

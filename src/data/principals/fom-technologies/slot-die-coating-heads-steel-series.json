@@ -1,0 +1,2020 @@
+{
+  "principal": {
+    "slug": "fom-technologies",
+    "principalName": "FOM Technologies",
+    "countryOfOrigin": "Denmark"
+  },
+  "categories": [
+    {
+      "name": "Slot-Die Coating Heads (Steel Series)",
+      "slug": "slot-die-coating-heads-steel-series",
+      "products": [
+        {
+          "name": "FOM SD 25 | Slot-Die Coating Heads Steel Series",
+          "slug": "fom-sd-25-slot-die-coating-heads-steel-series",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+          "imageAlt": "FOM SD 25 Slot-Die Coating Heads Steel Series - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/fom-sd-25-slot-die-coating-heads-steel-series",
+          "breadcrumbPath": "Home > Products > Slot-Die Coating Heads (Steel Series) > FOM SD 25 | Slot-Die Coating Heads Steel Series",
+          "h1": "FOM SD 25 | Slot-Die Coating Heads Steel Series",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Coating a delicate low-viscosity solution and a thick battery slurry usually calls for two different tools. FOM SD 25 covers both, the smallest stainless-steel head in the Steel Series, built for universal compatibility across every FOM coating machine.",
+
+          "features": [
+            "Outstanding Precise and Consistent Flow Control: Delivers reliable, repeatable coating flow across the full viscosity range.",
+            "Quick and Easy Installation: Designed for fast setup on any FOM coating machine.",
+            "Flexible Shim and Stripe Patterning: Varied shim thicknesses and stripe options adapt the head to different film applications.",
+            "Lightweight Yet Durable Design: Holds structural integrity and performance without adding unnecessary weight.",
+            "Low Dead-Volume Design: Minimizes material waste during coating runs.",
+            "Adaptable Meniscus Guide Configuration: Runs with or without a meniscus guide, depending on the application.",
+            "Easy Assembly, Disassembly, and Maintenance: Keeps day-to-day operation and cleaning hassle-free.",
+            "Double-Sided Coating Support: Compatible with double-sided coating on the FOM moduloR2R machine."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "FOM Technologies FOM SD 25 Slot-Die Coating Head" },
+            { "label": "Category", "value": "Slot-Die Coating Heads (Steel Series)" },
+            { "label": "Material", "value": "Stainless steel" },
+            { "label": "Coating Width", "value": "1 to 25 mm" },
+            { "label": "Viscosity Compatibility", "value": "1 cP to over 100,000 cPs at 25°C" },
+            { "label": "Flatness Tolerance (Inside Planes)", "value": "≤ 5 μm across entire surface" },
+            { "label": "Connections", "value": "Threaded, standard and high-viscosity versions" },
+            { "label": "Machine Compatibility", "value": "Universal, all FOM coating machines" },
+            { "label": "Meniscus Guide", "value": "Optional, adaptable with or without" },
+            { "label": "Double-Sided Coating", "value": "Supported on FOM moduloR2R" },
+            { "label": "Included", "value": "Lightweight protective flight case" }
+          ],
+
+          "applications": [
+            "Battery Slurries and Battery Production: Handles high-viscosity slurries up to 100,000+ cPs",
+            "PEM and Hydrogen Fuel Cells: Precision narrow-width coating for functional layers",
+            "OPV/Photovoltaic Cells and Solar Panel Technology: Uniform coating with ≤ 5 μm flatness tolerance",
+            "OLED and Perovskite Films: Precise flow control for sensitive functional materials",
+            "Transparent Conductive Foils: Consistent narrow-width film deposition",
+            "Printed Electronics and Biosensors: Low dead-volume design suited to precious lab-on-a-chip materials"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Machine Compatibility" },
+            { "id": "planner", "label": "Shim & Guide Configurator" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Width & Viscosity Selector" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Fast Turnaround" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which FOM coating machine will run this head?",
+            "description": "Select the target FOM machine, and confirm compatibility, including double-sided coating support.",
+            "fields": [
+              {
+                "key": "fomMachine",
+                "label": "FOM machine",
+                "options": [
+                  { "val": "arcRC", "label": "arcRC" },
+                  { "val": "omicronR2R", "label": "omicronR2R" },
+                  { "val": "omegaR2R", "label": "omegaR2R" },
+                  { "val": "moduloR2R", "label": "moduloR2R" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "doubleSidedNeeded",
+                "label": "Double-sided coating needed",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "coatingWidthTarget",
+                "label": "Coating width target",
+                "options": [
+                  { "val": "up-to-25mm", "label": "Up to 25 mm" },
+                  { "val": "wider", "label": "Wider than 25 mm" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "doubleSidedNeeded": "yes" }, "title": "Double-Sided Coating Needs FOM moduloR2R", "body": "Double-sided coating is supported when FOM SD 25 is used on the FOM moduloR2R machine specifically.", "tags": ["FOM moduloR2R Required"] },
+              { "condition": { "coatingWidthTarget": "wider" }, "title": "A Wider Steel Series Head Fits Better", "body": "FOM SD 25 covers 1 to 25 mm — SD 50, SD 100, SD 200, SD 300, or SD 500 cover wider coating widths in the Steel Series.", "tags": ["Consider SD 50 / SD 100+"] },
+              { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which FOM coating machine the head will run on, and Inkarp will confirm fit, including double-sided coating support if needed.", "tags": ["Universal FOM Compatibility"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "meniscus-guide-shim-configurator",
+              "eyebrow": "Meniscus Guide & Shim Configurator",
+              "title": "Does the application need a meniscus guide or a specific shim thickness?",
+              "description": "Select the film application, and see the recommended shim and guide setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Application type", "choices": "Battery slurry; PV; Printed electronics; Other" },
+                { "title": "Meniscus guide preference", "choices": "With meniscus guide; Without meniscus guide" },
+                { "title": "Stripe patterning need", "choices": "Continuous; Patterned" }
+              ],
+              "disclaimer": "Confirms recommended shim thickness and meniscus guide setup, then routes to an application-specific quotation."
+            }
+          ],
+
+          "configWizard": {
+            "title": "What width and viscosity does the coating process need?",
+            "description": "Enter the target coating width and precursor viscosity, and confirm SD 25 fits.",
+            "steps": [
+              {
+                "key": "coatingWidthTarget",
+                "question": "What coating width does the process need?",
+                "options": [
+                  { "val": "up-to-25mm", "label": "Up to 25 mm" },
+                  { "val": "wider-than-25mm", "label": "Wider than 25 mm" }
+                ]
+              },
+              {
+                "key": "connectionType",
+                "question": "What connection type is needed?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-viscosity", "label": "High-viscosity" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms SD 25 compatibility or recommends a wider Steel Series head, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FOM SD 25 industries: battery manufacturing, fuel cell development, and photovoltaic research.",
+            "industries": [
+              { "name": "Battery Electrode Manufacturing", "useCase": "Coating high-viscosity electrode slurries", "consideration": "Handles up to 100,000+ cPs on the same head" },
+              { "name": "Fuel Cell Development", "useCase": "PEM and hydrogen fuel cell functional layer coating", "consideration": "Precision narrow-width coating for membrane layers" },
+              { "name": "Photovoltaic and Perovskite Research", "useCase": "OPV, solar panel, and perovskite film coating", "consideration": "≤ 5 μm flatness supports demanding film uniformity" },
+              { "name": "Printed Electronics and Biosensors", "useCase": "Lab-on-a-chip and biosensor film deposition", "consideration": "Low dead-volume design conserves precious materials" }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Comparison",
+            "title": "Method Comparison",
+            "description": "FOM SD 25 comparison: SD 25 versus wider Steel Series heads.",
+            "columns": [
+              { "label": "FOM SD 25", "highlight": true },
+              { "label": "FOM SD 50 / SD 100+", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Coating Width", "values": ["1-25 mm", "Wider formats (see individual head specs)"] },
+              { "feature": "Best For", "values": ["Narrow-format, precision film applications", "Wider pilot or production-format coatings"] },
+              { "feature": "Choose When", "values": ["Small samples or narrow-width research work is the priority", "Broader film formats are needed for the application"] }
+            ],
+            "disclaimer": "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity."
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows flow control and coating uniformity on real precursor materials" },
+              { "title": "Configuration Assessment", "description": "Confirms width, viscosity, and shim setup for the application" },
+              { "title": "Installation Support", "description": "Supports mounting and first-run checks on the target FOM machine" },
+              { "title": "Operator Training", "description": "Builds confidence with assembly, disassembly, and cleaning" },
+              { "title": "Preventive Maintenance", "description": "Maintains flatness tolerance and connection integrity" },
+              { "title": "Spares and Accessories", "description": "Supplies shims, meniscus guides, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the FOM SD 25 used for?", "answer": "It's a stainless-steel slot-die coating head for precision, narrow-width film coating from 1 to 25 mm, used across batteries, fuel cells, photovoltaics, and printed electronics." },
+            { "question": "What viscosity range does it support?", "answer": "1 cP to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head." },
+            { "question": "How flat is the coating head internally?", "answer": "Flatness tolerance on inside planes holds to ≤ 5 μm across the entire surface, supporting uniform coatings." },
+            { "question": "Is it compatible with all FOM coating machines?", "answer": "Yes, it's engineered for universal compatibility across the full FOM coating machine range." },
+            { "question": "Does it support double-sided coating?", "answer": "Yes, when used on the FOM moduloR2R machine." },
+            { "question": "Can it be used with or without a meniscus guide?", "answer": "Yes, the design adapts either way depending on the application." },
+            { "question": "How easy is the head to maintain?", "answer": "Its lightweight, robust design supports easy assembly, disassembly, cleaning, and maintenance." },
+            { "question": "Does it minimize material waste?", "answer": "Yes, a low dead-volume design reduces material waste during coating runs." },
+            { "question": "What connection types are available?", "answer": "Threaded connections suited to various tubing sizes, in both standard and high-viscosity versions." },
+            { "question": "What is the price of the FOM SD 25 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the shim, guide, and connection configuration needed." },
+            { "question": "Who is the authorized distributor of the FOM SD 25 in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM SD 25 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FOM SD 25 in India from Inkarp",
+            "description": "Share the target width, viscosity, and FOM machine, and the right SD 25 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your target width, viscosity, and machine details, then confirm the right SD 25 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "widthDetails", "label": "Target coating width", "type": "text", "required": false },
+              { "key": "machineDetails", "label": "FOM coating machine and precursor viscosity", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right SD 25 configuration", "body": "Share the target coating width, precursor viscosity, and which FOM machine the head will run on, and the right SD 25 configuration gets confirmed from there." },
+              { "title": "Confirm the maintenance profile fit", "body": "Share how often the lab switches formulations or coating widths, and how FOM SD 25's maintenance profile fits that pace gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports mounting and first-run checks on the target FOM machine." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "1 to 25 mm wide. 1 cP to over 100,000 cPs. One precision head.",
+            "heroLead": "Coating a delicate low-viscosity solution and a thick battery slurry usually calls for two different tools. FOM SD 25 covers both, the smallest stainless-steel head in the Steel Series, built for universal compatibility across every FOM coating machine. Coating width runs 1 to 25 mm, viscosity compatibility spans 1 cP to over 100,000 cPs at 25°C, and flatness tolerance on inside planes holds to ≤ 5 μm across the entire surface, the kind of precision that keeps a coating genuinely uniform edge to edge. A lightweight, robust design makes assembly, disassembly, and maintenance fast, and it drops straight into applications from battery slurries to printed biosensors.",
+            "stats": [
+              { "value": "1 to 25 mm", "label": "Coating width range" },
+              { "value": "1 cP to 100,000+ cPs", "label": "Viscosity compatibility at 25°C" },
+              { "value": "≤ 5 μm", "label": "Flatness tolerance, inside planes" },
+              { "value": "Universal", "label": "Compatible with all FOM coating machines" },
+              { "value": "Stainless steel", "label": "Smallest head in the Steel Series" },
+              { "value": "Standard and high-viscosity", "label": "Threaded connection versions" },
+              { "value": "Low dead-volume", "label": "Minimizes material waste" },
+              { "value": "Double-sided coating", "label": "Supported on FOM moduloR2R" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FOM SD 25 product information: coating width, viscosity range, and precision flow control.",
+                "body": [
+                  "FOM SD 25 is the smallest stainless-steel slot-die head in the Steel Series, engineered for universal compatibility with all FOM coating machines.",
+                  "Coating width covers 1 to 25 mm, suited to narrow, precision film applications.",
+                  "Viscosity compatibility spans 1 cP up to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head.",
+                  "Flatness tolerance on inside planes holds to ≤ 5 μm across the entire surface, directly supporting uniform coating results.",
+                  "Threaded connections accommodate various tubing sizes, available in both standard and high-viscosity versions.",
+                  "A lightweight yet robust design keeps assembly, disassembly, and maintenance straightforward, without compromising structural integrity or performance.",
+                  "A low dead-volume design minimizes material waste, valuable when working with precious or expensive precursor materials.",
+                  "The head adapts with or without a meniscus guide, and precise FOM alignment design keeps shim and meniscus guide positioning reliable across setups.",
+                  "Double-sided coating is supported when used on the FOM moduloR2R machine.",
+                  "A lightweight, high-quality protective flight case ships with the head for shipping and storage."
+                ],
+                "cards": [
+                  { "title": "1-25 mm coating width", "description": "Precision narrow-format film coating" },
+                  { "title": "1 cP to 100,000+ cPs", "description": "One head across thin solutions and thick slurries" },
+                  { "title": "≤ 5 μm flatness tolerance", "description": "Uniform coatings across the full surface" },
+                  { "title": "Universal machine compatibility", "description": "Drops into any FOM coating system" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "FOM Technologies FOM SD 25 Slot-Die Coating Head, Steel Series" },
+                  { "title": "Coating width", "description": "1-25 mm" },
+                  { "title": "Viscosity range", "description": "1 cP to 100,000+ cPs at 25°C" },
+                  { "title": "Flatness tolerance", "description": "≤ 5 μm, inside planes" },
+                  { "title": "Connections", "description": "Threaded, standard and high-viscosity versions" },
+                  { "title": "Compatibility", "description": "Universal across all FOM coating machines" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FOM SD 25 applications: batteries, fuel cells, photovoltaics, and printed electronics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FOM SD 25 technical specifications: coating width, viscosity range, and flatness tolerance."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Precision at the Smallest Scale",
+                "title": "Precision at the Smallest Scale",
+                "body": [
+                  "Coating uniformity lives or dies on how flat the inside planes of a slot-die head actually are, and at narrow widths, even small deviations show up directly in the finished film.",
+                  "FOM SD 25 holds flatness tolerance to ≤ 5 μm across its entire inside surface, giving genuinely uniform coatings rather than a result that varies subtly across the width.",
+                  "That precision holds across the full viscosity range the head supports, from 1 cP solutions to slurries over 100,000 cPs, so film quality doesn't depend on which end of that range a given material sits at.",
+                  "Precise FOM alignment design keeps shim and meniscus guide positioning reliable every time the head is reassembled, not just on first setup."
+                ],
+                "utilityChecklist": [
+                  { "label": "Uniform films at narrow coating widths", "value": "≤ 5 μm flatness tolerance across the full surface" },
+                  { "label": "Consistent results across different precursor viscosities", "value": "1 cP to 100,000+ cPs compatibility on one head" },
+                  { "label": "Reliable shim and guide positioning after reassembly", "value": "Precise FOM alignment design" }
+                ],
+                "disclaimer": "Share the target film thickness and precursor viscosity, and the right shim thickness and meniscus guide configuration gets confirmed against it."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built for Fast Turnaround",
+                "title": "Built for Fast Turnaround",
+                "description": "A slot-die head that's difficult to clean or reassemble slows down every formulation change, and formulation research often means changing materials often.",
+                "cards": [
+                  { "title": "Fast turnaround between formulation changes", "description": "Easy assembly, disassembly, and cleaning" },
+                  { "title": "Minimal material waste between runs", "description": "Low dead-volume design, with less cleaning residue between formulation switches" },
+                  { "title": "No installation delay switching between machines", "description": "Universal, quick-install compatibility that's rarely the bottleneck in a busy research schedule" },
+                  { "title": "Structural performance isn't traded for convenience", "description": "Lightweight yet robust design keeps assembly and maintenance simple without sacrificing durability" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FOM SD 25 documentation: technical specifications and FAQ.",
+                "cards": [
+                  { "title": "FOM SD 25 Technical Specifications", "description": "Available on request" },
+                  { "title": "FOM SD 25 FAQ", "description": "Available on request" },
+                  { "title": "Shim and Meniscus Guide Configuration Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FOM SD 25 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Precision coating from 1 to 25 mm, handling everything from thin solutions to thick slurries on one head. Share the target width, viscosity, and FOM machine, and the right SD 25 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "FOM SD 100 | Slot-Die Coating Heads Steel Series",
+          "slug": "fom-sd-100-slot-die-coating-heads-steel-series",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+          "imageAlt": "FOM SD 100 Slot-Die Coating Heads Steel Series - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/fom-sd-100-slot-die-coating-heads-steel-series",
+          "breadcrumbPath": "Home > Products > Slot-Die Coating Heads (Steel Series) > FOM SD 100 | Slot-Die Coating Heads Steel Series",
+          "h1": "FOM SD 100 | Slot-Die Coating Heads Steel Series",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Scaling from lab samples toward pilot-relevant formats shouldn't mean losing the precision that made small-scale results trustworthy. FOM SD 100, one of the larger stainless-steel heads in the Steel Series, holds that precision at up to 100 mm, universally compatible with every FOM coating machine.",
+
+          "features": [
+            "Outstanding Precise and Consistent Flow Control: Delivers reliable, repeatable coating flow across the full viscosity range.",
+            "Quick and Easy Installation: Designed for fast setup on any FOM coating machine.",
+            "Flexible Shim and Stripe Patterning: Varied shim thicknesses and stripe options adapt the head to different film applications.",
+            "Lightweight Yet Durable Design: Holds structural integrity and performance without adding unnecessary weight.",
+            "Low Dead-Volume Design: Minimizes material waste during coating runs.",
+            "Adaptable Meniscus Guide Configuration: Runs with or without a meniscus guide, depending on the application.",
+            "Easy Assembly, Disassembly, and Maintenance: Keeps day-to-day operation and cleaning hassle-free.",
+            "Double-Sided Coating Support: Compatible with double-sided coating on the FOM moduloR2R machine."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "FOM Technologies FOM SD 100 Slot-Die Coating Head" },
+            { "label": "Category", "value": "Slot-Die Coating Heads (Steel Series)" },
+            { "label": "Material", "value": "Stainless steel" },
+            { "label": "Coating Width", "value": "1 to 100 mm" },
+            { "label": "Viscosity Compatibility", "value": "1 cP to over 100,000 cPs at 25°C" },
+            { "label": "Flatness Tolerance (Inside Planes)", "value": "≤ 5 μm" },
+            { "label": "Connections", "value": "Threaded, standard and high-viscosity versions" },
+            { "label": "Machine Compatibility", "value": "Universal, all FOM coating machines" },
+            { "label": "Meniscus Guide", "value": "Optional, adaptable with or without" },
+            { "label": "Double-Sided Coating", "value": "Supported on FOM moduloR2R" },
+            { "label": "Included", "value": "Lightweight protective flight case" }
+          ],
+
+          "applications": [
+            "Battery Slurries and Battery Production: Handles high-viscosity slurries up to 100,000+ cPs",
+            "PEM and Hydrogen Fuel Cells: Wider-width precision coating for functional layers",
+            "OPV/Photovoltaic Cells and Solar Panel Technology: Uniform coating with ≤ 5 μm flatness tolerance at pilot-relevant format",
+            "OLED and Perovskite Films: Precise flow control for sensitive functional materials",
+            "Transparent Conductive Foils: Consistent coating across a wider working format",
+            "Printed Electronics and Biosensors: Low dead-volume design suited to precious lab-on-a-chip materials"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Machine Compatibility" },
+            { "id": "planner", "label": "Shim & Guide Configurator" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Width & Viscosity Selector" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Fast Turnaround" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which FOM coating machine will run this head?",
+            "description": "Select the target FOM machine, and confirm compatibility, including double-sided coating support.",
+            "fields": [
+              {
+                "key": "fomMachine",
+                "label": "FOM machine",
+                "options": [
+                  { "val": "arcRC", "label": "arcRC" },
+                  { "val": "omicronR2R", "label": "omicronR2R" },
+                  { "val": "omegaR2R", "label": "omegaR2R" },
+                  { "val": "moduloR2R", "label": "moduloR2R" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "doubleSidedNeeded",
+                "label": "Double-sided coating needed",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "coatingWidthTarget",
+                "label": "Coating width target",
+                "options": [
+                  { "val": "up-to-100mm", "label": "Up to 100 mm" },
+                  { "val": "wider", "label": "Wider than 100 mm" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "doubleSidedNeeded": "yes" }, "title": "Double-Sided Coating Needs FOM moduloR2R", "body": "Double-sided coating is supported when FOM SD 100 is used on the FOM moduloR2R machine specifically.", "tags": ["FOM moduloR2R Required"] },
+              { "condition": { "coatingWidthTarget": "wider" }, "title": "A Wider Steel Series Head Fits Better", "body": "FOM SD 100 covers 1 to 100 mm — SD 200 or SD 300 cover wider coating widths in the Steel Series.", "tags": ["Consider SD 200 / SD 300"] },
+              { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which FOM coating machine the head will run on, and Inkarp will confirm fit, including double-sided coating support if needed.", "tags": ["Universal FOM Compatibility"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "meniscus-guide-shim-configurator",
+              "eyebrow": "Meniscus Guide & Shim Configurator",
+              "title": "Does the application need a meniscus guide or a specific shim thickness?",
+              "description": "Select the film application, and see the recommended shim and guide setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Application type", "choices": "Battery slurry; PV; Printed electronics; Other" },
+                { "title": "Meniscus guide preference", "choices": "With meniscus guide; Without meniscus guide" },
+                { "title": "Stripe patterning need", "choices": "Continuous; Patterned" }
+              ],
+              "disclaimer": "Confirms recommended shim thickness and meniscus guide setup, then routes to an application-specific quotation."
+            }
+          ],
+
+          "configWizard": {
+            "title": "What width and viscosity does the coating process need?",
+            "description": "Enter the target coating width and precursor viscosity, and confirm SD 100 fits.",
+            "steps": [
+              {
+                "key": "coatingWidthTarget",
+                "question": "What coating width does the process need?",
+                "options": [
+                  { "val": "up-to-100mm", "label": "Up to 100 mm" },
+                  { "val": "wider-than-100mm", "label": "Wider than 100 mm" }
+                ]
+              },
+              {
+                "key": "connectionType",
+                "question": "What connection type is needed?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-viscosity", "label": "High-viscosity" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms SD 100 compatibility or recommends a narrower or wider Steel Series head, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FOM SD 100 industries: battery manufacturing, fuel cell development, and photovoltaic research.",
+            "industries": [
+              { "name": "Battery Electrode Manufacturing", "useCase": "Coating high-viscosity electrode slurries at pilot-relevant width", "consideration": "Handles up to 100,000+ cPs on the same head" },
+              { "name": "Fuel Cell Development", "useCase": "PEM and hydrogen fuel cell functional layer coating", "consideration": "Wider-width coating for larger membrane samples" },
+              { "name": "Photovoltaic and Perovskite Research", "useCase": "OPV, solar panel, and perovskite film coating", "consideration": "≤ 5 μm flatness supports demanding film uniformity at scale" },
+              { "name": "Printed Electronics and Biosensors", "useCase": "Lab-on-a-chip and biosensor film deposition", "consideration": "Low dead-volume design conserves precious materials" }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Comparison",
+            "title": "Method Comparison",
+            "description": "FOM SD 100 comparison: SD 100 versus narrower and wider Steel Series heads.",
+            "columns": [
+              { "label": "FOM SD 25 / SD 50", "highlight": false },
+              { "label": "FOM SD 100", "highlight": true },
+              { "label": "FOM SD 200 / SD 300", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Coating Width", "values": ["1-25 mm / 1-50 mm", "1-100 mm", "Wider formats (see individual head specs)"] },
+              { "feature": "Best For", "values": ["Narrow lab-scale research work", "Pilot-relevant format testing", "Larger pilot or production-format coatings"] },
+              { "feature": "Choose When", "values": ["Sample size is minimal and width is tightly constrained", "Scaling toward production-relevant format matters", "The application needs an even wider working format"] }
+            ],
+            "disclaimer": "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity."
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows flow control and coating uniformity on real precursor materials" },
+              { "title": "Configuration Assessment", "description": "Confirms width, viscosity, and shim setup for the application" },
+              { "title": "Installation Support", "description": "Supports mounting and first-run checks on the target FOM machine" },
+              { "title": "Operator Training", "description": "Builds confidence with assembly, disassembly, and cleaning" },
+              { "title": "Preventive Maintenance", "description": "Maintains flatness tolerance and connection integrity" },
+              { "title": "Spares and Accessories", "description": "Supplies shims, meniscus guides, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the FOM SD 100 used for?", "answer": "It's a stainless-steel slot-die coating head for precision coating from 1 to 100 mm, used across batteries, fuel cells, photovoltaics, and printed electronics." },
+            { "question": "What viscosity range does it support?", "answer": "1 cP to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head." },
+            { "question": "How flat is the coating head internally?", "answer": "Flatness tolerance on inside planes holds to ≤ 5 μm, supporting consistent, even coatings at this wider width." },
+            { "question": "Is it compatible with all FOM coating machines?", "answer": "Yes, it's designed for universal compatibility across the full FOM coating machine range." },
+            { "question": "Does it support double-sided coating?", "answer": "Yes, when used on the FOM moduloR2R machine." },
+            { "question": "Can it be used with or without a meniscus guide?", "answer": "Yes, the design adapts either way depending on the application." },
+            { "question": "How easy is the head to maintain?", "answer": "Its lightweight, durable design supports easy assembly, disassembly, cleaning, and maintenance." },
+            { "question": "Does it minimize material waste?", "answer": "Yes, a low dead-volume design reduces material waste during coating runs." },
+            { "question": "What connection types are available?", "answer": "Threaded connections suited to various tubing sizes, in both standard and high-viscosity versions." },
+            { "question": "How is the SD 100 different from the SD 50?", "answer": "SD 100 covers a wider coating width range, 1 to 100 mm versus SD 50's 1 to 50 mm, while sharing the same viscosity range, flatness tolerance, and machine compatibility." },
+            { "question": "What is the price of the FOM SD 100 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the shim, guide, and connection configuration needed." },
+            { "question": "Who is the authorized distributor of the FOM SD 100 in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM SD 100 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FOM SD 100 in India from Inkarp",
+            "description": "Share the target width, viscosity, and FOM machine, and the right SD 100 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your target width, viscosity, and machine details, then confirm the right SD 100 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "widthDetails", "label": "Target coating width", "type": "text", "required": false },
+              { "key": "machineDetails", "label": "FOM coating machine and precursor viscosity", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right SD 100 configuration", "body": "Share the target coating width, precursor viscosity, and which FOM machine the head will run on, and the right SD 100 configuration gets confirmed from there." },
+              { "title": "Confirm the maintenance profile fit", "body": "Share how often the lab switches formulations or coating widths, and how FOM SD 100's maintenance profile fits that pace gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports mounting and first-run checks on the target FOM machine." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "1 to 100 mm wide. 1 cP to over 100,000 cPs. Full pilot-format precision.",
+            "heroLead": "Scaling from lab samples toward pilot-relevant formats shouldn't mean losing the precision that made small-scale results trustworthy. FOM SD 100, one of the larger stainless-steel heads in the Steel Series, holds that precision at up to 100 mm, universally compatible with every FOM coating machine. Viscosity compatibility spans 1 cP to over 100,000 cPs at 25°C, and flatness tolerance on inside planes holds to ≤ 5 μm across the entire surface, keeping coatings even at this wider format. A lightweight yet durable design keeps assembly, disassembly, and maintenance efficient, and the head runs across applications from battery slurries to printed biosensors.",
+            "stats": [
+              { "value": "1 to 100 mm", "label": "Coating width range" },
+              { "value": "1 cP to 100,000+ cPs", "label": "Viscosity compatibility at 25°C" },
+              { "value": "≤ 5 μm", "label": "Flatness tolerance, inside planes" },
+              { "value": "Universal", "label": "Compatible with all FOM coating machines" },
+              { "value": "Stainless steel", "label": "One of the larger heads in the Steel Series" },
+              { "value": "Standard and high-viscosity", "label": "Threaded connection versions" },
+              { "value": "Low dead-volume", "label": "Minimizes material waste" },
+              { "value": "Double-sided coating", "label": "Supported on FOM moduloR2R" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FOM SD 100 product information: coating width, viscosity range, and precision flow control.",
+                "body": [
+                  "FOM SD 100 is one of the larger stainless-steel slot-die heads in the Steel Series, designed for universal compatibility with all FOM coating machines.",
+                  "Coating width covers 1 to 100 mm, addressing coating requirements that extend well beyond narrow lab-scale formats.",
+                  "Viscosity compatibility spans 1 cP up to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head.",
+                  "Flatness tolerance on inside planes holds to ≤ 5 μm, ensuring consistent, even coatings even at this wider width.",
+                  "Threaded connections accommodate various tubing sizes, available in both standard and high-viscosity versions.",
+                  "A lightweight yet durable design keeps assembly, disassembly, and maintenance efficient, without compromising structural integrity or performance.",
+                  "A low dead-volume design minimizes material waste, valuable when working with precious or expensive precursor materials.",
+                  "The head adapts with or without a meniscus guide, and precise FOM alignment design keeps shim and meniscus guide positioning reliable across setups.",
+                  "Double-sided coating is supported when used on the FOM moduloR2R machine.",
+                  "A lightweight, high-quality protective flight case ships with the head for shipping and storage."
+                ],
+                "cards": [
+                  { "title": "1-100 mm coating width", "description": "Pilot-relevant format coating" },
+                  { "title": "1 cP to 100,000+ cPs", "description": "One head across thin solutions and thick slurries" },
+                  { "title": "≤ 5 μm flatness tolerance", "description": "Uniform coatings across the full surface" },
+                  { "title": "Universal machine compatibility", "description": "Drops into any FOM coating system" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "FOM Technologies FOM SD 100 Slot-Die Coating Head, Steel Series" },
+                  { "title": "Coating width", "description": "1-100 mm" },
+                  { "title": "Viscosity range", "description": "1 cP to 100,000+ cPs at 25°C" },
+                  { "title": "Flatness tolerance", "description": "≤ 5 μm, inside planes" },
+                  { "title": "Connections", "description": "Threaded, standard and high-viscosity versions" },
+                  { "title": "Compatibility", "description": "Universal across all FOM coating machines" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FOM SD 100 applications: batteries, fuel cells, photovoltaics, and printed electronics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FOM SD 100 technical specifications: coating width, viscosity range, and flatness tolerance."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Precision That Scales to 100 mm",
+                "title": "Precision That Scales to 100 mm",
+                "body": [
+                  "Scaling coating width from a narrow lab sample toward a pilot-relevant format is exactly where flatness deviations tend to show up first. FOM SD 100 holds ≤ 5 μm flatness tolerance on its inside planes even at up to 100 mm.",
+                  "That precision holds across the full viscosity range the head supports, from 1 cP solutions to slurries over 100,000 cPs, so a formulation validated at narrow width behaves consistently once tested at the wider SD 100 format.",
+                  "Precise FOM alignment design keeps shim and meniscus guide positioning reliable every time the head is reassembled, not just on first setup, important when a head this size sees frequent reconfiguration between test series."
+                ],
+                "utilityChecklist": [
+                  { "label": "Uniform films at pilot-relevant coating widths", "value": "≤ 5 μm flatness tolerance even at 100 mm" },
+                  { "label": "Confidence that results scale from narrower formats", "value": "Same flow control principles as narrower Steel Series heads" },
+                  { "label": "Reliable shim and guide positioning after reassembly", "value": "Precise FOM alignment design" }
+                ],
+                "disclaimer": "Share the target film thickness and precursor viscosity, and the right shim thickness and meniscus guide configuration gets confirmed against it."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built for Fast Turnaround",
+                "title": "Built for Fast Turnaround",
+                "description": "A slot-die head that's difficult to clean or reassemble slows down every formulation change, and formulation research often means changing materials often, even at wider pilot-relevant formats.",
+                "cards": [
+                  { "title": "Fast turnaround between formulation changes", "description": "Easy assembly, disassembly, and cleaning" },
+                  { "title": "Minimal material waste between runs at wider widths", "description": "Low dead-volume design, with a bigger savings advantage at 100 mm than at narrower widths" },
+                  { "title": "No installation delay switching between machines", "description": "Universal, quick-install compatibility that's rarely the bottleneck in a busy research schedule" },
+                  { "title": "Structural performance isn't traded for convenience, even at this larger size", "description": "Lightweight yet durable design keeps assembly and maintenance efficient without sacrificing performance at 100 mm" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FOM SD 100 documentation: technical specifications and FAQ.",
+                "cards": [
+                  { "title": "FOM SD 100 Technical Specifications", "description": "Available on request" },
+                  { "title": "FOM SD 100 FAQ", "description": "Available on request" },
+                  { "title": "Shim and Meniscus Guide Configuration Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FOM SD 100 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Precision coating from 1 to 100 mm, handling everything from thin solutions to thick slurries on one head. Share the target width, viscosity, and FOM machine, and the right SD 100 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "FOM SD 200 | Slot-Die Coating Heads Steel Series",
+          "slug": "fom-sd-200-slot-die-coating-heads-steel-series",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+          "imageAlt": "FOM SD 200 Slot-Die Coating Heads Steel Series - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/fom-sd-200-slot-die-coating-heads-steel-series",
+          "breadcrumbPath": "Home > Products > Slot-Die Coating Heads (Steel Series) > FOM SD 200 | Slot-Die Coating Heads Steel Series",
+          "h1": "FOM SD 200 | Slot-Die Coating Heads Steel Series",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "An extra-large format shouldn't come with corrosion risk or compromised flatness. FOM SD 200 is machined from stainless steel 1.4404 and chemically passivated for genuine corrosion resistance, compatible with nearly every FOM coating machine, FOM nanoRC being the one exception.",
+
+          "features": [
+            "Outstanding Precise and Consistent Flow Control: Delivers reliable, repeatable coating flow across the full viscosity range.",
+            "Chemically Passivated Stainless Steel 1.4404: Provides excellent corrosion resistance for demanding precursor chemistries.",
+            "Dual Ports for Pressure and Ventilation: Supports direct pressure measurement and air ventilation on the head itself.",
+            "Standard 1/8\" NPT Thread: Uses a widely available fitting standard for tube connections.",
+            "Flexible Shim and Stripe Patterning: Varied shim thicknesses and stripe options adapt the head to different film applications.",
+            "Robust Yet Lightweight Design: Simplifies assembly, disassembly, and maintenance at extra-large format.",
+            "Low Dead-Volume Design: Minimizes material waste during coating runs.",
+            "Double-Sided Coating Support: Compatible with double-sided coating on the FOM moduloR2R machine."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "FOM Technologies FOM SD 200 Slot-Die Coating Head" },
+            { "label": "Category", "value": "Slot-Die Coating Heads (Steel Series)" },
+            { "label": "Material", "value": "Stainless steel 1.4404, chemically passivated" },
+            { "label": "Coating Width", "value": "10 to 200 mm" },
+            { "label": "Viscosity Compatibility", "value": "1 cP to over 100,000 cPs at 25°C" },
+            { "label": "Flatness Tolerance", "value": "≤ 5 μm across entire surface" },
+            { "label": "Manifold", "value": "Standard single manifold" },
+            { "label": "Ports", "value": "Dual, for pressure measurement and air ventilation" },
+            { "label": "Tube Connection", "value": "1/8\" NPT thread" },
+            { "label": "Machine Compatibility", "value": "Nearly all FOM coating machines, excluding FOM nanoRC" },
+            { "label": "Double-Sided Coating", "value": "Supported on FOM moduloR2R" },
+            { "label": "Included", "value": "Lightweight protective flight case" }
+          ],
+
+          "applications": [
+            "Battery Slurries and Battery Production: Handles high-viscosity slurries up to 100,000+ cPs at extra-large width",
+            "PEM and Hydrogen Fuel Cells: Wide-format precision coating for functional layers",
+            "OPV/Photovoltaic Cells and Solar Panel Technology: Uniform coating with ≤ 5 μm flatness at up to 200 mm",
+            "OLED and Perovskite Films: Precise flow control for sensitive functional materials",
+            "Transparent Conductive Foils: Consistent coating across an extra-large working format",
+            "Printed Electronics and Biosensors: Corrosion-resistant material supports demanding precursor chemistries"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Width, Viscosity & Compatibility" },
+            { "id": "planner", "label": "Pressure & Ventilation Setup" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Corrosion & Chemistry Checker" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Manifold & Process Control" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What width, viscosity, and machine does the process need?",
+            "description": "Enter the target coating width and select the FOM machine, and confirm SD 200 fits.",
+            "fields": [
+              {
+                "key": "fomMachine",
+                "label": "FOM coating machine",
+                "options": [
+                  { "val": "arcRC", "label": "arcRC" },
+                  { "val": "omicronR2R", "label": "omicronR2R" },
+                  { "val": "omegaR2R", "label": "omegaR2R" },
+                  { "val": "moduloR2R", "label": "moduloR2R" },
+                  { "val": "nanoRC", "label": "nanoRC" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "coatingWidthTarget",
+                "label": "Coating width target",
+                "options": [
+                  { "val": "up-to-200mm", "label": "Up to 200 mm" },
+                  { "val": "wider", "label": "Wider than 200 mm" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "fomMachine": "nanoRC" }, "title": "FOM nanoRC Is Not Compatible", "body": "FOM SD 200 is not compatible with FOM nanoRC — every other FOM coating machine is supported.", "tags": ["nanoRC Exclusion"] },
+              { "condition": { "coatingWidthTarget": "wider" }, "title": "A Different Steel Series Head Fits Better", "body": "FOM SD 200 covers 10 to 200 mm — SD 300 covers wider coating widths in the Steel Series.", "tags": ["Consider SD 300"] },
+              { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which FOM coating machine the head will run on, and Inkarp will confirm fit, including the nanoRC exclusion if relevant.", "tags": ["Nearly Universal FOM Compatibility"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "pressure-ventilation-setup-planner",
+              "eyebrow": "Pressure & Ventilation Setup Planner",
+              "title": "Does the process need on-head pressure or ventilation monitoring?",
+              "description": "Select the current monitoring setup, and see how the dual-port design integrates.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Pressure monitoring need", "choices": "Yes; No" },
+                { "title": "Air ventilation management need", "choices": "Yes; No" },
+                { "title": "Current tube fitting standard", "choices": "1/8\" NPT; Other" }
+              ],
+              "disclaimer": "Confirms port and connection compatibility, then routes to a setup-specific quotation."
+            }
+          ],
+
+          "configWizard": {
+            "title": "Does the precursor chemistry need corrosion-resistant hardware?",
+            "description": "Select the precursor type and cleaning frequency, and see how SD 200's material fits.",
+            "steps": [
+              {
+                "key": "precursorChemistryType",
+                "question": "What precursor chemistry type will the head handle?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "acidic", "label": "Acidic" },
+                  { "val": "aggressive-solvent", "label": "Aggressive solvent-based" }
+                ]
+              },
+              {
+                "key": "cleaningFrequency",
+                "question": "How frequently will the head be cleaned?",
+                "options": [
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "frequent", "label": "Frequent" }
+                ]
+              },
+              {
+                "key": "applicationType",
+                "question": "What application is this for?",
+                "options": [
+                  { "val": "battery-slurry", "label": "Battery slurry" },
+                  { "val": "pv", "label": "PV" },
+                  { "val": "printed-electronics", "label": "Printed electronics" },
+                  { "val": "other", "label": "Other" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms material suitability for the chemistry, then routes to an application-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FOM SD 200 industries: battery manufacturing, fuel cell development, and photovoltaic research.",
+            "industries": [
+              { "name": "Battery Electrode Manufacturing", "useCase": "Coating high-viscosity electrode slurries at extra-large format", "consideration": "Corrosion-resistant material supports demanding slurry chemistries" },
+              { "name": "Fuel Cell Development", "useCase": "PEM and hydrogen fuel cell functional layer coating", "consideration": "Wide-format coating for larger membrane samples" },
+              { "name": "Photovoltaic and Perovskite Research", "useCase": "OPV, solar panel, and perovskite film coating", "consideration": "≤ 5 μm flatness supports demanding film uniformity at scale" },
+              { "name": "Printed Electronics and Biosensors", "useCase": "Lab-on-a-chip and biosensor film deposition", "consideration": "Dual ports support precise process monitoring" }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Comparison",
+            "title": "Method Comparison",
+            "description": "FOM SD 200 comparison: SD 200 versus narrower and wider Steel Series heads.",
+            "columns": [
+              { "label": "FOM SD 100", "highlight": false },
+              { "label": "FOM SD 200", "highlight": true },
+              { "label": "FOM SD 300", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Coating Width", "values": ["1-100 mm", "10-200 mm", "See individual head specs"] },
+              { "feature": "Machine Compatibility", "values": ["Universal, all FOM machines", "Nearly all, excludes FOM nanoRC", "See individual head specs"] },
+              { "feature": "Material", "values": ["Stainless steel", "Stainless steel 1.4404, chemically passivated", "See individual head specs"] },
+              { "feature": "Best For", "values": ["Pilot-relevant format testing across all FOM machines", "Extra-large format work with corrosion resistance", "Even wider format applications"] },
+              { "feature": "Choose When", "values": ["The application needs full FOM nanoRC compatibility", "Scale and corrosion resistance matter more than nanoRC compatibility", "The widest coating format is required"] }
+            ],
+            "disclaimer": "All Steel Series heads share the same precision flow control and shim flexibility. The difference is coating width capacity, material grade, and machine compatibility."
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows flow control and coating uniformity on real precursor materials" },
+              { "title": "Configuration Assessment", "description": "Confirms width, viscosity, and machine compatibility for the application" },
+              { "title": "Installation Support", "description": "Supports mounting and first-run checks on the target FOM machine" },
+              { "title": "Operator Training", "description": "Builds confidence with assembly, disassembly, and cleaning" },
+              { "title": "Preventive Maintenance", "description": "Maintains flatness tolerance, corrosion resistance, and connection integrity" },
+              { "title": "Spares and Accessories", "description": "Supplies shims, meniscus guides, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the FOM SD 200 used for?", "answer": "It's a stainless-steel slot-die coating head for extra-large format coating from 10 to 200 mm, used across batteries, fuel cells, photovoltaics, and printed electronics." },
+            { "question": "Is the FOM SD 200 compatible with all FOM coating machines?", "answer": "It's compatible with nearly all FOM coating machines, with FOM nanoRC as the one exception." },
+            { "question": "What viscosity range does it support?", "answer": "1 cP to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head." },
+            { "question": "What material is the head made from?", "answer": "Stainless steel 1.4404, chemically passivated for excellent corrosion resistance." },
+            { "question": "How flat is the coating head internally?", "answer": "Flatness tolerance holds to ≤ 5 μm across the entire surface, guaranteeing uniform, precise coatings." },
+            { "question": "What connection type does it use?", "answer": "A 1/8\" NPT thread for tube connections, alongside a standard single manifold." },
+            { "question": "Does it support pressure and ventilation monitoring?", "answer": "Yes, dual ports on the head support both pressure measurement and air ventilation." },
+            { "question": "Does it support double-sided coating?", "answer": "Yes, when used on the FOM moduloR2R machine." },
+            { "question": "How is the SD 200 different from the SD 100?", "answer": "SD 200 covers a wider format (10-200 mm vs. 1-100 mm), uses corrosion-resistant 1.4404 stainless steel, and is not compatible with FOM nanoRC, unlike SD 100 which is universally compatible." },
+            { "question": "What is the price of the FOM SD 200 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the machine compatibility and configuration needed." },
+            { "question": "Who is the authorized distributor of the FOM SD 200 in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM SD 200 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FOM SD 200 in India from Inkarp",
+            "description": "Share the target width, precursor type, and FOM machine, and the right SD 200 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your target width, precursor chemistry, and machine details, then confirm the right SD 200 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "widthDetails", "label": "Target coating width", "type": "text", "required": false },
+              { "key": "machineDetails", "label": "FOM coating machine and precursor chemistry", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right SD 200 configuration", "body": "Share the target coating width, precursor chemistry, and which FOM machine the head will run on, and the right SD 200 configuration gets confirmed from there, including compatibility verification against nanoRC exclusion." },
+              { "title": "Confirm corrosion resistance fit", "body": "Share the precursor chemistry and cleaning frequency expected, and confirmation on how SD 200's material holds up against it gets sent directly." },
+              { "title": "Confirm the pressure and ventilation setup", "body": "Share the current pressure monitoring and ventilation setup in use, and how SD 200's dual-port design integrates with it gets confirmed directly." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "10 to 200 mm wide. Corrosion-resistant. Built for nearly every FOM machine.",
+            "heroLead": "An extra-large format shouldn't come with corrosion risk or compromised flatness. FOM SD 200 is machined from stainless steel 1.4404 and chemically passivated for genuine corrosion resistance, compatible with nearly every FOM coating machine, FOM nanoRC being the one exception. Coating width spans 10 to 200 mm, viscosity compatibility runs 1 cP to over 100,000 cPs at 25°C, and flatness tolerance holds to ≤ 5 μm across the entire surface. A single manifold, dual ports for pressure measurement and air ventilation, and a 1/8\" NPT thread for tube connection round out a robust yet lightweight design built for efficient, reliable coating at this larger scale.",
+            "stats": [
+              { "value": "10 to 200 mm", "label": "Coating width range" },
+              { "value": "1 cP to 100,000+ cPs", "label": "Viscosity compatibility at 25°C" },
+              { "value": "≤ 5 μm", "label": "Flatness tolerance, entire surface" },
+              { "value": "Stainless steel 1.4404", "label": "Chemically passivated for corrosion resistance" },
+              { "value": "Compatible with nearly all FOM machines", "label": "FOM nanoRC excluded" },
+              { "value": "1/8\" NPT", "label": "Standard tube connection thread" },
+              { "value": "Dual ports", "label": "Pressure measurement and air ventilation" },
+              { "value": "Double-sided coating", "label": "Supported on FOM moduloR2R" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FOM SD 200 product information: coating width, corrosion-resistant material, and precision flow control.",
+                "body": [
+                  "FOM SD 200 is a versatile stainless-steel slot-die head crafted for seamless compatibility with nearly all FOM coating machines, with FOM nanoRC as the sole exception.",
+                  "Coating width covers 10 to 200 mm, positioning the head for extra-large format coating work.",
+                  "Viscosity compatibility spans 1 cP up to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head.",
+                  "Flatness tolerance holds to ≤ 5 μm across the entire surface, guaranteeing uniform, precise coatings at this larger scale.",
+                  "The head is made from stainless steel 1.4404 and chemically passivated, ensuring excellent corrosion resistance for demanding or aggressive precursor chemistries.",
+                  "A standard single manifold design keeps flow architecture straightforward, while dual ports support pressure measurement and air ventilation directly on the head.",
+                  "A 1/8\" NPT thread handles tube connections, a widely available standard fitting rather than a proprietary connector.",
+                  "The robust yet lightweight design simplifies assembly, disassembly, and maintenance even at this extra-large format.",
+                  "Double-sided coating is supported when used on the FOM moduloR2R machine.",
+                  "A lightweight, high-quality protective flight case ships with the head for shipping and storage."
+                ],
+                "cards": [
+                  { "title": "10-200 mm coating width", "description": "Extra-large format film coating" },
+                  { "title": "1.4404 passivated stainless steel", "description": "Genuine corrosion resistance" },
+                  { "title": "≤ 5 μm flatness tolerance", "description": "Uniform coatings across the full surface" },
+                  { "title": "Dual ports, 1/8\" NPT", "description": "Direct pressure monitoring and standard tube fitting" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "FOM Technologies FOM SD 200 Slot-Die Coating Head, Steel Series" },
+                  { "title": "Coating width", "description": "10-200 mm" },
+                  { "title": "Viscosity range", "description": "1 cP to 100,000+ cPs at 25°C" },
+                  { "title": "Flatness tolerance", "description": "≤ 5 μm, entire surface" },
+                  { "title": "Material", "description": "Stainless steel 1.4404, chemically passivated" },
+                  { "title": "Machine compatibility", "description": "Nearly all FOM coating machines, excluding FOM nanoRC" },
+                  { "title": "Connections", "description": "1/8\" NPT thread, single manifold, dual ports (pressure/ventilation)" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FOM SD 200 applications: batteries, fuel cells, photovoltaics, and printed electronics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FOM SD 200 technical specifications: coating width, viscosity range, material, and connections."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built to Resist Corrosion at Scale",
+                "title": "Built to Resist Corrosion at Scale",
+                "body": [
+                  "A larger coating head sees more contact area, more cleaning cycles, and often more aggressive precursor chemistry over its working life, all factors that make corrosion resistance genuinely matter rather than being a nice-to-have.",
+                  "FOM SD 200 is machined from stainless steel 1.4404 and chemically passivated, a combination built specifically to hold up against corrosive contact over repeated use.",
+                  "That resistance doesn't trade off against precision: flatness tolerance still holds to ≤ 5 μm across the entire surface, so corrosion resistance and coating uniformity aren't competing priorities on this head."
+                ],
+                "utilityChecklist": [
+                  { "label": "Long-term durability against aggressive precursor chemistries", "value": "Stainless steel 1.4404, chemically passivated" },
+                  { "label": "Uniform coatings despite the larger format", "value": "≤ 5 μm flatness tolerance across the full surface" },
+                  { "label": "A head that holds up to frequent cleaning cycles", "value": "Corrosion-resistant material built for repeated use" }
+                ],
+                "disclaimer": "Share the precursor chemistry and cleaning frequency expected, and confirmation on how SD 200's material holds up against it gets sent directly."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "One Manifold, Full Process Control",
+                "title": "One Manifold, Full Process Control",
+                "description": "Monitoring pressure and managing air during a coating run usually means bolting on separate hardware. FOM SD 200 builds that directly into the head with dual ports for pressure measurement and air ventilation.",
+                "cards": [
+                  { "title": "Direct, on-head pressure monitoring", "description": "Dedicated pressure measurement port" },
+                  { "title": "Managed air ventilation during coating", "description": "Dedicated air ventilation port" },
+                  { "title": "Standard, widely available tube fittings", "description": "1/8\" NPT thread connection" },
+                  { "title": "No separate hardware bolted on", "description": "A standard single manifold keeps the internal flow path simple, avoiding unnecessary complexity even at this larger format" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FOM SD 200 documentation: technical specifications and FAQ.",
+                "cards": [
+                  { "title": "FOM SD 200 Technical Specifications", "description": "Available on request" },
+                  { "title": "FOM SD 200 FAQ", "description": "Available on request" },
+                  { "title": "Machine Compatibility Guide (Including nanoRC Exclusion)", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FOM SD 200 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Extra-large format coating from 10 to 200 mm, built from corrosion-resistant stainless steel for demanding chemistries. Share the target width, precursor type, and FOM machine, and the right SD 200 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "FOM SD 300 | Slot-Die Coating Heads Steel Series",
+          "slug": "fom-sd-300-slot-die-coating-heads-steel-series",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+          "imageAlt": "FOM SD 300 Slot-Die Coating Heads Steel Series - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/fom-sd-300-slot-die-coating-heads-steel-series",
+          "breadcrumbPath": "Home > Products > Slot-Die Coating Heads (Steel Series) > FOM SD 300 | Slot-Die Coating Heads Steel Series",
+          "h1": "FOM SD 300 | Slot-Die Coating Heads Steel Series",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Large-area coating shouldn't mean a bulky, hard-to-handle head that fights the operator at every step. FOM SD 300 is built from resilient, chemically passivated stainless steel 1.4404, engineered lightweight for genuine maneuverability even at its largest working width.",
+
+          "features": [
+            "Self-Standing Lip Protection: Aids handling and supports manufacturing processes without extra propping.",
+            "Integrated Pressure Gauge: Enhances functionality with built-in process visibility.",
+            "Custom Shim and Meniscus Guide Designs: Tailors the head precisely to specific film applications.",
+            "Chemically Passivated Stainless Steel 1.4404: Provides superior corrosion resistance across repeated use.",
+            "Engineered for Effortless Disassembly and Cleaning: Simplifies maintenance despite the larger format.",
+            "Adaptable Meniscus Guide Configuration: Runs with or without a meniscus guide, depending on the application.",
+            "Precise FOM Alignment Design: Ensures reliable shim and meniscus guide positioning every time.",
+            "Innovative Lightweight Materials: Allows easy handling and maneuvering without compromising stability or precision."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "FOM Technologies FOM SD 300 Slot-Die Coating Head" },
+            { "label": "Category", "value": "Slot-Die Coating Heads (Steel Series)" },
+            { "label": "Material", "value": "Stainless steel 1.4404, chemically passivated" },
+            { "label": "Coating Width", "value": "10 to 300 mm" },
+            { "label": "Viscosity Compatibility", "value": "1 cP to over 100,000 cPs at 25°C" },
+            { "label": "Flatness Tolerance", "value": "≤ 5 μm across entire surface" },
+            { "label": "Manifold", "value": "Standard single manifold" },
+            { "label": "Ports", "value": "Dual, for pressure measurement and air ventilation" },
+            { "label": "Pressure Gauge", "value": "Integrated" },
+            { "label": "Tube Connection", "value": "1/8\" NPT thread" },
+            { "label": "Machine Compatibility", "value": "FOM arcRC, FOM alphaSC, FOM alphaR2R, FOM sigmaR2R, FOM moduloR2R" },
+            { "label": "Double-Sided Coating", "value": "Supported on FOM moduloR2R" },
+            { "label": "Included", "value": "Lightweight protective flight case" }
+          ],
+
+          "applications": [
+            "Battery Slurries and Battery Production: Handles high-viscosity slurries up to 100,000+ cPs at large-area format",
+            "PEM and Hydrogen Fuel Cells: Wide-format precision coating for functional layers",
+            "OPV/Photovoltaic Cells and Solar Panel Technology: Uniform coating with ≤ 5 μm flatness at up to 300 mm",
+            "OLED and Perovskite Films: Precise flow control for sensitive functional materials",
+            "Transparent Conductive Foils: Cost-effective large-area coating",
+            "Printed Electronics and Biosensors: Custom shim designs support specialized film requirements"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Machine Compatibility" },
+            { "id": "planner", "label": "Custom Shim & Guide" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Cost Comparison" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Cost-Effective Scale" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What width, viscosity, and FOM machine does the process need?",
+            "description": "Enter the target coating width and select the FOM machine, and confirm SD 300 compatibility.",
+            "fields": [
+              {
+                "key": "fomMachine",
+                "label": "FOM coating machine",
+                "options": [
+                  { "val": "arcRC", "label": "arcRC" },
+                  { "val": "alphaSC", "label": "alphaSC" },
+                  { "val": "alphaR2R", "label": "alphaR2R" },
+                  { "val": "sigmaR2R", "label": "sigmaR2R" },
+                  { "val": "moduloR2R", "label": "moduloR2R" }
+                ]
+              },
+              {
+                "key": "coatingWidthTarget",
+                "label": "Coating width target",
+                "options": [
+                  { "val": "up-to-300mm", "label": "Up to 300 mm" },
+                  { "val": "wider", "label": "Wider than 300 mm" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "coatingWidthTarget": "wider" }, "title": "SD 300 Is the Widest Steel Series Format", "body": "FOM SD 300 is the widest format in the Steel Series lineup — for custom formats beyond 300 mm, share your requirement and Inkarp will confirm available options.", "tags": ["Widest Steel Series Format"] },
+              { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which of the five compatible FOM machines (arcRC, alphaSC, alphaR2R, sigmaR2R, or moduloR2R) the head will run on, and Inkarp will confirm the right SD 300 configuration.", "tags": ["5 Compatible FOM Machines"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "custom-shim-guide-configurator",
+              "eyebrow": "Custom Shim and Guide Configurator",
+              "title": "Does the application need a custom shim or meniscus guide?",
+              "description": "Select the film application, and see the recommended custom shim and guide setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Application type", "choices": "Battery slurry; PV; Printed electronics; Other" },
+                { "title": "Meniscus guide preference", "choices": "With meniscus guide; Without meniscus guide; Custom meniscus guide" },
+                { "title": "Stripe patterning need", "choices": "Continuous; Patterned" }
+              ],
+              "disclaimer": "Recommends custom shim thickness and guide setup, then routes to an application-specific quotation."
+            }
+          ],
+
+          "configWizard": {
+            "title": "How does SD 300 compare on cost at large-area scale?",
+            "description": "Enter the target coating area and current setup cost, and see how SD 300 compares.",
+            "steps": [
+              {
+                "key": "currentLargeFormatHead",
+                "question": "Is a large-format head currently in use?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "currentPressureMonitoring",
+                "question": "What's the current pressure monitoring setup?",
+                "options": [
+                  { "val": "integrated", "label": "Integrated" },
+                  { "val": "external", "label": "External" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Estimates cost efficiency versus your current large-area setup, then routes to a cost-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FOM SD 300 industries: battery manufacturing, fuel cell development, and photovoltaic research.",
+            "industries": [
+              { "name": "Battery Electrode Manufacturing", "useCase": "Coating high-viscosity electrode slurries at large-area format", "consideration": "Corrosion-resistant material supports demanding slurry chemistries" },
+              { "name": "Fuel Cell Development", "useCase": "PEM and hydrogen fuel cell functional layer coating", "consideration": "Wide-format coating for larger membrane samples" },
+              { "name": "Photovoltaic and Perovskite Research", "useCase": "OPV, solar panel, and perovskite film coating", "consideration": "≤ 5 μm flatness supports demanding film uniformity at scale" },
+              { "name": "Printed Electronics and Biosensors", "useCase": "Lab-on-a-chip and biosensor film deposition", "consideration": "Custom shim designs support specialized film requirements" }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Comparison",
+            "title": "Method Comparison",
+            "description": "FOM SD 300 comparison: SD 300 versus SD 200.",
+            "columns": [
+              { "label": "FOM SD 200", "highlight": false },
+              { "label": "FOM SD 300", "highlight": true }
+            ],
+            "rows": [
+              { "feature": "Coating Width", "values": ["10-200 mm", "10-300 mm"] },
+              { "feature": "Machine Compatibility", "values": ["Nearly all FOM machines, excludes nanoRC", "arcRC, alphaSC, alphaR2R, sigmaR2R, moduloR2R"] },
+              { "feature": "Handling Design", "values": ["Standard", "Self-standing lip protection"] },
+              { "feature": "Pressure Monitoring", "values": ["Dual ports", "Dual ports plus integrated gauge"] },
+              { "feature": "Best For", "values": ["Extra-large format with broad machine compatibility", "Widest format with self-standing handling and cost efficiency"] },
+              { "feature": "Choose When", "values": ["The application needs broad FOM machine compatibility", "The widest format and easiest large-area handling matter most"] }
+            ],
+            "disclaimer": "Both heads share the same 1.4404 passivated stainless steel and ≤ 5 μm flatness tolerance. The difference is coating width, machine compatibility, and handling features."
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows self-standing handling and coating uniformity on real precursor materials" },
+              { "title": "Configuration Assessment", "description": "Confirms width, viscosity, and machine compatibility for the application" },
+              { "title": "Installation Support", "description": "Supports mounting and first-run checks on the target FOM machine" },
+              { "title": "Operator Training", "description": "Builds confidence with assembly, disassembly, and cleaning" },
+              { "title": "Preventive Maintenance", "description": "Maintains flatness tolerance, pressure gauge, and connection integrity" },
+              { "title": "Spares and Accessories", "description": "Supplies custom shims, meniscus guides, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the FOM SD 300 used for?", "answer": "It's a stainless-steel slot-die coating head for large-area coating from 10 to 300 mm, used across batteries, fuel cells, photovoltaics, and printed electronics." },
+            { "question": "Which FOM machines is the SD 300 compatible with?", "answer": "FOM arcRC, FOM alphaSC, FOM alphaR2R, FOM sigmaR2R, and FOM moduloR2R." },
+            { "question": "What viscosity range does it support?", "answer": "1 cP to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head." },
+            { "question": "What material is the head made from?", "answer": "Stainless steel 1.4404, chemically passivated for superior corrosion resistance." },
+            { "question": "What does the self-standing feature actually do?", "answer": "Lip protection on the slot-die lets the head rest securely on its own during handling and manufacturing, without needing to be propped or held." },
+            { "question": "Does it include a pressure gauge?", "answer": "Yes, an integrated pressure gauge is built directly into the head for direct process visibility." },
+            { "question": "How flat is the coating head internally?", "answer": "Flatness tolerance holds to ≤ 5 μm across the entire surface." },
+            { "question": "Does it support double-sided coating?", "answer": "Yes, when used on the FOM moduloR2R machine." },
+            { "question": "Can custom shim and meniscus guide designs be ordered?", "answer": "Yes, custom shim and meniscus guide designs are available to tailor the head to specific applications." },
+            { "question": "How is the SD 300 different from the SD 200?", "answer": "SD 300 covers a wider format (10-300 mm vs. 10-200 mm), adds self-standing lip protection and an integrated pressure gauge, and is compatible with a named set of FOM machines rather than nearly all FOM machines excluding nanoRC." },
+            { "question": "What is the price of the FOM SD 300 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the machine compatibility and shim configuration needed." },
+            { "question": "Who is the authorized distributor of the FOM SD 300 in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM SD 300 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FOM SD 300 in India from Inkarp",
+            "description": "Share the target width, precursor viscosity, and FOM machine, and the right SD 300 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your target width, precursor viscosity, and machine details, then confirm the right SD 300 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "widthDetails", "label": "Target coating width", "type": "text", "required": false },
+              { "key": "machineDetails", "label": "FOM coating machine and precursor viscosity", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right SD 300 configuration", "body": "Share the target coating width, precursor viscosity, and which of the five compatible FOM machines the head will run on, and the right SD 300 configuration gets confirmed from there." },
+              { "title": "Confirm the cost-efficiency fit", "body": "Share the target coating area and production volume, and how SD 300's cost profile compares to the current setup gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports mounting and first-run checks on the target FOM machine." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "10 to 300 mm wide. Self-standing. Built for large-area, cost-effective coating.",
+            "heroLead": "Large-area coating shouldn't mean a bulky, hard-to-handle head that fights the operator at every step. FOM SD 300 is built from resilient, chemically passivated stainless steel 1.4404, engineered lightweight for genuine maneuverability even at its largest working width. Coating width spans 10 to 300 mm, viscosity compatibility runs 1 cP to over 100,000 cPs at 25°C, and flatness tolerance holds to ≤ 5 μm across the entire surface. Lip protection on the slot-die gives it a self-standing feature that aids handling during manufacturing, and an integrated pressure gauge adds direct process visibility, all built for cost-effective large-area coating.",
+            "stats": [
+              { "value": "10 to 300 mm", "label": "Coating width range" },
+              { "value": "1 cP to 100,000+ cPs", "label": "Viscosity compatibility at 25°C" },
+              { "value": "≤ 5 μm", "label": "Flatness tolerance, entire surface" },
+              { "value": "Stainless steel 1.4404", "label": "Chemically passivated for corrosion resistance" },
+              { "value": "5 machines", "label": "Compatible with arcRC, alphaSC, alphaR2R, sigmaR2R, moduloR2R" },
+              { "value": "Self-standing", "label": "Lip protection on the slot-die" },
+              { "value": "Integrated", "label": "Pressure gauge built in" },
+              { "value": "Double-sided coating", "label": "Supported on FOM moduloR2R" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FOM SD 300 product information: coating width, self-standing design, and large-area cost efficiency.",
+                "body": [
+                  "FOM SD 300 is an advanced stainless-steel slot-die head designed for seamless integration with FOM arcRC, FOM alphaSC, FOM alphaR2R, FOM sigmaR2R, and FOM moduloR2R.",
+                  "Coating width covers 10 to 300 mm, the widest format in the Steel Series lineup.",
+                  "Viscosity compatibility spans 1 cP up to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head.",
+                  "Flatness tolerance holds to ≤ 5 μm across the entire surface, delivering uniform, precise coatings at this large-area format.",
+                  "The head is constructed from stainless steel 1.4404 and chemically passivated, offering superior corrosion resistance.",
+                  "A standard single manifold, dual ports for pressure measurement and air ventilation, and a 1/8\" NPT thread for tube connections round out the process-control hardware.",
+                  "Lip protection on the slot-die supports a genuine self-standing feature, aiding handling and manufacturing processes rather than requiring the head to be propped or held during setup.",
+                  "An integrated pressure gauge enhances functionality, giving direct process visibility without external instrumentation.",
+                  "Custom shim and meniscus guide designs are available, and the head adapts with or without a meniscus guide for versatile coating applications.",
+                  "Double-sided coating is supported when used on the FOM moduloR2R machine.",
+                  "Built with innovative lightweight materials, the head handles and maneuvers easily without compromising stability or precision, positioning it as a cost-effective solution for large-area coatings."
+                ],
+                "cards": [
+                  { "title": "10-300 mm coating width", "description": "Widest format in the Steel Series" },
+                  { "title": "Self-standing lip protection", "description": "Easier handling during setup and production" },
+                  { "title": "Integrated pressure gauge", "description": "Direct process visibility, no external gear needed" },
+                  { "title": "Cost-effective large-area coating", "description": "Lightweight design without sacrificing precision" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "FOM Technologies FOM SD 300 Slot-Die Coating Head, Steel Series" },
+                  { "title": "Coating width", "description": "10-300 mm" },
+                  { "title": "Viscosity range", "description": "1 cP to 100,000+ cPs at 25°C" },
+                  { "title": "Flatness tolerance", "description": "≤ 5 μm, entire surface" },
+                  { "title": "Material", "description": "Stainless steel 1.4404, chemically passivated" },
+                  { "title": "Machine compatibility", "description": "FOM arcRC, alphaSC, alphaR2R, sigmaR2R, moduloR2R" },
+                  { "title": "Connections", "description": "1/8\" NPT thread, single manifold, dual ports, integrated pressure gauge" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FOM SD 300 applications: batteries, fuel cells, photovoltaics, and printed electronics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FOM SD 300 technical specifications: coating width, viscosity range, material, and machine compatibility."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built to Stand and Handle Itself",
+                "title": "Built to Stand and Handle Itself",
+                "body": [
+                  "Large-format slot-die heads are typically awkward to set down, prop, or reposition mid-process, a real handling problem at 300 mm width. FOM SD 300 solves that directly with lip protection built into the slot-die itself.",
+                  "That lip protection supports a genuine self-standing feature, letting the head rest securely during manufacturing processes without needing to be held or braced.",
+                  "Innovative lightweight materials carry that handling advantage further, allowing easy maneuvering without compromising the stability or precision the head needs to deliver ≤ 5 μm flatness."
+                ],
+                "utilityChecklist": [
+                  { "label": "A head that can rest securely mid-process", "value": "Self-standing lip protection" },
+                  { "label": "Easy repositioning at large format", "value": "Lightweight, maneuverable construction" },
+                  { "label": "No stability trade-off for that lighter handling", "value": "≤ 5 μm flatness tolerance maintained" }
+                ],
+                "disclaimer": "Share the typical handling and setup routine for the coating line, and how SD 300's self-standing design fits that workflow gets confirmed directly."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Cost-Effective at Large-Area Scale",
+                "title": "Cost-Effective at Large-Area Scale",
+                "description": "Large-area coating heads often carry a steep cost premium, both to acquire and to run, as width scales up. FOM SD 300 is positioned specifically as a cost-effective solution for exactly that large-area coating need.",
+                "cards": [
+                  { "title": "Large-area coating without a steep cost premium", "description": "Cost-effective large-area coating design" },
+                  { "title": "Precise adaptation without extra hardware cost", "description": "Custom shim and meniscus guide options" },
+                  { "title": "No separate pressure monitoring hardware", "description": "Integrated pressure gauge" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FOM SD 300 documentation: technical specifications and FAQ.",
+                "cards": [
+                  { "title": "FOM SD 300 Technical Specifications", "description": "Available on request" },
+                  { "title": "FOM SD 300 FAQ", "description": "Available on request" },
+                  { "title": "Machine Compatibility Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FOM SD 300 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "The widest format in the Steel Series, self-standing and cost-effective for large-area coating. Share the target width, precursor viscosity, and FOM machine, and the right SD 300 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "FOM SD 500 | Slot-Die Coating Heads Steel Series",
+          "slug": "fom-sd-500-slot-die-coating-heads-steel-series",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+          "imageAlt": "FOM SD 500 Slot-Die Coating Heads Steel Series - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/fom-sd-500-slot-die-coating-heads-steel-series",
+          "breadcrumbPath": "Home > Products > Slot-Die Coating Heads (Steel Series) > FOM SD 500 | Slot-Die Coating Heads Steel Series",
+          "h1": "FOM SD 500 | Slot-Die Coating Heads Steel Series",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Large-area coating shouldn't mean sacrificing the precision you'd expect at a smaller width. FOM SD 500 is built to hold ≤ 5 µm flatness tolerance across its full surface, at the widest format in the standard steel range.",
+
+          "features": [
+            "≤ 5 µm Flatness Tolerance: Holds uniform coating quality across the full surface, even at the widest 500 mm format.",
+            "10 to 500 mm Coating Width: Adjustable within a single head, no separate hardware needed for narrower runs.",
+            "1 cP to Over 100,000 cPs Viscosity Range: Handles thin inks through heavy battery slurries on the same head.",
+            "Chemically Passivated Stainless Steel 1.4404: Delivers exceptional corrosion resistance across varied chemistries and repeated use.",
+            "Self-Standing Lip Protection: Supports easier handling and setup during manufacturing.",
+            "Meniscus Guide Flexibility: Works with or without a meniscus guide, adapting to different coating applications.",
+            "Integrated Pressure Gauge: Enhances functional monitoring directly on the head.",
+            "Double-Sided Coating Support (FOM moduloR2R): Enables double-sided coating applications on compatible machines.",
+            "Effortless Disassembly and Cleaning: Engineered specifically for fast, reliable assembly, disassembly, and cleaning.",
+            "Lightweight, Portable Construction: Integrated handle and innovative lightweight materials support easy handling without compromising stability."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "FOM Technologies FOM SD 500 Slot-Die Coating Head, Steel Series" },
+            { "label": "Category", "value": "Slot-Die Coating Heads, Steel Series" },
+            { "label": "Coating Width", "value": "10 to 500 mm" },
+            { "label": "Flatness Tolerance", "value": "≤ 5 µm across the full surface" },
+            { "label": "Viscosity Range", "value": "1 cP to over 100,000 cPs at 25°C" },
+            { "label": "Material", "value": "Stainless steel 1.4404, chemically passivated" },
+            { "label": "Manifold", "value": "Standard single manifold" },
+            { "label": "Ports", "value": "Dual ports, pressure measurement and air ventilation" },
+            { "label": "Pressure Gauge", "value": "Integrated" },
+            { "label": "Tube Connection", "value": "1/8\" NPT thread" },
+            { "label": "Compatible Machines", "value": "FOM alphaSC, FOM alphaR2R, FOM moduloR2R" },
+            { "label": "Double-Sided Coating", "value": "Supported on FOM moduloR2R" },
+            { "label": "Included Accessories", "value": "Protective flight case for shipping and storage" }
+          ],
+
+          "applications": [
+            "Battery Slurries and Battery Production: Handles heavy slurry viscosities up to over 100,000 cPs at full production width",
+            "PEM and Hydrogen Fuel Cells: Uniform, wide-format coating for functional fuel cell layers",
+            "OPV and Photovoltaic Cells: Precision flatness supports consistent active layer deposition",
+            "Solar Panel Technology: Large-area coating suited to production-relevant solar formats",
+            "OLED and Perovskite Devices: ≤ 5 µm tolerance supports demanding thin-film uniformity",
+            "Transparent Conductive Foils: Wide coating width suits large-format conductive film production",
+            "Printed Electronics and Biosensors: Adjustable width range fits both large panels and smaller device formats",
+            "Power-to-X Films: Broad viscosity range accommodates varied Power-to-X formulation types"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Width, Viscosity & Machine" },
+            { "id": "planner", "label": "Setup Builder" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "benefits", "label": "Assembly & Portability" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What coating width and viscosity does your process need?",
+            "description": "Enter your target width and formulation viscosity, and see whether FOM SD 500 or a narrower head fits.",
+            "fields": [
+              {
+                "key": "fomMachine",
+                "label": "Machine compatibility",
+                "options": [
+                  { "val": "alphaSC", "label": "alphaSC" },
+                  { "val": "alphaR2R", "label": "alphaR2R" },
+                  { "val": "moduloR2R", "label": "moduloR2R" }
+                ]
+              },
+              {
+                "key": "widthNeed",
+                "label": "Coating width need",
+                "options": [
+                  { "val": "need-full-width", "label": "Need up to 500 mm" },
+                  { "val": "narrower-ok", "label": "A narrower width would work too" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "widthNeed": "narrower-ok" }, "title": "A Narrower Steel Series Head May Fit", "body": "If the full 500 mm width isn't needed, FOM SD 25, SD 50, SD 100, or SD 200 may be a simpler, more cost-effective fit.", "tags": ["Consider SD 25 / SD 50 / SD 100 / SD 200"] },
+              { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which FOM coating machine (alphaSC, alphaR2R, or moduloR2R) the head will run on, and Inkarp will confirm the right FOM SD 500 configuration.", "tags": ["3 Compatible FOM Machines"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "meniscus-guide-coating-setup-builder",
+              "eyebrow": "Meniscus Guide and Coating Setup Builder",
+              "title": "What does your coating application require?",
+              "description": "Select your application type and machine, and see the recommended setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Application type", "choices": "Battery; Fuel cell; Photovoltaic; Printed electronics" },
+                { "title": "Meniscus guide need", "choices": "With meniscus guide; Without meniscus guide" },
+                { "title": "Double-sided coating", "choices": "Yes (FOM moduloR2R); No" }
+              ],
+              "disclaimer": "Recommends the right shim, guide, and machine configuration, then routes to a full-setup quotation."
+            }
+          ],
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Industries using FOM SD 500 include battery manufacturing, fuel cell development, and solar panel production.",
+            "industries": [
+              { "name": "Battery Manufacturing", "useCase": "Coating electrode slurries at production-relevant width", "consideration": "Viscosity range up to 100,000+ cPs handles heavy battery slurries directly" },
+              { "name": "Fuel Cell Development", "useCase": "Producing PEM and hydrogen fuel cell membrane layers", "consideration": "≤ 5 µm flatness supports demanding membrane uniformity requirements" },
+              { "name": "Solar Panel Production", "useCase": "Coating large-area photovoltaic and solar films", "consideration": "500 mm width suits production-scale solar panel formats" },
+              { "name": "Printed Electronics Manufacturing", "useCase": "Producing conductive foils and printed biosensor devices", "consideration": "Adjustable 10-500 mm width covers both large panels and smaller devices" },
+              { "name": "Corrosive Chemistry Research", "useCase": "Working with formulations that stress standard coating heads", "consideration": "Chemically passivated stainless steel 1.4404 resists corrosion over repeated use" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows coating uniformity and flatness performance on your own formulation" },
+              { "title": "Configuration Assessment", "description": "Confirms the right width, shim, and meniscus guide setup for your application" },
+              { "title": "Installation Support", "description": "Supports mounting onto your FOM coating machine and first-run checks" },
+              { "title": "Operator Training", "description": "Gets your team confident with disassembly, cleaning, and reassembly" },
+              { "title": "Preventive Maintenance", "description": "Maintains flatness precision and pressure gauge performance" },
+              { "title": "Spares and Accessories", "description": "Supplies shims, meniscus guides, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is FOM SD 500 used for?", "answer": "FOM SD 500 is a stainless-steel slot-die coating head used for precise, uniform, non-contact thin-film deposition at coating widths up to 500 mm, across applications like battery slurries, fuel cells, and photovoltaics." },
+            { "question": "What coating width does FOM SD 500 support?", "answer": "It supports coating widths from 10 to 500 mm within a single head." },
+            { "question": "What flatness tolerance does FOM SD 500 hold?", "answer": "It holds a flatness tolerance of ≤ 5 µm across its entire surface, ensuring uniform coatings even at the widest format." },
+            { "question": "What viscosity range can FOM SD 500 handle?", "answer": "It handles viscosities from 1 cP up to over 100,000 cPs at 25°C, covering thin inks through heavy battery slurries." },
+            { "question": "Which FOM coating machines is FOM SD 500 compatible with?", "answer": "It's compatible with FOM alphaSC, FOM alphaR2R, and FOM moduloR2R coating machines." },
+            { "question": "Can FOM SD 500 be used for double-sided coating?", "answer": "Yes, double-sided coating applications are supported specifically on the FOM moduloR2R." },
+            { "question": "What material is FOM SD 500 made from?", "answer": "It's constructed from chemically passivated stainless steel 1.4404, offering exceptional corrosion resistance." },
+            { "question": "Is FOM SD 500 easy to disassemble and clean?", "answer": "Yes, it's engineered specifically for effortless disassembly, assembly, and cleaning." },
+            { "question": "Does FOM SD 500 work with a meniscus guide?", "answer": "Yes, the design works with or without a meniscus guide, adapting to different coating applications." },
+            { "question": "Is a smaller or PEEK slot-die head available?", "answer": "Yes, FOM Technologies offers a full Steel Series in smaller widths (SD 25, SD 50, SD 100, SD 200) as well as a PEEK Series for different material requirements." },
+            { "question": "What is the price of FOM SD 500 in India?", "answer": "The price depends on the shim, meniscus guide, and accessory configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
+            { "question": "Who is the authorized distributor of FOM SD 500 in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM SD 500 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get FOM SD 500 in India from Inkarp",
+            "description": "Tell us your coating width and formulation viscosity, and Inkarp will confirm the right FOM SD 500 configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your coating width and viscosity details, then confirm the right FOM SD 500 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "widthDetails", "label": "Target coating width", "type": "text", "required": false },
+              { "key": "machineDetails", "label": "FOM coating machine and formulation viscosity", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right FOM SD 500 configuration", "body": "Tell our team your target coating width, formulation viscosity, and which FOM coating machine you're running, and Inkarp will confirm the right FOM SD 500 configuration." },
+              { "title": "Confirm the workflow fit", "body": "Tell our team about your typical changeover frequency and handling setup, and Inkarp will confirm how FOM SD 500 fits your workflow." },
+              { "title": "Installation and first-run support", "body": "Supports mounting onto your FOM coating machine and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "FOM's largest standard steel slot-die head, engineered for uniform 500 mm-wide coatings.",
+            "heroLead": "Large-area coating shouldn't mean sacrificing the precision you'd expect at a smaller width. FOM SD 500 is built to hold ≤ 5 µm flatness tolerance across its full surface, at the widest format in the standard steel range. Machined from chemically passivated stainless steel 1.4404 for exceptional corrosion resistance, it handles coating widths from 10 to 500 mm and viscosities from 1 cP up to over 100,000 cPs at 25°C, covering everything from thin inks to heavy battery slurries on one head. It's compatible with FOM alphaSC, FOM alphaR2R, and FOM moduloR2R coating machines, and its lightweight construction with an integrated handle keeps it genuinely portable across production environments without giving up stability or precision.",
+            "stats": [
+              { "value": "10 to 500 mm", "label": "Coating width range" },
+              { "value": "≤ 5 µm", "label": "Flatness tolerance" },
+              { "value": "1 cP to 100,000+ cPs", "label": "Viscosity range at 25°C" },
+              { "value": "Stainless steel 1.4404", "label": "Chemically passivated construction" },
+              { "value": "1/8\" NPT", "label": "Tube connection thread" },
+              { "value": "Dual ports", "label": "Pressure measurement and air ventilation" },
+              { "value": "3 machines", "label": "Compatible with alphaSC, alphaR2R, moduloR2R" },
+              { "value": "Lightweight", "label": "Integrated carrying handle" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FOM SD 500 product information: precision construction, machine compatibility, and maintenance design.",
+                "body": [
+                  "Flatness tolerance holds at ≤ 5 µm across the entire surface, ensuring uniform coatings even at the widest format in the standard steel series.",
+                  "Coating widths span 10 to 500 mm, adjustable within that single head rather than requiring separate hardware for narrower runs.",
+                  "Viscosity handling reaches from 1 cP up to over 100,000 cPs at 25°C, covering thin inks through heavy slurries like those used in battery production.",
+                  "Construction uses chemically passivated stainless steel 1.4404, giving exceptional corrosion resistance for repeated use across varied chemistries.",
+                  "A standard single manifold, dual ports for pressure measurement and air ventilation, and a 1/8\" NPT thread for tube connections come built into the head.",
+                  "Lip protection on the slot-die supports a self-standing feature, aiding handling during manufacturing and setup.",
+                  "The design works with or without a meniscus guide, adapting to different coating applications depending on the formulation.",
+                  "Custom shim and meniscus guide designs are supported, with precise FOM alignment design keeping shim and guide positioning reliable.",
+                  "Double-sided coating applications are supported specifically on the FOM moduloR2R.",
+                  "A lightweight, high-quality protective flight case ships with the head for shipping and storage.",
+                  "It's compatible with FOM alphaSC, FOM alphaR2R, and FOM moduloR2R coating machines."
+                ],
+                "cards": [
+                  { "title": "≤ 5 µm flatness", "description": "Uniform coating at full 500 mm width" },
+                  { "title": "1 cP to 100,000+ cPs", "description": "Thin inks through heavy slurries" },
+                  { "title": "Stainless steel 1.4404", "description": "Chemically passivated, corrosion-resistant" },
+                  { "title": "3-machine compatibility", "description": "alphaSC, alphaR2R, moduloR2R" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "FOM Technologies FOM SD 500 Slot-Die Coating Head, Steel Series" },
+                  { "title": "Coating width", "description": "10 to 500 mm" },
+                  { "title": "Flatness tolerance", "description": "≤ 5 µm" },
+                  { "title": "Viscosity range", "description": "1 cP to over 100,000 cPs at 25°C" },
+                  { "title": "Material", "description": "Stainless steel 1.4404, chemically passivated" },
+                  { "title": "Compatible machines", "description": "FOM alphaSC, FOM alphaR2R, FOM moduloR2R" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FOM SD 500 applications: battery production, fuel cells, photovoltaics, and printed electronics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FOM SD 500 technical specifications: coating width, flatness tolerance, viscosity range, and construction."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Precision Across the Widest Format",
+                "title": "Precision Across the Widest Format",
+                "body": [
+                  "Holding tight flatness tolerance gets harder as coating width increases, since even small deviations across a wider surface compound into visible film non-uniformity.",
+                  "FOM SD 500 holds ≤ 5 µm flatness across its entire surface despite being the largest standard-size head in the steel series, which is what keeps coatings uniform at the full 500 mm width rather than only at narrower settings. That precision pairs with a genuinely wide viscosity range, 1 cP up to over 100,000 cPs at 25°C, so the same head that coats a thin printed electronics ink can also handle a heavy battery slurry without needing separate hardware for each. Chemically passivated stainless steel 1.4404 construction keeps that precision intact over repeated use, resisting the corrosion that varied ink and slurry chemistries could otherwise introduce over time."
+                ],
+                "utilityChecklist": [
+                  { "label": "Uniform coating at full production width", "value": "≤ 5 µm flatness tolerance across 500 mm" },
+                  { "label": "One head for both thin and heavy formulations", "value": "1 cP to over 100,000 cPs viscosity range" },
+                  { "label": "Long-term precision across varied chemistries", "value": "Chemically passivated stainless steel 1.4404" },
+                  { "label": "Adjustable width without separate hardware", "value": "10 to 500 mm range within a single head" }
+                ],
+                "disclaimer": "Tell our team your target coating width and typical formulation viscosity, and Inkarp will confirm the right FOM SD 500 setup for your production line."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Assembly, Maintenance, and Portability",
+                "title": "Assembly, Maintenance, and Portability",
+                "description": "A slot-die head that's difficult to disassemble or clean adds friction to every changeover, and FOM SD 500 is engineered specifically to remove that friction.",
+                "cards": [
+                  { "title": "Faster changeovers between coating runs", "description": "Engineered for effortless disassembly, assembly, and cleaning" },
+                  { "title": "Safe handling without a dedicated stand", "description": "Self-standing lip protection design" },
+                  { "title": "Portability despite its large-format size", "description": "Lightweight construction with integrated handle" },
+                  { "title": "Protection during shipping and storage", "description": "Included protective flight case" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for FOM SD 500 is available on request.",
+                "cards": [
+                  { "title": "FOM SD 500 Technical Specification Sheet", "description": "Available on request" },
+                  { "title": "Steel Series Slot-Die Head Comparison Guide", "description": "Available on request" },
+                  { "title": "Machine Compatibility Guide (alphaSC, alphaR2R, moduloR2R)", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get FOM SD 500 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "FOM's largest standard steel slot-die head, holding ≤ 5 µm flatness across a full 500 mm width, from thin inks to heavy battery slurries. Tell us your coating width and formulation viscosity, and Inkarp will confirm the right FOM SD 500 configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "FOM SD 50 | Slot-Die Coating Heads Steel Series",
+          "slug": "fom-sd-50-slot-die-coating-heads-steel-series",
+          "principalImage": "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
+          "imageAlt": "FOM SD 50 Slot-Die Coating Heads Steel Series - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/fom-sd-50-slot-die-coating-heads-steel-series",
+          "breadcrumbPath": "Home > Products > Slot-Die Coating Heads (Steel Series) > FOM SD 50 | Slot-Die Coating Heads Steel Series",
+          "h1": "FOM SD 50 | Slot-Die Coating Heads Steel Series",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Stepping up from narrow lab samples to wider format testing shouldn't mean switching coating platforms entirely. FOM SD 50 is the compact stainless-steel head built to work seamlessly with every FOM coating machine, covering coating widths from 1 to 50 mm.",
+
+          "features": [
+            "Outstanding Precise and Consistent Flow Control: Delivers reliable, repeatable coating flow across the full viscosity range.",
+            "Quick and Easy Installation: Designed for fast setup on any FOM coating machine.",
+            "Flexible Shim and Stripe Patterning: Varied shim thicknesses and stripe options adapt the head to different film applications.",
+            "Lightweight Yet Durable Design: Holds structural integrity and performance without adding unnecessary weight.",
+            "Low Dead-Volume Design: Minimizes material waste during coating runs.",
+            "Adaptable Meniscus Guide Configuration: Runs with or without a meniscus guide, depending on the application.",
+            "Easy Assembly, Disassembly, and Maintenance: Keeps day-to-day operation and cleaning hassle-free.",
+            "Double-Sided Coating Support: Compatible with double-sided coating on the FOM moduloR2R machine."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "FOM Technologies FOM SD 50 Slot-Die Coating Head" },
+            { "label": "Category", "value": "Slot-Die Coating Heads (Steel Series)" },
+            { "label": "Material", "value": "Stainless steel" },
+            { "label": "Coating Width", "value": "1 to 50 mm" },
+            { "label": "Viscosity Compatibility", "value": "1 cP to over 100,000 cPs at 25°C" },
+            { "label": "Flatness Tolerance (Inside Planes)", "value": "≤ 5 μm across entire surface" },
+            { "label": "Connections", "value": "Threaded, standard and high-viscosity versions" },
+            { "label": "Machine Compatibility", "value": "Universal, all FOM coating machines" },
+            { "label": "Meniscus Guide", "value": "Optional, adaptable with or without" },
+            { "label": "Double-Sided Coating", "value": "Supported on FOM moduloR2R" },
+            { "label": "Included", "value": "Lightweight protective flight case" }
+          ],
+
+          "applications": [
+            "Battery Slurries and Battery Production: Handles high-viscosity slurries up to 100,000+ cPs",
+            "PEM and Hydrogen Fuel Cells: Wider-width precision coating for functional layers",
+            "OPV/Photovoltaic Cells and Solar Panel Technology: Uniform coating with ≤ 5 μm flatness tolerance",
+            "OLED and Perovskite Films: Precise flow control for sensitive functional materials",
+            "Transparent Conductive Foils: Consistent coating across a wider working format",
+            "Printed Electronics and Biosensors: Low dead-volume design suited to precious lab-on-a-chip materials"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Machine Compatibility" },
+            { "id": "planner", "label": "Shim & Guide Configurator" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Width & Viscosity Selector" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Fast Turnaround" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which FOM coating machine will run this head?",
+            "description": "Select the target FOM machine, and confirm compatibility, including double-sided coating support.",
+            "fields": [
+              {
+                "key": "fomMachine",
+                "label": "FOM machine",
+                "options": [
+                  { "val": "arcRC", "label": "arcRC" },
+                  { "val": "omicronR2R", "label": "omicronR2R" },
+                  { "val": "omegaR2R", "label": "omegaR2R" },
+                  { "val": "moduloR2R", "label": "moduloR2R" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "doubleSidedNeeded",
+                "label": "Double-sided coating needed",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "coatingWidthTarget",
+                "label": "Coating width target",
+                "options": [
+                  { "val": "up-to-50mm", "label": "Up to 50 mm" },
+                  { "val": "wider", "label": "Wider than 50 mm" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "doubleSidedNeeded": "yes" }, "title": "Double-Sided Coating Needs FOM moduloR2R", "body": "Double-sided coating is supported when FOM SD 50 is used on the FOM moduloR2R machine specifically.", "tags": ["FOM moduloR2R Required"] },
+              { "condition": { "coatingWidthTarget": "wider" }, "title": "A Wider Steel Series Head Fits Better", "body": "FOM SD 50 covers 1 to 50 mm — SD 100, SD 200, SD 300, or SD 500 cover wider coating widths in the Steel Series.", "tags": ["Consider SD 100+"] },
+              { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which FOM coating machine the head will run on, and Inkarp will confirm fit, including double-sided coating support if needed.", "tags": ["Universal FOM Compatibility"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "meniscus-guide-shim-configurator",
+              "eyebrow": "Meniscus Guide & Shim Configurator",
+              "title": "Does the application need a meniscus guide or a specific shim thickness?",
+              "description": "Select the film application, and see the recommended shim and guide setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Application type", "choices": "Battery slurry; PV; Printed electronics; Other" },
+                { "title": "Meniscus guide preference", "choices": "With meniscus guide; Without meniscus guide" },
+                { "title": "Stripe patterning need", "choices": "Continuous; Patterned" }
+              ],
+              "disclaimer": "Confirms recommended shim thickness and meniscus guide setup, then routes to an application-specific quotation."
+            }
+          ],
+
+          "configWizard": {
+            "title": "What width and viscosity does the coating process need?",
+            "description": "Enter the target coating width and precursor viscosity, and confirm SD 50 fits.",
+            "steps": [
+              {
+                "key": "coatingWidthTarget",
+                "question": "What coating width does the process need?",
+                "options": [
+                  { "val": "up-to-50mm", "label": "Up to 50 mm" },
+                  { "val": "wider-than-50mm", "label": "Wider than 50 mm" }
+                ]
+              },
+              {
+                "key": "connectionType",
+                "question": "What connection type is needed?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-viscosity", "label": "High-viscosity" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms SD 50 compatibility or recommends a narrower or wider Steel Series head, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FOM SD 50 industries: battery manufacturing, fuel cell development, and photovoltaic research.",
+            "industries": [
+              { "name": "Battery Electrode Manufacturing", "useCase": "Coating high-viscosity electrode slurries at wider formats", "consideration": "Handles up to 100,000+ cPs on the same head" },
+              { "name": "Fuel Cell Development", "useCase": "PEM and hydrogen fuel cell functional layer coating", "consideration": "Wider-width coating for larger membrane samples" },
+              { "name": "Photovoltaic and Perovskite Research", "useCase": "OPV, solar panel, and perovskite film coating", "consideration": "≤ 5 μm flatness supports demanding film uniformity" },
+              { "name": "Printed Electronics and Biosensors", "useCase": "Lab-on-a-chip and biosensor film deposition", "consideration": "Low dead-volume design conserves precious materials" }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Comparison",
+            "title": "Method Comparison",
+            "description": "FOM SD 50 comparison: SD 50 versus SD 25 and wider Steel Series heads.",
+            "columns": [
+              { "label": "FOM SD 25", "highlight": false },
+              { "label": "FOM SD 50", "highlight": true },
+              { "label": "FOM SD 100+", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Coating Width", "values": ["1-25 mm", "1-50 mm", "Wider formats (see individual head specs)"] },
+              { "feature": "Best For", "values": ["Narrowest-format, precision research work", "Moderate-width research and small pilot testing", "Broader pilot or production-format coatings"] },
+              { "feature": "Choose When", "values": ["Sample size is minimal and width is tightly constrained", "A step up in width is needed without moving to production scale", "Wider film formats are needed for the application"] }
+            ],
+            "disclaimer": "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity."
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows flow control and coating uniformity on real precursor materials" },
+              { "title": "Configuration Assessment", "description": "Confirms width, viscosity, and shim setup for the application" },
+              { "title": "Installation Support", "description": "Supports mounting and first-run checks on the target FOM machine" },
+              { "title": "Operator Training", "description": "Builds confidence with assembly, disassembly, and cleaning" },
+              { "title": "Preventive Maintenance", "description": "Maintains flatness tolerance and connection integrity" },
+              { "title": "Spares and Accessories", "description": "Supplies shims, meniscus guides, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the FOM SD 50 used for?", "answer": "It's a compact stainless-steel slot-die coating head for precision coating from 1 to 50 mm, used across batteries, fuel cells, photovoltaics, and printed electronics." },
+            { "question": "What viscosity range does it support?", "answer": "1 cP to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head." },
+            { "question": "How flat is the coating head internally?", "answer": "Flatness tolerance on inside planes holds to ≤ 5 μm across the entire surface, supporting uniform coatings." },
+            { "question": "Is it compatible with all FOM coating machines?", "answer": "Yes, it's designed to work seamlessly with the full FOM coating machine range." },
+            { "question": "Does it support double-sided coating?", "answer": "Yes, when used on the FOM moduloR2R machine." },
+            { "question": "Can it be used with or without a meniscus guide?", "answer": "Yes, the design adapts either way depending on the application." },
+            { "question": "How easy is the head to maintain?", "answer": "Its lightweight, sturdy design supports easy assembly, disassembly, cleaning, and maintenance." },
+            { "question": "Does it minimize material waste?", "answer": "Yes, a low dead-volume design reduces material waste during coating runs." },
+            { "question": "What connection types are available?", "answer": "Threaded connections suited to various tubing sizes, in both standard and high-viscosity versions." },
+            { "question": "How is the SD 50 different from the SD 25?", "answer": "SD 50 covers a wider coating width range, 1 to 50 mm versus SD 25's 1 to 25 mm, while sharing the same viscosity range, flatness tolerance, and machine compatibility." },
+            { "question": "What is the price of the FOM SD 50 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the shim, guide, and connection configuration needed." },
+            { "question": "Who is the authorized distributor of the FOM SD 50 in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM SD 50 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FOM SD 50 in India from Inkarp",
+            "description": "Share the target width, viscosity, and FOM machine, and the right SD 50 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your target width, viscosity, and machine details, then confirm the right SD 50 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "widthDetails", "label": "Target coating width", "type": "text", "required": false },
+              { "key": "machineDetails", "label": "FOM coating machine and precursor viscosity", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right SD 50 configuration", "body": "Share the target coating width, precursor viscosity, and which FOM machine the head will run on, and the right SD 50 configuration gets confirmed from there." },
+              { "title": "Confirm the maintenance profile fit", "body": "Share how often the lab switches formulations or coating widths, and how FOM SD 50's maintenance profile fits that pace gets confirmed directly." },
+              { "title": "Installation and first-run support", "body": "Supports mounting and first-run checks on the target FOM machine." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "1 to 50 mm wide. 1 cP to over 100,000 cPs. One compact head.",
+            "heroLead": "Stepping up from narrow lab samples to wider format testing shouldn't mean switching coating platforms entirely. FOM SD 50 is the compact stainless-steel head built to work seamlessly with every FOM coating machine, covering coating widths from 1 to 50 mm. Viscosity compatibility spans 1 cP to over 100,000 cPs at 25°C, and inside plane flatness holds to ≤ 5 μm across the entire surface, keeping coatings consistent whether the material is a thin solution or a thick slurry. A lightweight, sturdy design keeps assembly, disassembly, and maintenance fast, and the head runs across applications from battery slurries to printed biosensors.",
+            "stats": [
+              { "value": "1 to 50 mm", "label": "Coating width range" },
+              { "value": "1 cP to 100,000+ cPs", "label": "Viscosity compatibility at 25°C" },
+              { "value": "≤ 5 μm", "label": "Flatness tolerance, inside planes" },
+              { "value": "Universal", "label": "Compatible with all FOM coating machines" },
+              { "value": "Stainless steel", "label": "Compact head in the Steel Series" },
+              { "value": "Standard and high-viscosity", "label": "Threaded connection versions" },
+              { "value": "Low dead-volume", "label": "Minimizes material waste" },
+              { "value": "Double-sided coating", "label": "Supported on FOM moduloR2R" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FOM SD 50 product information: coating width, viscosity range, and precision flow control.",
+                "body": [
+                  "FOM SD 50 is a compact stainless-steel slot-die head designed to work seamlessly with all FOM coating machines.",
+                  "Coating width covers 1 to 50 mm, extending beyond the narrowest formats to a wider working range on the same platform.",
+                  "Viscosity compatibility spans 1 cP up to over 100,000 cPs at 25°C, covering thin solutions through thick slurries on the same head.",
+                  "Inside plane flatness tolerance holds to ≤ 5 μm across the entire surface, ensuring consistent coatings at the wider format.",
+                  "Threaded connections accommodate various tubing sizes, available in both standard and high-viscosity versions.",
+                  "A lightweight yet sturdy design keeps assembly, disassembly, and maintenance straightforward, without compromising structural integrity or performance.",
+                  "A low dead-volume design minimizes material waste, valuable when working with precious or expensive precursor materials.",
+                  "The head adapts with or without a meniscus guide, and precise FOM alignment design keeps shim and meniscus guide positioning reliable across setups.",
+                  "Double-sided coating is supported when used on the FOM moduloR2R machine.",
+                  "A lightweight, high-quality protective flight case ships with the head for shipping and storage."
+                ],
+                "cards": [
+                  { "title": "1-50 mm coating width", "description": "Wider-format precision film coating" },
+                  { "title": "1 cP to 100,000+ cPs", "description": "One head across thin solutions and thick slurries" },
+                  { "title": "≤ 5 μm flatness tolerance", "description": "Uniform coatings across the full surface" },
+                  { "title": "Universal machine compatibility", "description": "Drops into any FOM coating system" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "FOM Technologies FOM SD 50 Slot-Die Coating Head, Steel Series" },
+                  { "title": "Coating width", "description": "1-50 mm" },
+                  { "title": "Viscosity range", "description": "1 cP to 100,000+ cPs at 25°C" },
+                  { "title": "Flatness tolerance", "description": "≤ 5 μm, inside planes" },
+                  { "title": "Connections", "description": "Threaded, standard and high-viscosity versions" },
+                  { "title": "Compatibility", "description": "Universal across all FOM coating machines" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FOM SD 50 applications: batteries, fuel cells, photovoltaics, and printed electronics."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FOM SD 50 technical specifications: coating width, viscosity range, and flatness tolerance."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Consistent Precision at a Wider Format",
+                "title": "Consistent Precision at a Wider Format",
+                "body": [
+                  "Widening a coating format usually risks introducing flatness variation that a narrower head doesn't have to contend with. FOM SD 50 holds the line at ≤ 5 μm flatness tolerance across its entire inside surface, even at up to 50 mm.",
+                  "That precision holds across the full viscosity range the head supports, from 1 cP solutions to slurries over 100,000 cPs, so film quality doesn't shift depending on which material is running through it.",
+                  "Precise FOM alignment design keeps shim and meniscus guide positioning reliable every time the head is reassembled, not just on first setup."
+                ],
+                "utilityChecklist": [
+                  { "label": "Uniform films at a wider coating format", "value": "≤ 5 μm flatness tolerance across the full surface" },
+                  { "label": "Consistent results across different precursor viscosities", "value": "1 cP to 100,000+ cPs compatibility on one head" },
+                  { "label": "Reliable shim and guide positioning after reassembly", "value": "Precise FOM alignment design" }
+                ],
+                "disclaimer": "Share the target film thickness and precursor viscosity, and the right shim thickness and meniscus guide configuration gets confirmed against it."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built for Fast Turnaround",
+                "title": "Built for Fast Turnaround",
+                "description": "A slot-die head that's difficult to clean or reassemble slows down every formulation change, and formulation research often means changing materials often.",
+                "cards": [
+                  { "title": "Fast turnaround between formulation changes", "description": "Easy assembly, disassembly, and cleaning" },
+                  { "title": "Minimal material waste between runs", "description": "Low dead-volume design" },
+                  { "title": "No installation delay switching between machines", "description": "Universal, quick-install compatibility" },
+                  { "title": "Structural performance isn't traded for convenience", "description": "Lightweight yet sturdy design keeps assembly and maintenance simple without sacrificing durability" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FOM SD 50 documentation: technical specifications and FAQ.",
+                "cards": [
+                  { "title": "FOM SD 50 Technical Specifications", "description": "Available on request" },
+                  { "title": "FOM SD 50 FAQ", "description": "Available on request" },
+                  { "title": "Shim and Meniscus Guide Configuration Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FOM SD 50 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Precision coating from 1 to 50 mm, handling everything from thin solutions to thick slurries on one head. Share the target width, viscosity, and FOM machine, and the right SD 50 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

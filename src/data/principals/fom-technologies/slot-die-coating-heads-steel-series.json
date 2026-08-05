@@ -1765,7 +1765,7 @@
             ],
             "results": [
               { "condition": { "doubleSidedNeeded": "yes" }, "title": "Double-Sided Coating Needs FOM moduloR2R", "body": "Double-sided coating is supported when FOM SD 50 is used on the FOM moduloR2R machine specifically.", "tags": ["FOM moduloR2R Required"] },
-              { "condition": { "coatingWidthTarget": "wider" }, "title": "A Wider Steel Series Head Fits Better", "body": "FOM SD 50 covers 1 to 50 mm — SD 100, SD 200, SD 300, or SD 500 cover wider coating widths in the Steel Series.", "tags": ["Consider SD 100+"] },
+              { "condition": { "coatingWidthTarget": "wider" }, "title": "A Wider Steel Series Head Fits Better", "body": "FOM SD 50 covers 1 to 50 mm — FOM SD 100+ and wider Steel Series heads cover broader coating widths (see individual head specs).", "tags": ["Consider SD 100+"] },
               { "condition": "default", "title": "Confirm Machine Compatibility With Inkarp", "body": "Share which FOM coating machine the head will run on, and Inkarp will confirm fit, including double-sided coating support if needed.", "tags": ["Universal FOM Compatibility"] }
             ]
           },
@@ -1817,7 +1817,7 @@
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
-            "description": "FOM SD 50 industries: battery manufacturing, fuel cell development, and photovoltaic research.",
+            "description": "FOM SD 50 industries: battery manufacturing, fuel cell development, photovoltaic research, and printed electronics.",
             "industries": [
               { "name": "Battery Electrode Manufacturing", "useCase": "Coating high-viscosity electrode slurries at wider formats", "consideration": "Handles up to 100,000+ cPs on the same head" },
               { "name": "Fuel Cell Development", "useCase": "PEM and hydrogen fuel cell functional layer coating", "consideration": "Wider-width coating for larger membrane samples" },
@@ -1989,7 +1989,7 @@
                   { "title": "Fast turnaround between formulation changes", "description": "Easy assembly, disassembly, and cleaning" },
                   { "title": "Minimal material waste between runs", "description": "Low dead-volume design" },
                   { "title": "No installation delay switching between machines", "description": "Universal, quick-install compatibility" },
-                  { "title": "Structural performance isn't traded for convenience", "description": "Lightweight yet sturdy design keeps assembly and maintenance simple without sacrificing durability" }
+                  { "title": "Structural performance isn't traded for convenience", "description": "Lightweight yet sturdy design keeps assembly and maintenance simple without sacrificing durability, and universal quick-install compatibility means the head is rarely the bottleneck in a busy research schedule" }
                 ]
               },
               {

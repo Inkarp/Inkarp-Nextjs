@@ -1,0 +1,695 @@
+{
+  "principal": {
+    "slug": "chemspeed",
+    "principalName": "Chemspeed",
+    "countryOfOrigin": "Switzerland"
+  },
+  "categories": [
+    {
+      "name": "Automated Synthesis for Innovative Medicines",
+      "slug": "automated-synthesis-for-innovative-medicines",
+      "products": [
+        {
+          "name": "Chemspeed FLEX ISYNTH",
+          "slug": "flex-isynth",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
+          "imageAlt": "Chemspeed FLEX ISYNTH - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/flex-isynth",
+          "breadcrumbPath": "Home > Products > Automated Synthesis for Innovative Medicines > Chemspeed FLEX ISYNTH",
+          "h1": "Chemspeed FLEX ISYNTH",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Materials discovery keeps demanding more experiments from the same team, the same bench, the same week. FLEX ISYNTH answers that directly, a flexible, modular, fully automated platform that unlocks virtually unrestricted \"off-road\" chemistry investigation across reaction space, reagent space, and materials space.",
+
+          "features": [
+            "Disposable High-Precision Glass Reactor Arrays: Screwless, self-sealing design running reaction scales from μL to mL.",
+            "Full Unit Operation Range Per Array: Shaking, heating, cooling, reflux, vacuum, extraction, filtration, crystallization, and drying.",
+            "Proprietary Robotic Tool Exchange: Automates transitions between operations without manual handling.",
+            "Gravimetric Solid and Liquid Handling: Covers μg to g solids and mg to g / μL to mL liquids with chemistry-proven precision.",
+            "Scalable Parallel Throughput: 24, 48, 96, or more parallel reactions per run.",
+            "Integrated Online Analytics: Benchtop NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, and NIR/MIR/DLS in-line.",
+            "Integrated Online Benchtop XRD: Bruker D6 Phaser or Malvern Aeris, with sample handover station and full integration.",
+            "AUTOSUITE Drag-and-Drop Software: Fast experiment design with LIMS, ELN, and AI/ML closed-loop connectivity."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Chemspeed FLEX ISYNTH (with online XRD example configuration)" },
+            { "label": "Category", "value": "Automated Synthesis for Innovative Medicines" },
+            { "label": "Reaction Scale", "value": "μL to mL" },
+            { "label": "Throughput", "value": "24 / 48 / 96+ parallel reactions per run" },
+            { "label": "Solid Handling", "value": "μg to g" },
+            { "label": "Liquid Handling", "value": "mg to g / μL to mL" },
+            { "label": "Mixing", "value": "Shaking up to 1,000 rpm" },
+            { "label": "Temperature Range", "value": "-20°C to 150°C" },
+            { "label": "Reactor Array Operations", "value": "Mixing, heating, cooling, reflux, vacuum, inertization, evaporation, L/L extraction, filtration, solid-phase extraction, crystallization, drying" },
+            { "label": "Integrated Analytics", "value": "NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS" },
+            { "label": "Integrated XRD Options", "value": "Bruker D6 Phaser, Malvern Aeris" },
+            { "label": "Safety", "value": "Ventilated hood, conditioned operation" },
+            { "label": "Software", "value": "AUTOSUITE (experiment automation), ARKSUITE (lab orchestration)" }
+          ],
+
+          "applications": [
+            "Materials Library Synthesis (MOFs, Perovskites): Parallel synthesis at 24-96+ scale with full workflow automation",
+            "Crystallization Optimization (Active Ingredients): Integrated online XRD confirms structure without manual sampling",
+            "Reaction Screening: Full unit operation range across disposable reactor arrays",
+            "Multistep Synthesis: Deck modularity handles prep through work-up in one sequence",
+            "Solid- and Liquid-Phase Synthesis: Gravimetric handling across both phases on the same platform"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Unit Operation Coverage" },
+            { "id": "integrated-analytics-planner", "label": "Analytics Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Throughput & Scale" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Unrestricted Chemistry" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which reactor operations does the research protocol require?",
+            "description": "Select the required unit operations, and confirm reactor array coverage.",
+            "fields": [
+              {
+                "key": "thermalRange",
+                "label": "Thermal range needed",
+                "options": [
+                  { "val": "heating", "label": "Heating (up to 150°C)" },
+                  { "val": "cooling", "label": "Cooling (to -20°C)" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "processSteps",
+                "label": "Process steps needed",
+                "options": [
+                  { "val": "reflux", "label": "Reflux" },
+                  { "val": "vacuum", "label": "Vacuum" },
+                  { "val": "extraction", "label": "Extraction" },
+                  { "val": "filtration", "label": "Filtration" },
+                  { "val": "crystallization", "label": "Crystallization" },
+                  { "val": "drying", "label": "Drying" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "thermalRange": "both" }, "title": "Full Thermal Range Covered", "body": "Reactor arrays support heating up to 150°C and cooling to -20°C within the same automated sequence.", "tags": ["-20°C to 150°C"] },
+              { "condition": { "processSteps": "crystallization" }, "title": "Crystallization Is Within Reactor Array Scope", "body": "Crystallization runs alongside reflux, vacuum, extraction, filtration, and drying within the same disposable reactor array.", "tags": ["Full Unit Operation Range"] },
+              { "condition": "default", "title": "Confirm Reactor Array Coverage With Inkarp", "body": "Share the thermal range and process steps required, and Inkarp will confirm which operations run within the reactor array.", "tags": ["12 Reactor Array Operations"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What throughput and reaction scale does the research need?",
+            "description": "Select the target parallel reaction count and phase type, and see the recommended configuration.",
+            "steps": [
+              {
+                "key": "parallelReactions",
+                "question": "How many parallel reactions per run?",
+                "options": [
+                  { "val": "24", "label": "24" },
+                  { "val": "48", "label": "48" },
+                  { "val": "96", "label": "96" },
+                  { "val": "higher", "label": "Higher" }
+                ]
+              },
+              {
+                "key": "phaseType",
+                "question": "What phase type is needed?",
+                "options": [
+                  { "val": "solid-phase", "label": "Solid-phase" },
+                  { "val": "liquid-phase", "label": "Liquid-phase" },
+                  { "val": "both", "label": "Both" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Recommends the matching throughput and handling setup, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "integrated-analytics-planner",
+              "eyebrow": "Integrated Analytics Planner",
+              "title": "Which analytical techniques does the workflow need in-line?",
+              "description": "Select the required analytics, and see how they integrate with FLEX ISYNTH.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What structural analysis is needed?", "choices": "XRD (Bruker D6 Phaser); XRD (Malvern Aeris)" },
+                { "title": "What spectroscopy/chromatography is needed?", "choices": "NMR; HPLC (MS); UPLC (MS); GC (MS); UV-VIS; NIR/MIR/DLS" },
+                { "title": "What data system integration is needed?", "choices": "LIMS; ELN; AI/ML closed-loop" }
+              ],
+              "disclaimer": "Confirms the right integrated analytics package, then routes to an analytics-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "FLEX ISYNTH (Standard) vs. FLEX ISYNTH with Online XRD",
+            "description": "FLEX ISYNTH comparison: standard synthesis platform versus with integrated online XRD.",
+            "columns": [
+              { "label": "FLEX ISYNTH (Standard)" },
+              { "label": "FLEX ISYNTH with Online XRD" }
+            ],
+            "rows": [
+              { "feature": "Synthesis and Work-Up", "values": ["Fully automated", "Fully automated"] },
+              { "feature": "Structural Confirmation", "values": ["Manual, off-platform XRD", "Integrated, in-line XRD (D6 Phaser / Aeris)"] },
+              { "feature": "Best For", "values": ["Synthesis-focused workflows with separate analytical steps", "Materials and crystallization work needing immediate structural feedback"] },
+              { "feature": "Choose When", "values": ["XRD confirmation can happen as a separate step", "Synthesis-to-structure needs to run without manual transfer"] }
+            ],
+            "disclaimer": "Both configurations share the same reactor array, throughput, and gravimetric handling capabilities. The difference is whether XRD analysis runs in-line or separately."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FLEX ISYNTH industries: pharmaceutical R&D, materials science, and specialty chemicals.",
+            "industries": [
+              { "name": "Pharmaceutical R&D", "useCase": "Innovative medicine synthesis and reaction screening", "consideration": "Full workflow automation from prep through storage" },
+              { "name": "Materials Science (MOFs, Perovskites)", "useCase": "Parallel materials library synthesis", "consideration": "Integrated XRD confirms structure in-line" },
+              { "name": "Crystallization and Active Ingredient Optimization", "useCase": "Structure-driven crystallization studies", "consideration": "Sample handover station keeps synthesis and analysis connected" },
+              { "name": "Specialty and Fine Chemicals", "useCase": "High-throughput reaction and process development", "consideration": "Scalable 24-96+ parallel throughput" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows automated synthesis and integrated XRD analysis on real reactions" },
+              { "title": "Configuration Assessment", "description": "Confirms throughput, reactor array, and analytics setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with AUTOSUITE and ARKSUITE software" },
+              { "title": "Preventive Maintenance", "description": "Maintains reactor arrays, robotic tool exchange, and analytics performance" },
+              { "title": "Spares and Accessories", "description": "Supplies reactor arrays, robotic tooling, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Chemspeed FLEX ISYNTH used for?", "answer": "It's a fully automated, modular chemistry platform for materials library synthesis and crystallization optimization, running reaction preparation, synthesis, work-up, analysis, and storage transfer in one integrated workflow." },
+            { "question": "How much can it improve lab efficiency?", "answer": "Chemspeed states the platform enhances efficiency and productivity by a factor of up to 100." },
+            { "question": "What reaction scale does it support?", "answer": "μL to mL, using disposable, high-precision glass reactor arrays." },
+            { "question": "How many parallel reactions can it run?", "answer": "24, 48, 96, or more parallel reactions per run, depending on configuration." },
+            { "question": "What unit operations can the reactor arrays perform?", "answer": "Mixing (shaking up to 1,000 rpm), heating (up to 150°C), cooling (to -20°C), reflux, vacuum, inertization, evaporation, liquid/liquid extraction, filtration, solid-phase extraction, crystallization, and drying." },
+            { "question": "Does it include structural analysis capability?", "answer": "Yes, integrated online benchtop XRD, such as Bruker D6 Phaser or Malvern Aeris, is available with a dedicated sample handover station and full integration." },
+            { "question": "What other analytics can be integrated?", "answer": "Benchtop online NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, and NIR/MIR/DLS measurement cells." },
+            { "question": "What gravimetric handling ranges does it support?", "answer": "Solid handling from μg to g, and liquid handling from mg to g / μL to mL." },
+            { "question": "What software runs the platform?", "answer": "AUTOSUITE for drag-and-drop experiment design, and ARKSUITE for broader lab orchestration, data, inventory, and workflow management." },
+            { "question": "What is the price of the FLEX ISYNTH in India?", "answer": "Get in touch and Inkarp will put together a quote based on the throughput, reactor array, and analytics configuration needed." },
+            { "question": "Who is the authorized distributor of the FLEX ISYNTH in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX ISYNTH in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FLEX ISYNTH in India from Inkarp",
+            "description": "Share the throughput, reaction scale, and analytics needs, and the right FLEX ISYNTH configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your throughput, scale, and analytics requirements, then confirm the right FLEX ISYNTH configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "throughputDetails", "label": "Target throughput and reaction scale", "type": "text", "required": false },
+              { "key": "analyticsDetails", "label": "Analytics needed in-line", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the throughput, reaction scale, and analytics needs, and the right FLEX ISYNTH configuration gets confirmed from there." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Reaction prep to XRD analysis. One automated platform, up to 100x the output.",
+            "heroLead": "Materials discovery keeps demanding more experiments from the same team, the same bench, the same week. FLEX ISYNTH answers that directly, a flexible, modular, fully automated platform that unlocks virtually unrestricted \"off-road\" chemistry investigation across reaction space, reagent space, and materials space. Deck modularity runs reaction preparation, multistep synthesis, work-up, purification, analysis, and product transfer to storage, all in one fully automated sequence, for both solid- and liquid-phase synthesis. Integrated online benchtop XRD, Bruker D6 Phaser or Malvern Aeris, closes the loop from synthesis straight to structural analysis, without moving a sample by hand. Chemspeed puts the efficiency gain at up to 100x.",
+            "stats": [
+              { "value": "Up to 100x", "label": "Efficiency and productivity gain" },
+              { "value": "24/48/96+", "label": "Parallel reactions per run" },
+              { "value": "μL to mL", "label": "Reaction scale range" },
+              { "value": "μg to g", "label": "Gravimetric solid handling range" },
+              { "value": "mg to g / μL to mL", "label": "Gravimetric liquid handling range" },
+              { "value": "Up to 1,000 rpm", "label": "Mixing by shaking" },
+              { "value": "-20°C to 150°C", "label": "Cooling and heating range" },
+              { "value": "Integrated online XRD", "label": "Bruker D6 Phaser, Malvern Aeris" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FLEX ISYNTH product information: modular automation, reactor array design, and integrated analytics.",
+                "body": [
+                  "Fully automated chemistry platform: Automates reaction preparation, multistep synthesis, work-up, purification, analysis and product transfer in one modular workflow.",
+                  "Explore more chemistry, faster: Designed for flexible investigation of reaction, reagent and materials space, with Chemspeed reporting efficiency gains of up to 100×.",
+                  "High-throughput parallel synthesis: Run 24, 48, 96 or more parallel reactions per run, depending on configuration.",
+                  "One reactor, multiple operations: Disposable glass reactor arrays support mixing, heating, cooling, reflux, vacuum, extraction, filtration, crystallization and drying without transferring samples between vessels.",
+                  "Wide reaction range: Supports reaction scales from µL to mL, with heating up to 150°C, cooling to −20°C and shaking up to 1,000 rpm.",
+                  "Precision material handling: Gravimetric solid handling from µg to g and liquid handling from mg to g / µL to mL.",
+                  "Integrated analytics: Connects with NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS and XRD for automated analysis within the workflow.",
+                  "Connected, intelligent experimentation: AUTOSUITE enables drag-and-drop experiment design and integration with LIMS, ELN, data analysis, Python and AI/ML workflows."
+                ],
+                "cards": [
+                  { "title": "Up to 100x efficiency", "description": "Chemspeed's stated productivity gain versus manual workflows" },
+                  { "title": "Fully integrated workflow", "description": "Prep through analysis and storage, one automated sequence" },
+                  { "title": "μg to g solid handling", "description": "Covers trace through gram-scale dosing" },
+                  { "title": "Integrated online XRD", "description": "Structural analysis without manual sample transfer" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Chemspeed FLEX ISYNTH, integrated with online benchtop XRD" },
+                  { "title": "Reaction scale", "description": "μL to mL" },
+                  { "title": "Throughput", "description": "24 / 48 / 96+ parallel reactions per run" },
+                  { "title": "Solid handling", "description": "μg to g" },
+                  { "title": "Liquid handling", "description": "mg to g / μL to mL" },
+                  { "title": "Integrated analytics", "description": "NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS, online XRD" },
+                  { "title": "Software", "description": "AUTOSUITE (experiment design), ARKSUITE (lab orchestration)" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FLEX ISYNTH applications: materials library synthesis, crystallization optimization, and high-throughput reaction screening."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FLEX ISYNTH technical specifications: reaction scale, throughput, handling range, and integrated analytics."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Unrestricted Chemistry, Fully Automated",
+                "title": "Unrestricted Chemistry, Fully Automated",
+                "description": "Explore diverse chemistry in one automated workflow, from reaction preparation and multistep synthesis to work-up, purification, analysis and product storage.",
+                "cards": [
+                  { "title": "Broad reaction, reagent, and materials space exploration", "description": "Fully modular ISYNTH deck" },
+                  { "title": "One workflow from prep through storage", "description": "Full automation across prep, synthesis, work-up, and transfer" },
+                  { "title": "Flexibility across many unit operations in one vessel", "description": "Reactor arrays supporting the full operation range" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Synthesis to Structure, Without Leaving the Deck",
+                "title": "Synthesis to Structure, Without Leaving the Deck",
+                "body": [
+                  "Move from synthesis to structural confirmation without breaking the workflow, with integrated online XRD and in-line NMR, chromatography and spectroscopy."
+                ],
+                "utilityChecklist": [
+                  { "label": "Structural confirmation without breaking the automated chain", "value": "Integrated online XRD with dedicated sample handover" },
+                  { "label": "Faster feedback between synthesis and analysis", "value": "In-line analytics across NMR, chromatography, and spectroscopy" },
+                  { "label": "One continuous, documented workflow", "value": "Full software/hardware integration from synthesis to analysis" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FLEX ISYNTH documentation: AUTOSUITE and ARKSUITE software overviews.",
+                "cards": [
+                  { "title": "FLEX ISYNTH with Online XRD Overview", "description": "Available on request" },
+                  { "title": "AUTOSUITE Software Overview", "description": "Available on request" },
+                  { "title": "ARKSUITE Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FLEX ISYNTH in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Reaction prep through XRD analysis, fully automated, with a stated efficiency gain of up to 100x. Share the throughput, reaction scale, and analytics needs, and the right FLEX ISYNTH configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Chemspeed FLEX AUTOPLANT",
+          "slug": "flex-autoplant",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
+          "imageAlt": "Chemspeed FLEX AUTOPLANT - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/flex-autoplant",
+          "breadcrumbPath": "Home > Products > Automated Synthesis for Innovative Medicines > Chemspeed FLEX AUTOPLANT",
+          "h1": "Chemspeed FLEX AUTOPLANT",
+          "subhead": "Automated Process R&D and Preparative Synthesis",
+          "overview": "Scale-up fails most often when lab-scale conditions don't actually translate to production reality. FLEX AUTOPLANT is built to close that gap, individually controlled tank reactors at 100, 240, or 1,000 mL total volume, each running its own conditions, that truly mimic the final industrial production process.",
+
+          "features": [
+            "Individually Controlled Tank Reactors: 100, 240, or 1,000 mL volumes, each with independent temperature, stirring, and feed control.",
+            "Powerful, Configurable Mixing: Easily exchangeable stirrer designs handling viscosities up to 80 Pa·s.",
+            "Multiple Precision Feed Lines: Continuous liquid, liquefied gas, and gas feeds per reactor, plus unlimited overhead access.",
+            "High-Pressure Capability: Runs up to 100 bar with full corresponding safety installations.",
+            "Parallel Calorimetry and Viscosity Data: Captures process-critical data alongside the reaction itself.",
+            "Broad PAT Probe Integration: Connects to pH, UV-VIS, IR, Raman, PSD, and calorimetry probes in-situ.",
+            "Full Unit Operation Coverage: Extraction, filtration, evaporation, distillation, and crystallization, plus a Dean Stark trap and distillation bridge.",
+            "Optional Integrated Online NMR and XRD: 80 MHz Fourier RxnLite NMR or Bruker D6 Phaser / Malvern Aeris XRD, fully hardware and software integrated."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Chemspeed FLEX AUTOPLANT" },
+            { "label": "Category", "value": "Automated Synthesis for Innovative Medicines" },
+            { "label": "Reactor Volumes", "value": "100, 240, 1,000 mL (individually controlled)" },
+            { "label": "Syntheses Per Run", "value": "Up to 6, including prep, execution, work-up, and analysis" },
+            { "label": "Maximum Pressure", "value": "100 bar, with safety installations" },
+            { "label": "Temperature Difference (Adjacent Reactors)", "value": "Up to 130°C, active cooling beyond" },
+            { "label": "Temperature Control", "value": "Internal and/or jacket" },
+            { "label": "Mixing Capacity", "value": "Up to 80 Pa·s at 300 rpm; 30 Pa·s at 900 rpm (anchor stirrer)" },
+            { "label": "Stirrer Options", "value": "Anchor, twisted blade, gas entrainment, and others" },
+            { "label": "Feeds", "value": "Multiple continuous liquid, liquefied gas, and/or gas feeds per reactor, plus unlimited overhead access" },
+            { "label": "PAT Interfaces", "value": "pH, UV-VIS, IR, Raman, PSD, calorimetry" },
+            { "label": "Optional NMR", "value": "80 MHz Fourier RxnLite, permanent magnet, no liquid nitrogen/helium required" },
+            { "label": "Optional XRD", "value": "Bruker D6 Phaser, Malvern Aeris" },
+            { "label": "Safety", "value": "Ventilated hood, conditioned operation" },
+            { "label": "Software", "value": "AUTOSUITE (experiment automation), ARKSUITE (lab orchestration)" }
+          ],
+
+          "applications": [
+            "Pharmaceutical Process R&D: End-to-end scale-up mimicry from lab to production conditions",
+            "Agrochemical Development: Organic and inorganic synthesis under real process conditions",
+            "Polymer and Specialty Chemical R&D: High-viscosity mixing up to 80 Pa·s",
+            "Catalyst Development: Precise, independent reactor control for comparative studies",
+            "Cathode and Battery Storage Materials: High-pressure and controlled-atmosphere reaction capability",
+            "Photovoltaic Materials Research: Crystallization and preparative synthesis in one workflow"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Analytics Selector" },
+            { "id": "mixing-and-feed-complexity-planner", "label": "Mixing & Feed Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Reactor Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Production-Relevant Reactors" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the process need in-line NMR, XRD, or PAT monitoring?",
+            "description": "Select the analytical requirements, and see how they integrate with FLEX AUTOPLANT.",
+            "fields": [
+              {
+                "key": "nmrNeed",
+                "label": "NMR need",
+                "options": [
+                  { "val": "yes", "label": "Yes (80 MHz Fourier RxnLite)" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "xrdNeed",
+                "label": "XRD need",
+                "options": [
+                  { "val": "yes", "label": "Yes (D6 Phaser / Aeris)" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "patProbeRequirement",
+                "label": "PAT probe requirement",
+                "options": [
+                  { "val": "ph", "label": "pH" },
+                  { "val": "uv-vis", "label": "UV-VIS" },
+                  { "val": "ir", "label": "IR" },
+                  { "val": "raman", "label": "Raman" },
+                  { "val": "psd", "label": "PSD" },
+                  { "val": "calorimetry", "label": "Calorimetry" },
+                  { "val": "combination", "label": "Combination" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "nmrNeed": "yes" }, "title": "Integrated NMR Fits Without Cryogen Logistics", "body": "The 80 MHz Fourier RxnLite uses a permanent magnet design, with no liquid nitrogen or helium required.", "tags": ["Permanent Magnet NMR"] },
+              { "condition": { "xrdNeed": "yes" }, "title": "Integrated XRD Confirms Structure In-Line", "body": "Bruker D6 Phaser or Malvern Aeris XRD is fully hardware and software integrated into the same automated workflow.", "tags": ["Integrated XRD"] },
+              { "condition": { "patProbeRequirement": "combination" }, "title": "Multiple PAT Probes Can Run Together", "body": "pH, UV-VIS, IR, Raman, PSD, and calorimetry probes all connect in-situ alongside the reaction.", "tags": ["Broad PAT Integration"] },
+              { "condition": "default", "title": "Confirm the Right Integrated Analytics Package With Inkarp", "body": "Share the NMR, XRD, and PAT requirements, and Inkarp will confirm the right integrated analytics package.", "tags": ["Optional NMR / XRD"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What reactor volume, pressure, and temperature range does the process need?",
+            "description": "Select the target reactor volume and operating conditions, and see the recommended FLEX AUTOPLANT setup.",
+            "steps": [
+              {
+                "key": "reactorVolume",
+                "question": "What reactor volume is needed?",
+                "options": [
+                  { "val": "100ml", "label": "100 mL" },
+                  { "val": "240ml", "label": "240 mL" },
+                  { "val": "1000ml", "label": "1,000 mL" }
+                ]
+              },
+              {
+                "key": "temperatureDifference",
+                "question": "What temperature difference is needed between adjacent reactors?",
+                "options": [
+                  { "val": "minimal", "label": "Minimal difference (under 40°C)" },
+                  { "val": "moderate", "label": "Moderate difference (40–90°C)" },
+                  { "val": "large", "label": "Large difference, near maximum (90–130°C)" },
+                  { "val": "beyond-130", "label": "Beyond 130°C — requires active cooling" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Recommends the reactor and safety configuration, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "mixing-and-feed-complexity-planner",
+              "eyebrow": "Mixing and Feed Complexity Planner",
+              "title": "How viscous is the process, and how many feeds does it need?",
+              "description": "Select the target viscosity range and feed types, and see the recommended stirrer and feed setup.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the target viscosity?", "choices": "Under 30 Pa·s (fast mixing, up to 900 rpm); 30–80 Pa·s (standard anchor stirrer range at 300 rpm); Up to 80 Pa·s (maximum rated capacity)" },
+                { "title": "What stirrer type is preferred?", "choices": "Anchor; Twisted blade; Gas entrainment; Other" },
+                { "title": "What feed types are needed?", "choices": "Liquid; Liquefied gas; Gas; Combination" }
+              ],
+              "disclaimer": "Confirms the stirrer and feed line configuration, then routes to a process-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "FLEX AUTOPLANT (Standard) vs. FLEX AUTOPLANT with NMR/XRD",
+            "description": "FLEX AUTOPLANT comparison: standard configuration versus with integrated NMR/XRD.",
+            "columns": [
+              { "label": "FLEX AUTOPLANT (Standard)" },
+              { "label": "FLEX AUTOPLANT with NMR/XRD" }
+            ],
+            "rows": [
+              { "feature": "Reaction Monitoring", "values": ["PAT probes, calorimetry, viscosity data", "Same, plus in-line structural/spectroscopic confirmation"] },
+              { "feature": "Analytical Turnaround", "values": ["Separate, off-platform analysis", "In-line, same automated sequence"] },
+              { "feature": "Best For", "values": ["Process R&D with external analytical workflows", "Process R&D needing immediate structural feedback"] },
+              { "feature": "Choose When", "values": ["Analytical confirmation can run as a separate step", "Reaction and structural analysis need to stay in one workflow"] }
+            ],
+            "disclaimer": "Both configurations share the same reactor architecture, pressure and temperature range, and mixing capability. The difference is whether NMR or XRD analysis runs in-line."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FLEX AUTOPLANT industries: pharmaceutical process R&D, specialty chemicals, and energy materials.",
+            "industries": [
+              { "name": "Pharmaceutical Process R&D", "useCase": "Scale-up and process optimization", "consideration": "Individually controlled reactors mimic real production conditions" },
+              { "name": "Specialty Chemicals and Catalysts", "useCase": "Comparative reaction studies under varied conditions", "consideration": "130°C temperature difference between adjacent reactors" },
+              { "name": "Battery and Cathode Materials", "useCase": "High-pressure, controlled-atmosphere synthesis", "consideration": "Pressure up to 100 bar with full safety installations" },
+              { "name": "Photovoltaic Materials Research", "useCase": "Preparative synthesis and crystallization", "consideration": "Optional XRD confirms structure without manual transfer" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows independent reactor control and mixing performance on real processes" },
+              { "title": "Configuration Assessment", "description": "Confirms reactor volume, pressure, and analytics setup for the application" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with AUTOSUITE and ARKSUITE software" },
+              { "title": "Preventive Maintenance", "description": "Maintains reactors, stirrers, feed lines, and analytics performance" },
+              { "title": "Spares and Accessories", "description": "Supplies stirrer designs, feed line components, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Chemspeed FLEX AUTOPLANT used for?", "answer": "It's an automated process R&D and preparative synthesis workstation built for high-output experimentation in developing and optimizing pharmaceuticals, agrochemicals, polymers, catalysts, and energy materials, with reactors that mimic real production conditions." },
+            { "question": "How many reactor volumes are available?", "answer": "Three: 100, 240, and 1,000 mL, each individually controlled." },
+            { "question": "How many syntheses can run per session?", "answer": "Up to 6, covering reaction prep, execution, work-up, and analysis." },
+            { "question": "What pressure can the reactors handle?", "answer": "Up to 100 bar, with corresponding safety installations." },
+            { "question": "How different can conditions be between adjacent reactors?", "answer": "Up to a 130°C temperature difference, with active cooling available beyond that." },
+            { "question": "What viscosities can the system mix?", "answer": "Up to 80 Pa·s at 300 rpm, or 30 Pa·s at 900 rpm, using an anchor stirrer." },
+            { "question": "Can the platform monitor reactions in real time?", "answer": "Yes, through parallel calorimetry and viscosity data, plus PAT interfaces to pH, UV-VIS, IR, Raman, and PSD probes." },
+            { "question": "Does it include in-line structural analysis?", "answer": "Optionally, yes, integrated online benchtop NMR (80 MHz Fourier RxnLite) or integrated online benchtop XRD (Bruker D6 Phaser, Malvern Aeris) can be added." },
+            { "question": "Does the NMR option require liquid nitrogen or helium?", "answer": "No, it uses a permanent magnet design, with no liquid nitrogen or helium required." },
+            { "question": "What is the price of the FLEX AUTOPLANT in India?", "answer": "Get in touch and Inkarp will put together a quote based on the reactor configuration and optional analytics needed." },
+            { "question": "Who is the authorized distributor of the FLEX AUTOPLANT in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX AUTOPLANT in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FLEX AUTOPLANT in India from Inkarp",
+            "description": "Share the reactor volume, pressure, and analytics needs, and the right FLEX AUTOPLANT configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your reactor and analytics requirements, then confirm the right FLEX AUTOPLANT configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "reactorDetails", "label": "Reactor volume, pressure, and temperature range", "type": "text", "required": false },
+              { "key": "analyticsDetails", "label": "Analytics needs (NMR / XRD / PAT)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the reactor volume, pressure, and analytics needs, and the right FLEX AUTOPLANT configuration gets confirmed from there." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Individually controlled tank reactors. A 130°C swing between neighbors. Up to 100 bar.",
+            "heroLead": "Scale-up fails most often when lab-scale conditions don't actually translate to production reality. FLEX AUTOPLANT is built to close that gap, individually controlled tank reactors at 100, 240, or 1,000 mL total volume, each running its own conditions, that truly mimic the final industrial production process. Up to 6 syntheses run per single session, reaction prep through work-up and analysis, with independent temperature and stirring control per reactor, a 130°C temperature difference possible between adjacent vessels, and pressure up to 100 bar with full safety installations. Powerful mixing handles viscosities up to 80 Pa·s, and optional integrated online NMR or XRD close the loop from reaction straight to structural confirmation.",
+            "stats": [
+              { "value": "Up to 6 syntheses", "label": "Per run, prep through analysis" },
+              { "value": "100 / 240 / 1,000 mL", "label": "Individual reactor volumes" },
+              { "value": "Up to 100 bar", "label": "Maximum pressure, with safety installations" },
+              { "value": "130°C", "label": "Temperature difference achievable between adjacent reactors" },
+              { "value": "Up to 80 Pa·s", "label": "Viscosity handled at 300 rpm (anchor stirrer)" },
+              { "value": "Multiple feeds", "label": "Continuous liquid, liquefied gas, and gas per reactor" },
+              { "value": "Optional", "label": "Integrated online benchtop NMR (80 MHz Fourier RxnLite)" },
+              { "value": "Optional", "label": "Integrated online benchtop XRD (Bruker D6 Phaser, Malvern Aeris)" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FLEX AUTOPLANT product information: independent reactor control, pressure and temperature range, and integrated analytics.",
+                "body": [
+                  "End-to-end process R&D platform: Supports synthesis, reaction development, work-up, crystallization and scale-up across pharma, agrochemical, polymer, catalyst, battery and specialty chemical workflows.",
+                  "Up to 6 parallel syntheses: Run up to 6 independent reactions in one session, with each reactor controlled separately.",
+                  "Production-relevant reactor control: Available in 100, 240 and 1,000 mL reactor volumes with independent temperature, stirring and continuous feed control.",
+                  "Flexible reaction conditions: Supports temperatures, pressures up to 100 bar, multiple liquid, gas and liquefied gas feeds, and viscosity handling up to 80 Pa·s.",
+                  "Mixing matched to the chemistry: Interchangeable stirrer designs including anchor, twisted blade and gas entrainment options.",
+                  "Integrated process monitoring: Capture calorimetry and viscosity data alongside PAT measurements including pH, UV-VIS, IR, Raman and PSD.",
+                  "Built for complex workflows: Supports extraction, filtration, evaporation, distillation, crystallization, vacuum operations, gas consumption measurement and Dean Stark water trapping.",
+                  "Connected experimentation: AUTOSUITE enables drag-and-drop experiment design and integration with LIMS, ELN, Python, AI and ML workflows.",
+                  "Optional in-line analysis: Integrated online 80 MHz NMR and XRD options extend reaction monitoring and structural analysis within the same automated workflow."
+                ],
+                "cards": [
+                  { "title": "Individually controlled reactors", "description": "Each vessel runs its own real process conditions" },
+                  { "title": "Up to 100 bar pressure", "description": "Handles genuine high-pressure reaction chemistry" },
+                  { "title": "130°C swing between reactors", "description": "True parallel process diversity, not shared conditions" },
+                  { "title": "Optional in-line NMR / XRD", "description": "Reaction and structural analysis without manual transfer" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Chemspeed FLEX AUTOPLANT, Automated Process R&D and Preparative Synthesis Workstation" },
+                  { "title": "Reactor volumes", "description": "100 / 240 / 1,000 mL, individually controlled" },
+                  { "title": "Syntheses per run", "description": "Up to 6" },
+                  { "title": "Pressure", "description": "Up to 100 bar" },
+                  { "title": "Temperature range", "description": "Up to 130°C difference between adjacent reactors, active cooling beyond" },
+                  { "title": "Viscosity handling", "description": "Up to 80 Pa·s at 300 rpm (anchor stirrer)" },
+                  { "title": "Optional analytics", "description": "Integrated online NMR (80 MHz Fourier RxnLite), integrated online XRD (D6 Phaser / Aeris)" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FLEX AUTOPLANT applications: pharmaceuticals, agrochemicals, polymers, catalysts, and energy materials."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FLEX AUTOPLANT technical specifications: reactor volumes, pressure, temperature, and mixing capacity."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Reactors That Behave Like Production, Not Like a Flask",
+                "title": "Reactors That Behave Like Production, Not Like a Flask",
+                "description": "Run production-relevant chemistry with individually controlled reactors, independent feeds, viscosity handling up to 80 Pa·s, and pressures up to 100 bar.",
+                "cards": [
+                  { "title": "Reactors that don't compromise toward shared conditions", "description": "Individually controlled tank reactors, up to 130°C difference" },
+                  { "title": "Genuine multi-feed process complexity", "description": "Multiple continuous liquid, gas, and liquefied gas feeds per reactor" },
+                  { "title": "Confidence that high-pressure chemistry translates safely", "description": "Up to 100 bar with full safety installations" },
+                  { "title": "Real viscosity handling at process-relevant scale", "description": "Mixing up to 80 Pa·s with exchangeable stirrer designs" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "From Reaction to Structure, In-Line",
+                "title": "From Reaction to Structure, In-Line",
+                "body": [
+                  "Bring reaction and structural analysis into one automated workflow with optional integrated NMR, XRD, calorimetry, viscosity and PAT data."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fast structural confirmation without a separate analytical step", "value": "Optional integrated online NMR or XRD" },
+                  { "label": "No liquid nitrogen or helium logistics for NMR", "value": "Permanent magnet Fourier RxnLite design" },
+                  { "label": "Real-time process data beyond yield alone", "value": "Parallel calorimetry, viscosity, and PAT probe data" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FLEX AUTOPLANT documentation: AUTOSUITE and ARKSUITE software overviews.",
+                "cards": [
+                  { "title": "FLEX AUTOPLANT Overview", "description": "Available on request" },
+                  { "title": "AUTOSUITE Software Overview", "description": "Available on request" },
+                  { "title": "ARKSUITE Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FLEX AUTOPLANT in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Individually controlled reactors, up to 100 bar, and a 130°C swing between neighbors, all built to truly mimic production scale. Share the reactor volume, pressure, and analytics needs, and the right FLEX AUTOPLANT configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

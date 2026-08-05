@@ -2,23 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { FiMail } from "react-icons/fi";
 
-export default function ProductImageGallery({ images, productName }) {
+export default function ProductImageGallery({ ctaHref, images, productName }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selected = images[selectedIndex] ?? images[0];
 
   return (
     <>
       <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
-        <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-2/5">
-          <Image
-            alt="Dr Dexter"
-            className="object-contain object-bottom"
-            fill
-            sizes="(min-width: 1024px) 240px, (min-width: 640px) 200px, 150px"
-            src="/dexter.png"
-          />
-        </div>
         <Image
           alt={selected.alt ?? productName}
           className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
@@ -28,10 +21,23 @@ export default function ProductImageGallery({ images, productName }) {
           priority={selectedIndex === 0}
         />
       </div>
-      <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-        <span>{`Fig. ${String(selectedIndex + 1).padStart(2, "0")} - Product Overview`}</span>
-        <span>{selected.alt ?? productName}</span>
-      </div>
+      {ctaHref ? (
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link
+            href={ctaHref}
+            className="inline-flex h-12 items-center justify-center border border-red bg-red px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+          >
+            Request Quote
+          </Link>
+          <Link
+            href={ctaHref}
+            className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+          >
+            <FiMail className="h-4 w-4 text-red" />
+            Enquiry Now
+          </Link>
+        </div>
+      ) : null}
       {images.length > 1 && (
         <div className="mt-4 flex flex-wrap gap-3">
           {images.map((img, index) => (

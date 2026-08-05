@@ -202,6 +202,8 @@ export const productImageMap = {
   "nanosurf:naniteafm": "/assets/images/productImages/Nanosurf/naniteafm.jpg",
   "nanosurf:industrial-solution": "/assets/images/productImages/Nanosurf/industrial-solution.png",
   "nanosurf:alphacen-300": "/assets/images/productImages/Nanosurf/alphacen-300.jpg",
+  "nanosurf:naioafm": "/assets/images/productImages/Nanosurf/naioafm-the-leading-compact-afm.webp",
+  "nanosurf:naiostm": "/assets/images/productImages/Nanosurf/naiostm-stm-for-nanoeducation.jpg",
   "bwb-technologies:bwb-xp-flame-photometer": "/assets/images/productImages/BWB/bwb-xp-flame-photometer.webp",
   "bwb-technologies:bwb-xp-plus-flame-photometer": "/assets/images/productImages/BWB/bwb-xp-plus-flame-photometer.webp",
   "bwb-technologies:bwb-flash-flame-photometer": "/assets/images/productImages/BWB/bwb-flash-flame-photometer.webp",

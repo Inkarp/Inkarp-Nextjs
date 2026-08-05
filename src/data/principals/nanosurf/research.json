@@ -1,0 +1,655 @@
+{
+  "principal": {
+    "slug": "nanosurf",
+    "principalName": "Nanosurf",
+    "countryOfOrigin": "Switzerland"
+  },
+  "categories": [
+    {
+      "name": "Research",
+      "slug": "research",
+      "products": [
+        {
+          "name": "Nanosurf NaioAFM",
+          "slug": "naioafm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf NaioAFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/naioafm",
+          "breadcrumbPath": "Home > Products > Research > Nanosurf NaioAFM",
+          "h1": "Nanosurf NaioAFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Learning AFM shouldn't eat half a semester's lab hours on setup alone. NaioAFM is the leading AFM for nanoeducation, an all-in-one, plug-and-play system that skips laser alignment entirely, letting new users acquire meaningful images and data in as little as two hours.",
+
+          "features": [
+            "Simple Cantilever Exchange: No laser or detector adjustment required, ideal for hands-on AFM learning.",
+            "Integrated High-Resolution Camera: Top and side view sample observation built directly into the system.",
+            "Classroom-Ready Affordability: Designed with classroom settings and small budgets in mind.",
+            "Feature-Complete Mode Coverage: All standard operating modes available despite the compact design.",
+            "Fully Integrated, Compact Build: Controller, XY-table, airflow shielding, and vibration isolation all in one unit.",
+            "True Plug-and-Play Setup: No system setup needed, just connect to a PC, power up, and start the software.",
+            "Cantilever Alignment Chip: Built-in handling support removes the need for perfectly steady hands.",
+            "Shared Software Across Systems: One UI works across all Nanosurf AFM systems, no extra learning curve."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf NaioAFM" },
+            { "label": "Category", "value": "Compact / Entry-Level AFM" },
+            { "label": "System Components", "value": "Scan head, integrated controller, vibration isolation platform" },
+            { "label": "Setup Time", "value": "A few minutes, no laser alignment required" },
+            { "label": "Standard Imaging Modes", "value": "Static Force, Dynamic Force (Tapping), Phase Imaging" },
+            { "label": "Magnetic Property Mode", "value": "Magnetic Force Microscopy (MFM)" },
+            { "label": "Electrical Property Modes", "value": "Conductive AFM (C-AFM), Electrostatic Force Microscopy (EFM)" },
+            { "label": "Mechanical Property Modes", "value": "Force Spectroscopy, Force Modulation, Stiffness and Modulus, Adhesion, Force Mapping" },
+            { "label": "Other Modes", "value": "Lithography and Nanomanipulation" },
+            { "label": "Camera", "value": "Integrated high-resolution, top and side view" },
+            { "label": "Software", "value": "Shared Nanosurf control software, one UI across all scan heads" },
+            { "label": "Programming Compatibility", "value": "LabView, Python, MATLAB, C++, Java, and more" }
+          ],
+
+          "applications": [
+            "University and Classroom AFM Courses: Meaningful results in as little as two hours for new users",
+            "Basic Research on Small Samples: Solid performance across all standard operating modes",
+            "Student Research Projects: Robust, forgiving design suited to hands-on learning",
+            "Magnetic and Electrical Property Studies: MFM, C-AFM, and EFM available on the same system",
+            "Force Spectroscopy and Mechanical Characterization: Force mapping, modulation, stiffness, and adhesion measurement"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "classroom-time-planner", "label": "Classroom Time Planner" },
+            { "id": "sample-and-application-matcher", "label": "Sample Matcher" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Novice-Friendly Design" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Which AFM mode does the course or project need?",
+            "description": "Select the property or sample type of interest, and see which NaioAFM mode applies.",
+            "steps": [
+              {
+                "key": "propertyOfInterest",
+                "question": "What property is of interest?",
+                "options": [
+                  { "val": "topography", "label": "Topography" },
+                  { "val": "magnetic", "label": "Magnetic" },
+                  { "val": "electrical", "label": "Electrical" },
+                  { "val": "mechanical", "label": "Mechanical" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "question": "What sample type are you working with?",
+                "options": [
+                  { "val": "biological", "label": "Biological" },
+                  { "val": "polymer", "label": "Polymer" },
+                  { "val": "thin-film", "label": "Thin film" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "measurementGoal",
+                "question": "What's the measurement goal?",
+                "options": [
+                  { "val": "imaging", "label": "Imaging" },
+                  { "val": "spectroscopy", "label": "Spectroscopy" },
+                  { "val": "force-mapping", "label": "Force mapping" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your target sample and measurement goal, and this routes to an application-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "classroom-time-planner",
+              "eyebrow": "Classroom Time Planner",
+              "title": "How many lab hours are available for AFM instruction?",
+              "description": "Select the total lab time planned and the group's prior AFM experience, and see how NaioAFM's fast setup fits the schedule.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "About how many lab hours are planned in total?", "choices": "About 2 hours (one session); About 4-6 hours (a few sessions); A full day or more (multiple sessions)" },
+                { "title": "What's the group's prior AFM experience?", "choices": "None; Some; Experienced" }
+              ],
+              "disclaimer": "New users reach meaningful results in as little as two hours per session; share your exact student count and Inkarp will confirm how many students can be scheduled through in the available time."
+            },
+            {
+              "sectionId": "sample-and-application-matcher",
+              "eyebrow": "Sample and Application Matcher",
+              "title": "What kind of sample is being studied?",
+              "description": "Select the sample type and research goal, and see how NaioAFM applies.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the sample category?", "choices": "Biological; Polymer; Metal; Semiconductor; Other" },
+                { "title": "What's the research context?", "choices": "Coursework; Student project; Basic research" },
+                { "title": "What's the property focus?", "choices": "Topography; Magnetic; Electrical; Mechanical" }
+              ],
+              "disclaimer": "Routes to an application-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "NaioAFM vs. NaioSTM",
+            "description": "NaioAFM comparison: NaioAFM versus NaioSTM.",
+            "columns": [
+              { "label": "NaioAFM" },
+              { "label": "NaioSTM" }
+            ],
+            "rows": [
+              { "feature": "Technique", "values": ["Atomic Force Microscopy", "Scanning Tunneling Microscopy"] },
+              { "feature": "Setup", "values": ["Plug-and-play, no laser alignment", "Plug-and-play, entry-level design"] },
+              { "feature": "Best For", "values": ["Broad sample types, including insulators", "Conductive sample surface studies"] },
+              { "feature": "Choose When", "values": ["The course or project needs topography, magnetic, electrical, or mechanical AFM modes", "The focus is atomic-scale conductive surface imaging"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NaioAFM industries: higher education, teaching laboratories, and entry-level research programs.",
+            "industries": [
+              { "name": "University Physics and Chemistry Departments", "useCase": "AFM coursework and lab instruction", "consideration": "Meaningful results achievable within limited semester lab hours" },
+              { "name": "Community and Technical Colleges", "useCase": "Hands-on AFM training for students", "consideration": "Robust design suited to less experienced first-time users" },
+              { "name": "Undergraduate Research Programs", "useCase": "Student-led research projects", "consideration": "Full standard mode coverage supports varied project topics" },
+              { "name": "Entry-Level Materials and Life Science Labs", "useCase": "Basic small-sample research", "consideration": "All-in-one system fits limited lab space and budget" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows plug-and-play setup and imaging on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms operating modes and classroom setup needs" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with cantilever exchange and the control software" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, controller, and camera performance" },
+              { "title": "Spares and Accessories", "description": "Supplies cantilevers, alignment chips, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NaioAFM used for?", "answer": "It's an all-in-one atomic force microscope built for nanoeducation and basic research on small samples, ideal for university courses, classroom settings, and entry-level research." },
+            { "question": "How long does it take to set up?", "answer": "Just a few minutes, with no laser alignment required." },
+            { "question": "How quickly can a new user get meaningful results?", "answer": "In as little as two hours, according to reported classroom experience." },
+            { "question": "What operating modes does it support?", "answer": "All standard imaging modes, static force, dynamic force, and phase imaging, plus magnetic force microscopy, conductive AFM, electrostatic force microscopy, force spectroscopy, force modulation, stiffness and modulus, adhesion, force mapping, and lithography/nanomanipulation." },
+            { "question": "Does it require laser alignment?", "answer": "No, laser alignment is not required at all." },
+            { "question": "Is it durable enough for student or first-time use?", "answer": "Yes, its robust design is specifically built to be insensitive to careless handling by novice users." },
+            { "question": "Does it include a camera for sample observation?", "answer": "Yes, an integrated high-resolution camera provides both top and side view observation." },
+            { "question": "What software does it run on?", "answer": "Nanosurf's shared control software, the same UI used across all Nanosurf AFM systems, with automatic frequency sweep, a spectroscopy wizard, and a scripting interface." },
+            { "question": "Can the software be scripted or automated?", "answer": "Yes, a powerful scripting interface is compatible with LabView, Python, MATLAB, C++, Java, and more." },
+            { "question": "What is the price of the NaioAFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the intended application and classroom or lab setup." },
+            { "question": "Who is the authorized distributor of the NaioAFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf NaioAFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NaioAFM in India from Inkarp",
+            "description": "Share the classroom or research application, and the right NaioAFM setup gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your classroom or research application, then confirm the right NaioAFM setup.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "applicationDetails", "label": "Classroom or research application", "type": "text", "required": false },
+              { "key": "courseSchedule", "label": "Lab hours and student count", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Plug it in. Place a sample. First results in minutes, no laser alignment needed.",
+            "heroLead": "Learning AFM shouldn't eat half a semester's lab hours on setup alone. NaioAFM is the leading AFM for nanoeducation, an all-in-one, plug-and-play system that skips laser alignment entirely, letting new users acquire meaningful images and data in as little as two hours. Just the scan head, mounted on a small vibration isolation platform with an integrated controller, that's the whole system. It performs across all standard operating modes, plus basic electrical characterization and force spectroscopy, robustly built to survive careless handling by first-time users without sacrificing real performance across a wide range of samples.",
+            "stats": [
+              { "value": "Minutes", "label": "Time to first results, no laser alignment" },
+              { "value": "2 hours", "label": "Time for new users to acquire meaningful data" },
+              { "value": "All-in-one", "label": "Scan head, controller, and vibration isolation combined" },
+              { "value": "All standard modes", "label": "Static, dynamic, phase imaging, and more" },
+              { "value": "No laser adjustment", "label": "Simple cantilever exchange" },
+              { "value": "Integrated camera", "label": "High-resolution top and side view" },
+              { "value": "Plug-and-play", "label": "No system setup required" },
+              { "value": "1 software UI", "label": "Shared across all Nanosurf AFM systems" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NaioAFM product information: all-in-one design, measurement modes, and classroom-ready handling.",
+                "body": [
+                  "Simple AFM for education and research: Designed for nanoeducation and basic research on small samples, combining easy operation with reliable AFM performance.",
+                  "Ready in minutes: Compact setup with a scan head, vibration isolation platform and integrated controller, requiring minimal preparation.",
+                  "Built for new users: Robust construction and a built-in cantilever alignment chip simplify setup and reduce the learning curve.",
+                  "No laser alignment: Connect the system, place the cantilever and sample, and start measuring without manual laser alignment.",
+                  "Full essential AFM capability: Supports standard operating modes, basic electrical characterization and basic force spectroscopy.",
+                  "Integrated sample observation: High-resolution camera provides top and side views for easier sample positioning and measurement.",
+                  "Proven for AFM education: Used for basic AFM education and research for more than a decade."
+                ],
+                "cards": [
+                  { "title": "Plug-and-play, no laser alignment", "description": "First results in minutes" },
+                  { "title": "All-in-one compact design", "description": "Scan head, controller, and isolation combined" },
+                  { "title": "Robust, novice-proof handling", "description": "Built for classroom and first-time users" },
+                  { "title": "Full standard mode coverage", "description": "Real research capability in a teaching-scale system" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf NaioAFM All-in-One AFM System" },
+                  { "title": "System components", "description": "Scan head, integrated controller, vibration isolation platform" },
+                  { "title": "Setup time", "description": "A few minutes, no laser alignment" },
+                  { "title": "Operating modes", "description": "All standard modes, plus basic electrical characterization and force spectroscopy" },
+                  { "title": "Software", "description": "One shared UI across all Nanosurf AFM systems" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NaioAFM applications: nanoeducation, classroom demonstrations, and basic small-sample research."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NaioAFM technical specifications: system design, operating modes, and software capability."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built for Novice Hands, Real Results",
+                "title": "Built for Novice Hands, Real Results",
+                "description": "Make AFM accessible to first-time users with laser-free setup, simplified cantilever alignment and fast results, without compromising real imaging performance.",
+                "cards": [
+                  { "title": "Meaningful results within limited lab hours", "description": "Laser-free setup, results in minutes" },
+                  { "title": "Confidence handing the instrument to first-time users", "description": "Robust design, insensitive to careless handling" },
+                  { "title": "Reliable skill-building across a full semester", "description": "Years of proven use in university AFM courses" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "One Software, Every Standard Mode",
+                "title": "One Software, Every Standard Mode",
+                "body": [
+                  "Simplify every AFM workflow with automated setup, guided spectroscopy and one intuitive software interface shared across Nanosurf systems."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fast setup without manual parameter tuning", "value": "Automatic frequency sweep on cantilever selection" },
+                  { "label": "Guided setup for less common measurement types", "value": "Spectroscopy wizard, step-by-step" },
+                  { "label": "Room to grow into custom or automated workflows", "value": "Scripting interface compatible with major programming environments" },
+                  { "label": "No relearning software when adding another AFM", "value": "One shared UI across all Nanosurf scan heads" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NaioAFM documentation: brochure, application notes, and publications.",
+                "cards": [
+                  { "title": "NaioAFM Brochure (technology, applications, specifications)", "description": "Available for download" },
+                  { "title": "Application Note: Magnetic Force Microscopy (MFM)", "description": "Available on request" },
+                  { "title": "Related Publications", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NaioAFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Plug-and-play AFM with no laser alignment, meaningful results in as little as two hours. Share the classroom or research application, and the right NaioAFM setup gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Nanosurf NaioSTM",
+          "slug": "naiostm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf NaioSTM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/naiostm",
+          "breadcrumbPath": "Home > Products > Research > Nanosurf NaioSTM",
+          "h1": "Nanosurf NaioSTM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "NaioSTM is the best-selling tabletop STM, and it earns that title with a mechanical loop under 10 mm, tight enough to achieve atomic resolution on HOPG in an ordinary classroom, no isolation table or specialized room required.",
+
+          "features": [
+            "Very Small Mechanical Loop (<10 mm): Delivers the stability needed for atomic resolution outside a specialized lab.",
+            "All-in-One System Design: Scan head, controller, air-flow shielding, and vibration isolation combined.",
+            "Easy, Non-Hazardous Tip Preparation: Scanning probes cut directly from Pt/Ir wire, no etching chemicals required.",
+            "Robust, Passive Vibration Isolation: Isolation feet on a heavy stone table protect measurements without active components.",
+            "Safe, No-High-Voltage Operation: Built to be safely operated by unexperienced users.",
+            "Two-Cable Setup: Just power and USB, nothing else to configure.",
+            "Compact 204 × 204 mm Footprint: Fits comfortably on nearly any workbench or classroom table.",
+            "Wizard-Guided Control Software: Walks new users through measurement parameters step by step."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf NaioSTM" },
+            { "label": "Category", "value": "Compact / Entry-Level STM" },
+            { "label": "Mechanical Loop", "value": "Under 10 mm" },
+            { "label": "Footprint", "value": "204 × 204 mm" },
+            { "label": "System Components", "value": "Scan head, controller, air-flow shielding, vibration isolation, stone table" },
+            { "label": "Setup Requirements", "value": "2 cables (power, USB)" },
+            { "label": "Tip Preparation", "value": "Cut from Pt/Ir wire, no hazardous etching" },
+            { "label": "Voltage Requirement", "value": "No high voltage" },
+            { "label": "Imaging Modes", "value": "Constant current (topography), constant height (current)" },
+            { "label": "Spectroscopy Modes", "value": "Current-voltage, current-distance" },
+            { "label": "Lithography Modes", "value": "Patterning, modification" },
+            { "label": "Software", "value": "Wizard-guided, with basic analysis tools" }
+          ],
+
+          "applications": [
+            "University and Classroom STM Teaching: Atomic resolution achievable within a few minutes of setup",
+            "Live Atomic-Resolution Demonstrations: Sub-10 mm mechanical loop performs even outside a vibration-isolated lab",
+            "Student Research Projects: Simple, hazard-free tip preparation supports hands-on learning",
+            "Basic Surface and Materials Research: Constant current and constant height imaging modes",
+            "Spectroscopy-Based Studies: Current-voltage and current-distance spectroscopy modes",
+            "Nanolithography Exploration: Patterning and modification lithography modes"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "classroom-time-planner", "label": "Classroom Time Planner" },
+            { "id": "sample-and-application-matcher", "label": "Sample Matcher" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Atomic Resolution" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Which STM mode fits the demonstration or project?",
+            "description": "Select the measurement goal, sample type, and skill level, and see which NaioSTM mode applies.",
+            "steps": [
+              {
+                "key": "measurementGoal",
+                "question": "What's the measurement goal?",
+                "options": [
+                  { "val": "topography", "label": "Topography" },
+                  { "val": "current-mapping", "label": "Current mapping" },
+                  { "val": "spectroscopy", "label": "Spectroscopy" },
+                  { "val": "lithography", "label": "Lithography" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "question": "What sample type are you working with?",
+                "options": [
+                  { "val": "hopg", "label": "HOPG" },
+                  { "val": "conductive-nanomaterial", "label": "Conductive nanomaterial" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "skillLevel",
+                "question": "What's the operator's skill level?",
+                "options": [
+                  { "val": "first-time-user", "label": "First-time user" },
+                  { "val": "experienced", "label": "Experienced" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share your target sample and measurement goal, and this routes to an application-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "classroom-time-planner",
+              "eyebrow": "Classroom Time Planner",
+              "title": "How much lab time is available for STM instruction?",
+              "description": "Select the total lab time planned and the group's prior STM experience, and see how NaioSTM's fast setup fits the schedule.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "About how many lab hours are planned in total?", "choices": "About 1 hour (several turns); About 2-3 hours (a full class rotation); A full day or more (multiple rotations)" },
+                { "title": "What's the group's prior STM experience?", "choices": "None; Some; Experienced" }
+              ],
+              "disclaimer": "Atomic resolution is achievable within a few minutes of setup per turn; share your exact student count and Inkarp will confirm how many students can be scheduled through in the available time."
+            },
+            {
+              "sectionId": "sample-and-application-matcher",
+              "eyebrow": "Sample and Application Matcher",
+              "title": "What kind of conductive sample is being studied?",
+              "description": "Select the sample type and research goal, and see how NaioSTM applies.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the sample category?", "choices": "HOPG; Carbon nanotubes; Graphene; Quantum dots; Other" },
+                { "title": "What's the research context?", "choices": "Coursework; Student project; Basic research" },
+                { "title": "What's the measurement type?", "choices": "Imaging; Spectroscopy; Lithography" }
+              ],
+              "disclaimer": "Routes to an application-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "NaioSTM vs. NaioAFM",
+            "description": "NaioSTM comparison: NaioSTM versus NaioAFM.",
+            "columns": [
+              { "label": "NaioSTM" },
+              { "label": "NaioAFM" }
+            ],
+            "rows": [
+              { "feature": "Technique", "values": ["Scanning Tunneling Microscopy", "Atomic Force Microscopy"] },
+              { "feature": "Sample Requirement", "values": ["Conductive surfaces only", "Broad, including insulators"] },
+              { "feature": "Setup", "values": ["2 cables, tips cut from Pt/Ir wire", "Plug-and-play, no laser alignment"] },
+              { "feature": "Best For", "values": ["Atomic-scale imaging of conductive materials", "Wider sample range and mode variety"] },
+              { "feature": "Choose When", "values": ["The focus is conductive surface studies at atomic resolution", "The course or project needs topography, magnetic, electrical, or mechanical AFM modes"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NaioSTM industries: higher education, teaching laboratories, and entry-level surface science research.",
+            "industries": [
+              { "name": "University Physics and Chemistry Departments", "useCase": "STM coursework and atomic-resolution demonstrations", "consideration": "Sub-10 mm mechanical loop performs in a standard classroom" },
+              { "name": "Community and Technical Colleges", "useCase": "Hands-on STM training for students", "consideration": "No high voltage keeps the system safe for first-time users" },
+              { "name": "Undergraduate Research Programs", "useCase": "Student-led conductive-surface research projects", "consideration": "Non-hazardous tip preparation supports independent lab work" },
+              { "name": "Entry-Level Surface Science Labs", "useCase": "Basic conductive material characterization", "consideration": "Wizard-guided software shortens the learning curve" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows fast setup and atomic-resolution imaging on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms operating modes and classroom setup needs" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with tip preparation and the control software" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, controller, and isolation performance" },
+              { "title": "Spares and Accessories", "description": "Supplies Pt/Ir wire, tip preparation tools, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the NaioSTM used for?", "answer": "It's a tabletop scanning tunneling microscope built for teaching and basic research, capable of atomic resolution on conductive samples like HOPG in a standard classroom setting." },
+            { "question": "How fast can it achieve atomic resolution?", "answer": "Within a few minutes of setup, thanks to its very small mechanical loop and straightforward two-cable connection." },
+            { "question": "What does setup actually involve?", "answer": "Connecting two cables, power and USB, nothing more." },
+            { "question": "How are scanning tips prepared?", "answer": "They're simply cut from Pt/Ir wire, with no hazardous substances needed for etching." },
+            { "question": "Is high voltage required to operate it?", "answer": "No, the system functions entirely without high voltage, making it safe in unexperienced hands." },
+            { "question": "Does it need a specialized vibration-isolated lab?", "answer": "No, its mechanical loop of under 10 mm provides enough stability to achieve atomic resolution on a coffee table or in a regular classroom." },
+            { "question": "How much space does it take up?", "answer": "Just 204 × 204 mm, barely any workbench space at all." },
+            { "question": "What operating modes are available?", "answer": "Constant current and constant height imaging, current-voltage and current-distance spectroscopy, and patterning and modification lithography modes." },
+            { "question": "Is the software beginner-friendly?", "answer": "Yes, helpful wizards guide parameter setup for each measurement type, and built-in analysis tools support on-the-spot image evaluation." },
+            { "question": "What is the price of the NaioSTM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the intended application and classroom or lab setup." },
+            { "question": "Who is the authorized distributor of the NaioSTM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf NaioSTM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the NaioSTM in India from Inkarp",
+            "description": "Share the classroom or research application, and the right NaioSTM setup gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your classroom or research application, then confirm the right NaioSTM setup.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "applicationDetails", "label": "Classroom or research application", "type": "text", "required": false },
+              { "key": "courseSchedule", "label": "Lab hours and student count", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Connect two cables. See atoms in minutes. On a coffee table, if you want.",
+            "heroLead": "NaioSTM is the best-selling tabletop STM, and it earns that title with a mechanical loop under 10 mm, tight enough to achieve atomic resolution on HOPG in an ordinary classroom, no isolation table or specialized room required. Setup means connecting exactly two cables, power and USB. Scanning tips get cut straight from Pt/Ir wire, no hazardous etching chemicals involved, and the whole process from unboxing to a first successful atomic-resolution image takes just a few minutes. It runs without high voltage, genuinely safe in inexperienced hands, and fits a 204 × 204 mm footprint that barely touches the workbench.",
+            "stats": [
+              { "value": "Under 10 mm", "label": "Mechanical loop size" },
+              { "value": "5 minutes", "label": "Time to atomic resolution" },
+              { "value": "2 cables", "label": "Power and USB, the entire setup" },
+              { "value": "204 × 204 mm", "label": "Full system footprint" },
+              { "value": "No high voltage", "label": "Safe operation" },
+              { "value": "No hazardous chemicals", "label": "Tips cut directly from Pt/Ir wire" },
+              { "value": "All-in-one", "label": "Scan head and controller combined" },
+              { "value": "Passive vibration isolation", "label": "Stone table with isolation feet" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NaioSTM product information: mechanical stability, tip preparation, and classroom-ready design.",
+                "body": [
+                  "NaioSTM brings the scan head and controller together in a single instrument, simplifying installation, maximizing ease of use, and making the system genuinely easy to transport.",
+                  "A very small mechanical loop, under 10 mm, provides the stability to achieve atomic resolution on a coffee table or in a classroom, not just in a vibration-controlled lab.",
+                  "Passive vibration isolation feet on a heavy stone table protect measurements against disturbances, keeping the system robust during operation.",
+                  "The system functions without high voltage, making it safe to operate in unexperienced hands.",
+                  "Air-flow shielding, complete with a magnifying glass to aid the initial approach, integrates directly with the scan head, controller, and vibration isolation.",
+                  "Setup requires connecting just two cables, power and USB, nothing more.",
+                  "Scanning tips are simply cut from Pt/Ir wire, with no hazardous substances needed to etch them.",
+                  "The full process from setup to seeing first successful images takes just a few minutes.",
+                  "A 204 × 204 mm footprint means the system barely takes up workbench space."
+                ],
+                "cards": [
+                  { "title": "Sub-10 mm mechanical loop", "description": "Atomic resolution even outside a controlled lab" },
+                  { "title": "Atomic resolution in minutes", "description": "Fast setup, fast first results" },
+                  { "title": "No high voltage", "description": "Safe for unexperienced hands" },
+                  { "title": "204 × 204 mm footprint", "description": "Barely takes up bench space" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf NaioSTM All-in-One Scanning Tunneling Microscope" },
+                  { "title": "System components", "description": "Scan head and controller combined, air-flow shielding, vibration isolation" },
+                  { "title": "Mechanical loop", "description": "Under 10 mm" },
+                  { "title": "Footprint", "description": "204 × 204 mm" },
+                  { "title": "Setup", "description": "2 cables (power, USB), tips cut from Pt/Ir wire" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NaioSTM applications: teaching, classroom demonstrations, and basic surface research."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NaioSTM technical specifications: mechanical loop, footprint, and operating modes."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Atomic Resolution Without the Usual Overhead",
+                "title": "Atomic Resolution Without the Usual Overhead",
+                "description": "STM has a reputation for demanding controlled environments, high voltage, and hazardous tip-etching chemistry. NaioSTM strips all three of those barriers away. The system functions entirely without high voltage, making it genuinely safe to place in unexperienced hands, a real requirement for a classroom or teaching lab. Scanning tips are simply cut from Pt/Ir wire, no etching chemicals, no hazardous substances, no specialized tip-prep station required before a measurement can even start. A mechanical loop under 10 mm is what makes atomic resolution possible on HOPG in a standard classroom, not a dedicated vibration-isolated lab, backed further by passive isolation feet on a heavy stone table.",
+                "cards": [
+                  { "title": "Safe operation for students and first-time users", "description": "No high voltage required" },
+                  { "title": "No hazardous chemical handling before measurement", "description": "Tips cut directly from Pt/Ir wire" },
+                  { "title": "Atomic resolution outside a specialized vibration lab", "description": "Sub-10 mm mechanical loop, passive isolation" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Guided Software, Real Analysis Tools",
+                "title": "Guided Software, Real Analysis Tools",
+                "body": [
+                  "New STM users don't need a research-grade interface, they need to reach a real result fast, and then understand what they're looking at. NaioSTM's software is built around exactly that sequence.",
+                  "Only a few clicks are needed per measurement, and helpful wizards guide the process of setting parameters for each measurement type, whether imaging, spectroscopy, or lithography.",
+                  "Basic analysis tools let a user apply corrections, calculate roughness, and measure distances directly, so images can be evaluated on the spot rather than exported to a separate program first. That combination is what lets even unexperienced users quickly learn to confidently perform measurements and get meaningful results, not just pretty pictures."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fast setup without deep STM expertise", "value": "Wizard-guided parameter selection" },
+                  { "label": "On-the-spot image evaluation", "value": "Built-in correction, roughness, and distance tools" },
+                  { "label": "Confidence for first-time or student operators", "value": "Only a few clicks per measurement" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NaioSTM documentation: brochure and publications.",
+                "cards": [
+                  { "title": "NaioSTM Brochure (technology, applications, specifications)", "description": "Available for download" },
+                  { "title": "Related Publications", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the NaioSTM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Two cables, no high voltage, atomic resolution in minutes, on nearly any table. Share the classroom or research application, and the right NaioSTM setup gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

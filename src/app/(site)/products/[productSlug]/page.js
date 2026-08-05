@@ -49,6 +49,7 @@ export default async function ProductPage({ params }) {
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
   const countryFlagCodes = getCountryFlagCodes(product.countryOfOrigin);
   const heroLead = product.longForm?.heroLead ?? product.overview;
+  const ctaHref = isRichPage ? "#booking" : "/contact";
   const heroHookMatch = product.overview?.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/);
   const heroHook = product.longForm?.heroHook ?? heroHookMatch?.[1]?.trim();
   const showHeroHook = Boolean(heroHook && heroLead && !heroLead.startsWith(heroHook));
@@ -166,40 +167,14 @@ export default async function ProductPage({ params }) {
             <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft sm:text-lg">
               {heroLead}
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-3.5">
-              <Link
-                href={isRichPage ? "#booking" : "/contact"}
-                className="inline-flex items-center border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
-              >
-                Request Quote
-              </Link>
-              <Link
-                href={isRichPage ? "#booking" : "/contact"}
-                className="inline-flex items-center gap-2 border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
-              >
-                <FiMail className="h-4 w-4 text-red" />
-                Enquiry Now
-              </Link>
-            </div>
           </div>
 
           <div className="relative self-center border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
             {product.images?.length > 0 ? (
-              <ProductImageGallery images={product.images} productName={product.name} />
+              <ProductImageGallery ctaHref={ctaHref} images={product.images} productName={product.name} />
             ) : (
               <>
                 <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
-                  <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-2/5">
-                    <Image
-                      alt="Dr Dexter"
-                      className="object-contain object-bottom"
-                      fill
-                      sizes="(min-width: 1024px) 240px, (min-width: 640px) 200px, 150px"
-                      src="/dexter.png"
-                    />
-                  </div>
-
                   {product.image ? (
                     <Image
                       alt={product.imageAlt ?? product.name}
@@ -215,10 +190,7 @@ export default async function ProductPage({ params }) {
                     </div>
                   )}
                 </div>
-                <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-                  <span>Fig. 01 - Product Overview</span>
-                  <span>{product.imageAlt ?? `${product.principalName} ${product.name}`}</span>
-                </div>
+                <ProductImageActions href={ctaHref} />
               </>
             )}
           </div>
@@ -270,6 +242,26 @@ export default async function ProductPage({ params }) {
         </section>
       )}
     </main>
+  );
+}
+
+function ProductImageActions({ href }) {
+  return (
+    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+      <Link
+        href={href}
+        className="inline-flex h-12 items-center justify-center border border-red bg-red px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+      >
+        Request Quote
+      </Link>
+      <Link
+        href={href}
+        className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+      >
+        <FiMail className="h-4 w-4 text-red" />
+        Enquiry Now
+      </Link>
+    </div>
   );
 }
 

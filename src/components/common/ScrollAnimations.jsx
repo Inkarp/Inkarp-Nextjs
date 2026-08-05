@@ -44,7 +44,17 @@ export default function ScrollAnimations() {
       });
     };
 
-    observeRevealItems();
+    // Defer the initial sweep past the current paint. Running this
+    // synchronously in the effect can fire before React finishes hydrating
+    // later sections of a heavy page (this component queries the whole
+    // document, not just its own subtree), so the DOM it mutates can belong
+    // to nodes React hasn't hydrated yet - producing a hydration mismatch
+    // warning for attributes React never rendered itself. Two rAFs give
+    // hydration a full frame to settle before we touch anything.
+    let innerFrame = null;
+    const outerFrame = window.requestAnimationFrame(() => {
+      innerFrame = window.requestAnimationFrame(observeRevealItems);
+    });
 
     const mutationObserver = new MutationObserver(() => {
       window.requestAnimationFrame(observeRevealItems);
@@ -56,6 +66,8 @@ export default function ScrollAnimations() {
     });
 
     return () => {
+      window.cancelAnimationFrame(outerFrame);
+      if (innerFrame !== null) window.cancelAnimationFrame(innerFrame);
       mutationObserver.disconnect();
       observer.disconnect();
     };

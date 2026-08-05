@@ -1,0 +1,335 @@
+{
+  "principal": {
+    "slug": "chemspeed",
+    "principalName": "Chemspeed",
+    "countryOfOrigin": "Switzerland"
+  },
+  "categories": [
+    {
+      "name": "Automated Extraction (QuEChERS)",
+      "slug": "automated-extraction-quechers",
+      "products": [
+        {
+          "name": "Chemspeed FLEX QUECHERS",
+          "slug": "flex-quechers",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
+          "imageAlt": "Chemspeed FLEX QUECHERS - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/flex-quechers",
+          "breadcrumbPath": "Home > Products > Automated Extraction (QuEChERS) > Chemspeed FLEX QUECHERS",
+          "h1": "Chemspeed FLEX QUECHERS",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "QuEChERS prep quality usually depends on who's running it and how experienced they are. FLEX QUECHERS removes that variable entirely, fully automated, push-button sample preparation that delivers lab-, user-, and system-independent results, standardizing an analytical workflow that's traditionally been anything but consistent.",
+
+          "features": [
+            "Fully Automated, Push-Button Operation: Delivers consistent QuEChERS prep without relying on operator skill or experience.",
+            "Gravimetric Salt Dispensing: Ensures precise, repeatable salt amounts across every sample.",
+            "Volumetric Liquid Dispensing: Delivers consistent liquid volumes without manual pipetting variability.",
+            "Integrated Automated Centrifuge: Runs sample separation as part of the same automated sequence.",
+            "Integrated Orbital Shaker: Handles mixing and extraction steps without manual intervention.",
+            "50 mL and 15 mL Falcon Tube Compatibility: Fits directly into standard QuEChERS tube formats already in use.",
+            "High-Throughput, Day-and-Night Capability: Processes up to 240 samples across 24 hours without operator attendance.",
+            "Market-Proven Platform and Software: Built on Chemspeed's established automation tools for long-term robustness."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Chemspeed FLEX QUECHERS" },
+            { "label": "Category", "value": "Automated Extraction (QuEChERS)" },
+            { "label": "Throughput (1 Run)", "value": "Up to 120 samples in 10 hours" },
+            { "label": "Throughput (2 Runs)", "value": "Up to 240 samples in 24 hours" },
+            { "label": "Tube Compatibility", "value": "50 mL and 15 mL Falcon tubes" },
+            { "label": "Salt Dispensing", "value": "Gravimetric" },
+            { "label": "Liquid Dispensing", "value": "Volumetric" },
+            { "label": "Sample Separation", "value": "Automated centrifuge" },
+            { "label": "Mixing/Extraction", "value": "Automated orbital shaker" },
+            { "label": "Operation Mode", "value": "Fully automated, push-button" },
+            { "label": "Software", "value": "AUTOSUITE (experiment automation), ARKSUITE (lab orchestration)" }
+          ],
+
+          "applications": [
+            "Pesticide Residue Analysis: Standardized extraction and clean-up for consistent, defensible results",
+            "Food Safety Testing: High-throughput prep suited to routine QC sample loads",
+            "Environmental Residue Screening: Reproducible sample prep independent of operator or lab",
+            "High-Volume Contract Testing Labs: Up to 240 samples/24h supports demanding daily throughput",
+            "Regulatory and Compliance Testing: Standardized, traceable procedures support audit-ready documentation"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Compliance Fit" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Throughput Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Consistency Without Variability" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the lab need standardized, audit-ready sample prep?",
+            "description": "Select the regulatory environment and current variability concerns, and see how FLEX QUECHERS applies.",
+            "fields": [
+              {
+                "key": "regulatoryRequirement",
+                "label": "Regulatory requirement",
+                "options": [
+                  { "val": "pesticide-residue", "label": "Pesticide residue" },
+                  { "val": "food-safety", "label": "Food safety" },
+                  { "val": "environmental", "label": "Environmental" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "variabilityConcern",
+                "label": "Current result variability concern",
+                "options": [
+                  { "val": "operator-dependent", "label": "Operator-dependent" },
+                  { "val": "lab-dependent", "label": "Lab-dependent" },
+                  { "val": "none-reported", "label": "None reported" }
+                ]
+              },
+              {
+                "key": "documentationNeed",
+                "label": "Documentation need",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "audit-ready", "label": "Audit-ready traceable procedures" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "documentationNeed": "audit-ready" }, "title": "Standardized Procedures Support Audit Readiness", "body": "Standardized processes and procedures directly improve quality and traceability, supporting audit-ready documentation.", "tags": ["Audit-Ready Traceability"] },
+              { "condition": { "variabilityConcern": "operator-dependent" }, "title": "Push-Button Operation Removes Operator Variability", "body": "The entire prep sequence runs automatically the same way every time, removing operator and lab-specific variability.", "tags": ["Lab-, User-, and System-Independent"] },
+              { "condition": { "regulatoryRequirement": "pesticide-residue" }, "title": "Built for Pesticide Residue Workflows", "body": "Standardized extraction and clean-up deliver consistent, defensible results for pesticide residue analysis.", "tags": ["Pesticide Residue Ready"] },
+              { "condition": "default", "title": "Confirm the Right Fit With Inkarp", "body": "Share the regulatory requirement and documentation need, and Inkarp will confirm how FLEX QUECHERS applies.", "tags": ["Standardized, Traceable Prep"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How many samples need processing, and how fast?",
+            "description": "Select the daily sample volume, turnaround requirement, and tube format, and see the recommended run configuration.",
+            "steps": [
+              {
+                "key": "samplesPerDay",
+                "question": "How many samples need processing per day?",
+                "options": [
+                  { "val": "under-120", "label": "Under 120 (fits a single 10-hour run)" },
+                  { "val": "120-to-240", "label": "120–240 (needs day-and-night dual-run)" },
+                  { "val": "over-240", "label": "Over 240 (exceeds single-unit capacity)" }
+                ]
+              },
+              {
+                "key": "turnaroundRequirement",
+                "question": "What's the turnaround requirement?",
+                "options": [
+                  { "val": "same-day", "label": "Same-day" },
+                  { "val": "overnight", "label": "Overnight" },
+                  { "val": "24-hour-cycle", "label": "24-hour cycle" }
+                ]
+              },
+              {
+                "key": "tubeFormat",
+                "question": "What tube format is in use?",
+                "options": [
+                  { "val": "50ml-falcon", "label": "50 mL Falcon" },
+                  { "val": "15ml-falcon", "label": "15 mL Falcon" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Recommends a single-run or dual-run (day-and-night) setup, then routes to a throughput-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "Single Run vs. Dual Run (Day and Night)",
+            "description": "FLEX QUECHERS method comparison: single-run versus dual-run (day-and-night) operation.",
+            "columns": [
+              { "label": "Single Run" },
+              { "label": "Dual Run (Day and Night)" }
+            ],
+            "rows": [
+              { "feature": "Samples Processed", "values": ["Up to 120", "Up to 240"] },
+              { "feature": "Time Frame", "values": ["10 hours", "24 hours"] },
+              { "feature": "Best For", "values": ["Standard daily sample loads", "High-volume labs needing maximum throughput"] },
+              { "feature": "Choose When", "values": ["Sample volume fits within a single working shift", "Backlog or growth demands round-the-clock processing"] }
+            ],
+            "disclaimer": "Both run modes share the same gravimetric dispensing, centrifuge, and orbital shaker functions. The difference is purely how many cycles run per day."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FLEX QUECHERS industries: food safety testing, agrochemical regulatory labs, and environmental monitoring.",
+            "industries": [
+              { "name": "Food Safety and Residue Testing Labs", "useCase": "Routine pesticide residue screening", "consideration": "Up to 240 samples/24h supports high daily testing volume" },
+              { "name": "Agrochemical Regulatory Compliance", "useCase": "Standardized residue analysis for regulatory submission", "consideration": "Lab- and user-independent results support audit defensibility" },
+              { "name": "Environmental Testing Laboratories", "useCase": "Residue and contaminant screening in environmental samples", "consideration": "Reproducible prep removes operator-driven variability" },
+              { "name": "Contract Testing Laboratories", "useCase": "High-volume, multi-client sample processing", "consideration": "Day-and-night operation maximizes throughput without added staff" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows push-button prep and throughput performance on real samples" },
+              { "title": "Configuration Assessment", "description": "Confirms single-run or dual-run setup for the lab's sample volume" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Builds confidence with AUTOSUITE and ARKSUITE software" },
+              { "title": "Preventive Maintenance", "description": "Maintains dispensing, centrifuge, and shaker performance" },
+              { "title": "Spares and Accessories", "description": "Supplies Falcon tube racks, dispensing components, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Chemspeed FLEX QUECHERS used for?", "answer": "It's a fully automated, push-button sample preparation platform for QuEChERS extraction and clean-up, used in pesticide residue and food safety analysis." },
+            { "question": "Why does the platform produce lab-, user-, and system-independent results?", "answer": "Because the entire prep sequence, gravimetric salt dispensing, volumetric liquid dispensing, centrifugation, and shaking, runs automatically the same way every time, removing operator and lab-specific variability." },
+            { "question": "How many samples can it process?", "answer": "Up to 120 samples in 10 hours on a single run, or up to 240 samples across 24 hours running two cycles." },
+            { "question": "What tube formats does it support?", "answer": "50 mL and 15 mL Falcon tubes." },
+            { "question": "What functions are built into the platform?", "answer": "Gravimetric salt dispensing, volumetric liquid dispensing, an automated centrifuge, and an orbital shaker." },
+            { "question": "Can it run unattended overnight?", "answer": "Yes, it's built to work day and night, maximizing efficiency and productivity without requiring constant operator attendance." },
+            { "question": "How does this help with staffing constraints?", "answer": "It reduces dependence on a limited pool of trained staff, mitigating labor shortage risk while freeing skilled personnel for higher-value tasks." },
+            { "question": "Does it support regulatory or audit documentation?", "answer": "Yes, its standardized processes and procedures directly improve quality and traceability, supporting audit-ready documentation." },
+            { "question": "What software runs the platform?", "answer": "AUTOSUITE for experiment design and execution, and ARKSUITE for broader lab orchestration and data management." },
+            { "question": "What is the price of the FLEX QUECHERS in India?", "answer": "Get in touch and Inkarp will put together a quote based on the throughput and run configuration needed." },
+            { "question": "Who is the authorized distributor of the FLEX QUECHERS in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX QUECHERS in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the FLEX QUECHERS in India from Inkarp",
+            "description": "Share the sample volume and turnaround needs, and the right FLEX QUECHERS configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample volume and turnaround requirements, then confirm the right FLEX QUECHERS configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolume", "label": "Sample volume and turnaround needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right run configuration", "body": "Share the sample volume and turnaround needs, and the right FLEX QUECHERS configuration gets confirmed from there." },
+              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Push a button. Get the same result, every lab, every user, every time.",
+            "heroLead": "QuEChERS prep quality usually depends on who's running it and how experienced they are. FLEX QUECHERS removes that variable entirely, fully automated, push-button sample preparation that delivers lab-, user-, and system-independent results, standardizing an analytical workflow that's traditionally been anything but consistent. Gravimetric salt dispensing, volumetric liquid dispensing, automated centrifuge, and orbital shaker functions run together on 50 mL and 15 mL Falcon tubes, processing up to 120 samples in 10 hours on a single run, or up to 240 samples across 24 hours running day and night.",
+            "stats": [
+              { "value": "Up to 120 samples", "label": "Per 10-hour single run" },
+              { "value": "Up to 240 samples", "label": "Per 24 hours, running two cycles" },
+              { "value": "50 mL and 15 mL", "label": "Falcon tube compatibility" },
+              { "value": "Fully automated", "label": "Push-button operation" },
+              { "value": "Gravimetric", "label": "Salt dispensing" },
+              { "value": "Volumetric", "label": "Liquid dispensing" },
+              { "value": "Automated", "label": "Centrifuge and orbital shaker built in" },
+              { "value": "Day and night", "label": "Continuous, unattended operation" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FLEX QUECHERS product information: automated extraction workflow, throughput, and standardization.",
+                "body": [
+                  "Fully automated QuEChERS preparation: Push button sample preparation with automated salt and liquid dispensing, centrifugation and shaking.",
+                  "Consistent results every time: Standardized workflows reduce operator and laboratory variability for reliable, reproducible sample preparation.",
+                  "High throughput processing: Handles up to 120 samples in 10 hours or 240 samples in 24 hours across two cycles.",
+                  "Works with standard tubes: Compatible with 15 mL and 50 mL Falcon tubes.",
+                  "Less manual workload: Automates repetitive preparation steps, freeing skilled staff for higher value laboratory work.",
+                  "Built to scale: Increase sample throughput without proportionally increasing staffing, while maintaining traceability and workflow consistency."
+                ],
+                "cards": [
+                  { "title": "Push-button automation", "description": "Lab-, user-, and system-independent results" },
+                  { "title": "Up to 240 samples/24h", "description": "Genuine day-and-night throughput" },
+                  { "title": "Gravimetric + volumetric dispensing", "description": "Consistent salt and liquid handling every run" },
+                  { "title": "Standardized workflow", "description": "Removes human-factor variability from prep" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Chemspeed FLEX QUECHERS Automated Sample Preparation Platform" },
+                  { "title": "Tube formats", "description": "50 mL and 15 mL Falcon tubes" },
+                  { "title": "Throughput", "description": "Up to 120 samples/10 hours (1 run), up to 240 samples/24 hours (2 runs)" },
+                  { "title": "Core functions", "description": "Gravimetric salt dispensing, volumetric liquid dispensing, automated centrifuge, orbital shaker" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FLEX QUECHERS applications: pesticide residue analysis, food safety testing, and environmental sample screening."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FLEX QUECHERS technical specifications: throughput, tube formats, and functional components."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Consistency Without the Human Variable",
+                "title": "Consistency Without the Human Variable",
+                "description": "Consistent, operator-independent QuEChERS preparation for reproducible results across every sample, shift and laboratory.",
+                "cards": [
+                  { "title": "Results that don't depend on who ran the prep", "description": "Push-button, fully automated operation" },
+                  { "title": "Confidence in reproducibility across labs and operators", "description": "Standardized gravimetric and volumetric dispensing" },
+                  { "title": "Long-term comparability of results", "description": "Consistent workflow replication over years" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built to Run Day and Night",
+                "title": "Built to Run Day and Night",
+                "body": [
+                  "Run up to 240 samples in 24 hours with unattended automation, increasing daily throughput while freeing skilled staff for higher value work."
+                ],
+                "utilityChecklist": [
+                  { "label": "Higher daily sample throughput without more staff", "value": "Up to 240 samples processed across 24 hours" },
+                  { "label": "Freeing skilled staff for higher-value work", "value": "Fully automated, unattended prep" },
+                  { "label": "Resilience against staffing shortages", "value": "Reduced dependence on a limited trained pool" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FLEX QUECHERS documentation: AUTOSUITE and ARKSUITE software overviews.",
+                "cards": [
+                  { "title": "FLEX QUECHERS Workflow Overview", "description": "Available on request" },
+                  { "title": "AUTOSUITE Software Overview", "description": "Available on request" },
+                  { "title": "ARKSUITE Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the FLEX QUECHERS in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Push-button QuEChERS prep that delivers the same result regardless of lab, user, or shift, up to 240 samples every 24 hours. Share the sample volume and turnaround needs, and the right FLEX QUECHERS configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

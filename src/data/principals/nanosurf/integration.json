@@ -1,0 +1,891 @@
+{
+  "principal": {
+    "slug": "nanosurf",
+    "principalName": "Nanosurf",
+    "countryOfOrigin": "Switzerland"
+  },
+  "categories": [
+    {
+      "name": "Integration",
+      "slug": "integration",
+      "products": [
+        {
+          "name": "LensAFM",
+          "slug": "lensafm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf LensAFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/lensafm",
+          "breadcrumbPath": "Home > Products > Integration > LensAFM",
+          "h1": "LensAFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Optical microscopy stops at the wavelength of light. Everything smaller than that limit is a feature you know is there and cannot resolve — and the usual answer is a second instrument, a second bench, and a sample transferred between them with no certainty of finding the same spot twice.",
+
+          "features": [
+            "Universal Compatibility: Mountable on virtually any optical microscope or 3D optical profilometer.",
+            "Kinematic Precision Mounting: Quick-release mechanism with remounting guaranteed to better than 10 µm accuracy.",
+            "Alignment Grooves on the Chip Mount: Places the next cantilever's tip within 4 µm of the same position after exchange.",
+            "No Laser Alignment Required: The groove design removes cantilever laser alignment from the workflow entirely.",
+            "Integrated 8x Objective Lens: Clear optical view of both the sample and the cantilever during operation.",
+            "Automatic Cantilever Approach: Bringing the sample into optical focus is all the operator does; the system handles the rest.",
+            "Large Z-Range: Enables measurement of high structures beyond shallow surface topography.",
+            "Easy Sample Positioning: Uses the optical microscope's own position manipulators rather than a separate stage.",
+            "Eight Mounting Adapters: Covering Zeiss, Olympus, Leica, Nikon, and Mitutoyo thread standards and working distances.",
+            "Full Nanosurf C3000 Software: Automated calibration, roughness and distance tools, scriptable control, free lifetime updates."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf LensAFM" },
+            { "label": "Category", "value": "Integration / Turret-Mounted Atomic Force Microscopy" },
+            { "label": "Mounting", "value": "Objective turret of an optical microscope or 3D optical profilometer" },
+            { "label": "Mounting Mechanism", "value": "Quick-release, kinematic" },
+            { "label": "Remount Accuracy", "value": "Better than 10 µm" },
+            { "label": "Cantilever Tip Repositioning", "value": "Within 4 µm of the same position after exchange" },
+            { "label": "Laser Alignment", "value": "Not required — alignment grooves handle positioning" },
+            { "label": "Integrated Optics", "value": "8x objective lens for sample and cantilever view" },
+            { "label": "Cantilever Approach", "value": "Automatic, following optical focus" },
+            { "label": "Z-Range", "value": "Large, supporting measurement of high structures" },
+            { "label": "Sample Positioning", "value": "Via the optical microscope's own position manipulators" },
+            { "label": "Standard Imaging Modes", "value": "Static force, lateral force, dynamic force (tapping), phase imaging" },
+            { "label": "Electrical Modes", "value": "C-AFM, EFM, MFM" },
+            { "label": "Mechanical Modes", "value": "Force spectroscopy, force modulation, force mapping" },
+            { "label": "Additional Modes", "value": "Lithography and nanomanipulation" },
+            {
+              "label": "Mounting Adapters",
+              "value": [
+                "BT04771 — Zeiss/Olympus BF RMS W20.32×0.706, 45 mm",
+                "BT04774 — Zeiss DF M27×0.75, 45 mm",
+                "BT04782 — Olympus DF RMS W26×0.706, 45 mm",
+                "BT04772 — Leica M25×0.75, 45 mm",
+                "BT05015 — Leica M32×0.75, 45 mm",
+                "BT04768 — Nikon M25×0.75, 60 mm",
+                "BT05664 — Nikon M32×0.75, 60 mm",
+                "BT04940 — Mitutoyo RMS W26×0.706, 95 mm"
+              ]
+            },
+            { "label": "Control Software", "value": "Nanosurf C3000, fully scriptable, free lifetime updates" },
+            { "label": "Detailed System Specifications", "value": "Available in the LensAFM brochure on request — numeric specifications not published on the product page" }
+          ],
+
+          "applications": [
+            "Surface Defect Analysis: Demonstrated on a defect in a hard-coated metal surface with correlated optical and AFM imaging",
+            "Coating Characterization: Demonstrated on glass with anti-scratch coating",
+            "Transparent Sample Characterization: Overcomes the difficulty of assessing transparent samples optically",
+            "Sub-Optical Feature Inspection: Resolves features smaller than a 100x objective can distinguish",
+            "Surface Roughness Measurement: Roughness quantified directly rather than inferred optically",
+            "Hardness Variation Mapping: Mechanical property variation across a surface characterized",
+            "Magnetic Material Analysis: MFM for magnetic property investigation at the nanoscale",
+            "Electrical Conductance Analysis: C-AFM and EFM for conductance and resistance characterization",
+            "High Structure Measurement: Large Z-range accommodates tall surface features",
+            "Quality Control Surface Inspection: Optical screening followed by AFM confirmation on the same instrument",
+            "Instrument Development Platforms: Compact design with optical access, used in bespoke research instrumentation work",
+            "3D Optical Profilometer Extension: Adds AFM resolution where profilometer resolution ends"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Compatibility Check" },
+            { "id": "mode-and-capability-selector", "label": "Mode Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Resolution Assessment" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Precision Mounting" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Will it fit the microscope already in the lab?",
+            "description": "Select the instrument details, and see the required mounting adapter.",
+            "fields": [
+              {
+                "key": "instrumentType",
+                "label": "Instrument type",
+                "options": [
+                  { "val": "optical-microscope", "label": "Optical microscope" },
+                  { "val": "3d-optical-profilometer", "label": "3D optical profilometer" }
+                ]
+              },
+              {
+                "key": "manufacturer",
+                "label": "Manufacturer",
+                "options": [
+                  { "val": "zeiss", "label": "Zeiss" },
+                  { "val": "olympus", "label": "Olympus" },
+                  { "val": "leica", "label": "Leica" },
+                  { "val": "nikon", "label": "Nikon" },
+                  { "val": "mitutoyo", "label": "Mitutoyo" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "turretThreadStandard",
+                "label": "Turret thread standard",
+                "options": [
+                  { "val": "rms", "label": "RMS" },
+                  { "val": "m25", "label": "M25" },
+                  { "val": "m27", "label": "M27" },
+                  { "val": "m32", "label": "M32" },
+                  { "val": "unknown", "label": "Unknown" }
+                ]
+              },
+              {
+                "key": "parfocalDistance",
+                "label": "Parfocal distance",
+                "options": [
+                  { "val": "45mm", "label": "45 mm" },
+                  { "val": "60mm", "label": "60 mm" },
+                  { "val": "95mm", "label": "95 mm" },
+                  { "val": "unknown", "label": "Unknown" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "manufacturer": "zeiss", "turretThreadStandard": "rms" }, "title": "BT04771 Fits Your Microscope", "body": "Zeiss/Olympus BF RMS W20.32×0.706, 45 mm parfocal distance.", "tags": ["BT04771"] },
+              { "condition": { "manufacturer": "zeiss", "turretThreadStandard": "m27" }, "title": "BT04774 Fits Your Microscope", "body": "Zeiss DF M27×0.75, 45 mm parfocal distance.", "tags": ["BT04774"] },
+              { "condition": { "manufacturer": "olympus", "turretThreadStandard": "rms" }, "title": "BT04782 Fits Your Microscope", "body": "Olympus DF RMS W26×0.706, 45 mm parfocal distance.", "tags": ["BT04782"] },
+              { "condition": { "manufacturer": "leica", "turretThreadStandard": "m25" }, "title": "BT04772 Fits Your Microscope", "body": "Leica M25×0.75, 45 mm parfocal distance.", "tags": ["BT04772"] },
+              { "condition": { "manufacturer": "leica", "turretThreadStandard": "m32" }, "title": "BT05015 Fits Your Microscope", "body": "Leica M32×0.75, 45 mm parfocal distance.", "tags": ["BT05015"] },
+              { "condition": { "manufacturer": "nikon", "turretThreadStandard": "m25" }, "title": "BT04768 Fits Your Microscope", "body": "Nikon M25×0.75, 60 mm parfocal distance.", "tags": ["BT04768"] },
+              { "condition": { "manufacturer": "nikon", "turretThreadStandard": "m32" }, "title": "BT05664 Fits Your Microscope", "body": "Nikon M32×0.75, 60 mm parfocal distance.", "tags": ["BT05664"] },
+              { "condition": { "manufacturer": "mitutoyo" }, "title": "BT04940 Fits Your Microscope", "body": "Mitutoyo RMS W26×0.706, 95 mm parfocal distance.", "tags": ["BT04940"] },
+              { "condition": "default", "title": "Confirm the Right Adapter With Inkarp", "body": "Share the microscope make, model, turret thread standard, and parfocal distance, and Inkarp will confirm the right adapter from the eight available.", "tags": ["8 Mounting Adapters"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What is the current optical setup failing to resolve?",
+            "description": "Select the feature scale and sample type, and see whether LensAFM closes the gap.",
+            "steps": [
+              {
+                "key": "currentMagnification",
+                "question": "What's the current highest magnification?",
+                "options": [
+                  { "val": "50x", "label": "50x" },
+                  { "val": "100x", "label": "100x" },
+                  { "val": "profilometer-resolution", "label": "Profilometer resolution" }
+                ]
+              },
+              {
+                "key": "featureSize",
+                "question": "What's the feature size of interest?",
+                "options": [
+                  { "val": "micrometre", "label": "Micrometre scale" },
+                  { "val": "sub-micrometre", "label": "Sub-micrometre" },
+                  { "val": "nanometre", "label": "Nanometre" }
+                ]
+              },
+              {
+                "key": "sampleOpticalCharacter",
+                "question": "What's the sample's optical character?",
+                "options": [
+                  { "val": "opaque", "label": "Opaque" },
+                  { "val": "transparent", "label": "Transparent" },
+                  { "val": "optically-difficult", "label": "Optically difficult" }
+                ]
+              },
+              {
+                "key": "informationRequired",
+                "question": "What information is required beyond shape?",
+                "options": [
+                  { "val": "topography-only", "label": "Topography only" },
+                  { "val": "roughness", "label": "Roughness" },
+                  { "val": "hardness", "label": "Hardness" },
+                  { "val": "magnetic", "label": "Magnetic" },
+                  { "val": "electrical", "label": "Electrical" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms whether the features fall within AFM range and which modes apply, then routes to an application-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "mode-and-capability-selector",
+              "eyebrow": "Mode and Capability Selector",
+              "title": "What needs measuring beyond surface shape?",
+              "description": "Select the properties of interest, and see the recommended mode set.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What properties are of interest?", "choices": "Topography; Roughness; Mechanical; Electrical; Magnetic" },
+                { "title": "What's the sample structure height?", "choices": "Shallow; Moderate; High structures requiring large Z-range" },
+                { "title": "What's the measurement frequency?", "choices": "Occasional inspection; Routine repeat measurement" },
+                { "title": "What's the automation requirement?", "choices": "Manual operation; Scripted routines" }
+              ],
+              "disclaimer": "Recommends operating modes and confirms whether requirements exceed LensAFM's scope, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "LensAFM vs. CoreAFM vs. FlexAFM",
+            "description": "LensAFM method comparison: turret-mounted integration against Nanosurf's stand-alone research AFMs.",
+            "columns": [
+              { "label": "LensAFM" },
+              { "label": "CoreAFM" },
+              { "label": "FlexAFM" }
+            ],
+            "rows": [
+              { "feature": "Category", "values": ["Integration — mounts to existing optics", "Research — all-in-one standalone", "Research — configurable standalone"] },
+              { "feature": "Mounting", "values": ["Objective turret of a microscope or profilometer", "Self-contained integrated unit", "Stand-alone, IMO, or glovebox"] },
+              { "feature": "Optical Integration", "values": ["Native — it is the objective", "DIMO option", "Inverted microscope integration"] },
+              { "feature": "Sample Positioning", "values": ["Microscope's own manipulators", "Integrated XYZ sample stage", "System sample stage"] },
+              { "feature": "Vibration Isolation", "values": ["Dependent on the host microscope setup", "Active vibration table integrated", "Specified separately"] },
+              { "feature": "Standard Imaging Modes", "values": ["Static, lateral, dynamic, phase", "Same four", "Same four"] },
+              { "feature": "Electrical Modes", "values": ["C-AFM, EFM, MFM", "C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM", "Same seven"] },
+              { "feature": "SMM, SThM, EC-AFM", "values": ["Not available", "Available", "Available"] },
+              { "feature": "FluidFM", "values": ["Not available", "Available", "Available"] },
+              { "feature": "Repositioning Accuracy", "values": ["10 µm remount, 4 µm tip placement", "Not the design constraint", "Not the design constraint"] },
+              { "feature": "Best For", "values": ["Adding AFM to an existing optical workflow", "Complete standalone AFM capability on a budget", "Configurable research across setups"] },
+              { "feature": "Choose when", "values": ["The optical microscope is the workflow, and AFM extends it", "A full standalone research AFM is needed", "Configurability and large samples matter"] }
+            ],
+            "disclaimer": "The trade is explicit and reasonable. LensAFM offers three electrical modes against seven on the standalone research systems, and no SMM, SThM, EC-AFM, or FluidFM. What it offers instead is native optical integration no standalone system can match, and repositioning accuracy engineered specifically for returning to the same feature. If the optical microscope is already the centre of the workflow, that trade favours LensAFM."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "LensAFM industries: quality control, materials inspection, coatings, semiconductor, and instrument development.",
+            "industries": [
+              { "name": "Quality Control and Surface Inspection", "useCase": "Screening optically then confirming defects at nanoscale", "consideration": "Turret rotation replaces transferring samples between instruments" },
+              { "name": "Coatings and Surface Treatment", "useCase": "Anti-scratch, hard coating, and film characterization", "consideration": "Demonstrated on anti-scratch glass coating and hard-coated metal defects" },
+              { "name": "Materials Characterization Labs", "useCase": "Extending existing optical microscopy capability", "consideration": "Universal compatibility across major microscope manufacturers" },
+              { "name": "Metrology and Profilometry", "useCase": "Adding AFM resolution where profilometer resolution ends", "consideration": "Mounts to 3D optical profilometers as well as microscopes" },
+              { "name": "Semiconductor and Electronics", "useCase": "Sub-optical feature and conductance analysis", "consideration": "C-AFM and EFM for electrical characterization" },
+              { "name": "Magnetic Materials Research", "useCase": "Magnetic domain investigation at the nanoscale", "consideration": "MFM available, with published instrument development work in magnetic materials" },
+              { "name": "Glass and Transparent Materials", "useCase": "Characterizing samples optical methods struggle with", "consideration": "AFM overcomes transparent sample assessment difficulty" },
+              { "name": "Failure Analysis Laboratories", "useCase": "Locating and characterizing surface defects", "consideration": "10 µm remount and 4 µm tip accuracy for returning to the same defect" },
+              { "name": "Instrument Development Groups", "useCase": "Building bespoke correlative instrumentation", "consideration": "Compact design with optical access, proven in university development projects" },
+              { "name": "Multi-User Optical Facilities", "useCase": "Adding AFM without dedicating bench space", "consideration": "Mounts and dismounts by quick-release without disturbing the microscope" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Mounts to the lab's own microscope and images its samples" },
+              { "title": "Compatibility Assessment", "description": "Confirms the microscope or profilometer model and required adapter before purchase" },
+              { "title": "Application Assessment", "description": "Confirms whether the features and properties of interest fall within LensAFM's scope" },
+              { "title": "Configuration Assessment", "description": "Confirms mode set, cantilevers, and adapter selection" },
+              { "title": "Installation Support", "description": "Handles mounting, first-run checks, and initial performance verification" },
+              { "title": "Operator Training", "description": "Builds confidence with the optical-to-AFM workflow and Nanosurf C3000 software" },
+              { "title": "Advanced Technique Training", "description": "Supports electrical modes, force spectroscopy, and scripted operation" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, mounting mechanism, and optical system performance" },
+              { "title": "Spares and Consumables", "description": "Supplies cantilevers, chip mounts, adapters, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is LensAFM used for?", "answer": "It's an atomic force microscope that mounts on an optical microscope or profilometer turret, extending resolution and measurement capability beyond the optical limit for surface inspection, defect analysis, and material property characterization." },
+            { "question": "How does LensAFM mount to a microscope?", "answer": "It mounts like a normal objective lens on the turret, using a quick-release kinematic mechanism, so switching to AFM is a matter of rotating the turret." },
+            { "question": "How accurately does it remount?", "answer": "Kinematic mounting guarantees replacement to better than 10 µm accuracy." },
+            { "question": "Can the same feature be found again after a cantilever change?", "answer": "Yes. Alignment grooves on the chip mount place the next cantilever's tip within 4 µm of the same position." },
+            { "question": "Does the cantilever need laser alignment?", "answer": "No. The alignment grooves remove the laser alignment step entirely, saving time on every cantilever change." },
+            { "question": "Which microscopes is LensAFM compatible with?", "answer": "Virtually any optical microscope or 3D optical profilometer, with eight mounting adapters covering Zeiss, Olympus, Leica, Nikon, and Mitutoyo thread standards and working distances." },
+            { "question": "How is the sample positioned?", "answer": "Using the optical microscope's own position manipulators, so no separate stage is required or needs learning." },
+            { "question": "Does LensAFM have its own optics?", "answer": "Yes. An integrated 8x objective lens provides a clear view of both the sample and the cantilever, and is used to relocate areas of interest before scanning." },
+            { "question": "How does the cantilever approach the sample?", "answer": "Automatically — bringing the sample into optical focus is all that's required, and the LensAFM completes the approach." },
+            { "question": "Can it measure tall surface structures?", "answer": "Yes. A large Z-range allows measurement of high structures." },
+            { "question": "Which properties can LensAFM measure beyond topography?", "answer": "Surface roughness, hardness variations, magnetism, and electrical conductance and resistance." },
+            { "question": "Which electrical modes are available?", "answer": "C-AFM, EFM, and MFM." },
+            { "question": "Can LensAFM characterize transparent samples?", "answer": "Yes. AFM overcomes the difficulty of characterizing transparent samples and others hard to assess optically." },
+            { "question": "How does LensAFM differ from a standalone Nanosurf AFM?", "answer": "LensAFM integrates natively with an existing optical microscope and is engineered for repositioning accuracy. Standalone systems like CoreAFM and FlexAFM offer a wider mode set including SMM, SThM, EC-AFM, and FluidFM, along with their own sample stages and vibration isolation." },
+            { "question": "Can instrument control be scripted?", "answer": "Yes. Nanosurf C3000 software offers fully scriptable instrument control, with a Python API available." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Numeric system specifications are published in the LensAFM brochure rather than on the product page — Inkarp can provide it on request." },
+            { "question": "What is the price of LensAFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the mounting adapter, modes, and accessories required." },
+            { "question": "Who is the authorized distributor of LensAFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf LensAFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get LensAFM in India from Inkarp",
+            "description": "Share the microscope model and what optics can't resolve, and the right LensAFM adapter and configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your microscope details and measurement requirement, then confirm the right LensAFM adapter and configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "microscopeDetails", "label": "Microscope make, model, and turret thread standard", "type": "text", "required": false },
+              { "key": "measurementDetails", "label": "Properties needing measurement beyond topography", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right adapter and configuration", "body": "Share the microscope make and model, its turret thread standard, and the properties needing measurement beyond topography, and the right LensAFM adapter and configuration gets confirmed from there." },
+              { "title": "Installation and first-run support", "body": "Handles mounting, first-run checks, and initial performance verification." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Rotate the turret. The 100x objective just became an AFM.",
+            "heroLead": "Optical microscopy stops at the wavelength of light. Everything smaller than that limit is a feature you know is there and cannot resolve — and the usual answer is a second instrument, a second bench, and a sample transferred between them with no certainty of finding the same spot twice. LensAFM mounts on the objective turret like a normal lens. Screen the sample optically, find the area of interest, rotate to the LensAFM position, and scan. The workflow doesn't change; the resolution does. The numbers behind it are what make that workflow trustworthy. Kinematic mounting guarantees remounting to better than 10 µm accuracy. Alignment grooves on the chip mount place the next cantilever's tip within 4 µm of the same position — so the feature found before a cantilever change is still findable after one. Those same grooves remove laser alignment from the process entirely. Beyond topography, it reads surface roughness, hardness variation, magnetism, and electrical conductance — and it characterizes transparent samples that defeat optical assessment altogether.",
+            "stats": [
+              { "value": "< 10 µm", "label": "Kinematic mounting remount accuracy" },
+              { "value": "Within 4 µm", "label": "Cantilever tip repositioning after exchange" },
+              { "value": "No laser alignment", "label": "Removed entirely by the alignment groove design" },
+              { "value": "8x objective lens", "label": "Integrated optical view of sample and cantilever" },
+              { "value": "8 mounting adapters", "label": "Zeiss, Olympus, Leica, Nikon, Mitutoyo" },
+              { "value": "Quick-release", "label": "Mounts and unmounts from the turret directly" },
+              { "value": "Automatic approach", "label": "Bring the sample into optical focus and the system does the rest" },
+              { "value": "Large Z-range", "label": "Measurement of high structures supported" },
+              { "value": "Universal compatibility", "label": "Virtually any optical microscope or 3D optical profilometer" },
+              { "value": "Free lifetime updates", "label": "Nanosurf C3000 software" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "LensAFM product information: turret mounting, positioning accuracy, and measurement capability.",
+                "body": [
+                  "Mounts like an objective lens: Fits the turret of an optical microscope or 3D optical profilometer in place of a standard objective.",
+                  "Picks up where optics reach their limit: Extends resolution and measuring capability beyond what the wavelength of light permits.",
+                  "Exceptionally small design: Compact enough that turret mounting is genuinely practical rather than a modification.",
+                  "Quick-release mechanism: Mounted and unmounted from the turret quickly, without tools or realignment.",
+                  "Kinematic mounting to better than 10 µm: Remounting returns the system to the same position with guaranteed accuracy.",
+                  "Cantilever tip repositioning within 4 µm: Alignment grooves on the chip mount place the next cantilever's tip near-identically.",
+                  "No laser alignment required: The alignment groove design removes the step entirely, saving time on every cantilever change.",
+                  "Integrated 8x objective lens: Clear view of both sample and cantilever, and the means to relocate areas of interest.",
+                  "Automatic cantilever approach: Bring the sample into optical focus and the system handles approach itself.",
+                  "Large Z-range: Measurement of high structures rather than only flat or shallow topography.",
+                  "Sample positioning via the microscope: The optical microscope's own position manipulators handle sample movement.",
+                  "Beyond topography: Surface roughness, hardness variation, magnetism, and electrical conductance and resistance all measurable.",
+                  "Handles optically difficult samples: Transparent samples and others hard to assess optically are characterized directly.",
+                  "Eight mounting adapters available: Covering Zeiss, Olympus, Leica, Nikon, and Mitutoyo thread standards."
+                ],
+                "cards": [
+                  { "title": "Turret-mounted like an objective", "description": "Existing optical workflow keeps working" },
+                  { "title": "10 µm remount, 4 µm tip repositioning", "description": "The same feature findable again, reliably" },
+                  { "title": "No laser alignment step", "description": "Time saved on every cantilever change" },
+                  { "title": "Eight adapters", "description": "Fits the microscopes labs already own" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf LensAFM Turret-Mounted Atomic Force Microscope" },
+                  { "title": "Mounting", "description": "Objective turret of an optical microscope or 3D optical profilometer" },
+                  { "title": "Remount accuracy", "description": "Better than 10 µm, kinematic mounting" },
+                  { "title": "Cantilever repositioning", "description": "Within 4 µm after exchange" },
+                  { "title": "Optical view", "description": "Integrated 8x objective lens" },
+                  { "title": "Approach", "description": "Automatic cantilever approach" },
+                  { "title": "Adapters", "description": "Eight options across Zeiss, Olympus, Leica, Nikon, Mitutoyo" },
+                  { "title": "Software", "description": "Nanosurf C3000, fully scriptable, free lifetime updates" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "LensAFM applications: defect analysis, coating inspection, transparent samples, and surface characterization."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "LensAFM technical specifications: positioning accuracy, mounting adapters, and operating modes."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Precision Mounting and Repositioning",
+                "title": "Precision Mounting and Repositioning",
+                "description": "How the 10 µm and 4 µm figures make relocating a feature reliable.",
+                "cards": [
+                  { "title": "The instrument returning to the same place", "description": "Kinematic mounting, better than 10 µm" },
+                  { "title": "The tip returning to the same place", "description": "Alignment grooves, within 4 µm after exchange" },
+                  { "title": "Relocating a feature after a change", "description": "Combined mounting and tip positioning accuracy" },
+                  { "title": "Setup time reduced per cantilever", "description": "Laser alignment step removed entirely" },
+                  { "title": "Fast mount and dismount", "description": "Quick-release mechanism" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Beyond the Optical Resolution Limit",
+                "title": "Beyond the Optical Resolution Limit",
+                "body": [
+                  "Optical resolution has a hard ceiling — it's limited by the wavelength of light, so features below that limit cannot be resolved regardless of objective quality.",
+                  "When a 100x objective isn't enough, LensAFM takes over on the same instrument rather than requiring a different one. Transparent samples and others that optical methods struggle to assess become directly measurable.",
+                  "Surface topography is captured dimensionally rather than as an optical projection, and surface roughness, hardness variation, magnetism, and electrical conductance or resistance all become accessible — while the ease of use, screening speed, and minimal sample preparation of optical microscopy stay part of the workflow."
+                ],
+                "utilityChecklist": [
+                  { "label": "Features below the diffraction limit", "value": "AFM resolution on the same microscope" },
+                  { "label": "Samples optics cannot assess", "value": "Direct characterization of transparent and difficult samples" },
+                  { "label": "Genuine 3D surface information", "value": "Topographic measurement rather than optical projection" },
+                  { "label": "Properties beyond topography", "value": "Roughness, hardness variation, magnetism, conductance" },
+                  { "label": "Fast screening before detailed work", "value": "Optical microscopy retained as the first step" }
+                ],
+                "disclaimer": "Share the features currently unresolvable optically and what properties matter beyond shape, and the right mode set gets recommended."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "LensAFM documentation: brochure, webinars, and application resources.",
+                "cards": [
+                  { "title": "LensAFM Brochure with System Specifications", "description": "Available on request" },
+                  { "title": "Mounting Adapter Compatibility List", "description": "Available on request" },
+                  { "title": "Webinar: LensAFM Advancements in Surface Inspection and Defect Analysis", "description": "Available on request" },
+                  { "title": "AFM Master Class Webinar", "description": "Available on request" },
+                  { "title": "Webinar: Nanosurf Python API and Open-Source Tools", "description": "Available on request" },
+                  { "title": "LensAFM Overview Clip", "description": "Available on request" },
+                  { "title": "Nanosurf C3000 Software Overview", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get LensAFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Nanoscale resolution added to the microscope already on the bench, with 10 µm remount accuracy and 4 µm tip repositioning so the same feature stays findable. Share the microscope model and what optics can't resolve, and the right LensAFM adapter and configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "NaniteAFM",
+          "slug": "naniteafm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf NaniteAFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/naniteafm",
+          "breadcrumbPath": "Home > Products > Integration > NaniteAFM",
+          "h1": "NaniteAFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most AFMs decide the shape of the workflow around them — the sample comes to the instrument, cut down to fit a stage, mounted flat, brought to the lab. For quality and process control on real components, that sequence often isn't available.",
+
+          "features": [
+            "Designed for Integration: Built specifically to embed into existing user systems or custom stages, frequently without major modification.",
+            "No Inherent Sample Size Limit: Large workpieces and components measured without division or sectioning.",
+            "Suited for Concave Surfaces: Intricate curves and non-flat geometries accommodated during measurement.",
+            "Integrated Top and Side View Camera: Sample observation built directly into the compact scan head.",
+            "Stand-Alone Solutions: Available as a stand-alone configuration where integration isn't the requirement.",
+            "Bespoke Solutions: Nanosurf engineers design custom stages and automation features around specific applications.",
+            "Powerful Scripting Interface: Automates and extends capability, and brings AFM control into existing system architectures.",
+            "Broad Programming Compatibility: Works with LabVIEW, Python, MATLAB, C++, Java, and most other programming environments.",
+            "Automatic Frequency Sweep: Select the cantilever and the system handles the sweep before approach with no manual parameters.",
+            "Shared Software UI: One interface across all Nanosurf scan heads, removing the learning curve for multi-system labs."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf NaniteAFM" },
+            { "label": "Category", "value": "Integration / Integratable Atomic Force Microscopy" },
+            { "label": "Scan Head Dimensions", "value": "Less than 48 × 87 × 61 mm" },
+            { "label": "Integration Options", "value": "Existing user systems, custom stages, or stand-alone configuration" },
+            { "label": "Sample Size Limit", "value": "None inherent to the instrument" },
+            { "label": "Sample Geometry", "value": "Flat and concave surfaces supported" },
+            { "label": "Sample Impact", "value": "Non-destructive — samples remain intact and unaltered" },
+            { "label": "Measurement Capability", "value": "Features a few nanometres in size; surface roughness below one nanometre" },
+            { "label": "Integrated Optics", "value": "Top and side view camera" },
+            { "label": "Standard Imaging Modes", "value": "Static force, dynamic force (tapping), phase imaging" },
+            { "label": "Electrical Modes", "value": "C-AFM, EFM, MFM" },
+            { "label": "Mechanical Modes", "value": "Force modulation, force spectroscopy, force mapping" },
+            { "label": "Additional Modes", "value": "Lithography and nanomanipulation" },
+            { "label": "Cantilever Calibration", "value": "Sader method, with automatic frequency sweep" },
+            { "label": "Control Software", "value": "Nanosurf C3000, one UI shared across all Nanosurf scan heads" },
+            { "label": "Scripting Compatibility", "value": "LabVIEW, Python, MATLAB, C++, Java, and most programming environments" },
+            { "label": "Custom Engineering", "value": "Bespoke stage design and automation features available from Nanosurf" },
+            { "label": "Detailed System Specifications", "value": "Available in the Nanite brochure on request — further numeric specifications not published on the product page" }
+          ],
+
+          "applications": [
+            "Quality Control on Large Components: No inherent sample size limit means parts are measured whole",
+            "Process Control Measurement: Compact integration into production and process systems",
+            "Nanotechnology Research: Resolves features as small as a few nanometres",
+            "Data Storage Media Analysis: Sub-nanometre roughness measurement on high-tech surfaces",
+            "Precision Optics Characterization: Surface quality analysis where sub-nanometre roughness matters",
+            "Curved and Concave Surface Measurement: Geometry that flat-stage systems cannot accommodate",
+            "Non-Destructive Component Inspection: Workpieces remain intact and unaltered through analysis",
+            "Glass and High-Tech Surface Analysis: Applied to glass surface characterization in Nanosurf's own examples",
+            "Automated Measurement Systems: Scripting interface enables AFM control within automated workflows",
+            "Custom Instrumentation Development: Bespoke stage design and integration engineering available",
+            "Electrical Surface Characterization: C-AFM, EFM, and MFM available within the integrated format",
+            "Mechanical Property Measurement: Force modulation, spectroscopy, and mapping supported"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Workpiece Compatibility" },
+            { "id": "automation-and-control-planner", "label": "Automation Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Integration Feasibility" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "No Sample Size Limit" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "Where does the AFM need to go?",
+            "description": "Select the host environment and space available, and see the recommended integration route.",
+            "steps": [
+              {
+                "key": "hostEnvironment",
+                "question": "What's the host environment?",
+                "options": [
+                  { "val": "existing-instrument", "label": "Existing instrument" },
+                  { "val": "production-line", "label": "Production line" },
+                  { "val": "custom-rig", "label": "Custom rig" },
+                  { "val": "stand-alone", "label": "Stand-alone" }
+                ]
+              },
+              {
+                "key": "spaceAvailable",
+                "question": "Does the mounting envelope fit under 48 × 87 × 61 mm?",
+                "options": [
+                  { "val": "fits-envelope", "label": "Yes, fits within the envelope" },
+                  { "val": "tighter-than-envelope", "label": "No, tighter than that" }
+                ]
+              },
+              {
+                "key": "modificationTolerance",
+                "question": "Can the host system be modified?",
+                "options": [
+                  { "val": "can-be-modified", "label": "Yes, can be modified" },
+                  { "val": "must-remain-unchanged", "label": "No, must remain unchanged" }
+                ]
+              },
+              {
+                "key": "automationRequirement",
+                "question": "What's the automation requirement?",
+                "options": [
+                  { "val": "manual", "label": "Manual operation" },
+                  { "val": "scripted", "label": "Scripted control" },
+                  { "val": "fully-automated", "label": "Fully automated sequence" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms fit against the under 48 × 87 × 61 mm envelope and flags custom stage need, then routes to an integration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "suitability": {
+            "title": "Can the part be measured as it is?",
+            "description": "Select the workpiece characteristics, and see how NaniteAFM handles it.",
+            "fields": [
+              {
+                "key": "workpieceSize",
+                "label": "Workpiece size",
+                "options": [
+                  { "val": "small", "label": "Small" },
+                  { "val": "large", "label": "Large" },
+                  { "val": "oversized", "label": "Oversized beyond standard stages" }
+                ]
+              },
+              {
+                "key": "geometry",
+                "label": "Geometry",
+                "options": [
+                  { "val": "flat", "label": "Flat" },
+                  { "val": "curved", "label": "Curved" },
+                  { "val": "concave", "label": "Concave" },
+                  { "val": "complex", "label": "Complex" }
+                ]
+              },
+              {
+                "key": "sectioningTolerance",
+                "label": "Sectioning tolerance",
+                "options": [
+                  { "val": "can-be-cut", "label": "Can be cut" },
+                  { "val": "must-remain-whole", "label": "Must remain whole" }
+                ]
+              },
+              {
+                "key": "surfaceFeatureScale",
+                "label": "Surface feature scale",
+                "options": [
+                  { "val": "micrometre", "label": "Micrometre" },
+                  { "val": "nanometre", "label": "Nanometre" },
+                  { "val": "sub-nanometre-roughness", "label": "Sub-nanometre roughness" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "sectioningTolerance": "must-remain-whole" }, "title": "No Sectioning Required", "body": "NaniteAFM carries no inherent sample size limit, so large or complete workpieces are measured whole and unaltered.", "tags": ["Non-Destructive Measurement"] },
+              { "condition": { "geometry": "concave" }, "title": "Concave Geometry Is Supported", "body": "NaniteAFM is suited for concave surfaces, accommodating intricate curves that flat-stage systems cannot.", "tags": ["Concave Surface Capable"] },
+              { "condition": { "surfaceFeatureScale": "sub-nanometre-roughness" }, "title": "Sub-Nanometre Roughness Is Within Range", "body": "Surface roughness below one nanometre is resolvable, alongside features as small as a few nanometres.", "tags": ["Sub-Nanometre Precision"] },
+              { "condition": "default", "title": "Confirm the Right Measurement Approach With Inkarp", "body": "Share the workpiece size, geometry, and surface feature scale, and Inkarp will confirm the measurement approach and any stage requirements.", "tags": ["No Inherent Sample Size Limit"] }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "automation-and-control-planner",
+              "eyebrow": "Automation and Control Planner",
+              "title": "How should the AFM be controlled?",
+              "description": "Select the programming environment and automation depth, and see the recommended approach.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What programming environment is in use?", "choices": "LabVIEW; Python; MATLAB; C++; Java; Other" },
+                { "title": "What's the in-house development capability?", "choices": "Available; Limited; None" },
+                { "title": "What automation depth is needed?", "choices": "Manual measurement; Scripted routines; Fully integrated sequence" },
+                { "title": "What's the measurement frequency?", "choices": "Occasional; Routine; Continuous in-process" }
+              ],
+              "disclaimer": "Confirms the scripting approach and whether Nanosurf engineering support is recommended, then routes to an automation-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "NaniteAFM vs. LensAFM vs. CoreAFM",
+            "description": "NaniteAFM method comparison: Nanite against LensAFM and Nanosurf's standalone research systems.",
+            "columns": [
+              { "label": "NaniteAFM" },
+              { "label": "LensAFM" },
+              { "label": "CoreAFM" }
+            ],
+            "rows": [
+              { "feature": "Category", "values": ["Integration — embeds into systems", "Integration — mounts to optics", "Research — all-in-one standalone"] },
+              { "feature": "Mounting", "values": ["Existing systems, custom stages, or stand-alone", "Optical microscope or profilometer turret", "Self-contained integrated unit"] },
+              { "feature": "Dimensions", "values": ["Under 48 × 87 × 61 mm", "Compact, objective-sized", "Full benchtop unit"] },
+              { "feature": "Sample Size Limit", "values": ["None inherent", "Determined by the host microscope stage", "Determined by the integrated stage"] },
+              { "feature": "Concave Surfaces", "values": ["Suited for concave surfaces", "Not stated", "Not stated"] },
+              { "feature": "Standard Imaging Modes", "values": ["Static, dynamic, phase", "Static, lateral, dynamic, phase", "Static, lateral, dynamic, phase"] },
+              { "feature": "Lateral Force Mode", "values": ["Not listed", "Available", "Available"] },
+              { "feature": "Electrical Modes", "values": ["C-AFM, EFM, MFM", "C-AFM, EFM, MFM", "C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM"] },
+              { "feature": "SMM, SThM, EC-AFM, FluidFM", "values": ["Not available", "Not available", "Available"] },
+              { "feature": "Optical Integration", "values": ["Top and side view camera", "Native — mounts as the objective", "DIMO option"] },
+              { "feature": "Custom Engineering", "values": ["Bespoke stage and automation design", "Adapter selection", "Not applicable"] },
+              { "feature": "Best For", "values": ["Building AFM into a system or measuring large parts", "Extending an existing optical workflow", "Complete standalone AFM capability"] },
+              { "feature": "Choose when", "values": ["The sample can't move or can't be cut", "The optical microscope is the workflow", "A full standalone research AFM is needed"] }
+            ],
+            "disclaimer": "The trade is clear-eyed. Nanite carries the narrowest mode set in the Nanosurf range — three standard imaging modes without lateral force, three electrical modes, no SMM, SThM, EC-AFM, or FluidFM. What it uniquely offers is a form factor small enough to embed almost anywhere and the freedom to measure workpieces that cannot be sectioned or moved. Where the constraint is the sample or the system rather than the technique, that trade is the right one."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "NaniteAFM industries: precision manufacturing, data storage, optics, semiconductor, and automated inspection.",
+            "industries": [
+              { "name": "Precision Manufacturing QC", "useCase": "Measuring finished components without sectioning them", "consideration": "No inherent sample size limit and non-destructive analysis" },
+              { "name": "Data Storage Media", "useCase": "Sub-nanometre surface roughness on storage surfaces", "consideration": "Resolves roughness below one nanometre" },
+              { "name": "Precision Optics", "useCase": "Surface quality on optical components and curved surfaces", "consideration": "Suited for concave surfaces without stage constraints" },
+              { "name": "Semiconductor Manufacturing", "useCase": "Surface characterization within process environments", "consideration": "Compact integration into existing tools and systems" },
+              { "name": "Nanotechnology Research", "useCase": "Features a few nanometres in scale", "consideration": "Nanoscale precision within an integratable format" },
+              { "name": "Automated Inspection Systems", "useCase": "AFM as a step in an automated measurement sequence", "consideration": "Scripting interface across LabVIEW, Python, MATLAB, C++, Java" },
+              { "name": "OEM Instrument Manufacturers", "useCase": "Embedding AFM capability into a wider product", "consideration": "Designed for integration with bespoke engineering support" },
+              { "name": "Custom Research Instrumentation", "useCase": "Building measurement systems around specific requirements", "consideration": "Nanosurf stage design and automation engineering available" },
+              { "name": "Aerospace and High-Value Components", "useCase": "Parts too valuable or complete to cut", "consideration": "Workpieces remain intact and unaltered through analysis" },
+              { "name": "Glass and Coating Manufacturers", "useCase": "High-tech surface characterization", "consideration": "Applied to glass surface analysis in Nanosurf's own examples" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Measures the lab's own workpieces, including large or curved components" },
+              { "title": "Integration Assessment", "description": "Reviews the host system and available space against the scan head envelope" },
+              { "title": "Workpiece Assessment", "description": "Confirms whether parts can be measured whole and without alteration" },
+              { "title": "Custom Stage Coordination", "description": "Liaises with Nanosurf engineering on bespoke stage and automation design" },
+              { "title": "Configuration Assessment", "description": "Confirms mode set, cantilevers, and camera requirements" },
+              { "title": "Installation Support", "description": "Handles integration, first-run checks, and initial performance verification" },
+              { "title": "Operator Training", "description": "Builds confidence with C3000 software and routine measurement operation" },
+              { "title": "Scripting and Automation Support", "description": "Assists connecting AFM control into the lab's existing programming environment" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, camera, and control system performance" },
+              { "title": "Spares and Consumables", "description": "Supplies cantilevers, chip mounts, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is NaniteAFM used for?", "answer": "It's a compact, integratable atomic force microscope used for nanoscale surface analysis of workpieces of all shapes and sizes, across nanotechnology, data storage, precision optics, and industrial quality and process control." },
+            { "question": "How small is the scan head?", "answer": "Less than 48 × 87 × 61 mm — small enough to integrate into virtually any imaginable environment." },
+            { "question": "Is there a limit on sample size?", "answer": "No inherent limit. Large pieces and components that cannot be divided into smaller segments are measured as they are." },
+            { "question": "Does measurement damage or alter the sample?", "answer": "No. Samples remain intact and unaltered throughout the analysis process." },
+            { "question": "Can NaniteAFM measure curved surfaces?", "answer": "Yes. It is suited for concave surfaces and handles intricate curves." },
+            { "question": "What surface detail can it resolve?", "answer": "Features as small as a few nanometres, and surface roughness below one nanometre." },
+            { "question": "Can it be integrated into an existing system?", "answer": "Yes. It integrates into existing user systems or custom stages, often without significant modification." },
+            { "question": "What if no existing stage fits the application?", "answer": "Nanosurf's engineers design custom stages, along with automation features, around the specific application." },
+            { "question": "Is a stand-alone configuration available?", "answer": "Yes. Stand-alone solutions are offered alongside the integration configurations." },
+            { "question": "Can AFM control be built into an existing setup?", "answer": "Yes. The scripting interface allows AFM control to be integrated into existing system architectures." },
+            { "question": "Which programming environments are supported?", "answer": "LabVIEW, Python, MATLAB, C++, Java, and most other programming environments." },
+            { "question": "Which imaging modes are available?", "answer": "Static force, dynamic force (tapping), and phase imaging, plus C-AFM, EFM, and MFM for electrical properties and force modulation, spectroscopy, and mapping for mechanical properties." },
+            { "question": "Does the system include a camera?", "answer": "Yes. An integrated top and side view camera provides sample observation." },
+            { "question": "How is the cantilever set up before measurement?", "answer": "Select the cantilever in the software and the system automatically performs the frequency sweep before approach, with no manual parameter setting required." },
+            { "question": "How does NaniteAFM differ from LensAFM?", "answer": "LensAFM mounts on an optical microscope turret to extend an existing optical workflow. NaniteAFM is a scan head built to embed into systems or custom stages, with no inherent sample size limit and concave surface capability. LensAFM additionally offers lateral force mode." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Numeric system specifications are published in the Nanite brochure rather than on the product page — Inkarp can provide it on request." },
+            { "question": "What is the price of NaniteAFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the integration approach, custom stage requirements, and modes needed." },
+            { "question": "Who is the authorized distributor of NaniteAFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf NaniteAFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get NaniteAFM in India from Inkarp",
+            "description": "Share the part geometry and the system it needs to work inside, and the right NaniteAFM configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your workpiece and integration details, then confirm the right NaniteAFM configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "workpieceDetails", "label": "Workpiece dimensions and geometry", "type": "text", "required": false },
+              { "key": "integrationDetails", "label": "System it needs to integrate into", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right integration configuration", "body": "Share the workpiece dimensions and geometry, the system it needs to integrate into, and whether custom stage design is required, and the right NaniteAFM configuration gets confirmed from there." },
+              { "title": "Installation and first-run support", "body": "Handles integration, first-run checks, and initial performance verification." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "48 × 87 × 61 mm. Small enough to build into whatever the measurement needs.",
+            "heroLead": "Most AFMs decide the shape of the workflow around them — the sample comes to the instrument, cut down to fit a stage, mounted flat, brought to the lab. For quality and process control on real components, that sequence often isn't available. NaniteAFM inverts it. At under 48 × 87 × 61 mm, the scan head integrates into existing user systems or custom stages, frequently without significant modification to either. The AFM goes to the workpiece. The consequence matters more than the dimension. Large pieces stay whole. Components that can't be sectioned are measured as they are. Concave and curved surfaces are accommodated. Samples come through the analysis intact and unaltered — which for a finished part or a costly component is the difference between measuring it and destroying it. Underneath, it delivers nanoscale precision: features a few nanometres across, surface roughness below one nanometre. A scripting interface compatible with LabVIEW, Python, MATLAB, C++, and Java brings AFM control into whatever system already runs the process.",
+            "stats": [
+              { "value": "< 48 × 87 × 61 mm", "label": "Scan head dimensions" },
+              { "value": "No inherent sample size limit", "label": "Large workpieces measured whole" },
+              { "value": "Sub-nanometre roughness", "label": "Surface roughness below one nanometre resolvable" },
+              { "value": "Few-nanometre features", "label": "Nanoscale surface morphology detail" },
+              { "value": "Concave surface capable", "label": "Curved and non-flat geometries accommodated" },
+              { "value": "Non-destructive", "label": "Samples remain intact and unaltered" },
+              { "value": "Top and side view camera", "label": "Integrated sample observation" },
+              { "value": "5+ programming environments", "label": "LabVIEW, Python, MATLAB, C++, Java, and more" },
+              { "value": "Bespoke stage design", "label": "Nanosurf engineering available for custom integration" },
+              { "value": "One software UI", "label": "Shared across all Nanosurf scan heads" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "NaniteAFM product information: integration format, sample handling, and measurement capability.",
+                "body": [
+                  "Compact scan head under 48 × 87 × 61 mm: Small enough to integrate into virtually any imaginable environment.",
+                  "Designed for integration: Fits existing user systems or custom stages, often without significant modification.",
+                  "No inherent sample size limit: Large workpieces and components are measured without being divided into smaller segments.",
+                  "Samples stay intact: Analysis leaves the workpiece unaltered, preserving its integrity throughout.",
+                  "Suited to concave surfaces: Intricate curves and non-flat geometries are accommodated rather than excluded.",
+                  "Nanoscale measurement precision: Resolves features as small as a few nanometres and surface roughness below one nanometre.",
+                  "Integrated top and side view camera: Sample observation built into the scan head.",
+                  "Stand-alone solutions available: Not only an integration module — stand-alone configurations are offered.",
+                  "Bespoke solutions supported: Nanosurf engineers design custom stages and automation features around the application.",
+                  "Scripting interface for system integration: AFM control is brought into existing setups rather than operated separately.",
+                  "Broad programming environment compatibility: LabVIEW, Python, MATLAB, C++, Java, and more.",
+                  "Automatic cantilever setup: Select the cantilever and the system performs the frequency sweep before approach, with no manual parameters.",
+                  "Sader method cantilever calibration: Calibration handled within the software alongside the frequency sweep.",
+                  "One UI across all Nanosurf scan heads: No additional learning curve for labs running more than one Nanosurf system."
+                ],
+                "cards": [
+                  { "title": "Under 48 × 87 × 61 mm", "description": "Integration into systems that couldn't host an AFM" },
+                  { "title": "No inherent sample size limit", "description": "Components measured whole, not sectioned" },
+                  { "title": "Non-destructive analysis", "description": "Finished and costly parts survive measurement" },
+                  { "title": "Scripting across five-plus languages", "description": "Control from the system already running the process" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf NaniteAFM Integratable Atomic Force Microscope" },
+                  { "title": "Scan head dimensions", "description": "Under 48 × 87 × 61 mm" },
+                  { "title": "Integration", "description": "Existing user systems, custom stages, or stand-alone configuration" },
+                  { "title": "Sample handling", "description": "No inherent size limit, concave surfaces supported, non-destructive" },
+                  { "title": "Software", "description": "Nanosurf C3000 with scripting interface" },
+                  { "title": "Programming compatibility", "description": "LabVIEW, Python, MATLAB, C++, Java, and others" },
+                  { "title": "Custom engineering", "description": "Bespoke stage design and automation available from Nanosurf" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "NaniteAFM applications: nanotechnology, data storage, precision optics, and industrial quality control."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "NaniteAFM technical specifications: dimensions, operating modes, and software compatibility."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "No Sample Size Limit",
+                "title": "No Sample Size Limit",
+                "description": "How measuring the workpiece whole changes what quality control can cover.",
+                "cards": [
+                  { "title": "Measurement without sectioning", "description": "No inherent sample size limit" },
+                  { "title": "Large workpieces accommodated", "description": "The AFM moves to the sample, not the reverse" },
+                  { "title": "Curved and concave geometry", "description": "Suited for concave surfaces" },
+                  { "title": "The part usable afterwards", "description": "Non-destructive, samples remain unaltered" },
+                  { "title": "Nanoscale accuracy on real parts", "description": "Sub-nanometre roughness on production components" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "C3000 Control Software",
+                "title": "C3000 Control Software",
+                "body": [
+                  "Cantilever selection is the only setup step — choose the cantilever and the system performs the frequency sweep before approaching the sample, with no manual parameter setting.",
+                  "Sader method calibration is built into the software alongside the sweep, and measurement tools — angles and distances — work directly on the acquired image.",
+                  "The graph area configures itself for the mode in use, file handling includes automatic naming conventions, Windows Explorer integration, an image gallery, and bulk renaming, and a spectroscopy wizard guides setup rather than requiring manual configuration."
+                ],
+                "utilityChecklist": [
+                  { "label": "Setup without parameter guesswork", "value": "Automatic parameter-free frequency sweep" },
+                  { "label": "Reliable cantilever calibration", "value": "Sader method calibration in software" },
+                  { "label": "Measurement directly on the image", "value": "Angle and distance tools on acquired data" },
+                  { "label": "Relevant information shown automatically", "value": "Mode-dependent graph auto-layout" },
+                  { "label": "Manageable data across many runs", "value": "Naming conventions, gallery, and bulk renaming" },
+                  { "label": "Guided spectroscopy setup", "value": "Built-in spectroscopy wizard" }
+                ],
+                "disclaimer": "Share the experience level of the operators and the volume of data generated, and training and file-handling setup get planned around it."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "NaniteAFM documentation: brochure and integration resources.",
+                "cards": [
+                  { "title": "Nanite Brochure with System Specifications", "description": "Available on request" },
+                  { "title": "Integration and Mounting Guidance", "description": "Available on request" },
+                  { "title": "Bespoke Stage Design Consultation", "description": "Available on request" },
+                  { "title": "C3000 Control Software Overview", "description": "Available on request" },
+                  { "title": "Scripting Interface and API Documentation", "description": "Available on request" },
+                  { "title": "Programming Environment Compatibility Details", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get NaniteAFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "A scan head under 48 × 87 × 61 mm that goes to the workpiece instead of the other way round — large parts, curved surfaces, and finished components measured whole and unaltered. Share the part geometry and the system it needs to work inside, and the right NaniteAFM configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

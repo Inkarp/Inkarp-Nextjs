@@ -1,0 +1,1325 @@
+{
+  "principal": {
+    "slug": "nanosurf",
+    "principalName": "Nanosurf",
+    "countryOfOrigin": "Switzerland"
+  },
+  "categories": [
+    {
+      "name": "Research",
+      "slug": "research",
+      "products": [
+        {
+          "name": "DriveAFM",
+          "slug": "driveafm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf DriveAFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/driveafm",
+          "breadcrumbPath": "Home > Products > Research > DriveAFM",
+          "h1": "DriveAFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most AFMs are built around a compromise — resolution or sample flexibility, speed or gentleness, biology or materials. DriveAFM is Nanosurf's answer to labs that refuse to make the choice.",
+
+          "features": [
+            "WaveMode: Photothermal off-resonance imaging offering the most gentle imaging available to date.",
+            "CleanDrive: Photothermal cantilever excitation, the most stable way to drive a cantilever.",
+            "Ultra-Low System Noise: The basis for investigating samples in detail down to the nanometer.",
+            "28-Bit CX Controller: High-resolution imaging maintained across the full scan range.",
+            "Small Cantilevers: Faster imaging compared to regular cantilevers, with high fidelity retained.",
+            "Motorization and Automation: Full system motorization automating setup such as cantilever alignment, and measurement execution.",
+            "PicoBalance and Viscoelastic Analysis: Mass measurements and frequency-resolved nanomechanics for deeper sample insight.",
+            "FluidFM®: Cantilever-based microfluidics for spotting and deposition, single-cell manipulation, and nanomechanics.",
+            "Glovebox-Ready: Motorization and automation features supporting experiments in highly controlled environments.",
+            "Scanning Microwave Microscopy Option: Integrated SMM for dopant profile analysis in semiconductor research."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf DriveAFM" },
+            { "label": "Category", "value": "Research Atomic Force Microscopy" },
+            { "label": "Architecture", "value": "Tip-scanning, ultra-low noise" },
+            { "label": "Cantilever Excitation", "value": "CleanDrive photothermal excitation" },
+            { "label": "Controller", "value": "28-bit CX controller, full scan range" },
+            { "label": "Cantilever Compatibility", "value": "Standard and high-fidelity small cantilevers" },
+            { "label": "Setup Configurations", "value": "Stand-alone or inverted optical microscope (IMO) integrated" },
+            { "label": "Motorization", "value": "Full, covering laser alignment, calibration, approach, and acquisition — controlled without physically interfering with a temperature-controlled environment" },
+            { "label": "Standard Imaging Modes", "value": "Static force, lateral force, dynamic force (tapping), phase imaging" },
+            { "label": "Advanced Imaging Modes", "value": "CleanDrive photothermal excitation, WaveMode" },
+            { "label": "Electrical Modes", "value": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM" },
+            { "label": "Mechanical Modes", "value": "Force spectroscopy, modular spectroscopy, force modulation, force mapping" },
+            { "label": "Additional Modes", "value": "Lithography and nanomanipulation, EC-AFM, SThM" },
+            { "label": "Options", "value": "FluidFM, PicoBalance, SMM, glovebox operation" },
+            { "label": "Cantilever Holders", "value": "Conical, FluidFM, SMM, and STM tip holders available" },
+            { "label": "Control Software", "value": "Nanosurf Studio, configurable GUI, ViewPort optical sample navigation, fully scriptable, quarterly releases" },
+            { "label": "Environment Compatibility", "value": "Air, liquid, glovebox" },
+            { "label": "Detailed System Specifications", "value": "Available in the DriveAFM brochure on request — numeric specifications not published on the product page" }
+          ],
+
+          "applications": [
+            "Single-Molecule Imaging: Captures detail as minute as single molecule structure, including the DNA double helix",
+            "Live Biological Sample Imaging: CleanDrive stability holds in the liquid conditions sample integrity requires",
+            "Correlative Microscopy: IMO integration combines transmitted light and fluorescence with AFM and force spectroscopy",
+            "2D Materials Characterization: Resolves complex patterns and atomic structure in 2D materials",
+            "Semiconductor Analysis: Measures electronic properties with high precision, with SMM for dopant profiling",
+            "Nanomechanical Characterization: Force mapping, modulation, and frequency-resolved viscoelastic analysis",
+            "Nano-Electrical Characterization: C-AFM, SSRM, PFM, EFM, KPFM, MFM across dielectrics to metals",
+            "Energy Materials Research: Glovebox-compatible operation for air-sensitive battery and energy materials",
+            "Electrochemical Studies: EC-AFM for observing dynamic changes in electrochemical processes",
+            "Single-Cell Manipulation: FluidFM for spotting, deposition, and single-cell work",
+            "Bacterial and Microbial Imaging: Demonstrated from nanometer to millimeter scales in Nanosurf application work",
+            "Lithography and Nanomanipulation: Direct surface modification alongside characterization"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Mode Selector" },
+            { "id": "setup-configuration-planner", "label": "Setup Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Cantilever & Accessories" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "CleanDrive & WaveMode" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What needs measuring beyond topography?",
+            "description": "Select the sample type and properties of interest, and see the recommended mode set.",
+            "fields": [
+              {
+                "key": "sampleType",
+                "label": "Sample type",
+                "options": [
+                  { "val": "biological", "label": "Biological" },
+                  { "val": "2d-material", "label": "2D material" },
+                  { "val": "semiconductor", "label": "Semiconductor" },
+                  { "val": "polymer", "label": "Polymer" },
+                  { "val": "energy-material", "label": "Energy material" }
+                ]
+              },
+              {
+                "key": "measurementEnvironment",
+                "label": "Measurement environment",
+                "options": [
+                  { "val": "air", "label": "Air" },
+                  { "val": "liquid", "label": "Liquid" },
+                  { "val": "controlled-glovebox", "label": "Controlled / glovebox" }
+                ]
+              },
+              {
+                "key": "propertiesOfInterest",
+                "label": "Properties of interest",
+                "options": [
+                  { "val": "topography", "label": "Topography" },
+                  { "val": "electrical", "label": "Electrical" },
+                  { "val": "mechanical", "label": "Mechanical" },
+                  { "val": "magnetic", "label": "Magnetic" },
+                  { "val": "thermal", "label": "Thermal" },
+                  { "val": "electrochemical", "label": "Electrochemical" }
+                ]
+              },
+              {
+                "key": "sampleFragility",
+                "label": "Sample fragility",
+                "options": [
+                  { "val": "robust", "label": "Robust" },
+                  { "val": "delicate", "label": "Delicate" },
+                  { "val": "gentlest-possible", "label": "Requires gentlest possible imaging" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "measurementEnvironment": "liquid" }, "title": "CleanDrive Holds Stability in Liquid", "body": "Photothermal excitation maintains performance in the liquid conditions biological sample integrity requires, unlike acoustic drive methods that degrade in liquid.", "tags": ["CleanDrive in Liquid"] },
+              { "condition": { "sampleFragility": "gentlest-possible" }, "title": "WaveMode Is the Gentlest Option", "body": "WaveMode off-resonance imaging offers the most gentle imaging available to date, with directly adjustable interaction force to protect fragile samples.", "tags": ["WaveMode Gentlest Imaging"] },
+              { "condition": { "measurementEnvironment": "controlled-glovebox" }, "title": "Glovebox Operation Is Supported", "body": "All mechanical adjustments are software-controlled and magnetic cantilever holders allow cantilever exchange through thick gloves.", "tags": ["Glovebox-Ready"] },
+              { "condition": { "sampleType": "semiconductor" }, "title": "SMM Supports Dopant Profiling", "body": "The integrated SMM option measures electronic properties with high precision, including dopant profile analysis.", "tags": ["SMM Available"] },
+              { "condition": "default", "title": "Confirm the Right Mode Set With Inkarp", "body": "Share the sample type, measurement environment, and properties of interest, and Inkarp will confirm the recommended operating modes and accessories.", "tags": ["20+ Operating Modes"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Which cantilever holder and accessories does the work need?",
+            "description": "Select the technique and sample handling requirement, and see the recommended hardware.",
+            "steps": [
+              {
+                "key": "primaryTechnique",
+                "question": "What's the primary technique?",
+                "options": [
+                  { "val": "standard-imaging", "label": "Standard imaging" },
+                  { "val": "wavemode", "label": "WaveMode" },
+                  { "val": "smm", "label": "SMM" },
+                  { "val": "stm", "label": "STM" },
+                  { "val": "fluidfm", "label": "FluidFM" }
+                ]
+              },
+              {
+                "key": "cantileverType",
+                "question": "What cantilever type is needed?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "small-high-fidelity", "label": "High-fidelity small cantilevers for speed" }
+                ]
+              },
+              {
+                "key": "sampleAccess",
+                "question": "Does the sample need restricted-access handling?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "conical-holder-needed", "label": "Conical holder needed for restricted access" }
+                ]
+              },
+              {
+                "key": "additionalCapability",
+                "question": "What additional capability is needed?",
+                "options": [
+                  { "val": "temperature-control", "label": "Temperature control" },
+                  { "val": "magnetic-field", "label": "Magnetic field" },
+                  { "val": "current-detection", "label": "Current detection" },
+                  { "val": "electrochemistry", "label": "Electrochemistry" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Recommends the cantilever holder and accessory combination for the technique, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "setup-configuration-planner",
+              "eyebrow": "Setup Configuration Planner",
+              "title": "Stand-alone, or integrated with an optical microscope?",
+              "description": "Select the sample format and imaging needs, and see the recommended setup.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What are the sample dimensions?", "choices": "Small and light; Large; Heavy and irregular" },
+                { "title": "Is optical correlation needed?", "choices": "Not required; Transmitted light; Fluorescence needed" },
+                { "title": "Is an inverted optical microscope already available?", "choices": "Available; None" },
+                { "title": "What's the operating environment?", "choices": "Open bench; Temperature-controlled; Glovebox" }
+              ],
+              "disclaimer": "Recommends a stand-alone or IMO-integrated configuration, then routes to a setup-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "WaveMode vs. Dynamic Force / Tapping Mode",
+            "description": "DriveAFM method comparison: WaveMode off-resonance imaging versus conventional dynamic force mode.",
+            "columns": [
+              { "label": "WaveMode (Off-Resonance)" },
+              { "label": "Dynamic Force / Tapping Mode" }
+            ],
+            "rows": [
+              { "feature": "Cantilever Role", "values": ["Dual-function sensor and actuator", "Sensor driven at resonance"] },
+              { "feature": "Excitation", "values": ["CleanDrive photothermal", "Acoustic or photothermal at resonance"] },
+              { "feature": "Imaging Speed", "values": ["Fastest off-resonance mode available", "Standard dynamic imaging speed"] },
+              { "feature": "Force Control", "values": ["Precise, directly adjustable interaction force", "Indirect, via amplitude setpoint"] },
+              { "feature": "Sample Gentleness", "values": ["Most gentle imaging available to date", "Gentler than contact, harder than off-resonance"] },
+              { "feature": "Liquid Operation", "values": ["CleanDrive stability holds in liquid", "Acoustic drive degrades in liquid"] },
+              { "feature": "Tip Durability", "values": ["Enhanced through controlled interaction force", "Dependent on setpoint tuning"] },
+              { "feature": "Nanomechanical Data", "values": ["WaveMode NMA for high-speed nanomechanical mapping", "Phase imaging for qualitative contrast"] },
+              { "feature": "Best For", "values": ["Fragile samples, liquid imaging, mechanical mapping", "Established routine topographic imaging"] },
+              { "feature": "Choose when", "values": ["Speed, gentleness, or mechanical data are the priority", "The method is established and the sample robust"] }
+            ],
+            "disclaimer": "Both run on the same instrument. WaveMode exists because off-resonance operation gives direct force control that resonance-based modes cannot, and CleanDrive is what makes that operation fast enough to be practical rather than a slow specialist technique."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "DriveAFM industries: life science research, materials science, semiconductor, and energy materials.",
+            "industries": [
+              { "name": "Life Science and Biotech", "useCase": "Single-molecule and live-cell imaging in buffer", "consideration": "CleanDrive stability in liquid with IMO correlative imaging" },
+              { "name": "Structural Biology", "useCase": "DNA, virus, and protein structure visualization", "consideration": "Demonstrated on DNA double helix and tobacco mosaic virus" },
+              { "name": "Materials Science", "useCase": "2D materials and atomic structure characterization", "consideration": "Demonstrated on HOPG atomic lattice imaging" },
+              { "name": "Semiconductor Research", "useCase": "Dopant profiling and electronic property measurement", "consideration": "Integrated SMM option with comprehensive NEC feature set" },
+              { "name": "Energy Storage Research", "useCase": "Air-sensitive battery and electrode material analysis", "consideration": "Glovebox-ready with full software-controlled adjustment" },
+              { "name": "Ferroelectrics and Piezoelectrics", "useCase": "Domain visualization and polarization studies", "consideration": "PFM including DFRT, demonstrated on ErMnO₃ domains" },
+              { "name": "Polymer and Soft Matter Research", "useCase": "Nanomechanical property mapping", "consideration": "PicoBalance, viscoelastic analysis, and WaveMode NMA" },
+              { "name": "Electrochemistry", "useCase": "Observing dynamic electrochemical processes", "consideration": "EC-AFM with accessory support" },
+              { "name": "Microbiology", "useCase": "Bacterial imaging across scales", "consideration": "Demonstrated from nanometers to millimeters in Nanosurf application work" },
+              { "name": "Multi-User Facilities and Central Labs", "useCase": "Shared instrument across varied research groups", "consideration": "Automated setup and configurable GUI suit mixed experience levels" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Images the lab's own samples to show resolution and mode performance" },
+              { "title": "Application Assessment", "description": "Confirms which operating modes and accessories the research requires" },
+              { "title": "Configuration Assessment", "description": "Confirms stand-alone or IMO setup, cantilever holders, and options" },
+              { "title": "Glovebox Integration Support", "description": "Reviews glovebox dimensions and integration feasibility ahead of delivery" },
+              { "title": "Site Preparation Support", "description": "Reviews vibration, acoustic, bench, and environmental requirements" },
+              { "title": "Installation Support", "description": "Handles setup, first-run checks, and initial performance verification" },
+              { "title": "Operator Training", "description": "Builds confidence with Nanosurf Studio, automated setup, and mode selection" },
+              { "title": "Advanced Technique Training", "description": "Supports WaveMode, nanomechanics, and nano-electrical characterization workflows" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, controller, motorization, and optical system performance" },
+              { "title": "Spares and Consumables", "description": "Supplies cantilevers, cantilever holders, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is DriveAFM used for?", "answer": "It's Nanosurf's most advanced research atomic force microscope, used across life science, materials research, semiconductors, and energy materials for high-resolution nanoscale imaging and property characterization." },
+            { "question": "What is CleanDrive?", "answer": "Photothermal cantilever excitation — the most stable way to drive a cantilever, maintaining performance in both air and the liquid environments biological samples require." },
+            { "question": "What is WaveMode?", "answer": "The fastest off-resonance imaging mode on the market, in which the cantilever acts as both sensor and actuator, offering the most gentle imaging available to date with directly adjustable interaction force." },
+            { "question": "Can DriveAFM image in liquid?", "answer": "Yes. CleanDrive photothermal excitation ensures reliable performance in the liquid conditions needed to maintain biological sample integrity." },
+            { "question": "What sample sizes can DriveAFM handle?", "answer": "The tip-scanning design accommodates samples of various sizes and shapes, including large and heavy samples, without compromising performance." },
+            { "question": "Can DriveAFM be combined with optical microscopy?", "answer": "Yes. The scan head integrates seamlessly with an inverted optical microscope, combining transmitted light and fluorescence microscopy with AFM imaging and force spectroscopy." },
+            { "question": "What is automated on the system?", "answer": "Full motorization automates laser alignment, spring constant and sensitivity calibration, approach, and data acquisition." },
+            { "question": "Can DriveAFM operate inside a glovebox?", "answer": "Yes. All mechanical adjustments are controlled via software, and magnetic cantilever holders allow operation while wearing thick gloves." },
+            { "question": "Which electrical modes are supported?", "answer": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, and MFM." },
+            { "question": "Which mechanical characterization modes are available?", "answer": "Force spectroscopy, modular spectroscopy, force modulation, and force mapping." },
+            { "question": "What is FluidFM?", "answer": "Cantilever-based microfluidics for spotting and deposition, single-cell manipulation, and nanomechanics, available with a dedicated cantilever holder." },
+            { "question": "What is PicoBalance?", "answer": "A capability providing mass measurements and frequency-resolved nanomechanics for deeper sample characterization." },
+            { "question": "Can small cantilevers be used?", "answer": "Yes. DriveAFM is compatible with high-fidelity small cantilevers, delivering faster imaging than regular cantilevers." },
+            { "question": "Is the software suitable for inexperienced users?", "answer": "Nanosurf Studio is designed to be easy to learn for novice users while retaining full flexibility for experts, with a configurable GUI and automated setup." },
+            { "question": "Can instrument control be scripted?", "answer": "Yes. Instrument control is fully scriptable, and new software releases arrive quarterly." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Numeric system specifications are published in the DriveAFM brochure rather than on the product page — Inkarp can provide it on request." },
+            { "question": "What is the price of DriveAFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the setup configuration, operating modes, and accessories required." },
+            { "question": "Who is the authorized distributor of DriveAFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf DriveAFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get DriveAFM in India from Inkarp",
+            "description": "Share the samples and the properties that need measuring, and the right DriveAFM configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample and application details, then confirm the right DriveAFM configuration and accessory set.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleDetails", "label": "Samples being imaged and measurement environment", "type": "text", "required": false },
+              { "key": "propertiesDetails", "label": "Properties needing characterization beyond topography", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration and accessory set", "body": "Share the samples being imaged, whether measurements run in air or liquid, and which properties need characterizing beyond topography, and the right DriveAFM configuration and accessory set gets confirmed from there." },
+              { "title": "Installation and first-run support", "body": "Handles setup, first-run checks, and initial performance verification." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "See the DNA double helix. Then measure a semiconductor's dopant profile. Same instrument.",
+            "heroLead": "Most AFMs are built around a compromise — resolution or sample flexibility, speed or gentleness, biology or materials. DriveAFM is Nanosurf's answer to labs that refuse to make the choice. CleanDrive photothermal cantilever excitation is what makes it possible: the most stable way to drive a cantilever, holding performance even in the liquid conditions biological samples demand. That stability unlocks WaveMode, the fastest off-resonance imaging mode on the market, where the cantilever becomes both sensor and actuator. The tip-scanning design accommodates samples of any size or shape without performance loss — large, heavy materials samples included. Full motorization automates laser alignment, calibration, and approach. And it runs stand-alone or integrated with an inverted optical microscope, so AFM sits alongside fluorescence and transmitted light in one correlative workflow.",
+            "stats": [
+              { "value": "CleanDrive", "label": "Photothermal cantilever excitation, the most stable drive method" },
+              { "value": "WaveMode", "label": "Fastest off-resonance imaging mode on the market" },
+              { "value": "28-bit", "label": "CX controller resolution across the full scan range" },
+              { "value": "Tip-scanning", "label": "Any sample size or shape without performance compromise" },
+              { "value": "Ultra-low noise", "label": "System architecture for nanometer-level detail" },
+              { "value": "Full motorization", "label": "Automated alignment, calibration, approach, acquisition" },
+              { "value": "Glovebox-ready", "label": "Software-controlled adjustment, magnetic cantilever holders" },
+              { "value": "Stand-alone or IMO", "label": "Integrates with inverted optical microscopes" },
+              { "value": "20+ operating modes", "label": "Imaging, electrical, mechanical, lithography, thermal" },
+              { "value": "Small cantilever compatible", "label": "Faster imaging than regular cantilevers" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "DriveAFM product information: CleanDrive excitation, WaveMode imaging, motorization, and operating modes.",
+                "body": [
+                  "Tip-scanning architecture: Accommodates samples of any size, shape, or weight without compromising performance.",
+                  "CleanDrive photothermal excitation: The most stable way to drive a cantilever, holding performance in air and in liquid alike.",
+                  "WaveMode off-resonance imaging: The fastest off-resonance mode on the market, with the cantilever acting as both sensor and actuator.",
+                  "Ultra-low system noise: The architectural basis for resolving sample detail down to the nanometer.",
+                  "28-bit CX controller: High-resolution data acquisition maintained across the full scan range.",
+                  "Full motorization: Automates laser alignment, spring constant and sensitivity calibration, approach, and acquisition — all controlled without physically interfering with a temperature-controlled environment.",
+                  "Stand-alone or IMO-integrated: Runs independently or mounted to an inverted optical microscope for correlative imaging.",
+                  "Small cantilever compatibility: High-fidelity small cantilevers deliver faster imaging than regular cantilevers.",
+                  "Adjustable tip-sample interaction: Precise force control extends tip durability and enables analysis under varying loads.",
+                  "Glovebox-ready design: Software-controlled mechanical adjustment and magnetic cantilever holders for gloved operation.",
+                  "Comprehensive mode coverage: Standard imaging, electrical, mechanical, lithography, electrochemical, and thermal modes on one platform.",
+                  "FluidFM and PicoBalance options: Cantilever-based microfluidics and mass measurement extend the system beyond imaging.",
+                  "Nanosurf Studio control: Configurable GUI for novice and expert users, ViewPort optical sample navigation, fully scriptable, with quarterly feature releases."
+                ],
+                "cards": [
+                  { "title": "CleanDrive photothermal excitation", "description": "Stability that holds in liquid environments" },
+                  { "title": "WaveMode", "description": "Fastest off-resonance imaging available" },
+                  { "title": "Full motorization", "description": "Setup automated, not manually aligned" },
+                  { "title": "Tip-scanning design", "description": "Sample size and weight stop being a constraint" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf DriveAFM Research Atomic Force Microscope" },
+                  { "title": "Architecture", "description": "Tip-scanning, ultra-low noise" },
+                  { "title": "Cantilever excitation", "description": "CleanDrive photothermal" },
+                  { "title": "Controller", "description": "28-bit CX" },
+                  { "title": "Setup options", "description": "Stand-alone or inverted optical microscope integrated" },
+                  { "title": "Software", "description": "Nanosurf Studio, fully scriptable" },
+                  { "title": "Options", "description": "FluidFM, PicoBalance, SMM, glovebox operation" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "DriveAFM applications: life science, materials research, electronics and energy materials."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "DriveAFM technical specifications: architecture, controller, and mode compatibility."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "CleanDrive and WaveMode",
+                "title": "CleanDrive and WaveMode",
+                "description": "How photothermal excitation enables the fastest off-resonance imaging available.",
+                "cards": [
+                  { "title": "Clean cantilever drive without spurious peaks", "description": "CleanDrive drives the cantilever directly rather than shaking the holder, which is what removes spurious resonances" },
+                  { "title": "Reliable operation in buffer and liquid", "description": "Photothermal stability independent of the medium" },
+                  { "title": "Speed without sacrificing gentleness", "description": "WaveMode, fastest off-resonance mode available" },
+                  { "title": "Force matched to sample fragility", "description": "Precise, adjustable tip-sample interaction control" },
+                  { "title": "Longer tip life across a session", "description": "Controlled interaction force reducing tip wear" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Glovebox and Controlled Environments",
+                "title": "Glovebox and Controlled Environments",
+                "body": [
+                  "Every mechanical adjustment is software-controlled — nothing requires physical access, which is what makes glovebox operation practical rather than merely possible.",
+                  "Magnetic cantilever holders mean cantilever exchange works even through thick gloves, and the scan head is built to withstand the handling constraints of glovebox work.",
+                  "Air- and moisture-sensitive samples remain in optimal conditions throughout characterization — the glovebox environment adds control without costing the nanoscale fidelity the platform provides."
+                ],
+                "utilityChecklist": [
+                  { "label": "Adjustment without physical access", "value": "Full software control of all mechanical adjustments" },
+                  { "label": "Cantilever changes wearing thick gloves", "value": "Magnetic cantilever holders" },
+                  { "label": "Sample integrity through characterization", "value": "Optimal environmental conditions maintained inside the glovebox" },
+                  { "label": "Nanoscale fidelity inside the enclosure", "value": "Low-noise, high-fidelity platform unaffected by the environment" }
+                ],
+                "disclaimer": "Share the samples being imaged, whether measurements run in air or liquid, and which properties need characterizing beyond topography, and the right DriveAFM configuration and accessory set gets confirmed from there."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "DriveAFM documentation: brochure, technical notes, and application notes.",
+                "cards": [
+                  { "title": "DriveAFM Brochure with System Specifications", "description": "Available on request" },
+                  { "title": "WaveMode Technical Note: Simple and Fast Imaging", "description": "Available on request" },
+                  { "title": "WaveMode NMA Technical Note: High-Speed Nanomechanical Mapping", "description": "Available on request" },
+                  { "title": "Probe Guide: Selecting Cantilevers for WaveMode", "description": "Available on request" },
+                  { "title": "Application Note: Imaging Bacteria from Nanometers to Millimeters", "description": "Available on request" },
+                  { "title": "Nanosurf Studio Software Overview", "description": "Available on request" },
+                  { "title": "Accessory and Cantilever Holder Catalogue", "description": "Available on request" },
+                  { "title": "Glovebox Integration Guidance", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get DriveAFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Photothermal stability that holds in liquid, the fastest off-resonance mode available, and a tip-scanning design that stops caring how large the sample is. Share the samples and the properties that need measuring, and the right DriveAFM configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "FlexAFM",
+          "slug": "flexafm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf FlexAFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/flexafm",
+          "breadcrumbPath": "Home > Products > Research > FlexAFM",
+          "h1": "FlexAFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "The usual problem with a mid-range instrument is that outgrowing it means starting over — new system, new sample holders, new accessories, the previous investment written off.",
+
+          "features": [
+            "Motorized Stages: Automated sample positioning for measurements across different regions of a sample.",
+            "FluidFM®: Cantilever-based microfluidics for cell manipulation, spotting, and deposition.",
+            "Python Scripting: Fully scriptable instrument control for bespoke and automated measurement routines.",
+            "Nanosurf SMM Option: Scanning Microwave Microscopy for semiconductor and dopant-related characterization.",
+            "Glovebox-Ready: Lightweight, compact design with a magnetic cantilever holder for operation inside any glovebox.",
+            "Upgrade Path to DriveAFM: Accessories and sample holders transfer directly when moving to Nanosurf's flagship system.",
+            "CX Controller Upgrade: Integrates the system with external hardware for advanced applications.",
+            "Intuitive Cantilever Alignment: Alignment grooves precisely position the cantilever, making mounting quick and repeatable.",
+            "Integrated Top and Side View Camera: Sample observation and navigation built into the system rather than added externally.",
+            "Interchangeable Sample Holders: Switching between functional sample holders and operating modes is straightforward."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf FlexAFM" },
+            { "label": "Category", "value": "Research Atomic Force Microscopy, Mid-Range" },
+            { "label": "Architecture", "value": "Tip-scanning, compact and lightweight" },
+            { "label": "Controller", "value": "24-bit C3000i; CX controller upgrade available" },
+            { "label": "Resolution Capability", "value": "Single atomic layers through topography spanning several micrometres" },
+            { "label": "Setup Configurations", "value": "Stand-alone, inverted optical microscope integrated, or glovebox" },
+            { "label": "Inverted Microscope Compatibility", "value": "Most models from Zeiss, Nikon, Olympus, Leica" },
+            { "label": "Sample Handling", "value": "Large samples supported; interchangeable functional sample holders" },
+            { "label": "Cantilever Mounting", "value": "Intuitive alignment system with alignment grooves; magnetic holder for glovebox use" },
+            { "label": "Optical Navigation", "value": "Integrated camera with top and side sample views" },
+            { "label": "Standard Imaging Modes", "value": "Static force, lateral force, dynamic force (tapping), phase imaging" },
+            { "label": "Electrical Modes", "value": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM" },
+            { "label": "Mechanical Modes", "value": "Force spectroscopy, force modulation, force mapping" },
+            { "label": "Additional Modes", "value": "Lithography and nanomanipulation, EC-AFM, SThM" },
+            { "label": "Options", "value": "FluidFM, SMM, SThM, motorized stages, CX controller" },
+            { "label": "Cantilever Holders", "value": "Cantislide (with/without alignment chip), SMM, SThM, FluidFM" },
+            { "label": "Control Software", "value": "Nanosurf C3000, fully scriptable via Python, free lifetime updates" },
+            { "label": "Upgrade Compatibility", "value": "Accessories and sample holders compatible with DriveAFM" },
+            { "label": "Detailed System Specifications", "value": "Available in the FlexAFM brochure on request — numeric specifications not published on the product page" }
+          ],
+
+          "applications": [
+            "2D Materials Research: Demonstrated on graphene sheet stacks and multilayer graphene imaging",
+            "Electrical Characterization of Sensitive Samples: Glovebox compatibility with a broad range of nano-electrical modes",
+            "Semiconductor Analysis: SMM demonstrated on SRAM investigation in dS/dV mode",
+            "Ferroelectric Materials: PFM demonstrated on ferroelectric CuInP₂S₆ on silicon",
+            "Magnetic Materials Research: MFM demonstrated on magnetic shakti lattice structures",
+            "Tribology and Surface Films: Demonstrated on ZDDP tribofilm on Al-Si alloy",
+            "Cell Biology and Manipulation: FluidFM with simultaneous optical and AFM data acquisition",
+            "Single-Molecule Force Studies: Probing forces within and between single biomolecules",
+            "Biomolecular Assembly Characterization: Structure and property analysis of assemblies and fibrils",
+            "Virus Research: Covered in Nanosurf application work on cantilever-based virus techniques",
+            "Liquid Environment Imaging: Measurements with specimens in near-physiological condition",
+            "Nanomaterial Characterization: Applied to graphene analysis and broader nanomaterial evaluation"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Setup Selector" },
+            { "id": "upgrade-path-planner", "label": "Upgrade Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Mode & Accessories" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Upgrade Path" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Where and how will the system be used?",
+            "description": "Select the environment and imaging needs, and see the recommended configuration.",
+            "fields": [
+              {
+                "key": "operatingEnvironment",
+                "label": "Operating environment",
+                "options": [
+                  { "val": "open-bench", "label": "Open bench" },
+                  { "val": "inverted-optical-microscope", "label": "Inverted optical microscope" },
+                  { "val": "glovebox", "label": "Glovebox" }
+                ]
+              },
+              {
+                "key": "existingMicroscope",
+                "label": "Existing microscope",
+                "options": [
+                  { "val": "zeiss", "label": "Zeiss" },
+                  { "val": "nikon", "label": "Nikon" },
+                  { "val": "olympus", "label": "Olympus" },
+                  { "val": "leica", "label": "Leica" },
+                  { "val": "none", "label": "None" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "label": "Sample type",
+                "options": [
+                  { "val": "biological-liquid", "label": "Biological in liquid" },
+                  { "val": "2d-materials", "label": "2D materials" },
+                  { "val": "semiconductors", "label": "Semiconductors" },
+                  { "val": "mixed", "label": "Mixed" }
+                ]
+              },
+              {
+                "key": "opticalCorrelation",
+                "label": "Optical correlation",
+                "options": [
+                  { "val": "not-required", "label": "Not required" },
+                  { "val": "simultaneous-needed", "label": "Simultaneous optical and AFM data needed" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "operatingEnvironment": "glovebox" }, "title": "Glovebox Configuration Recommended", "body": "Lightweight, compact design with a magnetic cantilever holder supports operation inside any glovebox.", "tags": ["Glovebox-Ready"] },
+              { "condition": { "opticalCorrelation": "simultaneous-needed" }, "title": "IMO-Integrated Configuration Recommended", "body": "Integrates with most inverted optical microscopes from Zeiss, Nikon, Olympus, and Leica for simultaneous optical and AFM data acquisition.", "tags": ["4 Microscope Brands Supported"] },
+              { "condition": { "operatingEnvironment": "open-bench" }, "title": "Stand-Alone Configuration Recommended", "body": "Runs stand-alone for experiments that need no optical guidance, such as force spectroscopy on single biomolecules.", "tags": ["Stand-Alone Ready"] },
+              { "condition": "default", "title": "Confirm the Right Configuration With Inkarp", "body": "Share the operating environment, existing microscope, and sample type, and Inkarp will confirm the recommended setup.", "tags": ["3 Setup Configurations"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What needs measuring beyond topography?",
+            "description": "Select the properties of interest, and see the recommended modes and cantilever holders.",
+            "steps": [
+              {
+                "key": "propertiesOfInterest",
+                "question": "What needs measuring beyond topography?",
+                "options": [
+                  { "val": "topography", "label": "Topography" },
+                  { "val": "electrical", "label": "Electrical" },
+                  { "val": "mechanical", "label": "Mechanical" },
+                  { "val": "magnetic", "label": "Magnetic" },
+                  { "val": "thermal", "label": "Thermal" },
+                  { "val": "electrochemical", "label": "Electrochemical" }
+                ]
+              },
+              {
+                "key": "specialistTechnique",
+                "question": "Is a specialist technique needed?",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "smm", "label": "SMM" },
+                  { "val": "sthm", "label": "SThM" },
+                  { "val": "fluidfm", "label": "FluidFM" }
+                ]
+              },
+              {
+                "key": "sampleEnvironment",
+                "question": "What's the sample environment?",
+                "options": [
+                  { "val": "air", "label": "Air" },
+                  { "val": "liquid", "label": "Liquid" },
+                  { "val": "controlled-atmosphere", "label": "Controlled atmosphere" }
+                ]
+              },
+              {
+                "key": "automationRequirement",
+                "question": "What's the automation requirement?",
+                "options": [
+                  { "val": "manual", "label": "Manual positioning" },
+                  { "val": "motorized-scripted", "label": "Motorized stages and scripting" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Recommends the operating modes, cantilever holders, and options for the technique, then routes to a configuration-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "upgrade-path-planner",
+              "eyebrow": "Upgrade Path Planner",
+              "title": "What might the research need three years from now?",
+              "description": "Select current and anticipated requirements, and see the recommended starting point and upgrade route.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the current priority?", "choices": "Cost-effective capability now; Maximum performance immediately" },
+                { "title": "What's the anticipated development?", "choices": "Stable scope; Expanding modes; Moving toward flagship performance" },
+                { "title": "Is external hardware integration needed?", "choices": "Not needed; Required for advanced applications" },
+                { "title": "What's the budget approach?", "choices": "Single purchase; Staged investment over time" }
+              ],
+              "disclaimer": "Recommends the starting configuration and the CX controller and DriveAFM upgrade sequence, then routes to an upgrade-path-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "FlexAFM vs. DriveAFM",
+            "description": "FlexAFM method comparison: FlexAFM against the flagship DriveAFM.",
+            "columns": [
+              { "label": "FlexAFM" },
+              { "label": "DriveAFM" }
+            ],
+            "rows": [
+              { "feature": "Positioning", "values": ["Mid-range, versatile and cost-effective", "Flagship research instrument"] },
+              { "feature": "Architecture", "values": ["Tip-scanning, compact and lightweight", "Tip-scanning, ultra-low noise"] },
+              { "feature": "Controller", "values": ["24-bit C3000i, CX upgrade available", "28-bit CX controller as standard"] },
+              { "feature": "Cantilever Excitation", "values": ["Standard excitation", "CleanDrive photothermal excitation"] },
+              { "feature": "WaveMode", "values": ["Not available", "Available — fastest off-resonance mode on the market"] },
+              { "feature": "Motorization", "values": ["Motorized stages available", "Full system motorization with automated setup"] },
+              { "feature": "Small Cantilever Support", "values": ["Standard cantilevers", "High-fidelity small cantilevers for faster imaging"] },
+              { "feature": "PicoBalance", "values": ["Not listed", "Available, with viscoelastic analysis"] },
+              { "feature": "Setup Options", "values": ["Stand-alone, IMO, glovebox", "Stand-alone, IMO, glovebox"] },
+              { "feature": "Electrical Modes", "values": ["C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM", "Same seven modes"] },
+              { "feature": "FluidFM", "values": ["Available", "Available"] },
+              { "feature": "Software", "values": ["Nanosurf C3000, free lifetime updates", "Nanosurf Studio, quarterly releases"] },
+              { "feature": "Accessory Compatibility", "values": ["Compatible with DriveAFM", "Accepts FlexAFM accessories"] },
+              { "feature": "Best For", "values": ["Broad research needs at mid-range cost, with room to grow", "Demanding cutting-edge research needing maximum performance"] },
+              { "feature": "Choose when", "values": ["Versatility and value lead, with an upgrade path wanted", "CleanDrive stability, WaveMode speed, or full automation are required"] }
+            ],
+            "disclaimer": "The two share tip-scanning architecture, the same electrical mode set, FluidFM, and all three setup configurations. What DriveAFM adds is CleanDrive photothermal excitation and the WaveMode imaging it enables, the 28-bit controller as standard, full motorization, small cantilever support, and PicoBalance. Because accessories transfer between them, starting on FlexAFM and upgrading later is a supported route rather than a compromise that has to be unwound."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "FlexAFM industries: materials science, life science, semiconductor, and energy materials research.",
+            "industries": [
+              { "name": "Materials Science Research", "useCase": "Surface and structural characterization across sample types", "consideration": "Tip-scanning handles large samples in a compact system" },
+              { "name": "2D Materials Research", "useCase": "Graphene and layered material characterization", "consideration": "Glovebox compatibility protects sensitive samples during measurement" },
+              { "name": "Semiconductor Research", "useCase": "Dopant-related and device-level electrical analysis", "consideration": "SMM option demonstrated on SRAM in dS/dV mode" },
+              { "name": "Energy Materials Research", "useCase": "Battery and energy storage material characterization", "consideration": "Lightweight glovebox-ready design with broad nano-electrical modes" },
+              { "name": "Life Science and Biotech", "useCase": "Cell, biomolecule, and fibril characterization in liquid", "consideration": "IMO integration with FluidFM for correlative single-cell work" },
+              { "name": "Ferroelectric and Magnetic Materials", "useCase": "Domain and lattice structure visualization", "consideration": "PFM and MFM demonstrated on CuInP₂S₆ and shakti lattice structures" },
+              { "name": "Tribology and Surface Engineering", "useCase": "Film and coating characterization", "consideration": "Demonstrated on ZDDP tribofilm analysis on Al-Si alloy" },
+              { "name": "Virus and Pathogen Research", "useCase": "Cantilever-based virus characterization techniques", "consideration": "Covered in Nanosurf's virus research application work" },
+              { "name": "Academic Research Groups", "useCase": "Broad and evolving research programmes", "consideration": "Upgrade path to DriveAFM protects the initial investment" },
+              { "name": "Multi-User Facilities", "useCase": "Shared instrument across disciplines", "consideration": "Easy holder and mode switching with software accessible to novices" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Images the lab's own samples to show resolution and mode performance" },
+              { "title": "Application Assessment", "description": "Confirms which operating modes and accessories the research requires" },
+              { "title": "Configuration Assessment", "description": "Confirms stand-alone, IMO, or glovebox setup and accessory selection" },
+              { "title": "Upgrade Path Planning", "description": "Advises on CX controller and DriveAFM upgrade sequencing over time" },
+              { "title": "Glovebox Integration Support", "description": "Reviews glovebox dimensions and integration feasibility ahead of delivery" },
+              { "title": "Site Preparation Support", "description": "Reviews vibration, acoustic, bench, and environmental requirements" },
+              { "title": "Installation Support", "description": "Handles setup, first-run checks, and initial performance verification" },
+              { "title": "Operator Training", "description": "Builds confidence with Nanosurf C3000, cantilever mounting, and mode selection" },
+              { "title": "Advanced Technique Training", "description": "Supports nano-electrical modes, force spectroscopy, and Python scripting" },
+              { "title": "Preventive Maintenance", "description": "Maintains scan head, controller, stages, and optical system performance" },
+              { "title": "Spares and Consumables", "description": "Supplies cantilevers, cantilever holders, sample holders, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is FlexAFM used for?", "answer": "It's a versatile mid-range research atomic force microscope used across materials science, life science, semiconductor, and energy materials research for nanoscale imaging and property characterization." },
+            { "question": "Can FlexAFM handle large samples?", "answer": "Yes. The tip-scanning design handles large samples without compromising versatility, robustness, or the system's compact size." },
+            { "question": "What controller does FlexAFM use?", "answer": "A 24-bit C3000i controller, enabling high-resolution imaging of single atomic layers as well as topography spanning several micrometres. A CX controller upgrade is available." },
+            { "question": "What does the CX controller upgrade add?", "answer": "It allows the system to be integrated with external hardware for advanced applications, and is the first step on the upgrade path to DriveAFM." },
+            { "question": "Are FlexAFM accessories compatible with DriveAFM?", "answer": "Yes. Accessories and sample holders bought for FlexAFM work with DriveAFM, so upgrading the scan head leaves the surrounding hardware in place." },
+            { "question": "Which inverted optical microscopes can FlexAFM integrate with?", "answer": "Most inverted optical microscopes from leading manufacturers including Zeiss, Nikon, Olympus, and Leica." },
+            { "question": "Can FlexAFM operate inside a glovebox?", "answer": "Yes. Its light weight, compact design, and magnetic cantilever holder make it straightforward to operate inside any glovebox." },
+            { "question": "Can FlexAFM measure in liquid?", "answer": "Yes. Measurements can be made in liquid environments with the specimen held in near-physiological condition." },
+            { "question": "Which electrical modes does FlexAFM support?", "answer": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, and MFM." },
+            { "question": "Which mechanical characterization modes are available?", "answer": "Force spectroscopy, force modulation, and force mapping." },
+            { "question": "How difficult is cantilever mounting?", "answer": "Quick and simple — the intuitive alignment system uses grooves that precisely position the cantilever." },
+            { "question": "Does the system include sample navigation optics?", "answer": "Yes. An integrated camera provides top and side views of the sample for observation and navigation." },
+            { "question": "Can instrument control be scripted?", "answer": "Yes. Instrument control is fully scriptable, with Python scripting listed as a system feature." },
+            { "question": "Are software updates included?", "answer": "Nanosurf C3000 software includes free lifetime updates." },
+            { "question": "How is FlexAFM different from DriveAFM?", "answer": "DriveAFM adds CleanDrive photothermal excitation and WaveMode imaging, a 28-bit controller as standard, full motorization, small cantilever support, and PicoBalance. FlexAFM covers the same electrical mode set and setup configurations at mid-range cost, with accessories that transfer on upgrade." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Numeric system specifications are published in the FlexAFM brochure rather than on the product page — Inkarp can provide it on request." },
+            { "question": "What is the price of FlexAFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the setup configuration, operating modes, and accessories required." },
+            { "question": "Who is the authorized distributor of FlexAFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf FlexAFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get FlexAFM in India from Inkarp",
+            "description": "Share the samples, the setup environment, and where the research is heading, and the right FlexAFM configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample and setup details, then confirm the right FlexAFM configuration and accessory set.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleDetails", "label": "Samples being imaged and setup environment", "type": "text", "required": false },
+              { "key": "upgradeDetails", "label": "Whether an upgrade to DriveAFM is anticipated", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration and accessory set", "body": "Share the samples being imaged, the setup environment, and whether an upgrade to DriveAFM is anticipated, and the right FlexAFM configuration and accessory set gets confirmed from there." },
+              { "title": "Plan the upgrade sequence", "body": "Share where the research is likely to go over the next few years, and the right starting configuration and upgrade sequence get mapped out." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Buy the mid-range AFM. Keep the accessories when you upgrade to the flagship.",
+            "heroLead": "The usual problem with a mid-range instrument is that outgrowing it means starting over — new system, new sample holders, new accessories, the previous investment written off. Nanosurf built FlexAFM to avoid that. Its accessories and sample holders are compatible with DriveAFM, Nanosurf's most advanced research instrument, so upgrading the scan head later leaves everything else in place and working. The CX controller upgrade is the first deliberate step on that path. What sits underneath is a genuinely capable system in its own right. Tip-scanning design handles large samples without giving up compactness or robustness. A 24-bit C3000i controller resolves single atomic layers while still covering topography spanning several micrometres. It integrates with inverted optical microscopes from Zeiss, Nikon, Olympus, and Leica, or drops into a glovebox for sensitive 2D materials work — light enough to handle safely with one hand.",
+            "stats": [
+              { "value": "24-bit C3000i", "label": "Controller, resolving single atomic layers" },
+              { "value": "Tip-scanning", "label": "Large samples handled without compromising compactness" },
+              { "value": "DriveAFM compatible", "label": "Accessories and sample holders carry over on upgrade" },
+              { "value": "CX controller upgrade", "label": "External hardware integration and first step toward DriveAFM" },
+              { "value": "4 microscope brands", "label": "Zeiss, Nikon, Olympus, Leica inverted microscope integration" },
+              { "value": "Glovebox-ready", "label": "Lightweight, compact, magnetic cantilever holder" },
+              { "value": "Top and side view camera", "label": "Integrated sample observation and navigation" },
+              { "value": "20+ operating modes", "label": "Imaging, electrical, mechanical, lithography, thermal" },
+              { "value": "Python scripting", "label": "Fully scriptable instrument control" },
+              { "value": "Free lifetime updates", "label": "Nanosurf C3000 software" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "FlexAFM product information: configurability, controller capability, operating modes, and upgrade path.",
+                "body": [
+                  "Tip-scanning architecture: Handles large samples without compromising versatility, robustness, or compact system size.",
+                  "24-bit C3000i controller: Resolves single atomic layers while covering topography spanning several micrometres.",
+                  "Three setup configurations: Runs stand-alone, integrated with an inverted optical microscope, or inside a glovebox.",
+                  "Broad microscope compatibility: Integrates with most inverted optical microscopes from Zeiss, Nikon, Olympus, and Leica.",
+                  "DriveAFM-compatible accessories: Sample holders and accessories carry forward when the scan head is upgraded.",
+                  "CX controller upgrade available: Enables integration with external hardware and begins the upgrade path to DriveAFM.",
+                  "Lightweight, compact build: Safe to handle with one hand, which is what makes glovebox operation practical.",
+                  "Intuitive cantilever alignment: Alignment grooves position the cantilever precisely, making mounting quick and simple.",
+                  "Integrated top and side view camera: Facilitates sample observation and navigation during setup and measurement.",
+                  "Interchangeable functional sample holders: Switching between holders and operating modes is straightforward rather than a rebuild.",
+                  "Liquid environment measurement: Specimens held in near-physiological condition for nanomaterial, biomolecule, and cell work.",
+                  "Comprehensive mode coverage: Standard imaging, electrical, mechanical, lithography, electrochemical, and thermal modes.",
+                  "Nanosurf C3000 software: Automatic parameter-free frequency tuning, automated calibration, fully scriptable, free lifetime updates."
+                ],
+                "cards": [
+                  { "title": "DriveAFM-compatible accessories", "description": "Investment protected through a future upgrade" },
+                  { "title": "24-bit C3000i controller", "description": "Single atomic layers to multi-micrometre topography" },
+                  { "title": "Three setup configurations", "description": "One system across bench, microscope, and glovebox" },
+                  { "title": "Lightweight tip-scanning design", "description": "Large samples handled, one-handed system handling" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf FlexAFM Research Atomic Force Microscope" },
+                  { "title": "Architecture", "description": "Tip-scanning, compact and lightweight" },
+                  { "title": "Controller", "description": "24-bit C3000i, with CX controller upgrade available" },
+                  { "title": "Setup options", "description": "Stand-alone, inverted optical microscope integrated, or glovebox" },
+                  { "title": "Software", "description": "Nanosurf C3000, fully scriptable with Python" },
+                  { "title": "Options", "description": "FluidFM, SMM, SThM, motorized stages" },
+                  { "title": "Upgrade path", "description": "Accessories compatible with DriveAFM" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "FlexAFM applications: materials research, life science, electronics, and energy materials."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "FlexAFM technical specifications: controller, architecture, setup options, and operating modes."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "A Future-Proof Upgrade Path",
+                "title": "A Future-Proof Upgrade Path",
+                "description": "How accessories carry forward when the system grows toward DriveAFM.",
+                "cards": [
+                  { "title": "A system that grows with the research", "description": "Modules and features added to the existing platform" },
+                  { "title": "Accessories that survive an upgrade", "description": "Full compatibility with DriveAFM" },
+                  { "title": "A staged rather than all-at-once move", "description": "CX controller upgrade as the defined first step" },
+                  { "title": "External hardware integration", "description": "CX controller enabling advanced application setups" },
+                  { "title": "Capital investment protected", "description": "Scan head upgrade with accessories retained" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Ease of Use and Sample Handling",
+                "title": "Ease of Use and Sample Handling",
+                "body": [
+                  "The build combines portability with the stability measurement requires — compact, lightweight, and robust, with alignment grooves that precisely position the cantilever and remove the fiddliest part of AFM setup.",
+                  "Functional sample holders swap easily between experiments and operating modes, and an integrated top and side view camera handles sample observation and navigation without requiring external optics.",
+                  "The software tunes frequency automatically based on cantilever characteristics with no manual parameter entry, deflection sensitivity calibration is automated, and a Force Spectroscopy wizard guides setup — easy to learn for novices while retaining full flexibility and complete scriptability for experts."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fast, repeatable cantilever mounting", "value": "Intuitive alignment system with positioning grooves" },
+                  { "label": "Quick changes between experiments", "value": "Interchangeable functional sample holders and modes" },
+                  { "label": "Finding the region of interest", "value": "Integrated camera with top and side sample views" },
+                  { "label": "Setup without parameter guesswork", "value": "Automatic parameter-free frequency tuning" },
+                  { "label": "Reliable force measurements", "value": "Automated deflection sensitivity calibration and Force Spectroscopy wizard" },
+                  { "label": "Software that stays current", "value": "Free lifetime updates on Nanosurf C3000" }
+                ],
+                "disclaimer": "Share the samples being imaged, the setup environment, and whether an upgrade to DriveAFM is anticipated, and the right FlexAFM configuration and accessory set gets confirmed from there."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "FlexAFM documentation: brochure, application notes, and technical notes.",
+                "cards": [
+                  { "title": "FlexAFM Brochure with System Specifications", "description": "Available on request" },
+                  { "title": "Application Note: Unveiling the Power of Electrical AFM Modes", "description": "Available on request" },
+                  { "title": "Technical Note: Scanning Microwave Microscopy for the Semiconductor Industry", "description": "Available on request" },
+                  { "title": "Application Note: Advanced Cantilever-Based Techniques for Virus Research", "description": "Available on request" },
+                  { "title": "Application Note: Evaluating AFM as an Analysis Tool for Graphene", "description": "Available on request" },
+                  { "title": "Nanosurf C3000 Software Overview", "description": "Available on request" },
+                  { "title": "Accessory and Cantilever Holder Catalogue", "description": "Available on request" },
+                  { "title": "DriveAFM Upgrade Path Details", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get FlexAFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Mid-range capability with flagship-compatible accessories, three setup configurations, and single-atomic-layer resolution from a 24-bit controller. Share the samples, the setup environment, and where the research is heading, and the right FlexAFM configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "CoreAFM",
+          "slug": "coreafm",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
+          "imageAlt": "Nanosurf CoreAFM - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/coreafm",
+          "breadcrumbPath": "Home > Products > Research > CoreAFM",
+          "h1": "CoreAFM",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "An AFM is normally a project before it's an instrument. Scanner, sample stage, camera, vibration isolation table, environmental shielding — sourced separately, specified separately, assembled and commissioned before the first image.",
+
+          "features": [
+            "Compact All-in-One Device: Every essential AFM element integrated into a single, easy-to-use unit.",
+            "24-Bit Controller: Specially designed for precise, reliable scan control and straightforward data acquisition.",
+            "Active Vibration Table: Vibration isolation built into the system rather than purchased and specified separately.",
+            "Airflow Shielding: Environmental protection integrated into the unit for measurement stability.",
+            "Nanosurf SMM Option: Scanning Microwave Microscopy for semiconductor and materials characterization.",
+            "FluidFM®: Cantilever-based microfluidics, on Nanosurf's most affordable platform offering it.",
+            "Variable Magnetic Field Generator: In-plane magnetic field control for magnetic materials research.",
+            "Digital Inverted Microscope Option (DIMO): Microscope integration for life science applications.",
+            "Python Scripting: Fully scriptable instrument control for bespoke and automated routines.",
+            "Sample Heating and Environmental Control: Advanced options extending measurement conditions beyond ambient."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Nanosurf CoreAFM" },
+            { "label": "Category", "value": "Research Atomic Force Microscopy, All-in-One" },
+            { "label": "Architecture", "value": "Compact all-in-one integrated unit" },
+            { "label": "Scanner", "value": "Modern flexure-guided scanner" },
+            { "label": "Integrated Components", "value": "XYZ sample stage, sample observation camera, active vibration table, airflow shielding" },
+            { "label": "Controller", "value": "Purpose-designed 24-bit controller" },
+            { "label": "Setup Requirement", "value": "Three cables — controller connection, power, USB" },
+            { "label": "Operating Environments", "value": "Air and liquid" },
+            { "label": "Optional Modes and Functions", "value": "More than 30 available" },
+            { "label": "Standard Imaging Modes", "value": "Static force, lateral force, dynamic force (tapping), phase imaging" },
+            { "label": "Electrical Modes", "value": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM — the full electrical mode range on an affordable platform, delivering a robust research instrument under budget pressure" },
+            { "label": "Mechanical Modes", "value": "Force modulation, force spectroscopy, force mapping" },
+            { "label": "Additional Modes", "value": "Lithography and nanomanipulation, EC-AFM, SThM" },
+            { "label": "Advanced Options", "value": "Sample heating, environmental control, in-plane magnetic field control, scripting" },
+            { "label": "Key Options", "value": "SMM, FluidFM, DIMO digital inverted microscope, variable magnetic field generator" },
+            { "label": "Cantilever Holders", "value": "Cantislide (with/without alignment chip), SMM, SThM, FluidFM" },
+            { "label": "Control Software", "value": "Nanosurf Core, fully scriptable via Python, free lifetime updates" },
+            { "label": "Detailed System Specifications", "value": "Available in the CoreAFM brochure on request — numeric specifications not published on the product page" },
+            { "label": "Specification Note", "value": "Cantilever holder descriptions on Nanosurf's CoreAFM page reference FlexAFM. Worth confirming exact holder compatibility at configuration." }
+          ],
+
+          "applications": [
+            "2D Materials Research: Demonstrated on twisted graphene bilayer on hBN, imaged by TIFR India's Nanoelectronics group",
+            "Moiré Superlattice Imaging: Resolved twisted graphene on hBN Moiré superlattice structure",
+            "Graphene Characterization: Demonstrated on graphene and multilayer graphene samples",
+            "Microstructure Analysis: Demonstrated on Al-Au microstructure imaging",
+            "Polymer and Soft Matter Research: Applied to interfacial dynamics work with colloidal probes in liquid and at elevated temperature",
+            "Ceramics and Metals Characterization: Morphology and property analysis across hard material classes",
+            "Nano-Electrical Characterization: Seven electrical modes including C-AFM, KPFM, PFM, and SMM",
+            "Magnetic Materials Research: MFM with the in-plane variable magnetic field generator option",
+            "Life Science Research: Bio functionality with DIMO microscope integration and FluidFM",
+            "Liquid Environment Measurement: Measurements in liquid supported alongside air operation",
+            "Colloidal Probe Work: Demonstrated in liquid environments and at elevated temperatures",
+            "Teaching and Nanoscience Education: Three-cable setup and accessible software suit instructional environments"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Mode Selector" },
+            { "id": "life-science-configuration-checker", "label": "Bio Configuration" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "System Selector" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "All-in-One Design" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What does the research need to measure?",
+            "description": "Select the properties and conditions of interest, and see the recommended option set.",
+            "fields": [
+              {
+                "key": "propertiesOfInterest",
+                "label": "Properties of interest",
+                "options": [
+                  { "val": "morphology", "label": "Morphology" },
+                  { "val": "mechanical", "label": "Mechanical" },
+                  { "val": "electrical", "label": "Electrical" },
+                  { "val": "magnetic", "label": "Magnetic" },
+                  { "val": "thermal", "label": "Thermal" },
+                  { "val": "electrochemical", "label": "Electrochemical" }
+                ]
+              },
+              {
+                "key": "measurementEnvironment",
+                "label": "Measurement environment",
+                "options": [
+                  { "val": "air", "label": "Air" },
+                  { "val": "liquid", "label": "Liquid" },
+                  { "val": "elevated-temperature", "label": "Elevated temperature" },
+                  { "val": "controlled-atmosphere", "label": "Controlled atmosphere" }
+                ]
+              },
+              {
+                "key": "specialistTechnique",
+                "label": "Specialist technique",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "smm", "label": "SMM" },
+                  { "val": "sthm", "label": "SThM" },
+                  { "val": "fluidfm", "label": "FluidFM" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "label": "Sample type",
+                "options": [
+                  { "val": "polymers", "label": "Polymers" },
+                  { "val": "ceramics", "label": "Ceramics" },
+                  { "val": "metals", "label": "Metals" },
+                  { "val": "2d-materials", "label": "2D materials" },
+                  { "val": "biological", "label": "Biological" }
+                ]
+              }
+            ],
+            "results": [
+              { "condition": { "sampleType": "biological" }, "title": "Bio Configuration Recommended", "body": "DIMO microscope integration and FluidFM extend CoreAFM to biological applications, uncommon capability at this level.", "tags": ["Bio Capable"] },
+              { "condition": { "specialistTechnique": "fluidfm" }, "title": "FluidFM Is Available at Entry-Level Cost", "body": "CoreAFM is Nanosurf's most affordable platform offering FluidFM cantilever-based microfluidics.", "tags": ["Most Affordable FluidFM"] },
+              { "condition": { "propertiesOfInterest": "magnetic" }, "title": "Magnetic Field Generator Supports This Work", "body": "The in-plane variable magnetic field generator option supports magnetic materials research directly.", "tags": ["Magnetic Field Option"] },
+              { "condition": "default", "title": "Confirm the Right Option Set With Inkarp", "body": "Share the properties of interest, measurement environment, and sample type, and Inkarp will confirm the recommended modes and options from the 30+ available.", "tags": ["30+ Modes and Functions"] }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Which Nanosurf AFM fits the requirement and the budget?",
+            "description": "Select the priorities and constraints, and see where CoreAFM sits against the range.",
+            "steps": [
+              {
+                "key": "primaryConstraint",
+                "question": "What's the primary constraint?",
+                "options": [
+                  { "val": "budget", "label": "Budget" },
+                  { "val": "performance", "label": "Performance" },
+                  { "val": "setup-simplicity", "label": "Setup simplicity" }
+                ]
+              },
+              {
+                "key": "setupPreference",
+                "question": "What's the setup preference?",
+                "options": [
+                  { "val": "all-in-one", "label": "All-in-one integrated" },
+                  { "val": "modular-configurable", "label": "Modular and configurable" }
+                ]
+              },
+              {
+                "key": "sampleSize",
+                "question": "What's the sample size?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "large-heavy", "label": "Large and heavy samples" }
+                ]
+              },
+              {
+                "key": "advancedRequirements",
+                "question": "Are advanced requirements needed?",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "glovebox", "label": "Glovebox operation" },
+                  { "val": "photothermal-wavemode", "label": "Photothermal excitation and WaveMode" }
+                ]
+              },
+              {
+                "key": "growthExpectation",
+                "question": "What's the growth expectation?",
+                "options": [
+                  { "val": "stable", "label": "Stable scope" },
+                  { "val": "expanding-modes", "label": "Expanding modes" },
+                  { "val": "upgrading-later", "label": "Upgrading systems later" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Recommends CoreAFM, FlexAFM, or DriveAFM based on the constraint, setup preference, and growth expectation, then routes to a system-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "life-science-configuration-checker",
+              "eyebrow": "Life Science Configuration Checker",
+              "title": "Does the biological work fit CoreAFM?",
+              "description": "Select the samples and techniques required, and see the recommended bio configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "What's the sample type?", "choices": "Cells; Biomolecules; Tissue; Biomaterials" },
+                { "title": "What's the environment?", "choices": "Ambient; Liquid; Liquid at elevated temperature" },
+                { "title": "Is optical correlation needed?", "choices": "None; Inverted microscope integration needed" },
+                { "title": "Is manipulation needed?", "choices": "Imaging only; Cell manipulation, spotting, and deposition" }
+              ],
+              "disclaimer": "Confirms fit and recommends DIMO and FluidFM requirements, then routes to a bio-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Method comparison",
+            "title": "CoreAFM vs. FlexAFM vs. DriveAFM",
+            "description": "CoreAFM method comparison: CoreAFM against FlexAFM and DriveAFM.",
+            "columns": [
+              { "label": "CoreAFM" },
+              { "label": "FlexAFM" },
+              { "label": "DriveAFM" }
+            ],
+            "rows": [
+              { "feature": "Positioning", "values": ["Best value, all-in-one research AFM", "Mid-range, versatile and configurable", "Flagship research instrument"] },
+              { "feature": "Architecture", "values": ["Compact all-in-one integrated unit", "Tip-scanning, compact and lightweight", "Tip-scanning, ultra-low noise"] },
+              { "feature": "Controller", "values": ["Purpose-designed 24-bit", "24-bit C3000i, CX upgrade available", "28-bit CX as standard"] },
+              { "feature": "Vibration Isolation", "values": ["Active vibration table integrated", "Specified separately", "Specified separately"] },
+              { "feature": "Setup", "values": ["Three cables, ready to run", "Configurable across setups", "Configurable across setups"] },
+              { "feature": "Large Sample Handling", "values": ["Standard sample stage", "Large samples supported", "Large samples supported"] },
+              { "feature": "Setup Configurations", "values": ["All-in-one, with DIMO option", "Stand-alone, IMO, glovebox", "Stand-alone, IMO, glovebox"] },
+              { "feature": "Cantilever Excitation", "values": ["Standard excitation", "Standard excitation", "CleanDrive photothermal"] },
+              { "feature": "WaveMode", "values": ["Not available", "Not available", "Available"] },
+              { "feature": "Electrical Modes", "values": ["C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM", "Same seven modes", "Same seven modes"] },
+              { "feature": "FluidFM", "values": ["Available — most affordable route", "Available", "Available"] },
+              { "feature": "Magnetic Field Generator", "values": ["In-plane variable field option", "Not listed", "Not listed"] },
+              { "feature": "Software", "values": ["Nanosurf Core, free lifetime updates", "Nanosurf C3000, free lifetime updates", "Nanosurf Studio, quarterly releases"] },
+              { "feature": "Best For", "values": ["Getting capable AFM running fast, on budget", "Broad research with an upgrade path", "Cutting-edge research needing maximum performance"] },
+              { "feature": "Choose when", "values": ["Integration, simplicity, and value lead the decision", "Configurability and large samples matter", "CleanDrive, WaveMode, or full automation are required"] }
+            ],
+            "disclaimer": "All three share the same seven electrical modes and FluidFM availability — the electrical characterization capability does not drop at the entry level. What CoreAFM trades against the others is configurability and large-sample handling, and what it uniquely offers is complete integration including vibration isolation, plus the in-plane magnetic field generator option and the lowest-cost route to FluidFM."
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "CoreAFM industries: academic research, 2D materials, semiconductor, life science, and education.",
+            "industries": [
+              { "name": "Academic Research Groups", "useCase": "Broad nanoscience and nanotechnology research on constrained budgets", "consideration": "Solid foundation with 30+ options to expand as research evolves" },
+              { "name": "2D Materials Research", "useCase": "Graphene, hBN, and heterostructure characterization", "consideration": "Demonstrated on twisted graphene Moiré superlattice by TIFR India" },
+              { "name": "Semiconductor Research", "useCase": "Electrical characterization at the nanoscale", "consideration": "Nanosurf SMM option with supporting semiconductor application notes" },
+              { "name": "Polymer and Soft Matter Science", "useCase": "Interfacial dynamics and colloidal probe work", "consideration": "Liquid environment and elevated temperature measurement supported" },
+              { "name": "Materials Characterization Labs", "useCase": "Polymers, ceramics, metals, and 2D materials", "consideration": "30+ modes covering morphology, mechanical, and electrical properties" },
+              { "name": "Life Science Research", "useCase": "Cell and biomolecule work at entry-level cost", "consideration": "DIMO integration and the most affordable FluidFM route" },
+              { "name": "Magnetic Materials Research", "useCase": "Domain and field-dependent studies", "consideration": "MFM with in-plane variable magnetic field generator" },
+              { "name": "Teaching and Education", "useCase": "Introducing AFM to students", "consideration": "Three-cable setup with software accessible to novice users" },
+              { "name": "Multi-User Facilities", "useCase": "Shared instrument across varied users", "consideration": "All-in-one design reduces setup variability between operators" },
+              { "name": "Labs Without Existing AFM Infrastructure", "useCase": "First AFM purchase", "consideration": "Vibration isolation and shielding included rather than separately sourced" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Images the lab's own samples to show resolution and mode performance" },
+              { "title": "Application Assessment", "description": "Confirms which of the 30+ modes and options the research requires" },
+              { "title": "Configuration Assessment", "description": "Confirms option set, accessories, and cantilever holder selection" },
+              { "title": "System Selection Support", "description": "Confirms whether CoreAFM, FlexAFM, or DriveAFM fits the requirement" },
+              { "title": "Site Preparation Support", "description": "Reviews bench and environmental requirements, lighter than modular AFM installs" },
+              { "title": "Installation Support", "description": "Handles setup, first-run checks, and initial performance verification" },
+              { "title": "Operator Training", "description": "Builds confidence with Nanosurf Core software, cantilever mounting, and mode selection" },
+              { "title": "Advanced Technique Training", "description": "Supports nano-electrical modes, force spectroscopy, FluidFM, and Python scripting" },
+              { "title": "Preventive Maintenance", "description": "Maintains scanner, controller, vibration table, and optical system performance" },
+              { "title": "Spares and Consumables", "description": "Supplies cantilevers, cantilever holders, sample holders, and replacement parts" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is CoreAFM used for?", "answer": "It's an all-in-one research atomic force microscope used across nanoscience and nanotechnology — materials characterization, 2D materials, electrical property analysis, life science work, and teaching." },
+            { "question": "What is included in the all-in-one design?", "answer": "A modern flexure-guided scanner, XYZ sample stage, sample observation camera, active vibration table, and airflow shielding, all integrated into a single unit." },
+            { "question": "How difficult is the system to set up?", "answer": "Three cables — connect the controller, plug in power and USB, and the system is ready to go." },
+            { "question": "Does CoreAFM need a separate vibration isolation table?", "answer": "No. An active vibration table is integrated into the unit rather than being a separate purchase." },
+            { "question": "What controller does CoreAFM use?", "answer": "A specially designed 24-bit controller providing precise, reliable scan control alongside straightforward data acquisition and analysis." },
+            { "question": "How many operating modes are available?", "answer": "More than 30 optional modes and functions, spanning basic through advanced measurements." },
+            { "question": "Can CoreAFM measure in liquid?", "answer": "Yes. The system handles applications in both air and liquid environments." },
+            { "question": "Which electrical modes are supported?", "answer": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, and MFM — the same seven modes as Nanosurf's higher-tier systems." },
+            { "question": "Is CoreAFM suitable for biological work?", "answer": "Yes. Nanosurf describes it as the only AFM in its class with versatility covering biological applications, with microscope integration available through DIMO." },
+            { "question": "What is DIMO?", "answer": "The Digital Inverted Microscope Option, providing the microscope integration life science AFM work generally requires." },
+            { "question": "Can CoreAFM run FluidFM?", "answer": "Yes — Nanosurf describes it as the most affordable path to FluidFM functionality." },
+            { "question": "What advanced options are available?", "answer": "Sample heating, environmental control, in-plane magnetic field control via a variable magnetic field generator, and scripting." },
+            { "question": "Can instrument control be scripted?", "answer": "Yes. Instrument control is fully scriptable, with Python scripting listed as a system feature." },
+            { "question": "Are software updates included?", "answer": "Nanosurf Core software includes free lifetime updates." },
+            { "question": "How is CoreAFM different from FlexAFM and DriveAFM?", "answer": "CoreAFM integrates everything including vibration isolation into one unit with three-cable setup. FlexAFM adds configurability across stand-alone, microscope, and glovebox setups plus large sample handling. DriveAFM adds CleanDrive photothermal excitation, WaveMode, and a 28-bit controller as standard. All three share the same seven electrical modes." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Numeric system specifications are published in the CoreAFM brochure rather than on the product page — Inkarp can provide it on request." },
+            { "question": "What is the price of CoreAFM in India?", "answer": "Get in touch and Inkarp will put together a quote based on the modes, options, and accessories required." },
+            { "question": "Who is the authorized distributor of CoreAFM in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf CoreAFM in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get CoreAFM in India from Inkarp",
+            "description": "Share the samples and the properties that need measuring, and the right CoreAFM configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample and application details, then confirm the right CoreAFM configuration and option set.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleDetails", "label": "Samples being imaged and properties needing characterization", "type": "text", "required": false },
+              { "key": "bioDetails", "label": "Whether liquid or biological work is planned", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration and option set", "body": "Share the samples being imaged, the properties needing characterization, and whether liquid or biological work is planned, and the right CoreAFM configuration and option set gets confirmed from there." },
+              { "title": "Confirm the right electrical mode set and holders", "body": "Share which electrical properties need measuring and on what materials, and the right mode set and cantilever holders get recommended." },
+              { "title": "Installation and first-run support", "body": "Handles setup, first-run checks, and initial performance verification." },
+              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Three cables. That's the installation.",
+            "heroLead": "An AFM is normally a project before it's an instrument. Scanner, sample stage, camera, vibration isolation table, environmental shielding — sourced separately, specified separately, assembled and commissioned before the first image. CoreAFM arrives with all of it inside one unit. Flexure-guided scanner, XYZ sample stage, sample observation camera, active vibration table, and airflow shielding, driven by a purpose-designed 24-bit controller. Connect the controller, plug in power and USB, and the system is ready. The vibration table is the detail worth pausing on — it's usually the separate purchase that decides whether an AFM performs or merely exists, and here it's part of the instrument. What that simplicity doesn't cost is capability. More than 30 optional modes and functions cover morphology, mechanical and electrical properties, in air and in liquid, with sample heating, environmental control, in-plane magnetic field generation, and scripting available. It's also the most affordable route to FluidFM functionality Nanosurf offers.",
+            "stats": [
+              { "value": "3 cables", "label": "Complete setup: controller, power, USB" },
+              { "value": "30+ modes and functions", "label": "Optional capability across imaging, electrical, mechanical" },
+              { "value": "All-in-one unit", "label": "Scanner, stage, camera, vibration table, airflow shielding integrated" },
+              { "value": "24-bit controller", "label": "Purpose-designed for precise scanning and data acquisition" },
+              { "value": "Active vibration table", "label": "Built in, not a separate purchase" },
+              { "value": "Air and liquid", "label": "Both environments supported" },
+              { "value": "One-handed operation", "label": "User-friendly design with everything within reach" },
+              { "value": "In-plane magnetic field", "label": "Variable magnetic field generator option" },
+              { "value": "FluidFM capable", "label": "Nanosurf's most affordable route to the technology" },
+              { "value": "DIMO option", "label": "Digital inverted microscope for life science work" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "CoreAFM product information: integrated design, modal range, and expandability.",
+                "body": [
+                  "All-in-one integrated design: Flexure-guided scanner, XYZ sample stage, camera, active vibration table, and airflow shielding in a single unit.",
+                  "Three-cable setup: Connect the controller, plug in power and USB, and the system is ready to run.",
+                  "Modern flexure-guided scanner: The scanning foundation of the system, built into the integrated unit.",
+                  "Active vibration table included: Isolation built in rather than specified, sourced, and commissioned separately.",
+                  "Purpose-designed 24-bit controller: Precise, reliable control over scanning with straightforward data acquisition and analysis.",
+                  "More than 30 optional modes and functions: Modular design covering basic through advanced measurements as requirements grow, drawing on an accessory library users describe as good value and genuinely expandable.",
+                  "Air and liquid operation: Both environments supported on the same platform.",
+                  "One-handed operation: User-friendly design with everything in its place and within reach.",
+                  "Advanced options available: Sample heating, environmental control, in-plane magnetic field control, and scripting.",
+                  "Integrated sample observation camera: Sample viewing and navigation built into the unit.",
+                  "Bio capability uncommon at this level: Nanosurf positions it as the only AFM in its class with versatility covering biological applications.",
+                  "Most affordable path to FluidFM: Cantilever-based microfluidics accessible on the entry-level research platform.",
+                  "Nanosurf Core software: Automatic parameter-free frequency tuning, automated calibration, fully scriptable, free lifetime updates."
+                ],
+                "cards": [
+                  { "title": "All-in-one integrated unit", "description": "No separate vibration table or shielding to source" },
+                  { "title": "Three-cable setup", "description": "Running quickly, without a commissioning project" },
+                  { "title": "30+ optional modes", "description": "Capability expands as research does" },
+                  { "title": "FluidFM at entry level", "description": "Advanced technique on an affordable platform" }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Nanosurf CoreAFM Research Atomic Force Microscope" },
+                  { "title": "Architecture", "description": "All-in-one integrated unit, flexure-guided scanner" },
+                  { "title": "Integrated components", "description": "XYZ sample stage, camera, active vibration table, airflow shielding" },
+                  { "title": "Controller", "description": "Purpose-designed 24-bit" },
+                  { "title": "Setup", "description": "Three-cable connection — controller, power, USB" },
+                  { "title": "Environments", "description": "Air and liquid" },
+                  { "title": "Options", "description": "30+ modes including SMM, FluidFM, DIMO, magnetic field generator, sample heating, environmental control" },
+                  { "title": "Software", "description": "Nanosurf Core, fully scriptable via Python, free lifetime updates" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features"
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "CoreAFM applications: materials research, 2D materials, electrical characterization, and life science."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "CoreAFM technical specifications: integrated components, controller, and operating modes."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Everything in One Unit",
+                "title": "Everything in One Unit",
+                "description": "What integrating the full AFM setup removes from the buying and commissioning process.",
+                "cards": [
+                  { "title": "Vibration isolation without a separate project", "description": "Active vibration table integrated into the unit" },
+                  { "title": "Environmental stability out of the box", "description": "Airflow shielding built in" },
+                  { "title": "Sample positioning and viewing included", "description": "XYZ sample stage and observation camera integrated" },
+                  { "title": "Installation measured in minutes", "description": "Three-cable connection to run" },
+                  { "title": "Reliable scan control and data handling", "description": "Purpose-designed 24-bit controller" }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Bio Capability at Entry Level",
+                "title": "Bio Capability at Entry Level",
+                "body": [
+                  "Not a typical bio-AFM, but capable — Nanosurf's own framing is that smart engineering delivers strong performance in specific life science areas, covering the commonly required feature set life science-focused AFM work generally calls for.",
+                  "The Digital Inverted Microscope Option provides the optical integration bio work depends on, and Nanosurf describes CoreAFM as the only AFM in its class with versatility extending to biological applications.",
+                  "FluidFM — for cell manipulation, spotting, and deposition — is available at the most affordable price point Nanosurf offers, and samples measure in liquid — which biological work generally requires — on the same platform used for standard imaging."
+                ],
+                "utilityChecklist": [
+                  { "label": "Measurement in liquid", "value": "Air and liquid operation on the same platform" },
+                  { "label": "Optical integration", "value": "DIMO digital inverted microscope option" },
+                  { "label": "Cell manipulation capability", "value": "FluidFM at the most affordable price point Nanosurf offers" },
+                  { "label": "Bio functionality within budget", "value": "The only AFM in its class covering biological applications" }
+                ],
+                "disclaimer": "Share the biological samples and whether optical correlation or cell manipulation is needed, and the DIMO and FluidFM requirement gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "CoreAFM documentation: brochure, application notes, and technical notes.",
+                "cards": [
+                  { "title": "CoreAFM Brochure with System Specifications", "description": "Available on request" },
+                  { "title": "Application Note: Unveiling the Power of Electrical AFM Modes", "description": "Available on request" },
+                  { "title": "Technical Note: Scanning Microwave Microscopy for the Semiconductor Industry", "description": "Available on request" },
+                  { "title": "Application Note: Evaluating AFM as an Analysis Tool for Graphene", "description": "Available on request" },
+                  { "title": "Application Note: Advanced Kelvin Probe Force Microscopy (KPFM)", "description": "Available on request" },
+                  { "title": "Nanosurf Core Software Overview", "description": "Available on request" },
+                  { "title": "Accessory and Cantilever Holder Catalogue", "description": "Available on request" },
+                  { "title": "FluidFM and DIMO Option Details", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get CoreAFM in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "Scanner, stage, camera, vibration table and shielding in one unit, thirty-plus modes to grow into, and three cables between delivery and the first image. Share the samples and the properties that need measuring, and the right CoreAFM configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

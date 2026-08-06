@@ -1,0 +1,1787 @@
+{
+  "principal": {
+    "slug": "zeiss",
+    "principalName": "Zeiss",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "Inverted Microscopes",
+      "slug": "inverted-microscopes",
+      "products": [
+        {
+          "name": "Primovert Inverted Microscope",
+          "slug": "primovert-inverted-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Primovert Inverted Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/primovert-inverted-microscope",
+          "breadcrumbPath": "Home > Products > Inverted Microscopes > Primovert Inverted Microscope",
+          "h1": "Primovert Inverted Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Cell culture work happens in a sterile hood, on a schedule, usually more than once a day. A microscope that doesn't fit the cabinet, or that demands a manual cell count every single time, is friction the workflow doesn't need. Primovert is built to remove exactly that.",
+
+          "features": [
+            "Contrast Switching Happens at the Stand: Phase contrast and GFP fluorescence, toggled directly on the microscope itself, not through a separate module that has to be swapped in and out.",
+            "AI Cell Counting That Actually Replaces Manual Work: Primovert digital counts adherent or suspended cells with one click, a genuinely different workflow from a camera that just captures an image for someone else to count later.",
+            "Built Around the Flow Cabinet, Not Adapted to Fit It: All three versions are compact enough for a laminar flow cabinet by design, not as an afterthought retrofit.",
+            "LED Fluorescence Without the Overhead: Even illumination, no warm-up, no cool-down, no lamp alignment, a meaningfully lower-maintenance setup than a conventional fluorescence lamp.",
+            "Collaboration Without Breaking Sterile Technique: Primovert digital connects to tablets and computers, so a second opinion or a shared review doesn't mean someone else has to physically approach the hood."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Primovert Inverted Microscope, available as Primovert, Primovert with iLED fluorescence, or Primovert digital" },
+            { "label": "Category", "value": "Inverted Microscopes" },
+            { "label": "Brightfield / Transmitted Light", "value": "Yes, standard on all three versions" },
+            { "label": "Phase Contrast for Living Cells", "value": "Yes on all three versions (universal phase slider option on the iLED version)" },
+            { "label": "GFP Fluorescence", "value": "Primovert: Not available · Primovert with iLED fluorescence: Yes (470 nm LED + filter set) · Primovert digital: Not available" },
+            { "label": "Integrated Camera", "value": "Primovert: Not available · Primovert with iLED fluorescence: Not available · Primovert digital: Yes, 5 MP CMOS" },
+            { "label": "AI-Based Cell Analysis (Labscope)", "value": "Primovert: Not available · Primovert with iLED fluorescence: Not available · Primovert digital: Yes" },
+            { "label": "Collaboration / Sharing", "value": "Primovert: Not available · Primovert with iLED fluorescence: Not available · Primovert digital: Yes, connects to tablets and computers" },
+            { "label": "Fits Laminar Flow Cabinet", "value": "Yes, standard on all three versions" },
+            { "label": "Auto Standby / Shutoff", "value": "Primovert: Yes, 15 minutes · Primovert with iLED fluorescence: Yes, 15 minutes · Primovert digital: Not confirmed as present" },
+            { "label": "Ergonomics", "value": "Adjustable ergotube, standing or seated use" },
+            { "label": "Return Policy", "value": "60 days, risk-free" },
+            { "label": "Magnification Range, Objective Set, Stand Dimensions", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Routine Cell Culture Observation: Brightfield and phase contrast for morphology and development assessment.",
+            "GFP-Labeled Cell Assessment: iLED fluorescence, switched directly at the stand.",
+            "Cell Counting and Passage Decisions: AI-based one-click counting on Primovert digital, adherent or in suspension.",
+            "Confluency Monitoring: Instant AI-based confluency measurement via Labscope.",
+            "Stem Cell Research: Living cell observation without disturbing sterile culture conditions.",
+            "Microbiology: Unstained specimen observation in phase and brightfield contrast.",
+            "Collaborative Lab Review: Shared results across tablets and computers, without leaving the sterile workspace.",
+            "Teaching and Training Labs: Adjustable ergotube supports comfortable use across standing or seated positions."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Version Selector" },
+            { "id": "config", "label": "Flow Cabinet Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "AI Cell Counting" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Three questions, one clear recommendation.",
+            "description": "Select the routine workflow needs, and see which Primovert version fits.",
+            "fields": [
+              {
+                "key": "fluorescenceNeeded",
+                "label": "Fluorescence needed",
+                "options": [
+                  { "val": "regularly", "label": "GFP-labeled cells regularly" },
+                  { "val": "occasionally", "label": "Occasionally" },
+                  { "val": "not-required", "label": "Not required" }
+                ]
+              },
+              {
+                "key": "cellCountingFrequency",
+                "label": "Cell counting frequency",
+                "options": [
+                  { "val": "routine-daily", "label": "Routine daily counts" },
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "not-a-bottleneck", "label": "Not a bottleneck" }
+                ]
+              },
+              {
+                "key": "sharingRequirement",
+                "label": "Sharing requirement",
+                "options": [
+                  { "val": "outside-hood", "label": "Results need to reach others outside the hood" },
+                  { "val": "single-user", "label": "Single-user only" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "fluorescenceNeeded": "regularly" },
+                "title": "Primovert with iLED Fluorescence Fits",
+                "body": "Regular GFP-labeled cell work calls for the iLED fluorescence version, switching contrast directly at the stand.",
+                "tags": ["iLED Fluorescence"]
+              },
+              {
+                "condition": { "cellCountingFrequency": "routine-daily" },
+                "title": "Primovert Digital Fits",
+                "body": "Routine daily cell counting is exactly what Primovert digital's one-click AI counting is built to remove.",
+                "tags": ["Primovert Digital"]
+              },
+              {
+                "condition": { "sharingRequirement": "outside-hood" },
+                "title": "Primovert Digital Fits",
+                "body": "Results reaching people outside the sterile hood requires Primovert digital's tablet and computer connectivity.",
+                "tags": ["Sharing"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Version Fit",
+                "body": "Share whether fluorescence work is part of the routine, whether manual cell counting is currently a bottleneck, and whether results need to reach people outside the sterile workspace, and the right Primovert version gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Will this actually fit the hood already in use?",
+            "description": "Select the cabinet dimensions and working position, and confirm compatibility.",
+            "steps": [
+              {
+                "key": "cabinetInteriorSpace",
+                "question": "What's the cabinet interior space?",
+                "options": [
+                  { "val": "standard", "label": "Standard laminar flow cabinet" },
+                  { "val": "space-constrained", "label": "Space-constrained" }
+                ]
+              },
+              {
+                "key": "workingPosition",
+                "question": "What's the working position?",
+                "options": [
+                  { "val": "standing", "label": "Standing" },
+                  { "val": "seated", "label": "Seated" },
+                  { "val": "both", "label": "Both across shifts" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share whether remote monitoring outside the hood is needed, and the right ergotube configuration and version get confirmed against the cabinet and workflow.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing between Primovert digital and Axiovert 5",
+            "title": "Primovert Digital vs Axiovert 5",
+            "description": "Compare the ZEISS Primovert Inverted Microscope with other ZEISS inverted microscopes to identify the best solution for your imaging requirements, laboratory workflow, and application needs.",
+            "columns": [
+              { "label": "Primovert Digital", "highlight": true },
+              { "label": "Axiovert 5", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Positioning", "values": ["Compact, entry-level inverted microscope for routine cell culture", "Smart inverted microscope for standard contrast techniques, transmitted light and fluorescence"] },
+              { "feature": "Camera", "values": ["5 MP CMOS, integrated", "Confirm on specification"] },
+              { "feature": "AI Analysis", "values": ["Yes, cell counting and confluency via Labscope", "AI-driven automation referenced for routine work efficiency"] },
+              { "feature": "Contrast Techniques", "values": ["Brightfield, phase contrast, GFP fluorescence (iLED version)", "All standard contrast techniques, transmitted light and fluorescence"] },
+              { "feature": "Fits Laminar Flow Cabinet", "values": ["Yes, by design", "Not confirmed on this source"] },
+              { "feature": "Best For", "values": ["Routine cell culture observation and counting, sterile hood work", "Broader contrast technique needs, standard research and routine biology"] },
+              { "feature": "Choose When", "values": ["Cell culture is the primary application, and compactness matters", "The work spans more contrast techniques than phase and GFP fluorescence alone"] }
+            ],
+            "disclaimer": "Primovert is Zeiss's dedicated cell culture entry point, built specifically around the flow cabinet and routine passage work. Axiovert 5 sits a step up for labs needing the full range of standard contrast techniques rather than the focused phase-contrast-and-fluorescence workflow Primovert is built around."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Discover industries and research laboratories that rely on the ZEISS Primovert Inverted Microscope for everyday microscopy workflows.",
+            "industries": [
+              { "name": "Cell Culture Laboratories", "icon": "flask", "useCase": "Routine morphology checks, passage decisions, confluency monitoring", "consideration": "Fits the laminar flow cabinet, no compromise on sterile technique" },
+              { "name": "Stem Cell Research", "icon": "zap", "useCase": "Living cell observation without disturbing culture conditions", "consideration": "Non-invasive phase contrast and fluorescence assessment" },
+              { "name": "Biotechnology and Biopharma", "icon": "pill", "useCase": "GFP-labeled cell line tracking and quality checks", "consideration": "iLED fluorescence switches directly at the stand" },
+              { "name": "Academic Research Labs", "icon": "school", "useCase": "Shared cell culture facilities across research groups", "consideration": "Primovert digital's sharing features support multi-user collaboration" },
+              { "name": "Microbiology Labs", "icon": "droplet", "useCase": "Unstained specimen observation", "consideration": "Brightfield and phase contrast cover routine microbiological work" },
+              { "name": "Contract Research Organizations", "icon": "target", "useCase": "High-volume, reproducible cell counting for client studies", "consideration": "AI-based counting removes manual variability from routine reporting" },
+              { "name": "Teaching and Training Facilities", "icon": "repeat", "useCase": "Introducing students to cell culture technique", "consideration": "Adjustable ergotube and straightforward contrast switching suit varied users" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application guidance, training, calibration, and after-sales support for the ZEISS Primovert Inverted Microscope from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows contrast switching and AI cell counting on your own culture samples." },
+              { "title": "Version Selection Support", "description": "Confirms Primovert, iLED fluorescence, or digital against daily routine." },
+              { "title": "Flow Cabinet Fit Assessment", "description": "Confirms compatibility with your existing laminar flow cabinet." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Labscope and AI Setup", "description": "Configuration of cell counting and confluency workflows, digital version." },
+              { "title": "Operator Training", "description": "Contrast switching, ergotube adjustment, Labscope operation." },
+              { "title": "Preventive Maintenance", "description": "Optics, illumination, and camera performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, filter sets, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the difference between Primovert and Primovert digital?", "answer": "Primovert covers brightfield and phase contrast, with fluorescence available on the iLED version. Primovert digital adds a built-in 5 MP CMOS camera and AI-based cell analysis through ZEISS Labscope, including one-click cell counting and confluency measurement, but does not include GFP fluorescence." },
+            { "question": "Can I use Primovert digital in a laminar flow cabinet?", "answer": "Yes, all three Primovert versions are designed to fit inside a laminar flow cabinet, so observation happens without breaking sterile technique." },
+            { "question": "Does Primovert support fluorescence imaging?", "answer": "Yes, on the version with iLED fluorescence, using a 470 nm LED and filter set for GFP-labeled cells. The base Primovert and Primovert digital versions do not include fluorescence." },
+            { "question": "Which cell-culture vessels can I use?", "answer": "Specific vessel compatibility was not detailed on the source page reviewed. Inkarp can confirm compatible vessel types and stage inserts directly." },
+            { "question": "What camera outputs are available on Primovert digital?", "answer": "An integrated 5 MP CMOS camera, feeding directly into ZEISS Labscope for image capture, AI-based analysis, and sharing." },
+            { "question": "Can multiple people view results at the same time?", "answer": "Yes, on Primovert digital, results connect to tablets and computers, allowing joint observation and collaboration beyond the sterile workspace." },
+            { "question": "Does Primovert count cells automatically?", "answer": "Yes, on Primovert digital. AI-based workflows in Labscope count adherent or suspended cells with one click, without manual counting." },
+            { "question": "Can Primovert measure confluency?", "answer": "Yes, on Primovert digital, through built-in AI workflows in ZEISS Labscope, delivering instant confluency measurement." },
+            { "question": "Does the microscope switch off automatically when idle?", "answer": "Yes, on the standard Primovert and iLED fluorescence versions, auto standby activates after 15 minutes of inactivity." },
+            { "question": "Is the eyepiece height adjustable?", "answer": "Yes, an adjustable ergotube supports comfortable use whether working standing or seated." },
+            { "question": "How is Primovert different from Axiovert 5?", "answer": "Primovert is a compact, dedicated cell culture microscope built around the laminar flow cabinet, focused on phase contrast and GFP fluorescence. Axiovert 5 supports the full range of standard contrast techniques in transmitted light and fluorescence, suited to broader routine biology work." },
+            { "question": "Is there a return policy?", "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Magnification range, objective set, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Primovert in India?", "answer": "Get in touch and Inkarp will put together a quote based on the version selected." },
+            { "question": "Who is the authorized distributor of the Primovert in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Primovert in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Primovert in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Compact enough for the hood, sharp enough for GFP fluorescence, and smart enough to count cells with one click on the digital version. Share your daily culture workflow, and the right Primovert version gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your daily culture workflow, then confirm the right Primovert version.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "dailyCultureWorkflow", "label": "Daily culture workflow", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right version fast", "body": "Share whether fluorescence work is part of the routine, whether manual cell counting is currently a bottleneck, and whether results need to reach people outside the sterile workspace, and the right Primovert version gets confirmed." },
+              { "title": "Confirm the time saved", "body": "Share how frequently cell counts and confluency checks happen, and the realistic time saved from removing manual counting gets discussed against the current routine." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Compact enough for the flow cabinet. Smart enough to count cells for you.",
+            "heroLead": "Cell culture work happens in a sterile hood, on a schedule, usually more than once a day. A microscope that doesn't fit the cabinet, or that demands a manual cell count every single time, is friction the workflow doesn't need. Primovert is built to remove exactly that. The base model handles brightfield and phase contrast for living cells, unstained, exactly as they are. Add iLED fluorescence and GFP-labeled cells become visible too, switching contrast directly at the stand, no separate fluorescence unit to bolt on. Go one step further with Primovert digital, and a built-in 5 MP CMOS camera paired with AI-based analysis in ZEISS Labscope counts cells, measures confluency, and shares results, all with one click. Every version is compact enough to fit inside a laminar flow cabinet, so sterile technique never has to compete with getting a good look at the culture. What it replaces: manual cell counting and a separate fluorescence setup. What it adds with digital: one-click AI cell analysis and instant sharing beyond the sterile workspace. Where it lives: the bench, or the hood, whichever the culture actually needs.",
+            "stats": [
+              { "value": "3 versions", "label": "Primovert, Primovert with iLED fluorescence, Primovert digital" },
+              { "value": "Brightfield + phase contrast", "label": "Standard on all three versions" },
+              { "value": "GFP fluorescence", "label": "Primovert (universal phase slider) and iLED versions" },
+              { "value": "5 MP CMOS", "label": "Integrated camera, Primovert digital only" },
+              { "value": "AI-based analysis", "label": "Cell counting, confluency, Primovert digital only" },
+              { "value": "Laminar flow cabinet compatible", "label": "All three versions" },
+              { "value": "15 minutes", "label": "Auto standby time (non-digital versions)" },
+              { "value": "60 days", "label": "Risk-free return window" },
+              { "value": "Adjustable ergotube", "label": "Standing or seated comfort" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Navigate the three versions of the ZEISS Primovert Inverted Microscope and identify the best fit for your cell culture workflow.",
+                "body": [
+                  "Studies the morphography and development of living cells. Brightfield and phase contrast, standard across all three versions.",
+                  "Assesses GFP-labeled cells in fluorescence. Available on Primovert with iLED fluorescence.",
+                  "Captures high-definition images with integrated AI analysis. Primovert digital adds a built-in camera and Labscope's AI cell recognition.",
+                  "Switches between phase and fluorescence contrast at the stand. No separate fluorescence attachment, no removing the sample to swap setups.",
+                  "Examines unstained cells as well as GFP-labeled ones. Native cell morphology and fluorescent markers, on the same platform.",
+                  "Keeps cells in a sterile environment throughout observation. Compact enough to work inside a laminar flow cabinet.",
+                  "Introduces AI into cell culture analysis, on the digital version. Faster, more reproducible counts than manual assessment.",
+                  "Counts cells with one click, adherent or in suspension. No manual counting required on Primovert digital.",
+                  "Measures confluency instantly. Built-in AI workflows in ZEISS Labscope handle the analysis.",
+                  "Shares results for joint observation. Connects to tablets and computers, so collaboration doesn't require everyone crowding around one eyepiece.",
+                  "Supports remote control and connectivity for sterile workflows. Work continues inside the hood while results reach a screen outside it.",
+                  "LED fluorescence avoids warm-up, cool-down, and lamp adjustment. Even illumination, ready the moment it's switched on.",
+                  "Adjustable ergotube for standing or seated work. Comfort across however the workflow actually happens.",
+                  "Auto standby after 15 minutes idle, on non-digital versions. Energy saved without needing to remember to switch off.",
+                  "Backed by a 60-day risk-free return. Trial the actual workflow before committing."
+                ],
+                "cards": [
+                  { "title": "3 versions, 1 platform", "description": "The right feature set, without paying for what isn't needed" },
+                  { "title": "Contrast switching at the stand", "description": "Phase and fluorescence, no separate attachment" },
+                  { "title": "One-click AI cell counting", "description": "Manual counting removed, on the digital version" },
+                  { "title": "Fits the flow cabinet", "description": "Sterile technique and observation, never a trade-off" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Every key feature of the ZEISS Primovert Inverted Microscope that improves speed, imaging quality, and laboratory productivity."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Explore the laboratory applications where the ZEISS Primovert Inverted Microscope delivers reliable cell culture imaging and analysis."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Review the complete technical specifications of the ZEISS Primovert Inverted Microscope, including optics, objectives, illumination, and imaging options."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Which Primovert Fits",
+                "title": "Which Primovert Fits",
+                "description": "Choosing between standard, iLED fluorescence, and digital.",
+                "body": [
+                  "Buying more microscope than the workflow needs wastes budget. Buying too little means AI cell counting or fluorescence gets bolted on later, awkwardly, or not at all. Zeiss's own comparison makes the choice fairly direct, once the actual daily workflow is clear.",
+                  "Primovert covers brightfield and phase contrast, the two techniques most routine cell culture observation actually needs, with nothing beyond that. Primovert with iLED fluorescence adds GFP visualization through a 470 nm LED and filter set, switched directly at the stand, for labs working with fluorescent markers as part of routine assessment. Primovert digital adds the 5 MP CMOS camera and Labscope's AI-based analysis, the version built specifically for labs where manual cell counting has become a genuine bottleneck, or where results need to reach people beyond the person at the eyepiece."
+                ],
+                "utilityChecklist": [
+                  { "label": "Routine morphology and development checks, no fluorescence", "value": "Primovert" },
+                  { "label": "GFP-labeled cell work alongside standard phase contrast", "value": "Primovert with iLED fluorescence" },
+                  { "label": "Manual cell counting is slowing the team down", "value": "Primovert digital" },
+                  { "label": "Results need to reach people outside the sterile hood", "value": "Primovert digital" },
+                  { "label": "Confluency needs measuring quickly and consistently", "value": "Primovert digital" }
+                ],
+                "disclaimer": "Share whether fluorescence and AI analysis are both needed, or just one, and the right Primovert version gets confirmed against the actual daily routine."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "One Click, Not One Manual Count",
+                "title": "One Click, Not One Manual Count",
+                "description": "What AI-based analysis in Labscope actually changes.",
+                "cards": [
+                  { "title": "Time spent counting by eye, every single check", "description": "One-click AI cell counting." },
+                  { "title": "Inconsistent counts between people or sessions", "description": "Reproducible, AI-standardized results." },
+                  { "title": "Confluency estimated rather than measured", "description": "Instant, built-in AI confluency measurement." },
+                  { "title": "Sharing results means physically gathering around one eyepiece", "description": "Direct connection to tablets and computers." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Product sheets and white papers, available directly.",
+                "cards": [
+                  { "title": "Primovert Product Information Sheet", "description": "Available on request" },
+                  { "title": "Primovert Digital Product Information Sheet", "description": "Available on request" },
+                  { "title": "How to Use a Hemocytometer (Reference Guide)", "description": "Available on request" },
+                  { "title": "Feature Comparison Table (Primovert, iLED, Digital)", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Primovert in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Compact enough for the hood, sharp enough for GFP fluorescence, and smart enough to count cells with one click on the digital version. Share your daily culture workflow, and the right Primovert version gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Axiovert 5 Digital Inverted Microscope",
+          "slug": "axiovert-5-digital-inverted-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Axiovert 5 Digital Inverted Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/axiovert-5-digital-inverted-microscope",
+          "breadcrumbPath": "Home > Products > Inverted Microscopes > Axiovert 5 Digital Inverted Microscope",
+          "h1": "Axiovert 5 Digital Inverted Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "AI already recognizes faces on a phone and drives cars down a highway. Axiovert 5 digital brings that same kind of quiet automation into the cell lab, and it starts with a single button.",
+
+          "features": [
+            "Pre-Trained AI, Not a Tool to Learn: AI Cell Count and AI Cell Confluency work out of the box, no model training, no calibration curve, no prior AI experience needed from anyone using it.",
+            "Four Actions, One Button: Single image capture, five-channel fluorescence, full AI analysis, or video recording, all triggered from the same Snap button, depending on what's needed in the moment.",
+            "Built for Labs With Different Skill Levels: Multi-user support isn't an afterthought here, proper operation is supported by design, so results stay consistent whether it's a first-year student or a senior researcher at the eyepiece.",
+            "A Closed System That Doesn't Hide Anything: The box design keeps the culture contained, without losing visual access to how the cells are actually doing.",
+            "A Trial License for the AI Itself: Most microscope purchases can't be trialed feature by feature. Zeiss offers a personal trial license specifically to test the AI modules before buying."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Axiovert 5 Digital Inverted Microscope" },
+            { "label": "Category", "value": "Inverted Microscopes" },
+            { "label": "Operation", "value": "One-button (Snap), triggers capture, fluorescence, AI workflow, or video" },
+            { "label": "Fluorescence Channels", "value": "Up to 5, multi-channel" },
+            { "label": "AI Modules", "value": "AI Cell Count, AI Cell Confluency (ZEISS Labscope), pre-trained, no training required" },
+            { "label": "Design", "value": "Closed-box, cells remain visible/monitorable" },
+            { "label": "User Support", "value": "Built for multi-user environments" },
+            { "label": "Video Recording", "value": "Supported, via Snap button" },
+            { "label": "Trial Availability", "value": "Personal trial license for AI modules" },
+            { "label": "Return Policy", "value": "60 days, risk-free" },
+            { "label": "Camera Resolution, Magnification Range, Objective Set, Stand Dimensions", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Routine Cell Culture Monitoring: Phase contrast observation with instant, automated documentation.",
+            "Cell Counting and Passage Decisions: AI Cell Count module, one click, no manual tally.",
+            "Confluency Tracking: AI Cell Confluency, instant visual and quantitative results.",
+            "Multichannel Fluorescence Studies: Up to 5-channel fluorescence imaging, triggered from the same Snap button.",
+            "Multi-User Lab Environments: Consistent results regardless of operator experience.",
+            "Reproducibility-Focused Research: AI-standardized counting and confluency remove manual variability.",
+            "Histology-Adjacent Brightfield Work: Demonstrated on HE-stained tissue in brightfield contrast.",
+            "Training and Onboarding: New team members productive immediately, no settings to learn first."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "AI Workflow Checker" },
+            { "id": "config", "label": "Fluorescence Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "One-Button Outcomes" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Is manual counting actually costing the lab time?",
+            "description": "Select the current counting routine and number of users, and see the time realistically recovered.",
+            "fields": [
+              {
+                "key": "currentCountingMethod",
+                "label": "Current counting method",
+                "options": [
+                  { "val": "manual-hemocytometer", "label": "Manual hemocytometer" },
+                  { "val": "manual-image-review", "label": "Manual image review" },
+                  { "val": "another-automated-tool", "label": "Another automated tool" }
+                ]
+              },
+              {
+                "key": "numberOfRegularUsers",
+                "label": "Number of regular users",
+                "options": [
+                  { "val": "single-user", "label": "Single user" },
+                  { "val": "multiple-users", "label": "Multiple users" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "currentCountingMethod": "manual-hemocytometer" },
+                "title": "AI Cell Count Removes the Manual Step",
+                "body": "Manual hemocytometer counting is exactly what AI Cell Count in Labscope is built to replace, with one-click, reproducible results.",
+                "tags": ["AI Cell Count"]
+              },
+              {
+                "condition": { "numberOfRegularUsers": "multiple-users" },
+                "title": "Multi-User Consistency Confirmed",
+                "body": "Pre-trained AI modules give the same reliable output regardless of which team member is operating the system.",
+                "tags": ["Multi-User"]
+              },
+              {
+                "condition": { "currentCountingMethod": "manual-image-review" },
+                "title": "Automated Analysis Fits",
+                "body": "Manual image review carries the same variability manual counting does — AI Cell Count and AI Cell Confluency remove that step.",
+                "tags": ["Automated Analysis"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Time Savings",
+                "body": "Share the counts performed per week and the number of regular users, and time and consistency gains from AI Cell Count and AI Cell Confluency get estimated.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How many channels does the routine actually need?",
+            "description": "Select the fluorescence requirement and documentation need, and confirm the right configuration.",
+            "steps": [
+              {
+                "key": "channelsNeeded",
+                "question": "How many fluorescence channels are needed?",
+                "options": [
+                  { "val": "brightfield-only", "label": "Brightfield/phase contrast only" },
+                  { "val": "1-2-channels", "label": "1–2 channels" },
+                  { "val": "3-5-channels", "label": "3–5 channels" }
+                ]
+              },
+              {
+                "key": "documentationNeed",
+                "question": "What's the documentation need?",
+                "options": [
+                  { "val": "still-images", "label": "Still images" },
+                  { "val": "video", "label": "Video" },
+                  { "val": "both", "label": "Both" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share whether the fluorescence work is routine daily or occasional, and the right fluorescence and video configuration gets confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within Zeiss's inverted microscope range",
+            "title": "Axiovert 5 Digital vs Primovert Digital vs Axiovert 5",
+            "description": "Compare the ZEISS Axiovert 5 Digital with other ZEISS inverted microscopes to select the right solution for cell imaging and AI-assisted analysis.",
+            "columns": [
+              { "label": "Axiovert 5 Digital", "highlight": true },
+              { "label": "Primovert Digital", "highlight": false },
+              { "label": "Axiovert 5", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Fluorescence Channels", "values": ["Up to 5, multichannel", "Not available", "All standard contrast techniques, transmitted light and fluorescence"] },
+              { "feature": "AI Cell Analysis", "values": ["AI Cell Count, AI Cell Confluency, no training required", "AI Cell Count, AI Cell Confluency, via Labscope", "Not confirmed as AI-equipped on this source"] },
+              { "feature": "Camera Resolution", "values": ["Not confirmed in this source", "5 MP CMOS", "Not confirmed in this source"] },
+              { "feature": "One-Button Operation", "values": ["Yes, Snap triggers capture, fluorescence, AI, or video", "Yes, integrated capture and analysis", "Yes, Snap for standard contrast capture"] },
+              { "feature": "Video Recording", "values": ["Yes", "Not confirmed", "Not confirmed"] },
+              { "feature": "Multi-User Design", "values": ["Built for multi-user environments specifically", "Supports sharing to tablets/computers", "Not confirmed on this source"] },
+              { "feature": "Best For", "values": ["Labs needing multichannel fluorescence and AI analysis together", "Compact, flow-cabinet cell culture work with AI counting", "Broader standard contrast technique needs"] },
+              { "feature": "Choose When", "values": ["Fluorescence depth and reproducible AI analysis both matter", "Space is constrained and cell culture is the sole focus", "The full range of standard contrast techniques is needed, without AI as the priority"] }
+            ],
+            "disclaimer": "Axiovert 5 digital and Primovert digital share the same AI foundation, cell counting and confluency modules through Labscope, but they're built for different scales of work. Primovert digital is compact and flow-cabinet focused; Axiovert 5 digital adds genuine multichannel fluorescence depth and positions itself as a full all-in-one imaging system rather than a routine culture-check microscope."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the industries and laboratory environments where the ZEISS Axiovert 5 Digital supports routine cell culture, biotechnology, pharmaceuticals, and life science research.",
+            "industries": [
+              { "name": "Cell Biology Research Labs", "icon": "flask", "useCase": "Routine culture monitoring with reproducible AI-based counting", "consideration": "Removes manual counting variability from daily checks" },
+              { "name": "Biopharma and Biotechnology", "icon": "pill", "useCase": "Multichannel fluorescence tracking of engineered cell lines", "consideration": "Up to 5 channels captured with one button press" },
+              { "name": "Academic and Shared Facilities", "icon": "school", "useCase": "Multi-user labs with varied experience levels", "consideration": "Designed specifically for consistent multi-user operation" },
+              { "name": "Virology Research", "icon": "shield", "useCase": "Cell culture and infection assay monitoring", "consideration": "Demonstrated applicability referenced directly in Zeiss's related content" },
+              { "name": "Contract Research Organizations", "icon": "target", "useCase": "High-volume, reproducible cell counting for client work", "consideration": "AI standardization supports defensible, repeatable reporting" },
+              { "name": "Stem Cell and Regenerative Medicine Labs", "icon": "droplet", "useCase": "Non-invasive monitoring of sensitive cultures", "consideration": "Closed-box design keeps cells observable without disturbing them" },
+              { "name": "Training and Teaching Labs", "icon": "repeat", "useCase": "Introducing students to AI-assisted microscopy", "consideration": "No prior AI knowledge needed to get reliable results immediately" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application guidance, AI workflow setup, training, and after-sales support for the ZEISS Axiovert 5 Digital from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows AI cell counting and multichannel fluorescence on your own culture samples." },
+              { "title": "Trial License Setup", "description": "Coordinates the personal AI module trial before purchase." },
+              { "title": "Configuration Assessment", "description": "Confirms fluorescence channel and video requirements." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Labscope and AI Configuration", "description": "Sets up AI Cell Count and AI Cell Confluency workflows." },
+              { "title": "Multi-User Onboarding", "description": "Training designed around varied experience levels across the team." },
+              { "title": "Preventive Maintenance", "description": "Optics, illumination, and camera performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, filter sets, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Axiovert 5 digital used for?", "answer": "It's an all-in-one inverted cell imaging system built around AI-assisted analysis, used for routine cell culture monitoring, cell counting, confluency measurement, and multichannel fluorescence documentation." },
+            { "question": "Does the AI need training before it can be used?", "answer": "No. The AI Cell Count and AI Cell Confluency modules are pre-trained and ready to use immediately, with no training or prior knowledge required from the operator." },
+            { "question": "How many fluorescence channels can it capture?", "answer": "Up to 5 channels, triggered from the same Snap button used for standard image capture." },
+            { "question": "What does pressing the Snap button actually do?", "answer": "Depending on the mode selected, it triggers a single image acquisition, multi-channel fluorescence imaging, the full AI cell counting and confluency workflow, or video recording." },
+            { "question": "How does AI cell counting work in practice?", "answer": "Examine the culture as usual, then take a picture while moving across the vessel. The image is analyzed automatically, and a result, both visual and quantitative, arrives instantly." },
+            { "question": "Is it suitable for labs with multiple users of different experience levels?", "answer": "Yes, the system is built specifically for multi-user environments, with proper operation supported by design regardless of who is using it." },
+            { "question": "Can I test the AI features before buying?", "answer": "Yes, a personal trial license is available specifically for testing the AI modules directly." },
+            { "question": "Does the closed-box design make it harder to check on cells?", "answer": "No, the design keeps the culture contained while still allowing full visual monitoring throughout." },
+            { "question": "Can it record video?", "answer": "Yes, video recording is one of the four outcomes triggered by the Snap button." },
+            { "question": "How is Axiovert 5 digital different from Primovert digital?", "answer": "Both share AI Cell Count and AI Cell Confluency through Labscope, but Axiovert 5 digital adds multichannel fluorescence up to 5 channels and video recording, positioned as a full all-in-one imaging system. Primovert digital is a more compact, cell-culture-focused option built specifically to fit a laminar flow cabinet." },
+            { "question": "Is there a return policy?", "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Camera resolution, magnification range, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Axiovert 5 digital in India?", "answer": "Get in touch and Inkarp will put together a quote based on the fluorescence and camera configuration selected." },
+            { "question": "Who is the authorized distributor of the Axiovert 5 digital in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Axiovert 5 digital in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Axiovert 5 Digital in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Multichannel fluorescence up to 5 channels, AI cell counting and confluency that needs no training to use, and a trial license to test it all before committing. Share your daily workflow and team size, and the right Axiovert 5 digital configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your daily workflow and team size, then confirm the right Axiovert 5 digital configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "dailyWorkflow", "label": "Daily workflow", "type": "text", "required": false },
+              { "key": "teamSize", "label": "Team size", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration fast", "body": "Share how many users will operate the system daily, whether manual cell counting is currently a time cost, and whether multichannel fluorescence is part of the routine, and the right Axiovert 5 digital configuration gets confirmed." },
+              { "title": "Confirm the right camera pairing", "body": "Share which of the four Snap outputs the daily routine actually needs most, and the right configuration and camera pairing gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "One button. Five fluorescence channels. Zero training required to use the AI.",
+            "heroLead": "AI already recognizes faces on a phone and drives cars down a highway. Axiovert 5 digital brings that same kind of quiet automation into the cell lab, and it starts with a single button. Press Snap, and depending on what's needed, it triggers a single image capture, multi-channel fluorescence imaging across up to 5 channels, the full AI cell counting and confluency workflow, or video recording. No settings to configure first. Turn the system on and start working, the adjustments are already done. The AI itself needs no training or prior knowledge to use. Cell counting and cell confluency are handled by ready-to-use Labscope modules, pre-trained and instant. Take a picture as you move across the culture vessel, and the result, visual and quantitative, arrives with that one click. What it removes: manual settings, manual counting, and the learning curve that usually comes with AI tools. What it's built for: multi-user labs, where proper operation needs to survive different skill levels. What backs it: a 60-day risk-free return, and a personal trial license to test the AI modules directly.",
+            "stats": [
+              { "value": "1 button", "label": "Triggers capture, fluorescence, AI analysis, or video" },
+              { "value": "Up to 5 channels", "label": "Multi-channel fluorescence imaging" },
+              { "value": "AI Cell Count + AI Cell Confluency", "label": "Labscope modules, pre-trained, no training needed" },
+              { "value": "0", "label": "Manual settings required before first use" },
+              { "value": "Closed-box design", "label": "Cells monitored without opening the system" },
+              { "value": "Multi-user ready", "label": "Consistent operation regardless of skill level" },
+              { "value": "60 days", "label": "Risk-free return window" },
+              { "value": "Trial license available", "label": "Test the AI modules directly" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Explore the features, AI capabilities, fluorescence options, and imaging workflows of the ZEISS Axiovert 5 Digital Inverted Microscope.",
+                "body": [
+                  "An all-in-one cell imaging system. Built to bring AI into daily cell lab work, not as a separate add-on tool.",
+                  "Novice users produce reliable images from the start. No settings or adjustments to configure, they're already done.",
+                  "Cells stay observable even in a closed system. The box design doesn't mean losing sight of the culture.",
+                  "Cell counting and cell confluency run automatically. AI Cell Count and AI Cell Confluency modules, both readily available in Labscope.",
+                  "No training or prior knowledge required to use the AI. Genuinely accessible to anyone in the lab, not just the person who set it up.",
+                  "Results arrive instantly with one click. Visual and quantitative, and consistently reproducible.",
+                  "The Snap button triggers four distinct actions. Single image capture, multi-channel fluorescence up to 5 channels, the full AI counting and confluency workflow, or video recording.",
+                  "Built for multi-user environments by design. Consistent operation regardless of who's using it that day.",
+                  "Combines proven optical quality with genuine ease of use. Not a trade-off between the two.",
+                  "Examine cells as usual, then just take a picture. Moving from one position to another in the culture vessel, images analyze automatically.",
+                  "A personal trial license is available. Test the AI modules directly before committing.",
+                  "Backed by a 60-day risk-free return. Purchase, trial, and return with no questions asked if it isn't right."
+                ],
+                "cards": [
+                  { "title": "One button, four outcomes", "description": "Capture, fluorescence, AI analysis, or video, no separate steps" },
+                  { "title": "No AI training required", "description": "Anyone in the lab uses it immediately" },
+                  { "title": "Up to 5 fluorescence channels", "description": "Genuine multichannel work, not a limited add-on" },
+                  { "title": "60-day return + trial license", "description": "Test the actual AI workflow before deciding" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the advanced imaging, AI-powered analysis, and workflow automation features of the ZEISS Axiovert 5 Digital."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the ZEISS Axiovert 5 Digital supports cell culture, fluorescence microscopy, AI-assisted cell analysis, and life science research."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the technical specifications and confirmed system capabilities of the ZEISS Axiovert 5 Digital Inverted Microscope."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "AI Without the Learning Curve",
+                "title": "AI Without the Learning Curve",
+                "description": "Why \"no training required\" is the actual headline feature here.",
+                "body": [
+                  "Most lab AI tools come with a learning curve of their own: understanding the model, tuning parameters, validating against manual counts before trusting the output. That overhead defeats the point if the goal was saving time in the first place.",
+                  "Axiovert 5 digital's AI Cell Count and AI Cell Confluency modules skip that step entirely. They're pre-trained and ready to use, so anyone in the lab, not just the person who originally set up the system, gets the same reliable output. Examine the culture as usual, take a picture while moving across the vessel, and the analysis runs automatically. The result comes back instantly, both as a visual overlay and a quantitative number, and it's reproducible regardless of who pressed the button."
+                ],
+                "utilityChecklist": [
+                  { "label": "Model training or calibration before first use", "value": "Pre-trained modules, ready immediately" },
+                  { "label": "Specialized knowledge to operate correctly", "value": "No training or prior knowledge required" },
+                  { "label": "Manual verification before trusting the result", "value": "Instant, reproducible output every time" },
+                  { "label": "One expert user who knows how to run it", "value": "Genuinely accessible to the whole lab" }
+                ],
+                "disclaimer": "Share how many different people will use the system day to day, and the consistency benefit gets discussed against your current manual counting variability."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "One Button, Four Outcomes",
+                "title": "One Button, Four Outcomes",
+                "description": "What actually happens when Snap gets pressed.",
+                "cards": [
+                  { "title": "A quick reference image", "description": "Single image acquisition." },
+                  { "title": "Documenting a fluorescent marker across channels", "description": "Multi-channel fluorescence, up to 5 channels." },
+                  { "title": "Counting cells or measuring confluency", "description": "Full AI analysis workflow, instant result." },
+                  { "title": "Capturing dynamic behavior over time", "description": "Video recording." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access brochures, white papers, application guides, software information, and technical resources for the ZEISS Axiovert 5 Digital.",
+                "cards": [
+                  { "title": "Axiovert 5 Digital Product Information Sheet", "description": "Available on request" },
+                  { "title": "The Daily Cell Culture (White Paper)", "description": "Available on request" },
+                  { "title": "Common Forms of Cell Culture Contamination and How to Avoid Them", "description": "Available on request" },
+                  { "title": "The Most Commonly Used Immortal Cell Lines", "description": "Available on request" },
+                  { "title": "How to Use a Hemocytometer (Reference Guide)", "description": "Available on request" },
+                  { "title": "Personal Trial License for AI Modules", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Axiovert 5 Digital in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Multichannel fluorescence up to 5 channels, AI cell counting and confluency that needs no training to use, and a trial license to test it all before committing. Share your daily workflow and team size, and the right Axiovert 5 digital configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Axiovert 5 Inverted Microscope",
+          "slug": "axiovert-5-inverted-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Axiovert 5 Inverted Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/axiovert-5-inverted-microscope",
+          "breadcrumbPath": "Home > Products > Inverted Microscopes > Axiovert 5 Inverted Microscope",
+          "h1": "Axiovert 5 Inverted Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "A cell culture lab shouldn't need five different microscopes for five different contrast methods. Axiovert 5 runs DIC, iHMC, phase contrast, and multichannel fluorescence, all on the same stand, switching between them as the work actually demands.",
+
+          "features": [
+            "Every Standard Contrast Technique, Not a Subset: DIC, iHMC, phase contrast, brightfield, and fluorescence, all on one stand. Most inverted microscopes at this level pick two or three.",
+            "Genuine Standalone Operation: An Axiocam camera and on-screen display run the whole system without a connected computer, images saved directly to USB, a real option rather than a fallback mode.",
+            "Automated Fluorescence Sequencing With Colibri 3: Select channels, press Snap, and the system handles wavelength switching and exposure adjustment across all four automatically, the same automation Axiovert 5 digital offers, but paired with an external light source rather than built in.",
+            "Room for Cell Factories: Clearance built specifically for large-format culture vessels, not an afterthought squeeze-fit.",
+            "A Genuine Upgrade Path: Hardware and software both upgrade over time, so a lab's starting configuration doesn't lock in its ceiling."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Axiovert 5 Inverted Microscope" },
+            { "label": "Category", "value": "Inverted Microscopes" },
+            { "label": "Contrast Techniques", "value": "DIC, iHMC (improved Hoffman Modulation Contrast), phase contrast, brightfield" },
+            { "label": "Fluorescence", "value": "Multichannel, up to 4 channels (UV, blue, green, red excitation)" },
+            { "label": "Recommended Fluorescence Light Source", "value": "Colibri 3 LED" },
+            { "label": "Camera Compatibility", "value": "Any ZEISS microscope camera" },
+            { "label": "Configuration Paths", "value": "Standalone (Axiocam + OSD, USB save), ZEISS Labscope, ZEISS ZEN" },
+            { "label": "Sample Clearance", "value": "Sufficient for cell factories" },
+            { "label": "Control Layout", "value": "One-hand access to all main controls" },
+            { "label": "Illumination Management", "value": "Light Manager, uniform brightness across all magnifications" },
+            { "label": "Optional AI Modules", "value": "AI Cell Count, AI Cell Confluency (Labscope)" },
+            { "label": "Objectives Demonstrated", "value": "LD A-Plan 40x/0.55 Ph 1 (phase contrast example)" },
+            { "label": "Return Policy", "value": "60 days, risk-free, AI module trial license available" },
+            { "label": "Magnification Range, Full Objective Set, Stand Dimensions", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Routine Cell Culture Monitoring: Phase contrast and DIC for unstained, living cell observation.",
+            "Tissue Culture and Histology-Adjacent Work: Brightfield documentation, demonstrated on HE-stained tissue.",
+            "Multichannel Fluorescence Studies: Up to 4 channels, acquired and overlaid automatically with Colibri 3.",
+            "Materials and Sample Inspection: DIC and iHMC contrast for detailed surface and structural detail.",
+            "Large-Format Culture Vessel Work: Sufficient clearance for cell factories.",
+            "Cell Counting and Confluency Tracking: Optional AI Cell Count and AI Cell Confluency modules via Labscope.",
+            "Standalone Documentation Without IT Support: USB-based image saving, no computer or software dependency.",
+            "Research-Grade Image Analysis: ZEN software configuration path for advanced processing."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Contrast Selector" },
+            { "id": "config", "label": "Configuration Path" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "4-Channel Fluorescence" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which combination of techniques does the actual workload need?",
+            "description": "Select the contrast methods used regularly and sample type, and confirm the right configuration.",
+            "fields": [
+              {
+                "key": "contrastTechniquesNeeded",
+                "label": "Contrast techniques needed",
+                "options": [
+                  { "val": "dic", "label": "DIC" },
+                  { "val": "ihmc", "label": "iHMC" },
+                  { "val": "phase-contrast", "label": "Phase contrast" },
+                  { "val": "brightfield", "label": "Brightfield" },
+                  { "val": "fluorescence", "label": "Fluorescence" }
+                ]
+              },
+              {
+                "key": "sampleType",
+                "label": "Sample type",
+                "options": [
+                  { "val": "living-cell-culture", "label": "Living cell culture" },
+                  { "val": "fixed-tissue", "label": "Fixed tissue" },
+                  { "val": "materials", "label": "Materials" },
+                  { "val": "mixed", "label": "Mixed" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "contrastTechniquesNeeded": "fluorescence" },
+                "title": "Colibri 3 Configuration Fits",
+                "body": "Fluorescence work calls for the Colibri 3 LED light source paired with a ZEISS microscope camera, for up to 4-channel automated imaging.",
+                "tags": ["Fluorescence"]
+              },
+              {
+                "condition": { "sampleType": "fixed-tissue" },
+                "title": "Brightfield Configuration Fits",
+                "body": "Fixed, stained tissue sections are covered by brightfield contrast, demonstrated on HE-stained tissue.",
+                "tags": ["Brightfield"]
+              },
+              {
+                "condition": { "sampleType": "living-cell-culture" },
+                "title": "Phase Contrast or DIC Fits",
+                "body": "Unstained, living cell observation is covered by phase contrast, DIC, or iHMC, depending on the level of structural detail needed.",
+                "tags": ["Living Cell"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Contrast Configuration",
+                "body": "Share the full range of contrast techniques the lab actually uses across a typical week, and the right camera and light source configuration gets confirmed against that range.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Standalone, connected, or full research software, which fits the lab?",
+            "description": "Select the computer availability and documentation need, and see the recommended path.",
+            "steps": [
+              {
+                "key": "computerAvailability",
+                "question": "What's the computer availability?",
+                "options": [
+                  { "val": "no-computer", "label": "No dedicated computer" },
+                  { "val": "shared-workstation", "label": "Shared workstation" },
+                  { "val": "full-research-setup", "label": "Full research setup" }
+                ]
+              },
+              {
+                "key": "documentationNeed",
+                "question": "What's the documentation need?",
+                "options": [
+                  { "val": "usb-saving", "label": "USB image saving" },
+                  { "val": "connected-multichannel", "label": "Connected multichannel workflows" },
+                  { "val": "advanced-analysis", "label": "Advanced analysis" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share whether AI cell counting and confluency analysis is of interest, and the recommended path — standalone (OSD + USB), Labscope, or ZEN — gets confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within Zeiss's inverted microscope range",
+            "title": "Axiovert 5 vs Axiovert 5 Digital vs Primovert Digital",
+            "description": "Learn how the ZEISS Axiovert 5 combines DIC, iHMC, phase contrast, brightfield, and fluorescence imaging on a single microscope platform.",
+            "columns": [
+              { "label": "Axiovert 5", "highlight": true },
+              { "label": "Axiovert 5 Digital", "highlight": false },
+              { "label": "Primovert Digital", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Contrast Techniques", "values": ["DIC, iHMC, phase contrast, brightfield, fluorescence", "Standard contrast plus fluorescence (specific techniques not itemized in that source)", "Brightfield, phase contrast"] },
+              { "feature": "Fluorescence Channels", "values": ["Up to 4, via Colibri 3 (external LED)", "Up to 5, built into the system", "Not available"] },
+              { "feature": "Camera", "values": ["Any ZEISS microscope camera (external)", "Not confirmed, integrated", "5 MP CMOS, integrated"] },
+              { "feature": "Standalone Operation", "values": ["Yes, Axiocam + OSD, saves to USB", "Yes, closed-box all-in-one", "Yes"] },
+              { "feature": "AI Modules", "values": ["Optional, AI Cell Count and AI Cell Confluency", "Included, no training required", "Included, via Labscope"] },
+              { "feature": "Configuration Paths", "values": ["Standalone, Labscope, ZEN", "Primarily all-in-one, Labscope-based", "Labscope-based"] },
+              { "feature": "Cell Factory Clearance", "values": ["Yes, explicitly stated", "Not confirmed", "Not applicable, compact flow-cabinet design"] },
+              { "feature": "Best For", "values": ["Labs needing the widest contrast technique range, camera flexibility", "Labs prioritizing an all-in-one AI-first system with more fluorescence channels", "Compact, flow-cabinet-based cell culture work"] },
+              { "feature": "Choose When", "values": ["Multiple contrast techniques and camera flexibility both matter", "The priority is maximum automation with minimum setup decisions", "Space is the primary constraint"] }
+            ],
+            "disclaimer": "The standard Axiovert 5 is the most contrast-flexible option in the range, running DIC, iHMC, phase contrast, brightfield, and fluorescence on one stand with a choice of camera. Axiovert 5 digital trades some of that flexibility for a built-in camera, one more fluorescence channel, and zero setup decisions. Primovert digital trades contrast breadth for genuine compactness inside a laminar flow cabinet."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the industries and laboratory environments where the ZEISS Axiovert 5 supports cell biology, biotechnology, materials science, and research microscopy.",
+            "industries": [
+              { "name": "Cell Biology Research", "icon": "flask", "useCase": "Living cell observation across multiple contrast techniques", "consideration": "DIC, iHMC, and phase contrast all available on one stand" },
+              { "name": "Tissue and Histology-Adjacent Work", "icon": "droplet", "useCase": "Fixed, stained sample documentation", "consideration": "Brightfield contrast demonstrated on HE-stained tissue" },
+              { "name": "Biopharma and Cell Line Development", "icon": "pill", "useCase": "Fluorescent marker tracking across engineered cell lines", "consideration": "Up to 4-channel fluorescence with automated acquisition" },
+              { "name": "Materials Science", "icon": "cpu", "useCase": "Surface and structural detail inspection", "consideration": "DIC and iHMC provide the contrast detail materials work often needs" },
+              { "name": "Academic Multi-Purpose Labs", "icon": "school", "useCase": "Shared facilities running varied contrast requirements", "consideration": "Broadest contrast technique range in the inverted routine lineup" },
+              { "name": "Large-Scale Cell Culture Operations", "icon": "repeat", "useCase": "Bioprocessing and cell factory-based culture work", "consideration": "Explicit clearance for large-format culture vessels" },
+              { "name": "Contract Research Organizations", "icon": "target", "useCase": "Client work spanning multiple imaging modalities", "consideration": "Standalone, Labscope, or ZEN configuration adapts to varied client needs" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application guidance, configuration support, training, and after-sales service for the ZEISS Axiovert 5 from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows contrast switching and automated fluorescence on your own samples." },
+              { "title": "Configuration Selection Support", "description": "Confirms standalone, Labscope, or ZEN fit for your workflow." },
+              { "title": "Camera and Light Source Pairing", "description": "Axiocam and Colibri 3 selection for the fluorescence work required." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "AI Module Setup", "description": "Configures AI Cell Count and AI Cell Confluency where selected." },
+              { "title": "Operator Training", "description": "Snap workflow, Light Manager, contrast switching, standalone USB operation." },
+              { "title": "Preventive Maintenance", "description": "Optics, illumination, and camera performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, immersion media, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Axiovert 5 used for?", "answer": "It's an inverted microscope for cell culture and research, supporting DIC, iHMC, phase contrast, brightfield, and multichannel fluorescence on one stand." },
+            { "question": "Does it need a computer to operate?", "answer": "No. In standalone configuration, an Axiocam camera and on-screen display run the system independently, saving images directly to USB." },
+            { "question": "How does multichannel fluorescence work?", "answer": "Paired with Colibri 3 LED illumination and any ZEISS microscope camera, select the channels for UV, blue, green, and red excitation, then press Snap. The system automatically adjusts exposure, acquires each channel, switches wavelengths, and delivers a single overlaid image with a scale bar embedded in the file metadata." },
+            { "question": "What contrast techniques are available?", "answer": "DIC, improved Hoffman Modulation Contrast (iHMC), phase contrast, and brightfield, in transmitted light, combined with multichannel fluorescence." },
+            { "question": "Can it handle large culture vessels?", "answer": "Yes, Axiovert 5 offers enough space for cell factories, not just standard dishes." },
+            { "question": "Is AI-based cell analysis available?", "answer": "Yes, as an optional addition, AI Cell Count and AI Cell Confluency through ZEISS Labscope, pre-trained and requiring no prior AI knowledge to use." },
+            { "question": "What software options are available?", "answer": "Three configuration paths: standalone with an Axiocam and on-screen display, ZEISS Labscope for connected and multichannel fluorescence imaging, or ZEISS ZEN for advanced research-grade analysis." },
+            { "question": "Can the microscope be upgraded later?", "answer": "Yes, both hardware and software are upgradeable, so the stand can adapt as work requirements change rather than needing replacement." },
+            { "question": "How is Axiovert 5 different from Axiovert 5 digital?", "answer": "Axiovert 5 offers the widest contrast technique range (DIC, iHMC, phase contrast, brightfield, and fluorescence) with a choice of external camera and light source. Axiovert 5 digital integrates the camera and fluorescence system into a closed, all-in-one unit with one additional fluorescence channel and no external camera or light source decisions to make." },
+            { "question": "How is it different from Primovert?", "answer": "Primovert is a compact microscope built specifically to fit a laminar flow cabinet, covering brightfield and phase contrast, with fluorescence and AI analysis available on specific versions. Axiovert 5 covers a substantially wider range of contrast techniques and fluorescence channels, suited to labs needing more imaging flexibility than a flow cabinet setup allows." },
+            { "question": "Can I try the AI modules before buying?", "answer": "Yes, a personal trial license is available specifically for testing AI Cell Count and AI Cell Confluency." },
+            { "question": "Is there a return policy?", "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Magnification range, full objective set, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Axiovert 5 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the contrast technique, camera, and software configuration selected." },
+            { "question": "Who is the authorized distributor of the Axiovert 5 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Axiovert 5 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Axiovert 5 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. DIC, iHMC, phase contrast, brightfield, and multichannel fluorescence on one stand, standalone or connected, with optional AI cell analysis. Share the contrast techniques and fluorescence channels the work needs, and the right Axiovert 5 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the contrast techniques and fluorescence channels needed, then confirm the right Axiovert 5 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "contrastTechniques", "label": "Contrast techniques needed", "type": "text", "required": false },
+              { "key": "fluorescenceChannels", "label": "Fluorescence channels needed", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share which contrast techniques the work actually requires, whether fluorescence is routine or occasional, and whether a standalone or connected setup fits the lab better, and the right Axiovert 5 configuration gets confirmed." },
+              { "title": "Confirm the fluorescence setup", "body": "Share which fluorescence channels the routine work actually requires, and the right Colibri 3 configuration and camera pairing gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Four fluorescence channels. Every standard contrast technique. Zero computer required.",
+            "heroLead": "A cell culture lab shouldn't need five different microscopes for five different contrast methods. Axiovert 5 runs DIC, iHMC, phase contrast, and multichannel fluorescence, all on the same stand, switching between them as the work actually demands. Focus the sample, press Snap, and the system handles transmitted light and fluorescence settings automatically. Pair it with the Colibri 3 LED light source and any Zeiss microscope camera, and multichannel fluorescence becomes a one-click routine: select channels for UV, blue, green, and red excitation, and the system switches wavelengths, adjusts exposure, and delivers an overlaid image with a scale bar built into the metadata. Run it entirely standalone, no computer needed, controlled through an on-screen display and saved straight to USB. Or connect it to Labscope for advanced routine imaging, or ZEN for deeper research analysis. The same stand adapts to whichever configuration the lab actually needs, today or later. What it covers: DIC, iHMC, phase contrast, brightfield, and up to 4-channel fluorescence, on one microscope. What it doesn't need: a dedicated computer, unless the work calls for one. What it grows into: upgradeable hardware and software, so it stays the lab's answer as requirements change.",
+            "stats": [
+              { "value": "5 contrast techniques", "label": "DIC, iHMC, phase contrast, brightfield, fluorescence" },
+              { "value": "4 channels", "label": "UV, blue, green, red excitation, one click" },
+              { "value": "Colibri 3", "label": "Recommended LED light source for fluorescence" },
+              { "value": "3 configuration paths", "label": "Standalone, Labscope, or ZEN" },
+              { "value": "One-hand control", "label": "All main controls accessible without repositioning" },
+              { "value": "Cell factory space", "label": "Enough clearance for large culture vessels" },
+              { "value": "AI Cell Count + Confluency", "label": "Optional Labscope modules" },
+              { "value": "60 days", "label": "Risk-free return window" },
+              { "value": "Upgradeable", "label": "Hardware and software, built to grow with the lab" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Explore the contrast techniques, fluorescence options, AI capabilities, and configuration paths of the ZEISS Axiovert 5 Inverted Microscope.",
+                "body": [
+                  "Smart microscopy for cell culture and research. Focus the sample, press Snap, and settings adjust automatically.",
+                  "Runs every standard contrast technique in transmitted light. DIC, iHMC, and phase contrast, combined with multichannel fluorescence.",
+                  "Works entirely standalone. Save images directly to USB, no extra computer or software required.",
+                  "Automatically adjusts settings for transmitted light and fluorescence. The overlaid multichannel image, including a scale bar, saves straight into the image file metadata.",
+                  "Enough clearance for cell factories. Space accommodates large culture vessels, not just standard dishes.",
+                  "Adapts as the work changes. Upgradeable hardware and software mean the microscope grows alongside the lab's needs.",
+                  "One-hand access to all main controls. Keep watching the sample instead of reaching across the stand.",
+                  "Light Manager keeps brightness uniform across every magnification. No manual lamp adjustment when switching objectives.",
+                  "Pairs with Colibri 3 for multichannel fluorescence. UV, blue, green, and red excitation, switched with one click.",
+                  "Automatically manages exposure and channel switching. Select the channels, press Snap, and the system acquires each one, switches, and repeats on its own.",
+                  "Optional AI Cell Confluency and AI Cell Counting modules. Pre-trained analysis through Labscope, instant and reproducible.",
+                  "Three configuration paths available. Standalone with an Axiocam and on-screen display, connected via Labscope, or full research analysis via ZEN.",
+                  "A personal trial license is available for the AI modules. Test the analysis workflow directly.",
+                  "Backed by a 60-day risk-free return. Trial the actual setup before committing."
+                ],
+                "cards": [
+                  { "title": "5 contrast techniques, 1 stand", "description": "DIC, iHMC, phase, brightfield, and fluorescence together" },
+                  { "title": "4-channel fluorescence, one click", "description": "Colibri 3 pairing automates the whole sequence" },
+                  { "title": "Standalone or connected", "description": "No computer required, unless the work calls for one" },
+                  { "title": "Upgradeable by design", "description": "Grows with the lab instead of getting replaced" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the advanced imaging, standalone operation, automated fluorescence, and upgradeable design of the ZEISS Axiovert 5."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the ZEISS Axiovert 5 supports cell culture, tissue imaging, fluorescence microscopy, materials research, and AI-assisted cell analysis."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the technical specifications and confirmed imaging capabilities of the ZEISS Axiovert 5 Inverted Microscope."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Every Standard Contrast Technique, One Stand",
+                "title": "Every Standard Contrast Technique, One Stand",
+                "description": "Why DIC, iHMC, phase, and fluorescence together matters.",
+                "body": [
+                  "A cell biology lab rarely does just one kind of imaging. One day it's unstained cells in phase contrast, the next it's a fixed tissue section in brightfield, and the week after that a fluorescent marker needs documenting across four channels. Buying a separate microscope for each contrast method means separate footprints, separate training, and separate maintenance schedules.",
+                  "Axiovert 5 runs DIC, iHMC, phase contrast, brightfield, and multichannel fluorescence on the same stand. Switching between them is a configuration change, not a different piece of equipment. That range is what Zeiss means by future-proof: the microscope adapts as the work requirements shift, rather than needing to be replaced when they do."
+                ],
+                "utilityChecklist": [
+                  { "label": "Unstained, living cell observation", "value": "Phase contrast" },
+                  { "label": "Detailed structural or surface detail", "value": "DIC or iHMC" },
+                  { "label": "Fixed, stained tissue sections", "value": "Brightfield" },
+                  { "label": "Fluorescent marker tracking, up to 4 channels", "value": "Multichannel fluorescence with Colibri 3" }
+                ],
+                "disclaimer": "Share the full range of contrast techniques the lab actually uses across a typical week, and the right camera and light source configuration gets confirmed against that range."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Four Channels, One Click",
+                "title": "Four Channels, One Click",
+                "description": "How Colibri 3 and Smart Microscopy handle fluorescence automatically.",
+                "cards": [
+                  { "title": "Manually adjusting exposure per channel", "description": "Automatic exposure adjustment, every channel." },
+                  { "title": "Switching wavelengths by hand between captures", "description": "Automatic channel switching after Snap is pressed." },
+                  { "title": "Combining separate captures into an overlay", "description": "A single overlaid image, delivered directly." },
+                  { "title": "Manually inserting a scale bar afterward", "description": "Scale bar embedded in the file metadata automatically." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access brochures, white papers, user guides, and technical resources for the ZEISS Axiovert 5 Inverted Microscope.",
+                "cards": [
+                  { "title": "Axiovert 5 Product Information Sheet", "description": "Available on request" },
+                  { "title": "Axiovert 5 Flyer", "description": "Available on request" },
+                  { "title": "Fluorescence LED Illumination Guide (Axiovert 5 and Axioscope 5)", "description": "Available on request" },
+                  { "title": "The Daily Cell Culture (White Paper)", "description": "Available on request" },
+                  { "title": "The Most Commonly Used Immortal Cell Lines", "description": "Available on request" },
+                  { "title": "How to Use a Hemocytometer (Reference Guide)", "description": "Available on request" },
+                  { "title": "Personal Trial License for AI Modules", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Axiovert 5 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. DIC, iHMC, phase contrast, brightfield, and multichannel fluorescence on one stand, standalone or connected, with optional AI cell analysis. Share the contrast techniques and fluorescence channels the work needs, and the right Axiovert 5 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Axiovert 7 Inverted Microscope",
+          "slug": "axiovert-7-inverted-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Axiovert 7 Inverted Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/axiovert-7-inverted-microscope",
+          "breadcrumbPath": "Home > Products > Inverted Microscopes > Axiovert 7 Inverted Microscope",
+          "h1": "Axiovert 7 Inverted Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Research doesn't stay still. A project that starts with a simple monolayer culture can end up needing time-lapse organoid imaging, whole-slide scanning, or high-throughput multiwell analysis, and the microscope shouldn't be the thing holding that progression back.",
+
+          "features": [
+            "Six Contrast Methods, Including Polarization: PH, FL, DIC, PlasDIC, iHMC, and POL together, POL in particular isn't available on Axiovert 5 or Primovert, making this the only inverted stand in the range built for polarized light work.",
+            "Motorized Focus and Stage as Standard: Not an optional upgrade bolted on later, precise, reproducible, automated imaging is the platform's baseline behavior.",
+            "Genuine Whole-Slide and Multiwell Automation: Panoramic scanning, whole-slide imaging, and multiwell plate acquisition run without constant user intervention, a different category of automation from Axiovert 5's Snap-button convenience.",
+            "Built for GxP From the Ground Up: Modular hardware and upgradeable software mean the same platform adapts into regulated workflows, rather than requiring a separate compliance-focused instrument.",
+            "1.25x to 100x, on One Stand: A magnification range wide enough to move from a tissue overview scan straight to fine cellular structure, without swapping platforms."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Axiovert 7 Inverted Microscope" },
+            { "label": "Category", "value": "Inverted Microscopes" },
+            { "label": "Contrast Methods", "value": "PH (phase contrast), FL (fluorescence), DIC, PlasDIC, iHMC, POL (polarization)" },
+            { "label": "Field of View", "value": "23 mm" },
+            { "label": "Objective Magnification Range", "value": "1.25x to 100x" },
+            { "label": "Focus", "value": "Motorized" },
+            { "label": "Stage", "value": "Motorized" },
+            { "label": "Fluorescence", "value": "Multichannel, automatic overlay, scale and metadata stored" },
+            { "label": "Software", "value": "ZEISS ZEN" },
+            { "label": "Automated Capabilities", "value": "Z-stacks, time-lapse imaging, whole-slide scanning, multiwell plate imaging" },
+            { "label": "Compliance", "value": "Adaptable to GxP guidelines" },
+            { "label": "System Design", "value": "Modular hardware, upgradeable software, extensive interfaces" },
+            { "label": "Footprint", "value": "Small, standard lab bench compatible" },
+            { "label": "Camera Compatibility", "value": "Not itemized in this source, available on request" },
+            { "label": "Full Objective Set, Stand Dimensions, Weight", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Label-Free Live Cell Culture Monitoring: Phase contrast, DIC, PlasDIC, or iHMC, with long working distance objectives for routine work.",
+            "Fluorescence-Labeled Cell and Protein Imaging: Multichannel fluorescence with digital optical sectioning, improved resolution in X, Y, and Z.",
+            "Tissue Cross Sections and Pathology Research: Extended depth of field imaging, panoramic and whole-slide scanning for quantitative spatial analysis.",
+            "Long-Term Live-Cell and 3D Models: Organoid, spheroid, and Organ-on-a-Chip imaging under stable conditions with automated time-lapse.",
+            "High-Throughput Screening: Automated multiwell plate imaging and analysis, including fluorescence intensity heat maps.",
+            "Cell Structure and Organelle Imaging: Demonstrated on Cos-7 cell tubulin, mitochondria, and nuclei across multichannel overlay.",
+            "Developmental Biology: Demonstrated on Crossmon-stained mouse embryo sections.",
+            "Tumor Microenvironment Research: Demonstrated on mouse lung tissue cross sections marking tumor cells, macrophages, and T cells.",
+            "Whole-Slide Scanning for Regulated Environments: GxP-adaptable workflows for pathology and quantitative tissue analysis."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Contrast & Automation" },
+            { "id": "config", "label": "Research Roadmap" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Motorized Automation" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which of the six contrast methods, and how much automation, does the work need?",
+            "description": "Select the contrast method and automation level, and confirm the right configuration.",
+            "fields": [
+              {
+                "key": "contrastMethodsNeeded",
+                "label": "Contrast methods needed",
+                "options": [
+                  { "val": "ph", "label": "PH (phase contrast)" },
+                  { "val": "fl", "label": "FL (fluorescence)" },
+                  { "val": "dic", "label": "DIC" },
+                  { "val": "plasdic", "label": "PlasDIC" },
+                  { "val": "ihmc", "label": "iHMC" },
+                  { "val": "pol", "label": "POL (polarization)" }
+                ]
+              },
+              {
+                "key": "sampleScale",
+                "label": "Sample scale",
+                "options": [
+                  { "val": "single-fields", "label": "Single fields" },
+                  { "val": "whole-slides", "label": "Whole slides" },
+                  { "val": "multiwell-plates", "label": "Multiwell plates" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "contrastMethodsNeeded": "pol" },
+                "title": "Polarization Contrast Confirmed",
+                "body": "POL is the differentiator within Zeiss's inverted range — neither Axiovert 5 nor Primovert offers it, and Axiovert 7 is built specifically to cover it.",
+                "tags": ["Polarization"]
+              },
+              {
+                "condition": { "sampleScale": "whole-slides" },
+                "title": "Whole-Slide Scanning Fits",
+                "body": "Whole-slide imaging runs through panoramic and whole-slide scanning, automated via ZEISS ZEN.",
+                "tags": ["Whole-Slide"]
+              },
+              {
+                "condition": { "sampleScale": "multiwell-plates" },
+                "title": "Multiwell Automation Fits",
+                "body": "Multiwell plate imaging and analysis, including fluorescence intensity heat maps, runs automated without constant supervision.",
+                "tags": ["Multiwell"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Contrast and Automation Fit",
+                "body": "Share the contrast methods and magnification range the research actually spans, whether whole-slide or multiwell automation is part of the roadmap, and whether GxP compliance applies, and the right Axiovert 7 configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Where might this research go over the next few years?",
+            "description": "Select the current and anticipated needs, and see the recommended modular path.",
+            "steps": [
+              {
+                "key": "currentPrimaryNeed",
+                "question": "What's the current primary need?",
+                "options": [
+                  { "val": "routine-live-cell", "label": "Routine live-cell monitoring" },
+                  { "val": "fluorescence-imaging", "label": "Fluorescence imaging" },
+                  { "val": "tissue-analysis", "label": "Tissue analysis" }
+                ]
+              },
+              {
+                "key": "regulatoryEnvironment",
+                "question": "What's the regulatory environment?",
+                "options": [
+                  { "val": "standard-research", "label": "Standard research use" },
+                  { "val": "gxp-regulated", "label": "GxP-regulated workflows anticipated" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the future needs (whole-slide imaging, high-throughput screening, or long-term live-cell studies), and the recommended modular expansion path and GxP-readiness scope get confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "The clearest capability jump in the inverted range",
+            "title": "Axiovert 7 vs Axiovert 5",
+            "description": "Axiovert 7 against Axiovert 5, the clearest capability jump in the inverted range.",
+            "columns": [
+              { "label": "Axiovert 7", "highlight": true },
+              { "label": "Axiovert 5", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Contrast Methods", "values": ["PH, FL, DIC, PlasDIC, iHMC, POL (6 total)", "DIC, iHMC, phase contrast, brightfield, fluorescence (no polarization)"] },
+              { "feature": "Field of View", "values": ["23 mm", "Not confirmed in that source"] },
+              { "feature": "Objective Range", "values": ["1.25x to 100x", "Not confirmed in that source"] },
+              { "feature": "Focus", "values": ["Motorized", "Manual"] },
+              { "feature": "Stage", "values": ["Motorized", "Manual (standalone Axiocam-based)"] },
+              { "feature": "Fluorescence Channels", "values": ["Multichannel, automatic overlay", "Up to 4, via Colibri 3"] },
+              { "feature": "Whole-Slide Imaging", "values": ["Yes, panoramic and whole-slide scanning", "Not available"] },
+              { "feature": "Multiwell Screening", "values": ["Yes, automated", "Not available"] },
+              { "feature": "GxP Compliance", "values": ["Adaptable", "Not confirmed"] },
+              { "feature": "Software", "values": ["ZEISS ZEN", "Standalone, Labscope, or ZEN"] },
+              { "feature": "Best For", "values": ["Multidimensional research needing automation, whole-slide, or high-throughput work", "Routine cell culture and research across standard contrast techniques, without automated scanning"] },
+              { "feature": "Choose When", "values": ["The research needs motorized precision, polarization, or genuine high-throughput automation", "Standard contrast flexibility and manual operation are sufficient"] }
+            ],
+            "disclaimer": "Axiovert 5 and Axiovert 7 sit at genuinely different points in the inverted range, not just different price points on the same capability. Axiovert 5 covers broad contrast flexibility with manual operation, ideal for routine work across varied techniques. Axiovert 7 adds motorization, polarization contrast, and the automation infrastructure (whole-slide scanning, multiwell screening, GxP adaptability) that a multidimensional or regulated research programme actually needs."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Where this platform earns its place in serious research settings.",
+            "industries": [
+              { "name": "Cell Biology and Molecular Research", "icon": "flask", "useCase": "Multichannel fluorescence imaging of cellular structures", "consideration": "Demonstrated on Cos-7 cell tubulin, mitochondria, and nuclei" },
+              { "name": "Pathology and Tissue Research", "icon": "droplet", "useCase": "Whole-slide imaging and quantitative spatial analysis", "consideration": "Panoramic and whole-slide scanning built into the automation" },
+              { "name": "Developmental Biology", "icon": "zap", "useCase": "Embryonic and tissue section studies", "consideration": "Demonstrated on Crossmon-stained mouse embryo sections" },
+              { "name": "Cancer and Immunology Research", "icon": "shield", "useCase": "Tumor microenvironment and immune cell mapping", "consideration": "Demonstrated on mouse lung tissue marking tumor cells, macrophages, and T cells" },
+              { "name": "3D and Organoid Research", "icon": "repeat", "useCase": "Long-term live-cell imaging of complex 3D models", "consideration": "Automated time-lapse under stable environmental conditions" },
+              { "name": "High-Throughput Drug Discovery", "icon": "target", "useCase": "Multiwell plate screening and analysis", "consideration": "Automated acquisition and heat-map visualization without constant supervision" },
+              { "name": "Regulated Pharmaceutical Research", "icon": "pill", "useCase": "GxP-adaptable imaging workflows", "consideration": "Modular platform designed to adapt to regulated guideline requirements" },
+              { "name": "Academic Core Imaging Facilities", "icon": "school", "useCase": "Shared platforms across varied research needs", "consideration": "Six contrast methods and modular expansion cover a genuinely wide user base" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Support built around getting the full automated workflow running correctly.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows contrast switching, motorized scanning, and fluorescence on your own samples." },
+              { "title": "Configuration Selection Support", "description": "Confirms contrast methods, motorization level, and ZEN configuration." },
+              { "title": "GxP Readiness Assessment", "description": "Scopes modular workflow adaptation for regulated environments." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Whole-Slide and Multiwell Setup", "description": "Configures automated scanning and screening workflows." },
+              { "title": "Operator Training", "description": "Snap workflow, ZEN software, motorized stage and focus operation." },
+              { "title": "Preventive Maintenance", "description": "Optics, motorization, illumination, and camera performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, immersion media, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Axiovert 7 used for?", "answer": "It's an inverted microscope for routine cell culture work and multidimensional life science research, supporting live-cell imaging, fixed samples, tissue sections, and fluorescence experiments, from monolayers through to organoids." },
+            { "question": "Is Axiovert 7 suitable for live cell imaging?", "answer": "Yes. Label-free live cell culture is monitored using phase contrast, DIC, PlasDIC, or iHMC, and long-term live-cell and 3D models, including organoids and Organ-on-a-Chip systems, are supported under stable environmental conditions with automated time-lapse imaging." },
+            { "question": "Which contrast methods are available with Axiovert 7?", "answer": "Six: PH (phase contrast), FL (fluorescence), DIC, PlasDIC, iHMC, and POL (polarization)." },
+            { "question": "Can Axiovert 7 perform multichannel fluorescence imaging?", "answer": "Yes, multichannel fluorescence images are automatically overlaid and saved together with scale and metadata, supporting digital optical sectioning for improved resolution in X, Y, and Z." },
+            { "question": "What software is used with ZEISS Axiovert 7?", "answer": "ZEISS ZEN imaging software, enabling precise multidimensional experiments including Z-stacks, time-lapse imaging, and automated scanning for slides and multiwell plates." },
+            { "question": "Is Axiovert 7 expandable?", "answer": "Yes. The system uses modular hardware, upgradable software, and extensive interfaces, adapting from digital optical sectioning to long-term live-cell imaging as research requirements change, including in accordance with GxP guidelines." },
+            { "question": "Can Axiovert 7 be used for whole slide imaging?", "answer": "Yes, the system performs panoramic scanning and whole-slide imaging of stained or immunofluorescence-labeled tissue sections for quantitative spatial analysis." },
+            { "question": "What types of cameras are compatible with Axiovert 7?", "answer": "Specific camera compatibility was not itemized on the source page reviewed. Inkarp can confirm compatible camera options directly." },
+            { "question": "What is the field of view?", "answer": "23 mm." },
+            { "question": "What magnification range does it cover?", "answer": "1.25x to 100x across its objective range." },
+            { "question": "Is the focus and stage motorized?", "answer": "Yes, both are motorized, enabling reproducible, automated imaging." },
+            { "question": "How is Axiovert 7 different from Axiovert 5?", "answer": "Axiovert 7 adds motorized focus and stage, polarization contrast, whole-slide scanning, multiwell plate automation, and GxP-adaptable workflows. Axiovert 5 covers broad contrast flexibility (DIC, iHMC, phase contrast, brightfield, fluorescence) with manual operation, suited to routine work without the same level of automated, high-throughput capability." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Camera compatibility details, full objective set, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Axiovert 7 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the contrast methods, motorization, and ZEN configuration selected." },
+            { "question": "Who is the authorized distributor of the Axiovert 7 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Axiovert 7 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Axiovert 7 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. A 23 mm field of view, 1.25x to 100x magnification, and motorized focus and stage running whole-slide scans, time-lapse studies, and multiwell screening on ZEISS ZEN. Share the contrast methods and automation level the research needs, and the right Axiovert 7 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the contrast methods and automation level needed, then confirm the right Axiovert 7 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "contrastMethods", "label": "Contrast methods needed", "type": "text", "required": false },
+              { "key": "automationLevel", "label": "Automation level needed", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the contrast methods and magnification range the research actually spans, whether whole-slide or multiwell automation is part of the roadmap, and whether GxP compliance applies, and the right Axiovert 7 configuration gets confirmed." },
+              { "title": "Confirm the right automation level", "body": "Share whether the research involves long-term live-cell studies, whole-slide scanning, or multiwell screening, and the right level of ZEN automation gets confirmed against the actual workflow." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "From a monolayer to an organoid. From 1.25x to 100x. One motorized stand.",
+            "heroLead": "Research doesn't stay still. A project that starts with a simple monolayer culture can end up needing time-lapse organoid imaging, whole-slide scanning, or high-throughput multiwell analysis, and the microscope shouldn't be the thing holding that progression back. Axiovert 7 covers a genuinely wide range: six contrast methods (PH, FL, DIC, PlasDIC, iHMC, POL), a 23 mm field of view, and objectives spanning 1.25x to 100x magnification. Focus, press Snap, and the system captures a sharp, reproducible image instantly, with multichannel fluorescence automatically overlaid and saved together with scale and metadata. Motorized focus and stage paired with ZEISS ZEN software enable Z-stacks, time-lapse imaging, and automated scanning across slides and multiwell plates, precisely and reproducibly, without constant hands-on adjustment. The system is built modular from the start, so digital optical sectioning, long-term live-cell imaging, and GxP-compliant workflows are additions, not replacements. What it captures: everything from label-free routine cell culture to whole-slide pathology imaging. What it automates: focus, stage movement, and multichannel fluorescence acquisition. What it grows into: GxP-compliant, modular research workflows, on the same platform.",
+            "stats": [
+              { "value": "23 mm", "label": "Field of view" },
+              { "value": "1.25x – 100x", "label": "Objective magnification range" },
+              { "value": "6 contrast methods", "label": "PH, FL, DIC, PlasDIC, iHMC, POL" },
+              { "value": "Motorized", "label": "Focus and stage, for automated reproducible imaging" },
+              { "value": "Snap button", "label": "Fast, intuitive image acquisition" },
+              { "value": "Multichannel fluorescence", "label": "Automatic overlay, scale and metadata included" },
+              { "value": "GxP-compatible", "label": "Modular workflows, adaptable to regulated requirements" },
+              { "value": "ZEISS ZEN", "label": "Imaging software for multidimensional experiments" },
+              { "value": "Small footprint", "label": "Fits standard lab bench space" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "The full platform, organized around what actually matters to a research lab.",
+                "body": [
+                  "Intuitive Snap-button workflow. Fast time-to-image, with excellent image quality behind it.",
+                  "Small footprint. Doesn't demand disproportionate bench space for what it delivers.",
+                  "Adapts to whatever the sample actually is. Live cells, fixed samples, tissue sections, or fluorescence experiments, all supported on the same platform.",
+                  "Focus and press Snap for an instant, sharp, reproducible image. No extended setup between sample and result.",
+                  "Multichannel fluorescence images overlay automatically. Saved together with scale and metadata, for genuine traceability and reproducibility.",
+                  "Motorized components pair with ZEISS ZEN software. Precise multidimensional experiments, Z-stacks, time-lapse imaging, and automated scanning across slides and multiwell plates.",
+                  "Supports a wide range of contrast methods and fluorescence techniques. Confidence to tackle varied research questions on one stand.",
+                  "Modular hardware and upgradable software. The system grows as the lab's requirements change.",
+                  "Extensive interfaces for connectivity. Built to integrate rather than sit isolated.",
+                  "Adapts from digital optical sectioning to long-term live-cell imaging. Even in accordance with GxP guidelines, where regulated work demands it.",
+                  "Designed for daily laboratory operation and basic research together. Not a compromise between the two.",
+                  "Motorized focus and stage for reproducible, automated imaging. Precision that doesn't depend on manual repeatability.",
+                  "Field of view of 23 mm. Captures more of the sample per image.",
+                  "Objective magnification range from 1.25x to 100x. Genuinely wide coverage, from tissue overview to fine cellular detail."
+                ],
+                "cards": [
+                  { "title": "23 mm field of view", "description": "More sample captured per image" },
+                  { "title": "1.25x to 100x", "description": "Genuine range, from tissue overview to fine detail" },
+                  { "title": "6 contrast methods", "description": "PH, FL, DIC, PlasDIC, iHMC, POL, on one stand" },
+                  { "title": "Motorized, GxP-adaptable", "description": "Automation that scales into regulated environments" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What actually distinguishes this platform, not a repeat of the overview."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Where this platform actually gets used, across a real research programme."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "What Zeiss confirms about Axiovert 7, the most complete spec sheet in the inverted range so far."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Six Contrast Methods, One Motorized Stand",
+                "title": "Six Contrast Methods, One Motorized Stand",
+                "description": "What the full range actually unlocks that a narrower stand can't.",
+                "body": [
+                  "Most inverted microscopes at the routine level cover two or three contrast methods, enough for standard cell culture work but not enough for a research programme that touches tissue, polarized structures, or fine subcellular detail in the same study. Axiovert 7 runs six: PH, FL, DIC, PlasDIC, iHMC, and POL, on the same motorized stand.",
+                  "POL specifically is the differentiator within Zeiss's own inverted range, neither Axiovert 5 nor Primovert offers polarization contrast, which matters directly for crystalline structures, certain tissue architectures, and materials work that depends on birefringence to reveal detail brightfield or phase contrast simply can't show."
+                ],
+                "utilityChecklist": [
+                  { "label": "Unstained, living cell monitoring", "value": "Phase contrast (PH), DIC, PlasDIC, or iHMC" },
+                  { "label": "Fluorescent marker and protein tracking", "value": "FL, multichannel" },
+                  { "label": "Birefringent structures, crystals, certain tissue types", "value": "Polarization (POL)" },
+                  { "label": "Fine structural or surface detail", "value": "DIC or iHMC" }
+                ],
+                "disclaimer": "Share whether polarization contrast is part of the research plan, even occasionally, and the right contrast module configuration gets confirmed against the full six-method range."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built to Automate, Not Just Assist",
+                "title": "Built to Automate, Not Just Assist",
+                "description": "What motorized focus and stage change about the daily workflow.",
+                "cards": [
+                  { "title": "One field of view at a time, watched manually", "description": "Automated panoramic and whole-slide scanning." },
+                  { "title": "Time-lapse imaging requiring constant presence", "description": "Automated, stable-condition long-term acquisition." },
+                  { "title": "Multiwell plate imaging done one well at a time", "description": "Full-plate automated acquisition and analysis." },
+                  { "title": "Z-stacks built manually, focus plane by focus plane", "description": "Motorized, precise, reproducible Z-stack capture." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Product sheets and application guides, available directly.",
+                "cards": [
+                  { "title": "Axiovert 7 Product Information Sheet", "description": "Available on request" },
+                  { "title": "Axiovert 7 Extended Overview (9 MB Version)", "description": "Available on request" },
+                  { "title": "ZEN Core GxP Toolkit Overview", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Axiovert 7 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. A 23 mm field of view, 1.25x to 100x magnification, and motorized focus and stage running whole-slide scans, time-lapse studies, and multiwell screening on ZEISS ZEN. Share the contrast methods and automation level the research needs, and the right Axiovert 7 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Axio Observer Inverted Microscope",
+          "slug": "axio-observer-inverted-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Axio Observer Inverted Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/axio-observer-inverted-microscope",
+          "breadcrumbPath": "Home > Products > Inverted Microscopes > Axio Observer Inverted Microscope",
+          "h1": "Axio Observer Inverted Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Axio Observer isn't one microscope, it's an open platform, built to be assembled around exactly what a research programme actually needs, from standard widefield transmitted light through to sensitive super-resolution imaging.",
+
+          "features": [
+            "A Genuinely Open Platform, Not a Fixed Configuration: Where Axiovert 7 defines itself by six named contrast methods, Axio Observer defines itself by what it accepts, widefield through super-resolution, correlative EM data, and a deep accessory ecosystem built to be assembled per application.",
+            "AI Sample Finder Removes a Real Bottleneck: Not a convenience feature, a stated reduction from minutes to seconds on sample carrier detection, focus, and region-finding, the routine steps that eat into every single session regardless of how experienced the operator is.",
+            "Automated Immersion, Not Just Automated Imaging: The Autoimmersion Module addresses a genuine failure mode, manual water immersion errors that lose data points or damage the objective, something none of the other inverted microscopes in this range specifically address.",
+            "Definite Focus 3 for Genuinely Long Experiments: Built specifically for multi-day, multi-position time-lapse work, where focus drift over that timescale would otherwise quietly ruin the dataset.",
+            "ZEISS Microscopy Copilot, Configuration-Aware: An AI assistant that already knows the specific hardware and available ZEN Toolkits, answering setup and automation questions in natural conversation rather than a manual search."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Axio Observer Inverted Microscope" },
+            { "label": "Category", "value": "Inverted Microscopes" },
+            { "label": "Platform Type", "value": "Open, modular, application-tailored" },
+            { "label": "Field Number", "value": "23 mm (referenced in the live-cell culture application example)" },
+            { "label": "AI Features", "value": "AI Sample Finder, ZEISS Microscopy Copilot" },
+            { "label": "Optical Sectioning", "value": "Apotome 3 compatible, structured illumination" },
+            { "label": "Immersion Automation", "value": "Autoimmersion Module, available for Axio Observer 7" },
+            { "label": "Focus Stability", "value": "Definite Focus 3, drift compensation for long time-lapse" },
+            { "label": "Fluorescence Light Sources", "value": "Viluma 5, Viluma 7 (multicolor LED)" },
+            { "label": "White Light Source", "value": "Xylis LED" },
+            { "label": "Spectral Imaging", "value": "Duolink (simultaneous 2-channel), virtual filter technology" },
+            { "label": "Adjustable Optics", "value": "Autocorr objectives, software slider control via ZEN" },
+            { "label": "Camera Compatibility", "value": "Full ZEISS Axiocam portfolio" },
+            { "label": "Contrast Method Confirmed", "value": "PlasDIC (named directly in the live-cell application example)" },
+            { "label": "Full Contrast Method List, Magnification Range, Stand Dimensions", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Label-Free Live Cell Culture: PlasDIC contrast for high-resolution imaging through plastic vessels, with long working distance objectives and correction rings.",
+            "Large Cell Culture Flask Imaging: Sample carriers and stages built for large-format vessels.",
+            "Wide-Field-of-View Live Cell Documentation: 23 mm field number for capturing more of the sample per image.",
+            "Optical Sectioning of Fluorescent Samples: Apotome 3, structured illumination, high-contrast sections even from thick specimens.",
+            "Multi-Day, Multi-Position Time-Lapse: Definite Focus 3 keeps long-running experiments sharp throughout.",
+            "High-Resolution Water Immersion Imaging: Autoimmersion Module removes manual immersion risk on Axio Observer 7.",
+            "Multichannel and Simultaneous Spectral Imaging: Duolink captures two spectrally separated channels together, high-speed.",
+            "Correlative Microscopy: Acquired images combine with electron microscopy and other imaging modalities.",
+            "High-Content Imaging: Referenced directly in Zeiss's own genotoxicity case study content.",
+            "Hypergravity and Specialized Environment Live Imaging: Referenced in Zeiss's DLR Hyperscope customer story."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Automation Priority" },
+            { "id": "config", "label": "Imaging Modality Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Growth Ecosystem" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which manual step is actually costing the most time right now?",
+            "description": "Select the current bottleneck and session frequency, and see which Axio Observer technology addresses it.",
+            "fields": [
+              {
+                "key": "currentBottleneck",
+                "label": "Current bottleneck",
+                "options": [
+                  { "val": "sample-finding-focus", "label": "Sample finding and focus" },
+                  { "val": "immersion-setup", "label": "Immersion setup" },
+                  { "val": "focus-drift", "label": "Focus drift over time" },
+                  { "val": "spectral-acquisition-speed", "label": "Spectral acquisition speed" }
+                ]
+              },
+              {
+                "key": "sessionFrequency",
+                "label": "Session frequency",
+                "options": [
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "multiple-daily", "label": "Multiple sessions daily" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "currentBottleneck": "sample-finding-focus" },
+                "title": "AI Sample Finder Fits",
+                "body": "Sample finding and focus are exactly what AI Sample Finder automates, cutting time to image from minutes to seconds.",
+                "tags": ["AI Sample Finder"]
+              },
+              {
+                "condition": { "currentBottleneck": "immersion-setup" },
+                "title": "Autoimmersion Module Fits",
+                "body": "Manual immersion setup risk is removed by the Autoimmersion Module, available on Axio Observer 7.",
+                "tags": ["Autoimmersion Module"]
+              },
+              {
+                "condition": { "currentBottleneck": "focus-drift" },
+                "title": "Definite Focus 3 Fits",
+                "body": "Focus drift over multi-day, multi-position time-lapse work is exactly what Definite Focus 3 compensates for.",
+                "tags": ["Definite Focus 3"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Technology",
+                "body": "Share the current bottleneck and session frequency, and the right combination of AI Sample Finder, Autoimmersion Module, Definite Focus 3, or Duolink gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Widefield, optical sectioning, or something more advanced, what does the experiment actually need?",
+            "description": "Select the imaging requirement and fluorescence complexity, and see the recommended platform configuration.",
+            "steps": [
+              {
+                "key": "primaryImagingNeed",
+                "question": "What's the primary imaging need?",
+                "options": [
+                  { "val": "standard-widefield", "label": "Standard widefield" },
+                  { "val": "optical-sectioning", "label": "Optical sectioning" },
+                  { "val": "super-resolution", "label": "Super-resolution" },
+                  { "val": "correlative", "label": "Correlative (EM combined)" }
+                ]
+              },
+              {
+                "key": "fluorescenceComplexity",
+                "question": "What's the fluorescence complexity?",
+                "options": [
+                  { "val": "single-channel", "label": "Single channel" },
+                  { "val": "sequential-multichannel", "label": "Sequential multichannel" },
+                  { "val": "simultaneous-multichannel", "label": "Simultaneous multi-channel" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the sample type (live cell culture, fixed specimens, or both), and Apotome 3, Duolink, or a super-resolution-ready configuration gets recommended.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "The top of Zeiss's inverted range",
+            "title": "Axio Observer vs Axiovert 7",
+            "description": "Compare the ZEISS Axio Observer with other ZEISS inverted microscopes to identify the best solution for automated imaging, fluorescence microscopy, and multidimensional research.",
+            "columns": [
+              { "label": "Axio Observer", "highlight": true },
+              { "label": "Axiovert 7", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Platform Philosophy", "values": ["Open, modular, assembled per experiment", "Defined, motorized stand with six named contrast methods"] },
+              { "feature": "AI Automation", "values": ["AI Sample Finder (sample detection, focus, region finding, minutes to seconds)", "Snap-button workflow with motorized automation"] },
+              { "feature": "Optical Sectioning", "values": ["Apotome 3 compatible", "Not confirmed on that source"] },
+              { "feature": "Immersion Automation", "values": ["Autoimmersion Module (Axio Observer 7)", "Not confirmed"] },
+              { "feature": "Focus Drift Compensation", "values": ["Definite Focus 3", "Motorized focus (drift compensation not specifically named)"] },
+              { "feature": "Simultaneous Spectral Imaging", "values": ["Duolink, 2 channels simultaneously", "Multichannel, automatic overlay (sequential)"] },
+              { "feature": "Field Number", "values": ["23 mm (referenced)", "23 mm (confirmed)"] },
+              { "feature": "Confirmed Contrast Methods", "values": ["PlasDIC (application example)", "PH, FL, DIC, PlasDIC, iHMC, POL (6, fully confirmed)"] },
+              { "feature": "Software", "values": ["ZEN, with Microscopy Copilot", "ZEN"] },
+              { "feature": "Best For", "values": ["Labs needing correlative imaging, super-resolution readiness, or a genuinely custom-built system", "Labs needing a defined, motorized, six-contrast-method platform with whole-slide and multiwell automation out of the box"] },
+              { "feature": "Choose When", "values": ["The research needs the flexibility to add capability incrementally, including super-resolution and correlative work", "The full contrast range and automated scanning/screening are needed as a complete, defined system"] }
+            ],
+            "disclaimer": "Axio Observer and Axiovert 7 sit at the top of Zeiss's inverted range, but they answer different questions. Axiovert 7 is the more fully specified system, six contrast methods, motorization, and automation confirmed directly. Axio Observer is the open platform, built around AI-driven ease of use and a genuinely extensive accessory ecosystem, for labs whose research direction isn't fully fixed yet, or who need capabilities like super-resolution and correlative EM imaging that Axiovert 7's page doesn't address."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the industries and research environments where the ZEISS Axio Observer supports live-cell imaging, tissue analysis, drug discovery, and advanced life science research.",
+            "industries": [
+              { "name": "Cell Biology and High-Content Imaging", "icon": "flask", "useCase": "Live cell culture and multimodal fluorescence studies", "consideration": "AI Sample Finder speeds high-throughput daily imaging sessions" },
+              { "name": "Neuroscience Research", "icon": "zap", "useCase": "Cortical neuron structural imaging", "consideration": "Demonstrated directly via Apotome 3 optical sectioning comparisons" },
+              { "name": "Long-Term and Multi-Day Studies", "icon": "clock", "useCase": "Time-lapse imaging across days and multiple positions", "consideration": "Definite Focus 3 keeps extended sessions sharp throughout" },
+              { "name": "Genotoxicity and Toxicology Research", "icon": "shield", "useCase": "High-content imaging analysis", "consideration": "Referenced directly in Zeiss's own genotoxicity case study" },
+              { "name": "Correlative Microscopy Facilities", "icon": "cpu", "useCase": "Combining light and electron microscopy data", "consideration": "Native support for combining acquired images with EM and other modalities" },
+              { "name": "Specialized Environment Research", "icon": "target", "useCase": "Imaging under non-standard physical conditions", "consideration": "Referenced in Zeiss's hypergravity live-cell imaging customer story" },
+              { "name": "Academic Core Imaging Facilities", "icon": "school", "useCase": "Shared platforms serving varied and evolving research needs", "consideration": "Modular, open design accommodates changing requirements across many users" },
+              { "name": "Pharmaceutical and Biotech R&D", "icon": "pill", "useCase": "Advanced fluorescence and live-cell drug response studies", "consideration": "Duolink and Autocorr objectives support demanding multichannel, multi-depth imaging" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application support, training, workflow configuration, and after-sales service for the ZEISS Axio Observer from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows AI Sample Finder and relevant accessory technologies on your own samples." },
+              { "title": "Platform Configuration Support", "description": "Confirms which accessories and modalities the research actually needs." },
+              { "title": "Correlative Imaging Assessment", "description": "Scopes EM data combination and other multimodal workflows." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Apotome 3, Autoimmersion, and Definite Focus 3 Setup", "description": "Configuration of the relevant optical sectioning, immersion, and focus modules." },
+              { "title": "Operator Training", "description": "AI Sample Finder workflow, ZEN software, Microscopy Copilot use." },
+              { "title": "Preventive Maintenance", "description": "Optics, automation modules, and camera performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, immersion media, filter sets, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Axio Observer used for?", "answer": "It's an open, modular inverted microscope platform for demanding multimodal imaging of living and fixed specimens, built to be tailored precisely to the requirements of individual research programmes, from widefield through super-resolution imaging." },
+            { "question": "What is AI Sample Finder?", "answer": "An automated feature that detects the sample carrier, adjusts focus, and finds the relevant sample region without manual input, reducing time to image from minutes to just seconds." },
+            { "question": "Can it perform optical sectioning?", "answer": "Yes, with ZEISS Apotome 3, using structured illumination to remove out-of-focus light and produce high-contrast optical sections, even from thicker specimens." },
+            { "question": "Does it support automated water immersion?", "answer": "Yes, via the Autoimmersion Module, available for Axio Observer 7, which automates hands-free water immersion and removes the risk of data loss or objective damage from manual immersion errors." },
+            { "question": "How does it handle long time-lapse experiments?", "answer": "Definite Focus 3 compensates for focus drift, keeping multi-day, multi-position time-lapse experiments sharp and high-contrast throughout." },
+            { "question": "Can it capture multiple fluorescence channels simultaneously?", "answer": "Yes, using Duolink alongside ZEN imaging software, two spectrally separated channels can be captured together at high speed." },
+            { "question": "What light sources are available?", "answer": "Viluma 5 and Viluma 7 multicolor LED sources for fluorescence, and the Xylis white light LED source, which delivers reproducible output with no warm-up time across its lifespan." },
+            { "question": "Can it be combined with electron microscopy data?", "answer": "Yes, acquired images combine with electron microscopy data and other imaging modalities for correlative workflows." },
+            { "question": "What is ZEISS Microscopy Copilot?", "answer": "An AI assistant aware of the specific microscope configuration and available ZEN Toolkits, providing quick, natural-language guidance on experiment setup, automation, and post-processing." },
+            { "question": "How is Axio Observer different from Axiovert 7?", "answer": "Axiovert 7 is a fully specified, motorized platform with six confirmed contrast methods and automated whole-slide and multiwell workflows. Axio Observer is a more open platform, defined by its AI-driven automation and an extensive accessory ecosystem (Apotome 3, Autoimmersion Module, Definite Focus 3, Duolink), built to be assembled specifically around the experiment, including correlative and super-resolution imaging." },
+            { "question": "Which cameras is it compatible with?", "answer": "The full ZEISS Axiocam portfolio, selected by sensitivity, resolution, and speed to match the application." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "A full contrast method list, magnification range, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Axio Observer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the accessories and modalities selected for the specific research application." },
+            { "question": "Who is the authorized distributor of the Axio Observer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Axio Observer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Axio Observer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. AI Sample Finder cutting time to image from minutes to seconds, Apotome 3 for optical sectioning, and an accessory ecosystem built to grow with the research rather than get replaced by it. Share the imaging modalities the work actually needs, and the right Axio Observer configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the imaging modalities the work needs, then confirm the right Axio Observer configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "imagingModalities", "label": "Imaging modalities needed", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the imaging modalities the research actually needs (widefield, optical sectioning, super-resolution, long-term live-cell), and the right Axio Observer configuration and accessory set gets confirmed from there." },
+              { "title": "Plan the expansion path", "body": "Share where the research programme is likely to go over the next few years, not just what it needs today, and the right starting configuration and expansion path get planned around that." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Minutes to seconds. That's what AI does to the time between opening the software and getting an image.",
+            "heroLead": "Axio Observer isn't one microscope, it's an open platform, built to be assembled around exactly what a research programme actually needs, from standard widefield transmitted light through to sensitive super-resolution imaging. The AI Sample Finder removes the manual routine that eats into every session: it automatically detects the sample carrier, adjusts focus, and finds the sample region on its own, cutting time to image from minutes down to seconds. Wizards guide the experimental setup itself, so choosing the right imaging modality doesn't require re-learning the system every time the application changes. Add Apotome 3 for structured-illumination optical sectioning. Add the Autoimmersion Module for hands-free water immersion that removes both the tedium and the real risk of losing a data point, or damaging the objective, to a manual immersion error. Add Definite Focus 3 to hold focus across a multi-day, multi-position time-lapse without drift creeping in. Every addition keeps the same platform, not a replacement for it. What it removes: the manual steps between sample and image, sample-finding, focus, immersion, all automatable. What it adapts to: whatever the experiment actually calls for, today and later. What guides it: ZEISS Microscopy Copilot, an AI assistant that already knows the configuration.",
+            "stats": [
+              { "value": "AI Sample Finder", "label": "Automated sample detection, focus, and region finding" },
+              { "value": "Minutes to seconds", "label": "Time-to-image reduction, per Zeiss" },
+              { "value": "Apotome 3", "label": "Structured illumination optical sectioning" },
+              { "value": "Autoimmersion Module", "label": "Automated, hands-free water immersion (Axio Observer 7)" },
+              { "value": "Definite Focus 3", "label": "Focus drift compensation for multi-day time-lapse" },
+              { "value": "Duolink", "label": "Simultaneous two-channel spectral imaging" },
+              { "value": "Autocorr objectives", "label": "Software-adjustable optics for varying sample depth" },
+              { "value": "Viluma 5 / 7 + Xylis", "label": "LED light source options for fluorescence and white light" },
+              { "value": "23 mm", "label": "Field number, large field of view imaging" },
+              { "value": "ZEISS Microscopy Copilot", "label": "AI assistant, configuration-aware" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Explore the complete ZEISS Axio Observer platform, including its imaging capabilities, automation features, software options, and research applications.",
+                "body": [
+                  "An inverted platform for demanding multimodal imaging. Living and fixed specimens both, built to be tailored precisely to the experiment.",
+                  "Flexibility from widefield to super-resolution imaging. Interfaces span from standard transmitted light through to sensitive super-resolution technologies.",
+                  "AI Sample Finder automates the routine setup steps. Sample carrier detection, focus adjustment, and sample region identification, all handled automatically.",
+                  "Time to image drops from minutes to seconds. The direct, stated result of removing manual sample-finding and focus steps.",
+                  "Wizards guide experimental setup. Selecting the right imaging modality for the application becomes intuitive rather than a re-learned process each time.",
+                  "Acquired images combine with electron microscopy and other modalities. Correlative workflows supported, not siloed.",
+                  "Fast switchable light sources and filters. Highest spectral flexibility and speed, without slowing the workflow down.",
+                  "Camera selection matched to the application. Sensitivity, resolution, and speed chosen for what the experiment actually needs.",
+                  "Automatic focus maintenance for long-term imaging. Keeps samples in focus across extended sessions without manual intervention.",
+                  "Automatic objective adaptation to the sample. The system adjusts rather than requiring manual reconfiguration.",
+                  "Apotome 3 available for optical sectioning. Structured illumination removes out-of-focus light, delivering high-contrast images even from thicker specimens.",
+                  "Autoimmersion Module available for Axio Observer 7. Automated, hands-free water immersion, removing both the tedium and the real risk of user error damaging data or the microscope.",
+                  "Definite Focus 3 compensates for focus drift. Multi-day, multi-position time-lapse experiments stay sharp and high-contrast throughout.",
+                  "Viluma 5 and 7 LED light sources for fluorescence. Fast illumination reducing cross-stimulation while increasing contrast and signal-to-noise ratio.",
+                  "Xylis white light LED source. High, reproducible output with no warm-up time across its entire lifespan.",
+                  "Virtual filter technology. A wide range of excitation and emission combinations, with high excitation intensity and extremely fast switching.",
+                  "Duolink enables simultaneous spectral imaging. Two spectrally separated channels captured together, high-speed, through ZEN software.",
+                  "Autocorr objectives adjust to the sample via a ZEN software slider. Crisp contrast maintained even deep inside the specimen.",
+                  "Guided by ZEISS Microscopy Copilot. An AI assistant aware of the exact microscope configuration and available ZEN Toolkits.",
+                  "Field number of 23 mm for large field of view imaging. Referenced specifically in the live-cell culture application example."
+                ],
+                "cards": [
+                  { "title": "AI Sample Finder", "description": "Minutes of manual setup reduced to seconds" },
+                  { "title": "Apotome 3 compatible", "description": "Optical sectioning without a confocal system" },
+                  { "title": "Autoimmersion Module", "description": "Immersion error and data loss risk removed" },
+                  { "title": "Definite Focus 3", "description": "Multi-day time-lapse that stays sharp throughout" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Discover the core technologies that make the ZEISS Axio Observer ideal for automated microscopy, multidimensional imaging, and high-throughput research workflows."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Discover the core technologies that make the ZEISS Axio Observer ideal for automated microscopy, multidimensional imaging, and high-throughput research workflows."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the technical specifications of the ZEISS Axio Observer, including contrast methods, magnification range, motorization, software, and imaging capabilities."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "AI Sample Finder",
+                "title": "AI Sample Finder",
+                "description": "How automated sample detection changes daily throughput.",
+                "body": [
+                  "Microscopes keep getting more automated on the imaging side, but placing the sample, adjusting focus, and identifying the relevant region on a carrier have stayed stubbornly manual, small steps repeated at the start of every session, every sample, every day.",
+                  "AI Sample Finder removes that sequence. It detects the sample carrier automatically, adjusts focus, and locates the sample region without operator input, and Zeiss states the effect directly: time to image drops from minutes to just seconds. Across a lab running dozens of samples a day, that isn't a convenience feature, it's a genuine change in how much research actually fits into a working session."
+                ],
+                "utilityChecklist": [
+                  { "label": "Manually locating the sample carrier", "value": "Automatic detection" },
+                  { "label": "Adjusting focus by hand, every sample", "value": "Automatic focus adjustment" },
+                  { "label": "Hunting for the relevant sample region", "value": "Automatic region finding" },
+                  { "label": "Minutes lost before imaging even starts", "value": "Reduced to seconds" }
+                ],
+                "disclaimer": "Share how many samples run through a typical session, and the realistic daily time saved from removing manual sample-finding gets discussed against your current routine."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Built to Grow With the Experiment",
+                "title": "Built to Grow With the Experiment",
+                "description": "Why this platform is defined by what it accepts, not what it ships with.",
+                "cards": [
+                  { "title": "Deeper optical sectioning than standard widefield", "description": "Apotome 3." },
+                  { "title": "Risk-free water immersion imaging", "description": "Autoimmersion Module (Axio Observer 7)." },
+                  { "title": "Long, stable time-lapse across days", "description": "Definite Focus 3." },
+                  { "title": "Faster, simultaneous multichannel capture", "description": "Duolink." },
+                  { "title": "Consistent contrast at varying sample depth", "description": "Autocorr objectives." },
+                  { "title": "Guidance through unfamiliar configurations", "description": "ZEISS Microscopy Copilot." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access brochures, application guides, software information, and technical documents for the ZEISS Axio Observer Inverted Microscope.",
+                "cards": [
+                  { "title": "Axio Observer Product Information Sheet", "description": "Available on request" },
+                  { "title": "Autoimmersion Module for Axio Observer 7", "description": "Available on request" },
+                  { "title": "Axio Observer Bundle for Live Cell Imaging", "description": "Available on request" },
+                  { "title": "Filters and Filter Wheels Guide", "description": "Available on request" },
+                  { "title": "Microscope Bundle for Optical Sectioning", "description": "Available on request" },
+                  { "title": "Microscope Bundle for Screening Applications", "description": "Available on request" },
+                  { "title": "ZEISS Microscope Objectives Overview", "description": "Available on request" },
+                  { "title": "Live Cell Imaging Under Hypergravity (Customer Story)", "description": "Available on request" },
+                  { "title": "High Content Imaging for Genotoxicity (Case Study)", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Axio Observer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. AI Sample Finder cutting time to image from minutes to seconds, Apotome 3 for optical sectioning, and an accessory ecosystem built to grow with the research rather than get replaced by it. Share the imaging modalities the work actually needs, and the right Axio Observer configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -121,6 +121,12 @@ import chemspeedAutomatedSynthesisForInnovativeMedicinesCatalog from "./chemspee
 import chemspeedAutomatedExtractionQuechersCatalog from "./chemspeed/automated-extraction-quechers.json";
 import chemspeedCrystalBenchtopSolutionCatalog from "./chemspeed/crystal-benchtop-solution.json";
 import bwbTechnologiesFlamePhotometersCatalog from "./bwb-technologies/flame-photometers.json";
+import zeissInvertedMicroscopesCatalog from "./zeiss/inverted-microscopes.json";
+import zeissAutomatedMicroscopySystemsCatalog from "./zeiss/automated-microscopy-systems.json";
+import zeissStereoDiscoveryFamilyCatalog from "./zeiss/stereo-discovery-family.json";
+import zeissStereoMicroscopesCatalog from "./zeiss/stereo-microscopes.json";
+import zeissUprightMicroscopesCatalog from "./zeiss/upright-microscopes.json";
+import zeissZoomMicroscopesCatalog from "./zeiss/zoom-microscopes.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -256,6 +262,12 @@ const principalCatalogs = [
   chemspeedAutomatedExtractionQuechersCatalog,
   chemspeedCrystalBenchtopSolutionCatalog,
   bwbTechnologiesFlamePhotometersCatalog,
+  zeissInvertedMicroscopesCatalog,
+  zeissAutomatedMicroscopySystemsCatalog,
+  zeissStereoDiscoveryFamilyCatalog,
+  zeissStereoMicroscopesCatalog,
+  zeissUprightMicroscopesCatalog,
+  zeissZoomMicroscopesCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

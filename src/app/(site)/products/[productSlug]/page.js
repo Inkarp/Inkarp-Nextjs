@@ -88,8 +88,6 @@ export default async function ProductPage({ params }) {
       <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <RecTag>{product.principalName}</RecTag>
-
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
                 <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">

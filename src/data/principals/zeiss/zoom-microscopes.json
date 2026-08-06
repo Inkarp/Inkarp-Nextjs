@@ -1,0 +1,714 @@
+{
+  "principal": {
+    "slug": "zeiss",
+    "principalName": "Zeiss",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "Zoom Microscopes",
+      "slug": "zoom-microscopes",
+      "products": [
+        {
+          "name": "Smart Zoom 5 Microscope",
+          "slug": "smart-zoom-5-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Smart Zoom 5 Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/smart-zoom-5-microscope",
+          "breadcrumbPath": "Home > Products > Zoom Microscopes > Smart Zoom 5 Microscope",
+          "h1": "Smart Zoom 5 Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Changing magnification usually means losing your place, refocus, relocate, recalibrate, repeat. Smart Zoom 5 removes that entirely. Every objective is encoded, so the moment it's swapped, the software recognizes the change, corrects the measurement calibration, and returns to the exact focus and x/y position, no manual recovery step required.",
+
+          "features": [
+            "Encoded, Self-Correcting Objectives: Swap lenses, it refocuses and recalibrates itself.",
+            "Automatic Collision Detection: Retracts on contact, protecting sample and operator.",
+            "10x to 2020x Range: Four objectives, one continuous magnification span.",
+            "Shuttle & Find: Relocates your ROI straight to an electron microscope.",
+            "Macro Recording Mode: Record once, repeat the same inspection reproducibly.",
+            "Built-In Vibration Dampening: Crisp detail, even on a busy industrial floor."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Smart Zoom 5 Microscope" },
+            { "label": "Category", "value": "Zoom Microscopes (Industrial)" },
+            { "label": "Magnification Range", "value": "10x to 2020x" },
+            { "label": "Objectives", "value": "4 smart objectives, encoded" },
+            { "label": "Objective Encoding Behavior", "value": "Automatic measurement recalibration, refocus, and x/y repositioning on change" },
+            { "label": "Illumination", "value": "Built-in, segmentable LED ring light" },
+            { "label": "Optical Engine", "value": "Combines zoom, overview camera, and coaxial illumination in one component" },
+            { "label": "Safety", "value": "Collision detection, automatic optical engine retraction on sample contact" },
+            { "label": "Stabilization", "value": "Vibration dampening, optical image stabilization" },
+            { "label": "Tilt Range", "value": "±45°, region of interest stays in focus and centered" },
+            { "label": "Workflow Recording", "value": "Macro recording mode, step-by-step, repeatable" },
+            { "label": "Image Enhancement", "value": "Best Image function, one-click HDR, noise filtering, sharpening comparison" },
+            { "label": "Overview Navigation", "value": "Built-in overview camera, single-snapshot stage coverage" },
+            { "label": "Reporting", "value": "Image annotation, direct export to Word templates" },
+            { "label": "Correlative Workflow", "value": "Shuttle & Find, automated marker recognition and relocation to electron microscopy" },
+            { "label": "Return Policy", "value": "Not confirmed on this source (Metrology division, distinct from the 60-day Research Microscopy policy)" },
+            { "label": "Full Objective Specifications, Resolution, Working Distance", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Weld and Laser Weld Inspection: Coaxial brightfield illumination demonstrated directly on weld cuts.",
+            "Failure Analysis: Encoded objectives and Shuttle & Find support tracing a defect from macro to electron microscopy.",
+            "Electronics and Contact Inspection: Segmented ringlight illumination demonstrated on soldered coil contacts.",
+            "Airbag and Safety Component QC: Full ringlight and extended depth of field demonstrated on laser shots in airbag covers.",
+            "Valve and Component Residue Analysis: Segmented ringlight illumination for exhaust residue inspection.",
+            "Routine QA/QC Documentation: Guided workflow, calibrated components, and direct Word report export.",
+            "Repeat Sample Analysis: Macro recording mode stores and replays step-by-step inspection sequences.",
+            "Multi-Angle High-Magnification Inspection: ±45° tilt keeps the region of interest focused and centered throughout."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Objective & Magnification Selector" },
+            { "id": "config", "label": "Workflow Automation Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Shuttle & Find" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What range does the inspection actually span?",
+            "description": "Select the component type and magnification need, and see the recommended objective set.",
+            "fields": [
+              {
+                "key": "componentType",
+                "label": "Component type",
+                "options": [
+                  { "val": "welds", "label": "Welds" },
+                  { "val": "electronics", "label": "Electronics" },
+                  { "val": "molded-parts", "label": "Molded parts" },
+                  { "val": "mixed", "label": "Mixed" }
+                ]
+              },
+              {
+                "key": "magnificationRangeNeeded",
+                "label": "Magnification range needed",
+                "options": [
+                  { "val": "low-overview", "label": "Low overview (10x-50x)" },
+                  { "val": "mid-range", "label": "Mid-range" },
+                  { "val": "high-detail", "label": "High detail (up to 2020x)" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "magnificationRangeNeeded": "high-detail" },
+                "title": "Full 4-Objective Range Fits",
+                "body": "High-detail inspection up to 2020x is exactly what the full four-objective encoded set is built to cover, without losing calibration between swaps.",
+                "tags": ["High Detail"]
+              },
+              {
+                "condition": { "componentType": "welds" },
+                "title": "Coaxial Brightfield Configuration Fits",
+                "body": "Weld inspection is demonstrated directly with coaxial brightfield illumination on weld cuts.",
+                "tags": ["Welds"]
+              },
+              {
+                "condition": { "componentType": "electronics" },
+                "title": "Segmented Ringlight Configuration Fits",
+                "body": "Electronics and contact inspection is demonstrated directly with segmented ringlight illumination on soldered contacts.",
+                "tags": ["Electronics"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Objective and Illumination Fit",
+                "body": "Share the component type, magnification range, and illumination need, and the right Smart Zoom 5 objective set and illumination configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Repeat inspections, or one-off failure analysis?",
+            "description": "Select the inspection pattern, and confirm the right workflow setup.",
+            "steps": [
+              {
+                "key": "inspectionType",
+                "question": "What's the inspection pattern?",
+                "options": [
+                  { "val": "repeat-routine-qc", "label": "Repeat routine QC" },
+                  { "val": "one-off-failure-analysis", "label": "One-off failure analysis" }
+                ]
+              },
+              {
+                "key": "electronMicroscopyInWorkflow",
+                "question": "Is electron microscopy part of the workflow?",
+                "options": [
+                  { "val": "yes-correlative-needed", "label": "Yes, correlative analysis needed" },
+                  { "val": "optical-only", "label": "Optical only" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the operator experience level (trained microscopist or general QC staff), and macro recording setup and Shuttle & Find requirement get confirmed against your workflow.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing the right ZEISS zoom microscope",
+            "title": "Smart Zoom 5 vs Axio Zoom.V16",
+            "description": "Compare the ZEISS Smart Zoom 5 with other ZEISS zoom microscopes to identify the best solution for industrial inspection, quality control, and failure analysis.",
+            "columns": [
+              { "label": "Smart Zoom 5", "highlight": true },
+              { "label": "Axio Zoom.V16", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Division", "values": ["Industrial Quality Solutions (Metrology)", "Research Microscopy Solutions"] },
+              { "feature": "Magnification Range", "values": ["10x to 2020x", "Not confirmed in this source"] },
+              { "feature": "Objectives", "values": ["4, encoded, self-correcting", "Confirm on specification"] },
+              { "feature": "Primary Use", "values": ["QA/QC, failure analysis, industrial inspection", "Fluorescence and large object field biology imaging"] },
+              { "feature": "Automation", "values": ["Encoded objectives, collision detection, macro recording", "Confirm on specification"] },
+              { "feature": "Correlative Workflow", "values": ["Shuttle & Find, to electron microscopy", "Not confirmed"] },
+              { "feature": "Best For", "values": ["Industrial QC needing reproducible, encoded, automated inspection", "Biological research needing brightness and fluorescence in large fields"] },
+              { "feature": "Choose When", "values": ["The work is component inspection, weld analysis, or failure diagnosis", "The work is fluorescence imaging of complete model organisms"] }
+            ],
+            "disclaimer": "Smart Zoom 5 and Axio Zoom.V16 sit in genuinely different Zeiss divisions, Industrial Quality Solutions and Research Microscopy Solutions respectively, and serve correspondingly different purposes. Smart Zoom 5 is built for industrial QA/QC and failure analysis with encoded, automated optics; Axio Zoom.V16 is positioned for biological fluorescence imaging of large object fields, referenced across the SteREO Discovery family pages but not independently sourced yet."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the industries where the ZEISS Smart Zoom 5 supports quality assurance, industrial inspection, electronics manufacturing, automotive testing, and materials analysis.",
+            "industries": [
+              { "name": "Automotive Manufacturing", "icon": "cpu", "useCase": "Weld inspection, airbag component QC", "consideration": "Coaxial brightfield and full ringlight demonstrated directly on weld cuts and airbag laser shots" },
+              { "name": "Electronics Manufacturing", "icon": "cpu", "useCase": "Solder joint and contact pin inspection", "consideration": "Segmented ringlight demonstrated on coil wire soldered to contact pin" },
+              { "name": "Aerospace and Precision Components", "icon": "cpu", "useCase": "Failure analysis requiring correlative SEM investigation", "consideration": "Shuttle & Find bridges optical and electron microscopy directly" },
+              { "name": "Medical Device Manufacturing", "icon": "pill", "useCase": "Component and material defect inspection", "consideration": "Encoded objectives support reproducible, user-independent QC results" },
+              { "name": "Semiconductor and Microelectronics", "icon": "cpu", "useCase": "Fine-detail component inspection", "consideration": "Up to 2020x magnification resolves small-scale defects" },
+              { "name": "Quality Assurance Departments", "icon": "flask", "useCase": "Routine, repeatable inspection across large sample volumes", "consideration": "Macro recording mode and guided workflow support high-throughput QC" },
+              { "name": "Materials Science Laboratories", "icon": "droplet", "useCase": "Residue, coating, and surface defect analysis", "consideration": "Demonstrated directly on exhaust valve residue inspection" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application support, training, workflow setup, and after-sales service for the ZEISS Smart Zoom 5 from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows encoded objective switching and automated workflows on your own components." },
+              { "title": "Configuration Selection Support", "description": "Confirms objective set, illumination, and Shuttle & Find fit." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Shuttle & Find Integration", "description": "Configuration alongside an existing electron microscope, where applicable." },
+              { "title": "Macro Recording Setup", "description": "Building and storing repeatable step-by-step inspection workflows." },
+              { "title": "Operator Training", "description": "Objective handling, illumination control, and report export." },
+              { "title": "Preventive Maintenance", "description": "Optical engine, objectives, and stabilization system performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, illumination components, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Smart Zoom 5 used for?", "answer": "It's an automated digital microscope for quality assurance, quality control, and failure analysis across industrial applications, built to be simple enough for untrained users while delivering reproducible results." },
+            { "question": "What is the magnification range?", "answer": "10x to 2020x, across four smart objectives." },
+            { "question": "What happens when an objective is changed mid-inspection?", "answer": "The objectives are encoded, so the software automatically recognizes the change, recalibrates measurement, and returns to the correct focus and x/y position, no manual refocusing or relocation needed." },
+            { "question": "Does it protect the sample from accidental contact?", "answer": "Yes, collision detection automatically retracts the optical engine to a safe position the instant contact is detected, protecting both the sample and the user." },
+            { "question": "Can repeat inspections be automated?", "answer": "Yes, macro recording mode stores step-by-step workflows for the same sample type, letting them be repeated reproducibly without in-depth microscope knowledge." },
+            { "question": "What is the Best Image function?", "answer": "A one-click feature that generates a series of images under varying lighting and processing conditions, including HDR, noise filtering, and sharpening, so the best result can be selected for the application." },
+            { "question": "Can Smart Zoom 5 connect to an electron microscope?", "answer": "Yes, through Shuttle & Find, which relocates a defined region of interest from the digital microscope to an electron microscope using automated marker recognition, then aligns both images into an overlay." },
+            { "question": "What illumination options are available?", "answer": "A built-in, segmentable LED ring light, giving complete control over illumination, alongside coaxial brightfield and full or segmented ringlight configurations demonstrated across various applications." },
+            { "question": "Does tilting the microscope lose the region of interest?", "answer": "No, the motorized, encoded architecture keeps the focused region of interest in focus and centered even as the arm tilts up to ±45°." },
+            { "question": "Can reports be generated directly?", "answer": "Yes, images can be annotated and exported directly to Word report templates." },
+            { "question": "How is Smart Zoom 5 different from Zeiss's research microscopes?", "answer": "Smart Zoom 5 belongs to Zeiss's Industrial Quality Solutions division, built specifically for QA/QC, failure analysis, and industrial inspection with encoded, automated optics. The Research Microscopy Solutions range (Primostar, Axiovert, Stemi, SteREO Discovery) is built for biological and life science research instead." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Full objective specifications, resolution, and working distance were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Smart Zoom 5 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the objective set, illumination, and Shuttle & Find configuration selected." },
+            { "question": "Who is the authorized distributor of the Smart Zoom 5 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Smart Zoom 5 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Smart Zoom 5 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Encoded objectives that recalibrate themselves, collision detection that protects the sample automatically, and a direct bridge to electron microscopy when the inspection needs to go further. Share the component types and magnification range, and the right Smart Zoom 5 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the component types and magnification range, then confirm the right Smart Zoom 5 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "componentTypes", "label": "Component types", "type": "text", "required": false },
+              { "key": "magnificationRange", "label": "Magnification range", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the component types and magnification range the inspection work spans, and whether correlative electron microscopy is part of the failure analysis process, and the right Smart Zoom 5 objective and illumination configuration gets confirmed." },
+              { "title": "Confirm the Shuttle & Find fit", "body": "Share whether the failure analysis workflow already includes electron microscopy, and Shuttle & Find compatibility gets confirmed against your existing SEM setup." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Swap the objective. It refocuses, recalibrates, and finds the exact spot on its own.",
+            "heroLead": "Changing magnification usually means losing your place, refocus, relocate, recalibrate, repeat. Smart Zoom 5 removes that entirely. Every objective is encoded, so the moment it's swapped, the software recognizes the change, corrects the measurement calibration, and returns to the exact focus and x/y position, no manual recovery step required. Four smart objectives cover a 10x to 2020x magnification range, with a built-in, segmentable LED ring light giving complete control over illumination. Collision detection retracts the optical engine automatically the instant an objective contacts the sample, protecting both in one motion. Built-in vibration dampening and optical image stabilization keep detail crisp even on a busy industrial floor. A macro recording mode captures a step-by-step inspection workflow once, then repeats it reproducibly, without needing microscope expertise from whoever runs it next. And when a defect needs a closer look under an electron microscope, Shuttle & Find relocates the exact region of interest there in the shortest possible time, no manual re-searching required. What it removes: manual refocusing, recalibration, and relocation on every objective change. What it protects: both the sample and the operator, automatically, on contact. What it connects to: an electron microscope, when the inspection needs to go further.",
+            "stats": [
+              { "value": "10x - 2020x", "label": "Magnification range, across 4 smart objectives" },
+              { "value": "Encoded objectives", "label": "Automatic recalibration, refocus, and repositioning on change" },
+              { "value": "Collision detection", "label": "Automatic retraction on sample contact" },
+              { "value": "Segmentable LED ring light", "label": "Built-in, full illumination control" },
+              { "value": "±45°", "label": "Tilt range, region of interest stays in focus and centered" },
+              { "value": "Shuttle & Find", "label": "Correlative relocation to electron microscopy" },
+              { "value": "Vibration dampening + image stabilization", "label": "Built in, for industrial-floor conditions" },
+              { "value": "Macro recording", "label": "Repeatable, step-by-step inspection workflows" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Explore the complete ZEISS Smart Zoom 5 platform, including automated workflows, encoded optics, imaging technologies, and quality control applications.",
+                "body": [
+                  "An automated digital microscope for QA/QC across virtually every industry. Quick to set up, fully automated, dedicated quality assurance components built in.",
+                  "Simple enough for untrained users to produce excellent results. Not a specialist's instrument requiring years of experience.",
+                  "Macro recording mode enhances repeat sample analysis. Step-by-step workflows stored and replayed for the same sample type.",
+                  "The optical engine combines three functions in one component. Zoom, overview camera, and coaxial illumination, integrated together.",
+                  "The system always knows its own component status. Automatically corrects for component variations without manual calibration.",
+                  "Four smart objectives span 10x to 2020x. A genuinely wide magnification range on one platform.",
+                  "Objectives are encoded. Swap one, and the software recognizes the change, recalibrates measurement, and returns to the correct focus and x/y position automatically.",
+                  "Built-in segmentable LED ring light. Complete control and flexibility over illumination.",
+                  "Collision detection protects sample and user. The optical engine retracts automatically the instant it contacts the sample.",
+                  "Built-in vibration dampening. Low-level vibration doesn't cost image detail.",
+                  "Optical image stabilization. Further protection for imaging quality in industrial environments.",
+                  "A single overview snapshot covers the whole stage area. Fast navigation to the relevant region of interest.",
+                  "Step-by-step workflows record and store for repeatable analysis. No in-depth microscope knowledge required to run them again.",
+                  "The Best Image function generates multiple lighting and processing variants with one click. HDR, noise filtering, and sharpening, choose the best result for the application.",
+                  "Motorized, encoded architecture keeps the region of interest centered through tilt. Tilting the arm ±45° keeps the focused ROI in focus and centered, for multi-angle high-magnification viewing.",
+                  "Guided workflow and calibrated components support user-independent results. Reproducible measurements regardless of who's operating it.",
+                  "Annotate images and export reports directly to Word templates. Documentation built into the workflow, not a separate step.",
+                  "Shuttle & Find relocates a region of interest to an electron microscope. Automated marker recognition, easy relocation, and image overlay creation."
+                ],
+                "cards": [
+                  { "title": "Encoded objectives", "description": "No manual refocus or recalibration on a lens change" },
+                  { "title": "10x to 2020x", "description": "One platform, overview through fine detail" },
+                  { "title": "Automatic collision detection", "description": "Sample and operator protected, without thinking about it" },
+                  { "title": "Shuttle & Find", "description": "A direct bridge to electron microscopy" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Discover the technologies that make the ZEISS Smart Zoom 5 ideal for automated quality inspection, failure analysis, and industrial microscopy."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Explore how the ZEISS Smart Zoom 5 supports weld inspection, electronics manufacturing, failure analysis, routine quality control, and materials inspection."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the technical specifications of the ZEISS Smart Zoom 5, including magnification, objective system, illumination, automation, and reporting features."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Encoded Objectives, Explained",
+                "title": "Encoded Objectives, Explained",
+                "description": "Why swapping lenses doesn't cost setup time here.",
+                "body": [
+                  "Changing magnification on most microscopes means losing everything the inspection had already established, focus, calibration, and exactly where on the sample the region of interest actually was. Every swap becomes a small reset, refocus manually, recalibrate manually, hunt for the same spot manually.",
+                  "Smart Zoom 5's objectives are encoded, so the system knows exactly which one is mounted at all times. Swap objectives mid-inspection, and the software recognizes the change immediately: measurement calibration adjusts automatically, focus returns to where it was, and the x/y position snaps back to the exact region of interest, ready to continue the analysis without any of the usual recovery steps."
+                ],
+                "utilityChecklist": [
+                  { "label": "Refocusing from scratch after every swap", "value": "Automatic return to the correct focus" },
+                  { "label": "Manually recalibrating for the new magnification", "value": "Automatic measurement recalibration" },
+                  { "label": "Re-locating the region of interest by hand", "value": "Automatic return to the exact x/y position" },
+                  { "label": "Time lost on every single magnification change", "value": "Continuing the analysis immediately" }
+                ],
+                "disclaimer": "Share how often the inspection workflow requires switching magnification mid-analysis, and the time saved from encoded objectives gets discussed against your current process."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Shuttle & Find",
+                "title": "Shuttle & Find",
+                "description": "How a region of interest moves from digital to electron microscopy. Some failure analysis needs more resolution than any optical microscope can provide, and the usual bridge to an electron microscope is manual: describe the location, hope it translates, spend real time re-finding the same spot under a completely different imaging system. Shuttle & Find removes that gap. Define a region of interest on Smart Zoom 5, and the same location relocates on the electron microscope within the shortest possible time, using automated marker recognition rather than manual searching. Once found, both images align into a single overlay, giving a direct visual bridge between the optical and electron-level views of the exact same feature. Share whether the failure analysis workflow already includes electron microscopy, and Shuttle & Find compatibility gets confirmed against your existing SEM setup.",
+                "cards": [
+                  { "title": "Manually describing and re-finding the location", "description": "Automated marker recognition." },
+                  { "title": "Time lost searching under the electron microscope", "description": "Optimized time to result." },
+                  { "title": "Uncertainty the same feature was actually found", "description": "Easy, confirmed relocation of marker position." },
+                  { "title": "Two separate, disconnected images", "description": "A single aligned overlay of both views." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access product brochures, accessory guides, Shuttle & Find information, and technical resources for the ZEISS Smart Zoom 5 Microscope.",
+                "cards": [
+                  { "title": "Smart Zoom 5 Product Flyer (10x Objective)", "description": "Available on request" },
+                  { "title": "Smart Zoom 5 Accessories Flyer", "description": "Available on request" },
+                  { "title": "Shuttle & Find Overview", "description": "Available on request" },
+                  { "title": "ZEISS Metrology Portal Access", "description": "Available via Zeiss's Industrial Quality Solutions portal" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Smart Zoom 5 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Encoded objectives that recalibrate themselves, collision detection that protects the sample automatically, and a direct bridge to electron microscopy when the inspection needs to go further. Share the component types and magnification range, and the right Smart Zoom 5 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Axio Zoom V16 Microscope",
+          "slug": "axio-zoom-v16-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Axio Zoom V16 Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/axio-zoom-v16-microscope",
+          "breadcrumbPath": "Home > Products > Zoom Microscopes > Axio Zoom V16 Microscope",
+          "h1": "Axio Zoom V16 Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Numerical aperture usually climbs slowly as magnification increases, and stays modest everywhere else. Axio Zoom V16 breaks that pattern: with the Plan-NEOFLUAR Z 2.3x objective, it reaches a numerical aperture of NA 0.5 across a 1.5 mm object field, already in the medium zoom range, not stretched thin at the extreme high end.",
+
+          "features": [
+            "NA 0.5 in the Medium Zoom Range: High aperture, without pushing to max zoom.",
+            "Whole-Organism Fluorescence: Complete specimens, not stitched fragments.",
+            "3 Selectable Zoom Modes: Brightness, Eyepiece, or Camera, chosen per task.",
+            "Best Mode, One Button: Reads optical state, optimizes transmitted light.",
+            "eZoom Electronic Positioning: 2x the precision of a mechanical zoom body.",
+            "Save and Recall Settings: The exact configuration, back in one touch."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Axio Zoom V16 Microscope" },
+            { "label": "Category", "value": "Zoom Microscopes" },
+            { "label": "Zoom Ratio", "value": "16:1" },
+            { "label": "Numerical Aperture (stated)", "value": "NA 0.25" },
+            { "label": "Numerical Aperture (with Plan-NEOFLUAR Z 2.3x)", "value": "NA 0.5, across a 1.5 mm object field" },
+            { "label": "Zoom Technology", "value": "eZoom, electronic lens positioning via stepping motors" },
+            { "label": "Precision vs. Mechanical Zoom", "value": "Doubled" },
+            { "label": "Zoom Modes", "value": "Brightness, Eyepiece, Camera" },
+            { "label": "Iris Diaphragm", "value": "Motorized, coupled to zoom (eZoom)" },
+            { "label": "Transmitted Light", "value": "Brightfield, darkfield, oblique, increased-contrast brightfield (Best Mode)" },
+            { "label": "Control System", "value": "SyCop 3 touchscreen" },
+            { "label": "Settings Save/Recall", "value": "One-button, for repeatable experiment configuration" },
+            { "label": "System Family", "value": "Shared modular interfaces with SteREO Discovery V8, V12, V20" },
+            { "label": "Return Policy", "value": "Not confirmed in this source" },
+            { "label": "Full Objective Range, Working Distance, Field of View at Other Magnifications", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Whole Model Organism Fluorescence Imaging: Complete mouse embryo and Drosophila embryo demonstrated in fluorescence contrast.",
+            "Two-Color Fluorescence Studies: Demonstrated directly on Drosophila embryo imaging.",
+            "Developmental Biology: Whole-embryo imaging without tiling or stitching multiple fields.",
+            "Cell Isolation Workflows: Demonstrated on human cells identified, isolated, and transported to a PCR tube.",
+            "Botanical and Structural Brightfield Imaging: Daisy specimen demonstrated at 150x with PlanApo S 1.5x objective.",
+            "Routine Screening: High aperture in the medium zoom range supports fast, high-quality routine work.",
+            "Multidimensional Imaging Applications: Demanding imaging supported without needing extreme magnification.",
+            "Contour and Profile Display: Brightfield contrast for transparent, high-contrast, and dyed specimens."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Aperture & Field Size Planner" },
+            { "id": "config", "label": "Zoom Mode Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Intelligent Transmitted Light" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the work need NA 0.5 in the medium range, or is standard aperture enough?",
+            "description": "Select the specimen size and fluorescence requirement, and see the fit against V16.",
+            "fields": [
+              {
+                "key": "specimenType",
+                "label": "Specimen type",
+                "options": [
+                  { "val": "whole-model-organism", "label": "Whole model organism" },
+                  { "val": "tissue-section", "label": "Tissue section" },
+                  { "val": "small-component", "label": "Small component" }
+                ]
+              },
+              {
+                "key": "fluorescencePriority",
+                "label": "Fluorescence priority",
+                "options": [
+                  { "val": "signal-brightness-critical", "label": "Signal brightness is critical" },
+                  { "val": "standard-fluorescence-sufficient", "label": "Standard fluorescence sufficient" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "specimenType": "whole-model-organism" },
+                "title": "NA 0.5 Configuration Fits",
+                "body": "Whole model organism fluorescence imaging is exactly what the Plan-NEOFLUAR Z 2.3x / NA 0.5 configuration and large object field are built for.",
+                "tags": ["Whole Organism"]
+              },
+              {
+                "condition": { "fluorescencePriority": "signal-brightness-critical" },
+                "title": "Brightness Mode Fits",
+                "body": "Where signal strength matters most, Brightness mode holds the highest possible brightness across the entire zoom range.",
+                "tags": ["Brightness Priority"]
+              },
+              {
+                "condition": { "specimenType": "small-component" },
+                "title": "Standard Configuration May Suffice",
+                "body": "Small component work may not need the large-field NA 0.5 configuration — share the fluorescence priority to confirm the simplest fit.",
+                "tags": ["Standard Field"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Aperture and Field Fit",
+                "body": "Share the specimen size and whether whole-organism fluorescence imaging is the primary need, and the right Axio Zoom V16 objective and zoom mode configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Brightness, Eyepiece, or Camera, which matches the daily routine?",
+            "description": "Select the primary observation method, and confirm the right default mode.",
+            "steps": [
+              {
+                "key": "primaryObservationMethod",
+                "question": "What's the primary observation method?",
+                "options": [
+                  { "val": "fluorescence-signal-capture", "label": "Fluorescence signal capture" },
+                  { "val": "ocular-inspection", "label": "Ocular inspection" },
+                  { "val": "camera-documentation", "label": "Camera documentation" }
+                ]
+              },
+              {
+                "key": "cameraInUse",
+                "question": "Is a camera in use?",
+                "options": [
+                  { "val": "zeiss-axiocam", "label": "Specific ZEISS Axiocam model" },
+                  { "val": "third-party", "label": "Third-party" },
+                  { "val": "none-currently", "label": "None currently" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the illumination need (standard transmitted light, or Best Mode automatic optimization), and the default zoom mode and Best Mode configuration approach get recommended.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing the right ZEISS zoom microscope",
+            "title": "Axio Zoom V16 vs SteREO Discovery V20 vs Smart Zoom 5",
+            "description": "Compare the ZEISS Axio Zoom V16 with SteREO Discovery V20 and Smartzoom 5 to select the right ZEISS zoom microscope for your application.",
+            "columns": [
+              { "label": "Axio Zoom V16", "highlight": true },
+              { "label": "SteREO Discovery V20", "highlight": false },
+              { "label": "Smart Zoom 5", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Zoom Ratio", "values": ["16:1", "20:1", "Not a zoom-ratio system, encoded objectives (10x-2020x)"] },
+              { "feature": "Numerical Aperture", "values": ["NA 0.25 (up to NA 0.5 with Plan-NEOFLUAR Z 2.3x)", "Not confirmed on that source", "Not confirmed"] },
+              { "feature": "Fluorescence", "values": ["Yes, core capability, whole-organism imaging", "Not confirmed as core (PentaFluar S available on V8)", "Not a fluorescence-focused system"] },
+              { "feature": "Zoom Technology", "values": ["eZoom, doubled precision", "eZoom, doubled precision", "Encoded objectives, not zoom-based"] },
+              { "feature": "Zoom Modes", "values": ["3 (Brightness, Eyepiece, Camera)", "Not confirmed", "Not applicable"] },
+              { "feature": "Control", "values": ["SyCop 3 touchscreen", "SYCOP touch panel and joystick", "QA/QC graphic interface with gesture control"] },
+              { "feature": "Division", "values": ["Research Microscopy Solutions", "Research Microscopy Solutions", "Industrial Quality Solutions"] },
+              { "feature": "Best For", "values": ["Whole-organism fluorescence imaging in large fields", "Maximum stereo magnification and reproducible positioning", "Industrial QA/QC, failure analysis, encoded automation"] },
+              { "feature": "Choose When", "values": ["The work is fluorescence-driven biology, especially large or whole specimens", "The work needs the widest stereo zoom range and 99% reproducibility", "The work is industrial inspection, not biological research"] }
+            ],
+            "disclaimer": "Axio Zoom V16 and SteREO Discovery V20 share the same eZoom foundation but serve different research needs, V20 for maximum stereo magnification and measurement reproducibility, V16 for fluorescence-driven biology where a large, bright object field matters more than raw zoom ratio. Smart Zoom 5 sits in an entirely different division, built for industrial QC rather than biological research."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the research fields and life science applications where the ZEISS Axio Zoom V16 delivers high-brightness fluorescence imaging and large-field observation.",
+            "industries": [
+              { "name": "Developmental Biology Research", "icon": "flask", "useCase": "Whole mouse and Drosophila embryo fluorescence imaging", "consideration": "Complete organisms imaged in one field, without tiling" },
+              { "name": "Genetics and Molecular Biology", "icon": "flask", "useCase": "Two-color fluorescence studies", "consideration": "Demonstrated directly on Drosophila embryo imaging" },
+              { "name": "Cell Biology and Isolation Workflows", "icon": "flask", "useCase": "Identifying and isolating specific cells for downstream analysis", "consideration": "Demonstrated on human cell isolation to PCR tube" },
+              { "name": "Academic and Core Imaging Facilities", "icon": "school", "useCase": "Shared platforms across varied fluorescence-driven research", "consideration": "Three zoom modes adapt the same hardware to different research needs" },
+              { "name": "Botanical and Structural Research", "icon": "droplet", "useCase": "Brightfield structural imaging of plant specimens", "consideration": "Demonstrated at 150x on daisy specimen structure" },
+              { "name": "Pharmaceutical and Biotech R&D", "icon": "pill", "useCase": "High-throughput fluorescence screening", "consideration": "High aperture in the medium zoom range supports fast routine screening" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application guidance, configuration support, training, and after-sales service for the ZEISS Axio Zoom V16 from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows fluorescence brightness and zoom modes on your own specimens." },
+              { "title": "Objective and Configuration Support", "description": "Confirms Plan-NEOFLUAR Z 2.3x fit and other objective options." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Best Mode Configuration", "description": "Building and saving illumination presets for routine experiment types." },
+              { "title": "Operator Training", "description": "Zoom mode selection, SyCop 3 navigation, Best Mode operation." },
+              { "title": "Preventive Maintenance", "description": "Optics, motorized zoom, and control system performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, filters, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Axio Zoom V16 used for?", "answer": "It's a fluorescence stereo zoom microscope built for large object fields, used to image complete model organisms in fluorescence contrast, alongside routine screening and demanding multidimensional imaging." },
+            { "question": "What is the zoom ratio?", "answer": "16:1." },
+            { "question": "What numerical aperture does it achieve?", "answer": "NA 0.25 as the stated headline figure, reaching NA 0.5 with the Plan-NEOFLUAR Z 2.3x objective across a 1.5 mm object field, already in the medium zoom range." },
+            { "question": "Can it image whole organisms in fluorescence?", "answer": "Yes, demonstrated directly on a complete mouse embryo and a two-color Drosophila embryo, without needing to tile or stitch multiple fields." },
+            { "question": "What are the three zoom modes?", "answer": "Brightness mode (highest brightness across the zoom range, for fluorescence), Eyepiece mode (optimized for ocular observation), and Camera mode (adapted to the connected camera's performance)." },
+            { "question": "What does the Best Mode button do?", "answer": "It determines the current optical state and automatically optimizes transmitted light, including an increased-contrast brightfield option, and can save and reload that configuration for future experiments." },
+            { "question": "What is eZoom?", "answer": "An electronic zoom system that replaces the mechanical zoom curve with stepping motors, correcting for individual lens tolerances and delivering doubled precision compared to a mechanical zoom body." },
+            { "question": "How is it controlled?", "answer": "Via a SyCop 3 touchscreen, consistent with the control approach used across the SteREO Discovery family." },
+            { "question": "How does it fit into Zeiss's wider stereo and zoom range?", "answer": "It shares modular system interfaces with SteREO Discovery V8, V12, and V20, all documented together in Zeiss's stereo and zoom microscope family profile." },
+            { "question": "How is it different from SteREO Discovery V20?", "answer": "Both use eZoom, but V16 is built specifically around fluorescence brightness and large object fields for whole-organism imaging, while V20 is built for maximum stereo magnification (up to 345x) and highly reproducible zoom positioning." },
+            { "question": "Is there a return policy?", "answer": "Not confirmed on this source page. Inkarp can confirm current return and trial policy directly." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Full objective range, working distance, and field of view at other magnifications were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Axio Zoom V16 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the objective, zoom mode, and illumination configuration selected." },
+            { "question": "Who is the authorized distributor of the Axio Zoom V16 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Axio Zoom V16 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Axio Zoom V16 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Superior fluorescence brightness across large object fields, three zoom modes tuned to the actual task, and eZoom precision carried through the whole 16:1 range. Share the specimen size and fluorescence requirements, and the right Axio Zoom V16 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the specimen size and fluorescence requirements, then confirm the right Axio Zoom V16 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "specimenSize", "label": "Specimen size", "type": "text", "required": false },
+              { "key": "fluorescenceRequirements", "label": "Fluorescence requirements", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the specimen size and whether whole-organism fluorescence imaging is the primary need, and the right Axio Zoom V16 objective and zoom mode configuration gets confirmed." },
+              { "title": "Plan the Best Mode setup", "body": "Share how many distinct experiment types the lab runs regularly, and the number of saved Best Mode configurations gets planned around that routine." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "NA 0.5, in the medium zoom range. Not the top of it. The middle.",
+            "heroLead": "Numerical aperture usually climbs slowly as magnification increases, and stays modest everywhere else. Axio Zoom V16 breaks that pattern: with the Plan-NEOFLUAR Z 2.3x objective, it reaches a numerical aperture of NA 0.5 across a 1.5 mm object field, already in the medium zoom range, not stretched thin at the extreme high end. That aperture is what drives everything else. Superior fluorescence brightness in large object fields means whole model organisms, a full mouse embryo, an entire Drosophila embryo, image in fluorescence contrast without breaking the specimen into tiles first. The 16:1 zoom covers overview through fine detail on the same optical path. eZoom replaces the mechanical zoom curve with stepping motors that account for individual lens tolerance, doubling precision over a mechanical zoom body. Three selectable zoom modes, Brightness, Eyepiece, and Camera, optimize the aperture-to-resolution trade-off for whichever task is actually happening. And the Best Mode button reads the current optical state and adjusts transmitted light automatically, saved and recalled for the next experiment at the touch of the same button. What it achieves: high numerical aperture well before the top of the zoom range. What it images: complete model organisms in fluorescence, not fragments of them. What it remembers: exact illumination settings, saved and reloaded per experiment.",
+            "stats": [
+              { "value": "16:1", "label": "Zoom ratio" },
+              { "value": "NA 0.5", "label": "Numerical aperture, with Plan-NEOFLUAR Z 2.3x" },
+              { "value": "1.5 mm", "label": "Object field at that aperture" },
+              { "value": "Medium zoom range", "label": "Where NA 0.5 is already achieved" },
+              { "value": "3 zoom modes", "label": "Brightness, Eyepiece, Camera" },
+              { "value": "2x", "label": "Precision improvement, eZoom vs. mechanical zoom" },
+              { "value": "SyCop 3", "label": "Touchscreen control system" },
+              { "value": "Best Mode", "label": "One-button automatic transmitted light optimization" },
+              { "value": "Modular", "label": "Shared system with SteREO Discovery V8, V12, V20" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the ZEISS Axio Zoom V16 combines high numerical aperture, large-field fluorescence imaging, and intelligent zoom automation for advanced biological research.",
+                "body": [
+                  "A 16x zoom combined with a numerical aperture of NA 0.25. Positioned at the forefront of known stereo and zoom microscopes, per Zeiss.",
+                  "Very high aperture achieved already in the medium zoom range. Not reserved for the extreme top end of magnification.",
+                  "Superior brightness in large object fields. Complete model organisms viewed in fluorescence contrast, not fragmented.",
+                  "NA 0.5 with the Plan-NEOFLUAR Z 2.3x objective. Across a 1.5 mm object field.",
+                  "Supports routine screening and demanding multidimensional imaging. Both, in the medium zoom range, without needing to push to maximum magnification.",
+                  "eZoom pairs a motorized iris diaphragm with the zoom. Three selectable modes optimize for the actual task.",
+                  "Brightness mode holds highest possible brightness across the full zoom range. For fluorescence observation.",
+                  "Eyepiece mode favors conventional ocular observation. Maximum depth of field at large fields, maximum resolution at high magnification.",
+                  "Camera mode adapts to the connected camera's performance. Optimal resolution-to-depth-of-field balance across the whole zoom range.",
+                  "Increased-contrast brightfield available at the touch of the Best Mode button. Alongside standard brightfield, darkfield, and oblique illumination.",
+                  "The system determines the actual optical state and optimizes transmitted light automatically. No manual calculation required.",
+                  "Settings save and reload at the touch of a button. The exact configuration returns for the next experiment.",
+                  "eZoom replaces the mechanical zoom curve with an electronic one. Stepping motors position lenses precisely, accounting for individual lens tolerances.",
+                  "Each zoom body describes its own zoom curve. Rather than one mechanical curve applied uniformly across every unit.",
+                  "Doubled precision compared to a mechanical zoom body. Visibly more captured detail across the magnification range.",
+                  "Controlled via SyCop 3 touchscreen. The same control philosophy carried through the SteREO Discovery family.",
+                  "Part of the same modular system as SteREO Discovery V8, V12, and V20. Shared interfaces and adapters across the full stereo and zoom range."
+                ],
+                "cards": [
+                  { "title": "NA 0.5, medium zoom range", "description": "High aperture without needing maximum magnification" },
+                  { "title": "Whole-organism fluorescence", "description": "Complete specimens, not tiled fragments" },
+                  { "title": "3 zoom modes", "description": "The aperture-resolution trade-off tuned to the task" },
+                  { "title": "eZoom, doubled precision", "description": "Sharper detail across the full 16:1 range" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the high numerical aperture, eZoom precision, intelligent transmitted light, and fluorescence imaging capabilities of the ZEISS Axio Zoom V16."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the ZEISS Axio Zoom V16 supports developmental biology, fluorescence imaging, cell isolation, multidimensional imaging, and life science research."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the confirmed technical specifications, optical performance, and imaging capabilities of the ZEISS Axio Zoom V16 Microscope."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Three Zoom Modes, One Purpose Each",
+                "title": "Three Zoom Modes, One Purpose Each",
+                "description": "Why the same optical path behaves differently depending on what's actually happening.",
+                "body": [
+                  "Every stereo zoom microscope balances the same three things against each other, brightness, depth of field, and resolution, and the ideal balance shifts depending on whether someone's looking through the eyepieces, capturing a camera image, or chasing the brightest possible fluorescence signal. Axio Zoom V16 doesn't force one fixed compromise across all three, eZoom's motorized iris diaphragm shifts the balance per mode.",
+                  "Brightness mode holds the highest possible brightness across the entire zoom range, built specifically for fluorescence observation where signal strength is the whole game. Eyepiece mode favors conventional ocular observation, maximum depth of field at large fields for orientation, maximum resolution at high magnification for detail. Camera mode adapts to whatever camera is actually connected, tuning the resolution-to-depth-of-field relationship to get the most out of that specific sensor across the full range."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fluorescence observation, signal strength matters most", "value": "Brightness mode" },
+                  { "label": "Standard ocular observation across varying magnification", "value": "Eyepiece mode" },
+                  { "label": "Camera-based documentation and imaging", "value": "Camera mode" }
+                ],
+                "disclaimer": "Share whether the primary work is fluorescence observation, ocular inspection, or camera documentation, and the right default zoom mode gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Intelligent Transmitted Light",
+                "title": "Intelligent Transmitted Light",
+                "description": "What the Best Mode button actually automates. Manually optimizing transmitted light for a given specimen and zoom position means understanding the current optical state well enough to adjust it correctly, a skill that takes real time to build and doesn't transfer automatically to a different operator. The Best Mode button removes that requirement. Axio Zoom V16 determines the actual optical state on its own and optimizes transmitted light automatically, adding increased-contrast brightfield to the standard brightfield, darkfield, and oblique options already available. Once the setting is right for a specific application, it saves and reloads at the touch of the same button, so the next experiment starts from exactly the same optical configuration rather than being rebuilt from scratch.",
+                "cards": [
+                  { "title": "Understanding the current optical state to adjust correctly", "description": "Automatic determination and optimization." },
+                  { "title": "Rebuilding the right setting for every new experiment", "description": "Save and reload, one button." },
+                  { "title": "Inconsistent results between operators", "description": "The same saved configuration, every time." },
+                  { "title": "A learning curve before results are reliable", "description": "Automatic optimization from the first use." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access brochures, application notes, user guides, and technical resources for the ZEISS Axio Zoom V16 Microscope.",
+                "cards": [
+                  { "title": "Axio Zoom V16: The Fluorescence Zoom Microscope for Large Fields", "description": "Available on request" },
+                  { "title": "The Modular System of Stereo- and Zoom Microscopes (Full Family Profile)", "description": "Available on request" },
+                  { "title": "Sample Preparation for Fluorescence Microscopy (Webinar)", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Axio Zoom V16 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Superior fluorescence brightness across large object fields, three zoom modes tuned to the actual task, and eZoom precision carried through the whole 16:1 range. Share the specimen size and fluorescence requirements, and the right Axio Zoom V16 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

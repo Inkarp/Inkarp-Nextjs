@@ -1,0 +1,742 @@
+{
+  "principal": {
+    "slug": "zeiss",
+    "principalName": "Zeiss",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "Automated Microscopy Systems",
+      "slug": "automated-microscopy-systems",
+      "products": [
+        {
+          "name": "Axioscan 7 Automated Microscope",
+          "slug": "axioscan-7-automated-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Axioscan 7 Automated Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/axioscan-7-automated-microscope",
+          "breadcrumbPath": "Home > Products > Automated Microscopy Systems > Axioscan 7 Automated Microscope",
+          "h1": "Axioscan 7 Automated Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "A manual microscope scales with the number of hands available to operate it. Axioscan 7 doesn't. Set up a task once, and it digitizes up to 100 slides in a single automated run, with 24/7 uninterrupted operation across similar slide sets or genuinely mixed applications.",
+
+          "features": [
+            "Up to 100 Slides, Unattended: Load once, scan continuously, 24/7.",
+            "Four Purpose-Built Configurations: Standard, Spatial Biology, Clinical, Geology.",
+            "IVDR Certified (Clinical): The only Zeiss product in this range with it.",
+            "Mindpeak AI (Spatial Biology): AI-based image analysis, built in.",
+            "Up to 5 Contrast Techniques: Switched rapidly, no hardware reconfiguration.",
+            "Direct IMS/PACS Integration (Clinical): Via ZEISS Solutions Lab and Dicom converter."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Axioscan 7 Automated Microscope" },
+            { "label": "Category", "value": "Automated Microscopy Systems" },
+            { "label": "Throughput", "value": "Up to 100 slides per run, 24/7 unattended operation" },
+            { "label": "Slide Capacity", "value": "Standard: 12 or 100 · Spatial Biology: 100 · Clinical: 100 · Geology: 12 or 100" },
+            { "label": "Slide Formats", "value": "Standard: 1x3\", 2x3\", 4x3\" · Spatial Biology: 1x3\" · Clinical: 1x3\" · Geology: 1x3\", 2x3\", 4x3\", GEO format" },
+            { "label": "Contrast Techniques", "value": "Standard: brightfield, fluorescence, circular polarization, crossed linear polarization, TIE · Spatial Biology: brightfield, fluorescence, TIE · Clinical: brightfield, fluorescence, circular polarization, TIE · Geology: brightfield, fluorescence, circular polarization, crossed linear polarization, TIE" },
+            { "label": "Objectives", "value": "Standard: choose from 14 · Spatial Biology: 3 · Clinical: 2, plus 4 additional available · Geology: choose from 14" },
+            { "label": "Recommended Cameras", "value": "Standard: Axiocam 705 color, Axiocam 712 mono, Hamamatsu Orca Flash 4.0 · Spatial Biology: Axiocam 820 mono w/ 0.8x adapter, Axiocam 705 color w/ 0.8x adapter · Clinical: Axiocam 705 color, Axiocam 712 mono · Geology: Axiocam 705 color, Axiocam 712 mono, Hamamatsu Orca Flash 4.0" },
+            { "label": "Image Analysis / Workflow", "value": "Standard: ZEN, or any third-party solution · Spatial Biology: ZEN; SlideStream software for protocol selection and scan operation; multi-staining-round coregistration; Mindpeak AI-based analysis · Clinical: Integration into IMS/PACS via ZEISS Solutions Lab and Dicom converter (not IVD by itself) · Geology: ZEN, or any third-party solution" },
+            { "label": "Clinical Diagnostic Certification", "value": "Standard: Not certified · Spatial Biology: Not certified · Clinical: IVDR certified · Geology: Not certified" }
+          ],
+
+          "applications": [
+            "Life Science Research: Standard configuration, up to 14 objectives, full contrast range including polarization.",
+            "Spatial Biology at Scale: Multiple staining round coregistration, Mindpeak AI-based image analysis via SlideStream.",
+            "Pharma and Biotech Screening: High-throughput fluorescence and brightfield digitization across large slide batches.",
+            "Clinical Diagnostics: IVDR-certified configuration with direct IMS/PACS integration.",
+            "Geology and Petrography: GEO-format slide support, PetPAT quantitative analytics toolbox referenced directly.",
+            "Paraffin-Embedded Tissue Digitization: Demonstrated directly on paraffin-embedded mouse kidney sample.",
+            "Amyloid Fibril and Neurodegenerative Research: Referenced directly in Zeiss's Alzheimer's-related content.",
+            "Multi-User Research Facilities: Application flexibility supports varied research groups sharing one system."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Configuration Selector" },
+            { "id": "config", "label": "Throughput Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "IVDR Certification" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which of the four fields does the work actually belong to?",
+            "description": "Select the application area and regulatory requirement, and see which Axioscan 7 configuration fits.",
+            "fields": [
+              {
+                "key": "fieldOfApplication",
+                "label": "Field of application",
+                "options": [
+                  { "val": "life-science", "label": "Life science research" },
+                  { "val": "pharma-biotech", "label": "Pharma/biotech spatial biology" },
+                  { "val": "clinical", "label": "Clinical diagnostics" },
+                  { "val": "geology", "label": "Geology" }
+                ]
+              },
+              {
+                "key": "regulatoryRequirement",
+                "label": "Regulatory requirement",
+                "options": [
+                  { "val": "ivdr-needed", "label": "IVDR certification needed" },
+                  { "val": "research-only", "label": "Research use only" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "fieldOfApplication": "clinical" },
+                "title": "Clinical Configuration Fits",
+                "body": "Clinical diagnostic work needs the IVDR-certified Clinical configuration, the only one of the four certified for diagnostic use.",
+                "tags": ["Clinical"]
+              },
+              {
+                "condition": { "fieldOfApplication": "geology" },
+                "title": "Geology Configuration Fits",
+                "body": "Petrographic and geological thin-section work is covered by the Geology configuration, with GEO format slide support.",
+                "tags": ["Geology"]
+              },
+              {
+                "condition": { "fieldOfApplication": "pharma-biotech" },
+                "title": "Spatial Biology Configuration Fits",
+                "body": "Multi-round staining and AI-based analysis at scale are covered by the Spatial Biology configuration's SlideStream software and Mindpeak AI.",
+                "tags": ["Spatial Biology"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Configuration Fit",
+                "body": "Share the field of application, the slide formats and daily volume involved, and whether regulatory certification is required, and the right Axioscan 7 configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How many slides, and which contrast techniques, does the daily workflow need?",
+            "description": "Select the batch size and contrast requirements, and confirm the right setup.",
+            "steps": [
+              {
+                "key": "dailyWeeklySlideVolume",
+                "question": "What's the daily/weekly slide volume?",
+                "options": [
+                  { "val": "small-batches", "label": "Small batches" },
+                  { "val": "up-to-100-per-run", "label": "Up to 100 per run" }
+                ]
+              },
+              {
+                "key": "contrastTechniquesNeeded",
+                "question": "What contrast techniques are needed?",
+                "options": [
+                  { "val": "brightfield-fluorescence-only", "label": "Brightfield/fluorescence only" },
+                  { "val": "polarization-tie-required", "label": "Polarization and TIE required" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the software integration need (ZEN, third-party, SlideStream/Mindpeak AI, or PACS/IMS), and objective count, camera, and software configuration get confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within Zeiss's Automated Microscopy Systems",
+            "title": "Axioscan 7 vs Celldiscoverer 7",
+            "description": "Compare the ZEISS Axioscan 7 with Celldiscoverer 7 to determine the right automated microscopy solution for your laboratory.",
+            "columns": [
+              { "label": "Axioscan 7", "highlight": true },
+              { "label": "Celldiscoverer 7", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Primary Function", "values": ["Automated slide scanning and digitization", "Confirm on specification (automated live-cell imaging platform)"] },
+              { "feature": "Sample Type", "values": ["Fixed slides, tissue sections, thin sections", "Confirm on specification"] },
+              { "feature": "Throughput", "values": ["Up to 100 slides per run, 24/7", "Confirm on specification"] },
+              { "feature": "Configurations", "values": ["4 (Standard, Spatial Biology, Clinical, Geology)", "Confirm on specification"] },
+              { "feature": "Clinical Certification", "values": ["IVDR (Clinical configuration)", "Confirm on specification"] },
+              { "feature": "Best For", "values": ["Digitizing large slide batches for archival, spatial biology, or diagnostic workflows", "Confirm on specification"] },
+              { "feature": "Choose When", "values": ["The work involves scanning existing prepared slides at volume", "Confirm on specification"] }
+            ],
+            "disclaimer": "Detailed Celldiscoverer 7 specifications weren't available in this source pull, this table will be completed once that source is available. Based on Zeiss's positioning, Axioscan 7 and Celldiscoverer 7 likely serve different automated workflows entirely, slide digitization versus live-cell imaging automation, rather than competing directly."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the industries and research environments where the ZEISS Axioscan 7 delivers high-throughput digital slide scanning and advanced imaging workflows.",
+            "industries": [
+              { "name": "Academic and Life Science Research", "icon": "school", "useCase": "General histology, IHC, and fluorescence slide digitization", "consideration": "Standard configuration's broad objective and contrast range" },
+              { "name": "Pharmaceutical and Biotech R&D", "icon": "pill", "useCase": "Spatial biology and multi-round staining studies", "consideration": "SlideStream and Mindpeak AI purpose-built for this workflow" },
+              { "name": "Clinical Pathology and Diagnostics", "icon": "shield", "useCase": "Digital pathology workflows feeding diagnostic decisions", "consideration": "IVDR-certified Clinical configuration with direct PACS integration" },
+              { "name": "Geology and Materials Science", "icon": "cpu", "useCase": "Petrographic thin section digitization and quantification", "consideration": "GEO format support and PetPAT analytics toolbox" },
+              { "name": "Neuroscience and Neurodegenerative Research", "icon": "zap", "useCase": "Amyloid fibril and related pathology imaging", "consideration": "Referenced directly in Zeiss's Alzheimer's disease detection content" },
+              { "name": "Contract Research Organizations", "icon": "target", "useCase": "High-volume slide processing across varied client studies", "consideration": "100-slide, 24/7 unattended operation supports large batch throughput" },
+              { "name": "Multi-User Core Imaging Facilities", "icon": "repeat", "useCase": "Shared scanning infrastructure across research groups", "consideration": "Application flexibility across fluorescence, brightfield, and polarization" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, workflow integration, operator training, application guidance, and after-sales support for the ZEISS Axioscan 7 from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows automated scanning and contrast switching on your own slides." },
+              { "title": "Configuration Selection Support", "description": "Confirms Standard, Spatial Biology, Clinical, or Geology fit." },
+              { "title": "IVDR and Compliance Assessment", "description": "Scopes Clinical configuration requirements against regulatory need." },
+              { "title": "PACS/IMS Integration Support", "description": "Coordinates Solutions Lab and Dicom converter setup on Clinical." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-run checks." },
+              { "title": "SlideStream and Mindpeak AI Setup", "description": "Configures spatial biology workflow software." },
+              { "title": "Operator Training", "description": "Batch setup, contrast switching, ZEN or configuration-specific software." },
+              { "title": "Preventive Maintenance", "description": "Optics, automation mechanics, and camera performance." },
+              { "title": "Spares and Accessories", "description": "Objectives, cameras, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Axioscan 7 used for?", "answer": "It's an automated digital slide scanner, used across life science research, pharma and biotech spatial biology, clinical diagnostics, and geology, digitizing microscope slides at high throughput." },
+            { "question": "How many slides can it scan in one run?", "answer": "Up to 100, depending on the configuration, with reliable 24/7 unattended operation." },
+            { "question": "What configurations are available?", "answer": "Four: Standard (Life Science Research), Spatial Biology (Pharma & Biotech), Clinical, and Geology and Materials, each with different slide formats, contrast techniques, and software integration." },
+            { "question": "Is Axioscan 7 certified for clinical diagnostic use?", "answer": "Only the Clinical configuration carries IVDR certification. The Standard, Spatial Biology, and Geology configurations are not certified for diagnostic use." },
+            { "question": "What contrast techniques are supported?", "answer": "Up to five, depending on configuration: brightfield, fluorescence, circular polarization, crossed linear polarization, and TIE (transport of intensity equation)." },
+            { "question": "How many objectives are available?", "answer": "Up to 14 on Standard and Geology configurations, 3 on Spatial Biology, and 2 base objectives with 4 additional options on Clinical." },
+            { "question": "What software does it use?", "answer": "ZEN, or third-party solutions, on Standard and Geology. Spatial Biology adds SlideStream software and Mindpeak AI-based image analysis. Clinical integrates into IMS/PACS systems via ZEISS Solutions Lab and a Dicom converter." },
+            { "question": "Can it handle multiple staining rounds on the same tissue?", "answer": "Yes, on the Spatial Biology configuration, which supports coregistration of multiple staining rounds alongside Mindpeak AI-based analysis." },
+            { "question": "What slide formats are supported?", "answer": "1x3\", 2x3\", and 4x3\" on Standard and Geology (Geology adds GEO format specifically), 1x3\" only on Spatial Biology and Clinical." },
+            { "question": "Is this suitable for geological or petrographic work?", "answer": "Yes, the Geology configuration supports GEO-format slides and pairs with the Petrography Analysis Toolbox (PetPAT) for quantitative analytics." },
+            { "question": "How does the Clinical configuration connect to hospital systems?", "answer": "Via ZEISS Solutions Lab and a Dicom converter, integrating into existing IMS and PACS infrastructure. Zeiss notes this integration path itself is not an in vitro diagnostic device." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Detailed dimensions, weight, and full objective and camera part numbers were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Axioscan 7 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration, objectives, and software selected." },
+            { "question": "Who is the authorized distributor of the Axioscan 7 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Axioscan 7 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Axioscan 7 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Four configurations, from general life science research through IVDR-certified clinical diagnostics, all built on the same high-throughput automated scanning platform. Share the field of application and daily slide volume, and the right Axioscan 7 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the field of application and daily slide volume, then confirm the right Axioscan 7 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "fieldOfApplication", "label": "Field of application", "type": "text", "required": false },
+              { "key": "dailySlideVolume", "label": "Daily slide volume", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the field of application (life science research, pharma/biotech, clinical diagnostics, or geology), the slide formats and daily volume involved, and whether regulatory certification is required, and the right Axioscan 7 configuration gets confirmed." },
+              { "title": "Confirm the certification requirement", "body": "Share whether the scanner's output will inform an actual clinical diagnosis or support research and screening work instead, and the right configuration and certification requirement gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Load 100 slides. Walk away. Come back to 100 finished scans.",
+            "heroLead": "A manual microscope scales with the number of hands available to operate it. Axioscan 7 doesn't. Set up a task once, and it digitizes up to 100 slides in a single automated run, with 24/7 uninterrupted operation across similar slide sets or genuinely mixed applications. It isn't one fixed instrument, it's four configurations: Standard, Spatial Biology, Clinical, and Geology, each built around different slide formats, contrast techniques, objectives, and software integration for the field it actually serves. Switch rapidly between fluorescence, brightfield, and polarization without reconfiguring hardware between runs. Image quality holds consistent across the whole batch, not just the first slide or the last. Research-grade data quality supports demanding fluorescence work, and ZEN software unlocks the deeper processing and analysis layer once scanning is done. The Clinical configuration carries IVDR certification, the only Zeiss product in this build with that specific regulatory status. What it automates: the entire slide-to-digital-image pipeline, unattended. What it configures to: the actual field, life science, pharma, clinical, or geology. What it certifies for: in vitro diagnostic use, on the Clinical configuration specifically.",
+            "stats": [
+              { "value": "Up to 100 slides", "label": "Per automated run" },
+              { "value": "24/7", "label": "Unattended operation" },
+              { "value": "4 configurations", "label": "Standard, Spatial Biology, Clinical, Geology" },
+              { "value": "Up to 14 objectives", "label": "Configuration-dependent" },
+              { "value": "Up to 5 contrast techniques", "label": "Brightfield, fluorescence, circular polarization, crossed linear polarization, TIE" },
+              { "value": "IVDR certified", "label": "Clinical configuration only" },
+              { "value": "ZEN software", "label": "Full processing and analysis, or third-party integration" },
+              { "value": "Multiple slide formats", "label": "1x3\", 2x3\", 4x3\", GEO format (configuration-dependent)" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Explore the four ZEISS Axioscan 7 configurations, automated slide scanning capabilities, software integration, and digital pathology workflow options.",
+                "body": [
+                  "High-performance digital slide scanning across four fields. Spatial biology at scale, life science research, clinical applications, and geology.",
+                  "Advanced automation with exceptional image quality. Both delivered together, not traded off against each other.",
+                  "Digitizes up to 100 slides in a single run. Task setup happens once, effortlessly, before the batch starts.",
+                  "Consistent image quality across a variety of imaging modes. The first and hundredth slide in a batch scan to the same standard.",
+                  "Reliable 24/7 operation. Extended, uninterrupted digitization across similar or genuinely mixed slide sets.",
+                  "Four dedicated configurations. Life Science Research, Pharma & Biotech, Clinical Applications, and Geology and Materials.",
+                  "Rapid switching between fluorescence, brightfield, and polarization. No hardware reconfiguration required mid-batch.",
+                  "Research-grade data quality for demanding fluorescence applications. Not a reduced-quality automation trade-off.",
+                  "ZEN software unlocks deeper processing and analysis. Or integrates with third-party analysis tools, depending on the configuration.",
+                  "Slide capacity and format vary by configuration. From 12 or 100 slides at 1x3\"/2x3\"/4x3\" formats on Standard and Geology, to 100 slides at 1x3\" only on Spatial Biology and Clinical.",
+                  "Contrast techniques vary by configuration. Standard and Geology support the widest range, including crossed linear polarization; Spatial Biology and Clinical omit it.",
+                  "Objective count scales with configuration. Up to 14 on Standard and Geology, down to 2-3 base objectives on Spatial Biology and Clinical, with additional options available.",
+                  "Camera recommendations differ per field. Hamamatsu Orca Flash 4.0 available on Standard and Geology; Spatial Biology adds specific 0.8x adapter configurations.",
+                  "Spatial Biology configuration adds SlideStream software and Mindpeak AI. Protocol selection, scan operation, coregistration of multiple staining rounds, and AI-based image analysis.",
+                  "Clinical configuration integrates into IMS/PACS systems. Via ZEISS Solutions Lab and a Dicom converter.",
+                  "Only the Clinical configuration carries IVDR certification. The others are not certified for clinical diagnostic use."
+                ],
+                "cards": [
+                  { "title": "Up to 100 slides, 24/7", "description": "Genuine unattended high-throughput scanning" },
+                  { "title": "4 dedicated configurations", "description": "Built for the actual field, not one-size-fits-all" },
+                  { "title": "Research-grade fluorescence", "description": "No quality trade-off for automation" },
+                  { "title": "IVDR on Clinical", "description": "The only Zeiss configuration certified for diagnostic use" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the high-capacity automation, multi-configuration platform, advanced imaging modes, AI-powered analysis, and digital workflow integration of the ZEISS Axioscan 7."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the ZEISS Axioscan 7 supports life science research, spatial biology, pharmaceutical R&D, clinical pathology, geology, and digital slide imaging."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the technical specifications, slide capacities, imaging modes, objectives, software, and configuration details of the ZEISS Axioscan 7 Automated Microscope."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Four Configurations, One Platform",
+                "title": "Four Configurations, One Platform",
+                "description": "Choosing between Standard, Spatial Biology, Clinical, and Geology.",
+                "body": [
+                  "Buying an automated slide scanner sized for a general lab, then trying to run clinical diagnostic samples or multi-round spatial biology staining through it, means fighting the hardware and software the whole way. Axioscan 7 avoids that by not being one general-purpose system, Zeiss builds four distinct configurations, each with its own slide format range, contrast technique set, objective count, and software layer.",
+                  "Standard covers the broadest general research use, up to 14 objectives and the full contrast range including crossed linear polarization. Spatial Biology trades objective breadth (down to 3) for SlideStream software and Mindpeak AI, purpose-built for coregistering multiple staining rounds and running AI-based analysis at scale. Clinical narrows the slide format to 1x3\" only and adds direct IMS/PACS integration, with the IVDR certification that makes diagnostic use possible. Geology keeps Standard's broad objective and contrast range but adds GEO format slide support for petrographic work."
+                ],
+                "utilityChecklist": [
+                  { "label": "General life science research, broad contrast needs", "value": "Standard" },
+                  { "label": "Multi-round staining, spatial biology at scale", "value": "Spatial Biology" },
+                  { "label": "Clinical diagnostic workflow, IMS/PACS integration", "value": "Clinical" },
+                  { "label": "Petrography, geological thin sections", "value": "Geology" }
+                ],
+                "disclaimer": "Share the field of application and whether regulatory certification or specialized software (SlideStream, Mindpeak AI, PACS integration) is required, and the right configuration gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "What IVDR Certification Actually Means",
+                "title": "What IVDR Certification Actually Means",
+                "description": "Why the Clinical configuration stands apart from the other three.",
+                "cards": [
+                  { "title": "Regulatory certification for diagnostic use", "description": "IVDR certification, specific to this configuration." },
+                  { "title": "Integration into existing hospital imaging systems", "description": "Direct IMS/PACS connection via Solutions Lab and Dicom converter." },
+                  { "title": "A defined, narrower slide format for clinical samples", "description": "1x3\" only, matched to standard clinical slide preparation." },
+                  { "title": "Confidence the other three configurations aren't accidentally used diagnostically", "description": "Explicit certification distinction stated by Zeiss." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access product brochures, application notes, software information, manuals, and technical resources for the ZEISS Axioscan 7 Automated Microscope.",
+                "cards": [
+                  { "title": "Axioscan 7 Product Sheet (Fluorescence, Brightfield, Polarization)", "description": "Available on request" },
+                  { "title": "Axioscan 7 Clinical Product Sheet", "description": "Available on request" },
+                  { "title": "Axioscan 7 Geology Product Sheet", "description": "Available on request" },
+                  { "title": "The Petrography Analysis Toolbox (PetPAT) Overview", "description": "Available on request" },
+                  { "title": "ZEISS DICOM Converter Overview", "description": "Available on request" },
+                  { "title": "Studying Alzheimer's Disease Using Microscopy-Based Detection (White Paper)", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Axioscan 7 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Four configurations, from general life science research through IVDR-certified clinical diagnostics, all built on the same high-throughput automated scanning platform. Share the field of application and daily slide volume, and the right Axioscan 7 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Celldiscoverer 7 Automated Microscope",
+          "slug": "celldiscoverer-7-automated-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss Celldiscoverer 7 Automated Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/celldiscoverer-7-automated-microscope",
+          "breadcrumbPath": "Home > Products > Automated Microscopy Systems > Celldiscoverer 7 Automated Microscope",
+          "h1": "Celldiscoverer 7 Automated Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "High-content imaging usually forces a trade-off: image quality against how much data you can actually collect. Celldiscoverer 7 removes that trade-off. Insert a sample carrier, and the system handles calibration, focus, and aberration correction automatically, no microscopy expertise required to get research-grade results.",
+
+          "features": [
+            "Fully Automated Setup: Insert the sample, the system configures itself.",
+            "Autoimmersion, 50x Objective: Water immersion, supplied and removed automatically.",
+            "Autocorr Aberration Correction: Adjusts for any vessel type, on its own.",
+            "Find Focus + Definite Focus: One-click location, held for days if needed.",
+            "Adaptive Lens Guard: Collision protection, maximized scan area.",
+            "LSM 910 Confocal Upgrade Path: Same stand, up to 1.9x resolution gain."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss Celldiscoverer 7 Automated Microscope" },
+            { "label": "Category", "value": "Automated Microscopy Systems" },
+            { "label": "Platform Tiers", "value": "Widefield; with LSM 910 (Confocal)" },
+            { "label": "Widefield Speed Improvement", "value": "Up to 9x faster (latest generation vs. previous)" },
+            { "label": "Confocal Speed Improvement", "value": "Up to 1.8x faster (latest generation vs. previous)" },
+            { "label": "Excitation Lines", "value": "7, individually controlled, including 735 nm far red" },
+            { "label": "Recommended Cameras", "value": "Axiocam 807 mono, Axiocam 820 mono" },
+            { "label": "Immersion Objective", "value": "50x water, fully automated supply/removal (Autoimmersion)" },
+            { "label": "Aberration Correction", "value": "Automatic, via Autocorr correction ring adjustment" },
+            { "label": "Sample Carrier Compatibility", "value": "Petri dishes, chamber slides, multi-well plates, plastic/glass, thin/thick bottoms, low/high-skirt plates" },
+            { "label": "Incubation", "value": "Sustained 37°C, multi-day live-cell capable" },
+            { "label": "Focus Systems", "value": "Find Focus (hardware-based, single click), Definite Focus (continuous hold), automatic multi-position focus maps" },
+            { "label": "Lens Protection", "value": "Adaptive Lens Guard, collision protection with maximized scan area" },
+            { "label": "Confocal Upgrade", "value": "LSM 910 with Airyscan 2, up to 1.9x resolution improvement, spectral imaging, photomanipulation (FRAP, FRET)" },
+            { "label": "Robotic Loader (optional)", "value": "Peak Analysis & Automation (PAA) partnership, all SBS multi-well plate formats" },
+            { "label": "Analysis Software", "value": "arivis Pro, arivis Cloud (neural network training), arivis Hub (parallel cloud processing)" },
+            { "label": "Full Objective Range, Physical Dimensions", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Live-Cell Imaging: Demonstrated on HeLa Kyoto growth assays imaged every 15 minutes over 72 hours via Autoimmersion.",
+            "Organoid and 3D Culture Research: Referenced directly in Zeiss's organoid analysis case study content.",
+            "High-Content Screening: 384-microwell plate imaging demonstrated across multiple magnifications and 3 channels.",
+            "Developmental Biology: Lateral line primordium migration in zebrafish embryos, cricket embryo GFP expression, multi-position experiments.",
+            "Neuroscience and Neurodegeneration Research: Rat cortical primary neuron culture, deconvolved via GPU-based processing.",
+            "Cell Proliferation and Growth Assays: 72-hour phase gradient contrast imaging with machine-learning-based cell region detection.",
+            "Confocal 3D and Super-Resolution Imaging: Porcine kidney cell division and starlet sea anemone demonstrated using LSM Plus and Airyscan 2.",
+            "Guided Acquisition and Subset Imaging: Automatic identification and imaging of a subset from a group of fixed Drosophila embryos.",
+            "Drug Discovery and High-Content Analysis: Named directly among Zeiss's related application areas for biotech and pharma.",
+            "Model Organism Imaging: Zebrafish, cricket embryos, and starlet sea anemone, spanning a genuinely wide range of specimen types."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Imaging Mode Selector" },
+            { "id": "config", "label": "Throughput Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Autoimmersion" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Widefield alone, or widefield plus confocal?",
+            "description": "Select the primary imaging mode and resolution requirement, and see which platform tier fits.",
+            "fields": [
+              {
+                "key": "primaryImagingMode",
+                "label": "Primary imaging mode",
+                "options": [
+                  { "val": "widefield-only", "label": "Widefield only" },
+                  { "val": "confocal-needed", "label": "Confocal 3D imaging needed" }
+                ]
+              },
+              {
+                "key": "resolutionRequirement",
+                "label": "Resolution requirement",
+                "options": [
+                  { "val": "standard-widefield", "label": "Standard widefield" },
+                  { "val": "super-resolution", "label": "Super-resolution (Airyscan 2)" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "primaryImagingMode": "confocal-needed" },
+                "title": "LSM 910 Confocal Upgrade Fits",
+                "body": "Confocal 3D imaging needs the LSM 910 with Airyscan 2 upgrade path, delivering up to 1.9x resolution improvement on the same stand.",
+                "tags": ["LSM 910"]
+              },
+              {
+                "condition": { "resolutionRequirement": "super-resolution" },
+                "title": "Airyscan 2 Fits",
+                "body": "Super-resolution work is covered by Airyscan 2, part of the LSM 910 confocal upgrade.",
+                "tags": ["Airyscan 2"]
+              },
+              {
+                "condition": { "primaryImagingMode": "widefield-only" },
+                "title": "Widefield Platform Fits",
+                "body": "Standard widefield imaging is fully covered by the base Celldiscoverer 7 platform, without the confocal upgrade.",
+                "tags": ["Widefield"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Platform Tier",
+                "body": "Share the sample type and imaging modes required, and Widefield or Widefield + LSM 910 (Confocal) gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Single samples, or high-volume multi-well screening?",
+            "description": "Select the sample volume and loading automation, and confirm the right setup.",
+            "steps": [
+              {
+                "key": "sampleVolume",
+                "question": "What's the sample volume?",
+                "options": [
+                  { "val": "individual-samples", "label": "Individual samples" },
+                  { "val": "sbs-multiwell-scale", "label": "SBS multi-well plates at scale" }
+                ]
+              },
+              {
+                "key": "loadingAutomation",
+                "question": "What loading automation is needed?",
+                "options": [
+                  { "val": "manual-loading", "label": "Manual loading" },
+                  { "val": "robotic-loader", "label": "Robotic loader integration (PAA)" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the experiment duration and analysis software need (basic viewing or arivis Pro/Cloud/Hub), and the robotic loader and analysis software requirements get confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within Zeiss's Automated Microscopy Systems",
+            "title": "Celldiscoverer 7 vs Axioscan 7",
+            "description": "Compare the ZEISS Celldiscoverer 7 with Axioscan 7 to choose the right automated microscopy solution for your research workflow.",
+            "columns": [
+              { "label": "Celldiscoverer 7", "highlight": true },
+              { "label": "Axioscan 7", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Primary Function", "values": ["Automated live-cell and high-content imaging", "Automated slide scanning and digitization"] },
+              { "feature": "Sample Type", "values": ["Live cells, organoids, model organisms, multi-well plates", "Fixed slides, tissue sections, thin sections"] },
+              { "feature": "Imaging Modes", "values": ["Widefield, confocal (with LSM 910), phase gradient contrast, label-free", "Brightfield, fluorescence, polarization, TIE"] },
+              { "feature": "Immersion", "values": ["Automated 50x water immersion (Autoimmersion)", "Not applicable, dry slide scanning"] },
+              { "feature": "Incubation", "values": ["Sustained 37°C, multi-day live-cell support", "Not applicable"] },
+              { "feature": "Focus", "values": ["Find Focus, Definite Focus, automatic multi-position maps", "Automated slide focus per configuration"] },
+              { "feature": "Throughput", "values": ["Up to 9x faster widefield, 1.8x faster confocal (latest generation)", "Up to 100 slides per run, 24/7"] },
+              { "feature": "Confocal Upgrade", "values": ["Yes, LSM 910 with Airyscan 2", "Not applicable"] },
+              { "feature": "Clinical Certification", "values": ["Not confirmed on this source", "IVDR (Clinical configuration)"] },
+              { "feature": "Best For", "values": ["Live-cell, organoid, and high-content research requiring automation and reproducibility", "Digitizing large batches of prepared slides for archival, spatial biology, or diagnostics"] },
+              { "feature": "Choose When", "values": ["The work involves living samples, time-lapse, or confocal 3D imaging", "The work involves scanning existing fixed slides at volume"] }
+            ],
+            "disclaimer": "Celldiscoverer 7 and Axioscan 7 don't compete, they solve genuinely different automation problems within Zeiss's Automated Microscopy Systems category. Celldiscoverer 7 automates the imaging of living, dynamic samples over time, with immersion, incubation, and focus systems built specifically for that. Axioscan 7 automates the digitization of static, prepared slides at high volume, with no equivalent need for immersion or incubation."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the industries and research environments where the ZEISS Celldiscoverer 7 delivers advanced automated live-cell and high-content imaging.",
+            "industries": [
+              { "name": "Drug Discovery and Pharma Screening", "icon": "pill", "useCase": "High-content, multi-well plate screening", "consideration": "384-microwell imaging demonstrated across multiple magnifications and channels" },
+              { "name": "Organoid and 3D Culture Research", "icon": "flask", "useCase": "Growth, morphology, and dynamic process analysis", "consideration": "Referenced directly in Zeiss's organoid analysis case study" },
+              { "name": "Neuroscience Research", "icon": "zap", "useCase": "Neuron tracing and neurodegeneration studies", "consideration": "Demonstrated on rat cortical neuron cultures with GPU-based deconvolution" },
+              { "name": "Developmental Biology", "icon": "droplet", "useCase": "Live embryo imaging across species", "consideration": "Zebrafish, cricket, and sea anemone imaging all demonstrated directly" },
+              { "name": "Academic Core Imaging Facilities", "icon": "school", "useCase": "Multi-user shared platforms requiring reproducibility", "consideration": "No manual recalibration needed between users or experiments" },
+              { "name": "Cell Biology Core Facilities", "icon": "cpu", "useCase": "Long-term live-cell growth and proliferation assays", "consideration": "72-hour HeLa Kyoto and cell coverage growth curve studies demonstrated" },
+              { "name": "Biotech and CRO High-Throughput Screening", "icon": "repeat", "useCase": "Automated, unattended sample processing at scale", "consideration": "Optional PAA robotic loader for all SBS multi-well plate formats" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get installation, application guidance, automation setup, operator training, preventive maintenance, and after-sales support for the ZEISS Celldiscoverer 7 from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows automatic calibration and Autoimmersion on your own live-cell samples." },
+              { "title": "Platform Tier Selection Support", "description": "Confirms Widefield or Widefield + LSM 910 (Confocal) fit." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-run checks." },
+              { "title": "Robotic Loader Integration", "description": "Coordinates PAA robotic sample loader setup where required." },
+              { "title": "arivis Software Setup", "description": "Configures arivis Pro, Cloud, and Hub for image analysis workflows." },
+              { "title": "Operator Training", "description": "Sample loading, Find Focus/Definite Focus, workflow setup." },
+              { "title": "Preventive and Predictive Maintenance", "description": "Component wear tracking and scheduled service visits." },
+              { "title": "Spares and Accessories", "description": "Objectives, cameras, immersion consumables, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss Celldiscoverer 7 used for?", "answer": "It's an automated live-cell imaging platform, used for explorative high-content research, including cell biology, organoid research, developmental biology, and high-content screening." },
+            { "question": "Do I need to be a microscopy expert to use it?", "answer": "No. Insert the sample carrier and the system makes all necessary settings automatically, including calibration, focus, and aberration correction." },
+            { "question": "How much faster is the latest generation?", "answer": "Up to 9x faster widefield acquisition and up to 1.8x faster confocal acquisition, compared to the previous generation." },
+            { "question": "What is Autoimmersion?", "answer": "Fully automated water immersion supply and removal through a 50x objective, sealed with an elastic silicon membrane, supporting live-cell imaging at 37°C over several days." },
+            { "question": "What is Autocorr?", "answer": "Automatic correction ring adjustment on the objective, compensating for spherical aberration caused by different vessel bottom thickness or material." },
+            { "question": "Can it handle different sample carrier types?", "answer": "Yes, automatic sample recognition detects relevant vessel features on loading, supporting Petri dishes, chamber slides, multi-well plates, plastic or glass, thin or thick bottoms, and low- or high-skirt plates." },
+            { "question": "How does focus work for long time-lapse experiments?", "answer": "Find Focus locates the region of interest with one click; Definite Focus holds that position throughout the experiment, whether it runs seconds or several days, and automatic focus maps support multiple positions simultaneously." },
+            { "question": "Can it do confocal imaging?", "answer": "Yes, with the optional LSM 910 and Airyscan 2 upgrade, delivering up to 1.9x resolution improvement, spectral imaging, and photomanipulation techniques like FRAP and FRET." },
+            { "question": "Is there protection against objective damage?", "answer": "Yes, the Adaptive Lens Guard prevents collisions with the sample vessel or hardware while automatically maximizing the available scanning area." },
+            { "question": "Can throughput be increased with automation?", "answer": "Yes, an optional robotic sample loader from Peak Analysis & Automation (PAA) handles all SBS multi-well plate formats for high-volume, unattended processing." },
+            { "question": "What software analyzes the imaging data?", "answer": "arivis Pro, for 2D through complex 3D and 4D dataset analysis, with arivis Cloud for neural network training and arivis Hub for parallel cloud-based processing across multiple datasets." },
+            { "question": "Is it reliable in a shared, multi-user lab?", "answer": "Yes, workflows execute reproducibly without manual recalibration between users, and predictive service analytics schedule maintenance based on actual component wear." },
+            { "question": "How is Celldiscoverer 7 different from Axioscan 7?", "answer": "Celldiscoverer 7 automates live-cell and high-content imaging, with immersion, incubation, and focus systems built for living, dynamic samples. Axioscan 7 automates digitization of fixed, prepared slides at high volume, with no equivalent need for immersion or incubation." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Full objective range and physical dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the Celldiscoverer 7 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the platform tier, confocal upgrade, and automation options selected." },
+            { "question": "Who is the authorized distributor of the Celldiscoverer 7 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss Celldiscoverer 7 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss Celldiscoverer 7 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Up to 9x faster widefield acquisition, fully automated water immersion, and a genuine upgrade path to confocal 3D imaging with Airyscan 2. Share the imaging modes and experiment duration the research needs, and the right Celldiscoverer 7 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the imaging modes and experiment duration needed, then confirm the right Celldiscoverer 7 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "imagingModes", "label": "Imaging modes needed", "type": "text", "required": false },
+              { "key": "experimentDuration", "label": "Typical experiment duration", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the imaging modes required (widefield, confocal, or both), the typical experiment duration, and whether multi-well or multi-user throughput matters, and the right Celldiscoverer 7 configuration gets confirmed." },
+              { "title": "Confirm the immersion and incubation setup", "body": "Share the expected experiment duration and whether multi-well plates are part of the workflow, and the right Autoimmersion and incubation configuration gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Insert the sample. Press start. The microscope does the rest, correctly, every time.",
+            "heroLead": "High-content imaging usually forces a trade-off: image quality against how much data you can actually collect. Celldiscoverer 7 removes that trade-off. Insert a sample carrier, and the system handles calibration, focus, and aberration correction automatically, no microscopy expertise required to get research-grade results. The current generation runs up to 9x faster widefield and up to 1.8x faster confocal image acquisition, with seven excitation lines including 735 nm far red for maximum dye flexibility. Autoimmersion delivers water immersion automatically through a 50x objective, and Autocorr adjusts the objective's correction ring on its own to compensate for spherical aberration across different vessel types, Petri dishes, chamber slides, multi-well plates, plastic or glass, thin or thick bottoms, all recognized automatically on load. Adaptive Lens Guard protects the objective from collisions while maximizing usable scanning area. Find Focus and Definite Focus locate and hold the region of interest across seconds or multiple days. Add LSM 910 with Airyscan 2, and the same platform delivers confocal 3D imaging with up to 1.9x resolution improvement, on the same automated stand. What it removes: the need to become a microscopy expert before getting reliable data. What it adapts to: the actual sample carrier, automatically, on every load. What it scales to: confocal 3D imaging, robotic sample loading, and multi-day live-cell studies.",
+            "stats": [
+              { "value": "Up to 9x", "label": "Faster widefield acquisition (latest generation)" },
+              { "value": "Up to 1.8x", "label": "Faster confocal acquisition (latest generation)" },
+              { "value": "7 excitation lines", "label": "Including 735 nm far red" },
+              { "value": "50x", "label": "Water immersion objective, fully automated" },
+              { "value": "Up to 1.9x", "label": "Resolution improvement with Airyscan 2" },
+              { "value": "37°C", "label": "Sustained incubation for multi-day live-cell imaging" },
+              { "value": "2 platform tiers", "label": "Widefield, or with LSM 910 (Confocal)" },
+              { "value": "SBS-compatible", "label": "Optional robotic sample loader (PAA partnership)" },
+              { "value": "No manual recalibration", "label": "Reproducible workflows across users, indefinitely" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Explore the automated imaging workflows, live-cell capabilities, confocal expansion, intelligent sample handling, and AI-powered analysis of the ZEISS Celldiscoverer 7.",
+                "body": [
+                  "Built for explorative high-content imaging. Collecting statistically relevant data without trading away image quality.",
+                  "Easy access to high-quality imaging. Insert the sample carrier, and the system makes all the necessary settings.",
+                  "Automatic calibration routines. Optimal conditions and reproducible results, every time.",
+                  "Finds and keeps focus after detecting the sample carrier. Optical properties read automatically on load.",
+                  "Spherical aberrations corrected automatically. Best contrast and resolution delivered without manual adjustment.",
+                  "Automated water immersion and integrated incubation. Environmental conditions held precisely for demanding long-term imaging.",
+                  "Unbiased results, even operated remotely. No manual adjustments required regardless of who's running the experiment.",
+                  "Up to 9x faster widefield acquisition. Compared to the previous generation.",
+                  "Up to 1.8x faster confocal acquisition. Same generational comparison.",
+                  "Seven individually controlled excitation lines. Including 735 nm far red, for maximum flexibility in dye choice.",
+                  "New Axiocam 807 mono and 820 mono cameras. Higher sensitivity, signal-to-noise ratio, and speed.",
+                  "Full auto-immersion objective support. Significantly improves Guided Acquisition workflows.",
+                  "Cyclic imaging across different sample carriers. Advanced time series within a single experiment.",
+                  "New sample holder maximizes travel range. Full coverage of chamber slides.",
+                  "Shading Calibration Manager. Individual users apply their own custom shading corrections per sample.",
+                  "New data viewer. More options for observing and comparing multi-well experiment data.",
+                  "Excessive endurance testing and preventive service. Reliable long-term operation built into the design philosophy.",
+                  "A range of freely combinable imaging modes. Tailored to individual experimental requirements.",
+                  "Fast widefield imaging for live-cell experiments and rapid time-lapse. The baseline acquisition mode.",
+                  "Label-free imaging in multi-well plates without artifacts. No stain, no fixation required.",
+                  "Wide spectral range for multi-fluorescence experiments. Plus unique transmitted light contrast methods.",
+                  "Confocal imaging with LSM 910 and Airyscan available. For stunning 3D data, on the same platform.",
+                  "Reproducible workflows, no manual recalibration between users. Set up once, run again and again, indefinitely.",
+                  "Robust design prevents unwanted user intervention. Damaged objective lenses become a non-issue.",
+                  "Predictive service determines the optimal next service visit. Based on actual component wear, not a fixed schedule.",
+                  "Automatic sample recognition across vessel types. Petri dishes, chamber slides, multi-well plates, plastic or glass, thin or thick bottoms, low-skirt or high-skirt plates.",
+                  "Autocorr adjusts the objective's correction ring automatically. Compensating for spherical aberration from bottom thickness and material variation.",
+                  "50x water immersion objective with automated supply and removal. Rapid, hands-free.",
+                  "Elastic silicon membrane seals the sample chamber. Prevents unnecessary airflow and protects against liquid spillage.",
+                  "Sustained 37°C imaging over several days. Genuine long-term live-cell capability.",
+                  "Find Focus locates the region of interest with one click. Hardware-based, fast.",
+                  "Definite Focus holds focal position throughout an experiment. Seconds or several days, either way.",
+                  "Automatic focus maps for multiple positions. Supports long-term time-lapse across several locations at once.",
+                  "Adaptive Lens Guard protects the objective from collision. While automatically maximizing available scanning area.",
+                  "LED illumination, low phototoxicity, fast switching, homogeneous. Real-time and long-term stabilization for image comparability.",
+                  "LSM 910 with Airyscan 2 adds confocal 3D imaging. Up to 1.9x resolution improvement, spectral imaging, and photomanipulation (FRAP, FRET).",
+                  "Fast mixed-mode acquisition. Widefield and confocal images connect precisely within the same workflow.",
+                  "Optional robotic sample loader, via Peak Analysis & Automation (PAA). Handles all SBS multi-well plate formats, for high-volume unattended processing.",
+                  "arivis Pro image analysis software. From 2D snapshots to complex 3D and 4D datasets, with precise quantification and visualization.",
+                  "arivis Cloud trains neural networks for segmentation. Integrates directly back into arivis Pro.",
+                  "arivis Hub combines online storage with parallel processing. Running arivis Pro pipelines across multiple datasets at once."
+                ],
+                "cards": [
+                  { "title": "Automatic calibration and focus", "description": "Reliable data without microscopy expertise" },
+                  { "title": "9x faster widefield, 1.8x faster confocal", "description": "Genuine generational speed gain" },
+                  { "title": "Autoimmersion + Autocorr", "description": "Any vessel type, corrected automatically" },
+                  { "title": "Confocal upgrade path (LSM 910)", "description": "The same stand, when the research needs more" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the automated calibration, Autoimmersion, intelligent focus systems, adaptive optics, and confocal imaging capabilities of the ZEISS Celldiscoverer 7."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the ZEISS Celldiscoverer 7 supports live-cell imaging, organoid research, developmental biology, neuroscience, drug discovery, and high-content screening."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the technical specifications, imaging performance, automation features, focus systems, and confocal upgrade options of the ZEISS Celldiscoverer 7 Automated Microscope."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Automatic Adaptation to Any Sample Carrier",
+                "title": "Automatic Adaptation to Any Sample Carrier",
+                "description": "What Autocorr and automatic sample recognition actually solve.",
+                "body": [
+                  "High-numerical-aperture objectives, the kind live-cell imaging genuinely needs, only deliver their promised contrast and sensitivity when their optics correctly compensate for the specific vessel they're looking through. Bottom thickness varies. Material varies, plastic versus glass. Skirt height varies between plate designs. Every one of those variations introduces spherical aberration if left uncorrected, and manually adjusting a correction ring for each new vessel type is exactly the kind of expertise-gated step that slows a lab down.",
+                  "Celldiscoverer 7 removes it. Automatic sample recognition detects the relevant vessel features the moment a sample loads, and Autocorr adjusts the objective's correction ring to compensate, without anyone touching a dial. The freedom that unlocks is real: Petri dishes, chamber slides, multi-well plates, plastic or glass, thin or thick vessel bottoms, low-skirt or high-skirt plates, all usable interchangeably, at full optical quality, on the same system."
+                ],
+                "utilityChecklist": [
+                  { "label": "Re-adjusting the correction ring for every new vessel type", "value": "Autocorr adjusts automatically, on load" },
+                  { "label": "Restricting the lab to one or two known vessel formats", "value": "Genuine freedom across Petri dishes, chamber slides, multi-well plates" },
+                  { "label": "Spherical aberration degrading contrast and resolution silently", "value": "Best contrast and resolution delivered without manual intervention" },
+                  { "label": "Expertise required to recognize and correct for the issue", "value": "Automatic sample recognition detects it on its own" }
+                ],
+                "disclaimer": "Share the range of sample carriers the lab actually uses, plastic or glass, chamber slides or well plates, and Autocorr and automatic recognition get confirmed against that specific inventory."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Autoimmersion and Long-Term Live Imaging",
+                "title": "Autoimmersion and Long-Term Live Imaging",
+                "description": "What multi-day, water-immersed experiments actually require.",
+                "cards": [
+                  { "title": "Immersion optics matched to aqueous samples", "description": "50x water immersion objective, purpose-built." },
+                  { "title": "Consistent immersion without manual reapplication", "description": "Rapid automated supply and removal." },
+                  { "title": "A sealed chamber protecting both sample and system", "description": "Elastic silicon membrane." },
+                  { "title": "Stable temperature across days of imaging", "description": "Sustained 37°C incubation." },
+                  { "title": "No intervention required mid-experiment", "description": "Fully automated, hands-off operation." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access brochures, application notes, case studies, webinars, user guides, and technical resources for the ZEISS Celldiscoverer 7 Automated Microscope.",
+                "cards": [
+                  { "title": "Celldiscoverer 7: Your Automated Platform for Live Cell Imaging", "description": "Available on request" },
+                  { "title": "Automation in Microscopy Overview", "description": "Available on request" },
+                  { "title": "Automating Cellular Imaging with Celldiscoverer 7", "description": "Available on request" },
+                  { "title": "New Perspectives on 3D Cell Cultures and Organoids", "description": "Available on request" },
+                  { "title": "From Image to Results: Organoid Analysis (Case Study)", "description": "Available on request" },
+                  { "title": "Imaging of Living Samples (Webinar)", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss Celldiscoverer 7 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Up to 9x faster widefield acquisition, fully automated water immersion, and a genuine upgrade path to confocal 3D imaging with Airyscan 2. Share the imaging modes and experiment duration the research needs, and the right Celldiscoverer 7 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

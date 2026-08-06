@@ -1,0 +1,1052 @@
+{
+  "principal": {
+    "slug": "zeiss",
+    "principalName": "Zeiss",
+    "countryOfOrigin": "Germany"
+  },
+  "categories": [
+    {
+      "name": "SteREO Discovery Family",
+      "slug": "stereo-discovery-family",
+      "products": [
+        {
+          "name": "SteREO Discovery V8 Microscope",
+          "slug": "stereo-discovery-v8-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss SteREO Discovery V8 Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/stereo-discovery-v8-microscope",
+          "breadcrumbPath": "Home > Products > SteREO Discovery Family > SteREO Discovery V8 Microscope",
+          "h1": "SteREO Discovery V8 Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most stereo microscopes lock you into whatever illumination shipped in the box. SteREO Discovery V8 is built the other way, an 8:1 manual zoom platform that fits directly into Zeiss's modular SteREO system, so the illumination, focus, stage, and fluorescence setup all get chosen to match the actual work, not the other way around.",
+
+          "features": [
+            "Fully Modular Configuration: Focus, stage, illumination, chosen independently.",
+            "Click-Stop Magnification: Pixel sizes calibrate directly in ZEN.",
+            "Adjustable Ergo Phototube: 5° to 45° viewing angle, your choice.",
+            "PentaFluar S Fluorescence: Up to five filters, added when needed.",
+            "Coaxial Reflected-Light Illuminator S: Built for polished metal and microelectronics.",
+            "One-Button Illumination Switching: Annular to oblique light, no reconfiguration."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss SteREO Discovery V8 Microscope" },
+            { "label": "Category", "value": "SteREO Discovery Family" },
+            { "label": "Zoom", "value": "8:1, manual" },
+            { "label": "Magnification Steps", "value": "Click-stops, discrete, calibrated in ZEN" },
+            { "label": "Focus", "value": "Manual or motorized" },
+            { "label": "Stage", "value": "Manual or motorized X-Y" },
+            { "label": "Illumination Base", "value": "Cold light (CL 1500 ECO fiber-optic) or LED (VisiLED)" },
+            { "label": "Contrast Methods", "value": "Shadow-free annular, lateral oblique, brightfield, darkfield" },
+            { "label": "Specular Surface Illumination", "value": "Coaxial Reflected-Light Illuminator S, optimized for PlanApo S 1.0x objective" },
+            { "label": "Fluorescence (optional)", "value": "PentaFluar S, up to 5 filters" },
+            { "label": "Viewing Angle", "value": "5° to 45°, via ergo phototube" },
+            { "label": "Camera Interface", "value": "60N, for digital photo and video cameras" },
+            { "label": "System Family", "value": "SteREO Discovery V8, V12, V20, and Axio Zoom.V16" },
+            { "label": "Return Policy", "value": "60 days, risk-free" },
+            { "label": "Full Magnification Range, Working Distance, Field of View", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Developmental Biology: CL 1500 ECO cold light gives gentle, uniform illumination for zebrafish and Drosophila embryos.",
+            "Embryo and Oocyte Preparation: Three-dimensional perception supports precise sample manipulation.",
+            "Quality Assurance and Inspection: Distortion-free imaging determines surface characteristics accurately.",
+            "PCB and Electronics Inspection: Annular light and grazing light guides reveal solder and surface detail.",
+            "Specular and Reflective Surface Inspection: Coaxial Reflected-Light Illuminator S handles polished metal and microelectronic devices.",
+            "Fluorescence Documentation: PentaFluar S adds up to 5-filter fluorescence capability.",
+            "Digital Measurement and Recording: Large working distance supports direct digital measurement of specimens.",
+            "Museum and Conservation Work: Referenced directly in Zeiss's restoration and conservation use case.",
+            "Forensic Soil and Trace Examination: Referenced directly in Zeiss's forensic application content."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Illumination Selector" },
+            { "id": "config", "label": "Motorization Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "System Family" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What does the specimen actually need to be lit correctly?",
+            "description": "Select the specimen type and surface reflectivity, and see the recommended illumination module.",
+            "fields": [
+              {
+                "key": "specimenType",
+                "label": "Specimen type",
+                "options": [
+                  { "val": "living-tissue-embryo", "label": "Living tissue/embryo" },
+                  { "val": "polished-metal-electronics", "label": "Polished metal/electronics" },
+                  { "val": "pcb", "label": "PCB" },
+                  { "val": "mixed", "label": "Mixed" }
+                ]
+              },
+              {
+                "key": "surfaceReflectivity",
+                "label": "Surface reflectivity",
+                "options": [
+                  { "val": "translucent", "label": "Translucent" },
+                  { "val": "matte", "label": "Matte" },
+                  { "val": "highly-specular", "label": "Highly specular" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "specimenType": "living-tissue-embryo" },
+                "title": "CL 1500 ECO Cold Light Fits",
+                "body": "Living tissue and embryos, like zebrafish and Drosophila, need the gentle, uniform illumination CL 1500 ECO fiber-optic cold light provides.",
+                "tags": ["CL 1500 ECO"]
+              },
+              {
+                "condition": { "surfaceReflectivity": "highly-specular" },
+                "title": "Coaxial Reflected-Light Illuminator S Fits",
+                "body": "Highly specular surfaces like polished metal and microelectronics need the Coaxial Reflected-Light Illuminator S to reveal detail without glare.",
+                "tags": ["Coaxial Illuminator S"]
+              },
+              {
+                "condition": { "specimenType": "pcb" },
+                "title": "VisiLED Ring Light Fits",
+                "body": "PCB inspection benefits from the VisiLED ring light S 40-10 DF, combining brightfield and darkfield in reflected light.",
+                "tags": ["VisiLED"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Illumination Fit",
+                "body": "Share the specimen material and surface finish, and the right illumination module gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Manual or motorized? Fluorescence now, or later?",
+            "description": "Select the focus and fluorescence requirements, and confirm the right configuration.",
+            "steps": [
+              {
+                "key": "focusPreference",
+                "question": "What's the focus preference?",
+                "options": [
+                  { "val": "manual", "label": "Manual" },
+                  { "val": "motorized", "label": "Motorized, for reproducibility" }
+                ]
+              },
+              {
+                "key": "fluorescenceRequirement",
+                "question": "What's the fluorescence requirement?",
+                "options": [
+                  { "val": "not-needed", "label": "Not needed" },
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "routine", "label": "Routine (up to 5 filters)" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the stage preference (manual or motorized X-Y), and motorization level and PentaFluar S requirement get confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within Zeiss's stereo microscope range",
+            "title": "SteREO Discovery V8 vs Stemi 508 vs SteREO Discovery V12 / V20",
+            "description": "Compare the ZEISS SteREO Discovery V8 Microscope with other ZEISS stereo microscope platforms.",
+            "columns": [
+              { "label": "SteREO Discovery V8", "highlight": true },
+              { "label": "Stemi 508", "highlight": false },
+              { "label": "SteREO Discovery V12 / V20", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Zoom Ratio", "values": ["8:1, manual", "8:1, manual", "12x or 20x, motorized"] },
+              { "feature": "Modularity", "values": ["Fully modular illumination, focus, stage", "Stand-based, less modular", "Fully modular, shared system with V8"] },
+              { "feature": "Fluorescence", "values": ["Optional, PentaFluar S, up to 5 filters", "Not confirmed on that source", "Confirm on specification"] },
+              { "feature": "Motorized Focus/Stage", "values": ["Optional", "Not confirmed", "Confirm on specification, positioned above V8"] },
+              { "feature": "Specular Surface Illumination", "values": ["Coaxial Reflected-Light Illuminator S", "Not confirmed", "Confirm on specification"] },
+              { "feature": "Viewing Angle", "values": ["5° to 45°, adjustable", "35°, fixed", "Confirm on specification"] },
+              { "feature": "Positioning", "values": ["Entry point into the modular SteREO system", "High-performance apochromatic zoom, standalone range", "Step up in zoom and automation from V8"] },
+              { "feature": "Best For", "values": ["Developmental biology and QA needing modular illumination flexibility", "Detailed inspection needing apochromatic color accuracy without full modularity", "Research needing greater zoom range or motorized reproducibility"] },
+              { "feature": "Choose When", "values": ["Illumination flexibility and system upgrade path matter most", "Apochromatic optical performance is the priority, not modular expansion", "The work has outgrown 8:1 manual zoom"] }
+            ],
+            "disclaimer": "SteREO Discovery V8 and Stemi 508 share the same 8:1 zoom ratio but solve different problems. Stemi 508 is built around apochromatic optical performance in a more fixed configuration. SteREO Discovery V8 is built around modularity, specialized illumination for different specimen types, and a genuine upgrade path into V12 and V20 as zoom or automation needs grow."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore industries and research fields using the ZEISS SteREO Discovery V8 Microscope.",
+            "industries": [
+              { "name": "Developmental Biology Research", "icon": "droplet", "useCase": "Zebrafish and Drosophila embryo imaging", "consideration": "CL 1500 ECO gives gentle, uniform illumination suited to living specimens" },
+              { "name": "Electronics Manufacturing and QC", "icon": "cpu", "useCase": "PCB and solder inspection", "consideration": "VisiLED ring light combines brightfield and darkfield for surface detail" },
+              { "name": "Semiconductor and Microelectronics", "icon": "zap", "useCase": "Polished, specular component inspection", "consideration": "Coaxial Reflected-Light Illuminator S optimized specifically for this surface type" },
+              { "name": "Museums and Conservation", "icon": "clock", "useCase": "Artifact examination and restoration", "consideration": "Referenced directly in Zeiss's restoration and conservation use case content" },
+              { "name": "Forensic Science", "icon": "target", "useCase": "Soil and trace evidence investigation", "consideration": "Referenced directly in Zeiss's forensic application content" },
+              { "name": "Reproductive and Cell Biology Labs", "icon": "flask", "useCase": "Oocyte and embryo preparation and quality assessment", "consideration": "Gentle illumination and precise 3D manipulation support delicate sample handling" },
+              { "name": "Quality Assurance Departments", "icon": "repeat", "useCase": "Surface characteristic determination across manufactured parts", "consideration": "Distortion-free imaging with variable illumination extracts maximum surface information" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Support built around assembling the right modular configuration.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows illumination modules and zoom range on your own specimens." },
+              { "title": "Module Selection Support", "description": "Confirms illumination, focus, and stage configuration for the application." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "Fluorescence Setup", "description": "PentaFluar S filter selection and configuration." },
+              { "title": "Camera Integration", "description": "60N interface setup for photo and video capture." },
+              { "title": "Operator Training", "description": "Zoom operation, illumination switching, ergo phototube adjustment." },
+              { "title": "Preventive Maintenance", "description": "Optics, illumination modules, focus, and stage performance." },
+              { "title": "Spares and Accessories", "description": "Light guides, filters, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss SteREO Discovery V8 used for?", "answer": "It's a modular stereo microscope with an 8:1 manual zoom, used primarily in developmental biology and quality assurance, with configurable illumination for varied specimen types." },
+            { "question": "What does \"modular\" actually mean here?", "answer": "Focus, stage, and illumination are all chosen independently rather than fixed at purchase, manual or motorized focus, manual or motorized X-Y stages, and a choice of specialized illumination modules for different specimen and surface types." },
+            { "question": "What is the zoom ratio?", "answer": "8:1, manual, with click-stops for discrete magnification steps that calibrate directly in ZEN imaging software." },
+            { "question": "Can the viewing angle be adjusted?", "answer": "Yes, the ergo phototube sets the viewing angle anywhere between 5° and 45°." },
+            { "question": "Is fluorescence imaging available?", "answer": "Yes, as an optional upgrade with PentaFluar S, supporting up to five different fluorescence filters." },
+            { "question": "What illumination options are available?", "answer": "Cold light (CL 1500 ECO fiber-optic, suited to living specimens) or LED (VisiLED), including a ring light combining brightfield and darkfield, and a Coaxial Reflected-Light Illuminator S built for specular surfaces." },
+            { "question": "Is this microscope suitable for polished metal or microelectronics inspection?", "answer": "Yes, the Coaxial Reflected-Light Illuminator S is specifically optimized for smooth, specular surfaces like polished metal parts and microelectronic devices." },
+            { "question": "Can a camera be attached?", "answer": "Yes, the 60N interface connects numerous phototubes for digital photo and video cameras." },
+            { "question": "How does this fit into Zeiss's broader stereo microscope range?", "answer": "SteREO Discovery V8 is the entry point into a documented four-model modular family, alongside SteREO Discovery V12, V20, and Axio Zoom.V16, all sharing compatible illumination, focus, and stage modules." },
+            { "question": "How is it different from Stemi 508?", "answer": "Both share an 8:1 zoom ratio, but Stemi 508 is built around apochromatic optical performance in a more fixed configuration, while SteREO Discovery V8 is built around modularity, specialized illumination options, and a direct upgrade path into V12 and V20." },
+            { "question": "Is there a return policy?", "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Full magnification range, working distance, and field of view were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the SteREO Discovery V8 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the illumination, focus, stage, and fluorescence modules selected." },
+            { "question": "Who is the authorized distributor of the SteREO Discovery V8 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss SteREO Discovery V8 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss SteREO Discovery V8 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. An 8:1 zoom platform built to be configured around the actual specimen, with a direct upgrade path into V12 and V20 as the work grows. Share the specimen type and whether fluorescence or motorization matter, and the right SteREO Discovery V8 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the specimen type and fluorescence/motorization needs, then confirm the right SteREO Discovery V8 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "specimenType", "label": "Specimen type", "type": "text", "required": false },
+              { "key": "fluorescenceOrMotorization", "label": "Fluorescence or motorization needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right module configuration", "body": "Share the specimen type (embryos, PCBs, polished metal, or mixed), whether fluorescence is needed, and whether focus and stage should be motorized, and the right SteREO Discovery V8 module configuration gets confirmed." },
+              { "title": "Plan the upgrade path", "body": "Share whether the zoom requirement is likely to grow beyond 8:1 over the life of the instrument, and the right starting model and future upgrade path get planned together." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "One modular system. Five fluorescence filters. A viewing angle you actually choose.",
+            "heroLead": "Most stereo microscopes lock you into whatever illumination shipped in the box. SteREO Discovery V8 is built the other way, an 8:1 manual zoom platform that fits directly into Zeiss's modular SteREO system, so the illumination, focus, stage, and fluorescence setup all get chosen to match the actual work, not the other way around. Click-stops lock discrete magnification steps, letting pixel sizes calibrate directly in ZEN imaging software. Choose manual or motorized focus, manual or motorized X-Y stages, and illumination built on cold light or LED, switching from shadow-free annular light to lateral oblique light at the press of a button. Add PentaFluar S for fluorescence, with up to five different filters. Add the Coaxial Reflected-Light Illuminator S for smooth, specular surfaces, polished metal parts, microelectronics, anything that scatters light unpredictably under standard illumination. An ergo phototube lets the viewing angle be set anywhere between 5° and 45°, so comfort stops being a fixed compromise. What it fits into: Zeiss's full modular SteREO system, alongside V12, V20, and Axio Zoom.V16. What it's built around: developmental biology and quality assurance, in equal measure. What it doesn't force: a fixed viewing angle, illumination method, or fluorescence setup.",
+            "stats": [
+              { "value": "8:1", "label": "Manual zoom ratio" },
+              { "value": "Click-stops", "label": "Discrete magnification steps, calibrated in ZEN" },
+              { "value": "Manual or motorized", "label": "Focus and X-Y stages, both configurable" },
+              { "value": "5° to 45°", "label": "Ergo phototube viewing angle range" },
+              { "value": "Up to 5 filters", "label": "PentaFluar S fluorescence module" },
+              { "value": "Modular system", "label": "Shared with V12, V20, and Axio Zoom.V16" },
+              { "value": "Cold light or LED", "label": "Illumination base options" },
+              { "value": "60N interface", "label": "Connects phototubes for photo/video cameras" },
+              { "value": "60 days", "label": "Risk-free return window" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Learn about the modular architecture and capabilities of the ZEISS SteREO Discovery V8 Microscope.",
+                "body": [
+                  "8:1 manual zoom range. Crisp, brilliant images held throughout the full range.",
+                  "Click-stops for discrete magnification steps. Pixel sizes calibrate directly in ZEN imaging software.",
+                  "Three-dimensional image perception. Built specifically for sample preparation and manipulation work.",
+                  "Focused on developmental biology and quality assurance. Two application areas named directly by Zeiss.",
+                  "Seamless integration into the modular SteREO system. Shared architecture with V12, V20, and Axio Zoom.V16.",
+                  "Manual or motorized focus. Chosen to match the workflow, not fixed at purchase.",
+                  "Manual or motorized X-Y stages. Same flexibility extended to sample positioning.",
+                  "Illumination based on cold light or LED. Multiple contrast methods available across both.",
+                  "CL 1500 ECO fiber-optic cold light source. Gentle, uniform illumination, with a wide range of light guides and accessories for developmental biology work like zebrafish and Drosophila embryos.",
+                  "One-button switch between shadow-free annular and lateral oblique light. No manual reconfiguration needed mid-session.",
+                  "60N interface connects numerous phototubes. Digital photo and video cameras attach directly.",
+                  "PentaFluar S upgrades fluorescence capability. Up to five different fluorescence filters.",
+                  "Ergo phototube sets viewing angle between 5° and 45°. Comfort tuned to the individual, not fixed.",
+                  "Digitally measure and record specimens directly. Large working distance gives freedom of movement while doing it.",
+                  "VisiLED ring light S 40-10 DF combines brightfield and darkfield in reflected light. Mounted onto the brightfield ring light with a special adapter.",
+                  "Coaxial Reflected-Light Illuminator S handles specular surfaces. Optimized for polished metal parts and microelectronic devices, with a lever to adjust for different objectives.",
+                  "Light manager stabilizes brightness during zoom. Coaxial lighting stays consistent across the whole range.",
+                  "Backed by a 60-day risk-free return. Trial the actual configuration before committing."
+                ],
+                "cards": [
+                  { "title": "Fully modular", "description": "Focus, stage, and illumination all chosen independently" },
+                  { "title": "5° to 45° viewing angle", "description": "Comfort tuned to the person, not fixed" },
+                  { "title": "Up to 5 fluorescence filters", "description": "Genuine fluorescence capability, added as needed" },
+                  { "title": "Specialized illumination modules", "description": "Built for specular, flat, and translucent specimens alike" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the modular features and imaging capabilities of the ZEISS SteREO Discovery V8 Microscope."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See where the ZEISS SteREO Discovery V8 Microscope supports developmental biology, electronics, QA, and research."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Review the technical specifications of the ZEISS SteREO Discovery V8 Microscope configuration."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Illumination Built for the Surface",
+                "title": "Illumination Built for the Surface",
+                "description": "What each specialized lighting module actually solves.",
+                "body": [
+                  "A flat, polished microelectronic part and a translucent zebrafish embryo need genuinely different light. One reflects almost everything back specularly, hiding detail under glare. The other needs gentle, uniform illumination that doesn't scatter or overheat the sample. SteREO Discovery V8 doesn't try to solve both with one fixed light source, it offers a module for each.",
+                  "CL 1500 ECO fiber-optic cold light, paired with a wide range of light guides, is built specifically for developmental biology, gentle enough for zebrafish and Drosophila embryos without heat stress. The Coaxial Reflected-Light Illuminator S goes the opposite direction, purpose-built for smooth, specular surfaces like polished metal parts and microelectronic devices, with illumination and observation optimized specifically around the PlanApo S 1.0x objective. VisiLED ring light S 40-10 DF combines brightfield and darkfield in reflected light for PCB and surface inspection, and a light manager keeps coaxial lighting brightness stable through the entire zoom range, so illumination doesn't shift as magnification changes."
+                ],
+                "utilityChecklist": [
+                  { "label": "Living embryos, translucent tissue", "value": "CL 1500 ECO fiber-optic cold light" },
+                  { "label": "Polished metal, microelectronic devices", "value": "Coaxial Reflected-Light Illuminator S" },
+                  { "label": "PCBs, surfaces needing combined brightfield/darkfield", "value": "VisiLED ring light S 40-10 DF" },
+                  { "label": "Any specimen across a full zoom sweep", "value": "Light manager, stabilized coaxial brightness" }
+                ],
+                "disclaimer": "Share the specimen material and surface finish (living tissue, polished metal, PCB, or mixed), and the right illumination module gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Part of a Larger System",
+                "title": "Part of a Larger System",
+                "description": "Where V8 sits against V12, V20, and Axio Zoom.V16.",
+                "cards": [
+                  { "title": "8:1 zoom, manual, modular illumination", "description": "SteREO Discovery V8." },
+                  { "title": "Motorized 12x zoom, sharper contrast, color fidelity", "description": "SteREO Discovery V12." },
+                  { "title": "Motorized 20x zoom, maximum flexibility and depth perception", "description": "SteREO Discovery V20." },
+                  { "title": "The widest zoom in the family, Axio Zoom platform", "description": "Axio Zoom.V16." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Get nationwide service and application support for the ZEISS SteREO Discovery V8 Microscope.",
+                "cards": [
+                  { "title": "SteREO Discovery V8: A New View of Things (Product Sheet)", "description": "Available on request" },
+                  { "title": "Microscope and Measurement Systems for Quality Assurance and QC", "description": "Available on request" },
+                  { "title": "The Modular System of Stereo- and Zoom Microscopes (Full Family Profile)", "description": "Available on request" },
+                  { "title": "ZEISS Microscopes in Restoration and Conservation (Use Case)", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss SteREO Discovery V8 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. An 8:1 zoom platform built to be configured around the actual specimen, with a direct upgrade path into V12 and V20 as the work grows. Share the specimen type and whether fluorescence or motorization matter, and the right SteREO Discovery V8 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "SteREO Discovery V12 Microscope",
+          "slug": "stereo-discovery-v12-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss SteREO Discovery V12 Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/stereo-discovery-v12-microscope",
+          "breadcrumbPath": "Home > Products > SteREO Discovery Family > SteREO Discovery V12 Microscope",
+          "h1": "SteREO Discovery V12 Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Mechanical zoom bodies have a real limit: lens positioning tolerance builds up across the zoom range, and the image softens as a result, especially at the top end where detail actually matters most. SteREO Discovery V12 replaces the mechanical curve entirely.",
+
+          "features": [
+            "eZoom Electronic Positioning: 2x the precision of a mechanical zoom body.",
+            "12:1 Motorized Zoom: Reproducible results, across the whole range.",
+            "SYCOP Touch Panel + Joystick: Every function, eyes still on the eyepiece.",
+            "Assignable Physical Buttons: Touchscreen or tactile, whichever fits.",
+            "Positionable Control Panel: Placed wherever the bench actually needs it.",
+            "Fully Modular System: Shared architecture with V8, V20, and Axio Zoom.V16."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss SteREO Discovery V12 Microscope" },
+            { "label": "Category", "value": "SteREO Discovery Family" },
+            { "label": "Zoom", "value": "12:1, motorized" },
+            { "label": "Zoom Technology", "value": "eZoom, electronic lens positioning via stepping motors" },
+            { "label": "Precision", "value": "Doubled, compared to a mechanical zoom body" },
+            { "label": "Control System", "value": "SYCOP, touch panel and joystick, with assignable physical buttons" },
+            { "label": "Control Panel Positioning", "value": "Flexible, positioned to the operator's preference" },
+            { "label": "System Family", "value": "SteREO Discovery V8, V12, V20, and Axio Zoom.V16, shared modular interfaces" },
+            { "label": "Image Quality (stated)", "value": "Crisp, high-contrast, excellent color fidelity" },
+            { "label": "Return Policy", "value": "60 days, risk-free" },
+            { "label": "Full Magnification Range, Working Distance, Field of View", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Developmental Biology: Drosophila and zebrafish embryo imaging with enhanced depth perception.",
+            "Medical Device Inspection: Stent inspection, named directly by Zeiss as a core application.",
+            "Electronics and PCB Inspection: Circuit board imaging with crisp, high-contrast detail.",
+            "Semiconductor Component Analysis: Demonstrated on semiconductor element imaging in reflected light darkfield.",
+            "Diatom and Microorganism Study: Demonstrated in transmitted light brightfield.",
+            "Embryology and Relief Contrast Imaging: Demonstrated using oblique illumination for negative relief contrast on embryos.",
+            "High-Throughput Inspection Workflows: SYCOP control supports fast, eyes-on-sample operation across repeated inspections.",
+            "Quality Assurance Requiring Reproducibility: Motorized zoom holds consistent results across operators and sessions."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Precision Planner" },
+            { "id": "config", "label": "Control Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "SYCOP Control" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the work actually need eZoom's precision advantage?",
+            "description": "Select the typical magnification used and detail sensitivity, and see the fit against V12.",
+            "fields": [
+              {
+                "key": "typicalMagnificationUsed",
+                "label": "Typical magnification used",
+                "options": [
+                  { "val": "low-mid-range", "label": "Low-mid range" },
+                  { "val": "consistently-high", "label": "Consistently high magnification" }
+                ]
+              },
+              {
+                "key": "detailSensitivity",
+                "label": "Detail sensitivity",
+                "options": [
+                  { "val": "standard-inspection", "label": "Standard inspection" },
+                  { "val": "fine-detail-critical", "label": "Fine detail critical to the result" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "detailSensitivity": "fine-detail-critical" },
+                "title": "eZoom Precision Matters Here",
+                "body": "Fine detail critical to the result is exactly where eZoom's doubled precision over a mechanical zoom body makes a visible difference.",
+                "tags": ["eZoom Precision"]
+              },
+              {
+                "condition": { "typicalMagnificationUsed": "consistently-high" },
+                "title": "High-Magnification Work Benefits Most",
+                "body": "Consistently high magnification is where a mechanical zoom body softens most — eZoom holds precision throughout the range.",
+                "tags": ["High Magnification"]
+              },
+              {
+                "condition": { "typicalMagnificationUsed": "low-mid-range" },
+                "title": "Confirm Whether V12 Is Needed",
+                "body": "Low-to-mid range magnification may be well served by V8's manual zoom — share the detail sensitivity to confirm whether V12's precision matters here.",
+                "tags": ["Low-Mid Range"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Precision Fit",
+                "body": "Share the typical magnification used and detail sensitivity, and whether eZoom's precision improvement matters for the application gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Touchscreen, joystick, or physical buttons?",
+            "description": "Select the operator preference and inspection volume, and confirm the right SYCOP setup.",
+            "steps": [
+              {
+                "key": "dailyInspectionVolume",
+                "question": "What's the daily inspection volume?",
+                "options": [
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "high-throughput", "label": "High-throughput repeated work" }
+                ]
+              },
+              {
+                "key": "controlPreference",
+                "question": "What's the control preference?",
+                "options": [
+                  { "val": "touchscreen", "label": "Touchscreen" },
+                  { "val": "joystick", "label": "Joystick" },
+                  { "val": "physical-buttons", "label": "Assigned physical buttons" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the workstation layout (fixed bench position or flexible/shared setup), and SYCOP configuration and panel positioning get confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within the SteREO Discovery range",
+            "title": "SteREO Discovery V8 vs V12 vs V20",
+            "description": "See how the ZEISS SteREO Discovery V12 Microscope compares with other ZEISS stereo microscope platforms.",
+            "columns": [
+              { "label": "SteREO Discovery V8", "highlight": false },
+              { "label": "SteREO Discovery V12", "highlight": true },
+              { "label": "SteREO Discovery V20", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Zoom Ratio", "values": ["8:1", "12:1", "20:1"] },
+              { "feature": "Zoom Type", "values": ["Manual", "Motorized, eZoom", "Motorized (confirm eZoom on that source)"] },
+              { "feature": "Zoom Precision", "values": ["Standard mechanical", "Doubled vs. mechanical, via eZoom", "Confirm on specification"] },
+              { "feature": "Control System", "values": ["Standard stand controls", "SYCOP touch panel and joystick", "Confirm on specification"] },
+              { "feature": "Focus/Stage Motorization", "values": ["Optional", "Confirm on specification", "Confirm on specification"] },
+              { "feature": "Fluorescence", "values": ["Optional, PentaFluar S", "Confirm on specification", "Confirm on specification"] },
+              { "feature": "System Family", "values": ["Shared with V12, V20, Axio Zoom.V16", "Shared with V8, V20, Axio Zoom.V16", "Shared with V8, V12, Axio Zoom.V16"] },
+              { "feature": "Best For", "values": ["Modular illumination flexibility, manual operation acceptable", "Reproducibility and precision at higher magnification, hands-off control", "Maximum magnification flexibility and depth perception"] },
+              { "feature": "Choose When", "values": ["Manual zoom and illumination modularity are the priority", "Motorized precision and eyes-on-eyepiece control matter", "The work needs the widest zoom range in the family"] }
+            ],
+            "disclaimer": "V12 is the clear middle step in the SteREO Discovery progression, adding motorized eZoom precision and SYCOP control over V8's manual zoom, while sitting below V20's wider 20:1 range. Detailed V20 specifications weren't confirmed in this source pull, this table will be completed once that source is available."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "From biological research to industrial inspection, discover where the ZEISS SteREO Discovery V12 Microscope performs best.",
+            "industries": [
+              { "name": "Developmental Biology Research", "icon": "droplet", "useCase": "Zebrafish and Drosophila embryo imaging", "consideration": "Enhanced depth perception at high magnification, named directly by Zeiss" },
+              { "name": "Medical Device Manufacturing", "icon": "pill", "useCase": "Stent inspection and quality verification", "consideration": "Reproducible motorized zoom supports consistent QC across units" },
+              { "name": "Semiconductor and Electronics", "icon": "zap", "useCase": "Component and circuit board inspection", "consideration": "Demonstrated on semiconductor elements and PCBs in reflected light" },
+              { "name": "Microorganism and Diatom Research", "icon": "flask", "useCase": "Structural imaging in transmitted light", "consideration": "eZoom precision captures fine structural detail at high magnification" },
+              { "name": "Embryology and Relief Contrast Studies", "icon": "target", "useCase": "Oblique illumination for negative relief contrast work", "consideration": "Demonstrated directly by Zeiss on embryo imaging" },
+              { "name": "High-Throughput Quality Assurance", "icon": "repeat", "useCase": "Repeated inspection across large sample volumes", "consideration": "SYCOP control speeds inspection without breaking visual continuity" },
+              { "name": "Contract Testing and Inspection Labs", "icon": "clock", "useCase": "Varied client samples requiring consistent, reproducible results", "consideration": "Motorized zoom removes operator-dependent variability" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "End-to-end installation, training, and support for the ZEISS SteREO Discovery V12 Microscope across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows eZoom precision and SYCOP control on your own specimens." },
+              { "title": "Configuration Selection Support", "description": "Confirms zoom, control, and modular illumination fit." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "SYCOP Setup", "description": "Panel positioning and function assignment." },
+              { "title": "Operator Training", "description": "Zoom operation, SYCOP navigation, button assignment." },
+              { "title": "Preventive Maintenance", "description": "Optics, motorized zoom, and control panel performance." },
+              { "title": "Spares and Accessories", "description": "Illumination modules, filters, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss SteREO Discovery V12 used for?", "answer": "It's a modular stereo microscope with motorized 12:1 zoom, used in developmental biology and quality assurance, named directly for embryo, stent, and circuit board imaging." },
+            { "question": "What is eZoom?", "answer": "An electronic zoom system that replaces the mechanical zoom curve with stepping motors positioning the lenses precisely, correcting for individual lens tolerances rather than following one fixed mechanical path." },
+            { "question": "How much more precise is eZoom than a mechanical zoom body?", "answer": "Zeiss states doubled precision compared to a mechanical zoom body, delivering visibly more captured detail." },
+            { "question": "What is SYCOP?", "answer": "A control system combining a touch panel and joystick, letting the operator control magnification, focus, brightness, and view optical data without looking away from the eyepiece." },
+            { "question": "Can SYCOP functions be assigned to physical buttons?", "answer": "Yes, individual functions can be assigned to buttons for operators who prefer tactile control over the touchscreen." },
+            { "question": "Is the System Control Panel fixed in one position?", "answer": "No, it can be positioned wherever it's needed on the bench." },
+            { "question": "How does V12 fit into the wider SteREO system?", "answer": "It shares modular interfaces and adapters with SteREO Discovery V8, V20, and Axio Zoom.V16, so illumination and other accessories carry across the family." },
+            { "question": "How is V12 different from V8?", "answer": "V8 uses manual 8:1 zoom; V12 adds motorized 12:1 zoom with eZoom electronic precision and SYCOP eyes-on-eyepiece control, positioned above V8 for applications needing reproducibility and higher magnification detail." },
+            { "question": "Is there a return policy?", "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Full magnification range, working distance, and field of view were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the SteREO Discovery V12 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the illumination, control, and fluorescence configuration selected." },
+            { "question": "Who is the authorized distributor of the SteREO Discovery V12 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss SteREO Discovery V12 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss SteREO Discovery V12 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Motorized 12:1 zoom with eZoom's electronic precision, SYCOP control without breaking eye contact with the sample, and a modular system that scales into V20 when the work demands it. Share the magnification and control requirements, and the right SteREO Discovery V12 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the magnification and control requirements, then confirm the right SteREO Discovery V12 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "magnificationRequirements", "label": "Magnification requirements", "type": "text", "required": false },
+              { "key": "controlRequirements", "label": "Control requirements", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the magnification range and reproducibility needs the work demands, and whether high-throughput, hands-on control matters, and the right SteREO Discovery V12 configuration gets confirmed." },
+              { "title": "Confirm the SYCOP setup", "body": "Share the daily inspection volume and whether touchscreen or physical button control is preferred, and the right SYCOP configuration gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Double the precision. Twelve times the zoom. Not one manual step in between.",
+            "heroLead": "Mechanical zoom bodies have a real limit: lens positioning tolerance builds up across the zoom range, and the image softens as a result, especially at the top end where detail actually matters most. SteREO Discovery V12 replaces the mechanical curve entirely. eZoom uses stepping motors to position the moveable lenses electronically, accounting for the individual tolerances of each lens rather than following one fixed mechanical path. The result, per Zeiss, is doubled precision compared to a mechanical zoom body, visibly more detail across the full 12:1 motorized zoom range. Control all of it without looking away from the eyepiece. The SYCOP touch panel and joystick handle magnification, focus, brightness, and current optical data, positioned wherever it's actually convenient on the bench, with individual functions assignable to physical buttons for anyone who prefers that over the touchscreen. What it fixes: the softening that mechanical zoom bodies introduce at high magnification. What it controls: every essential function, without breaking eye contact with the specimen. What it plugs into: the same modular SteREO system as V8 and V20.",
+            "stats": [
+              { "value": "12:1", "label": "Motorized zoom ratio" },
+              { "value": "2x", "label": "Precision improvement, eZoom vs. mechanical zoom" },
+              { "value": "Motorized", "label": "Zoom body, stepping-motor controlled" },
+              { "value": "SYCOP", "label": "Touch panel + joystick, eyes-on-eyepiece control" },
+              { "value": "Reproducible", "label": "Results held across the full zoom range" },
+              { "value": "Modular", "label": "Shared system with V8, V20, and Axio Zoom.V16" },
+              { "value": "Crisp, contrast-rich, color-accurate", "label": "Image quality, per Zeiss" },
+              { "value": "60 days", "label": "Risk-free return window" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Everything you need to know about the ZEISS SteREO Discovery V12 Microscope, from optical technology to workflow advantages.",
+                "body": [
+                  "Enhances resolution and contrast in biology and quality assurance. Named directly as the two core application areas.",
+                  "12:1 motorized zoom range. Reproducible results held across the whole range, not just at the sweet spot.",
+                  "Enhanced three-dimensional impression. Observing Drosophila and zebrafish embryos, stents, or circuit boards, all named directly by Zeiss.",
+                  "Crisp, contrast-rich images with excellent color fidelity. The stated image quality outcome.",
+                  "Motorized components for reliable results. Consistency that doesn't depend on operator technique.",
+                  "Excellent depth perception, even at high magnification. Where mechanical systems typically lose it.",
+                  "eZoom replaces the mechanical zoom curve with an electronic one. Stepping motors position the moveable lenses precisely.",
+                  "Individual lens tolerances accounted for. Not a fixed mechanical path applied uniformly regardless of lens variation.",
+                  "Doubled precision compared to a mechanical zoom body. Zeiss's own stated comparison, visibly more captured detail.",
+                  "SYCOP touch panel and joystick control every essential function. Without moving the eye from the eyepiece.",
+                  "Individual functions can be assigned to physical buttons. For operators who prefer tactile control over the touchscreen.",
+                  "The System Control Panel positions wherever it's needed. Not fixed to one location on the stand.",
+                  "Magnification, focus, brightness, and optical data, all from one interface. SYCOP consolidates control rather than spreading it across the stand.",
+                  "Modular design integrates into the full SteREO system. Interfaces and adapters shared with V8, V20, and Axio Zoom.V16.",
+                  "Backed by a 60-day risk-free return. Trial the actual configuration before committing."
+                ],
+                "cards": [
+                  { "title": "eZoom, 2x precision", "description": "Visibly sharper detail than a mechanical zoom body" },
+                  { "title": "12:1 motorized zoom", "description": "Reproducible across the whole range, not just mid-range" },
+                  { "title": "SYCOP control", "description": "Every function, without looking away from the sample" },
+                  { "title": "Fully modular", "description": "Shared system with V8, V20, and Axio Zoom.V16" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "A closer look at the innovations that distinguish the ZEISS SteREO Discovery V12 Microscope from conventional stereo microscopes."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Built for research, quality assurance, and precision inspection — the ZEISS SteREO Discovery V12 Microscope adapts to demanding workflows."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Complete technical data and configuration details for the ZEISS SteREO Discovery V12 Microscope."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "eZoom, Explained",
+                "title": "eZoom, Explained",
+                "description": "Why electronic lens positioning beats a mechanical curve.",
+                "body": [
+                  "Every stereo microscope zoom body has to move lenses precisely as magnification changes. A mechanical zoom body does this with a physical cam curve, one fixed mechanical path that every unit follows, tolerances and all. Those tolerances compound as magnification increases, which is exactly where a soft image costs the most.",
+                  "eZoom replaces that physical curve with stepping motors that position each lens electronically, correcting for the actual tolerance of the individual lenses in that specific microscope rather than assuming a uniform mechanical path fits every unit. Zeiss states the result directly: doubled precision compared to a mechanical zoom body, visibly more detail captured across the zoom range. The defocus curve stays tighter to the depth-of-field envelope throughout, rather than drifting outside it as magnification climbs."
+                ],
+                "utilityChecklist": [
+                  { "label": "Lens tolerances compound across the zoom range", "value": "Tolerances corrected individually, per lens" },
+                  { "label": "Image softens most at high magnification", "value": "Precision held consistently throughout" },
+                  { "label": "One fixed path for every unit", "value": "Positioning tuned to the actual hardware" },
+                  { "label": "Detail lost to defocus drift", "value": "Doubled precision, visibly more detail captured" }
+                ],
+                "disclaimer": "Share the magnification range the work operates at most often, and expected image sharpness gets discussed against the eZoom precision improvement."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "SYCOP, Explained",
+                "title": "SYCOP, Explained",
+                "description": "What eyes-on-eyepiece control actually removes from the workflow.",
+                "cards": [
+                  { "title": "Breaking eye contact to adjust magnification", "description": "All essential functions from one control point." },
+                  { "title": "Reaching across the stand for different controls", "description": "Joystick and touchscreen, consolidated." },
+                  { "title": "A fixed control location regardless of setup", "description": "Positioned wherever the operator actually needs it." },
+                  { "title": "No visibility into current optical settings", "description": "Optical data displayed directly on the panel." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access brochures, manuals, and application documents for the ZEISS SteREO Discovery V12 Microscope.",
+                "cards": [
+                  { "title": "SteREO Discovery V12 Product Information Sheet", "description": "Available on request" },
+                  { "title": "The Modular System of Stereo- and Zoom Microscopes (Full Family Profile)", "description": "Available on request" },
+                  { "title": "eZoom Technical Overview", "description": "Available on request" },
+                  { "title": "SYCOP Control System Guide", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss SteREO Discovery V12 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Motorized 12:1 zoom with eZoom's electronic precision, SYCOP control without breaking eye contact with the sample, and a modular system that scales into V20 when the work demands it. Share the magnification and control requirements, and the right SteREO Discovery V12 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "SteREO Discovery V20 Microscope",
+          "slug": "stereo-discovery-v20-microscope",
+          "principalImage": "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
+          "imageAlt": "Zeiss SteREO Discovery V20 Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/stereo-discovery-v20-microscope",
+          "breadcrumbPath": "Home > Products > SteREO Discovery Family > SteREO Discovery V20 Microscope",
+          "h1": "SteREO Discovery V20 Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "The widest range in the SteREO Discovery family, and the one built for the moments when \"close enough\" isn't good enough. A 20:1 zoom range takes you from the largest overview straight into the smallest detail, and eZoom lets you set user-defined zoom positions and return to them with more than 99% accuracy.",
+
+          "features": [
+            ">99% Zoom Reproducibility: Return to the exact same position, provably.",
+            "20:1 Zoom, Up to 345x: The widest range in the family.",
+            "Up to 1000 LP/mm Resolution: Genuine research-grade optical performance.",
+            "eZoom Electronic Positioning: 2x the precision of a mechanical zoom body.",
+            "SYCOP Touch Panel + Joystick: Every function, eyes still on the eyepiece.",
+            "Fully Modular System: Shared architecture with V8, V12, and Axio Zoom.V16."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Zeiss SteREO Discovery V20 Microscope" },
+            { "label": "Category", "value": "SteREO Discovery Family" },
+            { "label": "Zoom", "value": "20:1, motorized" },
+            { "label": "Zoom Technology", "value": "eZoom, electronic lens positioning via stepping motors" },
+            { "label": "Total Magnification", "value": "Up to 345x" },
+            { "label": "Maximum Resolution", "value": "Up to 1000 LP/mm" },
+            { "label": "Zoom Position Reproducibility", "value": "More than 99%, via eZoom user-defined positions" },
+            { "label": "Precision vs. Mechanical Zoom", "value": "Doubled" },
+            { "label": "Control System", "value": "SYCOP, touch panel and joystick, with assignable physical buttons" },
+            { "label": "Control Panel Positioning", "value": "Flexible, positioned to operator preference" },
+            { "label": "System Family", "value": "SteREO Discovery V8, V12, V20, and Axio Zoom.V16, shared modular interfaces" },
+            { "label": "Depth Perception", "value": "Excellent, stated even at high magnification" },
+            { "label": "Return Policy", "value": "60 days, risk-free" },
+            { "label": "Full Objective Range, Working Distance, Field of View", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "High-Magnification Electronics Inspection: PCB components demonstrated across 7.5x and 150x total magnification.",
+            "Research-Grade Botanical Imaging: Daisy (Bellis perennis) structure demonstrated at 150x visual magnification.",
+            "Microorganism and Diatom Research: Demonstrated in transmitted light darkfield.",
+            "Developmental Biology and Embryology: Stained mouse embryo demonstrated at 94x total magnification.",
+            "Precision Component Inspection: Wide zoom range covers overview and fine-detail inspection on the same part.",
+            "Reproducible High-Throughput Research: eZoom's reproducible positions support consistent repeated measurements.",
+            "Semiconductor and Microelectronics: High resolution suited to fine structural detail on small components.",
+            "Research Requiring Documented Magnification: Total magnification figures stated precisely for reporting and publication."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Magnification Checker" },
+            { "id": "config", "label": "Reproducibility Planner" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Zoom Range" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the work actually need V20's top-end range?",
+            "description": "Select the magnification and reproducibility needs, and see the fit against V20.",
+            "fields": [
+              {
+                "key": "highestMagnificationNeeded",
+                "label": "Highest magnification needed",
+                "options": [
+                  { "val": "within-v8-v12-range", "label": "Within V8/V12's range" },
+                  { "val": "up-to-345x", "label": "Requires up to 345x" }
+                ]
+              },
+              {
+                "key": "reproducibilityNeed",
+                "label": "Reproducibility need",
+                "options": [
+                  { "val": "occasional-changes", "label": "Occasional zoom changes" },
+                  { "val": "repeated-fixed-position", "label": "Repeated fixed-position measurement" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "highestMagnificationNeeded": "up-to-345x" },
+                "title": "V20's Range Fits",
+                "body": "Magnification up to 345x is specifically what V20's 20:1 zoom range delivers, beyond V8 and V12's range.",
+                "tags": ["Up to 345x"]
+              },
+              {
+                "condition": { "reproducibilityNeed": "repeated-fixed-position" },
+                "title": "eZoom Reproducibility Fits",
+                "body": "Repeated fixed-position measurement is exactly what eZoom's more than 99% zoom position reproducibility is built for.",
+                "tags": ["99% Reproducibility"]
+              },
+              {
+                "condition": { "highestMagnificationNeeded": "within-v8-v12-range" },
+                "title": "V12 May Suffice",
+                "body": "If the highest magnification needed stays within V8 or V12's range, V20's extended range may not be necessary — share the resolution requirement to confirm.",
+                "tags": ["V12 May Suffice"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Range Fit",
+                "body": "Share the highest magnification needed, resolution requirement, and reproducibility need, and whether V20's range and reproducibility are required, or V12 suffices, gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How often does the work need to return to the exact same zoom setting?",
+            "description": "Select the measurement pattern and session frequency, and confirm the right configuration.",
+            "steps": [
+              {
+                "key": "measurementPattern",
+                "question": "What's the measurement pattern?",
+                "options": [
+                  { "val": "one-off", "label": "One-off observation" },
+                  { "val": "repeated-fixed-position", "label": "Repeated fixed-position inspection" }
+                ]
+              },
+              {
+                "key": "sessionFrequency",
+                "question": "What's the session frequency?",
+                "options": [
+                  { "val": "single-session", "label": "Single session" },
+                  { "val": "comparisons-across-time", "label": "Comparisons across days/weeks" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the documentation requirement (visual only, or magnification figures reported/published), and the eZoom reproducibility benefit gets confirmed against the actual workflow.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within the SteREO Discovery range",
+            "title": "SteREO Discovery V8 vs V12 vs V20",
+            "description": "Compare the ZEISS SteREO Discovery V20 Microscope with other ZEISS stereo microscope solutions.",
+            "columns": [
+              { "label": "SteREO Discovery V8", "highlight": false },
+              { "label": "SteREO Discovery V12", "highlight": false },
+              { "label": "SteREO Discovery V20", "highlight": true }
+            ],
+            "rows": [
+              { "feature": "Zoom Ratio", "values": ["8:1", "12:1", "20:1"] },
+              { "feature": "Zoom Type", "values": ["Manual", "Motorized, eZoom", "Motorized, eZoom"] },
+              { "feature": "Total Magnification", "values": ["-", "-", "Up to 345x"] },
+              { "feature": "Maximum Resolution", "values": ["-", "-", "Up to 1000 LP/mm"] },
+              { "feature": "Zoom Precision", "values": ["Standard mechanical", "Doubled vs. mechanical", "Doubled vs. mechanical"] },
+              { "feature": "Zoom Reproducibility", "values": ["Not applicable (manual)", "Not stated", "More than 99%, user-defined positions"] },
+              { "feature": "Control System", "values": ["Standard stand controls", "SYCOP touch panel and joystick", "SYCOP touch panel and joystick"] },
+              { "feature": "System Family", "values": ["Shared with V12, V20, Axio Zoom.V16", "Shared with V8, V20, Axio Zoom.V16", "Shared with V8, V12, Axio Zoom.V16"] },
+              { "feature": "Best For", "values": ["Modular illumination flexibility, manual operation acceptable", "Reproducibility and precision at moderate magnification", "Maximum magnification, resolution, and reproducible positioning"] },
+              { "feature": "Choose When", "values": ["Manual zoom and illumination modularity are the priority", "Motorized precision matters, but the widest range isn't required", "The work needs the highest resolution and provable zoom reproducibility"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Discover how the ZEISS SteREO Discovery V20 Microscope addresses advanced imaging challenges across research and industry.",
+            "industries": [
+              { "name": "Semiconductor and Electronics Research", "icon": "zap", "useCase": "Fine structural detail on components and PCBs", "consideration": "Up to 1000 LP/mm resolves detail standard stereo scopes can't reach" },
+              { "name": "Developmental Biology and Embryology", "icon": "droplet", "useCase": "Stained embryo and model organism imaging", "consideration": "Demonstrated directly on stained mouse embryo at 94x" },
+              { "name": "Botanical and Microorganism Research", "icon": "flask", "useCase": "Fine structural imaging of plant and diatom specimens", "consideration": "Demonstrated at 150x visual magnification on flower structure" },
+              { "name": "Precision Manufacturing QC", "icon": "cpu", "useCase": "Overview-to-detail inspection on the same part", "consideration": "20:1 range covers both without switching optics" },
+              { "name": "Metrology and Reproducible Measurement", "icon": "repeat", "useCase": "Repeated inspection at fixed magnification", "consideration": "Beyond 99% zoom reproducibility supports comparable measurements over time" },
+              { "name": "Academic and Publication-Grade Research", "icon": "school", "useCase": "Documented magnification for reporting", "consideration": "Precisely stated total magnification figures across demonstrated examples" },
+              { "name": "High-End Contract Inspection Services", "icon": "target", "useCase": "Client work demanding the highest resolution available in the family", "consideration": "The top of the SteREO Discovery range, by magnification and resolution" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Installation, application support, training, and AMC for the ZEISS SteREO Discovery V20 Microscope throughout India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows full zoom range, resolution, and reproducibility on your own specimens." },
+              { "title": "Configuration Selection Support", "description": "Confirms zoom, control, and modular illumination fit against V12." },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-use checks." },
+              { "title": "SYCOP Setup", "description": "Panel positioning and function assignment." },
+              { "title": "Operator Training", "description": "Zoom operation, eZoom position setting, SYCOP navigation." },
+              { "title": "Preventive Maintenance", "description": "Optics, motorized zoom, and control panel performance." },
+              { "title": "Spares and Accessories", "description": "Illumination modules, filters, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Zeiss SteREO Discovery V20 used for?", "answer": "It's the top-tier modular stereo microscope in Zeiss's SteREO Discovery family, offering motorized 20:1 zoom for research-grade 3D imaging requiring the highest magnification and resolution." },
+            { "question": "What is the maximum magnification?", "answer": "Up to 345x total magnification." },
+            { "question": "What is the maximum resolution?", "answer": "Up to 1000 LP/mm." },
+            { "question": "How reproducible are the zoom positions?", "answer": "More than 99% accurate, using eZoom's user-defined zoom positions, so a specific magnification can be returned to reliably across sessions." },
+            { "question": "How is that reproducibility achieved?", "answer": "eZoom replaces the mechanical zoom curve with stepping motors that position lenses electronically, correcting for individual lens tolerances rather than following a fixed mechanical path." },
+            { "question": "What is the precision improvement over a mechanical zoom body?", "answer": "Doubled, per Zeiss, delivering visibly more captured detail." },
+            { "question": "What is SYCOP?", "answer": "A control system combining a touch panel and joystick, letting the operator control magnification, focus, contrast, and brightness without looking away from the eyepiece." },
+            { "question": "How does V20 fit into the wider SteREO system?", "answer": "It shares modular interfaces and adapters with SteREO Discovery V8, V12, and Axio Zoom.V16, so illumination and other accessories carry across the family." },
+            { "question": "How is V20 different from V12?", "answer": "Both use motorized eZoom and SYCOP control, but V20 extends the zoom ratio to 20:1 (versus V12's 12:1), reaching up to 345x total magnification and 1000 LP/mm resolution, with a specifically quantified reproducibility figure of more than 99%." },
+            { "question": "Is there a return policy?", "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Full objective range, working distance, and field of view were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss." },
+            { "question": "What is the price of the SteREO Discovery V20 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the illumination, control, and fluorescence configuration selected." },
+            { "question": "Who is the authorized distributor of the SteREO Discovery V20 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Zeiss SteREO Discovery V20 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Zeiss SteREO Discovery V20 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The widest zoom range in the SteREO Discovery family, with reproducible positioning precise enough to trust across sessions. Share the magnification, resolution, and reproducibility the work demands, and the right SteREO Discovery V20 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the magnification, resolution, and reproducibility requirements, then confirm the right SteREO Discovery V20 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "magnificationResolutionRequirements", "label": "Magnification and resolution requirements", "type": "text", "required": false },
+              { "key": "reproducibilityRequirement", "label": "Reproducibility requirement", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the magnification and resolution the work actually demands, and whether returning to an exact zoom position repeatedly matters, and the right SteREO Discovery V20 configuration gets confirmed." },
+              { "title": "Confirm the reproducibility fit", "body": "Share whether the work requires repeated measurement at a fixed magnification, and the reproducibility benefit gets discussed against the actual research or inspection protocol." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Return to the exact same zoom position, over 99% of the time. Every time.",
+            "heroLead": "The widest range in the SteREO Discovery family, and the one built for the moments when \"close enough\" isn't good enough. A 20:1 zoom range takes you from the largest overview straight into the smallest detail, and eZoom lets you set user-defined zoom positions and return to them with more than 99% accuracy. That precision isn't incidental, it's the whole reason to choose V20 over V8 or V12. Total magnification reaches up to 345x, resolution up to 1000 LP/mm, both figures that only mean something if the zoom actually lands exactly where it's set every time. The same SYCOP touch panel and joystick from V12 carries over here, controlling magnification, focus, contrast, and brightness without ever looking away from the eyepiece. And like every SteREO Discovery model, it integrates into the same modular illumination and accessory system as V8 and V12, so nothing bought for a smaller model gets stranded on an upgrade. What it delivers: the widest zoom range, the highest resolution, and reproducible positioning in the family. What it doesn't sacrifice: depth perception, even at the top of that range. What it plugs into: the exact same modular system as V8 and V12.",
+            "stats": [
+              { "value": "20:1", "label": "Motorized zoom ratio" },
+              { "value": "Up to 345x", "label": "Total magnification" },
+              { "value": "Up to 1000 LP/mm", "label": "Maximum resolution" },
+              { "value": ">99%", "label": "Zoom position reproducibility, via eZoom" },
+              { "value": "2x", "label": "Precision improvement, eZoom vs. mechanical zoom" },
+              { "value": "SYCOP", "label": "Touch panel + joystick, eyes-on-eyepiece control" },
+              { "value": "Excellent", "label": "Depth perception, stated at high magnification" },
+              { "value": "Modular", "label": "Shared system with V8, V12, and Axio Zoom.V16" },
+              { "value": "60 days", "label": "Risk-free return window" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "An overview of the optics, automation, and modular capabilities of the ZEISS SteREO Discovery V20 Microscope.",
+                "body": [
+                  "20:1 zoom range. Largest overview to smallest detail, on one microscope.",
+                  "Brilliant three-dimensional images with exceptional depth perception. Held even at the top of the magnification range.",
+                  "Up to 345x total magnification. The highest in the SteREO Discovery family.",
+                  "Up to 1000 LP/mm maximum resolution. Genuine research-grade optical performance.",
+                  "eZoom lets you set and return to user-defined zoom positions. More than 99% reproducibility on those positions.",
+                  "SYCOP touch panel controls magnification, focus, contrast, and brightness. With ease, without moving the eye from the eyepiece.",
+                  "Motorized zoom, positioned electronically. Stepping motors account for individual lens tolerances, not one fixed mechanical path.",
+                  "Doubled precision compared to a mechanical zoom body. The same eZoom advantage carried up from V12.",
+                  "Individual functions assignable to physical buttons. Touchscreen or tactile control, whichever fits the operator.",
+                  "System Control Panel positions wherever it's needed. Not fixed to one spot on the stand.",
+                  "Integrated into the full modular SteREO system. Shared interfaces and adapters with V8, V12, and Axio Zoom.V16.",
+                  "Demonstrated across a genuinely wide range of applications. PCB components at 7.5x and 150x, daisy flower structures, diatoms, and stained mouse embryos at 94x.",
+                  "Backed by a 60-day risk-free return. Trial the actual configuration before committing."
+                ],
+                "cards": [
+                  { "title": ">99% zoom reproducibility", "description": "The exact same magnification, every time it's set" },
+                  { "title": "Up to 345x, 1000 LP/mm", "description": "The highest magnification and resolution in the family" },
+                  { "title": "Excellent depth perception", "description": "Held even at the top of the range" },
+                  { "title": "Fully modular", "description": "Shared system with V8, V12, and Axio Zoom.V16" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the technologies that make the ZEISS SteREO Discovery V20 Microscope the flagship of the SteREO Discovery family."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "From developmental biology to industrial quality control, the ZEISS SteREO Discovery V20 Microscope supports precision imaging across disciplines."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Detailed specifications of the ZEISS SteREO Discovery V20 Microscope, including optics, zoom, and modular configurations."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Reproducible Zoom Positions",
+                "title": "Reproducible Zoom Positions",
+                "description": "Why 99% accuracy matters more than raw magnification.",
+                "body": [
+                  "A 345x magnification figure is only useful if you can actually get back to it. Most zoom systems drift slightly every time they're adjusted, close enough for casual observation, not precise enough for a measurement or comparison that depends on consistent conditions.",
+                  "eZoom solves that directly. User-defined zoom positions are set once and recalled with more than 99% reproducibility, which means a measurement taken today at a specific magnification and a measurement taken next month at the same defined position are genuinely comparable, not approximately similar. That reproducibility comes from the same electronic lens positioning that gives eZoom its 2x precision advantage over a mechanical zoom body, stepping motors correcting for individual lens tolerance rather than following one fixed mechanical path."
+                ],
+                "utilityChecklist": [
+                  { "label": "Returning to the exact same zoom setting", "value": "More than 99% accuracy on user-defined positions" },
+                  { "label": "Comparable results across sessions or operators", "value": "The same optical conditions, provably repeated" },
+                  { "label": "Confidence in measurement consistency", "value": "Reproducibility documented as a stated specification" },
+                  { "label": "A mechanical system that drifts slightly each time", "value": "Electronic positioning holding the same setting reliably" }
+                ],
+                "disclaimer": "Share whether the work requires repeated measurement at a fixed magnification, and the reproducibility benefit gets discussed against the actual research or inspection protocol."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "From Overview to Fine Detail, One Range",
+                "title": "From Overview to Fine Detail, One Range",
+                "description": "What a genuine 20:1 zoom actually replaces.",
+                "cards": [
+                  { "title": "Locating a feature across a whole component", "description": "Lower end of the zoom, wide overview." },
+                  { "title": "Resolving fine structural detail on that same feature", "description": "Higher end, up to 345x total magnification." },
+                  { "title": "Comparing overview to detail without losing reference", "description": "Continuous zoom, same stand, same field alignment." },
+                  { "title": "Research needing both scales documented", "description": "Both magnifications captured from the same setup." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "The full system profile, available directly.",
+                "cards": [
+                  { "title": "SteREO Discovery V20 Product Information Sheet", "description": "Available on request" },
+                  { "title": "The Modular System of Stereo- and Zoom Microscopes (Full Family Profile)", "description": "Available on request" },
+                  { "title": "eZoom Technical Overview", "description": "Available on request" },
+                  { "title": "SYCOP Control System Guide", "description": "Available on request" },
+                  { "title": "Language Versions and Manuals", "description": "Available via the Zeiss Download Center" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Zeiss SteREO Discovery V20 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The widest zoom range in the SteREO Discovery family, with reproducible positioning precise enough to trust across sessions. Share the magnification, resolution, and reproducibility the work demands, and the right SteREO Discovery V20 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

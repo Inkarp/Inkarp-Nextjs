@@ -1,0 +1,323 @@
+{
+  "principal": {
+    "slug": "photon-etc",
+    "principalName": "Photon ETC",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "eSWIR Cameras",
+      "slug": "eswir-cameras",
+      "products": [
+        {
+          "name": "Photon etc. ZephIR™ 2.5e SWIR Camera",
+          "slug": "zephir-2-5",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Photon.jpeg",
+          "imageAlt": "Photon etc. ZephIR 2.5e SWIR Camera - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/zephir-2-5",
+          "breadcrumbPath": "Home > Products > eSWIR Cameras > Photon etc. ZephIR™ 2.5e SWIR Camera",
+          "h1": "Photon etc. ZephIR™ 2.5e SWIR Camera",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "High-speed, deep-cooled SWIR imaging for demanding scientific experiments and industrial applications.",
+
+          "features": [
+            "Extended 900–2500 nm SWIR Sensitivity: ZephIR™ 2.5e covers 900 to 2500 nm, providing access to an extended SWIR wavelength range suitable for applications requiring spectral information beyond conventional shorter-wave infrared ranges.",
+            "T2SL Focal Plane Array: The camera uses a T2SL FPA with 640 × 512 pixels and 15 µm pixel size, providing a scientific imaging platform for extended-SWIR applications.",
+            "Deep TEC Cooling to −80 °C: At 20 °C ambient, ZephIR™ 2.5e can reach −80 °C using TEC + forced-air cooling, helping reduce unwanted detector noise and support improved signal acquisition.",
+            "High-Speed Full-Frame Imaging: ZephIR™ 2.5e provides a frame rate of 240 fps, supporting high-speed SWIR imaging where temporal resolution is important.",
+            "Up to 4000 fps ROI Acquisition: When imaging only a selected region of interest, the camera can achieve ROI frame rates up to 4000 fps — useful for experiments and industrial processes where a selected region must be monitored at high temporal resolution.",
+            "High Quantum Efficiency: The camera has a specified peak quantum efficiency greater than 70%.",
+            "High Operability: Typical detector operability is specified at greater than 99%.",
+            "Flexible Gain Settings: The camera provides high, medium and low gain settings — High: 45 e−/ADU, 45 e− typical readout noise, 28 ke− typical full well; Medium: 75 e−/ADU, 75 e− typical readout noise, 110 ke− typical full well; Low: 300 e−/ADU, 300 e− typical readout noise, 1400 ke− typical full well.",
+            "Multiple Readout Modes: Supports CDS ITR, CDS IWR, and IMRO IWR readout modes.",
+            "Multiple Data Formats: Image data can be provided in 16-bit HDF5, FITS, and TIFF formats, providing flexibility for scientific analysis and integration with existing data workflows."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product", "value": "ZephIR™ 2.5e" },
+            { "label": "Technology", "value": "Infrared Imaging" },
+            { "label": "Category", "value": "eSWIR Cameras" },
+            { "label": "Sensor", "value": "T2SL FPA" },
+            { "label": "Sensor format", "value": "640 × 512 px" },
+            { "label": "Pixel size", "value": "15 µm" },
+            { "label": "Spectral range", "value": "900–2500 nm" },
+            { "label": "Peak quantum efficiency", "value": ">70%" },
+            { "label": "Typical operability", "value": ">99%" },
+            { "label": "Cooling temperature", "value": "−80 °C @ 20 °C ambient" },
+            { "label": "Cooling method", "value": "TEC + forced air" },
+            { "label": "Typical dark current", "value": "30 Mē/px/s" },
+            { "label": "Typical gain — High", "value": "45 e−/ADU" },
+            { "label": "Typical gain — Medium", "value": "75 e−/ADU" },
+            { "label": "Typical gain — Low", "value": "300 e−/ADU" },
+            { "label": "Typical readout noise — High", "value": "45 e−" },
+            { "label": "Typical readout noise — Medium", "value": "75 e−" },
+            { "label": "Typical readout noise — Low", "value": "300 e−" },
+            { "label": "Typical full well — High", "value": "28 ke−" },
+            { "label": "Typical full well — Medium", "value": "110 ke−" },
+            { "label": "Typical full well — Low", "value": "1400 ke−" },
+            { "label": "Readout modes", "value": "CDS ITR, CDS IWR, IMRO IWR" },
+            { "label": "Full-frame frame rate", "value": "240 fps" },
+            { "label": "ROI frame rate", "value": "Up to 4000 fps" },
+            { "label": "Integration time", "value": "1 µs to full well capacity" },
+            { "label": "Digitization", "value": "14 bit" },
+            { "label": "Image format", "value": "16-bit HDF5, FITS, TIFF" },
+            { "label": "Software", "value": "PHySpec™ control and analysis software" },
+            { "label": "SDK", "value": "C++, Python" },
+            { "label": "Computer interface", "value": "USB 3.0, CameraLink™" },
+            { "label": "External control", "value": "Trigger IN/OUT" },
+            { "label": "Ambient temperature", "value": "10–35 °C" },
+            { "label": "Dimensions", "value": "169 × 130 × 97 mm" },
+            { "label": "Power supply", "value": "12 V DC" },
+            { "label": "Weight", "value": "2.9 kg" }
+          ],
+
+          "applications": [
+            "Extended SWIR imaging: 900–2500 nm.",
+            "Weak-signal infrared imaging: Deep-cooled detector.",
+            "High-speed imaging: 240 fps.",
+            "Very high-speed ROI imaging: Up to 4000 fps.",
+            "Scientific imaging: T2SL FPA — combining the T2SL FPA, deep TEC cooling, 900–2500 nm spectral sensitivity, 14-bit digitization, multiple gain settings, flexible integration times, scientific data formats, and C++/Python SDK support for researchers developing custom SWIR imaging and spectroscopy systems.",
+            "Custom system development: C++ / Python SDK.",
+            "Industrial integration: USB 3.0 / CameraLink™ — supporting industrial imaging systems that need high acquisition speed, reliable integration, and extended infrared sensitivity.",
+            "Triggered experiments: Trigger IN/OUT.",
+            "Infrared spectroscopy: Extended SWIR sensitivity."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Gain Setting Guide" },
+            { "id": "workflow", "label": "Software & Integration" },
+            { "id": "benefits", "label": "Is This Camera For You?" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which gain setting fits your application?",
+            "description": "Select a gain setting, and see the resulting typical gain, readout noise and full well capacity.",
+            "fields": [
+              {
+                "key": "gainSetting",
+                "label": "Gain setting",
+                "options": [
+                  { "val": "high", "label": "High" },
+                  { "val": "medium", "label": "Medium" },
+                  { "val": "low", "label": "Low" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "gainSetting": "high" },
+                "title": "High Gain Setting",
+                "body": "High gain provides a typical gain of 45 e−/ADU, typical readout noise of 45 e−, and typical full well capacity of 28 ke−.",
+                "tags": ["High Gain"]
+              },
+              {
+                "condition": { "gainSetting": "medium" },
+                "title": "Medium Gain Setting",
+                "body": "Medium gain provides a typical gain of 75 e−/ADU, typical readout noise of 75 e−, and typical full well capacity of 110 ke−.",
+                "tags": ["Medium Gain"]
+              },
+              {
+                "condition": { "gainSetting": "low" },
+                "title": "Low Gain Setting",
+                "body": "Low gain provides a typical gain of 300 e−/ADU, typical readout noise of 300 e−, and typical full well capacity of 1400 ke−.",
+                "tags": ["Low Gain"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm Your ZephIR™ 2.5e Gain Setting",
+                "body": "The camera provides high, medium and low gain settings — share the expected signal level and required full well capacity to confirm the right setting for the application.",
+                "tags": ["Gain Guidance"]
+              }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Support in India",
+            "description": "Inkarp is the authorized distributor and service provider for Photon etc. ZephIR™ 2.5e in India. For SWIR cameras, detector range, cooling, acquisition speed, interface and software requirements should be matched to the intended application.",
+            "supportAreas": [
+              { "title": "Application discussion", "description": "Supported by Inkarp." },
+              { "title": "Camera selection", "description": "Supported by Inkarp." },
+              { "title": "Configuration guidance", "description": "Supported by Inkarp." },
+              { "title": "Product demonstration", "description": "Supported by Inkarp." },
+              { "title": "Installation", "description": "Supported by Inkarp." },
+              { "title": "Training", "description": "Supported by Inkarp." },
+              { "title": "Technical support", "description": "Supported by Inkarp." },
+              { "title": "AMC support", "description": "Supported by Inkarp." },
+              { "title": "Spare parts support", "description": "Supported by Inkarp." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is ZephIR™ 2.5e?", "answer": "ZephIR™ 2.5e is a deep-cooled SWIR camera from Photon etc. designed for infrared imaging from 900 to 2500 nm." },
+            { "question": "What wavelength range does ZephIR™ 2.5e cover?", "answer": "ZephIR™ 2.5e is sensitive from 900 to 2500 nm." },
+            { "question": "What type of detector does ZephIR™ 2.5e use?", "answer": "The camera uses a T2SL focal plane array with a 640 × 512 pixel format and 15 µm pixel size." },
+            { "question": "How cold can the ZephIR™ 2.5e detector get?", "answer": "At 20 °C ambient, the specified cooling temperature is −80 °C." },
+            { "question": "What cooling technology does ZephIR™ 2.5e use?", "answer": "ZephIR™ 2.5e uses thermoelectric cooling with forced air." },
+            { "question": "Does ZephIR™ 2.5e require liquid nitrogen?", "answer": "No. The manufacturer describes the camera as thermoelectrically cooled and states that it does not require a liquid-nitrogen refrigeration unit." },
+            { "question": "Does ZephIR™ 2.5e require water cooling?", "answer": "No. The supplied manufacturer information states that the camera does not require water cooling." },
+            { "question": "What is the frame rate of ZephIR™ 2.5e?", "answer": "The full-frame frame rate is 240 fps, while ROI frame rates can reach up to 4000 fps." },
+            { "question": "What is the sensor resolution?", "answer": "The ZephIR™ 2.5e uses a 640 × 512 pixel T2SL FPA." },
+            { "question": "What is the pixel size?", "answer": "The pixel size is 15 µm." },
+            { "question": "Does ZephIR™ 2.5e support external triggering?", "answer": "Yes. The camera provides Trigger IN/OUT for external control." },
+            { "question": "What software is used with ZephIR™ 2.5e?", "answer": "The camera can be controlled and analyzed using Photon etc.'s PHySpec™ control and analysis software." },
+            { "question": "Can ZephIR™ 2.5e be integrated into custom software?", "answer": "Yes. Photon etc. provides SDK support for C++ and Python." },
+            { "question": "What interfaces does ZephIR™ 2.5e support?", "answer": "The camera supports USB 3.0 and CameraLink™ computer interfaces." },
+            { "question": "What image formats are supported?", "answer": "ZephIR™ 2.5e supports 16-bit HDF5, FITS and TIFF image formats." },
+            { "question": "What is the integration time range?", "answer": "The specified integration time ranges from 1 µs to the full well capacity." },
+            { "question": "What is the peak quantum efficiency?", "answer": "The specified peak quantum efficiency is greater than 70%." },
+            { "question": "What is the typical operability of the sensor?", "answer": "Typical operability is greater than 99%." },
+            { "question": "What are the dimensions of ZephIR™ 2.5e?", "answer": "The camera measures 169 × 130 × 97 mm." },
+            { "question": "How much does ZephIR™ 2.5e weigh?", "answer": "The camera weighs 2.9 kg." },
+            { "question": "What is the price of ZephIR™ 2.5e in India?", "answer": "Pricing depends on the configuration and application requirements. Contact Inkarp for a quotation." },
+            { "question": "Who is the authorized distributor of ZephIR™ 2.5e in India?", "answer": "Inkarp is the authorized distributor and service provider for Photon etc. ZephIR™ 2.5e in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Need SWIR Imaging up to 2.5 µm?",
+            "description": "Explore Photon etc. ZephIR™ 2.5e for deep-cooled, high-speed SWIR imaging from 900 to 2500 nm. With a 640 × 512 T2SL FPA, −80 °C deep TEC cooling, 240 fps full-frame acquisition and up to 4000 fps ROI acquisition, ZephIR™ 2.5e is built for demanding scientific and industrial infrared imaging applications.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. Our team will review your requirements and get back to you about the right ZephIR™ 2.5e configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "wavelengthRange", "label": "Required wavelength range", "type": "text", "required": false },
+              { "key": "signalLevel", "label": "Signal level", "type": "text", "required": false },
+              { "key": "imagingSpeed", "label": "Imaging speed", "type": "text", "required": false },
+              { "key": "fieldOfView", "label": "Field of view", "type": "text", "required": false },
+              { "key": "integrationRequirements", "label": "Integration requirements", "type": "text", "required": false },
+              { "key": "softwareIntegrationNeeds", "label": "Software or system integration needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right ZephIR™ 2.5e configuration", "body": "For SWIR cameras, detector range, cooling, acquisition speed, interface and software requirements should be matched to the intended application." },
+              { "title": "Installation and setup support", "body": "Supported by Inkarp." },
+              { "title": "Ongoing service and support", "body": "Technical support, spare parts and AMC support are available through Inkarp." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Deep-Cooled SWIR Imaging from 900 to 2500 nm",
+            "heroLead": "High-speed, deep-cooled SWIR imaging for demanding scientific experiments and industrial applications. Photon etc. ZephIR™ 2.5e is a deep-cooled short-wave infrared (SWIR) camera sensitive from 900 to 2500 nm. Its T2SL focal plane array, deep thermoelectric cooling and low-noise operation are designed to help acquire weak infrared signals with improved signal quality. The camera uses a 640 × 512 pixel sensor with 15 µm pixels and provides frame rates up to 240 fps, with ROI frame rates up to 4000 fps. ZephIR™ 2.5e uses TEC + forced-air cooling and can reach a cooling temperature of −80 °C at 20 °C ambient, without requiring water cooling or liquid-nitrogen refrigeration. For system integration, the camera supports USB 3.0 and CameraLink™, external trigger input/output, and Photon etc.'s PHySpec™ control and analysis software. Developers can also use the supplied C++ and Python SDK.",
+            "stats": [
+              { "value": "Infrared Imaging", "label": "Technology" },
+              { "value": "eSWIR Camera", "label": "Category" },
+              { "value": "T2SL FPA", "label": "Sensor" },
+              { "value": "640 × 512 pixels", "label": "Sensor format" },
+              { "value": "15 µm", "label": "Pixel size" },
+              { "value": "900–2500 nm", "label": "Spectral range" },
+              { "value": ">70%", "label": "Peak quantum efficiency" },
+              { "value": ">99%", "label": "Typical operability" },
+              { "value": "−80 °C @ 20 °C ambient", "label": "Cooling temperature" },
+              { "value": "TEC + forced air", "label": "Cooling method" },
+              { "value": "45 / 75 / 300 e− depending on gain setting", "label": "Typical readout noise" },
+              { "value": "240 fps", "label": "Frame rate" },
+              { "value": "Up to 4000 fps", "label": "ROI frame rate" },
+              { "value": "1 µs to full well capacity", "label": "Integration time" },
+              { "value": "14 bit", "label": "Digitization" },
+              { "value": "16-bit HDF5, FITS, TIFF", "label": "Image formats" },
+              { "value": "USB 3.0, CameraLink™", "label": "Computer interface" },
+              { "value": "Trigger IN/OUT", "label": "External control" },
+              { "value": "PHySpec™ control and analysis software", "label": "Software" },
+              { "value": "C++, Python", "label": "SDK" },
+              { "value": "10–35 °C", "label": "Ambient temperature" },
+              { "value": "169 × 130 × 97 mm", "label": "Dimensions" },
+              { "value": "12 V DC", "label": "Power supply" },
+              { "value": "2.9 kg", "label": "Weight" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "ZephIR™ 2.5e combines extended SWIR sensitivity with deep thermoelectric cooling and high-speed acquisition.",
+                "body": [
+                  "Deep-cooled SWIR camera designed for high-sensitivity infrared imaging from 900–2500 nm.",
+                  "Features a T2SL (Type-II Superlattice) focal plane array with 640 × 512 pixel resolution and 15 µm pixel size.",
+                  "Equipped with deep thermoelectric cooling (TEC) that enables detector temperatures as low as −80 °C at 20 °C ambient.",
+                  "Deep cooling reduces detector noise, improving signal quality and image sensitivity for demanding infrared applications.",
+                  "Extended spectral range up to 2500 nm enables broader SWIR imaging and enhanced infrared detection capabilities.",
+                  "Delivers 240 fps full-frame imaging for fast data acquisition.",
+                  "Supports ROI frame rates up to 4000 fps for high-speed imaging of dynamic events.",
+                  "Ideal for scientific research, industrial inspection, spectroscopy, and other applications requiring both high infrared sensitivity and rapid image acquisition."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "ZephIR™ 2.5e features for extended 900–2500 nm SWIR imaging, T2SL FPA detection, deep TEC cooling and high-speed acquisition."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "ZephIR™ 2.5e applications in extended-SWIR imaging, industrial inspection, scientific experiments and high-speed infrared detection."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "ZephIR™ 2.5e technical specifications for 900–2500 nm SWIR imaging, T2SL FPA detection, −80 °C TEC cooling and high-speed acquisition up to 240 fps."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Why Deep-Cooled SWIR Imaging?",
+                "title": "Why Deep-Cooled SWIR Imaging?",
+                "body": [
+                  "Infrared detectors generate unwanted signals that can interfere with the measurement of weak infrared features. ZephIR™ 2.5e uses deep thermoelectric cooling to reduce unwanted detector noise.",
+                  "At 20 °C ambient, the camera can reach a cooling temperature of −80 °C using TEC + forced-air cooling. According to Photon etc., this deep cooling allows the camera to acquire more signal and minimize unwanted noise for a given imaging application.",
+                  "ZephIR™ 2.5e uses thermoelectric cooling rather than liquid-nitrogen cooling. The supplied manufacturer information highlights that the system does not require water cooling, does not require a liquid-nitrogen cooling unit, and does not depend on mechanical Stirling coolers — avoiding the limited lifetime associated with mechanical Stirling coolers. This can simplify integration into laboratory and industrial imaging systems."
+                ]
+              },
+              {
+                "key": "workflow",
+                "eyebrow": "Software & System Integration",
+                "title": "Software, SDK and System Integration",
+                "description": "ZephIR™ 2.5e provides multiple interfaces and external controls for integration into larger imaging systems, and can be operated using Photon etc.'s PHySpec™ software or integrated into custom systems via SDK.",
+                "steps": [
+                  { "title": "PHySpec™ Software", "description": "Camera control and analysis." },
+                  { "title": "C++ SDK", "description": "Custom software integration." },
+                  { "title": "Python SDK", "description": "Custom software integration." },
+                  { "title": "USB 3.0", "description": "Camera communication interface." },
+                  { "title": "CameraLink™", "description": "High-speed camera interface." },
+                  { "title": "Trigger IN/OUT", "description": "External synchronization and control." }
+                ]
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Infrared Detection and SWIR Imaging",
+                "title": "Is ZephIR™ 2.5e Right for Your Application?",
+                "description": "ZephIR™ 2.5e covers 900–2500 nm, extending into the longer-wavelength SWIR region. This broader spectral coverage can be valuable when an application requires infrared information beyond the range available from shorter-wave cameras. The camera is suited to research and industrial systems where:",
+                "cards": [
+                  { "title": "Extended SWIR sensitivity", "description": "Required for spectral information beyond conventional shorter-wave infrared ranges." },
+                  { "title": "Weak infrared signals", "description": "Need to be detected." },
+                  { "title": "High-speed acquisition", "description": "Is important." },
+                  { "title": "Deep cooling", "description": "Is required." },
+                  { "title": "Custom software integration", "description": "Is needed." },
+                  { "title": "No liquid-nitrogen cooling", "description": "The camera must operate without liquid-nitrogen cooling." }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Need SWIR Imaging up to 2.5 µm?",
+              "description": "Explore Photon etc. ZephIR™ 2.5e for deep-cooled, high-speed SWIR imaging from 900 to 2500 nm. With a 640 × 512 T2SL FPA, −80 °C deep TEC cooling, 240 fps full-frame acquisition and up to 4000 fps ROI acquisition, ZephIR™ 2.5e is built for demanding scientific and industrial infrared imaging applications. Tell us about your required wavelength range, signal level, imaging speed, field of view, integration requirements, and software or system integration needs.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

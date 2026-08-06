@@ -1,0 +1,382 @@
+{
+  "principal": {
+    "slug": "photon-etc",
+    "principalName": "Photon ETC",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Microscopy",
+      "slug": "microscopy",
+      "products": [
+        {
+          "name": "Photon etc. IMA™ Hyperspectral Microscope",
+          "slug": "ima",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Photon.jpeg",
+          "imageAlt": "Photon etc. IMA Hyperspectral Microscope - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/ima",
+          "breadcrumbPath": "Home > Products > Microscopy > Photon etc. IMA™ Hyperspectral Microscope",
+          "h1": "Photon etc. IMA™ Hyperspectral Microscope",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Capture spatial and spectral information from your sample in a single hyperspectral microscope.",
+
+          "features": [
+            "400–1620 nm Hyperspectral Coverage: IMA™ hyperspectral microscopy across VIS, NIR and SWIR wavelengths from 400–1620 nm.",
+            "Spatial & Spectral Imaging: Acquire spatial and spectral information together for microscopic material and sample analysis.",
+            "Millions of Data Points in One Snapshot: High-throughput IMA™ hyperspectral imaging for millions of spatial and spectral data points in a single snapshot.",
+            "Patented Imaging Filter Technology: Photon etc. patented imaging filter technology for rapid hyperspectral data acquisition.",
+            "Brightfield Hyperspectral Microscopy: IMA™ brightfield hyperspectral microscopy for spatial and spectral analysis of microscopic samples.",
+            "Darkfield Hyperspectral Microscopy: IMA™ darkfield hyperspectral microscopy for transparent, low-contrast and optically challenging samples.",
+            "Multiple Measurement Modes: Photoluminescence, electroluminescence, fluorescence, reflectance and transmittance imaging in one hyperspectral platform.",
+            "Scientific-Grade VIS, NIR & SWIR Microscopy: Configurable scientific-grade microscopy across VIS, NIR and SWIR spectral regions for advanced materials research."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product", "value": "Photon etc. IMA™" },
+            { "label": "Technology", "value": "Hyperspectral Imaging" },
+            { "label": "Category", "value": "Microscopy" },
+            { "label": "Spectral range", "value": "400–1620 nm" },
+            { "label": "Spectral regions", "value": "VIS / NIR / SWIR" },
+            { "label": "Imaging", "value": "Hyperspectral microscopy" },
+            { "label": "Acquisition", "value": "Single snapshot" },
+            { "label": "Data acquisition", "value": "Millions of data points per snapshot" },
+            { "label": "Microscope configuration", "value": "Brightfield or darkfield" },
+            { "label": "Microscope type", "value": "Scientific-grade VIS, NIR and/or SWIR microscope" },
+            { "label": "Imaging technology", "value": "Photon etc. patented imaging filter" },
+            { "label": "Measurement modes", "value": "PL, EL, fluorescence, reflectance, transmittance" }
+          ],
+
+          "applications": [
+            "Advanced Materials Analysis: Hyperspectral characterization of complex materials — Photon etc. identifies solar cells, nanomaterials and semiconductor quality control as key advanced materials applications for IMA™.",
+            "Solar Cell Research: PL and EL mapping of photovoltaic materials — supports hyperspectral characterization of photovoltaic materials and devices, with spatial information showing where a response occurs and spectral information providing additional detail about the emission.",
+            "Nanomaterial Research: Spatial and spectral characterization of nanomaterials — relevant where nanomaterials exhibit optical properties that vary with composition, structure, size, or local environment.",
+            "Semiconductor Quality Control: Hyperspectral PL/EL analysis — useful when the optical or electroluminescent response of a semiconductor needs to be mapped across a device or sample for non-destructive characterization.",
+            "Infrared Marker Research: SWIR hyperspectral microscopy — supports studying infrared markers in complex environments, including tissues and living cells.",
+            "Transparent Material Imaging: Darkfield hyperspectral microscopy — suited to transparent and low-contrast samples such as polymers, crystals and living cells, where conventional brightfield contrast may not provide sufficient information.",
+            "Polymer Research: Spectral imaging of transparent polymers.",
+            "Crystal Characterization: Hyperspectral imaging of crystals.",
+            "Perovskite Research: Photoluminescence mapping — demonstrated by Photon etc. for photoluminescence mapping of perovskite crystals under intense excitation, using monochromatic images and spectra collected from selected regions of the crystal.",
+            "Living Cell Research: Hyperspectral SWIR imaging of suitable samples."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Configuration Checker" },
+            { "id": "workflow", "label": "Measurement Modes" },
+            { "id": "config", "label": "Measurement Mode Guide" },
+            { "id": "planner", "label": "Materials Workflow Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Why IMA™" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which IMA™ configuration fits your sample?",
+            "description": "Select the spectral region and imaging configuration, and see which IMA™ setup is best considered for your sample.",
+            "fields": [
+              {
+                "key": "spectralRegion",
+                "label": "Spectral region required",
+                "options": [
+                  { "val": "vis", "label": "VIS (400 nm onward)" },
+                  { "val": "nir", "label": "NIR (near-infrared)" },
+                  { "val": "swir", "label": "SWIR (up to 1620 nm)" }
+                ]
+              },
+              {
+                "key": "sampleContrast",
+                "label": "Sample optical behavior",
+                "options": [
+                  { "val": "conventional-contrast", "label": "Provides useful brightfield/transmitted contrast" },
+                  { "val": "transparent-low-contrast", "label": "Transparent, low-contrast or scattering" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "spectralRegion": "vis" },
+                "title": "VIS Hyperspectral Microscopy Fits This Range",
+                "body": "For visible-wavelength work starting at 400 nm, IMA™ supports conventional optical and fluorescence-related characterization in the VIS region.",
+                "tags": ["VIS Region"]
+              },
+              {
+                "condition": { "spectralRegion": "nir" },
+                "title": "NIR Hyperspectral Microscopy Fits This Range",
+                "body": "For near-infrared work, IMA™ supports infrared optical characterization in the NIR region.",
+                "tags": ["NIR Region"]
+              },
+              {
+                "condition": { "spectralRegion": "swir" },
+                "title": "SWIR Hyperspectral Microscopy Fits This Range",
+                "body": "For work up to 1620 nm, IMA™ supports infrared markers, nanomaterials and SWIR microscopy in the SWIR region.",
+                "tags": ["SWIR Region"]
+              },
+              {
+                "condition": { "sampleContrast": "conventional-contrast" },
+                "title": "Brightfield IMA™ Fits This Sample",
+                "body": "Brightfield configuration is best considered for samples where conventional transmitted/brightfield imaging provides useful contrast.",
+                "tags": ["Consider Brightfield"]
+              },
+              {
+                "condition": "default",
+                "title": "Darkfield IMA™ Fits This Sample",
+                "body": "Darkfield configuration is best considered for transparent, low-contrast or scattering samples — such as transparent polymers, crystals or living cells — where darkfield illumination provides useful imaging contrast.",
+                "tags": ["Consider Darkfield"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Which measurement mode does your sample need?",
+            "description": "Select the optical response you want to measure, and see how IMA™ addresses it.",
+            "steps": [
+              {
+                "key": "measurementMode",
+                "question": "Which optical response do you need to measure?",
+                "options": [
+                  { "val": "pl", "label": "Photoluminescence (PL)" },
+                  { "val": "el", "label": "Electroluminescence (EL)" },
+                  { "val": "fluorescence", "label": "Fluorescence" },
+                  { "val": "reflectance", "label": "Reflectance" },
+                  { "val": "transmittance", "label": "Transmittance" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "IMA™ rapidly maps photoluminescence, electroluminescence, fluorescence, reflectance and transmittance across the sample, providing spectral information for each measured region.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "advanced-materials-workflow-planner",
+              "eyebrow": "Advanced Materials Analysis",
+              "title": "What does your materials research involve?",
+              "description": "Select the research workflow, and see how IMA™ supports advanced materials analysis.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                {
+                  "title": "Research workflow",
+                  "choices": "Material characterization; Spectral mapping; Defect or region comparison; Photoluminescence analysis; Electroluminescence analysis; Semiconductor characterization; Nanomaterial research"
+                }
+              ],
+              "disclaimer": "Photon etc. identifies solar cells, nanomaterials and semiconductor quality control as advanced materials applications for IMA™."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between conventional and hyperspectral microscopy",
+            "title": "IMA™ vs Conventional Optical Microscopy",
+            "description": "What does hyperspectral microscopy add to conventional optical microscopy?",
+            "columns": [
+              { "label": "Conventional Optical Microscope", "highlight": false },
+              { "label": "IMA™", "highlight": true }
+            ],
+            "rows": [
+              { "feature": "Microscopic imaging", "values": ["Yes", "Yes"] },
+              { "feature": "Spatial information", "values": ["Yes", "Yes"] },
+              { "feature": "Spectral information", "values": ["Limited / separate measurement may be required", "Integrated hyperspectral measurement"] },
+              { "feature": "Spectral range", "values": ["Configuration dependent", "400–1620 nm"] },
+              { "feature": "Photoluminescence mapping", "values": ["Configuration dependent", "Yes"] },
+              { "feature": "Electroluminescence mapping", "values": ["Configuration dependent", "Yes"] },
+              { "feature": "Fluorescence mapping", "values": ["Configuration dependent", "Yes"] },
+              { "feature": "Reflectance", "values": ["Configuration dependent", "Yes"] },
+              { "feature": "Transmittance", "values": ["Configuration dependent", "Yes"] },
+              { "feature": "Brightfield", "values": ["Yes", "Yes"] },
+              { "feature": "Darkfield", "values": ["Configuration dependent", "Yes"] },
+              { "feature": "Hyperspectral acquisition", "values": ["No / separate system", "Yes"] }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Inkarp is the authorized distributor and service provider for Photon etc. IMA™ in India. Because hyperspectral microscopy configurations depend strongly on the sample and measurement objective, application discussion should be part of the buying process.",
+            "supportAreas": [
+              { "title": "Application Discussion", "description": "Understand the sample and measurement objective." },
+              { "title": "Configuration Guidance", "description": "Help evaluate VIS/NIR/SWIR and brightfield/darkfield requirements." },
+              { "title": "Product Demonstration", "description": "Assess IMA™ against the intended research workflow." },
+              { "title": "Installation", "description": "System installation and setup support." },
+              { "title": "Training", "description": "Operator and workflow guidance." },
+              { "title": "Technical Support", "description": "Product-related technical assistance." },
+              { "title": "Service Support", "description": "Post-installation technical support." },
+              { "title": "Spare Parts", "description": "Applicable genuine replacement support." },
+              { "title": "AMC", "description": "Annual maintenance support, where applicable." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is IMA™?", "answer": "IMA™ is a hyperspectral microscope from Photon etc. that captures spatial and spectral information across the 400–1620 nm range." },
+            { "question": "What is IMA™ used for?", "answer": "IMA™ is used for hyperspectral characterization of advanced materials, solar cells, nanomaterials, semiconductors, infrared markers, transparent materials, crystals, polymers and other research samples." },
+            { "question": "What wavelength range does IMA™ cover?", "answer": "IMA™ provides hyperspectral coverage from 400 to 1620 nm, spanning the VIS, NIR and SWIR regions." },
+            { "question": "What does IMA™ measure?", "answer": "IMA™ can rapidly map photoluminescence, electroluminescence, fluorescence, reflectance and transmittance." },
+            { "question": "Can IMA™ measure photoluminescence?", "answer": "Yes. IMA™ supports photoluminescence mapping and Photon etc. demonstrates the system for PL mapping of perovskite crystals." },
+            { "question": "Can IMA™ measure electroluminescence?", "answer": "Yes. IMA™ can map electroluminescence and is positioned for applications including solar-cell and semiconductor research." },
+            { "question": "Can IMA™ perform fluorescence imaging?", "answer": "Yes. IMA™ supports hyperspectral fluorescence imaging." },
+            { "question": "Can IMA™ measure reflectance?", "answer": "Yes. Reflectance is one of the measurement modes supported by IMA™." },
+            { "question": "Can IMA™ measure transmittance?", "answer": "Yes. IMA™ supports transmittance measurements for suitable samples." },
+            { "question": "Can IMA™ be configured as a darkfield microscope?", "answer": "Yes. IMA™ can be configured as either a brightfield or darkfield hyperspectral microscope." },
+            { "question": "What samples can be studied using darkfield IMA™?", "answer": "Photon etc. identifies transparent materials such as polymers, crystals and living cells as applications for hyperspectral darkfield microscopy." },
+            { "question": "How many data points can IMA™ acquire?", "answer": "Photon etc. states that IMA™ can acquire millions of data points in a single snapshot." },
+            { "question": "How is IMA™ different from point-by-point hyperspectral scanning?", "answer": "IMA™ uses high-throughput imaging filters for rapid hyperspectral acquisition, rather than relying on standard point-by-point scanning." },
+            { "question": "What type of microscope does IMA™ use?", "answer": "IMA™ combines a scientific-grade VIS, NIR and/or SWIR microscope with Photon etc.'s patented imaging filter technology." },
+            { "question": "Is IMA™ suitable for solar-cell research?", "answer": "Yes. Photon etc. identifies solar-cell research as an application and highlights PL and EL hyperspectral analysis." },
+            { "question": "Is IMA™ suitable for nanomaterial research?", "answer": "Yes. Advanced materials and nanomaterial analysis are listed among IMA™ applications." },
+            { "question": "Is IMA™ suitable for semiconductor analysis?", "answer": "Yes. Photon etc. identifies semiconductor quality control using hyperspectral PL and EL as an IMA™ application." },
+            { "question": "Can IMA™ be used for infrared marker research?", "answer": "Yes. Photon etc. identifies research involving infrared markers in complex environments, including tissues and living cells, using hyperspectral SWIR microscopy." },
+            { "question": "What is the price of IMA™ in India?", "answer": "Pricing depends on the required optical configuration, spectral range and application requirements. Contact Inkarp for a quotation." },
+            { "question": "Who is the authorized distributor of IMA™ in India?", "answer": "Inkarp is the authorized distributor and service provider for Photon etc. IMA™ in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Bring Hyperspectral Microscopy into Your Materials Research",
+            "description": "Get Photon etc. IMA™ from the authorized distributor and service provider in India. From solar cells and perovskites to nanomaterials, semiconductors, infrared markers and transparent materials, IMA™ combines microscopy with spatially resolved spectral information across 400–1620 nm.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your sample and measurement requirements, then confirm the right IMA™ configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleDetails", "label": "Sample, wavelength range, and measurement mode (PL, EL, fluorescence, reflectance or transmittance)", "type": "text", "required": false },
+              { "key": "configDetails", "label": "Brightfield or darkfield requirement, and current point-by-point scanning workflow if applicable", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right IMA™ configuration", "body": "The correct IMA™ configuration depends on the sample, spectral region, illumination mode, and measurement objective." },
+              { "title": "Installation and setup support", "body": "System installation and setup support." },
+              { "title": "Ongoing service and support", "body": "Technical support, spare parts and AMC support are available through Inkarp, where applicable." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Hyperspectral Microscopy from 400 to 1620 nm",
+            "heroLead": "Capture spatial and spectral information from your sample in a single hyperspectral microscope. Photon etc. IMA™ is a hyperspectral microscope designed to acquire spatial and spectral information across the 400–1620 nm range. By combining a scientific-grade VIS, NIR and/or SWIR microscope with Photon etc.'s patented imaging filter technology, IMA™ enables detailed spectral characterization of a wide range of materials. IMA™ can acquire millions of data points in a single snapshot and rapidly map photoluminescence (PL), electroluminescence (EL), fluorescence, reflectance and transmittance. The system can be configured as either a brightfield or darkfield hyperspectral microscope, making it suitable for different sample types and imaging requirements. Unlike point-by-point scanning approaches, IMA™ uses high-throughput imaging filters to acquire hyperspectral information rapidly across the sample. IMA™ is suited to applications including advanced materials analysis, solar cell and nanomaterial research, semiconductor quality control, infrared marker studies, and hyperspectral imaging of transparent materials.",
+            "stats": [
+              { "value": "Hyperspectral Imaging", "label": "Technology" },
+              { "value": "Microscopy", "label": "Category" },
+              { "value": "400–1620 nm", "label": "Spectral range" },
+              { "value": "VIS / NIR / SWIR", "label": "Spectral regions" },
+              { "value": "High-throughput hyperspectral imaging", "label": "Imaging approach" },
+              { "value": "Spatial + spectral information", "label": "Data captured" },
+              { "value": "Single snapshot", "label": "Acquisition" },
+              { "value": "Millions of data points per snapshot", "label": "Data points" },
+              { "value": "Brightfield or darkfield", "label": "Microscope configuration" },
+              { "value": "Photoluminescence, electroluminescence, fluorescence, reflectance, transmittance", "label": "Sample measurements" },
+              { "value": "Scientific-grade VIS, NIR and/or SWIR microscope", "label": "Optical platform" },
+              { "value": "Photon etc. patented imaging filter", "label": "Imaging technology" },
+              { "value": "Non-destructive material and nanomaterial characterization", "label": "Primary use" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "IMA™ combines microscopy and hyperspectral imaging to provide spatially resolved spectral information from a sample.",
+                "body": [
+                  "Provides hyperspectral microscopy across the VIS, NIR and SWIR regions, covering 400–1620 nm.",
+                  "Captures spectral information together with the spatial position of the measured sample features.",
+                  "Can acquire millions of data points in a single snapshot.",
+                  "Supports rapid mapping of photoluminescence (PL).",
+                  "Supports electroluminescence (EL) measurements.",
+                  "Enables hyperspectral fluorescence characterization.",
+                  "Supports spectral characterization based on reflected light.",
+                  "Supports measurements of transmitted light through suitable samples.",
+                  "Can be configured as a brightfield hyperspectral microscope.",
+                  "Can also be configured as a darkfield hyperspectral microscope.",
+                  "Uses Photon etc.'s patented imaging filter technology for rapid hyperspectral acquisition.",
+                  "Can combine scientific-grade VIS, NIR and/or SWIR microscopy depending on configuration."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "IMA™ features for hyperspectral microscopy, 400–1620 nm spectral imaging, high-throughput acquisition and spatial-spectral analysis."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Where IMA™ fits: advanced materials, solar cells, nanomaterials, semiconductors, infrared markers, transparent materials, polymers, crystals, perovskites and living cells."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "IMA™ technical specifications for hyperspectral microscopy across VIS, NIR and SWIR wavelengths from 400–1620 nm."
+              },
+              {
+                "key": "workflow",
+                "eyebrow": "Measurement Modes",
+                "title": "Characterize Samples Using Multiple Optical Responses",
+                "description": "IMA™ is not limited to a single type of spectral measurement — the platform can be used to rapidly map different optical responses across a sample.",
+                "steps": [
+                  { "title": "Photoluminescence (PL)", "description": "Spectral mapping of light emitted following optical excitation — demonstrated by Photon etc. for photoluminescence mapping of perovskite crystals under intense excitation, with monochromatic images and spectra collected from selected regions of the crystal." },
+                  { "title": "Electroluminescence (EL)", "description": "Spectral mapping of electrically generated emission — particularly relevant to applications involving electrically active materials and devices, including solar-cell and semiconductor research." },
+                  { "title": "Fluorescence", "description": "Hyperspectral fluorescence imaging, allowing researchers to examine both the location and spectral response of fluorescent features." },
+                  { "title": "Reflectance", "description": "Spectral information from reflected light." },
+                  { "title": "Transmittance", "description": "Spectral information from transmitted light — together with reflectance, this extends IMA™ beyond emission-based microscopy." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "How IMA™ Works",
+                "title": "How IMA™ Works",
+                "body": [
+                  "Traditional microscopy provides detailed spatial information about a sample; hyperspectral microscopy adds spectral information to those spatial features, and IMA™ combines the two.",
+                  "The workflow: Sample → Microscopic imaging → Hyperspectral acquisition → Spatial + spectral data → Material characterization.",
+                  "Each measured region can therefore be considered in terms of both where a feature is located and what its spectral response is — this is particularly useful when visually similar regions need to be distinguished by their optical or spectral properties.",
+                  "Compared with conventional microscopy, IMA™ acquires spectral information within the same hyperspectral imaging workflow rather than requiring a separate measurement, uses high-throughput imaging acquisition rather than point measurements, and provides spectral information across 400–1620 nm rather than a limited spectral context."
+                ]
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Why IMA™ Instead of Point-by-Point Spectral Scanning?",
+                "title": "Why IMA™ Instead of Point-by-Point Spectral Scanning?",
+                "description": "Standard point-by-point scanning approaches acquire spectral information sequentially from individual positions. IMA™ uses high-throughput imaging filters to acquire hyperspectral information across the sample.",
+                "cards": [
+                  { "title": "High-throughput acquisition", "description": "IMA™ uses high-throughput imaging instead of sequential point-by-point measurement." },
+                  { "title": "Sample-wide spatial information", "description": "Spatial information is captured across the imaged sample rather than acquired point by point." },
+                  { "title": "Spatially resolved spectral information", "description": "Spectral information is spatially resolved across the sample rather than limited to individual points." },
+                  { "title": "Rapid hyperspectral acquisition", "description": "IMA™ is designed for rapid hyperspectral acquisition rather than an acquisition speed dependent on scan strategy." },
+                  { "title": "Millions of data points per snapshot", "description": "Millions of data points can be acquired in one snapshot, rather than a data volume that depends on scan density." },
+                  { "title": "Integrated hyperspectral microscopy", "description": "IMA™ is an integrated hyperspectral microscopy platform, rather than microscopy integration that depends on the system." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Resources covering IMA™ product architecture, technical specifications, application areas, and supporting research and technical materials.",
+                "cards": [
+                  { "title": "IMA™ Product Information", "description": "Product architecture and capabilities." },
+                  { "title": "Technical Specifications", "description": "Spectral and imaging configuration." },
+                  { "title": "Application Resources", "description": "Materials, solar cells, nanomaterials, semiconductors and transparent materials." },
+                  { "title": "Publications", "description": "Research applications and scientific references." },
+                  { "title": "Videos", "description": "Product and application demonstrations." },
+                  { "title": "White Papers", "description": "Technical and application information." }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Bring Hyperspectral Microscopy into Your Materials Research",
+              "description": "Get Photon etc. IMA™ from the authorized distributor and service provider in India. From solar cells and perovskites to nanomaterials, semiconductors, infrared markers and transparent materials, IMA™ combines microscopy with spatially resolved spectral information across 400–1620 nm. Tell us about your sample, required wavelength range, measurement mode (PL, EL, fluorescence, reflectance or transmittance), brightfield or darkfield requirement, and whether you are currently using point-by-point spectral scanning.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

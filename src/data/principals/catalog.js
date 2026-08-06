@@ -96,6 +96,13 @@ import sartoriusAriumMiniPlusCatalog from "./sartorius/arium-mini-plus.json";
 import sartoriusAriumProCatalog from "./sartorius/arium-pro.json";
 import sartoriusAriumAdvanceCatalog from "./sartorius/arium-advance.json";
 import inkarpUsbUltrasonicCleanersBathsCatalog from "./inkarp-usb/ultrasonic-cleaners-baths.json";
+import photonEtcPlateReadersCatalog from "./photon-etc/plate-readers.json";
+import photonEtcAreaScanImagingCatalog from "./photon-etc/area-scan-imaging.json";
+import photonEtcMicroscopyCatalog from "./photon-etc/microscopy.json";
+import photonEtcNirPreclinicalImagingCatalog from "./photon-etc/nir-i-nir-ii-preclinical-imaging.json";
+import photonEtcLinescanCamerasCatalog from "./photon-etc/linescan-cameras.json";
+import photonEtcSwirCamerasCatalog from "./photon-etc/swir-cameras.json";
+import photonEtcEswirCamerasCatalog from "./photon-etc/eswir-cameras.json";
 import buchiFreezeDryerLyophilizerCatalog from "./buchi/freeze-dryer-lyophilizer.json";
 import nanosurfResearchCatalog from "./nanosurf/research.json";
 import nanosurfAdvancedResearchCatalog from "./nanosurf/advanced-research.json";
@@ -215,6 +222,13 @@ const principalCatalogs = [
   sartoriusAriumProCatalog,
   sartoriusAriumAdvanceCatalog,
   inkarpUsbUltrasonicCleanersBathsCatalog,
+  photonEtcPlateReadersCatalog,
+  photonEtcAreaScanImagingCatalog,
+  photonEtcMicroscopyCatalog,
+  photonEtcNirPreclinicalImagingCatalog,
+  photonEtcLinescanCamerasCatalog,
+  photonEtcSwirCamerasCatalog,
+  photonEtcEswirCamerasCatalog,
   buchiFreezeDryerLyophilizerCatalog,
   nanosurfResearchCatalog,
   nanosurfAdvancedResearchCatalog,

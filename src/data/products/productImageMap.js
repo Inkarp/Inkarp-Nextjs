@@ -182,6 +182,7 @@ export const productImageMap = {
   "dara-lyo:dara-lyo-lyolab-pilot-freeze-dryers": "/assets/images/productImages/Daralyo/LyoLab.jpg",
   "dara-lyo:dara-lyo-lyolab-pilot-freeze-dryers-2": "/assets/images/productImages/Daralyo/LyoLab.jpg",
   "photon-etc:ir-vivo": "/assets/images/productImages/Photon/ir-vivo.jpg",
+  "photon-etc:clair": "/assets/images/productImages/Photon/Sans-titre-68.jpg",
   "photon-etc:ima": "/assets/images/productImages/Photon/ima.jpg",
   "photon-etc:grand-eos": "/assets/images/productImages/Photon/grand-eos.jpg",
   "photon-etc:zephir-2-5": "/assets/images/productImages/Photon/zephir-2-5.jpg",

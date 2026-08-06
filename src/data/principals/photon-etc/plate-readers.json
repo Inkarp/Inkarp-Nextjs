@@ -1,0 +1,394 @@
+{
+  "principal": {
+    "slug": "photon-etc",
+    "principalName": "Photon ETC",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "Plate Readers",
+      "slug": "plate-readers",
+      "products": [
+        {
+          "name": "ClaIR™ NIR-II Infrared Microplate Reader",
+          "slug": "clair",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Photon.jpeg",
+          "imageAlt": "Photon etc. ClaIR NIR-II Infrared Microplate Reader - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/clair",
+          "breadcrumbPath": "Home > Products > Plate Readers > ClaIR™ NIR-II Infrared Microplate Reader",
+          "h1": "ClaIR™ NIR-II Infrared Microplate Reader",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "NIR-II probes can emit beyond the visible and near-infrared ranges used by conventional fluorescence systems. To validate these probes properly, researchers need more than a single detection wavelength. They need access to the fluorescence spectrum across the relevant infrared region.",
+
+          "features": [
+            "900–1600 nm NIR-II Fluorescence Detection: ClaIR™ captures full fluorescence spectra from 900 to 1600 nm, covering the NIR-II region used for characterization of infrared-emitting probes and materials.",
+            "500–1600 nm Absorbance Spectroscopy: The system extends absorbance measurements from the visible into the infrared using a halogen white lamp.",
+            "High-Sensitivity VIS and IR Spectrometer: A high-sensitivity VIS and IR spectrometer provides the detection platform for fluorescence and infrared spectral measurements.",
+            "650 nm and 735 nm Laser Excitation: Built-in 650 nm and 735 nm laser diodes provide defined excitation wavelengths for fluorescence measurements.",
+            "Optional Tunable Light Source: A fiber entry allows an optional tunable light source to be integrated when the required excitation wavelength extends beyond the built-in laser sources.",
+            "96-Well Microplate Format: ClaIR™ supports standardized 96-well plates complying with ANSI/SLAS 1-2004 through 6-2012.",
+            "Adjustable Focal Height: Focal height can be adjusted with a resolution of 0.1 mm to support different measurement positions within the well.",
+            "Adjustable Read Height: The read height can be adjusted from the bottom to the middle of the well.",
+            "Fluorescence and Absorbance Modes: ClaIR™ supports both absorbance and fluorescence spectroscopy, giving researchers access to two measurement modes within one microplate platform.",
+            "CSV Data Output: Measurement data can be exported in CSV format for analysis and reporting.",
+            "USB Computer Interface: USB connectivity provides the computer interface for system operation and data handling."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Photon etc. ClaIR™ NIR-II Microplate Reader" },
+            { "label": "Technology", "value": "Infrared Imaging" },
+            { "label": "Category", "value": "Plate Reader" },
+            { "label": "Detection Modes", "value": "Absorbance and fluorescence spectroscopy" },
+            { "label": "Microplate Format", "value": "96-well plates" },
+            { "label": "Microplate Compliance", "value": "ANSI/SLAS 1-2004 through 6-2012" },
+            { "label": "Absorbance Light Source", "value": "Halogen white lamp" },
+            { "label": "Absorbance Spectral Range", "value": "500–1600 nm" },
+            { "label": "Fluorescence Light Sources", "value": "650 nm and 735 nm laser diodes" },
+            { "label": "Optional Fluorescence Source", "value": "Fiber entry for optional tunable light source" },
+            { "label": "Fluorescence Spectral Range", "value": "900–1600 nm" },
+            { "label": "Detection", "value": "High-sensitivity VIS and IR spectrometer" },
+            { "label": "Z-Adjustment", "value": "Focal height adjustment" },
+            { "label": "Focal Height Resolution", "value": "0.1 mm" },
+            { "label": "Read Height", "value": "Adjustable bottom to mid-well height" },
+            { "label": "Software", "value": "Data acquisition software" },
+            { "label": "Data Format", "value": "CSV" },
+            { "label": "Computer Interface", "value": "USB" },
+            { "label": "Line Voltage", "value": "120–230 VAC" },
+            { "label": "Dimensions", "value": "690 × 535 × 275 mm" },
+            { "label": "Weight", "value": "40 kg" }
+          ],
+
+          "applications": [
+            "NIR-II Probe Validation: Captures full fluorescence spectra from 900–1600 nm",
+            "NIR-II Fluorophore Characterization: Provides spectral measurement across the infrared emission region",
+            "Infrared-Emitting Probe Research: Combines defined laser excitation with VIS and IR spectral detection",
+            "Photoluminescence Characterization: Captures fluorescence spectra from infrared-emitting samples",
+            "Single-Wall Carbon Nanotube Research: Supports infrared photoluminescence characterization — Photon etc. demonstrates ClaIR™ for photoluminescence mapping of single-wall carbon nanotubes, with the NIR-II fluorescence range allowing infrared emission to be characterized across the supported spectral region",
+            "Microplate-Based Fluorescence Research: Measures samples in a standardized 96-well format",
+            "Absorbance Characterization: Measures absorbance from 500–1600 nm",
+            "Spectral Research: Provides visible and infrared measurement capability in one platform"
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Configuration Guide" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "96-Well Workflow" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "configWizard": {
+            "title": "What are you trying to measure?",
+            "description": "ClaIR™ configuration depends on the sample, excitation requirement, emission range, and measurement mode.",
+            "steps": [
+              {
+                "key": "probeEmission",
+                "question": "Does the emission fall within 900–1600 nm?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "excitation",
+                "question": "Is 650 nm or 735 nm excitation suitable?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "different-wavelength-needed", "label": "A different wavelength is needed" }
+                ]
+              },
+              {
+                "key": "tunableExcitation",
+                "question": "Is another excitation wavelength required?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "measurementMode",
+                "question": "Fluorescence, absorbance, or both?",
+                "options": [
+                  { "val": "fluorescence", "label": "Fluorescence" },
+                  { "val": "absorbance", "label": "Absorbance" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "sampleFormat",
+                "question": "Is a 96-well plate suitable?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "focalPosition",
+                "question": "Is focal height adjustment required for the sample/plate configuration?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              },
+              {
+                "key": "dataHandling",
+                "question": "Is CSV export suitable for the analysis workflow?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirms whether ClaIR™'s configuration matches the measurement requirement, then routes to configuration support.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "Where ClaIR™ fits into research workflows",
+            "industries": [
+              { "name": "NIR-II Fluorescence Research", "useCase": "Probe and fluorophore characterization", "consideration": "900–1600 nm fluorescence detection" },
+              { "name": "Nanomaterial Research", "useCase": "Infrared emission characterization", "consideration": "NIR-II spectral capture" },
+              { "name": "Carbon Nanotube Research", "useCase": "Photoluminescence characterization", "consideration": "Demonstrated ClaIR™ application" },
+              { "name": "Spectroscopy Research", "useCase": "Absorbance and fluorescence measurement", "consideration": "500–1600 nm absorbance and 900–1600 nm fluorescence" },
+              { "name": "Plate-Based Research", "useCase": "Structured sample measurements", "consideration": "96-well compatibility" },
+              { "name": "Materials Characterization", "useCase": "Infrared-emitting material analysis", "consideration": "VIS and IR spectrometer detection" },
+              { "name": "Academic Research", "useCase": "Development and validation of NIR-II probes", "consideration": "Full fluorescence spectral capture" },
+              { "name": "Advanced Photonics Research", "useCase": "Infrared optical characterization", "consideration": "Flexible excitation and NIR-II detection" }
+            ]
+          },
+
+          "comparison": {
+            "eyebrow": "Comparison",
+            "title": "ClaIR™ vs Narrow-Band Fluorescence Detection",
+            "description": "The key difference is not simply the detector. It is the type of information collected.",
+            "columns": [
+              { "label": "ClaIR™", "highlight": true },
+              { "label": "Narrow-Band Fluorescence Detection", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Fluorescence measurement", "values": ["Full fluorescence spectroscopy", "Typically selected detection wavelength(s)"] },
+              { "feature": "NIR-II coverage", "values": ["900–1600 nm", "Depends on detector"] },
+              { "feature": "Excitation", "values": ["650 nm and 735 nm lasers", "Depends on system"] },
+              { "feature": "Additional excitation", "values": ["Optional tunable light source", "Depends on system"] },
+              { "feature": "Absorbance", "values": ["500–1600 nm", "Depends on system"] },
+              { "feature": "Detector", "values": ["High-sensitivity VIS and IR spectrometer", "Depends on detector"] },
+              { "feature": "Plate format", "values": ["96-well", "Depends on system"] },
+              { "feature": "Best suited to", "values": ["NIR-II probe and infrared emission characterization", "Applications where full spectral capture is not required"] }
+            ],
+            "disclaimer": "When should you choose ClaIR™? ClaIR™ is particularly relevant when the research question requires spectral information across the NIR-II region, rather than simply determining whether fluorescence is present at one selected wavelength. If the objective is to characterize an infrared-emitting probe, examine its fluorescence spectrum, compare emission behaviour, or combine fluorescence and absorbance measurements in a 96-well workflow, the ClaIR™ architecture is designed around those requirements."
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Helps researchers evaluate ClaIR™ against their measurement requirements" },
+              { "title": "Application Assessment", "description": "Reviews the probe, emission range, excitation requirement, and measurement objective" },
+              { "title": "Configuration Assessment", "description": "Helps identify the appropriate excitation and detection configuration" },
+              { "title": "Installation Support", "description": "Supports system installation and initial setup" },
+              { "title": "Operator Training", "description": "Provides guidance on routine system operation and measurement workflow" },
+              { "title": "Technical Support", "description": "Assists with product-related technical requirements" },
+              { "title": "Service Support", "description": "Provides post-installation technical assistance" }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is ClaIR™?", "answer": "ClaIR™ is a NIR-II infrared microplate reader from Photon etc. designed for absorbance and fluorescence spectroscopy in a 96-well plate format." },
+            { "question": "What is ClaIR™ used for?", "answer": "ClaIR™ is used for NIR-II fluorescence and infrared spectral characterization, including research involving infrared-emitting probes, fluorophores, nanomaterials, and single-wall carbon nanotubes." },
+            { "question": "What wavelength range does ClaIR™ detect?", "answer": "ClaIR™ captures fluorescence spectra from 900 to 1600 nm. Its absorbance measurement range is 500 to 1600 nm." },
+            { "question": "What is the fluorescence range of ClaIR™?", "answer": "The fluorescence spectral range is 900–1600 nm, covering the NIR-II region supported by the system." },
+            { "question": "What excitation wavelengths are available on ClaIR™?", "answer": "ClaIR™ includes 650 nm and 735 nm laser diode fluorescence excitation sources. A fiber entry is also available for an optional tunable light source." },
+            { "question": "Can ClaIR™ measure absorbance?", "answer": "Yes. ClaIR™ supports absorbance spectroscopy from 500 to 1600 nm using a halogen white lamp." },
+            { "question": "Can ClaIR™ measure both absorbance and fluorescence?", "answer": "Yes. ClaIR™ supports both absorbance and fluorescence spectroscopy." },
+            { "question": "What detector does ClaIR™ use?", "answer": "ClaIR™ uses a high-sensitivity VIS and IR spectrometer." },
+            { "question": "What microplate format does ClaIR™ support?", "answer": "ClaIR™ supports 96-well microplates complying with ANSI/SLAS 1-2004 through 6-2012." },
+            { "question": "Can ClaIR™ use a tunable light source?", "answer": "Yes. The system includes a fiber entry for an optional tunable light source." },
+            { "question": "What is the focal height resolution of ClaIR™?", "answer": "ClaIR™ provides focal height adjustment with a resolution of 0.1 mm." },
+            { "question": "What read height does ClaIR™ support?", "answer": "The read height can be adjusted from the bottom to the middle of the well." },
+            { "question": "What data format does ClaIR™ provide?", "answer": "ClaIR™ provides data in CSV format." },
+            { "question": "How does ClaIR™ connect to a computer?", "answer": "The system uses a USB computer interface." },
+            { "question": "What are the dimensions of ClaIR™?", "answer": "ClaIR™ measures 690 × 535 × 275 mm." },
+            { "question": "What is the weight of ClaIR™?", "answer": "The system weighs 40 kg." },
+            { "question": "What voltage does ClaIR™ require?", "answer": "ClaIR™ supports a line voltage range of 120–230 VAC." },
+            { "question": "Is ClaIR™ suitable for NIR-II probe research?", "answer": "Yes. ClaIR™ is designed to capture full fluorescence spectra from 900 to 1600 nm, making it relevant for research involving NIR-II fluorescent probes and infrared-emitting materials." },
+            { "question": "Is ClaIR™ suitable for single-wall carbon nanotube research?", "answer": "Photon etc. demonstrates ClaIR™ for photoluminescence mapping of single-wall carbon nanotubes." },
+            { "question": "What is the price of ClaIR™ in India?", "answer": "Pricing depends on the required configuration and application. Contact Inkarp for a quotation based on the required excitation and measurement setup." },
+            { "question": "Who is the authorized distributor of ClaIR™ in India?", "answer": "Inkarp is the authorized distributor and service provider for Photon etc. ClaIR™ in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get ClaIR™ in India from Inkarp",
+            "description": "Share your probe, excitation wavelength, expected emission range, plate format, and measurement requirements with the Inkarp team.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your probe, excitation wavelength, and measurement requirements, then confirm the right ClaIR™ configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "probeDetails", "label": "Probe, excitation wavelength, and expected emission range", "type": "text", "required": false },
+              { "key": "measurementDetails", "label": "Plate format and measurement requirements", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why work with Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right ClaIR™ configuration", "body": "If you are evaluating NIR-II fluorescent probes, infrared-emitting materials, or new excitation conditions, share the expected emission range, excitation wavelength, plate format, and measurement objective. The ClaIR™ configuration can then be assessed against the workflow." },
+              { "title": "Confirm the excitation and detection configuration", "body": "When requesting a configuration, provide the probe's excitation wavelength and expected emission range. This allows the available excitation and detection configuration to be evaluated together." },
+              { "title": "Confirm the plate and measurement workflow fit", "body": "For configuration discussions, share the plate type, sample format, expected fluorescence range, and whether fluorescence, absorbance, or both measurements are required." },
+              { "title": "Why work with Inkarp", "body": "The right microplate reader configuration depends on the probe, excitation wavelength, emission range, sample format, and measurement mode. Inkarp can help connect those requirements with the appropriate ClaIR™ configuration." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Capture Full NIR-II Fluorescence Spectra from 900 to 1600 nm",
+            "heroLead": "NIR-II probes can emit beyond the visible and near-infrared ranges used by conventional fluorescence systems. To validate these probes properly, researchers need more than a single detection wavelength. They need access to the fluorescence spectrum across the relevant infrared region. Photon etc. ClaIR™ is a NIR-II infrared microplate reader designed to capture full fluorescence spectra from 900 to 1600 nm in a 96-well plate format. It combines laser-based fluorescence excitation with a high-sensitivity VIS and IR spectrometer for spectral characterization of infrared-emitting probes and materials. ClaIR™ supports both fluorescence and absorbance spectroscopy. Fluorescence measurements use 650 nm and 735 nm laser diodes, while an optional tunable light source can be connected through the integrated fiber entry. Absorbance measurements cover 500 to 1600 nm using a halogen white lamp. With ANSI/SLAS-compliant 96-well plate compatibility, adjustable focal height, USB connectivity, and CSV data output, ClaIR™ brings NIR-II spectral analysis into a standardized microplate workflow.",
+            "stats": [
+              { "value": "900–1600 nm", "label": "Fluorescence spectral range" },
+              { "value": "500–1600 nm", "label": "Absorbance spectral range" },
+              { "value": "96-well", "label": "Microplate format" },
+              { "value": "650 nm & 735 nm", "label": "Built-in fluorescence excitation wavelengths" },
+              { "value": "Optional", "label": "Tunable light source through fiber entry" },
+              { "value": "High sensitivity", "label": "VIS and IR spectrometer" },
+              { "value": "0.1 mm", "label": "Focal height adjustment resolution" },
+              { "value": "CSV", "label": "Data output format" },
+              { "value": "USB", "label": "Computer interface" },
+              { "value": "120–230 VAC", "label": "Line voltage" },
+              { "value": "690 × 535 × 275 mm", "label": "Dimensions" },
+              { "value": "40 kg", "label": "Weight" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "ClaIR™ product information: NIR-II fluorescence spectroscopy, infrared detection, excitation flexibility, and 96-well microplate measurement.",
+                "body": [
+                  "ClaIR™ is a NIR-II microplate reader from Photon etc. designed to capture full fluorescence spectra from 900 to 1600 nm. The system combines fluorescence and absorbance spectroscopy with a high-sensitivity VIS and IR spectrometer in a 96-well microplate format.",
+                  "Full NIR-II fluorescence detection: Captures fluorescence spectra across the 900–1600 nm NIR-II region.",
+                  "Visible-to-infrared absorbance measurement: Measures absorbance from 500 to 1600 nm using a halogen white lamp.",
+                  "96-well microplate compatibility: Supports 96-well plates complying with ANSI/SLAS 1-2004 through 6-2012.",
+                  "Two built-in fluorescence excitation wavelengths: Uses 650 nm and 735 nm laser diodes for fluorescence excitation.",
+                  "Optional tunable excitation: Provides a fiber entry for connection to an optional tunable light source.",
+                  "High-sensitivity VIS and IR detection: Uses a VIS and IR spectrometer for fluorescence and spectral measurements.",
+                  "Adjustable focal height: Provides focal height adjustment with 0.1 mm resolution.",
+                  "Adjustable read height: Supports measurement from the bottom to the middle of the well.",
+                  "Fluorescence and absorbance in one system: Allows researchers to use both measurement modes within the same microplate platform.",
+                  "CSV data output: Provides measurement data in CSV format for downstream analysis.",
+                  "USB connectivity: Connects the system to a computer through USB."
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration at a Glance",
+                "title": "Configuration at a Glance",
+                "cards": [
+                  { "title": "Product", "description": "Photon etc. ClaIR™ NIR-II Microplate Reader" },
+                  { "title": "Technology", "description": "Infrared imaging" },
+                  { "title": "Category", "description": "Plate Reader" },
+                  { "title": "Detection modes", "description": "Absorbance and fluorescence spectroscopy" },
+                  { "title": "Fluorescence spectral range", "description": "900–1600 nm" },
+                  { "title": "Absorbance spectral range", "description": "500–1600 nm" },
+                  { "title": "Fluorescence excitation", "description": "650 nm and 735 nm laser diodes" },
+                  { "title": "Optional excitation", "description": "Fiber entry for optional tunable light source" },
+                  { "title": "Detector", "description": "High-sensitivity VIS and IR spectrometer" },
+                  { "title": "Plate format", "description": "96-well" },
+                  { "title": "Plate standard", "description": "ANSI/SLAS 1-2004 through 6-2012" },
+                  { "title": "Focal adjustment", "description": "0.1 mm resolution" },
+                  { "title": "Read height", "description": "Adjustable bottom to mid-well height" },
+                  { "title": "Data format", "description": "CSV" },
+                  { "title": "Interface", "description": "USB" },
+                  { "title": "Line voltage", "description": "120–230 VAC" },
+                  { "title": "Dimensions", "description": "690 × 535 × 275 mm" },
+                  { "title": "Weight", "description": "40 kg" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "ClaIR™ features for NIR-II fluorescence spectroscopy, full spectral acquisition from 900–1600 nm and automated microplate-based analysis."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "ClaIR™ applications in NIR-II fluorescence research, photoluminescence analysis, nanomaterial characterization and infrared probe evaluation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "ClaIR™ Technical Specifications"
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Why NIR-II Detection Matters",
+                "title": "Why NIR-II Detection Matters",
+                "body": [
+                  "NIR-II fluorescence measurements require detection in a wavelength region that extends beyond conventional visible fluorescence. When a probe's emission lies in the infrared, measuring only at a selected wavelength can limit the information available about its spectral behaviour.",
+                  "ClaIR™ is designed to capture fluorescence spectra from 900 to 1600 nm, allowing researchers to examine the emission profile across the NIR-II region supported by the system.",
+                  "This is particularly relevant for researchers developing or characterizing NIR-II fluorescent probes, infrared-emitting materials, and nanomaterials where the spectral position and shape of the emission are important research parameters.",
+                  "The system also supports absorbance measurements from 500 to 1600 nm, extending spectral characterization from the visible into the infrared."
+                ],
+                "utilityChecklist": [
+                  { "label": "Infrared fluorescence detection", "value": "900–1600 nm fluorescence range" },
+                  { "label": "Full emission spectrum", "value": "Spectral capture across the supported NIR-II range" },
+                  { "label": "Defined excitation", "value": "650 nm and 735 nm laser diodes" },
+                  { "label": "Additional excitation flexibility", "value": "Optional tunable light source through fiber entry" },
+                  { "label": "Absorbance information", "value": "500–1600 nm absorbance range" },
+                  { "label": "Plate-based sample organization", "value": "96-well microplate compatibility" }
+                ],
+                "disclaimer": "For probe evaluation, provide the expected excitation wavelength, emission range, sample format, and whether absorbance measurement is also required. This helps determine whether the ClaIR™ configuration matches the measurement workflow."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "96-Well Microplate Workflow",
+                "title": "96-Well Microplate Workflow",
+                "description": "ClaIR™ is built around the 96-well microplate format, supporting plates that comply with ANSI/SLAS 1-2004 through 6-2012. This format allows researchers to organize samples within a standardized plate layout while using fluorescence or absorbance spectroscopy for measurement.",
+                "cards": [
+                  { "title": "Standard microplate format", "description": "96-well plates" },
+                  { "title": "Plate standard", "description": "ANSI/SLAS 1-2004 through 6-2012" },
+                  { "title": "Focal positioning", "description": "0.1 mm adjustment resolution" },
+                  { "title": "Measurement position", "description": "Bottom to mid-well adjustable read height" },
+                  { "title": "Fluorescence measurement", "description": "900–1600 nm" },
+                  { "title": "Absorbance measurement", "description": "500–1600 nm" },
+                  { "title": "Data export", "description": "CSV" },
+                  { "title": "Computer connection", "description": "USB" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "ClaIR™ Technical Resources",
+                "cards": [
+                  { "title": "ClaIR™ Specification Sheet", "description": "Available" },
+                  { "title": "Technical Specifications", "description": "Available" },
+                  { "title": "Product Information", "description": "Available" },
+                  { "title": "Application Information", "description": "Available through Photon etc." },
+                  { "title": "Research and Publications", "description": "Refer to available Photon etc. resources" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get ClaIR™ in India from Inkarp",
+              "subheading": "Authorized Distributor & Service Provider for Photon etc. in India",
+              "description": "Capture full NIR-II fluorescence spectra from 900 to 1600 nm in a standardized 96-well microplate workflow. Whether you are validating an NIR-II probe, characterizing infrared-emitting materials, studying single-wall carbon nanotubes, or combining absorbance and fluorescence measurements, ClaIR™ provides a platform built around visible-to-infrared spectral analysis. Share your probe, excitation wavelength, expected emission range, plate format, and measurement requirements with the Inkarp team.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

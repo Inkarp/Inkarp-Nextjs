@@ -1,0 +1,425 @@
+{
+  "principal": {
+    "slug": "photon-etc",
+    "principalName": "Photon ETC",
+    "countryOfOrigin": "Canada"
+  },
+  "categories": [
+    {
+      "name": "NIR-I & NIR-II Preclinical Imaging",
+      "slug": "nir-i-nir-ii-preclinical-imaging",
+      "products": [
+        {
+          "name": "IR VIVO™",
+          "slug": "ir-vivo",
+          "principalImage": "/assets/images/PrincipalLogos/RowFive/Photon.jpeg",
+          "imageAlt": "Photon etc. IR VIVO NIR-II Preclinical Imaging System - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/ir-vivo",
+          "breadcrumbPath": "Home > Products > NIR-I & NIR-II Preclinical Imaging > IR VIVO™",
+          "h1": "IR VIVO™",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Visible light and NIR-I imaging both hit the same wall: biological tissue scatters and absorbs at those wavelengths, and autofluorescence buries whatever signal makes it through. Push into the short-wave infrared — 700 to 1600 nm — and that wall mostly disappears. Tissue becomes transparent enough to image structures conventional systems simply cannot reach.",
+
+          "features": [
+            "Ultra-Low-Noise Alizé™ 1.7 Camera: Deep-cooled InGaAs sensor at -60°C, the foundation of the system's sensitivity.",
+            "Full NIR-II Spectral Coverage: 700–1600 nm, exploiting the window where tissue is most transparent.",
+            "Zero Background Autofluorescence: Removes the noise floor that limits contrast on visible and NIR-I systems.",
+            "High-Intensity Multi-Wavelength Laser Illumination: 670, 760, 808, and 890 nm, with adjustable power density per application.",
+            "2 cm Imaging Depth: Signal-to-noise sufficient to resolve structures conventional systems can't reach.",
+            "Up to 10 Emission Channels: Simultaneous multiplexed tracking of distinct fluorescent labels.",
+            "Three Imaging Modes: Fluorescence, reflectance, and overlay, in one platform.",
+            "Variable Field of View: 80×64 mm for a full mouse, down to 50×40 mm for a single organ.",
+            "Motorized Z, Manual XY Stage: Precise, repeatable sample positioning.",
+            "50mm f/1.4 Lens: Standard optics matched to the system's imaging requirements."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Photon etc. IR VIVO™ NIR-II Preclinical Imaging System" },
+            { "label": "Category", "value": "NIR-I & NIR-II Preclinical Imaging" },
+            { "label": "Emission Spectral Range", "value": "700–1600 nm" },
+            { "label": "Imaging Modes", "value": "Fluorescence, reflectance, overlay" },
+            { "label": "Emission Filters", "value": "Up to 10 emission channels" },
+            { "label": "Illumination Source", "value": "Laser at 670, 760, 808, and 890 nm, adjustable power density" },
+            { "label": "Lens", "value": "50mm f/1.4" },
+            { "label": "Field of View", "value": "80 × 64 mm to 50 × 40 mm, variable — full mouse or individual organ" },
+            { "label": "Stage", "value": "Manual XY, motorized Z" },
+            { "label": "Camera Type", "value": "InGaAs (Alizé™ 1.7); ZephIR™ 1.7 referenced as an alternative in Photon etc.'s video materials — confirm at configuration" },
+            { "label": "Camera Cooling", "value": "Deep-cooled to -60°C" },
+            { "label": "Dimensions (L × W × H)", "value": "77 × 60 × 98 cm" },
+            { "label": "Control Software", "value": "PHySpec (Photon etc.'s platform software across its instrument range — confirm scope for IR VIVO™)" },
+            { "label": "Imaging Depth", "value": "Signal-to-noise sufficient to 2 cm" }
+          ],
+
+          "applications": [
+            "Fluorescence-Guided Surgery (FGS) & Resection: Binary, unambiguous tumor delineation, minimizing missed malignant residue versus NIR-I.",
+            "Vascularization & Lymphatic Tracking: Maps microvascular structures, angiogenesis, lymph nodes, and real-time lymphatic drainage.",
+            "Fluorescent Label Multiplexing: Tracks distinct anatomical and molecular signals simultaneously via isolated NIR-II bandwidths.",
+            "Biodistribution and Pharmacokinetics: Real-time visualization of probe distribution and clearance in a living animal.",
+            "Brain Imaging: Structures visualized through intact skull, inaccessible to visible or NIR-I systems.",
+            "Tumor Delineation: High-contrast boundary definition for surgical and research applications.",
+            "Vascular Imaging: Detailed visualization of blood vessel structure and function.",
+            "Carbon Nanotube Research: In vivo tracking of nanomaterial biodistribution and biocompatibility.",
+            "Fluorophore Characterization: Evaluation of novel NIR-II emitting probes and nanoparticles.",
+            "Contact-Free Physiological Monitoring: Heartbeat and respiratory rate measured without restraint, in anesthetized or awake animals."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Application Fit Selector" },
+            { "id": "planner", "label": "FOV & Stage Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Channel Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Multiplexing" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What does the study need to visualize?",
+            "description": "Select the application and imaging depth required, and see how IR VIVO™ fits.",
+            "fields": [
+              {
+                "key": "applicationArea",
+                "label": "Application area",
+                "options": [
+                  { "val": "fgs-tumor-resection", "label": "FGS / tumor resection" },
+                  { "val": "vascular-lymphatic", "label": "Vascular / lymphatic imaging" },
+                  { "val": "biodistribution", "label": "Biodistribution" },
+                  { "val": "brain-imaging", "label": "Brain imaging" },
+                  { "val": "nanomaterial-research", "label": "Nanomaterial research" }
+                ]
+              },
+              {
+                "key": "imagingDepth",
+                "label": "Imaging depth required",
+                "options": [
+                  { "val": "surface", "label": "Surface" },
+                  { "val": "moderate", "label": "Moderate" },
+                  { "val": "up-to-2cm", "label": "Up to 2 cm" }
+                ]
+              },
+              {
+                "key": "biomarkerCount",
+                "label": "Number of biomarkers",
+                "options": [
+                  { "val": "single", "label": "Single label" },
+                  { "val": "multiple", "label": "Multiple, requiring simultaneous tracking" }
+                ]
+              },
+              {
+                "key": "animalModel",
+                "label": "Animal model",
+                "options": [
+                  { "val": "whole-mouse", "label": "Whole mouse" },
+                  { "val": "individual-organ", "label": "Individual organ focus" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "applicationArea": "fgs-tumor-resection" },
+                "title": "IR VIVO™ Fits Fluorescence-Guided Surgery",
+                "body": "IR VIVO™ supports binary, unambiguous tumor delineation, minimizing missed malignant residue versus NIR-I.",
+                "tags": ["FGS & Resection"]
+              },
+              {
+                "condition": { "applicationArea": "vascular-lymphatic" },
+                "title": "IR VIVO™ Fits Vascular & Lymphatic Imaging",
+                "body": "IR VIVO™ maps microvascular structures, angiogenesis, lymph nodes, and real-time lymphatic drainage.",
+                "tags": ["Vascular & Lymphatic"]
+              },
+              {
+                "condition": { "applicationArea": "biodistribution" },
+                "title": "IR VIVO™ Fits Biodistribution Studies",
+                "body": "IR VIVO™ provides real-time visualization of probe distribution and clearance in a living animal.",
+                "tags": ["Biodistribution"]
+              },
+              {
+                "condition": { "applicationArea": "brain-imaging" },
+                "title": "IR VIVO™ Fits Brain Imaging",
+                "body": "IR VIVO™ visualizes brain structures through intact skull, inaccessible to visible or NIR-I systems.",
+                "tags": ["Brain Imaging"]
+              },
+              {
+                "condition": { "imagingDepth": "up-to-2cm" },
+                "title": "2 cm Depth Confirms IR VIVO™",
+                "body": "Signal-to-noise sufficient for imaging is achievable to depths of 2 cm, reaching structures conventional systems cannot.",
+                "tags": ["2 cm Depth"]
+              },
+              {
+                "condition": "default",
+                "title": "IR VIVO™ Fits This Application",
+                "body": "IR VIVO™'s NIR-II platform covers fluorescence-guided surgery, vascular/lymphatic imaging, biodistribution, brain imaging, and nanomaterial research on one system.",
+                "tags": ["NIR-II Platform"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How many signals need separating in one animal?",
+            "description": "Select the fluorescent labels in use, and see the recommended channel and illumination setup.",
+            "steps": [
+              {
+                "key": "labelCount",
+                "question": "How many fluorescent labels need simultaneous discrimination?",
+                "options": [
+                  { "val": "1-2", "label": "1 to 2 labels" },
+                  { "val": "3-5", "label": "3 to 5 labels" },
+                  { "val": "6-10", "label": "6 to 10 labels" }
+                ]
+              },
+              {
+                "key": "bandwidthKnowledge",
+                "question": "Are the emission bandwidths known and separated?",
+                "options": [
+                  { "val": "known-separated", "label": "Known and separated" },
+                  { "val": "need-guidance", "label": "Need guidance" }
+                ]
+              },
+              {
+                "key": "illuminationWavelength",
+                "question": "Which illumination wavelength is needed?",
+                "options": [
+                  { "val": "670", "label": "670 nm" },
+                  { "val": "760", "label": "760 nm" },
+                  { "val": "808", "label": "808 nm" },
+                  { "val": "890", "label": "890 nm" },
+                  { "val": "combination", "label": "Combination of wavelengths" }
+                ]
+              },
+              {
+                "key": "imagingMode",
+                "question": "Which imaging mode is required?",
+                "options": [
+                  { "val": "fluorescence-only", "label": "Fluorescence only" },
+                  { "val": "fluorescence-plus", "label": "Fluorescence with reflectance/overlay" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "IR VIVO™'s up to 10 emission channels isolate distinct emission bandwidths across the NIR-II window, so the illumination and channel configuration can be matched to the labels and imaging mode selected.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "field-of-view-stage-configuration-planner",
+              "eyebrow": "Field of View and Stage Configuration Checker",
+              "title": "Whole animal or single organ?",
+              "description": "Select the imaging target and throughput needs, and see the recommended field of view.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Imaging target", "choices": "Whole mouse; Single organ; Multiple regions per session" },
+                { "title": "Field of view need", "choices": "80×64 mm full-animal; 50×40 mm focused view" },
+                { "title": "Sample positioning", "choices": "Standard XY placement; Z-axis depth adjustment required" },
+                { "title": "Session throughput", "choices": "Single animal per session; Higher-throughput sequential imaging" }
+              ],
+              "disclaimer": "Confirms field of view and stage setup for the workflow, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "IR VIVO™ method comparison",
+            "title": "IR VIVO™ (NIR-II / SWIR) vs Conventional Visible / NIR-I Imaging",
+            "description": "IR VIVO™ method comparison: NIR-II (SWIR) imaging versus conventional visible and NIR-I preclinical imaging.",
+            "columns": [
+              { "label": "IR VIVO™ (NIR-II / SWIR)", "highlight": true },
+              { "label": "Conventional Visible / NIR-I Imaging", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Spectral Range", "values": ["700–1600 nm", "Typically below 900 nm"] },
+              { "feature": "Light Scattering", "values": ["Dramatically minimized", "Significant, degrades resolution with depth"] },
+              { "feature": "Background Autofluorescence", "values": ["Completely eliminated", "Present, competes with probe signal"] },
+              { "feature": "Achievable Imaging Depth", "values": ["Up to 2 cm with strong SNR", "Substantially shallower"] },
+              { "feature": "Structures Resolvable", "values": ["Brain through intact bone, melanoma through skin", "Limited to near-surface or unpigmented targets"] },
+              { "feature": "Multiplexing", "values": ["Up to 10 emission channels, simultaneous", "Typically fewer channels, more spectral overlap"] },
+              { "feature": "Best For", "values": ["Deep-tissue, high-contrast, multiplexed in vivo imaging", "Surface-level or shallow fluorescence imaging"] },
+              { "feature": "Choose when", "values": ["The target is deep, pigmented, or requires multiple simultaneous signals", "Surface fluorescence is sufficient and depth isn't a constraint"] }
+            ],
+            "disclaimer": "The comparison isn't close on depth or contrast — it's the reason NIR-II imaging exists as a category. Where a study's targets sit near the surface and scattering isn't a limiting factor, a NIR-I system remains adequate. Where the structure of interest is buried under bone, tissue, or pigment, that's precisely the gap IR VIVO™ was built to close."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "IR VIVO™ industries: oncology, neuroscience, pharmaceutical drug discovery, and materials research.",
+            "industries": [
+              { "name": "Oncology & Surgical Guidance", "icon": "target", "useCase": "Fluorescence-guided tumor resection and delineation", "consideration": "Binary tumor margin definition reduces risk of missed residual disease" },
+              { "name": "Preclinical Drug Discovery & Pharmacokinetics", "icon": "pill", "useCase": "Real-time biodistribution and clearance monitoring", "consideration": "Deep-tissue visibility tracks probe distribution non-invasively over time" },
+              { "name": "Cardiovascular & Neurological Research", "icon": "flask", "useCase": "Vascular mapping and brain imaging through intact skull", "consideration": "2 cm imaging depth reaches structures NIR-I systems cannot resolve" },
+              { "name": "Advanced Materials & Nanosensor Development", "icon": "cpu", "useCase": "Carbon nanotube and nanoparticle biodistribution and biocompatibility studies", "consideration": "NIR-II fluorophore characterization directly supported" },
+              { "name": "Academic and Contract Research Organizations", "icon": "school", "useCase": "Multi-application preclinical imaging core facilities", "consideration": "Three imaging modes and up to 10 channels cover a broad application range on one platform" },
+              { "name": "Pharmaceutical CROs", "icon": "shield", "useCase": "Multiplexed efficacy and safety studies", "consideration": "Reduces animal numbers per study through simultaneous multi-signal tracking" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "IR VIVO™ service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows depth, contrast, and multiplexing performance with relevant probes and models." },
+              { "title": "Application Assessment", "description": "Confirms fit against the study's imaging targets and depth requirements." },
+              { "title": "Configuration Assessment", "description": "Confirms camera, channel count, illumination, and field of view setup." },
+              { "title": "Installation Support", "description": "Handles setup, first-run checks, and initial performance verification." },
+              { "title": "Operator Training", "description": "Builds confidence with PHySpec software and routine imaging workflows." },
+              { "title": "Preventive Maintenance", "description": "Maintains camera cooling, laser illumination, and optical system performance." },
+              { "title": "Spares and Consumables", "description": "Supplies components and replacement parts as required." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is IR VIVO™ used for?", "answer": "It's a preclinical in vivo imaging system operating in the NIR-II (SWIR) spectrum, used for fluorescence-guided surgery research, vascular and lymphatic tracking, biodistribution studies, brain imaging, and multiplexed biomarker visualization in small animals." },
+            { "question": "What wavelength range does it operate in?", "answer": "700 to 1600 nm, the NIR-II or short-wave infrared spectrum, where biological tissue becomes highly transparent to light." },
+            { "question": "How deep can IR VIVO™ image?", "answer": "Signal-to-noise sufficient for imaging is achievable to depths of 2 cm." },
+            { "question": "Why does NIR-II imaging see through bone and pigmented tissue?", "answer": "Light scattering is dramatically minimized and background autofluorescence is completely eliminated at these wavelengths, which is what allows structures like the brain through intact bone or melanoma through skin to be resolved." },
+            { "question": "What camera does IR VIVO™ use?", "answer": "An ultra-low-noise Alizé™ 1.7 InGaAs camera, deep-cooled to -60°C. Some of Photon etc.'s materials also reference a ZephIR™ 1.7 camera option — confirm the exact configuration at specification stage." },
+            { "question": "How many fluorescent signals can be tracked at once?", "answer": "Up to 10 emission channels, allowing distinct anatomical and molecular signals to be tracked simultaneously in the same animal." },
+            { "question": "What illumination does the system use?", "answer": "Laser illumination at 670, 760, 808, and 890 nm, with adjustable power density." },
+            { "question": "What imaging modes are available?", "answer": "Fluorescence, reflectance, and overlay." },
+            { "question": "What field of view does IR VIVO™ offer?", "answer": "A variable field of view from 80×64 mm, suited to a full mouse, down to 50×40 mm for an individual organ." },
+            { "question": "Can it monitor physiological signals without touching the animal?", "answer": "Yes. The fast frame rates of the InGaAs camera support contact-free cardiography and respiratory rate measurement in anesthetized or awake animals, without restraint." },
+            { "question": "What software controls the system?", "answer": "PHySpec, Photon etc.'s control software platform spanning their instrument range — confirm the specific feature scope for IR VIVO™ at configuration." },
+            { "question": "How much bench space does the system need?", "answer": "77 × 60 × 98 cm (L × W × H)." },
+            { "question": "Is there published research using IR VIVO™?", "answer": "Yes. Photon etc. references multiple peer-reviewed and preprint publications spanning NIR-II fluorophore development, nanoparticle imaging, tumor delineation, and vascular/lymphatic multiplexing." },
+            { "question": "What is the price of IR VIVO™ in India?", "answer": "Get in touch and Inkarp will put together a quote based on the camera, channel, and illumination configuration required." },
+            { "question": "Who is the authorized distributor of IR VIVO™ in India?", "answer": "Inkarp is the authorized distributor and service provider for the Photon etc. IR VIVO™ in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get IR VIVO™ in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The brain through intact bone, melanoma through skin, up to 10 biomarkers tracked simultaneously in one living animal. Share the study's imaging targets and depth requirements, and the right IR VIVO™ configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your study's imaging targets and depth requirements, then confirm the right IR VIVO™ configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "studyDetails", "label": "Application area, imaging depth required, and animal model (whole mouse or individual organ)", "type": "text", "required": false },
+              { "key": "multiplexingDetails", "label": "Fluorescent labels/probes in use and number requiring simultaneous tracking", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right IR VIVO™ configuration", "body": "Share the fluorescent labels or probes in use, how many need tracking simultaneously in one animal, and the imaging depth the study requires, and the right IR VIVO™ configuration gets confirmed from there." },
+              { "title": "Confirm the channel configuration", "body": "Share the fluorescent labels or probes planned for the study and how many need distinguishing simultaneously, and the channel configuration gets confirmed against it." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation setup, first-run checks, initial performance verification, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "See the brain through intact bone. See melanoma through skin. Without opening either.",
+            "heroLead": "Visible light and NIR-I imaging both hit the same wall: biological tissue scatters and absorbs at those wavelengths, and autofluorescence buries whatever signal makes it through. Push into the short-wave infrared — 700 to 1600 nm — and that wall mostly disappears. Tissue becomes transparent enough to image structures conventional systems simply cannot reach. IR VIVO™ is built entirely around that window. Photon etc.'s ultra-low-noise Alizé™ 1.7 InGaAs camera, deep-cooled to -60°C, paired with high-intensity laser illumination, delivers signal-to-noise clean enough to resolve features 2 cm deep — the mouse brain through intact skull, black melanoma through pigmented skin, vasculature no surface camera will ever show you. Up to 10 emission channels let distinct fluorescent labels be tracked simultaneously in the same animal, isolated by emission bandwidth across the NIR-II window. For oncology, neuroscience, and drug discovery teams who've hit the resolution ceiling of NIR-I systems, this is the platform built for what comes after it.",
+            "stats": [
+              { "value": "700–1600 nm", "label": "NIR-II / SWIR emission spectral range" },
+              { "value": "2 cm", "label": "Imaging depth with strong signal-to-noise" },
+              { "value": "-60°C", "label": "Alizé™ 1.7 InGaAs camera cooling" },
+              { "value": "Zero", "label": "Background autofluorescence" },
+              { "value": "Up to 10", "label": "Simultaneous emission channels" },
+              { "value": "4 wavelengths", "label": "Laser illumination: 670, 760, 808, 890 nm" },
+              { "value": "3 modes", "label": "Fluorescence, reflectance, overlay imaging" },
+              { "value": "80×64 to 50×40 mm", "label": "Variable field of view" },
+              { "value": "50mm f/1.4", "label": "Imaging lens" },
+              { "value": "Manual XY / Motorized Z", "label": "Sample stage" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "IR VIVO™ product information: SWIR technology, depth performance, and multiplexing capability.",
+                "body": [
+                  "Operates across 700–1600 nm, where biological tissue becomes highly transparent to light — full exploitation of the SWIR spectrum.",
+                  "Light scattering is dramatically minimized: the NIR-II window is where scattering that degrades visible and NIR-I imaging largely stops mattering.",
+                  "Background autofluorescence is completely eliminated, not merely reduced, which is what makes deep, high-contrast imaging possible in the first place.",
+                  "Uses an ultra-low-noise Alizé™ 1.7 InGaAs camera, deep-cooled to -60°C for the sensitivity SWIR imaging depends on.",
+                  "High-intensity laser illumination at four wavelengths — 670, 760, 808, and 890 nm — with adjustable power density.",
+                  "Signal-to-noise sufficient down to 2 cm depth — unmatched optical sensitivity at a depth conventional imaging can't approach.",
+                  "Reveals what's hidden from visible and NIR-I instruments: the brain through intact bone, black melanoma through pigmented skin — structures that are simply invisible at shorter wavelengths.",
+                  "Provides non-destructive, high-contrast visualization — no sacrifice, no incision required to see the structure of interest.",
+                  "Up to 10 emission channels track multiple fluorescent labels simultaneously across the NIR-II window.",
+                  "Offers three imaging modes: fluorescence, reflectance, and overlay.",
+                  "Variable field of view from 80 × 64 mm down to 50 × 40 mm, covering a whole mouse or an individual organ.",
+                  "Standard 50mm f/1.4 imaging lens.",
+                  "Manual XY, motorized Z stage for sample positioning built for repeatable setup."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "IR VIVO™ key features: SWIR sensitivity, multi-wavelength illumination, and flexible imaging."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "IR VIVO™ applications: fluorescence-guided surgery, vascular imaging, biodistribution, and brain research."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "IR VIVO™ technical specifications: spectral range, camera, illumination, and physical dimensions."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Why the NIR-II Window Matters",
+                "title": "Why the NIR-II Window Matters",
+                "body": [
+                  "Every photon travelling through tissue at visible or NIR-I wavelengths scatters repeatedly before it reaches a camera, and every scatter blurs the image and shortens the useful imaging depth.",
+                  "Tissue itself fluoresces at those wavelengths — a background signal with nowhere to hide, sitting directly under whatever probe signal is being measured.",
+                  "IR VIVO™ operates where both problems largely disappear: across 700–1600 nm, biological tissue becomes highly transparent, scattering drops dramatically, and background autofluorescence is completely eliminated rather than merely reduced.",
+                  "That is the entire reason the system can resolve structures like the mouse brain through intact bone, or black melanoma through pigmented skin — targets that are, in practical terms, invisible to instruments working at shorter wavelengths, however sensitive those instruments are.",
+                  "Set against what deep in vivo imaging needs: signal that survives passage through tissue is delivered by SWIR wavelengths where tissue is highly transparent; no background noise competing with the probe is delivered by autofluorescence being completely eliminated; depth conventional systems cannot reach is delivered by signal-to-noise sufficient to 2 cm; and structures hidden from visible/NIR-I imaging are demonstrated on brain-through-bone and melanoma imaging."
+                ],
+                "disclaimer": "Share the tissue depth and structure the study needs to resolve, and expected performance gets discussed against IR VIVO™'s demonstrated depth capability."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Multiplexed Imaging in One Animal",
+                "title": "Multiplexed Imaging in One Animal",
+                "description": "Running separate cohorts to track separate biomarkers costs animals, time, and introduces variability between groups that a single-animal comparison would avoid entirely. IR VIVO™'s up to 10 emission channels isolate distinct emission bandwidths across the NIR-II window, so multiple fluorescent labels can be tracked simultaneously in the same living animal. Published work using the platform has demonstrated exactly this — lymphatic and vascular signals imaged together in the same mouse, distinguished by their different emission bandwidths within the NIR-II region. That's not two separate images overlaid afterwards; it's genuinely simultaneous acquisition across isolated channels, which is what makes real-time correlation between anatomical and molecular signals possible rather than inferred.",
+                "cards": [
+                  { "title": "Up to 10 isolated emission channels", "description": "Multiple biomarkers can be tracked in one living animal rather than needing separate cohorts." },
+                  { "title": "Simultaneous multi-channel acquisition", "description": "Real correlation between signals, not two separate images overlaid afterwards." },
+                  { "title": "Fewer animals per study", "description": "One animal can cover data that would otherwise need multiple cohorts." },
+                  { "title": "Demonstrated, published performance", "description": "Lymphatic and vascular multiplexing has been shown in peer-reviewed and preprint work using the platform." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "IR VIVO™ documentation: specsheet, white paper, and published research.",
+                "cards": [
+                  { "title": "IR VIVO™ Specsheet", "description": "Available on request" },
+                  { "title": "White Paper: In Vivo NIR-II Imaging — A Disruptive Force for Preclinical Research", "description": "Available on request" },
+                  { "title": "Published Research Using IR VIVO™", "description": "Available on request (multiple peer-reviewed and preprint sources)" },
+                  { "title": "PHySpec Software Overview", "description": "Available on request" },
+                  { "title": "Application Notes (FGS, biodistribution, brain imaging, vascular imaging)", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get IR VIVO™ in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The brain through intact bone, melanoma through skin, up to 10 biomarkers tracked simultaneously in one living animal. Share the study's imaging targets and depth requirements, and the right IR VIVO™ configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

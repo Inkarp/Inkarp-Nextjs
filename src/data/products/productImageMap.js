@@ -275,6 +275,8 @@ export const productImageMap = {
   "chemspeed:swing-sp": "/assets/images/productImages/Chemspeed/swing-sp.png",
   "chemspeed:flex-quechers": "/assets/images/productImages/Chemspeed/flex-quechers.webp",
   "waters:alliance-hplc-system": "/assets/images/productImages/Waters/alliance-hplc-system.jpg",
+  "waters:alliance-is-hplc-system": "/assets/images/productImages/Waters/alliance-is-system-with-bottles-angled.jpg",
+  "waters:arc-hplc-system": "/assets/images/productImages/Waters/arc-hplc-QSm-pda-ftnr.jpg",
   "sartorius:arium-mini-plus-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
   "sartorius:arium-pro-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-pro-lab-water-purification-system.png",
   "sartorius:arium-advance-edi-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-advance-edi-lab-water-purification-system.png",

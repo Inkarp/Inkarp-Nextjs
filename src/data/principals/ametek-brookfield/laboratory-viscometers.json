@@ -1,0 +1,1099 @@
+{
+  "principal": {
+    "slug": "ametek-brookfield",
+    "principalName": "Ametek Brookfield",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Laboratory Viscometers",
+      "slug": "laboratory-viscometers",
+      "products": [
+        {
+          "name": "CAP2000+ Viscometer",
+          "slug": "cap2000-plus-viscometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield CAP2000+ Viscometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/cap2000-plus-viscometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > CAP2000+ Viscometer",
+          "h1": "CAP2000+ Viscometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Small sample volumes and high-shear conditions don't always play well with standard rotational viscometers. CAP2000+ is built specifically around that combination.",
+
+          "features": [
+            "Variable Speed Control, 5 to 1000 RPM: Suits testing scenarios from R&D exploration through detailed QC work.",
+            "Built-In Peltier Plate: Delivers precise temperature control across L or H Series ranges.",
+            "L Series Temperature Range, 5°C to 75°C: Suited to standard ambient-to-moderate temperature testing needs.",
+            "H Series Temperature Range, 50°C to 235°C: Extends testing into genuinely high-temperature conditions.",
+            "Wide Shear Rate Range: Suited to applications needing small sample volumes with precise control.",
+            "Keypad and Control Handle Interface: Direct parameter input alongside accurate, automatic cone positioning.",
+            "4-Line Display: Shows all test parameters simultaneously for streamlined operation.",
+            "Optional Capcalc PC Automation: Automates data collection and control, reducing operator error and saving time."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield CAP2000+ Viscometer" },
+            { "label": "Category", "value": "Laboratory Viscometers" },
+            { "label": "Measurement Type", "value": "Cone and plate, moderate to high shear" },
+            { "label": "Speed Range", "value": "5 to 1000 RPM" },
+            { "label": "Temperature Control", "value": "Built-in Peltier plate" },
+            { "label": "L Series Temperature Range", "value": "5°C to 75°C" },
+            { "label": "H Series Temperature Range", "value": "50°C to 235°C" },
+            { "label": "Display", "value": "4-line, simultaneous parameter viewing" },
+            { "label": "Control Interface", "value": "Keypad for direct parameter input, control handle for automatic cone positioning" },
+            { "label": "Optional Software", "value": "Capcalc, for automated PC control and data collection" }
+          ],
+
+          "applications": [
+            "Paints and Architectural Coatings: High-shear cone and plate testing suited to coating formulation QC.",
+            "Adhesives (Hot Melt): Built-in temperature control tests adhesives at application-relevant temperatures.",
+            "Food Products and Creams: Small sample volume requirement suits limited or costly food formulations.",
+            "Inks and UV Coatings: Wide shear rate range supports screen printing ink and UV coating testing.",
+            "High-Viscosity Materials (Asphalt, Chocolate, Epoxies): H Series temperature range and variable speed handle demanding viscosity testing.",
+            "Composite Polymers and Resins: Precise temperature and shear control supports polymer formulation development."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Series Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Automation Fit" },
+            { "id": "benefits", "label": "Capcalc Automation" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What temperature range does your formulation need?",
+            "description": "Select your target testing temperature and formulation type, and see whether L Series or H Series fits.",
+            "fields": [
+              {
+                "key": "targetTemperature",
+                "label": "Target testing temperature",
+                "options": [
+                  { "val": "5-75c", "label": "5°C to 75°C" },
+                  { "val": "50-235c", "label": "50°C to 235°C" }
+                ]
+              },
+              {
+                "key": "formulationType",
+                "label": "Formulation type",
+                "options": [
+                  { "val": "coating", "label": "Coating" },
+                  { "val": "adhesive", "label": "Adhesive" },
+                  { "val": "food", "label": "Food" },
+                  { "val": "industrial", "label": "Industrial material" }
+                ]
+              },
+              {
+                "key": "speedRangeNeed",
+                "label": "Speed range need",
+                "options": [
+                  { "val": "standard", "label": "Standard testing" },
+                  { "val": "high-speed", "label": "High-speed testing" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "targetTemperature": "5-75c" },
+                "title": "L Series Fits This Range",
+                "body": "The L Series covers 5°C to 75°C for standard ambient-to-moderate temperature testing.",
+                "tags": ["L Series"]
+              },
+              {
+                "condition": { "targetTemperature": "50-235c" },
+                "title": "H Series Fits This Range",
+                "body": "The H Series reaches 50°C to 235°C, extending testing into genuinely high-temperature conditions.",
+                "tags": ["H Series"]
+              },
+              {
+                "condition": { "formulationType": "adhesive" },
+                "title": "Adhesive Testing Confirmed",
+                "body": "Built-in temperature control tests adhesives at application-relevant temperatures, including hot melt adhesives.",
+                "tags": ["Adhesives"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Series Fit",
+                "body": "Share your target testing temperature and formulation type, and the right L Series or H Series configuration gets confirmed.",
+                "tags": ["Series Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How does your lab currently run repetitive viscosity tests?",
+            "description": "Select your testing frequency and analysis needs, and see whether Capcalc fits.",
+            "steps": [
+              {
+                "key": "testingFrequency",
+                "question": "How frequently are repetitive or batch tests run?",
+                "options": [
+                  { "val": "occasional", "label": "Occasional" },
+                  { "val": "repetitive", "label": "Repetitive, batch testing" }
+                ]
+              },
+              {
+                "key": "dataComparisonNeed",
+                "question": "Is multi-batch comparison needed?",
+                "options": [
+                  { "val": "single-tests", "label": "Single tests" },
+                  { "val": "multi-batch", "label": "Multi-batch comparison" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Capcalc automates data capture and viscometer control, supports scripting and looping for repetitive tasks, and provides math modeling for yield stress and plastic index calculations, with up to four data sets plotted together for comparison — share your calculation requirements to confirm the fit.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Industries using CAP2000+ include coatings manufacturing, food production, and adhesives development.",
+            "industries": [
+              { "name": "Paints and Coatings Manufacturing", "icon": "flask", "useCase": "QC testing of architectural coatings and industrial paints", "consideration": "High-shear cone and plate testing matches real application shear conditions" },
+              { "name": "Adhesives Manufacturing", "icon": "zap", "useCase": "Testing hot melt and industrial adhesive viscosity", "consideration": "H Series temperature range tests adhesives at application-relevant heat" },
+              { "name": "Food and Beverage Production", "icon": "coffee", "useCase": "Testing creams, gels, and food product viscosity", "consideration": "Small sample volume requirement suits limited or costly food formulations" },
+              { "name": "Printing and Ink Manufacturing", "icon": "droplet", "useCase": "QC testing of screen printing inks and UV coatings", "consideration": "Wide shear rate range suits high-shear printing application conditions" },
+              { "name": "Polymer and Resin Development", "icon": "cpu", "useCase": "Characterizing composite polymers, epoxies, and resins", "consideration": "Capcalc's yield stress and plastic index calculations support formulation R&D" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "CAP2000+ service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Shows cone and plate testing and Capcalc automation on your own samples." },
+              { "title": "Configuration Assessment", "description": "Confirms L Series or H Series fit for your formulation and temperature needs." },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks." },
+              { "title": "Operator Training", "description": "Gets your team confident with keypad control, cone positioning, and Capcalc use." },
+              { "title": "Preventive Maintenance", "description": "Maintains Peltier plate, cone, and drive performance." },
+              { "title": "Spares and Accessories", "description": "Supplies cones, plates, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is CAP2000+ used for?", "answer": "CAP2000+ is a cone and plate viscometer used for moderate to high shear viscosity testing of materials like paints, inks, adhesives, and resins, particularly where small sample volumes are involved." },
+            { "question": "What speed range does CAP2000+ operate at?", "answer": "It offers variable speed control from 5 to 1000 RPM, suited to both R&D and QC testing scenarios." },
+            { "question": "What's the difference between the L Series and H Series?", "answer": "The L Series covers a temperature range of 5°C to 75°C, while the H Series extends to 50°C to 235°C for higher-temperature material testing." },
+            { "question": "How is temperature controlled on CAP2000+?", "answer": "A built-in Peltier plate delivers precise temperature control across the L or H Series range." },
+            { "question": "What materials can be tested on CAP2000+?", "answer": "It handles medium-viscosity materials like coatings, creams, and inks, as well as high-viscosity materials like adhesives, asphalt, chocolate, and epoxies." },
+            { "question": "What does Capcalc software add to CAP2000+?", "answer": "Capcalc automates data collection and viscometer control, supports scripting and looping for repetitive tasks, and provides math modeling for yield stress and plastic index calculations." },
+            { "question": "Can I compare multiple test results on CAP2000+?", "answer": "Yes, with Capcalc software, up to four data sets can be plotted together for direct comparison and analysis." },
+            { "question": "Does CAP2000+ require large sample volumes?", "answer": "No, it's specifically designed for applications requiring small sample volumes alongside precise temperature control." },
+            { "question": "What is the price of CAP2000+ in India?", "answer": "The price depends on the series, spindle configuration, and Capcalc software selection. Contact Inkarp for a quotation once your requirements are confirmed." },
+            { "question": "Who is the authorized distributor of CAP2000+ in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield CAP2000+ Viscometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get CAP2000+ in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Variable speed from 5 to 1000 RPM, precise Peltier temperature control up to 235°C, and optional Capcalc automation for repeatable, comparable results. Tell us your formulation type and temperature range, and Inkarp will confirm the right CAP2000+ configuration.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your formulation type and temperature range, then confirm the right CAP2000+ configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "formulationType", "label": "Formulation type", "type": "text", "required": false },
+              { "key": "temperatureRange", "label": "Temperature range needed", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm L Series or H Series fit", "body": "Tell our team your typical formulation type and target temperature range, and Inkarp will confirm whether the L Series or H Series CAP2000+ fits your testing needs." },
+              { "title": "Confirm whether Capcalc fits the workflow", "body": "Tell our team whether repetitive testing or multi-batch comparison is a bigger priority for your lab, and Inkarp will confirm whether Capcalc fits your workflow." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Cone and plate precision for high-shear viscosity testing, on samples small enough to fit on a spoon.",
+            "heroLead": "Small sample volumes and high-shear conditions don't always play well with standard rotational viscometers. CAP2000+ is built specifically around that combination. Variable speed control runs from 5 to 1000 RPM, paired with a built-in Peltier plate for precise temperature control, available in an L Series covering 5°C to 75°C or an H Series reaching 50°C to 235°C. A keypad handles direct parameter input, an easy-to-use control handle manages automatic cone positioning, and a 4-line display shows every test parameter simultaneously, with optional Capcalc software available for full automated PC control.",
+            "stats": [
+              { "value": "5 to 1000 RPM", "label": "Variable speed range" },
+              { "value": "5°C to 75°C", "label": "L Series temperature range" },
+              { "value": "50°C to 235°C", "label": "H Series temperature range" },
+              { "value": "Built-in Peltier plate", "label": "Temperature control mechanism" },
+              { "value": "4-line display", "label": "Simultaneous parameter viewing" },
+              { "value": "Automatic", "label": "Cone positioning via control handle" },
+              { "value": "Optional", "label": "Capcalc software for PC automation" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "CAP2000+ product information: speed and temperature control, automation, and application range.",
+                "body": [
+                  "Variable speed control runs from 5 to 1000 RPM, covering testing scenarios that span both R&D exploration and detailed QC repeatability.",
+                  "A built-in Peltier plate delivers precise temperature control, available in two model series depending on the temperature range a formulation needs.",
+                  "The L Series covers 5°C to 75°C, while the H Series reaches 50°C to 235°C, extending testing into genuinely high-temperature conditions.",
+                  "A wide shear rate range makes the instrument well suited to applications requiring small sample volumes alongside precise temperature control.",
+                  "A keypad allows direct input of test parameters, while an easy-to-use control handle manages accurate, automatic cone positioning.",
+                  "A 4-line display shows all test parameters simultaneously, keeping operation streamlined without needing to cycle through separate screens.",
+                  "Optional Capcalc software automates data collection and viscometer control, reducing operator error and saving time compared to fully manual operation.",
+                  "The instrument is designed for both medium-viscosity materials, like hot melt adhesives, coatings, creams, food products, gels, screen printing inks, and UV coatings, and high-viscosity materials, including adhesives, asphalt, chocolate, composite polymers, epoxies, and gels."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "CAP2000+ key features: variable speed control, dual temperature series, and automated testing."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "CAP2000+ applications: paints, adhesives, food products, and high-viscosity industrial materials."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "CAP2000+ technical specifications: speed range, temperature range, and control interface."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Speed and Temperature Control",
+                "title": "Speed and Temperature Control",
+                "description": "How CAP2000+'s variable speed range and dual temperature series fit different testing needs.",
+                "body": [
+                  "High-shear viscosity testing rarely happens at a single fixed speed or temperature, and CAP2000+ is built to cover a genuinely wide operating window rather than a narrow one.",
+                  "Both R&D exploration and QC repeatability are covered by the 5 to 1000 RPM variable speed range.",
+                  "Standard ambient-to-moderate temperature testing is covered by the L Series, 5°C to 75°C, while genuinely high-temperature material testing is covered by the H Series, 50°C to 235°C.",
+                  "Reliable results from small sample volumes come from the wide shear rate range paired with precise temperature control."
+                ],
+                "disclaimer": "Tell our team your formulation's typical testing temperature, and Inkarp will confirm whether the L Series or H Series fits your process."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Automated Testing with Capcalc",
+                "title": "Automated Testing with Capcalc",
+                "description": "What optional Capcalc software adds to CAP2000+'s standard manual operation.",
+                "cards": [
+                  { "title": "Reduced operator-to-operator variation", "description": "Automated data capture and viscometer control." },
+                  { "title": "Efficient repetitive testing", "description": "Scripting and looping functions." },
+                  { "title": "Built-in yield stress and plastic index calculations", "description": "Math modeling capabilities." },
+                  { "title": "Direct comparison across formulations or batches", "description": "Up to four data sets plotted together." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for CAP2000+ is available on request.",
+                "cards": [
+                  { "title": "CAP2000+ Specification Sheet", "description": "Available on request" },
+                  { "title": "Capcalc Software Overview", "description": "Available on request" },
+                  { "title": "Spindle and Accessory Compatibility Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get CAP2000+ in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Variable speed from 5 to 1000 RPM, precise Peltier temperature control up to 235°C, and optional Capcalc automation for repeatable, comparable results. Tell us your formulation type and temperature range, and Inkarp will confirm the right CAP2000+ configuration.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "DV2Plus Viscometer",
+          "slug": "dv2plus-viscometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield DV2Plus Viscometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dv2plus-viscometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > DV2Plus Viscometer",
+          "h1": "DV2Plus Viscometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "The DV2T built its reputation over years of use across labs running everything from thin inks to heavy industrial pastes. DV2Plus is its direct successor — not a rebrand, but a genuine step forward built around a 7-inch full-color touchscreen, expanded 740-speed control, and optional Bluetooth connectivity.",
+
+          "features": [
+            "7\" Full-Color Touchscreen: High-resolution 800×480 display with wide viewing angle and intuitive interface.",
+            "Favorites Menu: Saves and accesses the most-used test methods in a single tap.",
+            "Viscosity Wizard: Guided setup that simplifies complex test configuration.",
+            "Post-Test Graphing with PDF Export: Instant torque vs. time graphs, printable and exportable.",
+            "Integrated Connectivity: 4 USB-A ports, 1 USB-B port, and Bluetooth for PCs, printers, and barcode scanners.",
+            "740 Speeds: Ultra-fine speed control across the full testing range.",
+            "Built-In Gel Timer Functionality: Standard capability suited to resins, epoxies, and curing systems.",
+            "HPQA Integration: Full compatibility with the Helipath Quick Action Stand for faster, repeatable testing.",
+            "Accuracy of ±1.0% of Range: Precise measurement across the viscosity span.",
+            "Repeatability of ±0.2%: Dependable results run after run."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield DV2Plus Viscometer" },
+            { "label": "Category", "value": "Laboratory Viscometers" },
+            { "label": "Display", "value": "7\" full-color PCAP touchscreen, 800×480 resolution, wide viewing angle" },
+            { "label": "Speed Range", "value": "740 speeds" },
+            { "label": "Accuracy", "value": "±1.0% of range" },
+            { "label": "Repeatability", "value": "±0.2%" },
+            { "label": "Measured Parameters", "value": "Viscosity (cP/mPa·s), temperature (°C/°F), shear rate/stress, % torque, spindle/speed, step program status" },
+            { "label": "Connectivity", "value": "4x USB-A, 1x USB-B, optional Bluetooth" },
+            { "label": "Gel Timer Functionality", "value": "Built in, standard" },
+            { "label": "HPQA Compatibility", "value": "Full integration with Helipath Quick Action Stand" },
+            { "label": "Automated Oscillation Testing", "value": "Included" },
+            { "label": "Digital Leveling", "value": "Included" },
+            { "label": "Compliance", "value": "Optional ISO 17025 calibration, NIST traceable standards, 21 CFR Part 11-ready with DV360" },
+            { "label": "Software Compatibility", "value": "DV360, DV Create" },
+            { "label": "Legacy File Compatibility", "value": "DV Create ensures compatibility with legacy DV2T files" },
+            { "label": "Data Export", "value": "Post-test PDF graphing (torque vs. time)" }
+          ],
+
+          "applications": [
+            "QC Release Testing: ±1.0% accuracy and ±0.2% repeatability for regulated batch release.",
+            "Resin, Epoxy, and Curing System Testing: Built-in Gel Timer functionality tracks viscosity change through cure.",
+            "Ink and Coating Viscosity Testing: Wide viscosity range from thin inks through heavy pastes.",
+            "Industrial Paste and Slurry Testing: 740-speed control supports fine-tuning across high-viscosity materials.",
+            "Method Development and R&D: Viscosity Wizard and DV Create software for building and testing new methods.",
+            "Regulated Pharmaceutical and Chemical QC: 21 CFR Part 11 compliance-ready with DV360, ISO 17025 calibration option.",
+            "Helipath-Based Structured Fluid Testing: HPQA integration for gels, creams, and structured materials.",
+            "Multi-Site Lab Standardization: Favorites Menu and shared method files across DV2T-compatible instruments."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "workflow", "label": "Control & Connectivity" },
+            { "id": "suitability", "label": "Viscosity & Method" },
+            { "id": "planner", "label": "Software Selector" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "DV2T Migration" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Touchscreen Interface" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What fluids and viscosity range does the work involve?",
+            "description": "Select the material type and viscosity range, and see the recommended spindle and speed configuration.",
+            "fields": [
+              {
+                "key": "materialType",
+                "label": "Material type",
+                "options": [
+                  { "val": "ink", "label": "Ink" },
+                  { "val": "coating", "label": "Coating" },
+                  { "val": "resin-epoxy", "label": "Resin/epoxy" },
+                  { "val": "industrial-paste", "label": "Industrial paste" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "viscosityRange",
+                "label": "Expected viscosity range",
+                "options": [
+                  { "val": "low", "label": "Low" },
+                  { "val": "medium", "label": "Medium" },
+                  { "val": "high", "label": "High viscosity" }
+                ]
+              },
+              {
+                "key": "testType",
+                "label": "Test type",
+                "options": [
+                  { "val": "single-point", "label": "Single-point" },
+                  { "val": "multi-step", "label": "Multi-step" },
+                  { "val": "curing-gel", "label": "Curing/gel timing" }
+                ]
+              },
+              {
+                "key": "regulatoryRequirement",
+                "label": "Regulatory requirement",
+                "options": [
+                  { "val": "research", "label": "Research use" },
+                  { "val": "cfr11", "label": "21 CFR Part 11 compliance needed" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "testType": "curing-gel" },
+                "title": "Built-In Gel Timer Fits This Test",
+                "body": "Built-in Gel Timer functionality is standard on DV2Plus, suited to resins, epoxies, and curing systems.",
+                "tags": ["Gel Timer"]
+              },
+              {
+                "condition": { "regulatoryRequirement": "cfr11" },
+                "title": "DV360 Supports Compliance",
+                "body": "DV360 software extends DV2Plus into advanced viscosity testing with optional 21 CFR Part 11 compliance.",
+                "tags": ["21 CFR Part 11"]
+              },
+              {
+                "condition": { "viscosityRange": "high" },
+                "title": "740-Speed Range Fits High Viscosity",
+                "body": "The 740-speed range gives ultra-fine control across industrial pastes and heavy materials.",
+                "tags": ["High Viscosity"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Configuration",
+                "body": "Share the material type, viscosity range, and test type, and the recommended spindle set, speed range, and software package get confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Moving from an existing DV2T?",
+            "description": "Select the current instrument and existing method files, and see the migration path.",
+            "steps": [
+              {
+                "key": "currentInstrument",
+                "question": "What is the current instrument?",
+                "options": [
+                  { "val": "dv2t", "label": "DV2T" },
+                  { "val": "another-brookfield", "label": "Another Brookfield model" },
+                  { "val": "new-purchase", "label": "New purchase" }
+                ]
+              },
+              {
+                "key": "existingMethodFiles",
+                "question": "Are existing DV2T-format method files in use?",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "none", "label": "None" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "DV Create maintains compatibility with legacy DV2T method files, so existing validated methods carry over — share the accessories in use (HPQA, small sample adapter, spindle sets) and the software currently used to confirm the full migration path.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "software-compliance-selector",
+              "eyebrow": "Software and Compliance Selector",
+              "title": "Which software package fits the workflow?",
+              "description": "Select the compliance and method-building requirements, and see the recommended software.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Compliance requirement", "choices": "Research use; ISO 17025; 21 CFR Part 11" },
+                { "title": "Method complexity", "choices": "Single-step; Multi-step (up to 25 steps)" },
+                { "title": "Connectivity preference", "choices": "USB; Bluetooth; Both" },
+                { "title": "Legacy file compatibility", "choices": "DV2T files need to carry over; New methods only" }
+              ],
+              "disclaimer": "Recommends DV360, DV Create, or both, then routes to a software-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between DV2Plus and its predecessor",
+            "title": "DV2Plus vs DV2T (Predecessor)",
+            "description": "DV2Plus method comparison: DV2Plus against the DV2T it succeeds.",
+            "columns": [
+              { "label": "DV2Plus", "highlight": true },
+              { "label": "DV2T (Predecessor)", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Display", "values": ["7\" full-color PCAP touchscreen, 800×480", "Confirm on DV2T specification"] },
+              { "feature": "Speed Range", "values": ["740 speeds", "Confirm on DV2T specification"] },
+              { "feature": "Accuracy", "values": ["±1.0% of range", "Confirm on DV2T specification"] },
+              { "feature": "Repeatability", "values": ["±0.2%", "Confirm on DV2T specification"] },
+              { "feature": "Connectivity", "values": ["4x USB-A, 1x USB-B, Bluetooth", "Confirm on DV2T specification"] },
+              { "feature": "Gel Timer Functionality", "values": ["Built in, standard", "Confirm on DV2T specification"] },
+              { "feature": "Guided Setup", "values": ["Viscosity Wizard", "Not stated"] },
+              { "feature": "Method File Compatibility", "values": ["DV Create supports legacy DV2T files", "—"] },
+              { "feature": "Best For", "values": ["Labs wanting the latest touchscreen interface and full connectivity", "Labs with an established DV2T fleet and validated methods"] },
+              { "feature": "Choose when", "values": ["A new purchase or fleet upgrade is planned", "Existing DV2T methods and hardware remain fully adequate"] }
+            ],
+            "disclaimer": "DV2Plus is positioned by Brookfield as the direct successor to the DV2T, carrying forward legacy method file compatibility through DV Create so an upgrade doesn't mean revalidating existing test methods from scratch. Detailed DV2T specifications weren't available in this source pull — confirm exact figures when comparing directly for a fleet upgrade decision."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "DV2Plus industries: pharmaceutical, coatings and inks, food and beverage, and chemical manufacturing.",
+            "industries": [
+              { "name": "Pharmaceutical and Chemical QC", "icon": "pill", "useCase": "Regulated batch release viscosity testing", "consideration": "21 CFR Part 11 compliance-ready with DV360" },
+              { "name": "Coatings and Inks", "icon": "droplet", "useCase": "Viscosity control across formulation and production", "consideration": "740-speed range covers thin to heavy formulations" },
+              { "name": "Adhesives, Resins, and Sealants", "icon": "zap", "useCase": "Cure tracking and gel time measurement", "consideration": "Built-in Gel Timer functionality standard" },
+              { "name": "Food and Beverage", "icon": "coffee", "useCase": "Texture and consistency-related viscosity QC", "consideration": "Wide viscosity range and repeatable results" },
+              { "name": "Cosmetics and Personal Care", "icon": "flask", "useCase": "Structured fluid and gel/cream testing", "consideration": "HPQA integration for Helipath-based structured fluid work" },
+              { "name": "Industrial Manufacturing", "icon": "cpu", "useCase": "Paste, slurry, and heavy-material viscosity control", "consideration": "Accuracy holds across the high end of the viscosity range" },
+              { "name": "Contract Testing Laboratories", "icon": "target", "useCase": "Varied client materials and methods", "consideration": "Viscosity Wizard and Favorites Menu support fast method switching" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "DV2Plus service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials to show precision and interface performance." },
+              { "title": "Configuration Assessment", "description": "Confirms spindle set, speed range, and software package for the application." },
+              { "title": "DV2T Migration Support", "description": "Assists transitioning existing methods and accessories from a DV2T fleet." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with the touchscreen interface, Viscosity Wizard, and Gel Timer." },
+              { "title": "Software Setup", "description": "Configures DV360 and DV Create, including compliance settings." },
+              { "title": "Calibration Support", "description": "Coordinates ISO 17025 calibration and NIST traceable standards." },
+              { "title": "Preventive Maintenance", "description": "Maintains spindle drive, touchscreen, and connectivity performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, HPQA components, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the DV2Plus Viscometer used for?", "answer": "It's a rotational viscometer for laboratory viscosity testing across QC and R&D applications, used on materials ranging from thin inks to heavy industrial pastes." },
+            { "question": "Is DV2Plus a replacement for the DV2T?", "answer": "Yes. Brookfield positions DV2Plus as the direct successor to the DV2T, its most popular viscometer, with DV Create maintaining compatibility with legacy DV2T method files." },
+            { "question": "How many test speeds does DV2Plus offer?", "answer": "740 speeds, providing ultra-fine control across the full range of testing applications." },
+            { "question": "What is the accuracy and repeatability?", "answer": "±1.0% of range for accuracy, and ±0.2% for repeatability." },
+            { "question": "What does the touchscreen display in real time?", "answer": "Viscosity (cP or mPa·s), temperature (°C or °F), shear rate/stress, % torque, spindle/speed, and step program status." },
+            { "question": "What is Gel Timer functionality?", "answer": "A built-in, standard feature for tracking viscosity change through curing, suited to resins, epoxies, and curing systems." },
+            { "question": "What is the Viscosity Wizard?", "answer": "A guided setup tool that simplifies configuring complex test methods." },
+            { "question": "Does DV2Plus support Bluetooth?", "answer": "Yes, optional Bluetooth connectivity is available alongside 4 USB-A ports and 1 USB-B port." },
+            { "question": "Is DV2Plus compliant with regulated testing standards?", "answer": "It's 21 CFR Part 11-ready with DV360 software, and supports optional ISO 17025 calibration with NIST traceable standards." },
+            { "question": "What is HPQA integration?", "answer": "Full compatibility with the Helipath Quick Action Stand, supporting faster, more repeatable Helipath testing." },
+            { "question": "What software works with DV2Plus?", "answer": "DV360 for advanced viscosity testing and compliance, and DV Create for building up to 25-step test methods with live monitoring and legacy DV2T file compatibility." },
+            { "question": "Can post-test data be exported?", "answer": "Yes, torque vs. time graphs are generated instantly after a test and can be printed or exported to PDF." },
+            { "question": "What is the price of the DV2Plus Viscometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the spindle set, software package, and compliance requirements." },
+            { "question": "Who is the authorized distributor of the DV2Plus Viscometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield DV2Plus Viscometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the DV2Plus Viscometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 740 speeds, ±1.0% accuracy, and a touchscreen interface built to guide complex tests rather than complicate them — the direct successor to Brookfield's most popular viscometer. Share the fluid types tested and any compliance requirements, and the right DV2Plus configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your fluid types and compliance requirements, then confirm the right DV2Plus configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "fluidTypes", "label": "Fluid types tested", "type": "text", "required": false },
+              { "key": "complianceRequirements", "label": "Compliance requirements", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right DV2Plus configuration", "body": "Share the fluid types and viscosity range routinely tested, and whether 21 CFR Part 11 compliance or Gel Timer testing is required, and the right DV2Plus configuration and accessories get confirmed from there." },
+              { "title": "Confirm the display and reporting setup", "body": "Share which parameters matter most for the routine tests being run, and the display and reporting setup gets confirmed accordingly." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles calibration support, installation, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "740 speeds. ±1.0% accuracy. The instrument that replaces Brookfield's most popular viscometer.",
+            "heroLead": "The DV2T built its reputation over years of use across labs running everything from thin inks to heavy industrial pastes. DV2Plus is its direct successor — not a rebrand, but a genuine step forward built around a 7-inch full-color touchscreen, expanded 740-speed control, and optional Bluetooth connectivity. The precision underneath hasn't moved: ±1.0% accuracy and ±0.2% repeatability across the full viscosity range, with 21 CFR Part 11 compliance available through DV360 software for regulated environments. What's changed is how fast a test gets set up and how much the instrument does on its own — Viscosity Wizard walks through complex test configuration, a Favorites menu recalls the most-used methods in one tap, and post-test graphing exports torque-vs-time data straight to PDF. Built-in Gel Timer functionality covers resins, epoxies, and curing systems without a separate accessory, and full HPQA integration supports faster, more repeatable Helipath testing on the same platform.",
+            "stats": [
+              { "value": "7\" touchscreen", "label": "800×480 resolution, wide viewing angle" },
+              { "value": "740 speeds", "label": "Ultra-fine control across the full range" },
+              { "value": "±1.0% of range", "label": "Accuracy" },
+              { "value": "±0.2%", "label": "Repeatability" },
+              { "value": "4 USB-A + 1 USB-B", "label": "Ports, plus Bluetooth" },
+              { "value": "Built-in", "label": "Gel Timer functionality" },
+              { "value": "Successor to DV2T", "label": "Brookfield's most popular viscometer" },
+              { "value": "21 CFR Part 11", "label": "Compliance-ready with DV360" },
+              { "value": "ISO 17025", "label": "Optional calibration, NIST traceable" },
+              { "value": "HPQA integrated", "label": "Full compatibility with the Helipath Quick Action Stand" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "DV2Plus product information: display and interface, precision, and connectivity and software.",
+                "body": [
+                  "Successor to the DV2T — builds on Brookfield's most popular viscometer with a modernized platform.",
+                  "7\" full-color PCAP touchscreen — 800×480 resolution with a wide viewing angle and intuitive interface.",
+                  "740-speed control — ultra-fine speed selection across the full range of testing applications.",
+                  "Optional Bluetooth connectivity — wireless connection to a PC alongside standard USB ports.",
+                  "Favorites Menu — saves and recalls the most-used test methods in a single tap.",
+                  "Viscosity Wizard — guided setup for complex tests, simplified into a step-by-step process.",
+                  "Post-Test Graphing with PDF Export — torque vs. time graphs generated instantly and exported for records.",
+                  "Integrated connectivity — 4 USB-A ports, 1 USB-B port, and Bluetooth for PCs, printers, and barcode scanners.",
+                  "Built-in Gel Timer functionality — standard on the model, suited to resins, epoxies, and curing systems.",
+                  "HPQA integration — full compatibility with the Helipath Quick Action Stand for faster, repeatable Helipath testing.",
+                  "Accuracy of ±1.0% of range — consistent across the instrument's full viscosity span.",
+                  "Repeatability of ±0.2% — dependable, run-to-run measurement consistency.",
+                  "Compliance options — ISO 17025 calibration, NIST traceable standards, and 21 CFR Part 11 readiness with DV360 software.",
+                  "Real-time monitoring across six parameters — viscosity (cP or mPa·s), temperature (°C or °F), shear rate/stress, % torque, spindle/speed, and step program status.",
+                  "Automated oscillation testing — built into the standard feature set.",
+                  "Digital leveling — simplifies instrument setup."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "DV2Plus key features: touchscreen interface, guided testing, and integrated connectivity."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "DV2Plus applications: QC and R&D viscosity testing across fluid types and industries."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "DV2Plus technical specifications: display, speed range, precision, and connectivity."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Built for Performance",
+                "title": "Built for Performance",
+                "description": "Accuracy and repeatability across a wide viscosity range.",
+                "body": [
+                  "A viscometer that's accurate on a mid-range fluid but drifts at the extremes isn't actually solving the problem most labs have — they need one instrument covering thin inks through heavy industrial pastes without swapping equipment between them.",
+                  "Accuracy across thin to heavy viscosities comes from ±1.0% of range, held across the full span.",
+                  "Confidence in repeated results comes from ±0.2% repeatability.",
+                  "One instrument serves both R&D and QC because the same precision specification applies across both use cases — a method developed during formulation work carries the same measurement confidence into production release testing, without needing to be re-validated on a different instrument because the viscosity range changed.",
+                  "Regulated release testing confidence follows from precision figures supporting 21 CFR Part 11-ready workflows."
+                ],
+                "disclaimer": "Share the viscosity range of the materials routinely tested, and expected precision performance gets confirmed against the ±1.0%/±0.2% specification."
+              },
+              {
+                "key": "workflow",
+                "eyebrow": "Advanced Control and Connectivity",
+                "title": "Advanced Control and Connectivity",
+                "description": "740 speeds, Bluetooth, and software integration.",
+                "steps": [
+                  { "title": "740-Speed Control", "description": "Ultra-fine control matching the speed a method calls for exactly." },
+                  { "title": "Wireless and Wired Connectivity", "description": "Bluetooth plus 4x USB-A and 1x USB-B, covering PCs, printers, and barcode scanners." },
+                  { "title": "DV360 Software", "description": "Advanced viscosity testing analysis, with optional 21 CFR Part 11 compliance." },
+                  { "title": "DV Create", "description": "Builds and runs up to 25-step multi-step methods, live-monitored over Bluetooth or USB." },
+                  { "title": "Legacy Method Compatibility", "description": "DV Create stays compatible with legacy DV2T method files, so existing validated methods carry over." }
+                ],
+                "disclaimer": "Share whether existing DV2T method files need to carry over, and whether 21 CFR Part 11 compliance is required, and the software package gets confirmed accordingly."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Touchscreen Simplicity and Smarter Interface",
+                "title": "Touchscreen Simplicity and Smarter Interface",
+                "description": "What real-time monitoring across six parameters delivers.",
+                "cards": [
+                  { "title": "Visibility into the test while it runs", "description": "Six parameters displayed simultaneously in real time." },
+                  { "title": "Reading the display from any bench angle", "description": "Wide-viewing-angle 800×480 touchscreen." },
+                  { "title": "Flagging problems before the test ends", "description": "Live torque and shear tracking, not just an end result." },
+                  { "title": "A clean interface under time pressure", "description": "Modern, simplified touchscreen layout." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the DV2Plus is available on request.",
+                "cards": [
+                  { "title": "DV2Plus Specification Sheet", "description": "Available on request" },
+                  { "title": "DV360 Software Overview", "description": "Available on request" },
+                  { "title": "DV Create Software Overview", "description": "Available on request" },
+                  { "title": "HPQA Integration Guide", "description": "Available on request" },
+                  { "title": "21 CFR Part 11 Compliance Details", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the DV2Plus Viscometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 740 speeds, ±1.0% accuracy, and a touchscreen interface built to guide complex tests rather than complicate them — the direct successor to Brookfield's most popular viscometer. Share the fluid types tested and any compliance requirements, and the right DV2Plus configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "DVNext Cone/Plate Rheometer",
+          "slug": "dvnext-cone-plate-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield DVNext Cone/Plate Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dvnext-cone-plate-rheometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > DVNext Cone/Plate Rheometer",
+          "h1": "DVNext Cone/Plate Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Some materials can't be spared in the volumes a standard viscometer needs — a biological fluid drawn from a limited source, a formulation that costs more per gram than the instrument itself. DVNext Cone/Plate Rheometer is built specifically for that constraint: accurate absolute viscosity measurement from samples as small as 0.5–2.0 mL.",
+
+          "features": [
+            "Small-Volume Absolute Viscosity: Accurate measurement from samples as small as 0.5–2.0 mL.",
+            "Precise Shear Rates: Detailed flow curve behavior for comprehensive fluid dynamics analysis.",
+            "Rapid Temperature Control: Faster thermal equilibrium due to small sample volume.",
+            "Magnetic Coupling Attachment: Simplified spindle attachment and removal, minimizing handling errors.",
+            "Electronic Gap Adjustment: Reduces manual intervention and improves repeatability.",
+            "7\" Touch Screen Display: Direct access to all features through an intuitive interface.",
+            "Auto-Zero Function: Automatic calibration for optimal torque measurement accuracy.",
+            "Auto-Range Function: Automatically defines the full-scale range for every spindle/speed combination.",
+            "High Torque Measurement Accuracy: 1% of full-scale range.",
+            "Exceptional Repeatability: 0.2% of full-scale range across multiple tests."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield DVNext Cone/Plate Rheometer" },
+            { "label": "Category", "value": "Laboratory Viscometers / Rheometers" },
+            { "label": "Sample Volume", "value": "0.5–2.0 mL" },
+            { "label": "Torque Measurement Accuracy", "value": "1% of full-scale range (FSR)" },
+            { "label": "Repeatability", "value": "0.2% of full-scale range (FSR)" },
+            { "label": "Output", "value": "Absolute viscosity in centipoise (cP / mPa·s)" },
+            { "label": "Interface", "value": "7\" touchscreen display" },
+            { "label": "Spindle Attachment", "value": "Magnetic coupling" },
+            { "label": "Gap Adjustment", "value": "Electronic" },
+            { "label": "Calibration Functions", "value": "Auto-zero, auto-range (FSR set per spindle/speed combination)" },
+            { "label": "Leveling", "value": "Digital" },
+            { "label": "Cone/Plate Positioning", "value": "Simple mechanical setup, no external gauges required" },
+            { "label": "Cone Spindle Support", "value": "Multiple, calibrated for specific applications" },
+            { "label": "Compliance (Optional)", "value": "21 CFR Part 11 — electronic signatures, audit trails, secure data management" },
+            { "label": "Connectivity (Optional)", "value": "Ethernet and LIMS integration" }
+          ],
+
+          "applications": [
+            "Biological Fluid Testing: 0.5–2.0 mL sample volume suits limited-availability biological materials.",
+            "Expensive Formulation Development: Small sample requirement minimizes consumption of costly R&D materials.",
+            "Flow Curve and Shear Rate Analysis: Precise shear rates provide detailed fluid dynamics behavior.",
+            "Rapid Iterative Testing: Fast temperature equilibrium reduces wait time between test conditions.",
+            "Regulated Pharmaceutical and Chemical QC: Optional 21 CFR Part 11 compliance with e-signatures and audit trails.",
+            "LIMS-Integrated Laboratories: Optional Ethernet/LIMS connectivity for seamless data management.",
+            "High-Throughput Method Development: Magnetic coupling and electronic gap adjustment speed setup between tests.",
+            "Application-Specific Cone Calibration: Multiple cone spindles calibrated for specific material types."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "workflow", "label": "Principle of Operation" },
+            { "id": "suitability", "label": "Sample & Material Fit" },
+            { "id": "planner", "label": "Compliance Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Test Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "standards", "label": "Control & Compliance" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "How much sample is actually available?",
+            "description": "Select the material type and available volume, and see whether cone/plate geometry fits.",
+            "fields": [
+              {
+                "key": "materialType",
+                "label": "Material type",
+                "options": [
+                  { "val": "biological-fluid", "label": "Biological fluid" },
+                  { "val": "formulation", "label": "Formulation" },
+                  { "val": "polymer", "label": "Polymer" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "materialScarcity",
+                "label": "Cost or scarcity of material",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "limited-expensive", "label": "Limited or expensive" }
+                ]
+              },
+              {
+                "key": "shearRateRange",
+                "label": "Shear rate range required",
+                "options": [
+                  { "val": "low", "label": "Low shear" },
+                  { "val": "moderate", "label": "Moderate shear" },
+                  { "val": "high", "label": "High shear" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "materialScarcity": "limited-expensive" },
+                "title": "Cone/Plate Geometry Fits Limited Material",
+                "body": "DVNext Cone/Plate measures accurate absolute viscosity from 0.5 to 2.0 mL, conserving limited or expensive material.",
+                "tags": ["Limited Material"]
+              },
+              {
+                "condition": { "materialType": "biological-fluid" },
+                "title": "Suited to Biological Fluid Testing",
+                "body": "The 0.5–2.0 mL sample volume suits limited-availability biological materials.",
+                "tags": ["Biological Fluid"]
+              },
+              {
+                "condition": { "shearRateRange": "high" },
+                "title": "High Shear Rate Cone Selection",
+                "body": "Multiple cone spindles are supported and can be calibrated for specific applications and shear rate ranges.",
+                "tags": ["High Shear"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm Cone/Plate Fit",
+                "body": "Share the material type and available sample volume, and suitability against the 0.5–2.0 mL requirement gets confirmed, along with the recommended cone spindle.",
+                "tags": ["Fit Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "How many conditions does the protocol test across?",
+            "description": "Select the throughput priority, and see the estimated test sequence time.",
+            "steps": [
+              {
+                "key": "throughputPriority",
+                "question": "Is this standard testing or high-iteration development work?",
+                "options": [
+                  { "val": "standard", "label": "Standard testing" },
+                  { "val": "high-iteration", "label": "High-iteration development work" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Small sample volume means fast thermal equilibrium, cutting the wait time larger volumes impose between test conditions — share the shear rate points per test, temperature points, and samples per session to estimate the full test sequence time.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "compliance-connectivity-checker",
+              "eyebrow": "Compliance and Connectivity Checker",
+              "title": "Does the lab need regulated compliance or LIMS integration?",
+              "description": "Select the regulatory and data management requirements, and see the recommended configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Regulatory framework", "choices": "Research use; 21 CFR Part 11 required" },
+                { "title": "Data management", "choices": "Standalone; LIMS-integrated" },
+                { "title": "Connectivity available", "choices": "Ethernet available; Not required" },
+                { "title": "Audit trail requirement", "choices": "Not required; Electronic signatures and audit trail needed" }
+              ],
+              "disclaimer": "Confirms the compliance and connectivity package required, then routes to a compliance-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between Ametek Brookfield instruments",
+            "title": "DVNext Cone/Plate vs DV2Plus (Rotational Spindle)",
+            "description": "DVNext Cone/Plate method comparison: cone/plate geometry against DV2Plus rotational spindle measurement.",
+            "columns": [
+              { "label": "DVNext Cone/Plate", "highlight": true },
+              { "label": "DV2Plus (Rotational Spindle)", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Sample Volume", "values": ["0.5–2.0 mL", "Larger volume, standard beaker/container"] },
+              { "feature": "Geometry", "values": ["Cone rotating against a plate", "Spindle rotating in a sample container"] },
+              { "feature": "Torque Accuracy", "values": ["1% of full-scale range", "±1.0% of range"] },
+              { "feature": "Repeatability", "values": ["0.2% of full-scale range", "±0.2%"] },
+              { "feature": "Speed Control", "values": ["Auto-range per spindle/speed", "740 discrete speeds"] },
+              { "feature": "Interface", "values": ["7\" touchscreen", "7\" touchscreen"] },
+              { "feature": "Setup", "values": ["Magnetic coupling, electronic gap adjustment", "Standard spindle attachment"] },
+              { "feature": "Gel Timer Functionality", "values": ["Not stated", "Built in, standard"] },
+              { "feature": "Best For", "values": ["Small, limited, or expensive sample volumes needing full flow curve data", "General-purpose viscosity testing across larger sample volumes"] },
+              { "feature": "Choose when", "values": ["Material availability is the binding constraint", "Standard sample volumes are available and Gel Timer or wide speed range matter"] }
+            ],
+            "disclaimer": "Both share the same touchscreen interface and comparable precision specifications, but they solve different problems. DVNext Cone/Plate exists specifically for when sample volume is the limiting factor; DV2Plus is the general-purpose choice when it isn't, with a wider speed range and built-in Gel Timer functionality DVNext Cone/Plate doesn't list."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "DVNext Cone/Plate industries: pharmaceutical R&D, biotechnology, cosmetics, and specialty chemical development.",
+            "industries": [
+              { "name": "Pharmaceutical R&D", "icon": "pill", "useCase": "Formulation viscosity testing on limited API quantities", "consideration": "Small sample volume conserves costly active material" },
+              { "name": "Biotechnology and Biologics", "icon": "flask", "useCase": "Viscosity testing of biological fluids and biopharmaceutical formulations", "consideration": "0.5–2.0 mL suits limited-availability biological samples" },
+              { "name": "Cosmetics and Personal Care R&D", "icon": "droplet", "useCase": "Testing precious or specialty formulation batches", "consideration": "Sample conservation across iterative formulation cycles" },
+              { "name": "Specialty Chemical Development", "icon": "cpu", "useCase": "Flow curve characterization of new formulations", "consideration": "Precise shear rates give comprehensive fluid dynamics data" },
+              { "name": "Regulated Pharmaceutical QC", "icon": "shield", "useCase": "Compliant viscosity testing under 21 CFR Part 11", "consideration": "Optional compliance with e-signatures and audit trails" },
+              { "name": "LIMS-Integrated Laboratories", "icon": "zap", "useCase": "Automated data flow into laboratory management systems", "consideration": "Optional Ethernet/LIMS connectivity" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "DVNext Cone/Plate service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own limited-volume samples to show precision performance." },
+              { "title": "Cone Spindle Selection", "description": "Confirms the right cone spindle set for the material and shear rate range." },
+              { "title": "Configuration Assessment", "description": "Confirms compliance and connectivity requirements." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with magnetic coupling, gap adjustment, and touchscreen operation." },
+              { "title": "Compliance Setup", "description": "Configures 21 CFR Part 11 features where required." },
+              { "title": "LIMS Integration Support", "description": "Assists Ethernet and LIMS connectivity setup." },
+              { "title": "Preventive Maintenance", "description": "Maintains cone/plate alignment, drive, and touchscreen performance." },
+              { "title": "Spares and Accessories", "description": "Supplies cone spindles, plates, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the DVNext Cone/Plate Rheometer used for?", "answer": "It's a rheometer for precise absolute viscosity measurement of small sample volumes, used in pharmaceutical, biotechnology, cosmetics, and specialty chemical R&D where sample material is limited or expensive." },
+            { "question": "How small a sample does it need?", "answer": "As small as 0.5–2.0 mL." },
+            { "question": "How does it calculate viscosity?", "answer": "It measures the torque required to rotate a cone spindle immersed in the sample against a plate; that torque is proportional to shear stress and is used to calculate absolute viscosity in centipoise (mPa·s)." },
+            { "question": "What is the torque measurement accuracy and repeatability?", "answer": "1% of full-scale range for accuracy, and 0.2% of full-scale range for repeatability." },
+            { "question": "How is the spindle attached?", "answer": "Via a magnetic coupling attachment, simplifying attachment and removal and minimizing handling errors." },
+            { "question": "Does the instrument require manual gap adjustment?", "answer": "No. Electronic gap adjustment reduces manual intervention and improves repeatability." },
+            { "question": "What do the auto-zero and auto-range functions do?", "answer": "Auto-zero automatically calibrates the instrument for optimal torque accuracy; auto-range automatically defines the full-scale range for every spindle/speed combination." },
+            { "question": "Why is temperature control faster on this instrument?", "answer": "The small sample volume has less thermal mass, so it reaches target temperature faster than larger-volume viscometry, reducing wait time during testing." },
+            { "question": "Is external gauging needed to set the cone/plate gap?", "answer": "No. The relative cone-to-plate position is maintained through simple mechanical setup without external gauges." },
+            { "question": "Can multiple cone spindles be used?", "answer": "Yes, multiple cone spindles are supported and can be calibrated for specific applications." },
+            { "question": "Is 21 CFR Part 11 compliance available?", "answer": "Yes, as an optional feature, including electronic signatures, audit trails, and secure data management." },
+            { "question": "Can the instrument connect to a LIMS?", "answer": "Yes, optional Ethernet and LIMS connectivity is available for integration with laboratory management systems." },
+            { "question": "How is DVNext Cone/Plate different from DV2Plus?", "answer": "DVNext Cone/Plate is built specifically for small sample volumes (0.5–2.0 mL) using cone/plate geometry. DV2Plus is a general-purpose rotational spindle viscometer with a 740-speed range and built-in Gel Timer functionality, suited to larger, more readily available sample volumes." },
+            { "question": "What is the price of the DVNext Cone/Plate Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the cone spindle set, compliance, and connectivity requirements." },
+            { "question": "Who is the authorized distributor of the DVNext Cone/Plate Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield DVNext Cone/Plate Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the DVNext Cone/Plate Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Full rheological data from samples as small as 0.5 mL, magnetic coupling and electronic gap adjustment that remove manual setup, and 1% torque accuracy across every spindle/speed combination. Share the material and available sample volume, and the right DVNext Cone/Plate configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your material and sample volume, then confirm the right DVNext Cone/Plate configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "material", "label": "Material to be tested", "type": "text", "required": false },
+              { "key": "availableSampleVolume", "label": "Available sample volume", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right cone spindle set and configuration", "body": "Share the sample material, how much volume is realistically available per test, and whether regulated compliance or LIMS integration is needed, and the right cone spindle set and configuration get confirmed from there." },
+              { "title": "Scope compliance and connectivity", "body": "Share whether the lab operates under 21 CFR Part 11 or connects to a LIMS, and the compliance and connectivity configuration gets scoped accordingly." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles cone spindle selection, installation, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "0.5 mL of sample. Full rheological data. Nothing wasted getting there.",
+            "heroLead": "Some materials can't be spared in the volumes a standard viscometer needs — a biological fluid drawn from a limited source, a formulation that costs more per gram than the instrument itself. DVNext Cone/Plate Rheometer is built specifically for that constraint: accurate absolute viscosity measurement from samples as small as 0.5–2.0 mL. The geometry does the work. A cone spindle rotates against a plate through the small sample volume, and the resistance to that rotation — proportional to shear stress — calculates directly to absolute viscosity in centipoise. Small volume also means fast thermal equilibrium: temperature adjustments happen quickly, cutting the wait time that larger sample volumes impose between test conditions. A magnetic coupling attachment turns spindle changes into a simple placement rather than a fiddly mechanical fitting, and electronic gap adjustment removes manual setup from the equation entirely — both reducing handling error and speeding throughput. Torque measurement holds to 1% of full-scale range accuracy with 0.2% repeatability, on the same 7-inch touchscreen interface found across the DVNext line, with optional 21 CFR Part 11 compliance and LIMS connectivity for regulated environments.",
+            "stats": [
+              { "value": "0.5–2.0 mL", "label": "Sample volume required" },
+              { "value": "1% of FSR", "label": "Torque measurement accuracy" },
+              { "value": "0.2% of FSR", "label": "Repeatability" },
+              { "value": "7\" touchscreen", "label": "Interface, shared across DVNext models" },
+              { "value": "Magnetic coupling", "label": "Spindle attachment and removal" },
+              { "value": "Electronic gap adjustment", "label": "Reduces manual setup" },
+              { "value": "Auto-zero", "label": "Automatic calibration for torque accuracy" },
+              { "value": "Auto-range", "label": "Full-scale range set automatically per spindle/speed" },
+              { "value": "21 CFR Part 11", "label": "Optional compliance, with e-signatures and audit trails" },
+              { "value": "LIMS-ready", "label": "Optional Ethernet and LIMS connectivity" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "DVNext Cone/Plate product information: small-volume precision, cone/plate operating principle, and compliance features.",
+                "body": [
+                  "Sample volumes as small as 0.5–2.0 mL — accurate absolute viscosity measurement without needing large material quantities.",
+                  "Precise shear rates — detailed flow curve behavior for comprehensive fluid dynamics analysis.",
+                  "Rapid temperature control — small sample size enables faster temperature adjustment, cutting wait time during testing.",
+                  "Magnetic coupling attachment — simplifies spindle attachment and removal, streamlining setup and minimizing handling errors.",
+                  "Electronic gap adjustment — reduces manual intervention during setup and improves repeatability.",
+                  "7\" touchscreen display — intuitive interface with direct access to all features, shared across DVNext Rheometers.",
+                  "Auto-zero function — automatically calibrates the instrument for optimal torque measurement accuracy.",
+                  "Auto-range function — automatically defines the full-scale range (FSR) for all spindle/speed combinations.",
+                  "Torque measurement accuracy of 1% of FSR — consistent, reliable performance across test conditions.",
+                  "Repeatability of 0.2% of FSR — consistent data across multiple tests.",
+                  "Simple mechanical cone/plate positioning — maintains precise relative cone-to-plate position without external gauges.",
+                  "Multiple cone spindle support — cone spindles calibrated for specific applications, extending versatility.",
+                  "Digital leveling — ensures consistent setup and accurate measurement across runs.",
+                  "Optional 21 CFR Part 11 compliance — electronic signatures, audit trails, and secure data management for regulated industries.",
+                  "Optional LIMS connectivity — Ethernet-based integration with laboratory management systems."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "DVNext Cone/Plate key features: small-volume precision, automated setup, and reliable torque measurement."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "DVNext Cone/Plate applications: limited-material testing, biological fluids, and formulation R&D."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "DVNext Cone/Plate technical specifications: sample volume, precision, and connectivity."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Precision at Small Sample Volumes",
+                "title": "Precision at Small Sample Volumes",
+                "description": "What 0.5–2.0 mL enables and why it matters.",
+                "body": [
+                  "Standard rotational viscometry generally assumes sample volume isn't the constraint — there's enough material to fill a beaker and immerse a spindle. Cone/plate geometry doesn't need that assumption.",
+                  "Full rheological data from precious material comes from the 0.5–2.0 mL sample volume requirement.",
+                  "Detailed flow behavior, not just a single point, comes from precise shear rates across the flow curve.",
+                  "Fast turnaround across multiple temperature points comes from rapid temperature control, since small thermal mass equilibrates quickly.",
+                  "Confidence in the absolute viscosity result comes from direct calculation from torque, with no external calibration curve needed."
+                ],
+                "disclaimer": "Share how much material is realistically available per test and the temperature points the protocol requires, and expected throughput gets discussed against the small-volume advantage."
+              },
+              {
+                "key": "workflow",
+                "eyebrow": "Principle of Operation",
+                "title": "Principle of Operation",
+                "description": "How the cone/plate geometry calculates absolute viscosity.",
+                "steps": [
+                  { "title": "Torque Measurement", "description": "DVNext Cone/Plate measures the torque required to rotate a cone spindle immersed in a small volume of fluid held against a plate." },
+                  { "title": "Shear Stress Calculation", "description": "The fluid's resistance to that rotation is directly proportional to shear stress." },
+                  { "title": "Absolute Viscosity Output", "description": "Shear stress calculates directly to absolute viscosity in centipoise (mPa·s), without an external calibration curve." },
+                  { "title": "Fixed Cone-to-Plate Geometry", "description": "The cone-to-plate relative position is maintained through simple mechanical setup rather than external gauges, keeping the shear rate calculation valid and consistent between runs." }
+                ],
+                "disclaimer": "Share the shear rate range the protocol requires, and cone spindle selection gets confirmed against it."
+              },
+              {
+                "key": "certs",
+                "eyebrow": "Enhanced Control and Compliance",
+                "title": "Enhanced Control and Compliance",
+                "description": "Digital leveling, 21 CFR Part 11, and LIMS integration.",
+                "cards": [
+                  { "title": "Consistent setup across every operator", "description": "Digital leveling.", "category": "quality" },
+                  { "title": "Electronic signatures and audit trails", "description": "Optional 21 CFR Part 11 compliance.", "category": "certifications" },
+                  { "title": "Secure, traceable data handling", "description": "Built into the Part 11-compliant configuration.", "category": "certifications" },
+                  { "title": "Results flowing into existing lab systems", "description": "Optional Ethernet and LIMS connectivity.", "category": "quality" }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the DVNext Cone/Plate Rheometer is available on request.",
+                "cards": [
+                  { "title": "DVNext Cone/Plate Specification Sheet", "description": "Available on request" },
+                  { "title": "Cone Spindle Selection Guide", "description": "Available on request" },
+                  { "title": "21 CFR Part 11 Compliance Details", "description": "Available on request" },
+                  { "title": "LIMS and Ethernet Connectivity Guide", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the DVNext Cone/Plate Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Full rheological data from samples as small as 0.5 mL, magnetic coupling and electronic gap adjustment that remove manual setup, and 1% torque accuracy across every spindle/speed combination. Share the material and available sample volume, and the right DVNext Cone/Plate configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

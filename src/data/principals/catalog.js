@@ -103,6 +103,10 @@ import photonEtcNirPreclinicalImagingCatalog from "./photon-etc/nir-i-nir-ii-pre
 import photonEtcLinescanCamerasCatalog from "./photon-etc/linescan-cameras.json";
 import photonEtcSwirCamerasCatalog from "./photon-etc/swir-cameras.json";
 import photonEtcEswirCamerasCatalog from "./photon-etc/eswir-cameras.json";
+import watersChromatographyAndLcMsSystemsCatalog from "./waters/chromatography-and-lc-ms-systems.json";
+import watersLcMsSystemsHighSensitivityRegulatoryCompliantCatalog from "./waters/lc-ms-systems-high-sensitivity-regulatory-compliant.json";
+import watersUplcCatalog from "./waters/uplc.json";
+import ametekBrookfieldLaboratoryViscometersCatalog from "./ametek-brookfield/laboratory-viscometers.json";
 import buchiFreezeDryerLyophilizerCatalog from "./buchi/freeze-dryer-lyophilizer.json";
 import nanosurfResearchCatalog from "./nanosurf/research.json";
 import nanosurfAdvancedResearchCatalog from "./nanosurf/advanced-research.json";
@@ -229,6 +233,10 @@ const principalCatalogs = [
   photonEtcLinescanCamerasCatalog,
   photonEtcSwirCamerasCatalog,
   photonEtcEswirCamerasCatalog,
+  watersChromatographyAndLcMsSystemsCatalog,
+  watersLcMsSystemsHighSensitivityRegulatoryCompliantCatalog,
+  watersUplcCatalog,
+  ametekBrookfieldLaboratoryViscometersCatalog,
   buchiFreezeDryerLyophilizerCatalog,
   nanosurfResearchCatalog,
   nanosurfAdvancedResearchCatalog,

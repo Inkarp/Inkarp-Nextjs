@@ -1,0 +1,338 @@
+{
+  "principal": {
+    "slug": "ametek-brookfield",
+    "principalName": "Ametek Brookfield",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Texture Analyzers",
+      "slug": "texture-analyzers",
+      "products": [
+        {
+          "name": "CTX Texture Analyzer",
+          "slug": "ctx-texture-analyzer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield CTX Texture Analyzer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/ctx-texture-analyzer",
+          "breadcrumbPath": "Home > Products > Texture Analyzers > CTX Texture Analyzer",
+          "h1": "CTX Texture Analyzer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most texture analyzers force a choice: sensitive enough for soft samples, or strong enough for firm ones. Not both. CTX Texture Analyzer removes that trade-off with 8 interchangeable load cells spanning 100g to 100kg — soft cosmetic gels and firm baked goods on the same instrument.",
+
+          "features": [
+            "8 Load Cells, 1000x Force Range: 100g to 100kg on one instrument. Most texture analyzers make you compromise between low-force sensitivity and high-force capacity. CTX doesn't.",
+            "500 Hz Data Output: Fast enough to catch a fracture point exactly, not approximately — critical for brittle or crunchy materials.",
+            "280mm Boom Travel: Extended reach for samples a shorter-travel instrument simply couldn't test.",
+            "Compression and Tension, One Platform: Not a compression-only or tension-only tester. Both, without switching hardware.",
+            "Optional 21 CFR Part 11 Compliance: Available through Texture Pro Software, built for regulated industries specifically."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield CTX Texture Analyzer" },
+            { "label": "Category", "value": "Texture Analyzers" },
+            { "label": "Test Types", "value": "Compression and tension" },
+            { "label": "Load Cell Options", "value": "8, ranging from 100g to 100kg" },
+            { "label": "Boom Travel", "value": "Up to 280mm" },
+            { "label": "Data Output Rate", "value": "500 Hz" },
+            { "label": "Base Tables", "value": "3, adjustable" },
+            { "label": "Interface", "value": "Easy-to-read display, intuitive controls" },
+            { "label": "Compliance Software", "value": "Optional Texture Pro Software, 21 CFR Part 11 compliant" },
+            { "label": "Core Texture Attributes Measured", "value": "Hardness, firmness, stickiness, and other properties" }
+          ],
+
+          "applications": [
+            "Food Texture Testing: Hardness, firmness, stickiness — measured fast and accurately.",
+            "Cosmetics Texture Analysis: Compression and tension on creams, gels, formulated products.",
+            "Pharmaceutical Product Testing: Regulated texture testing with optional 21 CFR Part 11 compliance.",
+            "Fracture and Rupture Analysis: 500 Hz output captures rapid moments of change.",
+            "Large or Complex Sample Testing: Extended 280mm boom reach.",
+            "Varied Sample Size and Format: 3 adjustable base tables.",
+            "Low-Force to High-Force Materials: 8 load cells span 100g to 100kg."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Load Cell Selector" },
+            { "id": "config", "label": "Base Table Selector" },
+            { "id": "compliance-data-output-checker", "label": "Compliance & Data" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "benefits", "label": "High-Speed Capture" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What force range does your material need?",
+            "description": "Select the material type and test type, and get the recommended load cell.",
+            "fields": [
+              {
+                "key": "materialType",
+                "label": "Material type",
+                "options": [
+                  { "val": "soft", "label": "Soft (cream, gel)" },
+                  { "val": "moderate", "label": "Moderate (food, cosmetic)" },
+                  { "val": "firm", "label": "Firm (solid food, pharma)" }
+                ]
+              },
+              {
+                "key": "testType",
+                "label": "Test type",
+                "options": [
+                  { "val": "compression", "label": "Compression" },
+                  { "val": "tension", "label": "Tension" },
+                  { "val": "both", "label": "Both" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "materialType": "soft" },
+                "title": "Low-Force Load Cell Fits",
+                "body": "Soft materials like creams and gels are best matched to the low end of the 100g to 100kg load cell range, avoiding saturation.",
+                "tags": ["Low-Force"]
+              },
+              {
+                "condition": { "materialType": "firm" },
+                "title": "High-Force Load Cell Fits",
+                "body": "Firm solid foods and pharma materials need a load cell from the higher end of the range to register accurately.",
+                "tags": ["High-Force"]
+              },
+              {
+                "condition": { "testType": "both" },
+                "title": "One Instrument Covers Both",
+                "body": "Compression and tension testing both run on the same CTX platform, without switching to a second instrument.",
+                "tags": ["Compression + Tension"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Load Cell Fit",
+                "body": "Share the material type and expected force range, and the right load cell from the 100g–100kg range gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What size and shape are you testing?",
+            "description": "Select the sample dimensions and reach requirement, and get the recommended base table and boom setup.",
+            "steps": [
+              {
+                "key": "sampleSize",
+                "question": "What's the sample size?",
+                "options": [
+                  { "val": "small", "label": "Small" },
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "large-complex", "label": "Large/complex" }
+                ]
+              },
+              {
+                "key": "reachRequirement",
+                "question": "What reach does the sample need?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "extended", "label": "Extended boom travel needed" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the sample shape (regular or irregular geometry), and the right base table and boom configuration gets confirmed against the 3 adjustable base tables and 280mm boom travel.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "compliance-data-output-checker",
+              "eyebrow": "Compliance and Data Output Checker",
+              "title": "Need regulated compliance or high-speed capture?",
+              "description": "Select the regulatory requirement and material behavior, and get the recommended software setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Regulatory context", "choices": "Research use; 21 CFR Part 11 required" },
+                { "title": "Material behavior", "choices": "Gradual deformation; Rapid fracture/rupture" },
+                { "title": "Data output need", "choices": "Standard; 500 Hz precision required" }
+              ],
+              "disclaimer": "Confirms Texture Pro Software and compliance need, then routes to a compliance-specific quotation."
+            }
+          ],
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "CTX Texture Analyzer industries: food, cosmetics, pharmaceutical, and contract testing applications.",
+            "industries": [
+              { "name": "Food Manufacturing", "icon": "coffee", "useCase": "Hardness, firmness, stickiness across formulations", "consideration": "500 Hz captures fracture points on crunchy products" },
+              { "name": "Cosmetics and Personal Care", "icon": "flask", "useCase": "Creams, gels, formulated product texture", "consideration": "Low-force load cells suit soft, spreadable formulations" },
+              { "name": "Pharmaceutical Manufacturing", "icon": "pill", "useCase": "Tablets, gels, semi-solid dosage forms", "consideration": "Optional 21 CFR Part 11 compliance via Texture Pro" },
+              { "name": "Bakery and Snack Testing", "icon": "zap", "useCase": "Firmness and crumb structure", "consideration": "Extended boom accommodates larger baked goods" },
+              { "name": "Confectionery Testing", "icon": "droplet", "useCase": "Stickiness and firmness measurement", "consideration": "Load cell range spans soft to firm" },
+              { "name": "Contract Testing Labs", "icon": "target", "useCase": "Varied client products, both test types", "consideration": "Compression and tension on one instrument" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "CTX Texture Analyzer service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs your own samples across the required force range." },
+              { "title": "Load Cell Selection Support", "description": "Confirms the right cell from the 100g–100kg range." },
+              { "title": "Configuration Assessment", "description": "Base table, boom travel, probe selection." },
+              { "title": "Installation Support", "description": "Setup, calibration, first-run checks." },
+              { "title": "Operator Training", "description": "Interface, probe changes, routine operation." },
+              { "title": "Compliance Setup", "description": "Configures Texture Pro Software and 21 CFR Part 11 features where required." },
+              { "title": "Preventive Maintenance", "description": "Load cell, boom mechanism, and base table performance." },
+              { "title": "Spares and Accessories", "description": "Load cells, probes, and replacement parts." },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the CTX Texture Analyzer used for?", "answer": "It's used for compression and tension testing to measure physical properties including hardness, firmness, and stickiness, across food, cosmetics, and pharmaceutical products." },
+            { "question": "What load cell options are available?", "answer": "Eight interchangeable load cells, ranging from 100g to 100kg." },
+            { "question": "Can it perform both compression and tension testing?", "answer": "Yes, on the same instrument." },
+            { "question": "What is the boom travel?", "answer": "Up to 280mm, for testing larger or more complex samples." },
+            { "question": "What is the data output rate?", "answer": "500 Hz, capturing precise moments of change in the sample." },
+            { "question": "How many base tables are available?", "answer": "Three, adjustable to accommodate a wide range of sample types and sizes." },
+            { "question": "Is the instrument suitable for regulated industries?", "answer": "Yes, with optional Texture Pro Software providing 21 CFR Part 11 compliance." },
+            { "question": "What is the price of the CTX Texture Analyzer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the load cell set, base table, and software requirements." },
+            { "question": "Who is the authorized distributor of the CTX Texture Analyzer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield CTX Texture Analyzer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the CTX Texture Analyzer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Eight load cells from 100g to 100kg, compression and tension testing on one instrument, and 500 Hz data output for precise texture measurement. Share the material type and expected force range, and the right CTX configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your material type and expected force range, then confirm the right CTX configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "materialType", "label": "Material type", "type": "text", "required": false },
+              { "key": "expectedForceRange", "label": "Expected force range", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration fast", "body": "Share the sample type, expected force range, and whether regulated compliance documentation is required, and the right load cell and base table configuration gets confirmed fast." },
+              { "title": "Confirm the data fidelity fit", "body": "Share whether your materials fracture, rupture, or deform gradually, and expected data fidelity gets discussed against the 500 Hz output rate." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "8 load cells. 100g to 100kg. 500 Hz data capture. One instrument, two test types.",
+            "heroLead": "Most texture analyzers force a choice: sensitive enough for soft samples, or strong enough for firm ones. Not both. CTX Texture Analyzer removes that trade-off with 8 interchangeable load cells spanning 100g to 100kg — soft cosmetic gels and firm baked goods on the same instrument. Both compression and tension testing run on one platform. No swapping to a second instrument for the other test type. Speed matters when texture attributes happen fast — a fracture, a rupture, the exact moment a product breaks. CTX captures data at 500 Hz, fast enough to catch that peak instead of averaging past it. Reach: boom travel up to 280mm, for larger or more complex samples. Flexibility: 3 adjustable base tables, for varied sample shapes and sizes. Compliance: optional Texture Pro Software brings 21 CFR Part 11 compliance for regulated industries.",
+            "stats": [
+              { "value": "8 load cells", "label": "100g to 100kg range" },
+              { "value": "280mm", "label": "Maximum boom travel" },
+              { "value": "500 Hz", "label": "Data output rate" },
+              { "value": "3 base tables", "label": "Adjustable, for varied sample types" },
+              { "value": "Compression + tension", "label": "Both test types, one instrument" },
+              { "value": "Optional", "label": "Texture Pro Software, 21 CFR Part 11 compliant" },
+              { "value": "Hardness, firmness, stickiness", "label": "Core attributes measured" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "CTX Texture Analyzer product information: load cell range, boom and base table configuration, and data capture speed.",
+                "body": [
+                  "Compression and tension testing. Both, on one instrument.",
+                  "Built for speed without sacrificing quality. Quick, reliable results for labs that can't afford to slow down.",
+                  "Real-life insight into physical properties. Practical, accurate understanding of how a sample actually behaves.",
+                  "8 interchangeable load cells, 100g to 100kg. One instrument, a huge force range.",
+                  "Easy-to-read display, intuitive controls. Simple for every operator, not just the specialists.",
+                  "280mm boom travel. Reach for larger, more complex samples.",
+                  "500 Hz data output. Captures precise moments of change — fracture, rupture, break point.",
+                  "3 adjustable base tables. Fits varied sample types and sizes.",
+                  "Optional Texture Pro Software. Brings 21 CFR Part 11 compliance for regulated industries."
+                ],
+                "cards": [
+                  { "title": "8 load cells, 100g–100kg", "description": "One instrument, no compromise on force range" },
+                  { "title": "280mm boom travel", "description": "Reach for larger or complex samples" },
+                  { "title": "500 Hz data output", "description": "Catches the exact moment of change" },
+                  { "title": "Optional 21 CFR Part 11", "description": "Regulated compliance when it's required" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "CTX Texture Analyzer key features: what actually sets this instrument apart, not a repeat of the overview."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "CTX Texture Analyzer applications: food, cosmetics, and pharmaceutical texture testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "CTX Texture Analyzer technical specifications: load cell range, boom travel, and data output."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Load Cell Range and Sample Versatility",
+                "title": "Load Cell Range and Sample Versatility",
+                "description": "What 8 load cells and 3 base tables cover, combined.",
+                "body": [
+                  "A texture measurement is only as good as the load cell measuring it. Too sensitive, and a firm product saturates the reading instantly. Not sensitive enough, and a soft gel barely registers.",
+                  "CTX solves this with 8 interchangeable load cells spanning 100g to 100kg. No compromise built into a single fixed sensor — the same instrument tests a soft cosmetic and a firm food product, accurately, both.",
+                  "3 adjustable base tables extend that same flexibility to the sample itself — different shapes, different sizes, no forcing everything onto one fixed platform. Combine that with 280mm of boom travel, and larger or more complex samples that a shorter-reach tester simply couldn't handle become testable."
+                ],
+                "utilityChecklist": [
+                  { "label": "Sensitivity across a wide force range", "value": "8 load cells, 100g to 100kg" },
+                  { "label": "Room for different sample shapes and sizes", "value": "3 adjustable base tables" },
+                  { "label": "Reach for larger or complex samples", "value": "280mm boom travel" },
+                  { "label": "One instrument, whole testing programme", "value": "All three, combined on one platform" }
+                ],
+                "disclaimer": "Share the expected force range and sample sizes across your testing programme, and the right load cell set and base table configuration gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "High-Speed Data Capture",
+                "title": "High-Speed Data Capture",
+                "description": "Why 500 Hz actually matters.",
+                "cards": [
+                  { "title": "A brittle material fractures", "description": "The exact peak force at break." },
+                  { "title": "A product ruptures under pressure", "description": "The precise moment, not an approximation." },
+                  { "title": "A firm surface gives way", "description": "Accurate hardness and firmness values." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "CTX Texture Analyzer documentation: specification sheet, load cell guide, and compliance details, available on request.",
+                "cards": [
+                  { "title": "CTX Specification Sheet", "description": "Available on request" },
+                  { "title": "Load Cell Selection Guide", "description": "Available on request" },
+                  { "title": "Texture Pro Software and 21 CFR Part 11 Details", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the CTX Texture Analyzer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Eight load cells from 100g to 100kg, compression and tension testing on one instrument, and 500 Hz data output for precise texture measurement. Share the material type and expected force range, and the right CTX configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

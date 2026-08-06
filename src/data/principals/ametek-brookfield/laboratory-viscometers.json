@@ -1092,6 +1092,1815 @@
               "href": "#booking"
             }
           }
+        },
+        {
+          "name": "DVNext Rheometer",
+          "slug": "dvnext-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield DVNext Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dvnext-rheometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > DVNext Rheometer",
+          "h1": "DVNext Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "A rheometer bought for R&D and a rheometer bought for regulated QC release testing don't need the same feature set — one needs speed and simplicity, the other needs electronic signatures and a system of record. DVNext Rheometer ships as two versions built around exactly that distinction.",
+
+          "features": [
+            "Digital Leveling: Ensures precise instrument setup for accurate measurements, on both versions.",
+            "Start-up Wizard: Simplifies initial setup with guided instructions.",
+            "Gel-Timer Functionality: Measures gelation time with ease for various applications.",
+            "Magnetic Coupling Attachment: Optional on Standard, standard-fit on Compliant — replaces the EZ-lock for enhanced spindle security.",
+            "Barcode Scanning: Optional scanner on Standard; hand-held scanner with accessory detection standard on Compliant.",
+            "High Accuracy and Repeatability: ±1.0% of range accuracy and ±0.2% repeatability, both versions.",
+            "21 CFR Part 11 and GAMP Compliance: Regulatory compliance for stand-alone and GAMP-compliant environments, Compliant version.",
+            "Ethernet Connectivity: Network integration and remote monitoring, Compliant version.",
+            "LIMS Connectivity: Seamless integration with laboratory information management systems, Compliant version.",
+            "Non-Editable PDF Reporting: Secure, data-integrity-protected reports generated directly from the device, Compliant version."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield DVNext Rheometer — Standard: \"DVNext Rheometer (Standard)\" · Compliant: \"DVNext Rheometer (Compliant)\"" },
+            { "label": "Category", "value": "Laboratory Viscometers / Rheometers (both versions)" },
+            { "label": "Accuracy", "value": "±1.0% of range (both versions)" },
+            { "label": "Repeatability", "value": "±0.2% (both versions)" },
+            { "label": "Digital Leveling", "value": "Included (both versions)" },
+            { "label": "Start-up Wizard", "value": "Standard: Included · Compliant: Not explicitly listed (confirm at specification)" },
+            { "label": "Gel-Timer Functionality", "value": "Standard: Included · Compliant: Not explicitly listed (confirm at specification)" },
+            { "label": "Magnetic Coupling Attachment", "value": "Standard: Optional · Compliant: Standard" },
+            { "label": "Barcode Scanner", "value": "Standard: Optional · Compliant: Hand-held, standard, with accessory detection" },
+            { "label": "ISO 17025 Calibration", "value": "Standard: Optional · Compliant: Not explicitly listed (confirm at specification)" },
+            { "label": "21 CFR Part 11 / GAMP Compliance", "value": "Standard: Not included · Compliant: Included" },
+            { "label": "Ethernet Connectivity", "value": "Standard: Not included · Compliant: Included" },
+            { "label": "LIMS Connectivity", "value": "Standard: Not included · Compliant: Included" },
+            { "label": "Reporting", "value": "Standard: Standard reporting · Compliant: Non-editable PDF, data-integrity protected" }
+          ],
+
+          "applications": [
+            "General R&D Viscosity and Yield Stress Testing: Standard version with digital leveling and Start-up Wizard for fast setup.",
+            "Gelation and Curing Studies: Built-in Gel-Timer functionality tracks gelation time directly.",
+            "Regulated Pharmaceutical and Chemical QC: Compliant version with 21 CFR Part 11 and GAMP compliance.",
+            "Sample Traceability and Tracking: Barcode scanning (optional on Standard, standard on Compliant) streamlines data entry.",
+            "LIMS-Integrated Laboratories: Ethernet and LIMS connectivity on the Compliant version.",
+            "Auditable Regulated Data Workflows: Non-editable PDF reporting for secure, tamper-evident records.",
+            "Multi-Accessory Testing Programs: Automatic accessory detection by barcode on the Compliant version.",
+            "ISO 17025-Accredited Calibration Programs: Optional 17025 calibration on the Standard version."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Standard or Compliant" },
+            { "id": "planner", "label": "Accessory Configurator" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Gelation Test Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Why Choose DVNext" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the workflow need regulated compliance?",
+            "description": "Select the regulatory and traceability requirements, and see which version fits.",
+            "fields": [
+              {
+                "key": "regulatoryContext",
+                "label": "Regulatory context",
+                "options": [
+                  { "val": "rd-research", "label": "R&D/research use" },
+                  { "val": "regulated-qc", "label": "Regulated QC release testing" }
+                ]
+              },
+              {
+                "key": "auditTrailRequirement",
+                "label": "Audit trail requirement",
+                "options": [
+                  { "val": "not-required", "label": "Not required" },
+                  { "val": "required", "label": "Electronic signatures/audit trail needed" }
+                ]
+              },
+              {
+                "key": "dataConnectivity",
+                "label": "Data connectivity",
+                "options": [
+                  { "val": "standalone", "label": "Standalone" },
+                  { "val": "lims-ethernet", "label": "LIMS/Ethernet integration required" }
+                ]
+              },
+              {
+                "key": "accessoryTracking",
+                "label": "Accessory tracking",
+                "options": [
+                  { "val": "manual", "label": "Manual" },
+                  { "val": "barcode", "label": "Automatic barcode-based detection preferred" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "regulatoryContext": "regulated-qc" },
+                "title": "Compliant Version Fits Regulated QC",
+                "body": "The 21 CFR Part 11 Compliant version builds magnetic coupling, barcode scanning, Ethernet/LIMS connectivity, and non-editable PDF reporting into the standard configuration.",
+                "tags": ["Compliant Version"]
+              },
+              {
+                "condition": { "regulatoryContext": "rd-research" },
+                "title": "Standard Version Fits R&D Work",
+                "body": "The Standard version covers digital leveling, a Start-up Wizard, and built-in Gel-Timer functionality for fast, flexible testing.",
+                "tags": ["Standard Version"]
+              },
+              {
+                "condition": { "dataConnectivity": "lims-ethernet" },
+                "title": "Compliant Version Required for LIMS",
+                "body": "Ethernet and LIMS connectivity are included on the Compliant version only.",
+                "tags": ["LIMS Connectivity"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Version",
+                "body": "Share the regulatory context, audit trail requirement, and connectivity needs, and Standard or 21 CFR Part 11 Compliant gets confirmed.",
+                "tags": ["Version Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Does the work involve gelation or curing measurement?",
+            "description": "Select the material type and version preference, and see how Gel-Timer functionality applies.",
+            "steps": [
+              {
+                "key": "materialType",
+                "question": "What material type is being tested?",
+                "options": [
+                  { "val": "resin", "label": "Resin" },
+                  { "val": "epoxy", "label": "Epoxy" },
+                  { "val": "gel", "label": "Gel" },
+                  { "val": "other-curing", "label": "Other curing system" }
+                ]
+              },
+              {
+                "key": "versionPreference",
+                "question": "Which version fits the reporting need?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "compliant", "label": "Compliant with regulated reporting" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Gel-Timer functionality is built in on the Standard version for measuring gelation time — share the test frequency and data output need (on-screen only, or exported/reported) to confirm the Gel-Timer applicability and reporting configuration.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "accessory-connectivity-configurator",
+              "eyebrow": "Accessory and Connectivity Configurator",
+              "title": "Which optional features does the setup actually need?",
+              "description": "Select the accessories and connectivity requirements, and see the recommended configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Spindle security", "choices": "Standard EZ-lock; Magnetic coupling preferred" },
+                { "title": "Sample tracking", "choices": "Manual entry; Barcode-based tracking" },
+                { "title": "Calibration standard", "choices": "Standard calibration; ISO 17025 required" },
+                { "title": "Connectivity", "choices": "Standalone; Ethernet/LIMS integration" }
+              ],
+              "disclaimer": "Recommends the version and optional accessories required, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between Ametek Brookfield instruments",
+            "title": "DVNext Rheometer vs DVNext Cone/Plate vs DV2Plus",
+            "description": "DVNext Rheometer method comparison: DVNext Rheometer against DVNext Cone/Plate and DV2Plus.",
+            "columns": [
+              { "label": "DVNext Rheometer (Standard/Compliant)", "highlight": true },
+              { "label": "DVNext Cone/Plate Rheometer", "highlight": false },
+              { "label": "DV2Plus Viscometer", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Accuracy", "values": ["±1.0% of range", "1% of full-scale range", "±1.0% of range"] },
+              { "feature": "Repeatability", "values": ["±0.2%", "0.2% of full-scale range", "±0.2%"] },
+              { "feature": "Sample Volume", "values": ["Not stated as small-volume specific", "0.5–2.0 mL", "Standard/larger volume"] },
+              { "feature": "Gel-Timer Functionality", "values": ["Built in, Standard version", "Not stated", "Built in, standard"] },
+              { "feature": "Compliance Options", "values": ["21 CFR Part 11 / GAMP as a dedicated Compliant version", "Optional 21 CFR Part 11", "Optional, 21 CFR Part 11-ready with DV360"] },
+              { "feature": "Connectivity", "values": ["Ethernet + LIMS, Compliant version", "Optional Ethernet + LIMS", "USB + Bluetooth"] },
+              { "feature": "Speed Control", "values": ["Not stated as the primary differentiator", "Auto-range per spindle/speed", "740 speeds"] },
+              { "feature": "Best For", "values": ["Labs needing a dedicated regulated-vs-R&D version choice", "Small or limited-volume samples needing full flow curve data", "General-purpose testing with the widest speed range"] },
+              { "feature": "Choose when", "values": ["The lab wants compliance built into a distinct hardware/software version rather than layered on optionally", "Sample material is scarce or expensive", "Broad speed flexibility and Gel-Timer are the priority, standard sample volumes"] }
+            ],
+            "disclaimer": "DVNext Rheometer's distinguishing choice is structural rather than a spec difference: rather than making 21 CFR Part 11 an add-on toggle, Brookfield sells it as a distinct Compliant version with its own standard feature set. That's a meaningful difference for procurement — a regulated lab buys the Compliant version outright rather than assembling compliance from optional add-ons on a Standard unit."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "DVNext Rheometer industries: pharmaceutical, chemical, food and beverage, and industrial manufacturing.",
+            "industries": [
+              { "name": "Pharmaceutical QC and Release Testing", "icon": "pill", "useCase": "Regulated viscosity and yield stress testing", "consideration": "Compliant version for 21 CFR Part 11 and GAMP requirements" },
+              { "name": "Chemical and Formulation R&D", "icon": "flask", "useCase": "Exploratory viscosity and gelation studies", "consideration": "Standard version for fast, flexible testing" },
+              { "name": "Adhesives, Resins, and Sealants", "icon": "zap", "useCase": "Gelation and cure-time monitoring", "consideration": "Built-in Gel-Timer functionality on the Standard version" },
+              { "name": "Food and Beverage QC", "icon": "coffee", "useCase": "Viscosity and yield stress testing for texture consistency", "consideration": "Digital leveling and repeatability support consistent QC results" },
+              { "name": "LIMS-Integrated Regulated Laboratories", "icon": "cpu", "useCase": "Automated data flow from testing to system of record", "consideration": "Ethernet and LIMS connectivity on the Compliant version" },
+              { "name": "Contract Testing and Multi-Client Labs", "icon": "target", "useCase": "Varied samples requiring accessory tracking", "consideration": "Barcode-based accessory detection on the Compliant version" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "DVNext Rheometer service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials on the recommended version." },
+              { "title": "Version Selection Support", "description": "Confirms Standard versus Compliant against the regulatory context." },
+              { "title": "Configuration Assessment", "description": "Confirms optional accessories — magnetic coupling, barcode scanner, calibration." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with the Start-up Wizard, Gel-Timer, and routine operation." },
+              { "title": "Compliance Setup", "description": "Configures 21 CFR Part 11/GAMP features on the Compliant version." },
+              { "title": "LIMS Integration Support", "description": "Assists Ethernet and LIMS connectivity setup." },
+              { "title": "Preventive Maintenance", "description": "Maintains spindle drive, touchscreen, and connectivity performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, barcode scanners, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the DVNext Rheometer used for?", "answer": "It's a rheometer for viscosity and yield stress measurement, available in a Standard version for general R&D use and a 21 CFR Part 11 Compliant version for regulated QC release testing." },
+            { "question": "What's the difference between the Standard and Compliant versions?", "answer": "Standard includes digital leveling, a Start-up Wizard, built-in Gel-Timer functionality, and optional magnetic coupling or barcode scanning. Compliant includes magnetic coupling and hand-held barcode scanning as standard, plus 21 CFR Part 11/GAMP compliance, Ethernet and LIMS connectivity, and non-editable PDF reporting." },
+            { "question": "What is the accuracy and repeatability?", "answer": "±1.0% of range accuracy and ±0.2% repeatability, on both versions." },
+            { "question": "What is Gel-Timer functionality?", "answer": "A built-in capability on the Standard version for measuring gelation time across various applications." },
+            { "question": "Is magnetic coupling standard or optional?", "answer": "Optional on the Standard version, standard-fit on the Compliant version." },
+            { "question": "Does the Compliant version include barcode scanning?", "answer": "Yes, a hand-held barcode scanner is standard, with automatic accessory detection built in." },
+            { "question": "Can the instrument connect to a LIMS?", "answer": "Yes, on the 21 CFR Part 11 Compliant version, via Ethernet and LIMS connectivity." },
+            { "question": "What does non-editable PDF reporting protect against?", "answer": "It generates secure, tamper-evident reports directly from the device, protecting data integrity for regulated environments." },
+            { "question": "Is ISO 17025 calibration available?", "answer": "Yes, as an optional feature on the Standard version." },
+            { "question": "What is the Start-up Wizard?", "answer": "A guided setup tool that simplifies the instrument's initial configuration process, included on the Standard version." },
+            { "question": "How is DVNext Rheometer different from DVNext Cone/Plate Rheometer?", "answer": "DVNext Rheometer is a general viscosity and yield stress instrument available in Standard and Compliant versions. DVNext Cone/Plate Rheometer is purpose-built for small sample volumes (0.5–2.0 mL) using cone/plate geometry." },
+            { "question": "What is the price of the DVNext Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the version (Standard or Compliant) and optional accessories required." },
+            { "question": "Who is the authorized distributor of the DVNext Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield DVNext Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the DVNext Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. ±1.0% accuracy and ±0.2% repeatability across both versions, with Standard built for fast R&D testing and Compliant built for regulated, LIMS-connected release work. Share the regulatory context and connectivity needs, and the right version gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your regulatory context and connectivity needs, then confirm the right DVNext Rheometer version.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "regulatoryContext", "label": "Regulatory context (R&D or regulated QC)", "type": "text", "required": false },
+              { "key": "connectivityNeeds", "label": "Connectivity needs (LIMS, Ethernet)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right version and accessories", "body": "Share whether the work is R&D or regulated QC release testing, and whether LIMS integration or electronic audit trails are required, and the right version and optional accessories get confirmed from there." },
+              { "title": "Confirm the version against the workflow", "body": "Share the testing environment and regulatory context, and the right combination of version and optional accessories gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles version selection support, installation, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Standard for the bench. Compliant for the audit trail. Same rheometer underneath.",
+            "heroLead": "A rheometer bought for R&D and a rheometer bought for regulated QC release testing don't need the same feature set — one needs speed and simplicity, the other needs electronic signatures and a system of record. DVNext Rheometer ships as two versions built around exactly that distinction. The Standard version covers what most labs need day to day: digital leveling for consistent setup, a Start-up Wizard that guides initial configuration, built-in Gel-Timer functionality for tracking gelation, and ±1.0% accuracy with ±0.2% repeatability as the baseline. Magnetic coupling and a barcode scanner are available as options. The 21 CFR Part 11 Compliant version takes that same measurement core and builds a full regulated workflow around it: magnetic coupling attachment as standard, hand-held barcode scanning with automatic accessory detection, Ethernet and LIMS connectivity, and secure non-editable PDF reporting — all under GAMP-compliant audit trails.",
+            "stats": [
+              { "value": "2 versions", "label": "Standard, and 21 CFR Part 11 Compliant" },
+              { "value": "±1.0% of range", "label": "Accuracy, both versions" },
+              { "value": "±0.2%", "label": "Repeatability, both versions" },
+              { "value": "Built-in", "label": "Gel-Timer functionality, Standard version" },
+              { "value": "Optional", "label": "Magnetic coupling and barcode scanner, Standard version" },
+              { "value": "Standard-fit", "label": "Magnetic coupling, Compliant version" },
+              { "value": "Hand-held scanner", "label": "Barcode detection, Compliant version" },
+              { "value": "Ethernet + LIMS", "label": "Connectivity, Compliant version only" },
+              { "value": "Non-editable PDF", "label": "Secure reporting, Compliant version only" },
+              { "value": "GAMP-compliant", "label": "Regulatory environment support, Compliant version" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "DVNext Rheometer product information: two versions, shared precision core, and configuration differences.",
+                "body": [
+                  "Available in two versions — Standard and 21 CFR Part 11 Compliant, built for different workflow requirements.",
+                  "Digital leveling — ensures precise instrument setup for accurate measurements, standard on both versions.",
+                  "Start-up Wizard — guided instructions simplify the initial setup process.",
+                  "Built-in Gel-Timer functionality — measures gelation time for various applications.",
+                  "Optional magnetic coupling (Standard version) — upgrades from the EZ-lock to a magnetic coupling for enhanced spindle security.",
+                  "Standard-fit magnetic coupling (Compliant version) — included by default rather than optional.",
+                  "Optional barcode scanner (Standard version) — streamlines data entry and sample tracking.",
+                  "Hand-held barcode scanner (Compliant version) — standard-fit for data capture, with accessory detection built in.",
+                  "Accessory detection by barcode (Compliant version) — automatically identifies and configures accessories for seamless operation.",
+                  "Optional ISO 17025 calibration — available on the Standard version for calibration accuracy compliance.",
+                  "21 CFR Part 11 and GAMP compliance (Compliant version) — regulatory compliance for both stand-alone and GAMP-compliant environments.",
+                  "Ethernet connectivity (Compliant version) — network integration and remote monitoring.",
+                  "LIMS connectivity (Compliant version) — seamless connection to laboratory information management systems.",
+                  "Non-editable PDF reporting (Compliant version) — secure reports generated directly from the device, protecting data integrity.",
+                  "±1.0% of range accuracy — shared across both versions.",
+                  "±0.2% repeatability — shared across both versions."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "DVNext Rheometer key features, split by version."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "DVNext Rheometer applications: R&D viscosity and yield stress work, and regulated QC release testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "DVNext Rheometer technical specifications: precision, and version-specific configuration."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Standard vs. Compliant",
+                "title": "Standard vs. Compliant",
+                "description": "The exact feature split across the two versions.",
+                "body": [
+                  "Buying more compliance capability than a lab actually needs adds cost and complexity without adding value; buying too little means a regulated workflow has to be retrofitted later. DVNext Rheometer avoids that mismatch by offering the choice upfront rather than layering compliance on as an afterthought.",
+                  "The Standard version is built for straightforward, high-quality measurement: digital leveling and a Start-up Wizard get a test running quickly, Gel-Timer functionality is built in rather than an add-on, and magnetic coupling or a barcode scanner can be added where the workflow calls for them.",
+                  "The Compliant version starts from a different assumption — that every test needs to be traceable, auditable, and connected to a system of record — and builds magnetic coupling, hand-held barcode scanning with automatic accessory detection, Ethernet and LIMS connectivity, and non-editable PDF reporting into the standard configuration rather than treating any of them as optional extras.",
+                  "Fast, accurate R&D testing without a compliance layer points to Standard; gelation and curing measurement as a built-in capability is also Standard, since Gel-Timer is included; enhanced spindle security added as needed points to Standard with optional magnetic coupling.",
+                  "A full regulated audit trail and electronic signatures, automatic accessory identification via barcode, data flowing directly into a LIMS, and tamper-evident, non-editable reporting all point to Compliant."
+                ],
+                "disclaimer": "Share whether the testing feeds a regulated release decision or supports R&D work, and the Standard-versus-Compliant choice gets confirmed against the actual workflow."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Why Choose DVNext Rheometer",
+                "title": "Why Choose DVNext Rheometer",
+                "description": "Precision, compliance, and configurable versatility.",
+                "cards": [
+                  { "title": "Reliable, repeatable measurement", "description": "±1.0% accuracy, ±0.2% repeatability, digital leveling." },
+                  { "title": "Regulatory compliance where required", "description": "21 CFR Part 11 Compliant version with audit trails." },
+                  { "title": "Adaptability across testing needs", "description": "Optional accessories and configurable features." },
+                  { "title": "The right cost/capability match", "description": "Two versions rather than one fixed configuration." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the DVNext Rheometer is available on request.",
+                "cards": [
+                  { "title": "DVNext Rheometer Specification Sheet (Standard and Compliant)", "description": "Available on request" },
+                  { "title": "21 CFR Part 11 / GAMP Compliance Details", "description": "Available on request" },
+                  { "title": "LIMS and Ethernet Connectivity Guide", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the DVNext Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. ±1.0% accuracy and ±0.2% repeatability across both versions, with Standard built for fast R&D testing and Compliant built for regulated, LIMS-connected release work. Share the regulatory context and connectivity needs, and the right version gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "DVPlus Viscometer",
+          "slug": "dvplus-viscometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield DVPlus Viscometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dvplus-viscometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > DVPlus Viscometer",
+          "h1": "DVPlus Viscometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "DVPlus is Ametek Brookfield's viscometer with a 5-inch touchscreen, measuring viscosity, temperature, torque, and speed, with USB and Bluetooth connectivity through the DVPlus Connect app. Accuracy is ±1.0% of range and repeatability is ±0.2%, across a 740-speed range — the same figures Brookfield states for the DV2Plus.",
+
+          "features": [
+            "Flagship-Grade Precision, Entry-Level Price: ±1.0% accuracy and ±0.2% repeatability, identical to DV2Plus. The number that matters most isn't held back for the higher tier.",
+            "Full Speed Range at a Lower Price Point: 740 speeds, matching DV2Plus exactly. What's smaller here is the screen and the software, not the measurement capability.",
+            "Seven-Language Interface: Not stated on the DV2Plus source at all — genuinely relevant for multi-site or export-facing operations choosing between the two.",
+            "Time-to-Condition Testing, Surfaced Directly: Time to Torque, Time to Temperature, Time to Stop — accessed directly rather than buried inside a step-program menu.",
+            "Automatic FSR Calculation: Full-Scale Range and maximum viscosity per spindle/speed calculated automatically, removing a manual lookup step.",
+            "HPQA-Compatible Despite the Lower Price: Full integration with the same Helipath accessory ecosystem as Brookfield's higher-tier instruments."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield DVPlus Viscometer" },
+            { "label": "Category", "value": "Laboratory Viscometers" },
+            { "label": "Display", "value": "5\" full-color touchscreen" },
+            { "label": "Speed Range", "value": "740 speeds" },
+            { "label": "Accuracy", "value": "±1.0% of range" },
+            { "label": "Repeatability", "value": "±0.2%" },
+            { "label": "Measured Parameters", "value": "Viscosity (cP, mPa·s, P, Pa·s), temperature (°C, °F, K), torque (%, mNm, Dyne·cm), speed/spindle, step program status" },
+            { "label": "Connectivity", "value": "USB and Bluetooth, via DVPlus Connect App" },
+            { "label": "Temperature Offset", "value": "Adjustable, ±5°C" },
+            { "label": "Time Measurement Functions", "value": "Time to Torque, Time to Temperature, Time to Stop" },
+            { "label": "Range Calculation", "value": "Automatic, FSR at 100% and maximum viscosity per spindle/speed" },
+            { "label": "Language Support", "value": "English, French, German, Portuguese, Chinese, Japanese, Spanish" },
+            { "label": "Optional Temperature Probe", "value": "RTD probe, DVP-94Y" },
+            { "label": "Optional Calibration", "value": "ISO 17025" },
+            { "label": "Base", "value": "Model G Base" },
+            { "label": "Accessory Integration", "value": "Full compatibility with optional accessories including HPQA" }
+          ],
+
+          "applications": [
+            "Routine QC Viscosity Testing: ±1.0% accuracy and ±0.2% repeatability at an entry-level price point.",
+            "High-Volume Production Labs: 740-speed range covers diverse product formulations without a second instrument.",
+            "Multi-Site or International Operations: Seven-language interface supports deployment across regions.",
+            "Time-Dependent Behaviour Testing: Direct access to Time to Torque, Time to Temperature, and Time to Stop.",
+            "Budget-Conscious Lab Upgrades: Full precision specification without the higher-tier software feature set.",
+            "Temperature-Sensitive Formulations: Optional RTD probe (DVP-94Y) for enhanced temperature accuracy.",
+            "Helipath-Based Structured Fluid Testing: Full integration with the optional HPQA accessory.",
+            "Accredited QC Laboratories: Optional ISO 17025 calibration meets stringent quality standards."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "DVPlus or DV2Plus" },
+            { "id": "planner", "label": "Language & Deployment" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Time-Based Test Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Time-Based Measurement" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which Brookfield viscometer fits the budget and workflow?",
+            "description": "Select the priorities and required software features, and see which instrument fits.",
+            "fields": [
+              {
+                "key": "budgetPriority",
+                "label": "Budget priority",
+                "options": [
+                  { "val": "entry-level", "label": "Entry-level cost" },
+                  { "val": "full-depth", "label": "Full feature depth regardless of price" }
+                ]
+              },
+              {
+                "key": "guidedSetup",
+                "label": "Guided test setup",
+                "options": [
+                  { "val": "not-needed", "label": "Not needed" },
+                  { "val": "required", "label": "Viscosity Wizard required" }
+                ]
+              },
+              {
+                "key": "gelTimer",
+                "label": "Built-in Gel Timer",
+                "options": [
+                  { "val": "not-needed", "label": "Not needed" },
+                  { "val": "required", "label": "Required as standard" }
+                ]
+              },
+              {
+                "key": "complianceSoftware",
+                "label": "Compliance software",
+                "options": [
+                  { "val": "basic", "label": "Basic connectivity" },
+                  { "val": "dv360", "label": "DV360 with 21 CFR Part 11 readiness" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "budgetPriority": "entry-level" },
+                "title": "DVPlus Fits an Entry-Level Budget",
+                "body": "DVPlus offers ±1.0% accuracy, ±0.2% repeatability, and the full 740-speed range at an entry-level price point.",
+                "tags": ["DVPlus"]
+              },
+              {
+                "condition": { "guidedSetup": "required" },
+                "title": "DV2Plus Fits Guided Setup Needs",
+                "body": "Viscosity Wizard guided setup is a DV2Plus feature, not included on DVPlus.",
+                "tags": ["DV2Plus"]
+              },
+              {
+                "condition": { "gelTimer": "required" },
+                "title": "DV2Plus Includes Built-In Gel Timer",
+                "body": "Built-in Gel Timer functionality is a DV2Plus feature, not included on DVPlus.",
+                "tags": ["DV2Plus"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm DVPlus or DV2Plus",
+                "body": "Share the budget priority and whether guided setup, Gel Timer, or DV360 compliance software are required, and the right instrument gets confirmed.",
+                "tags": ["Instrument Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What time-dependent behaviour does the protocol need to capture?",
+            "description": "Select the time-based measurement required, and see the recommended setup.",
+            "steps": [
+              {
+                "key": "measurementType",
+                "question": "Which time-based measurement is required?",
+                "options": [
+                  { "val": "time-to-torque", "label": "Time to Torque" },
+                  { "val": "time-to-temperature", "label": "Time to Temperature" },
+                  { "val": "time-to-stop", "label": "Time to Stop" }
+                ]
+              },
+              {
+                "key": "temperatureAccuracy",
+                "question": "Is enhanced temperature accuracy needed?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "enhanced-rtd", "label": "Enhanced with the RTD probe" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "DVPlus provides direct access to Time to Torque, Time to Temperature, and Time to Stop, with automatic FSR calculation — share the test duration and data output need (on-screen only, or exported via DVPlus Connect) to confirm the full configuration.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "language-deployment-selector",
+              "eyebrow": "Language and Deployment Selector",
+              "title": "Where and how will the instrument be deployed?",
+              "description": "Select the deployment locations and interface language needs, and see the recommended configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Deployment region", "choices": "Single site; Multiple international locations" },
+                { "title": "Interface language", "choices": "English; French; German; Portuguese; Chinese; Japanese; Spanish" },
+                { "title": "Calibration requirement", "choices": "Standard; ISO 17025 accredited" },
+                { "title": "Accessory needs", "choices": "Standard use; HPQA integration required" }
+              ],
+              "disclaimer": "Confirms language, calibration, and accessory configuration, then routes to a deployment-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between Ametek Brookfield instruments",
+            "title": "DVPlus vs DV2Plus",
+            "description": "DVPlus method comparison: DVPlus against DV2Plus.",
+            "columns": [
+              { "label": "DVPlus", "highlight": true },
+              { "label": "DV2Plus", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Positioning", "values": ["Entry-level", "Flagship, successor to the DV2T"] },
+              { "feature": "Display", "values": ["5\" full-color touchscreen", "7\" full-color touchscreen, 800×480 resolution"] },
+              { "feature": "Speed Range", "values": ["740 speeds", "740 speeds"] },
+              { "feature": "Accuracy", "values": ["±1.0% of range", "±1.0% of range"] },
+              { "feature": "Repeatability", "values": ["±0.2%", "±0.2%"] },
+              { "feature": "Connectivity", "values": ["USB, Bluetooth, DVPlus Connect App", "4x USB-A, 1x USB-B, Bluetooth"] },
+              { "feature": "Guided Setup", "values": ["Not stated", "Viscosity Wizard"] },
+              { "feature": "Gel Timer Functionality", "values": ["Not stated", "Built in, standard"] },
+              { "feature": "Software", "values": ["DVPlus Connect App", "DV360, DV Create"] },
+              { "feature": "Time Measurement Access", "values": ["Time to Torque, Time to Temperature, Time to Stop", "Not explicitly listed as a distinct feature"] },
+              { "feature": "Language Support", "values": ["7 languages", "Not specified"] },
+              { "feature": "Compliance", "values": ["Optional ISO 17025", "Optional ISO 17025, 21 CFR Part 11-ready with DV360"] },
+              { "feature": "Best For", "values": ["Accurate, repeatable testing at lower cost, without needing guided setup or Gel Timer", "Labs needing Viscosity Wizard, built-in Gel Timer, or full DV360/DV Create software depth"] },
+              { "feature": "Choose when", "values": ["Core precision matters more than software depth", "Complex test setup, curing/gel work, or regulated compliance software are required"] }
+            ],
+            "disclaimer": "Both instruments share the identical core measurement specification — ±1.0% accuracy, ±0.2% repeatability, 740 speeds — so the choice between them isn't about precision at all. It's about how much guided software and built-in functionality the workflow actually needs, versus a lower-cost instrument that measures just as accurately without them."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "DVPlus industries: general QC, production labs, and multi-site operations.",
+            "industries": [
+              { "name": "General Laboratory QC", "icon": "flask", "useCase": "Routine viscosity testing across varied materials", "consideration": "Full precision specification at an accessible price point" },
+              { "name": "Production and Manufacturing QC", "icon": "cpu", "useCase": "High-volume batch viscosity testing", "consideration": "740-speed range covers diverse formulations" },
+              { "name": "Multi-Site or Global Operations", "icon": "zap", "useCase": "Standardized testing across regions", "consideration": "Seven-language interface supports international deployment" },
+              { "name": "Coatings, Inks, and Adhesives", "icon": "droplet", "useCase": "Time-dependent viscosity behaviour testing", "consideration": "Direct access to Time to Torque and Time to Temperature functions" },
+              { "name": "Educational and Training Laboratories", "icon": "school", "useCase": "Teaching viscometry fundamentals", "consideration": "Straightforward interface at a lower cost of entry" },
+              { "name": "Contract Testing Laboratories", "icon": "target", "useCase": "Budget-conscious equipment expansion", "consideration": "Full precision without the cost of advanced software features" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "DVPlus service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials to show precision and interface performance." },
+              { "title": "Instrument Selection Support", "description": "Confirms DVPlus versus DV2Plus fit against workflow and budget." },
+              { "title": "Configuration Assessment", "description": "Confirms optional RTD probe, calibration, and accessory needs." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with the touchscreen interface and time-measurement functions." },
+              { "title": "Software Setup", "description": "Configures the DVPlus Connect App and connectivity." },
+              { "title": "Calibration Support", "description": "Coordinates ISO 17025 calibration where required." },
+              { "title": "Preventive Maintenance", "description": "Maintains spindle drive, touchscreen, and connectivity performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, RTD probes, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the DVPlus Viscometer used for?", "answer": "It's an entry-level rotational viscometer for routine QC and general viscosity testing, offering the same core precision as Brookfield's flagship instruments at a lower price point." },
+            { "question": "How accurate is the DVPlus?", "answer": "±1.0% of range accuracy and ±0.2% repeatability — the same specification as the DV2Plus." },
+            { "question": "How many speeds does it offer?", "answer": "740 speeds, matching the DV2Plus's speed range." },
+            { "question": "What is the display size?", "answer": "A 5-inch full-color touchscreen, smaller than DV2Plus's 7-inch display but showing the same core data categories." },
+            { "question": "How does DVPlus connect to a PC?", "answer": "Via USB or Bluetooth, connecting to the DVPlus Connect App for data transfer and remote operation." },
+            { "question": "What languages does the interface support?", "answer": "English, French, German, Portuguese, Chinese, Japanese, and Spanish." },
+            { "question": "Does DVPlus have a temperature offset adjustment?", "answer": "Yes, adjustable by ±5°C to match specific testing requirements." },
+            { "question": "Can temperature measurement accuracy be improved?", "answer": "Yes, an optional RTD temperature probe (DVP-94Y) is available." },
+            { "question": "What time-based measurements are available?", "answer": "Time to Torque, Time to Temperature, and Time to Stop, accessed directly." },
+            { "question": "Does DVPlus calculate the measurement range automatically?", "answer": "Yes. Full-Scale Range at 100% and the maximum viscosity for each spindle/speed combination are calculated automatically." },
+            { "question": "Is ISO 17025 calibration available?", "answer": "Yes, as an optional feature for labs needing accredited calibration." },
+            { "question": "Can DVPlus integrate with the HPQA?", "answer": "Yes, DVPlus offers full integration with optional accessories including the HPQA, Helipath Quick Action Stand." },
+            { "question": "How is DVPlus different from DV2Plus?", "answer": "Both share identical accuracy (±1.0%), repeatability (±0.2%), and speed range (740 speeds). DV2Plus adds a larger 7\" display, Viscosity Wizard guided setup, built-in Gel Timer functionality, and DV360/DV Create software depth. DVPlus is the more affordable option where those additional features aren't required." },
+            { "question": "What is the price of the DVPlus Viscometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the accessories and calibration options required." },
+            { "question": "Who is the authorized distributor of the DVPlus Viscometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield DVPlus Viscometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the DVPlus Viscometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The same ±1.0% accuracy and 740-speed range as Brookfield's flagship instrument, at an entry-level price. Share the materials tested and whether guided setup or Gel Timer functionality are needed, and the right choice between DVPlus and DV2Plus gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your materials and requirements, then confirm the right choice between DVPlus and DV2Plus.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "materialsTested", "label": "Materials tested", "type": "text", "required": false },
+              { "key": "featureNeeds", "label": "Guided setup or Gel Timer functionality needed?", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm DVPlus or DV2Plus", "body": "Share whether the priority is entry-level cost with full precision, or the additional software depth (Viscosity Wizard, Gel Timer, larger display) DV2Plus offers, and the right instrument between the two gets confirmed." },
+              { "title": "Confirm the right test configuration", "body": "Share which time-based behaviour matters for the protocol — reaching a torque threshold, temperature stabilization, or a defined stop condition — and the right test configuration gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles instrument selection support, installation, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Rotational viscometer, ±1.0% accuracy, ±0.2% repeatability, 740 speeds.",
+            "heroLead": "DVPlus is Ametek Brookfield's viscometer with a 5-inch touchscreen, measuring viscosity, temperature, torque, and speed, with USB and Bluetooth connectivity through the DVPlus Connect app. Accuracy is ±1.0% of range and repeatability is ±0.2%, across a 740-speed range — the same figures Brookfield states for the DV2Plus. It includes direct access to Time to Torque, Time to Temperature, and Time to Stop measurements, automatic Full-Scale Range calculation, a ±5°C adjustable temperature offset, and support for seven interface languages. An optional RTD probe (DVP-94Y) improves temperature measurement accuracy, and the instrument integrates with optional accessories including the HPQA. What it doesn't include, compared to DV2Plus: the larger 7-inch display, the Viscosity Wizard guided setup, built-in Gel Timer functionality, and DV360/DV Create software.",
+            "stats": [
+              { "value": "5\" touchscreen", "label": "Full-color display" },
+              { "value": "740 speeds", "label": "Same range as DV2Plus" },
+              { "value": "±1.0% of range", "label": "Accuracy" },
+              { "value": "±0.2%", "label": "Repeatability" },
+              { "value": "USB + Bluetooth", "label": "Connectivity, via DVPlus Connect App" },
+              { "value": "±5°C", "label": "Temperature offset adjustment" },
+              { "value": "7 languages", "label": "Multi-language interface support" },
+              { "value": "Optional RTD probe", "label": "DVP-94Y for enhanced temperature accuracy" },
+              { "value": "Model G Base", "label": "Stable, robust instrument foundation" },
+              { "value": "ISO 17025", "label": "Optional calibration" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "DVPlus product information: interface, precision, connectivity, and time-based measurement.",
+                "body": [
+                  "5-inch full-color touchscreen with a dynamic interface and direct access to all features.",
+                  "Advanced interface with enhanced controls, real-time indicators, and easy navigation across the testing process.",
+                  "Comprehensive display information: viscosity in cP, mPa·s, P, or Pa·s; temperature in °C, °F, or K; torque in %, mNm, or Dyne·cm; speed/spindle details; and step program status.",
+                  "USB and Bluetooth interface, connecting to the DVPlus Connect App for data transfer and remote operation.",
+                  "Temperature offset adjustable by ±5°C to match specific testing requirements.",
+                  "Multi-language support across English, French, German, Portuguese, Chinese, Japanese, and Spanish.",
+                  "740-speed range, the same exceptional speed capacity as DV2Plus, catering to diverse testing needs.",
+                  "Optional RTD temperature probe (DVP-94Y) for enhanced temperature measurement accuracy.",
+                  "Direct access to time measurement functions: Time to Torque, Time to Temperature, and Time to Stop.",
+                  "Automatic range calculation, computing the Full-Scale Range (FSR) at 100% and the maximum viscosity measured for each spindle/speed combination.",
+                  "Accuracy of ±1.0% of range, matching DV2Plus's precision specification.",
+                  "Repeatability of ±0.2%, the same figure as DV2Plus.",
+                  "Optional ISO 17025 calibration for labs needing accredited calibration standards.",
+                  "Model G Base, a stable and robust foundation for the instrument.",
+                  "Full integration with optional accessories, including the HPQA, for extended functionality."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What actually sets DVPlus apart — not a repeat of the overview above."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "DVPlus applications: routine QC viscosity testing, and entry-level R&D use."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "DVPlus technical specifications: display, precision, connectivity, and options."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Precision at an Entry-Level Price",
+                "title": "Precision at an Entry-Level Price",
+                "description": "The accuracy and repeatability figures matched against DV2Plus.",
+                "body": [
+                  "Entry-level instrumentation usually signals a trade-off somewhere in the measurement chain — a wider accuracy band, fewer discrete speeds, a narrower operating range. DVPlus doesn't carry that trade-off into its core specification: ±1.0% of range accuracy and ±0.2% repeatability, identical to what Brookfield states for the DV2Plus, and a full 740-speed range rather than a reduced subset.",
+                  "What positions DVPlus as the entry-level instrument is everything built around that core measurement, not the measurement itself. A 5-inch display instead of 7 inches, no stated Viscosity Wizard or built-in Gel Timer functionality, and a simpler connectivity story via the DVPlus Connect App rather than DV360's advanced compliance-ready software layer.",
+                  "For a lab whose real requirement is accurate, repeatable viscosity data without needing guided complex-test setup or regulated audit trails, that's the right trade to make."
+                ],
+                "disclaimer": "Share the budget and whether guided test setup or built-in Gel Timer functionality are required, and the choice between DVPlus and DV2Plus gets confirmed against actual workflow needs rather than precision alone."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Time-Based Measurement Access",
+                "title": "Time-Based Measurement Access",
+                "description": "Time to Torque, Time to Temperature, and Time to Stop.",
+                "cards": [
+                  { "title": "Direct access to time-to-condition measurements", "description": "Time to Torque, Time to Temperature, Time to Stop." },
+                  { "title": "Confidence the test stays within valid range", "description": "Automatic FSR and maximum viscosity calculation." },
+                  { "title": "Matching test temperature to real-world conditions", "description": "±5°C adjustable temperature offset." },
+                  { "title": "Improved temperature accuracy where it matters", "description": "Optional RTD probe, DVP-94Y." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the DVPlus is available on request.",
+                "cards": [
+                  { "title": "DVPlus Specification Sheet", "description": "Available on request" },
+                  { "title": "DVPlus Connect App Overview", "description": "Available on request" },
+                  { "title": "RTD Probe (DVP-94Y) Details", "description": "Available on request" },
+                  { "title": "ISO 17025 Calibration Details", "description": "Available on request" },
+                  { "title": "HPQA Integration Guide", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the DVPlus Viscometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The same ±1.0% accuracy and 740-speed range as Brookfield's flagship instrument, at an entry-level price. Share the materials tested and whether guided setup or Gel Timer functionality are needed, and the right choice between DVPlus and DV2Plus gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "DVNext Rheometer with Gel Timer Functionality",
+          "slug": "dvnext-rheometer-with-gel-timer-functionality",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield DVNext Rheometer with Gel Timer Functionality - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dvnext-rheometer-with-gel-timer-functionality",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > DVNext Rheometer with Gel Timer Functionality",
+          "h1": "DVNext Rheometer with Gel Timer Functionality",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Gelation studies often mean running one instrument for viscosity and yield stress, then switching to something else entirely to track time-to-gel. DVNext Rheometer with Gel Timer Functionality keeps all three on one platform, purpose-built for applications where knowing exactly when a material gels matters as much as knowing how thick it is.",
+
+          "features": [
+            "Gel-Timer as a Core Capability, Not an Add-On: Time-to-gel measurement sits on the same platform as viscosity and yield stress testing, using the same calibration and reporting path rather than a separate device.",
+            "Ethernet Included on the Standard Version: Unlike the base DVNext Rheometer, where Ethernet is Compliant-only, this variant's source lists it as standard — worth confirming, but a genuine differentiator as stated.",
+            "Purpose-Built for Curing System Testing: Positioned specifically for resins, epoxies, and gelation-driven materials, where a general rheometer would treat gel time as a secondary function.",
+            "Same Standard/Compliant Split as the Base Rheometer: Magnetic coupling and barcode scanning optional on Standard, standard-fit on Compliant, alongside 21 CFR Part 11/GAMP and LIMS connectivity.",
+            "Remote Monitoring for Long Cure Tests: Ethernet connectivity supports checking on extended gelation runs without staying at the bench."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Standard: \"DVNext Rheometer with Gel Timer Functionality (Standard)\" · Compliant: \"DVNext Rheometer with Gel Timer Functionality (Compliant)\"" },
+            { "label": "Category", "value": "Laboratory Viscometers / Rheometers (both versions)" },
+            { "label": "Gel-Timer Functionality", "value": "Included (both versions)" },
+            { "label": "Digital Leveling", "value": "Included (both versions)" },
+            { "label": "Ethernet Connectivity", "value": "Standard: Included, per this source · Compliant: Included" },
+            { "label": "Start-up Wizard", "value": "Standard: Included · Compliant: Not explicitly listed (confirm at specification)" },
+            { "label": "Magnetic Coupling Attachment", "value": "Standard: Optional · Compliant: Standard" },
+            { "label": "Barcode Scanner", "value": "Standard: Optional · Compliant: Hand-held, standard, with accessory detection" },
+            { "label": "21 CFR Part 11 / GAMP Compliance", "value": "Standard: Not included · Compliant: Included" },
+            { "label": "LIMS Connectivity", "value": "Standard: Not included · Compliant: Included" },
+            { "label": "Reporting", "value": "Standard: Standard reporting · Compliant: Non-editable PDF" },
+            { "label": "Accuracy", "value": "Not stated on this source page (both versions)" },
+            { "label": "Repeatability", "value": "Not stated on this source page (both versions)" }
+          ],
+
+          "applications": [
+            "Gelation Time Studies: Gel-Timer functionality provides precise time-to-gel measurement.",
+            "Resin and Epoxy Curing Analysis: Accurate gelation tracking alongside viscosity behaviour.",
+            "Combined Viscosity and Gel Time Testing: Both measurements run on the same instrument, no second device needed.",
+            "Regulated Pharmaceutical and Chemical QC: Compliant version with 21 CFR Part 11 and GAMP compliance.",
+            "Sample Traceability and Tracking: Barcode scanning (optional on Standard, standard on Compliant).",
+            "LIMS-Integrated Laboratories: LIMS connectivity on the Compliant version.",
+            "Network-Connected R&D Labs: Ethernet connectivity as a Standard-version feature.",
+            "Auditable Regulated Data Workflows: Non-editable PDF reporting for tamper-evident records."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Standard or Compliant" },
+            { "id": "planner", "label": "Accessory Configurator" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Gel Time Range Planner" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Standard vs Compliant" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the gelation testing need regulated compliance?",
+            "description": "Select the regulatory and traceability requirements, and see which version fits.",
+            "fields": [
+              {
+                "key": "regulatoryContext",
+                "label": "Regulatory context",
+                "options": [
+                  { "val": "rd-research", "label": "R&D/research use" },
+                  { "val": "regulated-qc", "label": "Regulated QC release testing" }
+                ]
+              },
+              {
+                "key": "auditTrailRequirement",
+                "label": "Audit trail requirement",
+                "options": [
+                  { "val": "not-required", "label": "Not required" },
+                  { "val": "required", "label": "Electronic signatures/audit trail needed" }
+                ]
+              },
+              {
+                "key": "dataConnectivity",
+                "label": "Data connectivity",
+                "options": [
+                  { "val": "ethernet-only", "label": "Ethernet only" },
+                  { "val": "full-lims", "label": "Full LIMS integration required" }
+                ]
+              },
+              {
+                "key": "accessoryTracking",
+                "label": "Accessory tracking",
+                "options": [
+                  { "val": "manual", "label": "Manual" },
+                  { "val": "barcode", "label": "Automatic barcode-based detection preferred" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "regulatoryContext": "regulated-qc" },
+                "title": "Compliant Version Fits Regulated QC",
+                "body": "The 21 CFR Part 11 Compliant version builds magnetic coupling, hand-held barcode scanning, LIMS connectivity, and non-editable PDF reporting into the standard configuration.",
+                "tags": ["Compliant Version"]
+              },
+              {
+                "condition": { "regulatoryContext": "rd-research" },
+                "title": "Standard Version Fits R&D Work",
+                "body": "The Standard version covers digital leveling, a Start-up Wizard, Gel-Timer functionality, and Ethernet connectivity for network integration.",
+                "tags": ["Standard Version"]
+              },
+              {
+                "condition": { "dataConnectivity": "full-lims" },
+                "title": "Compliant Version Required for LIMS",
+                "body": "LIMS connectivity is included on the Compliant version only.",
+                "tags": ["LIMS Connectivity"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Version",
+                "body": "Share the regulatory context, audit trail requirement, and connectivity needs, and Standard or 21 CFR Part 11 Compliant gets confirmed.",
+                "tags": ["Version Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What gelation window does the protocol need to capture?",
+            "description": "Select the material type and combined testing need, and see the test configuration.",
+            "steps": [
+              {
+                "key": "materialType",
+                "question": "What material type is being tested?",
+                "options": [
+                  { "val": "resin", "label": "Resin" },
+                  { "val": "epoxy", "label": "Epoxy" },
+                  { "val": "adhesive", "label": "Adhesive" },
+                  { "val": "other-curing", "label": "Other curing system" }
+                ]
+              },
+              {
+                "key": "combinedTestingNeed",
+                "question": "Is viscosity/yield stress testing needed alongside gel time?",
+                "options": [
+                  { "val": "gel-time-only", "label": "Gel time only" },
+                  { "val": "combined", "label": "Viscosity and yield stress alongside it" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Gel-Timer functionality runs on the same platform as viscosity and yield stress testing, with Ethernet connectivity available for remote monitoring of long-running cure tests — share the expected gel time range (seconds, minutes, or hours) and monitoring requirement to confirm the test configuration.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "accessory-connectivity-configurator-gel-timer",
+              "eyebrow": "Accessory and Connectivity Configurator",
+              "title": "Which optional features does the setup actually need?",
+              "description": "Select the accessories and connectivity requirements, and see the recommended configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Spindle security", "choices": "Standard EZ-lock; Magnetic coupling preferred" },
+                { "title": "Sample tracking", "choices": "Manual entry; Barcode-based tracking" },
+                { "title": "Network integration", "choices": "Ethernet only; Full LIMS connectivity" },
+                { "title": "Reporting format", "choices": "Standard; Non-editable PDF required" }
+              ],
+              "disclaimer": "Recommends the version and optional accessories required, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between Ametek Brookfield instruments",
+            "title": "DVNext Rheometer with Gel Timer Functionality vs DVNext Rheometer (Base)",
+            "description": "Method comparison: this instrument against the base DVNext Rheometer.",
+            "columns": [
+              { "label": "DVNext Rheometer with Gel Timer Functionality", "highlight": true },
+              { "label": "DVNext Rheometer (Base)", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Gel-Timer Functionality", "values": ["Included, Standard version", "Included, Standard version"] },
+              { "feature": "Ethernet Connectivity", "values": ["Listed as Standard-version feature", "Listed as Compliant-version-only feature"] },
+              { "feature": "Digital Leveling", "values": ["Included, both versions", "Included, both versions"] },
+              { "feature": "Magnetic Coupling", "values": ["Optional (Standard) / Standard (Compliant)", "Optional (Standard) / Standard (Compliant)"] },
+              { "feature": "Barcode Scanning", "values": ["Optional (Standard) / Standard hand-held (Compliant)", "Optional (Standard) / Standard hand-held (Compliant)"] },
+              { "feature": "Accuracy", "values": ["Not stated in this source", "±1.0% of range"] },
+              { "feature": "Repeatability", "values": ["Not stated in this source", "±0.2%"] },
+              { "feature": "Compliance Version", "values": ["21 CFR Part 11 / GAMP", "21 CFR Part 11 / GAMP"] }
+            ],
+            "disclaimer": "The feature sets between this instrument and the base DVNext Rheometer are substantially the same, with two differences worth confirming before ordering: this page lists Ethernet as a Standard-version feature where the base page restricts it to Compliant, and this page's source doesn't restate the ±1.0%/±0.2% accuracy figures the base page specifies. Given how closely the two overlap, confirm directly with Brookfield or Inkarp whether these represent genuinely distinct SKUs or the same physical instrument described on two separate pages."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Industries: adhesives and resins, pharmaceutical, and chemical formulation.",
+            "industries": [
+              { "name": "Adhesives, Resins, and Sealants", "icon": "zap", "useCase": "Gel time and cure behaviour tracking", "consideration": "Gel-Timer functionality built in as a core capability" },
+              { "name": "Pharmaceutical QC and Release Testing", "icon": "pill", "useCase": "Regulated viscosity and gelation testing", "consideration": "Compliant version for 21 CFR Part 11 and GAMP requirements" },
+              { "name": "Chemical and Formulation R&D", "icon": "flask", "useCase": "Combined viscosity, yield stress, and gel time studies", "consideration": "Standard version for flexible, network-connected testing" },
+              { "name": "Coatings and Curing Systems", "icon": "droplet", "useCase": "Time-to-gel measurement for process control", "consideration": "Ethernet connectivity supports remote monitoring of long cure tests" },
+              { "name": "LIMS-Integrated Regulated Laboratories", "icon": "cpu", "useCase": "Automated data flow from testing to system of record", "consideration": "LIMS connectivity on the Compliant version" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own gelation and viscosity samples on the recommended version." },
+              { "title": "Version Selection Support", "description": "Confirms Standard versus Compliant against the regulatory context." },
+              { "title": "Configuration Assessment", "description": "Confirms optional accessories — magnetic coupling, barcode scanner." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with the Start-up Wizard, Gel-Timer, and routine operation." },
+              { "title": "Compliance Setup", "description": "Configures 21 CFR Part 11/GAMP features on the Compliant version." },
+              { "title": "LIMS Integration Support", "description": "Assists LIMS connectivity setup on the Compliant version." },
+              { "title": "Preventive Maintenance", "description": "Maintains spindle drive, touchscreen, and connectivity performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, barcode scanners, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is this instrument used for?", "answer": "It's a rheometer for viscosity, yield stress, and gel time measurement, with Gel-Timer functionality as a defining capability, available in Standard and 21 CFR Part 11 Compliant versions." },
+            { "question": "How is it different from the base DVNext Rheometer?", "answer": "The feature sets are largely the same — both include built-in Gel-Timer functionality. This page lists Ethernet connectivity as a Standard-version feature, where the base DVNext Rheometer page restricts it to the Compliant version. Confirm with Inkarp whether this represents a genuinely distinct configuration." },
+            { "question": "What is Gel-Timer functionality?", "answer": "Accurate measurement of gelation time, positioned as the instrument's core differentiating capability for applications requiring precise time-to-gel data." },
+            { "question": "Does the Standard version include Ethernet connectivity?", "answer": "Yes, per this source page — worth confirming directly given the base DVNext Rheometer page lists Ethernet as Compliant-only." },
+            { "question": "What is the accuracy and repeatability?", "answer": "Not explicitly stated on this source page. The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability — confirm whether this applies to the Gel Timer variant." },
+            { "question": "Is magnetic coupling standard or optional?", "answer": "Optional on the Standard version, standard-fit on the Compliant version." },
+            { "question": "Does the Compliant version include barcode scanning?", "answer": "Yes, a hand-held barcode scanner is standard, with automatic accessory detection built in." },
+            { "question": "Can the instrument connect to a LIMS?", "answer": "Yes, on the 21 CFR Part 11 Compliant version." },
+            { "question": "What does non-editable PDF reporting protect against?", "answer": "It generates secure, tamper-evident reports directly from the instrument, protecting data integrity for regulated environments." },
+            { "question": "What is the price of this instrument in India?", "answer": "Get in touch and Inkarp will put together a quote based on the version (Standard or Compliant) and optional accessories required." },
+            { "question": "Who is the authorized distributor in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield DVNext Rheometer with Gel Timer Functionality in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the DVNext Rheometer with Gel Timer Functionality in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Viscosity, yield stress, and gel time on one instrument, with Standard and 21 CFR Part 11 Compliant versions covering both R&D and regulated workflows. Share the gelation systems tested and the regulatory context, and the right version gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your gelation systems and regulatory context, then confirm the right version.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "gelationSystems", "label": "Gelation systems tested", "type": "text", "required": false },
+              { "key": "regulatoryContext", "label": "Regulatory context (R&D or regulated release)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right version and accessories", "body": "Share whether gel time measurement is the primary requirement or one of several tests run on the instrument, and whether the workflow is R&D or regulated release, and the right version and accessories get confirmed from there." },
+              { "title": "Confirm the version against the workflow", "body": "Share whether gel-time testing feeds a regulated release decision or supports R&D work, and the Standard-versus-Compliant choice gets confirmed against the actual workflow." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles version selection support, installation, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Viscosity, yield stress, and gel time — measured on the same instrument, not three.",
+            "heroLead": "Gelation studies often mean running one instrument for viscosity and yield stress, then switching to something else entirely to track time-to-gel. DVNext Rheometer with Gel Timer Functionality keeps all three on one platform, purpose-built for applications where knowing exactly when a material gels matters as much as knowing how thick it is. Digital leveling ensures precise setup, a Start-up Wizard guides initial configuration step by step, and Ethernet connectivity supports network integration and remote access as a standard capability. Like the base DVNext Rheometer, it's available in a Standard version and a 21 CFR Part 11 Compliant version — the Compliant version adding hand-held barcode scanning with automatic accessory detection, standard-fit magnetic coupling, LIMS connectivity, and secure non-editable PDF reporting under GAMP-compliant audit trails.",
+            "stats": [
+              { "value": "2 versions", "label": "Standard, and 21 CFR Part 11 Compliant" },
+              { "value": "Gel-Timer", "label": "Accurate time-to-gel measurement, both versions" },
+              { "value": "Digital leveling", "label": "Precise setup, both versions" },
+              { "value": "Ethernet connectivity", "label": "Listed as a Standard-version feature on this page" },
+              { "value": "Optional", "label": "Magnetic coupling and barcode scanner, Standard version" },
+              { "value": "Standard-fit", "label": "Magnetic coupling, Compliant version" },
+              { "value": "Hand-held scanner", "label": "Barcode detection with accessory ID, Compliant version" },
+              { "value": "LIMS connectivity", "label": "Compliant version" },
+              { "value": "Non-editable PDF", "label": "Secure reporting, Compliant version" },
+              { "value": "GAMP-compliant", "label": "Regulatory environment support, Compliant version" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Product information: gel-time measurement, connectivity, and version differences.",
+                "body": [
+                  "Latest in Brookfield's precision rheometer line, built for repeatability and reliability across viscosity, gel time, and yield stress measurement.",
+                  "Available in two versions, Standard and 21 CFR Part 11 Compliant, suited to different regulatory environments.",
+                  "Digital leveling ensures precise instrument setup for accurate measurements.",
+                  "Ethernet connectivity, listed as a Standard-version feature here, provides network integration and remote access.",
+                  "Start-up Wizard simplifies initial setup with guided, step-by-step instructions.",
+                  "Gel-Timer functionality provides accurate gelation time measurement, positioned as the instrument's defining capability.",
+                  "Optional magnetic coupling on the Standard version upgrades from the standard EZ-lock for easy, secure spindle attachment.",
+                  "Optional barcode scanner on the Standard version streamlines data entry and sample tracking.",
+                  "Hand-held barcode scanner on the Compliant version offers portable scanning for sample management, standard-fit.",
+                  "Automatic accessory detection by barcode on the Compliant version identifies and configures accessories without manual setup.",
+                  "Magnetic coupling attachment is standard-fit on the Compliant version, simplifying spindle attachment and removal.",
+                  "21 CFR Part 11 compliance on the Compliant version covers both stand-alone and GAMP-compliant environments.",
+                  "LIMS connectivity on the Compliant version integrates with laboratory information management systems for data management and workflow automation.",
+                  "Non-editable PDF reporting on the Compliant version generates secure reports directly from the instrument, protecting data integrity.",
+                  "Stand-alone, easy-to-use design across both versions."
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What actually distinguishes this instrument — not a restatement of the overview above."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Applications: gelation and curing studies, and regulated QC release testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Technical specifications: confirmed features by version. Accuracy and repeatability were not stated in this source pull. The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability — confirm whether the same figures apply to this variant before quoting."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Gel Time as a First-Class Measurement",
+                "title": "Gel Time as a First-Class Measurement",
+                "description": "Why tracking gelation on the primary rheometer matters.",
+                "body": [
+                  "Gelation isn't a single point measurement the way a viscosity reading is — it's a transition that happens over time, and catching exactly when it occurs matters directly for resins, epoxies, and other curing systems where working time and cure time are process-critical variables.",
+                  "Running that measurement as a bolt-on to a general viscometer, or on a separate dedicated instrument, adds a step and a potential source of inconsistency between the viscosity data and the gel time data.",
+                  "DVNext Rheometer with Gel Timer Functionality keeps both on the same measurement platform. Gel-Timer functionality is positioned as a defining capability rather than an incidental feature, so gelation studies and standard viscosity/yield stress testing draw on the same calibration, the same interface, and the same reporting path."
+                ],
+                "disclaimer": "Share the curing systems and typical gel-time ranges involved, and test configuration gets confirmed against the Gel-Timer functionality."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Standard vs. Compliant",
+                "title": "Standard vs. Compliant",
+                "description": "The exact feature split across the two versions. The version split mirrors the base DVNext Rheometer: Standard is built for straightforward gelation and viscosity testing with the option to add magnetic coupling or barcode tracking as needed, while Compliant builds those features in as standard and adds the full regulated workflow.",
+                "cards": [
+                  { "title": "Gelation and viscosity testing without a compliance layer", "description": "Standard." },
+                  { "title": "Enhanced spindle security added as needed", "description": "Standard, with optional magnetic coupling." },
+                  { "title": "Full regulated audit trail and electronic signatures", "description": "Compliant." },
+                  { "title": "Automatic accessory identification via barcode", "description": "Compliant." },
+                  { "title": "Data flowing directly into a LIMS", "description": "Compliant." },
+                  { "title": "Tamper-evident, non-editable reporting", "description": "Compliant." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation is available on request.",
+                "cards": [
+                  { "title": "Specification Sheet (Standard and Compliant)", "description": "Available on request" },
+                  { "title": "Accuracy and Repeatability Confirmation", "description": "Available on request — not stated in this source" },
+                  { "title": "21 CFR Part 11 / GAMP Compliance Details", "description": "Available on request" },
+                  { "title": "LIMS and Ethernet Connectivity Guide", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the DVNext Rheometer with Gel Timer Functionality in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Viscosity, yield stress, and gel time on one instrument, with Standard and 21 CFR Part 11 Compliant versions covering both R&D and regulated workflows. Share the gelation systems tested and the regulatory context, and the right version gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "KU-3 Viscometer",
+          "slug": "ku-3-viscometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield KU-3 Viscometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/ku-3-viscometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > KU-3 Viscometer",
+          "h1": "KU-3 Viscometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "KU-3 is Ametek Brookfield's viscometer for measuring paints, coatings, and inks, described by Brookfield as the industry standard instrument for this application. It displays viscosity simultaneously in Krebs units, grams, and centipoise on an LED digital display.",
+
+          "features": [
+            "Three Units, One Reading: Krebs units, grams, and centipoise displayed simultaneously — no separate conversion step between the unit a formulator specifies and the unit a lab reports.",
+            "No Weights in the Test Procedure: The established Krebs method traditionally involves weights; KU-3 removes that step from routine testing.",
+            "Magnetic Spindle Coupling: Faster spindle changes than a threaded or pin-fit coupling, reducing setup time between samples.",
+            "Built Around ASTM D562: Not adapted to the standard — designed for full compatibility with it, which matters where compliance documentation is required.",
+            "Container-Ready Base: Fits standard pint, ½ pint, and quart cans directly, without needing to decant into a dedicated sample vessel."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield KU-3 Viscometer" },
+            { "label": "Category", "value": "Laboratory Viscometers" },
+            { "label": "Display", "value": "LED digital, simultaneous KU / grams / cP" },
+            { "label": "Display Resolution", "value": "0.1 KU, 1 gram, 1 cP" },
+            { "label": "Measurement Range (KU)", "value": "40 to 141" },
+            { "label": "Measurement Range (grams)", "value": "32 to 1099" },
+            { "label": "Measurement Range (cP)", "value": "27 to 5274" },
+            { "label": "Accuracy", "value": "±1% of full-scale range" },
+            { "label": "Reproducibility", "value": "±0.5% of full-scale range" },
+            { "label": "Spindle Coupling", "value": "Magnetic" },
+            { "label": "Compliance Standard", "value": "ASTM D562" },
+            { "label": "Container Compatibility", "value": "Standard pint, ½ pint, and quart cans" },
+            { "label": "Optional Accessories", "value": "Paste spindle for high-consistency materials" },
+            { "label": "Calibration Standards", "value": "NIST traceable viscosity standards available" }
+          ],
+
+          "applications": [
+            "Paint Formulation and QC: Krebs unit readings for direct comparison against formulation specifications.",
+            "Coatings Manufacturing: ASTM D562-compliant testing for product consistency across batches.",
+            "Ink Production: Viscosity measurement across the instrument's stated range for varied ink formulations.",
+            "Roller Mill Paste Testing: Optional paste spindle extends range to high-consistency materials.",
+            "Batch-to-Batch Consistency Checks: ±1% accuracy and ±0.5% reproducibility support repeatable QC decisions.",
+            "Standards-Based Calibration Verification: NIST traceable viscosity standards available for calibration checks."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Range Checker" },
+            { "id": "config", "label": "Compliance Checker" },
+            { "id": "container-spindle-selector", "label": "Container & Spindle" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the formulation fall within KU-3's measurement range?",
+            "description": "Select the unit and material type, and see whether it falls within the instrument's range.",
+            "fields": [
+              {
+                "key": "reportingUnit",
+                "label": "Reporting unit",
+                "options": [
+                  { "val": "ku", "label": "Krebs units" },
+                  { "val": "grams", "label": "Grams" },
+                  { "val": "cp", "label": "Centipoise" }
+                ]
+              },
+              {
+                "key": "materialType",
+                "label": "Material type",
+                "options": [
+                  { "val": "standard", "label": "Standard formulation" },
+                  { "val": "paste", "label": "High-consistency paste" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "reportingUnit": "ku" },
+                "title": "Within the KU Range",
+                "body": "The 40–141 KU range covers standard paint, coating, and ink consistency as specified by Brookfield.",
+                "tags": ["40–141 KU"]
+              },
+              {
+                "condition": { "reportingUnit": "grams" },
+                "title": "Within the Gram Range",
+                "body": "The 32–1099 gram range covers the same consistency span, reported in grams.",
+                "tags": ["32–1099 g"]
+              },
+              {
+                "condition": { "materialType": "paste" },
+                "title": "Paste Spindle Required",
+                "body": "High-consistency materials like roller mill pastes need the optional paste spindle, extending testing beyond the standard range.",
+                "tags": ["Paste Spindle"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Range Fit",
+                "body": "Share the reporting unit and expected value, and whether the material is a standard formulation or a high-consistency paste, and the right spindle configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Does the testing need to be ASTM D562-compliant?",
+            "description": "Select the compliance and calibration requirement, and see the recommended setup.",
+            "steps": [
+              {
+                "key": "complianceRequirement",
+                "question": "Is ASTM D562 compliance required?",
+                "options": [
+                  { "val": "astm-d562", "label": "ASTM D562 required" },
+                  { "val": "internal-qc", "label": "Internal QC only" }
+                ]
+              },
+              {
+                "key": "calibrationStandard",
+                "question": "Is a NIST traceable calibration standard required?",
+                "options": [
+                  { "val": "nist-required", "label": "NIST traceable required" },
+                  { "val": "not-specified", "label": "Not specified" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "KU-3 is fully compatible with ASTM D562, and NIST traceable viscosity standards are available for calibration — share the documentation need (formal compliance record or informal check), and the right compliance setup gets confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "container-spindle-selector",
+              "eyebrow": "Sample Container and Spindle Selector",
+              "title": "What container and spindle does the sample need?",
+              "description": "Select the container size and material consistency, and see the recommended configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Container size", "choices": "Pint; ½ pint; Quart" },
+                { "title": "Material consistency", "choices": "Standard formulation; High-consistency paste" },
+                { "title": "Spindle need", "choices": "Standard; Optional paste spindle" }
+              ],
+              "disclaimer": "Confirms base and spindle fit, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between KU-3, DV2Plus, and DVPlus",
+            "title": "KU-3 vs DV2Plus vs DVPlus",
+            "description": "KU-3 method comparison: KU-3 against DV2Plus and DVPlus for coatings testing.",
+            "columns": [
+              { "label": "KU-3", "highlight": true },
+              { "label": "DV2Plus", "highlight": false },
+              { "label": "DVPlus", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Unit System", "values": ["KU, grams, cP simultaneously", "cP, mPa·s", "cP, mPa·s, P, Pa·s"] },
+              { "feature": "Accuracy", "values": ["±1% of full-scale range", "±1.0% of range", "±1.0% of range"] },
+              { "feature": "Reproducibility/Repeatability", "values": ["±0.5% of full-scale range", "±0.2%", "±0.2%"] },
+              { "feature": "Spindle Coupling", "values": ["Magnetic", "Standard", "Standard"] },
+              { "feature": "Industry Standard Compliance", "values": ["ASTM D562", "Not stated as its primary compliance target", "Not stated as its primary compliance target"] },
+              { "feature": "Speed Control", "values": ["Not applicable — fixed test method", "740 speeds", "740 speeds"] },
+              { "feature": "Best For", "values": ["Paint, coating, and ink testing specified in Krebs units", "General-purpose rotational viscosity testing", "General-purpose rotational viscosity testing at lower cost"] },
+              { "feature": "Choose when", "values": ["The formulation is specified in KU or the application requires ASTM D562", "The material and application don't require Krebs units", "Budget is the priority and Krebs units aren't required"] }
+            ],
+            "disclaimer": "KU-3 is built for one application specifically — paint, coating, and ink consistency measured against ASTM D562 — rather than general-purpose rotational viscometry. Where a formulation specification is written in Krebs units, KU-3 reports directly against it; DV2Plus and DVPlus don't report in KU at all."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "KU-3 industries: paint manufacturing, coatings, and printing/ink production.",
+            "industries": [
+              { "name": "Paint Manufacturing", "icon": "flask", "useCase": "Formulation and batch consistency testing", "consideration": "Direct KU reading against formulation specification" },
+              { "name": "Industrial and Architectural Coatings", "icon": "shield", "useCase": "Product consistency verification", "consideration": "ASTM D562 compliance for standardized testing" },
+              { "name": "Printing and Ink Production", "icon": "droplet", "useCase": "Ink viscosity testing across formulation range", "consideration": "Simultaneous KU/gram/cP display for varied specification formats" },
+              { "name": "Contract Testing Laboratories", "icon": "target", "useCase": "Third-party consistency verification for paint and coatings clients", "consideration": "NIST traceable standards support calibration documentation" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "KU-3 service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own paint, coating, or ink samples." },
+              { "title": "Configuration Assessment", "description": "Confirms spindle and container setup for the material and range." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with the digital display and magnetic spindle coupling." },
+              { "title": "Calibration Support", "description": "Coordinates NIST traceable standards where required." },
+              { "title": "Preventive Maintenance", "description": "Maintains spindle coupling, drive, and display performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, paste spindle, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the KU-3 Viscometer used for?", "answer": "It's used for measuring the viscosity of paints, coatings, and inks, described by Brookfield as the industry standard instrument for this application." },
+            { "question": "What units does it display?", "answer": "Krebs units (KU), grams, and centipoise (cP), simultaneously." },
+            { "question": "What is the measurement range?", "answer": "40 to 141 KU, 32 to 1099 grams, and 27 to 5274 cP." },
+            { "question": "What is the accuracy and reproducibility?", "answer": "±1% of the full-scale range for accuracy, and ±0.5% of the full-scale range for reproducibility." },
+            { "question": "Does it comply with ASTM D562?", "answer": "Yes, it's fully compatible with ASTM D562." },
+            { "question": "Are weights required for testing?", "answer": "No, the test procedure eliminates the need for weights." },
+            { "question": "How is the spindle attached?", "answer": "Via a magnetic spindle coupling, allowing quick and secure attachment and removal." },
+            { "question": "What sample containers does it accommodate?", "answer": "Standard pint, ½ pint, and quart cans." },
+            { "question": "Can it test high-consistency materials like roller mill pastes?", "answer": "Yes, with the optional paste spindle." },
+            { "question": "Are NIST traceable calibration standards available?", "answer": "Yes, NIST traceable viscosity standards are available." },
+            { "question": "How is KU-3 different from DV2Plus or DVPlus?", "answer": "KU-3 is built specifically for paint, coating, and ink testing against ASTM D562, reporting in Krebs units, grams, and centipoise. DV2Plus and DVPlus are general-purpose rotational viscometers reporting in cP/mPa·s (and additional units on DVPlus), without Krebs unit output." },
+            { "question": "What is the price of the KU-3 Viscometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the spindle configuration and calibration standards required." },
+            { "question": "Who is the authorized distributor of the KU-3 Viscometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield KU-3 Viscometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the KU-3 Viscometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Krebs units, grams, and centipoise on one display, ±1% accuracy, and full ASTM D562 compatibility. Share the formulation specification and material type, and the right KU-3 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your formulation specification and material type, then confirm the right KU-3 configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "formulationSpecification", "label": "Formulation specification (KU / grams / cP)", "type": "text", "required": false },
+              { "key": "materialType", "label": "Material type (standard formulation or high-consistency paste)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the reporting unit and range fit", "body": "Share whether the formulation specification is written in KU, grams, or cP, and whether high-consistency materials like roller mill pastes need testing, and the right spindle configuration gets confirmed." },
+              { "title": "Confirm the ASTM D562 compliance setup", "body": "Share whether formal compliance documentation is needed and whether NIST traceable calibration standards are required, and the right setup gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Krebs units, grams, and centipoise on one display. ±1% accuracy. Full ASTM D562 compatibility.",
+            "heroLead": "KU-3 is Ametek Brookfield's viscometer for measuring paints, coatings, and inks, and is described by Brookfield as the industry standard for this application. It displays viscosity simultaneously in Krebs units, grams, and centipoise on an LED digital display, in increments of 0.1 KU, 1 gram, and 1 cP. Measurement range runs 40 to 141 KU, 32 to 1099 grams, and 27 to 5274 cP. Accuracy is ±1% of the full-scale range, and reproducibility is ±0.5% of the full-scale range. A magnetic spindle coupling allows quick spindle attachment and removal, and the base accommodates standard pint, ½ pint, and quart cans. The test method requires no weights, and the instrument is fully compatible with ASTM D562. An optional paste spindle extends testing to high-consistency materials such as roller mill pastes, and NIST traceable viscosity standards are available.",
+            "stats": [
+              { "value": "3 units", "label": "KU, grams, and cP, displayed simultaneously" },
+              { "value": "40–141 KU", "label": "Krebs unit measurement range" },
+              { "value": "32–1099 g", "label": "Gram measurement range" },
+              { "value": "27–5274 cP", "label": "Centipoise measurement range" },
+              { "value": "±1%", "label": "Accuracy, full-scale range" },
+              { "value": "±0.5%", "label": "Reproducibility, full-scale range" },
+              { "value": "0.1 KU / 1 g / 1 cP", "label": "Display resolution" },
+              { "value": "Magnetic", "label": "Spindle coupling" },
+              { "value": "ASTM D562", "label": "Compliance standard" },
+              { "value": "Optional", "label": "Paste spindle for high-consistency materials" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "KU-3 product information: display, measurement range, and industry standard compliance.",
+                "body": [
+                  "Described by Brookfield as the industry standard instrument for measuring the viscosity of paints, coatings, and inks.",
+                  "Continuous sensing and display gives real-time measurements in Krebs units, grams, and centipoise, for immediate analysis of sample consistency.",
+                  "Magnetic spindle coupling enables quick and secure attachment and removal of spindles.",
+                  "Rapid sample measurement determines the required consistency of a sample quickly.",
+                  "LED digital display gives high-resolution readings in increments of 0.1 KU, 1 gram, and 1 cP.",
+                  "Measurement range covers 40 to 141 KU, 32 to 1099 grams, and 27 to 5274 cP.",
+                  "Accuracy of ±1% of the full-scale range.",
+                  "Reproducibility of ±0.5% of the full-scale range.",
+                  "The test procedure eliminates the need for weights, simplifying an established method.",
+                  "Fully compatible with ASTM D562.",
+                  "The base accommodates standard pint, ½ pint, and quart cans.",
+                  "An optional paste spindle is available for testing high-consistency materials such as roller mill pastes.",
+                  "NIST traceable viscosity standards are available."
+                ],
+                "cards": [
+                  { "title": "KU, grams, and cP together", "description": "One reading, three unit systems, no conversion needed" },
+                  { "title": "±1% / ±0.5%", "description": "Accuracy and reproducibility across the full-scale range" },
+                  { "title": "ASTM D562 compliant", "description": "Meets the industry test method for this application" },
+                  { "title": "No weights required", "description": "Established test procedure simplified" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What specifically separates KU-3 from a general rotational viscometer."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "KU-3 applications: paint, coating, and ink viscosity testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "KU-3 technical specifications: measurement range, precision, and display."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Krebs Units and ASTM D562",
+                "title": "Krebs Units and ASTM D562",
+                "description": "Why this unit system and standard apply to paints and coatings.",
+                "body": [
+                  "Krebs units are the measurement system the paint and coatings industry has used to specify application consistency, and ASTM D562 is the standard method built around that system. A formulation specified in KU can't be directly verified on an instrument reporting only in centipoise without a conversion step, so KU-3 reports in Krebs units, grams, and centipoise at the same time, letting a lab match whichever unit a specification or customer actually requires.",
+                  "The stated measurement range — 40 to 141 KU, 32 to 1099 grams, 27 to 5274 cP — covers the consistency range Brookfield associates with standard paint, coating, and ink testing. The optional paste spindle extends that into materials outside the standard range, such as roller mill pastes, without requiring a separate instrument."
+                ],
+                "utilityChecklist": [
+                  { "label": "Direct comparison against KU-specified formulations", "value": "Krebs unit reading displayed directly" },
+                  { "label": "Compliance with the industry test method", "value": "Full ASTM D562 compatibility" },
+                  { "label": "Testing materials outside the standard consistency range", "value": "Optional paste spindle" },
+                  { "label": "Confidence in calibration accuracy", "value": "NIST traceable viscosity standards available" }
+                ],
+                "disclaimer": "Share whether the formulation specification is written in KU, grams, or cP, and whether high-consistency materials like roller mill pastes need testing, and the right spindle configuration gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the KU-3 is available on request.",
+                "cards": [
+                  { "title": "KU-3 Specification Sheet", "description": "Available on request" },
+                  { "title": "ASTM D562 Compliance Details", "description": "Available on request" },
+                  { "title": "Paste Spindle Accessory Details", "description": "Available on request" },
+                  { "title": "NIST Traceable Standards Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the KU-3 Viscometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Krebs units, grams, and centipoise on one display, ±1% accuracy, and full ASTM D562 compatibility. Share the formulation specification and material type, and the right KU-3 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Dial Reading Viscometer",
+          "slug": "dial-reading-viscometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield Dial Reading Viscometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dial-reading-viscometer",
+          "breadcrumbPath": "Home > Products > Laboratory Viscometers > Dial Reading Viscometer",
+          "h1": "Dial Reading Viscometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Dial Reading Viscometer is Brookfield's original viscosity measurement instrument, in continuous production since 1934. Current models use a multi-speed electronic drive with an ergonomic speed control knob, giving quick selection across 10 pre-set speeds on standard models (8 speeds on LVT models).",
+
+          "features": [
+            "Dial Readout, No Screen: Torque is read directly off a mechanical dial rather than a digital display — a different operating principle from DV2Plus, DVPlus, and the DVNext line.",
+            "Pre-Set Speed Selection: 10 speeds selected directly via a control knob (8 on LVT models), rather than a 740-speed digital range.",
+            "Direct Drive for Quiet Operation: Brookfield states this specifically as a benefit of the electronic drive design.",
+            "Full Brookfield Accessory Compatibility: Works across the same accessory range as Brookfield's other viscometers, without being tied to a specific software ecosystem.",
+            "Longest Production History in the Range: In continuous production since 1934, per Brookfield."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield Dial Reading Viscometer" },
+            { "label": "Category", "value": "Laboratory Viscometers" },
+            { "label": "In Production Since", "value": "1934" },
+            { "label": "Drive System", "value": "Multi-speed electronic, direct drive" },
+            { "label": "Speed Control", "value": "Ergonomically designed speed control knob" },
+            { "label": "Pre-Set Speeds (Standard Models)", "value": "10" },
+            { "label": "Pre-Set Speeds (LVT Models)", "value": "8" },
+            { "label": "Torque Sensing", "value": "Continuous, real-time" },
+            { "label": "Accuracy", "value": "1% of full-scale range" },
+            { "label": "Repeatability", "value": "0.2% of full-scale range" },
+            { "label": "Power Compatibility", "value": "Global power sources" },
+            { "label": "Accessory Compatibility", "value": "Full Brookfield accessory range" },
+            { "label": "Calibration Standards", "value": "NIST traceable viscosity standards available" }
+          ],
+
+          "applications": [
+            "Routine QC Viscosity Testing: Direct dial readout with 1% accuracy for repeatable batch checks.",
+            "Labs Without Digital Interface Requirements: Mechanical dial operation, no software or touchscreen dependency.",
+            "Established Test Methods Referencing This Instrument: Compatibility with methods historically developed on Brookfield dial instruments.",
+            "Accessory-Dependent Testing: Full compatibility with the Brookfield accessory range.",
+            "Facilities with Variable Power Supply: Compatibility with global power sources."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Model Selector" },
+            { "id": "config", "label": "Accessory Checker" },
+            { "id": "power-installation-checker", "label": "Power & Installation" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which speed range does the method call for?",
+            "description": "Select the required speed range and any existing method reference, and see which model fits.",
+            "fields": [
+              {
+                "key": "speedRangeRequired",
+                "label": "Speed range required",
+                "options": [
+                  { "val": "10-speed", "label": "10 speeds (Standard)" },
+                  { "val": "8-speed-lvt", "label": "8 speeds (LVT)" }
+                ]
+              },
+              {
+                "key": "existingMethodReference",
+                "label": "Existing method reference",
+                "options": [
+                  { "val": "standard", "label": "References a standard model" },
+                  { "val": "lvt", "label": "References an LVT model" },
+                  { "val": "unspecified", "label": "Unspecified" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "speedRangeRequired": "10-speed" },
+                "title": "Standard Model Fits",
+                "body": "10 pre-set speeds are available on the standard model configuration.",
+                "tags": ["Standard Model"]
+              },
+              {
+                "condition": { "speedRangeRequired": "8-speed-lvt" },
+                "title": "LVT Model Fits",
+                "body": "8 pre-set speeds are available on the LVT model configuration.",
+                "tags": ["LVT Model"]
+              },
+              {
+                "condition": { "existingMethodReference": "lvt" },
+                "title": "LVT Continuity Confirmed",
+                "body": "An existing method referencing an LVT model carries over directly onto the LVT configuration.",
+                "tags": ["Method Continuity"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Model Fit",
+                "body": "Share the required speed range and any existing method reference, and the standard or LVT configuration gets confirmed.",
+                "tags": ["Model Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Which Brookfield accessories does the setup need?",
+            "description": "Select the accessories in use or required, and see compatibility.",
+            "steps": [
+              {
+                "key": "accessoryType",
+                "question": "What accessory type is involved?",
+                "options": [
+                  { "val": "spindles", "label": "Spindles" },
+                  { "val": "hpqa", "label": "HPQA" },
+                  { "val": "small-sample-adapter", "label": "Small sample adapter" },
+                  { "val": "other", "label": "Other Brookfield accessory" }
+                ]
+              },
+              {
+                "key": "newAccessoryNeed",
+                "question": "Is a new accessory required for the application?",
+                "options": [
+                  { "val": "yes", "label": "Yes, a specific accessory is needed" },
+                  { "val": "no", "label": "No, existing accessories cover it" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Dial Reading Viscometer is fully compatible with the Brookfield accessory range — share the existing accessory inventory and the specific application need, and compatibility gets confirmed against it.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "power-installation-checker",
+              "eyebrow": "Power and Installation Checker",
+              "title": "Does the site's power supply suit the instrument?",
+              "description": "Select the available power source, and confirm compatibility.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Available power supply", "choices": "Voltage and frequency available at the installation site" },
+                { "title": "Installation environment", "choices": "Standard lab bench; Variable power infrastructure" },
+                { "title": "Calibration requirement", "choices": "Standard; NIST traceable standards needed" }
+              ],
+              "disclaimer": "Confirms power compatibility and calibration standard availability, then routes to an installation-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing between Dial Reading Viscometer, DV2Plus, and DVPlus",
+            "title": "Dial Reading Viscometer vs DV2Plus vs DVPlus",
+            "description": "Dial Reading Viscometer method comparison: against DV2Plus and DVPlus.",
+            "columns": [
+              { "label": "Dial Reading Viscometer", "highlight": true },
+              { "label": "DV2Plus", "highlight": false },
+              { "label": "DVPlus", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Readout", "values": ["Mechanical dial", "7\" digital touchscreen", "5\" digital touchscreen"] },
+              { "feature": "Speed Options", "values": ["10 pre-set (8 on LVT)", "740", "740"] },
+              { "feature": "Accuracy", "values": ["1% of full-scale range", "±1.0% of range", "±1.0% of range"] },
+              { "feature": "Repeatability", "values": ["0.2% of full-scale range", "±0.2%", "±0.2%"] },
+              { "feature": "Connectivity", "values": ["Not stated", "USB, Bluetooth, DV360, DV Create", "USB, Bluetooth, DVPlus Connect"] },
+              { "feature": "Production History", "values": ["Since 1934", "Successor to the DV2T", "Not stated"] },
+              { "feature": "Best For", "values": ["Methods referencing a dial readout, or labs without a digital interface requirement", "Full digital control, guided setup, wide speed range", "Digital control at lower cost"] },
+              { "feature": "Choose when", "values": ["The test method specifies a dial-reading instrument, or a non-digital readout is preferred", "Digital connectivity, Viscosity Wizard, or Gel Timer are required", "Digital connectivity is wanted without the higher price"] }
+            ],
+            "disclaimer": "Dial Reading Viscometer sits apart from Brookfield's digital instruments on readout method rather than precision — the stated accuracy and repeatability figures are comparable to the DVNext line, but the interface and speed selection are entirely mechanical rather than digital."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Dial Reading Viscometer industries: general laboratory QC across multiple sectors.",
+            "industries": [
+              { "name": "General Laboratory QC", "icon": "flask", "useCase": "Routine viscosity checks across varied materials", "consideration": "Dial readout suits labs without a digital interface requirement" },
+              { "name": "Facilities with Established Dial-Based Methods", "icon": "clock", "useCase": "Test methods historically developed on Brookfield dial instruments", "consideration": "Direct continuity with existing method documentation" },
+              { "name": "Labs Operating Across Variable Power Infrastructure", "icon": "zap", "useCase": "Facilities with inconsistent or non-standard power supply", "consideration": "Compatibility with global power sources" },
+              { "name": "Accessory-Dependent Testing Programs", "icon": "repeat", "useCase": "Labs already invested in the Brookfield accessory ecosystem", "consideration": "Full compatibility with the Brookfield accessory range" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Dial Reading Viscometer service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials to show dial readout and repeatability." },
+              { "title": "Model Selection Support", "description": "Confirms standard versus LVT configuration against the method's speed requirement." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with speed selection and dial reading operation." },
+              { "title": "Calibration Support", "description": "Coordinates NIST traceable standards where required." },
+              { "title": "Preventive Maintenance", "description": "Maintains drive system, dial mechanism, and spindle coupling performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles and replacement parts across the Brookfield accessory range." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Dial Reading Viscometer used for?", "answer": "It's used for routine rotational viscosity testing, reading torque directly off a mechanical dial rather than a digital display." },
+            { "question": "How long has this instrument been in production?", "answer": "Since 1934, per Brookfield." },
+            { "question": "How many speeds does it offer?", "answer": "10 pre-set speeds on standard models, 8 pre-set speeds on LVT models." },
+            { "question": "What is the accuracy and repeatability?", "answer": "1% of the full-scale range for torque measurement accuracy, and 0.2% of the full-scale range for repeatability." },
+            { "question": "Does it have continuous torque sensing?", "answer": "Yes, providing real-time torque measurements throughout a test." },
+            { "question": "Does it work on different power supplies?", "answer": "Yes, the direct drive design is compatible with global power sources." },
+            { "question": "Is it compatible with Brookfield accessories?", "answer": "Yes, fully compatible with the Brookfield accessory range." },
+            { "question": "Are NIST traceable calibration standards available?", "answer": "Yes." },
+            { "question": "How is this different from DV2Plus or DVPlus?", "answer": "Dial Reading Viscometer uses a mechanical dial readout and pre-set speed selection (10 speeds standard, 8 on LVT), where DV2Plus and DVPlus use digital touchscreens with 740 speeds and USB/Bluetooth connectivity. Stated accuracy and repeatability figures are comparable across all three." },
+            { "question": "What is the price of the Dial Reading Viscometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the model (standard or LVT) and accessories required." },
+            { "question": "Who is the authorized distributor of the Dial Reading Viscometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Dial Reading Viscometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Dial Reading Viscometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Mechanical dial readout, 10 pre-set speeds, ±1% accuracy, in production since 1934. Share the required speed range and accessory needs, and the right configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review your required speed range and accessory needs, then confirm the right configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "speedRangeNeeded", "label": "Required speed range (Standard 10-speed or LVT 8-speed)", "type": "text", "required": false },
+              { "key": "accessoryNeeds", "label": "Accessory needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm standard or LVT fit", "body": "Share the material type, expected viscosity range, and whether LVT or standard speed range fits the application, and the right spindle and speed configuration gets confirmed." },
+              { "title": "Confirm accessory compatibility", "body": "Share the accessories currently in use or required, and compatibility across the Brookfield accessory range gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles calibration support, installation, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "In production since 1934. 10 pre-set speeds. The mechanical dial readout Brookfield's digital line was built to succeed.",
+            "heroLead": "Dial Reading Viscometer is Brookfield's original viscosity measurement instrument, in continuous production since 1934. Current models use a multi-speed electronic drive with an ergonomic speed control knob, giving quick selection across 10 pre-set speeds on standard models (8 speeds on LVT models). The direct drive design runs quietly and works across global power sources. Torque measurement accuracy is 1% of the full-scale range, with repeatability of 0.2% of the full-scale range. Continuous torque sensing gives real-time readings throughout a test. Speed adjustment and on/off control are direct, with no menu navigation involved. The instrument is fully compatible with the Brookfield accessory range, and NIST traceable viscosity standards are available.",
+            "stats": [
+              { "value": "Since 1934", "label": "In production" },
+              { "value": "10 speeds", "label": "Pre-set speed selections (standard models)" },
+              { "value": "8 speeds", "label": "Pre-set speed selections (LVT models)" },
+              { "value": "±1%", "label": "Torque measurement accuracy, full-scale range" },
+              { "value": "±0.2%", "label": "Repeatability, full-scale range" },
+              { "value": "Electronic drive", "label": "Multi-speed, direct drive" },
+              { "value": "Global power", "label": "Compatible with global power sources" },
+              { "value": "Continuous", "label": "Torque sensing, real-time" },
+              { "value": "Full compatibility", "label": "Across the Brookfield accessory range" },
+              { "value": "NIST traceable", "label": "Viscosity standards available" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Dial Reading Viscometer product information: drive system, precision, and accessory compatibility.",
+                "body": [
+                  "In continuous production since 1934, described by Brookfield as the original standard in viscosity measurement.",
+                  "Current models use a multi-speed electronic drive with an ergonomically designed speed control knob.",
+                  "10 pre-set speeds on standard models, 8 pre-set speeds on LVT models.",
+                  "Direct drive design offers quiet operation, increased versatility, and compatibility with global power sources.",
+                  "Continuous torque sensing provides real-time torque measurements throughout a test.",
+                  "Torque measurement accuracy of 1% of the full-scale range.",
+                  "Repeatability of 0.2% of the full-scale range.",
+                  "Speed adjustment and on/off control are direct and straightforward, without menu navigation.",
+                  "Full compatibility with the Brookfield accessory range.",
+                  "NIST traceable viscosity standards are available.",
+                  "The electronic drive system runs quietly, minimizing workspace disruption."
+                ],
+                "cards": [
+                  { "title": "Since 1934", "description": "Long-standing production history" },
+                  { "title": "±1% / ±0.2%", "description": "Accuracy and repeatability, full-scale range" },
+                  { "title": "10 pre-set speeds", "description": "Direct selection, no digital menu" },
+                  { "title": "Full accessory compatibility", "description": "Works across the Brookfield accessory range" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What specifically separates this instrument from Brookfield's digital touchscreen models."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Dial Reading Viscometer applications: routine QC viscosity testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Dial Reading Viscometer technical specifications: speed options, precision, and drive system."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Direct Drive and Dial Readout",
+                "title": "Direct Drive and Dial Readout",
+                "description": "How the mechanical measurement principle works.",
+                "body": [
+                  "Unlike Brookfield's touchscreen instruments, Dial Reading Viscometer reads torque off a mechanical dial rather than a digital display. The multi-speed electronic drive behind that dial is a direct drive design, which Brookfield states delivers quiet operation and works reliably across global power sources — a consideration relevant for labs operating across different regions or power infrastructure.",
+                  "Speed selection uses an ergonomic control knob to move between pre-set speeds directly, rather than navigating a menu. Standard models offer 10 pre-set speeds; LVT models offer 8. Continuous torque sensing keeps the reading live throughout a test, and the underlying accuracy and repeatability figures — 1% and 0.2% of full-scale range — match what Brookfield states for its digital DVNext line, despite the different readout method."
+                ],
+                "utilityChecklist": [
+                  { "label": "A readout that doesn't depend on a digital interface", "value": "Mechanical dial display" },
+                  { "label": "Quick, direct speed selection", "value": "Ergonomic knob across pre-set speeds" },
+                  { "label": "Reliable operation on varied power infrastructure", "value": "Direct drive, global power source compatibility" },
+                  { "label": "Accuracy comparable to Brookfield's digital instruments", "value": "1% accuracy, 0.2% repeatability, full-scale range" },
+                  { "label": "Continuity with established test methods", "value": "Compatibility with the full Brookfield accessory range" }
+                ],
+                "disclaimer": "Share whether the method specifies a particular speed count (10-speed standard vs. 8-speed LVT), and the right model gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the Dial Reading Viscometer is available on request.",
+                "cards": [
+                  { "title": "Dial Reading Viscometer Specification Sheet", "description": "Available on request" },
+                  { "title": "Standard vs. LVT Model Comparison", "description": "Available on request" },
+                  { "title": "NIST Traceable Standards Catalogue", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Dial Reading Viscometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Mechanical dial readout, 10 pre-set speeds, ±1% accuracy, in production since 1934. Share the required speed range and accessory needs, and the right configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
         }
       ]
     }

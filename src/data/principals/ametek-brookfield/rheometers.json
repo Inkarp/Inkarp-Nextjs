@@ -1,0 +1,1805 @@
+{
+  "principal": {
+    "slug": "ametek-brookfield",
+    "principalName": "Ametek Brookfield",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Rheometers",
+      "slug": "rheometers",
+      "products": [
+        {
+          "name": "PVS Rheometer",
+          "slug": "pvs-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield PVS Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/pvs-rheometer",
+          "breadcrumbPath": "Home > Products > Rheometers > PVS Rheometer",
+          "h1": "PVS Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "PVS Rheometer is a dynamic coaxial cylinder, controlled shear rate rheometer for measuring viscosity under pressure at elevated or reduced temperatures, where sample boil-off could otherwise be a problem. Brookfield describes it as suited to simulating in-process conditions on small fluid samples, in industries including chemicals, oil, food processing, polymers, and paints.",
+
+          "features": [
+            "Pressurized Measurement up to 1000 psi: Test volatile and temperature-sensitive samples under pressure to reduce boil-off during viscosity measurements.",
+            "Wide Temperature Range: Cover testing from -40°C to +260°C in a single instrument for applications requiring both low- and high-temperature measurement.",
+            "Low Shear Rate Measurement: Measure viscosity at shear rates down to 0.2 sec⁻¹ for detailed characterization of low-shear fluid behaviour.",
+            "API Industry Standard Compliance: Designed for drilling fluid and fracturing gel testing in oil and gas applications in line with relevant API testing requirements.",
+            "Portable Footprint: The compact 1 × 1 × 2 ft footprint supports in-process testing and site-to-site use beyond a fixed laboratory setup.",
+            "Triple Annulus Geometry: The optional triple annulus geometry increases measurement sensitivity for low-viscosity fluids compared with standard coaxial cylinder geometry."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield PVS Rheometer" },
+            { "label": "Category", "value": "Rheometers" },
+            { "label": "Measurement Principle", "value": "Dynamic coaxial cylinder, controlled shear rate" },
+            { "label": "Pressure Range", "value": "Up to 1000 psi" },
+            { "label": "Temperature Range", "value": "-40°C to +260°C" },
+            { "label": "Temperature Sensing", "value": "RTD sensor on the inner cylinder surface" },
+            { "label": "Shear Rate Range", "value": "0.2 sec⁻¹ (LSRV) to 1700 sec⁻¹ (outer cylinder rotation)" },
+            { "label": "Motor Speed", "value": "Up to 1000 RPM" },
+            { "label": "Cup/Bob Construction", "value": "Standard Hastelloy" },
+            { "label": "Geometry Options", "value": "Standard coaxial cylinder; optional triple annulus for low-viscosity sensitivity" },
+            { "label": "Safety", "value": "Safety relief valve" },
+            { "label": "Compliance", "value": "API industry standards" },
+            { "label": "Control Software", "value": "Rheovision" },
+            { "label": "Footprint", "value": "1' x 1' x 2'" },
+            { "label": "Included in Setup", "value": "Choice of spindle (bob), cup, Rheovision software, and computer" }
+          ],
+
+          "applications": [
+            "Drilling Fluid Testing: Pressure and temperature range matched to down-hole simulation, with API compliance.",
+            "Fracturing Gel Analysis: High-pressure, wide-temperature-range measurement on volatile fluid systems.",
+            "Chemical Process Fluids: Pressurized testing prevents boil-off at elevated process temperatures.",
+            "Oil and Gas In-Process Simulation: Simulates down-hole drilling conditions directly.",
+            "Food Processing (Cooking, Blending): In-process simulation named specifically by Brookfield.",
+            "Reactor Fluid Simulation: In-process reactor condition simulation.",
+            "Polymer and Paint Testing: Application industries named by Brookfield for viscosity measurement under controlled conditions.",
+            "Low-Viscosity Fluid Sensitivity Testing: Optional triple annulus geometry for increased measurement sensitivity."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Pressure & Temp Checker" },
+            { "id": "config", "label": "Shear Rate Selector" },
+            { "id": "api-compliance-deployment-checker", "label": "API & Deployment" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Low Shear & Annulus" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the sample need pressurized or temperature-extreme testing?",
+            "description": "Select the required pressure and any boil-off risk, and confirm it falls within the PVS range.",
+            "fields": [
+              {
+                "key": "requiredPressure",
+                "label": "Required pressure",
+                "options": [
+                  { "val": "under-1000psi", "label": "Up to 1000 psi" },
+                  { "val": "ambient", "label": "Ambient, no pressurization needed" }
+                ]
+              },
+              {
+                "key": "boilOffRisk",
+                "label": "Boil-off risk at ambient pressure",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "not-applicable", "label": "Not applicable" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "requiredPressure": "under-1000psi" },
+                "title": "Within the 1000 psi Range",
+                "body": "PVS Rheometer's pressure range extends to 1000 psi, covering the pressurized testing requirement.",
+                "tags": ["Up to 1000 psi"]
+              },
+              {
+                "condition": { "boilOffRisk": "yes" },
+                "title": "Pressurized Testing Prevents Boil-Off",
+                "body": "Pressurized operation up to 1000 psi across -40°C to +260°C is designed specifically to prevent sample boil-off at elevated or reduced temperatures.",
+                "tags": ["Boil-Off Prevention"]
+              },
+              {
+                "condition": { "requiredPressure": "ambient" },
+                "title": "Confirm Whether Pressurization Is Needed",
+                "body": "If boil-off isn't a risk at ambient pressure, a non-pressurized rheometer in Brookfield's range may be a simpler fit — share the temperature range to confirm.",
+                "tags": ["Ambient Testing"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Pressure and Temperature Fit",
+                "body": "Share the required pressure and temperature, and fit against the 1000 psi / -40°C to +260°C range gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "What shear rate range does the application need?",
+            "description": "Select the shear rate and fluid viscosity, and see the recommended geometry.",
+            "steps": [
+              {
+                "key": "targetShearRate",
+                "question": "What shear rate range is needed?",
+                "options": [
+                  { "val": "low", "label": "Low (near 0.2 sec⁻¹)" },
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high", "label": "High (up to 1700 sec⁻¹)" }
+                ]
+              },
+              {
+                "key": "fluidViscosity",
+                "question": "What's the fluid viscosity?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "low-viscosity", "label": "Low-viscosity, requiring extra sensitivity" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the application type (down-hole drilling, cooking/blending, reactor simulation, or other), and standard coaxial cylinder or triple annulus geometry gets recommended against it.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "api-compliance-deployment-checker",
+              "eyebrow": "API Compliance and Deployment Checker",
+              "title": "Does the testing need to meet API standards, and where will it run?",
+              "description": "Select the compliance requirement and deployment environment, and confirm fit.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Compliance requirement", "choices": "API industry standard required; General testing" },
+                { "title": "Deployment location", "choices": "Fixed lab; Site-to-site portable use" },
+                { "title": "Sample type", "choices": "Drilling fluid; Fracturing gel; Chemical process fluid; Other" }
+              ],
+              "disclaimer": "Confirms API compliance and portability fit, then routes to a deployment-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Brookfield's rheometer range",
+            "title": "PVS Rheometer vs RSO Rheometer vs RSX Coaxial Cylinder Rheometer",
+            "description": "PVS Rheometer method comparison: against Brookfield's other rheometers in the range.",
+            "columns": [
+              { "label": "PVS Rheometer", "highlight": true },
+              { "label": "RSO Rheometer", "highlight": false },
+              { "label": "RSX Coaxial Cylinder Rheometer", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Pressure Rating", "values": ["Up to 1000 psi", "Not stated (confirm on specification)", "Not stated (confirm on specification)"] },
+              { "feature": "Temperature Range", "values": ["-40°C to +260°C", "Not stated (confirm on specification)", "Not stated (confirm on specification)"] },
+              { "feature": "Geometry", "values": ["Coaxial cylinder, optional triple annulus", "Confirm on specification", "Coaxial cylinder"] },
+              { "feature": "Shear Rate Range", "values": ["0.2 to 1700 sec⁻¹", "Not stated (confirm on specification)", "Not stated (confirm on specification)"] },
+              { "feature": "API Compliance", "values": ["Yes", "Not stated (confirm on specification)", "Not stated (confirm on specification)"] },
+              { "feature": "Portability", "values": ["1' x 1' x 2', site-to-site", "Not stated (confirm on specification)", "Not stated (confirm on specification)"] },
+              { "feature": "Best For", "values": ["Pressurized, temperature-extreme, or boil-off-prone samples", "General rheometry, confirm application fit", "Coaxial cylinder geometry without pressurization"] },
+              { "feature": "Choose when", "values": ["The sample requires pressure or extreme temperature to test accurately", "PVS's pressure/temperature range isn't required", "Standard coaxial cylinder testing at ambient conditions suffices"] }
+            ],
+            "disclaimer": "PVS Rheometer is distinguished within Brookfield's rheometer range specifically by pressurized operation — detailed specifications for the RSO, RSX Coaxial Cylinder, RSX Cone Plate, and RSX SST Rheometers weren't available in this source pull, so those comparisons are placeholders pending their own source pages."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "PVS Rheometer industries: oil and gas, chemical processing, food processing, and polymers.",
+            "industries": [
+              { "name": "Oil and Gas", "icon": "droplet", "useCase": "Drilling fluid and fracturing gel viscosity testing", "consideration": "API industry standard compliance, down-hole condition simulation" },
+              { "name": "Chemical Processing", "icon": "flask", "useCase": "Volatile fluid testing at elevated temperature", "consideration": "Pressurized chamber prevents boil-off" },
+              { "name": "Food Processing", "icon": "coffee", "useCase": "Cooking and blending process simulation", "consideration": "In-process simulation across the -40°C to +260°C range" },
+              { "name": "Polymers", "icon": "cpu", "useCase": "Process fluid viscosity under controlled conditions", "consideration": "Wide shear rate range covers varied polymer processing speeds" },
+              { "name": "Paints", "icon": "shield", "useCase": "Viscosity measurement under controlled conditions", "consideration": "Named application industry by Brookfield" },
+              { "name": "Reactor and Process Engineering", "icon": "repeat", "useCase": "Reactor fluid condition simulation", "consideration": "Portable design supports site-to-site testing" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "PVS Rheometer service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own samples under the required pressure and temperature conditions." },
+              { "title": "Configuration Assessment", "description": "Confirms geometry, cup/bob, and pressure/temperature setup for the application." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with Rheovision software and pressurized operation." },
+              { "title": "API Compliance Support", "description": "Confirms configuration against API standard requirements." },
+              { "title": "Preventive Maintenance", "description": "Maintains the pressure chamber, motor, and safety relief valve." },
+              { "title": "Spares and Accessories", "description": "Supplies cups, bobs, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the PVS Rheometer used for?", "answer": "It's used for viscosity measurement under pressure at elevated or reduced temperatures, particularly for volatile or temperature-sensitive samples where boil-off at ambient pressure would be a problem, in industries including chemicals, oil, food processing, polymers, and paints." },
+            { "question": "What pressure range does it operate at?", "answer": "Up to 1000 psi." },
+            { "question": "What temperature range does it cover?", "answer": "-40°C to +260°C." },
+            { "question": "What shear rate range can it measure?", "answer": "Down to 0.2 sec⁻¹ for low shear rate viscosity (LSRV), up to 1700 sec⁻¹ on the outer cylinder rotation." },
+            { "question": "Does it comply with API industry standards?", "answer": "Yes." },
+            { "question": "What is triple annulus geometry?", "answer": "An optional geometry that increases measurement sensitivity for low viscosity fluids." },
+            { "question": "Is the instrument portable?", "answer": "Yes, with a compact 1' x 1' x 2' footprint designed for site-to-site mobility." },
+            { "question": "What is the cup and bob construction?", "answer": "Standard Hastelloy, built to withstand severe environments." },
+            { "question": "How is sample temperature measured?", "answer": "Via an RTD temperature sensor on the inner cylinder surface." },
+            { "question": "What safety features does it include?", "answer": "A safety relief valve for secure operation under pressure and temperature extremes." },
+            { "question": "What software controls the instrument?", "answer": "Rheovision software, which automates and controls all test parameters." },
+            { "question": "What motor speed does it reach?", "answer": "Up to 1000 RPM." },
+            { "question": "What applications can PVS Rheometer simulate?", "answer": "In-process conditions including down-hole drilling, cooking, blending, and reactor environments." },
+            { "question": "What is the price of the PVS Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the geometry, cup/bob configuration, and API compliance requirements." },
+            { "question": "Who is the authorized distributor of the PVS Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield PVS Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the PVS Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Pressurized viscosity measurement up to 1000 psi, -40°C to +260°C, shear rates from 0.2 to 1700 sec⁻¹, built to API standards. Share the pressure, temperature, and shear rate the application requires, and the right PVS configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the required pressure, temperature, and shear rate range, then confirm the right PVS configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "requiredConditions", "label": "Pressure, temperature, and shear rate range required", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the pressure, temperature, and shear rate range the application requires, and whether triple annulus geometry is needed for low-viscosity sensitivity, and the right PVS configuration gets confirmed." },
+              { "title": "Confirm the right geometry", "body": "Share the shear rate range the in-process condition requires, and whether the fluid is low-viscosity enough to need the triple annulus option, and the right geometry gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Pressurized coaxial cylinder rheometer, up to 1000 psi, -40°C to +260°C, down to 0.2 sec⁻¹.",
+            "heroLead": "PVS Rheometer is a dynamic coaxial cylinder, controlled shear rate rheometer for measuring viscosity under pressure at elevated or reduced temperatures, where sample boil-off could otherwise be a problem. Brookfield describes it as suited to simulating in-process conditions on small fluid samples, in industries including chemicals, oil, food processing, polymers, and paints. Pressure range extends to 1000 psi, with a temperature range of -40°C to +260°C. An RTD temperature sensor on the inner cylinder surface measures sample temperature directly. The outer cylinder rotates at shear rates up to 1700 sec⁻¹, and the instrument measures down to 0.2 sec⁻¹ for low shear rate viscosity (LSRV) work. A robust motor reaches speeds up to 1000 RPM, with a stationary spindle inside the rotating outer cylinder. Standard construction uses Hastelloy cups and bobs. A triple annulus geometry option is available for increased sensitivity on low-viscosity fluids. The instrument is designed to meet API industry standards, and includes a safety relief valve. Rheovision software automates and controls test parameters. The footprint is 1' x 1' x 2', described by Brookfield as compact enough for site-to-site mobility.",
+            "stats": [
+              { "value": "Up to 1000 psi", "label": "Pressure range" },
+              { "value": "-40°C to +260°C", "label": "Temperature range" },
+              { "value": "0.2 sec⁻¹", "label": "Minimum measurable shear rate (LSRV)" },
+              { "value": "Up to 1700 sec⁻¹", "label": "Maximum shear rate, outer cylinder rotation" },
+              { "value": "Up to 1000 RPM", "label": "Motor speed" },
+              { "value": "1' x 1' x 2'", "label": "Footprint" },
+              { "value": "Hastelloy", "label": "Standard cup and bob construction" },
+              { "value": "Safety relief valve", "label": "Standard safety feature" },
+              { "value": "API", "label": "Industry standard compliance" },
+              { "value": "Rheovision", "label": "Control and automation software" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "PVS Rheometer product information: pressure and temperature range, shear rate capability, and construction.",
+                "body": [
+                  "A dynamic coaxial cylinder, controlled shear rate rheometer for precise viscosity measurement under pressure, at elevated or reduced temperatures.",
+                  "Designed for conditions where sample boil-off could be an issue at ambient pressure.",
+                  "Suited to simulating in-process conditions on small fluid samples in a laboratory environment.",
+                  "Named application industries include chemicals, oil, food processing, polymers, and paints.",
+                  "Portable design, with a compact 1' x 1' x 2' footprint for site-to-site mobility.",
+                  "Rheovision software automates and controls all test parameters for precise, repeatable results.",
+                  "Durable construction using standard Hastelloy cups and bobs, built to withstand severe environments.",
+                  "Quick, trouble-free operation with minimal setup time.",
+                  "Pressure range up to 1000 psi.",
+                  "Equipped with a safety relief valve for secure operation.",
+                  "Temperature range from -40°C to +260°C.",
+                  "RTD temperature sensor on the inner cylinder surface for accurate sample temperature measurement.",
+                  "Designed to meet API industry standards.",
+                  "Low shear rate viscosity (LSRV) measurement down to 0.2 sec⁻¹.",
+                  "Capable of simulating in-process conditions including down-hole drilling, cooking, blending, and reactors.",
+                  "Motor speed up to 1000 RPM, with the outer cylinder rotating at shear rates up to 1700 sec⁻¹ and a stationary spindle inside.",
+                  "Triple annulus geometry available as an option, for increased sensitivity measuring low viscosity fluids.",
+                  "Quick setup with a choice of spindle (bob), cup, Rheovision software, and computer.",
+                  "Adheres to industrial standards for consistent, accurate testing."
+                ],
+                "cards": [
+                  { "title": "Up to 1000 psi", "description": "Pressurized testing prevents boil-off" },
+                  { "title": "-40°C to +260°C", "description": "Wide temperature range in one instrument" },
+                  { "title": "0.2 to 1700 sec⁻¹", "description": "Both low and high shear rate coverage" },
+                  { "title": "Portable, 1' x 1' x 2'", "description": "Site-to-site mobility for in-process simulation" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Key features of the Brookfield PVS Rheometer for pressurized viscosity testing, wide temperature control, low shear rate measurement, and oil and gas applications."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "PVS Rheometer applications: pressurized and temperature-controlled viscosity testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "PVS Rheometer technical specifications: pressure, temperature, shear rate, and construction."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Pressure and Temperature Control",
+                "title": "Pressure and Temperature Control",
+                "description": "Why boil-off is the problem this design addresses.",
+                "body": [
+                  "A volatile fluid tested at ambient pressure and elevated temperature can boil off before or during measurement, changing its composition and invalidating the result. PVS Rheometer's coaxial cylinder chamber operates under pressure specifically to prevent that — up to 1000 psi, across a temperature range of -40°C to +260°C, which Brookfield states makes it suitable for elevated or reduced temperature testing where boil-off would otherwise be an issue.",
+                  "An RTD sensor mounted on the inner cylinder surface measures sample temperature directly at the point of shear, rather than inferring it from the chamber wall or an external probe. A safety relief valve is fitted as standard, addressing the operational risk of running a sealed chamber under both pressure and temperature extremes."
+                ],
+                "utilityChecklist": [
+                  { "label": "Measurement without sample boil-off", "value": "Pressure up to 1000 psi" },
+                  { "label": "A wide operating temperature window", "value": "-40°C to +260°C in one instrument" },
+                  { "label": "Accurate sample temperature at the shear point", "value": "RTD sensor on the inner cylinder surface" },
+                  { "label": "Safe operation under combined pressure and temperature", "value": "Standard safety relief valve" },
+                  { "label": "Compliance with oil and gas testing standards", "value": "Designed to meet API industry standards" }
+                ],
+                "disclaimer": "Share the pressure and temperature conditions the sample needs to be tested under, and the configuration gets confirmed against the 1000 psi / -40°C to +260°C range."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Low Shear Rate Measurement and Triple Annulus",
+                "title": "Low Shear Rate Measurement and Triple Annulus",
+                "description": "What 0.2 sec⁻¹ and the annulus option enable.",
+                "cards": [
+                  { "title": "Accurate measurement at very low shear rates", "description": "LSRV down to 0.2 sec⁻¹." },
+                  { "title": "Coverage into higher shear conditions on the same instrument", "description": "Shear rate up to 1700 sec⁻¹." },
+                  { "title": "Simulating real process speeds", "description": "Motor speed up to 1000 RPM." },
+                  { "title": "Sensitivity on low-viscosity fluids", "description": "Optional triple annulus geometry." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the PVS Rheometer is available on request.",
+                "cards": [
+                  { "title": "PVS Rheometer Specification Sheet", "description": "Available on request" },
+                  { "title": "API Compliance Details", "description": "Available on request" },
+                  { "title": "Rheovision Software Overview", "description": "Available on request" },
+                  { "title": "Triple Annulus Geometry Details", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the PVS Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Pressurized viscosity measurement up to 1000 psi, -40°C to +260°C, shear rates from 0.2 to 1700 sec⁻¹, built to API standards. Share the pressure, temperature, and shear rate the application requires, and the right PVS configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "RSO Rheometer",
+          "slug": "rso-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield RSO Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/rso-rheometer",
+          "breadcrumbPath": "Home > Products > Rheometers > RSO Rheometer",
+          "h1": "RSO Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "RSO Rheometer is an oscillatory rheometer designed for both QC and R&D testing. It uses a low-friction air bearing for oscillatory measurement, giving precise viscoelastic measurements under controlled shear stress or shear rate. Brookfield states this design allows study of static yield, flow curves, and viscoelastic behavior.",
+
+          "features": [
+            "Two Geometries on One Instrument: Cone/plate and concentric cylinder both supported, rather than requiring separate instruments for each configuration.",
+            "Genuinely Stand-Alone: Touchscreen operation without a PC — most rheometers at this level of capability assume a connected computer is part of the setup.",
+            "Automatic Gap Setting: Removes a manual calibration step that's typically operator-dependent on cone/plate instruments.",
+            "Barcode Spindle Recognition: Automatic identification rather than manual spindle selection in software or on-screen.",
+            "Small Sample Volume: Named specifically as suited to labs with limited sample availability."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield RSO Rheometer" },
+            { "label": "Category", "value": "Rheometers" },
+            { "label": "Measurement Principle", "value": "Oscillatory, low-friction air bearing" },
+            { "label": "Operation Mode", "value": "Controlled shear stress / shear rate" },
+            { "label": "Geometries Supported", "value": "Cone/plate, concentric cylinder" },
+            { "label": "Spindle Coupling", "value": "Quick connect" },
+            { "label": "Spindle Identification", "value": "Automatic, via barcode recognition" },
+            { "label": "Gap Setting", "value": "Automatic" },
+            { "label": "Interface", "value": "Touchscreen, graphical display, stand-alone" },
+            { "label": "PC Requirement", "value": "Not required for standard operation" },
+            { "label": "Optional Software", "value": "Rheo3000, for PC control, data acquisition, and multi-file analysis" },
+            { "label": "Optional Temperature Control", "value": "Peltier, for rapid viscosity-vs-temperature profiling" },
+            { "label": "Sample Volume", "value": "Small, suited to limited-availability samples" }
+          ],
+
+          "applications": [
+            "Quality Control Yield Testing: Stand-alone touchscreen operation for straightforward static yield measurement.",
+            "Flow Curve Characterization: Controlled shear stress/shear rate operation across the flow curve.",
+            "Viscoelastic Behavior Studies: Oscillatory measurement via low-friction air bearing.",
+            "R&D Material Characterization: Optional Rheo3000 software for PC-based data acquisition and multi-file analysis.",
+            "Limited-Sample Testing: Small sample volume requirement, rapid setup and cleanup.",
+            "Temperature-Dependent Viscosity Profiling: Optional Peltier temperature control for rapid viscosity-vs-temperature testing.",
+            "Multi-Geometry Testing Programs: Cone/plate and concentric cylinder on the same instrument."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Geometry Selector" },
+            { "id": "config", "label": "QC/R&D Selector" },
+            { "id": "temperature-profiling-checker", "label": "Temp Profiling" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Stand-Alone & PC Control" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Which geometry does the material testing need?",
+            "description": "Select the sample volume and testing requirement, and see the recommended geometry.",
+            "fields": [
+              {
+                "key": "sampleVolumeAvailable",
+                "label": "Sample volume available",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "limited", "label": "Limited" }
+                ]
+              },
+              {
+                "key": "testingRequirement",
+                "label": "Testing requirement",
+                "options": [
+                  { "val": "static-yield", "label": "Static yield" },
+                  { "val": "flow-curve", "label": "Flow curve" },
+                  { "val": "viscoelastic", "label": "Viscoelastic behavior" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "sampleVolumeAvailable": "limited" },
+                "title": "Small Sample Volume Fits",
+                "body": "RSO Rheometer's small sample volume requirement suits labs with limited sample availability.",
+                "tags": ["Small Sample"]
+              },
+              {
+                "condition": { "testingRequirement": "viscoelastic" },
+                "title": "Oscillatory Measurement Fits",
+                "body": "Viscoelastic behavior studies are supported directly through oscillatory measurement via the low-friction air bearing.",
+                "tags": ["Viscoelastic"]
+              },
+              {
+                "condition": { "testingRequirement": "static-yield" },
+                "title": "Stand-Alone Yield Testing Fits",
+                "body": "Static yield testing runs through the stand-alone touchscreen without requiring a connected PC.",
+                "tags": ["Static Yield"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Geometry Fit",
+                "body": "Share the material type and sample volume, and cone/plate or concentric cylinder configuration gets recommended.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Does the workflow need stand-alone or PC-controlled operation?",
+            "description": "Select the testing environment and data needs, and see the recommended setup.",
+            "steps": [
+              {
+                "key": "primaryUse",
+                "question": "What's the primary use?",
+                "options": [
+                  { "val": "routine-qc", "label": "Routine QC testing" },
+                  { "val": "rd-analysis", "label": "R&D data analysis" }
+                ]
+              },
+              {
+                "key": "dataHandlingNeed",
+                "question": "What's the data handling need?",
+                "options": [
+                  { "val": "single-test", "label": "Single test results" },
+                  { "val": "multi-file", "label": "Multi-file acquisition and analysis" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share PC availability, and whether stand-alone touchscreen operation or optional Rheo3000 software fits gets confirmed against the primary use and data handling need.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "temperature-profiling-checker",
+              "eyebrow": "Temperature Profiling Checker",
+              "title": "Does the testing need viscosity-versus-temperature profiling?",
+              "description": "Select the temperature testing requirement, and see whether the Peltier option applies.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Temperature profiling need", "choices": "Not required; Viscosity-vs-temperature testing required" },
+                { "title": "Test speed priority", "choices": "Standard; Rapid profiling needed" },
+                { "title": "Sample temperature sensitivity", "choices": "Standard; Precise control required" }
+              ],
+              "disclaimer": "Confirms whether the optional Peltier temperature control is needed, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Brookfield's rheometer range",
+            "title": "RSO Rheometer vs PVS Rheometer vs RSX Coaxial Cylinder Rheometer",
+            "description": "RSO Rheometer method comparison: against PVS Rheometer and the RSX range.",
+            "columns": [
+              { "label": "RSO Rheometer", "highlight": true },
+              { "label": "PVS Rheometer", "highlight": false },
+              { "label": "RSX Coaxial Cylinder Rheometer", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Measurement Principle", "values": ["Oscillatory, air bearing", "Dynamic coaxial cylinder, controlled shear rate", "Confirm on specification"] },
+              { "feature": "Geometry", "values": ["Cone/plate and concentric cylinder", "Coaxial cylinder, optional triple annulus", "Coaxial cylinder"] },
+              { "feature": "Pressure/Temperature Extremes", "values": ["Not designed for pressurized testing", "Up to 1000 psi, -40°C to +260°C", "Not stated (confirm on specification)"] },
+              { "feature": "Operation", "values": ["Stand-alone touchscreen, optional PC (Rheo3000)", "Requires Rheovision software and computer", "Confirm on specification"] },
+              { "feature": "Sample Volume", "values": ["Small", "Small fluid samples", "Confirm on specification"] },
+              { "feature": "Best For", "values": ["QC and R&D viscoelastic testing across two geometries", "Pressurized or volatile samples, boil-off risk conditions", "Confirm on specification"] },
+              { "feature": "Choose when", "values": ["Standard-condition testing needing geometry flexibility and simple operation", "The sample requires pressure or temperature extremes to test accurately", "RSO's dual-geometry flexibility isn't needed"] }
+            ],
+            "disclaimer": "RSO Rheometer and PVS Rheometer serve different testing conditions rather than competing directly — RSO for standard-condition, dual-geometry viscoelastic testing with a genuinely stand-alone workflow, PVS for pressurized or temperature-extreme samples where boil-off is a risk. Detailed specifications for the RSX Coaxial Cylinder, RSX Cone Plate, and RSX SST Rheometers weren't available in this source pull."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "RSO Rheometer industries: general material testing across QC and R&D functions.",
+            "industries": [
+              { "name": "Quality Control Laboratories", "icon": "target", "useCase": "Routine static yield and flow curve testing", "consideration": "Stand-alone touchscreen operation without a PC dependency" },
+              { "name": "Research and Development Laboratories", "icon": "school", "useCase": "Viscoelastic characterization and material development", "consideration": "Optional Rheo3000 software for multi-file data acquisition and analysis" },
+              { "name": "Coatings and Formulation Testing", "icon": "droplet", "useCase": "Flow behavior and yield stress measurement", "consideration": "Small sample volume suits limited-availability formulations" },
+              { "name": "Multi-Geometry Testing Programs", "icon": "repeat", "useCase": "Labs testing varied material types requiring different geometries", "consideration": "Cone/plate and concentric cylinder on one instrument" },
+              { "name": "Contract Testing Laboratories", "icon": "clock", "useCase": "Varied client materials and testing protocols", "consideration": "Barcode spindle recognition speeds configuration changes between clients" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "RSO Rheometer service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials across both supported geometries." },
+              { "title": "Configuration Assessment", "description": "Confirms geometry, spindle set, and software needs for the application." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with stand-alone touchscreen operation and geometry changes." },
+              { "title": "Software Setup", "description": "Configures optional Rheo3000 software where required." },
+              { "title": "Preventive Maintenance", "description": "Maintains the air bearing, coupling system, and touchscreen performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, cups, plates, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the RSO Rheometer used for?", "answer": "It's used for rheological testing across QC and R&D environments, measuring static yield, flow curves, and viscoelastic behavior via oscillatory measurement." },
+            { "question": "What geometries does it support?", "answer": "Both cone/plate and concentric cylinder configurations, on a single instrument." },
+            { "question": "Does it require a PC to operate?", "answer": "No, standard operation is stand-alone via a touchscreen. Optional Rheo3000 software adds PC control for R&D data acquisition and analysis." },
+            { "question": "How does the air bearing improve measurement?", "answer": "It provides low friction for oscillatory measurement, enabling precise viscoelastic measurement." },
+            { "question": "How are spindles attached?", "answer": "Via a quick connect coupling system, reducing setup time." },
+            { "question": "How is the gap between spindle and plate set?", "answer": "Automatically, via the automatic gap setting feature." },
+            { "question": "Are spindles automatically recognized?", "answer": "Yes, through barcode scanning, which streamlines testing and ensures accurate data entry." },
+            { "question": "How much sample does a test require?", "answer": "A small sample volume, suited to labs with limited sample availability." },
+            { "question": "Can it profile viscosity against temperature?", "answer": "Yes, with the optional Peltier temperature control, for rapid viscosity-vs-temperature profiling." },
+            { "question": "What does Rheo3000 software add?", "answer": "PC control, data acquisition, and analysis of multiple test files." },
+            { "question": "How is RSO different from PVS Rheometer?", "answer": "RSO is an oscillatory rheometer for standard-condition QC and R&D testing across two geometries, operated stand-alone. PVS is a pressurized coaxial cylinder rheometer built for volatile or temperature-extreme samples up to 1000 psi and -40°C to +260°C." },
+            { "question": "What is the price of the RSO Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the geometry, spindle set, and software options required." },
+            { "question": "Who is the authorized distributor of the RSO Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield RSO Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the RSO Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Cone/plate and concentric cylinder geometry on one instrument, stand-alone touchscreen operation for QC, and optional Rheo3000 software for R&D data analysis. Share the geometry and operation mode the work requires, and the right RSO configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the geometry and operation mode required, then confirm the right RSO configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "geometry", "label": "Geometry required (cone/plate or concentric cylinder)", "type": "text", "required": false },
+              { "key": "operationMode", "label": "Operation mode (stand-alone or PC-controlled)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share whether the testing is primarily QC (stand-alone) or R&D (requiring PC-based data analysis), and which geometry the samples need, and the right RSO configuration gets confirmed." },
+              { "title": "Confirm whether Rheo3000 is needed", "body": "Share whether the primary use is routine QC testing or R&D data analysis work, and whether Rheo3000 software is needed gets confirmed against that split." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Oscillatory rheometer with air bearing, cone/plate or concentric cylinder geometry, stand-alone or PC-controlled.",
+            "heroLead": "RSO Rheometer is an oscillatory rheometer designed for both QC and R&D testing. It uses a low-friction air bearing for oscillatory measurement, giving precise viscoelastic measurements under controlled shear stress or shear rate. Brookfield states this design allows study of static yield, flow curves, and viscoelastic behavior. The instrument accepts both cone/plate and concentric cylinder geometries. A quick connect coupling system attaches spindles, with automatic gap setting between spindle and plate, and spindle barcode recognition for automatic identification. Standard operation runs stand-alone through a touchscreen, without a PC. Optional Rheo3000 software adds PC control, data acquisition, and analysis of multiple test files. A Peltier temperature control option is available for rapid viscosity-versus-temperature profiling.",
+            "stats": [
+              { "value": "Air bearing", "label": "Low-friction oscillatory measurement" },
+              { "value": "Cone/plate + concentric cylinder", "label": "Both geometries, one instrument" },
+              { "value": "Touchscreen", "label": "Stand-alone operation, no PC required" },
+              { "value": "Quick connect", "label": "Spindle coupling system" },
+              { "value": "Automatic", "label": "Gap setting between spindle and plate" },
+              { "value": "Barcode", "label": "Automatic spindle recognition" },
+              { "value": "Small sample", "label": "Reduced sample volume requirement" },
+              { "value": "Optional", "label": "Peltier temperature control" },
+              { "value": "Optional", "label": "Rheo3000 software for PC control and data analysis" },
+              { "value": "Controlled", "label": "Shear stress and shear rate operation" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "RSO Rheometer product information: geometry flexibility, stand-alone operation, and optional software.",
+                "body": [
+                  "Designed for rapid, accurate rheological testing across both Quality Control (QC) and Research & Development (R&D) environments.",
+                  "Uses oscillatory measurement through a low friction air bearing for precise viscoelastic measurements.",
+                  "Controlled shear stress/shear rate operation allows the study of static yield, flow curves, and viscoelastic behavior.",
+                  "User-friendly touchscreen simplifies stand-alone operation with a graphical display.",
+                  "Quick connect coupling system attaches spindles, reducing setup time.",
+                  "Instrument flexibility allows both cone/plate and concentric cylinder configurations on a single instrument.",
+                  "Small sample size testing is supported, suited to labs with limited sample availability.",
+                  "Spindle barcode recognition automatically identifies spindles and streamlines data entry.",
+                  "Standalone simplicity means straightforward operation without needing a PC, suited to QC users.",
+                  "Automatic gap setting between spindle and plate improves accuracy and reduces setup time.",
+                  "Rapid temperature control is available with the Peltier option, for quick viscosity-versus-temperature profiling.",
+                  "Optional Rheo3000 software adds PC control, data acquisition, and analysis of multiple test files."
+                ],
+                "cards": [
+                  { "title": "Air bearing oscillatory measurement", "description": "Precise viscoelastic characterization" },
+                  { "title": "Cone/plate + concentric cylinder", "description": "One instrument covers two geometries" },
+                  { "title": "Stand-alone touchscreen", "description": "No PC required for routine QC operation" },
+                  { "title": "Barcode spindle recognition", "description": "Automatic identification, no manual entry" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What specifically separates RSO from a fixed-geometry rheometer."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "RSO Rheometer applications: QC yield and flow testing, and R&D viscoelastic characterization."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "RSO Rheometer technical specifications: geometry, operation, and optional accessories."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Dual Geometry, One Instrument",
+                "title": "Dual Geometry, One Instrument",
+                "description": "Why cone/plate and concentric cylinder on the same platform matters.",
+                "body": [
+                  "Different materials and test protocols call for different rheometer geometries — cone/plate suits certain viscosity ranges and sample volumes, concentric cylinder suits others. Buying separate instruments for each geometry means separate footprints, separate calibration routines, and separate operator training. RSO Rheometer supports both configurations on the same instrument, described by Brookfield as instrument flexibility suited to a wide range of material testing applications.",
+                  "A quick connect coupling system attaches spindles without a lengthy fitting process, and automatic gap setting handles the spindle-to-plate distance that cone/plate geometry depends on for accurate shear rate calculation — a step that's traditionally manual and operator-sensitive on other instruments. Spindle barcode recognition identifies which geometry and spindle configuration is fitted automatically, reducing the chance of a test running against the wrong configuration data."
+                ],
+                "utilityChecklist": [
+                  { "label": "Both geometries without two instruments", "value": "Cone/plate and concentric cylinder on one platform" },
+                  { "label": "Fast switching between configurations", "value": "Quick connect coupling system" },
+                  { "label": "Accurate gap setting without manual calibration", "value": "Automatic gap setting" },
+                  { "label": "Confidence the right spindle is recognized", "value": "Barcode-based automatic spindle identification" }
+                ],
+                "disclaimer": "Share which geometries the material testing programme requires, and the right spindle and cup/plate configuration gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Stand-Alone Operation and Optional PC Control",
+                "title": "Stand-Alone Operation and Optional PC Control",
+                "description": "What runs without software, and what Rheo3000 adds.",
+                "cards": [
+                  { "title": "Simple QC testing without a PC dependency", "description": "Stand-alone touchscreen operation." },
+                  { "title": "Straightforward daily operation", "description": "Graphical display, intuitive navigation." },
+                  { "title": "Deeper data acquisition and multi-file analysis for R&D", "description": "Optional Rheo3000 software." },
+                  { "title": "One instrument serving both QC and R&D needs", "description": "Software layer added optionally, same hardware." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the RSO Rheometer is available on request.",
+                "cards": [
+                  { "title": "RSO Rheometer Specification Sheet", "description": "Available on request" },
+                  { "title": "Rheo3000 Software Overview", "description": "Available on request" },
+                  { "title": "Peltier Temperature Control Option Details", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the RSO Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Cone/plate and concentric cylinder geometry on one instrument, stand-alone touchscreen operation for QC, and optional Rheo3000 software for R&D data analysis. Share the geometry and operation mode the work requires, and the right RSO configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "RSX Coaxial Cylinder Rheometer",
+          "slug": "rsx-coaxial-cylinder-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield RSX Coaxial Cylinder Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/rsx-coaxial-cylinder-rheometer",
+          "breadcrumbPath": "Home > Products > Rheometers > RSX Coaxial Cylinder Rheometer",
+          "h1": "RSX Coaxial Cylinder Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "RSX Coaxial Cylinder Rheometer is built for viscosity profiling, thixotropic response, yield stress determination, and creep analysis, using controlled shear stress/shear rate operation. Brookfield positions it for quality control laboratories needing high throughput and precise, repeatable measurement.",
+
+          "features": [
+            "200 Nm Torque Motor: Enhanced beyond a standard rheometer motor, specifically for testing tougher samples.",
+            "Motorized Height-Adjustable Stand: Named specifically for convenience and precision during setup — not present on RSO's feature list.",
+            "Rugged, Production Floor-Rated Construction: Built to withstand conditions beyond a standard lab bench.",
+            "Two Temperature Control Methods: Direct bath immersion, or external circulation via the FTKY3 water jacket, across -20°C to 180°C.",
+            "Comprehensive Flow Behavior Analysis in One Platform: Viscosity profiling, thixotropic response, yield stress determination, and creep analysis together, not as separate add-on tests."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield RSX Coaxial Cylinder Rheometer" },
+            { "label": "Category", "value": "Rheometers" },
+            { "label": "Geometry", "value": "Coaxial cylinder" },
+            { "label": "Torque Motor", "value": "200 Nm" },
+            { "label": "Temperature Range", "value": "-20°C to 180°C" },
+            { "label": "Temperature Control Methods", "value": "Direct bath immersion, or external circulation via FTKY3 water jacket" },
+            { "label": "Spindle Coupling", "value": "Quick connect" },
+            { "label": "Spindle Identification", "value": "Automatic, via barcode recognition" },
+            { "label": "Stand", "value": "Motorized, height-adjustable" },
+            { "label": "Interface", "value": "Large touchscreen, user-friendly" },
+            { "label": "Sample Volume", "value": "Small" },
+            { "label": "Construction", "value": "Rugged, production floor rated" },
+            { "label": "Test Types Supported", "value": "Viscosity profiling, thixotropic response, yield stress determination, creep analysis" }
+          ],
+
+          "applications": [
+            "Viscosity Profiling: Controlled shear stress/shear rate operation across the flow curve.",
+            "Thixotropic Response Testing: Time-dependent flow behavior analysis.",
+            "Yield Stress Determination: Static yield measurement under controlled conditions.",
+            "Creep Analysis: Deformation behavior under sustained stress.",
+            "High-Throughput QC: Precise, repeatable measurement suited to production QC volume.",
+            "Tough or High-Viscosity Sample Testing: 200 Nm torque motor handles samples a standard motor can't.",
+            "Low-Viscosity Precision Testing: Coaxial cylinder geometry delivers the most accurate results in this range.",
+            "Wide-Temperature-Range Testing: -20°C to 180°C across bath immersion or FTKY3 circulation.",
+            "Production Floor QC: Rugged construction rated for production floor conditions."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Torque Checker" },
+            { "id": "config", "label": "Temp Control Selector" },
+            { "id": "qc-throughput-environment-checker", "label": "QC & Environment" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Temperature Control" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the sample need the increased torque motor?",
+            "description": "Select the material type and expected torque demand, and confirm fit against the 200 Nm motor.",
+            "fields": [
+              {
+                "key": "materialType",
+                "label": "Material type",
+                "options": [
+                  { "val": "standard-fluid", "label": "Standard fluid" },
+                  { "val": "paste", "label": "Paste" },
+                  { "val": "gel", "label": "Gel" },
+                  { "val": "filled-compound", "label": "Filled compound" }
+                ]
+              },
+              {
+                "key": "expectedTorqueDemand",
+                "label": "Expected torque demand",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-resistance", "label": "High-resistance material" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "expectedTorqueDemand": "high-resistance" },
+                "title": "200 Nm Torque Motor Fits",
+                "body": "The 200 Nm torque motor is built specifically for testing tougher samples than a standard rheometer motor handles.",
+                "tags": ["200 Nm Torque"]
+              },
+              {
+                "condition": { "materialType": "filled-compound" },
+                "title": "High-Torque Testing Confirmed",
+                "body": "Filled compounds and other structured materials are within the range the increased torque motor was built to test.",
+                "tags": ["Filled Compound"]
+              },
+              {
+                "condition": { "materialType": "standard-fluid" },
+                "title": "Coaxial Cylinder Precision Fits",
+                "body": "Coaxial cylinder geometry delivers the most accurate results particularly in low-viscosity ranges, on standard fluid samples.",
+                "tags": ["Low-Viscosity Precision"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Torque Fit",
+                "body": "Share the material type and expected torque demand, and fit against the 200 Nm torque motor and coaxial cylinder geometry gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Direct bath immersion, or FTKY3 external circulation?",
+            "description": "Select the existing lab setup and immersion practicality, and see the recommended method.",
+            "steps": [
+              {
+                "key": "existingBathCompatibility",
+                "question": "Is a compatible bath already available?",
+                "options": [
+                  { "val": "available", "label": "Compatible bath available" },
+                  { "val": "none", "label": "None" }
+                ]
+              },
+              {
+                "key": "immersionPracticality",
+                "question": "Is direct immersion practical for this setup?",
+                "options": [
+                  { "val": "suitable", "label": "Immersion suitable" },
+                  { "val": "external-preferred", "label": "External circulation preferred" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the required temperature range within -20°C to 180°C, and direct bath immersion or the FTKY3 external circulation water jacket gets recommended against the existing lab setup.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "qc-throughput-environment-checker",
+              "eyebrow": "QC Throughput and Environment Checker",
+              "title": "Is this for a lab bench or a production floor?",
+              "description": "Select the testing environment and throughput requirement, and see the recommended configuration.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Testing environment", "choices": "Standard lab bench; Production floor" },
+                { "title": "Throughput requirement", "choices": "Standard; High-volume QC" },
+                { "title": "Durability requirement", "choices": "Standard; Rugged construction needed" }
+              ],
+              "disclaimer": "Confirms fit against the rugged, production-floor-rated design, then routes to an environment-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Brookfield's rheometer range",
+            "title": "RSX Coaxial Cylinder vs RSO Rheometer vs PVS Rheometer",
+            "description": "RSX Coaxial Cylinder method comparison: against RSO Rheometer and PVS Rheometer.",
+            "columns": [
+              { "label": "RSX Coaxial Cylinder", "highlight": true },
+              { "label": "RSO Rheometer", "highlight": false },
+              { "label": "PVS Rheometer", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Geometry", "values": ["Coaxial cylinder", "Cone/plate and concentric cylinder", "Coaxial cylinder, optional triple annulus"] },
+              { "feature": "Torque Motor", "values": ["200 Nm, increased", "Not stated", "Not stated (speed-driven up to 1000 RPM)"] },
+              { "feature": "Temperature Range", "values": ["-20°C to 180°C", "Optional Peltier control (range not stated)", "-40°C to +260°C"] },
+              { "feature": "Pressure Rating", "values": ["Not stated (ambient)", "Not stated (ambient)", "Up to 1000 psi"] },
+              { "feature": "Construction", "values": ["Rugged, production floor rated", "Not specifically stated as production-floor rated", "Standard Hastelloy, severe-environment rated"] },
+              { "feature": "Operation", "values": ["Touchscreen, standard operation", "Stand-alone touchscreen, optional Rheo3000 PC control", "Requires Rheovision software and computer"] },
+              { "feature": "Sample Volume", "values": ["Small", "Small", "Small"] },
+              { "feature": "Best For", "values": ["High-torque or production floor QC testing with coaxial geometry", "Standard-condition QC/R&D needing geometry flexibility and stand-alone operation", "Pressurized or temperature-extreme samples with boil-off risk"] },
+              { "feature": "Choose when", "values": ["The sample needs high torque, or testing happens on the production floor", "Two geometries and simple stand-alone operation are the priority", "The sample requires pressure or extreme temperature"] }
+            ],
+            "disclaimer": "Of Brookfield's four rheometers built so far, RSX-CC is the one built specifically for torque capacity and production floor durability — RSO covers standard-condition dual-geometry testing, and PVS covers pressurized/temperature-extreme conditions. Specifications for the RSX Cone Plate and RSX SST Rheometers weren't available in this source pull."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "RSX Coaxial Cylinder industries: production QC across manufacturing sectors.",
+            "industries": [
+              { "name": "Manufacturing QC", "icon": "target", "useCase": "High-throughput production floor viscosity testing", "consideration": "Rugged construction and 200 Nm torque suit production conditions" },
+              { "name": "Coatings and Paints", "icon": "droplet", "useCase": "Thixotropic response and flow behavior analysis", "consideration": "Comprehensive flow behavior testing on one instrument" },
+              { "name": "Adhesives and Sealants", "icon": "zap", "useCase": "Yield stress and creep analysis on structured materials", "consideration": "High torque motor handles resistant, structured formulations" },
+              { "name": "Food and Personal Care Products", "icon": "coffee", "useCase": "Viscosity profiling across varied consistency ranges", "consideration": "Coaxial cylinder geometry accurate across the viscosity range" },
+              { "name": "Chemical Processing", "icon": "flask", "useCase": "Temperature-dependent viscosity testing", "consideration": "-20°C to 180°C range with two temperature control methods" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "RSX Coaxial Cylinder service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own tough or high-viscosity samples to show torque performance." },
+              { "title": "Configuration Assessment", "description": "Confirms temperature control method and spindle/cylinder set." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with the touchscreen interface and motorized stand." },
+              { "title": "Preventive Maintenance", "description": "Maintains the torque motor, motorized stand, and coupling system." },
+              { "title": "Spares and Accessories", "description": "Supplies cylinders, spindles, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the RSX Coaxial Cylinder Rheometer used for?", "answer": "It's used for viscosity profiling, thixotropic response testing, yield stress determination, and creep analysis, positioned for quality control laboratories needing high throughput and precise, repeatable measurement." },
+            { "question": "What torque does the motor deliver?", "answer": "200 Nm, described by Brookfield as an increase over a standard motor, for testing tougher samples." },
+            { "question": "What temperature range does it cover?", "answer": "-20°C to 180°C, via direct bath immersion or external circulation using the FTKY3 water jacket." },
+            { "question": "What geometry does it use?", "answer": "Coaxial cylinder, which Brookfield states delivers the most accurate results particularly in low-viscosity ranges." },
+            { "question": "Is it suitable for production floor use?", "answer": "Yes, Brookfield describes the construction as rugged and built to withstand production floor conditions." },
+            { "question": "How are spindles attached?", "answer": "Via a quick connect coupling system, with automatic recognition through spindle barcode scanning." },
+            { "question": "Does the stand adjust height?", "answer": "Yes, via a motorized stand for convenience and precision during testing." },
+            { "question": "How much sample does a test require?", "answer": "A small sample volume, enabling rapid setup and cleanup." },
+            { "question": "How is RSX Coaxial Cylinder different from RSO Rheometer?", "answer": "RSX-CC uses coaxial cylinder geometry only, with a 200 Nm torque motor and production-floor-rated construction. RSO supports both cone/plate and concentric cylinder geometry, with stand-alone operation and optional Rheo3000 PC control, but doesn't state the same torque or ruggedness specification." },
+            { "question": "How is it different from PVS Rheometer?", "answer": "RSX-CC operates at standard pressure with a -20°C to 180°C temperature range, driven by torque. PVS Rheometer is pressurized to 1000 psi with a wider -40°C to +260°C range, built specifically for volatile or boil-off-prone samples." },
+            { "question": "What is the price of the RSX Coaxial Cylinder Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the temperature control method and spindle/cylinder configuration required." },
+            { "question": "Who is the authorized distributor of the RSX Coaxial Cylinder Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield RSX Coaxial Cylinder Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the RSX Coaxial Cylinder Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 200 Nm torque motor, -20°C to 180°C temperature control, coaxial cylinder geometry, and rugged construction built for production floor QC. Share the material toughness and temperature range required, and the right RSX-CC configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the material toughness and temperature range required, then confirm the right RSX-CC configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "materialToughness", "label": "Material toughness", "type": "text", "required": false },
+              { "key": "temperatureRangeRequired", "label": "Temperature range required", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the material toughness, the required temperature range, and whether production floor conditions apply, and the right RSX-CC configuration gets confirmed." },
+              { "title": "Confirm the temperature control method", "body": "Share the temperature range required and whether a compatible bath is already in use, and the right temperature control method — direct immersion or FTKY3 — gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "200 Nm torque motor, -20°C to 180°C, coaxial cylinder geometry for QC and production floor use.",
+            "heroLead": "RSX Coaxial Cylinder Rheometer is built for viscosity profiling, thixotropic response, yield stress determination, and creep analysis, using controlled shear stress/shear rate operation. Brookfield positions it for quality control laboratories needing high throughput and precise, repeatable measurement. A 200 Nm torque motor tests tougher samples than a standard rheometer motor handles. Temperature control runs -20°C to 180°C, with options for direct bath immersion or external circulation using the FTKY3 water jacket. A motorized stand adjusts height, a quick connect coupling system attaches spindles, and spindle barcode recognition identifies them automatically. The instrument is described by Brookfield as ruggedly built for the production floor.",
+            "stats": [
+              { "value": "200 Nm", "label": "Torque motor" },
+              { "value": "-20°C to 180°C", "label": "Temperature control range" },
+              { "value": "Coaxial cylinder", "label": "Geometry" },
+              { "value": "Motorized stand", "label": "Height adjustment" },
+              { "value": "Quick connect", "label": "Spindle coupling system" },
+              { "value": "Barcode", "label": "Automatic spindle recognition" },
+              { "value": "Small sample", "label": "Reduced volume requirement" },
+              { "value": "Rugged design", "label": "Built for production floor use" },
+              { "value": "FTKY3", "label": "Optional water jacket for external circulation" },
+              { "value": "Touchscreen", "label": "Large, user-friendly interface" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "RSX Coaxial Cylinder product information: torque capacity, temperature range, and geometry.",
+                "body": [
+                  "State-of-the-art instrument for superior viscosity profiling, thixotropic response, yield stress determination, and creep analysis.",
+                  "Controlled shear stress/shear rate operation enables thorough flow behavior analysis.",
+                  "Positioned for quality control laboratories requiring high throughput and precise, repeatable measurement.",
+                  "Large user-friendly touchscreen simplifies operation and test parameter control.",
+                  "Quick connect coupling system attaches and detaches spindles, reducing setup time.",
+                  "Auto spindle recognition via barcode ensures accurate data entry and streamlined operation.",
+                  "Small sample size testing enables rapid setup and cleanup, suited to limited sample availability.",
+                  "Rugged design built to withstand production floor conditions while maintaining precision.",
+                  "Increased 200 Nm torque motor tests tougher samples than a standard motor.",
+                  "Motorized stand allows height adjustment for convenience and precision during testing.",
+                  "Advanced temperature control from -20°C to 180°C, with options for direct bath immersion or external circulation using the FTKY3 water jacket.",
+                  "High-precision cylindric geometries deliver the most accurate results, particularly in low-viscosity ranges."
+                ],
+                "cards": [
+                  { "title": "200 Nm torque motor", "description": "Tests tougher samples than a standard motor" },
+                  { "title": "-20°C to 180°C", "description": "Wide temperature control range, two methods" },
+                  { "title": "Coaxial cylinder geometry", "description": "Most accurate results in low-viscosity ranges" },
+                  { "title": "Rugged, production floor rated", "description": "Built beyond standard lab-bench durability" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What specifically separates RSX-CC from a standard-torque rheometer."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "RSX Coaxial Cylinder applications: viscosity profiling, thixotropy, yield stress, and creep analysis."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "RSX Coaxial Cylinder technical specifications: torque, temperature, and construction."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "High Torque for Difficult Samples",
+                "title": "High Torque for Difficult Samples",
+                "description": "Why 200 Nm matters against a standard motor.",
+                "body": [
+                  "Testing high-viscosity or highly structured materials — pastes, gels, filled compounds — requires enough torque to actually shear the sample without the motor stalling or the measurement losing accuracy at the top of its range. RSX Coaxial Cylinder's 200 Nm motor is described by Brookfield specifically as an increase over a standard motor, aimed at testing the toughest samples for comprehensive analysis across a wide range of materials.",
+                  "That torque capacity pairs with coaxial cylinder geometry, which Brookfield states delivers the most accurate results particularly in low-viscosity ranges — meaning the instrument's usable range extends in both directions, from difficult high-torque materials through to precision measurement at the low-viscosity end, on the same geometry."
+                ],
+                "utilityChecklist": [
+                  { "label": "Enough torque to shear tough materials", "value": "200 Nm motor, enhanced beyond standard" },
+                  { "label": "Accuracy at the low-viscosity end too", "value": "Coaxial cylinder geometry, high precision in low-viscosity ranges" },
+                  { "label": "Confidence across a wide material range", "value": "Comprehensive analysis capability stated across both extremes" },
+                  { "label": "Durability under repeated high-torque testing", "value": "Rugged, production floor-rated construction" }
+                ],
+                "disclaimer": "Share the toughest and most dilute materials in the testing programme, and expected performance across that range gets confirmed against the 200 Nm motor and coaxial geometry."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Temperature Control Options",
+                "title": "Temperature Control Options",
+                "description": "Direct bath immersion versus FTKY3 external circulation.",
+                "cards": [
+                  { "title": "A wide temperature span in one instrument", "description": "-20°C to 180°C." },
+                  { "title": "Compatibility with an existing bath setup", "description": "Direct immersion option." },
+                  { "title": "An alternative where immersion isn't practical", "description": "FTKY3 external circulation water jacket." },
+                  { "title": "Precise regulation during the test", "description": "Described by Brookfield as advanced temperature control." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the RSX Coaxial Cylinder is available on request.",
+                "cards": [
+                  { "title": "RSX Coaxial Cylinder Specification Sheet", "description": "Available on request" },
+                  { "title": "FTKY3 Water Jacket Details", "description": "Available on request" },
+                  { "title": "Torque Motor Specification", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the RSX Coaxial Cylinder Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 200 Nm torque motor, -20°C to 180°C temperature control, coaxial cylinder geometry, and rugged construction built for production floor QC. Share the material toughness and temperature range required, and the right RSX-CC configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "RSX Cone Plate Rheometer",
+          "slug": "rsx-cone-plate-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield RSX Cone Plate Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/rsx-cone-plate-rheometer",
+          "breadcrumbPath": "Home > Products > Rheometers > RSX Cone Plate Rheometer",
+          "h1": "RSX Cone Plate Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "RSX Cone Plate Rheometer measures in two controlled modes: controlled shear rate (rpm) and controlled shear stress (torque). Brookfield positions it for both R&D rheological analysis and quality control testing.",
+
+          "features": [
+            "Controlled Shear Stress Testing: Apply controlled shear stress through torque-based measurement for testing materials under defined stress conditions.",
+            "Automatic Spindle Detection: Automatic gap setting detects the standard one-piece spindle and adjusts the measurement gap for consistent setup.",
+            "Flexible Temperature Control: Choose between Peltier or fluid-heated temperature control to match different testing and application requirements.",
+            "200 mNm Rated Torque: A 200 mNm torque rating supports rheological measurements across a range of laboratory and production applications.",
+            "Rugged Production-Floor Design: Built with robust construction for demanding laboratory and production environments."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield RSX Cone Plate Rheometer" },
+            { "label": "Category", "value": "Rheometers" },
+            { "label": "Geometry", "value": "Cone/plate" },
+            { "label": "Operating Modes", "value": "Controlled shear rate (rpm), controlled shear stress (torque)" },
+            { "label": "Torque Motor", "value": "200 mNm" },
+            { "label": "Spindle Coupling", "value": "Quick connect" },
+            { "label": "Spindle Identification", "value": "Automatic, via barcode recognition" },
+            { "label": "Gap Setting", "value": "Automatic, with standard one-piece spindles" },
+            { "label": "Interface", "value": "Large touchscreen, user-friendly" },
+            { "label": "Temperature Control", "value": "Peltier or fluid-heated options" },
+            { "label": "Sample Volume", "value": "Small" },
+            { "label": "Construction", "value": "Rugged, production floor rated" }
+          ],
+
+          "applications": [
+            "Sophisticated R&D Rheological Analysis: Controlled shear rate and controlled shear stress modes for detailed studies.",
+            "Quality Control Testing: Straightforward operation suited to routine QC alongside R&D use.",
+            "Flow Behavior Characterization: Precise analysis under controlled shear conditions.",
+            "Limited-Sample Testing: Small sample volume for rapid setup and cleanup.",
+            "Temperature-Dependent Rheology: Peltier or fluid-heated temperature control for consistent conditions.",
+            "Tough Sample Testing: 200 mNm torque motor for comprehensive analysis across material types.",
+            "Production Floor QC: Rugged construction rated for harsh environments."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Operating Mode Selector" },
+            { "id": "config", "label": "Torque Checker" },
+            { "id": "temperature-control-method-selector", "label": "Temp Control" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Gap Setting" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the protocol need controlled shear rate, controlled shear stress, or both?",
+            "description": "Select the test protocol type and application focus, and see which mode fits.",
+            "fields": [
+              {
+                "key": "testProtocolType",
+                "label": "Test protocol type",
+                "options": [
+                  { "val": "rate-controlled", "label": "Rate-controlled (rpm)" },
+                  { "val": "stress-controlled", "label": "Stress-controlled (torque)" },
+                  { "val": "both", "label": "Both" }
+                ]
+              },
+              {
+                "key": "applicationFocus",
+                "label": "Application focus",
+                "options": [
+                  { "val": "flow-curve", "label": "Flow curve generation" },
+                  { "val": "yield-stress", "label": "Yield stress" },
+                  { "val": "general", "label": "General characterization" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "testProtocolType": "stress-controlled" },
+                "title": "Controlled Shear Stress Mode Fits",
+                "body": "Stress-controlled (torque) operation is named explicitly, suited to yield stress work and stress-controlled protocols.",
+                "tags": ["Stress-Controlled"]
+              },
+              {
+                "condition": { "testProtocolType": "rate-controlled" },
+                "title": "Controlled Shear Rate Mode Fits",
+                "body": "Rate-controlled (rpm) operation is named explicitly, suited to standard flow curve generation.",
+                "tags": ["Rate-Controlled"]
+              },
+              {
+                "condition": { "testProtocolType": "both" },
+                "title": "Both Modes Run on One Instrument",
+                "body": "Rate-controlled and stress-controlled protocols both run on the same platform, without switching hardware between them.",
+                "tags": ["Dual Mode"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Operating Mode",
+                "body": "Share which test protocols the work follows, and the right mode configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Does the sample need the 200 mNm torque motor's capacity?",
+            "description": "Select the material type and expected torque demand, and confirm fit against the torque motor rating.",
+            "steps": [
+              {
+                "key": "materialType",
+                "question": "What material type is being tested?",
+                "options": [
+                  { "val": "standard-fluid", "label": "Standard fluid" },
+                  { "val": "tough-resistant", "label": "Tough/resistant sample" }
+                ]
+              },
+              {
+                "key": "expectedTorqueDemand",
+                "question": "What's the expected torque demand?",
+                "options": [
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "high-resistance", "label": "High-resistance material" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the material type and expected torque demand, and fit against the 200 mNm torque rating gets confirmed.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "temperature-control-method-selector",
+              "eyebrow": "Temperature Control Method Selector",
+              "title": "Peltier or fluid-heated temperature control?",
+              "description": "Select the temperature requirement and existing lab setup, and see the recommended method.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Temperature control need", "choices": "Fast Peltier regulation; Fluid-heated" },
+                { "title": "Existing fluid-heating setup", "choices": "Available; None" },
+                { "title": "Test speed priority", "choices": "Standard; Rapid regulation required" }
+              ],
+              "disclaimer": "Recommends Peltier or fluid-heated configuration, then routes to a configuration-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Brookfield's rheometer range",
+            "title": "RSX Cone Plate vs RSO Rheometer vs RSX Coaxial Cylinder",
+            "description": "RSX Cone Plate method comparison: against RSO Rheometer and RSX Coaxial Cylinder Rheometer.",
+            "columns": [
+              { "label": "RSX Cone Plate", "highlight": true },
+              { "label": "RSO Rheometer", "highlight": false },
+              { "label": "RSX Coaxial Cylinder", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Geometry", "values": ["Cone/plate only", "Cone/plate and concentric cylinder", "Coaxial cylinder only"] },
+              { "feature": "Operating Modes", "values": ["Controlled shear rate (rpm) and controlled shear stress (torque), named explicitly", "Controlled shear stress/shear rate, oscillatory", "Controlled shear stress/shear rate"] },
+              { "feature": "Torque Motor", "values": ["200 mNm", "Not stated", "200 Nm"] },
+              { "feature": "Gap Setting", "values": ["Automatic, with standard one-piece spindles", "Automatic", "Not stated as a cone/plate-specific feature"] },
+              { "feature": "Temperature Control", "values": ["Peltier or fluid-heated", "Optional Peltier", "-20°C to 180°C, bath immersion or FTKY3"] },
+              { "feature": "Operation", "values": ["Touchscreen, standard", "Stand-alone touchscreen, optional Rheo3000 PC control", "Touchscreen, standard"] },
+              { "feature": "Construction", "values": ["Rugged, production floor rated", "Not specifically stated", "Rugged, production floor rated"] },
+              { "feature": "Best For", "values": ["Cone/plate testing needing both rate- and stress-controlled modes", "Dual-geometry flexibility with stand-alone simplicity", "High-torque or wide-temperature-range coaxial testing"] },
+              { "feature": "Choose when", "values": ["Cone/plate geometry with explicit dual-mode control is required", "Both cone/plate and concentric cylinder geometry are needed on one instrument", "The sample needs more torque or a wider temperature range than cone/plate typically requires"] }
+            ],
+            "disclaimer": "Note the torque figures across the RSX pair: this instrument states 200 mNm, while RSX Coaxial Cylinder states 200 Nm — a thousand-fold difference in stated unit, not a typo carried over from the source. Confirm directly with Brookfield or Inkarp before quoting torque capacity to a customer comparing the two."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "RSX Cone Plate industries: R&D and QC across formulation-driven sectors.",
+            "industries": [
+              { "name": "Coatings and Paints R&D", "icon": "droplet", "useCase": "Flow curve and yield stress characterization", "consideration": "Both controlled rate and controlled stress modes support varied protocols" },
+              { "name": "Cosmetics and Personal Care Formulation", "icon": "flask", "useCase": "Small-sample rheological analysis", "consideration": "Small sample volume suits limited-availability formulations" },
+              { "name": "Adhesives and Sealants", "icon": "zap", "useCase": "Tough sample testing under controlled conditions", "consideration": "200 mNm torque motor rated for resistant materials" },
+              { "name": "Pharmaceutical Formulation Development", "icon": "pill", "useCase": "Precise, protocol-driven rheological studies", "consideration": "Automatic gap setting supports consistent, repeatable setup" },
+              { "name": "Production QC Across Formulated Products", "icon": "target", "useCase": "Routine QC testing on the production floor", "consideration": "Rugged, production-floor-rated construction" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "RSX Cone Plate service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own materials under both controlled shear rate and controlled shear stress modes." },
+              { "title": "Configuration Assessment", "description": "Confirms operating mode, spindle set, and temperature control method." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with mode switching and automatic gap setting." },
+              { "title": "Preventive Maintenance", "description": "Maintains the torque motor, coupling system, and touchscreen performance." },
+              { "title": "Spares and Accessories", "description": "Supplies spindles, cones, plates, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the RSX Cone Plate Rheometer used for?", "answer": "It's used for precise, controlled shear rate and controlled shear stress measurements, suited to both sophisticated R&D rheological analysis and straightforward QC testing." },
+            { "question": "What operating modes does it support?", "answer": "Controlled shear rate (rpm) and controlled shear stress (torque), both named explicitly as distinct modes." },
+            { "question": "What is the torque motor rating?", "answer": "200 mNm, per the source specification — note this differs by three orders of magnitude from the 200 Nm stated for the RSX Coaxial Cylinder Rheometer; confirm before quoting." },
+            { "question": "How is the spindle gap set?", "answer": "Automatically, with standard one-piece spindles, eliminating manual adjustment." },
+            { "question": "How are spindles recognized?", "answer": "Via a barcode feature that automatically recognizes and sets the correct spindle." },
+            { "question": "What temperature control options are available?", "answer": "Peltier or fluid-heated, for fast and accurate temperature regulation." },
+            { "question": "Is it suitable for the production floor?", "answer": "Yes, Brookfield describes the design as rugged and built to withstand production floor demands." },
+            { "question": "How much sample does a test require?", "answer": "A small sample volume, allowing rapid setup and cleanup." },
+            { "question": "How is RSX Cone Plate different from RSO Rheometer?", "answer": "RSX Cone Plate supports cone/plate geometry only, with controlled shear rate and controlled shear stress named as distinct operating modes, Peltier or fluid-heated temperature control, and rugged production-floor construction. RSO supports both cone/plate and concentric cylinder geometry with stand-alone touchscreen operation and optional Rheo3000 PC control." },
+            { "question": "How is it different from RSX Coaxial Cylinder Rheometer?", "answer": "RSX Cone Plate uses cone/plate geometry with a 200 mNm torque motor; RSX Coaxial Cylinder uses coaxial cylinder geometry with a 200 Nm motor and a wider -20°C to 180°C temperature range with two control methods." },
+            { "question": "What is the price of the RSX Cone Plate Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the operating mode, spindle set, and temperature control method required." },
+            { "question": "Who is the authorized distributor of the RSX Cone Plate Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield RSX Cone Plate Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the RSX Cone Plate Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Controlled shear rate and controlled shear stress modes on cone/plate geometry, automatic gap setting, and a 200 mNm torque motor for tough samples. Share the test protocol and material type, and the right RSX Cone Plate configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the test protocol and material type, then confirm the right RSX Cone Plate configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "testProtocol", "label": "Test protocol (rate-controlled, stress-controlled, or both)", "type": "text", "required": false },
+              { "key": "materialType", "label": "Material type", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share whether the work needs controlled shear rate, controlled shear stress, or both, and the material toughness involved, and the right RSX Cone Plate configuration gets confirmed." },
+              { "title": "Confirm spindle compatibility", "body": "Share the spindle types currently in use, and compatibility with the automatic gap-setting feature gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Controlled shear rate and shear stress, cone/plate geometry, 200 mNm torque motor.",
+            "heroLead": "RSX Cone Plate Rheometer measures in two controlled modes: controlled shear rate (rpm) and controlled shear stress (torque). Brookfield positions it for both R&D rheological analysis and quality control testing. A quick connect coupling system attaches spindles, with a spindle barcode feature that automatically recognizes and sets the correct spindle. Automatic spindle gap setting works with standard one-piece spindles, removing manual adjustment. Temperature control offers rapid regulation through Peltier or fluid-heated options. The torque motor is rated at 200 mNm, described by Brookfield as capable of testing tough samples. Construction is described as rugged, built for production floor conditions.",
+            "stats": [
+              { "value": "2 modes", "label": "Controlled shear rate (rpm) and controlled shear stress (torque)" },
+              { "value": "200 mNm", "label": "Torque motor" },
+              { "value": "Cone/plate", "label": "Geometry" },
+              { "value": "Automatic", "label": "Spindle gap setting, with one-piece spindles" },
+              { "value": "Quick connect", "label": "Spindle coupling system" },
+              { "value": "Barcode", "label": "Automatic spindle recognition" },
+              { "value": "Small sample", "label": "Reduced volume requirement" },
+              { "value": "Peltier or fluid-heated", "label": "Temperature control options" },
+              { "value": "Rugged design", "label": "Built for production floor use" },
+              { "value": "Touchscreen", "label": "Large, user-friendly interface" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "RSX Cone Plate product information: dual operating modes, automatic setup, and temperature control.",
+                "body": [
+                  "Designed for precise, controlled shear rate (rpm) and controlled shear stress (torque) measurements.",
+                  "Positioned for both sophisticated R&D rheological analysis and straightforward quality control testing.",
+                  "Controlled shear stress/shear rate operation precisely analyzes flow behavior for detailed rheological studies.",
+                  "Large user-friendly touchscreen simplifies navigation of test parameters.",
+                  "Quick connect coupling system simplifies spindle attachment, reducing setup time and ensuring secure connections.",
+                  "Auto spindle recognition via barcode automatically recognizes and sets the correct spindle.",
+                  "Automatic spindle gap setting detects and adjusts the gap with standard one-piece spindles, eliminating manual adjustment.",
+                  "Small sample size testing enables rapid setup and cleanup, suited to labs with limited sample availability.",
+                  "Rapid temperature control is achieved through Peltier or fluid-heated options, for consistent test conditions.",
+                  "Rugged design built to withstand production floor demands, with durability and reliability in harsh environments.",
+                  "Increased torque motor rated at 200 mNm, capable of testing tough samples for comprehensive analysis across a wide range of materials."
+                ],
+                "cards": [
+                  { "title": "Two controlled modes", "description": "Shear rate and shear stress on the same instrument" },
+                  { "title": "Automatic gap setting", "description": "No manual adjustment with one-piece spindles" },
+                  { "title": "200 mNm torque motor", "description": "Rated for tough sample testing" },
+                  { "title": "Rugged, production floor rated", "description": "Built beyond standard lab-bench durability" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Key features of the Brookfield RSX Cone Plate Rheometer for controlled shear stress testing, automatic spindle detection, flexible temperature control, and reliable rheological measurement."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "RSX Cone Plate applications: R&D rheological analysis and quality control testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "RSX Cone Plate technical specifications: torque, geometry, and temperature control."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Controlled Shear Rate vs. Controlled Shear Stress",
+                "title": "Controlled Shear Rate vs. Controlled Shear Stress",
+                "description": "Why having both modes on one instrument matters.",
+                "body": [
+                  "Some rheological questions are best answered by fixing the shear rate and observing how stress responds; others need the reverse — fixing shear stress and observing the resulting shear rate, particularly around yield behavior. RSX Cone Plate runs both: controlled shear rate (rpm) and controlled shear stress (torque), named explicitly as distinct operating modes rather than one general controlled-shear description.",
+                  "That distinction matters for method design. A test protocol built around controlled stress — common for yield stress work — and one built around controlled rate — common for standard flow curve generation — can both run on the same instrument without switching hardware, only the operating mode."
+                ],
+                "utilityChecklist": [
+                  { "label": "Controlled shear rate testing", "value": "Named operating mode (rpm)" },
+                  { "label": "Controlled shear stress testing", "value": "Named operating mode (torque)" },
+                  { "label": "Both methods without changing instruments", "value": "Both modes on the same platform" },
+                  { "label": "Precise flow behavior analysis", "value": "Detailed rheological study support in either mode" }
+                ],
+                "disclaimer": "Share which test protocols the work follows — rate-controlled or stress-controlled — and the right mode configuration gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Automatic Gap Setting with One-Piece Spindles",
+                "title": "Automatic Gap Setting with One-Piece Spindles",
+                "description": "What removing manual adjustment changes.",
+                "cards": [
+                  { "title": "Accurate gap without manual calibration", "description": "Automatic spindle gap setting, one-piece spindles." },
+                  { "title": "Confidence the right spindle is loaded", "description": "Barcode-based auto spindle recognition." },
+                  { "title": "Fast physical attachment", "description": "Quick connect coupling system." },
+                  { "title": "Setup consistency across operators", "description": "Automation removing operator-dependent steps." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the RSX Cone Plate is available on request.",
+                "cards": [
+                  { "title": "RSX Cone Plate Specification Sheet", "description": "Available on request" },
+                  { "title": "Torque Motor Rating Confirmation (mNm)", "description": "Available on request" },
+                  { "title": "Peltier and Fluid-Heated Temperature Control Details", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the RSX Cone Plate Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Controlled shear rate and controlled shear stress modes on cone/plate geometry, automatic gap setting, and a 200 mNm torque motor for tough samples. Share the test protocol and material type, and the right RSX Cone Plate configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "RSX SST Rheometer",
+          "slug": "rsx-sst-rheometer",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield RSX SST Rheometer - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/rsx-sst-rheometer",
+          "breadcrumbPath": "Home > Products > Rheometers > RSX SST Rheometer",
+          "h1": "RSX SST Rheometer",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "RSX SST Rheometer is built specifically for testing pastes, slurries, and soft solids — materials that fixed cone/plate or coaxial cylinder geometry can struggle with, either through slippage at the sample surface or migration of the sample out of the measuring gap. Brookfield names creep analysis, yield stress determination, and viscosity profiling as the instrument's core measurements, running in both controlled shear rate (rpm) and controlled shear stress (torque) modes.",
+
+          "features": [
+            "Designed for Soft Solids: Vane and cross-hatch geometries help minimize sample slip when measuring pastes, gels, creams, and other non-flowing materials.",
+            "Purpose-Built Geometry: The RSX SST uses measurement geometries developed specifically for soft solids, rather than adapting standard rheometer geometries for the application.",
+            "Creep Analysis: Evaluate how soft materials deform over time alongside yield stress and viscosity measurements for a more complete material profile.",
+            "Automated Measurement Workflow: Quick-connect tooling, barcode recognition, and automatic gap setting simplify setup and support repeatable measurements across routine testing."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield RSX SST Rheometer" },
+            { "label": "Category", "value": "Rheometers" },
+            { "label": "Instrument Type", "value": "Soft-Solids Tester (SST)" },
+            { "label": "Geometry", "value": "Vane and cross-hatch spindles" },
+            { "label": "Operating Modes", "value": "Controlled shear rate (rpm), controlled shear stress (torque)" },
+            { "label": "Core Measurements", "value": "Creep analysis, yield stress determination, viscosity profiling" },
+            { "label": "Spindle Coupling", "value": "Quick connect" },
+            { "label": "Spindle Identification", "value": "Automatic, via barcode recognition" },
+            { "label": "Gap Setting", "value": "Automatic" },
+            { "label": "Interface", "value": "Large touchscreen, user-friendly" },
+            { "label": "Temperature Control", "value": "Peltier or fluid-heated options" },
+            { "label": "Sample Volume", "value": "Small" },
+            { "label": "Construction", "value": "Rugged, production floor rated" }
+          ],
+
+          "applications": [
+            "Paste and Slurry Viscosity Testing: Vane and cross-hatch geometry minimizes slippage in non-flowing materials.",
+            "Creep Analysis: Named core capability for deformation-under-stress behavior.",
+            "Yield Stress Determination: Controlled shear stress mode for structured material characterization.",
+            "Viscosity Profiling of Soft Solids: Comprehensive testing across the material's viscosity range.",
+            "R&D Material Characterization: Controlled shear rate and shear stress modes for detailed studies.",
+            "Production QC on Structured Formulations: Rugged construction suited to production floor testing.",
+            "Limited-Sample Soft-Solid Testing: Small sample volume for rapid setup and cleanup."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Geometry Selector" },
+            { "id": "config", "label": "Measurement Selector" },
+            { "id": "temperature-control-environment-checker", "label": "Temp & Environment" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Measurement Types" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the material need vane or cross-hatch geometry?",
+            "description": "Select the material type and slippage tendency, and see the recommended geometry.",
+            "fields": [
+              {
+                "key": "materialType",
+                "label": "Material type",
+                "options": [
+                  { "val": "paste", "label": "Paste" },
+                  { "val": "slurry", "label": "Slurry" },
+                  { "val": "soft-solid", "label": "Soft solid" },
+                  { "val": "standard-fluid", "label": "Standard fluid" }
+                ]
+              },
+              {
+                "key": "slippageTendency",
+                "label": "Slippage tendency",
+                "options": [
+                  { "val": "known-to-slip", "label": "Known to slip against smooth surfaces" },
+                  { "val": "unknown", "label": "Unknown" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "slippageTendency": "known-to-slip" },
+                "title": "Vane or Cross-Hatch Geometry Fits",
+                "body": "Materials known to slip against smooth surfaces are exactly what vane and cross-hatch geometry are designed to address.",
+                "tags": ["Slip-Resistant Geometry"]
+              },
+              {
+                "condition": { "materialType": "soft-solid" },
+                "title": "Purpose-Built Geometry Confirmed",
+                "body": "Soft solids are the material class RSX SST's vane and cross-hatch geometries were purpose-built for, rather than adapting a standard spindle.",
+                "tags": ["Soft Solid"]
+              },
+              {
+                "condition": { "materialType": "standard-fluid" },
+                "title": "Confirm Whether RSX SST Is Needed",
+                "body": "Standard fluids without slippage tendencies may be better served by RSO or another RSX instrument — share the material behavior to confirm.",
+                "tags": ["Standard Fluid"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Geometry Fit",
+                "body": "Share the material type and slippage behavior, and the recommended vane or cross-hatch spindle configuration gets confirmed.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Creep, yield stress, or viscosity profiling?",
+            "description": "Select the primary measurement need and test control preference, and see the recommended operating mode.",
+            "steps": [
+              {
+                "key": "primaryMeasurement",
+                "question": "What's the primary measurement need?",
+                "options": [
+                  { "val": "creep", "label": "Creep analysis" },
+                  { "val": "yield-stress", "label": "Yield stress" },
+                  { "val": "viscosity-profile", "label": "Viscosity profile" }
+                ]
+              },
+              {
+                "key": "testControlPreference",
+                "question": "What's the test control preference?",
+                "options": [
+                  { "val": "rate-controlled", "label": "Rate-controlled (rpm)" },
+                  { "val": "stress-controlled", "label": "Stress-controlled (torque)" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the application context (R&D characterization or production QC), and the operating mode and test protocol get recommended against the primary measurement need.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "planners": [
+            {
+              "sectionId": "temperature-control-environment-checker",
+              "eyebrow": "Temperature Control and Environment Checker",
+              "title": "What temperature control and testing environment apply?",
+              "description": "Select the temperature control preference and testing location, and see the recommended setup.",
+              "fields": [
+                { "key": "choices", "label": "Choose one" }
+              ],
+              "options": [
+                { "title": "Temperature control need", "choices": "Peltier; Fluid-heated" },
+                { "title": "Testing environment", "choices": "Standard lab bench; Production floor" },
+                { "title": "Existing fluid-heating setup", "choices": "Available; None" }
+              ],
+              "disclaimer": "Confirms temperature control method and construction fit, then routes to an environment-specific quotation."
+            }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Brookfield's rheometer range",
+            "title": "RSX SST vs RSX Cone Plate vs RSX Coaxial Cylinder vs RSO Rheometer",
+            "description": "RSX SST method comparison: against the full RSX and RSO range.",
+            "columns": [
+              { "label": "RSX SST", "highlight": true },
+              { "label": "RSX Cone Plate", "highlight": false },
+              { "label": "RSX Coaxial Cylinder", "highlight": false },
+              { "label": "RSO Rheometer", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Geometry", "values": ["Vane, cross-hatch", "Cone/plate", "Coaxial cylinder", "Cone/plate, concentric cylinder"] },
+              { "feature": "Best Suited Material", "values": ["Pastes, slurries, soft solids", "Standard fluids and structured samples", "Fluids, including low-viscosity precision work", "Fluids across both geometries"] },
+              { "feature": "Operating Modes", "values": ["Controlled shear rate and shear stress", "Controlled shear rate and shear stress", "Controlled shear stress/shear rate", "Controlled shear stress/shear rate, oscillatory"] },
+              { "feature": "Torque Motor", "values": ["Not separately stated", "200 mNm", "200 Nm", "Not stated"] },
+              { "feature": "Core Named Measurements", "values": ["Creep, yield stress, viscosity profiling", "Not named as distinctly", "Viscosity profiling, thixotropy, yield stress, creep", "Static yield, flow curves, viscoelastic behavior"] },
+              { "feature": "Temperature Control", "values": ["Peltier or fluid-heated", "Peltier or fluid-heated", "-20°C to 180°C, bath or FTKY3", "Optional Peltier"] },
+              { "feature": "Construction", "values": ["Rugged, production floor rated", "Rugged, production floor rated", "Rugged, production floor rated", "Not specifically stated"] },
+              { "feature": "Best For", "values": ["Non-flowing, structured, or slip-prone materials", "Cone/plate testing with dual-mode control", "High-torque or wide-temperature coaxial testing", "Standard-condition dual-geometry testing, stand-alone operation"] },
+              { "feature": "Choose when", "values": ["The sample is a paste, slurry, or soft solid that slips on smooth geometry", "Standard fluid rheology on cone/plate geometry", "The sample needs high torque or a wide temperature range", "Flexibility across two geometries with simple stand-alone operation"] }
+            ],
+            "disclaimer": "RSX SST is the material-specific member of Brookfield's rheometer range — where the other three are differentiated mainly by geometry, torque, and temperature range for generally flowable materials, RSX SST exists because pastes and soft solids fail on those geometries in a specific, identifiable way (slippage), and the vane/cross-hatch design is the direct answer to that failure mode."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "RSX SST industries: formulated pastes, slurries, and structured product manufacturing.",
+            "industries": [
+              { "name": "Cosmetics and Personal Care", "icon": "flask", "useCase": "Cream, paste, and gel formulation characterization", "consideration": "Vane/cross-hatch geometry avoids slippage artifacts on structured formulations" },
+              { "name": "Food and Beverage", "icon": "coffee", "useCase": "Sauce, paste, and slurry consistency testing", "consideration": "Small sample volume suits formulation-stage testing" },
+              { "name": "Pharmaceutical Formulation", "icon": "pill", "useCase": "Semi-solid and paste dosage form characterization", "consideration": "Creep and yield stress data support formulation stability studies" },
+              { "name": "Adhesives and Sealants", "icon": "zap", "useCase": "Structured, non-flowing product testing", "consideration": "Yield stress determination relevant to application behavior" },
+              { "name": "Mining and Mineral Processing", "icon": "shield", "useCase": "Slurry viscosity and yield stress testing", "consideration": "Rugged construction suited to production floor environments" },
+              { "name": "Batteries and Electrode Slurries", "icon": "cpu", "useCase": "Paste and slurry rheology for coating processes", "consideration": "Vane geometry addresses the same slip-prone material class" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "RSX SST service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own pastes, slurries, or soft-solid samples to show slippage-resistant measurement." },
+              { "title": "Configuration Assessment", "description": "Confirms vane or cross-hatch spindle, operating mode, and temperature control." },
+              { "title": "Installation Support", "description": "Supports setup, calibration, and first-run checks." },
+              { "title": "Operator Training", "description": "Builds confidence with mode switching and spindle geometry selection." },
+              { "title": "Preventive Maintenance", "description": "Maintains the coupling system, spindles, and touchscreen performance." },
+              { "title": "Spares and Accessories", "description": "Supplies vane spindles, cross-hatch spindles, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the RSX SST Rheometer used for?", "answer": "It's a Soft-Solids Tester for characterizing pastes, slurries, and soft solid materials, measuring creep, yield stress, and viscosity profile." },
+            { "question": "Why does it use vane and cross-hatch geometry instead of standard spindles?", "answer": "Standard smooth cone/plate or cylinder geometry can allow soft-solid or paste-like samples to slip at the measuring surface rather than shear internally, corrupting the measurement. Vane and cross-hatch geometry are used specifically to minimize that slippage." },
+            { "question": "What operating modes does it support?", "answer": "Controlled shear rate (rpm) and controlled shear stress (torque)." },
+            { "question": "What are the core measurement types?", "answer": "Creep analysis, yield stress determination, and viscosity profiling." },
+            { "question": "How is the spindle gap set?", "answer": "Automatically, removing manual adjustment." },
+            { "question": "How are spindles recognized?", "answer": "Via barcode, automatically identifying and setting the correct spindle configuration." },
+            { "question": "What temperature control options are available?", "answer": "Peltier or fluid-heated." },
+            { "question": "Is it suitable for the production floor?", "answer": "Yes, described as rugged and built to withstand production floor demands while maintaining precision." },
+            { "question": "How much sample does a test require?", "answer": "A small sample volume, supporting rapid setup and cleanup." },
+            { "question": "How is RSX SST different from RSX Cone Plate or RSX Coaxial Cylinder?", "answer": "RSX SST uses vane and cross-hatch geometry specifically for soft solids, pastes, and slurries, where slippage is a problem on smooth cone/plate or cylinder geometry. RSX Cone Plate and RSX Coaxial Cylinder are built for standard flowable materials, with torque motors stated at 200 mNm and 200 Nm respectively." },
+            { "question": "How is RSX SST different from RSO Rheometer?", "answer": "RSO supports cone/plate and concentric cylinder geometry with stand-alone touchscreen operation, suited to standard-condition fluids. RSX SST is purpose-built with vane and cross-hatch geometry specifically for materials that slip on those standard geometries." },
+            { "question": "What is the price of the RSX SST Rheometer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the spindle geometry and temperature control method required." },
+            { "question": "Who is the authorized distributor of the RSX SST Rheometer in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield RSX SST Rheometer in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the RSX SST Rheometer in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Vane and cross-hatch geometry built for pastes and soft solids, creep, yield stress, and viscosity profiling on one instrument, in both controlled shear rate and shear stress modes. Share the material consistency and slippage behavior, and the right RSX SST configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the material consistency and slippage behavior, then confirm the right RSX SST configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "materialConsistency", "label": "Material consistency (paste, slurry, or soft solid)", "type": "text", "required": false },
+              { "key": "slippageBehavior", "label": "Slippage behavior against smooth surfaces", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right spindle geometry", "body": "Share the material consistency (paste, slurry, or soft solid) and whether creep, yield stress, or viscosity profiling is the primary test requirement, and the right spindle geometry gets confirmed." },
+              { "title": "Confirm the right test method", "body": "Share which of creep, yield stress, or viscosity profiling matters most for the material programme, and the right test method gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Soft-solids tester, controlled shear rate and shear stress, vane and cross-hatch geometry.",
+            "heroLead": "RSX SST Rheometer is built specifically for testing pastes, slurries, and soft solids — materials that fixed cone/plate or coaxial cylinder geometry can struggle with, either through slippage at the sample surface or migration of the sample out of the measuring gap. Brookfield names creep analysis, yield stress determination, and viscosity profiling as the instrument's core measurements, running in both controlled shear rate (rpm) and controlled shear stress (torque) modes. Vane and cross-hatch spindle geometries are used specifically to minimize slippage in soft-solid and paste-like samples. A quick connect coupling system attaches spindles, with automatic gap setting and spindle barcode recognition. Temperature control runs through Peltier or fluid-heated options. Construction is described as rugged, built for production floor conditions, with a large touchscreen interface.",
+            "stats": [
+              { "value": "Vane + cross-hatch", "label": "Spindle geometries for slip-resistant testing" },
+              { "value": "2 modes", "label": "Controlled shear rate (rpm) and controlled shear stress (torque)" },
+              { "value": "Creep, yield stress, viscosity", "label": "Core measurement types" },
+              { "value": "Automatic", "label": "Spindle gap setting" },
+              { "value": "Quick connect", "label": "Spindle coupling system" },
+              { "value": "Barcode", "label": "Automatic spindle recognition" },
+              { "value": "Peltier or fluid-heated", "label": "Temperature control options" },
+              { "value": "Small sample", "label": "Reduced volume requirement" },
+              { "value": "Rugged design", "label": "Built for production floor use" },
+              { "value": "Touchscreen", "label": "Large, user-friendly interface" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "RSX SST product information: soft-solid geometry, dual operating modes, and construction.",
+                "body": [
+                  "Advanced Soft-Solids Tester (SST) engineered for precise characterization of soft solid materials, including pastes and slurries.",
+                  "Comprehensive testing capabilities cover creep, yield stress, and viscosity profile analysis for detailed insight into material behavior.",
+                  "Controlled shear rate (rpm) and controlled shear stress (torque) operating modes support both R&D and QC testing approaches.",
+                  "Large user-friendly touchscreen simplifies test setup and navigation.",
+                  "Quick connect coupling system enables fast, secure spindle attachment.",
+                  "Auto spindle recognition via barcode automatically identifies and sets the correct spindle configuration.",
+                  "Automatic spindle gap setting removes manual adjustment for consistent setup.",
+                  "Vane and cross-hatch spindle geometries are used specifically to minimize slippage in soft-solid and paste-like samples.",
+                  "Small sample size testing supports rapid setup and cleanup, suited to limited sample availability.",
+                  "Rapid temperature control is achieved through Peltier or fluid-heated options.",
+                  "Rugged design built to withstand production floor demands while maintaining measurement precision."
+                ],
+                "cards": [
+                  { "title": "Vane and cross-hatch geometry", "description": "Minimizes slippage specific to soft solids and pastes" },
+                  { "title": "Creep, yield stress, viscosity", "description": "Three core measurement types on one instrument" },
+                  { "title": "Two controlled modes", "description": "Shear rate and shear stress operation" },
+                  { "title": "Rugged, production floor rated", "description": "Built beyond standard lab-bench durability" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Key features of the Brookfield RSX SST Soft Solids Tester for precise soft-solid rheology and material characterization."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "RSX SST applications: pastes, slurries, and soft-solid material testing."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "RSX SST technical specifications: geometry, operating modes, and construction."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Why Vane and Cross-Hatch Geometry",
+                "title": "Why Vane and Cross-Hatch Geometry",
+                "description": "The slippage problem this design solves.",
+                "body": [
+                  "Standard cone/plate or smooth cylinder geometry works because the sample shears cleanly against the measuring surface. Pastes, slurries, and soft solids often don't behave that way — instead of shearing internally, the material slips at the surface of a smooth spindle or plate, which corrupts the measurement without necessarily looking wrong to the operator.",
+                  "RSX SST addresses that specifically with vane and cross-hatch spindle geometries, described by Brookfield as used specifically to minimize slippage in soft-solid and paste-like samples. A vane geometry effectively traps material between its blades so the sample shears against itself rather than against a smooth surface; cross-hatch geometry provides a textured surface with the same intent."
+                ],
+                "utilityChecklist": [
+                  { "label": "Shear happening within the sample, not at its surface", "value": "Vane geometry, minimizing slippage" },
+                  { "label": "An alternative textured-surface option", "value": "Cross-hatch geometry" },
+                  { "label": "Accurate results on non-flowing materials", "value": "Purpose-built geometry rather than adapted smooth-surface spindles" },
+                  { "label": "Confidence the reading reflects the material, not an artifact", "value": "Slippage-resistant design" }
+                ],
+                "disclaimer": "Share the material consistency and whether it tends to slip against smooth surfaces during handling, and the right vane or cross-hatch spindle gets confirmed."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Creep, Yield Stress, and Viscosity Profiling",
+                "title": "Creep, Yield Stress, and Viscosity Profiling",
+                "description": "What the three core measurement types cover.",
+                "cards": [
+                  { "title": "Deformation-under-load behavior", "description": "Creep analysis, named core capability." },
+                  { "title": "The stress at which flow begins", "description": "Yield stress determination." },
+                  { "title": "How viscosity changes with shear", "description": "Viscosity profile analysis." },
+                  { "title": "Method flexibility across these tests", "description": "Both controlled shear rate and shear stress modes." }
+                ]
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the RSX SST is available on request.",
+                "cards": [
+                  { "title": "RSX SST Specification Sheet", "description": "Available on request" },
+                  { "title": "Vane and Cross-Hatch Spindle Guide", "description": "Available on request" },
+                  { "title": "Creep, Yield Stress, and Viscosity Test Method Overview", "description": "Available on request" },
+                  { "title": "Related Accessories Catalogue", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the RSX SST Rheometer in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Vane and cross-hatch geometry built for pastes and soft solids, creep, yield stress, and viscosity profiling on one instrument, in both controlled shear rate and shear stress modes. Share the material consistency and slippage behavior, and the right RSX SST configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -107,6 +107,11 @@ import watersChromatographyAndLcMsSystemsCatalog from "./waters/chromatography-a
 import watersLcMsSystemsHighSensitivityRegulatoryCompliantCatalog from "./waters/lc-ms-systems-high-sensitivity-regulatory-compliant.json";
 import watersUplcCatalog from "./waters/uplc.json";
 import ametekBrookfieldLaboratoryViscometersCatalog from "./ametek-brookfield/laboratory-viscometers.json";
+import ametekBrookfieldMoistureAnalyzersCatalog from "./ametek-brookfield/moisture-analyzers.json";
+import ametekBrookfieldPowderFlowTestersCatalog from "./ametek-brookfield/powder-flow-testers.json";
+import ametekBrookfieldRheometersCatalog from "./ametek-brookfield/rheometers.json";
+import ametekBrookfieldSoftwareDataAnalysisCatalog from "./ametek-brookfield/software-data-analysis.json";
+import ametekBrookfieldTextureAnalyzersCatalog from "./ametek-brookfield/texture-analyzers.json";
 import buchiFreezeDryerLyophilizerCatalog from "./buchi/freeze-dryer-lyophilizer.json";
 import nanosurfResearchCatalog from "./nanosurf/research.json";
 import nanosurfAdvancedResearchCatalog from "./nanosurf/advanced-research.json";
@@ -237,6 +242,11 @@ const principalCatalogs = [
   watersLcMsSystemsHighSensitivityRegulatoryCompliantCatalog,
   watersUplcCatalog,
   ametekBrookfieldLaboratoryViscometersCatalog,
+  ametekBrookfieldMoistureAnalyzersCatalog,
+  ametekBrookfieldPowderFlowTestersCatalog,
+  ametekBrookfieldRheometersCatalog,
+  ametekBrookfieldSoftwareDataAnalysisCatalog,
+  ametekBrookfieldTextureAnalyzersCatalog,
   buchiFreezeDryerLyophilizerCatalog,
   nanosurfResearchCatalog,
   nanosurfAdvancedResearchCatalog,

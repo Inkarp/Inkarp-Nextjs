@@ -1,0 +1,273 @@
+{
+  "principal": {
+    "slug": "ametek-brookfield",
+    "principalName": "Ametek Brookfield",
+    "countryOfOrigin": "United States of America"
+  },
+  "categories": [
+    {
+      "name": "Software / Data Analysis",
+      "slug": "software-data-analysis",
+      "products": [
+        {
+          "name": "DV360 Software",
+          "slug": "dv360-software",
+          "principalImage": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+          "imageAlt": "Ametek Brookfield DV360 Software - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/dv360-software",
+          "breadcrumbPath": "Home > Products > Software / Data Analysis > DV360 Software",
+          "h1": "DV360 Software",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Running a viscometer well is one skill. Managing the data that comes out of it, consistently, compliantly, across a whole fleet, is another. DV360 handles the second part. It comes in two versions: Standard, for labs that need reliable data capture and analysis, and 21 CFR Part 11 Advanced, for labs that need electronic signatures, audit trails, and secure data management on top of that.",
+
+          "features": [
+            "Two Tiers, One Clear Decision: Standard for general viscosity testing, Advanced specifically for regulated environments needing 21 CFR Part 11.",
+            "Cross-Instrument Integration: Confirmed to work across DV2Plus and the full DVNext Rheometer range, rather than being locked to one solution.",
+            "21 CFR Part 11 Compliance on Demand: Available specifically on the Advanced tier, not bundled into every license.",
+            "Detailed Capability Breakdown: Workflow automation, reporting, and data export formats — not confirmed in this source, available on request."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Ametek Brookfield DV360 Software" },
+            { "label": "Category", "value": "Software / Data Analysis" },
+            { "label": "Tiers", "value": "Standard, 21 CFR Part 11 Advanced" },
+            { "label": "Confirmed Compatible Solutions", "value": "DV2Plus, DVNext Rheometer, DVNext Rheometer with Gel Timer Functionality, DVNext Cone/Plate Rheometer" },
+            { "label": "Compliance (Advanced Tier)", "value": "21 CFR Part 11" },
+            { "label": "System Requirements, Licensing Model, Data Export Formats, Connectivity Protocols", "value": "Not confirmed in this source, available on request" }
+          ],
+
+          "applications": [
+            "Standardizing Data Across a Brookfield Fleet: One software layer across DV2Plus and DVNext solutions.",
+            "Regulated Pharmaceutical QC: 21 CFR Part 11 Advanced tier, electronic signatures and audit trails.",
+            "Regulated Chemical QC: Same Advanced tier compliance features.",
+            "General R&D Viscosity Testing: Standard tier for labs without a compliance requirement.",
+            "Multi-Instrument Method Consistency: Shared software environment across connected solutions."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Tier Selector" },
+            { "id": "config", "label": "Fleet Checker" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "Does the workflow need 21 CFR Part 11 compliance?",
+            "description": "Select the regulatory context and audit trail requirement, and see which tier fits.",
+            "fields": [
+              {
+                "key": "regulatoryContext",
+                "label": "Regulatory context",
+                "options": [
+                  { "val": "rd-research", "label": "R&D / research use" },
+                  { "val": "regulated-qc", "label": "Regulated QC release testing" }
+                ]
+              },
+              {
+                "key": "auditTrailRequirement",
+                "label": "Audit trail requirement",
+                "options": [
+                  { "val": "not-required", "label": "Not required" },
+                  { "val": "required", "label": "Electronic signatures/audit trail needed" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "regulatoryContext": "regulated-qc" },
+                "title": "21 CFR Part 11 Advanced Fits",
+                "body": "Regulated QC release testing is exactly what the Advanced tier's electronic signatures and audit trails are built for.",
+                "tags": ["21 CFR Part 11 Advanced"]
+              },
+              {
+                "condition": { "auditTrailRequirement": "required" },
+                "title": "Advanced Tier Required",
+                "body": "Electronic signatures and audit trail requirements place the workflow on the 21 CFR Part 11 Advanced tier.",
+                "tags": ["Audit Trail Required"]
+              },
+              {
+                "condition": { "regulatoryContext": "rd-research" },
+                "title": "Standard Tier Likely Fits",
+                "body": "R&D and research use without regulatory documentation needs is generally covered by the Standard tier.",
+                "tags": ["Standard Tier"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Tier Fit",
+                "body": "Share the regulatory context and audit trail requirement, and Standard or 21 CFR Part 11 Advanced gets recommended.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "configWizard": {
+            "title": "Which Brookfield solutions does the lab already run?",
+            "description": "Select the solutions in use, and confirm DV360 compatibility.",
+            "steps": [
+              {
+                "key": "solutionsInFleet",
+                "question": "Which solutions are in the fleet?",
+                "options": [
+                  { "val": "dv2plus", "label": "DV2Plus" },
+                  { "val": "dvnext-rheometer", "label": "DVNext Rheometer" },
+                  { "val": "dvnext-cone-plate", "label": "DVNext Cone/Plate" },
+                  { "val": "other", "label": "Other Brookfield solutions" }
+                ]
+              },
+              {
+                "key": "numberOfSolutions",
+                "question": "How many solutions need to connect?",
+                "options": [
+                  { "val": "single", "label": "Single instrument" },
+                  { "val": "multiple", "label": "Multiple across the lab" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Confirmed compatibility covers DV2Plus, DVNext Rheometer, DVNext Rheometer with Gel Timer Functionality, and DVNext Cone/Plate Rheometer — share any other Brookfield solutions in the fleet to confirm fit beyond that list.",
+              "ctaLabel": "Talk to Product Expert"
+            }
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "DV360 software service in India: licensing, installation, and support.",
+            "supportAreas": [
+              { "title": "Tier Selection Support", "description": "Confirms Standard versus Advanced against the regulatory context." },
+              { "title": "Fleet Compatibility Assessment", "description": "Confirms which connected Brookfield solutions the license covers." },
+              { "title": "Installation Support", "description": "Software setup and integration with existing solutions." },
+              { "title": "Compliance Setup", "description": "Configures 21 CFR Part 11 features on the Advanced tier." },
+              { "title": "Operator Training", "description": "Software navigation and routine workflow." },
+              { "title": "Service Support", "description": "Troubleshooting and ongoing licensing support." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is DV360 Software used for?", "answer": "It's viscosity measurement automation software that integrates with Ametek Brookfield instruments to simplify and optimize testing." },
+            { "question": "What is the difference between Standard and 21 CFR Part 11 Advanced?", "answer": "Standard covers general viscosity testing. Advanced adds 21 CFR Part 11 compliance, electronic signatures, and audit trails for regulated environments." },
+            { "question": "Which Brookfield solutions does DV360 work with?", "answer": "Confirmed integration with DV2Plus, DVNext Rheometer, DVNext Rheometer with Gel Timer Functionality, and DVNext Cone/Plate Rheometer." },
+            { "question": "Is 21 CFR Part 11 compliance included in every license?", "answer": "No, only on the Advanced tier." },
+            { "question": "Where can I find a full feature list?", "answer": "A detailed feature breakdown, screenshots, and system requirements weren't confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield." },
+            { "question": "What is the price of DV360 Software in India?", "answer": "Get in touch and Inkarp will quote based on the tier and number of connected solutions." },
+            { "question": "Who is the authorized distributor of DV360 Software in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield DV360 Software in India, licensing, installation, training, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get DV360 Software in India from Inkarp",
+            "description": "Authorized distributor and service provider. Licensing, installation, and technical support. Two tiers, one shared software layer across the Brookfield fleet, with 21 CFR Part 11 compliance available where regulated work requires it. Share which solutions are in the fleet and whether compliance documentation is required, and the right DV360 tier gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the fleet and compliance requirements, then confirm the right DV360 tier.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "solutionsInFleet", "label": "Brookfield solutions already in the fleet", "type": "text", "required": false },
+              { "key": "complianceDocumentationRequired", "label": "Is compliance documentation required?", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right tier", "body": "Share which Brookfield solutions are already in the fleet and whether 21 CFR Part 11 compliance is required, and the right DV360 tier gets confirmed." },
+              { "title": "Confirm the compliance fit", "body": "Share whether the testing feeds a regulated release decision, and the Standard-versus-Advanced choice gets confirmed against the actual workflow." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing licensing support." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Two tiers. One goal: simplify and optimize viscosity testing across the Brookfield range.",
+            "heroLead": "Running a viscometer well is one skill. Managing the data that comes out of it, consistently, compliantly, across a whole fleet, is another. DV360 handles the second part. It comes in two versions: Standard, for labs that need reliable data capture and analysis, and 21 CFR Part 11 Advanced, for labs that need electronic signatures, audit trails, and secure data management on top of that. DV360 integrates directly with Ametek Brookfield instruments, DV2Plus and the DVNext Rheometer range among them, giving those solutions a shared software layer for advanced viscosity testing beyond what an on-instrument touchscreen alone provides. What it simplifies: viscosity test setup and execution across the Brookfield fleet. What it adds: 21 CFR Part 11 compliance, where the Advanced tier is selected. Where it fits: any lab standardizing data management across multiple Brookfield solutions.",
+            "stats": [
+              { "value": "2 tiers", "label": "Standard, and 21 CFR Part 11 Advanced" },
+              { "value": "Compliance-ready", "label": "21 CFR Part 11, on the Advanced tier" },
+              { "value": "Integrates with", "label": "DV2Plus, DVNext Rheometer range, and other Brookfield solutions" },
+              { "value": "Fleet-wide", "label": "One software layer across multiple instruments" },
+              { "value": "Detailed feature list, screenshots, system requirements", "label": "Not confirmed in this source, available on request" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "DV360 software product information: tier structure and instrument integration.",
+                "body": [
+                  "Viscosity measurement automation software. Integrates with Ametek Brookfield solutions to simplify and optimize testing.",
+                  "Two versions available. Standard, and 21 CFR Part 11 Advanced.",
+                  "21 CFR Part 11 compliance on the Advanced tier. Relevant for regulated pharmaceutical and chemical QC environments.",
+                  "Confirmed integration with DV2Plus. Advanced viscosity testing beyond the instrument's own touchscreen.",
+                  "Confirmed integration with the DVNext Rheometer range. Compliance and data management features referenced directly on DVNext's own product pages.",
+                  "Positioned as a shared software layer. One data and compliance environment across multiple Brookfield solutions, not tied to a single instrument."
+                ],
+                "cards": [
+                  { "title": "2 tiers", "description": "Standard testing, or full regulated compliance" },
+                  { "title": "Fleet-wide integration", "description": "One software layer across multiple Brookfield solutions" },
+                  { "title": "21 CFR Part 11 Advanced", "description": "Electronic signatures and audit trails where required" },
+                  { "title": "Confirmed on DV2Plus and DVNext", "description": "Not a standalone product, a shared layer across the range" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "DV360 software key features: what's confirmed as distinct between the two tiers."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "DV360 software applications: fleet-wide viscosity testing and regulated QC."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "DV360 software technical specifications: confirmed tier structure and integration."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Standard vs. 21 CFR Part 11 Advanced",
+                "title": "Standard vs. 21 CFR Part 11 Advanced",
+                "description": "The core choice this software presents.",
+                "body": [
+                  "Not every lab needs an electronic audit trail. Every regulated lab does. DV360 splits along that exact line rather than forcing every customer into the same feature set.",
+                  "Standard covers general viscosity testing, connected to the Brookfield instrument it's paired with, giving labs advanced testing capability beyond what an on-instrument touchscreen alone delivers. The 21 CFR Part 11 Advanced tier adds what regulated environments specifically require, referenced on DV2Plus's own product page as covering electronic compliance for pharmaceutical and chemical QC work."
+                ],
+                "utilityChecklist": [
+                  { "label": "General viscosity testing, no compliance requirement", "value": "Standard" },
+                  { "label": "Electronic signatures and audit trails", "value": "21 CFR Part 11 Advanced" },
+                  { "label": "Regulated pharmaceutical or chemical QC", "value": "21 CFR Part 11 Advanced" },
+                  { "label": "R&D work without regulatory documentation needs", "value": "Standard" }
+                ],
+                "disclaimer": "Share whether the testing feeds a regulated release decision, and the Standard-versus-Advanced choice gets confirmed against the actual workflow."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "DV360 software documentation: detailed feature list, licensing, and system requirements, available on request.",
+                "cards": [
+                  { "title": "DV360 Full Feature and Capability Sheet", "description": "Not confirmed in this source, available on request" },
+                  { "title": "Licensing and Pricing Structure", "description": "Available on request" },
+                  { "title": "System Requirements", "description": "Not confirmed in this source, available on request" },
+                  { "title": "21 CFR Part 11 Advanced Compliance Details", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get DV360 Software in India from Inkarp",
+              "description": "Authorized distributor and service provider. Licensing, installation, and technical support. Two tiers, one shared software layer across the Brookfield fleet, with 21 CFR Part 11 compliance available where regulated work requires it. Share which solutions are in the fleet and whether compliance documentation is required, and the right DV360 tier gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

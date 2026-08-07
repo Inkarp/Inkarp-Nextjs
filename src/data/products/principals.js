@@ -1,6 +1,7 @@
 import {
     getProductDetailByPrincipalAndSlug,
     getProductDetailBySlug,
+    productDetails,
 } from "./productDetails";
 import {
     getJsonCatalogPrincipalBySlug,
@@ -26,6 +27,22 @@ function toArray(value) {
     }
 
     return Array.isArray(value) ? value.filter(Boolean) : [value];
+}
+
+function toTextValue(value) {
+    if (value && typeof value === "object") {
+        return value.title || value.name || value.label || value.description || "";
+    }
+
+    return value;
+}
+
+function getApplicationFilterValues(product) {
+    const sheetApplications = toArray(product.processApplication).map(toTextValue).filter(Boolean);
+
+    return sheetApplications.length
+        ? sheetApplications
+        : toArray(product.applications).map(toTextValue).filter(Boolean);
 }
 
 function getProductTaxonomy(productName, detail) {
@@ -430,12 +447,6 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "being",
-        "principalName": "Being",
-        "countryOfOrigin": "China",
-        "products": []
-    },
-    {
         "slug": "waters",
         "principalName": "Waters",
         "countryOfOrigin": "United States of America",
@@ -512,6 +523,12 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
         return jsonProduct;
     }
 
+    const detail = getProductDetailByPrincipalAndSlug(principalSlug, productSlug);
+
+    if (detail) {
+        return normalizeStandaloneProductDetail(detail);
+    }
+
     const principal = productPrincipals.find((item) => item.slug === principalSlug);
     const product = principal?.products.find((item) => item.slug === productSlug);
 
@@ -519,7 +536,6 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
         return undefined;
     }
 
-    const detail = getProductDetailByPrincipalAndSlug(principalSlug, productSlug);
     const metadata = { ...product, ...detail };
     const taxonomy = getProductTaxonomy(product.name, metadata);
     const applications = toArray(metadata.applications);
@@ -562,6 +578,42 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
     };
 }
 
+function normalizeStandaloneProductDetail(detail) {
+    const principal =
+        productPrincipals.find((item) => item.slug === detail.principalSlug) ??
+        getJsonCatalogPrincipalBySlug(detail.principalSlug);
+    const taxonomy = getProductTaxonomy(detail.name, detail);
+    const applications = toArray(detail.applications);
+    const industryTags = toArray(detail.industryTags);
+    const workflowTags = toArray(detail.workflowTags);
+    const problemSolutionTags = toArray(detail.problemSolutionTags);
+    const tags = uniqueValues([
+        ...toArray(detail.tags),
+        ...industryTags,
+        ...workflowTags,
+        ...problemSolutionTags,
+        detail.category,
+        detail.principalName ?? principal?.principalName,
+    ]);
+
+    return {
+        ...detail,
+        category: detail.category ?? taxonomy.industry,
+        industry: detail.industry ?? detail.category ?? taxonomy.industry,
+        applications: applications.length ? applications : taxonomy.applications,
+        industryTags,
+        workflowTags,
+        problemSolutionTags,
+        tags,
+        principalSlug: detail.principalSlug,
+        principalName: detail.principalName ?? principal?.principalName,
+        countryOfOrigin: detail.countryOfOrigin ?? principal?.countryOfOrigin,
+        href: detail.href ?? `/products/${detail.slug}`,
+        apiPath: detail.apiPath ?? `/api/products/${detail.principalSlug}/${detail.slug}`,
+        hasDetails: true,
+    };
+}
+
 export function getProductBySlug(productSlug) {
     const jsonProduct = getJsonCatalogProductBySlug(productSlug);
 
@@ -572,7 +624,7 @@ export function getProductBySlug(productSlug) {
     const detail = getProductDetailBySlug(productSlug);
 
     if (detail) {
-        return getProductByPrincipalAndSlug(detail.principalSlug, detail.slug);
+        return normalizeStandaloneProductDetail(detail);
     }
 
     for (const principal of productPrincipals) {
@@ -593,9 +645,13 @@ export function getAllProducts() {
                 getProductByPrincipalAndSlug(principal.slug, product.slug)
             )
         );
+        const standaloneDetailProducts = productDetails.map((detail) =>
+            normalizeStandaloneProductDetail(detail)
+        );
 
         allProductsCache = mergeProductsByKey([
             ...legacyProducts,
+            ...standaloneDetailProducts,
             ...getJsonCatalogProducts(),
         ]);
     }
@@ -613,9 +669,7 @@ export function getProductFilterOptions() {
         })),
         countries: uniqueValues(products.map((product) => product.countryOfOrigin)),
         industries: uniqueValues(products.map((product) => product.industry)),
-        applications: uniqueValues(
-            products.flatMap((product) => product.applications ?? [])
-        ),
+        applications: uniqueValues(products.flatMap(getApplicationFilterValues)),
         categories: uniqueValues(products.map((product) => product.category)),
     };
 }
@@ -624,6 +678,7 @@ export function searchProducts(filters = {}) {
     const query = filters.q?.trim().toLowerCase();
     const selectedPrincipals = toArray(filters.principals ?? filters.principal);
     const selectedIndustries = toArray(filters.industries);
+    const selectedApplications = toArray(filters.applications ?? filters.application);
 
     return getAllProducts().filter((product) => {
         return (
@@ -634,8 +689,10 @@ export function searchProducts(filters = {}) {
                 (product.industryTags ?? []).some((tag) => selectedIndustries.includes(tag))) &&
             (!filters.country || product.countryOfOrigin === filters.country) &&
             (!filters.industry || product.industry === filters.industry) &&
-            (!filters.application ||
-                (product.applications ?? []).includes(filters.application)) &&
+            (!selectedApplications.length ||
+                getApplicationFilterValues(product).some((application) =>
+                    selectedApplications.includes(application)
+                )) &&
             (!filters.details || product.hasDetails)
         );
     });

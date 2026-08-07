@@ -265,7 +265,17 @@ function ProductImageActions({ href }) {
 
 function LegacyProductContent({ product }) {
   const lf = product.longForm;
-  if (!lf) return null;
+  const sections = lf?.sections ?? [];
+  const rawApplications = product.processApplication ? [product.processApplication] : product.applications ?? [];
+  const applications = rawApplications
+    .map((application) => {
+      if (application && typeof application === "object") {
+        return application.title || application.name || application.label || application.description || "";
+      }
+
+      return application;
+    })
+    .filter(Boolean);
 
   return (
     <>
@@ -284,7 +294,26 @@ function LegacyProductContent({ product }) {
         </section>
       )}
 
-      {lf.sections?.map((section, i) => (
+      {applications.length > 0 && (
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1180px]">
+            <RecTag>Applications</RecTag>
+            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">Where this product fits.</h2>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {applications.map((application) => (
+                <div key={application} className="flex items-start gap-3 border border-line-light bg-parchment p-4">
+                  <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center bg-red/8 text-red">
+                    <FiCheck className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="text-sm font-semibold leading-6 text-ink">{application}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {sections.map((section, i) => (
         <section key={section.title} className={`px-4 py-16 sm:px-6 lg:px-8 ${i % 2 === 1 ? "bg-parchment-alt" : "bg-white"}`}>
           <div className="mx-auto max-w-[1180px]">
             {section.eyebrow && <RecTag>{section.eyebrow}</RecTag>}
@@ -305,7 +334,7 @@ function LegacyProductContent({ product }) {
         </section>
       ))}
 
-      {lf.cta && (
+      {lf?.cta && (
         <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto flex max-w-[1180px] flex-col gap-6 border border-line-light bg-white p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>

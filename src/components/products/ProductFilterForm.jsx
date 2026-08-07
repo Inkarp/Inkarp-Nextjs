@@ -5,7 +5,14 @@ import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
 
-function getProductsUrl(pathname, searchParams, query, brands = [], industries = []) {
+function getProductsUrl(
+  pathname,
+  searchParams,
+  query,
+  brands = [],
+  industries = [],
+  applications = []
+) {
   const params = new URLSearchParams(searchParams.toString());
   const trimmedQuery = query.trim();
 
@@ -29,6 +36,13 @@ function getProductsUrl(pathname, searchParams, query, brands = [], industries =
     }
   });
 
+  params.delete("application");
+  applications.forEach((application) => {
+    if (application) {
+      params.append("application", application);
+    }
+  });
+
   const queryString = params.toString();
 
   return queryString ? `${pathname}?${queryString}` : pathname;
@@ -48,6 +62,7 @@ function FilterDropdown({
   isOpen,
   label,
   noMatchLabel,
+  onClear,
   onOptionToggle,
   onSearchChange,
   onToggleOpen,
@@ -64,7 +79,7 @@ function FilterDropdown({
     : options;
 
   return (
-    <div className="relative min-w-0 lg:w-64">
+    <div className="relative min-w-[min(100%,15rem)] flex-1">
       <button
         aria-expanded={isOpen}
         className="flex h-11 w-full items-center justify-between gap-3 border border-line-light bg-white px-4 text-left text-sm text-ink-soft transition hover:border-red focus:outline-none focus:ring-2 focus:ring-red/20"
@@ -84,6 +99,21 @@ function FilterDropdown({
 
       {isOpen ? (
         <div className="absolute right-0 z-30 mt-2 w-full min-w-72 border border-line-light bg-white p-2 shadow-xl shadow-zinc-900/10">
+          {selectedValues.length > 0 ? (
+            <div className="mb-2 flex items-center justify-between gap-3 border-b border-line-light pb-2">
+              <span className="text-xs font-semibold text-ink-soft">
+                {selectedValues.length} selected
+              </span>
+              <button
+                className="text-xs font-semibold text-red transition hover:text-ink"
+                onClick={onClear}
+                type="button"
+              >
+                Clear
+              </button>
+            </div>
+          ) : null}
+
           <div className="relative mb-2">
             <FiSearch className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-sm text-ink-soft" />
             <input
@@ -129,10 +159,12 @@ function FilterDropdown({
 }
 
 export default function ProductFilterForm({
+  applicationOptions = [],
   brandOptions = [],
   industryOptions = [],
   productCount,
   query,
+  selectedApplications = [],
   selectedBrands = [],
   selectedIndustries = [],
   totalCount,
@@ -145,13 +177,17 @@ export default function ProductFilterForm({
   const [brandSearch, setBrandSearch] = useState("");
   const [isIndustryOpen, setIsIndustryOpen] = useState(false);
   const [industrySearch, setIndustrySearch] = useState("");
+  const [isApplicationOpen, setIsApplicationOpen] = useState(false);
+  const [applicationSearch, setApplicationSearch] = useState("");
   const [isPending, startTransition] = useTransition();
   const [isNavigating, setIsNavigating] = useState(false);
   const trimmedSearch = search.trim();
   const hasActiveSearch = Boolean(trimmedSearch);
   const hasActiveBrands = selectedBrands.length > 0;
   const hasActiveIndustries = selectedIndustries.length > 0;
-  const hasActiveFilters = hasActiveSearch || hasActiveBrands || hasActiveIndustries;
+  const hasActiveApplications = selectedApplications.length > 0;
+  const hasActiveFilters =
+    hasActiveSearch || hasActiveBrands || hasActiveIndustries || hasActiveApplications;
   const selectedBrandSet = new Set(selectedBrands);
   const selectedBrandNames = brandOptions
     .filter((option) => selectedBrandSet.has(option.value))
@@ -160,10 +196,18 @@ export default function ProductFilterForm({
   const selectedIndustryNames = industryOptions
     .filter((option) => selectedIndustrySet.has(option.value))
     .map((option) => option.label);
+  const selectedApplicationSet = new Set(selectedApplications);
+  const selectedApplicationNames = applicationOptions
+    .filter((option) => selectedApplicationSet.has(option.value))
+    .map((option) => option.label);
   const isLoading = isPending || isNavigating;
 
   useEffect(() => {
-    setIsNavigating(false);
+    const timeout = window.setTimeout(() => {
+      setIsNavigating(false);
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
   }, [searchParams]);
 
   const showSearchButton = trimmedSearch.length >= 2;
@@ -180,7 +224,14 @@ export default function ProductFilterForm({
 
     startTransition(() => {
       router.replace(
-        getProductsUrl(pathname, searchParams, search, selectedBrands, selectedIndustries),
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          selectedBrands,
+          selectedIndustries,
+          selectedApplications
+        ),
         { scroll: false }
       );
     });
@@ -203,9 +254,17 @@ export default function ProductFilterForm({
     setIsNavigating(true);
 
     startTransition(() => {
-      router.replace(getProductsUrl(pathname, searchParams, search, nextBrands, selectedIndustries), {
-        scroll: false,
-      });
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          nextBrands,
+          selectedIndustries,
+          selectedApplications
+        ),
+        { scroll: false }
+      );
     });
   };
 
@@ -217,22 +276,109 @@ export default function ProductFilterForm({
     setIsNavigating(true);
 
     startTransition(() => {
-      router.replace(getProductsUrl(pathname, searchParams, search, selectedBrands, nextIndustries), {
-        scroll: false,
-      });
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          selectedBrands,
+          nextIndustries,
+          selectedApplications
+        ),
+        { scroll: false }
+      );
+    });
+  };
+
+  const handleApplicationToggle = (application) => {
+    const nextApplications = selectedApplicationSet.has(application)
+      ? selectedApplications.filter((item) => item !== application)
+      : [...selectedApplications, application];
+
+    setIsNavigating(true);
+
+    startTransition(() => {
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          selectedBrands,
+          selectedIndustries,
+          nextApplications
+        ),
+        { scroll: false }
+      );
+    });
+  };
+
+  const handleBrandClear = () => {
+    setBrandSearch("");
+    setIsNavigating(true);
+
+    startTransition(() => {
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          [],
+          selectedIndustries,
+          selectedApplications
+        ),
+        { scroll: false }
+      );
+    });
+  };
+
+  const handleIndustryClear = () => {
+    setIndustrySearch("");
+    setIsNavigating(true);
+
+    startTransition(() => {
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          selectedBrands,
+          [],
+          selectedApplications
+        ),
+        { scroll: false }
+      );
+    });
+  };
+
+  const handleApplicationClear = () => {
+    setApplicationSearch("");
+    setIsNavigating(true);
+
+    startTransition(() => {
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          search,
+          selectedBrands,
+          selectedIndustries,
+          []
+        ),
+        { scroll: false }
+      );
     });
   };
 
   return (
     <form action="/products" className="relative" onSubmit={handleSubmit} role="search">
-      <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-        <div className="flex min-w-0 flex-1 items-center gap-2">
+      <div className="flex flex-col gap-3">
+        <div className="flex min-w-0 items-center gap-2">
           <div className="relative flex min-w-0 flex-1 items-center">
-            <FiSearch className="pointer-events-none absolute left-4 text-base text-ink-soft" />
+            <FiSearch className="pointer-events-none absolute left-5 text-lg text-ink-soft" />
             <input
               aria-label="Search products"
               autoComplete="off"
-              className="h-12 w-full border border-line-light bg-white pl-10 pr-9 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20"
+              className="h-14 w-full border border-line-light bg-white pl-12 pr-11 text-base text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20 lg:h-16"
               name="q"
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search products, brands, applications..."
@@ -242,7 +388,7 @@ export default function ProductFilterForm({
             {search ? (
               <button
                 aria-label="Clear search"
-                className="absolute right-3 flex size-5 items-center justify-center text-ink-soft transition hover:text-red"
+                className="absolute right-4 flex size-6 items-center justify-center text-ink-soft transition hover:text-red"
                 onClick={handleClear}
                 type="button"
               >
@@ -252,8 +398,8 @@ export default function ProductFilterForm({
           </div>
 
           <button
-            className={`shrink-0 overflow-hidden whitespace-nowrap border border-red bg-red text-sm font-semibold text-white transition-all duration-300 ease-out hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-40 ${
-              showSearchButton ? "h-12 max-w-[140px] px-6 opacity-100" : "h-12 max-w-0 px-0 opacity-0"
+            className={`shrink-0 overflow-hidden whitespace-nowrap border border-red bg-red text-sm font-semibold text-white transition-all duration-300 ease-out hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-40 lg:text-base ${
+              showSearchButton ? "h-14 max-w-[180px] px-7 opacity-100 lg:h-16 lg:px-10" : "h-14 max-w-0 px-0 opacity-0 lg:h-16"
             }`}
             disabled={!showSearchButton}
             type="submit"
@@ -262,12 +408,35 @@ export default function ProductFilterForm({
           </button>
         </div>
 
-        <div className="flex items-center gap-2 lg:justify-end">
+        <div className="flex w-full flex-wrap items-center gap-2">
+          <FilterDropdown
+            allLabel="All applications"
+            isOpen={isApplicationOpen}
+            label="Application"
+            noMatchLabel={`No applications match "${applicationSearch}"`}
+            onClear={handleApplicationClear}
+            onOptionToggle={handleApplicationToggle}
+            onSearchChange={setApplicationSearch}
+            onToggleOpen={() =>
+              setIsApplicationOpen((isOpen) => {
+                if (isOpen) {
+                  setApplicationSearch("");
+                }
+                return !isOpen;
+              })
+            }
+            options={applicationOptions}
+            searchPlaceholder="Search application..."
+            searchValue={applicationSearch}
+            selectedValues={selectedApplications}
+          />
+
           <FilterDropdown
             allLabel="All industries"
             isOpen={isIndustryOpen}
             label="Industry"
             noMatchLabel={`No industries match "${industrySearch}"`}
+            onClear={handleIndustryClear}
             onOptionToggle={handleIndustryToggle}
             onSearchChange={setIndustrySearch}
             onToggleOpen={() =>
@@ -289,6 +458,7 @@ export default function ProductFilterForm({
             isOpen={isBrandOpen}
             label="Brand"
             noMatchLabel={`No brands match "${brandSearch}"`}
+            onClear={handleBrandClear}
             onOptionToggle={handleBrandToggle}
             onSearchChange={setBrandSearch}
             onToggleOpen={() =>
@@ -346,6 +516,14 @@ export default function ProductFilterForm({
               Industry: {" "}
               <span className="font-semibold text-ink">
                 {selectedIndustryNames.join(", ")}
+              </span>
+            </span>
+          ) : null}
+          {hasActiveApplications ? (
+            <span>
+              Application: {" "}
+              <span className="font-semibold text-ink">
+                {selectedApplicationNames.join(", ")}
               </span>
             </span>
           ) : null}

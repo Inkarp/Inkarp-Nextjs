@@ -1,0 +1,2351 @@
+{
+  "principal": {
+    "slug": "kubota",
+    "principalName": "Kubota",
+    "countryOfOrigin": "Japan"
+  },
+  "categories": [
+    {
+      "name": "General Purpose Centrifuges",
+      "slug": "general-purpose-centrifuges",
+      "products": [
+        {
+          "name": "Benchtop High Speed Refrigerated Centrifuge (Model M500TR)",
+          "slug": "benchtop-high-speed-refrigerated-centrifuge-model-m500tr",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Benchtop High Speed Refrigerated Centrifuge (Model M500TR) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/benchtop-high-speed-refrigerated-centrifuge-model-m500tr",
+          "breadcrumbPath": "Home > Products > Benchtop High Speed Refrigerated Centrifuge (Model M500TR)",
+          "h1": "Benchtop High Speed Refrigerated Centrifuge (Model M500TR)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Most labs running mixed sample formats end up running mixed rotors too — one for microtubes, another when a run needs bottles, a third for plates, each swapped in and re-balanced as the work changes.",
+
+          "features": [
+            "5-in-1 Rotor: Newly developed rotor sufficient for use with various microtube formats on its own.",
+            "High Maximum Speed: 15,300 rpm, delivering up to 22,250 xg.",
+            "Wide Refrigeration Range: -10°C to +40°C temperature setting for sample stability.",
+            "Broad Sample Format Coverage: Microtubes through 500 mL bottles, or microplates, on one machine.",
+            "2,000 mL Maximum Capacity: Sufficient volume for general-purpose laboratory separation work.",
+            "Compact Benchtop Footprint: 70 × 63 × 36 cm at 85 kg.",
+            "Dual Voltage Compatibility: Runs on either 110V or 220/230V single-phase supply."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Benchtop High Speed Refrigerated Centrifuge, Model M500TR" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "15,300 rpm" },
+            { "label": "Maximum RCF", "value": "22,250 xg" },
+            { "label": "Maximum Capacity", "value": "2,000 mL" },
+            { "label": "Temperature Setting", "value": "-10°C to +40°C" },
+            { "label": "Dimensions (W × D × H)", "value": "70 × 63 × 36 cm" },
+            { "label": "Weight", "value": "85 kg" },
+            { "label": "Power Requirements", "value": "Single phase, 50/60Hz; 110V ±10% at 15A, or 220/230V ±10% at 10A" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "SF-724, ST-5004, MAF-2024, 055-0730, AF-2524, 055-0760, AF-5006C, RA-410M3" },
+            { "label": "Rotor Highlight", "value": "5-in-1 rotor, sufficient for use with various microtubes" }
+          ],
+
+          "applications": [
+            "General Laboratory Sample Separation: Broad rotor and format coverage suited to routine lab work.",
+            "Clinical Sample Preparation: Refrigerated operation for temperature-sensitive blood and biological samples.",
+            "Microtube-Based Research Workflows: 5-in-1 rotor covers multiple microtube formats without rotor changes.",
+            "Cell and Molecular Biology Prep: High-speed separation at up to 22,250 xg.",
+            "Microplate-Based Workflows: Plate rotor compatibility for high-throughput formats.",
+            "Volume Separation up to 500 mL: Bottle rotor capability for larger-volume samples."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "suitability", "label": "Speed & Force Checker" },
+            { "id": "installation-power-checker", "label": "Installation & Power Checker" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "config", "label": "Sample & Rotor Selector" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "suitability": {
+            "title": "What RCF does the protocol call for?",
+            "description": "Enter the target g-force or speed, and confirm it against the M500TR's range.",
+            "fields": [
+              {
+                "key": "targetRCF",
+                "label": "Target RCF (xg)",
+                "options": [
+                  { "val": "under-10000", "label": "Under 10,000 xg" },
+                  { "val": "10000-20000", "label": "10,000-20,000 xg" },
+                  { "val": "20000-22250", "label": "20,000-22,250 xg (near maximum)" },
+                  { "val": "above-22250", "label": "Above 22,250 xg" }
+                ]
+              },
+              {
+                "key": "sampleTemperatureSensitivity",
+                "label": "Sample temperature sensitivity",
+                "options": [
+                  { "val": "ambient", "label": "Ambient" },
+                  { "val": "refrigeration-required", "label": "Refrigeration required" }
+                ]
+              }
+            ],
+            "results": [
+              {
+                "condition": { "targetRCF": "above-22250" },
+                "title": "Outside the M500TR's Range",
+                "body": "A target above 22,250 xg exceeds the M500TR's maximum RCF — share the exact figure and rotor radius, and Inkarp can confirm whether a different model is needed.",
+                "tags": ["Above Range"]
+              },
+              {
+                "condition": { "targetRCF": "20000-22250" },
+                "title": "Within Range, Near Maximum",
+                "body": "A target in the 20,000-22,250 xg band sits within the M500TR's 22,250 xg maximum RCF, at the top end of its range.",
+                "tags": ["Near Maximum"]
+              },
+              {
+                "condition": { "sampleTemperatureSensitivity": "refrigeration-required" },
+                "title": "Refrigeration Range Confirmed",
+                "body": "The M500TR's -10°C to +40°C refrigerated operation covers temperature-sensitive protocols directly.",
+                "tags": ["Refrigeration"]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Target Against the Range",
+                "body": "Share the target RCF or speed, the rotor radius if known, and whether refrigeration is required, and the target gets confirmed against the M500TR's 15,300 rpm / 22,250 xg range.",
+                "tags": ["Configuration Guidance"]
+              }
+            ]
+          },
+
+          "planners": [
+            {
+              "sectionId": "installation-power-checker",
+              "eyebrow": "Interactive Module",
+              "title": "Does the site meet the power and space requirement?",
+              "description": "Select the available power supply and bench space, and confirm installation fit.",
+              "fields": [{ "key": "choices", "label": "Choices" }],
+              "options": [
+                { "title": "Available voltage", "choices": "110V single phase; 220/230V single phase" },
+                { "title": "Available amperage", "choices": "15A available (110V line); 10A available (220/230V line); Not yet confirmed" },
+                { "title": "Bench space available", "choices": "At least 70 x 63 x 36 cm (W x D x H); Less than that footprint" },
+                { "title": "Floor/bench loading capacity", "choices": "Supports at least 85 kg; Not yet confirmed" }
+              ],
+              "disclaimer": "Confirms installation compatibility, then routes to an installation-specific quotation."
+            }
+          ],
+
+          "configWizard": {
+            "title": "What sample formats does the work involve?",
+            "description": "Select the tube, bottle, or plate formats in routine use, and see the recommended rotor set.",
+            "steps": [
+              {
+                "key": "sampleFormat",
+                "question": "What's the primary sample format?",
+                "options": [
+                  { "val": "microtubes", "label": "Microtubes" },
+                  { "val": "bottles-up-to-500ml", "label": "Bottles up to 500 mL" },
+                  { "val": "microplates", "label": "Microplates" }
+                ]
+              },
+              {
+                "key": "refrigerationRequirement",
+                "question": "Is refrigeration required?",
+                "options": [
+                  { "val": "room-temperature", "label": "Room temperature" },
+                  { "val": "cooled-samples-required", "label": "Cooled samples required" }
+                ]
+              }
+            ],
+            "result": {
+              "ctaNote": "Share the format variety (single format, or several rotated through routinely) and the volume per run at the largest routine volume, and the rotor combination gets recommended from Kubota's typical accessory list.",
+              "ctaLabel": "Get Configuration Support"
+            }
+          },
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "M500TR vs S300T / S500T / S700T vs S300TR",
+            "description": "Compare the Kubota Model M500TR with other models in the General Purpose Centrifuge range.",
+            "columns": [
+              { "label": "M500TR", "highlight": true },
+              { "label": "S300T / S500T / S700T", "highlight": false },
+              { "label": "S300TR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Refrigeration", "values": ["Yes, -10°C to +40°C", "Not specified (non-refrigerated series)", "Yes"] },
+              { "feature": "Positioning", "values": ["High-speed refrigerated benchtop", "Standard benchtop", "Refrigerated benchtop"] },
+              { "feature": "Maximum RCF", "values": ["22,250 xg", "Confirm per model", "Confirm per model"] },
+              { "feature": "Rotor Highlight", "values": ["5-in-1 rotor", "Confirm per model", "Confirm per model"] },
+              { "feature": "Best For", "values": ["Mixed sample formats needing high RCF and refrigeration", "General non-refrigerated separation", "Refrigerated separation without the M500TR's top-end speed"] },
+              { "feature": "Choose when", "values": ["Both high force and temperature control are required", "Refrigeration isn't needed", "Refrigeration is needed but 22,250 xg isn't"] }
+            ],
+            "disclaimer": "Detailed specifications for the S300T, S500T, S700T, and S300TR were not available in this pull — confirm exact figures when comparing directly against the M500TR."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Model M500TR industries: clinical laboratories, research institutions, and general life science labs.",
+            "industries": [
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "Blood and biological sample separation", "consideration": "Refrigeration protects temperature-sensitive samples" },
+              { "name": "Research and Academic Laboratories", "icon": "school", "useCase": "Mixed-format sample prep across projects", "consideration": "5-in-1 rotor reduces rotor-change downtime" },
+              { "name": "Molecular Biology Laboratories", "icon": "flask", "useCase": "High-speed separation for cell and nucleic acid prep", "consideration": "22,250 xg covers demanding separation protocols" },
+              { "name": "Multi-User Core Facilities", "icon": "droplet", "useCase": "Shared instrument across varied sample types", "consideration": "Broad format range from microtubes to 500 mL bottles" },
+              { "name": "Pharmaceutical QC Laboratories", "icon": "pill", "useCase": "Routine sample separation in regulated environments", "consideration": "Compact footprint suits space-constrained QC labs" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Model M500TR service in India: demonstration, installation, training, and AMC.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own sample formats and protocols on the unit." },
+              { "title": "Rotor Configuration Support", "description": "Confirms the right rotor set from Kubota's typical accessory list." },
+              { "title": "Installation Support", "description": "Confirms power supply compatibility and bench siting." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, balancing, and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotor, refrigeration, and drive system performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, tube adapters, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model M500TR used for?", "answer": "It's a benchtop high-speed refrigerated centrifuge for general laboratory separation, covering sample formats from microtubes through 500 mL bottles and microplates, used across clinical, research, and life science labs." },
+            { "question": "What is the maximum speed and RCF?", "answer": "15,300 rpm, delivering up to 22,250 xg maximum RCF." },
+            { "question": "What is the temperature range?", "answer": "-10°C to +40°C." },
+            { "question": "What sample formats does it support?", "answer": "Microtubes, bottles up to 500 mL, and microplates, depending on the rotor fitted." },
+            { "question": "What is the 5-in-1 rotor?", "answer": "A newly developed rotor sufficient on its own for use with various microtube formats, reducing the need to swap rotors as sample formats change." },
+            { "question": "What is the maximum capacity?", "answer": "2,000 mL." },
+            { "question": "What are the dimensions and weight?", "answer": "70 × 63 × 36 cm (W×D×H), weighing 85 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60Hz — either 110V ±10% at 15A, or 220/230V ±10% at 10A." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan by Kubota Corporation." },
+            { "question": "What is the price of the Model M500TR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model M500TR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Benchtop High Speed Refrigerated Centrifuge Model M500TR in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model M500TR in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 22,250 xg from an 85 kg benchtop unit, refrigeration down to -10°C, and one rotor covering the microtube formats most labs run day to day. Share the sample formats and volumes involved, and the right M500TR rotor configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample formats and volumes involved, then confirm the right M500TR rotor configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleFormats", "label": "Sample formats", "type": "text", "required": false },
+              { "key": "volumesInvolved", "label": "Volumes involved", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the rotor combination", "body": "Share the sample formats routinely run (microtubes, bottles, plates), the volumes involved, and whether refrigeration is required for the application, and the right rotor combination gets confirmed from there." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "22,250 xg from an 85 kg benchtop unit. One rotor covers the microtubes.",
+            "heroLead": "Most labs running mixed sample formats end up running mixed rotors too — one for microtubes, another when a run needs bottles, a third for plates, each swapped in and re-balanced as the work changes. Kubota's M500TR is built around a newly developed 5-in-1 rotor that covers the range of common microtube formats on its own, while the machine itself scales from microtubes through 500 mL bottles to microplates. Speed runs to 15,300 rpm, delivering up to 22,250 xg, with refrigeration holding from -10°C to +40°C for temperature-sensitive samples. All of it inside a 70 × 63 × 36 cm benchtop footprint at 85 kg — genuinely bench-sized for the force it produces.",
+            "stats": [
+              { "value": "15,300 rpm", "label": "Maximum speed" },
+              { "value": "22,250 xg", "label": "Maximum relative centrifugal force (RCF)" },
+              { "value": "2,000 mL", "label": "Maximum capacity" },
+              { "value": "-10°C to +40°C", "label": "Temperature setting range" },
+              { "value": "70 x 63 x 36 cm", "label": "Dimensions (W x D x H)" },
+              { "value": "85 kg", "label": "Weight" },
+              { "value": "5-in-1 rotor", "label": "Newly developed, covers multiple microtube formats" },
+              { "value": "Microtubes to 500 mL bottles", "label": "Sample format range, including microplates" },
+              { "value": "Made in Japan", "label": "Manufacturing origin" },
+              { "value": "Single phase", "label": "Power supply, 110V or 220/230V" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Model M500TR at a glance: what the centrifuge is and what it delivers.",
+                "body": [
+                  "Table-top refrigerated centrifuge. Covers sample formats from microtubes through 500 mL bottles, or microplates, on one machine.",
+                  "Newly developed 5-in-1 rotor. One rotor sufficient for use with various microtube formats, reducing how often rotors need swapping.",
+                  "Maximum speed of 15,300 rpm. Delivering up to 22,250 xg maximum RCF.",
+                  "Refrigerated operation, -10°C to +40°C. Temperature-sensitive samples held stable across a wide working range.",
+                  "Maximum capacity of 2,000 mL. Covers general-purpose separation volumes for research and clinical work.",
+                  "Compact benchtop footprint. 70 × 63 × 36 cm (W×D×H) at 85 kg — genuinely bench-sized for the force it produces.",
+                  "Single-phase power. 110V ±10% at 15A, or 220/230V ±10% at 10A, 50/60Hz.",
+                  "Made in Japan. Kubota manufacturing origin.",
+                  "Positioned as an ideal general-purpose centrifuge. Kubota's own description of the M500TR's role in the broader range."
+                ],
+                "cards": [
+                  { "title": "22,250 xg max RCF", "description": "High force from a genuinely benchtop unit" },
+                  { "title": "5-in-1 rotor", "description": "Fewer rotor changes across microtube formats" },
+                  { "title": "-10°C to +40°C", "description": "Refrigeration for temperature-sensitive samples" },
+                  { "title": "Microtubes to 500 mL bottles", "description": "One machine across most common sample formats" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Model M500TR key features: rotor versatility, performance range, and compact refrigerated operation."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Model M500TR applications: general laboratory separation, clinical and research sample prep."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Model M500TR technical specifications: speed, force, capacity, temperature, and physical dimensions."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "The 5-in-1 Rotor",
+                "title": "The 5-in-1 Rotor",
+                "description": "What it replaces and what it covers.",
+                "body": [
+                  "A centrifuge running several microtube formats through a typical week usually means several rotors — swapped, balanced, and re-swapped as the sample format changes. Kubota built the M500TR's core rotor to remove that step: one rotor, newly developed, sufficient on its own for use across various microtube formats.",
+                  "That consolidation matters most in labs running mixed protocols day to day, where rotor changeover is otherwise the recurring interruption between one prep step and the next. The machine still scales beyond that single rotor when the work calls for it — bottle rotors up to 500 mL and plate rotor options extend the M500TR across the fuller range Kubota lists in its typical rotor and accessory set."
+                ],
+                "utilityChecklist": [
+                  { "label": "Fewer rotor changes across a working day", "value": "5-in-1 rotor covering multiple microtube formats" },
+                  { "label": "Volume flexibility beyond microtubes", "value": "Bottle rotor compatibility up to 500 mL" },
+                  { "label": "Plate-based workflow support", "value": "Microplate rotor compatibility" },
+                  { "label": "High force without a floor-standing unit", "value": "22,250 xg from a benchtop footprint" }
+                ],
+                "disclaimer": "Share the specific microtube formats, bottle volumes, and plate types in routine use, and the right rotor set from Kubota's typical accessory list gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Documentation for the Model M500TR is available on request.",
+                "cards": [
+                  { "title": "M500TR Brochure", "description": "Available on request (linked on Kubota's own product page)" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model M500TR in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 22,250 xg from an 85 kg benchtop unit, refrigeration down to -10°C, and one rotor covering the microtube formats most labs run day to day. Share the sample formats and volumes involved, and the right M500TR rotor configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Benchtop Centrifuge (Model S300T)",
+          "slug": "benchtop-centrifuge-model-s300t",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Benchtop Centrifuge (Model S300T) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/benchtop-centrifuge-model-s300t",
+          "breadcrumbPath": "Home > Products > Benchtop Centrifuge (Model S300T)",
+          "h1": "Benchtop Centrifuge (Model S300T)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Model S300T lets long and short blood collection tubes, or 15 mL and 50 mL tubes, run together in the same load, cutting the number of separate spins a busy lab needs. It handles everything from 1.5/2 mL microtubes to 50 mL tubes, up to 4,000 rpm and 2,610 xg, with a maximum capacity of 360 mL across 24 × 15 mL tubes. A 2-second imbalance detector catches a badly loaded rotor before the spin gets underway.",
+
+          "features": [
+            "Mixed-Loading: Long and short tubes, 15 mL and 50 mL, together.",
+            "2-Second Imbalance Detection: Catches a bad load before the spin starts.",
+            "1.5 mL to 50 mL Range: Microtubes through standard tubes, one machine.",
+            "Compact, 20 kg: Genuinely benchtop, not floor-standing.",
+            "Dual Voltage: 110-115V or 220-230V, either works."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Benchtop Centrifuge, Model S300T" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "4,000 rpm" },
+            { "label": "Maximum RCF", "value": "2,610 xg" },
+            { "label": "Maximum Capacity", "value": "360 mL (24 × 15 mL)" },
+            { "label": "Tube Range", "value": "1.5/2 mL microtubes to 50 mL tubes" },
+            { "label": "Mixed-Loading", "value": "Long/short blood collection tubes, or 15 mL/50 mL TC tubes, same load" },
+            { "label": "Imbalance Detection", "value": "2 seconds" },
+            { "label": "Dimensions (W×D×H)", "value": "34 × 42 × 33 cm" },
+            { "label": "Weight", "value": "20 kg" },
+            { "label": "Power Requirements", "value": "Single phase, 110-115V ±10% 8A or 220-230V ±10% 5A, 50/60 Hz" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "RS-240A" }
+          ],
+
+          "applications": [
+            "Routine Clinical Sample Separation: Handles standard blood collection tube formats, including mixed lengths.",
+            "General Laboratory Sample Prep: 1.5/2 mL microtubes through 50 mL tubes on one machine.",
+            "Mixed-Batch Processing: Long and short tubes, or 15 mL and 50 mL tubes, run together.",
+            "Cell Culture and TC Tube Handling: 15 mL and 50 mL TC tube compatibility, mixed-loading capable.",
+            "High-Volume Routine QC: 2-second imbalance detection keeps throughput moving.",
+            "Multi-User Lab Environments: General-purpose range suits varied daily protocols."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Mixed-Loading" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S300T vs S500T vs S700T vs M500TR",
+            "description": "Compare the Kubota Model S300T with S500T, S700T, and M500TR to choose the right general-purpose centrifuge.",
+            "columns": [
+              { "label": "S300T", "highlight": true },
+              { "label": "S500T", "highlight": false },
+              { "label": "S700T", "highlight": false },
+              { "label": "M500TR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Refrigeration", "values": ["No", "No", "No", "Yes, -10°C to +40°C"] },
+              { "feature": "Maximum Speed", "values": ["4,000 rpm", "6,000 rpm", "3,800 rpm (swing) / 6,000 rpm (angle)", "15,300 rpm"] },
+              { "feature": "Maximum RCF", "values": ["2,610 xg", "5,350 xg", "3,100 xg (swing) / 5,350 xg (angle)", "22,250 xg"] },
+              { "feature": "Maximum Capacity", "values": ["360 mL", "1,020 mL", "4 × 750 mL (swing) / 8 × 50 mL (angle)", "2,000 mL"] },
+              { "feature": "Rotor Options", "values": ["1 typical", "7", "3", "1 highlighted \"5-in-1\""] },
+              { "feature": "Mixed-Loading", "values": ["Yes, tube sizes", "Yes, tube sizes", "Yes, round + plate buckets", "Not specified"] },
+              { "feature": "Weight", "values": ["20 kg", "39 kg", "118 kg", "85 kg"] },
+              { "feature": "Best For", "values": ["Smallest footprint, simplest need", "Wider format range, micro-plate compatibility", "Large-volume bottles, mixed round/plate loading", "Maximum speed and capacity with refrigeration"] },
+              { "feature": "Choose When", "values": ["Refrigeration isn't needed, ambient spinning is sufficient", "A wider tube-to-bottle range is needed", "Bottle capacity or combined round/plate loading matters", "Both high force and refrigeration are required"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota Model S300T handles routine mixed-load separation.",
+            "industries": [
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "Routine blood sample separation", "consideration": "Mixed-loading handles long and short collection tubes together" },
+              { "name": "Research and Academic Laboratories", "icon": "school", "useCase": "General sample prep across varied protocols", "consideration": "Wide tube range, microtubes through 50 mL" },
+              { "name": "Cell Culture Facilities", "icon": "flask", "useCase": "TC tube processing", "consideration": "15 mL/50 mL mixed-loading matches typical cell culture batch patterns" },
+              { "name": "Multi-User Core Facilities", "icon": "droplet", "useCase": "Shared instrument across varied daily needs", "consideration": "General-purpose range suits varied protocols on one machine" },
+              { "name": "Pharmaceutical QC Laboratories", "icon": "pill", "useCase": "Routine sample separation", "consideration": "Compact footprint suits space-constrained QC benches" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota Model S300T from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own tube formats and mixed loads on the unit." },
+              { "title": "Rotor Configuration Support", "description": "Confirms the right rotor set for the tube mix in use." },
+              { "title": "Installation Support", "description": "Confirms power supply compatibility and bench siting." },
+              { "title": "Operator Training", "description": "Builds confidence with mixed-load balancing and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotor, imbalance detector, and drive system performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, tube adapters, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model S300T used for?", "answer": "A general-purpose benchtop centrifuge for routine sample separation, handling 1.5/2 mL microtubes through 50 mL tubes." },
+            { "question": "What is the maximum speed and RCF?", "answer": "4,000 rpm, delivering up to 2,610 xg maximum RCF." },
+            { "question": "Can different tube sizes be run together?", "answer": "Yes, mixed-loading allows long and short blood collection tubes, or 15 mL and 50 mL TC tubes, to run in the same load." },
+            { "question": "How fast does it detect an imbalanced load?", "answer": "Within 2 seconds of the spin starting." },
+            { "question": "What is the maximum capacity?", "answer": "360 mL, configured as 24 × 15 mL tubes." },
+            { "question": "What are the dimensions and weight?", "answer": "34 × 42 × 33 cm (W×D×H), weighing 20 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60 Hz, either 110-115V ±10% at 8A or 220-230V ±10% at 5A." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the Model S300T in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model S300T in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Benchtop Centrifuge Model S300T in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model S300T in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Mixed-loading across long and short tubes, or 15 mL and 50 mL formats, with 2-second imbalance detection and up to 2,610 xg. Share the tube formats and daily volume, and the right S300T configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the tube formats and daily volume, then confirm the right S300T configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "tubeFormats", "label": "Tube formats", "type": "text", "required": false },
+              { "key": "dailyVolume", "label": "Daily volume", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the rotor set for the tube mix", "body": "Share the tube formats routinely run and whether mixed loads are common, and the right rotor set gets confirmed." },
+              { "title": "Confirm the rotor configuration for the daily mix", "body": "Share the typical tube mix run in a single day, and the right rotor configuration gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Long tubes and short tubes, 15 mL and 50 mL, in the same spin.",
+            "heroLead": "Model S300T lets long and short blood collection tubes, or 15 mL and 50 mL tubes, run together in the same load, cutting the number of separate spins a busy lab needs. It handles everything from 1.5/2 mL microtubes to 50 mL tubes, up to 4,000 rpm and 2,610 xg, with a maximum capacity of 360 mL across 24 × 15 mL tubes. A 2-second imbalance detector catches a badly loaded rotor before the spin gets underway.",
+            "stats": [
+              { "value": "4,000 rpm", "label": "Maximum speed" },
+              { "value": "2,610 xg", "label": "Maximum RCF" },
+              { "value": "360 mL", "label": "Maximum capacity (24 × 15 mL)" },
+              { "value": "Mixed-loading", "label": "Long/short and 15 mL/50 mL tubes, same load" },
+              { "value": "2 seconds", "label": "Imbalance detection time" },
+              { "value": "20 kg", "label": "Weight" },
+              { "value": "34 x 42 x 33 cm", "label": "Dimensions (W×D×H)" },
+              { "value": "Made in Japan", "label": "Manufacturing origin" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "A general-purpose benchtop centrifuge built around one genuinely practical feature.",
+                "body": [
+                  "Benchtop centrifuge for 1.5/2 mL microtubes through 50 mL tubes.",
+                  "Mixed-loading available: long and short blood collection tubes, or 15 mL and 50 mL TC tubes, run together in the same load.",
+                  "2-second imbalance detector equipped.",
+                  "Ideal for general purpose use.",
+                  "Maximum speed of 4,000 rpm, delivering up to 2,610 xg maximum RCF.",
+                  "Maximum capacity of 360 mL, 24 × 15 mL tubes.",
+                  "Compact benchtop footprint, 34 × 42 × 33 cm (W×D×H) at 20 kg.",
+                  "Single-phase power, two voltage options, 110-115V or 220-230V, both 50/60 Hz.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "Mixed-loading", "description": "Fewer separate spins for mixed tube batches" },
+                  { "title": "2,610 xg max RCF", "description": "Genuine general-purpose force range" },
+                  { "title": "2-second imbalance detection", "description": "A badly loaded rotor caught fast" },
+                  { "title": "20 kg, compact footprint", "description": "Genuinely benchtop, not a floor unit" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the mixed-loading capability, imbalance detection, and tube range of the Kubota Model S300T."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota Model S300T supports routine clinical, research, and cell culture sample separation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the speed, RCF, capacity, dimensions, and power requirements of the Kubota Model S300T."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Mixed-Loading, Explained",
+                "title": "Mixed-Loading, Explained",
+                "description": "Learn how the Kubota Model S300T runs different tube sizes together in the same load. A routine day in most labs produces a mix, some long blood collection tubes, some short, occasionally a batch needing both 15 mL and 50 mL tubes spun at once. A centrifuge that only runs one tube size per load turns that mix into multiple separate spins. S300T's mixed-loading capability removes the bottleneck directly, long and short tubes run together, 15 mL and 50 mL TC tubes run together, no sort-and-batch step required.",
+                "cards": [
+                  { "title": "Sorting tubes by size before every spin", "description": "Load the mix directly." },
+                  { "title": "Multiple sequential spins for one mixed batch", "description": "One spin, mixed load." },
+                  { "title": "Time lost waiting between separate runs", "description": "Throughput held across the actual daily mix." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "2-Second Imbalance Detection",
+                "title": "2-Second Imbalance Detection",
+                "description": "Discover how fast imbalance detection on the Kubota Model S300T protects samples and equipment.",
+                "body": [
+                  "An unbalanced rotor is a safety and equipment risk, and the later it's caught, the more damage it can do. S300T's imbalance detector flags a problem within 2 seconds of the spin starting, fast enough to stop before the imbalance builds into something worse, exactly the margin that matters most in the high-throughput, mixed-load scenarios this centrifuge is built for."
+                ],
+                "utilityChecklist": [
+                  { "label": "Damage building up before the problem is caught", "value": "Flagged within 2 seconds of spin start" },
+                  { "label": "Risk compounding in high-throughput, mixed-load use", "value": "Fast detection matched to exactly that use case" },
+                  { "label": "Manual rebalancing checks slowing every load", "value": "Confidence to load quickly, checked automatically" }
+                ],
+                "disclaimer": "Share the daily throughput and whether mixed loads are routine, and expected reliability gets discussed against the 2-second detection window."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S300 Series brochure and rotor compatibility list for the Kubota Model S300T.",
+                "cards": [
+                  { "title": "S300 Series Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model S300T in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Mixed-loading across long and short tubes, or 15 mL and 50 mL formats, with 2-second imbalance detection and up to 2,610 xg. Share the tube formats and daily volume, and the right S300T configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Benchtop Centrifuge (Model S500T)",
+          "slug": "benchtop-centrifuge-model-s500t",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Benchtop Centrifuge (Model S500T) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/benchtop-centrifuge-model-s500t",
+          "breadcrumbPath": "Home > Products > Benchtop Centrifuge (Model S500T)",
+          "h1": "Benchtop Centrifuge (Model S500T)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Model S500T runs from microtubes to 250 mL bottles, or micro-plates, across 7 available rotor options: 4 swinging bucket, 1 angle, and 2 micro-plate rotors. Two named safety functions, a Self-Check Function and an Imbalance Early Detector, set it apart from the smaller S300T. Mixed-loading carries over from the range. Speed reaches 6,000 rpm, up to 5,350 xg, with a maximum capacity of 1,020 mL.",
+
+          "features": [
+            "7 Rotor Options: Swinging bucket, angle, and micro-plate.",
+            "Self-Check Function: Verifies the system automatically.",
+            "Imbalance Early Detector: Catches a bad load fast.",
+            "Mixed-Loading: Different formats, same load.",
+            "1,020 mL Capacity: Genuinely more headroom than S300T."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Benchtop Centrifuge, Model S500T" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "6,000 rpm" },
+            { "label": "Maximum RCF", "value": "5,350 xg" },
+            { "label": "Maximum Capacity", "value": "1,020 mL" },
+            { "label": "Sample Format Range", "value": "Microtubes to 250 mL bottles, or micro-plates" },
+            { "label": "Rotor Options", "value": "7 total: 4 multiple swinging bucket, 1 angle, 2 micro-plate" },
+            { "label": "Safety Functions", "value": "Self-Check Function, Imbalance Early Detector" },
+            { "label": "Mixed-Loading", "value": "Available" },
+            { "label": "Dimensions (W×D×H)", "value": "44 × 53 × 32 cm" },
+            { "label": "Weight", "value": "39 kg" },
+            { "label": "Power Requirements", "value": "Single phase, 110V ±10% 15A or 220-230V ±10% 8A, 50/60 Hz" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "ST-724M" }
+          ],
+
+          "applications": [
+            "Routine Clinical Sample Separation: Mixed-loading and swinging bucket rotors handle standard tube formats.",
+            "Microplate-Based Assays: 2 dedicated micro-plate rotors support plate-based workflows directly.",
+            "General Laboratory Sample Prep: Microtubes through 250 mL bottles on one machine.",
+            "Cell Culture and Larger Volume Processing: 250 mL bottle capacity extends beyond S300T's tube-only range.",
+            "High-Throughput Routine QC: Self-Check and Imbalance Early Detector support confident high-volume operation.",
+            "Multi-User Core Facilities: 7 rotor options accommodate varied daily protocols."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Seven Rotors" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S500T vs S300T vs M500TR",
+            "description": "Compare the Kubota Model S500T with S300T and M500TR to choose the right general-purpose centrifuge.",
+            "columns": [
+              { "label": "S300T", "highlight": false },
+              { "label": "S500T", "highlight": true },
+              { "label": "M500TR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Refrigeration", "values": ["No", "No", "Yes, -10°C to +40°C"] },
+              { "feature": "Maximum Speed", "values": ["4,000 rpm", "6,000 rpm", "15,300 rpm"] },
+              { "feature": "Maximum RCF", "values": ["2,610 xg", "5,350 xg", "22,250 xg"] },
+              { "feature": "Maximum Capacity", "values": ["360 mL", "1,020 mL", "2,000 mL"] },
+              { "feature": "Rotor Options", "values": ["1 typical", "7", "1 highlighted \"5-in-1\""] },
+              { "feature": "Weight", "values": ["20 kg", "39 kg", "85 kg"] },
+              { "feature": "Best For", "values": ["Smallest footprint, simplest need", "Wider format range, micro-plate compatibility", "High RCF and refrigeration together"] },
+              { "feature": "Choose When", "values": ["Minimal rotor variety required", "Micro-plate work or a wider range is needed", "Both high force and temperature control are required"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota Model S500T handles varied routine separation work.",
+            "industries": [
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "Routine blood and sample separation", "consideration": "Mixed-loading and swinging bucket rotors handle standard formats" },
+              { "name": "Research and Academic Laboratories", "icon": "school", "useCase": "Varied sample prep across microtubes, bottles, and plates", "consideration": "7 rotor options cover a genuinely wide daily workflow" },
+              { "name": "Cell Culture and Molecular Biology", "icon": "flask", "useCase": "250 mL bottle and micro-plate processing", "consideration": "Dedicated micro-plate rotors and larger bottle capacity" },
+              { "name": "High-Throughput Screening Labs", "icon": "cpu", "useCase": "Micro-plate assay-based workflows", "consideration": "2 micro-plate rotors purpose-built for this format" },
+              { "name": "Multi-User Core Facilities", "icon": "droplet", "useCase": "Shared instrument across varied protocols", "consideration": "Self-Check and Imbalance Early Detector support confident use" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota Model S500T from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own sample formats across the 7 available rotors." },
+              { "title": "Rotor Configuration Support", "description": "Confirms the right rotor combination for the sample mix in use." },
+              { "title": "Installation Support", "description": "Confirms power supply compatibility and bench siting." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, mixed-loading, and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotor, Self-Check system, and imbalance detector performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, tube adapters, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model S500T used for?", "answer": "A general-purpose benchtop centrifuge for routine sample separation, handling microtubes through 250 mL bottles or micro-plates." },
+            { "question": "What is the maximum speed and RCF?", "answer": "6,000 rpm, delivering up to 5,350 xg maximum RCF." },
+            { "question": "How many rotor options are available?", "answer": "7 total: 4 multiple swinging bucket rotors, 1 angle rotor, and 2 micro-plate rotors." },
+            { "question": "What is the Self-Check Function?", "answer": "An automated function that verifies the system's operating condition." },
+            { "question": "What is the Imbalance Early Detector?", "answer": "A safety function that flags a poorly balanced rotor early, before an uneven spin causes damage." },
+            { "question": "Can different tube sizes be run together?", "answer": "Yes, mixed-loading is available." },
+            { "question": "What is the maximum capacity?", "answer": "1,020 mL." },
+            { "question": "What are the dimensions and weight?", "answer": "44 × 53 × 32 cm (W×D×H), weighing 39 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60 Hz, either 110V ±10% at 15A or 220-230V ±10% at 8A." },
+            { "question": "How is S500T different from S300T?", "answer": "S500T offers a higher maximum speed, greater capacity, and 7 rotor options including dedicated micro-plate rotors, plus the Self-Check Function and Imbalance Early Detector." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the Model S500T in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model S500T in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Benchtop Centrifuge Model S500T in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model S500T in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 7 rotor options from microtubes to micro-plates, mixed-loading, and two named safety functions built to catch problems early. Share the sample formats and daily volume, and the right S500T configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample formats and daily volume, then confirm the right S500T configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleFormats", "label": "Sample formats", "type": "text", "required": false },
+              { "key": "dailyVolume", "label": "Daily volume", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right rotor selection", "body": "Share the sample formats routinely run, including whether micro-plates are part of the workflow, and the right rotor selection from the 7 available gets confirmed." },
+              { "title": "Confirm the rotor combination for micro-plate work", "body": "Share whether micro-plate work is part of the routine, and the right rotor combination gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Microtubes to 250 mL bottles. 7 rotor options. One machine, checking itself.",
+            "heroLead": "Model S500T runs from microtubes to 250 mL bottles, or micro-plates, across 7 available rotor options: 4 swinging bucket, 1 angle, and 2 micro-plate rotors. Two named safety functions, a Self-Check Function and an Imbalance Early Detector, set it apart from the smaller S300T. Mixed-loading carries over from the range. Speed reaches 6,000 rpm, up to 5,350 xg, with a maximum capacity of 1,020 mL.",
+            "stats": [
+              { "value": "6,000 rpm", "label": "Maximum speed" },
+              { "value": "5,350 xg", "label": "Maximum RCF" },
+              { "value": "1,020 mL", "label": "Maximum capacity" },
+              { "value": "7 rotors", "label": "4 swinging bucket, 1 angle, 2 micro-plate" },
+              { "value": "Self-Check Function", "label": "Automated system check" },
+              { "value": "Imbalance Early Detector", "label": "Fast imbalance detection" },
+              { "value": "Mixed-loading", "label": "Different tube formats, same load" },
+              { "value": "39 kg", "label": "Weight" },
+              { "value": "44 x 53 x 32 cm", "label": "Dimensions (W×D×H)" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota Model S500T covers microtubes through 250 mL bottles and micro-plates on one machine.",
+                "body": [
+                  "Benchtop centrifuge for microtubes through 250 mL bottles, or micro-plates.",
+                  "7 rotor options: 4 multiple swinging bucket rotors, 1 angle rotor, and 2 micro-plate rotors.",
+                  "Self-Check Function equipped.",
+                  "Imbalance Early Detector equipped.",
+                  "Mixed-loading available, different tube formats run together in the same load.",
+                  "Maximum speed of 6,000 rpm, delivering up to 5,350 xg maximum RCF.",
+                  "Maximum capacity of 1,020 mL.",
+                  "Dimensions of 44 × 53 × 32 cm at 39 kg.",
+                  "Single-phase power, 110V or 220-230V, both 50/60 Hz.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "7 rotor options", "description": "Microtubes through 250 mL bottles, and micro-plates" },
+                  { "title": "Self-Check + Early Imbalance Detection", "description": "Two named safety layers, not one" },
+                  { "title": "Mixed-loading", "description": "Different tube formats, same load" },
+                  { "title": "1,020 mL max capacity", "description": "Nearly 3x S300T's stated capacity" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the rotor variety, Self-Check Function, and Imbalance Early Detector of the Kubota Model S500T."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota Model S500T supports routine clinical separation, micro-plate assays, and cell culture work."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the speed, RCF, capacity, rotor options, and power requirements of the Kubota Model S500T."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Seven Rotors, One Machine",
+                "title": "Seven Rotors, One Machine",
+                "description": "Learn how rotor variety on the Kubota Model S500T covers a wider sample range than speed alone. A centrifuge's top speed matters less day to day than whether the right rotor exists for the sample in front of you. S500T covers that ground directly: 4 multiple swinging bucket rotors, 1 angle rotor, and 2 micro-plate rotors, seven options across three genuinely different rotor geometries. Micro-plate rotors extend the machine into plate-based assay work, a format S300T's stated rotor list doesn't reach.",
+                "cards": [
+                  { "title": "Standard tube formats, gentle separation", "description": "Swinging bucket rotors, 4 options." },
+                  { "title": "Higher tube count, compact footprint", "description": "Angle rotor." },
+                  { "title": "Micro-plate assay work", "description": "2 dedicated micro-plate rotors." },
+                  { "title": "Coverage across a full daily workflow", "description": "7 rotor options on one machine." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Self-Check and Early Imbalance Detection",
+                "title": "Self-Check and Early Imbalance Detection",
+                "description": "Discover how two named safety functions on the Kubota Model S500T catch problems before they affect a run.",
+                "body": [
+                  "Kubota names two specific functions on S500T that go beyond S300T's single imbalance detector: a Self-Check Function and an Imbalance Early Detector. The Self-Check Function verifies the system's own operating condition, catching a problem with the machine itself before it affects a run. The Imbalance Early Detector addresses the load side of the same concern, flagging a poorly balanced rotor early."
+                ],
+                "utilityChecklist": [
+                  { "label": "A system fault going unnoticed until it causes a problem", "value": "Self-Check Function verifies operating condition" },
+                  { "label": "An unbalanced load building into damage mid-spin", "value": "Imbalance Early Detector flags it early" },
+                  { "label": "Inconsistent safety across different operators", "value": "Both functions run automatically, regardless of who's loading" }
+                ],
+                "disclaimer": "Share the daily throughput and whether the centrifuge runs across multiple operators or shifts, and expected reliability gets discussed against these two safety functions."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S500T brochure and rotor compatibility list for the Kubota Model S500T.",
+                "cards": [
+                  { "title": "S500T Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model S500T in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 7 rotor options from microtubes to micro-plates, mixed-loading, and two named safety functions built to catch problems early. Share the sample formats and daily volume, and the right S500T configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Benchtop Centrifuge (Model S700T)",
+          "slug": "benchtop-centrifuge-model-s700t",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Benchtop Centrifuge (Model S700T) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/benchtop-centrifuge-model-s700t",
+          "breadcrumbPath": "Home > Products > Benchtop Centrifuge (Model S700T)",
+          "h1": "Benchtop Centrifuge (Model S700T)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "S700T is the largest in Kubota's S-series, running from 5 mL slim blood collection tubes to 750 mL bottles, or micro-plates, on 3 rotor options: 2 swinging bucket rotors and 1 angle rotor. A new structure allows mixed loading with 2 round and 2 plate buckets together. Performance splits by rotor: the swing rotor (RS-7504M) reaches 3,800 rpm and 3,100 xg with capacity to 4 × 750 mL; the angle rotor (AT-508C) reaches 6,000 rpm and 5,350 xg with capacity to 8 × 50 mL.",
+
+          "features": [
+            "750 mL Bottle Capacity: The largest volume in the S-series.",
+            "Round + Plate Mixed Loading: 2 round and 2 plate buckets, together.",
+            "Rotor-Dependent Performance: Swing for volume, angle for speed.",
+            "3 Rotor Options: 2 swinging bucket, 1 angle.",
+            "Genuinely Floor-Standing: 118 kg, not benchtop-light."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Benchtop Centrifuge, Model S700T" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "Swing rotor (RS-7504M): 3,800 rpm · Angle rotor (AT-508C): 6,000 rpm" },
+            { "label": "Maximum RCF", "value": "Swing rotor (RS-7504M): 3,100 xg · Angle rotor (AT-508C): 5,350 xg" },
+            { "label": "Maximum Capacity", "value": "Swing rotor (RS-7504M): 4 × 750 mL · Angle rotor (AT-508C): 8 × 50 mL" },
+            { "label": "Sample Range", "value": "5 mL slim blood collection tubes to 750 mL bottles, or micro-plates" },
+            { "label": "Rotor Options", "value": "3 total, 2 swinging bucket, 1 angle" },
+            { "label": "Mixed Loading", "value": "2 round + 2 plate buckets, same load" },
+            { "label": "Dimensions (W×D×H)", "value": "54 × 63 × 84 cm" },
+            { "label": "Weight", "value": "118 kg" },
+            { "label": "Power Requirements", "value": "Single phase, 110V/115V ±10% 15A or 220V/230V ±10% 10A, 50/60 Hz" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "RS-7504M, RS-1440M, AT-508C" }
+          ],
+
+          "applications": [
+            "Larger-Volume Blood Sample Processing: 5 mL slim tube compatibility with swing rotor capacity to 4 × 750 mL.",
+            "Blood Bank and Large-Batch Separation: 750 mL bottle capacity, the largest in the S-series.",
+            "Combined Tube and Plate Workflows: Mixed loading with 2 round and 2 plate buckets.",
+            "High-Throughput Small-Tube Processing: Angle rotor (AT-508C), 8 × 50 mL at 6,000 rpm.",
+            "Multipurpose Routine Laboratory Use: Kubota's own multipurpose positioning.",
+            "Microplate-Based Assay Work: Plate bucket compatibility within the mixed-loading structure."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Mixed Loading" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S700T vs S300T vs S500T",
+            "description": "Compare the Kubota Model S700T with S300T and S500T to choose the right general-purpose centrifuge.",
+            "columns": [
+              { "label": "S300T", "highlight": false },
+              { "label": "S500T", "highlight": false },
+              { "label": "S700T", "highlight": true }
+            ],
+            "rows": [
+              { "feature": "Refrigeration", "values": ["No", "No", "No"] },
+              { "feature": "Maximum Speed", "values": ["4,000 rpm", "6,000 rpm", "3,800 rpm (swing) / 6,000 rpm (angle)"] },
+              { "feature": "Maximum RCF", "values": ["2,610 xg", "5,350 xg", "3,100 xg (swing) / 5,350 xg (angle)"] },
+              { "feature": "Maximum Capacity", "values": ["360 mL", "1,020 mL", "4 × 750 mL (swing) / 8 × 50 mL (angle)"] },
+              { "feature": "Rotor Options", "values": ["1 typical", "7", "3"] },
+              { "feature": "Mixed-Loading", "values": ["Yes, tube sizes", "Yes, tube sizes", "Yes, 2 round + 2 plate buckets"] },
+              { "feature": "Weight", "values": ["20 kg", "39 kg", "118 kg"] },
+              { "feature": "Best For", "values": ["Smallest footprint, simplest need", "Micro-plate work, broader format range", "Large-volume bottles, combined tube/plate loads"] },
+              { "feature": "Choose When", "values": ["Minimal rotor variety required", "A wider tube-to-plate range is needed", "Bottle capacity or combined round/plate loading is the priority"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota Model S700T handles large-volume separation.",
+            "industries": [
+              { "name": "Blood Banks", "icon": "droplet", "useCase": "Large-batch blood component separation", "consideration": "750 mL bottle capacity via the swing rotor" },
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "Larger-volume routine sample processing", "consideration": "5 mL slim tube compatibility across a wide capacity range" },
+              { "name": "Research Laboratories with Mixed Workflows", "icon": "flask", "useCase": "Combined tube and plate-based protocols", "consideration": "2 round + 2 plate bucket mixed loading" },
+              { "name": "High-Volume Reference Laboratories", "icon": "school", "useCase": "Batch processing at scale", "consideration": "Largest capacity in the S-series general-purpose range" },
+              { "name": "Multipurpose Core Facilities", "icon": "cpu", "useCase": "Varied daily protocols spanning tubes, bottles, and plates", "consideration": "Multipurpose positioning built for this model specifically" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota Model S700T from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own tube and bottle formats across swing and angle rotors." },
+              { "title": "Rotor Configuration Support", "description": "Confirms swing, angle, or mixed round/plate setup for the workload." },
+              { "title": "Installation Support", "description": "Confirms power supply, floor loading, and siting for a floor-standing unit." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, mixed loading, and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotors, drive system, and mixed-loading structure performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, buckets, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model S700T used for?", "answer": "A multipurpose benchtop centrifuge for larger routine sample loads, handling 5 mL slim blood collection tubes through 750 mL bottles, or micro-plates." },
+            { "question": "What is the maximum speed and RCF?", "answer": "Depends on the rotor: the swing rotor reaches 3,800 rpm and 3,100 xg; the angle rotor reaches 6,000 rpm and 5,350 xg." },
+            { "question": "What is the maximum capacity?", "answer": "4 × 750 mL on the swing rotor, or 8 × 50 mL on the angle rotor." },
+            { "question": "Can round tubes and plates be loaded together?", "answer": "Yes, a new bucket structure allows mixed loading with 2 round and 2 plate buckets." },
+            { "question": "How many rotor options are available?", "answer": "3: 2 swinging bucket rotors and 1 angle rotor." },
+            { "question": "Is this a benchtop or floor-standing unit?", "answer": "It's the largest and heaviest in the S-series at 118 kg." },
+            { "question": "What are the dimensions?", "answer": "54 × 63 × 84 cm (W×D×H)." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60 Hz, either 110V/115V ±10% at 15A or 220V/230V ±10% at 10A." },
+            { "question": "How is S700T different from S500T?", "answer": "S700T handles significantly larger bottle volumes and adds combined round-and-plate mixed loading, with fewer total rotor options but far greater capacity." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the Model S700T in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model S700T in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Benchtop Centrifuge Model S700T in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model S700T in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Swing rotor capacity to 4 × 750 mL, angle rotor speed to 6,000 rpm, and mixed loading across round and plate buckets together. Share the sample volumes and formats, and the right S700T rotor configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample volumes and formats, then confirm the right S700T rotor configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolumes", "label": "Sample volumes", "type": "text", "required": false },
+              { "key": "sampleFormats", "label": "Sample formats", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right rotor", "body": "Share the sample volumes and formats routinely run, including whether plate-based work is part of the mix, and the right rotor gets confirmed." },
+              { "title": "Confirm the bucket configuration for mixed work", "body": "Share how often the daily workflow mixes tube-based and plate-based samples, and the right bucket configuration gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "5 mL slim tubes to 750 mL bottles. Two round buckets, two plate buckets, one load.",
+            "heroLead": "S700T is the largest in Kubota's S-series, running from 5 mL slim blood collection tubes to 750 mL bottles, or micro-plates, on 3 rotor options: 2 swinging bucket rotors and 1 angle rotor. A new structure allows mixed loading with 2 round and 2 plate buckets together. Performance splits by rotor: the swing rotor (RS-7504M) reaches 3,800 rpm and 3,100 xg with capacity to 4 × 750 mL; the angle rotor (AT-508C) reaches 6,000 rpm and 5,350 xg with capacity to 8 × 50 mL.",
+            "stats": [
+              { "value": "750 mL", "label": "Maximum bottle size" },
+              { "value": "4 x 750 mL", "label": "Maximum capacity, swing rotor" },
+              { "value": "6,000 rpm", "label": "Maximum speed, angle rotor (AT-508C)" },
+              { "value": "5,350 xg", "label": "Maximum RCF, angle rotor" },
+              { "value": "3 rotors", "label": "2 swinging bucket, 1 angle" },
+              { "value": "Mixed loading", "label": "2 round + 2 plate buckets, same load" },
+              { "value": "118 kg", "label": "Weight" },
+              { "value": "54 x 63 x 84 cm", "label": "Dimensions (W×D×H)" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota Model S700T handles 5 mL slim tubes through 750 mL bottles for large-volume routine work.",
+                "body": [
+                  "Benchtop centrifuge for 5 mL slim blood collection tubes through 750 mL bottles, or micro-plates.",
+                  "Ideal for multipurpose centrifuge use.",
+                  "New structure allows mixed loading with 2 round and 2 plate buckets.",
+                  "3 rotor options: 2 swinging bucket rotors, 1 angle rotor.",
+                  "Swing rotor (RS-7504M) reaches 3,800 rpm, delivering up to 3,100 xg, capacity 4 × 750 mL.",
+                  "Angle rotor (AT-508C) reaches 6,000 rpm, delivering up to 5,350 xg, capacity 8 × 50 mL.",
+                  "Dimensions of 54 × 63 × 84 cm at 118 kg.",
+                  "Single-phase power, 110/115V or 220/230V, both 50/60 Hz.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "750 mL bottle capacity", "description": "The largest volume in the S-series" },
+                  { "title": "Round + plate mixed loading", "description": "Genuinely combined tube-and-plate runs" },
+                  { "title": "Rotor-dependent performance", "description": "Swing for volume, angle for speed and throughput" },
+                  { "title": "Multipurpose positioning", "description": "Distinct from the rest of the range" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the 750 mL bottle capacity, round-and-plate mixed loading, and rotor-dependent performance of the Kubota Model S700T."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota Model S700T supports blood bank, large-batch, and combined tube-and-plate separation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the swing and angle rotor speed, RCF, capacity, and power requirements of the Kubota Model S700T."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Mixed Loading, Round and Plate Together",
+                "title": "Mixed Loading, Round and Plate Together",
+                "description": "Learn how the Kubota Model S700T combines tube and plate buckets in a single run. S300T and S500T support mixed loading across different tube sizes. S700T's mixed loading goes a step further: a new structure allows 2 round and 2 plate buckets to load simultaneously, mixing conventional tube-based separation with plate-based work in a single spin.",
+                "cards": [
+                  { "title": "Running tubes and plates as fully separate processes", "description": "Both load together, in the same spin." },
+                  { "title": "Time lost waiting for sequential runs", "description": "One run covers the mixed batch." },
+                  { "title": "Extra equipment or scheduling to cover both formats", "description": "One machine, both formats, together." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Choosing Swing or Angle",
+                "title": "Choosing Swing or Angle",
+                "description": "Discover how to match rotor type to sample volume and force requirements on the Kubota Model S700T.",
+                "body": [
+                  "The swing rotor (RS-7504M) trades top speed for volume, 3,800 rpm and 3,100 xg, but capacity to 4 × 750 mL, the largest bottle handling in the S-series. The angle rotor (AT-508C) trades volume for speed and throughput, 6,000 rpm and 5,350 xg, matching S500T's top-end figures, with capacity to 8 × 50 mL."
+                ],
+                "utilityChecklist": [
+                  { "label": "Large-volume bottles, up to 750 mL", "value": "Swing rotor (RS-7504M)" },
+                  { "label": "Higher speed, higher force, smaller tube volumes", "value": "Angle rotor (AT-508C)" },
+                  { "label": "Maximum throughput on 50 mL-scale samples", "value": "Angle rotor" },
+                  { "label": "Blood bank or large-batch bottle processing", "value": "Swing rotor" }
+                ],
+                "disclaimer": "Share the sample volumes and force requirements involved, and the right rotor gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S700 Series brochure and rotor compatibility list for the Kubota Model S700T.",
+                "cards": [
+                  { "title": "S700 Series Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model S700T in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Swing rotor capacity to 4 × 750 mL, angle rotor speed to 6,000 rpm, and mixed loading across round and plate buckets together. Share the sample volumes and formats, and the right S700T rotor configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Benchtop Refrigerated Centrifuge (Model S300TR)",
+          "slug": "benchtop-refrigerated-centrifuge-model-s300tr",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Benchtop Refrigerated Centrifuge (Model S300TR) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/benchtop-refrigerated-centrifuge-model-s300tr",
+          "breadcrumbPath": "Home > Products > Benchtop Refrigerated Centrifuge (Model S300TR)",
+          "h1": "Benchtop Refrigerated Centrifuge (Model S300TR)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "S300TR is the refrigerated sibling to Kubota's S300T, same 4,000 rpm top speed, same 2,610 xg maximum RCF, same 360 mL capacity, same mixed-loading across long and short tubes or 15 mL and 50 mL formats. What it adds is temperature control: -10°C to +40°C. The same 2-second imbalance detector carries over, and this model is documented alongside Kubota's dedicated F-gas free centrifuges brochure.",
+
+          "features": [
+            "-10°C to +40°C: Temperature control S300T doesn't have.",
+            "Identical Speed and RCF to S300T: 4,000 rpm, 2,610 xg, unchanged.",
+            "Mixed-Loading: Long and short tubes, same load, still.",
+            "2-Second Imbalance Detection: Carried over, unchanged.",
+            "F-Gas Free Refrigerant: Documented separately by Kubota."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Benchtop Refrigerated Centrifuge, Model S300TR" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Temperature Setting", "value": "-10°C to +40°C" },
+            { "label": "Maximum Speed", "value": "4,000 rpm" },
+            { "label": "Maximum RCF", "value": "2,610 xg" },
+            { "label": "Maximum Capacity", "value": "360 mL (24 × 15 mL)" },
+            { "label": "Tube Range", "value": "1.5/2 mL microtubes to 50 mL tubes" },
+            { "label": "Mixed-Loading", "value": "Long/short blood collection tubes, or 15 mL/50 mL TC tubes, same load" },
+            { "label": "Imbalance Detection", "value": "2 seconds" },
+            { "label": "Dimensions (W×D×H)", "value": "36 × 64 × 33 cm" },
+            { "label": "Weight", "value": "40 kg (110-115V) or 44 kg (220-230V)" },
+            { "label": "Power Requirements", "value": "Single phase, 110V/115V/220V/230V ±10%, 50/60 Hz" },
+            { "label": "Refrigerant", "value": "F-gas free" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "RS-240A" }
+          ],
+
+          "applications": [
+            "Heat-Sensitive Sample Processing: -10°C to +40°C range protects samples spin heat would otherwise degrade.",
+            "Routine Clinical Sample Separation: Same mixed-loading and format range as S300T, with temperature control.",
+            "Enzyme and Protein Sample Prep: Refrigerated spinning preserves activity that ambient spinning risks.",
+            "Cell and Tissue Sample Handling: Cold-chain-sensitive samples held at controlled temperature.",
+            "Mixed-Batch Processing: Long and short tubes, or 15 mL and 50 mL tubes, together.",
+            "Environmentally Conscious Procurement: F-gas free refrigerant relevant where compliance is a purchasing factor."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Same Performance, Refrigerated" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S300TR vs S300T vs M500TR",
+            "description": "Compare the Kubota Model S300TR with S300T and M500TR to choose the right refrigerated centrifuge.",
+            "columns": [
+              { "label": "S300T", "highlight": false },
+              { "label": "S300TR", "highlight": true },
+              { "label": "M500TR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Refrigeration", "values": ["No", "Yes, -10°C to +40°C", "Yes, -10°C to +40°C"] },
+              { "feature": "Maximum Speed", "values": ["4,000 rpm", "4,000 rpm", "15,300 rpm"] },
+              { "feature": "Maximum RCF", "values": ["2,610 xg", "2,610 xg", "22,250 xg"] },
+              { "feature": "Maximum Capacity", "values": ["360 mL", "360 mL", "2,000 mL"] },
+              { "feature": "Mixed-Loading", "values": ["Yes", "Yes", "Not specified"] },
+              { "feature": "Weight", "values": ["20 kg", "40-44 kg", "85 kg"] },
+              { "feature": "Refrigerant", "values": ["Not applicable", "F-gas free", "Not specified"] },
+              { "feature": "Best For", "values": ["Refrigeration not needed, smallest footprint", "Same performance as S300T, temperature-sensitive samples", "Maximum speed and capacity with refrigeration"] },
+              { "feature": "Choose When", "values": ["Ambient spinning is sufficient", "Temperature control matters, standard speed range is enough", "Both high force and high capacity are required"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota Model S300TR handles temperature-sensitive separation.",
+            "industries": [
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "Routine blood and plasma separation for heat-sensitive analytes", "consideration": "-10°C to +40°C protects sample integrity" },
+              { "name": "Molecular Biology Laboratories", "icon": "flask", "useCase": "Enzyme, protein, and nucleic acid sample prep", "consideration": "Refrigeration preserves activity ambient spinning would risk" },
+              { "name": "Pharmaceutical QC Laboratories", "icon": "pill", "useCase": "Temperature-sensitive formulation and stability sample handling", "consideration": "Controlled temperature range matched to sample requirements" },
+              { "name": "Environmentally Conscious Institutions", "icon": "droplet", "useCase": "Procurement requiring documented refrigerant compliance", "consideration": "F-gas free refrigeration" },
+              { "name": "Multi-User Core Facilities", "icon": "cpu", "useCase": "Shared instrument needing refrigeration and mixed-load flexibility", "consideration": "Combines S300T's mixed-loading with temperature control" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota Model S300TR from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own tube formats and temperature-sensitive samples on the unit." },
+              { "title": "Rotor Configuration Support", "description": "Confirms the right rotor set for the tube mix in use." },
+              { "title": "Installation Support", "description": "Confirms power supply compatibility and bench siting." },
+              { "title": "Operator Training", "description": "Builds confidence with temperature settings, mixed-load balancing, and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotor, refrigeration system, and imbalance detector performance." },
+              { "title": "Refrigerant Compliance Support", "description": "Provides F-gas free documentation for procurement requirements." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, tube adapters, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model S300TR used for?", "answer": "A benchtop refrigerated centrifuge for routine sample separation, protecting heat-sensitive samples across the same tube range as S300T." },
+            { "question": "What is the temperature range?", "answer": "-10°C to +40°C." },
+            { "question": "How does it compare to S300T in performance?", "answer": "Identical, 4,000 rpm maximum speed, 2,610 xg maximum RCF, 360 mL maximum capacity, with refrigeration added." },
+            { "question": "Can different tube sizes be run together?", "answer": "Yes, mixed-loading allows long and short blood collection tubes, or 15 mL and 50 mL TC tubes, in the same load." },
+            { "question": "How fast does it detect an imbalanced load?", "answer": "Within 2 seconds." },
+            { "question": "Is the refrigerant F-gas free?", "answer": "Yes, Kubota documents this model specifically alongside its F-gas free centrifuges compliance brochure." },
+            { "question": "What are the dimensions and weight?", "answer": "36 × 64 × 33 cm (W×D×H), weighing 40 kg on 110-115V or 44 kg on 220-230V." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60 Hz, at 110V, 115V, 220V, or 230V, each ±10%." },
+            { "question": "How is S300TR different from S300T?", "answer": "S300TR adds a -10°C to +40°C temperature range on otherwise identical speed, RCF, and capacity figures." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the Model S300TR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model S300TR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Benchtop Refrigerated Centrifuge Model S300TR in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model S300TR in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. S300T's exact performance, with temperature control from -10°C to +40°C and F-gas free refrigeration. Share the sample sensitivity and site voltage, and the right S300TR configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample sensitivity and site voltage, then confirm the right S300TR configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleSensitivity", "label": "Sample sensitivity", "type": "text", "required": false },
+              { "key": "siteVoltage", "label": "Site voltage", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the temperature sensitivity of the samples routinely spun and the site's voltage supply, and the right S300TR configuration gets confirmed." },
+              { "title": "Confirm S300T vs. S300TR", "body": "Share whether the samples routinely spun are temperature-sensitive, and the choice between S300T and S300TR gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "Everything S300T does, at -10°C to +40°C, with F-gas free refrigerant.",
+            "heroLead": "S300TR is the refrigerated sibling to Kubota's S300T, same 4,000 rpm top speed, same 2,610 xg maximum RCF, same 360 mL capacity, same mixed-loading across long and short tubes or 15 mL and 50 mL formats. What it adds is temperature control: -10°C to +40°C. The same 2-second imbalance detector carries over, and this model is documented alongside Kubota's dedicated F-gas free centrifuges brochure.",
+            "stats": [
+              { "value": "-10°C to +40°C", "label": "Temperature range" },
+              { "value": "4,000 rpm", "label": "Maximum speed" },
+              { "value": "2,610 xg", "label": "Maximum RCF" },
+              { "value": "360 mL", "label": "Maximum capacity (24 × 15 mL)" },
+              { "value": "Mixed-loading", "label": "Long/short and 15 mL/50 mL tubes, same load" },
+              { "value": "2 seconds", "label": "Imbalance detection time" },
+              { "value": "F-gas free", "label": "Refrigerant, documented separately" },
+              { "value": "40-44 kg", "label": "Weight (voltage-dependent)" },
+              { "value": "36 x 64 x 33 cm", "label": "Dimensions (W×D×H)" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota Model S300TR adds temperature control to the S300T's mixed-loading performance.",
+                "body": [
+                  "Benchtop refrigerated centrifuge for 1.5/2 mL microtubes through 50 mL tubes.",
+                  "Mixed-loading available: long and short blood collection tubes, or 15 mL and 50 mL TC tubes, run together.",
+                  "2-second imbalance detector equipped.",
+                  "Ideal for general purpose use.",
+                  "Temperature setting from -10°C to +40°C.",
+                  "Maximum speed of 4,000 rpm, maximum RCF of 2,610 xg.",
+                  "Maximum capacity of 360 mL, 24 × 15 mL.",
+                  "Dimensions of 36 × 64 × 33 cm, larger than S300T to accommodate refrigeration.",
+                  "Weight varies by voltage: 40 kg on 110-115V, 44 kg on 220-230V.",
+                  "Single-phase power, four voltage/frequency combinations: 110V, 115V, 220V, or 230V, all 50/60 Hz.",
+                  "F-gas free refrigerant documentation available separately.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "-10°C to +40°C", "description": "Temperature control for heat-sensitive samples" },
+                  { "title": "Identical performance to S300T", "description": "Same speed, RCF, and capacity, refrigerated" },
+                  { "title": "F-gas free refrigerant", "description": "A compliance detail unique to this model" },
+                  { "title": "Mixed-loading carried over", "description": "Same practical flexibility as the non-refrigerated version" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the -10°C to +40°C range, mixed-loading, and F-gas free refrigerant of the Kubota Model S300TR."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota Model S300TR supports heat-sensitive sample processing and routine clinical separation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the temperature range, speed, RCF, capacity, and power requirements of the Kubota Model S300TR."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Same Performance, Added Temperature Control",
+                "title": "Same Performance, Added Temperature Control",
+                "description": "Learn why the Kubota Model S300TR matches S300T's figures with refrigeration added. S300TR isn't a different centrifuge built around refrigeration, it's S300T with temperature control layered on. Speed matches at 4,000 rpm, RCF matches at 2,610 xg, capacity matches at 360 mL. Mixed-loading works identically, and the imbalance detector still flags a problem in 2 seconds. The genuine difference is the -10°C to +40°C temperature range, and a larger footprint to house the refrigeration system.",
+                "cards": [
+                  { "title": "4,000 rpm, 2,610 xg, 360 mL", "description": "Identical figures." },
+                  { "title": "Mixed-loading, 2-second imbalance detection", "description": "Identical functions." },
+                  { "title": "No temperature control", "description": "-10°C to +40°C." },
+                  { "title": "20 kg, compact footprint", "description": "40-44 kg, larger footprint for refrigeration." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "F-Gas Free Refrigeration",
+                "title": "F-Gas Free Refrigeration",
+                "description": "Discover what F-gas free refrigerant compliance means for the Kubota Model S300TR.",
+                "body": [
+                  "Refrigerant choice in laboratory equipment increasingly matters beyond cooling performance, F-gases carry environmental regulation in many markets. Kubota lists S300TR alongside a dedicated F-gas free centrifuges brochure, a document not linked from other Kubota product pages, worth taking as a genuine signal for institutions with environmental procurement policies or operating in jurisdictions regulating F-gas use."
+                ],
+                "utilityChecklist": [
+                  { "label": "Regulatory restriction on F-gas refrigerants", "value": "A refrigeration system built to avoid them" },
+                  { "label": "Institutional environmental procurement policies", "value": "A documented compliance position" },
+                  { "label": "Long-term refrigerant availability and servicing", "value": "Dedicated Kubota documentation on this specific point" }
+                ],
+                "disclaimer": "Share whether the institution has specific refrigerant or environmental procurement requirements, and F-gas free documentation gets provided."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S300 Series and F-gas free brochures for the Kubota Model S300TR.",
+                "cards": [
+                  { "title": "S300 Series Brochure", "description": "Available on request" },
+                  { "title": "F-Gas Free Centrifuges Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model S300TR in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. S300T's exact performance, with temperature control from -10°C to +40°C and F-gas free refrigeration. Share the sample sensitivity and site voltage, and the right S300TR configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Benchtop Refrigerated Centrifuge (Model S700TR)",
+          "slug": "benchtop-refrigerated-centrifuge-model-s700tr",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Benchtop Refrigerated Centrifuge (Model S700TR) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/benchtop-refrigerated-centrifuge-model-s700tr",
+          "breadcrumbPath": "Home > Products > Benchtop Refrigerated Centrifuge (Model S700TR)",
+          "h1": "Benchtop Refrigerated Centrifuge (Model S700TR)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "S700TR is the refrigerated version of S700T, and it goes further than a straight temperature-controlled copy. Alongside the same swing rotor capacity to 4 × 750 mL, S700TR adds a faster angle rotor, the AT-2724M, reaching 12,000 rpm and 13,200 xg. Coverage runs 1.5 mL microtubes through 750 mL bottles, or micro-plates, across 4 rotor options: 2 swinging bucket, 1 micro rotor, and 1 angle rotor. Temperature holds -10°C to +40°C, and like S300TR, this model carries F-gas free refrigerant documentation.",
+
+          "features": [
+            "12,000 rpm Angle Rotor: Genuinely faster than S700T's rotor set.",
+            "4 Rotor Options: Swing, micro, and angle, one more than S700T.",
+            "-10°C to +40°C: Temperature control S700T doesn't have.",
+            "Round + Plate Mixed Loading: Carried over from S700T, unchanged.",
+            "F-Gas Free Refrigerant: Same standard as S300TR."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Benchtop Refrigerated Centrifuge, Model S700TR" },
+            { "label": "Category", "value": "General Purpose Refrigerated Centrifuge" },
+            { "label": "Temperature Range", "value": "-10°C to +40°C" },
+            { "label": "Sample Capacity", "value": "1.5 mL microtubes to 750 mL bottles, or microplates" },
+            { "label": "Rotor Options", "value": "4 total (2 swinging bucket, 1 micro, 1 angle)" },
+            { "label": "Mixed Loading Capability", "value": "2 round buckets + 2 plate buckets simultaneously with equal loading" },
+            { "label": "Maximum Speed (Swing Rotor – RS-7504M)", "value": "4,000 rpm" },
+            { "label": "Maximum RCF (Swing Rotor – RS-7504M)", "value": "3,430 xg" },
+            { "label": "Maximum Capacity (Swing Rotor – RS-7504M)", "value": "4 × 750 mL" },
+            { "label": "Maximum Speed (Angle Rotor – AT-2724M)", "value": "12,000 rpm" },
+            { "label": "Maximum RCF (Angle Rotor – AT-2724M)", "value": "13,200 xg" },
+            { "label": "Maximum Capacity (Angle Rotor)", "value": "8 × 50 mL — flagged in source: this figure is listed against AT-508C, a different rotor from AT-2724M; confirm the exact angle rotor capacity directly before quoting" },
+            { "label": "Typical Rotor Options", "value": "RS-7504M, RS-1440M, AT-508C, AT-2724M" },
+            { "label": "Dimensions (W × D × H)", "value": "54 × 63 × 84 cm" },
+            { "label": "Weight", "value": "118 kg" },
+            { "label": "Power Requirements", "value": "Single-phase, 220/230 V ±10%, 10 A, 50/60 Hz" },
+            { "label": "Refrigerant", "value": "F-gas free" },
+            { "label": "Country of Manufacture", "value": "Made in Japan" }
+          ],
+
+          "applications": [
+            "Heat-Sensitive Large-Volume Processing: -10°C to +40°C on the same 4 × 750 mL swing rotor capacity as S700T.",
+            "High-Speed Small-Tube Separation: AT-2724M angle rotor, 12,000 rpm, 13,200 xg.",
+            "Blood Bank and Large-Batch Refrigerated Separation: 750 mL bottle capacity with temperature control.",
+            "Combined Tube and Plate Refrigerated Workflows: Mixed loading with 2 round and 2 plate buckets, temperature-controlled.",
+            "Micro-Volume Work Requiring a Dedicated Rotor: Micro rotor, one of 4 available rotor types.",
+            "Environmentally Conscious Refrigerated Procurement: F-gas free refrigerant, same standard as S300TR."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Faster Angle Rotor" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S700TR vs S700T vs S300TR",
+            "description": "Compare the Kubota Model S700TR with S700T and S300TR to choose the right refrigerated centrifuge.",
+            "columns": [
+              { "label": "S700T", "highlight": false },
+              { "label": "S700TR", "highlight": true },
+              { "label": "S300TR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Refrigeration", "values": ["No", "Yes, -10°C to +40°C", "Yes, -10°C to +40°C"] },
+              { "feature": "Maximum Speed (Swing)", "values": ["3,800 rpm", "4,000 rpm", "4,000 rpm"] },
+              { "feature": "Maximum Speed (Angle)", "values": ["6,000 rpm", "12,000 rpm", "Not applicable"] },
+              { "feature": "Maximum RCF (Angle)", "values": ["5,350 xg", "13,200 xg", "2,610 xg"] },
+              { "feature": "Maximum Capacity (Swing)", "values": ["4 × 750 mL", "4 × 750 mL", "360 mL"] },
+              { "feature": "Rotor Options", "values": ["3", "4", "1 typical"] },
+              { "feature": "Mixed-Loading", "values": ["2 round + 2 plate buckets", "2 round + 2 plate buckets", "Tube sizes only"] },
+              { "feature": "Refrigerant", "values": ["Not applicable", "F-gas free", "F-gas free"] },
+              { "feature": "Weight", "values": ["118 kg", "118 kg", "40-44 kg"] },
+              { "feature": "Best For", "values": ["Large volume, mixed round/plate loading, no refrigeration needed", "Everything S700T offers, plus refrigeration and higher angle rotor speed", "Smaller format range, refrigeration for basic general-purpose work"] },
+              { "feature": "Choose When", "values": ["Refrigeration isn't required", "Both large-volume/mixed loading and refrigeration or high-speed angle work are needed", "Refrigeration is needed but neither the S700 series' volume nor speed matters"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota Model S700TR handles large-volume refrigerated separation.",
+            "industries": [
+              { "name": "Blood Banks", "icon": "droplet", "useCase": "Large-batch, temperature-controlled blood component separation", "consideration": "750 mL swing rotor capacity, refrigerated" },
+              { "name": "Reference and High-Volume Clinical Laboratories", "icon": "pill", "useCase": "Heat-sensitive large-volume routine processing", "consideration": "-10°C to +40°C across the widest S-series format range" },
+              { "name": "Research Laboratories Requiring High-Speed Separation", "icon": "flask", "useCase": "Protocols needing force beyond S700T's angle rotor ceiling", "consideration": "AT-2724M reaches 12,000 rpm, 13,200 xg" },
+              { "name": "Pharmaceutical Formulation and Stability Testing", "icon": "pill", "useCase": "Temperature-sensitive, high-force sample separation", "consideration": "Combines refrigeration with the range's highest angle rotor speed" },
+              { "name": "Multipurpose Core Facilities", "icon": "cpu", "useCase": "Varied protocols spanning volume, speed, and temperature control", "consideration": "4 rotor options cover swing, micro, and high-speed angle work together" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota Model S700TR from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own samples across swing, micro, and angle rotor configurations." },
+              { "title": "Rotor Configuration Support", "description": "Confirms swing, micro, or angle rotor fit, including AT-2724M speed capability." },
+              { "title": "Installation Support", "description": "Confirms power supply, floor loading, and siting for a floor-standing unit." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, temperature settings, and mixed loading." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotors, refrigeration system, and drive performance." },
+              { "title": "Refrigerant Compliance Support", "description": "Provides F-gas free documentation for procurement requirements." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, buckets, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model S700TR used for?", "answer": "A multipurpose benchtop refrigerated centrifuge for larger sample loads, handling 1.5 mL microtubes through 750 mL bottles, or micro-plates, with temperature control." },
+            { "question": "What is the temperature range?", "answer": "-10°C to +40°C." },
+            { "question": "What is the maximum speed?", "answer": "4,000 rpm on the swing rotor, or 12,000 rpm on the angle rotor." },
+            { "question": "How does this compare to S700T?", "answer": "S700TR adds refrigeration and a faster angle rotor (12,000 rpm vs. S700T's 6,000 rpm), while matching S700T's swing rotor bottle capacity." },
+            { "question": "How many rotor options are available?", "answer": "4: 2 swinging bucket rotors, 1 micro rotor, and 1 angle rotor." },
+            { "question": "Can round tubes and plates be loaded together?", "answer": "Yes, 2 round and 2 plate buckets in the same load." },
+            { "question": "Is the refrigerant F-gas free?", "answer": "Yes, documented alongside Kubota's F-gas free centrifuges brochure, the same standard applied to S300TR." },
+            { "question": "What is the maximum capacity?", "answer": "4 × 750 mL on the swing rotor. The angle rotor capacity figure needs direct confirmation, as it's attributed to a different rotor model in Kubota's own material." },
+            { "question": "What are the dimensions and weight?", "answer": "54 × 63 × 84 cm (W×D×H), weighing 118 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 220V or 230V ±10%, 50/60 Hz, 10A." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the Model S700TR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model S700TR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Benchtop Refrigerated Centrifuge Model S700TR in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model S700TR in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The largest Kubota format range, refrigerated, with an angle rotor reaching 12,000 rpm. Share the sample volumes, speed requirements, and site voltage, and the right S700TR rotor configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample volumes, speed requirements, and site voltage, then confirm the right S700TR rotor configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolumes", "label": "Sample volumes", "type": "text", "required": false },
+              { "key": "speedRequirements", "label": "Speed requirements", "type": "text", "required": false },
+              { "key": "siteVoltage", "label": "Site voltage", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right rotor configuration", "body": "Share the sample volumes, whether high-speed angle rotor work is part of the routine, and the site's voltage supply, and the right S700TR rotor configuration gets confirmed." },
+              { "title": "Confirm AT-2724M's fit", "body": "Share whether the routine work needs speeds above S700T's 6,000 rpm ceiling, and AT-2724M's fit gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "12,000 rpm on the angle rotor. -10°C to +40°C throughout. 750 mL bottles, still.",
+            "heroLead": "S700TR is the refrigerated version of S700T, and it goes further than a straight temperature-controlled copy. Alongside the same swing rotor capacity to 4 × 750 mL, S700TR adds a faster angle rotor, the AT-2724M, reaching 12,000 rpm and 13,200 xg. Coverage runs 1.5 mL microtubes through 750 mL bottles, or micro-plates, across 4 rotor options: 2 swinging bucket, 1 micro rotor, and 1 angle rotor. Temperature holds -10°C to +40°C, and like S300TR, this model carries F-gas free refrigerant documentation.",
+            "stats": [
+              { "value": "-10°C to +40°C", "label": "Temperature range" },
+              { "value": "12,000 rpm", "label": "Maximum speed, angle rotor (AT-2724M)" },
+              { "value": "13,200 xg", "label": "Maximum RCF, angle rotor" },
+              { "value": "4 x 750 mL", "label": "Maximum capacity, swing rotor" },
+              { "value": "4 rotors", "label": "2 swinging bucket, 1 micro, 1 angle" },
+              { "value": "Mixed loading", "label": "2 round + 2 plate buckets, same load" },
+              { "value": "F-gas free", "label": "Refrigerant, documented separately" },
+              { "value": "118 kg", "label": "Weight" },
+              { "value": "54 x 63 x 84 cm", "label": "Dimensions (W×D×H)" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota Model S700TR combines large-volume capacity with refrigeration and a high-speed angle rotor.",
+                "body": [
+                  "Benchtop refrigerated centrifuge for 1.5 mL microtubes through 750 mL bottles, or micro-plates.",
+                  "Ideal for multipurpose centrifuge use.",
+                  "New structure allows mixed loading with 2 round and 2 plate buckets.",
+                  "4 rotor options: 2 swinging bucket rotors, 1 micro rotor, 1 angle rotor.",
+                  "Swing rotor (RS-7504M) reaches 4,000 rpm, delivering up to 3,430 xg, capacity 4 × 750 mL.",
+                  "Angle rotor (AT-2724M) reaches 12,000 rpm, delivering up to 13,200 xg.",
+                  "Temperature setting from -10°C to +40°C.",
+                  "Dimensions of 54 × 63 × 84 cm at 118 kg.",
+                  "Single-phase power, 220V/230V ±10%, 50/60 Hz.",
+                  "F-gas free refrigerant documentation available separately.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "12,000 rpm angle rotor", "description": "Faster than anything in S700T's rotor set" },
+                  { "title": "-10°C to +40°C", "description": "Temperature control across the full format range" },
+                  { "title": "4 rotor options", "description": "One more than S700T, including a dedicated micro rotor" },
+                  { "title": "F-gas free refrigerant", "description": "Same compliance standard as S300TR" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the 12,000 rpm angle rotor, refrigeration range, and rotor variety of the Kubota Model S700TR."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota Model S700TR supports heat-sensitive large-volume and high-speed separation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the swing and angle rotor speed, RCF, capacity, and power requirements of the Kubota Model S700TR."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "A Genuinely Faster Angle Rotor",
+                "title": "A Genuinely Faster Angle Rotor",
+                "description": "Learn how the AT-2724M rotor on the Kubota Model S700TR outpaces the S700T's rotor set. S700T's angle rotor (AT-508C) tops out at 6,000 rpm and 5,350 xg. S700TR replaces that with the AT-2724M, reaching 12,000 rpm and 13,200 xg, more than double the speed and well over double the force. Combined with the same 4 × 750 mL swing rotor capacity carried over from S700T, S700TR covers more ground in two directions at once, larger volumes on the swing rotor, and meaningfully higher force on the angle rotor, with temperature control running underneath both.",
+                "cards": [
+                  { "title": "Angle rotor: 6,000 rpm, 5,350 xg", "description": "AT-2724M: 12,000 rpm, 13,200 xg." },
+                  { "title": "Swing rotor: 4 × 750 mL, 3,100 xg", "description": "Same swing capacity, refrigerated, marginally higher RCF (3,430 xg)." },
+                  { "title": "3 rotor options", "description": "4 rotor options, adding a dedicated micro rotor." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Same Family, Same F-Gas Free Standard",
+                "title": "Same Family, Same F-Gas Free Standard",
+                "description": "Discover how the Kubota Model S700TR shares its refrigerant standard with the S300TR.",
+                "body": [
+                  "Like S300TR, this model is listed alongside Kubota's F-gas free centrifuges brochure, the same compliance documentation applied here to the larger, higher-capacity S700TR. That consistency suggests the F-gas free refrigerant standard runs across Kubota's refrigerated benchtop range generally."
+                ],
+                "utilityChecklist": [
+                  { "label": "Regulatory restriction on F-gas refrigerants", "value": "A refrigeration system documented as avoiding them" },
+                  { "label": "Consistency across a refrigerated product range", "value": "Same compliance documentation as S300TR" },
+                  { "label": "Institutional procurement requirements", "value": "Kubota's dedicated brochure, available on request" }
+                ],
+                "disclaimer": "Share whether refrigerant compliance is a specific procurement requirement, and the F-gas free documentation gets provided directly."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S700 Series and F-gas free brochures for the Kubota Model S700TR.",
+                "cards": [
+                  { "title": "S700 Series Brochure", "description": "Available on request" },
+                  { "title": "F-Gas Free Centrifuges Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model S700TR in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The largest Kubota format range, refrigerated, with an angle rotor reaching 12,000 rpm. Share the sample volumes, speed requirements, and site voltage, and the right S700TR rotor configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Floor Standing Refrigerated Centrifuge (S500FR)",
+          "slug": "floor-standing-refrigerated-centrifuge-s500fr",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Floor Standing Refrigerated Centrifuge (S500FR) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/floor-standing-refrigerated-centrifuge-s500fr",
+          "breadcrumbPath": "Home > Products > Floor Standing Refrigerated Centrifuge (S500FR)",
+          "h1": "Floor Standing Refrigerated Centrifuge (S500FR)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "S500FR runs from microtubes to 500 mL bottles, or micro-plates, across 10 rotor options: 5 multiple swinging bucket rotors, 2 angle rotors, and 3 micro-plate rotors. The same Self-Check Function and Imbalance Early Detector found on S500T carry over here, alongside mixed-loading across different sample formats. Speed reaches 8,500 rpm, delivering up to 9,690 xg, with a maximum capacity of 2,000 mL.",
+
+          "features": [
+            "10 Rotor Options: 5 swing, 2 angle, 3 micro-plate.",
+            "8,500 rpm, 9,690 xg: Well above benchtop-tier performance.",
+            "Self-Check Function: Verifies the system automatically.",
+            "Imbalance Early Detector: Catches a bad load fast.",
+            "2,000 mL Capacity: Matches Kubota's top-end general-purpose volume."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Floor Standing Refrigerated Centrifuge, Model S500FR" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "8,500 rpm" },
+            { "label": "Maximum RCF", "value": "9,690 xg" },
+            { "label": "Maximum Capacity", "value": "2,000 mL" },
+            { "label": "Sample Format Range", "value": "Microtubes to 500 mL bottles, or micro-plates" },
+            { "label": "Rotor Options", "value": "10 total: 5 multiple swinging bucket, 2 angle, 3 micro-plate" },
+            { "label": "Safety Functions", "value": "Self-Check Function, Imbalance Early Detector" },
+            { "label": "Mixed-Loading", "value": "Available" },
+            { "label": "Dimensions (W×D×H)", "value": "54 × 64 × 84 cm" },
+            { "label": "Weight", "value": "39 kg — flagged in source: unusually light for a floor-standing configuration; Kubota's other floor units (S700T, S700TR, Model 8730, Model 9945) weigh 118 kg, 118 kg, 217 kg, and 450 kg respectively. Worth confirming this figure directly with Kubota." },
+            { "label": "Power Requirements", "value": "Single phase, 110V ±10% 15A or 220-230V ±10% 10A, 50/60 Hz" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "ST-724M, ST-2504MS, ST-5004M, PT-22M" }
+          ],
+
+          "applications": [
+            "High-Capacity Clinical Sample Separation: 2,000 mL capacity across swing rotor configurations.",
+            "Micro-Plate Assay Work: 3 dedicated micro-plate rotors support plate-based workflows.",
+            "High-Throughput Angle Rotor Processing: 2 angle rotors for higher tube counts.",
+            "Mixed-Format Routine Separation: Mixed-loading across different sample formats.",
+            "Research and Molecular Biology Work: 8,500 rpm and 9,690 xg cover demanding separation protocols.",
+            "Multi-Protocol Core Facilities: 10 rotor options accommodate varied daily needs."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Ten Rotors" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S500FR vs S500T vs Model 5500",
+            "description": "Compare the Kubota S500FR with S500T and Model 5500 to choose the right general-purpose centrifuge.",
+            "columns": [
+              { "label": "S500T", "highlight": false },
+              { "label": "S500FR", "highlight": true },
+              { "label": "Model 5500", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Configuration", "values": ["Benchtop", "Floor-standing", "Tabletop"] },
+              { "feature": "Refrigeration", "values": ["No", "Yes", "Yes, -20°C to +40°C"] },
+              { "feature": "Maximum Speed", "values": ["6,000 rpm", "8,500 rpm", "15,000 rpm"] },
+              { "feature": "Maximum RCF", "values": ["5,350 xg", "9,690 xg", "20,820 xg"] },
+              { "feature": "Maximum Capacity", "values": ["1,020 mL", "2,000 mL", "2,000 mL"] },
+              { "feature": "Rotor Options", "values": ["7 (4 swing, 1 angle, 2 plate)", "10 (5 swing, 2 angle, 3 plate)", "12 (5 swing, 3 micro, 2 angle, 2 plate)"] },
+              { "feature": "Safety Functions", "values": ["Self-Check, Imbalance Early Detector", "Self-Check, Imbalance Early Detector", "Not specified"] },
+              { "feature": "Best For", "values": ["Compact benchtop, moderate speed and capacity", "Higher capacity and speed than S500T, refrigerated", "Maximum rotor variety and widest temperature range"] },
+              { "feature": "Choose When", "values": ["Benchtop footprint is the priority", "Capacity and speed above S500T are needed, in a refrigerated unit", "The lab needs the broadest rotor coverage and coldest temperature setting"] }
+            ],
+            "disclaimer": "S500FR sits directly between S500T and Model 5500 on capacity and speed, nearly double S500T's RCF and capacity, while carrying two fewer rotor options than Model 5500's full 12."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota S500FR handles high-capacity, temperature-controlled separation.",
+            "industries": [
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "High-capacity blood and sample separation", "consideration": "2,000 mL capacity with mixed-loading support" },
+              { "name": "Research and Molecular Biology Laboratories", "icon": "flask", "useCase": "Demanding separation protocols", "consideration": "8,500 rpm and 9,690 xg cover a wide research range" },
+              { "name": "Microplate-Based Assay Laboratories", "icon": "school", "useCase": "Plate-based screening and assay workflows", "consideration": "3 dedicated micro-plate rotors" },
+              { "name": "High-Throughput Core Facilities", "icon": "cpu", "useCase": "Angle rotor work at higher tube counts", "consideration": "2 angle rotors add throughput" },
+              { "name": "Multi-Protocol Shared Facilities", "icon": "droplet", "useCase": "Labs running varied daily protocols across formats", "consideration": "10 rotor options cover a genuinely wide daily workflow" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota S500FR from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own sample formats across the 10 available rotors." },
+              { "title": "Rotor Configuration Support", "description": "Confirms the right rotor combination for the sample mix in use." },
+              { "title": "Installation Support", "description": "Confirms power supply compatibility and site placement." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, mixed-loading, and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotor, refrigeration, Self-Check system, and imbalance detector performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, tube adapters, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the S500FR used for?", "answer": "A floor-standing refrigerated centrifuge for high-capacity separation, handling microtubes through 500 mL bottles or micro-plates." },
+            { "question": "What is the maximum speed and RCF?", "answer": "8,500 rpm, delivering up to 9,690 xg maximum RCF." },
+            { "question": "How many rotor options are available?", "answer": "10 total: 5 multiple swinging bucket rotors, 2 angle rotors, and 3 micro-plate rotors." },
+            { "question": "What is the Self-Check Function?", "answer": "An automated function that verifies the system's operating condition." },
+            { "question": "What is the Imbalance Early Detector?", "answer": "A safety function that flags a poorly balanced rotor early, before an uneven spin causes damage." },
+            { "question": "Can different sample formats be run together?", "answer": "Yes, mixed-loading is available." },
+            { "question": "What is the maximum capacity?", "answer": "2,000 mL." },
+            { "question": "What are the dimensions and weight?", "answer": "54 × 64 × 84 cm (W×D×H), weighing 39 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60 Hz, either 110V ±10% at 15A or 220-230V ±10% at 10A." },
+            { "question": "How is S500FR different from S500T?", "answer": "S500FR offers a higher maximum speed (8,500 rpm vs. 6,000 rpm), nearly double the RCF, and double the capacity, with 10 rotor options against S500T's 7, in a floor-standing configuration with refrigeration." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the S500FR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the S500FR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Floor Standing Refrigerated Centrifuge S500FR in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota S500FR in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 10 rotor options, 8,500 rpm and 9,690 xg, and two named safety functions built to catch problems early. Share the sample formats and daily volume, and the right S500FR rotor configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample formats and daily volume, then confirm the right S500FR rotor configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleFormats", "label": "Sample formats", "type": "text", "required": false },
+              { "key": "dailyVolume", "label": "Daily volume", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right rotor selection", "body": "Share the sample formats routinely run, including whether micro-plate work is part of the workflow, and the right rotor selection from the 10 available gets confirmed." },
+              { "title": "Confirm the rotor combination for micro-plate work", "body": "Share whether micro-plate work is a routine part of the lab's daily protocol, and the right rotor combination from the 10 available gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "10 rotor options. Two named safety functions. Microtubes to 500 mL bottles.",
+            "heroLead": "S500FR runs from microtubes to 500 mL bottles, or micro-plates, across 10 rotor options: 5 multiple swinging bucket rotors, 2 angle rotors, and 3 micro-plate rotors. The same Self-Check Function and Imbalance Early Detector found on S500T carry over here, alongside mixed-loading across different sample formats. Speed reaches 8,500 rpm, delivering up to 9,690 xg, with a maximum capacity of 2,000 mL.",
+            "stats": [
+              { "value": "8,500 rpm", "label": "Maximum speed" },
+              { "value": "9,690 xg", "label": "Maximum RCF" },
+              { "value": "2,000 mL", "label": "Maximum capacity" },
+              { "value": "10 rotors", "label": "5 swing, 2 angle, 3 micro-plate" },
+              { "value": "Self-Check Function", "label": "Automated system check" },
+              { "value": "Imbalance Early Detector", "label": "Fast imbalance detection" },
+              { "value": "Mixed-loading", "label": "Different sample formats, same load" },
+              { "value": "54 x 64 x 84 cm", "label": "Dimensions (W×D×H)" },
+              { "value": "Made in Japan", "label": "Manufacturing origin" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota S500FR covers microtubes through 500 mL bottles and micro-plates across ten rotor options.",
+                "body": [
+                  "Floor-standing refrigerated centrifuge for microtubes through 500 mL bottles, or micro-plates.",
+                  "10 rotor options: 5 multiple swinging bucket rotors, 2 angle rotors, and 3 micro-plate rotors.",
+                  "Self-Check Function equipped.",
+                  "Imbalance Early Detector equipped.",
+                  "Mixed-loading available across different sample formats.",
+                  "Maximum speed of 8,500 rpm, delivering up to 9,690 xg maximum RCF.",
+                  "Maximum capacity of 2,000 mL.",
+                  "Dimensions of 54 × 64 × 84 cm (W×D×H).",
+                  "Single-phase power, 110V or 220-230V, both 50/60 Hz.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "10 rotor options", "description": "Microtubes through 500 mL bottles, and micro-plates" },
+                  { "title": "8,500 rpm, 9,690 xg", "description": "Performance above benchtop-tier general-purpose centrifuges" },
+                  { "title": "Self-Check + Early Imbalance Detection", "description": "Two named safety layers" },
+                  { "title": "2,000 mL capacity", "description": "Matching the top-end capacity in Kubota's general-purpose range" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the rotor variety, speed capability, and safety functions of the Kubota S500FR."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota S500FR supports high-capacity, temperature-controlled separation across research and clinical settings."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the speed, RCF, capacity, dimensions, and power requirements of the Kubota S500FR."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Ten Rotors Across Three Geometries",
+                "title": "Ten Rotors Across Three Geometries",
+                "description": "Learn how the rotor set on the Kubota S500FR covers a genuinely broad daily workflow. S500FR's 10 rotor options span 5 swinging bucket, 2 angle, and 3 micro-plate rotors, more micro-plate rotor variety than S500T's benchtop configuration, and a genuinely wide format range across all three geometries. That breadth means standard tube separation, higher-throughput angle work, and plate-based assay work all run on the same unit, without a second machine needed to fill a gap in the rotor set.",
+                "cards": [
+                  { "title": "Standard tube separation, gentler handling", "description": "Swinging bucket rotors, 5 options." },
+                  { "title": "Higher tube count, compact footprint", "description": "Angle rotors, 2 options." },
+                  { "title": "Plate-based assay work", "description": "Micro-plate rotors, 3 options." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Self-Check and Early Imbalance Detection",
+                "title": "Self-Check and Early Imbalance Detection",
+                "description": "Discover what two named safety functions add to the Kubota S500FR.",
+                "body": [
+                  "The Self-Check Function verifies the system's own operating condition automatically, catching a problem with the machine itself before it affects a run. The Imbalance Early Detector addresses the load side of the same concern, flagging a poorly balanced rotor early, before an uneven spin causes damage or compromises a sample. Both run automatically, regardless of which operator loads the machine."
+                ],
+                "utilityChecklist": [
+                  { "label": "A system fault going unnoticed until it causes a problem", "value": "Self-Check Function verifies operating condition" },
+                  { "label": "An unbalanced load building into damage mid-spin", "value": "Imbalance Early Detector flags it early" },
+                  { "label": "Inconsistent safety across different operators", "value": "Both functions run automatically, regardless of who's loading" }
+                ],
+                "disclaimer": "Share the daily throughput and whether the centrifuge runs across multiple operators or shifts, and expected reliability gets discussed against these two safety functions."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S500FR brochure and rotor compatibility list for the Kubota S500FR.",
+                "cards": [
+                  { "title": "S500FR Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota S500FR in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 10 rotor options, 8,500 rpm and 9,690 xg, and two named safety functions built to catch problems early. Share the sample formats and daily volume, and the right S500FR rotor configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Floor Standing Refrigerated Centrifuge (S700FR)",
+          "slug": "floor-standing-refrigerated-centrifuge-s700fr",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Floor Standing Refrigerated Centrifuge (S700FR) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/floor-standing-refrigerated-centrifuge-s700fr",
+          "breadcrumbPath": "Home > Products > Floor Standing Refrigerated Centrifuge (S700FR)",
+          "h1": "Floor Standing Refrigerated Centrifuge (S700FR)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "S700FR handles 1.5 mL microtubes through 750 mL bottles, or micro-plates, across 4 rotor options: 2 swinging bucket rotors, 1 micro rotor, and 1 angle rotor. A new structure allows mixed loading with 2 round and 2 plate buckets together. The swing rotor (RS-7504M) reaches 4,000 rpm and 3,430 xg with capacity to 4 × 750 mL; the angle rotor (AT-2724M) reaches 12,000 rpm and 13,200 xg. Temperature holds -10°C to +40°C.",
+
+          "features": [
+            "12,000 rpm Angle Rotor: High-speed capability, floor-standing.",
+            "4 Rotor Options: Swing, micro, and angle geometries.",
+            "-10°C to +40°C: Temperature control across the range.",
+            "Round + Plate Mixed Loading: 2 round and 2 plate buckets, together.",
+            "750 mL Bottle Capacity: Large-volume swing rotor handling."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Floor Standing Refrigerated Centrifuge, Model S700FR" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "Swing rotor (RS-7504M): 4,000 rpm · Angle rotor (AT-2724M): 12,000 rpm" },
+            { "label": "Maximum RCF", "value": "Swing rotor (RS-7504M): 3,430 xg · Angle rotor (AT-2724M): 13,200 xg" },
+            { "label": "Maximum Capacity", "value": "Swing rotor (RS-7504M): 4 × 750 mL · Angle rotor: 8 × 50 mL — flagged in source: this figure is attributed to AT-508C, a different rotor from AT-2724M; confirm the exact angle rotor capacity directly before quoting" },
+            { "label": "Temperature Setting", "value": "-10°C to +40°C" },
+            { "label": "Sample Range", "value": "1.5 mL microtubes to 750 mL bottles, or micro-plates" },
+            { "label": "Rotor Options", "value": "4 total, 2 swinging bucket, 1 micro, 1 angle" },
+            { "label": "Mixed Loading", "value": "2 round + 2 plate buckets, same load" },
+            { "label": "Dimensions (W×D×H)", "value": "54 × 63 × 84 cm" },
+            { "label": "Weight", "value": "118 kg" },
+            { "label": "Power Requirements", "value": "Single phase, 110V/115V ±10% 15A or 220V/230V ±10% 10A, 50/60 Hz" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "RS-7504M, RS-1440M, AT-508C, AT-2724M" }
+          ],
+
+          "applications": [
+            "Heat-Sensitive Large-Volume Processing: -10°C to +40°C on 4 × 750 mL swing rotor capacity.",
+            "High-Speed Small-Tube Separation: AT-2724M angle rotor, 12,000 rpm, 13,200 xg.",
+            "Blood Bank and Large-Batch Refrigerated Separation: 750 mL bottle capacity with temperature control.",
+            "Combined Tube and Plate Refrigerated Workflows: Mixed loading with 2 round and 2 plate buckets.",
+            "Micro-Volume Work Requiring a Dedicated Rotor: Micro rotor, one of 4 available rotor types.",
+            "Floor-Standing Installations Needing Large Capacity: Full 750 mL and high-speed angle work on one floor unit."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Mixed Loading" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "S700FR vs S700T vs S500FR",
+            "description": "Compare the Kubota S700FR with S700T and S500FR to choose the right high-capacity centrifuge.",
+            "columns": [
+              { "label": "S700T", "highlight": false },
+              { "label": "S700FR", "highlight": true },
+              { "label": "S500FR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Configuration", "values": ["Benchtop", "Floor-standing", "Floor-standing"] },
+              { "feature": "Refrigeration", "values": ["No", "Yes, -10°C to +40°C", "Yes"] },
+              { "feature": "Maximum Speed (Swing)", "values": ["3,800 rpm", "4,000 rpm", "Not applicable, uses swing/angle/plate set"] },
+              { "feature": "Maximum Speed (Angle)", "values": ["6,000 rpm", "12,000 rpm", "8,500 rpm"] },
+              { "feature": "Maximum RCF (Angle)", "values": ["5,350 xg", "13,200 xg", "9,690 xg"] },
+              { "feature": "Maximum Capacity", "values": ["4 × 750 mL", "4 × 750 mL", "2,000 mL"] },
+              { "feature": "Rotor Options", "values": ["3", "4", "10"] },
+              { "feature": "Mixed-Loading", "values": ["2 round + 2 plate buckets", "2 round + 2 plate buckets", "Yes"] },
+              { "feature": "Weight", "values": ["118 kg", "118 kg", "39 kg"] },
+              { "feature": "Best For", "values": ["Large volume, mixed round/plate loading, no refrigeration needed", "Everything S700T offers, plus refrigeration and higher angle rotor speed", "Wider rotor variety, refrigerated, moderate speed range"] },
+              { "feature": "Choose When", "values": ["Refrigeration isn't required", "Large-volume bottles and high-speed angle work are both needed", "Rotor variety across microplates and tubes matters more than bottle capacity"] }
+            ]
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota S700FR handles large-volume refrigerated separation.",
+            "industries": [
+              { "name": "Blood Banks", "icon": "droplet", "useCase": "Large-batch, temperature-controlled blood component separation", "consideration": "750 mL swing rotor capacity, refrigerated" },
+              { "name": "Reference and High-Volume Clinical Laboratories", "icon": "pill", "useCase": "Heat-sensitive large-volume routine processing", "consideration": "-10°C to +40°C across the widest format range" },
+              { "name": "Research Laboratories Requiring High-Speed Separation", "icon": "flask", "useCase": "Protocols needing force beyond standard angle rotor ceilings", "consideration": "AT-2724M reaches 12,000 rpm, 13,200 xg" },
+              { "name": "Pharmaceutical Formulation and Stability Testing", "icon": "pill", "useCase": "Temperature-sensitive, high-force sample separation", "consideration": "Combines refrigeration with high angle rotor speed" },
+              { "name": "Multipurpose Core Facilities", "icon": "cpu", "useCase": "Varied protocols spanning volume, speed, and temperature control", "consideration": "4 rotor options cover swing, micro, and high-speed angle work together" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota S700FR from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own samples across swing, micro, and angle rotor configurations." },
+              { "title": "Rotor Configuration Support", "description": "Confirms swing, micro, or angle rotor fit, including AT-2724M speed capability." },
+              { "title": "Installation Support", "description": "Confirms power supply, floor loading, and siting." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, temperature settings, and mixed loading." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotors, refrigeration system, and drive performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, buckets, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the S700FR used for?", "answer": "A floor-standing refrigerated centrifuge for large sample loads, handling 1.5 mL microtubes through 750 mL bottles, or micro-plates, with temperature control." },
+            { "question": "What is the temperature range?", "answer": "-10°C to +40°C." },
+            { "question": "What is the maximum speed?", "answer": "4,000 rpm on the swing rotor (RS-7504M), or 12,000 rpm on the angle rotor (AT-2724M)." },
+            { "question": "How many rotor options are available?", "answer": "4: 2 swinging bucket rotors, 1 micro rotor, and 1 angle rotor." },
+            { "question": "Can round tubes and plates be loaded together?", "answer": "Yes, 2 round and 2 plate buckets in the same load." },
+            { "question": "What is the maximum capacity?", "answer": "4 × 750 mL on the swing rotor. The angle rotor capacity figure needs direct confirmation, as it's attributed to a different rotor model number in Kubota's own material." },
+            { "question": "What are the dimensions and weight?", "answer": "54 × 63 × 84 cm (W×D×H), weighing 118 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, either 110V/115V ±10% at 15A, or 220V/230V ±10% at 10A, 50/60 Hz." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the S700FR in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the S700FR in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Floor Standing Refrigerated Centrifuge S700FR in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota S700FR in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 750 mL bottle capacity, an angle rotor reaching 12,000 rpm, and refrigeration from -10°C to +40°C. Share the sample volumes, speed requirements, and site voltage, and the right S700FR rotor configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample volumes, speed requirements, and site voltage, then confirm the right S700FR rotor configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleVolumes", "label": "Sample volumes", "type": "text", "required": false },
+              { "key": "speedRequirements", "label": "Speed requirements", "type": "text", "required": false },
+              { "key": "siteVoltage", "label": "Site voltage", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right rotor configuration", "body": "Share the sample volumes, whether high-speed angle rotor work is part of the routine, and the site's voltage supply, and the right S700FR rotor configuration gets confirmed." },
+              { "title": "Confirm the bucket configuration for mixed work", "body": "Share how often the daily workflow mixes tube-based and plate-based samples, and the right bucket configuration gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "12,000 rpm on the angle rotor. -10°C to +40°C. 750 mL bottles, floor-standing.",
+            "heroLead": "S700FR handles 1.5 mL microtubes through 750 mL bottles, or micro-plates, across 4 rotor options: 2 swinging bucket rotors, 1 micro rotor, and 1 angle rotor. A new structure allows mixed loading with 2 round and 2 plate buckets together. The swing rotor (RS-7504M) reaches 4,000 rpm and 3,430 xg with capacity to 4 × 750 mL; the angle rotor (AT-2724M) reaches 12,000 rpm and 13,200 xg. Temperature holds -10°C to +40°C.",
+            "stats": [
+              { "value": "-10°C to +40°C", "label": "Temperature range" },
+              { "value": "12,000 rpm", "label": "Maximum speed, angle rotor (AT-2724M)" },
+              { "value": "13,200 xg", "label": "Maximum RCF, angle rotor" },
+              { "value": "4 x 750 mL", "label": "Maximum capacity, swing rotor" },
+              { "value": "4 rotors", "label": "2 swinging bucket, 1 micro, 1 angle" },
+              { "value": "Mixed loading", "label": "2 round + 2 plate buckets, same load" },
+              { "value": "118 kg", "label": "Weight" },
+              { "value": "54 x 63 x 84 cm", "label": "Dimensions (W×D×H)" },
+              { "value": "Made in Japan", "label": "Manufacturing origin" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota S700FR combines large-volume capacity with refrigeration and a high-speed angle rotor.",
+                "body": [
+                  "Floor-standing refrigerated centrifuge for 1.5 mL microtubes through 750 mL bottles, or micro-plates.",
+                  "Ideal for multipurpose centrifuge use.",
+                  "New structure allows mixed loading with 2 round and 2 plate buckets.",
+                  "4 rotor options: 2 swinging bucket rotors, 1 micro rotor, 1 angle rotor.",
+                  "Swing rotor (RS-7504M) reaches 4,000 rpm, delivering up to 3,430 xg, capacity 4 × 750 mL.",
+                  "Angle rotor (AT-2724M) reaches 12,000 rpm, delivering up to 13,200 xg.",
+                  "Temperature setting from -10°C to +40°C.",
+                  "Dimensions of 54 × 63 × 84 cm at 118 kg.",
+                  "Single-phase power, 110V/115V ±10% at 15A, or 220V/230V ±10% at 10A, 50/60 Hz.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "12,000 rpm angle rotor", "description": "High-speed capability on a floor-standing unit" },
+                  { "title": "-10°C to +40°C", "description": "Temperature control across the full format range" },
+                  { "title": "4 rotor options", "description": "Swing, micro, and angle geometries covered" },
+                  { "title": "750 mL bottle capacity", "description": "Large-volume swing rotor handling" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the 12,000 rpm angle rotor, refrigeration range, and rotor variety of the Kubota S700FR."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota S700FR supports large-volume, heat-sensitive, and high-speed separation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the swing and angle rotor speed, RCF, capacity, and power requirements of the Kubota S700FR."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Mixed Loading, Round and Plate Together",
+                "title": "Mixed Loading, Round and Plate Together",
+                "description": "Learn how the Kubota S700FR combines tube and plate buckets in a single run. The new bucket structure allows 2 round and 2 plate buckets to load simultaneously, mixing conventional tube-based separation with plate-based work in a single spin. That removes the need to run tube-based and plate-based samples as fully separate processes, or schedule them across separate spins.",
+                "cards": [
+                  { "title": "Running tubes and plates as fully separate processes", "description": "Both load together, in the same spin." },
+                  { "title": "Time lost waiting for sequential runs", "description": "One run covers the mixed batch." },
+                  { "title": "Extra equipment or scheduling to cover both formats", "description": "One machine, both formats, together." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Swing or Angle Rotor",
+                "title": "Swing or Angle Rotor",
+                "description": "Matching rotor type to the actual sample on the Kubota S700FR.",
+                "body": [
+                  "The swing rotor (RS-7504M) trades top speed for volume, 4,000 rpm and 3,430 xg, with capacity to 4 × 750 mL. The angle rotor (AT-2724M) trades volume for speed and throughput, reaching 12,000 rpm and 13,200 xg."
+                ],
+                "utilityChecklist": [
+                  { "label": "Large-volume bottles, up to 750 mL", "value": "Swing rotor (RS-7504M)" },
+                  { "label": "Higher speed, higher force, smaller tube volumes", "value": "Angle rotor (AT-2724M)" },
+                  { "label": "Blood bank or large-batch bottle processing", "value": "Swing rotor" },
+                  { "label": "High-speed protocols on smaller sample volumes", "value": "Angle rotor" }
+                ],
+                "disclaimer": "Share the sample volumes and force requirements involved, and the right rotor gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the S700 Series brochure and rotor compatibility list for the Kubota S700FR.",
+                "cards": [
+                  { "title": "S700 Series Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota S700FR in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 750 mL bottle capacity, an angle rotor reaching 12,000 rpm, and refrigeration from -10°C to +40°C. Share the sample volumes, speed requirements, and site voltage, and the right S700FR rotor configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        },
+        {
+          "name": "Tabletop Refrigerated Centrifuge (Model 5500)",
+          "slug": "tabletop-refrigerated-centrifuge-model-5500",
+          "principalImage": "/assets/images/PrincipalLogos/RowThree/Kubota.png",
+          "imageAlt": "Kubota Tabletop Refrigerated Centrifuge (Model 5500) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/tabletop-refrigerated-centrifuge-model-5500",
+          "breadcrumbPath": "Home > Products > Tabletop Refrigerated Centrifuge (Model 5500)",
+          "h1": "Tabletop Refrigerated Centrifuge (Model 5500)",
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "Model 5500 carries more rotor variety than anything else in Kubota's general-purpose range: 5 multiple swinging bucket rotors, 3 micro rotors, 2 angle rotors, and 2 micro-plate rotors, 12 total across four geometries. Microtubes to 500 mL bottles, or micro-plates, all on one tabletop unit. Speed reaches 15,000 rpm, delivering up to 20,820 xg, with a maximum capacity of 2,000 mL. Temperature control runs -20°C to +40°C, the widest cold-end range in the Kubota range.",
+
+          "features": [
+            "12 Rotor Options: 5 swing, 3 micro, 2 angle, 2 plate.",
+            "15,000 rpm, 20,820 xg: Well above general-purpose entry level.",
+            "-20°C to +40°C: The widest cold range in the set.",
+            "2,000 mL Capacity: The largest volume in the range.",
+            "Genuine Format Breadth: Microtubes to 500 mL bottles, or plates."
+          ],
+
+          "technicalSpecs": [
+            { "label": "Product Name", "value": "Kubota Tabletop Refrigerated Centrifuge, Model 5500" },
+            { "label": "Category", "value": "General Purpose Centrifuges" },
+            { "label": "Maximum Speed", "value": "15,000 rpm" },
+            { "label": "Maximum RCF", "value": "20,820 xg" },
+            { "label": "Maximum Capacity", "value": "2,000 mL" },
+            { "label": "Sample Format Range", "value": "Microtubes to 500 mL bottles, or micro-plates" },
+            { "label": "Temperature Setting", "value": "-20°C to +40°C" },
+            { "label": "Rotor Options", "value": "12 total: 5 multiple swinging bucket, 3 micro, 2 angle, 2 micro-plate" },
+            { "label": "Dimensions (W×D×H)", "value": "70 × 65 × 36 cm" },
+            { "label": "Weight", "value": "102 kg" },
+            { "label": "Power Requirements", "value": "Single phase, 110V ±10% 15A or 220-230V ±10% 10A, 50/60 Hz" },
+            { "label": "Manufacturing Origin", "value": "Made in Japan" },
+            { "label": "Typical Rotors", "value": "ST-5004M" }
+          ],
+
+          "applications": [
+            "Routine Clinical Sample Separation: Swing rotors handle standard tube formats across a wide capacity range.",
+            "Micro-Volume and Molecular Biology Work: 3 dedicated micro rotors for small-volume, high-force applications.",
+            "High-Throughput Angle Rotor Processing: 2 angle rotors for higher tube counts at compact footprint.",
+            "Microplate-Based Assay Work: 2 dedicated micro-plate rotors support plate-based workflows directly.",
+            "Temperature-Sensitive Sample Processing: -20°C to +40°C protects heat- and cold-sensitive samples alike.",
+            "Multi-Protocol Core Facilities: 12 rotor options across 4 geometries cover a genuinely broad daily workflow."
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "benefits", "label": "Twelve Rotors" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
+          "comparison": {
+            "eyebrow": "Choosing within Kubota's General Purpose Centrifuge range",
+            "title": "Model 5500 vs the S-series vs M500TR",
+            "description": "Compare the Kubota Model 5500 with the S-series and M500TR across the full general-purpose range.",
+            "columns": [
+              { "label": "S300T/S300TR", "highlight": false },
+              { "label": "S500T", "highlight": false },
+              { "label": "S700T/S700TR", "highlight": false },
+              { "label": "Model 5500", "highlight": true },
+              { "label": "M500TR", "highlight": false }
+            ],
+            "rows": [
+              { "feature": "Maximum Speed", "values": ["4,000 rpm", "6,000 rpm", "3,800-6,000 rpm (T) / 4,000-12,000 rpm (TR)", "15,000 rpm", "15,300 rpm"] },
+              { "feature": "Maximum RCF", "values": ["2,610 xg", "5,350 xg", "Up to 5,350 xg (T) / up to 13,200 xg (TR)", "20,820 xg", "22,250 xg"] },
+              { "feature": "Maximum Capacity", "values": ["360 mL", "1,020 mL", "4 × 750 mL", "2,000 mL", "2,000 mL"] },
+              { "feature": "Refrigeration", "values": ["Optional (TR variant)", "No", "Optional (TR variant)", "Yes, -20°C to +40°C", "Yes, -10°C to +40°C"] },
+              { "feature": "Rotor Options", "values": ["1 typical", "7", "3 (T) / 4 (TR)", "12", "1 highlighted \"5-in-1\""] },
+              { "feature": "Weight", "values": ["20-44 kg", "39 kg", "118 kg", "102 kg", "85 kg"] },
+              { "feature": "Best For", "values": ["Basic general-purpose spinning", "Wider format range, micro-plate compatibility", "Large-volume bottles, mixed round/plate loading", "Maximum rotor variety across every geometry", "Maximum speed/RCF in the lightest high-performance footprint"] },
+              { "feature": "Choose When", "values": ["The simplest general-purpose need", "Micro-plate work without top-end volume", "Bottle capacity or combined round/plate loading matters", "The lab needs genuinely broad rotor coverage", "Top-end speed and RCF in a lighter unit matter most"] }
+            ],
+            "disclaimer": "The Kubota general-purpose range spans from S300T's basic entry point through to Model 5500 and M500TR at the top, one built for rotor variety, the other for the marginal edge in raw speed and RCF within a lighter unit."
+          },
+
+          "applicationsExplorer": {
+            "eyebrow": "Industry Explorer",
+            "title": "Industry Explorer",
+            "description": "Explore the laboratories and industries where the Kubota Model 5500 handles broad, high-performance separation.",
+            "industries": [
+              { "name": "Clinical Diagnostic Laboratories", "icon": "pill", "useCase": "Routine blood and sample separation across varied formats", "consideration": "Swing rotors and micro rotors cover both standard and small-volume clinical work" },
+              { "name": "Research and Molecular Biology Laboratories", "icon": "flask", "useCase": "Micro-volume, high-force separation protocols", "consideration": "3 dedicated micro rotors matched to molecular biology needs" },
+              { "name": "High-Throughput Core Facilities", "icon": "cpu", "useCase": "Angle rotor work at higher tube counts", "consideration": "2 angle rotors add throughput without needing a separate machine" },
+              { "name": "Microplate-Based Assay Laboratories", "icon": "school", "useCase": "Plate-based screening and assay workflows", "consideration": "2 dedicated micro-plate rotors support plate work directly" },
+              { "name": "Multi-Protocol Shared Facilities", "icon": "droplet", "useCase": "Labs running varied daily protocols across formats", "consideration": "12 rotor options across 4 geometries cover the full range on one machine" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "Get demonstration, installation, rotor configuration, training, and AMC support for the Kubota Model 5500 from Inkarp across India.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own sample formats across the 12 available rotors." },
+              { "title": "Rotor Configuration Support", "description": "Confirms the right rotor combination for the sample mix in use." },
+              { "title": "Installation Support", "description": "Confirms power supply compatibility and bench siting." },
+              { "title": "Operator Training", "description": "Builds confidence with rotor changes, temperature settings, and routine operation." },
+              { "title": "Preventive Maintenance", "description": "Maintains rotor, refrigeration, and drive system performance." },
+              { "title": "Spares and Accessories", "description": "Supplies rotors, tube adapters, and replacement parts." },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
+            ]
+          },
+
+          "faqs": [
+            { "question": "What is the Model 5500 used for?", "answer": "A tabletop refrigerated centrifuge for general-purpose separation, handling microtubes through 500 mL bottles or micro-plates." },
+            { "question": "What is the maximum speed and RCF?", "answer": "15,000 rpm, delivering up to 20,820 xg maximum RCF." },
+            { "question": "How many rotor options are available?", "answer": "12 total: 5 multiple swinging bucket rotors, 3 micro rotors, 2 angle rotors, and 2 micro-plate rotors." },
+            { "question": "What is the temperature range?", "answer": "-20°C to +40°C." },
+            { "question": "What is the maximum capacity?", "answer": "2,000 mL." },
+            { "question": "What are the dimensions and weight?", "answer": "70 × 65 × 36 cm (W×D×H), weighing 102 kg." },
+            { "question": "What power supply does it require?", "answer": "Single phase, 50/60 Hz, either 110V ±10% at 15A or 220-230V ±10% at 10A." },
+            { "question": "How does Model 5500 compare to M500TR?", "answer": "M500TR reaches marginally higher speed and RCF in a lighter 85 kg unit built around a single 5-in-1 rotor. Model 5500 offers a wider -20°C to +40°C temperature range and 12 separate rotor options across four geometries, in a heavier 102 kg unit." },
+            { "question": "Where is it manufactured?", "answer": "Made in Japan." },
+            { "question": "What is the price of the Model 5500 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the rotor configuration and power supply requirements." },
+            { "question": "Who is the authorized distributor of the Model 5500 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Kubota Tabletop Refrigerated Centrifuge Model 5500 in India." }
+          ],
+
+          "booking": {
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Kubota Model 5500 in India from Inkarp",
+            "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 12 rotor options across 4 geometries, 15,000 rpm and 20,820 xg, and a -20°C to +40°C range wider than anywhere else in the Kubota lineup. Share the sample formats and daily volume, and the right Model 5500 rotor configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the sample formats and daily volume, then confirm the right Model 5500 rotor configuration.",
+            "fields": [
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleFormats", "label": "Sample formats", "type": "text", "required": false },
+              { "key": "dailyVolume", "label": "Daily volume", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
+            ],
+            "whyHeading": "Why talk to Inkarp?",
+            "whyItems": [
+              { "title": "Confirm the right rotor selection", "body": "Share the full range of sample formats routinely run, including micro-plate work, and the right selection from the 12 available rotors gets confirmed." },
+              { "title": "Confirm the rotor combination for the weekly workload", "body": "Share the full spread of sample types and volumes the lab processes in a typical week, and the right rotor combination gets confirmed." },
+              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "12 rotor options. 15,000 rpm. -20°C to +40°C. One tabletop unit.",
+            "heroLead": "Model 5500 carries more rotor variety than anything else in Kubota's general-purpose range: 5 multiple swinging bucket rotors, 3 micro rotors, 2 angle rotors, and 2 micro-plate rotors, 12 total across four geometries. Microtubes to 500 mL bottles, or micro-plates, all on one tabletop unit. Speed reaches 15,000 rpm, delivering up to 20,820 xg, with a maximum capacity of 2,000 mL. Temperature control runs -20°C to +40°C, the widest cold-end range in the Kubota range.",
+            "stats": [
+              { "value": "15,000 rpm", "label": "Maximum speed" },
+              { "value": "20,820 xg", "label": "Maximum RCF" },
+              { "value": "2,000 mL", "label": "Maximum capacity" },
+              { "value": "-20°C to +40°C", "label": "Temperature range" },
+              { "value": "12 rotors", "label": "5 swing, 3 micro, 2 angle, 2 micro-plate" },
+              { "value": "102 kg", "label": "Weight" },
+              { "value": "70 x 65 x 36 cm", "label": "Dimensions (W×D×H)" },
+              { "value": "Made in Japan", "label": "Manufacturing origin" }
+            ],
+            "sections": [
+              {
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Discover how the Kubota Model 5500 covers microtubes through 500 mL bottles and micro-plates across twelve rotor options.",
+                "body": [
+                  "Tabletop refrigerated centrifuge for microtubes through 500 mL bottles, or micro-plates.",
+                  "Ideal for general purpose centrifuge use.",
+                  "12 rotor options: 5 multiple swinging bucket rotors, 3 micro rotors, 2 angle rotors, 2 micro-plate rotors.",
+                  "Maximum speed of 15,000 rpm, delivering up to 20,820 xg maximum RCF.",
+                  "Maximum capacity of 2,000 mL.",
+                  "Temperature setting from -20°C to +40°C.",
+                  "Dimensions of 70 × 65 × 36 cm at 102 kg.",
+                  "Single-phase power, 110V or 220-230V, both 50/60 Hz.",
+                  "Made in Japan."
+                ],
+                "cards": [
+                  { "title": "12 rotor options", "description": "The widest rotor variety in Kubota's range" },
+                  { "title": "15,000 rpm, 20,820 xg", "description": "Performance well above general-purpose entry level" },
+                  { "title": "-20°C to +40°C", "description": "The widest temperature range in the range" },
+                  { "title": "2,000 mL capacity", "description": "The largest volume across the general-purpose lineup" }
+                ]
+              },
+              {
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "Explore the rotor variety, 15,000 rpm speed, and -20°C to +40°C range of the Kubota Model 5500."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "See how the Kubota Model 5500 supports routine, micro-volume, high-throughput, and micro-plate separation."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "View the speed, RCF, capacity, temperature range, and rotor options of the Kubota Model 5500."
+              },
+              {
+                "key": "benefits",
+                "eyebrow": "Twelve Rotors, Four Geometries",
+                "title": "Twelve Rotors, Four Geometries",
+                "description": "Learn how rotor variety on the Kubota Model 5500 covers a genuinely broad daily workflow. Model 5500's headline numbers, 15,000 rpm and 20,820 xg, are strong, but the real differentiator is what sits behind them: 12 rotor options, spanning 5 swinging bucket, 3 micro, 2 angle, and 2 micro-plate rotors. No other model in Kubota's general-purpose range covers that many geometries at once, letting a single unit serve a lab's whole day, standard tube separation, small-volume molecular work, higher-throughput angle spins, and plate-based assay work, without a second or third centrifuge to fill the gaps.",
+                "cards": [
+                  { "title": "Standard tube separation, gentler handling", "description": "Swinging bucket rotors, 5 options." },
+                  { "title": "Small-volume, high-force molecular work", "description": "Micro rotors, 3 options." },
+                  { "title": "Higher tube count, compact footprint", "description": "Angle rotors, 2 options." },
+                  { "title": "Plate-based assay work", "description": "Micro-plate rotors, 2 options." }
+                ]
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Model 5500 or M500TR",
+                "title": "Model 5500 or M500TR",
+                "description": "Compare the two highest-performing Kubota centrifuges to choose between rotor variety and top-end speed.",
+                "body": [
+                  "Model 5500 and M500TR are the two strongest performers in Kubota's general-purpose lineup, and their headline figures sit close enough to genuinely compare. M500TR reaches 15,300 rpm and 22,250 xg, marginally ahead of 5500's 15,000 rpm and 20,820 xg. But 5500 pulls ahead on a wider -20°C to +40°C temperature range against M500TR's -10°C to +40°C, and on rotor count. M500TR's page highlights a single \"5-in-1\" rotor as its defining feature; Model 5500 offers 12 separate rotor options across four geometries."
+                ],
+                "utilityChecklist": [
+                  { "label": "Maximum Speed", "value": "Model 5500: 15,000 rpm · M500TR: 15,300 rpm" },
+                  { "label": "Maximum RCF", "value": "Model 5500: 20,820 xg · M500TR: 22,250 xg" },
+                  { "label": "Maximum Capacity", "value": "Model 5500: 2,000 mL · M500TR: 2,000 mL" },
+                  { "label": "Temperature Range", "value": "Model 5500: -20°C to +40°C · M500TR: -10°C to +40°C" },
+                  { "label": "Rotor Options", "value": "Model 5500: 12, across 4 geometries · M500TR: 1 highlighted \"5-in-1\"" },
+                  { "label": "Weight", "value": "Model 5500: 102 kg · M500TR: 85 kg" }
+                ],
+                "disclaimer": "Share whether the priority is the widest possible rotor selection (5500) or the marginally higher top-end speed and force in a lighter footprint (M500TR), and the right choice gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Access the Model 5500 brochure and rotor compatibility list for the Kubota Model 5500.",
+                "cards": [
+                  { "title": "Model 5500 Brochure", "description": "Available on request" },
+                  { "title": "Rotor and Accessory Compatibility List", "description": "Available on request" },
+                  { "title": "Installation and Power Requirements Guide", "description": "Available on request" }
+                ]
+              }
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Kubota Model 5500 in India from Inkarp",
+              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 12 rotor options across 4 geometries, 15,000 rpm and 20,820 xg, and a -20°C to +40°C range wider than anywhere else in the Kubota lineup. Share the sample formats and daily volume, and the right Model 5500 rotor configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -44,7 +44,7 @@ export const heroSlides = [
     id: "hitachi-nexta-dsc",
     title: "Click Here to Know More",
     subtitle: "",
-    href: "/products/dsc-differential-scanning-calorimeters",
+    href: "/products/differential-scanning-calorimeter-dsc-nexta-dsc-series",
     media: {
       type: "image",
       src: "/assets/home/BannerHitachi.jpg",

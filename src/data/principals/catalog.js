@@ -127,6 +127,10 @@ import zeissStereoDiscoveryFamilyCatalog from "./zeiss/stereo-discovery-family.j
 import zeissStereoMicroscopesCatalog from "./zeiss/stereo-microscopes.json";
 import zeissUprightMicroscopesCatalog from "./zeiss/upright-microscopes.json";
 import zeissZoomMicroscopesCatalog from "./zeiss/zoom-microscopes.json";
+import kubotaGeneralPurposeCentrifugesCatalog from "./kubota/general-purpose-centrifuges.json";
+import kubotaLaboratoryCentrifugesCatalog from "./kubota/laboratory-centrifuges.json";
+import kubotaLargeLaboratoryCentrifugesCatalog from "./kubota/large-laboratory-centrifuges.json";
+import workbookProductMetadata from "./workbook-product-metadata.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
   principalFallbackImages,
@@ -137,6 +141,7 @@ import { getPrincipalLogo } from "@/data/products/principalLogos";
 let jsonCatalogCategoriesCache;
 let jsonCatalogProductsCache;
 let jsonCatalogPrincipalSummariesCache;
+let workbookMetadataMapsCache;
 
 const principalCatalogs = [
   heidolphCatalog,
@@ -268,6 +273,9 @@ const principalCatalogs = [
   zeissStereoMicroscopesCatalog,
   zeissUprightMicroscopesCatalog,
   zeissZoomMicroscopesCatalog,
+  kubotaGeneralPurposeCentrifugesCatalog,
+  kubotaLaboratoryCentrifugesCatalog,
+  kubotaLargeLaboratoryCentrifugesCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 
@@ -316,6 +324,100 @@ function getProductImage(product, principal) {
   );
 }
 
+const WORKBOOK_METADATA_FIELDS = [
+  "canonicalUrl",
+  "breadcrumbPath",
+  "imageAlt",
+  "h1",
+  "subhead",
+  "metaTitle",
+  "metaDescription",
+  "metaKeywords",
+  "manufacturerUrl",
+  "internalLinks",
+  "applications",
+  "synonymUseCaseKeywords",
+  "searchKeywords",
+  "usp",
+  "processApplication",
+];
+
+function getWorkbookMetadataMaps() {
+  if (!workbookMetadataMapsCache) {
+    const byKey = new Map();
+    const bySlug = new Map();
+
+    toArray(workbookProductMetadata.products).forEach((metadata) => {
+      if (metadata.principalSlug && metadata.slug) {
+        byKey.set(`${metadata.principalSlug}:${metadata.slug}`, metadata);
+      }
+
+      if (metadata.slug && !bySlug.has(metadata.slug)) {
+        bySlug.set(metadata.slug, metadata);
+      }
+    });
+
+    workbookMetadataMapsCache = { byKey, bySlug };
+  }
+
+  return workbookMetadataMapsCache;
+}
+
+function getWorkbookMetadata(product, principal) {
+  const { byKey, bySlug } = getWorkbookMetadataMaps();
+
+  return (
+    byKey.get(`${principal.slug}:${product.slug}`) ??
+    bySlug.get(product.slug)
+  );
+}
+
+function getWorkbookMetadataFields(metadata) {
+  return WORKBOOK_METADATA_FIELDS.reduce((fields, key) => {
+    const value = metadata?.[key];
+
+    if (Array.isArray(value)) {
+      if (value.length) {
+        fields[key] = value;
+      }
+      return fields;
+    }
+
+    if (value) {
+      fields[key] = value;
+    }
+
+    return fields;
+  }, {});
+}
+
+function applyWorkbookMetadata(product, principal) {
+  const metadata = getWorkbookMetadata(product, principal);
+
+  if (!metadata) {
+    return product;
+  }
+
+  const metadataFields = getWorkbookMetadataFields(metadata);
+
+  return {
+    ...product,
+    ...metadataFields,
+    tags: mergeTagValues(
+      product.tags,
+      metadata.applications,
+      metadata.synonymUseCaseKeywords,
+      metadata.searchKeywords
+    ),
+    searchTags: mergeTagValues(
+      product.searchTags,
+      metadata.applications,
+      metadata.synonymUseCaseKeywords,
+      metadata.searchKeywords
+    ),
+  };
+}
+
 function normalizeProduct(product, category, principal) {
   const applications = toArray(product.applications).length
     ? toArray(product.applications)
@@ -337,7 +439,7 @@ function normalizeProduct(product, category, principal) {
     principal.principalName,
   ]);
 
-  return {
+  return applyWorkbookMetadata({
     ...product,
     image: getProductImage(product, principal),
     category: categoryName,
@@ -355,7 +457,7 @@ function normalizeProduct(product, category, principal) {
     apiPath: `/api/products/${principal.slug}/${product.slug}`,
     hasDetails: true,
     source: "json-catalog",
-  };
+  }, principal);
 }
 
 export function getJsonCatalogs() {

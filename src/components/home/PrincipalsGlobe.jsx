@@ -70,6 +70,24 @@ function PrincipalCard({ principal }) {
   );
 }
 
+// Logo-only showcase tile, intentionally not linked to a product/brand page.
+function StaticPrincipalLogo({ name, logo }) {
+  return (
+    <div
+      aria-label={name}
+      className="flex h-16 items-center justify-center rounded-lg border border-line-light bg-white p-3"
+    >
+      {logo ? (
+        <span className="relative h-9 w-full">
+          <Image src={logo} alt={name} fill sizes="140px" className="object-contain" />
+        </span>
+      ) : (
+        <span className="text-xs font-semibold text-ink">{name}</span>
+      )}
+    </div>
+  );
+}
+
 export default function PrincipalsGlobe() {
   const { countries, allPrincipals } = useCountryGroups();
   const [selected, setSelected] = useState(null);
@@ -339,6 +357,9 @@ export default function PrincipalsGlobe() {
             {visiblePrincipals.map((principal) => (
               <PrincipalCard key={principal.slug} principal={principal} />
             ))}
+            {!activeCountry ? (
+              <StaticPrincipalLogo name="Being" logo={getPrincipalLogo("being")} />
+            ) : null}
           </div>
         </div>
       </div>

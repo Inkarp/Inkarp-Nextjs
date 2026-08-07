@@ -58,6 +58,13 @@ function toCardArray(value) {
 
   return (Array.isArray(value) ? value : [value]).map(toCardText).filter(Boolean);
 }
+
+function getProductApplicationValues(product) {
+  const sheetApplications = toCardArray(product.processApplication);
+
+  return sheetApplications.length ? sheetApplications : toCardArray(product.applications);
+}
+
 function toProductCard(product) {
   return {
     slug: product.slug,
@@ -70,7 +77,7 @@ function toProductCard(product) {
     imageAlt: product.imageAlt,
     name: product.name,
     industry: product.industry,
-    applications: toCardArray(product.applications),
+    applications: getProductApplicationValues(product),
     industryTags: toCardArray(product.industryTags),
     workflowTags: toCardArray(product.workflowTags),
     problemSolutionTags: toCardArray(product.problemSolutionTags),
@@ -100,10 +107,12 @@ export default async function ProductsPage({ searchParams }) {
   const params = await searchParams;
   const selectedBrands = getParams(params, "brand");
   const selectedIndustries = getParams(params, "industry");
+  const selectedApplications = getParams(params, "application");
   const filters = {
     q: getParam(params, "q"),
     principals: selectedBrands,
     industries: selectedIndustries,
+    applications: selectedApplications,
   };
   const allProducts = getAllProducts();
   const totalProducts = allProducts.length;
@@ -130,6 +139,19 @@ export default async function ProductsPage({ searchParams }) {
       label: formatIndustryLabel(tag),
       value: tag,
       count: productCountsByIndustry.get(tag),
+    }));
+  const productCountsByApplication = allProducts.reduce((counts, product) => {
+    getProductApplicationValues(product).forEach((application) => {
+      counts.set(application, (counts.get(application) ?? 0) + 1);
+    });
+    return counts;
+  }, new Map());
+  const applicationOptions = [...productCountsByApplication.keys()]
+    .sort((a, b) => a.localeCompare(b))
+    .map((application) => ({
+      label: application,
+      value: application,
+      count: productCountsByApplication.get(application),
     }));
 
   return (
@@ -195,11 +217,13 @@ export default async function ProductsPage({ searchParams }) {
 
       <StickyProductSearch>
         <ProductFilterForm
-          key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}`}
+          key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}-${selectedApplications.join("|")}`}
+          applicationOptions={applicationOptions}
           brandOptions={brandOptions}
           industryOptions={industryOptions}
           productCount={products.length}
           query={filters.q}
+          selectedApplications={selectedApplications}
           selectedBrands={selectedBrands}
           selectedIndustries={selectedIndustries}
           totalCount={totalProducts}
@@ -209,7 +233,7 @@ export default async function ProductsPage({ searchParams }) {
       <section className="bg-parchment-alt px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1180px]">
           <ProductResultsGrid
-            key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}`}
+            key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}-${selectedApplications.join("|")}`}
             products={productCards}
             query={filters.q}
           />

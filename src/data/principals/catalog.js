@@ -130,6 +130,14 @@ import zeissZoomMicroscopesCatalog from "./zeiss/zoom-microscopes.json";
 import kubotaGeneralPurposeCentrifugesCatalog from "./kubota/general-purpose-centrifuges.json";
 import kubotaLaboratoryCentrifugesCatalog from "./kubota/laboratory-centrifuges.json";
 import kubotaLargeLaboratoryCentrifugesCatalog from "./kubota/large-laboratory-centrifuges.json";
+import mettlerToledoUvVisSpectrophotometersCatalog from "./mettler-toledo/uv-vis-spectrophotometers.json";
+import mettlerToledoMeltingPointSystemsCatalog from "./mettler-toledo/melting-point-systems.json";
+import mettlerToledoRefractometerCatalog from "./mettler-toledo/refractometer.json";
+import mettlerToledoDensityMeterCatalog from "./mettler-toledo/density-meter.json";
+import mettlerToledoMoistureAnalyzersCatalog from "./mettler-toledo/moisture-analyzers.json";
+import mettlerToledoTitratorsCatalog from "./mettler-toledo/titrators.json";
+import mettlerToledoPhMetersCatalog from "./mettler-toledo/ph-meters.json";
+import mettlerToledoWeighingBalancesCatalog from "./mettler-toledo/weighing-balances.json";
 import workbookProductMetadata from "./workbook-product-metadata.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
@@ -276,6 +284,14 @@ const principalCatalogs = [
   kubotaGeneralPurposeCentrifugesCatalog,
   kubotaLaboratoryCentrifugesCatalog,
   kubotaLargeLaboratoryCentrifugesCatalog,
+  mettlerToledoUvVisSpectrophotometersCatalog,
+  mettlerToledoMeltingPointSystemsCatalog,
+  mettlerToledoRefractometerCatalog,
+  mettlerToledoDensityMeterCatalog,
+  mettlerToledoMoistureAnalyzersCatalog,
+  mettlerToledoTitratorsCatalog,
+  mettlerToledoPhMetersCatalog,
+  mettlerToledoWeighingBalancesCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

@@ -279,12 +279,6 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "rotachrom",
-        "principalName": "RotaChrom",
-        "countryOfOrigin": "Hungary",
-        "products": []
-    },
-    {
         "slug": "hohsen-corp",
         "principalName": "Hohsen Corp",
         "countryOfOrigin": "Japan",
@@ -372,12 +366,6 @@ export const productPrincipals = [
         "slug": "implen",
         "principalName": "Implen",
         "countryOfOrigin": "Germany",
-        "products": []
-    },
-    {
-        "slug": "lumicks",
-        "principalName": "Lumicks",
-        "countryOfOrigin": "Netherlands",
         "products": []
     },
     {

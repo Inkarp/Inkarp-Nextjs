@@ -358,7 +358,11 @@ export default function PrincipalsGlobe() {
               <PrincipalCard key={principal.slug} principal={principal} />
             ))}
             {!activeCountry ? (
-              <StaticPrincipalLogo name="Being" logo={getPrincipalLogo("being")} />
+              <>
+                <StaticPrincipalLogo name="Being" logo={getPrincipalLogo("being")} />
+                <StaticPrincipalLogo name="Lumicks" logo={getPrincipalLogo("lumicks")} />
+                <StaticPrincipalLogo name="RotaChrom" logo={getPrincipalLogo("rotachrom")} />
+              </>
             ) : null}
           </div>
         </div>

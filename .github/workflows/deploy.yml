@@ -1,0 +1,26 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: 72.60.98.245
+          username: deploy
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            export PATH="/home/inkarpnext/.nvm/versions/node/$(ls /home/inkarpnext/.nvm/versions/node)/bin:$PATH"
+            cd /home/inkarpnext/htdocs/nextapp.72.60.98.245.nip.io
+            git pull origin main
+            npm install
+            npm run build
+            pkill -f "next start" || true
+            sleep 2
+            PORT=3000 nohup npm start > app.log 2>&1 &
+            disown

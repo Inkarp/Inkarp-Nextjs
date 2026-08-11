@@ -259,6 +259,7 @@ export const productImageMap = {
   "fom-technologies:fom-sd-300-slot-die-coating-heads-steel-series": "/assets/images/productImages/fom-technologies/FOM SD 300.webp",
   "fom-technologies:fom-sd-500-slot-die-coating-heads-steel-series": "/assets/images/productImages/fom-technologies/FOM SD 500.webp",
   "affinite-instruments:p4spr-surface-plasmon-resonance": "/assets/images/productImages/Affinite/p4spr-surface-plasmon-resonance.avif",
+  "affinite-instruments:p4pro-and-affipump-surface-plasmon-resonance": "/assets/images/productImages/Affinite/P4pro.avif",
   "affinite-instruments:p4pro-plus-surface-plasmon-resonance": "/assets/images/productImages/Affinite/p4pro-plus-surface-plasmon-resonance.avif",
   "affinite-instruments:ezcontrol-software": "/assets/images/productImages/Affinite/ezcontrol-software.avif",
   "sbt-instruments:bactobox-bacteria-enumeration-system": "/assets/images/productImages/SBT/bactobox-bacteria-enumeration-system.avif",

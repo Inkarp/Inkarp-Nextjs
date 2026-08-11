@@ -7,39 +7,20 @@
   "categories": [
     {
       "name": "Moisture Analyzers",
+      "slug": "moisture-analyzers",
       "products": [
         {
+          "name": "Halogen Moisture Analyzer HE53 (230V)",
           "slug": "halogen-moisture-analyzer-he53-230v",
+          "principalImage": "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
+          "imageAlt": "Mettler Toledo Halogen Moisture Analyzer HE53 (230V) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/halogen-moisture-analyzer-he53-230v",
+          "breadcrumbPath": "Home > Products > Moisture Analyzers > Halogen Moisture Analyzer HE53 (230V)",
           "h1": "Halogen Moisture Analyzer HE53 (230V)",
-          "subhead": "0.01% MC readability, one method, drying done in minutes instead of hours.",
-          "overview": {
-            "body": [
-              "Readability of 0.01% MC (approximately 1 mg).",
-              "Drying temperature range of 50°C to 160°C.",
-              "Repeatability (sd) of 0.05% with a 10 g sample, 0.15% with a 2 g sample.",
-              "Maximum capacity of 54 g.",
-              "Minimum recommended moisture range of 1% MC.",
-              "Rapid and Standard drying programs.",
-              "Automatic (SOC 3) or timed switch-off criteria.",
-              "Test & Adjust functions for temperature (100°C/160°C) and weight.",
-              "Display modes: %AD, %AM, %DC, %MC, and g.",
-              "Bright backlit LCD display with a progress indicator.",
-              "RS232 interface with strip-printing result handling.",
-              "Single method storage and single result storage, kept simple by design.",
-              "English language, 230V, Food and general (\"Others\") industry positioning.",
-              "Robust, compact housing for routine bench use."
-            ],
-            "cards": [
-              { "title": "0.01% MC readability", "description": "Fine enough for routine loss-on-drying accuracy" },
-              { "title": "50°C – 160°C drying range", "description": "Covers most common sample types" },
-              { "title": "Single-method simplicity", "description": "One method, kept straightforward by design" },
-              { "title": "Rapid & Standard programs", "description": "Two drying speeds cover most routine testing" }
-            ],
-            "note": {
-              "title": "Confirm the right configuration",
-              "body": "Share the sample types and typical moisture ranges the lab tests, and whether strip-printed results are sufficient or a connected data workflow is needed, and the right HE53 configuration and accessories get confirmed."
-            }
-          },
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "HE53 determines moisture content by loss-on-drying, heating a sample with a halogen element from 50°C to 160°C and reading the result to 0.01% MC (roughly 1 mg). Repeatability holds to 0.05% with a 10 g sample and 0.15% with a 2 g sample, and a bright backlit LCD display with a progress indicator keeps the drying process easy to follow.",
+
           "features": [
             "0.01% MC Readability: Fine enough for routine moisture testing.",
             "Rapid & Standard Drying Programs: Two speeds cover most sample types.",
@@ -48,25 +29,7 @@
             "RS232 with Strip Printing: Straightforward result output, no extra setup.",
             "Robust, Compact Design: Built for a working bench, not a lab bench showpiece."
           ],
-          "applications": [
-            { "title": "Routine Food Moisture Testing", "description": "Positioned specifically for food industry moisture determination" },
-            { "title": "General Laboratory Moisture Checks", "description": "Rapid and Standard programs cover most routine sample types" },
-            { "title": "Single-Method QC Routines", "description": "One stored method keeps the testing process simple and repeatable" },
-            { "title": "Basic Documented Results", "description": "Strip printing over RS232 provides a straightforward paper record" },
-            { "title": "Entry-Level Moisture Analysis", "description": "Low application flexibility suits a lab needing one dependable method, not many" }
-          ],
-          "applicationsExplorer": {
-            "eyebrow": "Industry Explorer",
-            "title": "Industry Explorer",
-            "description": "The labs where HE53's simple, single-method moisture testing earns its place.",
-            "industries": [
-              { "name": "Food Production and QC", "icon": "coffee", "useCase": "Routine moisture content testing on incoming or finished goods", "consideration": "Specifically positioned for food industry applications" },
-              { "name": "General Laboratory Testing", "icon": "flask", "useCase": "Basic loss-on-drying moisture checks", "consideration": "Simple, single-method operation suits routine, low-variability testing" },
-              { "name": "Small and Mid-Size QC Labs", "icon": "cpu", "useCase": "Entry-level moisture analysis needs", "consideration": "Low application flexibility keeps cost and complexity down" },
-              { "name": "Teaching and Training Laboratories", "icon": "school", "useCase": "Introducing students to loss-on-drying testing", "consideration": "Straightforward operation, one method to learn" },
-              { "name": "Basic Compliance and Documentation Workflows", "icon": "droplet", "useCase": "Testing needing a simple paper record", "consideration": "Strip printing over RS232" }
-            ]
-          },
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Mettler Toledo Halogen Moisture Analyzer HE53 (230V)" },
             { "label": "Category", "value": "Moisture Analyzers" },
@@ -92,52 +55,68 @@
             { "label": "Industry", "value": "Food, Others" },
             { "label": "Material Number", "value": "30100246" }
           ],
-          "performance": {
-            "title": "Loss-on-Drying and Switch-Off Criteria Explained",
-            "description": "How HE53 actually decides when a sample has finished drying, rather than just running a fixed timer.",
-            "body": [
-              "Loss-on-drying moisture testing works by heating a sample and tracking how much weight it loses as moisture evaporates, but knowing when to stop matters as much as the heating itself. Stop too early and the reading understates moisture content; run too long and the result can drift as the sample begins to degrade rather than simply dry.",
-              "HE53's automatic switch-off (SOC 3) monitors the rate of weight loss and ends the test once the sample has genuinely stopped losing moisture, rather than running to a fixed time regardless of the sample. A timed switch-off is also available for sample types where a fixed drying duration is the better fit."
-            ],
-            "utilityChecklist": [
-              { "label": "Stopping before the sample has actually finished drying", "value": "Ending the test based on actual weight-loss rate" },
-              { "label": "Running longer than needed on a fast-drying sample", "value": "A result tied to genuine moisture loss, not a guessed duration" },
-              { "label": "Inconsistent endpoints across different sample types", "value": "A consistent, sample-driven stopping point" },
-              { "label": "No flexibility when a fixed duration IS the better fit", "value": "A timed option still available where it's genuinely needed" }
-            ],
-            "disclaimer": "Share the sample types most commonly tested and whether drying behavior varies a lot between them, and the right HE53 switch-off configuration gets confirmed."
-          },
+
+          "applications": [
+            { "title": "Routine Food Moisture Testing", "description": "Positioned specifically for food industry moisture determination" },
+            { "title": "General Laboratory Moisture Checks", "description": "Rapid and Standard programs cover most routine sample types" },
+            { "title": "Single-Method QC Routines", "description": "One stored method keeps the testing process simple and repeatable" },
+            { "title": "Basic Documented Results", "description": "Strip printing over RS232 provides a straightforward paper record" },
+            { "title": "Entry-Level Moisture Analysis", "description": "Low application flexibility suits a lab needing one dependable method, not many" }
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
           "comparison": {
-            "title": "Method Comparison",
+            "eyebrow": "Choosing within Mettler Toledo's moisture analyzer range",
+            "title": "HE53 (230V)",
+            "description": "HE53 currently has no same-category Halogen Moisture Analyzer sourced yet to compare against directly.",
             "columns": [
               { "label": "HE53 (230V)", "highlight": true }
             ],
             "rows": [
-              { "label": "Readability (MC)", "values": ["0.01%"] },
-              { "label": "Drying Temperature", "values": ["50°C – 160°C"] },
-              { "label": "Maximum Capacity", "values": ["54 g"] },
-              { "label": "Method Storage", "values": ["1"] },
-              { "label": "Application Flexibility", "values": ["Low"] },
-              { "label": "Best For", "values": ["Simple, single-method, entry-level loss-on-drying moisture testing"] }
+              { "feature": "Readability (MC)", "values": ["0.01%"] },
+              { "feature": "Drying Temperature", "values": ["50°C – 160°C"] },
+              { "feature": "Maximum Capacity", "values": ["54 g"] },
+              { "feature": "Method Storage", "values": ["1"] },
+              { "feature": "Application Flexibility", "values": ["Low"] },
+              { "feature": "Best For", "values": ["Simple, single-method, entry-level loss-on-drying moisture testing"] }
             ],
             "disclaimer": "This table will be completed once other Mettler Toledo Moisture Analyzer models are sourced. The source's own Related Products list names Computrac® MAX 4000XL, Computrac® MAX 5000XL, Computrac® Vapor PRO XL, and Halogen Moisture Analyzer HC103 (230V) as siblings in this category, all still unconfirmed."
           },
-          "docs": [
-            { "label": "Datasheet: HE53 Halogen Moisture Analyzer", "type": "datasheet" },
-            { "label": "Reference Manual: Moisture Analyzer HE53", "type": "manual" },
-            { "label": "User Manual: Moisture Analyzer HE53", "type": "manual" },
-            { "label": "MT-SICS Interface Commands for Moisture Analyzers HE", "type": "brochure" },
-            { "label": "Declaration of Conformity", "type": "certificate" }
-          ],
-          "serviceMap": [
-            { "title": "Product Demonstration", "description": "Runs the lab's own sample types through a drying test on the unit." },
-            { "title": "Calibration Support", "description": "Supplies temperature verification kits and SmartCal test substances." },
-            { "title": "Installation Support", "description": "Confirms bench siting and power requirements." },
-            { "title": "Operator Training", "description": "Builds confidence with drying programs, switch-off criteria, and result handling." },
-            { "title": "Preventive Maintenance", "description": "Maintains the heating unit and weighing mechanism." },
-            { "title": "Spares and Accessories", "description": "Supplies sample pans, dust filters, printers, and SmartCal verification kits." },
-            { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
-          ],
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "The labs where HE53's simple, single-method moisture testing earns its place.",
+            "industries": [
+              { "name": "Food Production and QC", "icon": "coffee", "useCase": "Routine moisture content testing on incoming or finished goods", "consideration": "Specifically positioned for food industry applications" },
+              { "name": "General Laboratory Testing", "icon": "flask", "useCase": "Basic loss-on-drying moisture checks", "consideration": "Simple, single-method operation suits routine, low-variability testing" },
+              { "name": "Small and Mid-Size QC Labs", "icon": "cpu", "useCase": "Entry-level moisture analysis needs", "consideration": "Low application flexibility keeps cost and complexity down" },
+              { "name": "Teaching and Training Laboratories", "icon": "school", "useCase": "Introducing students to loss-on-drying testing", "consideration": "Straightforward operation, one method to learn" },
+              { "name": "Basic Compliance and Documentation Workflows", "icon": "droplet", "useCase": "Testing needing a simple paper record", "consideration": "Strip printing over RS232" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "What Inkarp handles once HE53 is on the bench.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own sample types through a drying test on the unit" },
+              { "title": "Calibration Support", "description": "Supplies temperature verification kits and SmartCal test substances" },
+              { "title": "Installation Support", "description": "Confirms bench siting and power requirements" },
+              { "title": "Operator Training", "description": "Builds confidence with drying programs, switch-off criteria, and result handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains the heating unit and weighing mechanism" },
+              { "title": "Spares and Accessories", "description": "Supplies sample pans, dust filters, printers, and SmartCal verification kits" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
           "faqs": [
             { "question": "What is the HE53 used for?", "answer": "Routine loss-on-drying moisture content testing, particularly in food production and general laboratory settings." },
             { "question": "What is the readability?", "answer": "0.01% MC, approximately 1 mg." },
@@ -151,70 +130,143 @@
             { "question": "What is the price of the HE53 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration and accessories required." },
             { "question": "Who is the authorized distributor of the HE53 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Mettler Toledo HE53 in India." }
           ],
-          "stats": [
-            { "label": "Readability (MC)", "value": "0.01%" },
-            { "label": "Drying temperature range", "value": "50°C – 160°C" },
-            { "label": "Repeatability (sd), 10 g sample", "value": "0.05%" },
-            { "label": "Repeatability (sd), 2 g sample", "value": "0.15%" },
-            { "label": "Maximum capacity", "value": "54 g" },
-            { "label": "Minimum recommended moisture range (%MC)", "value": "1" },
-            { "label": "Method storage (max)", "value": "1" },
-            { "label": "Application flexibility", "value": "Low" }
-          ],
-          "inPageNav": ["overview", "industries", "comparison", "service", "faq", "booking"],
+
           "booking": {
-            "title": "Confirm the Right HE53 Configuration",
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Mettler Toledo HE53 in India from Inkarp",
             "description": "Share the lab's sample types and typical moisture ranges, and the right HE53 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review the lab's sample types and typical moisture ranges, then confirm the right HE53 configuration.",
             "fields": [
-              { "key": "sampleTypes", "label": "Sample types and typical moisture ranges" },
-              { "key": "resultHandling", "label": "Result handling needs (strip printing vs. connected workflow)" }
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleTypes", "label": "Sample types and typical moisture ranges", "type": "text", "required": false },
+              { "key": "resultHandling", "label": "Result handling needs (strip printing vs. connected workflow)", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
             ],
+            "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share the sample types and typical moisture ranges the lab tests, and whether strip-printed results are sufficient or a connected data workflow is needed, and the right HE53 configuration and accessories get confirmed." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "0.01% MC readability, one method, drying done in minutes instead of hours.",
+            "heroLead": "HE53 determines moisture content by loss-on-drying, heating a sample with a halogen element from 50°C to 160°C and reading the result to 0.01% MC (roughly 1 mg). Repeatability holds to 0.05% with a 10 g sample and 0.15% with a 2 g sample, and a bright backlit LCD display with a progress indicator keeps the drying process easy to follow. Rapid and Standard drying programs cover most routine samples, an automatic switch-off (SOC 3) or a timed cutoff ends the test, and results can be sent straight to a strip printer over RS232. HE53 is built as a simple, single-method entry point into halogen moisture analysis, in a robust, compact housing.",
+            "stats": [
+              { "value": "0.01%", "label": "Readability (MC)" },
+              { "value": "50°C – 160°C", "label": "Drying temperature range" },
+              { "value": "0.05%", "label": "Repeatability (sd), 10 g sample" },
+              { "value": "0.15%", "label": "Repeatability (sd), 2 g sample" },
+              { "value": "54 g", "label": "Maximum capacity" },
+              { "value": "1", "label": "Minimum recommended moisture range (%MC)" },
+              { "value": "1", "label": "Method storage (max)" },
+              { "value": "Low", "label": "Application flexibility" }
+            ],
+            "sections": [
               {
-                "title": "Confirm the right configuration",
-                "body": "Share the sample types and typical moisture ranges the lab tests, and whether strip-printed results are sufficient or a connected data workflow is needed, and the right HE53 configuration and accessories get confirmed."
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "A moisture analyzer built around one job, loss-on-drying, done simply and reliably.",
+                "subheading": "HE53 at a Glance",
+                "body": [
+                  "Readability of 0.01% MC (approximately 1 mg).",
+                  "Drying temperature range of 50°C to 160°C.",
+                  "Repeatability (sd) of 0.05% with a 10 g sample, 0.15% with a 2 g sample.",
+                  "Maximum capacity of 54 g.",
+                  "Minimum recommended moisture range of 1% MC.",
+                  "Rapid and Standard drying programs.",
+                  "Automatic (SOC 3) or timed switch-off criteria.",
+                  "Test & Adjust functions for temperature (100°C/160°C) and weight.",
+                  "Display modes: %AD, %AM, %DC, %MC, and g.",
+                  "Bright backlit LCD display with a progress indicator.",
+                  "RS232 interface with strip-printing result handling.",
+                  "Single method storage and single result storage, kept simple by design.",
+                  "English language, 230V, Food and general (\"Others\") industry positioning.",
+                  "Robust, compact housing for routine bench use."
+                ],
+                "cards": [
+                  { "title": "0.01% MC readability", "description": "Fine enough for routine loss-on-drying accuracy" },
+                  { "title": "50°C – 160°C drying range", "description": "Covers most common sample types" },
+                  { "title": "Single-method simplicity", "description": "One method, kept straightforward by design" },
+                  { "title": "Rapid & Standard programs", "description": "Two drying speeds cover most routine testing" }
+                ]
               },
               {
-                "title": "Talk to an Inkarp product specialist",
-                "body": "Get help matching HE53 to the application, with genuine Mettler Toledo pricing, delivery, and installation support."
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What keeps HE53 simple without giving up loss-on-drying accuracy."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Where HE53's straightforward loss-on-drying testing earns its place."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Every number on the HE53 spec sheet, laid out in full."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Loss-on-Drying and Switch-Off Criteria Explained",
+                "title": "Loss-on-Drying and Switch-Off Criteria Explained",
+                "description": "How HE53 actually decides when a sample has finished drying, rather than just running a fixed timer.",
+                "body": [
+                  "Loss-on-drying moisture testing works by heating a sample and tracking how much weight it loses as moisture evaporates, but knowing when to stop matters as much as the heating itself. Stop too early and the reading understates moisture content; run too long and the result can drift as the sample begins to degrade rather than simply dry.",
+                  "HE53's automatic switch-off (SOC 3) monitors the rate of weight loss and ends the test once the sample has genuinely stopped losing moisture, rather than running to a fixed time regardless of the sample. A timed switch-off is also available for sample types where a fixed drying duration is the better fit."
+                ],
+                "utilityChecklist": [
+                  { "label": "Stopping before the sample has actually finished drying", "value": "Ending the test based on actual weight-loss rate" },
+                  { "label": "Running longer than needed on a fast-drying sample", "value": "A result tied to genuine moisture loss, not a guessed duration" },
+                  { "label": "Inconsistent endpoints across different sample types", "value": "A consistent, sample-driven stopping point" },
+                  { "label": "No flexibility when a fixed duration IS the better fit", "value": "A timed option still available where it's genuinely needed" }
+                ],
+                "disclaimer": "Share the sample types most commonly tested and whether drying behavior varies a lot between them, and the right HE53 switch-off configuration gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Everything on paper for HE53, available through Inkarp.",
+                "cards": [
+                  { "title": "Datasheet: HE53 Halogen Moisture Analyzer", "description": "Available on request" },
+                  { "title": "Reference Manual: Moisture Analyzer HE53", "description": "Available on request" },
+                  { "title": "User Manual: Moisture Analyzer HE53", "description": "Available on request" },
+                  { "title": "MT-SICS Interface Commands for Moisture Analyzers HE", "description": "Available on request" },
+                  { "title": "Declaration of Conformity", "description": "Available on request" }
+                ]
               }
-            ]
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Mettler Toledo HE53 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "0.01% MC readability, automatic switch-off, and a single, repeatable method, in a robust, compact halogen moisture analyzer. Share the lab's sample types and typical moisture ranges, and the right HE53 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
           }
         },
         {
+          "name": "Halogen Moisture Analyzer HC103 (230V)",
           "slug": "halogen-moisture-analyzer-hc103-230v",
+          "principalImage": "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
+          "imageAlt": "Mettler Toledo Halogen Moisture Analyzer HC103 (230V) - authorized distributor & service provider in India",
+          "distributorNote": "Authorized Distributor & Service Provider in India",
+          "canonicalUrl": "https://inkarp.co.in/products/halogen-moisture-analyzer-hc103-230v",
+          "breadcrumbPath": "Home > Products > Moisture Analyzers > Halogen Moisture Analyzer HC103 (230V)",
           "h1": "Halogen Moisture Analyzer HC103 (230V)",
-          "subhead": "A real-time drying curve, a touchscreen, and a Method Wizard that picks the parameters for you.",
-          "overview": {
-            "body": [
-              "Readability of 0.01% MC.",
-              "Drying temperature range of 40°C to 230°C, wider than an entry-level analyzer.",
-              "Repeatability (sd) of 0.015% with a 10 g sample, 0.1% with a 2 g sample.",
-              "Maximum capacity of 101 g.",
-              "Minimum recommended moisture range of 1% MC.",
-              "Rapid and Standard drying programs.",
-              "Method Wizard and Temperature Assistant guide new method setup.",
-              "Real-time drying curve shown live on a touchscreen interface.",
-              "Editable method shortcuts speed up repeat testing.",
-              "Up to 20 stored methods and 100 stored results.",
-              "Five automatic switch-off criteria (SOC 1-5), plus freely definable and timed options.",
-              "ID management, user guidance, weigh-in aid, and settings protection.",
-              "Interfaces: RS232 and USB, with strip printing, push-to-PC, or push-to-USB result handling.",
-              "Multiple languages supported, including English, German, French, Chinese, and more.",
-              "My Green Lab® ACT® Ecolabel certified.",
-              "Recommended for chemical, food, and general laboratory applications."
-            ],
-            "cards": [
-              { "title": "0.015% repeatability", "description": "More than three times tighter than an entry-level analyzer's 0.05%" },
-              { "title": "Method Wizard", "description": "Removes the guesswork from setting up a new method" },
-              { "title": "20 methods, 100 results", "description": "Real multi-method, multi-sample-type capacity" },
-              { "title": "Real-time drying curve", "description": "Live visibility into the drying process as it happens" }
-            ],
-            "note": {
-              "title": "Confirm the right configuration",
-              "body": "Share how many distinct sample types the lab tests and whether guided method setup would speed up onboarding new tests, and the right HC103 configuration and accessories get confirmed."
-            }
-          },
+          "subhead": "Authorized Distributor & Service Provider in India",
+          "overview": "HC103 determines moisture content by loss-on-drying, heating a sample from 40°C to 230°C and reading the result to 0.01% MC. Repeatability holds to 0.015% with a 10 g sample and 0.1% with a 2 g sample, both tighter than an entry-level halogen analyzer, and a real-time drying curve on the touchscreen shows exactly how the sample is drying as the test runs.",
+
           "features": [
             "Method Wizard: Guides method setup instead of leaving it to guesswork.",
             "Real-Time Drying Curve: Shows exactly how the sample is drying, live.",
@@ -223,25 +275,7 @@
             "Five Automatic Switch-Off Modes: SOC 1-5 plus freely definable and timed options.",
             "My Green Lab® ACT® Ecolabel: Certified sustainability credential."
           ],
-          "applications": [
-            { "title": "Precise Routine Moisture Testing", "description": "0.015% repeatability suits demanding routine QC" },
-            { "title": "Multi-Sample-Type Laboratories", "description": "20 stored methods cover a wide range of sample types" },
-            { "title": "Chemical and Pharma Moisture Analysis", "description": "Wider 40°C–230°C drying range and Method Wizard support varied chemistries" },
-            { "title": "Regulated, Documented Testing Workflows", "description": "Push-to-PC and push-to-USB result handling support traceable records" },
-            { "title": "Sustainability-Conscious Laboratories", "description": "My Green Lab® ACT® Ecolabel certification" }
-          ],
-          "applicationsExplorer": {
-            "eyebrow": "Industry Explorer",
-            "title": "Industry Explorer",
-            "description": "The labs where HC103's precision and guided setup earn their place.",
-            "industries": [
-              { "name": "Chemical Manufacturing and QC", "icon": "flask", "useCase": "Moisture testing across varied chemistries", "consideration": "Wider 40°C–230°C drying range and Method Wizard support" },
-              { "name": "Food Production and QC", "icon": "coffee", "useCase": "Precise routine moisture content testing", "consideration": "0.015% repeatability, tighter than an entry-level analyzer" },
-              { "name": "Pharmaceutical and Contract Testing Labs", "icon": "pill", "useCase": "Documented, traceable moisture results", "consideration": "Push-to-PC and push-to-USB result handling" },
-              { "name": "Multi-Product Laboratories", "icon": "cpu", "useCase": "Testing many different sample types", "consideration": "20 stored methods and Method Wizard guidance" },
-              { "name": "Sustainability-Focused Facilities", "icon": "droplet", "useCase": "Labs prioritizing certified sustainable equipment", "consideration": "My Green Lab® ACT® Ecolabel certification" }
-            ]
-          },
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Mettler Toledo Halogen Moisture Analyzer HC103 (230V)" },
             { "label": "Category", "value": "Moisture Analyzers" },
@@ -269,60 +303,76 @@
             { "label": "Certification", "value": "My Green Lab® ACT® Ecolabel" },
             { "label": "Material Number", "value": "30216101" }
           ],
-          "performance": {
-            "title": "Method Wizard and Real-Time Drying Curve Explained",
-            "description": "What guided method setup and live drying visibility actually remove from testing a new sample type.",
-            "body": [
-              "Setting up a moisture test correctly, choosing the right temperature, drying program, and switch-off criteria for a given sample, normally depends on the operator's experience with that specific material, and getting it wrong means either an inaccurate result or wasted time re-running the test. That's a bigger problem in a lab handling many different sample types than in one running the same method every day.",
-              "HC103's Method Wizard walks the operator through parameter selection step by step, and the Temperature Assistant helps identify the right drying temperature for materials the operator hasn't tested before. Once a test is running, the real-time drying curve on the touchscreen shows exactly how the sample is losing weight over time, so an unusual drying pattern is visible as it happens, not just in the final result."
-            ],
-            "utilityChecklist": [
-              { "label": "Wrong parameters on an unfamiliar sample type", "value": "Step-by-step guidance to the right settings" },
-              { "label": "Re-running a test because the first result looked wrong", "value": "A visible drying curve that flags issues while the test runs" },
-              { "label": "Depending entirely on operator experience", "value": "Built-in support for method development" },
-              { "label": "No visibility into the process until the result appears", "value": "Live tracking of exactly how the sample is drying" }
-            ],
-            "disclaimer": "Share how many different sample types the lab tests and how often a new, unfamiliar material comes through, and the right HC103 configuration gets confirmed."
-          },
+
+          "applications": [
+            { "title": "Precise Routine Moisture Testing", "description": "0.015% repeatability suits demanding routine QC" },
+            { "title": "Multi-Sample-Type Laboratories", "description": "20 stored methods cover a wide range of sample types" },
+            { "title": "Chemical and Pharma Moisture Analysis", "description": "Wider 40°C–230°C drying range and Method Wizard support varied chemistries" },
+            { "title": "Regulated, Documented Testing Workflows", "description": "Push-to-PC and push-to-USB result handling support traceable records" },
+            { "title": "Sustainability-Conscious Laboratories", "description": "My Green Lab® ACT® Ecolabel certification" }
+          ],
+
+          "inPageNav": [
+            { "id": "overview", "label": "Overview" },
+            { "id": "industries", "label": "Industries" },
+            { "id": "comparison", "label": "Comparison" },
+            { "id": "service", "label": "Service" },
+            { "id": "faq", "label": "FAQ" },
+            { "id": "booking", "label": "Request Quote" }
+          ],
+
           "comparison": {
-            "title": "Method Comparison",
+            "eyebrow": "Choosing within Mettler Toledo's moisture analyzer range",
+            "title": "HC103 vs. HE53",
+            "description": "Compare HC103 against the other Mettler Toledo Moisture Analyzer sourced so far.",
             "columns": [
               { "label": "HC103 (230V)", "highlight": true },
               { "label": "HE53 (230V)" }
             ],
             "rows": [
-              { "label": "Readability (MC)", "values": ["0.01%", "0.01%"] },
-              { "label": "Repeatability, 10g Sample", "values": ["0.015%", "0.05%"] },
-              { "label": "Repeatability, 2g Sample", "values": ["0.1%", "0.15%"] },
-              { "label": "Drying Temperature", "values": ["40°C – 230°C", "50°C – 160°C"] },
-              { "label": "Maximum Capacity", "values": ["101 g", "54 g"] },
-              { "label": "Display", "values": ["Touchscreen, real-time drying curve", "Backlit LCD, progress indicator"] },
-              { "label": "Method Storage", "values": ["20", "1"] },
-              { "label": "Results Storage", "values": ["100", "1"] },
-              { "label": "Interfaces", "values": ["RS232, USB", "RS232"] },
-              { "label": "Method Development Support", "values": ["Method Wizard, Temperature Assistant", "Not available"] },
-              { "label": "Application Flexibility", "values": ["Low, Medium", "Low"] },
-              { "label": "Best For", "values": ["Precise, multi-sample-type routine moisture analysis", "Simple, single-method, entry-level moisture testing"] },
-              { "label": "Choose When", "values": ["Multiple sample types, tighter repeatability, or guided setup are needed", "One dependable method is enough, and simplicity matters more than flexibility"] }
+              { "feature": "Readability (MC)", "values": ["0.01%", "0.01%"] },
+              { "feature": "Repeatability, 10g Sample", "values": ["0.015%", "0.05%"] },
+              { "feature": "Repeatability, 2g Sample", "values": ["0.1%", "0.15%"] },
+              { "feature": "Drying Temperature", "values": ["40°C – 230°C", "50°C – 160°C"] },
+              { "feature": "Maximum Capacity", "values": ["101 g", "54 g"] },
+              { "feature": "Display", "values": ["Touchscreen, real-time drying curve", "Backlit LCD, progress indicator"] },
+              { "feature": "Method Storage", "values": ["20", "1"] },
+              { "feature": "Results Storage", "values": ["100", "1"] },
+              { "feature": "Interfaces", "values": ["RS232, USB", "RS232"] },
+              { "feature": "Method Development Support", "values": ["Method Wizard, Temperature Assistant", "Not available"] },
+              { "feature": "Application Flexibility", "values": ["Low, Medium", "Low"] },
+              { "feature": "Best For", "values": ["Precise, multi-sample-type routine moisture analysis", "Simple, single-method, entry-level moisture testing"] },
+              { "feature": "Choose When", "values": ["Multiple sample types, tighter repeatability, or guided setup are needed", "One dependable method is enough, and simplicity matters more than flexibility"] }
             ],
             "disclaimer": "HC103 sits clearly above HE53 on every axis: three times tighter repeatability, twice the capacity, twenty times the method storage, and guided method development that HE53 doesn't offer at all. The source's own Related Products list also names three unsourced Computrac siblings: MAX 4000XL, MAX 5000XL, and Vapor PRO XL."
           },
-          "docs": [
-            { "label": "Datasheet: HC103 Halogen Moisture Analyzer", "type": "datasheet" },
-            { "label": "User Manual: Moisture Analyzer HC103", "type": "manual" },
-            { "label": "Reference Manual: Moisture Analyzer HC103", "type": "manual" },
-            { "label": "MT-SICS Interface Commands for Moisture Analyzers HX/HS/HC", "type": "brochure" },
-            { "label": "Declaration of Conformity", "type": "certificate" }
-          ],
-          "serviceMap": [
-            { "title": "Product Demonstration", "description": "Runs the lab's own sample types through a guided test on the unit." },
-            { "title": "Calibration Support", "description": "Supplies certified temperature verification kits and SmartCal test substances." },
-            { "title": "Installation Support", "description": "Confirms bench siting and power requirements." },
-            { "title": "Operator Training", "description": "Builds confidence with the Method Wizard, touchscreen operation, and result handling." },
-            { "title": "Preventive Maintenance", "description": "Maintains the heating unit and weighing mechanism." },
-            { "title": "Spares and Accessories", "description": "Supplies sample pans, dust filters, barcode scanners, printers, and SmartCal kits." },
-            { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC." }
-          ],
+
+          "applicationsExplorer": {
+            "title": "Industry Explorer",
+            "description": "The labs where HC103's precision and guided setup earn their place.",
+            "industries": [
+              { "name": "Chemical Manufacturing and QC", "icon": "flask", "useCase": "Moisture testing across varied chemistries", "consideration": "Wider 40°C–230°C drying range and Method Wizard support" },
+              { "name": "Food Production and QC", "icon": "coffee", "useCase": "Precise routine moisture content testing", "consideration": "0.015% repeatability, tighter than an entry-level analyzer" },
+              { "name": "Pharmaceutical and Contract Testing Labs", "icon": "pill", "useCase": "Documented, traceable moisture results", "consideration": "Push-to-PC and push-to-USB result handling" },
+              { "name": "Multi-Product Laboratories", "icon": "cpu", "useCase": "Testing many different sample types", "consideration": "20 stored methods and Method Wizard guidance" },
+              { "name": "Sustainability-Focused Facilities", "icon": "droplet", "useCase": "Labs prioritizing certified sustainable equipment", "consideration": "My Green Lab® ACT® Ecolabel certification" }
+            ]
+          },
+
+          "serviceMap": {
+            "title": "Inkarp Service Near You",
+            "description": "What Inkarp handles once HC103 is on the bench.",
+            "supportAreas": [
+              { "title": "Product Demonstration", "description": "Runs the lab's own sample types through a guided test on the unit" },
+              { "title": "Calibration Support", "description": "Supplies certified temperature verification kits and SmartCal test substances" },
+              { "title": "Installation Support", "description": "Confirms bench siting and power requirements" },
+              { "title": "Operator Training", "description": "Builds confidence with the Method Wizard, touchscreen operation, and result handling" },
+              { "title": "Preventive Maintenance", "description": "Maintains the heating unit and weighing mechanism" },
+              { "title": "Spares and Accessories", "description": "Supplies sample pans, dust filters, barcode scanners, printers, and SmartCal kits" },
+              { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
+            ]
+          },
+
           "faqs": [
             { "question": "What is the HC103 used for?", "answer": "Precise, routine moisture content testing across chemical, food, and general laboratory settings, particularly where multiple sample types are tested." },
             { "question": "What is the readability?", "answer": "0.01% MC." },
@@ -336,38 +386,136 @@
             { "question": "What is the price of the HC103 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration and accessories required." },
             { "question": "Who is the authorized distributor of the HC103 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Mettler Toledo HC103 in India." }
           ],
-          "stats": [
-            { "label": "Readability (MC)", "value": "0.01%" },
-            { "label": "Drying temperature range", "value": "40°C – 230°C" },
-            { "label": "Repeatability (sd), 10 g sample", "value": "0.015%" },
-            { "label": "Repeatability (sd), 2 g sample", "value": "0.1%" },
-            { "label": "Maximum capacity", "value": "101 g" },
-            { "label": "Method storage (max)", "value": "20" },
-            { "label": "Results storage", "value": "100" },
-            { "label": "Application flexibility", "value": "Low, Medium" }
-          ],
-          "inPageNav": ["overview", "industries", "comparison", "service", "faq", "booking"],
+
           "booking": {
-            "title": "Confirm the Right HC103 Configuration",
+            "sectionId": "booking",
+            "eyebrow": "Request Quote",
+            "title": "Get the Mettler Toledo HC103 in India from Inkarp",
             "description": "Share how many distinct sample types the lab tests, and the right HC103 configuration gets confirmed.",
+            "submitLabel": "Request Quote",
+            "successMessage": "Thank you. An Inkarp specialist will review how many distinct sample types the lab tests, then confirm the right HC103 configuration.",
             "fields": [
-              { "key": "sampleTypeCount", "label": "Number of distinct sample types tested" },
-              { "key": "methodSetupNeeds", "label": "Guided method setup or onboarding needs" }
+              { "key": "name", "label": "Name", "type": "text", "required": true },
+              { "key": "email", "label": "Email", "type": "email", "required": true },
+              { "key": "phone", "label": "Phone", "type": "tel", "required": true },
+              { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
+              { "key": "sampleTypeCount", "label": "Number of distinct sample types tested", "type": "text", "required": false },
+              { "key": "methodSetupNeeds", "label": "Guided method setup or onboarding needs", "type": "text", "required": false },
+              { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
             ],
+            "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
+              { "title": "Confirm the right configuration", "body": "Share how many distinct sample types the lab tests and whether guided method setup would speed up onboarding new tests, and the right HC103 configuration and accessories get confirmed." }
+            ]
+          },
+
+          "longForm": {
+            "heroHook": "A real-time drying curve, a touchscreen, and a Method Wizard that picks the parameters for you.",
+            "heroLead": "HC103 determines moisture content by loss-on-drying, heating a sample from 40°C to 230°C and reading the result to 0.01% MC. Repeatability holds to 0.015% with a 10 g sample and 0.1% with a 2 g sample, both tighter than an entry-level halogen analyzer, and a real-time drying curve on the touchscreen shows exactly how the sample is drying as the test runs. A Method Wizard and Temperature Assistant help set up new methods without guesswork, editable method shortcuts speed up repeat testing, and up to 20 methods and 100 results can be stored on the instrument. RS232 and USB connectivity support strip printing, push-to-PC, or push-to-USB result handling. HC103 also carries My Green Lab® ACT® Ecolabel certification.",
+            "stats": [
+              { "value": "0.01%", "label": "Readability (MC)" },
+              { "value": "40°C – 230°C", "label": "Drying temperature range" },
+              { "value": "0.015%", "label": "Repeatability (sd), 10 g sample" },
+              { "value": "0.1%", "label": "Repeatability (sd), 2 g sample" },
+              { "value": "101 g", "label": "Maximum capacity" },
+              { "value": "20", "label": "Method storage (max)" },
+              { "value": "100", "label": "Results storage" },
+              { "value": "Low, Medium", "label": "Application flexibility" }
+            ],
+            "sections": [
               {
-                "title": "Confirm the right configuration",
-                "body": "Share how many distinct sample types the lab tests and whether guided method setup would speed up onboarding new tests, and the right HC103 configuration and accessories get confirmed."
+                "key": "overview",
+                "eyebrow": "Product overview",
+                "title": "Product Information",
+                "description": "Where an entry-level analyzer runs one fixed method, HC103 is built to help set up the right one and show exactly what's happening while it runs.",
+                "subheading": "HC103 at a Glance",
+                "body": [
+                  "Readability of 0.01% MC.",
+                  "Drying temperature range of 40°C to 230°C, wider than an entry-level analyzer.",
+                  "Repeatability (sd) of 0.015% with a 10 g sample, 0.1% with a 2 g sample.",
+                  "Maximum capacity of 101 g.",
+                  "Minimum recommended moisture range of 1% MC.",
+                  "Rapid and Standard drying programs.",
+                  "Method Wizard and Temperature Assistant guide new method setup.",
+                  "Real-time drying curve shown live on a touchscreen interface.",
+                  "Editable method shortcuts speed up repeat testing.",
+                  "Up to 20 stored methods and 100 stored results.",
+                  "Five automatic switch-off criteria (SOC 1-5), plus freely definable and timed options.",
+                  "ID management, user guidance, weigh-in aid, and settings protection.",
+                  "Interfaces: RS232 and USB, with strip printing, push-to-PC, or push-to-USB result handling.",
+                  "Multiple languages supported, including English, German, French, Chinese, and more.",
+                  "My Green Lab® ACT® Ecolabel certified.",
+                  "Recommended for chemical, food, and general laboratory applications."
+                ],
+                "cards": [
+                  { "title": "0.015% repeatability", "description": "More than three times tighter than an entry-level analyzer's 0.05%" },
+                  { "title": "Method Wizard", "description": "Removes the guesswork from setting up a new method" },
+                  { "title": "20 methods, 100 results", "description": "Real multi-method, multi-sample-type capacity" },
+                  { "title": "Real-time drying curve", "description": "Live visibility into the drying process as it happens" }
+                ]
               },
               {
-                "title": "Talk to an Inkarp product specialist",
-                "body": "Get help matching HC103 to the application, with genuine Mettler Toledo pricing, delivery, and installation support."
+                "key": "features",
+                "eyebrow": "Key Features",
+                "title": "Key Features",
+                "description": "What HC103 adds over a single-method entry-level moisture analyzer."
+              },
+              {
+                "key": "applications",
+                "eyebrow": "Applications",
+                "title": "Applications",
+                "description": "Where HC103's guided setup and tighter repeatability earn their place."
+              },
+              {
+                "key": "specs",
+                "eyebrow": "Technical Specifications",
+                "title": "Technical Specifications",
+                "description": "Every number on the HC103 spec sheet, laid out in full."
+              },
+              {
+                "key": "performance",
+                "eyebrow": "Method Wizard and Real-Time Drying Curve Explained",
+                "title": "Method Wizard and Real-Time Drying Curve Explained",
+                "description": "What guided method setup and live drying visibility actually remove from testing a new sample type.",
+                "body": [
+                  "Setting up a moisture test correctly, choosing the right temperature, drying program, and switch-off criteria for a given sample, normally depends on the operator's experience with that specific material, and getting it wrong means either an inaccurate result or wasted time re-running the test. That's a bigger problem in a lab handling many different sample types than in one running the same method every day.",
+                  "HC103's Method Wizard walks the operator through parameter selection step by step, and the Temperature Assistant helps identify the right drying temperature for materials the operator hasn't tested before. Once a test is running, the real-time drying curve on the touchscreen shows exactly how the sample is losing weight over time, so an unusual drying pattern is visible as it happens, not just in the final result."
+                ],
+                "utilityChecklist": [
+                  { "label": "Wrong parameters on an unfamiliar sample type", "value": "Step-by-step guidance to the right settings" },
+                  { "label": "Re-running a test because the first result looked wrong", "value": "A visible drying curve that flags issues while the test runs" },
+                  { "label": "Depending entirely on operator experience", "value": "Built-in support for method development" },
+                  { "label": "No visibility into the process until the result appears", "value": "Live tracking of exactly how the sample is drying" }
+                ],
+                "disclaimer": "Share how many different sample types the lab tests and how often a new, unfamiliar material comes through, and the right HC103 configuration gets confirmed."
+              },
+              {
+                "key": "docs",
+                "eyebrow": "Documentation",
+                "title": "Documentation and Resources",
+                "description": "Everything on paper for HC103, available through Inkarp.",
+                "cards": [
+                  { "title": "Datasheet: HC103 Halogen Moisture Analyzer", "description": "Available on request" },
+                  { "title": "User Manual: Moisture Analyzer HC103", "description": "Available on request" },
+                  { "title": "Reference Manual: Moisture Analyzer HC103", "description": "Available on request" },
+                  { "title": "MT-SICS Interface Commands for Moisture Analyzers HX/HS/HC", "description": "Available on request" },
+                  { "title": "Declaration of Conformity", "description": "Available on request" }
+                ]
               }
-            ]
+            ],
+            "cta": {
+              "eyebrow": "Enquire now",
+              "title": "Get the Mettler Toledo HC103 in India from Inkarp",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "description": "A Method Wizard, a real-time drying curve, and storage for 20 methods, built for precise routine moisture analysis across varied sample types. Share the lab's sample types and testing volume, and the right HC103 configuration gets confirmed.",
+              "label": "Request Quote",
+              "href": "#booking"
+            }
           }
         },
         {
           "slug": "halogen-moisture-analyzer-hx204",
+          "name": "Halogen Moisture Analyzer HX204",
           "h1": "Halogen Moisture Analyzer HX204",
           "subhead": "0.001% MC readability. QuickPredict™ tells you the result before the drying finishes.",
           "overview": {
@@ -556,6 +704,7 @@
         },
         {
           "slug": "halogen-moisture-analyzer-hs153",
+          "name": "Halogen Moisture Analyzer HS153",
           "h1": "Halogen Moisture Analyzer HS153",
           "subhead": "Excellence-tier precision, with control charts and an optional QuickPredict™ upgrade path.",
           "overview": {

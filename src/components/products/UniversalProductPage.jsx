@@ -64,7 +64,7 @@ export default function UniversalProductPage({ product }) {
       )} */}
 
       {/* Stats bar */}
-      <StatsBar stats={lf.stats ?? []} />
+      <StatsBar stats={lf.stats ?? product.stats ?? []} />
 
       {/* Product info tabs (overview, features, specs, etc.) */}
       <ProductInfoTabs product={product} />

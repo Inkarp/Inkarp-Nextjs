@@ -267,12 +267,6 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "brookfield",
-        "principalName": "Brookfield",
-        "countryOfOrigin": "United States of America",
-        "products": []
-    },
-    {
         "slug": "khimod",
         "principalName": "Khimod",
         "countryOfOrigin": "France",

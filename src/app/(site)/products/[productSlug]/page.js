@@ -48,9 +48,17 @@ export default async function ProductPage({ params }) {
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
   const countryFlagCodes = getCountryFlagCodes(product.countryOfOrigin);
-  const heroLead = product.longForm?.heroLead ?? product.overview;
+  // `overview` is a plain string on most products, but a { body: [...] } object
+  // on the newer flat-schema Mettler Toledo pages — guard against both shapes.
+  const overviewIsString = typeof product.overview === "string";
+  const heroLead =
+    product.longForm?.heroLead ??
+    (overviewIsString ? product.overview : product.subhead) ??
+    "";
   const ctaHref = isRichPage ? "#booking" : "/contact";
-  const heroHookMatch = product.overview?.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/);
+  const heroHookMatch = overviewIsString
+    ? product.overview.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/)
+    : null;
   const heroHook = product.longForm?.heroHook ?? heroHookMatch?.[1]?.trim();
   const showHeroHook = Boolean(heroHook && heroLead && !heroLead.startsWith(heroHook));
 

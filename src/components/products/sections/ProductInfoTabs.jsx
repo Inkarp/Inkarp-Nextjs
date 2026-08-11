@@ -227,11 +227,23 @@ export default function ProductInfoTabs({ product }) {
   const section = (key, eyebrow) => lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
   const sectionAny = (keys = [], eyebrows = []) =>
     lf.sections?.find((s) => keys.includes(s.key) || eyebrows.includes(s.eyebrow));
-  const overviewSec      = section('overview', 'Product overview') ?? lf.sections?.[0];
+
+  // Flat-schema fallback: products without `longForm.sections` (e.g. the
+  // newer Mettler Toledo pages) carry the same content as top-level fields
+  // instead (`overview`, `performance`, `docs`). Synthesize an equivalent
+  // section shape from those so the tabs show real content, not placeholders.
+  const flatOverviewSec = product.overview && typeof product.overview === 'object'
+    ? { subheading: product.subhead, body: product.overview.body ?? [], cards: [] }
+    : undefined;
+  const flatPerfSec = product.performance && typeof product.performance === 'object'
+    ? product.performance
+    : undefined;
+
+  const overviewSec      = section('overview', 'Product overview') ?? lf.sections?.[0] ?? flatOverviewSec;
   const keyFeaturesSec   = section('features', 'Key Features');
   const applicationsSec  = section('applications', 'Applications');
   const specsSec         = section('specs', 'Technical Specs');
-  const perfSec          = section('performance', 'Performance');
+  const perfSec          = section('performance', 'Performance') ?? flatPerfSec;
   const complianceSec    = section('certs', 'Quality and safety');
   const configSec        = sectionAny(['config', 'configuration'], ['Configuration', 'Configurations', 'Platform Capacity & Sample Compatibility', 'Platform Capacity / Sample Compatibility', 'Attachments', 'Platform Capacity']);
   const docsSec          = sectionAny(['docs'], ['Documentation', 'Documentation & Resources', 'Documentation and Resources']);
@@ -244,7 +256,10 @@ export default function ProductInfoTabs({ product }) {
   const docsCards = docsSec?.cards ?? docsSec?.resources?.map((item) => ({
     title: item.title,
     description: item.description ?? item.note ?? item.type,
-  })) ?? [];
+  })) ?? (Array.isArray(product.docs) ? product.docs.map((item) => ({
+    title: item.label ?? item.title,
+    description: item.description ?? item.type ?? item.note,
+  })) : []);
 
   const visibleTabs = TABS.filter(({ key }) => {
     if (key === 'performance') return !!perfSec;

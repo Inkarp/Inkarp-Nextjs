@@ -28,7 +28,7 @@ export default function ServicePage() {
         <div className="mx-auto max-w-[1180px]">
           <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
-              <RecTag>Service</RecTag>
+              <RecTag>Service Support</RecTag>
               <h1 className="max-w-[15ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
                 Service that keeps your lab
                 <em className="italic text-red"> running with confidence.</em>

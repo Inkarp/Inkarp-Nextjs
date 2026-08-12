@@ -2,7 +2,6 @@ import Image from "next/image";
 import Directors from "@/components/about/Directors";
 import EmpathyTeam from "@/components/about/EmpathyTeam";
 import InkarpBio from "@/components/about/InkarpBio";
-import LeadershipRecognition from "@/components/about/LeadershipRecognition";
 import MissionVision from "@/components/about/MissionVision";
 import TrustedClients from "@/components/about/TrustedClients";
 import RecTag from "@/components/home/RecTag";
@@ -59,8 +58,10 @@ export default function OurStory() {
       <InkarpBio />
       <TrustedClients />
 
+      {/* Parallax is desktop-only: iOS Safari ignores background-attachment:fixed
+          and renders the image at the wrong scale, so mobile gets a static cover. */}
       <section
-        className="relative overflow-hidden bg-cover bg-center bg-fixed"
+        className="relative overflow-hidden bg-cover bg-center lg:bg-fixed"
         style={{
           backgroundImage: "url('/assets/our-story/InkarpBuilding.jpg')",
         }}
@@ -71,8 +72,6 @@ export default function OurStory() {
           <Directors />
         </div>
       </section>
-
-      {/* <LeadershipRecognition /> */}
     </main>
   );
 }

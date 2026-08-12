@@ -1,12 +1,13 @@
-import { getCanonicalUrl } from "@/data/pageSeo";
+import { buildDynamicMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title:"Privacy Policy - Inkarp Instruments Pvt Ltd",
-  description:"How Inkarp Instruments Private Ltd collects, uses, and safeguards your personal information.",
-  alternates: {
-    canonical: getCanonicalUrl("/privacy-policy"),
-  },
-};
+// Routed through the shared builder so this page gets the same canonical,
+// Open Graph and Twitter card treatment as the rest of the site.
+export const metadata = buildDynamicMetadata({
+  path: "/privacy-policy",
+  title: "Privacy Policy - Inkarp Instruments Pvt Ltd",
+  description:
+    "How Inkarp Instruments Private Ltd collects, uses, and safeguards your personal information.",
+});
 
 const sections = [
   {

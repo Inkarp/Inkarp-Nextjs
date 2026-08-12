@@ -23,11 +23,15 @@ const pillars = [
 export default function MissionVision() {
   return (
     <section className="relative mx-auto w-full px-4 py-12 sm:px-6 lg:px-10">
-      <SectionHeading
-        eyebrow="Who Are We"
-        title="Our Purpose & Principles"
-        description="With over four decades of experience, we partner with global leaders to empower research, diagnostics, and industry through reliable, precise instrumentation and personalized support."
-      />
+      {/* Same 1180px container as the cards below, so the left-aligned heading
+          lines up with the content instead of the section edge. */}
+      <div className="mx-auto max-w-[1180px]">
+        <SectionHeading
+          eyebrow="Who Are We"
+          title="Our Purpose & Principles"
+          description="With over four decades of experience, we partner with global leaders to empower research, diagnostics, and industry through reliable, precise instrumentation and personalized support."
+        />
+      </div>
 
       <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-5 md:grid-cols-3">
         {pillars.map((pillar) => {

@@ -3,6 +3,14 @@ export const SITE_NAME = "Inkarp Instruments";
 export const SITE_AUTHOR = "Inkarp Instruments Pvt Ltd";
 export const SITE_PUBLISHER = "Inkarp Instruments Pvt Ltd";
 
+// Social share card shown by WhatsApp, LinkedIn, X, Slack etc. Every page falls
+// back to this unless its pageSeo entry sets its own `image`. Replace with a
+// purpose-made 1200x630 banner when one is available — the current file is a
+// 1672x941 photo, which crops acceptably but is not ideal.
+export const SITE_OG_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
+export const SITE_OG_IMAGE_ALT =
+  "Inkarp Instruments — laboratory and analytical instrumentation across India";
+
 export const pageSeo = {
   "/": {
     label: "Home",
@@ -117,6 +125,14 @@ export function getCanonicalUrl(path) {
 }
 
 function metadataFromSeo(seo, path) {
+  // Absolute URL — WhatsApp/LinkedIn/X will not resolve a relative og:image.
+  const image = {
+    url: `${SITE_URL}${seo.image ?? SITE_OG_IMAGE}`,
+    width: 1200,
+    height: 630,
+    alt: seo.imageAlt ?? seo.title ?? SITE_OG_IMAGE_ALT,
+  };
+
   return {
     title: seo.title,
     description: seo.description,
@@ -133,6 +149,13 @@ function metadataFromSeo(seo, path) {
       url: getCanonicalUrl(path),
       siteName: SITE_NAME,
       type: "website",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+      images: [image.url],
     },
   };
 }

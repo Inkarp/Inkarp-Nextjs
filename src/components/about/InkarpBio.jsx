@@ -41,10 +41,12 @@ export default function InkarpBio() {
 
   return (
     <section className="mx-auto w-full max-w-[1180px] px-4 py-12 sm:px-6 lg:px-8">
+      {/* Distinct from MissionVision above — that section covers mission, vision
+          and values; this one covers how the company changed over four decades. */}
       <SectionHeading
         eyebrow="Inkarp Bio"
-        title="Purpose & Promise"
-        description="With over four decades of experience, we partner with global leaders to empower research, diagnostics, and industry through reliable, precise instrumentation and personalized support."
+        title="How We Have Grown"
+        description="Four decades changed what a laboratory needs from a partner. Follow how Inkarp moved from supplying core instruments to supporting complete, data-ready workflows."
       />
 
       <div className="overflow-hidden border border-line-light bg-white">

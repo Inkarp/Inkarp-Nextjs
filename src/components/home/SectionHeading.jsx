@@ -1,16 +1,29 @@
-export default function SectionHeading({ eyebrow, title, description }) {
+import RecTag from "@/components/home/RecTag";
+
+// Matches the section-header pattern used across the home page sections
+// (HomeWorkflowWheel, Companies, HomeClientReviews): a RecTag eyebrow, a
+// left-aligned ink heading, then a soft description.
+export default function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  variant = "red",
+  className = "",
+  // Pass as="h1" for a page's primary heading; every other section stays h2.
+  as: Heading = "h2",
+}) {
   return (
-    <div className="mx-auto mb-8 flex max-w-3xl flex-col items-center gap-3 text-center">
-      <span className="rounded-full border border-red/30 bg-parchment px-4 py-1 text-xs font-semibold uppercase tracking-wide text-ink dark:bg-zinc-900 dark:text-zinc-100">
-        {eyebrow}
-      </span>
+    <div className={`mb-10 max-w-3xl ${className}`}>
+      {eyebrow ? <RecTag variant={variant}>{eyebrow}</RecTag> : null}
+
       {title ? (
-        <h2 className="font-maxot text-2xl leading-tight text-red sm:text-3xl">
+        <Heading className="max-w-[24ch] text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
           {title}
-        </h2>
+        </Heading>
       ) : null}
+
       {description ? (
-        <p className="max-w-2xl text-sm leading-6 text-ink-soft sm:text-base dark:text-zinc-400">
+        <p className="mt-3 max-w-xl text-sm leading-6 text-ink-soft sm:text-base">
           {description}
         </p>
       ) : null}

@@ -1,12 +1,13 @@
-import { getCanonicalUrl } from "@/data/pageSeo";
+import { buildDynamicMetadata } from "@/data/pageSeo";
 
-export const metadata = {
-  title:"Terms and Conditions - Inkarp Instruments Pvt Ltd",
-  description:"Terms and conditions governing quotations, orders, supplies, and services from Inkarp Instruments Pvt Ltd.",
-  alternates: {
-    canonical: getCanonicalUrl("/terms-and-conditions"),
-  },
-};
+// Routed through the shared builder so this page gets the same canonical,
+// Open Graph and Twitter card treatment as the rest of the site.
+export const metadata = buildDynamicMetadata({
+  path: "/terms-and-conditions",
+  title: "Terms and Conditions - Inkarp Instruments Pvt Ltd",
+  description:
+    "Terms and conditions governing quotations, orders, supplies, and services from Inkarp Instruments Pvt Ltd.",
+});
 
 const sections = [
   {

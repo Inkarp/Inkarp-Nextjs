@@ -1,10 +1,7 @@
-export const categories = [
-  "All",
-  "Application Notes",
-  "Industry Insights",
-  "Product Updates",
-  "Company News",
-];
+// "Application Notes" was retired — those 21 posts are now Industry Insights.
+// Only categories that actually have posts belong here, so the filter never
+// offers an option that returns an empty list.
+export const categories = ["All", "Industry Insights"];
 
 function slugify(title) {
   return title
@@ -22,11 +19,11 @@ const rawPosts = [
   {
     id: 1,
     title: "Revolutionizing Sample Preparation in Analytical Laboratories",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
+    image: "/assets/images/productImages/Mettler/xpr205du.jpg",
     tags: [
       "Gravimetric Dosing",
       "Sample Preparation",
@@ -35,7 +32,7 @@ const rawPosts = [
     sections: [
       {
         type: "image",
-        imageUrl: "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
+        imageUrl: "/assets/images/productImages/Mettler/xpr205du.jpg",
         caption: "METTLER TOLEDO — gravimetric dosing and weighing solutions",
       },
       {
@@ -140,7 +137,7 @@ const rawPosts = [
   {
     id: 2,
     title: "Advanced Application of Differential Scanning Calorimetry (DSC) in the Lithium-ion Battery Manufacturing Industry",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
@@ -212,7 +209,7 @@ const rawPosts = [
   {
     id: 3,
     title: "Precision Hydrogen Content in Crude Oil Analysis with NMR Spectroscopy",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "5 min read",
@@ -414,7 +411,7 @@ const rawPosts = [
   {
     id: 6,
     title: "Revolutionizing Semiconductor Failure Analysis with NenoVision's LiteScope AFM-in-SEM",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
@@ -442,7 +439,7 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogSix/Image2.jpeg",
+        imageUrl: "/assets/images/productImages/Nanovision/litescope-afm.png",
         caption: "NenoVision LiteScope",
       },
       {
@@ -456,29 +453,14 @@ const rawPosts = [
         content: "The LiteScope is designed for critical applications such as NAND failure analysis, SRAM and logic circuits, transistors (FinFET, CMOS), and thin films. For instance, in NAND failure analysis, the system identifies specific vias in a NAND structure, performs sequential delayering using Plasma-Focused Ion Beam (PFIB), and conducts electrical analysis via Conductive AFM (C-AFM) and I/V spectroscopy. This in-situ approach allows real-time monitoring of the delayering process, ensuring precise targeting and revealing electrical failures at various depths.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSix/Image3.jpeg",
-        caption: "Figure 1: In-situ electrical failure analysis of NAND structures",
-      },
-      {
         type: "text",
         heading: "Scanning Spreading Resistance Microscopy for Dopant Analysis",
         content: "A standout feature of the LiteScope is its ability to perform Scanning Spreading Resistance Microscopy (SSRM) for dopant concentration analysis. By correlating SEM imaging with local electrical properties, SSRM provides nanoscale precision in mapping variations in doping levels, which are critical for device performance and reliability. For SiC MOSFET transistors, this technique enables detailed characterization of doped layers and junctions, analyzing their shape, size, and depth to ensure optimal conductivity and minimal losses.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSix/Image4.jpeg",
-        caption: "Figure 2: Site-specific dopant concentration analysis of MOSFET transistor",
-      },
-      {
         type: "text",
         heading: "Workflow for Comprehensive Failure Analysis",
         content: "Failure analysis with the AFM-in-SEM LiteScope begins with site-specific sample preparation using FIB to expose defect areas. The AFM tip is then navigated to the region of interest for high-resolution electrical characterization, such as C-AFM or SSRM. Results are correlated with SEM imaging, and calibration is performed using reference resistance measurements on samples with known dopant concentration levels. This calibration ensures accurate dopant profiling, providing a comprehensive understanding of failure mechanisms.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSix/Image5.jpeg",
-        caption: "Figure 3: Failure analysis workflow with AFM-in-FIB/SEM",
       },
       {
         type: "text",
@@ -487,7 +469,7 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogSix/Image6.jpeg",
+        imageUrl: "/assets/images/productImages/Nanovision/litescope-2.jpg",
         caption: "Figure 4: NenoVision LiteScope setup",
       },
       {
@@ -501,11 +483,11 @@ const rawPosts = [
   {
     id: 7,
     title: "Streamlining Bacterial Culture Standardization with McFarland Standards and Implen OD600",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/images/productImages/Implen/diluphotometer-od600-new.jpg",
+    image: "/assets/images/productImages/Implen/nanophotometer-od600.jpg",
     tags: [
       "McFarland Standards",
       "OD600",
@@ -514,7 +496,7 @@ const rawPosts = [
     sections: [
       {
         type: "image",
-        imageUrl: "/assets/images/productImages/Implen/diluphotometer-od600-new.jpg",
+        imageUrl: "/assets/images/productImages/Implen/nanophotometer-od600.jpg",
         caption: "Implen OD600 — Optical Density Photometer",
       },
       {
@@ -533,17 +515,13 @@ const rawPosts = [
         content: "Traditionally, McFarland standards are assessed visually by comparing the turbidity of a bacterial culture to a standard, such as the 0.5 McFarland unit, against a Wickerham card. This method, while simple, is subjective and prone to variability due to factors like ambient light, observer experience, and standard quality. Such inconsistencies can compromise quality control in critical experiments.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeven/Image2.jpeg",
-      },
-      {
         type: "text",
         heading: "Implen OD600: Precision in Bacterial Quantification",
         content: "The Implen OD600 device addresses these limitations by providing a spectrophotometer-based approach to measure OD600 absorbance, offering superior reader accuracy. The device's McFarland app converts absorbance readings at 600 nm into MFU values using a McFarland calibration curve, eliminating subjective bias. The Implen OD600 supports various sample containers (e.g., 16 mm test tubes, cuvettes) without adapters, enhancing versatility. Its default calibration curve, based on ProLab McFarland standards, ensures reliable measurements, with the option to create custom curves for specific tube types.",
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogSeven/Image3.jpeg",
+        imageUrl: "/assets/images/productImages/Implen/nanophotometer-od600.jpg",
         caption: "Implen OD600® Spectrophotometer",
       },
       {
@@ -572,7 +550,7 @@ const rawPosts = [
   {
     id: 8,
     title: "Advancing Nanoscale Research with WaveMode NMA Technology",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
@@ -600,13 +578,8 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogEight/Image2.jpg",
+        imageUrl: "/assets/images/productImages/Nanosurf/driveafm.jpg",
         caption: "Nanosurf DriveAFM",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogEight/Image3.jpeg",
-        caption: "Figure 1: Nanosurf nanomechanics portfolio selection guide. Three complementary methods — classical force spectroscopy, viscoelastic analysis, and WaveMode NMA — are plotted against sample stiffness and measurement frequency, with shaded regions indicating the optimal application range for each technique.",
       },
       {
         type: "text",
@@ -619,16 +592,6 @@ const rawPosts = [
         content: "Calibration for WaveMode NMA is seamlessly integrated into Nanosurf Studio software's automatic cantilever calibration procedure, requiring only a hard reference sample like silicon, glass, or sapphire. This streamlined process enhances user experience and minimizes setup time, and the workflow mirrors classical WaveMode imaging, ensuring a minimal learning curve. In WaveMode NMA, the tip is modulated sinusoidally via photothermal actuation, ensuring a reliable trajectory. The oscillation frequency is capped at 10% of the cantilever's resonance frequency to avoid resonance effects, enabling high-speed AFM and simplified data interpretation. Force-distance curves are evaluated using contact mechanics models (Hertz, Sneddon, DMT) to extract mechanical properties.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogEight/Image4.jpeg",
-        caption: "Figure 2: WaveMode NMA in Nanosurf Studio — the calibration process is fully incorporated into the cantilever calibration procedure, and the live oscilloscope supports parameter selection.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogEight/Image5.jpeg",
-        caption: "Figure 3: A WaveMode NMA interaction curve measured on an SBS sample (25 kHz WaveMode frequency) shown together with the DMT model fit and a selection of analysis parameters.",
-      },
-      {
         type: "text",
         heading: "Specialized Probes for Diverse Applications",
         content: "Nanosurf offers probes optimized for WaveMode NMA, each tailored to specific sample stiffness ranges. The WM0.1Au-SS probe (5 MPa-500 MPa) is designed for soft matter and life-science applications, ideal for delicate biological structures and soft polymers. The WM0.8PTD probe (50 MPa-5 GPa) is balanced for general polymer characterization and material science applications. The WM20PTD probe (500 MPa-50 GPa) is optimized for high elastic moduli materials like metals and ceramics. These probes enable WaveMode NMA to address a wide range of research needs, from photothermal therapy studies to advanced materials development.",
@@ -637,11 +600,6 @@ const rawPosts = [
         type: "text",
         heading: "Real-World Applications",
         content: "WaveMode NMA excels in diverse applications. A micro-phase separated polymer blend (PS-SBS) was mapped using a WM0.8PTD probe, producing a Young's modulus range of 0.1-3.2 GPa over a 6 μm scan at 19 kHz. Similarly, a Sn63Pb37 solder alloy was analyzed with a WM20PTD probe, achieving an 18-112 GPa range over a 2 μm scan at 20 kHz. These examples highlight WaveMode NMA's capability for detailed nanomechanical analysis across material science applications. Nanosurf Studio software enhances these results with live analysis, evaluating parameters like indentation depth and adhesion force in real-time.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogEight/Image6.jpeg",
-        caption: "Figure 4: Photothermal frequency sweeps of selected WaveMode probes, the Young's modulus histogram from a PS-SBS scan, the resulting 3D topography overlay, and the Sn63Pb37 solder alloy map acquired with a WM20PTD probe.",
       },
       {
         type: "text",
@@ -659,7 +617,7 @@ const rawPosts = [
   {
     id: 9,
     title: "Exploring the Thermal Properties and Crystallinity of Polylactic Acid (PLA) through Advanced Analysis",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
@@ -687,43 +645,13 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image2.jpeg",
+        imageUrl: "/assets/images/productImages/Hitachi/ana-nexta-dsc.jpg",
         caption: "Hitachi NEXTA DSC200",
       },
       {
         type: "text",
         heading: "Crystallinity and Cooling Rate Effects",
         content: "Crystallinity in polylactic acid is heavily influenced by the cooling rate during processing. All samples exhibited a glass transition temperature around 60°C, marking the shift from a glassy to a rubbery state. Samples b, c, and c' showed endothermic melting peaks at 150°C (b) and 170°C (c and c') when cooled slowly at 0.1°C/min, indicating crystallization, while sample a — with the lowest L ratio — remained nearly amorphous, showing no melting peak even at slow cooling rates. Sample b displayed a melting peak only at cooling rates of 1°C/min or slower, suggesting that slower cooling enhances crystallinity. Samples c and c' showed similar crystallinity at 0.1°C/min, but at faster rates (≥0.5°C/min), sample c' (lower molecular weight) exhibited a higher heat of fusion, indicating greater crystallinity.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image3.jpeg",
-        caption: "Figure 1: DSC results after cooling at 0.1°C/min",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image4.jpeg",
-        caption: "Figure 2: DSC results after quench cooling",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image6.jpeg",
-        caption: "Figure 3: DSC results for sample a",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image7.jpeg",
-        caption: "Figure 4: DSC results for sample b",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image8.jpeg",
-        caption: "Figure 5: DSC results for sample c",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image9.jpeg",
-        caption: "Figure 6: DSC results for sample c'",
       },
       {
         type: "text",
@@ -738,16 +666,6 @@ const rawPosts = [
         type: "text",
         heading: "Heat Resistance and Activation Energy",
         content: "TG/DTA analysis assessed PLA's heat transfer resistance and thermal decomposition. No significant differences in thermal decomposition were observed between samples b and c, suggesting comparable stability at the tested heating rates (1-10°C/min). Kinetic analysis using the Ozawa method revealed differences in activation energy for thermal degradation: sample b (lower L ratio) showed 144 kJ/mol with a degradation lifetime of 15.4 hours, sample c showed 155 kJ/mol with a lifetime of 21.6 hours, and sample c' (lower molecular weight) showed 136 kJ/mol with a lifetime of 10.9 hours. These results indicate that samples with higher L ratios (c) have greater heat transfer resistance, while lower molecular weight (c') leads to faster degradation.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image10.jpeg",
-        caption: "Figure 7: TG results for sample b and c",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogNine/Image11.jpeg",
-        caption: "Figure 8: Arrhenius plot results for sample c",
       },
       {
         type: "text",
@@ -765,11 +683,11 @@ const rawPosts = [
   {
     id: 10,
     title: "Accurate Determination of Casein Content in Milk Using the Kjeldahl Method",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-07-19",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
-    image: "/assets/images/PrincipalLogos/RowSeven/BUCHI.svg",
+    image: "/assets/images/productImages/Buchi/K-375.webp",
     tags: [
       "Kjeldahl Method",
       "Casein",
@@ -778,7 +696,7 @@ const rawPosts = [
     sections: [
       {
         type: "image",
-        imageUrl: "/assets/images/PrincipalLogos/RowSeven/BUCHI.svg",
+        imageUrl: "/assets/images/productImages/Buchi/K-375.webp",
         caption: "BUCHI — Kjeldahl nitrogen determination systems",
       },
       {
@@ -793,17 +711,17 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogTen/Image2.webp",
+        imageUrl: "/assets/images/productImages/Buchi/K-375.webp",
         caption: "BUCHI KjelFlex K-360",
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogTen/Image3.jpg",
+        imageUrl: "/assets/images/productImages/Buchi/K-375.webp",
         caption: "BUCHI SpeedDigester K-439",
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogTen/Image4.jpg",
+        imageUrl: "/assets/images/productImages/Buchi/K-375.webp",
         caption: "BUCHI KjelFlex K-360",
       },
       {
@@ -837,11 +755,11 @@ const rawPosts = [
   {
     id: 11,
     title: "Dynamic Viscoelastic Analysis of Polypropylene Homopolymer and Block Copolymer",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
+    image: "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
     tags: [
       "DMA",
       "Polypropylene",
@@ -850,7 +768,7 @@ const rawPosts = [
     sections: [
       {
         type: "image",
-        imageUrl: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
+        imageUrl: "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
         caption: "Hitachi — Dynamic Mechanical Analysis instrumentation",
       },
       {
@@ -921,7 +839,7 @@ const rawPosts = [
   {
     id: 12,
     title: "Advancing Edible Oil Quality Control with FT-NIR Spectroscopy",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
@@ -998,7 +916,7 @@ const rawPosts = [
   {
     id: 13,
     title: "Analytical Validation of an Immunofluorescence Assay for ARv7 Protein Expression on Circulating Tumor Cells Using the RareCyte Platform",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-06-05",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
@@ -1075,7 +993,7 @@ const rawPosts = [
   {
     id: 14,
     title: "Optimizing the Lyophilisation Process for Banana Slices Using BUCHI Lyovapor™ L-200",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-06-05",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
@@ -1376,7 +1294,7 @@ const rawPosts = [
   {
     id: 16,
     title: "RotaChrom CPC Modeler: Enabling Scalable Oligonucleotide Isolation",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-10-22",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
@@ -1395,11 +1313,6 @@ const rawPosts = [
       {
         type: "text",
         content: "The starting material was a 20-mer single-stranded unmodified oligonucleotide (dT), with 88.5% purity (Figure 1).",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSixteen/Image1.jpg",
-        caption: "Figure 1: AEX-HPLC analytical chromatogram of the crude sample",
       },
       {
         type: "text",
@@ -1454,11 +1367,6 @@ const rawPosts = [
       {
         type: "text",
         content: "The experiment was performed on RotaChrom's Benchtop CPC, part of the CPC Modeler platform — a compact, desktop-sized unit with mg to g/cycle loading capacity and high-purity output. It also includes the CPC Simulator tool, which helps identify optimal purification methods using partition coefficients, crude composition, and a digital method library.\n\nThe resulting fractions demonstrated impressive performance: fractions 36-51 achieved 96.6% purity with a calculated yield of 94.5%, while fractions 38-49 achieved 98% purity with a 74.5% calculated yield. Fractions were lyophilized to remove organic solvents, followed by alcohol precipitation to eliminate salts and residual additives. This study confirms that CPC enables high-purity, high-yield purification of oligonucleotides in a single step — without requiring a solid stationary phase.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSixteen/Image2.jpg",
-        caption: "Figure 2: CPC chromatogram and AEX-HPLC chromatogram of pooled fraction 44",
       },
       {
         type: "text",
@@ -1522,7 +1430,7 @@ const rawPosts = [
   {
     id: 17,
     title: "Small Scale Peptide and Impurity Isolation Using Waters ACQUITY UPLC H-Class and Fraction Manager System",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2025-11-20",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
@@ -1563,59 +1471,16 @@ const rawPosts = [
         content: "The ACQUITY UPLC H-Class System, with its low system dispersion, exact control of solvent composition, and accurate sample injection scheme, provided excellent chromatographic reproducibility, illustrated by an overlay of five peptide injections that matched exactly. The Waters Fraction Manager-Analytical (WFM-A) was specifically designed to minimize peak dispersion during collection, emphasizing the benefit of low peak dispersion in the fraction collection valve compared with a traditional collector.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image2.jpg",
-        caption: "Figure 2: Overlay of five peptide injections on the 4.6 × 50 mm XBridge Peptide BEH C18 Column. Gradient: 28-32% B in 5 minutes, 5 μL injection, 280 nm.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image3.jpg",
-        caption: "WFM-A design for minimizing peak dispersion and collecting narrow peaks of interest.",
-      },
-      {
         type: "text",
         content: "Narrow, concentrated peaks are easily identified and collected with higher recovery when peaks are clearly defined. Fractions can be collected by time, slope, threshold, or any combination of the three. While collection starting and ending times may be manually entered in the WFM-A method editor if desired, it is also possible to populate the WFM-A method automatically using processed results from an analytical injection.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image4.jpg",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image5.jpg",
-        caption: "Figure 4: The sample result selected populates the peak table with retention time, start time, and end time for each peak.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image6.jpg",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image7.jpg",
-        caption: "Figure 5: Collection Event Table in the fraction method.",
       },
       {
         type: "text",
         content: "With the collection method developed, the peptide and two closely eluting impurities were isolated from the crude sample in a total of ten injections. Because the ACQUITY UPLC H-Class System is so reproducible, all sample purification chromatograms were essentially identical. The fraction volumes were essentially identical for each compound in each isolation (impurity 1, 0.29 mL; peptide, 0.55 mL; impurity 2, 0.33 mL). All fractions of each type were pooled, and an aliquot of each pool was immediately analyzed using two different gradients.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image8.jpg",
-        caption: "Figure 6: The peptide product and two closely eluting impurities were collected into a 48-well plate containing 2 mL vials. Gradient: 28-32% B in 5 minutes on a 4.6 × 50 mm XBridge Peptide BEH C18 Column, 5 μm; 5 μL injection; 280 nm.",
-      },
-      {
         type: "text",
         content: "The peptide product purity was 100% as determined by both the fast gradient and the shallower focused gradients used for fraction analysis. While the fast gradient (3.38% change per column volume) showed impurity 1 to be about 83% pure, the shallow focused gradient (0.30% change per column volume) resolved yet another coeluting peak and reduced the estimated purity to about 77%. Impurity 2 had a purity of 98% using the fast gradient and 80% using the focused gradient, again due to better resolution of compound constituents. If higher purity contaminant fractions were required for subsequent studies, further method development would likely be needed.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image9.jpg",
-        caption: "Figure 7: Approximate compound purities after subtracting peaks present in the blank. Fraction analysis gradient: 5-50% B in 5 minutes, rate of gradient change 3.38%/column volume, injection volume 40 μL, 280 nm.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogSeventeen/Image10.jpg",
-        caption: "Figure 8: Approximate compound purities after subtracting peaks present in the blank. Fraction analysis gradient: 28-32% B in 5 minutes, rate of gradient change 0.30%/column volume, injection volume 40 μL, 280 nm.",
       },
       {
         type: "text",
@@ -1670,7 +1535,7 @@ const rawPosts = [
     date: "2026-01-21",
     author: "Inkarp Applications Team",
     readTime: "5 min read",
-    image: "/assets/blogs/BlogNineteen/Image1.jpeg",
+    image: "/assets/images/productImages/Nanosurf/driveafm.jpg",
     tags: [
       "AI in Research",
       "AFM Automation",
@@ -1712,7 +1577,7 @@ const rawPosts = [
   {
     id: 20,
     title: "The New Standard for Surface Roughness Measurement in Semiconductor Wafers",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2026-01-27",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
@@ -1728,18 +1593,8 @@ const rawPosts = [
         content: "Semiconductor research and manufacturing are inseparable from silicon wafers, and one of their most critical characteristics is surface roughness. Even minute irregularities can significantly influence device performance. Excessive roughness can reduce the mobility of electrons and holes, directly affecting electrical efficiency and reliability. Its impact goes far beyond electrical behavior, influencing adhesion, photolithography precision, optical properties, and overall device durability throughout the manufacturing process.\n\nA rough wafer surface can scatter charge carriers, increasing resistance and reducing efficiency in high-performance CPUs, GPUs, and memory chips. It also affects thin-film adhesion, compromises photolithography accuracy, and can degrade optical performance in LEDs and solar cells. In addition, surface irregularities may introduce cracks and defects that reduce yield and long-term reliability.\n\nFor this reason, semiconductor manufacturers continuously monitor wafer roughness, defined as the root mean square (RMS) of height deviations from the mean surface, typically measured in the sub-nanometer (angstrom) range. Atomic Force Microscopy (AFM) is the natural choice for such measurements. However, traditional dynamic modes have long been limited by slow scanning speeds. This limitation is now overcome with Nanosurf's WaveMode, available on the DriveAFM and the industrial Alphacen 300 Drive systems. WaveMode operates up to 15 times faster than conventional dynamic modes, establishing a new reference for sub-nanometer roughness measurements and positioning DriveAFM as the future standard in semiconductor metrology.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwenty/Image2.png",
-        caption: "Figure 1: Surface of a silicon wafer imaged with DriveAFM using WaveMode at 15 Hz line rate. The whole image took less than 34 seconds to acquire.",
-      },
-      {
         type: "text",
         content: "WaveMode is enabled by CleanDrive technology, which uses a second laser to excite the cantilever photothermally off-resonance. Unlike other off-resonance implementations, WaveMode does not require or depend on subtracting parasitic background signals. This photothermal excitation overcomes the typical f/Q limitation associated with dynamic mode operation.\n\nBy incorporating the Fast Scanning option, which includes an additional piezo capable of rapidly following surface topography, the system achieves significantly faster response times and higher scanning speeds. In semiconductor production environments, this translates directly into increased throughput.\n\nAnother important advantage of WaveMode is the precise control of the tip-sample interaction, minimizing the risk of damage to both the wafer surface and the probe tip. Maintaining tip condition allows repeated measurements over extended periods without frequent replacement, lowering operational costs. As a result, WaveMode delivers highly reproducible measurements; in datasets collected over nine consecutive days, the distribution of roughness values remained stable, confirming preserved tip quality and low-noise measurement performance from start to finish.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwenty/Image3.jpeg",
-        caption: "Sub-nanometer surface roughness reproducibility data over 9 days using AFM WaveMode",
       },
       {
         type: "text",
@@ -1789,7 +1644,7 @@ const rawPosts = [
   {
     id: 21,
     title: "Metal Alloys from a New Perspective",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2026-01-27",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
@@ -1810,19 +1665,9 @@ const rawPosts = [
         content: "Transportation, energy production, healthcare, electronics — it is difficult to find any field untouched by material science. Metallurgy, in particular, has accompanied human progress for thousands of years. Bronze marked an entire age of human civilization. Steel powered the Industrial Revolution. Today, metal alloys continue to form the backbone of modern technology, especially in the semiconductor and electronics industries.\n\nBehind every silicon chip lies a network of carefully engineered metal alloys. Aluminum-silicon-copper interconnects ensure signal transmission, while titanium and tantalum barriers prevent atomic diffusion and improve reliability. Semiconductor materials themselves are evolving through alloy engineering, with silicon-germanium and III-V compounds such as gallium arsenide, indium phosphide, and aluminum gallium arsenide enabling faster, more efficient devices for the digital era.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyOne/Image2.png",
-        caption: "Figure 1: Image of solder tin Sn63Pb37, acquired with DriveAFM on a stand-alone material science setup, resolution: 500 x 500 pixels, scan size: 2 μm x 2 μm.",
-      },
-      {
         type: "text",
         heading: "Understanding Alloy Behavior at Micro and Nanoscale",
         content: "Modern alloy design requires careful control of structure and properties. Mechanical metamaterials with nano- and micro-architected structures demonstrate properties that arise primarily from geometry rather than composition. Advances in fabrication now allow creation of both periodic and disordered architectures, enabling mechanical behaviors rarely seen in natural materials.\n\nAtomic Force Microscopy (AFM) allows researchers to investigate these properties at micro- and nanoscale dimensions. The structure of an alloy strongly influences its mechanical performance: grain boundaries and phase boundaries restrict dislocation movement and directly affect plastic deformation. Therefore, understanding the arrangement, dominant orientations, and phase separation scale is essential to predict alloy performance.\n\nNanoindentation is commonly used to investigate metallic surfaces, but it is often slow. Nanosurf's DriveAFM, equipped with CleanDrive photothermal excitation and FastScanning, can scan a 1 μm x 1 μm area in under 35 seconds per frame (line rate 15 Hz) at high resolution (512 x 512 pixels) using WaveMode — the fastest off-resonance AFM technique. With WaveMode NMA, quantitative elasticity values can be obtained alongside topography, allowing direct visualization of phase-dependent mechanical variations.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyOne/Image3.png",
-        caption: "Figure 2: Scanning electron microscope image of a WM20PTD AFM probe used for WaveMode.",
       },
       {
         type: "text",
@@ -1873,7 +1718,7 @@ const rawPosts = [
   {
     id: 22,
     title: "Kolbe-Schmitt Carboxylation of Resorcinol: A Benchtop NMR Spectroscopy Approach",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2026-02-02",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
@@ -1890,29 +1735,19 @@ const rawPosts = [
         content: "The Kolbe-Schmitt reaction is a fundamental carboxylation method widely used in organic chemistry for the synthesis of hydroxybenzoic acids. This process involves the reaction of phenolic compounds with carbon dioxide under basic conditions. Initially developed by Kolbe as a solid-gas reaction to synthesize salicylic acid, Schmitt later improved the methodology by employing elevated pressures to reduce phenol losses, increasing overall efficiency. Beyond industrial applications, the Kolbe-Schmitt reaction remains essential in laboratory-scale organic chemistry experiments and is a key reaction in organic chemistry training.\n\nThis experiment aims to perform the Kolbe-Schmitt reaction on resorcinol (1,3-dihydroxybenzene) to yield β-resorcylic acid (2,4-hydroxybenzoic acid) through carboxylation in an aqueous sodium bicarbonate solution. The product is subsequently analyzed using benchtop NMR spectroscopy, including HSQC NMR experiments, to elucidate molecular structure and couplings in aromatic compounds.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyTwo/Image2.jpeg",
-        caption: "Scheme 1: Carboxylation of resorcinol with sodium bicarbonate and hydrochloric acid to obtain β-resorcylic acid.",
-      },
-      {
         type: "text",
         heading: "Experimental Procedure",
         content: "Materials and reagents: resorcinol (1,3-dihydroxybenzene, 99%, TCI Chemicals), sodium bicarbonate (99.5%, Sigma Aldrich), hydrochloric acid (37%, Sigma Aldrich), deuterated dimethyl sulfoxide (DMSO-d6, 99.8%, Deutero GmbH), and distilled water.\n\nInstrumentation: Nanalysis-100 Benchtop NMR Spectrometer (2.45 T), reflux apparatus, vacuum filtration system, and MestReNova software (v15.0.1) for spectral processing.",
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyTwo/Image3.jpeg",
+        imageUrl: "/assets/images/productImages/Nanalysis/100MHz-proton-benchtop-nmr.png",
         caption: "Nanalysis-100 Benchtop NMR Spectrometer",
       },
       {
         type: "text",
         heading: "Synthesis and Recrystallization",
         content: "Synthesis of β-resorcylic acid: in a 100 mL round-bottom flask, 25 g of sodium bicarbonate, 5.9 g of resorcinol, and 60 mL of distilled water were combined with a magnetic stir bar and attached to a reflux apparatus. The reaction mixture was heated to 100°C and refluxed for 2 hours, then the temperature was increased to 130°C for 15 minutes. After cooling to room temperature, 29 mL of hydrochloric acid (37%) was added slowly with continuous stirring, and the mixture was placed in an ice bath to promote crystallization. The resulting precipitate was collected via vacuum filtration and washed with cold water.\n\nRecrystallization: the crude product was dissolved in minimal hot water, and recrystallization was induced by cooling in an ice bath. The purified crystals were collected by vacuum filtration, yielding 3.30 g (40%) of β-resorcylic acid as a white solid.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyTwo/Image4.jpeg",
-        caption: "Figure 1: Recrystallization of β-resorcylic acid.",
       },
       {
         type: "text",
@@ -1925,16 +1760,6 @@ const rawPosts = [
         content: "The experiment successfully demonstrated the Kolbe-Schmitt reaction for carboxylation of resorcinol, yielding β-resorcylic acid as confirmed through spectral analysis. The proton NMR spectra exhibited expected couplings for an aromatic system, with well-resolved 3JHH, 4JHH, and 5JHH interactions, and the HSQC experiments further provided insight into proton-carbon connectivity.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyTwo/Image5.jpeg",
-        caption: "Figure 2: 1H NMR spectrum (102.3 MHz, DMSO-d6) of recrystallized β-resorcylic acid.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyTwo/Image6.jpeg",
-        caption: "Figure 3: gHSQC (1H: 102.3 MHz, 13C: 25.7 MHz) NMR spectrum of β-resorcylic acid in DMSO-d6.",
-      },
-      {
         type: "text",
         heading: "Conclusion",
         content: "This organic chemistry experiment effectively integrates synthesis, carboxylation, and advanced spectral analysis using benchtop NMR spectroscopy. The successful formation of β-resorcylic acid was confirmed through proton and HSQC NMR spectra, highlighting the relevance of coupling interactions in aromatic compounds. The Kolbe-Schmitt reaction remains a versatile and green approach, as it produces minimal waste and allows for scalable synthesis, providing valuable hands-on experience in organic spectroscopy for undergraduate organic chemistry training.\n\nInkarp Instruments is a trusted distributor and service provider of Nanalysis products in India, delivering advanced scientific solutions tailored to modern research needs. Driven by a steadfast commitment to quality and trust, we empower scientists across the country with high-performance instruments and expert support to accelerate their breakthroughs.\n\nReferences:\n1. Krtschil, U.; Hessel, V.; Kost, H. J.; Reinhard, D. Chem. Eng. Technol. 2013, 36, 1010-1016.\n2. Kolbe, H. J. Pratt. Chem. 1874, 10, 89.\n3. Schmitt, R. J. Pratt. Chem. 1885, 31, 397.",
@@ -1945,7 +1770,7 @@ const rawPosts = [
   {
     id: 23,
     title: "Evaluation of Oxidative Stability in Polyethylene Using Differential Scanning Calorimetry",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
@@ -1967,34 +1792,19 @@ const rawPosts = [
         content: "Polymer materials, such as Polyethylene (PE), are susceptible to oxidative degradation when exposed to oxygen, leading to a decline in mechanical strength and electrical properties. The oxidative stability of polymers is a critical factor in applications such as wire coating materials, where prolonged durability is required. Unlike thermal decomposition, which typically occurs around 400°C in an inert gas environment (e.g., nitrogen), oxidation-induced degradation can begin at significantly lower temperatures, often below 200°C, in the presence of oxygen.\n\nTo enhance polymer stability, antioxidant additives are incorporated into PE formulations to prevent premature degradation. The effectiveness of these additives can be evaluated using Oxidation Induction Time (OIT), a parameter measured via Differential Scanning Calorimetry (DSC). The DSC curve provides insights into temperature dependence, the impact of catalyst effects (e.g., copper influence), and polymer aging.\n\nThe OIT measurement follows a standardized process: the sample is heated under a nitrogen atmosphere and stabilized at a predefined isothermal temperature, the atmosphere gas is then switched to oxygen, and the exothermic peak indicating the onset of oxidation is recorded — the time elapsed from the gas switch to this peak is the oxidation induction time.\n\nThis study aims to assess the oxidative stability of PE by measuring its OIT at different isothermal temperatures, evaluating the catalyst effect of copper, and comparing different grades of PE.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyThree/Image2.jpeg",
-        caption: "Figure 1: Oxidation induction time measurement result for PE at 205°C",
-      },
-      {
         type: "text",
         heading: "Experimental Method",
         content: "A DSC200 instrument was used for all measurements. Sample mass: 5 mg. Isothermal temperatures: 200°C, 205°C, 210°C, and 215°C. Atmosphere gas: nitrogen (initial phase), followed by oxygen. Flow rate (gas control): 40 mL/min. Gas switching: automated using a programmed gas controller unit.",
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyThree/Image3.jpeg",
+        imageUrl: "/assets/images/productImages/Hitachi/ana-nexta-dsc.jpg",
         caption: "Hitachi NEXTA DSC200",
       },
       {
         type: "text",
         heading: "Results and Discussion",
         content: "Temperature dependence of oxidation induction time: at 205°C, following the gas switch from nitrogen to oxygen, no significant changes were observed for 17 minutes, indicating the presence of antioxidant additives. Beyond this point, an exothermic peak appeared due to oxidation, marking the OIT at 17.2 minutes. Measurements at 200°C, 205°C, 210°C, and 215°C demonstrate that higher temperatures lead to shorter oxidation induction times, confirming the temperature dependence of the oxidation process.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyThree/Image4.jpeg",
-        caption: "Figure 2: DSC curve of PE at 205°C showing the exothermic oxidation peak.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyThree/Image5.jpeg",
-        caption: "Figure 3: OIT measurements at different isothermal temperatures (200°C, 205°C, 210°C, and 215°C).",
       },
       {
         type: "text",
@@ -2007,11 +1817,6 @@ const rawPosts = [
         content: "Comparing the OIT of three different PE grades, the order of oxidative stability was found to be C > B > A, highlighting the variation in polymer stability across different formulations. This demonstrates the usefulness of OIT analysis for material evaluation and quality control in industrial applications.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyThree/Image6.jpeg",
-        caption: "Figure 4: Measurement results of three different grades of PE. Isothermal temperature: 205°C.",
-      },
-      {
         type: "text",
         heading: "Conclusion",
         content: "The oxidation induction time (OIT) of Polyethylene (PE) was successfully measured using Differential Scanning Calorimetry (DSC). This method provides a reliable approach for assessing oxidative stability, the influence of temperature dependence, the catalyst effect of copper, and variations among different PE grades. The DSC curve serves as an essential tool for evaluating polymer aging, optimizing antioxidant additives, and ensuring the long-term performance of wire coating materials and other polymer-based products.\n\nInkarp Instruments is a reliable distributor and service provider of Hitachi products in India, offering state-of-the-art scientific solutions designed to meet the evolving demands of modern research. With a strong commitment to excellence and trust, we support scientists nationwide with cutting-edge technology and dedicated expertise to drive innovation and discovery.\n\nReference: Hitachi",
@@ -2022,7 +1827,7 @@ const rawPosts = [
   {
     id: 24,
     title: "Optimizing Laboratory Water Solutions for HPLC-Based Cannabis Testing",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
@@ -2044,7 +1849,7 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyFour/Image2.jpg",
+        imageUrl: "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
         caption: "Arium® Mini Ultrapure Water Systems",
       },
       {
@@ -2055,11 +1860,6 @@ const rawPosts = [
         type: "text",
         heading: "Materials and Methods",
         content: "Cannabinoid reference standards and the internal standard (ISTD) phencyclidine (PCP) were obtained from Cerilliant (Round Rock, TX) as individual substances. ACS Reagent Grade and HPLC-grade water were sourced commercially, while ultrapure water ASTM Type 1 was produced using the Arium® mini plus system on the day of use. HPLC analysis was performed using a Shimadzu Nexera-i LC2040L 3D Plus system, equipped with a Restek Rapture ARC-18 column (100 mm x 3.0 mm ID x 1.80 μm) and a Restek UltraShield pre-column filter (0.2 μm frit), set at 30°C. The system operated in isocratic mode with a mobile phase of 25% aqueous (water, 5 mM ammonium formate, 0.1% formic acid) and 75% organic (acetonitrile, 0.1% formic acid) at a flow rate of 1 mL/min. A sample volume of 1 μL was injected and detected using photodiode array detection across the 190-400 nm wavelength range.\n\nA stock solution containing 17 cannabinoids and the ISTD at 100 μg/mL in methanol was prepared and serially diluted to create calibrators. Cannabis samples were processed by grinding 1-2 grams of cannabis with a Geno Grinder, extracting 0.2 grams in 20 mL methanol three times with vortexing and sonication, then filtering and ultra-centrifuging before HPLC analysis.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyFour/Image3.jpeg",
-        caption: "Figure 1: Comparison of expenses between in-house produced Arium® water Type 1 (ultrapure water) and bottled water (HPLC grade), based on two liters of water consumption per working day, 20 working days per month.",
       },
       {
         type: "text",
@@ -2107,24 +1907,9 @@ const rawPosts = [
         caption: "Table 1: Summary of analytical runs. Bottled water = HPLC-grade bottled water. Arium® water = Arium® ultrapure water type I.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyFour/Image3.jpeg",
-        caption: "Figure 2: Cannabis samples were quantitatively analyzed using a set of 17 cannabinoids. Only seven analytes (CBDV-A, CBG, THCV-A, Delta-9 THC, THCA-A, CBC-A) were above the LOQ and subsequently compared.",
-      },
-      {
         type: "text",
         heading: "Results and Discussion",
         content: "All positive controls, regardless of water source, were quantified within the expected range, and no interfering peaks were detected in the blanks, confirming the purity of both bottled and ultrapure water. Among the 17 tested cannabinoids, 7 analytes (CBDV-A, CBG-A, CBG, THCV-A, Delta-9 THC, THCA-A, and CBC-A) were consistently above the limit of quantification (LOQ) and used for further comparison. Quantitative analysis showed no statistically significant differences in analyte concentration when using Arium® ultrapure water compared to commercial bottled water. These findings validate the use of in-house water purification systems for critical lab water solutions in regulated environments.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyFour/Image5.jpeg",
-        caption: "Figure 3: All positive controls quantified within the expected range, and no interfering compounds were detected. Both water sources are pure and suitable for HPLC in cannabis analytics.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentyFour/Image6.jpeg",
-        caption: "Figure 4: No significant differences in cannabis quantities were found using two different water sources for the mobile phase. The bars show concentration of seven cannabinoids analyzed by HPLC using Arium water type 1 compared to HPLC-grade bottled water.",
       },
       {
         type: "text",
@@ -2137,11 +1922,10 @@ const rawPosts = [
   {
     id: 26,
     title: "The Role of Phosphorylation in Post-Translational Modification: Activating Akt/PKB",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
-    image: "/assets/blogs/BlogTwentySix/Image1.jpeg",
     tags: [
       "QF-Pro",
       "Akt/PKB",
@@ -2158,11 +1942,6 @@ const rawPosts = [
         content: "Traditional diagnostic techniques primarily rely on immunohistochemistry (IHC) analysis to evaluate protein expression levels. While effective, IHC analysis fails to provide insights into protein activation states and their functional relevance in disease progression. QF-Pro® technology overcomes these limitations by enabling biomarker analysis of oncoprotein activation through fluorophore-labelled antibodies, providing a more detailed and reliable analysis of biomarker functionality in renal cell carcinoma.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySix/Image2.jpeg",
-        caption: "Hawk Biosystems Violet 3.0, integrated with QF-Pro® Technology",
-      },
-      {
         type: "text",
         heading: "QF-Pro® Technology and Methodology",
         content: "QF-Pro® analysis is based on Förster Resonance Energy Transfer (FRET)-Fluorescence Lifetime Imaging Microscopy (FRET-FLIM), a non-radiative energy transfer technique occurring between fluorophores when within a 1-10 nanometer proximity. This two-site amplified FRET-FLIM approach enhances specificity by reducing false positives and allowing for precise quantitative measurements of Akt/PKB activation.\n\nIn this study, QF-Pro® technology was used to assess Akt/PKB and STAT3 activation in ccRCC samples by targeting phosphorylation-specific antibodies at key activation sites, enabling real-time visualization of oncoprotein activation. Formalin-fixed, paraffin-embedded (FFPE) tissue microarrays from primary and metastatic ccRCC samples were analyzed, with secondary QF-Pro® probes tagged with ATTO 488 (donor) and Alexa594 (acceptor) fluorophores used to detect activation state scores for each patient sample.",
@@ -2173,19 +1952,9 @@ const rawPosts = [
         content: "Akt/PKB activation dynamics were assessed using growth factor (EGF) stimulation. QF-Pro® activation maps revealed marked differences between basal and stimulated conditions: in basal conditions, cells exhibited predominantly blue signals, indicating minimal Akt phosphorylation. After 10 minutes of EGF stimulation, cells transitioned to green, yellow, and orange, reflecting a progressive increase in Akt phosphorylation at the plasma membrane, with quantitative measurements confirming a significant increase in Akt phosphorylation over time, peaking at 10 minutes post-stimulation.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySix/Image4.jpeg",
-        caption: "Figure 1: A) Illustration of the QF-Pro® assay for detecting Akt/PKB activation. B) Representative QF-Pro® maps show minimal activation under basal conditions and increased phosphorylation upon EGF stimulation for 10 minutes. C) Quantitative QF-Pro® scores across different EGF treatment time points demonstrate a significant increase in activation state with longer stimulation times (p < 0.001).",
-      },
-      {
         type: "text",
         heading: "Akt/PKB Activation in ccRCC Progression",
         content: "QF-Pro® analysis of renal control tissues, primary tumors, and metastatic ccRCC samples demonstrated clear differences in Akt/PKB activation states: renal control tissues showed minimal activation (predominantly green QF-Pro® maps), primary tumor samples exhibited a mild increase in activation, and metastatic samples displayed high phosphorylation levels (yellow and red QF-Pro® maps), indicating enhanced Akt/PKB activation during ccRCC progression. These results highlight the Akt/PKB signaling pathway as a potential biomarker for assessing tumor progression and aggressiveness in renal cell carcinoma.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySix/Image6.jpeg",
-        caption: "Figure 2: A) Representative fluorescence lifetime images — primary ccRCC tissue shows moderate Akt/PKB activation (blue/green) and metastatic ccRCC tissue exhibits increased activation (yellow/red). B) QF-Pro® score demonstrated a significant difference between non-cancerous, primary, and metastatic samples (p < 0.001).",
       },
       {
         type: "text",
@@ -2193,19 +1962,9 @@ const rawPosts = [
         content: "QF-Pro® technology demonstrated superior prognostic accuracy compared to IHC analysis, particularly in assessing Akt/PKB activation states. Kaplan-Meier survival analysis showed that patients with higher Akt activation (upper quartile) exhibited poorer survival outcomes, while conventional IHC-based phosphorylation (Threonine 308) Akt expression failed to correlate with survival, highlighting its lower prognostic reliability. The limitations of one-site IHC assays in distinguishing activation states emphasize the need for functional biomarker analysis, which QF-Pro® technology uniquely provides.",
       },
       {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySix/Image8.jpeg",
-        caption: "Figure 3: Akt/PKB activation state correlates with poor overall survival in ccRCC. Kaplan-Meier survival outcomes related to PKB/Akt activation as determined by QF-Pro® (A) versus conventional IHC (B).",
-      },
-      {
         type: "text",
         heading: "STAT3 Activation Dynamics",
         content: "STAT3 activation (Tyr705 phosphorylation) was assessed across renal control tissues, primary ccRCC tumors, and metastatic samples. Renal control tissues exhibited low STAT3 activation, primary ccRCC samples displayed a modest but statistically significant increase, and metastatic tumors showed a marked elevation in STAT3 activation, emphasizing its role in tumor progression. These findings suggest STAT3 activation as a potential biomarker for ccRCC prognosis, correlating increased activation with advanced disease stages and poor patient outcomes.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySix/Image9.jpeg",
-        caption: "Figure 4: Tyr705 activation is higher in metastatic ccRCC tumors in FFPE TMAs. Activation of Tyr705 is higher in metastatic cores than in primary cores, with both groups significantly higher than non-cancerous renal control tissue (p < 0.001).",
       },
       {
         type: "text",
@@ -2218,11 +1977,11 @@ const rawPosts = [
   {
     id: 27,
     title: "Unraveling the Dynamic Viscoelastic Properties of Polytetrafluoroethylene (PTFE)",
-    category: "Application Notes",
+    category: "Industry Insights",
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    image: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
+    image: "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
     tags: [
       "DMA",
       "PTFE",
@@ -2231,7 +1990,7 @@ const rawPosts = [
     sections: [
       {
         type: "image",
-        imageUrl: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
+        imageUrl: "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
         caption: "Hitachi — Dynamic Mechanical Analysis instrumentation",
       },
       {
@@ -2242,11 +2001,6 @@ const rawPosts = [
         type: "text",
         heading: "Dynamic Viscoelasticity: The Science Behind PTFE's Flexibility and Strength",
         content: "PTFE's viscoelastic nature means it exhibits both elastic and viscous behavior, making it capable of storing and dissipating mechanical energy. Dynamic Mechanical Analysis (DMA), facilitated by Hitachi's NEXTA® DMA200, is the key technique used to explore these properties, measuring critical parameters like the storage modulus (E'), which represents the elastic portion of the material indicating its stiffness, the loss modulus (E''), which measures the viscous response representing energy lost as heat, and the complex modulus (E*), which combines E' and E'' to give a complete view of the material's mechanical response.\n\nThe loss factor (tan δ), the ratio of E'' to E', reveals crucial information about damping characteristics, highlighting how PTFE can absorb and dissipate energy — a key feature for applications involving vibrations or dynamic loads.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySeven/Image2.jpeg",
-        caption: "Hitachi's NEXTA® DMA200",
       },
       {
         type: "text",
@@ -2291,14 +2045,6 @@ const rawPosts = [
         type: "text",
         heading: "Thermal Stability and Rheological Behavior",
         content: "PTFE's thermal performance is another cornerstone of its versatility. Using Differential Scanning Calorimetry (DSC), researchers mapped PTFE's crystallization and melting points: crystallization temperatures (Tc1 and Tc2) of 22.3°C and 31.1°C, with an enthalpy of crystallization (ΔHc) of 7.2 J/g, and a melting temperature (Tm) of 330.7°C, with an enthalpy of melting (ΔHm) of 37.4 J/g. This remarkable thermal stability, combined with insights from mechanical spectroscopy, helps engineers predict PTFE's shear modulus, complex modulus, and overall behavior in extreme environments.",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySeven/Image3.jpeg",
-      },
-      {
-        type: "image",
-        imageUrl: "/assets/blogs/BlogTwentySeven/Image4.jpeg",
       },
       {
         type: "text",

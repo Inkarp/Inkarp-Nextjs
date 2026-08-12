@@ -257,6 +257,13 @@ article[data-scroll-reveal="true"] {
   to   { width: 100%; }
 }
 
+/* Indeterminate loading bar: the fill sweeps across the track, so it reads as
+   "still working" for waits of unknown length (e.g. embedded PDF previews). */
+@keyframes hvc-progress-sweep {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(300%); }
+}
+
 @keyframes hvc-badge-pop {
   0%   { transform: scale(0.55); opacity: 0.5; }
   60%  { transform: scale(1.15); opacity: 1; }

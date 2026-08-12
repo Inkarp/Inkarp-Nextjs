@@ -45,6 +45,11 @@ function TextSection({ section }) {
 }
 
 function ImageSection({ section }) {
+  // Never render an empty frame for a figure with no image.
+  if (!section.imageUrl) {
+    return null;
+  }
+
   return (
     <figure>
       <div className="relative h-56 overflow-hidden bg-parchment-alt sm:h-72">
@@ -204,10 +209,7 @@ export default function BlogDetailsPage({ post }) {
     <main className="overflow-hidden">
       <section className="relative overflow-hidden">
         <div className="relative mx-auto max-w-[1180px] px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
-          <span className="inline-flex bg-red/10 px-3 py-1 text-xs font-semibold uppercase text-red">
-            {post.category}
-          </span>
-          <h1 className="mx-auto mt-4 max-w-3xl text-2xl font-bold leading-tight text-ink sm:text-3xl">
+          <h1 className="mx-auto max-w-3xl text-2xl font-bold leading-tight text-ink sm:text-3xl">
             {post.title}
           </h1>
           <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-ink-soft">
@@ -227,16 +229,20 @@ export default function BlogDetailsPage({ post }) {
       <section className="mx-auto max-w-[1180px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_1fr]">
           <article>
-            <div className="relative h-64 overflow-hidden sm:h-80">
-              <Image
-                alt={post.title}
-                className="object-cover"
-                fill
-                priority
-                sizes="(min-width: 1024px) 66vw, 100vw"
-                src={post.image}
-              />
-            </div>
+            {/* Posts without a cover image skip the hero entirely rather than
+                rendering an empty frame. */}
+            {post.image ? (
+              <div className="relative h-64 overflow-hidden sm:h-80">
+                <Image
+                  alt={post.title}
+                  className="object-cover"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 66vw, 100vw"
+                  src={post.image}
+                />
+              </div>
+            ) : null}
 
             <div className="mt-5 flex flex-wrap items-center gap-5 text-sm text-ink-soft">
               <span className="flex items-center gap-1.5">
@@ -377,15 +383,17 @@ export default function BlogDetailsPage({ post }) {
                     href={`/blog/${recent.slug}`}
                     key={recent.id}
                   >
-                    <span className="relative size-16 shrink-0 overflow-hidden">
-                      <Image
-                        alt={recent.title}
-                        className="object-cover transition duration-300 group-hover:scale-110"
-                        fill
-                        sizes="64px"
-                        src={recent.image}
-                      />
-                    </span>
+                    {recent.image ? (
+                      <span className="relative size-16 shrink-0 overflow-hidden">
+                        <Image
+                          alt={recent.title}
+                          className="object-cover transition duration-300 group-hover:scale-110"
+                          fill
+                          sizes="64px"
+                          src={recent.image}
+                        />
+                      </span>
+                    ) : null}
                     <div>
                       <p className="line-clamp-2 text-sm font-medium text-ink transition group-hover:text-red">
                         {recent.title}

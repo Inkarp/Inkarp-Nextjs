@@ -14,23 +14,39 @@ import {
 const PAGE_SIZE = 10;
 
 function BlogCard({ post }) {
+  // Most covers are catalogue product shots on a white background. Cropping
+  // those with object-cover cuts the instrument off, so they are contained on a
+  // tinted panel instead; editorial photos still fill the frame.
+  const isProductShot = post.image?.includes("/productImages/");
+
   return (
     <Link
       className="group flex h-full flex-col overflow-hidden border border-line-light bg-parchment transition hover:-translate-y-1 hover:border-red/35"
       href={`/blog/${post.slug}`}
     >
-      <div className="relative h-48 overflow-hidden">
-        <Image
-          alt={post.title}
-          className="object-cover transition duration-500 ease-out group-hover:scale-110"
-          fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          src={post.image}
-        />
-        <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 bg-red px-3 py-1 text-xs font-semibold uppercase text-parchment">
-          {post.category}
-        </span>
-      </div>
+      {/* No category badge — every post is Industry Insights, so the chip
+          carried no information. Posts without a cover simply skip the frame. */}
+      {post.image ? (
+        <div
+          className={`relative h-48 overflow-hidden border-b border-line-light ${
+            isProductShot ? "bg-white" : ""
+          }`}
+        >
+          {/* Inner wrapper does the insetting — `fill` resolves against the
+              padding box, so padding on the parent would not move the image. */}
+          <div className={`absolute ${isProductShot ? "inset-4" : "inset-0"}`}>
+            <Image
+              alt={post.title}
+              className={`transition duration-500 ease-out group-hover:scale-105 ${
+                isProductShot ? "object-contain" : "object-cover"
+              }`}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              src={post.image}
+            />
+          </div>
+        </div>
+      ) : null}
 
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex items-center gap-4 text-xs text-ink-soft">

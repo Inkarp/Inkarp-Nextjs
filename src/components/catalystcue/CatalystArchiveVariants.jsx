@@ -237,7 +237,7 @@ function IssueCard({ card }) {
 function EmptyState() {
   return (
     <div className="py-16 text-center text-sm text-ink-soft">
-      No issues match your filters.{""}
+      No issues match your filters.{" "}
       <span className="text-ink-soft">Try clearing some filters.</span>
     </div>
   );

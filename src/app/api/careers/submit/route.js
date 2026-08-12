@@ -11,7 +11,9 @@ const ALLOWED_TYPES = new Set([
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 ]);
 const ALLOWED_EXTENSIONS = new Set([".pdf", ".doc", ".docx"]);
-const MAX_FILE_SIZE = 5 * 1024 * 1024;
+// Kept in sync with CareersForm. 4MB rather than 5: serverless hosts cap
+// request bodies at ~4.5MB, so anything larger 413s before reaching this route.
+const MAX_FILE_SIZE = 4 * 1024 * 1024;
 
 function extensionOf(filename = "") {
   const dotIndex = filename.lastIndexOf(".");
@@ -56,7 +58,7 @@ export async function POST(request) {
   }
 
   if (resume.size > MAX_FILE_SIZE) {
-    return Response.json({ success: false, message: "File size should be less than 5MB" }, { status: 400 });
+    return Response.json({ success: false, message: "File size should be less than 4MB" }, { status: 400 });
   }
 
   const rawTracking = Object.fromEntries(TRACKING_FIELD_KEYS.map((key) => [key, fieldValue(formData, key)]));

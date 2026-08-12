@@ -104,7 +104,7 @@ export default function TermsAndConditions() {
             Inkarp Instruments - Terms & Conditions
           </h1>
           <p className="mt-3 text-sm text-ink-soft sm:text-base">
-            <strong>Effective Date:</strong> 27 May 2026 |{""}
+            <strong>Effective Date:</strong> 27 May 2026 |{" "}
             <strong>Last Updated:</strong> 27 May 2026
           </p>
         </header>

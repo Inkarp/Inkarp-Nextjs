@@ -15,6 +15,7 @@ import {
   FiAlertCircle,
 } from"react-icons/fi";
 import { collectTracking } from"@/lib/browserTracking";
+import SectionHeading from"@/components/home/SectionHeading";
 
 const initialFormData = {
   name:"",
@@ -75,10 +76,12 @@ export default function CareersForm() {
       return false;
     }
 
-    if (file.size > 5 * 1024 * 1024) {
+    // 4MB, not 5: serverless hosts (Vercel) cap request bodies at ~4.5MB, so a
+    // larger upload is rejected with a 413 before the route handler ever runs.
+    if (file.size > 4 * 1024 * 1024) {
       setStatus({
         type:"error",
-        message:"File size should be less than 5MB",
+        message:"File size should be less than 4MB",
       });
       return false;
     }
@@ -112,6 +115,16 @@ export default function CareersForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (isSubmitting) {
+      return;
+    }
+
+    // Replaces the `required` attribute the hidden file input can no longer
+    // carry — without this a missing resume would reach the API and 400.
+    if (!selectedFile) {
+      setStatus({
+        type: "error",
+        message: "Please attach your resume (PDF or Word, up to 4MB) before submitting.",
+      });
       return;
     }
 
@@ -181,17 +194,13 @@ export default function CareersForm() {
       className="relative mx-auto max-w-[1180px] scroll-mt-20 px-4 py-12 sm:px-6 lg:px-8"
       id="careers-form"
     >
-      <div className="flex flex-col items-center justify-center gap-2 pb-8 text-center" data-reveal>
-        <span className="w-fit border border-red/30 bg-white px-4 py-1 text-xs uppercase text-ink-soft sm:text-sm">
-          Careers at Inkarp
-        </span>
-        <h2 className="text-2xl text-ink-soft sm:text-3xl">
-          Apply to Join Our Team
-        </h2>
-        <p className="max-w-xl text-sm text-ink-soft">
-          Tell us a bit about yourself and attach your resume - our team
-          reviews every application personally.
-        </p>
+      <div className="pb-8" data-reveal>
+        <SectionHeading
+          className="mb-0"
+          eyebrow="Careers at Inkarp"
+          title="Apply to Join Our Team"
+          description="Tell us a bit about yourself and attach your resume — our team reviews every application personally."
+        />
       </div>
 
       <form
@@ -294,18 +303,23 @@ export default function CareersForm() {
                 <p className="text-sm text-ink-soft">
                   <span className="font-semibold text-red">
                     Click to upload
-                  </span>{""}
+                  </span>{" "}
                   or drag and drop
                 </p>
                 <p className="text-xs text-ink-soft">
-                  PDF or Word, up to 5MB
+                  PDF or Word, up to 4MB
                 </p>
+                {/* No `required` here: the input is display:none, and browsers
+                    refuse to submit a form containing an invalid control they
+                    cannot focus — it blocked submit silently with
+                    "An invalid form control with name='' is not focusable".
+                    The resume is validated in handleSubmit instead. */}
                 <input
                   accept=".pdf,.doc,.docx"
                   className="hidden"
+                  name="resume"
                   onChange={handleFileChange}
                   ref={fileInputRef}
-                  required
                   type="file"
                 />
               </label>
@@ -335,7 +349,7 @@ export default function CareersForm() {
               className={`group relative overflow-hidden bg-red px-10 py-3 font-medium text-parchment transition ${
                 isSubmitting
                   ?"cursor-not-allowed opacity-70"
-                  :"hover:-translate-y-0.5 hover:hover:/40"
+                  :"hover:-translate-y-0.5 hover:bg-red-soft"
               }`}
               disabled={isSubmitting}
               type="submit"

@@ -8,6 +8,7 @@ import {
   FiSearch,
   FiTag,
 } from"react-icons/fi";
+import RecTag from"@/components/home/RecTag";
 
 const KEKA_IDENTIFIER ="357ac919-3c5b-4878-922a-e01bc5fd29cd";
 const KEKA_DOMAIN ="https://inkarpinstrument.keka.com/careers/";
@@ -110,14 +111,12 @@ export default function CareersKeka() {
 
   return (
     <section className="relative mx-auto py-10 md:px-10 lg:px-20">
-      <div className="flex flex-col items-center justify-center gap-3 text-center">
-        <span className="border border-red/30 bg-white px-4 py-1 text-xs uppercase text-ink-soft sm:text-sm">
-          Careers @ INKARP
-        </span>
-        <h2 className="text-xl leading-tight text-red sm:text-2xl">
+      <div className="mx-auto max-w-[1180px] px-4 sm:px-0">
+        <RecTag>Careers @ Inkarp</RecTag>
+        <h2 className="max-w-[24ch] text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
           Let&apos;s Work Together
         </h2>
-        <p className="max-w-2xl text-sm text-ink-soft sm:text-base">
+        <p className="mt-3 max-w-xl text-sm leading-6 text-ink-soft sm:text-base">
           Join a diverse, passionate team and do your best work - backed by a
           culture of growth.
         </p>
@@ -240,7 +239,7 @@ function JobCard({ job }) {
     <article className="border border-line-light">
       <div className="flex flex-col justify-between gap-5 p-4 sm:flex-row sm:items-center sm:p-6">
         <div className="flex min-w-0 flex-1 flex-col gap-3">
-          <h3 className="text-lg leading-snug text-ink-soft sm:text-xl">
+          <h3 className="text-lg font-semibold leading-snug text-ink sm:text-xl">
             {title ||"Untitled role"}
           </h3>
 

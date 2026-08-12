@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from"react";
 import CareersForm from"@/components/careers/CareersForm";
 import CareersKeka from"@/components/careers/CareersKeka";
+import RecTag from"@/components/home/RecTag";
 
 const team = [
   {
@@ -104,14 +105,12 @@ export default function CareersPage() {
               className="flex flex-col items-start justify-center gap-2 p-6 lg:col-span-4"
               data-reveal
             >
-              <h1 className="mt-1 text-4xl font-bold leading-tight text-red">
-                We are hiring
+              <RecTag>We Are Hiring</RecTag>
+              <h1 className="max-w-[18ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+                Do the most meaningful work of your career at{" "}
+                <em className="italic text-red">Inkarp.</em>
               </h1>
-              <h2 className="text-2xl leading-tight">
-                Do the most meaningful work of your career at{""}
-                <span className="text-red">INKARP</span>
-              </h2>
-              <p className="mt-2 text-lg text-ink-soft">
+              <p className="mt-4 max-w-[520px] text-base leading-relaxed text-ink-soft sm:text-lg">
                 We hire for potential, not just positions. If you love solving
                 real problems and learning fast, you&apos;ll feel at home.
               </p>
@@ -121,11 +120,7 @@ export default function CareersPage() {
               className="overflow-hidden bg-white p-5 lg:col-span-6"
               data-reveal
             >
-              <div className="flex justify-center">
-                <span className="border border-red/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-ink-soft md:text-sm">
-                  What Our Team Says
-                </span>
-              </div>
+              <RecTag>What Our Team Says</RecTag>
 
               <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:[&>div:nth-child(n+3)]:hidden">
                 {visibleTeam.map((member, offset) => (
@@ -138,13 +133,13 @@ export default function CareersPage() {
                       }deg)`,
                     }}
                   >
-                    <div className="flex items-center gap-4">
-                      <h4 className="text-red">
-                        {member.name}
-                      </h4>
-                    </div>
-                    <p className="mt-4 italic text-ink-soft">
+                    {/* A quote and its attribution — rendered as blockquote/cite
+                        rather than a heading, which would skip from h1 to h3. */}
+                    <blockquote className="italic leading-relaxed text-ink-soft">
                       &quot;{member.quote}&quot;
+                    </blockquote>
+                    <p className="mt-4 text-sm font-semibold not-italic text-ink">
+                      <cite className="not-italic">{member.name}</cite>
                     </p>
                   </div>
                 ))}
@@ -170,9 +165,9 @@ export default function CareersPage() {
       <section className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-4 bg-red p-6 text-parchment md:flex-row md:p-10">
           <div className="space-y-2 text-center md:text-left">
-            <h4 className="text-xl md:text-2xl">
+            <h2 className="text-[22px] font-semibold tracking-tight md:text-3xl">
               Don&apos;t see a perfect role?
-            </h4>
+            </h2>
             <p className="text-parchment/90">
               We always welcome exceptional talent. Share your profile with us.
             </p>

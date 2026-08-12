@@ -4,9 +4,7 @@ import { buildPageMetadata } from"@/data/pageSeo";
 
 export const metadata = buildPageMetadata("/careers");
 
-export default async function Careers() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
+export default function Careers() {
   return (
     <>
       <BreadcrumbJsonLd path="/careers" />

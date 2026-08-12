@@ -133,7 +133,7 @@ export default function ApplicationResourcesClient() {
         <div className="mx-auto max-w-[1180px]">
           <div className="mb-8 text-center">
             <p className="text-xs font-semibold uppercase tracking-widest text-red">
-              CatalystCue
+              CATALYSTCue
             </p>
             <h1 className="mt-2 text-3xl text-ink sm:text-4xl">
               Application Resources

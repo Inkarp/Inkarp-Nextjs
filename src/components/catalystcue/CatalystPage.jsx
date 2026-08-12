@@ -80,7 +80,7 @@ export default function CatalystPage() {
           <div className="min-w-0 border border-line-light bg-white px-4 py-8 sm:px-6 lg:px-8">
             <div className="mb-8 text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red">
-                CatalystCue Archive
+                CATALYSTCue Archive
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-ink sm:text-4xl">
                 Browse Previous Issues

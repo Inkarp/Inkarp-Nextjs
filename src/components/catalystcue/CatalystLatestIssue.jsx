@@ -93,7 +93,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
           </div>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-ink-soft">
-            {issue.metaDescription || "Explore the newest CatalystCue issue from Inkarp, featuring scientific workflows, laboratory insights, and application-focused innovations."}
+            {issue.metaDescription || "Explore the newest CATALYSTCue issue from Inkarp, featuring scientific workflows, laboratory insights, and application-focused innovations."}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">

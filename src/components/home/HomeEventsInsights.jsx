@@ -43,18 +43,22 @@ const statusLabels = {
   past: "Completed",
 };
 
+const FEATURED_EVENT_COUNT = 2;
+
+// Soonest upcoming/ongoing first, then the most recently completed, topped up to
+// FEATURED_EVENT_COUNT — so the row still fills when nothing is upcoming.
 function pickFeaturedEvents() {
   const withStatus = events.map((event) => ({ ...event, status: getEventStatus(event) }));
 
-  const nextUpcoming = withStatus
+  const upcoming = withStatus
     .filter((event) => event.status !== "past")
-    .sort((a, b) => new Date(a.date) - new Date(b.date))[0];
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  const lastCompleted = withStatus
+  const completed = withStatus
     .filter((event) => event.status === "past")
-    .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  return [nextUpcoming, lastCompleted].filter(Boolean);
+  return [...upcoming, ...completed].slice(0, FEATURED_EVENT_COUNT);
 }
 
 function EventCard({ event, highlight }) {
@@ -97,9 +101,6 @@ function BlogCard({ post }) {
         <SafeImage src={post.image} alt={post.title} sizes="120px" className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col gap-1.5 py-1">
-        <span className="inline-flex w-fit items-center rounded-full bg-red/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-red">
-          {post.category}
-        </span>
         <p className="text-xs text-ink-soft">{formatPostDate(post.date)}</p>
         <h4 className="line-clamp-1 text-sm font-semibold text-ink">{post.title}</h4>
         <p className="line-clamp-1 text-xs text-ink-soft">{post.excerpt}</p>
@@ -111,7 +112,7 @@ function BlogCard({ post }) {
 
 export default function HomeEventsInsights() {
   const featuredEvents = pickFeaturedEvents();
-  const recentPosts = getRecentPosts(undefined, 2);
+  const recentPosts = getRecentPosts(undefined, 3);
 
   return (
     <section className="bg-white py-[78px]" id="events-insights" data-reveal>

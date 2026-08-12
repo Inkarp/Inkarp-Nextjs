@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { campaigns } from "@/data/campaigns";
+import { getActiveCampaign, getEvergreenCampaign } from "@/data/campaigns";
 
 const AUTO_ROTATE_MS = 6000;
 
@@ -114,7 +114,9 @@ function WavingFlag() {
 
 function IndependenceFlagSlide({ campaign }) {
   return (
-    <div className="relative flex h-16 w-full items-center overflow-hidden bg-[#0d1117] sm:h-20 lg:h-24">
+    // Soft tricolour wash — saffron to white to green — instead of a flat dark
+    // panel, so the stripe reads as a celebration and keeps dark text legible.
+    <div className="relative flex h-16 w-full items-center overflow-hidden bg-gradient-to-r from-[#FFDCB0] via-[#FFFDF8] to-[#C7E7BE] sm:h-20 lg:h-24">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808]"
@@ -123,14 +125,19 @@ function IndependenceFlagSlide({ campaign }) {
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[#138808] via-white to-[#FF9933]"
       />
-      <FallingParticles className="text-amber-300" items={INDEPENDENCE_PARTICLES} />
+      {/* Faint Ashoka-blue glow behind the centre so the white band isn't flat. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-40 w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#000080]/5 blur-3xl"
+      />
+      <FallingParticles className="text-amber-500" items={INDEPENDENCE_PARTICLES} />
       <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-center gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <WavingFlag />
         <div className="min-w-0 text-center">
-          <p className="truncate text-sm font-semibold text-white sm:text-base lg:text-lg">
+          <p className="truncate text-sm font-semibold text-[#0f1b2d] sm:text-base lg:text-lg">
             {campaign.title}
           </p>
-          <p className="hidden truncate text-xs font-normal text-white/70 sm:block sm:text-sm">
+          <p className="hidden truncate text-xs font-normal text-[#0f1b2d]/70 sm:block sm:text-sm">
             {campaign.message}
           </p>
         </div>
@@ -179,6 +186,50 @@ function InkarpAnniversarySlide({ campaign }) {
   );
 }
 
+// Year-round fallback slide, shown whenever no dated campaign is running.
+function ExploreProductsSlide({ campaign }) {
+  return (
+    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-line-light bg-parchment-alt sm:h-20 lg:h-24">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-red via-red/30 to-teal"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,var(--ink)_1px,transparent_1px),linear-gradient(to_bottom,var(--ink)_1px,transparent_1px)] [background-size:34px_34px]"
+      />
+      <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+          <span
+            aria-hidden="true"
+            className="hidden size-10 shrink-0 items-center justify-center rounded-full bg-red/10 text-lg text-red sm:flex"
+          >
+            {campaign.icon}
+          </span>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-ink sm:text-base lg:text-lg">
+              {campaign.title}
+            </p>
+            <p className="hidden truncate text-xs font-normal text-ink-soft sm:block sm:text-sm">
+              {campaign.message}
+            </p>
+          </div>
+        </div>
+
+        {campaign.cta ? (
+          <Link
+            className="inline-flex shrink-0 items-center gap-2 border border-red bg-red px-4 py-2 text-xs font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red sm:px-6 sm:py-2.5 sm:text-sm"
+            href={campaign.cta.href}
+          >
+            {campaign.cta.label}
+            <span aria-hidden="true">→</span>
+          </Link>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
 function ImageSlide({ campaign }) {
   const content = (
     <div className="relative h-16 w-full overflow-hidden sm:h-20 lg:h-24">
@@ -203,74 +254,46 @@ function ImageSlide({ campaign }) {
   );
 }
 
+function CampaignSlide({ campaign }) {
+  if (campaign.variant === "flag-wave") {
+    return <IndependenceFlagSlide campaign={campaign} />;
+  }
+  if (campaign.variant === "inkarp-anniversary") {
+    return <InkarpAnniversarySlide campaign={campaign} />;
+  }
+  if (campaign.variant === "explore-products") {
+    return <ExploreProductsSlide campaign={campaign} />;
+  }
+  if (campaign.image) {
+    return <ImageSlide campaign={campaign} />;
+  }
+  return <TextSlide campaign={campaign} />;
+}
+
 export default function HomeCampaignSlider() {
-  // Not date-gated on purpose — every entry in campaigns.js shows here
-  // continuously. Add/remove entries in that file to control what's live.
-  const slides = campaigns;
-  const [activeIndex, setActiveIndex] = useState(0);
+  // One stripe at a time: the highest-priority campaign whose date range covers
+  // today, falling back to the evergreen promo. The evergreen entry is also what
+  // renders on the server — the page is statically prerendered, so evaluating
+  // dates during render would freeze the build date into the HTML and mismatch
+  // on hydration. The real date is applied after mount instead.
+  const [campaign, setCampaign] = useState(getEvergreenCampaign);
 
   useEffect(() => {
-    if (slides.length < 2) {
-      return undefined;
-    }
+    setCampaign(getActiveCampaign() ?? getEvergreenCampaign());
+  }, []);
 
-    const timer = window.setInterval(() => {
-      setActiveIndex((index) => (index + 1) % slides.length);
-    }, AUTO_ROTATE_MS);
-
-    return () => window.clearInterval(timer);
-  }, [slides.length]);
-
-  if (slides.length === 0) {
+  if (!campaign) {
     return null;
   }
 
   return (
     <section
-      aria-label="Current promotions"
+      aria-label="Current promotion"
       className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden"
     >
-      <div
-        className="flex transition-transform duration-500 ease-out"
-        style={{
-          width: `${slides.length * 100}%`,
-          transform: `translateX(-${(100 / slides.length) * activeIndex}%)`,
-        }}
-      >
-        {slides.map((campaign) => (
-          <div
-            className="shrink-0"
-            key={campaign.id}
-            style={{ width: `${100 / slides.length}%` }}
-          >
-            {campaign.variant === "flag-wave" ? (
-              <IndependenceFlagSlide campaign={campaign} />
-            ) : campaign.variant === "inkarp-anniversary" ? (
-              <InkarpAnniversarySlide campaign={campaign} />
-            ) : campaign.image ? (
-              <ImageSlide campaign={campaign} />
-            ) : (
-              <TextSlide campaign={campaign} />
-            )}
-          </div>
-        ))}
+      <div key={campaign.id} className="animate-[hvc-fade_500ms_ease]">
+        <CampaignSlide campaign={campaign} />
       </div>
-
-      {slides.length > 1 ? (
-        <div className="absolute bottom-1.5 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-ink/20 px-2 py-1 backdrop-blur-sm">
-          {slides.map((campaign, index) => (
-            <button
-              aria-label={`Show promotion ${index + 1}`}
-              className={`h-1.5 rounded-full transition-all ${
-                activeIndex === index ? "w-5 bg-white" : "w-1.5 bg-white/50 hover:bg-white/70"
-              }`}
-              key={campaign.id}
-              onClick={() => setActiveIndex(index)}
-              type="button"
-            />
-          ))}
-        </div>
-      ) : null}
     </section>
   );
 }

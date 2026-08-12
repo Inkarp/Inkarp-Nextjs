@@ -38,12 +38,12 @@ export const siteConfig = {
       href: "/service",
     },
     {
-      label: "CatalystCue",
+      label: "CATALYSTCue",
       href: "",
       logo: "/CatalystNew.svg",
       children: [
         {
-          label: "CatalystCue",
+          label: "CATALYSTCue",
           href: "/magazine",
         },
         {
@@ -90,10 +90,18 @@ export const siteConfig = {
   socials: {
     linkedin: "https://www.linkedin.com/company/inkarp",
     facebook: "https://www.facebook.com/inkarp",
-    instagram: "https://www.instagram.com/inkarp",
-    youtube: "https://www.youtube.com/@inkarp",
+    instagram: "https://www.instagram.com/inkarpinstruments/",
+    youtube: "https://www.youtube.com/@InkarpInstrument",
   },
 
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5601922545243!2d78.55536867462791!3d17.432881801493995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993f40000001%3A0x534548d1d6e2d4bd!2sInkarp%20Instruments%20Private%20Limited!5e0!3m2!1sen!2sin!4v1782193121677!5m2!1sen!2sin"
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5601922545243!2d78.55536867462791!3d17.432881801493995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb993f40000001%3A0x534548d1d6e2d4bd!2sInkarp%20Instruments%20Private%20Limited!5e0!3m2!1sen!2sin!4v1782193121677!5m2!1sen!2sin",
 
+  // Google Business Profile (opens the listing with reviews). Official share
+  // link for the Inkarp listing — used by the "See us on Google" button.
+  googleBusinessUrl: "https://share.google/Tz1IBsgK9XGpqlsGz",
+
+  // Direct Google Maps link to the same listing (cid 6000282144631608509),
+  // matching mapEmbedUrl above. Used by the footer map tile and address.
+  mapPlaceUrl:
+    "https://www.google.com/maps?ll=17.432877,78.557944&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=6000282144631608509",
 };

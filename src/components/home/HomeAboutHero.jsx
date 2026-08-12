@@ -10,13 +10,13 @@ const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
 
+/*
 function SlideWorkflow() {
   return (
     <div className="bg-white px-4 pb-15 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            {/* <RecTag>Since 1985 / 18 Offices / 49 Principals</RecTag> */}
             <h1 className="max-w-[16ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
               Your lab has a workflow. 
               <em className="italic text-red">We help build the right{" "} solution</em> around it.
@@ -64,6 +64,7 @@ function SlideWorkflow() {
     </div>
   );
 }
+*/
 
 function SlideAbout() {
   return (
@@ -79,11 +80,13 @@ function SlideAbout() {
               </div>
               <div>
                 <RecTag>About Inkarp</RecTag>
-                <h2 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+                {/* Page-level h1 — the only one on the homepage. Every other
+                    section heads with an h2. */}
+                <h1 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
                   Four decades of supporting
                   <br />
                   India&apos;s <em className="italic text-red">laboratories.</em>
-                </h2>
+                </h1>
               </div>
             </div>
 
@@ -131,68 +134,16 @@ function SlideAbout() {
   );
 }
 
-// Dummy copy — swap in real product details once the launch is finalised.
-function SlideFutureProducts() {
-  return (
-    <div className="bg-white px-4 pb-15 pt-5 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <RecTag variant="teal">Coming Soon</RecTag>
-            <h2 className="max-w-lg text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
-              New solutions are on their way to your lab.
-            </h2>
-
-            <p className="my-4 max-w-[520px] text-base leading-relaxed text-ink-soft sm:text-lg">
-              We&apos;re expanding our catalogue with new principal partnerships and in-house
-              solutions, built around the same workflows you already trust us with. Details to be
-              announced soon.
-            </p>
-
-            <div className="mb-11 flex flex-wrap gap-3.5">
-              <Link
-                href="/products"
-                className="border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
-              >
-                Browse Solutions
-              </Link>
-              <Link
-                href="/contact"
-                className="border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
-              >
-                Get Notified
-              </Link>
-            </div>
-          </div>
-
-          <div className="relative border border-line-light bg-white p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-teal before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-teal after:content-['']">
-            <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-parchment-alt">
-              <Image
-                src={BUILDING_IMAGE}
-                alt="Inkarp scientific solutions, coming soon"
-                loading="eager"
-                fill
-                sizes="(min-width: 1024px) 520px, 90vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-              <span>Fig. 02 — Expanding Our Range</span>
-              <span>Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const SLIDES = [SlideWorkflow, SlideAbout, SlideFutureProducts];
+const SLIDES = [SlideAbout];
 
 export default function HomeAboutHero() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    if (SLIDES.length < 2) {
+      return undefined;
+    }
+
     const timer = window.setInterval(() => {
       setActiveIndex((index) => (index + 1) % SLIDES.length);
     }, AUTO_ROTATE_MS);
@@ -208,21 +159,23 @@ export default function HomeAboutHero() {
         <ActiveSlide />
       </div>
 
-      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-        {SLIDES.map((_, index) => (
-          <button
-            key={index}
-            aria-label={`Show slide ${index + 1}`}
-            onClick={() => setActiveIndex(index)}
-            type="button"
-            className={`h-2.5 rounded-full transition-all ${
-              activeIndex === index
-                ? "w-8 bg-red"
-                : "w-2.5 bg-ink-soft/30 hover:bg-ink-soft/50"
-            }`}
-          />
-        ))}
-      </div>
+      {SLIDES.length > 1 ? (
+        <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+          {SLIDES.map((_, index) => (
+            <button
+              key={index}
+              aria-label={`Show slide ${index + 1}`}
+              onClick={() => setActiveIndex(index)}
+              type="button"
+              className={`h-2.5 rounded-full transition-all ${
+                activeIndex === index
+                  ? "w-8 bg-red"
+                  : "w-2.5 bg-ink-soft/30 hover:bg-ink-soft/50"
+              }`}
+            />
+          ))}
+        </div>
+      ) : null}
     </section>
   );
 }

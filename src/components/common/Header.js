@@ -203,7 +203,7 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className={`fixed inset-x-0 top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out will-change-transform ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
+        className={`font-maxot fixed inset-x-0 top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out will-change-transform ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
           }`}
       >
       {/* <AnnouncementBar collapsed={!(isAtTop || isMenuOpen || isSearchOpen)} /> */}
@@ -241,20 +241,30 @@ export default function Header() {
               ))}
             </nav>
             <div className="hidden h-5 w-px bg-parchment/20 sm:block" />
-            <div className="flex items-center gap-3">
+            {/* Same chip treatment as the footer socials: bordered square with
+                red corner ticks, filling red on hover. */}
+            <div className="flex items-center gap-2">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
 
                 return (
                   <Link
                     aria-label={item.label}
-                    className="text-parchment text-xl transition hover:text-red"
+                    className="group relative inline-flex size-8 items-center justify-center border border-parchment/15 bg-parchment/5 text-parchment transition hover:-translate-y-0.5 hover:border-red hover:bg-red hover:text-white"
                     href={item.href}
                     key={item.label}
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <Icon aria-hidden="true" className="text-xl" />
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute left-[-1px] top-[-1px] h-2 w-2 border-l border-t border-red"
+                    />
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute bottom-[-1px] right-[-1px] h-2 w-2 border-b border-r border-red"
+                    />
+                    <Icon aria-hidden="true" className="text-base" />
                   </Link>
                 );
               })}

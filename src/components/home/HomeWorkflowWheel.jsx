@@ -6,7 +6,7 @@ import RecTag from "./RecTag";
 import StepIcon from "./StepIcon";
 import WorkflowIcon from "./WorkflowIcon";
 import { workflowIndustries } from "@/data/homeShowcase";
-import { workflowWheelSteps } from "@/data/workflowWheel";
+import { workflowWheelLinks, workflowWheelSteps } from "@/data/workflowWheel";
 
 const STEP_COUNT = 8;
 const SPOKE_INNER_R = 104;
@@ -29,6 +29,13 @@ export default function HomeWorkflowWheel() {
 
   const active = industries[activeIndex];
   const steps = workflowWheelSteps[active.cat] ?? [];
+  const stepLinks = workflowWheelLinks[active.cat] ?? [];
+
+  // Unmapped steps fall back to the industry landing page.
+  function stepHref(index) {
+    const topic = stepLinks[index];
+    return topic ? `/workflows/${active.cat}/${topic}` : `/workflows/${active.cat}`;
+  }
 
   const spokeAngles = useMemo(
     () => Array.from({ length: STEP_COUNT }, (_, i) => i * (360 / STEP_COUNT)),
@@ -116,16 +123,20 @@ export default function HomeWorkflowWheel() {
                       className="absolute left-1/2 top-1/2 h-0 w-0"
                       style={{ transform: `rotate(${angle}deg) translate(0,-${NODE_RADIUS}px)` }}
                     >
-                      <div
-                        className="absolute w-[118px] text-center transition-transform duration-1000"
+                      <Link
+                        href={stepHref(i)}
+                        aria-label={`${steps[i]} — open ${active.industry} workflow`}
+                        className="group absolute block w-[118px] text-center transition-transform duration-1000 focus:outline-none"
                         style={{
                           transform: `translate(-50%,-50%) rotate(${-(rotation + angle)}deg)`,
                           transitionTimingFunction: EASE,
                         }}
                       >
                         <span
-                          className={`relative mx-auto flex h-[66px] w-[66px] items-center justify-center rounded-full border-2 border-white shadow-sm ${
-                            i % 2 === 0 ? "bg-white text-red" : "bg-[#F5F5F5] text-teal"
+                          className={`relative mx-auto flex h-[66px] w-[66px] items-center justify-center rounded-full border-2 border-white shadow-sm transition duration-200 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:shadow-lg group-focus-visible:scale-110 ${
+                            i % 2 === 0
+                              ? "bg-white text-red group-hover:border-red group-focus-visible:border-red"
+                              : "bg-[#F5F5F5] text-teal group-hover:border-teal group-focus-visible:border-teal"
                           }`}
                         >
                           <StepIcon index={i} className="h-6 w-6" />
@@ -134,13 +145,15 @@ export default function HomeWorkflowWheel() {
                           </span>
                         </span>
                         <span
-                          className={`mt-1.5 block text-[11.5px] font-medium leading-tight text-ink transition-opacity duration-300 ${
-                            visibleLabels.has(i) ? "opacity-100" : "opacity-0"
-                          }`}
+                          className={`mt-1.5 block text-[11.5px] font-medium leading-tight text-ink transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 ${
+                            i % 2 === 0
+                              ? "group-hover:text-red group-focus-visible:text-red"
+                              : "group-hover:text-teal group-focus-visible:text-teal"
+                          } ${visibleLabels.has(i) ? "opacity-100" : "opacity-0"}`}
                         >
                           {steps[i]}
                         </span>
-                      </div>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -176,9 +189,17 @@ export default function HomeWorkflowWheel() {
 
             <ol className="mt-6 w-full max-w-md divide-y divide-line-light border-t border-line-light lg:hidden">
               {steps.map((step, i) => (
-                <li key={step} className="flex items-baseline gap-3 py-2.5 text-sm text-ink">
-                  <span className="font-mono text-xs text-red">{String(i + 1).padStart(2, "0")}</span>
-                  {step}
+                <li key={step}>
+                  <Link
+                    href={stepHref(i)}
+                    className="group flex items-baseline gap-3 py-2.5 text-sm text-ink transition-colors hover:text-red"
+                  >
+                    <span className="font-mono text-xs text-red">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="flex-1">{step}</span>
+                    <span className="text-xs text-ink-soft transition-transform group-hover:translate-x-0.5 group-hover:text-red">
+                      →
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ol>

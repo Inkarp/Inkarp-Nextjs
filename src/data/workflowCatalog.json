@@ -3,16 +3,34 @@
     "seo": {
       "keywords": "lab workflow problems, lab workflow solutions, workflow product matching, Inkarp instruments"
     },
-    "workflowTags": ["workflow-mapping", "instrument-selection", "application-support"],
-    "problemSolutionTags": ["method-readiness", "sample-handling", "service-support"],
+    "workflowTags": [
+      "workflow-mapping",
+      "instrument-selection",
+      "application-support"
+    ],
+    "problemSolutionTags": [
+      "method-readiness",
+      "sample-handling",
+      "service-support"
+    ],
     "problemSolutions": [
       {
         "title": "Workflow is not yet mapped to a product set",
         "problem": "The lab knows the application, but the required instrument chain, support needs, and operating constraints are not fully mapped yet.",
         "solution": "Use structured product tags for industry, workflow, and problem-solution fit so the page can surface relevant products automatically as the catalog grows.",
-        "tags": ["workflow-mapping", "instrument-selection", "application-support"],
-        "productTags": ["workflow-mapping", "instrument-selection"],
-        "productQueryTags": ["laboratory workflow", "instrument selection"]
+        "tags": [
+          "workflow-mapping",
+          "instrument-selection",
+          "application-support"
+        ],
+        "productTags": [
+          "workflow-mapping",
+          "instrument-selection"
+        ],
+        "productQueryTags": [
+          "laboratory workflow",
+          "instrument selection"
+        ]
       }
     ]
   },
@@ -23,16 +41,36 @@
         "description": "Explore pharmaceutical workflow problems, practical lab solutions, and tagged products for QC, method validation, compliance, and repeatable sample preparation.",
         "keywords": "pharmaceutical workflow, pharma qc instruments, method validation products, inkarp pharma workflows"
       },
-      "workflowTags": ["pharma-qc", "regulated-lab", "method-validation"],
-      "problemSolutionTags": ["compliance-readiness", "repeatability", "traceability"],
+      "workflowTags": [
+        "pharma-qc",
+        "regulated-lab",
+        "method-validation"
+      ],
+      "problemSolutionTags": [
+        "compliance-readiness",
+        "repeatability",
+        "traceability"
+      ],
       "problemSolutions": [
         {
           "title": "Regulated labs need repeatable methods",
           "problem": "Pharmaceutical workflows need consistent sample preparation, method control, documentation, and service support before release-critical data can be trusted.",
           "solution": "Match products with pharma, QC, repeatability, and compliance tags so the workflow recommends instruments that support validated lab practice.",
-          "tags": ["pharma-qc", "method-validation", "repeatability"],
-          "productTags": ["pharma-qc", "method-validation", "repeatability"],
-          "productQueryTags": ["pharma qc", "method validation", "sample preparation"]
+          "tags": [
+            "pharma-qc",
+            "method-validation",
+            "repeatability"
+          ],
+          "productTags": [
+            "pharma-qc",
+            "method-validation",
+            "repeatability"
+          ],
+          "productQueryTags": [
+            "pharma qc",
+            "method validation",
+            "sample preparation"
+          ]
         }
       ]
     },
@@ -42,16 +80,36 @@
         "description": "Browse chemical and petrochemical workflow problems with tagged solutions and related products for distillation, solvent recovery, process control, and QC.",
         "keywords": "chemical workflow, petrochemical lab instruments, distillation products, solvent recovery instruments, inkarp chemical workflows"
       },
-      "workflowTags": ["process-development", "distillation", "solvent-recovery"],
-      "problemSolutionTags": ["process-control", "solvent-loss", "operator-safety"],
+      "workflowTags": [
+        "process-development",
+        "distillation",
+        "solvent-recovery"
+      ],
+      "problemSolutionTags": [
+        "process-control",
+        "solvent-loss",
+        "operator-safety"
+      ],
       "problemSolutions": [
         {
           "title": "Chemical workflows need controlled separation",
           "problem": "Process and QC teams need repeatable separation, solvent recovery, and in-process checks without losing yield or operator time.",
           "solution": "Prioritize products tagged for distillation, solvent recovery, process control, and vacuum-controlled workflows.",
-          "tags": ["distillation", "solvent-recovery", "process-control"],
-          "productTags": ["distillation", "solvent-recovery", "process-control"],
-          "productQueryTags": ["distillation", "solvent recovery", "process control"]
+          "tags": [
+            "distillation",
+            "solvent-recovery",
+            "process-control"
+          ],
+          "productTags": [
+            "distillation",
+            "solvent-recovery",
+            "process-control"
+          ],
+          "productQueryTags": [
+            "distillation",
+            "solvent recovery",
+            "process control"
+          ]
         }
       ]
     },
@@ -61,16 +119,270 @@
         "description": "Find R&D workflow problems, practical solutions, and tagged products for method development, screening, solvent recovery, and fast research iteration.",
         "keywords": "R&D lab workflow, research lab instruments, method development products, solvent recovery R&D, inkarp research workflows"
       },
-      "workflowTags": ["research-workflow", "method-development", "solvent-recovery"],
-      "problemSolutionTags": ["fast-iteration", "sample-throughput", "method-repeatability"],
+      "workflowTags": [
+        "research-workflow",
+        "method-development",
+        "solvent-recovery"
+      ],
+      "problemSolutionTags": [
+        "fast-iteration",
+        "sample-throughput",
+        "method-repeatability"
+      ],
       "problemSolutions": [
         {
           "title": "R&D teams need fast method iteration",
           "problem": "Research labs change samples, solvents, and methods frequently, so product selection must support flexibility without slowing experiments.",
           "solution": "Use workflow and problem-solution tags to recommend instruments that help screening, optimization, recovery, and documentation.",
-          "tags": ["research-workflow", "method-development", "fast-iteration"],
-          "productTags": ["research-workflow", "method-development", "fast-iteration"],
-          "productQueryTags": ["method development", "research workflow", "screening"]
+          "tags": [
+            "research-workflow",
+            "method-development",
+            "fast-iteration"
+          ],
+          "productTags": [
+            "research-workflow",
+            "method-development",
+            "fast-iteration"
+          ],
+          "productQueryTags": [
+            "method development",
+            "research workflow",
+            "screening"
+          ]
+        }
+      ]
+    },
+    "biotech": {
+      "seo": {
+        "title": "Biotech Workflow Problems, Solutions & Lab Products | Inkarp",
+        "description": "Explore biotechnology workflow problems with practical solutions and tagged products for cell culture, extraction, purification, and bioprocess monitoring.",
+        "keywords": "biotech workflow, bioprocess instruments, cell culture equipment, protein purification products, inkarp biotech"
+      },
+      "workflowTags": [
+        "bioprocess",
+        "cell-culture",
+        "sample-preparation"
+      ],
+      "problemSolutionTags": [
+        "sample-integrity",
+        "contamination-control",
+        "reproducibility"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Biological samples degrade between steps",
+          "problem": "Cells, lysates, and proteins lose activity when temperature, agitation, and hold times are not controlled across culture, extraction, and purification.",
+          "solution": "Match incubated shaking, refrigerated centrifugation, and controlled storage products so sample integrity is preserved from culture through analysis.",
+          "tags": [
+            "bioprocess",
+            "sample-integrity",
+            "cell-culture"
+          ],
+          "productTags": [
+            "bioprocess",
+            "sample-integrity",
+            "cell-culture"
+          ],
+          "productQueryTags": [
+            "incubated shaker",
+            "centrifuge",
+            "chamber"
+          ]
+        }
+      ]
+    },
+    "food": {
+      "seo": {
+        "title": "Food & Beverage Workflow Problems, Solutions & Products | Inkarp",
+        "description": "Browse food and beverage workflow problems with tagged solutions and products for moisture, composition, authenticity, and extraction testing.",
+        "keywords": "food testing workflow, food lab instruments, moisture analysis products, food authenticity testing, inkarp food"
+      },
+      "workflowTags": [
+        "food-qc",
+        "sample-preparation",
+        "composition-analysis"
+      ],
+      "problemSolutionTags": [
+        "batch-consistency",
+        "regulatory-limits",
+        "sample-homogeneity"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Every batch must land inside specification",
+          "problem": "Food and beverage QC runs high sample volumes where inconsistent preparation and drying make composition and moisture results hard to reproduce.",
+          "solution": "Use products tagged for homogenisation, controlled drying, and composition analysis so each batch is prepared and measured the same way.",
+          "tags": [
+            "food-qc",
+            "batch-consistency",
+            "sample-homogeneity"
+          ],
+          "productTags": [
+            "food-qc",
+            "batch-consistency",
+            "sample-homogeneity"
+          ],
+          "productQueryTags": [
+            "oven",
+            "homogenizer",
+            "balance"
+          ]
+        }
+      ]
+    },
+    "environmental": {
+      "seo": {
+        "title": "Environmental & Water Workflow Problems, Solutions & Products | Inkarp",
+        "description": "Find environmental and water testing workflow problems, practical solutions, and tagged products for trace contaminants, effluent, and compliance reporting.",
+        "keywords": "environmental lab workflow, water testing instruments, trace contaminant analysis, effluent testing products, inkarp environmental"
+      },
+      "workflowTags": [
+        "environmental-testing",
+        "water-quality",
+        "trace-analysis"
+      ],
+      "problemSolutionTags": [
+        "detection-limits",
+        "sample-preservation",
+        "compliance-readiness"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Field samples must survive the trip to the bench",
+          "problem": "Environmental results drift when samples are not preserved, filtered, and stored consistently between collection and analysis.",
+          "solution": "Match preservation, filtration, and controlled-storage products so reported values reflect the sample as collected, not as degraded.",
+          "tags": [
+            "environmental-testing",
+            "sample-preservation",
+            "water-quality"
+          ],
+          "productTags": [
+            "environmental-testing",
+            "sample-preservation",
+            "water-quality"
+          ],
+          "productQueryTags": [
+            "water purification",
+            "chamber",
+            "centrifuge"
+          ]
+        }
+      ]
+    },
+    "academic": {
+      "seo": {
+        "title": "Academic & Research Lab Workflow Problems, Solutions & Products | Inkarp",
+        "description": "Explore academic lab workflow problems with tagged solutions and products for teaching labs, shared facilities, thesis analytics, and grant-funded equipment.",
+        "keywords": "academic lab workflow, university lab instruments, teaching lab equipment, research facility products, inkarp academic"
+      },
+      "workflowTags": [
+        "teaching-lab",
+        "shared-facility",
+        "research-workflow"
+      ],
+      "problemSolutionTags": [
+        "ease-of-use",
+        "uptime",
+        "budget-fit"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Shared instruments face many users and few specialists",
+          "problem": "University labs rotate students and projects through the same instruments, so setups must be simple, robust, and quick to bring back into service.",
+          "solution": "Match products tagged for straightforward operation, durable construction, and supported maintenance so shared facilities stay available.",
+          "tags": [
+            "teaching-lab",
+            "shared-facility",
+            "ease-of-use"
+          ],
+          "productTags": [
+            "teaching-lab",
+            "shared-facility",
+            "ease-of-use"
+          ],
+          "productQueryTags": [
+            "shaker",
+            "oven",
+            "balance"
+          ]
+        }
+      ]
+    },
+    "materials": {
+      "seo": {
+        "title": "Materials Science Workflow Problems, Solutions & Products | Inkarp",
+        "description": "Browse materials science workflow problems with tagged solutions and products for surface characterisation, particle sizing, thermal, and mechanical testing.",
+        "keywords": "materials science workflow, surface characterization instruments, particle sizing products, thermal analysis materials, inkarp materials"
+      },
+      "workflowTags": [
+        "material-characterization",
+        "surface-analysis",
+        "thermal-analysis"
+      ],
+      "problemSolutionTags": [
+        "measurement-resolution",
+        "sample-preparation",
+        "data-comparability"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Characterisation is only as good as the sample prep",
+          "problem": "Surface and structural measurements scatter when mounting, cleaning, and conditioning are inconsistent between specimens.",
+          "solution": "Use products tagged for controlled preparation, drying, and high-resolution characterisation so results compare across specimens and sessions.",
+          "tags": [
+            "material-characterization",
+            "sample-preparation",
+            "surface-analysis"
+          ],
+          "productTags": [
+            "material-characterization",
+            "sample-preparation",
+            "surface-analysis"
+          ],
+          "productQueryTags": [
+            "AFM",
+            "vacuum oven",
+            "desiccator"
+          ]
+        }
+      ]
+    },
+    "clinical": {
+      "seo": {
+        "title": "Clinical & Diagnostics Workflow Problems, Solutions & Products | Inkarp",
+        "description": "Find clinical diagnostics workflow problems with tagged solutions and products for sample preparation, molecular testing, immunoassay, and cold-chain storage.",
+        "keywords": "clinical lab workflow, diagnostics instruments, molecular diagnostics products, immunoassay equipment, inkarp clinical"
+      },
+      "workflowTags": [
+        "clinical-diagnostics",
+        "sample-preparation",
+        "cold-chain"
+      ],
+      "problemSolutionTags": [
+        "turnaround-time",
+        "traceability",
+        "sample-integrity"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Turnaround time cannot cost sample integrity",
+          "problem": "Diagnostic labs work to tight reporting windows while samples still need correct temperature, separation, and documented handling.",
+          "solution": "Match products tagged for rapid separation, controlled storage, and traceable operation so speed does not compromise the result.",
+          "tags": [
+            "clinical-diagnostics",
+            "sample-integrity",
+            "turnaround-time"
+          ],
+          "productTags": [
+            "clinical-diagnostics",
+            "sample-integrity",
+            "turnaround-time"
+          ],
+          "productQueryTags": [
+            "centrifuge",
+            "chamber",
+            "pH meter"
+          ]
         }
       ]
     }
@@ -82,17 +394,47 @@
         "description": "Select distillation workflow problems to see practical solutions and related rotary evaporation, vacuum-control, and solvent-recovery products from Inkarp.",
         "keywords": "distillation workflow, solvent recovery products, rotary evaporator, vacuum distillation, heat sensitive samples, inkarp"
       },
-      "workflowTags": ["distillation", "vacuum-distillation", "rotary-evaporation", "solvent-recovery", "solvent-removal"],
-      "problemSolutionTags": ["bumping-control", "vacuum-control", "condensation-efficiency", "heat-sensitive-samples", "operator-safety"],
-      "productQueryTags": ["rotary evaporator", "distillation", "solvent recovery", "vacuum distillation"],
+      "workflowTags": [
+        "distillation",
+        "vacuum-distillation",
+        "rotary-evaporation",
+        "solvent-recovery",
+        "solvent-removal"
+      ],
+      "problemSolutionTags": [
+        "bumping-control",
+        "vacuum-control",
+        "condensation-efficiency",
+        "heat-sensitive-samples",
+        "operator-safety"
+      ],
+      "productQueryTags": [
+        "rotary evaporator",
+        "distillation",
+        "solvent recovery",
+        "vacuum distillation"
+      ],
       "problemSolutions": [
         {
           "title": "Solvent recovery can be slow or inconsistent",
           "problem": "Labs lose time when bath temperature, rotation, vacuum, and condenser performance are not matched to the solvent and sample volume.",
           "solution": "Use rotary evaporation and vacuum-control products tagged for solvent recovery, distillation, and condensation efficiency.",
-          "tags": ["solvent-recovery", "rotary-evaporation", "vacuum-control"],
-          "productTags": ["solvent-recovery", "rotary-evaporation", "vacuum-control", "condensation-efficiency"],
-          "productQueryTags": ["solvent recovery", "rotary evaporator", "vacuum control"],
+          "tags": [
+            "solvent-recovery",
+            "rotary-evaporation",
+            "vacuum-control"
+          ],
+          "productTags": [
+            "solvent-recovery",
+            "rotary-evaporation",
+            "vacuum-control",
+            "condensation-efficiency"
+          ],
+          "productQueryTags": [
+            "solvent recovery",
+            "rotary evaporator",
+            "vacuum control"
+          ],
           "productSlugs": [
             "hei-vap-ultimate-control-rotary-evaporator",
             "hei-vap-expert-control-rotary-evaporator",
@@ -104,9 +446,22 @@
           "title": "Heat-sensitive samples need gentler removal",
           "problem": "High bath temperatures can damage sensitive compounds when evaporation is not controlled under suitable vacuum conditions.",
           "solution": "Match products tagged for heat-sensitive samples, controlled vacuum, and method repeatability to protect sample quality.",
-          "tags": ["heat-sensitive-samples", "vacuum-distillation", "method-repeatability"],
-          "productTags": ["heat-sensitive-samples", "vacuum-distillation", "method-repeatability", "bumping-control"],
-          "productQueryTags": ["heat sensitive samples", "vacuum distillation", "rotary evaporator"],
+          "tags": [
+            "heat-sensitive-samples",
+            "vacuum-distillation",
+            "method-repeatability"
+          ],
+          "productTags": [
+            "heat-sensitive-samples",
+            "vacuum-distillation",
+            "method-repeatability",
+            "bumping-control"
+          ],
+          "productQueryTags": [
+            "heat sensitive samples",
+            "vacuum distillation",
+            "rotary evaporator"
+          ],
           "productSlugs": [
             "hei-vap-core-rotary-evaporator",
             "hei-vap-expert-rotary-evaporator",
@@ -122,17 +477,43 @@
         "description": "Explore R&D solvent recovery problems with tagged solutions and rotary evaporation products for repeatable sample concentration and faster method iteration.",
         "keywords": "R&D solvent recovery, rotary evaporation R&D, sample concentration products, method repeatability"
       },
-      "workflowTags": ["solvent-recovery", "rotary-evaporation", "solvent-removal", "sample-concentration"],
-      "problemSolutionTags": ["method-repeatability", "fast-iteration", "vacuum-control", "bumping-control"],
-      "productQueryTags": ["rotary evaporator", "solvent recovery", "sample concentration"],
+      "workflowTags": [
+        "solvent-recovery",
+        "rotary-evaporation",
+        "solvent-removal",
+        "sample-concentration"
+      ],
+      "problemSolutionTags": [
+        "method-repeatability",
+        "fast-iteration",
+        "vacuum-control",
+        "bumping-control"
+      ],
+      "productQueryTags": [
+        "rotary evaporator",
+        "solvent recovery",
+        "sample concentration"
+      ],
       "problemSolutions": [
         {
           "title": "R&D solvent recovery changes from method to method",
           "problem": "Changing solvents and batch sizes can make recovery unpredictable when teams do not have a repeatable evaporation setup.",
           "solution": "Use products tagged for rotary evaporation, solvent recovery, sample concentration, and method repeatability.",
-          "tags": ["rotary-evaporation", "solvent-recovery", "method-repeatability"],
-          "productTags": ["rotary-evaporation", "solvent-recovery", "method-repeatability"],
-          "productQueryTags": ["rotary evaporator", "sample concentration", "solvent recovery"]
+          "tags": [
+            "rotary-evaporation",
+            "solvent-recovery",
+            "method-repeatability"
+          ],
+          "productTags": [
+            "rotary-evaporation",
+            "solvent-recovery",
+            "method-repeatability"
+          ],
+          "productQueryTags": [
+            "rotary evaporator",
+            "sample concentration",
+            "solvent recovery"
+          ]
         }
       ]
     },
@@ -142,17 +523,42 @@
         "description": "See food and beverage solvent extraction problems, matching solutions, and tagged products for sample concentration and solvent removal.",
         "keywords": "food solvent extraction, sample concentration, solvent removal products, food testing instruments"
       },
-      "workflowTags": ["solvent-extraction", "solvent-removal", "rotary-evaporation", "sample-concentration"],
-      "problemSolutionTags": ["extract-concentration", "residue-control", "method-repeatability"],
-      "productQueryTags": ["rotary evaporator", "solvent extraction", "sample concentration"],
+      "workflowTags": [
+        "solvent-extraction",
+        "solvent-removal",
+        "rotary-evaporation",
+        "sample-concentration"
+      ],
+      "problemSolutionTags": [
+        "extract-concentration",
+        "residue-control",
+        "method-repeatability"
+      ],
+      "productQueryTags": [
+        "rotary evaporator",
+        "solvent extraction",
+        "sample concentration"
+      ],
       "problemSolutions": [
         {
           "title": "Extract concentration must protect sample quality",
           "problem": "Food and beverage extracts can be sensitive to heat and solvent residue, especially before downstream analysis.",
           "solution": "Recommend products tagged for solvent removal, sample concentration, heat-sensitive samples, and repeatable methods.",
-          "tags": ["solvent-removal", "sample-concentration", "heat-sensitive-samples"],
-          "productTags": ["solvent-removal", "sample-concentration", "heat-sensitive-samples"],
-          "productQueryTags": ["sample concentration", "solvent removal", "rotary evaporator"]
+          "tags": [
+            "solvent-removal",
+            "sample-concentration",
+            "heat-sensitive-samples"
+          ],
+          "productTags": [
+            "solvent-removal",
+            "sample-concentration",
+            "heat-sensitive-samples"
+          ],
+          "productQueryTags": [
+            "sample concentration",
+            "solvent removal",
+            "rotary evaporator"
+          ]
         }
       ]
     },
@@ -162,17 +568,1895 @@
         "description": "Explore residual solvent sample-preparation problems, compliance-focused solutions, and related products tagged for pharma QC and solvent control.",
         "keywords": "residual solvent workflow, pharma qc, solvent removal products, sample preparation instruments"
       },
-      "workflowTags": ["residual-solvents", "solvent-removal", "sample-preparation", "pharma-qc"],
-      "problemSolutionTags": ["compliance-readiness", "repeatability", "traceability", "solvent-control"],
-      "productQueryTags": ["residual solvents", "solvent removal", "rotary evaporator", "sample preparation"],
+      "workflowTags": [
+        "residual-solvents",
+        "solvent-removal",
+        "sample-preparation",
+        "pharma-qc"
+      ],
+      "problemSolutionTags": [
+        "compliance-readiness",
+        "repeatability",
+        "traceability",
+        "solvent-control"
+      ],
+      "productQueryTags": [
+        "residual solvents",
+        "solvent removal",
+        "rotary evaporator",
+        "sample preparation"
+      ],
       "problemSolutions": [
         {
           "title": "Residual solvent workflows need controlled preparation",
           "problem": "Sample preparation must avoid uncontrolled solvent loss, contamination, and inconsistent concentration before analytical testing.",
           "solution": "Surface products tagged for pharma QC, solvent removal, repeatability, and traceable preparation support.",
-          "tags": ["residual-solvents", "solvent-removal", "pharma-qc"],
-          "productTags": ["residual-solvents", "solvent-removal", "pharma-qc", "repeatability"],
-          "productQueryTags": ["residual solvents", "solvent removal", "pharma qc"]
+          "tags": [
+            "residual-solvents",
+            "solvent-removal",
+            "pharma-qc"
+          ],
+          "productTags": [
+            "residual-solvents",
+            "solvent-removal",
+            "pharma-qc",
+            "repeatability"
+          ],
+          "productQueryTags": [
+            "residual solvents",
+            "solvent removal",
+            "pharma qc"
+          ]
+        }
+      ]
+    },
+    "pharma/impurity-profiling": {
+      "workflowTags": [
+        "impurity-profiling",
+        "separation",
+        "detection"
+      ],
+      "problemSolutionTags": [
+        "impurity-profiling",
+        "separation",
+        "detection"
+      ],
+      "productQueryTags": [
+        "mass spectrometer",
+        "spectrometer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Impurities must be separated and identified reliably",
+          "problem": "Low-level impurities co-elute or fall below confident detection when separation and detection are not matched to the substance.",
+          "solution": "Match separation and mass-detection products tagged for impurity work so peaks resolve and identities are confirmed.",
+          "tags": [
+            "impurity-profiling",
+            "separation",
+            "detection"
+          ],
+          "productTags": [
+            "impurity-profiling",
+            "separation",
+            "detection"
+          ],
+          "productQueryTags": [
+            "mass spectrometer",
+            "spectrometer"
+          ]
+        }
+      ]
+    },
+    "pharma/dissolution": {
+      "workflowTags": [
+        "dissolution",
+        "temperature-control",
+        "repeatability"
+      ],
+      "problemSolutionTags": [
+        "dissolution",
+        "temperature-control",
+        "repeatability"
+      ],
+      "productQueryTags": [
+        "circulator",
+        "shaker"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Dissolution results vary between vessels and runs",
+          "problem": "Solid dosage release data scatters when temperature, agitation, and media preparation are not tightly controlled.",
+          "solution": "Use products tagged for controlled heating, agitation, and media handling so dissolution profiles repeat run to run.",
+          "tags": [
+            "dissolution",
+            "temperature-control",
+            "repeatability"
+          ],
+          "productTags": [
+            "dissolution",
+            "temperature-control",
+            "repeatability"
+          ],
+          "productQueryTags": [
+            "circulator",
+            "shaker"
+          ]
+        }
+      ]
+    },
+    "pharma/elemental-impurities": {
+      "workflowTags": [
+        "elemental-impurities",
+        "trace-analysis",
+        "contamination-control"
+      ],
+      "problemSolutionTags": [
+        "elemental-impurities",
+        "trace-analysis",
+        "contamination-control"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "storage"
+      ],
+      "problemSolutions": [
+        {
+          "title": "ICH Q3D limits demand trace-level confidence",
+          "problem": "Elemental impurity limits sit far below routine detection, so digestion and contamination control decide whether the data holds.",
+          "solution": "Match digestion, clean-storage, and trace-detection products so results stay defensible against regulatory limits.",
+          "tags": [
+            "elemental-impurities",
+            "trace-analysis",
+            "contamination-control"
+          ],
+          "productTags": [
+            "elemental-impurities",
+            "trace-analysis",
+            "contamination-control"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "storage"
+          ]
+        }
+      ]
+    },
+    "pharma/karl-fischer-moisture": {
+      "workflowTags": [
+        "moisture-analysis",
+        "sample-handling",
+        "weighing"
+      ],
+      "problemSolutionTags": [
+        "moisture-analysis",
+        "sample-handling",
+        "weighing"
+      ],
+      "productQueryTags": [
+        "desiccator",
+        "balance"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Water content shifts while the sample waits",
+          "problem": "Hygroscopic samples pick up ambient moisture between weighing and titration, biasing the reported water content.",
+          "solution": "Use controlled drying, desiccation, and precision weighing products so the sample reaching the titrator is the sample you prepared.",
+          "tags": [
+            "moisture-analysis",
+            "sample-handling",
+            "weighing"
+          ],
+          "productTags": [
+            "moisture-analysis",
+            "sample-handling",
+            "weighing"
+          ],
+          "productQueryTags": [
+            "desiccator",
+            "balance"
+          ]
+        }
+      ]
+    },
+    "pharma/balance-qualification": {
+      "workflowTags": [
+        "weighing",
+        "qualification",
+        "repeatability"
+      ],
+      "problemSolutionTags": [
+        "weighing",
+        "qualification",
+        "repeatability"
+      ],
+      "productQueryTags": [
+        "balance",
+        "desiccator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Weighing is the first place error enters",
+          "problem": "Every downstream calculation inherits the balance reading, yet drafts, vibration, and static quietly corrupt small masses.",
+          "solution": "Match analytical balances and controlled-environment products so weighing is qualified, stable, and documented.",
+          "tags": [
+            "weighing",
+            "qualification",
+            "repeatability"
+          ],
+          "productTags": [
+            "weighing",
+            "qualification",
+            "repeatability"
+          ],
+          "productQueryTags": [
+            "balance",
+            "desiccator"
+          ]
+        }
+      ]
+    },
+    "biotech/cell-line-development": {
+      "workflowTags": [
+        "cell-culture",
+        "screening",
+        "reproducibility"
+      ],
+      "problemSolutionTags": [
+        "cell-culture",
+        "screening",
+        "reproducibility"
+      ],
+      "productQueryTags": [
+        "incubated shaker",
+        "chamber"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Clone screening needs steady culture conditions",
+          "problem": "Cell line selection is only meaningful when every candidate sees the same temperature, shaking, and gas conditions.",
+          "solution": "Use incubated shaking and controlled-chamber products so screening compares clones, not conditions.",
+          "tags": [
+            "cell-culture",
+            "screening",
+            "reproducibility"
+          ],
+          "productTags": [
+            "cell-culture",
+            "screening",
+            "reproducibility"
+          ],
+          "productQueryTags": [
+            "incubated shaker",
+            "chamber"
+          ]
+        }
+      ]
+    },
+    "biotech/bioreactor-monitoring": {
+      "workflowTags": [
+        "bioprocess",
+        "process-monitoring",
+        "traceability"
+      ],
+      "problemSolutionTags": [
+        "bioprocess",
+        "process-monitoring",
+        "traceability"
+      ],
+      "productQueryTags": [
+        "pH meter",
+        "circulator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Process drift is invisible without steady measurement",
+          "problem": "pH, conductivity, and temperature excursions during a run are easy to miss and hard to reconstruct afterwards.",
+          "solution": "Match calibrated measurement and controlled-temperature products so process parameters are tracked and documented throughout.",
+          "tags": [
+            "bioprocess",
+            "process-monitoring",
+            "traceability"
+          ],
+          "productTags": [
+            "bioprocess",
+            "process-monitoring",
+            "traceability"
+          ],
+          "productQueryTags": [
+            "pH meter",
+            "circulator"
+          ]
+        }
+      ]
+    },
+    "biotech/protein-purification": {
+      "workflowTags": [
+        "protein-purification",
+        "sample-integrity",
+        "separation"
+      ],
+      "problemSolutionTags": [
+        "protein-purification",
+        "sample-integrity",
+        "separation"
+      ],
+      "productQueryTags": [
+        "centrifuge",
+        "sonicator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Yield is lost at every transfer",
+          "problem": "Proteins denature or aggregate when temperature and mechanical stress are not controlled through lysis, clarification, and polishing.",
+          "solution": "Use refrigerated separation and gentle processing products so purification protects activity as well as purity.",
+          "tags": [
+            "protein-purification",
+            "sample-integrity",
+            "separation"
+          ],
+          "productTags": [
+            "protein-purification",
+            "sample-integrity",
+            "separation"
+          ],
+          "productQueryTags": [
+            "centrifuge",
+            "sonicator"
+          ]
+        }
+      ]
+    },
+    "biotech/endotoxin-testing": {
+      "workflowTags": [
+        "contamination-control",
+        "sample-preparation",
+        "water-quality"
+      ],
+      "problemSolutionTags": [
+        "contamination-control",
+        "sample-preparation",
+        "water-quality"
+      ],
+      "productQueryTags": [
+        "water purification",
+        "oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Contamination control decides the result",
+          "problem": "Endotoxin and bioburden testing fails on preparation, not detection — glassware, water, and storage carry the risk.",
+          "solution": "Match depyrogenation, purified water, and clean-storage products so the background does not become the finding.",
+          "tags": [
+            "contamination-control",
+            "sample-preparation",
+            "water-quality"
+          ],
+          "productTags": [
+            "contamination-control",
+            "sample-preparation",
+            "water-quality"
+          ],
+          "productQueryTags": [
+            "water purification",
+            "oven"
+          ]
+        }
+      ]
+    },
+    "biotech/sample-homogenization": {
+      "workflowTags": [
+        "homogenization",
+        "cell-disruption",
+        "sample-preparation"
+      ],
+      "problemSolutionTags": [
+        "homogenization",
+        "cell-disruption",
+        "sample-preparation"
+      ],
+      "productQueryTags": [
+        "sonicator",
+        "homogenizer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Incomplete lysis skews everything downstream",
+          "problem": "Partial disruption leaves target molecules locked inside cells, under-reporting concentration and activity.",
+          "solution": "Use ultrasonic processing and controlled-temperature products so disruption is complete without overheating the sample.",
+          "tags": [
+            "homogenization",
+            "cell-disruption",
+            "sample-preparation"
+          ],
+          "productTags": [
+            "homogenization",
+            "cell-disruption",
+            "sample-preparation"
+          ],
+          "productQueryTags": [
+            "sonicator",
+            "homogenizer"
+          ]
+        }
+      ]
+    },
+    "biotech/cold-chain-storage": {
+      "workflowTags": [
+        "cold-chain",
+        "sample-integrity",
+        "monitoring"
+      ],
+      "problemSolutionTags": [
+        "cold-chain",
+        "sample-integrity",
+        "monitoring"
+      ],
+      "productQueryTags": [
+        "chamber",
+        "circulator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "The chain is only as good as its weakest hour",
+          "problem": "Samples lose viability during unlogged excursions, and without records the loss is discovered only at analysis.",
+          "solution": "Match controlled low-temperature storage and monitored chamber products so the cold chain is both held and evidenced.",
+          "tags": [
+            "cold-chain",
+            "sample-integrity",
+            "monitoring"
+          ],
+          "productTags": [
+            "cold-chain",
+            "sample-integrity",
+            "monitoring"
+          ],
+          "productQueryTags": [
+            "chamber",
+            "circulator"
+          ]
+        }
+      ]
+    },
+    "rnd/reaction-screening": {
+      "workflowTags": [
+        "reaction-screening",
+        "parallel-synthesis",
+        "fast-iteration"
+      ],
+      "problemSolutionTags": [
+        "reaction-screening",
+        "parallel-synthesis",
+        "fast-iteration"
+      ],
+      "productQueryTags": [
+        "reaction station",
+        "circulator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Screening throughput is limited by the bench",
+          "problem": "Testing many conditions in series slows discovery, while inconsistent control makes comparisons between runs unreliable.",
+          "solution": "Use parallel reaction and controlled-temperature products so more conditions run under identical, comparable control.",
+          "tags": [
+            "reaction-screening",
+            "parallel-synthesis",
+            "fast-iteration"
+          ],
+          "productTags": [
+            "reaction-screening",
+            "parallel-synthesis",
+            "fast-iteration"
+          ],
+          "productQueryTags": [
+            "reaction station",
+            "circulator"
+          ]
+        }
+      ]
+    },
+    "rnd/crystallization-studies": {
+      "workflowTags": [
+        "crystallization",
+        "temperature-control",
+        "method-repeatability"
+      ],
+      "problemSolutionTags": [
+        "crystallization",
+        "temperature-control",
+        "method-repeatability"
+      ],
+      "productQueryTags": [
+        "circulator",
+        "reaction station"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Polymorph outcome hinges on the cooling profile",
+          "problem": "Crystal form changes with cooling rate, agitation, and solvent conditions, so uncontrolled profiles give irreproducible solids.",
+          "solution": "Match programmable temperature and controlled-agitation products so crystallisation follows the intended profile every time.",
+          "tags": [
+            "crystallization",
+            "temperature-control",
+            "method-repeatability"
+          ],
+          "productTags": [
+            "crystallization",
+            "temperature-control",
+            "method-repeatability"
+          ],
+          "productQueryTags": [
+            "circulator",
+            "reaction station"
+          ]
+        }
+      ]
+    },
+    "rnd/material-characterization": {
+      "workflowTags": [
+        "identification",
+        "spectroscopy",
+        "fast-iteration"
+      ],
+      "problemSolutionTags": [
+        "identification",
+        "spectroscopy",
+        "fast-iteration"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "desiccator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Identity confirmation should not need a specialist queue",
+          "problem": "Sending every sample to a central facility for FT-IR identity checks stalls iteration at the bench.",
+          "solution": "Use benchtop spectroscopy and preparation products so identity is confirmed in the lab that made the sample.",
+          "tags": [
+            "identification",
+            "spectroscopy",
+            "fast-iteration"
+          ],
+          "productTags": [
+            "identification",
+            "spectroscopy",
+            "fast-iteration"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "desiccator"
+          ]
+        }
+      ]
+    },
+    "rnd/thermal-analysis": {
+      "workflowTags": [
+        "thermal-analysis",
+        "temperature-control",
+        "material-characterization"
+      ],
+      "problemSolutionTags": [
+        "thermal-analysis",
+        "temperature-control",
+        "material-characterization"
+      ],
+      "productQueryTags": [
+        "furnace",
+        "oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Thermal events are missed at the wrong ramp rate",
+          "problem": "Transitions and decomposition points shift with heating rate and atmosphere, so uncontrolled runs mislabel materials.",
+          "solution": "Match controlled-heating and furnace products so thermal behaviour is measured under defined, repeatable conditions.",
+          "tags": [
+            "thermal-analysis",
+            "temperature-control",
+            "material-characterization"
+          ],
+          "productTags": [
+            "thermal-analysis",
+            "temperature-control",
+            "material-characterization"
+          ],
+          "productQueryTags": [
+            "furnace",
+            "oven"
+          ]
+        }
+      ]
+    },
+    "rnd/data-documentation": {
+      "workflowTags": [
+        "documentation",
+        "traceability",
+        "research-workflow"
+      ],
+      "problemSolutionTags": [
+        "documentation",
+        "traceability",
+        "research-workflow"
+      ],
+      "productQueryTags": [
+        "balance",
+        "pH meter"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Results are only as useful as their record",
+          "problem": "Bench data spread across notebooks and instrument exports is hard to reconstruct months later for reports or patents.",
+          "solution": "Use instruments with structured export and traceable operation so research data stays attributable and reportable.",
+          "tags": [
+            "documentation",
+            "traceability",
+            "research-workflow"
+          ],
+          "productTags": [
+            "documentation",
+            "traceability",
+            "research-workflow"
+          ],
+          "productQueryTags": [
+            "balance",
+            "pH meter"
+          ]
+        }
+      ]
+    },
+    "food/material-identification": {
+      "workflowTags": [
+        "material-identification",
+        "incoming-qc",
+        "food-qc"
+      ],
+      "problemSolutionTags": [
+        "material-identification",
+        "incoming-qc",
+        "food-qc"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "balance"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Incoming material must be verified before it is used",
+          "problem": "Accepting raw material on paperwork alone risks pulling an out-of-spec ingredient into a whole production batch.",
+          "solution": "Match rapid identification and preparation products so incoming goods are confirmed before they enter the process.",
+          "tags": [
+            "material-identification",
+            "incoming-qc",
+            "food-qc"
+          ],
+          "productTags": [
+            "material-identification",
+            "incoming-qc",
+            "food-qc"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "balance"
+          ]
+        }
+      ]
+    },
+    "food/composition-analysis": {
+      "workflowTags": [
+        "composition-analysis",
+        "food-qc",
+        "repeatability"
+      ],
+      "problemSolutionTags": [
+        "composition-analysis",
+        "food-qc",
+        "repeatability"
+      ],
+      "productQueryTags": [
+        "homogenizer",
+        "oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Nutritional claims must hold up to testing",
+          "problem": "Declared composition has to be defensible, but inconsistent extraction and preparation shift the numbers between analysts.",
+          "solution": "Use standardised preparation, extraction, and measurement products so composition results reproduce across operators.",
+          "tags": [
+            "composition-analysis",
+            "food-qc",
+            "repeatability"
+          ],
+          "productTags": [
+            "composition-analysis",
+            "food-qc",
+            "repeatability"
+          ],
+          "productQueryTags": [
+            "homogenizer",
+            "oven"
+          ]
+        }
+      ]
+    },
+    "food/moisture-content": {
+      "workflowTags": [
+        "moisture-analysis",
+        "drying",
+        "food-qc"
+      ],
+      "problemSolutionTags": [
+        "moisture-analysis",
+        "drying",
+        "food-qc"
+      ],
+      "productQueryTags": [
+        "oven",
+        "balance"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Moisture drives shelf life and yield",
+          "problem": "Loss-on-drying results vary when oven temperature, airflow, and sample geometry are not controlled.",
+          "solution": "Match controlled convection drying and precision weighing products so moisture figures are consistent and comparable.",
+          "tags": [
+            "moisture-analysis",
+            "drying",
+            "food-qc"
+          ],
+          "productTags": [
+            "moisture-analysis",
+            "drying",
+            "food-qc"
+          ],
+          "productQueryTags": [
+            "oven",
+            "balance"
+          ]
+        }
+      ]
+    },
+    "food/authenticity-testing": {
+      "workflowTags": [
+        "authenticity-testing",
+        "adulteration",
+        "screening"
+      ],
+      "problemSolutionTags": [
+        "authenticity-testing",
+        "adulteration",
+        "screening"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "homogenizer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Adulteration hides inside a normal-looking specification",
+          "problem": "Bulk parameters can look compliant while the product is diluted or substituted, so screening needs a finer signal.",
+          "solution": "Use spectroscopic screening and preparation products tagged for authenticity so substitution is caught before dispatch.",
+          "tags": [
+            "authenticity-testing",
+            "adulteration",
+            "screening"
+          ],
+          "productTags": [
+            "authenticity-testing",
+            "adulteration",
+            "screening"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "homogenizer"
+          ]
+        }
+      ]
+    },
+    "food/formulation-weighing": {
+      "workflowTags": [
+        "weighing",
+        "formulation",
+        "batch-consistency"
+      ],
+      "problemSolutionTags": [
+        "weighing",
+        "formulation",
+        "batch-consistency"
+      ],
+      "productQueryTags": [
+        "balance",
+        "storage"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Small weighing errors scale with the batch",
+          "problem": "Minor ingredient deviations at formulation stage become large, costly deviations at production volume.",
+          "solution": "Match analytical weighing and controlled-environment products so formulation accuracy holds from pilot to plant.",
+          "tags": [
+            "weighing",
+            "formulation",
+            "batch-consistency"
+          ],
+          "productTags": [
+            "weighing",
+            "formulation",
+            "batch-consistency"
+          ],
+          "productQueryTags": [
+            "balance",
+            "storage"
+          ]
+        }
+      ]
+    },
+    "environmental/water-quality": {
+      "workflowTags": [
+        "water-quality",
+        "compliance-readiness",
+        "environmental-testing"
+      ],
+      "problemSolutionTags": [
+        "water-quality",
+        "compliance-readiness",
+        "environmental-testing"
+      ],
+      "productQueryTags": [
+        "pH meter",
+        "water purification"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Effluent data must stand up to a regulator",
+          "problem": "Water quality reporting is challenged on method and handling, not just on the final number.",
+          "solution": "Use calibrated measurement, purified water, and documented-handling products so results are defensible on review.",
+          "tags": [
+            "water-quality",
+            "compliance-readiness",
+            "environmental-testing"
+          ],
+          "productTags": [
+            "water-quality",
+            "compliance-readiness",
+            "environmental-testing"
+          ],
+          "productQueryTags": [
+            "pH meter",
+            "water purification"
+          ]
+        }
+      ]
+    },
+    "environmental/microplastics": {
+      "workflowTags": [
+        "microplastics",
+        "contamination-control",
+        "filtration"
+      ],
+      "problemSolutionTags": [
+        "microplastics",
+        "contamination-control",
+        "filtration"
+      ],
+      "productQueryTags": [
+        "oven",
+        "desiccator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Airborne and glassware contamination mimics the analyte",
+          "problem": "Microplastic counts are easily inflated by particles introduced during filtration and handling.",
+          "solution": "Match clean filtration, controlled drying, and enclosed storage products so counts reflect the sample, not the lab.",
+          "tags": [
+            "microplastics",
+            "contamination-control",
+            "filtration"
+          ],
+          "productTags": [
+            "microplastics",
+            "contamination-control",
+            "filtration"
+          ],
+          "productQueryTags": [
+            "oven",
+            "desiccator"
+          ]
+        }
+      ]
+    },
+    "environmental/trace-metals": {
+      "workflowTags": [
+        "trace-metals",
+        "trace-analysis",
+        "contamination-control"
+      ],
+      "problemSolutionTags": [
+        "trace-metals",
+        "trace-analysis",
+        "contamination-control"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "furnace"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Trace metals live at the edge of detection",
+          "problem": "Digestion carryover and vessel contamination dominate results at the concentrations regulations care about.",
+          "solution": "Use controlled digestion, clean-storage, and trace-capable detection products so low-level metals stay measurable.",
+          "tags": [
+            "trace-metals",
+            "trace-analysis",
+            "contamination-control"
+          ],
+          "productTags": [
+            "trace-metals",
+            "trace-analysis",
+            "contamination-control"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "furnace"
+          ]
+        }
+      ]
+    },
+    "environmental/air-quality": {
+      "workflowTags": [
+        "air-quality",
+        "sample-preservation",
+        "environmental-testing"
+      ],
+      "problemSolutionTags": [
+        "air-quality",
+        "sample-preservation",
+        "environmental-testing"
+      ],
+      "productQueryTags": [
+        "oven",
+        "chamber"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Captured air samples change before analysis",
+          "problem": "Adsorbed analytes are lost or altered when sampling media are not conditioned and stored under defined conditions.",
+          "solution": "Match conditioning, controlled-storage, and desorption products so what is captured is what is measured.",
+          "tags": [
+            "air-quality",
+            "sample-preservation",
+            "environmental-testing"
+          ],
+          "productTags": [
+            "air-quality",
+            "sample-preservation",
+            "environmental-testing"
+          ],
+          "productQueryTags": [
+            "oven",
+            "chamber"
+          ]
+        }
+      ]
+    },
+    "environmental/soil-contamination": {
+      "workflowTags": [
+        "soil-contamination",
+        "sample-homogeneity",
+        "sample-preparation"
+      ],
+      "problemSolutionTags": [
+        "soil-contamination",
+        "sample-homogeneity",
+        "sample-preparation"
+      ],
+      "productQueryTags": [
+        "oven",
+        "homogenizer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Heterogeneous solids need real homogenisation",
+          "problem": "Soil and sediment vary sharply within a single sample, so a poorly prepared subsample misrepresents the site.",
+          "solution": "Use grinding, drying, and homogenisation products so the analysed portion represents the material collected.",
+          "tags": [
+            "soil-contamination",
+            "sample-homogeneity",
+            "sample-preparation"
+          ],
+          "productTags": [
+            "soil-contamination",
+            "sample-homogeneity",
+            "sample-preparation"
+          ],
+          "productQueryTags": [
+            "oven",
+            "homogenizer"
+          ]
+        }
+      ]
+    },
+    "environmental/sample-preservation": {
+      "workflowTags": [
+        "sample-preservation",
+        "cold-chain",
+        "compliance-readiness"
+      ],
+      "problemSolutionTags": [
+        "sample-preservation",
+        "cold-chain",
+        "compliance-readiness"
+      ],
+      "productQueryTags": [
+        "chamber",
+        "circulator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Holding time is part of the method",
+          "problem": "Samples exceeding temperature or holding-time limits invalidate results regardless of instrument quality.",
+          "solution": "Match monitored cold storage and preservation products so holding conditions are maintained and recorded.",
+          "tags": [
+            "sample-preservation",
+            "cold-chain",
+            "compliance-readiness"
+          ],
+          "productTags": [
+            "sample-preservation",
+            "cold-chain",
+            "compliance-readiness"
+          ],
+          "productQueryTags": [
+            "chamber",
+            "circulator"
+          ]
+        }
+      ]
+    },
+    "chemical/purity-analysis": {
+      "workflowTags": [
+        "purity-analysis",
+        "composition-analysis",
+        "separation"
+      ],
+      "problemSolutionTags": [
+        "purity-analysis",
+        "composition-analysis",
+        "separation"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "mass spectrometer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Purity claims need more than a single number",
+          "problem": "Composition and purity shift between lots, and a single summary figure hides the impurity profile that matters.",
+          "solution": "Use separation, detection, and preparation products so purity is characterised rather than merely reported.",
+          "tags": [
+            "purity-analysis",
+            "composition-analysis",
+            "separation"
+          ],
+          "productTags": [
+            "purity-analysis",
+            "composition-analysis",
+            "separation"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "mass spectrometer"
+          ]
+        }
+      ]
+    },
+    "chemical/process-control": {
+      "workflowTags": [
+        "process-control",
+        "in-process-testing",
+        "turnaround-time"
+      ],
+      "problemSolutionTags": [
+        "process-control",
+        "in-process-testing",
+        "turnaround-time"
+      ],
+      "productQueryTags": [
+        "pH meter",
+        "viscometer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "In-process checks must keep pace with production",
+          "problem": "Off-line testing returns answers after the batch has moved on, so deviations are caught too late to correct.",
+          "solution": "Match rapid in-process measurement products so process decisions are made while the batch can still be adjusted.",
+          "tags": [
+            "process-control",
+            "in-process-testing",
+            "turnaround-time"
+          ],
+          "productTags": [
+            "process-control",
+            "in-process-testing",
+            "turnaround-time"
+          ],
+          "productQueryTags": [
+            "pH meter",
+            "viscometer"
+          ]
+        }
+      ]
+    },
+    "chemical/viscosity": {
+      "workflowTags": [
+        "viscosity",
+        "rheology",
+        "temperature-control"
+      ],
+      "problemSolutionTags": [
+        "viscosity",
+        "rheology",
+        "temperature-control"
+      ],
+      "productQueryTags": [
+        "viscometer",
+        "circulator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Viscosity is meaningless without stated conditions",
+          "problem": "Readings change with temperature, shear rate, and geometry, so uncontrolled measurement cannot be compared or specified.",
+          "solution": "Use rotational viscometry and controlled-temperature products so viscosity is measured under defined conditions.",
+          "tags": [
+            "viscosity",
+            "rheology",
+            "temperature-control"
+          ],
+          "productTags": [
+            "viscosity",
+            "rheology",
+            "temperature-control"
+          ],
+          "productQueryTags": [
+            "viscometer",
+            "circulator"
+          ]
+        }
+      ]
+    },
+    "chemical/corrosion-testing": {
+      "workflowTags": [
+        "corrosion-testing",
+        "environmental-testing",
+        "material-characterization"
+      ],
+      "problemSolutionTags": [
+        "corrosion-testing",
+        "environmental-testing",
+        "material-characterization"
+      ],
+      "productQueryTags": [
+        "chamber",
+        "furnace"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Material compatibility fails in service, not on paper",
+          "problem": "Corrosion and compatibility problems appear only after sustained exposure to real temperature and humidity conditions.",
+          "solution": "Match environmental and humidity chamber products so exposure testing reproduces service conditions on a schedule.",
+          "tags": [
+            "corrosion-testing",
+            "environmental-testing",
+            "material-characterization"
+          ],
+          "productTags": [
+            "corrosion-testing",
+            "environmental-testing",
+            "material-characterization"
+          ],
+          "productQueryTags": [
+            "chamber",
+            "furnace"
+          ]
+        }
+      ]
+    },
+    "chemical/batch-documentation": {
+      "workflowTags": [
+        "batch-documentation",
+        "traceability",
+        "compliance-readiness"
+      ],
+      "problemSolutionTags": [
+        "batch-documentation",
+        "traceability",
+        "compliance-readiness"
+      ],
+      "productQueryTags": [
+        "balance",
+        "pH meter"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Release depends on the record, not just the result",
+          "problem": "Batch release stalls when instrument data cannot be tied cleanly to the batch, operator, and method.",
+          "solution": "Use instruments with traceable output and controlled operation so batch records assemble without reconstruction.",
+          "tags": [
+            "batch-documentation",
+            "traceability",
+            "compliance-readiness"
+          ],
+          "productTags": [
+            "batch-documentation",
+            "traceability",
+            "compliance-readiness"
+          ],
+          "productQueryTags": [
+            "balance",
+            "pH meter"
+          ]
+        }
+      ]
+    },
+    "academic/teaching-labs": {
+      "workflowTags": [
+        "teaching-lab",
+        "ease-of-use",
+        "uptime"
+      ],
+      "problemSolutionTags": [
+        "teaching-lab",
+        "ease-of-use",
+        "uptime"
+      ],
+      "productQueryTags": [
+        "shaker",
+        "oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Teaching instruments take heavy, untrained use",
+          "problem": "Equipment in student labs sees constant turnover and rough handling, so fragile or complex setups lose teaching time.",
+          "solution": "Match robust, simple-to-operate products so demonstrations run reliably across large student groups.",
+          "tags": [
+            "teaching-lab",
+            "ease-of-use",
+            "uptime"
+          ],
+          "productTags": [
+            "teaching-lab",
+            "ease-of-use",
+            "uptime"
+          ],
+          "productQueryTags": [
+            "shaker",
+            "oven"
+          ]
+        }
+      ]
+    },
+    "academic/research-grants": {
+      "workflowTags": [
+        "research-grants",
+        "budget-fit",
+        "shared-facility"
+      ],
+      "problemSolutionTags": [
+        "research-grants",
+        "budget-fit",
+        "shared-facility"
+      ],
+      "productQueryTags": [
+        "shaker",
+        "chamber"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Grant equipment must justify itself across projects",
+          "problem": "Funded purchases are scrutinised for utility, so single-purpose instruments are hard to justify on a shared budget.",
+          "solution": "Use versatile, multi-application products so one instrument supports several research directions.",
+          "tags": [
+            "research-grants",
+            "budget-fit",
+            "shared-facility"
+          ],
+          "productTags": [
+            "research-grants",
+            "budget-fit",
+            "shared-facility"
+          ],
+          "productQueryTags": [
+            "shaker",
+            "chamber"
+          ]
+        }
+      ]
+    },
+    "academic/thesis-analytics": {
+      "workflowTags": [
+        "thesis-analytics",
+        "data-comparability",
+        "research-workflow"
+      ],
+      "problemSolutionTags": [
+        "thesis-analytics",
+        "data-comparability",
+        "research-workflow"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "AFM"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Thesis data must be publication-grade",
+          "problem": "Examiners and reviewers challenge method and repeatability, so provisional data weakens an otherwise sound thesis.",
+          "solution": "Match measurement products with documented performance so results withstand review and publication.",
+          "tags": [
+            "thesis-analytics",
+            "data-comparability",
+            "research-workflow"
+          ],
+          "productTags": [
+            "thesis-analytics",
+            "data-comparability",
+            "research-workflow"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "AFM"
+          ]
+        }
+      ]
+    },
+    "academic/shared-facilities": {
+      "workflowTags": [
+        "shared-facility",
+        "uptime",
+        "service-support"
+      ],
+      "problemSolutionTags": [
+        "shared-facility",
+        "uptime",
+        "service-support"
+      ],
+      "productQueryTags": [
+        "AFM",
+        "centrifuge"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Shared facilities live or die on uptime",
+          "problem": "A central instrument out of service blocks several groups at once, and booking backlogs build quickly.",
+          "solution": "Use supported, serviceable products so shared facilities recover fast and stay bookable.",
+          "tags": [
+            "shared-facility",
+            "uptime",
+            "service-support"
+          ],
+          "productTags": [
+            "shared-facility",
+            "uptime",
+            "service-support"
+          ],
+          "productQueryTags": [
+            "AFM",
+            "centrifuge"
+          ]
+        }
+      ]
+    },
+    "academic/student-training": {
+      "workflowTags": [
+        "student-training",
+        "ease-of-use",
+        "teaching-lab"
+      ],
+      "problemSolutionTags": [
+        "student-training",
+        "ease-of-use",
+        "teaching-lab"
+      ],
+      "productQueryTags": [
+        "shaker",
+        "balance"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Method skills need instruments that tolerate learning",
+          "problem": "Students develop method skills through repetition, which requires equipment that survives mistakes and resets easily.",
+          "solution": "Match forgiving, well-supported products so training runs without risking the instrument or the schedule.",
+          "tags": [
+            "student-training",
+            "ease-of-use",
+            "teaching-lab"
+          ],
+          "productTags": [
+            "student-training",
+            "ease-of-use",
+            "teaching-lab"
+          ],
+          "productQueryTags": [
+            "shaker",
+            "balance"
+          ]
+        }
+      ]
+    },
+    "academic/equipment-amc": {
+      "workflowTags": [
+        "equipment-amc",
+        "service-support",
+        "uptime"
+      ],
+      "problemSolutionTags": [
+        "equipment-amc",
+        "service-support",
+        "uptime"
+      ],
+      "productQueryTags": [
+        "balance",
+        "oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Instruments age faster without a service plan",
+          "problem": "Unplanned breakdowns and lapsed calibration take teaching and research instruments offline at the worst moments.",
+          "solution": "Use products backed by calibration and annual maintenance support so the installed base stays qualified.",
+          "tags": [
+            "equipment-amc",
+            "service-support",
+            "uptime"
+          ],
+          "productTags": [
+            "equipment-amc",
+            "service-support",
+            "uptime"
+          ],
+          "productQueryTags": [
+            "balance",
+            "oven"
+          ]
+        }
+      ]
+    },
+    "materials/surface-characterization": {
+      "workflowTags": [
+        "surface-analysis",
+        "sample-preparation",
+        "material-characterization"
+      ],
+      "problemSolutionTags": [
+        "surface-analysis",
+        "sample-preparation",
+        "material-characterization"
+      ],
+      "productQueryTags": [
+        "AFM",
+        "desiccator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Surface detail is lost to preparation artefacts",
+          "problem": "Contamination, residue, and poor mounting create features that look like real surface structure.",
+          "solution": "Match scanning probe and controlled-cleaning products so imaged features belong to the material, not the prep.",
+          "tags": [
+            "surface-analysis",
+            "sample-preparation",
+            "material-characterization"
+          ],
+          "productTags": [
+            "surface-analysis",
+            "sample-preparation",
+            "material-characterization"
+          ],
+          "productQueryTags": [
+            "AFM",
+            "desiccator"
+          ]
+        }
+      ]
+    },
+    "materials/particle-sizing": {
+      "workflowTags": [
+        "particle-sizing",
+        "dispersion",
+        "sample-preparation"
+      ],
+      "problemSolutionTags": [
+        "particle-sizing",
+        "dispersion",
+        "sample-preparation"
+      ],
+      "productQueryTags": [
+        "sonicator",
+        "homogenizer"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Agglomerates masquerade as large particles",
+          "problem": "Poorly dispersed samples report a coarser distribution than the material actually has.",
+          "solution": "Use ultrasonic dispersion and controlled-preparation products so the measured distribution reflects primary particles.",
+          "tags": [
+            "particle-sizing",
+            "dispersion",
+            "sample-preparation"
+          ],
+          "productTags": [
+            "particle-sizing",
+            "dispersion",
+            "sample-preparation"
+          ],
+          "productQueryTags": [
+            "sonicator",
+            "homogenizer"
+          ]
+        }
+      ]
+    },
+    "materials/structural-analysis": {
+      "workflowTags": [
+        "structural-analysis",
+        "spectroscopy",
+        "sample-preparation"
+      ],
+      "problemSolutionTags": [
+        "structural-analysis",
+        "spectroscopy",
+        "sample-preparation"
+      ],
+      "productQueryTags": [
+        "spectrometer",
+        "desiccator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Structure needs the right probe and a stable sample",
+          "problem": "Crystallographic and structural measurements drift when samples absorb moisture or move during acquisition.",
+          "solution": "Match spectroscopic and controlled-environment products so structural data is acquired on a stable specimen.",
+          "tags": [
+            "structural-analysis",
+            "spectroscopy",
+            "sample-preparation"
+          ],
+          "productTags": [
+            "structural-analysis",
+            "spectroscopy",
+            "sample-preparation"
+          ],
+          "productQueryTags": [
+            "spectrometer",
+            "desiccator"
+          ]
+        }
+      ]
+    },
+    "materials/thermal-properties": {
+      "workflowTags": [
+        "thermal-analysis",
+        "temperature-control",
+        "material-characterization"
+      ],
+      "problemSolutionTags": [
+        "thermal-analysis",
+        "temperature-control",
+        "material-characterization"
+      ],
+      "productQueryTags": [
+        "furnace",
+        "vacuum oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Thermal data depends on atmosphere and rate",
+          "problem": "Transition temperatures and stability figures shift with ramp rate and surrounding atmosphere.",
+          "solution": "Use programmable furnace and vacuum-drying products so thermal properties are measured under stated conditions.",
+          "tags": [
+            "thermal-analysis",
+            "temperature-control",
+            "material-characterization"
+          ],
+          "productTags": [
+            "thermal-analysis",
+            "temperature-control",
+            "material-characterization"
+          ],
+          "productQueryTags": [
+            "furnace",
+            "vacuum oven"
+          ]
+        }
+      ]
+    },
+    "materials/nanoparticle-synthesis": {
+      "workflowTags": [
+        "nanoparticle-synthesis",
+        "dispersion",
+        "method-repeatability"
+      ],
+      "problemSolutionTags": [
+        "nanoparticle-synthesis",
+        "dispersion",
+        "method-repeatability"
+      ],
+      "productQueryTags": [
+        "sonicator",
+        "vacuum oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Nanoparticle batches are hard to repeat",
+          "problem": "Size and dispersity swing with mixing energy, temperature, and drying, so batches vary despite an identical recipe.",
+          "solution": "Match ultrasonic processing, controlled heating, and drying products so synthesis conditions repeat batch to batch.",
+          "tags": [
+            "nanoparticle-synthesis",
+            "dispersion",
+            "method-repeatability"
+          ],
+          "productTags": [
+            "nanoparticle-synthesis",
+            "dispersion",
+            "method-repeatability"
+          ],
+          "productQueryTags": [
+            "sonicator",
+            "vacuum oven"
+          ]
+        }
+      ]
+    },
+    "materials/mechanical-testing": {
+      "workflowTags": [
+        "mechanical-testing",
+        "environmental-testing",
+        "data-comparability"
+      ],
+      "problemSolutionTags": [
+        "mechanical-testing",
+        "environmental-testing",
+        "data-comparability"
+      ],
+      "productQueryTags": [
+        "chamber",
+        "oven"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Conditioning decides the mechanical result",
+          "problem": "Specimens tested at uncontrolled humidity and temperature give strength and wear data that cannot be compared.",
+          "solution": "Use environmental conditioning products so mechanical testing starts from a defined, documented specimen state.",
+          "tags": [
+            "mechanical-testing",
+            "environmental-testing",
+            "data-comparability"
+          ],
+          "productTags": [
+            "mechanical-testing",
+            "environmental-testing",
+            "data-comparability"
+          ],
+          "productQueryTags": [
+            "chamber",
+            "oven"
+          ]
+        }
+      ]
+    },
+    "clinical/molecular-diagnostics": {
+      "workflowTags": [
+        "molecular-diagnostics",
+        "sample-preparation",
+        "sample-integrity"
+      ],
+      "problemSolutionTags": [
+        "molecular-diagnostics",
+        "sample-preparation",
+        "sample-integrity"
+      ],
+      "productQueryTags": [
+        "centrifuge",
+        "sonicator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Nucleic acid yield decides the assay",
+          "problem": "Extraction inconsistency and degradation produce weak or failed amplification that looks like a negative result.",
+          "solution": "Match controlled separation, disruption, and cold-storage products so extraction yield stays consistent.",
+          "tags": [
+            "molecular-diagnostics",
+            "sample-preparation",
+            "sample-integrity"
+          ],
+          "productTags": [
+            "molecular-diagnostics",
+            "sample-preparation",
+            "sample-integrity"
+          ],
+          "productQueryTags": [
+            "centrifuge",
+            "sonicator"
+          ]
+        }
+      ]
+    },
+    "clinical/clinical-sample-prep": {
+      "workflowTags": [
+        "clinical-sample-prep",
+        "sample-preparation",
+        "reproducibility"
+      ],
+      "problemSolutionTags": [
+        "clinical-sample-prep",
+        "sample-preparation",
+        "reproducibility"
+      ],
+      "productQueryTags": [
+        "centrifuge",
+        "chamber"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Preparation variability reaches the report",
+          "problem": "Differences in separation and handling between operators shift analyte concentration before measurement begins.",
+          "solution": "Use standardised separation and controlled-storage products so preparation is consistent across shifts.",
+          "tags": [
+            "clinical-sample-prep",
+            "sample-preparation",
+            "reproducibility"
+          ],
+          "productTags": [
+            "clinical-sample-prep",
+            "sample-preparation",
+            "reproducibility"
+          ],
+          "productQueryTags": [
+            "centrifuge",
+            "chamber"
+          ]
+        }
+      ]
+    },
+    "clinical/immunoassay": {
+      "workflowTags": [
+        "immunoassay",
+        "temperature-control",
+        "reproducibility"
+      ],
+      "problemSolutionTags": [
+        "immunoassay",
+        "temperature-control",
+        "reproducibility"
+      ],
+      "productQueryTags": [
+        "microplate shaker",
+        "chamber"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Plate conditions drive assay variability",
+          "problem": "Incubation temperature and mixing differences across a plate produce edge effects and poor well-to-well agreement.",
+          "solution": "Match microplate shaking and controlled-temperature products so every well sees the same conditions.",
+          "tags": [
+            "immunoassay",
+            "temperature-control",
+            "reproducibility"
+          ],
+          "productTags": [
+            "immunoassay",
+            "temperature-control",
+            "reproducibility"
+          ],
+          "productQueryTags": [
+            "microplate shaker",
+            "chamber"
+          ]
+        }
+      ]
+    },
+    "clinical/cold-chain": {
+      "workflowTags": [
+        "cold-chain",
+        "sample-integrity",
+        "monitoring"
+      ],
+      "problemSolutionTags": [
+        "cold-chain",
+        "sample-integrity",
+        "monitoring"
+      ],
+      "productQueryTags": [
+        "chamber",
+        "circulator"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Storage excursions are found too late",
+          "problem": "Diagnostic samples and reagents lose integrity during unmonitored temperature excursions.",
+          "solution": "Use monitored controlled-temperature storage products so excursions are prevented and evidenced.",
+          "tags": [
+            "cold-chain",
+            "sample-integrity",
+            "monitoring"
+          ],
+          "productTags": [
+            "cold-chain",
+            "sample-integrity",
+            "monitoring"
+          ],
+          "productQueryTags": [
+            "chamber",
+            "circulator"
+          ]
+        }
+      ]
+    },
+    "clinical/calibration-compliance": {
+      "workflowTags": [
+        "calibration-compliance",
+        "traceability",
+        "service-support"
+      ],
+      "problemSolutionTags": [
+        "calibration-compliance",
+        "traceability",
+        "service-support"
+      ],
+      "productQueryTags": [
+        "balance",
+        "pH meter"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Accreditation rests on the calibration record",
+          "problem": "Audits challenge calibration currency and traceability, not just the reported patient result.",
+          "solution": "Match instruments with documented calibration and service support so compliance evidence is always current.",
+          "tags": [
+            "calibration-compliance",
+            "traceability",
+            "service-support"
+          ],
+          "productTags": [
+            "calibration-compliance",
+            "traceability",
+            "service-support"
+          ],
+          "productQueryTags": [
+            "balance",
+            "pH meter"
+          ]
+        }
+      ]
+    },
+    "clinical/point-of-care": {
+      "workflowTags": [
+        "point-of-care",
+        "turnaround-time",
+        "traceability"
+      ],
+      "problemSolutionTags": [
+        "point-of-care",
+        "turnaround-time",
+        "traceability"
+      ],
+      "productQueryTags": [
+        "pH meter",
+        "centrifuge"
+      ],
+      "problemSolutions": [
+        {
+          "title": "Near-patient testing still needs lab-grade control",
+          "problem": "Decentralised testing loses the environmental and calibration control that central labs take for granted.",
+          "solution": "Use compact, calibrated measurement products so near-patient results stay comparable to the central lab.",
+          "tags": [
+            "point-of-care",
+            "turnaround-time",
+            "traceability"
+          ],
+          "productTags": [
+            "point-of-care",
+            "turnaround-time",
+            "traceability"
+          ],
+          "productQueryTags": [
+            "pH meter",
+            "centrifuge"
+          ]
         }
       ]
     }

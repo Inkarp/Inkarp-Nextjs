@@ -6,11 +6,13 @@
 // `image` is optional (used by HomeCampaignSlider) — entries without one render
 // as a plain accent-colored text slide instead.
 //
-// HomeCampaignSlider shows every entry below continuously (not date-gated) —
-// only add an entry here once it's real, ready content. The commented-out
-// entries further down are placeholder examples kept for reference/reuse;
-// uncomment and update one when you actually want it live.
+// HomeCampaignSlider is date-gated: it shows the highest-priority campaign whose
+// start/end range covers today, and falls back to the `evergreen` entry when no
+// dated campaign is running. Add an entry here only once it's real, ready
+// content. The commented-out entries further down are placeholder examples kept
+// for reference/reuse; uncomment and update one when you actually want it live.
 export const campaigns = [
+  /*
   {
     id: "inkarp-41st-anniversary",
     type: "milestone",
@@ -24,6 +26,7 @@ export const campaigns = [
     end: "2026-12-31",
     priority: 3,
   },
+  */
   {
     id: "independence-day-2026",
     type: "national-day",
@@ -33,10 +36,30 @@ export const campaigns = [
     title: "Celebrating India's 80th Independence Day",
     message: "Jai Hind! Team Inkarp wishes you a proud and joyous Independence Day.",
     cta: null,
-    start: "2026-08-14",
-    end: "2026-08-15",
+    // Live through the Independence Day window; inclusive end — the stripe shows
+    // through the 16th and is replaced by the evergreen promo on the 17th.
+    start: "2026-08-01",
+    end: "2026-08-16",
     priority: 5,
   },
+  {
+    // `evergreen` marks the year-round fallback: it's what the stripe falls back
+    // to whenever no dated campaign is running, and it's what renders on the
+    // server so the first paint never depends on the build date.
+    id: "explore-products-promo",
+    type: "promo",
+    variant: "explore-products",
+    icon: "🔬",
+    accent: "teal",
+    evergreen: true,
+    title: "Explore Inkarp's Latest Lab Solutions",
+    message: "Find instruments, application support, and expert guidance in one place.",
+    cta: { label: "Explore Products", href: "/products" },
+    start: "2026-01-01",
+    end: "2027-12-31",
+    priority: 1,
+  },
+  /*
   {
     id: "independence-day-2026-classic",
     type: "national-day",
@@ -50,19 +73,6 @@ export const campaigns = [
     end: "2026-08-15",
     priority: 5,
   },
-  {
-    id: "explore-products-promo",
-    type: "promo",
-    icon: "🔬",
-    accent: "teal",
-    title: "Explore Inkarp's Latest Lab Solutions",
-    message: "Find instruments, application support, and expert guidance in one place.",
-    cta: { label: "Explore Products", href: "/products" },
-    start: "2026-01-01",
-    end: "2026-12-31",
-    priority: 3,
-  },
-  /*
   {
     id: "gandhi-jayanti-2026",
     type: "national-day",
@@ -151,6 +161,10 @@ export function getActiveCampaign(today = new Date()) {
     });
 
   return active[0] ?? null;
+}
+
+export function getEvergreenCampaign() {
+  return campaigns.find((campaign) => campaign.evergreen) ?? null;
 }
 
 export function getActiveCampaigns(today = new Date()) {

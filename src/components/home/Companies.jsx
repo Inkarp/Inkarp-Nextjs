@@ -77,21 +77,24 @@ export default function Companies() {
         <ul className="space-y-5">
           {companies.map((company, index) => (
             <li key={`${company.displayName}-${company.logo}`} className="flex gap-4">
-              <span className="mt-4 w-12 shrink-0 text-right font-mono text-sm font-semibold text-red">
-                {company.year}
-              </span>
-              <div className="flex flex-col items-center">
-                <span className="mt-5 size-2.5 shrink-0 rounded-full bg-red" />
-                {index < companies.length - 1 ? (
-                  <span className="mt-1 w-px flex-1 bg-red/15" />
-                ) : null}
+              {/* Rail: flex-1 spacers above and below keep the dot vertically centred on the card. */}
+              <div className="flex flex-col items-center self-stretch">
+                <span
+                  className={`w-px flex-1 ${index > 0 ? "bg-red/15" : "bg-transparent"}`}
+                />
+                <span className="my-1 size-2.5 shrink-0 rounded-full bg-red" />
+                <span
+                  className={`w-px flex-1 ${
+                    index < companies.length - 1 ? "bg-red/15" : "bg-transparent"
+                  }`}
+                />
               </div>
 
               <Link
                 href={company.href}
                 className="flex-1 rounded-xl bg-parchment-alt p-5 transition hover:bg-parchment-alt/70"
-              >            
-                <div className="mt-3 flex flex-col items-start gap-3 sm:flex-row sm:gap-4">
+              >
+                <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
                   <span className="relative bg-white p-2 rounded-xl h-12 w-24 shrink-0">
                     <Image
                       src={company.logo}

@@ -73,11 +73,18 @@ export function mergeWorkflowContent(activeIndustry, activeTopic) {
     activeTopic
   );
 
-  const problemSolutions = uniqueByTitle([
+  // `defaults` is a genuine fallback, not an extra card: it only applies when
+  // neither the topic nor the industry supplies any problem/solution content.
+  // Appending it unconditionally put a "not yet mapped to a product set"
+  // placeholder on every workflow page, including fully populated ones.
+  const authored = uniqueByTitle([
     ...toArray(topic.problemSolutions),
     ...toArray(industry.problemSolutions),
-    ...toArray(defaults.problemSolutions),
   ]);
+
+  const problemSolutions = authored.length
+    ? authored
+    : uniqueByTitle(toArray(defaults.problemSolutions));
 
   return {
     topicKey,

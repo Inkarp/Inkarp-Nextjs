@@ -1,63 +1,87 @@
+import { siteConfig } from "@/data/siteConfig";
+
 export const googleReviewsSummary = {
   rating: "4.8",
   count: "120+",
-  href: "#",
+  href: siteConfig.googleBusinessUrl,
 };
 
+// PLACEHOLDER CONTENT — all 9 entries below are dummy. Swap `name`, `initials`,
+// `date`, `rating`, and `text` for the real Google reviews when they're ready.
+// Keep `id` unique (it's the React key) and keep the list at a multiple of 3 so
+// the HomeClientReviews slider pages fill evenly on desktop.
 export const googleReviews = [
   {
-    name: "Sample Reviewer",
+    id: "review-1",
+    name: "Sample Reviewer 1",
     initials: "SR",
     date: "2 weeks ago",
     rating: 5,
     text: "Sample review text — replace with a real Google review. Installation and support were prompt and professional.",
   },
   {
-    name: "Sample Reviewer",
+    id: "review-2",
+    name: "Sample Reviewer 2",
     initials: "SR",
     date: "1 month ago",
     rating: 5,
     text: "Sample review text — replace with a real Google review. The team helped us choose the right instrument for our lab.",
   },
   {
-    name: "Sample Reviewer",
+    id: "review-3",
+    name: "Sample Reviewer 3",
     initials: "SR",
     date: "2 months ago",
     rating: 4,
     text: "Sample review text — replace with a real Google review. Responsive service and genuine product knowledge.",
   },
-];
-
-export const clientReviews = [
   {
-    name: "Anil Pasunuti",
-    message:
-      "Best service provided by Inkarp. Service engineer response towards the equipment is very good and our Heidolph rotary evaporator smoothly functioning without any interruptions, fully satisfied.",
+    id: "review-4",
+    name: "Sample Reviewer 4",
+    initials: "SR",
+    date: "3 months ago",
+    rating: 5,
+    text: "Sample review text — replace with a real Google review. Commissioning was completed on schedule and the handover training was clear.",
   },
   {
-    name: "Omprakash Kushwaha",
-    message:
-      "Inkarp supplied and installed their brand of a four port glovebox Labstationi to our lab. Their service is on time, professional and top notch. So far so smooth.",
+    id: "review-5",
+    name: "Sample Reviewer 5",
+    initials: "SR",
+    date: "4 months ago",
+    rating: 5,
+    text: "Sample review text — replace with a real Google review. Application support helped us settle on a method that suits our samples.",
   },
   {
-    name: "Renitta Benny",
-    message:
-      "Mr. Jerbin is the service person coming to our lab. He is very helpful and always ready for the service. His service is very appreciable. We are very satisfied and happy with his service.",
+    id: "review-6",
+    name: "Sample Reviewer 6",
+    initials: "SR",
+    date: "5 months ago",
+    rating: 4,
+    text: "Sample review text — replace with a real Google review. Spare parts arrived quickly and the instrument was back in service the same week.",
   },
   {
-    name: "Snehashish Senapati",
-    message:
-      "Inkarp is really helpful, and their service people are guiding us how to use the instruments for longer time without damage and service is helpful.",
+    id: "review-7",
+    name: "Sample Reviewer 7",
+    initials: "SR",
+    date: "6 months ago",
+    rating: 5,
+    text: "Sample review text — replace with a real Google review. The engineer explained the preventive maintenance schedule in detail.",
   },
   {
-    name: "Shwetha M",
-    message:
-      "Our university had bought a lyophilizer a year back and the performance of it was phenomenal. There were regular services for the maintenance of the equipment. Thank you.",
+    id: "review-8",
+    name: "Sample Reviewer 8",
+    initials: "SR",
+    date: "8 months ago",
+    rating: 5,
+    text: "Sample review text — replace with a real Google review. Good coordination from enquiry through to installation at our facility.",
   },
   {
-    name: "Prasad Joshi",
-    message:
-      "Excellent service provided by Inkarp Instrument Pvt Ltd from last many years. They are prompt in their service and attending call anytime and help us for resolved problem on priority.",
+    id: "review-9",
+    name: "Sample Reviewer 9",
+    initials: "SR",
+    date: "10 months ago",
+    rating: 4,
+    text: "Sample review text — replace with a real Google review. Consistent follow-up and dependable annual service visits.",
   },
 ];
 
@@ -112,239 +136,3 @@ export const groupCompanies = {
     },
   ],
 };
-
-export const principalLogoRows = [
-  [
-    {
-      name: "Heidolph",
-      logo: "/assets/images/PrincipalLogos/RowOne/Heidolph.svg",
-      href: "/products?q=heidolph",
-    },
-    {
-      name: "PolyScience",
-      logo: "/assets/images/PrincipalLogos/RowOne/Polyscience.png",
-      href: "/products?q=polyscience",
-    },
-    {
-      name: "Radleys",
-      logo: "/assets/images/PrincipalLogos/RowOne/radley.svg",
-      href: "/products?q=radleys",
-    },
-    {
-      name: "Rotzmeier",
-      logo: "/assets/images/PrincipalLogos/RowOne/Rotzmeier.gif",
-      href: "/products?q=rotzmeier",
-    },
-    {
-      name: "ThalesNano",
-      logo: "/assets/images/PrincipalLogos/RowOne/ThalesNano.jpg",
-      href: "/products?q=thalesnano",
-    },
-    {
-      name: "Nanalysis",
-      logo: "/assets/images/PrincipalLogos/RowOne/nanalysis.png",
-      href: "/products?q=nanalysis",
-    },
-    {
-      name: "Advion",
-      logo: "/assets/images/PrincipalLogos/RowOne/advion.png",
-      href: "/products?q=advion",
-    },
-    {
-      name: "DaraLyo",
-      logo: "/assets/images/PrincipalLogos/RowOne/dara-lyo.svg",
-      href: "/products?q=daralyo",
-    },
-  ],
-  [
-    {
-      name: "ECOM",
-      logo: "/assets/images/PrincipalLogos/RowTwo/ECom.png",
-      href: "/products?q=ecom",
-    },
-    {
-      name: "Labomatic",
-      logo: "/assets/images/PrincipalLogos/RowTwo/Labomatic.svg",
-      href: "/products?q=labomatic",
-    },
-    {
-      name: "Waters",
-      logo: "/assets/images/PrincipalLogos/RowTwo/waters.svg",
-      href: "/products?q=waters",
-    },
-    {
-      name: "Hohsen Corp",
-      logo: "/assets/images/PrincipalLogos/RowTwo/hohsencorp.png",
-      href: "/products?q=hohsen",
-    },
-    
-    {
-      name: "Labstation",
-      logo: "/assets/images/PrincipalLogos/RowTwo/labstation.svg",
-      href: "/products?q=labstation",
-    },
-    {
-      name: "Mettler Toledo",
-      logo: "/assets/images/PrincipalLogos/RowTwo/Metller.svg",
-      href: "/products?q=mettler",
-    },
-    {
-      name: "Bandelin",
-      logo: "/assets/images/PrincipalLogos/RowThree/bandelin.jpg",
-      href: "/products?q=bandelin",
-    },
-
-  ],
-  [
-    {
-      name: "Luzchem",
-      logo: "/assets/images/PrincipalLogos/RowThree/Luzchem.png",
-      href: "/products?q=luzchem",
-    },
-    {
-      name: "Sonics",
-      logo: "/assets/images/PrincipalLogos/RowThree/sonics-logo.svg",
-      href: "/products?q=sonics",
-    },
-    {
-      name: "Robot Coupe",
-      logo: "/assets/images/PrincipalLogos/RowThree/robot.png",
-      href: "/products?q=robot coupe",
-    },
-    {
-      name: "Brookfield",
-      logo: "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
-      href: "/products?q=brookfield",
-    },
-    {
-      name: "Sartorius",
-      logo: "/assets/images/PrincipalLogos/RowFour/sartorius.svg",
-      href: "/products?q=sartorius",
-    },
-    {
-      name: "Implen",
-      logo: "/assets/images/PrincipalLogos/RowFour/Implen.jpg",
-      href: "/products?q=implen",
-    },
-    {
-      name: "Nanosurf",
-      logo: "/assets/images/PrincipalLogos/RowFour/NanoSurf.svg",
-      href: "/products?q=nanosurf",
-    },
-    {
-      name: "BWB",
-      logo: "/assets/images/PrincipalLogos/RowFour/BWB.png",
-      href: "/products?q=bwb",
-    },
-    {
-      name: "RotoChrom",
-      logo: "/assets/images/PrincipalLogos/RowFour/Rotochrome.png",
-      href: "/products?q=rotochrom",
-    },
-  ],
-  [
-    {
-      name: "Bruker",
-      logo: "/assets/images/PrincipalLogos/RowSeven/Bruker.svg",
-      href: "/products?q=bruker",
-    },
-    {
-      name: "BUCHI",
-      logo: "/assets/images/PrincipalLogos/RowSeven/BUCHI.svg",
-      href: "/products?q=buchi",
-    },
-    {
-      name: "Hitachi",
-      logo: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
-      href: "/products?q=hitachi",
-    },
-    {
-      name: "Chemspeed",
-      logo: "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg",
-      href: "/products?q=chemspeed",
-    },
-    {
-      name: "ZEISS",
-      logo: "/assets/images/PrincipalLogos/RowSix/zeiss-logo.svg",
-      href: "/products?q=zeiss",
-    },
-    {
-      name: "Affinite",
-      logo: "/assets/images/PrincipalLogos/RowSeven/Affinite.webp",
-      href: "/products?q=affinite",
-    },
-    {
-      name: "SBT Instruments",
-      logo: "/assets/images/PrincipalLogos/RowSeven/SBT-Instruments.svg",
-      href: "/products?q=sbt",
-    },
-    {
-      name: "Khimod",
-      logo: "/assets/images/PrincipalLogos/RowSeven/KhiMod.svg",
-      href: "/products?q=khimod",
-    },
-    {
-      name: "Evonik",
-      logo: "/assets/images/PrincipalLogos/RowFive/Evonik.png",
-      href: "/products?q=evonik",
-    },
-    {
-      name: "GEA",
-      logo: "/assets/images/PrincipalLogos/RowFive/GEA.png",
-      href: "/products?q=gea",
-    },
-    {
-      name: "NeoVision",
-      logo: "/assets/images/PrincipalLogos/RowFive/Nenovision.svg",
-      href: "/products?q=nenovision",
-    },
-    {
-      name: "Photon etc.",
-      logo: "/assets/images/PrincipalLogos/RowFive/Photon.jpeg",
-      href: "/products?q=photon",
-    },
-    {
-      name: "Pro Scientific",
-      logo: "/assets/images/PrincipalLogos/RowFive/Proscientific.png",
-      href: "/products?q=pro scientific",
-    },
-    {
-      name: "Reichert",
-      logo: "/assets/images/PrincipalLogos/RowFive/reichert.png",
-      href: "/products?q=reichert",
-    },
-    {
-      name: "Thermo Fisher Scientific",
-      logo: "/assets/images/PrincipalLogos/RowFive/thermofisher.png",
-      href: "/products?q=thermo fisher",
-    },
-  ],
-  [
-   {
-      name: "Maccor",
-      logo: "/assets/images/PrincipalLogos/RowTwo/Maccor.jpg",
-      href: "/products?q=maccor",
-    },
-    {
-      name: "LUMICKS",
-      logo: "/assets/images/PrincipalLogos/RowSix/LUMICKS.png",
-      href: "/products?q=lumicks",
-    },
-    
-   {
-      name: "Kubota",
-      logo: "/assets/images/PrincipalLogos/RowThree/Kubota.png",
-      href: "/products?q=kubota",
-    },
-    {
-      name: "SP Scientific",
-      logo: "/assets/images/PrincipalLogos/RowOne/SP-Scientific.png",
-      href: "/products?q=sp scientific",
-    },
-    {
-      name: "FOM Technologies",
-      logo: "/assets/images/PrincipalLogos/RowOne/FOM-Technologies.svg",
-      href: "/products?q=fom",
-    },
-  ],
-];

@@ -18,23 +18,20 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
   if (variant === "aside") {
     return (
       <article className="overflow-hidden border border-red bg-white">
-        <Link
-          aria-label={`Read ${issue.title}`}
-          className="group relative block aspect-[468/620] w-full overflow-hidden bg-[#1A2D51]"
-          href={`/magazine/${encodeURIComponent(issue.slug)}`}
-        >
+        {/* Cover is not clickable — reading happens via the button below. */}
+        <div className="relative aspect-[468/620] w-full overflow-hidden bg-[#1A2D51]">
           <Image
             alt={imageAlt}
-            className="object-contain p-3 transition duration-700 group-hover:scale-[1.02]"
+            className="object-contain p-3"
             fill
             priority
-            sizes="(min-width: 1280px) 468px, calc(100vw - 40px)"
+            sizes="(min-width: 1024px) 340px, calc(100vw - 40px)"
             src={issue.image}
           />
           <span className="absolute left-4 top-4 bg-red px-4 py-2 text-sm font-bold uppercase tracking-wide text-parchment">
             Latest Issue
           </span>
-        </Link>
+        </div>
 
         <div className="border-t border-line-light bg-white p-5 sm:p-6">
           <p className="text-sm font-bold uppercase tracking-wide text-red">

@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import CatalystArchiveSwitcher from "@/components/catalystcue/CatalystArchiveVariants";
+import CatalystArchive from "@/components/catalystcue/CatalystArchiveVariants";
 import CatalystLatestIssue from "@/components/catalystcue/CatalystLatestIssue";
 import CatalystModal from "@/components/catalystcue/CatalystModal";
+import RecTag from "@/components/home/RecTag";
 import { catalystCards } from "@/data/catalystCue";
 
 const MONTH_ORDER = [
@@ -58,35 +59,23 @@ export default function CatalystPage() {
 
   return (
     <main className="relative bg-parchment">
-      <div className="relative left-1/2 h-screen -translate-x-1/2 overflow-hidden">
-        <video
-          autoPlay
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          loop
-          muted
-          playsInline
-          src="/assets/catalyst/Postlaunch_V2_issue_06.mp4"
-        >
-          <track kind="captions" />
-        </video>
-      </div>
-
-      <section className="bg-parchment-alt px-5 py-12 sm:py-16" id="catalyst-archive">
-        <div className="mx-auto grid max-w-[1530px] gap-10 xl:grid-cols-[468px_minmax(0,1fr)] xl:items-start">
-          <div className="xl:sticky xl:top-24">
+      {/* The hero video lives in the page shell (magazine/page.js) so it can
+          share one h-screen flex column with the page header. */}
+      <section className="bg-parchment-alt py-12 sm:py-16" id="catalyst-archive">
+        {/* 90% of the viewport, matching the header and video above. */}
+        <div className="mx-auto grid w-[90%] gap-8 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-start">
+          <div className="lg:sticky lg:top-6">
             <CatalystLatestIssue issue={latestIssue} variant="aside" />
           </div>
 
-          <div className="min-w-0 border border-line-light bg-white px-4 py-8 sm:px-6 lg:px-8">
-            <div className="mb-8 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-red">
-                CATALYSTCue Archive
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold text-ink sm:text-4xl">
+          <div className="min-w-0 border border-line-light bg-white px-4 py-8 sm:px-6">
+            <div className="mb-8">
+              <RecTag>CATALYSTCue Archive</RecTag>
+              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
                 Browse Previous Issues
               </h2>
             </div>
-            <CatalystArchiveSwitcher catalystCards={archiveIssues} />
+            <CatalystArchive catalystCards={archiveIssues} />
           </div>
         </div>
       </section>

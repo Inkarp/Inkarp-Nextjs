@@ -212,25 +212,37 @@ function FilterBar({ allCards, filters, setFilters }) {
   );
 }
 
+// The cover is deliberately NOT a link — reading an issue happens through the
+// explicit "Read Issue" button below it.
 function IssueCard({ card }) {
   return (
-    <Link
-      className="flex w-[260px] shrink-0 flex-col overflow-hidden border border-line-light bg-white text-ink transition hover:-translate-y-0.5 hover:border-red"
-      href={`/magazine/${encodeURIComponent(card.slug)}`}
-    >
-      <Image
-        alt={card.subTitle}
-        className="h-[366px] w-[260px] object-cover"
-        height={366}
-        src={card.image}
-        width={260}
-      />
-      <div className="flex min-h-[54px] items-center justify-center gap-2 border-t border-line-light bg-parchment px-3 py-2 text-center text-sm">
-        <h3>{card.subTitle}</h3>
-        <span className="text-red">|</span>
-        <p>{card.Date}</p>
+    <article className="flex flex-col overflow-hidden border border-line-light bg-white text-ink transition hover:-translate-y-0.5 hover:border-red">
+      <div className="relative aspect-[260/366] w-full overflow-hidden bg-parchment-alt">
+        <Image
+          alt={card.subTitle}
+          className="object-cover"
+          fill
+          sizes="(min-width: 1024px) 28vw, (min-width: 640px) 42vw, 85vw"
+          src={card.image}
+        />
       </div>
-    </Link>
+
+      <div className="flex flex-1 flex-col gap-3 border-t border-line-light bg-parchment px-3 py-3 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-2 text-sm">
+          <h3 className="font-semibold leading-snug text-ink">{card.subTitle}</h3>
+          <span aria-hidden="true" className="text-red">|</span>
+          <p className="text-ink-soft">{card.Date}</p>
+        </div>
+
+        <Link
+          className="mt-auto inline-flex items-center justify-center gap-1.5 border border-red bg-red px-4 py-2 text-xs font-semibold text-white transition hover:bg-transparent hover:text-red"
+          href={`/magazine/${encodeURIComponent(card.slug)}`}
+        >
+          Read Issue
+          <span aria-hidden="true">→</span>
+        </Link>
+      </div>
+    </article>
   );
 }
 
@@ -243,28 +255,39 @@ function EmptyState() {
   );
 }
 
-export function ArchiveTabbed({ catalystCards }) {
+function ArchiveTabbed({ catalystCards }) {
   const { groupedByVolume, sortedVolumeKeys } = useGroupedVolumes(catalystCards);
   const [activeVolume, setActiveVolume] = useState(sortedVolumeKeys[0]);
 
+  // Keep the selection valid when filtering removes the active volume.
+  const currentVolume = sortedVolumeKeys.includes(activeVolume)
+    ? activeVolume
+    : sortedVolumeKeys[0];
+
   const activeCards = useMemo(() => {
-    return [...(groupedByVolume[activeVolume] || [])].sort(newestFirst);
-  }, [groupedByVolume, activeVolume]);
+    return [...(groupedByVolume[currentVolume] || [])].sort(newestFirst);
+  }, [groupedByVolume, currentVolume]);
 
   if (!catalystCards.length) return <EmptyState />;
 
   return (
     <div>
-      <div className="mb-8 flex flex-wrap justify-center gap-3">
+      <div
+        aria-label="Volumes"
+        className="mb-8 flex flex-wrap gap-3"
+        role="tablist"
+      >
         {sortedVolumeKeys.map((volume) => (
           <button
+            aria-selected={currentVolume === volume}
             className={`px-5 py-2 text-sm font-bold uppercase transition ${
-              activeVolume === volume
+              currentVolume === volume
                 ?"bg-red text-parchment"
                 :"border border-line-light text-ink-soft hover:border-red hover:text-red"
             }`}
             key={volume}
             onClick={() => setActiveVolume(volume)}
+            role="tab"
             type="button"
           >
             {formatVolumeLabel(volume)}
@@ -272,7 +295,7 @@ export function ArchiveTabbed({ catalystCards }) {
         ))}
       </div>
       {activeCards.length ? (
-        <div className="flex flex-wrap items-start justify-center gap-8 xl:justify-start">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {activeCards.map((card) => (
             <IssueCard card={card} key={card.slug} />
           ))}
@@ -284,125 +307,9 @@ export function ArchiveTabbed({ catalystCards }) {
   );
 }
 
-export function ArchiveShelves({ catalystCards }) {
-  const { groupedByVolume, sortedVolumeKeys } = useGroupedVolumes(catalystCards);
-
-  if (!catalystCards.length) return <EmptyState />;
-
-  return (
-    <div className="space-y-12">
-      {sortedVolumeKeys.map((volume) => {
-        const cards = [...groupedByVolume[volume]].sort(newestFirst);
-
-        return (
-          <section key={volume}>
-            <div className="mb-4 flex items-center justify-between">
-              <h3 className="text-xl font-bold uppercase text-ink">
-                {formatVolumeLabel(volume)}
-              </h3>
-              <span className="text-sm text-ink-soft">{cards.length} issues</span>
-            </div>
-            <div className="flex items-start gap-6 overflow-x-auto pb-4">
-              {cards.map((card) => (
-                <IssueCard card={card} key={card.slug} />
-              ))}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-export function ArchiveAccordion({ catalystCards }) {
-  const { groupedByVolume, sortedVolumeKeys } = useGroupedVolumes(catalystCards);
-  const [openVolume, setOpenVolume] = useState(sortedVolumeKeys[0]);
-
-  if (!catalystCards.length) return <EmptyState />;
-
-  return (
-    <div className="mx-auto max-w-[1180px] divide-y divide-line-light border border-line-light">
-      {sortedVolumeKeys.map((volume) => {
-        const cards = [...groupedByVolume[volume]].sort(newestFirst);
-        const isOpen = openVolume === volume;
-
-        return (
-          <div key={volume}>
-            <button
-              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-bold uppercase text-ink"
-              onClick={() => setOpenVolume(isOpen ? null : volume)}
-              type="button"
-            >
-              <span>{formatVolumeLabel(volume)}</span>
-              <span className="flex items-center gap-3 text-sm font-medium text-ink-soft">
-                {cards.length} issues
-                <FiChevronDown
-                  className={`transition-transform ${isOpen ?"rotate-180" :""}`}
-                />
-              </span>
-            </button>
-            {isOpen ? (
-              <div className="flex flex-wrap items-start justify-center gap-8 p-5 xl:justify-start">
-                {cards.map((card) => (
-                  <IssueCard card={card} key={card.slug} />
-                ))}
-              </div>
-            ) : null}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-export function ArchiveTimeline({ catalystCards }) {
-  const sorted = useMemo(
-    () => [...catalystCards].sort(newestFirst),
-    [catalystCards],
-  );
-
-  if (!catalystCards.length) return <EmptyState />;
-
-  return (
-    <div className="mx-auto max-w-3xl">
-      <ol className="relative space-y-10 border-l border-line-light pl-6">
-        {sorted.map((card) => (
-          <li className="relative" key={card.slug}>
-            <span className="absolute -left-[31px] top-1.5 h-3 w-3 bg-red" />
-            <Link className="group flex gap-5" href={`/magazine/${encodeURIComponent(card.slug)}`}>
-              <Image
-                alt={card.subTitle}
-                className="h-28 w-20 shrink-0 object-cover"
-                height={112}
-                src={card.image}
-                width={80}
-              />
-              <div>
-                <span className="text-xs font-bold uppercase text-red">
-                  {formatVolumeLabel(card.Volume)} &middot; {card.subTitle}
-                </span>
-                <h3 className="mt-1 font-semibold text-ink transition-colors group-hover:text-red">
-                  {card.metaTitle || card.title}
-                </h3>
-                <p className="text-sm text-ink-soft">{card.Date}</p>
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
-}
-
-const variants = [
-  { key:"tabbed", label:"Tabbed Volumes", Component: ArchiveTabbed },
-  { key:"shelves", label:"Horizontal Shelves", Component: ArchiveShelves },
-  { key:"accordion", label:"Accordion List", Component: ArchiveAccordion },
-  { key:"timeline", label:"Timeline View", Component: ArchiveTimeline },
-];
-
-export default function CatalystArchiveSwitcher({ catalystCards }) {
-  const [variant, setVariant] = useState(variants[0].key);
+// Only the tabbed-by-volume layout is offered now; the shelves, accordion and
+// timeline variants and the layout switcher above them have been removed.
+export default function CatalystArchive({ catalystCards }) {
   const [filters, setFilters] = useState({
     search:"",
     volume:"",
@@ -413,30 +320,10 @@ export default function CatalystArchiveSwitcher({ catalystCards }) {
 
   const filteredCards = useFilteredCards(catalystCards, filters);
 
-  const Active = variants.find((item) => item.key === variant).Component;
-
   return (
     <div>
       <FilterBar allCards={catalystCards} filters={filters} setFilters={setFilters} />
-
-      <div className="mb-10 flex flex-wrap justify-center gap-2">
-        {variants.map((item) => (
-          <button
-            className={`px-4 py-2 text-xs font-bold uppercase tracking-wide transition ${
-              variant === item.key
-                ?"bg-[#1A2D51] text-parchment"
-                :"border border-line-light text-ink-soft hover:border-red hover:text-ink"
-            }`}
-            key={item.key}
-            onClick={() => setVariant(item.key)}
-            type="button"
-          >
-            {item.label}
-          </button>
-        ))}
-      </div>
-
-      <Active catalystCards={filteredCards} />
+      <ArchiveTabbed catalystCards={filteredCards} />
     </div>
   );
 }

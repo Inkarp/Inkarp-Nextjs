@@ -1,4 +1,4 @@
-import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import ScrollAnimations from "@/components/common/ScrollAnimations";
@@ -7,11 +7,26 @@ import { ThemeProvider, themeInitScript } from "@/components/common/ThemeProvide
 import { SITE_AUTHOR, SITE_PUBLISHER, SITE_URL } from "@/data/pageSeo";
 import "./globals.css";
 
-const roboto = Roboto({
+// Self-hosted rather than next/font/google: that helper downloads the font from
+// fonts.gstatic.com during the build, so any build host without reliable access
+// to Google Fonts fails with "Error while requesting resource" / module-not-found.
+// These are the official Roboto v51 variable woff2 subsets committed to the repo,
+// so the build has no network dependency. MaxOT is already self-hosted the same way.
+const roboto = localFont({
   variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
   display: "swap",
+  src: [
+    {
+      path: "../../public/fonts/roboto/roboto-latin.woff2",
+      style: "normal",
+      weight: "100 900",
+    },
+    {
+      path: "../../public/fonts/roboto/roboto-latin-ext.woff2",
+      style: "normal",
+      weight: "100 900",
+    },
+  ],
 });
 
 export const metadata = {

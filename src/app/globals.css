@@ -264,6 +264,22 @@ article[data-scroll-reveal="true"] {
   100% { transform: translateX(300%); }
 }
 
+/* Countdown: each digit group lifts as its value changes, and the seconds cell
+   carries a soft pulse so the timer visibly "lives". */
+@keyframes hvc-count-flip {
+  0%   { transform: translateY(-42%); opacity: 0; }
+  55%  { transform: translateY(4%);   opacity: 1; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+@keyframes hvc-count-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(190, 0, 16, 0); }
+  50%      { box-shadow: 0 0 0 4px rgba(190, 0, 16, 0.10); }
+}
+@keyframes hvc-count-sheen {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+
 @keyframes hvc-badge-pop {
   0%   { transform: scale(0.55); opacity: 0.5; }
   60%  { transform: scale(1.15); opacity: 1; }

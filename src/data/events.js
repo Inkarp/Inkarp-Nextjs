@@ -226,7 +226,33 @@ export const events = [
   },
 ];
 
-export const eventsBanner = `${IMG}/EventBanner.jpg`;
+// Featured event shown in the page banner, replacing the old flat EventBanner
+// image. Update these five fields when the next show is confirmed.
+//
+// Name taken from the official MMI registration page, which titles the 2026
+// Hyderabad edition "analytica Lab India" (the older "Anacon India & India Lab
+// Expo" branding is retired). The registration URL was checked and resolves.
+// The banner hides the Register button entirely if `registrationUrl` is null.
+export const featuredEvent = {
+  eyebrow: "Meet Us At",
+  name: "analytica Lab India",
+  edition: "Hyderabad 2026",
+  dateLabel: "10 – 12 September 2026",
+  venue: "HITEX Exhibition Centre, Hyderabad",
+  // Drives the banner countdown. Local time, doors-open on day one.
+  startsAt: "2026-09-10T10:00:00+05:30",
+  endsAt: "2026-09-12T18:00:00+05:30",
+  summary:
+    "Join the Inkarp team on the floor to see our laboratory and analytical instrumentation in action, talk methods with our application specialists, and plan the right setup for your lab.",
+  highlights: [
+    "Live instrument demonstrations",
+    "Application and method guidance",
+    "Meet our service and support team",
+  ],
+  image: `${IMG}/Event1.jpeg`,
+  registrationUrl: "https://mmiconnect.in/ile-hyd-2026/visitor/registration?source=website",
+};
+
 export const eventYears = [...new Set(events.map((event) => new Date(event.date).getFullYear()))].sort(
   (a, b) => a - b
 );

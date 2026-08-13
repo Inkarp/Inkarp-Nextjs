@@ -146,7 +146,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
         </div>
 
         <SectionDisclaimer>
-          Certifications and documentation are provided on request for product evaluation and compliance review. Final regulatory compliance remains your organisation's responsibility.
+          Certifications and documentation are provided on request for product evaluation and compliance review. Final regulatory compliance remains your organisation&apos;s responsibility.
         </SectionDisclaimer>
       </div>
     </section>

@@ -23,6 +23,9 @@ const REGION_BY_CITY = {
 
 const REGIONS = ['All', 'North', 'South', 'East', 'West'];
 
+// Registered head office — badged and listed first.
+const HEAD_OFFICE = 'Hyderabad';
+
 // `as` lets the host page promote this to the page's h1.
 export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   const [screenSize, setScreenSize] = useState('lg');
@@ -45,6 +48,19 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
     });
     return counts;
   }, []);
+
+  // Head office first in the list. The original index is carried through so it
+  // still matches the map pins, which render in the source data order.
+  const orderedBranches = useMemo(
+    () =>
+      branches
+        .map((branch, index) => ({ branch, index }))
+        .sort(
+          (a, b) =>
+            Number(b.branch.name === HEAD_OFFICE) - Number(a.branch.name === HEAD_OFFICE)
+        ),
+    []
+  );
 
   const isDimmed = (branch) => region !== 'All' && REGION_BY_CITY[branch.name] !== region;
 
@@ -131,9 +147,15 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                         className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red/30 motion-reduce:hidden"
                         style={{ animationDuration: '2.4s' }}
                       />
+                      {/* Head office pin is larger with a white core so it
+                          stands out from the branch pins. */}
                       <span
                         className={`relative inline-flex rounded-full bg-red transition-all duration-200 ${
-                          active ? 'size-4 ring-4 ring-red/20' : 'size-2.5'
+                          active
+                            ? 'size-4 ring-4 ring-red/20'
+                            : branch.name === HEAD_OFFICE
+                              ? 'size-3.5 ring-2 ring-white'
+                              : 'size-2.5'
                         }`}
                       />
                     </span>
@@ -141,6 +163,7 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                     {active && (
                       <span className="pointer-events-none absolute left-1/2 top-full z-40 mt-1.5 -translate-x-1/2 whitespace-nowrap rounded-md border border-ink bg-ink px-2.5 py-1 text-[10px] font-semibold text-white shadow-lg">
                         {branch.name}
+                        {branch.name === HEAD_OFFICE ? ' · Head Office' : ''}
                       </span>
                     )}
                   </button>
@@ -158,17 +181,23 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
             </div>
           </div>
 
-          {/* Branch list */}
-          <div className="flex max-h-[560px] flex-col gap-2.5 overflow-y-auto pr-1">
-            {branches.map((branch, i) => {
+          {/* Branch list — no max height or inner scroll: all 12 branches are
+              listed in full so nothing is hidden behind a scrollbar. */}
+          <div className="flex flex-col gap-2.5">
+            {orderedBranches.map(({ branch, index: i }) => {
               const isOpen = expanded === i;
               const dimmed = isDimmed(branch);
+              const isHeadOffice = branch.name === HEAD_OFFICE;
 
               return (
                 <div
                   key={branch.name}
                   className={`rounded-xl border bg-white transition-all duration-200 ${
-                    isOpen ? 'border-red shadow-md' : 'border-line-light hover:border-red/30'
+                    isOpen
+                      ? 'border-red shadow-md'
+                      : isHeadOffice
+                        ? 'border-red/50 shadow-sm'
+                        : 'border-line-light hover:border-red/30'
                   } ${dimmed ? 'opacity-40' : ''}`}
                 >
                   <button
@@ -179,9 +208,14 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                     aria-expanded={isOpen}
                     className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left"
                   >
-                    <span className="flex items-center gap-2.5">
+                    <span className="flex flex-wrap items-center gap-2.5">
                       <MdLocationPin className="size-4 shrink-0 text-red" />
                       <span className="text-sm font-semibold text-ink">{branch.name}</span>
+                      {isHeadOffice ? (
+                        <span className="rounded-full bg-red px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-parchment">
+                          Head Office
+                        </span>
+                      ) : null}
                       <span className="rounded-full border border-line-light bg-parchment-alt px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-ink-soft">
                         {REGION_BY_CITY[branch.name] ?? '—'}
                       </span>

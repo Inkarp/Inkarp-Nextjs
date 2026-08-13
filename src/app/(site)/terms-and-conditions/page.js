@@ -111,11 +111,12 @@ export default function TermsAndConditions() {
 
         <div className="mt-8 space-y-8 border border-line-light bg-parchment p-5 sm:p-8">
           <p className="text-base leading-8 text-ink-soft">
-            These Terms & Conditions govern all quotations, orders, supplies,
+            These Terms &amp; Conditions govern all quotations, orders, supplies,
             and services issued or rendered by Inkarp Instruments Pvt. Ltd. and
-            Inkarp Instruments Services (collectively,"Inkarp"). By requesting
-            a quotation, placing a Purchase Order, accepting delivery, or
-            otherwise transacting with Inkarp, the customer ("Buyer")
+            Inkarp Instruments Services (collectively, &ldquo;Inkarp&rdquo;). By
+            requesting a quotation, placing a Purchase Order, accepting delivery,
+            or otherwise transacting with Inkarp, the customer
+            (&ldquo;Buyer&rdquo;)
             acknowledges and unconditionally accepts these Terms. These Terms
             apply in addition to any quotation-specific terms; in case of
             conflict, the quotation-specific terms shall prevail for that

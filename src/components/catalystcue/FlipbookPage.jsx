@@ -1,5 +1,6 @@
 "use client";
 
+import Link from"next/link";
 import { useEffect, useRef, useState } from"react";
 import { createPortal } from"react-dom";
 
@@ -507,12 +508,12 @@ export default function FlipbookPage({ file, title }) {
       ) : null}
 
       <div className="relative z-20 grid min-h-[60px] grid-cols-[auto_1fr] items-center gap-3 border-b border-white/10 bg-navy/70 px-3 py-2 backdrop-blur sm:grid-cols-[auto_1fr_auto] sm:px-6">
-        <a
+        <Link
           className="inline-flex h-10 shrink-0 items-center justify-center border border-line-light bg-parchment/10 px-3 text-sm font-semibold text-parchment transition hover:bg-parchment hover:text-ink-soft sm:px-4"
           href="/magazine"
         >
           Back
-        </a>
+        </Link>
         <div className="min-w-0 text-center sm:pr-[72px]">
           <p className="text-[11px] uppercase tracking-wide text-parchment/60 sm:text-xs">
             Magazine

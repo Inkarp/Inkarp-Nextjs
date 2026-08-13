@@ -1,5 +1,4 @@
 import ContactForm from"@/components/contact/ContactForm";
-import LocationCards from"@/components/contact/LocationCards";
 import IndiaNetworkMap from"@/components/contact/IndiaNetworkMap";
 import SupportSection from"@/components/contact/SupportSection";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
@@ -12,8 +11,8 @@ export default function ContactUs() {
     <main className="overflow-hidden bg-white">
       <BreadcrumbJsonLd path="/contact" />
       <PageBreadcrumbs path="/contact" />
-      <LocationCards calm/>
-      <IndiaNetworkMap />
+      {/* This section now carries the page's h1. */}
+      <IndiaNetworkMap as="h1" />
       <SupportSection />
       <ContactForm />
     </main>

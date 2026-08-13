@@ -62,11 +62,14 @@ export default function ServiceMap({ data, calm = false }) {
 
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
           {/* India map with all branch pins */}
+          {/* Ratio matches IndiaMap.svg's 1847x2000 viewBox so the contained
+              map fills the frame and pin percentages line up — a square frame
+              letterboxed it and pushed every pin sideways. */}
           <div
             className={
               calm
-                ? 'relative aspect-square w-full overflow-hidden border border-line-light bg-white'
-                : 'relative aspect-square w-full overflow-hidden border border-line-light bg-parchment'
+                ? 'relative aspect-[1847/2000] w-full overflow-hidden border border-line-light bg-white'
+                : 'relative aspect-[1847/2000] w-full overflow-hidden border border-line-light bg-parchment'
             }
           >
             <div className="absolute inset-0">

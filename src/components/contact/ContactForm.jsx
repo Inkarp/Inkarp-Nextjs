@@ -44,13 +44,20 @@ export default function ContactForm() {
     {
       label:"Send email",
       value: contact.email,
-      href: `mailto:${contact.email}`,
+      // Gmail compose rather than mailto: — mailto hands off to whatever
+      // desktop mail app Windows has registered and does nothing at all when
+      // none is set, which is the common case for people living in webmail.
+      href: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+        contact.email
+      )}&su=${encodeURIComponent("Enquiry for Inkarp Instruments")}`,
       icon: FiMail,
     },
     {
       label:"Head office",
       value: contact.address,
-      href:"https://maps.google.com/?q=Inkarp%20Instruments%20Hyderabad",
+      // The verified Google Maps pin for the office, not a name search that
+      // can resolve to the wrong place.
+      href: siteConfig.mapPlaceUrl,
       icon: FiMapPin,
     },
     {
@@ -174,9 +181,11 @@ export default function ContactForm() {
         <div className="py-2 lg:py-4">
           <div className="mb-9">
             <RecTag>Contact with us</RecTag>
-            <h3 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            {/* Section-level heading, so h2 rather than h3 — it is not nested
+                under any h2 on the page. */}
+            <h2 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
               Feel free to write us anytime
-            </h3>
+            </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">
               Share your requirement and our team will route it to the right
               sales, service, or application specialist.

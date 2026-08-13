@@ -23,7 +23,8 @@ const REGION_BY_CITY = {
 
 const REGIONS = ['All', 'North', 'South', 'East', 'West'];
 
-export default function IndiaNetworkMap() {
+// `as` lets the host page promote this to the page's h1.
+export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   const [screenSize, setScreenSize] = useState('lg');
   const [region, setRegion] = useState('All');
   const [hovered, setHovered] = useState(null);
@@ -58,9 +59,9 @@ export default function IndiaNetworkMap() {
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <RecTag>Live coverage</RecTag>
-            <h2 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <Heading className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
               Inkarp&apos;s network across India
-            </h2>
+            </Heading>
             <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
               {branches.length} branches spanning {REGIONS.length - 1} regions. Hover a pin to preview a
               branch, or pick a region to narrow the network.
@@ -90,7 +91,12 @@ export default function IndiaNetworkMap() {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           {/* Map card */}
           <div className="relative rounded-2xl border border-line-light bg-white p-4 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:p-6">
-            <div className="relative aspect-square w-full rounded-xl bg-parchment/60">
+            {/* Must match IndiaMap.svg's own 1847x2000 viewBox. With a square
+                frame the contained map only filled the middle 92.35% of the
+                width, so pin percentages — which are relative to this box —
+                drifted sideways, worst at the edges. Matching the ratio makes
+                the map fill the frame exactly, so pin % == map %. */}
+            <div className="relative aspect-[1847/2000] w-full rounded-xl bg-parchment/60">
               <div className="absolute inset-0 overflow-hidden rounded-xl">
                 <Image
                   alt="India network coverage map"
@@ -189,7 +195,20 @@ export default function IndiaNetworkMap() {
 
                   {isOpen && (
                     <div className="space-y-2.5 border-t border-line-light px-4 py-3.5">
-                      <p className="text-xs leading-relaxed text-ink-soft">{branch.address}</p>
+                      {/* Address opens this branch on Google Maps. */}
+                      <a
+                        className="group inline-flex items-start gap-1.5 text-xs leading-relaxed text-ink-soft transition-colors hover:text-red"
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                          `Inkarp Instruments ${branch.name} ${branch.address}`
+                        )}`}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <MdLocationPin className="mt-0.5 size-3.5 shrink-0 text-red" />
+                        <span className="underline decoration-line-light underline-offset-2 group-hover:decoration-red/40">
+                          {branch.address}
+                        </span>
+                      </a>
                       <div className="flex flex-wrap gap-x-4 gap-y-1.5">
                         {branch.phone.split(',').map((phone, pi) => (
                           <a
@@ -205,7 +224,14 @@ export default function IndiaNetworkMap() {
                         {branch.email.split(',').map((email) => (
                           <a
                             key={email}
-                            href={`mailto:${email.trim()}`}
+                            // Gmail compose, not mailto: — see ContactForm.
+                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+                              email.trim()
+                            )}&su=${encodeURIComponent(
+                              `Enquiry for Inkarp ${branch.name}`
+                            )}`}
+                            rel="noopener noreferrer"
+                            target="_blank"
                             className="inline-flex items-center gap-1.5 text-xs font-medium text-ink underline decoration-line-light underline-offset-2 hover:text-red hover:decoration-red/40"
                           >
                             <MdEmail className="size-3.5 text-red" /> {email.trim()}

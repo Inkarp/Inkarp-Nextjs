@@ -73,7 +73,14 @@ export default function SupportSection() {
                     <a
                       aria-label={`Email ${item.email}`}
                       className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-parchment focus-visible:ring-2 focus-visible:ring-red/40"
-                      href={`mailto:${item.email}`}
+                      // Gmail compose rather than mailto: — see ContactForm.
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+                        item.email
+                      )}&su=${encodeURIComponent(
+                        `Enquiry — ${item.title.replace(/\n/g," ")}`
+                      )}`}
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <MdEmail className="size-4 shrink-0 text-red transition-colors duration-200 group-hover/link:text-parchment" />
                       <span className="truncate">{item.email}</span>

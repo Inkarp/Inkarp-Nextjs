@@ -5,7 +5,9 @@ import { MdEmail, MdLocalPhone, MdLocationPin } from 'react-icons/md';
 import { branches, getScreenSize, phoneHref } from '@/data/branches';
 import RecTag from '@/components/home/RecTag';
 
-export default function LocationCards({ data }) {
+// `as` lets the host page promote this to the page's h1 — on /contact this is
+// the first and most important heading, and the page had no h1 at all.
+export default function LocationCards({ data, as: Heading = 'h2' }) {
   const { title, description, eyebrow } = data ?? {};
   const [screenSize, setScreenSize] = useState('lg');
   const [selected, setSelected] = useState(0);
@@ -30,9 +32,9 @@ export default function LocationCards({ data }) {
         {/* Heading */}
         <div className="mb-10 max-w-2xl">
           <RecTag>{eyebrow ?? 'Service'}</RecTag>
-          <h2 className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+          <Heading className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
             {title ?? 'Inkarp service across India'}
-          </h2>
+          </Heading>
           {description ? (
             <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
               {description}
@@ -133,9 +135,11 @@ export default function LocationCards({ data }) {
                   <span className="absolute inline-flex h-full w-full bg-red/40 motion-reduce:hidden" />
                   <span className="relative inline-flex size-2.5 bg-red" />
                 </span>
-                <h3 className="text-base font-semibold text-ink">
+                {/* h2 so it sits one level under this section's heading, which
+                    is the page h1 on /contact — h3 here would skip a level. */}
+                <h2 className="text-base font-semibold text-ink">
                   {selectedBranch.name} branch
-                </h3>
+                </h2>
               </div>
 
               <div className="space-y-2.5">

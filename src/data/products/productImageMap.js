@@ -326,6 +326,7 @@ export const productImageMap = {
   "mettler-toledo:density-meter-excellence-d4": "/assets/images/productImages/Mettler/density-meter-excellence-d4.jpg",
   "mettler-toledo:titrator-easyplus-easy-ph": "/assets/images/productImages/Mettler/titrator-easyplus-easy-ph.jpg",
   "mettler-toledo:titrator-easyplus-easy-pro": "/assets/images/productImages/Mettler/titrator-easyplus-easy-pro.jpg",
+  "mettler-toledo:titrator-easyplus-easy-kf-v": "/assets/images/productImages/Mettler/easy-kfv.jpg",
   "mettler-toledo:titrator-excellence-t5": "/assets/images/productImages/Mettler/titrator-excellence-t5.jpg",
   "mettler-toledo:volumetric-kf-titrator-eva-v1": "/assets/images/productImages/Mettler/volumetric-kf-titrator-eva-v1.jpg",
   "mettler-toledo:coulometric-kf-titrator-base-eva-c1": "/assets/images/productImages/Mettler/coulometric-kf-titrator-base-eva-c1.jpg",

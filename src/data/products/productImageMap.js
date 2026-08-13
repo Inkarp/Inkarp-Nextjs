@@ -72,6 +72,9 @@ export const productImageMap = {
   "radleys:ava-lab-control-software": "/assets/images/productImages/radleys/ava-lab-control-software.webp",
   "radleys:starfish-work-station": "/assets/images/productImages/radleys/starfish-work-station.jpg",
   "radleys:carousel-12-plus-parallel-reaction-station": "/assets/images/productImages/radleys/carousel-12-plus-parallel-reaction-station.webp",
+  "radleys:carousel-6-plus-parallel-reaction-station": "/assets/images/productImages/radleys/E1-Carousel-6-Plus_1000x1000.jpg",
+  "radleys:storm-heating-cooling-work-station": "/assets/images/productImages/radleys/E1-Storm-1000x1000-1.jpg",
+  "radleys:breeze-heating-cooling-work-station": "/assets/images/productImages/radleys/E1-Breeze-1000x1000-1.jpg",
   "radleys:cooled-carousel-12-plus-parallel-reaction-station": "/assets/images/productImages/radleys/cooled-carousel-12-plus-parallel-reaction-station.jpg",
   "radleys:carousel-work-up-parallel-reaction-station": "/assets/images/productImages/radleys/carousel-work-up-parallel-reaction-station.jpg",
   "radleys:tornado-overhead-stirring-system": "/assets/images/productImages/radleys/tornado-overhead-stirring-system.webp",
@@ -286,12 +289,14 @@ export const productImageMap = {
   "chemspeed:swing-sp": "/assets/images/productImages/Chemspeed/swing-sp.png",
   "chemspeed:flex-quechers": "/assets/images/productImages/Chemspeed/flex-quechers.webp",
   "waters:alliance-hplc-system": "/assets/images/productImages/Waters/alliance-hplc-system.jpg",
-  "waters:alliance-is-hplc-system": "/assets/images/productImages/Waters/alliance-is-system-with-bottles-angled.jpg",
-  "waters:arc-hplc-system": "/assets/images/productImages/Waters/arc-hplc-QSm-pda-ftnr.jpg",
+  "waters:alliance-is-hplc-system": "/assets/images/productImages/Waters/alliance-is-hplc-system.jpg",
+  "waters:arc-hplc-system": "/assets/images/productImages/Waters/arc-hplc-system.jpg",
   "sartorius:arium-mini-plus-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
   "sartorius:arium-pro-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-pro-lab-water-purification-system.png",
   "sartorius:arium-advance-edi-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-advance-edi-lab-water-purification-system.png",
   "sartorius:arium-advance-ro-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-advance-ro-lab-water-purification-system.png",
+  "sartorius:arium-comfort-1-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-comfort-I.png",
+  "sartorius:arium-comfort-2-lab-water-purification-system": "/assets/images/productImages/Sotorius/arium-comfort-II.png",
   "mettler-toledo:refractometer-excellence-r4": "/assets/images/productImages/Mettler/refractometer-excellence-r4.jpg",
   "mettler-toledo:handheld-refractometer-mybrix": "/assets/images/productImages/Mettler/handheld-refractometer-mybrix.jpg",
   "mettler-toledo:melting-point-system-mp30": "/assets/images/productImages/Mettler/melting-point-System-mp30.jpg",
@@ -329,7 +334,9 @@ export const productImageMap = {
   "mettler-toledo:ph-meter-fp20-bio-kit": "/assets/images/productImages/Mettler/ph-meter-fp20-bio-kit.jpg",
   "mettler-toledo:cond-meter-fp30-std-kit": "/assets/images/productImages/Mettler/cond-meter-fp30-std-kit.jpg",
   "inkarp-usb:ultrasonic-bath": "/assets/images/productImages/inkarp/ultrasonic-bath.png",
-  "inkarp-usb:ultrasonic-cleaner": "/assets/images/productImages/inkarp/ultrasonic-cleaner.png"
+  "inkarp-usb:ultrasonic-cleaner": "/assets/images/productImages/inkarp/ultrasonic-cleaner.png",
+  "buchi:freeze-dryer-lyovapor-l-250": "/assets/images/productImages/Buchi/L-250.webp",
+  "mettler-toledo:balance-xpr3": "/assets/images/productImages/Mettler/xpr3.jpg"
 };
 
 export const principalFallbackImages = {

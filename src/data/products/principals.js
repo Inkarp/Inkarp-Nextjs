@@ -635,7 +635,12 @@ export function getAllProducts() {
             ...legacyProducts,
             ...standaloneDetailProducts,
             ...getJsonCatalogProducts(),
-        ]);
+        ]).sort((a, b) =>
+            String(a.name ?? "").localeCompare(String(b.name ?? ""), undefined, {
+                numeric: true,
+                sensitivity: "base",
+            })
+        );
     }
 
     return allProductsCache;

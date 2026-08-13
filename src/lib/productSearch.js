@@ -10,6 +10,10 @@ function normalizeSearchValue(value) {
     .trim();
 }
 
+function normalizeCompactSearchValue(value) {
+  return normalizeSearchValue(value).replace(/\s+/g, "");
+}
+
 function flattenSearchValues(value) {
   if (!value) {
     return [];
@@ -92,13 +96,27 @@ export function getProductSearchText(product) {
 }
 
 export function productMatchesSearch(product, query) {
-  const terms = normalizeSearchValue(query).split(" ").filter(Boolean);
+  const normalizedQuery = normalizeSearchValue(query);
+  const terms = normalizedQuery.split(" ").filter(Boolean);
 
   if (!terms.length) {
     return true;
   }
 
   const searchableText = getProductSearchText(product);
+  const compactSearchableText = normalizeCompactSearchValue(searchableText);
+  const compactQuery = normalizeCompactSearchValue(query);
 
-  return terms.every((term) => searchableText.includes(term));
+  if (compactQuery && compactSearchableText.includes(compactQuery)) {
+    return true;
+  }
+
+  return terms.every((term) => {
+    const compactTerm = normalizeCompactSearchValue(term);
+
+    return (
+      searchableText.includes(term) ||
+      (compactTerm && compactSearchableText.includes(compactTerm))
+    );
+  });
 }

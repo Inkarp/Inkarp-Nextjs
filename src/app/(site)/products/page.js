@@ -72,7 +72,6 @@ function toProductCard(product) {
     principalName: product.principalName,
     countryOfOrigin: product.countryOfOrigin,
     href: product.href,
-    apiPath: product.apiPath,
     image: product.image,
     imageAlt: product.imageAlt,
     name: product.name,

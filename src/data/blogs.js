@@ -922,7 +922,8 @@ const rawPosts = [
     date: "2025-06-05",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    image: "/assets/blogs/BlogThirteen/Image1.jpg",
+    // Image1.jpg is a wide banner that the card's object-cover crop cut mid-word.
+    image: "/assets/blogs/BlogThirteen/arv7-immunofluorescence-cover.svg",
     tags: [
       "Immunofluorescence",
       "ARv7",
@@ -1300,7 +1301,8 @@ const rawPosts = [
     date: "2025-10-22",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    image: "/assets/images/PrincipalLogos/RowFour/Rotochrome.png",
+    // Was the RotaChrom principal logo, which the card cropped into illegibility.
+    image: "/assets/blogs/BlogSixteen/rotachrom-cpc-oligo-cover.svg",
     tags: [
       "Centrifugal Partition Chromatography",
       "Oligonucleotide Purification",
@@ -1928,6 +1930,8 @@ const rawPosts = [
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
+    // This post had no cover at all, so its card rendered as a bare text block.
+    image: "/assets/blogs/BlogTwentySix/phosphorylation-akt-cover.svg",
     tags: [
       "QF-Pro",
       "Akt/PKB",

@@ -91,11 +91,11 @@ export default function ContactForm() {
       if (response.ok && data?.success) {
         setStatus({
           type:"success",
-          message:"Message sent successfully! Redirecting...",
+          message:"Thank you for contacting us. Redirecting...",
         });
         setFormData(getInitialFormData());
         event.target.reset();
-        window.setTimeout(() => router.push("/thank-you"), 200);
+        window.setTimeout(() => router.push("/thank-you?type=contact"), 200);
       } else {
         setStatus({
           type:"error",

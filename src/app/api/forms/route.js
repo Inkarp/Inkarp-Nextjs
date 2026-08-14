@@ -56,6 +56,8 @@ function validate(formType, fields) {
 
 function acknowledgementFor(formType) {
   switch (formType) {
+    case "contact":
+      return "Thank you for contacting Inkarp. We have received your enquiry and our team will get back to you shortly.";
     case "webinar":
       return "We have received your webinar registration. Our team will share the joining information with you soon.";
     case "catalyst":

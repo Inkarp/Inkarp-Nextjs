@@ -222,10 +222,10 @@ function LabCard({ title, image, collageImage, date, formLink }) {
   return (
     <div className="flex h-full flex-col">
       <div className="group relative overflow-hidden bg-parchment-alt p-1 transition-all duration-300">
-        <div className="relative h-[420px] w-full overflow-hidden sm:h-[470px] lg:h-[520px]">
+        <div className="relative h-[420px] w-full overflow-hidden bg-white sm:h-[470px] lg:h-[560px] xl:h-[520px]">
           <Image
             alt={alt}
-            className={`object-cover transition duration-300 ${
+            className={`object-contain transition duration-300 ${
               isPast && !collageImage ?"group-hover:blur-sm group-hover:brightness-75" :""
             }`}
             fill
@@ -349,7 +349,7 @@ export default function EventsPage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 items-stretch gap-3 px-2 py-4 sm:grid-cols-2 sm:gap-4 sm:px-4 md:px-6 lg:grid-cols-3 lg:px-10">
+      <div className="grid grid-cols-1 items-stretch gap-3 px-2 py-4 sm:grid-cols-2 sm:gap-4 sm:px-4 md:px-6 lg:grid-cols-2 lg:px-10 xl:grid-cols-3">
         {filteredEvents.length === 0 ? (
           <div className="col-span-full py-8 text-center text-ink-soft">
             <p className="text-sm sm:text-base">No events found for selected filters.</p>

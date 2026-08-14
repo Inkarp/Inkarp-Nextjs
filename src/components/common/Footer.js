@@ -54,7 +54,7 @@ export default function Footer() {
   ]);
 
   return (
-    <footer className="font-maxot relative overflow-hidden border-t border-line-light bg-parchment-alt text-ink">
+    <footer className="relative overflow-hidden border-t border-line-light bg-parchment-alt text-ink">
       {/* Accent rule + faint blueprint grid: the technical texture used across the home sections. */}
       <div
         aria-hidden="true"
@@ -103,7 +103,7 @@ export default function Footer() {
 
             <p className="mt-5 inline-flex items-center gap-2 border border-line-light bg-parchment px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-soft">
               <span aria-hidden="true" className="size-1.5 rounded-full bg-red" />
-              Pan-India Sales &amp; Service Network
+              Reach Us &amp; 
             </p>
 
             <div aria-label="Social media links" className="mt-6 flex flex-wrap gap-2.5">

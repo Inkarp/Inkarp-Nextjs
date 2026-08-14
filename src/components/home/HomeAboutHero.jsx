@@ -54,10 +54,6 @@ function SlideWorkflow() {
                 className="object-cover"
               />
             </div>
-            <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-              <span>Fig. 01 — Inkarp Scientific Solutions</span>
-              <span>Workflow-Led Approach</span>
-            </div>
           </div>
         </div>
       </div>
@@ -122,10 +118,6 @@ function SlideAbout() {
                 sizes="(min-width: 1024px) 520px, 90vw"
                 className="object-cover"
               />
-            </div>
-            <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-              <span>Fig. 01 — Inkarp Scientific Solutions</span>
-              <span>Pan-India Support</span>
             </div>
           </div>
         </div>

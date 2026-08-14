@@ -204,7 +204,7 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className={`font-maxot fixed inset-x-0 top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out will-change-transform ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
+        className={`fixed inset-x-0 top-0 z-50 shadow-[0_14px_40px_rgba(15,23,42,0.08)] transition-transform duration-300 ease-out will-change-transform ${shouldShowHeader ? "translate-y-0" : "-translate-y-full"
           }`}
       >
       {/* <AnnouncementBar collapsed={!(isAtTop || isMenuOpen || isSearchOpen)} /> */}
@@ -294,16 +294,16 @@ export default function Header() {
 
             <nav
               aria-label="Primary navigation"
-              className="hidden min-w-0 flex-1 xl:block"
+              className="hidden min-w-0 flex-1 2xl:block"
             >
-              <ul className="flex items-center justify-center gap-2">
+              <ul className="flex items-center justify-center gap-1">
                 {mainNavigation.map((item) => {
                   const active = isNavActive(item, pathname);
 
                   return (
                     <li className="group relative" key={item.label}>
                       <Link
-                        className={`flex h-11 items-center gap-1 px-3 text-base  transition ${active
+                        className={`flex h-11 items-center gap-1 whitespace-nowrap px-2.5 text-base transition ${active
                             ? "text-red"
                             : "text-ink-soft hover:text-red dark:text-zinc-300"
                           }`}
@@ -346,7 +346,7 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div className="ml-auto gap-4 hidden shrink-0 items-stretch xl:flex">
+            <div className="ml-auto hidden shrink-0 items-stretch gap-4 2xl:flex">
 
               <div className="mx-6 w-px bg-zinc-200" />
               <button
@@ -369,7 +369,7 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="ml-auto flex items-center gap-2 xl:hidden">
+            <div className="ml-auto flex items-center gap-2 2xl:hidden">
               <a
                 aria-label="Download product profile"
                 className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-red/40 hover:text-red dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
@@ -405,7 +405,7 @@ export default function Header() {
       {isMenuOpen ? (
         <nav
           aria-label="Mobile navigation"
-          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] xl:hidden dark:border-zinc-800 dark:bg-zinc-950"
+          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] 2xl:hidden dark:border-zinc-800 dark:bg-zinc-950"
         >
           <ul className="space-y-1">
             {mainNavigation.map((item) => {
@@ -416,7 +416,7 @@ export default function Header() {
                 <li key={item.label}>
                   <div className="flex items-center gap-2">
                     <Link
-                      className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium transition ${active
+                      className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium whitespace-nowrap transition ${active
                           ? "bg-red text-parchment"
                           : "text-ink hover:bg-parchment-alt hover:text-red dark:text-zinc-200 dark:hover:bg-zinc-900"
                         }`}

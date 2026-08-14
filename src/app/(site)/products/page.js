@@ -7,6 +7,12 @@ import RecTag from "@/components/home/RecTag";
 import StickyProductSearch from "@/components/products/StickyProductSearch";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { buildPageMetadata } from "@/data/pageSeo";
+import { workflowIndustries } from "@/data/homeShowcase";
+import {
+  getWorkflowProducts,
+  mergeWorkflowContent,
+  normalizeTags,
+} from "@/lib/workflowContent";
 
 const VIEW_TABS = [
   { href: "/products", label: "By Product", active: true, Icon: FiBox },
@@ -87,19 +93,60 @@ function getParams(searchParams, key) {
   return (Array.isArray(value) ? value : [value]).filter(Boolean);
 }
 
-const INDUSTRY_LABEL_OVERRIDES = {
-  rnd: "R&D",
-};
+function productKey(product) {
+  return `${product.principalSlug}:${product.slug}`;
+}
 
-function formatIndustryLabel(tag) {
-  if (INDUSTRY_LABEL_OVERRIDES[tag]) {
-    return INDUSTRY_LABEL_OVERRIDES[tag];
+function productMatchesWorkflowIndustry(product, industryContent, workflowProductKeys) {
+  const productTags = normalizeTags([
+    product.industry,
+    product.category,
+    product.industryTags,
+    product.workflowTags,
+    product.problemSolutionTags,
+    product.tags,
+    product.searchTags,
+    product.applications,
+    product.processApplication,
+  ]);
+  const industryTags = normalizeTags(industryContent.industryTags);
+
+  return (
+    workflowProductKeys.has(productKey(product)) ||
+    industryTags.some((tag) => productTags.includes(tag))
+  );
+}
+
+function buildWorkflowIndustryIndex(allProducts) {
+  return workflowIndustries.map((industry) => {
+    const content = mergeWorkflowContent(industry, null);
+    const workflowProductKeys = new Set(getWorkflowProducts(content).map(productKey));
+    const productKeys = new Set(
+      allProducts
+        .filter((product) => productMatchesWorkflowIndustry(product, content, workflowProductKeys))
+        .map(productKey)
+    );
+
+    return {
+      ...industry,
+      content,
+      productKeys,
+    };
+  });
+}
+
+function filterProductsByWorkflowIndustries(products, selectedIndustries, workflowIndustryIndex) {
+  if (!selectedIndustries.length) {
+    return products;
   }
 
-  return String(tag)
-    .replace(/[-_]+/g, " ")
-    .trim()
-    .replace(/\b\w/g, (letter) => letter.toUpperCase());
+  const selectedProductKeys = new Set(
+    workflowIndustryIndex
+      .filter((industry) => selectedIndustries.includes(industry.cat))
+      .flatMap((industry) => [...industry.productKeys])
+  );
+
+  return products.filter((product) => selectedProductKeys.has(productKey(product)));
 }
 
 export default async function ProductsPage({ searchParams }) {
@@ -110,12 +157,16 @@ export default async function ProductsPage({ searchParams }) {
   const filters = {
     q: getParam(params, "q"),
     principals: selectedBrands,
-    industries: selectedIndustries,
     applications: selectedApplications,
   };
   const allProducts = getAllProducts();
   const totalProducts = allProducts.length;
-  const products = searchProducts(filters);
+  const workflowIndustryIndex = buildWorkflowIndustryIndex(allProducts);
+  const products = filterProductsByWorkflowIndustries(
+    searchProducts(filters),
+    selectedIndustries,
+    workflowIndustryIndex
+  );
   const productCards = products.map(toProductCard);
   const productCountsByBrand = allProducts.reduce((counts, product) => {
     counts.set(product.principalSlug, (counts.get(product.principalSlug) ?? 0) + 1);
@@ -126,19 +177,11 @@ export default async function ProductsPage({ searchParams }) {
     value: principal.slug,
     count: productCountsByBrand.get(principal.slug) ?? 0,
   }));
-  const productCountsByIndustry = allProducts.reduce((counts, product) => {
-    (product.industryTags ?? []).forEach((tag) => {
-      counts.set(tag, (counts.get(tag) ?? 0) + 1);
-    });
-    return counts;
-  }, new Map());
-  const industryOptions = [...productCountsByIndustry.keys()]
-    .sort()
-    .map((tag) => ({
-      label: formatIndustryLabel(tag),
-      value: tag,
-      count: productCountsByIndustry.get(tag),
-    }));
+  const industryOptions = workflowIndustryIndex.map((industry) => ({
+    label: industry.industry,
+    value: industry.cat,
+    count: industry.productKeys.size,
+  }));
   const productCountsByApplication = allProducts.reduce((counts, product) => {
     getProductApplicationValues(product).forEach((application) => {
       counts.set(application, (counts.get(application) ?? 0) + 1);

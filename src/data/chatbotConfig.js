@@ -58,7 +58,7 @@ export const CHATBOT_FIELDS = {
     { name: "country", label: "Country", type: "text", required: true },
     { name: "state", label: "State", type: "text", required: true },
     { name: "city", label: "City", type: "text", required: true },
-    { name: "gst", label: "GST", type: "text", required: true },
+    { name: "gst", label: "GST", type: "text", required: false },
   ],
   Service: [
     { name: "customerName", label: "Customer Name", type: "text", required: true },
@@ -91,7 +91,7 @@ export const CHATBOT_FIELDS = {
     { name: "company", label: "Company", type: "text", required: true },
     { name: "email", label: "Email", type: "email", required: true },
     { name: "contact", label: "Contact", type: "tel", required: true },
-    { name: "gst", label: "GST", type: "text", required: true },
+    { name: "gst", label: "GST", type: "text", required: false },
     { name: "country", label: "Country", type: "text", required: true },
     { name: "state", label: "State", type: "text", required: true },
     { name: "billingAddress", label: "Billing Address", type: "textarea", required: true },

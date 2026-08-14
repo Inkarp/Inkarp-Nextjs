@@ -94,8 +94,8 @@ export function mergeWorkflowContent(activeIndustry, activeTopic) {
       ...(topic.seo ?? {}),
     },
     workflowTags: [
-      activeTopic.tag,
-      activeTopic.title,
+      activeTopic?.tag,
+      activeTopic?.title,
       ...toArray(defaults.workflowTags),
       ...toArray(industry.workflowTags),
       ...toArray(topic.workflowTags),
@@ -116,7 +116,7 @@ export function mergeWorkflowContent(activeIndustry, activeTopic) {
     productQueryTags: [
       ...toArray(topic.productQueryTags),
       ...toArray(industry.productQueryTags),
-      activeTopic.tag,
+      activeTopic?.tag,
       activeIndustry.cat,
     ],
     problemSolutions,

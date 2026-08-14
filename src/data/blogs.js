@@ -279,9 +279,7 @@ const rawPosts = [
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    // Image1.jpeg is a wide banner whose text got sliced by the card's
-    // object-cover crop. This vector cover is composed to survive that crop.
-    image: "/assets/blogs/BlogFour/ctc-detection-cover.svg",
+    image: "/assets/blogs/BlogFour/cytefinder-ii.jpg",
     tags: [
       "Circulating Tumor Cells",
       "Oncology Diagnostics",
@@ -295,7 +293,7 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogFour/Image2.jpg",
+        imageUrl: "/assets/blogs/BlogFour/cytefinder-ii.jpg",
         caption: "RareCyte CyteFinder® II",
       },
       {
@@ -922,8 +920,7 @@ const rawPosts = [
     date: "2025-06-05",
     author: "Inkarp Applications Team",
     readTime: "8 min read",
-    // Image1.jpg is a wide banner that the card's object-cover crop cut mid-word.
-    image: "/assets/blogs/BlogThirteen/arv7-immunofluorescence-cover.svg",
+    image: "/assets/blogs/BlogFour/cytefinder-ii.jpg",
     tags: [
       "Immunofluorescence",
       "ARv7",
@@ -947,7 +944,7 @@ const rawPosts = [
       },
       {
         type: "image",
-        imageUrl: "/assets/blogs/BlogThirteen/Image2.jpg",
+        imageUrl: "/assets/blogs/BlogFour/cytefinder-ii.jpg",
         caption: "RareCyte CyteFinder II",
       },
       {
@@ -1301,8 +1298,7 @@ const rawPosts = [
     date: "2025-10-22",
     author: "Inkarp Applications Team",
     readTime: "7 min read",
-    // Was the RotaChrom principal logo, which the card cropped into illegibility.
-    image: "/assets/blogs/BlogSixteen/rotachrom-cpc-oligo-cover.svg",
+    image: "/assets/blogs/BlogSixteen/rotachrom-cpc-modeler.jpg",
     tags: [
       "Centrifugal Partition Chromatography",
       "Oligonucleotide Purification",
@@ -1311,7 +1307,7 @@ const rawPosts = [
     sections: [
       {
         type: "image",
-        imageUrl: "/assets/images/PrincipalLogos/RowFour/Rotochrome.png",
+        imageUrl: "/assets/blogs/BlogSixteen/rotachrom-cpc-modeler.jpg",
         caption: "RotaChrom — Centrifugal Partition Chromatography systems",
       },
       {
@@ -1930,14 +1926,18 @@ const rawPosts = [
     date: "2024-02-02",
     author: "Inkarp Applications Team",
     readTime: "9 min read",
-    // This post had no cover at all, so its card rendered as a bare text block.
-    image: "/assets/blogs/BlogTwentySix/phosphorylation-akt-cover.svg",
+    image: "/assets/blogs/BlogTwentySix/hawk-violet-3-qf-pro.jpg",
     tags: [
       "QF-Pro",
       "Akt/PKB",
       "Biomarker Analysis",
     ],
     sections: [
+      {
+        type: "image",
+        imageUrl: "/assets/blogs/BlogTwentySix/hawk-violet-3-qf-pro.jpg",
+        caption: "Hawk Biosystems Violet 3.0 platform for QF-Pro® analysis",
+      },
       {
         type: "text",
         content: "Clear cell renal cell carcinoma (ccRCC) is the most prevalent and aggressive subtype of renal cell carcinoma, presenting significant therapeutic challenges due to its radioresistance, chemoresistance, and genetic variability. With a five-year mortality rate of 40%, there is an urgent need for reliable prognostic biomarkers to facilitate personalized treatment approaches. Recent research suggests that monitoring oncoprotein activation states, specifically Akt/PKB (Protein Kinase B) and STAT3 activation, using QF-Pro® technology may offer a promising diagnostic tool with prognostic significance.",

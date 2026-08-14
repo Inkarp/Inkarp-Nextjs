@@ -144,7 +144,7 @@ export default function HomeEventsInsights() {
 
           <div>
             <div className="mb-6 flex items-center justify-between gap-3">
-              <h3 className="text-lg font-semibold text-ink">From the blog</h3>
+              <h3 className="text-lg font-semibold text-ink">From the blogs</h3>
               <Link href="/blog" className="text-sm font-semibold text-red">
                 View all posts →
               </Link>

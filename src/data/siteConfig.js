@@ -1,10 +1,22 @@
+const ORIGINAL_LOGO = "/InkarpLogo.svg";
+const INDEPENDENCE_DAY_LOGO = "/assets/inkarp-independance-logo.png";
+const INDEPENDENCE_DAY_LOGO_END = new Date("2026-08-17T00:00:00+05:30");
+
+function getActiveCompanyLogo() {
+  return new Date() < INDEPENDENCE_DAY_LOGO_END
+    ? INDEPENDENCE_DAY_LOGO
+    : ORIGINAL_LOGO;
+}
+
 export const siteConfig = {
   company: {
     name: "Inkarp",
     tagline: "Scientific and analytical instrumentation solutions",
     description:
       "Inkarp Instruments Pvt Ltd partners with leading global brands to deliver laboratory equipment, analytical instruments, consumables, and application support across India.",
-    logo: "/InkarpLogo.svg",
+    logo: getActiveCompanyLogo(),
+    originalLogo: ORIGINAL_LOGO,
+    independenceDayLogo: INDEPENDENCE_DAY_LOGO,
   },
   navigation: [
     {

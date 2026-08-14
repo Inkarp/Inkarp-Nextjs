@@ -34,7 +34,9 @@ const SUBMIT_BUTTON_CLASS =
 const TOP_LAYER = 2147483647;
 const AUTO_OPEN_DELAY_MS = 9000;
 const AUTO_OPEN_STORAGE_KEY = "inkarp-chatbot-seen";
+const GREETING_STORAGE_KEY = "inkarp-chatbot-greeting-dismissed";
 const PANEL_TRANSITION_MS = 250;
+const LAUNCHER_GREETING = "I am Dexter. How can I help you?";
 
 const ENQUIRY_ICONS = {
   Product: FiBox,
@@ -87,6 +89,22 @@ function rememberChatbotSeen() {
 function hasSeenChatbot() {
   try {
     return window.sessionStorage.getItem(AUTO_OPEN_STORAGE_KEY) === "true";
+  } catch {
+    return true;
+  }
+}
+
+function rememberGreetingDismissed() {
+  try {
+    window.sessionStorage.setItem(GREETING_STORAGE_KEY, "true");
+  } catch {
+    // Session storage can be unavailable in hardened browser contexts.
+  }
+}
+
+function hasDismissedGreeting() {
+  try {
+    return window.sessionStorage.getItem(GREETING_STORAGE_KEY) === "true";
   } catch {
     return true;
   }
@@ -166,6 +184,7 @@ export default function FloatingChatbot() {
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [hasOpenedOnce, setHasOpenedOnce] = useState(false);
+  const [showGreetingTooltip, setShowGreetingTooltip] = useState(() => typeof window !== "undefined" && !hasDismissedGreeting());
   const [showAttentionPulse, setShowAttentionPulse] = useState(() => typeof window !== "undefined" && !hasSeenChatbot());
   const [category, setCategory] = useState("");
   const [step, setStep] = useState("type");
@@ -214,7 +233,10 @@ export default function FloatingChatbot() {
     function handleKeyDown(event) {
       if (event.key === "Escape") {
         event.preventDefault();
-        closeChatbot();
+        setIsOpen(false);
+        setShowGreetingTooltip(false);
+        rememberGreetingDismissed();
+        rememberChatbotSeen();
       }
     }
 
@@ -250,6 +272,7 @@ export default function FloatingChatbot() {
   function openChatbot() {
     setHasOpenedOnce(true);
     setIsOpen(true);
+    dismissGreetingTooltip();
     setShowAttentionPulse(false);
     rememberChatbotSeen();
     if (step === "workflow-result" || step === "success") setStep("type");
@@ -257,7 +280,13 @@ export default function FloatingChatbot() {
 
   function closeChatbot() {
     setIsOpen(false);
+    dismissGreetingTooltip();
     rememberChatbotSeen();
+  }
+
+  function dismissGreetingTooltip() {
+    setShowGreetingTooltip(false);
+    rememberGreetingDismissed();
   }
 
   function resetFlow() {
@@ -420,6 +449,28 @@ export default function FloatingChatbot() {
 
   return createPortal(
     <>
+      {showGreetingTooltip && !isOpen ? (
+        <div
+          className="fixed max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+          role="status"
+          style={{ bottom: "2.25rem", right: "5.25rem", zIndex: TOP_LAYER }}
+        >
+          {LAUNCHER_GREETING}
+          <button
+            aria-label="Dismiss Dexter greeting"
+            className="absolute right-2 top-2 inline-flex size-5 items-center justify-center rounded-full text-ink-soft transition hover:bg-red/10 hover:text-red"
+            onClick={dismissGreetingTooltip}
+            type="button"
+          >
+            <FiX aria-hidden="true" className="size-3.5" />
+          </button>
+          <span
+            aria-hidden="true"
+            className="absolute -right-1.5 bottom-4 size-3 rotate-45 border-r border-t border-line-light bg-white dark:border-zinc-700 dark:bg-zinc-900"
+          />
+        </div>
+      ) : null}
+
       <button
         aria-expanded={isOpen}
         aria-label="Open website chatbot"

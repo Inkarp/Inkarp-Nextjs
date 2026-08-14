@@ -145,7 +145,7 @@ export default function CareersForm() {
       }
 
       const controller = new AbortController();
-      const timeoutId = window.setTimeout(() => controller.abort(), 15000);
+      const timeoutId = window.setTimeout(() => controller.abort(), 45000);
 
       const response = await fetch("/api/careers/submit",
         {
@@ -181,7 +181,7 @@ export default function CareersForm() {
       setStatus({
         type:"error",
         message: isAbort
-          ?"Request timed out. Please try again in a moment or check your connection."
+          ?"The application is taking longer than expected. Please try again in a moment."
           :"Couldn't reach the server. Please try again or check your network.",
       });
     } finally {

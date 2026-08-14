@@ -12,7 +12,10 @@ function getClientPromise() {
   }
 
   if (!clientPromise) {
-    clientPromise = new MongoClient(uri).connect();
+    clientPromise = new MongoClient(uri, {
+      connectTimeoutMS: 8000,
+      serverSelectionTimeoutMS: 8000,
+    }).connect();
     globalThis._mongoClientPromise = clientPromise;
   }
 

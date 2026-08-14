@@ -1,3 +1,4 @@
+import { after } from "next/server";
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 import { TRACKING_FIELD_KEYS, normalizeTracking } from "@/lib/serverTracking";
@@ -22,6 +23,37 @@ function extensionOf(filename = "") {
 
 function fieldValue(formData, key) {
   return String(formData.get(key) || "").trim();
+}
+
+async function sendCareerEmails({ fields, submission, tracking, resume, resumeBuffer }) {
+  try {
+    await sendFormNotification({
+      subject: `New Career Application: ${fields.role}`,
+      fields: submission,
+      tracking,
+      replyTo: fields.email,
+      attachments: [
+        {
+          filename: resume.name,
+          content: resumeBuffer,
+          contentType: resume.type,
+        },
+      ],
+    });
+  } catch (error) {
+    console.error("[careers] failed to send notification email:", error.message);
+  }
+
+  try {
+    await sendUserAcknowledgement({
+      to: fields.email,
+      name: fields.name,
+      subject: "Thank you for applying to Inkarp",
+      intro: `We have received your application for the ${fields.role} position at Inkarp. Our team will review it and get back to you soon.`,
+    });
+  } catch (error) {
+    console.error("[careers] failed to send acknowledgement email:", error.message);
+  }
 }
 
 export async function POST(request) {
@@ -85,35 +117,16 @@ export async function POST(request) {
     );
   }
 
-  try {
-    const resumeBuffer = Buffer.from(await resume.arrayBuffer());
-    await sendFormNotification({
-      subject: `New Career Application: ${fields.role}`,
-      fields: submission,
+  const resumeBuffer = Buffer.from(await resume.arrayBuffer());
+  after(() =>
+    sendCareerEmails({
+      fields,
+      submission,
       tracking,
-      replyTo: fields.email,
-      attachments: [
-        {
-          filename: resume.name,
-          content: resumeBuffer,
-          contentType: resume.type,
-        },
-      ],
-    });
-  } catch (error) {
-    console.error("[careers] failed to send notification email:", error.message);
-  }
-
-  try {
-    await sendUserAcknowledgement({
-      to: fields.email,
-      name: fields.name,
-      subject: "Thank you for applying to Inkarp",
-      intro: `We have received your application for the ${fields.role} position at Inkarp. Our team will review it and get back to you soon.`,
-    });
-  } catch (error) {
-    console.error("[careers] failed to send acknowledgement email:", error.message);
-  }
+      resume,
+      resumeBuffer,
+    })
+  );
 
   return Response.json({ success: true, message: "Application submitted successfully" }, { status: 201 });
 }

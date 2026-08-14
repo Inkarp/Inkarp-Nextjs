@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
-import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import RecTag from "./RecTag";
 import { googleReviews, googleReviewsSummary } from "@/data/homeSections";
-
-const AUTO_ROTATE_MS = 6000;
 
 function StarRating({ rating }) {
   return (
@@ -18,47 +15,8 @@ function StarRating({ rating }) {
   );
 }
 
-// 3 cards per page on desktop, 2 on tablet, 1 on mobile.
-function useCardsPerPage() {
-  const [perPage, setPerPage] = useState(3);
-
-  useEffect(() => {
-    const tablet = window.matchMedia("(min-width: 640px)");
-    const desktop = window.matchMedia("(min-width: 1024px)");
-    const update = () => setPerPage(desktop.matches ? 3 : tablet.matches ? 2 : 1);
-
-    update();
-    tablet.addEventListener("change", update);
-    desktop.addEventListener("change", update);
-    return () => {
-      tablet.removeEventListener("change", update);
-      desktop.removeEventListener("change", update);
-    };
-  }, []);
-
-  return perPage;
-}
-
 export default function HomeClientReviews() {
-  const perPage = useCardsPerPage();
-  const pageCount = Math.max(1, Math.ceil(googleReviews.length / perPage));
-  const [page, setPage] = useState(0);
-  const [paused, setPaused] = useState(false);
-
-  // Keep the page in range when the breakpoint changes.
-  const safePage = Math.min(page, pageCount - 1);
-
-  useEffect(() => {
-    if (pageCount < 2 || paused) {
-      return undefined;
-    }
-
-    const timer = window.setInterval(() => {
-      setPage((current) => (current + 1) % pageCount);
-    }, AUTO_ROTATE_MS);
-
-    return () => window.clearInterval(timer);
-  }, [pageCount, paused]);
+  const reviewLoop = [...googleReviews, ...googleReviews];
 
   return (
     <section className="bg-parchment-alt py-[78px]" id="client-reviews" data-reveal>
@@ -102,80 +60,66 @@ export default function HomeClientReviews() {
           </a>
         </div>
 
-        <div
-          className="mt-10"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          {/* -mx-2.5 cancels the per-slide gutter so cards align with the section edges. */}
-          <div className="-mx-2.5 overflow-hidden">
-            <div
-              className="flex items-stretch transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${safePage * 100}%)` }}
-            >
-              {googleReviews.map((review) => (
-                <div
-                  className="shrink-0 px-2.5"
-                  key={review.id}
-                  style={{ width: `${100 / perPage}%` }}
-                >
-                  <div className="flex h-full flex-col rounded-xl border border-line-light bg-white p-6">
-                    <div className="flex items-center gap-3">
-                      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-red/10 text-sm font-bold text-red">
-                        {review.initials}
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-ink">{review.name}</p>
-                        <p className="text-xs text-ink-soft">{review.date}</p>
+        <div className="mt-10 overflow-hidden">
+          <div className="-mx-2.5">
+            <div className="home-review-marquee flex w-max items-stretch">
+              {reviewLoop.map((review, index) => {
+                const isDuplicate = index >= googleReviews.length;
+
+                return (
+                  <div
+                    aria-hidden={isDuplicate ? "true" : undefined}
+                    className="w-[min(82vw,360px)] shrink-0 px-2.5 sm:w-[340px] lg:w-[380px]"
+                    key={`${review.id}-${index}`}
+                  >
+                    <div className="flex h-full flex-col rounded-xl border border-line-light bg-white p-6">
+                      <div className="flex items-center gap-3">
+                        <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-red/10 text-sm font-bold text-red">
+                          {review.initials}
+                        </span>
+                        <div>
+                          <p className="text-sm font-semibold text-ink">{review.name}</p>
+                          <p className="text-xs text-ink-soft">{review.date}</p>
+                        </div>
                       </div>
+                      <div className="mt-4">
+                        <StarRating rating={review.rating} />
+                      </div>
+                      <p className="mt-3 text-sm leading-6 text-ink-soft">{review.text}</p>
                     </div>
-                    <div className="mt-4">
-                      <StarRating rating={review.rating} />
-                    </div>
-                    <p className="mt-3 text-sm leading-6 text-ink-soft">{review.text}</p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
-
-          {pageCount > 1 ? (
-            <div className="mt-7 flex items-center justify-center gap-4">
-              <button
-                aria-label="Previous reviews"
-                className="flex size-9 items-center justify-center rounded-full border border-line-light bg-white text-ink-soft transition hover:border-red hover:text-red"
-                onClick={() => setPage((current) => (current - 1 + pageCount) % pageCount)}
-                type="button"
-              >
-                <FiChevronLeft aria-hidden="true" />
-              </button>
-
-              <div className="flex items-center gap-2">
-                {Array.from({ length: pageCount }, (_, index) => (
-                  <button
-                    aria-label={`Show reviews page ${index + 1}`}
-                    className={`h-2 rounded-full transition-all ${
-                      safePage === index ? "w-6 bg-red" : "w-2 bg-ink-soft/25 hover:bg-ink-soft/45"
-                    }`}
-                    key={index}
-                    onClick={() => setPage(index)}
-                    type="button"
-                  />
-                ))}
-              </div>
-
-              <button
-                aria-label="Next reviews"
-                className="flex size-9 items-center justify-center rounded-full border border-line-light bg-white text-ink-soft transition hover:border-red hover:text-red"
-                onClick={() => setPage((current) => (current + 1) % pageCount)}
-                type="button"
-              >
-                <FiChevronRight aria-hidden="true" />
-              </button>
-            </div>
-          ) : null}
         </div>
       </div>
+      <style jsx>{`
+        .home-review-marquee {
+          animation: home-review-marquee 52s linear infinite;
+        }
+
+        .home-review-marquee:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes home-review-marquee {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .home-review-marquee {
+            animation: none;
+            overflow-x: auto;
+            max-width: 100%;
+          }
+        }
+      `}</style>
     </section>
   );
 }

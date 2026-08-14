@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FiArrowRight } from "react-icons/fi";
 import WorkflowIcon from "@/components/home/WorkflowIcon";
 import WorkflowProblemProductPanel from "@/components/products/WorkflowProblemProductPanel";
 import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
@@ -92,9 +93,13 @@ function WorkflowList({ activeIndustry, topics }) {
             <p className="mt-2 flex-1 text-[13px] text-ink-soft">{topic.desc}</p>
             <Link
               href={`/workflows/${activeIndustry.cat}/${topicSlug(topic.tag)}`}
-              className="mt-4 inline-flex w-fit items-center gap-2 bg-red px-4 py-2 text-xs font-semibold text-ink transition hover:bg-transparent hover:text-red"
+              className="group mt-5 inline-flex h-10 w-fit items-center gap-2 border border-red bg-red px-4 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(201,0,22,0.14)] transition hover:-translate-y-0.5 hover:bg-red-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
             >
-              Open workflow
+              <span>Open workflow</span>
+              <FiArrowRight
+                aria-hidden="true"
+                className="text-sm transition-transform group-hover:translate-x-0.5"
+              />
             </Link>
           </div>
         ))}

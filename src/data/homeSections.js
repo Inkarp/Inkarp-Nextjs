@@ -17,9 +17,8 @@ export const googleReviewsSummary = {
 // `date` is a fixed month, not a relative phrase: Google shows "3 weeks ago",
 // but storing that would leave the site claiming it forever.
 //
-// Keep `id` unique (it's the React key). A count that is a multiple of 3 fills
-// the HomeClientReviews slider evenly on desktop; at 16 the last desktop page
-// carries a single card.
+// Keep `id` unique (it's the React key). HomeClientReviews duplicates this list
+// at render time for the continuous sliding loop.
 export const googleReviews = [
   {
     id: "review-rajkumar-varma",

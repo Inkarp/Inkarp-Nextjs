@@ -54,7 +54,7 @@ function NavLabel({ item, mobile = false }) {
 
   return (
     <span
-      className={`relative block rounded-md dark:bg-white dark:p-1 ${mobile ? "h-8 w-36" : "h-7 w-28"}`}
+      className={`relative block rounded-md dark:bg-white dark:p-1 ${mobile ? "h-8 w-36" : "h-6 w-24 xl:h-7 xl:w-28"}`}
     >
       <Image
         alt={item.label}
@@ -279,7 +279,7 @@ export default function Header() {
           <div className="relative flex min-h-20 items-center gap-4">
             <Link
               aria-label={`${company.name} home`}
-              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg p-1.5 sm:w-56 dark:bg-white"
+              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg p-1.5 sm:w-56 lg:w-40 xl:w-48 2xl:w-56 dark:bg-white"
               href="/"
               onClick={closeMenu}
             >
@@ -294,16 +294,16 @@ export default function Header() {
 
             <nav
               aria-label="Primary navigation"
-              className="hidden min-w-0 flex-1 2xl:block"
+              className="hidden min-w-0 flex-1 lg:block"
             >
-              <ul className="flex items-center justify-center gap-1">
+              <ul className="flex items-center justify-center gap-0 2xl:gap-1">
                 {mainNavigation.map((item) => {
                   const active = isNavActive(item, pathname);
 
                   return (
                     <li className="group relative" key={item.label}>
                       <Link
-                        className={`flex h-11 items-center gap-1 whitespace-nowrap px-2.5 text-base transition ${active
+                        className={`flex h-11 items-center gap-1 whitespace-nowrap px-1 text-xs transition xl:px-1.5 xl:text-sm 2xl:px-2.5 2xl:text-base ${active
                             ? "text-red"
                             : "text-ink-soft hover:text-red dark:text-zinc-300"
                           }`}
@@ -346,9 +346,9 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div className="ml-auto hidden shrink-0 items-stretch gap-4 2xl:flex">
+            <div className="ml-auto hidden shrink-0 items-stretch gap-2 lg:flex xl:gap-3 2xl:gap-4">
 
-              <div className="mx-6 w-px bg-zinc-200" />
+              <div className="mx-3 hidden w-px bg-zinc-200 xl:block 2xl:mx-6" />
               <button
                 aria-label="Search products"
                 className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-red dark:text-zinc-200"
@@ -360,16 +360,16 @@ export default function Header() {
              
               <Link
                 aria-label="Download product profile"
-                className="inline-flex h-12 items-center justify-center gap-2 bg-red px-7 text-sm font-bold text-parchment transition hover:bg-[#fff3f4] hover:text-black"
+                className="inline-flex h-12 w-12 items-center justify-center gap-2 bg-red px-0 text-sm font-bold text-parchment transition hover:bg-[#fff3f4] hover:text-black xl:w-auto xl:px-5 2xl:px-7"
                 download
                 href={productProfileUrl}
               >
                 <FaDownload className="text-base animate-bounce" />
-                Product Profile
+                <span className="hidden xl:inline">Product Profile</span>
               </Link>
             </div>
 
-            <div className="ml-auto flex items-center gap-2 2xl:hidden">
+            <div className="ml-auto flex items-center gap-2 lg:hidden">
               <a
                 aria-label="Download product profile"
                 className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-red/40 hover:text-red dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
@@ -405,7 +405,7 @@ export default function Header() {
       {isMenuOpen ? (
         <nav
           aria-label="Mobile navigation"
-          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] 2xl:hidden dark:border-zinc-800 dark:bg-zinc-950"
+          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] lg:hidden dark:border-zinc-800 dark:bg-zinc-950"
         >
           <ul className="space-y-1">
             {mainNavigation.map((item) => {

@@ -4,6 +4,10 @@ function isVideoLogo(src) {
   return /\.(mp4|webm|ogg)$/i.test(src);
 }
 
+function isAnimatedImage(src) {
+  return /\.gif(?:$|\?)/i.test(src);
+}
+
 export default function CompanyLogoMedia({
   alt,
   className = "object-contain",
@@ -34,6 +38,7 @@ export default function CompanyLogoMedia({
       priority={priority}
       sizes={sizes}
       src={src}
+      unoptimized={isAnimatedImage(src)}
     />
   );
 }

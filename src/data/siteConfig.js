@@ -1,5 +1,5 @@
 const ORIGINAL_LOGO = "/InkarpLogo.svg";
-const INDEPENDENCE_DAY_LOGO = ORIGINAL_LOGO;
+const INDEPENDENCE_DAY_LOGO = "/assets/Inkarp_logo%20animation.gif";
 const INDEPENDENCE_DAY_LOGO_END = new Date("2026-08-17T00:00:00+05:30");
 
 function getActiveCompanyLogo() {

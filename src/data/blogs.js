@@ -279,7 +279,9 @@ const rawPosts = [
     date: "2025-06-19",
     author: "Inkarp Applications Team",
     readTime: "6 min read",
-    image: "/assets/blogs/BlogFour/Image1.jpeg",
+    // Image1.jpeg is a wide banner whose text got sliced by the card's
+    // object-cover crop. This vector cover is composed to survive that crop.
+    image: "/assets/blogs/BlogFour/ctc-detection-cover.svg",
     tags: [
       "Circulating Tumor Cells",
       "Oncology Diagnostics",

@@ -44,6 +44,15 @@ const statusLabels = {
 };
 
 const FEATURED_EVENT_COUNT = 2;
+const HOME_ANALYTICA_STALL_EVENT = {
+  id: "home-analytica-stall-2026",
+  title: "analytica Lab India Hyderabad 2026",
+  description:
+    "Visit the Inkarp stall at HITEX Hyderabad for live demonstrations and application discussions.",
+  image: "/assets/events/analytica-2026.webp",
+  date: "2026-09-12",
+  status: "upcoming",
+};
 
 // Soonest upcoming/ongoing first, then the most recently completed, topped up to
 // FEATURED_EVENT_COUNT — so the row still fills when nothing is upcoming.
@@ -58,7 +67,10 @@ function pickFeaturedEvents() {
     .filter((event) => event.status === "past")
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  return [...upcoming, ...completed].slice(0, FEATURED_EVENT_COUNT);
+  return [
+    HOME_ANALYTICA_STALL_EVENT,
+    ...[...upcoming, ...completed].filter((event) => event.id !== HOME_ANALYTICA_STALL_EVENT.id),
+  ].slice(0, FEATURED_EVENT_COUNT);
 }
 
 function EventCard({ event, highlight }) {

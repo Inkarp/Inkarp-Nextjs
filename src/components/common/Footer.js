@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -7,6 +6,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FiArrowUpRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import { siteConfig } from "@/data/siteConfig";
 
 const socialIcons = {
@@ -83,10 +83,9 @@ export default function Footer() {
               href="/"
             >
               <CornerBrackets />
-              <Image
+              <CompanyLogoMedia
                 alt={`${company.name} logo`}
                 className="object-contain"
-                fill
                 sizes="192px"
                 src={company.logo}
               />

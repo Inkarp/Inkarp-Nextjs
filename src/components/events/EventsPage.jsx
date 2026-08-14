@@ -83,6 +83,7 @@ function EventCountdown({ event }) {
   }, [event.startsAt, event.endsAt]);
 
   const isCounting = remaining?.state === "counting";
+  const canRegister = Boolean(event.registrationUrl) && remaining?.state !== "over";
 
   return (
     <div className="relative border border-line-light bg-parchment-alt p-5 sm:p-6">
@@ -129,7 +130,7 @@ function EventCountdown({ event }) {
           {event.venue}
         </p>
 
-        {event.registrationUrl ? (
+        {canRegister ? (
           <a
             className="mt-5 inline-flex w-full items-center justify-center gap-2 border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
             href={event.registrationUrl}
@@ -208,8 +209,6 @@ function FeaturedEventBanner() {
 
         </div>
 
-        {/* Countdown replaces the event artwork — a live clock earns the space
-            better than a static image. */}
         <EventCountdown event={event} />
       </div>
     </section>
@@ -255,7 +254,7 @@ function LabCard({ title, image, collageImage, date, formLink }) {
               className="cursor-pointer bg-red px-6 py-2 text-sm font-medium text-parchment transition-transform duration-300 hover:scale-105 hover:bg-red"
               type="button"
             >
-              Join Us
+              Register Now
             </button>
           </a>
         </div>

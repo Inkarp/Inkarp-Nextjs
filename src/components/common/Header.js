@@ -22,6 +22,7 @@ import {
 // usage below once there's real content ready in src/data/campaigns.js.
 // import AnnouncementBar from "@/components/common/AnnouncementBar";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
+import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import { getAllProducts } from "@/data/products/principals";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
 import { siteConfig } from "@/data/siteConfig";
@@ -282,10 +283,9 @@ export default function Header() {
               href="/"
               onClick={closeMenu}
             >
-              <Image
+              <CompanyLogoMedia
                 alt={`${company.name} logo`}
                 className="object-contain"
-                fill
                 priority
                 sizes="240px"
                 src={company.logo}

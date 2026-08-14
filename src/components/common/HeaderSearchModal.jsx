@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { FiX } from "react-icons/fi";
+import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import ProductSearchBox from "@/components/products/ProductSearchBox";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -50,10 +50,9 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
           href="/"
           onClick={onClose}
         >
-          <Image
+          <CompanyLogoMedia
             alt={`${company.name} logo`}
             className="object-contain object-left"
-            fill
             sizes="160px"
             src={company.logo}
           />

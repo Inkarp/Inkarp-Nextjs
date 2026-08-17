@@ -324,7 +324,7 @@ export const productImageMap = {
   "mettler-toledo:precision-balance-ma503": "/assets/images/productImages/Mettler/precision-balance-ma503.jpg",
   "mettler-toledo:balance-xpr2u": "/assets/images/productImages/Mettler/balance-xpr2u.jpg",
   "mettler-toledo:balance-xpr205due": "/assets/images/productImages/Mettler/balance-xpr205due.jpg",
-  "mettler-toledo:halogen-moisture-analyzer-he53-230v": "/assets/images/productImages/Mettler/halogen-moisture-analyzer-he53-230v.jpg",
+  "mettler-toledo:halogen-moisture-analyzer-he53-230v": "/assets/images/productImages/Mettler/he53.png",
   "mettler-toledo:halogen-moisture-analyzer-hc103-230v": "/assets/images/productImages/Mettler/halogen-moisture-analyzer-hc103-230v.jpg",
   "mettler-toledo:halogen-moisture-analyzer-hx204": "/assets/images/productImages/Mettler/halogen-moisture-analyzer-hx204.jpg",
   "mettler-toledo:halogen-moisture-analyzer-hs153": "/assets/images/productImages/Mettler/halogen-moisture-analyzer-hs153.jpg",

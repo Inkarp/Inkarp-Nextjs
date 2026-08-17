@@ -13,7 +13,7 @@ import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
 
-const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor and Service Provider in India";
+const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor & Service Provider in India";
 
 const DEFAULT_PRODUCT_SERVICE_PILLS = [
   "Installation",
@@ -149,10 +149,10 @@ export default async function ProductPage({ params }) {
             <h1 className=" text-2xl font-semibold leading-[1.15] tracking-tight text-ink sm:text-[32px] lg:text-[34px]">
               {product.name}
             </h1>
-            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-red/30 bg-red/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red">
-              <FiShield className="h-4 w-4 shrink-0" />
+            <h2 className="mt-4 inline-flex items-center gap-2 rounded-full border border-red/30 bg-red/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red">
+              <FiShield className="h-4 w-4 shrink-0" aria-hidden="true" />
               {PRODUCT_DISTRIBUTOR_NOTE}
-            </div>
+            </h2>
 
             <div className="mt-4 flex flex-wrap gap-2.5">
               {servicePills.map((pill) => (

@@ -11,7 +11,6 @@ export default function CatalystCue() {
   return (
     <>
       <BreadcrumbJsonLd path="/magazine" />
-
       {/* Header + video occupy exactly one viewport between them: the flex
           column is h-screen and the video takes whatever height the header
           leaves, so no magic offset is needed and nothing overflows the fold. */}

@@ -51,7 +51,7 @@ export default function ApplicationsExplorer({ data, productName }) {
   if (!industries.length || !industry || !profile) return null;
 
   return (
-    <section id="industries" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id="industries" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-[1180px]">
         <SectionHeader
           number="08"

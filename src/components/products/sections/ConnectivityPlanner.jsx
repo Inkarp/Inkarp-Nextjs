@@ -75,7 +75,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
   ].join('\n');
 
   return (
-    <section id={data?.sectionId ?? 'connectivity'} className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id={data?.sectionId ?? 'connectivity'} className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-[1180px] w-full">
         <SectionHeader
           number="12"

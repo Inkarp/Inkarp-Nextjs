@@ -11,8 +11,8 @@ const phoneNumber = "+918125580808";
 
 export default function FloatingQuickActions() {
   const [scrollPercent, setScrollPercent] = useState(0);
-  const { theme, toggleTheme } = useTheme();
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
   const showThemeToggle = pathname === "/products" || pathname?.startsWith("/products/");
   const [showThemeTip, setShowThemeTip] = useState(false);
   const hideTipTimeout = useRef(null);
@@ -60,7 +60,8 @@ export default function FloatingQuickActions() {
 
   return (
     <div className="fixed right-0 top-2/3 z-50 flex -translate-y-1/2 flex-col items-end gap-3">
-      {showThemeToggle ? (
+      {/* Dark mode toggle for product pages is intentionally disabled. */}
+      {false ? (
         <div className="relative">
           {showThemeTip ? (
             <div

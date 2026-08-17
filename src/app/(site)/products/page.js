@@ -13,6 +13,7 @@ import {
   mergeWorkflowContent,
   normalizeTags,
 } from "@/lib/workflowContent";
+import { getProductIndustryCats } from "@/lib/industryMapping";
 
 const VIEW_TABS = [
   { href: "/products", label: "By Product", active: true, Icon: FiBox },
@@ -118,12 +119,24 @@ function productMatchesWorkflowIndustry(product, industryContent, workflowProduc
 }
 
 function buildWorkflowIndustryIndex(allProducts) {
+  // Each product page carries an Industry Explorer section written in free
+  // prose. Map those labels onto the nine filter industries once for the whole
+  // catalogue, so the Industry dropdown reflects what the product pages claim
+  // rather than only the handful of products named in workflow content.
+  const industryCatsByProduct = new Map(
+    allProducts.map((product) => [productKey(product), getProductIndustryCats(product)])
+  );
+
   return workflowIndustries.map((industry) => {
     const content = mergeWorkflowContent(industry, null);
     const workflowProductKeys = new Set(getWorkflowProducts(content).map(productKey));
     const productKeys = new Set(
       allProducts
-        .filter((product) => productMatchesWorkflowIndustry(product, content, workflowProductKeys))
+        .filter(
+          (product) =>
+            productMatchesWorkflowIndustry(product, content, workflowProductKeys) ||
+            industryCatsByProduct.get(productKey(product))?.has(industry.cat)
+        )
         .map(productKey)
     );
 
@@ -276,6 +289,10 @@ export default async function ProductsPage({ searchParams }) {
         <div className="mx-auto max-w-[1180px]">
           <ProductResultsGrid
             key={`${filters.q}-${selectedBrands.join("|")}-${selectedIndustries.join("|")}-${selectedApplications.join("|")}`}
+            // Picking a brand is a deliberate, narrow choice — show that
+            // principal's full range at once rather than making the user page
+            // through "Load more". Other filters keep the paged default.
+            initialVisibleCount={selectedBrands.length ? productCards.length : undefined}
             products={productCards}
             query={filters.q}
           />

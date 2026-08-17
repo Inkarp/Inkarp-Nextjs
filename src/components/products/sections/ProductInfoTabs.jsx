@@ -261,12 +261,26 @@ export default function ProductInfoTabs({ product }) {
     description: item.description ?? item.type ?? item.note,
   })) : []);
 
+  // A tab is only offered when it has something to show. Products carry very
+  // different section sets, so an unconditional tab opens onto a bare heading
+  // (e.g. the Labstation I size-configuration page had four empty tabs).
   const visibleTabs = TABS.filter(({ key }) => {
-    if (key === 'performance') return !!perfSec;
-    if (key === 'compliance') return !!complianceSec?.cards?.length;
-    return true;
+    switch (key) {
+      case 'overview':     return !!(overviewSec?.body?.length || overviewSec?.cards?.length);
+      case 'features':     return (product.features ?? []).length > 0;
+      case 'applications': return (product.applications ?? []).length > 0;
+      case 'specs':        return (product.technicalSpecs ?? []).length > 0;
+      case 'performance':  return !!perfSec;
+      case 'compliance':   return !!complianceSec?.cards?.length;
+      case 'config':       return configCards.length > 0;
+      case 'docs':         return docsCards.length > 0;
+      default:             return true;
+    }
   });
-  const safeActive = visibleTabs.some((t) => t.key === active) ? active : 'overview';
+  // Fall back to the first tab that actually exists — 'overview' itself can be hidden.
+  const safeActive = visibleTabs.some((t) => t.key === active)
+    ? active
+    : (visibleTabs[0]?.key ?? 'overview');
 
   /* ── Tab content ─────────────────────────────────── */
   const renderContent = () => {
@@ -529,6 +543,10 @@ export default function ProductInfoTabs({ product }) {
         return null;
     }
   };
+
+  // Nothing to tab through at all — skip the section rather than render an
+  // empty header and an empty card.
+  if (visibleTabs.length === 0) return null;
 
   return (
     <section id="overview" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">

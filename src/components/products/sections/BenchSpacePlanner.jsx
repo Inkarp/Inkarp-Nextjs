@@ -102,7 +102,7 @@ export default function BenchSpacePlanner({ data, productName }) {
   ].join('\n');
 
   return (
-    <section id={data.sectionId ?? 'bench-planner'} className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-16 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8">
+    <section id={data.sectionId ?? 'bench-planner'} className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number={data.number ?? '13'}

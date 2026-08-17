@@ -100,7 +100,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     .join('\n');
 
   return (
-    <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8">
+    <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px] border border-line-light bg-parchment-alt px-5 py-12 sm:px-8 lg:px-12">
         <div className="relative overflow-hidden">
           <SectionHeader number="09" eyebrow={eyebrow} title={heading} description={intro} />

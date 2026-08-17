@@ -108,7 +108,7 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
   const cards = data?.cards ?? [];
 
   return (
-    <section id="roi" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:px-8">
+    <section id="roi" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number={sectionNumber}

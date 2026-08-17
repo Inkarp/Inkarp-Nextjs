@@ -216,7 +216,7 @@ export default function DistillationSimulator({ data, productName = 'this evapor
   };
 
   return (
-    <section id="simulator" className={`scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-5 sm:px-6 lg:px-8 lg:min-h-screen lg:flex lg:flex-col ${finished ? 'lg:justify-start' : 'lg:justify-center'}`}>
+    <section id="simulator" className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px] w-full">
         <SectionHeader
           number="03"

@@ -97,7 +97,7 @@ export default function SolventCalculator({ calculatorData, simulatorData, produ
   ];
 
   return (
-    <section id="calculator" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8 lg:py-0 lg:h-screen lg:flex lg:flex-col lg:justify-center">
+    <section id="calculator" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-[1180px] w-full">
         <SectionHeader
           number={calculatorData?.sectionNumber ?? '04'}

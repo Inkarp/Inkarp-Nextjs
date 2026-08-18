@@ -35,6 +35,26 @@ export default function CareersKeka() {
       targetContainer:"#khembedjobs",
     };
 
+    const readJobs = () => {
+      if (!containerRef.current) return false;
+      const parsed = parseJobsFromContainer(containerRef.current);
+      if (!parsed.length) return false;
+      setJobs(parsed);
+      setLoading(false);
+      return true;
+    };
+
+    // Watch the embed target before the script runs, otherwise a fast embed can
+    // populate it before the observer attaches and the list never appears.
+    observerRef.current = new MutationObserver(readJobs);
+    if (containerRef.current) {
+      observerRef.current.observe(containerRef.current, {
+        childList: true,
+        subtree: true,
+      });
+      readJobs();
+    }
+
     const existing = document.querySelector(`script[src="${KEKA_SCRIPT_SRC}"]`);
     if (existing) {
       existing.remove();
@@ -50,26 +70,20 @@ export default function CareersKeka() {
     };
     document.head.appendChild(script);
 
-    observerRef.current = new MutationObserver(() => {
-      if (!containerRef.current) {
-        return;
-      }
-
-      const parsed = parseJobsFromContainer(containerRef.current);
-      if (parsed.length) {
-        setJobs(parsed);
-        setLoading(false);
-      }
-    });
-
-    if (containerRef.current) {
-      observerRef.current.observe(containerRef.current, {
-        childList: true,
-        subtree: true,
-      });
-    }
+    // Re-check periodically, then give up rather than spinning forever - on a
+    // slow or blocked mobile connection the embed may never populate.
+    const poll = window.setInterval(() => {
+      if (readJobs()) window.clearInterval(poll);
+    }, 1200);
+    const giveUp = window.setTimeout(() => {
+      window.clearInterval(poll);
+      if (!readJobs()) setLoading(false);
+    }, 12000);
 
     return () => {
+      window.clearInterval(poll);
+      window.clearTimeout(giveUp);
+
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -110,7 +124,7 @@ export default function CareersKeka() {
   }, [jobs, searchTerm, departmentFilter, locationFilter]);
 
   return (
-    <section className="relative mx-auto py-10 md:px-10 lg:px-20">
+    <section className="relative mx-auto px-4 py-10 sm:px-6 md:px-10 lg:px-20">
       <div className="mx-auto max-w-[1180px] px-4 sm:px-0">
         <RecTag>Careers @ Inkarp</RecTag>
         <h2 className="max-w-[24ch] text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
@@ -124,8 +138,24 @@ export default function CareersKeka() {
 
       <div className="mt-6 p-2 sm:p-6">
         {loading && !loadError ? (
-          <div className="py-10 text-center text-sm text-ink-soft">
-            Loading job listings...
+          <div aria-busy="true" className="mx-auto max-w-[1180px]">
+            <span className="sr-only">Loading job listings</span>
+            <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <div className="h-11 w-full animate-pulse bg-line-light/60 sm:max-w-md" />
+              <div className="h-11 w-full animate-pulse bg-line-light/60 sm:max-w-[12rem]" />
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {Array.from({ length: 4 }).map((_, index) => (
+                <div className="border border-line-light bg-white p-4 sm:p-6" key={index}>
+                  <div className="h-5 w-3/4 animate-pulse bg-line-light/60" />
+                  <div className="mt-3 flex gap-2">
+                    <div className="h-6 w-24 animate-pulse bg-line-light/50" />
+                    <div className="h-6 w-20 animate-pulse bg-line-light/50" />
+                  </div>
+                  <div className="mt-5 h-9 w-28 animate-pulse bg-line-light/50" />
+                </div>
+              ))}
+            </div>
           </div>
         ) : null}
 
@@ -136,8 +166,20 @@ export default function CareersKeka() {
         ) : null}
 
         {!loading && !loadError && jobs.length === 0 ? (
-          <div className="py-10 text-center text-sm text-ink-soft">
-            No openings currently. Please check back soon.
+          <div className="py-10 text-center">
+            <p className="text-sm text-ink-soft">
+              We could not load the live openings here. You can view them all on our
+              careers portal.
+            </p>
+            <a
+              className="mt-4 inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+              href={KEKA_DOMAIN}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              View all openings
+              <FiArrowRight aria-hidden="true" className="size-4" />
+            </a>
           </div>
         ) : null}
 

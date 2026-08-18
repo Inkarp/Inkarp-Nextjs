@@ -451,6 +451,7 @@ export default function FloatingChatbot() {
     <>
       {showGreetingTooltip && !isOpen ? (
         <div
+          data-floating-widget
           className="fixed max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
           role="status"
           style={{ bottom: "2.25rem", right: "5.25rem", zIndex: TOP_LAYER }}
@@ -474,13 +475,20 @@ export default function FloatingChatbot() {
       <button
         aria-expanded={isOpen}
         aria-label="Open website chatbot"
-        className="fixed inline-flex size-16 items-center justify-center rounded-full shadow-lg shadow-zinc-900/25 transition hover:-translate-y-0.5 hover:shadow-xl sm:size-20"
+        data-floating-widget
+        className="group fixed inline-flex size-16 items-center justify-center rounded-full transition-transform duration-300 ease-out hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:size-20"
         onClick={openChatbot}
         ref={launcherRef}
         style={{ bottom: "1.25rem", color: CHATBOT_CONFIG.colors.launcherText, right: "1rem", zIndex: TOP_LAYER }}
         type="button"
       >
-        <Image alt="" className="absolute left-1/2 top-1/2 size-12 -translate-x-1/2 -translate-y-1/2 rounded-full object-cover sm:size-14" height={46} src="/chatbot-icon.webp" width={46} />
+        <Image
+          alt=""
+          className="size-full rounded-full object-cover drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] transition duration-300 group-hover:drop-shadow-[0_6px_14px_rgba(190,0,16,0.25)]"
+          height={80}
+          src="/chatbot-icon.webp"
+          width={80}
+        />
         {showAttentionPulse && !isOpen ? (
           <span aria-hidden="true" className="absolute right-0.5 top-0.5 flex size-3.5">
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-red opacity-75" />

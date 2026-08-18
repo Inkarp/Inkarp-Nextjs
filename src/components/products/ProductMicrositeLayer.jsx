@@ -71,6 +71,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
       </nav> */}
 
       <div
+        data-floating-widget
         className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl border border-line-light bg-parchment/95 p-3 backdrop-blur transition ${
           shouldShowSticky
             ?"translate-y-0 opacity-100"

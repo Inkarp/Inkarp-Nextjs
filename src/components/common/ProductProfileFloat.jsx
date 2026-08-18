@@ -72,7 +72,7 @@ export default function ProductProfileFloat() {
   };
 
   return (
-    <div className="fixed bottom-4 left-4 z-40 flex flex-col items-end gap-3 text-sm">
+    <div className="fixed bottom-4 left-4 z-40 flex flex-col items-end gap-3 text-sm" data-floating-widget>
       {isOpen && (
         <div className="w-[320px] rounded-[32px] border border-red bg-parchment p-5 shadow-2xl shadow-zinc-900/15">
           <div className="mb-4 flex items-start justify-between gap-4">

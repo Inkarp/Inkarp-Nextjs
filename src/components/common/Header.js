@@ -87,6 +87,13 @@ export default function Header() {
   const mainNavigation = navigation.filter(
     (item) => !["About Us", "Service", "Careers"].includes(item.label)
   );
+  // The floating widgets sit above the header, so they cover the mobile
+  // menu's submenu toggles. Flag the open menu on <body> and let CSS hide them.
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isMenuOpen);
+    return () => document.body.classList.remove("menu-open");
+  }, [isMenuOpen]);
+
   const productProfileUrl = "/assets/productProfile/Inkarp_product_profile_2026.pdf";
 
   const socialLinks = [

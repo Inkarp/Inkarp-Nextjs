@@ -429,3 +429,8 @@ article[data-scroll-reveal="true"] {
     animation: none !important;
   }
 }
+/* The mobile nav sits under the floating widgets, which cover its submenu
+   toggles. Header flags the open menu on <body>; hide the floats while it is. */
+body.menu-open [data-floating-widget] {
+  display: none !important;
+}

@@ -215,33 +215,26 @@ export default function HomeWorkflowWheel() {
             className="flex w-full shrink-0 flex-row gap-1 overflow-x-auto pb-1 lg:w-[300px] lg:flex-col lg:gap-0 lg:overflow-visible lg:border-l lg:border-line-light lg:pb-0"
           >
             {industries.map((ind, i) => (
-              // Hover or focus spins the wheel to this industry; clicking opens
-              // its complete set of workflows.
-              <Link
-                aria-current={i === activeIndex ? "true" : undefined}
-                className={`group -ml-px flex shrink-0 items-baseline gap-3 border-l-2 px-4 py-3.5 text-left transition lg:px-5 ${
+              // Clicking selects the industry; the wheel's centre link opens its
+              // full workflow set. Hovering deliberately does nothing.
+              <button
+                aria-pressed={i === activeIndex}
+                className={`-ml-px flex shrink-0 items-baseline gap-3 border-l-2 px-4 py-3.5 text-left transition lg:px-5 ${
                   i === activeIndex
                     ? "border-red bg-white"
-                    : "border-transparent text-ink-soft hover:bg-white/60"
+                    : "border-transparent text-ink-soft"
                 }`}
-                href={`/workflows/${ind.cat}`}
                 key={ind.cat}
-                onFocus={() => selectIndustry(i)}
-                onMouseEnter={() => selectIndustry(i)}
-                title={`See all ${STEP_COUNT} ${ind.industry} workflows`}
+                onClick={() => selectIndustry(i)}
+                type="button"
               >
                 <span className={`hidden font-mono text-[11px] lg:inline ${i === activeIndex ? "text-red" : "text-ink-soft"}`}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="min-w-0">
-                  <span className={`block text-[15px] font-semibold leading-tight ${i === activeIndex ? "text-red" : "text-ink"}`}>
-                    {ind.industry}
-                  </span>
-                  <span className="hidden font-mono text-[10px] uppercase tracking-wide text-ink-soft transition-colors group-hover:text-red lg:block">
-                    All {STEP_COUNT} workflows →
-                  </span>
+                <span className={`text-[15px] font-semibold leading-tight ${i === activeIndex ? "text-red" : "text-ink"}`}>
+                  {ind.industry}
                 </span>
-              </Link>
+              </button>
             ))}
           </div>
         </div>

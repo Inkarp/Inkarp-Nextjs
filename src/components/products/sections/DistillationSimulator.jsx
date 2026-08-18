@@ -247,6 +247,7 @@ export default function DistillationSimulator({ data, productName = 'this evapor
               <div className="space-y-1">
                 {solvents.map((s, i) => (
                   <button
+                    aria-pressed={selIdx === i}
                     className={`flex w-full items-center justify-between border px-3 py-1.5 text-left text-xs transition ${
                       selIdx === i
                         ? 'border-black bg-red text-white'

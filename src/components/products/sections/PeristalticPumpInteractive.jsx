@@ -207,6 +207,7 @@ function SegmentControl({ label, onChange, options, value }) {
           const active = option.value === value;
           return (
             <button
+              aria-pressed={active}
               className={`border px-3 py-2.5 text-left text-xs font-semibold transition ${
                 active ? 'border-black bg-red text-white' : 'border-line-light bg-white text-black hover:border-red hover:text-red'
               }`}
@@ -227,6 +228,7 @@ function SegmentControl({ label, onChange, options, value }) {
 function ToggleButton({ checked, label, offLabel = 'Off', onChange, onLabel = 'On' }) {
   return (
     <button
+      aria-pressed={checked}
       className={`flex w-full items-center justify-between border px-4 py-3 text-left transition ${
         checked ? 'border-black bg-red text-white' : 'border-line-light bg-white text-black hover:border-red'
       }`}

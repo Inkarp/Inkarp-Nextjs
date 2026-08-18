@@ -66,6 +66,7 @@ export default function ApplicationsExplorer({ data, productName }) {
             const isActive = active === index;
             return (
               <button
+                aria-pressed={isActive}
                 className={`inline-flex h-12 items-center gap-2 border px-5 text-sm font-semibold transition ${
                   isActive
                     ? 'border-black bg-red text-white'
@@ -75,7 +76,7 @@ export default function ApplicationsExplorer({ data, productName }) {
                 onClick={() => setActive(index)}
                 type="button"
               >
-                <Icon className={`text-base ${isActive ? '' : 'text-red'}`} />
+                <Icon aria-hidden="true" className={`text-base ${isActive ? '' : 'text-red'}`} />
                 {item.name}
               </button>
             );

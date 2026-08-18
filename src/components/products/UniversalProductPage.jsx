@@ -1,4 +1,5 @@
 'use client';
+import { Fragment } from 'react';
 import InPageNav from './sections/InPageNav';
 import StatsBar from './sections/StatsBar';
 import ProductInfoTabs from './sections/ProductInfoTabs';
@@ -50,6 +51,112 @@ export default function UniversalProductPage({ product }) {
   const certsSection = findSection('certs', 'Quality and safety');
   const glasswareSection = findSection('glassware', 'Glassware guide');
 
+  const plannerSections = product.planners ?? (product.connectivityPlanner ? [product.connectivityPlanner] : []);
+  const productSections = [
+    {
+      key: 'product-info',
+      node: <ProductInfoTabs product={product} />,
+    },
+    workflowSection?.steps?.length > 0 && {
+      key: 'workflow',
+      node: <EvaporationWorkflow section={workflowSection} metrics={performanceSection?.metrics} />,
+    },
+    product.orbitVisualizer && {
+      key: 'orbit-visualizer',
+      node: <OrbitVisualizer data={product.orbitVisualizer} productName={product.name} />,
+    },
+    product.simulator && {
+      key: 'distillation-simulator',
+      node: <DistillationSimulator data={product.simulator} productName={product.name} />,
+    },
+    product.calculator && {
+      key: 'solvent-calculator',
+      node: <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} productName={product.name} />,
+    },
+    product.suitability?.fields?.length > 0 && product.suitability?.results?.length > 0 && {
+      key: 'suitability-checker',
+      node: <SuitabilityChecker data={product.suitability} productName={product.name} />,
+    },
+    solventSection?.cards?.length > 0 && {
+      key: 'solvent-guide',
+      node: <SolventGuide data={solventSection} simulatorData={product.simulator} />,
+    },
+    product.readinessGuide?.items?.length > 0 && {
+      key: 'readiness-guide',
+      node: (
+        <ChecklistGuide
+          data={product.readinessGuide}
+          productName={product.name}
+          sectionId={product.readinessGuide.sectionId ?? 'readiness'}
+        />
+      ),
+    },
+    ...plannerSections.map((planner, index) => ({
+      key: `planner-${planner.sectionId ?? index}`,
+      node: <ConnectivityPlanner data={planner} productName={product.name} />,
+    })),
+    product.unattendedPlanner && {
+      key: 'unattended-planner',
+      node: <UnattendedHoursPlanner data={product.unattendedPlanner} productName={product.name} />,
+    },
+    product.benchPlanner && {
+      key: 'bench-planner',
+      node: <BenchSpacePlanner data={product.benchPlanner} productName={product.name} />,
+    },
+    product.serviceLifePlanner && {
+      key: 'service-life-planner',
+      node: <ServiceLifePlanner data={product.serviceLifePlanner} productName={product.name} />,
+    },
+    roiSection && {
+      key: 'roi-calculator',
+      node: <ROICalculator data={roiSection} productName={product.name} />,
+    },
+    product.applicationsExplorer && {
+      key: 'applications-explorer',
+      node: <ApplicationsExplorer data={product.applicationsExplorer} productName={product.name} />,
+    },
+    product.configWizard && {
+      key: 'config-wizard',
+      node: <ConfigWizard data={product.configWizard} productName={product.name} />,
+    },
+    product.workflowScore && {
+      key: 'workflow-score',
+      node: <WorkflowScore data={product.workflowScore} productName={product.name} />,
+    },
+    product.comparison && {
+      key: 'method-comparison',
+      node: <MethodComparison data={product.comparison} />,
+    },
+    product.quiz && {
+      key: 'fit-quiz',
+      node: <FitQuiz data={product.quiz} productName={product.name} />,
+    },
+    product.pairing && {
+      key: 'vacuum-chiller-pairing',
+      node: <VacuumChillerPairing data={product.pairing} />,
+    },
+    benefitsSection?.cards?.length > 0 && {
+      key: 'benefits',
+      node: <WhyLabsChoose cards={benefitsSection.cards} section={benefitsSection} productName={product.name} />,
+    },
+    certsSection?.cards?.length > 0 && {
+      key: 'certs',
+      node: <StandardsCerts cards={certsSection.cards} section={certsSection} productName={product.name} />,
+    },
+    product.serviceMap && {
+      key: 'service-map',
+      node: <ServiceMap data={product.serviceMap} />,
+    },
+    product.faqs?.length > 0 && {
+      key: 'faq',
+      node: <FAQSection faqs={product.faqs} productName={product.name} />,
+    },
+    product.booking && {
+      key: 'demo-booking',
+      node: <DemoBooking data={product.booking} productName={product.name} />,
+    },
+  ].filter(Boolean);
+
   return (
     <div className="w-full" data-product-page>
       <ProductMicrositeLayer
@@ -66,134 +173,11 @@ export default function UniversalProductPage({ product }) {
       {/* Stats bar */}
       <StatsBar stats={lf.stats ?? product.stats ?? []} />
 
-      {/* Product info tabs (overview, features, specs, etc.) */}
-      <ProductInfoTabs product={product} />
-
-      {/* Evaporation workflow animation */}
-      {workflowSection?.steps?.length > 0 && (
-        <EvaporationWorkflow section={workflowSection} metrics={performanceSection?.metrics} />
-      )}
-
-      {/* Orbit / vortex mechanism visualiser */}
-      {product.orbitVisualizer && (
-        <OrbitVisualizer data={product.orbitVisualizer} productName={product.name} />
-      )}
-
-      {/* Distillation simulator */}
-      {product.simulator && (
-        <DistillationSimulator data={product.simulator} productName={product.name} />
-      )}
-
-      {/* Recovery calculator */}
-      {product.calculator && (
-        <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} productName={product.name} />
-      )}
-
-      {/* Suitability checker */}
-      {product.suitability && (
-        <SuitabilityChecker data={product.suitability} productName={product.name} />
-      )}
-
-      {/* Solvent setup guide */}
-      {solventSection?.cards?.length > 0 && (
-        <SolventGuide
-          data={solventSection}
-          simulatorData={product.simulator}
-          sectionNumber="06"
-        />
-      )}
-
-      {/* Readiness / requirement checklist */}
-      {product.readinessGuide && (
-        <ChecklistGuide
-          data={product.readinessGuide}
-          productName={product.name}
-          sectionId={product.readinessGuide.sectionId ?? 'readiness'}
-        />
-      )}
-
-      {/* Connectivity, planner & selector tools - supports either a single
-          `connectivityPlanner` (legacy) or a `planners` array (multiple tools) */}
-      {(product.planners ?? (product.connectivityPlanner ? [product.connectivityPlanner] : [])).map((planner, index) => (
-        <ConnectivityPlanner key={planner.sectionId ?? index} data={planner} productName={product.name} />
+      {productSections.map(({ key, node }) => (
+        <Fragment key={key}>
+          {node}
+        </Fragment>
       ))}
-
-      {product.unattendedPlanner && (
-        <UnattendedHoursPlanner data={product.unattendedPlanner} productName={product.name} />
-      )}
-
-      {product.benchPlanner && (
-        <BenchSpacePlanner data={product.benchPlanner} productName={product.name} />
-      )}
-
-      {product.serviceLifePlanner && (
-        <ServiceLifePlanner data={product.serviceLifePlanner} productName={product.name} />
-      )}
-
-      {/* ROI calculator */}
-      {roiSection && (
-        <ROICalculator data={roiSection} sectionNumber="07" productName={product.name} />
-      )}
-
-      {/* Applications explorer */}
-      {product.applicationsExplorer && (
-        <ApplicationsExplorer data={product.applicationsExplorer} productName={product.name} />
-      )}
-
-      {/* Configuration wizard */}
-      {product.configWizard && (
-        <ConfigWizard data={product.configWizard} productName={product.name} />
-      )}
-
-      {/* Workflow score comparison */}
-      {product.workflowScore && (
-        <WorkflowScore data={product.workflowScore} productName={product.name} />
-      )}
-
-      {/* Method comparison table */}
-      {product.comparison && (
-        <MethodComparison data={product.comparison} />
-      )}
-
-      {/* Fit quiz */}
-      {product.quiz && (
-        <FitQuiz data={product.quiz} productName={product.name} />
-      )}
-
-      {/* Glassware guide */}
-      {/* {glasswareSection?.cards?.length > 0 && (
-        <GlasswareGuide cards={glasswareSection.cards} section={glasswareSection} productName={product.name} />
-      )} */}
-
-      {/* Vacuum & chiller pairing */}
-      {product.pairing && (
-        <VacuumChillerPairing data={product.pairing} />
-      )}
-
-      {/* Why labs choose (benefits) */}
-      {benefitsSection?.cards?.length > 0 && (
-        <WhyLabsChoose cards={benefitsSection.cards} section={benefitsSection} productName={product.name} />
-      )}
-
-      {/* Standards & certs */}
-      {certsSection?.cards?.length > 0 && (
-        <StandardsCerts cards={certsSection.cards} section={certsSection} productName={product.name} />
-      )}
-
-      {/* India service map */}
-      {product.serviceMap && (
-        <ServiceMap data={product.serviceMap} />
-      )}
-
-      {/* FAQ */}
-      {product.faqs?.length > 0 && (
-        <FAQSection faqs={product.faqs} productName={product.name} />
-      )}
-
-      {/* Demo booking */}
-      {product.booking && (
-        <DemoBooking data={product.booking} productName={product.name} />
-      )}
 
       {/* CTA strip */}
       {lf.cta && (

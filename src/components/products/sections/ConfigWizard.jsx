@@ -146,6 +146,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   const isSelected = selections[current.key] === option.val;
                   return (
                     <button
+                      aria-pressed={isSelected}
                       className={`w-full border px-4 py-3 text-left transition ${
                         isSelected
                           ? 'border-ink bg-parchment-alt text-black'

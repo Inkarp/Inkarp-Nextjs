@@ -127,6 +127,7 @@ export default function WorkflowScore({ data, productName }) {
               const StepIcon = resolveStepIcon(step.label);
               return (
                 <button
+                  aria-pressed={isSelected}
                   className={`flex min-h-14 w-full items-center gap-4 border px-5 py-3 text-left transition ${
                     isSelected
                       ? 'border-black bg-red text-white'

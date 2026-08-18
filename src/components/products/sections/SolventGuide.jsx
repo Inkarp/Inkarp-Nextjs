@@ -119,6 +119,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
           <div className="space-y-2">
             {enrichedCards.map((item, index) => (
               <button
+                aria-pressed={active === index}
                 className={`flex min-h-12 w-full items-center justify-between border px-5 py-3 text-left transition ${
                   active === index
                     ? 'border-black bg-red text-white'

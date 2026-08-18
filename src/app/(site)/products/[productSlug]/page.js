@@ -94,7 +94,7 @@ export default async function ProductPage({ params }) {
       </nav>
 
       <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[7fr_3fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
@@ -166,11 +166,11 @@ export default async function ProductPage({ params }) {
               ))}
             </div>
             {showHeroHook ? (
-              <p className="mt-5 max-w-xl text-xl font-normal leading-8 tracking-tight text-ink sm:text-2xl">
+              <p className="mt-5 max-w-2xl text-xl font-normal leading-8 tracking-tight text-ink sm:text-2xl">
                 {heroHook}
               </p>
             ) : null}
-            <p className="mt-5 max-w-xl text-base leading-7 text-ink-soft sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
               {heroLead}
             </p>
           </div>
@@ -180,7 +180,7 @@ export default async function ProductPage({ params }) {
               <ProductImageGallery ctaHref={ctaHref} images={product.images} productName={product.name} />
             ) : (
               <>
-                <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
+                <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[340px]">
                   {product.image ? (
                     <Image
                       alt={product.imageAlt ?? product.name}
@@ -251,9 +251,11 @@ export default async function ProductPage({ params }) {
   );
 }
 
+// Stacked at lg: the image column is only 30% wide, too narrow for two
+// buttons side by side without clipping the labels.
 function ProductImageActions({ href }) {
   return (
-    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+    <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
       <Link
         href={href}
         className="inline-flex h-12 items-center justify-center border border-red bg-red px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"

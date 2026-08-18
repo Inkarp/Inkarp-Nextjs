@@ -360,7 +360,7 @@ export default function Header() {
              
               <Link
                 aria-label="Download product profile"
-                className="inline-flex h-12 w-12 items-center justify-center gap-2 bg-red px-0 text-sm font-bold text-parchment transition hover:bg-[#fff3f4] hover:text-black xl:w-auto xl:px-5 2xl:px-7"
+                className="inline-flex h-12 w-12 items-center justify-center gap-2 bg-[#EE4B2B] text-sm font-bold text-parchment transition hover:bg-[#FF8A8A] hover:text-black xl:w-auto xl:px-5 2xl:px-7"
                 download
                 href={productProfileUrl}
               >

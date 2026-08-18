@@ -560,25 +560,36 @@ export default function ProductInfoTabs({ product }) {
         />
 
         {/* Pill tabs */}
-        <div className="mb-6 flex flex-wrap gap-2">
+        <div aria-label="Product information" className="mb-6 flex flex-wrap gap-2" role="tablist">
           {visibleTabs.map(({ key, label, Icon }) => (
             <button
+              aria-controls="product-info-panel"
+              aria-selected={safeActive === key}
+              id={`product-info-tab-${key}`}
               key={key}
               onClick={() => setActive(key)}
+              role="tab"
+              type="button"
               className={`inline-flex items-center gap-1.5 border px-4 py-2 text-xs font-semibold transition ${
                 safeActive === key
                   ? 'border-black bg-red text-white'
                   : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'
               }`}
             >
-              <Icon className={`h-3.5 w-3.5 ${safeActive === key ? '' : 'text-red'}`} />
+              <Icon aria-hidden="true" className={`h-3.5 w-3.5 ${safeActive === key ? '' : 'text-red'}`} />
               {label}
             </button>
           ))}
         </div>
 
         {/* Content card */}
-        <div className="border border-line-light bg-parchment p-6 min-h-[300px]">
+        <div
+          aria-labelledby={`product-info-tab-${safeActive}`}
+          className="border border-line-light bg-parchment p-6 min-h-[300px]"
+          id="product-info-panel"
+          role="tabpanel"
+          tabIndex={0}
+        >
           {renderContent()}
         </div>
 

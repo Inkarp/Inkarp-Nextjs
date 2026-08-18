@@ -45,8 +45,10 @@ export default function VacuumChillerPairing({ data }) {
               <div className="flex flex-col gap-2">
                 {solventTypes.map((s) => (
                   <button
+                    aria-pressed={solventType === s.val}
                     key={s.val}
                     onClick={() => setSolventType(s.val)}
+                    type="button"
                     className={`border-2 px-4 py-3 text-sm font-semibold text-left transition ${
                       solventType === s.val ? 'border-black bg-red text-white' : 'border-line-light text-black hover:border-line-light'
                     }`}
@@ -63,8 +65,10 @@ export default function VacuumChillerPairing({ data }) {
                 <div className="flex flex-col gap-2">
                   {priorities.map((p) => (
                     <button
+                      aria-pressed={priority === p.val}
                       key={p.val}
                       onClick={() => setPriority(p.val)}
+                      type="button"
                       className={`border-2 px-4 py-3 text-sm font-semibold text-left transition ${
                         priority === p.val ? 'border-black bg-red text-white' : 'border-line-light text-black hover:border-line-light'
                       }`}

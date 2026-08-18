@@ -11,7 +11,7 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
 
   return (
     <>
-      <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[500px]">
+      <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[340px]">
         <Image
           alt={selected.alt ?? productName}
           className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
@@ -22,7 +22,7 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
         />
       </div>
       {ctaHref ? (
-        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
           <Link
             href={ctaHref}
             className="inline-flex h-12 items-center justify-center border border-red bg-red px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"

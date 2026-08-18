@@ -198,6 +198,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                   const isChosen = answers[activeIndex] === choice;
                   return (
                     <button
+                      aria-pressed={isChosen}
                       className={`border px-5 py-3 text-sm font-semibold transition ${
                         isChosen
                           ? 'border-black bg-red text-white'

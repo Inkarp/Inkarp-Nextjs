@@ -76,6 +76,7 @@ export default function SuitabilityChecker({ data, productName }) {
                       const active = selections[field.key] === option.val;
                       return (
                         <button
+                          aria-pressed={active}
                           className={`border px-5 py-2.5 text-sm font-semibold transition ${
                             active
                               ? 'border-black bg-red text-white'

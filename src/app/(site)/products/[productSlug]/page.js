@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaWhatsapp } from "react-icons/fa";
 import * as CountryFlagIcons from "country-flag-icons/react/3x2";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
@@ -12,6 +12,7 @@ import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
+import { whatsappEnquiryHref } from "@/data/siteConfig";
 
 const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor & Service Provider in India";
 
@@ -166,11 +167,11 @@ export default async function ProductPage({ params }) {
               ))}
             </div>
             {showHeroHook ? (
-              <p className="mt-5 max-w-2xl text-xl font-normal leading-8 tracking-tight text-ink sm:text-2xl">
+              <p className="mt-5 text-lg font-normal leading-7 tracking-tight text-ink sm:text-xl">
                 {heroHook}
               </p>
             ) : null}
-            <p className="mt-5 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
+            <p className="mt-5 text-sm leading-6 text-ink-soft sm:text-base">
               {heroLead}
             </p>
           </div>
@@ -196,7 +197,7 @@ export default async function ProductPage({ params }) {
                     </div>
                   )}
                 </div>
-                <ProductImageActions href={ctaHref} />
+                <ProductImageActions href={ctaHref} productName={product.name} />
               </>
             )}
           </div>
@@ -253,22 +254,24 @@ export default async function ProductPage({ params }) {
 
 // Stacked at lg: the image column is only 30% wide, too narrow for two
 // buttons side by side without clipping the labels.
-function ProductImageActions({ href }) {
+function ProductImageActions({ href, productName }) {
   return (
     <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
       <Link
         href={href}
-        className="inline-flex h-12 items-center justify-center border border-red bg-red px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+        className="inline-flex h-12 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
       >
         Request Quote
       </Link>
-      <Link
-        href={href}
-        className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+      <a
+        className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-700"
+        href={whatsappEnquiryHref(productName)}
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        <FiMail className="h-4 w-4 text-red" />
+        <FaWhatsapp className="h-4 w-4 text-[#25D366]" />
         Enquiry Now
-      </Link>
+      </a>
     </div>
   );
 }
@@ -352,7 +355,7 @@ function LegacyProductContent({ product }) {
               <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">{lf.cta.title}</h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft">{lf.cta.description}</p>
             </div>
-            <Link href={lf.cta.href ?? "/contact"} className="inline-flex items-center justify-center border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red">
+            <Link href={lf.cta.href ?? "/contact"} className="inline-flex items-center justify-center border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100">
               {lf.cta.label} <FiArrowRight className="ml-2" />
             </Link>
           </div>

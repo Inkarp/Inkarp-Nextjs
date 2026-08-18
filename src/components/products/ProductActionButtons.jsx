@@ -57,7 +57,7 @@ export default function ProductActionButtons({ productName, productPath }) {
       </Link>
 
       <Link
-        className="inline-flex h-10 items-center gap-2 border border-red bg-red px-4 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red"
+        className="inline-flex h-10 items-center gap-2 border border-rose-200 bg-rose-50 px-4 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
         href="/contact"
       >
         <FiMail />

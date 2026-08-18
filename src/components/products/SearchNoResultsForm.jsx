@@ -203,7 +203,7 @@ export default function SearchNoResultsForm({
         </label>
 
         <button
-          className="inline-flex h-11 items-center justify-center gap-2 border border-red bg-red px-5 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2 sm:w-fit"
+          className="inline-flex h-11 items-center justify-center gap-2 border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2 sm:w-fit"
           disabled={isSubmitting}
           type="submit"
         >

@@ -105,7 +105,7 @@ function WorkflowList({ activeIndustry, topics }) {
             <p className="mt-2 flex-1 text-[13px] text-ink-soft">{stage.description}</p>
             <Link
               href={hrefFor(index)}
-              className="group mt-5 inline-flex h-10 w-fit items-center gap-2 border border-red bg-red px-4 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(201,0,22,0.14)] transition hover:-translate-y-0.5 hover:bg-red-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+              className="group mt-5 inline-flex h-10 w-fit items-center gap-2 border border-rose-200 bg-rose-50 px-4 text-xs font-semibold text-rose-700 shadow-[0_8px_18px_rgba(201,0,22,0.14)] transition hover:-translate-y-0.5 hover:bg-rose-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
             >
               <span>Open workflow</span>
               <FiArrowRight

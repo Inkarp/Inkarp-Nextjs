@@ -302,7 +302,7 @@ export default function ContactForm() {
             />
 
             <button
-              className={`inline-flex h-13 w-full items-center justify-center gap-2 bg-red px-8 py-3.5 text-sm font-semibold text-parchment transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-red/40 sm:w-fit ${
+              className={`inline-flex h-13 w-full items-center justify-center gap-2 bg-rose-50 px-8 py-3.5 text-sm font-semibold text-rose-700 transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-red/40 sm:w-fit ${
                 isSubmitting
                   ?"cursor-not-allowed opacity-70"
                   :"hover:bg-transparent hover:text-red"

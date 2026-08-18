@@ -17,7 +17,7 @@ export default function Error({ error, reset }) {
           The page had a problem while loading. You can try again from here.
         </p>
         <button
-          className="mt-6 border border-red bg-red px-5 py-2.5 text-sm font-semibold text-parchment transition hover:bg-transparent hover:text-red"
+          className="mt-6 border border-rose-200 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
           onClick={reset}
           type="button"
         >

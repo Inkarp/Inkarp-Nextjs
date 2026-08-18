@@ -113,7 +113,7 @@ export default function FAQSection({ faqs = [], productName }) {
             <p className="text-sm font-semibold text-black">Have a question not listed here?</p>
             <p className="mt-0.5 text-xs text-black">Contact Inkarp for detailed technical discussions about {productName ?? 'this product'} and configurations.</p>
           </div>
-          <a className="shrink-0 bg-red px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red" href="#booking">
+          <a className="shrink-0 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100" href="#booking">
             Ask Inkarp
           </a>
         </div>

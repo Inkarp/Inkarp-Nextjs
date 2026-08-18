@@ -234,7 +234,7 @@ function TipsSlider({ selectedProduct }) {
           Prev
         </button>
         <button
-          className="border border-red bg-red px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-transparent hover:text-red sm:text-sm"
+          className="border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-semibold text-rose-700 transition hover:bg-rose-100 sm:text-sm"
           onClick={next}
           type="button"
         >

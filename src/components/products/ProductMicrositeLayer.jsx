@@ -88,7 +88,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
           </div>
           <div className="flex items-center gap-2">
             <button
-              className="inline-flex h-10 items-center justify-center bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]"
+              className="inline-flex h-10 items-center justify-center border border-rose-200 bg-rose-50 px-4 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
               onClick={() => scrollToSection("booking")}
               type="button"
             >

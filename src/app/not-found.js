@@ -11,7 +11,7 @@ export default function NotFound() {
           The page you are looking for does not exist or may have been moved.
         </p>
         <Link
-          className="mt-6 inline-flex border border-red bg-red px-5 py-2.5 text-sm font-semibold text-parchment transition hover:bg-transparent hover:text-red"
+          className="mt-6 inline-flex border border-rose-200 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
           href="/"
         >
           Go home

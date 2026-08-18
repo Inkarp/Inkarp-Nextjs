@@ -150,8 +150,10 @@ function ProductCard({ product }) {
       </div>
 
       <span
-        className={`mt-3 inline-block font-mono text-[11px] uppercase tracking-wide ${
-          slug ? 'text-red' : 'text-ink-soft'
+        className={`mt-3 inline-flex w-fit items-center gap-1.5 border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide transition ${
+          slug
+            ? 'border-rose-200 bg-rose-50 text-rose-700 group-hover:bg-rose-100'
+            : 'border-dashed border-line-light text-ink-soft'
         }`}
       >
         {slug ? 'View product →' : 'Not listed yet'}

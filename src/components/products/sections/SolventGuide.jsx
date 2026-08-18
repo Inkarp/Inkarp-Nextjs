@@ -171,7 +171,7 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
             </div>
 
             <a
-              className="mt-6 inline-flex h-11 items-center justify-center bg-red px-5 text-sm font-bold text-white transition hover:bg-transparent hover:text-red"
+              className="mt-6 inline-flex h-11 items-center justify-center bg-rose-50 px-5 text-sm font-bold text-rose-700 transition hover:bg-rose-100"
               href="#booking"
             >
               {card.cta ?? 'Ask Inkarp for solvent-specific configuration'}

@@ -284,7 +284,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
               ))}
 
               <button
-                className="mt-2 inline-flex items-center justify-center gap-2 bg-red px-5 py-3 text-sm font-semibold text-parchment transition hover:bg-red disabled:cursor-not-allowed disabled:opacity-70 md:col-span-2"
+                className="mt-2 inline-flex items-center justify-center gap-2 bg-rose-50 px-5 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-70 md:col-span-2"
                 disabled={isSubmitting}
                 type="submit"
               >

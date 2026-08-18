@@ -53,7 +53,7 @@ export default function ServicePage() {
               <div className="flex flex-wrap gap-3.5">
                 <Link
                   href="#service-request"
-                  className="inline-flex items-center gap-2 border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+                  className="inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
                 >
                   Request Service
                   <FiArrowRight className="size-4" />

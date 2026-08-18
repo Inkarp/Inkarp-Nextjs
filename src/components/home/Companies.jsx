@@ -67,7 +67,7 @@ export default function Companies() {
 
           <Link
             href="/our-story"
-            className="mt-9 inline-flex items-center gap-2 bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-red-soft"
+            className="mt-9 inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
           >
             About Inkarp
             <FiArrowRight aria-hidden="true" />

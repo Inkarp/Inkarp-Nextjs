@@ -117,3 +117,15 @@ export const siteConfig = {
   mapPlaceUrl:
     "https://www.google.com/maps?ll=17.432877,78.557944&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=6000282144631608509",
 };
+
+/**
+ * WhatsApp deep link to the number shown in the footer, optionally prefilled
+ * with the product the visitor is enquiring about.
+ */
+export function whatsappEnquiryHref(productName) {
+  const number = siteConfig.contact.phone.replace(/\D/g, "");
+  const message = productName
+    ? `Hi Inkarp, I would like to enquire about the ${productName}.`
+    : "Hi Inkarp, I would like to make an enquiry.";
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+}

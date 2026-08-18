@@ -283,7 +283,7 @@ export default function DistillationSimulator({ data, productName = 'this evapor
 
             <div className="mt-3 flex gap-2">
               <button
-                className={`flex-1 px-4 py-1.5 text-xs font-semibold text-white transition ${running ? 'bg-parchment-alt hover:bg-red' : 'bg-red hover:bg-transparent hover:text-red'}`}
+                className={`flex-1 px-4 py-1.5 text-xs font-semibold text-rose-700 transition ${running ? 'bg-parchment-alt hover:bg-rose-100' : 'bg-rose-50 hover:bg-rose-100'}`}
                 disabled={finished}
                 onClick={() => setRunning((current) => !current)}
                 type="button"

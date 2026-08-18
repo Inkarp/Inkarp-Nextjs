@@ -172,7 +172,7 @@ export default function PromoPopup() {
 
     const className =
       variant === "primary"
-        ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full bg-red px-5 text-sm font-semibold text-parchment transition hover:bg-[#9f000d] sm:flex-none"
+        ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 sm:flex-none"
         : "inline-flex h-10 flex-1 items-center justify-center rounded-full border border-line-light bg-parchment px-5 text-sm font-semibold text-ink-soft transition hover:border-red/35 hover:text-red sm:flex-none";
 
     if (button.action === "close") {

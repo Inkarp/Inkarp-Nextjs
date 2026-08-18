@@ -132,7 +132,7 @@ function EventCountdown({ event }) {
 
         {canRegister ? (
           <a
-            className="mt-5 inline-flex w-full items-center justify-center gap-2 border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
             href={event.registrationUrl}
             rel="noopener noreferrer"
             target="_blank"
@@ -251,7 +251,7 @@ function LabCard({ title, image, collageImage, date, formLink }) {
         <div className="mt-4 flex items-start justify-center">
           <a href={formLink} rel="noopener noreferrer" target="_blank">
             <button
-              className="cursor-pointer bg-red px-6 py-2 text-sm font-medium text-parchment transition-transform duration-300 hover:scale-105 hover:bg-red"
+              className="cursor-pointer bg-rose-50 px-6 py-2 text-sm font-medium text-rose-700 transition-transform duration-300 hover:scale-105 hover:bg-rose-100"
               type="button"
             >
               Register Now
@@ -341,7 +341,7 @@ export default function EventsPage() {
         </div>
 
         <button
-          className="w-full bg-red px-5 py-2 font-semibold text-parchment transition-transform active:scale-95 sm:w-auto"
+          className="w-full bg-rose-50 px-5 py-2 font-semibold text-rose-700 transition-transform active:scale-95 sm:w-auto"
           onClick={resetFilters}
           type="button"
         >

@@ -30,7 +30,7 @@ const INPUT_CLASS =
 const OPTION_BUTTON_CLASS =
   "group flex w-full items-center gap-3 rounded-xl border border-line-light bg-white px-4 py-3 text-left text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red/45 hover:bg-red/5 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-red/10";
 const SUBMIT_BUTTON_CLASS =
-  "inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-red px-4 text-sm font-bold text-white transition hover:bg-[#9a000d] disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-4 text-sm font-bold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60";
 const TOP_LAYER = 2147483647;
 const AUTO_OPEN_DELAY_MS = 9000;
 const AUTO_OPEN_STORAGE_KEY = "inkarp-chatbot-seen";

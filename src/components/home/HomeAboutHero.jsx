@@ -30,7 +30,7 @@ function SlideWorkflow() {
             <div className="mb-11 flex flex-wrap gap-3.5">
               <Link
                 href="#categories"
-                className="border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+                className="border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
               >
                 Find My Industry
               </Link>
@@ -95,7 +95,7 @@ function SlideAbout() {
             <div className="mb-11 flex flex-wrap gap-3.5">
               <Link
                 href="/products"
-                className="border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+                className="border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
               >
                 Browse Solutions
               </Link>

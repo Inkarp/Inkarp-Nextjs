@@ -206,7 +206,7 @@ export default function CareersKeka() {
 
             <div className="mt-8 text-center">
               <a
-                className="inline-flex items-center gap-2 bg-red px-5 py-2.5 text-sm font-semibold text-parchment"
+                className="inline-flex items-center gap-2 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700"
                 href={KEKA_DOMAIN}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -267,7 +267,7 @@ function JobCard({ job }) {
         <div className="shrink-0">
           <a
             aria-label={`Apply for ${title ??"this role"}`}
-            className="inline-flex items-center gap-2 bg-red px-4 py-2 text-sm font-semibold text-parchment hover:opacity-95"
+            className="inline-flex items-center gap-2 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 hover:opacity-95"
             href={url || KEKA_DOMAIN}
             rel="noopener noreferrer"
             target="_blank"

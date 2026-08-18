@@ -192,7 +192,7 @@ export default function ProductSearchBox({
                 <span className="font-semibold text-ink">{submittedQuery}</span>
               </p>
               <Link
-                className="inline-flex items-center gap-1.5 border border-red/30 px-3 py-2 text-sm font-semibold text-red outline-none transition hover:bg-red hover:text-white focus-visible:ring-2 focus-visible:ring-red/40"
+                className="inline-flex items-center gap-1.5 border border-rose-200 px-3 py-2 text-sm font-semibold text-red outline-none transition hover:bg-rose-100 hover:text-rose-700 focus-visible:ring-2 focus-visible:ring-red/40"
                 href={`/products?q=${encodeURIComponent(submittedQuery)}`}
                 onClick={onClose}
               >
@@ -297,7 +297,7 @@ export default function ProductSearchBox({
 
             <div className="border-t border-line-light p-2">
               <Link
-                className="block w-full border border-red bg-red px-4 py-2.5 text-center text-sm font-semibold text-parchment outline-none transition-colors duration-200 hover:bg-transparent hover:text-red focus-visible:ring-2 focus-visible:ring-red/40"
+                className="block w-full border border-rose-200 bg-rose-50 px-4 py-2.5 text-center text-sm font-semibold text-rose-700 outline-none transition-colors duration-200 hover:bg-rose-100 focus-visible:ring-2 focus-visible:ring-red/40"
                 href={`/products?q=${encodeURIComponent(submittedQuery)}`}
                 onClick={onClose}
               >

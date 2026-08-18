@@ -165,7 +165,7 @@ export default function CatalystModal({ onClose }) {
             />
 
             <button
-              className="w-full bg-red py-2.5 text-parchment hover:bg-transparent hover:text-red disabled:opacity-60"
+              className="w-full bg-rose-50 py-2.5 text-rose-700 hover:bg-rose-100 disabled:opacity-60"
               disabled={isSubmitting}
               type="submit"
             >

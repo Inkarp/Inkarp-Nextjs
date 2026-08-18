@@ -338,7 +338,7 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
                   className={
                     isExternal
                       ? 'inline-flex h-11 items-center justify-center bg-navy px-4 text-sm font-semibold text-parchment transition hover:bg-parchment-alt '
-                      : 'inline-flex h-11 items-center justify-center bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]'
+                      : 'inline-flex h-11 items-center justify-center bg-rose-50 px-4 text-sm font-semibold text-rose-700 transition hover:bg-rose-100'
                   }
                   href={action.href}
                   onClick={close}
@@ -356,7 +356,7 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
                 className={
                   action.closeOnly
                     ? 'inline-flex h-11 items-center justify-center border border-line-light bg-parchment px-4 text-sm font-semibold text-ink transition hover:border-red hover:text-red'
-                    : 'inline-flex h-11 items-center justify-center bg-red px-4 text-sm font-semibold text-parchment transition hover:bg-[#9f000d]'
+                    : 'inline-flex h-11 items-center justify-center bg-rose-50 px-4 text-sm font-semibold text-rose-700 transition hover:bg-rose-100'
                 }
                 onClick={() => {
                   if (action.closeOnly) { close(); return; }

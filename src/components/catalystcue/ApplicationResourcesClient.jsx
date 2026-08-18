@@ -157,7 +157,7 @@ function ResourceCard({ resource }) {
             footer socials) instead of a toggle that hid them behind a click. */}
         <div className="mt-auto flex flex-wrap items-center gap-2 pt-5">
           <a
-            className="inline-flex items-center gap-2 bg-red px-3 py-2 text-sm font-semibold text-parchment transition hover:bg-transparent hover:text-red"
+            className="inline-flex items-center gap-2 bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
             download
             href={resource.url}
           >
@@ -313,7 +313,7 @@ export default function ApplicationResourcesClient() {
             {remaining > 0 ? (
               <div className="mt-10 flex justify-center">
                 <button
-                  className="inline-flex items-center gap-2 border border-red bg-red px-8 py-3 text-sm font-semibold text-parchment transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+                  className="inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-8 py-3 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
                   onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
                   type="button"
                 >

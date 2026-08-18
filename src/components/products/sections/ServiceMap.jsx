@@ -220,7 +220,7 @@ export default function ServiceMap({ data, calm = false }) {
               <p className={`text-xs mb-3 ${calm ? 'text-ink-soft' : 'text-black'}`}>
                 Inkarp covers all major cities and institutes across India. Contact us to confirm service availability in your location.
               </p>
-              <a href="/contact" className="inline-flex items-center bg-red px-5 py-2.5 text-sm font-semibold text-white hover:bg-transparent hover:text-red transition">
+              <a href="/contact" className="inline-flex items-center bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 hover:bg-rose-100 transition">
                 Contact Inkarp →
               </a>
             </div>

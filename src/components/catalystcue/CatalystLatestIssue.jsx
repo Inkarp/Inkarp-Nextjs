@@ -42,7 +42,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
           </h1>
           <p className="mt-3 text-sm text-ink-soft">{issue.Date}</p>
           <Link
-            className="mt-5 inline-flex h-11 items-center justify-center border border-red bg-red px-5 text-sm font-bold text-parchment transition hover:bg-transparent hover:text-red"
+            className="mt-5 inline-flex h-11 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-bold text-rose-700 transition hover:bg-rose-100"
             href={`/magazine/${encodeURIComponent(issue.slug)}`}
           >
             Read Latest Issue
@@ -95,7 +95,7 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
-              className="inline-flex h-12 items-center justify-center border border-red bg-red px-6 text-sm font-bold text-parchment transition hover:bg-transparent hover:text-red"
+              className="inline-flex h-12 items-center justify-center border border-rose-200 bg-rose-50 px-6 text-sm font-bold text-rose-700 transition hover:bg-rose-100"
               href={`/magazine/${encodeURIComponent(issue.slug)}`}
             >
               Read Latest Issue

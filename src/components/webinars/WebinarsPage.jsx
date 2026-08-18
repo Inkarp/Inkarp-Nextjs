@@ -128,7 +128,7 @@ export default function WebinarsPage() {
 
                     <div className="mt-2 flex gap-3">
                       <button
-                        className="flex-1 border border-red px-3 py-2 text-sm font-medium text-red transition hover:bg-red hover:text-parchment"
+                        className="flex-1 border border-rose-200 px-3 py-2 text-sm font-medium text-red transition hover:bg-rose-100 hover:text-rose-700"
                         onClick={() => setSelectedWebinar(webinar)}
                         type="button"
                       >
@@ -136,7 +136,7 @@ export default function WebinarsPage() {
                       </button>
                       {daysLeft > 0 ? (
                         <button
-                          className="flex-1 bg-red px-3 py-2 text-sm text-parchment transition hover:bg-red"
+                          className="flex-1 bg-rose-50 px-3 py-2 text-sm text-rose-700 transition hover:bg-rose-100"
                           onClick={() => {
                             setSelectedWebinar(webinar);
                             setShowRegister(true);
@@ -173,7 +173,7 @@ export default function WebinarsPage() {
             {getDaysLeft(selectedWebinar.date) > 0 ? (
               <div className="mt-6 text-center">
                 <button
-                  className="bg-red px-6 py-2 text-sm text-parchment transition hover:bg-red"
+                  className="bg-rose-50 px-6 py-2 text-sm text-rose-700 transition hover:bg-rose-100"
                   onClick={() => setShowRegister(true)}
                   type="button"
                 >

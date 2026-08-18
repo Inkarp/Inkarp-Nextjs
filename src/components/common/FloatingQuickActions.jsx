@@ -120,7 +120,7 @@ export default function FloatingQuickActions() {
 
       <a
         aria-label="Call Inkarp"
-        className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-navy text-parchment shadow-lg shadow-zinc-900/15 transition hover:bg-red"
+        className="group inline-flex h-12 items-center overflow-hidden rounded-full border border-rose-200 bg-rose-50 text-rose-700 shadow-lg shadow-zinc-900/15 transition hover:bg-rose-100"
         href={`tel:${phoneNumber}`}
       >
         <span className="inline-flex size-12 items-center justify-center text-xl">

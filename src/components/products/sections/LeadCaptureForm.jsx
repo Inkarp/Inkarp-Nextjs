@@ -67,7 +67,7 @@ export default function LeadCaptureForm({
   if (!expanded) {
     return (
       <button
-        className={`inline-flex h-11 items-center justify-center gap-2 bg-red px-6 text-sm font-bold text-white transition hover:bg-transparent hover:text-red ${className}`}
+        className={`inline-flex h-11 items-center justify-center gap-2 bg-rose-50 px-6 text-sm font-bold text-rose-700 transition hover:bg-rose-100 ${className}`}
         onClick={() => setExpanded(true)}
         type="button"
       >
@@ -109,7 +109,7 @@ export default function LeadCaptureForm({
 
       <div className="flex flex-wrap items-center gap-3">
         <button
-          className="inline-flex h-11 items-center justify-center gap-2 bg-red px-6 text-sm font-bold text-white transition hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center gap-2 bg-rose-50 px-6 text-sm font-bold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
           disabled={submitState === 'sending'}
           type="submit"
         >

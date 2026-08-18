@@ -27,7 +27,7 @@ export default function CatalystCue() {
 
           <Link
             aria-label="Back to Inkarp"
-            className="inline-flex w-fit items-center gap-1.5 rounded-full bg-red px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-red/90 sm:justify-self-end sm:text-sm"
+            className="inline-flex w-fit items-center gap-1.5 rounded-full bg-rose-50 px-4 py-2 text-xs font-semibold text-rose-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-rose-100/90 sm:justify-self-end sm:text-sm"
             href="/"
           >
             <FiArrowLeft className="h-3.5 w-3.5 shrink-0" />

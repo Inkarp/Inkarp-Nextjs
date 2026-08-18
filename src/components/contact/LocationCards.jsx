@@ -193,7 +193,7 @@ export default function LocationCards({ data, as: Heading = 'h2' }) {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-1.5 bg-red px-5 py-2.5 text-sm font-semibold text-parchment transition-colors duration-200 hover:bg-transparent hover:text-red focus-visible:ring-2 focus-visible:ring-red/40"
+                className="inline-flex items-center gap-1.5 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 transition-colors duration-200 hover:bg-rose-100 focus-visible:ring-2 focus-visible:ring-red/40"
               >
                 Contact Inkarp
                 <span aria-hidden="true">→</span>

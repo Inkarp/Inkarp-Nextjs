@@ -48,7 +48,7 @@ export default async function ThankYou({ searchParams }) {
           {content.message}
         </p>
         <Link
-          className="mt-6 inline-flex bg-red px-5 py-3 text-sm font-semibold text-parchment transition hover:bg-[#9a000d]"
+          className="mt-6 inline-flex bg-rose-50 px-5 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
           href={content.href}
         >
           {content.cta}

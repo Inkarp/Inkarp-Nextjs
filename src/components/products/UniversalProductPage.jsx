@@ -197,7 +197,7 @@ export default function UniversalProductPage({ product }) {
             </div>
             <a
               href={lf.cta.href ?? '/contact'}
-              className="inline-flex items-center justify-center border border-red bg-red px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red shrink-0"
+              className="inline-flex items-center justify-center border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 shrink-0"
             >
               {lf.cta.label}
               <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

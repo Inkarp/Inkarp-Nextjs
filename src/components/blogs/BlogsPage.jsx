@@ -68,7 +68,7 @@ function BlogCard({ post }) {
           {post.excerpt}
         </p>
 
-        <span className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-red">
+        <span className="mt-1 inline-flex w-fit items-center gap-2 border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition group-hover:bg-rose-100">
           Read More
           <FiArrowRight className="size-4 transition group-hover:translate-x-1" />
         </span>

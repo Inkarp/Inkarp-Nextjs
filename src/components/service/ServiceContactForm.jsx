@@ -220,7 +220,7 @@ export default function ServiceContactForm() {
               />
 
               <button
-                className={`mt-2 inline-flex border border-red bg-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red ${
+                className={`mt-2 inline-flex border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 ${
                   isSubmitting ? "cursor-not-allowed opacity-70" : "hover:-translate-y-0.5"
                 }`}
                 disabled={isSubmitting}

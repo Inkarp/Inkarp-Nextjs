@@ -160,7 +160,7 @@ export default function WorkflowJourneyExplorer() {
           </div>
           <Link
             href={`/workflows/${active.cat}`}
-            className="inline-flex shrink-0 items-center gap-2 bg-red px-4 py-2 text-xs font-semibold uppercase tracking-wide text-parchment transition hover:bg-red-soft"
+            className="inline-flex shrink-0 items-center gap-2 bg-rose-50 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-rose-700 transition hover:bg-rose-100"
           >
             Open full workflow →
           </Link>

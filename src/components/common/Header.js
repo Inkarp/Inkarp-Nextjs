@@ -251,7 +251,7 @@ export default function Header() {
                 return (
                   <Link
                     aria-label={item.label}
-                    className="group relative inline-flex size-8 items-center justify-center border border-parchment/15 bg-parchment/5 text-parchment transition hover:-translate-y-0.5 hover:border-red hover:bg-red hover:text-white"
+                    className="group relative inline-flex size-8 items-center justify-center border border-parchment/15 bg-parchment/5 text-parchment transition hover:-translate-y-0.5 hover:border-rose-300 hover:bg-rose-50 hover:text-rose-700"
                     href={item.href}
                     key={item.label}
                     rel="noreferrer"
@@ -351,7 +351,7 @@ export default function Header() {
               <div className="mx-3 hidden w-px bg-zinc-200 xl:block 2xl:mx-6" />
               <button
                 aria-label="Search products"
-                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-red dark:text-zinc-200"
+                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-rose-700 dark:text-zinc-200"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -360,7 +360,7 @@ export default function Header() {
              
               <Link
                 aria-label="Download product profile"
-                className="inline-flex h-12 w-12 items-center justify-center gap-2 bg-[#EE4B2B] text-sm font-bold text-parchment transition hover:bg-[#FF8A8A] hover:text-black xl:w-auto xl:px-5 2xl:px-7"
+                className="inline-flex h-12 w-12 items-center justify-center gap-2 border border-rose-200 bg-rose-50 text-sm font-bold text-rose-700 transition hover:bg-rose-100 xl:w-auto xl:px-5 2xl:px-7"
                 download
                 href={productProfileUrl}
               >
@@ -372,7 +372,7 @@ export default function Header() {
             <div className="ml-auto flex items-center gap-2 lg:hidden">
               <a
                 aria-label="Download product profile"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-red/40 hover:text-red dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
                 download
                 href={productProfileUrl}
               >
@@ -381,7 +381,7 @@ export default function Header() {
 
               <button
                 aria-label="Search products"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-red/40 hover:text-red dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -391,7 +391,7 @@ export default function Header() {
               <button
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle menu"
-                className="inline-flex size-11 items-center justify-center rounded-lg bg-red text-2xl text-parchment transition hover:bg-[#9a000d]"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-rose-200 bg-rose-50 text-2xl text-rose-700 transition hover:bg-rose-100"
                 onClick={() => setIsMenuOpen((current) => !current)}
                 type="button"
               >
@@ -417,7 +417,7 @@ export default function Header() {
                   <div className="flex items-center gap-2">
                     <Link
                       className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium whitespace-nowrap transition ${active
-                          ? "bg-red text-parchment"
+                          ? "border border-rose-200 bg-rose-50 text-rose-700"
                           : "text-ink hover:bg-parchment-alt hover:text-red dark:text-zinc-200 dark:hover:bg-zinc-900"
                         }`}
                       href={getNavHref(item)}

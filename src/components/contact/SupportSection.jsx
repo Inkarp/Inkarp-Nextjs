@@ -72,7 +72,7 @@ export default function SupportSection() {
                   <li>
                     <a
                       aria-label={`Email ${item.email}`}
-                      className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-parchment focus-visible:ring-2 focus-visible:ring-red/40"
+                      className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-rose-100 hover:text-rose-700 focus-visible:ring-2 focus-visible:ring-red/40"
                       // Gmail compose rather than mailto: — see ContactForm.
                       href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
                         item.email
@@ -89,7 +89,7 @@ export default function SupportSection() {
                   <li>
                     <a
                       aria-label={`Call +91 ${item.phone}`}
-                      className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-red hover:text-parchment focus-visible:ring-2 focus-visible:ring-red/40"
+                      className="group/link flex items-center gap-3 bg-parchment-alt px-3.5 py-3 text-left text-xs font-medium text-ink transition-colors duration-200 outline-none hover:bg-rose-100 hover:text-rose-700 focus-visible:ring-2 focus-visible:ring-red/40"
                       href={`tel:+91${item.phone}`}
                     >
                       <MdLocalPhone className="size-4 shrink-0 text-red transition-colors duration-200 group-hover/link:text-parchment" />

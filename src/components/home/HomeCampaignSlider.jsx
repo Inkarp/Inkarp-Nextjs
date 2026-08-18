@@ -218,7 +218,7 @@ function ExploreProductsSlide({ campaign }) {
 
         {campaign.cta ? (
           <Link
-            className="inline-flex shrink-0 items-center gap-2 border border-red bg-red px-4 py-2 text-xs font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red sm:px-6 sm:py-2.5 sm:text-sm"
+            className="inline-flex shrink-0 items-center gap-2 border border-rose-200 bg-rose-50 px-4 py-2 text-xs font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100 sm:px-6 sm:py-2.5 sm:text-sm"
             href={campaign.cta.href}
           >
             {campaign.cta.label}

@@ -131,7 +131,7 @@ function ProductCard({ product }) {
 
       <div className="mt-auto flex gap-2 pt-4">
         <Link
-          className="flex h-10 flex-1 items-center justify-center border border-red bg-red text-xs font-semibold text-white transition hover:bg-transparent hover:text-red"
+          className="flex h-10 flex-1 items-center justify-center border border-rose-200 bg-rose-50 text-xs font-semibold text-rose-700 transition hover:bg-rose-100"
           href={productHref}
           prefetch={false}
         >
@@ -165,7 +165,7 @@ export default function ProductResultsGrid({
           Try another product, principal, country, industry, application, or tag.
         </p>
         <Link
-          className="mt-4 inline-flex border border-red bg-red px-4 py-2 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red"
+          className="mt-4 inline-flex border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
           href={emptyHref}
         >
           {emptyLinkLabel}
@@ -200,7 +200,7 @@ export default function ProductResultsGrid({
       {hasMoreProducts ? (
         <div className="mt-8 flex justify-center">
           <button
-            className="border border-red bg-red px-6 py-3 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red"
+            className="border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
             onClick={() =>
               setVisibleCount((count) => Math.min(count + LOAD_MORE_COUNT, products.length))
             }

@@ -160,7 +160,7 @@ export default function DemoBooking({ data, productName }) {
                   </div>
                 ) : null}
 
-                <button className="w-full bg-red py-3.5 text-sm font-semibold text-white transition hover:bg-transparent hover:text-red disabled:opacity-60" disabled={loading} type="submit">
+                <button className="w-full bg-rose-50 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:opacity-60" disabled={loading} type="submit">
                   {loading ? 'Sending...' : (submitLabel ?? 'Request demo - we will call you back')}
                 </button>
                 <p className="mt-3 text-center text-xs text-black">

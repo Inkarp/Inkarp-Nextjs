@@ -346,7 +346,7 @@ export default function CareersForm() {
 
           <div className="flex justify-center pt-2">
             <button
-              className={`group relative overflow-hidden bg-red px-10 py-3 font-medium text-parchment transition ${
+              className={`group relative overflow-hidden bg-rose-50 px-10 py-3 font-medium text-rose-700 transition ${
                 isSubmitting
                   ?"cursor-not-allowed opacity-70"
                   :"hover:-translate-y-0.5 hover:bg-red-soft"

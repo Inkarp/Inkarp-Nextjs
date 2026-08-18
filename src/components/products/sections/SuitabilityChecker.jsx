@@ -96,7 +96,7 @@ export default function SuitabilityChecker({ data, productName }) {
             </div>
 
             <button
-              className="mt-6 h-12 w-full bg-red px-6 text-left text-sm font-bold text-white transition hover:bg-transparent hover:text-red disabled:cursor-not-allowed disabled:opacity-45"
+              className="mt-6 h-12 w-full bg-rose-50 px-6 text-left text-sm font-bold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-45"
               disabled={!allAnswered}
               onClick={handleCheck}
               type="button"

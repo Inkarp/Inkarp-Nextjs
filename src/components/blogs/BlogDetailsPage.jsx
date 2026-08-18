@@ -361,7 +361,7 @@ export default function BlogDetailsPage({ post }) {
                   </div>
                 ) : null}
                 <button
-                  className="col-span-1 w-fit bg-red px-6 py-3 text-sm font-semibold text-parchment transition hover:bg-red disabled:opacity-70 sm:col-span-2"
+                  className="col-span-1 w-fit border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:opacity-70 sm:col-span-2"
                   disabled={isCommentSubmitting}
                   type="submit"
                 >

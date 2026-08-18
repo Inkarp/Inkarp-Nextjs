@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FiMail } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+import { whatsappEnquiryHref } from "@/data/siteConfig";
 
 export default function ProductImageGallery({ ctaHref, images, productName }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -25,17 +26,19 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
           <Link
             href={ctaHref}
-            className="inline-flex h-12 items-center justify-center border border-red bg-red px-5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-transparent hover:text-red"
+            className="inline-flex h-12 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
           >
             Request Quote
           </Link>
-          <Link
-            href={ctaHref}
-            className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+          <a
+            className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-700"
+            href={whatsappEnquiryHref(productName)}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <FiMail className="h-4 w-4 text-red" />
+            <FaWhatsapp className="h-4 w-4 text-[#25D366]" />
             Enquiry Now
-          </Link>
+          </a>
         </div>
       ) : null}
       {images.length > 1 && (

@@ -185,11 +185,15 @@ export default async function ProductsPage({ searchParams }) {
     counts.set(product.principalSlug, (counts.get(product.principalSlug) ?? 0) + 1);
     return counts;
   }, new Map());
-  const brandOptions = getAllPrincipals().map((principal) => ({
-    label: principal.principalName,
-    value: principal.slug,
-    count: productCountsByBrand.get(principal.slug) ?? 0,
-  }));
+  // Principals with no live products would offer a filter that returns nothing,
+  // so they are left out of the dropdown until they have a product page.
+  const brandOptions = getAllPrincipals()
+    .map((principal) => ({
+      label: principal.principalName,
+      value: principal.slug,
+      count: productCountsByBrand.get(principal.slug) ?? 0,
+    }))
+    .filter((option) => option.count > 0);
   const industryOptions = workflowIndustryIndex.map((industry) => ({
     label: industry.industry,
     value: industry.cat,

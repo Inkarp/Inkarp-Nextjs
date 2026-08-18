@@ -13,7 +13,7 @@ import {
 } from "@/data/workflowWheel";
 import { buildDynamicMetadata } from "@/data/pageSeo";
 import { workflowChallenges } from "@/data/workflowChallenges";
-import { getProductBySlug } from "@/data/products/principals";
+import { getAllProducts, getProductBySlug } from "@/data/products/principals";
 
 function resolve(industry, slug) {
   const activeIndustry = workflowIndustries.find((item) => item.cat === industry);
@@ -70,22 +70,33 @@ export default async function WorkflowStagePage({ params }) {
 
   // Resolve each named instrument against the live catalogue here on the
   // server, so the cards can show the product image, brand and country without
-  // shipping the whole catalogue to the browser.
+  // shipping the whole catalogue to the browser. Instruments the document names
+  // but the site does not stock yet are dropped rather than shown as dead
+  // entries; matching also falls back to the product name, so they reappear on
+  // their own once those product pages exist.
+  const normaliseName = (value) =>
+    String(value ?? "").toLowerCase().replace(/[®™]/g, "").replace(/[^a-z0-9]+/g, "");
+  const productsByName = new Map(getAllProducts().map((p) => [normaliseName(p.name), p]));
+
   const challenges = (workflowChallenges[industry]?.[stage.name] ?? []).map((c) => ({
     ...c,
-    products: c.products.map((item) => {
-      const product = item.slug ? getProductBySlug(item.slug) : null;
-      if (!product) return { ...item, slug: null };
-      return {
-        name: product.name ?? item.name,
-        slug: product.slug,
-        principal: product.principalName ?? item.principal,
-        principalImage: product.principalImage ?? null,
-        country: product.countryOfOrigin ?? null,
-        image: product.image ?? null,
-        imageAlt: product.imageAlt ?? product.name ?? item.name,
-      };
-    }),
+    products: c.products
+      .map((item) => {
+        const product =
+          (item.slug ? getProductBySlug(item.slug) : null) ??
+          productsByName.get(normaliseName(item.name));
+        if (!product) return null;
+        return {
+          name: product.name ?? item.name,
+          slug: product.slug,
+          principal: product.principalName ?? item.principal,
+          principalImage: product.principalImage ?? null,
+          country: product.countryOfOrigin ?? null,
+          image: product.image ?? null,
+          imageAlt: product.imageAlt ?? product.name ?? item.name,
+        };
+      })
+      .filter(Boolean),
   }));
 
   const trail = [

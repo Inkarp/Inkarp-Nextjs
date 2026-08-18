@@ -239,7 +239,11 @@ export default function ProductInfoTabs({ product }) {
     ? product.performance
     : undefined;
 
-  const overviewSec      = section('overview', 'Product overview') ?? lf.sections?.[0] ?? flatOverviewSec;
+  // Fall back to the first prose section — never the workflow section, whose
+  // `steps` belong to the process cycle rather than the Overview tab.
+  const overviewSec      = section('overview', 'Product overview')
+    ?? lf.sections?.find((s) => !s.steps?.length)
+    ?? flatOverviewSec;
   const keyFeaturesSec   = section('features', 'Key Features');
   const applicationsSec  = section('applications', 'Applications');
   const specsSec         = section('specs', 'Technical Specs');

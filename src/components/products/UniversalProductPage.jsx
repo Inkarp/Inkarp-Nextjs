@@ -31,6 +31,7 @@ import SupportStrip from './sections/SupportStrip';
 import ProductMicrositeLayer from './ProductMicrositeLayer';
 import ProductEngagementPopups from './ProductEngagementPopups';
 import RecTag from '@/components/home/RecTag';
+import { productWorkflows } from '@/data/productWorkflows';
 
 
 export default function UniversalProductPage({ product }) {
@@ -43,7 +44,10 @@ export default function UniversalProductPage({ product }) {
   const findSection = (key, eyebrow) =>
     lf.sections?.find((s) => s.key === key || s.eyebrow === eyebrow);
 
-  const workflowSection = findSection('workflow', 'Evaporation workflow');
+  // The process cycle comes from the product workbook, keyed by slug. It is the
+  // source of truth and replaces any older hand-written section.
+  const workflowSection =
+    productWorkflows[product.slug] ?? findSection('workflow', 'Evaporation workflow');
   const performanceSection = findSection('performance', 'Performance');
   const solventSection = findSection('solventGuide', 'Solvent setup guide');
   const roiSection = findSection('roi', 'ROI and payback');

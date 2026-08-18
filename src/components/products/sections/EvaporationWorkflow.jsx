@@ -2,39 +2,53 @@
 import { useState, useEffect, useCallback } from 'react';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import {
+  FiActivity, FiBarChart2, FiCamera, FiCloudDrizzle, FiCrosshair, FiDroplet,
+  FiFileText, FiFilter, FiLayers, FiLock, FiLogIn, FiLogOut, FiMinimize2,
+  FiRefreshCw, FiRepeat, FiRotateCw, FiSettings, FiSliders, FiSun, FiTarget,
+  FiThermometer, FiTrendingUp, FiWind, FiZap,
+} from 'react-icons/fi';
 
 const STEP_DURATION = 4000; // ms per step
 
-/* Step icons as inline SVGs */
-// Keyed by step.title.toLowerCase() so icon assignment survives JSON reordering.
-// Falls back to a numbered circle if a title doesn't match any key.
-const STEP_ICON_MAP = {
-  rotate: (
-    <svg key="rotate" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <path d="M1 4v6h6M23 20v-6h-6" /><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15" />
-    </svg>
-  ),
-  heat: (
-    <svg key="heat" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
-    </svg>
-  ),
-  evaporate: (
-    <svg key="evap" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" />
-    </svg>
-  ),
-  condense: (
-    <svg key="cond" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <path d="M12 2L8 8H4l4 4-1.5 5L12 14l5.5 3L16 12l4-4h-4z" />
-    </svg>
-  ),
-  collect: (
-    <svg key="coll" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-      <path d="M8 3l-1 7H5a2 2 0 0 0-2 2v1a9 9 0 0 0 18 0v-1a2 2 0 0 0-2-2h-2L16 3H8z" />
-    </svg>
-  ),
-};
+/* Step icons.
+   The step vocabulary across the catalogue runs to ~227 distinct names, so
+   icons resolve by keyword rather than exact match: "Load Sample", "Load
+   Samples" and "Load" all read as loading. Unmatched steps fall back to a
+   numbered circle. */
+const STEP_ICON_RULES = [
+  { test: /rotat|spin|orbital|centrifug|shake|vortex|swirl/,        Icon: FiRotateCw    },
+  { test: /evaporat|vapor|boil.?off|distil/,                        Icon: FiTrendingUp  },
+  { test: /condens/,                                                Icon: FiCloudDrizzle},
+  { test: /cool|chill|freeze|cryo/,                                 Icon: FiWind        },
+  { test: /heat|warm|cure|incubat|anneal|bake/,                     Icon: FiThermometer },
+  { test: /dry|dehydrat|lyophil/,                                   Icon: FiSun         },
+  { test: /weigh|balance|tare|level|mass/,                          Icon: FiSliders     },
+  { test: /calibrat|standard|zero|reference/,                       Icon: FiTarget      },
+  { test: /load|mount|insert|charge|fill|feed|place/,               Icon: FiLogIn       },
+  { test: /unload|discharg|eject|remove|recover|harvest|collect/,   Icon: FiLogOut      },
+  { test: /rinse|clean|wash|purge|flush/,                           Icon: FiDroplet     },
+  { test: /separat|purif|filter|extract|elut|chromatograph/,        Icon: FiFilter      },
+  { test: /pump|prime|circulat|dispens|aspirat|inject|flow|dose/,   Icon: FiRepeat      },
+  { test: /evacuat|vacuum|degas|pressur/,                           Icon: FiMinimize2   },
+  { test: /seal|close|lock|cap/,                                    Icon: FiLock        },
+  { test: /stir|mix|homogenis|homogeniz|blend|dissolv|disperse/,    Icon: FiRefreshCw   },
+  { test: /react|synthes|sonicat|digest|titrat/,                    Icon: FiZap         },
+  { test: /coat|spread|print|deposit|apply/,                        Icon: FiLayers      },
+  { test: /illuminat|expos|irradiat|flame|atomis|atomiz|emission|light/, Icon: FiSun    },
+  { test: /focus|image|captur|observ|view|acquir|scan|microscop/,   Icon: FiCamera      },
+  { test: /detect|sens|probe|immers|approach|electrode/,            Icon: FiCrosshair   },
+  { test: /measur|analys|analyz|calculat|quantif|read|assay/,       Icon: FiBarChart2   },
+  { test: /monitor|maintain|stabilis|stabiliz|track|hold/,          Icon: FiActivity    },
+  { test: /report|record|document|log|export|result/,               Icon: FiFileText    },
+  { test: /prepar|set ?up|configur|program|select|set /,            Icon: FiSettings    },
+];
+
+function stepIcon(title) {
+  const t = String(title ?? '').toLowerCase();
+  const rule = STEP_ICON_RULES.find((r) => r.test.test(t));
+  return rule ? <rule.Icon className="h-5 w-5" /> : null;
+}
 
 /* Connector between cards */
 function Connector({ complete }) {
@@ -82,7 +96,7 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
           isActive ? 'bg-red text-white' : 'bg-white text-ink-soft'
         }`}
       >
-        {STEP_ICON_MAP[step.title.toLowerCase()] ?? <span className="text-sm font-bold">{index + 1}</span>}
+        {stepIcon(step.title) ?? <span className="text-sm font-bold">{index + 1}</span>}
       </div>
 
       <h3 className={`mb-2 text-sm font-semibold tracking-tight transition-colors ${isActive ? 'text-ink' : 'text-ink-soft'}`}>

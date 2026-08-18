@@ -227,25 +227,30 @@ export async function POST(request) {
     submittedAt: new Date(),
   };
   let insertedId;
+  let saved = false;
 
   try {
     const db = await getDb();
     const result = await db.collection(CHATBOT_CONFIG.mongoCollectionName).insertOne(submission);
     insertedId = result.insertedId;
+    saved = true;
   } catch (error) {
     console.error("[chat] failed to save submission:", error.message);
-    return Response.json({ success: false, message: "Could not save your enquiry. Please try again shortly." }, { status: 500 });
   }
 
   let notificationSent = false;
   try {
-    await sendChatEmail({ ...submission, _id: insertedId });
+    await sendChatEmail(insertedId ? { ...submission, _id: insertedId } : submission);
     notificationSent = true;
   } catch (error) {
     console.error("[chat] failed to send notification email:", error.message);
   }
 
-  return Response.json({ success: true, id: String(insertedId), notificationSent });
+  if (!saved && !notificationSent) {
+    return Response.json({ success: false, message: "Could not submit your enquiry. Please try again shortly." }, { status: 500 });
+  }
+
+  return Response.json({ success: true, id: insertedId ? String(insertedId) : undefined, saved, notificationSent });
 }
 
 

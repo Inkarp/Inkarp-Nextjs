@@ -26,6 +26,8 @@ function fieldValue(formData, key) {
 }
 
 async function sendCareerEmails({ fields, submission, tracking, resume, resumeBuffer }) {
+  let notificationSent = false;
+
   try {
     await sendFormNotification({
       subject: `New Career Application: ${fields.role}`,
@@ -40,6 +42,7 @@ async function sendCareerEmails({ fields, submission, tracking, resume, resumeBu
         },
       ],
     });
+    notificationSent = true;
   } catch (error) {
     console.error("[careers] failed to send notification email:", error.message);
   }
@@ -54,6 +57,8 @@ async function sendCareerEmails({ fields, submission, tracking, resume, resumeBu
   } catch (error) {
     console.error("[careers] failed to send acknowledgement email:", error.message);
   }
+
+  return notificationSent;
 }
 
 export async function POST(request) {
@@ -106,18 +111,40 @@ export async function POST(request) {
     submittedAt: new Date(),
   };
 
+  let saved = false;
+
   try {
     const db = await getDb();
     await db.collection("careerApplications").insertOne(submission);
+    saved = true;
   } catch (error) {
     console.error("[careers] failed to save application:", error.message);
-    return Response.json(
-      { success: false, message: "Could not save your application. Please try again shortly." },
-      { status: 500 }
-    );
   }
 
   const resumeBuffer = Buffer.from(await resume.arrayBuffer());
+
+  if (!saved) {
+    const notificationSent = await sendCareerEmails({
+      fields,
+      submission,
+      tracking,
+      resume,
+      resumeBuffer,
+    });
+
+    if (!notificationSent) {
+      return Response.json(
+        { success: false, message: "Could not submit your application. Please try again shortly." },
+        { status: 500 }
+      );
+    }
+
+    return Response.json(
+      { success: true, saved, notificationSent, message: "Application submitted successfully" },
+      { status: 201 }
+    );
+  }
+
   after(() =>
     sendCareerEmails({
       fields,
@@ -128,5 +155,5 @@ export async function POST(request) {
     })
   );
 
-  return Response.json({ success: true, message: "Application submitted successfully" }, { status: 201 });
+  return Response.json({ success: true, saved, message: "Application submitted successfully" }, { status: 201 });
 }

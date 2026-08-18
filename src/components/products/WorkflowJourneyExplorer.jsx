@@ -5,7 +5,7 @@ import { useState } from "react";
 import StepIcon from "@/components/home/StepIcon";
 import WorkflowIcon from "@/components/home/WorkflowIcon";
 import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
-import { workflowWheelSteps } from "@/data/workflowWheel";
+import { workflowIntros, workflowWheelLinks, workflowWheelSteps } from "@/data/workflowWheel";
 
 const TOP_H = 52;
 const DOT_H = 40;
@@ -14,7 +14,12 @@ const LINE_TOP = TOP_H + DOT_H / 2;
 
 function StepRail({ cat, industry }) {
   const steps = workflowWheelSteps[cat] ?? [];
-  const href = `/workflows/${cat}`;
+  const stepLinks = workflowWheelLinks[cat] ?? [];
+
+  // Each stage opens its own workflow topic; unmapped stages fall back to the
+  // industry landing page.
+  const stepHref = (index) =>
+    stepLinks[index] ? `/workflows/${cat}/${stepLinks[index]}` : `/workflows/${cat}`;
 
   return (
     <div className="overflow-x-auto pb-2">
@@ -43,17 +48,17 @@ function StepRail({ cat, industry }) {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="block text-[11.5px] font-medium leading-tight text-ink underline decoration-line-light decoration-1 underline-offset-2 transition-colors group-hover:text-red group-hover:decoration-red">
-                  {step}
+                  {step.name}
                 </span>
               </>
             );
 
             return (
               <Link
-                key={step}
-                href={href}
-                title={`View the ${industry} workflow`}
-                aria-label={`Step ${i + 1}: ${step} — view the ${industry} workflow`}
+                key={step.name}
+                href={stepHref(i)}
+                title={step.description}
+                aria-label={`Step ${i + 1}: ${step.name} — ${step.description}`}
                 className="group contents"
               >
                 <div
@@ -146,7 +151,7 @@ export default function WorkflowJourneyExplorer() {
               {active.industry}
             </h3>
             <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-ink-soft">
-              {active.tagline}
+              {workflowIntros[active.cat] ?? active.tagline}
             </p>
           </div>
           <Link
@@ -159,7 +164,7 @@ export default function WorkflowJourneyExplorer() {
 
         <div className="mt-6 border-t border-line-light pt-6">
           <p className="mb-1 text-[11.5px] text-ink-soft">
-            Click any step to open the {active.industry.toLowerCase()} workflow →
+            Click any stage to open that workflow →
           </p>
           <StepRail cat={active.cat} industry={active.industry} />
         </div>

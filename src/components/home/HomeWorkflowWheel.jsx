@@ -46,8 +46,10 @@ export default function HomeWorkflowWheel() {
     timeoutsRef.current.forEach((id) => clearTimeout(id));
     timeoutsRef.current = [];
 
-    setHubSwapping(true);
-    setVisibleLabels(new Set());
+    const reset = setTimeout(() => {
+      setHubSwapping(true);
+      setVisibleLabels(new Set());
+    }, 0);
 
     const reveal = setTimeout(() => {
       setHubSwapping(false);
@@ -58,6 +60,7 @@ export default function HomeWorkflowWheel() {
         timeoutsRef.current.push(t);
       }
     }, 280);
+    timeoutsRef.current.push(reset);
     timeoutsRef.current.push(reveal);
 
     return () => {
@@ -125,7 +128,7 @@ export default function HomeWorkflowWheel() {
                     >
                       <Link
                         href={stepHref(i)}
-                        aria-label={`${steps[i]} — open ${active.industry} workflow`}
+                        aria-label={`${steps[i].name} — open ${active.industry} workflow`}
                         className="group absolute block w-[118px] text-center transition-transform duration-1000 focus:outline-none"
                         style={{
                           transform: `translate(-50%,-50%) rotate(${-(rotation + angle)}deg)`,
@@ -151,7 +154,7 @@ export default function HomeWorkflowWheel() {
                               : "group-hover:text-teal group-focus-visible:text-teal"
                           } ${visibleLabels.has(i) ? "opacity-100" : "opacity-0"}`}
                         >
-                          {steps[i]}
+                          {steps[i].name}
                         </span>
                       </Link>
                     </div>
@@ -189,13 +192,13 @@ export default function HomeWorkflowWheel() {
 
             <ol className="mt-6 w-full max-w-md divide-y divide-line-light border-t border-line-light lg:hidden">
               {steps.map((step, i) => (
-                <li key={step}>
+                <li key={step.name}>
                   <Link
                     href={stepHref(i)}
                     className="group flex items-baseline gap-3 py-2.5 text-sm text-ink transition-colors hover:text-red"
                   >
                     <span className="font-mono text-xs text-red">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="flex-1">{step}</span>
+                    <span className="flex-1">{step.name}</span>
                     <span className="text-xs text-ink-soft transition-transform group-hover:translate-x-0.5 group-hover:text-red">
                       →
                     </span>

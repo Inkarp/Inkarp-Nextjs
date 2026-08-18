@@ -119,15 +119,15 @@ export async function POST(request) {
     submittedAt: new Date(),
   };
 
+  let saved = false;
+  let notificationSent = false;
+
   try {
     const db = await getDb();
     await db.collection("formSubmissions").insertOne(submission);
+    saved = true;
   } catch (error) {
     console.error("[forms] failed to save submission:", error.message);
-    return Response.json(
-      { success: false, message: "Could not save your submission. Please try again shortly." },
-      { status: 500 }
-    );
   }
 
   try {
@@ -138,6 +138,7 @@ export async function POST(request) {
       replyTo: fields.email,
       to: FORM_RECIPIENTS[formType],
     });
+    notificationSent = true;
   } catch (error) {
     console.error("[forms] failed to send notification email:", error.message);
   }
@@ -152,5 +153,12 @@ export async function POST(request) {
     console.error("[forms] failed to send acknowledgement email:", error.message);
   }
 
-  return Response.json({ success: true });
+  if (!saved && !notificationSent) {
+    return Response.json(
+      { success: false, message: "Could not submit your request. Please try again shortly." },
+      { status: 500 }
+    );
+  }
+
+  return Response.json({ success: true, saved, notificationSent });
 }

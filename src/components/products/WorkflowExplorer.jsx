@@ -3,6 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 import WorkflowIcon from "@/components/home/WorkflowIcon";
 import WorkflowProblemProductPanel from "@/components/products/WorkflowProblemProductPanel";
 import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import { workflowIntros, stagesWithSlugs } from "@/data/workflowWheel";
 import {
   getProblemProductGroups,
   mergeWorkflowContent,
@@ -65,6 +66,13 @@ function WorkflowDetail({ activeIndustry, topics, activeTopic }) {
 }
 
 function WorkflowList({ activeIndustry, topics }) {
+  // The eight document stages replace the old six hand-written topic cards.
+  const cat = activeIndustry.cat;
+  const stages = stagesWithSlugs(cat);
+
+  // Every stage has its own page of challenges, solutions and instruments.
+  const hrefFor = (i) => `/workflows/${cat}/${stages[i].slug}`;
+
   return (
     <div className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-8">
       <IndustryTabs activeCat={activeIndustry.cat} />
@@ -73,26 +81,30 @@ function WorkflowList({ activeIndustry, topics }) {
       <h2 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
         {activeIndustry.industry}
       </h2>
-      <p className="mt-2 max-w-2xl text-sm text-ink-soft">{activeIndustry.tagline}</p>
+      <p className="mt-2 max-w-3xl text-sm text-ink-soft">
+        {workflowIntros[activeIndustry.cat] ?? activeIndustry.tagline}
+      </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {topics.map((topic, index) => (
+        {stages.map((stage, index) => (
           <div
-            key={topic.tag}
+            key={stage.name}
             className="flex flex-col border border-line-light bg-white p-5 transition hover:-translate-y-0.5 hover:border-red/40"
           >
-            <div className="mb-3 flex items-center justify-between">
-              <span className="font-mono text-xs text-red">#{index + 1}</span>
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <span className="font-mono text-xs text-red">
+                #{String(index + 1).padStart(2, "0")}
+              </span>
               <span className="bg-red/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-red">
-                {topic.tag}
+                Challenges &amp; solutions
               </span>
             </div>
             <h3 className="text-[15px] font-semibold leading-snug text-ink">
-              {topic.title}
+              {stage.name}
             </h3>
-            <p className="mt-2 flex-1 text-[13px] text-ink-soft">{topic.desc}</p>
+            <p className="mt-2 flex-1 text-[13px] text-ink-soft">{stage.description}</p>
             <Link
-              href={`/workflows/${activeIndustry.cat}/${topicSlug(topic.tag)}`}
+              href={hrefFor(index)}
               className="group mt-5 inline-flex h-10 w-fit items-center gap-2 border border-red bg-red px-4 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(201,0,22,0.14)] transition hover:-translate-y-0.5 hover:bg-red-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
             >
               <span>Open workflow</span>

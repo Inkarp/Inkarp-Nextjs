@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import WorkflowExplorer from "@/components/products/WorkflowExplorer";
-import WorkflowStageList from "@/components/products/WorkflowStageList";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { workflowIndustries } from "@/data/homeShowcase";
 import { buildDynamicMetadata } from "@/data/pageSeo";
@@ -40,7 +39,6 @@ export default async function WorkflowIndustryPage({ params }) {
       <BreadcrumbJsonLd trail={trail} />
       <PageBreadcrumbs trail={trail} />
       <WorkflowExplorer industry={industry} />
-      <WorkflowStageList cat={industry} industry={activeIndustry.industry} />
     </main>
   );
 }

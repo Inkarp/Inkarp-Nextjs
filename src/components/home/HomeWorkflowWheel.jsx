@@ -6,7 +6,7 @@ import RecTag from "./RecTag";
 import StepIcon from "./StepIcon";
 import WorkflowIcon from "./WorkflowIcon";
 import { workflowIndustries } from "@/data/homeShowcase";
-import { workflowWheelLinks, workflowWheelSteps } from "@/data/workflowWheel";
+import { stagesWithSlugs, workflowWheelSteps } from "@/data/workflowWheel";
 
 const STEP_COUNT = 8;
 const SPOKE_INNER_R = 104;
@@ -29,12 +29,12 @@ export default function HomeWorkflowWheel() {
 
   const active = industries[activeIndex];
   const steps = workflowWheelSteps[active.cat] ?? [];
-  const stepLinks = workflowWheelLinks[active.cat] ?? [];
+  const stageSlugs = stagesWithSlugs(active.cat);
 
-  // Unmapped steps fall back to the industry landing page.
+  // Straight to that workflow's challenges, solutions and instruments.
   function stepHref(index) {
-    const topic = stepLinks[index];
-    return topic ? `/workflows/${active.cat}/${topic}` : `/workflows/${active.cat}`;
+    const stage = stageSlugs[index];
+    return stage ? `/workflows/${active.cat}/${stage.slug}` : `/workflows/${active.cat}`;
   }
 
   const spokeAngles = useMemo(
@@ -136,10 +136,12 @@ export default function HomeWorkflowWheel() {
                         }}
                       >
                         <span
-                          className={`relative mx-auto flex h-[66px] w-[66px] items-center justify-center rounded-full border-2 border-white shadow-sm transition duration-200 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:shadow-lg group-focus-visible:scale-110 ${
+                          // Solid white fill and a wider white ring so the spoke
+                          // behind the wheel is hidden under each node.
+                          className={`relative mx-auto flex h-[66px] w-[66px] items-center justify-center rounded-full border-4 border-white bg-white shadow-sm transition duration-200 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:shadow-lg group-focus-visible:scale-110 ${
                             i % 2 === 0
-                              ? "bg-white text-red group-hover:border-red group-focus-visible:border-red"
-                              : "bg-[#F5F5F5] text-teal group-hover:border-teal group-focus-visible:border-teal"
+                              ? "text-red group-hover:border-red group-focus-visible:border-red"
+                              : "text-teal group-hover:border-teal group-focus-visible:border-teal"
                           }`}
                         >
                           <StepIcon index={i} className="h-6 w-6" />
@@ -209,30 +211,37 @@ export default function HomeWorkflowWheel() {
           </div>
 
           <div
-            role="tablist"
             aria-label="Industries"
             className="flex w-full shrink-0 flex-row gap-1 overflow-x-auto pb-1 lg:w-[300px] lg:flex-col lg:gap-0 lg:overflow-visible lg:border-l lg:border-line-light lg:pb-0"
           >
             {industries.map((ind, i) => (
-              <button
-                key={ind.cat}
-                type="button"
-                role="tab"
-                aria-selected={i === activeIndex}
-                onClick={() => selectIndustry(i)}
-                className={`-ml-px flex shrink-0 items-baseline gap-3 border-l-2 px-4 py-3.5 text-left transition lg:px-5 ${
+              // Hover or focus spins the wheel to this industry; clicking opens
+              // its complete set of workflows.
+              <Link
+                aria-current={i === activeIndex ? "true" : undefined}
+                className={`group -ml-px flex shrink-0 items-baseline gap-3 border-l-2 px-4 py-3.5 text-left transition lg:px-5 ${
                   i === activeIndex
                     ? "border-red bg-white"
                     : "border-transparent text-ink-soft hover:bg-white/60"
                 }`}
+                href={`/workflows/${ind.cat}`}
+                key={ind.cat}
+                onFocus={() => selectIndustry(i)}
+                onMouseEnter={() => selectIndustry(i)}
+                title={`See all ${STEP_COUNT} ${ind.industry} workflows`}
               >
                 <span className={`hidden font-mono text-[11px] lg:inline ${i === activeIndex ? "text-red" : "text-ink-soft"}`}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className={`text-[15px] font-semibold leading-tight ${i === activeIndex ? "text-red" : "text-ink"}`}>
-                  {ind.industry}
+                <span className="min-w-0">
+                  <span className={`block text-[15px] font-semibold leading-tight ${i === activeIndex ? "text-red" : "text-ink"}`}>
+                    {ind.industry}
+                  </span>
+                  <span className="hidden font-mono text-[10px] uppercase tracking-wide text-ink-soft transition-colors group-hover:text-red lg:block">
+                    All {STEP_COUNT} workflows →
+                  </span>
                 </span>
-              </button>
+              </Link>
             ))}
           </div>
         </div>

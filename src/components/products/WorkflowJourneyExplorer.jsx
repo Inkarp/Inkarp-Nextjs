@@ -5,36 +5,36 @@ import { useState } from "react";
 import StepIcon from "@/components/home/StepIcon";
 import WorkflowIcon from "@/components/home/WorkflowIcon";
 import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
-import { workflowIntros, workflowWheelLinks, workflowWheelSteps } from "@/data/workflowWheel";
+import {
+  stageSlugForLegacyTopic,
+  stagesWithSlugs,
+  workflowIntros,
+} from "@/data/workflowWheel";
 
-const TOP_H = 52;
-const DOT_H = 40;
-const BOTTOM_H = 52;
+const TOP_H = 58;
+const DOT_H = 60;
+const BOTTOM_H = 58;
 const LINE_TOP = TOP_H + DOT_H / 2;
 
 function StepRail({ cat, industry }) {
-  const steps = workflowWheelSteps[cat] ?? [];
-  const stepLinks = workflowWheelLinks[cat] ?? [];
-
-  // Each stage opens its own workflow topic; unmapped stages fall back to the
-  // industry landing page.
-  const stepHref = (index) =>
-    stepLinks[index] ? `/workflows/${cat}/${stepLinks[index]}` : `/workflows/${cat}`;
+  // Each stage opens its own page of challenges, solutions and instruments.
+  const steps = stagesWithSlugs(cat);
+  const stepHref = (index) => `/workflows/${cat}/${steps[index].slug}`;
 
   return (
     <div className="overflow-x-auto pb-2">
       <div
-        className="relative min-w-[720px]"
+        className="relative min-w-[860px]"
         style={{ height: TOP_H + DOT_H + BOTTOM_H }}
       >
         <span
-          className="pointer-events-none absolute left-0 right-0 h-px bg-line-light"
+          className="pointer-events-none absolute left-0 right-0 z-0 h-px bg-line-light"
           style={{ top: LINE_TOP }}
           aria-hidden="true"
         />
 
         <div
-          className="grid h-full grid-flow-col gap-x-1"
+          className="relative z-10 grid h-full grid-flow-col gap-x-1"
           style={{
             gridTemplateColumns: `repeat(${steps.length}, minmax(0,1fr))`,
             gridTemplateRows: `${TOP_H}px ${DOT_H}px ${BOTTOM_H}px`,
@@ -44,10 +44,10 @@ function StepRail({ cat, industry }) {
             const isUp = i % 2 === 0;
             const label = (
               <>
-                <span className="block font-mono text-[10px] text-ink-soft transition-colors group-hover:text-red">
+                <span className="block font-mono text-[11px] text-ink-soft transition-colors group-hover:text-red">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="block text-[11.5px] font-medium leading-tight text-ink underline decoration-line-light decoration-1 underline-offset-2 transition-colors group-hover:text-red group-hover:decoration-red">
+                <span className="block text-[13px] font-semibold leading-tight text-ink underline decoration-line-light decoration-1 underline-offset-2 transition-colors group-hover:text-red group-hover:decoration-red">
                   {step.name}
                 </span>
               </>
@@ -71,14 +71,18 @@ function StepRail({ cat, industry }) {
                   className="flex items-center justify-center"
                   style={{ gridRow: 2, gridColumn: i + 1 }}
                 >
-                  <span
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border bg-white transition-all group-hover:-translate-y-0.5 group-hover:shadow-[0_2px_8px_rgba(190,0,16,0.18)] group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-red ${
-                      isUp
-                        ? "border-red/30 text-red group-hover:border-red"
-                        : "border-teal/30 text-teal group-hover:border-teal"
-                    }`}
-                  >
-                    <StepIcon index={i} className="h-[18px] w-[18px]" />
+                  {/* White gutter so the connecting line stops short of the
+                      node instead of running into its border. */}
+                  <span className="flex items-center justify-center bg-white px-3.5">
+                    <span
+                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 bg-white transition-all group-hover:-translate-y-0.5 group-hover:shadow-[0_2px_8px_rgba(190,0,16,0.18)] group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-red ${
+                        isUp
+                          ? "border-red text-red group-hover:border-red group-hover:bg-red/5"
+                          : "border-teal text-teal group-hover:border-teal group-hover:bg-teal/5"
+                      }`}
+                    >
+                      <StepIcon index={i} className="h-6 w-6" />
+                    </span>
                   </span>
                 </div>
                 <div
@@ -133,7 +137,7 @@ export default function WorkflowJourneyExplorer() {
                   {item.industry}
                 </span>
                 <span className="hidden font-mono text-[10px] uppercase tracking-wide text-ink-soft lg:block">
-                  {(workflowWheelSteps[item.cat] ?? []).length}-step process
+                  {stagesWithSlugs(item.cat).length}-step process
                 </span>
               </span>
             </button>
@@ -177,7 +181,10 @@ export default function WorkflowJourneyExplorer() {
             {topics.map((topic) => (
               <Link
                 key={topic.tag}
-                href={`/workflows/${active.cat}/${topicSlug(topic.tag)}`}
+                href={`/workflows/${active.cat}/${
+                  stageSlugForLegacyTopic(active.cat, topicSlug(topic.tag)) ??
+                  topicSlug(topic.tag)
+                }`}
                 className="border border-line-light px-3 py-1.5 text-[12px] text-ink transition hover:border-red hover:text-red"
               >
                 {topic.title}

@@ -2,7 +2,8 @@
 import { catalystCards } from "@/data/catalystCue";
 import { pageSeo, SITE_URL } from "@/data/pageSeo";
 import { getAllProducts } from "@/data/products/principals";
-import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import { workflowIndustries } from "@/data/homeShowcase";
+import { stagesWithSlugs } from "@/data/workflowWheel";
 
 const STATIC_ROUTES = [
   ...Object.keys(pageSeo),
@@ -72,9 +73,10 @@ export default function sitemap() {
     })
   );
 
+  // One page per workflow stage: nine industries x eight stages.
   const workflowTopicEntries = workflowIndustries.flatMap((industry) =>
-    (workflowTopics[industry.cat] ?? []).map((topic) =>
-      entry(`/workflows/${industry.cat}/${topicSlug(topic.tag)}`, {
+    stagesWithSlugs(industry.cat).map((stage) =>
+      entry(`/workflows/${industry.cat}/${stage.slug}`, {
         changeFrequency: "monthly",
         priority: 0.7,
       })

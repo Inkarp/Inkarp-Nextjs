@@ -212,3 +212,63 @@ export const workflowWheelLinks = {
     "cold-chain",
   ],
 };
+
+/**
+ * Stage names for an industry that map to a given workflow topic. A topic can
+ * be the destination of more than one stage (e.g. both "Separation (HPLC)" and
+ * "Detection & ID" point at impurity-profiling). Returns [] for the two topics
+ * no stage links to, so callers can fall back to the full stage set.
+ */
+export function stagesForTopic(cat, topic) {
+  const links = workflowWheelLinks[cat] ?? [];
+  const steps = workflowWheelSteps[cat] ?? [];
+  return links
+    .map((t, i) => (t === topic ? steps[i]?.name : null))
+    .filter(Boolean);
+}
+
+/** URL slug for a stage name, e.g. "Sampling & weighing" -> "sampling-and-weighing". */
+export function stageSlug(name) {
+  return String(name ?? "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** Every stage of an industry, with its slug and position. */
+export function stagesWithSlugs(cat) {
+  return (workflowWheelSteps[cat] ?? []).map((step, index) => ({
+    ...step,
+    slug: stageSlug(step.name),
+    index,
+    number: String(index + 1).padStart(2, "0"),
+  }));
+}
+
+/** Resolve a stage by its slug. */
+export function findStage(cat, slug) {
+  return stagesWithSlugs(cat).find((s) => s.slug === slug) ?? null;
+}
+
+/**
+ * Old topic slug -> the stage that fed it, so legacy
+ * /workflows/<industry>/<topic> URLs can redirect to the stage page.
+ */
+export function stageSlugForLegacyTopic(cat, topic) {
+  const links = workflowWheelLinks[cat] ?? [];
+  const steps = workflowWheelSteps[cat] ?? [];
+  const i = links.indexOf(topic);
+  return i >= 0 && steps[i] ? stageSlug(steps[i].name) : null;
+}
+
+/**
+ * Industries whose workflow contains a stage of this name, with that
+ * industry's slug for it. Most stages are unique to one industry; eight are
+ * shared (e.g. "Purification" runs in both pharma and biotech).
+ */
+export function industriesWithStage(name) {
+  return Object.keys(workflowWheelSteps)
+    .filter((cat) => workflowWheelSteps[cat].some((step) => step.name === name))
+    .map((cat) => ({ cat, slug: stageSlug(name) }));
+}

@@ -12,6 +12,7 @@ import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
+import ProductImageZoom from "@/components/products/ProductImageZoom";
 
 const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor & Service Provider in India";
 
@@ -195,6 +196,7 @@ export default async function ProductPage({ params }) {
                       Product image coming soon
                     </div>
                   )}
+                  <ProductImageZoom alt={product.imageAlt ?? product.name} src={product.image} />
                 </div>
                 <ProductImageActions href={ctaHref} />
               </>

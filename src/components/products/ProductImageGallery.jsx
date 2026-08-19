@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ProductImageZoom from "./ProductImageZoom";
 
 export default function ProductImageGallery({ ctaHref, images, productName }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -19,6 +20,7 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
           width={600}
           priority={selectedIndex === 0}
         />
+        <ProductImageZoom alt={selected.alt ?? productName} src={selected.src} />
       </div>
       {ctaHref ? (
         <div className="mt-4">

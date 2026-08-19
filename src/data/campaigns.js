@@ -23,14 +23,16 @@ export const campaigns = [
     variant: "inkarp-anniversary",
     icon: "🎉",
     accent: "red",
-    evergreen: true,
     foundedYear: 1985,
     years: 41,
     title: "Celebrating 41 Years of Inkarp",
     message: "Since 1985 — four decades of powering India's laboratories with trusted instruments and support.",
     cta: { label: "Our Story", href: "/our-story" },
-    start: "2026-01-01",
-    end: "2026-12-31",
+    // Picks up the day after the Independence Day banner ends. Inclusive end —
+    // the milestone stripe shows through the 21st and the evergreen Explore
+    // Products promo takes over on the 22nd.
+    start: "2026-08-17",
+    end: "2026-08-21",
     priority: 3,
   },
   {
@@ -51,10 +53,7 @@ export const campaigns = [
   {
     // `evergreen` marks the year-round fallback: it's what the stripe falls back
     // to whenever no dated campaign is running, and it's what renders on the
-    // server so the first paint never depends on the build date. The anniversary
-    // campaign above holds that slot while it runs, so the milestone stripe
-    // paints server-side instead of flashing this one first. Move
-    // `evergreen: true` back here once the anniversary ends (2026-12-31).
+    // server so the first paint never depends on the build date.
     id: "explore-products-promo",
     type: "promo",
     variant: "explore-products",
@@ -63,6 +62,7 @@ export const campaigns = [
     title: "Explore Inkarp's Latest Lab Solutions",
     message: "Find instruments, application support, and expert guidance in one place.",
     cta: { label: "Explore Products", href: "/products" },
+    evergreen: true,
     start: "2026-01-01",
     end: "2027-12-31",
     priority: 1,

@@ -1,6 +1,7 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 import { normalizeTracking, omitTrackingFields } from "@/lib/serverTracking";
+import { PRODUCT_ENQUIRY_FIELDS, validateProductEnquiry } from "@/lib/formValidation";
 
 // Product-page "pick something, then send it to Inkarp" tools. They all
 // share the same required fields (name/email/configuration) and all route
@@ -21,7 +22,7 @@ const PRODUCT_TOOL_LABELS = {
 const FORM_LABELS = {
   contact: "Contact form",
   service: "Service & installation request",
-  "demo-booking": "Product demo booking",
+  "demo-booking": "Product quote request",
   webinar: "Webinar registration",
   catalyst: "CATALYSTCue physical copy request",
   feedback: "Product profile feedback",
@@ -41,6 +42,8 @@ const REQUIRED_FIELDS = {
   ...Object.fromEntries(
     Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, ["name", "email", "configuration"]])
   ),
+  // The product enquiry form collects a full set of buyer details.
+  "demo-booking": PRODUCT_ENQUIRY_FIELDS,
 };
 
 const FORM_RECIPIENTS = {
@@ -88,6 +91,8 @@ function acknowledgementFor(formType) {
       return "We have received your ROI estimate. Our team will follow up with a tailored quote.";
     case "solvent-calculator":
       return "We have received your solvent recovery estimate. Our team will follow up with a tailored quote.";
+    case "demo-booking":
+      return "We have received your quote request. Our team will get back to you with pricing and availability shortly.";
     default:
       return "We have received your enquiry and our team will get back to you soon.";
   }
@@ -108,6 +113,18 @@ export async function POST(request) {
       { success: false, message: `Missing required fields: ${missing.join(", ")}` },
       { status: 400 }
     );
+  }
+
+  // Re-run the product enquiry rules here; the browser checks are a
+  // convenience, not a guarantee.
+  if (formType === "demo-booking") {
+    const errors = validateProductEnquiry(fields);
+    if (Object.keys(errors).length) {
+      return Response.json(
+        { success: false, message: "Please correct the highlighted fields.", errors },
+        { status: 400 }
+      );
+    }
   }
 
   const tracking = normalizeTracking(fields, request);

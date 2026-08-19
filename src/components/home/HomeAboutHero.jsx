@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import RecTag from "./RecTag";
 
 const AUTO_ROTATE_MS = 7000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
+const ANNIVERSARY_VIDEO = "/assets/41-anniversary-animation.mp4";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
 
@@ -64,10 +64,10 @@ function SlideWorkflow() {
 
 function SlideAbout() {
   return (
-    <div className="bg-white px-4 pt-5 sm:px-6 lg:px-8">
+    <div className="bg-white px-4 pb-8 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
+        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+          <div className="flex flex-col">
             <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
               <div className="relative flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:h-[104px] sm:w-[104px]">
                 <div className="absolute inset-2 rounded-full border border-dashed border-red/40" />
@@ -92,7 +92,7 @@ function SlideAbout() {
               guidance, installation support, and service across India.
             </p>
 
-            <div className="mb-11 flex flex-wrap gap-3.5">
+            <div className="mt-8 flex flex-wrap gap-3.5 lg:mt-auto lg:pb-1">
               <Link
                 href="/products"
                 className="border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
@@ -108,15 +108,18 @@ function SlideAbout() {
             </div>
           </div>
 
-          <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-            <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-white">
-              <Image
-                src={BUILDING_IMAGE}
-                alt="Inkarp scientific solutions and support network"
-                loading="eager"
-                fill
-                sizes="(min-width: 1024px) 520px, 90vw"
-                className="object-cover"
+          <div className="relative border border-line-light bg-parchment-alt p-4.5 lg:flex lg:flex-col before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+            <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-white lg:aspect-auto lg:flex-1">
+              {/* Muted is what lets it start on its own: browsers block autoplay with sound. */}
+              <video
+                aria-label="Inkarp 41st anniversary animation"
+                autoPlay
+                className="absolute inset-0 h-full w-full object-cover"
+                loop
+                muted
+                playsInline
+                preload="auto"
+                src={ANNIVERSARY_VIDEO}
               />
             </div>
           </div>

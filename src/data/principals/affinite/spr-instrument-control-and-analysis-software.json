@@ -318,7 +318,12 @@
                 "key": "benefits",
                 "eyebrow": "One Application, Every Step",
                 "title": "One Application, Every Step",
-                "description": "Switching between separate tools for calibration, acquisition, and analysis costs time and introduces version mismatches between them. Affilabs.core keeps every step of an SPR experiment in one application, from first connection to exported data. The live sensorgram, method queue, and analysis tools all draw from the same running session, so a cycle comparison or KD fit happens on the exact data just acquired, not a re-imported copy. Data leaves the application in whatever format the next step needs, Excel or CSV for Origin and Prism, sensorgram images, or a direct clipboard copy, without a separate export utility. Optical fault detection runs alongside acquisition itself, catching leaks or bubbles with a real-time quality score instead of surfacing the problem only after the run is already wasted.",
+                "description": "Switching between separate tools for calibration, acquisition, and analysis costs time and introduces version mismatches between them. Affilabs.core keeps every step of an SPR experiment in one application, from first connection to exported data.",
+                "body": [
+                  "The live sensorgram, method queue, and analysis tools all draw from the same running session, so a cycle comparison or KD fit happens on the exact data just acquired, not a re-imported copy.",
+                  "Data leaves the application in whatever format the next step needs, Excel or CSV for Origin and Prism, sensorgram images, or a direct clipboard copy, without a separate export utility.",
+                  "Optical fault detection runs alongside acquisition itself, catching leaks or bubbles with a real-time quality score instead of surfacing the problem only after the run is already wasted."
+                ],
                 "cards": [
                   { "title": "No switching between separate tools", "description": "Control, acquisition, and analysis in one application" },
                   { "title": "Data ready for the next analysis step", "description": "Direct Excel, CSV, and image export" },

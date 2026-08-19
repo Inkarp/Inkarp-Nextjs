@@ -15,9 +15,14 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
   if (!cards.length) return null;
 
   const title = section?.title ?? `What you gain with ${productName ?? 'this product'}`;
+  // `body` carries the section's supporting points as separate bullets. Sections
+  // that only supply a `description` keep the single-paragraph lead-in.
+  const bullets = section?.body?.length ? section.body : [];
   const description =
     section?.description ??
-    "Concrete, capability-based benefits drawn from the product's real specifications - not customer testimonials. Ask Inkarp for verifiable references in your field.";
+    (bullets.length
+      ? null
+      : "Concrete, capability-based benefits drawn from the product's real specifications - not customer testimonials. Ask Inkarp for verifiable references in your field.");
 
   return (
     <section id="benefits" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
@@ -30,9 +35,21 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
           <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-4 text-base leading-7 text-black">
-            {description}
-          </p>
+          {description && (
+            <p className="mt-4 text-base leading-7 text-black">
+              {description}
+            </p>
+          )}
+          {bullets.length > 0 && (
+            <ul className="mt-4 space-y-3">
+              {bullets.map((point) => (
+                <li className="flex gap-3 text-base leading-7 text-black" key={point}>
+                  <span aria-hidden className="mt-2.5 inline-block size-1.5 shrink-0 bg-red" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

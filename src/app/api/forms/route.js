@@ -17,6 +17,7 @@ const PRODUCT_TOOL_LABELS = {
   "config-wizard": "Configuration wizard submission",
   "roi-calculator": "ROI calculator submission",
   "solvent-calculator": "Solvent recovery calculator submission",
+  "throughput-calculator": "Screening throughput calculator submission",
 };
 
 const FORM_LABELS = {
@@ -89,6 +90,8 @@ function acknowledgementFor(formType) {
       return "We have received your configuration. Our team will confirm availability and pricing.";
     case "roi-calculator":
       return "We have received your ROI estimate. Our team will follow up with a tailored quote.";
+    case "throughput-calculator":
+      return "Thanks for sending your screening throughput numbers. An Inkarp specialist will confirm the right configuration for that workload.";
     case "solvent-calculator":
       return "We have received your solvent recovery estimate. Our team will follow up with a tailored quote.";
     case "demo-booking":

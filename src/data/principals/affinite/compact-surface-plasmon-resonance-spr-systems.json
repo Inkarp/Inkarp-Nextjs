@@ -321,7 +321,12 @@
                 "key": "benefits",
                 "eyebrow": "Static and Flow, No Reconfiguration",
                 "title": "Static and Flow, No Reconfiguration",
-                "description": "Buying two instruments to cover fast screening and precise kinetics means paying twice and training twice. P4PRO with AffiPump collapses that into one system. Static mode handles quick yes-or-no binding questions and early assay development, the same role the standalone P4SPR 2.0 fills. Flow mode, enabled by the AffiPump, switches on when the study needs actual rate constants rather than just a binding signal, and the switch happens on the same hardware, not a separate setup. Semi-automated injection and direct inline controls carry through both modes, so the workflow stays consistent regardless of which mode is running.",
+                "description": "Buying two instruments to cover fast screening and precise kinetics means paying twice and training twice. P4PRO with AffiPump collapses that into one system.",
+                "body": [
+                  "Static mode handles quick yes-or-no binding questions and early assay development, the same role the standalone P4SPR 2.0 fills.",
+                  "Flow mode, enabled by the AffiPump, switches on when the study needs actual rate constants rather than just a binding signal, and the switch happens on the same hardware, not a separate setup.",
+                  "Semi-automated injection and direct inline controls carry through both modes, so the workflow stays consistent regardless of which mode is running."
+                ],
                 "cards": [
                   { "title": "Fast screening without buying a second instrument", "description": "Static mode on the same platform as flow kinetics" },
                   { "title": "Full kinetic data when a study calls for it", "description": "Flow mode via AffiPump, switchable without reconfiguration" },
@@ -416,6 +421,7 @@
 
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
+            { "id": "screening-throughput", "label": "Screening Throughput Calculator" },
             { "id": "suitability", "label": "Sensor Chemistry Selector" },
             { "id": "industries", "label": "Industries" },
             { "id": "config", "label": "Configuration" },
@@ -425,6 +431,21 @@
             { "id": "faq", "label": "FAQ" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
+          "throughputCalculator": {
+            "sectionId": "screening-throughput",
+            "eyebrow": "Screening Throughput Calculator",
+            "title": "How many conditions can get tested per day?",
+            "description": "Enter the number of samples and cycle time, and see the daily screening throughput.",
+            "cycleMinutes": 10,
+            "fields": [
+              { "key": "samples", "label": "Samples to screen", "default": 24, "min": 1 },
+              { "key": "cyclesPerSample", "label": "Cycles per sample", "default": 2, "min": 1 },
+              { "key": "hoursPerDay", "label": "Working hours available per day", "default": 7, "min": 1, "max": 24 }
+            ],
+            "submitLabel": "Get Configuration Support",
+            "disclaimer": "Estimates conditions screened per day at under 10 minutes per cycle. Routes to a workflow-specific quotation; actual throughput depends on incubation and wash times for the assay."
+          },
 
           "configWizard": {
             "title": "What kind of lab environment will run this instrument?",
@@ -663,7 +684,11 @@
                 "key": "benefits",
                 "eyebrow": "Static SPR, No Fluidics to Manage",
                 "title": "Static SPR, No Fluidics to Manage",
-                "description": "Every pump and tubing line in a flow-based SPR system is one more thing that can clog, wear out, or need cleaning between runs. P4SPR 2.0 removes that entire category of failure by running static, not flow. The workflow follows three simple steps: manual injection, ELISA-like incubation, and manual wash, familiar territory for anyone who's run an ELISA before. Without fluidics, there's no clogging risk and no pump maintenance to schedule, just the instrument, the sensor, and the sample.",
+                "description": "Every pump and tubing line in a flow-based SPR system is one more thing that can clog, wear out, or need cleaning between runs. P4SPR 2.0 removes that entire category of failure by running static, not flow.",
+                "body": [
+                  "The workflow follows three simple steps: manual injection, ELISA-like incubation, and manual wash, familiar territory for anyone who's run an ELISA before.",
+                  "Without fluidics, there's no clogging risk and no pump maintenance to schedule, just the instrument, the sensor, and the sample."
+                ],
                 "cards": [
                   { "title": "Simple operation without a fluidics specialist", "description": "Static SPR, manual injection and wash" },
                   { "title": "Zero clogging risk during routine use", "description": "No pump, no tubing lines" },

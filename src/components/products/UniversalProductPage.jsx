@@ -8,6 +8,7 @@ import OrbitVisualizer from './sections/OrbitVisualizer';
 import DistillationSimulator from './sections/DistillationSimulator';
 import SolventCalculator from './sections/SolventCalculator';
 import SuitabilityChecker from './sections/SuitabilityChecker';
+import ScreeningThroughputCalculator from './sections/ScreeningThroughputCalculator';
 import SolventGuide from './sections/SolventGuide';
 import ConnectivityPlanner from './sections/ConnectivityPlanner';
 import ChecklistGuide from './sections/ChecklistGuide';
@@ -76,6 +77,12 @@ export default function UniversalProductPage({ product }) {
     product.calculator && {
       key: 'solvent-calculator',
       node: <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} productName={product.name} />,
+    },
+    // Sits ahead of the suitability checker so the modules run in the order the
+    // product content defines them.
+    product.throughputCalculator && {
+      key: 'throughput-calculator',
+      node: <ScreeningThroughputCalculator data={product.throughputCalculator} productName={product.name} />,
     },
     product.suitability?.fields?.length > 0 && product.suitability?.results?.length > 0 && {
       key: 'suitability-checker',

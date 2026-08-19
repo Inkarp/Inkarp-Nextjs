@@ -202,6 +202,7 @@ export default function UniversalProductPage({ product }) {
               )}
               <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft">{lf.cta.description}</p>
             </div>
+            <div className="flex shrink-0 flex-wrap gap-3">
             <a
               href={lf.cta.href ?? '/contact'}
               className="inline-flex items-center justify-center border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 shrink-0"
@@ -211,6 +212,15 @@ export default function UniversalProductPage({ product }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
+            {lf.cta.secondaryLabel && (
+              <a
+                className="inline-flex items-center justify-center border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:border-rose-300 hover:text-rose-700 shrink-0"
+                href={lf.cta.secondaryHref ?? '/contact'}
+              >
+                {lf.cta.secondaryLabel}
+              </a>
+            )}
+            </div>
           </div>
         </section>
       )}

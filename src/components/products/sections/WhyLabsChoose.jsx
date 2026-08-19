@@ -40,6 +40,11 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
               {description}
             </p>
           )}
+          {section?.tabSummary && (
+            <p className="mt-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">
+              {section.tabSummary}
+            </p>
+          )}
           {bullets.length > 0 && (
             <ul className="mt-4 space-y-3">
               {bullets.map((point) => (
@@ -51,6 +56,14 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
             </ul>
           )}
         </div>
+
+        {section?.columnHeaders && (
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+            {section.columnHeaders.label}
+            <span aria-hidden className="mx-2 text-red">&rarr;</span>
+            {section.columnHeaders.value}
+          </p>
+        )}
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((c, i) => {

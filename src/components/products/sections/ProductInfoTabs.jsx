@@ -286,6 +286,19 @@ export default function ProductInfoTabs({ product }) {
     ? active
     : (visibleTabs[0]?.key ?? 'overview');
 
+  // One line saying what the open tab covers, when the content supplies one.
+  const sectionForTab = {
+    overview: overviewSec,
+    features: keyFeaturesSec,
+    applications: applicationsSec,
+    specs: specsSec,
+    performance: perfSec,
+    compliance: complianceSec,
+    config: configSec,
+    docs: docsSec,
+  };
+  const activeSummary = sectionForTab[safeActive]?.tabSummary;
+
   /* ── Tab content ─────────────────────────────────── */
   const renderContent = () => {
     switch (safeActive) {
@@ -415,6 +428,12 @@ export default function ProductInfoTabs({ product }) {
             {perfSec?.utilityChecklist?.length > 0 && (
               <div className="mt-6 overflow-hidden border border-line-light bg-parchment">
                 <dl className="divide-y divide-line-light">
+                  {perfSec.columnHeaders && (
+                    <div className="grid bg-parchment-alt px-5 py-2.5 text-[11px] font-semibold uppercase tracking-wide text-ink-soft sm:grid-cols-[0.45fr_0.55fr]">
+                      <dt>{perfSec.columnHeaders.label}</dt>
+                      <dd>{perfSec.columnHeaders.value}</dd>
+                    </div>
+                  )}
                   {perfSec.utilityChecklist.map((row) => (
                     <div key={row.label} className="grid px-5 py-3 text-sm sm:grid-cols-[0.45fr_0.55fr]">
                       <dt className="font-medium text-black">{row.label}</dt>
@@ -594,6 +613,11 @@ export default function ProductInfoTabs({ product }) {
           role="tabpanel"
           tabIndex={0}
         >
+          {activeSummary && (
+            <p className="mb-5 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">
+              {activeSummary}
+            </p>
+          )}
           {renderContent()}
         </div>
 

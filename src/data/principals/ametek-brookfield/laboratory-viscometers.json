@@ -66,6 +66,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Series and Temperature Selector",
             "title": "What temperature range does your formulation need?",
             "description": "Select your target testing temperature and formulation type, and see whether L Series or H Series fits.",
             "fields": [
@@ -125,6 +126,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "Automation Fit Checker",
             "title": "How does your lab currently run repetitive viscosity tests?",
             "description": "Select your testing frequency and analysis needs, and see whether Capcalc fits.",
             "steps": [
@@ -142,6 +144,14 @@
                 "options": [
                   { "val": "single-tests", "label": "Single tests" },
                   { "val": "multi-batch", "label": "Multi-batch comparison" }
+                ]
+              },
+              {
+                "key": "calculationRequirement",
+                "question": "What calculations does the analysis need?",
+                "options": [
+                  { "val": "basic-viscosity", "label": "Basic viscosity" },
+                  { "val": "yield-stress", "label": "Yield stress / plastic index" }
                 ]
               }
             ],
@@ -194,7 +204,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get CAP2000+ in India from Inkarp",
+            "title": "Request a quote for the CAP2000+ Viscometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Variable speed from 5 to 1000 RPM, precise Peltier temperature control up to 235°C, and optional Capcalc automation for repeatable, comparable results. Tell us your formulation type and temperature range, and Inkarp will confirm the right CAP2000+ configuration.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your formulation type and temperature range, then confirm the right CAP2000+ configuration.",
@@ -230,6 +240,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "Why small-volume, high-shear testing needs its own instrument",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "CAP2000+ product information: speed and temperature control, automation, and application range.",
@@ -246,24 +257,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "Variable speed, dual temperature series, automated control",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "CAP2000+ key features: variable speed control, dual temperature series, and automated testing."
               },
               {
                 "key": "applications",
+                "tabSummary": "Paints, inks, adhesives, resins, and high-viscosity materials",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "CAP2000+ applications: paints, adhesives, food products, and high-viscosity industrial materials."
               },
               {
                 "key": "specs",
+                "tabSummary": "Speed range, temperature range, and interface details",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "CAP2000+ technical specifications: speed range, temperature range, and control interface."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What your testing needs", "value": "How CAP2000+ delivers it" },
+                "tabSummary": "How L and H Series fit different testing needs",
                 "eyebrow": "Speed and Temperature Control",
                 "title": "Speed and Temperature Control",
                 "description": "How CAP2000+'s variable speed range and dual temperature series fit different testing needs.",
@@ -277,6 +293,8 @@
               },
               {
                 "key": "benefits",
+                "columnHeaders": { "label": "What your lab needs", "value": "How Capcalc delivers it" },
+                "tabSummary": "What optional PC control actually adds",
                 "eyebrow": "Automated Testing with Capcalc",
                 "title": "Automated Testing with Capcalc",
                 "description": "What optional Capcalc software adds to CAP2000+'s standard manual operation.",
@@ -289,6 +307,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, resources",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for CAP2000+ is available on request.",
@@ -304,7 +323,9 @@
               "title": "Get CAP2000+ in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Variable speed from 5 to 1000 RPM, precise Peltier temperature control up to 235°C, and optional Capcalc automation for repeatable, comparable results. Tell us your formulation type and temperature range, and Inkarp will confirm the right CAP2000+ configuration.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -378,6 +399,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Viscosity Range and Method Selector",
             "title": "What fluids and viscosity range does the work involve?",
             "description": "Select the material type and viscosity range, and see the recommended spindle and speed configuration.",
             "fields": [
@@ -448,6 +470,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "DV2T to DV2Plus Migration Planner",
             "title": "Moving from an existing DV2T?",
             "description": "Select the current instrument and existing method files, and see the migration path.",
             "steps": [
@@ -466,6 +489,25 @@
                 "options": [
                   { "val": "yes", "label": "Yes" },
                   { "val": "none", "label": "None" }
+                ]
+              },
+              {
+                "key": "accessoriesInUse",
+                "question": "Which accessories are already in use?",
+                "options": [
+                  { "val": "hpqa", "label": "HPQA" },
+                  { "val": "small-sample-adapter", "label": "Small sample adapter" },
+                  { "val": "spindle-sets", "label": "Spindle sets" },
+                  { "val": "other-none", "label": "Other or none" }
+                ]
+              },
+              {
+                "key": "softwareCurrentlyUsed",
+                "question": "What software is in use today?",
+                "options": [
+                  { "val": "none", "label": "None" },
+                  { "val": "dv360", "label": "DV360" },
+                  { "val": "another-platform", "label": "Another platform" }
                 ]
               }
             ],
@@ -569,7 +611,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the DV2Plus Viscometer in India from Inkarp",
+            "title": "Request a quote for the DV2Plus Viscometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 740 speeds, ±1.0% accuracy, and a touchscreen interface built to guide complex tests rather than complicate them — the direct successor to Brookfield's most popular viscometer. Share the fluid types tested and any compliance requirements, and the right DV2Plus configuration gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your fluid types and compliance requirements, then confirm the right DV2Plus configuration.",
@@ -608,6 +650,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "Why DV2Plus succeeds the DV2T as the standard",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "DV2Plus product information: display and interface, precision, and connectivity and software.",
@@ -632,24 +675,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "Touchscreen, Viscosity Wizard, Gel Timer, HPQA integration",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "DV2Plus key features: touchscreen interface, guided testing, and integrated connectivity."
               },
               {
                 "key": "applications",
+                "tabSummary": "QC and R&D viscosity testing across fluid types",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "DV2Plus applications: QC and R&D viscosity testing across fluid types and industries."
               },
               {
                 "key": "specs",
+                "tabSummary": "Accuracy, repeatability, speed range, and connectivity",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "DV2Plus technical specifications: display, speed range, precision, and connectivity."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What consistent measurement needs", "value": "How DV2Plus delivers it" },
+                "tabSummary": "Accuracy and repeatability across a wide viscosity range",
                 "eyebrow": "Built for Performance",
                 "title": "Built for Performance",
                 "description": "Accuracy and repeatability across a wide viscosity range.",
@@ -664,6 +712,7 @@
               },
               {
                 "key": "workflow",
+                "tabSummary": "740 speeds, Bluetooth, and software integration",
                 "eyebrow": "Advanced Control and Connectivity",
                 "title": "Advanced Control and Connectivity",
                 "description": "740 speeds, Bluetooth, and software integration.",
@@ -678,6 +727,8 @@
               },
               {
                 "key": "benefits",
+                "columnHeaders": { "label": "What test monitoring needs", "value": "How DV2Plus delivers it" },
+                "tabSummary": "What real-time monitoring across six parameters delivers",
                 "eyebrow": "Touchscreen Simplicity and Smarter Interface",
                 "title": "Touchscreen Simplicity and Smarter Interface",
                 "description": "What real-time monitoring across six parameters delivers.",
@@ -690,6 +741,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Software options, resources, related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for the DV2Plus is available on request.",
@@ -708,7 +760,9 @@
               "title": "Get the DV2Plus Viscometer in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 740 speeds, ±1.0% accuracy, and a touchscreen interface built to guide complex tests rather than complicate them — the direct successor to Brookfield's most popular viscometer. Share the fluid types tested and any compliance requirements, and the right DV2Plus configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -781,6 +835,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Sample Volume and Material Selector",
             "title": "How much sample is actually available?",
             "description": "Select the material type and available volume, and see whether cone/plate geometry fits.",
             "fields": [
@@ -809,6 +864,15 @@
                   { "val": "low", "label": "Low shear" },
                   { "val": "moderate", "label": "Moderate shear" },
                   { "val": "high", "label": "High shear" }
+                ]
+              },
+              {
+                "key": "availableSampleVolume",
+                "label": "Available sample volume",
+                "options": [
+                  { "val": "under-0-5", "label": "Under 0.5 mL per test" },
+                  { "val": "0-5-to-2", "label": "0.5 to 2.0 mL per test" },
+                  { "val": "over-2", "label": "Over 2.0 mL per test" }
                 ]
               }
             ],
@@ -841,6 +905,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "Flow Curve and Temperature Testing Planner",
             "title": "How many conditions does the protocol test across?",
             "description": "Select the throughput priority, and see the estimated test sequence time.",
             "steps": [
@@ -850,6 +915,33 @@
                 "options": [
                   { "val": "standard", "label": "Standard testing" },
                   { "val": "high-iteration", "label": "High-iteration development work" }
+                ]
+              },
+              {
+                "key": "shearRatePoints",
+                "question": "How many shear rate points per flow curve?",
+                "options": [
+                  { "val": "1-3", "label": "1 to 3 points" },
+                  { "val": "4-8", "label": "4 to 8 points" },
+                  { "val": "9-plus", "label": "9 or more points" }
+                ]
+              },
+              {
+                "key": "temperaturePoints",
+                "question": "How many temperatures are tested per sample?",
+                "options": [
+                  { "val": "single", "label": "A single temperature" },
+                  { "val": "2-3", "label": "2 to 3 temperatures" },
+                  { "val": "4-plus", "label": "4 or more temperatures" }
+                ]
+              },
+              {
+                "key": "samplesPerSession",
+                "question": "How many samples run in one session?",
+                "options": [
+                  { "val": "1-5", "label": "1 to 5 samples" },
+                  { "val": "6-15", "label": "6 to 15 samples" },
+                  { "val": "16-plus", "label": "16 or more samples" }
                 ]
               }
             ],
@@ -953,7 +1045,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the DVNext Cone/Plate Rheometer in India from Inkarp",
+            "title": "Request a quote for the DVNext Cone/Plate Rheometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Full rheological data from samples as small as 0.5 mL, magnetic coupling and electronic gap adjustment that remove manual setup, and 1% torque accuracy across every spindle/speed combination. Share the material and available sample volume, and the right DVNext Cone/Plate configuration gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your material and sample volume, then confirm the right DVNext Cone/Plate configuration.",
@@ -992,6 +1084,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "Why small sample volume drives the whole instrument design",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "DVNext Cone/Plate product information: small-volume precision, cone/plate operating principle, and compliance features.",
@@ -1015,24 +1108,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "Magnetic coupling, electronic gap adjustment, auto-zero, auto-range",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "DVNext Cone/Plate key features: small-volume precision, automated setup, and reliable torque measurement."
               },
               {
                 "key": "applications",
+                "tabSummary": "Limited-material testing, biological fluids, formulation R&D",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "DVNext Cone/Plate applications: limited-material testing, biological fluids, and formulation R&D."
               },
               {
                 "key": "specs",
+                "tabSummary": "Sample volume, accuracy, repeatability, and connectivity",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "DVNext Cone/Plate technical specifications: sample volume, precision, and connectivity."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What limited-material testing needs", "value": "How DVNext Cone/Plate delivers it" },
+                "tabSummary": "What 0.5–2.0 mL enables and why it matters",
                 "eyebrow": "Precision at Small Sample Volumes",
                 "title": "Precision at Small Sample Volumes",
                 "description": "What 0.5–2.0 mL enables and why it matters.",
@@ -1047,6 +1145,7 @@
               },
               {
                 "key": "workflow",
+                "tabSummary": "How the cone/plate geometry calculates absolute viscosity",
                 "eyebrow": "Principle of Operation",
                 "title": "Principle of Operation",
                 "description": "How the cone/plate geometry calculates absolute viscosity.",
@@ -1060,6 +1159,8 @@
               },
               {
                 "key": "certs",
+                "columnHeaders": { "label": "What regulated or connected testing needs", "value": "How DVNext Cone/Plate delivers it" },
+                "tabSummary": "Digital leveling, 21 CFR Part 11, and LIMS integration",
                 "eyebrow": "Enhanced Control and Compliance",
                 "title": "Enhanced Control and Compliance",
                 "description": "Digital leveling, 21 CFR Part 11, and LIMS integration.",
@@ -1072,6 +1173,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, software, and related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for the DVNext Cone/Plate Rheometer is available on request.",
@@ -1089,7 +1191,9 @@
               "title": "Get the DVNext Cone/Plate Rheometer in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Full rheological data from samples as small as 0.5 mL, magnetic coupling and electronic gap adjustment that remove manual setup, and 1% torque accuracy across every spindle/speed combination. Share the material and available sample volume, and the right DVNext Cone/Plate configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -1160,6 +1264,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Standard or Compliant Selector",
             "title": "Does the workflow need regulated compliance?",
             "description": "Select the regulatory and traceability requirements, and see which version fits.",
             "fields": [
@@ -1225,6 +1330,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "Gelation and Curing Test Planner",
             "title": "Does the work involve gelation or curing measurement?",
             "description": "Select the material type and version preference, and see how Gel-Timer functionality applies.",
             "steps": [
@@ -1244,6 +1350,22 @@
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "compliant", "label": "Compliant with regulated reporting" }
+                ]
+              },
+              {
+                "key": "testFrequency",
+                "question": "How often is gelation measured?",
+                "options": [
+                  { "val": "occasional", "label": "Occasionally" },
+                  { "val": "routine", "label": "Routine gelation monitoring" }
+                ]
+              },
+              {
+                "key": "dataOutputNeed",
+                "question": "How does the result need to leave the instrument?",
+                "options": [
+                  { "val": "on-screen", "label": "On-screen only" },
+                  { "val": "exported", "label": "Exported or reported" }
                 ]
               }
             ],
@@ -1345,7 +1467,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the DVNext Rheometer in India from Inkarp",
+            "title": "Request a quote for the DVNext Rheometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. ±1.0% accuracy and ±0.2% repeatability across both versions, with Standard built for fast R&D testing and Compliant built for regulated, LIMS-connected release work. Share the regulatory context and connectivity needs, and the right version gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your regulatory context and connectivity needs, then confirm the right DVNext Rheometer version.",
@@ -1384,6 +1506,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "Why two versions exist and what each is built for",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "DVNext Rheometer product information: two versions, shared precision core, and configuration differences.",
@@ -1408,24 +1531,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "Digital leveling, Gel-Timer, magnetic coupling, barcode detection",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "DVNext Rheometer key features, split by version."
               },
               {
                 "key": "applications",
+                "tabSummary": "R&D viscosity and yield stress work, regulated QC release testing",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "DVNext Rheometer applications: R&D viscosity and yield stress work, and regulated QC release testing."
               },
               {
                 "key": "specs",
+                "tabSummary": "Accuracy, repeatability, and version-specific features",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "DVNext Rheometer technical specifications: precision, and version-specific configuration."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What the lab actually needs", "value": "Which version fits" },
+                "tabSummary": "The exact feature split across the two versions",
                 "eyebrow": "Standard vs. Compliant",
                 "title": "Standard vs. Compliant",
                 "description": "The exact feature split across the two versions.",
@@ -1440,6 +1568,8 @@
               },
               {
                 "key": "benefits",
+                "columnHeaders": { "label": "What the instrument needs to deliver", "value": "How DVNext Rheometer delivers it" },
+                "tabSummary": "Precision, compliance, and configurable versatility",
                 "eyebrow": "Why Choose DVNext Rheometer",
                 "title": "Why Choose DVNext Rheometer",
                 "description": "Precision, compliance, and configurable versatility.",
@@ -1452,6 +1582,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for the DVNext Rheometer is available on request.",
@@ -1468,7 +1599,9 @@
               "title": "Get the DVNext Rheometer in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. ±1.0% accuracy and ±0.2% repeatability across both versions, with Standard built for fast R&D testing and Compliant built for regulated, LIMS-connected release work. Share the regulatory context and connectivity needs, and the right version gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -1537,6 +1670,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "DVPlus or DV2Plus Selector",
             "title": "Which Brookfield viscometer fits the budget and workflow?",
             "description": "Select the priorities and required software features, and see which instrument fits.",
             "fields": [
@@ -1602,6 +1736,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "Time-Based Test Configuration Planner",
             "title": "What time-dependent behaviour does the protocol need to capture?",
             "description": "Select the time-based measurement required, and see the recommended setup.",
             "steps": [
@@ -1620,6 +1755,22 @@
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "enhanced-rtd", "label": "Enhanced with the RTD probe" }
+                ]
+              },
+              {
+                "key": "testDuration",
+                "question": "How long does a typical test run?",
+                "options": [
+                  { "val": "short", "label": "Short runs" },
+                  { "val": "extended", "label": "Extended monitoring" }
+                ]
+              },
+              {
+                "key": "dataOutput",
+                "question": "How does the data need to leave the instrument?",
+                "options": [
+                  { "val": "on-screen", "label": "On-screen only" },
+                  { "val": "dvplus-connect", "label": "Exported via DVPlus Connect" }
                 ]
               }
             ],
@@ -1727,7 +1878,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the DVPlus Viscometer in India from Inkarp",
+            "title": "Request a quote for the DVPlus Viscometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The same ±1.0% accuracy and 740-speed range as Brookfield's flagship instrument, at an entry-level price. Share the materials tested and whether guided setup or Gel Timer functionality are needed, and the right choice between DVPlus and DV2Plus gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your materials and requirements, then confirm the right choice between DVPlus and DV2Plus.",
@@ -1766,6 +1917,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "Why entry-level doesn't mean reduced accuracy here",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "DVPlus product information: interface, precision, connectivity, and time-based measurement.",
@@ -1789,24 +1941,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "The handful of things that actually separate DVPlus from DV2Plus",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "What actually sets DVPlus apart — not a repeat of the overview above."
               },
               {
                 "key": "applications",
+                "tabSummary": "Routine QC viscosity testing, entry-level R&D use",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "DVPlus applications: routine QC viscosity testing, and entry-level R&D use."
               },
               {
                 "key": "specs",
+                "tabSummary": "Display, accuracy, repeatability, connectivity, and options",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "DVPlus technical specifications: display, precision, connectivity, and options."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What entry-level buyers actually need", "value": "How DVPlus delivers it" },
+                "tabSummary": "The accuracy/repeatability figures matched against DV2Plus",
                 "eyebrow": "Precision at an Entry-Level Price",
                 "title": "Precision at an Entry-Level Price",
                 "description": "The accuracy and repeatability figures matched against DV2Plus.",
@@ -1819,6 +1976,8 @@
               },
               {
                 "key": "benefits",
+                "columnHeaders": { "label": "What time-dependent testing needs", "value": "How DVPlus delivers it" },
+                "tabSummary": "Time to Torque, Time to Temperature, Time to Stop",
                 "eyebrow": "Time-Based Measurement Access",
                 "title": "Time-Based Measurement Access",
                 "description": "Time to Torque, Time to Temperature, and Time to Stop.",
@@ -1831,6 +1990,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for the DVPlus is available on request.",
@@ -1849,7 +2009,9 @@
               "title": "Get the DVPlus Viscometer in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. The same ±1.0% accuracy and 740-speed range as Brookfield's flagship instrument, at an entry-level price. Share the materials tested and whether guided setup or Gel Timer functionality are needed, and the right choice between DVPlus and DV2Plus gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -1914,6 +2076,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Standard or Compliant Selector",
             "title": "Does the gelation testing need regulated compliance?",
             "description": "Select the regulatory and traceability requirements, and see which version fits.",
             "fields": [
@@ -1979,6 +2142,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "Gel Time Range Planner",
             "title": "What gelation window does the protocol need to capture?",
             "description": "Select the material type and combined testing need, and see the test configuration.",
             "steps": [
@@ -1998,6 +2162,23 @@
                 "options": [
                   { "val": "gel-time-only", "label": "Gel time only" },
                   { "val": "combined", "label": "Viscosity and yield stress alongside it" }
+                ]
+              },
+              {
+                "key": "expectedGelTime",
+                "question": "What gel time window does the material fall into?",
+                "options": [
+                  { "val": "seconds", "label": "Seconds" },
+                  { "val": "minutes", "label": "Minutes" },
+                  { "val": "hours", "label": "Hours" }
+                ]
+              },
+              {
+                "key": "monitoringRequirement",
+                "question": "Where does the run need to be monitored from?",
+                "options": [
+                  { "val": "on-site", "label": "On-site only" },
+                  { "val": "remote-ethernet", "label": "Remotely over Ethernet" }
                 ]
               }
             ],
@@ -2094,7 +2275,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the DVNext Rheometer with Gel Timer Functionality in India from Inkarp",
+            "title": "Request a quote for the DVNext Rheometer with Gel Timer Functionality",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Viscosity, yield stress, and gel time on one instrument, with Standard and 21 CFR Part 11 Compliant versions covering both R&D and regulated workflows. Share the gelation systems tested and the regulatory context, and the right version gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your gelation systems and regulatory context, then confirm the right version.",
@@ -2133,6 +2314,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "Why gel time measurement sits alongside viscosity and yield stress on one instrument",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "Product information: gel-time measurement, connectivity, and version differences.",
@@ -2156,24 +2338,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "The specific things that separate this from a general-purpose rheometer",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "What actually distinguishes this instrument — not a restatement of the overview above."
               },
               {
                 "key": "applications",
+                "tabSummary": "Gelation and curing studies, regulated QC release testing",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "Applications: gelation and curing studies, and regulated QC release testing."
               },
               {
                 "key": "specs",
+                "tabSummary": "Confirmed features by version, and what needs confirmation",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "Technical specifications: confirmed features by version. Accuracy and repeatability were not stated in this source pull. The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability — confirm whether the same figures apply to this variant before quoting."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What gelation studies need", "value": "How the instrument delivers it" },
+                "tabSummary": "Why tracking gelation on the primary rheometer matters",
                 "eyebrow": "Gel Time as a First-Class Measurement",
                 "title": "Gel Time as a First-Class Measurement",
                 "description": "Why tracking gelation on the primary rheometer matters.",
@@ -2186,6 +2373,8 @@
               },
               {
                 "key": "benefits",
+                "columnHeaders": { "label": "What the lab actually needs", "value": "Which version fits" },
+                "tabSummary": "The exact feature split across the two versions",
                 "eyebrow": "Standard vs. Compliant",
                 "title": "Standard vs. Compliant",
                 "description": "The exact feature split across the two versions. The version split mirrors the base DVNext Rheometer: Standard is built for straightforward gelation and viscosity testing with the option to add magnetic coupling or barcode tracking as needed, while Compliant builds those features in as standard and adds the full regulated workflow.",
@@ -2200,6 +2389,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation is available on request.",
@@ -2217,7 +2407,9 @@
               "title": "Get the DVNext Rheometer with Gel Timer Functionality in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Viscosity, yield stress, and gel time on one instrument, with Standard and 21 CFR Part 11 Compliant versions covering both R&D and regulated workflows. Share the gelation systems tested and the regulatory context, and the right version gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -2280,6 +2472,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Unit and Range Checker",
             "title": "Does the formulation fall within KU-3's measurement range?",
             "description": "Select the unit and material type, and see whether it falls within the instrument's range.",
             "fields": [
@@ -2298,6 +2491,15 @@
                 "options": [
                   { "val": "standard", "label": "Standard formulation" },
                   { "val": "paste", "label": "High-consistency paste" }
+                ]
+              },
+              {
+                "key": "expectedValue",
+                "label": "Approximate reading for the material",
+                "options": [
+                  { "val": "below-range", "label": "Below 40 KU / 32 g / 27 cP" },
+                  { "val": "in-range", "label": "Within 40 to 141 KU" },
+                  { "val": "above-range", "label": "Above 141 KU / 1099 g / 5274 cP" }
                 ]
               }
             ],
@@ -2330,6 +2532,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "ASTM D562 Compliance Checker",
             "title": "Does the testing need to be ASTM D562-compliant?",
             "description": "Select the compliance and calibration requirement, and see the recommended setup.",
             "steps": [
@@ -2347,6 +2550,14 @@
                 "options": [
                   { "val": "nist-required", "label": "NIST traceable required" },
                   { "val": "not-specified", "label": "Not specified" }
+                ]
+              },
+              {
+                "key": "documentationNeed",
+                "question": "What documentation does the test need to produce?",
+                "options": [
+                  { "val": "formal-record", "label": "A formal compliance record" },
+                  { "val": "informal-check", "label": "An informal check" }
                 ]
               }
             ],
@@ -2442,7 +2653,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the KU-3 Viscometer in India from Inkarp",
+            "title": "Request a quote for the KU-3 Viscometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Krebs units, grams, and centipoise on one display, ±1% accuracy, and full ASTM D562 compatibility. Share the formulation specification and material type, and the right KU-3 configuration gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your formulation specification and material type, then confirm the right KU-3 configuration.",
@@ -2481,6 +2692,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "What the instrument measures and how",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "KU-3 product information: display, measurement range, and industry standard compliance.",
@@ -2508,24 +2720,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "The specific things that separate KU-3 from a general rotational viscometer",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "What specifically separates KU-3 from a general rotational viscometer."
               },
               {
                 "key": "applications",
+                "tabSummary": "Paint, coating, and ink viscosity testing",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "KU-3 applications: paint, coating, and ink viscosity testing."
               },
               {
                 "key": "specs",
+                "tabSummary": "Measurement range, accuracy, and display resolution",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "KU-3 technical specifications: measurement range, precision, and display."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What paint and coatings QC needs", "value": "How KU-3 delivers it" },
+                "tabSummary": "Why this unit system and standard apply to paints and coatings",
                 "eyebrow": "Krebs Units and ASTM D562",
                 "title": "Krebs Units and ASTM D562",
                 "description": "Why this unit system and standard apply to paints and coatings.",
@@ -2543,6 +2760,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for the KU-3 is available on request.",
@@ -2559,7 +2777,9 @@
               "title": "Get the KU-3 Viscometer in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Krebs units, grams, and centipoise on one display, ±1% accuracy, and full ASTM D562 compatibility. Share the formulation specification and material type, and the right KU-3 configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         },
@@ -2620,6 +2840,7 @@
           ],
 
           "suitability": {
+            "eyebrow": "Standard or LVT Model Selector",
             "title": "Which speed range does the method call for?",
             "description": "Select the required speed range and any existing method reference, and see which model fits.",
             "fields": [
@@ -2638,6 +2859,15 @@
                   { "val": "standard", "label": "References a standard model" },
                   { "val": "lvt", "label": "References an LVT model" },
                   { "val": "unspecified", "label": "Unspecified" }
+                ]
+              },
+              {
+                "key": "viscosityRange",
+                "label": "Approximate viscosity range of the materials tested",
+                "options": [
+                  { "val": "low", "label": "Low, under 1,000 cP" },
+                  { "val": "medium", "label": "Medium, 1,000 to 100,000 cP" },
+                  { "val": "high", "label": "High, above 100,000 cP" }
                 ]
               }
             ],
@@ -2670,6 +2900,7 @@
           },
 
           "configWizard": {
+            "eyebrow": "Accessory Compatibility Checker",
             "title": "Which Brookfield accessories does the setup need?",
             "description": "Select the accessories in use or required, and see compatibility.",
             "steps": [
@@ -2689,6 +2920,14 @@
                 "options": [
                   { "val": "yes", "label": "Yes, a specific accessory is needed" },
                   { "val": "no", "label": "No, existing accessories cover it" }
+                ]
+              },
+              {
+                "key": "existingAccessoryInventory",
+                "question": "Which accessories does the lab already own?",
+                "options": [
+                  { "val": "already-owned", "label": "Some Brookfield accessories already owned" },
+                  { "val": "none-yet", "label": "None yet" }
                 ]
               }
             ],
@@ -2782,7 +3021,7 @@
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
-            "title": "Get the Dial Reading Viscometer in India from Inkarp",
+            "title": "Request a quote for the Dial Reading Viscometer",
             "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Mechanical dial readout, 10 pre-set speeds, ±1% accuracy, in production since 1934. Share the required speed range and accessory needs, and the right configuration gets confirmed.",
             "submitLabel": "Request Quote",
             "successMessage": "Thank you. An Inkarp specialist will review your required speed range and accessory needs, then confirm the right configuration.",
@@ -2821,6 +3060,7 @@
             "sections": [
               {
                 "key": "overview",
+                "tabSummary": "What the instrument measures and how it's operated",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "Dial Reading Viscometer product information: drive system, precision, and accessory compatibility.",
@@ -2846,24 +3086,29 @@
               },
               {
                 "key": "features",
+                "tabSummary": "What separates it from Brookfield's digital touchscreen instruments",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
                 "description": "What specifically separates this instrument from Brookfield's digital touchscreen models."
               },
               {
                 "key": "applications",
+                "tabSummary": "Routine QC viscosity testing across industries",
                 "eyebrow": "Applications",
                 "title": "Applications",
                 "description": "Dial Reading Viscometer applications: routine QC viscosity testing."
               },
               {
                 "key": "specs",
+                "tabSummary": "Speed options, accuracy, and repeatability",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "description": "Dial Reading Viscometer technical specifications: speed options, precision, and drive system."
               },
               {
                 "key": "performance",
+                "columnHeaders": { "label": "What routine mechanical viscometry needs", "value": "How Dial Reading Viscometer delivers it" },
+                "tabSummary": "How the mechanical measurement principle works",
                 "eyebrow": "Direct Drive and Dial Readout",
                 "title": "Direct Drive and Dial Readout",
                 "description": "How the mechanical measurement principle works.",
@@ -2882,6 +3127,7 @@
               },
               {
                 "key": "docs",
+                "tabSummary": "Specifications, related accessories",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for the Dial Reading Viscometer is available on request.",
@@ -2898,7 +3144,9 @@
               "title": "Get the Dial Reading Viscometer in India from Inkarp",
               "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Mechanical dial readout, 10 pre-set speeds, ±1% accuracy, in production since 1934. Share the required speed range and accessory needs, and the right configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "/contact"
             }
           }
         }

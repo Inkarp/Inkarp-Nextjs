@@ -84,6 +84,18 @@ export default function StandardsCerts({ cards = [], section, productName }) {
           <p className="mt-4 text-base leading-7 text-black">
             {section?.description ?? `The certifications and safety standards behind ${productName ?? 'this product'}.`}
           </p>
+          {section?.tabSummary && (
+            <p className="mt-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">
+              {section.tabSummary}
+            </p>
+          )}
+          {section?.columnHeaders && (
+            <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+              {section.columnHeaders.label}
+              <span aria-hidden className="mx-2 text-red">&rarr;</span>
+              {section.columnHeaders.value}
+            </p>
+          )}
         </div>
 
         <div className="relative mt-8 flex flex-wrap gap-2">

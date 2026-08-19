@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
-import { whatsappEnquiryHref } from "@/data/siteConfig";
 
 export default function ProductImageGallery({ ctaHref, images, productName }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -12,10 +10,10 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
 
   return (
     <>
-      <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[340px]">
+      <div className="relative flex min-h-[240px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[320px] lg:min-h-[260px]">
         <Image
           alt={selected.alt ?? productName}
-          className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
+          className="mx-auto max-h-[380px] w-full object-contain p-5 transition duration-500 hover:scale-105"
           height={600}
           src={selected.src}
           width={600}
@@ -23,22 +21,13 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
         />
       </div>
       {ctaHref ? (
-        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+        <div className="mt-4">
           <Link
             href={ctaHref}
-            className="inline-flex h-12 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
+            className="inline-flex h-12 w-full items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
           >
             Request Quote
           </Link>
-          <a
-            className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-700"
-            href={whatsappEnquiryHref(productName)}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <FaWhatsapp className="h-4 w-4 text-[#25D366]" />
-            Enquiry Now
-          </a>
         </div>
       ) : null}
       {images.length > 1 && (

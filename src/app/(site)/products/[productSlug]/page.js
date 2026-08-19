@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
-import { FaHome, FaWhatsapp } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import * as CountryFlagIcons from "country-flag-icons/react/3x2";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
@@ -12,7 +12,6 @@ import UniversalProductPage from "@/components/products/UniversalProductPage";
 import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
-import { whatsappEnquiryHref } from "@/data/siteConfig";
 
 const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor & Service Provider in India";
 
@@ -95,7 +94,7 @@ export default async function ProductPage({ params }) {
       </nav>
 
       <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[7fr_3fr] lg:items-center">
+        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[7.6fr_2.4fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
@@ -176,16 +175,16 @@ export default async function ProductPage({ params }) {
             </p>
           </div>
 
-          <div className="relative self-center border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+          <div className="relative self-center border border-line-light bg-parchment-alt p-3.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
             {product.images?.length > 0 ? (
               <ProductImageGallery ctaHref={ctaHref} images={product.images} productName={product.name} />
             ) : (
               <>
-                <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[420px] lg:min-h-[340px]">
+                <div className="relative flex min-h-[240px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[320px] lg:min-h-[260px]">
                   {product.image ? (
                     <Image
                       alt={product.imageAlt ?? product.name}
-                      className="mx-auto max-h-[520px] w-full object-contain p-6 transition duration-500 hover:scale-105"
+                      className="mx-auto max-h-[380px] w-full object-contain p-5 transition duration-500 hover:scale-105"
                       height={600}
                       src={product.image}
                       width={600}
@@ -197,7 +196,7 @@ export default async function ProductPage({ params }) {
                     </div>
                   )}
                 </div>
-                <ProductImageActions href={ctaHref} productName={product.name} />
+                <ProductImageActions href={ctaHref} />
               </>
             )}
           </div>
@@ -252,26 +251,15 @@ export default async function ProductPage({ params }) {
   );
 }
 
-// Stacked at lg: the image column is only 30% wide, too narrow for two
-// buttons side by side without clipping the labels.
-function ProductImageActions({ href, productName }) {
+function ProductImageActions({ href }) {
   return (
-    <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+    <div className="mt-4">
       <Link
         href={href}
-        className="inline-flex h-12 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
+        className="inline-flex h-12 w-full items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
       >
         Request Quote
       </Link>
-      <a
-        className="inline-flex h-12 items-center justify-center gap-2 border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-rose-300 hover:text-rose-700"
-        href={whatsappEnquiryHref(productName)}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <FaWhatsapp className="h-4 w-4 text-[#25D366]" />
-        Enquiry Now
-      </a>
     </div>
   );
 }

@@ -146,39 +146,151 @@ function IndependenceFlagSlide({ campaign }) {
   );
 }
 
+// Confetti and sparkles falling across the milestone stripe. Items carrying an
+// `animationName` override the default fall with the twinkling variant.
 const ANNIVERSARY_PARTICLES = [
-  { left: "4%", emoji: "🎉", fontSize: "0.85rem", animationDelay: "0s", animationDuration: "4.4s", "--particle-drift": "10px" },
-  { left: "12%", emoji: "✨", fontSize: "0.7rem", animationDelay: "1.4s", animationDuration: "5s", "--particle-drift": "-8px" },
-  { left: "20%", emoji: "🌸", fontSize: "0.85rem", animationDelay: "2.1s", animationDuration: "4.8s", "--particle-drift": "8px" },
-  { right: "4%", emoji: "🎊", fontSize: "0.85rem", animationDelay: "0.7s", animationDuration: "4.6s", "--particle-drift": "-10px" },
-  { right: "12%", emoji: "✨", fontSize: "0.7rem", animationDelay: "1.9s", animationDuration: "5.3s", "--particle-drift": "6px" },
-  { right: "20%", emoji: "🌸", fontSize: "0.85rem", animationDelay: "0.4s", animationDuration: "4.2s", "--particle-drift": "-6px" },
+  { left: "3%", emoji: "🎉", fontSize: "0.9rem", animationDelay: "0s", animationDuration: "4.4s", "--particle-drift": "12px" },
+  { left: "9%", emoji: "✨", fontSize: "0.7rem", animationDelay: "1.4s", animationDuration: "5s", animationName: "sparkle-twinkle-fall", "--particle-drift": "-8px" },
+  { left: "16%", emoji: "🎊", fontSize: "0.8rem", animationDelay: "2.6s", animationDuration: "4.8s", "--particle-drift": "8px" },
+  { left: "24%", emoji: "✨", fontSize: "0.6rem", animationDelay: "0.9s", animationDuration: "5.4s", animationName: "sparkle-twinkle-fall", "--particle-drift": "10px" },
+  { left: "33%", emoji: "🎇", fontSize: "0.85rem", animationDelay: "3.1s", animationDuration: "5.1s", "--particle-drift": "-10px" },
+  { right: "3%", emoji: "🎊", fontSize: "0.9rem", animationDelay: "0.6s", animationDuration: "4.6s", "--particle-drift": "-12px" },
+  { right: "9%", emoji: "✨", fontSize: "0.7rem", animationDelay: "2.1s", animationDuration: "5.2s", animationName: "sparkle-twinkle-fall", "--particle-drift": "6px" },
+  { right: "16%", emoji: "🎉", fontSize: "0.8rem", animationDelay: "1.1s", animationDuration: "4.3s", "--particle-drift": "-6px" },
+  { right: "24%", emoji: "✨", fontSize: "0.6rem", animationDelay: "3.4s", animationDuration: "5.5s", animationName: "sparkle-twinkle-fall", "--particle-drift": "-9px" },
+  { right: "33%", emoji: "🎇", fontSize: "0.85rem", animationDelay: "1.8s", animationDuration: "4.9s", "--particle-drift": "9px" },
 ];
 
-function InkarpAnniversarySlide({ campaign }) {
+/** 1 -> st, 2 -> nd, 3 -> rd, 11-13 -> th, everything else th. */
+function ordinalSuffix(value) {
+  const lastTwo = value % 100;
+  if (lastTwo >= 11 && lastTwo <= 13) return "th";
+  switch (value % 10) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}
+
+/**
+ * The milestone figure rolls up to its final value like an odometer: each digit
+ * is keyed by position and value, so changing one replays the roll-in. The final
+ * number is what renders on the server, so there is no layout shift and nothing
+ * to mismatch on hydration — the climb only starts after mount.
+ */
+function RollingYears({ years }) {
+  const [shown, setShown] = useState(years);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return undefined;
+    }
+
+    const from = Math.max(0, years - 9);
+    setShown(from);
+
+    let current = from;
+    let gap = 60;
+    let timer = window.setTimeout(function step() {
+      current += 1;
+      setShown(current);
+      if (current >= years) return;
+      // Widening gap so the climb decelerates into the milestone.
+      gap += 26;
+      timer = window.setTimeout(step, gap);
+    }, 260);
+
+    return () => window.clearTimeout(timer);
+  }, [years]);
+
   return (
-    <div className="relative flex h-16 w-full items-center overflow-hidden bg-gradient-to-r from-[#8c000d] via-red to-[#8c000d] sm:h-20 lg:h-24">
+    <span className="relative z-10 flex items-start leading-none text-red">
+      <span className="flex h-[1.05em] items-center overflow-hidden text-[15px] font-bold tabular-nums sm:text-lg lg:text-xl">
+        {String(shown)
+          .split("")
+          .map((digit, index) => (
+            <span
+              className="motion-safe:animate-[hvc-count-flip_340ms_ease-out]"
+              key={`${index}-${digit}`}
+            >
+              {digit}
+            </span>
+          ))}
+      </span>
+      <span className="ml-px text-[8px] font-bold uppercase sm:text-[9px]">
+        {ordinalSuffix(years)}
+      </span>
+    </span>
+  );
+}
+
+function InkarpAnniversarySlide({ campaign }) {
+  const years = campaign.years ?? 0;
+
+  return (
+    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-rose-100 bg-[linear-gradient(110deg,#FFF7F7_0%,#FFE3E6_26%,#FFF1F2_50%,#FFE3E6_74%,#FFF7F7_100%)] bg-[length:220%_100%] motion-safe:animate-[celebration-shimmer_9s_ease-in-out_infinite] sm:h-20 lg:h-24">
+      {/* Red ribbon edges top and bottom. */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-red/55 to-transparent"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-transparent via-red/55 to-transparent"
+      />
+      {/* Soft blush pool behind the medallion. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 top-1/2 h-40 w-80 -translate-y-1/2 rounded-full bg-red/10 blur-3xl"
+      />
       <FallingParticles items={ANNIVERSARY_PARTICLES} />
-      <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+
+      <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-amber-300/80 text-amber-300 sm:h-12 sm:w-12">
-            <span className="text-xs font-bold sm:text-sm">41</span>
+          <div className="relative flex size-11 shrink-0 items-center justify-center sm:size-14 lg:size-16">
+            {/* Turning dashed ring. */}
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full border border-dashed border-red/45 motion-safe:animate-[hvc-spin_16s_linear_infinite]"
+            />
+            {/* Inner disc with a slow celebratory pulse. */}
+            <span
+              aria-hidden="true"
+              className="absolute inset-[3px] rounded-full bg-white ring-1 ring-red/25 motion-safe:animate-[celebration-glow_3.4s_ease-in-out_infinite]"
+              style={{ "--glow-color": "rgba(190, 0, 16, 0.22)" }}
+            />
+            {/* Light sweeping across the medallion face. */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-[3px] overflow-hidden rounded-full"
+            >
+              <span className="absolute inset-y-0 -left-1/2 w-1/2 -skew-x-12 bg-gradient-to-r from-transparent via-red/15 to-transparent motion-safe:animate-[hvc-count-sheen_3.6s_ease-in-out_infinite]" />
+            </span>
+            <RollingYears years={years} />
           </div>
+
           <div className="min-w-0">
-            <p className="truncate text-sm font-semibold text-white sm:text-base lg:text-lg">
+            <p className="truncate text-sm font-semibold text-ink sm:text-base lg:text-lg">
               {campaign.title}
             </p>
-            <p className="hidden truncate text-xs font-normal text-white/75 sm:block sm:text-sm">
+            <p className="hidden truncate text-xs font-normal text-ink-soft sm:block sm:text-sm">
               {campaign.message}
             </p>
           </div>
         </div>
+
         {campaign.cta ? (
           <Link
-            className="hidden shrink-0 items-center gap-1 rounded-full border border-white/50 px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10 sm:inline-flex"
+            className="inline-flex shrink-0 items-center gap-2 border border-rose-200 bg-white px-4 py-2 text-xs font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-50 sm:px-6 sm:py-2.5 sm:text-sm"
             href={campaign.cta.href}
           >
             {campaign.cta.label}
+            <span aria-hidden="true">→</span>
           </Link>
         ) : null}
       </div>

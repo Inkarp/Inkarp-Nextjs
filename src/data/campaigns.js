@@ -12,21 +12,27 @@
 // content. The commented-out entries further down are placeholder examples kept
 // for reference/reuse; uncomment and update one when you actually want it live.
 export const campaigns = [
-  /*
   {
+    // Milestone year banner. `years` is deliberately a literal rather than
+    // derived from today's date: the stripe is prerendered, so computing it at
+    // render time would bake the build year into the HTML and mismatch on
+    // hydration. Bump `years` alongside start/end each anniversary; the slide
+    // works out the ordinal ("41st", "42nd") from it.
     id: "inkarp-41st-anniversary",
     type: "milestone",
     variant: "inkarp-anniversary",
     icon: "🎉",
     accent: "red",
+    evergreen: true,
+    foundedYear: 1985,
+    years: 41,
     title: "Celebrating 41 Years of Inkarp",
-    message: "Since 1985 — 41 years of powering India's laboratories with trusted instruments and support.",
+    message: "Since 1985 — four decades of powering India's laboratories with trusted instruments and support.",
     cta: { label: "Our Story", href: "/our-story" },
     start: "2026-01-01",
     end: "2026-12-31",
     priority: 3,
   },
-  */
   {
     id: "independence-day-2026",
     type: "national-day",
@@ -45,13 +51,15 @@ export const campaigns = [
   {
     // `evergreen` marks the year-round fallback: it's what the stripe falls back
     // to whenever no dated campaign is running, and it's what renders on the
-    // server so the first paint never depends on the build date.
+    // server so the first paint never depends on the build date. The anniversary
+    // campaign above holds that slot while it runs, so the milestone stripe
+    // paints server-side instead of flashing this one first. Move
+    // `evergreen: true` back here once the anniversary ends (2026-12-31).
     id: "explore-products-promo",
     type: "promo",
     variant: "explore-products",
     icon: "🔬",
     accent: "teal",
-    evergreen: true,
     title: "Explore Inkarp's Latest Lab Solutions",
     message: "Find instruments, application support, and expert guidance in one place.",
     cta: { label: "Explore Products", href: "/products" },

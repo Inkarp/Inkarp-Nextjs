@@ -16,6 +16,7 @@
           "imageAlt": "Ametek Brookfield Computrac® MAX 4000XL Moisture Analyzer - authorized distributor & service provider in India",
           "distributorNote": "Authorized Distributor & Service Provider in India",
           "canonicalUrl": "https://inkarp.co.in/products/computrac-max-4000xl-moisture-analyzer",
+          "heroSecondaryCta": { "label": "Talk to Product Expert", "href": "/contact" },
           "breadcrumbPath": "Home > Products > Moisture Analyzers > Computrac® MAX 4000XL Moisture Analyzer",
           "h1": "Computrac® MAX 4000XL Moisture Analyzer",
           "subhead": "Authorized Distributor & Service Provider in India",
@@ -62,7 +63,7 @@
 
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
-            { "id": "suitability", "label": "Speed Calculator" },
+            { "id": "speed-vs-current-method", "label": "Speed Calculator" },
             { "id": "config", "label": "Material Selector" },
             { "id": "remote-access-data-checker", "label": "Remote Access" },
             { "id": "industries", "label": "Industries" },
@@ -73,63 +74,50 @@
             { "id": "booking", "label": "Request Quote" }
           ],
 
-          "suitability": {
+          "metricCalculator": {
+            "formula": "time-saved",
+            "sectionId": "speed-vs-current-method",
             "eyebrow": "Speed vs. Current Method Calculator",
             "title": "How much time would MAX 4000XL actually save?",
-            "description": "Select your current testing method and average test time, and see the time recovered.",
-            "fields": [
+            "description": "Enter your current testing method and daily volume, and see the time recovered.",
+            "choices": [
               {
                 "key": "currentMethod",
                 "label": "Current method",
+                "default": "oven",
                 "options": [
-                  { "val": "oven", "label": "Standard oven" },
-                  { "val": "other-rapid-lod", "label": "Another rapid LOD instrument" }
+                  {
+                    "val": "oven",
+                    "label": "Standard oven reference method",
+                    "speedFactor": 100,
+                    "basis": "Brookfield states MAX 4000XL runs up to 100x faster than standard oven reference methods."
+                  },
+                  {
+                    "val": "other-rapid-lod",
+                    "label": "Another rapid LOD instrument",
+                    "speedFactor": 1.25,
+                    "basis": "Brookfield states MAX 4000XL runs 25% faster than other rapid LOD instruments, driven by the built-in lid fan's rapid chamber cooling."
+                  }
                 ]
-              },
+              }
+            ],
+            "fields": [
               {
-                "key": "averageTestTimeNow",
-                "label": "Average test time now",
-                "options": [
-                  { "val": "minutes", "label": "Minutes per sample" },
-                  { "val": "hours", "label": "Hours per sample" }
-                ]
+                "key": "minutesPerSample",
+                "label": "Minutes per sample on the current method",
+                "default": 180,
+                "min": 1
               },
               {
                 "key": "samplesPerDay",
                 "label": "Samples tested per day",
-                "options": [
-                  { "val": "under-10", "label": "Fewer than 10" },
-                  { "val": "10-30", "label": "10 to 30" },
-                  { "val": "over-30", "label": "More than 30" }
-                ]
+                "default": 12,
+                "min": 1
               }
             ],
-            "results": [
-              {
-                "condition": { "currentMethod": "oven" },
-                "title": "Up to 100x Faster",
-                "body": "Against a standard oven reference method, MAX 4000XL is stated to run up to 100x faster.",
-                "tags": ["100x Faster"]
-              },
-              {
-                "condition": { "currentMethod": "other-rapid-lod" },
-                "title": "25% Faster Than Other Rapid LOD",
-                "body": "Against other rapid LOD instruments, Brookfield states MAX 4000XL runs 25% faster, driven by the built-in lid fan's rapid chamber cooling.",
-                "tags": ["25% Faster"]
-              },
-              {
-                "condition": { "averageTestTimeNow": "hours" },
-                "title": "Hours to Minutes",
-                "body": "Moving from an hours-long oven method to MAX 4000XL turns a full day's queue into a fraction of the time.",
-                "tags": ["Time Savings"]
-              },
-              {
-                "condition": "default",
-                "title": "Confirm the Time Savings",
-                "body": "Share the current method and daily sample volume, and the real-world time saved gets calculated against the 100x (oven) or 25% (rapid LOD) speed figures.",
-                "tags": ["Configuration Guidance"]
-              }
-            ]
+            "submitLabel": "Get Configuration Support",
+            "ctaNote": "Share the current method and daily volume, and the right MAX 4000XL configuration gets confirmed against it.",
+            "disclaimer": "Time recovered is calculated from the figures entered against Brookfield's stated speed comparisons. The 100x figure is against the oven method specifically; the 25% figure is Brookfield's comparison against other rapid LOD instruments — worth confirming which competitor instrument that benchmark was run against."
           },
 
           "configWizard": {
@@ -173,6 +161,8 @@
           "planners": [
             {
               "sectionId": "remote-access-data-checker",
+              "ctaLabel": "Get Configuration Support",
+              "ctaNote": "Share the access and data-management needs, and whether the web server option applies gets confirmed.",
               "eyebrow": "Remote Access and Data Management Checker",
               "title": "Does the data need to leave the instrument?",
               "description": "Select the access and reporting needs, and see whether the web server option applies.",
@@ -368,6 +358,11 @@
                 "eyebrow": "Multistage Testing and Flexible Ending Criteria",
                 "title": "Multistage Testing and Flexible Ending Criteria",
                 "description": "Free moisture. Bound moisture. One test.",
+                "body": [
+                  "Not all moisture behaves the same way. Some evaporates fast and easily — free moisture. Some is chemically bound to the material and needs a different temperature, a different endpoint, to release.",
+                  "MAX 4000XL links multiple test stages into one sequence. Temperature, ending criteria, and timing can all change between segments — so a single run captures both free and bound moisture without manual intervention between stages.",
+                  "User-adjustable ending criteria go further: the test stops when your material says it's done, not when a generic default says so."
+                ],
                 "columnHeaders": { "label": "The material behavior", "value": "The MAX 4000XL response" },
                 "cards": [
                   { "title": "Free moisture releases quickly", "description": "The first stage captures moisture that releases quickly, without waiting on the slower-releasing fraction." },
@@ -396,6 +391,7 @@
               },
               {
                 "key": "docs",
+                "ctaLabel": "Send My Requirement",
                 "tabSummary": "Specs, compliance, accessories — on request",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
@@ -426,6 +422,7 @@
           "imageAlt": "Ametek Brookfield Computrac® MAX 5000XL Moisture Analyzer - authorized distributor & service provider in India",
           "distributorNote": "Authorized Distributor & Service Provider in India",
           "canonicalUrl": "https://inkarp.co.in/products/computrac-max-5000xl-moisture-analyzer",
+          "heroSecondaryCta": { "label": "Talk to Product Expert", "href": "/contact" },
           "breadcrumbPath": "Home > Products > Moisture Analyzers > Computrac® MAX 5000XL Moisture Analyzer",
           "h1": "Computrac® MAX 5000XL Moisture Analyzer",
           "subhead": "Authorized Distributor & Service Provider in India",
@@ -469,7 +466,7 @@
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "suitability", "label": "LOD/LOI Checker" },
-            { "id": "config", "label": "TGA Cost Calculator" },
+            { "id": "tga-cost-comparison", "label": "TGA Cost Calculator" },
             { "id": "remote-access-maintenance-checker", "label": "Remote & Maintenance" },
             { "id": "industries", "label": "Industries" },
             { "id": "comparison", "label": "Comparison" },
@@ -480,6 +477,8 @@
           ],
 
           "suitability": {
+            "ctaLabel": "Get Configuration Support",
+            "ctaNote": "Share whether loss-on-ignition testing is part of the workload, and the right MAX 5000XL setup gets confirmed.",
             "eyebrow": "LOD/LOI Requirement Checker",
             "title": "Does the application need loss-on-ignition testing?",
             "description": "Select the material and required measurements, and see the recommended test method.",
@@ -506,13 +505,19 @@
                 "key": "currentMethod",
                 "label": "Current method",
                 "options": [
-                  { "val": "loss-on-drying", "label": "Loss-on-drying analyzer" },
-                  { "val": "muffle-furnace", "label": "Muffle furnace" },
-                  { "val": "tga", "label": "Thermogravimetric analyzer" }
+                  { "val": "tga", "label": "TGA" },
+                  { "val": "oven", "label": "Oven" },
+                  { "val": "loss-on-drying", "label": "Another moisture analyzer" }
                 ]
               }
             ],
             "results": [
+              {
+                "condition": { "materialType": "biomass" },
+                "title": "600°C Reaches LOI-Capable Range",
+                "body": "Biomass ash content determination needs the LOI-capable temperature range MAX 5000XL's 600°C heater reaches.",
+                "tags": ["Biomass"]
+              },
               {
                 "condition": { "measurementsRequired": "moisture-plus-ash" },
                 "title": "Combined LOD/LOI Testing Fits",
@@ -526,12 +531,6 @@
                 "tags": ["LOD Only"]
               },
               {
-                "condition": { "materialType": "biomass" },
-                "title": "600°C Reaches LOI-Capable Range",
-                "body": "Biomass ash content determination needs the LOI-capable temperature range MAX 5000XL's 600°C heater reaches.",
-                "tags": ["Biomass"]
-              },
-              {
                 "condition": "default",
                 "title": "Confirm the Test Method Fit",
                 "body": "Share the material and current testing method, and whether LOD alone or combined LOD/LOI fits gets confirmed.",
@@ -540,47 +539,43 @@
             ]
           },
 
-          "configWizard": {
+          "metricCalculator": {
+            "formula": "workload-consolidation",
+            "sectionId": "tga-cost-comparison",
             "eyebrow": "TGA Cost Comparison Calculator",
             "title": "What would switching from a TGA actually save?",
-            "description": "Select the current testing setup, and see the potential cost and time comparison.",
-            "steps": [
-              {
-                "key": "currentTestingMethod",
-                "question": "What's the current testing method?",
-                "options": [
-                  { "val": "tga", "label": "TGA" },
-                  { "val": "standard-oven", "label": "Standard oven" },
-                  { "val": "separate-lod-loi", "label": "Separate LOD/LOI instruments" }
-                ]
-              },
-              {
-                "key": "ashTestingRequired",
-                "question": "Is ash testing required?",
-                "options": [
-                  { "val": "yes", "label": "Yes" },
-                  { "val": "moisture-only", "label": "Moisture only, currently" }
-                ]
-              },
+            "description": "Enter the current testing setup and volume, and see the runs and cost that consolidate onto one instrument.",
+            "fields": [
               {
                 "key": "samplesPerWeek",
-                "question": "How many samples run per week?",
-                "options": [
-                  { "val": "under-25", "label": "Fewer than 25" },
-                  { "val": "25-100", "label": "25 to 100" },
-                  { "val": "over-100", "label": "More than 100" }
-                ]
+                "label": "Samples tested per week",
+                "default": 60,
+                "min": 1
+              },
+              {
+                "key": "runsPerSampleNow",
+                "label": "Separate runs each sample needs today",
+                "default": 2,
+                "min": 1,
+                "max": 6
+              },
+              {
+                "key": "costPerRun",
+                "label": "Cost per run today (INR, consumables and labour)",
+                "default": 500,
+                "min": 0
               }
             ],
-            "result": {
-              "ctaNote": "Share the samples tested per week, and the potential cost and workflow consolidation from moving off a TGA (or separate LOD/LOI instruments) onto MAX 5000XL gets estimated.",
-              "ctaLabel": "Talk to Product Expert"
-            }
+            "submitLabel": "Talk to Product Expert",
+            "ctaNote": "Share the samples tested per week, and the cost and workflow consolidation from moving off a TGA — or off separate LOD/LOI instruments — onto MAX 5000XL gets confirmed against your own rates.",
+            "disclaimer": "MAX 5000XL captures moisture, solids and ash from one sample in a single linked sequence, so each sample needs one run rather than separate LOD and LOI runs. Run counts and cost come from the figures entered — nothing here assumes a price for your current instrument."
           },
 
           "planners": [
             {
               "sectionId": "remote-access-maintenance-checker",
+              "ctaLabel": "Get Configuration Support",
+              "ctaNote": "Share the access and maintenance needs, and whether the web server option applies gets confirmed.",
               "eyebrow": "Remote Access and Maintenance Checker",
               "title": "Does the data need to leave the solution?",
               "description": "Select the access and maintenance needs, and see whether the web server option applies.",
@@ -780,6 +775,10 @@
                 "eyebrow": "Self-Cleaning and Rugged Construction",
                 "title": "Self-Cleaning and Rugged Construction",
                 "description": "What keeps the solution running with minimal upkeep: chamber cleaning without manual teardown, and construction rated for demanding environments.",
+                "body": [
+                  "A high-temperature moisture analyzer that requires manual cleaning after every ash test is a maintenance burden most labs don't want. MAX 5000XL's self-cleaning oven cycle runs for 45 minutes at 550°C, clearing the chamber without manual intervention.",
+                  "Construction backs that up. The cast aluminum enclosure and high-temperature heater are built specifically to withstand demanding environments while still delivering lab-quality data, whether the solution sits on a bench or on a production floor."
+                ],
                 "cards": [
                   { "title": "Chamber cleaning without manual teardown", "description": "Self-cleaning oven cycle, 45 minutes at 550°C." },
                   { "title": "Durability under repeated high-heat cycles", "description": "Cast aluminum enclosure." },
@@ -805,6 +804,7 @@
               },
               {
                 "key": "docs",
+                "ctaLabel": "Send My Requirement",
                 "tabSummary": "Specs, compliance, accessories, available on request",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
@@ -835,6 +835,7 @@
           "imageAlt": "Ametek Brookfield Computrac® Vapor Pro XL Moisture Analyzer - authorized distributor & service provider in India",
           "distributorNote": "Authorized Distributor & Service Provider in India",
           "canonicalUrl": "https://inkarp.co.in/products/computrac-vapor-pro-xl-moisture-analyzer",
+          "heroSecondaryCta": { "label": "Talk to Product Expert", "href": "/contact" },
           "breadcrumbPath": "Home > Products > Moisture Analyzers > Computrac® Vapor Pro XL Moisture Analyzer",
           "h1": "Computrac® Vapor Pro XL Moisture Analyzer",
           "subhead": "Authorized Distributor & Service Provider in India",
@@ -880,7 +881,7 @@
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "suitability", "label": "Sensitivity Checker" },
-            { "id": "config", "label": "KF Cost Calculator" },
+            { "id": "kf-replacement-cost", "label": "KF Cost Calculator" },
             { "id": "vial-compatibility-checker", "label": "Vial Compatibility" },
             { "id": "industries", "label": "Industries" },
             { "id": "comparison", "label": "Comparison" },
@@ -891,6 +892,8 @@
           ],
 
           "suitability": {
+            "ctaLabel": "Get Configuration Support",
+            "ctaNote": "Share the sensitivity the application needs, and the right Vapor Pro XL configuration gets confirmed.",
             "eyebrow": "Sensitivity Requirement Checker",
             "title": "Does the application need trace-level moisture detection?",
             "description": "Select the expected moisture range and material type, and confirm fit against the 10ppm sensitivity.",
@@ -950,46 +953,36 @@
             ]
           },
 
-          "configWizard": {
+          "metricCalculator": {
+            "formula": "reagent-savings",
+            "sectionId": "kf-replacement-cost",
             "eyebrow": "KF Replacement Cost Calculator",
             "title": "What would switching from Karl Fischer actually save?",
-            "description": "Select the current method and testing volume, and see the potential comparison.",
-            "steps": [
+            "description": "Enter the current Karl Fischer reagent spend and testing volume, and see what zero reagents removes.",
+            "fields": [
               {
-                "key": "currentMethod",
-                "question": "What's the current testing method?",
-                "options": [
-                  { "val": "kf-titration", "label": "Karl Fischer titration" },
-                  { "val": "another-moisture-method", "label": "Another moisture method" }
-                ]
+                "key": "reagentCostPerMonth",
+                "label": "Karl Fischer reagent and consumable spend per month (INR)",
+                "default": 25000,
+                "min": 0
               },
               {
                 "key": "samplesPerWeek",
-                "question": "What's the approximate testing volume?",
-                "options": [
-                  { "val": "low", "label": "Low volume" },
-                  { "val": "high", "label": "High volume" }
-                ]
-              },
-              {
-                "key": "reagentCostPerMonth",
-                "question": "What is the monthly Karl Fischer reagent spend?",
-                "options": [
-                  { "val": "under-10k", "label": "Under ₹10,000" },
-                  { "val": "10k-50k", "label": "₹10,000 to ₹50,000" },
-                  { "val": "over-50k", "label": "Over ₹50,000" }
-                ]
+                "label": "Samples tested per week",
+                "default": 40,
+                "min": 1
               }
             ],
-            "result": {
-              "ctaNote": "Share the current reagent cost per month, and the potential reagent cost and workflow savings from switching to Vapor Pro XL get estimated.",
-              "ctaLabel": "Talk to Product Expert"
-            }
+            "submitLabel": "Talk to Product Expert",
+            "ctaNote": "Share the current reagent spend and testing volume, and the comparison against a Vapor Pro XL workflow gets confirmed.",
+            "disclaimer": "Vapor Pro XL uses no chemical reagents, so the reagent line goes to zero entirely. Figures come from the monthly spend entered; reagent handling, storage and disposal effort are removed too but are not costed here. Brookfield states results correlate well with Karl Fischer titration."
           },
 
           "planners": [
             {
               "sectionId": "vial-compatibility-checker",
+              "ctaLabel": "Get Configuration Support",
+              "ctaNote": "Share the vial sizes and sample handling in use, and the right accessories get confirmed.",
               "eyebrow": "Vial Compatibility and Sample Handling Checker",
               "title": "Does the sample vial size fit?",
               "description": "Select the vial type and sample sensitivity, and confirm fit.",
@@ -1189,6 +1182,10 @@
                 "eyebrow": "A Chemical-Free Karl Fischer Alternative",
                 "title": "A Chemical-Free Karl Fischer Alternative",
                 "description": "What zero reagents actually removes from the Karl Fischer titration workflow.",
+                "body": [
+                  "Karl Fischer titration is accurate, and it comes with real overhead. Reagents that require careful handling and disposal. Glassware that needs cleaning and replacement. Titrant that has to be standardized and tracked. None of that goes away on its own.",
+                  "Vapor Pro XL removes it. Zero chemical reagents, with results Brookfield states correlate well with Karl Fischer titration. The workflow becomes load a sealed vial, run the test, read the result, without the reagent purchasing, handling protocols, or waste disposal that KF titration carries as a matter of course."
+                ],
                 "cards": [
                   { "title": "Hazardous chemical reagents", "description": "Zero chemical reagents required." },
                   { "title": "Glassware purchase and upkeep", "description": "No titration glassware needed." },
@@ -1216,6 +1213,7 @@
               },
               {
                 "key": "docs",
+                "ctaLabel": "Send My Requirement",
                 "tabSummary": "Specs, compliance, resources",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",

@@ -165,6 +165,9 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                 ))}
               </div>
 
+              {data?.ctaNote && (
+                <p className="mt-6 text-sm leading-6 text-black">{data.ctaNote}</p>
+              )}
               <LeadCaptureForm
                 className="mt-6"
                 formType="setup-configurator"
@@ -175,7 +178,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                   `Thank you${name ? `, ${name}` : ''}. Your configuration has been sent to our team. We will reach out with a complete setup quotation shortly.`
                 }
                 summary={summaryConfiguration}
-                triggerLabel="Email my configuration to Inkarp"
+                triggerLabel={data?.ctaLabel ?? 'Email my configuration to Inkarp'}
               />
 
               <button
@@ -258,7 +261,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                   `Thank you${name ? `, ${name}` : ''}. We have sent this scenario to our team and will follow up with guidance.`
                 }
                 summary={scenarioSummary}
-                triggerLabel={option.cta ?? 'Discuss this setup with Inkarp'}
+                triggerLabel={option.cta ?? data?.ctaLabel ?? 'Discuss this setup with Inkarp'}
               />
             </div>
           )}

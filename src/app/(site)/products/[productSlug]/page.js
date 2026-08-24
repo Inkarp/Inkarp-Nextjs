@@ -255,7 +255,7 @@ export default async function ProductPage({ params }) {
 
 function ProductImageActions({ href }) {
   return (
-    <div className="mt-4">
+    <div className="mt-4 space-y-2.5">
       <Link
         href={href}
         className="inline-flex h-12 w-full items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"

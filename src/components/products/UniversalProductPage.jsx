@@ -8,7 +8,7 @@ import OrbitVisualizer from './sections/OrbitVisualizer';
 import DistillationSimulator from './sections/DistillationSimulator';
 import SolventCalculator from './sections/SolventCalculator';
 import SuitabilityChecker from './sections/SuitabilityChecker';
-import ScreeningThroughputCalculator from './sections/ScreeningThroughputCalculator';
+import MetricCalculator from './sections/MetricCalculator';
 import SolventGuide from './sections/SolventGuide';
 import ConnectivityPlanner from './sections/ConnectivityPlanner';
 import ChecklistGuide from './sections/ChecklistGuide';
@@ -80,9 +80,9 @@ export default function UniversalProductPage({ product }) {
     },
     // Sits ahead of the suitability checker so the modules run in the order the
     // product content defines them.
-    product.throughputCalculator && {
-      key: 'throughput-calculator',
-      node: <ScreeningThroughputCalculator data={product.throughputCalculator} productName={product.name} />,
+    product.metricCalculator && {
+      key: 'metric-calculator',
+      node: <MetricCalculator data={product.metricCalculator} productName={product.name} />,
     },
     product.suitability?.fields?.length > 0 && product.suitability?.results?.length > 0 && {
       key: 'suitability-checker',
@@ -150,7 +150,7 @@ export default function UniversalProductPage({ product }) {
       key: 'benefits',
       node: <WhyLabsChoose cards={benefitsSection.cards} section={benefitsSection} productName={product.name} />,
     },
-    certsSection?.cards?.length > 0 && {
+    certsSection?.cards?.length > 0 && !certsSection?.hideStandalone && {
       key: 'certs',
       node: <StandardsCerts cards={certsSection.cards} section={certsSection} productName={product.name} />,
     },

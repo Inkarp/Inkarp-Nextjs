@@ -558,6 +558,15 @@ export default function ProductInfoTabs({ product }) {
                 );
               })}
             </div>
+            {docsSec?.ctaLabel && (
+              <a
+                className="mt-6 inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-5 py-2.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
+                href="#booking"
+              >
+                {docsSec.ctaLabel}
+                <span aria-hidden="true">→</span>
+              </a>
+            )}
           </div>
         );
       }

@@ -126,6 +126,9 @@ export default function SuitabilityChecker({ data, productName }) {
                     ))}
                   </div>
                 ) : null}
+                {data?.ctaNote && (
+                  <p className="mt-4 max-w-xl text-sm leading-6 text-black">{data.ctaNote}</p>
+                )}
                 <LeadCaptureForm
                   className="mt-5"
                   formType="suitability-check"
@@ -136,7 +139,7 @@ export default function SuitabilityChecker({ data, productName }) {
                   summary={`Selections:\n${fields
                     .map((field) => `- ${field.label}: ${normaliseText(field.options.find((opt) => opt.val === selections[field.key])?.label ?? selections[field.key])}`)
                     .join('\n')}\n\nResult: ${normaliseText(result.title)}\n${normaliseText(result.body)}`}
-                  triggerLabel="Discuss your needs with us"
+                  triggerLabel={data?.ctaLabel ?? 'Discuss your needs with us'}
                 />
               </div>
             ) : (

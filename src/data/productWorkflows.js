@@ -347,7 +347,7 @@ export const productWorkflows = {
     steps: [
       { title: "Prepare Sample", description: "The sample is filtered and loaded into a vial in the autosampler." },
       { title: "Inject", description: "A precise volume is injected on the modular AVANT (U)HPLC, configurable from manual-injection HPLC to automated UHPLC." },
-      { title: "Separate", description: "Analytes separate on the packed column (sub-2 to 5 um particles) as the gradient elutes." },
+      { title: "Separate", description: "Analytes separate on the packed column as the gradient elutes." },
       { title: "Detect", description: "A UV/UV-Vis detector — or the expression CMS for integrated LC/MS — records each analyte as it elutes." },
       { title: "Report", description: "Peaks are integrated and quantified against standards." },
     ],
@@ -1231,9 +1231,9 @@ export const productWorkflows = {
     title: "The mass spectrometer workflow",
     description: "How the expression® CMS works, in a continuous loop of prepare sample, ionise, separate by mass, detect and analyse.",
     steps: [
-      { title: "Prepare Sample", description: "The sample is introduced by direct infusion or from an LC/GC front end." },
-      { title: "Ionise", description: "The sample is ionised by ESI or APCI (interchangeable sources) at the bench." },
-      { title: "Separate by Mass", description: "A single quadrupole separates ions across 10 to 2,000 m/z for rapid compound confirmation." },
+      { title: "Prepare Sample", description: "The sample is introduced by direct infusion or from an LC front end." },
+      { title: "Ionise", description: "The sample is ionised at the bench, switching between sampling interfaces in the time it takes to change the source." },
+      { title: "Separate by Mass", description: "Ions are separated across the system's mass range — m/z 10 to 1,200, or extended to 10 to 2,000 for larger compounds." },
       { title: "Detect", description: "The detector records ion abundance for immediate reaction monitoring and compound ID." },
       { title: "Analyse", description: "The mass spectrum is interpreted for identity, structure or quantity." },
     ],
@@ -3305,7 +3305,7 @@ export const productWorkflows = {
     steps: [
       { title: "Load Sample", description: "The crude sample is loaded onto the column." },
       { title: "Equilibrate Column", description: "The column is equilibrated with mobile phase." },
-      { title: "Separate", description: "Compounds separate on the puriFlash 5.030 for smaller-scale flash purification." },
+      { title: "Separate", description: "Compounds separate on the puriFlash 5.030 at 300 mL/min and 30 bar." },
       { title: "Detect", description: "UV/ELSD detection tracks eluting compounds." },
       { title: "Collect Fractions", description: "Fractions are collected automatically at peaks." },
     ],
@@ -3319,7 +3319,7 @@ export const productWorkflows = {
     steps: [
       { title: "Load Sample", description: "The crude sample is loaded onto the column." },
       { title: "Equilibrate Column", description: "The column is equilibrated with mobile phase." },
-      { title: "Separate", description: "Compounds separate on the puriFlash 5.050 for medium-scale flash purification." },
+      { title: "Separate", description: "Compounds separate on the puriFlash 5.050 at 250 mL/min and up to 50 bar, on reusable stainless steel columns." },
       { title: "Detect", description: "UV/ELSD detection tracks eluting compounds." },
       { title: "Collect Fractions", description: "Fractions are collected automatically at peaks." },
     ],
@@ -3333,7 +3333,7 @@ export const productWorkflows = {
     steps: [
       { title: "Load Sample", description: "The crude sample is loaded onto the column." },
       { title: "Equilibrate Column", description: "The column is equilibrated with mobile phase." },
-      { title: "Separate", description: "Compounds separate on the puriFlash 5.250 PrepLC/flash system, optionally with mass-directed fraction collection." },
+      { title: "Separate", description: "Compounds separate on the puriFlash 5.250 at 250 mL/min and up to 250 bar, bridging flash and preparative HPLC." },
       { title: "Detect", description: "UV/ELSD detection tracks eluting compounds." },
       { title: "Collect Fractions", description: "Fractions are collected automatically at peaks." },
     ],
@@ -3347,7 +3347,7 @@ export const productWorkflows = {
     steps: [
       { title: "Load Sample", description: "The crude sample is loaded onto the column." },
       { title: "Equilibrate Column", description: "The column is equilibrated with mobile phase." },
-      { title: "Separate", description: "Compounds separate on the puriFlash 5.400 at up to ~400 mL/min with UV/Vis detection for prep-scale purification." },
+      { title: "Separate", description: "Compounds separate on the puriFlash 5.400-UV at 125 mL/min and up to 400 bar, trading flow rate for higher pressure and finer resolution." },
       { title: "Detect", description: "UV/ELSD detection tracks eluting compounds." },
       { title: "Collect Fractions", description: "Fractions are collected automatically at peaks." },
     ],
@@ -3361,7 +3361,7 @@ export const productWorkflows = {
     steps: [
       { title: "Load Sample", description: "The crude sample is loaded onto the column." },
       { title: "Equilibrate Column", description: "The column is equilibrated with mobile phase." },
-      { title: "Separate", description: "Compounds separate on the compact puriFlash XS 530, which can couple to the expression CMS for mass-directed purification." },
+      { title: "Separate", description: "Compounds separate on the compact puriFlash XS 530 at 300 mL/min and 30 bar." },
       { title: "Detect", description: "UV/ELSD detection tracks eluting compounds." },
       { title: "Collect Fractions", description: "Fractions are collected automatically at peaks." },
     ],
@@ -3728,7 +3728,7 @@ export const productWorkflows = {
     title: "The mass spectrometer workflow",
     description: "How the SOLATION® ICP-MS works, in a continuous loop of prepare sample, ionise, separate by mass, detect and analyse.",
     steps: [
-      { title: "Prepare Sample", description: "The sample is introduced by direct infusion or from an LC/GC front end." },
+      { title: "Prepare Sample", description: "The liquid sample is prepared for introduction into the plasma." },
       { title: "Ionise", description: "The sample is ionised in a high-temperature argon inductively-coupled plasma." },
       { title: "Separate by Mass", description: "Elemental ions are separated for trace and ultra-trace multi-element analysis." },
       { title: "Detect", description: "The detector records ion abundance at each m/z." },

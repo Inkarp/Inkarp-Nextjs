@@ -253,6 +253,26 @@ export const featuredEvent = {
   registrationUrl: "https://mmiconnect.in/ile-hyd-2026/visitor/registration?source=website",
 };
 
+/**
+ * The stand Inkarp is exhibiting at next. Kept here rather than inside a
+ * component so the home events row and the campaign stripe read one source —
+ * update the date and venue in a single place.
+ */
+export const upcomingStallEvent = {
+  id: "analytica-lab-india-2026",
+  title: `${featuredEvent.name} ${featuredEvent.edition}`,
+  shortTitle: featuredEvent.name,
+  description: featuredEvent.summary,
+  venue: featuredEvent.venue,
+  dateLabel: featuredEvent.dateLabel,
+  image: featuredEvent.image,
+  registrationUrl: featuredEvent.registrationUrl,
+  // Doors open on day one — that is what a countdown should point at.
+  date: featuredEvent.startsAt.slice(0, 10),
+  closesOn: featuredEvent.endsAt.slice(0, 10),
+  status: "upcoming",
+};
+
 export const eventYears = [...new Set(events.map((event) => new Date(event.date).getFullYear()))].sort(
   (a, b) => a - b
 );

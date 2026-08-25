@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getActiveCampaign, getEvergreenCampaign } from "@/data/campaigns";
+import { getActiveCampaigns, getEvergreenCampaign } from "@/data/campaigns";
+import { webinars } from "@/data/webinars";
 
 const AUTO_ROTATE_MS = 6000;
 
@@ -298,6 +299,179 @@ function InkarpAnniversarySlide({ campaign }) {
   );
 }
 
+/**
+ * Whole days until `isoDate`, or null until mounted. The page is prerendered, so
+ * counting on the server would freeze the build date into the HTML; the dash
+ * shows for one frame and is replaced on hydration.
+ */
+function useDaysUntil(isoDate) {
+  const [days, setDays] = useState(null);
+
+  useEffect(() => {
+    if (!isoDate) return undefined;
+
+    const compute = () => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const target = new Date(`${isoDate}T00:00:00`);
+      target.setHours(0, 0, 0, 0);
+      setDays(Math.max(0, Math.ceil((target - today) / 86400000)));
+    };
+
+    compute();
+    // A tab left open overnight should not show yesterday's count.
+    const timer = window.setInterval(compute, 60 * 60 * 1000);
+    return () => window.clearInterval(timer);
+  }, [isoDate]);
+
+  return days;
+}
+
+function countdownLabel(days) {
+  if (days === null) return "Coming up";
+  if (days === 0) return "Today";
+  if (days === 1) return "Tomorrow";
+  return `In ${days} days`;
+}
+
+function CountdownPill({ className = "", days }) {
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center gap-1.5 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] sm:text-[11px] ${className}`}
+    >
+      {days !== null && days <= 1 ? (
+        <span aria-hidden="true" className="relative flex size-1.5">
+          <span className="absolute inline-flex size-full animate-ping rounded-full bg-current opacity-70" />
+          <span className="relative inline-flex size-1.5 rounded-full bg-current" />
+        </span>
+      ) : null}
+      {countdownLabel(days)}
+    </span>
+  );
+}
+
+// Dated webinar: the countdown is the reason this outperforms a plain date.
+function WebinarCountdownSlide({ campaign }) {
+  const webinar = webinars.find((item) => item.id === campaign.webinarId);
+  const days = useDaysUntil(webinar?.date ?? campaign.end);
+
+  return (
+    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-teal/20 bg-[linear-gradient(105deg,#F2FAF9_0%,#E4F3F1_50%,#F2FAF9_100%)] sm:h-20 lg:h-24">
+      <div
+        aria-hidden="true"
+        className="absolute inset-y-0 left-0 w-1 bg-teal"
+      />
+      <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+          <span
+            aria-hidden="true"
+            className="hidden size-10 shrink-0 items-center justify-center rounded-full bg-teal/10 text-lg sm:flex"
+          >
+            {campaign.icon}
+          </span>
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <CountdownPill className="bg-teal text-white" days={days} />
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-teal sm:text-[11px]">
+                Live webinar
+              </span>
+            </div>
+            <p className="mt-0.5 truncate text-sm font-semibold text-ink sm:text-base">
+              {campaign.title}
+            </p>
+            {webinar?.date1 ? (
+              <p className="hidden truncate text-xs text-ink-soft sm:block">{webinar.date1}</p>
+            ) : null}
+          </div>
+        </div>
+
+        {campaign.cta ? (
+          <Link
+            className="inline-flex shrink-0 items-center gap-2 border border-teal/30 bg-white px-4 py-2 text-xs font-semibold text-teal transition hover:-translate-y-0.5 hover:bg-teal hover:text-white sm:px-6 sm:py-2.5 sm:text-sm"
+            href={campaign.cta.href}
+          >
+            {campaign.cta.label}
+            <span aria-hidden="true">→</span>
+          </Link>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+// Exhibition stand, carrying the event artwork and a countdown to the doors.
+function EventCountdownSlide({ campaign }) {
+  const days = useDaysUntil(campaign.eventDate ?? campaign.end);
+
+  return (
+    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-line-light bg-[linear-gradient(105deg,#FFF7F7_0%,#FFECEE_55%,#FFF7F7_100%)] sm:h-20 lg:h-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-[0.13] [mask-image:linear-gradient(to_left,black,transparent)]"
+      >
+        {campaign.image ? (
+          <Image alt="" className="h-full w-full object-cover" fill sizes="33vw" src={campaign.image} />
+        ) : null}
+      </div>
+
+      <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+          {campaign.image ? (
+            <span className="hidden h-12 w-16 shrink-0 overflow-hidden border border-line-light bg-white sm:block lg:h-14 lg:w-20">
+              <Image
+                alt={campaign.title}
+                className="h-full w-full object-cover"
+                height={56}
+                src={campaign.image}
+                width={80}
+              />
+            </span>
+          ) : null}
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <CountdownPill className="bg-red text-white" days={days} />
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-red sm:text-[11px]">
+                {campaign.kicker ?? "Meet us there"}
+              </span>
+            </div>
+            <p className="mt-0.5 truncate text-sm font-semibold text-ink sm:text-base">
+              {campaign.title}
+            </p>
+            <p className="hidden truncate text-xs text-ink-soft sm:block">
+              {campaign.venue ? `${campaign.venue} · ` : ""}
+              {campaign.message}
+            </p>
+          </div>
+        </div>
+
+        {campaign.cta ? <CampaignCta cta={campaign.cta} /> : null}
+      </div>
+    </div>
+  );
+}
+
+/** Internal links route; an organiser's registration page opens in a new tab. */
+function CampaignCta({ cta }) {
+  const className =
+    "inline-flex shrink-0 items-center gap-2 border border-rose-200 bg-rose-50 px-4 py-2 text-xs font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100 sm:px-6 sm:py-2.5 sm:text-sm";
+
+  if (cta.external) {
+    return (
+      <a className={className} href={cta.href} rel="noopener noreferrer" target="_blank">
+        {cta.label}
+        <span aria-hidden="true">→</span>
+      </a>
+    );
+  }
+
+  return (
+    <Link className={className} href={cta.href}>
+      {cta.label}
+      <span aria-hidden="true">→</span>
+    </Link>
+  );
+}
+
 // Year-round fallback slide, shown whenever no dated campaign is running.
 function ExploreProductsSlide({ campaign }) {
   return (
@@ -373,6 +547,12 @@ function CampaignSlide({ campaign }) {
   if (campaign.variant === "inkarp-anniversary") {
     return <InkarpAnniversarySlide campaign={campaign} />;
   }
+  if (campaign.variant === "webinar-countdown") {
+    return <WebinarCountdownSlide campaign={campaign} />;
+  }
+  if (campaign.variant === "event-countdown") {
+    return <EventCountdownSlide campaign={campaign} />;
+  }
   if (campaign.variant === "explore-products") {
     return <ExploreProductsSlide campaign={campaign} />;
   }
@@ -383,20 +563,33 @@ function CampaignSlide({ campaign }) {
 }
 
 export default function HomeCampaignSlider() {
-  // One stripe at a time: the highest-priority campaign whose date range covers
-  // today, falling back to the evergreen promo. The evergreen entry is also what
-  // renders on the server — the page is statically prerendered, so evaluating
-  // dates during render would freeze the build date into the HTML and mismatch
-  // on hydration. The real date is applied after mount instead.
-  const [campaign, setCampaign] = useState(getEvergreenCampaign);
+  // Every campaign whose date range covers today, highest priority first. The
+  // evergreen promo renders on the server — the page is statically prerendered,
+  // so evaluating dates during render would freeze the build date into the HTML.
+  const [slides, setSlides] = useState(() => {
+    const evergreen = getEvergreenCampaign();
+    return evergreen ? [evergreen] : [];
+  });
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setCampaign(getActiveCampaign() ?? getEvergreenCampaign());
+    const active = getActiveCampaigns();
+    const evergreen = getEvergreenCampaign();
+    const next = active.length ? active : evergreen ? [evergreen] : [];
+    setSlides(next);
+    setIndex(0);
   }, []);
 
-  if (!campaign) {
-    return null;
-  }
+  useEffect(() => {
+    if (slides.length < 2) return undefined;
+    const timer = window.setInterval(() => {
+      setIndex((current) => (current + 1) % slides.length);
+    }, AUTO_ROTATE_MS);
+    return () => window.clearInterval(timer);
+  }, [slides.length]);
+
+  const campaign = slides[index];
+  if (!campaign) return null;
 
   return (
     <section
@@ -406,6 +599,22 @@ export default function HomeCampaignSlider() {
       <div key={campaign.id} className="animate-[hvc-fade_500ms_ease]">
         <CampaignSlide campaign={campaign} />
       </div>
+
+      {slides.length > 1 ? (
+        <div className="pointer-events-none absolute inset-x-0 bottom-1.5 hidden justify-center gap-1.5 sm:flex">
+          {slides.map((slide, slideIndex) => (
+            <button
+              aria-label={`Show ${slide.title}`}
+              className={`pointer-events-auto h-1.5 rounded-full transition-all ${
+                slideIndex === index ? "w-5 bg-ink/45" : "w-1.5 bg-ink/20 hover:bg-ink/35"
+              }`}
+              key={slide.id}
+              onClick={() => setIndex(slideIndex)}
+              type="button"
+            />
+          ))}
+        </div>
+      ) : null}
     </section>
   );
 }

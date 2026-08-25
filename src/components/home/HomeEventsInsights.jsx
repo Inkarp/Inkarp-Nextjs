@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiImage } from "react-icons/fi";
 import RecTag from "./RecTag";
-import { events, formatEventDate, getEventStatus } from "@/data/events";
+import { events, formatEventDate, getEventStatus, upcomingStallEvent } from "@/data/events";
 import { formatPostDate, getRecentPosts } from "@/data/blogs";
 
 function SafeImage({ src, alt, sizes, className }) {
@@ -44,15 +44,7 @@ const statusLabels = {
 };
 
 const FEATURED_EVENT_COUNT = 2;
-const HOME_ANALYTICA_STALL_EVENT = {
-  id: "home-analytica-stall-2026",
-  title: "analytica Lab India Hyderabad 2026",
-  description:
-    "Visit the Inkarp stall at HITEX Hyderabad for live demonstrations and application discussions.",
-  image: "/assets/events/analytica-2026.webp",
-  date: "2026-09-12",
-  status: "upcoming",
-};
+const HOME_ANALYTICA_STALL_EVENT = upcomingStallEvent;
 
 // Soonest upcoming/ongoing first, then the most recently completed, topped up to
 // FEATURED_EVENT_COUNT — so the row still fills when nothing is upcoming.

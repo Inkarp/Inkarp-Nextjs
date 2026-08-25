@@ -11,7 +11,69 @@
 // dated campaign is running. Add an entry here only once it's real, ready
 // content. The commented-out entries further down are placeholder examples kept
 // for reference/reuse; uncomment and update one when you actually want it live.
+import { upcomingStallEvent } from "./events";
+import { webinars } from "./webinars";
+
+const LEAD_IN_DAYS = 10;
+
+function shiftDays(isoDate, days) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+}
+
+/**
+ * The stripe for the webinar happening furthest in the future. Derived from the
+ * webinar data rather than hand-dated, so publishing a webinar schedules its own
+ * campaign — and the window is computed from that fixed date, never from "now",
+ * which would bake the build date into the prerendered page.
+ */
+function buildWebinarCampaign() {
+  const latest = [...webinars]
+    .filter((webinar) => webinar.date)
+    .sort((a, b) => (a.date < b.date ? 1 : -1))[0];
+  if (!latest) return null;
+
+  return {
+    id: `webinar-${latest.id}`,
+    type: "webinar",
+    variant: "webinar-countdown",
+    icon: "📅",
+    accent: "teal",
+    webinarId: latest.id,
+    title: latest.title,
+    message: latest.description ?? "",
+    cta: { label: "Register free", href: "/webinars" },
+    start: shiftDays(latest.date, -LEAD_IN_DAYS),
+    end: latest.date,
+    priority: 6,
+  };
+}
+
+const webinarCampaign = buildWebinarCampaign();
+
 export const campaigns = [
+  ...(webinarCampaign ? [webinarCampaign] : []),
+  {
+    // Exhibition stand, counting down to doors-open. Dates and copy come from
+    // the events-page banner, so moving the show moves both.
+    id: "analytica-countdown-2026",
+    type: "event",
+    variant: "event-countdown",
+    icon: "🧪",
+    accent: "red",
+    kicker: "Meet us there",
+    title: upcomingStallEvent.title,
+    message: upcomingStallEvent.description,
+    venue: upcomingStallEvent.venue,
+    eventDate: upcomingStallEvent.date,
+    dateLabel: upcomingStallEvent.dateLabel,
+    image: upcomingStallEvent.image,
+    cta: { label: "Event details", href: "/events" },
+    start: shiftDays(upcomingStallEvent.date, -30),
+    end: upcomingStallEvent.closesOn,
+    priority: 4,
+  },
   {
     // Milestone year banner. `years` is deliberately a literal rather than
     // derived from today's date: the stripe is prerendered, so computing it at

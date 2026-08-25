@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import DexterChat from "./DexterChat";
 import { createPortal } from "react-dom";
 import {
   FiArrowRight,
@@ -187,7 +188,7 @@ export default function FloatingChatbot() {
   const [showGreetingTooltip, setShowGreetingTooltip] = useState(() => typeof window !== "undefined" && !hasDismissedGreeting());
   const [showAttentionPulse, setShowAttentionPulse] = useState(() => typeof window !== "undefined" && !hasSeenChatbot());
   const [category, setCategory] = useState("");
-  const [step, setStep] = useState("type");
+  const [step, setStep] = useState("chat");
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
@@ -275,7 +276,7 @@ export default function FloatingChatbot() {
     dismissGreetingTooltip();
     setShowAttentionPulse(false);
     rememberChatbotSeen();
-    if (step === "workflow-result" || step === "success") setStep("type");
+    if (step === "workflow-result" || step === "success") setStep("chat");
   }
 
   function closeChatbot() {
@@ -634,6 +635,12 @@ export default function FloatingChatbot() {
               </div>
             ) : null}
 
+            {step === "chat" ? (
+              <div className="animate-[hvc-fade_300ms_ease] motion-reduce:animate-none">
+                <DexterChat onFallback={() => setStep("type")} />
+              </div>
+            ) : null}
+
             {step === "type" ? (
               <div className="animate-[hvc-fade_300ms_ease] space-y-4 motion-reduce:animate-none">
                 <div className="flex items-start gap-2.5">
@@ -642,6 +649,13 @@ export default function FloatingChatbot() {
                     Hi! I can help you find the right instrument, request a quote, or get support. What would you like to do?
                   </div>
                 </div>
+                <button
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold text-ink-soft transition hover:text-red"
+                  onClick={() => setStep("chat")}
+                  type="button"
+                >
+                  <FiChevronLeft aria-hidden /> Back to chat
+                </button>
                 <div className="grid gap-2">
                   {CHATBOT_ENQUIRY_TYPES.map((item) => {
                     const Icon = ENQUIRY_ICONS[item.category] ?? FiBox;

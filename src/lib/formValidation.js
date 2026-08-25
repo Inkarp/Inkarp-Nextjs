@@ -98,3 +98,57 @@ export function validateProductEnquiry(values = {}) {
 
   return errors;
 }
+
+/**
+ * Buyer details for a multi-product quote request. Same person fields as a
+ * single product enquiry, without the product name (the basket carries the
+ * items) and without GSTIN — colleges and research institutes often have none,
+ * and a mandatory GST field would block them from enquiring at all.
+ */
+export const QUOTE_REQUEST_FIELDS = [
+  "firstName",
+  "lastName",
+  "designation",
+  "department",
+  "companyName",
+  "industry",
+  "state",
+  "city",
+  "email",
+  "contact",
+];
+
+const QUOTE_LABELS = {
+  firstName: "First name",
+  lastName: "Last name",
+  designation: "Designation",
+  department: "Department",
+  companyName: "Company name",
+  industry: "Industry",
+  state: "State",
+  city: "City",
+  email: "Email",
+  contact: "Contact number",
+};
+
+/**
+ * Validate a quote-basket payload.
+ * @returns {Record<string, string>} field key -> message, empty when valid.
+ */
+export function validateQuoteRequest(values = {}) {
+  const errors = {};
+  const text = (key) => String(values[key] ?? "").trim();
+
+  for (const key of QUOTE_REQUEST_FIELDS) {
+    if (!text(key)) errors[key] = `${QUOTE_LABELS[key]} is required.`;
+  }
+
+  if (!errors.email && !isValidEmail(text("email"))) {
+    errors.email = "Enter a valid email address.";
+  }
+  if (!errors.contact && !isValidIndianPhone(text("contact"))) {
+    errors.contact = "Enter a valid 10-digit Indian mobile number.";
+  }
+
+  return errors;
+}

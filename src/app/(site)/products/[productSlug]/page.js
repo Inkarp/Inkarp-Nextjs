@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AddToQuoteButton from "@/components/products/AddToQuoteButton";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
@@ -198,7 +199,7 @@ export default async function ProductPage({ params }) {
                   )}
                   <ProductImageZoom alt={product.imageAlt ?? product.name} src={product.image} />
                 </div>
-                <ProductImageActions href={ctaHref} />
+                <ProductImageActions href={ctaHref} product={product} secondary={product.heroSecondaryCta} />
               </>
             )}
           </div>
@@ -253,7 +254,7 @@ export default async function ProductPage({ params }) {
   );
 }
 
-function ProductImageActions({ href }) {
+function ProductImageActions({ href, product, secondary }) {
   return (
     <div className="mt-4 space-y-2.5">
       <Link
@@ -262,6 +263,15 @@ function ProductImageActions({ href }) {
       >
         Request Quote
       </Link>
+      <AddToQuoteButton product={product} variant="block" />
+      {secondary?.label && (
+        <Link
+          href={secondary.href ?? "/contact"}
+          className="inline-flex h-12 w-full items-center justify-center border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+        >
+          {secondary.label}
+        </Link>
+      )}
     </div>
   );
 }

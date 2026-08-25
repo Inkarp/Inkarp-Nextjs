@@ -1,7 +1,12 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 import { normalizeTracking, omitTrackingFields } from "@/lib/serverTracking";
-import { PRODUCT_ENQUIRY_FIELDS, validateProductEnquiry } from "@/lib/formValidation";
+import {
+  PRODUCT_ENQUIRY_FIELDS,
+  QUOTE_REQUEST_FIELDS,
+  validateProductEnquiry,
+  validateQuoteRequest,
+} from "@/lib/formValidation";
 
 // Product-page "pick something, then send it to Inkarp" tools. They all
 // share the same required fields (name/email/configuration) and all route
@@ -24,6 +29,7 @@ const FORM_LABELS = {
   contact: "Contact form",
   service: "Service & installation request",
   "demo-booking": "Product quote request",
+  "quote-basket": "Multi-product quote request",
   webinar: "Webinar registration",
   catalyst: "CATALYSTCue physical copy request",
   feedback: "Product profile feedback",
@@ -45,10 +51,13 @@ const REQUIRED_FIELDS = {
   ),
   // The product enquiry form collects a full set of buyer details.
   "demo-booking": PRODUCT_ENQUIRY_FIELDS,
+  // Items are validated separately against the live catalogue.
+  "quote-basket": QUOTE_REQUEST_FIELDS,
 };
 
 const FORM_RECIPIENTS = {
   "product-search-no-results": "info@inkarp.co.in",
+  "quote-basket": "info@inkarp.co.in",
   ...Object.fromEntries(Object.keys(PRODUCT_TOOL_LABELS).map((formType) => [formType, "info@inkarp.co.in"])),
 };
 
@@ -94,6 +103,8 @@ function acknowledgementFor(formType) {
       return "Thanks for sending your numbers. An Inkarp specialist will confirm the right configuration against them.";
     case "solvent-calculator":
       return "We have received your solvent recovery estimate. Our team will follow up with a tailored quote.";
+    case "quote-basket":
+      return "Thanks for your quote request. An Inkarp specialist will come back to you with pricing and availability for every product on your list.";
     case "demo-booking":
       return "We have received your quote request. Our team will get back to you with pricing and availability shortly.";
     default:
@@ -120,6 +131,19 @@ export async function POST(request) {
 
   // Re-run the product enquiry rules here; the browser checks are a
   // convenience, not a guarantee.
+  if (formType === "quote-basket") {
+    const errors = validateQuoteRequest(fields);
+    if (!Array.isArray(fields.items) || fields.items.length === 0) {
+      errors.items = "Add at least one product to your quote list.";
+    }
+    if (Object.keys(errors).length) {
+      return Response.json(
+        { success: false, message: "Please correct the highlighted fields.", errors },
+        { status: 400 }
+      );
+    }
+  }
+
   if (formType === "demo-booking") {
     const errors = validateProductEnquiry(fields);
     if (Object.keys(errors).length) {
@@ -138,6 +162,33 @@ export async function POST(request) {
     tracking,
     submittedAt: new Date(),
   };
+
+  // sendFormNotification drops object-valued fields, so a basket would email as
+  // a request with no products on it. Flatten it to a readable list; the raw
+  // `items` array is still stored for reporting.
+  // A quote request needs something the buyer and sales can both cite. Built
+  // once here so the PDF, the email and the stored record all carry the same one.
+  let reference = null;
+  if (formType === "quote-basket") {
+    const now = new Date();
+    const stamp = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
+      .map((part, index) => String(part).padStart(index === 0 ? 4 : 2, "0"))
+      .join("");
+    const suffix = Math.random().toString(36).slice(2, 6).toUpperCase();
+    reference = `INK/RFQ/${stamp}/${suffix}`;
+    submission.reference = reference;
+  }
+
+  if (formType === "quote-basket" && Array.isArray(fields.items)) {
+    submission.productCount = fields.items.length;
+    submission.products = fields.items
+      .map((item, index) => {
+        const brand = item?.principalName ? ` (${item.principalName})` : "";
+        const url = item?.slug ? ` - https://inkarp.co.in/products/${item.slug}` : "";
+        return `${index + 1}. ${item?.name ?? "Unnamed product"}${brand}${url}`;
+      })
+      .join(String.fromCharCode(10));
+  }
 
   let saved = false;
   let notificationSent = false;
@@ -180,5 +231,5 @@ export async function POST(request) {
     );
   }
 
-  return Response.json({ success: true, saved, notificationSent });
+  return Response.json({ success: true, saved, notificationSent, reference });
 }

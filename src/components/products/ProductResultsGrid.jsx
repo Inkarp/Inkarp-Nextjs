@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AddToQuoteButton from "./AddToQuoteButton";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
@@ -137,6 +138,7 @@ function ProductCard({ product }) {
         >
           View Details
         </Link>
+        <AddToQuoteButton product={product} />
       </div>
     </article>
   );

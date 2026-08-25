@@ -434,3 +434,51 @@ article[data-scroll-reveal="true"] {
 body.menu-open [data-floating-widget] {
   display: none !important;
 }
+
+/* Printing the quote document. Two things this must get right:
+   the overlay is nested deep in the React tree, so hiding body's direct
+   children would hide the sheet along with everything else; and the rules are
+   scoped to `body.quote-printing` (set only while the document is open) so
+   printing any ordinary page of the site still works normally. */
+@media print {
+  body.quote-printing * {
+    visibility: hidden;
+  }
+
+  body.quote-printing .quote-print-root,
+  body.quote-printing .quote-print-root * {
+    visibility: visible;
+  }
+
+  body.quote-printing [data-floating-widget] {
+    display: none !important;
+  }
+
+  body.quote-printing .quote-print-root {
+    background: #fff;
+    inset: 0 auto auto 0;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 100%;
+  }
+
+  body.quote-printing .quote-doc {
+    box-shadow: none !important;
+    margin: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Keep a product row or a block from splitting across two sheets. */
+  body.quote-printing .quote-doc tr,
+  body.quote-printing .quote-doc section {
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 14mm;
+    size: A4;
+  }
+}

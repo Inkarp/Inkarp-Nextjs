@@ -1,256 +1,316 @@
-import nodemailer from "nodemailer";
+import Anthropic from "@anthropic-ai/sdk";
+import { buildCompactSystemPrompt, buildSystemPrompt } from "@/lib/chat/systemPrompt";
+import { CHAT_TOOLS, runTool } from "@/lib/chat/tools";
+import { answerLocally } from "@/lib/chat/localAssistant";
+import { runGroqTurn } from "@/lib/chat/groqEngine";
 import { getDb } from "@/lib/mongodb";
-import { CHATBOT_CONFIG, CHATBOT_FIELDS } from "@/data/chatbotConfig";
-import { getClientIp, normalizeTracking, omitTrackingFields, buildTrackingEmailHtml } from "@/lib/serverTracking";
 
-const ALLOWED_CATEGORIES = new Set(["Product", "Service", "Quote", "Talk to expert", "Workflow quiz"]);
-const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
-const RATE_LIMIT_MAX = 8;
-const MAX_STRING_LENGTH = 2000;
-const MAX_ARRAY_ITEMS = 20;
-const MAX_OBJECT_KEYS = 80;
-const rateLimitStore = globalThis._chatRateLimitStore || new Map();
-globalThis._chatRateLimitStore = rateLimitStore;
+// MongoDB and the streaming loop both need the Node runtime.
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
-function escapeHtml(value = "") {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
+const MODEL = "claude-opus-5";
+const MAX_TOKENS = 8000;
+// Chat wants to feel responsive; raise to "high" if answers need more depth.
+const EFFORT = "medium";
+const MAX_TOOL_ROUNDS = 5;
+const MAX_HISTORY_MESSAGES = 24;
+const MAX_MESSAGE_CHARS = 2000;
 
-function normalizeValue(value, depth = 0) {
-  if (typeof value === "string") return value.trim().slice(0, MAX_STRING_LENGTH);
-  if (typeof value === "number" || typeof value === "boolean") return value;
-  if (Array.isArray(value)) {
-    if (depth > 2) return [];
-    return value.slice(0, MAX_ARRAY_ITEMS).map((item) => normalizeValue(item, depth + 1));
-  }
-  if (value && typeof value === "object") {
-    if (depth > 2) return {};
-    return Object.fromEntries(
-      Object.entries(value)
-        .slice(0, MAX_OBJECT_KEYS)
-        .map(([key, nestedValue]) => [String(key).slice(0, 80), normalizeValue(nestedValue, depth + 1)])
-    );
-  }
-  return "";
-}
+// Per-IP throttle. In-process on purpose: this is a spike guard for one server,
+// not a distributed quota.
+const WINDOW_MS = 60_000;
+const MAX_REQUESTS_PER_WINDOW = 12;
+const hits = new Map();
 
-function normalizePayload(payload) {
-  if (!payload || typeof payload !== "object" || Array.isArray(payload)) return null;
-  return normalizeValue(payload);
-}
-
-function formatValue(value) {
-  if (Array.isArray(value) || (value && typeof value === "object")) {
-    return JSON.stringify(value, null, 2);
-  }
-  return value ?? "";
-}
-
-function labelize(key) {
-  return key.replace(/^_/, "").replace(/([A-Z])/g, " $1").replace(/^./, (letter) => letter.toUpperCase());
-}
-
-function checkRateLimit(ip) {
+function rateLimited(ip) {
   const now = Date.now();
-  if (rateLimitStore.size > 500) {
-    for (const [key, record] of rateLimitStore.entries()) {
-      if (record.resetAt <= now) rateLimitStore.delete(key);
+  const recent = (hits.get(ip) ?? []).filter((time) => now - time < WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+
+  // Keep the map from growing without bound on a long-lived process.
+  if (hits.size > 5000) {
+    for (const [key, times] of hits) {
+      if (!times.some((time) => now - time < WINDOW_MS)) hits.delete(key);
     }
   }
-  const record = rateLimitStore.get(ip) || { count: 0, resetAt: now + RATE_LIMIT_WINDOW_MS };
-  if (record.resetAt <= now) {
-    record.count = 0;
-    record.resetAt = now + RATE_LIMIT_WINDOW_MS;
+
+  return recent.length > MAX_REQUESTS_PER_WINDOW;
+}
+
+const SSE_HEADERS = {
+  "Cache-Control": "no-cache, no-transform",
+  Connection: "keep-alive",
+  "Content-Type": "text/event-stream; charset=utf-8",
+};
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function clientIp(request) {
+  const forwarded = request.headers.get("x-forwarded-for");
+  if (forwarded) return forwarded.split(",")[0].trim();
+  return request.headers.get("x-real-ip") ?? "unknown";
+}
+
+/** Trim to recent turns and drop anything that isn't a well-formed message. */
+function sanitiseHistory(messages) {
+  if (!Array.isArray(messages)) return [];
+  return messages
+    .filter(
+      (message) =>
+        message &&
+        (message.role === "user" || message.role === "assistant") &&
+        typeof message.content === "string" &&
+        message.content.trim()
+    )
+    .slice(-MAX_HISTORY_MESSAGES)
+    .map((message) => ({
+      role: message.role,
+      content: message.content.slice(0, MAX_MESSAGE_CHARS),
+    }));
+}
+
+async function logConversation(entry) {
+  try {
+    const db = await getDb();
+    await db.collection("chatConversations").insertOne(entry);
+  } catch {
+    // Analytics must never take the chat down.
   }
-  record.count += 1;
-  rateLimitStore.set(ip, record);
-  return record.count <= RATE_LIMIT_MAX;
-}
-
-function getRequiredFields(category) {
-  const fields = CHATBOT_FIELDS[category] || [];
-  const required = fields.filter((field) => field.required).map((field) => field.name);
-  return required;
-}
-
-function validatePayload(payload) {
-  if (!payload || typeof payload !== "object") return ["Invalid JSON payload"];
-  if (!ALLOWED_CATEGORIES.has(payload.category)) return ["Invalid enquiry category"];
-
-  if (payload.category === "Workflow quiz") {
-    const errors = [];
-    const requiredWorkflowFields = [
-      "productName",
-      "inquiryType",
-      "name",
-      "email",
-      "phone",
-      "company",
-      "city",
-      "state",
-      "application",
-    ];
-
-    if (!Array.isArray(payload.answers) || payload.answers.length !== 3) errors.push("Workflow answers are required");
-    if (!String(payload.recommendedProduct ?? "").trim()) errors.push("recommendedProduct is required");
-    if (!String(payload.recommendedProductSlug ?? "").trim()) errors.push("recommendedProductSlug is required");
-
-    for (const field of requiredWorkflowFields) {
-      if (!String(payload[field] ?? "").trim()) errors.push(`${field} is required`);
-    }
-
-    if (payload.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(payload.email))) errors.push("Invalid email");
-    if (payload.phone && !/^[+\d][\d\s().-]{6,19}$/.test(String(payload.phone))) errors.push("Invalid phone");
-
-    return errors;
-  }
-
-  const missing = getRequiredFields(payload.category).filter((field) => !String(payload[field] ?? "").trim());
-  const errors = missing.map((field) => `${field} is required`);
-
-  if (payload.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(payload.email))) errors.push("Invalid email");
-  if (payload.contact && !/^[+\d][\d\s().-]{6,19}$/.test(String(payload.contact))) errors.push("Invalid phone");
-
-  return errors;
-}
-
-function renderTable(title, rows, headerColor) {
-  const visibleRows = rows.filter(([, value]) => value !== undefined && value !== null && String(value) !== "");
-  if (!visibleRows.length) return "";
-
-  return `
-    <table style="width:100%;border-collapse:collapse;margin:0 0 18px 0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111827;">
-      <thead>
-        <tr>
-          <th colspan="2" style="background:${headerColor};color:#ffffff;text-align:left;padding:10px 12px;border:1px solid #e5e7eb;font-size:15px;">${escapeHtml(title)}</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${visibleRows
-          .map(
-            ([key, value]) => `
-              <tr>
-                <td style="width:34%;padding:9px 12px;border:1px solid #e5e7eb;background:#f9fafb;font-weight:700;color:#111827;vertical-align:top;">${escapeHtml(labelize(key))}</td>
-                <td style="padding:9px 12px;border:1px solid #e5e7eb;background:#ffffff;color:#111827;vertical-align:top;white-space:pre-wrap;">${escapeHtml(formatValue(value))}</td>
-              </tr>
-            `
-          )
-          .join("")}
-      </tbody>
-    </table>
-  `;
-}
-
-let transporter;
-function getTransporter() {
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    throw new Error("SMTP_HOST/SMTP_USER/SMTP_PASS are not set.");
-  }
-  if (!transporter) {
-    transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === "true",
-      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-    });
-  }
-  return transporter;
-}
-
-function renderTrackingTable(tracking, headerColor) {
-  return `
-    <table style="width:100%;border-collapse:collapse;margin:0 0 18px 0;background:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111827;">
-      <thead>
-        <tr>
-          <th colspan="2" style="background:${headerColor};color:#ffffff;text-align:left;padding:10px 12px;border:1px solid #e5e7eb;font-size:15px;">Visitor &amp; Campaign Tracking</th>
-        </tr>
-      </thead>
-      <tbody>${buildTrackingEmailHtml(tracking)}</tbody>
-    </table>
-  `;
-}
-
-async function sendChatEmail(submission) {
-  const to = process.env.COMPANY_EMAIL || process.env.MAIL_TO || "sharath@inkarp.co.in";
-  const from = process.env.MAIL_FROM || process.env.SMTP_USER;
-  const brandBlue = CHATBOT_CONFIG.colors.brandBlue;
-  const submissionRows = Object.entries(submission).filter(
-    ([key]) => !["_id", "submittedAt", "tracking"].includes(key)
-  );
-
-  await getTransporter().sendMail({
-    from,
-    to,
-    replyTo: submission.email,
-    subject: `${CHATBOT_CONFIG.emailSubject} - ${submission.category}`,
-    html: `
-      <div style="background:#f3f4f6;padding:20px;">
-        <div style="max-width:820px;margin:0 auto;background:#ffffff;padding:20px;border:1px solid #e5e7eb;">
-          <h2 style="margin:0 0 16px 0;color:#111827;font-family:Arial,Helvetica,sans-serif;">${escapeHtml(CHATBOT_CONFIG.emailSubject)}</h2>
-          ${renderTable("Submission Details", submissionRows, brandBlue)}
-          ${renderTrackingTable(submission.tracking, brandBlue)}
-        </div>
-      </div>
-    `,
-  });
 }
 
 export async function POST(request) {
-  const visitorIp = getClientIp(request);
-  if (!checkRateLimit(visitorIp)) {
-    return Response.json({ success: false, message: "Too many requests. Please try again later." }, { status: 429 });
+  const ip = clientIp(request);
+  if (rateLimited(ip)) {
+    return Response.json(
+      { error: "rate_limited", message: "You are sending messages very quickly. Give it a moment." },
+      { status: 429 }
+    );
   }
 
-  const rawPayload = await request.json().catch(() => null);
-  if (rawPayload?.website) {
-    return Response.json({ success: true, spamFiltered: true });
+  const body = await request.json().catch(() => null);
+  const history = sanitiseHistory(body?.messages);
+  if (!history.length || history[history.length - 1].role !== "user") {
+    return Response.json({ error: "bad_request", message: "No message to answer." }, { status: 400 });
   }
 
-  const payload = normalizePayload(rawPayload);
-  const errors = validatePayload(payload);
-  if (errors.length) {
-    return Response.json({ success: false, message: errors.join(", ") }, { status: 400 });
+  const encoder = new TextEncoder();
+  const startedAt = Date.now();
+  // Best available engine wins: Claude, then Groq's free tier, then the
+  // catalogue search that needs no key at all.
+  const engine = process.env.ANTHROPIC_API_KEY
+    ? "claude"
+    : process.env.GROQ_API_KEY
+      ? "groq"
+      : "catalogue";
+
+  // No key configured: answer from the catalogue directly, over the same stream
+  // shape, so the widget behaves identically and swaps to the model the moment
+  // a key exists.
+  if (engine === "catalogue") {
+    const question = history[history.length - 1].content;
+    const localStream = new ReadableStream({
+      async start(controller) {
+        const send = (event, data) =>
+          controller.enqueue(encoder.encode(`event: ${event}
+data: ${JSON.stringify(data)}
+
+`));
+        const { activity, text } = answerLocally(question, history);
+
+        if (activity) {
+          send("tools", { names: [], label: activity });
+          await sleep(420);
+        }
+
+        // Typed out rather than dumped, so reading keeps pace with arrival.
+        for (const token of text.match(/\S+\s*/g) ?? []) {
+          send("delta", { text: token });
+          await sleep(18);
+        }
+
+        send("done", { stopReason: "end_turn", source: "catalogue" });
+        controller.close();
+        logConversation({
+          ip,
+          startedAt: new Date(startedAt),
+          durationMs: Date.now() - startedAt,
+          question,
+          answer: text,
+          turns: history.length,
+          toolsUsed: [],
+          source: "catalogue",
+        });
+      },
+    });
+
+    return new Response(localStream, { headers: SSE_HEADERS });
   }
 
-  const cleanPayload = Object.fromEntries(
-    Object.entries(payload).filter(([key]) => key !== "website")
-  );
-  const tracking = normalizeTracking(cleanPayload, visitorIp);
-  const submission = {
-    ...omitTrackingFields(cleanPayload),
-    tracking,
-    submittedAt: new Date(),
-  };
-  let insertedId;
-  let saved = false;
+  if (engine === "groq") {
+    const question = history[history.length - 1].content;
+    const groqStream = new ReadableStream({
+      async start(controller) {
+        const send = (event, data) =>
+          controller.enqueue(encoder.encode(`event: ${event}
+data: ${JSON.stringify(data)}
 
-  try {
-    const db = await getDb();
-    const result = await db.collection(CHATBOT_CONFIG.mongoCollectionName).insertOne(submission);
-    insertedId = result.insertedId;
-    saved = true;
-  } catch (error) {
-    console.error("[chat] failed to save submission:", error.message);
+`));
+
+        let answer = "";
+        let toolsUsed = [];
+        try {
+          const result = await runGroqTurn({
+            history,
+            send,
+            system: buildCompactSystemPrompt(),
+          });
+          answer = result.answer;
+          toolsUsed = result.toolsUsed;
+
+          // An empty turn is worse than a plain answer — fall back rather than
+          // leave the visitor looking at nothing.
+          if (!answer.trim()) {
+            const local = answerLocally(question, history);
+            answer = local.text;
+            for (const token of local.text.match(/\S+\s*/g) ?? []) {
+              send("delta", { text: token });
+              await sleep(12);
+            }
+          }
+          send("done", { stopReason: "end_turn", source: "groq" });
+        } catch (error) {
+          // A key problem, an exhausted quota or a network blip shouldn't leave
+          // the visitor with nothing — the catalogue engine always answers.
+          if (error?.status === 429) {
+            send("error", {
+              message: "I'm getting a lot of questions right now. Try again in a moment.",
+            });
+          } else {
+            const local = answerLocally(question, history);
+            answer = local.text;
+            for (const token of local.text.match(/\S+\s*/g) ?? []) {
+              send("delta", { text: token });
+              await sleep(12);
+            }
+            send("done", { stopReason: "end_turn", source: "catalogue-fallback" });
+          }
+        } finally {
+          controller.close();
+          logConversation({
+            ip,
+            startedAt: new Date(startedAt),
+            durationMs: Date.now() - startedAt,
+            question,
+            answer,
+            turns: history.length,
+            toolsUsed,
+            source: "groq",
+          });
+        }
+      },
+    });
+
+    return new Response(groqStream, { headers: SSE_HEADERS });
   }
 
-  let notificationSent = false;
-  try {
-    await sendChatEmail(insertedId ? { ...submission, _id: insertedId } : submission);
-    notificationSent = true;
-  } catch (error) {
-    console.error("[chat] failed to send notification email:", error.message);
-  }
+  const client = new Anthropic();
 
-  if (!saved && !notificationSent) {
-    return Response.json({ success: false, message: "Could not submit your enquiry. Please try again shortly." }, { status: 500 });
-  }
+  const stream = new ReadableStream({
+    async start(controller) {
+      const send = (event, data) =>
+        controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
 
-  return Response.json({ success: true, id: insertedId ? String(insertedId) : undefined, saved, notificationSent });
+      const messages = [...history];
+      const toolsUsed = [];
+      let answer = "";
+
+      try {
+        for (let round = 0; round <= MAX_TOOL_ROUNDS; round += 1) {
+          const runner = client.messages.stream({
+            model: MODEL,
+            max_tokens: MAX_TOKENS,
+            // The system prompt carries the whole catalogue index and never
+            // varies, so caching it turns most of each request into a cache read.
+            system: [
+              {
+                type: "text",
+                text: buildSystemPrompt(),
+                cache_control: { type: "ephemeral" },
+              },
+            ],
+            thinking: { type: "adaptive" },
+            output_config: { effort: EFFORT },
+            tools: CHAT_TOOLS,
+            messages,
+          });
+
+          runner.on("text", (delta) => {
+            answer += delta;
+            send("delta", { text: delta });
+          });
+
+          const response = await runner.finalMessage();
+
+          if (response.stop_reason === "refusal") {
+            send("error", {
+              message:
+                "I can't help with that one. Ask me about instruments, applications or service and I'll do my best.",
+            });
+            break;
+          }
+
+          if (response.stop_reason !== "tool_use") {
+            send("done", { stopReason: response.stop_reason });
+            break;
+          }
+
+          const calls = response.content.filter((block) => block.type === "tool_use");
+          send("tools", { names: calls.map((call) => call.name) });
+
+          // Parallel calls must all come back in one user message.
+          const results = await Promise.all(
+            calls.map(async (call) => {
+              toolsUsed.push(call.name);
+              const result = await runTool(call.name, call.input);
+              return {
+                type: "tool_result",
+                tool_use_id: call.id,
+                content: JSON.stringify(result),
+              };
+            })
+          );
+
+          messages.push({ role: "assistant", content: response.content });
+          messages.push({ role: "user", content: results });
+
+          if (round === MAX_TOOL_ROUNDS) {
+            send("done", { stopReason: "tool_limit" });
+          }
+        }
+      } catch (error) {
+        const status = error?.status;
+        send("error", {
+          message:
+            status === 429
+              ? "The assistant is busy right now. Try again in a moment."
+              : "Something went wrong on my side. You can reach the team on the contact page.",
+        });
+      } finally {
+        controller.close();
+        logConversation({
+          ip,
+          startedAt: new Date(startedAt),
+          durationMs: Date.now() - startedAt,
+          question: history[history.length - 1].content,
+          answer,
+          turns: history.length,
+          toolsUsed,
+        });
+      }
+    },
+  });
+
+  return new Response(stream, { headers: SSE_HEADERS });
 }
-
-

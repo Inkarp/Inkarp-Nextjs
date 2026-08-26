@@ -23,12 +23,10 @@ import {
 // import AnnouncementBar from "@/components/common/AnnouncementBar";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
-import { getAllProducts } from "@/data/products/principals";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
 import { siteConfig } from "@/data/siteConfig";
 import { FaDownload } from "react-icons/fa";
 
-const headerSearchProducts = getAllProducts();
 const upcomingWebinarsCount = getUpcomingWebinarsCount();
 
 function getNavHref(item) {
@@ -482,7 +480,6 @@ export default function Header() {
       <HeaderSearchModal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
-        products={headerSearchProducts}
       />
       </header>
       <div

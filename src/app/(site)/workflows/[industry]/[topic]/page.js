@@ -21,14 +21,67 @@ function resolve(industry, slug) {
   return { activeIndustry, stage: findStage(industry, slug) };
 }
 
+/**
+ * The stage descriptions written for the page body run ~60 characters — far too
+ * short for a search result. This composes one from what the page actually
+ * contains: the stage, the industry, how many problems it covers and which
+ * brands answer them.
+ */
+function buildStageMeta({ activeIndustry, industry, stage, topic }) {
+  const challenges = workflowChallenges?.[industry]?.[stage.name] ?? [];
+
+  const brands = [
+    ...new Set(
+      challenges
+        .flatMap((entry) => entry.products ?? [])
+        .filter((item) => item.slug)
+        .map((item) => item.principal)
+        .filter(Boolean)
+    ),
+  ].slice(0, 3);
+
+  const industryLabel = activeIndustry.industry.toLowerCase();
+  const problems = challenges.length
+    ? `${challenges.length} common problems and the instruments that solve them`
+    : "the instruments Inkarp supplies for it";
+  const brandLine = brands.length ? ` Products from ${brands.join(", ")}.` : "";
+
+  // Search results cut off around 155 characters, so the closing line only
+  // survives if the brands have not already used the space.
+  const lead = `${stage.name} in ${industryLabel} labs: ${problems}.`;
+  const withBrands = `${lead}${brandLine}`;
+  const description =
+    withBrands.length <= 120
+      ? `${withBrands} Inkarp, distributor in India.`
+      : withBrands.slice(0, 155).trimEnd();
+
+  return {
+    description,
+    keywords: [
+      `${stage.name} ${industryLabel}`,
+      `${stage.name} instruments`,
+      `${industryLabel} laboratory workflow`,
+      `${industryLabel} lab equipment india`,
+      ...brands.map((brand) => `${brand} india`),
+      "inkarp workflows",
+    ].join(", "),
+  };
+}
+
 export async function generateMetadata({ params }) {
   const { industry, topic } = await params;
   const { activeIndustry, stage } = resolve(industry, topic);
-  if (!activeIndustry || !stage) return {};
+  // Without this, an unresolved URL inherits the site-wide default title.
+  if (!activeIndustry || !stage) {
+    return { title: "Workflow Not Found - Inkarp", robots: { index: false, follow: true } };
+  }
+
+  const { description, keywords } = buildStageMeta({ activeIndustry, industry, stage, topic });
 
   return buildDynamicMetadata({
     title: `${stage.name} — ${activeIndustry.industry} Workflow | Inkarp`,
-    description: stage.description,
+    description,
+    keywords,
     path: `/workflows/${industry}/${topic}`,
   });
 }
@@ -90,6 +143,7 @@ export default async function WorkflowStagePage({ params }) {
           name: product.name ?? item.name,
           slug: product.slug,
           principal: product.principalName ?? item.principal,
+          principalSlug: product.principalSlug ?? "",
           principalImage: product.principalImage ?? null,
           country: product.countryOfOrigin ?? null,
           image: product.image ?? null,

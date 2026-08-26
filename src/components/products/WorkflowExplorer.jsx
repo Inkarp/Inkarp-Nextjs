@@ -52,9 +52,9 @@ function WorkflowDetail({ activeIndustry, topics, activeTopic }) {
       <p className="font-mono text-xs uppercase tracking-wide text-ink-soft">
         Workflow #{topicIndex + 1} / {activeIndustry.industry}
       </p>
-      <h2 className="mt-2 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
+      <h1 className="mt-2 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
         {activeTopic.title}
-      </h2>
+      </h1>
       <p className="mt-3 max-w-2xl text-sm leading-6 text-ink-soft">{activeTopic.desc}</p>
 
       <WorkflowProblemProductPanel
@@ -78,9 +78,9 @@ function WorkflowList({ activeIndustry, topics }) {
       <IndustryTabs activeCat={activeIndustry.cat} />
 
       <p className="font-mono text-xs font-semibold uppercase tracking-wide text-red">Top workflows</p>
-      <h2 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-        {activeIndustry.industry}
-      </h2>
+      <h1 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
+        {activeIndustry.industry} laboratory workflows
+      </h1>
       <p className="mt-2 max-w-3xl text-sm text-ink-soft">
         {workflowIntros[activeIndustry.cat] ?? activeIndustry.tagline}
       </p>

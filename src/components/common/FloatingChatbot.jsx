@@ -477,23 +477,35 @@ export default function FloatingChatbot() {
         aria-expanded={isOpen}
         aria-label="Open website chatbot"
         data-floating-widget
-        className="group fixed inline-flex size-16 items-center justify-center rounded-full transition-transform duration-300 ease-out hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:size-20"
+        className="group fixed inline-flex size-12 items-center justify-center rounded-full transition-transform duration-300 ease-out hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:size-14"
         onClick={openChatbot}
         ref={launcherRef}
         style={{ bottom: "1.25rem", color: CHATBOT_CONFIG.colors.launcherText, right: "1rem", zIndex: TOP_LAYER }}
         type="button"
       >
+        {showAttentionPulse && !isOpen ? (
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-full border-2 border-red motion-safe:animate-[dexter-ring_2.6s_ease-out_infinite]"
+          />
+        ) : null}
         <Image
           alt=""
-          className="size-full rounded-full object-cover drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] transition duration-300 group-hover:drop-shadow-[0_6px_14px_rgba(190,0,16,0.25)]"
+          className={`size-full rounded-full object-cover drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] transition duration-300 group-hover:drop-shadow-[0_6px_14px_rgba(190,0,16,0.25)] ${
+            isOpen
+              ? ""
+              : showAttentionPulse
+                ? "motion-safe:animate-[dexter-greet_1.4s_ease-out]"
+                : "motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
+          }`}
           height={80}
           src="/chatbot-icon.webp"
           width={80}
         />
         {showAttentionPulse && !isOpen ? (
-          <span aria-hidden="true" className="absolute right-0.5 top-0.5 flex size-3.5">
+          <span aria-hidden="true" className="absolute right-0 top-0 flex size-3">
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-red opacity-75" />
-            <span className="relative inline-flex size-3.5 rounded-full border-2 border-white bg-red" />
+            <span className="relative inline-flex size-3 rounded-full border-2 border-white bg-red" />
           </span>
         ) : null}
       </button>

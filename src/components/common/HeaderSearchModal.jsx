@@ -8,7 +8,7 @@ import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import ProductSearchBox from "@/components/products/ProductSearchBox";
 import { siteConfig } from "@/data/siteConfig";
 
-export default function HeaderSearchModal({ isOpen, onClose, products }) {
+export default function HeaderSearchModal({ isOpen, onClose }) {
   const { company } = siteConfig;
 
   useEffect(() => {
@@ -85,7 +85,7 @@ export default function HeaderSearchModal({ isOpen, onClose, products }) {
         </div>
 
         <div>
-          <ProductSearchBox onClose={onClose} products={products} variant="fullscreen" />
+          <ProductSearchBox onClose={onClose} variant="fullscreen" />
         </div>
       </div>
     </div>,

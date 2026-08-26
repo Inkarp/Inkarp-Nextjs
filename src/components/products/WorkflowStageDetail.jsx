@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiChevronDown } from 'react-icons/fi';
+import AddToQuoteButton from './AddToQuoteButton';
 
 /**
  * One workflow stage: each challenge, the solution to it, and cards for the
@@ -97,6 +98,7 @@ export default function WorkflowStageDetail({ challenges = [], industry, stage }
 function ProductCard({ product }) {
   const { image, imageAlt, country, name, principal, principalImage, slug } = product;
 
+
   const body = (
     <>
       <div className="flex items-center justify-center border border-line-light bg-parchment-alt p-2">
@@ -149,15 +151,11 @@ function ProductCard({ product }) {
         ) : null}
       </div>
 
-      <span
-        className={`mt-3 inline-flex w-fit items-center gap-1.5 border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide transition ${
-          slug
-            ? 'border-rose-200 bg-rose-50 text-rose-700 group-hover:bg-rose-100'
-            : 'border-dashed border-line-light text-ink-soft'
-        }`}
-      >
-        {slug ? 'View product →' : 'Not listed yet'}
-      </span>
+      {slug ? null : (
+        <span className="mt-3 inline-flex w-fit items-center gap-1.5 border border-dashed border-line-light px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+          Not listed yet
+        </span>
+      )}
     </>
   );
 
@@ -173,12 +171,34 @@ function ProductCard({ product }) {
   }
 
   return (
-    <Link
-      className="group flex flex-col border border-line-light bg-white p-4 transition hover:-translate-y-0.5 hover:border-red/50"
-      href={`/products/${slug}`}
-      title={principal ? `${name} — ${principal}` : name}
-    >
-      {body}
-    </Link>
+    <article className="group flex flex-col border border-line-light bg-white p-4 transition hover:-translate-y-0.5 hover:border-red/50">
+      <Link
+        className="flex flex-1 flex-col"
+        href={`/products/${slug}`}
+        title={principal ? `${name} — ${principal}` : name}
+      >
+        {body}
+      </Link>
+
+      <div className="mt-3 flex gap-2">
+        <Link
+          className="flex h-9 flex-1 items-center justify-center border border-rose-200 bg-rose-50 text-[11px] font-semibold uppercase tracking-wide text-rose-700 transition hover:bg-rose-100"
+          href={`/products/${slug}`}
+        >
+          View product
+        </Link>
+        <AddToQuoteButton
+          product={{
+            slug,
+            principalSlug: product.principalSlug ?? '',
+            principalName: principal ?? '',
+            name,
+            image: image ?? '',
+            imageAlt: imageAlt ?? name,
+            countryOfOrigin: country ?? '',
+          }}
+        />
+      </div>
+    </article>
   );
 }

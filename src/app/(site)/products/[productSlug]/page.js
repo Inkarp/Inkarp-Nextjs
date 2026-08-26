@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { productWorkflows } from "@/data/productWorkflows";
 import AddToQuoteButton from "@/components/products/AddToQuoteButton";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -207,7 +208,7 @@ export default async function ProductPage({ params }) {
       </section>
 
       <div id="product-details">
-        {isRichPage ? <UniversalProductPage product={product} /> : <LegacyProductContent product={product} />}
+        {isRichPage ? <UniversalProductPage product={product} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
       </div>
 
       <CustomerReviews reviews={product.reviews} />

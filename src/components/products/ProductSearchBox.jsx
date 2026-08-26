@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight, FiSearch, FiX } from "react-icons/fi";
-import { productMatchesSearch } from "@/lib/productSearch";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
 
@@ -84,6 +83,16 @@ function ProductResultLink({ product, compact = false, onDark = false, onClose }
   );
 }
 
+function SearchStatus({ className = "", failed }) {
+  return (
+    <p className={`text-sm text-ink-soft ${className}`}>
+      {failed
+        ? "Search is unavailable right now. Please try again in a moment."
+        : "Searching the catalogue…"}
+    </p>
+  );
+}
+
 export default function ProductSearchBox({
   products,
   defaultValue = "",
@@ -102,28 +111,53 @@ export default function ProductSearchBox({
   const showSearchButton = trimmedQuery.length >= 2;
   const canSubmit = trimmedQuery.length === 0 || trimmedQuery.length >= 2;
 
-  const results = useMemo(() => {
+  const [results, setResults] = useState([]);
+  const [searching, setSearching] = useState(false);
+  const [searchFailed, setSearchFailed] = useState(false);
+  // Guards against an older, slower response overwriting a newer one.
+  const requestRef = useRef(0);
+
+  useEffect(() => {
     if (!submittedQuery) {
-      return [];
+      setResults([]);
+      setSearchFailed(false);
+      return undefined;
     }
 
-    return products
-      .filter((product) => productMatchesSearch(product, submittedQuery))
-      .slice(0, isHeader ? 6 : 12);
-  }, [isHeader, products, submittedQuery]);
+    const ticket = requestRef.current + 1;
+    requestRef.current = ticket;
+    const controller = new AbortController();
+
+    setSearching(true);
+    setSearchFailed(false);
+
+    fetch(
+      `/api/search?q=${encodeURIComponent(submittedQuery)}&limit=${isHeader ? 6 : 12}`,
+      { signal: controller.signal }
+    )
+      .then((response) => (response.ok ? response.json() : Promise.reject(response)))
+      .then((data) => {
+        if (requestRef.current !== ticket) return;
+        setResults(data.results ?? []);
+        logSearch({ query: submittedQuery, resultsCount: data.total ?? 0 });
+      })
+      .catch((error) => {
+        if (error?.name === "AbortError" || requestRef.current !== ticket) return;
+        setResults([]);
+        setSearchFailed(true);
+      })
+      .finally(() => {
+        if (requestRef.current === ticket) setSearching(false);
+      });
+
+    return () => controller.abort();
+  }, [isHeader, submittedQuery]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!canSubmit) return;
 
     setSubmittedQuery(trimmedQuery);
-
-    if (trimmedQuery) {
-      const matchCount = products.filter((product) =>
-        productMatchesSearch(product, trimmedQuery)
-      ).length;
-      logSearch({ query: trimmedQuery, resultsCount: matchCount });
-    }
   };
 
   const clearQuery = () => {
@@ -212,6 +246,8 @@ export default function ProductSearchBox({
                   />
                 ))}
               </div>
+            ) : searching || searchFailed ? (
+              <SearchStatus className="mt-5" failed={searchFailed} />
             ) : (
               <SearchNoResultsForm
                 className="mt-5"
@@ -291,7 +327,11 @@ export default function ProductSearchBox({
               </div>
             ) : (
               <div className="p-4 text-sm text-ink-soft">
-                No related products found.
+                {searching
+                  ? "Searching the catalogue…"
+                  : searchFailed
+                    ? "Search is unavailable right now. Please try again in a moment."
+                    : "No related products found."}
               </div>
             )}
 
@@ -340,6 +380,8 @@ export default function ProductSearchBox({
                 />
               ))}
             </div>
+          ) : searching || searchFailed ? (
+            <SearchStatus className="mt-4" failed={searchFailed} />
           ) : (
             <SearchNoResultsForm
               className="mt-4"

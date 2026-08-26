@@ -187,6 +187,12 @@ export default function DexterChat({ onFallback }) {
 
         {activity ? (
           <p className="flex items-center gap-2 text-xs font-medium text-ink-soft">
+            <img
+              alt=""
+              aria-hidden="true"
+              className="size-6 shrink-0 rounded-full object-cover motion-safe:animate-[dexter-think_1.1s_ease-in-out_infinite]"
+              src="/chatbot-icon.webp"
+            />
             <span aria-hidden className="inline-flex gap-1">
               <span className="size-1.5 animate-bounce rounded-full bg-red [animation-delay:-0.3s]" />
               <span className="size-1.5 animate-bounce rounded-full bg-red [animation-delay:-0.15s]" />

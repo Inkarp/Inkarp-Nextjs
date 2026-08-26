@@ -482,3 +482,38 @@ body.menu-open [data-floating-widget] {
     size: A4;
   }
 }
+
+/* Dexter, animated from the existing artwork rather than a new asset.
+   The character is a 3D render, so the motion is applied to the whole figure:
+   a slow float while idle, a single greeting tilt on arrival, and a quicker
+   pulse while an answer is being worked out. Long pauses are deliberate — a
+   mascot that moves constantly in the corner of a page gets ignored. */
+@keyframes dexter-idle {
+  0%, 82%, 100% { transform: translateY(0) rotate(0deg); }
+  88%           { transform: translateY(-2px) rotate(-1.5deg); }
+  94%           { transform: translateY(0) rotate(1deg); }
+}
+
+@keyframes dexter-greet {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  25%  { transform: translateY(-7px) rotate(-8deg) scale(1.06); }
+  45%  { transform: translateY(0) rotate(6deg) scale(1.03); }
+  65%  { transform: translateY(-3px) rotate(-4deg) scale(1.02); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes dexter-think {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%      { transform: scale(0.94) rotate(-2deg); }
+}
+
+/* A ring that expands out of the launcher, drawing the eye without moving the
+   character itself. */
+@keyframes dexter-ring {
+  0%       { opacity: 0.45; transform: scale(1); }
+  70%,100% { opacity: 0;    transform: scale(1.7); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="animate-[dexter-"] { animation: none !important; }
+}

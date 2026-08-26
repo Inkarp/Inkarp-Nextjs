@@ -13,14 +13,13 @@ import { feature as topoFeature } from "topojson-client";
 import RecTag from "./RecTag";
 import { countryGeo } from "@/data/countryGeo";
 import { getPrincipalLogo } from "@/data/products/principalLogos";
-import { productPrincipals } from "@/data/products/principals";
 
 const GLOBE_SIZE = 320;
 const GLOBE_RADIUS = 150;
 const AUTO_SPIN_SPEED = 0.05;
 const LAND_TOPOLOGY_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json";
 
-function useCountryGroups() {
+function useCountryGroups(productPrincipals) {
   return useMemo(() => {
     const groups = new Map();
 
@@ -47,7 +46,7 @@ function useCountryGroups() {
     );
 
     return { countries, allPrincipals };
-  }, []);
+  }, [productPrincipals]);
 }
 
 function PrincipalCard({ principal }) {
@@ -88,8 +87,8 @@ function StaticPrincipalLogo({ name, logo }) {
   );
 }
 
-export default function PrincipalsGlobe() {
-  const { countries, allPrincipals } = useCountryGroups();
+export default function PrincipalsGlobe({ principals = [] }) {
+  const { countries, allPrincipals } = useCountryGroups(principals);
   const [selected, setSelected] = useState(null);
   const [globeStatus, setGlobeStatus] = useState("loading");
   const wrapRef = useRef(null);

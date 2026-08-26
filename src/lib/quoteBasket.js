@@ -147,4 +147,21 @@ export function clearBasket() {
   return EMPTY;
 }
 
+/**
+ * Folds a saved list into the current one without losing either side. Used when
+ * a visitor signs in on a device that already has products shortlisted.
+ */
+export function mergeIntoBasket(incoming) {
+  const current = getBasket();
+  const seen = new Set(current.map(itemKey));
+  const added = (Array.isArray(incoming) ? incoming : []).filter(
+    (item) => item?.slug && !seen.has(itemKey(item))
+  );
+  if (!added.length) return current;
+
+  const next = [...current, ...added].slice(-MAX_ITEMS);
+  writeStorage(next);
+  return next;
+}
+
 export const BASKET_LIMIT = MAX_ITEMS;

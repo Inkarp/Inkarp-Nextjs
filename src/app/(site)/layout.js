@@ -1,3 +1,4 @@
+import BasketSync from "@/components/account/BasketSync";
 import Footer from "@/components/common/Footer";
 import FloatingChatbot from "@/components/common/FloatingChatbot";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
@@ -11,6 +12,7 @@ export default function SiteLayout({ children }) {
       <Header />
       <div className="relative w-[90%] mx-auto">{children}</div>
       <Footer />
+      <BasketSync />
       <QuoteBasketFloat />
       <PromoPopup />
       <FloatingChatbot />

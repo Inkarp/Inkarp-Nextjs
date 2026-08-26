@@ -24,6 +24,7 @@ import {
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
+import AccountLink from "@/components/common/AccountLink";
 import { siteConfig } from "@/data/siteConfig";
 import { FaDownload } from "react-icons/fa";
 
@@ -363,6 +364,8 @@ export default function Header() {
                 <FiSearch />
               </button>
              
+              <AccountLink className="hidden whitespace-nowrap xl:inline-flex" />
+
               <Link
                 aria-label="Download product profile"
                 className="inline-flex h-12 w-12 items-center justify-center gap-2 border border-rose-200 bg-rose-50 text-sm font-bold text-rose-700 transition hover:bg-rose-100 xl:w-auto xl:px-5 2xl:px-7"

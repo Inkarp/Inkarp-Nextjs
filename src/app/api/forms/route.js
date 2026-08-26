@@ -1,4 +1,5 @@
 import { getDb } from "@/lib/mongodb";
+import { currentUserEmail } from "@/lib/auth/server";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 import { normalizeTracking, omitTrackingFields } from "@/lib/serverTracking";
 import {
@@ -154,6 +155,9 @@ export async function POST(request) {
     }
   }
 
+  // Ties a submission to an account when one is signed in, which is what makes
+  // the quote history on /account possible.
+  const accountEmail = await currentUserEmail();
   const tracking = normalizeTracking(fields, request);
   const submission = {
     formType,
@@ -161,6 +165,7 @@ export async function POST(request) {
     ...omitTrackingFields(fields),
     tracking,
     submittedAt: new Date(),
+    ...(accountEmail ? { accountEmail } : {}),
   };
 
   // sendFormNotification drops object-valued fields, so a basket would email as

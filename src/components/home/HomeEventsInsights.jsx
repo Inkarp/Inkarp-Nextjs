@@ -44,7 +44,12 @@ const statusLabels = {
 };
 
 const FEATURED_EVENT_COUNT = 2;
-const HOME_ANALYTICA_STALL_EVENT = upcomingStallEvent;
+// Home uses the dedicated stall photo (not the Event1.jpeg banner image shared
+// with the campaign stripe) for the analytica card.
+const HOME_ANALYTICA_STALL_EVENT = {
+  ...upcomingStallEvent,
+  image: "/assets/events/analytica-2026.webp",
+};
 
 // Soonest upcoming/ongoing first, then the most recently completed, topped up to
 // FEATURED_EVENT_COUNT — so the row still fills when nothing is upcoming.

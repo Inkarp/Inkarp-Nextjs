@@ -24,7 +24,7 @@ import {
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
-import AccountLink from "@/components/common/AccountLink";
+// import AccountLink from "@/components/common/AccountLink"; // re-enable with the header usage below once account is ready to go live
 import { siteConfig } from "@/data/siteConfig";
 import { FaDownload } from "react-icons/fa";
 
@@ -364,7 +364,8 @@ export default function Header() {
                 <FiSearch />
               </button>
              
-              <AccountLink className="hidden whitespace-nowrap xl:inline-flex" />
+              {/* Login temporarily hidden from nav until the account rollout plan is ready — /signin and /account still work directly.
+              <AccountLink className="hidden whitespace-nowrap xl:inline-flex" /> */}
 
               <Link
                 aria-label="Download product profile"

@@ -117,7 +117,7 @@ export async function POST(request) {
 data: ${JSON.stringify(data)}
 
 `));
-        const { activity, text } = answerLocally(question, history);
+        const { activity, text, offerContact } = answerLocally(question, history);
 
         if (activity) {
           send("tools", { names: [], label: activity });
@@ -130,7 +130,7 @@ data: ${JSON.stringify(data)}
           await sleep(18);
         }
 
-        send("done", { stopReason: "end_turn", source: "catalogue" });
+        send("done", { stopReason: "end_turn", source: "catalogue", offerContact: offerContact === true });
         controller.close();
         logConversation({
           ip,
@@ -160,6 +160,7 @@ data: ${JSON.stringify(data)}
 
         let answer = "";
         let toolsUsed = [];
+        let offerContact = false;
         try {
           const result = await runGroqTurn({
             history,
@@ -174,28 +175,25 @@ data: ${JSON.stringify(data)}
           if (!answer.trim()) {
             const local = answerLocally(question, history);
             answer = local.text;
+            offerContact = local.offerContact === true;
             for (const token of local.text.match(/\S+\s*/g) ?? []) {
               send("delta", { text: token });
               await sleep(12);
             }
           }
-          send("done", { stopReason: "end_turn", source: "groq" });
-        } catch (error) {
-          // A key problem, an exhausted quota or a network blip shouldn't leave
-          // the visitor with nothing — the catalogue engine always answers.
-          if (error?.status === 429) {
-            send("error", {
-              message: "I'm getting a lot of questions right now. Try again in a moment.",
-            });
-          } else {
-            const local = answerLocally(question, history);
-            answer = local.text;
-            for (const token of local.text.match(/\S+\s*/g) ?? []) {
-              send("delta", { text: token });
-              await sleep(12);
-            }
-            send("done", { stopReason: "end_turn", source: "catalogue-fallback" });
+          send("done", { stopReason: "end_turn", source: "groq", offerContact });
+        } catch {
+          // A key problem, an exhausted quota (including a 429) or a network
+          // blip shouldn't leave the visitor with nothing — the catalogue
+          // engine always answers.
+          const local = answerLocally(question, history);
+          answer = local.text;
+          offerContact = local.offerContact === true;
+          for (const token of local.text.match(/\S+\s*/g) ?? []) {
+            send("delta", { text: token });
+            await sleep(12);
           }
+          send("done", { stopReason: "end_turn", source: "catalogue-fallback", offerContact });
         } finally {
           controller.close();
           logConversation({
@@ -290,13 +288,28 @@ data: ${JSON.stringify(data)}
           }
         }
       } catch (error) {
-        const status = error?.status;
-        send("error", {
-          message:
-            status === 429
-              ? "The assistant is busy right now. Try again in a moment."
-              : "Something went wrong on my side. You can reach the team on the contact page.",
-        });
+        // Nothing streamed yet (the common case for a 429 or an auth/network
+        // blip on the very first call) — the catalogue engine always answers,
+        // so use it instead of leaving the visitor with a dead end. If some
+        // of the reply already streamed, stop there instead of risking a
+        // second, unrelated answer glued onto the first.
+        if (!answer.trim()) {
+          const local = answerLocally(history[history.length - 1].content, history);
+          answer = local.text;
+          for (const token of local.text.match(/\S+\s*/g) ?? []) {
+            send("delta", { text: token });
+            await sleep(12);
+          }
+          send("done", { stopReason: "end_turn", source: "catalogue-fallback", offerContact: local.offerContact === true });
+        } else {
+          const status = error?.status;
+          send("error", {
+            message:
+              status === 429
+                ? "The assistant is busy right now. Try again in a moment."
+                : "Something went wrong on my side.",
+          });
+        }
       } finally {
         controller.close();
         logConversation({

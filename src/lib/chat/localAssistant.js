@@ -60,7 +60,7 @@ const WHAT_YOU_DO = /(what do you (sell|do|have|supply)|about inkarp|who are you
 
 /**
  * Answer one message from the catalogue.
- * @returns {{text: string, activity?: string}}
+ * @returns {{text: string, activity?: string, offerContact?: boolean}}
  */
 export function answerLocally(message, history = []) {
   const text = String(message ?? "").trim();
@@ -103,19 +103,21 @@ export function answerLocally(message, history = []) {
 
   if (PRICE.test(text) && !productWords.length) {
     return {
+      offerContact: true,
       text:
         "Inkarp doesn't publish prices — every quote depends on the configuration, accessories " +
         "and application.\n\nTell me which instrument you're after and I'll point you at it, or " +
-        "raise it with the team on the [contact page](/contact).",
+        "talk directly to the team below.",
     };
   }
 
   if (CONTACT.test(text) && !productWords.length) {
     return {
+      offerContact: true,
       text:
-        "The quickest route is the [contact page](/contact) — the team covers demonstration, " +
-        "configuration and service enquiries across India.\n\nIf you tell me the application " +
-        "first, I can point you at the right range so the conversation starts further along.",
+        "You can reach the team directly below — they cover demonstration, configuration and " +
+        "service enquiries across India.\n\nIf you tell me the application first, I can point " +
+        "you at the right range so the conversation starts further along.",
     };
   }
 
@@ -183,27 +185,30 @@ export function answerLocally(message, history = []) {
 
   if (PRICE.test(text)) {
     return {
+      offerContact: true,
       text:
         "Inkarp doesn't publish prices — every quote depends on the configuration, accessories " +
         "and application.\n\nTell me which instrument you're after and I'll point you at it, or " +
-        "raise it directly with the team on the [contact page](/contact).",
+        "talk directly to the team below.",
     };
   }
 
   if (CONTACT.test(text)) {
     return {
+      offerContact: true,
       text:
-        "The quickest route is the [contact page](/contact) — the team covers demonstration, " +
-        "configuration and service enquiries across India.\n\nIf you tell me the application " +
-        "first, I can point you at the right range so the conversation starts further along.",
+        "You can reach the team directly below — they cover demonstration, configuration and " +
+        "service enquiries across India.\n\nIf you tell me the application first, I can point " +
+        "you at the right range so the conversation starts further along.",
     };
   }
 
   return {
+    offerContact: true,
     text:
       `I couldn't find a match for that in the catalogue.\n\nTry naming the technique or the ` +
       `measurement — *evaporation*, *moisture content*, *viscosity*, *particle size* — or browse ` +
-      `[all products](/products). If it's specialised, the [team](/contact) will know whether ` +
-      `Inkarp can source it.`,
+      `[all products](/products). If it's specialised, the team below will know whether Inkarp ` +
+      `can source it.`,
   };
 }

@@ -37,7 +37,7 @@ const AUTO_OPEN_DELAY_MS = 9000;
 const AUTO_OPEN_STORAGE_KEY = "inkarp-chatbot-seen";
 const GREETING_STORAGE_KEY = "inkarp-chatbot-greeting-dismissed";
 const PANEL_TRANSITION_MS = 250;
-const LAUNCHER_GREETING = "I am Dexter. How can I help you?";
+const LAUNCHER_GREETING = "Hi, I'm Dexter — Inkarp's AI assistant. Ask me anything, anytime!";
 
 const ENQUIRY_ICONS = {
   Product: FiBox,
@@ -508,6 +508,14 @@ export default function FloatingChatbot() {
             <span className="relative inline-flex size-3 rounded-full border-2 border-white bg-red" />
           </span>
         ) : null}
+        {!isOpen ? (
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-red px-1.5 py-[2px] text-[8px] font-black uppercase tracking-wider text-white shadow-md shadow-red/40 ring-2 ring-white"
+          >
+            AI
+          </span>
+        ) : null}
       </button>
 
       {hasOpenedOnce ? (
@@ -528,9 +536,9 @@ export default function FloatingChatbot() {
 
       {hasOpenedOnce ? (
         <div
-          aria-label={`${CHATBOT_CONFIG.brandName} Assistant`}
+          aria-label={`Dexter — ${CHATBOT_CONFIG.brandName}'s AI Assistant`}
           aria-hidden={!isOpen}
-          className={`fixed w-[calc(100vw-1.5rem)] max-w-[430px] origin-bottom-right overflow-hidden rounded-2xl border border-line-light bg-white text-ink shadow-2xl shadow-zinc-900/18 transition-all ease-out dark:border-zinc-700 dark:bg-zinc-900 motion-reduce:transition-none ${
+          className={`fixed w-[calc(100vw-1.5rem)] max-w-[480px] origin-bottom-right overflow-hidden rounded-2xl border border-white/60 bg-white/75 text-ink shadow-2xl shadow-zinc-900/25 backdrop-blur-2xl backdrop-saturate-150 transition-all ease-out dark:border-white/10 dark:bg-zinc-900/70 motion-reduce:transition-none ${
             isOpen ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none translate-y-4 scale-95 opacity-0"
           }`}
           inert={!isOpen}
@@ -539,17 +547,25 @@ export default function FloatingChatbot() {
           style={{ bottom: "6rem", isolation: "isolate", right: "1rem", transitionDuration: `${PANEL_TRANSITION_MS}ms`, zIndex: TOP_LAYER }}
           tabIndex={-1}
         >
-          <div className="flex items-center justify-between gap-3 border-b border-red/15 bg-white px-4 py-3 dark:bg-zinc-900">
+          {/* Glass sheen — a soft top-down highlight, the way a glossy iOS surface catches light. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/60 via-white/10 to-transparent dark:from-white/10 dark:via-white/0"
+          />
+
+          <div className="relative flex items-center justify-between gap-3 border-b border-white/50 bg-white/40 px-4 py-3 backdrop-blur-md dark:border-white/10 dark:bg-zinc-900/40">
             <div className="flex items-center gap-2.5">
               <Image alt="" className="size-9 shrink-0 rounded-full" height={36} src="/chatbot-icon.webp" width={36} />
               <div>
-                <p className="text-sm font-bold text-ink">{CHATBOT_CONFIG.brandName} Assistant</p>
-                <p className="flex items-center gap-1.5 text-xs text-ink-soft">
-                  <span aria-hidden="true" className="relative flex size-1.5">
-                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-green-500 opacity-75" />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-green-500" />
+                <p className="flex items-center gap-1.5 text-sm font-bold text-ink">
+                  Dexter
+                  <span className="inline-flex items-center rounded-full bg-red/10 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-red">
+                    AI
                   </span>
-                  Typically replies in a few minutes
+                </p>
+                <p className="flex items-center gap-1 text-xs text-ink-soft">
+                  <FiZap aria-hidden="true" className="size-3 text-red" />
+                  {CHATBOT_CONFIG.brandName}&apos;s AI assistant · Replies instantly
                 </p>
               </div>
             </div>
@@ -558,7 +574,7 @@ export default function FloatingChatbot() {
             </button>
           </div>
 
-          <div className="overflow-y-auto p-4" data-chatbot-scroll style={{ maxHeight: "min(70dvh, 640px)" }}>
+          <div className="relative overflow-y-auto p-4" data-chatbot-scroll style={{ maxHeight: "min(74dvh, 720px)" }}>
             {showBackButton ? (
               <button className="mb-3 inline-flex items-center gap-1 text-xs font-semibold text-ink-soft hover:text-red" onClick={() => setStep("type")} type="button">
                 <FiChevronLeft /> Back

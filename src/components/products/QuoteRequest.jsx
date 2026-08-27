@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
-import { FiFileText, FiTrash2 } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi"; // FiFileText re-enable with the View Quote button below
 import QuoteDocument from "./QuoteDocument";
 import useQuoteBasket from "./useQuoteBasket";
 import { clearBasket, itemKey, pushBasketEvent, removeFromBasket } from "@/lib/quoteBasket";
@@ -139,6 +139,7 @@ export default function QuoteRequest() {
           </p>
         ) : null}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          {/* View Quote (PDF) button temporarily hidden — re-enable once ready.
           <button
             className="inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
             onClick={() => setShowDocument(true)}
@@ -146,6 +147,7 @@ export default function QuoteRequest() {
           >
             <FiFileText aria-hidden /> View Quote
           </button>
+          */}
           <Link
             className="inline-flex items-center justify-center border border-line-light bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:border-red hover:text-red"
             href="/products"

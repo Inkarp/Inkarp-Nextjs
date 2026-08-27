@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiArrowUp, FiCornerUpLeft, FiPhone } from "react-icons/fi";
 import { siteConfig } from "@/data/siteConfig";
+import { pushEvent } from "@/lib/analytics";
 
 const CONTACT_PHONE = siteConfig.contact.phone;
 const CONTACT_PHONE_DIGITS = CONTACT_PHONE.replace(/\D/g, "");
@@ -65,6 +66,7 @@ function ContactActions({ label = "Talk to a person:" }) {
       <a
         className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-[#1fb85a]"
         href={`https://wa.me/${CONTACT_PHONE_DIGITS}`}
+        onClick={() => pushEvent("whatsapp_clicked", { source: "chatbot" })}
         rel="noreferrer"
         target="_blank"
       >
@@ -73,6 +75,7 @@ function ContactActions({ label = "Talk to a person:" }) {
       <a
         className="inline-flex items-center gap-1.5 rounded-full border border-rose-200 bg-rose-50 px-2.5 py-1 text-[11px] font-bold text-rose-700 transition hover:bg-rose-100"
         href={`tel:${CONTACT_PHONE_TEL}`}
+        onClick={() => pushEvent("phone_clicked", { source: "chatbot" })}
       >
         <FiPhone aria-hidden="true" /> Call
       </a>

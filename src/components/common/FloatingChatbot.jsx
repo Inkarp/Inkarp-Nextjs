@@ -25,6 +25,7 @@ import {
 } from "@/data/chatbotConfig";
 import Image from "next/image";
 import { collectTracking } from "@/lib/browserTracking";
+import { pushEvent } from "@/lib/analytics";
 
 const INPUT_CLASS =
   "w-full rounded-lg border border-line-light bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/10 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500";
@@ -271,6 +272,7 @@ export default function FloatingChatbot() {
   }, [step]);
 
   function openChatbot() {
+    pushEvent("chatbot_clicked");
     setHasOpenedOnce(true);
     setIsOpen(true);
     dismissGreetingTooltip();
@@ -280,6 +282,7 @@ export default function FloatingChatbot() {
   }
 
   function closeChatbot() {
+    pushEvent("chatbot_closed");
     setIsOpen(false);
     dismissGreetingTooltip();
     rememberChatbotSeen();

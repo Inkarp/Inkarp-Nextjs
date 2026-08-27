@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getActiveCampaigns, getEvergreenCampaign } from "@/data/campaigns";
 import { webinars } from "@/data/webinars";
+import { pushEvent } from "@/lib/analytics";
 
 const AUTO_ROTATE_MS = 6000;
 
@@ -444,20 +445,21 @@ function EventCountdownSlide({ campaign }) {
           </div>
         </div>
 
-        {campaign.cta ? <CampaignCta cta={campaign.cta} /> : null}
+        {campaign.cta ? <CampaignCta campaign={campaign} cta={campaign.cta} /> : null}
       </div>
     </div>
   );
 }
 
 /** Internal links route; an organiser's registration page opens in a new tab. */
-function CampaignCta({ cta }) {
+function CampaignCta({ campaign, cta }) {
   const className =
     "inline-flex shrink-0 items-center gap-2 border border-rose-200 bg-rose-50 px-4 py-2 text-xs font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100 sm:px-6 sm:py-2.5 sm:text-sm";
+  const trackClick = () => pushEvent("campaign_cta_clicked", { campaign_id: campaign.id, campaign_title: campaign.title });
 
   if (cta.external) {
     return (
-      <a className={className} href={cta.href} rel="noopener noreferrer" target="_blank">
+      <a className={className} href={cta.href} onClick={trackClick} rel="noopener noreferrer" target="_blank">
         {cta.label}
         <span aria-hidden="true">→</span>
       </a>
@@ -465,7 +467,7 @@ function CampaignCta({ cta }) {
   }
 
   return (
-    <Link className={className} href={cta.href}>
+    <Link className={className} href={cta.href} onClick={trackClick}>
       {cta.label}
       <span aria-hidden="true">→</span>
     </Link>

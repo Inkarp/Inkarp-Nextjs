@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import ProductImageZoom from "./ProductImageZoom";
+import RequestQuoteButton from "./RequestQuoteButton";
 
-export default function ProductImageGallery({ ctaHref, images, productName }) {
+export default function ProductImageGallery({ ctaHref, images, productName, productSlug }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selected = images[selectedIndex] ?? images[0];
 
@@ -24,12 +24,7 @@ export default function ProductImageGallery({ ctaHref, images, productName }) {
       </div>
       {ctaHref ? (
         <div className="mt-4">
-          <Link
-            href={ctaHref}
-            className="inline-flex h-12 w-full items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
-          >
-            Request Quote
-          </Link>
+          <RequestQuoteButton href={ctaHref} product={{ name: productName, slug: productSlug }} />
         </div>
       ) : null}
       {images.length > 1 && (

@@ -15,6 +15,7 @@ import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
 import ProductImageZoom from "@/components/products/ProductImageZoom";
+import RequestQuoteButton from "@/components/products/RequestQuoteButton";
 
 const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor & Service Provider in India";
 
@@ -180,7 +181,7 @@ export default async function ProductPage({ params }) {
 
           <div className="relative self-center border border-line-light bg-parchment-alt p-3.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
             {product.images?.length > 0 ? (
-              <ProductImageGallery ctaHref={ctaHref} images={product.images} productName={product.name} />
+              <ProductImageGallery ctaHref={ctaHref} images={product.images} productName={product.name} productSlug={product.slug} />
             ) : (
               <>
                 <div className="relative flex min-h-[240px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[320px] lg:min-h-[260px]">
@@ -258,12 +259,7 @@ export default async function ProductPage({ params }) {
 function ProductImageActions({ href, product, secondary }) {
   return (
     <div className="mt-4 space-y-2.5">
-      <Link
-        href={href}
-        className="inline-flex h-12 w-full items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
-      >
-        Request Quote
-      </Link>
+      <RequestQuoteButton href={href} product={product} />
       <AddToQuoteButton product={product} variant="block" />
       {secondary?.label && (
         <Link

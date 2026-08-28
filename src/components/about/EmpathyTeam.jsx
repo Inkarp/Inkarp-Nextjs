@@ -21,6 +21,33 @@ const people = [
   },
 ];
 
+function QuoteContent({ person }) {
+  return (
+    <>
+      <p className="text-sm leading-7 text-ink-soft sm:text-base">
+        {person.quote}
+      </p>
+      <div className="mt-4">
+        <h3 className="text-2xl font-semibold text-red">
+          {person.author}
+        </h3>
+        <p className="text-sm font-semibold text-ink-soft">
+          {person.role}
+        </p>
+      </div>
+      <a
+        aria-label={`${person.author} on LinkedIn`}
+        className="mt-4 inline-flex size-10 items-center justify-center border border-line-light bg-parchment text-red transition hover:border-red hover:text-red"
+        href={person.link}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <FaLinkedin aria-hidden="true" className="size-5" />
+      </a>
+    </>
+  );
+}
+
 export default function EmpathyTeam() {
   return (
     <section className="mx-auto w-full max-w-[1180px] space-y-8 px-4 py-12 sm:px-6 lg:px-8">
@@ -35,50 +62,35 @@ export default function EmpathyTeam() {
 
         return (
           <article className="relative overflow-hidden border border-line-light bg-white" data-scroll-reveal="true" key={person.author}>
-            <div className="relative min-h-[560px] w-full sm:min-h-[470px] lg:min-h-[430px]">
+            <div className="relative h-72 w-full sm:h-auto sm:min-h-[470px] lg:min-h-[430px]">
               <Image
                 alt={`${person.author}, ${person.role}`}
                 className={`object-cover ${isTextRight ? "object-left" : "object-right"}`}
                 fill
                 priority
-                sizes="(min-width: 1024px) 1152px, 90vw"
+                sizes="(min-width: 1024px) 1152px, 100vw"
                 src={person.image}
               />
               <div
-                className={`absolute inset-0 ${
+                className={`absolute inset-0 hidden sm:block ${
                   isTextRight
                     ? "bg-gradient-to-l from-black/70 via-black/30 to-transparent"
                     : "bg-gradient-to-r from-black/70 via-black/30 to-transparent"
                 }`}
               />
               <div
-                className={`absolute inset-0 flex items-end p-4 sm:items-center sm:p-6 lg:p-8 ${
+                className={`absolute inset-0 hidden items-center p-6 sm:flex lg:p-8 ${
                   isTextRight ? "justify-end" : "justify-start"
                 }`}
               >
                 <div className="w-full border border-line-light bg-parchment/92 p-5 text-ink backdrop-blur sm:max-w-[62%] lg:max-w-[45%]">
-                  <p className="text-sm leading-7 text-ink-soft sm:text-base">
-                    {person.quote}
-                  </p>
-                  <div className="mt-4">
-                    <h3 className="text-2xl font-semibold text-red">
-                      {person.author}
-                    </h3>
-                    <p className="text-sm font-semibold text-ink-soft">
-                      {person.role}
-                    </p>
-                  </div>
-                  <a
-                    aria-label={`${person.author} on LinkedIn`}
-                    className="mt-4 inline-flex size-10 items-center justify-center border border-line-light bg-parchment text-red transition hover:border-red hover:text-red"
-                    href={person.link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <FaLinkedin aria-hidden="true" className="size-5" />
-                  </a>
+                  <QuoteContent person={person} />
                 </div>
               </div>
+            </div>
+
+            <div className="border-t border-line-light bg-white p-5 text-ink sm:hidden">
+              <QuoteContent person={person} />
             </div>
           </article>
         );

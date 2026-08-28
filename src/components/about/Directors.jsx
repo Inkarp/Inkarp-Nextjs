@@ -37,10 +37,10 @@ function DirectorCard({ director, index }) {
   return (
     <article className="relative overflow-hidden border border-line-light bg-white" data-scroll-reveal="true">
       <div className="grid sm:grid-cols-[160px_1fr] lg:grid-cols-[190px_1fr]">
-        <div className="relative h-44 overflow-hidden bg-parchment-alt sm:h-full">
+        <div className="relative h-64 overflow-hidden bg-parchment-alt sm:h-full">
           <Image
             alt={director.name}
-            className="object-cover"
+            className="object-cover object-top"
             fill
             sizes="(min-width: 1024px) 190px, (min-width: 640px) 160px, 100vw"
             src={director.img}

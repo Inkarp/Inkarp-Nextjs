@@ -17,7 +17,7 @@ export function BreadcrumbJsonLd({ path, trail }) {
 // or `trail` — an array of { label, href } — for nested routes like
 // /workflows/[industry]/[topic] that aren't in that table.
 const DEFAULT_CLASSNAME =
-  "mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:px-6 lg:px-8 dark:text-zinc-400";
+  "mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:px-6 lg:px-8";
 
 // `className` lets a caller embed the breadcrumb trail inside its own row
 // (e.g. centered between a logo and a button) instead of the default
@@ -39,7 +39,7 @@ export default function PageBreadcrumbs({ path, trail, className = DEFAULT_CLASS
       </Link>
       {steps.map((step, index) => (
         <Fragment key={step.href}>
-          <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-700">
+          <span aria-hidden="true" className="text-zinc-300">
             /
           </span>
           {index === steps.length - 1 ? (

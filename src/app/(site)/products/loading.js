@@ -4,7 +4,7 @@ function SkeletonBlock({ className = "" }) {
 
 export default function ProductsLoading() {
   return (
-    <main className="min-h-screen bg-white text-ink" data-product-page data-scroll-skip>
+    <main className="min-h-screen bg-white text-ink" data-scroll-skip>
       <section className="bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16">
         <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>

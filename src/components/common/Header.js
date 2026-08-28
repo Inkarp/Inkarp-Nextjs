@@ -53,7 +53,7 @@ function NavLabel({ item, mobile = false }) {
 
   return (
     <span
-      className={`relative block rounded-md dark:bg-white dark:p-1 ${mobile ? "h-8 w-36" : "h-6 w-24 xl:h-7 xl:w-28"}`}
+      className={`relative block rounded-md ${mobile ? "h-8 w-36" : "h-6 w-24 xl:h-7 xl:w-28"}`}
     >
       <Image
         alt={item.label}
@@ -280,12 +280,12 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="bg-parchment dark:bg-zinc-950">
+      <div className="bg-parchment">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="relative flex min-h-20 items-center gap-4">
             <Link
               aria-label={`${company.name} home`}
-              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg p-1.5 sm:w-56 lg:w-40 xl:w-48 2xl:w-56 dark:bg-white"
+              className="relative flex h-16 w-48 shrink-0 items-center rounded-lg p-1.5 sm:w-56 lg:w-40 xl:w-48 2xl:w-56"
               href="/"
               onClick={closeMenu}
             >
@@ -311,7 +311,7 @@ export default function Header() {
                       <Link
                         className={`flex h-11 items-center gap-1 whitespace-nowrap px-1 text-xs transition xl:px-1.5 xl:text-sm 2xl:px-2.5 2xl:text-base ${active
                             ? "text-red"
-                            : "text-ink-soft hover:text-red dark:text-zinc-300"
+                            : "text-ink-soft hover:text-red"
                           }`}
                         href={getNavHref(item)}
                       >
@@ -326,10 +326,10 @@ export default function Header() {
 
                       {item.children ? (
                         <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
-                          <div className="rounded-lg border border-line-light bg-parchment p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)] dark:border-zinc-800 dark:bg-zinc-900">
+                          <div className="rounded-lg border border-line-light bg-parchment p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
                             {item.children.map((child) => (
                               <Link
-                                className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red dark:text-zinc-300 dark:hover:bg-zinc-800"
+                                className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red"
                                 href={child.href}
                                 key={child.label}
                               >
@@ -357,7 +357,7 @@ export default function Header() {
               <div className="mx-3 hidden w-px bg-zinc-200 xl:block 2xl:mx-6" />
               <button
                 aria-label="Search products"
-                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-rose-700 dark:text-zinc-200"
+                className="inline-flex h-12 w-12 items-center justify-center text-2xl text-[#071f3d] transition hover:text-rose-700"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -381,7 +381,7 @@ export default function Header() {
             <div className="ml-auto flex items-center gap-2 lg:hidden">
               <a
                 aria-label="Download product profile"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700"
                 download
                 href={productProfileUrl}
               >
@@ -390,7 +390,7 @@ export default function Header() {
 
               <button
                 aria-label="Search products"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200"
+                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700"
                 onClick={() => setIsSearchOpen(true)}
                 type="button"
               >
@@ -414,7 +414,7 @@ export default function Header() {
       {isMenuOpen ? (
         <nav
           aria-label="Mobile navigation"
-          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] lg:hidden dark:border-zinc-800 dark:bg-zinc-950"
+          className="mx-auto max-w-[1480px] border-t border-line-light bg-parchment p-3 shadow-[0_18px_55px_rgba(15,23,42,0.10)] lg:hidden"
         >
           <ul className="space-y-1">
             {mainNavigation.map((item) => {
@@ -427,7 +427,7 @@ export default function Header() {
                     <Link
                       className={`flex min-h-12 flex-1 items-center rounded-lg px-3 text-base font-medium whitespace-nowrap transition ${active
                           ? "border border-rose-200 bg-rose-50 text-rose-700"
-                          : "text-ink hover:bg-parchment-alt hover:text-red dark:text-zinc-200 dark:hover:bg-zinc-900"
+                          : "text-ink hover:bg-parchment-alt hover:text-red"
                         }`}
                       href={getNavHref(item)}
                       onClick={item.children ? undefined : closeMenu}
@@ -439,7 +439,7 @@ export default function Header() {
                       <button
                         aria-expanded={isOpen}
                         aria-label={`Toggle ${item.label} submenu`}
-                        className="inline-flex size-12 items-center justify-center rounded-lg border border-line-light text-ink-soft dark:border-zinc-800 dark:text-zinc-200"
+                        className="inline-flex size-12 items-center justify-center rounded-lg border border-line-light text-ink-soft"
                         onClick={() =>
                           setOpenMobileItem(isOpen ? null : item.label)
                         }
@@ -454,10 +454,10 @@ export default function Header() {
                   </div>
 
                   {item.children && isOpen ? (
-                    <div className="mt-1 space-y-1 border-l border-line-light pl-4 dark:border-zinc-800">
+                    <div className="mt-1 space-y-1 border-l border-line-light pl-4">
                       {item.children.map((child) => (
                         <Link
-                          className="flex items-center justify-between gap-2 rounded-lg px-3 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red dark:text-zinc-300 dark:hover:bg-zinc-900"
+                          className="flex items-center justify-between gap-2 rounded-lg px-3 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red"
                           href={child.href}
                           key={child.label}
                           onClick={closeMenu}

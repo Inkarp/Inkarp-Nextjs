@@ -28,9 +28,9 @@ import { collectTracking } from "@/lib/browserTracking";
 import { pushEvent } from "@/lib/analytics";
 
 const INPUT_CLASS =
-  "w-full rounded-lg border border-line-light bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/10 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500";
+  "w-full rounded-lg border border-line-light bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/10";
 const OPTION_BUTTON_CLASS =
-  "group flex w-full items-center gap-3 rounded-xl border border-line-light bg-white px-4 py-3 text-left text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red/45 hover:bg-red/5 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-red/10";
+  "group flex w-full items-center gap-3 rounded-xl border border-line-light bg-white px-4 py-3 text-left text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red/45 hover:bg-red/5";
 const SUBMIT_BUTTON_CLASS =
   "inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-4 text-sm font-bold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60";
 const TOP_LAYER = 2147483647;
@@ -456,7 +456,7 @@ export default function FloatingChatbot() {
       {showGreetingTooltip && !isOpen ? (
         <div
           data-floating-widget
-          className="fixed max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+          className="fixed max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15"
           role="status"
           style={{ bottom: "2.25rem", right: "5.25rem", zIndex: TOP_LAYER }}
         >
@@ -471,7 +471,7 @@ export default function FloatingChatbot() {
           </button>
           <span
             aria-hidden="true"
-            className="absolute -right-1.5 bottom-4 size-3 rotate-45 border-r border-t border-line-light bg-white dark:border-zinc-700 dark:bg-zinc-900"
+            className="absolute -right-1.5 bottom-4 size-3 rotate-45 border-r border-t border-line-light bg-white"
           />
         </div>
       ) : null}
@@ -541,7 +541,7 @@ export default function FloatingChatbot() {
         <div
           aria-label={`Dexter — ${CHATBOT_CONFIG.brandName}'s AI Assistant`}
           aria-hidden={!isOpen}
-          className={`fixed w-[calc(100vw-1.5rem)] max-w-[480px] origin-bottom-right overflow-hidden rounded-2xl border border-white/60 bg-white/75 text-ink shadow-2xl shadow-zinc-900/25 backdrop-blur-2xl backdrop-saturate-150 transition-all ease-out dark:border-white/10 dark:bg-zinc-900/70 motion-reduce:transition-none ${
+          className={`fixed w-[calc(100vw-1.5rem)] max-w-[480px] origin-bottom-right overflow-hidden rounded-2xl border border-white/60 bg-white/75 text-ink shadow-2xl shadow-zinc-900/25 backdrop-blur-2xl backdrop-saturate-150 transition-all ease-out motion-reduce:transition-none ${
             isOpen ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none translate-y-4 scale-95 opacity-0"
           }`}
           inert={!isOpen}
@@ -553,10 +553,10 @@ export default function FloatingChatbot() {
           {/* Glass sheen — a soft top-down highlight, the way a glossy iOS surface catches light. */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/60 via-white/10 to-transparent dark:from-white/10 dark:via-white/0"
+            className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/60 via-white/10 to-transparent"
           />
 
-          <div className="relative flex items-center justify-between gap-3 border-b border-white/50 bg-white/40 px-4 py-3 backdrop-blur-md dark:border-white/10 dark:bg-zinc-900/40">
+          <div className="relative flex items-center justify-between gap-3 border-b border-white/50 bg-white/40 px-4 py-3 backdrop-blur-md">
             <div className="flex items-center gap-2.5">
               <Image alt="" className="size-9 shrink-0 rounded-full" height={36} src="/chatbot-icon.webp" width={36} />
               <div>
@@ -572,7 +572,7 @@ export default function FloatingChatbot() {
                 </p>
               </div>
             </div>
-            <button aria-label="Close chatbot" className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-light bg-parchment-alt text-ink-soft transition hover:border-red/30 hover:text-red dark:border-zinc-700 dark:bg-zinc-800" onClick={closeChatbot} type="button">
+            <button aria-label="Close chatbot" className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-light bg-parchment-alt text-ink-soft transition hover:border-red/30 hover:text-red" onClick={closeChatbot} type="button">
               <FiX />
             </button>
           </div>
@@ -589,7 +589,7 @@ export default function FloatingChatbot() {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wide text-red">Quick workflow check</p>
                   <p className="mt-1 text-sm font-semibold text-ink">{currentWorkflowQuestion.question}</p>
-                  <div className="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-red/10 dark:bg-red/15">
+                  <div className="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-red/10">
                     <div
                       className="h-full rounded-full bg-red transition-all duration-300"
                       style={{ width: `${((workflowIndex + 1) / CHATBOT_WORKFLOW_QUESTIONS.length) * 100}%` }}
@@ -649,7 +649,7 @@ export default function FloatingChatbot() {
 
             {step === "workflow-result" && workflowResult ? (
               <div className="animate-[hvc-fade_300ms_ease] space-y-4 text-center motion-reduce:animate-none">
-                <span className="mx-auto flex size-16 items-center justify-center rounded-full bg-green-50 dark:bg-green-500/10">
+                <span className="mx-auto flex size-16 items-center justify-center rounded-full bg-green-50">
                   <FiCheckCircle className="text-4xl text-green-600" />
                 </span>
                 <div>
@@ -676,7 +676,7 @@ export default function FloatingChatbot() {
               <div className="animate-[hvc-fade_300ms_ease] space-y-4 motion-reduce:animate-none">
                 <div className="flex items-start gap-2.5">
                   <Image alt="" className="mt-0.5 size-8 shrink-0 rounded-full" height={32} src="/chatbot-icon.webp" width={32} />
-                  <div className="rounded-2xl rounded-tl-sm bg-parchment-alt px-3.5 py-2.5 text-sm leading-5 text-ink dark:bg-zinc-800">
+                  <div className="rounded-2xl rounded-tl-sm bg-parchment-alt px-3.5 py-2.5 text-sm leading-5 text-ink">
                     Hi! I can help you find the right instrument, request a quote, or get support. What would you like to do?
                   </div>
                 </div>
@@ -705,7 +705,7 @@ export default function FloatingChatbot() {
                   })}
                 </div>
                 <button
-                  className="group flex w-full items-center gap-3 rounded-xl border border-red/20 bg-red/5 px-4 py-3 text-left transition hover:-translate-y-0.5 hover:border-red/40 hover:bg-red/10 dark:border-red/25 dark:bg-red/10"
+                  className="group flex w-full items-center gap-3 rounded-xl border border-red/20 bg-red/5 px-4 py-3 text-left transition hover:-translate-y-0.5 hover:border-red/40 hover:bg-red/10"
                   onClick={startWorkflowQuiz}
                   type="button"
                 >
@@ -753,7 +753,7 @@ export default function FloatingChatbot() {
 
             {step === "success" ? (
               <div className="animate-[hvc-fade_300ms_ease] space-y-4 text-center motion-reduce:animate-none">
-                <span className="mx-auto flex size-16 items-center justify-center rounded-full bg-green-50 dark:bg-green-500/10">
+                <span className="mx-auto flex size-16 items-center justify-center rounded-full bg-green-50">
                   <FiCheckCircle className="text-4xl text-green-600" />
                 </span>
                 <div>
@@ -761,7 +761,7 @@ export default function FloatingChatbot() {
                   <p className="mt-1 text-sm leading-6 text-ink-soft">Your enquiry has been submitted. Our team will contact you shortly.</p>
                 </div>
                 {success?.id ? <p className="text-xs text-ink-soft">Reference ID: {success.id}</p> : null}
-                <button className="inline-flex h-10 items-center justify-center rounded-xl border border-line-light px-4 text-sm font-bold text-ink transition hover:border-red/35 hover:text-red dark:border-zinc-700" onClick={resetFlow} type="button">
+                <button className="inline-flex h-10 items-center justify-center rounded-xl border border-line-light px-4 text-sm font-bold text-ink transition hover:border-red/35 hover:text-red" onClick={resetFlow} type="button">
                   Start another enquiry
                 </button>
               </div>

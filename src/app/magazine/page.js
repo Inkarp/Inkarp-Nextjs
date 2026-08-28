@@ -21,7 +21,7 @@ export default function CatalystCue() {
           </Link>
 
           <PageBreadcrumbs
-            className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:justify-self-center dark:text-zinc-400"
+            className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-ink-soft sm:justify-self-center"
             path="/magazine"
           />
 

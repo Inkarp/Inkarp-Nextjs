@@ -214,7 +214,7 @@ export default async function ProductsPage({ searchParams }) {
     }));
 
   return (
-    <main className="min-h-screen bg-white text-ink" data-product-page data-scroll-skip>
+    <main className="min-h-screen bg-white text-ink" data-scroll-skip>
       <BreadcrumbJsonLd path="/products" />
       <PageBreadcrumbs path="/products" />
 

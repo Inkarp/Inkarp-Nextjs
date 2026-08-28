@@ -213,7 +213,7 @@ export default function DexterChat({ onFallback }) {
             <div className="mt-3 space-y-2">
               {SUGGESTIONS.map((suggestion) => (
                 <button
-                  className="block w-full border border-line-light bg-parchment-alt px-3 py-2 text-left text-xs font-medium text-ink transition hover:border-red hover:text-red dark:border-zinc-700 dark:bg-zinc-800"
+                  className="block w-full border border-line-light bg-parchment-alt px-3 py-2 text-left text-xs font-medium text-ink transition hover:border-red hover:text-red"
                   key={suggestion}
                   onClick={() => ask(suggestion)}
                   type="button"
@@ -254,7 +254,7 @@ export default function DexterChat({ onFallback }) {
                   className="mt-0.5 size-7 shrink-0 rounded-full object-cover"
                   src="/chatbot-icon.webp"
                 />
-                <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-parchment-alt px-3.5 py-2.5 text-sm leading-6 text-ink dark:bg-zinc-800">
+                <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-parchment-alt px-3.5 py-2.5 text-sm leading-6 text-ink">
                   <RichText text={message.content} />
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function DexterChat({ onFallback }) {
               className="size-7 shrink-0 rounded-full object-cover motion-safe:animate-[dexter-think_1.1s_ease-in-out_infinite]"
               src="/chatbot-icon.webp"
             />
-            <p className="flex items-center gap-2 rounded-2xl rounded-tl-sm bg-parchment-alt px-3.5 py-2.5 text-xs font-medium text-ink-soft dark:bg-zinc-800">
+            <p className="flex items-center gap-2 rounded-2xl rounded-tl-sm bg-parchment-alt px-3.5 py-2.5 text-xs font-medium text-ink-soft">
               <span aria-hidden className="inline-flex gap-1">
                 <span className="size-1.5 animate-bounce rounded-full bg-red [animation-delay:-0.3s]" />
                 <span className="size-1.5 animate-bounce rounded-full bg-red [animation-delay:-0.15s]" />
@@ -307,7 +307,7 @@ export default function DexterChat({ onFallback }) {
       </div>
 
       <form
-        className="mt-3 border-t border-line-light pt-3 dark:border-zinc-700"
+        className="mt-3 border-t border-line-light pt-3"
         onSubmit={(event) => {
           event.preventDefault();
           ask(draft);
@@ -316,7 +316,7 @@ export default function DexterChat({ onFallback }) {
         <div className="flex items-end gap-2">
           <textarea
             aria-label="Message Dexter"
-            className="max-h-28 min-h-[42px] flex-1 resize-none border border-line-light bg-parchment-alt px-3 py-2.5 text-sm text-ink outline-none transition focus:border-red focus:ring-2 focus:ring-red/15 dark:border-zinc-700 dark:bg-zinc-800"
+            className="max-h-28 min-h-[42px] flex-1 resize-none border border-line-light bg-parchment-alt px-3 py-2.5 text-sm text-ink outline-none transition focus:border-red focus:ring-2 focus:ring-red/15"
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={(event) => {
               if (event.key === "Enter" && !event.shiftKey) {

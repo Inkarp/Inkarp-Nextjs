@@ -168,7 +168,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
   ].filter(Boolean);
 
   return (
-    <div className="w-full" data-product-page>
+    <div className="w-full">
       <ProductMicrositeLayer
         links={product.inPageNav ?? []}
         productName={product.name}

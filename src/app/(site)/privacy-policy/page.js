@@ -1,4 +1,5 @@
 import { buildDynamicMetadata } from "@/data/pageSeo";
+import LabelledLine from "@/components/common/LabelledLine";
 
 // Routed through the shared builder so this page gets the same canonical,
 // Open Graph and Twitter card treatment as the rest of the site.
@@ -56,7 +57,7 @@ const sections = [
 
 export default function PrivacyPolicy() {
   return (
-    <main className="bg-parchment text-ink">
+    <main className="bg-parchment text-ink" data-scroll-skip>
       <section className="mx-auto max-w-[1180px] px-4 py-10 sm:px-6 lg:px-8">
         <header className="border border-line-light bg-parchment-alt p-6 text-center sm:p-8">
           <h1 className="text-3xl text-red sm:text-4xl">
@@ -73,8 +74,8 @@ export default function PrivacyPolicy() {
               Policy explains how we collect, use, and safeguard your
               personal information when you visit or interact with our
               website (
-              <a className="underline" href="https://www.inkarp.co.in">
-                www.inkarp.co.in
+              <a className="underline" href="https://inkarp.co.in">
+                inkarp.co.in
               </a>
               ) (the &quot;Website&quot;).
             </p>
@@ -95,7 +96,9 @@ export default function PrivacyPolicy() {
               {section.items ? (
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-8 text-ink-soft marker:text-red">
                   {section.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>
+                      <LabelledLine text={item} />
+                    </li>
                   ))}
                 </ul>
               ) : null}

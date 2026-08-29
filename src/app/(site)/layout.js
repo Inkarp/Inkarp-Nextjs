@@ -4,7 +4,7 @@ import FloatingChatbot from "@/components/common/FloatingChatbot";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
 import Header from "@/components/common/Header";
 import PromoPopup from "@/components/common/PromoPopup";
-import QuoteBasketFloat from "@/components/common/QuoteBasketFloat";
+import ShortlistFloats from "@/components/common/ShortlistFloats";
 
 export default function SiteLayout({ children }) {
   return (
@@ -13,7 +13,7 @@ export default function SiteLayout({ children }) {
       <div className="relative w-[90%] mx-auto">{children}</div>
       <Footer />
       <BasketSync />
-      <QuoteBasketFloat />
+      <ShortlistFloats />
       <PromoPopup />
       <FloatingChatbot />
       <FloatingQuickActions />

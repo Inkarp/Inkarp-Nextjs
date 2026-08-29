@@ -69,6 +69,9 @@ export const campaigns = [
     eventDate: upcomingStallEvent.date,
     dateLabel: upcomingStallEvent.dateLabel,
     image: upcomingStallEvent.image,
+    // The icon + wordmark crop used in place of the event name elsewhere —
+    // shown in the strip's thumbnail slot instead of the wider stall photo.
+    logoImage: "/assets/events/analytica-logo.png",
     cta: { label: "Event details", href: "/events" },
     start: shiftDays(upcomingStallEvent.date, -30),
     end: upcomingStallEvent.closesOn,

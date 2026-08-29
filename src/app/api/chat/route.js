@@ -161,6 +161,7 @@ data: ${JSON.stringify(data)}
         let answer = "";
         let toolsUsed = [];
         let offerContact = false;
+        let source = "groq";
         try {
           const result = await runGroqTurn({
             history,
@@ -171,17 +172,20 @@ data: ${JSON.stringify(data)}
           toolsUsed = result.toolsUsed;
 
           // An empty turn is worse than a plain answer — fall back rather than
-          // leave the visitor looking at nothing.
+          // leave the visitor looking at nothing. Logged honestly as a
+          // fallback rather than as "groq" so this doesn't hide how often it
+          // actually happens.
           if (!answer.trim()) {
             const local = answerLocally(question, history);
             answer = local.text;
             offerContact = local.offerContact === true;
+            source = "groq-empty-fallback";
             for (const token of local.text.match(/\S+\s*/g) ?? []) {
               send("delta", { text: token });
               await sleep(12);
             }
           }
-          send("done", { stopReason: "end_turn", source: "groq", offerContact });
+          send("done", { stopReason: "end_turn", source, offerContact });
         } catch {
           // A key problem, an exhausted quota (including a 429) or a network
           // blip shouldn't leave the visitor with nothing — the catalogue
@@ -189,11 +193,12 @@ data: ${JSON.stringify(data)}
           const local = answerLocally(question, history);
           answer = local.text;
           offerContact = local.offerContact === true;
+          source = "catalogue-fallback";
           for (const token of local.text.match(/\S+\s*/g) ?? []) {
             send("delta", { text: token });
             await sleep(12);
           }
-          send("done", { stopReason: "end_turn", source: "catalogue-fallback", offerContact });
+          send("done", { stopReason: "end_turn", source, offerContact });
         } finally {
           controller.close();
           logConversation({
@@ -204,7 +209,7 @@ data: ${JSON.stringify(data)}
             answer,
             turns: history.length,
             toolsUsed,
-            source: "groq",
+            source,
           });
         }
       },
@@ -223,9 +228,16 @@ data: ${JSON.stringify(data)}
       const messages = [...history];
       const toolsUsed = [];
       let answer = "";
+      let source = "claude";
 
       try {
         for (let round = 0; round <= MAX_TOOL_ROUNDS; round += 1) {
+          // As with the Groq engine, the last round drops tools so the model
+          // is forced to answer in text from whatever it already looked up —
+          // otherwise a turn that was still mid-tool-call on the final round
+          // ended at "tool_limit" with no chance to use the tool's result,
+          // leaving the visitor with only a preamble or nothing at all.
+          const isFinalRound = round === MAX_TOOL_ROUNDS;
           const runner = client.messages.stream({
             model: MODEL,
             max_tokens: MAX_TOKENS,
@@ -240,7 +252,7 @@ data: ${JSON.stringify(data)}
             ],
             thinking: { type: "adaptive" },
             output_config: { effort: EFFORT },
-            tools: CHAT_TOOLS,
+            ...(isFinalRound ? {} : { tools: CHAT_TOOLS }),
             messages,
           });
 
@@ -260,7 +272,7 @@ data: ${JSON.stringify(data)}
           }
 
           if (response.stop_reason !== "tool_use") {
-            send("done", { stopReason: response.stop_reason });
+            send("done", { stopReason: response.stop_reason, source });
             break;
           }
 
@@ -282,10 +294,6 @@ data: ${JSON.stringify(data)}
 
           messages.push({ role: "assistant", content: response.content });
           messages.push({ role: "user", content: results });
-
-          if (round === MAX_TOOL_ROUNDS) {
-            send("done", { stopReason: "tool_limit" });
-          }
         }
       } catch (error) {
         // Nothing streamed yet (the common case for a 429 or an auth/network
@@ -296,11 +304,12 @@ data: ${JSON.stringify(data)}
         if (!answer.trim()) {
           const local = answerLocally(history[history.length - 1].content, history);
           answer = local.text;
+          source = "catalogue-fallback";
           for (const token of local.text.match(/\S+\s*/g) ?? []) {
             send("delta", { text: token });
             await sleep(12);
           }
-          send("done", { stopReason: "end_turn", source: "catalogue-fallback", offerContact: local.offerContact === true });
+          send("done", { stopReason: "end_turn", source, offerContact: local.offerContact === true });
         } else {
           const status = error?.status;
           send("error", {
@@ -320,6 +329,7 @@ data: ${JSON.stringify(data)}
           answer,
           turns: history.length,
           toolsUsed,
+          source,
         });
       }
     },

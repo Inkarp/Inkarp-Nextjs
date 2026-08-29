@@ -15,6 +15,7 @@ const COUNTRY_NAME_TO_ISO_CODES = {
   Spain: ["ES"],
   Switzerland: ["CH"],
   "United Kingdom": ["GB"],
+  USA: ["US"],
   "United States of America": ["US"],
   "United States of America & France": ["US", "FR"],
 };

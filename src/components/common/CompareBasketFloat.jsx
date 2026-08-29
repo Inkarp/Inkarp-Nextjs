@@ -3,23 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FiFileText, FiTrash2, FiX } from "react-icons/fi";
-import useQuoteBasket from "@/components/products/useQuoteBasket";
-import { clearBasket, itemKey, removeFromBasket } from "@/lib/quoteBasket";
+import { FiBarChart2, FiFileText, FiTrash2, FiX } from "react-icons/fi";
+import useCompareBasket from "@/components/products/useCompareBasket";
+import { clearCompare, COMPARE_LIMIT, itemKey, removeFromCompare } from "@/lib/compareBasket";
 
 const AVATAR_COUNT = 3;
 
-export default function QuoteBasketFloat() {
-  const basket = useQuoteBasket();
+export default function CompareBasketFloat() {
+  const basket = useCompareBasket();
   const [isOpen, setIsOpen] = useState(false);
 
-  // An empty basket has nothing to show, so the tray closes itself rather than
-  // leaving an empty panel pinned over the page.
   useEffect(() => {
     if (!basket.length) setIsOpen(false);
   }, [basket.length]);
 
-  // Nothing shortlisted yet — stay out of the way entirely.
   if (!basket.length) return null;
 
   const count = basket.length;
@@ -32,17 +29,19 @@ export default function QuoteBasketFloat() {
           <div className="flex items-center justify-between gap-3 bg-[linear-gradient(135deg,#161616_0%,#242424_62%,#be0010_100%)] px-4 py-4">
             <div className="flex items-center gap-3">
               <span className="inline-flex size-9 shrink-0 items-center justify-center bg-white/10 text-white ring-1 ring-white/15">
-                <FiFileText />
+                <FiBarChart2 />
               </span>
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">
-                  Your quote
+                  Compare
                 </p>
-                <p className="mt-0.5 text-sm font-semibold text-white">{label} shortlisted</p>
+                <p className="mt-0.5 text-sm font-semibold text-white">
+                  {label} selected <span className="text-white/50">({count}/{COMPARE_LIMIT})</span>
+                </p>
               </div>
             </div>
             <button
-              aria-label="Close quote list"
+              aria-label="Close compare list"
               className="inline-flex h-8 w-8 shrink-0 items-center justify-center border border-white/20 text-white/70 transition hover:border-white hover:text-white"
               onClick={() => setIsOpen(false)}
               type="button"
@@ -84,7 +83,7 @@ export default function QuoteBasketFloat() {
                   <button
                     aria-label={`Remove ${item.name}`}
                     className="inline-flex h-8 w-8 shrink-0 items-center justify-center text-ink-soft transition hover:text-red"
-                    onClick={() => removeFromBasket(key)}
+                    onClick={() => removeFromCompare(key)}
                     type="button"
                   >
                     <FiTrash2 />
@@ -96,15 +95,19 @@ export default function QuoteBasketFloat() {
 
           <div className="space-y-2 border-t border-line-light bg-white px-4 py-3">
             <Link
-              className="inline-flex h-11 w-full items-center justify-center border border-rose-200 bg-rose-50 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
-              href="/quote"
+              className={`inline-flex h-11 w-full items-center justify-center border font-semibold transition ${
+                count >= 2
+                  ? "border-ink bg-ink text-sm text-white hover:bg-ink/90"
+                  : "pointer-events-none border-line-light bg-white text-sm text-ink-soft/60"
+              }`}
+              href="/compare"
               onClick={() => setIsOpen(false)}
             >
-              {`Request quote for ${label}`}
+              {count >= 2 ? `Compare ${label}` : "Add 1 more to compare"}
             </Link>
             <button
               className="w-full text-xs font-semibold text-ink-soft transition hover:text-red"
-              onClick={clearBasket}
+              onClick={clearCompare}
               type="button"
             >
               Clear all
@@ -115,8 +118,8 @@ export default function QuoteBasketFloat() {
 
       <button
         aria-expanded={isOpen}
-        aria-label={`${label} in your quote list`}
-        className="group relative inline-flex min-h-[56px] items-center gap-3 border border-red bg-white pl-2.5 pr-4 shadow-xl shadow-zinc-900/15 transition hover:-translate-y-0.5 hover:shadow-2xl motion-safe:animate-[float-widget-pop_0.35s_ease-out]"
+        aria-label={`${label} selected to compare`}
+        className="group relative inline-flex min-h-[56px] items-center gap-3 border border-ink bg-white pl-2.5 pr-4 shadow-xl shadow-zinc-900/15 transition hover:-translate-y-0.5 hover:shadow-2xl motion-safe:animate-[float-widget-pop_0.35s_ease-out]"
         onClick={() => setIsOpen((current) => !current)}
         type="button"
       >
@@ -129,14 +132,14 @@ export default function QuoteBasketFloat() {
               {item.image ? (
                 <Image alt="" className="h-full w-full object-contain p-1" height={32} src={item.image} width={32} />
               ) : (
-                <FiFileText className="text-xs text-ink-soft" />
+                <FiBarChart2 className="text-xs text-ink-soft" />
               )}
             </span>
           ))}
         </span>
-        <span className="text-sm font-semibold text-red">My Quote</span>
+        <span className="text-sm font-semibold text-ink">Compare</span>
         <span
-          className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-red px-1.5 text-xs font-bold text-white motion-safe:animate-[float-badge-pop_0.4s_ease-out]"
+          className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-ink px-1.5 text-xs font-bold text-white motion-safe:animate-[float-badge-pop_0.4s_ease-out]"
           key={count}
         >
           {count}

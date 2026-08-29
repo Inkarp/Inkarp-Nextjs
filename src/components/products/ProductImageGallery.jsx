@@ -3,32 +3,26 @@
 import { useState } from "react";
 import Image from "next/image";
 import ProductImageZoom from "./ProductImageZoom";
-import RequestQuoteButton from "./RequestQuoteButton";
 
-export default function ProductImageGallery({ ctaHref, images, productName, productSlug }) {
+export default function ProductImageGallery({ images, productName }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selected = images[selectedIndex] ?? images[0];
 
   return (
     <>
-      <div className="relative flex min-h-[240px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[320px] lg:min-h-[260px]">
+      <div className="relative flex min-h-[220px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[280px] lg:min-h-[300px]">
         <Image
           alt={selected.alt ?? productName}
-          className="mx-auto max-h-[380px] w-full object-contain p-5 transition duration-500 hover:scale-105"
-          height={600}
+          className="mx-auto max-h-[340px] w-full object-contain p-4 transition duration-500 hover:scale-105"
+          height={700}
           src={selected.src}
-          width={600}
+          width={700}
           priority={selectedIndex === 0}
         />
         <ProductImageZoom alt={selected.alt ?? productName} src={selected.src} />
       </div>
-      {ctaHref ? (
-        <div className="mt-4">
-          <RequestQuoteButton href={ctaHref} product={{ name: productName, slug: productSlug }} />
-        </div>
-      ) : null}
       {images.length > 1 && (
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="mt-3 flex flex-wrap gap-2.5">
           {images.map((img, index) => (
             <button
               key={img.src}
@@ -36,7 +30,7 @@ export default function ProductImageGallery({ ctaHref, images, productName, prod
               onClick={() => setSelectedIndex(index)}
               aria-label={img.alt ?? `View image ${index + 1}`}
               aria-pressed={index === selectedIndex}
-              className={`relative h-16 w-16 shrink-0 overflow-hidden border bg-white transition ${
+              className={`relative h-14 w-14 shrink-0 overflow-hidden border bg-white transition ${
                 index === selectedIndex
                   ? "border-red"
                   : "border-line-light hover:border-ink"
@@ -46,7 +40,7 @@ export default function ProductImageGallery({ ctaHref, images, productName, prod
                 alt={img.alt ?? `${productName} view ${index + 1}`}
                 className="object-contain p-1"
                 fill
-                sizes="64px"
+                sizes="56px"
                 src={img.src}
               />
             </button>

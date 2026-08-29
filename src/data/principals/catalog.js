@@ -145,6 +145,7 @@ import {
   productImageMap,
 } from "@/data/products/productImageMap";
 import { getPrincipalLogo } from "@/data/products/principalLogos";
+import { getAuthorizedRegion } from "@/data/products/authorizedRegions";
 
 let jsonCatalogCategoriesCache;
 let jsonCatalogProductsCache;
@@ -469,6 +470,7 @@ function normalizeProduct(product, category, principal) {
     principalSlug: principal.slug,
     principalName: principal.principalName,
     countryOfOrigin: product.countryOfOrigin ?? principal.countryOfOrigin,
+    authorizedRegion: getAuthorizedRegion(principal.slug),
     href: `/products/${product.slug}`,
     apiPath: `/api/products/${principal.slug}/${product.slug}`,
     hasDetails: true,

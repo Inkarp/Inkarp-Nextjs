@@ -12,8 +12,13 @@ import { CHAT_TOOLS, runTool } from "./tools";
 
 const ENDPOINT = "https://api.groq.com/openai/v1/chat/completions";
 // Override with GROQ_MODEL; check the Groq console for what your account can use.
+// Every standard chat model on this account is capped at the same 8K tokens/min
+// (verified against Groq's own rate-limit response headers) — there is no
+// same-architecture model swap on this account's free tier that raises it.
 const DEFAULT_MODEL = "openai/gpt-oss-120b";
-const MAX_TOOL_ROUNDS = 4;
+// The last round never offers tools (see the loop below), so this is the number
+// of genuine tool-calling rounds before that forced, text-only wrap-up turn.
+const MAX_TOOL_ROUNDS = 5;
 const MAX_TOKENS = 1200;
 
 /** CHAT_TOOLS translated into OpenAI function-calling shape. */
@@ -84,6 +89,12 @@ export async function runGroqTurn({ system, history, send }) {
   let answer = "";
 
   for (let round = 0; round <= MAX_TOOL_ROUNDS; round += 1) {
+    // Once the round budget is spent, stop offering tools so the model has to
+    // answer in text from whatever it already looked up. Without this, a turn
+    // that was still mid-tool-call on the final round returned with `answer`
+    // reset to "" and nothing to show for it — silently swallowed by the
+    // caller's empty-answer fallback instead of ever reaching the visitor.
+    const isFinalRound = round === MAX_TOOL_ROUNDS;
     const response = await requestWithRetry({
       method: "POST",
       headers: {
@@ -96,7 +107,7 @@ export async function runGroqTurn({ system, history, send }) {
         messages,
         stream: true,
         temperature: 0.3,
-        tools: toOpenAiTools(),
+        ...(isFinalRound ? {} : { tools: toOpenAiTools() }),
       }),
     });
 

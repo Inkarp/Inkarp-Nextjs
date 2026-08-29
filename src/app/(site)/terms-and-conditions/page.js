@@ -1,4 +1,5 @@
 import { buildDynamicMetadata } from "@/data/pageSeo";
+import LabelledLine from "@/components/common/LabelledLine";
 
 // Routed through the shared builder so this page gets the same canonical,
 // Open Graph and Twitter card treatment as the rest of the site.
@@ -90,14 +91,14 @@ const sections = [
   },
   {
     title:"15. General Commercial Conditions",
-    items: ["No verbal commitments, assurances, or representations shall be valid unless documented in writing by authorised representatives of Inkarp.","By accepting any quotation and/or issuing a Purchase Order against an Inkarp offer, the Buyer acknowledges and agrees to all Terms & Conditions stated in that quotation along with the standard Terms & Conditions published on the Inkarp website (www.inkarp.co.in).","All transactions shall be governed accordingly unless otherwise agreed in writing by the authorised parties.","If any provision of these Terms is held to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect.",
+    items: ["No verbal commitments, assurances, or representations shall be valid unless documented in writing by authorised representatives of Inkarp.","By accepting any quotation and/or issuing a Purchase Order against an Inkarp offer, the Buyer acknowledges and agrees to all Terms & Conditions stated in that quotation along with the standard Terms & Conditions published on the Inkarp website (inkarp.co.in).","All transactions shall be governed accordingly unless otherwise agreed in writing by the authorised parties.","If any provision of these Terms is held to be invalid or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect.",
     ],
   },
 ];
 
 export default function TermsAndConditions() {
   return (
-    <main className="bg-parchment text-ink">
+    <main className="bg-parchment text-ink" data-scroll-skip>
       <section className="mx-auto max-w-[1180px] px-4 py-10 sm:px-6 lg:px-8">
         <header className="border border-line-light bg-parchment-alt p-6 text-center sm:p-8">
           <h1 className="text-3xl text-red sm:text-4xl">
@@ -145,7 +146,7 @@ export default function TermsAndConditions() {
                       {lineIndex === 0 && paragraph.length > 1 ? (
                         <strong>{line}</strong>
                       ) : (
-                        line
+                        <LabelledLine text={line} />
                       )}
                       {lineIndex < paragraph.length - 1 ? <br /> : null}
                     </span>
@@ -156,7 +157,9 @@ export default function TermsAndConditions() {
               {section.items ? (
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-base leading-8 text-ink-soft marker:text-red">
                   {section.items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>
+                      <LabelledLine text={item} />
+                    </li>
                   ))}
                 </ul>
               ) : null}

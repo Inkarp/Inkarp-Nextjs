@@ -16,8 +16,9 @@ import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
 import ProductImageZoom from "@/components/products/ProductImageZoom";
 import RequestQuoteButton from "@/components/products/RequestQuoteButton";
+import CompareButton from "@/components/products/CompareButton";
 
-const PRODUCT_DISTRIBUTOR_NOTE = "Authorized Distributor & Service Provider in India";
+const DEFAULT_AUTHORIZED_REGION = "India";
 
 const DEFAULT_PRODUCT_SERVICE_PILLS = [
   "Installation",
@@ -51,6 +52,7 @@ export default async function ProductPage({ params }) {
 
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
+  const distributorNote = `Authorized Distributor & Service Provider in ${product.authorizedRegion || DEFAULT_AUTHORIZED_REGION}`;
   const countryFlagCodes = getCountryFlagCodes(product.countryOfOrigin);
   // `overview` is a plain string on most products, but a { body: [...] } object
   // on the newer flat-schema Mettler Toledo pages — guard against both shapes.
@@ -97,8 +99,8 @@ export default async function ProductPage({ params }) {
         </div>
       </nav>
 
-      <section className="bg-white px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-[1180px] gap-14 lg:grid-cols-[7.6fr_2.4fr] lg:items-center">
+      <section className="bg-white px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-8">
+        <div className="mx-auto grid w-full gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
@@ -155,7 +157,7 @@ export default async function ProductPage({ params }) {
             </h1>
             <h2 className="mt-4 inline-flex items-center gap-2 rounded-full border border-red/30 bg-red/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-red">
               <FiShield className="h-4 w-4 shrink-0" aria-hidden="true" />
-              {PRODUCT_DISTRIBUTOR_NOTE}
+              {distributorNote}
             </h2>
 
             <div className="mt-4 flex flex-wrap gap-2.5">
@@ -179,31 +181,29 @@ export default async function ProductPage({ params }) {
             </p>
           </div>
 
-          <div className="relative self-center border border-line-light bg-parchment-alt p-3.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+          <div className="relative self-center border border-line-light bg-parchment-alt p-3 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
             {product.images?.length > 0 ? (
-              <ProductImageGallery ctaHref={ctaHref} images={product.images} productName={product.name} productSlug={product.slug} />
+              <ProductImageGallery images={product.images} productName={product.name} />
             ) : (
-              <>
-                <div className="relative flex min-h-[240px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[320px] lg:min-h-[260px]">
-                  {product.image ? (
-                    <Image
-                      alt={product.imageAlt ?? product.name}
-                      className="mx-auto max-h-[380px] w-full object-contain p-5 transition duration-500 hover:scale-105"
-                      height={600}
-                      src={product.image}
-                      width={600}
-                      priority
-                    />
-                  ) : (
-                    <div className="flex aspect-square w-full items-center justify-center text-sm text-ink-soft">
-                      Product image coming soon
-                    </div>
-                  )}
-                  <ProductImageZoom alt={product.imageAlt ?? product.name} src={product.image} />
-                </div>
-                <ProductImageActions href={ctaHref} product={product} secondary={product.heroSecondaryCta} />
-              </>
+              <div className="relative flex min-h-[220px] items-center justify-center overflow-hidden border border-line-light bg-white sm:min-h-[280px] lg:min-h-[300px]">
+                {product.image ? (
+                  <Image
+                    alt={product.imageAlt ?? product.name}
+                    className="mx-auto max-h-[340px] w-full object-contain p-4 transition duration-500 hover:scale-105"
+                    height={700}
+                    src={product.image}
+                    width={700}
+                    priority
+                  />
+                ) : (
+                  <div className="flex aspect-square w-full items-center justify-center text-sm text-ink-soft">
+                    Product image coming soon
+                  </div>
+                )}
+                <ProductImageZoom alt={product.imageAlt ?? product.name} src={product.image} />
+              </div>
             )}
+            <ProductImageActions href={ctaHref} product={product} secondary={product.heroSecondaryCta} />
           </div>
         </div>
       </section>
@@ -256,15 +256,21 @@ export default async function ProductPage({ params }) {
   );
 }
 
+const DUO_REQUEST_QUOTE_CLASS =
+  "inline-flex h-14 w-full items-center justify-center gap-1.5 border border-rose-200 bg-rose-50 px-2 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100";
+
 function ProductImageActions({ href, product, secondary }) {
   return (
-    <div className="mt-4 space-y-2.5">
-      <RequestQuoteButton href={href} product={product} />
-      <AddToQuoteButton product={product} variant="block" />
+    <div className="mt-3 space-y-2">
+      <div className="grid grid-cols-2 gap-2">
+        <RequestQuoteButton className={DUO_REQUEST_QUOTE_CLASS} href={href} product={product} />
+        <AddToQuoteButton product={product} variant="duo" />
+      </div>
+      <CompareButton product={product} variant="block" />
       {secondary?.label && (
         <Link
           href={secondary.href ?? "/contact"}
-          className="inline-flex h-12 w-full items-center justify-center border border-line-light bg-white px-5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+          className="inline-flex h-14 w-full items-center justify-center border border-line-light bg-white px-6 text-base font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
         >
           {secondary.label}
         </Link>

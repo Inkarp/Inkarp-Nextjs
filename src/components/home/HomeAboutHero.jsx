@@ -1,13 +1,22 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FiCalendar, FiMapPin } from "react-icons/fi";
 import RecTag from "./RecTag";
+import { featuredEvent } from "@/data/events";
 
-const AUTO_ROTATE_MS = 7000;
+const AUTO_ROTATE_MS = 3000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
 const ANNIVERSARY_VIDEO = "/assets/41-anniversary-animation.mp4";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
+// The dedicated stall photo — same asset the home events row uses for this
+// event's card — rather than the wider Event1.jpeg shared with the campaign strip.
+const ANALYTICA_STALL_IMAGE = "/assets/events/analytica-2026.webp";
+// Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
+// just the icon + wordmark, so it can sit inline in place of the event name.
+const ANALYTICA_LOGO = "/assets/events/analytica-logo.png";
 
 
 /*
@@ -129,7 +138,154 @@ function SlideAbout() {
   );
 }
 
-const SLIDES = [SlideAbout];
+/**
+ * Days/hours/minutes until `startsAt`, or null until mounted — the remaining
+ * time depends on the current clock, so computing it during render would bake
+ * the build time into the static HTML and mismatch on hydration.
+ */
+function useTimeUntil(startsAt) {
+  const [remaining, setRemaining] = useState(null);
+
+  useEffect(() => {
+    if (!startsAt) return undefined;
+    const target = new Date(startsAt).getTime();
+
+    const tick = () => {
+      const diff = target - Date.now();
+      if (diff <= 0) {
+        setRemaining({ state: "live" });
+        return;
+      }
+      const totalMinutes = Math.floor(diff / 60000);
+      setRemaining({
+        state: "counting",
+        days: Math.floor(totalMinutes / 1440),
+        hours: Math.floor((totalMinutes % 1440) / 60),
+        minutes: totalMinutes % 60,
+      });
+    };
+
+    tick();
+    const timer = window.setInterval(tick, 30_000);
+    return () => window.clearInterval(timer);
+  }, [startsAt]);
+
+  return remaining;
+}
+
+function CountdownUnit({ label, value }) {
+  return (
+    <span className="flex flex-col items-center border border-red/20 bg-white px-2.5 py-1.5">
+      <span className="font-mono text-base font-bold leading-none text-red sm:text-lg">
+        {String(value).padStart(2, "0")}
+      </span>
+      <span className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-ink-soft">
+        {label}
+      </span>
+    </span>
+  );
+}
+
+function SlideAnalytica() {
+  const remaining = useTimeUntil(featuredEvent.startsAt);
+
+  return (
+    <div className="bg-white px-4 pb-8 pt-5 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1180px]">
+        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+          <div className="flex flex-col">
+            <RecTag>{featuredEvent.eyebrow}</RecTag>
+            <h1 className="flex flex-wrap items-center gap-3 text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+              <Image
+                alt={featuredEvent.name}
+                className="h-10 w-auto object-contain sm:h-14"
+                height={58}
+                priority
+                src={ANALYTICA_LOGO}
+                width={234}
+              />
+              <em className="italic text-red">{featuredEvent.edition}</em>
+            </h1>
+
+            <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-ink">
+              <span className="inline-flex items-center gap-2">
+                <FiCalendar aria-hidden="true" className="size-4 text-red" />
+                {featuredEvent.dateLabel}
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <FiMapPin aria-hidden="true" className="size-4 text-red" />
+                {featuredEvent.venue}
+              </span>
+            </div>
+
+            <p className="my-4 max-w-[520px] text-base leading-relaxed text-ink-soft sm:text-lg">
+              {featuredEvent.summary}
+            </p>
+
+            <div className="mb-2 flex flex-wrap items-center gap-3">
+              {featuredEvent.stallNumber ? (
+                <p className="inline-flex w-fit shrink-0 items-center gap-1.5 border border-red/30 bg-red/5 px-3 py-1.5 text-sm font-semibold text-red">
+                  Stall No: {featuredEvent.stallNumber}
+                </p>
+              ) : null}
+
+              {remaining?.state === "counting" ? (
+                <div className="flex items-center gap-2.5">
+                  <span className="text-xs font-semibold uppercase tracking-[0.1em] text-ink-soft">
+                    Doors open in
+                  </span>
+                  <div className="flex items-center gap-1.5">
+                    <CountdownUnit label="Days" value={remaining.days} />
+                    <CountdownUnit label="Hrs" value={remaining.hours} />
+                    <CountdownUnit label="Mins" value={remaining.minutes} />
+                  </div>
+                </div>
+              ) : remaining?.state === "live" ? (
+                <p className="inline-flex w-fit items-center gap-1.5 border border-teal/30 bg-teal/5 px-3 py-1.5 text-sm font-semibold text-teal">
+                  <span aria-hidden="true" className="size-1.5 animate-pulse rounded-full bg-teal" />
+                  Happening now — come say hello
+                </p>
+              ) : null}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3.5 lg:mt-auto lg:pb-1">
+              {featuredEvent.registrationUrl ? (
+                <a
+                  className="border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
+                  href={featuredEvent.registrationUrl}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Register Now
+                </a>
+              ) : null}
+              <Link
+                href="/events"
+                className="border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
+              >
+                Event Details
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative border border-line-light bg-parchment-alt p-4.5 lg:flex lg:flex-col before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+            <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-white lg:aspect-auto lg:flex-1">
+              <Image
+                alt={`Inkarp stall at ${featuredEvent.name} ${featuredEvent.edition}`}
+                className="object-cover"
+                fill
+                sizes="(min-width: 1024px) 520px, 90vw"
+                src={ANALYTICA_STALL_IMAGE}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const SLIDES = [SlideAbout, SlideAnalytica];
 
 export default function HomeAboutHero() {
   const [activeIndex, setActiveIndex] = useState(0);

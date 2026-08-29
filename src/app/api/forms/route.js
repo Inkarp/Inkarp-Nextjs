@@ -189,8 +189,7 @@ export async function POST(request) {
     submission.products = fields.items
       .map((item, index) => {
         const brand = item?.principalName ? ` (${item.principalName})` : "";
-        const url = item?.slug ? ` - https://inkarp.co.in/products/${item.slug}` : "";
-        return `${index + 1}. ${item?.name ?? "Unnamed product"}${brand}${url}`;
+        return `${index + 1}. ${item?.name ?? "Unnamed product"}${brand}`;
       })
       .join(String.fromCharCode(10));
   }

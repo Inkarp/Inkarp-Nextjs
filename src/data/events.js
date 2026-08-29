@@ -239,6 +239,7 @@ export const featuredEvent = {
   edition: "Hyderabad 2026",
   dateLabel: "10 – 12 September 2026",
   venue: "HITEX Exhibition Centre, Hyderabad",
+  stallNumber: "H5-C02",
   // Drives the banner countdown. Local time, doors-open on day one.
   startsAt: "2026-09-10T10:00:00+05:30",
   endsAt: "2026-09-12T18:00:00+05:30",

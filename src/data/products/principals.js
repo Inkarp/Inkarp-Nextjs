@@ -11,6 +11,7 @@ import {
     getJsonCatalogProducts,
 } from "@/data/principals/catalog";
 import { productMatchesSearch } from "@/lib/productSearch";
+import { getAuthorizedRegion } from "@/data/products/authorizedRegions";
 
 let allProductsCache;
 let allPrincipalsCache;
@@ -554,6 +555,7 @@ export function getProductByPrincipalAndSlug(principalSlug, productSlug) {
         principalSlug: principal.slug,
         principalName: principal.principalName,
         countryOfOrigin: metadata.countryOfOrigin ?? principal.countryOfOrigin,
+        authorizedRegion: getAuthorizedRegion(principal.slug),
         href: `/products/${product.slug}`,
         apiPath: `/api/products/${principal.slug}/${product.slug}`,
         hasDetails: Boolean(detail),
@@ -590,6 +592,7 @@ function normalizeStandaloneProductDetail(detail) {
         principalSlug: detail.principalSlug,
         principalName: detail.principalName ?? principal?.principalName,
         countryOfOrigin: detail.countryOfOrigin ?? principal?.countryOfOrigin,
+        authorizedRegion: detail.authorizedRegion ?? getAuthorizedRegion(detail.principalSlug),
         href: detail.href ?? `/products/${detail.slug}`,
         apiPath: detail.apiPath ?? `/api/products/${detail.principalSlug}/${detail.slug}`,
         hasDetails: true,

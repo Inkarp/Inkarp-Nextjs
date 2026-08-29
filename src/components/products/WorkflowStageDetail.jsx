@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FiChevronDown } from 'react-icons/fi';
 import AddToQuoteButton from './AddToQuoteButton';
+import CompareButton from './CompareButton';
 
 /**
  * One workflow stage: each challenge, the solution to it, and cards for the
@@ -197,6 +198,18 @@ function ProductCard({ product }) {
             imageAlt: imageAlt ?? name,
             countryOfOrigin: country ?? '',
           }}
+        />
+        <CompareButton
+          product={{
+            slug,
+            principalSlug: product.principalSlug ?? '',
+            principalName: principal ?? '',
+            name,
+            image: image ?? '',
+            imageAlt: imageAlt ?? name,
+            countryOfOrigin: country ?? '',
+          }}
+          variant="icon"
         />
       </div>
     </article>

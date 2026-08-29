@@ -417,7 +417,17 @@ function EventCountdownSlide({ campaign }) {
 
       <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3 sm:gap-4">
-          {campaign.image ? (
+          {campaign.logoImage ? (
+            <span className="hidden h-8 w-24 shrink-0 items-center justify-center overflow-hidden border border-line-light bg-white p-1 sm:flex lg:h-9 lg:w-28">
+              <Image
+                alt={campaign.title}
+                className="h-full w-full object-contain"
+                height={36}
+                src={campaign.logoImage}
+                width={140}
+              />
+            </span>
+          ) : campaign.image ? (
             <span className="hidden h-12 w-16 shrink-0 overflow-hidden border border-line-light bg-white sm:block lg:h-14 lg:w-20">
               <Image
                 alt={campaign.title}

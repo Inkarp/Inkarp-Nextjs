@@ -4,7 +4,12 @@ import { useEffect, useState } from"react";
 import Image from"next/image";
 import { FiArrowUpRight, FiCalendar, FiCheckCircle, FiMapPin } from"react-icons/fi";
 import RecTag from"@/components/home/RecTag";
+import StallWorkflowSlider from"@/components/events/StallWorkflowSlider";
 import { events, eventYears, featuredEvent, isPastEvent } from"@/data/events";
+
+// Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
+// just the icon + wordmark, so it can sit inline in place of the event name.
+const ANALYTICA_LOGO = "/assets/events/analytica-logo.png";
 
 const COUNTDOWN_UNITS = [
   { key: "days", label: "Days" },
@@ -175,8 +180,15 @@ function FeaturedEventBanner() {
         <div>
           <RecTag>{event.eyebrow}</RecTag>
 
-          <h1 className="max-w-[18ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
-            {event.name}{" "}
+          <h1 className="flex flex-wrap items-center gap-3 text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <Image
+              alt={event.name}
+              className="h-10 w-auto object-contain sm:h-14"
+              height={58}
+              priority
+              src={ANALYTICA_LOGO}
+              width={234}
+            />
             <em className="italic text-red">{event.edition}</em>
           </h1>
 
@@ -190,6 +202,12 @@ function FeaturedEventBanner() {
               {event.venue}
             </span>
           </div>
+
+          {event.stallNumber ? (
+            <p className="mt-4 inline-flex w-fit items-center gap-1.5 border border-red/30 bg-red/5 px-3 py-1.5 text-sm font-semibold text-red">
+              Stall No: {event.stallNumber}
+            </p>
+          ) : null}
 
           <p className="mt-4 max-w-[560px] text-base leading-relaxed text-ink-soft">
             {event.summary}
@@ -290,6 +308,7 @@ export default function EventsPage() {
   return (
     <main>
       <FeaturedEventBanner />
+      <StallWorkflowSlider />
 
       <div
         className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 border border-line-light bg-parchment-alt py-8 sm:flex-row"

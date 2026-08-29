@@ -197,6 +197,18 @@ article[data-scroll-reveal="true"] {
   100% { transform: scale(1); opacity: 1; }
 }
 
+/* The "My Quote" / "Compare" floating widgets: a soft rise-in the first time the
+   pill appears, and a sharper pop on the count badge whenever it changes. */
+@keyframes float-widget-pop {
+  from { opacity: 0; transform: translateY(10px) scale(0.94); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes float-badge-pop {
+  0%   { transform: scale(0.5); }
+  65%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
 /* Home page workflow section animations */
 @keyframes topicReveal {
   from { opacity: 0; transform: translateY(-8px); }

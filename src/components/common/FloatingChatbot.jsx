@@ -502,6 +502,7 @@ export default function FloatingChatbot() {
                 : "motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
           }`}
           height={80}
+          priority
           src="/chatbot-icon.webp"
           width={80}
         />

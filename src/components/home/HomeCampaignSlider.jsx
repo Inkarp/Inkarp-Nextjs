@@ -411,7 +411,7 @@ function EventCountdownSlide({ campaign }) {
         className="pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-[0.13] [mask-image:linear-gradient(to_left,black,transparent)]"
       >
         {campaign.image ? (
-          <Image alt="" className="h-full w-full object-cover" fill sizes="33vw" src={campaign.image} />
+          <Image alt="" className="h-full w-full object-cover" fill priority sizes="33vw" src={campaign.image} />
         ) : null}
       </div>
 
@@ -423,6 +423,7 @@ function EventCountdownSlide({ campaign }) {
                 alt={campaign.title}
                 className="h-full w-full object-contain"
                 height={36}
+                priority
                 src={campaign.logoImage}
                 width={140}
               />
@@ -433,6 +434,7 @@ function EventCountdownSlide({ campaign }) {
                 alt={campaign.title}
                 className="h-full w-full object-cover"
                 height={56}
+                priority
                 src={campaign.image}
                 width={80}
               />

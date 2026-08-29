@@ -274,6 +274,7 @@ function SlideAnalytica() {
                 alt={`Inkarp stall at ${featuredEvent.name} ${featuredEvent.edition}`}
                 className="object-cover"
                 fill
+                priority
                 sizes="(min-width: 1024px) 520px, 90vw"
                 src={ANALYTICA_STALL_IMAGE}
               />

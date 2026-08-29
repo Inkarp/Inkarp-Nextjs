@@ -107,7 +107,7 @@ export default async function ProductPage({ params }) {
                 <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">
                   <Image
                     alt={product.principalName}
-                    className="h-5 w-auto object-contain"
+                    className="object-contain"
                     height={20}
                     src={product.principalImage}
                     width={80}

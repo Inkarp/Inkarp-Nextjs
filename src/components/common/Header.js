@@ -215,13 +215,13 @@ export default function Header() {
       >
       {/* <AnnouncementBar collapsed={!(isAtTop || isMenuOpen || isSearchOpen)} /> */}
       <div
-        className={`overflow-hidden bg-black text-parchment transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
+        className={`overflow-hidden bg-red-50 text-ink transition-[max-height,opacity] duration-300 ease-out ${isAtTop || isMenuOpen || isSearchOpen
             ? "max-h-40 opacity-100"
             : "max-h-0 opacity-0"
           }`}
       >
         <div className="mx-auto flex max-w-[1480px] flex-col gap-3 px-4 py-3 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-parchment/80">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-ink-soft">
             <Link
               className="inline-flex items-center gap-2 transition hover:text-red hover:underline "
               href={`mailto:${contact.email}`}
@@ -236,18 +236,33 @@ export default function Header() {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <nav aria-label="Quick links" className="flex items-center gap-3">
+            <nav aria-label="Quick links" className="flex items-center gap-1">
               {topLinks.map((link) => (
                 <Link
-                  className="text-parchment/80 transition hover:text-red"
+                  className="group/top relative inline-flex items-center overflow-hidden px-2 py-1"
                   href={link.href}
                   key={link.href}
                 >
-                  {link.label}
+                  <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#D5BDA2]/40 transition-transform duration-300 delay-[60ms] group-hover/top:scale-y-100 group-hover/top:delay-0" />
+                  <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/25 transition-transform duration-300 delay-[40ms] group-hover/top:scale-y-100 group-hover/top:delay-[20ms]" />
+                  <span className="pointer-events-none absolute inset-0 scale-y-0 border-r border-black/40 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/top:scale-y-100 group-hover/top:delay-[40ms]" />
+                  <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/top:scale-y-100 group-hover/top:delay-[60ms]" />
+
+                  <span className="relative z-10 block overflow-hidden">
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-0 block scale-y-0 text-red transition-transform duration-300 delay-[60ms] group-hover/top:scale-y-100"
+                    >
+                      {link.label}
+                    </span>
+                    <span className="block text-ink-soft transition-transform duration-300 delay-[60ms] group-hover/top:scale-y-0 group-hover/top:delay-0">
+                      {link.label}
+                    </span>
+                  </span>
                 </Link>
               ))}
             </nav>
-            <div className="hidden h-5 w-px bg-parchment/20 sm:block" />
+            <div className="hidden h-5 w-px bg-ink/15 sm:block" />
             {/* Same chip treatment as the footer socials: bordered square with
                 red corner ticks, filling red on hover. */}
             <div className="flex items-center gap-2">
@@ -257,7 +272,7 @@ export default function Header() {
                 return (
                   <Link
                     aria-label={item.label}
-                    className="group relative inline-flex size-8 items-center justify-center border border-parchment/15 bg-parchment/5 text-parchment transition hover:-translate-y-0.5 hover:border-rose-300 hover:bg-rose-50 hover:text-rose-700"
+                    className="group relative inline-flex size-8 items-center justify-center border border-ink/15 bg-ink/5 text-ink transition hover:-translate-y-0.5 hover:border-rose-300 hover:bg-white hover:text-rose-700"
                     href={item.href}
                     key={item.label}
                     rel="noreferrer"
@@ -307,36 +322,73 @@ export default function Header() {
                   const active = isNavActive(item, pathname);
 
                   return (
-                    <li className="group relative" key={item.label}>
+                    <li className="group/nav relative" key={item.label}>
                       <Link
-                        className={`flex h-11 items-center gap-1 whitespace-nowrap px-1 text-xs transition xl:px-1.5 xl:text-sm 2xl:px-2.5 2xl:text-base ${active
-                            ? "text-red"
-                            : "text-ink-soft hover:text-red"
-                          }`}
+                        className="relative flex h-11 items-center gap-1 overflow-hidden whitespace-nowrap px-1 text-xs xl:px-1.5 xl:text-sm 2xl:px-2.5 2xl:text-base"
                         href={getNavHref(item)}
                       >
-                        <NavLabel item={item} />
-                        {item.children ? (
-                          <FiChevronDown
-                            className={`text-base transition group-hover:rotate-180 ${active ? "text-red" : "text-ink-soft"
-                              }`}
-                          />
-                        ) : null}
+                        <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#D5BDA2]/40 transition-transform duration-300 delay-[60ms] group-hover/nav:scale-y-100 group-hover/nav:delay-0" />
+                        <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/25 transition-transform duration-300 delay-[40ms] group-hover/nav:scale-y-100 group-hover/nav:delay-[20ms]" />
+                        <span className="pointer-events-none absolute inset-0 scale-y-0 border-r border-black/40 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/nav:scale-y-100 group-hover/nav:delay-[40ms]" />
+                        <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/nav:scale-y-100 group-hover/nav:delay-[60ms]" />
+
+                        <span className="relative z-10 flex items-center gap-1">
+                          {item.logo ? (
+                            <NavLabel item={item} />
+                          ) : (
+                            <span className="relative block overflow-hidden">
+                              <span
+                                aria-hidden="true"
+                                className="absolute inset-0 block scale-y-0 text-red transition-transform duration-300 delay-[60ms] group-hover/nav:scale-y-100"
+                              >
+                                {item.label}
+                              </span>
+                              <span
+                                className={`block transition-transform duration-300 delay-[60ms] group-hover/nav:scale-y-0 group-hover/nav:delay-0 ${active ? "text-red" : "text-ink-soft"
+                                  }`}
+                              >
+                                {item.label}
+                              </span>
+                            </span>
+                          )}
+                          {item.children ? (
+                            <FiChevronDown
+                              className={`text-base transition group-hover/nav:rotate-180 ${active ? "text-red" : "text-ink-soft"
+                                }`}
+                            />
+                          ) : null}
+                        </span>
                       </Link>
 
                       {item.children ? (
-                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100">
+                        <div className="invisible absolute left-1/2 top-full min-w-72 -translate-x-1/2 pt-3 opacity-0 transition group-hover/nav:visible group-hover/nav:opacity-100">
                           <div className="rounded-lg border border-line-light bg-parchment p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
                             {item.children.map((child) => (
                               <Link
-                                className="flex items-center justify-between gap-2 rounded-md px-4 py-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red"
+                                className="group/child relative flex items-center justify-between gap-2 overflow-hidden rounded-md px-4 py-3 text-sm font-medium"
                                 href={child.href}
                                 key={child.label}
                               >
-                                {child.label}
+                                <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#D5BDA2]/40 transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-100 group-hover/child:delay-0" />
+                                <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/25 transition-transform duration-300 delay-[40ms] group-hover/child:scale-y-100 group-hover/child:delay-[20ms]" />
+                                <span className="pointer-events-none absolute inset-0 scale-y-0 border-r border-black/40 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/child:scale-y-100 group-hover/child:delay-[40ms]" />
+                                <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/child:scale-y-100 group-hover/child:delay-[60ms]" />
+
+                                <span className="relative z-10 block overflow-hidden">
+                                  <span
+                                    aria-hidden="true"
+                                    className="absolute inset-0 block scale-y-0 text-red transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-100"
+                                  >
+                                    {child.label}
+                                  </span>
+                                  <span className="block text-ink-soft transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-0 group-hover/child:delay-0">
+                                    {child.label}
+                                  </span>
+                                </span>
+
                                 {child.label === "Webinars" &&
                                 upcomingWebinarsCount > 0 ? (
-                                  <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-parchment">
+                                  <span className="relative z-10 inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-parchment">
                                     <span className="size-1.5 animate-pulse rounded-full bg-parchment" />
                                     Live
                                   </span>

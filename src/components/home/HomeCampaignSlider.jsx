@@ -400,12 +400,109 @@ function WebinarCountdownSlide({ campaign }) {
   );
 }
 
-// Exhibition stand, carrying the event artwork and a countdown to the doors.
-function EventCountdownSlide({ campaign }) {
-  const days = useDaysUntil(campaign.eventDate ?? campaign.end);
+/**
+ * Days/hours/minutes/seconds remaining until `targetIso`, or "live" once it's
+ * passed. Null until mounted — the page is prerendered, so computing this
+ * during render would bake the build time into the static HTML.
+ */
+function splitRemaining(ms) {
+  const total = Math.max(0, Math.floor(ms / 1000));
+  return {
+    days: Math.floor(total / 86400),
+    hours: Math.floor((total % 86400) / 3600),
+    minutes: Math.floor((total % 3600) / 60),
+    seconds: total % 60,
+  };
+}
+
+function useCountdown(targetIso) {
+  const [remaining, setRemaining] = useState(null);
+
+  useEffect(() => {
+    if (!targetIso) return undefined;
+    const target = new Date(targetIso).getTime();
+
+    const tick = () => {
+      const now = Date.now();
+      if (now >= target) return setRemaining({ state: "live" });
+      return setRemaining({ state: "counting", ...splitRemaining(target - now) });
+    };
+
+    tick();
+    const timer = window.setInterval(tick, 1000);
+    return () => window.clearInterval(timer);
+  }, [targetIso]);
+
+  return remaining;
+}
+
+// One boxed digit cell — same "white box, brand-colour digits" language as
+// the full countdown on the events page, scaled down to fit the stripe.
+function CountdownBox({ label, value }) {
+  return (
+    <span className="flex w-7 shrink-0 flex-col items-center justify-center border border-[#8C2F63]/25 bg-white py-0.5 leading-none sm:w-8 sm:py-1">
+      <span className="font-mono text-xs font-bold tabular-nums text-[#8C2F63] sm:text-sm">
+        {String(value).padStart(2, "0")}
+      </span>
+      <span className="mt-0.5 font-mono text-[6px] uppercase tracking-wide text-ink-soft sm:text-[7px]">
+        {label}
+      </span>
+    </span>
+  );
+}
+
+// Ticking D/H/M/[S] countdown for the exhibition stripe, as individual boxed
+// cells — seconds only past the sm breakpoint, so it stays compact on phones.
+function EventCountdownBoxes({ remaining }) {
+  if (remaining?.state === "live") {
+    return (
+      <span className="inline-flex shrink-0 items-center gap-1.5 bg-[#8C2F63] px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-white sm:text-[11px]">
+        <span aria-hidden="true" className="relative flex size-1.5">
+          <span className="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-70" />
+          <span className="relative inline-flex size-1.5 rounded-full bg-white" />
+        </span>
+        Live now
+      </span>
+    );
+  }
+
+  if (remaining?.state !== "counting") {
+    return (
+      <span className="inline-flex shrink-0 items-center bg-[#8C2F63] px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.1em] text-white sm:text-[11px]">
+        Coming up
+      </span>
+    );
+  }
 
   return (
-    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-line-light bg-[linear-gradient(105deg,#FFF7F7_0%,#FFECEE_55%,#FFF7F7_100%)] sm:h-20 lg:h-24">
+    <span className="flex shrink-0 items-center gap-1">
+      <CountdownBox label="D" value={remaining.days} />
+      <CountdownBox label="H" value={remaining.hours} />
+      <CountdownBox label="M" value={remaining.minutes} />
+      <span className="hidden sm:block">
+        <CountdownBox label="S" value={remaining.seconds} />
+      </span>
+    </span>
+  );
+}
+
+// Exhibition stand, carrying the event artwork and a countdown to the doors.
+// Background is themed after the analytica Lab India mark itself — the gold
+// wash and magenta accent both come from its logo, so the stripe reads as
+// "this event" rather than a generic red-branded promo.
+function EventCountdownSlide({ campaign }) {
+  const remaining = useCountdown(campaign.eventStartsAt ?? campaign.eventDate);
+
+  return (
+    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-amber-200/60 bg-[linear-gradient(105deg,#FFFBEF_0%,#FDF0C8_40%,#FBE49A_75%,#F6D877_100%)] sm:h-20 lg:h-24">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-[#F6C445] via-[#8C2F63] to-[#F6C445]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-1/2 h-32 w-32 -translate-y-1/2 rounded-full bg-[#8C2F63]/10 blur-3xl"
+      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-[0.13] [mask-image:linear-gradient(to_left,black,transparent)]"
@@ -418,7 +515,7 @@ function EventCountdownSlide({ campaign }) {
       <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3 sm:gap-4">
           {campaign.logoImage ? (
-            <span className="hidden h-8 w-24 shrink-0 items-center justify-center overflow-hidden border border-line-light bg-white p-1 sm:flex lg:h-9 lg:w-28">
+            <span className="hidden h-8 w-24 shrink-0 items-center justify-center overflow-hidden border border-amber-200/70 bg-white p-1 sm:flex lg:h-9 lg:w-28">
               <Image
                 alt={campaign.title}
                 className="h-full w-full object-contain"
@@ -429,7 +526,7 @@ function EventCountdownSlide({ campaign }) {
               />
             </span>
           ) : campaign.image ? (
-            <span className="hidden h-12 w-16 shrink-0 overflow-hidden border border-line-light bg-white sm:block lg:h-14 lg:w-20">
+            <span className="hidden h-12 w-16 shrink-0 overflow-hidden border border-amber-200/70 bg-white sm:block lg:h-14 lg:w-20">
               <Image
                 alt={campaign.title}
                 className="h-full w-full object-cover"
@@ -442,10 +539,15 @@ function EventCountdownSlide({ campaign }) {
           ) : null}
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <CountdownPill className="bg-red text-white" days={days} />
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-red sm:text-[11px]">
+              <EventCountdownBoxes remaining={remaining} />
+              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-amber-800 sm:text-[11px]">
                 {campaign.kicker ?? "Meet us there"}
               </span>
+              {campaign.stallNumber ? (
+                <span className="hidden shrink-0 items-center border border-[#8C2F63]/30 bg-[#8C2F63]/5 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-[#8C2F63] sm:inline-flex">
+                  Stall {campaign.stallNumber}
+                </span>
+              ) : null}
             </div>
             <p className="mt-0.5 truncate text-sm font-semibold text-ink sm:text-base">
               {campaign.title}

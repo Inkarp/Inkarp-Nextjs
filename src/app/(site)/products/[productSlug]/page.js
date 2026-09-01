@@ -17,6 +17,7 @@ import ProductImageGallery from "@/components/products/ProductImageGallery";
 import ProductImageZoom from "@/components/products/ProductImageZoom";
 import RequestQuoteButton from "@/components/products/RequestQuoteButton";
 import CompareButton from "@/components/products/CompareButton";
+import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
 
 const DEFAULT_AUTHORIZED_REGION = "India";
 
@@ -159,6 +160,10 @@ export default async function ProductPage({ params }) {
               <FiShield className="h-4 w-4 shrink-0" aria-hidden="true" />
               {distributorNote}
             </h2>
+
+            <div className="mt-4">
+              <AnalyticaShowcaseBadge principalSlug={product.principalSlug} productSlug={product.slug} />
+            </div>
 
             <div className="mt-4 flex flex-wrap gap-2.5">
               {servicePills.map((pill) => (

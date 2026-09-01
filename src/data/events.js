@@ -268,6 +268,10 @@ export const upcomingStallEvent = {
   dateLabel: featuredEvent.dateLabel,
   image: featuredEvent.image,
   registrationUrl: featuredEvent.registrationUrl,
+  stallNumber: featuredEvent.stallNumber,
+  // Full doors-open timestamp, for countdowns precise to the second — `date`
+  // below is the day-only cut for simpler "days until" displays.
+  startsAt: featuredEvent.startsAt,
   // Doors open on day one — that is what a countdown should point at.
   date: featuredEvent.startsAt.slice(0, 10),
   closesOn: featuredEvent.endsAt.slice(0, 10),

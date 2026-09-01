@@ -67,7 +67,9 @@ export const campaigns = [
     message: upcomingStallEvent.description,
     venue: upcomingStallEvent.venue,
     eventDate: upcomingStallEvent.date,
+    eventStartsAt: upcomingStallEvent.startsAt,
     dateLabel: upcomingStallEvent.dateLabel,
+    stallNumber: upcomingStallEvent.stallNumber,
     image: upcomingStallEvent.image,
     // The icon + wordmark crop used in place of the event name elsewhere —
     // shown in the strip's thumbnail slot instead of the wider stall photo.
@@ -115,6 +117,11 @@ export const campaigns = [
     end: "2026-08-16",
     priority: 5,
   },
+  // Disabled so the stripe shows only the analytica countdown, not rotating
+  // with a second generic slide — uncomment to bring the evergreen fallback
+  // back (needed again once analytica ends and no other dated campaign is
+  // running, otherwise the stripe renders nothing in that gap).
+  /*
   {
     // `evergreen` marks the year-round fallback: it's what the stripe falls back
     // to whenever no dated campaign is running, and it's what renders on the
@@ -132,6 +139,7 @@ export const campaigns = [
     end: "2027-12-31",
     priority: 1,
   },
+  */
   /*
   {
     id: "independence-day-2026-classic",

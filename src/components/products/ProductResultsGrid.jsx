@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
+import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
 
 const INITIAL_VISIBLE_PRODUCTS = 24;
 const LOAD_MORE_COUNT = 24;
@@ -69,10 +70,15 @@ function ProductCard({ product }) {
     >
       <Link
         aria-label={`View ${product.name}`}
-        className="mb-4 flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-line-light bg-parchment-alt"
+        className="relative mb-4 flex aspect-[4/3] w-full items-center justify-center overflow-hidden border border-line-light bg-parchment-alt"
         href={productHref}
         prefetch={false}
       >
+        <AnalyticaShowcaseBadge
+          principalSlug={product.principalSlug}
+          productSlug={product.slug}
+          variant="ribbon"
+        />
         {product.image ? (
           <Image
             alt={product.imageAlt ?? product.name}

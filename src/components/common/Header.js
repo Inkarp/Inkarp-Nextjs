@@ -245,7 +245,7 @@ export default function Header() {
                 >
                   <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#D5BDA2]/40 transition-transform duration-300 delay-[60ms] group-hover/top:scale-y-100 group-hover/top:delay-0" />
                   <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/25 transition-transform duration-300 delay-[40ms] group-hover/top:scale-y-100 group-hover/top:delay-[20ms]" />
-                  <span className="pointer-events-none absolute inset-0 scale-y-0 border-r border-black/40 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/top:scale-y-100 group-hover/top:delay-[40ms]" />
+                  <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/top:scale-y-100 group-hover/top:delay-[40ms]" />
                   <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/top:scale-y-100 group-hover/top:delay-[60ms]" />
 
                   <span className="relative z-10 block overflow-hidden">
@@ -329,7 +329,7 @@ export default function Header() {
                       >
                         <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#D5BDA2]/40 transition-transform duration-300 delay-[60ms] group-hover/nav:scale-y-100 group-hover/nav:delay-0" />
                         <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/25 transition-transform duration-300 delay-[40ms] group-hover/nav:scale-y-100 group-hover/nav:delay-[20ms]" />
-                        <span className="pointer-events-none absolute inset-0 scale-y-0 border-r border-black/40 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/nav:scale-y-100 group-hover/nav:delay-[40ms]" />
+                        <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/nav:scale-y-100 group-hover/nav:delay-[40ms]" />
                         <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/nav:scale-y-100 group-hover/nav:delay-[60ms]" />
 
                         <span className="relative z-10 flex items-center gap-1">
@@ -371,7 +371,7 @@ export default function Header() {
                               >
                                 <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#D5BDA2]/40 transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-100 group-hover/child:delay-0" />
                                 <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/25 transition-transform duration-300 delay-[40ms] group-hover/child:scale-y-100 group-hover/child:delay-[20ms]" />
-                                <span className="pointer-events-none absolute inset-0 scale-y-0 border-r border-black/40 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/child:scale-y-100 group-hover/child:delay-[40ms]" />
+                                <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/child:scale-y-100 group-hover/child:delay-[40ms]" />
                                 <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/child:scale-y-100 group-hover/child:delay-[60ms]" />
 
                                 <span className="relative z-10 block overflow-hidden">

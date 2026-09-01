@@ -5,8 +5,32 @@ import { useState } from "react";
 import { FiArrowRight, FiChevronLeft, FiChevronRight, FiLayers } from "react-icons/fi";
 import RecTag from "@/components/home/RecTag";
 import { stallWorkflowStages } from "@/data/stallWorkflows";
+import { getProductBySlug } from "@/data/products/principals";
 
+// One chip per confirmed catalogue page — resolves the real product name/href
+// rather than reusing the free-text `name` on the workflow entry (which is
+// often several models bundled into one descriptive string).
+function ProductSlugChip({ slug }) {
+  const product = getProductBySlug(slug);
+
+  return (
+    <Link
+      className="inline-flex items-center border border-red/25 bg-red/5 px-2.5 py-1 text-[11px] font-semibold leading-4 text-red transition hover:border-red hover:bg-red/10"
+      href={product?.href ?? `/products/${slug}`}
+    >
+      {product?.name ?? slug}
+    </Link>
+  );
+}
+
+// Falls back to the principal's brand-filtered listing when the workflow
+// entry has no confirmed productSlugs yet (either it names a whole product
+// family with no single model, or the exact model has no catalogue page).
 function ProductChip({ product }) {
+  if (product.productSlugs?.length) {
+    return product.productSlugs.map((slug) => <ProductSlugChip key={slug} slug={slug} />);
+  }
+
   const label = product.name ? `${product.principalName} — ${product.name}` : product.principalName;
 
   if (!product.principalSlug) {
@@ -68,24 +92,33 @@ function StageSlide({ stage }) {
         </div>
 
         {stage.footnote ? (
-          <p className="mt-4 border-t border-line-light pt-3 text-xs text-ink-soft">
-            {stage.footnote.principalSlug !== undefined ? (
-              <>
-                <span className="font-semibold text-ink">
-                  {stage.footnote.principalSlug ? (
-                    <Link className="text-red hover:underline" href={`/products?brand=${stage.footnote.principalSlug}`}>
-                      {stage.footnote.principalName}
-                    </Link>
-                  ) : (
-                    stage.footnote.principalName
-                  )}
-                </span>{" "}
-                — {stage.footnote.note}
-              </>
-            ) : (
-              stage.footnote.note
-            )}
-          </p>
+          <div className="mt-4 border-t border-line-light pt-3">
+            <p className="text-xs text-ink-soft">
+              {stage.footnote.principalSlug !== undefined ? (
+                <>
+                  <span className="font-semibold text-ink">
+                    {stage.footnote.principalSlug ? (
+                      <Link className="text-red hover:underline" href={`/products?brand=${stage.footnote.principalSlug}`}>
+                        {stage.footnote.principalName}
+                      </Link>
+                    ) : (
+                      stage.footnote.principalName
+                    )}
+                  </span>{" "}
+                  — {stage.footnote.note}
+                </>
+              ) : (
+                stage.footnote.note
+              )}
+            </p>
+            {stage.footnote.products?.length ? (
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {stage.footnote.products.map((product, index) => (
+                  <ProductChip key={`${product.principalName}-${index}`} product={product} />
+                ))}
+              </div>
+            ) : null}
+          </div>
         ) : null}
       </div>
     </div>

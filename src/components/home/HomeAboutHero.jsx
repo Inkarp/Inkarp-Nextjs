@@ -138,11 +138,9 @@ function SlideAbout() {
   );
 }
 
-/**
- * Days/hours/minutes until `startsAt`, or null until mounted — the remaining
- * time depends on the current clock, so computing it during render would bake
- * the build time into the static HTML and mismatch on hydration.
- */
+// Analytica hero slide — disabled until it's needed again; uncomment this
+// block and add SlideAnalytica back to SLIDES below to bring it back.
+/*
 function useTimeUntil(startsAt) {
   const [remaining, setRemaining] = useState(null);
 
@@ -285,8 +283,9 @@ function SlideAnalytica() {
     </div>
   );
 }
+*/
 
-const SLIDES = [SlideAbout, SlideAnalytica];
+const SLIDES = [SlideAbout];
 
 export default function HomeAboutHero() {
   const [activeIndex, setActiveIndex] = useState(0);

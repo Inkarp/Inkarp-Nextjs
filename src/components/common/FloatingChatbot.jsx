@@ -288,6 +288,28 @@ export default function FloatingChatbot() {
     rememberChatbotSeen();
   }
 
+  function openLiveChat() {
+    pushEvent("live_chat_clicked", { source: "dexter_handoff" });
+    setIsOpen(false);
+    dismissGreetingTooltip();
+    rememberChatbotSeen();
+
+    const openTawk = () => {
+      const tawk = window.Tawk_API;
+      if (!tawk) return false;
+      tawk.showWidget?.();
+      tawk.maximize?.();
+      return true;
+    };
+
+    if (openTawk()) return;
+
+    const retryTimer = window.setInterval(() => {
+      if (openTawk()) window.clearInterval(retryTimer);
+    }, 250);
+    window.setTimeout(() => window.clearInterval(retryTimer), 5000);
+  }
+
   function dismissGreetingTooltip() {
     setShowGreetingTooltip(false);
     rememberGreetingDismissed();
@@ -669,7 +691,7 @@ export default function FloatingChatbot() {
 
             {step === "chat" ? (
               <div className="animate-[hvc-fade_300ms_ease] motion-reduce:animate-none">
-                <DexterChat onFallback={() => setStep("type")} />
+                <DexterChat onFallback={() => setStep("type")} onLiveChat={openLiveChat} />
               </div>
             ) : null}
 

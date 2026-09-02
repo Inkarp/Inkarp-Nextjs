@@ -34,6 +34,12 @@ export default function SiteLayout({ children }) {
               }
             }
           };
+          window.Tawk_API.onLoad = function() {
+            window.Tawk_API.hideWidget();
+          };
+          window.Tawk_API.onChatMinimized = function() {
+            window.Tawk_API.hideWidget();
+          };
           window.Tawk_LoadStart = new Date();
           (function() {
             var s1 = document.createElement("script");

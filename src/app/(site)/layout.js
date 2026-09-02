@@ -16,6 +16,21 @@ export default function SiteLayout({ children }) {
       <BasketSync />
       <ShortlistFloats />
       <PromoPopup />
+      <style>
+        {`
+          html.inkarp-live-chat-launcher-small iframe[title*="chat" i] {
+            transform: scale(0.78) !important;
+            transform-origin: bottom right !important;
+            transition: transform 160ms ease !important;
+          }
+
+          @media (max-width: 640px) {
+            html.inkarp-live-chat-launcher-small iframe[title*="chat" i] {
+              transform: scale(0.72) !important;
+            }
+          }
+        `}
+      </style>
       <Script id="tawk-to-widget" strategy="afterInteractive">
         {`
           window.Tawk_API = window.Tawk_API || {};
@@ -35,10 +50,22 @@ export default function SiteLayout({ children }) {
             }
           };
           window.Tawk_API.onLoad = function() {
+            if (window.__inkarpLiveChatRequested) {
+              document.documentElement.classList.add("inkarp-live-chat-launcher-small");
+              window.Tawk_API.showWidget();
+              return;
+            }
             window.Tawk_API.hideWidget();
           };
+          window.Tawk_API.onChatMaximized = function() {
+            document.documentElement.classList.remove("inkarp-live-chat-launcher-small");
+          };
           window.Tawk_API.onChatMinimized = function() {
-            window.Tawk_API.hideWidget();
+            if (window.__inkarpLiveChatRequested) {
+              document.documentElement.classList.add("inkarp-live-chat-launcher-small");
+            } else {
+              window.Tawk_API.hideWidget();
+            }
           };
           window.Tawk_LoadStart = new Date();
           (function() {

@@ -293,19 +293,21 @@ export default function FloatingChatbot() {
     setIsOpen(false);
     dismissGreetingTooltip();
     rememberChatbotSeen();
+    window.__inkarpLiveChatRequested = true;
+    document.documentElement.classList.add("inkarp-live-chat-launcher-small");
 
-    const openTawk = () => {
+    const showTawkLauncher = () => {
       const tawk = window.Tawk_API;
-      if (!tawk) return false;
-      tawk.showWidget?.();
-      tawk.maximize?.();
+      if (typeof tawk?.showWidget !== "function") return false;
+
+      tawk.showWidget();
       return true;
     };
 
-    if (openTawk()) return;
+    if (showTawkLauncher()) return;
 
     const retryTimer = window.setInterval(() => {
-      if (openTawk()) window.clearInterval(retryTimer);
+      if (showTawkLauncher()) window.clearInterval(retryTimer);
     }, 250);
     window.setTimeout(() => window.clearInterval(retryTimer), 5000);
   }

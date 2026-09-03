@@ -3,7 +3,7 @@
 import { useState } from"react";
 import Image from"next/image";
 import { FiX } from"react-icons/fi";
-import { getDaysLeft, webinars } from"@/data/webinars";
+import { getDaysLeft, getWebinarSortDate, webinars } from"@/data/webinars";
 import RegisterForm from"./RegisterForm";
 
 const tabs = [
@@ -24,10 +24,10 @@ export default function WebinarsPage() {
   const visibleWebinars = webinars
     .filter((webinar) =>
       activeTab ==="upcoming"
-        ? getDaysLeft(webinar.date) > 0
-        : getDaysLeft(webinar.date) === 0
+        ? getDaysLeft(webinar) > 0
+        : getDaysLeft(webinar) === 0
     )
-    .sort((a, b) => new Date(a.date) - new Date(b.date));
+    .sort((a, b) => getWebinarSortDate(a) - getWebinarSortDate(b));
 
   return (
     <main className="overflow-hidden">
@@ -84,7 +84,7 @@ export default function WebinarsPage() {
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {visibleWebinars.map((webinar) => {
-              const daysLeft = getDaysLeft(webinar.date);
+              const daysLeft = getDaysLeft(webinar);
 
               return (
                 <div
@@ -170,7 +170,7 @@ export default function WebinarsPage() {
               className="mb-3 text-base text-ink"
               dangerouslySetInnerHTML={{ __html: selectedWebinar.details }}
             />
-            {getDaysLeft(selectedWebinar.date) > 0 ? (
+            {getDaysLeft(selectedWebinar) > 0 ? (
               <div className="mt-6 text-center">
                 <button
                   className="bg-rose-50 px-6 py-2 text-sm text-rose-700 transition hover:bg-rose-100"

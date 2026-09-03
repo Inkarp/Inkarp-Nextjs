@@ -16,6 +16,7 @@ import {
   FiX,
 } from"react-icons/fi";
 import { collectTracking } from"@/lib/browserTracking";
+import { getDaysLeft } from"@/data/webinars";
 
 const startOfToday = () => {
   const d = new Date();
@@ -60,9 +61,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
     if (!preselected) {
       return"";
     }
-    const eventDate = new Date(preselected.date);
-    eventDate.setHours(0, 0, 0, 0);
-    return eventDate >= today ? preselected.title :"";
+    return getDaysLeft(preselected, today) > 0 ? preselected.title :"";
   }, [preselected, today]);
 
   const getInitialFormData = () => ({

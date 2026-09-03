@@ -21,6 +21,8 @@ const DEFAULT_ACCENT = {
 
 const PRINCIPAL_ACCENTS = [
   {
+    key: "mettler",
+    label: "Mettler",
     match: (webinar) => webinar.sourceLink?.includes("mt.com") || webinar.img?.includes("Metller"),
     text: "#15803d",
     tint: "#f0fdf4",
@@ -28,6 +30,8 @@ const PRINCIPAL_ACCENTS = [
     border: "#bbf7d0",
   },
   {
+    key: "chemspeed",
+    label: "Chemspeed",
     match: (webinar) => webinar.sourceLink?.includes("chemspeed") || webinar.img?.includes("Chemspeed"),
     text: "#a16207",
     tint: "#fef9c3",
@@ -35,12 +39,18 @@ const PRINCIPAL_ACCENTS = [
     border: "#fde68a",
   },
   {
+    key: "waters",
+    label: "Waters",
     match: (webinar) => webinar.img?.includes("waters") || webinar.sourceLink?.includes("on24.com"),
     text: "#2563eb",
     tint: "#eff6ff",
     soft: "#f8fbff",
     border: "#bfdbfe",
   },
+];
+const PRINCIPAL_FILTERS = [
+  { key: "all", label: "All" },
+  ...PRINCIPAL_ACCENTS.map(({ key, label }) => ({ key, label })),
 ];
 
 function getShortDate(value) {
@@ -52,22 +62,36 @@ function getWebinarAccent(webinar) {
   return PRINCIPAL_ACCENTS.find((accent) => accent.match(webinar)) ?? DEFAULT_ACCENT;
 }
 
+function getWebinarPrincipal(webinar) {
+  return PRINCIPAL_ACCENTS.find((accent) => accent.match(webinar))?.key ?? "other";
+}
+
 export default function WebinarsPage() {
   const [selectedWebinar, setSelectedWebinar] = useState(null);
   const [showRegister, setShowRegister] = useState(false);
   const [activeTab, setActiveTab] = useState("upcoming");
+  const [activePrincipal, setActivePrincipal] = useState("all");
 
   const handleCloseModal = () => {
     setSelectedWebinar(null);
     setShowRegister(false);
   };
 
-  const visibleWebinars = webinars
+  const webinarsForTab = webinars
     .filter((webinar) =>
       activeTab ==="upcoming"
         ? getDaysLeft(webinar) > 0
         : getDaysLeft(webinar) === 0
-    )
+    );
+  const principalCounts = PRINCIPAL_FILTERS.reduce((counts, principal) => {
+    counts[principal.key] =
+      principal.key === "all"
+        ? webinarsForTab.length
+        : webinarsForTab.filter((webinar) => getWebinarPrincipal(webinar) === principal.key).length;
+    return counts;
+  }, {});
+  const visibleWebinars = webinarsForTab
+    .filter((webinar) => activePrincipal === "all" || getWebinarPrincipal(webinar) === activePrincipal)
     .sort((a, b) => getWebinarSortDate(a) - getWebinarSortDate(b));
   const nextWebinar = activeTab ==="upcoming" ? visibleWebinars[0] : null;
   const selectedAccent = selectedWebinar ? getWebinarAccent(selectedWebinar) : DEFAULT_ACCENT;
@@ -113,24 +137,56 @@ export default function WebinarsPage() {
             </p>
           </div>
 
-          <div
-            className="flex w-fit gap-1 border border-line-light bg-parchment-alt p-1"
-            data-reveal
-          >
-            {tabs.map((tab) => (
-              <button
-                className={`px-4 py-2 text-sm font-medium transition ${
-                  activeTab === tab.key
-                    ?"bg-ink text-parchment"
-                    :"text-ink-soft hover:bg-white hover:text-ink"
-                }`}
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
-                type="button"
-              >
-                {tab.label}
-              </button>
-            ))}
+          <div className="flex flex-col gap-2 sm:items-start md:items-end">
+            <div
+              className="flex w-fit gap-1 border border-line-light bg-parchment-alt p-1"
+              data-reveal
+            >
+              {tabs.map((tab) => (
+                <button
+                  className={`px-4 py-2 text-sm font-medium transition ${
+                    activeTab === tab.key
+                      ?"bg-ink text-parchment"
+                      :"text-ink-soft hover:bg-white hover:text-ink"
+                  }`}
+                  key={tab.key}
+                  onClick={() => {
+                    setActiveTab(tab.key);
+                    setActivePrincipal("all");
+                  }}
+                  type="button"
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex max-w-full gap-1 overflow-x-auto pb-1" aria-label="Filter webinars by principal">
+              {PRINCIPAL_FILTERS.map((principal) => {
+                const count = principalCounts[principal.key] ?? 0;
+                const accent = PRINCIPAL_ACCENTS.find((item) => item.key === principal.key) ?? DEFAULT_ACCENT;
+                const isActive = activePrincipal === principal.key;
+
+                return (
+                  <button
+                    aria-pressed={isActive}
+                    className="shrink-0 border px-3 py-1.5 text-xs font-semibold transition hover:brightness-[0.98] disabled:cursor-not-allowed disabled:opacity-45"
+                    disabled={count === 0}
+                    key={principal.key}
+                    onClick={() => setActivePrincipal(principal.key)}
+                    style={{
+                      backgroundColor: isActive ? accent.tint : "#ffffff",
+                      borderColor: isActive ? accent.border : "#e8dfd2",
+                      color: isActive ? accent.text : "#6f6a63",
+                    }}
+                    type="button"
+                  >
+                    {principal.label}
+                    <span className="ml-1 font-normal">({count})</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 

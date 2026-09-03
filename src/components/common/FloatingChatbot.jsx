@@ -294,13 +294,19 @@ export default function FloatingChatbot() {
     dismissGreetingTooltip();
     rememberChatbotSeen();
     window.__inkarpLiveChatRequested = true;
+    document.documentElement.classList.add("inkarp-live-chat-requested");
     document.documentElement.classList.add("inkarp-live-chat-launcher-small");
 
     const showTawkLauncher = () => {
+      if (typeof window.__inkarpOpenLiveChat === "function") {
+        return window.__inkarpOpenLiveChat();
+      }
+
       const tawk = window.Tawk_API;
       if (typeof tawk?.showWidget !== "function") return false;
 
       tawk.showWidget();
+      if (typeof tawk.maximize === "function") tawk.maximize();
       return true;
     };
 
@@ -510,6 +516,29 @@ export default function FloatingChatbot() {
         style={{ bottom: "1.25rem", color: CHATBOT_CONFIG.colors.launcherText, right: "1rem", zIndex: TOP_LAYER }}
         type="button"
       >
+        {!isOpen ? (
+          <svg
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-3.5 overflow-visible text-red drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition duration-300 group-hover:-translate-y-0.5 sm:-inset-4"
+            viewBox="0 0 84 84"
+          >
+            <defs>
+              <path d="M 12 43 A 30 30 0 0 1 72 43" id="dexter-label-arc" />
+            </defs>
+            <text
+              fill="currentColor"
+              fontSize="8"
+              fontWeight="900"
+              letterSpacing="1.7"
+              textAnchor="middle"
+              textLength="56"
+            >
+              <textPath href="#dexter-label-arc" startOffset="50%">
+                I AM DEXTER
+              </textPath>
+            </text>
+          </svg>
+        ) : null}
         {showAttentionPulse && !isOpen ? (
           <span
             aria-hidden="true"

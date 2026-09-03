@@ -29,10 +29,67 @@ export default function SiteLayout({ children }) {
               transform: scale(0.72) !important;
             }
           }
+
+          html:not(.inkarp-live-chat-requested) iframe[src*="tawk.to"],
+          html:not(.inkarp-live-chat-requested) iframe[title*="tawk" i],
+          html:not(.inkarp-live-chat-requested) iframe[title*="chat" i] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+          }
         `}
       </style>
       <Script id="tawk-to-widget" strategy="afterInteractive">
         {`
+          (function() {
+            var root = document.documentElement;
+            var isClosingLiveChat = false;
+
+            function markLiveChatRequested() {
+              window.__inkarpLiveChatRequested = true;
+              root.classList.add("inkarp-live-chat-requested");
+              root.classList.add("inkarp-live-chat-launcher-small");
+            }
+
+            function keepLiveChatHidden() {
+              if (window.__inkarpLiveChatRequested) return;
+              root.classList.remove("inkarp-live-chat-requested");
+              root.classList.remove("inkarp-live-chat-launcher-small");
+              if (window.Tawk_API && typeof window.Tawk_API.hideWidget === "function") {
+                window.Tawk_API.hideWidget();
+              }
+            }
+
+            window.__inkarpCloseLiveChat = function() {
+              if (isClosingLiveChat) return;
+              isClosingLiveChat = true;
+              window.__inkarpLiveChatRequested = false;
+              root.classList.remove("inkarp-live-chat-requested");
+              root.classList.remove("inkarp-live-chat-launcher-small");
+              if (window.Tawk_API && typeof window.Tawk_API.hideWidget === "function") {
+                window.Tawk_API.hideWidget();
+              }
+              window.setTimeout(function() {
+                isClosingLiveChat = false;
+              }, 0);
+            };
+
+            window.__inkarpOpenLiveChat = function() {
+              markLiveChatRequested();
+              var tawk = window.Tawk_API;
+              if (!tawk || typeof tawk.showWidget !== "function") return false;
+
+              tawk.showWidget();
+              if (typeof tawk.maximize === "function") {
+                tawk.maximize();
+              }
+              return true;
+            };
+
+            keepLiveChatHidden();
+          })();
+
           window.Tawk_API = window.Tawk_API || {};
           window.Tawk_API.customStyle = {
             zIndex: "2147483647 !important",
@@ -51,21 +108,28 @@ export default function SiteLayout({ children }) {
           };
           window.Tawk_API.onLoad = function() {
             if (window.__inkarpLiveChatRequested) {
-              document.documentElement.classList.add("inkarp-live-chat-launcher-small");
-              window.Tawk_API.showWidget();
+              window.__inkarpOpenLiveChat();
               return;
             }
             window.Tawk_API.hideWidget();
           };
           window.Tawk_API.onChatMaximized = function() {
+            if (!window.__inkarpLiveChatRequested) {
+              if (typeof window.Tawk_API.minimize === "function") {
+                window.Tawk_API.minimize();
+              }
+              if (typeof window.Tawk_API.hideWidget === "function") {
+                window.Tawk_API.hideWidget();
+              }
+              return;
+            }
             document.documentElement.classList.remove("inkarp-live-chat-launcher-small");
           };
           window.Tawk_API.onChatMinimized = function() {
-            if (window.__inkarpLiveChatRequested) {
-              document.documentElement.classList.add("inkarp-live-chat-launcher-small");
-            } else {
-              window.Tawk_API.hideWidget();
-            }
+            window.__inkarpCloseLiveChat();
+          };
+          window.Tawk_API.onChatHidden = function() {
+            window.__inkarpCloseLiveChat();
           };
           window.Tawk_LoadStart = new Date();
           (function() {

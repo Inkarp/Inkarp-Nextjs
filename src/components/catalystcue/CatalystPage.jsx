@@ -53,10 +53,6 @@ export default function CatalystPage() {
     return sortIssuesNewestFirst(catalystCards)[0];
   }, []);
 
-  const archiveIssues = useMemo(() => {
-    return catalystCards.filter((card) => card.slug !== latestIssue?.slug);
-  }, [latestIssue]);
-
   return (
     <main className="relative bg-parchment">
       {/* The hero video lives in the page shell (magazine/page.js) so it can
@@ -72,10 +68,10 @@ export default function CatalystPage() {
             <div className="mb-8">
               <RecTag>CATALYSTCue Archive</RecTag>
               <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-                Browse Previous Issues
+                Browse All Issues
               </h2>
             </div>
-            <CatalystArchive catalystCards={archiveIssues} />
+            <CatalystArchive catalystCards={catalystCards} />
           </div>
         </div>
       </section>

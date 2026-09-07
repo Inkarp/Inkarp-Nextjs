@@ -161,6 +161,24 @@ export const catalystCards = [
     altText:
       "Inkarp CATALYSTCue Volume 2 Issue 6 Sample to Insight Across Biological Workflows",
   },
+  {
+    id: 13,
+    Volume: "Volume-3",
+    subTitle: "Issue 01",
+    image: "/assets/catalyst/images/Issue1V3.webp",
+    Date: "August 2026",
+    slug: "Precision-without-compromise",
+    title: "CATALYSTCue Magazine - Volume 3 - Issue 1",
+    themeTitle: "PRECISION WITHOUT COMPROMISE",
+    metaTitle:
+      "Precision Without Compromise | CATALYSTCue Volume 3 Issue 1 | Inkarp",
+    metaDescription:
+      "Read CATALYSTCue Volume 3, Issue 1: the analytica Lab India special featuring laboratory water, PFAS analysis, pharmaceutical homogenization, and peptide preservation.",
+    keywords:
+      "CATALYSTCue, Inkarp, Precision Without Compromise, Volume 3 Issue 1, analytica Lab India, laboratory workflows, laboratory water, PFAS analysis, pharmaceutical homogenization, peptide preservation",
+    altText:
+      "CATALYSTCue Volume 3 Issue 1, August 2026: Precision Without Compromise",
+  },
 ];
 
 export function getCatalystCardBySlug(slug) {

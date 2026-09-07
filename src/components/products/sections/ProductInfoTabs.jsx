@@ -311,16 +311,18 @@ export default function ProductInfoTabs({ product }) {
               {overviewSec?.subheading ?? 'Reliable rotary evaporation, focused on the essentials'}
             </h3>
             {overviewSec?.body?.map((p, i) => {
-              const colonIdx = p.indexOf(':');
-              const heading = colonIdx > -1 ? p.slice(0, colonIdx).trim() : null;
-              const rest = colonIdx > -1 ? p.slice(colonIdx + 1).trim() : p;
+              // Match separator dashes without splitting hyphenated words.
+              const separator = /:|\s+[-\u2013\u2014]\s+/.exec(p);
+              const heading = separator ? p.slice(0, separator.index) : null;
+              const rest = separator ? p.slice(separator.index + separator[0].length) : p;
               return (
                 <p key={i} className="mb-4 flex items-start gap-3 text-sm leading-7 text-black">
                   <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center bg-parchment-alt text-red">
                     <FiCheckCircle aria-hidden="true" className="text-sm" />
                   </span>
                   <span>
-                    {heading && <strong className="font-semibold text-ink">{heading}: </strong>}
+                    {heading && <strong className="font-semibold text-ink">{heading}</strong>}
+                    {separator?.[0]}
                     {rest}
                   </span>
                 </p>

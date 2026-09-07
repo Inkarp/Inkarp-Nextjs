@@ -42,7 +42,7 @@ export default function CatalystCue() {
             loop
             muted
             playsInline
-            src="/assets/catalyst/Postlaunch_V2_issue_06.mp4"
+            src="/assets/catalyst/videos/post-lauch-V3I1.mp4"
           >
             <track kind="captions" />
           </video>

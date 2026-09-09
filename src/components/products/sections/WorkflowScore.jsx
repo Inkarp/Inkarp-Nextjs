@@ -95,10 +95,20 @@ export default function WorkflowScore({ data, productName }) {
   const name = productName ?? 'this product';
   const steps = data?.steps ?? [];
   const benefits = data?.benefits ?? [];
+  const bands = data?.bands ?? [];
   const [selected, setSelected] = useState([]);
 
   const selectedSteps = useMemo(() => selected.map((index) => steps[index]).filter(Boolean), [selected, steps]);
   const percent = steps.length ? Math.round((selectedSteps.length / steps.length) * 100) : 0;
+  // Optional readiness bands: when the content supplies count-based tiers
+  // (e.g. "0-2 manual steps = High readiness"), show that tier's summary
+  // alongside the existing per-step comparisons. Absent for products that
+  // don't define bands, so this stays inert for the original per-step-only
+  // use (Heidolph rotary evaporators).
+  const band = useMemo(
+    () => bands.find((b) => selectedSteps.length >= b.min && selectedSteps.length <= b.max),
+    [bands, selectedSteps.length]
+  );
 
   if (!steps.length) return null;
 
@@ -159,6 +169,32 @@ export default function WorkflowScore({ data, productName }) {
               </p>
             </div>
 
+            {band ? (
+              <div className="mt-6 border border-line-light bg-parchment-alt p-4">
+                <p className="text-sm font-bold uppercase tracking-wide text-red">{band.title}</p>
+                <dl className="mt-3 space-y-2 text-sm leading-6">
+                  {band.meaning ? (
+                    <div className="flex gap-2">
+                      <dt className="shrink-0 font-semibold text-black">Meaning:</dt>
+                      <dd className="text-ink-soft">{band.meaning}</dd>
+                    </div>
+                  ) : null}
+                  {band.biggestGains ? (
+                    <div className="flex gap-2">
+                      <dt className="shrink-0 font-semibold text-black">Biggest gains:</dt>
+                      <dd className="text-ink-soft">{band.biggestGains}</dd>
+                    </div>
+                  ) : null}
+                  {band.recommendedConfiguration ? (
+                    <div className="flex gap-2">
+                      <dt className="shrink-0 font-semibold text-black">Recommended configuration:</dt>
+                      <dd className="text-ink-soft">{band.recommendedConfiguration}</dd>
+                    </div>
+                  ) : null}
+                </dl>
+              </div>
+            ) : null}
+
             <div className="mt-7">
               <h3 className="text-base font-semibold tracking-tight text-ink">How {name} simplifies your selected steps:</h3>
               {selectedSteps.length ? (
@@ -210,7 +246,7 @@ export default function WorkflowScore({ data, productName }) {
                 successMessage={(contactName) =>
                   `Thank you${contactName ? `, ${contactName}` : ''}. We have sent your workflow score to our team.`
                 }
-                summary={`Score: ${percent}%\n\nManual steps selected:\n${selectedSteps
+                summary={`Score: ${percent}%${band ? ` — ${band.title}` : ''}\n\nManual steps selected:\n${selectedSteps
                   .map((step) => `- ${step.label} (manually: ${step.manual})`)
                   .join('\n')}`}
                 triggerLabel={data?.ctaLabel ?? 'Map my workflow with an expert'}

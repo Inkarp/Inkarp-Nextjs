@@ -62,6 +62,7 @@ export default async function ProductPage({ params }) {
     product.longForm?.heroLead ??
     (overviewIsString ? product.overview : product.subhead) ??
     "";
+  const heroParagraphs = product.longForm?.heroParagraphs ?? [];
   const ctaHref = isRichPage ? "#booking" : "/contact";
   const heroHookMatch = overviewIsString
     ? product.overview.match(/^(.*?)(?=\s+(?:The Hei-FLOW|The Heidolph)\b)/)
@@ -181,9 +182,22 @@ export default async function ProductPage({ params }) {
                 {heroHook}
               </p>
             ) : null}
-            <p className="mt-5 text-sm leading-6 text-ink-soft sm:text-base">
-              {heroLead}
-            </p>
+            {heroParagraphs.length > 0 ? (
+              heroParagraphs.map((paragraph, index) => (
+                <p
+                  className={`text-sm leading-6 text-ink-soft sm:text-base ${
+                    index === 0 ? "mt-5 font-medium text-ink" : "mt-2"
+                  }`}
+                  key={index}
+                >
+                  {paragraph}
+                </p>
+              ))
+            ) : (
+              <p className="mt-5 text-sm leading-6 text-ink-soft sm:text-base">
+                {heroLead}
+              </p>
+            )}
           </div>
 
           <div className="relative self-center border border-line-light bg-parchment-alt p-3 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">

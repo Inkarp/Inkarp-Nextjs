@@ -70,7 +70,30 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     };
   }), [selections, steps]);
 
-  const recommendedTitle = selectedRows.length
+  // Optional named result profiles: when the content supplies documented
+  // combinations (e.g. "stability + large load + long-term + GMP" -> a full
+  // recommended setup), match the visitor's answers against them instead of
+  // just echoing each answer back individually. Falls back to selectedRows
+  // (the original echo behaviour) when no profile is defined or none match,
+  // so products without `profiles` render exactly as before.
+  const profiles = data?.profiles ?? [];
+  const matchedProfile = useMemo(
+    () => profiles.find((profile) =>
+      Object.entries(profile.match ?? {}).every(([key, val]) => selections[key] === val)
+    ),
+    [profiles, selections]
+  );
+  const profileRows = useMemo(() => {
+    if (!matchedProfile) return null;
+    return Object.entries(matchedProfile.result ?? {}).map(([key, val]) => ({
+      key,
+      label: matchedProfile.resultLabels?.[key] ?? titleCase(key),
+      value: cleanText(String(val)),
+    }));
+  }, [matchedProfile]);
+  const displayRows = profileRows ?? selectedRows;
+
+  const recommendedTitle = displayRows.length
     ? `${productName} starting setup`
     : `${productName} configuration`;
 
@@ -95,7 +118,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     window.dispatchEvent(new CustomEvent('product-config-ready'));
   };
 
-  const configurationSummary = selectedRows
+  const configurationSummary = displayRows
     .map((row) => `- ${row.label}: ${row.desc ? `${row.value} (${row.desc})` : row.value}`)
     .join('\n');
 
@@ -200,7 +223,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   </div>
                   <h3 className="mt-4 shrink-0 text-2xl font-semibold tracking-tight text-ink">{result.title ?? recommendedTitle}</h3>
                   <div className="mt-5 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
-                    {selectedRows.map((row) => (
+                    {displayRows.map((row) => (
                       <div className="border border-line-light bg-parchment-alt px-4 py-3" key={row.key}>
                         <div className="flex items-center justify-between gap-4">
                           <span className="text-xs font-bold uppercase tracking-wide text-black">{row.label}</span>

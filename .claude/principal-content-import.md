@@ -73,6 +73,20 @@ cannot be made without touching other pages, stop and tell me instead of doing i
    - **`tabSummary`** present for each tab.
    - **Sitemap**: every product slug present.
    - **Dead internal links** in `internalLinks` (note whether anything renders them).
+   - **Workbook metadata override collision**: if the product's `slug` matches a row in
+     `workbook-product-metadata.json`, `applyWorkbookMetadata()` in `catalog.js` does
+     `{...product, ...metadataFields}` — the workbook row's `applications` (if non-empty)
+     silently **replaces** the product JSON's own `applications` array, since `applications`
+     is in `WORKBOOK_METADATA_FIELDS`. This breaks the Applications tab (which renders
+     `product.applications` directly) with the workbook's terse 1-2 word tags instead of the
+     authored copy. Check `bySlug`/`byKey` in `getWorkbookMetadataMaps()` for a match before
+     writing `applications`, and if the workbook row's version is a placeholder, set that row's
+     `applications` to `[]` in `workbook-product-metadata.json` (an empty array is skipped by
+     `getWorkbookMetadataFields`, so the product's own array survives). Same risk applies to
+     every other field in `WORKBOOK_METADATA_FIELDS` (canonicalUrl, breadcrumbPath, imageAlt,
+     h1, subhead, metaTitle/Description/Keywords, manufacturerUrl, internalLinks,
+     synonymUseCaseKeywords, searchKeywords, usp, processApplication) — harmless if your
+     authored value already matches the workbook row, worth a diff if it doesn't.
 
 7. **Report** — group as: *Content complete* (with the count table), *Content
    gaps*, *UI gaps*, *Structural differences from the doc*, *Data hygiene*.

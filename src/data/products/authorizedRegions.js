@@ -6,7 +6,7 @@ export const DEFAULT_AUTHORIZED_REGION = "India";
 export const principalAuthorizedRegions = {
   "ametek-brookfield": "North India",
   zeiss: "Andhra Pradesh, Telangana & Tamil Nadu",
-  "jeio-tech": "South India",
+  jeiotech: "South India",
 };
 
 export function getAuthorizedRegion(principalSlug) {

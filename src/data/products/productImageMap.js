@@ -175,6 +175,7 @@ export const productImageMap = {
   "kubota:large-capacity-refrigerated-centrifuge-model-9945": "/assets/images/productImages/Kubota/M9942.jpg",
   "kubota:large-capacity-refrigerated-centrifuge-model-9925": "/assets/images/productImages/Kubota/M9920.jpg",
   "jeio-tech:autoclave": "/assets/images/productImages/Jiotech/autoclave.jpg",
+  "jeiotech:temperature-humidity-chamber-th3-e": "/assets/images/productImages/Jiotech/temperature-humidity-chamber-th3-e.jpg",
   "sonics-and-materials:vc-50-ultrasonic-probe-sonicator": "/assets/images/productImages/Sonics/vc-50-ultrasonic-probe-sonicator.webp",
   "sonics-and-materials:vcx-130-ultrasonic-probe-sonicator": "/assets/images/productImages/Sonics/vcx-130-ultrasonic-probe-sonicator.webp",
   "sonics-and-materials:vcx-500-ultrasonic-probe-sonicator": "/assets/images/productImages/Sonics/vcx-500-ultrasonic-probe-sonicator.webp",

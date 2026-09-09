@@ -107,6 +107,167 @@ const FORMULAS = {
       ],
     };
   },
+
+  // Chamber/shelf load fit against published per-model per-shelf, per-shelf-count
+  // and total weight limits. `data.modelLimits` (ordered smallest to largest)
+  // supplies the limits so this stays reusable across any chamber-style
+  // product rather than hard-coding one model's numbers here.
+  'shelf-load-fit-check': ({ nums, data }) => {
+    const shelvesUsed = Math.max(0, nums.shelvesUsed ?? 0);
+    const loadPerShelf = Math.max(0, nums.loadPerShelfKg ?? 0);
+    const totalLoad = shelvesUsed * loadPerShelf;
+
+    const models = data?.modelLimits ?? [];
+    const smallest = models[0];
+    const widest = models[models.length - 1];
+    const fits = (m) =>
+      loadPerShelf <= m.maxLoadPerShelfKg && totalLoad <= m.maxLoadKg && shelvesUsed <= m.maxShelves;
+    const fitting = models.find(fits);
+
+    let recommendedModel;
+    let usableShelves;
+    let loadCheck;
+    let fitResult;
+
+    if (fitting && smallest && fitting === smallest) {
+      recommendedModel = smallest.name;
+      usableShelves = `${count(shelvesUsed)} of up to ${count(smallest.maxShelves)}`;
+      loadCheck = `Well within ${count(smallest.maxLoadPerShelfKg)} kg/shelf and ${count(smallest.maxLoadKg)} kg total`;
+      fitResult = 'Fits comfortably';
+    } else if (fitting) {
+      recommendedModel = fitting.name;
+      usableShelves = `${count(shelvesUsed)} of up to ${count(fitting.maxShelves)}`;
+      loadCheck = smallest && loadPerShelf > smallest.maxLoadPerShelfKg
+        ? `${count(loadPerShelf)} kg exceeds ${count(smallest.maxLoadPerShelfKg)} kg/shelf on the ${smallest.shortName} but is within ${count(fitting.maxLoadPerShelfKg)} kg on the ${fitting.shortName}`
+        : `${count(totalLoad)} kg total exceeds the ${count(smallest?.maxLoadKg)} kg limit of the ${smallest?.shortName}`;
+      fitResult = `Step up to ${fitting.name} for headroom`;
+    } else {
+      recommendedModel = 'Beyond TH3-E range';
+      usableShelves = 'Not sufficient';
+      if (widest && loadPerShelf > widest.maxLoadPerShelfKg) {
+        loadCheck = `${count(loadPerShelf)} kg/shelf exceeds the ${widest.shortName}'s ${count(widest.maxLoadPerShelfKg)} kg/shelf limit`;
+      } else if (widest && shelvesUsed > widest.maxShelves) {
+        loadCheck = `${count(shelvesUsed)} shelves exceeds the ${widest.shortName}'s ${count(widest.maxShelves)}-shelf maximum`;
+      } else {
+        loadCheck = `${count(totalLoad)} kg exceeds the ${count(widest?.maxLoadKg)} kg maximum of the ${widest?.shortName}`;
+      }
+      fitResult = 'Split across two units or use a larger TH3 model';
+    }
+
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: 'Recommended model', value: recommendedModel },
+        { label: 'Usable shelves', value: usableShelves },
+        { label: 'Load check', value: loadCheck },
+        { label: 'Fit result', value: fitResult },
+      ],
+    };
+  },
+
+  // Manual refills a recirculating water supply removes over a test run —
+  // pure arithmetic from the visitor's own current refill schedule, not a
+  // manufacturer-published rate (there isn't one), so the disclaimer says so.
+  // Tier thresholds (`data.tiers`) are Inkarp's own guidance, not JeioTech's.
+  'water-refill-savings': ({ nums, data }) => {
+    const testDays = Math.max(0, nums.testDurationDays ?? 0);
+    const currentRefillsPerDay = Math.max(0, nums.currentRefillsPerDay ?? 0);
+    const refillsAvoided = testDays * currentRefillsPerDay;
+
+    const tiers = data?.tiers ?? [];
+    const tier = tiers.find((t) => testDays <= t.maxDays) ?? tiers[tiers.length - 1];
+
+    return {
+      cards: [
+        { label: 'Refills avoided', value: `About ${count(refillsAvoided)}`,
+          note: 'Assumes recirculation covers the full run instead of the manual schedule entered above.' },
+        { label: 'Unattended run time', value: tier?.unattendedRunTime ?? `${count(testDays)} day(s) without a top-up` },
+        { label: 'Risk reduced', value: tier?.riskReduced ?? 'Low-water alarm prevents dry running' },
+        { label: 'Recommended option', value: tier?.recommendedOption ?? 'Recirculation tank is sufficient' },
+      ],
+    };
+  },
+
+  // Confirms a setpoint sits inside the published operating envelope, then
+  // interpolates heat-up/cool-down time between JeioTech's own stated
+  // reference points (`data.heatAnchors`/`coolAnchors`, each an ambient
+  // starting point) rather than inventing a physics curve — every anchor is
+  // a figure JeioTech/Inkarp has already published, this just connects them.
+  'chamber-envelope-check': ({ nums, picks, data }) => {
+    const tempMin = data?.tempRange?.[0] ?? 0;
+    const tempMax = data?.tempRange?.[1] ?? 90;
+    const humidityMin = data?.humidityRange?.[0] ?? 35;
+    const humidityMax = data?.humidityRange?.[1] ?? 85;
+    const targetTemp = nums.targetTemp ?? 0;
+    const targetHumidity = nums.targetHumidity ?? 0;
+    const holdDays = Math.max(0, nums.holdDays ?? 0);
+    const needsHumidity = (picks?.humidityControlNeeded ?? 'yes') === 'yes';
+
+    const tempOk = targetTemp >= tempMin && targetTemp <= tempMax;
+    const humidityOk = !needsHumidity || (targetHumidity >= humidityMin && targetHumidity <= humidityMax);
+
+    if (!tempOk) {
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: 'Range check', value: `Out of range — exceeds ${tempMax}°C maximum` },
+          { label: 'Heating time', value: 'Not applicable' },
+          { label: 'Cooling time', value: 'Not applicable' },
+          { label: 'Water guidance', value: 'Not applicable' },
+          { label: 'Stability note', value: `Lower the target to ${tempMax}°C or below` },
+        ],
+      };
+    }
+    if (!humidityOk) {
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: 'Range check', value: `Out of range — outside ${humidityMin}–${humidityMax} %RH` },
+          { label: 'Heating time', value: 'Not applicable' },
+          { label: 'Cooling time', value: 'Not applicable' },
+          { label: 'Water guidance', value: 'Not applicable' },
+          { label: 'Stability note', value: `Set humidity within ${humidityMin}–${humidityMax} %RH, or turn humidity control off` },
+        ],
+      };
+    }
+
+    const interpolate = (target, anchors = []) => {
+      if (!anchors.length) return 0;
+      if (target <= anchors[0][0]) return anchors[0][1];
+      if (target >= anchors[anchors.length - 1][0]) return anchors[anchors.length - 1][1];
+      for (let i = 0; i < anchors.length - 1; i += 1) {
+        const [x0, y0] = anchors[i];
+        const [x1, y1] = anchors[i + 1];
+        if (target >= x0 && target <= x1) {
+          return y0 + ((target - x0) / (x1 - x0)) * (y1 - y0);
+        }
+      }
+      return anchors[anchors.length - 1][1];
+    };
+
+    const heatMinutes = Math.round(interpolate(targetTemp, data?.heatAnchors));
+    const coolMinutes = Math.round(interpolate(targetTemp, data?.coolAnchors));
+
+    let waterGuidance;
+    if (!needsHumidity) {
+      waterGuidance = 'No water needed';
+    } else if (holdDays <= 7) {
+      waterGuidance = '20 L tank with recirculation should be sufficient';
+    } else {
+      waterGuidance = 'Direct Water System recommended for the long hold';
+    }
+
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: 'Range check', value: 'Within range — achievable' },
+        { label: 'Heating time', value: `About ${count(heatMinutes)} minutes from ambient` },
+        { label: 'Cooling time', value: `About ${count(coolMinutes)} minutes to ambient` },
+        { label: 'Water guidance', value: waterGuidance },
+        { label: 'Stability note', value: `Holds within ± 0.5°C${needsHumidity ? ' and ± 1 %RH' : ''}` },
+      ],
+    };
+  },
 };
 
 function cleanNumber(value, { min = 0, max } = {}) {
@@ -236,7 +397,20 @@ export default function MetricCalculator({ data, productName = 'this product' })
           </div>
 
           <div className="space-y-3">
-            {results.cards.map((card) => (
+            {results.cards.map((card) => {
+              // Short numeric/₹ readouts (most calculators) stay big and punchy.
+              // A checker-style calculator can return a full phrase instead of a
+              // number (e.g. "Within range — achievable") — that shouldn't blow
+              // up to the same huge size, or it wraps awkwardly and overwhelms
+              // the card, so long text drops to a smaller, wrap-friendly size.
+              const isLongText = typeof card.value === 'string' && card.value.length > 20;
+              const valueSizeClass = isLongText
+                ? 'text-lg leading-snug sm:text-xl'
+                : card.primary
+                  ? 'text-4xl leading-none sm:text-5xl'
+                  : 'text-2xl leading-none sm:text-3xl';
+
+              return (
               <div
                 className={`border border-line-light p-5 sm:p-6 ${card.primary ? 'bg-parchment-alt' : 'bg-parchment'}`}
                 key={card.label}
@@ -245,15 +419,16 @@ export default function MetricCalculator({ data, productName = 'this product' })
                   {card.label}
                 </p>
                 <div
-                  className={`mt-4 font-semibold leading-none tracking-tight ${
-                    card.primary ? 'text-4xl text-red sm:text-5xl' : 'text-2xl text-ink sm:text-3xl'
+                  className={`mt-4 font-semibold tracking-tight ${valueSizeClass} ${
+                    card.primary ? 'text-red' : 'text-ink'
                   }`}
                 >
                   {card.value}
                 </div>
                 {card.note ? <p className="mt-3 text-sm leading-6 text-ink-soft">{card.note}</p> : null}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

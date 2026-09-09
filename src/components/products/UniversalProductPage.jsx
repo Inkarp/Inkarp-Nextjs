@@ -78,11 +78,15 @@ export default function UniversalProductPage({ product, workflowSection: provide
       node: <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} productName={product.name} />,
     },
     // Sits ahead of the suitability checker so the modules run in the order the
-    // product content defines them.
-    product.metricCalculator && {
-      key: 'metric-calculator',
-      node: <MetricCalculator data={product.metricCalculator} productName={product.name} />,
-    },
+    // product content defines them. `metricCalculators` (plural) renders more
+    // than one calculator; the singular `metricCalculator` still works as a
+    // one-item shorthand for products that only need a single calculator.
+    ...(product.metricCalculators ?? (product.metricCalculator ? [product.metricCalculator] : [])).map(
+      (calc, index) => ({
+        key: `metric-calculator-${calc.sectionId ?? index}`,
+        node: <MetricCalculator data={calc} productName={product.name} />,
+      })
+    ),
     product.suitability?.fields?.length > 0 && product.suitability?.results?.length > 0 && {
       key: 'suitability-checker',
       node: <SuitabilityChecker data={product.suitability} productName={product.name} />,
@@ -217,6 +221,14 @@ export default function UniversalProductPage({ product, workflowSection: provide
                 href={lf.cta.secondaryHref ?? '/contact'}
               >
                 {lf.cta.secondaryLabel}
+              </a>
+            )}
+            {lf.cta.tertiaryLabel && (
+              <a
+                className="inline-flex items-center justify-center border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:border-rose-300 hover:text-rose-700 shrink-0"
+                href={lf.cta.tertiaryHref ?? '/contact'}
+              >
+                {lf.cta.tertiaryLabel}
               </a>
             )}
             </div>

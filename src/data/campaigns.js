@@ -11,7 +11,6 @@
 // dated campaign is running. Add an entry here only once it's real, ready
 // content. The commented-out entries further down are placeholder examples kept
 // for reference/reuse; uncomment and update one when you actually want it live.
-import { upcomingStallEvent } from "./events";
 import { webinars } from "./webinars";
 
 const LEAD_IN_DAYS = 10;
@@ -55,31 +54,6 @@ const webinarCampaign = buildWebinarCampaign();
 export const campaigns = [
   ...(webinarCampaign ? [webinarCampaign] : []),
   {
-    // Exhibition stand, counting down to doors-open. Dates and copy come from
-    // the events-page banner, so moving the show moves both.
-    id: "analytica-countdown-2026",
-    type: "event",
-    variant: "event-countdown",
-    icon: "🧪",
-    accent: "red",
-    kicker: "Meet us there",
-    title: upcomingStallEvent.title,
-    message: upcomingStallEvent.description,
-    venue: upcomingStallEvent.venue,
-    eventDate: upcomingStallEvent.date,
-    eventStartsAt: upcomingStallEvent.startsAt,
-    dateLabel: upcomingStallEvent.dateLabel,
-    stallNumber: upcomingStallEvent.stallNumber,
-    image: upcomingStallEvent.image,
-    // The icon + wordmark crop used in place of the event name elsewhere —
-    // shown in the strip's thumbnail slot instead of the wider stall photo.
-    logoImage: "/assets/events/analytica-logo.png",
-    cta: { label: "Event details", href: "/events" },
-    start: shiftDays(upcomingStallEvent.date, -30),
-    end: upcomingStallEvent.closesOn,
-    priority: 4,
-  },
-  {
     // Milestone year banner. `years` is deliberately a literal rather than
     // derived from today's date: the stripe is prerendered, so computing it at
     // render time would bake the build year into the HTML and mismatch on
@@ -103,6 +77,24 @@ export const campaigns = [
     priority: 3,
   },
   {
+    // Major ten-day festival, through visarjan (Anant Chaturdashi) immersion
+    // day. Verified 2026-09-10 against public festival calendars: Chaturthi
+    // falls Mon 14 Sep 2026, visarjan Fri 25 Sep 2026 — re-verify next year,
+    // this is a lunar date per the note at the top of this file.
+    id: "ganesh-chaturthi-2026",
+    type: "festival",
+    variant: "ganesh-chaturthi",
+    icon: "🐘",
+    accent: "gold",
+    title: "Happy Ganesh Chaturthi",
+    exclusive: true,
+    message: "May Lord Ganesha bless every new beginning with wisdom, fill your home with joy, and bring prosperity to you and your loved ones.",
+    cta: null,
+    start: "2026-09-10",
+    end: "2026-09-25",
+    priority: 7,
+  },
+  {
     id: "independence-day-2026",
     type: "national-day",
     variant: "flag-wave",
@@ -117,10 +109,7 @@ export const campaigns = [
     end: "2026-08-16",
     priority: 5,
   },
-  // Disabled so the stripe shows only the analytica countdown, not rotating
-  // with a second generic slide — uncomment to bring the evergreen fallback
-  // back (needed again once analytica ends and no other dated campaign is
-  // running, otherwise the stripe renders nothing in that gap).
+  // Optional evergreen fallback, ready to enable for future campaigns.
   /*
   {
     // `evergreen` marks the year-round fallback: it's what the stripe falls back

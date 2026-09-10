@@ -7,6 +7,7 @@ import { getActiveCampaign } from "@/data/campaigns";
 const ACCENT_CLASSES = {
   red: "bg-red text-parchment",
   teal: "bg-teal text-parchment",
+  gold: "bg-gradient-to-r from-[#B3452B] to-[#D98324] text-white",
 };
 
 export default function AnnouncementBar({ collapsed = false }) {

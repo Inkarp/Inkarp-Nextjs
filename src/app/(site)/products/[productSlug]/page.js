@@ -11,7 +11,7 @@ import { getAllProducts, getProductBySlug } from "@/data/products/principals";
 import { getCountryFlagCodes } from "@/data/products/countryFlags";
 import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
-import CustomerReviews from "@/components/products/sections/CustomerReviews";
+// import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
 import ProductImageZoom from "@/components/products/ProductImageZoom";
@@ -231,7 +231,7 @@ export default async function ProductPage({ params }) {
         {isRichPage ? <UniversalProductPage product={product} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
       </div>
 
-      <CustomerReviews reviews={product.reviews} />
+      {/* <CustomerReviews reviews={product.reviews} /> */}
 
       {relatedProducts.length > 0 && (
         <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">

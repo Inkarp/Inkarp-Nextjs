@@ -42,7 +42,7 @@ const FORM_LABELS = {
 const REQUIRED_FIELDS = {
   contact: ["name", "email", "phone", "inquiryType"],
   service: ["customerName", "companyName", "contactNumber", "serialNumber", "instrumentName", "warranty", "department"],
-  webinar: ["name", "email", "contact"],
+  webinar: ["name", "email", "contact", "companyName", "department", "designation", "country", "state", "city"],
   catalyst: ["name", "email", "institutionName", "mobileNumber"],
   feedback: ["name", "email", "interests"],
   "blog-comment": ["name", "email", "message"],

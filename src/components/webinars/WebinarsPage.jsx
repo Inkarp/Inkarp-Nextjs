@@ -8,7 +8,7 @@ import RegisterForm from"./RegisterForm";
 
 const tabs = [
   { key:"upcoming", label:"Upcoming" },
-  { key:"past", label:"Past / On-Demand" },
+  { key:"past", label:"Past" },
 ];
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -104,7 +104,7 @@ export default function WebinarsPage() {
             className="inline-flex border border-red/30 bg-white px-4 py-1 text-xs font-semibold uppercase text-ink-soft md:text-sm"
             data-reveal
           >
-            Live & On-Demand
+            Upcoming & Past
           </span>
           <h1
             className="mt-4 text-3xl font-bold leading-tight text-red sm:text-4xl"
@@ -237,15 +237,14 @@ export default function WebinarsPage() {
                         width={96}
                       />
                     </div>
-                    <span
-                      className="shrink-0 border bg-white px-2 py-1 text-[11px] font-semibold"
-                      style={{
-                        borderColor: daysLeft > 0 ? accent.border : undefined,
-                        color: daysLeft > 0 ? accent.text : undefined,
-                      }}
-                    >
-                      {daysLeft > 0 ? `${daysLeft}d left` :"On-Demand"}
-                    </span>
+                    {daysLeft > 0 ? (
+                      <span
+                        className="shrink-0 border bg-white px-2 py-1 text-[11px] font-semibold"
+                        style={{ borderColor: accent.border, color: accent.text }}
+                      >
+                        {`${daysLeft}d left`}
+                      </span>
+                    ) : null}
                   </div>
 
                   <p className="flex items-center gap-1.5 text-xs font-semibold text-ink-soft">

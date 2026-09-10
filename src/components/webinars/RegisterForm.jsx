@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from"react";
 import { useRouter } from"next/navigation";
 import {
+  FiArrowRight,
   FiBriefcase,
   FiCalendar,
   FiCheckCircle,
@@ -24,30 +25,26 @@ const startOfToday = () => {
   return d;
 };
 
-function InputField({ name, label, value, onChange, required = false, type ="text", icon: Icon }) {
+function InputField({ name, label, value, onChange, required = false, type = "text", icon: Icon, autoComplete, placeholder }) {
   return (
-    <div className="group relative">
-      {Icon ? (
-        <Icon className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-ink-soft transition group-focus-within:text-red" />
-      ) : null}
-      <input
-        className={`peer w-full border border-line-light bg-parchment pb-2 pt-5 text-sm text-ink outline-none transition-all duration-300 placeholder:text-transparent hover:border-red/35 focus:border-red focus:ring-2 focus:ring-red/15 ${
-          Icon ?"pl-11 pr-4" :"px-4"
-        }`}
-        name={name}
-        onChange={onChange}
-        placeholder=""
-        required={required}
-        type={type}
-        value={value}
-      />
-      <label
-        className={`absolute top-2 text-xs text-ink-soft transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-ink-soft peer-focus:top-2 peer-focus:text-xs peer-focus:text-red ${
-          Icon ?"left-11" :"left-4"
-        }`}
-      >
-        {label}
+    <div className="min-w-0">
+      <label htmlFor={`webinar-${name}`} className="mb-1 block text-xs font-medium text-ink">
+        {label}{required ? <span className="ml-1 text-red" aria-hidden="true">*</span> : null}
       </label>
+      <div className="group relative">
+        {Icon ? <Icon aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-zinc-400 group-focus-within:text-red" /> : null}
+        <input
+          id={`webinar-${name}`}
+          className="min-h-11 w-full rounded-lg border border-zinc-200 bg-zinc-50/70 py-2 pl-11 pr-3 text-base text-ink outline-none transition placeholder:text-zinc-400 hover:border-zinc-300 focus:border-red focus:bg-white focus:ring-4 focus:ring-red/10"
+          name={name}
+          onChange={onChange}
+          placeholder={placeholder}
+          autoComplete={autoComplete}
+          required={required}
+          type={type}
+          value={value}
+        />
+      </div>
     </div>
   );
 }
@@ -56,6 +53,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
   const router = useRouter();
   const today = useMemo(() => startOfToday(), []);
   const backdropRef = useRef(null);
+  const dialogRef = useRef(null);
 
   const selectedTitle = useMemo(() => {
     if (!preselected) {
@@ -86,14 +84,31 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
       return undefined;
     }
 
+    const previousFocus = document.activeElement;
+    dialogRef.current?.focus();
     const onKey = (event) => {
+      if (event.key === "Tab") {
+        const focusable = [...dialogRef.current.querySelectorAll('button:not(:disabled), input:not(:disabled), summary, [tabindex="0"]')].filter((element) => element.getClientRects().length > 0);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && (document.activeElement === first || document.activeElement === dialogRef.current)) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && (document.activeElement === last || document.activeElement === dialogRef.current)) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
       if (event.key ==="Escape") {
         onClose?.();
       }
     };
 
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      previousFocus?.focus();
+    };
   }, [isOpen, onClose]);
 
   useEffect(() => {
@@ -169,127 +184,89 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
   };
 
   const contactFields = [
-    ["name","Your Name","text", FiUser],
-    ["email","Email Address","email", FiMail],
-    ["contact","Phone Number","tel", FiPhone],
-    ["companyName","Company Name","text", FiBriefcase],
+    ["name", "Full name", "text", FiUser, "name", "Your full name"],
+    ["email", "Email address", "email", FiMail, "email", "you@company.com"],
+    ["contact", "Phone number", "tel", FiPhone, "tel", "+91 98765 43210"],
   ];
-
   const profileFields = [
-    ["department","Department", FiUsers],
-    ["designation","Designation", FiBriefcase],
-    ["city","City", FiMapPin],
-    ["state","State", FiMapPin],
-    ["country","Country", FiGlobe],
+    ["companyName", "Company / institution", FiBriefcase, "organization"],
+    ["designation", "Job title", FiBriefcase, "organization-title"],
+    ["department", "Department", FiUsers, "off"],
+    ["country", "Country", FiGlobe, "country-name"],
+    ["state", "State / region", FiMapPin, "address-level1"],
+    ["city", "City", FiMapPin, "address-level2"],
   ];
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-[#0F2A33]/70 backdrop-blur-md"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-950/65 p-2 backdrop-blur-sm sm:p-6"
       onClick={handleBackdropClick}
       ref={backdropRef}
     >
-      <div className="flex min-h-screen items-center justify-center p-3 sm:p-5">
-        <div className="flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden border border-white/60 bg-parchment">
-          <div className="relative overflow-hidden border-b border-line-light bg-parchment-alt px-5 py-5 sm:px-7">
-            <div className="absolute inset-x-0 top-0 h-1 bg-red" />
-            <button
-              aria-label="Close registration form"
-              className="absolute right-4 top-4 grid size-9 place-items-center border border-line-light bg-parchment text-ink-soft transition hover:border-red hover:text-red"
-              onClick={onClose}
-              type="button"
-            >
-              <FiX size={20} />
-            </button>
-
-            <div className="pr-11">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-normal text-red">
-                Reserve Your Seat
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="webinar-registration-heading"
+        aria-describedby="webinar-selected-title"
+        tabIndex={-1}
+        className="relative max-h-[calc(100dvh-1rem)] w-full max-w-4xl overflow-y-auto overscroll-contain rounded-2xl bg-white shadow-2xl outline-none sm:max-h-[calc(100dvh-3rem)] sm:rounded-3xl"
+      >
+        <button
+          aria-label="Close registration form"
+          className="absolute right-3 top-3 z-10 grid size-11 place-items-center rounded-full border border-zinc-200 bg-white text-zinc-600 transition hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red sm:right-4 sm:top-4"
+          onClick={onClose}
+          type="button"
+        >
+          <FiX aria-hidden="true" size={20} />
+        </button>
+        <div>
+          <header className="relative overflow-hidden bg-[#171c24] px-4 py-4 pr-16 text-white sm:px-6 sm:pr-20">
+            <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-rose-200">
+              <span className="size-2 rounded-full bg-rose-400" /> You are registering for
+            </p>
+            <h3 id="webinar-selected-title" className="mt-2 break-words text-sm font-semibold leading-snug sm:text-lg">
+              {formData.webinarTitle || "Expert-led webinar"}
+            </h3>
+            {preselected?.date1 ? (
+              <p className="mt-2 flex items-center gap-2 text-xs text-zinc-300">
+                <FiCalendar aria-hidden="true" className="size-3.5 shrink-0 text-rose-200" />
+                {preselected.date1}
               </p>
-              <h2 className="text-2xl leading-tight text-ink-soft sm:text-3xl">
-                Webinar Registration
-              </h2>
-              <p className="mt-2 max-w-xl text-sm leading-6 text-ink-soft">
-                Share a few details and our team will send the joining information to your inbox.
-              </p>
-            </div>
-          </div>
+            ) : null}
+          </header>
 
-          {status.message ? (
-            <div
-              className={`mx-5 mt-4 flex items-start gap-3 border px-4 py-3 text-sm sm:mx-7 ${
-                status.type ==="success"
-                  ?"border-green-200 bg-green-50 text-green-800"
-                  :"border-red/20 bg-red/5 text-red"
-              }`}
-            >
-              {status.type ==="success" ? (
-                <FiCheckCircle className="mt-0.5 size-4 shrink-0" />
-              ) : null}
-              {status.message}
+          <div className="px-4 py-4 sm:px-6 sm:py-5">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h2 id="webinar-registration-heading" className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">Save your seat.</h2>
+              <p className="text-xs text-ink-soft"><span className="text-red">*</span> All fields are required</p>
             </div>
-          ) : null}
-
-          <div className="flex-1 overflow-y-auto bg-parchment">
-            <form
-              className="grid grid-cols-1 gap-4 px-5 py-5 sm:px-7 md:grid-cols-2"
-              onSubmit={handleSubmit}
-            >
-              <div className="border border-red/15 bg-red/5 px-4 py-4 md:col-span-2">
-                <div className="flex items-start gap-3">
-                  <div className="grid size-10 shrink-0 place-items-center bg-parchment text-red">
-                    <FiCalendar size={18} />
-                  </div>
-                  <div>
-                    <p className="mb-1 text-xs font-semibold uppercase tracking-normal text-red">
-                      Selected Webinar
-                    </p>
-                    <p className="text-base leading-snug text-ink-soft">
-                      {formData.webinarTitle ||"Webinar"}
-                    </p>
-                  </div>
-                </div>
+            <form className="mt-3 space-y-3" onSubmit={handleSubmit} aria-busy={isSubmitting}>
+              <div className="grid grid-cols-2 gap-x-3 gap-y-3 sm:grid-cols-3 sm:gap-x-4">
+                {contactFields.map(([field, label, type, icon, autoComplete, placeholder]) => (
+                  <InputField key={field} name={field} label={label} type={type} icon={icon} autoComplete={autoComplete} placeholder={placeholder} value={formData[field]} onChange={handleChange} required />
+                ))}
+                {profileFields.map(([field, label, icon, autoComplete]) => (
+                  <InputField key={field} name={field} label={label} icon={icon} autoComplete={autoComplete} value={formData[field]} onChange={handleChange} required />
+                ))}
               </div>
 
-              <p className="text-xs font-semibold uppercase tracking-normal text-ink-soft md:col-span-2">
-                Contact Details
-              </p>
-              {contactFields.map(([field, label, type, icon]) => (
-                <InputField
-                  icon={icon}
-                  key={field}
-                  label={label}
-                  name={field}
-                  onChange={handleChange}
-                  required
-                  type={type}
-                  value={formData[field]}
-                />
-              ))}
-
-              <p className="mt-1 text-xs font-semibold uppercase tracking-normal text-ink-soft md:col-span-2">
-                Professional Information
-              </p>
-              {profileFields.map(([field, label, icon]) => (
-                <InputField
-                  icon={icon}
-                  key={field}
-                  label={label}
-                  name={field}
-                  onChange={handleChange}
-                  required
-                  value={formData[field]}
-                />
-              ))}
-
+              {status.message ? (
+                <div role={status.type === "error" ? "alert" : "status"} className={`flex items-start gap-2 rounded-xl px-4 py-3 text-sm ${status.type === "success" ? "bg-green-50 text-green-800" : "bg-red/5 text-red"}`}>
+                  {status.type === "success" ? <FiCheckCircle aria-hidden="true" className="mt-0.5 size-4 shrink-0" /> : null}
+                  {status.message}
+                </div>
+              ) : null}
               <button
-                className="mt-2 inline-flex items-center justify-center gap-2 bg-rose-50 px-5 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-70 md:col-span-2"
-                disabled={isSubmitting}
+                className="inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-xl bg-red px-5 py-2.5 text-base font-semibold text-white shadow-lg shadow-red/15 transition hover:bg-[#a3000e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red disabled:cursor-not-allowed disabled:opacity-70"
+                disabled={isSubmitting || status.type === "success"}
                 type="submit"
               >
-                {isSubmitting ? <FiLoader className="size-4 animate-spin" /> : null}
-                {isSubmitting ?"Submitting..." :"Register"}
+                {isSubmitting ? <FiLoader aria-hidden="true" className="size-5 animate-spin" /> : null}
+                {isSubmitting ? "Registering..." : status.type === "success" ? "Registration complete" : "Reserve my seat"}
+                {!isSubmitting && status.type !== "success" ? <FiArrowRight aria-hidden="true" className="size-5" /> : null}
               </button>
+              <p className="text-center text-xs leading-5 text-ink-soft">Joining information will be sent to your email.</p>
             </form>
           </div>
         </div>

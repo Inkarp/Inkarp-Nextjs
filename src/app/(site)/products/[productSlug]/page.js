@@ -18,6 +18,7 @@ import ProductImageZoom from "@/components/products/ProductImageZoom";
 import RequestQuoteButton from "@/components/products/RequestQuoteButton";
 import CompareButton from "@/components/products/CompareButton";
 import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
+import RecordProductView from "@/components/products/RecordProductView";
 
 const DEFAULT_AUTHORIZED_REGION = "India";
 
@@ -82,6 +83,7 @@ export default async function ProductPage({ params }) {
 
   return (
     <main className="bg-white text-ink" data-scroll-skip>
+      <RecordProductView product={product} />
       {faqJsonLd && (
         <script
           type="application/ld+json"

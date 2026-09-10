@@ -1,0 +1,42 @@
+.shell {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 5%; /* the page's content wrapper is 90% wide and centered, leaving
+                exactly this much gutter on each side. */
+  min-width: 46px;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 40;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+
+@media (min-width: 1024px) {
+  .shell { display: block; }
+}
+
+@media (min-width: 1280px) {
+  .shell { min-width: 60px; }
+}
+
+@media (min-width: 1536px) {
+  .shell { min-width: 72px; }
+}
+
+.shellHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--header-offset, 0px) + 12px) 0 16px;
+}

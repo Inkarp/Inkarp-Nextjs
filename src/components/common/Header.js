@@ -229,10 +229,13 @@ export default function Header() {
               <FiMail className="text-red" />
               {contact.email}
             </Link>
-            <span className="hidden items-center gap-2 xl:inline-flex">
+            <a
+              className="inline-flex items-center gap-2 transition hover:text-red hover:underline"
+              href={`tel:${contact.phone}`}
+            >
               <FiPhoneCall className="text-red" />
               {contact.phone}
-            </span>
+            </a>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -530,6 +533,35 @@ export default function Header() {
               );
             })}
           </ul>
+
+          {/* Our Story, Awards, Service, Careers otherwise only live in the top
+              utility bar, which collapses on scroll — surface them here too so
+              they stay reachable on mobile no matter where you've scrolled. */}
+          <div className="mt-3 border-t border-line-light pt-3">
+            <p className="px-3 text-[11px] font-bold uppercase tracking-wide text-ink-soft">More</p>
+            <ul className="mt-1 space-y-1">
+              {topLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    className="flex min-h-11 items-center rounded-lg px-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red"
+                    href={link.href}
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <a
+                  className="flex min-h-11 items-center gap-2 rounded-lg px-3 text-sm font-medium text-ink-soft transition hover:bg-parchment-alt hover:text-red"
+                  href={`tel:${contact.phone}`}
+                >
+                  <FiPhoneCall className="text-red" />
+                  {contact.phone}
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       ) : null}
 

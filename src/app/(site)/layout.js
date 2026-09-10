@@ -3,6 +3,7 @@ import Footer from "@/components/common/Footer";
 import FloatingChatbot from "@/components/common/FloatingChatbot";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
 import Header from "@/components/common/Header";
+import LeftRail from "@/components/common/LeftRail";
 import PromoPopup from "@/components/common/PromoPopup";
 import ShortlistFloats from "@/components/common/ShortlistFloats";
 import Script from "next/script";
@@ -11,6 +12,7 @@ export default function SiteLayout({ children }) {
   return (
     <>
       <Header />
+      <LeftRail />
       <div className="relative w-[90%] mx-auto">{children}</div>
       <Footer />
       <BasketSync />

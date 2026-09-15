@@ -4,7 +4,6 @@ import { useEffect, useState } from"react";
 import Image from"next/image";
 import { FiArrowUpRight, FiCalendar, FiCheckCircle, FiMapPin } from"react-icons/fi";
 import RecTag from"@/components/home/RecTag";
-import StallWorkflowSlider from"@/components/events/StallWorkflowSlider";
 import { events, eventYears, featuredEvent, isPastEvent } from"@/data/events";
 
 // Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
@@ -90,6 +89,39 @@ function EventCountdown({ event }) {
   const isCounting = remaining?.state === "counting";
   const canRegister = Boolean(event.registrationUrl) && remaining?.state !== "over";
 
+  if (remaining?.state === "over") {
+    return (
+      <div className="relative border border-line-light bg-parchment-alt p-6 sm:p-8">
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute left-[-1px] top-[-1px] h-4 w-4 border-l-[1.5px] border-t-[1.5px] border-red"
+        />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-[-1px] right-[-1px] h-4 w-4 border-b-[1.5px] border-r-[1.5px] border-red"
+        />
+        <div className="flex min-h-64 flex-col items-center justify-center text-center">
+          <span className="grid size-14 place-items-center rounded-full bg-emerald-50 text-emerald-600">
+            <FiCheckCircle aria-hidden="true" className="size-7" />
+          </span>
+          <p className="mt-5 font-mono text-[10.5px] font-semibold uppercase tracking-[0.18em] text-emerald-700">
+            Successfully Completed
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-ink">
+            Thank you for visiting us
+          </h2>
+          <p className="mt-3 max-w-sm text-sm leading-6 text-ink-soft">
+            We appreciate everyone who met our team, explored the instruments, and shared their laboratory challenges with us.
+          </p>
+          <p className="mt-5 text-sm font-semibold text-ink">{event.dateLabel}</p>
+          <p className="mt-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink-soft">
+            {event.venue}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative border border-line-light bg-parchment-alt p-5 sm:p-6">
       <span
@@ -151,9 +183,8 @@ function EventCountdown({ event }) {
   );
 }
 
-// Page banner for the next show. Deliberately not a flat JPEG: the copy is real
-// text so it is readable, searchable and translatable, with the event artwork
-// alongside it.
+// Featured event recap. The copy remains real text so it is readable,
+// searchable and translatable, with the event artwork alongside it.
 function FeaturedEventBanner() {
   const event = featuredEvent;
 
@@ -308,7 +339,6 @@ export default function EventsPage() {
   return (
     <main>
       <FeaturedEventBanner />
-      <StallWorkflowSlider />
 
       <div
         className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 border border-line-light bg-parchment-alt py-8 sm:flex-row"

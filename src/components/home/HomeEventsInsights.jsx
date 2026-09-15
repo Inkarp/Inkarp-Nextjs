@@ -132,7 +132,7 @@ export default function HomeEventsInsights() {
             Events &amp; insights
           </h2>
           <p className="mt-3 max-w-xl text-sm text-ink-soft">
-            Where you can meet us next, and the latest thinking from our team.
+            Highlights from our recent events and the latest thinking from our team.
           </p>
         </div>
 

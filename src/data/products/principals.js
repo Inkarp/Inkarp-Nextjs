@@ -452,6 +452,12 @@ export const productPrincipals = [
         "principalName": "Mettler Toledo",
         "countryOfOrigin": "Switzerland",
         "products": []
+    },
+    {
+        "slug": "ametek-brookfield",
+        "principalName": "Ametek Brookfield",
+        "countryOfOrigin": "United States of America",
+        "products": []
     }
 ];
 

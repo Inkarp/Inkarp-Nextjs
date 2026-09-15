@@ -11,7 +11,7 @@ export const principalLogos = {
   ecom: "/assets/images/PrincipalLogos/RowTwo/ECom.png",
   "advion-interchim-scientific": "/assets/images/PrincipalLogos/RowOne/advion.png",
   labomatic: "/assets/images/PrincipalLogos/RowTwo/Labomatic.svg",
-  brookfield: "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
+  "ametek-brookfield": "/assets/images/PrincipalLogos/RowFour/Brookfield.webp",
   khimod: "/assets/images/PrincipalLogos/RowSeven/KhiMod.svg",
   rotachrom: "/assets/images/PrincipalLogos/RowFour/Rotochrome.png",
   maccor: "/assets/images/PrincipalLogos/RowTwo/Maccor.jpg",

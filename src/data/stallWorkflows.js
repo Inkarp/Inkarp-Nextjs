@@ -476,11 +476,11 @@ export const stallWorkflowStages = [
 
 /**
  * Product-page "on display at analytica" badges expire the day doors open —
- * after that, visitors should be looking at the live event, not a countdown
- * teaser. Kept as a plain string constant (compared client-side, never at
+ * The campaign is inactive after the event closes, so visitors no longer see
+ * a stale promotional badge. Kept as a plain string constant (compared client-side, never at
  * build time) so it needs updating in exactly one place next year.
  */
-export const ANALYTICA_SHOWCASE_ACTIVE_THROUGH = "2026-09-10";
+export const ANALYTICA_SHOWCASE_ACTIVE_THROUGH = "2026-09-12";
 
 export function isAnalyticaShowcaseActive(today = new Date()) {
   const cutoff = new Date(`${ANALYTICA_SHOWCASE_ACTIVE_THROUGH}T23:59:59+05:30`);

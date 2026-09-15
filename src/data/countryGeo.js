@@ -10,7 +10,6 @@ export const countryGeo = {
   India: { label: "India", lat: 20.59, lon: 78.96, hue: "#eb6834" },
   Italy: { label: "Italy", lat: 41.87, lon: 12.57, hue: "#2a78d6" },
   Japan: { label: "Japan", lat: 36.2, lon: 138.25, hue: "#1baf7a" },
-  Netherlands: { label: "Netherlands", lat: 52.13, lon: 5.29, hue: "#eda100" },
   "South Korea": { label: "South Korea", lat: 35.91, lon: 127.77, hue: "#008300" },
   Spain: { label: "Spain", lat: 40.46, lon: -3.75, hue: "#4a3aa7" },
   Switzerland: { label: "Switzerland", lat: 46.82, lon: 8.23, hue: "#e34948" },

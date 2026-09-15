@@ -234,7 +234,7 @@ export const events = [
 // Expo" branding is retired). The registration URL was checked and resolves.
 // The banner hides the Register button entirely if `registrationUrl` is null.
 export const featuredEvent = {
-  eyebrow: "Meet Us At",
+  eyebrow: "Event Completed",
   name: "analytica Lab India",
   edition: "Hyderabad 2026",
   dateLabel: "10 – 12 September 2026",
@@ -244,14 +244,14 @@ export const featuredEvent = {
   startsAt: "2026-09-10T10:00:00+05:30",
   endsAt: "2026-09-12T18:00:00+05:30",
   summary:
-    "Join the Inkarp team on the floor to see our laboratory and analytical instrumentation in action, talk methods with our application specialists, and plan the right setup for your lab.",
+    "Thank you to everyone who visited the Inkarp team at analytica Lab India 2026. We were delighted to demonstrate our laboratory and analytical instrumentation, discuss methods, and connect with the scientific community.",
   highlights: [
-    "Live instrument demonstrations",
-    "Application and method guidance",
-    "Meet our service and support team",
+    "Instrument demonstrations",
+    "Application and method discussions",
+    "Connections with our support team",
   ],
   image: `${IMG}/Event1.jpeg`,
-  registrationUrl: "https://mmiconnect.in/ile-hyd-2026/visitor/registration?source=website",
+  registrationUrl: null,
 };
 
 /**
@@ -275,7 +275,7 @@ export const upcomingStallEvent = {
   // Doors open on day one — that is what a countdown should point at.
   date: featuredEvent.startsAt.slice(0, 10),
   closesOn: featuredEvent.endsAt.slice(0, 10),
-  status: "upcoming",
+  status: "past",
 };
 
 export const eventYears = [...new Set(events.map((event) => new Date(event.date).getFullYear()))].sort(

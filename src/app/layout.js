@@ -1,6 +1,4 @@
 import localFont from "next/font/local";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/next"
 import ScrollAnimations from "@/components/common/ScrollAnimations";
 import TrackingCapture from "@/components/common/TrackingCapture";
 import { SITE_AUTHOR, SITE_PUBLISHER, SITE_URL } from "@/data/pageSeo";
@@ -67,8 +65,6 @@ export default function RootLayout({ children }) {
         <ScrollAnimations />
         <TrackingCapture />
         {children}
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   );

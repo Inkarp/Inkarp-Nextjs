@@ -21,22 +21,22 @@ export default function StatsBar({ stats = [] }) {
   if (!visibleStats.length) return null;
 
   return (
-    <section className="border-y border-line-light bg-parchment-alt px-4 py-10 sm:px-6 lg:px-8">
+    <section className="border-y border-line-light bg-parchment-alt px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
           {visibleStats.map((s, index) => {
             const Icon = resolveIcon(s.label);
             const isHighlight = index === 0;
             return (
-              <div className="flex items-center gap-4 border border-line-light bg-white p-5" key={s.label}>
-                <span className="flex size-11 shrink-0 items-center justify-center bg-red/8 text-lg text-red">
+              <div className="flex items-center gap-2.5 border border-line-light bg-white p-3 sm:gap-4 sm:p-5" key={s.label}>
+                <span className="flex size-8 shrink-0 items-center justify-center bg-red/8 text-sm text-red sm:size-11 sm:text-lg">
                   <Icon />
                 </span>
-                <div>
-                  <div className={`text-xl font-bold tracking-tight sm:text-2xl ${isHighlight ? 'text-red' : 'text-ink'}`}>
+                <div className="min-w-0">
+                  <div className={`text-sm font-bold leading-tight tracking-tight sm:text-xl sm:leading-normal lg:text-2xl ${isHighlight ? 'text-red' : 'text-ink'}`}>
                     {s.value}
                   </div>
-                  <p className="mt-0.5 text-xs text-ink-soft">{s.label}</p>
+                  <p className="mt-0.5 text-[11px] leading-tight text-ink-soft sm:text-xs">{s.label}</p>
                 </div>
               </div>
             );

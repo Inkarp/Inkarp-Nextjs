@@ -190,43 +190,65 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
               </button>
             </div>
           ) : isPicker ? (
-            <div className="border border-line-light bg-parchment p-6 sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-wide text-red">
-                Question {activeIndex + 1} of {options.length}
-              </p>
-              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink">{option.title}</h3>
+            (() => {
+              const currentChoices = parseChoices(option[choicesField.key]);
+              const isInfoStep = currentChoices.length <= 1;
 
-              <div className="mt-6 flex flex-wrap gap-3">
-                {parseChoices(option[choicesField.key]).map((choice) => {
-                  const isChosen = answers[activeIndex] === choice;
-                  return (
+              return (
+                <div className="border border-line-light bg-parchment p-6 sm:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-red">
+                    {isInfoStep ? 'Summary' : 'Question'} {activeIndex + 1} of {options.length}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink">{option.title}</h3>
+
+                  {isInfoStep ? (
+                    <>
+                      <p className="mt-6 border border-line-light bg-parchment-alt px-5 py-4 text-sm font-medium leading-6 text-black">
+                        {currentChoices[0]}
+                      </p>
+                      <button
+                        className="mt-6 inline-flex h-12 items-center gap-2 border border-black bg-red px-7 text-sm font-semibold text-white transition hover:bg-black"
+                        onClick={() => handlePick(currentChoices[0] ?? '')}
+                        type="button"
+                      >
+                        Continue <FiArrowRight />
+                      </button>
+                    </>
+                  ) : (
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      {currentChoices.map((choice) => {
+                        const isChosen = answers[activeIndex] === choice;
+                        return (
+                          <button
+                            aria-pressed={isChosen}
+                            className={`border px-5 py-3 text-sm font-semibold transition ${
+                              isChosen
+                                ? 'border-black bg-red text-white'
+                                : 'border-line-light bg-white text-black hover:border-red hover:text-red'
+                            }`}
+                            key={choice}
+                            onClick={() => handlePick(choice)}
+                            type="button"
+                          >
+                            {choice}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {answeredCount > 0 ? (
                     <button
-                      aria-pressed={isChosen}
-                      className={`border px-5 py-3 text-sm font-semibold transition ${
-                        isChosen
-                          ? 'border-black bg-red text-white'
-                          : 'border-line-light bg-white text-black hover:border-red hover:text-red'
-                      }`}
-                      key={choice}
-                      onClick={() => handlePick(choice)}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-red hover:underline"
+                      onClick={() => setView('summary')}
                       type="button"
                     >
-                      {choice}
+                      Review my answers so far ({answeredCount}/{options.length}) <FiArrowRight />
                     </button>
-                  );
-                })}
-              </div>
-
-              {answeredCount > 0 ? (
-                <button
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-red hover:underline"
-                  onClick={() => setView('summary')}
-                  type="button"
-                >
-                  Review my answers so far ({answeredCount}/{options.length}) <FiArrowRight />
-                </button>
-              ) : null}
-            </div>
+                  ) : null}
+                </div>
+              );
+            })()
           ) : (
             <div className="border border-line-light bg-parchment p-6 sm:p-8">
               <h3 className="text-2xl font-semibold tracking-tight text-ink">{option.title}</h3>

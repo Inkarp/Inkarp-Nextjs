@@ -23,6 +23,7 @@ import {
 // import AnnouncementBar from "@/components/common/AnnouncementBar";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
+import RailUtilityDock from "@/components/common/RailUtilityDock";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
 // import AccountLink from "@/components/common/AccountLink"; // re-enable with the header usage below once account is ready to go live
 import { siteConfig } from "@/data/siteConfig";
@@ -418,6 +419,8 @@ export default function Header() {
               >
                 <FiSearch />
               </button>
+
+              <RailUtilityDock placement="header" />
              
               {/* Login temporarily hidden from nav until the account rollout plan is ready — /signin and /account still work directly.
               <AccountLink className="hidden whitespace-nowrap xl:inline-flex" /> */}

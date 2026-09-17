@@ -24,8 +24,8 @@ function relativeLabel(dateString) {
   return `${Math.round(pastDays / 30)}mo ago`;
 }
 
-// This component only ever mounts client-side (LeftRail gates it behind a
-// post-hydration effect), so it's safe to read localStorage straight from the
+// Read the visitor-specific seen state after hydration because this component
+// can render inside the server-rendered header.
 // initializer below rather than an effect — there's no SSR pass to mismatch.
 function computeInitialPulse() {
   const items = getPulseUpdates();
@@ -33,11 +33,15 @@ function computeInitialPulse() {
   return { updates: items, unseenCount: items.filter((item) => Date.parse(item.date) > lastSeen).length };
 }
 
-export default function RailUtilityDock() {
+export default function RailUtilityDock({ placement = "rail" }) {
   const [open, setOpen] = useState(null);
-  const [{ updates, unseenCount }, setPulse] = useState(computeInitialPulse);
+  const [{ updates, unseenCount }, setPulse] = useState(() => ({ updates: getPulseUpdates(), unseenCount: 0 }));
   const recentlyViewed = useRecentlyViewed();
   const dockRef = useRef(null);
+
+  useEffect(() => {
+    setPulse(computeInitialPulse());
+  }, []);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -66,11 +70,16 @@ export default function RailUtilityDock() {
     }
   }
 
+  const isHeader = placement === "header";
+
   return (
-    <div className="pointer-events-auto relative flex flex-col items-center gap-2.5" ref={dockRef}>
+    <div
+      className={`pointer-events-auto relative flex items-center gap-2.5 ${isHeader ? "flex-row" : "flex-col"}`}
+      ref={dockRef}
+    >
       <button
         aria-label={`What's new${unseenCount ? `, ${unseenCount} unseen` : ""}`}
-        className={TAB_CLASS}
+        className={`${TAB_CLASS} ${unseenCount > 0 ? "motion-safe:animate-pulse border-red/50 text-red" : ""}`}
         onClick={togglePulse}
         type="button"
       >
@@ -95,7 +104,9 @@ export default function RailUtilityDock() {
 
       {open ? (
         <div
-          className="absolute left-[calc(100%+10px)] top-0 max-h-[min(64vh,480px)] w-[min(320px,calc(100vw-110px))] overflow-y-auto border border-line-light bg-white shadow-2xl shadow-zinc-900/20 animate-[hvc-fade_200ms_ease]"
+          className={`absolute max-h-[min(64vh,480px)] w-[min(320px,calc(100vw-32px))] overflow-y-auto border border-line-light bg-white shadow-2xl shadow-zinc-900/20 animate-[hvc-fade_200ms_ease] ${
+            isHeader ? "right-0 top-[calc(100%+12px)]" : "left-[calc(100%+10px)] top-0"
+          }`}
           role="dialog"
         >
           <div className="sticky top-0 flex items-center justify-between gap-2 border-b border-line-light bg-white px-3.5 py-3">
@@ -124,7 +135,22 @@ export default function RailUtilityDock() {
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="line-clamp-2 block text-xs font-semibold leading-5 text-ink">{item.title}</span>
-                      <span className="mt-0.5 block text-[10px] text-ink-soft">{relativeLabel(item.date)}</span>
+                      <span className="mt-1 flex items-center gap-1.5 text-[10px] text-ink-soft">
+                        {item.statusLabel ? (
+                          <span
+                            className={`inline-flex items-center rounded-full px-2 py-0.5 font-bold uppercase tracking-wide ${
+                              item.status === "live"
+                                ? "bg-red text-white motion-safe:animate-pulse"
+                                : "bg-amber-100 text-amber-800"
+                            }`}
+                          >
+                            {item.status === "live" ? <span className="mr-1 size-1.5 rounded-full bg-white" /> : null}
+                            {item.statusLabel}
+                          </span>
+                        ) : (
+                          relativeLabel(item.date)
+                        )}
+                      </span>
                     </span>
                   </Link>
                 </li>

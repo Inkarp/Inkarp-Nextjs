@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowUp, FiCornerUpLeft, FiMessageCircle, FiPhone } from "react-icons/fi";
+import { FiArrowUp, FiCornerUpLeft, FiPhone } from "react-icons/fi";
 import { siteConfig } from "@/data/siteConfig";
 import { pushEvent } from "@/lib/analytics";
 
@@ -59,19 +59,10 @@ function RichText({ text }) {
   });
 }
 
-function ContactActions({ label = "Talk to a person:", onLiveChat }) {
+function ContactActions({ label = "Talk to a person:" }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <span className="text-[11px] font-medium text-ink-soft">{label}</span>
-      {onLiveChat ? (
-        <button
-          className="inline-flex items-center gap-1.5 rounded-full bg-ink px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-red"
-          onClick={onLiveChat}
-          type="button"
-        >
-          <FiMessageCircle aria-hidden="true" /> Live chat
-        </button>
-      ) : null}
       <a
         className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-2.5 py-1 text-[11px] font-bold text-white transition hover:bg-[#1fb85a]"
         href={`https://wa.me/${CONTACT_PHONE_DIGITS}`}
@@ -92,7 +83,7 @@ function ContactActions({ label = "Talk to a person:", onLiveChat }) {
   );
 }
 
-export default function DexterChat({ onFallback, onLiveChat }) {
+export default function DexterChat({ onFallback }) {
   const [messages, setMessages] = useState([]);
   const [draft, setDraft] = useState("");
   const [streaming, setStreaming] = useState(false);
@@ -269,7 +260,7 @@ export default function DexterChat({ onFallback, onLiveChat }) {
               </div>
               {showContactActions ? (
                 <div className="ml-[38px] animate-[hvc-fade_300ms_ease] motion-reduce:animate-none">
-                  <ContactActions onLiveChat={onLiveChat} />
+                  <ContactActions />
                 </div>
               ) : null}
             </div>
@@ -309,7 +300,7 @@ export default function DexterChat({ onFallback, onLiveChat }) {
               </button>
             </div>
             <div className="border-t border-red/10 pt-2.5">
-              <ContactActions label="Or talk to a person:" onLiveChat={onLiveChat} />
+              <ContactActions label="Or talk to a person:" />
             </div>
           </div>
         ) : null}

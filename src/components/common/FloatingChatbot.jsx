@@ -288,36 +288,6 @@ export default function FloatingChatbot() {
     rememberChatbotSeen();
   }
 
-  function openLiveChat() {
-    pushEvent("live_chat_clicked", { source: "dexter_handoff" });
-    setIsOpen(false);
-    dismissGreetingTooltip();
-    rememberChatbotSeen();
-    window.__inkarpLiveChatRequested = true;
-    document.documentElement.classList.add("inkarp-live-chat-requested");
-    document.documentElement.classList.add("inkarp-live-chat-launcher-small");
-
-    const showTawkLauncher = () => {
-      if (typeof window.__inkarpOpenLiveChat === "function") {
-        return window.__inkarpOpenLiveChat();
-      }
-
-      const tawk = window.Tawk_API;
-      if (typeof tawk?.showWidget !== "function") return false;
-
-      tawk.showWidget();
-      if (typeof tawk.maximize === "function") tawk.maximize();
-      return true;
-    };
-
-    if (showTawkLauncher()) return;
-
-    const retryTimer = window.setInterval(() => {
-      if (showTawkLauncher()) window.clearInterval(retryTimer);
-    }, 250);
-    window.setTimeout(() => window.clearInterval(retryTimer), 5000);
-  }
-
   function dismissGreetingTooltip() {
     setShowGreetingTooltip(false);
     rememberGreetingDismissed();
@@ -722,7 +692,7 @@ export default function FloatingChatbot() {
 
             {step === "chat" ? (
               <div className="animate-[hvc-fade_300ms_ease] motion-reduce:animate-none">
-                <DexterChat onFallback={() => setStep("type")} onLiveChat={openLiveChat} />
+                <DexterChat onFallback={() => setStep("type")} />
               </div>
             ) : null}
 

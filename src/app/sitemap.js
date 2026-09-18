@@ -9,6 +9,7 @@ const STATIC_ROUTES = [
   ...Object.keys(pageSeo),
   "/privacy-policy",
   "/terms-and-conditions",
+  "/solution-finder",
 ];
 
 function absoluteUrl(path) {

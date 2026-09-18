@@ -16,7 +16,7 @@ import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
 import ProductImageZoom from "@/components/products/ProductImageZoom";
 import RequestQuoteButton from "@/components/products/RequestQuoteButton";
-import CompareButton from "@/components/products/CompareButton";
+import CompareCategoryButton from "@/components/products/CompareCategoryButton";
 import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
 import RecordProductView from "@/components/products/RecordProductView";
 
@@ -84,6 +84,7 @@ export default async function ProductPage({ params }) {
   return (
     <main className="bg-white text-ink" data-scroll-skip>
       <RecordProductView product={product} />
+      <CompareCategoryButton product={product} relatedProducts={relatedProducts} />
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -287,7 +288,6 @@ function ProductImageActions({ href, product, secondary }) {
         <RequestQuoteButton className={DUO_REQUEST_QUOTE_CLASS} href={href} product={product} />
         <AddToQuoteButton product={product} variant="duo" />
       </div>
-      <CompareButton product={product} variant="block" />
       {secondary?.label && (
         <Link
           href={secondary.href ?? "/contact"}

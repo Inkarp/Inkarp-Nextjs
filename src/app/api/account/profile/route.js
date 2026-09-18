@@ -1,5 +1,5 @@
 import { currentUserEmail } from "@/lib/auth/server";
-import { getQuoteHistory, getUser, updateProfile } from "@/lib/auth/store";
+import { getQuoteHistory, getSavedSolutionReports, getUser, updateProfile } from "@/lib/auth/store";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -9,11 +9,13 @@ export async function GET() {
   if (!email) return Response.json({ signedIn: false }, { status: 401 });
 
   try {
-    const [user, quotes] = await Promise.all([getUser(email), getQuoteHistory(email)]);
-    return Response.json({ quotes, signedIn: true, user: user ?? { email } });
+    const [user, quotes, solutionReports] = await Promise.all([
+      getUser(email), getQuoteHistory(email), getSavedSolutionReports(email),
+    ]);
+    return Response.json({ quotes, solutionReports, signedIn: true, user: user ?? { email } });
   } catch (error) {
     console.error("[account] load failed:", error.message);
-    return Response.json({ quotes: [], signedIn: true, user: { email } });
+    return Response.json({ quotes: [], solutionReports: [], signedIn: true, user: { email } });
   }
 }
 

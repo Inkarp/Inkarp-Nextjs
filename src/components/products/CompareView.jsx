@@ -8,7 +8,7 @@ import RecTag from "@/components/home/RecTag";
 import RequestQuoteButton from "./RequestQuoteButton";
 import AddToQuoteButton from "./AddToQuoteButton";
 import useCompareBasket from "./useCompareBasket";
-import { clearCompare, COMPARE_LIMIT, itemKey, removeFromCompare } from "@/lib/compareBasket";
+import { addToCompare, clearCompare, COMPARE_LIMIT, itemKey, removeFromCompare } from "@/lib/compareBasket";
 
 const HEADER_REQUEST_QUOTE_CLASS =
   "inline-flex h-9 flex-1 items-center justify-center gap-1 border border-rose-200 bg-rose-50 px-2 text-xs font-semibold text-rose-700 transition hover:bg-rose-100";
@@ -292,7 +292,8 @@ function EmptyState() {
       </div>
       <h1 className="text-lg font-semibold tracking-tight text-ink">Nothing to compare yet</h1>
       <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-ink-soft">
-        Add two or more products to your comparison from the &quot;Compare&quot; button on any product page, then come back here to see them side by side.
+        Add two or more products to your comparison from the &quot;Compare with similar products&quot; option on
+        any product page, then come back here to see them side by side.
       </p>
       <Link
         className="mt-6 inline-flex items-center justify-center border border-ink bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink/90"
@@ -300,6 +301,94 @@ function EmptyState() {
       >
         Browse products
       </Link>
+    </div>
+  );
+}
+
+/** Lets the visitor add more products to an in-progress comparison — restricted to the
+ * same category as what's already there, mirroring the product page's own picker.
+ * Uses a custom listbox rather than a native <select>, since the browser's own dropdown
+ * styling (white options, system-blue highlight) clashes with the page's dark/red theme. */
+function AddMorePicker({ category, excludeKeys }) {
+  const [options, setOptions] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    const params = new URLSearchParams({ category, exclude: [...excludeKeys].join(",") });
+
+    fetch(`/api/products/related?${params.toString()}`)
+      .then((res) => res.json())
+      .then((json) => {
+        if (!cancelled && json?.success) setOptions(json.data ?? []);
+      })
+      .catch(() => {
+        if (!cancelled) setOptions([]);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+    // excludeKeys is derived fresh each render from the basket; only re-fetch on category change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClickOutside = (event) => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) setIsOpen(false);
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
+  const available = options.filter((option) => !excludeKeys.has(itemKey(option)));
+
+  if (!available.length) return null;
+
+  return (
+    <div className="relative flex h-full flex-col items-center justify-center gap-2 p-2 text-center" ref={containerRef}>
+      <button
+        aria-expanded={isOpen}
+        className="flex flex-col items-center gap-2 text-xs font-semibold text-white/70 transition hover:text-white"
+        onClick={() => setIsOpen((current) => !current)}
+        type="button"
+      >
+        <span className="inline-flex size-9 items-center justify-center rounded-full border border-white/30">
+          <FiPlus />
+        </span>
+        Add another product
+      </button>
+
+      {isOpen ? (
+        <div className="absolute left-1/2 top-full z-30 mt-2 w-56 -translate-x-1/2 border border-line-light bg-white text-left shadow-2xl shadow-zinc-900/20">
+          <p className="border-b border-line-light bg-parchment-alt px-3 py-2 text-[11px] font-bold uppercase tracking-wide text-ink-soft">
+            Choose a product
+          </p>
+          <ul className="max-h-64 divide-y divide-line-light overflow-y-auto">
+            {available.map((option) => (
+              <li key={itemKey(option)}>
+                <button
+                  className="flex w-full items-center gap-2.5 px-3 py-2.5 text-left text-xs font-semibold leading-5 text-ink transition hover:bg-parchment-alt hover:text-red"
+                  onClick={() => {
+                    addToCompare(option);
+                    setIsOpen(false);
+                  }}
+                  type="button"
+                >
+                  <span className="flex size-8 shrink-0 items-center justify-center border border-line-light bg-parchment-alt">
+                    {option.image ? (
+                      <Image alt="" className="h-full w-full object-contain p-1" height={32} src={option.image} width={32} />
+                    ) : null}
+                  </span>
+                  <span className="line-clamp-2">{option.name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </div>
   );
 }
@@ -324,7 +413,9 @@ export default function CompareView() {
     };
   });
 
-  const canAddMore = basket.length < COMPARE_LIMIT;
+  const basketCategory = basket.find((item) => item.category)?.category;
+  const excludeKeys = new Set(basket.map(itemKey));
+  const canAddMore = basket.length < COMPARE_LIMIT && !!basketCategory;
   const overviewRows = buildOverviewRows(columns);
   const specRows = buildSpecRows(columns);
   const span = columns.length + 1 + (canAddMore ? 1 : 0);
@@ -393,15 +484,7 @@ export default function CompareView() {
               ))}
               {canAddMore ? (
                 <th className="min-w-[200px] border-l border-dashed border-white/20 px-5 py-5 align-middle" scope="col">
-                  <Link
-                    className="flex h-full flex-col items-center justify-center gap-2 text-center text-xs font-semibold text-white/70 transition hover:text-white"
-                    href="/products"
-                  >
-                    <span className="inline-flex size-9 items-center justify-center rounded-full border border-white/30">
-                      <FiPlus />
-                    </span>
-                    Add another product
-                  </Link>
+                  <AddMorePicker category={basketCategory} excludeKeys={excludeKeys} />
                 </th>
               ) : null}
             </tr>

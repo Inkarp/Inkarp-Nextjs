@@ -162,3 +162,15 @@ export async function getQuoteHistory(email, limit = 25) {
     .limit(limit)
     .toArray();
 }
+
+export async function getSavedSolutionReports(email, limit = 12) {
+  const { db } = await collections();
+  return db.collection("solutionFinderSessions")
+    .find(
+      { accountEmail: normaliseEmail(email), saved: true },
+      { projection: { _id: 0, sessionId: 1, institution: 1, labels: 1, recommendations: { $slice: 1 }, updatedAt: 1 } }
+    )
+    .sort({ updatedAt: -1 })
+    .limit(limit)
+    .toArray();
+}

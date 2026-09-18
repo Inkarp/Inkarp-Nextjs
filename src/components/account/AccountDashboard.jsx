@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FiFileText, FiLogOut, FiTrash2 } from "react-icons/fi";
+import { FiArrowUpRight, FiFileText, FiLogOut, FiTarget, FiTrash2 } from "react-icons/fi";
 import useQuoteBasket from "@/components/products/useQuoteBasket";
 import { itemKey, removeFromBasket } from "@/lib/quoteBasket";
 
@@ -26,6 +26,7 @@ export default function AccountDashboard() {
   const basket = useQuoteBasket();
   const [quotes, setQuotes] = useState([]);
   const [profile, setProfile] = useState({});
+  const [solutionReports, setSolutionReports] = useState([]);
   const [loading, setLoading] = useState(true);
   const [savingProfile, setSavingProfile] = useState(false);
   const [savedNote, setSavedNote] = useState("");
@@ -37,6 +38,7 @@ export default function AccountDashboard() {
       .then((data) => {
         if (cancelled) return;
         setQuotes(data.quotes ?? []);
+        setSolutionReports(data.solutionReports ?? []);
         setProfile(data.user ?? {});
       })
       .catch(() => {})
@@ -74,6 +76,23 @@ export default function AccountDashboard() {
   return (
     <div className="mt-8 grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-start">
       <div className="flex flex-col gap-8">
+        <section className="border border-line-light bg-parchment p-6">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-lg font-semibold tracking-tight text-ink">Saved solution reports</h2>
+            <Link className="inline-flex items-center gap-2 text-xs font-semibold text-red hover:underline" href="/solution-finder">Build a new report <FiArrowUpRight /></Link>
+          </div>
+          {solutionReports.length ? (
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {solutionReports.map((report) => (
+                <li className="border border-line-light bg-white p-4" key={report.sessionId}>
+                  <div className="flex gap-3"><span className="flex size-9 shrink-0 items-center justify-center bg-rose-50 text-red"><FiTarget /></span><div className="min-w-0"><p className="truncate text-sm font-semibold text-ink">{report.institution?.name}</p><p className="mt-1 text-xs text-ink-soft">{report.labels?.objective}</p></div></div>
+                  <div className="mt-4 flex items-center justify-between gap-3"><span className="text-[10px] uppercase tracking-wide text-ink-soft">{formatDate(report.updatedAt)}</span><Link className="text-xs font-semibold text-red hover:underline" href={`/solution-finder/results/${report.sessionId}`}>Open report</Link></div>
+                </li>
+              ))}
+            </ul>
+          ) : <p className="text-sm leading-6 text-ink-soft">Saved personalised product and workflow reports will appear here.</p>}
+        </section>
+
         {/* Saved list */}
         <section className="border border-line-light bg-parchment p-6">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">

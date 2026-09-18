@@ -82,15 +82,21 @@ export function isCompareFull() {
   return getCompareBasket().length >= MAX_ITEMS;
 }
 
-/** Returns { items, added } — `added` is false when the item was already in, or the list is full. */
+/** Returns { items, added, reason } — `added` is false when the item was already in, the
+ * list is full, or `product.category` doesn't match the category already in the basket
+ * (comparisons are scoped to a single category at a time). */
 export function addToCompare(product) {
   const key = itemKey(product);
   const current = getCompareBasket();
   if (current.some((item) => itemKey(item) === key)) {
-    return { items: current, added: false };
+    return { items: current, added: false, reason: "duplicate" };
   }
   if (current.length >= MAX_ITEMS) {
-    return { items: current, added: false };
+    return { items: current, added: false, reason: "full" };
+  }
+  const existingCategory = current.find((item) => item.category)?.category;
+  if (existingCategory && product.category && product.category !== existingCategory) {
+    return { items: current, added: false, reason: "category" };
   }
 
   const item = {

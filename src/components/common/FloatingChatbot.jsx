@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import DexterChat from "./DexterChat";
 import { createPortal } from "react-dom";
 import {
@@ -34,11 +35,10 @@ const OPTION_BUTTON_CLASS =
 const SUBMIT_BUTTON_CLASS =
   "inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-4 text-sm font-bold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60";
 const TOP_LAYER = 2147483647;
-const AUTO_OPEN_DELAY_MS = 9000;
-const AUTO_OPEN_STORAGE_KEY = "inkarp-chatbot-seen";
+const HELPER_PROMPT_DELAY_MS = 25000;
 const GREETING_STORAGE_KEY = "inkarp-chatbot-greeting-dismissed";
 const PANEL_TRANSITION_MS = 250;
-const LAUNCHER_GREETING = "Hi, I'm Dexter — Inkarp's AI assistant. Ask me anything, anytime!";
+const LAUNCHER_GREETING = "Need help choosing an instrument?";
 
 const ENQUIRY_ICONS = {
   Product: FiBox,
@@ -79,22 +79,6 @@ const WORKFLOW_LEAD_INITIAL = {
   message: "",
 };
 
-
-function rememberChatbotSeen() {
-  try {
-    window.sessionStorage.setItem(AUTO_OPEN_STORAGE_KEY, "true");
-  } catch {
-    // Session storage can be unavailable in hardened browser contexts.
-  }
-}
-
-function hasSeenChatbot() {
-  try {
-    return window.sessionStorage.getItem(AUTO_OPEN_STORAGE_KEY) === "true";
-  } catch {
-    return true;
-  }
-}
 
 function rememberGreetingDismissed() {
   try {
@@ -183,11 +167,11 @@ function Field({ field, category, values, errors, onChange, blankOption }) {
 }
 
 export default function FloatingChatbot() {
+  const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [hasOpenedOnce, setHasOpenedOnce] = useState(false);
-  const [showGreetingTooltip, setShowGreetingTooltip] = useState(() => typeof window !== "undefined" && !hasDismissedGreeting());
-  const [showAttentionPulse, setShowAttentionPulse] = useState(() => typeof window !== "undefined" && !hasSeenChatbot());
+  const [helperPromptPath, setHelperPromptPath] = useState("");
   const [category, setCategory] = useState("");
   const [step, setStep] = useState("chat");
   const [values, setValues] = useState({});
@@ -212,17 +196,26 @@ export default function FloatingChatbot() {
 
   useEffect(() => {
     const mountTimer = window.setTimeout(() => setIsMounted(true), 0);
-    const autoOpenTimer = window.setTimeout(() => {
-      if (hasSeenChatbot() || document.visibilityState !== "visible") return;
-      openChatbot();
-    }, AUTO_OPEN_DELAY_MS);
-
-    return () => {
-      window.clearTimeout(mountTimer);
-      window.clearTimeout(autoOpenTimer);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => window.clearTimeout(mountTimer);
   }, []);
+
+  useEffect(() => {
+    const isProductDetailPage = /^\/products\/[^/]+\/?$/.test(pathname);
+    const isApplicationPage =
+      pathname === "/application-resources" ||
+      pathname.startsWith("/application-resources/") ||
+      /^\/workflows\/[^/]+/.test(pathname);
+
+    if ((!isProductDetailPage && !isApplicationPage) || hasDismissedGreeting()) return undefined;
+
+    const promptTimer = window.setTimeout(() => {
+      if (document.visibilityState === "visible" && !isOpen) {
+        setHelperPromptPath(pathname);
+      }
+    }, HELPER_PROMPT_DELAY_MS);
+
+    return () => window.clearTimeout(promptTimer);
+  }, [isOpen, pathname]);
 
   // Escape-to-close, and moving focus in/out of the panel as it opens and closes.
   useEffect(() => {
@@ -236,9 +229,8 @@ export default function FloatingChatbot() {
       if (event.key === "Escape") {
         event.preventDefault();
         setIsOpen(false);
-        setShowGreetingTooltip(false);
+        setHelperPromptPath("");
         rememberGreetingDismissed();
-        rememberChatbotSeen();
       }
     }
 
@@ -276,8 +268,6 @@ export default function FloatingChatbot() {
     setHasOpenedOnce(true);
     setIsOpen(true);
     dismissGreetingTooltip();
-    setShowAttentionPulse(false);
-    rememberChatbotSeen();
     if (step === "workflow-result" || step === "success") setStep("chat");
   }
 
@@ -285,11 +275,10 @@ export default function FloatingChatbot() {
     pushEvent("chatbot_closed");
     setIsOpen(false);
     dismissGreetingTooltip();
-    rememberChatbotSeen();
   }
 
   function dismissGreetingTooltip() {
-    setShowGreetingTooltip(false);
+    setHelperPromptPath("");
     rememberGreetingDismissed();
   }
 
@@ -453,7 +442,7 @@ export default function FloatingChatbot() {
 
   return createPortal(
     <>
-      {showGreetingTooltip && !isOpen ? (
+      {helperPromptPath === pathname && !isOpen ? (
         <div
           data-floating-widget
           className="fixed max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15"
@@ -509,32 +498,16 @@ export default function FloatingChatbot() {
             </text>
           </svg>
         ) : null}
-        {showAttentionPulse && !isOpen ? (
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-full border-2 border-red motion-safe:animate-[dexter-ring_2.6s_ease-out_infinite]"
-          />
-        ) : null}
         <Image
           alt=""
           className={`size-full rounded-full object-cover drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] transition duration-300 group-hover:drop-shadow-[0_6px_14px_rgba(190,0,16,0.25)] ${
-            isOpen
-              ? ""
-              : showAttentionPulse
-                ? "motion-safe:animate-[dexter-greet_1.4s_ease-out]"
-                : "motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
+            isOpen ? "" : "motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
           }`}
           height={80}
           priority
           src="/chatbot-icon.webp"
           width={80}
         />
-        {showAttentionPulse && !isOpen ? (
-          <span aria-hidden="true" className="absolute right-0 top-0 flex size-3">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-red opacity-75" />
-            <span className="relative inline-flex size-3 rounded-full border-2 border-white bg-red" />
-          </span>
-        ) : null}
         {!isOpen ? (
           <span
             aria-hidden="true"

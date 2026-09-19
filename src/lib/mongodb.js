@@ -15,7 +15,13 @@ function getClientPromise() {
     clientPromise = new MongoClient(uri, {
       connectTimeoutMS: 8000,
       serverSelectionTimeoutMS: 8000,
-    }).connect();
+    }).connect().catch((error) => {
+      // Do not permanently cache a rejected connection promise. A transient
+      // network/Atlas outage should be recoverable on the next request.
+      clientPromise = undefined;
+      globalThis._mongoClientPromise = undefined;
+      throw error;
+    });
     globalThis._mongoClientPromise = clientPromise;
   }
 

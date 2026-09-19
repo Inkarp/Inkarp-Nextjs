@@ -1,6 +1,7 @@
 import { getDb } from "@/lib/mongodb";
 import { currentUserEmail } from "@/lib/auth/server";
 import { recommendFinderProducts, sanitizeFinderAnswers, validateFinderAnswers, finderLabels } from "@/lib/solutionFinder";
+import { getCachedFinderSession } from "@/lib/finderSessionFallback";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -21,7 +22,10 @@ export async function GET(_request, { params }) {
     if (!session) return Response.json({ success: false }, { status: 404 });
     return Response.json({ success: true, session });
   } catch {
-    return Response.json({ success: false }, { status: 500 });
+    const session = getCachedFinderSession(sessionId);
+    return session
+      ? Response.json({ success: true, temporary: true, session })
+      : Response.json({ success: false }, { status: 503 });
   }
 }
 

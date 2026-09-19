@@ -1,5 +1,6 @@
 import { getDb } from "@/lib/mongodb";
 import { buildFinderFallbackGuidance, generateFinderGuidance } from "@/lib/solutionFinderAi";
+import { getCachedFinderSession, updateCachedFinderSession } from "@/lib/finderSessionFallback";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -27,11 +28,14 @@ export async function POST(_request, { params }) {
     return Response.json({ success: true, cached: false, guidance: savedGuidance });
   } catch (error) {
     console.error("[solution-finder-ai] failed:", error.message);
+    session ??= getCachedFinderSession(sessionId);
+    const guidance = buildFinderFallbackGuidance(session);
+    if (session) updateCachedFinderSession(sessionId, { aiGuidance: guidance });
     return Response.json({
       success: true,
       cached: false,
       fallback: true,
-      guidance: buildFinderFallbackGuidance(session),
+      guidance,
     });
   }
 }

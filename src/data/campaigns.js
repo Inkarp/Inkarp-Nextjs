@@ -11,15 +11,7 @@
 // dated campaign is running. Add an entry here only once it's real, ready
 // content. The commented-out entries further down are placeholder examples kept
 // for reference/reuse; uncomment and update one when you actually want it live.
-import { webinars } from "./webinars";
-
-const LEAD_IN_DAYS = 10;
-
-function shiftDays(isoDate, days) {
-  const date = new Date(`${isoDate}T00:00:00Z`);
-  date.setUTCDate(date.getUTCDate() + days);
-  return date.toISOString().slice(0, 10);
-}
+import { getUpcomingWebinarDate, webinars } from "./webinars";
 
 /**
  * The stripe for the webinar happening furthest in the future. Derived from the
@@ -27,32 +19,34 @@ function shiftDays(isoDate, days) {
  * campaign — and the window is computed from that fixed date, never from "now",
  * which would bake the build date into the prerendered page.
  */
-function buildWebinarCampaign() {
-  const latest = [...webinars]
-    .filter((webinar) => webinar.date)
-    .sort((a, b) => (a.date < b.date ? 1 : -1))[0];
-  if (!latest) return null;
+export function getUpcomingWebinarCampaign(today = new Date()) {
+  const next = webinars
+    .map((webinar) => ({ webinar, date: getUpcomingWebinarDate(webinar, today) }))
+    .filter(({ date }) => date)
+    .sort((a, b) => a.date - b.date)[0]?.webinar;
+  if (!next) return null;
 
   return {
-    id: `webinar-${latest.id}`,
+    id: `webinar-${next.id}`,
     type: "webinar",
     variant: "webinar-countdown",
     icon: "📅",
     accent: "teal",
-    webinarId: latest.id,
-    title: latest.title,
-    message: latest.description ?? "",
-    cta: { label: "Register free", href: "/webinars" },
-    start: shiftDays(latest.date, -LEAD_IN_DAYS),
-    end: latest.date,
+    webinarId: next.id,
+    title: next.title,
+    message: next.description ?? "",
+    cta: {
+      label: "Reserve my seat",
+      href: next.sourceLink || "/webinars",
+      external: Boolean(next.sourceLink),
+    },
+    start: next.date,
+    end: next.date,
     priority: 6,
   };
 }
 
-const webinarCampaign = buildWebinarCampaign();
-
 export const campaigns = [
-  ...(webinarCampaign ? [webinarCampaign] : []),
   {
     // Milestone year banner. `years` is deliberately a literal rather than
     // derived from today's date: the stripe is prerendered, so computing it at
@@ -91,7 +85,7 @@ export const campaigns = [
     message: "May Lord Ganesha bless every new beginning with wisdom, fill your home with joy, and bring prosperity to you and your loved ones.",
     cta: null,
     start: "2026-09-10",
-    end: "2026-09-25",
+    end: "2026-09-18",
     priority: 7,
   },
   {

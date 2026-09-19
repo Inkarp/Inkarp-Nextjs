@@ -2,9 +2,14 @@
 
 import Image from "next/image";
 import GaneshCelebration from "./GaneshCelebration";
+import HomeSolutionFinder from "./HomeSolutionFinder";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getActiveCampaigns, getEvergreenCampaign } from "@/data/campaigns";
+import { FiArrowRight, FiClock, FiZap } from "react-icons/fi";
+import {
+  getActiveCampaigns,
+  getEvergreenCampaign,
+} from "@/data/campaigns";
 import { webinars } from "@/data/webinars";
 import { pushEvent } from "@/lib/analytics";
 
@@ -293,7 +298,7 @@ function InkarpAnniversarySlide({ campaign }) {
             href={campaign.cta.href}
           >
             {campaign.cta.label}
-            <span aria-hidden="true">→</span>
+            <FiArrowRight aria-hidden="true" className="transition group-hover:translate-x-1" />
           </Link>
         ) : null}
       </div>
@@ -358,42 +363,56 @@ function WebinarCountdownSlide({ campaign }) {
   const days = useDaysUntil(webinar?.date ?? campaign.end);
 
   return (
-    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-teal/20 bg-[linear-gradient(105deg,#F2FAF9_0%,#E4F3F1_50%,#F2FAF9_100%)] sm:h-20 lg:h-24">
+    <div className="relative flex h-16 w-full items-center overflow-hidden border-y border-cyan-300/20 bg-[#071d25] text-white sm:h-20 lg:h-24">
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_16%_50%,rgba(20,184,166,0.34),transparent_30%),radial-gradient(circle_at_82%_20%,rgba(239,68,68,0.24),transparent_25%),linear-gradient(105deg,#06171e_0%,#0b3540_55%,#071d25_100%)]" />
+      <div aria-hidden="true" className="absolute inset-0 opacity-15 [background-image:linear-gradient(rgba(255,255,255,.13)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.13)_1px,transparent_1px)] [background-size:28px_28px]" />
+      <div aria-hidden="true" className="absolute -left-12 top-1/2 size-36 -translate-y-1/2 rounded-full border border-cyan-300/20 motion-safe:animate-[hvc-spin_18s_linear_infinite] sm:size-48">
+        <span className="absolute left-1/2 top-0 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300 shadow-[0_0_16px_#67e8f9]" />
+      </div>
+      <div aria-hidden="true" className="absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent motion-safe:animate-[hvc-count-sheen_4s_ease-in-out_infinite]" />
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 left-0 w-1 bg-teal"
+        className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-red via-amber-400 to-cyan-300"
       />
       <div className="relative mx-auto flex w-full max-w-[1480px] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-3 sm:gap-4">
           <span
             aria-hidden="true"
-            className="hidden size-10 shrink-0 items-center justify-center rounded-full bg-teal/10 text-lg sm:flex"
+            className="relative hidden size-11 shrink-0 items-center justify-center rounded-full border border-cyan-200/30 bg-cyan-300/10 text-cyan-200 shadow-[0_0_24px_rgba(34,211,238,.18)] sm:flex"
           >
-            {campaign.icon}
+            <FiZap className="motion-safe:animate-pulse" />
+            <span className="absolute inset-[-5px] rounded-full border border-dashed border-cyan-200/25 motion-safe:animate-[hvc-spin_12s_linear_infinite]" />
           </span>
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <CountdownPill className="bg-teal text-white" days={days} />
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-teal sm:text-[11px]">
-                Live webinar
+              <CountdownPill className="rounded-full border border-amber-300/35 bg-amber-300 text-[#172027] shadow-[0_0_18px_rgba(252,211,77,.22)]" days={days} />
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-red px-2.5 py-1 font-mono text-[9px] font-black uppercase tracking-[0.14em] text-white shadow-[0_0_20px_rgba(239,68,68,.35)] sm:text-[10px]">
+                <span className="relative flex size-1.5"><span className="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-75" /><span className="relative inline-flex size-1.5 rounded-full bg-white" /></span>
+                Hurry up
+              </span>
+              <span className="hidden font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-cyan-200 sm:inline sm:text-[11px]">
+                Live scientific webinar
               </span>
             </div>
-            <p className="mt-0.5 truncate text-sm font-semibold text-ink sm:text-base">
+            <p className="mt-1 truncate text-sm font-bold text-white sm:text-base lg:text-lg">
               {campaign.title}
             </p>
             {webinar?.date1 ? (
-              <p className="hidden truncate text-xs text-ink-soft sm:block">{webinar.date1}</p>
+              <p className="hidden items-center gap-1.5 truncate text-xs text-cyan-100/75 sm:flex"><FiClock aria-hidden="true" />{webinar.date1}</p>
             ) : null}
           </div>
         </div>
 
         {campaign.cta ? (
           <Link
-            className="inline-flex shrink-0 items-center gap-2 border border-teal/30 bg-white px-4 py-2 text-xs font-semibold text-teal transition hover:-translate-y-0.5 hover:bg-teal hover:text-white sm:px-6 sm:py-2.5 sm:text-sm"
+            className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-red to-rose-500 px-3.5 py-2 text-[11px] font-black text-white shadow-[0_8px_28px_rgba(239,68,68,.32)] ring-1 ring-white/25 transition hover:-translate-y-0.5 hover:shadow-[0_10px_34px_rgba(239,68,68,.48)] sm:px-5 sm:text-sm"
             href={campaign.cta.href}
+            onClick={() => pushEvent("campaign_cta_clicked", { campaign_id: campaign.id, campaign_title: campaign.title })}
+            rel={campaign.cta.external ? "noopener noreferrer" : undefined}
+            target={campaign.cta.external ? "_blank" : undefined}
           >
             {campaign.cta.label}
-            <span aria-hidden="true">→</span>
+            <FiArrowRight aria-hidden="true" className="transition group-hover:translate-x-1" />
           </Link>
         ) : null}
       </div>
@@ -530,7 +549,12 @@ export default function HomeCampaignSlider() {
       const active = getActiveCampaigns();
       const evergreen = getEvergreenCampaign();
       const exclusive = active.find((campaign) => campaign.exclusive);
-      const next = exclusive ? [exclusive] : active.length ? active : evergreen ? [evergreen] : [];
+      const priorityCampaigns = exclusive ? [exclusive] : active;
+      const next = priorityCampaigns.length
+        ? priorityCampaigns
+        : evergreen
+          ? [evergreen]
+          : [];
       setSlides(next);
       setIndex(0);
     });
@@ -546,14 +570,15 @@ export default function HomeCampaignSlider() {
   }, [slides.length]);
 
   const campaign = slides[index];
-  if (!campaign) return null;
 
   return (
     <section
-      aria-label={campaign.type === "festival" ? "Festive wishes from Inkarp" : "Current promotion"}
-      className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden"
+      aria-label={campaign?.type === "festival" ? "Festive wishes and solution finder" : "Laboratory solution finder"}
+      className="relative z-30 left-1/2 w-screen -translate-x-1/2 bg-[#071923] shadow-[inset_0_-1px_0_rgba(255,255,255,0.08)]"
     >
-      <div key={campaign.id} className="animate-[hvc-fade_500ms_ease]">
+      {campaign ? (
+      <div className="relative">
+      <div key={campaign.id} className="overflow-hidden animate-[hvc-fade_500ms_ease]">
         <CampaignSlide campaign={campaign} />
       </div>
 
@@ -572,6 +597,9 @@ export default function HomeCampaignSlider() {
           ))}
         </div>
       ) : null}
+      </div>
+      ) : null}
+      <HomeSolutionFinder campaignEmbedded />
     </section>
   );
 }

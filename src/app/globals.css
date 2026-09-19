@@ -384,6 +384,120 @@ body.menu-open [data-floating-widget] {
   display: none !important;
 }
 
+/* Solution Finder: a deliberately separate AI workspace. The motion stays on
+   composited transforms/opacity so the atmosphere does not disturb layout. */
+.solution-universe::before {
+  background:
+    radial-gradient(circle at 50% 15%, rgba(26, 42, 76, 0.65), transparent 34%),
+    linear-gradient(180deg, #070910 0%, #05060b 68%, #09070c 100%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.solution-universe-grid {
+  background-image:
+    linear-gradient(rgba(103, 232, 249, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 232, 249, 0.045) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+  perspective: 700px;
+  transform: perspective(600px) rotateX(58deg) scale(1.4) translateY(16%);
+  transform-origin: center bottom;
+}
+
+.solution-aurora {
+  border-radius: 999px;
+  filter: blur(80px);
+  opacity: 0.22;
+  pointer-events: none;
+  position: absolute;
+}
+.solution-aurora-red { animation: solution-drift 12s ease-in-out infinite; background: #be0010; height: 270px; left: -80px; top: 12%; width: 270px; }
+.solution-aurora-blue { animation: solution-drift 15s ease-in-out -4s infinite reverse; background: #22d3ee; height: 230px; right: -40px; top: 20%; width: 230px; }
+
+.solution-orbit {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  position: absolute;
+}
+.solution-orbit-one { animation: solution-spin 24s linear infinite; height: 420px; right: -120px; top: 20px; width: 420px; }
+.solution-orbit-two { animation: solution-spin 32s linear infinite reverse; height: 620px; left: -390px; top: 90px; width: 620px; }
+.solution-orbit span { background: #67e8f9; border-radius: 50%; box-shadow: 0 0 18px #22d3ee; height: 6px; left: 50%; position: absolute; top: -3px; width: 6px; }
+
+.solution-live-dot {
+  animation: solution-pulse 1.8s ease-out infinite;
+  background: #67e8f9;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #22d3ee;
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+}
+
+.solution-gradient-text {
+  background: linear-gradient(110deg, #fff 5%, #ff7189 38%, #67e8f9 72%, #a99bff);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.solution-neural-card::before {
+  background: linear-gradient(105deg, transparent 30%, rgba(103,232,249,0.08), transparent 70%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+  animation: solution-scan 5s ease-in-out infinite;
+}
+.solution-neural-card .solution-core {
+  align-items: center;
+  animation: solution-core 2.8s ease-in-out infinite;
+  background: radial-gradient(circle at 35% 30%, #ff607b, #be0010 46%, #3b0710);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  box-shadow: 0 0 0 12px rgba(190,0,16,.08), 0 0 50px rgba(190,0,16,.55);
+  display: flex;
+  font-size: 25px;
+  height: 66px;
+  justify-content: center;
+  width: 66px;
+}
+.solution-node {
+  border: 1px solid rgba(103,232,249,.2);
+  color: rgba(165,243,252,.75);
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: .16em;
+  padding: 6px 9px;
+  position: absolute;
+}
+.solution-node::after { background: linear-gradient(90deg, rgba(103,232,249,.4), transparent); content: ""; height: 1px; position: absolute; top: 50%; width: 50px; }
+.solution-node:nth-of-type(odd)::after { left: 100%; }
+.solution-node:nth-of-type(even)::after { right: 100%; transform: rotate(180deg); }
+
+.solution-wizard { isolation: isolate; position: relative; }
+.solution-wizard::before {
+  background: radial-gradient(circle at 95% 0%, rgba(103,232,249,.10), transparent 25%), radial-gradient(circle at 0% 100%, rgba(190,0,16,.08), transparent 28%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes solution-spin { to { transform: rotate(360deg); } }
+@keyframes solution-drift { 50% { opacity: .34; transform: translate3d(28px,-18px,0) scale(1.12); } }
+@keyframes solution-pulse { 70% { box-shadow: 0 0 0 8px rgba(103,232,249,0); } }
+@keyframes solution-scan { 45%, 100% { transform: translateX(100%); } }
+@keyframes solution-core { 50% { box-shadow: 0 0 0 18px rgba(190,0,16,.03), 0 0 65px rgba(190,0,16,.75); transform: scale(1.05); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-universe * { animation: none !important; }
+}
+
 /* Printing the quote document. Two things this must get right:
    the overlay is nested deep in the React tree, so hiding body's direct
    children would hide the sheet along with everything else; and the rules are

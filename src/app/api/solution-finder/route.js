@@ -2,6 +2,7 @@ import { getDb } from "@/lib/mongodb";
 import { currentUserEmail } from "@/lib/auth/server";
 import { ensureInstitutionSeeds } from "@/lib/institutionStore";
 import { isFinderOption } from "@/lib/finderOptionStore";
+import { cacheFinderSession } from "@/lib/finderSessionFallback";
 import {
   createFinderSessionId,
   FINDER_VERSION,
@@ -35,6 +36,7 @@ export async function POST(request) {
     );
   }
 
+  let session;
   try {
     const db = await getDb();
     await ensureInstitutionSeeds(db);
@@ -57,7 +59,7 @@ export async function POST(request) {
     const sessionId = createFinderSessionId();
     const accountEmail = await currentUserEmail();
     const now = new Date();
-    const session = {
+    session = {
       sessionId,
       version: FINDER_VERSION,
       status: "completed",
@@ -92,9 +94,43 @@ export async function POST(request) {
     return Response.json({ success: true, sessionId, resultUrl: `/solution-finder/results/${sessionId}` });
   } catch (error) {
     console.error("[solution-finder] failed:", error.message);
-    return Response.json(
-      { success: false, message: "The solution finder could not save your report. Please try again." },
-      { status: 500 }
-    );
+    // The recommendation engine is local and can still produce a useful
+    // report during a temporary database outage. Only use checked-in
+    // institutions here; user-added records still require database validation.
+    const institution = findSeedInstitution(answers.institution?.id);
+    if (!institution || institution.name !== answers.institution?.name) {
+      return Response.json(
+        { success: false, message: "The report service is temporarily unavailable. Please try again shortly." },
+        { status: 503 }
+      );
+    }
+
+    if (!answers.industry) answers.industry = institutionIndustrySlug(institution);
+    const sessionId = createFinderSessionId();
+    const now = new Date();
+    session = {
+      sessionId,
+      version: FINDER_VERSION,
+      status: "completed",
+      answers,
+      labels: finderLabels(answers),
+      institution: {
+        id: institution.id,
+        name: institution.name,
+        industry: institution.industry ?? "",
+        city: institution.city ?? "",
+        state: institution.state ?? "",
+      },
+      recommendations: recommendFinderProducts(answers),
+      sourcePage: typeof body?.sourcePage === "string" ? body.sourcePage.slice(0, 180) : "/solution-finder",
+      recommendationVersion: FINDER_VERSION,
+      saved: false,
+      accountEmail: null,
+      temporary: true,
+      createdAt: now,
+      updatedAt: now,
+    };
+    cacheFinderSession(session);
+    return Response.json({ success: true, temporary: true, sessionId, resultUrl: `/solution-finder/results/${sessionId}` });
   }
 }

@@ -6,51 +6,11 @@ import { useEffect, useMemo, useState } from "react";
 import {
   FiArrowRight,
   FiBookOpen,
-  FiBox,
   FiMessageCircle,
-  FiMonitor,
   FiX,
 } from "react-icons/fi";
 
 function getPopupConfig(pathname) {
-  if (pathname === "/") {
-    return {
-      id: "home-webinar-products",
-      threshold: 0,
-      switchThreshold: 50,
-      initial: {
-        icon: <FiMonitor aria-hidden="true" />,
-        eyebrow: "Live webinar",
-        title: "Join our upcoming scientific webinar",
-        description:
-          "Get practical ideas for modern lab workflows, better product selection, and application-focused decisions.",
-        primary: {
-          label: "Register Now",
-          href: "/webinars",
-        },
-        secondary: {
-          label: "",
-          href: "",
-        },
-      },
-      switched: {
-        icon: <FiBox aria-hidden="true" />,
-        eyebrow: "Explore products",
-        title: "Find the right lab solution faster",
-        description:
-          "Browse curated instruments, principal brands, and application-ready solutions from Inkarp.",
-        primary: {
-          label: "Explore Products",
-          href: "/products",
-        },
-        secondary: {
-          label: "Talk to Specialist",
-          href: "/products",
-        },
-      },
-    };
-  }
-
   if (pathname === "/products") {
     return {
       id: "products-quote",

@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { FiCheck, FiChevronDown, FiPlus, FiSearch } from "react-icons/fi";
 
-export default function FinderOptionCombobox({ icon: Icon, label, onChange, placeholder, type, value }) {
+export default function FinderOptionCombobox({ dark = false, icon: Icon, label, onChange, placeholder, type, value }) {
   const listId = useId();
   const rootRef = useRef(null);
   const [query, setQuery] = useState("");
@@ -64,13 +64,13 @@ export default function FinderOptionCombobox({ icon: Icon, label, onChange, plac
 
   return (
     <div className="relative min-w-0 flex-1" ref={rootRef}>
-      <div className="flex h-12 items-center rounded-full border border-line-light bg-white px-4 shadow-sm transition focus-within:border-red focus-within:ring-2 focus-within:ring-rose-100">
-        {Icon ? <Icon className="mr-2 shrink-0 text-ink-soft" /> : <FiSearch className="mr-2 shrink-0 text-ink-soft" />}
-        <input aria-autocomplete="list" aria-controls={listId} aria-expanded={open} aria-label={label} autoComplete="off" className="min-w-0 flex-1 bg-transparent text-sm font-medium text-ink outline-none placeholder:text-ink-soft/60" onChange={(event) => { setQuery(event.target.value); onChange("", null); setOpen(true); load(event.target.value); }} onFocus={() => { setOpen(true); load(query); }} onKeyDown={handleKeyDown} placeholder={placeholder} role="combobox" value={query} />
-        {loading || adding ? <span className="size-4 animate-spin rounded-full border-2 border-red/20 border-t-red" /> : value ? <FiCheck className="text-emerald-600" /> : <FiChevronDown className="text-ink-soft" />}
+      <div className={`flex h-12 items-center rounded-full px-4 transition ${dark ? "bg-white/20 shadow-[inset_0_1px_0_rgba(255,255,255,.18),0_6px_18px_rgba(8,4,24,.16)] backdrop-blur-md ring-1 ring-white/15 focus-within:bg-white/28 focus-within:ring-2 focus-within:ring-fuchsia-300/70" : "border border-line-light bg-white shadow-sm focus-within:border-red focus-within:ring-2 focus-within:ring-rose-100"}`}>
+        {Icon ? <Icon className={`mr-2 shrink-0 ${dark ? "text-fuchsia-200" : "text-ink-soft"}`} /> : <FiSearch className={`mr-2 shrink-0 ${dark ? "text-fuchsia-200" : "text-ink-soft"}`} />}
+        <input aria-autocomplete="list" aria-controls={listId} aria-expanded={open} aria-label={label} autoComplete="off" className={`min-w-0 flex-1 bg-transparent text-sm font-semibold outline-none ${dark ? "text-white caret-fuchsia-200 placeholder:font-medium placeholder:text-white/65" : "text-ink placeholder:text-ink-soft/60"}`} onChange={(event) => { setQuery(event.target.value); onChange("", null); setOpen(true); load(event.target.value); }} onFocus={() => { setOpen(true); load(query); }} onKeyDown={handleKeyDown} placeholder={placeholder} role="combobox" value={query} />
+        {loading || adding ? <span className={`size-4 animate-spin rounded-full border-2 ${dark ? "border-white/30 border-t-white" : "border-red/20 border-t-red"}`} /> : value ? <FiCheck className={dark ? "text-emerald-300" : "text-emerald-600"} /> : <FiChevronDown className={dark ? "text-white/65" : "text-ink-soft"} />}
       </div>
       {open ? (
-        <div className="absolute bottom-[calc(100%+5px)] left-0 z-50 max-h-72 w-full min-w-[280px] overflow-auto rounded-2xl border border-rose-200 bg-white p-1.5 shadow-[0_18px_50px_rgba(15,23,42,0.2)]" id={listId} role="listbox">
+        <div className={`absolute left-0 z-50 max-h-72 w-full min-w-[280px] overflow-auto rounded-2xl border border-rose-200 bg-white p-1.5 shadow-[0_18px_50px_rgba(15,23,42,0.2)] ${dark ? "top-[calc(100%+8px)]" : "bottom-[calc(100%+5px)]"}`} id={listId} role="listbox">
           {options.map((option) => <button aria-selected={option.value === value} className="flex w-full items-start justify-between gap-3 px-3 py-2.5 text-left transition hover:bg-rose-50" key={option.value} onClick={() => choose(option)} role="option" type="button"><span><span className="block text-sm font-semibold text-ink">{option.label}</span>{option.description ? <span className="mt-0.5 block text-[11px] text-ink-soft">{option.description}</span> : null}</span>{option.userAdded ? <span className="shrink-0 rounded-full bg-zinc-100 px-2 py-0.5 text-[9px] font-bold uppercase text-ink-soft">Community</span> : null}</button>)}
           {normalizedQuery.length >= 2 && !exactMatch ? <button className="mt-1 flex w-full items-center gap-2 border-t border-line-light px-3 py-3 text-left text-sm font-bold text-red hover:bg-rose-50" disabled={adding} onClick={add} type="button"><FiPlus /> Add “{query.trim()}” <span className="ml-auto text-[10px] font-medium uppercase tracking-wide text-ink-soft">or press Enter</span></button> : null}
           {!options.length && normalizedQuery.length < 2 && !loading ? <p className="px-3 py-3 text-sm text-ink-soft">Type to search or add a new option.</p> : null}

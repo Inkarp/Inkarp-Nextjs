@@ -7,6 +7,7 @@ import MatchScoreBadge from "@/components/solution-finder/MatchScoreBadge";
 import FinderProductCard from "@/components/solution-finder/FinderProductCard";
 import FinderAiAdvisor from "@/components/solution-finder/FinderAiAdvisor";
 import { buildFinderFallbackGuidance } from "@/lib/solutionFinderAi";
+import { getCachedFinderSession } from "@/lib/finderSessionFallback";
 
 export const dynamic = "force-dynamic";
 
@@ -20,7 +21,7 @@ async function getSession(sessionId) {
   try {
     const db = await getDb();
     return db.collection("solutionFinderSessions").findOne({ sessionId }, { projection: { _id: 0, accountEmail: 0 } });
-  } catch { return null; }
+  } catch { return getCachedFinderSession(sessionId); }
 }
 
 export default async function FinderResultsPage({ params }) {
@@ -32,8 +33,7 @@ export default async function FinderResultsPage({ params }) {
 
   return (
     <main className="min-h-screen bg-parchment-alt text-ink" data-scroll-skip>
-      <section className="relative overflow-hidden bg-[#111] px-4 py-12 text-white sm:px-6 lg:px-8 lg:py-16">
-        <div aria-hidden="true" className="absolute -right-32 -top-32 size-[440px] rounded-full bg-red/20 blur-3xl" />
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_20%,rgba(168,85,247,.34),transparent_26%),radial-gradient(circle_at_88%_75%,rgba(236,72,153,.26),transparent_28%),linear-gradient(110deg,#100822_0%,#24114a_48%,#0d1938_100%)] px-4 py-12 text-white sm:px-6 lg:px-8 lg:py-16">
         <div className="relative mx-auto max-w-[1180px]">
           <div className="flex flex-wrap items-start justify-between gap-8">
             <div className="flex flex-wrap items-start gap-6">

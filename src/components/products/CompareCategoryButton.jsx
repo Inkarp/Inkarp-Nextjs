@@ -67,13 +67,8 @@ export default function CompareCategoryButton({ product, relatedProducts }) {
 
   const expanded = peek || isOpen;
   const inBasket = (item) => basket.some((entry) => itemKey(entry) === itemKey(item));
-  const existingCategory = basket.find((item) => item.category)?.category;
-  const blockedCategory =
-    existingCategory && existingCategory !== product.category ? existingCategory : null;
 
   function handleToggle(item) {
-    if (blockedCategory) return;
-
     if (inBasket(item)) {
       removeFromCompare(itemKey(item));
       return;
@@ -87,7 +82,7 @@ export default function CompareCategoryButton({ product, relatedProducts }) {
   }
 
   const selectedCount = basket.length;
-  const canCompare = selectedCount >= 2 && !blockedCategory;
+  const canCompare = selectedCount >= 2;
 
   return (
     <div className="fixed left-0 top-1/2 z-40 -translate-y-1/2" data-floating-widget ref={rootRef}>
@@ -125,23 +120,12 @@ export default function CompareCategoryButton({ product, relatedProducts }) {
               </button>
             </div>
 
-            {blockedCategory ? (
-              <p className="border-b border-line-light bg-[#fdf4f4] px-4 py-3 text-xs leading-5 text-ink-soft">
-                You already have a comparison in progress for <strong>{blockedCategory}</strong>. Clear it
-                from the compare widget or the{" "}
-                <Link className="font-semibold text-red underline" href="/compare">
-                  comparison page
-                </Link>{" "}
-                before comparing {product.category} products.
-              </p>
-            ) : null}
-
             <ul className="max-h-72 divide-y divide-line-light overflow-y-auto">
               {relatedProducts.map((item) => {
                 const added = inBasket(item);
                 const slotsNeeded = inBasket(product) ? 1 : 2;
                 const full = !added && basket.length + slotsNeeded > COMPARE_LIMIT;
-                const disabled = blockedCategory || full;
+                const disabled = full;
 
                 return (
                   <li className="flex items-center gap-3 px-4 py-3" key={itemKey(item)}>

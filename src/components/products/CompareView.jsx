@@ -46,9 +46,21 @@ function valuesEqual(values) {
 function useProductDetails(basket) {
   const [entries, setEntries] = useState({});
   const fetchedKeys = useRef(new Set());
+  // Tracks true unmount only — unlike a per-effect-run `cancelled` closure, this must not
+  // flip when the effect below merely re-runs because another item was added to the basket,
+  // or an in-flight fetch for an already-tracked item would be dropped by its own effect's
+  // cleanup and never retried (fetchedKeys already marks it as fetched), leaving that column
+  // stuck on the loading skeleton until a full page reload.
+  const isMounted = useRef(true);
 
   useEffect(() => {
-    let cancelled = false;
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
+  useEffect(() => {
     const currentKeys = new Set(basket.map(itemKey));
 
     basket.forEach((item) => {
@@ -61,12 +73,12 @@ function useProductDetails(basket) {
       fetch(item.apiPath)
         .then((res) => res.json())
         .then((json) => {
-          if (cancelled) return;
+          if (!isMounted.current) return;
           if (!json?.success || !json?.data) throw new Error("Product not found");
           setEntries((current) => ({ ...current, [key]: { status: "ready", product: json.data } }));
         })
         .catch(() => {
-          if (cancelled) return;
+          if (!isMounted.current) return;
           setEntries((current) => ({ ...current, [key]: { status: "error" } }));
         });
     });
@@ -77,10 +89,6 @@ function useProductDetails(basket) {
     [...fetchedKeys.current].forEach((key) => {
       if (!currentKeys.has(key)) fetchedKeys.current.delete(key);
     });
-
-    return () => {
-      cancelled = true;
-    };
   }, [basket]);
 
   return entries;

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  FiArrowLeft, FiArrowRight, FiBriefcase, FiCheck, FiChevronDown,
+  FiArrowLeft, FiArrowRight, FiBriefcase, FiCheck,
   FiCpu, FiMapPin, FiSearch, FiSliders, FiTarget, FiX,
 } from "react-icons/fi";
 import {
@@ -16,6 +16,40 @@ const STEPS = [
   { label: "Goal", icon: FiTarget },
   { label: "Priorities", icon: FiSliders },
 ];
+
+const AUTOMATION_OPTIONS = [
+  { value: "no-preference", label: "No preference" },
+  { value: "manual", label: "Manual" },
+  { value: "semi-automated", label: "Semi-automated" },
+  { value: "automated", label: "Automated / unattended" },
+];
+
+function CompactChoiceGrid({ label, onChange, options, value }) {
+  return (
+    <fieldset>
+      <legend className="text-xs font-bold uppercase tracking-wider text-ink-soft">{label}</legend>
+      <div className="mt-3 grid grid-cols-2 gap-2">
+        {options.map((option) => {
+          const selected = value === option.value;
+          return (
+            <button
+              aria-pressed={selected}
+              className={`relative flex min-h-12 items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left text-xs font-semibold transition sm:text-sm ${selected ? "border-red bg-rose-50 text-red shadow-[0_0_0_2px_rgba(190,0,16,0.06)]" : "border-line-light bg-white text-ink hover:border-red/40 hover:bg-rose-50/40"}`}
+              key={option.value}
+              onClick={() => onChange(option.value)}
+              type="button"
+            >
+              <span>{option.label}</span>
+              <span className={`flex size-5 shrink-0 items-center justify-center rounded-full border ${selected ? "border-red bg-red text-white" : "border-zinc-300 text-transparent"}`}>
+                <FiCheck className="text-xs" />
+              </span>
+            </button>
+          );
+        })}
+      </div>
+    </fieldset>
+  );
+}
 
 function OptionGrid({ options, value, onChange, columns = "md:grid-cols-2" }) {
   return (
@@ -202,8 +236,8 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
   };
 
   return (
-    <div className="overflow-hidden border border-zinc-200 bg-white shadow-[0_30px_90px_rgba(15,23,42,0.13)]">
-      <div className="h-1.5 bg-[linear-gradient(90deg,#be0010,#d71920_48%,#161616)]" />
+    <div className="solution-wizard overflow-hidden rounded-[28px] border border-white/15 bg-white/[0.96] shadow-[0_35px_120px_rgba(0,0,0,0.55),0_0_80px_rgba(37,211,255,0.06)] backdrop-blur-xl">
+      <div className="h-1.5 bg-[linear-gradient(90deg,#be0010,#ff375f_38%,#42d9ff_72%,#725cff)]" />
       <div className="grid border-b border-line-light bg-parchment-alt sm:grid-cols-4">
         {STEPS.map((item, index) => {
           const Icon = item.icon;
@@ -234,10 +268,10 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
         {step === 3 ? (
           <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div><h2 className="text-lg font-semibold text-ink">What should the solution improve?</h2><p className="mb-4 mt-1 text-sm text-ink-soft">Select up to four. This makes the ranking and explanation more specific.</p><div className="grid gap-2 sm:grid-cols-2">{finderChallenges.map((option) => { const selected = answers.challenges.includes(option.value); return <button className={`flex items-center justify-between border px-4 py-3 text-left text-sm font-semibold transition ${selected ? "border-red bg-rose-50 text-red" : "border-line-light text-ink hover:border-red/40"}`} key={option.value} onClick={() => toggleChallenge(option.value)} type="button"><span>{option.label}</span><span className={`flex size-5 items-center justify-center rounded-full border ${selected ? "border-red bg-red text-white" : "border-line-light"}`}>{selected ? <FiCheck className="text-xs" /> : null}</span></button>; })}</div></div>
-            <div className="space-y-5 border border-line-light bg-parchment-alt p-5">
-              <label className="block"><span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Automation preference</span><span className="relative mt-2 block"><select className="h-12 w-full appearance-none border border-line-light bg-white px-3 pr-10 text-sm font-medium outline-none focus:border-red" onChange={(e) => set("automation", e.target.value)} value={answers.automation}><option value="no-preference">No preference</option><option value="manual">Manual</option><option value="semi-automated">Semi-automated</option><option value="automated">Automated / unattended</option></select><FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" /></span></label>
-              <label className="block"><span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Purchase timeline</span><span className="relative mt-2 block"><select className="h-12 w-full appearance-none border border-line-light bg-white px-3 pr-10 text-sm font-medium outline-none focus:border-red" onChange={(e) => set("timeline", e.target.value)} value={answers.timeline}>{finderTimelines.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select><FiChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2" /></span></label>
-              <label className="block"><span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Anything else? (optional)</span><textarea className="mt-2 min-h-24 w-full resize-y border border-line-light bg-white p-3 text-sm outline-none focus:border-red" maxLength={600} onChange={(e) => set("notes", e.target.value)} placeholder="Sample type, capacity, standards, existing equipment..." value={answers.notes} /></label>
+            <div className="space-y-6 rounded-xl border border-line-light bg-parchment-alt p-4 sm:p-5">
+              <CompactChoiceGrid label="Automation preference" onChange={(value) => set("automation", value)} options={AUTOMATION_OPTIONS} value={answers.automation} />
+              <CompactChoiceGrid label="Purchase timeline" onChange={(value) => set("timeline", value)} options={finderTimelines} value={answers.timeline} />
+              <label className="block"><span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Anything else? (optional)</span><textarea className="mt-3 min-h-28 w-full resize-y rounded-lg border border-line-light bg-white p-3 text-sm outline-none transition focus:border-red focus:ring-4 focus:ring-rose-50" maxLength={600} onChange={(e) => set("notes", e.target.value)} placeholder="Sample type, capacity, standards, existing equipment..." value={answers.notes} /></label>
             </div>
           </div>
         ) : null}

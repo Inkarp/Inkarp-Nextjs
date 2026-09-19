@@ -1,4 +1,5 @@
 import BasketSync from "@/components/account/BasketSync";
+import DelayedWebinarNotice from "@/components/common/DelayedWebinarNotice";
 import Footer from "@/components/common/Footer";
 import FloatingChatbot from "@/components/common/FloatingChatbot";
 import FloatingQuickActions from "@/components/common/FloatingQuickActions";
@@ -15,6 +16,7 @@ export default function SiteLayout({ children }) {
       <BasketSync />
       <ShortlistFloats />
       <PromoPopup />
+      <DelayedWebinarNotice />
       <FloatingChatbot />
       <FloatingQuickActions />
     </>

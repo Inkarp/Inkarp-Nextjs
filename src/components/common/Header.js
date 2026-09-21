@@ -27,7 +27,7 @@ import RailUtilityDock from "@/components/common/RailUtilityDock";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
 // import AccountLink from "@/components/common/AccountLink"; // re-enable with the header usage below once account is ready to go live
 import { siteConfig } from "@/data/siteConfig";
-import { FaDownload } from "react-icons/fa";
+import ProductProfileDownloadButton from "@/components/common/ProductProfileDownloadButton";
 
 const upcomingWebinarsCount = getUpcomingWebinarsCount();
 
@@ -438,26 +438,11 @@ export default function Header() {
               {/* Login temporarily hidden from nav until the account rollout plan is ready — /signin and /account still work directly.
               <AccountLink className="hidden whitespace-nowrap xl:inline-flex" /> */}
 
-              <Link
-                aria-label="Download product profile"
-                className="inline-flex h-12 w-12 items-center justify-center gap-2 border border-rose-200 bg-rose-50 text-sm font-bold text-rose-700 transition hover:bg-rose-100 xl:w-auto xl:px-5 2xl:px-7"
-                download
-                href={productProfileUrl}
-              >
-                <FaDownload className="text-base animate-bounce" />
-                <span className="hidden xl:inline">Product Profile</span>
-              </Link>
+              <ProductProfileDownloadButton href={productProfileUrl} variant="full" />
             </div>
 
             <div className="ml-auto flex items-center gap-2 lg:hidden">
-              <a
-                aria-label="Download product profile"
-                className="inline-flex size-11 items-center justify-center rounded-lg border border-line-light bg-parchment text-xl text-ink-soft transition hover:border-rose-300 hover:text-rose-700"
-                download
-                href={productProfileUrl}
-              >
-                <FaDownload />
-              </a>
+              <ProductProfileDownloadButton href={productProfileUrl} variant="icon" />
 
               <button
                 aria-label="Search products"

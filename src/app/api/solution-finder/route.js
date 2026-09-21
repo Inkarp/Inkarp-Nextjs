@@ -3,6 +3,7 @@ import { currentUserEmail } from "@/lib/auth/server";
 import { ensureInstitutionSeeds } from "@/lib/institutionStore";
 import { isFinderOption } from "@/lib/finderOptionStore";
 import { cacheFinderSession } from "@/lib/finderSessionFallback";
+import { sendFormNotification } from "@/lib/mailer";
 import {
   createFinderSessionId,
   FINDER_VERSION,
@@ -23,6 +24,32 @@ async function resolveInstitution(db, selected) {
     { projection: { _id: 0 } }
   );
   return databaseRecord ?? findSeedInstitution(selected.id);
+}
+
+// Best-effort: a lead should never be lost over a flaky SMTP connection, so
+// this is always called from inside its own try/catch at the call site.
+async function notifyFinderLead(session) {
+  await sendFormNotification({
+    subject: `New Solution Finder lead: ${session.institution.name}`,
+    fields: {
+      sessionId: session.sessionId,
+      institution: session.institution.name,
+      city: session.institution.city,
+      state: session.institution.state,
+      role: session.labels.role,
+      industry: session.labels.industry,
+      objective: session.labels.objective,
+      challenges: session.labels.challenges.join(", "),
+      automation: session.labels.automation,
+      timeline: session.labels.timeline,
+      notes: session.answers.notes,
+      contactEmail: session.contactEmail || "(not provided)",
+      accountEmail: session.accountEmail || "",
+      sourcePage: session.sourcePage,
+      resultUrl: session.resultUrl,
+    },
+    replyTo: session.contactEmail || session.accountEmail || undefined,
+  });
 }
 
 export async function POST(request) {
@@ -89,6 +116,7 @@ export async function POST(request) {
       },
       recommendations,
       sourcePage: typeof body?.sourcePage === "string" ? body.sourcePage.slice(0, 180) : "/solution-finder",
+      resultUrl: `/solution-finder/results/${sessionId}`,
       recommendationVersion: FINDER_VERSION,
       saved: Boolean(accountEmail),
       accountEmail: accountEmail ?? null,
@@ -127,7 +155,13 @@ export async function POST(request) {
       createdAt: now,
     });
 
-    return Response.json({ success: true, sessionId, resultUrl: `/solution-finder/results/${sessionId}` });
+    try {
+      await notifyFinderLead(session);
+    } catch (error) {
+      console.error("[solution-finder] failed to send lead notification email:", error.message);
+    }
+
+    return Response.json({ success: true, sessionId, resultUrl: session.resultUrl });
   } catch (error) {
     console.error("[solution-finder] failed:", error.message);
     // The recommendation engine is local and can still produce a useful
@@ -159,14 +193,23 @@ export async function POST(request) {
       },
       recommendations: recommendFinderProducts(answers),
       sourcePage: typeof body?.sourcePage === "string" ? body.sourcePage.slice(0, 180) : "/solution-finder",
+      resultUrl: `/solution-finder/results/${sessionId}`,
       recommendationVersion: FINDER_VERSION,
       saved: false,
       accountEmail: null,
+      contactEmail,
       temporary: true,
       createdAt: now,
       updatedAt: now,
     };
     cacheFinderSession(session);
-    return Response.json({ success: true, temporary: true, sessionId, resultUrl: `/solution-finder/results/${sessionId}` });
+
+    try {
+      await notifyFinderLead(session);
+    } catch (notifyError) {
+      console.error("[solution-finder] failed to send lead notification email:", notifyError.message);
+    }
+
+    return Response.json({ success: true, temporary: true, sessionId, resultUrl: session.resultUrl });
   }
 }

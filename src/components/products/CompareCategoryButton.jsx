@@ -7,52 +7,18 @@ import { FiBarChart2, FiCheck, FiX } from "react-icons/fi";
 import useCompareBasket from "./useCompareBasket";
 import { addToCompare, COMPARE_LIMIT, itemKey, removeFromCompare } from "@/lib/compareBasket";
 
-// How long the label stays expanded after the visitor last scrolled/moved the
-// pointer, before it retracts back to just the icon.
-const IDLE_RETRACT_MS = 4500;
-
 /**
- * A left-edge floating tab, not an inline button — it only shows its
- * "Compare with similar products" label while the visitor is actively
- * scrolling or moving the pointer, and retracts to just the icon after a
- * moment of inactivity (the icon itself always stays reachable). Only
- * rendered once this product's category actually has something to compare
- * it against — same condition as "Related Products" — and only ever lets
- * the visitor build a comparison within that one category.
+ * A left-edge floating tab, icon-only. Only rendered once this product's
+ * category actually has something to compare it against — same condition as
+ * "Related Products" — and only ever lets the visitor build a comparison
+ * within that one category.
  */
 export default function CompareCategoryButton({ product, relatedProducts }) {
   const basket = useCompareBasket();
   const [isOpen, setIsOpen] = useState(false);
-  const [peek, setPeek] = useState(false);
-  const retractTimer = useRef(null);
   const rootRef = useRef(null);
 
   const hasSiblings = !!relatedProducts?.length;
-
-  useEffect(() => {
-    if (!hasSiblings) return undefined;
-
-    const reveal = () => {
-      setPeek(true);
-      if (retractTimer.current) clearTimeout(retractTimer.current);
-      retractTimer.current = setTimeout(() => setPeek(false), IDLE_RETRACT_MS);
-    };
-
-    reveal();
-    window.addEventListener("scroll", reveal, { passive: true });
-    window.addEventListener("pointermove", reveal, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", reveal);
-      window.removeEventListener("pointermove", reveal);
-      if (retractTimer.current) clearTimeout(retractTimer.current);
-    };
-  }, [hasSiblings]);
-
-  // The panel only ever opens off the expanded (labelled) tab, so keep it expanded
-  // and pause the idle-retract countdown for as long as the panel is open.
-  useEffect(() => {
-    if (isOpen && retractTimer.current) clearTimeout(retractTimer.current);
-  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -65,7 +31,6 @@ export default function CompareCategoryButton({ product, relatedProducts }) {
 
   if (!hasSiblings) return null;
 
-  const expanded = peek || isOpen;
   const inBasket = (item) => basket.some((entry) => itemKey(entry) === itemKey(item));
 
   function handleToggle(item) {
@@ -89,19 +54,12 @@ export default function CompareCategoryButton({ product, relatedProducts }) {
       <div className="relative">
         <button
           aria-expanded={isOpen}
-          className="flex items-center border border-l-0 border-ink bg-ink py-3.5 pl-3 pr-3 text-white shadow-lg shadow-zinc-900/25 transition-colors hover:bg-black"
+          aria-label="Compare with similar products"
+          className="flex items-center border border-l-0 border-ink bg-ink p-3.5 text-white shadow-lg shadow-zinc-900/25 transition-colors hover:bg-black"
           onClick={() => setIsOpen((current) => !current)}
-          onMouseEnter={() => setPeek(true)}
           type="button"
         >
           <FiBarChart2 className="shrink-0 text-base" />
-          <span
-            className={`overflow-hidden whitespace-nowrap text-xs font-semibold transition-all duration-500 ease-out ${
-              expanded ? "ml-2 max-w-[13rem] opacity-100" : "ml-0 max-w-0 opacity-0"
-            }`}
-          >
-            Compare with similar products
-          </span>
         </button>
 
         {isOpen ? (

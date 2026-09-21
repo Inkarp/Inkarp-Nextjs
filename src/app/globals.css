@@ -497,6 +497,20 @@ body.menu-open [data-floating-widget] {
 @keyframes solution-loader-breathe { 50% { box-shadow: 0 0 75px rgba(217,70,239,.8); transform: scale(1.08); } }
 @keyframes solution-stage-pulse { 0% { box-shadow: 0 0 0 0 rgba(232,121,249,.45); } 70%, 100% { box-shadow: 0 0 0 10px rgba(232,121,249,0); } }
 
+.profile-download-glow { animation: profile-glow-pulse 2.6s ease-in-out infinite; }
+.profile-download-progress {
+  background: linear-gradient(90deg,rgba(255,255,255,.55),rgba(255,255,255,.95));
+  animation: profile-download-fill 1.6s ease forwards;
+}
+@keyframes profile-glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(190,0,16,.32); }
+  50% { box-shadow: 0 0 16px 5px rgba(190,0,16,.26); }
+}
+@keyframes profile-download-fill { from { width: 0%; } to { width: 100%; } }
+@media (prefers-reduced-motion: reduce) {
+  .profile-download-glow, .profile-download-progress { animation: none !important; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .solution-loading-screen * { animation: none !important; }
 }

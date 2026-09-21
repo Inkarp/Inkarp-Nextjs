@@ -6,11 +6,13 @@ import FloatingQuickActions from "@/components/common/FloatingQuickActions";
 import Header from "@/components/common/Header";
 import PromoPopup from "@/components/common/PromoPopup";
 import ShortlistFloats from "@/components/common/ShortlistFloats";
+import HomeSolutionFinder from "@/components/home/HomeSolutionFinder";
 
 export default function SiteLayout({ children }) {
   return (
     <>
       <Header />
+      <HomeSolutionFinder campaignEmbedded siteWide />
       <div className="relative w-[90%] mx-auto">{children}</div>
       <Footer />
       <BasketSync />

@@ -27,8 +27,20 @@ async function resolveInstitution(db, selected) {
 
 export async function POST(request) {
   const body = await request.json().catch(() => null);
+  const contactEmail = typeof body?.contactEmail === "string"
+    ? body.contactEmail.trim().toLowerCase().slice(0, 254)
+    : "";
+  if (contactEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail)) {
+    return Response.json({ success: false, message: "Enter a valid work email address." }, { status: 400 });
+  }
   const answers = sanitizeFinderAnswers(body?.answers);
-  const missing = validateFinderAnswers(answers);
+  // The compact home finder intentionally does not ask visitors to repeat an
+  // industry answer we already know from their selected institution.
+  if (!answers.industry) {
+    const seedInstitution = findSeedInstitution(answers.institution?.id);
+    if (seedInstitution) answers.industry = institutionIndustrySlug(seedInstitution);
+  }
+  const missing = validateFinderAnswers(answers).filter((field) => field !== "industry");
   if (missing.length) {
     return Response.json(
       { success: false, message: `Complete: ${missing.join(", ")}.` },
@@ -55,6 +67,9 @@ export async function POST(request) {
     // Use an institution's known sector as a helpful default, never as an
     // override: multidisciplinary institutions can legitimately choose another.
     if (!answers.industry) answers.industry = institutionIndustrySlug(institution);
+    if (!answers.industry) {
+      return Response.json({ success: false, message: "We could not determine an industry for this institution." }, { status: 400 });
+    }
     const recommendations = recommendFinderProducts(answers);
     const sessionId = createFinderSessionId();
     const accountEmail = await currentUserEmail();
@@ -77,11 +92,32 @@ export async function POST(request) {
       recommendationVersion: FINDER_VERSION,
       saved: Boolean(accountEmail),
       accountEmail: accountEmail ?? null,
+      contactEmail,
       createdAt: now,
       updatedAt: now,
     };
 
     await db.collection("solutionFinderSessions").insertOne(session);
+    if (contactEmail) {
+      await db.collection("solutionFinderLeads").updateOne(
+        { email: contactEmail },
+        {
+          $set: {
+            email: contactEmail,
+            institutionId: institution.id,
+            institutionName: institution.name,
+            role: answers.role,
+            objective: answers.objective,
+            industry: answers.industry,
+            latestSessionId: sessionId,
+            sourcePage: session.sourcePage,
+            updatedAt: now,
+          },
+          $setOnInsert: { createdAt: now },
+        },
+        { upsert: true }
+      );
+    }
     await db.collection("finderEvents").insertOne({
       sessionId,
       event: "finder_completed",

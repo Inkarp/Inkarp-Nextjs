@@ -8,6 +8,7 @@ import FinderProductCard from "@/components/solution-finder/FinderProductCard";
 import FinderAiAdvisor from "@/components/solution-finder/FinderAiAdvisor";
 import { buildFinderFallbackGuidance } from "@/lib/solutionFinderAi";
 import { getCachedFinderSession } from "@/lib/finderSessionFallback";
+import FinderResultsReveal from "@/components/solution-finder/FinderResultsReveal";
 
 export const dynamic = "force-dynamic";
 
@@ -20,7 +21,7 @@ async function getSession(sessionId) {
   if (!/^[A-Za-z0-9_-]{12,40}$/.test(sessionId)) return null;
   try {
     const db = await getDb();
-    return db.collection("solutionFinderSessions").findOne({ sessionId }, { projection: { _id: 0, accountEmail: 0 } });
+    return db.collection("solutionFinderSessions").findOne({ sessionId }, { projection: { _id: 0, accountEmail: 0, contactEmail: 0 } });
   } catch { return getCachedFinderSession(sessionId); }
 }
 
@@ -32,6 +33,7 @@ export default async function FinderResultsPage({ params }) {
   const bestMatch = recommendations[0]?.match ?? 0;
 
   return (
+    <FinderResultsReveal initialReady={Boolean(session.aiGuidance?.summary)} sessionId={sessionId}>
     <main className="min-h-screen bg-parchment-alt text-ink" data-scroll-skip>
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_20%,rgba(168,85,247,.34),transparent_26%),radial-gradient(circle_at_88%_75%,rgba(236,72,153,.26),transparent_28%),linear-gradient(110deg,#100822_0%,#24114a_48%,#0d1938_100%)] px-4 py-12 text-white sm:px-6 lg:px-8 lg:py-16">
         <div className="relative mx-auto max-w-[1180px]">
@@ -66,5 +68,6 @@ export default async function FinderResultsPage({ params }) {
         {[{Icon:FiLayers,title:'Compare',text:'Review shortlisted specifications and configurations.',href:'/compare',cta:'Open comparison'},{Icon:FiBarChart2,title:'Build a quote',text:'Combine products into one consolidated request.',href:'/quote',cta:'View quote list'},{Icon:FiShield,title:'Confirm technical fit',text:'Validate samples, throughput, compliance, and accessories.',href:'/contact',cta:'Contact a specialist'},{Icon:FiMessageCircle,title:'Plan service',text:'Discuss installation, qualification, training, AMC, and calibration.',href:'/service',cta:'Explore service'}].map(({Icon,title,text,href,cta}) => <article className="bg-white p-6" key={title}><Icon className="text-2xl text-red"/><h3 className="mt-4 font-semibold">{title}</h3><p className="mt-2 min-h-16 text-sm leading-6 text-ink-soft">{text}</p><Link className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-red hover:text-ink" href={href}>{cta}<FiArrowRight/></Link></article>)}
       </div></div></section>
     </main>
+    </FinderResultsReveal>
   );
 }

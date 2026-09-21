@@ -396,17 +396,6 @@ body.menu-open [data-floating-widget] {
   position: absolute;
 }
 
-.solution-universe-grid {
-  background-image:
-    linear-gradient(rgba(103, 232, 249, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(103, 232, 249, 0.045) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(to bottom, black, transparent 92%);
-  perspective: 700px;
-  transform: perspective(600px) rotateX(58deg) scale(1.4) translateY(16%);
-  transform-origin: center bottom;
-}
-
 .solution-aurora {
   border-radius: 999px;
   filter: blur(80px);
@@ -414,18 +403,8 @@ body.menu-open [data-floating-widget] {
   pointer-events: none;
   position: absolute;
 }
-.solution-aurora-red { animation: solution-drift 12s ease-in-out infinite; background: #be0010; height: 270px; left: -80px; top: 12%; width: 270px; }
-.solution-aurora-blue { animation: solution-drift 15s ease-in-out -4s infinite reverse; background: #22d3ee; height: 230px; right: -40px; top: 20%; width: 230px; }
-
-.solution-orbit {
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 50%;
-  pointer-events: none;
-  position: absolute;
-}
-.solution-orbit-one { animation: solution-spin 24s linear infinite; height: 420px; right: -120px; top: 20px; width: 420px; }
-.solution-orbit-two { animation: solution-spin 32s linear infinite reverse; height: 620px; left: -390px; top: 90px; width: 620px; }
-.solution-orbit span { background: #67e8f9; border-radius: 50%; box-shadow: 0 0 18px #22d3ee; height: 6px; left: 50%; position: absolute; top: -3px; width: 6px; }
+.solution-aurora-violet { animation: solution-drift 12s ease-in-out infinite; background: #a855f7; height: 270px; left: -80px; top: 12%; width: 270px; }
+.solution-aurora-pink { animation: solution-drift 15s ease-in-out -4s infinite reverse; background: #ec4899; height: 230px; right: -40px; top: 20%; width: 230px; }
 
 .solution-live-dot {
   animation: solution-pulse 1.8s ease-out infinite;
@@ -496,6 +475,30 @@ body.menu-open [data-floating-widget] {
 
 @media (prefers-reduced-motion: reduce) {
   .solution-universe * { animation: none !important; }
+}
+
+.solution-loading-screen {
+  background: radial-gradient(circle at 50% 38%, rgba(192,38,211,.22), transparent 26%), radial-gradient(circle at 75% 70%, rgba(59,130,246,.15), transparent 30%), #080512;
+  position: relative;
+}
+.solution-loading-grid {
+  background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, black, transparent 72%);
+}
+.solution-ai-loader { height: 120px; position: relative; width: 120px; }
+.solution-ai-loader-ring { border: 1px solid rgba(232,121,249,.38); border-radius: 50%; inset: 0; position: absolute; }
+.solution-ai-loader-ring::after { background: #f0abfc; border-radius: 50%; box-shadow: 0 0 18px #d946ef; content: ""; height: 8px; left: 50%; position: absolute; top: -4px; width: 8px; }
+.solution-ai-loader-ring-one { animation: solution-spin 2.8s linear infinite; }
+.solution-ai-loader-ring-two { animation: solution-spin 4.2s linear infinite reverse; inset: 16px; }
+.solution-ai-loader-core { align-items: center; animation: solution-loader-breathe 1.8s ease-in-out infinite; background: linear-gradient(145deg,#7c3aed,#db2777); border-radius: 50%; box-shadow: 0 0 55px rgba(217,70,239,.55); display: flex; font-size: 26px; inset: 34px; justify-content: center; position: absolute; }
+.solution-loading-progress { background: linear-gradient(90deg,#8b5cf6,#ec4899,#f0abfc); transition: width .7s ease; }
+.solution-stage-pulse { animation: solution-stage-pulse 1.4s ease-out infinite; }
+@keyframes solution-loader-breathe { 50% { box-shadow: 0 0 75px rgba(217,70,239,.8); transform: scale(1.08); } }
+@keyframes solution-stage-pulse { 0% { box-shadow: 0 0 0 0 rgba(232,121,249,.45); } 70%, 100% { box-shadow: 0 0 0 10px rgba(232,121,249,0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .solution-loading-screen * { animation: none !important; }
 }
 
 /* Printing the quote document. Two things this must get right:

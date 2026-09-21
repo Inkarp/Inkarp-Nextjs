@@ -17,7 +17,7 @@ export async function GET(_request, { params }) {
     const db = await getDb();
     const session = await db.collection("solutionFinderSessions").findOne(
       { sessionId },
-      { projection: { _id: 0, accountEmail: 0 } }
+      { projection: { _id: 0, accountEmail: 0, contactEmail: 0 } }
     );
     if (!session) return Response.json({ success: false }, { status: 404 });
     return Response.json({ success: true, session });

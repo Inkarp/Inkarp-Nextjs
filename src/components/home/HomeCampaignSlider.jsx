@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import GaneshCelebration from "./GaneshCelebration";
-import HomeSolutionFinder from "./HomeSolutionFinder";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiArrowRight, FiClock, FiZap } from "react-icons/fi";
@@ -599,7 +598,6 @@ export default function HomeCampaignSlider() {
       ) : null}
       </div>
       ) : null}
-      <HomeSolutionFinder campaignEmbedded />
     </section>
   );
 }

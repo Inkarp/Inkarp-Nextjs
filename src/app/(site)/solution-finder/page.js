@@ -1,8 +1,11 @@
-import { FiActivity, FiCheckCircle, FiCpu, FiDatabase, FiRadio, FiShield, FiZap } from "react-icons/fi";
+import Image from "next/image";
+import { FiActivity, FiCheckCircle, FiDatabase, FiShield, FiZap } from "react-icons/fi";
 import SolutionFinderWizard from "@/components/solution-finder/SolutionFinderWizard";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { getDb } from "@/lib/mongodb";
 import { findSeedInstitution, institutionIndustrySlug } from "@/lib/solutionFinder";
+
+const HERO_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
 export const metadata = {
   title: "Laboratory Solution Finder | Inkarp",
@@ -53,38 +56,27 @@ export default async function SolutionFinderPage({ searchParams }) {
     <main className="solution-universe relative min-h-screen overflow-hidden bg-[#05060b] text-white" data-scroll-skip>
       <BreadcrumbJsonLd path="/solution-finder" />
       <div className="relative z-20 text-white [&_a]:text-white/60 [&_a:hover]:text-white"><PageBreadcrumbs path="/solution-finder" /></div>
-      <section className="relative px-4 pb-20 pt-12 text-white sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
-        <div aria-hidden="true" className="solution-universe-grid absolute inset-0" />
-        <div aria-hidden="true" className="solution-orbit solution-orbit-one"><span /></div>
-        <div aria-hidden="true" className="solution-orbit solution-orbit-two"><span /></div>
-        <div aria-hidden="true" className="solution-aurora solution-aurora-red" />
-        <div aria-hidden="true" className="solution-aurora solution-aurora-blue" />
-        <div className="relative z-10 mx-auto max-w-[1180px]">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <span className="inline-flex items-center gap-2 rounded-full border border-red/40 bg-red/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-rose-200 shadow-[0_0_30px_rgba(190,0,16,0.18)]"><FiZap /> Inkarp Intelligence Engine</span>
+      <section className="relative overflow-hidden text-white">
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image alt="Modern Inkarp laboratory workspace" className="object-cover" fill priority sizes="100vw" src={HERO_IMAGE} />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#05060b]/90 via-[#05060b]/80 to-[#05060b]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(168,85,247,.34),transparent_45%),radial-gradient(circle_at_85%_75%,rgba(236,72,153,.24),transparent_45%)]" />
+        </div>
+        <div aria-hidden="true" className="solution-aurora solution-aurora-violet" />
+        <div aria-hidden="true" className="solution-aurora solution-aurora-pink" />
+        <div className="relative z-10 mx-auto max-w-[1180px] px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-28">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-fuchsia-300/35 bg-fuchsia-400/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.24em] text-fuchsia-200 shadow-[0_0_30px_rgba(192,38,211,0.18)]"><FiZap /> Inkarp Intelligence Engine</span>
             <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-200/70"><i className="solution-live-dot" /> Systems online · catalogue connected</span>
           </div>
-          <div className="mt-10 grid items-end gap-10 lg:grid-cols-[1.25fr_0.75fr]">
-            <div>
-              <p className="mb-4 font-mono text-xs uppercase tracking-[0.32em] text-cyan-300/70">Enter the solution space</p>
-              <h1 className="max-w-4xl text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-6xl lg:text-7xl">Turn your lab challenge into an <span className="solution-gradient-text">intelligent workflow.</span></h1>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">Describe your environment and objective. Our intelligence layer maps your needs across instruments, applications, and scientific workflows to create a ranked path forward.</p>
-            </div>
-            <div className="solution-neural-card relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-6 backdrop-blur-xl">
-              <div className="mb-6 flex items-center justify-between"><span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/45">Live reasoning map</span><FiRadio className="text-cyan-300" /></div>
-              <div className="relative flex h-32 items-center justify-center">
-                <div className="solution-core"><FiCpu /></div>
-                <span className="solution-node left-[8%] top-[15%]">LAB</span><span className="solution-node right-[4%] top-[12%]">FIT</span>
-                <span className="solution-node bottom-[5%] left-[2%]">DATA</span><span className="solution-node bottom-0 right-[8%]">FLOW</span>
-              </div>
-              <div className="mt-5 grid grid-cols-3 gap-2 text-center font-mono text-[9px] uppercase tracking-wider text-white/45"><span>Discover</span><span>Reason</span><span>Recommend</span></div>
-            </div>
-          </div>
+          <p className="mx-auto mt-8 max-w-xl font-mono text-[11px] uppercase tracking-[0.28em] text-fuchsia-300/70">Laboratory solution finder</p>
+          <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-0.03em] sm:text-6xl">Find the right workflow for your lab.</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">Tell us what you need and receive a ranked, AI-assisted shortlist from the verified Inkarp catalogue.</p>
         </div>
       </section>
 
       <section className="relative z-10 px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto -mt-10 max-w-[1180px]"><SolutionFinderWizard initialAnswers={initialAnswers} /></div>
+        <div className="mx-auto max-w-[1180px]"><SolutionFinderWizard initialAnswers={initialAnswers} /></div>
       </section>
 
       <section className="relative z-10 px-4 pb-20 sm:px-6 lg:px-8">

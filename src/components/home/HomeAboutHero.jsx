@@ -73,10 +73,6 @@ function SlideWorkflow() {
 */
 
 function SlideAbout() {
-  const openSolutionFinder = () => {
-    window.dispatchEvent(new CustomEvent("inkarp:open-solution-finder"));
-  };
-
   return (
     <div className="bg-white px-4 pb-8 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
@@ -113,20 +109,6 @@ function SlideAbout() {
               >
                 Browse Solutions
               </Link>
-              <button
-                onClick={openSolutionFinder}
-                type="button"
-                className="group relative isolate overflow-hidden rounded-full bg-[linear-gradient(110deg,#8f000c_0%,#be0010_45%,#e3232d_100%)] px-6 py-3.5 text-sm font-bold text-white shadow-[0_12px_30px_rgba(190,0,16,0.3)] ring-1 ring-red/20 transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_38px_rgba(190,0,16,0.42)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-red"
-              >
-                <span aria-hidden="true" className="absolute inset-y-0 -left-1/2 -z-10 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-[450%]" />
-                <span className="inline-flex items-center gap-2.5">
-                  <span className="inline-flex size-7 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25">
-                    <HiSparkles aria-hidden="true" className="text-white motion-safe:animate-pulse" />
-                  </span>
-                  Help me choose an instrument
-                  <FiArrowRight aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              </button>
             </div>
           </div>
 

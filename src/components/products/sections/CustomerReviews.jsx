@@ -30,7 +30,7 @@ export default function CustomerReviews({ reviews = [] }) {
         <div className="mb-8 flex flex-wrap gap-2">
           {filters.map((filter) => (
             <button
-              className={`inline-flex h-10 items-center justify-center border px-4 text-sm font-semibold transition ${
+              className={`flex h-10 w-full items-center justify-center border px-4 text-sm font-semibold transition sm:inline-flex sm:w-auto ${
                 activeFilter === filter
                   ? 'border-red bg-red text-white'
                   : 'border-line-light bg-white text-ink-soft hover:border-red hover:text-red'

@@ -32,7 +32,7 @@ export default function InPageNav({ links = [] }) {
 
   return (
     <div className="sticky top-0 z-40 border-b border-line-light bg-parchment/95 backdrop-blur-sm">
-      <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <nav className="flex gap-0 overflow-x-auto scrollbar-none">
           {links.map(({ id, label }) => (
             <button
@@ -48,6 +48,10 @@ export default function InPageNav({ links = [] }) {
             </button>
           ))}
         </nav>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-parchment/95 to-transparent lg:hidden"
+        />
       </div>
     </div>
   );

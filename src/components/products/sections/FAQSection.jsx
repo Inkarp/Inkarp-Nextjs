@@ -64,7 +64,7 @@ export default function FAQSection({ faqs = [], productName }) {
           <div className="flex flex-wrap gap-2">
             {CATEGORIES.map((item) => (
               <button
-                className={`border px-3 py-2 text-xs font-semibold transition ${category === item.key ? 'border-black bg-red text-white' : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'}`}
+                className={`w-full border px-3 py-2 text-xs font-semibold transition sm:w-auto ${category === item.key ? 'border-black bg-red text-white' : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'}`}
                 key={item.key}
                 onClick={() => { setCategory(item.key); setOpen(null); }}
                 type="button"

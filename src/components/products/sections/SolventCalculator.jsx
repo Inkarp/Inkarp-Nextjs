@@ -113,7 +113,7 @@ export default function SolventCalculator({ calculatorData, simulatorData, produ
               <div className="flex flex-wrap gap-2">
                 {solvents.map((item, index) => (
                   <button
-                    className={`min-w-24 border px-5 py-2.5 text-sm font-semibold transition ${
+                    className={`w-full border px-5 py-2.5 text-sm font-semibold transition sm:w-auto sm:min-w-24 ${
                       item.rate === null
                         ? 'cursor-not-allowed border-line-light bg-parchment-alt text-black/30'
                         : selIdx === index

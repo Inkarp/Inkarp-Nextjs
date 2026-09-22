@@ -67,7 +67,7 @@ export default function ApplicationsExplorer({ data, productName }) {
             return (
               <button
                 aria-pressed={isActive}
-                className={`inline-flex h-12 items-center gap-2 border px-5 text-sm font-semibold transition ${
+                className={`flex h-12 w-full items-center gap-2 border px-5 text-sm font-semibold transition sm:inline-flex sm:w-auto ${
                   isActive
                     ? 'border-black bg-red text-white'
                     : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'

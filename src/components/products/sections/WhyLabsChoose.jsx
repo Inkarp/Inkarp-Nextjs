@@ -97,7 +97,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
                 )}
 
                 <div
-                  className={`relative mt-auto flex h-7 items-center px-3 text-xs font-bold ${
+                  className={`relative mt-auto flex min-h-7 items-center px-3 text-xs font-bold ${
                     isAccent
                       ? 'bg-red text-white'
                       : 'bg-parchment-alt text-black'

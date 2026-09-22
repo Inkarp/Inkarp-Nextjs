@@ -298,11 +298,11 @@ export default function DistillationSimulator({ data, productName = 'this evapor
 
           {/* Right column — stacked */}
           <div className="space-y-6">
-            <div className="flex h-[380px] gap-4 border border-line-light bg-parchment p-4">
-              <div className="flex h-full w-1/2 items-center">
+            <div className="flex h-auto flex-col gap-4 border border-line-light bg-parchment p-4 sm:h-[380px] sm:flex-row">
+              <div className="flex h-[220px] w-full items-center sm:h-full sm:w-1/2">
                 <EvaporatorStage remaining={fill} running={running} recoveredPct={recoveredPct} />
               </div>
-              <div className="h-full w-1/2">
+              <div className="h-[220px] w-full sm:h-full sm:w-1/2">
                 <RecoveryChart points={points} />
               </div>
             </div>

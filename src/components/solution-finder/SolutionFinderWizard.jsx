@@ -4,11 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   FiArrowLeft, FiArrowRight, FiBriefcase, FiCheck,
-  FiCpu, FiMapPin, FiSearch, FiSliders, FiTarget, FiX,
+  FiCpu, FiMail, FiMapPin, FiSearch, FiSliders, FiTarget, FiX,
 } from "react-icons/fi";
 import {
   finderChallenges, finderIndustries, finderObjectives, finderRoles, finderTimelines,
 } from "@/data/solutionFinder";
+
+const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
 const STEPS = [
   { label: "Institution", icon: FiMapPin },
@@ -207,6 +209,7 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
     challenges: [],
     automation: "no-preference", timeline: "exploring", notes: "",
   });
+  const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -224,7 +227,7 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
     try {
       const response = await fetch("/api/solution-finder", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ answers, sourcePage: window.location.pathname }),
+        body: JSON.stringify({ answers, contactEmail: email.trim().toLowerCase(), sourcePage: window.location.pathname }),
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Could not generate recommendations.");
@@ -269,6 +272,14 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
           <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div><h2 className="text-lg font-semibold text-ink">What should the solution improve?</h2><p className="mb-4 mt-1 text-sm text-ink-soft">Select up to four. This makes the ranking and explanation more specific.</p><div className="grid gap-2 sm:grid-cols-2">{finderChallenges.map((option) => { const selected = answers.challenges.includes(option.value); return <button className={`flex items-center justify-between border px-4 py-3 text-left text-sm font-semibold transition ${selected ? "border-red bg-rose-50 text-red" : "border-line-light text-ink hover:border-red/40"}`} key={option.value} onClick={() => toggleChallenge(option.value)} type="button"><span>{option.label}</span><span className={`flex size-5 items-center justify-center rounded-full border ${selected ? "border-red bg-red text-white" : "border-line-light"}`}>{selected ? <FiCheck className="text-xs" /> : null}</span></button>; })}</div></div>
             <div className="space-y-6 rounded-xl border border-line-light bg-parchment-alt p-4 sm:p-5">
+              <label className="block">
+                <span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Work email</span>
+                <div className={`mt-3 flex h-12 items-center gap-2 border bg-white px-3 transition ${email && !EMAIL_PATTERN.test(email) ? "border-red/50 ring-4 ring-rose-50" : "border-line-light focus-within:border-red focus-within:ring-4 focus-within:ring-rose-50"}`}>
+                  <FiMail className="shrink-0 text-ink-soft" />
+                  <input aria-label="Work email" autoComplete="email" className="min-w-0 flex-1 bg-transparent text-sm font-medium text-ink outline-none placeholder:text-ink-soft/55" inputMode="email" onChange={(e) => setEmail(e.target.value)} placeholder="you@institution.edu" type="email" value={email} />
+                </div>
+                <span className="mt-1.5 block text-[11px] leading-4 text-ink-soft">So we can send your report and have a specialist follow up.</span>
+              </label>
               <CompactChoiceGrid label="Automation preference" onChange={(value) => set("automation", value)} options={AUTOMATION_OPTIONS} value={answers.automation} />
               <CompactChoiceGrid label="Purchase timeline" onChange={(value) => set("timeline", value)} options={finderTimelines} value={answers.timeline} />
               <label className="block"><span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Anything else? (optional)</span><textarea className="mt-3 min-h-28 w-full resize-y rounded-lg border border-line-light bg-white p-3 text-sm outline-none transition focus:border-red focus:ring-4 focus:ring-rose-50" maxLength={600} onChange={(e) => set("notes", e.target.value)} placeholder="Sample type, capacity, standards, existing equipment..." value={answers.notes} /></label>
@@ -283,7 +294,7 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
           {step < STEPS.length - 1 ? (
             <button className="inline-flex h-12 items-center gap-2 bg-red px-6 text-sm font-bold text-white transition hover:bg-[#9f000d] disabled:cursor-not-allowed disabled:opacity-35" disabled={!valid} onClick={() => setStep((value) => value + 1)} type="button">Continue <FiArrowRight /></button>
           ) : (
-            <button className="inline-flex h-12 items-center gap-2 bg-red px-6 text-sm font-bold text-white transition hover:bg-[#9f000d] disabled:opacity-50" disabled={submitting} onClick={submit} type="button">{submitting ? <><span className="size-4 animate-spin rounded-full border-2 border-white/30 border-t-white" /> Building your report</> : <><FiCpu /> Generate recommendations</>}</button>
+            <button className="inline-flex h-12 items-center gap-2 bg-red px-6 text-sm font-bold text-white transition hover:bg-[#9f000d] disabled:cursor-not-allowed disabled:opacity-50" disabled={submitting || !EMAIL_PATTERN.test(email)} onClick={submit} type="button">{submitting ? <><span className="size-4 animate-spin rounded-full border-2 border-white/30 border-t-white" /> Building your report</> : <><FiCpu /> Generate recommendations</>}</button>
           )}
         </div>
       </div>

@@ -104,7 +104,7 @@ export default function StandardsCerts({ cards = [], section, productName }) {
 
             return (
               <button
-                className={`h-10 border px-5 text-sm font-semibold transition ${
+                className={`h-10 w-full border px-5 text-sm font-semibold transition sm:w-auto ${
                   isActive
                     ? 'border-black bg-red text-white'
                     : 'border-line-light bg-parchment text-black hover:border-red/30 hover:text-red'

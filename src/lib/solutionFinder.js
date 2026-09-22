@@ -180,6 +180,7 @@ export function recommendFinderProducts(answers, limit = MAX_RECOMMENDATIONS) {
       principalSlug: product.principalSlug ?? "",
       principalName: product.principalName ?? "",
       countryOfOrigin: product.countryOfOrigin ?? "",
+      category: product.category ?? "",
       industry: product.industry ?? product.category ?? "Scientific instrument",
     },
   }));

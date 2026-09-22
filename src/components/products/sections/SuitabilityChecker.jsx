@@ -77,7 +77,7 @@ export default function SuitabilityChecker({ data, productName }) {
                       return (
                         <button
                           aria-pressed={active}
-                          className={`border px-5 py-2.5 text-sm font-semibold transition ${
+                          className={`w-full border px-5 py-2.5 text-sm font-semibold transition sm:w-auto ${
                             active
                               ? 'border-black bg-red text-white'
                               : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'

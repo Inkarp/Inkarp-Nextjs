@@ -11,10 +11,31 @@ const stages = [
   { Icon: FiCpu, label: "Preparing your AI report" },
 ];
 
+// A brand-new institution (added via "Add as a new institution") has no known
+// industry yet, so the API can reject the request even though everything else
+// here was already answered. Carry the already-known fields back to the full
+// wizard via its searchParams pre-fill support instead of discarding them —
+// the visitor then only has to pick an industry on Step 2, not start over.
+function buildResumeUrl(rawPayload) {
+  try {
+    const answers = JSON.parse(rawPayload)?.answers ?? {};
+    const params = new URLSearchParams();
+    if (answers.institution?.id) params.set("institutionId", answers.institution.id);
+    if (answers.institution?.name) params.set("institutionName", answers.institution.name);
+    if (answers.role) params.set("role", answers.role);
+    if (answers.objective) params.set("objective", answers.objective);
+    const query = params.toString();
+    return query ? `/solution-finder?${query}` : "/solution-finder";
+  } catch {
+    return "/solution-finder";
+  }
+}
+
 export default function FinderAnalysisPage() {
   const router = useRouter();
   const [activeStage, setActiveStage] = useState(0);
   const [error, setError] = useState("");
+  const [resumeUrl, setResumeUrl] = useState("/solution-finder");
 
   useEffect(() => {
     const rawPayload = window.sessionStorage.getItem("inkarp:solution-finder-payload");
@@ -22,6 +43,7 @@ export default function FinderAnalysisPage() {
       setError("Your finder details were not available. Please return and try again.");
       return undefined;
     }
+    setResumeUrl(buildResumeUrl(rawPayload));
 
     const controller = new AbortController();
     const stageTimer = window.setInterval(() => {
@@ -74,7 +96,7 @@ export default function FinderAnalysisPage() {
         {error ? (
           <div className="mx-auto mt-8 max-w-sm rounded-xl border border-rose-300/30 bg-rose-400/10 p-5">
             <p className="font-semibold text-rose-100">{error}</p>
-            <button className="mt-4 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#24114a]" onClick={() => router.back()} type="button">Return to the finder</button>
+            <button className="mt-4 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#24114a]" onClick={() => router.push(resumeUrl)} type="button">Continue in the full form</button>
           </div>
         ) : (
           <>

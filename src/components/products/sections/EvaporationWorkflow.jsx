@@ -163,23 +163,33 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
           description={section.description}
         />
 
-        {/* Cards with connectors */}
-        <div className="flex items-stretch gap-2 overflow-x-auto pb-2 pt-6 lg:gap-0 lg:overflow-visible lg:pt-0">
-          {steps.map((step, i) => (
-            <div key={`step-${i}`} className="flex min-w-[160px] flex-1 items-stretch">
-              <StepCard
-                step={step}
-                index={i}
-                isActive={active === i}
-                isPast={i < active}
-                onClick={() => setActive(i)}
-                totalDuration={STEP_DURATION}
-              />
-              {i < steps.length - 1 && (
-                <Connector complete={i < active} />
-              )}
-            </div>
-          ))}
+        {/* Cards with connectors. Below `lg` this scrolls horizontally — the extra
+            `pl-8` (on top of the section's own padding) keeps the first card clear
+            of the fixed-position compare button (CompareCategoryButton, pinned at
+            left-0/top-1/2), and the right-edge fade signals there's more to scroll
+            instead of clipping mid-card. */}
+        <div className="relative">
+          <div className="flex items-stretch gap-2 overflow-x-auto scroll-smooth scrollbar-none snap-x snap-mandatory scroll-pl-8 pb-2 pl-8 pr-6 pt-6 lg:snap-none lg:scroll-pl-0 lg:gap-0 lg:overflow-visible lg:pl-0 lg:pr-0 lg:pt-0">
+            {steps.map((step, i) => (
+              <div key={`step-${i}`} className="flex min-w-[160px] flex-1 snap-start items-stretch">
+                <StepCard
+                  step={step}
+                  index={i}
+                  isActive={active === i}
+                  isPast={i < active}
+                  onClick={() => setActive(i)}
+                  totalDuration={STEP_DURATION}
+                />
+                {i < steps.length - 1 && (
+                  <Connector complete={i < active} />
+                )}
+              </div>
+            ))}
+          </div>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-parchment to-transparent lg:hidden"
+          />
         </div>
 
         {/* Step dots (mobile progress indicator) */}

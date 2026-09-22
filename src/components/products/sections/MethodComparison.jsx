@@ -28,11 +28,11 @@ export default function MethodComparison({ data }) {
         />
 
         <div className="relative mt-9 overflow-hidden border border-line-light bg-parchment">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto scrollbar-none pl-8 lg:pl-0">
             <table className="w-full min-w-[820px] border-collapse">
               <thead>
                 <tr className="border-b border-line-light">
-                  <th className="w-[28%] px-4 py-5 text-left text-xs font-bold uppercase tracking-widest text-black sm:px-6">
+                  <th className="sticky left-0 z-10 w-[28%] bg-parchment px-4 py-5 text-left text-xs font-bold uppercase tracking-widest text-black sm:px-6">
                     Parameter
                   </th>
                   {columns.map((column, index) => {
@@ -60,7 +60,7 @@ export default function MethodComparison({ data }) {
               <tbody>
                 {rows.map((row) => (
                   <tr className="border-b border-line-light last:border-b-0" key={row.feature}>
-                    <td className="px-4 py-4 text-sm font-semibold text-black sm:px-6">
+                    <td className="sticky left-0 z-10 bg-parchment px-4 py-4 text-sm font-semibold text-black sm:px-6">
                       {cleanText(row.feature)}
                     </td>
                     {(row.values ?? []).map((value, index) => {
@@ -83,6 +83,13 @@ export default function MethodComparison({ data }) {
               </tbody>
             </table>
           </div>
+          {/* Signals there's more to scroll — the table has no native scrollbar
+              visible on most devices, and its sticky first column can otherwise
+              make it look fully visible when it isn't. */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-parchment to-transparent lg:hidden"
+          />
         </div>
 
         <SectionDisclaimer>

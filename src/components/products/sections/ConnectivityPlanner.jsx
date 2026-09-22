@@ -221,7 +221,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                         return (
                           <button
                             aria-pressed={isChosen}
-                            className={`border px-5 py-3 text-sm font-semibold transition ${
+                            className={`w-full border px-5 py-3 text-sm font-semibold transition sm:w-auto ${
                               isChosen
                                 ? 'border-black bg-red text-white'
                                 : 'border-line-light bg-white text-black hover:border-red hover:text-red'

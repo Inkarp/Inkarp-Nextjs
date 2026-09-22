@@ -38,6 +38,7 @@ export default function HomeSolutionFinder({ campaignEmbedded = false, siteWide 
   const universeTheme = AI_UNIVERSE_THEME;
   const isResultsPage = pathname.startsWith("/solution-finder/results/");
   const isAnalysisPage = pathname === "/solution-finder/analyze";
+  const isFinderPage = pathname === "/solution-finder";
 
   useEffect(() => {
     setGenerateError("");
@@ -191,6 +192,10 @@ export default function HomeSolutionFinder({ campaignEmbedded = false, siteWide 
       <HiSparkles className="animate-pulse" /> Help me choose an instrument <FiArrowRight />
     </button>
   );
+
+  // The dedicated wizard page already asks institution/role/objective in full —
+  // showing this compact bar on top of it would ask the same three questions twice.
+  if (isFinderPage) return null;
 
   if (!visible || isResultsPage || isAnalysisPage) {
     return (

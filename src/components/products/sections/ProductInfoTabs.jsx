@@ -604,7 +604,7 @@ export default function ProductInfoTabs({ product }) {
               onClick={() => setActive(key)}
               role="tab"
               type="button"
-              className={`inline-flex items-center gap-1.5 border px-4 py-2 text-xs font-semibold transition ${
+              className={`flex w-full items-center gap-1.5 border px-4 py-2 text-xs font-semibold transition sm:inline-flex sm:w-auto ${
                 safeActive === key
                   ? 'border-black bg-red text-white'
                   : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'

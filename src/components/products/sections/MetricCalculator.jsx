@@ -112,7 +112,7 @@ const FORMULAS = {
   // and total weight limits. `data.modelLimits` (ordered smallest to largest)
   // supplies the limits so this stays reusable across any chamber-style
   // product rather than hard-coding one model's numbers here.
-  'shelf-load-fit-check': ({ nums, data }) => {
+  'shelf-load-fit-check': ({ nums, picks, data }) => {
     const shelvesUsed = Math.max(0, nums.shelvesUsed ?? 0);
     const loadPerShelf = Math.max(0, nums.loadPerShelfKg ?? 0);
     const totalLoad = shelvesUsed * loadPerShelf;
@@ -122,7 +122,8 @@ const FORMULAS = {
     const widest = models[models.length - 1];
     const fits = (m) =>
       loadPerShelf <= m.maxLoadPerShelfKg && totalLoad <= m.maxLoadKg && shelvesUsed <= m.maxShelves;
-    const fitting = models.find(fits);
+    const preferred = models.find((model) => model.name === picks?.preferredModel);
+    const fitting = preferred && fits(preferred) ? preferred : models.find(fits);
 
     let recommendedModel;
     let usableShelves;
@@ -200,8 +201,11 @@ const FORMULAS = {
     const humidityMax = data?.humidityRange?.[1] ?? 85;
     const targetTemp = nums.targetTemp ?? 0;
     const targetHumidity = nums.targetHumidity ?? 0;
-    const holdDays = Math.max(0, nums.holdDays ?? 0);
+    const holdHours = Math.max(0, nums.holdHours ?? ((nums.holdDays ?? 0) * 24));
+    const holdDays = holdHours / 24;
     const needsHumidity = (picks?.humidityControlNeeded ?? 'yes') === 'yes';
+    const chamberModel = picks?.chamberModel ?? data?.choices?.find((choice) => choice.key === 'chamberModel')?.default;
+    const selectedModel = data?.models?.find((model) => model.val === chamberModel);
 
     const tempOk = targetTemp >= tempMin && targetTemp <= tempMax;
     const humidityOk = !needsHumidity || (targetHumidity >= humidityMin && targetHumidity <= humidityMax);
@@ -210,11 +214,11 @@ const FORMULAS = {
       return {
         assumption: data?.assumptionNote ?? '',
         cards: [
-          { label: 'Range check', value: `Out of range — exceeds ${tempMax}°C maximum` },
+          { label: 'Range check', value: `Out of range - exceeds ${tempMax} C maximum` },
           { label: 'Heating time', value: 'Not applicable' },
           { label: 'Cooling time', value: 'Not applicable' },
           { label: 'Water guidance', value: 'Not applicable' },
-          { label: 'Stability note', value: `Lower the target to ${tempMax}°C or below` },
+          { label: 'Stability note', value: `Lower the target to ${tempMax} C or below` },
         ],
       };
     }
@@ -252,7 +256,7 @@ const FORMULAS = {
     if (!needsHumidity) {
       waterGuidance = 'No water needed';
     } else if (holdDays <= 7) {
-      waterGuidance = '20 L tank with recirculation should be sufficient';
+      waterGuidance = selectedModel?.shortRunWaterGuidance ?? 'Refill tank is sufficient';
     } else {
       waterGuidance = 'Direct Water System recommended for the long hold';
     }
@@ -260,11 +264,11 @@ const FORMULAS = {
     return {
       assumption: data?.assumptionNote ?? '',
       cards: [
-        { label: 'Range check', value: 'Within range — achievable' },
+        { label: 'Range check', value: 'Within range - achievable' },
         { label: 'Heating time', value: `About ${count(heatMinutes)} minutes from ambient` },
         { label: 'Cooling time', value: `About ${count(coolMinutes)} minutes to ambient` },
         { label: 'Water guidance', value: waterGuidance },
-        { label: 'Stability note', value: `Holds within ± 0.5°C${needsHumidity ? ' and ± 1 %RH' : ''}` },
+        { label: 'Stability note', value: `Holds within +/- 0.3 C${needsHumidity ? ' and +/- 1 %RH' : ''}` },
       ],
     };
   },
@@ -320,6 +324,7 @@ export default function MetricCalculator({ data, productName = 'this product' })
   const fields = data?.fields ?? [];
   const choices = data?.choices ?? [];
   const compute = FORMULAS[data?.formula];
+  const requiresRun = Boolean(data?.requiresRun);
 
   const [nums, setNums] = useState(() =>
     Object.fromEntries(fields.map((field) => [field.key, field.default ?? 0]))
@@ -327,10 +332,30 @@ export default function MetricCalculator({ data, productName = 'this product' })
   const [picks, setPicks] = useState(() =>
     Object.fromEntries(choices.map((choice) => [choice.key, choice.default ?? choice.options?.[0]?.val]))
   );
+  const [runValues, setRunValues] = useState(null);
+
+  const resetCalculator = () => {
+    setNums(Object.fromEntries(fields.map((field) => [field.key, field.default ?? 0])));
+    setPicks(Object.fromEntries(choices.map((choice) => [choice.key, choice.default ?? choice.options?.[0]?.val])));
+    setRunValues(null);
+  };
+
+  const applyPreset = (preset) => {
+    if (preset.nums) setNums((current) => ({ ...current, ...preset.nums }));
+    if (preset.picks) setPicks((current) => ({ ...current, ...preset.picks }));
+    setRunValues(null);
+  };
 
   const results = useMemo(
-    () => (compute ? compute({ nums, picks, data }) : null),
-    [compute, data, nums, picks]
+    () => {
+      if (!compute || (requiresRun && !runValues)) return null;
+      return compute({
+        nums: requiresRun ? runValues.nums : nums,
+        picks: requiresRun ? runValues.picks : picks,
+        data,
+      });
+    },
+    [compute, data, nums, picks, requiresRun, runValues]
   );
 
   if (!compute || !fields.length) return null;
@@ -342,25 +367,48 @@ export default function MetricCalculator({ data, productName = 'this product' })
     }),
     ...fields.map((field) => `${field.label}: ${nums[field.key] ?? 0}`),
     '',
-    ...results.cards.map((card) => `${card.label}: ${card.value}`),
+    ...(results?.cards ?? []).map((card) => `${card.label}: ${card.value}`),
   ].join('\n');
 
   return (
     <section
-      className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8"
+      className={`scroll-mt-32 border-b border-line-light px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16 ${data?.surface === 'alt' ? 'bg-parchment-alt' : 'bg-white'}`}
       id={data?.sectionId ?? 'calculator'}
     >
       <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader description={data?.description} eyebrow={data?.eyebrow} title={data?.title} />
 
         <div className="relative mt-6 grid gap-6 lg:grid-cols-[1fr_1fr]">
-          <div className="border border-line-light bg-parchment p-5 sm:p-6">
+          <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">
+            {data?.promptTitle ? (
+              <h3 className="mb-4 text-lg font-semibold tracking-tight text-ink">{data.promptTitle}</h3>
+            ) : null}
+            {data?.presets?.length > 0 ? (
+              <div className="mb-5">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-soft">Try a common target</p>
+                <div className="flex flex-wrap gap-2">
+                  {data.presets.map((preset) => (
+                    <button
+                      className="border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink transition hover:border-red hover:text-red"
+                      key={preset.label}
+                      onClick={() => applyPreset(preset)}
+                      type="button"
+                    >
+                      {preset.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : null}
             <div className="space-y-4">
               {choices.map((choice) => (
                 <ChoiceInput
                   field={choice}
                   key={choice.key}
-                  onChange={(next) => setPicks((current) => ({ ...current, [choice.key]: next }))}
+                  onChange={(next) => {
+                    setPicks((current) => ({ ...current, [choice.key]: next }));
+                    if (requiresRun) setRunValues(null);
+                  }}
                   value={picks[choice.key] ?? ''}
                 />
               ))}
@@ -368,36 +416,68 @@ export default function MetricCalculator({ data, productName = 'this product' })
                 <NumberInput
                   field={field}
                   key={field.key}
-                  onChange={(next) => setNums((current) => ({ ...current, [field.key]: next }))}
+                  onChange={(next) => {
+                    setNums((current) => ({ ...current, [field.key]: next }));
+                    if (requiresRun) setRunValues(null);
+                  }}
                   value={nums[field.key] ?? 0}
                 />
               ))}
             </div>
 
-            {results.assumption ? (
+            {requiresRun && !results ? (
+              <button
+                className="mt-5 inline-flex w-full items-center justify-center border border-red bg-red px-5 py-3 text-sm font-semibold text-white transition hover:bg-red/90 sm:w-auto"
+                onClick={() => setRunValues({ nums: { ...nums }, picks: { ...picks } })}
+                type="button"
+              >
+                {data.runLabel ?? 'Run Calculation'}
+              </button>
+            ) : null}
+
+            {data?.showRetry && results ? (
+              <button
+                className="mt-5 inline-flex items-center justify-center border border-line-light bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:border-red hover:text-red"
+                onClick={resetCalculator}
+                type="button"
+              >
+                {data.retryLabel ?? 'Retry with New Values'}
+              </button>
+            ) : null}
+
+            {results?.assumption ? (
               <p className="mt-4 border border-line-light bg-parchment-alt px-4 py-3 text-xs leading-6 text-ink-soft">
                 {results.assumption}
               </p>
             ) : null}
 
-            {data?.ctaNote ? (
+            {results && data?.ctaNote ? (
               <p className="mt-4 text-sm leading-6 text-black">{data.ctaNote}</p>
             ) : null}
 
-            <LeadCaptureForm
-              className="mt-5 w-full"
-              formType="metric-calculator"
-              productName={productName}
-              successMessage={(name) =>
-                `Thank you${name ? `, ${name}` : ''}. We have sent your numbers to our team.`
-              }
-              summary={summary}
-              triggerLabel={data?.submitLabel ?? 'Get Configuration Support'}
-            />
+            {results ? (
+              <LeadCaptureForm
+                className="mt-5 w-full"
+                formType="metric-calculator"
+                productName={productName}
+                successMessage={(name) =>
+                  `Thank you${name ? `, ${name}` : ''}. We have sent your numbers to our team.`
+                }
+                summary={summary}
+                triggerLabel={data?.submitLabel ?? 'Get Configuration Support'}
+              />
+            ) : null}
           </div>
 
-          <div className="space-y-3">
-            {results.cards.map((card) => {
+          <div className="min-w-0 space-y-3">
+            {!results ? (
+              <div className="flex min-h-[280px] items-center justify-center border border-dashed border-line-light bg-parchment-alt p-6 text-center">
+                <div>
+                  <p className="text-lg font-semibold text-ink">Your test-cycle output will appear here</p>
+                  <p className="mt-2 text-sm leading-6 text-ink-soft">Choose the conditions and chamber model, then run the test cycle.</p>
+                </div>
+              </div>
+            ) : results.cards.map((card) => {
               // Short numeric/₹ readouts (most calculators) stay big and punchy.
               // A checker-style calculator can return a full phrase instead of a
               // number (e.g. "Within range — achievable") — that shouldn't blow

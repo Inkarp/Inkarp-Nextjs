@@ -105,7 +105,7 @@ export default async function ProductPage({ params }) {
       </nav>
 
       <section className="bg-white px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-8">
-        <div className="mx-auto grid w-full gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
+        <div className="mx-auto grid w-full max-w-[1180px] gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (

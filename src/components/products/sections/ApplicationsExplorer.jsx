@@ -51,8 +51,8 @@ export default function ApplicationsExplorer({ data, productName }) {
   if (!industries.length || !industry || !profile) return null;
 
   return (
-    <section id="industries" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-[1180px]">
+    <section id="industries" className="scroll-mt-32 border-b border-line-light bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="08"
           eyebrow={data?.eyebrow ?? 'Applications explorer'}
@@ -60,7 +60,21 @@ export default function ApplicationsExplorer({ data, productName }) {
           description={data?.description ?? 'Select your field to see typical tasks and the capabilities that matter.'}
         />
 
-        <div className="relative mt-8 flex flex-wrap gap-2">
+        <label className="relative mt-6 block sm:hidden">
+          <span className="mb-2 block text-xs font-semibold uppercase tracking-wide text-ink-soft">Choose an industry</span>
+          <select
+            className="h-12 w-full appearance-none border border-line-light bg-parchment px-4 pr-10 text-sm font-semibold text-ink outline-none focus:border-red focus:ring-2 focus:ring-red/20"
+            onChange={(event) => setActive(Number(event.target.value))}
+            value={active}
+          >
+            {industries.map((item, index) => (
+              <option key={item.name} value={index}>{item.name}</option>
+            ))}
+          </select>
+          <span aria-hidden="true" className="pointer-events-none absolute bottom-4 right-4 border-x-[5px] border-t-[6px] border-x-transparent border-t-ink" />
+        </label>
+
+        <div className="relative mt-8 hidden flex-wrap gap-2 sm:flex">
           {industries.map((item, index) => {
             const Icon = ICON_MAP[item.icon] ?? FiActivity;
             const isActive = active === index;
@@ -83,7 +97,7 @@ export default function ApplicationsExplorer({ data, productName }) {
           })}
         </div>
 
-        <div className="relative mt-6 border border-line-light bg-parchment p-6 sm:p-8 lg:grid lg:grid-cols-[1fr_464px] lg:gap-12">
+        <div className="relative mt-6 border border-line-light bg-parchment p-4 sm:p-8 lg:grid lg:grid-cols-[1fr_464px] lg:gap-12">
           <div>
             <h3 className="text-2xl font-semibold tracking-tight text-ink">{industry.name}</h3>
             <p className="mt-5 max-w-2xl text-base leading-8 text-black">
@@ -92,7 +106,7 @@ export default function ApplicationsExplorer({ data, productName }) {
 
             <div className="mt-7 space-y-4">
               {profile.bullets.map((item) => (
-                <div className="flex items-center gap-4 text-base text-black" key={item}>
+                <div className="flex items-start gap-3 text-sm leading-6 text-black sm:items-center sm:gap-4 sm:text-base" key={item}>
                   <FiCheck className="shrink-0 text-emerald-600" />
                   <span>{item}</span>
                 </div>

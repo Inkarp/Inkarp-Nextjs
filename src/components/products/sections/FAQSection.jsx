@@ -38,8 +38,8 @@ export default function FAQSection({ faqs = [], productName }) {
   });
 
   return (
-    <section id="faq" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-[1180px]">
+    <section id="faq" className="scroll-mt-32 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="18"
           eyebrow="FAQ"
@@ -61,7 +61,21 @@ export default function FAQSection({ faqs = [], productName }) {
             />
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <label className="relative block lg:hidden">
+            <span className="sr-only">Filter questions by category</span>
+            <select
+              className="h-11 w-full appearance-none border border-line-light bg-parchment px-4 pr-10 text-sm font-semibold text-ink outline-none focus:border-red focus:ring-2 focus:ring-red/20"
+              onChange={(event) => { setCategory(event.target.value); setOpen(null); }}
+              value={category}
+            >
+              {CATEGORIES.map((item) => (
+                <option key={item.key} value={item.key}>{item.label}</option>
+              ))}
+            </select>
+            <span aria-hidden="true" className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 border-x-[5px] border-t-[6px] border-x-transparent border-t-ink" />
+          </label>
+
+          <div className="hidden flex-wrap gap-2 lg:flex">
             {CATEGORIES.map((item) => (
               <button
                 className={`w-full border px-3 py-2 text-xs font-semibold transition sm:w-auto ${category === item.key ? 'border-black bg-red text-white' : 'border-line-light bg-parchment text-black hover:border-line-light hover:text-black'}`}

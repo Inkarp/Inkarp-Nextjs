@@ -147,7 +147,7 @@ export default function OrbitVisualizer({ data, productName = 'this mixer' }) {
             </svg>
           </div>
 
-          <div className="flex-1">
+          <div className="min-w-0 flex-1">
             <label className="text-sm font-semibold text-black">Speed</label>
             <div className="mb-1 mt-1 flex items-baseline gap-2">
               <span className="text-3xl font-semibold tracking-tight text-ink">{formatNumber(speed)}</span>
@@ -170,14 +170,14 @@ export default function OrbitVisualizer({ data, productName = 'this mixer' }) {
             {modes.length > 1 && (
               <>
                 <p className="mb-2 mt-5 text-sm font-semibold text-black">Operating mode</p>
-                <div className="flex gap-2">
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
                   {modes.map((mode) => (
                     <button
                       key={mode.key}
                       onClick={() => setModeKey(mode.key)}
                       type="button"
                       aria-pressed={modeKey === mode.key}
-                      className={`flex-1 border px-3 py-2.5 text-sm font-semibold transition ${
+                      className={`min-h-12 min-w-0 border px-3 py-2.5 text-sm font-semibold leading-5 transition ${
                         modeKey === mode.key
                           ? 'border-red bg-red/5 text-red'
                           : 'border-line-light bg-white text-ink hover:border-red/40'

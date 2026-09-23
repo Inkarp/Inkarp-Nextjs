@@ -18,8 +18,8 @@ export default function MethodComparison({ data }) {
   const highlightedIndex = columns.findIndex((column) => column.highlight);
 
   return (
-    <section id="comparison" className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-[1180px]">
+    <section id="comparison" className="scroll-mt-32 border-b border-line-light bg-parchment-alt px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="11"
           eyebrow={eyebrow ?? 'Method comparison'}
@@ -27,12 +27,13 @@ export default function MethodComparison({ data }) {
           description={description ?? 'How the system compares with a basic manually controlled evaporation setup across the parameters that matter day to day.'}
         />
 
-        <div className="relative mt-9 overflow-hidden border border-line-light bg-parchment">
-          <div className="overflow-x-auto scrollbar-none pl-8 lg:pl-0">
-            <table className="w-full min-w-[820px] border-collapse">
+        <p className="mt-6 text-xs font-semibold text-ink-soft sm:hidden">Swipe horizontally to compare all columns.</p>
+        <div className="relative mt-3 overflow-hidden border border-line-light bg-parchment sm:mt-9">
+          <div className="overflow-x-auto scrollbar-none">
+            <table className="w-full min-w-[680px] border-collapse sm:min-w-[820px]">
               <thead>
                 <tr className="border-b border-line-light">
-                  <th className="sticky left-0 z-10 w-[28%] bg-parchment px-4 py-5 text-left text-xs font-bold uppercase tracking-widest text-black sm:px-6">
+                  <th className="sticky left-0 z-10 w-[28%] bg-parchment px-3 py-4 text-left text-[11px] font-bold uppercase tracking-wide text-black sm:px-6 sm:py-5 sm:text-xs sm:tracking-widest">
                     Parameter
                   </th>
                   {columns.map((column, index) => {
@@ -60,7 +61,7 @@ export default function MethodComparison({ data }) {
               <tbody>
                 {rows.map((row) => (
                   <tr className="border-b border-line-light last:border-b-0" key={row.feature}>
-                    <td className="sticky left-0 z-10 bg-parchment px-4 py-4 text-sm font-semibold text-black sm:px-6">
+                    <td className="sticky left-0 z-10 max-w-36 bg-parchment px-3 py-3 text-xs font-semibold text-black sm:max-w-none sm:px-6 sm:py-4 sm:text-sm">
                       {cleanText(row.feature)}
                     </td>
                     {(row.values ?? []).map((value, index) => {

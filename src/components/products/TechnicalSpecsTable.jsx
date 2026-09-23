@@ -44,7 +44,21 @@ export default function TechnicalSpecsTable({ note, specs = [] }) {
         </div>
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="divide-y divide-line-light sm:hidden">
+        {specs.map((row, index) => (
+          <div className="bg-white p-4" key={`${row.label}-mobile-${index}`}>
+            <div className="flex items-start gap-2 text-sm font-semibold leading-6 text-ink">
+              <FiCheckCircle aria-hidden="true" className="mt-1 shrink-0 text-red" />
+              <span>{row.label}</span>
+            </div>
+            <div className="mt-2 break-words pl-6 text-sm font-medium leading-6 text-ink-soft">
+              {renderSpecValue(row.value)}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="hidden overflow-x-auto sm:block">
         <table className="w-full min-w-[640px] border-collapse text-left">
           <caption className="sr-only">Technical specifications table</caption>
           <thead>

@@ -583,8 +583,8 @@ export default function ProductInfoTabs({ product }) {
   if (visibleTabs.length === 0) return null;
 
   return (
-    <section id="overview" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1180px]">
+    <section id="overview" className="scroll-mt-32 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="mx-auto w-full max-w-[1180px]">
 
         <SectionHeader
           number="01"
@@ -619,7 +619,7 @@ export default function ProductInfoTabs({ product }) {
         {/* Content card */}
         <div
           aria-labelledby={`product-info-tab-${safeActive}`}
-          className="border border-line-light bg-parchment p-6 min-h-[300px]"
+          className="min-h-[300px] border border-line-light bg-white p-4 sm:p-6"
           id="product-info-panel"
           role="tabpanel"
           tabIndex={0}

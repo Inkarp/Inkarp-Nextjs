@@ -50,8 +50,8 @@ export default function SuitabilityChecker({ data, productName }) {
   if (!fields.length || !results.length) return null;
 
   return (
-    <section id="suitability" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-[1180px] w-full">
+    <section id="suitability" className="scroll-mt-32 border-b border-line-light bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number={data?.sectionNumber ?? '05'}
           eyebrow={data?.eyebrow ?? 'Suitability checker'}

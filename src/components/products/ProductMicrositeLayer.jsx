@@ -72,7 +72,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
 
       <div
         data-floating-widget
-        className={`fixed inset-x-3 bottom-4 z-40 mx-auto max-w-3xl border border-line-light bg-parchment/95 p-3 backdrop-blur transition ${
+        className={`fixed inset-x-2 bottom-2 z-40 mx-auto max-w-3xl border border-line-light bg-parchment/95 p-3 backdrop-blur transition sm:inset-x-3 sm:bottom-4 ${
           shouldShowSticky
             ?"translate-y-0 opacity-100"
             :"pointer-events-none translate-y-6 opacity-0"
@@ -87,9 +87,9 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
               Book a demo for {productName ??"this product"}.
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             <button
-              className="inline-flex h-10 items-center justify-center border border-rose-200 bg-rose-50 px-4 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
+              className="inline-flex h-10 min-w-0 flex-1 items-center justify-center border border-rose-200 bg-rose-50 px-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 sm:flex-none sm:px-4"
               onClick={() => scrollToSection("booking")}
               type="button"
             >

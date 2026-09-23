@@ -116,7 +116,21 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
         />
 
         <div className="relative mt-9 grid gap-6 lg:grid-cols-[294px_1fr]">
-          <div className="space-y-2">
+          <label className="relative block lg:hidden">
+            <span className="mb-2 block text-xs font-semibold uppercase tracking-wide text-ink-soft">Choose an option</span>
+            <select
+              className="h-12 w-full appearance-none border border-line-light bg-parchment px-4 pr-10 text-sm font-semibold text-ink outline-none focus:border-red focus:ring-2 focus:ring-red/20"
+              onChange={(event) => setActive(Number(event.target.value))}
+              value={active}
+            >
+              {enrichedCards.map((item, index) => (
+                <option key={item.title} value={index}>{item.title}</option>
+              ))}
+            </select>
+            <span aria-hidden="true" className="pointer-events-none absolute bottom-4 right-4 border-x-[5px] border-t-[6px] border-x-transparent border-t-ink" />
+          </label>
+
+          <div className="hidden space-y-2 lg:block">
             {enrichedCards.map((item, index) => (
               <button
                 aria-pressed={active === index}

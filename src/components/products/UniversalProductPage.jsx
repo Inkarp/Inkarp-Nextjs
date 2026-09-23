@@ -1,6 +1,5 @@
 'use client';
 import { Fragment } from 'react';
-import InPageNav from './sections/InPageNav';
 import StatsBar from './sections/StatsBar';
 import ProductInfoTabs from './sections/ProductInfoTabs';
 import EvaporationWorkflow from './sections/EvaporationWorkflow';
@@ -77,20 +76,16 @@ export default function UniversalProductPage({ product, workflowSection: provide
       key: 'solvent-calculator',
       node: <SolventCalculator calculatorData={product.calculator} simulatorData={product.simulator} productName={product.name} />,
     },
-    // Sits ahead of the suitability checker so the modules run in the order the
-    // product content defines them. `metricCalculators` (plural) renders more
-    // than one calculator; the singular `metricCalculator` still works as a
-    // one-item shorthand for products that only need a single calculator.
+    product.suitability?.fields?.length > 0 && product.suitability?.results?.length > 0 && {
+      key: 'suitability-checker',
+      node: <SuitabilityChecker data={product.suitability} productName={product.name} />,
+    },
     ...(product.metricCalculators ?? (product.metricCalculator ? [product.metricCalculator] : [])).map(
       (calc, index) => ({
         key: `metric-calculator-${calc.sectionId ?? index}`,
         node: <MetricCalculator data={calc} productName={product.name} />,
       })
     ),
-    product.suitability?.fields?.length > 0 && product.suitability?.results?.length > 0 && {
-      key: 'suitability-checker',
-      node: <SuitabilityChecker data={product.suitability} productName={product.name} />,
-    },
     solventSection?.cards?.length > 0 && {
       key: 'solvent-guide',
       node: <SolventGuide data={solventSection} simulatorData={product.simulator} />,
@@ -179,11 +174,6 @@ export default function UniversalProductPage({ product, workflowSection: provide
       />
       <ProductEngagementPopups productName={product.name} popups={product.popups} />
 
-      {/* Sticky in-page navigation */}
-      {/* {product.inPageNav?.length > 0 && (
-        <InPageNav links={product.inPageNav} />
-      )} */}
-
       {/* Stats bar */}
       <StatsBar stats={lf.stats ?? product.stats ?? []} />
 
@@ -195,8 +185,8 @@ export default function UniversalProductPage({ product, workflowSection: provide
 
       {/* CTA strip */}
       {lf.cta && (
-        <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 border border-line-light bg-white p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+        <section className="bg-parchment-alt px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 border border-line-light bg-white p-4 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <RecTag>{lf.cta.eyebrow}</RecTag>
               <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">{lf.cta.title}</h2>
@@ -205,10 +195,10 @@ export default function UniversalProductPage({ product, workflowSection: provide
               )}
               <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft">{lf.cta.description}</p>
             </div>
-            <div className="flex shrink-0 flex-wrap gap-3">
+            <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={lf.cta.href ?? '/contact'}
-              className="inline-flex items-center justify-center border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 shrink-0"
+              className="inline-flex w-full items-center justify-center border border-rose-200 bg-rose-50 px-5 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 sm:w-auto sm:px-6"
             >
               {lf.cta.label}
               <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -217,7 +207,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
             </a>
             {lf.cta.secondaryLabel && (
               <a
-                className="inline-flex items-center justify-center border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:border-rose-300 hover:text-rose-700 shrink-0"
+                className="inline-flex w-full items-center justify-center border border-line-light bg-white px-5 py-3.5 text-sm font-semibold text-ink transition hover:border-rose-300 hover:text-rose-700 sm:w-auto sm:px-6"
                 href={lf.cta.secondaryHref ?? '/contact'}
               >
                 {lf.cta.secondaryLabel}
@@ -225,7 +215,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
             )}
             {lf.cta.tertiaryLabel && (
               <a
-                className="inline-flex items-center justify-center border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:border-rose-300 hover:text-rose-700 shrink-0"
+                className="inline-flex w-full items-center justify-center border border-line-light bg-white px-5 py-3.5 text-sm font-semibold text-ink transition hover:border-rose-300 hover:text-rose-700 sm:w-auto sm:px-6"
                 href={lf.cta.tertiaryHref ?? '/contact'}
               >
                 {lf.cta.tertiaryLabel}

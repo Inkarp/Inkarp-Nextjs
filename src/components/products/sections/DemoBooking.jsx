@@ -118,8 +118,8 @@ export default function DemoBooking({ data, productName }) {
   };
 
   return (
-    <section id="booking" className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-14 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-[1180px]">
+    <section id="booking" className="scroll-mt-32 border-b border-line-light bg-parchment-alt px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="19"
           eyebrow={eyebrow ?? 'Request a quote'}
@@ -128,7 +128,7 @@ export default function DemoBooking({ data, productName }) {
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
-          <div className="border border-line-light bg-parchment p-6">
+          <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">
             {submitted ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center py-8 text-center">
                 <div className="mx-auto mb-4 flex size-16 items-center justify-center bg-emerald-100">
@@ -237,7 +237,7 @@ export default function DemoBooking({ data, productName }) {
             )}
           </div>
 
-          <div className="border border-line-light bg-parchment p-6">
+          <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">
             <h3 className="mb-4 text-lg font-semibold tracking-tight text-ink">{whyHeading}</h3>
             <div className="space-y-4">
               {items.map((item) => (

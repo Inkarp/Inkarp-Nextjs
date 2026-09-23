@@ -28,11 +28,11 @@ export default function ServiceMap({ data, calm = false }) {
       id="service"
       className={
         calm
-          ? 'scroll-mt-16 border-b border-line-light bg-white px-4 py-14 sm:px-6 lg:px-8'
-          : 'scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-14 sm:px-6 lg:px-8'
+          ? 'scroll-mt-32 border-b border-line-light bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16'
+          : 'scroll-mt-32 border-b border-line-light bg-parchment-alt px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16'
       }
     >
-      <div className="relative mx-auto max-w-[1180px]">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="17"
           eyebrow={eyebrow ?? 'Service'}

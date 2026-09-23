@@ -21,8 +21,8 @@ export default function StatsBar({ stats = [] }) {
   if (!visibleStats.length) return null;
 
   return (
-    <section className="border-y border-line-light bg-parchment-alt px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
-      <div className="mx-auto max-w-[1180px]">
+    <section className="border-y border-line-light bg-parchment-alt px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <div className="mx-auto w-full max-w-[1180px]">
         <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
           {visibleStats.map((s, index) => {
             const Icon = resolveIcon(s.label);

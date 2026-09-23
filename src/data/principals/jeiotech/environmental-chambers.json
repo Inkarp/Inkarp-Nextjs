@@ -669,11 +669,18 @@
             {
               "formula": "chamber-envelope-check",
               "sectionId": "test-cycle",
-              "eyebrow": "Interactive — test cycle",
+              "surface": "alt",
+              "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "title": "Run a Simulated Test Cycle",
-              "description": "Enter a target temperature, humidity, hold time and chamber model to check the operating envelope and receive ramp-time and water guidance.",
+              "promptTitle": "How would your test cycle run?",
+              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
               "tempRange": [0, 100],
               "humidityRange": [30, 95],
+              "models": [
+                { "val": "th3-pe-025", "label": "TH3-PE-025", "shortRunWaterGuidance": "8 L tank is sufficient" },
+                { "val": "th3-pe-065", "label": "TH3-PE-065", "shortRunWaterGuidance": "12 L tank sufficient; direct supply optional" },
+                { "val": "th3-pe-100", "label": "TH3-PE-100", "shortRunWaterGuidance": "12 L tank sufficient; direct supply optional" }
+              ],
               "heatAnchors": [[20, 0], [25, 4], [40, 8], [60, 27], [90, 40], [100, 44]],
               "coolAnchors": [[20, 0], [25, 4], [40, 9], [60, 27], [90, 35], [100, 45]],
               "assumptionNote": "The guide uses the document's common-target examples and the published 0 to 90°C reference ramp times. Exact performance depends on ambient conditions, load and model.",
@@ -686,13 +693,34 @@
                     { "val": "yes", "label": "Yes, control humidity" },
                     { "val": "no", "label": "No, temperature only" }
                   ]
+                },
+                {
+                  "key": "chamberModel",
+                  "label": "Chamber model (TH3-PE-025 / 065 / 100)",
+                  "default": "th3-pe-065",
+                  "options": [
+                    { "val": "th3-pe-025", "label": "TH3-PE-025" },
+                    { "val": "th3-pe-065", "label": "TH3-PE-065" },
+                    { "val": "th3-pe-100", "label": "TH3-PE-100" }
+                  ]
                 }
               ],
               "fields": [
-                { "key": "targetTemp", "label": "Target temperature (°C)", "default": 40, "min": 0, "max": 110 },
-                { "key": "targetHumidity", "label": "Target humidity (%RH)", "default": 75, "min": 0, "max": 100 },
-                { "key": "holdDays", "label": "Hold duration (days)", "default": 3, "min": 1 }
+                { "key": "targetTemp", "label": "Target temperature (0-100 C)", "default": 40, "min": 0, "max": 110 },
+                { "key": "targetHumidity", "label": "Target humidity (30-95 %RH)", "default": 75, "min": 0, "max": 100 },
+                { "key": "holdHours", "label": "Hold duration (hours)", "default": 72, "min": 1 }
               ],
+              "presets": [
+                { "label": "25 C / 60 %RH / 72 h / 025", "nums": { "targetTemp": 25, "targetHumidity": 60, "holdHours": 72 }, "picks": { "humidityControlNeeded": "yes", "chamberModel": "th3-pe-025" } },
+                { "label": "40 C / 75 %RH / 72 h / 065", "nums": { "targetTemp": 40, "targetHumidity": 75, "holdHours": 72 }, "picks": { "humidityControlNeeded": "yes", "chamberModel": "th3-pe-065" } },
+                { "label": "100 C / no humidity / 24 h / 100", "nums": { "targetTemp": 100, "targetHumidity": 30, "holdHours": 24 }, "picks": { "humidityControlNeeded": "no", "chamberModel": "th3-pe-100" } },
+                { "label": "60 C / 90 %RH / 14 days / 100", "nums": { "targetTemp": 60, "targetHumidity": 90, "holdHours": 336 }, "picks": { "humidityControlNeeded": "yes", "chamberModel": "th3-pe-100" } },
+                { "label": "110 C / out of range", "nums": { "targetTemp": 110, "targetHumidity": 60, "holdHours": 24 }, "picks": { "humidityControlNeeded": "yes", "chamberModel": "th3-pe-065" } }
+              ],
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
+              "requiresRun": true,
+              "runLabel": "Run Test Cycle",
               "ctaNote": "Share the target setpoint, hold duration and chamber model with Inkarp for application validation.",
               "submitLabel": "Validate This Cycle With an Inkarp Application Specialist",
               "disclaimer": "Range validation uses the published 0 to 100°C and 30 to 95 %RH envelope. Ramp-time estimates are indicative and must be confirmed for the actual load and ambient conditions."
@@ -709,10 +737,34 @@
                 { "name": "TH3-PE-100", "shortName": "100", "maxLoadPerShelfKg": 25, "maxShelves": 10, "maxLoadKg": 65 }
               ],
               "assumptionNote": "All models permit 25 kg per shelf and 65 kg total. Model selection also depends on sample dimensions and required shelf spacing.",
-              "fields": [
-                { "key": "shelvesUsed", "label": "Shelves loaded", "default": 3, "min": 1, "max": 10 },
-                { "key": "loadPerShelfKg", "label": "Approx. load per shelf (kg)", "default": 10, "min": 1 }
+              "choices": [
+                {
+                  "key": "preferredModel",
+                  "label": "Preferred model (optional)",
+                  "default": "auto",
+                  "options": [
+                    { "val": "auto", "label": "Let the tool recommend" },
+                    { "val": "TH3-PE-025", "label": "TH3-PE-025" },
+                    { "val": "TH3-PE-065", "label": "TH3-PE-065" },
+                    { "val": "TH3-PE-100", "label": "TH3-PE-100" }
+                  ]
+                }
               ],
+              "fields": [
+                { "key": "sampleUnits", "label": "Number of sample units or trays", "default": 3, "min": 1 },
+                { "key": "shelvesUsed", "label": "Shelves required", "default": 2, "min": 1, "max": 10 },
+                { "key": "loadPerShelfKg", "label": "Approximate weight per shelf (kg)", "default": 10, "min": 1 },
+                { "key": "shelfSpacingMm", "label": "Shelf spacing needed (mm)", "default": 20, "min": 20 }
+              ],
+              "presets": [
+                { "label": "3 trays / 10 kg / 2 shelves", "nums": { "sampleUnits": 3, "shelvesUsed": 2, "loadPerShelfKg": 10, "shelfSpacingMm": 20 }, "picks": { "preferredModel": "auto" } },
+                { "label": "5 trays / 20 kg / 4 shelves", "nums": { "sampleUnits": 5, "shelvesUsed": 4, "loadPerShelfKg": 20, "shelfSpacingMm": 20 }, "picks": { "preferredModel": "auto" } },
+                { "label": "Heavy load / 90 kg total", "nums": { "sampleUnits": 3, "shelvesUsed": 3, "loadPerShelfKg": 30, "shelfSpacingMm": 20 }, "picks": { "preferredModel": "auto" } }
+              ],
+              "requiresRun": true,
+              "runLabel": "Check Sample Fit",
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
               "ctaNote": "Share sample dimensions and load details so Inkarp can confirm physical fit.",
               "submitLabel": "Get a Load-Matched Recommendation From Inkarp",
               "disclaimer": "This estimate checks published shelf and total-load limits. It cannot validate bulky fixtures or required clearances."
@@ -720,6 +772,7 @@
             {
               "formula": "water-refill-savings",
               "sectionId": "water-savings",
+              "surface": "alt",
               "eyebrow": "Interactive — uptime and water",
               "title": "How Much Time and Water Could You Save?",
               "description": "Estimate avoided manual refills during long tests and identify when direct water supply is appropriate.",
@@ -728,10 +781,39 @@
                 { "maxDays": 21, "unattendedRunTime": "Multi-day intervals between checks", "riskReduced": "Fewer interruptions during long runs", "recommendedOption": "Direct Water System recommended" },
                 { "maxDays": 999, "unattendedRunTime": "Continuous, largely unattended operation", "riskReduced": "Automatic shut-off protects against dry-tank failure", "recommendedOption": "Direct Water System strongly recommended" }
               ],
+              "choices": [
+                {
+                  "key": "humidityLevel",
+                  "label": "Target humidity level",
+                  "default": "high",
+                  "options": [
+                    { "val": "medium", "label": "Medium humidity" },
+                    { "val": "high", "label": "High humidity" }
+                  ]
+                },
+                {
+                  "key": "waterSupplyOption",
+                  "label": "Water supply option",
+                  "default": "refill",
+                  "options": [
+                    { "val": "refill", "label": "Refill tank" },
+                    { "val": "direct", "label": "Direct Water System" }
+                  ]
+                }
+              ],
               "fields": [
                 { "key": "testDurationDays", "label": "Test duration (days)", "default": 14, "min": 1 },
                 { "key": "currentRefillsPerDay", "label": "Current manual refills per day", "default": 1, "min": 0 }
               ],
+              "presets": [
+                { "label": "3 days / medium humidity", "nums": { "testDurationDays": 3, "currentRefillsPerDay": 1 }, "picks": { "humidityLevel": "medium", "waterSupplyOption": "refill" } },
+                { "label": "2 weeks / high humidity", "nums": { "testDurationDays": 14, "currentRefillsPerDay": 1 }, "picks": { "humidityLevel": "high", "waterSupplyOption": "direct" } },
+                { "label": "30 days / high humidity", "nums": { "testDurationDays": 30, "currentRefillsPerDay": 1 }, "picks": { "humidityLevel": "high", "waterSupplyOption": "direct" } }
+              ],
+              "requiresRun": true,
+              "runLabel": "Calculate Time and Water Savings",
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
               "ctaNote": "Inkarp can size the water arrangement for the target humidity and test duration.",
               "submitLabel": "Ask Inkarp to Size Your Water Setup",
               "disclaimer": "Avoided-refill figures are calculated from the schedule entered; actual water consumption depends on setpoint, ambient conditions and door openings."
@@ -902,10 +984,12 @@
             ]
           },
           "longForm": {
-            "heroLead": "The JeioTech TH3-PE delivers precise benchtop temperature and humidity testing across 0 to 100°C and 30 to 95 %RH, with 25 L, 65 L and 100 L chamber options.",
+            "heroHook": "Compact benchtop temperature and humidity testing with a wide 0 to 100°C range and precise control",
+            "heroLead": "The JeioTech (Lab Companion) TH3-PE Temperature & Humidity Chamber is a compact tabletop environmental chamber built for laboratories that need accurate, repeatable climate control in a small footprint.",
             "heroParagraphs": [
-              "Built around a 5.6-inch colour touch controller, external humidification and a double-sealed door, the TH3-PE maintains repeatable conditions in a compact footprint.",
-              "Its efficient water recirculation, dual over-temperature protection and optional connected monitoring support both routine tests and longer stability studies."
+              "The JeioTech (Lab Companion) TH3-PE Temperature & Humidity Chamber is a compact tabletop environmental chamber built for laboratories that need accurate, repeatable climate control in a small footprint.",
+              "Built around a 5.6-inch colour touch controller, a differentiated external humidification system and a double-sealed door, the TH3-PE delivers stable temperature and humidity reproducibility even under repeated testing.",
+              "It is available in 25 L, 65 L and 100 L chamber volumes, and belongs to a three-model tabletop series (KE, ME, PE) selected by temperature range. The PE model covers 0 to 100°C and 30 to 95 %RH, making it suited to stability, material and general environmental testing where bench space is limited."
             ],
             "stats": [
               { "value": "0 to 100°C", "label": "Temperature range" },
@@ -916,19 +1000,21 @@
             "sections": [
               {
                 "key": "overview",
-                "eyebrow": "Product overview",
-                "title": "TH3-PE at a Glance",
-                "description": "A compact tabletop environmental chamber for stability, material and routine environmental work.",
+                "eyebrow": "Overview",
+                "title": "Overview",
+                "description": "",
+                "subheading": "The TH3-PE Temperature & Humidity Chamber brings wide-range, precise climate testing to the benchtop for stability, material and routine environmental work.",
                 "body": [
-                  "The TH3-PE is engineered for laboratories that need reliable temperature and humidity control without dedicating floor space to a full-size chamber.",
-                  "A 5.6-inch touch display shows set values, actual values, operating status and graphs. External humidification keeps the chamber cleaner and easier to maintain.",
-                  "As an authorised JeioTech distributor and service provider in India, Inkarp supports consultation, configuration, installation, training and after-sales service."
+                  "The TH3-PE from JeioTech (Lab Companion) is a tabletop environmental chamber engineered for laboratories that need reliable temperature and humidity control without dedicating floor space to a full-size chamber.",
+                  "Its structural design is optimised for miniaturisation, giving proven reproducibility and reliability in a compact body. A 5.6-inch colour touch display gives clear access to set values, actual values and operating status, which can also be followed as a graph.",
+                  "A differentiated external humidification system provides stable humidity control and keeps the testing space easy to clean and maintain, while an efficient water supply and recirculation system minimises refilling even during long high-humidity tests.",
+                  "As a JeioTech Distributor and Service Provider in India, Inkarp Instruments supports laboratories with product consultation, application guidance, configuration assistance, installation, user training and after-sales service."
                 ],
                 "cards": [
-                  { "title": "Compact footprint", "description": "Tabletop design saves laboratory space" },
-                  { "title": "Wide range", "description": "0 to 100°C and 30 to 95 %RH" },
-                  { "title": "Precise control", "description": "±0.3°C temperature fluctuation" },
-                  { "title": "Clean humidity", "description": "External humidification simplifies maintenance" }
+                  { "title": "Compact footprint", "description": "Benchtop design saves laboratory space" },
+                  { "title": "Wide range", "description": "0 to 100 C and 30 to 95 %RH on the PE model" },
+                  { "title": "Precise control", "description": "+/- 0.3 C fluctuation for repeatable results" },
+                  { "title": "Clean humidity", "description": "External humidification, easy to maintain" }
                 ]
               },
               {

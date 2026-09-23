@@ -121,8 +121,8 @@ export default function WorkflowScore({ data, productName }) {
   };
 
   return (
-    <section id="workflow-score" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-[1180px]">
+    <section id="workflow-score" className="scroll-mt-32 border-b border-line-light bg-white px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="10"
           eyebrow="Interactive - workflow score"
@@ -138,7 +138,7 @@ export default function WorkflowScore({ data, productName }) {
               return (
                 <button
                   aria-pressed={isSelected}
-                  className={`flex min-h-14 w-full items-center gap-4 border px-5 py-3 text-left transition ${
+                  className={`flex min-h-14 w-full items-center gap-3 border px-4 py-3 text-left transition sm:gap-4 sm:px-5 ${
                     isSelected
                       ? 'border-black bg-red text-white'
                       : 'border-line-light bg-parchment text-black hover:border-line-light'
@@ -155,7 +155,7 @@ export default function WorkflowScore({ data, productName }) {
                   >
                     {isSelected ? <FiCheck /> : <StepIcon />}
                   </span>
-                  <span className="text-base font-semibold">{step.label}</span>
+                  <span className="min-w-0 text-sm font-semibold leading-5 sm:text-base">{step.label}</span>
                 </button>
               );
             })}
@@ -174,19 +174,19 @@ export default function WorkflowScore({ data, productName }) {
                 <p className="text-sm font-bold uppercase tracking-wide text-red">{band.title}</p>
                 <dl className="mt-3 space-y-2 text-sm leading-6">
                   {band.meaning ? (
-                    <div className="flex gap-2">
+                    <div className="grid gap-0.5 sm:flex sm:gap-2">
                       <dt className="shrink-0 font-semibold text-black">Meaning:</dt>
                       <dd className="text-ink-soft">{band.meaning}</dd>
                     </div>
                   ) : null}
                   {band.biggestGains ? (
-                    <div className="flex gap-2">
+                    <div className="grid gap-0.5 sm:flex sm:gap-2">
                       <dt className="shrink-0 font-semibold text-black">Biggest gains:</dt>
                       <dd className="text-ink-soft">{band.biggestGains}</dd>
                     </div>
                   ) : null}
                   {band.recommendedConfiguration ? (
-                    <div className="flex gap-2">
+                    <div className="grid gap-0.5 sm:flex sm:gap-2">
                       <dt className="shrink-0 font-semibold text-black">Recommended configuration:</dt>
                       <dd className="text-ink-soft">{band.recommendedConfiguration}</dd>
                     </div>

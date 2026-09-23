@@ -123,17 +123,17 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     .join('\n');
 
   return (
-    <section id="config" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1180px] border border-line-light bg-parchment-alt px-5 py-12 sm:px-8 lg:px-12">
+    <section id="config" className="scroll-mt-32 border-b border-line-light bg-parchment-alt px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+      <div className="relative mx-auto w-full max-w-[1180px]">
         <div className="relative overflow-hidden">
           <SectionHeader number="09" eyebrow={eyebrow} title={heading} description={intro} />
 
-          <div className="relative mt-8 flex flex-wrap items-center gap-x-3 gap-y-4">
+          <div className="relative mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-4">
             {steps.map((item, index) => {
               const isComplete = done || index < step;
               const isActive = !done && index === step;
               return (
-                <div className="flex items-center gap-3" key={item.key ?? index}>
+                <div className="flex min-w-0 items-center gap-2 sm:gap-3" key={item.key ?? index}>
                   <button
                     aria-label={`Go to ${getStepLabel(item, index)}`}
                     className={`flex size-9 items-center justify-center text-sm font-bold transition ${
@@ -152,7 +152,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   >
                     {isComplete ? <FiCheck className="text-sm" /> : index + 1}
                   </button>
-                  <span className={`text-sm ${isActive ? 'font-bold text-black' : 'text-black'}`}>
+                  <span className={`min-w-0 text-xs leading-4 sm:text-sm ${isActive ? 'font-bold text-black' : 'text-black'}`}>
                     {getStepLabel(item, index)}
                   </span>
                   {index < steps.length - 1 && <span className="hidden h-px w-10 bg-parchment-alt sm:block" />}
@@ -162,7 +162,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
           </div>
 
           <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-stretch">
-            <div className="flex h-[520px] flex-col border border-line-light bg-parchment p-6 sm:p-8">
+            <div className="flex min-h-[420px] flex-col border border-line-light bg-white p-4 sm:p-6 lg:p-8">
               <h3 className="shrink-0 text-lg font-semibold tracking-tight text-ink">{cleanText(current.question)}</h3>
               <div className="mt-5 min-h-0 flex-1 space-y-3 overflow-y-auto pr-1">
                 {(current.options ?? []).map((option) => {
@@ -209,7 +209,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
               </div>
             </div>
 
-            <div className="flex h-[520px] flex-col overflow-y-auto border border-line-light bg-parchment p-6 sm:p-8">
+            <div className="flex min-h-[420px] flex-col border border-line-light bg-white p-4 sm:p-6 lg:p-8">
               {!done ? (
                 <div className="flex h-full flex-col items-center justify-center text-center text-black">
                   <FiSettings className="mx-auto text-4xl text-red" />
@@ -225,16 +225,16 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                   <div className="mt-5 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
                     {displayRows.map((row) => (
                       <div className="border border-line-light bg-parchment-alt px-4 py-3" key={row.key}>
-                        <div className="flex items-center justify-between gap-4">
+                        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
                           <span className="text-xs font-bold uppercase tracking-wide text-black">{row.label}</span>
-                          <span className="text-right text-sm font-bold text-black">{row.value}</span>
+                          <span className="break-words text-sm font-bold text-black sm:text-right">{row.value}</span>
                         </div>
                         {row.desc && <p className="mt-1 text-xs leading-5 text-black">{row.desc}</p>}
                       </div>
                     ))}
                   </div>
                   {result.ctaNote && <p className="mt-4 shrink-0 text-sm leading-6 text-black">{result.ctaNote}</p>}
-                  <div className="mt-5 flex shrink-0 flex-wrap items-start gap-3">
+                  <div className="mt-5 flex shrink-0 flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-start">
                     <LeadCaptureForm
                       formType="config-wizard"
                       productName={productName}
@@ -244,7 +244,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                       summary={configurationSummary}
                       triggerLabel="Email this configuration"
                     />
-                    <a className="inline-flex h-11 items-center justify-center border border-line-light px-5 text-sm font-bold text-black transition hover:border-red hover:text-red" href="#booking">
+                    <a className="inline-flex h-11 w-full items-center justify-center border border-line-light px-5 text-sm font-bold text-black transition hover:border-red hover:text-red sm:w-auto" href="#booking">
                       {result.ctaLabel ?? 'Request quote'}
                     </a>
                   </div>

@@ -31,8 +31,8 @@ export default function InPageNav({ links = [] }) {
   if (!links.length) return null;
 
   return (
-    <div className="sticky top-0 z-40 border-b border-line-light bg-parchment/95 backdrop-blur-sm">
-      <div className="relative mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
+    <div className="sticky top-16 z-40 border-b border-line-light bg-parchment/95 backdrop-blur-sm">
+      <div className="relative mx-auto w-full max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <nav className="flex gap-0 overflow-x-auto scrollbar-none">
           {links.map(({ id, label }) => (
             <button

@@ -42,7 +42,7 @@ export default async function FinderResultsPage({ params }) {
               <MatchScoreBadge score={bestMatch} />
               <div className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[0.22em] text-red-soft">Personalised solution report · {sessionId.slice(0, 6).toUpperCase()}</p><h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">Solutions for {session.labels.role} at <span className="text-red-soft">{session.institution.name}</span></h1><p className="mt-4 max-w-2xl text-base leading-7 text-white/65">Built for {session.labels.objective.toLowerCase()} in {session.labels.industry.toLowerCase()}, with recommendations ranked against your selected priorities.</p></div>
             </div>
-            <FinderReportActions initiallySaved={session.saved} sessionId={sessionId} />
+            <FinderReportActions sessionId={sessionId} />
           </div>
           <div className="mt-9 grid gap-px overflow-hidden border border-white/15 bg-white/15 sm:grid-cols-3">
             {[['Products assessed', recommendations.length], ['Automation', session.labels.automation], ['Timeline', session.labels.timeline]].map(([label, value]) => <div className="bg-white/5 p-4" key={label}><p className="text-[10px] font-bold uppercase tracking-wider text-white/50">{label}</p><p className="mt-1 text-lg font-semibold">{value}</p></div>)}

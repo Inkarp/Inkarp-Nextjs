@@ -1,4 +1,3 @@
-import BasketSync from "@/components/account/BasketSync";
 import DelayedWebinarNotice from "@/components/common/DelayedWebinarNotice";
 import Footer from "@/components/common/Footer";
 import FloatingChatbot from "@/components/common/FloatingChatbot";
@@ -12,10 +11,9 @@ export default function SiteLayout({ children }) {
   return (
     <>
       <Header />
-      <HomeSolutionFinder campaignEmbedded siteWide />
+      <HomeSolutionFinder />
       <div className="relative w-[90%] mx-auto">{children}</div>
       <Footer />
-      <BasketSync />
       <ShortlistFloats />
       <PromoPopup />
       <DelayedWebinarNotice />

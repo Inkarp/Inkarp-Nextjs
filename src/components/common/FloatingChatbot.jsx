@@ -538,6 +538,7 @@ export default function FloatingChatbot() {
         <div
           aria-label={`Dexter — ${CHATBOT_CONFIG.brandName}'s AI Assistant`}
           aria-hidden={!isOpen}
+          data-popup-open={isOpen ? "" : undefined}
           className={`fixed w-[calc(100vw-1.5rem)] max-w-[480px] origin-bottom-right overflow-hidden rounded-2xl border border-white/60 bg-white/75 text-ink shadow-2xl shadow-zinc-900/25 backdrop-blur-2xl backdrop-saturate-150 transition-all ease-out motion-reduce:transition-none ${
             isOpen ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none translate-y-4 scale-95 opacity-0"
           }`}

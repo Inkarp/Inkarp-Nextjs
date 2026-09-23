@@ -3,10 +3,12 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { FiCheck, FiChevronDown, FiPlus, FiSearch } from "react-icons/fi";
 
-export default function FinderOptionCombobox({ dark = false, icon: Icon, label, onChange, placeholder, type, value }) {
+// `initialLabel` shows a value chosen elsewhere (or pre-filled) when the field
+// mounts; remount with a new `key` to apply a different one.
+export default function FinderOptionCombobox({ dark = false, icon: Icon, initialLabel = "", label, onChange, placeholder, type, value }) {
   const listId = useId();
   const rootRef = useRef(null);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialLabel);
   const [options, setOptions] = useState([]);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);

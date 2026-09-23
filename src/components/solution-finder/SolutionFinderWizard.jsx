@@ -273,10 +273,10 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
             <div><h2 className="text-lg font-semibold text-ink">What should the solution improve?</h2><p className="mb-4 mt-1 text-sm text-ink-soft">Select up to four. This makes the ranking and explanation more specific.</p><div className="grid gap-2 sm:grid-cols-2">{finderChallenges.map((option) => { const selected = answers.challenges.includes(option.value); return <button className={`flex items-center justify-between border px-4 py-3 text-left text-sm font-semibold transition ${selected ? "border-red bg-rose-50 text-red" : "border-line-light text-ink hover:border-red/40"}`} key={option.value} onClick={() => toggleChallenge(option.value)} type="button"><span>{option.label}</span><span className={`flex size-5 items-center justify-center rounded-full border ${selected ? "border-red bg-red text-white" : "border-line-light"}`}>{selected ? <FiCheck className="text-xs" /> : null}</span></button>; })}</div></div>
             <div className="space-y-6 rounded-xl border border-line-light bg-parchment-alt p-4 sm:p-5">
               <label className="block">
-                <span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Work email</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-ink-soft">Email</span>
                 <div className={`mt-3 flex h-12 items-center gap-2 border bg-white px-3 transition ${email && !EMAIL_PATTERN.test(email) ? "border-red/50 ring-4 ring-rose-50" : "border-line-light focus-within:border-red focus-within:ring-4 focus-within:ring-rose-50"}`}>
                   <FiMail className="shrink-0 text-ink-soft" />
-                  <input aria-label="Work email" autoComplete="email" className="min-w-0 flex-1 bg-transparent text-sm font-medium text-ink outline-none placeholder:text-ink-soft/55" inputMode="email" onChange={(e) => setEmail(e.target.value)} placeholder="you@institution.edu" type="email" value={email} />
+                  <input aria-label="Email address" autoComplete="email" className="min-w-0 flex-1 bg-transparent text-sm font-medium text-ink outline-none placeholder:text-ink-soft/55" inputMode="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email address" type="email" value={email} />
                 </div>
                 <span className="mt-1.5 block text-[11px] leading-4 text-ink-soft">So we can send your report and have a specialist follow up.</span>
               </label>

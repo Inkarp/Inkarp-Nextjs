@@ -40,6 +40,7 @@ export default function DelayedWebinarNotice() {
   return (
     <aside
       aria-label="Upcoming webinar"
+      data-popup-open=""
       className="fixed inset-x-3 bottom-20 z-40 mx-auto w-[min(760px,calc(100vw-1.5rem))] animate-[hvc-fade_500ms_ease] print:hidden"
     >
       <div className="flex items-center gap-2 rounded-full border border-cyan-200/25 bg-[#071d25]/95 px-3 py-2 text-white shadow-[0_14px_40px_rgba(7,29,37,.32)] backdrop-blur-xl sm:gap-3 sm:px-4">

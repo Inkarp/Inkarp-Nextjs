@@ -19,6 +19,8 @@ import RequestQuoteButton from "@/components/products/RequestQuoteButton";
 import CompareCategoryButton from "@/components/products/CompareCategoryButton";
 import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
 import RecordProductView from "@/components/products/RecordProductView";
+import FinderProductPrompt from "@/components/solution-finder/FinderProductPrompt";
+import { inferFinderObjective } from "@/lib/finderPlacement";
 
 const DEFAULT_AUTHORIZED_REGION = "India";
 
@@ -233,6 +235,11 @@ export default async function ProductPage({ params }) {
       <div id="product-details">
         {isRichPage ? <UniversalProductPage product={product} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
       </div>
+
+      <FinderProductPrompt
+        objective={inferFinderObjective(product.name, product.workflowTags?.join(" "))}
+        productName={product.name}
+      />
 
       {/* <CustomerReviews reviews={product.reviews} /> */}
 

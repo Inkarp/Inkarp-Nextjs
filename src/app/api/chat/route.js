@@ -71,9 +71,20 @@ function sanitiseHistory(messages) {
     }));
 }
 
+// Conversation logs grow with every visitor forever, so Mongo expires them after
+// 180 days. Created once per process — a repeat createIndex is a no-op anyway.
+let ttlIndexReady = null;
+
 async function logConversation(entry) {
   try {
     const db = await getDb();
+    ttlIndexReady ??= db
+      .collection("chatConversations")
+      .createIndex({ startedAt: 1 }, { expireAfterSeconds: 180 * 86400 })
+      .catch(() => {
+        ttlIndexReady = null;
+      });
+    await ttlIndexReady;
     await db.collection("chatConversations").insertOne(entry);
   } catch {
     // Analytics must never take the chat down.

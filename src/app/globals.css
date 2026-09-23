@@ -384,6 +384,13 @@ body.menu-open [data-floating-widget] {
   display: none !important;
 }
 
+/* One prompt at a time: the Solution Finder pill steps aside while a popup,
+   notice or the chat panel is open instead of stacking on top of it. Popups
+   mark themselves with data-popup-open only while they are showing. */
+html:has([data-popup-open]) [data-finder-launcher] {
+  display: none !important;
+}
+
 /* Solution Finder: a deliberately separate AI workspace. The motion stays on
    composited transforms/opacity so the atmosphere does not disturb layout. */
 .solution-universe::before {

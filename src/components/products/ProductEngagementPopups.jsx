@@ -302,6 +302,7 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
   return (
     <div
       id={popup.ovId}
+      data-popup-open=""
       aria-modal="true"
       role="dialog"
       className="nudge-overlay fixed inset-0 z-[90] flex items-center justify-center bg-navy/35 px-4 backdrop-blur-[2px]"

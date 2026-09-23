@@ -30,7 +30,6 @@ export async function ensureInstitutionSeeds(db) {
         db.collection("institutions").createIndex({ id: 1 }, { unique: true }),
         db.collection("institutions").createIndex({ status: 1, normalizedName: 1 }),
         db.collection("solutionFinderSessions").createIndex({ sessionId: 1 }, { unique: true }),
-        db.collection("solutionFinderSessions").createIndex({ accountEmail: 1, updatedAt: -1 }),
         db.collection("finderEvents").createIndex({ createdAt: 1 }, { expireAfterSeconds: 365 * 86400 }),
       ]);
     }).catch((error) => {

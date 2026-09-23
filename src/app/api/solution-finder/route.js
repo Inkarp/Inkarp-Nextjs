@@ -1,5 +1,4 @@
 import { getDb } from "@/lib/mongodb";
-import { currentUserEmail } from "@/lib/auth/server";
 import { ensureInstitutionSeeds } from "@/lib/institutionStore";
 import { isFinderOption } from "@/lib/finderOptionStore";
 import { cacheFinderSession } from "@/lib/finderSessionFallback";
@@ -17,6 +16,10 @@ import {
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+// Which site-wide prompt started the session, so completions can be compared
+// per placement. The full wizard page sends none.
+const FINDER_PLACEMENTS = new Set(["stripe", "stripe-compact", "launcher", "product-page"]);
 
 async function resolveInstitution(db, selected) {
   const databaseRecord = await db.collection("institutions").findOne(
@@ -43,12 +46,12 @@ async function notifyFinderLead(session) {
       automation: session.labels.automation,
       timeline: session.labels.timeline,
       notes: session.answers.notes,
-      contactEmail: session.contactEmail || "(not provided)",
-      accountEmail: session.accountEmail || "",
+      contactEmail: session.contactEmail,
       sourcePage: session.sourcePage,
+      placement: session.sourcePlacement || "wizard",
       resultUrl: session.resultUrl,
     },
-    replyTo: session.contactEmail || session.accountEmail || undefined,
+    replyTo: session.contactEmail,
   });
 }
 
@@ -57,9 +60,11 @@ export async function POST(request) {
   const contactEmail = typeof body?.contactEmail === "string"
     ? body.contactEmail.trim().toLowerCase().slice(0, 254)
     : "";
-  if (contactEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail)) {
-    return Response.json({ success: false, message: "Enter a valid work email address." }, { status: 400 });
+  // Every finder report is a lead, so an email is required, not optional.
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail)) {
+    return Response.json({ success: false, message: "Enter a valid email address." }, { status: 400 });
   }
+  const sourcePlacement = FINDER_PLACEMENTS.has(body?.placement) ? body.placement : null;
   const answers = sanitizeFinderAnswers(body?.answers);
   // The compact home finder intentionally does not ask visitors to repeat an
   // industry answer we already know from their selected institution.
@@ -99,7 +104,6 @@ export async function POST(request) {
     }
     const recommendations = recommendFinderProducts(answers);
     const sessionId = createFinderSessionId();
-    const accountEmail = await currentUserEmail();
     const now = new Date();
     session = {
       sessionId,
@@ -116,42 +120,41 @@ export async function POST(request) {
       },
       recommendations,
       sourcePage: typeof body?.sourcePage === "string" ? body.sourcePage.slice(0, 180) : "/solution-finder",
+      sourcePlacement,
       resultUrl: `/solution-finder/results/${sessionId}`,
       recommendationVersion: FINDER_VERSION,
-      saved: Boolean(accountEmail),
-      accountEmail: accountEmail ?? null,
       contactEmail,
       createdAt: now,
       updatedAt: now,
     };
 
     await db.collection("solutionFinderSessions").insertOne(session);
-    if (contactEmail) {
-      await db.collection("solutionFinderLeads").updateOne(
-        { email: contactEmail },
-        {
-          $set: {
-            email: contactEmail,
-            institutionId: institution.id,
-            institutionName: institution.name,
-            role: answers.role,
-            objective: answers.objective,
-            industry: answers.industry,
-            latestSessionId: sessionId,
-            sourcePage: session.sourcePage,
-            updatedAt: now,
-          },
-          $setOnInsert: { createdAt: now },
+    await db.collection("solutionFinderLeads").updateOne(
+      { email: contactEmail },
+      {
+        $set: {
+          email: contactEmail,
+          institutionId: institution.id,
+          institutionName: institution.name,
+          role: answers.role,
+          objective: answers.objective,
+          industry: answers.industry,
+          latestSessionId: sessionId,
+          sourcePage: session.sourcePage,
+          updatedAt: now,
         },
-        { upsert: true }
-      );
-    }
+        $setOnInsert: { createdAt: now },
+      },
+      { upsert: true }
+    );
     await db.collection("finderEvents").insertOne({
       sessionId,
       event: "finder_completed",
       institutionId: institution.id,
       industry: answers.industry,
       objective: answers.objective,
+      sourcePage: session.sourcePage,
+      sourcePlacement,
       createdAt: now,
     });
 
@@ -193,10 +196,9 @@ export async function POST(request) {
       },
       recommendations: recommendFinderProducts(answers),
       sourcePage: typeof body?.sourcePage === "string" ? body.sourcePage.slice(0, 180) : "/solution-finder",
+      sourcePlacement,
       resultUrl: `/solution-finder/results/${sessionId}`,
       recommendationVersion: FINDER_VERSION,
-      saved: false,
-      accountEmail: null,
       contactEmail,
       temporary: true,
       createdAt: now,

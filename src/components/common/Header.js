@@ -25,7 +25,6 @@ import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
 import RailUtilityDock from "@/components/common/RailUtilityDock";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
-// import AccountLink from "@/components/common/AccountLink"; // re-enable with the header usage below once account is ready to go live
 import { siteConfig } from "@/data/siteConfig";
 import ProductProfileDownloadButton from "@/components/common/ProductProfileDownloadButton";
 
@@ -161,19 +160,6 @@ export default function Header() {
   }, []);
 
   const shouldShowHeader = isHeaderVisible || isMenuOpen || isSearchOpen;
-
-  // Let fixed companions (currently the home-page Solution Finder) occupy the
-  // vacated header area without running their own, potentially conflicting,
-  // scroll-direction detector.
-  useEffect(() => {
-    const detail = { visible: shouldShowHeader, atTop: isAtTop };
-    document.documentElement.dataset.headerVisible = shouldShowHeader ? "true" : "false";
-    window.dispatchEvent(new CustomEvent("inkarp:header-visibility", { detail }));
-
-    return () => {
-      delete document.documentElement.dataset.headerVisible;
-    };
-  }, [isAtTop, shouldShowHeader]);
 
   // Publishes the header's real visible height for sticky children while a
   // stable spacer keeps the fixed header from moving page content on scroll.
@@ -434,9 +420,6 @@ export default function Header() {
               </button>
 
               <RailUtilityDock placement="header" />
-             
-              {/* Login temporarily hidden from nav until the account rollout plan is ready — /signin and /account still work directly.
-              <AccountLink className="hidden whitespace-nowrap xl:inline-flex" /> */}
 
               <ProductProfileDownloadButton href={productProfileUrl} variant="full" />
             </div>

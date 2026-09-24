@@ -79,7 +79,6 @@ import sonicsUltrasonicProbeSonicatorsProductionScaleCatalog from "./sonics/ultr
 import affiniteCompactSurfacePlasmonResonanceSprSystemsCatalog from "./affinite/compact-surface-plasmon-resonance-spr-systems.json";
 import affiniteSprInstrumentControlAndAnalysisSoftwareCatalog from "./affinite/spr-instrument-control-and-analysis-software.json";
 import sbtInstrumentsBacteriaEnumerationSystemsCatalog from "./sbt-instruments/bacteria-enumeration-systems.json";
-import evonikLiposomeExtrusionSystemsCatalog from "./evonik/liposome-extrusion-systems.json";
 import implenNanophotometerCatalog from "./implen/nanophotometer.json";
 import implenOd600Catalog from "./implen/od-600.json";
 import geaIndustrialHomogenizersCatalog from "./gea/industrial-homogenizers.json";
@@ -235,7 +234,6 @@ const principalCatalogs = [
   affiniteCompactSurfacePlasmonResonanceSprSystemsCatalog,
   affiniteSprInstrumentControlAndAnalysisSoftwareCatalog,
   sbtInstrumentsBacteriaEnumerationSystemsCatalog,
-  evonikLiposomeExtrusionSystemsCatalog,
   implenNanophotometerCatalog,
   implenOd600Catalog,
   geaIndustrialHomogenizersCatalog,

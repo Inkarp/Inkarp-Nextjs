@@ -34,7 +34,6 @@ export const principalLogos = {
   "reichert-technologies": "/assets/images/PrincipalLogos/RowFive/reichert.png",
   "affinite-instruments": "/assets/images/PrincipalLogos/RowSeven/Affinite.webp",
   "sbt-instruments": "/assets/images/PrincipalLogos/RowSeven/SBT-Instruments.svg",
-  evonik: "/assets/images/PrincipalLogos/RowFive/Evonik.png",
   gea: "/assets/images/PrincipalLogos/RowFive/GEA.png",
   hitachi: "/assets/images/PrincipalLogos/RowSix/hitachi.png",
   proscientific: "/assets/images/PrincipalLogos/RowFive/Proscientific.png",

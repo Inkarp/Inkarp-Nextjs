@@ -394,12 +394,6 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "evonik",
-        "principalName": "Evonik",
-        "countryOfOrigin": "Canada",
-        "products": []
-    },
-    {
         "slug": "gea",
         "principalName": "Gea",
         "countryOfOrigin": "Italy",

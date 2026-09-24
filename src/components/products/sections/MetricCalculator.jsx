@@ -5,6 +5,10 @@ import SectionDisclaimer from './SectionDisclaimer';
 import LeadCaptureForm from './LeadCaptureForm';
 
 const INR = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+// Photometric figures (Lux, Lux.hr) read in international grouping.
+const EN = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1 });
+// Limits quoted back in check sentences, written the way the content writes them.
+const PLAIN = new Intl.NumberFormat('en-US', { maximumFractionDigits: 1, useGrouping: false });
 
 function money(value) {
   return `₹${INR.format(Math.max(0, Math.round(value || 0)))}`;
@@ -21,6 +25,38 @@ function duration(minutes) {
   const hours = mins / 60;
   if (hours < 10) return `${hours.toFixed(1).replace(/\.0$/, '')} hr`;
   return `${Math.round(hours)} hr`;
+}
+
+/** Fill `{value}` / `{limit}` placeholders in a content-supplied sentence. */
+function fillTemplate(text, values) {
+  return String(text ?? '').replace(/\{(\w+)\}/g, (match, key) => (values[key] ?? match));
+}
+
+/**
+ * Optional checks the content can attach to a lookup: numeric inputs compared
+ * with a published limit (fixed, or per chosen row via `limitFrom`), and
+ * choices whose picked option supplies a card. A card with the same label as
+ * an existing one replaces it.
+ */
+function applyChecks(cards, { nums, picks, data, row }) {
+  const out = [...cards];
+  const upsert = (card) => {
+    const index = out.findIndex((item) => item.label === card.label);
+    if (index >= 0) out[index] = card;
+    else out.push(card);
+  };
+  (data?.checks ?? []).forEach((check) => {
+    const value = nums[check.field];
+    const limit = check.limitFrom ? row?.limits?.[check.limitFrom] : check.limit;
+    if (value == null || limit == null) return;
+    const ok = value <= limit;
+    upsert({ label: check.label, value: fillTemplate(ok ? check.okText : check.overText, { value: PLAIN.format(value), limit: PLAIN.format(limit) }) });
+  });
+  (data?.choiceCards ?? []).forEach((choiceCard) => {
+    const text = choiceCard.values?.[picks?.[choiceCard.key]];
+    if (text) upsert({ label: choiceCard.label, value: text });
+  });
+  return out;
 }
 
 /**
@@ -116,14 +152,50 @@ const FORMULAS = {
     const shelvesUsed = Math.max(0, nums.shelvesUsed ?? 0);
     const loadPerShelf = Math.max(0, nums.loadPerShelfKg ?? 0);
     const totalLoad = shelvesUsed * loadPerShelf;
+    // Stacked height is only checked against models that publish an interior height.
+    const spacing = Math.max(0, nums.shelfSpacingMm ?? 0);
+    const heightNeeded = shelvesUsed * spacing;
 
-    const models = data?.modelLimits ?? [];
+    // A choice option may narrow the candidates via `allowedModels`, e.g.
+    // only the photostability model when light exposure is required.
+    let models = data?.modelLimits ?? [];
+    (data?.choices ?? []).forEach((choice) => {
+      const option = choice.options?.find((item) => item.val === picks?.[choice.key]);
+      if (option?.allowedModels) models = models.filter((model) => option.allowedModels.includes(model.name));
+    });
     const smallest = models[0];
     const widest = models[models.length - 1];
-    const fits = (m) =>
-      loadPerShelf <= m.maxLoadPerShelfKg && totalLoad <= m.maxLoadKg && shelvesUsed <= m.maxShelves;
+    const heightOk = (m) => !m.interiorHeightMm || heightNeeded <= m.interiorHeightMm;
+    const shortfall = (m) => {
+      if (loadPerShelf > m.maxLoadPerShelfKg) return 'perShelf';
+      if (shelvesUsed > m.maxShelves) return 'shelves';
+      if (totalLoad > m.maxLoadKg) return 'total';
+      if (!heightOk(m)) return 'height';
+      return null;
+    };
+    const fits = (m) => !shortfall(m);
     const preferred = models.find((model) => model.name === picks?.preferredModel);
     const fitting = preferred && fits(preferred) ? preferred : models.find(fits);
+
+    // Why `m` cannot take this load; `next` is the model that can, if any.
+    const shortfallText = (m, next) => {
+      switch (shortfall(m)) {
+        case 'perShelf':
+          return next
+            ? `${count(loadPerShelf)} kg exceeds ${count(m.maxLoadPerShelfKg)} kg/shelf on the ${m.shortName} but is within ${count(next.maxLoadPerShelfKg)} kg on the ${next.shortName}`
+            : `${count(loadPerShelf)} kg/shelf exceeds the ${m.shortName}'s ${count(m.maxLoadPerShelfKg)} kg/shelf limit`;
+        case 'shelves':
+          return `${count(shelvesUsed)} shelves exceeds the ${m.shortName}'s ${count(m.maxShelves)}-shelf maximum${next ? `; the ${next.shortName} takes up to ${count(next.maxShelves)}` : ''}`;
+        case 'total':
+          return next
+            ? `${count(totalLoad)} kg total exceeds the ${count(m.maxLoadKg)} kg limit of the ${m.shortName}`
+            : `${count(totalLoad)} kg exceeds the ${count(m.maxLoadKg)} kg maximum of the ${m.shortName}`;
+        case 'height':
+          return `${count(shelvesUsed)} shelves at ${count(spacing)} mm need ${count(heightNeeded)} mm, more than the ${m.shortName}'s ${count(m.interiorHeightMm)} mm interior height${next?.interiorHeightMm ? `; the ${next.shortName} has ${count(next.interiorHeightMm)} mm` : ''}`;
+        default:
+          return '';
+      }
+    };
 
     let recommendedModel;
     let usableShelves;
@@ -135,24 +207,22 @@ const FORMULAS = {
       usableShelves = `${count(shelvesUsed)} of up to ${count(smallest.maxShelves)}`;
       loadCheck = `Well within ${count(smallest.maxLoadPerShelfKg)} kg/shelf and ${count(smallest.maxLoadKg)} kg total`;
       fitResult = 'Fits comfortably';
+    } else if (fitting && smallest && fits(smallest)) {
+      // A larger model was picked as preferred although the smallest would do.
+      recommendedModel = fitting.name;
+      usableShelves = `${count(shelvesUsed)} of up to ${count(fitting.maxShelves)}`;
+      loadCheck = `Within ${count(fitting.maxLoadPerShelfKg)} kg/shelf and ${count(fitting.maxLoadKg)} kg total`;
+      fitResult = `Fits; the ${smallest.name} would also take this load`;
     } else if (fitting) {
       recommendedModel = fitting.name;
       usableShelves = `${count(shelvesUsed)} of up to ${count(fitting.maxShelves)}`;
-      loadCheck = smallest && loadPerShelf > smallest.maxLoadPerShelfKg
-        ? `${count(loadPerShelf)} kg exceeds ${count(smallest.maxLoadPerShelfKg)} kg/shelf on the ${smallest.shortName} but is within ${count(fitting.maxLoadPerShelfKg)} kg on the ${fitting.shortName}`
-        : `${count(totalLoad)} kg total exceeds the ${count(smallest?.maxLoadKg)} kg limit of the ${smallest?.shortName}`;
+      loadCheck = smallest ? shortfallText(smallest, fitting) : '';
       fitResult = `Step up to ${fitting.name} for headroom`;
     } else {
-      recommendedModel = 'Beyond TH3-E range';
+      recommendedModel = data?.beyondRangeLabel ?? 'Beyond TH3-E range';
       usableShelves = 'Not sufficient';
-      if (widest && loadPerShelf > widest.maxLoadPerShelfKg) {
-        loadCheck = `${count(loadPerShelf)} kg/shelf exceeds the ${widest.shortName}'s ${count(widest.maxLoadPerShelfKg)} kg/shelf limit`;
-      } else if (widest && shelvesUsed > widest.maxShelves) {
-        loadCheck = `${count(shelvesUsed)} shelves exceeds the ${widest.shortName}'s ${count(widest.maxShelves)}-shelf maximum`;
-      } else {
-        loadCheck = `${count(totalLoad)} kg exceeds the ${count(widest?.maxLoadKg)} kg maximum of the ${widest?.shortName}`;
-      }
-      fitResult = 'Split across two units or use a larger TH3 model';
+      loadCheck = widest ? shortfallText(widest, null) : '';
+      fitResult = data?.beyondRangeFit ?? 'Split across two units or use a larger TH3 model';
     }
 
     return {
@@ -206,19 +276,37 @@ const FORMULAS = {
     const needsHumidity = (picks?.humidityControlNeeded ?? 'yes') === 'yes';
     const chamberModel = picks?.chamberModel ?? data?.choices?.find((choice) => choice.key === 'chamberModel')?.default;
     const selectedModel = data?.models?.find((model) => model.val === chamberModel);
+    const ambient = data?.ambientTemp ?? 20;
+    const tempFluctuation = data?.stability?.temp ?? '0.3';
+    const humidityFluctuation = selectedModel?.humidityFluctuation ?? data?.stability?.humidity ?? '1';
 
     const tempOk = targetTemp >= tempMin && targetTemp <= tempMax;
     const humidityOk = !needsHumidity || (targetHumidity >= humidityMin && targetHumidity <= humidityMax);
 
     if (!tempOk) {
+      const belowMin = targetTemp < tempMin;
       return {
         assumption: data?.assumptionNote ?? '',
         cards: [
-          { label: 'Range check', value: `Out of range - exceeds ${tempMax} C maximum` },
+          { label: 'Range check', value: belowMin ? `Out of range - below ${tempMin} C minimum` : `Out of range - exceeds ${tempMax} C maximum` },
           { label: 'Heating time', value: 'Not applicable' },
           { label: 'Cooling time', value: 'Not applicable' },
           { label: 'Water guidance', value: 'Not applicable' },
-          { label: 'Stability note', value: `Lower the target to ${tempMax} C or below` },
+          { label: 'Stability note', value: belowMin ? `Raise the target to ${tempMin} C or above` : `Lower the target to ${tempMax} C or below` },
+        ],
+      };
+    }
+    // Some models only control humidity inside a narrower temperature window.
+    const humidityTempRange = data?.humidityTempRange;
+    if (needsHumidity && humidityTempRange && (targetTemp < humidityTempRange[0] || targetTemp > humidityTempRange[1])) {
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: 'Range check', value: `Out of range with humidity - humidity control runs from ${humidityTempRange[0]} to ${humidityTempRange[1]} C` },
+          { label: 'Heating time', value: 'Not applicable' },
+          { label: 'Cooling time', value: 'Not applicable' },
+          { label: 'Water guidance', value: 'Not applicable' },
+          { label: 'Stability note', value: `Turn humidity control off, or set ${humidityTempRange[0]} to ${humidityTempRange[1]} C` },
         ],
       };
     }
@@ -251,10 +339,50 @@ const FORMULAS = {
 
     const heatMinutes = Math.round(interpolate(targetTemp, data?.heatAnchors));
     const coolMinutes = Math.round(interpolate(targetTemp, data?.coolAnchors));
+    let heating = `About ${count(heatMinutes)} minutes from ambient`;
+    let cooling = `About ${count(coolMinutes)} minutes to ambient`;
+
+    // Floor-standing models publish only full-span ramp figures per model, so
+    // those are shown as stated (never scaled); sub-ambient targets on the
+    // tabletop models interpolate between their stated cool-down examples.
+    const reference = data?.rampReference;
+    const belowAmbientAnchors = data?.belowAmbientCoolAnchors;
+    if (reference) {
+      const heatFull = selectedModel?.heatFullMin ?? reference.heatFullMin;
+      const coolFull = selectedModel?.coolFullMin ?? reference.coolFullMin;
+      if (targetTemp < ambient) {
+        heating = 'Not applicable (cooling test)';
+        cooling = targetTemp === tempMin
+          ? `About ${count(coolFull)} minutes from ${ambient} C to ${tempMin} C`
+          : `Up to about ${count(coolFull)} minutes from ${ambient} C (published ${ambient} to ${tempMin} C figure)`;
+      } else if (targetTemp <= (reference.fewMinutesUpTo ?? 40)) {
+        heating = 'A few minutes from ambient';
+        cooling = 'A few minutes to ambient';
+      } else if (targetTemp === tempMax) {
+        heating = `About ${count(heatFull)} minutes from ${tempMin} C, less from ambient`;
+        cooling = `About ${count(coolFull)} minutes back down`;
+      } else {
+        heating = `Up to about ${count(heatFull)} minutes (published ${tempMin} to ${tempMax} C figure), less from ambient`;
+        cooling = `Up to about ${count(coolFull)} minutes back down`;
+      }
+    } else if (belowAmbientAnchors && targetTemp < ambient) {
+      heating = 'Not applicable (cooling test)';
+      cooling = `About ${count(Math.round(interpolate(targetTemp, belowAmbientAnchors)))} minutes from ambient to ${targetTemp} C`;
+    }
+
+    let rangeCheck = 'Within range - achievable';
+    if (reference || belowAmbientAnchors) {
+      if (targetTemp === tempMin) {
+        rangeCheck = `Within range - reaches the ${tempMin} C minimum${data?.min50Hz != null ? ` (${data.min50Hz} C at 50 Hz)` : ''}`;
+      } else if (data?.min50Hz != null && targetTemp < data.min50Hz) {
+        rangeCheck = `Within range at 60 Hz only - the minimum is ${data.min50Hz} C at 50 Hz`;
+      }
+    }
 
     let waterGuidance;
     if (!needsHumidity) {
-      waterGuidance = 'No water needed';
+      const cold = (data?.coldWaterGuidance ?? []).find((tier) => targetTemp < tier.belowTemp);
+      waterGuidance = cold?.text ?? 'No water needed';
     } else if (holdDays <= 7) {
       waterGuidance = selectedModel?.shortRunWaterGuidance ?? 'Refill tank is sufficient';
     } else {
@@ -264,11 +392,259 @@ const FORMULAS = {
     return {
       assumption: data?.assumptionNote ?? '',
       cards: [
-        { label: 'Range check', value: 'Within range - achievable' },
-        { label: 'Heating time', value: `About ${count(heatMinutes)} minutes from ambient` },
-        { label: 'Cooling time', value: `About ${count(coolMinutes)} minutes to ambient` },
+        { label: 'Range check', value: rangeCheck },
+        { label: 'Heating time', value: heating },
+        { label: 'Cooling time', value: cooling },
         { label: 'Water guidance', value: waterGuidance },
-        { label: 'Stability note', value: `Holds within +/- 0.3 C${needsHumidity ? ' and +/- 1 %RH' : ''}` },
+        { label: 'Stability note', value: `Holds within +/- ${tempFluctuation} C${needsHumidity ? ` and +/- ${humidityFluctuation} %RH` : ''}` },
+      ],
+    };
+  },
+
+  // Hours to reach a light dose: dose / (published rated output x the output
+  // setting entered). Published uniformity gives the spread across positions.
+  'photostability-exposure': ({ nums, picks, data }) => {
+    const setting = Math.min(100, Math.max(1, nums.outputPercent ?? 100)) / 100;
+    const uniformity = (data?.uniformityPercent ?? 0) / 100;
+    const at = setting === 1 ? 'at rated output' : `at ${count(setting * 100)}% output`;
+    const sources = {
+      vis: { ...data?.visible, dose: Math.max(0, nums.visTarget ?? 0) },
+      uva: { ...data?.uva, dose: Math.max(0, nums.uvaTarget ?? 0) },
+    };
+    const hoursFor = (source) => (source.ratedOutput > 0 ? source.dose / (source.ratedOutput * setting) : 0);
+    const hrs = (value) => (value >= 10 ? count(value) : (Math.round(value * 10) / 10).toString());
+    const dose = (value) => (value >= 1e6 && value % 1e5 === 0 ? `${value / 1e6} million` : EN.format(value));
+
+    const lightType = picks?.lightType ?? 'vis';
+    if (lightType === 'both') {
+      const visHours = hoursFor(sources.vis);
+      const uvaHours = hoursFor(sources.uva);
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: 'Sequence', value: `Run ${sources.vis.name} to ${dose(sources.vis.dose)} ${sources.vis.doseUnit}, then ${sources.uva.name} to ${dose(sources.uva.dose)} ${sources.uva.doseUnit}` },
+          { label: 'Estimated time', value: `About ${hrs(visHours)} hr ${sources.vis.name} + ${hrs(uvaHours)} hr ${sources.uva.name} ${at}`, primary: true },
+          { label: 'Uniformity', value: `+/- ${count(uniformity * 100)} % across the vertical area` },
+          { label: 'Note', value: data?.combinedNote ?? '' },
+        ],
+      };
+    }
+
+    const source = sources[lightType] ?? sources.vis;
+    const hours = hoursFor(source);
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: 'Rated output', value: setting === 1 ? source.ratedLabel : `${EN.format(Math.round(source.ratedOutput * setting * 10) / 10)} ${source.outputUnit} (${count(setting * 100)}% of ${source.ratedLabel})` },
+        { label: 'Estimated time', value: `About ${hrs(hours)} hours ${at}`, primary: true },
+        { label: 'Across sample positions', value: `About ${hrs(hours / (1 + uniformity))} to ${hrs(hours / (1 - uniformity))} hours within the +/- ${count(uniformity * 100)} % uniformity` },
+        { label: 'Tracking', value: source.tracking ?? '' },
+        { label: 'Auto lamp-off', value: source.lampOff ?? '' },
+      ],
+    };
+  },
+
+  // Target illuminance and CO2 against the chosen model's published limits;
+  // the crop guidance is the product content's own text for that crop type.
+  'growth-light-plan': ({ nums, picks, data }) => {
+    const crops = data?.crops ?? [];
+    const models = data?.models ?? [];
+    const crop = crops.find((item) => item.val === picks?.cropType) ?? crops[0];
+    const model = models.find((item) => item.val === picks?.chamberModel) ?? models[0];
+    if (!crop || !model) return { cards: [] };
+    const targetLux = Math.max(0, nums.targetLux ?? 0);
+    const brighter = models.find((item) => item.maxLux >= targetLux && item.maxLux > model.maxLux);
+
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: 'Recommended light', value: crop.recommendedLight },
+        {
+          label: 'Light check',
+          value: targetLux <= model.maxLux
+            ? `${EN.format(targetLux)} Lux is within the ${model.name}'s 0 to ${EN.format(model.maxLux)} Lux range`
+            : `${EN.format(targetLux)} Lux exceeds the ${model.name}'s ${EN.format(model.maxLux)} Lux maximum${brighter ? `; the ${brighter.name} reaches ${EN.format(brighter.maxLux)} Lux` : ''}`,
+        },
+        { label: 'Lamp setup', value: model.lampSetup },
+        { label: 'CO2', value: picks?.co2 === 'yes' ? data?.co2OptionText ?? '' : crop.co2 },
+        { label: 'Note', value: crop.note ?? model.note ?? '' },
+      ],
+    };
+  },
+
+  // A published row picked from a list (a block, a tray, a documented
+  // scenario), with optional limit checks against what the visitor entered.
+  'option-lookup': ({ nums, picks, data }) => {
+    const options = data?.options ?? [];
+    const row = options.find((item) => item.val === picks?.[data?.optionKey ?? 'option']) ?? options[0];
+    if (!row) return { cards: [] };
+    return { assumption: data?.assumptionNote ?? '', cards: applyChecks(row.cards ?? [], { nums, picks, data, row }) };
+  },
+
+  // Published vessel capacity (clamps, tubes, funnels...) per model or
+  // platform, against the number the visitor needs; stacked units multiply it.
+  'vessel-capacity': ({ nums, picks, data }) => {
+    const rows = data?.rows ?? [];
+    const row = rows.find((item) => item.val === picks?.[data?.rowKey ?? 'vesselSize']) ?? rows[0];
+    const columns = data?.columns ?? [];
+    if (!row || !columns.length) return { cards: [] };
+    const needed = Math.max(0, nums.numberNeeded ?? 0);
+    const units = Math.max(1, nums.units ?? 1);
+    const baseUnit = row.unit ?? data?.unit ?? 'clamps';
+    const unitFor = (n) => (n === 1 ? baseUnit.replace(/s$/, '') : baseUnit);
+    const capacityOf = (column) => {
+      const value = row.counts?.[column.key];
+      return value == null ? null : value * units;
+    };
+    const cards = columns.map((column) => {
+      const capacity = capacityOf(column);
+      return {
+        label: column.label,
+        value: capacity == null
+          ? (row.unsupportedText ?? 'Not supported')
+          : `Up to ${count(capacity)} ${unitFor(capacity)}${units > 1 ? ` across ${count(units)} units` : ''}`,
+      };
+    });
+
+    const fits = (column) => capacityOf(column) != null && capacityOf(column) >= needed;
+    const preferred = columns.find((column) => column.key === picks?.preferredColumn);
+    const fitting = preferred && fits(preferred) ? preferred : columns.find(fits);
+    const largest = columns.reduce((best, column) => ((capacityOf(column) ?? 0) > (capacityOf(best) ?? 0) ? column : best), columns[0]);
+    let fitResult;
+    if (fitting) {
+      fitResult = columns.length > 1
+        ? `${count(needed)} x ${row.label} fit on the ${fitting.label} (up to ${count(capacityOf(fitting))})`
+        : `${count(needed)} x ${row.label} fit in one run (up to ${count(capacityOf(fitting))})`;
+    } else if (capacityOf(largest)) {
+      const runs = Math.ceil(needed / capacityOf(largest));
+      fitResult = `More than one run holds: about ${count(runs)} runs on the ${columns.length > 1 ? largest.label : 'platform'} (up to ${count(capacityOf(largest))} per run)`;
+    } else {
+      fitResult = data?.beyondText ?? 'Not supported - ask Inkarp for an alternative';
+    }
+
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: applyChecks([...cards, { label: data?.fitLabel ?? 'Fit result', value: fitResult }, ...(row.cards ?? [])], { nums, picks, data, row }),
+    };
+  },
+
+  // Achievable speed at a load, from the published load-speed ratings
+  // (e.g. "10 kg at 500 rpm, 15 kg at 400 rpm"). Loads between ratings take
+  // the next rating's lower speed rather than an invented in-between figure.
+  'speed-at-load': ({ nums, picks, data }) => {
+    const models = data?.models ?? [];
+    const model = models.find((item) => item.val === picks?.model) ?? models[0];
+    if (!model) return { cards: [] };
+    const variant = data?.variantKey ? picks?.[data.variantKey] : null;
+    const steps = model.stepsBy?.[variant] ?? model.steps ?? [];
+    const cap = model.maxRpmBy?.[variant];
+    const load = Math.max(0, nums.totalLoadKg ?? 0);
+    const labels = { speed: 'Achievable speed', headroom: 'Load headroom', note: 'Note', ...data?.cardLabels };
+    const rpmOf = (step) => (cap ? Math.min(step.rpm, cap) : step.rpm);
+    const ratings = steps.map((step) => `${count(rpmOf(step))} rpm up to ${EN.format(step.maxKg)} kg`).join('; ');
+    const tier = steps.find((step) => load <= step.maxKg);
+
+    if (!tier) {
+      const last = steps[steps.length - 1];
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: labels.speed, value: model.overloadSpeed ?? data?.overloadSpeed ?? 'Beyond the rated load' },
+          { label: labels.headroom, value: `${EN.format(load)} kg exceeds the ${EN.format(last?.maxKg ?? 0)} kg rating of the ${model.name}` },
+          { label: labels.note, value: data?.overloadNote ?? 'Reduce load or speed for stable operation' },
+        ],
+      };
+    }
+    const isTop = tier === steps[0];
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: labels.speed, value: isTop ? `Up to ${count(rpmOf(tier))} rpm` : `About ${count(rpmOf(tier))} rpm at ${EN.format(load)} kg` },
+        { label: labels.headroom, value: `Within the ${EN.format(tier.maxKg)} kg rating at ${count(rpmOf(tier))} rpm` },
+        { label: labels.note, value: `${model.name}: ${ratings}` },
+      ],
+    };
+  },
+
+  // Carboy shaking: achievable rpm read from the published holder table by
+  // water weight (the next published column at or above the entered volume).
+  'rpm-by-load-table': ({ nums, picks, data }) => {
+    const rows = data?.rows ?? [];
+    const row = rows.find((item) => item.model === picks?.model && item.holder === picks?.holder) ?? rows[0];
+    if (!row) return { cards: [] };
+    const litres = Math.max(0, nums.waterLitres ?? 0);
+    const holderLabel = data?.holderLabels?.[row.holder] ?? row.holder;
+    if (litres > row.maxLitres) {
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: 'Achievable rpm', value: 'Not applicable' },
+          { label: 'Holder', value: holderLabel },
+          { label: 'Note', value: `${EN.format(litres)} L exceeds the ${EN.format(row.maxLitres)} L this holder takes` },
+        ],
+      };
+    }
+    const column = (data?.columns ?? []).findIndex((max) => litres <= max);
+    const rpm = row.rpm[column];
+    const notes = data?.notes ?? {};
+    let note = notes.default;
+    if (litres === 0) note = notes.empty ?? note;
+    else if (row.vessels > 1) note = notes.multiple ?? note;
+    else if (column === row.rpm.length - 1) note = notes.largest ?? note;
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: 'Achievable rpm', value: `About ${count(rpm)} rpm`, note: `Published value for up to ${EN.format(data.columns[column])} L of water.` },
+        { label: 'Holder', value: holderLabel },
+        { label: 'Note', value: note ?? '' },
+      ],
+    };
+  },
+
+  // Plant height against each model's published interior height; the tray
+  // count is spread over the levels that height allows. Humidity narrows the
+  // candidates to the models with humidity control.
+  'plant-fit-check': ({ nums, picks, data }) => {
+    const trays = Math.max(0, nums.traysOrPots ?? 0);
+    const plantHeight = Math.max(1, nums.plantHeightMm ?? 1);
+    const needsHumidity = picks?.humidityNeeded === 'yes';
+    const models = (data?.models ?? []).filter((model) => !needsHumidity || model.humidity);
+    const heightOk = (model) => plantHeight <= model.interiorMm.h;
+    const preferred = models.find((model) => model.name === picks?.preferredModel);
+    const chosen = preferred && heightOk(preferred) ? preferred : models.find(heightOk);
+
+    if (!chosen) {
+      const tallest = Math.max(0, ...models.map((model) => model.interiorMm.h));
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: [
+          { label: 'Recommended model', value: data?.beyondRangeLabel ?? 'Beyond chamber height' },
+          { label: 'Usable shelves', value: 'Not sufficient' },
+          { label: 'Height', value: `${count(plantHeight)} mm exceeds the tallest interior (${count(tallest)} mm)` },
+          { label: 'Fit result', value: data?.beyondRangeFit ?? 'Ask Inkarp for a size-matched recommendation' },
+        ],
+      };
+    }
+
+    const { w, d, h } = chosen.interiorMm;
+    const levels = Math.max(1, Math.min(chosen.maxShelves, Math.floor(h / plantHeight)));
+    const perLevel = Math.ceil(trays / levels);
+    const preferredNote = preferred && preferred !== chosen
+      ? ` (${preferred.name} is ${needsHumidity && !preferred.humidity ? 'without humidity control' : 'too short'})`
+      : '';
+
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: [
+        { label: 'Recommended model', value: `${chosen.name}${preferredNote}` },
+        {
+          label: 'Usable shelves',
+          value: levels === 1
+            ? `Remove shelves for the full ${count(h)} mm interior height`
+            : `About ${count(levels)} levels at this plant height (${chosen.shelvesLabel})`,
+        },
+        { label: 'Height', value: `${count(plantHeight)} mm plants fit the ${count(h)} mm interior height` },
+        { label: 'Fit result', value: `About ${count(perLevel)} tray(s) or pot(s) per level on a ${count(w)} x ${count(d)} mm shelf area` },
       ],
     };
   },
@@ -358,7 +734,8 @@ export default function MetricCalculator({ data, productName = 'this product' })
     [compute, data, nums, picks, requiresRun, runValues]
   );
 
-  if (!compute || !fields.length) return null;
+  // A pure lookup can be driven by choices alone, with no numeric inputs.
+  if (!compute || (!fields.length && !choices.length)) return null;
 
   const summary = [
     ...choices.map((choice) => {
@@ -385,7 +762,7 @@ export default function MetricCalculator({ data, productName = 'this product' })
             ) : null}
             {data?.presets?.length > 0 ? (
               <div className="mb-5">
-                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-soft">Try a common target</p>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-soft">{data.presetsLabel ?? 'Try a common target'}</p>
                 <div className="flex flex-wrap gap-2">
                   {data.presets.map((preset) => (
                     <button
@@ -473,8 +850,8 @@ export default function MetricCalculator({ data, productName = 'this product' })
             {!results ? (
               <div className="flex min-h-[280px] items-center justify-center border border-dashed border-line-light bg-parchment-alt p-6 text-center">
                 <div>
-                  <p className="text-lg font-semibold text-ink">Your test-cycle output will appear here</p>
-                  <p className="mt-2 text-sm leading-6 text-ink-soft">Choose the conditions and chamber model, then run the test cycle.</p>
+                  <p className="text-lg font-semibold text-ink">{data?.emptyTitle ?? 'Your test-cycle output will appear here'}</p>
+                  <p className="mt-2 text-sm leading-6 text-ink-soft">{data?.emptyText ?? 'Choose the conditions and chamber model, then run the test cycle.'}</p>
                 </div>
               </div>
             ) : results.cards.map((card) => {

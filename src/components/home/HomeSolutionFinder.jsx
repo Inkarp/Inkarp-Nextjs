@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { FiArrowRight, FiBriefcase, FiMail, FiMapPin, FiTarget, FiX } from "react-icons/fi";
@@ -258,16 +257,12 @@ export default function HomeSolutionFinder() {
       ? <span className="hidden shrink-0 px-1 text-base font-semibold text-white/70 min-[1440px]:inline">{rowText}</span>
       : <span className="mb-1.5 block text-[11px] font-bold uppercase tracking-wider text-white/60">{gridText}</span>);
 
-    const consent = (
-      <p className={`px-1 text-[11px] leading-4 ${inline ? "mt-1 truncate text-center" : ""} ${message ? "font-semibold text-rose-200" : "text-white/55"}`} role={message ? "alert" : undefined}>
-        {message || (
-          <>
-            By continuing, you agree Inkarp may contact you about this request.{" "}
-            <Link className="underline underline-offset-2 transition hover:text-white" href="/privacy-policy">Privacy policy</Link>
-          </>
-        )}
+    // Only a validation message takes a line under the fields; nothing otherwise.
+    const alert = message ? (
+      <p className={`px-1 text-[11px] font-semibold leading-4 text-rose-200 ${inline ? "mt-1 truncate text-center" : ""}`} role="alert">
+        {message}
       </p>
-    );
+    ) : null;
 
     const submit = (
       <button
@@ -346,9 +341,9 @@ export default function HomeSolutionFinder() {
           {inline ? submit : null}
         </div>
 
-        {inline ? consent : (
-          <div className="mt-6 flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="sm:max-w-sm">{consent}</div>
+        {inline ? alert : (
+          <div className={`mt-6 flex flex-col-reverse gap-4 sm:flex-row sm:items-center ${alert ? "sm:justify-between" : "sm:justify-end"}`}>
+            {alert ? <div className="sm:max-w-sm">{alert}</div> : null}
             {submit}
           </div>
         )}
@@ -374,7 +369,7 @@ export default function HomeSolutionFinder() {
       </div>
 
       {/* 1280px and up: the whole form in one row; sentence labels join in from 1440px. */}
-      <div className="hidden min-h-[84px] py-2 xl:block">
+      <div className="hidden py-2 xl:block">
         {dialog ? null : renderForm("row", "stripe")}
       </div>
     </div>

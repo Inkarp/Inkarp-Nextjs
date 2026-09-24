@@ -125,7 +125,7 @@ export default function WorkflowScore({ data, productName }) {
       <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="10"
-          eyebrow="Interactive - workflow score"
+          eyebrow={data?.sectionEyebrow ?? 'Interactive - workflow score'}
           title={data?.title ?? `How much of your workflow can ${name} simplify?`}
           description={data?.description ?? `Tap the steps your team currently manages manually. We will show how ${name} improves visibility, safety and repeatability.`}
         />

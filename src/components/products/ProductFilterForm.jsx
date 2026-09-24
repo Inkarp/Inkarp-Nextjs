@@ -182,7 +182,9 @@ export default function ProductFilterForm({
   const [isPending, startTransition] = useTransition();
   const [isNavigating, setIsNavigating] = useState(false);
   const trimmedSearch = search.trim();
-  const hasActiveSearch = Boolean(trimmedSearch);
+  // The search applied to the results (from the URL), not what is typed in the box.
+  const appliedQuery = (query ?? "").trim();
+  const hasActiveSearch = Boolean(appliedQuery);
   const hasActiveBrands = selectedBrands.length > 0;
   const hasActiveIndustries = selectedIndustries.length > 0;
   const hasActiveApplications = selectedApplications.length > 0;
@@ -244,6 +246,24 @@ export default function ProductFilterForm({
 
   const handleClear = () => {
     setSearch("");
+    // Also drop the applied search, otherwise the results stay filtered.
+    if (!appliedQuery) return;
+
+    setIsNavigating(true);
+
+    startTransition(() => {
+      router.replace(
+        getProductsUrl(
+          pathname,
+          searchParams,
+          "",
+          selectedBrands,
+          selectedIndustries,
+          selectedApplications
+        ),
+        { scroll: false }
+      );
+    });
   };
 
   const handleBrandToggle = (brand) => {
@@ -499,7 +519,7 @@ export default function ProductFilterForm({
             <span>
               Showing matches for{" "}
               <span className="font-semibold text-ink">
-                {trimmedSearch}
+                {appliedQuery}
               </span>
             </span>
           ) : null}

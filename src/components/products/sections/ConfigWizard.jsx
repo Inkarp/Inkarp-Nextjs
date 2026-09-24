@@ -242,7 +242,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                         `Thank you${name ? `, ${name}` : ''}. We have sent your configuration to our team.`
                       }
                       summary={configurationSummary}
-                      triggerLabel="Email this configuration"
+                      triggerLabel={result.emailLabel ?? 'Email this configuration'}
                     />
                     <a className="inline-flex h-11 w-full items-center justify-center border border-line-light px-5 text-sm font-bold text-black transition hover:border-red hover:text-red sm:w-auto" href="#booking">
                       {result.ctaLabel ?? 'Request quote'}

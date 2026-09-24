@@ -425,6 +425,12 @@ export default function Header() {
             </div>
 
             <div className="ml-auto flex items-center gap-2 lg:hidden">
+              {/* Small laptops at 125-150% display scaling land here (under 1024px),
+                  so keep notifications and last-viewed reachable from tablet width up. */}
+              <div className="hidden md:flex">
+                <RailUtilityDock placement="header" />
+              </div>
+
               <ProductProfileDownloadButton href={productProfileUrl} variant="icon" />
 
               <button

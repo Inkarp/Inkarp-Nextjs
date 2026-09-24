@@ -58,10 +58,7 @@ export default function FinderReportActions({ sessionId }) {
             <input aria-label="Email address" autoComplete="email" className="h-11 min-w-0 flex-1 border border-white/20 bg-white/10 px-3 text-sm text-white outline-none placeholder:text-white/50 focus:border-white/60" inputMode="email" onChange={(event) => setEmail(event.target.value)} placeholder="Email address" required type="email" value={email} />
             <button className="h-11 shrink-0 bg-white px-4 text-sm font-semibold text-ink transition hover:bg-red hover:text-white disabled:opacity-60" disabled={sending} type="submit">{sending ? "Sending…" : "Send"}</button>
           </div>
-          <p className="mt-2 text-[11px] leading-4 text-white/55">
-            We&apos;ll email you a link to this report. By sending, you agree Inkarp may contact you about it.{" "}
-            <Link className="underline underline-offset-2 transition hover:text-white" href="/privacy-policy">Privacy policy</Link>
-          </p>
+          <p className="mt-2 text-[11px] leading-4 text-white/55">We&apos;ll email you a link to this report.</p>
         </form>
       ) : null}
       {message ? <p className="mt-2 text-xs text-white/65" role="status">{message}</p> : null}

@@ -45,7 +45,13 @@
             { "label": "Funnel holders included", "value": "4 (standard); 2 optional" },
             { "label": "Cat. No.", "value": "AAH32025K" },
             { "label": "Cat. No.", "value": "AAH32023U" },
-            { "label": "Max. funnels (across both sides): Less than 500 mL", "value": "10 (5 per side), round or cylindrical" },
+            {
+              "label": "Max. funnels (across both sides): Less than 500 mL",
+              "value": "10 (5 per side), round or cylindrical",
+              "groupTitle": "Funnel Loading Capacity",
+              "groupIntro": "Maximum number of funnels by capacity (across both sides):",
+              "groupNote": "Funnels are not provided. Up to five holders can be installed on each side. Funnel holder catalog number: AAA32502."
+            },
             { "label": "Max. funnels (across both sides): 500 mL", "value": "6 (3 per side)" },
             { "label": "Max. funnels (across both sides): 1 L", "value": "6 (3 per side)" },
             { "label": "Max. funnels (across both sides): 2 L", "value": "4 (2 per side)" }
@@ -93,7 +99,8 @@
                     { "label": "Suggested tilt", "value": "10 to 20 deg for efficiency at low rpm" },
                     { "label": "Motion", "value": "Inclined reciprocating" },
                     { "label": "Note", "value": "Tilt boosts mixing without high speed foaming" }
-                  ]
+                  ],
+                  "matches": { "foaming": ["foaming"], "intensity": ["low"] }
                 },
                 {
                   "val": "standard-liquid-liquid-extraction",
@@ -103,7 +110,8 @@
                     { "label": "Suggested tilt", "value": "10 to 15 deg" },
                     { "label": "Motion", "value": "Vertical or inclined" },
                     { "label": "Note", "value": "Balanced mixing for most extractions" }
-                  ]
+                  ],
+                  "matches": { "foaming": ["non-foaming"], "intensity": ["medium"] }
                 },
                 {
                   "val": "vigorous-mixing-non-foaming-sample",
@@ -113,18 +121,46 @@
                     { "label": "Suggested tilt", "value": "0 to 10 deg" },
                     { "label": "Motion", "value": "Vertical reciprocating" },
                     { "label": "Note", "value": "Inclined mode is limited to 250 rpm" }
-                  ]
+                  ],
+                  "matches": { "foaming": ["non-foaming"], "intensity": ["high"] }
                 }
               ],
               "choices": [
                 {
                   "key": "option",
-                  "label": "Choose your case",
+                  "label": "Sample / extraction type",
                   "default": "gentle-extraction-foaming-sample",
                   "options": [
                     { "val": "gentle-extraction-foaming-sample", "label": "Gentle extraction, foaming sample" },
                     { "val": "standard-liquid-liquid-extraction", "label": "Standard liquid-liquid extraction" },
                     { "val": "vigorous-mixing-non-foaming-sample", "label": "Vigorous mixing, non-foaming sample" }
+                  ]
+                },
+                {
+                  "key": "funnelSize",
+                  "label": "Funnel size",
+                  "default": "2l",
+                  "options": [
+                    { "val": "lt500", "label": "Less than 500 mL" },
+                    { "val": "500ml", "label": "500 mL" },
+                    { "val": "1l", "label": "1 L" },
+                    { "val": "2l", "label": "2 L" }
+                  ]
+                },
+                {
+                  "key": "foaming",
+                  "label": "Foaming tendency",
+                  "default": "foaming",
+                  "options": [{ "val": "foaming", "label": "Foaming" }, { "val": "non-foaming", "label": "Non-foaming" }]
+                },
+                {
+                  "key": "intensity",
+                  "label": "Mixing intensity needed",
+                  "default": "low",
+                  "options": [
+                    { "val": "low", "label": "Low (30 to 100 rpm)" },
+                    { "val": "medium", "label": "Medium (100 to 200 rpm)" },
+                    { "val": "high", "label": "High (200 to 300 rpm vertical)" }
                   ]
                 }
               ],
@@ -138,7 +174,18 @@
               "ctaNote": "Share your samples and vessels and Inkarp will confirm the settings for your run.",
               "submitLabel": "Validate your speed and tilt with an Inkarp specialist",
               "disclaimer": "Suggested settings are starting points from JeioTech / Inkarp guidance; confirm them for your samples.",
-              "surface": "alt"
+              "surface": "alt",
+              "choiceCards": [
+                {
+                  "key": "funnelSize",
+                  "label": "Max. funnels",
+                  "values": { "lt500": "10 (5 per side), round or cylindrical", "500ml": "6 (3 per side)", "1l": "6 (3 per side)", "2l": "4 (2 per side)" }
+                }
+              ],
+              "matchChecks": [
+                { "key": "foaming", "label": "Foaming check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "intensity", "label": "Intensity check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -186,7 +233,7 @@
               "choices": [
                 {
                   "key": "vesselSize",
-                  "label": "Vessel size",
+                  "label": "Funnel size",
                   "default": "lt500",
                   "options": [
                     { "val": "lt500", "label": "funnels under 500 mL" },
@@ -203,7 +250,7 @@
                 }
               ],
               "fields": [
-                { "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 },
+                { "key": "numberNeeded", "label": "Number of funnels", "default": 4, "min": 1 },
                 { "key": "weightPerSideKg", "label": "Total weight per side (kg)", "default": 4, "min": 0 }
               ],
               "presetsLabel": "Try an example case",
@@ -226,7 +273,16 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a fit check from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "verdict": {
+                "label": "Fit result",
+                "okText": "Fits comfortably",
+                "rules": [
+                  { "overCapacity": true, "text": "Split the funnels into more than one run" },
+                  { "over": "weightPerSideKg", "text": "Rebalance load across both sides" },
+                  { "pick": { "benchSpace": "tight" }, "text": "Provide tilt clearance or run vertical only" }
+                ]
+              }
             }
           ],
           "suitability": {
@@ -518,8 +574,7 @@
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
                 "body": [
-                  "The technical specifications of the RS-2 Funnel Shaker include vertical and inclined reciprocating motion, 30 to 300 rpm speed, a 40 mm stroke and capacity for up to four 2 L funnels.",
-                  "Funnels are not provided. Up to five holders can be installed on each side. Funnel holder catalog number: AAA32502."
+                  "The technical specifications of the RS-2 Funnel Shaker include vertical and inclined reciprocating motion, 30 to 300 rpm speed, a 40 mm stroke and capacity for up to four 2 L funnels."
                 ]
               },
               {
@@ -676,7 +731,12 @@
               "models": [
                 { "val": "os-2000", "name": "OS-2000", "steps": [{ "maxKg": 10, "rpm": 500 }, { "maxKg": 16, "rpm": 300 }] },
                 { "val": "os-3000", "name": "OS-3000", "steps": [{ "maxKg": 10, "rpm": 500 }, { "maxKg": 18, "rpm": 300 }] },
-                { "val": "os-4000", "name": "OS-4000", "steps": [{ "maxKg": 14, "rpm": 500 }, { "maxKg": 21, "rpm": 300 }], "maxRpmBy": { "reciprocal": 450 } }
+                {
+                  "val": "os-4000",
+                  "name": "OS-4000",
+                  "steps": [{ "maxKg": 14, "rpm": 500 }, { "maxKg": 21, "rpm": 300, "speedSuffix": "; 400 rpm lighter" }],
+                  "maxRpmBy": { "reciprocal": 450 }
+                }
               ],
               "variantKey": "motion",
               "overloadSpeed": "Best-effort run keeps it shaking",
@@ -694,18 +754,28 @@
                   "label": "Motion type",
                   "default": "orbital",
                   "options": [{ "val": "orbital", "label": "Orbital" }, { "val": "reciprocal", "label": "Reciprocal" }]
+                },
+                {
+                  "key": "amplitude",
+                  "label": "Amplitude",
+                  "default": "19.1",
+                  "options": [
+                    { "val": "19.1", "label": "19.1 mm (default)" },
+                    { "val": "12.7", "label": "12.7 mm (option)", "when": { "model": "os-2000" } },
+                    { "val": "25.4", "label": "25.4 mm (option)", "when": { "model": ["os-3000", "os-4000"] } }
+                  ]
                 }
               ],
               "fields": [{ "key": "totalLoadKg", "label": "Total load (kg)", "default": 10, "min": 0 }],
               "presetsLabel": "Try an example load",
               "presets": [
-                { "label": "OS-2000, up to 10 kg", "nums": { "totalLoadKg": 10 }, "picks": { "model": "os-2000" } },
-                { "label": "OS-2000, up to 16 kg", "nums": { "totalLoadKg": 16 }, "picks": { "model": "os-2000" } },
-                { "label": "OS-3000, up to 10 kg", "nums": { "totalLoadKg": 10 }, "picks": { "model": "os-3000" } },
-                { "label": "OS-3000, up to 18 kg", "nums": { "totalLoadKg": 18 }, "picks": { "model": "os-3000" } },
-                { "label": "OS-4000, up to 14 kg", "nums": { "totalLoadKg": 14 }, "picks": { "model": "os-4000" } },
-                { "label": "OS-4000, up to 21 kg", "nums": { "totalLoadKg": 21 }, "picks": { "model": "os-4000" } },
-                { "label": "Overloaded beyond rating", "nums": { "totalLoadKg": 22 }, "picks": { "model": "os-3000" } }
+                { "label": "OS-2000, up to 10 kg", "nums": { "totalLoadKg": 10 }, "picks": { "model": "os-2000", "amplitude": "19.1" } },
+                { "label": "OS-2000, up to 16 kg", "nums": { "totalLoadKg": 16 }, "picks": { "model": "os-2000", "amplitude": "19.1" } },
+                { "label": "OS-3000, up to 10 kg", "nums": { "totalLoadKg": 10 }, "picks": { "model": "os-3000", "amplitude": "19.1" } },
+                { "label": "OS-3000, up to 18 kg", "nums": { "totalLoadKg": 18 }, "picks": { "model": "os-3000", "amplitude": "19.1" } },
+                { "label": "OS-4000, up to 14 kg", "nums": { "totalLoadKg": 14 }, "picks": { "model": "os-4000", "amplitude": "19.1" } },
+                { "label": "OS-4000, up to 21 kg", "nums": { "totalLoadKg": 21 }, "picks": { "model": "os-4000", "amplitude": "19.1" } },
+                { "label": "Overloaded beyond rating", "nums": { "totalLoadKg": 22 }, "picks": { "model": "os-3000", "amplitude": "19.1" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -715,7 +785,18 @@
               "emptyText": "Choose the model and enter the total load, then check.",
               "ctaNote": "Share your vessels and total load and Inkarp will confirm the running speed.",
               "submitLabel": "Validate your speed and load with an Inkarp specialist",
-              "disclaimer": "Speeds are the published load-speed ratings (measured with a fixed steel-plate load); liquid samples can behave differently."
+              "disclaimer": "Speeds are the published load-speed ratings (measured with a fixed steel-plate load); liquid samples can behave differently.",
+              "choiceCards": [
+                {
+                  "key": "amplitude",
+                  "label": "Amplitude",
+                  "values": {
+                    "19.1": "19.1 mm default - the published ratings apply",
+                    "12.7": "12.7 mm option - ratings are published at the default 19.1 mm; confirm the speed with Inkarp",
+                    "25.4": "25.4 mm option - ratings are published at the default 19.1 mm; confirm the speed with Inkarp"
+                  }
+                }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -757,6 +838,27 @@
                   "counts": { "os2000": null, "os3000": 1, "os4000": 3 },
                   "cards": [{ "label": "Note", "value": "Use OS-3000 or OS-4000 for large flasks" }],
                   "unsupportedText": "Not supported above 1 L"
+                },
+                {
+                  "val": "plates",
+                  "label": "Microplates",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Single, tower and flat microplate holders are available - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Note", "value": "Microplate holders on the universal platform" }]
+                },
+                {
+                  "val": "funnels",
+                  "label": "Separatory funnels",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Funnel clamps take separatory funnels from 250 mL to 2 L - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Note", "value": "Funnel clamps on the universal platform" }]
+                },
+                {
+                  "val": "tubes",
+                  "label": "Test tubes",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Test tube racks take tubes from 8 mm to 50 mm diameter - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Note", "value": "Test tube racks on the universal platform" }]
                 }
               ],
               "unit": "clamps",
@@ -764,15 +866,29 @@
               "assumptionNote": "Published stainless-steel clamp maximums per model; the OS-2000 does not take flasks above 1 L.",
               "choices": [
                 {
+                  "key": "vesselType",
+                  "label": "Vessel type",
+                  "default": "flasks",
+                  "options": [
+                    { "val": "flasks", "label": "Flasks" },
+                    { "val": "plates", "label": "Microplates" },
+                    { "val": "funnels", "label": "Separatory funnels" },
+                    { "val": "tubes", "label": "Test tubes" }
+                  ]
+                },
+                {
                   "key": "vesselSize",
                   "label": "Vessel size",
                   "default": "250ml",
                   "options": [
-                    { "val": "250ml", "label": "250 mL flasks" },
-                    { "val": "500ml", "label": "500 mL flasks" },
-                    { "val": "1l", "label": "1 L flasks" },
-                    { "val": "2l", "label": "2 L flasks" },
-                    { "val": "6l", "label": "6 L flasks" }
+                    { "val": "250ml", "label": "250 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "500ml", "label": "500 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "1l", "label": "1 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "2l", "label": "2 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "6l", "label": "6 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "plates", "label": "Microplates", "when": { "vesselType": "plates" } },
+                    { "val": "funnels", "label": "Separatory funnels", "when": { "vesselType": "funnels" } },
+                    { "val": "tubes", "label": "Test tubes", "when": { "vesselType": "tubes" } }
                   ]
                 },
                 {
@@ -790,11 +906,11 @@
               "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "250 mL flasks", "nums": { "numberNeeded": 24 }, "picks": { "vesselSize": "250ml", "preferredColumn": "auto" } },
-                { "label": "500 mL flasks", "nums": { "numberNeeded": 16 }, "picks": { "vesselSize": "500ml", "preferredColumn": "auto" } },
-                { "label": "1 L flasks", "nums": { "numberNeeded": 9 }, "picks": { "vesselSize": "1l", "preferredColumn": "auto" } },
-                { "label": "2 L flasks", "nums": { "numberNeeded": 6 }, "picks": { "vesselSize": "2l", "preferredColumn": "auto" } },
-                { "label": "6 L flasks", "nums": { "numberNeeded": 3 }, "picks": { "vesselSize": "6l", "preferredColumn": "auto" } }
+                { "label": "250 mL flasks", "nums": { "numberNeeded": 24 }, "picks": { "vesselType": "flasks", "vesselSize": "250ml", "preferredColumn": "auto" } },
+                { "label": "500 mL flasks", "nums": { "numberNeeded": 16 }, "picks": { "vesselType": "flasks", "vesselSize": "500ml", "preferredColumn": "auto" } },
+                { "label": "1 L flasks", "nums": { "numberNeeded": 9 }, "picks": { "vesselType": "flasks", "vesselSize": "1l", "preferredColumn": "auto" } },
+                { "label": "2 L flasks", "nums": { "numberNeeded": 6 }, "picks": { "vesselType": "flasks", "vesselSize": "2l", "preferredColumn": "auto" } },
+                { "label": "6 L flasks", "nums": { "numberNeeded": 3 }, "picks": { "vesselType": "flasks", "vesselSize": "6l", "preferredColumn": "auto" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -1317,7 +1433,10 @@
             { "label": "Cat. No. (120V)", "value": ["OS-7100: AAH3D1465U", "OS-7200: AAH3D1565U"] },
             {
               "label": "Carboy max rpm: OS-7100, 20 L x 2",
-              "value": ["0 L water: 300 rpm", "10 L water: 280 rpm", "20 L water: 180 rpm", "30 L water: 160 rpm", "40-50 L water: 160 rpm (no 50 L)"]
+              "value": ["0 L water: 300 rpm", "10 L water: 280 rpm", "20 L water: 180 rpm", "30 L water: 160 rpm", "40-50 L water: 160 rpm (no 50 L)"],
+              "groupTitle": "Carboy Shaking - Controllable rpm by Water Weight",
+              "groupIntro": "With the optional heavy-duty holder, the achievable rpm depends on the water weight loaded:",
+              "groupNote": "Values are approximate maximum rpm in rpm. Select the 20 L or 50 L holder sponge depending on the shaking volume."
             },
             {
               "label": "Carboy max rpm: OS-7100, 50 L x 1",
@@ -1369,10 +1488,10 @@
               "description": "This section shows the achievable rpm for carboy shaking based on model, holder sponge and water weight, using the heavy-duty holder rpm table.",
               "columns": [0, 10, 20, 30, 50],
               "rows": [
-                { "model": "os-7100", "holder": "20x2", "rpm": [300, 280, 180, 160, 160], "maxLitres": 40, "vessels": 2 },
-                { "model": "os-7100", "holder": "50x1", "rpm": [300, 190, 150, 130, 130], "maxLitres": 50, "vessels": 1 },
-                { "model": "os-7200", "holder": "20x2", "rpm": [210, 180, 160, 150, 150], "maxLitres": 40, "vessels": 2 },
-                { "model": "os-7200", "holder": "50x1", "rpm": [210, 140, 120, 110, 100], "maxLitres": 50, "vessels": 1 }
+                { "model": "os-7100", "holder": "20x2", "rpm": [300, 280, 180, 160, 160], "maxLitres": 40, "vessels": 2, "limits": { "vessels": 2 } },
+                { "model": "os-7100", "holder": "50x1", "rpm": [300, 190, 150, 130, 130], "maxLitres": 50, "vessels": 1, "limits": { "vessels": 1 } },
+                { "model": "os-7200", "holder": "20x2", "rpm": [210, 180, 160, 150, 150], "maxLitres": 40, "vessels": 2, "limits": { "vessels": 2 } },
+                { "model": "os-7200", "holder": "50x1", "rpm": [210, 140, 120, 110, 100], "maxLitres": 50, "vessels": 1, "limits": { "vessels": 1 } }
               ],
               "holderLabels": { "20x2": "20 L two-hole sponge", "50x1": "50 L single-hole sponge" },
               "notes": {
@@ -1391,18 +1510,21 @@
                 },
                 {
                   "key": "holder",
-                  "label": "Holder sponge",
+                  "label": "Holder sponge (20 L x 2 or 50 L x 1)",
                   "default": "50x1",
                   "options": [{ "val": "20x2", "label": "20 L x 2" }, { "val": "50x1", "label": "50 L x 1" }]
                 }
               ],
-              "fields": [{ "key": "waterLitres", "label": "Water weight (L)", "default": 20, "min": 0, "max": 60 }],
+              "fields": [
+                { "key": "waterLitres", "label": "Water weight (L)", "default": 20, "min": 0, "max": 60 },
+                { "key": "vesselCount", "label": "Vessel count", "default": 1, "min": 1 }
+              ],
               "presetsLabel": "Try an example load",
               "presets": [
-                { "label": "OS-7100, 50 L x 1, 20 L water", "nums": { "waterLitres": 20 }, "picks": { "model": "os-7100", "holder": "50x1" } },
-                { "label": "OS-7100, 20 L x 2, 10 L water", "nums": { "waterLitres": 10 }, "picks": { "model": "os-7100", "holder": "20x2" } },
-                { "label": "OS-7200, 50 L x 1, 50 L water", "nums": { "waterLitres": 50 }, "picks": { "model": "os-7200", "holder": "50x1" } },
-                { "label": "OS-7200, 20 L x 2, 0 L (empty)", "nums": { "waterLitres": 0 }, "picks": { "model": "os-7200", "holder": "20x2" } }
+                { "label": "OS-7100, 50 L x 1, 20 L water", "nums": { "waterLitres": 20, "vesselCount": 1 }, "picks": { "model": "os-7100", "holder": "50x1" } },
+                { "label": "OS-7100, 20 L x 2, 10 L water", "nums": { "waterLitres": 10, "vesselCount": 2 }, "picks": { "model": "os-7100", "holder": "20x2" } },
+                { "label": "OS-7200, 50 L x 1, 50 L water", "nums": { "waterLitres": 50, "vesselCount": 1 }, "picks": { "model": "os-7200", "holder": "50x1" } },
+                { "label": "OS-7200, 20 L x 2, 0 L (empty)", "nums": { "waterLitres": 0, "vesselCount": 2 }, "picks": { "model": "os-7200", "holder": "20x2" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -1412,7 +1534,16 @@
               "emptyText": "Choose the model and holder, enter the water weight, then check.",
               "ctaNote": "Share your carboy sizes and fill volumes and Inkarp will confirm the holder and speed.",
               "submitLabel": "Validate your carboy speed with an Inkarp specialist",
-              "disclaimer": "Values are the approximate maximum rpm published for the heavy-duty holder (Cat. No. AAA3D501). Select the 20 L or 50 L holder sponge by shaking volume."
+              "disclaimer": "Values are the approximate maximum rpm published for the heavy-duty holder (Cat. No. AAA3D501). Select the 20 L or 50 L holder sponge by shaking volume.",
+              "checks": [
+                {
+                  "field": "vesselCount",
+                  "limitFrom": "vessels",
+                  "label": "Vessel count",
+                  "okText": "{value} of {limit} holder positions used",
+                  "overText": "{value} carboys - this holder takes {limit}"
+                }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -1427,31 +1558,76 @@
                   "val": "50ml",
                   "label": "50 mL flasks",
                   "counts": { "os7000": 88 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Very high throughput for small flasks" }]
+                  "cards": [
+                    { "label": "Holder", "value": "Stainless-steel flask clamps" },
+                    { "label": "Model", "value": "OS-7100 or OS-7200" },
+                    { "label": "Note", "value": "Very high throughput for small flasks" }
+                  ]
                 },
                 {
                   "val": "250ml",
                   "label": "250 mL flasks",
                   "counts": { "os7000": 39 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Balance the platform for even shaking" }]
+                  "cards": [
+                    { "label": "Holder", "value": "Stainless-steel flask clamps" },
+                    { "label": "Model", "value": "OS-7100 or OS-7200" },
+                    { "label": "Note", "value": "Balance the platform for even shaking" }
+                  ]
                 },
                 {
                   "val": "1l",
                   "label": "1 L flasks",
                   "counts": { "os7000": 18 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Large platform suits multiple 1 L flasks" }]
+                  "cards": [
+                    { "label": "Holder", "value": "Stainless-steel flask clamps" },
+                    { "label": "Model", "value": "OS-7100 or OS-7200" },
+                    { "label": "Note", "value": "Large platform suits multiple 1 L flasks" }
+                  ]
                 },
                 {
                   "val": "2l",
                   "label": "2 L flasks",
                   "counts": { "os7000": 11 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Highest large-flask capacity in the OS range" }]
+                  "cards": [
+                    { "label": "Holder", "value": "Stainless-steel flask clamps" },
+                    { "label": "Model", "value": "OS-7100 or OS-7200" },
+                    { "label": "Note", "value": "Highest large-flask capacity in the OS range" }
+                  ]
                 },
                 {
                   "val": "6l",
                   "label": "6 L flasks",
                   "counts": { "os7000": 5 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Highest large-flask capacity in the OS range" }]
+                  "cards": [
+                    { "label": "Holder", "value": "Stainless-steel flask clamps" },
+                    { "label": "Model", "value": "OS-7100 or OS-7200" },
+                    { "label": "Note", "value": "Highest large-flask capacity in the OS range" }
+                  ]
+                },
+                {
+                  "val": "plates",
+                  "label": "microplates (single holders)",
+                  "counts": { "os7000": 25 },
+                  "unit": "holders",
+                  "cards": [
+                    { "label": "Holder", "value": "Microplate holders" },
+                    { "label": "Model", "value": "OS-7100 or OS-7200" },
+                    { "label": "Note", "value": "Up to 25 single holders on OS-7000 platform" }
+                  ]
+                },
+                {
+                  "val": "funnels",
+                  "label": "Separatory funnels",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Funnel clamps take separatory funnels from 250 mL to 2 L - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Holder", "value": "Funnel clamps" }, { "label": "Model", "value": "OS-7100 or OS-7200" }]
+                },
+                {
+                  "val": "tubes",
+                  "label": "Test tubes",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Test tube racks take tubes from 8 mm to 50 mm diameter - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Holder", "value": "Test tube racks" }, { "label": "Model", "value": "OS-7100 or OS-7200" }]
                 }
               ],
               "unit": "clamps",
@@ -1459,26 +1635,46 @@
               "assumptionNote": "Published stainless-steel clamp maximums on the OS-7000 universal platform (the same on the OS-7100 and OS-7200): 88 x 50 mL, 39 x 250 mL, 18 x 1 L, 11 x 2 L, 5 x 6 L.",
               "choices": [
                 {
+                  "key": "vesselType",
+                  "label": "Vessel type",
+                  "default": "flasks",
+                  "options": [
+                    { "val": "flasks", "label": "Flasks" },
+                    { "val": "plates", "label": "Microplates" },
+                    { "val": "funnels", "label": "Separatory funnels" },
+                    { "val": "tubes", "label": "Test tubes" }
+                  ]
+                },
+                {
                   "key": "vesselSize",
                   "label": "Vessel size",
                   "default": "50ml",
                   "options": [
-                    { "val": "50ml", "label": "50 mL flasks" },
-                    { "val": "250ml", "label": "250 mL flasks" },
-                    { "val": "1l", "label": "1 L flasks" },
-                    { "val": "2l", "label": "2 L flasks" },
-                    { "val": "6l", "label": "6 L flasks" }
+                    { "val": "50ml", "label": "50 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "250ml", "label": "250 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "1l", "label": "1 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "2l", "label": "2 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "6l", "label": "6 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "plates", "label": "microplates (single holders)", "when": { "vesselType": "plates" } },
+                    { "val": "funnels", "label": "Separatory funnels", "when": { "vesselType": "funnels" } },
+                    { "val": "tubes", "label": "Test tubes", "when": { "vesselType": "tubes" } }
                   ]
+                },
+                {
+                  "key": "amplitude",
+                  "label": "Amplitude preference",
+                  "default": "any",
+                  "options": [{ "val": "any", "label": "No preference" }, { "val": "25.4", "label": "25.4 mm (OS-7100)" }, { "val": "50.8", "label": "50.8 mm (OS-7200)" }]
                 }
               ],
               "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "50 mL flasks", "nums": { "numberNeeded": 88 }, "picks": { "vesselSize": "50ml" } },
-                { "label": "250 mL flasks", "nums": { "numberNeeded": 39 }, "picks": { "vesselSize": "250ml" } },
-                { "label": "1 L flasks", "nums": { "numberNeeded": 18 }, "picks": { "vesselSize": "1l" } },
-                { "label": "2 L flasks", "nums": { "numberNeeded": 11 }, "picks": { "vesselSize": "2l" } },
-                { "label": "6 L flasks", "nums": { "numberNeeded": 5 }, "picks": { "vesselSize": "6l" } }
+                { "label": "50 mL flasks", "nums": { "numberNeeded": 88 }, "picks": { "vesselType": "flasks", "vesselSize": "50ml", "amplitude": "any" } },
+                { "label": "250 mL flasks", "nums": { "numberNeeded": 39 }, "picks": { "vesselType": "flasks", "vesselSize": "250ml", "amplitude": "any" } },
+                { "label": "1 L flasks", "nums": { "numberNeeded": 18 }, "picks": { "vesselType": "flasks", "vesselSize": "1l", "amplitude": "any" } },
+                { "label": "2 L flasks", "nums": { "numberNeeded": 11 }, "picks": { "vesselType": "flasks", "vesselSize": "2l", "amplitude": "any" } },
+                { "label": "6 L flasks", "nums": { "numberNeeded": 5 }, "picks": { "vesselType": "flasks", "vesselSize": "6l", "amplitude": "any" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -1489,7 +1685,8 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "choiceCards": [{ "key": "amplitude", "label": "Model", "values": { "any": "OS-7100 or OS-7200", "25.4": "OS-7100", "50.8": "OS-7200" } }]
             }
           ],
           "suitability": {
@@ -1861,8 +2058,7 @@
                 "title": "Technical Specifications",
                 "body": [
                   "The technical specifications of the OS-7000 Series include orbital motion, up to 500 rpm, a large 755 x 520 mm platform and loads up to 35 kg.",
-                  "Maximum rpm is measured under fixed-weight conditions with a steel plate at default amplitude; actual performance may vary with liquid samples. Speed accuracy is ±1 rpm below 100 rpm and ±1% above 100 rpm. A universal platform (sold separately) is required to mount clamps, racks and holders.",
-                  "Values are approximate maximum rpm in rpm. Select the 20 L or 50 L holder sponge depending on the shaking volume."
+                  "Maximum rpm is measured under fixed-weight conditions with a steel plate at default amplitude; actual performance may vary with liquid samples. Speed accuracy is ±1 rpm below 100 rpm and ±1% above 100 rpm. A universal platform (sold separately) is required to mount clamps, racks and holders."
                 ]
               },
               {
@@ -2032,7 +2228,8 @@
                     { "label": "Amplitude", "value": "19 or 25 mm (SKC-7075/7100)" },
                     { "label": "Motion", "value": "Orbital, constant" },
                     { "label": "Note", "value": "Low throw protects fragile cells" }
-                  ]
+                  ],
+                  "matches": { "intensity": ["gentle"], "model": ["skc-7075", "skc-7100"] }
                 },
                 {
                   "val": "standard-microbial-culture",
@@ -2042,7 +2239,8 @@
                     { "label": "Amplitude", "value": "25 mm (SKC-7100)" },
                     { "label": "Motion", "value": "Orbital" },
                     { "label": "Note", "value": "Good aeration for most cultures" }
-                  ]
+                  ],
+                  "matches": { "intensity": ["standard"], "model": ["skc-7100"] }
                 },
                 {
                   "val": "vigorous-mixing-large-flasks",
@@ -2052,19 +2250,44 @@
                     { "label": "Amplitude", "value": "50 mm (SKC-7200)" },
                     { "label": "Motion", "value": "Orbital" },
                     { "label": "Note", "value": "Use weight increaser above 350 rpm" }
-                  ]
+                  ],
+                  "matches": { "intensity": ["vigorous"], "model": ["skc-7200"] }
                 }
               ],
               "choices": [
                 {
                   "key": "option",
-                  "label": "Choose your case",
+                  "label": "Sample type",
                   "default": "gentle-cell-culture",
                   "options": [
                     { "val": "gentle-cell-culture", "label": "Gentle cell culture" },
                     { "val": "standard-microbial-culture", "label": "Standard microbial culture" },
                     { "val": "vigorous-mixing-large-flasks", "label": "Vigorous mixing / large flasks" }
                   ]
+                },
+                {
+                  "key": "vesselSize",
+                  "label": "Vessel size",
+                  "default": "250ml",
+                  "options": [
+                    { "val": "50ml", "label": "50 mL flasks" },
+                    { "val": "250ml", "label": "250 mL flasks" },
+                    { "val": "1l", "label": "1 L flasks" },
+                    { "val": "2l", "label": "2 L flasks" },
+                    { "val": "6l", "label": "6 L flasks" }
+                  ]
+                },
+                {
+                  "key": "intensity",
+                  "label": "Mixing intensity",
+                  "default": "gentle",
+                  "options": [{ "val": "gentle", "label": "Gentle" }, { "val": "standard", "label": "Standard" }, { "val": "vigorous", "label": "Vigorous" }]
+                },
+                {
+                  "key": "model",
+                  "label": "Model",
+                  "default": "skc-7075",
+                  "options": [{ "val": "skc-7075", "label": "SKC-7075" }, { "val": "skc-7100", "label": "SKC-7100" }, { "val": "skc-7200", "label": "SKC-7200" }]
                 }
               ],
               "fields": [],
@@ -2077,7 +2300,24 @@
               "ctaNote": "Share your samples and vessels and Inkarp will confirm the settings for your run.",
               "submitLabel": "Validate your speed and amplitude with an Inkarp specialist",
               "disclaimer": "Suggested settings are starting points from JeioTech / Inkarp guidance; confirm them for your samples.",
-              "surface": "alt"
+              "surface": "alt",
+              "choiceCards": [
+                {
+                  "key": "vesselSize",
+                  "label": "Flask capacity",
+                  "values": {
+                    "50ml": "Up to 108 clamps (small platform) or 126 (large platform)",
+                    "250ml": "Up to 42 clamps (small platform) or 51 (large platform)",
+                    "1l": "Up to 18 clamps (small platform) or 20 (large platform)",
+                    "2l": "Up to 12 clamps (small platform) or 13 (large platform)",
+                    "6l": "Up to 6 clamps (small platform) or 7 (large platform)"
+                  }
+                }
+              ],
+              "matchChecks": [
+                { "key": "intensity", "label": "Intensity check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "model", "label": "Model check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -2117,6 +2357,28 @@
                   "label": "6 L flasks",
                   "counts": { "small": 6, "large": 7 },
                   "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "High large-flask capacity" }]
+                },
+                {
+                  "val": "plates",
+                  "label": "microplates (single holders)",
+                  "counts": { "large": 28 },
+                  "unit": "holders",
+                  "unsupportedText": "Count not published",
+                  "cards": [{ "label": "Holder", "value": "Microplate holders" }, { "label": "Note", "value": "Up to 28 single on the large platform" }]
+                },
+                {
+                  "val": "funnels",
+                  "label": "Separatory funnels",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Funnel clamps take separatory funnels 250 mL to 2 L - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Holder", "value": "Funnel clamps" }]
+                },
+                {
+                  "val": "tubes",
+                  "label": "Test tubes",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Test tube racks take tubes 8 mm to 50 mm diameter - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Holder", "value": "Test tube racks" }]
                 }
               ],
               "unit": "clamps",
@@ -2124,20 +2386,34 @@
               "assumptionNote": "Published stainless-steel clamp maximums on the 755 x 520 mm (small) and 885 x 520 mm (large) universal platforms.",
               "choices": [
                 {
+                  "key": "vesselType",
+                  "label": "Vessel type",
+                  "default": "flasks",
+                  "options": [
+                    { "val": "flasks", "label": "Flasks" },
+                    { "val": "plates", "label": "Microplates" },
+                    { "val": "funnels", "label": "Separatory funnels" },
+                    { "val": "tubes", "label": "Test tubes" }
+                  ]
+                },
+                {
                   "key": "vesselSize",
                   "label": "Vessel size",
                   "default": "50ml",
                   "options": [
-                    { "val": "50ml", "label": "50 mL flasks" },
-                    { "val": "250ml", "label": "250 mL flasks" },
-                    { "val": "1l", "label": "1 L flasks" },
-                    { "val": "2l", "label": "2 L flasks" },
-                    { "val": "6l", "label": "6 L flasks" }
+                    { "val": "50ml", "label": "50 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "250ml", "label": "250 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "1l", "label": "1 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "2l", "label": "2 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "6l", "label": "6 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "plates", "label": "microplates (single holders)", "when": { "vesselType": "plates" } },
+                    { "val": "funnels", "label": "Separatory funnels", "when": { "vesselType": "funnels" } },
+                    { "val": "tubes", "label": "Test tubes", "when": { "vesselType": "tubes" } }
                   ]
                 },
                 {
                   "key": "preferredColumn",
-                  "label": "Preferred model (optional)",
+                  "label": "Platform size",
                   "default": "auto",
                   "options": [{ "val": "auto", "label": "Let the tool recommend" }, { "val": "small", "label": "Small platform" }, { "val": "large", "label": "Large platform" }]
                 }
@@ -2145,11 +2421,11 @@
               "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "50 mL flasks", "nums": { "numberNeeded": 126 }, "picks": { "vesselSize": "50ml", "preferredColumn": "auto" } },
-                { "label": "250 mL flasks", "nums": { "numberNeeded": 51 }, "picks": { "vesselSize": "250ml", "preferredColumn": "auto" } },
-                { "label": "1 L flasks", "nums": { "numberNeeded": 20 }, "picks": { "vesselSize": "1l", "preferredColumn": "auto" } },
-                { "label": "2 L flasks", "nums": { "numberNeeded": 13 }, "picks": { "vesselSize": "2l", "preferredColumn": "auto" } },
-                { "label": "6 L flasks", "nums": { "numberNeeded": 7 }, "picks": { "vesselSize": "6l", "preferredColumn": "auto" } }
+                { "label": "50 mL flasks", "nums": { "numberNeeded": 126 }, "picks": { "vesselType": "flasks", "vesselSize": "50ml", "preferredColumn": "auto" } },
+                { "label": "250 mL flasks", "nums": { "numberNeeded": 51 }, "picks": { "vesselType": "flasks", "vesselSize": "250ml", "preferredColumn": "auto" } },
+                { "label": "1 L flasks", "nums": { "numberNeeded": 20 }, "picks": { "vesselType": "flasks", "vesselSize": "1l", "preferredColumn": "auto" } },
+                { "label": "2 L flasks", "nums": { "numberNeeded": 13 }, "picks": { "vesselType": "flasks", "vesselSize": "2l", "preferredColumn": "auto" } },
+                { "label": "6 L flasks", "nums": { "numberNeeded": 7 }, "picks": { "vesselType": "flasks", "vesselSize": "6l", "preferredColumn": "auto" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -2700,7 +2976,8 @@
                     { "label": "Suggested speed", "value": "50 to 100 rpm" },
                     { "label": "Accessory", "value": "Tray + mat" },
                     { "label": "Note", "value": "Low speed protects samples" }
-                  ]
+                  ],
+                  "matches": { "sensitivity": ["sensitive"], "accessory": ["tray-mat"] }
                 },
                 {
                   "val": "well-plates-dishes",
@@ -2709,7 +2986,8 @@
                     { "label": "Suggested speed", "value": "100 to 200 rpm" },
                     { "label": "Accessory", "value": "Microplate holders" },
                     { "label": "Note", "value": "Up to 6 plates on the tray" }
-                  ]
+                  ],
+                  "matches": { "sensitivity": ["not-sensitive"], "accessory": ["holders"] }
                 },
                 {
                   "val": "small-flasks-up-to-1-l",
@@ -2718,22 +2996,39 @@
                     { "label": "Suggested speed", "value": "150 to 300 rpm" },
                     { "label": "Accessory", "value": "Universal platform + clamps" },
                     { "label": "Note", "value": "Keep total load within 5.2 kg" }
-                  ]
+                  ],
+                  "matches": { "sensitivity": ["not-sensitive"], "accessory": ["clamps"] }
                 }
               ],
               "choices": [
                 {
                   "key": "option",
-                  "label": "Choose your case",
+                  "label": "Vessel type",
                   "default": "membranes-gels-sensitive",
                   "options": [
                     { "val": "membranes-gels-sensitive", "label": "Membranes / gels (sensitive)" },
                     { "val": "well-plates-dishes", "label": "Well plates / dishes" },
                     { "val": "small-flasks-up-to-1-l", "label": "Small flasks (up to 1 L)" }
                   ]
+                },
+                {
+                  "key": "sensitivity",
+                  "label": "Sample sensitivity",
+                  "default": "sensitive",
+                  "options": [{ "val": "sensitive", "label": "Sensitive" }, { "val": "not-sensitive", "label": "Not sensitive" }]
+                },
+                {
+                  "key": "accessory",
+                  "label": "Accessory",
+                  "default": "tray-mat",
+                  "options": [
+                    { "val": "tray-mat", "label": "Tray + mat" },
+                    { "val": "holders", "label": "Microplate holders" },
+                    { "val": "clamps", "label": "Universal platform + clamps" }
+                  ]
                 }
               ],
-              "fields": [],
+              "fields": [{ "key": "loadKg", "label": "Load (kg)", "default": 2, "min": 0 }],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
               "requiresRun": true,
@@ -2743,7 +3038,20 @@
               "ctaNote": "Share your samples and vessels and Inkarp will confirm the settings for your run.",
               "submitLabel": "Validate your speed with an Inkarp specialist",
               "disclaimer": "Suggested settings are starting points from JeioTech / Inkarp guidance; confirm them for your samples.",
-              "surface": "alt"
+              "surface": "alt",
+              "checks": [
+                {
+                  "field": "loadKg",
+                  "limit": 5.2,
+                  "label": "Load check",
+                  "okText": "{value} kg is within the {limit} kg maximum load",
+                  "overText": "{value} kg exceeds the {limit} kg maximum load"
+                }
+              ],
+              "matchChecks": [
+                { "key": "sensitivity", "label": "Sensitivity check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "accessory", "label": "Accessory check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -2758,32 +3066,53 @@
                   "val": "50ml",
                   "label": "50 mL flasks",
                   "counts": { "cms": 16 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Highest small-flask capacity" }]
+                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Highest small-flask capacity" }],
+                  "matches": { "accessory": ["clamps"] }
                 },
                 {
                   "val": "250ml",
                   "label": "250 mL flasks",
                   "counts": { "cms": 9 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Balance the platform" }]
+                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Balance the platform" }],
+                  "matches": { "accessory": ["clamps"] }
                 },
                 {
                   "val": "500ml",
                   "label": "500 mL flasks",
                   "counts": { "cms": 5 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Keep within 5.2 kg load" }]
+                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Keep within 5.2 kg load" }],
+                  "matches": { "accessory": ["clamps"] }
                 },
                 {
                   "val": "1l",
                   "label": "1 L flasks",
                   "counts": { "cms": 4 },
-                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Keep within 5.2 kg load" }]
+                  "cards": [{ "label": "Holder", "value": "Stainless-steel flask clamps" }, { "label": "Note", "value": "Keep within 5.2 kg load" }],
+                  "matches": { "accessory": ["clamps"] }
                 },
                 {
                   "val": "plates",
                   "label": "well plates",
                   "counts": { "cms": 6 },
                   "cards": [{ "label": "Holder", "value": "Microplate holders / tray" }, { "label": "Note", "value": "Removable tray for transport" }],
-                  "unit": "plates"
+                  "unit": "plates",
+                  "matches": { "accessory": ["holders"] }
+                },
+                {
+                  "val": "funnels",
+                  "label": "Separatory funnels",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Funnel clamps take separatory funnels 250 mL to 1 L - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Holder", "value": "Funnel clamps" }],
+                  "matches": { "accessory": ["funnel-clamps"] }
+                },
+                {
+                  "val": "tubes",
+                  "label": "Test tubes",
+                  "unsupportedText": "Count not published",
+                  "fitText": "Test tube racks take tubes 8 mm to 50 mm diameter - Inkarp confirms the count for your layout",
+                  "cards": [{ "label": "Holder", "value": "Test tube racks" }],
+                  "matches": { "accessory": ["tube-racks"] }
                 }
               ],
               "unit": "clamps",
@@ -2791,26 +3120,50 @@
               "assumptionNote": "Published capacities on the CMS-350 (maximum load 5.2 kg): 16 x 50 mL, 9 x 250 mL, 5 x 500 mL, 4 x 1 L flasks, or 6 well plates.",
               "choices": [
                 {
+                  "key": "vesselType",
+                  "label": "Vessel type",
+                  "default": "flasks",
+                  "options": [
+                    { "val": "flasks", "label": "Flasks" },
+                    { "val": "plates", "label": "Well plates" },
+                    { "val": "funnels", "label": "Separatory funnels" },
+                    { "val": "tubes", "label": "Test tubes" }
+                  ]
+                },
+                {
                   "key": "vesselSize",
                   "label": "Vessel size",
                   "default": "50ml",
                   "options": [
-                    { "val": "50ml", "label": "50 mL flasks" },
-                    { "val": "250ml", "label": "250 mL flasks" },
-                    { "val": "500ml", "label": "500 mL flasks" },
-                    { "val": "1l", "label": "1 L flasks" },
-                    { "val": "plates", "label": "well plates" }
+                    { "val": "50ml", "label": "50 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "250ml", "label": "250 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "500ml", "label": "500 mL flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "1l", "label": "1 L flasks", "when": { "vesselType": "flasks" } },
+                    { "val": "plates", "label": "well plates", "when": { "vesselType": "plates" } },
+                    { "val": "funnels", "label": "Separatory funnels", "when": { "vesselType": "funnels" } },
+                    { "val": "tubes", "label": "Test tubes", "when": { "vesselType": "tubes" } }
+                  ]
+                },
+                {
+                  "key": "accessory",
+                  "label": "Accessory",
+                  "default": "clamps",
+                  "options": [
+                    { "val": "clamps", "label": "Stainless-steel flask clamps" },
+                    { "val": "holders", "label": "Microplate holders / tray" },
+                    { "val": "funnel-clamps", "label": "Funnel clamps" },
+                    { "val": "tube-racks", "label": "Test tube racks" }
                   ]
                 }
               ],
               "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "50 mL flasks", "nums": { "numberNeeded": 16 }, "picks": { "vesselSize": "50ml" } },
-                { "label": "250 mL flasks", "nums": { "numberNeeded": 9 }, "picks": { "vesselSize": "250ml" } },
-                { "label": "500 mL flasks", "nums": { "numberNeeded": 5 }, "picks": { "vesselSize": "500ml" } },
-                { "label": "1 L flasks", "nums": { "numberNeeded": 4 }, "picks": { "vesselSize": "1l" } },
-                { "label": "well plates", "nums": { "numberNeeded": 6 }, "picks": { "vesselSize": "plates" } }
+                { "label": "50 mL flasks", "nums": { "numberNeeded": 16 }, "picks": { "vesselType": "flasks", "vesselSize": "50ml", "accessory": "clamps" } },
+                { "label": "250 mL flasks", "nums": { "numberNeeded": 9 }, "picks": { "vesselType": "flasks", "vesselSize": "250ml", "accessory": "clamps" } },
+                { "label": "500 mL flasks", "nums": { "numberNeeded": 5 }, "picks": { "vesselType": "flasks", "vesselSize": "500ml", "accessory": "clamps" } },
+                { "label": "1 L flasks", "nums": { "numberNeeded": 4 }, "picks": { "vesselType": "flasks", "vesselSize": "1l", "accessory": "clamps" } },
+                { "label": "well plates", "nums": { "numberNeeded": 6 }, "picks": { "vesselType": "plates", "vesselSize": "plates", "accessory": "holders" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -2821,7 +3174,15 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "matchChecks": [
+                {
+                  "key": "accessory",
+                  "label": "Accessory check",
+                  "matchText": "{picked}: suits these vessels",
+                  "otherText": "{picked}: use the {expected} for these vessels"
+                }
+              ]
             }
           ],
           "suitability": {
@@ -3278,7 +3639,7 @@
             { "label": "Electrical", "value": "AC 100 to 240 V, 50/60 Hz" },
             { "label": "Cat. No. (KR plug)", "value": "AAH3C1115K" },
             { "label": "Cat. No. (US plug)", "value": "AAH3C1115U" },
-            { "label": "Tube-rack capacity: 1.5 mL micro-tube rack", "value": "80 tubes (5 x 16)" },
+            { "label": "Tube-rack capacity: 1.5 mL micro-tube rack", "value": "80 tubes (5 x 16)", "groupTitle": "Tube-Rack Capacity" },
             { "label": "Tube-rack capacity: 15 mL conical tube rack", "value": "30 tubes (3 x 10)" },
             { "label": "Tube-rack capacity: 50 mL conical tube rack", "value": "12 tubes (2 x 6)" }
           ],
@@ -3325,7 +3686,8 @@
                     { "label": "Suggested speed", "value": "300 to 700 rpm" },
                     { "label": "Accessory", "value": "Four-plate tray" },
                     { "label": "Note", "value": "Smooth start avoids cross-well splashing" }
-                  ]
+                  ],
+                  "matches": { "volume": ["wells"], "intensity": ["std"], "accessory": ["tray"] }
                 },
                 {
                   "val": "1-5-ml-micro-tubes",
@@ -3334,7 +3696,8 @@
                     { "label": "Suggested speed", "value": "800 to 1,200 rpm" },
                     { "label": "Accessory", "value": "1.5 mL rack (80)" },
                     { "label": "Note", "value": "High speed for resuspension" }
-                  ]
+                  ],
+                  "matches": { "volume": ["1-5"], "intensity": ["high"], "accessory": ["rack-1-5"] }
                 },
                 {
                   "val": "15-50-ml-conical-tubes",
@@ -3343,18 +3706,41 @@
                     { "label": "Suggested speed", "value": "300 to 700 rpm" },
                     { "label": "Accessory", "value": "15 mL / 50 mL rack" },
                     { "label": "Note", "value": "Keep within 4 kg load" }
-                  ]
+                  ],
+                  "matches": { "volume": ["15-50"], "intensity": ["std"], "accessory": ["rack-15-50"] }
                 }
               ],
               "choices": [
                 {
                   "key": "option",
-                  "label": "Choose your case",
+                  "label": "Vessel type",
                   "default": "microplates-assays",
                   "options": [
                     { "val": "microplates-assays", "label": "Microplates (assays)" },
                     { "val": "1-5-ml-micro-tubes", "label": "1.5 mL micro-tubes" },
                     { "val": "15-50-ml-conical-tubes", "label": "15 / 50 mL conical tubes" }
+                  ]
+                },
+                {
+                  "key": "volume",
+                  "label": "Sample volume",
+                  "default": "wells",
+                  "options": [{ "val": "wells", "label": "Microplate wells" }, { "val": "1-5", "label": "1.5 mL" }, { "val": "15-50", "label": "15 or 50 mL" }]
+                },
+                {
+                  "key": "intensity",
+                  "label": "Mixing intensity",
+                  "default": "std",
+                  "options": [{ "val": "std", "label": "300 to 700 rpm" }, { "val": "high", "label": "800 to 1,200 rpm" }]
+                },
+                {
+                  "key": "accessory",
+                  "label": "Accessory",
+                  "default": "tray",
+                  "options": [
+                    { "val": "tray", "label": "Four-plate tray" },
+                    { "val": "rack-1-5", "label": "1.5 mL rack (80)" },
+                    { "val": "rack-15-50", "label": "15 mL / 50 mL rack" }
                   ]
                 }
               ],
@@ -3368,7 +3754,12 @@
               "ctaNote": "Share your samples and vessels and Inkarp will confirm the settings for your run.",
               "submitLabel": "Validate your speed with an Inkarp specialist",
               "disclaimer": "Suggested settings are starting points from JeioTech / Inkarp guidance; confirm them for your samples.",
-              "surface": "alt"
+              "surface": "alt",
+              "matchChecks": [
+                { "key": "volume", "label": "Volume check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "intensity", "label": "Intensity check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "accessory", "label": "Accessory check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -3384,28 +3775,32 @@
                   "label": "microplates",
                   "counts": { "cps": 4 },
                   "cards": [{ "label": "Accessory", "value": "Four-plate tray" }, { "label": "Note", "value": "Standard-footprint plates" }],
-                  "unit": "plates"
+                  "unit": "plates",
+                  "matches": { "accessory": ["tray"] }
                 },
                 {
                   "val": "tube-1-5",
                   "label": "1.5 mL micro-tubes",
                   "counts": { "cps": 80 },
                   "cards": [{ "label": "Accessory", "value": "1.5 mL micro-tube rack with cap (5 x 16)" }, { "label": "Note", "value": "Highest tube throughput" }],
-                  "unit": "tubes"
+                  "unit": "tubes",
+                  "matches": { "accessory": ["rack-1-5"] }
                 },
                 {
                   "val": "tube-15",
                   "label": "15 mL conical tubes",
                   "counts": { "cps": 30 },
                   "cards": [{ "label": "Accessory", "value": "15 mL conical tube rack (3 x 10)" }, { "label": "Note", "value": "Keep within 4 kg load" }],
-                  "unit": "tubes"
+                  "unit": "tubes",
+                  "matches": { "accessory": ["rack-15"] }
                 },
                 {
                   "val": "tube-50",
                   "label": "50 mL conical tubes",
                   "counts": { "cps": 12 },
                   "cards": [{ "label": "Accessory", "value": "50 mL conical tube rack (2 x 6)" }, { "label": "Note", "value": "Balance the tray" }],
-                  "unit": "tubes"
+                  "unit": "tubes",
+                  "matches": { "accessory": ["rack-50"] }
                 }
               ],
               "unit": "clamps",
@@ -3413,24 +3808,41 @@
               "assumptionNote": "Published CPS-350 capacities (maximum load 4 kg): 4 microplates, or 80 x 1.5 mL, 30 x 15 mL or 12 x 50 mL tubes in the racks.",
               "choices": [
                 {
+                  "key": "vesselType",
+                  "label": "Vessel type",
+                  "default": "plates",
+                  "options": [{ "val": "plates", "label": "Microplates" }, { "val": "tubes", "label": "Tubes" }]
+                },
+                {
                   "key": "vesselSize",
                   "label": "Vessel size",
                   "default": "plates",
                   "options": [
-                    { "val": "plates", "label": "microplates" },
-                    { "val": "tube-1-5", "label": "1.5 mL micro-tubes" },
-                    { "val": "tube-15", "label": "15 mL conical tubes" },
-                    { "val": "tube-50", "label": "50 mL conical tubes" }
+                    { "val": "plates", "label": "microplates", "when": { "vesselType": "plates" } },
+                    { "val": "tube-1-5", "label": "1.5 mL micro-tubes", "when": { "vesselType": "tubes" } },
+                    { "val": "tube-15", "label": "15 mL conical tubes", "when": { "vesselType": "tubes" } },
+                    { "val": "tube-50", "label": "50 mL conical tubes", "when": { "vesselType": "tubes" } }
+                  ]
+                },
+                {
+                  "key": "accessory",
+                  "label": "Accessory",
+                  "default": "tray",
+                  "options": [
+                    { "val": "tray", "label": "Four-plate tray" },
+                    { "val": "rack-1-5", "label": "1.5 mL micro-tube rack" },
+                    { "val": "rack-15", "label": "15 mL conical tube rack" },
+                    { "val": "rack-50", "label": "50 mL conical tube rack" }
                   ]
                 }
               ],
               "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "microplates", "nums": { "numberNeeded": 4 }, "picks": { "vesselSize": "plates" } },
-                { "label": "1.5 mL micro-tubes", "nums": { "numberNeeded": 80 }, "picks": { "vesselSize": "tube-1-5" } },
-                { "label": "15 mL conical tubes", "nums": { "numberNeeded": 30 }, "picks": { "vesselSize": "tube-15" } },
-                { "label": "50 mL conical tubes", "nums": { "numberNeeded": 12 }, "picks": { "vesselSize": "tube-50" } }
+                { "label": "microplates", "nums": { "numberNeeded": 4 }, "picks": { "vesselType": "plates", "vesselSize": "plates", "accessory": "tray" } },
+                { "label": "1.5 mL micro-tubes", "nums": { "numberNeeded": 80 }, "picks": { "vesselType": "tubes", "vesselSize": "tube-1-5", "accessory": "rack-1-5" } },
+                { "label": "15 mL conical tubes", "nums": { "numberNeeded": 30 }, "picks": { "vesselType": "tubes", "vesselSize": "tube-15", "accessory": "rack-15" } },
+                { "label": "50 mL conical tubes", "nums": { "numberNeeded": 12 }, "picks": { "vesselType": "tubes", "vesselSize": "tube-50", "accessory": "rack-50" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -3441,7 +3853,15 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "matchChecks": [
+                {
+                  "key": "accessory",
+                  "label": "Accessory check",
+                  "matchText": "{picked}: suits these vessels",
+                  "otherText": "{picked}: use the {expected} for these vessels"
+                }
+              ]
             }
           ],
           "suitability": {
@@ -3937,7 +4357,8 @@
                     { "label": "Suggested tilt", "value": "7 to 10 degrees" },
                     { "label": "Tray", "value": "Dimpled or rubber mat" },
                     { "label": "Note", "value": "Low speed and tilt for delicate work" }
-                  ]
+                  ],
+                  "matches": { "vessel": ["flat"], "intensity": ["low"], "tray": ["dimpled", "rubber"] }
                 },
                 {
                   "val": "standard-plate-dish-mixing",
@@ -3947,7 +4368,8 @@
                     { "label": "Suggested tilt", "value": "10 degrees" },
                     { "label": "Tray", "value": "Dimpled mat" },
                     { "label": "Note", "value": "Balanced rocking" }
-                  ]
+                  ],
+                  "matches": { "vessel": ["plates"], "intensity": ["balanced"], "tray": ["dimpled"] }
                 },
                 {
                   "val": "vigorous-tube-mixing",
@@ -3957,19 +4379,43 @@
                     { "label": "Suggested tilt", "value": "13 degrees" },
                     { "label": "Tray", "value": "Universal harness" },
                     { "label": "Note", "value": "Maximum motion within 5 kg load" }
-                  ]
+                  ],
+                  "matches": { "vessel": ["tubes"], "intensity": ["maximum"], "tray": ["harness"] }
                 }
               ],
               "choices": [
                 {
                   "key": "option",
-                  "label": "Choose your case",
+                  "label": "Sample type",
                   "default": "delicate-gels-membranes",
                   "options": [
                     { "val": "delicate-gels-membranes", "label": "Delicate gels / membranes" },
                     { "val": "standard-plate-dish-mixing", "label": "Standard plate / dish mixing" },
                     { "val": "vigorous-tube-mixing", "label": "Vigorous tube mixing" }
                   ]
+                },
+                {
+                  "key": "vessel",
+                  "label": "Vessel",
+                  "default": "flat",
+                  "options": [
+                    { "val": "plates", "label": "Well-plates and dishes" },
+                    { "val": "flat", "label": "Flat trays / gels" },
+                    { "val": "tubes", "label": "Tubes, beakers, vials" },
+                    { "val": "mixed", "label": "Mixed vessels" }
+                  ]
+                },
+                {
+                  "key": "intensity",
+                  "label": "Motion intensity",
+                  "default": "low",
+                  "options": [{ "val": "low", "label": "Low" }, { "val": "balanced", "label": "Balanced" }, { "val": "maximum", "label": "Maximum" }]
+                },
+                {
+                  "key": "tray",
+                  "label": "Tray",
+                  "default": "dimpled",
+                  "options": [{ "val": "dimpled", "label": "Dimpled mat" }, { "val": "rubber", "label": "Rubber mat" }, { "val": "harness", "label": "Universal harness" }]
                 }
               ],
               "fields": [],
@@ -3982,7 +4428,18 @@
               "ctaNote": "Share your samples and vessels and Inkarp will confirm the settings for your run.",
               "submitLabel": "Validate your speed and tilt with an Inkarp specialist",
               "disclaimer": "Suggested settings are starting points from JeioTech / Inkarp guidance; confirm them for your samples.",
-              "surface": "alt"
+              "surface": "alt",
+              "matchChecks": [
+                {
+                  "key": "vessel",
+                  "label": "Vessel check",
+                  "matchText": "{picked}: matches this setup",
+                  "otherText": "{picked}: the guide suggests {cases}",
+                  "noneText": "{picked}: choose by dominant vessel"
+                },
+                { "key": "intensity", "label": "Intensity check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "tray", "label": "Tray check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" }
+              ]
             },
             {
               "formula": "option-lookup",
@@ -4000,7 +4457,8 @@
                     { "label": "Recommended tray", "value": "Dimpled mat (standard)" },
                     { "label": "Grip", "value": "Silicone pad" },
                     { "label": "Note", "value": "Even support for flat vessels" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["flat"] }
                 },
                 {
                   "val": "flat",
@@ -4009,7 +4467,8 @@
                     { "label": "Recommended tray", "value": "Rubber mat" },
                     { "label": "Grip", "value": "Sticky pad" },
                     { "label": "Note", "value": "Holds flat items securely" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["flat"] }
                 },
                 {
                   "val": "tubes",
@@ -4018,7 +4477,8 @@
                     { "label": "Recommended tray", "value": "Universal harness" },
                     { "label": "Grip", "value": "Sticky pad + 6 rubber bands" },
                     { "label": "Note", "value": "Secures irregular or tall vessels" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["irregular"] }
                 },
                 {
                   "val": "mixed",
@@ -4027,7 +4487,8 @@
                     { "label": "Recommended tray", "value": "Choose by dominant vessel" },
                     { "label": "Grip", "value": "Dimpled / rubber / harness" },
                     { "label": "Note", "value": "Balance the tray evenly" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["flat", "irregular"] }
                 }
               ],
               "checks": [
@@ -4051,15 +4512,21 @@
                     { "val": "tubes", "label": "Tubes, beakers, vials" },
                     { "val": "mixed", "label": "Mixed vessels" }
                   ]
+                },
+                {
+                  "key": "vesselShape",
+                  "label": "Vessel shape",
+                  "default": "flat",
+                  "options": [{ "val": "flat", "label": "Flat" }, { "val": "irregular", "label": "Irregular or tall" }]
                 }
               ],
-              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }, { "key": "loadKg", "label": "Total load (kg)", "default": 2, "min": 0 }],
+              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }, { "key": "loadKg", "label": "Load (kg)", "default": 2, "min": 0 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "Well-plates and dishes", "nums": { "loadKg": 2 }, "picks": { "vessel": "plates" } },
-                { "label": "Flat trays / gels", "nums": { "loadKg": 2 }, "picks": { "vessel": "flat" } },
-                { "label": "Tubes, beakers, vials", "nums": { "loadKg": 2 }, "picks": { "vessel": "tubes" } },
-                { "label": "Mixed vessels", "nums": { "loadKg": 2 }, "picks": { "vessel": "mixed" } }
+                { "label": "Well-plates and dishes", "nums": { "loadKg": 2 }, "picks": { "vessel": "plates", "vesselShape": "flat" } },
+                { "label": "Flat trays / gels", "nums": { "loadKg": 2 }, "picks": { "vessel": "flat", "vesselShape": "flat" } },
+                { "label": "Tubes, beakers, vials", "nums": { "loadKg": 2 }, "picks": { "vessel": "tubes", "vesselShape": "irregular" } },
+                { "label": "Mixed vessels", "nums": { "loadKg": 2 }, "picks": { "vessel": "mixed", "vesselShape": "flat" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -4070,7 +4537,8 @@
               "ctaNote": "Share your vessels and Inkarp will confirm the tray and accessories.",
               "submitLabel": "Get a tray-matched recommendation from Inkarp",
               "disclaimer": "The CRS-350 carries up to 5 kg; balance the tray evenly and confirm the tray set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "matchChecks": [{ "key": "vesselShape", "label": "Shape check", "matchText": "{picked} vessels suit this tray", "otherText": "{picked} vessels: see {cases}" }]
             }
           ],
           "suitability": {
@@ -4586,7 +5054,8 @@
                     { "label": "Suggested tilt", "value": "3 to 8 degrees" },
                     { "label": "Tray", "value": "Dimpled or rubber mat" },
                     { "label": "Note", "value": "Low speed and tilt for delicate work" }
-                  ]
+                  ],
+                  "matches": { "vessel": ["flat"], "intensity": ["low"], "tray": ["dimpled", "rubber"] }
                 },
                 {
                   "val": "standard-plate-dish-mixing",
@@ -4596,7 +5065,8 @@
                     { "label": "Suggested tilt", "value": "10 degrees" },
                     { "label": "Tray", "value": "Dimpled mat" },
                     { "label": "Note", "value": "Balanced waving" }
-                  ]
+                  ],
+                  "matches": { "vessel": ["plates"], "intensity": ["balanced"], "tray": ["dimpled"] }
                 },
                 {
                   "val": "vigorous-tube-mixing",
@@ -4606,19 +5076,43 @@
                     { "label": "Suggested tilt", "value": "13 degrees" },
                     { "label": "Tray", "value": "Universal harness" },
                     { "label": "Note", "value": "Maximum motion within 5 kg load" }
-                  ]
+                  ],
+                  "matches": { "vessel": ["tubes"], "intensity": ["maximum"], "tray": ["harness"] }
                 }
               ],
               "choices": [
                 {
                   "key": "option",
-                  "label": "Choose your case",
+                  "label": "Sample type",
                   "default": "delicate-gels-membranes",
                   "options": [
                     { "val": "delicate-gels-membranes", "label": "Delicate gels / membranes" },
                     { "val": "standard-plate-dish-mixing", "label": "Standard plate / dish mixing" },
                     { "val": "vigorous-tube-mixing", "label": "Vigorous tube mixing" }
                   ]
+                },
+                {
+                  "key": "vessel",
+                  "label": "Vessel",
+                  "default": "flat",
+                  "options": [
+                    { "val": "plates", "label": "Well-plates and dishes" },
+                    { "val": "flat", "label": "Flat trays / gels" },
+                    { "val": "tubes", "label": "Tubes, beakers, vials" },
+                    { "val": "mixed", "label": "Mixed vessels" }
+                  ]
+                },
+                {
+                  "key": "intensity",
+                  "label": "Motion intensity",
+                  "default": "low",
+                  "options": [{ "val": "low", "label": "Low" }, { "val": "balanced", "label": "Balanced" }, { "val": "maximum", "label": "Maximum" }]
+                },
+                {
+                  "key": "tray",
+                  "label": "Tray",
+                  "default": "dimpled",
+                  "options": [{ "val": "dimpled", "label": "Dimpled mat" }, { "val": "rubber", "label": "Rubber mat" }, { "val": "harness", "label": "Universal harness" }]
                 }
               ],
               "fields": [],
@@ -4631,7 +5125,18 @@
               "ctaNote": "Share your samples and vessels and Inkarp will confirm the settings for your run.",
               "submitLabel": "Validate your speed and tilt with an Inkarp specialist",
               "disclaimer": "Suggested settings are starting points from JeioTech / Inkarp guidance; confirm them for your samples.",
-              "surface": "alt"
+              "surface": "alt",
+              "matchChecks": [
+                {
+                  "key": "vessel",
+                  "label": "Vessel check",
+                  "matchText": "{picked}: matches this setup",
+                  "otherText": "{picked}: the guide suggests {cases}",
+                  "noneText": "{picked}: choose by dominant vessel"
+                },
+                { "key": "intensity", "label": "Intensity check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" },
+                { "key": "tray", "label": "Tray check", "matchText": "{picked}: matches this setup", "otherText": "{picked}: the guide suggests {cases}" }
+              ]
             },
             {
               "formula": "option-lookup",
@@ -4649,7 +5154,8 @@
                     { "label": "Recommended tray", "value": "Dimpled mat (standard)" },
                     { "label": "Grip", "value": "Silicone pad" },
                     { "label": "Note", "value": "Even support for flat vessels" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["flat"] }
                 },
                 {
                   "val": "flat",
@@ -4658,7 +5164,8 @@
                     { "label": "Recommended tray", "value": "Rubber mat" },
                     { "label": "Grip", "value": "Sticky pad" },
                     { "label": "Note", "value": "Holds flat items securely" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["flat"] }
                 },
                 {
                   "val": "tubes",
@@ -4667,7 +5174,8 @@
                     { "label": "Recommended tray", "value": "Universal harness" },
                     { "label": "Grip", "value": "Sticky pad + 6 rubber bands" },
                     { "label": "Note", "value": "Secures irregular or tall vessels" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["irregular"] }
                 },
                 {
                   "val": "mixed",
@@ -4676,7 +5184,8 @@
                     { "label": "Recommended tray", "value": "Choose by dominant vessel" },
                     { "label": "Grip", "value": "Dimpled / rubber / harness" },
                     { "label": "Note", "value": "Balance the tray evenly" }
-                  ]
+                  ],
+                  "matches": { "vesselShape": ["flat", "irregular"] }
                 }
               ],
               "checks": [
@@ -4700,15 +5209,21 @@
                     { "val": "tubes", "label": "Tubes, beakers, vials" },
                     { "val": "mixed", "label": "Mixed vessels" }
                   ]
+                },
+                {
+                  "key": "vesselShape",
+                  "label": "Vessel shape",
+                  "default": "flat",
+                  "options": [{ "val": "flat", "label": "Flat" }, { "val": "irregular", "label": "Irregular or tall" }]
                 }
               ],
-              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }, { "key": "loadKg", "label": "Total load (kg)", "default": 2, "min": 0 }],
+              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }, { "key": "loadKg", "label": "Load (kg)", "default": 2, "min": 0 }],
               "presetsLabel": "Try an example case",
               "presets": [
-                { "label": "Well-plates and dishes", "nums": { "loadKg": 2 }, "picks": { "vessel": "plates" } },
-                { "label": "Flat trays / gels", "nums": { "loadKg": 2 }, "picks": { "vessel": "flat" } },
-                { "label": "Tubes, beakers, vials", "nums": { "loadKg": 2 }, "picks": { "vessel": "tubes" } },
-                { "label": "Mixed vessels", "nums": { "loadKg": 2 }, "picks": { "vessel": "mixed" } }
+                { "label": "Well-plates and dishes", "nums": { "loadKg": 2 }, "picks": { "vessel": "plates", "vesselShape": "flat" } },
+                { "label": "Flat trays / gels", "nums": { "loadKg": 2 }, "picks": { "vessel": "flat", "vesselShape": "flat" } },
+                { "label": "Tubes, beakers, vials", "nums": { "loadKg": 2 }, "picks": { "vessel": "tubes", "vesselShape": "irregular" } },
+                { "label": "Mixed vessels", "nums": { "loadKg": 2 }, "picks": { "vessel": "mixed", "vesselShape": "flat" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -4719,7 +5234,8 @@
               "ctaNote": "Share your vessels and Inkarp will confirm the tray and accessories.",
               "submitLabel": "Get a tray-matched recommendation from Inkarp",
               "disclaimer": "The CWS-350 carries up to 5 kg; balance the tray evenly and confirm the tray set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "matchChecks": [{ "key": "vesselShape", "label": "Shape check", "matchText": "{picked} vessels suit this tray", "otherText": "{picked} vessels: see {cases}" }]
             }
           ],
           "suitability": {
@@ -5191,14 +5707,19 @@
             { "label": "Electrical (120V)", "value": "3.4 A" },
             { "label": "Cat. No. (230V)", "value": "AAHJ4015K" },
             { "label": "Cat. No. (120V)", "value": "AAHJ4013U" },
-            { "label": "Max. speed: 96-well tube block", "value": "150 to 1500 rpm" },
+            { "label": "Max. speed: 96-well tube block", "value": "150 to 1500 rpm", "groupTitle": "Speed by Tube Block" },
             { "label": "Max. speed: 0.5 mL tube block", "value": "150 to 1000 rpm" },
             { "label": "Max. speed: 1.5 mL tube block", "value": "150 to 1000 rpm" },
             { "label": "Max. speed: 15 mL tube block", "value": "150 to 900 rpm" },
             { "label": "Max. speed: 12 mm tube block", "value": "150 to 850 rpm" },
             { "label": "Max. speed: 13 mm tube block", "value": "150 to 850 rpm" },
             { "label": "Max. speed: 50 mL tube block", "value": "150 to 800 rpm" },
-            { "label": "Capacity: 0.2 mL block (AAAJ4504)", "value": "96 tubes" },
+            {
+              "label": "Capacity: 0.2 mL block (AAAJ4504)",
+              "value": "96 tubes",
+              "groupTitle": "Tube-Block Capacity",
+              "groupNote": "One block is mounted at a time. Each block includes a block cover."
+            },
             { "label": "Capacity: 0.5 mL block (AAAJ4501)", "value": "48 tubes" },
             { "label": "Capacity: 1.5 / 2.0 mL block (AAAJ4502)", "value": "24 tubes" },
             { "label": "Capacity: 15 mL block (AAAJ4505)", "value": "15 tubes" },
@@ -5252,7 +5773,8 @@
                     { "label": "Best for", "value": "PCR plates, fast resuspension" },
                     { "label": "Temp", "value": "Ambient +5 to 100 C" },
                     { "label": "Note", "value": "Highest speed in the range" }
-                  ]
+                  ],
+                  "matches": { "tubeSize": ["96-well"] }
                 },
                 {
                   "val": "0-5ml",
@@ -5263,7 +5785,8 @@
                     { "label": "Best for", "value": "Microtube reactions and prep" },
                     { "label": "Temp", "value": "Ambient +5 to 100 C" },
                     { "label": "Note", "value": "Most common lab block" }
-                  ]
+                  ],
+                  "matches": { "tubeSize": ["0-5ml"] }
                 },
                 {
                   "val": "1-5ml",
@@ -5274,7 +5797,8 @@
                     { "label": "Best for", "value": "Microtube reactions and prep" },
                     { "label": "Temp", "value": "Ambient +5 to 100 C" },
                     { "label": "Note", "value": "Most common lab block" }
-                  ]
+                  ],
+                  "matches": { "tubeSize": ["1-5ml"] }
                 },
                 {
                   "val": "15ml",
@@ -5285,19 +5809,22 @@
                     { "label": "Best for", "value": "Larger-volume digestion" },
                     { "label": "Temp", "value": "Ambient +5 to 100 C" },
                     { "label": "Note", "value": "Lower max speed with larger tubes" }
-                  ]
+                  ],
+                  "matches": { "tubeSize": ["15ml"] }
                 },
                 {
                   "val": "12mm",
                   "label": "12 mm tube block",
                   "limits": { "speed": 850 },
-                  "cards": [{ "label": "Max. speed", "value": "850 rpm" }, { "label": "Temp", "value": "Ambient +5 to 100 C" }]
+                  "cards": [{ "label": "Max. speed", "value": "850 rpm" }, { "label": "Temp", "value": "Ambient +5 to 100 C" }],
+                  "matches": { "tubeSize": ["12mm"] }
                 },
                 {
                   "val": "13mm",
                   "label": "13 mm tube block",
                   "limits": { "speed": 850 },
-                  "cards": [{ "label": "Max. speed", "value": "850 rpm" }, { "label": "Temp", "value": "Ambient +5 to 100 C" }]
+                  "cards": [{ "label": "Max. speed", "value": "850 rpm" }, { "label": "Temp", "value": "Ambient +5 to 100 C" }],
+                  "matches": { "tubeSize": ["13mm"] }
                 },
                 {
                   "val": "50ml",
@@ -5308,7 +5835,8 @@
                     { "label": "Best for", "value": "Largest tubes" },
                     { "label": "Temp", "value": "Ambient +5 to 100 C" },
                     { "label": "Note", "value": "Lowest max speed (heaviest load)" }
-                  ]
+                  ],
+                  "matches": { "tubeSize": ["50ml"] }
                 }
               ],
               "checks": [
@@ -5330,6 +5858,20 @@
               "assumptionNote": "Maximum speeds are the published CBS-350 block limits: 96-well 1500 rpm, 0.5 / 1.5 mL 1000 rpm, 15 mL 900 rpm, 12 / 13 mm 850 rpm, 50 mL 800 rpm.",
               "choices": [
                 {
+                  "key": "tubeSize",
+                  "label": "Tube size",
+                  "default": "1-5ml",
+                  "options": [
+                    { "val": "96-well", "label": "0.2 mL PCR tubes" },
+                    { "val": "0-5ml", "label": "0.5 mL tubes" },
+                    { "val": "1-5ml", "label": "1.5 / 2.0 mL microtubes" },
+                    { "val": "15ml", "label": "15 mL conical tubes" },
+                    { "val": "12mm", "label": "12 mm tubes" },
+                    { "val": "13mm", "label": "13 mm tubes" },
+                    { "val": "50ml", "label": "50 mL conical tubes" }
+                  ]
+                },
+                {
                   "key": "block",
                   "label": "Block",
                   "default": "1-5ml",
@@ -5345,15 +5887,15 @@
                 }
               ],
               "fields": [
-                { "key": "speedNeeded", "label": "Speed needed (rpm)", "default": 800, "min": 0 },
-                { "key": "targetTemp", "label": "Target temperature (C)", "default": 37, "min": 0 }
+                { "key": "targetTemp", "label": "Target temperature (C)", "default": 37, "min": 0 },
+                { "key": "speedNeeded", "label": "Mixing intensity (rpm)", "default": 800, "min": 0 }
               ],
               "presetsLabel": "Try an example block",
               "presets": [
-                { "label": "96-well block", "nums": { "speedNeeded": 1500, "targetTemp": 37 }, "picks": { "block": "96-well" } },
-                { "label": "1.5 mL block", "nums": { "speedNeeded": 1000, "targetTemp": 37 }, "picks": { "block": "1-5ml" } },
-                { "label": "15 mL block", "nums": { "speedNeeded": 900, "targetTemp": 37 }, "picks": { "block": "15ml" } },
-                { "label": "50 mL block", "nums": { "speedNeeded": 800, "targetTemp": 37 }, "picks": { "block": "50ml" } }
+                { "label": "96-well block", "nums": { "speedNeeded": 1500, "targetTemp": 37 }, "picks": { "block": "96-well", "tubeSize": "96-well" } },
+                { "label": "1.5 mL block", "nums": { "speedNeeded": 1000, "targetTemp": 37 }, "picks": { "block": "1-5ml", "tubeSize": "1-5ml" } },
+                { "label": "15 mL block", "nums": { "speedNeeded": 900, "targetTemp": 37 }, "picks": { "block": "15ml", "tubeSize": "15ml" } },
+                { "label": "50 mL block", "nums": { "speedNeeded": 800, "targetTemp": 37 }, "picks": { "block": "50ml", "tubeSize": "50ml" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -5363,7 +5905,8 @@
               "emptyText": "Choose the block, enter your speed and temperature, then check.",
               "ctaNote": "Share your tubes, speed and temperature and Inkarp will confirm the block.",
               "submitLabel": "Validate your speed and block with an Inkarp specialist",
-              "disclaimer": "Speed limits are the published block maximums; one block is mounted at a time and each includes a block cover."
+              "disclaimer": "Speed limits are the published block maximums; one block is mounted at a time and each includes a block cover.",
+              "matchChecks": [{ "key": "tubeSize", "label": "Tube check", "matchText": "{picked} fit this block", "otherText": "{picked} need the {cases}" }]
             },
             {
               "formula": "vessel-capacity",
@@ -5380,8 +5923,8 @@
                   "counts": { "block": 96 },
                   "cards": [
                     { "label": "Block", "value": "0.2 mL block (AAAJ4504)" },
-                    { "label": "Max. speed", "value": "1500 rpm" },
-                    { "label": "Note", "value": "Highest speed in the range" }
+                    { "label": "Max. speed", "value": "1500 rpm (96-well)" },
+                    { "label": "Note", "value": "Highest throughput" }
                   ],
                   "unit": "tubes",
                   "limits": { "speed": 1500 }
@@ -5390,11 +5933,7 @@
                   "val": "0-5ml",
                   "label": "0.5 mL tubes",
                   "counts": { "block": 48 },
-                  "cards": [
-                    { "label": "Block", "value": "0.5 mL block (AAAJ4501)" },
-                    { "label": "Max. speed", "value": "1000 rpm" },
-                    { "label": "Note", "value": "Most common lab block" }
-                  ],
+                  "cards": [{ "label": "Block", "value": "0.5 mL block (AAAJ4501)" }, { "label": "Max. speed", "value": "1000 rpm" }],
                   "unit": "tubes",
                   "limits": { "speed": 1000 }
                 },
@@ -5403,9 +5942,9 @@
                   "label": "1.5 / 2.0 mL microtubes",
                   "counts": { "block": 24 },
                   "cards": [
-                    { "label": "Block", "value": "1.5 / 2.0 mL block (AAAJ4502)" },
+                    { "label": "Block", "value": "1.5/2.0 mL block (AAAJ4502)" },
                     { "label": "Max. speed", "value": "1000 rpm" },
-                    { "label": "Note", "value": "Most common lab block" }
+                    { "label": "Note", "value": "Most common microtube block" }
                   ],
                   "unit": "tubes",
                   "limits": { "speed": 1000 }
@@ -5417,7 +5956,7 @@
                   "cards": [
                     { "label": "Block", "value": "15 mL block (AAAJ4505)" },
                     { "label": "Max. speed", "value": "900 rpm" },
-                    { "label": "Note", "value": "Lower max speed with larger tubes" }
+                    { "label": "Note", "value": "Larger-volume work" }
                   ],
                   "unit": "tubes",
                   "limits": { "speed": 900 }
@@ -5445,7 +5984,7 @@
                   "cards": [
                     { "label": "Block", "value": "50 mL block (AAAJ4503)" },
                     { "label": "Max. speed", "value": "800 rpm" },
-                    { "label": "Note", "value": "Lowest max speed (heaviest load)" }
+                    { "label": "Note", "value": "Largest tubes, lowest speed" }
                   ],
                   "unit": "tubes",
                   "limits": { "speed": 800 }
@@ -5460,6 +5999,13 @@
                   "label": "Speed check",
                   "okText": "{value} rpm is within this block's {limit} rpm maximum",
                   "overText": "{value} rpm exceeds this block's {limit} rpm maximum"
+                },
+                {
+                  "field": "targetTemp",
+                  "limit": 100,
+                  "label": "Temperature check",
+                  "okText": "{value} C is within the 100 C maximum (the minimum is ambient +5 C)",
+                  "overText": "{value} C exceeds the 100 C maximum"
                 }
               ],
               "assumptionNote": "Published block capacities: 96 x 0.2 mL, 48 x 0.5 mL, 24 x 1.5 / 2.0 mL, 15 x 15 mL, 6 x 50 mL, 24 x 12 mm or 13 mm tubes. One block is mounted at a time.",
@@ -5481,13 +6027,15 @@
               ],
               "fields": [
                 { "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 },
+                { "key": "targetTemp", "label": "Target temperature (C)", "default": 37, "min": 0 },
                 { "key": "speedNeeded", "label": "Speed needed (rpm)", "default": 800, "min": 0 }
               ],
               "presetsLabel": "Try an example case",
               "presets": [
                 { "label": "0.2 mL PCR tubes", "nums": { "numberNeeded": 96 }, "picks": { "vesselSize": "96-well" } },
                 { "label": "1.5 / 2.0 mL microtubes", "nums": { "numberNeeded": 24 }, "picks": { "vesselSize": "1-5ml" } },
-                { "label": "15 mL conical tubes", "nums": { "numberNeeded": 15 }, "picks": { "vesselSize": "15ml" } }
+                { "label": "15 mL conical tubes", "nums": { "numberNeeded": 15 }, "picks": { "vesselSize": "15ml" } },
+                { "label": "50 mL conical tubes", "nums": { "numberNeeded": 6 }, "picks": { "vesselSize": "50ml" } }
               ],
               "showRetry": true,
               "retryLabel": "Retry With New Values",
@@ -5872,8 +6420,7 @@
                 "title": "Technical Specifications",
                 "body": [
                   "The technical specifications of the CBS-350 include an ambient +5 to 100°C heating range, 150 to 1500 rpm orbital mixing and a 2 mm orbit.",
-                  "Permissible environment: 5 to 40°C, up to 80 %RH. Body dimensions are without accessories. Maximum speed depends on the fitted block (see block table).",
-                  "One block is mounted at a time. Each block includes a block cover."
+                  "Permissible environment: 5 to 40°C, up to 80 %RH. Body dimensions are without accessories. Maximum speed depends on the fitted block (see block table)."
                 ]
               },
               {
@@ -6040,9 +6587,21 @@
                   "label": "Model",
                   "default": "ist-3075",
                   "options": [{ "val": "ist-3075", "label": "IST-3075" }, { "val": "ist-4075", "label": "IST-4075" }]
+                },
+                {
+                  "key": "flaskSize",
+                  "label": "Flask size",
+                  "default": "250ml",
+                  "options": [
+                    { "val": "250ml", "label": "250 mL flasks" },
+                    { "val": "500ml", "label": "500 mL flasks" },
+                    { "val": "1l", "label": "1 L flasks" },
+                    { "val": "2l", "label": "2 L flasks" },
+                    { "val": "2-8l", "label": "2.8 L flasks" }
+                  ]
                 }
               ],
-              "fields": [{ "key": "totalLoadKg", "label": "Total load (kg)", "default": 10, "min": 0 }],
+              "fields": [{ "key": "totalLoadKg", "label": "Total load (kg)", "default": 10, "min": 0 }, { "key": "temperature", "label": "Temperature (C)", "default": 37 }],
               "presetsLabel": "Try an example load",
               "presets": [
                 { "label": "IST-3075, up to 10 kg", "nums": { "totalLoadKg": 10 }, "picks": { "model": "ist-3075" } },
@@ -6058,7 +6617,41 @@
               "emptyText": "Choose the model and enter the total load, then check.",
               "ctaNote": "Share your vessels and total load and Inkarp will confirm the running speed.",
               "submitLabel": "Validate your speed and load with an Inkarp specialist",
-              "disclaimer": "Speeds are the published load-speed ratings (measured with a fixed steel-plate load); liquid samples can behave differently."
+              "disclaimer": "Speeds are the published load-speed ratings (measured with a fixed steel-plate load); liquid samples can behave differently.",
+              "choiceCards": [
+                {
+                  "key": "flaskSize",
+                  "label": "Flask capacity",
+                  "by": "model",
+                  "values": {
+                    "ist-3075": {
+                      "250ml": "Up to 14 x 250 mL flask clamps on the IST-3075",
+                      "500ml": "Up to 9 x 500 mL flask clamps on the IST-3075",
+                      "1l": "Up to 6 x 1 L flask clamps on the IST-3075",
+                      "2l": "Up to 4 x 2 L flask clamps on the IST-3075",
+                      "2-8l": "Up to 2 x 2.8 L flask clamps on the IST-3075"
+                    },
+                    "ist-4075": {
+                      "250ml": "Up to 20 x 250 mL flask clamps on the IST-4075",
+                      "500ml": "Up to 16 x 500 mL flask clamps on the IST-4075",
+                      "1l": "Up to 9 x 1 L flask clamps on the IST-4075",
+                      "2l": "Up to 5 x 2 L flask clamps on the IST-4075",
+                      "2-8l": "Up to 4 x 2.8 L flask clamps on the IST-4075"
+                    }
+                  }
+                }
+              ],
+              "checks": [
+                {
+                  "field": "temperature",
+                  "label": "Temperature check",
+                  "bands": [
+                    { "lt": 15, "text": "{value} C is below the lowest set point (R models ambient -15 to 80 C, minimum 15 C)" },
+                    { "max": 80, "text": "{value} C is within the published range (standard models ambient +5 to 80 C; R models ambient -15 to 80 C, minimum 15 C)" },
+                    { "text": "{value} C exceeds the 80 C maximum" }
+                  ]
+                }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -6106,7 +6699,7 @@
               "choices": [
                 {
                   "key": "vesselSize",
-                  "label": "Vessel size",
+                  "label": "Flask size",
                   "default": "250ml",
                   "options": [
                     { "val": "250ml", "label": "250 mL flasks" },
@@ -6118,12 +6711,12 @@
                 },
                 {
                   "key": "preferredColumn",
-                  "label": "Preferred model (optional)",
+                  "label": "Preferred model",
                   "default": "auto",
                   "options": [{ "val": "auto", "label": "Let the tool recommend" }, { "val": "ist3075", "label": "IST-3075" }, { "val": "ist4075", "label": "IST-4075" }]
                 }
               ],
-              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
+              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }, { "key": "temperature", "label": "Temperature (C)", "default": 37 }],
               "presetsLabel": "Try an example case",
               "presets": [
                 { "label": "250 mL flasks", "nums": { "numberNeeded": 20 }, "picks": { "vesselSize": "250ml", "preferredColumn": "auto" } },
@@ -6141,7 +6734,23 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "checks": [
+                {
+                  "field": "temperature",
+                  "label": "Temperature check",
+                  "bands": [
+                    { "lt": 15, "text": "{value} C is below the lowest set point (R models ambient -15 to 80 C, minimum 15 C)" },
+                    { "max": 80, "text": "{value} C is within the published range (standard models ambient +5 to 80 C; R models ambient -15 to 80 C, minimum 15 C)" },
+                    { "text": "{value} C exceeds the 80 C maximum" }
+                  ]
+                },
+                {
+                  "field": "temperature",
+                  "label": "Clamp material",
+                  "bands": [{ "max": 40, "text": "Stainless-steel or plastic flask clamps" }, { "text": "Stainless steel recommended above 40 C" }]
+                }
+              ]
             }
           ],
           "suitability": {
@@ -6694,9 +7303,22 @@
                   "label": "Model",
                   "default": "isf-7100",
                   "options": [{ "val": "isf-7100", "label": "ISF-7100" }, { "val": "isf-7200", "label": "ISF-7200" }]
+                },
+                {
+                  "key": "flaskSize",
+                  "label": "Flask size",
+                  "default": "50ml",
+                  "options": [
+                    { "val": "50ml", "label": "50 mL flasks" },
+                    { "val": "500ml", "label": "500 mL flasks" },
+                    { "val": "1l", "label": "1 L flasks" },
+                    { "val": "2l", "label": "2 L flasks" },
+                    { "val": "4l", "label": "4 L flasks" },
+                    { "val": "6l", "label": "6 L flasks" }
+                  ]
                 }
               ],
-              "fields": [{ "key": "totalLoadKg", "label": "Total load (kg)", "default": 10, "min": 0 }],
+              "fields": [{ "key": "totalLoadKg", "label": "Total load (kg)", "default": 10, "min": 0 }, { "key": "temperature", "label": "Temperature (C)", "default": 37 }],
               "presetsLabel": "Try an example load",
               "presets": [
                 { "label": "ISF-7100, up to 15 kg", "nums": { "totalLoadKg": 15 }, "picks": { "model": "isf-7100" } },
@@ -6713,7 +7335,32 @@
               "emptyText": "Choose the model and enter the total load, then check.",
               "ctaNote": "Share your vessels and total load and Inkarp will confirm the running speed.",
               "submitLabel": "Validate your speed and load with an Inkarp specialist",
-              "disclaimer": "Speeds are the published load-speed ratings (measured with a fixed steel-plate load); liquid samples can behave differently."
+              "disclaimer": "Speeds are the published load-speed ratings (measured with a fixed steel-plate load); liquid samples can behave differently.",
+              "choiceCards": [
+                {
+                  "key": "flaskSize",
+                  "label": "Flask capacity",
+                  "values": {
+                    "50ml": "Up to 88 x 50 mL flask clamps on the ISF platform",
+                    "500ml": "Up to 28 x 500 mL flask clamps on the ISF platform",
+                    "1l": "Up to 18 x 1 L flask clamps on the ISF platform",
+                    "2l": "Up to 11 x 2 L flask clamps on the ISF platform",
+                    "4l": "Up to 6 x 4 L flask clamps on the ISF platform",
+                    "6l": "Up to 5 x 6 L flask clamps on the ISF platform"
+                  }
+                }
+              ],
+              "checks": [
+                {
+                  "field": "temperature",
+                  "label": "Temperature check",
+                  "bands": [
+                    { "lt": 4, "text": "{value} C is below the lowest set point (R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "max": 80, "text": "{value} C is within the published range (standard models ambient +5 to 80 C; R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "text": "{value} C exceeds the 80 C maximum" }
+                  ]
+                }
+              ]
             },
             {
               "formula": "vessel-capacity",
@@ -6767,7 +7414,7 @@
               "choices": [
                 {
                   "key": "vesselSize",
-                  "label": "Vessel size",
+                  "label": "Flask size",
                   "default": "50ml",
                   "options": [
                     { "val": "50ml", "label": "50 mL flasks" },
@@ -6779,7 +7426,11 @@
                   ]
                 }
               ],
-              "fields": [{ "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 }],
+              "fields": [
+                { "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 },
+                { "key": "temperature", "label": "Temperature (C)", "default": 37 },
+                { "key": "speedNeeded", "label": "Speed needed (rpm)", "default": 200, "min": 0 }
+              ],
               "presetsLabel": "Try an example case",
               "presets": [
                 { "label": "50 mL flasks", "nums": { "numberNeeded": 88 }, "picks": { "vesselSize": "50ml" } },
@@ -6797,7 +7448,33 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "checks": [
+                {
+                  "field": "temperature",
+                  "label": "Temperature check",
+                  "bands": [
+                    { "lt": 4, "text": "{value} C is below the lowest set point (R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "max": 80, "text": "{value} C is within the published range (standard models ambient +5 to 80 C; R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "text": "{value} C exceeds the 80 C maximum" }
+                  ]
+                },
+                {
+                  "field": "temperature",
+                  "label": "Clamp material",
+                  "bands": [{ "max": 40, "text": "Stainless-steel or plastic flask clamps" }, { "text": "Stainless steel recommended above 40 C" }]
+                },
+                {
+                  "field": "speedNeeded",
+                  "label": "Speed check",
+                  "bands": [
+                    { "lt": 30, "text": "{value} rpm is below the 30 rpm minimum" },
+                    { "max": 300, "text": "{value} rpm: ISF-7100 (30 to 500 rpm) or ISF-7200 (30 to 300 rpm)" },
+                    { "max": 500, "text": "{value} rpm needs the ISF-7100 (30 to 500 rpm); the ISF-7200 reaches 300 rpm" },
+                    { "text": "{value} rpm exceeds the 500 rpm maximum" }
+                  ]
+                }
+              ]
             }
           ],
           "suitability": {
@@ -7487,7 +8164,7 @@
               "choices": [
                 {
                   "key": "vesselSize",
-                  "label": "Vessel size",
+                  "label": "Flask size",
                   "default": "250ml",
                   "options": [
                     { "val": "250ml", "label": "250 mL flasks" },
@@ -7500,7 +8177,8 @@
               ],
               "fields": [
                 { "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 },
-                { "key": "units", "label": "Units (stacked or single)", "default": 1, "min": 1, "max": 3 }
+                { "key": "temperature", "label": "Temperature (C)", "default": 37 },
+                { "key": "units", "label": "Stacked or single", "default": 1, "min": 1, "max": 3 }
               ],
               "presetsLabel": "Try an example case",
               "presets": [
@@ -7519,7 +8197,23 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "checks": [
+                {
+                  "field": "temperature",
+                  "label": "Temperature check",
+                  "bands": [
+                    { "lt": 4, "text": "{value} C is below the lowest set point (R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "max": 80, "text": "{value} C is within the published range (standard models ambient +10 to 80 C; R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "text": "{value} C exceeds the 80 C maximum" }
+                  ]
+                },
+                {
+                  "field": "temperature",
+                  "label": "Clamp material",
+                  "bands": [{ "max": 40, "text": "Stainless-steel or plastic flask clamps" }, { "text": "Stainless steel recommended above 40 C" }]
+                }
+              ]
             }
           ],
           "suitability": {
@@ -8188,7 +8882,7 @@
               "choices": [
                 {
                   "key": "vesselSize",
-                  "label": "Vessel size",
+                  "label": "Flask size",
                   "default": "250ml",
                   "options": [
                     { "val": "250ml", "label": "250 mL flasks" },
@@ -8201,13 +8895,14 @@
                 },
                 {
                   "key": "preferredColumn",
-                  "label": "Preferred model (optional)",
+                  "label": "Preferred model",
                   "default": "auto",
                   "options": [{ "val": "auto", "label": "Let the tool recommend" }, { "val": "iss3075", "label": "ISS-3075" }, { "val": "iss4075", "label": "ISS-4075" }]
                 }
               ],
               "fields": [
                 { "key": "numberNeeded", "label": "Number needed", "default": 4, "min": 1 },
+                { "key": "temperature", "label": "Temperature (C)", "default": 37 },
                 { "key": "units", "label": "Units (stacked or single)", "default": 1, "min": 1, "max": 3 }
               ],
               "presetsLabel": "Try an example case",
@@ -8227,7 +8922,23 @@
               "ctaNote": "Share your vessels and quantities and Inkarp will confirm the platform and accessories.",
               "submitLabel": "Get a capacity-matched recommendation from Inkarp",
               "disclaimer": "Capacities are the approximate maximums published for this product; balance the platform and confirm the exact accessory set with Inkarp.",
-              "surface": "white"
+              "surface": "white",
+              "checks": [
+                {
+                  "field": "temperature",
+                  "label": "Temperature check",
+                  "bands": [
+                    { "lt": 4, "text": "{value} C is below the lowest set point (R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "max": 80, "text": "{value} C is within the published range (standard models ambient +5 to 80 C; R models ambient -20 to 80 C, minimum +4 C)" },
+                    { "text": "{value} C exceeds the 80 C maximum" }
+                  ]
+                },
+                {
+                  "field": "temperature",
+                  "label": "Clamp material",
+                  "bands": [{ "max": 40, "text": "Stainless-steel or plastic flask clamps" }, { "text": "Stainless steel recommended above 40 C" }]
+                }
+              ]
             }
           ],
           "suitability": {

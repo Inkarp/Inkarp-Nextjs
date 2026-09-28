@@ -34,11 +34,19 @@ function fillTemplate(text, values) {
 
 /**
  * Optional checks the content can attach to a lookup: numeric inputs compared
- * with a published limit (fixed, or per chosen row via `limitFrom`), and
- * choices whose picked option supplies a card. A card with the same label as
- * an existing one replaces it.
+ * with a published limit (fixed, per chosen row via `limitFrom`, or banded by
+ * published thresholds via `bands`), choices whose picked option supplies a
+ * card (optionally per another pick via `by`), `matchChecks` comparing a pick
+ * with what the chosen row documents, and a `verdict` summing up the checks.
+ * A card with the same label as an existing one replaces it.
  */
-function applyChecks(cards, { nums, picks, data, row }) {
+function isOver(check, nums, row) {
+  const value = nums[check.field];
+  const limit = check.limitFrom ? row?.limits?.[check.limitFrom] : check.limit;
+  return value != null && limit != null && value > limit;
+}
+
+function applyChecks(cards, { nums, picks, data, row, rows = [], overCapacity = false }) {
   const out = [...cards];
   const upsert = (card) => {
     const index = out.findIndex((item) => item.label === card.label);
@@ -47,15 +55,56 @@ function applyChecks(cards, { nums, picks, data, row }) {
   };
   (data?.checks ?? []).forEach((check) => {
     const value = nums[check.field];
+    if (check.bands) {
+      if (value == null) return;
+      const band = check.bands.find((item) => {
+        if (item.lt != null) return value < item.lt;
+        if (item.max != null) return value <= item.max;
+        return true;
+      });
+      if (band) upsert({ label: check.label, value: fillTemplate(band.text, { value: PLAIN.format(value) }) });
+      return;
+    }
     const limit = check.limitFrom ? row?.limits?.[check.limitFrom] : check.limit;
     if (value == null || limit == null) return;
     const ok = value <= limit;
     upsert({ label: check.label, value: fillTemplate(ok ? check.okText : check.overText, { value: PLAIN.format(value), limit: PLAIN.format(limit) }) });
   });
   (data?.choiceCards ?? []).forEach((choiceCard) => {
-    const text = choiceCard.values?.[picks?.[choiceCard.key]];
+    const table = choiceCard.by ? choiceCard.values?.[picks?.[choiceCard.by]] : choiceCard.values;
+    const text = table?.[picks?.[choiceCard.key]];
     if (text) upsert({ label: choiceCard.label, value: text });
   });
+  (data?.matchChecks ?? []).forEach((matchCheck) => {
+    const picked = picks?.[matchCheck.key];
+    const expected = row?.matches?.[matchCheck.key];
+    if (picked == null || !expected) return;
+    const choice = (data?.choices ?? []).find((item) => item.key === matchCheck.key);
+    const labelOf = (val) => choice?.options?.find((option) => option.val === val)?.label ?? val;
+    const others = rows.filter((item) => item !== row && item.matches?.[matchCheck.key]?.includes(picked));
+    const text = expected.includes(picked)
+      ? matchCheck.matchText
+      : (others.length ? matchCheck.otherText : (matchCheck.noneText ?? matchCheck.otherText));
+    upsert({
+      label: matchCheck.label,
+      value: fillTemplate(text, {
+        picked: labelOf(picked),
+        expected: expected.map(labelOf).join(' or '),
+        case: others[0]?.label,
+        cases: others.map((item) => item.label).join(' or '),
+        first: others[0]?.cards?.[0]?.value,
+      }),
+    });
+  });
+  if (data?.verdict) {
+    const hits = (data.verdict.rules ?? []).filter((rule) => {
+      if (rule.overCapacity) return overCapacity;
+      if (rule.over) return (data.checks ?? []).some((check) => check.field === rule.over && isOver(check, nums, row));
+      if (rule.pick) return Object.entries(rule.pick).every(([key, val]) => picks?.[key] === val);
+      return false;
+    });
+    upsert({ label: data.verdict.label, value: hits.length ? hits.map((rule) => rule.text).join('; ') : data.verdict.okText });
+  }
   return out;
 }
 
@@ -478,7 +527,7 @@ const FORMULAS = {
     const options = data?.options ?? [];
     const row = options.find((item) => item.val === picks?.[data?.optionKey ?? 'option']) ?? options[0];
     if (!row) return { cards: [] };
-    return { assumption: data?.assumptionNote ?? '', cards: applyChecks(row.cards ?? [], { nums, picks, data, row }) };
+    return { assumption: data?.assumptionNote ?? '', cards: applyChecks(row.cards ?? [], { nums, picks, data, row, rows: options }) };
   },
 
   // Published vessel capacity (clamps, tubes, funnels...) per model or
@@ -519,12 +568,12 @@ const FORMULAS = {
       const runs = Math.ceil(needed / capacityOf(largest));
       fitResult = `More than one run holds: about ${count(runs)} runs on the ${columns.length > 1 ? largest.label : 'platform'} (up to ${count(capacityOf(largest))} per run)`;
     } else {
-      fitResult = data?.beyondText ?? 'Not supported - ask Inkarp for an alternative';
+      fitResult = row.fitText ?? data?.beyondText ?? 'Not supported - ask Inkarp for an alternative';
     }
 
     return {
       assumption: data?.assumptionNote ?? '',
-      cards: applyChecks([...cards, { label: data?.fitLabel ?? 'Fit result', value: fitResult }, ...(row.cards ?? [])], { nums, picks, data, row }),
+      cards: applyChecks([...cards, { label: data?.fitLabel ?? 'Fit result', value: fitResult }, ...(row.cards ?? [])], { nums, picks, data, row, rows, overCapacity: !fitting }),
     };
   },
 
@@ -544,25 +593,27 @@ const FORMULAS = {
     const ratings = steps.map((step) => `${count(rpmOf(step))} rpm up to ${EN.format(step.maxKg)} kg`).join('; ');
     const tier = steps.find((step) => load <= step.maxKg);
 
+    const withChecks = (cards) => applyChecks(cards, { nums, picks, data, row: model, rows: models });
     if (!tier) {
       const last = steps[steps.length - 1];
       return {
         assumption: data?.assumptionNote ?? '',
-        cards: [
+        cards: withChecks([
           { label: labels.speed, value: model.overloadSpeed ?? data?.overloadSpeed ?? 'Beyond the rated load' },
           { label: labels.headroom, value: `${EN.format(load)} kg exceeds the ${EN.format(last?.maxKg ?? 0)} kg rating of the ${model.name}` },
           { label: labels.note, value: data?.overloadNote ?? 'Reduce load or speed for stable operation' },
-        ],
+        ]),
       };
     }
     const isTop = tier === steps[0];
+    const speed = isTop ? `Up to ${count(rpmOf(tier))} rpm` : `About ${count(rpmOf(tier))} rpm at ${EN.format(load)} kg`;
     return {
       assumption: data?.assumptionNote ?? '',
-      cards: [
-        { label: labels.speed, value: isTop ? `Up to ${count(rpmOf(tier))} rpm` : `About ${count(rpmOf(tier))} rpm at ${EN.format(load)} kg` },
+      cards: withChecks([
+        { label: labels.speed, value: `${speed}${tier.speedSuffix ?? ''}` },
         { label: labels.headroom, value: `Within the ${EN.format(tier.maxKg)} kg rating at ${count(rpmOf(tier))} rpm` },
         { label: labels.note, value: `${model.name}: ${ratings}` },
-      ],
+      ]),
     };
   },
 
@@ -574,14 +625,15 @@ const FORMULAS = {
     if (!row) return { cards: [] };
     const litres = Math.max(0, nums.waterLitres ?? 0);
     const holderLabel = data?.holderLabels?.[row.holder] ?? row.holder;
+    const withChecks = (cards) => applyChecks(cards, { nums, picks, data, row, rows });
     if (litres > row.maxLitres) {
       return {
         assumption: data?.assumptionNote ?? '',
-        cards: [
+        cards: withChecks([
           { label: 'Achievable rpm', value: 'Not applicable' },
           { label: 'Holder', value: holderLabel },
           { label: 'Note', value: `${EN.format(litres)} L exceeds the ${EN.format(row.maxLitres)} L this holder takes` },
-        ],
+        ]),
       };
     }
     const column = (data?.columns ?? []).findIndex((max) => litres <= max);
@@ -589,15 +641,15 @@ const FORMULAS = {
     const notes = data?.notes ?? {};
     let note = notes.default;
     if (litres === 0) note = notes.empty ?? note;
-    else if (row.vessels > 1) note = notes.multiple ?? note;
+    else if (row.vessels > 1 && (nums.vesselCount ?? row.vessels) > 1) note = notes.multiple ?? note;
     else if (column === row.rpm.length - 1) note = notes.largest ?? note;
     return {
       assumption: data?.assumptionNote ?? '',
-      cards: [
+      cards: withChecks([
         { label: 'Achievable rpm', value: `About ${count(rpm)} rpm`, note: `Published value for up to ${EN.format(data.columns[column])} L of water.` },
         { label: 'Holder', value: holderLabel },
         { label: 'Note', value: note ?? '' },
-      ],
+      ]),
     };
   },
 
@@ -674,7 +726,26 @@ function NumberInput({ field, onChange, value }) {
   );
 }
 
-function ChoiceInput({ field, onChange, value }) {
+/** Options a choice offers for the current picks: an option with `when` shows only while those picks hold. */
+function visibleOptions(choice, picks) {
+  return (choice.options ?? []).filter((option) => !option.when || Object.entries(option.when).every(([key, val]) => (
+    Array.isArray(val) ? val.includes(picks[key]) : picks[key] === val
+  )));
+}
+
+/** Keep each dependent pick on an option its conditions allow. Choices without `when` options are left alone. */
+function settlePicks(choices, picks) {
+  const dependent = choices.filter((choice) => choice.options?.some((option) => option.when));
+  if (!dependent.length) return picks;
+  const next = { ...picks };
+  dependent.forEach((choice) => {
+    const options = visibleOptions(choice, next);
+    if (options.length && !options.some((option) => option.val === next[choice.key])) next[choice.key] = options[0].val;
+  });
+  return next;
+}
+
+function ChoiceInput({ field, onChange, value, options }) {
   return (
     <label className="block">
       <span className="text-sm font-medium text-black">{field.label}</span>
@@ -683,7 +754,7 @@ function ChoiceInput({ field, onChange, value }) {
         onChange={(event) => onChange(event.target.value)}
         value={value}
       >
-        {field.options.map((option) => (
+        {(options ?? field.options).map((option) => (
           <option key={option.val} value={option.val}>{option.label}</option>
         ))}
       </select>
@@ -706,19 +777,19 @@ export default function MetricCalculator({ data, productName = 'this product' })
     Object.fromEntries(fields.map((field) => [field.key, field.default ?? 0]))
   );
   const [picks, setPicks] = useState(() =>
-    Object.fromEntries(choices.map((choice) => [choice.key, choice.default ?? choice.options?.[0]?.val]))
+    settlePicks(choices, Object.fromEntries(choices.map((choice) => [choice.key, choice.default ?? choice.options?.[0]?.val])))
   );
   const [runValues, setRunValues] = useState(null);
 
   const resetCalculator = () => {
     setNums(Object.fromEntries(fields.map((field) => [field.key, field.default ?? 0])));
-    setPicks(Object.fromEntries(choices.map((choice) => [choice.key, choice.default ?? choice.options?.[0]?.val])));
+    setPicks(settlePicks(choices, Object.fromEntries(choices.map((choice) => [choice.key, choice.default ?? choice.options?.[0]?.val]))));
     setRunValues(null);
   };
 
   const applyPreset = (preset) => {
     if (preset.nums) setNums((current) => ({ ...current, ...preset.nums }));
-    if (preset.picks) setPicks((current) => ({ ...current, ...preset.picks }));
+    if (preset.picks) setPicks((current) => settlePicks(choices, { ...current, ...preset.picks }));
     setRunValues(null);
   };
 
@@ -783,9 +854,10 @@ export default function MetricCalculator({ data, productName = 'this product' })
                   field={choice}
                   key={choice.key}
                   onChange={(next) => {
-                    setPicks((current) => ({ ...current, [choice.key]: next }));
+                    setPicks((current) => settlePicks(choices, { ...current, [choice.key]: next }));
                     if (requiresRun) setRunValues(null);
                   }}
+                  options={visibleOptions(choice, picks)}
                   value={picks[choice.key] ?? ''}
                 />
               ))}

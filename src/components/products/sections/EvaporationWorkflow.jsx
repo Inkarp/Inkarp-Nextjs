@@ -164,9 +164,8 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
         />
 
         {/* Cards with connectors. Below `lg` this scrolls horizontally — the extra
-            `pl-8` (on top of the section's own padding) keeps the first card clear
-            of the fixed-position compare button (CompareCategoryButton, pinned at
-            left-0/top-1/2), and the right-edge fade signals there's more to scroll
+            `pl-8` (on top of the section's own padding) gives the first card a clear
+            left gutter, and the right-edge fade signals there's more to scroll
             instead of clipping mid-card. */}
         <div className="relative">
           <div className="flex items-stretch gap-2 overflow-x-auto scroll-smooth scrollbar-none snap-x snap-mandatory scroll-pl-8 pb-2 pl-8 pr-6 pt-6 lg:snap-none lg:scroll-pl-0 lg:gap-0 lg:overflow-visible lg:pl-0 lg:pr-0 lg:pt-0">

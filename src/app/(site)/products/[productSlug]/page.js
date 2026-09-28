@@ -16,7 +16,7 @@ import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
 import ProductImageZoom from "@/components/products/ProductImageZoom";
 import RequestQuoteButton from "@/components/products/RequestQuoteButton";
-import CompareCategoryButton from "@/components/products/CompareCategoryButton";
+import CompareSiblings from "@/components/products/CompareSiblings";
 import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
 import RecordProductView from "@/components/products/RecordProductView";
 import FinderProductPrompt from "@/components/solution-finder/FinderProductPrompt";
@@ -50,9 +50,20 @@ export default async function ProductPage({ params }) {
   const product = getProductBySlug(productSlug);
   if (!product) notFound();
 
-  const relatedProducts = getAllProducts()
-    .filter((p) => p.category === product.category && p.slug !== product.slug)
-    .slice(0, 4);
+  const categorySiblings = getAllProducts()
+    .filter((p) => p.category === product.category && p.slug !== product.slug);
+  const relatedProducts = categorySiblings.slice(0, 4);
+  // Only what the compare shortlist stores - not whole product objects - reaches the client.
+  const toCompareItem = (p) => ({
+    slug: p.slug,
+    principalSlug: p.principalSlug,
+    principalName: p.principalName,
+    name: p.name,
+    image: p.image ?? "",
+    imageAlt: p.imageAlt ?? p.name,
+    category: p.category ?? "",
+    apiPath: p.apiPath,
+  });
 
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
@@ -86,7 +97,7 @@ export default async function ProductPage({ params }) {
   return (
     <main className="bg-white text-ink" data-scroll-skip>
       <RecordProductView product={product} />
-      <CompareCategoryButton product={product} relatedProducts={relatedProducts} />
+      <CompareSiblings category={product.category} items={categorySiblings.map(toCompareItem)} product={toCompareItem(product)} />
       {faqJsonLd && (
         <script
           type="application/ld+json"

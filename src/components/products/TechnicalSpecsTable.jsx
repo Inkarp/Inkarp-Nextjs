@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { FiCheckCircle, FiCpu, FiFileText } from "react-icons/fi";
 
 function renderSpecValue(value) {
@@ -15,6 +16,20 @@ function renderSpecValue(value) {
   }
 
   return value;
+}
+
+/**
+ * A row may open a titled sub-table (`groupTitle`, optional `groupIntro`, and a
+ * `groupNote` shown after the group's last row) - the group runs until the next
+ * row with a `groupTitle`. Rows without these keys render as a plain list.
+ */
+function groupNoteAfter(specs, index) {
+  const next = specs[index + 1];
+  if (next && !next.groupTitle) return null;
+  for (let i = index; i >= 0; i -= 1) {
+    if (specs[i].groupTitle) return specs[i].groupNote ?? null;
+  }
+  return null;
 }
 
 export default function TechnicalSpecsTable({ note, specs = [] }) {
@@ -46,15 +61,26 @@ export default function TechnicalSpecsTable({ note, specs = [] }) {
 
       <div className="divide-y divide-line-light sm:hidden">
         {specs.map((row, index) => (
-          <div className="bg-white p-4" key={`${row.label}-mobile-${index}`}>
-            <div className="flex items-start gap-2 text-sm font-semibold leading-6 text-ink">
-              <FiCheckCircle aria-hidden="true" className="mt-1 shrink-0 text-red" />
-              <span>{row.label}</span>
+          <Fragment key={`${row.label}-mobile-${index}`}>
+            {row.groupTitle ? (
+              <div className="bg-parchment-alt p-4">
+                <h4 className="text-sm font-bold text-ink">{row.groupTitle}</h4>
+                {row.groupIntro ? <p className="mt-1 text-xs leading-5 text-ink-soft">{row.groupIntro}</p> : null}
+              </div>
+            ) : null}
+            <div className="bg-white p-4">
+              <div className="flex items-start gap-2 text-sm font-semibold leading-6 text-ink">
+                <FiCheckCircle aria-hidden="true" className="mt-1 shrink-0 text-red" />
+                <span>{row.label}</span>
+              </div>
+              <div className="mt-2 break-words pl-6 text-sm font-medium leading-6 text-ink-soft">
+                {renderSpecValue(row.value)}
+              </div>
             </div>
-            <div className="mt-2 break-words pl-6 text-sm font-medium leading-6 text-ink-soft">
-              {renderSpecValue(row.value)}
-            </div>
-          </div>
+            {groupNoteAfter(specs, index) ? (
+              <p className="bg-white px-4 py-3 text-xs leading-5 text-ink-soft">{groupNoteAfter(specs, index)}</p>
+            ) : null}
+          </Fragment>
         ))}
       </div>
 
@@ -69,10 +95,16 @@ export default function TechnicalSpecsTable({ note, specs = [] }) {
           </thead>
           <tbody className="divide-y divide-line-light">
             {specs.map((row, index) => (
-              <tr
-                className="group bg-white transition hover:bg-red/[0.03]"
-                key={`${row.label}-${index}`}
-              >
+              <Fragment key={`${row.label}-${index}`}>
+              {row.groupTitle ? (
+                <tr className="bg-parchment-alt">
+                  <th className="px-5 py-3 text-left" colSpan={2} scope="colgroup">
+                    <span className="block text-sm font-bold text-ink">{row.groupTitle}</span>
+                    {row.groupIntro ? <span className="mt-1 block text-xs font-medium leading-5 text-ink-soft">{row.groupIntro}</span> : null}
+                  </th>
+                </tr>
+              ) : null}
+              <tr className="group bg-white transition hover:bg-red/[0.03]">
                 <th className="align-top px-5 py-4 text-sm font-semibold leading-6 text-ink" scope="row">
                   <span className="flex items-start gap-3">
                     <span className="mt-1 inline-flex size-6 shrink-0 items-center justify-center bg-parchment-alt text-red transition group-hover:bg-red group-hover:text-white">
@@ -85,6 +117,12 @@ export default function TechnicalSpecsTable({ note, specs = [] }) {
                   {renderSpecValue(row.value)}
                 </td>
               </tr>
+              {groupNoteAfter(specs, index) ? (
+                <tr className="bg-white">
+                  <td className="px-5 py-3 text-xs leading-5 text-ink-soft" colSpan={2}>{groupNoteAfter(specs, index)}</td>
+                </tr>
+              ) : null}
+              </Fragment>
             ))}
           </tbody>
         </table>

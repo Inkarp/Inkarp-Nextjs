@@ -15,14 +15,21 @@ function resolveIcon(label = '') {
   return ICON_RULES.find((rule) => rule.match(t))?.icon ?? FiActivity;
 }
 
-export default function StatsBar({ stats = [] }) {
-  const visibleStats = stats.slice(0, 4);
+export default function StatsBar({ stats = [], showAll = false, title, intro }) {
+  // Four by default; content can opt in to every stat plus a short title / intro line.
+  const visibleStats = showAll ? stats : stats.slice(0, 4);
 
   if (!visibleStats.length) return null;
 
   return (
     <section className="border-y border-line-light bg-parchment-alt px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <div className="mx-auto w-full max-w-[1180px]">
+        {title || intro ? (
+          <div className="mb-4 max-w-3xl">
+            {title ? <p className="text-xs font-semibold uppercase tracking-widest text-red">{title}</p> : null}
+            {intro ? <p className="mt-1 text-sm leading-6 text-ink-soft">{intro}</p> : null}
+          </div>
+        ) : null}
         <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-4">
           {visibleStats.map((s, index) => {
             const Icon = resolveIcon(s.label);

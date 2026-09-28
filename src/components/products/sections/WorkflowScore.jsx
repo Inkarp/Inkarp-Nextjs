@@ -99,6 +99,9 @@ export default function WorkflowScore({ data, productName }) {
   const [selected, setSelected] = useState([]);
 
   const selectedSteps = useMemo(() => selected.map((index) => steps[index]).filter(Boolean), [selected, steps]);
+  // Per-step "manually / with product" copy is optional - content that only
+  // lists the steps (or issues) gets the score and bands without that panel.
+  const hasComparisons = steps.some((step) => step.manual || step.core);
   const percent = steps.length ? Math.round((selectedSteps.length / steps.length) * 100) : 0;
   // Optional readiness bands: when the content supplies count-based tiers
   // (e.g. "0-2 manual steps = High readiness"), show that tier's summary
@@ -195,6 +198,7 @@ export default function WorkflowScore({ data, productName }) {
               </div>
             ) : null}
 
+            {hasComparisons ? (
             <div className="mt-7">
               <h3 className="text-base font-semibold tracking-tight text-ink">How {name} simplifies your selected steps:</h3>
               {selectedSteps.length ? (
@@ -216,6 +220,7 @@ export default function WorkflowScore({ data, productName }) {
                 </div>
               )}
             </div>
+            ) : null}
 
             <div className="mt-6 flex flex-wrap gap-2">
               {benefits.map(({ icon, label }) => {
@@ -247,7 +252,7 @@ export default function WorkflowScore({ data, productName }) {
                   `Thank you${contactName ? `, ${contactName}` : ''}. We have sent your workflow score to our team.`
                 }
                 summary={`Score: ${percent}%${band ? ` — ${band.title}` : ''}\n\nManual steps selected:\n${selectedSteps
-                  .map((step) => `- ${step.label} (manually: ${step.manual})`)
+                  .map((step) => (step.manual ? `- ${step.label} (manually: ${step.manual})` : `- ${step.label}`))
                   .join('\n')}`}
                 triggerLabel={data?.ctaLabel ?? 'Map my workflow with an expert'}
               />

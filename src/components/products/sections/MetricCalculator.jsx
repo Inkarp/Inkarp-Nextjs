@@ -40,10 +40,21 @@ function fillTemplate(text, values) {
  * with what the chosen row documents, and a `verdict` summing up the checks.
  * A card with the same label as an existing one replaces it.
  */
-function isOver(check, nums, row) {
+/** A check's limit: fixed, from the chosen row (`limitFrom`), or from the row by another pick (`limitFromPick`). */
+function checkLimit(check, row, picks) {
+  if (check.limitFromPick) return row?.limits?.[picks?.[check.limitFromPick]];
+  return check.limitFrom ? row?.limits?.[check.limitFrom] : check.limit;
+}
+
+/** `okWhen: 'atLeast'` passes when the entered value reaches the limit (e.g. minutes allowed vs heat-up time). */
+function checkPasses(check, value, limit) {
+  return check.okWhen === 'atLeast' ? value >= limit : value <= limit;
+}
+
+function isOver(check, nums, row, picks) {
   const value = nums[check.field];
-  const limit = check.limitFrom ? row?.limits?.[check.limitFrom] : check.limit;
-  return value != null && limit != null && value > limit;
+  const limit = checkLimit(check, row, picks);
+  return value != null && limit != null && !checkPasses(check, value, limit);
 }
 
 function applyChecks(cards, { nums, picks, data, row, rows = [], overCapacity = false }) {
@@ -65,9 +76,9 @@ function applyChecks(cards, { nums, picks, data, row, rows = [], overCapacity = 
       if (band) upsert({ label: check.label, value: fillTemplate(band.text, { value: PLAIN.format(value) }) });
       return;
     }
-    const limit = check.limitFrom ? row?.limits?.[check.limitFrom] : check.limit;
+    const limit = checkLimit(check, row, picks);
     if (value == null || limit == null) return;
-    const ok = value <= limit;
+    const ok = checkPasses(check, value, limit);
     upsert({ label: check.label, value: fillTemplate(ok ? check.okText : check.overText, { value: PLAIN.format(value), limit: PLAIN.format(limit) }) });
   });
   (data?.choiceCards ?? []).forEach((choiceCard) => {
@@ -99,7 +110,7 @@ function applyChecks(cards, { nums, picks, data, row, rows = [], overCapacity = 
   if (data?.verdict) {
     const hits = (data.verdict.rules ?? []).filter((rule) => {
       if (rule.overCapacity) return overCapacity;
-      if (rule.over) return (data.checks ?? []).some((check) => check.field === rule.over && isOver(check, nums, row));
+      if (rule.over) return (data.checks ?? []).some((check) => check.field === rule.over && isOver(check, nums, row, picks));
       if (rule.pick) return Object.entries(rule.pick).every(([key, val]) => picks?.[key] === val);
       return false;
     });
@@ -525,7 +536,11 @@ const FORMULAS = {
   // scenario), with optional limit checks against what the visitor entered.
   'option-lookup': ({ nums, picks, data }) => {
     const options = data?.options ?? [];
-    const row = options.find((item) => item.val === picks?.[data?.optionKey ?? 'option']) ?? options[0];
+    const byPicks = (item) => data.rowBy.every((key, i) => {
+      const part = String(item.val).split(':')[i];
+      return part === '*' || part === picks?.[key];
+    });
+    const row = (data?.rowBy ? options.find(byPicks) : options.find((item) => item.val === picks?.[data?.optionKey ?? 'option'])) ?? options[0];
     if (!row) return { cards: [] };
     return { assumption: data?.assumptionNote ?? '', cards: applyChecks(row.cards ?? [], { nums, picks, data, row, rows: options }) };
   },
@@ -653,6 +668,34 @@ const FORMULAS = {
     };
   },
 
+  // Cooling capacity at a target temperature, read from the published points
+  // (e.g. +20, 0 and -20 C) - the point at or below the target, so the figure
+  // is never higher than what is published - against the visitor's heat load.
+  'capacity-at-point': ({ nums, picks, data }) => {
+    const points = [...(data?.points ?? [])].sort((a, b) => b.at - a.at);
+    const target = nums.targetTemp ?? 0;
+    const load = Math.max(0, nums.heatLoad ?? 0);
+    const model = (data?.models ?? []).find((item) => item.val === picks?.model) ?? data?.models?.[0];
+    const point = points.find((item) => item.at <= target);
+    const withChecks = (cards) => applyChecks(cards, { nums, picks, data, row: point, rows: points });
+    if (!point || !model) {
+      return {
+        assumption: data?.assumptionNote ?? '',
+        cards: withChecks([{ label: data?.cardLabels?.capacity ?? 'Cooling capacity', value: fillTemplate(data?.belowText, { value: PLAIN.format(target) }) }]),
+      };
+    }
+    const capacity = point.capacity?.[model.val];
+    const fits = capacity != null && load <= capacity;
+    return {
+      assumption: data?.assumptionNote ?? '',
+      cards: withChecks([
+        ...(point.cards ?? []),
+        { label: `${model.label} ${point.label.replace(/^At /, 'at ')}`, value: capacity == null ? 'Not published' : `${count(capacity)} W`, primary: true },
+        { label: data?.cardLabels?.load ?? 'Heat load check', value: fillTemplate(fits ? data?.fitText : data?.overText, { value: PLAIN.format(load), limit: PLAIN.format(capacity ?? 0) }) },
+      ]),
+    };
+  },
+
   // Plant height against each model's published interior height; the tray
   // count is spread over the levels that height allows. Humidity narrows the
   // candidates to the models with humidity control.
@@ -713,6 +756,7 @@ function NumberInput({ field, onChange, value }) {
   return (
     <label className="block">
       <span className="text-sm font-medium text-black">{field.label}</span>
+      {field.hint ? <span className="mt-0.5 block text-xs leading-5 text-ink-soft">{field.hint}</span> : null}
       <input
         className="mt-2 h-11 w-full border border-line-light bg-parchment-alt px-4 text-lg font-semibold tracking-tight text-ink outline-none transition focus:border-red focus:bg-parchment focus:ring-4 focus:ring-red/10"
         max={field.max}
@@ -749,6 +793,7 @@ function ChoiceInput({ field, onChange, value, options }) {
   return (
     <label className="block">
       <span className="text-sm font-medium text-black">{field.label}</span>
+      {field.hint ? <span className="mt-0.5 block text-xs leading-5 text-ink-soft">{field.hint}</span> : null}
       <select
         className="mt-2 h-11 w-full border border-line-light bg-parchment-alt px-4 text-sm font-semibold text-ink outline-none transition focus:border-red focus:bg-parchment focus:ring-4 focus:ring-red/10"
         onChange={(event) => onChange(event.target.value)}

@@ -445,6 +445,48 @@ export default function ProductInfoTabs({ product }) {
                 </dl>
               </div>
             )}
+            {perfSec?.groups?.length > 0 && (
+              // Optional titled tables / bullet lists (e.g. operating modes, safety systems).
+              <div className="mt-6 space-y-6">
+                {perfSec.groups.map((group) => (
+                  <div key={group.title}>
+                    <h4 className="mb-2 text-sm font-semibold text-ink">{group.title}</h4>
+                    {group.rows?.length > 0 && (
+                      <div className="overflow-x-auto border border-line-light">
+                        <table className="w-full min-w-[420px] border-collapse text-left text-sm">
+                          {group.columns?.length > 0 && (
+                            <thead>
+                              <tr className="bg-parchment-alt text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+                                {group.columns.map((column) => <th className="px-4 py-2.5" key={column} scope="col">{column}</th>)}
+                              </tr>
+                            </thead>
+                          )}
+                          <tbody className="divide-y divide-line-light">
+                            {group.rows.map((row) => (
+                              <tr key={row.join('|')}>
+                                {row.map((cell, index) => (
+                                  <td className={`px-4 py-2.5 text-black ${index === 0 ? 'font-medium' : ''}`} key={`${index}-${cell}`}>{cell}</td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                    {group.items?.length > 0 && (
+                      <ul className="space-y-1.5">
+                        {group.items.map((item) => (
+                          <li className="flex gap-2 text-sm leading-6 text-black" key={item}>
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
             {perfSec?.disclaimer && (
               <p className="mt-5 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
                 {perfSec.disclaimer}

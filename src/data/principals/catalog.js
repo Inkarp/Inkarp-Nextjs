@@ -131,6 +131,8 @@ import kubotaLaboratoryCentrifugesCatalog from "./kubota/laboratory-centrifuges.
 import kubotaLargeLaboratoryCentrifugesCatalog from "./kubota/large-laboratory-centrifuges.json";
 import jeiotechEnvironmentalChambersCatalog from "./jeiotech/environmental-chambers.json";
 import jeiotechShakersCatalog from "./jeiotech/shakers.json";
+import jeiotechBathCirculatorsCatalog from "./jeiotech/bath-circulators.json";
+import jeiotechAutoclavesCatalog from "./jeiotech/autoclaves.json";
 import mettlerToledoUvVisSpectrophotometersCatalog from "./mettler-toledo/uv-vis-spectrophotometers.json";
 import mettlerToledoMeltingPointSystemsCatalog from "./mettler-toledo/melting-point-systems.json";
 import mettlerToledoRefractometerCatalog from "./mettler-toledo/refractometer.json";
@@ -287,6 +289,8 @@ const principalCatalogs = [
   kubotaLargeLaboratoryCentrifugesCatalog,
   jeiotechEnvironmentalChambersCatalog,
   jeiotechShakersCatalog,
+  jeiotechBathCirculatorsCatalog,
+  jeiotechAutoclavesCatalog,
   mettlerToledoUvVisSpectrophotometersCatalog,
   mettlerToledoMeltingPointSystemsCatalog,
   mettlerToledoRefractometerCatalog,

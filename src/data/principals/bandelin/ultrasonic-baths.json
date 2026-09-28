@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "bandelin",
-    "principalName": "Bandelin",
-    "countryOfOrigin": "Germany"
-  },
+  "principal": { "slug": "bandelin", "principalName": "Bandelin", "countryOfOrigin": "Germany" },
   "categories": [
     {
       "name": "Ultrasonic Baths",
@@ -20,7 +16,6 @@
           "h1": "SONOREX DIGITEC DT Ultrasonic Baths",
           "subhead": "Authorized Distributor & Service Provider in India",
           "overview": "A generic ultrasonic bath cleans until it doesn't, once standing waves or uneven cavitation start leaving dead spots in the tank. SONOREX DIGITEC DT is built to avoid that entirely.",
-
           "features": [
             "Fully Automatic SweepTec Function: Prevents standing waves in the ultrasonic field for genuinely uniform cleaning across the tank.",
             "Digital LED Display: Shows remaining cleaning time, and on heated models, both set and actual bath temperature.",
@@ -31,7 +26,6 @@
             "Robust, Repeated-Use Construction: Built to hold up under daily use in laboratory, workshop, and clinical practice settings.",
             "Coordinated Accessory Ecosystem: Matching baskets, lids, and cleaning or disinfection concentrates available for the full range."
           ],
-
           "technicalSpecs": [
             { "label": "Product Name", "value": "Bandelin SONOREX DIGITEC DT Ultrasonic Baths" },
             { "label": "Category", "value": "Ultrasonic Baths" },
@@ -45,104 +39,68 @@
             { "label": "Standard Technology", "value": "SweepTec, Degas function" },
             { "label": "Model Examples", "value": "DT 31, DT 31 H, DT 52, DT 510, DT 514, DT 255 H, DT 1028 CH, and others across the range" }
           ],
-
           "applications": [
-            "Laboratory Glassware and Instrument Cleaning: SweepTec delivers even cavitation across hard-to-reach surfaces",
-            "Degassing Liquids and Solvents: Dedicated Degas function removes dissolved gas efficiently",
-            "Sample Preparation: Uniform, repeatable cavitation supports consistent sample handling",
-            "Workshop and Component Cleaning: Larger-capacity models handle bigger parts and higher volumes",
-            "Clinical and Practice-Setting Instrument Cleaning: Robust construction and disinfection concentrate compatibility suit daily clinical use"
+            { "title": "Laboratory Glassware and Instrument Cleaning", "description": "SweepTec delivers even cavitation across hard-to-reach surfaces" },
+            { "title": "Degassing Liquids and Solvents", "description": "Dedicated Degas function removes dissolved gas efficiently" },
+            { "title": "Sample Preparation", "description": "Uniform, repeatable cavitation supports consistent sample handling" },
+            { "title": "Workshop and Component Cleaning", "description": "Larger-capacity models handle bigger parts and higher volumes" },
+            {
+              "title": "Clinical and Practice-Setting Instrument Cleaning",
+              "description": "Robust construction and disinfection concentrate compatibility suit daily clinical use"
+            }
           ],
-
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
-            { "id": "suitability", "label": "Process Fit" },
+            { "id": "model-selector", "label": "Size Selector" },
+            { "id": "process-planner", "label": "Process Planner" },
             { "id": "industries", "label": "Industries" },
-            { "id": "config", "label": "Configuration" },
             { "id": "benefits", "label": "SweepTec & Degas" },
             { "id": "service", "label": "Service" },
             { "id": "faq", "label": "FAQ" },
             { "id": "booking", "label": "Request Quote" }
           ],
-
-          "configWizard": {
-            "title": "What are you cleaning or degassing?",
-            "description": "Select your object size and typical batch volume, and see the recommended tank capacity.",
-            "steps": [
-              {
-                "key": "objectSize",
-                "question": "What size are the objects you're cleaning?",
-                "options": [
-                  { "val": "small", "label": "Small instruments" },
-                  { "val": "large", "label": "Large components" }
-                ]
-              },
-              {
-                "key": "heating",
-                "question": "Do you need heating?",
-                "options": [
-                  { "val": "yes", "label": "Yes" },
-                  { "val": "no", "label": "No" }
-                ]
-              }
-            ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
-          },
-
-          "suitability": {
-            "title": "What does your cleaning or degassing process need?",
-            "description": "Select your process requirements, and see the recommended configuration.",
-            "fields": [
-              {
-                "key": "cavitationUniformity",
-                "label": "Cavitation uniformity need",
-                "options": [
-                  { "val": "standard", "label": "Standard" },
-                  { "val": "hard-to-reach", "label": "Hard-to-reach surface cleaning" }
-                ]
-              },
-              {
-                "key": "degassing",
-                "label": "Degassing requirement",
-                "options": [
-                  { "val": "yes", "label": "Yes" },
-                  { "val": "no", "label": "No" }
-                ]
-              },
-              {
-                "key": "temperatureControl",
-                "label": "Temperature control requirement",
-                "options": [
-                  { "val": "yes", "label": "Yes" },
-                  { "val": "no", "label": "No" }
-                ]
-              }
-            ],
-            "results": [
-              {
-                "condition": "default",
-                "title": "SweepTec and Degas Explained",
-                "body": "SweepTec runs fully automatically to prevent standing waves in the ultrasonic field, delivering uniform cleaning across the entire tank instead of uneven hotspots. Degas activates at the start of a cleaning cycle to remove dissolved gas from the liquid, sharpening the ultrasound's cleaning effect from the very beginning.",
-                "tags": ["SweepTec", "Degas function"]
-              }
-            ]
-          },
-
           "applicationsExplorer": {
+            "eyebrow": "Industries",
             "title": "Industry Explorer",
             "description": "Industries using SONOREX DIGITEC DT include laboratories, clinical practices, and industrial workshops.",
             "industries": [
-              { "name": "Analytical and Research Laboratories", "useCase": "Cleaning glassware and preparing samples via ultrasonic degassing", "consideration": "SweepTec ensures uniform cleaning across delicate lab glassware" },
-              { "name": "Dental and Medical Practices", "useCase": "Cleaning and disinfecting instruments between patients", "consideration": "Compatible cleaning and disinfection concentrates support clinical protocols" },
-              { "name": "Industrial Workshops", "useCase": "Cleaning components and parts as part of maintenance workflows", "consideration": "Larger-capacity models handle bigger parts and higher batch volumes" },
-              { "name": "Precision Manufacturing", "useCase": "Removing residues from precision-machined components", "consideration": "Even cavitation from SweepTec reaches recessed and hard-to-access surfaces" },
-              { "name": "Pharmaceutical and QC Laboratories", "useCase": "Degassing solvents and preparing samples for analysis", "consideration": "Dedicated Degas function improves ultrasound effectiveness from the start" }
+              {
+                "name": "Analytical and Research Laboratories",
+                "icon": "flask",
+                "note": "Cleaning glassware and preparing samples via ultrasonic degassing",
+                "bullets": ["SweepTec ensures uniform cleaning across delicate lab glassware"],
+                "tags": []
+              },
+              {
+                "name": "Dental and Medical Practices",
+                "icon": "pill",
+                "note": "Cleaning and disinfecting instruments between patients",
+                "bullets": ["Compatible cleaning and disinfection concentrates support clinical protocols"],
+                "tags": []
+              },
+              {
+                "name": "Industrial Workshops",
+                "icon": "cpu",
+                "note": "Cleaning components and parts as part of maintenance workflows",
+                "bullets": ["Larger-capacity models handle bigger parts and higher batch volumes"],
+                "tags": []
+              },
+              {
+                "name": "Precision Manufacturing",
+                "icon": "coffee",
+                "note": "Removing residues from precision-machined components",
+                "bullets": ["Even cavitation from SweepTec reaches recessed and hard-to-access surfaces"],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical and QC Laboratories",
+                "icon": "school",
+                "note": "Degassing solvents and preparing samples for analysis",
+                "bullets": ["Dedicated Degas function improves ultrasound effectiveness from the start"],
+                "tags": []
+              }
             ]
           },
-
           "serviceMap": {
             "title": "Inkarp Service Near You",
             "description": "SONOREX DIGITEC DT service in India: demonstration, installation, training, and AMC.",
@@ -156,20 +114,45 @@
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
-
           "faqs": [
-            { "question": "What is SONOREX DIGITEC DT used for?", "answer": "SONOREX DIGITEC DT is a range of ultrasonic baths used for cleaning, degassing, and sample preparation in laboratories, clinical practices, and workshops." },
-            { "question": "What does the SweepTec function do?", "answer": "SweepTec runs fully automatically to prevent standing waves in the ultrasonic field, delivering uniform cleaning across the entire tank instead of uneven hotspots." },
-            { "question": "What does the Degas function do?", "answer": "Degas activates at the start of a cleaning cycle to remove dissolved gas from the liquid, sharpening the ultrasound's cleaning effect from the very beginning." },
-            { "question": "What's the difference between heated and unheated models?", "answer": "Heated models, marked with an H or CH designation, add bath temperature setting and display both set and actual temperature. Unheated models focus on cleaning time control alone." },
-            { "question": "What tank sizes are available in the SONOREX DIGITEC DT range?", "answer": "Capacity spans up to 100 L across the range, with internal dimensions ranging from compact bench units to large workshop-scale tanks." },
+            {
+              "question": "What is SONOREX DIGITEC DT used for?",
+              "answer": "SONOREX DIGITEC DT is a range of ultrasonic baths used for cleaning, degassing, and sample preparation in laboratories, clinical practices, and workshops."
+            },
+            {
+              "question": "What does the SweepTec function do?",
+              "answer": "SweepTec runs fully automatically to prevent standing waves in the ultrasonic field, delivering uniform cleaning across the entire tank instead of uneven hotspots."
+            },
+            {
+              "question": "What does the Degas function do?",
+              "answer": "Degas activates at the start of a cleaning cycle to remove dissolved gas from the liquid, sharpening the ultrasound's cleaning effect from the very beginning."
+            },
+            {
+              "question": "What's the difference between heated and unheated models?",
+              "answer": "Heated models, marked with an H or CH designation, add bath temperature setting and display both set and actual temperature. Unheated models focus on cleaning time control alone."
+            },
+            {
+              "question": "What tank sizes are available in the SONOREX DIGITEC DT range?",
+              "answer": "Capacity spans up to 100 L across the range, with internal dimensions ranging from compact bench units to large workshop-scale tanks."
+            },
             { "question": "How much ultrasonic power do these baths run at?", "answer": "Ultrasonic rated power reaches up to 600 W depending on the model selected." },
-            { "question": "What accessories are available?", "answer": "Matching baskets, lids, and cleaning or disinfection concentrates are available as coordinated accessories across the range." },
-            { "question": "Are these baths suitable for clinical instrument cleaning?", "answer": "Yes, the range's robust construction and compatibility with disinfection concentrates make it suitable for clinical and dental practice settings." },
-            { "question": "What is the price of SONOREX DIGITEC DT in India?", "answer": "Get in touch and Inkarp will put together a quote based on the tank size, heating requirement, and accessories your process needs." },
-            { "question": "Who is the authorized distributor of SONOREX DIGITEC DT in India?", "answer": "Inkarp is the authorized distributor and service provider for the Bandelin SONOREX DIGITEC DT Ultrasonic Bath range in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What accessories are available?",
+              "answer": "Matching baskets, lids, and cleaning or disinfection concentrates are available as coordinated accessories across the range."
+            },
+            {
+              "question": "Are these baths suitable for clinical instrument cleaning?",
+              "answer": "Yes, the range's robust construction and compatibility with disinfection concentrates make it suitable for clinical and dental practice settings."
+            },
+            {
+              "question": "What is the price of SONOREX DIGITEC DT in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the tank size, heating requirement, and accessories your process needs."
+            },
+            {
+              "question": "Who is the authorized distributor of SONOREX DIGITEC DT in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Bandelin SONOREX DIGITEC DT Ultrasonic Bath range in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
-
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -188,15 +171,20 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right model for your process", "body": "Tell us your tank size requirement, whether you need heating, and what you're cleaning or degassing, and we'll confirm the right SONOREX DIGITEC DT model." },
-              { "title": "Confirm SweepTec vs SweepTec plus Degas", "body": "Tell us what you're cleaning or degassing and how sensitive the objects are to uneven cavitation, and we'll confirm whether SweepTec alone or SweepTec plus Degas fits your process." },
+              {
+                "title": "Confirm the right model for your process",
+                "body": "Tell us your tank size requirement, whether you need heating, and what you're cleaning or degassing, and we'll confirm the right SONOREX DIGITEC DT model."
+              },
+              {
+                "title": "Confirm SweepTec vs SweepTec plus Degas",
+                "body": "Tell us what you're cleaning or degassing and how sensitive the objects are to uneven cavitation, and we'll confirm whether SweepTec alone or SweepTec plus Degas fits your process."
+              },
               { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
               { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
             ]
           },
-
           "longForm": {
-            "heroLead": "Digital control, uniform cavitation, and a range that scales from bench to workshop.",
+            "heroLead": "A generic ultrasonic bath cleans until it doesn't, once standing waves or uneven cavitation start leaving dead spots in the tank. SONOREX DIGITEC DT is built to avoid that entirely.",
             "stats": [
               { "value": "Up to 100 L", "label": "Tank capacity across the range" },
               { "value": "Up to 1100 mm", "label": "Length across the range" },
@@ -210,9 +198,9 @@
             "sections": [
               {
                 "key": "overview",
-                "eyebrow": "Product overview",
-                "title": "Product Information",
-                "description": "SONOREX DIGITEC DT product information: SweepTec technology, heated vs unheated models, and accessory options.",
+                "eyebrow": "Product Information",
+                "title": "SONOREX DIGITEC DT at a Glance",
+                "description": "SONOREX DIGITEC DT product information: SweepTec technology, heated vs unheated models, and accessory options. What to know about SONOREX DIGITEC DT: how SweepTec and Degas work together, choosing between heated and unheated models, and matching accessories.",
                 "subheading": "Why uniform cavitation matters more than raw power",
                 "body": [
                   "SweepTec runs fully automatically on every unit in the range, actively preventing standing waves in the ultrasonic field so cleaning stays even across the entire tank rather than concentrated in certain zones.",
@@ -236,9 +224,9 @@
                 "title": "Configuration note",
                 "cards": [
                   { "title": "Solution", "description": "Bandelin SONOREX DIGITEC DT Ultrasonic Bath range" },
-                  { "title": "Capacity range", "description": "Up to 100 L across the model line" },
-                  { "title": "Ultrasonic rated power", "description": "Up to 600 W" },
-                  { "title": "Heat output (heated models)", "description": "Up to 1950 W" },
+                  { "title": "Capacity range", "description": "up to 100 L across the model line" },
+                  { "title": "Ultrasonic rated power", "description": "up to 600 W" },
+                  { "title": "Heat output (heated models)", "description": "up to 1950 W" },
                   { "title": "Standard technology", "description": "SweepTec, Degas function, digital display, membrane keypad" }
                 ]
               },
@@ -246,25 +234,34 @@
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "SONOREX DIGITEC DT key features: SweepTec technology, digital display, degassing, and coordinated accessories."
+                "description": "SONOREX DIGITEC DT key features: SweepTec technology, digital display, degassing, and coordinated accessories.",
+                "tabSummary": "SweepTec, Degas, digital display, membrane keypad"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "SONOREX DIGITEC DT applications: laboratory cleaning, degassing, sample preparation, and workshop use."
+                "description": "SONOREX DIGITEC DT applications: laboratory cleaning, degassing, sample preparation, and workshop use.",
+                "tabSummary": "Lab cleaning, workshop cleaning, degassing, sample prep"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "SONOREX DIGITEC DT technical specifications: capacity, dimensions, and power range across the model line."
+                "description": "SONOREX DIGITEC DT technical specifications: capacity, dimensions, and power range across the model line.",
+                "tabSummary": "Capacity, dimension, and power range across models"
               },
               {
                 "key": "benefits",
-                "eyebrow": "SweepTec and Degas",
+                "eyebrow": "SweepTec and Degas Explained",
                 "title": "SweepTec and Degas Explained",
-                "description": "An ultrasonic bath is only as good as how evenly its cavitation reaches the whole tank, and that's exactly what these two functions are built to solve. Standing waves form naturally in a fixed-frequency ultrasonic field, creating pockets of intense cavitation next to nearly dead zones in the same tank. SweepTec actively varies the field to prevent that pattern from settling in, so cleaning stays consistent whether an object sits in the center of the tank or against the wall. The Degas function tackles a separate problem: dissolved gas in the cleaning liquid absorbs some of the ultrasound's energy before it ever reaches the object being cleaned. Running Degas at the start of a cycle clears that dissolved gas out first, so the ultrasound works at full effect from the very beginning rather than only reaching peak performance partway through.",
+                "description": "How SweepTec's standing-wave prevention and the Degas function work together on SONOREX DIGITEC DT.",
+                "tabSummary": "How standing-wave prevention and degassing work together",
+                "body": [
+                  "An ultrasonic bath is only as good as how evenly its cavitation reaches the whole tank, and that's exactly what these two functions are built to solve.",
+                  "Standing waves form naturally in a fixed-frequency ultrasonic field, creating pockets of intense cavitation next to nearly dead zones in the same tank. SweepTec actively varies the field to prevent that pattern from settling in, so cleaning stays consistent whether an object sits in the center of the tank or against the wall. The Degas function tackles a separate problem: dissolved gas in the cleaning liquid absorbs some of the ultrasound's energy before it ever reaches the object being cleaned. Running Degas at the start of a cycle clears that dissolved gas out first, so the ultrasound works at full effect from the very beginning rather than only reaching peak performance partway through."
+                ],
+                "columnHeaders": { "label": "What your process needs", "value": "How SONOREX DIGITEC DT delivers it" },
                 "cards": [
                   { "title": "Even cleaning across the entire tank", "description": "Fully automatic SweepTec function" },
                   { "title": "Cleaning objects reaching hard-to-access surfaces", "description": "Uniform cavitation from standing-wave prevention" },
@@ -274,12 +271,15 @@
               },
               {
                 "key": "performance",
-                "eyebrow": "Heated vs unheated models",
+                "eyebrow": "Heated vs Unheated Models",
                 "title": "Heated vs Unheated Models",
-                "description": "Not every cleaning or degassing process needs temperature control, and the range splits cleanly along that line.",
+                "tabSummary": "Choosing the right configuration for your process",
                 "body": [
+                  "Choosing between SONOREX DIGITEC DT's heated and unheated ultrasonic bath configurations.",
+                  "Not every cleaning or degassing process needs temperature control, and the range splits cleanly along that line.",
                   "Unheated models, like DT 31, DT 52, DT 510, and DT 514, focus on cleaning time control and the display of remaining time, suited to processes where ambient or unheated liquid temperature is enough. Heated models, marked with an H or CH designation such as DT 31 H, DT 255 H, and DT 1028 CH, add bath temperature setting through the same membrane keypad, with the display showing both the set and actual temperature so you can confirm the bath has genuinely reached target conditions before relying on it for a temperature-sensitive process."
                 ],
+                "columnHeaders": { "label": "What your process needs", "value": "Which configuration fits" },
                 "utilityChecklist": [
                   { "label": "Standard cleaning at ambient temperature", "value": "Unheated model (e.g., DT 31, DT 52, DT 510, DT 514)" },
                   { "label": "Temperature-sensitive cleaning or degassing", "value": "Heated model, H or CH designation (e.g., DT 31 H, DT 255 H, DT 1028 CH)" },
@@ -292,6 +292,8 @@
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for SONOREX DIGITEC DT is available on request.",
+                "tabSummary": "Instructions for use, model datasheets",
+                "ctaLabel": "Send My Requirement",
                 "cards": [
                   { "title": "Model Range Datasheet", "description": "Available on request" },
                   { "title": "Instructions for Use", "description": "Available on request" },
@@ -305,9 +307,142 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Uniform cavitation from SweepTec, sharper cleaning from Degas, and a range that scales up to 100 L. Tell us your tank size and process needs, and Inkarp will confirm the right SONOREX DIGITEC DT model.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert"
+            },
+            "heroHook": "Digital control, uniform cavitation, and a range that scales from bench to workshop.",
+            "heroParagraphs": [
+              "A generic ultrasonic bath cleans until it doesn't, once standing waves or uneven cavitation start leaving dead spots in the tank. SONOREX DIGITEC DT is built to avoid that entirely.",
+              "Every unit in the range runs a fully automatic SweepTec function that prevents standing waves in the ultrasonic field, delivering genuinely uniform cleaning across the tank instead of hotspots and blind zones. A user-friendly membrane keypad sets cleaning time, and heated models add bath temperature control with an LED display showing both set and actual readings. A Degas function, activated at the start of a cycle, strips dissolved gas from the liquid first to sharpen the ultrasound's cleaning effect from the very first second."
+            ],
+            "statsTitle": "Quick Stats",
+            "statsIntro": "SONOREX DIGITEC DT range at a glance: capacity, dimensions, and power span across the full model line.",
+            "showAllStats": true
+          },
+          "metricCalculators": [
+            {
+              "formula": "option-lookup",
+              "sectionId": "model-selector",
+              "eyebrow": "Model Size and Capacity Selector",
+              "title": "Find the right SONOREX DIGITEC DT tank size for your cleaning objects.",
+              "promptTitle": "What are you cleaning or degassing?",
+              "description": "Select your object size and typical batch volume, and see the recommended tank capacity.",
+              "optionKey": "heating",
+              "options": [
+                {
+                  "val": "yes",
+                  "label": "Yes",
+                  "cards": [{ "label": "Model readout", "value": "Heated model, H or CH designation (e.g., DT 31 H, DT 255 H, DT 1028 CH)" }]
+                },
+                { "val": "no", "label": "No", "cards": [{ "label": "Model readout", "value": "Unheated model (e.g., DT 31, DT 52, DT 510, DT 514)" }] }
+              ],
+              "choices": [
+                {
+                  "key": "objectSize",
+                  "label": "Object size input",
+                  "default": "small",
+                  "options": [{ "val": "small", "label": "Small instruments" }, { "val": "large", "label": "Large components" }],
+                  "hint": "Small instruments through large components"
+                },
+                {
+                  "key": "heating",
+                  "label": "Heating requirement",
+                  "default": "no",
+                  "options": [{ "val": "yes", "label": "Yes" }, { "val": "no", "label": "No" }],
+                  "hint": "Yes or no"
+                }
+              ],
+              "fields": [{ "key": "tankCapacity", "label": "Tank capacity need (L)", "default": 10, "min": 0, "hint": "Up to 100 L range" }],
+              "checks": [
+                {
+                  "field": "tankCapacity",
+                  "limit": 100,
+                  "label": "Tank capacity",
+                  "okText": "{value} L - within the up to 100 L range",
+                  "overText": "{value} L - above the up to 100 L range; ask Inkarp"
+                }
+              ],
+              "choiceCards": [
+                {
+                  "key": "objectSize",
+                  "label": "Object size",
+                  "values": { "small": "Small instruments - compact bench units", "large": "Large components - larger-capacity models handle bigger parts and higher volumes" }
+                }
+              ],
+              "assumptionNote": "Capacity range: up to 100 L across the model line. Heated models carry an H or CH designation; the exact model for your capacity is confirmed by Inkarp.",
+              "runLabel": "Show Model Readout",
+              "emptyTitle": "Model readout",
+              "emptyText": "Recommends the right SONOREX DIGITEC DT model.",
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
+              "requiresRun": true,
+              "ctaNote": "Routes to us for a configuration-specific quotation.",
+              "submitLabel": "Get Configuration Support",
+              "disclaimer": "Readouts restate Bandelin's published range and model information; Inkarp confirms the exact model and accessories for your application.",
+              "surface": "alt"
+            },
+            {
+              "formula": "option-lookup",
+              "sectionId": "process-planner",
+              "eyebrow": "Process Function Planner",
+              "title": "What does your cleaning or degassing process need?",
+              "description": "Select your process requirements, and see the recommended configuration.",
+              "optionKey": "temperature",
+              "options": [
+                {
+                  "val": "yes",
+                  "label": "Yes",
+                  "cards": [
+                    { "label": "Configuration readout", "value": "Heated model, H or CH designation (e.g., DT 31 H, DT 255 H, DT 1028 CH)" },
+                    { "label": "Confirming actual vs target bath temperature", "value": "LED display on heated models" }
+                  ]
+                },
+                { "val": "no", "label": "No", "cards": [{ "label": "Configuration readout", "value": "Unheated model (e.g., DT 31, DT 52, DT 510, DT 514)" }] }
+              ],
+              "choices": [
+                {
+                  "key": "cavitation",
+                  "label": "Cavitation uniformity need",
+                  "default": "standard",
+                  "options": [{ "val": "standard", "label": "Standard" }, { "val": "hard", "label": "Hard-to-reach surface cleaning" }],
+                  "hint": "Standard or hard-to-reach surface cleaning"
+                },
+                {
+                  "key": "degassing",
+                  "label": "Degassing requirement",
+                  "default": "no",
+                  "options": [{ "val": "yes", "label": "Yes" }, { "val": "no", "label": "No" }],
+                  "hint": "Yes or no"
+                },
+                {
+                  "key": "temperature",
+                  "label": "Temperature control requirement",
+                  "default": "no",
+                  "options": [{ "val": "yes", "label": "Yes" }, { "val": "no", "label": "No" }],
+                  "hint": "Yes or no"
+                }
+              ],
+              "fields": [],
+              "choiceCards": [
+                {
+                  "key": "cavitation",
+                  "label": "Cavitation uniformity",
+                  "values": { "standard": "Fully automatic SweepTec function", "hard": "Uniform cavitation from standing-wave prevention" }
+                },
+                { "key": "degassing", "label": "Degassing", "values": { "yes": "Degas function, run before the main cleaning cycle" } }
+              ],
+              "runLabel": "Show Configuration Readout",
+              "emptyTitle": "Configuration readout",
+              "emptyText": "Recommends heated or unheated model with the right feature set.",
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
+              "requiresRun": true,
+              "ctaNote": "Routes to us for a configuration-specific quotation.",
+              "submitLabel": "Talk to Product Expert",
+              "disclaimer": "Readouts restate Bandelin's published range and model information; Inkarp confirms the exact model and accessories for your application.",
+              "surface": "white"
             }
-          }
+          ]
         },
         {
           "name": "SONOREX SUPER RK 255 H Ultrasonic Baths",
@@ -320,7 +455,6 @@
           "h1": "SONOREX SUPER RK 255 H Ultrasonic Baths",
           "subhead": "Authorized Distributor & Service Provider in India",
           "overview": "Not every lab or workshop needs a digital interface to get consistent, powerful cleaning. RK 255 H is built around straightforward physical controls that still deliver the same cavitation quality as the digital range.",
-
           "features": [
             "Rotary Handle Control: Sets cleaning time and bath temperature directly, without a digital interface.",
             "Fully Automatic SweepTec Function: Prevents standing waves in the ultrasonic field for even, thorough cleaning.",
@@ -330,7 +464,6 @@
             "Compact 300 x 150 x 150 mm Tank: Sized for instrument sets, small parts, and laboratory glassware.",
             "Matched Accessory Range: Baskets, lids, insert cups, and mounting brackets built specifically for this tank size."
           ],
-
           "technicalSpecs": [
             { "label": "Product Name", "value": "Bandelin SONOREX SUPER RK 255 H Ultrasonic Bath with Heater" },
             { "label": "Category", "value": "Ultrasonic Baths" },
@@ -340,107 +473,68 @@
             { "label": "Standard Technology", "value": "SweepTec, fully automatic" },
             { "label": "Heating", "value": "Included as standard on this model" }
           ],
-
           "applications": [
-            "Laboratory Glassware and Instrument Cleaning: SweepTec delivers even cavitation across recessed and hard-to-reach surfaces",
-            "Dental and Medical Practice Instrument Cleaning: IP 32 protection and disinfection concentrate compatibility suit daily clinical use",
-            "Small Parts and Component Cleaning: Compact tank size fits small workshop and precision parts",
-            "Heated Cleaning Cycles: Built-in heating lets bath temperature match the process",
-            "Sample Preparation: Consistent, repeatable cavitation supports reliable sample handling"
+            { "title": "Laboratory Glassware and Instrument Cleaning", "description": "SweepTec delivers even cavitation across recessed and hard-to-reach surfaces" },
+            {
+              "title": "Dental and Medical Practice Instrument Cleaning",
+              "description": "IP 32 protection and disinfection concentrate compatibility suit daily clinical use"
+            },
+            { "title": "Small Parts and Component Cleaning", "description": "Compact tank size fits small workshop and precision parts" },
+            { "title": "Heated Cleaning Cycles", "description": "Built-in heating lets bath temperature match the process" },
+            { "title": "Sample Preparation", "description": "Consistent, repeatable cavitation supports reliable sample handling" }
           ],
-
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
-            { "id": "suitability", "label": "Accessory Fit" },
+            { "id": "tank-fit", "label": "Tank Fit" },
+            { "id": "accessory-builder", "label": "Accessory Builder" },
             { "id": "industries", "label": "Industries" },
-            { "id": "config", "label": "Configuration" },
-            { "id": "benefits", "label": "SweepTec & Cavitation" },
+            { "id": "benefits", "label": "SweepTec" },
             { "id": "service", "label": "Service" },
             { "id": "faq", "label": "FAQ" },
             { "id": "booking", "label": "Request Quote" }
           ],
-
-          "configWizard": {
-            "title": "What are you cleaning, and how much of it at once?",
-            "description": "Select your object size and batch volume, and see whether RK 255 H fits or a larger tank suits better.",
-            "steps": [
-              {
-                "key": "objectType",
-                "question": "What type of objects are you cleaning?",
-                "options": [
-                  { "val": "instruments", "label": "Instruments" },
-                  { "val": "glassware", "label": "Glassware" },
-                  { "val": "small-parts", "label": "Small parts" }
-                ]
-              },
-              {
-                "key": "batchVolume",
-                "question": "What's your typical batch volume?",
-                "options": [
-                  { "val": "single-load", "label": "Single load" },
-                  { "val": "multiple-items", "label": "Multiple items per cycle" }
-                ]
-              }
-            ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
-          },
-
-          "suitability": {
-            "title": "What does your cleaning setup need?",
-            "description": "Select your loading and cleaning chemistry needs, and see the recommended accessories.",
-            "fields": [
-              {
-                "key": "basketNeed",
-                "label": "Basket or insert need",
-                "options": [
-                  { "val": "hanging-basket", "label": "Hanging basket" },
-                  { "val": "insert-cup", "label": "Insert cup" },
-                  { "val": "strainer-basket", "label": "Strainer basket" }
-                ]
-              },
-              {
-                "key": "lidPreference",
-                "label": "Lid preference",
-                "options": [
-                  { "val": "standard", "label": "Standard" },
-                  { "val": "perforated", "label": "Perforated" }
-                ]
-              },
-              {
-                "key": "cleaningChemistry",
-                "label": "Cleaning chemistry need",
-                "options": [
-                  { "val": "general", "label": "General cleaning" },
-                  { "val": "disinfection", "label": "Disinfection" },
-                  { "val": "specialty", "label": "Specialty removal" }
-                ]
-              }
-            ],
-            "results": [
-              {
-                "condition": "default",
-                "title": "Accessories Built for This Tank",
-                "body": "A full range is available, including lids, hanging baskets, insert cups, mounting brackets, and Tickopur or Stammopur cleaning and disinfection concentrates.",
-                "tags": ["Tickopur", "Stammopur"]
-              }
-            ]
-          },
-
           "applicationsExplorer": {
+            "eyebrow": "Industries",
             "title": "Industry Explorer",
             "description": "Industries using SONOREX SUPER RK 255 H include dental practices, laboratories, and precision workshops.",
             "industries": [
-              { "name": "Dental and Medical Practices", "useCase": "Cleaning and disinfecting instruments between patients", "consideration": "IP 32 protection and Stammopur concentrates support daily clinical workflows" },
-              { "name": "Analytical and Research Laboratories", "useCase": "Cleaning glassware and preparing samples", "consideration": "SweepTec ensures even cleaning across delicate glassware surfaces" },
-              { "name": "Precision Component Cleaning", "useCase": "Removing residues from small machined or threaded parts", "consideration": "Uniform cavitation reaches recessed surfaces standard cleaning misses" },
-              { "name": "Jewellery and Fine Instrument Care", "useCase": "Cleaning small, detailed items without damage", "consideration": "Compact tank size and gentle cavitation suit delicate items" },
-              { "name": "Educational and Teaching Laboratories", "useCase": "Introducing students to ultrasonic cleaning fundamentals", "consideration": "Simple rotary control keeps operation approachable for training settings" }
+              {
+                "name": "Dental and Medical Practices",
+                "icon": "flask",
+                "note": "Cleaning and disinfecting instruments between patients",
+                "bullets": ["IP 32 protection and Stammopur concentrates support daily clinical workflows"],
+                "tags": []
+              },
+              {
+                "name": "Analytical and Research Laboratories",
+                "icon": "pill",
+                "note": "Cleaning glassware and preparing samples",
+                "bullets": ["SweepTec ensures even cleaning across delicate glassware surfaces"],
+                "tags": []
+              },
+              {
+                "name": "Precision Component Cleaning",
+                "icon": "cpu",
+                "note": "Removing residues from small machined or threaded parts",
+                "bullets": ["Uniform cavitation reaches recessed surfaces standard cleaning misses"],
+                "tags": []
+              },
+              {
+                "name": "Jewellery and Fine Instrument Care",
+                "icon": "coffee",
+                "note": "Cleaning small, detailed items without damage",
+                "bullets": ["Compact tank size and gentle cavitation suit delicate items"],
+                "tags": []
+              },
+              {
+                "name": "Educational and Teaching Laboratories",
+                "icon": "school",
+                "note": "Introducing students to ultrasonic cleaning fundamentals",
+                "bullets": ["Simple rotary control keeps operation approachable for training settings"],
+                "tags": []
+              }
             ]
           },
-
           "serviceMap": {
             "title": "Inkarp Service Near You",
             "description": "SONOREX SUPER RK 255 H service in India: demonstration, installation, training, and AMC.",
@@ -454,20 +548,48 @@
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
-
           "faqs": [
-            { "question": "What is SONOREX SUPER RK 255 H used for?", "answer": "SONOREX SUPER RK 255 H is a heated ultrasonic bath used for cleaning instruments, glassware, and small parts in laboratory, dental, medical, and workshop settings." },
-            { "question": "How is bath temperature controlled?", "answer": "A rotary handle sets both cleaning time and bath temperature directly, without a digital interface." },
-            { "question": "What does SweepTec do on this model?", "answer": "SweepTec runs fully automatically to prevent standing waves in the ultrasonic field, keeping cavitation even across the entire tank." },
-            { "question": "What is the internal tank size?", "answer": "The internal tank measures 300 x 150 x 150 mm, suited to instrument sets, small parts, and laboratory glassware." },
-            { "question": "What protection class does this model carry?", "answer": "RK 255 H carries an IP 32 protection class, built for reliable daily use in practice, laboratory, and workshop environments." },
-            { "question": "Does this model include heating as standard?", "answer": "Yes, heating is built in on RK 255 H, controlled through the same rotary handle used for cleaning time." },
-            { "question": "What accessories are available for RK 255 H?", "answer": "A full range is available, including lids, hanging baskets, insert cups, mounting brackets, and Tickopur or Stammopur cleaning and disinfection concentrates." },
-            { "question": "Is RK 255 H suitable for dental or medical practice use?", "answer": "Yes, its IP 32 protection class and compatibility with disinfection concentrates make it suitable for clinical instrument cleaning." },
-            { "question": "What is the price of SONOREX SUPER RK 255 H in India?", "answer": "Get in touch and Inkarp will put together a quote based on your requirements and any accessories needed." },
-            { "question": "Who is the authorized distributor of SONOREX SUPER RK 255 H in India?", "answer": "Inkarp is the authorized distributor and service provider for the Bandelin SONOREX SUPER RK 255 H in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is SONOREX SUPER RK 255 H used for?",
+              "answer": "SONOREX SUPER RK 255 H is a heated ultrasonic bath used for cleaning instruments, glassware, and small parts in laboratory, dental, medical, and workshop settings."
+            },
+            {
+              "question": "How is bath temperature controlled?",
+              "answer": "A rotary handle sets both cleaning time and bath temperature directly, without a digital interface."
+            },
+            {
+              "question": "What does SweepTec do on this model?",
+              "answer": "SweepTec runs fully automatically to prevent standing waves in the ultrasonic field, keeping cavitation even across the entire tank."
+            },
+            {
+              "question": "What is the internal tank size?",
+              "answer": "The internal tank measures 300 x 150 x 150 mm, suited to instrument sets, small parts, and laboratory glassware."
+            },
+            {
+              "question": "What protection class does this model carry?",
+              "answer": "RK 255 H carries an IP 32 protection class, built for reliable daily use in practice, laboratory, and workshop environments."
+            },
+            {
+              "question": "Does this model include heating as standard?",
+              "answer": "Yes, heating is built in on RK 255 H, controlled through the same rotary handle used for cleaning time."
+            },
+            {
+              "question": "What accessories are available for RK 255 H?",
+              "answer": "A full range is available, including lids, hanging baskets, insert cups, mounting brackets, and Tickopur or Stammopur cleaning and disinfection concentrates."
+            },
+            {
+              "question": "Is RK 255 H suitable for dental or medical practice use?",
+              "answer": "Yes, its IP 32 protection class and compatibility with disinfection concentrates make it suitable for clinical instrument cleaning."
+            },
+            {
+              "question": "What is the price of SONOREX SUPER RK 255 H in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your requirements and any accessories needed."
+            },
+            {
+              "question": "Who is the authorized distributor of SONOREX SUPER RK 255 H in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Bandelin SONOREX SUPER RK 255 H in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
-
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -486,15 +608,20 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right model for your volume", "body": "Tell us what you're cleaning and whether you need heating for your process, and we'll confirm whether RK 255 H fits or a larger tank in the SUPER RK range suits your volume better." },
-              { "title": "Confirm the right cycle settings", "body": "Tell us about the geometry and material of what you're cleaning, and we'll confirm the right cycle settings for your RK 255 H." },
+              {
+                "title": "Confirm RK 255 H or a larger SUPER RK tank",
+                "body": "Tell us what you're cleaning and whether you need heating for your process, and we'll confirm whether RK 255 H fits or a larger tank in the SUPER RK range suits your volume better."
+              },
+              {
+                "title": "Confirm the right cycle settings",
+                "body": "Tell us about the geometry and material of what you're cleaning, and we'll confirm the right cycle settings for your RK 255 H."
+              },
               { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
               { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
             ]
           },
-
           "longForm": {
-            "heroLead": "Simple rotary control, even cavitation, and heating built in for demanding cleaning work.",
+            "heroLead": "Not every lab or workshop needs a digital interface to get consistent, powerful cleaning. RK 255 H is built around straightforward physical controls that still deliver the same cavitation quality as the digital range.",
             "stats": [
               { "value": "300 x 150 x 150 mm", "label": "Internal tank dimensions" },
               { "value": "Rotary handle", "label": "Cleaning time and temperature control" },
@@ -506,10 +633,11 @@
             "sections": [
               {
                 "key": "overview",
-                "eyebrow": "Product overview",
-                "title": "Product Information",
+                "eyebrow": "Product Information",
+                "title": "SONOREX SUPER RK 255 H at a Glance",
                 "description": "SONOREX SUPER RK 255 H product information: rotary control, SweepTec cavitation, and accessory compatibility.",
-                "subheading": "Why simple rotary control still delivers precise results",
+                "subheading": "SONOREX SUPER RK 255 H overview: rotary control, uniform cleaning, and built-in heating.",
+                "tabSummary": "Why simple rotary control still delivers precise results",
                 "body": [
                   "A rotary handle sets both cleaning time and bath temperature in one straightforward motion, no digital menu or button sequence to learn.",
                   "SweepTec runs fully automatically, actively preventing standing waves in the ultrasonic field so cleaning stays even across the whole tank rather than concentrated in certain spots.",
@@ -542,25 +670,34 @@
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "SONOREX SUPER RK 255 H key features: rotary control, SweepTec cavitation, heating, and IP 32 protection."
+                "description": "SONOREX SUPER RK 255 H key features: rotary control, SweepTec cavitation, heating, and IP 32 protection.",
+                "tabSummary": "SweepTec, heating, IP 32 protection, rotary handle"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "SONOREX SUPER RK 255 H applications: laboratory cleaning, dental and medical practice, and small parts cleaning."
+                "description": "SONOREX SUPER RK 255 H applications: laboratory cleaning, dental and medical practice, and small parts cleaning.",
+                "tabSummary": "Practice, laboratory, and workshop cleaning tasks"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "SONOREX SUPER RK 255 H technical specifications: tank dimensions, control type, and protection rating."
+                "description": "SONOREX SUPER RK 255 H technical specifications: tank dimensions, control type, and protection rating.",
+                "tabSummary": "Dimensions, control type, and protection rating"
               },
               {
                 "key": "benefits",
-                "eyebrow": "SweepTec and even cavitation",
+                "eyebrow": "SweepTec and Even Cavitation",
                 "title": "SweepTec and Even Cavitation",
-                "description": "A fixed-frequency ultrasonic field naturally develops standing waves, pockets where cavitation runs intense right next to areas where it barely reaches at all. That unevenness is exactly what SweepTec is built to eliminate. Running fully automatically, SweepTec actively varies the ultrasonic field to prevent those standing-wave patterns from forming, so cleaning stays consistent whether an object sits at the center of the tank or against its walls. That matters directly for anything with recessed surfaces, threaded fittings, or complex geometry, exactly the places a manual wipe-down or simple immersion cleaning would miss.",
+                "description": "How SweepTec's standing-wave prevention keeps cleaning uniform across the RK 255 H tank.",
+                "tabSummary": "What standing-wave prevention actually changes",
+                "body": [
+                  "A fixed-frequency ultrasonic field naturally develops standing waves, pockets where cavitation runs intense right next to areas where it barely reaches at all. That unevenness is exactly what SweepTec is built to eliminate.",
+                  "Running fully automatically, SweepTec actively varies the ultrasonic field to prevent those standing-wave patterns from forming, so cleaning stays consistent whether an object sits at the center of the tank or against its walls. That matters directly for anything with recessed surfaces, threaded fittings, or complex geometry, exactly the places a manual wipe-down or simple immersion cleaning would miss."
+                ],
+                "columnHeaders": { "label": "What your cleaning process needs", "value": "How RK 255 H delivers it" },
                 "cards": [
                   { "title": "Consistent cleaning across the whole tank", "description": "Fully automatic SweepTec function" },
                   { "title": "Reaching recessed or hard-to-access surfaces", "description": "Uniform cavitation, no standing-wave dead zones" },
@@ -569,12 +706,15 @@
               },
               {
                 "key": "performance",
-                "eyebrow": "Accessories",
+                "eyebrow": "Accessories Built for This Tank",
                 "title": "Accessories Built for This Tank",
-                "description": "A tank on its own only does half the job. Getting the right basket, lid, and cleaning chemistry matched to that specific tank size is what makes a cleaning cycle actually consistent.",
+                "tabSummary": "Baskets, lids, inserts, and cleaning concentrates",
                 "body": [
+                  "Baskets, lids, insert cups, and cleaning concentrates matched specifically to the RK 255 H.",
+                  "A tank on its own only does half the job. Getting the right basket, lid, and cleaning chemistry matched to that specific tank size is what makes a cleaning cycle actually consistent.",
                   "For RK 255 H specifically, that includes the D 255 lid, the DE 255 perforated lid for cycles needing airflow, the K 5 C hanging basket, and the EG 1 insert grille for organizing smaller items within a basket. Insert cups like the SD 06, PD 06, and EB 05, each with lid and rubber ring, handle smaller sample volumes separately from the main tank. Mounting brackets across several sizes secure baskets in place during operation, and a range of Tickopur and Stammopur cleaning and disinfection concentrates cover everything from general instrument cleaning to gypsum removal and drill disinfection."
                 ],
+                "columnHeaders": { "label": "What your setup needs", "value": "What's available for RK 255 H" },
                 "utilityChecklist": [
                   { "label": "Standard tank cover", "value": "D 255 lid, or DE 255 perforated lid for ventilated cycles" },
                   { "label": "Organized item loading", "value": "K 5 C hanging basket with EG 1 insert grille" },
@@ -589,6 +729,8 @@
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
                 "description": "Documentation for SONOREX SUPER RK 255 H is available on request.",
+                "tabSummary": "Specifications and instructions for use",
+                "ctaLabel": "Send My Requirement",
                 "cards": [
                   { "title": "Product Specification Sheet", "description": "Available on request" },
                   { "title": "Instructions for Use", "description": "Available on request" },
@@ -602,9 +744,166 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Simple rotary control, even SweepTec cavitation, and built-in heating in a compact 300 x 150 x 150 mm tank. Tell us what you're cleaning, and Inkarp will confirm the right configuration and accessories.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert"
+            },
+            "heroHook": "Simple rotary control, even cavitation, and heating built in for demanding cleaning work.",
+            "heroParagraphs": [
+              "Not every lab or workshop needs a digital interface to get consistent, powerful cleaning. RK 255 H is built around straightforward physical controls that still deliver the same cavitation quality as the digital range.",
+              "A single rotary handle sets both cleaning time and bath temperature directly, no menus to navigate. The fully automatic SweepTec function prevents standing waves in the ultrasonic field, so cleaning stays even across the entire tank, reaching hard-to-access spots on the objects inside it. IP 32 protection class construction, with a 300 x 150 x 150 mm internal tank, holds up to daily practice, laboratory, or workshop use."
+            ],
+            "statsTitle": "Quick Stats",
+            "statsIntro": "SONOREX SUPER RK 255 H at a glance: tank dimensions, control type, and protection rating.",
+            "showAllStats": true
+          },
+          "faqIntro": "Frequently asked questions about SONOREX SUPER RK 255 H cover its controls, protection rating, and pricing in India.",
+          "metricCalculators": [
+            {
+              "formula": "option-lookup",
+              "sectionId": "tank-fit",
+              "eyebrow": "Tank Fit Checker",
+              "title": "Confirm whether the RK 255 H's tank size suits your typical cleaning load.",
+              "promptTitle": "What are you cleaning, and how much of it at once?",
+              "description": "Select your object size and batch volume, and see whether RK 255 H fits or a larger tank suits better.",
+              "optionKey": "batch",
+              "options": [
+                { "val": "single", "label": "Single load", "cards": [{ "label": "Fit readout", "value": "RK 255 H fits" }] },
+                {
+                  "val": "multiple",
+                  "label": "Multiple items per cycle",
+                  "cards": [{ "label": "Fit readout", "value": "Inkarp confirms whether RK 255 H fits or a larger tank in the SUPER RK range suits your volume better" }]
+                }
+              ],
+              "choices": [
+                {
+                  "key": "objectType",
+                  "label": "Object type",
+                  "default": "instruments",
+                  "options": [{ "val": "instruments", "label": "Instruments" }, { "val": "glassware", "label": "Glassware" }, { "val": "parts", "label": "Small parts" }],
+                  "hint": "Instruments, glassware, or small parts"
+                },
+                {
+                  "key": "batch",
+                  "label": "Batch volume",
+                  "default": "single",
+                  "options": [{ "val": "single", "label": "Single load" }, { "val": "multiple", "label": "Multiple items per cycle" }],
+                  "hint": "Single load or multiple items per cycle"
+                },
+                {
+                  "key": "heating",
+                  "label": "Heating requirement",
+                  "default": "yes",
+                  "options": [{ "val": "yes", "label": "Yes" }, { "val": "no", "label": "No" }],
+                  "hint": "Confirmed, built into this model"
+                }
+              ],
+              "fields": [],
+              "choiceCards": [
+                {
+                  "key": "objectType",
+                  "label": "Internal tank",
+                  "values": {
+                    "instruments": "300 x 150 x 150 mm, sized for instrument sets, small parts, and lab glassware rather than bulk workshop loads",
+                    "glassware": "300 x 150 x 150 mm, sized for instrument sets, small parts, and lab glassware rather than bulk workshop loads",
+                    "parts": "300 x 150 x 150 mm, sized for instrument sets, small parts, and lab glassware rather than bulk workshop loads"
+                  }
+                },
+                { "key": "heating", "label": "Heating requirement", "values": { "yes": "Confirmed, built into this model", "no": "Included as standard on this model" } }
+              ],
+              "runLabel": "Check Tank Fit",
+              "emptyTitle": "Fit readout",
+              "emptyText": "Confirms RK 255 H fit or recommends a larger SUPER RK model.",
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
+              "requiresRun": true,
+              "ctaNote": "Routes to us for a configuration-specific quotation.",
+              "submitLabel": "Get Configuration Support",
+              "disclaimer": "Readouts restate Bandelin's published range and model information; Inkarp confirms the exact model and accessories for your application.",
+              "surface": "alt"
+            },
+            {
+              "formula": "option-lookup",
+              "sectionId": "accessory-builder",
+              "eyebrow": "Accessory Builder",
+              "title": "Build the right basket, lid, and cleaning concentrate combination for RK 255 H.",
+              "promptTitle": "What does your cleaning setup need?",
+              "description": "Select your loading and cleaning chemistry needs, and see the recommended accessories.",
+              "optionKey": "basket",
+              "options": [
+                {
+                  "val": "hanging",
+                  "label": "Hanging basket",
+                  "cards": [
+                    { "label": "Accessory readout", "value": "K 5 C hanging basket with EG 1 insert grille" },
+                    { "label": "Secure basket positioning", "value": "EK-series mounting brackets, sized to match" }
+                  ]
+                },
+                {
+                  "val": "insert",
+                  "label": "Insert cup",
+                  "cards": [{ "label": "Accessory readout", "value": "SD 06, PD 06, or EB 05 insert cups with lid and rubber ring" }]
+                },
+                {
+                  "val": "strainer",
+                  "label": "Strainer basket",
+                  "cards": [
+                    { "label": "Accessory readout", "value": "Strainer basket - Inkarp confirms the matching option for RK 255 H" },
+                    { "label": "Secure basket positioning", "value": "EK-series mounting brackets, sized to match" }
+                  ]
+                }
+              ],
+              "choices": [
+                {
+                  "key": "basket",
+                  "label": "Basket or insert need",
+                  "default": "hanging",
+                  "options": [{ "val": "hanging", "label": "Hanging basket" }, { "val": "insert", "label": "Insert cup" }, { "val": "strainer", "label": "Strainer basket" }],
+                  "hint": "Hanging basket, insert cup, or strainer basket"
+                },
+                {
+                  "key": "lid",
+                  "label": "Lid preference",
+                  "default": "standard",
+                  "options": [{ "val": "standard", "label": "Standard" }, { "val": "perforated", "label": "Perforated" }],
+                  "hint": "Standard or perforated"
+                },
+                {
+                  "key": "chemistry",
+                  "label": "Cleaning chemistry need",
+                  "default": "general",
+                  "options": [
+                    { "val": "general", "label": "General cleaning" },
+                    { "val": "disinfection", "label": "Disinfection" },
+                    { "val": "specialty", "label": "Specialty removal" }
+                  ],
+                  "hint": "General cleaning, disinfection, or specialty removal"
+                }
+              ],
+              "fields": [],
+              "choiceCards": [
+                { "key": "lid", "label": "Lid", "values": { "standard": "D 255 lid", "perforated": "DE 255 perforated lid for ventilated cycles" } },
+                {
+                  "key": "chemistry",
+                  "label": "Cleaning chemistry",
+                  "values": {
+                    "general": "Tickopur and Stammopur concentrates, matched to cleaning task - general instrument cleaning",
+                    "disinfection": "Tickopur and Stammopur concentrates, matched to cleaning task - drill disinfection",
+                    "specialty": "Tickopur and Stammopur concentrates, matched to cleaning task - gypsum removal"
+                  }
+                }
+              ],
+              "runLabel": "Show Accessory Readout",
+              "emptyTitle": "Accessory readout",
+              "emptyText": "Recommends the right basket, lid, and concentrate combination.",
+              "showRetry": true,
+              "retryLabel": "Retry With New Values",
+              "requiresRun": true,
+              "ctaNote": "Routes to us for a full-package quotation.",
+              "submitLabel": "Talk to Product Expert",
+              "disclaimer": "Readouts restate Bandelin's published range and model information; Inkarp confirms the exact model and accessories for your application.",
+              "surface": "white"
             }
-          }
+          ]
         }
       ]
     }

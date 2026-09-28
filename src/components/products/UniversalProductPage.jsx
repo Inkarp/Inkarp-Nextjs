@@ -158,7 +158,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
     },
     product.faqs?.length > 0 && {
       key: 'faq',
-      node: <FAQSection faqs={product.faqs} productName={product.name} />,
+      node: <FAQSection faqs={product.faqs} intro={product.faqIntro} productName={product.name} />,
     },
     product.booking && {
       key: 'demo-booking',
@@ -175,7 +175,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
       <ProductEngagementPopups productName={product.name} popups={product.popups} />
 
       {/* Stats bar */}
-      <StatsBar stats={lf.stats ?? product.stats ?? []} />
+      <StatsBar intro={lf.statsIntro} showAll={lf.showAllStats} stats={lf.stats ?? product.stats ?? []} title={lf.statsTitle} />
 
       {productSections.map(({ key, node }) => (
         <Fragment key={key}>

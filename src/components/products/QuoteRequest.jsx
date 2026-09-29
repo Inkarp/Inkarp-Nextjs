@@ -8,6 +8,7 @@ import QuoteDocument from "./QuoteDocument";
 import useQuoteBasket from "./useQuoteBasket";
 import { clearBasket, itemKey, pushBasketEvent, removeFromBasket } from "@/lib/quoteBasket";
 import { collectTracking } from "@/lib/browserTracking";
+import SubmitButton from "@/components/common/SubmitButton";
 import { validateQuoteRequest } from "@/lib/formValidation";
 import { workflowIndustries } from "@/data/homeShowcase";
 
@@ -315,15 +316,12 @@ export default function QuoteRequest() {
             ) : null}
           </div>
 
-          <button
+          <SubmitButton
             className="w-full border border-rose-200 bg-rose-50 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
-            disabled={loading}
-            type="submit"
+            sending={loading}
           >
-            {loading
-              ? "Sending..."
-              : `Request quote for ${basket.length === 1 ? "1 product" : `${basket.length} products`}`}
-          </button>
+            {`Request quote for ${basket.length === 1 ? "1 product" : `${basket.length} products`}`}
+          </SubmitButton>
         </form>
       </div>
     </div>

@@ -15,6 +15,7 @@ import {
   FiAlertCircle,
 } from"react-icons/fi";
 import { collectTracking } from"@/lib/browserTracking";
+import SubmitButton from"@/components/common/SubmitButton";
 import SectionHeading from"@/components/home/SectionHeading";
 
 const initialFormData = {
@@ -345,17 +346,17 @@ export default function CareersForm() {
           </div>
 
           <div className="flex justify-center pt-2">
-            <button
+            <SubmitButton
               className={`group relative overflow-hidden bg-rose-50 px-10 py-3 font-medium text-rose-700 transition ${
-                isSubmitting
-                  ?"cursor-not-allowed opacity-70"
-                  :"hover:-translate-y-0.5 hover:bg-red-soft"
+                isSubmitting ?"cursor-not-allowed" :"hover:-translate-y-0.5 hover:bg-red-soft"
               }`}
-              disabled={isSubmitting}
-              type="submit"
+              doneLabel="Application sent"
+              sending={isSubmitting}
+              sendingLabel="Submitting..."
+              succeeded={status.type ==="success"}
             >
-              {isSubmitting ?"Submitting..." :"Submit Application"}
-            </button>
+              Submit Application
+            </SubmitButton>
           </div>
         </div>
       </form>

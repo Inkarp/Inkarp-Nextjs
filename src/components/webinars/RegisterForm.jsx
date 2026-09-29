@@ -8,7 +8,6 @@ import {
   FiCalendar,
   FiCheckCircle,
   FiGlobe,
-  FiLoader,
   FiMail,
   FiMapPin,
   FiPhone,
@@ -17,6 +16,7 @@ import {
   FiX,
 } from"react-icons/fi";
 import { collectTracking } from"@/lib/browserTracking";
+import SubmitButton from"@/components/common/SubmitButton";
 import { getDaysLeft } from"@/data/webinars";
 
 const startOfToday = () => {
@@ -257,15 +257,18 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
                   {status.message}
                 </div>
               ) : null}
-              <button
+              <SubmitButton
                 className="inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-xl bg-red px-5 py-2.5 text-base font-semibold text-white shadow-lg shadow-red/15 transition hover:bg-[#a3000e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red disabled:cursor-not-allowed disabled:opacity-70"
-                disabled={isSubmitting || status.type === "success"}
-                type="submit"
+                disabled={status.type === "success"}
+                doneLabel="Registration complete"
+                keepDone
+                sending={isSubmitting}
+                sendingLabel="Registering..."
+                succeeded={status.type === "success"}
               >
-                {isSubmitting ? <FiLoader aria-hidden="true" className="size-5 animate-spin" /> : null}
-                {isSubmitting ? "Registering..." : status.type === "success" ? "Registration complete" : "Reserve my seat"}
-                {!isSubmitting && status.type !== "success" ? <FiArrowRight aria-hidden="true" className="size-5" /> : null}
-              </button>
+                Reserve my seat
+                <FiArrowRight aria-hidden="true" className="size-5" />
+              </SubmitButton>
               <p className="text-center text-xs leading-5 text-ink-soft">Joining information will be sent to your email.</p>
             </form>
           </div>

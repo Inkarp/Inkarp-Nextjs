@@ -4,6 +4,7 @@ import { useState } from "react";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import RecTag from "@/components/home/RecTag";
 import { collectTracking } from "@/lib/browserTracking";
+import SubmitButton from "@/components/common/SubmitButton";
 
 const inputClass =
   "w-full border border-line-light bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20";
@@ -219,15 +220,17 @@ export default function ServiceContactForm() {
                 value={form.department}
               />
 
-              <button
+              <SubmitButton
                 className={`mt-2 inline-flex border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 ${
-                  isSubmitting ? "cursor-not-allowed opacity-70" : "hover:-translate-y-0.5"
+                  isSubmitting ? "cursor-not-allowed" : "hover:-translate-y-0.5"
                 }`}
-                disabled={isSubmitting}
-                type="submit"
+                doneLabel="Request sent"
+                sending={isSubmitting}
+                sendingLabel="Submitting..."
+                succeeded={status.type === "success"}
               >
-                {isSubmitting ? "Submitting..." : "Submit Request"}
-              </button>
+                Submit Request
+              </SubmitButton>
             </form>
           </div>
         </div>

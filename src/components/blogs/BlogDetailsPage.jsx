@@ -17,6 +17,7 @@ import {
   getRecentPosts,
 } from"@/data/blogs";
 import { collectTracking } from"@/lib/browserTracking";
+import SubmitButton from"@/components/common/SubmitButton";
 
 function initials(name) {
   return name
@@ -360,13 +361,15 @@ export default function BlogDetailsPage({ post }) {
                     {commentStatus.message}
                   </div>
                 ) : null}
-                <button
+                <SubmitButton
                   className="col-span-1 w-fit border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:opacity-70 sm:col-span-2"
-                  disabled={isCommentSubmitting}
-                  type="submit"
+                  doneLabel="Comment posted"
+                  sending={isCommentSubmitting}
+                  sendingLabel="Posting..."
+                  succeeded={commentStatus.type ==="success"}
                 >
-                  {isCommentSubmitting ?"Posting..." :"Post Comment"}
-                </button>
+                  Post Comment
+                </SubmitButton>
               </form>
             </div>
           </article>

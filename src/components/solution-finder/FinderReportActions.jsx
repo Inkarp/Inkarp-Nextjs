@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FiDownload, FiEdit3, FiMail, FiShare2 } from "react-icons/fi";
 import { pushEvent } from "@/lib/analytics";
+import SubmitButton from "@/components/common/SubmitButton";
 
 const ACTION_CLASS = "inline-flex h-11 items-center gap-2 border border-white/20 px-4 text-sm font-semibold text-white transition hover:bg-white hover:text-ink";
 
@@ -56,7 +57,7 @@ export default function FinderReportActions({ sessionId }) {
         <form className="mt-3 max-w-md print:hidden" onSubmit={sendReport}>
           <div className="flex gap-2">
             <input aria-label="Email address" autoComplete="email" className="h-11 min-w-0 flex-1 border border-white/20 bg-white/10 px-3 text-sm text-white outline-none placeholder:text-white/50 focus:border-white/60" inputMode="email" onChange={(event) => setEmail(event.target.value)} placeholder="Email address" required type="email" value={email} />
-            <button className="h-11 shrink-0 bg-white px-4 text-sm font-semibold text-ink transition hover:bg-red hover:text-white disabled:opacity-60" disabled={sending} type="submit">{sending ? "Sending…" : "Send"}</button>
+            <SubmitButton className="h-11 shrink-0 bg-white px-4 text-sm font-semibold text-ink transition hover:bg-red hover:text-white disabled:opacity-60" sending={sending} sendingLabel="Sending…">Send</SubmitButton>
           </div>
           <p className="mt-2 text-[11px] leading-4 text-white/55">We&apos;ll email you a link to this report.</p>
         </form>

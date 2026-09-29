@@ -7,16 +7,12 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   FiClock,
   FiChevronDown,
-  FiFacebook,
-  FiInstagram,
-  FiLinkedin,
   FiMail,
   FiMenu,
   FiMapPin,
   FiPhoneCall,
   FiSearch,
   FiX,
-  FiYoutube,
 } from "react-icons/fi";
 // Festival/launch top banner — re-enable by uncommenting this import and its
 // usage below once there's real content ready in src/data/campaigns.js.
@@ -27,6 +23,7 @@ import RailUtilityDock from "@/components/common/RailUtilityDock";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
 import { siteConfig } from "@/data/siteConfig";
 import ProductProfileDownloadButton from "@/components/common/ProductProfileDownloadButton";
+import { SOCIAL_BRANDS, socialBrandStyle } from "@/components/common/socialBrands";
 
 const upcomingWebinarsCount = getUpcomingWebinarsCount();
 
@@ -96,12 +93,9 @@ export default function Header() {
 
   const productProfileUrl = "/assets/productProfile/Inkarp_product_profile_2026.pdf";
 
-  const socialLinks = [
-    { label: "LinkedIn", href: socials.linkedin, icon: FiLinkedin },
-    { label: "Facebook", href: socials.facebook, icon: FiFacebook },
-    { label: "Instagram", href: socials.instagram, icon: FiInstagram },
-    { label: "YouTube", href: socials.youtube, icon: FiYoutube },
-  ];
+  const socialLinks = Object.entries(socials)
+    .filter(([name]) => SOCIAL_BRANDS[name])
+    .map(([name, href]) => ({ ...SOCIAL_BRANDS[name], href }));
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -267,31 +261,34 @@ export default function Header() {
               ))}
             </nav>
             <div className="hidden h-5 w-px bg-ink/15 sm:block" />
-            {/* Same chip treatment as the footer socials: bordered square with
-                red corner ticks, filling red on hover. */}
-            <div className="flex items-center gap-2">
-              {socialLinks.map((item) => {
+            {/* Segmented pill in the footer's social theme: white tiles with brand-colour
+                logos, rounded at both ends of the row; the hovered tile grows 10% and
+                fills with its brand colour (colours from socialBrands.js). */}
+            <div aria-label="Social media links" className="flex items-center gap-1">
+              {socialLinks.map((item, index) => {
                 const Icon = item.icon;
+                const edge =
+                  index === 0 ? "rounded-l-2xl" : index === socialLinks.length - 1 ? "rounded-r-2xl" : "";
 
                 return (
-                  <Link
+                  <a
                     aria-label={item.label}
-                    className="group relative inline-flex size-8 items-center justify-center border border-ink/15 bg-ink/5 text-ink transition hover:-translate-y-0.5 hover:border-rose-300 hover:bg-white hover:text-rose-700"
+                    className={`group relative isolate inline-flex h-8 w-9 items-center justify-center overflow-hidden rounded bg-white text-sm shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] transition duration-200 ease-in-out hover:z-10 hover:scale-110 focus-visible:z-10 focus-visible:scale-110 focus-visible:outline-none ${edge}`}
                     href={item.href}
                     key={item.label}
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
+                    style={socialBrandStyle(item)}
                     target="_blank"
                   >
                     <span
                       aria-hidden="true"
-                      className="pointer-events-none absolute left-[-1px] top-[-1px] h-2 w-2 border-l border-t border-red"
+                      className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-200 ease-in-out [background:var(--social-fill)] group-hover:opacity-100 group-focus-visible:opacity-100"
                     />
-                    <span
+                    <Icon
                       aria-hidden="true"
-                      className="pointer-events-none absolute bottom-[-1px] right-[-1px] h-2 w-2 border-b border-r border-red"
+                      className="text-[color:var(--social-color)] transition-colors duration-200 ease-in-out group-hover:text-white group-focus-visible:text-white"
                     />
-                    <Icon aria-hidden="true" className="text-base" />
-                  </Link>
+                  </a>
                 );
               })}
             </div>

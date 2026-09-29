@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { collectTracking } from '@/lib/browserTracking';
+import SubmitButton from '@/components/common/SubmitButton';
 
 export default function LeadCaptureForm({
   className = '',
@@ -108,14 +109,13 @@ export default function LeadCaptureForm({
       {submitState === 'error' ? <p className="text-sm font-semibold text-red">{submitError}</p> : null}
 
       <div className="flex flex-wrap items-center gap-3">
-        <button
+        <SubmitButton
           className="inline-flex h-11 items-center justify-center gap-2 bg-rose-50 px-6 text-sm font-bold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
-          disabled={submitState === 'sending'}
-          type="submit"
+          sending={submitState === 'sending'}
         >
-          {submitState === 'sending' ? 'Sending...' : submitLabel ?? triggerLabel}
+          {submitLabel ?? triggerLabel}
           <FiArrowRight />
-        </button>
+        </SubmitButton>
         {!startExpanded ? (
           <button
             className="text-sm font-semibold text-ink-soft transition hover:text-red"

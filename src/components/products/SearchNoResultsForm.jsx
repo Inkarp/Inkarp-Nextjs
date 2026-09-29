@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FiArrowRight, FiCheckCircle, FiMail, FiPhone, FiSearch, FiUser } from "react-icons/fi";
 import { collectTracking } from "@/lib/browserTracking";
+import SubmitButton from "@/components/common/SubmitButton";
 
 const inputClass =
   "h-11 w-full border border-line-light bg-white px-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 focus:border-red focus:ring-2 focus:ring-red/20";
@@ -202,14 +203,15 @@ export default function SearchNoResultsForm({
           />
         </label>
 
-        <button
+        <SubmitButton
           className="inline-flex h-11 items-center justify-center gap-2 border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2 sm:w-fit"
-          disabled={isSubmitting}
-          type="submit"
+          doneLabel="Request sent"
+          sending={isSubmitting}
+          succeeded={status.type === "success"}
         >
-          {isSubmitting ? "Sending..." : "Send search request"}
+          Send search request
           <FiArrowRight aria-hidden="true" />
-        </button>
+        </SubmitButton>
       </form>
     </div>
   );

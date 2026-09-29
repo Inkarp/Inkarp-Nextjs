@@ -1,20 +1,19 @@
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
 import { FiArrowUpRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
+import { SOCIAL_BRANDS, socialBrandStyle } from "@/components/common/socialBrands";
 import { siteConfig } from "@/data/siteConfig";
 
-const socialIcons = {
-  facebook: FaFacebookF,
-  instagram: FaInstagram,
-  linkedin: FaLinkedinIn,
-  youtube: FaYoutube,
-};
+// The four socials are the quadrants of one circle (grid order: top-left, top-right,
+// bottom-left, bottom-right), after the Uiverse "social cards" by Praashoo7: each
+// tile's outer corner is a quarter circle (radius = tile size), the icon sits nudged
+// toward the circle's centre, and on hover / keyboard focus the tile scales up 10%.
+const SOCIAL_QUADRANTS = [
+  { tile: "rounded-tl-[40px]", icon: "translate-x-1 translate-y-1" },
+  { tile: "rounded-tr-[40px]", icon: "-translate-x-1 translate-y-1" },
+  { tile: "rounded-bl-[40px]", icon: "translate-x-1 -translate-y-1" },
+  { tile: "rounded-br-[40px]", icon: "-translate-x-1 -translate-y-1" },
+];
 
 // Small mono label with a red rule, echoing RecTag from the home sections.
 function FooterLabel({ children }) {
@@ -101,28 +100,42 @@ export default function Footer() {
               lab stays productive well past the day the instrument arrives.
             </p>
 
-            <p className="mt-5 inline-flex items-center gap-2 border border-line-light bg-parchment px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-soft">
-              <span aria-hidden="true" className="size-1.5 rounded-full bg-red" />
-              Reach Us &amp; 
-            </p>
+            {/* label and social circle side by side, so the circle doesn't add height to the footer */}
+            <div className="mt-5 flex items-center gap-5">
+              <p className="inline-flex items-center gap-2 border border-line-light bg-parchment px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-soft">
+                <span aria-hidden="true" className="size-1.5 rounded-full bg-red" />
+                Reach Us &amp;
+              </p>
 
-            <div aria-label="Social media links" className="mt-6 flex flex-wrap gap-2.5">
-              {Object.entries(socials).map(([name, href]) => {
-                const Icon = socialIcons[name];
-                return (
-                  <a
-                    aria-label={name}
-                    className="group relative inline-flex size-9 items-center justify-center border border-line-light bg-parchment text-ink-soft transition hover:-translate-y-0.5 hover:border-red hover:bg-red hover:text-white"
-                    href={href}
-                    key={name}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <CornerBrackets />
-                    {Icon ? <Icon /> : name}
-                  </a>
-                );
-              })}
+              <div aria-label="Social media links" className="grid w-fit shrink-0 grid-cols-2 gap-1">
+                {Object.entries(socials).map(([name, href], index) => {
+                  const brand = SOCIAL_BRANDS[name] ?? { label: name, color: "var(--ink)" };
+                  const Icon = brand.icon;
+                  const quadrant = SOCIAL_QUADRANTS[index % SOCIAL_QUADRANTS.length];
+                  return (
+                    <a
+                      aria-label={brand.label}
+                      className={`group relative isolate inline-flex size-10 items-center justify-center overflow-hidden rounded-md bg-parchment text-base shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] transition duration-200 ease-in-out hover:z-10 hover:scale-110 focus-visible:z-10 focus-visible:scale-110 focus-visible:outline-none ${quadrant.tile}`}
+                      href={href}
+                      key={name}
+                      rel="noopener noreferrer"
+                      style={socialBrandStyle(brand)}
+                      target="_blank"
+                    >
+                      {/* brand fill fades in on hover (opacity, so the Instagram gradient animates too) */}
+                      <span
+                        aria-hidden="true"
+                        className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-200 ease-in-out [background:var(--social-fill)] group-hover:opacity-100 group-focus-visible:opacity-100"
+                      />
+                      {Icon ? (
+                        <Icon className={`text-[color:var(--social-color)] transition-colors duration-200 ease-in-out group-hover:text-white group-focus-visible:text-white ${quadrant.icon}`} />
+                      ) : (
+                        brand.label
+                      )}
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

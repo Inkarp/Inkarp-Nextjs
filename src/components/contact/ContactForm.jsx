@@ -6,6 +6,7 @@ import { useState } from"react";
 import { FiArrowRight, FiClock, FiMail, FiMapPin, FiPhoneCall } from"react-icons/fi";
 import { siteConfig } from"@/data/siteConfig";
 import RecTag from"@/components/home/RecTag";
+import SubmitButton from"@/components/common/SubmitButton";
 import { collectTracking } from"@/lib/browserTracking";
 
 const inputClass ="min-h-14 w-full border border-line-light bg-parchment-alt px-5 text-sm font-medium text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/70 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/15";
@@ -301,45 +302,17 @@ export default function ContactForm() {
               placeholder="Write a message"
             />
 
-            <button
+            <SubmitButton
               className={`inline-flex h-13 w-full items-center justify-center gap-2 bg-rose-50 px-8 py-3.5 text-sm font-semibold text-rose-700 transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-red/40 sm:w-fit ${
-                isSubmitting
-                  ?"cursor-not-allowed opacity-70"
-                  :"hover:bg-transparent hover:text-red"
+                isSubmitting ? "cursor-not-allowed" : "hover:bg-transparent hover:text-red"
               }`}
-              disabled={isSubmitting}
-              type="submit"
+              doneLabel="Message sent"
+              sending={isSubmitting}
+              succeeded={status.type === "success"}
             >
-              {isSubmitting ? (
-                <>
-                  <svg
-                    className="size-5 animate-spin text-parchment motion-reduce:hidden"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-30"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    />
-                    <path
-                      className="opacity-80"
-                      d="M4 12a8 8 0 018-8V0a12 12 0 100 24v-4a8 8 0 01-8-8z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  Sending...
-                </>
-              ) : (
-                <>
-                  Send a message
-                  <FiArrowRight aria-hidden="true" />
-                </>
-              )}
-            </button>
+              Send a message
+              <FiArrowRight aria-hidden="true" />
+            </SubmitButton>
           </form>
         </div>
       </div>

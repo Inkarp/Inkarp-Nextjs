@@ -26,6 +26,7 @@ import {
 } from "@/data/chatbotConfig";
 import Image from "next/image";
 import { collectTracking } from "@/lib/browserTracking";
+import SubmitButton from "@/components/common/SubmitButton";
 import { pushEvent } from "@/lib/analytics";
 
 const INPUT_CLASS =
@@ -639,9 +640,9 @@ export default function FloatingChatbot() {
                     {serverError}
                   </p>
                 ) : null}
-                <button className={SUBMIT_BUTTON_CLASS} disabled={workflowSaving} type="submit">
-                  {workflowSaving ? "Submitting..." : "Continue to recommendation"} <FiSend />
-                </button>
+                <SubmitButton className={SUBMIT_BUTTON_CLASS} sending={workflowSaving} sendingLabel="Submitting...">
+                  Continue to recommendation <FiSend />
+                </SubmitButton>
               </form>
             ) : null}
 
@@ -743,9 +744,9 @@ export default function FloatingChatbot() {
                     {serverError}
                   </p>
                 ) : null}
-                <button className={SUBMIT_BUTTON_CLASS} disabled={submitting} type="submit">
-                  {submitting ? "Submitting..." : "Submit enquiry"} <FiSend />
-                </button>
+                <SubmitButton className={SUBMIT_BUTTON_CLASS} sending={submitting} sendingLabel="Submitting...">
+                  Submit enquiry <FiSend />
+                </SubmitButton>
               </form>
             ) : null}
 

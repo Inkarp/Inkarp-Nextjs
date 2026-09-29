@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import SectionHeader from './SectionHeader';
 import { collectTracking } from '@/lib/browserTracking';
+import SubmitButton from '@/components/common/SubmitButton';
 import { normaliseGstin, validateProductEnquiry } from '@/lib/formValidation';
 import { workflowIndustries } from '@/data/homeShowcase';
 
@@ -226,13 +227,12 @@ export default function DemoBooking({ data, productName }) {
                   ) : null}
                 </div>
 
-                <button
+                <SubmitButton
                   className="w-full border border-rose-200 bg-rose-50 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
-                  disabled={loading}
-                  type="submit"
+                  sending={loading}
                 >
-                  {loading ? 'Sending...' : (submitLabel ?? 'Request Quote - we will call you back')}
-                </button>
+                  {submitLabel ?? 'Request Quote - we will call you back'}
+                </SubmitButton>
               </form>
             )}
           </div>

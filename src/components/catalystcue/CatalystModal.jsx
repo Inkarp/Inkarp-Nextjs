@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from"react";
 import { MdClose } from"react-icons/md";
 import { collectTracking } from"@/lib/browserTracking";
+import SubmitButton from"@/components/common/SubmitButton";
 
 const initialFormData = {
   name:"",
@@ -164,13 +165,15 @@ export default function CatalystModal({ onClose }) {
               value={formData.mobileNumber}
             />
 
-            <button
+            <SubmitButton
               className="w-full bg-rose-50 py-2.5 text-rose-700 hover:bg-rose-100 disabled:opacity-60"
-              disabled={isSubmitting}
-              type="submit"
+              doneLabel="Request sent"
+              sending={isSubmitting}
+              sendingLabel="Submitting..."
+              succeeded={status ==="success"}
             >
-              {isSubmitting ?"Submitting..." :"Submit"}
-            </button>
+              Submit
+            </SubmitButton>
 
             {status ==="success" ? (
               <div className="border border-green-200 bg-green-50 px-3 py-2 text-center text-sm text-green-700">

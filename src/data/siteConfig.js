@@ -57,6 +57,7 @@ export const siteConfig = {
         {
           label: "CATALYSTCue",
           href: "/magazine",
+          logo: "/CatalystNew.svg",
         },
         {
           label: "Application Resources",

@@ -46,21 +46,22 @@ function isNavActive(item, pathname) {
   return item.children?.some((child) => pathname.startsWith(child.href));
 }
 
-function NavLabel({ item, mobile = false }) {
+function NavLabel({ item, mobile = false, child = false }) {
   if (!item.logo) {
     return item.label;
   }
 
+  // `child` = an entry inside a dropdown / mobile submenu, sized to its text rows.
+  const size = child ? "h-6 w-24" : mobile ? "h-8 w-36" : "h-6 w-24 xl:h-7 xl:w-28";
+
   return (
-    <span
-      className={`relative block rounded-md ${mobile ? "h-8 w-36" : "h-6 w-24 xl:h-7 xl:w-28"}`}
-    >
+    <span className={`relative block rounded-md ${size}`}>
       <Image
         alt={item.label}
-        className="object-contain"
+        className={`object-contain ${child ? "object-left" : ""}`}
         fill
         loading="eager"
-        sizes={mobile ? "144px" : "112px"}
+        sizes={child ? "96px" : mobile ? "144px" : "112px"}
         src={item.logo}
       />
     </span>
@@ -377,17 +378,23 @@ export default function Header() {
                                 <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#F67A45]/10 transition-transform duration-300 delay-[20ms] group-hover/child:scale-y-100 group-hover/child:delay-[40ms]" />
                                 <span className="pointer-events-none absolute inset-0 scale-y-0 bg-[#BE0010]/15 transition-transform duration-300 delay-0 group-hover/child:scale-y-100 group-hover/child:delay-[60ms]" />
 
-                                <span className="relative z-10 block overflow-hidden">
-                                  <span
-                                    aria-hidden="true"
-                                    className="absolute inset-0 block scale-y-0 text-red transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-100"
-                                  >
-                                    {child.label}
+                                {child.logo ? (
+                                  <span className="relative z-10">
+                                    <NavLabel child item={child} />
                                   </span>
-                                  <span className="block text-ink-soft transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-0 group-hover/child:delay-0">
-                                    {child.label}
+                                ) : (
+                                  <span className="relative z-10 block overflow-hidden">
+                                    <span
+                                      aria-hidden="true"
+                                      className="absolute inset-0 block scale-y-0 text-red transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-100"
+                                    >
+                                      {child.label}
+                                    </span>
+                                    <span className="block text-ink-soft transition-transform duration-300 delay-[60ms] group-hover/child:scale-y-0 group-hover/child:delay-0">
+                                      {child.label}
+                                    </span>
                                   </span>
-                                </span>
+                                )}
 
                                 {child.label === "Webinars" &&
                                 upcomingWebinarsCount > 0 ? (
@@ -507,7 +514,7 @@ export default function Header() {
                           key={child.label}
                           onClick={closeMenu}
                         >
-                          {child.label}
+                          {child.logo ? <NavLabel child item={child} /> : child.label}
                           {child.label === "Webinars" &&
                           upcomingWebinarsCount > 0 ? (
                             <span className="inline-flex items-center gap-1 rounded-full bg-[#E63946] px-2 py-0.5 text-[10px] font-bold uppercase text-parchment">

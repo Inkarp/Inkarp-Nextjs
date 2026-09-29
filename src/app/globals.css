@@ -504,14 +504,28 @@ html:has([data-popup-open]) [data-finder-launcher] {
 @keyframes solution-loader-breathe { 50% { box-shadow: 0 0 75px rgba(217,70,239,.8); transform: scale(1.08); } }
 @keyframes solution-stage-pulse { 0% { box-shadow: 0 0 0 0 rgba(232,121,249,.45); } 70%, 100% { box-shadow: 0 0 0 10px rgba(232,121,249,0); } }
 
+/* Service page hero: on desktop it fills the first screen below the header and
+   breadcrumb (2.5rem), with its two columns centred vertically in that space. */
+@media (min-width: 64rem) {
+  .service-hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - var(--header-spacer, 136px) - 2.5rem);
+  }
+}
+
 .profile-download-glow { animation: profile-glow-pulse 2.6s ease-in-out infinite; }
+/* stop pulsing on hover so the button's own hover shadow shows */
+.profile-download-glow:hover { animation: none; }
 .profile-download-progress {
-  background: linear-gradient(90deg,rgba(255,255,255,.55),rgba(255,255,255,.95));
+  background: linear-gradient(90deg,rgba(190,0,16,.35),rgba(190,0,16,.95));
   animation: profile-download-fill 1.6s ease forwards;
 }
+/* soft warm ring on the light button, keeping its raised resting shadow
+   (top highlight, red lip, drop shadow) underneath */
 @keyframes profile-glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(190,0,16,.32); }
-  50% { box-shadow: 0 0 16px 5px rgba(190,0,16,.26); }
+  0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 2px 0 rgba(190,0,16,.22), 0 8px 18px rgba(190,0,16,.14), 0 0 0 0 rgba(246,122,69,0); }
+  50% { box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 2px 0 rgba(190,0,16,.22), 0 8px 18px rgba(190,0,16,.14), 0 0 0 6px rgba(246,122,69,.16); }
 }
 @keyframes profile-download-fill { from { width: 0%; } to { width: 100%; } }
 @media (prefers-reduced-motion: reduce) {

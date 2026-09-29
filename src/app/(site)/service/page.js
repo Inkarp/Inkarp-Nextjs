@@ -24,24 +24,24 @@ export default function ServicePage() {
       <BreadcrumbJsonLd path="/service" />
       <PageBreadcrumbs path="/service" />
 
-      <section className="bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16">
-        <div className="mx-auto max-w-[1180px]">
-          <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="service-hero bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:py-6">
+        <div className="mx-auto w-full max-w-[1180px]">
+          <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
             <div>
               <RecTag>Service Support</RecTag>
-              <h1 className="max-w-[15ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
+              <h1 className="max-w-[15ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:max-w-none lg:text-[40px] xl:text-[44px]">
                 Service that keeps your lab
-                <em className="italic text-red"> running with confidence.</em>
+                <em className="italic text-red lg:block"> running with confidence.</em>
               </h1>
 
-              <p className="my-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg">
+              <p className="my-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg lg:my-4 lg:text-base">
                 At Inkarp Instruments, service is the backbone of our partnership with
                 scientists, researchers, and industries across India. Our factory-trained
                 engineers, application specialists, and service managers support every
                 instrument journey from installation to long-term maintenance.
               </p>
 
-              <div className="mb-9 grid max-w-[560px] gap-3 sm:grid-cols-3">
+              <div className="mb-9 grid max-w-[560px] gap-3 sm:grid-cols-3 lg:mb-6">
                 {servicePromises.map((promise) => (
                   <div key={promise} className="flex items-start gap-2 border border-line-light bg-parchment-alt p-3">
                     <FiCheckCircle className="mt-0.5 size-4 shrink-0 text-red" />
@@ -68,7 +68,12 @@ export default function ServicePage() {
             </div>
 
             <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-              <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-white">
+              {/* Box matches the banner's own 3:1 shape (5333 x 1775) so the whole
+                  "1000+ Installations" message shows instead of being cropped. */}
+              <div
+                className="relative w-full overflow-hidden border border-line-light bg-white"
+                style={{ aspectRatio: "5333 / 1775" }}
+              >
                 <Image
                   alt="Inkarp service engineer support"
                   className="object-cover object-center"

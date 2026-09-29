@@ -29,9 +29,10 @@ function useDownloadStage() {
   return [stage, start];
 }
 
-function StageIcon({ stage, className = "text-base" }) {
+function StageIcon({ stage, className = "text-base", onLight = false }) {
   if (stage === "preparing" || stage === "downloading") {
-    return <span aria-hidden="true" className="size-4 shrink-0 animate-spin rounded-full border-2 border-white/30 border-t-white" />;
+    const ring = onLight ? "border-red/25 border-t-red" : "border-white/30 border-t-white";
+    return <span aria-hidden="true" className={`size-4 shrink-0 animate-spin rounded-full border-2 ${ring}`} />;
   }
   if (stage === "done") {
     return <FiCheck aria-hidden="true" className={className} />;
@@ -40,6 +41,13 @@ function StageIcon({ stage, className = "text-base" }) {
 }
 
 const STAGE_LABEL = { idle: "Product Profile", preparing: "Preparing…", downloading: "Downloading…", done: "Downloaded" };
+
+// A light, raised pill: soft peach fill inside a red -> orange -> sand gradient
+// outline (the nav hover palette), with a thin red lip underneath so it reads as
+// a pressable button without a solid block of red. The resting shadow is also
+// in the profile-glow-pulse keyframes (globals.css), which own it while idle.
+const LIGHT_SURFACE =
+  "border-[1.5px] border-transparent [background:linear-gradient(180deg,#fff5f0,#ffe2d7)_padding-box,linear-gradient(110deg,#be0010_0%,#f67a45_55%,#d5bda2_100%)_border-box] hover:[background:linear-gradient(180deg,#ffece4,#ffd4c5)_padding-box,linear-gradient(110deg,#be0010_0%,#f67a45_55%,#d5bda2_100%)_border-box] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_2px_0_rgba(190,0,16,0.22),0_8px_18px_rgba(190,0,16,0.14)] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_3px_0_rgba(190,0,16,0.26),0_12px_24px_rgba(190,0,16,0.2)] active:translate-y-px active:shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_1px_0_rgba(190,0,16,0.22),0_4px_10px_rgba(190,0,16,0.12)]";
 
 export default function ProductProfileDownloadButton({ href, variant = "full" }) {
   const [stage, start] = useDownloadStage();
@@ -52,7 +60,7 @@ export default function ProductProfileDownloadButton({ href, variant = "full" })
   const shineSweep = (
     <span
       aria-hidden="true"
-      className="absolute inset-y-0 -left-1/2 -z-10 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-700 group-hover:translate-x-[450%]"
+      className="absolute inset-y-0 -left-1/2 -z-10 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-[#f67a45]/20 to-transparent transition-transform duration-700 group-hover:translate-x-[450%]"
     />
   );
   const progressBar = stage === "downloading"
@@ -64,13 +72,13 @@ export default function ProductProfileDownloadButton({ href, variant = "full" })
       <a
         aria-busy={busy}
         aria-label="Download product profile"
-        className={`profile-download-btn group relative isolate inline-flex size-11 items-center justify-center overflow-hidden rounded-full bg-[linear-gradient(110deg,#8f000c_0%,#be0010_45%,#e3232d_100%)] text-white shadow-[0_10px_24px_rgba(190,0,16,0.35)] ring-1 ring-white/15 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(190,0,16,0.45)] ${stage === "idle" ? "profile-download-glow" : ""}`}
+        className={`profile-download-btn group relative isolate inline-flex size-11 items-center justify-center overflow-hidden rounded-full text-red transition duration-300 hover:-translate-y-0.5 ${LIGHT_SURFACE} ${stage === "idle" ? "profile-download-glow" : ""}`}
         download
         href={href}
         onClick={handleClick}
       >
         {shineSweep}
-        <StageIcon stage={stage} />
+        <StageIcon onLight stage={stage} />
         {progressBar}
       </a>
     );
@@ -80,13 +88,13 @@ export default function ProductProfileDownloadButton({ href, variant = "full" })
     <a
       aria-busy={busy}
       aria-label="Download product profile"
-      className={`profile-download-btn group relative isolate inline-flex h-12 w-12 items-center justify-center gap-2.5 overflow-hidden rounded-full bg-[linear-gradient(110deg,#8f000c_0%,#be0010_45%,#e3232d_100%)] text-sm font-bold text-white shadow-[0_10px_26px_rgba(190,0,16,0.32)] ring-1 ring-white/15 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_34px_rgba(190,0,16,0.42)] xl:w-auto xl:px-5 2xl:px-6 ${stage === "idle" ? "profile-download-glow" : ""}`}
+      className={`profile-download-btn group relative isolate inline-flex h-12 w-12 items-center justify-center gap-2.5 overflow-hidden rounded-full text-sm font-bold text-ink transition duration-300 hover:-translate-y-0.5 xl:w-auto xl:pl-1.5 xl:pr-5 2xl:pr-6 ${LIGHT_SURFACE} ${stage === "idle" ? "profile-download-glow" : ""}`}
       download
       href={href}
       onClick={handleClick}
     >
       {shineSweep}
-      <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/25">
+      <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(135deg,#be0010,#e3232d)] text-white shadow-[0_4px_10px_rgba(190,0,16,0.28)]">
         <StageIcon className="text-sm" stage={stage} />
       </span>
       <span className="hidden xl:inline">{STAGE_LABEL[stage]}</span>

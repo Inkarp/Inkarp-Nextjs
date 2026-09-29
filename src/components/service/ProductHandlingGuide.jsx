@@ -65,7 +65,7 @@ const productData = [
   },
   {
     name: "Labstation I Glovebox Analyzer",
-    image: "/assets/images/productImages/Labstation/labstation-i-solvent-purification-system-sps.png",
+    image: "/assets/images/productImages/Labstation/labstation-i-glovebox-and-accessories.jpg",
     description: "Advanced inert-atmosphere control with safety features",
     dos: [
       "Purge and maintain inert atmosphere per SOP.",

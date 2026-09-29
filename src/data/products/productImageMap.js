@@ -148,7 +148,7 @@ export const productImageMap = {
   "maccor:model-4400": "/assets/images/productImages/Maccor/model-4400.png",
   "labstation-i:labstation-i-glovebox-and-accessories": "/assets/images/productImages/Labstation/labstation-i-glovebox-and-accessories.jpg",
   "labstation-i:labstation-i-size-configuration": "/assets/images/productImages/Labstation/labstation-i-size-configuration.jpg",
-  "labstation-i:labstation-i-solvent-purification-system-sps": "/assets/images/productImages/Labstation/labstation-i-solvent-purification-system-sps.png",
+  "labstation-i:labstation-i-solvent-purification-system-sps": "/assets/images/productImages/Labstation/sps.jpeg",
   "luzchem:laser-flash-photolysis": "/assets/images/productImages/Luzchem/laser-flash-photolysis.webp",
   "luzchem:solar-simulators-300-800-nm": "/assets/images/productImages/Luzchem/solar-simulators-300-800-nm.png",
   "luzchem:xenon-illuminator": "/assets/images/productImages/Luzchem/xenon-illuminator.webp",

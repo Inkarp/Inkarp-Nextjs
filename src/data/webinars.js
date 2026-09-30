@@ -1,6 +1,6 @@
-const WATERS_LOGO = "/assets/images/PrincipalLogos/RowTwo/waters.svg";
-const CHEMSPEED_LOGO = "/assets/images/PrincipalLogos/RowSix/Chemspeed.jpg";
-const METTLER_LOGO = "/assets/images/PrincipalLogos/RowTwo/Metller.svg";
+const WATERS_LOGO = "/assets/images/PrincipalLogos/waters.svg";
+const CHEMSPEED_LOGO = "/assets/images/PrincipalLogos/Chemspeed.jpg";
+const METTLER_LOGO = "/assets/images/PrincipalLogos/Metller.svg";
 
 export const webinars = [
   {

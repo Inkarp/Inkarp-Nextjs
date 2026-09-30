@@ -18,6 +18,7 @@ const GLOBE_SIZE = 320;
 const GLOBE_RADIUS = 150;
 const AUTO_SPIN_SPEED = 0.05;
 const LAND_TOPOLOGY_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json";
+const STATIC_PRINCIPAL_COUNT = 3;
 
 function useCountryGroups(productPrincipals) {
   return useMemo(() => {
@@ -74,22 +75,45 @@ function PrincipalCard({ principal }) {
 }
 
 // Logo-only showcase tile, intentionally not linked to a product/brand page.
-function StaticPrincipalLogo({ name, logo }) {
+// A principal without catalog products. With `href` it links out to the principal's
+// own website (new tab), styled like the catalog cards; without it, it's display only.
+function StaticPrincipalLogo({ name, logo, href }) {
+  const content = logo ? (
+    <span className={`relative h-9 w-full ${href ? "transition duration-300 group-hover:scale-[1.04]" : ""}`}>
+      <Image src={logo} alt={name} fill sizes="140px" className="object-contain" />
+    </span>
+  ) : (
+    <span className="text-xs font-semibold text-ink">{name}</span>
+  );
+
+  if (href) {
+    return (
+      <a
+        aria-label={`${name} (opens ${href.replace(/^https?:\/\//, "").replace(/\/$/, "")} in a new tab)`}
+        className="group relative flex h-[74px] items-center justify-center overflow-hidden rounded-xl border border-white/80 bg-white/90 p-3 shadow-[0_8px_24px_rgba(15,23,42,0.06)] ring-1 ring-black/[0.025] transition duration-300 hover:-translate-y-1 hover:border-red/25 hover:shadow-[0_16px_34px_rgba(190,0,16,0.13)]"
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {content}
+        <span className="absolute right-2 top-2 grid size-5 translate-x-1 -translate-y-1 place-items-center rounded-full bg-red text-white opacity-0 shadow-md transition duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+          <FiArrowUpRight aria-hidden="true" className="size-3" />
+        </span>
+      </a>
+    );
+  }
+
   return (
     <div
       aria-label={name}
       className="relative flex h-[74px] items-center justify-center overflow-hidden rounded-xl border border-white/80 bg-white/75 p-3 shadow-[0_8px_24px_rgba(15,23,42,0.05)] ring-1 ring-black/[0.025]"
     >
-      {logo ? (
-        <span className="relative h-9 w-full">
-          <Image src={logo} alt={name} fill sizes="140px" className="object-contain" />
-        </span>
-      ) : (
-        <span className="text-xs font-semibold text-ink">{name}</span>
-      )}
+      {content}
     </div>
   );
 }
+
+const BEING_WEBSITE = "https://beinglab.co.in/";
 
 export default function PrincipalsGlobe({ principals = [] }) {
   const { countries, allPrincipals } = useCountryGroups(principals);
@@ -337,7 +361,8 @@ export default function PrincipalsGlobe({ principals = [] }) {
     country.principals.length + (country.name === "China" ? 1 : 0);
   const visibleBrandCount = activeCountry
     ? countryBrandCount(activeCountry)
-    : visiblePrincipals.length;
+    : visiblePrincipals.length + STATIC_PRINCIPAL_COUNT;
+  const totalBrandCount = allPrincipals.length + STATIC_PRINCIPAL_COUNT;
 
   return (
     <section
@@ -358,7 +383,7 @@ export default function PrincipalsGlobe({ principals = [] }) {
           A global network of scientific leaders
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">
-          We represent {allPrincipals.length} principals across {countries.length} countries. Spin the
+          We represent {totalBrandCount} principals across {countries.length} countries. Spin the
           globe or pick a country to see who we bring to Indian labs.
         </p>
       </div>
@@ -406,7 +431,7 @@ export default function PrincipalsGlobe({ principals = [] }) {
           >
             All principals
             <span className={`text-[10px] normal-case tracking-normal ${!selected ? "text-white/80" : "text-ink-soft/70"}`}>
-              {allPrincipals.length}
+              {totalBrandCount}
             </span>
           </button>
           {countries.map((c) => (
@@ -449,12 +474,12 @@ export default function PrincipalsGlobe({ principals = [] }) {
             ))}
             {!activeCountry ? (
               <>
-                <StaticPrincipalLogo name="Being" logo={getPrincipalLogo("being")} />
+                <StaticPrincipalLogo href={BEING_WEBSITE} name="Being" logo={getPrincipalLogo("being")} />
                 <StaticPrincipalLogo name="Lumicks" logo={getPrincipalLogo("lumicks")} />
                 <StaticPrincipalLogo name="RotaChrom" logo={getPrincipalLogo("rotachrom")} />
               </>
             ) : activeCountry.name === "China" ? (
-              <StaticPrincipalLogo name="Being" logo={getPrincipalLogo("being")} />
+              <StaticPrincipalLogo href={BEING_WEBSITE} name="Being" logo={getPrincipalLogo("being")} />
             ) : null}
           </div>
         </div>

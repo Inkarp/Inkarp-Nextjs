@@ -268,12 +268,6 @@ export const productPrincipals = [
         "products": []
     },
     {
-        "slug": "khimod",
-        "principalName": "Khimod",
-        "countryOfOrigin": "France",
-        "products": []
-    },
-    {
         "slug": "hohsen-corp",
         "principalName": "Hohsen Corp",
         "countryOfOrigin": "Japan",

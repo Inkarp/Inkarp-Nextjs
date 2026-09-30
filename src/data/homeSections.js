@@ -187,7 +187,7 @@ export const groupCompanies = {
       name: "Collaborative Venture",
       displayName: "Advion Interchim Scientific",
       description: "Collaboration partner for specialized analytical and purification technologies.",
-      logo: "/assets/images/PrincipalLogos/RowOne/advion.png",
+      logo: "/assets/images/PrincipalLogos/advion.png",
       href: "/products?q=advion",
       year: "2015", // dummy — replace with the real partnership start year
     },

@@ -76,15 +76,18 @@ function SlideAbout() {
   return (
     <div className="bg-white px-4 pb-8 pt-5 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+        <div className="grid grid-cols-1 items-start gap-8 sm:gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
           <div className="flex flex-col">
-            <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
-              <div className="relative flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:h-[104px] sm:w-[104px]">
+            {/* Phones: the badge floats right of the tag and heading, and the
+                heading's lower lines run full width beneath it. From sm the
+                badge leads the row. */}
+            <div className="mb-4 flow-root sm:mb-6 sm:flex sm:items-start sm:gap-6">
+              <div className="relative float-right mb-1 ml-3 flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:float-none sm:mb-0 sm:ml-0 sm:h-[104px] sm:w-[104px]">
                 <div className="absolute inset-2 rounded-full border border-dashed border-red/40" />
                 <span className="text-[19px] font-semibold tracking-wide">1985</span>
                 <span className="mt-0.5 text-[8.5px] uppercase tracking-[0.16em]">Est. &amp; Trusted</span>
               </div>
-              <div>
+              <div className="sm:min-w-0 sm:flex-1">
                 <RecTag>About Inkarp</RecTag>
                 {/* Page-level h1 — the only one on the homepage. Every other
                     section heads with an h2. */}
@@ -96,13 +99,13 @@ function SlideAbout() {
               </div>
             </div>
 
-            <p className="my-4 max-w-[520px] text-base leading-relaxed text-ink-soft sm:text-lg">
+            <p className="max-w-[520px] text-base leading-relaxed text-ink-soft sm:my-4 sm:text-lg">
               Since 1985, Inkarp has helped Indian laboratories move from scientific need to
               supported use — bringing together global principals, product lines, application
               guidance, installation support, and service across India.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3.5 lg:mt-auto lg:pb-1">
+            <div className="mt-5 flex flex-wrap gap-3.5 sm:mt-8 lg:mt-auto lg:pb-1">
               <Link
                 href="/products"
                 className="border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"

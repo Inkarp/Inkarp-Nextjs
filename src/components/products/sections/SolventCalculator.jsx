@@ -171,7 +171,9 @@ export default function SolventCalculator({ calculatorData, simulatorData, produ
             </div>
           </div>
 
-          <div className="space-y-3">
+          {/* The headline figure absorbs any spare height on desktop so this
+              column ends level with the inputs. */}
+          <div className="flex flex-col gap-3">
             <div className="border border-line-light bg-parchment p-5">
               {resultRows.map((row, index, rows) => (
                 <div className={`flex items-center justify-between gap-6 py-3 ${index < rows.length - 1 ? 'border-b border-line-light' : ''}`} key={row.label}>
@@ -181,11 +183,11 @@ export default function SolventCalculator({ calculatorData, simulatorData, produ
               ))}
             </div>
 
-            <div className="border border-line-light bg-parchment-alt px-6 py-6 text-center">
-              <div className="text-5xl font-semibold tracking-tight leading-none text-red sm:text-6xl">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment-alt px-5 py-4 text-center lg:flex-1">
+              <div className="text-3xl font-semibold leading-none tracking-tight text-red sm:text-4xl">
                 {Math.round(annualRecoveredLitres).toLocaleString('en-IN')}
               </div>
-              <p className="mt-2 text-sm font-semibold text-ink-soft">
+              <p className="mt-1.5 text-xs font-semibold text-ink-soft">
                 {calculatorData?.heroLabel ?? ''}
               </p>
             </div>

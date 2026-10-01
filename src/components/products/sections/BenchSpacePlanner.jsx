@@ -155,52 +155,54 @@ export default function BenchSpacePlanner({ data, productName }) {
             </div>
           </div>
 
-          <div className="grid gap-3">
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+          {/* Result cards share the input panel's height on desktop, so both
+              columns end level (same treatment as MetricCalculator). */}
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiGrid className="text-red" />
                 Physical stations by footprint
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-red">{results.physicalStations}</div>
-              <p className="mt-2 text-xs leading-5 text-ink-soft">
+              <div className="mt-1.5 text-2xl font-semibold leading-tight tracking-tight text-red sm:text-3xl">{results.physicalStations}</div>
+              <p className="mt-1.5 text-xs leading-5 text-ink-soft">
                 Based on {width} mm width plus {clearance} mm clearance per station.
               </p>
             </div>
 
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiTool className="text-red" />
                 Hei-Mix S stations to review
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-ink">{results.heiMixStations}</div>
-              <p className="mt-2 text-xs leading-5 text-ink-soft">
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">{results.heiMixStations}</div>
+              <p className="mt-1.5 text-xs leading-5 text-ink-soft">
                 Heating and above-5 L stations are separated for alternate Heidolph models.
               </p>
             </div>
 
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiVolume2 className="text-red" />
                 Noise and load note
               </p>
-              <div className="mt-3 text-2xl font-semibold tracking-tight text-ink">{noise}</div>
-              <p className="mt-2 text-xs leading-5 text-ink-soft">
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">{noise}</div>
+              <p className="mt-1.5 text-xs leading-5 text-ink-soft">
                 Each unit weighs {weight} kg. Confirm filled vessel weight against the 6 kg load limit.
               </p>
             </div>
 
-            <div className={`border p-5 ${results.depthOk && results.unservedStations === 0 ? 'border-line-light bg-parchment' : 'border-red bg-red text-white'}`}>
-              <p className={`text-sm font-semibold ${results.depthOk && results.unservedStations === 0 ? 'text-ink-soft' : 'text-white/80'}`}>
+            <div className={`flex flex-col justify-center border px-4 py-3 sm:px-5 sm:py-4 lg:flex-1 ${results.depthOk && results.unservedStations === 0 ? 'border-line-light bg-parchment' : 'border-red bg-red text-white'}`}>
+              <p className={`text-xs font-semibold ${results.depthOk && results.unservedStations === 0 ? 'text-ink-soft' : 'text-white/80'}`}>
                 Planning signal
               </p>
-              <div className="mt-3 text-2xl font-semibold tracking-tight">
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight sm:text-xl">
                 {!results.depthOk
                   ? 'Depth needs review'
                   : results.unservedStations > 0
                     ? `${results.unservedStations} station gap`
                     : 'Bench plan fits'}
               </div>
-              <p className={`mt-2 text-sm leading-6 ${results.depthOk && results.unservedStations === 0 ? 'text-ink-soft' : 'text-white/85'}`}>
+              <p className={`mt-1.5 text-xs leading-5 ${results.depthOk && results.unservedStations === 0 ? 'text-ink-soft' : 'text-white/85'}`}>
                 {data.resultNote}
               </p>
             </div>

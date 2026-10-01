@@ -160,38 +160,40 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
             />
           </div>
 
-          <div className="space-y-3">
+          {/* Result cards share the input panel's height on desktop, so both
+              columns end level (same treatment as MetricCalculator). */}
+          <div className="flex flex-col gap-3">
             {isPaybackMode ? (
               <>
-                <div className="border border-line-light bg-parchment-alt p-5 sm:p-6">
-                  <p className="text-sm font-semibold text-ink-soft">Estimated payback period</p>
-                  <div className="mt-4 text-4xl font-semibold tracking-tight leading-none text-red sm:text-5xl">
+                <div className="flex flex-col justify-center border border-line-light bg-parchment-alt px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+                  <p className="text-xs font-semibold text-ink-soft">Estimated payback period</p>
+                  <div className="mt-1.5 text-2xl font-semibold leading-tight tracking-tight text-red sm:text-3xl">
                     {results.paybackMonths ? `${results.paybackMonths} months` : '-'}
                   </div>
                 </div>
 
-                <div className="border border-line-light bg-parchment p-5 sm:p-6">
-                  <p className="text-sm font-semibold text-black">Total annual value</p>
-                  <div className="mt-4 text-3xl font-semibold leading-none tracking-tight text-ink sm:text-4xl">
+                <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+                  <p className="text-xs font-semibold text-black">Total annual value</p>
+                  <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">
                     {formatCurrency(results.totalAnnualValue, currencySymbol)}
                   </div>
                 </div>
 
-                <div className="border border-line-light bg-parchment p-5 sm:p-6">
-                  <p className="text-sm font-semibold text-black">5-year net value (after purchase)</p>
-                  <div className="mt-4 text-3xl font-semibold leading-none tracking-tight text-ink sm:text-4xl">
+                <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+                  <p className="text-xs font-semibold text-black">5-year net value (after purchase)</p>
+                  <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">
                     {formatCurrency(results.fiveYearNetValue, currencySymbol)}
                   </div>
                 </div>
               </>
             ) : (
-              <div className="border border-line-light bg-parchment-alt p-5 sm:p-6">
-                <p className="text-sm font-semibold text-ink-soft">{data?.totalValueLabel ?? 'Current total annual cost'}</p>
-                <div className="mt-4 text-4xl font-semibold tracking-tight leading-none text-red sm:text-5xl">
+              <div className="flex flex-col justify-center border border-line-light bg-parchment-alt px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+                <p className="text-xs font-semibold text-ink-soft">{data?.totalValueLabel ?? 'Current total annual cost'}</p>
+                <div className="mt-1.5 text-2xl font-semibold leading-tight tracking-tight text-red sm:text-3xl">
                   {formatCurrency(results.totalAnnualValue, currencySymbol)}
                 </div>
                 {data?.totalValueNote && (
-                  <p className="mt-3 text-sm leading-6 text-ink-soft">{data.totalValueNote}</p>
+                  <p className="mt-1.5 text-xs leading-5 text-ink-soft">{data.totalValueNote}</p>
                 )}
               </div>
             )}

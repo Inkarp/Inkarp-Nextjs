@@ -142,32 +142,34 @@ export default function UnattendedHoursPlanner({ data, productName }) {
             </div>
           </div>
 
-          <div className="grid gap-3">
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+          {/* Result cards share the input panel's height on desktop, so both
+              columns end level (same treatment as MetricCalculator). */}
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiClock className="text-red" />
                 Operator hours to review per year
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-red">{results.annualOperatorHours}</div>
+              <div className="mt-1.5 text-2xl font-semibold leading-tight tracking-tight text-red sm:text-3xl">{results.annualOperatorHours}</div>
             </div>
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiClock className="text-red" />
                 Unattended processing window per year
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-ink">{results.annualIdleWindow}</div>
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">{results.annualIdleWindow}</div>
             </div>
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiTrendingUp className="text-red" />
                 Annual solvent volume to assess
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-ink">{results.annualSolventVolume} L</div>
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">{results.annualSolventVolume} L</div>
             </div>
-            <div className="border border-line-light bg-red p-5 text-white">
-              <p className="text-sm font-semibold text-white/80">Planner signal</p>
-              <div className="mt-3 text-3xl font-semibold tracking-tight">{results.caseStrength}</div>
-              <p className="mt-3 text-sm leading-6 text-white/85">
+            <div className="flex flex-col justify-center border border-line-light bg-red px-4 py-3 text-white sm:px-5 sm:py-4 lg:flex-1">
+              <p className="text-xs font-semibold text-white/80">Planner signal</p>
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight sm:text-xl">{results.caseStrength}</div>
+              <p className="mt-1.5 text-xs leading-5 text-white/85">
                 {data?.resultNote}
               </p>
             </div>

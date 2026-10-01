@@ -148,37 +148,39 @@ export default function ServiceLifePlanner({ data, productName }) {
             </div>
           </div>
 
-          <div className="grid gap-3">
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+          {/* Result cards share the input panel's height on desktop, so both
+              columns end level (same treatment as MetricCalculator). */}
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiShield className="text-red" />
                 Replacement events to review
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-red">{results.replacementEvents}</div>
-              <p className="mt-2 text-xs leading-5 text-ink-soft">Inside a {warrantyYears}-year registered warranty window.</p>
+              <div className="mt-1.5 text-2xl font-semibold leading-tight tracking-tight text-red sm:text-3xl">{results.replacementEvents}</div>
+              <p className="mt-1.5 text-xs leading-5 text-ink-soft">Inside a {warrantyYears}-year registered warranty window.</p>
             </div>
 
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiClock className="text-red" />
                 Annual run hours across fleet
               </p>
-              <div className="mt-3 text-4xl font-semibold tracking-tight text-ink">{results.annualRunHours}</div>
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">{results.annualRunHours}</div>
             </div>
 
-            <div className="border border-line-light bg-parchment p-5">
-              <p className="flex items-center gap-2 text-sm font-semibold text-ink-soft">
+            <div className="flex flex-col justify-center border border-line-light bg-parchment px-4 py-3 sm:px-5 sm:py-4 lg:flex-1">
+              <p className="flex items-center gap-2 text-xs font-semibold text-ink-soft">
                 <FiZap className="text-red" />
                 Annual energy estimate
               </p>
-              <div className="mt-3 text-3xl font-semibold tracking-tight text-ink">{results.annualRunKwh + results.annualStandbyKwh} kWh</div>
-              <p className="mt-2 text-xs leading-5 text-ink-soft">Uses {normalPowerW} W running and {standbyPowerW} W standby.</p>
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-ink sm:text-xl">{results.annualRunKwh + results.annualStandbyKwh} kWh</div>
+              <p className="mt-1.5 text-xs leading-5 text-ink-soft">Uses {normalPowerW} W running and {standbyPowerW} W standby.</p>
             </div>
 
-            <div className="border border-line-light bg-red p-5 text-white">
-              <p className="text-sm font-semibold text-white/80">Planner signal</p>
-              <div className="mt-3 text-3xl font-semibold tracking-tight">{results.reviewSignal}</div>
-              <p className="mt-3 text-sm leading-6 text-white/85">{data.resultNote}</p>
+            <div className="flex flex-col justify-center border border-line-light bg-red px-4 py-3 text-white sm:px-5 sm:py-4 lg:flex-1">
+              <p className="text-xs font-semibold text-white/80">Planner signal</p>
+              <div className="mt-1.5 text-lg font-semibold leading-snug tracking-tight sm:text-xl">{results.reviewSignal}</div>
+              <p className="mt-1.5 text-xs leading-5 text-white/85">{data.resultNote}</p>
             </div>
           </div>
         </div>

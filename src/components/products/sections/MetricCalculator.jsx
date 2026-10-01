@@ -963,9 +963,11 @@ export default function MetricCalculator({ data, productName = 'this product' })
             ) : null}
           </div>
 
-          <div className="min-w-0 space-y-3">
+          {/* On desktop the result cards share the input panel's height equally,
+              so both columns end level and every card is the same height. */}
+          <div className="flex min-w-0 flex-col gap-3">
             {!results ? (
-              <div className="flex min-h-[280px] items-center justify-center border border-dashed border-line-light bg-parchment-alt p-6 text-center">
+              <div className="flex min-h-[280px] items-center justify-center border border-dashed border-line-light bg-parchment-alt p-6 text-center lg:flex-1">
                 <div>
                   <p className="text-lg font-semibold text-ink">{data?.emptyTitle ?? 'Your test-cycle output will appear here'}</p>
                   <p className="mt-2 text-sm leading-6 text-ink-soft">{data?.emptyText ?? 'Choose the conditions and chamber model, then run the test cycle.'}</p>
@@ -979,27 +981,27 @@ export default function MetricCalculator({ data, productName = 'this product' })
               // the card, so long text drops to a smaller, wrap-friendly size.
               const isLongText = typeof card.value === 'string' && card.value.length > 20;
               const valueSizeClass = isLongText
-                ? 'text-lg leading-snug sm:text-xl'
+                ? 'text-sm leading-snug sm:text-base'
                 : card.primary
-                  ? 'text-4xl leading-none sm:text-5xl'
-                  : 'text-2xl leading-none sm:text-3xl';
+                  ? 'text-2xl leading-tight sm:text-3xl'
+                  : 'text-lg leading-snug sm:text-xl';
 
               return (
               <div
-                className={`border border-line-light p-5 sm:p-6 ${card.primary ? 'bg-parchment-alt' : 'bg-parchment'}`}
+                className={`flex flex-col justify-center border border-line-light px-4 py-3 sm:px-5 sm:py-4 lg:flex-1 ${card.primary ? 'bg-parchment-alt' : 'bg-parchment'}`}
                 key={card.label}
               >
-                <p className={`text-sm font-semibold ${card.primary ? 'text-ink-soft' : 'text-black'}`}>
+                <p className={`text-xs font-semibold ${card.primary ? 'text-ink-soft' : 'text-black'}`}>
                   {card.label}
                 </p>
                 <div
-                  className={`mt-4 font-semibold tracking-tight ${valueSizeClass} ${
+                  className={`mt-1.5 font-semibold tracking-tight ${valueSizeClass} ${
                     card.primary ? 'text-red' : 'text-ink'
                   }`}
                 >
                   {card.value}
                 </div>
-                {card.note ? <p className="mt-3 text-sm leading-6 text-ink-soft">{card.note}</p> : null}
+                {card.note ? <p className="mt-1.5 text-xs leading-5 text-ink-soft">{card.note}</p> : null}
               </div>
               );
             })}

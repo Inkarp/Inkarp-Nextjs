@@ -68,6 +68,48 @@ function NavLabel({ item, mobile = false, child = false }) {
   );
 }
 
+/**
+ * Segmented pill in the footer's social theme: white tiles with brand-colour
+ * logos, rounded at both ends of the row; the hovered tile grows 10% and fills
+ * with its brand colour (colours from socialBrands.js). `compact` is the
+ * smaller size that shares the email/phone row on phones. The caller passes
+ * the display classes, so each copy can show at its own breakpoint.
+ */
+function SocialTiles({ className = "", compact = false, links }) {
+  const tileSize = compact ? "size-[22px] text-[11px]" : "h-8 w-9 text-sm";
+
+  return (
+    <div aria-label="Social media links" className={`items-center ${compact ? "gap-0.5" : "gap-1"} ${className}`}>
+      {links.map((item, index) => {
+        const Icon = item.icon;
+        const edge =
+          index === 0 ? "rounded-l-2xl" : index === links.length - 1 ? "rounded-r-2xl" : "";
+
+        return (
+          <a
+            aria-label={item.label}
+            className={`group relative isolate inline-flex ${tileSize} items-center justify-center overflow-hidden rounded bg-white shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] transition duration-200 ease-in-out hover:z-10 hover:scale-110 focus-visible:z-10 focus-visible:scale-110 focus-visible:outline-none ${edge}`}
+            href={item.href}
+            key={item.label}
+            rel="noopener noreferrer"
+            style={socialBrandStyle(item)}
+            target="_blank"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-200 ease-in-out [background:var(--social-fill)] group-hover:opacity-100 group-focus-visible:opacity-100"
+            />
+            <Icon
+              aria-hidden="true"
+              className="text-[color:var(--social-color)] transition-colors duration-200 ease-in-out group-hover:text-white group-focus-visible:text-white"
+            />
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function Header() {
   const { company, contact, navigation, socials } = siteConfig;
   const pathname = usePathname();
@@ -219,28 +261,30 @@ export default function Header() {
           }`}
       >
         <div className="mx-auto flex max-w-[1480px] flex-col gap-3 px-4 py-3 text-xs font-semibold sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-ink-soft">
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-2 text-[11px] text-ink-soft sm:gap-x-6 sm:text-xs">
             <Link
-              className="inline-flex items-center gap-2 transition hover:text-red hover:underline "
+              className="inline-flex items-center gap-1 transition hover:text-red hover:underline sm:gap-2"
               href={`mailto:${contact.email}`}
             >
               <FiMail className="text-red" />
               {contact.email}
             </Link>
             <a
-              className="inline-flex items-center gap-2 transition hover:text-red hover:underline"
+              className="inline-flex items-center gap-1 transition hover:text-red hover:underline sm:gap-2"
               href={`tel:${contact.phone}`}
             >
               <FiPhoneCall className="text-red" />
               {contact.phone}
             </a>
+            {/* On phones the icons join this row, smaller, instead of taking a row of their own. */}
+            <SocialTiles className="ml-auto flex sm:hidden" compact links={socialLinks} />
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <nav aria-label="Quick links" className="flex items-center gap-1">
+          <div className="flex flex-wrap items-center gap-4 text-[11px] sm:text-xs">
+            <nav aria-label="Quick links" className="flex flex-wrap items-center gap-1">
               {topLinks.map((link) => (
                 <Link
-                  className="group/top relative inline-flex items-center overflow-hidden px-2 py-1"
+                  className="group/top relative inline-flex items-center overflow-hidden whitespace-nowrap px-1 py-1 sm:px-2"
                   href={link.href}
                   key={link.href}
                 >
@@ -264,37 +308,7 @@ export default function Header() {
               ))}
             </nav>
             <div className="hidden h-5 w-px bg-ink/15 sm:block" />
-            {/* Segmented pill in the footer's social theme: white tiles with brand-colour
-                logos, rounded at both ends of the row; the hovered tile grows 10% and
-                fills with its brand colour (colours from socialBrands.js). */}
-            <div aria-label="Social media links" className="flex items-center gap-1">
-              {socialLinks.map((item, index) => {
-                const Icon = item.icon;
-                const edge =
-                  index === 0 ? "rounded-l-2xl" : index === socialLinks.length - 1 ? "rounded-r-2xl" : "";
-
-                return (
-                  <a
-                    aria-label={item.label}
-                    className={`group relative isolate inline-flex h-8 w-9 items-center justify-center overflow-hidden rounded bg-white text-sm shadow-[rgba(50,50,93,0.25)_0px_2px_5px_-1px,rgba(0,0,0,0.3)_0px_1px_3px_-1px] transition duration-200 ease-in-out hover:z-10 hover:scale-110 focus-visible:z-10 focus-visible:scale-110 focus-visible:outline-none ${edge}`}
-                    href={item.href}
-                    key={item.label}
-                    rel="noopener noreferrer"
-                    style={socialBrandStyle(item)}
-                    target="_blank"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-200 ease-in-out [background:var(--social-fill)] group-hover:opacity-100 group-focus-visible:opacity-100"
-                    />
-                    <Icon
-                      aria-hidden="true"
-                      className="text-[color:var(--social-color)] transition-colors duration-200 ease-in-out group-hover:text-white group-focus-visible:text-white"
-                    />
-                  </a>
-                );
-              })}
-            </div>
+            <SocialTiles className="hidden sm:flex" links={socialLinks} />
           </div>
         </div>
       </div>

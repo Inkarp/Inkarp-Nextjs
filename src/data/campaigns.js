@@ -11,7 +11,53 @@
 // dated campaign is running. Add an entry here only once it's real, ready
 // content. The commented-out entries further down are placeholder examples kept
 // for reference/reuse; uncomment and update one when you actually want it live.
+//
+// Dates are calendar days in India (IST) and both ends are inclusive, so every
+// visitor sees the same window whatever their own timezone. An entry with a
+// `mark` also puts that ornament beside the header logo while it runs.
+//
+// To see an entry before its dates, open the homepage with a preview link:
+//   /?campaign=diwali-2026            that entry, whatever today's date is
+//   /?campaign-date=2026-11-08        whatever would run on that day
+// Previews only change the visitor's own browser and work even when
+// CAMPAIGNS_ENABLED is off.
 import { getUpcomingWebinarDate, webinars } from "./webinars";
+
+/** Master switch: false hides every campaign surface without touching the entries. */
+export const CAMPAIGNS_ENABLED = true;
+
+const INDIA_DATE = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Kolkata",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+/**
+ * Today's date in India as "YYYY-MM-DD". The server and every browser get the
+ * same answer, so the prerendered strip and the hydrated one agree.
+ */
+export function todayInIndia(now = new Date()) {
+  return INDIA_DATE.format(now);
+}
+
+const DATE_KEY = /^\d{4}-\d{2}-\d{2}$/;
+
+function toDateKey(value) {
+  if (typeof value === "string" && DATE_KEY.test(value.slice(0, 10))) {
+    return value.slice(0, 10);
+  }
+  return todayInIndia(value instanceof Date ? value : new Date(value));
+}
+
+/** Whole days from one "YYYY-MM-DD" to another; integers only, so it is hydration-safe. */
+export function daysBetween(fromKey, toKey) {
+  const toUtc = (key) => {
+    const [year, month, day] = key.split("-").map(Number);
+    return Date.UTC(year, month - 1, day);
+  };
+  return Math.round((toUtc(toKey) - toUtc(fromKey)) / 86400000);
+}
 
 /**
  * The stripe for the webinar happening furthest in the future. Derived from the
@@ -88,6 +134,67 @@ export const campaigns = [
     end: "2026-09-18",
     priority: 7,
   },
+  // Festival designs for Navratri, Dussehra and Diwali 2026 are ready but on
+  // hold (2026-10-01). Uncomment this block to switch them on; the dates are
+  // already verified. Preview links only work for entries that are uncommented.
+  /*
+  {
+    // Nine nights of Sharad Navratri. Verified 2026-10-01 against public
+    // festival calendars: Sun 11 Oct – Mon 19 Oct 2026. Lunar date, re-verify
+    // next year. The slide lights one lamp per night, counted from `start`.
+    id: "navratri-2026",
+    type: "festival",
+    variant: "navratri",
+    mark: "diya",
+    icon: "🪔",
+    accent: "gold",
+    title: "Happy Navratri",
+    message: "Nine nights of devotion, colour and celebration. May the Goddess bless you and your family with strength, joy and prosperity.",
+    nights: 9,
+    cta: null,
+    exclusive: true,
+    start: "2026-10-11",
+    end: "2026-10-19",
+    priority: 7,
+  },
+  {
+    // Vijayadashami, the day after the ninth night: Tue 20 Oct 2026 (verified
+    // 2026-10-01). Same design as Navratri with every lamp lit.
+    id: "dussehra-2026",
+    type: "festival",
+    variant: "navratri",
+    finale: true,
+    mark: "diya",
+    icon: "🏹",
+    accent: "gold",
+    title: "Happy Dussehra",
+    message: "May the victory of good over evil light the way for you and your loved ones. Warm wishes on Vijayadashami from Team Inkarp.",
+    nights: 9,
+    cta: null,
+    exclusive: true,
+    start: "2026-10-20",
+    end: "2026-10-20",
+    priority: 7,
+  },
+  {
+    // Five-day festival, Dhanteras to Bhai Dooj. Verified 2026-10-01: Dhanteras
+    // Fri 6 Nov, Lakshmi Puja Sun 8 Nov, Bhai Dooj Tue 10 Nov 2026. Lunar date,
+    // re-verify next year.
+    id: "diwali-2026",
+    type: "festival",
+    variant: "diwali",
+    mark: "diya",
+    icon: "🪔",
+    accent: "gold",
+    title: "Happy Diwali",
+    message: "May the festival of lights fill your home with warmth, good health and prosperity, and light up every new beginning.",
+    cta: null,
+    exclusive: true,
+    start: "2026-11-06",
+    end: "2026-11-10",
+    priority: 8,
+  },
+  */
   {
     id: "independence-day-2026",
     type: "national-day",
@@ -150,19 +257,6 @@ export const campaigns = [
     priority: 5,
   },
   {
-    id: "diwali-2026",
-    type: "festival",
-    icon: "🪔",
-    accent: "red",
-    title: "Happy Diwali from Team Inkarp",
-    message: "Wishing your lab a bright, safe, and productive festive season.",
-    cta: null,
-    // Verify exact date before publishing — approximate, regionally variable.
-    start: "2026-11-07",
-    end: "2026-11-09",
-    priority: 8,
-  },
-  {
     id: "new-year-2027",
     type: "national-day",
     icon: "🎉",
@@ -201,43 +295,90 @@ export const campaigns = [
   */
 ];
 
-function toDateOnly(value) {
-  const date = value instanceof Date ? value : new Date(value);
-  date.setHours(0, 0, 0, 0);
-  return date;
+function toDayKey(today) {
+  return typeof today === "string" ? today : todayInIndia(today);
 }
 
-export function isCampaignActive(campaign, today = new Date()) {
-  const day = toDateOnly(today);
-  const start = toDateOnly(campaign.start);
-  const end = toDateOnly(campaign.end);
-  return day >= start && day <= end;
+export function isCampaignActive(campaign, today = todayInIndia()) {
+  const day = toDayKey(today);
+  return day >= toDateKey(campaign.start) && day <= toDateKey(campaign.end);
 }
 
-export function getActiveCampaign(today = new Date()) {
-  const active = campaigns
-    .filter((campaign) => isCampaignActive(campaign, today))
-    .sort((a, b) => {
-      if (b.priority !== a.priority) {
-        return b.priority - a.priority;
-      }
-      return new Date(a.start) - new Date(b.start);
-    });
+function byPriority(a, b) {
+  if (b.priority !== a.priority) {
+    return b.priority - a.priority;
+  }
+  return toDateKey(a.start).localeCompare(toDateKey(b.start));
+}
 
-  return active[0] ?? null;
+export function getActiveCampaign(today = todayInIndia()) {
+  return getActiveCampaigns(today)[0] ?? null;
 }
 
 export function getEvergreenCampaign() {
   return campaigns.find((campaign) => campaign.evergreen) ?? null;
 }
 
-export function getActiveCampaigns(today = new Date()) {
+export function getActiveCampaigns(today = todayInIndia()) {
+  if (!CAMPAIGNS_ENABLED) return [];
   return campaigns
     .filter((campaign) => isCampaignActive(campaign, today))
-    .sort((a, b) => {
-      if (b.priority !== a.priority) {
-        return b.priority - a.priority;
-      }
-      return new Date(a.start) - new Date(b.start);
-    });
+    .sort(byPriority);
+}
+
+/**
+ * What the homepage strip shows on `today`: an `exclusive` campaign alone,
+ * otherwise every dated campaign by priority, otherwise the evergreen entry.
+ */
+function resolveStripCampaigns(today) {
+  const dated = campaigns
+    .filter((campaign) => !campaign.evergreen && isCampaignActive(campaign, today))
+    .sort(byPriority);
+  const exclusive = dated.find((campaign) => campaign.exclusive);
+  if (exclusive) return [exclusive];
+  if (dated.length) return dated;
+
+  const evergreen = getEvergreenCampaign();
+  return evergreen ? [evergreen] : [];
+}
+
+export function getStripCampaigns(today = todayInIndia()) {
+  return CAMPAIGNS_ENABLED ? resolveStripCampaigns(toDayKey(today)) : [];
+}
+
+function clampDay(day, start, end) {
+  if (day < start) return start;
+  if (day > end) return end;
+  return day;
+}
+
+/**
+ * Reads a preview link (see the note at the top of this file) from a
+ * `location.search` string. Returns null when the URL asks for no preview, or
+ * names an entry or date that doesn't exist.
+ */
+export function getCampaignPreview(search) {
+  const params = new URLSearchParams(search);
+  const id = params.get("campaign");
+  const dateParam = params.get("campaign-date");
+  const date = dateParam && DATE_KEY.test(dateParam) ? dateParam : null;
+
+  if (id) {
+    const campaign = campaigns.find((entry) => entry.id === id);
+    if (!campaign) return null;
+    const start = toDateKey(campaign.start);
+    const end = toDateKey(campaign.end);
+    return { slides: [campaign], today: date ?? clampDay(todayInIndia(), start, end) };
+  }
+
+  if (date) {
+    return { slides: resolveStripCampaigns(date), today: date };
+  }
+
+  return null;
+}
+
+/** The ornament for the header logo on `today`, from the first strip campaign that sets one. */
+export function getCampaignMark(slides) {
+  return slides.find((campaign) => campaign.mark)?.mark ?? null;
 }

@@ -1,14 +1,14 @@
+import DiyaIcon from "./DiyaIcon";
 import styles from "./GaneshCelebration.module.css";
 
+// The strip is now server-rendered, so trig-derived inline styles are rounded:
+// raw floats can format differently in Node and the browser and break hydration.
+const GARLAND_DROPS = Array.from({ length: 48 }, (_, i) =>
+  `${(Math.sin(((i % 12) / 11) * Math.PI) * 21).toFixed(2)}px`
+);
+
 export function Diya() {
-  return (
-    <svg viewBox="0 0 80 90" className={styles.diya} aria-hidden="true">
-      <path className={styles.flame} d="M40 5C20 31 26 44 40 46C54 44 59 31 40 5Z" fill="#ffd46b" />
-      <path d="M40 24C32 36 35 43 40 44C47 42 47 35 40 24Z" fill="#fff9d8" />
-      <path d="M8 51Q40 43 72 51Q65 79 40 80Q15 79 8 51Z" fill="#d66524" stroke="#ffcf70" strokeWidth="2" />
-      <path d="M10 53Q40 64 70 53M22 66Q40 76 58 66" fill="none" stroke="#ffcf70" strokeWidth="2" />
-    </svg>
-  );
+  return <DiyaIcon className={styles.diya} flameClassName={styles.flame} />;
 }
 
 export function GaneshaArt({ className }) {
@@ -32,7 +32,7 @@ export default function GaneshCelebration({ campaign }) {
   return (
     <div className={styles.banner}>
       <div className={styles.garland} aria-hidden="true">
-        {Array.from({ length: 48 }, (_, i) => <span key={i} style={{ "--drop": `${Math.sin((i % 12) / 11 * Math.PI) * 21}px` }} />)}
+        {GARLAND_DROPS.map((drop, i) => <span key={i} style={{ "--drop": drop }} />)}
       </div>
       <div className={styles.petals} aria-hidden="true">
         {Array.from({ length: 18 }, (_, i) => <i key={i} style={{ left: `${(i * 37) % 100}%`, animationDelay: `${-i * 0.7}s`, animationDuration: `${6 + i % 4}s` }} />)}

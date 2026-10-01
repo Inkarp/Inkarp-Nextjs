@@ -1,0 +1,23 @@
+/* The logo is 64px tall and about 134px wide, centred in its link, so the
+   mark sits just past the logo's top-right corner at every breakpoint. */
+.mark {
+  position: absolute;
+  top: 2px;
+  left: calc(50% + 68px);
+  width: 20px;
+  pointer-events: none;
+  animation: mark-in 600ms ease-out both;
+}
+.icon { display: block; width: 100%; overflow: visible; }
+.flame {
+  transform-origin: 40px 46px;
+  filter: drop-shadow(0 0 5px #ffb548);
+  animation: mark-flicker 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes mark-in { from { opacity: 0; transform: translateY(-4px) scale(0.8); } to { opacity: 1; transform: none; } }
+@keyframes mark-flicker { from { transform: scale(0.94) rotate(-4deg); } to { transform: scale(1.06) rotate(4deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .mark, .flame { animation: none; }
+}

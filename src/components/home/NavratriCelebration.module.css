@@ -1,0 +1,114 @@
+/* Same footprint as every campaign slide: 64px / 80px / 96px. */
+.banner {
+  position: relative;
+  height: 64px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #ffe9c7;
+  background:
+    radial-gradient(ellipse at 12% 55%, rgba(242, 114, 176, 0.38) 0%, transparent 42%),
+    radial-gradient(ellipse at 88% 60%, rgba(155, 93, 229, 0.4) 0%, transparent 46%),
+    radial-gradient(ellipse at 50% 130%, rgba(246, 196, 69, 0.22) 0%, transparent 55%),
+    linear-gradient(110deg, #4a0d3b 0%, #2d0b45 55%, #4a0d3b 100%);
+}
+
+.band {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  display: flex;
+}
+.band span { flex: 1; }
+
+.content {
+  position: relative;
+  max-width: 1320px;
+  height: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 40px);
+  padding: 6px 20px 4px;
+}
+
+.dandiya { width: 52px; flex-shrink: 0; overflow: visible; filter: drop-shadow(0 0 10px rgba(246, 196, 69, 0.35)); }
+.stickLeft, .stickRight { transform-box: view-box; transform-origin: 30px 30px; animation: strike 2.8s ease-in-out infinite; }
+.stickRight { animation-name: strike-right; }
+
+.copy { min-width: 0; max-width: 700px; text-align: center; }
+.eyebrow { color: #ffd9a8; font-size: 9px; line-height: 1.2; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; }
+.title { margin: 2px 0; color: #fff0d6; font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 500; line-height: 1.1; text-wrap: balance; }
+.message { margin: auto; max-width: 700px; color: #f6dcef; font-size: 11px; line-height: 1.3; text-wrap: balance; }
+
+.nights { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.lamps { display: flex; align-items: flex-end; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.lamps li { position: relative; display: block; }
+.lamps li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--lamp);
+  filter: blur(8px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+.lamp { display: block; width: 18px; overflow: visible; }
+.flame { transform-origin: 40px 46px; }
+
+.lit::before { opacity: 0.45; }
+.lit .flame { animation: flicker 3s ease-in-out infinite alternate; }
+
+.tonight::before { opacity: 0.9; animation: halo 2.2s ease-in-out infinite; }
+.tonight .lamp { width: 22px; }
+.tonight .flame { animation: flicker 2.2s ease-in-out infinite alternate; filter: drop-shadow(0 0 6px #ffb548); }
+
+.unlit .flame { opacity: 0; }
+.unlit .lamp { opacity: 0.45; }
+
+.count { margin: 0; color: #ffd9a8; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; }
+
+.border { position: absolute; inset: auto 0 0; height: 3px; background: repeating-linear-gradient(135deg, #f6c445 0 6px, #7a1d5c 6px 12px); }
+
+@keyframes flicker { from { transform: scale(0.95) rotate(-3deg); } to { transform: scale(1.06) rotate(3deg); } }
+@keyframes halo { 0%, 100% { opacity: 0.65; } 50% { opacity: 1; } }
+@keyframes strike { 0%, 64%, 100% { transform: rotate(0deg); } 72% { transform: rotate(-9deg); } 80% { transform: rotate(0deg); } }
+@keyframes strike-right { 0%, 64%, 100% { transform: rotate(0deg); } 72% { transform: rotate(9deg); } 80% { transform: rotate(0deg); } }
+
+@media (min-width: 640px) {
+  .banner { height: 80px; }
+  .dandiya { width: 46px; }
+  .title { font-size: 24px; }
+  .message { font-size: 10px; }
+}
+@media (min-width: 1024px) {
+  .banner { height: 96px; }
+  .dandiya { width: 58px; }
+  .title { font-size: 28px; }
+  .message { font-size: 11px; }
+  .lamp { width: 20px; }
+  .tonight .lamp { width: 25px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .lamps { gap: 1px; }
+  .lamp { width: 14px; }
+  .tonight .lamp { width: 18px; }
+  .content { gap: 14px; }
+}
+@media (max-width: 639px) {
+  .content { gap: 8px; padding: 6px 12px 4px; }
+  .dandiya { width: 34px; }
+  .eyebrow { font-size: 7px; letter-spacing: 0.08em; }
+  .title { font-size: clamp(16px, 4.5vw, 23px); }
+  .message { display: none; }
+  .lamps { display: none; }
+  .count { font-size: 8px; padding: 3px 6px; border: 1px solid rgba(255, 217, 168, 0.4); border-radius: 999px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stickLeft, .stickRight, .flame, .tonight::before { animation: none; }
+}

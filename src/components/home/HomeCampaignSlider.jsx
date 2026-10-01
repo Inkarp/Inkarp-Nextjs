@@ -1,18 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import GaneshCelebration from "./GaneshCelebration";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiArrowRight, FiClock, FiZap } from "react-icons/fi";
 import {
-  getActiveCampaigns,
-  getEvergreenCampaign,
+  getCampaignPreview,
+  getStripCampaigns,
+  todayInIndia,
 } from "@/data/campaigns";
 import { webinars } from "@/data/webinars";
 import { pushEvent } from "@/lib/analytics";
+import DiwaliCelebration from "./DiwaliCelebration";
+import GaneshCelebration from "./GaneshCelebration";
+import NavratriCelebration from "./NavratriCelebration";
 
 const AUTO_ROTATE_MS = 6000;
+
+// Festival designs are imported directly, not with next/dynamic: a dynamic
+// boundary streams a placeholder first and the design near the end of the
+// HTML, so the strip would show as an empty band until the page finished
+// parsing. The designs are small CSS-module components, so the cost is minor.
 
 const ACCENT_TEXT_CLASSES = {
   red: "text-red",
@@ -510,7 +518,13 @@ function ImageSlide({ campaign }) {
   );
 }
 
-function CampaignSlide({ campaign }) {
+function CampaignSlide({ campaign, today }) {
+  if (campaign.variant === "diwali") {
+    return <DiwaliCelebration campaign={campaign} />;
+  }
+  if (campaign.variant === "navratri") {
+    return <NavratriCelebration campaign={campaign} today={today} />;
+  }
   if (campaign.variant === "flag-wave") {
     return <IndependenceFlagSlide campaign={campaign} />;
   }
@@ -532,30 +546,38 @@ function CampaignSlide({ campaign }) {
   return <TextSlide campaign={campaign} />;
 }
 
-export default function HomeCampaignSlider() {
-  // Every campaign whose date range covers today, highest priority first. The
-  // evergreen promo renders on the server — the page is statically prerendered,
-  // so evaluating dates during render would freeze the build date into the HTML.
-  const [slides, setSlides] = useState(() => {
-    const evergreen = getEvergreenCampaign();
-    return evergreen ? [evergreen] : [];
+function sameCampaigns(a, b) {
+  return a.length === b.length && a.every((campaign, index) => campaign.id === b[index].id);
+}
+
+/**
+ * `initialSlides` and `initialToday` come from the server, which re-renders the
+ * homepage hourly, so the strip is in the first HTML and never pushes the page
+ * down after load. The browser re-checks once (the HTML can be up to an hour
+ * old around midnight, and preview links are read here) and only swaps if the
+ * answer changed.
+ */
+export default function HomeCampaignSlider({ initialSlides = [], initialToday }) {
+  const [{ slides, today, resolved }, setStrip] = useState({
+    slides: initialSlides,
+    today: initialToday,
+    resolved: false,
   });
   const [index, setIndex] = useState(0);
+  const sectionRef = useRef(null);
+  const seenRef = useRef(new Set());
 
   useEffect(() => {
-    // Resolve the visitor's date after hydration, keeping prerendered HTML stable.
     const frame = window.requestAnimationFrame(() => {
-      const active = getActiveCampaigns();
-      const evergreen = getEvergreenCampaign();
-      const exclusive = active.find((campaign) => campaign.exclusive);
-      const priorityCampaigns = exclusive ? [exclusive] : active;
-      const next = priorityCampaigns.length
-        ? priorityCampaigns
-        : evergreen
-          ? [evergreen]
-          : [];
-      setSlides(next);
-      setIndex(0);
+      const preview = getCampaignPreview(window.location.search);
+      const nextToday = preview?.today ?? todayInIndia();
+      const nextSlides = preview?.slides ?? getStripCampaigns(nextToday);
+      // Runs on the first frame, before any rotation, so the index is still 0.
+      setStrip((current) => ({
+        slides: sameCampaigns(current.slides, nextSlides) ? current.slides : nextSlides,
+        today: nextToday,
+        resolved: true,
+      }));
     });
     return () => window.cancelAnimationFrame(frame);
   }, []);
@@ -568,17 +590,39 @@ export default function HomeCampaignSlider() {
     return () => window.clearInterval(timer);
   }, [slides.length]);
 
-  const campaign = slides[index];
+  // Decorations loop forever; pause them while the strip is scrolled away.
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node || typeof IntersectionObserver === "undefined") return undefined;
+    const observer = new IntersectionObserver(([entry]) => {
+      node.toggleAttribute("data-campaign-paused", !entry.isIntersecting);
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  const campaign = slides[index] ?? slides[0];
+
+  // One impression per campaign per page view, after the browser's re-check.
+  useEffect(() => {
+    if (!resolved || !campaign || seenRef.current.has(campaign.id)) return;
+    seenRef.current.add(campaign.id);
+    pushEvent("campaign_impression", { campaign_id: campaign.id, campaign_title: campaign.title });
+  }, [resolved, campaign]);
 
   return (
     <section
       aria-label={campaign?.type === "festival" ? "Festive wishes and solution finder" : "Laboratory solution finder"}
       className="relative z-30 left-1/2 w-screen -translate-x-1/2 bg-[#071923] shadow-[inset_0_-1px_0_rgba(255,255,255,0.08)]"
+      // Already in place at first paint; ScrollAnimations' reveal transform on
+      // it makes Chrome record a large layout shift.
+      data-scroll-skip=""
+      ref={sectionRef}
     >
       {campaign ? (
       <div className="relative">
       <div key={campaign.id} className="overflow-hidden animate-[hvc-fade_500ms_ease]">
-        <CampaignSlide campaign={campaign} />
+        <CampaignSlide campaign={campaign} today={today} />
       </div>
 
       {slides.length > 1 ? (

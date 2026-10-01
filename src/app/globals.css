@@ -368,6 +368,13 @@ article[data-scroll-reveal="true"] {
   }
 }
 
+/* HomeCampaignSlider sets this while the strip is scrolled out of view. */
+[data-campaign-paused] *,
+[data-campaign-paused] *::before,
+[data-campaign-paused] *::after {
+  animation-play-state: paused !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   [class*="animate-[flag-wave"],
   [class*="animate-[particle-fall"],
@@ -597,6 +604,10 @@ html:has([data-popup-open]) [data-finder-launcher] {
 @keyframes submit-trace-edge-out { 0%, 78% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes submit-trace-done-flash { 0% { opacity: 0; transform: translateY(4px); } 10%, 78% { opacity: 1; transform: none; } 100% { opacity: 0; } }
 @keyframes submit-trace-idle-back { 0%, 80% { opacity: 0; } 100% { opacity: 1; } }
+/* During a festival (FestiveMark sets data-festive) the sending light turns gold. */
+:root[data-festive] .submit-trace[data-state="sending"]::before {
+  background: conic-gradient(from var(--submit-trace-angle), #b8860b, #ffcf70, #f67a45, transparent 45%);
+}
 @media (prefers-reduced-motion: reduce) {
   /* a still, fully drawn edge instead of the running light; no shimmer */
   .submit-trace[data-state="sending"]::before { animation: none; background: linear-gradient(90deg, #be0010, #f67a45, #d5bda2); }

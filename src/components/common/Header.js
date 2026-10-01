@@ -19,6 +19,9 @@ import {
 // import AnnouncementBar from "@/components/common/AnnouncementBar";
 import HeaderSearchModal from "@/components/common/HeaderSearchModal";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
+// Festival diya beside the logo - on hold; uncomment together with the
+// festival entries in src/data/campaigns.js.
+// import FestiveMark from "@/components/common/FestiveMark";
 import RailUtilityDock from "@/components/common/RailUtilityDock";
 import { getUpcomingWebinarsCount } from "@/data/webinars";
 import { siteConfig } from "@/data/siteConfig";
@@ -312,6 +315,7 @@ export default function Header() {
                 sizes="240px"
                 src={company.logo}
               />
+              {/* <FestiveMark /> */}
             </Link>
 
             <nav

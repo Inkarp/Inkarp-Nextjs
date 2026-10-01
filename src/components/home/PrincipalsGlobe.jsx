@@ -8,7 +8,7 @@ import { geoDistance, geoOrthographic, geoPath } from "d3-geo";
 import { interpolate as d3Interpolate } from "d3-interpolate";
 import { select as d3Select } from "d3-selection";
 import { transition as d3Transition } from "d3-transition";
-import { FiArrowUpRight, FiGlobe, FiMapPin, FiMove } from "react-icons/fi";
+import { FiArrowUpRight, FiChevronDown, FiGlobe, FiMapPin, FiMove } from "react-icons/fi";
 import { feature as topoFeature } from "topojson-client";
 import RecTag from "./RecTag";
 import { countryGeo } from "@/data/countryGeo";
@@ -415,7 +415,49 @@ export default function PrincipalsGlobe({ principals = [] }) {
           <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-ink-soft/70"><FiMove aria-hidden="true" /> Drag to explore</p>
         </div>
 
-        <div className="principals-scroll flex flex-col gap-2 rounded-[28px] border border-white/80 bg-white/55 p-3 shadow-[0_20px_60px_rgba(15,23,42,0.07)] ring-1 ring-black/[0.025] backdrop-blur-xl lg:min-h-0 lg:overflow-y-auto">
+        {/* Below lg the region list stacks under the globe as a long column of
+            buttons, so phones and tablets get a native dropdown instead. */}
+        <div className="rounded-[24px] border border-white/80 bg-white/55 p-3 shadow-[0_20px_60px_rgba(15,23,42,0.07)] ring-1 ring-black/[0.025] backdrop-blur-xl lg:hidden">
+          <label
+            className="mb-2 flex items-center justify-between px-2 pt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-ink-soft/60"
+            htmlFor="principals-region"
+          >
+            Explore by region
+            <FiMapPin aria-hidden="true" className="size-3.5 text-red" />
+          </label>
+          <div className="relative">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute left-3.5 top-1/2 size-2.5 -translate-y-1/2 rounded-full shadow-[0_0_0_3px_rgba(255,255,255,.8)]"
+              style={{ background: activeCountry ? activeCountry.hue : "#be0010" }}
+            />
+            <select
+              className="w-full appearance-none rounded-xl border border-red/30 bg-white py-3 pl-9 pr-10 text-sm font-semibold text-ink shadow-sm transition focus:border-red focus:outline-none focus-visible:ring-2 focus-visible:ring-red/30"
+              id="principals-region"
+              onChange={(event) => {
+                if (event.target.value) {
+                  selectRef.current?.(event.target.value);
+                } else {
+                  clearSelection();
+                }
+              }}
+              value={selected ?? ""}
+            >
+              <option value="">All principals ({totalBrandCount})</option>
+              {countries.map((c) => (
+                <option key={c.name} value={c.name}>
+                  {c.label} ({countryBrandCount(c)})
+                </option>
+              ))}
+            </select>
+            <FiChevronDown
+              aria-hidden="true"
+              className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-red"
+            />
+          </div>
+        </div>
+
+        <div className="principals-scroll hidden flex-col gap-2 rounded-[28px] border border-white/80 bg-white/55 p-3 shadow-[0_20px_60px_rgba(15,23,42,0.07)] ring-1 ring-black/[0.025] backdrop-blur-xl lg:flex lg:min-h-0 lg:overflow-y-auto">
           <div className="mb-1 flex items-center justify-between px-2 pt-1">
             <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-ink-soft/60">Explore by region</span>
             <FiMapPin aria-hidden="true" className="size-3.5 text-red" />

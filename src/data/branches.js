@@ -147,3 +147,18 @@ export function getScreenSize() {
 export function phoneHref(phone) {
   return phone.replace(/[^0-9+]/g, "");
 }
+
+/**
+ * "Sales: 7042194732 / 7042066011, Service: 7042194720" ->
+ * [{ label: "Sales", numbers: ["7042194732", "7042066011"] }, { label: "Service", numbers: [...] }]
+ * Each number is separate so it can get its own tel: link.
+ */
+export function parseBranchPhones(phone) {
+  return phone.split(",").map((part) => {
+    const [label, numbers] = part.includes(":") ? part.split(":") : ["", part];
+    return {
+      label: label.trim(),
+      numbers: numbers.split("/").map((number) => number.trim()).filter(Boolean),
+    };
+  });
+}

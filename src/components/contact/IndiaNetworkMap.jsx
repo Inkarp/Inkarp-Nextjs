@@ -3,7 +3,9 @@ import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import { MdEmail, MdLocalPhone, MdLocationPin } from 'react-icons/md';
 import { FiChevronDown } from 'react-icons/fi';
-import { branches, getScreenSize, phoneHref } from '@/data/branches';
+import { branches, getScreenSize, parseBranchPhones, phoneHref } from '@/data/branches';
+import { gmailComposeHref } from '@/data/siteConfig';
+import { pushEvent } from '@/lib/analytics';
 import RecTag from '@/components/home/RecTag';
 
 const REGION_BY_CITY = {
@@ -25,13 +27,15 @@ const REGIONS = ['All', 'North', 'South', 'East', 'West'];
 
 // Registered head office — badged and listed first.
 const HEAD_OFFICE = 'Hyderabad';
+const HEAD_OFFICE_INDEX = branches.findIndex((b) => b.name === HEAD_OFFICE);
 
 // `as` lets the host page promote this to the page's h1.
 export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   const [screenSize, setScreenSize] = useState('lg');
   const [region, setRegion] = useState('All');
   const [hovered, setHovered] = useState(null);
-  const [expanded, setExpanded] = useState(null);
+  // Head office starts open, so its contacts show without a click.
+  const [expanded, setExpanded] = useState(HEAD_OFFICE_INDEX);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(getScreenSize());
@@ -70,7 +74,7 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   };
 
   return (
-    <section id="coverage-network" className="scroll-mt-16 border-b border-line-light bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
+    <section id="coverage-network" className="scroll-mt-16 border-b border-line-light bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
@@ -244,26 +248,31 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                         </span>
                       </a>
                       <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-                        {branch.phone.split(',').map((phone, pi) => (
-                          <a
-                            key={pi}
-                            href={`tel:${phoneHref(phone)}`}
-                            className="inline-flex items-center gap-1.5 text-xs font-medium text-ink underline decoration-line-light underline-offset-2 hover:text-red hover:decoration-red/40"
-                          >
-                            <MdLocalPhone className="size-3.5 text-red" /> {phone.trim()}
-                          </a>
-                        ))}
+                        {/* One link per number: Delhi lists two sales numbers
+                            in one entry, which as a single tel: link ran
+                            together into an undiallable 20 digits. */}
+                        {parseBranchPhones(branch.phone).flatMap(({ label, numbers }) =>
+                          numbers.map((number) => (
+                            <a
+                              key={`${label}-${number}`}
+                              href={`tel:${phoneHref(number)}`}
+                              onClick={() =>
+                                pushEvent('phone_clicked', { source: 'contact_branch', branch: branch.name, line: label })
+                              }
+                              className="inline-flex items-center gap-1.5 text-xs font-medium text-ink underline decoration-line-light underline-offset-2 hover:text-red hover:decoration-red/40"
+                            >
+                              <MdLocalPhone className="size-3.5 text-red" /> {label ? `${label}: ` : ''}
+                              {number}
+                            </a>
+                          ))
+                        )}
                       </div>
                       <div className="flex flex-wrap gap-x-4 gap-y-1.5">
                         {branch.email.split(',').map((email) => (
                           <a
                             key={email}
-                            // Gmail compose, not mailto: — see ContactForm.
-                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-                              email.trim()
-                            )}&su=${encodeURIComponent(
-                              `Enquiry for Inkarp ${branch.name}`
-                            )}`}
+                            href={gmailComposeHref(email.trim(), `Enquiry for Inkarp ${branch.name}`)}
+                            onClick={() => pushEvent('email_clicked', { source: 'contact_branch', branch: branch.name })}
                             rel="noopener noreferrer"
                             target="_blank"
                             className="inline-flex items-center gap-1.5 text-xs font-medium text-ink underline decoration-line-light underline-offset-2 hover:text-red hover:decoration-red/40"

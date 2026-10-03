@@ -1,4 +1,5 @@
-import ContactForm from"@/components/contact/ContactForm";
+import ContactHero from"@/components/contact/ContactHero";
+import ContactJsonLd from"@/components/contact/ContactJsonLd";
 import IndiaNetworkMap from"@/components/contact/IndiaNetworkMap";
 import SupportSection from"@/components/contact/SupportSection";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
@@ -10,11 +11,12 @@ export default function ContactUs() {
   return (
     <main className="overflow-hidden bg-white">
       <BreadcrumbJsonLd path="/contact" />
+      <ContactJsonLd />
       <PageBreadcrumbs path="/contact" />
-      {/* This section now carries the page's h1. */}
-      <IndiaNetworkMap as="h1" />
+      {/* Ways to reach us and the form come first; it carries the page's h1. */}
+      <ContactHero />
       <SupportSection />
-      <ContactForm />
+      <IndiaNetworkMap />
     </main>
   );
 }

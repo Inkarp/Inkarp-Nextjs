@@ -5,9 +5,24 @@ import { MdEmail, MdLocalPhone } from "react-icons/md";
 import RecTag from "@/components/home/RecTag";
 import { collectTracking } from "@/lib/browserTracking";
 import SubmitButton from "@/components/common/SubmitButton";
+import { SERVICE_DESK } from "@/data/contactDirectory";
 
 const inputClass =
   "w-full border border-line-light bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20";
+
+function Field({ id, label, children }) {
+  return (
+    <div className="min-w-0">
+      <label className="mb-1.5 block text-xs font-semibold text-ink" htmlFor={id}>
+        {label}
+        <span aria-hidden="true" className="ml-0.5 text-red">
+          *
+        </span>
+      </label>
+      {children}
+    </div>
+  );
+}
 
 function getInitialForm() {
   return {
@@ -114,17 +129,17 @@ export default function ServiceContactForm() {
             <div className="mt-8 space-y-4">
               <a
                 className="flex items-center gap-3 border border-line-light bg-parchment-alt p-4 text-sm text-ink transition hover:border-red hover:text-red"
-                href="mailto:service@inkarp.co.in"
+                href={`mailto:${SERVICE_DESK.email}`}
               >
                 <MdEmail className="size-5 shrink-0 text-red" />
-                service@inkarp.co.in
+                {SERVICE_DESK.email}
               </a>
               <a
                 className="flex items-center gap-3 border border-line-light bg-parchment-alt p-4 text-sm text-ink transition hover:border-red hover:text-red"
-                href="tel:+917330731315"
+                href={`tel:+91${SERVICE_DESK.phone}`}
               >
                 <MdLocalPhone className="size-5 shrink-0 text-red" />
-                7330731315
+                {SERVICE_DESK.phone}
               </a>
             </div>
 
@@ -144,86 +159,100 @@ export default function ServiceContactForm() {
           <div className="border border-line-light bg-white p-6 sm:p-8">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid gap-4 md:grid-cols-2">
-                <input
-                  autoComplete="name"
-                  className={inputClass}
-                  name="customerName"
-                  onChange={handleChange}
-                  placeholder="Customer Name *"
-                  required
-                  type="text"
-                  value={form.customerName}
-                />
-                <input
-                  className={inputClass}
-                  name="companyName"
-                  onChange={handleChange}
-                  placeholder="Company Name *"
-                  required
-                  type="text"
-                  value={form.companyName}
-                />
+                <Field id="service-customerName" label="Customer name">
+                  <input
+                    autoComplete="name"
+                    className={inputClass}
+                    id="service-customerName"
+                    name="customerName"
+                    onChange={handleChange}
+                    required
+                    type="text"
+                    value={form.customerName}
+                  />
+                </Field>
+                <Field id="service-companyName" label="Company name">
+                  <input
+                    autoComplete="organization"
+                    className={inputClass}
+                    id="service-companyName"
+                    name="companyName"
+                    onChange={handleChange}
+                    required
+                    type="text"
+                    value={form.companyName}
+                  />
+                </Field>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <input
-                  autoComplete="tel"
-                  className={inputClass}
-                  name="contactNumber"
-                  onChange={handleChange}
-                  placeholder="Contact Number *"
-                  required
-                  type="tel"
-                  value={form.contactNumber}
-                />
-                <input
-                  className={inputClass}
-                  name="serialNumber"
-                  onChange={handleChange}
-                  placeholder="Serial Number *"
-                  required
-                  type="text"
-                  value={form.serialNumber}
-                />
+                <Field id="service-contactNumber" label="Contact number">
+                  <input
+                    autoComplete="tel"
+                    className={inputClass}
+                    id="service-contactNumber"
+                    name="contactNumber"
+                    onChange={handleChange}
+                    required
+                    type="tel"
+                    value={form.contactNumber}
+                  />
+                </Field>
+                <Field id="service-serialNumber" label="Serial number">
+                  <input
+                    className={inputClass}
+                    id="service-serialNumber"
+                    name="serialNumber"
+                    onChange={handleChange}
+                    required
+                    type="text"
+                    value={form.serialNumber}
+                  />
+                </Field>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <input
-                  className={inputClass}
-                  name="instrumentName"
-                  onChange={handleChange}
-                  placeholder="Instrument Name *"
-                  required
-                  type="text"
-                  value={form.instrumentName}
-                />
-                <select
-                  className={inputClass}
-                  name="warranty"
-                  onChange={handleChange}
-                  required
-                  value={form.warranty}
-                >
-                  <option value="">Warranty *</option>
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
+                <Field id="service-instrumentName" label="Instrument name">
+                  <input
+                    className={inputClass}
+                    id="service-instrumentName"
+                    name="instrumentName"
+                    onChange={handleChange}
+                    required
+                    type="text"
+                    value={form.instrumentName}
+                  />
+                </Field>
+                <Field id="service-warranty" label="Under warranty?">
+                  <select
+                    className={inputClass}
+                    id="service-warranty"
+                    name="warranty"
+                    onChange={handleChange}
+                    required
+                    value={form.warranty}
+                  >
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </Field>
               </div>
 
-              <input
-                className={inputClass}
-                name="department"
-                onChange={handleChange}
-                placeholder="Department *"
-                required
-                type="text"
-                value={form.department}
-              />
+              <Field id="service-department" label="Department">
+                <input
+                  className={inputClass}
+                  id="service-department"
+                  name="department"
+                  onChange={handleChange}
+                  required
+                  type="text"
+                  value={form.department}
+                />
+              </Field>
 
               <SubmitButton
-                className={`mt-2 inline-flex border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 ${
-                  isSubmitting ? "cursor-not-allowed" : "hover:-translate-y-0.5"
-                }`}
+                className="mt-2 inline-flex min-h-12 items-center justify-center gap-2 bg-red px-7 text-sm font-semibold text-white shadow-lg shadow-red/15 transition hover:bg-[#a3000e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red disabled:cursor-not-allowed disabled:opacity-70"
                 doneLabel="Request sent"
                 sending={isSubmitting}
                 sendingLabel="Submitting..."

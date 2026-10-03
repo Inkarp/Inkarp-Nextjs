@@ -120,6 +120,17 @@ export const siteConfig = {
 };
 
 /**
+ * Gmail compose link rather than mailto: — mailto hands off to whatever
+ * desktop mail app Windows has registered and does nothing at all when none
+ * is set, which is the common case for people living in webmail.
+ */
+export function gmailComposeHref(email, subject) {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    email
+  )}&su=${encodeURIComponent(subject)}`;
+}
+
+/**
  * WhatsApp deep link to the number shown in the footer, optionally prefilled
  * with the product the visitor is enquiring about.
  */

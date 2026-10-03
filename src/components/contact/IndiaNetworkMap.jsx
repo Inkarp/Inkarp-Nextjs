@@ -2,9 +2,10 @@
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import { MdEmail, MdLocalPhone, MdLocationPin } from 'react-icons/md';
-import { FiChevronDown } from 'react-icons/fi';
+import { FiChevronDown, FiCrosshair, FiNavigation } from 'react-icons/fi';
 import { branches, getScreenSize, parseBranchPhones, phoneHref } from '@/data/branches';
-import { gmailComposeHref } from '@/data/siteConfig';
+import { INDIA_STATES, nearestBranchForState, nearestBranchTo } from '@/data/indiaStates';
+import { gmailComposeHref, siteConfig } from '@/data/siteConfig';
 import { pushEvent } from '@/lib/analytics';
 import RecTag from '@/components/home/RecTag';
 
@@ -29,6 +30,75 @@ const REGIONS = ['All', 'North', 'South', 'East', 'West'];
 const HEAD_OFFICE = 'Hyderabad';
 const HEAD_OFFICE_INDEX = branches.findIndex((b) => b.name === HEAD_OFFICE);
 
+const actionClass =
+  'inline-flex min-w-0 max-w-full items-center gap-1.5 border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink transition-colors hover:border-red/40 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red/40';
+
+function directionsHref(branch) {
+  // The head office has a verified map pin; other branches go by address.
+  return branch.name === HEAD_OFFICE
+    ? siteConfig.mapDirectionsUrl
+    : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(branch.address)}`;
+}
+
+/** Open-branch panel: one row per team (Sales / Service) with its numbers and email. */
+function BranchDetails({ branch }) {
+  // Emails are listed in the same order as the phone groups (sales, then service).
+  const emails = branch.email.split(',').map((email) => email.trim());
+
+  return (
+    <div className="space-y-3 border-t border-line-light px-4 py-4">
+      <p className="flex items-start gap-1.5 text-xs leading-relaxed text-ink-soft">
+        <MdLocationPin aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-red" />
+        {branch.address}
+      </p>
+
+      {/* One link per number: Delhi lists two sales numbers in one entry,
+          which as a single tel: link ran together into an undiallable 20 digits. */}
+      {parseBranchPhones(branch.phone).map(({ label, numbers }, groupIndex) => (
+        <div className="flex flex-wrap items-center gap-2" key={label || groupIndex}>
+          <span className="w-full text-[10px] font-bold uppercase tracking-wide text-ink-soft sm:w-14">{label}</span>
+          {numbers.map((number) => (
+            <a
+              aria-label={`Call ${branch.name} ${label} ${number}`}
+              className={actionClass}
+              href={`tel:${phoneHref(number)}`}
+              key={number}
+              onClick={() => pushEvent('phone_clicked', { source: 'contact_branch', branch: branch.name, line: label })}
+            >
+              <MdLocalPhone aria-hidden="true" className="size-3.5 shrink-0 text-red" />
+              {number}
+            </a>
+          ))}
+          {emails[groupIndex] ? (
+            <a
+              aria-label={`Email ${branch.name} ${label} ${emails[groupIndex]}`}
+              className={actionClass}
+              href={gmailComposeHref(emails[groupIndex], `Enquiry for Inkarp ${branch.name}`)}
+              onClick={() => pushEvent('email_clicked', { source: 'contact_branch', branch: branch.name, line: label })}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <MdEmail aria-hidden="true" className="size-3.5 shrink-0 text-red" />
+              <span className="truncate">{emails[groupIndex]}</span>
+            </a>
+          ) : null}
+        </div>
+      ))}
+
+      <a
+        className="inline-flex items-center gap-1.5 text-xs font-semibold text-red underline-offset-2 hover:underline"
+        href={directionsHref(branch)}
+        onClick={() => pushEvent('directions_clicked', { source: 'contact_branch', branch: branch.name })}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <FiNavigation aria-hidden="true" className="size-3.5" />
+        Get directions
+      </a>
+    </div>
+  );
+}
+
 // `as` lets the host page promote this to the page's h1.
 export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   const [screenSize, setScreenSize] = useState('lg');
@@ -36,6 +106,8 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   const [hovered, setHovered] = useState(null);
   // Head office starts open, so its contacts show without a click.
   const [expanded, setExpanded] = useState(HEAD_OFFICE_INDEX);
+  const [finderState, setFinderState] = useState('');
+  const [finderMessage, setFinderMessage] = useState('');
 
   useEffect(() => {
     const handleResize = () => setScreenSize(getScreenSize());
@@ -73,18 +145,60 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
     setHovered(null);
   };
 
+  // Open a branch found by the finder and bring its card into view — on
+  // phones the list can run well past the finder.
+  const showBranch = (branch, message) => {
+    const index = branches.indexOf(branch);
+    setRegion('All');
+    setExpanded(index);
+    setHovered(null);
+    setFinderMessage(message);
+    pushEvent('branch_finder_used', { branch: branch.name });
+    window.requestAnimationFrame(() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document
+        .getElementById(`branch-${index}`)
+        ?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
+    });
+  };
+
+  const handleFinderState = (event) => {
+    const state = event.target.value;
+    setFinderState(state);
+    const branch = nearestBranchForState(state);
+    if (branch) showBranch(branch, `Nearest branch to ${state}: ${branch.name}`);
+    else setFinderMessage('');
+  };
+
+  const locateVisitor = () => {
+    if (!navigator.geolocation) {
+      setFinderMessage("Location isn't available in this browser. Pick your state instead.");
+      return;
+    }
+    setFinderMessage('Finding your location…');
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        const branch = nearestBranchTo({ lat: coords.latitude, lon: coords.longitude });
+        setFinderState('');
+        showBranch(branch, `Nearest branch to you: ${branch.name}`);
+      },
+      () => setFinderMessage("Couldn't get your location. Pick your state instead."),
+      { maximumAge: 600000, timeout: 10000 }
+    );
+  };
+
   return (
     <section id="coverage-network" className="scroll-mt-16 border-b border-line-light bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-2xl">
             <RecTag>Live coverage</RecTag>
             <Heading className="text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl">
               Inkarp&apos;s network across India
             </Heading>
             <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
-              {branches.length} branches spanning {REGIONS.length - 1} regions. Hover a pin to preview a
-              branch, or pick a region to narrow the network.
+              {branches.length} branches spanning {REGIONS.length - 1} regions. Find the branch nearest you,
+              or pick a region to narrow the network.
             </p>
           </div>
 
@@ -108,9 +222,41 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
           </div>
         </div>
 
+        {/* Nearest-branch finder */}
+        <div className="mb-6 flex flex-col gap-3 border border-line-light bg-parchment-alt p-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+          <label className="text-sm font-semibold text-ink" htmlFor="branch-finder-state">
+            Find my nearest branch
+          </label>
+          <select
+            className="min-h-11 border border-line-light bg-white px-3 text-sm font-medium text-ink outline-none focus:border-red/40 focus:ring-2 focus:ring-red/15 sm:w-64"
+            id="branch-finder-state"
+            onChange={handleFinderState}
+            value={finderState}
+          >
+            <option value="">Select your state</option>
+            {INDIA_STATES.map(({ name }) => (
+              <option key={name} value={name}>
+                {name}
+              </option>
+            ))}
+          </select>
+          <span className="hidden text-xs text-ink-soft sm:inline">or</span>
+          <button
+            className="inline-flex min-h-11 items-center justify-center gap-2 border border-line-light bg-white px-4 text-sm font-semibold text-ink transition-colors hover:border-red/40 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red/40"
+            onClick={locateVisitor}
+            type="button"
+          >
+            <FiCrosshair aria-hidden="true" className="size-4 text-red" />
+            Use my location
+          </button>
+          <p aria-live="polite" className="text-xs font-medium text-ink sm:ml-auto">
+            {finderMessage}
+          </p>
+        </div>
+
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          {/* Map card */}
-          <div className="relative rounded-2xl border border-line-light bg-white p-4 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:p-6">
+          {/* Map card. Phones get the branch list first and a smaller map. */}
+          <div className="relative order-2 mx-auto w-full max-w-sm rounded-2xl border border-line-light bg-white p-4 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:p-6 lg:order-1 lg:max-w-none">
             {/* Must match IndiaMap.svg's own 1847x2000 viewBox. With a square
                 frame the contained map only filled the middle 92.35% of the
                 width, so pin percentages — which are relative to this box —
@@ -174,20 +320,11 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                 );
               })}
             </div>
-
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {['North', 'South', 'East', 'West'].map((r) => (
-                <div key={r} className="rounded-lg border border-line-light bg-parchment px-3 py-2.5 text-center">
-                  <div className="text-lg font-semibold text-ink">{regionCounts[r] ?? 0}</div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wide text-ink-soft">{r}</div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Branch list — no max height or inner scroll: all 12 branches are
               listed in full so nothing is hidden behind a scrollbar. */}
-          <div className="flex flex-col gap-2.5">
+          <div className="order-1 flex flex-col gap-2.5 lg:order-2">
             {orderedBranches.map(({ branch, index: i }) => {
               const isOpen = expanded === i;
               const dimmed = isDimmed(branch);
@@ -196,7 +333,8 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
               return (
                 <div
                   key={branch.name}
-                  className={`rounded-xl border bg-white transition-all duration-200 ${
+                  id={`branch-${i}`}
+                  className={`scroll-mt-24 rounded-xl border bg-white transition-all duration-200 ${
                     isOpen
                       ? 'border-red shadow-md'
                       : isHeadOffice
@@ -231,58 +369,7 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                     />
                   </button>
 
-                  {isOpen && (
-                    <div className="space-y-2.5 border-t border-line-light px-4 py-3.5">
-                      {/* Address opens this branch on Google Maps. */}
-                      <a
-                        className="group inline-flex items-start gap-1.5 text-xs leading-relaxed text-ink-soft transition-colors hover:text-red"
-                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                          `Inkarp Instruments ${branch.name} ${branch.address}`
-                        )}`}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <MdLocationPin className="mt-0.5 size-3.5 shrink-0 text-red" />
-                        <span className="underline decoration-line-light underline-offset-2 group-hover:decoration-red/40">
-                          {branch.address}
-                        </span>
-                      </a>
-                      <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-                        {/* One link per number: Delhi lists two sales numbers
-                            in one entry, which as a single tel: link ran
-                            together into an undiallable 20 digits. */}
-                        {parseBranchPhones(branch.phone).flatMap(({ label, numbers }) =>
-                          numbers.map((number) => (
-                            <a
-                              key={`${label}-${number}`}
-                              href={`tel:${phoneHref(number)}`}
-                              onClick={() =>
-                                pushEvent('phone_clicked', { source: 'contact_branch', branch: branch.name, line: label })
-                              }
-                              className="inline-flex items-center gap-1.5 text-xs font-medium text-ink underline decoration-line-light underline-offset-2 hover:text-red hover:decoration-red/40"
-                            >
-                              <MdLocalPhone className="size-3.5 text-red" /> {label ? `${label}: ` : ''}
-                              {number}
-                            </a>
-                          ))
-                        )}
-                      </div>
-                      <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-                        {branch.email.split(',').map((email) => (
-                          <a
-                            key={email}
-                            href={gmailComposeHref(email.trim(), `Enquiry for Inkarp ${branch.name}`)}
-                            onClick={() => pushEvent('email_clicked', { source: 'contact_branch', branch: branch.name })}
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            className="inline-flex items-center gap-1.5 text-xs font-medium text-ink underline decoration-line-light underline-offset-2 hover:text-red hover:decoration-red/40"
-                          >
-                            <MdEmail className="size-3.5 text-red" /> {email.trim()}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  {isOpen && <BranchDetails branch={branch} />}
                 </div>
               );
             })}

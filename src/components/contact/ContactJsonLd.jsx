@@ -1,9 +1,12 @@
 import { branches, parseBranchPhones, phoneHref } from "@/data/branches";
-import { contactDirectory, SERVICE_DESK } from "@/data/contactDirectory";
+import { contactDirectory } from "@/data/contactDirectory";
+import { CONTACT_FAQS } from "@/data/contactFaqs";
 import { pageSeo, SITE_URL } from "@/data/pageSeo";
 import { siteConfig } from "@/data/siteConfig";
 
 const DIRECTORY_CONTACT_TYPES = {
+  sales: "sales",
+  service: "technical support",
   import: "import and logistics",
   accounts: "billing support",
   hr: "human resources",
@@ -83,13 +86,6 @@ function buildContactJsonLd() {
           email: contact.email,
           areaServed: "IN",
         },
-        {
-          "@type": "ContactPoint",
-          contactType: "technical support",
-          telephone: toTel(SERVICE_DESK.phone),
-          email: SERVICE_DESK.email,
-          areaServed: "IN",
-        },
         ...contactDirectory.map((entry) => ({
           "@type": "ContactPoint",
           contactType: DIRECTORY_CONTACT_TYPES[entry.id],
@@ -102,11 +98,32 @@ function buildContactJsonLd() {
   };
 }
 
+// Google only shows FAQ rich results for a few authoritative government and
+// health sites, so this won't add search dropdowns; it still describes the
+// page's Q&A to search engines and AI answer tools.
+function buildFaqJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: CONTACT_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+}
+
 export default function ContactJsonLd() {
   return (
-    <script
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(buildContactJsonLd()) }}
-      type="application/ld+json"
-    />
+    <>
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildContactJsonLd()) }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd()) }}
+        type="application/ld+json"
+      />
+    </>
   );
 }

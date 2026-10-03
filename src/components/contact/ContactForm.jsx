@@ -7,7 +7,7 @@ import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import SubmitButton from "@/components/common/SubmitButton";
 import { parseBranchPhones, phoneHref } from "@/data/branches";
 import {
-  contactDirectory,
+  directoryEntry,
   ENQUIRY_DEPARTMENTS,
   HR_DEPARTMENT,
   SERVICE_DEPARTMENT,
@@ -91,7 +91,7 @@ function Field({ id, label, optional = false, error, children }) {
 /** Extra help under the department choices, for teams with their own route. */
 function DepartmentHint({ department }) {
   const entry = ENQUIRY_DEPARTMENTS.find((d) => d.label === department);
-  const direct = entry?.directoryId ? contactDirectory.find((c) => c.id === entry.directoryId) : null;
+  const direct = entry?.directoryId ? directoryEntry(entry.directoryId) : null;
 
   if (department === SERVICE_DEPARTMENT) {
     return (
@@ -122,7 +122,7 @@ function DepartmentHint({ department }) {
       )}
       <a
         className={linkClass}
-        href={gmailComposeHref(direct.email, `Enquiry — ${direct.title.replace(/\n/g, " ")}`)}
+        href={gmailComposeHref(direct.email, `Enquiry — ${direct.title}`)}
         onClick={() => pushEvent("email_clicked", { source: "contact_form_hint", department })}
         rel="noopener noreferrer"
         target="_blank"

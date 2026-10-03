@@ -117,6 +117,9 @@ export const siteConfig = {
   // matching mapEmbedUrl above. Used by the footer map tile and address.
   mapPlaceUrl:
     "https://www.google.com/maps?ll=17.432877,78.557944&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=6000282144631608509",
+
+  // Turn-by-turn directions to the same pin as mapPlaceUrl.
+  mapDirectionsUrl: "https://www.google.com/maps/dir/?api=1&destination=17.432877,78.557944",
 };
 
 /**

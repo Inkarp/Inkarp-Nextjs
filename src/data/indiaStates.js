@@ -55,12 +55,15 @@ function distanceScore(a, b) {
   return dx * dx + dy * dy;
 }
 
+/** The branch closest to a { lat, lon } point. */
+export function nearestBranchTo(point) {
+  return branches.reduce((best, branch) =>
+    distanceScore(point, branch.coords) < distanceScore(point, best.coords) ? branch : best
+  );
+}
+
 /** The branch closest to a state's capital, or null for an unknown state. */
 export function nearestBranchForState(stateName) {
   const state = INDIA_STATES.find((s) => s.name === stateName);
-  if (!state) return null;
-
-  return branches.reduce((best, branch) =>
-    distanceScore(state, branch.coords) < distanceScore(state, best.coords) ? branch : best
-  );
+  return state ? nearestBranchTo(state) : null;
 }

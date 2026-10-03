@@ -47,6 +47,15 @@ const PRINCIPAL_ACCENTS = [
     soft: "#f8fbff",
     border: "#bfdbfe",
   },
+  {
+    key: "nanosurf",
+    label: "Nanosurf",
+    match: (webinar) => webinar.sourceLink?.includes("nanosurf") || webinar.img?.includes("NanoSurf"),
+    text: "#6d28d9",
+    tint: "#f5f3ff",
+    soft: "#fdfcff",
+    border: "#ddd6fe",
+  },
 ];
 const PRINCIPAL_FILTERS = [
   { key: "all", label: "All" },
@@ -129,7 +138,7 @@ export default function WebinarsPage() {
               Webinars
             </p>
             <h1 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-              September webinar agenda
+              October webinar agenda
             </h1>
             <p className="mt-1 text-sm text-ink-soft">
               {visibleWebinars.length} {activeTab ==="upcoming" ?"upcoming sessions" :"past sessions"}

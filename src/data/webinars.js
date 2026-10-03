@@ -1,6 +1,7 @@
 const WATERS_LOGO = "/assets/images/PrincipalLogos/waters.svg";
 const CHEMSPEED_LOGO = "/assets/images/PrincipalLogos/Chemspeed.jpg";
 const METTLER_LOGO = "/assets/images/PrincipalLogos/Metller.svg";
+const NANOSURF_LOGO = "/assets/images/PrincipalLogos/NanoSurf.svg";
 
 export const webinars = [
   {
@@ -501,6 +502,535 @@ export const webinars = [
     <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
       <li><strong>30 September 2026</strong></li>
       <li><strong>08:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 17,
+    title: "Automated Sample Preparation for Mycotoxin Analysis",
+    description: "Automate sample preparation for single- and multi-mycotoxin LC-MS/MS analysis",
+    date1: "October 01 | 06:30 PM IST",
+    date: "2026-10-01",
+    img: CHEMSPEED_LOGO,
+    sourceLink: "https://www.chemspeed.com/webinar/automated-sample-preparation-for-mycotoxin-analysis",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Automated Sample Preparation for Mycotoxin Analysis
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    From sample preparation to LC-MS/MS analysis, food safety testing can involve complex and time-consuming workflows. Automation is changing that.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Discover how an integrated Chemspeed robotic platform can automate sample preparation for single- and multi-mycotoxin analysis, helping laboratories achieve reliable recoveries across diverse food matrices while giving analysts more time for higher-value scientific work.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>See how robotic automation simplifies sample preparation</li>
+      <li>Explore single- and multi-mycotoxin LC-MS/MS workflows</li>
+      <li>Discover how automation supports consistent recoveries</li>
+      <li>Learn how smarter workflows can improve laboratory efficiency</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>01 October 2026</strong></li>
+      <li><strong>06:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 18,
+    title: "Pharmacopoeial Changes, Are Your Weighing Processes Ready?",
+    description: "Prepare your weighing processes for the latest USP <41> and Ph. Eur. 2.1.7 updates",
+    date1: "October 05 | 01:30 PM IST & 07:30 PM IST",
+    date: "2026-10-05",
+    img: METTLER_LOGO,
+    sourceLink: "https://www.mt.com/in/en/home/events/live-webinars/laboratory-weighing/pharmacopoeial-changes.html",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Pharmacopoeial Changes, Are Your Weighing Processes Ready?
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    New updates to USP &lt;41&gt; and Ph. Eur. 2.1.7 are changing how pharmaceutical laboratories demonstrate weighing performance and compliance.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this live webinar to understand the practical impact of safety factors, measurement uncertainty, as-found/as-left results, and balance selection, and discover how to strengthen your weighing workflows for compliance and audit readiness.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand the latest USP &lt;41&gt; and Ph. Eur. 2.1.7 requirements</li>
+      <li>Explore the new safety factor and measurement uncertainty concepts</li>
+      <li>Learn the importance of as-found and as-left results</li>
+      <li>Discover how to select balances that support compliant weighing</li>
+      <li>Gain insights into calibration, qualification, and audit readiness</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>05 October 2026</strong></li>
+      <li><strong>01:30 PM IST &amp; 07:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 19,
+    title: "DMPK Masterclass Episode 1 - Better DMPK Workflows",
+    description: "Simplify automated MRM optimization and speed up bioanalytical method development",
+    date1: "October 06 | 06:30 PM IST",
+    date: "2026-10-06",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/mr/6973845/ABC71E79AECBE3E81A174B663E3A51A2?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    DMPK Masterclass Episode 1 - Better DMPK Workflows
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Complex modalities. More data. Tighter regulations. Bioanalytical labs need smarter ways to move from method development to meaningful results.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join DMPK Masterclass - Episode 1 to discover how intelligent automation can simplify MRM optimization, streamline method development, and reduce manual effort, helping scientists work faster, more consistently, and with greater confidence.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Simplify automated MRM optimization for faster method development</li>
+      <li>Create acquisition and processing methods with a single click</li>
+      <li>Reduce transcription errors and manual effort</li>
+      <li>Make advanced MRM workflows accessible across experience levels</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>06 October 2026</strong></li>
+      <li><strong>06:30 PM IST</strong></li>
+      <li><strong>30 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 20,
+    title: "DMPK Masterclass Episode 2 - From Data to Decisions",
+    description: "Streamline LC-MS data review with simplified informatics and exception-based review",
+    date1: "October 07 | 06:30 PM IST",
+    date: "2026-10-07",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/mr/6973845/ABC71E79AECBE3E81A174B663E3A51A2?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    DMPK Masterclass Episode 2 - From Data to Decisions
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Complex modalities. More data. Tighter timelines. The challenge isn't just generating data; it's turning it into meaningful decisions.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join DMPK Masterclass - Episode 2 to explore how simplified informatics and intelligent, exception-based review can streamline LC-MS data analysis, reduce manual effort, and help laboratory teams make faster, more informed decisions.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand how exception-based review focuses on critical data</li>
+      <li>Learn ways to streamline LC-MS data review</li>
+      <li>Reduce manual data interrogation and improve productivity</li>
+      <li>Discover how modern informatics can accelerate decision-making</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>07 October 2026</strong></li>
+      <li><strong>06:30 PM IST</strong></li>
+      <li><strong>30 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 21,
+    title: "DMPK Masterclass Episode 3 - From Insight to Impact",
+    description: "Connect ELN, LIMS, and instrument software for scalable, future-ready bioanalytical workflows",
+    date1: "October 08 | 06:30 PM IST",
+    date: "2026-10-08",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/mr/6973845/ABC71E79AECBE3E81A174B663E3A51A2?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    DMPK Masterclass Episode 3 - From Insight to Impact
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    More data. More complex workflows. More demands on your laboratory. The next step is turning insights into impact.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join DMPK Masterclass - Episode 3 to discover how connected informatics can eliminate data silos, integrate ELN, LIMS, and instrument software, and create a scalable foundation for more efficient and future-ready bioanalytical workflows.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Explore connected informatics for seamless data integration</li>
+      <li>Discover how analytics and machine learning can improve assay robustness</li>
+      <li>Learn how scalable, API-driven workflows can future-proof laboratory operations</li>
+      <li>Understand how modern informatics can improve productivity and connectivity</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>08 October 2026</strong></li>
+      <li><strong>06:30 PM IST</strong></li>
+      <li><strong>30 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 22,
+    title: "Reducing Biologic QC Risk with MALS",
+    description: "Use QC-ready MALS in Empower to support more confident biologic lot-release decisions",
+    date1: "October 08 | 08:30 PM IST",
+    date: "2026-10-08",
+    img: WATERS_LOGO,
+    sourceLink: "https://www.selectscience.net/webinar/qc-ready-mals-in-empower-cds",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Reducing Biologic QC Risk with MALS
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    For biologics, aggregation, molecular heterogeneity, and variability can create hidden risks in routine QC testing. Turning MALS measurements into standardized, objective metrics can help laboratories strengthen consistency, traceability, and confidence in lot release.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar to explore how QC-ready MALS within an Empower&trade; workflow can simplify molecular measurements, reduce analyst-dependent interpretation, and support more defensible QC release decisions.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand how MALS can support biologic QC release testing</li>
+      <li>Explore standardized calculations for molecular measurements</li>
+      <li>Learn approaches to assess aggregation, recovery, and molecular weight</li>
+      <li>Discover how automation can improve consistency and traceability</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>08 October 2026</strong></li>
+      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>60 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 23,
+    title: "Machine Learning and Artificial Intelligence towards autonomous AFM",
+    description: "Explore AI-powered AFM, autonomous control, and high-throughput microscopy workflows",
+    date1: "October 08 | 09:30 PM IST",
+    date: "2026-10-08",
+    img: NANOSURF_LOGO,
+    sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Machine Learning and Artificial Intelligence towards autonomous AFM
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    The future of atomic force microscopy is moving beyond conventional imaging. Machine learning and artificial intelligence are opening new possibilities for smarter AFM control, automation, and high-throughput research.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this Nanosurf webinar series to explore the latest developments in autonomous AFM and discover how AI-driven approaches are shaping the next generation of microscopy and materials research.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Explore the future of AI-powered AFM</li>
+      <li>Discover advances in autonomous AFM control</li>
+      <li>Learn about high-throughput AFM approaches</li>
+      <li>Gain insights into emerging intelligent microscopy workflows</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>08 October 2026</strong></li>
+      <li><strong>09:30 PM IST</strong></li>
+      <li><strong>30-Minute Talk + 15-Minute Q&amp;A</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 24,
+    title: "LC-MS for High-Throughput Metabolomics",
+    description: "Use solid-core particles and high-throughput LC-MS for challenging polar metabolites",
+    date1: "October 13 | 08:30 PM IST",
+    date: "2026-10-13",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5459578/2DA9FCE35E406A0A17055CAB930360A5?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    LC-MS for High-Throughput Metabolomics
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    High-throughput metabolomics demands more than speed. Efficient separations, stable retention, and reliable detection are essential for turning complex chromatographic data into meaningful biological insights.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar to explore how solid-core particle technology and high-throughput LC-MS can improve chromatographic performance and support the analysis of challenging polar metabolites, from method development to real-world biological discovery.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand how solid-core particles enable high-efficiency, high-throughput separations</li>
+      <li>Explore practical LC-MS approaches for highly polar metabolites</li>
+      <li>Discover strategies for stable retention times across high-throughput workflows</li>
+      <li>Learn approaches to mitigate metal interactions in challenging metabolomics analysis</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>13 October 2026</strong></li>
+      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>1 Hour</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 25,
+    title: "Charged Aerosol Detection for LNPs",
+    description: "Fast, selective, reproducible LNP lipid composition and impurity analysis with CAD",
+    date1: "October 14 | 08:30 PM IST",
+    date: "2026-10-14",
+    img: WATERS_LOGO,
+    sourceLink: "https://www.selectscience.net/webinar/lnp-analysis-charged-aerosol-detection",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Charged Aerosol Detection for LNPs
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Lipid nanoparticles bring together complex combinations of ionizable lipids, phospholipids, cholesterol, and PEG-lipids. Accurate composition analysis is essential for building confidence in LNP development and characterization.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar to explore how charged aerosol detection (CAD), optimized chromatography, and integrated analytical workflows can support fast, selective, and reproducible analysis of LNP lipid components and impurity profiles.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Explore practical approaches to LNP composition analysis</li>
+      <li>Understand the role of charged aerosol detection in lipid analysis</li>
+      <li>Discover strategies for impurity profiling and robust quantification</li>
+      <li>Learn how optimized workflows can support LNP development and characterization</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>14 October 2026</strong></li>
+      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>60 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 26,
+    title: "Empower Software AMA: Periodic Audit Trail Review",
+    description: "Practical, risk-based periodic audit trail review in Empower, with a live Ask Me Anything",
+    date1: "October 20 | 07:30 PM IST",
+    date: "2026-10-20",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5436709/8F959AFF04584B5957F192DAB2581B04?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Empower Software AMA: Periodic Audit Trail Review
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    In a regulated laboratory, audit trail review is more than a compliance task; it plays an important role in data integrity, quality oversight, and inspection readiness.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this interactive webinar to explore practical approaches for risk-based periodic audit trail review and discover how to identify meaningful events while making your review process more efficient.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand expectations for periodic audit trail review</li>
+      <li>Explore practical risk-review frameworks and event types</li>
+      <li>Learn how to streamline audit trail monitoring</li>
+      <li>Discover ways to support data integrity and inspection readiness</li>
+      <li>Bring your questions for an Ask Me Anything session</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>20 October 2026</strong></li>
+      <li><strong>07:30 PM IST</strong></li>
+      <li><strong>45 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 27,
+    title: "Root Cause Analysis That Drives Results",
+    description: "Practical root cause analysis and CAPA tools that prevent deviations from recurring",
+    date1: "October 21 | 08:30 PM IST",
+    date: "2026-10-21",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5474570/5E8B491E24F89B80480C6D0C9E3FDE30?partnerref=waters_hub",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Root Cause Analysis That Drives Results
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Finding the cause is only the first step. The real challenge is identifying the underlying process gap and taking corrective action that prevents the same issue from happening again.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar for a practical look at Root Cause Analysis and CAPA, with proven problem-solving tools, real-world examples, and strategies to improve investigation effectiveness.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Identify root causes instead of treating symptoms</li>
+      <li>Apply 5W1H, 5 Whys, and Fishbone analysis effectively</li>
+      <li>Build corrective actions designed to prevent recurrence</li>
+      <li>Use PDCA to verify CAPA effectiveness</li>
+      <li>Strengthen compliance and continuous improvement</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>21 October 2026</strong></li>
+      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>45 Minutes</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 28,
+    title: "Machine Learning and Artificial Intelligence towards autonomous AFM",
+    description: "AI-driven autonomous AFM and automated identification of viscoelastic properties",
+    date1: "October 22 | 06:30 PM IST",
+    date: "2026-10-22",
+    img: NANOSURF_LOGO,
+    sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Machine Learning and Artificial Intelligence towards autonomous AFM
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    The future of atomic force microscopy is moving toward intelligent, autonomous analysis. Machine learning and AI are opening new possibilities for faster characterization, automated measurements, and deeper materials insights.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join the Nanosurf webinar series to explore how AI-driven approaches are advancing autonomous AFM and discover innovative methods for automated identification of viscoelastic properties.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">Why attend?</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Explore AI and machine learning in AFM</li>
+      <li>Discover automated identification of viscoelastic properties</li>
+      <li>Learn about advances in autonomous AFM workflows</li>
+      <li>Gain insights into intelligent materials characterization</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>22 October 2026</strong></li>
+      <li><strong>06:30 PM IST</strong></li>
+      <li><strong>30-Minute Talk + 15-Minute Q&amp;A</strong></li>
       <li><strong>Live Webinar</strong></li>
     </ul>
   </div>

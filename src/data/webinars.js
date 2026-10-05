@@ -1,5 +1,5 @@
 const WATERS_LOGO = "/assets/images/PrincipalLogos/waters.svg";
-const CHEMSPEED_LOGO = "/assets/images/PrincipalLogos/Chemspeed.jpg";
+const CHEMSPEED_LOGO = "/assets/images/PrincipalLogos/Chemspeed.png";
 const METTLER_LOGO = "/assets/images/PrincipalLogos/Metller.svg";
 const NANOSURF_LOGO = "/assets/images/PrincipalLogos/NanoSurf.svg";
 

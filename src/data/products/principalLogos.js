@@ -37,7 +37,7 @@ export const principalLogos = {
   hitachi: "/assets/images/PrincipalLogos/hitachi.png",
   proscientific: "/assets/images/PrincipalLogos/Proscientific.png",
   "thermofisher-scientific": "/assets/images/PrincipalLogos/thermofisher.png",
-  chemspeed: "/assets/images/PrincipalLogos/Chemspeed.jpg",
+  chemspeed: "/assets/images/PrincipalLogos/Chemspeed.png",
   being: "/assets/images/PrincipalLogos/Being.svg",
   waters: "/assets/images/PrincipalLogos/waters.svg",
   sartorius: "/assets/images/PrincipalLogos/sartorius.svg",

@@ -7,7 +7,7 @@ export async function POST(request) {
   const body = await request.json().catch(() => null);
   const name = typeof body?.name === "string" ? body.name.trim().slice(0, 180) : "";
   if (name.length < 3) {
-    return Response.json({ success: false, message: "Enter a valid institution name." }, { status: 400 });
+    return Response.json({ success: false, message: "Enter a valid organisation name." }, { status: 400 });
   }
 
   try {

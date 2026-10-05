@@ -52,7 +52,7 @@ export default async function FinderResultsPage({ params }) {
 
       <section className="px-4 py-10 sm:px-6 lg:px-8 lg:py-14"><div className="mx-auto max-w-[1180px]">
         <div className="grid gap-4 border border-line-light bg-white p-5 sm:grid-cols-2 lg:grid-cols-4">
-          <div><p className="text-[10px] font-bold uppercase tracking-wider text-ink-soft">Institution</p><p className="mt-1 text-sm font-semibold">{session.institution.name}</p></div>
+          <div><p className="text-[10px] font-bold uppercase tracking-wider text-ink-soft">Organisation</p><p className="mt-1 text-sm font-semibold">{session.institution.name}</p></div>
           <div><p className="text-[10px] font-bold uppercase tracking-wider text-ink-soft">Role</p><p className="mt-1 text-sm font-semibold">{session.labels.role}</p></div>
           <div><p className="text-[10px] font-bold uppercase tracking-wider text-ink-soft">Objective</p><p className="mt-1 text-sm font-semibold">{session.labels.objective}</p></div>
           <div><p className="text-[10px] font-bold uppercase tracking-wider text-ink-soft">Priorities</p><p className="mt-1 text-sm font-semibold">{session.labels.challenges.join(', ') || 'General fit and workflow coverage'}</p></div>

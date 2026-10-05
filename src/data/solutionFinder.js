@@ -45,6 +45,8 @@ export const solutionFinderInstitutions = [
   ["laurus-labs", "Laurus Labs", "Laurus", "Pharmaceuticals", "Hyderabad", "Telangana"],
   ["syngene", "Syngene International", "Syngene", "Biotechnology", "Bengaluru", "Karnataka"],
   ["aragen", "Aragen Life Sciences", "Aragen", "Pharmaceuticals", "Hyderabad", "Telangana"],
+  ["inkarp-instruments", "Inkarp Instruments", "Inkarp", "", "Hyderabad", "Telangana"],
+  ["genpact", "Genpact", "Genpact", "", "Hyderabad", "Telangana"],
   ["sai-life-sciences", "Sai Life Sciences", "Sai Life Sciences", "Pharmaceuticals", "Hyderabad", "Telangana"],
   ["indian-oil-rnd", "Indian Oil Corporation R&D Centre", "IndianOil R&D", "Chemical & Petrochemical", "Faridabad", "Haryana"],
   ["reliance-industries", "Reliance Industries", "Reliance", "Chemical & Petrochemical", "Mumbai", "Maharashtra"],
@@ -72,6 +74,7 @@ export const finderRoles = [
   { value: "procurement", label: "Procurement / purchase", description: "Technical and commercial evaluation" },
   { value: "service", label: "Service / maintenance", description: "Reliability, calibration, and AMC" },
   { value: "management", label: "Management", description: "Capacity, ROI, and laboratory planning" },
+  { value: "sales-product-specialist", label: "Sales / product specialist", description: "Match products to customer applications" },
 ];
 
 export const finderIndustries = [
@@ -95,6 +98,7 @@ export const finderObjectives = [
   ["automation high throughput", "Lab automation", "Increase throughput and reduce manual variation"],
   ["service calibration amc", "Service, calibration & AMC", "Maintain performance and audit readiness"],
   ["general laboratory equipment", "General laboratory setup", "Equip a new, shared, or teaching laboratory"],
+  ["customer solution product selection", "Customer solution planning", "Find products for a customer requirement or sales opportunity"],
 ].map(([value, label, description]) => ({ value, label, description }));
 
 export const finderChallenges = [

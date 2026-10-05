@@ -14,7 +14,7 @@ const GRADIENT = "bg-[linear-gradient(110deg,#7c3aed,#c026d3_55%,#ec4899)]";
 const UNIVERSE_BACKGROUND = "bg-[radial-gradient(circle_at_12%_20%,rgba(168,85,247,.34),transparent_26%),radial-gradient(circle_at_88%_75%,rgba(236,72,153,.26),transparent_28%),linear-gradient(110deg,#100822_0%,#24114a_48%,#0d1938_100%)]";
 const FIELD_SHELL = "flex h-12 items-center rounded-full bg-white/15 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,.18),0_6px_18px_rgba(8,4,24,.16)] ring-1 ring-white/15 backdrop-blur-md transition focus-within:bg-white/22 focus-within:ring-2 focus-within:ring-fuchsia-300/70";
 const INPUT_CLASS = "min-w-0 flex-1 bg-transparent text-sm font-semibold text-white caret-fuchsia-200 outline-none placeholder:font-medium placeholder:text-white/60";
-const FIELD_NAMES = { institution: "institution", objective: "interest", role: "role" };
+const FIELD_NAMES = { institution: "organisation", objective: "interest", role: "role" };
 
 /** Which form of the prompt this visitor actually sees, for analytics. */
 function visiblePrompt(placement) {
@@ -36,7 +36,7 @@ function missingMessage(missing, { email, typedInstitution }) {
   const names = missing.filter((field) => field !== "email").map((field) => FIELD_NAMES[field]);
   const parts = [];
   if (names.length === 1 && missing.includes("institution") && typedInstitution) {
-    parts.push("pick your institution from the list (or add it as new)");
+    parts.push("pick your organisation from the list (or add it as new)");
   } else if (names.length) {
     parts.push(`choose your ${names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)}` : names[0]}`);
   }
@@ -286,12 +286,12 @@ export default function HomeSolutionFinder() {
                   aria-autocomplete="list"
                   aria-controls="finder-institution-results"
                   aria-expanded={showResults}
-                  aria-label="Your institution or company"
+                  aria-label="Your organisation"
                   autoComplete="off"
                   className={INPUT_CLASS}
                   onChange={(event) => { setQuery(event.target.value); setInstitution(null); setResults([]); setResultsOpen(true); }}
                   onFocus={() => query.trim().length >= 2 && setResultsOpen(true)}
-                  placeholder="Institution or company"
+                  placeholder="Company, institute or organisation"
                   role="combobox"
                   value={query}
                 />
@@ -303,9 +303,9 @@ export default function HomeSolutionFinder() {
                     <button aria-selected="false" className="block w-full px-3 py-2.5 text-left text-sm font-medium text-ink hover:bg-rose-50 hover:text-red" key={item.id} onClick={() => { setInstitution(item); setQuery(item.name); setResultsOpen(false); }} role="option" type="button">{item.name}</button>
                   )) : !searching ? (
                     <div className="p-2">
-                      <p className="px-2 py-2 text-sm text-ink-soft">No institution matches “{query.trim()}”.</p>
+                      <p className="px-2 py-2 text-sm text-ink-soft">No organisation matches “{query.trim()}”.</p>
                       <button className="flex w-full items-center gap-2 border-t border-line-light px-2 py-3 text-left text-sm font-bold text-red hover:bg-rose-50" disabled={addingInstitution} onClick={addInstitution} type="button">
-                        {addingInstitution ? <span className="size-4 animate-spin rounded-full border-2 border-red/20 border-t-red" /> : null} Add “{query.trim()}” as a new institution
+                        {addingInstitution ? <span className="size-4 animate-spin rounded-full border-2 border-red/20 border-t-red" /> : null} Add “{query.trim()}” as a new organisation
                       </button>
                     </div>
                   ) : null}

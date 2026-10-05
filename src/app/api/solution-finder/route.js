@@ -93,7 +93,7 @@ export async function POST(request) {
     }
     const institution = await resolveInstitution(db, answers.institution);
     if (!institution || institution.name !== answers.institution.name) {
-      return Response.json({ success: false, message: "Select a valid institution." }, { status: 400 });
+      return Response.json({ success: false, message: "Select a valid organisation." }, { status: 400 });
     }
 
     // Use an institution's known sector as a helpful default, never as an

@@ -13,7 +13,7 @@ import {
 const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 
 const STEPS = [
-  { label: "Institution", icon: FiMapPin },
+  { label: "Organisation", icon: FiMapPin },
   { label: "Your work", icon: FiBriefcase },
   { label: "Goal", icon: FiTarget },
   { label: "Priorities", icon: FiSliders },
@@ -127,7 +127,7 @@ function InstitutionSearch({ value, onChange }) {
   return (
     <div ref={boxRef} className="relative">
       <label className="text-xs font-bold uppercase tracking-[0.18em] text-ink-soft" htmlFor="institution-search">
-        Search your institution or company
+        Search your organisation
       </label>
       <div className={`mt-3 flex min-h-16 items-center border bg-white px-4 transition ${value ? "border-emerald-300 ring-4 ring-emerald-50" : "border-line-light focus-within:border-red focus-within:ring-4 focus-within:ring-rose-50"}`}>
         <FiSearch className="mr-3 shrink-0 text-xl text-red" />
@@ -140,13 +140,13 @@ function InstitutionSearch({ value, onChange }) {
           id="institution-search"
           onChange={(event) => { setQuery(event.target.value); setResults([]); onChange(null); setOpen(true); }}
           onFocus={() => query.trim().length >= 2 && setOpen(true)}
-          placeholder="Start typing — e.g. IIT, CSIR, Biocon..."
+          placeholder="Start typing — e.g. Inkarp, Aragen, IICT..."
           role="combobox"
           value={query}
         />
         {value ? <FiCheck className="text-xl text-emerald-600" /> : loading ? <span className="size-5 animate-spin rounded-full border-2 border-red/20 border-t-red" /> : null}
         {query ? (
-          <button aria-label="Clear institution" className="ml-2 text-ink-soft hover:text-red" onClick={() => { setQuery(""); setResults([]); onChange(null); }} type="button"><FiX /></button>
+          <button aria-label="Clear organisation" className="ml-2 text-ink-soft hover:text-red" onClick={() => { setQuery(""); setResults([]); onChange(null); }} type="button"><FiX /></button>
         ) : null}
       </div>
 
@@ -166,7 +166,7 @@ function InstitutionSearch({ value, onChange }) {
             </button>
           )) : !loading ? (
             <div className="p-4">
-              <p className="text-sm font-semibold text-ink">No approved institution found</p>
+              <p className="text-sm font-semibold text-ink">No approved organisation found</p>
               {requestStatus === "saved" ? (
                 <p className="mt-2 text-sm text-emerald-700">Thank you. It has been sent for review.</p>
               ) : (
@@ -179,7 +179,7 @@ function InstitutionSearch({ value, onChange }) {
           ) : null}
         </div>
       ) : null}
-      <p className="mt-3 text-xs leading-5 text-ink-soft">Suggestions display institution names only. Internal identifiers and organisation details are never exposed.</p>
+      <p className="mt-3 text-xs leading-5 text-ink-soft">Companies, research institutes, universities, and internal teams are supported. Only organisation names are shown.</p>
     </div>
   );
 }
@@ -269,7 +269,7 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
 
       <div className="p-5 sm:p-8 lg:p-10">
         {step === 0 ? (
-          <div><p className="mb-6 max-w-2xl text-sm leading-6 text-ink-soft">Choose an approved organisation so recommendations can reflect its sector and location. You can replace our starter directory when your institution database is ready.</p><InstitutionSearch onChange={(value) => set("institution", value)} value={answers.institution} /></div>
+          <div><p className="mb-6 max-w-2xl text-sm leading-6 text-ink-soft">Choose your company, research institute, university, customer, or internal team. If its sector is not known, you can select the target industry in the next step.</p><InstitutionSearch onChange={(value) => set("institution", value)} value={answers.institution} /></div>
         ) : null}
         {step === 1 ? (
           <div className="grid gap-8 lg:grid-cols-2">

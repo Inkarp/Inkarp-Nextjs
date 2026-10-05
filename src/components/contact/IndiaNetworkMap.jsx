@@ -33,13 +33,6 @@ const HEAD_OFFICE_INDEX = branches.findIndex((b) => b.name === HEAD_OFFICE);
 const actionClass =
   'inline-flex min-w-0 max-w-full items-center gap-1.5 border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink transition-colors hover:border-red/40 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red/40';
 
-function directionsHref(branch) {
-  // The head office has a verified map pin; other branches go by address.
-  return branch.name === HEAD_OFFICE
-    ? siteConfig.mapDirectionsUrl
-    : `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(branch.address)}`;
-}
-
 /** Open-branch panel: one row per team (Sales / Service) with its numbers and email. */
 function BranchDetails({ branch }) {
   // Emails are listed in the same order as the phone groups (sales, then service).
@@ -85,16 +78,18 @@ function BranchDetails({ branch }) {
         </div>
       ))}
 
-      <a
-        className="inline-flex items-center gap-1.5 text-xs font-semibold text-red underline-offset-2 hover:underline"
-        href={directionsHref(branch)}
-        onClick={() => pushEvent('directions_clicked', { source: 'contact_branch', branch: branch.name })}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <FiNavigation aria-hidden="true" className="size-3.5" />
-        Get directions
-      </a>
+      {branch.name === HEAD_OFFICE ? (
+        <a
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-red underline-offset-2 hover:underline"
+          href={siteConfig.mapDirectionsUrl}
+          onClick={() => pushEvent('directions_clicked', { source: 'contact_branch', branch: branch.name })}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <FiNavigation aria-hidden="true" className="size-3.5" />
+          Get directions
+        </a>
+      ) : null}
     </div>
   );
 }

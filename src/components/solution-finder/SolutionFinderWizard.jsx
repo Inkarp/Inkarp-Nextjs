@@ -213,6 +213,17 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(window.sessionStorage.getItem("inkarp:solution-finder-payload") ?? "null");
+      if (saved?.answers?.institution?.id === initialAnswers.institution?.id && EMAIL_PATTERN.test(saved.contactEmail ?? "")) {
+        window.setTimeout(() => setEmail(saved.contactEmail), 0);
+      }
+    } catch {
+      // A missing or malformed recovery payload should not block the wizard.
+    }
+  }, [initialAnswers.institution?.id]);
+
   const valid = [Boolean(answers.institution), Boolean(answers.role && answers.industry), Boolean(answers.objective), true][step];
   const set = (key, value) => setAnswers((current) => ({ ...current, [key]: value }));
   const toggleChallenge = (value) => setAnswers((current) => ({
@@ -231,6 +242,7 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Could not generate recommendations.");
+      window.sessionStorage.removeItem("inkarp:solution-finder-payload");
       router.push(data.resultUrl);
     } catch (submitError) {
       setError(submitError.message);

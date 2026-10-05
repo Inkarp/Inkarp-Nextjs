@@ -100,7 +100,14 @@ export async function POST(request) {
     // override: multidisciplinary institutions can legitimately choose another.
     if (!answers.industry) answers.industry = institutionIndustrySlug(institution);
     if (!answers.industry) {
-      return Response.json({ success: false, message: "We could not determine an industry for this institution." }, { status: 400 });
+      return Response.json(
+        {
+          success: false,
+          code: "INDUSTRY_REQUIRED",
+          message: "Choose an industry so we can tailor your recommendations.",
+        },
+        { status: 400 }
+      );
     }
     const recommendations = recommendFinderProducts(answers);
     const sessionId = createFinderSessionId();

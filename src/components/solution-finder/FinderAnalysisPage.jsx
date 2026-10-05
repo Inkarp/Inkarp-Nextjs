@@ -40,10 +40,10 @@ export default function FinderAnalysisPage() {
   useEffect(() => {
     const rawPayload = window.sessionStorage.getItem("inkarp:solution-finder-payload");
     if (!rawPayload) {
-      setError("Your finder details were not available. Please return and try again.");
+      window.setTimeout(() => setError("Your finder details were not available. Please return and try again."), 0);
       return undefined;
     }
-    setResumeUrl(buildResumeUrl(rawPayload));
+    window.setTimeout(() => setResumeUrl(buildResumeUrl(rawPayload)), 0);
 
     const controller = new AbortController();
     const stageTimer = window.setInterval(() => {
@@ -58,7 +58,13 @@ export default function FinderAnalysisPage() {
     })
       .then(async (response) => {
         const data = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(data.message || "Could not build your recommendations.");
+        if (!response.ok) {
+          if (data.code === "INDUSTRY_REQUIRED") {
+            router.replace(buildResumeUrl(rawPayload));
+            return;
+          }
+          throw new Error(data.message || "Could not build your recommendations.");
+        }
         window.sessionStorage.removeItem("inkarp:solution-finder-payload");
         setActiveStage(stages.length);
         router.replace(data.resultUrl);
@@ -84,19 +90,19 @@ export default function FinderAnalysisPage() {
       <div aria-hidden="true" className="absolute left-[12%] top-[18%] size-72 rounded-full bg-fuchsia-600/20 blur-[100px]" />
       <div aria-hidden="true" className="absolute bottom-[10%] right-[10%] size-80 rounded-full bg-cyan-500/15 blur-[110px]" />
       <section className="relative z-10 w-full max-w-xl rounded-[32px] border border-fuchsia-300/25 bg-[#100822]/80 px-6 py-10 text-center shadow-[0_35px_110px_rgba(0,0,0,.55),0_0_70px_rgba(192,38,211,.16)] backdrop-blur-xl sm:px-10 sm:py-12" role="status" aria-live="polite">
-        <div className="solution-ai-loader mx-auto">
+        <div className={`solution-ai-loader mx-auto ${error ? "[&_span]:[animation-play-state:paused]" : ""}`}>
           <span className="solution-ai-loader-ring solution-ai-loader-ring-one" />
           <span className="solution-ai-loader-ring solution-ai-loader-ring-two" />
           <span className="solution-ai-loader-core"><FiCpu /></span>
         </div>
-        <p className="mt-9 font-mono text-xs font-bold uppercase tracking-[0.3em] text-fuchsia-200"><FiZap className="mr-2 inline" /> AI analysis in progress</p>
-        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Finding the right solution for you</h1>
-        <p className="mx-auto mt-4 max-w-sm text-sm leading-7 text-white/65">Please keep this page open while we prepare your shortlist.</p>
+        <p className="mt-9 font-mono text-xs font-bold uppercase tracking-[0.3em] text-fuchsia-200"><FiZap className="mr-2 inline" /> {error ? "Analysis paused" : "AI analysis in progress"}</p>
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">{error ? "We need your help to continue" : "Finding the right solution for you"}</h1>
+        <p className="mx-auto mt-4 max-w-sm text-sm leading-7 text-white/65">{error ? "Your answers are saved. Review the detail below to continue." : "Please keep this page open while we prepare your shortlist."}</p>
 
         {error ? (
           <div className="mx-auto mt-8 max-w-sm rounded-xl border border-rose-300/30 bg-rose-400/10 p-5">
             <p className="font-semibold text-rose-100">{error}</p>
-            <button className="mt-4 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#24114a]" onClick={() => router.push(resumeUrl)} type="button">Continue in the full form</button>
+            <button className="mt-4 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#24114a]" onClick={() => router.push(resumeUrl)} type="button">Review answers and continue</button>
           </div>
         ) : (
           <>

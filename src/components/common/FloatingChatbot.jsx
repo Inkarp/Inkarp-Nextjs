@@ -11,6 +11,8 @@ import {
   FiChevronLeft,
   FiChevronRight,
   FiFileText,
+  FiMaximize2,
+  FiMinimize2,
   FiSend,
   FiTool,
   FiUser,
@@ -171,6 +173,7 @@ export default function FloatingChatbot() {
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [hasOpenedOnce, setHasOpenedOnce] = useState(false);
   const [helperPromptPath, setHelperPromptPath] = useState("");
   const [category, setCategory] = useState("");
@@ -275,6 +278,7 @@ export default function FloatingChatbot() {
   function closeChatbot() {
     pushEvent("chatbot_closed");
     setIsOpen(false);
+    setIsExpanded(false);
     dismissGreetingTooltip();
   }
 
@@ -446,9 +450,9 @@ export default function FloatingChatbot() {
       {helperPromptPath === pathname && !isOpen ? (
         <div
           data-floating-widget
-          className="fixed max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15"
+          className="fixed bottom-[5.25rem] right-4 max-w-[220px] rounded-2xl rounded-br-sm border border-line-light bg-white px-4 py-3 pr-9 text-sm font-semibold leading-5 text-ink shadow-xl shadow-zinc-900/15 sm:bottom-9 sm:right-48"
           role="status"
-          style={{ bottom: "2.25rem", right: "5.25rem", zIndex: TOP_LAYER }}
+          style={{ zIndex: TOP_LAYER }}
         >
           {LAUNCHER_GREETING}
           <button
@@ -470,53 +474,39 @@ export default function FloatingChatbot() {
         aria-expanded={isOpen}
         aria-label="Open website chatbot"
         data-floating-widget
-        className="group fixed inline-flex size-12 items-center justify-center rounded-full transition-transform duration-300 ease-out hover:-translate-y-1 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:size-14"
+        className={`group fixed inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-white/95 p-1.5 text-left shadow-[0_12px_34px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-red/20 hover:shadow-[0_16px_38px_rgba(190,0,16,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:w-[168px] sm:justify-start sm:gap-2.5 sm:py-1.5 sm:pl-1.5 sm:pr-4 ${
+          isOpen ? "pointer-events-none translate-y-3 scale-75 opacity-0" : "opacity-100"
+        }`}
         onClick={openChatbot}
         ref={launcherRef}
         style={{ bottom: "1.25rem", color: CHATBOT_CONFIG.colors.launcherText, right: "1rem", zIndex: TOP_LAYER }}
         type="button"
       >
-        {!isOpen ? (
-          <svg
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-3.5 overflow-visible text-red drop-shadow-[0_1px_2px_rgba(255,255,255,0.95)] transition duration-300 group-hover:-translate-y-0.5 sm:-inset-4"
-            viewBox="0 0 84 84"
-          >
-            <defs>
-              <path d="M 12 43 A 30 30 0 0 1 72 43" id="dexter-label-arc" />
-            </defs>
-            <text
-              fill="currentColor"
-              fontSize="8"
-              fontWeight="900"
-              letterSpacing="1.7"
-              textAnchor="middle"
-              textLength="56"
-            >
-              <textPath href="#dexter-label-arc" startOffset="50%">
-                I AM DEXTER
-              </textPath>
-            </text>
-          </svg>
-        ) : null}
-        <Image
-          alt=""
-          className={`size-full rounded-full object-cover drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] transition duration-300 group-hover:drop-shadow-[0_6px_14px_rgba(190,0,16,0.25)] ${
-            isOpen ? "" : "motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
-          }`}
-          height={80}
-          priority
-          src="/chatbot-icon.webp"
-          width={80}
-        />
-        {!isOpen ? (
+        <span className="pointer-events-none absolute -top-6 right-0 whitespace-nowrap rounded-full bg-ink px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-[0.08em] text-white shadow-md sm:hidden">
+          Ask Dexter · AI
+        </span>
+        <span className="relative inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose-50 to-rose-100 ring-1 ring-red/10">
+          <Image
+            alt=""
+            className="size-10 rounded-full object-cover motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
+            height={44}
+            priority
+            src="/chatbot-icon.webp"
+            width={44}
+          />
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-red px-1.5 py-[2px] text-[8px] font-black uppercase tracking-wider text-white shadow-md shadow-red/40 ring-2 ring-white"
-          >
-            AI
+            className="absolute bottom-0 right-0 size-3 rounded-full border-2 border-white bg-emerald-500 shadow-sm"
+          />
+        </span>
+        <span className="hidden min-w-0 flex-1 sm:block">
+          <span className="block text-sm font-extrabold leading-4 text-ink transition group-hover:text-red">
+            Ask Dexter
           </span>
-        ) : null}
+          <span className="mt-0.5 block text-[10px] font-semibold leading-3 text-ink-soft">
+            AI instrument guide
+          </span>
+        </span>
       </button>
 
       {hasOpenedOnce ? (
@@ -540,43 +530,59 @@ export default function FloatingChatbot() {
           aria-label={`Dexter — ${CHATBOT_CONFIG.brandName}'s AI Assistant`}
           aria-hidden={!isOpen}
           data-popup-open={isOpen ? "" : undefined}
-          className={`fixed w-[calc(100vw-1.5rem)] max-w-[480px] origin-bottom-right overflow-hidden rounded-2xl border border-white/60 bg-white/75 text-ink shadow-2xl shadow-zinc-900/25 backdrop-blur-2xl backdrop-saturate-150 transition-all ease-out motion-reduce:transition-none ${
+          className={`fixed w-[calc(100vw-1.5rem)] origin-bottom-right rounded-[28px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.97)_0%,rgba(255,255,255,0.95)_54%,rgba(255,238,242,0.96)_76%,rgba(190,0,16,0.16)_100%)] text-ink shadow-[0_28px_80px_rgba(25,25,25,0.24)] backdrop-blur-2xl backdrop-saturate-150 transition-all ease-out motion-reduce:transition-none ${
             isOpen ? "translate-y-0 scale-100 opacity-100" : "pointer-events-none translate-y-4 scale-95 opacity-0"
-          }`}
+          } ${isExpanded ? "sm:max-w-[760px]" : "sm:max-w-[440px]"}`}
           inert={!isOpen}
           ref={panelRef}
           role="dialog"
-          style={{ bottom: "6rem", isolation: "isolate", right: "1rem", transitionDuration: `${PANEL_TRANSITION_MS}ms`, zIndex: TOP_LAYER }}
+          style={{ bottom: "1.25rem", isolation: "isolate", right: "1rem", transitionDuration: `${PANEL_TRANSITION_MS}ms`, zIndex: TOP_LAYER }}
           tabIndex={-1}
         >
+          <div className="pointer-events-none absolute left-1/2 top-0 z-20 h-28 w-28 -translate-x-1/2 -translate-y-[58%] drop-shadow-[0_12px_16px_rgba(0,0,0,0.18)] sm:h-32 sm:w-32">
+            <Image
+              alt="Dexter, Inkarp's AI assistant"
+              className="size-full object-contain object-top motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
+              height={128}
+              priority
+              src="/dexter.png"
+              width={128}
+            />
+          </div>
+
           {/* Glass sheen — a soft top-down highlight, the way a glossy iOS surface catches light. */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/60 via-white/10 to-transparent"
+            className="pointer-events-none absolute inset-x-0 top-0 h-28 rounded-t-[28px] bg-gradient-to-b from-white/70 via-white/15 to-transparent"
           />
 
-          <div className="relative flex items-center justify-between gap-3 border-b border-white/50 bg-white/40 px-4 py-3 backdrop-blur-md">
-            <div className="flex items-center gap-2.5">
-              <Image alt="" className="size-9 shrink-0 rounded-full" height={36} src="/chatbot-icon.webp" width={36} />
-              <div>
-                <p className="flex items-center gap-1.5 text-sm font-bold text-ink">
-                  Dexter
-                  <span className="inline-flex items-center rounded-full bg-red/10 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-red">
-                    AI
-                  </span>
-                </p>
-                <p className="flex items-center gap-1 text-xs text-ink-soft">
-                  <FiZap aria-hidden="true" className="size-3 text-red" />
-                  {CHATBOT_CONFIG.brandName}&apos;s AI assistant · Replies instantly
-                </p>
-              </div>
-            </div>
-            <button aria-label="Close chatbot" className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-light bg-parchment-alt text-ink-soft transition hover:border-red/30 hover:text-red" onClick={closeChatbot} type="button">
+          <div className="relative flex min-h-16 items-start justify-between px-4 pt-4">
+            <button
+              aria-label={isExpanded ? "Restore chatbot size" : "Expand chatbot"}
+              className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-zinc-900/30 text-white shadow-sm backdrop-blur transition hover:bg-zinc-900/50"
+              onClick={() => setIsExpanded((current) => !current)}
+              type="button"
+            >
+              {isExpanded ? <FiMinimize2 /> : <FiMaximize2 />}
+            </button>
+            <button aria-label="Close chatbot" className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-zinc-900/30 text-white shadow-sm backdrop-blur transition hover:bg-red" onClick={closeChatbot} type="button">
               <FiX />
             </button>
           </div>
 
-          <div className="relative overflow-y-auto p-4" data-chatbot-scroll style={{ maxHeight: "min(74dvh, 720px)" }}>
+          <div className="relative -mt-1 text-center">
+            <p className="text-sm font-extrabold text-ink">Dexter</p>
+            <p className="mt-0.5 flex items-center justify-center gap-1 text-[11px] font-medium text-ink-soft">
+              <FiZap aria-hidden="true" className="size-3 text-red" />
+              {CHATBOT_CONFIG.brandName}&apos;s AI assistant · Replies instantly
+            </p>
+          </div>
+
+          <div
+            className="relative overflow-y-auto px-4 pb-4 pt-3 sm:px-5 sm:pb-5"
+            data-chatbot-scroll
+            style={{ maxHeight: isExpanded ? "min(78dvh, 760px)" : "min(70dvh, 620px)" }}
+          >
             {showBackButton ? (
               <button className="mb-3 inline-flex items-center gap-1 text-xs font-semibold text-ink-soft hover:text-red" onClick={() => setStep("type")} type="button">
                 <FiChevronLeft /> Back

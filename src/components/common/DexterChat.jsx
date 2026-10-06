@@ -86,6 +86,7 @@ function ContactActions({ label = "Talk to a person:" }) {
 export default function DexterChat({ onFallback }) {
   const [messages, setMessages] = useState([]);
   const [draft, setDraft] = useState("");
+  const [typedPrompt, setTypedPrompt] = useState("");
   const [streaming, setStreaming] = useState(false);
   const [activity, setActivity] = useState("");
   const [notice, setNotice] = useState("");
@@ -96,6 +97,38 @@ export default function DexterChat({ onFallback }) {
     const node = scrollRef.current;
     if (node) node.scrollTop = node.scrollHeight;
   }, [messages, activity]);
+
+  useEffect(() => {
+    const prompt = SUGGESTIONS.at(-1);
+    if (messages.length || draft || !prompt) return undefined;
+    let timer;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      timer = window.setTimeout(() => setTypedPrompt(prompt), 0);
+      return () => window.clearTimeout(timer);
+    }
+
+    let index = 0;
+    let deleting = false;
+
+    const type = () => {
+      if (!deleting) {
+        index += 1;
+        setTypedPrompt(prompt.slice(0, index));
+        if (index === prompt.length) deleting = true;
+        timer = window.setTimeout(type, index === prompt.length ? 1800 : 55);
+        return;
+      }
+
+      index -= 1;
+      setTypedPrompt(prompt.slice(0, index));
+      if (index === 0) deleting = false;
+      timer = window.setTimeout(type, index === 0 ? 500 : 28);
+    };
+
+    timer = window.setTimeout(type, 650);
+    return () => window.clearTimeout(timer);
+  }, [draft, messages.length]);
 
   const ask = (question) => {
     const text = question.trim();
@@ -200,20 +233,21 @@ export default function DexterChat({ onFallback }) {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="min-h-[280px] flex-1 space-y-3 overflow-y-auto" ref={scrollRef}>
+      <div className="min-h-[300px] flex-1 space-y-3 overflow-y-auto px-1 py-2" ref={scrollRef}>
         {messages.length === 0 ? (
-          <div>
-            <p className="text-sm leading-6 text-ink">
-              Hello, I&apos;m Dexter. Tell me what you&apos;re working on and I&apos;ll find the right
-              instrument — or answer questions about anything Inkarp supplies.
+          <div className="space-y-3">
+            <div className="max-w-[88%] rounded-2xl rounded-tl-sm bg-white px-4 py-3 text-sm leading-6 text-ink shadow-[0_6px_22px_rgba(0,0,0,0.08)]">
+              Hello, I&apos;m Dexter. Tell me what you&apos;re working on and I&apos;ll help you find the right instrument.
+            </div>
+            <p className="px-2 text-center text-[11px] font-medium text-ink-soft">
+              Try one of these, or ask your own question
             </p>
-            <p className="mt-1.5 text-xs text-ink-soft">
-              I&apos;m an AI assistant trained on Inkarp&apos;s full catalogue — instant answers, available 24/7.
-            </p>
-            <div className="mt-3 space-y-2">
-              {SUGGESTIONS.map((suggestion) => (
+            <div className="space-y-3 py-1">
+              {SUGGESTIONS.slice(0, -1).map((suggestion, index) => (
                 <button
-                  className="block w-full border border-line-light bg-parchment-alt px-3 py-2 text-left text-xs font-medium text-ink transition hover:border-red hover:text-red"
+                  className={`block max-w-[86%] rounded-2xl bg-white px-4 py-3 text-left text-sm font-medium leading-5 text-ink shadow-[0_6px_22px_rgba(0,0,0,0.08)] transition hover:-translate-y-0.5 hover:text-red hover:shadow-[0_10px_26px_rgba(190,0,16,0.12)] ${
+                    index % 2 ? "ml-auto rounded-tr-sm" : "rounded-tl-sm"
+                  }`}
                   key={suggestion}
                   onClick={() => ask(suggestion)}
                   type="button"
@@ -307,16 +341,17 @@ export default function DexterChat({ onFallback }) {
       </div>
 
       <form
-        className="mt-3 border-t border-line-light pt-3"
+        className="mt-3"
         onSubmit={(event) => {
           event.preventDefault();
           ask(draft);
         }}
       >
-        <div className="flex items-end gap-2">
-          <textarea
-            aria-label="Message Dexter"
-            className="max-h-28 min-h-[42px] flex-1 resize-none border border-line-light bg-parchment-alt px-3 py-2.5 text-sm text-ink outline-none transition focus:border-red focus:ring-2 focus:ring-red/15"
+        <div className="rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-red p-[3px] shadow-[0_10px_28px_rgba(38,99,235,0.18)]">
+          <div className="flex items-end gap-2 rounded-[13px] bg-white px-3 py-1.5">
+            <textarea
+              aria-label="Message Dexter"
+              className="max-h-28 min-h-[42px] flex-1 resize-none bg-transparent px-1 py-2.5 text-sm text-ink outline-none placeholder:text-ink-soft/80"
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={(event) => {
               if (event.key === "Enter" && !event.shiftKey) {
@@ -324,19 +359,20 @@ export default function DexterChat({ onFallback }) {
                 ask(draft);
               }
             }}
-            placeholder="Ask about an instrument or describe your application…"
+            placeholder={typedPrompt ? `${typedPrompt}|` : "Ask Dexter a question…"}
             ref={inputRef}
             rows={1}
             value={draft}
-          />
-          <button
-            aria-label="Send message"
-            className="inline-flex size-[42px] shrink-0 items-center justify-center border border-rose-200 bg-rose-50 text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-50"
-            disabled={streaming || !draft.trim()}
-            type="submit"
-          >
-            <FiArrowUp />
-          </button>
+            />
+            <button
+              aria-label="Send message"
+              className="mb-0.5 inline-flex size-[42px] shrink-0 items-center justify-center rounded-full bg-red text-white shadow-md shadow-red/20 transition hover:-translate-y-0.5 hover:bg-rose-700 disabled:cursor-not-allowed disabled:opacity-40"
+              disabled={streaming || !draft.trim()}
+              type="submit"
+            >
+              <FiArrowUp />
+            </button>
+          </div>
         </div>
 
         <button

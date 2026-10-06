@@ -19,6 +19,10 @@ import {
 import { collectTracking } from"@/lib/browserTracking";
 import SubmitButton from"@/components/common/SubmitButton";
 
+function isProductImage(src) {
+  return src?.includes("/productImages/");
+}
+
 function initials(name) {
   return name
     .split("")
@@ -205,6 +209,11 @@ export default function BlogDetailsPage({ post }) {
   const recentPosts = getRecentPosts(post.slug, 4);
   const categoryCounts = getCategoryCounts();
   const tags = getAllTags();
+  const visibleSections = post.sections.filter(
+    (section, index) =>
+      !(index === 0 && section.type === "image" && section.imageUrl === post.image)
+  );
+  const coverIsProductImage = isProductImage(post.image);
 
   return (
     <main className="overflow-hidden">
@@ -233,15 +242,21 @@ export default function BlogDetailsPage({ post }) {
             {/* Posts without a cover image skip the hero entirely rather than
                 rendering an empty frame. */}
             {post.image ? (
-              <div className="relative h-64 overflow-hidden sm:h-80">
-                <Image
-                  alt={post.title}
-                  className="object-cover"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 66vw, 100vw"
-                  src={post.image}
-                />
+              <div
+                className={`relative h-64 overflow-hidden sm:h-80 ${
+                  coverIsProductImage ? "bg-white" : ""
+                }`}
+              >
+                <div className={`absolute ${coverIsProductImage ? "inset-6 sm:inset-8" : "inset-0"}`}>
+                  <Image
+                    alt={post.title}
+                    className={coverIsProductImage ? "object-contain" : "object-cover"}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 66vw, 100vw"
+                    src={post.image}
+                  />
+                </div>
               </div>
             ) : null}
 
@@ -261,7 +276,7 @@ export default function BlogDetailsPage({ post }) {
             </div>
 
             <div className="mt-5 space-y-6">
-              {post.sections.map((section, index) => (
+              {visibleSections.map((section, index) => (
                 <Section index={index} key={index} section={section} />
               ))}
             </div>
@@ -387,10 +402,16 @@ export default function BlogDetailsPage({ post }) {
                     key={recent.id}
                   >
                     {recent.image ? (
-                      <span className="relative size-16 shrink-0 overflow-hidden">
+                      <span
+                        className={`relative size-16 shrink-0 overflow-hidden ${
+                          isProductImage(recent.image) ? "bg-white" : ""
+                        }`}
+                      >
                         <Image
                           alt={recent.title}
-                          className="object-cover transition duration-300 group-hover:scale-110"
+                          className={`transition duration-300 group-hover:scale-110 ${
+                            isProductImage(recent.image) ? "object-contain" : "object-cover"
+                          }`}
                           fill
                           sizes="64px"
                           src={recent.image}

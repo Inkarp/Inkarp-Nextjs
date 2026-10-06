@@ -31,7 +31,11 @@ export default function ScrollAnimations() {
       },
       {
         rootMargin: "0px 0px -12% 0px",
-        threshold: 0.12,
+        // A ratio threshold is measured against the element's full height.
+        // Long sections (such as a complete blog article) may never have 12%
+        // visible at once, leaving them permanently transparent. Any actual
+        // intersection is enough to start the reveal.
+        threshold: 0,
       }
     );
 

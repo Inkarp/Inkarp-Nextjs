@@ -4,12 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import StepIcon from "@/components/home/StepIcon";
 import WorkflowIcon from "@/components/home/WorkflowIcon";
-import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
-import {
-  stageSlugForLegacyTopic,
-  stagesWithSlugs,
-  workflowIntros,
-} from "@/data/workflowWheel";
+import { workflowIndustries } from "@/data/homeShowcase";
+import { stagesWithSlugs, workflowIntros } from "@/data/workflowWheel";
 
 const TOP_H = 58;
 const DOT_H = 60;
@@ -103,7 +99,6 @@ function StepRail({ cat, industry }) {
 export default function WorkflowJourneyExplorer() {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = workflowIndustries[activeIndex];
-  const topics = workflowTopics[active.cat] ?? [];
 
   return (
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-[260px_1fr]">
@@ -171,26 +166,6 @@ export default function WorkflowJourneyExplorer() {
             Click any stage to open that workflow →
           </p>
           <StepRail cat={active.cat} industry={active.industry} />
-        </div>
-
-        <div className="mt-6 border-t border-line-light pt-6">
-          <p className="mb-3 font-mono text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
-            Jump to a specific workflow
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {topics.map((topic) => (
-              <Link
-                key={topic.tag}
-                href={`/workflows/${active.cat}/${
-                  stageSlugForLegacyTopic(active.cat, topicSlug(topic.tag)) ??
-                  topicSlug(topic.tag)
-                }`}
-                className="border border-line-light px-3 py-1.5 text-[12px] text-ink transition hover:border-red hover:text-red"
-              >
-                {topic.title}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </div>

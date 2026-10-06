@@ -108,6 +108,12 @@ export default async function WorkflowStagePage({ params }) {
   if (!stage) {
     const legacy = stageSlugForLegacyTopic(industry, topic);
     if (legacy) redirect(`/workflows/${industry}/${legacy}`);
+    // A few old topics (e.g. chemical/corrosion-testing) never fed a stage;
+    // send those to the industry's workflow rather than a dead end.
+    const isOldTopic = (workflowTopics[industry] ?? []).some(
+      (item) => topicSlug(item.tag) === topic
+    );
+    if (isOldTopic) redirect(`/workflows/${industry}`);
     notFound();
   }
 
@@ -206,11 +212,7 @@ export default async function WorkflowStagePage({ params }) {
         </h1>
         <p className="mt-3 max-w-3xl text-sm leading-6 text-ink-soft">{stage.description}</p>
 
-        <WorkflowStageDetail
-          challenges={challenges}
-          industry={activeIndustry.industry}
-          stage={stage}
-        />
+        <WorkflowStageDetail challenges={challenges} industry={activeIndustry.industry} />
 
         <WorkflowOtherStages cat={industry} currentSlug={stage.slug} stages={stages} />
       </div>

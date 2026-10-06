@@ -1,13 +1,8 @@
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import WorkflowIcon from "@/components/home/WorkflowIcon";
-import WorkflowProblemProductPanel from "@/components/products/WorkflowProblemProductPanel";
-import { topicSlug, workflowIndustries, workflowTopics } from "@/data/homeShowcase";
+import { workflowIndustries } from "@/data/homeShowcase";
 import { workflowIntros, stagesWithSlugs } from "@/data/workflowWheel";
-import {
-  getProblemProductGroups,
-  mergeWorkflowContent,
-} from "@/lib/workflowContent";
 
 function IndustryTabs({ activeCat }) {
   return (
@@ -32,40 +27,7 @@ function IndustryTabs({ activeCat }) {
   );
 }
 
-function WorkflowDetail({ activeIndustry, topics, activeTopic }) {
-  const topicIndex = topics.indexOf(activeTopic);
-  const workflowContent = mergeWorkflowContent(activeIndustry, activeTopic);
-  const problemGroups = getProblemProductGroups(workflowContent);
-  const productSearchTerm = workflowContent.productQueryTags[0] ?? activeTopic.tag;
-
-  return (
-    <div className="mx-auto max-w-[1180px] px-4 py-6 sm:px-6 lg:px-8">
-      <IndustryTabs activeCat={activeIndustry.cat} />
-
-      <Link
-        href={`/workflows/${activeIndustry.cat}`}
-        className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-red"
-      >
-        Back to workflows
-      </Link>
-
-      <p className="font-mono text-xs uppercase tracking-wide text-ink-soft">
-        Workflow #{topicIndex + 1} / {activeIndustry.industry}
-      </p>
-      <h1 className="mt-2 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-        {activeTopic.title}
-      </h1>
-      <p className="mt-3 max-w-2xl text-sm leading-6 text-ink-soft">{activeTopic.desc}</p>
-
-      <WorkflowProblemProductPanel
-        problemGroups={problemGroups}
-        productSearchHref={`/products?q=${encodeURIComponent(productSearchTerm)}`}
-      />
-    </div>
-  );
-}
-
-function WorkflowList({ activeIndustry, topics }) {
+function WorkflowList({ activeIndustry }) {
   // The eight document stages replace the old six hand-written topic cards.
   const cat = activeIndustry.cat;
   const stages = stagesWithSlugs(cat);
@@ -120,17 +82,9 @@ function WorkflowList({ activeIndustry, topics }) {
   );
 }
 
-export default function WorkflowExplorer({ industry, topicSlug: activeTopicSlug }) {
+export default function WorkflowExplorer({ industry }) {
   const activeIndustry =
     workflowIndustries.find((item) => item.cat === industry) ?? workflowIndustries[0];
-  const topics = workflowTopics[activeIndustry.cat] ?? [];
-  const activeTopic = activeTopicSlug
-    ? topics.find((topic) => topicSlug(topic.tag) === activeTopicSlug) ?? null
-    : null;
 
-  return activeTopic ? (
-    <WorkflowDetail activeIndustry={activeIndustry} topics={topics} activeTopic={activeTopic} />
-  ) : (
-    <WorkflowList activeIndustry={activeIndustry} topics={topics} />
-  );
+  return <WorkflowList activeIndustry={activeIndustry} />;
 }

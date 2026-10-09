@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from"react";
 import Image from"next/image";
 import Link from"next/link";
-import { useSearchParams } from"next/navigation";
 import { FiArrowRight, FiCalendar, FiUser } from"react-icons/fi";
 import {
   categories,
@@ -77,9 +76,7 @@ function BlogCard({ post }) {
   );
 }
 
-export default function BlogsPage() {
-  const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") ||"All";
+export default function BlogsPage({ initialCategory ="All" }) {
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [renderedCategory, setRenderedCategory] = useState(initialCategory);
@@ -118,6 +115,7 @@ export default function BlogsPage() {
 
   return (
     <main className="overflow-hidden">
+      <h1 className="sr-only">Inkarp Blog: laboratory equipment guides and buying advice</h1>
 
       <section className="mx-auto max-w-[1180px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-center gap-2 pb-10" data-reveal>

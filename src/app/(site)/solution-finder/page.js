@@ -2,15 +2,18 @@ import Image from "next/image";
 import { FiActivity, FiCheckCircle, FiDatabase, FiShield, FiZap } from "react-icons/fi";
 import SolutionFinderWizard from "@/components/solution-finder/SolutionFinderWizard";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import { buildDynamicMetadata } from "@/data/pageSeo";
 import { getDb } from "@/lib/mongodb";
 import { findSeedInstitution, institutionIndustrySlug } from "@/lib/solutionFinder";
 
 const HERO_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 
-export const metadata = {
+export const metadata = buildDynamicMetadata({
+  path: "/solution-finder",
   title: "Laboratory Solution Finder | Inkarp",
   description: "Build a personalised laboratory workflow and discover matched scientific instruments, application resources, and support from Inkarp.",
-};
+  keywords: "laboratory solution finder, lab instrument selection, scientific instrument recommendation, Inkarp",
+});
 
 const benefits = [
   { Icon: FiActivity, title: "Workflow-led", text: "Recommendations consider the full laboratory process, not only a keyword." },

@@ -5,6 +5,7 @@ import HomeAchievements from "@/components/home/HomeAchievements";
 import HomeClientReviews from "@/components/home/HomeClientReviews";
 import HomeEventsInsights from "@/components/home/HomeEventsInsights";
 import HomeWorkflowWheel from "@/components/home/HomeWorkflowWheel";
+import OrganizationJsonLd from "@/components/home/OrganizationJsonLd";
 import Principles from "@/components/home/Principles";
 import { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
 import { getStripCampaigns, todayInIndia } from "@/data/campaigns";
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <main>
       <BreadcrumbJsonLd path="/" />
+      <OrganizationJsonLd />
       <HomeCampaignSlider initialSlides={getStripCampaigns(today)} initialToday={today} />
       <HomeAboutHero />
       <HomeWorkflowWheel />

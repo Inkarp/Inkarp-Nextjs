@@ -196,7 +196,10 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
           {steps.map((_, i) => (
             <button
               key={i}
+              aria-label={`Show step ${i + 1} of ${steps.length}`}
+              aria-current={active === i ? 'step' : undefined}
               onClick={() => setActive(i)}
+              type="button"
               className={`h-2 transition-all ${active === i ? 'w-6 bg-red' : 'w-2 bg-parchment-alt'}`}
             />
           ))}

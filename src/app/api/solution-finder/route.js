@@ -1,4 +1,5 @@
 import { getDb } from "@/lib/mongodb";
+import { createRateLimiter, tooManySubmissions } from "@/lib/rateLimit";
 import { ensureInstitutionSeeds } from "@/lib/institutionStore";
 import { isFinderOption } from "@/lib/finderOptionStore";
 import { cacheFinderSession } from "@/lib/finderSessionFallback";
@@ -55,7 +56,10 @@ async function notifyFinderLead(session) {
   });
 }
 
+const isRateLimited = createRateLimiter({ windowMs: 10 * 60_000, max: 6 });
+
 export async function POST(request) {
+  if (isRateLimited(request)) return tooManySubmissions();
   const body = await request.json().catch(() => null);
   const contactEmail = typeof body?.contactEmail === "string"
     ? body.contactEmail.trim().toLowerCase().slice(0, 254)

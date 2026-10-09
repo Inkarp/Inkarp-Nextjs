@@ -126,10 +126,11 @@ export function getCanonicalUrl(path) {
 
 function metadataFromSeo(seo, path) {
   // Absolute URL — WhatsApp/LinkedIn/X will not resolve a relative og:image.
+  // Only the default share image is known to be 1200x630; a page's own photo
+  // (a product shot, a blog banner) goes out without claimed dimensions.
   const image = {
     url: `${SITE_URL}${seo.image ?? SITE_OG_IMAGE}`,
-    width: 1200,
-    height: 630,
+    ...(seo.image ? {} : { width: 1200, height: 630 }),
     alt: seo.imageAlt ?? seo.title ?? SITE_OG_IMAGE_ALT,
   };
 
@@ -166,8 +167,11 @@ export function buildPageMetadata(path) {
 
 // For dynamic routes (e.g. /workflows/[industry]/[topic]) that aren't in the
 // static pageSeo table — caller supplies title/description/keywords per-record.
-export function buildDynamicMetadata({ path, title, description, keywords }) {
-  return metadataFromSeo({ title, description, keywords }, path);
+// `image` is a site path; WhatsApp and LinkedIn previews only handle JPEG/PNG
+// reliably, so anything else falls back to the default share image.
+export function buildDynamicMetadata({ path, title, description, keywords, image, imageAlt }) {
+  const shareImage = /\.(jpe?g|png)$/i.test(image ?? "") && image.startsWith("/") ? image : undefined;
+  return metadataFromSeo({ title, description, keywords, image: shareImage, imageAlt: shareImage ? imageAlt : undefined }, path);
 }
 
 // Accepts either a static path (looked up in pageSeo) or an explicit trail of

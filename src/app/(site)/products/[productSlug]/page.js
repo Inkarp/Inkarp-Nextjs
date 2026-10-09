@@ -42,6 +42,8 @@ export async function generateMetadata({ params }) {
       product.metaDescription ??
       `Explore ${product.name} from ${product.principalName}.`,
     keywords: product.metaKeywords,
+    image: product.image,
+    imageAlt: product.imageAlt ?? product.name,
   });
 }
 
@@ -105,10 +107,10 @@ export default async function ProductPage({ params }) {
         />
       )}
 
-      <nav className="border-y border-line-light bg-parchment-alt px-4 py-3 text-sm text-ink-soft sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" className="border-y border-line-light bg-parchment-alt px-4 py-3 text-sm text-ink-soft sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-[1180px] items-center gap-2">
-          <Link className="inline-flex size-8 items-center justify-center border border-line-light bg-white text-red transition hover:border-red" href="/">
-            <FaHome />
+          <Link aria-label="Home" className="inline-flex size-8 items-center justify-center border border-line-light bg-white text-red transition hover:border-red" href="/">
+            <FaHome aria-hidden="true" />
           </Link>
           <FiChevronRight className="text-red" />
           <Link className="transition hover:text-red" href="/products">Products</Link>

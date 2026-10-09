@@ -1,12 +1,18 @@
 import { getDb } from "@/lib/mongodb";
+import { createRateLimiter, tooManySubmissions } from "@/lib/rateLimit";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 import { normalizeTracking, omitTrackingFields } from "@/lib/serverTracking";
 import {
+  isValidEmail,
   PRODUCT_ENQUIRY_FIELDS,
   QUOTE_REQUEST_FIELDS,
   validateProductEnquiry,
   validateQuoteRequest,
 } from "@/lib/formValidation";
+
+// Phone-style fields across the forms. Only a digit count is checked, so
+// international numbers in any format still go through.
+const PHONE_FIELDS = ["phone", "contact", "contactNumber", "mobileNumber"];
 
 // Product-page "pick something, then send it to Inkarp" tools. They all
 // share the same required fields (name/email/configuration) and all route
@@ -112,7 +118,11 @@ function acknowledgementFor(formType) {
   }
 }
 
+// A person rarely sends more than a few forms in ten minutes; a bot sends hundreds.
+const isRateLimited = createRateLimiter({ windowMs: 10 * 60_000, max: 8 });
+
 export async function POST(request) {
+  if (isRateLimited(request)) return tooManySubmissions();
   const body = await request.json().catch(() => null);
 
   if (!body || typeof body !== "object") {
@@ -125,6 +135,27 @@ export async function POST(request) {
   if (missing.length) {
     return Response.json(
       { success: false, message: `Missing required fields: ${missing.join(", ")}` },
+      { status: 400 }
+    );
+  }
+
+  // Every form that asks for an email or phone gets a basic format check, so
+  // junk such as "not-an-email" never reaches the inbox or the database.
+  // Empty optional fields are left alone; required ones were checked above.
+  if (typeof fields.email === "string" && fields.email.trim() && !isValidEmail(fields.email)) {
+    return Response.json(
+      { success: false, message: "Enter a valid email address.", errors: { email: "Enter a valid email address." } },
+      { status: 400 }
+    );
+  }
+  const badPhone = PHONE_FIELDS.find((key) => {
+    if (typeof fields[key] !== "string" || !fields[key].trim()) return false;
+    const digits = fields[key].replace(/\D/g, "").length;
+    return digits < 7 || digits > 15;
+  });
+  if (badPhone) {
+    return Response.json(
+      { success: false, message: "Enter a valid phone number.", errors: { [badPhone]: "Enter a valid phone number." } },
       { status: 400 }
     );
   }

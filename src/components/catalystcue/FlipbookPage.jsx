@@ -518,9 +518,9 @@ export default function FlipbookPage({ file, title }) {
           <p className="text-[11px] uppercase tracking-wide text-parchment/60 sm:text-xs">
             Magazine
           </p>
-          <h1 className="truncate  text-sm font-semibold text-parchment sm:text-lg">
+          <p className="truncate  text-sm font-semibold text-parchment sm:text-lg">
             {title}
-          </h1>
+          </p>
         </div>
       </div>
 

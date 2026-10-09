@@ -13,6 +13,9 @@ jobs:
           username: deploy
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            # Stop at the first failing step, so a failed install or build never
+            # restarts the live site on a broken .next folder.
+            set -e
             export PATH="/home/inkarpnext/.nvm/versions/node/$(ls /home/inkarpnext/.nvm/versions/node)/bin:$PATH"
             export PM2_HOME="/home/deploy/.pm2"
             git config --global --add safe.directory /home/inkarpnext/htdocs/nextapp.72.60.98.245.nip.io

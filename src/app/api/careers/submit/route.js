@@ -1,4 +1,5 @@
 import { after } from "next/server";
+import { createRateLimiter, tooManySubmissions } from "@/lib/rateLimit";
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
 import { TRACKING_FIELD_KEYS, normalizeTracking } from "@/lib/serverTracking";
@@ -61,7 +62,10 @@ async function sendCareerEmails({ fields, submission, tracking, resume, resumeBu
   return notificationSent;
 }
 
+const isRateLimited = createRateLimiter({ windowMs: 10 * 60_000, max: 4 });
+
 export async function POST(request) {
+  if (isRateLimited(request)) return tooManySubmissions();
   const formData = await request.formData().catch(() => null);
 
   if (!formData) {

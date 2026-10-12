@@ -32,7 +32,8 @@ function groupNoteAfter(specs, index) {
   return null;
 }
 
-export default function TechnicalSpecsTable({ note, specs = [] }) {
+// `columns` lets content name the two header cells (defaults: Parameter / Details).
+export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
   if (!specs.length) {
     return null;
   }
@@ -89,8 +90,8 @@ export default function TechnicalSpecsTable({ note, specs = [] }) {
           <caption className="sr-only">Technical specifications table</caption>
           <thead>
             <tr className="border-b border-line-light bg-parchment-alt text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">
-              <th className="w-[34%] px-5 py-4" scope="col">Parameter</th>
-              <th className="px-5 py-4" scope="col">Details</th>
+              <th className="w-[34%] px-5 py-4" scope="col">{columns?.[0] ?? "Parameter"}</th>
+              <th className="px-5 py-4" scope="col">{columns?.[1] ?? "Details"}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-line-light">

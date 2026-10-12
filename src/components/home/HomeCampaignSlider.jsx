@@ -12,6 +12,7 @@ import {
 import { webinars } from "@/data/webinars";
 import { pushEvent } from "@/lib/analytics";
 import DiwaliCelebration from "./DiwaliCelebration";
+import DussehraCelebration from "./DussehraCelebration";
 import GaneshCelebration from "./GaneshCelebration";
 import NavratriCelebration from "./NavratriCelebration";
 
@@ -521,6 +522,9 @@ function ImageSlide({ campaign }) {
 function CampaignSlide({ campaign, today }) {
   if (campaign.variant === "diwali") {
     return <DiwaliCelebration campaign={campaign} />;
+  }
+  if (campaign.variant === "dussehra") {
+    return <DussehraCelebration campaign={campaign} />;
   }
   if (campaign.variant === "navratri") {
     return <NavratriCelebration campaign={campaign} today={today} />;

@@ -41,6 +41,7 @@ const TOP_LAYER = 2147483647;
 const HELPER_PROMPT_DELAY_MS = 25000;
 const GREETING_STORAGE_KEY = "inkarp-chatbot-greeting-dismissed";
 const PANEL_TRANSITION_MS = 250;
+const LAUNCHER_SLIDE_MS = 700;
 const LAUNCHER_GREETING = "Need help choosing an instrument?";
 
 const ENQUIRY_ICONS = {
@@ -173,6 +174,7 @@ export default function FloatingChatbot() {
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLaunching, setIsLaunching] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [hasOpenedOnce, setHasOpenedOnce] = useState(false);
   const [helperPromptPath, setHelperPromptPath] = useState("");
@@ -192,6 +194,7 @@ export default function FloatingChatbot() {
   const [workflowLeadId, setWorkflowLeadId] = useState("");
 
   const launcherRef = useRef(null);
+  const launcherTimerRef = useRef(null);
   const panelRef = useRef(null);
   const previouslyFocusedRef = useRef(null);
 
@@ -200,7 +203,10 @@ export default function FloatingChatbot() {
 
   useEffect(() => {
     const mountTimer = window.setTimeout(() => setIsMounted(true), 0);
-    return () => window.clearTimeout(mountTimer);
+    return () => {
+      window.clearTimeout(mountTimer);
+      window.clearTimeout(launcherTimerRef.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -268,11 +274,22 @@ export default function FloatingChatbot() {
   }, [step]);
 
   function openChatbot() {
+    if (isLaunching || isOpen) return;
     pushEvent("chatbot_clicked");
     setHasOpenedOnce(true);
-    setIsOpen(true);
     dismissGreetingTooltip();
     if (step === "workflow-result" || step === "success") setStep("chat");
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsOpen(true);
+      return;
+    }
+
+    setIsLaunching(true);
+    launcherTimerRef.current = window.setTimeout(() => {
+      setIsLaunching(false);
+      setIsOpen(true);
+    }, LAUNCHER_SLIDE_MS);
   }
 
   function closeChatbot() {
@@ -472,11 +489,13 @@ export default function FloatingChatbot() {
 
       <button
         aria-expanded={isOpen}
-        aria-label="Open website chatbot"
+        aria-label={isLaunching ? "Opening website chatbot" : "Open website chatbot"}
         data-floating-widget
-        className={`group fixed inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-white/95 p-1.5 text-left shadow-[0_12px_34px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-red/20 hover:shadow-[0_16px_38px_rgba(190,0,16,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:w-[168px] sm:justify-start sm:gap-2.5 sm:py-1.5 sm:pl-1.5 sm:pr-4 ${
+        className={`dexter-launcher-button group fixed inline-flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-white/80 bg-white/95 p-1.5 text-left shadow-[0_12px_34px_rgba(0,0,0,0.2)] backdrop-blur-xl transition-all duration-300 ease-out hover:-translate-y-1 hover:border-red/20 hover:shadow-[0_16px_38px_rgba(190,0,16,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-400 motion-reduce:transition-none motion-reduce:hover:transform-none sm:w-[168px] sm:justify-start sm:gap-2.5 sm:py-1.5 sm:pl-1.5 sm:pr-4 ${
           isOpen ? "pointer-events-none translate-y-3 scale-75 opacity-0" : "opacity-100"
         }`}
+        data-launching={isLaunching ? "" : undefined}
+        disabled={isLaunching}
         onClick={openChatbot}
         ref={launcherRef}
         style={{ bottom: "1.25rem", color: CHATBOT_CONFIG.colors.launcherText, right: "1rem", zIndex: TOP_LAYER }}
@@ -485,7 +504,7 @@ export default function FloatingChatbot() {
         <span className="pointer-events-none absolute -top-6 right-0 whitespace-nowrap rounded-full bg-ink px-2.5 py-1 text-[9px] font-extrabold uppercase tracking-[0.08em] text-white shadow-md sm:hidden">
           Ask Dexter · AI
         </span>
-        <span className="relative inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose-50 to-rose-100 ring-1 ring-red/10">
+        <span className="dexter-launcher-icon relative inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose-50 to-rose-100 ring-1 ring-red/10">
           <Image
             alt=""
             className="size-10 rounded-full object-cover motion-safe:animate-[dexter-idle_7s_ease-in-out_infinite]"
@@ -499,7 +518,7 @@ export default function FloatingChatbot() {
             className="absolute bottom-0 right-0 size-3 rounded-full border-2 border-white bg-emerald-500 shadow-sm"
           />
         </span>
-        <span className="hidden min-w-0 flex-1 sm:block">
+        <span className="dexter-launcher-copy hidden min-w-0 flex-1 sm:block">
           <span className="block text-sm font-extrabold leading-4 text-ink transition group-hover:text-red">
             Ask Dexter
           </span>

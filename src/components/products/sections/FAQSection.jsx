@@ -20,7 +20,7 @@ function getCategory(faq) {
   return 'capability';
 }
 
-export default function FAQSection({ faqs = [], productName, intro }) {
+export default function FAQSection({ faqs = [], productName, intro, title }) {
   const [open, setOpen] = useState(null);
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
@@ -43,7 +43,7 @@ export default function FAQSection({ faqs = [], productName, intro }) {
         <SectionHeader
           number="18"
           eyebrow="FAQ"
-          title="Frequently asked questions"
+          title={title ?? "Frequently asked questions"}
           description={intro ?? "Direct answers for product capability, configuration, pricing, installation and service discussions."}
         />
 

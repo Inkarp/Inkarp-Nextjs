@@ -135,6 +135,7 @@ import jeiotechBathCirculatorsCatalog from "./jeiotech/bath-circulators.json";
 import jeiotechAutoclavesCatalog from "./jeiotech/autoclaves.json";
 import jeiotechStoragesCatalog from "./jeiotech/storages.json";
 import jeiotechOvensCatalog from "./jeiotech/ovens.json";
+import hitachiThermalAnalysisCatalog from "./hitachi/thermal-analysis.json";
 import mettlerToledoUvVisSpectrophotometersCatalog from "./mettler-toledo/uv-vis-spectrophotometers.json";
 import mettlerToledoMeltingPointSystemsCatalog from "./mettler-toledo/melting-point-systems.json";
 import mettlerToledoRefractometerCatalog from "./mettler-toledo/refractometer.json";
@@ -295,6 +296,7 @@ const principalCatalogs = [
   jeiotechAutoclavesCatalog,
   jeiotechStoragesCatalog,
   jeiotechOvensCatalog,
+  hitachiThermalAnalysisCatalog,
   mettlerToledoUvVisSpectrophotometersCatalog,
   mettlerToledoMeltingPointSystemsCatalog,
   mettlerToledoRefractometerCatalog,

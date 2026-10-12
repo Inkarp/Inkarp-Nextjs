@@ -12,7 +12,7 @@ function cleanText(value = '') {
 }
 
 export default function MethodComparison({ data }) {
-  const { columns = [], rows = [], eyebrow, title, description, disclaimer } = data ?? {};
+  const { columns = [], rows = [], eyebrow, title, description, disclaimer, featureLabel } = data ?? {};
   if (!rows.length) return null;
 
   const highlightedIndex = columns.findIndex((column) => column.highlight);
@@ -34,7 +34,7 @@ export default function MethodComparison({ data }) {
               <thead>
                 <tr className="border-b border-line-light">
                   <th className="sticky left-0 z-10 w-[28%] bg-parchment px-3 py-4 text-left text-[11px] font-bold uppercase tracking-wide text-black sm:px-6 sm:py-5 sm:text-xs sm:tracking-widest">
-                    Parameter
+                    {featureLabel ?? 'Parameter'}
                   </th>
                   {columns.map((column, index) => {
                     const isHighlighted = column.highlight;

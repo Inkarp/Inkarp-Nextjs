@@ -312,7 +312,9 @@ export default function ProductInfoTabs({ product }) {
             </h3>
             {overviewSec?.body?.map((p, i) => {
               // Match separator dashes without splitting hyphenated words.
-              const separator = /:|\s+[-\u2013\u2014]\s+/.exec(p);
+              // `plainBody` keeps verbatim prose whole, where a mid-sentence
+              // dash would otherwise turn half a sentence into a bold heading.
+              const separator = overviewSec.plainBody ? null : /:|\s+[-\u2013\u2014]\s+/.exec(p);
               const heading = separator ? p.slice(0, separator.index) : null;
               const rest = separator ? p.slice(separator.index + separator[0].length) : p;
               return (
@@ -328,9 +330,12 @@ export default function ProductInfoTabs({ product }) {
                 </p>
               );
             })}
+            {overviewSec?.cards?.length > 0 && overviewSec.cardsTitle ? (
+              <h4 className="mt-6 text-sm font-semibold text-ink">{overviewSec.cardsTitle}</h4>
+            ) : null}
             {overviewSec?.cards?.length > 0 && (
               <div className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-                {overviewSec.cards.slice(0, 4).map((c) => (
+                {overviewSec.cards.slice(0, overviewSec.cardLimit ?? 4).map((c) => (
                   <IconCard
                     key={c.title}
                     {...c}
@@ -410,6 +415,7 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
             <TechnicalSpecsTable
+              columns={specsSec?.columns}
               note="Per published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering."
               specs={product.technicalSpecs ?? []}
             />
@@ -448,9 +454,9 @@ export default function ProductInfoTabs({ product }) {
             {perfSec?.groups?.length > 0 && (
               // Optional titled tables / bullet lists (e.g. operating modes, safety systems).
               <div className="mt-6 space-y-6">
-                {perfSec.groups.map((group) => (
-                  <div key={group.title}>
-                    <h4 className="mb-2 text-sm font-semibold text-ink">{group.title}</h4>
+                {perfSec.groups.map((group, groupIndex) => (
+                  <div key={group.title ?? groupIndex}>
+                    {group.title ? <h4 className="mb-2 text-sm font-semibold text-ink">{group.title}</h4> : null}
                     {group.rows?.length > 0 && (
                       <div className="overflow-x-auto border border-line-light">
                         <table className="w-full min-w-[420px] border-collapse text-left text-sm">
@@ -591,8 +597,9 @@ export default function ProductInfoTabs({ product }) {
                     <div>
                       <div className="font-semibold text-sm text-black">{c.title}</div>
                       <div className="text-xs text-black mt-0.5">{c.description}</div>
+                      {/* Every page with this tab carries the quote form (#booking). */}
                       <a
-                        href={`mailto:info@inkarp.co.in?subject=${encodeURIComponent(`Request: ${product.name} ${c.title}`)}`}
+                        href="#booking"
                         className="mt-2 inline-block text-xs font-semibold text-ink underline hover:text-red"
                       >
                         Request →

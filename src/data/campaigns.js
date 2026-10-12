@@ -134,9 +134,8 @@ export const campaigns = [
     end: "2026-09-18",
     priority: 7,
   },
-  // Festival designs for Navratri, Dussehra and Diwali 2026 are ready but on
-  // hold (2026-10-01). Uncomment this block to switch them on; the dates are
-  // already verified. Preview links only work for entries that are uncommented.
+  // The Navratri design is ready but remains on hold. Uncomment this entry when
+  // it should be scheduled; preview links only work for enabled entries.
   /*
   {
     // Nine nights of Sharad Navratri. Verified 2026-10-01 against public
@@ -157,12 +156,13 @@ export const campaigns = [
     end: "2026-10-19",
     priority: 7,
   },
+  */
   {
-    // Vijayadashami, the day after the ninth night: Tue 20 Oct 2026 (verified
-    // 2026-10-01). Same design as Navratri with every lamp lit.
+    // Dussehra campaign window leading into Vijayadashami on Tue 20 Oct 2026.
+    // Dedicated bow-and-arrow celebration design with festive lamps.
     id: "dussehra-2026",
     type: "festival",
-    variant: "navratri",
+    variant: "dussehra",
     finale: true,
     mark: "diya",
     icon: "🏹",
@@ -172,7 +172,7 @@ export const campaigns = [
     nights: 9,
     cta: null,
     exclusive: true,
-    start: "2026-10-20",
+    start: "2026-10-12",
     end: "2026-10-20",
     priority: 7,
   },
@@ -194,7 +194,6 @@ export const campaigns = [
     end: "2026-11-10",
     priority: 8,
   },
-  */
   {
     id: "independence-day-2026",
     type: "national-day",

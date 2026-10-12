@@ -158,7 +158,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
     },
     product.faqs?.length > 0 && {
       key: 'faq',
-      node: <FAQSection faqs={product.faqs} intro={product.faqIntro} productName={product.name} />,
+      node: <FAQSection faqs={product.faqs} intro={product.faqIntro} productName={product.name} title={product.faqTitle} />,
     },
     product.booking && {
       key: 'demo-booking',

@@ -400,7 +400,11 @@ export const productImageMap = {
   "inkarp-usb:ultrasonic-bath": "/assets/images/productImages/inkarp/ultrasonic-bath.png",
   "inkarp-usb:ultrasonic-cleaner": "/assets/images/productImages/inkarp/ultrasonic-cleaner.png",
   "buchi:freeze-dryer-lyovapor-l-250": "/assets/images/productImages/Buchi/L-250.webp",
-  "mettler-toledo:balance-xpr3": "/assets/images/productImages/Mettler/xpr3.jpg"
+  "mettler-toledo:balance-xpr3": "/assets/images/productImages/Mettler/xpr3.jpg",
+  "hitachi:differential-scanning-calorimeter-dsc-nexta-dsc-series": "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
+  "hitachi:simultaneous-thermogravimetric-analyzer-nexta-sta-series": "/assets/images/productImages/Hitachi/simultaneous-thermogravimetric-analyzer-nexta-sta-series.jpg",
+  "hitachi:thermomechanical-analyzer-tma7000-series": "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
+  "hitachi:nexta-dma200-dynamic-mechanical-analyzer": "/assets/images/productImages/Hitachi/dma-200.avif",
 };
 
 export const principalFallbackImages = {

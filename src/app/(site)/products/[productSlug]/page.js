@@ -69,7 +69,8 @@ export default async function ProductPage({ params }) {
 
   const isRichPage = !!(product.inPageNav || product.simulator || product.quiz);
   const servicePills = DEFAULT_PRODUCT_SERVICE_PILLS;
-  const distributorNote = `Authorized Distributor & Service Provider in ${product.authorizedRegion || DEFAULT_AUTHORIZED_REGION}`;
+  // `heroBadge` lets a product show its source document's own distributor line.
+  const distributorNote = product.heroBadge ?? `Authorized Distributor & Service Provider in ${product.authorizedRegion || DEFAULT_AUTHORIZED_REGION}`;
   const countryFlagCodes = getCountryFlagCodes(product.countryOfOrigin);
   // `overview` is a plain string on most products, but a { body: [...] } object
   // on the newer flat-schema Mettler Toledo pages — guard against both shapes.

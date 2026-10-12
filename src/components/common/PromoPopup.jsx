@@ -155,6 +155,7 @@ export default function PromoPopup() {
     <div
       data-floating-widget
       data-popup-open={isVisible ? "" : undefined}
+      data-bottom-banner={isVisible ? "" : undefined}
       className={`fixed inset-x-3 bottom-4 z-[60] mx-auto w-[min(44rem,calc(100vw-1.5rem))] transition duration-500 ease-out sm:bottom-6 ${
         isVisible
           ? "translate-y-0 opacity-100"

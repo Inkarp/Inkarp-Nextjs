@@ -398,6 +398,12 @@ html:has([data-popup-open]) [data-finder-launcher] {
   display: none !important;
 }
 
+/* The webinar strip shares that bottom-centre spot, so it steps aside while
+   the product banner (PromoPopup) is up and comes back when it is closed. */
+html:has([data-bottom-banner]) [data-webinar-notice] {
+  display: none !important;
+}
+
 /* Solution Finder: a deliberately separate AI workspace. The motion stays on
    composited transforms/opacity so the atmosphere does not disturb layout. */
 .solution-universe::before {

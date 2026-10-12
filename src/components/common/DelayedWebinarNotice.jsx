@@ -38,33 +38,38 @@ export default function DelayedWebinarNotice() {
   };
 
   return (
+    // Sits in the Solution Finder button's spot (bottom centre, between the
+    // Compare and Dexter corner buttons); that button is hidden while this is
+    // open and takes the spot back once it is closed. Below lg the gap is
+    // narrow, so the strip uses two rows: the title, then Register and close.
     <aside
       aria-label="Upcoming webinar"
       data-popup-open=""
-      className="fixed inset-x-3 bottom-20 z-40 mx-auto w-[min(760px,calc(100vw-1.5rem))] animate-[hvc-fade_500ms_ease] print:hidden"
+      data-webinar-notice=""
+      className="fixed inset-x-0 bottom-4 z-40 mx-auto w-[calc(100vw-10.5rem)] animate-[hvc-fade_500ms_ease] print:hidden sm:w-[calc(100vw-27rem)] lg:w-[min(760px,calc(100vw-27rem))]"
     >
-      <div className="flex items-center gap-2 rounded-full border border-cyan-200/25 bg-[#071d25]/95 px-3 py-2 text-white shadow-[0_14px_40px_rgba(7,29,37,.32)] backdrop-blur-xl sm:gap-3 sm:px-4">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border border-cyan-200/25 bg-[#071d25]/95 px-3 py-2 text-white shadow-[0_14px_40px_rgba(7,29,37,.32)] backdrop-blur-xl lg:flex-nowrap lg:gap-3 lg:rounded-full lg:px-4">
         <span className="relative flex size-2 shrink-0">
           <span className="absolute inline-flex size-full animate-ping rounded-full bg-red opacity-75" />
           <span className="relative inline-flex size-2 rounded-full bg-red" />
         </span>
-        <p className="min-w-0 flex-1 truncate text-xs sm:text-sm">
+        <p className="min-w-0 flex-1 basis-[calc(100%-1rem)] truncate text-xs lg:basis-auto lg:text-sm">
           <strong className="text-cyan-200">Live webinar:</strong>{" "}
           <span className="font-semibold">{webinar.title}</span>
-          <span className="hidden text-white/65 md:inline"> · {webinar.date1}</span>
+          <span className="hidden text-white/65 lg:inline"> · {webinar.date1}</span>
         </p>
         <Link
-          className="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-amber-300 transition hover:text-white sm:text-sm"
+          className="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-amber-300 transition hover:text-white lg:text-sm"
           href={webinar.sourceLink || "/webinars"}
           onClick={dismiss}
           rel={webinar.sourceLink ? "noopener noreferrer" : undefined}
           target={webinar.sourceLink ? "_blank" : undefined}
         >
-          <FiClock aria-hidden="true" className="hidden sm:block" /> Register <FiArrowRight aria-hidden="true" />
+          <FiClock aria-hidden="true" className="hidden lg:block" /> Register <FiArrowRight aria-hidden="true" />
         </Link>
         <button
           aria-label="Dismiss webinar notice"
-          className="inline-flex size-7 shrink-0 items-center justify-center rounded-full text-white/60 transition hover:bg-white/10 hover:text-white"
+          className="ml-auto inline-flex size-7 shrink-0 items-center justify-center rounded-full text-white/60 transition hover:bg-white/10 hover:text-white lg:ml-0"
           onClick={dismiss}
           type="button"
         >

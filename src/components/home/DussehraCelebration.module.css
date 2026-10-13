@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  height: 64px;
+  height: 52px;
   box-sizing: border-box;
   overflow: hidden;
   color: #ffd978;
@@ -11,8 +11,8 @@
   border-top: 2px solid #efb94f;
 }
 .banner::before { content: ""; position: absolute; inset: 0; opacity: .13; background: repeating-linear-gradient(45deg, transparent 0 18px, #ffd978 19px 20px); mask-image: linear-gradient(to bottom, #000, transparent 75%); }
-.content { position: relative; z-index: 2; max-width: 1320px; height: 100%; margin: auto; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: clamp(12px, 3vw, 42px); padding: 8px 20px 5px; }
-.art { width: 76px; flex: 0 0 auto; }
+.content { position: relative; z-index: 2; max-width: 1320px; height: 100%; margin: auto; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: clamp(8px, 2.2vw, 30px); padding: 5px 20px 4px; }
+.art { width: 42px; flex: 0 0 auto; }
 .bow { display: block; width: 100%; overflow: visible; filter: drop-shadow(0 0 12px rgba(255, 192, 72, .42)); }
 .sunRing { fill: none; stroke: #ffc454; stroke-width: 2; stroke-dasharray: 2 8; transform-origin: center; animation: spin 20s linear infinite; }
 .sunCore { fill: rgba(255, 193, 71, .09); stroke: rgba(255, 220, 142, .28); stroke-width: 1; }
@@ -22,17 +22,18 @@
 .arrow { stroke: #fff0bd; stroke-width: 4; animation: arrow-pulse 2.8s ease-in-out infinite; }
 .tilak { fill: #ffca4e; }
 .copy { min-width: 0; max-width: 760px; text-align: center; }
-.eyebrow { color: #ffe5ac; font-size: 9px; line-height: 1.2; font-weight: 700; text-transform: uppercase; letter-spacing: .16em; }
-.title { margin: 2px 0; color: #fff3cf; font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 500; line-height: 1.1; text-wrap: balance; text-shadow: 0 2px 18px rgba(255, 190, 60, .28); }
-.message { margin: auto; max-width: 760px; color: #ffe5c6; font-size: 11px; line-height: 1.3; text-wrap: balance; }
-.cheer { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 3px; color: #ffd16e; font-size: 10px; line-height: 1.2; font-weight: 700; letter-spacing: .04em; }
+.eyebrow { color: #ffe5ac; font-size: 7px; line-height: 1.1; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+.title { display: flex; justify-content: center; min-height: 1em; margin: 1px 0; color: #fff3cf; font-family: Georgia, "Times New Roman", serif; font-size: 18px; font-weight: 700; line-height: 1; text-shadow: 0 2px 18px rgba(255, 190, 60, .28); }
+.typedTitle { display: inline-block; width: 0; max-width: 25ch; overflow: hidden; white-space: nowrap; animation: festiveTyping 2.6s steps(25, end) forwards; }
+.message { display: none; margin: auto; max-width: 760px; color: #ffe5c6; font-size: 9px; line-height: 1.15; text-wrap: balance; }
+.cheer { display: flex; justify-content: center; align-items: center; gap: 7px; margin-top: 2px; color: #ffd16e; font-size: 8px; line-height: 1; font-weight: 700; letter-spacing: .04em; }
 .cheer span { font-size: 9px; }
-.lamps { display: flex; align-items: flex-end; width: 108px; flex: 0 0 auto; }
-.diya { width: 34px; overflow: visible; }
-.featuredDiya { width: 42px; margin-bottom: 11px; }
+.lamps { display: flex; align-items: flex-end; width: 72px; flex: 0 0 auto; }
+.diya { width: 23px; overflow: visible; }
+.featuredDiya { width: 29px; margin-bottom: 5px; }
 .flame { transform-origin: 40px 46px; animation: flicker 2.4s ease-in-out infinite alternate; filter: drop-shadow(0 0 9px #ffb548); }
-.garland { position: absolute; z-index: 3; inset: 0 0 auto; height: 14px; display: flex; justify-content: space-around; pointer-events: none; }
-.garland span { width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: #f8aa27; border: 1px solid #ffd878; box-shadow: 0 0 6px rgba(255, 190, 58, .45); }
+.garland { position: absolute; z-index: 3; inset: 0 0 auto; height: 10px; display: flex; justify-content: space-around; pointer-events: none; }
+.garland span { width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: #f8aa27; border: 1px solid #ffd878; box-shadow: 0 0 6px rgba(255, 190, 58, .45); }
 .garland span:nth-child(3n) { background: #e95b22; }
 .garland span:nth-child(even) { transform: translateY(4px); }
 .sparks { position: absolute; inset: 0; pointer-events: none; }
@@ -42,8 +43,9 @@
 @keyframes flicker { from { transform: scale(.94) rotate(-3deg); } to { transform: scale(1.07) rotate(3deg); } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes arrow-pulse { 0%, 100% { transform: translateX(-2px); opacity: .85; } 50% { transform: translateX(3px); opacity: 1; } }
-@media (min-width: 640px) { .banner { height: 80px; } .art { width: 62px; } .title { font-size: 24px; } .message { font-size: 10px; } }
-@media (min-width: 1024px) { .banner { height: 96px; } .art { width: 80px; } .title { font-size: 28px; } .message { font-size: 11px; } }
-@media (min-width: 640px) and (max-width: 1023px) { .content { gap: 14px; } .lamps { width: 78px; } .diya { width: 24px; } .featuredDiya { width: 30px; } }
-@media (max-width: 639px) { .content { gap: 8px; padding: 7px 12px 4px; } .art { width: 46px; } .eyebrow { font-size: 7px; letter-spacing: .07em; } .title { font-size: clamp(16px, 4.5vw, 23px); } .message { display: none; } .cheer { margin-top: 2px; font-size: 8px; gap: 6px; } .lamps { width: 27px; } .diya { display: none; } .featuredDiya { display: block; width: 27px; margin-bottom: 0; } }
-@media (prefers-reduced-motion: reduce) { .sunRing, .arrow, .flame, .sparks i { animation: none; } .sparks i { display: none; } }
+@keyframes festiveTyping { from { width: 0; } to { width: 25ch; } }
+@media (min-width: 640px) { .banner { height: 60px; } .art { width: 48px; } .title { font-size: 20px; } }
+@media (min-width: 1024px) { .banner { height: 68px; } .art { width: 54px; } .title { font-size: 22px; } .message { display: block; font-size: 9px; } .lamps { width: 84px; } .diya { width: 27px; } .featuredDiya { width: 34px; margin-bottom: 6px; } }
+@media (min-width: 640px) and (max-width: 1023px) { .content { gap: 12px; } }
+@media (max-width: 639px) { .content { gap: 6px; padding: 5px 8px 3px; } .art { width: 34px; } .eyebrow { font-size: 5.5px; letter-spacing: .05em; } .title { font-size: clamp(12px, 3.65vw, 15px); } .message { display: none; } .cheer { margin-top: 1px; font-size: 6.5px; gap: 4px; } .lamps { width: 22px; } .diya { display: none; } .featuredDiya { display: block; width: 22px; margin-bottom: 0; } }
+@media (prefers-reduced-motion: reduce) { .sunRing, .arrow, .flame, .sparks i, .typedTitle { animation: none; } .typedTitle { width: auto; } .sparks i { display: none; } }

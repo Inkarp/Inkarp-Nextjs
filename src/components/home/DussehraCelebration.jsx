@@ -46,7 +46,9 @@ export default function DussehraCelebration({ campaign }) {
         <div className={styles.art}><BowAndArrow /></div>
         <div className={styles.copy}>
           <p className={styles.eyebrow}>Team Inkarp celebrates the triumph of light</p>
-          <h2 className={styles.title}>{campaign.title}</h2>
+          <h2 aria-label="Happy Navratri and Dussehra" className={styles.title}>
+            <span aria-hidden="true" className={styles.typedTitle}>Happy Navratri &amp; Dussehra</span>
+          </h2>
           <p className={styles.message}>{campaign.message}</p>
           <p className={styles.cheer}><span aria-hidden="true">✦</span> Shubh Vijayadashami <span aria-hidden="true">✦</span></p>
         </div>

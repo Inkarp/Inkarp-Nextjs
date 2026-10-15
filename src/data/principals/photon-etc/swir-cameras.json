@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "photon-etc",
-    "principalName": "Photon ETC",
-    "countryOfOrigin": "Canada"
-  },
+  "principal": { "slug": "photon-etc", "principalName": "Photon ETC", "countryOfOrigin": "Canada" },
   "categories": [
     {
       "name": "SWIR Cameras",
@@ -11,24 +7,54 @@
       "products": [
         {
           "name": "ZephIR™ 1.7",
+
           "slug": "zephir-1-7",
+
           "principalImage": "/assets/images/PrincipalLogos/Photon.jpeg",
+
           "imageAlt": "Photon etc. ZephIR 1.7 SWIR Camera - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/zephir-1-7",
+
           "breadcrumbPath": "Home > Products > SWIR Cameras > Photon etc. ZephIR™ 1.7 SWIR Camera",
+
           "h1": "ZephIR™ 1.7",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Scientific-grade SWIR imaging with extremely low noise, high efficiency and deep thermoelectric cooling to −80 °C.",
 
           "features": [
-            "Scientific-Grade InGaAs Detector: ZephIR™ 1.7 uses an InGaAs detector designed for SWIR imaging, suited to applications requiring sensitive infrared imaging across the 0.9–1.7 µm range, spanning both the NIR-II and SWIR regions.",
-            "Deep Four-Stage TEC Cooling: The camera uses a four-stage thermoelectric cooler capable of maintaining temperatures as low as −80 °C — a key part of the camera's low-noise imaging design.",
-            "Extremely Low Noise: Photon etc. describes ZephIR™ 1.7 as having extremely low noise levels, suitable for applications where weak infrared signals need to be detected and characterized.",
-            "High Efficiency: The camera combines high efficiency with its scientific-grade InGaAs detector and low-noise architecture.",
-            "Rapid Frame Rate: ZephIR™ 1.7 provides a rapid frame rate, allowing it to be used for applications where fast image acquisition is required.",
-            "External Trigger Compatibility: The camera supports an external trigger, enabling synchronized image acquisition within experimental or automated imaging systems.",
-            "Forced-Air Cooling: The TEC uses forced-air cooling, eliminating the need for a separate water or liquid-nitrogen chiller unit and simplifying camera integration."
+            {
+              "title": "Scientific-Grade InGaAs Detector",
+              "description": "ZephIR™ 1.7 uses an InGaAs detector designed for SWIR imaging. The detector architecture is suited to applications requiring sensitive infrared imaging across the 0.9–1.7 µm range."
+            },
+            {
+              "title": "Deep Four-Stage TEC Cooling",
+              "description": "The camera uses a four-stage thermoelectric cooler capable of maintaining temperatures as low as −80 °C. Deep cooling is a key part of the camera's low-noise imaging design."
+            },
+            {
+              "title": "Extremely Low Noise",
+              "description": "Photon etc. describes ZephIR™ 1.7 as having extremely low noise levels. This makes the camera suitable for applications where weak infrared signals need to be detected and characterized."
+            },
+            {
+              "title": "High Efficiency",
+              "description": "The camera combines high efficiency with its scientific-grade InGaAs detector and low-noise architecture."
+            },
+            {
+              "title": "Rapid Frame Rate",
+              "description": "ZephIR™ 1.7 provides a rapid frame rate, allowing it to be used for applications where fast image acquisition is required."
+            },
+            {
+              "title": "External Trigger Compatibility",
+              "description": "The camera supports an external trigger, enabling synchronized image acquisition within experimental or automated imaging systems."
+            },
+            {
+              "title": "Forced-Air Cooling",
+              "description": "The TEC uses forced-air cooling. This eliminates the need for a separate water or liquid-nitrogen chiller unit and simplifies camera integration."
+            }
           ],
 
           "technicalSpecs": [
@@ -46,15 +72,18 @@
             { "label": "Frame rate", "value": "Rapid frame rate" },
             { "label": "Trigger", "value": "External trigger compatible" },
             { "label": "Cooling infrastructure", "value": "No water or liquid-nitrogen chiller required" },
-            { "label": "Applications", "value": "NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor wafer inspection, device failure detection" }
+            {
+              "label": "Applications",
+              "value": "NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor wafer inspection, device failure detection"
+            }
           ],
 
           "applications": [
-            "NIR-II / SWIR bio-imaging: Imaging applications requiring NIR-II / SWIR sensitivity — the 0.9–1.7 µm sensitivity and deep-cooled InGaAs detector provide a platform for imaging applications operating in this spectral region, with the low-noise design particularly relevant for sensitive detection of weak signals.",
-            "Photovoltaic characterization: Photoluminescence (PL) and electroluminescence (EL) imaging — these imaging methods can help researchers investigate spatial variations and emission behaviour across photovoltaic materials and devices.",
-            "Semiconductor inspection: Inspection of semiconductor wafers — SWIR imaging can provide information beyond visible imaging, making the camera relevant to inspection workflows involving semiconductor materials and devices.",
-            "Device failure detection: Detection and investigation of device failures — the camera's low-noise InGaAs imaging capability and rapid frame rate support inspection workflows where spatial infrared information is required to investigate device behaviour or failure.",
-            "SWIR characterization: Infrared imaging and characterization workflows."
+            { "title": "NIR-II / SWIR bio-imaging", "description": "Imaging applications requiring NIR-II / SWIR sensitivity" },
+            { "title": "Photovoltaic characterization", "description": "Photoluminescence (PL) and electroluminescence (EL) imaging" },
+            { "title": "Semiconductor inspection", "description": "Inspection of semiconductor wafers" },
+            { "title": "Device failure detection", "description": "Detection and investigation of device failures" },
+            { "title": "SWIR characterization", "description": "Infrared imaging and characterization workflows" }
           ],
 
           "inPageNav": [
@@ -67,59 +96,162 @@
           ],
 
           "comparison": {
-            "eyebrow": "Which Photon etc. SWIR camera fits your application?",
+            "eyebrow": "Method comparison",
             "title": "ZephIR™ 1.7 vs ZephIR™ 2.5e",
-            "description": "The two ZephIR cameras address different spectral requirements.",
+            "description": "Which Photon etc. SWIR camera fits your application?",
             "columns": [
-              { "label": "ZephIR™ 1.7", "highlight": true },
-              { "label": "ZephIR™ 2.5e", "highlight": false }
+              { "label": "ZephIR™ 1.7" },
+              { "label": "ZephIR™ 2.5e" }
             ],
             "rows": [
-              { "feature": "Detector", "values": ["InGaAs", "T2SL FPA"] },
-              { "feature": "Spectral range", "values": ["0.9–1.7 µm", "0.9–2.5 µm"] },
-              { "feature": "Cooling", "values": ["Four-stage TEC", "TEC + forced air"] },
-              { "feature": "Cooling temperature", "values": ["−80 °C", "−80 °C @ 20 °C ambient"] },
-              { "feature": "Primary positioning", "values": ["Scientific-grade SWIR imaging", "Extended-SWIR imaging"] },
-              { "feature": "High-speed imaging", "values": ["Rapid frame rate", "240 fps"] },
-              { "feature": "ROI high-speed imaging", "values": ["Not specified in supplied source", "Up to 4000 fps"] },
-              { "feature": "External trigger", "values": ["Yes", "Trigger IN/OUT"] },
-              { "feature": "Key applications", "values": ["NIR-II/SWIR bio-imaging, photovoltaics, semiconductor inspection", "Demanding industrial and scientific SWIR imaging"] }
+              {
+                "feature": "Detector",
+                "values": [
+                  "InGaAs",
+                  "T2SL FPA"
+                ]
+              },
+              {
+                "feature": "Spectral range",
+                "values": [
+                  "0.9–1.7 µm",
+                  "0.9–2.5 µm"
+                ]
+              },
+              {
+                "feature": "Cooling",
+                "values": [
+                  "Four-stage TEC",
+                  "TEC + forced air"
+                ]
+              },
+              {
+                "feature": "Cooling temperature",
+                "values": [
+                  "−80 °C",
+                  "−80 °C @ 20 °C ambient"
+                ]
+              },
+              {
+                "feature": "Primary positioning",
+                "values": [
+                  "Scientific-grade SWIR imaging",
+                  "Extended-SWIR imaging"
+                ]
+              },
+              {
+                "feature": "High-speed imaging",
+                "values": [
+                  "Rapid frame rate",
+                  "240 fps"
+                ]
+              },
+              {
+                "feature": "ROI high-speed imaging",
+                "values": [
+                  "Not specified in supplied source",
+                  "Up to 4000 fps"
+                ]
+              },
+              {
+                "feature": "External trigger",
+                "values": [
+                  "Yes",
+                  "Trigger IN/OUT"
+                ]
+              },
+              {
+                "feature": "Key applications",
+                "values": [
+                  "NIR-II/SWIR bio-imaging, photovoltaics, semiconductor inspection",
+                  "Demanding industrial and scientific SWIR imaging"
+                ]
+              }
             ],
-            "disclaimer": "Choose ZephIR™ 1.7 when your application is centered around the 0.9–1.7 µm range and requires a scientific-grade, deeply cooled InGaAs SWIR camera. Consider ZephIR™ 2.5e when your application requires extended SWIR sensitivity up to 2.5 µm and higher specified acquisition speeds."
+            "disclaimer": "",
+            "paragraphs": [
+              "The two ZephIR cameras address different spectral requirements."
+            ],
+            "featureLabel": "Parameter",
+            "notes": [
+              "Choose ZephIR™ 1.7 when your application is centered around the 0.9–1.7 µm range and requires a scientific-grade, deeply cooled InGaAs SWIR camera.",
+              "Consider ZephIR™ 2.5e when your application requires extended SWIR sensitivity up to 2.5 µm and higher specified acquisition speeds."
+            ],
+            "verbatim": true
           },
 
           "serviceMap": {
             "title": "Inkarp Support in India",
-            "description": "Inkarp is the authorized distributor and service provider for Photon etc. ZephIR™ 1.7 in India. For SWIR imaging systems, the detector range, cooling requirements, imaging speed and application should be considered when selecting a camera.",
+            "description": "Application support, installation and service",
             "supportAreas": [
-              { "title": "Application consultation", "description": "Supported by Inkarp." },
-              { "title": "Camera selection guidance", "description": "Supported by Inkarp." },
-              { "title": "Configuration support", "description": "Supported by Inkarp." },
-              { "title": "Product demonstration", "description": "Supported by Inkarp." },
-              { "title": "Installation", "description": "Supported by Inkarp." },
-              { "title": "Training", "description": "Supported by Inkarp." },
-              { "title": "Technical support", "description": "Supported by Inkarp." },
-              { "title": "AMC support", "description": "Supported by Inkarp." },
-              { "title": "Spare parts support", "description": "Supported by Inkarp." }
+              { "title": "Application consultation", "description": "✓" },
+              { "title": "Camera selection guidance", "description": "✓" },
+              { "title": "Configuration support", "description": "✓" },
+              { "title": "Product demonstration", "description": "✓" },
+              { "title": "Installation", "description": "✓" },
+              { "title": "Training", "description": "✓" },
+              { "title": "Technical support", "description": "✓" },
+              { "title": "AMC support", "description": "✓" },
+              { "title": "Spare parts support", "description": "✓" }
+            ],
+            "paragraphs": [
+              "Inkarp is the authorized distributor and service provider for Photon etc. ZephIR™ 1.7 in India.",
+              "For SWIR imaging systems, the detector range, cooling requirements, imaging speed and application should be considered when selecting a camera."
             ]
           },
 
           "faqs": [
-            { "question": "What is ZephIR™ 1.7?", "answer": "ZephIR™ 1.7 is a scientific-grade InGaAs SWIR camera from Photon etc. designed for sensitive infrared imaging across 0.9–1.7 µm." },
+            {
+              "question": "What is ZephIR™ 1.7?",
+              "answer": "ZephIR™ 1.7 is a scientific-grade InGaAs SWIR camera from Photon etc. designed for sensitive infrared imaging across 0.9–1.7 µm."
+            },
             { "question": "What wavelength range does ZephIR™ 1.7 cover?", "answer": "ZephIR™ 1.7 is sensitive from 0.9 to 1.7 µm." },
             { "question": "What detector does ZephIR™ 1.7 use?", "answer": "ZephIR™ 1.7 uses an InGaAs detector." },
-            { "question": "How cold can ZephIR™ 1.7 operate?", "answer": "The camera uses a four-stage thermoelectric cooler capable of maintaining an operating temperature as low as −80 °C." },
+            {
+              "question": "How cold can ZephIR™ 1.7 operate?",
+              "answer": "The camera uses a four-stage thermoelectric cooler capable of maintaining an operating temperature as low as −80 °C."
+            },
             { "question": "What cooling method does ZephIR™ 1.7 use?", "answer": "The camera uses four-stage TEC cooling with forced air." },
-            { "question": "Does ZephIR™ 1.7 require liquid nitrogen?", "answer": "No. The supplied manufacturer information states that its forced-air TEC cooling removes the need for a liquid-nitrogen chiller unit." },
-            { "question": "Does ZephIR™ 1.7 require water cooling?", "answer": "No. The forced-air cooling system eliminates the need for a water chiller unit." },
-            { "question": "What is ZephIR™ 1.7 used for?", "answer": "Applications identified by Photon etc. include NIR-II/SWIR bio-imaging, photovoltaic characterization using PL and EL, semiconductor wafer inspection and device failure detection." },
-            { "question": "Can ZephIR™ 1.7 be used for photovoltaic characterization?", "answer": "Yes. Photon etc. identifies photoluminescence and electroluminescence imaging for photovoltaic characterization as an application." },
-            { "question": "Can ZephIR™ 1.7 be used for semiconductor inspection?", "answer": "Yes. The camera is positioned for semiconductor wafer inspection and device failure detection." },
-            { "question": "Does ZephIR™ 1.7 support external triggering?", "answer": "Yes. The manufacturer describes the camera as compatible with an external trigger." },
-            { "question": "Is ZephIR™ 1.7 a SWIR camera?", "answer": "Yes. Photon etc. categorizes ZephIR™ 1.7 as a SWIR camera and describes it as a scientific-grade InGaAs camera." },
-            { "question": "What is the difference between ZephIR™ 1.7 and ZephIR™ 2.5e?", "answer": "ZephIR™ 1.7 covers 0.9–1.7 µm and uses an InGaAs detector, while ZephIR™ 2.5e extends to 2.5 µm and uses a T2SL focal plane array. The appropriate camera depends on the required spectral range and application." },
-            { "question": "What is the price of ZephIR™ 1.7 in India?", "answer": "Pricing depends on the configuration and application requirements. Contact Inkarp for a quotation." },
-            { "question": "Who is the authorized distributor of ZephIR™ 1.7 in India?", "answer": "Inkarp is the authorized distributor and service provider for Photon etc. ZephIR™ 1.7 in India." }
+            {
+              "question": "Does ZephIR™ 1.7 require liquid nitrogen?",
+              "answer": "No. The supplied manufacturer information states that its forced-air TEC cooling removes the need for a liquid-nitrogen chiller unit."
+            },
+            {
+              "question": "Does ZephIR™ 1.7 require water cooling?",
+              "answer": "No. The forced-air cooling system eliminates the need for a water chiller unit."
+            },
+            {
+              "question": "What is ZephIR™ 1.7 used for?",
+              "answer": "Applications identified by Photon etc. include NIR-II/SWIR bio-imaging, photovoltaic characterization using PL and EL, semiconductor wafer inspection and device failure detection."
+            },
+            {
+              "question": "Can ZephIR™ 1.7 be used for photovoltaic characterization?",
+              "answer": "Yes. Photon etc. identifies photoluminescence and electroluminescence imaging for photovoltaic characterization as an application."
+            },
+            {
+              "question": "Can ZephIR™ 1.7 be used for semiconductor inspection?",
+              "answer": "Yes. The camera is positioned for semiconductor wafer inspection and device failure detection."
+            },
+            {
+              "question": "Does ZephIR™ 1.7 support external triggering?",
+              "answer": "Yes. The manufacturer describes the camera as compatible with an external trigger."
+            },
+            {
+              "question": "Is ZephIR™ 1.7 a SWIR camera?",
+              "answer": "Yes. Photon etc. categorizes ZephIR™ 1.7 as a SWIR camera and describes it as a scientific-grade InGaAs camera."
+            },
+            {
+              "question": "What is the difference between ZephIR™ 1.7 and ZephIR™ 2.5e?",
+              "answer": "ZephIR™ 1.7 covers 0.9–1.7 µm and uses an InGaAs detector, while ZephIR™ 2.5e extends to 2.5 µm and uses a T2SL focal plane array. The appropriate camera depends on the required spectral range and application."
+            },
+            {
+              "question": "What is the price of ZephIR™ 1.7 in India?",
+              "answer": "Pricing depends on the configuration and application requirements. Contact Inkarp for a quotation."
+            },
+            {
+              "question": "Who is the authorized distributor of ZephIR™ 1.7 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for Photon etc. ZephIR™ 1.7 in India."
+            }
           ],
 
           "booking": {
@@ -144,9 +276,15 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right ZephIR™ 1.7 configuration", "body": "For SWIR imaging systems, the detector range, cooling requirements, imaging speed and application should be considered when selecting a camera." },
-              { "title": "Installation and setup support", "body": "Supported by Inkarp." },
-              { "title": "Ongoing service and support", "body": "Technical support, spare parts and AMC support are available through Inkarp." }
+              { "title": "Application consultation", "body": "✓" },
+              { "title": "Camera selection guidance", "body": "✓" },
+              { "title": "Configuration support", "body": "✓" },
+              { "title": "Product demonstration", "body": "✓" },
+              { "title": "Installation", "body": "✓" },
+              { "title": "Training", "body": "✓" },
+              { "title": "Technical support", "body": "✓" },
+              { "title": "AMC support", "body": "✓" },
+              { "title": "Spare parts support", "body": "✓" }
             ]
           },
 
@@ -165,7 +303,10 @@
               { "value": "High", "label": "Efficiency" },
               { "value": "Rapid frame rate", "label": "Frame rate" },
               { "value": "External trigger compatible", "label": "Triggering" },
-              { "value": "NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor inspection and device failure detection", "label": "Primary applications" }
+              {
+                "value": "NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor inspection and device failure detection",
+                "label": "Primary applications"
+              }
             ],
             "sections": [
               {
@@ -174,14 +315,35 @@
                 "title": "Product Information",
                 "description": "ZephIR™ 1.7 combines a sensitive InGaAs detector, low-noise electronics and deep thermoelectric cooling in a SWIR camera designed for scientific and industrial imaging applications.",
                 "body": [
-                  "Deeply cooled InGaAs SWIR camera from Photon etc., designed as a high-end, scientific-grade imaging solution for research and precision applications.",
-                  "Combines high performance and reliability with extremely low noise, high quantum efficiency, and rapid frame rates.",
-                  "Operates across the 0.9–1.7 µm SWIR spectral range.",
-                  "Features a four-stage thermoelectric cooling (TEC) system that maintains sensor temperatures as low as −80 °C.",
-                  "Uses forced-air cooling, eliminating the need for water cooling or liquid-nitrogen chiller units.",
-                  "Delivers high sensitivity and stable long-term performance for demanding imaging tasks.",
-                  "Ideal for scientific research, spectroscopy, inspection, and other low-light SWIR applications where sensitivity and reliability are critical."
-                ]
+                  { "text": "Deeply cooled InGaAs SWIR camera from Photon etc." },
+                  { "text": "Designed as a high-end, scientific-grade imaging solution for research and precision applications." },
+                  { "text": "Combines high performance and reliability with:" },
+                  { "text": "Extremely low noise" },
+                  { "text": "High quantum efficiency" },
+                  { "text": "Rapid frame rates" },
+                  { "text": "Operates across the 0.9–1.7 µm SWIR spectral range." },
+                  { "text": "Features a four-stage thermoelectric cooling (TEC) system that maintains sensor temperatures as low as −80 °C." },
+                  { "text": "Uses forced-air cooling, eliminating the need for:" },
+                  { "text": "Water cooling" },
+                  { "text": "Liquid-nitrogen chiller units" },
+                  { "text": "Delivers high sensitivity and stable long-term performance for demanding imaging tasks." },
+                  {
+                    "text": "Ideal for scientific research, spectroscopy, inspection, and other low-light SWIR applications where sensitivity and reliability are critical."
+                  }
+                ],
+                "cards": [
+                  { "title": "InGaAs detector", "description": "Suitable for SWIR imaging applications" },
+                  { "title": "0.9–1.7 µm range", "description": "Covers near-infrared and SWIR wavelengths within the specified range" },
+                  { "title": "Four-stage TEC", "description": "Deep detector cooling" },
+                  { "title": "−80 °C operation", "description": "Helps reduce noise for sensitive imaging" },
+                  { "title": "Forced-air cooling", "description": "No water or liquid-nitrogen chiller required" },
+                  { "title": "Low noise", "description": "Supports detection of weak signals" },
+                  { "title": "High efficiency", "description": "Supports sensitive infrared imaging" },
+                  { "title": "Rapid frame rate", "description": "Suitable for dynamic imaging" },
+                  { "title": "External trigger", "description": "Enables synchronized acquisition" }
+                ],
+                "cardLimit": 9,
+                "subheading": "Overview"
               },
               {
                 "key": "features",
@@ -193,37 +355,251 @@
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "ZephIR™ 1.7 applications in NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor inspection and device failure detection."
+                "body": [
+                  "ZephIR™ 1.7 applications in NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor inspection and device failure detection."
+                ]
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "ZephIR™ 1.7 technical specifications for InGaAs SWIR imaging, 0.9–1.7 µm sensitivity, deep TEC cooling and low-noise operation."
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "body": [
+                  "ZephIR™ 1.7 technical specifications for InGaAs SWIR imaging, 0.9–1.7 µm sensitivity, deep TEC cooling and low-noise operation."
+                ]
               },
               {
                 "key": "performance",
                 "eyebrow": "Why Deep Cooling Matters in SWIR Imaging",
                 "title": "Why Deep Cooling Matters in SWIR Imaging",
                 "body": [
-                  "SWIR imaging applications can involve weak optical signals. Detector temperature can influence unwanted noise and therefore affect the quality of acquired images.",
-                  "ZephIR™ 1.7 uses a four-stage thermoelectric cooler capable of maintaining an operating temperature as low as −80 °C.",
-                  "The deep cooling is designed to support the camera's low-noise performance while avoiding the infrastructure associated with water or liquid-nitrogen cooling."
+                  "Reduce detector noise for sensitive measurements"
                 ],
-                "utilityChecklist": [
-                  { "label": "Cooling technology", "value": "Four-stage TEC" },
-                  { "label": "Cooling method", "value": "Forced air" },
-                  { "label": "Minimum operating temperature", "value": "−80 °C" },
-                  { "label": "Water chiller required", "value": "No" },
-                  { "label": "Liquid-nitrogen chiller required", "value": "No" },
-                  { "label": "Intended benefit", "value": "Low-noise, sensitive SWIR imaging" }
+                "groups": [
+                  {
+                    "body": [
+                      "SWIR imaging applications can involve weak optical signals. Detector temperature can influence unwanted noise and therefore affect the quality of acquired images.",
+                      "ZephIR™ 1.7 uses a four-stage thermoelectric cooler capable of maintaining an operating temperature as low as −80 °C.",
+                      "The deep cooling is designed to support the camera's low-noise performance while avoiding the infrastructure associated with water or liquid-nitrogen cooling."
+                    ]
+                  },
+                  {
+                    "title": "Cooling System at a Glance",
+                    "columns": [
+                      "Feature",
+                      "ZephIR™ 1.7"
+                    ],
+                    "rows": [
+                      [
+                        "Cooling technology",
+                        "Four-stage TEC"
+                      ],
+                      [
+                        "Cooling method",
+                        "Forced air"
+                      ],
+                      [
+                        "Minimum operating temperature",
+                        "−80 °C"
+                      ],
+                      [
+                        "Water chiller required",
+                        "No"
+                      ],
+                      [
+                        "Liquid-nitrogen chiller required",
+                        "No"
+                      ],
+                      [
+                        "Intended benefit",
+                        "Low-noise, sensitive SWIR imaging"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Spectral Range",
+                    "description": "0.9–1.7 µm SWIR Imaging",
+                    "body": [
+                      "ZephIR™ 1.7 covers wavelengths from 0.9 to 1.7 µm.",
+                      "This range is relevant to applications where NIR-II and SWIR spectral information is required."
+                    ],
+                    "columns": [
+                      "Spectral Region",
+                      "ZephIR™ 1.7"
+                    ],
+                    "rows": [
+                      [
+                        "0.9 µm",
+                        "✓"
+                      ],
+                      [
+                        "NIR-II region",
+                        "✓"
+                      ],
+                      [
+                        "SWIR region",
+                        "✓"
+                      ],
+                      [
+                        "1.7 µm",
+                        "✓"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "NIR-II / SWIR Bio-Imaging",
+                    "description": "Deep-cooled imaging for NIR-II and SWIR research",
+                    "body": [
+                      "ZephIR™ 1.7 is positioned for NIR-II/SWIR bio-imaging.",
+                      "Its 0.9–1.7 µm sensitivity and deep-cooled InGaAs detector provide a platform for imaging applications that operate in this spectral region.",
+                      "The low-noise design is particularly relevant when imaging applications require sensitive detection of weak signals."
+                    ]
+                  },
+                  {
+                    "title": "Photovoltaic Characterization",
+                    "description": "Photoluminescence and electroluminescence imaging",
+                    "body": [
+                      "ZephIR™ 1.7 can be used for photovoltaic characterization through photoluminescence (PL) and electroluminescence (EL) imaging.",
+                      "These imaging methods can help researchers investigate spatial variations and emission behaviour across photovoltaic materials and devices."
+                    ],
+                    "columns": [
+                      "Measurement",
+                      "Application"
+                    ],
+                    "rows": [
+                      [
+                        "Photoluminescence (PL)",
+                        "Photovoltaic characterization"
+                      ],
+                      [
+                        "Electroluminescence (EL)",
+                        "Photovoltaic characterization"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Semiconductor Wafer Inspection",
+                    "description": "SWIR imaging for semiconductor inspection",
+                    "body": [
+                      "ZephIR™ 1.7 is designed for semiconductor wafer inspection.",
+                      "SWIR imaging can provide information beyond visible imaging, making the camera relevant to inspection workflows involving semiconductor materials and devices."
+                    ]
+                  },
+                  {
+                    "title": "Device Failure Detection",
+                    "description": "Identify infrared signatures associated with device failures",
+                    "body": [
+                      "ZephIR™ 1.7 is also positioned for device failure detection.",
+                      "Its low-noise InGaAs imaging capability and rapid frame rate support inspection workflows where spatial infrared information is required to investigate device behaviour or failure."
+                    ]
+                  },
+                  {
+                    "title": "ZephIR™ 1.7 vs Conventional Infrared Cameras",
+                    "description": "What does deep-cooled InGaAs imaging add?",
+                    "columns": [
+                      "Capability",
+                      "Standard Infrared Camera",
+                      "ZephIR™ 1.7"
+                    ],
+                    "rows": [
+                      [
+                        "InGaAs SWIR detector",
+                        "Configuration dependent",
+                        "✓"
+                      ],
+                      [
+                        "0.9–1.7 µm sensitivity",
+                        "Configuration dependent",
+                        "✓"
+                      ],
+                      [
+                        "Deep cooling",
+                        "Configuration dependent",
+                        "✓"
+                      ],
+                      [
+                        "−80 °C operation",
+                        "Not typical",
+                        "✓"
+                      ],
+                      [
+                        "Four-stage TEC",
+                        "Not typical",
+                        "✓"
+                      ],
+                      [
+                        "Extremely low noise",
+                        "Configuration dependent",
+                        "✓"
+                      ],
+                      [
+                        "External triggering",
+                        "Configuration dependent",
+                        "✓"
+                      ],
+                      [
+                        "Rapid frame rate",
+                        "Configuration dependent",
+                        "✓"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Application Selection Guide",
+                    "description": "Is ZephIR™ 1.7 right for your application?",
+                    "columns": [
+                      "If you need to...",
+                      "ZephIR™ 1.7 offers..."
+                    ],
+                    "rows": [
+                      [
+                        "Image in NIR-II / SWIR",
+                        "0.9–1.7 µm sensitivity"
+                      ],
+                      [
+                        "Detect weak infrared signals",
+                        "Deep-cooled, low-noise InGaAs imaging"
+                      ],
+                      [
+                        "Characterize photovoltaic devices",
+                        "PL and EL imaging"
+                      ],
+                      [
+                        "Inspect semiconductor wafers",
+                        "SWIR imaging"
+                      ],
+                      [
+                        "Investigate device failures",
+                        "Infrared imaging"
+                      ],
+                      [
+                        "Avoid liquid-nitrogen cooling",
+                        "Four-stage TEC cooling"
+                      ],
+                      [
+                        "Avoid water cooling",
+                        "Forced-air cooling"
+                      ],
+                      [
+                        "Synchronize image acquisition",
+                        "External trigger compatibility"
+                      ],
+                      [
+                        "Use a scientific-grade camera",
+                        "Scientific-grade InGaAs platform"
+                      ]
+                    ]
+                  }
                 ]
               },
               {
                 "key": "benefits",
                 "eyebrow": "Research and Industrial Use",
                 "title": "Research and Industrial Use",
-                "description": "ZephIR™ 1.7 combines several features relevant to scientific and industrial imaging:",
+                "description": "Built for demanding imaging workflows",
                 "cards": [
                   { "title": "Scientific-grade InGaAs detection", "description": "For sensitive SWIR imaging." },
                   { "title": "Deep TEC cooling", "description": "Down to −80 °C." },
@@ -231,17 +607,46 @@
                   { "title": "Rapid acquisition", "description": "For dynamic imaging requirements." },
                   { "title": "External triggering", "description": "For synchronized experimental and inspection workflows." },
                   { "title": "Forced-air cooling", "description": "For simpler system integration without water or liquid-nitrogen cooling." }
-                ]
+                ],
+                "paragraphs": [
+                  "ZephIR™ 1.7 combines several features relevant to scientific and industrial imaging:"
+                ],
+                "body": []
               }
             ],
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Looking for a Deep-Cooled InGaAs SWIR Camera?",
-              "description": "Explore Photon etc. ZephIR™ 1.7 for sensitive 0.9–1.7 µm SWIR imaging with four-stage TEC cooling down to −80 °C. Designed for NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor wafer inspection and device failure detection, ZephIR™ 1.7 combines scientific-grade InGaAs imaging with low-noise operation and forced-air cooling. Tell us about your required wavelength range, imaging application, signal level, acquisition speed, triggering requirements, and integration requirements.",
+              "description": "Explore Photon etc. ZephIR™ 1.7 for sensitive 0.9–1.7 µm SWIR imaging with four-stage TEC cooling down to −80 °C.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "paragraphs": [
+                "Designed for NIR-II/SWIR bio-imaging, photovoltaic characterization, semiconductor wafer inspection and device failure detection, ZephIR™ 1.7 combines scientific-grade InGaAs imaging with low-noise operation and forced-air cooling.",
+                "Tell us about your:"
+              ],
+              "items": [
+                "Required wavelength range",
+                "Imaging application",
+                "Signal level",
+                "Acquisition speed",
+                "Triggering requirements",
+                "Integration requirements"
+              ],
+              "secondaryLabel": "Book a Demo",
+              "secondaryHref": "#booking",
+              "tertiaryLabel": "Discuss Your Application",
+              "tertiaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Scientific-grade SWIR imaging with extremely low noise, high efficiency and deep thermoelectric cooling to −80 °C.",
+              "Photon etc. ZephIR™ 1.7 is a scientific-grade InGaAs SWIR camera designed for high-sensitivity infrared imaging and demanding research applications.",
+              "The camera combines Photon etc.'s control electronics with a four-stage thermoelectric cooler (TEC) capable of maintaining an operating temperature as low as −80 °C. Forced-air cooling removes the need for a water or liquid-nitrogen chiller unit.",
+              "ZephIR™ 1.7 is designed for applications including NIR-II/SWIR bio-imaging, photovoltaic characterization using photoluminescence (PL) and electroluminescence (EL), semiconductor wafer inspection and device failure detection."
+            ],
+            "statsIntro": "ZephIR™ 1.7 at a Glance"
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

@@ -200,6 +200,90 @@ function KPIRow({ kpis }) {
   );
 }
 
+/* Titled tables, lists and paragraphs from a source document, in its order
+   (e.g. operating modes, safety systems, a variants table). */
+function ContentGroups({ groups }) {
+  return (
+    <div className="mt-6 space-y-6">
+      {groups.map((group, groupIndex) => (
+        <div key={group.title ?? groupIndex}>
+          {group.title ? <h4 className="mb-2 text-sm font-semibold text-ink">{group.title}</h4> : null}
+          {group.summary && (
+            <p className="mb-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">{group.summary}</p>
+          )}
+          {group.description && (
+            <p className="mb-3 text-sm leading-7 text-black">{group.description}</p>
+          )}
+          {group.body?.map((paragraph, paragraphIndex) => (
+            <p className="mb-3 text-sm leading-7 text-black" key={paragraphIndex}>{paragraph}</p>
+          ))}
+          {/* A group holding both a list and a table shows the list first. */}
+          {group.rows?.length > 0 && group.items?.length > 0 && (
+            <ul className="mb-4 space-y-1.5">
+              {group.items.map((item, itemIndex) => (
+                <li className="flex gap-2 text-sm leading-6 text-black" key={itemIndex}>
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
+                  {item && typeof item === 'object' ? (
+                    <span>
+                      {item.title && <strong className="font-semibold text-ink">{item.title}</strong>}
+                      {item.title && item.text ? ' ' : null}
+                      {item.text}
+                    </span>
+                  ) : item}
+                </li>
+              ))}
+            </ul>
+          )}
+          {group.rows?.length > 0 && (
+            <div className="overflow-x-auto border border-line-light">
+              <table className="w-full min-w-[420px] border-collapse text-left text-sm">
+                {group.columns?.length > 0 && (
+                  <thead>
+                    <tr className="bg-parchment-alt text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+                      {group.columns.map((column) => <th className="px-4 py-2.5" key={column} scope="col">{column}</th>)}
+                    </tr>
+                  </thead>
+                )}
+                <tbody className="divide-y divide-line-light">
+                  {group.rows.map((row) => (
+                    <tr key={row.join('|')}>
+                      {row.map((cell, index) => (
+                        <td className={`px-4 py-2.5 text-black ${index === 0 ? 'font-medium' : ''}`} key={`${index}-${cell}`}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          {group.items?.length > 0 && !group.rows?.length && (
+            <ul className="space-y-1.5">
+              {group.items.map((item, itemIndex) => (
+                <li className="flex gap-2 text-sm leading-6 text-black" key={typeof item === 'string' ? item : itemIndex}>
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
+                  {item && typeof item === 'object' ? (
+                    <span>
+                      {item.title && <strong className="font-semibold text-ink">{item.title}</strong>}
+                      {item.title && item.text ? ' ' : null}
+                      {item.text}
+                    </span>
+                  ) : item}
+                </li>
+              ))}
+            </ul>
+          )}
+          {group.note && (
+            <p className="mt-4 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
+              {group.note}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
 /* ════════════════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════════════════ */
@@ -276,7 +360,7 @@ export default function ProductInfoTabs({ product }) {
       case 'specs':        return (product.technicalSpecs ?? []).length > 0;
       case 'performance':  return !!perfSec;
       case 'compliance':   return !!complianceSec?.cards?.length;
-      case 'config':       return configCards.length > 0;
+      case 'config':       return configCards.length > 0 || configSec?.groups?.length > 0;
       case 'docs':         return docsCards.length > 0;
       default:             return true;
     }
@@ -352,6 +436,9 @@ export default function ProductInfoTabs({ product }) {
             {overviewSec?.cards?.length > 0 && overviewSec.cardsTitle ? (
               <h4 className="mt-6 text-sm font-semibold text-ink">{overviewSec.cardsTitle}</h4>
             ) : null}
+            {overviewSec?.cards?.length > 0 && overviewSec.cardsIntro ? (
+              <p className="mt-6 text-sm leading-6 text-ink-soft">{overviewSec.cardsIntro}</p>
+            ) : null}
             {overviewSec?.cards?.length > 0 && (
               <div className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
                 {overviewSec.cards.slice(0, overviewSec.cardLimit ?? 4).map((c) => (
@@ -387,11 +474,13 @@ export default function ProductInfoTabs({ product }) {
                     key={isObject ? title || i : f}
                     title={title}
                     description={description}
+                    items={isObject ? f.items : undefined}
                     icon={resolveIcon(title, FEATURE_ICON_RULES)}
                   />
                 );
               })}
             </div>
+            {keyFeaturesSec?.groups?.length > 0 && <ContentGroups groups={keyFeaturesSec.groups} />}
           </div>
         );
 
@@ -470,85 +559,7 @@ export default function ProductInfoTabs({ product }) {
                 </dl>
               </div>
             )}
-            {perfSec?.groups?.length > 0 && (
-              // Optional titled tables / bullet lists (e.g. operating modes, safety systems).
-              <div className="mt-6 space-y-6">
-                {perfSec.groups.map((group, groupIndex) => (
-                  <div key={group.title ?? groupIndex}>
-                    {group.title ? <h4 className="mb-2 text-sm font-semibold text-ink">{group.title}</h4> : null}
-                    {group.summary && (
-                      <p className="mb-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">{group.summary}</p>
-                    )}
-                    {group.description && (
-                      <p className="mb-3 text-sm leading-7 text-black">{group.description}</p>
-                    )}
-                    {group.body?.map((paragraph, paragraphIndex) => (
-                      <p className="mb-3 text-sm leading-7 text-black" key={paragraphIndex}>{paragraph}</p>
-                    ))}
-                    {/* A group holding both a list and a table shows the list first. */}
-                    {group.rows?.length > 0 && group.items?.length > 0 && (
-                      <ul className="mb-4 space-y-1.5">
-                        {group.items.map((item, itemIndex) => (
-                          <li className="flex gap-2 text-sm leading-6 text-black" key={itemIndex}>
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
-                            {item && typeof item === 'object' ? (
-                              <span>
-                                {item.title && <strong className="font-semibold text-ink">{item.title}</strong>}
-                                {item.title && item.text ? ' ' : null}
-                                {item.text}
-                              </span>
-                            ) : item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {group.rows?.length > 0 && (
-                      <div className="overflow-x-auto border border-line-light">
-                        <table className="w-full min-w-[420px] border-collapse text-left text-sm">
-                          {group.columns?.length > 0 && (
-                            <thead>
-                              <tr className="bg-parchment-alt text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
-                                {group.columns.map((column) => <th className="px-4 py-2.5" key={column} scope="col">{column}</th>)}
-                              </tr>
-                            </thead>
-                          )}
-                          <tbody className="divide-y divide-line-light">
-                            {group.rows.map((row) => (
-                              <tr key={row.join('|')}>
-                                {row.map((cell, index) => (
-                                  <td className={`px-4 py-2.5 text-black ${index === 0 ? 'font-medium' : ''}`} key={`${index}-${cell}`}>{cell}</td>
-                                ))}
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    )}
-                    {group.items?.length > 0 && !group.rows?.length && (
-                      <ul className="space-y-1.5">
-                        {group.items.map((item, itemIndex) => (
-                          <li className="flex gap-2 text-sm leading-6 text-black" key={typeof item === 'string' ? item : itemIndex}>
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
-                            {item && typeof item === 'object' ? (
-                              <span>
-                                {item.title && <strong className="font-semibold text-ink">{item.title}</strong>}
-                                {item.title && item.text ? ' ' : null}
-                                {item.text}
-                              </span>
-                            ) : item}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {group.note && (
-                      <p className="mt-4 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
-                        {group.note}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
+            {perfSec?.groups?.length > 0 && <ContentGroups groups={perfSec.groups} />}
             {perfSec?.disclaimer && (
               <p className="mt-5 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
                 {perfSec.disclaimer}
@@ -615,6 +626,7 @@ export default function ProductInfoTabs({ product }) {
                 />
               ))}
             </div>
+            {configSec?.groups?.length > 0 && <ContentGroups groups={configSec.groups} />}
             {configSec?.disclaimer && (
               <p className="mt-5 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
                 {configSec.disclaimer}

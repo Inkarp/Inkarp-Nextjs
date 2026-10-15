@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "photon-etc",
-    "principalName": "Photon ETC",
-    "countryOfOrigin": "Canada"
-  },
+  "principal": { "slug": "photon-etc", "principalName": "Photon ETC", "countryOfOrigin": "Canada" },
   "categories": [
     {
       "name": "Linescan Cameras",
@@ -11,52 +7,130 @@
       "products": [
         {
           "name": "L-EOS™",
+
           "slug": "l-eos",
+
           "principalImage": "/assets/images/PrincipalLogos/Photon.jpeg",
+
           "imageAlt": "Photon etc. L-EOS Hyperspectral SWIR Imaging System - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/l-eos",
+
           "breadcrumbPath": "Home > Products > Linescan Cameras > Photon etc. L-EOS™ Hyperspectral SWIR Imaging System",
+
           "h1": "L-EOS™",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Map spectral information across materials, surfaces, and continuous processes with L-EOS™.",
 
           "features": [
-            "Scientific-Grade Hyperspectral Detection: Low background noise, high dynamic range, and high signal-to-noise performance for accurate SWIR material analysis.",
-            "Four-Stage Thermoelectric Cooling: Deep detector cooling down to −60 °C or −80 °C (model dependent) to minimize background noise and improve measurement quality.",
-            "Two SWIR Spectral Configurations: Available in L-EOS 1.7 (900–1700 nm) and L-EOS 2.5e (1000–2500 nm) to suit different hyperspectral imaging requirements.",
-            "512 Spatial Channels: Captures detailed spatial information for high-resolution line-scan hyperspectral imaging.",
-            "640 Spectral Channels: Acquires rich spectral data across the selected SWIR wavelength range.",
-            "15 µm Pixel Size: Delivers consistent image quality and precise hyperspectral data capture.",
-            "Industrial-Ready Architecture: Integrates infrared cameras, spectrometers, and telecentric optics into a robust industrial imaging platform.",
-            "Broad Application Support: Suitable for material sorting, recycling, food inspection, textile identification, mining, geology, core scanning, search and rescue, and UAV imaging."
+            {
+              "title": "Scientific-Grade Hyperspectral Detection",
+              "description": "Low background noise, high dynamic range, and high signal-to-noise performance for accurate SWIR material analysis."
+            },
+            {
+              "title": "Four-Stage Thermoelectric Cooling",
+              "description": "Deep detector cooling down to −60 °C or −80 °C (model dependent) to minimize background noise and improve measurement quality."
+            },
+            {
+              "title": "Two SWIR Spectral Configurations",
+              "description": "Available in L-EOS 1.7 (900–1700 nm) and L-EOS 2.5e (1000–2500 nm) to suit different hyperspectral imaging requirements."
+            },
+            { "title": "512 Spatial Channels", "description": "Captures detailed spatial information for high-resolution line-scan hyperspectral imaging." },
+            { "title": "640 Spectral Channels", "description": "Acquires rich spectral data across the selected SWIR wavelength range." },
+            { "title": "15 µm Pixel Size", "description": "Delivers consistent image quality and precise hyperspectral data capture." },
+            {
+              "title": "Industrial-Ready Architecture",
+              "description": "Integrates infrared cameras, spectrometers, and telecentric optics into a robust industrial imaging platform."
+            },
+            {
+              "title": "Broad Application Support",
+              "description": "Suitable for material sorting, recycling, food inspection, textile identification, mining, geology, core scanning, search and rescue, and UAV imaging."
+            }
           ],
 
           "technicalSpecs": [
-            { "label": "Product", "value": "L-EOS™" },
-            { "label": "Technology", "value": "Hyperspectral Imaging / Infrared Imaging" },
-            { "label": "Category", "value": "Linescan Cameras" },
-            { "label": "Spectral Range", "value": "L-EOS 1.7: 900–1700 nm · L-EOS 2.5e: 1000–2500 nm" },
-            { "label": "Sensor", "value": "L-EOS 1.7: InGaAs — Alizé™ 1.7 or ZephIR™ 1.7 · L-EOS 2.5e: T2SL — ZephIR™ 2.5e" },
-            { "label": "Spatial Resolution", "value": "6 pixels (both configurations)" },
-            { "label": "Spectral Resolution", "value": "L-EOS 1.7: 7.8 nm · L-EOS 2.5e: 15.3 nm" },
-            { "label": "Spectral Sampling", "value": "L-EOS 1.7: 1.3 nm/px · L-EOS 2.5e: 2.6 nm/px" },
-            { "label": "Spatial Channels", "value": "512 (both configurations)" },
-            { "label": "Spectral Channels", "value": "640 (both configurations)" },
-            { "label": "Pixel Size", "value": "15 µm (both configurations)" },
-            { "label": "Cooling Temperature at 20°C Ambient", "value": "L-EOS 1.7: -60°C or -80°C · L-EOS 2.5e: -80°C" }
+            {
+              "label": "Spectral Range",
+              "values": [
+                "900–1700 nm",
+                "1000–2500 nm"
+              ]
+            },
+            {
+              "label": "Sensor",
+              "values": [
+                "InGaAs — Alizé™ 1.7 or ZephIR™ 1.7",
+                "T2SL — ZephIR™ 2.5e"
+              ]
+            },
+            {
+              "label": "Spatial Resolution",
+              "values": [
+                "6 pixels",
+                "6 pixels"
+              ]
+            },
+            {
+              "label": "Spectral Resolution",
+              "values": [
+                "7.8 nm",
+                "15.3 nm"
+              ]
+            },
+            {
+              "label": "Spectral Sampling",
+              "values": [
+                "1.3 nm/px",
+                "2.6 nm/px"
+              ]
+            },
+            {
+              "label": "Spatial Channels",
+              "values": [
+                "512",
+                "512"
+              ]
+            },
+            {
+              "label": "Spectral Channels",
+              "values": [
+                "640",
+                "640"
+              ]
+            },
+            {
+              "label": "Pixel Size",
+              "values": [
+                "15 µm",
+                "15 µm"
+              ]
+            },
+            {
+              "label": "Cooling Temperature at 20°C Ambient",
+              "values": [
+                "-60°C or -80°C",
+                "-80°C"
+              ]
+            }
           ],
 
           "applications": [
-            "Plastic Sorting: SWIR spectral information can support identification and separation of different plastic materials — L-EOS™ is listed by Photon etc. for plastic sorting and recycling applications, following a typical workflow of material stream → SWIR illumination → line scanning → hyperspectral data → material classification → sorting.",
-            "Textile Sorting & Recycling: SWIR hyperspectral imaging can help identify fabric types, blends, and material composition — Photon etc. specifically presents L-EOS™ for next-generation fabric identification, highlighting its use in distinguishing complex blends and compositions.",
-            "Food Quality & Safety: Spectral imaging can support non-destructive material and quality assessment workflows, covering product inspection, material differentiation, quality assessment, spectral classification, and non-destructive analysis.",
-            "Mining & Geology: Hyperspectral information can be used to map and distinguish geological or mineralogical features, supporting workflows where material differences need to be mapped and characterized.",
-            "Core Scanning: Line-based hyperspectral imaging can support continuous analysis of geological core samples — Photon etc. lists core scanning among the L-EOS™ application resources.",
-            "Search & Rescue: Infrared spectral imaging can provide information beyond conventional visible imaging.",
-            "UAV Imaging: SWIR imaging can be integrated into aerial inspection and remote sensing workflows.",
-            "Material Characterization: Spectral signatures can support differentiation of materials.",
-            "Industrial Recycling: Hyperspectral identification can support automated material classification workflows."
+            { "title": "Plastic Sorting", "description": "SWIR spectral information can support identification and separation of different plastic materials" },
+            {
+              "title": "Textile Sorting & Recycling",
+              "description": "SWIR hyperspectral imaging can help identify fabric types, blends, and material composition"
+            },
+            { "title": "Food Quality & Safety", "description": "Spectral imaging can support non-destructive material and quality assessment workflows" },
+            { "title": "Mining & Geology", "description": "Hyperspectral information can be used to map and distinguish geological or mineralogical features" },
+            { "title": "Core Scanning", "description": "Line-based hyperspectral imaging can support continuous analysis of geological core samples" },
+            { "title": "Search & Rescue", "description": "Infrared spectral imaging can provide information beyond conventional visible imaging" },
+            { "title": "UAV Imaging", "description": "SWIR imaging can be integrated into aerial inspection and remote sensing workflows" },
+            { "title": "Material Characterization", "description": "Spectral signatures can support differentiation of materials" },
+            { "title": "Industrial Recycling", "description": "Hyperspectral identification can support automated material classification workflows" }
           ],
 
           "inPageNav": [
@@ -72,8 +146,8 @@
           ],
 
           "suitability": {
-            "title": "Which L-EOS™ configuration fits your application?",
-            "description": "Select the spectral range and process type, and see which L-EOS™ configuration is recommended.",
+            "title": "Find the right L-EOS™ configuration for your application",
+            "description": "The correct L-EOS™ configuration depends primarily on what you need to measure and which wavelengths contain the relevant spectral information.",
             "fields": [
               {
                 "key": "spectralRangeNeeded",
@@ -97,49 +171,128 @@
                 "condition": { "spectralRangeNeeded": "900-1700" },
                 "title": "L-EOS 1.7 Fits This Range",
                 "body": "For spectral coverage from 900 to 1700 nm, the InGaAs-based L-EOS 1.7 configuration meets the required spectral range.",
-                "tags": ["L-EOS 1.7"]
+                "tags": [
+                  "L-EOS 1.7"
+                ]
               },
               {
                 "condition": { "spectralRangeNeeded": "1000-2500" },
                 "title": "L-EOS 2.5e Fits This Range",
                 "body": "For extended SWIR coverage from 1000 to 2500 nm, the T2SL-based L-EOS 2.5e configuration is appropriate for the target spectral region.",
-                "tags": ["L-EOS 2.5e"]
+                "tags": [
+                  "L-EOS 2.5e"
+                ]
               },
               {
                 "condition": { "processContinuity": "continuous" },
                 "title": "Linescan Architecture Fits Continuous Processes",
                 "body": "L-EOS™ is built on a line-scan architecture for continuous hyperspectral data acquisition, and belongs to Photon etc.'s Linescan Cameras category for high-throughput industrial sorting and continuous-flow analysis.",
-                "tags": ["Continuous Process"]
+                "tags": [
+                  "Continuous Process"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm Your L-EOS™ Configuration",
                 "body": "The correct L-EOS configuration should be selected from the spectral features of the material being measured, not simply from the broadest available wavelength range.",
-                "tags": ["Configuration Guidance"]
+                "tags": [
+                  "Configuration Guidance"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Interactive Configuration Guide",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Discuss My Application"
           },
 
           "comparison": {
-            "eyebrow": "Method Comparison",
-            "title": "L-EOS 1.7 vs L-EOS 2.5e",
-            "description": "Which L-EOS™ configuration should you choose? The most important configuration decision is the required spectral range.",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
+            "description": "Which L-EOS™ configuration should you choose?",
             "columns": [
-              { "label": "L-EOS 1.7", "highlight": false },
-              { "label": "L-EOS 2.5e", "highlight": true }
+              { "label": "L-EOS 1.7" },
+              { "label": "L-EOS 2.5e" }
             ],
             "rows": [
-              { "feature": "Spectral range", "values": ["900–1700 nm", "1000–2500 nm"] },
-              { "feature": "Sensor", "values": ["InGaAs", "T2SL"] },
-              { "feature": "Spatial channels", "values": ["512", "512"] },
-              { "feature": "Spectral channels", "values": ["640", "640"] },
-              { "feature": "Spatial resolution", "values": ["6 pixels", "6 pixels"] },
-              { "feature": "Spectral resolution", "values": ["7.8 nm", "15.3 nm"] },
-              { "feature": "Spectral sampling", "values": ["1.3 nm/px", "2.6 nm/px"] },
-              { "feature": "Pixel size", "values": ["15 µm", "15 µm"] },
-              { "feature": "Cooling", "values": ["-60°C or -80°C", "-80°C"] }
+              {
+                "feature": "Spectral range",
+                "values": [
+                  "900–1700 nm",
+                  "1000–2500 nm"
+                ]
+              },
+              {
+                "feature": "Sensor",
+                "values": [
+                  "InGaAs",
+                  "T2SL"
+                ]
+              },
+              {
+                "feature": "Spatial channels",
+                "values": [
+                  "512",
+                  "512"
+                ]
+              },
+              {
+                "feature": "Spectral channels",
+                "values": [
+                  "640",
+                  "640"
+                ]
+              },
+              {
+                "feature": "Spatial resolution",
+                "values": [
+                  "6 pixels",
+                  "6 pixels"
+                ]
+              },
+              {
+                "feature": "Spectral resolution",
+                "values": [
+                  "7.8 nm",
+                  "15.3 nm"
+                ]
+              },
+              {
+                "feature": "Spectral sampling",
+                "values": [
+                  "1.3 nm/px",
+                  "2.6 nm/px"
+                ]
+              },
+              {
+                "feature": "Pixel size",
+                "values": [
+                  "15 µm",
+                  "15 µm"
+                ]
+              },
+              {
+                "feature": "Cooling",
+                "values": [
+                  "-60°C or -80°C",
+                  "-80°C"
+                ]
+              }
             ],
-            "disclaimer": "Choose L-EOS 1.7 when your application requires spectral coverage from 900 to 1700 nm and the InGaAs-based configuration meets the required spectral range. Choose L-EOS 2.5e when your application requires extended SWIR coverage from 1000 to 2500 nm and the T2SL-based configuration is appropriate for the target spectral region."
+            "disclaimer": "",
+            "lead": "L-EOS 1.7 vs L-EOS 2.5e",
+            "paragraphs": [
+              "The most important configuration decision is the required spectral range."
+            ],
+            "featureLabel": "Specification",
+            "notes": [
+              "Choose L-EOS 1.7 when:",
+              "Your application requires spectral coverage from 900 to 1700 nm and the InGaAs-based configuration meets the required spectral range.",
+              "Choose L-EOS 2.5e when:",
+              "Your application requires extended SWIR coverage from 1000 to 2500 nm and the T2SL-based configuration is appropriate for the target spectral region.",
+              "The correct L-EOS configuration should be selected from the spectral features of the material being measured, not simply from the broadest available wavelength range."
+            ],
+            "verbatim": true
           },
 
           "applicationsExplorer": {
@@ -159,27 +312,49 @@
 
           "serviceMap": {
             "title": "Inkarp Service Near You",
-            "description": "Inkarp is the authorized distributor and service provider for Photon etc. L-EOS™ in India. Support can begin before purchase with application and configuration discussions, particularly where the choice between L-EOS 1.7 and L-EOS 2.5e depends on the required spectral range.",
+            "description": "L-EOS™ support in India",
             "supportAreas": [
-              { "title": "Application Discussion", "description": "Understand the material, imaging objective and workflow." },
-              { "title": "Configuration Guidance", "description": "Help assess L-EOS 1.7 vs L-EOS 2.5e." },
-              { "title": "Product Demonstration", "description": "Evaluate the system against the intended application." },
-              { "title": "Installation", "description": "System installation and setup support." },
-              { "title": "Training", "description": "Operator guidance and workflow familiarization." },
-              { "title": "Technical Support", "description": "Product-related technical assistance." },
-              { "title": "Service Support", "description": "Post-installation support." },
-              { "title": "Spare Parts", "description": "Support for applicable genuine replacement requirements." },
-              { "title": "AMC", "description": "Service contract support, where applicable." }
+              { "title": "Application Discussion", "description": "Understand the material, imaging objective and workflow" },
+              { "title": "Configuration Guidance", "description": "Help assess L-EOS 1.7 vs L-EOS 2.5e" },
+              { "title": "Product Demonstration", "description": "Evaluate the system against the intended application" },
+              { "title": "Installation", "description": "System installation and setup support" },
+              { "title": "Training", "description": "Operator guidance and workflow familiarization" },
+              { "title": "Technical Support", "description": "Product-related technical assistance" },
+              { "title": "Service Support", "description": "Post-installation support" },
+              { "title": "Spare Parts", "description": "Support for applicable genuine replacement requirements" },
+              { "title": "AMC", "description": "Service contract support, where applicable" }
+            ],
+            "paragraphs": [
+              "Inkarp is the authorized distributor and service provider for Photon etc. L-EOS™ in India.",
+              "Support can begin before purchase with application and configuration discussions, particularly where the choice between L-EOS 1.7 and L-EOS 2.5e depends on the required spectral range."
             ]
           },
 
           "faqs": [
-            { "question": "What is L-EOS™?", "answer": "L-EOS™ is a hyperspectral SWIR imaging system from Photon etc. designed for industrial infrared imaging, material analysis, sorting, recycling, textiles, geology, food applications, and other hyperspectral workflows." },
-            { "question": "What type of camera is L-EOS™?", "answer": "L-EOS™ is a hyperspectral linescan camera system designed for industrial SWIR imaging applications." },
-            { "question": "What wavelength range does L-EOS™ cover?", "answer": "L-EOS™ is available in two configurations. L-EOS 1.7 covers 900–1700 nm, while L-EOS 2.5e covers 1000–2500 nm." },
-            { "question": "What is the difference between L-EOS 1.7 and L-EOS 2.5e?", "answer": "L-EOS 1.7 uses an InGaAs sensor and covers 900–1700 nm. L-EOS 2.5e uses a T2SL sensor and covers 1000–2500 nm. They also differ in spectral resolution and spectral sampling." },
-            { "question": "What sensor does L-EOS 1.7 use?", "answer": "L-EOS 1.7 uses an InGaAs sensor, with Alizé™ 1.7 or ZephIR™ 1.7 sensor options listed by Photon etc." },
-            { "question": "What sensor does L-EOS 2.5e use?", "answer": "L-EOS 2.5e uses a T2SL sensor, specifically the ZephIR™ 2.5e configuration listed by Photon etc." },
+            {
+              "question": "What is L-EOS™?",
+              "answer": "L-EOS™ is a hyperspectral SWIR imaging system from Photon etc. designed for industrial infrared imaging, material analysis, sorting, recycling, textiles, geology, food applications, and other hyperspectral workflows."
+            },
+            {
+              "question": "What type of camera is L-EOS™?",
+              "answer": "L-EOS™ is a hyperspectral linescan camera system designed for industrial SWIR imaging applications."
+            },
+            {
+              "question": "What wavelength range does L-EOS™ cover?",
+              "answer": "L-EOS™ is available in two configurations. L-EOS 1.7 covers 900–1700 nm, while L-EOS 2.5e covers 1000–2500 nm."
+            },
+            {
+              "question": "What is the difference between L-EOS 1.7 and L-EOS 2.5e?",
+              "answer": "L-EOS 1.7 uses an InGaAs sensor and covers 900–1700 nm. L-EOS 2.5e uses a T2SL sensor and covers 1000–2500 nm. They also differ in spectral resolution and spectral sampling."
+            },
+            {
+              "question": "What sensor does L-EOS 1.7 use?",
+              "answer": "L-EOS 1.7 uses an InGaAs sensor, with Alizé™ 1.7 or ZephIR™ 1.7 sensor options listed by Photon etc."
+            },
+            {
+              "question": "What sensor does L-EOS 2.5e use?",
+              "answer": "L-EOS 2.5e uses a T2SL sensor, specifically the ZephIR™ 2.5e configuration listed by Photon etc."
+            },
             { "question": "How many spatial channels does L-EOS™ have?", "answer": "Both L-EOS configurations provide 512 spatial channels." },
             { "question": "How many spectral channels does L-EOS™ have?", "answer": "Both L-EOS configurations provide 640 spectral channels." },
             { "question": "What is the spectral resolution of L-EOS 1.7?", "answer": "L-EOS 1.7 has a spectral resolution of 7.8 nm." },
@@ -188,16 +363,43 @@
             { "question": "What is the spectral sampling of L-EOS 2.5e?", "answer": "The typical spectral sampling of L-EOS 2.5e is 2.6 nm/px." },
             { "question": "What is the pixel size of L-EOS™?", "answer": "Both L-EOS configurations have a 15 µm pixel size." },
             { "question": "Does L-EOS™ use thermoelectric cooling?", "answer": "Yes. L-EOS™ uses four stages of thermoelectric cooling." },
-            { "question": "How cold can the L-EOS™ detector get?", "answer": "At 20°C ambient temperature, L-EOS 1.7 can reach -60°C or -80°C, while L-EOS 2.5e can reach -80°C." },
-            { "question": "What is L-EOS™ used for?", "answer": "L-EOS™ is used for industrial hyperspectral imaging applications including material sorting, plastic sorting, textile analysis and recycling, food quality and safety, mining and geology, core scanning, search and rescue, and UAV applications." },
-            { "question": "Can L-EOS™ be used for textile analysis?", "answer": "Yes. Photon etc. specifically presents L-EOS™ for textile analysis and fabric identification, including applications involving complex blends and recycling." },
+            {
+              "question": "How cold can the L-EOS™ detector get?",
+              "answer": "At 20°C ambient temperature, L-EOS 1.7 can reach -60°C or -80°C, while L-EOS 2.5e can reach -80°C."
+            },
+            {
+              "question": "What is L-EOS™ used for?",
+              "answer": "L-EOS™ is used for industrial hyperspectral imaging applications including material sorting, plastic sorting, textile analysis and recycling, food quality and safety, mining and geology, core scanning, search and rescue, and UAV applications."
+            },
+            {
+              "question": "Can L-EOS™ be used for textile analysis?",
+              "answer": "Yes. Photon etc. specifically presents L-EOS™ for textile analysis and fabric identification, including applications involving complex blends and recycling."
+            },
             { "question": "Can L-EOS™ be used for plastic sorting?", "answer": "Yes. Plastic sorting is listed by Photon etc. as an application for L-EOS™." },
-            { "question": "Can L-EOS™ be used for mining and geology?", "answer": "Yes. Photon etc. lists mining and geology among the industrial applications for its hyperspectral imaging solutions and provides core-scanning resources associated with L-EOS™." },
-            { "question": "Can L-EOS™ be used for food quality and safety?", "answer": "Yes. Food Quality / Safety is listed among the L-EOS™ application resources." },
-            { "question": "Can L-EOS™ be used with UAVs?", "answer": "UAV is listed among the L-EOS™ application resources. The complete UAV configuration should be evaluated according to the imaging platform and application requirements." },
-            { "question": "Is L-EOS™ suitable for continuous industrial processes?", "answer": "L-EOS™ belongs to Photon etc.'s Linescan Cameras category, which is designed for high-throughput industrial sorting and continuous-flow analysis." },
-            { "question": "What is the price of L-EOS™ in India?", "answer": "Pricing depends on the selected L-EOS configuration and application requirements. Contact Inkarp for a quotation." },
-            { "question": "Who is the authorized distributor of L-EOS™ in India?", "answer": "Inkarp is the authorized distributor and service provider for Photon etc. L-EOS™ in India." }
+            {
+              "question": "Can L-EOS™ be used for mining and geology?",
+              "answer": "Yes. Photon etc. lists mining and geology among the industrial applications for its hyperspectral imaging solutions and provides core-scanning resources associated with L-EOS™."
+            },
+            {
+              "question": "Can L-EOS™ be used for food quality and safety?",
+              "answer": "Yes. Food Quality / Safety is listed among the L-EOS™ application resources."
+            },
+            {
+              "question": "Can L-EOS™ be used with UAVs?",
+              "answer": "UAV is listed among the L-EOS™ application resources. The complete UAV configuration should be evaluated according to the imaging platform and application requirements."
+            },
+            {
+              "question": "Is L-EOS™ suitable for continuous industrial processes?",
+              "answer": "L-EOS™ belongs to Photon etc.'s Linescan Cameras category, which is designed for high-throughput industrial sorting and continuous-flow analysis."
+            },
+            {
+              "question": "What is the price of L-EOS™ in India?",
+              "answer": "Pricing depends on the selected L-EOS configuration and application requirements. Contact Inkarp for a quotation."
+            },
+            {
+              "question": "Who is the authorized distributor of L-EOS™ in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for Photon etc. L-EOS™ in India."
+            }
           ],
 
           "booking": {
@@ -214,22 +416,48 @@
               { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
               { "key": "materialBeingMeasured", "label": "What material are you measuring?", "type": "text", "required": false },
               { "key": "wavelengthsImportant", "label": "Which wavelengths are important?", "type": "text", "required": false },
-              { "key": "processType", "label": "Is the process continuous or stationary?", "type": "select", "required": false, "options": ["Continuous", "Stationary", "Not sure yet"] },
-              { "key": "spectralCoverageNeeded", "label": "Do you need 900–1700 nm or 1000–2500 nm coverage?", "type": "select", "required": false, "options": ["900–1700 nm (L-EOS 1.7)", "1000–2500 nm (L-EOS 2.5e)", "Not sure yet"] },
+              {
+                "key": "processType",
+                "label": "Is the process continuous or stationary?",
+                "type": "select",
+                "required": false,
+                "options": [
+                  "Continuous",
+                  "Stationary",
+                  "Not sure yet"
+                ]
+              },
+              {
+                "key": "spectralCoverageNeeded",
+                "label": "Do you need 900–1700 nm or 1000–2500 nm coverage?",
+                "type": "select",
+                "required": false,
+                "options": [
+                  "900–1700 nm (L-EOS 1.7)",
+                  "1000–2500 nm (L-EOS 2.5e)",
+                  "Not sure yet"
+                ]
+              },
               { "key": "resolutionRequirement", "label": "What spatial and spectral resolution do you require?", "type": "text", "required": false },
               { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right L-EOS™ configuration", "body": "Configuration guidance helps assess L-EOS 1.7 vs L-EOS 2.5e based on the spectral features of the material being measured." },
-              { "title": "Installation and setup support", "body": "System installation and setup support." },
-              { "title": "Ongoing service and support", "body": "Technical support, spare parts and AMC service contract support are available through Inkarp, where applicable." }
+              { "title": "Application Discussion", "body": "Understand the material, imaging objective and workflow" },
+              { "title": "Configuration Guidance", "body": "Help assess L-EOS 1.7 vs L-EOS 2.5e" },
+              { "title": "Product Demonstration", "body": "Evaluate the system against the intended application" },
+              { "title": "Installation", "body": "System installation and setup support" },
+              { "title": "Training", "body": "Operator guidance and workflow familiarization" },
+              { "title": "Technical Support", "body": "Product-related technical assistance" },
+              { "title": "Service Support", "body": "Post-installation support" },
+              { "title": "Spare Parts", "body": "Support for applicable genuine replacement requirements" },
+              { "title": "AMC", "body": "Service contract support, where applicable" }
             ]
           },
 
           "longForm": {
             "heroHook": "Long-Lifetime Hyperspectral SWIR Imaging for Industrial Material Analysis",
-            "heroLead": "Map spectral information across materials, surfaces, and continuous processes with L-EOS™. Photon etc. L-EOS™ is a hyperspectral SWIR imaging system designed for industrial applications that require spatial and spectral information from materials and processes. It combines a scientific-grade infrared camera, thermoelectric cooling, spectrometer technology, and an industrial-ready design for demanding imaging workflows. L-EOS™ is available in two configurations covering different SWIR spectral regions: L-EOS 1.7 covering 900–1700 nm, and L-EOS 2.5e covering 1000–2500 nm. Both configurations provide 512 spatial channels and 640 spectral channels, with 6-pixel spatial resolution and 15 µm pixel size. The L-EOS 1.7 configuration uses an InGaAs sensor, while L-EOS 2.5e uses a T2SL sensor. Four-stage thermoelectric cooling can reach temperatures as low as -60°C or -80°C, depending on the configuration. Cooling helps reduce background noise and support high signal-to-noise performance during infrared imaging. L-EOS™ is suited to industrial workflows including material sorting, textile identification, recycling, food quality and safety, mining and geology, core scanning, search and rescue, and UAV-based applications.",
+            "heroLead": "Map spectral information across materials, surfaces, and continuous processes with L-EOS™. Photon etc. L-EOS™ is a hyperspectral SWIR imaging system designed for industrial applications that require spatial and spectral information from materials and processes. It combines a scientific-grade infrared camera, thermoelectric cooling, spectrometer technology, and an industrial-ready design for demanding imaging workflows. L-EOS™ is available in two configurations covering different SWIR spectral regions: L-EOS 1.7: 900–1700 nm L-EOS 2.5e: 1000–2500 nm Both configurations provide 512 spatial channels and 640 spectral channels, with 6-pixel spatial resolution and 15 µm pixel size. The L-EOS 1.7 configuration uses an InGaAs sensor, while L-EOS 2.5e uses a T2SL sensor. Four-stage thermoelectric cooling can reach temperatures as low as -60°C or -80°C, depending on the configuration. Cooling helps reduce background noise and support high signal-to-noise performance during infrared imaging. L-EOS™ is suited to industrial workflows including material sorting, textile identification, recycling, food quality and safety, mining and geology, core scanning, search and rescue, and UAV-based applications.",
             "stats": [
               { "value": "Hyperspectral Imaging / Infrared Imaging", "label": "Technology" },
               { "value": "Linescan Cameras", "label": "Category" },
@@ -253,18 +481,41 @@
                 "key": "overview",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
-                "description": "L-EOS™ combines hyperspectral imaging, SWIR detection, scientific-grade sensors, thermoelectric cooling, and industrial-ready construction for applications where material information must be identified from both spatial and spectral data.",
+                "description": "L-EOS™ at a Glance",
                 "body": [
-                  "Hyperspectral SWIR imaging system designed for industrial infrared imaging and spectral analysis.",
-                  "Captures both spatial and spectral information for detailed material identification and characterization.",
-                  "Built on a line-scan architecture for continuous hyperspectral data acquisition.",
-                  "Available in two spectral configurations: L-EOS 1.7 (900–1700 nm with an InGaAs sensor) and L-EOS 2.5e (1000–2500 nm with a T2SL sensor).",
-                  "Delivers scientific-grade performance with low background noise, high dynamic range, and high signal-to-noise ratio.",
-                  "Features four-stage thermoelectric cooling (TEC) with operating temperatures as low as −80 °C, depending on the model.",
-                  "Provides 512 spatial channels and 640 spectral channels for high-resolution hyperspectral analysis.",
-                  "Uses a 6-pixel spatial resolution and 15 µm pixel size across both configurations.",
-                  "Designed for industrial applications including material sorting, recycling, geology, textile inspection, and food quality analysis."
-                ]
+                  { "text": "Hyperspectral SWIR imaging system designed for industrial infrared imaging and spectral analysis." },
+                  { "text": "Captures both spatial and spectral information for detailed material identification and characterization." },
+                  { "text": "Built on a line-scan architecture for continuous hyperspectral data acquisition." },
+                  { "text": "Available in two spectral configurations:" },
+                  { "text": "L-EOS 1.7: 900–1700 nm with an InGaAs sensor" },
+                  { "text": "L-EOS 2.5e: 1000–2500 nm with a T2SL sensor" },
+                  { "text": "Delivers scientific-grade performance with low background noise, high dynamic range, and high signal-to-noise ratio." },
+                  { "text": "Features four-stage thermoelectric cooling (TEC) with operating temperatures as low as −80 °C, depending on the model." },
+                  { "text": "Provides 512 spatial channels and 640 spectral channels for high-resolution hyperspectral analysis." },
+                  { "text": "Uses a 6-pixel spatial resolution and 15 µm pixel size across both configurations." },
+                  {
+                    "text": "Designed for industrial applications including material sorting, recycling, geology, textile inspection, and food quality analysis."
+                  }
+                ],
+                "cards": [
+                  { "title": "Overview", "description": "SWIR hyperspectral imaging and industrial material analysis" },
+                  { "title": "Key Features", "description": "Scientific-grade detection, cooling, spectral channels, and industrial design" },
+                  { "title": "Applications", "description": "Sorting, recycling, textiles, food, mining, geology, UAV and other industrial workflows" },
+                  { "title": "Technical Specifications", "description": "Spectral range, sensors, resolution, channels, sampling, pixel size, and cooling" },
+                  {
+                    "title": "Why SWIR Hyperspectral Imaging Matters",
+                    "description": "How spectral information can support material identification and classification"
+                  },
+                  { "title": "Scientific-Grade Detection", "description": "Low background noise, dynamic range and signal-to-noise performance" },
+                  { "title": "Thermoelectric Cooling", "description": "Four-stage TEC architecture and low operating temperatures" },
+                  { "title": "L-EOS 1.7 vs L-EOS 2.5e", "description": "Choosing between the two spectral configurations" },
+                  { "title": "Industrial Workflow", "description": "Continuous or line-based hyperspectral imaging requirements" },
+                  { "title": "Documentation", "description": "Technical specifications, publications, videos and white papers" },
+                  { "title": "Inkarp Service", "description": "Application evaluation, configuration, installation and technical support" }
+                ],
+                "cardLimit": 11,
+                "glanceDescription": "L-EOS™ combines hyperspectral imaging, SWIR detection, scientific-grade sensors, thermoelectric cooling, and industrial-ready construction for applications where material information must be identified from both spatial and spectral data.",
+                "subheading": "Overview"
               },
               {
                 "key": "features",
@@ -276,74 +527,574 @@
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "L-EOS™ applications in textile analysis, material sorting, recycling, geology and industrial SWIR spectral imaging."
+                "body": [
+                  "L-EOS™ applications in textile analysis, material sorting, recycling, geology and industrial SWIR spectral imaging."
+                ]
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "L-EOS™ technical specifications for SWIR hyperspectral imaging, scientific-grade detection, thermoelectric cooling and industrial spectral analysis."
-              },
-              {
-                "key": "performance",
-                "eyebrow": "Why SWIR Hyperspectral Imaging Matters",
-                "title": "Why SWIR Hyperspectral Imaging Matters",
-                "body": [
-                  "A conventional image primarily records spatial information. Hyperspectral imaging adds another layer: spectral information at each measured spatial position. For industrial applications, this can be valuable when two materials look similar in visible light but exhibit different spectral responses in the SWIR region.",
-                  "L-EOS™ combines line-based spatial acquisition with multiple spectral channels, creating a hyperspectral measurement that can be used to investigate material differences across a scene — spatial + spectral information in place of appearance-only imaging, spectral-response-based discrimination in place of limited spectral discrimination, and spectral-data-based classification in place of image-based classification.",
-                  "Short-wave infrared imaging can provide spectral information outside the visible range, which is useful for industrial applications where material differences are difficult to identify from visible appearance alone. L-EOS™ extends spectral imaging into SWIR through its two configurations — 900–1700 nm with L-EOS 1.7 and 1000–2500 nm with L-EOS 2.5e — with the appropriate spectral range depending on the material and the spectral features that need to be measured."
+                "columns": [
+                  "Parameter",
+                  "L-EOS 1.7",
+                  "L-EOS 2.5e"
                 ],
-                "disclaimer": "If the objective is material identification, share the materials being differentiated, the expected spectral range, the imaging distance, and whether the workflow is continuous or stationary. This helps determine whether the L-EOS 1.7 or L-EOS 2.5e configuration is more appropriate."
-              },
-              {
-                "key": "workflow",
-                "eyebrow": "Industrial Workflow Fit",
-                "title": "From Continuous Material Flow to Spectral Classification",
-                "description": "L-EOS™ belongs to Photon etc.'s Linescan Cameras category and is positioned for high-throughput industrial sorting and continuous flow analysis. For an industrial deployment, the complete workflow should be considered — not just camera specifications.",
-                "steps": [
-                  { "title": "Material", "description": "The material stream enters the imaging workflow." },
-                  { "title": "Illumination", "description": "The material is illuminated ahead of line scanning." },
-                  { "title": "Line Scanning", "description": "L-EOS™'s linescan architecture captures the material continuously." },
-                  { "title": "Spectral Acquisition", "description": "512 spatial channels and 640 spectral channels capture spatial and spectral information." },
-                  { "title": "Classification", "description": "Spectral data is used to classify or distinguish materials." },
-                  { "title": "Sorting / Inspection / Analysis", "description": "Classified output feeds sorting, inspection, or analysis workflows." }
+                "body": [
+                  "L-EOS™ technical specifications for SWIR hyperspectral imaging, scientific-grade detection, thermoelectric cooling and industrial spectral analysis."
                 ]
               },
               {
-                "key": "benefits",
-                "eyebrow": "Thermoelectric Cooling and Signal Quality",
-                "title": "Thermoelectric Cooling and Signal Quality",
-                "description": "Infrared detectors can be affected by background signal and thermal effects. L-EOS™ addresses this through a four-stage thermoelectric cooling architecture. Photon etc. specifies operating temperatures as low as -60°C or -80°C for L-EOS 1.7, and -80°C for L-EOS 2.5e, with these values specified at 20°C ambient temperature. The cooling architecture is intended to support the low-background and high signal-to-noise characteristics of the system.",
-                "cards": [
-                  { "title": "Four-stage thermoelectric cooling", "description": "Purpose-built cooling technology across 4 stages." },
-                  { "title": "L-EOS 1.7 cooling", "description": "Reaches -60°C or -80°C at 20°C ambient." },
-                  { "title": "L-EOS 2.5e cooling", "description": "Reaches -80°C at 20°C ambient." },
-                  { "title": "Low-background, high SNR imaging", "description": "Deep cooling supports the low-background and high signal-to-noise characteristics the system depends on." }
+                "key": "performance",
+                "eyebrow": "SWIR Hyperspectral Imaging for Material Identification",
+                "title": "SWIR Hyperspectral Imaging for Material Identification",
+                "body": [
+                  "See more than an image: capture spectral information across the material"
+                ],
+                "groups": [
+                  {
+                    "body": [
+                      "A conventional image primarily records spatial information. Hyperspectral imaging adds another layer: spectral information at each measured spatial position.",
+                      "For industrial applications, this can be valuable when two materials look similar in visible light but exhibit different spectral responses in the SWIR region.",
+                      "L-EOS™ combines line-based spatial acquisition with multiple spectral channels, creating a hyperspectral measurement that can be used to investigate material differences across a scene."
+                    ],
+                    "columns": [
+                      "Conventional Imaging",
+                      "L-EOS™ Hyperspectral Imaging"
+                    ],
+                    "rows": [
+                      [
+                        "Primarily spatial information",
+                        "Spatial + spectral information"
+                      ],
+                      [
+                        "Material appearance",
+                        "Material spectral response"
+                      ],
+                      [
+                        "Limited spectral discrimination",
+                        "Multiple spectral channels"
+                      ],
+                      [
+                        "Image-based classification",
+                        "Spectral-data-based classification"
+                      ],
+                      [
+                        "Visible imaging may be insufficient",
+                        "SWIR extends detection beyond visible wavelengths"
+                      ]
+                    ],
+                    "note": "If the objective is material identification, share the materials being differentiated, the expected spectral range, the imaging distance, and whether the workflow is continuous or stationary. This helps determine whether the L-EOS 1.7 or L-EOS 2.5e configuration is more appropriate."
+                  },
+                  {
+                    "title": "Why SWIR Matters for Industrial Imaging",
+                    "description": "Extend material analysis beyond visible imaging",
+                    "body": [
+                      "Short-wave infrared imaging can provide spectral information outside the visible range. This makes it useful for industrial applications where material differences are difficult to identify from visible appearance alone.",
+                      "L-EOS™ extends spectral imaging into SWIR through two configurations:"
+                    ],
+                    "items": [
+                      { "title": "900–1700 nm", "text": "with L-EOS 1.7" }
+                    ]
+                  },
+                  {
+                    "body": [
+                      "and"
+                    ],
+                    "items": [
+                      { "title": "1000–2500 nm", "text": "with L-EOS 2.5e." }
+                    ]
+                  },
+                  {
+                    "body": [
+                      "The appropriate spectral range depends on the material and the spectral features that need to be measured."
+                    ],
+                    "columns": [
+                      "Requirement",
+                      "L-EOS™ Capability"
+                    ],
+                    "rows": [
+                      [
+                        "SWIR spectral imaging",
+                        "Available"
+                      ],
+                      [
+                        "900–1700 nm analysis",
+                        "L-EOS 1.7"
+                      ],
+                      [
+                        "1000–2500 nm analysis",
+                        "L-EOS 2.5e"
+                      ],
+                      [
+                        "Multiple spatial channels",
+                        "512"
+                      ],
+                      [
+                        "Multiple spectral channels",
+                        "640"
+                      ],
+                      [
+                        "Low detector temperature",
+                        "Four-stage TEC"
+                      ],
+                      [
+                        "Industrial material analysis",
+                        "Designed for industrial applications"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Thermoelectric Cooling and Signal Quality",
+                    "description": "Reduce detector temperature for demanding infrared measurements",
+                    "body": [
+                      "Infrared detectors can be affected by background signal and thermal effects. L-EOS™ addresses this through a four-stage thermoelectric cooling architecture.",
+                      "Photon etc. specifies operating temperatures as low as:"
+                    ],
+                    "items": [
+                      "-60°C or -80°C for L-EOS 1.7",
+                      "-80°C for L-EOS 2.5e"
+                    ]
+                  },
+                  {
+                    "body": [
+                      "These values are specified at 20°C ambient temperature.",
+                      "The cooling architecture is intended to support the low-background and high signal-to-noise characteristics of the system."
+                    ],
+                    "columns": [
+                      "Cooling Requirement",
+                      "L-EOS™"
+                    ],
+                    "rows": [
+                      [
+                        "Cooling technology",
+                        "Thermoelectric cooling"
+                      ],
+                      [
+                        "Cooling stages",
+                        "4"
+                      ],
+                      [
+                        "L-EOS 1.7",
+                        "-60°C or -80°C"
+                      ],
+                      [
+                        "L-EOS 2.5e",
+                        "-80°C"
+                      ],
+                      [
+                        "Ambient condition specified",
+                        "20°C"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Industrial Workflow Fit",
+                    "description": "From continuous material flow to spectral classification",
+                    "body": [
+                      "L-EOS™ belongs to Photon etc.'s Linescan Cameras category and is positioned for high-throughput industrial sorting and continuous flow analysis.",
+                      "For an industrial deployment, the important questions are not limited to camera specifications. The complete workflow should be considered:"
+                    ],
+                    "items": []
+                  },
+                  {
+                    "title": "Material → illumination → line scanning → spectral acquisition → classification → sorting / inspection / analysis",
+                    "columns": [
+                      "Workflow Requirement",
+                      "L-EOS™ Consideration"
+                    ],
+                    "rows": [
+                      [
+                        "Material identification",
+                        "SWIR spectral information"
+                      ],
+                      [
+                        "Continuous process",
+                        "Linescan architecture"
+                      ],
+                      [
+                        "Spectral discrimination",
+                        "640 spectral channels"
+                      ],
+                      [
+                        "Spatial information",
+                        "512 spatial channels"
+                      ],
+                      [
+                        "Industrial deployment",
+                        "Industrial-oriented design"
+                      ],
+                      [
+                        "Low-background imaging",
+                        "Thermoelectric cooling"
+                      ],
+                      [
+                        "Material sorting",
+                        "SWIR hyperspectral analysis"
+                      ],
+                      [
+                        "Remote imaging",
+                        "UAV applications are listed by Photon etc."
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Textile Analysis and Recycling",
+                    "description": "SWIR hyperspectral imaging for fabric identification",
+                    "body": [
+                      "Textile recycling requires reliable identification of materials and blends. Photon etc. highlights L-EOS™ for textile analysis, including fabric identification and recycling applications.",
+                      "SWIR spectral imaging provides information that can help distinguish materials based on their spectral response rather than relying only on visible appearance.",
+                      "This makes L-EOS™ relevant to workflows involving:"
+                    ],
+                    "items": [
+                      "Textile identification",
+                      "Fabric blend differentiation",
+                      "Material sorting",
+                      "Textile recycling",
+                      "Automated classification workflows"
+                    ]
+                  },
+                  {
+                    "body": [
+                      "Photon etc. specifically presents L-EOS™ for next-generation fabric identification and highlights its use in distinguishing complex blends and compositions."
+                    ]
+                  },
+                  {
+                    "title": "Mining, Geology and Core Scanning",
+                    "description": "Hyperspectral information for geological material analysis",
+                    "body": [
+                      "L-EOS™ is also positioned for mining and geology applications.",
+                      "Hyperspectral imaging can provide spatially resolved spectral information across geological materials, supporting workflows where material differences need to be mapped and characterized.",
+                      "Photon etc. lists core scanning among the L-EOS™ application resources and also highlights mining and geology within its industrial application areas."
+                    ],
+                    "columns": [
+                      "Application",
+                      "Potential Workflow"
+                    ],
+                    "rows": [
+                      [
+                        "Geological analysis",
+                        "Spectral mapping of material differences"
+                      ],
+                      [
+                        "Core scanning",
+                        "Line-based imaging of geological cores"
+                      ],
+                      [
+                        "Mining",
+                        "Hyperspectral material characterization"
+                      ],
+                      [
+                        "Mineral identification",
+                        "Spectral differentiation and mapping"
+                      ],
+                      [
+                        "Continuous scanning",
+                        "Linescan hyperspectral acquisition"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Food Quality and Safety",
+                    "description": "SWIR spectral imaging for non-destructive material analysis",
+                    "body": [
+                      "Food products contain materials with different optical and spectral characteristics. SWIR hyperspectral imaging can provide additional spectral information for industrial inspection workflows.",
+                      "Photon etc. lists Food Quality / Safety among the L-EOS™ application areas.",
+                      "Potential workflow considerations include:"
+                    ],
+                    "items": [
+                      "Product inspection",
+                      "Material differentiation",
+                      "Quality assessment",
+                      "Spectral classification",
+                      "Non-destructive analysis"
+                    ]
+                  },
+                  {
+                    "body": [
+                      "The specific measurement configuration should be determined from the product, target material, required spectral range, and inspection workflow."
+                    ]
+                  },
+                  {
+                    "title": "Plastic Sorting and Recycling",
+                    "description": "Identify materials using spectral information",
+                    "body": [
+                      "Plastic sorting is a key application for industrial SWIR hyperspectral imaging because different materials can exhibit different spectral responses.",
+                      "L-EOS™ is listed by Photon etc. for plastic sorting and recycling applications.",
+                      "A typical workflow can be considered as:"
+                    ],
+                    "items": [
+                      {
+                        "title": "Material stream → SWIR illumination → line scanning → hyperspectral data → material classification → sorting",
+                        "text": "The appropriate L-EOS configuration depends on the spectral features that need to be identified and the operating environment."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Applications by Industry",
+                    "description": "Where does L-EOS™ fit?",
+                    "columns": [
+                      "Industry",
+                      "Application",
+                      "Key L-EOS™ Capability"
+                    ],
+                    "rows": [
+                      [
+                        "Recycling",
+                        "Plastic and textile sorting",
+                        "SWIR hyperspectral material identification"
+                      ],
+                      [
+                        "Textiles",
+                        "Fabric and blend identification",
+                        "Spectral discrimination"
+                      ],
+                      [
+                        "Mining & Geology",
+                        "Geological and core analysis",
+                        "Hyperspectral spectral mapping"
+                      ],
+                      [
+                        "Food Industry",
+                        "Quality and safety inspection",
+                        "SWIR spectral imaging"
+                      ],
+                      [
+                        "Industrial Inspection",
+                        "Material characterization",
+                        "Spatial + spectral information"
+                      ],
+                      [
+                        "Remote Sensing",
+                        "UAV imaging",
+                        "Infrared hyperspectral imaging"
+                      ],
+                      [
+                        "Search & Rescue",
+                        "Infrared scene analysis",
+                        "SWIR imaging beyond visible wavelengths"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Method Comparison",
+                    "description": "Hyperspectral Imaging vs Conventional Imaging",
+                    "columns": [
+                      "Parameter",
+                      "Conventional Camera",
+                      "L-EOS™ Hyperspectral Imaging"
+                    ],
+                    "rows": [
+                      [
+                        "Primary information",
+                        "Spatial image",
+                        "Spatial + spectral information"
+                      ],
+                      [
+                        "Spectral channels",
+                        "Limited",
+                        "640"
+                      ],
+                      [
+                        "Spatial channels",
+                        "Camera-dependent",
+                        "512"
+                      ],
+                      [
+                        "SWIR analysis",
+                        "Configuration dependent",
+                        "Dedicated SWIR configurations"
+                      ],
+                      [
+                        "Material discrimination",
+                        "Based primarily on appearance",
+                        "Can use spectral response"
+                      ],
+                      [
+                        "Material classification",
+                        "Image-based",
+                        "Hyperspectral-data-based"
+                      ],
+                      [
+                        "Linescan workflow",
+                        "Depends on camera",
+                        "Dedicated linescan category"
+                      ],
+                      [
+                        "Industrial applications",
+                        "Broad",
+                        "Sorting, recycling, textiles, geology, food and other applications"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Interactive Configuration Guide",
+                    "description": "Find the right L-EOS™ configuration for your application",
+                    "columns": [
+                      "Question",
+                      "Why It Matters"
+                    ],
+                    "rows": [
+                      [
+                        "What material are you measuring?",
+                        "Determines the relevant spectral features"
+                      ],
+                      [
+                        "What wavelength range is required?",
+                        "Helps select L-EOS 1.7 or L-EOS 2.5e"
+                      ],
+                      [
+                        "Is the process continuous?",
+                        "Helps assess the linescan workflow"
+                      ],
+                      [
+                        "What spatial resolution is required?",
+                        "Determines whether the 6-pixel specification fits the application"
+                      ],
+                      [
+                        "What spectral resolution is required?",
+                        "L-EOS 1.7 and 2.5e provide different spectral resolutions"
+                      ],
+                      [
+                        "Is low-background detection important?",
+                        "Thermoelectric cooling supports low-temperature operation"
+                      ],
+                      [
+                        "Is the system for sorting or inspection?",
+                        "Helps define the imaging and classification workflow"
+                      ],
+                      [
+                        "Is the application mobile or remote?",
+                        "UAV applications may require additional system-level considerations"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration Overview",
+                "title": "Configuration Overview",
+                "cards": [],
+                "groups": [
+                  {
+                    "columns": [
+                      "Parameter",
+                      "L-EOS 1.7",
+                      "L-EOS 2.5e"
+                    ],
+                    "rows": [
+                      [
+                        "Spectral range",
+                        "900–1700 nm",
+                        "1000–2500 nm"
+                      ],
+                      [
+                        "Sensor",
+                        "InGaAs",
+                        "T2SL"
+                      ],
+                      [
+                        "Spatial channels",
+                        "512",
+                        "512"
+                      ],
+                      [
+                        "Spectral channels",
+                        "640",
+                        "640"
+                      ],
+                      [
+                        "Spatial resolution",
+                        "6 pixels",
+                        "6 pixels"
+                      ],
+                      [
+                        "Spectral resolution",
+                        "7.8 nm",
+                        "15.3 nm"
+                      ],
+                      [
+                        "Spectral sampling",
+                        "1.3 nm/px",
+                        "2.6 nm/px"
+                      ],
+                      [
+                        "Pixel size",
+                        "15 µm",
+                        "15 µm"
+                      ],
+                      [
+                        "Cooling temperature*",
+                        "-60°C or -80°C",
+                        "-80°C"
+                      ]
+                    ]
+                  },
+                  {
+                    "body": [
+                      "*Cooling temperatures are specified by Photon etc. at 20°C ambient."
+                    ]
+                  }
                 ]
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
-                "description": "L-EOS™ resources: specification sheet, technical specifications, application resources, publications, videos and white papers.",
+                "description": "L-EOS™ Resources",
                 "cards": [
-                  { "title": "L-EOS™ Specification Sheet", "description": "Detailed technical information." },
-                  { "title": "Technical Specifications", "description": "Spectral range, sensor, resolution, channels, sampling and cooling." },
-                  { "title": "Application Resources", "description": "Core scanning, food quality/safety, plastic sorting, search & rescue, textile and UAV applications." },
-                  { "title": "Publications", "description": "Research and industrial application references." },
-                  { "title": "Videos", "description": "Product and application demonstrations." },
-                  { "title": "White Papers", "description": "Technical and application-focused information." }
+                  { "title": "L-EOS™ Specification Sheet", "description": "Detailed technical information" },
+                  { "title": "Technical Specifications", "description": "Spectral range, sensor, resolution, channels, sampling and cooling" },
+                  {
+                    "title": "Application Resources",
+                    "description": "Core scanning, food quality/safety, plastic sorting, search & rescue, textile and UAV applications"
+                  },
+                  { "title": "Publications", "description": "Research and industrial application references" },
+                  { "title": "Videos", "description": "Product and application demonstrations" },
+                  { "title": "White Papers", "description": "Technical and application-focused information" }
                 ]
               }
             ],
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Need SWIR Hyperspectral Imaging for Your Industrial Application?",
-              "description": "Get Photon etc. L-EOS™ from the authorized distributor and service provider in India. Whether your workflow involves plastic sorting, textile identification, recycling, food quality, mining, geology, core scanning, search and rescue, UAV imaging, or industrial material characterization, the right L-EOS™ configuration starts with the spectral requirements of your application. Tell us what material you are measuring, which wavelengths are important, whether the process is continuous or stationary, whether you need 900–1700 nm or 1000–2500 nm coverage, and what spatial and spectral resolution you require.",
+              "description": "Get Photon etc. L-EOS™ from the authorized distributor and service provider in India.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "paragraphs": [
+                "Whether your workflow involves plastic sorting, textile identification, recycling, food quality, mining, geology, core scanning, search and rescue, UAV imaging, or industrial material characterization, the right L-EOS™ configuration starts with the spectral requirements of your application.",
+                "Tell us:"
+              ],
+              "items": [
+                "What material are you measuring?",
+                "Which wavelengths are important?",
+                "Is the process continuous or stationary?",
+                "Do you need 900–1700 nm or 1000–2500 nm coverage?",
+                "What spatial and spectral resolution do you require?"
+              ],
+              "closing": [
+                "Our team can help evaluate the appropriate L-EOS™ configuration for your workflow."
+              ],
+              "secondaryLabel": "Book a Demo",
+              "secondaryHref": "#booking",
+              "tertiaryLabel": "Talk to a Product Expert",
+              "tertiaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Map spectral information across materials, surfaces, and continuous processes with L-EOS™.",
+              "Photon etc. L-EOS™ is a hyperspectral SWIR imaging system designed for industrial applications that require spatial and spectral information from materials and processes. It combines a scientific-grade infrared camera, thermoelectric cooling, spectrometer technology, and an industrial-ready design for demanding imaging workflows.",
+              "L-EOS™ is available in two configurations covering different SWIR spectral regions:",
+              "L-EOS 1.7: 900–1700 nm",
+              "L-EOS 2.5e: 1000–2500 nm",
+              "Both configurations provide 512 spatial channels and 640 spectral channels, with 6-pixel spatial resolution and 15 µm pixel size. The L-EOS 1.7 configuration uses an InGaAs sensor, while L-EOS 2.5e uses a T2SL sensor.",
+              "Four-stage thermoelectric cooling can reach temperatures as low as -60°C or -80°C, depending on the configuration. Cooling helps reduce background noise and support high signal-to-noise performance during infrared imaging.",
+              "L-EOS™ is suited to industrial workflows including material sorting, textile identification, recycling, food quality and safety, mining and geology, core scanning, search and rescue, and UAV-based applications."
+            ],
+            "statsIntro": "L-EOS™ at a Glance"
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

@@ -43,6 +43,32 @@ export function isValidIndianPhone(value) {
   return /^[6-9]\d{9}$/.test(digits);
 }
 
+export function validateCatalogueDetails(values = {}) {
+  const errors = {};
+  const labels = {
+    firstName: "Name",
+    designation: "Designation",
+    department: "Department",
+    companyName: "Company name",
+    industry: "Industry",
+    country: "Country",
+    state: "State / Union Territory",
+    city: "City",
+    email: "Email",
+    contact: "Contact number",
+    productName: "Product name",
+  };
+
+  for (const [key, label] of Object.entries(labels)) {
+    if (!String(values[key] ?? "").trim()) errors[key] = `${label} is required.`;
+  }
+  if (!errors.email && !isValidEmail(values.email)) errors.email = "Enter a valid email address.";
+  if (!errors.contact && !isValidIndianPhone(values.contact)) {
+    errors.contact = "Enter a valid 10-digit Indian mobile number.";
+  }
+  return errors;
+}
+
 /** Fields the product enquiry form collects, in display order. */
 export const PRODUCT_ENQUIRY_FIELDS = [
   "firstName",

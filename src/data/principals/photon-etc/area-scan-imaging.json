@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "photon-etc",
-    "principalName": "Photon ETC",
-    "countryOfOrigin": "Canada"
-  },
+  "principal": { "slug": "photon-etc", "principalName": "Photon ETC", "countryOfOrigin": "Canada" },
   "categories": [
     {
       "name": "Area Scan Imaging",
@@ -11,24 +7,33 @@
       "products": [
         {
           "name": "GRAND-EOS™",
+
           "slug": "grand-eos",
+
           "principalImage": "/assets/images/PrincipalLogos/Photon.jpeg",
+
           "imageAlt": "Photon etc. GRAND-EOS Hyperspectral Camera - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/grand-eos",
+
           "breadcrumbPath": "Home > Products > Area Scan Imaging > Photon etc. GRAND-EOS™ Hyperspectral Camera",
+
           "h1": "GRAND-EOS™",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Connect micro- and macro-scale imaging with continuously tunable hyperspectral analysis.",
 
           "features": [
-            "Continuous 400–1650 nm Tuning: Continuous wavelength selection across 400–1650 nm.",
-            "Micro & Macro Imaging: Micro and macro imaging in one platform.",
-            "Hyperspectral Data Cube: Spatial and spectral information in a single data cube.",
-            "VBG Filtering Technology: Non-polarized wavelength selection using VBG technology.",
-            "Global Imaging Technology: Data-cube generation without image reconstruction.",
-            "Adjustable Field of View: Field of view adapted to sample size and application.",
-            "Multiple Imaging Modes: Reflectance, transmittance and luminescence imaging."
+            { "title": "Continuous 400–1650 nm Tuning", "description": "Continuous wavelength selection across 400–1650 nm." },
+            { "title": "Micro & Macro Imaging", "description": "Micro and macro imaging in one platform." },
+            { "title": "Hyperspectral Data Cube", "description": "Spatial and spectral information in a single data cube." },
+            { "title": "VBG Filtering Technology", "description": "Non-polarized wavelength selection using VBG technology." },
+            { "title": "Global Imaging Technology", "description": "Data-cube generation without image reconstruction." },
+            { "title": "Adjustable Field of View", "description": "Field of view adapted to sample size and application." },
+            { "title": "Multiple Imaging Modes", "description": "Reflectance, transmittance and luminescence imaging." }
           ],
 
           "technicalSpecs": [
@@ -52,13 +57,13 @@
           ],
 
           "applications": [
-            "Photovoltaic Materials: Characterization of photovoltaic materials — hyperspectral imaging adds spectral information to spatial imaging, letting researchers investigate how spectral responses vary across a photovoltaic material or sample.",
-            "Counterfeit Product Identification: Spectral identification of products and materials — adds spectral information to conventional spatial imaging, so regions or materials with different spectral responses can be investigated within the same imaging workflow.",
-            "Forensic Analysis: Spectral imaging for forensic investigation — useful where visually similar materials exhibit different spectral responses; adjustable field of view and micro/macro imaging let the approach be matched to the sample.",
-            "Food Sorting: Spectral-based identification and sorting — spectral information across an imaged area lets materials or regions with different spectral responses be distinguished.",
-            "Environmental Sorting: Spectral characterization and sorting — the same wide spectral coverage and adjustable field of view apply to environmental sorting and classification workflows.",
-            "Materials Research: Hyperspectral reflectance, transmittance and luminescence imaging",
-            "Industrial Inspection: Wide-field spectral imaging of samples and materials"
+            { "title": "Photovoltaic materials", "description": "Characterization of photovoltaic materials" },
+            { "title": "Counterfeit product identification", "description": "Spectral identification of products and materials" },
+            { "title": "Forensic analysis", "description": "Spectral imaging for forensic investigation" },
+            { "title": "Food sorting", "description": "Spectral-based identification and sorting" },
+            { "title": "Environmental sorting", "description": "Spectral characterization and sorting" },
+            { "title": "Materials research", "description": "Hyperspectral reflectance, transmittance and luminescence imaging" },
+            { "title": "Industrial inspection", "description": "Wide-field spectral imaging of samples and materials" }
           ],
 
           "inPageNav": [
@@ -72,63 +77,182 @@
           ],
 
           "comparison": {
-            "eyebrow": "Choosing between Photon etc. hyperspectral platforms",
+            "eyebrow": "Method comparison",
             "title": "GRAND-EOS™ vs IMA™",
             "description": "GRAND-EOS™ and IMA™ both combine spatial and spectral imaging, but they address different imaging requirements.",
             "columns": [
-              { "label": "IMA™", "highlight": false },
-              { "label": "GRAND-EOS™", "highlight": true }
+              { "label": "IMA™" },
+              { "label": "GRAND-EOS™" }
             ],
             "rows": [
-              { "feature": "Primary category", "values": ["Hyperspectral microscopy", "Hyperspectral area-scan imaging"] },
-              { "feature": "Core capability", "values": ["Microscopy", "Micro + macro modalities"] },
-              { "feature": "Spectral range", "values": ["400–1620 nm", "400–1650 nm"] },
-              { "feature": "Imaging scale", "values": ["Microscopic", "Micro to macro"] },
-              { "feature": "Data", "values": ["Spatial + spectral", "Spatial + spectral"] },
-              { "feature": "Brightfield", "values": ["Yes", "Not specified in supplied source"] },
-              { "feature": "Darkfield", "values": ["Yes", "Not specified in supplied source"] },
-              { "feature": "PL", "values": ["Yes", "Luminescence imaging"] },
-              { "feature": "EL", "values": ["Yes", "Luminescence imaging"] },
-              { "feature": "Reflectance", "values": ["Yes", "Yes"] },
-              { "feature": "Transmittance", "values": ["Yes", "Yes"] },
-              { "feature": "Primary positioning", "values": ["Microscopic materials characterization", "Micro/macro hyperspectral imaging"] }
+              {
+                "feature": "Primary category",
+                "values": [
+                  "Hyperspectral microscopy",
+                  "Hyperspectral area-scan imaging"
+                ]
+              },
+              {
+                "feature": "Microscopy",
+                "values": [
+                  "Core capability",
+                  "Micro + macro modalities"
+                ]
+              },
+              {
+                "feature": "Spectral range",
+                "values": [
+                  "400–1620 nm",
+                  "400–1650 nm"
+                ]
+              },
+              {
+                "feature": "Imaging scale",
+                "values": [
+                  "Microscopic",
+                  "Micro to macro"
+                ]
+              },
+              {
+                "feature": "Data",
+                "values": [
+                  "Spatial + spectral",
+                  "Spatial + spectral"
+                ]
+              },
+              {
+                "feature": "Brightfield",
+                "values": [
+                  "Yes",
+                  "Not specified in supplied source"
+                ]
+              },
+              {
+                "feature": "Darkfield",
+                "values": [
+                  "Yes",
+                  "Not specified in supplied source"
+                ]
+              },
+              {
+                "feature": "PL",
+                "values": [
+                  "Yes",
+                  "Luminescence imaging"
+                ]
+              },
+              {
+                "feature": "EL",
+                "values": [
+                  "Yes",
+                  "Luminescence imaging"
+                ]
+              },
+              {
+                "feature": "Reflectance",
+                "values": [
+                  "Yes",
+                  "Yes"
+                ]
+              },
+              {
+                "feature": "Transmittance",
+                "values": [
+                  "Yes",
+                  "Yes"
+                ]
+              },
+              {
+                "feature": "Primary positioning",
+                "values": [
+                  "Microscopic materials characterization",
+                  "Micro/macro hyperspectral imaging"
+                ]
+              }
             ],
-            "disclaimer": "Choose IMA™ when the primary requirement is hyperspectral microscopy and microscopic material characterization. Consider GRAND-EOS™ when the workflow requires a combination of micro and macro imaging with continuously tunable 400–1650 nm hyperspectral area imaging."
+            "disclaimer": "",
+            "lead": "Choosing between Photon etc. hyperspectral platforms",
+            "featureLabel": "Requirement",
+            "notes": [
+              "Choose IMA™ when the primary requirement is hyperspectral microscopy and microscopic material characterization.",
+              "Consider GRAND-EOS™ when the workflow requires a combination of micro and macro imaging with continuously tunable 400–1650 nm hyperspectral area imaging."
+            ],
+            "verbatim": true
           },
 
           "serviceMap": {
             "title": "Inkarp Support in India",
-            "description": "For hyperspectral imaging systems, the correct configuration depends on the sample, imaging scale, spectral range and measurement mode.",
+            "description": "From application discussion to installation and service",
             "supportAreas": [
-              { "title": "Application consultation", "description": "Supported by Inkarp." },
-              { "title": "System configuration guidance", "description": "Supported by Inkarp." },
-              { "title": "Product demonstration", "description": "Supported by Inkarp." },
-              { "title": "Installation", "description": "Supported by Inkarp." },
-              { "title": "Training", "description": "Supported by Inkarp." },
-              { "title": "Technical support", "description": "Supported by Inkarp." },
-              { "title": "AMC support", "description": "Supported by Inkarp." },
-              { "title": "Spare parts support", "description": "Supported by Inkarp." }
+              { "title": "Application consultation", "description": "✓" },
+              { "title": "System configuration guidance", "description": "✓" },
+              { "title": "Product demonstration", "description": "✓" },
+              { "title": "Installation", "description": "✓" },
+              { "title": "Training", "description": "✓" },
+              { "title": "Technical support", "description": "✓" },
+              { "title": "AMC support", "description": "✓" },
+              { "title": "Spare parts support", "description": "✓" }
+            ],
+            "paragraphs": [
+              "Inkarp is the authorized distributor and service provider for Photon etc. GRAND-EOS™ in India.",
+              "For hyperspectral imaging systems, the correct configuration depends on the sample, imaging scale, spectral range and measurement mode."
             ]
           },
 
           "faqs": [
-            { "question": "What is GRAND-EOS™?", "answer": "GRAND-EOS™ is a continuously tunable hyperspectral camera from Photon etc. that operates from 400 to 1650 nm and combines micro and macro imaging modalities." },
+            {
+              "question": "What is GRAND-EOS™?",
+              "answer": "GRAND-EOS™ is a continuously tunable hyperspectral camera from Photon etc. that operates from 400 to 1650 nm and combines micro and macro imaging modalities."
+            },
             { "question": "What wavelength range does GRAND-EOS™ cover?", "answer": "GRAND-EOS™ is continuously tunable from 400 to 1650 nm." },
-            { "question": "What is GRAND-EOS™ used for?", "answer": "GRAND-EOS™ is designed for hyperspectral imaging applications including photovoltaic material characterization, counterfeit product identification, forensic analysis, food sorting and environmental sorting." },
-            { "question": "What is a hyperspectral data cube?", "answer": "A hyperspectral data cube combines spatial and spectral information. In GRAND-EOS™, spatial information is represented along the X-Y axes and spectral information along the Z-axis." },
-            { "question": "Does GRAND-EOS™ require image reconstruction?", "answer": "No. Photon etc.'s global-imaging technology extracts a hyperspectral data cube from a handful of monochromatic images without the need for image reconstruction." },
+            {
+              "question": "What is GRAND-EOS™ used for?",
+              "answer": "GRAND-EOS™ is designed for hyperspectral imaging applications including photovoltaic material characterization, counterfeit product identification, forensic analysis, food sorting and environmental sorting."
+            },
+            {
+              "question": "What is a hyperspectral data cube?",
+              "answer": "A hyperspectral data cube combines spatial and spectral information. In GRAND-EOS™, spatial information is represented along the X-Y axes and spectral information along the Z-axis."
+            },
+            {
+              "question": "Does GRAND-EOS™ require image reconstruction?",
+              "answer": "No. Photon etc.'s global-imaging technology extracts a hyperspectral data cube from a handful of monochromatic images without the need for image reconstruction."
+            },
             { "question": "Can GRAND-EOS™ perform reflectance imaging?", "answer": "Yes. GRAND-EOS™ is designed for reflectance imaging." },
             { "question": "Can GRAND-EOS™ perform transmittance imaging?", "answer": "Yes. Transmittance imaging is one of the supported imaging modes." },
             { "question": "Can GRAND-EOS™ perform luminescence imaging?", "answer": "Yes. GRAND-EOS™ is designed for luminescence imaging." },
-            { "question": "Does GRAND-EOS™ support both micro and macro imaging?", "answer": "Yes. GRAND-EOS™ combines micro and macro imaging modalities in one platform." },
-            { "question": "Can the field of view be adjusted?", "answer": "Yes. The field of view can be adjusted depending on the application and sample size." },
-            { "question": "What filtering technology does GRAND-EOS™ use?", "answer": "GRAND-EOS™ uses Photon etc.'s patented filtering technology based on volume Bragg grating (VBG)." },
+            {
+              "question": "Does GRAND-EOS™ support both micro and macro imaging?",
+              "answer": "Yes. GRAND-EOS™ combines micro and macro imaging modalities in one platform."
+            },
+            {
+              "question": "Can the field of view be adjusted?",
+              "answer": "Yes. The field of view can be adjusted depending on the application and sample size."
+            },
+            {
+              "question": "What filtering technology does GRAND-EOS™ use?",
+              "answer": "GRAND-EOS™ uses Photon etc.'s patented filtering technology based on volume Bragg grating (VBG)."
+            },
             { "question": "Does GRAND-EOS™ use polarized wavelength selection?", "answer": "GRAND-EOS™ provides non-polarized wavelength selection." },
-            { "question": "What are the main applications of GRAND-EOS™?", "answer": "Photon etc. identifies photovoltaic material characterization, counterfeit product identification, forensic analysis, food sorting and environmental sorting as application areas." },
-            { "question": "Is GRAND-EOS™ suitable for industrial applications?", "answer": "Yes. GRAND-EOS™ is designed for both fundamental research and industrial applications." },
-            { "question": "What is the difference between GRAND-EOS™ and IMA™?", "answer": "IMA™ is primarily a hyperspectral microscopy platform for microscopic material characterization, while GRAND-EOS™ combines micro and macro hyperspectral imaging and is designed as an area-scan imaging platform with continuous tuning from 400 to 1650 nm." },
-            { "question": "What is the price of GRAND-EOS™ in India?", "answer": "Pricing depends on the required configuration and application. Contact Inkarp for a quotation." },
-            { "question": "Who is the authorized distributor of GRAND-EOS™ in India?", "answer": "Inkarp is the authorized distributor and service provider for Photon etc. GRAND-EOS™ in India." }
+            {
+              "question": "What are the main applications of GRAND-EOS™?",
+              "answer": "Photon etc. identifies photovoltaic material characterization, counterfeit product identification, forensic analysis, food sorting and environmental sorting as application areas."
+            },
+            {
+              "question": "Is GRAND-EOS™ suitable for industrial applications?",
+              "answer": "Yes. GRAND-EOS™ is designed for both fundamental research and industrial applications."
+            },
+            {
+              "question": "What is the difference between GRAND-EOS™ and IMA™?",
+              "answer": "IMA™ is primarily a hyperspectral microscopy platform for microscopic material characterization, while GRAND-EOS™ combines micro and macro hyperspectral imaging and is designed as an area-scan imaging platform with continuous tuning from 400 to 1650 nm."
+            },
+            {
+              "question": "What is the price of GRAND-EOS™ in India?",
+              "answer": "Pricing depends on the required configuration and application. Contact Inkarp for a quotation."
+            },
+            {
+              "question": "Who is the authorized distributor of GRAND-EOS™ in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for Photon etc. GRAND-EOS™ in India."
+            }
           ],
 
           "booking": {
@@ -144,14 +268,24 @@
               { "key": "phone", "label": "Phone", "type": "tel", "required": true },
               { "key": "company", "label": "Company / Institute", "type": "text", "required": false },
               { "key": "sampleDetails", "label": "Sample and required spectral range", "type": "text", "required": false },
-              { "key": "measurementDetails", "label": "Imaging area, measurement mode, and micro or macro imaging requirement", "type": "text", "required": false },
+              {
+                "key": "measurementDetails",
+                "label": "Imaging area, measurement mode, and micro or macro imaging requirement",
+                "type": "text",
+                "required": false
+              },
               { "key": "message", "label": "Additional details", "type": "textarea", "required": false }
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right GRAND-EOS™ configuration", "body": "For hyperspectral imaging systems, the correct configuration depends on the sample, imaging scale, spectral range and measurement mode." },
-              { "title": "Installation and setup support", "body": "Supported by Inkarp." },
-              { "title": "Ongoing service and support", "body": "AMC and spare parts support are available through Inkarp." }
+              { "title": "Application consultation", "body": "✓" },
+              { "title": "System configuration guidance", "body": "✓" },
+              { "title": "Product demonstration", "body": "✓" },
+              { "title": "Installation", "body": "✓" },
+              { "title": "Training", "body": "✓" },
+              { "title": "Technical support", "body": "✓" },
+              { "title": "AMC support", "body": "✓" },
+              { "title": "Spare parts support", "body": "✓" }
             ]
           },
 
@@ -166,13 +300,13 @@
               { "value": "Continuously tunable", "label": "Tuning" },
               { "value": "Micro + Macro", "label": "Imaging modalities" },
               { "value": "Non-polarized", "label": "Wavelength selection" },
-              { "value": "Photon etc. patented VBG technology", "label": "Filtering technology" },
+              { "value": "Photon etc. patented Volume Bragg Grating (VBG) technology", "label": "Filtering technology" },
               { "value": "Hyperspectral data cube", "label": "Data output" },
               { "value": "X-Y axes", "label": "Spatial information" },
               { "value": "Z-axis", "label": "Spectral information" },
               { "value": "Reflectance, transmittance and luminescence", "label": "Imaging modes" },
-              { "value": "Adjustable", "label": "Field of view, according to application and sample size" },
-              { "value": "Not required", "label": "Image reconstruction for global imaging data-cube extraction" },
+              { "value": "Adjustable according to application and sample size", "label": "Field of view" },
+              { "value": "Not required for global imaging data-cube extraction", "label": "Image reconstruction" },
               { "value": "Fundamental research and industrial applications", "label": "Applications" }
             ],
             "sections": [
@@ -180,16 +314,32 @@
                 "key": "overview",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
-                "description": "GRAND-EOS™ combines broad spectral tunability, global imaging and flexible field-of-view selection in a single hyperspectral camera.",
+                "description": "What GRAND-EOS™ Brings to Hyperspectral Imaging",
                 "body": [
-                  "Continuously tunable hyperspectral camera covering the 400–1650 nm spectral range.",
-                  "Combines micro-scale and macro-scale imaging for flexible sample analysis.",
-                  "Captures a hyperspectral data cube containing both spatial and spectral information.",
-                  "Provides spectral information for every pixel, enabling detailed material identification and analysis.",
-                  "Supports reflectance, transmittance, and luminescence imaging.",
-                  "Designed for scientific research and industrial inspection across diverse applications.",
-                  "Suitable for photovoltaic material characterization, counterfeit detection, forensic analysis, food inspection, and environmental sorting."
-                ]
+                  { "text": "Continuously tunable hyperspectral camera covering the 400–1650 nm spectral range." },
+                  { "text": "Combines micro-scale and macro-scale imaging for flexible sample analysis." },
+                  { "text": "Captures a hyperspectral data cube containing both spatial and spectral information." },
+                  { "text": "Provides spectral information for every pixel, enabling detailed material identification and analysis." },
+                  { "text": "Supports reflectance, transmittance, and luminescence imaging." },
+                  { "text": "Designed for scientific research and industrial inspection across diverse applications." },
+                  {
+                    "text": "Suitable for photovoltaic material characterization, counterfeit detection, forensic analysis, food inspection, and environmental sorting."
+                  }
+                ],
+                "cards": [
+                  { "title": "400–1650 nm coverage", "description": "Access visible and infrared spectral information" },
+                  { "title": "Continuous tuning", "description": "Select wavelengths across the operating spectral range" },
+                  { "title": "Micro + macro modalities", "description": "Analyze samples at different scales" },
+                  { "title": "Global imaging", "description": "Extract hyperspectral information from a small number of monochromatic images" },
+                  { "title": "VBG filtering", "description": "Non-polarized wavelength selection with high throughput and efficiency" },
+                  { "title": "Data-cube generation", "description": "Combine spatial and spectral information into a hyperspectral data cube" },
+                  { "title": "Adjustable field of view", "description": "Adapt imaging coverage to sample size and application" },
+                  { "title": "Multiple imaging modes", "description": "Reflectance, transmittance and luminescence imaging" },
+                  { "title": "Industrial + research use", "description": "Suitable for fundamental research and industrial workflows" }
+                ],
+                "cardLimit": 9,
+                "glanceDescription": "GRAND-EOS™ combines broad spectral tunability, global imaging and flexible field-of-view selection in a single hyperspectral camera.",
+                "subheading": "Overview"
               },
               {
                 "key": "features",
@@ -201,65 +351,449 @@
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Where GRAND-EOS™ fits: photovoltaic materials, counterfeit product identification, forensic analysis, food sorting, environmental sorting, materials research, and industrial inspection."
+                "body": [
+                  "Where GRAND-EOS™ Fits",
+                  "GRAND-EOS™ is designed for both fundamental research and industrial applications.",
+                  "Photon etc. identifies the following application areas:"
+                ]
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "GRAND-EOS™ technical specifications for continuously tunable hyperspectral imaging across 400–1650 nm with micro- and macro-scale imaging capabilities."
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "body": [
+                  "GRAND-EOS™ technical specifications for continuously tunable hyperspectral imaging across 400–1650 nm with micro- and macro-scale imaging capabilities."
+                ]
               },
               {
                 "key": "performance",
                 "eyebrow": "How GRAND-EOS™ Works",
                 "title": "How GRAND-EOS™ Works",
                 "body": [
-                  "GRAND-EOS™ uses Photon etc.'s patented global-imaging technology to extract a hyperspectral data cube from a handful of monochromatic images.",
-                  "The workflow: Sample → Monochromatic images → Global imaging acquisition → Hyperspectral data cube → Spatial + spectral analysis.",
-                  "A key part of the GRAND-EOS™ approach is that the data cube is generated without the need for image reconstruction.",
-                  "A conventional image provides information about where features are located; a hyperspectral data cube adds spectral information to every spatial location, enabling users to examine spectral differences across different regions of a sample."
+                  "From monochromatic images to a hyperspectral data cube"
                 ],
-                "utilityChecklist": [
-                  { "label": "X", "value": "Spatial information" },
-                  { "label": "Y", "value": "Spatial information" },
-                  { "label": "Z", "value": "Spectral information" }
+                "groups": [
+                  {
+                    "body": [
+                      "GRAND-EOS™ uses Photon etc.'s patented global-imaging technology to extract a hyperspectral data cube from a handful of monochromatic images.",
+                      "The workflow can be represented as:"
+                    ],
+                    "items": [
+                      "Sample → Monochromatic images → Global imaging acquisition → Hyperspectral data cube → Spatial + spectral analysis"
+                    ]
+                  },
+                  {
+                    "body": [
+                      "The resulting data cube contains:"
+                    ],
+                    "columns": [
+                      "Axis",
+                      "Information"
+                    ],
+                    "rows": [
+                      [
+                        "X",
+                        "Spatial information"
+                      ],
+                      [
+                        "Y",
+                        "Spatial information"
+                      ],
+                      [
+                        "Z",
+                        "Spectral information"
+                      ]
+                    ]
+                  },
+                  {
+                    "body": [
+                      "A key part of the GRAND-EOS™ approach is that the data cube is generated without the need for image reconstruction."
+                    ]
+                  },
+                  {
+                    "title": "Hyperspectral Data Cube",
+                    "description": "Turn an image into spatially resolved spectral information",
+                    "body": [
+                      "A conventional image provides information about where features are located.",
+                      "A hyperspectral data cube adds spectral information to every spatial location.",
+                      "GRAND-EOS™ represents this information as:"
+                    ],
+                    "items": [
+                      "X = Spatial position",
+                      "Y = Spatial position",
+                      {
+                        "title": "Z = Wavelength / spectral information",
+                        "text": "This enables users to examine spectral differences across different regions of a sample."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Why the Data Cube Matters",
+                    "columns": [
+                      "Conventional Imaging",
+                      "GRAND-EOS™"
+                    ],
+                    "rows": [
+                      [
+                        "Spatial information",
+                        "Spatial + spectral information"
+                      ],
+                      [
+                        "Image-based analysis",
+                        "Hyperspectral data-cube analysis"
+                      ],
+                      [
+                        "Limited spectral context",
+                        "Spectral information across 400–1650 nm"
+                      ],
+                      [
+                        "Single imaging scale may be used",
+                        "Micro + macro modalities"
+                      ],
+                      [
+                        "Separate spectral analysis may be required",
+                        "Hyperspectral imaging platform"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Micro and Macro Hyperspectral Imaging",
+                    "description": "Analyze samples at the scale your application requires",
+                    "body": [
+                      "Different research and industrial workflows require different fields of view.",
+                      "GRAND-EOS™ combines micro and macro imaging modalities, allowing the system to address applications at different scales.",
+                      "The field of view can be adjusted according to the sample size and application."
+                    ],
+                    "columns": [
+                      "Imaging Scale",
+                      "Typical Requirement"
+                    ],
+                    "rows": [
+                      [
+                        "Micro",
+                        "Detailed imaging of smaller features and regions"
+                      ],
+                      [
+                        "Macro",
+                        "Imaging of larger sample areas"
+                      ],
+                      [
+                        "Variable field of view",
+                        "Matching image coverage to the sample and application"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Spectral Imaging Modes",
+                    "description": "Reflectance, Transmittance and Luminescence",
+                    "body": [
+                      "GRAND-EOS™ supports three major imaging approaches."
+                    ],
+                    "columns": [
+                      "Imaging Mode",
+                      "What It Measures"
+                    ],
+                    "rows": [
+                      [
+                        "Reflectance",
+                        "Spectral information from light reflected by the sample"
+                      ],
+                      [
+                        "Transmittance",
+                        "Spectral information from light transmitted through the sample"
+                      ],
+                      [
+                        "Luminescence",
+                        "Spectral information from light emitted by the sample"
+                      ]
+                    ]
+                  },
+                  {
+                    "body": [
+                      "The appropriate imaging mode depends on the optical properties of the sample and the intended research or industrial workflow."
+                    ]
+                  },
+                  {
+                    "title": "Photovoltaic Material Characterization",
+                    "description": "Hyperspectral analysis for photovoltaic materials",
+                    "body": [
+                      "GRAND-EOS™ opens the door to the characterization of photovoltaic materials.",
+                      "Hyperspectral imaging can add spectral information to spatial imaging, allowing researchers to investigate how spectral responses vary across a photovoltaic material or sample.",
+                      "The combination of:"
+                    ],
+                    "items": [
+                      "Broad wavelength tunability",
+                      "Spatial imaging",
+                      "Spectral information",
+                      "Adjustable field of view"
+                    ]
+                  },
+                  {
+                    "body": [
+                      "makes GRAND-EOS™ suitable for photovoltaic research workflows requiring spatially resolved spectral characterization."
+                    ]
+                  },
+                  {
+                    "title": "Counterfeit Product Identification",
+                    "description": "Use spectral information to distinguish materials",
+                    "body": [
+                      "Counterfeit products can require more than visual inspection to identify differences in composition or material properties.",
+                      "GRAND-EOS™ is positioned by Photon etc. for counterfeit product identification, using hyperspectral imaging to add spectral information to conventional spatial imaging.",
+                      "This allows regions or materials with different spectral responses to be investigated within the same imaging workflow."
+                    ]
+                  },
+                  {
+                    "title": "Forensic Analysis",
+                    "description": "Add spectral information to forensic imaging",
+                    "body": [
+                      "Forensic samples can contain visually similar materials that exhibit different spectral responses.",
+                      "GRAND-EOS™ supports hyperspectral imaging across 400–1650 nm and can be used for forensic analysis where spatial and spectral information need to be examined together.",
+                      "Its adjustable field of view and micro/macro imaging capabilities allow the imaging approach to be matched to the sample."
+                    ]
+                  },
+                  {
+                    "title": "Food and Environmental Sorting",
+                    "description": "Hyperspectral imaging for sorting applications",
+                    "body": [
+                      "GRAND-EOS™ is designed for applications involving food and environmental sorting.",
+                      "Hyperspectral imaging can provide spectral information across an imaged area, allowing materials or regions with different spectral responses to be distinguished.",
+                      "The combination of wide spectral coverage and adjustable field of view makes the platform relevant to sorting and classification workflows."
+                    ]
+                  },
+                  {
+                    "title": "Research and Industrial Applications",
+                    "description": "One hyperspectral platform for multiple workflows",
+                    "body": [
+                      "GRAND-EOS™ is designed to support both laboratory research and industrial applications."
+                    ],
+                    "columns": [
+                      "Research / Industrial Need",
+                      "GRAND-EOS™ Capability"
+                    ],
+                    "rows": [
+                      [
+                        "Spectral imaging",
+                        "Hyperspectral imaging"
+                      ],
+                      [
+                        "Broad wavelength coverage",
+                        "400–1650 nm"
+                      ],
+                      [
+                        "Variable sample size",
+                        "Adjustable field of view"
+                      ],
+                      [
+                        "Small-scale imaging",
+                        "Micro modality"
+                      ],
+                      [
+                        "Large-area imaging",
+                        "Macro modality"
+                      ],
+                      [
+                        "Material characterization",
+                        "Reflectance / transmittance / luminescence"
+                      ],
+                      [
+                        "Spectral mapping",
+                        "Hyperspectral data cube"
+                      ],
+                      [
+                        "Industrial inspection",
+                        "Global hyperspectral imaging"
+                      ],
+                      [
+                        "Fundamental research",
+                        "Flexible imaging platform"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "GRAND-EOS™ vs Conventional Imaging",
+                    "description": "What does hyperspectral imaging add?",
+                    "columns": [
+                      "Capability",
+                      "Conventional Camera",
+                      "GRAND-EOS™"
+                    ],
+                    "rows": [
+                      [
+                        "Spatial imaging",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Spectral imaging",
+                        "Limited / separate system",
+                        "Yes"
+                      ],
+                      [
+                        "Hyperspectral data cube",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "Continuous wavelength tuning",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "400–1650 nm coverage",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "Micro imaging",
+                        "Configuration dependent",
+                        "Yes"
+                      ],
+                      [
+                        "Macro imaging",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Adjustable field of view",
+                        "Configuration dependent",
+                        "Yes"
+                      ],
+                      [
+                        "Reflectance imaging",
+                        "Possible",
+                        "Yes"
+                      ],
+                      [
+                        "Transmittance imaging",
+                        "Possible",
+                        "Yes"
+                      ],
+                      [
+                        "Luminescence imaging",
+                        "Configuration dependent",
+                        "Yes"
+                      ],
+                      [
+                        "Global imaging",
+                        "No",
+                        "Yes"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Application Selection Guide",
+                    "description": "Is GRAND-EOS™ right for your application?",
+                    "columns": [
+                      "If you need to...",
+                      "GRAND-EOS™ offers..."
+                    ],
+                    "rows": [
+                      [
+                        "Characterize photovoltaic materials",
+                        "Hyperspectral imaging across 400–1650 nm"
+                      ],
+                      [
+                        "Identify counterfeit products",
+                        "Spatial + spectral imaging"
+                      ],
+                      [
+                        "Perform forensic analysis",
+                        "Hyperspectral reflectance / transmittance / luminescence imaging"
+                      ],
+                      [
+                        "Sort food materials",
+                        "Hyperspectral imaging"
+                      ],
+                      [
+                        "Sort environmental materials",
+                        "Hyperspectral imaging"
+                      ],
+                      [
+                        "Analyze small features",
+                        "Micro imaging modality"
+                      ],
+                      [
+                        "Analyze larger areas",
+                        "Macro imaging modality"
+                      ],
+                      [
+                        "Change imaging coverage",
+                        "Adjustable field of view"
+                      ],
+                      [
+                        "Analyze spectral differences",
+                        "Hyperspectral data cube"
+                      ],
+                      [
+                        "Work across visible and infrared wavelengths",
+                        "400–1650 nm continuous tuning"
+                      ]
+                    ]
+                  }
                 ]
-              },
-              {
-                "key": "workflow",
-                "eyebrow": "Spectral Imaging Modes",
-                "title": "Three Ways to Capture Spectral Information",
-                "description": "GRAND-EOS™ supports three major imaging approaches, each suited to different sample properties.",
-                "steps": [
-                  { "title": "Reflectance Imaging", "description": "Captures spectral information from light reflected by the sample." },
-                  { "title": "Transmittance Imaging", "description": "Captures spectral information from light transmitted through the sample." },
-                  { "title": "Luminescence Imaging", "description": "Captures spectral information from light emitted by the sample." }
-                ],
-                "disclaimer": "The appropriate imaging mode depends on the optical properties of the sample and the intended research or industrial workflow."
               },
               {
                 "key": "benefits",
                 "eyebrow": "Why GRAND-EOS™?",
                 "title": "Why GRAND-EOS™?",
-                "description": "GRAND-EOS™ brings several capabilities together in one hyperspectral imaging platform, built around spatial + spectral information.",
+                "description": "Built around spatial + spectral information",
                 "cards": [
                   { "title": "Broad spectral coverage", "description": "400–1650 nm continuous tuning provides a wide operating range." },
-                  { "title": "Micro + macro imaging", "description": "The platform can address different sample sizes and imaging scales — from detailed imaging of smaller features to larger sample areas." },
-                  { "title": "Global hyperspectral imaging", "description": "A hyperspectral data cube can be extracted from a small number of monochromatic images." },
-                  { "title": "No image reconstruction", "description": "The global-imaging approach generates the hyperspectral data cube without image reconstruction." },
+                  { "title": "Micro + macro imaging", "description": "The platform can address different sample sizes and imaging scales." },
+                  {
+                    "title": "Global hyperspectral imaging",
+                    "description": "A hyperspectral data cube can be extracted from a small number of monochromatic images."
+                  },
+                  {
+                    "title": "No image reconstruction",
+                    "description": "The global-imaging approach generates the hyperspectral data cube without image reconstruction."
+                  },
                   { "title": "Flexible field of view", "description": "Imaging coverage can be adjusted according to the sample and application." },
                   { "title": "Multiple measurement modes", "description": "Reflectance, transmittance and luminescence imaging are supported." }
-                ]
+                ],
+                "paragraphs": [
+                  "GRAND-EOS™ brings several capabilities together in one hyperspectral imaging platform:"
+                ],
+                "body": []
               }
             ],
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Need Spatial + Spectral Information Across Your Sample?",
-              "description": "Explore Photon etc. GRAND-EOS™ for continuously tunable hyperspectral imaging from 400 to 1650 nm. Whether you are working on photovoltaic materials, counterfeit identification, forensic analysis, food sorting or environmental sorting, GRAND-EOS™ combines micro and macro imaging with hyperspectral data-cube generation. Tell us about your sample, required spectral range, imaging area, measurement mode, and micro or macro imaging requirement.",
+              "description": "Explore Photon etc. GRAND-EOS™ for continuously tunable hyperspectral imaging from 400 to 1650 nm.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "paragraphs": [
+                "Whether you are working on photovoltaic materials, counterfeit identification, forensic analysis, food sorting or environmental sorting, GRAND-EOS™ combines micro and macro imaging with hyperspectral data-cube generation.",
+                "Tell us about your:"
+              ],
+              "items": [
+                "Sample",
+                "Required spectral range",
+                "Imaging area",
+                "Measurement mode",
+                "Micro or macro imaging requirement"
+              ],
+              "secondaryLabel": "Book a Demo",
+              "secondaryHref": "#booking",
+              "tertiaryLabel": "Discuss Your Application",
+              "tertiaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Connect micro- and macro-scale imaging with continuously tunable hyperspectral analysis.",
+              "Photon etc. GRAND-EOS™ is a global hyperspectral camera continuously tunable from 400 to 1650 nm. It combines micro and macro imaging modalities in one platform, allowing researchers and industrial users to analyze samples across different scales.",
+              "Using Photon etc.'s patented volume Bragg grating (VBG) filtering technology, GRAND-EOS™ provides non-polarized wavelength selection with high throughput and efficiency.",
+              "The system generates a hyperspectral data cube containing spatial information along the X-Y axes and spectral information along the Z-axis. Photon etc.'s global imaging technology extracts this data cube from a small number of monochromatic images without requiring image reconstruction.",
+              "GRAND-EOS™ supports reflectance, transmittance and luminescence imaging, with an adjustable field of view based on the application and sample size."
+            ],
+            "statsIntro": "GRAND-EOS™ at a Glance"
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

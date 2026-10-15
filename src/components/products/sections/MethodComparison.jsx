@@ -25,10 +25,15 @@ export default function MethodComparison({ data }) {
         <SectionHeader
           number="11"
           eyebrow={eyebrow ?? 'Method comparison'}
+          lead={data?.lead}
           title={title ?? 'Method comparison'}
           description={description ?? 'How the system compares with a basic manually controlled evaporation setup across the parameters that matter day to day.'}
         />
 
+        {/* Optional paragraphs before the table and notes after it, from a source document. */}
+        {data?.paragraphs?.map((paragraph, index) => (
+          <p className="-mt-4 mb-6 max-w-3xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+        ))}
         <p className="mt-6 text-xs font-semibold text-ink-soft sm:hidden">Swipe horizontally to compare all columns.</p>
         <div className="relative mt-3 overflow-hidden border border-line-light bg-parchment sm:mt-9">
           <div className="overflow-x-auto scrollbar-none">
@@ -95,6 +100,9 @@ export default function MethodComparison({ data }) {
           />
         </div>
 
+        {data?.notes?.map((note, index) => (
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-black" key={index}>{note}</p>
+        ))}
         <SectionDisclaimer>
           {disclaimer ?? 'This is a generalised comparison with a typical basic manual setup for illustration - not a comparison with any specific competitor product. Capabilities depend on the exact equipment compared.'}
         </SectionDisclaimer>

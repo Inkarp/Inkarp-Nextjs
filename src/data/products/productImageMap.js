@@ -267,7 +267,7 @@ export const productImageMap = {
   "photon-etc:grand-eos": "/assets/images/productImages/Photon/grand-eos.jpg",
   "photon-etc:zephir-2-5": "/assets/images/productImages/Photon/zephir-2-5.jpg",
   "photon-etc:l-eos": "/assets/images/productImages/Photon/l-eos.png",
-  "photon-etc:zephir-1-7": "/assets/images/productImages/Photon/zephir-1-7.png",
+  "photon-etc:zephir-1-7": "/assets/images/productImages/Photon/zephir-1-7-transparent.png",
   "nenovision-s-r-o:litescope-afm": "/assets/images/productImages/Nanovision/litescope-afm.png",
   "implen:nanophotometer-n120": "/assets/images/productImages/Implen/nanophotometer-n120.jpg",
   "implen:nanophotometer-np80": "/assets/images/productImages/Implen/nanophotometer-np80.jpg",

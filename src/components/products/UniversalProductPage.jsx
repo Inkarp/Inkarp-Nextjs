@@ -195,6 +195,23 @@ export default function UniversalProductPage({ product, workflowSection: provide
                 <p className="mt-2 max-w-2xl text-sm font-semibold text-ink">{lf.cta.subheading}</p>
               )}
               <p className="mt-3 max-w-2xl text-sm leading-7 text-ink-soft">{lf.cta.description}</p>
+              {/* Optional extra paragraphs, a short list and closing lines from a source document. */}
+              {lf.cta.paragraphs?.map((paragraph, index) => (
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+              ))}
+              {lf.cta.items?.length > 0 && (
+                <ul className="mt-2 max-w-2xl space-y-1">
+                  {lf.cta.items.map((item) => (
+                    <li className="flex gap-2 text-sm leading-6 text-ink-soft" key={item}>
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {lf.cta.closing?.map((paragraph, index) => (
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+              ))}
             </div>
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a

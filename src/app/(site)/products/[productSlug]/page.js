@@ -21,6 +21,7 @@ import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge
 import RecordProductView from "@/components/products/RecordProductView";
 import FinderProductPrompt from "@/components/solution-finder/FinderProductPrompt";
 import { inferFinderObjective } from "@/lib/finderPlacement";
+import CatalogueDownloadButton from "@/components/products/CatalogueDownloadButton";
 
 const DEFAULT_AUTHORIZED_REGION = "India";
 
@@ -309,6 +310,7 @@ function ProductImageActions({ href, product, secondary }) {
         <RequestQuoteButton className={DUO_REQUEST_QUOTE_CLASS} href={href} product={product} />
         <AddToQuoteButton product={product} variant="duo" />
       </div>
+      <CatalogueDownloadButton productName={product.name} productSlug={product.slug} />
       {secondary?.label && (
         <Link
           href={secondary.href ?? "/contact"}

@@ -39,6 +39,10 @@ export default function ServiceMap({ data, calm = false }) {
           title={title ?? 'Inkarp service across India'}
           description={description}
         />
+        {/* Extra paragraphs from a source document, after the section intro. */}
+        {data?.paragraphs?.map((paragraph, index) => (
+          <p className="-mt-4 mb-6 max-w-3xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+        ))}
 
         {supportAreas?.length > 0 && (
           <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

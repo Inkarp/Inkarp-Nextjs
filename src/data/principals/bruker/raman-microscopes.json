@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "bruker",
-    "principalName": "Bruker",
-    "countryOfOrigin": "Germany"
-  },
+  "principal": { "slug": "bruker", "principalName": "Bruker", "countryOfOrigin": "Germany" },
   "categories": [
     {
       "name": "Raman Microscopes",
@@ -27,18 +23,31 @@
       "products": [
         {
           "name": "SENTERRA II Raman Microscope",
+
           "slug": "senterra-ii-raman-microscope",
+
           "image": "/assets/images/productImages/Bruker/senterra-ii-raman-microscope.png",
+
           "principalImage": "/assets/images/PrincipalLogos/Bruker.svg",
+
           "imageAlt": "Bruker SENTERRA II Raman Microscope - authorized distributor & service provider in India",
+
           "manufacturerUrl": "https://www.bruker.com/en/products-and-solutions/raman-spectroscopy/raman-microscopes/senterra-ii-raman-microscope.html",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/senterra-ii-raman-microscope",
+
           "breadcrumbPath": "Home > Products > Raman Microscopes > SENTERRA II Raman Microscope",
+
           "h1": "SENTERRA II Raman Microscope",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "metaTitle": "SENTERRA II Raman Microscope — Authorized Distributor & Service Provider in India | Inkarp | Bruker",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Bruker SENTERRA II Raman Microscope in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "SENTERRA II Raman Microscope",
             "SENTERRA II Raman Microscope India",
@@ -58,41 +67,79 @@
             "Bruker India",
             "Inkarp Instruments"
           ],
+
           "overview": "Heat, vibration, and component wear all shift a Raman microscope's wavenumber accuracy over time. Every conventional system needs regular recalibration to correct for it. SENTERRA II doesn't stop for that. SureCal, a patented technology, recalibrates continuously in the background, holding sub-wavenumber precision without interrupting a measurement session. Switch between built-in lasers with one click, and the filter and grating adjust automatically behind it. A Class 1 laser housing with interlock keeps the user protected at all times, which matters when students or first-time operators are involved. It runs its own diagnostics, automated OQ and PQ included, and stays 100% compliant with GMP, 21 CFR Part 11, and the ALCOA+ principle.",
+
           "features": [
-            "SureCal Continuous Calibration: Recalibrates in the background, permanently, holding sub-wavenumber precision without interrupting analysis.",
-            "One-Click Laser Switching: Filter and grating adjust automatically once a different built-in laser is selected.",
-            "Class 1 Laser Housing with Interlock: Protects the user from harmful laser radiation at all times, regardless of operator experience.",
-            "Automated Self-Diagnosis: Built-in OQ and PQ instrument tests run without a separate qualification process.",
-            "A.I.D. Autonomous Composition Identifier: AI-driven identification of pure substances or complex mixtures, with diagnostics and hit-quality graphs, in seconds.",
-            "Adaptive K-means Clustering: Builds a chemical image automatically, without needing to select a specific Raman peak first.",
-            "Co-Local Measurement: Transfers overview images and measurement areas between LUMOS II, HYPERION II, and SENTERRA II, for combined IR and Raman analysis of the same spot.",
-            "Inverted Microscope Configuration: Gives open sample access for live tissue, cell research, and in situ measurement, without losing functionality.",
-            "100% GMP and 21 CFR Part 11 Compliance: Follows the ALCOA+ principle, with data integrity maintained locally or on a server."
+            {
+              "title": "SureCal Continuous Calibration",
+              "description": "Recalibrates in the background, permanently, holding sub-wavenumber precision without interrupting analysis."
+            },
+            { "title": "One-Click Laser Switching", "description": "Filter and grating adjust automatically once a different built-in laser is selected." },
+            {
+              "title": "Class 1 Laser Housing with Interlock",
+              "description": "Protects the user from harmful laser radiation at all times, regardless of operator experience."
+            },
+            { "title": "Automated Self-Diagnosis", "description": "Built-in OQ and PQ instrument tests run without a separate qualification process." },
+            {
+              "title": "A.I.D. Autonomous Composition Identifier",
+              "description": "AI-driven identification of pure substances or complex mixtures, with diagnostics and hit-quality graphs, in seconds."
+            },
+            {
+              "title": "Adaptive K-means Clustering",
+              "description": "Builds a chemical image automatically, without needing to select a specific Raman peak first."
+            },
+            {
+              "title": "Co-Local Measurement",
+              "description": "Transfers overview images and measurement areas between LUMOS II, HYPERION II, and SENTERRA II, for combined IR and Raman analysis of the same spot."
+            },
+            {
+              "title": "Inverted Microscope Configuration",
+              "description": "Gives open sample access for live tissue, cell research, and in situ measurement, without losing functionality."
+            },
+            {
+              "title": "100% GMP and 21 CFR Part 11 Compliance",
+              "description": "Follows the ALCOA+ principle, with data integrity maintained locally or on a server."
+            }
           ],
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Bruker SENTERRA II" },
             { "label": "Product Page Name", "value": "SENTERRA II Raman Microscope" },
             { "label": "Category", "value": "Raman Microscopes" },
             { "label": "Design", "value": "Confocal Raman microscope, fully automated" },
             { "label": "Calibration", "value": "SureCal, continuous, patented, sub-wavenumber precision" },
-            { "label": "Built-In Lasers", "value": "One-click switching; stated as 4 in technical features, and up to 3 excitation lasers in the material science application detail" },
+            {
+              "label": "Built-In Lasers",
+              "value": "One-click switching; stated as 4 in technical features, and up to 3 excitation lasers in the material science application detail"
+            },
             { "label": "Laser Safety", "value": "Class 1 housing with interlock" },
             { "label": "Imaging", "value": "Fast 3D Raman imaging" },
             { "label": "Self-Diagnosis", "value": "Automated OQ/PQ" },
             { "label": "Optional Configuration", "value": "Inverted microscope, for life-science applications" },
-            { "label": "Software", "value": "OPUS, including A.I.D., Adaptive K-means Clustering, Particle Identification, Co-Local Measurement, Python Script Interface" },
+            {
+              "label": "Software",
+              "value": "OPUS, including A.I.D., Adaptive K-means Clustering, Particle Identification, Co-Local Measurement, Python Script Interface"
+            },
             { "label": "Compliance", "value": "100% GMP, 21 CFR Part 11, ALCOA+" },
             { "label": "Cross-Instrument Integration", "value": "Co-local measurement with LUMOS II and HYPERION II" }
           ],
+
           "applications": [
-            "Pharmaceuticals: 100% compliant with GMP, major pharmacopoeias, 21 CFR Part 11, and ALCOA+.",
-            "Forensic Science: High spatial resolution down to the nanometer range for counterfeit and varnish analysis.",
-            "Art Conservation and Restoration: Raman probes and gantry mounting for larger painting analysis.",
-            "Polymers and Plastics: Raman imaging for material distribution, spectral libraries for unknown material and filler identification.",
-            "Material Science: Battery research, graphene and silicon studies, with up to three excitation lasers stated for this application.",
-            "Environmental Studies: Automated particle identification for microplastics contamination analysis."
+            { "title": "Pharmaceuticals", "description": "100% compliant with GMP, major pharmacopoeias, 21 CFR Part 11, and ALCOA+" },
+            { "title": "Forensic Science", "description": "High spatial resolution down to the nanometer range for counterfeit and varnish analysis" },
+            { "title": "Art Conservation and Restoration", "description": "Raman probes and gantry mounting for larger painting analysis" },
+            {
+              "title": "Polymers and Plastics",
+              "description": "Raman imaging for material distribution, spectral libraries for unknown material and filler identification"
+            },
+            {
+              "title": "Material Science",
+              "description": "Battery research, graphene and silicon studies, with up to three excitation lasers stated for this application"
+            },
+            { "title": "Environmental Studies", "description": "Automated particle identification for microplastics contamination analysis" }
           ],
+
           "tags": [
             "SENTERRA II",
             "Raman Microscope",
@@ -103,6 +150,7 @@
             "Bruker India",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What is the SENTERRA II Raman Microscope used for?",
@@ -157,8 +205,9 @@
               "answer": "Inkarp is the authorized distributor and service provider for the Bruker SENTERRA II Raman Microscope in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
-            "heroLead": "Never stop to recalibrate. It happens continuously, on its own. Heat, vibration, and component wear all shift a Raman microscope's wavenumber accuracy over time. Every conventional system needs regular recalibration to correct for it. SENTERRA II doesn't stop for that. SureCal, a patented technology, recalibrates continuously in the background, holding sub-wavenumber precision without interrupting a measurement session. Switch between built-in lasers with one click, and the filter and grating adjust automatically behind it. A Class 1 laser housing with interlock keeps the user protected at all times, which matters when students or first-time operators are involved. It runs its own diagnostics, automated OQ and PQ included, and stays 100% compliant with GMP, 21 CFR Part 11, and the ALCOA+ principle.",
+            "heroLead": "Heat, vibration, and component wear all shift a Raman microscope's wavenumber accuracy over time. Every conventional system needs regular recalibration to correct for it. SENTERRA II doesn't stop for that. SureCal, a patented technology, recalibrates continuously in the background, holding sub-wavenumber precision without interrupting a measurement session. Switch between built-in lasers with one click, and the filter and grating adjust automatically behind it. A Class 1 laser housing with interlock keeps the user protected at all times, which matters when students or first-time operators are involved. It runs its own diagnostics, automated OQ and PQ included, and stays 100% compliant with GMP, 21 CFR Part 11, and the ALCOA+ principle.",
             "stats": [
               { "value": "SureCal", "label": "Continuous, patented calibration technology" },
               { "value": "Sub-wavenumber", "label": "Precision, held automatically" },
@@ -173,91 +222,179 @@
               {
                 "key": "overview",
                 "eyebrow": "Product information",
-                "title": "SENTERRA II Raman Microscope at a Glance",
-                "description": "Everything you need to evaluate the SENTERRA II: how SureCal keeps it always calibrated, what the AI-driven identification and imaging tools do, which applications it fits, and Inkarp installation and service support.",
-                "subheading": "Recalibration stops being a scheduled task",
+                "title": "Product Information",
+                "description": "The product information of the SENTERRA II Raman Microscope covers its continuous calibration, imaging and identification software, applications, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "SureCal continuously recalibrates SENTERRA II in the background, holding sub-wavenumber precision without a manual stop-and-check step.",
-                  "Lasers switch with one click. Filter and grating adjust automatically behind it, so changing excitation wavelength doesn't mean reconfiguring the instrument by hand.",
-                  "Safety doesn't depend on the operator's experience. A Class 1 laser housing with interlock protects anyone using it, which matters directly when students or first-time users are at the bench.",
-                  "The instrument checks itself. Automated OQ and PQ routines run as self-diagnosis, without a separate qualification process each time.",
-                  "Identification is largely automatic now. A.I.D., an AI-driven tool, finds the best match against reference spectral databases in seconds, for pure substances or complex mixtures.",
-                  "Chemical imaging doesn't require picking a peak first. Adaptive K-means Clustering sorts spectra into groups and builds a Raman image automatically.",
-                  "It configures for delicate, living samples too. An inverted microscope option gives open sample access, suited to live tissue, cells, and in situ measurement.",
-                  "Confirmed solution: Bruker SENTERRA II Raman Microscope. Calibration: SureCal, continuous, patented. Laser safety: Class 1 housing with interlock. Optional configuration: inverted microscope, for life-science applications. Full performance specifications (spectral range, spatial resolution figure, dimensions, weight, power) are available on request from Inkarp."
+                  {
+                    "title": "Recalibration stops being a scheduled task.",
+                    "text": "SureCal continuously recalibrates SENTERRA II in the background, holding sub-wavenumber precision without a manual stop-and-check step."
+                  },
+                  {
+                    "title": "Lasers switch with one click.",
+                    "text": "Filter and grating adjust automatically behind it, so changing excitation wavelength doesn't mean reconfiguring the instrument by hand."
+                  },
+                  {
+                    "title": "Safety doesn't depend on the operator's experience.",
+                    "text": "A Class 1 laser housing with interlock protects anyone using it, which matters directly when students or first-time users are at the bench."
+                  },
+                  {
+                    "title": "The instrument checks itself.",
+                    "text": "Automated OQ and PQ routines run as self-diagnosis, without a separate qualification process each time."
+                  },
+                  {
+                    "title": "Identification is largely automatic now.",
+                    "text": "A.I.D., an AI-driven tool, finds the best match against reference spectral databases in seconds, for pure substances or complex mixtures."
+                  },
+                  {
+                    "title": "Chemical imaging doesn't require picking a peak first.",
+                    "text": "Adaptive K-means Clustering sorts spectra into groups and builds a Raman image automatically."
+                  },
+                  {
+                    "title": "It configures for delicate, living samples too.",
+                    "text": "An inverted microscope option gives open sample access, suited to live tissue, cells, and in situ measurement."
+                  }
                 ],
                 "cards": [
                   { "title": "SureCal", "description": "Continuous calibration, no manual recalibration needed" },
                   { "title": "Class 1", "description": "Laser safety, protected at all times" },
                   { "title": "Automated OQ/PQ", "description": "Built-in self-diagnosis" },
                   { "title": "Seconds", "description": "Time to an A.I.D. identification result" }
-                ]
+                ],
+                "glanceTitle": "SENTERRA II Raman Microscope at a Glance",
+                "glanceDescription": "Everything you need to evaluate the SENTERRA II: how SureCal keeps it always calibrated, what the AI-driven identification and imaging tools do, which applications it fits, and Inkarp installation and service support.",
+                "cardsIntro": "The value cards of the SENTERRA II Raman Microscope summarize its calibration, safety, and automation.",
+                "tabSummary": "Why continuous calibration changes how a Raman microscope gets used"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Continuous calibration, one-click laser switching, and AI-driven identification",
-                "description": "The key features of the SENTERRA II Raman Microscope include continuous calibration, one-click laser switching, and AI-driven identification."
+                "title": "Key Features",
+                "description": "The key features of the SENTERRA II Raman Microscope include continuous calibration, one-click laser switching, and AI-driven identification.",
+                "tabSummary": "SureCal, one-click lasers, automated OQ/PQ, inverted configuration"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
-                "title": "Where the SENTERRA II fits",
-                "description": "The applications of the SENTERRA II Raman Microscope include pharmaceutical analysis, forensic science, art restoration, and environmental microplastics testing."
+                "title": "Applications",
+                "description": "The applications of the SENTERRA II Raman Microscope include pharmaceutical analysis, forensic science, art restoration, and environmental microplastics testing.",
+                "tabSummary": "Pharma, forensics, art restoration, polymers, material science, environmental"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
-                "title": "Technical specifications",
-                "description": "The technical specifications of the SENTERRA II Raman Microscope include SureCal continuous calibration, Class 1 laser safety, and AI-driven identification tools."
+                "title": "Technical Specifications",
+                "description": "The technical specifications of the SENTERRA II Raman Microscope include SureCal continuous calibration, Class 1 laser safety, and AI-driven identification tools.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Full performance specifications, including spectral range, absolute spatial resolution, dimensions, weight, and power, are available on request from Inkarp.",
+                "tabSummary": "Confirmed calibration, laser, and compliance features"
               },
               {
                 "key": "performance",
                 "eyebrow": "Continuous Calibration and Laser Safety",
-                "title": "How SureCal and Class 1 safety work together",
+                "title": "Continuous Calibration and Laser Safety",
+                "tabSummary": "How SureCal and Class 1 safety work together",
                 "body": [
                   "Every Raman microscope drifts. Heat, component wear, and vibration all shift wavenumber accuracy over time, and most systems handle that with a scheduled recalibration routine that takes the instrument offline.",
-                  "SureCal removes that step entirely, recalibrating continuously in the background so precision holds without a pause in analysis. That matters whether you're running a quick material identification or collecting a large dataset for PCA or other statistical work, where consistency across hundreds of measurements is the whole point.",
-                  "Laser safety runs on the same always-on principle: the Class 1 housing and interlock protect the user in every operating mode, which is what makes SENTERRA II usable by students and first-time operators without a separate safety program."
+                  "SureCal removes that step entirely, recalibrating continuously in the background so precision holds without a pause in analysis. That matters whether you're running a quick material identification or collecting a large dataset for PCA or other statistical work, where consistency across hundreds of measurements is the whole point. Laser safety runs on the same always-on principle: the Class 1 housing and interlock protect the user in every operating mode, which is what makes SENTERRA II usable by students and first-time operators without a separate safety program."
                 ],
-                "metrics": [
-                  { "value": "SureCal", "label": "Continuous, patented calibration" },
-                  { "value": "Sub-wavenumber", "label": "Precision, held automatically" },
-                  { "value": "One-click", "label": "Laser switching" },
-                  { "value": "Class 1", "label": "Laser housing, with interlock" }
-                ],
-                "utilityChecklist": [
-                  { "label": "Long measurement sessions or large datasets", "value": "Continuous calibration holds accuracy without a recalibration break" },
-                  { "label": "Multiple excitation wavelengths in one workflow", "value": "One-click laser switching, filter and grating auto-adjust" },
-                  { "label": "Students or first-time operators at the bench", "value": "Class 1 laser housing with interlock, always active" },
-                  { "label": "Formal instrument qualification", "value": "Automated OQ/PQ self-diagnosis, no separate manual process" }
-                ],
-                "disclaimer": "Tell our team your typical session length and who's operating the instrument, and Inkarp will confirm the configuration that fits."
+                "groups": [
+                  {
+                    "columns": [
+                      "What matters to your lab",
+                      "How SENTERRA II addresses it"
+                    ],
+                    "rows": [
+                      [
+                        "Long measurement sessions or large datasets",
+                        "Continuous calibration holds accuracy without a recalibration break"
+                      ],
+                      [
+                        "Multiple excitation wavelengths in one workflow",
+                        "One-click laser switching, filter and grating auto-adjust"
+                      ],
+                      [
+                        "Students or first-time operators at the bench",
+                        "Class 1 laser housing with interlock, always active"
+                      ],
+                      [
+                        "Formal instrument qualification",
+                        "Automated OQ/PQ self-diagnosis, no separate manual process"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team your typical session length and who's operating the instrument, and Inkarp will confirm the configuration that fits."
+                  },
+                  {
+                    "title": "Confocal Imaging and AI-Driven Identification",
+                    "summary": "What A.I.D., particle ID, and clustering actually do",
+                    "description": "Raw spectra are only the start. SENTERRA II's software turns them into an answer, often without the operator selecting a specific peak first.",
+                    "body": [
+                      "A.I.D. runs identification against reference spectral databases automatically, returning a result with diagnostics and hit-quality graphs in seconds, whether the sample is a pure substance or a complex mixture. Adaptive K-means clustering builds a full chemical image the same way, sorting spectra into groups on its own, which shows at a glance whether an unknown sample is chemically homogeneous or structured. And where a sample needs both infrared and Raman perspectives, Co-Local Measurement transfers the same region of interest between SENTERRA II, LUMOS II, and HYPERION II, so both data sets come from precisely the same spot."
+                    ],
+                    "columns": [
+                      "What you're trying to do",
+                      "Which tool fits"
+                    ],
+                    "rows": [
+                      [
+                        "Identify an unknown substance or mixture quickly",
+                        "A.I.D."
+                      ],
+                      [
+                        "Generate a chemical image without picking a Raman peak",
+                        "Adaptive K-means Clustering"
+                      ],
+                      [
+                        "Detect, size, and identify particles in one workflow",
+                        "Particle Identification, OPUS/OBJECT"
+                      ],
+                      [
+                        "Correlate Raman data with IR data from the same spot",
+                        "Co-Local Measurement, with LUMOS II or HYPERION II"
+                      ],
+                      [
+                        "Build a custom analysis routine",
+                        "Python Script Interface"
+                      ]
+                    ],
+                    "note": "Tell our team what you're trying to identify or image, and Inkarp will confirm which OPUS tools your workflow needs."
+                  }
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Confocal Imaging and AI-Driven Identification",
-                "title": "What A.I.D., particle ID, and clustering actually do",
+                "title": "Configuration note",
                 "description": "Raw spectra are only the start. SENTERRA II's software turns them into an answer, often without the operator selecting a specific peak first.",
                 "cards": [
-                  { "title": "Identify an unknown substance or mixture quickly", "description": "A.I.D." },
-                  { "title": "Generate a chemical image without picking a Raman peak", "description": "Adaptive K-means Clustering" },
-                  { "title": "Detect, size, and identify particles in one workflow", "description": "Particle Identification, OPUS/OBJECT" },
-                  { "title": "Correlate Raman data with IR data from the same spot", "description": "Co-Local Measurement, with LUMOS II or HYPERION II" },
-                  { "title": "Build a custom analysis routine", "description": "Python Script Interface" }
-                ]
+                  { "title": "Confirmed solution", "description": "Bruker SENTERRA II Raman Microscope" },
+                  { "title": "Calibration", "description": "SureCal, continuous, patented" },
+                  { "title": "Laser safety", "description": "Class 1 housing with interlock" },
+                  { "title": "Optional configuration", "description": "inverted microscope, for life-science applications" }
+                ],
+                "body": [
+                  "Full performance specifications (spectral range, spatial resolution figure, dimensions, weight, power) are available on request from Inkarp"
+                ],
+                "disclaimer": "Tell our team your samples and whether you need standard or inverted configuration, and Inkarp will confirm the right SENTERRA II setup."
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation and Resources",
-                "title": "Documentation and resources",
+                "title": "Documentation and Resources",
                 "description": "Documentation for the SENTERRA II Raman Microscope is available from Inkarp on request.",
                 "cards": [
-                  { "title": "Technical Data Sheet, SENTERRA II", "description": "Available from Inkarp on request." },
-                  { "title": "SENTERRA II Brochure", "description": "Available from Inkarp on request." },
-                  { "title": "OPUS Release Notes, A.I.D. and Co-Local Measurement", "description": "Available from Inkarp on request." },
-                  { "title": "Application Notes: Pharma, Polymers, Material Science, Environmental", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "Technical Data Sheet, SENTERRA II", "description": "Available from Inkarp on request" },
+                  { "title": "SENTERRA II Brochure", "description": "Available from Inkarp on request" },
+                  { "title": "OPUS Release Notes, A.I.D. and Co-Local Measurement", "description": "Available from Inkarp on request" },
+                  { "title": "Application Notes: Pharma, Polymers, Material Science, Environmental", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet, brochure, application notes"
               }
             ],
             "cta": {
@@ -266,9 +403,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "SENTERRA II calibrates itself continuously, identifies unknowns with AI in seconds, and configures for life-science work without losing any functionality. Tell us your samples and your workflow, and Inkarp will confirm the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "Never stop to recalibrate. It happens continuously, on its own.",
+            "heroParagraphs": [
+              "Heat, vibration, and component wear all shift a Raman microscope's wavenumber accuracy over time. Every conventional system needs regular recalibration to correct for it.",
+              "SENTERRA II doesn't stop for that. SureCal, a patented technology, recalibrates continuously in the background, holding sub-wavenumber precision without interrupting a measurement session.",
+              "Switch between built-in lasers with one click, and the filter and grating adjust automatically behind it. A Class 1 laser housing with interlock keeps the user protected at all times, which matters when students or first-time operators are involved.",
+              "It runs its own diagnostics, automated OQ and PQ included, and stays 100% compliant with GMP, 21 CFR Part 11, and the ALCOA+ principle."
+            ],
+            "statsIntro": "The quick stats of the SENTERRA II Raman Microscope cover its calibration technology, laser safety, and automation."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "calibration-drift-visualiser", "label": "Drift Visualiser" },
@@ -280,6 +428,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "calibration-drift-visualiser",
@@ -287,26 +436,29 @@
               "title": "See what continuous calibration actually prevents",
               "description": "Run time forward and watch wavenumber accuracy drift on a conventional system, then toggle SureCal on to see it held steady instead.",
               "fields": [
-                { "key": "choices", "label": "Select your scenario" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Time/session length slider",
-                  "choices": "Minutes; Hours; Extended, multi-hour session",
-                  "cta": "Get Configuration Support"
+                  "hint": "Simulates a measurement session running over minutes to hours",
+                  "choices": "Minutes; Hours; Extended, multi-hour session"
                 },
                 {
                   "title": "Environmental factor toggle",
-                  "choices": "Heat drift; Vibration drift; Component wear drift",
-                  "cta": "Get Configuration Support"
+                  "hint": "Adds heat, vibration, or component wear as drift sources",
+                  "choices": "Adds heat; Vibration; Component wear as drift sources"
                 },
                 {
                   "title": "SureCal toggle",
-                  "choices": "SureCal off, accuracy drifts; SureCal on, accuracy held steady",
-                  "cta": "Get Configuration Support"
+                  "hint": "Switches between drifting (off) and continuously corrected (on) accuracy",
+                  "choices": "Drifting (off); Continuously corrected (on) accuracy"
                 }
               ],
-              "disclaimer": "This visualiser is illustrative only. Actual drift and calibration performance depend on your instrument and environment, confirmed by Inkarp."
+              "disclaimer": "",
+              "lead": "The calibration drift visualiser shows how wavenumber accuracy drifts on a conventional Raman microscope, compared with SENTERRA II's continuous SureCal correction.",
+              "ctaNote": "Shows the resulting wavenumber accuracy over the session.",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "ai-identification-and-imaging-workflow-matcher",
@@ -314,140 +466,145 @@
               "title": "What are you trying to find out from your sample?",
               "description": "Select your task, and see which SENTERRA II software tool handles it.",
               "fields": [
-                { "key": "choices", "label": "Select your task" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Task selector",
-                  "choices": "Identify an unknown; Image a sample; Find particles; Correlate with IR data",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Tool readout",
-                  "choices": "A.I.D.; Adaptive K-means Clustering; Particle Identification; Co-Local Measurement",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Result speed note",
-                  "choices": "Seconds, for A.I.D. identification; Automatic, no peak selection needed",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Identify an unknown, image a sample, find particles, or correlate with IR data",
+                  "choices": "Identify an unknown; Image a sample; Find particles; Correlate with IR data"
                 }
               ],
-              "disclaimer": "This matcher is a configuration helper. Confirm your exact workflow and software needs with Inkarp before quotation."
+              "disclaimer": "",
+              "lead": "The AI identification and imaging workflow matcher shows which OPUS software tool fits your specific task.",
+              "ctaNote": "Recommends A.I.D., Adaptive K-means Clustering, Particle Identification, or Co-Local Measurement. Notes where results are stated to return in seconds. Routes to Inkarp for a software-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
-            "title": "Industries using the SENTERRA II Raman Microscope",
+            "title": "Industry Explorer",
             "description": "Industries using the SENTERRA II Raman Microscope include pharmaceutical manufacturing, forensic science, art conservation, and environmental testing.",
             "industries": [
               {
                 "name": "Pharmaceutical Manufacturing",
                 "icon": "pill",
-                "useCase": "API distribution imaging in tablets, particle analysis in QC",
-                "consideration": "21 CFR Part 11 validated mode, A.I.D. for rapid identification",
-                "bullets": ["API distribution imaging", "Particle analysis", "Rapid identification"],
-                "tags": ["Pharma", "21 CFR Part 11", "A.I.D."],
-                "highlights": [
-                  { "value": "21 CFR Part 11", "label": "Validated mode compliance", "fill": 89 },
-                  { "value": "Seconds", "label": "A.I.D. identification speed", "fill": 80 }
-                ]
+                "note": "Use Case: API distribution imaging in tablets, particle analysis in QC",
+                "bullets": [
+                  "What to Consider: 21 CFR Part 11 validated mode, A.I.D. for rapid identification"
+                ],
+                "tags": []
               },
               {
                 "name": "Forensic Science",
                 "icon": "school",
-                "useCase": "Counterfeit art examination, varnish and trace evidence analysis",
-                "consideration": "Nanometer-range spatial resolution",
-                "bullets": ["Counterfeit examination", "Varnish analysis", "Trace evidence analysis"],
-                "tags": ["Forensics", "Counterfeit Detection", "Spatial Resolution"],
-                "highlights": [
-                  { "value": "Nanometer-range", "label": "Spatial resolution", "fill": 83 },
-                  { "value": "SureCal", "label": "Continuous calibration accuracy", "fill": 77 }
-                ]
+                "note": "Use Case: Counterfeit art examination, varnish and trace evidence analysis",
+                "bullets": [
+                  "What to Consider: Nanometer-range spatial resolution"
+                ],
+                "tags": []
               },
               {
                 "name": "Art Conservation",
                 "icon": "school",
-                "useCase": "Non-destructive pigment and material analysis on paintings",
-                "consideration": "Gantry mounting for larger works",
-                "bullets": ["Pigment analysis", "Material analysis", "Non-destructive testing"],
-                "tags": ["Art Conservation", "Non-Destructive", "Gantry Mounting"],
-                "highlights": [
-                  { "value": "Gantry mounting", "label": "Larger painting analysis", "fill": 78 },
-                  { "value": "Raman probes", "label": "Flexible sampling for art pieces", "fill": 74 }
-                ]
+                "note": "Use Case: Non-destructive pigment and material analysis on paintings",
+                "bullets": [
+                  "What to Consider: Gantry mounting for larger works"
+                ],
+                "tags": []
               },
               {
                 "name": "Environmental Testing",
                 "icon": "droplet",
-                "useCase": "Microplastics contamination analysis",
-                "consideration": "Automated particle identification routines",
-                "bullets": ["Microplastics analysis", "Contamination analysis", "Automated particle ID"],
-                "tags": ["Environmental", "Microplastics", "Particle ID"],
-                "highlights": [
-                  { "value": "Particle Identification", "label": "Automated routine", "fill": 81 },
-                  { "value": "OPUS/OBJECT", "label": "Particle detection and sizing", "fill": 75 }
-                ]
+                "note": "Use Case: Microplastics contamination analysis",
+                "bullets": [
+                  "What to Consider: Automated particle identification routines"
+                ],
+                "tags": []
               },
               {
                 "name": "Material Science and Battery Research",
                 "icon": "cpu",
-                "useCase": "Graphene, silicon, and energy storage material studies",
-                "consideration": "Up to three excitation lasers for material science work",
-                "bullets": ["Graphene studies", "Silicon studies", "Energy storage research"],
-                "tags": ["Material Science", "Battery Research", "Multi-Laser"],
-                "highlights": [
-                  { "value": "Up to 3 lasers", "label": "Excitation wavelengths for material science", "fill": 79 },
-                  { "value": "Fast 3D imaging", "label": "Material distribution mapping", "fill": 76 }
-                ]
+                "note": "Use Case: Graphene, silicon, and energy storage material studies",
+                "bullets": [
+                  "What to Consider: Up to three excitation lasers for material science work"
+                ],
+                "tags": []
               },
               {
                 "name": "Life Science Research",
                 "icon": "flask",
-                "useCase": "Live tissue and cell characterization",
-                "consideration": "Inverted microscope configuration",
-                "bullets": ["Live tissue characterization", "Cell characterization", "In situ measurement"],
-                "tags": ["Life Science", "Inverted Microscope", "Cell Research"],
-                "highlights": [
-                  { "value": "Inverted configuration", "label": "Open sample access", "fill": 82 },
-                  { "value": "Class 1", "label": "Safe for live sample handling", "fill": 75 }
-                ]
+                "note": "Use Case: Live tissue and cell characterization",
+                "bullets": [
+                  "What to Consider: Inverted microscope configuration"
+                ],
+                "tags": []
               }
             ],
             "disclaimer": "Application notes are configuration guidance only. Confirm your samples and workflow needs with Inkarp."
           },
+
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
-            "title": "Compare the SENTERRA II within the range",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare the SENTERRA II with the RAMANwalk in the same category.",
             "columns": [
-              { "label": "SENTERRA II", "highlight": true },
+              { "label": "SENTERRA II" },
               { "label": "RAMANwalk" }
             ],
             "rows": [
-              { "feature": "Design", "values": ["Confocal Raman microscope, fully automated", "Available on request"] },
-              { "feature": "Calibration", "values": ["SureCal, continuous", "Available on request"] },
-              { "feature": "Best For", "values": ["Confocal imaging, AI-driven identification, life-science with inverted configuration", "Available on request"] },
-              { "feature": "Choose when", "values": ["Your work needs continuous calibration and automated imaging", "Available on request"] }
+              {
+                "feature": "Design",
+                "values": [
+                  "Confocal Raman microscope, fully automated",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Calibration",
+                "values": [
+                  "SureCal, continuous",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Confocal imaging, AI-driven identification, life-science with inverted configuration",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Your work needs continuous calibration and automated imaging",
+                  "Available on request"
+                ]
+              }
             ],
-            "disclaimer": "Full comparison detail for the RAMANwalk will be added once its own configuration is confirmed."
+            "disclaimer": "Full comparison detail for the RAMANwalk will be added once its own configuration is confirmed.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
-            "title": "Inkarp support for the SENTERRA II across India",
+            "title": "Inkarp Service Near You",
             "description": "Inkarp supports the SENTERRA II Raman Microscope with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Shows SureCal, laser switching, and AI identification on your own samples." },
-              { "title": "Configuration Assessment", "description": "Confirms standard or inverted configuration for your application." },
-              { "title": "Software Configuration", "description": "Confirms which OPUS tools and packages your workflow needs." },
-              { "title": "Installation Support", "description": "Supports setup and first-run checks." },
-              { "title": "Operator Training", "description": "Helps the team work confidently with imaging and identification tools." },
-              { "title": "Preventive Maintenance", "description": "Supports the solution's virtually maintenance-free operation." },
-              { "title": "Spares and Accessories", "description": "Supplies laser modules, probes, and replacement parts." },
-              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC." }
+              { "title": "Product Demonstration", "description": "Shows SureCal, laser switching, and AI identification on your own samples" },
+              { "title": "Configuration Assessment", "description": "Confirms standard or inverted configuration for your application" },
+              { "title": "Software Configuration", "description": "Confirms which OPUS tools and packages your workflow needs" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Helps the team work confidently with imaging and identification tools" },
+              { "title": "Preventive Maintenance", "description": "Supports the solution's virtually maintenance-free operation" },
+              { "title": "Spares and Accessories", "description": "Supplies laser modules, probes, and replacement parts" },
+              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -467,16 +624,22 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "Standard or inverted microscope setup is matched to your sample types and research goals." },
-              { "title": "Plan your software toolkit", "body": "A.I.D., Adaptive K-means Clustering, Particle Identification, and Co-Local Measurement are confirmed against your workflow." },
-              { "title": "Regulated environment support", "body": "21 CFR Part 11 validated mode and ALCOA+ compliance are confirmed for your compliance needs." },
-              { "title": "Support after purchase", "body": "Inkarp provides installation, operator training, AMC, spares, and service support across India." }
+              { "title": "Product Demonstration", "body": "Shows SureCal, laser switching, and AI identification on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms standard or inverted configuration for your application" },
+              { "title": "Software Configuration", "body": "Confirms which OPUS tools and packages your workflow needs" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Helps the team work confidently with imaging and identification tools" },
+              { "title": "Preventive Maintenance", "body": "Supports the solution's virtually maintenance-free operation" },
+              { "title": "Spares and Accessories", "body": "Supplies laser modules, probes, and replacement parts" },
+              { "title": "Service Support", "body": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "relatedProducts": [
             "RAMANwalk Raman Microscope",
             "BRAVO Handheld Raman Spectrometer"
           ],
+
           "popups": [
             {
               "id": "senterra-config",
@@ -485,22 +648,37 @@
               "ctaLabel": "Get Configuration Support",
               "href": "#calibration-drift-visualiser"
             }
-          ]
+          ],
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "RAMANwalk Raman Microscope",
+
           "slug": "ramanwalk-raman-microscope",
+
           "image": "/assets/images/productImages/Bruker/RamanWalk.webp",
+
           "principalImage": "/assets/images/PrincipalLogos/Bruker.svg",
+
           "imageAlt": "Bruker RAMANwalk Raman Microscope - authorized distributor & service provider in India",
+
           "manufacturerUrl": "https://www.bruker.com/en/products-and-solutions/raman-spectroscopy/raman-microscopes/nanophoton-microscopes/ramanwalk-confocal-raman-microscope.html",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/ramanwalk-raman-microscope",
+
           "breadcrumbPath": "Home > Products > Raman Microscopes > RAMANwalk Raman Microscope",
+
           "h1": "RAMANwalk Raman Microscope",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "metaTitle": "RAMANwalk Raman Microscope — Authorized Distributor & Service Provider in India | Inkarp | Bruker",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Bruker RAMANwalk Raman Microscope in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "RAMANwalk Raman Microscope",
             "RAMANwalk Raman Microscope India",
@@ -520,18 +698,36 @@
             "Bruker India",
             "Inkarp Instruments"
           ],
+
           "overview": "A conventional Raman microscope scans a sample the way you'd read a page: top to bottom, left to right, no matter what you're actually looking for. RAMANwalk doesn't. It searches for the Raman signal itself, using a random-walk algorithm that follows chemical information rather than a fixed pattern. Find a signal, search around it, move on when it thins out. The result isn't just faster, it's faster at the question that matters. Looking for a contaminant in a sample where the full scan takes 50 minutes, RAMANwalk reaches a conclusive answer in about 5. In that same 5 minutes, a traditional raster scan is only 10% through the sample, with nothing found yet. Galvanic mirrors steer the beam instead of moving the stage, spatial resolution runs to 350 nm, and the whole system calibrates and aligns itself automatically.",
+
           "features": [
-            "Random-Walk Imaging Algorithm: Searches for the Raman signal directly, moving rapidly toward chemical information rather than scanning the whole sample in a fixed pattern.",
-            "Galvanic Mirror Beam Steering: Moves the laser beam instead of the stage, far faster than conventional stage-based scanning.",
-            "Low-Contrast Sample Detection: Finds regions of interest by chemical signal, even where visual appearance gives no indication.",
-            "Quick Raman Preview Images: Rough detail emerges in seconds to minutes, letting you decide whether a full scan is worth the time before committing to it.",
-            "350 nm Spatial Resolution: Holds fine spatial detail in X and Y, with 1 µm resolution in Z.",
-            "Up to 3 Interchangeable Gratings: Spectral resolution under 1.5 cm⁻¹, adjustable to the measurement.",
-            "Five Objective Lenses: 5x, 10x, 20x, 50x, and 100x cover overview to fine-detail imaging.",
-            "Auto-Calibration and Auto-Alignment: Calibrates against a standard lamp and sample, and aligns its own optical path, without a manual routine.",
-            "Class I Laser Safety Housing: Protects the user with an interlocked door, regardless of operator experience."
+            {
+              "title": "Random-Walk Imaging Algorithm",
+              "description": "Searches for the Raman signal directly, moving rapidly toward chemical information rather than scanning the whole sample in a fixed pattern."
+            },
+            {
+              "title": "Galvanic Mirror Beam Steering",
+              "description": "Moves the laser beam instead of the stage, far faster than conventional stage-based scanning."
+            },
+            {
+              "title": "Low-Contrast Sample Detection",
+              "description": "Finds regions of interest by chemical signal, even where visual appearance gives no indication."
+            },
+            {
+              "title": "Quick Raman Preview Images",
+              "description": "Rough detail emerges in seconds to minutes, letting you decide whether a full scan is worth the time before committing to it."
+            },
+            { "title": "350 nm Spatial Resolution", "description": "Holds fine spatial detail in X and Y, with 1 µm resolution in Z." },
+            { "title": "Up to 3 Interchangeable Gratings", "description": "Spectral resolution under 1.5 cm⁻¹, adjustable to the measurement." },
+            { "title": "Five Objective Lenses", "description": "5x, 10x, 20x, 50x, and 100x cover overview to fine-detail imaging." },
+            {
+              "title": "Auto-Calibration and Auto-Alignment",
+              "description": "Calibrates against a standard lamp and sample, and aligns its own optical path, without a manual routine."
+            },
+            { "title": "Class I Laser Safety Housing", "description": "Protects the user with an interlocked door, regardless of operator experience." }
           ],
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Bruker RAMANwalk" },
             { "label": "Product Page Name", "value": "RAMANwalk Raman Microscope" },
@@ -548,16 +744,21 @@
             { "label": "Laser Safety", "value": "Class I door with interlock" },
             { "label": "Scan Speed", "value": "More than 5x a conventional scanning Raman microscope" }
           ],
+
           "applications": [
-            "Battery Research and Manufacturing: Assesses electrode stability and binder effectiveness for performance optimization.",
-            "Silicon and Semiconductors: Supports defect detection and fabrication optimization.",
-            "Life Science: Aids disease diagnosis, biomolecule study, and structural analysis of biological samples.",
-            "Pharmaceuticals: Monitors formulations and analyzes ingredient distribution with precision.",
-            "Minerals and Inorganics: Analyzes crystal structure, phase identification, and composition.",
-            "Nano Carbon Materials: Characterizes graphene quality and carbon nanotubes for electronics.",
-            "Polymers and Plastics: Evaluates cure degree and distribution in resin.",
-            "Food and Beverages: Supports QC, contaminant detection, and composition analysis."
+            {
+              "title": "Battery Research and Manufacturing",
+              "description": "Assesses electrode stability and binder effectiveness for performance optimization"
+            },
+            { "title": "Silicon and Semiconductors", "description": "Supports defect detection and fabrication optimization" },
+            { "title": "Life Science", "description": "Aids disease diagnosis, biomolecule study, and structural analysis of biological samples" },
+            { "title": "Pharmaceuticals", "description": "Monitors formulations and analyzes ingredient distribution with precision" },
+            { "title": "Minerals and Inorganics", "description": "Analyzes crystal structure, phase identification, and composition" },
+            { "title": "Nano Carbon Materials", "description": "Characterizes graphene quality and carbon nanotubes for electronics" },
+            { "title": "Polymers and Plastics", "description": "Evaluates cure degree and distribution in resin" },
+            { "title": "Food and Beverages", "description": "Supports QC, contaminant detection, and composition analysis" }
           ],
+
           "tags": [
             "RAMANwalk",
             "Raman Microscope",
@@ -567,6 +768,7 @@
             "Bruker India",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What is the RAMANwalk Raman Microscope used for?",
@@ -592,10 +794,7 @@
               "question": "Can RAMANwalk find signal in low-contrast samples?",
               "answer": "Yes. It locates regions of interest using chemical Raman information, even when the sample gives no useful visual contrast."
             },
-            {
-              "question": "What is the spatial resolution of the RAMANwalk?",
-              "answer": "350 nm in X and Y, and 1 µm in Z."
-            },
+            { "question": "What is the spatial resolution of the RAMANwalk?", "answer": "350 nm in X and Y, and 1 µm in Z." },
             {
               "question": "How many objective lenses does the RAMANwalk offer?",
               "answer": "Five: 5x, 10x, 20x, 50x, and 100x, covering broad overview imaging through fine sub-micron detail."
@@ -617,8 +816,9 @@
               "answer": "Inkarp is the authorized distributor and service provider for the Bruker RAMANwalk Raman Microscope in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
-            "heroLead": "It doesn't scan everything. It walks straight to the answer. A conventional Raman microscope scans a sample the way you'd read a page: top to bottom, left to right, no matter what you're actually looking for. RAMANwalk doesn't. It searches for the Raman signal itself, using a random-walk algorithm that follows chemical information rather than a fixed pattern. Find a signal, search around it, move on when it thins out. The result isn't just faster, it's faster at the question that matters. Looking for a contaminant in a sample where the full scan takes 50 minutes, RAMANwalk reaches a conclusive answer in about 5. In that same 5 minutes, a traditional raster scan is only 10% through the sample, with nothing found yet. Galvanic mirrors steer the beam instead of moving the stage, spatial resolution runs to 350 nm, and the whole system calibrates and aligns itself automatically.",
+            "heroLead": "A conventional Raman microscope scans a sample the way you'd read a page: top to bottom, left to right, no matter what you're actually looking for. RAMANwalk doesn't. It searches for the Raman signal itself, using a random-walk algorithm that follows chemical information rather than a fixed pattern. Find a signal, search around it, move on when it thins out. The result isn't just faster, it's faster at the question that matters. Looking for a contaminant in a sample where the full scan takes 50 minutes, RAMANwalk reaches a conclusive answer in about 5. In that same 5 minutes, a traditional raster scan is only 10% through the sample, with nothing found yet. Galvanic mirrors steer the beam instead of moving the stage, spatial resolution runs to 350 nm, and the whole system calibrates and aligns itself automatically.",
             "stats": [
               { "value": "5x faster", "label": "Than a conventional scanning Raman microscope" },
               { "value": "~5 minutes", "label": "To a conclusive answer, versus ~50 for a full scan" },
@@ -633,90 +833,172 @@
               {
                 "key": "overview",
                 "eyebrow": "Product information",
-                "title": "RAMANwalk Raman Microscope at a Glance",
-                "description": "Everything you need to evaluate the RAMANwalk: how random-walk imaging beats a conventional scan, what resolution and optics it offers, which applications it fits, and Inkarp installation and service support.",
-                "subheading": "It searches instead of scanning",
+                "title": "Product Information",
+                "description": "The product information of the RAMANwalk Raman Microscope covers its random-walk imaging, resolution, applications, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "RAMANwalk's random-walk algorithm follows the Raman signal itself, rather than moving through a sample in a fixed pattern regardless of what's actually there.",
-                  "Speed shows up where it matters. More than 5x faster than a conventional scanning Raman microscope, and on a real contamination question, RAMANwalk reaches a conclusive answer in about 5 minutes while a traditional raster scan is only 10% through the same sample.",
-                  "It finds signal even when the eye can't. Low-contrast samples, where visual appearance gives no clues, are located by chemical information alone.",
-                  "The beam moves, not the stage. Galvanic mirrors steer the laser, which is what makes the rapid, non-linear search pattern possible in the first place.",
-                  "Resolution holds up at speed. 350 nm spatial resolution in X and Y, spectral resolution under 1.5 cm⁻¹, five objective lenses from 5x to 100x.",
-                  "It looks after its own calibration. Auto-calibration against a standard lamp and sample, and auto-alignment of the optical path, without a manual routine.",
-                  "Safety doesn't depend on training. A Class I laser housing with interlock protects the user at all times.",
-                  "Confirmed solution: Bruker RAMANwalk Raman Microscope, built on Nanophoton's random-walk technology. Spatial resolution: 350 nm (X, Y), 1 µm (Z). Spectral resolution: under 1.5 cm⁻¹, up to 3 gratings available. Objective lenses: 5x, 10x, 20x, 50x, 100x. Full physical specifications (unit dimensions, weight, power requirements) are available on request from Inkarp."
+                  {
+                    "title": "It searches instead of scanning.",
+                    "text": "RAMANwalk's random-walk algorithm follows the Raman signal itself, rather than moving through a sample in a fixed pattern regardless of what's actually there."
+                  },
+                  {
+                    "title": "Speed shows up where it matters.",
+                    "text": "More than 5x faster than a conventional scanning Raman microscope, and on a real contamination question, RAMANwalk reaches a conclusive answer in about 5 minutes while a traditional raster scan is only 10% through the same sample."
+                  },
+                  {
+                    "title": "It finds signal even when the eye can't.",
+                    "text": "Low-contrast samples, where visual appearance gives no clues, are located by chemical information alone."
+                  },
+                  {
+                    "title": "The beam moves, not the stage.",
+                    "text": "Galvanic mirrors steer the laser, which is what makes the rapid, non-linear search pattern possible in the first place."
+                  },
+                  {
+                    "title": "Resolution holds up at speed.",
+                    "text": "350 nm spatial resolution in X and Y, spectral resolution under 1.5 cm⁻¹, five objective lenses from 5x to 100x."
+                  },
+                  {
+                    "title": "It looks after its own calibration.",
+                    "text": "Auto-calibration against a standard lamp and sample, and auto-alignment of the optical path, without a manual routine."
+                  },
+                  { "title": "Safety doesn't depend on training.", "text": "A Class I laser housing with interlock protects the user at all times." }
                 ],
                 "cards": [
                   { "title": "5x faster", "description": "Scan speed versus a conventional Raman microscope" },
                   { "title": "350 nm", "description": "Spatial resolution, X and Y" },
                   { "title": "Under 1.5 cm⁻¹", "description": "Spectral resolution" },
                   { "title": "Fully automated", "description": "Calibration, alignment, and hardware" }
-                ]
+                ],
+                "glanceTitle": "RAMANwalk Raman Microscope at a Glance",
+                "glanceDescription": "Everything you need to evaluate the RAMANwalk: how random-walk imaging beats a conventional scan, what resolution and optics it offers, which applications it fits, and Inkarp installation and service support.",
+                "cardsIntro": "The value cards of the RAMANwalk Raman Microscope summarize its scan speed, resolution, and automation.",
+                "tabSummary": "Why searching for a signal beats scanning for one"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Random-walk imaging, galvanic mirror beam steering, and full automation",
-                "description": "The key features of the RAMANwalk Raman Microscope include random-walk imaging, galvanic mirror beam steering, and full automation."
+                "title": "Key Features",
+                "description": "The key features of the RAMANwalk Raman Microscope include random-walk imaging, galvanic mirror beam steering, and full automation.",
+                "tabSummary": "Random-walk algorithm, galvanic mirrors, auto-calibration"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
-                "title": "Where the RAMANwalk fits",
-                "description": "The applications of the RAMANwalk Raman Microscope include battery research, semiconductor analysis, and pharmaceutical formulation monitoring."
+                "title": "Applications",
+                "description": "The applications of the RAMANwalk Raman Microscope include battery research, semiconductor analysis, and pharmaceutical formulation monitoring.",
+                "tabSummary": "Battery research, semiconductors, pharma, polymers, food"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
-                "title": "Technical specifications",
-                "description": "The technical specifications of the RAMANwalk Raman Microscope include 350 nm spatial resolution, sub-1.5 cm⁻¹ spectral resolution, and five objective lenses."
+                "title": "Technical Specifications",
+                "description": "The technical specifications of the RAMANwalk Raman Microscope include 350 nm spatial resolution, sub-1.5 cm⁻¹ spectral resolution, and five objective lenses.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Full physical specifications, including unit dimensions, weight, and power requirements, are available on request from Inkarp.",
+                "tabSummary": "Confirmed resolution, optics, and stage figures"
               },
               {
                 "key": "performance",
                 "eyebrow": "Random Walk Imaging and Scan Speed",
-                "title": "How the algorithm finds an answer faster than a scan",
+                "title": "Random Walk Imaging and Scan Speed",
+                "tabSummary": "How the algorithm finds an answer faster than a scan",
                 "body": [
                   "A conventional Raman microscope treats every point in a sample as equally worth visiting. RAMANwalk doesn't.",
-                  "The random-walk algorithm finds a distinctive Raman signal, searches the surrounding area for more of it, and moves rapidly elsewhere once the signal runs out. It's a fundamentally different search strategy, not just a faster version of the old one, and it's why RAMANwalk delivers a rough preview in under a minute and finer detail within a few minutes, well before a full scan would even be close to done.",
-                  "On a real contamination question, that difference is the whole point: a conclusive answer in about 5 minutes, against a traditional raster scan that's only 10% complete in the same time, with nothing found yet."
+                  "The random-walk algorithm finds a distinctive Raman signal, searches the surrounding area for more of it, and moves rapidly elsewhere once the signal runs out. It's a fundamentally different search strategy, not just a faster version of the old one, and it's why RAMANwalk delivers a rough preview in under a minute and finer detail within a few minutes, well before a full scan would even be close to done. On a real contamination question, that difference is the whole point: a conclusive answer in about 5 minutes, against a traditional raster scan that's only 10% complete in the same time, with nothing found yet."
                 ],
-                "metrics": [
-                  { "value": "5x faster", "label": "Than a conventional scanning Raman microscope" },
-                  { "value": "~5 minutes", "label": "To a conclusive answer, versus ~50 for a full scan" },
-                  { "value": "350 nm", "label": "Spatial resolution, X and Y" },
-                  { "value": "Under 1.5 cm⁻¹", "label": "Spectral resolution" }
-                ],
-                "utilityChecklist": [
-                  { "label": "A fast first read on an unknown sample", "value": "Rough detail in seconds to a minute" },
-                  { "label": "An answer to one specific question, like contamination", "value": "A targeted search reaches a conclusion in minutes, not the full scan time" },
-                  { "label": "A low-contrast sample with no visual cues", "value": "Located by Raman signal, not appearance" },
-                  { "label": "A full, publication-quality image eventually", "value": "Still available, at roughly the same total time as a conventional scan" }
-                ],
-                "disclaimer": "Tell our team the kind of question you're usually answering, quick screening or full imaging, and Inkarp will confirm how RAMANwalk fits your workflow."
+                "groups": [
+                  {
+                    "columns": [
+                      "What you need",
+                      "How random-walk imaging helps"
+                    ],
+                    "rows": [
+                      [
+                        "A fast first read on an unknown sample",
+                        "Rough detail in seconds to a minute"
+                      ],
+                      [
+                        "An answer to one specific question, like contamination",
+                        "A targeted search reaches a conclusion in minutes, not the full scan time"
+                      ],
+                      [
+                        "A low-contrast sample with no visual cues",
+                        "Located by Raman signal, not appearance"
+                      ],
+                      [
+                        "A full, publication-quality image eventually",
+                        "Still available, at roughly the same total time as a conventional scan"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team the kind of question you're usually answering, quick screening or full imaging, and Inkarp will confirm how RAMANwalk fits your workflow."
+                  },
+                  {
+                    "title": "Resolution, Optics and Calibration",
+                    "summary": "Matching objective and grating to your sample",
+                    "description": "Matching the right objective and grating to your sample is what actually determines the resolution you get in practice.",
+                    "columns": [
+                      "Point",
+                      "What to Check"
+                    ],
+                    "rows": [
+                      [
+                        "Fine sub-micron detail",
+                        "Higher magnification objectives, up to 100x"
+                      ],
+                      [
+                        "Broad area overview",
+                        "Lower magnification objectives, from 5x"
+                      ],
+                      [
+                        "Spectral resolution needs",
+                        "Grating selection, up to 3 available, under 1.5 cm⁻¹"
+                      ],
+                      [
+                        "Sample positioning",
+                        "30 × 30 × 35 mm motorized XYZ stage"
+                      ],
+                      [
+                        "Day-to-day calibration",
+                        "Handled automatically, against a standard lamp and sample"
+                      ]
+                    ],
+                    "note": "Send our team your typical sample size and the spectral detail your application needs, and Inkarp will confirm the objective and grating configuration."
+                  }
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Resolution, Optics and Calibration",
-                "title": "Matching objective and grating to your sample",
+                "title": "Configuration note",
                 "description": "Matching the right objective and grating to your sample is what actually determines the resolution you get in practice.",
                 "cards": [
-                  { "title": "Fine sub-micron detail", "description": "Higher magnification objectives, up to 100x." },
-                  { "title": "Broad area overview", "description": "Lower magnification objectives, from 5x." },
-                  { "title": "Spectral resolution needs", "description": "Grating selection, up to 3 available, under 1.5 cm⁻¹." },
-                  { "title": "Sample positioning", "description": "30 × 30 × 35 mm motorized XYZ stage." },
-                  { "title": "Day-to-day calibration", "description": "Handled automatically, against a standard lamp and sample." }
-                ]
+                  { "title": "Confirmed solution", "description": "Bruker RAMANwalk Raman Microscope, built on Nanophoton's random-walk technology" },
+                  { "title": "Spatial resolution", "description": "350 nm (X, Y), 1 µm (Z)" },
+                  { "title": "Spectral resolution", "description": "under 1.5 cm⁻¹, up to 3 gratings available" },
+                  { "title": "Objective lenses", "description": "5x, 10x, 20x, 50x, 100x" }
+                ],
+                "body": [
+                  "Full physical specifications (unit dimensions, weight, power requirements) are available on request from Inkarp"
+                ],
+                "disclaimer": "Tell our team what you're searching for in your sample, and Inkarp will confirm the objective and grating configuration that fits."
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation and Resources",
-                "title": "Documentation and resources",
+                "title": "Documentation and Resources",
                 "description": "Documentation for the RAMANwalk Raman Microscope is available from Inkarp on request.",
                 "cards": [
-                  { "title": "Technical Data Sheet, RAMANwalk", "description": "Available from Inkarp on request." },
-                  { "title": "Random-Walk Imaging Application Note", "description": "Available from Inkarp on request." },
-                  { "title": "Application Notes: Battery, Semiconductor, Pharma, Polymer", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "Technical Data Sheet, RAMANwalk", "description": "Available from Inkarp on request" },
+                  { "title": "Random-Walk Imaging Application Note", "description": "Available from Inkarp on request" },
+                  { "title": "Application Notes: Battery, Semiconductor, Pharma, Polymer", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet, application notes"
               }
             ],
             "cta": {
@@ -725,9 +1007,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "RAMANwalk searches for the answer instead of scanning for it, reaching a conclusive result in minutes on questions that take a conventional Raman microscope nearly an hour. Tell us what you're trying to find, and Inkarp will confirm the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "It doesn't scan everything. It walks straight to the answer.",
+            "heroParagraphs": [
+              "A conventional Raman microscope scans a sample the way you'd read a page: top to bottom, left to right, no matter what you're actually looking for.",
+              "RAMANwalk doesn't. It searches for the Raman signal itself, using a random-walk algorithm that follows chemical information rather than a fixed pattern. Find a signal, search around it, move on when it thins out.",
+              "The result isn't just faster, it's faster at the question that matters. Looking for a contaminant in a sample where the full scan takes 50 minutes, RAMANwalk reaches a conclusive answer in about 5. In that same 5 minutes, a traditional raster scan is only 10% through the sample, with nothing found yet.",
+              "Galvanic mirrors steer the beam instead of moving the stage, spatial resolution runs to 350 nm, and the whole system calibrates and aligns itself automatically."
+            ],
+            "statsIntro": "The quick stats of the RAMANwalk Raman Microscope cover its scan speed, resolution, and automation."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "random-walk-vs-raster-scan-race", "label": "Scan Race" },
@@ -739,6 +1032,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "random-walk-vs-raster-scan-race",
@@ -746,26 +1040,19 @@
               "title": "Watch the two methods search the same sample",
               "description": "Move the time slider and watch RAMANwalk's random-walk search progress against a conventional raster scan, based on the sugar-and-PVA contamination example.",
               "fields": [
-                { "key": "choices", "label": "Select a time point" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Time slider, 0 to 50 minutes",
-                  "choices": "5 minutes; 15 minutes; 30 minutes; 50 minutes",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Random-walk progress readout",
-                  "choices": "Conclusive answer reached, around 5 minutes",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Raster scan progress readout",
-                  "choices": "10% complete at 5 minutes; Still scanning at 30 minutes; Complete at 50 minutes",
-                  "cta": "Get Configuration Support"
+                  "hint": "Advances both search methods simultaneously",
+                  "choices": "5 minutes; 15 minutes; 30 minutes; 50 minutes"
                 }
               ],
-              "disclaimer": "This race recreates Bruker's own published comparison for illustration. Actual timing depends on your sample and target signal, confirmed by Inkarp."
+              "disclaimer": "",
+              "lead": "The random walk vs raster scan race recreates Bruker's own published comparison, showing how far each method gets over the same time.",
+              "ctaNote": "Shows RAMANwalk reaching a conclusive answer around 5 minutes. Shows the conventional method's percentage complete at the same time. States when each method actually finds the target signal.",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "objective-and-resolution-configurator",
@@ -773,140 +1060,152 @@
               "title": "What are you trying to resolve?",
               "description": "Select whether you need a broad overview or fine sub-micron detail, and see which objective and grating configuration fits.",
               "fields": [
-                { "key": "choices", "label": "Select your detail level" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Detail level selector",
-                  "choices": "Broad overview; Standard detail; Fine sub-micron detail",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Broad overview through fine sub-micron detail",
+                  "choices": "Broad overview; Standard detail; Fine sub-micron detail"
                 },
-                {
-                  "title": "Objective readout",
-                  "choices": "5x; 10x; 20x; 50x; 100x",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Grating readout",
-                  "choices": "Standard grating; High-resolution grating, under 1.5 cm⁻¹",
-                  "cta": "Talk to Product Expert"
-                }
+                { "title": "Sample size input", "hint": "Confirms fit within the 30 × 30 × 35 mm stage", "input": "text", "choices": "" }
               ],
-              "disclaimer": "This configurator is a starting point only. Final objective and grating configuration is confirmed by Inkarp against your sample size and spectral needs."
+              "disclaimer": "",
+              "lead": "The objective and resolution configurator helps match the right lens and grating to your sample.",
+              "ctaNote": "Recommends a lens from 5x to 100x. Suggests a grating for the spectral resolution required.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
-            "title": "Industries using the RAMANwalk Raman Microscope",
+            "title": "Industry Explorer",
             "description": "Industries using the RAMANwalk Raman Microscope include battery manufacturing, semiconductor research, and pharmaceutical development.",
             "industries": [
               {
                 "name": "Battery Manufacturing",
                 "icon": "cpu",
-                "useCase": "Electrode stability and binder effectiveness assessment",
-                "consideration": "Fast preview imaging for process optimization",
-                "bullets": ["Electrode stability assessment", "Binder effectiveness assessment", "Process optimization"],
-                "tags": ["Battery Manufacturing", "Electrode Research", "Process Optimization"],
-                "highlights": [
-                  { "value": "5x faster", "label": "Scan speed for process optimization", "fill": 87 },
-                  { "value": "Quick preview", "label": "Rapid imaging in seconds to minutes", "fill": 80 }
-                ]
+                "note": "Use Case: Electrode stability and binder effectiveness assessment",
+                "bullets": [
+                  "What to Consider: Fast preview imaging for process optimization"
+                ],
+                "tags": []
               },
               {
                 "name": "Semiconductor Research",
                 "icon": "cpu",
-                "useCase": "Defect detection in silicon materials",
-                "consideration": "Spatial resolution to 350 nm",
-                "bullets": ["Defect detection", "Fabrication optimization", "Silicon material analysis"],
-                "tags": ["Semiconductors", "Defect Detection", "Spatial Resolution"],
-                "highlights": [
-                  { "value": "350 nm", "label": "Spatial resolution for defect detection", "fill": 85 },
-                  { "value": "100x objective", "label": "Fine sub-micron detail", "fill": 78 }
-                ]
+                "note": "Use Case: Defect detection in silicon materials",
+                "bullets": [
+                  "What to Consider: Spatial resolution to 350 nm"
+                ],
+                "tags": []
               },
               {
                 "name": "Pharmaceutical Development",
                 "icon": "pill",
-                "useCase": "Formulation monitoring and ingredient distribution",
-                "consideration": "Targeted contamination checks in minutes",
-                "bullets": ["Formulation monitoring", "Ingredient distribution analysis", "Contamination checks"],
-                "tags": ["Pharma", "Formulation", "Contamination Detection"],
-                "highlights": [
-                  { "value": "~5 minutes", "label": "Conclusive contamination answer", "fill": 84 },
-                  { "value": "Random-walk search", "label": "Targeted signal detection", "fill": 76 }
-                ]
+                "note": "Use Case: Formulation monitoring and ingredient distribution",
+                "bullets": [
+                  "What to Consider: Targeted contamination checks in minutes"
+                ],
+                "tags": []
               },
               {
                 "name": "Polymer and Plastics",
                 "icon": "flask",
-                "useCase": "Cure degree and resin distribution analysis",
-                "consideration": "Objective range for varied sample sizes",
-                "bullets": ["Cure degree evaluation", "Resin distribution analysis", "Varied sample sizes"],
-                "tags": ["Polymers", "Plastics", "Resin Analysis"],
-                "highlights": [
-                  { "value": "5x to 100x", "label": "Objective lens range", "fill": 77 },
-                  { "value": "30x30x35 mm stage", "label": "Motorized XYZ positioning", "fill": 73 }
-                ]
+                "note": "Use Case: Cure degree and resin distribution analysis",
+                "bullets": [
+                  "What to Consider: Objective range for varied sample sizes"
+                ],
+                "tags": []
               },
               {
                 "name": "Food and Beverage QC",
                 "icon": "coffee",
-                "useCase": "Contaminant detection and composition analysis",
-                "consideration": "Fast targeted search for specific contaminants",
-                "bullets": ["Contaminant detection", "Composition analysis", "Fast targeted search"],
-                "tags": ["Food and Beverage", "QC", "Contaminant Detection"],
-                "highlights": [
-                  { "value": "~5 minutes", "label": "Targeted contaminant search time", "fill": 83 },
-                  { "value": "Low-contrast detection", "label": "Finds signal without visual cues", "fill": 76 }
-                ]
+                "note": "Use Case: Contaminant detection and composition analysis",
+                "bullets": [
+                  "What to Consider: Fast targeted search for specific contaminants"
+                ],
+                "tags": []
               },
               {
                 "name": "Nano-Carbon Research",
                 "icon": "cpu",
-                "useCase": "Graphene quality and carbon nanotube characterization",
-                "consideration": "Fine spatial resolution for nanomaterial features",
-                "bullets": ["Graphene quality characterization", "Carbon nanotube characterization", "Nanomaterial feature analysis"],
-                "tags": ["Nano-Carbon", "Graphene", "Nanomaterials"],
-                "highlights": [
-                  { "value": "350 nm", "label": "Spatial resolution for nanomaterial detail", "fill": 82 },
-                  { "value": "Up to 3 gratings", "label": "Spectral resolution flexibility", "fill": 74 }
-                ]
+                "note": "Use Case: Graphene quality and carbon nanotube characterization",
+                "bullets": [
+                  "What to Consider: Fine spatial resolution for nanomaterial features"
+                ],
+                "tags": []
               }
             ],
             "disclaimer": "Application notes are configuration guidance only. Confirm your sample types and workflow needs with Inkarp."
           },
+
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
-            "title": "Compare the RAMANwalk within the range",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare the RAMANwalk with the SENTERRA II in the same category.",
             "columns": [
-              { "label": "RAMANwalk", "highlight": true },
+              { "label": "RAMANwalk" },
               { "label": "SENTERRA II" }
             ],
             "rows": [
-              { "feature": "Core Technology", "values": ["Random-walk search algorithm", "SureCal continuous calibration"] },
-              { "feature": "Scan Speed", "values": ["More than 5x a conventional scan", "Available on request"] },
-              { "feature": "Spatial Resolution", "values": ["350 nm (X, Y)", "Available on request"] },
-              { "feature": "Best For", "values": ["Fast targeted answers and quick previews", "Continuous precision and AI-driven identification"] },
-              { "feature": "Choose when", "values": ["You need a fast answer to a specific question, not just a full image", "Your work depends on precision holding steady across long sessions"] }
+              {
+                "feature": "Core Technology",
+                "values": [
+                  "Random-walk search algorithm",
+                  "SureCal continuous calibration"
+                ]
+              },
+              {
+                "feature": "Scan Speed",
+                "values": [
+                  "More than 5x a conventional scan",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Spatial Resolution",
+                "values": [
+                  "350 nm (X, Y)",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Fast targeted answers and quick previews",
+                  "Continuous precision and AI-driven identification"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "You need a fast answer to a specific question, not just a full image",
+                  "Your work depends on precision holding steady across long sessions"
+                ]
+              }
             ],
-            "disclaimer": "RAMANwalk and SENTERRA II solve different problems: one gets to an answer faster by searching intelligently, the other holds precision automatically over time. Many labs use both for different stages of the same investigation."
+            "disclaimer": "RAMANwalk and SENTERRA II solve different problems: one gets to an answer faster by searching intelligently, the other holds precision automatically over time. Many labs use both for different stages of the same investigation.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
-            "title": "Inkarp support for the RAMANwalk across India",
+            "title": "Inkarp Service Near You",
             "description": "Inkarp supports the RAMANwalk Raman Microscope with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Shows random-walk imaging speed on your own sample types." },
-              { "title": "Objective and Grating Configuration", "description": "Confirms the right optics for your resolution needs." },
-              { "title": "Installation Support", "description": "Supports setup and first-run checks." },
-              { "title": "Operator Training", "description": "Helps the team use the random-walk search effectively." },
-              { "title": "Preventive Maintenance", "description": "Maintains calibration and alignment performance over time." },
-              { "title": "Spares and Accessories", "description": "Supplies objectives, gratings, and replacement parts." },
-              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC." }
+              { "title": "Product Demonstration", "description": "Shows random-walk imaging speed on your own sample types" },
+              { "title": "Objective and Grating Configuration", "description": "Confirms the right optics for your resolution needs" },
+              { "title": "Installation Support", "description": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "description": "Helps the team use the random-walk search effectively" },
+              { "title": "Preventive Maintenance", "description": "Maintains calibration and alignment performance over time" },
+              { "title": "Spares and Accessories", "description": "Supplies objectives, gratings, and replacement parts" },
+              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -926,16 +1225,21 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right optics", "body": "Objective lens and grating configuration are matched to your sample size and spectral resolution needs." },
-              { "title": "Match workflow to speed", "body": "Whether you need a fast targeted answer or a full-resolution image is confirmed against your typical workflow." },
-              { "title": "Understand the real advantage", "body": "Inkarp helps confirm whether random-walk imaging's speed advantage applies to your specific sample types." },
-              { "title": "Support after purchase", "body": "Inkarp provides installation, operator training, AMC, spares, and service support across India." }
+              { "title": "Product Demonstration", "body": "Shows random-walk imaging speed on your own sample types" },
+              { "title": "Objective and Grating Configuration", "body": "Confirms the right optics for your resolution needs" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Helps the team use the random-walk search effectively" },
+              { "title": "Preventive Maintenance", "body": "Maintains calibration and alignment performance over time" },
+              { "title": "Spares and Accessories", "body": "Supplies objectives, gratings, and replacement parts" },
+              { "title": "Service Support", "body": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "relatedProducts": [
             "SENTERRA II Raman Microscope",
             "BRAVO Handheld Raman Spectrometer"
           ],
+
           "popups": [
             {
               "id": "ramanwalk-config",
@@ -944,7 +1248,9 @@
               "ctaLabel": "Get Configuration Support",
               "href": "#random-walk-vs-raster-scan-race"
             }
-          ]
+          ],
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

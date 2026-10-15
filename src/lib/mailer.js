@@ -102,3 +102,26 @@ export async function sendUserAcknowledgement({ to, name, subject, intro }) {
     `,
   });
 }
+
+export async function sendCatalogueOtp({ to, name, otp, productName }) {
+  const from = process.env.MAIL_FROM || process.env.SMTP_USER;
+  const safeName = escapeHtml(name || "there");
+  const safeProduct = escapeHtml(productName || "the requested product");
+
+  await getTransporter().sendMail({
+    from,
+    to,
+    subject: "Your Inkarp catalogue verification code",
+    html: `
+      <div style="font-family:Arial,Helvetica,sans-serif;color:#222;line-height:1.6;max-width:560px;">
+        <h2 style="color:#BE0010;margin-bottom:8px;">Verify your catalogue download</h2>
+        <p>Dear ${safeName},</p>
+        <p>Use this one-time code to download the catalogue for <strong>${safeProduct}</strong>.</p>
+        <p style="font-size:28px;font-weight:700;letter-spacing:8px;margin:22px 0;color:#111;">${escapeHtml(otp)}</p>
+        <p>This code expires in 10 minutes. If you did not request it, you can safely ignore this email.</p>
+        <p>Regards,<br/>Team Inkarp</p>
+      </div>
+    `,
+    text: `Dear ${name || "there"},\n\nYour Inkarp verification code is ${otp}. It expires in 10 minutes.\n\nRequested catalogue: ${productName || "Product catalogue"}\n\nTeam Inkarp`,
+  });
+}

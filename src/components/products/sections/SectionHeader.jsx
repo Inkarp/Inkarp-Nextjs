@@ -1,6 +1,7 @@
 'use client';
 
-export default function SectionHeader({ eyebrow, title, description, dark = false }) {
+// `lead` is an optional one-line introduction shown between the eyebrow and the title.
+export default function SectionHeader({ eyebrow, lead, title, description, dark = false }) {
   return (
     <div className="relative mb-8 max-w-3xl">
       {eyebrow && (
@@ -8,6 +9,10 @@ export default function SectionHeader({ eyebrow, title, description, dark = fals
           <span className="inline-block h-2 w-2 bg-red" />
           {eyebrow}
         </p>
+      )}
+
+      {lead && (
+        <p className={`relative mt-2 text-sm leading-6 ${dark ? 'text-white/70' : 'text-ink-soft'}`}>{lead}</p>
       )}
 
       {title && (

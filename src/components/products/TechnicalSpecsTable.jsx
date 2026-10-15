@@ -33,10 +33,14 @@ function groupNoteAfter(specs, index) {
 }
 
 // `columns` lets content name the two header cells (defaults: Parameter / Details).
+// With more than two `columns`, rows give one value per column in `values`
+// (e.g. a Standard and a Compliant version side by side).
 export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
   if (!specs.length) {
     return null;
   }
+  const valueColumns = columns?.length > 2 ? columns.slice(1) : null;
+  const rowValues = (row) => (valueColumns && Array.isArray(row.values) ? row.values : null);
 
   return (
     <div className="overflow-hidden border border-line-light bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
@@ -75,7 +79,16 @@ export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
                 <span>{row.label}</span>
               </div>
               <div className="mt-2 break-words pl-6 text-sm font-medium leading-6 text-ink-soft">
-                {renderSpecValue(row.value)}
+                {rowValues(row) ? (
+                  <dl className="space-y-1.5">
+                    {rowValues(row).map((value, valueIndex) => (
+                      <div key={valueIndex}>
+                        <dt className="text-xs font-semibold text-ink">{valueColumns[valueIndex]}</dt>
+                        <dd>{renderSpecValue(value)}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : renderSpecValue(row.value)}
               </div>
             </div>
             {groupNoteAfter(specs, index) ? (
@@ -90,8 +103,12 @@ export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
           <caption className="sr-only">Technical specifications table</caption>
           <thead>
             <tr className="border-b border-line-light bg-parchment-alt text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">
-              <th className="w-[34%] px-5 py-4" scope="col">{columns?.[0] ?? "Parameter"}</th>
-              <th className="px-5 py-4" scope="col">{columns?.[1] ?? "Details"}</th>
+              <th className={`${valueColumns ? 'w-[28%]' : 'w-[34%]'} px-5 py-4`} scope="col">{columns?.[0] ?? "Parameter"}</th>
+              {valueColumns ? (
+                valueColumns.map((column) => <th className="px-5 py-4" key={column} scope="col">{column}</th>)
+              ) : (
+                <th className="px-5 py-4" scope="col">{columns?.[1] ?? "Details"}</th>
+              )}
             </tr>
           </thead>
           <tbody className="divide-y divide-line-light">
@@ -99,7 +116,7 @@ export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
               <Fragment key={`${row.label}-${index}`}>
               {row.groupTitle ? (
                 <tr className="bg-parchment-alt">
-                  <th className="px-5 py-3 text-left" colSpan={2} scope="colgroup">
+                  <th className="px-5 py-3 text-left" colSpan={1 + (valueColumns?.length ?? 1)} scope="colgroup">
                     <span className="block text-sm font-bold text-ink">{row.groupTitle}</span>
                     {row.groupIntro ? <span className="mt-1 block text-xs font-medium leading-5 text-ink-soft">{row.groupIntro}</span> : null}
                   </th>
@@ -114,13 +131,21 @@ export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
                     <span>{row.label}</span>
                   </span>
                 </th>
-                <td className="px-5 py-4 text-sm font-medium leading-6 text-ink-soft">
-                  {renderSpecValue(row.value)}
-                </td>
+                {rowValues(row) ? (
+                  rowValues(row).map((value, valueIndex) => (
+                    <td className="align-top px-5 py-4 text-sm font-medium leading-6 text-ink-soft" key={valueIndex}>
+                      {renderSpecValue(value)}
+                    </td>
+                  ))
+                ) : (
+                  <td className="px-5 py-4 text-sm font-medium leading-6 text-ink-soft" colSpan={valueColumns ? valueColumns.length : undefined}>
+                    {renderSpecValue(row.value)}
+                  </td>
+                )}
               </tr>
               {groupNoteAfter(specs, index) ? (
                 <tr className="bg-white">
-                  <td className="px-5 py-3 text-xs leading-5 text-ink-soft" colSpan={2}>{groupNoteAfter(specs, index)}</td>
+                  <td className="px-5 py-3 text-xs leading-5 text-ink-soft" colSpan={1 + (valueColumns?.length ?? 1)}>{groupNoteAfter(specs, index)}</td>
                 </tr>
               ) : null}
               </Fragment>

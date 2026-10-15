@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "nanosurf",
-    "principalName": "Nanosurf",
-    "countryOfOrigin": "Switzerland"
-  },
+  "principal": { "slug": "nanosurf", "principalName": "Nanosurf", "countryOfOrigin": "Switzerland" },
   "categories": [
     {
       "name": "Industry",
@@ -11,27 +7,39 @@
       "products": [
         {
           "name": "Industrial Solution",
+
           "slug": "industrial-solution",
+
           "principalImage": "/assets/images/PrincipalLogos/NanoSurf.svg",
+
           "imageAlt": "Nanosurf Industrial Solution - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/industrial-solution",
+
           "breadcrumbPath": "Home > Products > Industry > Industrial Solution",
+
           "h1": "Industrial Solution",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "That stage is real and it was built. Over 2 metres long, 1.45 metres wide, weighing more than 2 tonnes — one of the largest AFM stages ever constructed, on air bearings with drive belt and stepper motor positioning, carrying samples up to 500 kg while holding noise below 0.75 Å.",
 
           "features": [
-            "Fully Customizable: Every system configured to the specific application and performance requirement.",
-            "5 Degrees of Freedom: Sample stages designed to reach any position on any sample geometry.",
-            "Tiltable Scan Head: Concave and convex surfaces addressed directly rather than approximated.",
-            "Air-Bearing-Based Sample Translation: Precision motion under high load through air-bearing technology.",
-            "Closed Loop Motion Control: Position continuously controlled for reproducible results.",
-            "Large Selection of Operating Modes: Standard imaging, seven electrical modes, and mechanical characterization.",
-            "ISO 6 Cleanroom Compliant: Cleanroom-certified materials and components, assembled in a clean environment.",
-            "Safe and Reliable: PLC-governed operation executing safe torque off on triggered security conditions.",
-            "Automation: Factory-scale process integration extending to MES.",
-            "System Optimization by Simulation: Performance modelled against environmental factors before the system is delivered."
+            { "title": "Fully Customizable", "description": "Every system configured to the specific application and performance requirement." },
+            { "title": "5 Degrees of Freedom", "description": "Sample stages designed to reach any position on any sample geometry." },
+            { "title": "Tiltable Scan Head", "description": "Concave and convex surfaces addressed directly rather than approximated." },
+            { "title": "Air-Bearing-Based Sample Translation", "description": "Precision motion under high load through air-bearing technology." },
+            { "title": "Closed Loop Motion Control", "description": "Position continuously controlled for reproducible results." },
+            { "title": "Large Selection of Operating Modes", "description": "Standard imaging, seven electrical modes, and mechanical characterization." },
+            { "title": "ISO 6 Cleanroom Compliant", "description": "Cleanroom-certified materials and components, assembled in a clean environment." },
+            { "title": "Safe and Reliable", "description": "PLC-governed operation executing safe torque off on triggered security conditions." },
+            { "title": "Automation", "description": "Factory-scale process integration extending to MES." },
+            {
+              "title": "System Optimization by Simulation",
+              "description": "Performance modelled against environmental factors before the system is delivered."
+            }
           ],
 
           "technicalSpecs": [
@@ -45,63 +53,66 @@
             { "label": "Motion Control", "value": "Closed loop" },
             { "label": "Sample Translation", "value": "Air-bearing based" },
             { "label": "Cleanroom Compliance", "value": "ISO 6; cleanroom-certified materials and components, clean-environment assembly" },
-            { "label": "Safety System", "value": "Programmable logic controller with safe torque off on triggered conditions, including safe limited speed exceedance, emergency stop, and cantilever loss" },
+            {
+              "label": "Safety System",
+              "value": "Programmable logic controller with safe torque off on triggered conditions, including safe limited speed exceedance, emergency stop, and cantilever loss"
+            },
             { "label": "Automation", "value": "Measurement series through to full MES integration" },
             { "label": "Standard Imaging Modes", "value": "Static force, lateral force, dynamic force (tapping), phase imaging" },
             { "label": "Electrical Modes", "value": "C-AFM, SSRM, PFM, EFM, KPFM, SMM, MFM" },
             { "label": "Mechanical Modes", "value": "Force spectroscopy, force modulation, force mapping" },
             { "label": "Control Software", "value": "Nanosurf C3000/CX with scripting interface" },
-            { "label": "System Verification", "value": "Performance simulation against acoustic noise, temperature variation, and floor vibration prior to delivery" },
             {
-              "label": "Documented Implementation — Extra-Large XYZ Stage",
-              "value": [
-                "Maximum Traverse Path XYZ: 550 / 1555 / 50 mm",
-                "Resolution XYZ: σ = 1 µm",
-                "Repositioning Accuracy: ± 5 µm",
-                "Absolute Accuracy: ± 50 µm",
-                "Maximum Velocity: 30 mm/s",
-                "Sample Platform Size: 785 × 1950 mm",
-                "Sample Size: Max. 540 × 1500 × 210 mm",
-                "Sample Weight: Max. 500 kg",
-                "Stage Size: 1450 × 2200 × 1350 mm",
-                "Stage Weight: 2250 kg",
-                "Stage Technology: Air bearings, drive belt, stepper motor",
-                "Noise Level: < 0.75 Å (NaniteAFM 110 µm scan head, quiet environment)"
-              ]
+              "label": "System Verification",
+              "value": "Performance simulation against acoustic noise, temperature variation, and floor vibration prior to delivery"
             },
             {
-              "label": "Documented Implementation — XYZΦ Stage",
-              "value": [
-                "Maximum Traverse Path XYZΦ: 230 / 485 / 20 mm / 360°",
-                "Resolution XYZ / Φ: 0.1 µm / 0.0001°",
-                "Repositioning Accuracy XYZ / Φ: ± 1 µm / 0.001°",
-                "Absolute Accuracy: ± 15 µm",
-                "Maximum Velocity XY / Z / Φ: 30 mm/s / 3 mm/s / 7°/s",
-                "Sample Platform Size: ⌀500 mm",
-                "Sample Size: ⌀500 mm × 80 mm",
-                "Sample Weight: Max. 20 kg",
-                "Stage Size: 1350 × 950 × 1360 mm",
-                "Stage Weight: 2250 kg",
-                "Stage Technology: Linear motors, spindle-stepper motor, harmonic drive, air bearings",
-                "Noise Level: < 0.40 Å (Flex-Mount scan head, quiet environment)"
-              ]
+              "groupTitle": "Documented Implementation — Motorized XYZ Translation Stage for Extra Large Samples",
+              "label": "Maximum Traverse Path XYZ",
+              "value": "550 / 1555 / 50 mm"
             },
-            { "label": "Specification Note", "value": "Both are documented example implementations, not a product range. Systems are engineered to the application. Note that Nanosurf's Flex-Mount page states 1300 kg stage weight and 0.5 µm step size for the XYZΦ configuration against 2250 kg and 0.1 µm resolution here — worth confirming at specification. The noise figures are consistent: 0.40 Å equals 40 pm." }
+            { "label": "Resolution XYZ", "value": "σ = 1 µm" },
+            { "label": "Repositioning Accuracy", "value": "± 5 µm" },
+            { "label": "Absolute Accuracy", "value": "± 50 µm" },
+            { "label": "Maximum Velocity", "value": "30 mm/s" },
+            { "label": "Sample Platform Size", "value": "785 × 1950 mm" },
+            { "label": "Sample Size", "value": "Max. 540 × 1500 × 210 mm" },
+            { "label": "Sample Weight", "value": "Max. 500 kg" },
+            { "label": "Stage Size", "value": "1450 × 2200 × 1350 mm" },
+            { "label": "Stage Weight", "value": "2250 kg" },
+            { "label": "Stage Technology", "value": "Air bearings, drive belt, stepper motor" },
+            { "label": "Noise Level", "value": "< 0.75 Å (NaniteAFM 110 µm scan head, quiet environment)" },
+            {
+              "groupTitle": "Documented Implementation — Motorized XYZΦ Translation Stage",
+              "label": "Maximum Traverse Path XYZΦ",
+              "value": "230 / 485 / 20 mm / 360°"
+            },
+            { "label": "Resolution XYZ / Φ", "value": "0.1 µm / 0.0001°" },
+            { "label": "Repositioning Accuracy XYZ / Φ", "value": "± 1 µm / 0.001°" },
+            { "label": "Absolute Accuracy", "value": "± 15 µm" },
+            { "label": "Maximum Velocity XY / Z / Φ", "value": "30 mm/s / 3 mm/s / 7°/s" },
+            { "label": "Sample Platform Size", "value": "⌀500 mm" },
+            { "label": "Sample Size", "value": "⌀500 mm × 80 mm" },
+            { "label": "Sample Weight", "value": "Max. 20 kg" },
+            { "label": "Stage Size", "value": "1350 × 950 × 1360 mm" },
+            { "label": "Stage Weight", "value": "2250 kg" },
+            { "label": "Stage Technology", "value": "Linear motors, spindle-stepper motor, harmonic drive, air bearings" },
+            { "label": "Noise Level", "value": "< 0.40 Å (Flex-Mount scan head, quiet environment)" }
           ],
 
           "applications": [
-            "Semiconductor Production Metrology: ISO 6 cleanroom compliance with automation and MES integration",
-            "Highly Polished Glass Characterization: Sub-nanometre surface characterization on concave and convex glass",
-            "Large Optics Metrology: Custom stages carrying samples up to 500 kg and 1500 mm in length",
-            "Production-Scale Quality Control: Automation beyond measurement series with closed loop motion control",
-            "Ultra-Flat Surface Roughness: Noise levels below 0.40 Å with the Flex-Mount scan head",
-            "Curved and Non-Planar Surfaces: Tiltable scan head with up to 5 axes of stage freedom",
-            "Critical Dimension Measurement: Mountable FlexAFM and DriveAFM heads for roughness and CD determination",
-            "Heavy Component Inspection: Tip-scanner technology preserving performance on heavy samples",
-            "Electrical Property Metrology: Seven electrical modes including SSRM, SMM, and KPFM",
-            "Industrial R&D: Bespoke systems for research requirements beyond standard instrumentation",
-            "Magnetoresistive Sensor Research: Supported by published work integrating MR sensors with AFM cantilevers",
-            "Inline Process Integration: MES-level automation for factory-scale deployment"
+            { "title": "Semiconductor Production Metrology", "description": "ISO 6 cleanroom compliance with automation and MES integration" },
+            { "title": "Highly Polished Glass Characterization", "description": "Sub-nanometre surface characterization on concave and convex glass" },
+            { "title": "Large Optics Metrology", "description": "Custom stages carrying samples up to 500 kg and 1500 mm in length" },
+            { "title": "Production-Scale Quality Control", "description": "Automation beyond measurement series with closed loop motion control" },
+            { "title": "Ultra-Flat Surface Roughness", "description": "Noise levels below 0.40 Å with the Flex-Mount scan head" },
+            { "title": "Curved and Non-Planar Surfaces", "description": "Tiltable scan head with up to 5 axes of stage freedom" },
+            { "title": "Critical Dimension Measurement", "description": "Mountable FlexAFM and DriveAFM heads for roughness and CD determination" },
+            { "title": "Heavy Component Inspection", "description": "Tip-scanner technology preserving performance on heavy samples" },
+            { "title": "Electrical Property Metrology", "description": "Seven electrical modes including SSRM, SMM, and KPFM" },
+            { "title": "Industrial R&D", "description": "Bespoke systems for research requirements beyond standard instrumentation" },
+            { "title": "Magnetoresistive Sensor Research", "description": "Supported by published work integrating MR sensors with AFM cantilevers" },
+            { "title": "Inline Process Integration", "description": "MES-level automation for factory-scale deployment" }
           ],
 
           "inPageNav": [
@@ -120,11 +131,29 @@
 
           "configWizard": {
             "title": "What has to be measured, and how big is it?",
-            "description": "Select the surface geometry, access requirement, and rotation need, and see the stage capability the application requires.",
+            "description": "Enter the sample characteristics, and see the stage capability the application requires.",
             "steps": [
               {
+                "key": "sampleDimensions",
+                "label": "Sample dimensions",
+                "question": "Sample dimensions",
+                "hint": "Length, width, and height or diameter",
+                "input": "text",
+                "options": []
+              },
+              {
+                "key": "sampleWeight",
+                "label": "Sample weight",
+                "question": "Sample weight",
+                "hint": "Kilograms, including fixturing",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "surfaceGeometry",
-                "question": "What's the sample's surface geometry?",
+                "label": "Surface geometry",
+                "question": "Surface geometry",
+                "hint": "Flat, concave, convex, or complex",
                 "options": [
                   { "val": "flat", "label": "Flat" },
                   { "val": "concave", "label": "Concave" },
@@ -134,7 +163,9 @@
               },
               {
                 "key": "accessRequirement",
-                "question": "What access does the measurement need?",
+                "label": "Access requirement",
+                "question": "Access requirement",
+                "hint": "Single site, multiple positions, or full-surface coverage",
                 "options": [
                   { "val": "single-site", "label": "Single site" },
                   { "val": "multiple-positions", "label": "Multiple positions" },
@@ -143,17 +174,19 @@
               },
               {
                 "key": "rotationNeeded",
-                "question": "Is rotational access to the sample needed?",
+                "label": "Rotation needed",
+                "question": "Rotation needed",
+                "hint": "Not required, or rotational access to the sample",
                 "options": [
                   { "val": "not-required", "label": "Not required" },
-                  { "val": "rotational-access", "label": "Rotational access required" }
+                  { "val": "rotational-access-to-the-sample", "label": "Rotational access to the sample" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share the sample dimensions and weight, and this routes to an engineering scoping conversation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to an engineering scoping conversation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Sample and Stage Scoping Tool",
+            "emptyState": "Maps the requirement against the documented XYZ and XYZΦ implementations and flags bespoke scope",
+            "disclaimer": ""
           },
 
           "suitability": {
@@ -163,6 +196,7 @@
               {
                 "key": "installationEnvironment",
                 "label": "Installation environment",
+                "hint": "Laboratory, production floor, or cleanroom",
                 "options": [
                   { "val": "laboratory", "label": "Laboratory" },
                   { "val": "production-floor", "label": "Production floor" },
@@ -172,6 +206,7 @@
               {
                 "key": "cleanroomClassification",
                 "label": "Cleanroom classification",
+                "hint": "Not required, or ISO class specified",
                 "options": [
                   { "val": "not-required", "label": "Not required" },
                   { "val": "iso-class-specified", "label": "ISO class specified" }
@@ -180,6 +215,7 @@
               {
                 "key": "environmentalConditions",
                 "label": "Environmental conditions",
+                "hint": "Quiet, moderate vibration, or high acoustic and floor noise",
                 "options": [
                   { "val": "quiet", "label": "Quiet" },
                   { "val": "moderate-vibration", "label": "Moderate vibration" },
@@ -189,6 +225,7 @@
               {
                 "key": "safetyRequirement",
                 "label": "Safety requirement",
+                "hint": "Standard, or PLC-governed with defined trigger conditions",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "plc-governed", "label": "PLC-governed with defined trigger conditions" }
@@ -197,9 +234,10 @@
               {
                 "key": "noiseTarget",
                 "label": "Noise target",
+                "hint": "Standard AFM performance, or sub-ångström requirement",
                 "options": [
                   { "val": "standard-afm", "label": "Standard AFM performance" },
-                  { "val": "sub-angstrom", "label": "Sub-Ångström requirement" }
+                  { "val": "sub-angstrom", "label": "Sub-ångström requirement" }
                 ]
               }
             ],
@@ -208,21 +246,31 @@
                 "condition": { "cleanroomClassification": "iso-class-specified" },
                 "title": "ISO Cleanroom Compliance Fits Your Environment",
                 "body": "Systems are designed to ISO 6 cleanroom compliance, with cleanroom-certified materials and components, and assembly carried out in a clean environment.",
-                "tags": ["ISO 6 Cleanroom Compliant"]
+                "tags": [
+                  "ISO 6 Cleanroom Compliant"
+                ]
               },
               {
                 "condition": { "noiseTarget": "sub-angstrom" },
                 "title": "Sub-Ångström Performance Is Documented",
                 "body": "Documented implementations hold noise below 0.75 Å on a 500 kg-capable stage and below 0.40 Å on the XYZΦ stage, both verified in advance through system modelling.",
-                "tags": ["Sub-Ångström Noise Documented"]
+                "tags": [
+                  "Sub-Ångström Noise Documented"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Right Compliance Scope With Inkarp",
                 "body": "Share the installation environment, cleanroom classification, and safety requirements, and Inkarp will confirm the compliance and optimization scope for the design.",
-                "tags": ["ISO 6 / PLC Safety / MES"]
+                "tags": [
+                  "ISO 6 / PLC Safety / MES"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Environment and Compliance Checker",
+            "ctaNote": "Confirms cleanroom, safety, and system optimization requirements for the design. Routes to an engineering scoping conversation.",
+            "disclaimer": "",
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "planners": [
@@ -235,18 +283,36 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "How deep does the automation need to go?", "choices": "Manual measurement; Automated series; Full process integration" },
-                { "title": "What factory systems are involved?", "choices": "Standalone; Connected to line control; MES integration required" },
-                { "title": "What's the available development capability?", "choices": "In-house scripting available; Limited; Nanosurf engineering needed" },
-                { "title": "What's the throughput requirement?", "choices": "Occasional QC; Routine sampling; Continuous inline measurement" }
+                {
+                  "title": "Automation depth",
+                  "hint": "Manual measurement, automated series, or full process integration",
+                  "choices": "Manual measurement; Automated series; Full process integration"
+                },
+                {
+                  "title": "Factory systems",
+                  "hint": "Standalone, connected to line control, or MES integration required",
+                  "choices": "Standalone; Connected to line control; MES integration required"
+                },
+                {
+                  "title": "Development capability",
+                  "hint": "In-house scripting available, limited, or Nanosurf engineering needed",
+                  "choices": "In-house scripting available; Limited; Nanosurf engineering needed"
+                },
+                {
+                  "title": "Throughput requirement",
+                  "hint": "Occasional QC, routine sampling, or continuous inline measurement",
+                  "choices": "Occasional QC; Routine sampling; Continuous inline measurement"
+                }
               ],
-              "disclaimer": "Routes to an automation scoping conversation."
+              "disclaimer": "",
+              "ctaNote": "Confirms scripting scope and whether Nanosurf software engineering is recommended. Routes to an automation scoping conversation.",
+              "ctaLabel": "Get Configuration Support"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Industrial Solution vs. Flex-Mount AFM vs. NaniteAFM",
+            "title": "Method Comparison",
             "description": "Industrial Solution method comparison: bespoke engineered systems against standard integration products.",
             "columns": [
               { "label": "Industrial Solution" },
@@ -254,38 +320,207 @@
               { "label": "NaniteAFM" }
             ],
             "rows": [
-              { "feature": "Nature of Offering", "values": ["Bespoke engineered system", "Standard integratable scan head", "Standard integratable scan head"] },
-              { "feature": "Scan Head", "values": ["Mountable FlexAFM or DriveAFM", "FlexAFM-based", "Compact integratable head"] },
-              { "feature": "Stage", "values": ["Custom-designed, up to 5 axes", "Custom or existing stage systems", "Custom or existing stage systems"] },
-              { "feature": "Documented Sample Weight", "values": ["Up to 500 kg", "Up to 20 kg", "Determined by stage"] },
-              { "feature": "Documented Platform Size", "values": ["785 × 1950 mm", "⌀500 mm", "Determined by stage"] },
-              { "feature": "Degrees of Freedom", "values": ["Up to 5", "Determined by stage", "Determined by stage"] },
-              { "feature": "Cleanroom Compliance", "values": ["ISO 6, certified materials and assembly", "Not specified", "Not specified"] },
-              { "feature": "PLC Safety System", "values": ["Available with safe torque off", "Not specified", "Not specified"] },
-              { "feature": "MES Integration", "values": ["Supported", "Scripting available", "Scripting available"] },
-              { "feature": "Pre-Delivery Simulation", "values": ["System modelling against environmental factors", "Not specified", "Not specified"] },
-              { "feature": "Electrical Modes", "values": ["Seven, including SSRM, SMM, KPFM", "Seven, including SSRM, SMM, KPFM", "Three: C-AFM, EFM, MFM"] },
-              { "feature": "Engagement Model", "values": ["Iterative engineering project", "Product purchase with configuration", "Product purchase with configuration"] },
-              { "feature": "Best For", "values": ["Production-scale metrology with specific compliance and scale needs", "Large-sample research and industrial measurement", "Embedding into constrained spaces"] },
-              { "feature": "Choose when", "values": ["Nothing standard meets the requirement", "Flex-Mount plus a stage covers the need", "Space is the primary constraint"] }
+              {
+                "feature": "Nature of Offering",
+                "values": [
+                  "Bespoke engineered system",
+                  "Standard integratable scan head",
+                  "Standard integratable scan head"
+                ]
+              },
+              {
+                "feature": "Scan Head",
+                "values": [
+                  "Mountable FlexAFM or DriveAFM",
+                  "FlexAFM-based",
+                  "Compact integratable head"
+                ]
+              },
+              {
+                "feature": "Stage",
+                "values": [
+                  "Custom-designed, up to 5 axes",
+                  "Custom or existing stage systems",
+                  "Custom or existing stage systems"
+                ]
+              },
+              {
+                "feature": "Documented Sample Weight",
+                "values": [
+                  "Up to 500 kg",
+                  "Up to 20 kg",
+                  "Determined by stage"
+                ]
+              },
+              {
+                "feature": "Documented Platform Size",
+                "values": [
+                  "785 × 1950 mm",
+                  "⌀500 mm",
+                  "Determined by stage"
+                ]
+              },
+              {
+                "feature": "Degrees of Freedom",
+                "values": [
+                  "Up to 5",
+                  "Determined by stage",
+                  "Determined by stage"
+                ]
+              },
+              {
+                "feature": "Cleanroom Compliance",
+                "values": [
+                  "ISO 6, certified materials and assembly",
+                  "Not specified",
+                  "Not specified"
+                ]
+              },
+              {
+                "feature": "PLC Safety System",
+                "values": [
+                  "Available with safe torque off",
+                  "Not specified",
+                  "Not specified"
+                ]
+              },
+              {
+                "feature": "MES Integration",
+                "values": [
+                  "Supported",
+                  "Scripting available",
+                  "Scripting available"
+                ]
+              },
+              {
+                "feature": "Pre-Delivery Simulation",
+                "values": [
+                  "System modelling against environmental factors",
+                  "Not specified",
+                  "Not specified"
+                ]
+              },
+              {
+                "feature": "Electrical Modes",
+                "values": [
+                  "Seven, including SSRM, SMM, KPFM",
+                  "Seven, including SSRM, SMM, KPFM",
+                  "Three: C-AFM, EFM, MFM"
+                ]
+              },
+              {
+                "feature": "Engagement Model",
+                "values": [
+                  "Iterative engineering project",
+                  "Product purchase with configuration",
+                  "Product purchase with configuration"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Production-scale metrology with specific compliance and scale needs",
+                  "Large-sample research and industrial measurement",
+                  "Embedding into constrained spaces"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Nothing standard meets the requirement",
+                  "Flex-Mount plus a stage covers the need",
+                  "Space is the primary constraint"
+                ]
+              }
             ],
-            "disclaimer": "The distinction is engagement model as much as capability. Flex-Mount and NaniteAFM are products configured to an application. Industrial Solutions is an engineering project — Nanosurf's team designing stage, mount, geometry, compliance, and automation to a requirement that no standard configuration meets. If Flex-Mount on a catalogue stage covers the need, that's the simpler route; the bespoke path exists for when it doesn't."
+            "disclaimer": "The distinction is engagement model as much as capability. Flex-Mount and NaniteAFM are products configured to an application. Industrial Solutions is an engineering project — Nanosurf's team designing stage, mount, geometry, compliance, and automation to a requirement that no standard configuration meets. If Flex-Mount on a catalogue stage covers the need, that's the simpler route; the bespoke path exists for when it doesn't.",
+            "featureLabel": "Parameter"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industrial Solution industries: semiconductor, precision optics, large-scale manufacturing, and production metrology.",
             "industries": [
-              { "name": "Semiconductor Manufacturing", "useCase": "Cleanroom-compliant automated metrology in production", "consideration": "ISO 6 compliance with certified materials and clean-environment assembly" },
-              { "name": "Precision Optics Manufacturing", "useCase": "Sub-nanometre characterization of polished concave and convex glass", "consideration": "Tiltable scan head with up to 5 axes of stage freedom" },
-              { "name": "Large Optics Production", "useCase": "Metrology on optical components at metre scale", "consideration": "Documented platform to 785 × 1950 mm and 500 kg" },
-              { "name": "Production-Scale Quality Control", "useCase": "Routine nanoscale QC integrated into manufacturing", "consideration": "Automation extending to MES integration" },
-              { "name": "Ultra-Precision Metrology", "useCase": "Roughness measurement on the flattest available surfaces", "consideration": "Noise below 0.40 Å with the Flex-Mount scan head" },
-              { "name": "Heavy Industry Component Inspection", "useCase": "Large, heavy parts measured without sectioning", "consideration": "Air-bearing translation with closed loop motion control" },
-              { "name": "Display and Glass Manufacturing", "useCase": "Large-format substrate characterization", "consideration": "Extra-large stage configurations for panel-scale samples" },
-              { "name": "Industrial R&D Laboratories", "useCase": "Measurement requirements no standard instrument meets", "consideration": "Iterative bespoke engineering with Nanosurf's development team" },
-              { "name": "Sensor and MEMS Development", "useCase": "Specialized cantilever and sensor integration work", "consideration": "Supported by published magnetoresistive sensor integration research" },
-              { "name": "Contract Manufacturing", "useCase": "Varied client metrology requirements at production scale", "consideration": "Fully customizable system design with automation options" }
+              {
+                "name": "Semiconductor Manufacturing",
+                "note": "Use Case: Cleanroom-compliant automated metrology in production",
+                "bullets": [
+                  "What to Consider: ISO 6 compliance with certified materials and clean-environment assembly"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Precision Optics Manufacturing",
+                "note": "Use Case: Sub-nanometre characterization of polished concave and convex glass",
+                "bullets": [
+                  "What to Consider: Tiltable scan head with up to 5 axes of stage freedom"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Large Optics Production",
+                "note": "Use Case: Metrology on optical components at metre scale",
+                "bullets": [
+                  "What to Consider: Documented platform to 785 × 1950 mm and 500 kg"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Production-Scale Quality Control",
+                "note": "Use Case: Routine nanoscale QC integrated into manufacturing",
+                "bullets": [
+                  "What to Consider: Automation extending to MES integration"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Ultra-Precision Metrology",
+                "note": "Use Case: Roughness measurement on the flattest available surfaces",
+                "bullets": [
+                  "What to Consider: Noise below 0.40 Å with the Flex-Mount scan head"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Heavy Industry Component Inspection",
+                "note": "Use Case: Large, heavy parts measured without sectioning",
+                "bullets": [
+                  "What to Consider: Air-bearing translation with closed loop motion control"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Display and Glass Manufacturing",
+                "note": "Use Case: Large-format substrate characterization",
+                "bullets": [
+                  "What to Consider: Extra-large stage configurations for panel-scale samples"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Industrial R&D Laboratories",
+                "note": "Use Case: Measurement requirements no standard instrument meets",
+                "bullets": [
+                  "What to Consider: Iterative bespoke engineering with Nanosurf's development team"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Sensor and MEMS Development",
+                "note": "Use Case: Specialized cantilever and sensor integration work",
+                "bullets": [
+                  "What to Consider: Supported by published magnetoresistive sensor integration research"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Manufacturing",
+                "note": "Use Case: Varied client metrology requirements at production scale",
+                "bullets": [
+                  "What to Consider: Fully customizable system design with automation options"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -303,26 +538,75 @@
               { "title": "Preventive Maintenance", "description": "Maintains scan head, stage motion, and control system performance" },
               { "title": "Spares and Consumables", "description": "Supplies cantilevers, chip mounts, and system-specific replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "Industrial Solution service in India: scoping, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is a Nanosurf Industrial Solution?", "answer": "It's a bespoke AFM system engineered specifically to an application — Nanosurf's engineering and development team designs the sample stage, scan head mount, and system geometry around the measurement requirement rather than supplying a catalogue product." },
-            { "question": "How large and heavy a sample can be measured?", "answer": "One documented implementation carries samples up to 500 kg, measuring up to 540 × 1500 × 210 mm on a 785 × 1950 mm platform. Nanosurf states virtually no restrictions on sample weight, size, and geometry." },
-            { "question": "What noise levels are achievable?", "answer": "Below 0.75 Å with the NaniteAFM 110 µm scan head on the extra-large stage, and below 0.40 Å with the Flex-Mount scan head on the XYZΦ stage, both in a quiet environment." },
-            { "question": "Which scan heads are used?", "answer": "Mountable versions of the FlexAFM and DriveAFM research-grade scan heads, with tip-scanner technology preserving scanner performance on heavy samples." },
-            { "question": "How many axes of movement are available?", "answer": "Up to 5 degrees of freedom, with the stage designed to reach any position on the sample." },
-            { "question": "Can curved surfaces be measured?", "answer": "Yes. A tiltable scan head combined with multi-axis stage freedom addresses highly polished concave and convex surfaces." },
-            { "question": "Are these systems cleanroom compatible?", "answer": "Yes. Systems are designed to ISO 6 cleanroom compliance, with all materials and components cleanroom certified and assembly carried out in a clean environment." },
-            { "question": "What safety systems are included?", "answer": "A programmable logic controller ensures safe operation, executing safe torque off if safe limited speed is exceeded, the emergency stop is pressed, or an AFM cantilever is lost." },
-            { "question": "Can the system integrate into factory processes?", "answer": "Yes. Automation solutions go beyond simple measurement series to factory-scale process integration, including MES." },
-            { "question": "How is performance guaranteed before delivery?", "answer": "Detailed system models and performance simulations including environmental factors — acoustic noise, temperature variation, and floor vibration — verify that requirements are met by the final system." },
-            { "question": "Which AFM modes are available?", "answer": "Static, lateral, dynamic, and phase imaging; C-AFM, SSRM, PFM, EFM, KPFM, SMM, and MFM for electrical properties; force spectroscopy, modulation, and mapping for mechanical properties." },
-            { "question": "What software runs these systems?", "answer": "Nanosurf C3000/CX control software, with a scripting interface handling everything from small measurement automation series to full-scale MES integration." },
-            { "question": "How does the engagement process work?", "answer": "It begins with an exploratory meeting to discuss the application. Nanosurf's engineering and development team then works iteratively with your team to design the system around the requirement." },
-            { "question": "How is this different from buying a Flex-Mount or NaniteAFM?", "answer": "Those are products configured to an application. An Industrial Solution is an engineering project — stage, mount, geometry, cleanroom compliance, safety systems, and automation all designed to a requirement no standard configuration meets." },
-            { "question": "What is the price of a Nanosurf Industrial Solution in India?", "answer": "Pricing follows the engineering scope. Get in touch and Inkarp will arrange the application scoping conversation that defines it." },
-            { "question": "Who is the authorized distributor of Nanosurf Industrial Solutions in India?", "answer": "Inkarp is the authorized distributor and service provider for Nanosurf in India, providing application scoping, engineering coordination, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is a Nanosurf Industrial Solution?",
+              "answer": "It's a bespoke AFM system engineered specifically to an application — Nanosurf's engineering and development team designs the sample stage, scan head mount, and system geometry around the measurement requirement rather than supplying a catalogue product."
+            },
+            {
+              "question": "How large and heavy a sample can be measured?",
+              "answer": "One documented implementation carries samples up to 500 kg, measuring up to 540 × 1500 × 210 mm on a 785 × 1950 mm platform. Nanosurf states virtually no restrictions on sample weight, size, and geometry."
+            },
+            {
+              "question": "What noise levels are achievable?",
+              "answer": "Below 0.75 Å with the NaniteAFM 110 µm scan head on the extra-large stage, and below 0.40 Å with the Flex-Mount scan head on the XYZΦ stage, both in a quiet environment."
+            },
+            {
+              "question": "Which scan heads are used?",
+              "answer": "Mountable versions of the FlexAFM and DriveAFM research-grade scan heads, with tip-scanner technology preserving scanner performance on heavy samples."
+            },
+            {
+              "question": "How many axes of movement are available?",
+              "answer": "Up to 5 degrees of freedom, with the stage designed to reach any position on the sample."
+            },
+            {
+              "question": "Can curved surfaces be measured?",
+              "answer": "Yes. A tiltable scan head combined with multi-axis stage freedom addresses highly polished concave and convex surfaces."
+            },
+            {
+              "question": "Are these systems cleanroom compatible?",
+              "answer": "Yes. Systems are designed to ISO 6 cleanroom compliance, with all materials and components cleanroom certified and assembly carried out in a clean environment."
+            },
+            {
+              "question": "What safety systems are included?",
+              "answer": "A programmable logic controller ensures safe operation, executing safe torque off if safe limited speed is exceeded, the emergency stop is pressed, or an AFM cantilever is lost."
+            },
+            {
+              "question": "Can the system integrate into factory processes?",
+              "answer": "Yes. Automation solutions go beyond simple measurement series to factory-scale process integration, including MES."
+            },
+            {
+              "question": "How is performance guaranteed before delivery?",
+              "answer": "Detailed system models and performance simulations including environmental factors — acoustic noise, temperature variation, and floor vibration — verify that requirements are met by the final system."
+            },
+            {
+              "question": "Which AFM modes are available?",
+              "answer": "Static, lateral, dynamic, and phase imaging; C-AFM, SSRM, PFM, EFM, KPFM, SMM, and MFM for electrical properties; force spectroscopy, modulation, and mapping for mechanical properties."
+            },
+            {
+              "question": "What software runs these systems?",
+              "answer": "Nanosurf C3000/CX control software, with a scripting interface handling everything from small measurement automation series to full-scale MES integration."
+            },
+            {
+              "question": "How does the engagement process work?",
+              "answer": "It begins with an exploratory meeting to discuss the application. Nanosurf's engineering and development team then works iteratively with your team to design the system around the requirement."
+            },
+            {
+              "question": "How is this different from buying a Flex-Mount or NaniteAFM?",
+              "answer": "Those are products configured to an application. An Industrial Solution is an engineering project — stage, mount, geometry, cleanroom compliance, safety systems, and automation all designed to a requirement no standard configuration meets."
+            },
+            {
+              "question": "What is the price of a Nanosurf Industrial Solution in India?",
+              "answer": "Pricing follows the engineering scope. Get in touch and Inkarp will arrange the application scoping conversation that defines it."
+            },
+            {
+              "question": "Who is the authorized distributor of Nanosurf Industrial Solutions in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for Nanosurf in India, providing application scoping, engineering coordination, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -343,9 +627,17 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right engineering scoping engagement", "body": "Share the sample dimensions, weight, and geometry, the measurement requirement, and the environment the system must operate in, and the scoping engagement with Nanosurf's engineering team gets arranged from there." },
-              { "title": "Installation and first-run support", "body": "Coordinates delivery, installation, and commissioning of the engineered system." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Application Scoping", "body": "Gathers the sample, measurement, and environment requirements for the engineering engagement" },
+              { "title": "Engineering Coordination", "body": "Arranges and supports the iterative design process with Nanosurf's development team" },
+              { "title": "Site Assessment", "body": "Reviews floor loading, vibration, acoustic conditions, and cleanroom classification" },
+              { "title": "Compliance Review", "body": "Confirms cleanroom and safety requirements against the intended installation" },
+              { "title": "Installation Support", "body": "Coordinates delivery, installation, and commissioning of the engineered system" },
+              { "title": "Performance Verification", "body": "Supports acceptance testing against the specified requirements" },
+              { "title": "Operator Training", "body": "Builds confidence with C3000/CX software and system-specific operation" },
+              { "title": "Automation Support", "body": "Assists connecting the system into factory control and MES environments" },
+              { "title": "Preventive Maintenance", "body": "Maintains scan head, stage motion, and control system performance" },
+              { "title": "Spares and Consumables", "body": "Supplies cantilevers, chip mounts, and system-specific replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -371,29 +663,55 @@
                 "title": "Product Information",
                 "description": "Industrial Solution product information: bespoke engineering, stage capability, and compliance.",
                 "body": [
-                  "Bespoke AFM systems, engineered to the application: Systems configured specifically to the unique application and performance requirements rather than selected from a catalogue.",
-                  "Iterative design with your team: Nanosurf's engineering and development team works with yours to understand needs and design the system together.",
-                  "A large component library behind it: Years of designing solutions for complex measurement situations means many proven components are available to apply.",
-                  "Mountable FlexAFM and DriveAFM scan heads: Research-grade measurement performance for roughness and critical dimension determination.",
-                  "Tip-scanner technology: Scan heads mount easily while preserving scanner performance on heavy samples.",
-                  "Up to 5 degrees of freedom: Sample stages designed to reach any position on the sample.",
-                  "Virtually no restrictions on sample weight, size, or geometry: The stage, mount, and system geometry are designed around the sample rather than the reverse.",
-                  "High repositioning accuracy: Down to ± 1 µm and 0.001° on the documented XYZΦ configuration.",
-                  "Tiltable scan head: Concave and convex surfaces reached rather than approximated.",
-                  "Air-bearing sample translation: Motion technology chosen for precision at high load.",
-                  "Closed loop motion control: Position controlled continuously rather than commanded open-loop.",
-                  "Performance simulated before delivery: Detailed system models run against acoustic noise, temperature variation, and floor vibration.",
-                  "ISO 6 cleanroom compliant: Cleanroom-certified materials and components, with assembly carried out in a clean environment.",
-                  "PLC-governed safety: Safe torque off executed when a security condition triggers, including cantilever loss.",
-                  "Factory-scale automation: Automation beyond measurement series, extending to MES integration.",
-                  "Full operating mode range: Standard imaging, seven electrical modes, and mechanical characterization."
+                  {
+                    "title": "Bespoke AFM systems, engineered to the application",
+                    "text": "Systems configured specifically to the unique application and performance requirements rather than selected from a catalogue."
+                  },
+                  {
+                    "title": "Iterative design with your team",
+                    "text": "Nanosurf's engineering and development team works with yours to understand needs and design the system together."
+                  },
+                  {
+                    "title": "A large component library behind it",
+                    "text": "Years of designing solutions for complex measurement situations means many proven components are available to apply."
+                  },
+                  {
+                    "title": "Mountable FlexAFM and DriveAFM scan heads",
+                    "text": "Research-grade measurement performance for roughness and critical dimension determination."
+                  },
+                  { "title": "Tip-scanner technology", "text": "Scan heads mount easily while preserving scanner performance on heavy samples." },
+                  { "title": "Up to 5 degrees of freedom", "text": "Sample stages designed to reach any position on the sample." },
+                  {
+                    "title": "Virtually no restrictions on sample weight, size, or geometry",
+                    "text": "The stage, mount, and system geometry are designed around the sample rather than the reverse."
+                  },
+                  { "title": "High repositioning accuracy", "text": "Down to ± 1 µm and 0.001° on the documented XYZΦ configuration." },
+                  { "title": "Tiltable scan head", "text": "Concave and convex surfaces reached rather than approximated." },
+                  { "title": "Air-bearing sample translation", "text": "Motion technology chosen for precision at high load." },
+                  { "title": "Closed loop motion control", "text": "Position controlled continuously rather than commanded open-loop." },
+                  {
+                    "title": "Performance simulated before delivery",
+                    "text": "Detailed system models run against acoustic noise, temperature variation, and floor vibration."
+                  },
+                  {
+                    "title": "ISO 6 cleanroom compliant",
+                    "text": "Cleanroom-certified materials and components, with assembly carried out in a clean environment."
+                  },
+                  { "title": "PLC-governed safety", "text": "Safe torque off executed when a security condition triggers, including cantilever loss." },
+                  { "title": "Factory-scale automation", "text": "Automation beyond measurement series, extending to MES integration." },
+                  { "title": "Full operating mode range", "text": "Standard imaging, seven electrical modes, and mechanical characterization." }
                 ],
                 "cards": [
                   { "title": "Bespoke engineering", "description": "The system designed to the sample, not the reverse" },
                   { "title": "500 kg on a documented stage", "description": "Sample scale no standard AFM approaches" },
                   { "title": "Simulated before delivery", "description": "Environmental performance verified in advance" },
                   { "title": "ISO 6 and PLC safety", "description": "Fab-floor requirements met by design" }
-                ]
+                ],
+                "glanceTitle": "Industrial Solution at a Glance",
+                "glanceDescription": "Industrial Solution overview: custom engineering process, sample freedom, automation, and cleanroom compliance.",
+                "subheading": "Overview",
+                "intro": "Industrial Solution at a glance: what the service is and what it delivers.",
+                "tabSummary": "Why bespoke engineering rather than a catalogue system"
               },
               {
                 "key": "config",
@@ -408,24 +726,34 @@
                   { "title": "Compliance", "description": "ISO 6 cleanroom, PLC safety with safe torque off" },
                   { "title": "Software", "description": "Nanosurf C3000/CX with scripting interface up to MES integration" },
                   { "title": "Process", "description": "Iterative design engagement between Nanosurf and the customer's engineering team" }
-                ]
+                ],
+                "disclaimer": "Share the sample dimensions, weight, and geometry, the measurement requirement, and the environment the system must operate in, and the scoping engagement with Nanosurf's engineering team gets arranged from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "Industrial Solution key features: custom stages, cleanroom compliance, safety, and automation.",
+                "tabSummary": "5 DoF stages, tiltable scan head, air bearings, PLC safety, automation"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Industrial Solution applications: semiconductor metrology, large optics, production QC, and curved surface characterization."
+                "description": "Industrial Solution applications: semiconductor metrology, large optics, production QC, and curved surface characterization.",
+                "tabSummary": "Semiconductor, large optics, production QC, curved glass metrology"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Industrial Solution technical specifications: scan heads, operating modes, and system capabilities."
+                "description": "Industrial Solution technical specifications: scan heads, operating modes, and system capabilities.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Both are documented example implementations, not a product range. Systems are engineered to the application.",
+                "tabSummary": "Documented stage configurations and operating modes"
               },
               {
                 "key": "benefits",
@@ -438,35 +766,199 @@
                   { "title": "Measurement performance retained", "description": "Mountable FlexAFM and DriveAFM research scan heads" },
                   { "title": "Heavy samples without performance loss", "description": "Tip-scanner technology" },
                   { "title": "A defined starting point", "description": "Exploratory meeting to scope the application" }
-                ]
+                ],
+                "body": [
+                  {
+                    "title": "The requirement comes first",
+                    "text": "Nanosurf's team works with yours to understand the needs before any design decision is made."
+                  },
+                  {
+                    "title": "Iterative design, not a single specification",
+                    "text": "The system is developed through iteration between engineering teams rather than quoted from a form."
+                  },
+                  {
+                    "title": "Proven components, novel configuration",
+                    "text": "Years of complex measurement work means a large selection of component solutions is available to apply."
+                  },
+                  {
+                    "title": "Stage, mount, and geometry all designed",
+                    "text": "Sample stage, scan head mount, and system geometry are each specified to the sample and measurement requirement."
+                  },
+                  {
+                    "title": "Research-grade heads at the core",
+                    "text": "Mountable FlexAFM and DriveAFM scan heads supply roughness and critical dimension performance."
+                  },
+                  {
+                    "title": "Tip-scanner technology preserves performance",
+                    "text": "Mounting the scan head doesn't degrade scanner performance, even on heavy samples."
+                  },
+                  {
+                    "title": "An exploratory meeting starts it",
+                    "text": "Nanosurf's process begins with a conversation about the application, not a purchase order."
+                  }
+                ],
+                "columnHeaders": { "label": "What a bespoke system needs", "value": "How Industrial Solution delivers it" },
+                "tabSummary": "How the design process works"
               },
               {
                 "key": "performance",
-                "eyebrow": "System Optimization Before Delivery",
-                "title": "System Optimization Before Delivery",
+                "eyebrow": "Sample Freedom Across Five Axes",
+                "title": "Sample Freedom Across Five Axes",
+                "tabSummary": "Reaching any position regardless of size, weight, or curvature",
                 "body": [
-                  "AFM is environmentally sensitive: acoustic noise, temperature variation, and floor vibration all perturb nanoscale measurement.",
-                  "Detailed system models are built, so the system is modelled rather than assumed to perform in the intended environment. Performance simulations include environmental factors, so the site's real conditions are part of the simulation rather than an unknown.",
-                  "Requirements are verified at delivery — Nanosurf's stated aim is that all requirements are met by the final system upon delivery. Below 0.75 Å on a 2,250 kg stage carrying 500 kg samples is what the modelling is for, moving risk off the customer by engineering environmental performance in advance rather than discovering it during commissioning."
+                  "How stage design removes sample constraints entirely."
                 ],
-                "utilityChecklist": [
-                  { "label": "Confidence the system will perform on site", "value": "Detailed system models and performance simulation" },
-                  { "label": "Environmental conditions accounted for", "value": "Acoustic, thermal, and vibration factors in the simulation" },
-                  { "label": "Requirements met on arrival", "value": "Performance verified against specification before delivery" },
-                  { "label": "Sub-Ångström noise at industrial scale", "value": "Documented below 0.75 Å and 0.40 Å on the two stages" }
-                ]
-              },
-              {
-                "key": "certs",
-                "eyebrow": "Cleanroom, safety & certification",
-                "title": "Cleanroom, Safety, and Automation",
-                "description": "What makes these systems deployable on a production floor.",
-                "cards": [
-                  { "title": "ISO 6 Cleanroom Compliance", "description": "Cleanliness to semiconductor standards, with certified materials and clean-environment assembly.", "badge": "ISO 6", "category": "certifications", "tags": ["Semiconductor-grade", "Certified materials"] },
-                  { "title": "PLC-Governed Operator and Sample Protection", "description": "A programmable logic controller ensures safe operation, with safe torque off on triggered security conditions.", "badge": "PLC", "category": "safety", "tags": ["Safe torque off"] },
-                  { "title": "Protection Against Cantilever Loss", "description": "Cantilever loss is a defined PLC trigger condition, alongside safe limited speed exceedance and emergency stop.", "badge": "PLC", "category": "safety", "tags": ["Trigger condition"] },
-                  { "title": "MES Factory Integration", "description": "Automation extends beyond simple measurement series up to full manufacturing execution system integration.", "badge": "MES", "category": "quality", "tags": ["Factory systems"] },
-                  { "title": "In-House or Nanosurf-Supported Automation", "description": "C3000/CX scripting handles automation from small series through to MES integration, by end-users or Nanosurf's software engineers.", "badge": "MES", "category": "quality", "tags": ["Scripting", "Support"] }
+                "groups": [
+                  {
+                    "items": [
+                      { "title": "Up to 5 axes of freedom", "text": "Sample stages designed to reach any position on the sample, whatever its form." },
+                      { "title": "Weight, size, and geometry all accommodated", "text": "Nanosurf states virtually no restrictions across all three." },
+                      { "title": "Documented at 500 kg", "text": "The extra-large XYZ stage carries samples up to 500 kg on a 785 × 1950 mm platform." },
+                      { "title": "Rotation where the geometry needs it", "text": "The XYZΦ configuration adds 360° rotation at 0.0001° resolution." },
+                      {
+                        "title": "Tilting scan head for curvature",
+                        "text": "Concave and convex surfaces addressed by tilting rather than by compromising the measurement."
+                      },
+                      { "title": "High repositioning accuracy at scale", "text": "± 1 µm and 0.001° on the XYZΦ stage, ± 5 µm on the 500 kg configuration." },
+                      { "title": "Highly reproducible results", "text": "Closed loop motion control and air-bearing translation underpin repeatability." }
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What large-sample metrology needs",
+                      "How Industrial Solution delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Any position on the sample reachable",
+                        "Up to 5 degrees of stage freedom"
+                      ],
+                      [
+                        "Heavy components measured whole",
+                        "Documented capability to 500 kg"
+                      ],
+                      [
+                        "Curved and shaped surfaces",
+                        "Tiltable scan head with multi-axis motion"
+                      ],
+                      [
+                        "Returning to the same location",
+                        "± 1 µm repositioning on the XYZΦ configuration"
+                      ],
+                      [
+                        "Repeatability across runs",
+                        "Closed loop control with air-bearing translation"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "System Optimization Before Delivery",
+                    "summary": "Modelling and simulation against environmental factors",
+                    "description": "How performance is verified before the system arrives.",
+                    "items": [
+                      {
+                        "title": "AFM is environmentally sensitive",
+                        "text": "Acoustic noise, temperature variation, and floor vibration all perturb nanoscale measurement."
+                      },
+                      {
+                        "title": "Detailed system models are built",
+                        "text": "The system is modelled rather than assumed to perform in the intended environment."
+                      },
+                      {
+                        "title": "Performance simulations include environmental factors",
+                        "text": "The site's real conditions are part of the simulation rather than an unknown."
+                      },
+                      {
+                        "title": "Requirements verified at delivery",
+                        "text": "Nanosurf's stated aim is that all requirements are met by the final system upon delivery."
+                      },
+                      {
+                        "title": "The noise figures prove the approach",
+                        "text": "Below 0.75 Å on a 2,250 kg stage carrying 500 kg samples is what the modelling is for."
+                      },
+                      {
+                        "title": "Risk moves off the customer",
+                        "text": "Environmental performance is engineered in advance rather than discovered during commissioning."
+                      }
+                    ],
+                    "columns": [
+                      "What system delivery needs",
+                      "How Industrial Solution delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Confidence the system will perform on site",
+                        "Detailed system models and performance simulation"
+                      ],
+                      [
+                        "Environmental conditions accounted for",
+                        "Acoustic, thermal, and vibration factors in the simulation"
+                      ],
+                      [
+                        "Requirements met on arrival",
+                        "Performance verified against specification before delivery"
+                      ],
+                      [
+                        "Sub-ångström noise at industrial scale",
+                        "Documented below 0.75 Å and 0.40 Å on the two stages"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Cleanroom, Safety, and Automation",
+                    "summary": "ISO 6 compliance, PLC safety, and MES integration",
+                    "description": "What makes these systems deployable on a production floor.",
+                    "items": [
+                      {
+                        "title": "ISO 6 cleanroom compliance",
+                        "text": "Designed to fulfil the most stringent cleanliness requirements, as semiconductor applications demand."
+                      },
+                      {
+                        "title": "Cleanroom-certified throughout",
+                        "text": "All materials and components are cleanroom certified, and assembly is carried out in a clean environment."
+                      },
+                      {
+                        "title": "PLC-governed safe operation",
+                        "text": "A programmable logic controller ensures safe operation for both employees and samples."
+                      },
+                      {
+                        "title": "Safe torque off on triggered conditions",
+                        "text": "Executed if safe limited speed is exceeded, the emergency stop is pressed, or an AFM cantilever is lost."
+                      },
+                      { "title": "Automation beyond measurement series", "text": "Factory-scale process integration rather than simple automated sequences." },
+                      { "title": "MES integration supported", "text": "Full-scale manufacturing execution system integration is within scope." },
+                      {
+                        "title": "Scripting for automation at any level",
+                        "text": "C3000/CX scripting handles small automation series through to MES integration, by end-users or Nanosurf's software engineers."
+                      }
+                    ],
+                    "columns": [
+                      "What production deployment needs",
+                      "How Industrial Solution delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Cleanliness to semiconductor standards",
+                        "ISO 6 compliance with certified materials and clean assembly"
+                      ],
+                      [
+                        "Operator and sample protection",
+                        "PLC with safe torque off on security conditions"
+                      ],
+                      [
+                        "Protection against cantilever loss",
+                        "Cantilever loss as a defined PLC trigger condition"
+                      ],
+                      [
+                        "Integration into factory systems",
+                        "Automation up to full MES integration"
+                      ],
+                      [
+                        "Automation developed in-house or by Nanosurf",
+                        "Scripting interface with software engineering support available"
+                      ]
+                    ]
+                  }
                 ]
               },
               {
@@ -479,46 +971,73 @@
                   { "title": "Documented Stage Specifications (XYZ and XYZΦ configurations)", "description": "Available on request" },
                   { "title": "Application Note: Measuring the Flattest Surfaces in the Universe", "description": "Available on request" },
                   { "title": "Insights Article: Cleanroom-Compliant Automated AFM for the Semiconductor Industry", "description": "Available on request" },
-                  { "title": "Publication: Magnetoresistive Sensor Integration with AFM Cantilevers (IEEE Trans. Magn. 51, 2015)", "description": "Available on request" },
+                  {
+                    "title": "Publication: Magnetoresistive Sensor Integration with AFM Cantilevers (IEEE Trans. Magn. 51, 2015)",
+                    "description": "Available on request"
+                  },
                   { "title": "Webinar: Nanosurf Python API and Open-Source Tools", "description": "Available on request" },
                   { "title": "AFM Master Class Webinar", "description": "Available on request" },
                   { "title": "Customization Process Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Brochure, application notes, publications"
               }
             ],
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Get a Nanosurf Industrial Solution in India from Inkarp",
               "subheading": "Authorized distributor and service provider. Application scoping, installation, AMC, and genuine spare parts.",
-              "description": "Stages built for 500 kg samples at sub-Ångström noise, ISO 6 cleanroom compliance, PLC-governed safety, and MES-level automation — all designed to the requirement rather than selected from a catalogue. Share the sample, the measurement, and the environment, and the engineering scoping conversation gets arranged.",
+              "description": "Stages built for 500 kg samples at sub-ångström noise, ISO 6 cleanroom compliance, PLC-governed safety, and MES-level automation — all designed to the requirement rather than selected from a catalogue. Share the sample, the measurement, and the environment, and the engineering scoping conversation gets arranged.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "That stage is real and it was built. Over 2 metres long, 1.45 metres wide, weighing more than 2 tonnes — one of the largest AFM stages ever constructed, on air bearings with drive belt and stepper motor positioning, carrying samples up to 500 kg while holding noise below 0.75 Å.",
+              "It exists because someone needed it. That's the proposition here: Nanosurf's engineering and development team works with yours to understand the requirement and iteratively design an AFM system around it — sample stage, scan head mount, and system geometry designed to the sample, regardless of size, weight, or curvature.",
+              "Mountable versions of the FlexAFM and DriveAFM research scan heads supply the measurement performance, with tip-scanner technology preserving that performance even on heavy samples. Up to five axes of freedom reach any position on any sample.",
+              "Before delivery, detailed system models and performance simulations account for acoustic noise, temperature variation, and floor vibration, so the requirements are met on arrival rather than discovered afterwards. ISO 6 cleanroom compliance and PLC-governed safety come as part of the design where the application demands them."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Alphacen 300",
+
           "slug": "alphacen-300",
+
           "principalImage": "/assets/images/PrincipalLogos/NanoSurf.svg",
+
           "imageAlt": "Nanosurf Alphacen 300 - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/alphacen-300",
+
           "breadcrumbPath": "Home > Products > Industry > Alphacen 300",
+
           "h1": "Alphacen 300",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Large-sample AFM usually means one of two things: a scan head that needs a stage designed around it, or a full bespoke engineering project with a scoping phase before anything is quoted.",
 
           "features": [
-            "No Sample Limitations: Tip-scanning design ensures high-quality imaging regardless of sample size or weight.",
-            "100 µm Scan Range: Full research-grade scan area within an industrial large-sample system.",
-            "24-Bit CX Controller: Nanosurf's most advanced AFM controller, delivering fast and precise scan process control.",
-            "Flat and Linear Scanning: Flexure-based tip scanner providing high resolution and stable operation.",
-            "Dedicated Acoustic Enclosure: Minimizes external noise and vibration as part of the delivered system.",
-            "Self-Aligning Cantilevers: Removes the manual cantilever alignment step from setup.",
-            "Top and Side View Camera: Integrated sample observation built into the system.",
-            "Large Range of AFM Modes: Standard imaging, six electrical modes, mechanical characterization, EC-AFM, and SThM.",
-            "Standard System with Customizing Options: A catalogue system that serves as the basis for custom-engineered solutions.",
-            "Easy to Use: Straightforward operation despite industrial-scale sample handling."
+            { "title": "No Sample Limitations", "description": "Tip-scanning design ensures high-quality imaging regardless of sample size or weight." },
+            { "title": "100 µm Scan Range", "description": "Full research-grade scan area within an industrial large-sample system." },
+            { "title": "24-Bit CX Controller", "description": "Nanosurf's most advanced AFM controller, delivering fast and precise scan process control." },
+            { "title": "Flat and Linear Scanning", "description": "Flexure-based tip scanner providing high resolution and stable operation." },
+            { "title": "Dedicated Acoustic Enclosure", "description": "Minimizes external noise and vibration as part of the delivered system." },
+            { "title": "Self-Aligning Cantilevers", "description": "Removes the manual cantilever alignment step from setup." },
+            { "title": "Top and Side View Camera", "description": "Integrated sample observation built into the system." },
+            { "title": "Large Range of AFM Modes", "description": "Standard imaging, six electrical modes, mechanical characterization, EC-AFM, and SThM." },
+            {
+              "title": "Standard System with Customizing Options",
+              "description": "A catalogue system that serves as the basis for custom-engineered solutions."
+            },
+            { "title": "Easy to Use", "description": "Straightforward operation despite industrial-scale sample handling." }
           ],
 
           "technicalSpecs": [
@@ -538,26 +1057,28 @@
             { "label": "Electrical Modes", "value": "C-AFM, SSRM, PFM, EFM, KPFM, MFM" },
             { "label": "Mechanical Modes", "value": "Force spectroscopy, force modulation, force mapping" },
             { "label": "Additional Modes", "value": "Lithography and nanomanipulation, EC-AFM, SThM" },
-            { "label": "Customization Options", "value": "Additional translation and rotation axes on sample positioning system and scan head; samples beyond 300 mm" },
+            {
+              "label": "Customization Options",
+              "value": "Additional translation and rotation axes on sample positioning system and scan head; samples beyond 300 mm"
+            },
             { "label": "Control Software", "value": "Nanosurf C3000, fully scriptable, free lifetime updates" },
             { "label": "Automation", "value": "Customizable scripts beyond built-in options; integration into larger automation concepts" },
-            { "label": "Detailed System Specifications", "value": "Available in the Alphacen 300 Flex brochure on request" },
-            { "label": "Specification Note", "value": "Nanosurf's mode listing for this system does not include SMM, which appears on the Flex-Mount and Industrial Solutions pages. Worth confirming at configuration if scanning microwave microscopy is required." }
+            { "label": "Detailed System Specifications", "value": "Available in the Alphacen 300 Flex brochure on request" }
           ],
 
           "applications": [
-            "Precision Optics Metrology: Demonstrated on polished fused silica surface measurement",
-            "Surface Roughness Metrology: Sub-Ångström roughness characterization on large components",
-            "Large Substrate Characterization: Samples up to 300 × 300 mm measured directly",
-            "Heavy Component Inspection: Workpieces up to 45 kg without sectioning or fixturing compromise",
-            "Thick Sample Measurement: 50 mm z approach stage accommodating substantial sample thickness",
-            "Neutron and Specialist Mirror Metrology: Applied to mirror surface characterization in Nanosurf's own imagery",
-            "Industrial Quality Control: Standard system deployment for routine large-sample QC",
-            "Electrical Property Characterization: C-AFM, SSRM, PFM, EFM, KPFM, and MFM available",
-            "Electrochemical Studies: EC-AFM retained in the industrial system",
-            "Thermal Property Mapping: SThM available for thermal characterization",
-            "Automated Measurement Workflows: Customizable scripting beyond built-in automation options",
-            "Industry 4.0 Process Integration: Integration into larger automation concepts with Nanosurf software support"
+            { "title": "Precision Optics Metrology", "description": "Demonstrated on polished fused silica surface measurement" },
+            { "title": "Surface Roughness Metrology", "description": "Sub-ångström roughness characterization on large components" },
+            { "title": "Large Substrate Characterization", "description": "Samples up to 300 × 300 mm measured directly" },
+            { "title": "Heavy Component Inspection", "description": "Workpieces up to 45 kg without sectioning or fixturing compromise" },
+            { "title": "Thick Sample Measurement", "description": "50 mm z approach stage accommodating substantial sample thickness" },
+            { "title": "Neutron and Specialist Mirror Metrology", "description": "Applied to mirror surface characterization in Nanosurf's own imagery" },
+            { "title": "Industrial Quality Control", "description": "Standard system deployment for routine large-sample QC" },
+            { "title": "Electrical Property Characterization", "description": "C-AFM, SSRM, PFM, EFM, KPFM, and MFM available" },
+            { "title": "Electrochemical Studies", "description": "EC-AFM retained in the industrial system" },
+            { "title": "Thermal Property Mapping", "description": "SThM available for thermal characterization" },
+            { "title": "Automated Measurement Workflows", "description": "Customizable scripting beyond built-in automation options" },
+            { "title": "Industry 4.0 Process Integration", "description": "Integration into larger automation concepts with Nanosurf software support" }
           ],
 
           "inPageNav": [
@@ -575,30 +1096,48 @@
 
           "configWizard": {
             "title": "Does the sample fit the standard system?",
-            "description": "Select the surface geometry and envelope fit, and see whether Alphacen 300 covers it as standard.",
+            "description": "Enter the sample dimensions and weight, and see whether Alphacen 300 covers it as standard.",
             "steps": [
               {
+                "key": "sampleFootprint",
+                "label": "Sample footprint",
+                "question": "Sample footprint",
+                "hint": "Length and width, or diameter",
+                "input": "text",
+                "options": []
+              },
+              {
+                "key": "sampleThickness",
+                "label": "Sample thickness",
+                "question": "Sample thickness",
+                "hint": "Height, against the 50 mm z approach stage",
+                "input": "text",
+                "options": []
+              },
+              {
+                "key": "sampleWeight",
+                "label": "Sample weight",
+                "question": "Sample weight",
+                "hint": "Kilograms, including any fixturing",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "surfaceGeometry",
-                "question": "What's the sample's surface geometry?",
+                "label": "Surface geometry",
+                "question": "Surface geometry",
+                "hint": "Flat, curved, or complex",
                 "options": [
                   { "val": "flat", "label": "Flat" },
                   { "val": "curved", "label": "Curved" },
                   { "val": "complex", "label": "Complex" }
                 ]
-              },
-              {
-                "key": "envelopeFit",
-                "question": "Does the sample fit within 300 × 300 mm and 45 kg?",
-                "options": [
-                  { "val": "within-envelope", "label": "Yes, within the standard envelope" },
-                  { "val": "beyond-envelope", "label": "No, beyond the standard envelope" }
-                ]
               }
             ],
-            "result": {
-              "ctaNote": "Share the sample footprint, thickness, and weight, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Sample Envelope Checker",
+            "emptyState": "Confirms fit within 300 × 300 mm and 45 kg, or flags customization requirement",
+            "disclaimer": ""
           },
 
           "suitability": {
@@ -608,6 +1147,7 @@
               {
                 "key": "propertiesOfInterest",
                 "label": "Properties of interest",
+                "hint": "Topography, electrical, mechanical, magnetic, thermal, electrochemical",
                 "options": [
                   { "val": "topography", "label": "Topography" },
                   { "val": "electrical", "label": "Electrical" },
@@ -620,6 +1160,7 @@
               {
                 "key": "specialistTechnique",
                 "label": "Specialist technique",
+                "hint": "None, SSRM, KPFM, EC-AFM, SThM, or SMM",
                 "options": [
                   { "val": "none", "label": "None" },
                   { "val": "ssrm", "label": "SSRM" },
@@ -632,6 +1173,7 @@
               {
                 "key": "automationDepth",
                 "label": "Automation depth",
+                "hint": "Manual measurement, built-in automation, custom scripts, or process integration",
                 "options": [
                   { "val": "manual", "label": "Manual measurement" },
                   { "val": "built-in-automation", "label": "Built-in automation" },
@@ -642,6 +1184,7 @@
               {
                 "key": "throughputRequirement",
                 "label": "Throughput requirement",
+                "hint": "Occasional, routine QC, or continuous production measurement",
                 "options": [
                   { "val": "occasional", "label": "Occasional" },
                   { "val": "routine-qc", "label": "Routine QC" },
@@ -654,21 +1197,31 @@
                 "condition": { "specialistTechnique": "smm" },
                 "title": "Confirm SMM Availability With Inkarp",
                 "body": "SMM isn't listed in Nanosurf's published mode set for Alphacen 300, though it appears on the Flex-Mount and Industrial Solutions pages. Inkarp will confirm availability at configuration.",
-                "tags": ["SMM Needs Confirmation"]
+                "tags": [
+                  "SMM Needs Confirmation"
+                ]
               },
               {
                 "condition": { "automationDepth": "process-integration" },
                 "title": "Process Integration Fits Your Throughput Need",
                 "body": "Automation extends beyond built-in options through customizable scripts and integration into larger automation concepts, with support from Nanosurf's Automation Software Solutions team.",
-                "tags": ["Industry 4.0 Integration"]
+                "tags": [
+                  "Industry 4.0 Integration"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Right Mode and Automation Configuration With Inkarp",
                 "body": "Share the properties of interest and automation depth, and Inkarp will confirm mode availability and the right automation scope.",
-                "tags": ["Six Electrical Modes Plus EC-AFM and SThM"]
+                "tags": [
+                  "Six Electrical Modes Plus EC-AFM and SThM"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Mode and Automation Selector",
+            "ctaNote": "Confirms mode availability, flags SMM as requiring confirmation, and recommends automation scope. Routes to a configuration-specific quotation.",
+            "disclaimer": "",
+            "ctaLabel": "Get Configuration Support"
           },
 
           "planners": [
@@ -681,18 +1234,32 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Does the current sample fit the standard envelope?", "choices": "Within 300 × 300 mm and 45 kg; Beyond the standard envelope" },
-                { "title": "Is precise feature-alignment rotation needed?", "choices": "Not needed; Precise feature alignment required" },
-                { "title": "What access angles does the scan head need?", "choices": "Standard approach; Additional scan head axes" },
-                { "title": "Is the requirement expected to grow?", "choices": "Stable requirement; Samples expected to get larger" }
+                { "title": "Current sample envelope", "hint": "Within 300 × 300 mm and 45 kg, or beyond", "choices": "Within 300 × 300 mm and 45 kg; Beyond" },
+                {
+                  "title": "Rotation requirement",
+                  "hint": "Not needed, or precise feature alignment required",
+                  "choices": "Not needed; Precise feature alignment required"
+                },
+                {
+                  "title": "Access angles needed",
+                  "hint": "Standard approach, or additional scan head axes",
+                  "choices": "Standard approach; Additional scan head axes"
+                },
+                {
+                  "title": "Anticipated growth",
+                  "hint": "Stable requirement, or samples expected to get larger",
+                  "choices": "Stable requirement; Samples expected to get larger"
+                }
               ],
-              "disclaimer": "Routes to a route-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Recommends the standard system, standard plus customization, or a full Industrial Solution engagement. Routes to a route-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Alphacen 300 Flex vs. Flex-Mount AFM vs. Industrial Solution",
+            "title": "Method Comparison",
             "description": "Alphacen 300 method comparison: standard system against Flex-Mount and full Industrial Solutions.",
             "columns": [
               { "label": "Alphacen 300 Flex" },
@@ -700,40 +1267,223 @@
               { "label": "Industrial Solution" }
             ],
             "rows": [
-              { "feature": "Nature of Offering", "values": ["Complete standard system", "Scan head requiring a stage", "Bespoke engineered system"] },
-              { "feature": "Scan Head", "values": ["Flex-Mount", "Flex-Mount", "Mountable FlexAFM or DriveAFM"] },
-              { "feature": "Controller", "values": ["24-bit CX, Nanosurf's most advanced", "24-bit", "C3000/CX"] },
-              { "feature": "Scan Range", "values": ["100 µm", "100 µm", "Per configuration"] },
-              { "feature": "Sample Size", "values": ["300 × 300 mm standard", "Per stage — ⌀500 mm documented", "Per design — 785 × 1950 mm documented"] },
-              { "feature": "Sample Weight", "values": ["45 kg standard", "Per stage — 20 kg documented", "Per design — 500 kg documented"] },
-              { "feature": "Z Approach", "values": ["50 mm stage", "Per stage configuration", "Per design"] },
-              { "feature": "Acoustic Enclosure", "values": ["Included as standard", "Not specified", "Per design"] },
-              { "feature": "Electrical Modes", "values": ["C-AFM, SSRM, PFM, EFM, KPFM, MFM", "Seven, including SMM", "Seven, including SMM"] },
-              { "feature": "EC-AFM and SThM", "values": ["Available", "Available", "Not specified"] },
-              { "feature": "Cleanroom Compliance", "values": ["Not specified", "Not specified", "ISO 6 available"] },
-              { "feature": "PLC Safety System", "values": ["Not specified", "Not specified", "Available"] },
-              { "feature": "Customization", "values": ["Additional axes and larger samples", "Stage design", "Fully bespoke"] },
-              { "feature": "Lead Time Model", "values": ["Standard product", "Product plus stage specification", "Engineering project"] },
-              { "feature": "Best For", "values": ["Large samples within the standard envelope", "Custom stage integration with full mode set", "Requirements nothing standard meets"] },
-              { "feature": "Choose when", "values": ["300 × 300 mm and 45 kg covers the need", "A specific stage configuration is required", "Compliance, scale, or automation demand bespoke design"] }
+              {
+                "feature": "Nature of Offering",
+                "values": [
+                  "Complete standard system",
+                  "Scan head requiring a stage",
+                  "Bespoke engineered system"
+                ]
+              },
+              {
+                "feature": "Scan Head",
+                "values": [
+                  "Flex-Mount",
+                  "Flex-Mount",
+                  "Mountable FlexAFM or DriveAFM"
+                ]
+              },
+              {
+                "feature": "Controller",
+                "values": [
+                  "24-bit CX, Nanosurf's most advanced",
+                  "24-bit",
+                  "C3000/CX"
+                ]
+              },
+              {
+                "feature": "Scan Range",
+                "values": [
+                  "100 µm",
+                  "100 µm",
+                  "Per configuration"
+                ]
+              },
+              {
+                "feature": "Sample Size",
+                "values": [
+                  "300 × 300 mm standard",
+                  "Per stage — ⌀500 mm documented",
+                  "Per design — 785 × 1950 mm documented"
+                ]
+              },
+              {
+                "feature": "Sample Weight",
+                "values": [
+                  "45 kg standard",
+                  "Per stage — 20 kg documented",
+                  "Per design — 500 kg documented"
+                ]
+              },
+              {
+                "feature": "Z Approach",
+                "values": [
+                  "50 mm stage",
+                  "Per stage configuration",
+                  "Per design"
+                ]
+              },
+              {
+                "feature": "Acoustic Enclosure",
+                "values": [
+                  "Included as standard",
+                  "Not specified",
+                  "Per design"
+                ]
+              },
+              {
+                "feature": "Electrical Modes",
+                "values": [
+                  "C-AFM, SSRM, PFM, EFM, KPFM, MFM",
+                  "Seven, including SMM",
+                  "Seven, including SMM"
+                ]
+              },
+              {
+                "feature": "EC-AFM and SThM",
+                "values": [
+                  "Available",
+                  "Available",
+                  "Not specified"
+                ]
+              },
+              {
+                "feature": "Cleanroom Compliance",
+                "values": [
+                  "Not specified",
+                  "Not specified",
+                  "ISO 6 available"
+                ]
+              },
+              {
+                "feature": "PLC Safety System",
+                "values": [
+                  "Not specified",
+                  "Not specified",
+                  "Available"
+                ]
+              },
+              {
+                "feature": "Customization",
+                "values": [
+                  "Additional axes and larger samples",
+                  "Stage design",
+                  "Fully bespoke"
+                ]
+              },
+              {
+                "feature": "Lead Time Model",
+                "values": [
+                  "Standard product",
+                  "Product plus stage specification",
+                  "Engineering project"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Large samples within the standard envelope",
+                  "Custom stage integration with full mode set",
+                  "Requirements nothing standard meets"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "300 × 300 mm and 45 kg covers the need",
+                  "A specific stage configuration is required",
+                  "Compliance, scale, or automation demand bespoke design"
+                ]
+              }
             ],
-            "disclaimer": "The three form a genuine progression. Alphacen 300 Flex is the fastest route to large-sample AFM — a complete system with an acoustic enclosure and the CX controller, deliverable as a standard product. Flex-Mount is the component for building a specific configuration. Industrial Solutions is the engineering project for requirements that exceed both. Note that Alphacen 300's published mode list omits SMM while the other two include it, so confirm if scanning microwave microscopy is needed."
+            "disclaimer": "The three form a genuine progression. Alphacen 300 Flex is the fastest route to large-sample AFM — a complete system with an acoustic enclosure and the CX controller, deliverable as a standard product. Flex-Mount is the component for building a specific configuration. Industrial Solutions is the engineering project for requirements that exceed both. Note that Alphacen 300's published mode list omits SMM while the other two include it, so confirm if scanning microwave microscopy is needed.",
+            "featureLabel": "Parameter"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Alphacen 300 industries: precision optics, industrial metrology, semiconductor, and large component manufacturing.",
             "industries": [
-              { "name": "Precision Optics Manufacturing", "useCase": "Surface quality on polished optical components", "consideration": "Demonstrated on polished fused silica" },
-              { "name": "Specialist Mirror Production", "useCase": "Neutron and precision mirror surface metrology", "consideration": "Referenced in Nanosurf's own application imagery" },
-              { "name": "Industrial Quality Control", "useCase": "Routine large-sample nanoscale QC", "consideration": "Complete standard system with acoustic enclosure included" },
-              { "name": "Semiconductor and Electronics", "useCase": "Substrate and component surface characterization", "consideration": "Six electrical modes; confirm SMM availability if required" },
-              { "name": "Large Substrate Manufacturing", "useCase": "Panel and plate-format sample measurement", "consideration": "300 × 300 mm standard, extendable through customization" },
-              { "name": "Heavy Component Metrology", "useCase": "Workpieces too heavy for conventional AFM stages", "consideration": "45 kg sample weight on the standard system" },
-              { "name": "Surface Finishing and Polishing", "useCase": "Roughness verification on finished surfaces", "consideration": "Research-grade scan head with CX controller precision" },
-              { "name": "Coatings and Thin Film Production", "useCase": "Film characterization on large substrates", "consideration": "Full mechanical, electrical, and thermal mode range" },
-              { "name": "Production Metrology Integration", "useCase": "AFM within an automated measurement workflow", "consideration": "Custom scripting and larger automation concept integration" },
-              { "name": "Laboratories Needing Fast Deployment", "useCase": "Large-sample capability without an engineering project", "consideration": "Standard system rather than a bespoke build" }
+              {
+                "name": "Precision Optics Manufacturing",
+                "note": "Use Case: Surface quality on polished optical components",
+                "bullets": [
+                  "What to Consider: Demonstrated on polished fused silica"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Specialist Mirror Production",
+                "note": "Use Case: Neutron and precision mirror surface metrology",
+                "bullets": [
+                  "What to Consider: Referenced in Nanosurf's own application imagery"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Industrial Quality Control",
+                "note": "Use Case: Routine large-sample nanoscale QC",
+                "bullets": [
+                  "What to Consider: Complete standard system with acoustic enclosure included"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Semiconductor and Electronics",
+                "note": "Use Case: Substrate and component surface characterization",
+                "bullets": [
+                  "What to Consider: Six electrical modes; confirm SMM availability if required"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Large Substrate Manufacturing",
+                "note": "Use Case: Panel and plate-format sample measurement",
+                "bullets": [
+                  "What to Consider: 300 × 300 mm standard, extendable through customization"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Heavy Component Metrology",
+                "note": "Use Case: Workpieces too heavy for conventional AFM stages",
+                "bullets": [
+                  "What to Consider: 45 kg sample weight on the standard system"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Surface Finishing and Polishing",
+                "note": "Use Case: Roughness verification on finished surfaces",
+                "bullets": [
+                  "What to Consider: Research-grade scan head with CX controller precision"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Coatings and Thin Film Production",
+                "note": "Use Case: Film characterization on large substrates",
+                "bullets": [
+                  "What to Consider: Full mechanical, electrical, and thermal mode range"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Production Metrology Integration",
+                "note": "Use Case: AFM within an automated measurement workflow",
+                "bullets": [
+                  "What to Consider: Custom scripting and larger automation concept integration"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Laboratories Needing Fast Deployment",
+                "note": "Use Case: Large-sample capability without an engineering project",
+                "bullets": [
+                  "What to Consider: Standard system rather than a bespoke build"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -741,7 +1491,10 @@
             "title": "Inkarp Service Near You",
             "supportAreas": [
               { "title": "Product Demonstration", "description": "Measures the lab's own large or heavy samples on the system" },
-              { "title": "Sample Envelope Assessment", "description": "Confirms sample dimensions and weight against the standard 300 × 300 mm and 45 kg capability" },
+              {
+                "title": "Sample Envelope Assessment",
+                "description": "Confirms sample dimensions and weight against the standard 300 × 300 mm and 45 kg capability"
+              },
               { "title": "Configuration Assessment", "description": "Confirms mode set, cantilevers, and any customization requirement" },
               { "title": "Customization Coordination", "description": "Liaises with Nanosurf on additional axes, rotation, and larger sample accommodation" },
               { "title": "Site Preparation Support", "description": "Reviews floor loading, space, and environmental requirements for the enclosure" },
@@ -751,28 +1504,77 @@
               { "title": "Preventive Maintenance", "description": "Maintains scan head, stage, controller, and enclosure performance" },
               { "title": "Spares and Consumables", "description": "Supplies cantilevers, chip mounts, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "Alphacen 300 service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is Alphacen 300 used for?", "answer": "It's a tip-scanning atomic force microscope for large and heavy samples, used in precision optics metrology, surface roughness measurement, industrial quality control, and large substrate characterization." },
-            { "question": "What sample size and weight can it handle?", "answer": "Samples up to 300 × 300 mm in size and up to 45 kg in weight, with a 50 mm z approach stage for thick samples." },
-            { "question": "Why does tip-scanning matter for large samples?", "answer": "The tip moves rather than the sample, so imaging quality holds regardless of sample size or weight — the sample's mass stops affecting scan performance." },
-            { "question": "What scan head does it use?", "answer": "The Flex-Mount scan head, based on proven research scan head technology from Nanosurf's FlexAFM, with a flexure-based tip design." },
+            {
+              "question": "What is Alphacen 300 used for?",
+              "answer": "It's a tip-scanning atomic force microscope for large and heavy samples, used in precision optics metrology, surface roughness measurement, industrial quality control, and large substrate characterization."
+            },
+            {
+              "question": "What sample size and weight can it handle?",
+              "answer": "Samples up to 300 × 300 mm in size and up to 45 kg in weight, with a 50 mm z approach stage for thick samples."
+            },
+            {
+              "question": "Why does tip-scanning matter for large samples?",
+              "answer": "The tip moves rather than the sample, so imaging quality holds regardless of sample size or weight — the sample's mass stops affecting scan performance."
+            },
+            {
+              "question": "What scan head does it use?",
+              "answer": "The Flex-Mount scan head, based on proven research scan head technology from Nanosurf's FlexAFM, with a flexure-based tip design."
+            },
             { "question": "What scan range does it offer?", "answer": "100 µm." },
-            { "question": "What controller does the system use?", "answer": "A 24-bit CX controller — Nanosurf's most advanced AFM controller, offering fast and precise control over the scan process." },
-            { "question": "Is vibration isolation included?", "answer": "Yes. A dedicated acoustic enclosure minimizes external noise and vibrations as part of the system." },
-            { "question": "Which AFM modes are available?", "answer": "Static, lateral, dynamic, and phase imaging; C-AFM, SSRM, PFM, EFM, KPFM, and MFM for electrical properties; force spectroscopy, modulation, and mapping for mechanical; plus lithography and nanomanipulation, EC-AFM, and SThM." },
-            { "question": "Is Scanning Microwave Microscopy available?", "answer": "SMM isn't listed in Nanosurf's published mode set for this system, though it appears on the Flex-Mount and Industrial Solutions pages. Confirm availability at configuration if SMM is required." },
-            { "question": "Can samples larger than 300 mm be measured?", "answer": "Yes, through customization — the Alphacen 300 Flex serves as the basis for custom-engineered solutions accommodating samples beyond 300 mm." },
-            { "question": "Can sample rotation be added?", "answer": "Yes. Rotation axes are customizable on both the sample positioning system and the scan head, useful where consistent feature alignment is needed." },
+            {
+              "question": "What controller does the system use?",
+              "answer": "A 24-bit CX controller — Nanosurf's most advanced AFM controller, offering fast and precise control over the scan process."
+            },
+            {
+              "question": "Is vibration isolation included?",
+              "answer": "Yes. A dedicated acoustic enclosure minimizes external noise and vibrations as part of the system."
+            },
+            {
+              "question": "Which AFM modes are available?",
+              "answer": "Static, lateral, dynamic, and phase imaging; C-AFM, SSRM, PFM, EFM, KPFM, and MFM for electrical properties; force spectroscopy, modulation, and mapping for mechanical; plus lithography and nanomanipulation, EC-AFM, and SThM."
+            },
+            {
+              "question": "Is Scanning Microwave Microscopy available?",
+              "answer": "SMM isn't listed in Nanosurf's published mode set for this system, though it appears on the Flex-Mount and Industrial Solutions pages. Confirm availability at configuration if SMM is required."
+            },
+            {
+              "question": "Can samples larger than 300 mm be measured?",
+              "answer": "Yes, through customization — the Alphacen 300 Flex serves as the basis for custom-engineered solutions accommodating samples beyond 300 mm."
+            },
+            {
+              "question": "Can sample rotation be added?",
+              "answer": "Yes. Rotation axes are customizable on both the sample positioning system and the scan head, useful where consistent feature alignment is needed."
+            },
             { "question": "Do cantilevers need manual alignment?", "answer": "No. Self-aligning cantilevers remove the manual alignment step." },
-            { "question": "Can measurements be automated?", "answer": "Yes. Automation scripts are customizable beyond the built-in options in the AFM software, and the system integrates into larger automation concepts with support from Nanosurf's Automation Software Solutions team." },
-            { "question": "How is Alphacen 300 different from Flex-Mount?", "answer": "Alphacen 300 Flex is a complete standard system — Flex-Mount scan head, CX controller, and acoustic enclosure, with a defined 300 × 300 mm and 45 kg sample capability. Flex-Mount is the scan head alone, requiring a stage to be specified or built around it." },
-            { "question": "How is it different from a full Industrial Solution?", "answer": "Alphacen 300 is a standard product deliverable without an engineering project. Industrial Solutions are bespoke systems engineered to requirements no standard configuration meets, including cleanroom compliance, PLC safety, and stages carrying up to 500 kg." },
-            { "question": "Where can I find detailed technical specifications?", "answer": "Numeric system specifications are published in the Alphacen 300 Flex brochure — Inkarp can provide it on request." },
-            { "question": "What is the price of Alphacen 300 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the mode set, automation requirements, and any customization needed." },
-            { "question": "Who is the authorized distributor of Alphacen 300 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf Alphacen 300 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Can measurements be automated?",
+              "answer": "Yes. Automation scripts are customizable beyond the built-in options in the AFM software, and the system integrates into larger automation concepts with support from Nanosurf's Automation Software Solutions team."
+            },
+            {
+              "question": "How is Alphacen 300 different from Flex-Mount?",
+              "answer": "Alphacen 300 Flex is a complete standard system — Flex-Mount scan head, CX controller, and acoustic enclosure, with a defined 300 × 300 mm and 45 kg sample capability. Flex-Mount is the scan head alone, requiring a stage to be specified or built around it."
+            },
+            {
+              "question": "How is it different from a full Industrial Solution?",
+              "answer": "Alphacen 300 is a standard product deliverable without an engineering project. Industrial Solutions are bespoke systems engineered to requirements no standard configuration meets, including cleanroom compliance, PLC safety, and stages carrying up to 500 kg."
+            },
+            {
+              "question": "Where can I find detailed technical specifications?",
+              "answer": "Numeric system specifications are published in the Alphacen 300 Flex brochure — Inkarp can provide it on request."
+            },
+            {
+              "question": "What is the price of Alphacen 300 in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the mode set, automation requirements, and any customization needed."
+            },
+            {
+              "question": "Who is the authorized distributor of Alphacen 300 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Nanosurf Alphacen 300 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -793,10 +1595,17 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Alphacen 300 configuration", "body": "Share the sample dimensions and weight, the measurement modes required, and whether sample rotation or additional axes are anticipated, and the right Alphacen 300 configuration gets confirmed from there." },
-              { "title": "Confirm the right automation and scripting scope", "body": "Share the automation requirement and the systems the AFM must work alongside, and the scripting and integration scope gets defined." },
-              { "title": "Confirm the right customization route", "body": "Share where the requirement might go beyond the standard envelope, and the customization route gets mapped before the initial purchase." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Measures the lab's own large or heavy samples on the system" },
+              { "title": "Sample Envelope Assessment", "body": "Confirms sample dimensions and weight against the standard 300 × 300 mm and 45 kg capability" },
+              { "title": "Configuration Assessment", "body": "Confirms mode set, cantilevers, and any customization requirement" },
+              { "title": "Customization Coordination", "body": "Liaises with Nanosurf on additional axes, rotation, and larger sample accommodation" },
+              { "title": "Site Preparation Support", "body": "Reviews floor loading, space, and environmental requirements for the enclosure" },
+              { "title": "Installation Support", "body": "Handles setup, first-run checks, and initial performance verification" },
+              { "title": "Operator Training", "body": "Builds confidence with C3000 software and large-sample handling" },
+              { "title": "Automation Support", "body": "Assists with custom scripting and integration into wider automation workflows" },
+              { "title": "Preventive Maintenance", "body": "Maintains scan head, stage, controller, and enclosure performance" },
+              { "title": "Spares and Consumables", "body": "Supplies cantilevers, chip mounts, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -822,27 +1631,44 @@
                 "title": "Product Information",
                 "description": "Alphacen 300 product information: sample capability, scan performance, and customization scope.",
                 "body": [
-                  "A complete standard system: Not a scan head requiring a stage — a full AFM system ready for large and heavy samples.",
-                  "Samples up to 300 × 300 mm and 45 kg: Large-format and heavy workpieces measured directly.",
-                  "50 mm z approach stage: Thick samples mount without hassle rather than requiring workarounds.",
-                  "Flex-Mount scan head: Tip-scanner design enabling high-performance imaging regardless of sample size or weight.",
-                  "Proven FlexAFM scanner technology: Flexure-based tip design giving flat and linear scanning, high resolution, and stable operation.",
-                  "100 µm scan range: Full research-grade scan area retained in the industrial format.",
-                  "24-bit CX controller: Nanosurf's most advanced AFM controller, offering fast and precise scan process control.",
-                  "Dedicated acoustic enclosure: External noise and vibration minimized as part of the delivered system.",
-                  "Self-aligning cantilevers: Cantilever alignment handled by design rather than by operator adjustment.",
-                  "Top and side view camera: Integrated sample observation.",
-                  "Six electrical modes plus EC-AFM and SThM: Broad characterization range covering electrical, mechanical, and thermal properties.",
-                  "Customizable automation scripts: Automation extends beyond the built-in options in the AFM software.",
-                  "Integration into larger automation concepts: Nanosurf's Automation Software Solutions team supports industry 4.0 workflow integration.",
-                  "Basis for custom-engineered solutions: Sample rotation, additional axes, and samples beyond 300 mm accommodated through customization."
+                  { "title": "A complete standard system", "text": "Not a scan head requiring a stage — a full AFM system ready for large and heavy samples." },
+                  { "title": "Samples up to 300 × 300 mm and 45 kg", "text": "Large-format and heavy workpieces measured directly." },
+                  { "title": "50 mm z approach stage", "text": "Thick samples mount without hassle rather than requiring workarounds." },
+                  { "title": "Flex-Mount scan head", "text": "Tip-scanner design enabling high-performance imaging regardless of sample size or weight." },
+                  {
+                    "title": "Proven FlexAFM scanner technology",
+                    "text": "Flexure-based tip design giving flat and linear scanning, high resolution, and stable operation."
+                  },
+                  { "title": "100 µm scan range", "text": "Full research-grade scan area retained in the industrial format." },
+                  { "title": "24-bit CX controller", "text": "Nanosurf's most advanced AFM controller, offering fast and precise scan process control." },
+                  { "title": "Dedicated acoustic enclosure", "text": "External noise and vibration minimized as part of the delivered system." },
+                  { "title": "Self-aligning cantilevers", "text": "Cantilever alignment handled by design rather than by operator adjustment." },
+                  { "title": "Top and side view camera", "text": "Integrated sample observation." },
+                  {
+                    "title": "Six electrical modes plus EC-AFM and SThM",
+                    "text": "Broad characterization range covering electrical, mechanical, and thermal properties."
+                  },
+                  { "title": "Customizable automation scripts", "text": "Automation extends beyond the built-in options in the AFM software." },
+                  {
+                    "title": "Integration into larger automation concepts",
+                    "text": "Nanosurf's Automation Software Solutions team supports industry 4.0 workflow integration."
+                  },
+                  {
+                    "title": "Basis for custom-engineered solutions",
+                    "text": "Sample rotation, additional axes, and samples beyond 300 mm accommodated through customization."
+                  }
                 ],
                 "cards": [
                   { "title": "Standard system, large samples", "description": "No stage design project before measurement starts" },
                   { "title": "300 × 300 mm and 45 kg", "description": "Large-format workpieces handled directly" },
                   { "title": "CX controller", "description": "Nanosurf's most advanced scan control" },
                   { "title": "Customizable from a standard base", "description": "Grows into a bespoke solution when needed" }
-                ]
+                ],
+                "glanceTitle": "Alphacen 300 at a Glance",
+                "glanceDescription": "Alphacen 300 Flex overview: large-sample handling, research-grade scanning, and the path to customization.",
+                "subheading": "Overview",
+                "intro": "Alphacen 300 at a glance: what the system is and what it delivers.",
+                "tabSummary": "Why a standard large-sample system fills a real gap"
               },
               {
                 "key": "config",
@@ -859,24 +1685,33 @@
                   { "title": "Enclosure", "description": "Dedicated acoustic enclosure" },
                   { "title": "Customization", "description": "Additional translation and rotation axes on sample stage and scan head" },
                   { "title": "Software", "description": "Nanosurf C3000, fully scriptable" }
-                ]
+                ],
+                "disclaimer": "Share the sample dimensions and weight, the measurement modes required, and whether sample rotation or additional axes are anticipated, and the right Alphacen 300 configuration gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "Alphacen 300 key features: large-sample capability, advanced control, and customization scope.",
+                "tabSummary": "Flex-Mount head, CX controller, acoustic enclosure, self-aligning cantilevers"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Alphacen 300 applications: optics metrology, industrial QC, and large substrate characterization."
+                "description": "Alphacen 300 applications: optics metrology, industrial QC, and large substrate characterization.",
+                "tabSummary": "Optics metrology, industrial QC, large substrate characterization"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Alphacen 300 technical specifications: sample capability, scan performance, and operating modes."
+                "description": "Alphacen 300 technical specifications: sample capability, scan performance, and operating modes.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Sample capability, scan range, controller, and modes"
               },
               {
                 "key": "benefits",
@@ -888,25 +1723,185 @@
                   { "title": "Automation shaped to the requirement", "description": "Customizable automation scripts" },
                   { "title": "The AFM as part of a wider process", "description": "Integration into larger automation concepts" },
                   { "title": "Expert support for implementation", "description": "Nanosurf Automation Software Solutions team" }
-                ]
+                ],
+                "body": [
+                  { "title": "Built-in automation options", "text": "The AFM software includes automation capability as standard." },
+                  { "title": "Customizable automation scripts", "text": "Automation is tailored beyond the built-in options to suit specific requirements." },
+                  {
+                    "title": "Beyond measurement automation",
+                    "text": "The system integrates into a larger automation concept rather than automating only its own operation."
+                  },
+                  {
+                    "title": "Nanosurf Automation Software Solutions team",
+                    "text": "A specialized team supports taking measurement workflows into industry 4.0 environments."
+                  },
+                  { "title": "Fully scriptable control", "text": "Nanosurf C3000 provides scriptable instrument control as the foundation." },
+                  { "title": "Process workflow engineering", "text": "Nanosurf approaches automation as workflow engineering rather than script writing." }
+                ],
+                "columnHeaders": { "label": "What automated operation needs", "value": "How Alphacen 300 delivers it" },
+                "note": "Share the automation requirement and the systems the AFM must work alongside, and the scripting and integration scope gets defined.",
+                "tabSummary": "Scripting through to larger automation concepts"
               },
               {
                 "key": "performance",
-                "eyebrow": "From Standard System to Custom Solution",
-                "title": "From Standard System to Custom Solution",
+                "eyebrow": "Large and Heavy Samples",
+                "title": "Large and Heavy Samples",
+                "tabSummary": "What 300 × 300 mm, 45 kg, and 50 mm z travel accommodate",
                 "body": [
-                  "How the platform extends when the requirement grows.",
-                  "Alphacen 300 Flex is a catalogue product, orderable and deliverable without an engineering project. The same system serves as the basis for a custom-engineered solution when requirements exceed it — sample rotation for feature alignment, samples beyond 300 mm, and additional axes on both the sample positioning system and the scan head.",
-                  "The stage underneath is built to adapt rather than fixed to one configuration."
+                  "What the sample envelope accommodates and why it matters."
                 ],
-                "utilityChecklist": [
-                  { "label": "Starting without an engineering project", "value": "Standard system, ready to order" },
-                  { "label": "Rotation for feature alignment", "value": "Customizable rotation axes on the positioning system" },
-                  { "label": "Samples larger than the standard envelope", "value": "Custom accommodation beyond 300 mm" },
-                  { "label": "Access from additional angles", "value": "Customizable rotation axes on the scan head" },
-                  { "label": "A platform that adapts rather than gets replaced", "value": "Versatile stage system as the customization base" }
-                ],
-                "disclaimer": "Share where the requirement might go beyond the standard envelope, and the customization route gets mapped before the initial purchase."
+                "groups": [
+                  {
+                    "items": [
+                      { "title": "300 × 300 mm sample footprint", "text": "Large-format components and substrates measured whole rather than sectioned." },
+                      { "title": "45 kg sample weight", "text": "Heavy workpieces handled without special fixturing or compromise." },
+                      { "title": "50 mm z approach stage", "text": "Thick samples mount without hassle — a practical constraint that limits many systems." },
+                      {
+                        "title": "Tip-scanning is why it works",
+                        "text": "The tip moves rather than the sample, so mass and dimension stop affecting scan performance."
+                      },
+                      {
+                        "title": "Imaging quality holds regardless",
+                        "text": "Nanosurf's claim is high-quality imaging irrespective of sample size or weight, not despite it."
+                      },
+                      {
+                        "title": "Larger samples through customization",
+                        "text": "Accommodation for samples beyond 300 mm is available via custom engineering on the same platform."
+                      }
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What large-sample work needs",
+                      "How Alphacen 300 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Components measured without sectioning",
+                        "300 × 300 mm sample capability"
+                      ],
+                      [
+                        "Heavy workpieces accommodated",
+                        "Up to 45 kg on the standard system"
+                      ],
+                      [
+                        "Thick samples mounted simply",
+                        "50 mm z approach stage"
+                      ],
+                      [
+                        "Scan quality unaffected by sample mass",
+                        "Tip-scanning design"
+                      ],
+                      [
+                        "Room to grow beyond the standard envelope",
+                        "Customization for samples beyond 300 mm"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "Research-Grade Tip-Scanning",
+                    "summary": "Why scan quality holds regardless of sample mass",
+                    "description": "Why scan performance holds on an industrial system.",
+                    "items": [
+                      {
+                        "title": "Proven FlexAFM scan head technology",
+                        "text": "The scan head comes from Nanosurf's most widely used research platform, not an industrial simplification."
+                      },
+                      { "title": "Flexure-based tip design", "text": "Delivers flat and linear scanning, high resolution, and stable operation." },
+                      { "title": "100 µm scan range retained", "text": "Full research scan area rather than the reduced range industrial systems often carry." },
+                      {
+                        "title": "CX controller for precise control",
+                        "text": "Nanosurf's most advanced AFM controller, offering fast and precise control over the scan process."
+                      },
+                      {
+                        "title": "Acoustic enclosure protects the measurement",
+                        "text": "External noise and vibration minimized rather than left to the installation environment."
+                      },
+                      {
+                        "title": "Self-aligning cantilevers keep operation simple",
+                        "text": "Research-grade performance without research-grade setup complexity."
+                      }
+                    ],
+                    "columns": [
+                      "What measurement quality needs",
+                      "How Alphacen 300 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Research resolution on industrial samples",
+                        "Flex-Mount scan head from FlexAFM technology"
+                      ],
+                      [
+                        "Flat, linear scanning",
+                        "Flexure-based tip scanner design"
+                      ],
+                      [
+                        "Fast and precise scan control",
+                        "24-bit CX controller"
+                      ],
+                      [
+                        "Protection from environmental noise",
+                        "Dedicated acoustic enclosure"
+                      ],
+                      [
+                        "Simple, repeatable setup",
+                        "Self-aligning cantilevers"
+                      ]
+                    ]
+                  },
+                  {
+                    "title": "From Standard System to Custom Solution",
+                    "summary": "How the platform extends when requirements grow",
+                    "description": "How the platform extends when the requirement grows.",
+                    "items": [
+                      {
+                        "title": "A standard system first",
+                        "text": "Alphacen 300 Flex is a catalogue product, orderable and deliverable without an engineering project."
+                      },
+                      {
+                        "title": "Custom engineering from the same base",
+                        "text": "The same system serves as the basis for a custom-engineered solution when requirements exceed it."
+                      },
+                      { "title": "Sample rotation for feature alignment", "text": "Precise rotation added where consistent feature alignment is needed." },
+                      {
+                        "title": "Samples beyond 300 mm accommodated",
+                        "text": "The envelope extends through customization rather than requiring a different platform."
+                      },
+                      {
+                        "title": "Additional axes on stage and scan head",
+                        "text": "Rotation axes are customizable on both the sample positioning system and the scan head."
+                      },
+                      { "title": "A versatile stage system underneath", "text": "The stage is built to adapt rather than fixed to one configuration." }
+                    ],
+                    "columns": [
+                      "What growing requirements need",
+                      "How Alphacen 300 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Starting without an engineering project",
+                        "Standard system, ready to order"
+                      ],
+                      [
+                        "Rotation for feature alignment",
+                        "Customizable rotation axes on the positioning system"
+                      ],
+                      [
+                        "Samples larger than the standard envelope",
+                        "Custom accommodation beyond 300 mm"
+                      ],
+                      [
+                        "Access from additional angles",
+                        "Customizable rotation axes on the scan head"
+                      ],
+                      [
+                        "A platform that adapts rather than gets replaced",
+                        "Versatile stage system as the customization base"
+                      ]
+                    ],
+                    "note": "Share where the requirement might go beyond the standard envelope, and the customization route gets mapped before the initial purchase."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -920,7 +1915,9 @@
                   { "title": "Nanosurf C3000 Software Overview", "description": "Available on request" },
                   { "title": "Automation and Scripting Guidance", "description": "Available on request" },
                   { "title": "Acoustic Enclosure Specification", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Brochure and application resources"
               }
             ],
             "cta": {
@@ -929,9 +1926,19 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A complete large-sample AFM ready to order — 300 × 300 mm and 45 kg, research-grade tip-scanning, the CX controller, and an acoustic enclosure included, with customization available when the requirement grows. Share the sample envelope and the techniques needed, and the right Alphacen 300 configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Large-sample AFM usually means one of two things: a scan head that needs a stage designed around it, or a full bespoke engineering project with a scoping phase before anything is quoted.",
+              "Alphacen 300 Flex is neither. It's a complete, standard system — Flex-Mount scan head, CX controller, dedicated acoustic enclosure — that handles samples up to 300 × 300 mm and 45 kg out of the box, with a 50 mm z approach stage so thick samples mount without difficulty.",
+              "The performance comes from proven parts. The tip-scanner design means imaging quality holds regardless of sample size or weight, because the tip moves and the sample doesn't. The flexure-based scanner from Nanosurf's FlexAFM delivers flat, linear scanning at 100 µm range. The CX controller is Nanosurf's most advanced, giving fast and precise control over the scan process. The acoustic enclosure handles external noise and vibration as part of the system.",
+              "And when the requirement outgrows it, the same system becomes the basis for a custom solution — additional translation or rotation axes on the sample positioning system and the scan head alike."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

@@ -869,7 +869,7 @@ export default function MetricCalculator({ data, productName = 'this product' })
       id={data?.sectionId ?? 'calculator'}
     >
       <div className="relative mx-auto w-full max-w-[1180px]">
-        <SectionHeader description={data?.description} eyebrow={data?.eyebrow} title={data?.title} />
+        <SectionHeader description={data?.description} eyebrow={data?.eyebrow} lead={data?.lead} title={data?.title} />
 
         <div className="relative mt-6 grid gap-6 lg:grid-cols-[1fr_1fr]">
           <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">

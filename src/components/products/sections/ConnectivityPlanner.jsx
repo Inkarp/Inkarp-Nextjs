@@ -13,6 +13,36 @@ const DEFAULT_FIELDS = [
   { key: 'result', label: 'End result' },
 ];
 
+function TypedAnswer({ type, label, initial, onSubmit }) {
+  const [value, setValue] = useState(initial ?? '');
+  const trimmed = String(value).trim();
+  return (
+    <form
+      className="mt-6 flex flex-col gap-3 sm:flex-row"
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (trimmed) onSubmit(trimmed);
+      }}
+    >
+      <input
+        aria-label={label}
+        className="h-12 w-full border border-line-light bg-white px-4 text-base text-black outline-none focus:border-red focus:ring-2 focus:ring-red/20 sm:max-w-xs"
+        min={type === 'number' ? 0 : undefined}
+        onChange={(event) => setValue(event.target.value)}
+        type={type === 'number' ? 'number' : 'text'}
+        value={value}
+      />
+      <button
+        className="inline-flex h-12 items-center justify-center gap-2 border border-black bg-red px-7 text-sm font-semibold text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-40"
+        disabled={!trimmed}
+        type="submit"
+      >
+        Continue <FiArrowRight />
+      </button>
+    </form>
+  );
+}
+
 function parseChoices(raw) {
   return String(raw ?? '')
     .split(';')
@@ -80,6 +110,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
         <SectionHeader
           number="12"
           eyebrow={data?.eyebrow ?? 'Connectivity & control planner'}
+          lead={data?.lead}
           title={data?.title ?? `How connected should your ${productName} setup be?`}
           description={data?.description}
         />
@@ -192,7 +223,9 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
           ) : isPicker ? (
             (() => {
               const currentChoices = parseChoices(option[choicesField.key]);
-              const isInfoStep = currentChoices.length <= 1;
+              // `input: 'text' | 'number'` asks the visitor to type the answer.
+              const isTyped = Boolean(option.input);
+              const isInfoStep = !isTyped && currentChoices.length <= 1;
 
               return (
                 <div className="border border-line-light bg-parchment p-6 sm:p-8">
@@ -200,8 +233,17 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                     {isInfoStep ? 'Summary' : 'Question'} {activeIndex + 1} of {options.length}
                   </p>
                   <h3 className="mt-2 text-2xl font-semibold tracking-tight text-ink">{option.title}</h3>
+                  {option.hint && <p className="mt-1 text-sm leading-6 text-ink-soft">{option.hint}</p>}
 
-                  {isInfoStep ? (
+                  {isTyped ? (
+                    <TypedAnswer
+                      initial={answers[activeIndex]}
+                      key={activeIndex}
+                      label={option.title}
+                      onSubmit={handlePick}
+                      type={option.input}
+                    />
+                  ) : isInfoStep ? (
                     <>
                       <p className="mt-6 border border-line-light bg-parchment-alt px-5 py-4 text-sm font-medium leading-6 text-black">
                         {currentChoices[0]}

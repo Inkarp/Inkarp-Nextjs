@@ -310,7 +310,26 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {overviewSec?.subheading ?? 'Reliable rotary evaporation, focused on the essentials'}
             </h3>
+            {overviewSec?.intro && (
+              <p className="mb-5 text-sm leading-7 text-black">{overviewSec.intro}</p>
+            )}
             {overviewSec?.body?.map((p, i) => {
+              // `{ title, text }` items keep a source document's bold lead-in
+              // exactly, with no separator character added between the two.
+              if (p && typeof p === 'object') {
+                return (
+                  <p key={i} className="mb-4 flex items-start gap-3 text-sm leading-7 text-black">
+                    <span className="mt-0.5 inline-flex size-6 shrink-0 items-center justify-center bg-parchment-alt text-red">
+                      <FiCheckCircle aria-hidden="true" className="text-sm" />
+                    </span>
+                    <span>
+                      {p.title && <strong className="font-semibold text-ink">{p.title}</strong>}
+                      {p.title && p.text ? ' ' : null}
+                      {p.text}
+                    </span>
+                  </p>
+                );
+              }
               // Match separator dashes without splitting hyphenated words.
               // `plainBody` keeps verbatim prose whole, where a mid-sentence
               // dash would otherwise turn half a sentence into a bold heading.
@@ -416,7 +435,7 @@ export default function ProductInfoTabs({ product }) {
             ))}
             <TechnicalSpecsTable
               columns={specsSec?.columns}
-              note="Per published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering."
+              note={specsSec?.note ?? "Per published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering."}
               specs={product.technicalSpecs ?? []}
             />
           </div>
@@ -457,6 +476,32 @@ export default function ProductInfoTabs({ product }) {
                 {perfSec.groups.map((group, groupIndex) => (
                   <div key={group.title ?? groupIndex}>
                     {group.title ? <h4 className="mb-2 text-sm font-semibold text-ink">{group.title}</h4> : null}
+                    {group.summary && (
+                      <p className="mb-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">{group.summary}</p>
+                    )}
+                    {group.description && (
+                      <p className="mb-3 text-sm leading-7 text-black">{group.description}</p>
+                    )}
+                    {group.body?.map((paragraph, paragraphIndex) => (
+                      <p className="mb-3 text-sm leading-7 text-black" key={paragraphIndex}>{paragraph}</p>
+                    ))}
+                    {/* A group holding both a list and a table shows the list first. */}
+                    {group.rows?.length > 0 && group.items?.length > 0 && (
+                      <ul className="mb-4 space-y-1.5">
+                        {group.items.map((item, itemIndex) => (
+                          <li className="flex gap-2 text-sm leading-6 text-black" key={itemIndex}>
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
+                            {item && typeof item === 'object' ? (
+                              <span>
+                                {item.title && <strong className="font-semibold text-ink">{item.title}</strong>}
+                                {item.title && item.text ? ' ' : null}
+                                {item.text}
+                              </span>
+                            ) : item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     {group.rows?.length > 0 && (
                       <div className="overflow-x-auto border border-line-light">
                         <table className="w-full min-w-[420px] border-collapse text-left text-sm">
@@ -479,15 +524,26 @@ export default function ProductInfoTabs({ product }) {
                         </table>
                       </div>
                     )}
-                    {group.items?.length > 0 && (
+                    {group.items?.length > 0 && !group.rows?.length && (
                       <ul className="space-y-1.5">
-                        {group.items.map((item) => (
-                          <li className="flex gap-2 text-sm leading-6 text-black" key={item}>
+                        {group.items.map((item, itemIndex) => (
+                          <li className="flex gap-2 text-sm leading-6 text-black" key={typeof item === 'string' ? item : itemIndex}>
                             <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
-                            {item}
+                            {item && typeof item === 'object' ? (
+                              <span>
+                                {item.title && <strong className="font-semibold text-ink">{item.title}</strong>}
+                                {item.title && item.text ? ' ' : null}
+                                {item.text}
+                              </span>
+                            ) : item}
                           </li>
                         ))}
                       </ul>
+                    )}
+                    {group.note && (
+                      <p className="mt-4 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
+                        {group.note}
+                      </p>
                     )}
                   </div>
                 ))}
@@ -559,6 +615,11 @@ export default function ProductInfoTabs({ product }) {
                 />
               ))}
             </div>
+            {configSec?.disclaimer && (
+              <p className="mt-5 border border-line-light bg-parchment-alt p-4 text-xs leading-6 text-black">
+                {configSec.disclaimer}
+              </p>
+            )}
             {(product.configWizard || glassSec?.cards?.length > 0 || product.pairing) && (
               <p className="mt-4 text-xs text-ink-soft">
                 Not sure which to choose?{' '}
@@ -641,6 +702,18 @@ export default function ProductInfoTabs({ product }) {
           title={overviewSec?.title ?? 'Product at a glance'}
           description={overviewSec?.description ?? ''}
         />
+
+        {/* Optional lead-in for the tab list (a source document's "at a Glance" block). */}
+        {(overviewSec?.glanceTitle || overviewSec?.glanceDescription) && (
+          <div className="-mt-3 mb-6 max-w-3xl">
+            {overviewSec.glanceTitle && (
+              <h3 className="text-base font-semibold tracking-tight text-ink">{overviewSec.glanceTitle}</h3>
+            )}
+            {overviewSec.glanceDescription && (
+              <p className="mt-1 text-sm leading-6 text-ink-soft">{overviewSec.glanceDescription}</p>
+            )}
+          </div>
+        )}
 
         {/* Pill tabs */}
         <div aria-label="Product information" className="mb-6 flex flex-wrap gap-2" role="tablist">

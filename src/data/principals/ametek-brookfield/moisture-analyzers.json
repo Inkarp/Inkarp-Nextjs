@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "ametek-brookfield",
-    "principalName": "Ametek Brookfield",
-    "countryOfOrigin": "United States of America"
-  },
+  "principal": { "slug": "ametek-brookfield", "principalName": "Ametek Brookfield", "countryOfOrigin": "United States of America" },
   "categories": [
     {
       "name": "Moisture Analyzers",
@@ -11,22 +7,46 @@
       "products": [
         {
           "name": "Computrac® MAX 4000XL Moisture Analyzer",
+
           "slug": "computrac-max-4000xl-moisture-analyzer",
+
           "principalImage": "/assets/images/PrincipalLogos/Brookfield.webp",
+
           "imageAlt": "Ametek Brookfield Computrac® MAX 4000XL Moisture Analyzer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/computrac-max-4000xl-moisture-analyzer",
+
           "breadcrumbPath": "Home > Products > Moisture Analyzers > Computrac® MAX 4000XL Moisture Analyzer",
+
           "h1": "Computrac® MAX 4000XL Moisture Analyzer",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Moisture testing shouldn't take hours. The Computrac® MAX 4000XL cuts loss-on-drying analysis down to minutes — up to 100x faster than a standard oven reference method, and 25% faster than other rapid LOD instruments on the market.",
 
           "features": [
-            "Rapid Chamber Cooling: The integrated lid fan accelerates chamber cooling between tests, helping the MAX 4000XL deliver faster moisture analysis cycles.",
-            "100 µg Resolution with Steel Construction: Achieve 100 µg measurement resolution in a robust all-steel housing designed for demanding laboratory and production environments.",
-            "Multistage Testing: Run multiple temperature and measurement criteria stages within a single test sequence to distinguish free and bound moisture.",
-            "On-Device Data History: Store programs, results, and graphs directly on the instrument, with capacity for up to 250 programs, 1,000 results, and 100 graphs without requiring a PC.",
-            "Optional Remote Access: The optional web server enables remote access to the instrument, allowing users to monitor testing and review results from another location."
+            {
+              "title": "Rapid Chamber Cooling",
+              "description": "The integrated lid fan accelerates chamber cooling between tests, helping the MAX 4000XL deliver faster moisture analysis cycles."
+            },
+            {
+              "title": "100 µg Resolution with Steel Construction",
+              "description": "Achieve 100 µg measurement resolution in a robust all-steel housing designed for demanding laboratory and production environments."
+            },
+            {
+              "title": "Multistage Testing",
+              "description": "Run multiple temperature and measurement criteria stages within a single test sequence to distinguish free and bound moisture."
+            },
+            {
+              "title": "On-Device Data History",
+              "description": "Store programs, results, and graphs directly on the instrument, with capacity for up to 250 programs, 1,000 results, and 100 graphs without requiring a PC."
+            },
+            {
+              "title": "Optional Remote Access",
+              "description": "The optional web server enables remote access to the instrument, allowing users to monitor testing and review results from another location."
+            }
           ],
 
           "technicalSpecs": [
@@ -47,17 +67,20 @@
             { "label": "Stored Test Results", "value": "1,000" },
             { "label": "Stored Test Graphs", "value": "100" },
             { "label": "Optional Connectivity", "value": "Web server — remote LCD view, calibration reports, audit logs, program/result upload-download" },
-            { "label": "Drying Temperature Range, Sample Capacity, Dimensions, Compliance, Accessories", "value": "Not confirmed in this source — available on request" }
+            {
+              "label": "Drying Temperature Range, Sample Capacity, Dimensions, Compliance, Accessories",
+              "value": "Not confirmed in this source — available on request"
+            }
           ],
 
           "applications": [
-            "Food Moisture and Solids Testing: Fast, repeatable results for QC release testing.",
-            "Pharmaceutical Moisture Analysis: 100 µg accuracy for tight specification limits.",
-            "Plastics and Polymer Testing: Rapid results support in-process adjustment.",
-            "Chemical Manufacturing QC: Loss-on-drying across varied chemical matrices.",
-            "Method Development: Multistage testing isolates free vs. bound moisture.",
-            "Production Floor Monitoring: Rugged all-steel build handles the environment.",
-            "Regulated Documentation: Optional web server pulls audit logs and calibration reports remotely."
+            { "title": "Food Moisture and Solids Testing", "description": "Fast, repeatable results for QC release testing" },
+            { "title": "Pharmaceutical Moisture Analysis", "description": "100 µg accuracy for tight specification limits" },
+            { "title": "Plastics and Polymer Testing", "description": "Rapid results support in-process adjustment" },
+            { "title": "Chemical Manufacturing QC", "description": "Loss-on-drying across varied chemical matrices" },
+            { "title": "Method Development", "description": "Multistage testing isolates free vs. bound moisture" },
+            { "title": "Production Floor Monitoring", "description": "Rugged all-steel build handles the environment" },
+            { "title": "Regulated Documentation", "description": "Optional web server pulls audit logs and calibration reports remotely" }
           ],
 
           "inPageNav": [
@@ -87,7 +110,7 @@
                 "options": [
                   {
                     "val": "oven",
-                    "label": "Standard oven reference method",
+                    "label": "Standard oven",
                     "speedFactor": 100,
                     "basis": "Brookfield states MAX 4000XL runs up to 100x faster than standard oven reference methods."
                   },
@@ -97,25 +120,16 @@
                     "speedFactor": 1.25,
                     "basis": "Brookfield states MAX 4000XL runs 25% faster than other rapid LOD instruments, driven by the built-in lid fan's rapid chamber cooling."
                   }
-                ]
+                ],
+                "hint": "Standard oven, or another rapid LOD instrument"
               }
             ],
             "fields": [
-              {
-                "key": "minutesPerSample",
-                "label": "Minutes per sample on the current method",
-                "default": 180,
-                "min": 1
-              },
-              {
-                "key": "samplesPerDay",
-                "label": "Samples tested per day",
-                "default": 12,
-                "min": 1
-              }
+              { "key": "minutesPerSample", "label": "Average test time now", "default": 180, "min": 1, "hint": "Minutes or hours per sample" },
+              { "key": "samplesPerDay", "label": "Samples tested per day", "default": 12, "min": 1, "hint": "Daily volume" }
             ],
             "submitLabel": "Get Configuration Support",
-            "ctaNote": "Share the current method and daily volume, and the right MAX 4000XL configuration gets confirmed against it.",
+            "ctaNote": "Calculates against the 100x (oven) or 25% (rapid LOD) speed figures. Routes to a configuration-specific quotation.",
             "disclaimer": "Time recovered is calculated from the figures entered against Brookfield's stated speed comparisons. The 100x figure is against the oven method specifically; the 25% figure is Brookfield's comparison against other rapid LOD instruments — worth confirming which competitor instrument that benchmark was run against."
           },
 
@@ -126,7 +140,9 @@
             "steps": [
               {
                 "key": "industry",
-                "question": "Which industry is the material from?",
+                "label": "Industry",
+                "question": "Industry",
+                "hint": "Food, pharma, plastics, or chemicals",
                 "options": [
                   { "val": "food", "label": "Food" },
                   { "val": "pharma", "label": "Pharma" },
@@ -136,66 +152,121 @@
               },
               {
                 "key": "moistureType",
-                "question": "What moisture behavior does the material have?",
+                "label": "Moisture type",
+                "question": "Moisture type",
+                "hint": "Free moisture only, or free plus bound",
                 "options": [
                   { "val": "free-only", "label": "Free moisture only" },
-                  { "val": "free-plus-bound", "label": "Free plus bound moisture" }
+                  { "val": "free-plus-bound", "label": "Free plus bound" }
                 ]
               },
               {
                 "key": "accuracyRequirement",
-                "question": "How tight does the accuracy need to be?",
+                "label": "Accuracy requirement",
+                "question": "Accuracy requirement",
+                "hint": "Standard QC, or tight regulatory spec",
                 "options": [
-                  { "val": "routine", "label": "Routine QC tolerance" },
-                  { "val": "tight", "label": "Tight, audit-grade accuracy" }
+                  { "val": "standard-qc", "label": "Standard QC" },
+                  { "val": "tight-regulatory-spec", "label": "Tight regulatory spec" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Free moisture alone typically fits a single-stage test; free plus bound moisture calls for a multistage sequence — share the accuracy requirement (standard QC or tight regulatory spec), and the right test setup gets confirmed.",
-              "ctaLabel": "Talk to Product Expert"
-            }
+            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "Recommends single-stage or multistage configuration",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "planners": [
             {
               "sectionId": "remote-access-data-checker",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Share the access and data-management needs, and whether the web server option applies gets confirmed.",
+              "ctaNote": "Confirms whether the optional web server feature fits. Routes to a configuration-specific quotation.",
               "eyebrow": "Remote Access and Data Management Checker",
               "title": "Does the data need to leave the instrument?",
               "description": "Select the access and reporting needs, and see whether the web server option applies.",
               "fields": [
-                { "key": "choices", "label": "Choose one" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Remote access needed", "choices": "Yes; On-device only" },
-                { "title": "Audit log requirement", "choices": "Required; Not needed" },
-                { "title": "Data upload/download", "choices": "Required; Manual review only" }
+                { "title": "Remote access needed", "hint": "Yes, or on-device only", "choices": "Yes; On-device only" },
+                { "title": "Audit log requirement", "hint": "Required, or not needed", "choices": "Required; Not needed" },
+                { "title": "Data upload/download", "hint": "Required, or manual review only", "choices": "Required; Manual review only" }
               ],
-              "disclaimer": "Confirms whether the optional web server feature fits, then routes to a configuration-specific quotation."
+              "disclaimer": ""
             }
           ],
 
           "comparison": {
-            "eyebrow": "Choosing a loss-on-drying method",
-            "title": "MAX 4000XL vs Standard Oven Reference vs Other Rapid LOD Instruments",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Computrac MAX 4000XL against loss-on-drying alternatives.",
             "columns": [
-              { "label": "MAX 4000XL (Rapid LOD)", "highlight": true },
-              { "label": "Standard Oven Reference", "highlight": false },
-              { "label": "Other Rapid LOD Instruments", "highlight": false }
+              { "label": "MAX 4000XL (Rapid LOD)" },
+              { "label": "Standard Oven Reference" },
+              { "label": "Other Rapid LOD Instruments" }
             ],
             "rows": [
-              { "feature": "Test Speed", "values": ["Up to 100x faster than oven", "Baseline — hours per test", "Faster than oven, but 25% slower than MAX 4000XL"] },
-              { "feature": "Balance Resolution", "values": ["100 µg", "Method-dependent", "Confirm per instrument"] },
-              { "feature": "Cooling Between Tests", "values": ["Built-in lid fan, rapid", "Not applicable", "Standard cooling, slower cycle"] },
-              { "feature": "Construction", "values": ["All-steel, production-floor rated", "Lab-only equipment", "Confirm per instrument"] },
-              { "feature": "Data Storage On-Device", "values": ["250 programs / 1,000 results / 100 graphs", "None", "Confirm per instrument"] },
-              { "feature": "Best For", "values": ["High-volume QC needing speed and accuracy together", "Reference-grade, non-time-sensitive testing", "Labs already using rapid LOD, evaluating an upgrade"] },
-              { "feature": "Choose When", "values": ["Throughput and turnaround matter", "Regulatory reference method is mandated", "—"] }
+              {
+                "feature": "Test Speed",
+                "values": [
+                  "Up to 100x faster than oven",
+                  "Baseline — hours per test",
+                  "Faster than oven, but 25% slower than MAX 4000XL"
+                ]
+              },
+              {
+                "feature": "Balance Resolution",
+                "values": [
+                  "100 µg",
+                  "Method-dependent",
+                  "Confirm per instrument"
+                ]
+              },
+              {
+                "feature": "Cooling Between Tests",
+                "values": [
+                  "Built-in lid fan, rapid",
+                  "Not applicable",
+                  "Standard cooling, slower cycle"
+                ]
+              },
+              {
+                "feature": "Construction",
+                "values": [
+                  "All-steel, production-floor rated",
+                  "Lab-only equipment",
+                  "Confirm per instrument"
+                ]
+              },
+              {
+                "feature": "Data Storage On-Device",
+                "values": [
+                  "250 programs / 1,000 results / 100 graphs",
+                  "None",
+                  "Confirm per instrument"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "High-volume QC needing speed and accuracy together",
+                  "Reference-grade, non-time-sensitive testing",
+                  "Labs already using rapid LOD, evaluating an upgrade"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Throughput and turnaround matter",
+                  "Regulatory reference method is mandated",
+                  "—"
+                ]
+              }
             ],
-            "disclaimer": "The 100x figure is against the oven method specifically. The 25% figure is Brookfield's comparison against other rapid LOD instruments — worth confirming which specific competitor instrument that benchmark was run against before quoting it to a customer directly."
+            "disclaimer": "The 100x figure is against the oven method specifically. The 25% figure is Brookfield's comparison against other rapid LOD instruments — worth confirming which specific competitor instrument that benchmark was run against before quoting it to a customer directly.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
@@ -203,12 +274,60 @@
             "title": "Industry Explorer",
             "description": "Where Computrac MAX 4000XL fits.",
             "industries": [
-              { "name": "Food Manufacturing", "icon": "coffee", "useCase": "Moisture and solids QC release testing", "consideration": "Fast turnaround keeps production moving" },
-              { "name": "Pharmaceutical Manufacturing", "icon": "pill", "useCase": "Moisture content in raw materials and finished product", "consideration": "100 µg accuracy meets tight spec limits" },
-              { "name": "Plastics and Polymers", "icon": "cpu", "useCase": "In-process moisture monitoring", "consideration": "Rapid results support real-time adjustment" },
-              { "name": "Chemical Manufacturing", "icon": "flask", "useCase": "Solids and moisture content across varied chemistries", "consideration": "Rugged build handles harsh production environments" },
-              { "name": "Contract Testing Labs", "icon": "target", "useCase": "High sample throughput across varied client materials", "consideration": "25% faster cycle time increases daily capacity" },
-              { "name": "Regulated Industries", "icon": "shield", "useCase": "Documented, auditable moisture testing", "consideration": "Optional web server pulls calibration reports and audit logs remotely" }
+              {
+                "name": "Food Manufacturing",
+                "icon": "coffee",
+                "note": "Use Case: Moisture and solids QC release testing",
+                "bullets": [
+                  "Why It Fits: Fast turnaround keeps production moving"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Manufacturing",
+                "icon": "pill",
+                "note": "Use Case: Moisture content in raw materials and finished product",
+                "bullets": [
+                  "Why It Fits: 100 µg accuracy meets tight spec limits"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Plastics and Polymers",
+                "icon": "cpu",
+                "note": "Use Case: In-process moisture monitoring",
+                "bullets": [
+                  "Why It Fits: Rapid results support real-time adjustment"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical Manufacturing",
+                "icon": "flask",
+                "note": "Use Case: Solids and moisture content across varied chemistries",
+                "bullets": [
+                  "Why It Fits: Rugged build handles harsh production environments"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Testing Labs",
+                "icon": "target",
+                "note": "Use Case: High sample throughput across varied client materials",
+                "bullets": [
+                  "Why It Fits: 25% faster cycle time increases daily capacity"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Regulated Industries",
+                "icon": "shield",
+                "note": "Use Case: Documented, auditable moisture testing",
+                "bullets": [
+                  "Why It Fits: Optional web server pulls calibration reports and audit logs remotely"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -216,30 +335,54 @@
             "title": "Inkarp Service Near You",
             "description": "MAX 4000XL service in India: demonstration, installation, training, and AMC.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Runs your own material to show real speed and accuracy." },
-              { "title": "Method Setup Support", "description": "Confirms ending criteria and multistage configuration." },
-              { "title": "Installation Support", "description": "Setup, calibration, first-run checks." },
-              { "title": "Operator Training", "description": "Interface, program setup, routine operation." },
-              { "title": "Web Server Configuration", "description": "Sets up remote access where required." },
-              { "title": "Preventive Maintenance", "description": "Heating element, balance, lid fan performance." },
-              { "title": "Spares and Accessories", "description": "Replacement parts as needed." },
-              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC." }
+              { "title": "Product Demonstration", "description": "Runs your own material to show real speed and accuracy" },
+              { "title": "Method Setup Support", "description": "Confirms ending criteria and multistage configuration" },
+              { "title": "Installation Support", "description": "Setup, calibration, first-run checks" },
+              { "title": "Operator Training", "description": "Interface, program setup, routine operation" },
+              { "title": "Web Server Configuration", "description": "Sets up remote access where required" },
+              { "title": "Preventive Maintenance", "description": "Heating element, balance, lid fan performance" },
+              { "title": "Spares and Accessories", "description": "Replacement parts as needed" },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC" }
             ]
           },
 
           "faqs": [
-            { "question": "What is the Computrac MAX 4000XL used for?", "answer": "Moisture and solids analysis via loss-on-drying, used across food, pharmaceutical, plastics, and chemical manufacturing." },
+            {
+              "question": "What is the Computrac MAX 4000XL used for?",
+              "answer": "Moisture and solids analysis via loss-on-drying, used across food, pharmaceutical, plastics, and chemical manufacturing."
+            },
             { "question": "How much faster is it than a standard oven?", "answer": "Up to 100x faster, per Brookfield." },
-            { "question": "How much faster is it than other rapid moisture analyzers?", "answer": "25% faster throughput, attributed to the built-in lid fan's rapid chamber cooling." },
+            {
+              "question": "How much faster is it than other rapid moisture analyzers?",
+              "answer": "25% faster throughput, attributed to the built-in lid fan's rapid chamber cooling."
+            },
             { "question": "What is the balance resolution?", "answer": "100 micrograms." },
             { "question": "What is the enclosure made of?", "answer": "All-steel, with a nickel chromium heating element — rated for production floor use." },
-            { "question": "Can it measure both free and bound moisture?", "answer": "Yes, via multistage testing that adjusts temperature, ending criteria, and timing across linked test segments." },
+            {
+              "question": "Can it measure both free and bound moisture?",
+              "answer": "Yes, via multistage testing that adjusts temperature, ending criteria, and timing across linked test segments."
+            },
             { "question": "How many test programs and results can it store?", "answer": "250 test programs, 1,000 test results, and 100 test graphs." },
-            { "question": "Can the instrument be accessed remotely?", "answer": "Yes, with the optional web server feature — remote LCD viewing, calibration report downloads, audit log access, and program/result upload-download." },
-            { "question": "What does the display show during testing?", "answer": "Real-time moisture curve and rate-of-moisture-loss graphs, on a large color display." },
-            { "question": "Where can I find full technical specifications?", "answer": "Drying temperature range, sample capacity, dimensions, and compliance standards weren't confirmed in this source pull — Inkarp can request the full specification sheet from Brookfield." },
-            { "question": "What is the price of the Computrac MAX 4000XL in India?", "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements." },
-            { "question": "Who is the authorized distributor of the Computrac MAX 4000XL in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Computrac® MAX 4000XL in India, including demonstration, installation, training, AMC, spares, and support." }
+            {
+              "question": "Can the instrument be accessed remotely?",
+              "answer": "Yes, with the optional web server feature — remote LCD viewing, calibration report downloads, audit log access, and program/result upload-download."
+            },
+            {
+              "question": "What does the display show during testing?",
+              "answer": "Real-time moisture curve and rate-of-moisture-loss graphs, on a large color display."
+            },
+            {
+              "question": "Where can I find full technical specifications?",
+              "answer": "Drying temperature range, sample capacity, dimensions, and compliance standards weren't confirmed in this source pull — Inkarp can request the full specification sheet from Brookfield."
+            },
+            {
+              "question": "What is the price of the Computrac MAX 4000XL in India?",
+              "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of the Computrac MAX 4000XL in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Computrac® MAX 4000XL in India, including demonstration, installation, training, AMC, spares, and support."
+            }
           ],
 
           "booking": {
@@ -260,9 +403,14 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration fast", "body": "Share the material being tested, the moisture range expected, and whether remote data access matters, and the right MAX 4000XL configuration gets confirmed fast." },
-              { "title": "Confirm the throughput gain", "body": "Share your daily sample volume, and the real-world time saved from the faster cooling cycle gets estimated against your current instrument." },
-              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+              { "title": "Product Demonstration", "body": "Runs your own material to show real speed and accuracy" },
+              { "title": "Method Setup Support", "body": "Confirms ending criteria and multistage configuration" },
+              { "title": "Installation Support", "body": "Setup, calibration, first-run checks" },
+              { "title": "Operator Training", "body": "Interface, program setup, routine operation" },
+              { "title": "Web Server Configuration", "body": "Sets up remote access where required" },
+              { "title": "Preventive Maintenance", "body": "Heating element, balance, lid fan performance" },
+              { "title": "Spares and Accessories", "body": "Replacement parts as needed" },
+              { "title": "Service Support", "body": "Troubleshooting, maintenance visits, AMC" }
             ]
           },
 
@@ -289,27 +437,35 @@
                 "title": "Product Information",
                 "description": "Everything the Computrac MAX 4000XL does, in one place: measurement method, build quality, and data handling.",
                 "body": [
-                  "Loss-on-drying moisture and solids analyzer. Precise, repeatable results across industrial applications.",
-                  "Rugged by design. Built to keep monitoring and adjusting process quality, cutting waste, energy, and labor cost along the way.",
-                  "100-microgram balance. Accurate, repeatable moisture data — not a rough estimate.",
-                  "All-steel enclosure. Nickel chromium heating element. Heavy-duty use, lab or production floor.",
-                  "Built-in lid fan cools the chamber fast. 25% faster throughput than other rapid LOD instruments.",
-                  "Up to 100x faster than a standard oven. Minutes, not hours.",
-                  "Used across food, pharma, plastics, and chemicals. One instrument, many industries.",
-                  "User-adjustable ending criteria. Tune the test to the material, not the other way around.",
-                  "Multistage testing. Link tests together, adjusting temperature, ending criteria, and timing between segments — built for method development and for separating free from bound moisture.",
-                  "Live moisture curve and rate-of-loss graphs. Watch the test happen, on a large color display.",
-                  "Menu-driven interface. User-programmable settings, no steep learning curve.",
-                  "Optional web server. Download calibration reports, view the screen remotely, pull audit logs, upload or download test programs and results.",
-                  "Stores 250 programs, 1,000 results, 100 graphs. History stays on the instrument.",
-                  "Free expert support from Brookfield's moisture analysis specialists."
+                  { "text": "Loss-on-drying moisture and solids analyzer. Precise, repeatable results across industrial applications." },
+                  { "text": "Rugged by design. Built to keep monitoring and adjusting process quality, cutting waste, energy, and labor cost along the way." },
+                  { "text": "100-microgram balance. Accurate, repeatable moisture data — not a rough estimate." },
+                  { "text": "All-steel enclosure. Nickel chromium heating element. Heavy-duty use, lab or production floor." },
+                  { "text": "Built-in lid fan cools the chamber fast. 25% faster throughput than other rapid LOD instruments." },
+                  { "text": "Up to 100x faster than a standard oven. Minutes, not hours." },
+                  { "text": "Used across food, pharma, plastics, and chemicals. One instrument, many industries." },
+                  { "text": "User-adjustable ending criteria. Tune the test to the material, not the other way around." },
+                  {
+                    "text": "Multistage testing. Link tests together, adjusting temperature, ending criteria, and timing between segments — built for method development and for separating free from bound moisture."
+                  },
+                  { "text": "Live moisture curve and rate-of-loss graphs. Watch the test happen, on a large color display." },
+                  { "text": "Menu-driven interface. User-programmable settings, no steep learning curve." },
+                  {
+                    "text": "Optional web server. Download calibration reports, view the screen remotely, pull audit logs, upload or download test programs and results."
+                  },
+                  { "text": "Stores 250 programs, 1,000 results, 100 graphs. History stays on the instrument." },
+                  { "text": "Free expert support from Brookfield's moisture analysis specialists." }
                 ],
                 "cards": [
                   { "title": "100 µg balance", "description": "Accuracy that holds up under audit" },
                   { "title": "100x faster than oven", "description": "Hours become minutes" },
                   { "title": "25% faster than rivals", "description": "Even against other rapid LOD units" },
                   { "title": "250/1,000/100 storage", "description": "A full test history, on-device" }
-                ]
+                ],
+                "glanceTitle": "MAX 4000XL at a Glance",
+                "glanceDescription": "What loss-on-drying measures, and how MAX 4000XL gets there faster than the alternatives.",
+                "subheading": "Overview",
+                "intro": "What the Computrac MAX 4000XL is, and what it does — the short version."
               },
               {
                 "key": "features",
@@ -330,26 +486,48 @@
                 "tabSummary": "Balance resolution, build, storage — confirmed in this source",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "What's confirmed. What isn't — flagged, not filled in."
+                "description": "What's confirmed. What isn't — flagged, not filled in.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ]
               },
               {
                 "key": "performance",
-                "columnHeaders": { "label": "The bottleneck", "value": "The fix" },
-                "tabSummary": "Why the lid fan is the whole speed story",
                 "eyebrow": "Rapid Cooling and Throughput",
                 "title": "Rapid Cooling and Throughput",
-                "description": "Why the lid fan is the real story behind the 25% figure.",
+                "tabSummary": "Why the lid fan is the whole speed story",
                 "body": [
+                  "Why the lid fan is the real story behind the 25% figure.",
                   "Loss-on-drying testing has a bottleneck most people don't think about: the chamber has to cool before the next sample goes in. Every minute spent cooling is a minute the instrument isn't testing.",
                   "MAX 4000XL's built-in lid fan solves that directly. It cools the heating chamber fast, and Brookfield states the result plainly: 25% faster throughput than other rapid loss-on-drying instruments.",
                   "That's not a marginal gain. Across a full shift of testing, 25% is the difference between finishing the queue and carrying samples into tomorrow."
                 ],
-                "utilityChecklist": [
-                  { "label": "Chamber takes too long to cool between tests", "value": "Built-in lid fan, rapid cooling" },
-                  { "label": "Slow turnaround limits daily sample throughput", "value": "25% faster than other rapid LOD instruments" },
-                  { "label": "Oven methods take hours", "value": "Up to 100x faster with MAX 4000XL" }
-                ],
-                "disclaimer": "Share your daily sample volume, and the real-world time saved from the faster cooling cycle gets estimated against your current instrument."
+                "groups": [
+                  {
+                    "columns": [
+                      "The bottleneck",
+                      "The fix"
+                    ],
+                    "rows": [
+                      [
+                        "Chamber takes too long to cool between tests",
+                        "Built-in lid fan, rapid cooling"
+                      ],
+                      [
+                        "Slow turnaround limits daily sample throughput",
+                        "25% faster than other rapid LOD instruments"
+                      ],
+                      [
+                        "Oven methods take hours",
+                        "Up to 100x faster with MAX 4000XL"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share your daily sample volume, and the real-world time saved from the faster cooling cycle gets estimated against your current instrument."
+                  }
+                ]
               },
               {
                 "key": "benefits",
@@ -357,19 +535,21 @@
                 "eyebrow": "Multistage Testing and Flexible Ending Criteria",
                 "title": "Multistage Testing and Flexible Ending Criteria",
                 "description": "Free moisture. Bound moisture. One test.",
-                "body": [
+                "body": [],
+                "columnHeaders": { "label": "The material behavior", "value": "The MAX 4000XL response" },
+                "cards": [
+                  { "title": "Free moisture releases quickly", "description": "First stage captures it" },
+                  { "title": "Bound moisture needs different conditions", "description": "Later stage adjusts temperature and criteria" },
+                  { "title": "Every material dries differently", "description": "Ending criteria tuned per application" },
+                  { "title": "Method development needs flexibility", "description": "Multistage sequences, fully configurable" }
+                ],
+                "disclaimer": "Share whether the material has both free and bound moisture components, and a multistage test sequence gets built around it.",
+                "paragraphs": [
                   "Not all moisture behaves the same way. Some evaporates fast and easily — free moisture. Some is chemically bound to the material and needs a different temperature, a different endpoint, to release.",
                   "MAX 4000XL links multiple test stages into one sequence. Temperature, ending criteria, and timing can all change between segments — so a single run captures both free and bound moisture without manual intervention between stages.",
                   "User-adjustable ending criteria go further: the test stops when your material says it's done, not when a generic default says so."
                 ],
-                "columnHeaders": { "label": "The material behavior", "value": "The MAX 4000XL response" },
-                "cards": [
-                  { "title": "Free moisture releases quickly", "description": "The first stage captures moisture that releases quickly, without waiting on the slower-releasing fraction." },
-                  { "title": "Bound moisture needs different conditions", "description": "A later stage changes temperature and ending criteria to release moisture that's chemically bound to the material." },
-                  { "title": "Every material dries differently", "description": "Every material dries differently — ending criteria get tuned per application rather than left at a generic default." },
-                  { "title": "Method development needs flexibility", "description": "Method development gets the flexibility to link stages together, fully configurable to the material at hand." }
-                ],
-                "disclaimer": "Share whether the material has both free and bound moisture components, and a multistage test sequence gets built around it."
+                "note": "Share whether the material has both free and bound moisture components, and a multistage test sequence gets built around it."
               },
               {
                 "key": "config",
@@ -385,8 +565,12 @@
                   { "title": "Speed", "description": "Up to 100x faster than oven methods; 25% faster than other rapid LOD instruments" },
                   { "title": "Data storage", "description": "250 programs, 1,000 results, 100 graphs" },
                   { "title": "Optional", "description": "Web server for remote access and data management" },
-                  { "title": "Not confirmed in this source", "description": "drying temperature range, sample capacity, dimensions, compliance standards, accessories — available on request" }
-                ]
+                  {
+                    "title": "Not confirmed in this source",
+                    "description": "drying temperature range, sample capacity, dimensions, compliance standards, accessories — available on request"
+                  }
+                ],
+                "disclaimer": "Share the material being tested, the moisture range expected, and whether remote data access matters, and the right MAX 4000XL configuration gets confirmed fast."
               },
               {
                 "key": "docs",
@@ -406,32 +590,62 @@
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Get the Computrac® MAX 4000XL in India from Inkarp",
-              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. 100x faster than an oven. 25% faster than the competition. 100-microgram accuracy that doesn't get traded away for speed. Share your material and daily sample volume, and the right configuration gets confirmed fast.",
+              "description": "100x faster than an oven. 25% faster than the competition. 100-microgram accuracy that doesn't get traded away for speed. Share your material and daily sample volume, and the right configuration gets confirmed fast.",
               "label": "Request Quote",
               "href": "#booking",
               "secondaryLabel": "Talk to Product Expert",
-              "secondaryHref": "/contact"
-            }
-          }
+              "secondaryHref": "#booking",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts."
+            },
+            "heroParagraphs": [
+              "Moisture testing shouldn't take hours. The Computrac® MAX 4000XL cuts loss-on-drying analysis down to minutes — up to 100x faster than a standard oven reference method, and 25% faster than other rapid LOD instruments on the market.",
+              "The speed comes from a built-in lid fan that rapidly cools the heating chamber between tests. Less waiting, more samples through the door.",
+              "Accuracy doesn't get traded away for speed. A 100-microgram resolution balance delivers repeatable, defensible results, run after run. The enclosure is all-steel. The heating element is nickel chromium. Built for the lab bench and the production floor alike.",
+              "What it measures: moisture and solids content, across food, pharmaceutical, plastics, and chemical applications.",
+              "What it stores: 250 test programs, 1,000 results, 100 graphs — all on the instrument.",
+              "What it shows: real-time moisture curves and rate-of-loss data, live, on a large color display."
+            ],
+            "statsIntro": "Computrac MAX 4000XL moisture analyzer specifications at a glance."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Computrac® MAX 5000XL Moisture Analyzer",
+
           "slug": "computrac-max-5000xl-moisture-analyzer",
+
           "principalImage": "/assets/images/PrincipalLogos/Brookfield.webp",
+
           "imageAlt": "Ametek Brookfield Computrac® MAX 5000XL Moisture Analyzer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/computrac-max-5000xl-moisture-analyzer",
+
           "breadcrumbPath": "Home > Products > Moisture Analyzers > Computrac® MAX 5000XL Moisture Analyzer",
+
           "h1": "Computrac® MAX 5000XL Moisture Analyzer",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Thermogravimetric analyzers do this job well. They also cost a lot more than most labs need to spend. Computrac® MAX 5000XL delivers the features typically found in a TGA, at a fraction of the price.",
 
           "features": [
-            "600°C Heater Enables Both LOD and LOI: Most moisture analyzers stop at drying temperatures. MAX 5000XL goes hot enough for loss-on-ignition too, opening up ash content measurement on the same sample.",
-            "A Genuine TGA Alternative, Not Just a Faster Oven: Brookfield states this directly: features typically found in more expensive thermogravimetric analyzers, at a fraction of the cost.",
-            "One-Button Operation: No intermediate weighing. No manual cooling steps. The whole test runs from a single command.",
-            "Self-Cleaning Oven Cycle: 45 minutes at 550°C keeps the heating chamber clean without manual scrubbing or teardown.",
-            "Multistage Testing for Moisture, Solids, and Ash Together: One linked sequence, adjusting temperature and criteria between segments, captures all three from a single sample."
+            {
+              "title": "600°C Heater Enables Both LOD and LOI",
+              "description": "Most moisture analyzers stop at drying temperatures. MAX 5000XL goes hot enough for loss-on-ignition too, opening up ash content measurement on the same sample."
+            },
+            {
+              "title": "A Genuine TGA Alternative, Not Just a Faster Oven",
+              "description": "Brookfield states this directly: features typically found in more expensive thermogravimetric analyzers, at a fraction of the cost."
+            },
+            { "title": "One-Button Operation", "description": "No intermediate weighing. No manual cooling steps. The whole test runs from a single command." },
+            { "title": "Self-Cleaning Oven Cycle", "description": "45 minutes at 550°C keeps the heating chamber clean without manual scrubbing or teardown." },
+            {
+              "title": "Multistage Testing for Moisture, Solids, and Ash Together",
+              "description": "One linked sequence, adjusting temperature and criteria between segments, captures all three from a single sample."
+            }
           ],
 
           "technicalSpecs": [
@@ -452,13 +666,13 @@
           ],
 
           "applications": [
-            "Plastics and Polymer Testing: Moisture and ash content from one sample, one test.",
-            "Pharmaceutical Analysis: Accurate, repeatable moisture and solids data.",
-            "Food and Beverage Testing: Moisture, solids, and ash analysis across varied food matrices.",
-            "Biomass Material Analysis: High-temperature LOI testing suited to biomass ash content.",
-            "TGA Cost Reduction Projects: Cost-effective alternative for labs evaluating a TGA purchase.",
-            "Production Floor QC: Cast aluminum construction rated for heavy-duty use.",
-            "Regulated Documentation: Optional web server pulls audit logs and calibration reports remotely."
+            { "title": "Plastics and Polymer Testing", "description": "Moisture and ash content from one sample, one test" },
+            { "title": "Pharmaceutical Analysis", "description": "Accurate, repeatable moisture and solids data" },
+            { "title": "Food and Beverage Testing", "description": "Moisture, solids, and ash analysis across varied food matrices" },
+            { "title": "Biomass Material Analysis", "description": "High-temperature LOI testing suited to biomass ash content" },
+            { "title": "TGA Cost Reduction Projects", "description": "Cost-effective alternative for labs evaluating a TGA purchase" },
+            { "title": "Production Floor QC", "description": "Cast aluminum construction rated for heavy-duty use" },
+            { "title": "Regulated Documentation", "description": "Optional web server pulls audit logs and calibration reports remotely" }
           ],
 
           "inPageNav": [
@@ -476,14 +690,15 @@
 
           "suitability": {
             "ctaLabel": "Get Configuration Support",
-            "ctaNote": "Share whether loss-on-ignition testing is part of the workload, and the right MAX 5000XL setup gets confirmed.",
+            "ctaNote": "Confirms whether LOD alone or combined LOD/LOI testing fits. Routes to a configuration-specific quotation.",
             "eyebrow": "LOD/LOI Requirement Checker",
-            "title": "Does the application need loss-on-ignition testing?",
+            "title": "Computrac MAX 5000XL test requirement checker: does the application need loss-on-ignition testing?",
             "description": "Select the material and required measurements, and see the recommended test method.",
             "fields": [
               {
                 "key": "materialType",
                 "label": "Material type",
+                "hint": "Plastics, pharmaceuticals, foods, or biomass",
                 "options": [
                   { "val": "plastics", "label": "Plastics" },
                   { "val": "pharmaceuticals", "label": "Pharmaceuticals" },
@@ -494,6 +709,7 @@
               {
                 "key": "measurementsRequired",
                 "label": "Measurements required",
+                "hint": "Moisture only, or moisture plus ash content",
                 "options": [
                   { "val": "moisture-only", "label": "Moisture only" },
                   { "val": "moisture-plus-ash", "label": "Moisture plus ash content" }
@@ -502,8 +718,9 @@
               {
                 "key": "currentMethod",
                 "label": "Current method",
+                "hint": "Separate TGA, oven, or another moisture analyzer",
                 "options": [
-                  { "val": "tga", "label": "TGA" },
+                  { "val": "tga", "label": "Separate TGA" },
                   { "val": "oven", "label": "Oven" },
                   { "val": "loss-on-drying", "label": "Another moisture analyzer" }
                 ]
@@ -514,102 +731,188 @@
                 "condition": { "materialType": "biomass" },
                 "title": "600°C Reaches LOI-Capable Range",
                 "body": "Biomass ash content determination needs the LOI-capable temperature range MAX 5000XL's 600°C heater reaches.",
-                "tags": ["Biomass"]
+                "tags": [
+                  "Biomass"
+                ]
               },
               {
                 "condition": { "measurementsRequired": "moisture-plus-ash" },
                 "title": "Combined LOD/LOI Testing Fits",
                 "body": "Ash content alongside moisture calls for MAX 5000XL's combined loss-on-drying and loss-on-ignition testing, run from the same sample.",
-                "tags": ["LOD + LOI"]
+                "tags": [
+                  "LOD + LOI"
+                ]
               },
               {
                 "condition": { "measurementsRequired": "moisture-only" },
                 "title": "LOD Alone May Be Sufficient",
                 "body": "If moisture is the only measurement required, a loss-on-drying-only test may be sufficient — confirm against current method and required turnaround.",
-                "tags": ["LOD Only"]
+                "tags": [
+                  "LOD Only"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Test Method Fit",
                 "body": "Share the material and current testing method, and whether LOD alone or combined LOD/LOI fits gets confirmed.",
-                "tags": ["Configuration Guidance"]
+                "tags": [
+                  "Configuration Guidance"
+                ]
               }
-            ]
+            ],
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "metricCalculator": {
             "formula": "workload-consolidation",
             "sectionId": "tga-cost-comparison",
             "eyebrow": "TGA Cost Comparison Calculator",
-            "title": "What would switching from a TGA actually save?",
-            "description": "Enter the current testing setup and volume, and see the runs and cost that consolidate onto one instrument.",
+            "title": "Computrac MAX 5000XL vs TGA: what would switching actually save?",
+            "description": "Enter the current testing setup, and see the potential cost and time comparison.",
             "fields": [
-              {
-                "key": "samplesPerWeek",
-                "label": "Samples tested per week",
-                "default": 60,
-                "min": 1
-              },
-              {
-                "key": "runsPerSampleNow",
-                "label": "Separate runs each sample needs today",
-                "default": 2,
-                "min": 1,
-                "max": 6
-              },
-              {
-                "key": "costPerRun",
-                "label": "Cost per run today (INR, consumables and labour)",
-                "default": 500,
-                "min": 0
-              }
+              { "key": "samplesPerWeek", "label": "Samples tested per week", "default": 60, "min": 1, "hint": "Testing volume" },
+              { "key": "runsPerSampleNow", "label": "Separate runs each sample needs today", "default": 2, "min": 1, "max": 6 },
+              { "key": "costPerRun", "label": "Cost per run today (INR, consumables and labour)", "default": 500, "min": 0 }
             ],
             "submitLabel": "Talk to Product Expert",
-            "ctaNote": "Share the samples tested per week, and the cost and workflow consolidation from moving off a TGA — or off separate LOD/LOI instruments — onto MAX 5000XL gets confirmed against your own rates.",
-            "disclaimer": "MAX 5000XL captures moisture, solids and ash from one sample in a single linked sequence, so each sample needs one run rather than separate LOD and LOI runs. Run counts and cost come from the figures entered — nothing here assumes a price for your current instrument."
+            "ctaNote": "Estimates cost and workflow consolidation potential against MAX 5000XL. Routes to a cost-comparison quotation.",
+            "disclaimer": "MAX 5000XL captures moisture, solids and ash from one sample in a single linked sequence, so each sample needs one run rather than separate LOD and LOI runs. Run counts and cost come from the figures entered — nothing here assumes a price for your current instrument.",
+            "choices": [
+              {
+                "key": "currentTestingMethod",
+                "label": "Current testing method",
+                "hint": "TGA, standard oven, or separate LOD/LOI instruments",
+                "default": "tga",
+                "options": [
+                  { "val": "tga", "label": "TGA" },
+                  { "val": "standard-oven", "label": "Standard oven" },
+                  { "val": "separate-lod-loi-instruments", "label": "Separate LOD/LOI instruments" }
+                ]
+              },
+              {
+                "key": "ashTestingRequired",
+                "label": "Ash testing required",
+                "hint": "Yes, or moisture only currently",
+                "default": "yes",
+                "options": [
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "moisture-only-currently", "label": "Moisture only currently" }
+                ]
+              }
+            ]
           },
 
           "planners": [
             {
               "sectionId": "remote-access-maintenance-checker",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Share the access and maintenance needs, and whether the web server option applies gets confirmed.",
+              "ctaNote": "Confirms whether the optional web server feature fits. Routes to a configuration-specific quotation.",
               "eyebrow": "Remote Access and Maintenance Checker",
-              "title": "Does the data need to leave the solution?",
+              "title": "Computrac MAX 5000XL remote access checker: does the data need to leave the solution?",
               "description": "Select the access and maintenance needs, and see whether the web server option applies.",
               "fields": [
-                { "key": "choices", "label": "Choose one" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Remote access needed", "choices": "Yes; On-device only" },
-                { "title": "Audit log requirement", "choices": "Required; Not needed" },
-                { "title": "Maintenance frequency", "choices": "Routine self-cleaning acceptable; Manual preferred" }
+                { "title": "Remote access needed", "hint": "Yes, or on-device only", "choices": "Yes; On-device only" },
+                { "title": "Audit log requirement", "hint": "Required, or not needed", "choices": "Required; Not needed" },
+                {
+                  "title": "Maintenance frequency",
+                  "hint": "Routine self-cleaning acceptable, or manual preferred",
+                  "choices": "Routine self-cleaning acceptable; Manual preferred"
+                }
               ],
-              "disclaimer": "Confirms whether the optional web server feature fits, then routes to a configuration-specific quotation."
+              "disclaimer": ""
             }
           ],
 
           "comparison": {
-            "eyebrow": "Choosing between MAX 5000XL, MAX 4000XL, and a TGA",
-            "title": "MAX 5000XL vs MAX 4000XL vs Thermogravimetric Analyzer (TGA)",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Computrac MAX 5000XL against MAX 4000XL and thermogravimetric analyzers.",
             "columns": [
-              { "label": "MAX 5000XL", "highlight": true },
-              { "label": "MAX 4000XL", "highlight": false },
-              { "label": "Thermogravimetric Analyzer (TGA)", "highlight": false }
+              { "label": "MAX 5000XL" },
+              { "label": "MAX 4000XL" },
+              { "label": "Thermogravimetric Analyzer (TGA)" }
             ],
             "rows": [
-              { "feature": "Maximum Temperature", "values": ["600°C", "Not confirmed at LOI-capable range", "Typically higher, reference-grade"] },
-              { "feature": "Test Methods", "values": ["LOD and LOI", "LOD only", "LOD and LOI, reference standard"] },
-              { "feature": "Ash Content Measurement", "values": ["Yes", "Not stated", "Yes"] },
-              { "feature": "Test Time", "values": ["30 minutes or less", "Fast, 25% faster than other rapid LOD solutions", "Longer, reference-method timing"] },
-              { "feature": "Construction", "values": ["Cast aluminum", "All-steel", "Lab-grade, typically bench-only"] },
-              { "feature": "Self-Cleaning", "values": ["Yes, 45 min at 550°C", "Not stated", "Method-dependent"] },
-              { "feature": "Cost Position", "values": ["Cost-effective alternative to TGA", "Entry point for rapid LOD testing", "Highest capital cost"] },
-              { "feature": "Best For", "values": ["Labs needing moisture, solids, and ash from one sample without TGA cost", "Labs needing fast, accurate moisture-only testing", "Labs needing full reference-grade thermogravimetric data"] },
-              { "feature": "Choose When", "values": ["Ash content matters alongside moisture", "Moisture testing alone is sufficient", "Regulatory reference method specifically requires TGA"] }
+              {
+                "feature": "Maximum Temperature",
+                "values": [
+                  "600°C",
+                  "Not confirmed at LOI-capable range",
+                  "Typically higher, reference-grade"
+                ]
+              },
+              {
+                "feature": "Test Methods",
+                "values": [
+                  "LOD and LOI",
+                  "LOD only",
+                  "LOD and LOI, reference standard"
+                ]
+              },
+              {
+                "feature": "Ash Content Measurement",
+                "values": [
+                  "Yes",
+                  "Not stated",
+                  "Yes"
+                ]
+              },
+              {
+                "feature": "Test Time",
+                "values": [
+                  "30 minutes or less",
+                  "Fast, 25% faster than other rapid LOD solutions",
+                  "Longer, reference-method timing"
+                ]
+              },
+              {
+                "feature": "Construction",
+                "values": [
+                  "Cast aluminum",
+                  "All-steel",
+                  "Lab-grade, typically bench-only"
+                ]
+              },
+              {
+                "feature": "Self-Cleaning",
+                "values": [
+                  "Yes, 45 min at 550°C",
+                  "Not stated",
+                  "Method-dependent"
+                ]
+              },
+              {
+                "feature": "Cost Position",
+                "values": [
+                  "Cost-effective alternative to TGA",
+                  "Entry point for rapid LOD testing",
+                  "Highest capital cost"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Labs needing moisture, solids, and ash from one sample without TGA cost",
+                  "Labs needing fast, accurate moisture-only testing",
+                  "Labs needing full reference-grade thermogravimetric data"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Ash content matters alongside moisture",
+                  "Moisture testing alone is sufficient",
+                  "Regulatory reference method specifically requires TGA"
+                ]
+              }
             ],
-            "disclaimer": "MAX 5000XL and MAX 4000XL solve different problems within the same product family: 4000XL is built for speed on moisture-only testing, 5000XL adds the temperature range for ash determination and positions itself against TGA equipment specifically. Choosing between the two comes down to whether ash content is part of the testing requirement."
+            "disclaimer": "MAX 5000XL and MAX 4000XL solve different problems within the same product family: 4000XL is built for speed on moisture-only testing, 5000XL adds the temperature range for ash determination and positions itself against TGA equipment specifically. Choosing between the two comes down to whether ash content is part of the testing requirement.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
@@ -617,12 +920,60 @@
             "title": "Industry Explorer",
             "description": "Computrac MAX 5000XL industries: plastics, pharmaceuticals, food, and biomass processing.",
             "industries": [
-              { "name": "Plastics and Polymer Manufacturing", "icon": "cpu", "useCase": "Moisture and ash content in resins and compounds", "consideration": "One test covers both measurements" },
-              { "name": "Pharmaceutical Manufacturing", "icon": "pill", "useCase": "Moisture and solids analysis in raw materials and finished product", "consideration": "Repeatable, lab-quality results" },
-              { "name": "Food and Beverage Processing", "icon": "coffee", "useCase": "Moisture, solids, and ash testing across food matrices", "consideration": "Multistage testing captures all three from one sample" },
-              { "name": "Biomass and Renewable Energy", "icon": "zap", "useCase": "Ash content determination in biomass feedstock", "consideration": "600°C heater reaches LOI-capable temperatures" },
-              { "name": "Contract Testing Laboratories", "icon": "target", "useCase": "Varied client materials needing moisture and ash data", "consideration": "Cost-effective TGA alternative extends service capability" },
-              { "name": "Chemical Manufacturing", "icon": "flask", "useCase": "Solids and ash content in process materials", "consideration": "Rugged construction suited to production environments" }
+              {
+                "name": "Plastics and Polymer Manufacturing",
+                "icon": "cpu",
+                "note": "Use Case: Moisture and ash content in resins and compounds",
+                "bullets": [
+                  "Why It Fits: One test covers both measurements"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Manufacturing",
+                "icon": "pill",
+                "note": "Use Case: Moisture and solids analysis in raw materials and finished product",
+                "bullets": [
+                  "Why It Fits: Repeatable, lab-quality results"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Beverage Processing",
+                "icon": "coffee",
+                "note": "Use Case: Moisture, solids, and ash testing across food matrices",
+                "bullets": [
+                  "Why It Fits: Multistage testing captures all three from one sample"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biomass and Renewable Energy",
+                "icon": "zap",
+                "note": "Use Case: Ash content determination in biomass feedstock",
+                "bullets": [
+                  "Why It Fits: 600°C heater reaches LOI-capable temperatures"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Testing Laboratories",
+                "icon": "target",
+                "note": "Use Case: Varied client materials needing moisture and ash data",
+                "bullets": [
+                  "Why It Fits: Cost-effective TGA alternative extends service capability"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical Manufacturing",
+                "icon": "flask",
+                "note": "Use Case: Solids and ash content in process materials",
+                "bullets": [
+                  "Why It Fits: Rugged construction suited to production environments"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -630,32 +981,62 @@
             "title": "Inkarp Service Near You",
             "description": "Computrac MAX 5000XL service in India: demonstration, installation, training, and AMC.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Runs the customer's own material to show LOD and LOI results." },
-              { "title": "Method Setup Support", "description": "Confirms ending criteria and multistage configuration for moisture, solids, and ash." },
-              { "title": "Installation Support", "description": "Setup, calibration, first-run checks." },
-              { "title": "Operator Training", "description": "Interface, program setup, self-cleaning cycle operation." },
-              { "title": "Web Server Configuration", "description": "Sets up remote access where required." },
-              { "title": "Preventive Maintenance", "description": "Heating element, enclosure, and self-cleaning cycle performance." },
-              { "title": "Spares and Accessories", "description": "Replacement parts as needed." },
-              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC." }
+              { "title": "Product Demonstration", "description": "Runs the customer's own material to show LOD and LOI results" },
+              { "title": "Method Setup Support", "description": "Confirms ending criteria and multistage configuration for moisture, solids, and ash" },
+              { "title": "Installation Support", "description": "Setup, calibration, first-run checks" },
+              { "title": "Operator Training", "description": "Interface, program setup, self-cleaning cycle operation" },
+              { "title": "Web Server Configuration", "description": "Sets up remote access where required" },
+              { "title": "Preventive Maintenance", "description": "Heating element, enclosure, and self-cleaning cycle performance" },
+              { "title": "Spares and Accessories", "description": "Replacement parts as needed" },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC" }
             ]
           },
 
           "faqs": [
-            { "question": "What is the Computrac MAX 5000XL used for?", "answer": "Moisture, solids, and ash analysis from a single sample, using loss-on-drying and loss-on-ignition methods, across plastics, pharmaceuticals, foods, and biomass materials." },
+            {
+              "question": "What is the Computrac MAX 5000XL used for?",
+              "answer": "Moisture, solids, and ash analysis from a single sample, using loss-on-drying and loss-on-ignition methods, across plastics, pharmaceuticals, foods, and biomass materials."
+            },
             { "question": "What is the maximum heater temperature?", "answer": "Up to 600°C, high enough to run both LOD and LOI tests." },
-            { "question": "How is this different from a thermogravimetric analyzer?", "answer": "Brookfield positions MAX 5000XL as a cost-effective alternative, offering features typically found in more expensive TGA equipment, at a fraction of the cost." },
+            {
+              "question": "How is this different from a thermogravimetric analyzer?",
+              "answer": "Brookfield positions MAX 5000XL as a cost-effective alternative, offering features typically found in more expensive TGA equipment, at a fraction of the cost."
+            },
             { "question": "How long does a test take?", "answer": "30 minutes or less." },
-            { "question": "Does it require manual weighing or cooling between steps?", "answer": "No, one-button operation eliminates intermediate weighing and cooling steps." },
+            {
+              "question": "Does it require manual weighing or cooling between steps?",
+              "answer": "No, one-button operation eliminates intermediate weighing and cooling steps."
+            },
             { "question": "What is the enclosure made of?", "answer": "Cast aluminum, built for heavy-duty use in the lab or on the production floor." },
-            { "question": "Does it need manual cleaning after high-temperature tests?", "answer": "No, a self-cleaning oven cycle runs for 45 minutes at 550°C." },
+            {
+              "question": "Does it need manual cleaning after high-temperature tests?",
+              "answer": "No, a self-cleaning oven cycle runs for 45 minutes at 550°C."
+            },
             { "question": "Can it measure ash content?", "answer": "Yes, via loss-on-ignition testing, made possible by the 600°C heater." },
-            { "question": "Can moisture, solids, and ash all come from one sample?", "answer": "Yes, using multistage testing that adjusts temperature and ending criteria across linked segments." },
-            { "question": "Can the solution be accessed remotely?", "answer": "Yes, with the optional web server feature, remote LCD viewing, calibration report downloads, audit log access, and program transfer between solutions." },
-            { "question": "How is MAX 5000XL different from MAX 4000XL?", "answer": "MAX 5000XL reaches 600°C and adds loss-on-ignition testing for ash content, positioned as a TGA alternative. MAX 4000XL is built for fast moisture-only testing via loss-on-drying." },
-            { "question": "Where can I find full technical specifications?", "answer": "Sample capacity, dimensions, and compliance standards were not confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield." },
-            { "question": "What is the price of the Computrac MAX 5000XL in India?", "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements." },
-            { "question": "Who is the authorized distributor of the Computrac MAX 5000XL in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Computrac® MAX 5000XL in India, demonstration, installation, training, AMC, spares, and support." }
+            {
+              "question": "Can moisture, solids, and ash all come from one sample?",
+              "answer": "Yes, using multistage testing that adjusts temperature and ending criteria across linked segments."
+            },
+            {
+              "question": "Can the solution be accessed remotely?",
+              "answer": "Yes, with the optional web server feature, remote LCD viewing, calibration report downloads, audit log access, and program transfer between solutions."
+            },
+            {
+              "question": "How is MAX 5000XL different from MAX 4000XL?",
+              "answer": "MAX 5000XL reaches 600°C and adds loss-on-ignition testing for ash content, positioned as a TGA alternative. MAX 4000XL is built for fast moisture-only testing via loss-on-drying."
+            },
+            {
+              "question": "Where can I find full technical specifications?",
+              "answer": "Sample capacity, dimensions, and compliance standards were not confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield."
+            },
+            {
+              "question": "What is the price of the Computrac MAX 5000XL in India?",
+              "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of the Computrac MAX 5000XL in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Computrac® MAX 5000XL in India, demonstration, installation, training, AMC, spares, and support."
+            }
           ],
 
           "booking": {
@@ -676,9 +1057,14 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration fast", "body": "Share the material being tested, whether ash content matters alongside moisture, and whether a TGA is currently in use for this application, and the right MAX 5000XL configuration gets confirmed fast." },
-              { "title": "Confirm maintenance expectations", "body": "Share how often ash testing runs and the environment the solution will sit in, and expected maintenance frequency gets confirmed against the self-cleaning cycle." },
-              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+              { "title": "Product Demonstration", "body": "Runs the customer's own material to show LOD and LOI results" },
+              { "title": "Method Setup Support", "body": "Confirms ending criteria and multistage configuration for moisture, solids, and ash" },
+              { "title": "Installation Support", "body": "Setup, calibration, first-run checks" },
+              { "title": "Operator Training", "body": "Interface, program setup, self-cleaning cycle operation" },
+              { "title": "Web Server Configuration", "body": "Sets up remote access where required" },
+              { "title": "Preventive Maintenance", "body": "Heating element, enclosure, and self-cleaning cycle performance" },
+              { "title": "Spares and Accessories", "body": "Replacement parts as needed" },
+              { "title": "Service Support", "body": "Troubleshooting, maintenance visits, AMC" }
             ]
           },
 
@@ -703,28 +1089,38 @@
                 "title": "Product Information",
                 "description": "Computrac MAX 5000XL product information: temperature range, dual-method testing, and self-maintenance.",
                 "body": [
-                  "Moisture, solids, and ash analysis, from a single sample. No need to run three separate tests.",
-                  "Cost-effective alternative to thermogravimetric analyzers. Features typically found in more expensive TGA equipment.",
-                  "Robust construction, reliable results. Across plastics, pharmaceuticals, foods, and biomass materials.",
-                  "Accurate ash and moisture measurement together. Wide material range, one solution.",
-                  "Results in half an hour or less. Significantly faster than standard reference methods.",
-                  "One-button operation. No intermediate weighing, no manual cooling steps.",
-                  "Cast aluminum enclosure. Heavy-duty use, lab or production floor.",
-                  "Heater reaches up to 600°C. Runs both loss on drying (LOD) and loss on ignition (LOI) tests.",
-                  "Rugged metal casing, high-temperature heater. Built for demanding environments, lab-quality data throughout.",
-                  "User-adjustable ending criteria. Test results tuned to the specific application or material.",
-                  "Optional web server. Download calibration reports, view the screen remotely, access audit logs, upload or download test programs, results, and graphs.",
-                  "Real-time moisture curve and rate-of-loss graphs. Live, on a large color display, menu-driven interface.",
-                  "Multistage testing. Link tests to adjust temperature, ending criteria, and timing between segments, capturing moisture, solids, and ash from one sample.",
-                  "Self-cleaning oven cycle. 45 minutes at 550°C, simplifying routine maintenance.",
-                  "Optional web server for connectivity. Remote monitoring, results and calibration report access, audit log viewing, program transfer between solutions."
+                  { "text": "Moisture, solids, and ash analysis, from a single sample. No need to run three separate tests." },
+                  { "text": "Cost-effective alternative to thermogravimetric analyzers. Features typically found in more expensive TGA equipment." },
+                  { "text": "Robust construction, reliable results. Across plastics, pharmaceuticals, foods, and biomass materials." },
+                  { "text": "Accurate ash and moisture measurement together. Wide material range, one solution." },
+                  { "text": "Results in half an hour or less. Significantly faster than standard reference methods." },
+                  { "text": "One-button operation. No intermediate weighing, no manual cooling steps." },
+                  { "text": "Cast aluminum enclosure. Heavy-duty use, lab or production floor." },
+                  { "text": "Heater reaches up to 600°C. Runs both loss on drying (LOD) and loss on ignition (LOI) tests." },
+                  { "text": "Rugged metal casing, high-temperature heater. Built for demanding environments, lab-quality data throughout." },
+                  { "text": "User-adjustable ending criteria. Test results tuned to the specific application or material." },
+                  {
+                    "text": "Optional web server. Download calibration reports, view the screen remotely, access audit logs, upload or download test programs, results, and graphs."
+                  },
+                  { "text": "Real-time moisture curve and rate-of-loss graphs. Live, on a large color display, menu-driven interface." },
+                  {
+                    "text": "Multistage testing. Link tests to adjust temperature, ending criteria, and timing between segments, capturing moisture, solids, and ash from one sample."
+                  },
+                  { "text": "Self-cleaning oven cycle. 45 minutes at 550°C, simplifying routine maintenance." },
+                  {
+                    "text": "Optional web server for connectivity. Remote monitoring, results and calibration report access, audit log viewing, program transfer between solutions."
+                  }
                 ],
                 "cards": [
                   { "title": "600°C heater", "description": "LOD and LOI on one solution" },
                   { "title": "30 minutes or less", "description": "Fast enough to inform real decisions" },
                   { "title": "Cost-effective TGA alternative", "description": "Lab-quality data without lab-equipment pricing" },
                   { "title": "Self-cleaning oven", "description": "Maintenance built in, not bolted on" }
-                ]
+                ],
+                "glanceTitle": "MAX 5000XL at a Glance",
+                "glanceDescription": "Computrac MAX 5000XL at a glance: what LOD and LOI testing on one solution actually covers.",
+                "subheading": "Overview",
+                "intro": "Computrac MAX 5000XL overview: what the solution is, and what it does, fast."
               },
               {
                 "key": "features",
@@ -745,26 +1141,51 @@
                 "tabSummary": "Temperature range, test time, construction",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Computrac MAX 5000XL technical specifications: temperature range, test time, and construction."
+                "description": "Computrac MAX 5000XL technical specifications: temperature range, test time, and construction.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ]
               },
               {
                 "key": "performance",
-                "columnHeaders": { "label": "The TGA capability", "value": "What MAX 5000XL delivers instead" },
-                "tabSummary": "Why 600°C changes what this solution can measure",
                 "eyebrow": "A Cost-Effective Alternative to TGA",
                 "title": "A Cost-Effective Alternative to TGA",
-                "description": "Why 600°C changes the value proposition against a thermogravimetric analyzer.",
+                "tabSummary": "Why 600°C changes what this solution can measure",
                 "body": [
+                  "Computrac MAX 5000XL vs thermogravimetric analyzers: why 600°C changes the value proposition.",
                   "Thermogravimetric analyzers measure moisture, solids, and ash by precisely tracking mass change as temperature rises. They're the reference standard for this kind of testing. They also carry a price tag that puts them out of reach for many labs that only occasionally need that level of capability.",
                   "MAX 5000XL closes that gap. A heater reaching 600°C runs both loss-on-drying and loss-on-ignition tests, which is what lets one sample yield moisture, solids, and ash data without switching equipment. Brookfield states this plainly: features typically found in more expensive thermogravimetric analyzers, delivered in a solution built for a fraction of the cost."
                 ],
-                "utilityChecklist": [
-                  { "label": "High-temperature ash determination", "value": "600°C heater, loss-on-ignition testing" },
-                  { "label": "Moisture and solids from one sample", "value": "Multistage testing, same sample throughout" },
-                  { "label": "Lab-grade repeatable data", "value": "Cast aluminum construction, robust results" },
-                  { "label": "A significant capital investment", "value": "A cost-effective alternative, per Brookfield" }
-                ],
-                "disclaimer": "Share whether ash content is currently tested on a separate instrument, and the potential to consolidate onto MAX 5000XL gets discussed."
+                "groups": [
+                  {
+                    "columns": [
+                      "The TGA capability",
+                      "What MAX 5000XL delivers instead"
+                    ],
+                    "rows": [
+                      [
+                        "High-temperature ash determination",
+                        "600°C heater, loss-on-ignition testing"
+                      ],
+                      [
+                        "Moisture and solids from one sample",
+                        "Multistage testing, same sample throughout"
+                      ],
+                      [
+                        "Lab-grade repeatable data",
+                        "Cast aluminum construction, robust results"
+                      ],
+                      [
+                        "A significant capital investment",
+                        "A cost-effective alternative, per Brookfield"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share whether ash content is currently tested on a separate instrument, and the potential to consolidate onto MAX 5000XL gets discussed."
+                  }
+                ]
               },
               {
                 "key": "benefits",
@@ -772,17 +1193,19 @@
                 "tabSummary": "What keeps the solution running with minimal upkeep",
                 "eyebrow": "Self-Cleaning and Rugged Construction",
                 "title": "Self-Cleaning and Rugged Construction",
-                "description": "What keeps the solution running with minimal upkeep: chamber cleaning without manual teardown, and construction rated for demanding environments.",
-                "body": [
+                "description": "Computrac MAX 5000XL maintenance: what keeps the solution running with minimal upkeep.",
+                "body": [],
+                "cards": [
+                  { "title": "Chamber cleaning without manual teardown", "description": "Self-cleaning oven cycle, 45 min at 550°C" },
+                  { "title": "Durability under repeated high-heat cycles", "description": "Cast aluminum enclosure" },
+                  { "title": "Reliable performance outside a controlled lab", "description": "Rugged construction rated for demanding environments" },
+                  { "title": "Data quality that holds regardless of setting", "description": "Lab-quality results, lab or production floor" }
+                ],
+                "paragraphs": [
                   "A high-temperature moisture analyzer that requires manual cleaning after every ash test is a maintenance burden most labs don't want. MAX 5000XL's self-cleaning oven cycle runs for 45 minutes at 550°C, clearing the chamber without manual intervention.",
                   "Construction backs that up. The cast aluminum enclosure and high-temperature heater are built specifically to withstand demanding environments while still delivering lab-quality data, whether the solution sits on a bench or on a production floor."
                 ],
-                "cards": [
-                  { "title": "Chamber cleaning without manual teardown", "description": "Self-cleaning oven cycle, 45 minutes at 550°C." },
-                  { "title": "Durability under repeated high-heat cycles", "description": "Cast aluminum enclosure." },
-                  { "title": "Reliable performance outside a controlled lab", "description": "Rugged construction rated for demanding environments." },
-                  { "title": "Data quality that holds regardless of setting", "description": "Lab-quality results, lab or production floor." }
-                ]
+                "note": "Share how often ash testing runs and the environment the solution will sit in, and expected maintenance frequency gets confirmed against the self-cleaning cycle."
               },
               {
                 "key": "config",
@@ -797,8 +1220,12 @@
                   { "title": "Construction", "description": "Cast aluminum enclosure" },
                   { "title": "Self-cleaning cycle", "description": "45 minutes at 550°C" },
                   { "title": "Optional", "description": "Web server for remote access and data management" },
-                  { "title": "Detailed numeric specifications (sample capacity, dimensions), compliance standards, and accessories", "description": "not confirmed in this source, available on request" }
-                ]
+                  {
+                    "title": "Detailed numeric specifications (sample capacity, dimensions), compliance standards, and accessories",
+                    "description": "not confirmed in this source, available on request"
+                  }
+                ],
+                "disclaimer": "Share the material being tested, whether ash content matters alongside moisture, and whether a TGA is currently in use for this application, and the right MAX 5000XL configuration gets confirmed fast."
               },
               {
                 "key": "docs",
@@ -818,32 +1245,69 @@
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Get the Computrac® MAX 5000XL in India from Inkarp",
-              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Moisture, solids, and ash from one sample, a 600°C heater, and TGA-level capability at a fraction of the cost. Share the material and whether ash content matters, and the right configuration gets confirmed fast.",
+              "description": "Moisture, solids, and ash from one sample, a 600°C heater, and TGA-level capability at a fraction of the cost. Share the material and whether ash content matters, and the right configuration gets confirmed fast.",
               "label": "Request Quote",
               "href": "#booking",
               "secondaryLabel": "Talk to Product Expert",
-              "secondaryHref": "/contact"
-            }
-          }
+              "secondaryHref": "#booking",
+              "lead": "Computrac MAX 5000XL, get it in India from Inkarp.",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts."
+            },
+            "heroParagraphs": [
+              "Thermogravimetric analyzers do this job well. They also cost a lot more than most labs need to spend. Computrac® MAX 5000XL delivers the features typically found in a TGA, at a fraction of the price.",
+              "The heater reaches up to 600°C, hot enough to run both loss-on-drying and loss-on-ignition tests on the same sample. That means moisture, solids, and ash content, all from one measurement, not three separate tests on three separate instruments.",
+              "Results come back in half an hour or less. One-button operation runs the whole test, no intermediate weighing, no manual cooling steps in between. The enclosure is cast aluminum, built for the production floor as much as the lab bench.",
+              "What it replaces: the need for a separate, expensive TGA for many applications. What it adds: a self-cleaning oven cycle, 45 minutes at 550°C, that keeps maintenance simple. Where it fits: plastics, pharmaceuticals, foods, and biomass materials."
+            ],
+            "statsIntro": "Computrac MAX 5000XL specifications at a glance: temperature range, test speed, and construction."
+          },
+
+          "faqIntro": "Computrac MAX 5000XL FAQs: temperature range, test methods, and TGA comparison.",
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Computrac® Vapor Pro XL Moisture Analyzer",
+
           "slug": "computrac-vapor-pro-xl-moisture-analyzer",
+
           "principalImage": "/assets/images/PrincipalLogos/Brookfield.webp",
+
           "imageAlt": "Ametek Brookfield Computrac® Vapor Pro XL Moisture Analyzer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/computrac-vapor-pro-xl-moisture-analyzer",
+
           "breadcrumbPath": "Home > Products > Moisture Analyzers > Computrac® Vapor Pro XL Moisture Analyzer",
+
           "h1": "Computrac® Vapor Pro XL Moisture Analyzer",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Karl Fischer titration works. It also means hazardous reagents, costly glassware, and time-consuming maintenance. Computrac® Vapor Pro XL delivers moisture-specific results that correlate well with KF titration, with zero chemical reagents.",
 
           "features": [
-            "Moisture-Specific, Not Weight-Loss Based: Unlike LOD or LOI testing, RH-sensor detection measures water directly. Volatiles other than moisture don't get counted as moisture by mistake.",
-            "Zero Chemical Reagents, KF-Correlated Results: Results that correlate well with Karl Fischer titration, without the reagents, glassware, or disposal concerns that come with it.",
-            "10 Microgram Sensitivity: Detects moisture down to 10ppm, a trace-level capability most loss-on-drying methods can't match.",
-            "No Sample Transfer Step: Crimp top vials from 2R to 60R go straight in. Hygroscopic samples never get exposed to ambient air between preparation and testing.",
-            "Stepped Temperature Testing: Built specifically for method development, letting a single test sequence step through multiple temperatures rather than running separate tests at each."
+            {
+              "title": "Moisture-Specific, Not Weight-Loss Based",
+              "description": "Unlike LOD or LOI testing, RH-sensor detection measures water directly. Volatiles other than moisture don't get counted as moisture by mistake."
+            },
+            {
+              "title": "Zero Chemical Reagents, KF-Correlated Results",
+              "description": "Results that correlate well with Karl Fischer titration, without the reagents, glassware, or disposal concerns that come with it."
+            },
+            {
+              "title": "10 Microgram Sensitivity",
+              "description": "Detects moisture down to 10ppm, a trace-level capability most loss-on-drying methods can't match."
+            },
+            {
+              "title": "No Sample Transfer Step",
+              "description": "Crimp top vials from 2R to 60R go straight in. Hygroscopic samples never get exposed to ambient air between preparation and testing."
+            },
+            {
+              "title": "Stepped Temperature Testing",
+              "description": "Built specifically for method development, letting a single test sequence step through multiple temperatures rather than running separate tests at each."
+            }
           ],
 
           "technicalSpecs": [
@@ -866,13 +1330,16 @@
           ],
 
           "applications": [
-            "Plastics and Polymer Moisture Testing: Trace-level moisture detection without weight-loss interference from other volatiles.",
-            "Petroleum and Petrochemical Testing: Chemical-free alternative to KF titration for hydrocarbon-based samples.",
-            "Pharmaceutical Moisture Analysis: 10ppm sensitivity meets tight regulatory specification limits.",
-            "Chemical Manufacturing QC: Moisture-specific results without hazardous reagent handling.",
-            "Hygroscopic Sample Testing: Sealed crimp top vials prevent ambient moisture pickup before testing.",
-            "Method Development: Stepped temperature testing simplifies building a validated method.",
-            "Karl Fischer Replacement Projects: Correlated results without titrant cost or disposal requirements."
+            {
+              "title": "Plastics and Polymer Moisture Testing",
+              "description": "Trace-level moisture detection without weight-loss interference from other volatiles"
+            },
+            { "title": "Petroleum and Petrochemical Testing", "description": "Chemical-free alternative to KF titration for hydrocarbon-based samples" },
+            { "title": "Pharmaceutical Moisture Analysis", "description": "10ppm sensitivity meets tight regulatory specification limits" },
+            { "title": "Chemical Manufacturing QC", "description": "Moisture-specific results without hazardous reagent handling" },
+            { "title": "Hygroscopic Sample Testing", "description": "Sealed crimp top vials prevent ambient moisture pickup before testing" },
+            { "title": "Method Development", "description": "Stepped temperature testing simplifies building a validated method" },
+            { "title": "Karl Fischer Replacement Projects", "description": "Correlated results without titrant cost or disposal requirements" }
           ],
 
           "inPageNav": [
@@ -890,35 +1357,38 @@
 
           "suitability": {
             "ctaLabel": "Get Configuration Support",
-            "ctaNote": "Share the sensitivity the application needs, and the right Vapor Pro XL configuration gets confirmed.",
+            "ctaNote": "Confirms fit against the 10 microgram / 10ppm sensitivity. Routes to a configuration-specific quotation.",
             "eyebrow": "Sensitivity Requirement Checker",
-            "title": "Does the application need trace-level moisture detection?",
-            "description": "Select the expected moisture range and material type, and confirm fit against the 10ppm sensitivity.",
+            "title": "Computrac Vapor Pro XL sensitivity checker: does the application need trace-level moisture detection?",
+            "description": "Select the expected moisture range, and confirm fit against the 10ppm sensitivity.",
             "fields": [
               {
                 "key": "expectedMoistureContent",
                 "label": "Expected moisture content",
+                "hint": "Standard range, or trace-level (near 10ppm)",
                 "options": [
                   { "val": "standard", "label": "Standard range" },
                   { "val": "trace", "label": "Trace-level (near 10ppm)" }
                 ]
               },
               {
-                "key": "otherVolatilesPresent",
-                "label": "Other volatiles present",
+                "key": "materialType",
+                "label": "Material type",
+                "hint": "Plastics, petroleum, pharmaceutical, or chemical",
                 "options": [
-                  { "val": "yes", "label": "Yes" },
-                  { "val": "no", "label": "Moisture is the only volatile of concern" }
+                  { "val": "plastic-resin", "label": "Plastics" },
+                  { "val": "petroleum", "label": "Petroleum" },
+                  { "val": "pharmaceutical", "label": "Pharmaceutical" },
+                  { "val": "chemical", "label": "Chemical" }
                 ]
               },
               {
-                "key": "materialType",
-                "label": "Material type",
+                "key": "otherVolatilesPresent",
+                "label": "Other volatiles present",
+                "hint": "Yes, or moisture is the only volatile of concern",
                 "options": [
-                  { "val": "plastic-resin", "label": "Plastic or resin" },
-                  { "val": "petroleum", "label": "Petroleum product" },
-                  { "val": "pharmaceutical", "label": "Pharmaceutical" },
-                  { "val": "chemical", "label": "Chemical or other" }
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "Moisture is the only volatile of concern" }
                 ]
               }
             ],
@@ -927,94 +1397,168 @@
                 "condition": { "expectedMoistureContent": "trace" },
                 "title": "Within the 10ppm Sensitivity Range",
                 "body": "10 microgram sensitivity resolves moisture content down to 10ppm, matching trace-level requirements.",
-                "tags": ["10ppm Sensitivity"]
+                "tags": [
+                  "10ppm Sensitivity"
+                ]
               },
               {
                 "condition": { "otherVolatilesPresent": "yes" },
                 "title": "Moisture-Specific Detection Fits",
                 "body": "RH-sensor technology detects moisture specifically, avoiding the interference other volatiles cause in weight-loss methods.",
-                "tags": ["Moisture-Specific"]
+                "tags": [
+                  "Moisture-Specific"
+                ]
               },
               {
                 "condition": { "expectedMoistureContent": "standard" },
                 "title": "Standard Range Confirmed",
                 "body": "Standard moisture ranges are well within Vapor Pro XL's detection capability.",
-                "tags": ["Standard Range"]
+                "tags": [
+                  "Standard Range"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Sensitivity Fit",
                 "body": "Share the expected moisture range and material type, and fit against the 10 microgram / 10ppm sensitivity gets confirmed.",
-                "tags": ["Configuration Guidance"]
+                "tags": [
+                  "Configuration Guidance"
+                ]
               }
-            ]
+            ],
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "metricCalculator": {
             "formula": "reagent-savings",
             "sectionId": "kf-replacement-cost",
             "eyebrow": "KF Replacement Cost Calculator",
-            "title": "What would switching from Karl Fischer actually save?",
-            "description": "Enter the current Karl Fischer reagent spend and testing volume, and see what zero reagents removes.",
+            "title": "Computrac Vapor Pro XL vs Karl Fischer: what would switching actually save?",
+            "description": "Enter the current KF titration workflow and volume, and see the potential comparison.",
             "fields": [
-              {
-                "key": "reagentCostPerMonth",
-                "label": "Karl Fischer reagent and consumable spend per month (INR)",
-                "default": 25000,
-                "min": 0
-              },
-              {
-                "key": "samplesPerWeek",
-                "label": "Samples tested per week",
-                "default": 40,
-                "min": 1
-              }
+              { "key": "reagentCostPerMonth", "label": "Reagent cost per month", "default": 25000, "min": 0, "hint": "Current titrant and consumable spend" },
+              { "key": "samplesPerWeek", "label": "Samples tested per week", "default": 40, "min": 1, "hint": "Testing volume" }
             ],
             "submitLabel": "Talk to Product Expert",
-            "ctaNote": "Share the current reagent spend and testing volume, and the comparison against a Vapor Pro XL workflow gets confirmed.",
-            "disclaimer": "Vapor Pro XL uses no chemical reagents, so the reagent line goes to zero entirely. Figures come from the monthly spend entered; reagent handling, storage and disposal effort are removed too but are not costed here. Brookfield states results correlate well with Karl Fischer titration."
+            "ctaNote": "Estimates reagent cost and workflow savings against Vapor Pro XL. Routes to a cost-comparison quotation.",
+            "disclaimer": "Vapor Pro XL uses no chemical reagents, so the reagent line goes to zero entirely. Figures come from the monthly spend entered; reagent handling, storage and disposal effort are removed too but are not costed here. Brookfield states results correlate well with Karl Fischer titration.",
+            "choices": [
+              {
+                "key": "currentMethod",
+                "label": "Current method",
+                "hint": "Karl Fischer titration, or another moisture method",
+                "default": "karl-fischer-titration",
+                "options": [
+                  { "val": "karl-fischer-titration", "label": "Karl Fischer titration" },
+                  { "val": "another-moisture-method", "label": "Another moisture method" }
+                ]
+              }
+            ]
           },
 
           "planners": [
             {
               "sectionId": "vial-compatibility-checker",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Share the vial sizes and sample handling in use, and the right accessories get confirmed.",
+              "ctaNote": "Confirms vial compatibility and sealed-handling fit. Routes to a configuration-specific quotation.",
               "eyebrow": "Vial Compatibility and Sample Handling Checker",
-              "title": "Does the sample vial size fit?",
+              "title": "Computrac Vapor Pro XL vial checker: does the sample vial size fit?",
               "description": "Select the vial type and sample sensitivity, and confirm fit.",
               "fields": [
-                { "key": "choices", "label": "Choose one" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Vial size in use", "choices": "Within 2R to 60R crimp top; Other" },
-                { "title": "Sample hygroscopicity", "choices": "Standard; Highly hygroscopic" },
-                { "title": "Ambient exposure risk", "choices": "Sample must stay sealed; Exposure is acceptable" }
+                { "title": "Vial size in use", "hint": "Within 2R to 60R crimp top, or other", "choices": "Within 2R to 60R crimp top; Other" },
+                { "title": "Sample hygroscopicity", "hint": "Standard, or highly hygroscopic", "choices": "Standard; Highly hygroscopic" },
+                {
+                  "title": "Ambient exposure risk",
+                  "hint": "Sample must stay sealed, or exposure is acceptable",
+                  "choices": "Sample must stay sealed; Exposure is acceptable"
+                }
               ],
-              "disclaimer": "Confirms vial compatibility and sealed-handling fit, then routes to a configuration-specific quotation."
+              "disclaimer": ""
             }
           ],
 
           "comparison": {
-            "eyebrow": "Choosing between Vapor Pro XL, the MAX analyzers, and Karl Fischer titration",
-            "title": "Vapor Pro XL vs MAX 4000XL / MAX 5000XL vs Karl Fischer Titration",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Computrac Vapor Pro XL against MAX 4000XL, MAX 5000XL, and Karl Fischer titration.",
             "columns": [
-              { "label": "Vapor Pro XL", "highlight": true },
-              { "label": "MAX 4000XL / MAX 5000XL", "highlight": false },
-              { "label": "Karl Fischer Titration", "highlight": false }
+              { "label": "Vapor Pro XL" },
+              { "label": "MAX 4000XL / MAX 5000XL" },
+              { "label": "Karl Fischer Titration" }
             ],
             "rows": [
-              { "feature": "Measurement Principle", "values": ["RH-sensor, moisture-specific", "Weight loss (LOD/LOI)", "Chemical titration"] },
-              { "feature": "Sensitivity", "values": ["10 micrograms, down to 10ppm", "Method-dependent, weight-loss based", "High, reagent-dependent"] },
-              { "feature": "Chemical Reagents Required", "values": ["None", "None", "Yes, hazardous titrant"] },
-              { "feature": "Interference from Other Volatiles", "values": ["None, moisture-specific", "Possible, weight loss doesn't distinguish", "None"] },
-              { "feature": "Maximum Temperature", "values": ["300°C", "600°C (MAX 5000XL), lower on MAX 4000XL", "Not applicable"] },
-              { "feature": "Sample Handling", "values": ["Sealed crimp top vial, no transfer", "Open sample pan", "Requires titration vessel and glassware"] },
-              { "feature": "Best For", "values": ["Trace moisture, KF replacement, volatile-containing samples", "Fast moisture, solids, and ash content", "Reference-standard moisture determination"] },
-              { "feature": "Choose When", "values": ["Interference from other volatiles is a concern, or KF reagent cost/handling is the issue", "Weight loss alone answers the question", "Regulatory reference method specifically requires KF"] }
+              {
+                "feature": "Measurement Principle",
+                "values": [
+                  "RH-sensor, moisture-specific",
+                  "Weight loss (LOD/LOI)",
+                  "Chemical titration"
+                ]
+              },
+              {
+                "feature": "Sensitivity",
+                "values": [
+                  "10 micrograms, down to 10ppm",
+                  "Method-dependent, weight-loss based",
+                  "High, reagent-dependent"
+                ]
+              },
+              {
+                "feature": "Chemical Reagents Required",
+                "values": [
+                  "None",
+                  "None",
+                  "Yes, hazardous titrant"
+                ]
+              },
+              {
+                "feature": "Interference from Other Volatiles",
+                "values": [
+                  "None, moisture-specific",
+                  "Possible, weight loss doesn't distinguish",
+                  "None"
+                ]
+              },
+              {
+                "feature": "Maximum Temperature",
+                "values": [
+                  "300°C",
+                  "600°C (MAX 5000XL), lower on MAX 4000XL",
+                  "Not applicable"
+                ]
+              },
+              {
+                "feature": "Sample Handling",
+                "values": [
+                  "Sealed crimp top vial, no transfer",
+                  "Open sample pan",
+                  "Requires titration vessel and glassware"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Trace moisture, KF replacement, volatile-containing samples",
+                  "Fast moisture, solids, and ash content",
+                  "Reference-standard moisture determination"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Interference from other volatiles is a concern, or KF reagent cost/handling is the issue",
+                  "Weight loss alone answers the question",
+                  "Regulatory reference method specifically requires KF"
+                ]
+              }
             ],
-            "disclaimer": "Vapor Pro XL and the MAX analyzers solve genuinely different problems. MAX 4000XL and MAX 5000XL measure total weight loss, fast and effective when moisture is the only volatile present. Vapor Pro XL measures moisture specifically, which matters when other volatiles would otherwise inflate a weight-loss result, or when the goal is replacing Karl Fischer titration without giving up correlated accuracy."
+            "disclaimer": "Vapor Pro XL and the MAX analyzers solve genuinely different problems. MAX 4000XL and MAX 5000XL measure total weight loss, fast and effective when moisture is the only volatile present. Vapor Pro XL measures moisture specifically, which matters when other volatiles would otherwise inflate a weight-loss result, or when the goal is replacing Karl Fischer titration without giving up correlated accuracy.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
@@ -1022,12 +1566,60 @@
             "title": "Industry Explorer",
             "description": "Computrac Vapor Pro XL industries: plastics, petroleum, pharmaceuticals, and chemical manufacturing.",
             "industries": [
-              { "name": "Plastics and Polymer Manufacturing", "icon": "cpu", "useCase": "Trace moisture content in resins and compounds", "consideration": "Moisture-specific detection avoids interference from other volatiles" },
-              { "name": "Petroleum and Petrochemical Processing", "icon": "droplet", "useCase": "Moisture testing in hydrocarbon-based products", "consideration": "Chemical-free alternative avoids reagent compatibility concerns" },
-              { "name": "Pharmaceutical Manufacturing", "icon": "pill", "useCase": "Moisture content in raw materials and finished dosage forms", "consideration": "10ppm sensitivity meets tight regulatory limits" },
-              { "name": "Chemical Manufacturing", "icon": "flask", "useCase": "Moisture QC without hazardous reagent handling", "consideration": "Zero chemical reagents simplifies safety and disposal protocols" },
-              { "name": "Contract Testing Laboratories", "icon": "target", "useCase": "KF replacement across varied client materials", "consideration": "Correlated results without titrant cost per test" },
-              { "name": "Research and Method Development", "icon": "school", "useCase": "Building validated moisture test methods", "consideration": "Stepped temperature testing simplifies development work" }
+              {
+                "name": "Plastics and Polymer Manufacturing",
+                "icon": "cpu",
+                "note": "Use Case: Trace moisture content in resins and compounds",
+                "bullets": [
+                  "Why It Fits: Moisture-specific detection avoids interference from other volatiles"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Petroleum and Petrochemical Processing",
+                "icon": "droplet",
+                "note": "Use Case: Moisture testing in hydrocarbon-based products",
+                "bullets": [
+                  "Why It Fits: Chemical-free alternative avoids reagent compatibility concerns"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Manufacturing",
+                "icon": "pill",
+                "note": "Use Case: Moisture content in raw materials and finished dosage forms",
+                "bullets": [
+                  "Why It Fits: 10ppm sensitivity meets tight regulatory limits"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical Manufacturing",
+                "icon": "flask",
+                "note": "Use Case: Moisture QC without hazardous reagent handling",
+                "bullets": [
+                  "Why It Fits: Zero chemical reagents simplifies safety and disposal protocols"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Testing Laboratories",
+                "icon": "target",
+                "note": "Use Case: KF replacement across varied client materials",
+                "bullets": [
+                  "Why It Fits: Correlated results without titrant cost per test"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Research and Method Development",
+                "icon": "school",
+                "note": "Use Case: Building validated moisture test methods",
+                "bullets": [
+                  "Why It Fits: Stepped temperature testing simplifies development work"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -1035,32 +1627,62 @@
             "title": "Inkarp Service Near You",
             "description": "Computrac Vapor Pro XL service in India: demonstration, installation, training, and AMC.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Runs the customer's own material to show moisture-specific results." },
-              { "title": "KF Correlation Support", "description": "Confirms expected correlation against current Karl Fischer data." },
-              { "title": "Installation Support", "description": "Setup, calibration, first-run checks." },
-              { "title": "Operator Training", "description": "Touchscreen interface, vial handling, stepped temperature setup." },
-              { "title": "Web Server Configuration", "description": "Sets up remote access where required." },
-              { "title": "Preventive Maintenance", "description": "RH-sensor, heater, and touchscreen performance." },
-              { "title": "Spares and Accessories", "description": "Vials, replacement parts as needed." },
-              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC." }
+              { "title": "Product Demonstration", "description": "Runs the customer's own material to show moisture-specific results" },
+              { "title": "KF Correlation Support", "description": "Confirms expected correlation against current Karl Fischer data" },
+              { "title": "Installation Support", "description": "Setup, calibration, first-run checks" },
+              { "title": "Operator Training", "description": "Touchscreen interface, vial handling, stepped temperature setup" },
+              { "title": "Web Server Configuration", "description": "Sets up remote access where required" },
+              { "title": "Preventive Maintenance", "description": "RH-sensor, heater, and touchscreen performance" },
+              { "title": "Spares and Accessories", "description": "Vials, replacement parts as needed" },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, AMC" }
             ]
           },
 
           "faqs": [
-            { "question": "What is the Computrac Vapor Pro XL used for?", "answer": "Moisture-specific analysis as a chemical-free alternative to Karl Fischer titration, used across plastics, petroleum, pharmaceuticals, and chemicals." },
-            { "question": "How does it differ from a loss-on-drying moisture analyzer?", "answer": "LOD methods measure total weight loss and assume it's moisture. Vapor Pro XL uses RH-sensor technology to detect moisture specifically, avoiding interference from other volatile compounds." },
+            {
+              "question": "What is the Computrac Vapor Pro XL used for?",
+              "answer": "Moisture-specific analysis as a chemical-free alternative to Karl Fischer titration, used across plastics, petroleum, pharmaceuticals, and chemicals."
+            },
+            {
+              "question": "How does it differ from a loss-on-drying moisture analyzer?",
+              "answer": "LOD methods measure total weight loss and assume it's moisture. Vapor Pro XL uses RH-sensor technology to detect moisture specifically, avoiding interference from other volatile compounds."
+            },
             { "question": "How sensitive is it?", "answer": "Detects as little as 10 micrograms of water, determining moisture content as low as 10ppm." },
-            { "question": "Does it require chemical reagents?", "answer": "No, zero chemical reagents, with results that correlate well with Karl Fischer titration." },
+            {
+              "question": "Does it require chemical reagents?",
+              "answer": "No, zero chemical reagents, with results that correlate well with Karl Fischer titration."
+            },
             { "question": "What is the maximum testing temperature?", "answer": "300°C, via an upgraded heater with precise control across the range." },
-            { "question": "What is stepped temperature testing?", "answer": "A test sequence that steps through multiple temperatures within one run, simplifying method development." },
+            {
+              "question": "What is stepped temperature testing?",
+              "answer": "A test sequence that steps through multiple temperatures within one run, simplifying method development."
+            },
             { "question": "What sample vial sizes are compatible?", "answer": "Most crimp top vials from 2R to 60R." },
-            { "question": "Does the sample get exposed to ambient air during testing?", "answer": "No, sealed crimp top vials prevent exposure, protecting hygroscopic samples." },
+            {
+              "question": "Does the sample get exposed to ambient air during testing?",
+              "answer": "No, sealed crimp top vials prevent exposure, protecting hygroscopic samples."
+            },
             { "question": "How much data can it store?", "answer": "Up to 250 test programs, the last 1,000 test results, and the last 100 test graphs." },
-            { "question": "Can it be accessed remotely?", "answer": "Yes, with the optional web server feature, remote monitoring, result downloads, audit log viewing, and program transfer between solutions." },
-            { "question": "How is Vapor Pro XL different from MAX 4000XL and MAX 5000XL?", "answer": "MAX 4000XL and MAX 5000XL measure moisture via weight loss (LOD/LOI). Vapor Pro XL measures moisture specifically via RH-sensor technology, correlating with Karl Fischer titration rather than weight-loss methods." },
-            { "question": "Where can I find full technical specifications?", "answer": "Dimensions, weight, power requirements, and compliance standards were not confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield." },
-            { "question": "What is the price of the Computrac Vapor Pro XL in India?", "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements." },
-            { "question": "Who is the authorized distributor of the Computrac Vapor Pro XL in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Computrac® Vapor Pro XL in India, demonstration, installation, training, AMC, spares, and support." }
+            {
+              "question": "Can it be accessed remotely?",
+              "answer": "Yes, with the optional web server feature, remote monitoring, result downloads, audit log viewing, and program transfer between solutions."
+            },
+            {
+              "question": "How is Vapor Pro XL different from MAX 4000XL and MAX 5000XL?",
+              "answer": "MAX 4000XL and MAX 5000XL measure moisture via weight loss (LOD/LOI). Vapor Pro XL measures moisture specifically via RH-sensor technology, correlating with Karl Fischer titration rather than weight-loss methods."
+            },
+            {
+              "question": "Where can I find full technical specifications?",
+              "answer": "Dimensions, weight, power requirements, and compliance standards were not confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield."
+            },
+            {
+              "question": "What is the price of the Computrac Vapor Pro XL in India?",
+              "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of the Computrac Vapor Pro XL in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield Computrac® Vapor Pro XL in India, demonstration, installation, training, AMC, spares, and support."
+            }
           ],
 
           "booking": {
@@ -1081,9 +1703,14 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration fast", "body": "Share the material being tested, the expected moisture range, and whether Karl Fischer titration is currently in use for this application, and the right Vapor Pro XL configuration gets confirmed fast." },
-              { "title": "Confirm the KF replacement savings", "body": "Share the current KF titration workflow and reagent cost, and the practical savings from switching get discussed against actual usage." },
-              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+              { "title": "Product Demonstration", "body": "Runs the customer's own material to show moisture-specific results" },
+              { "title": "KF Correlation Support", "body": "Confirms expected correlation against current Karl Fischer data" },
+              { "title": "Installation Support", "body": "Setup, calibration, first-run checks" },
+              { "title": "Operator Training", "body": "Touchscreen interface, vial handling, stepped temperature setup" },
+              { "title": "Web Server Configuration", "body": "Sets up remote access where required" },
+              { "title": "Preventive Maintenance", "body": "RH-sensor, heater, and touchscreen performance" },
+              { "title": "Spares and Accessories", "body": "Vials, replacement parts as needed" },
+              { "title": "Service Support", "body": "Troubleshooting, maintenance visits, AMC" }
             ]
           },
 
@@ -1110,27 +1737,33 @@
                 "title": "Product Information",
                 "description": "Computrac Vapor Pro XL product information: detection technology, sensitivity, and sample handling.",
                 "body": [
-                  "Moisture-specific analysis, not weight loss. RH-sensor technology measures only moisture content, nothing else.",
-                  "Chemical-free Karl Fischer alternative. Results that correlate well with KF titration, without hazardous reagents, costly glassware, or ongoing maintenance.",
-                  "Exceptional accuracy across testing temperatures. An upgraded heater gives precise control over a wide temperature range.",
-                  "High sensitivity. Detects as little as 10 micrograms of water, determines moisture content down to 10ppm.",
-                  "Flexible sample handling. Various vial sizes tested without exposing hygroscopic samples to ambient air.",
-                  "Color LCD touchscreen. Intuitive interface, minimal training, less room for operator error.",
-                  "Zero chemical reagents. No hazardous chemistry, no costly glassware, no time-consuming maintenance.",
-                  "Versatile across industries. Plastics, petroleum, pharmaceuticals, and chemicals all covered.",
-                  "Maximum testing temperature of 300°C. An upgraded heater delivers enhanced control and versatility.",
-                  "Stepped temperature testing. Simplifies method development with detailed, tailored analysis.",
-                  "Compatible with most crimp top vials, 2R to 60R. Various sample types tested without transferring between containers.",
-                  "User-adjustable ending criteria. Testing tuned to the specific application.",
-                  "Extensive data storage. Up to 250 test programs, the last 1,000 results, the last 100 graphs.",
-                  "Optional web server. Remote monitoring, result downloads, audit log access, program transfer between solutions."
+                  { "text": "Moisture-specific analysis, not weight loss. RH-sensor technology measures only moisture content, nothing else." },
+                  {
+                    "text": "Chemical-free Karl Fischer alternative. Results that correlate well with KF titration, without hazardous reagents, costly glassware, or ongoing maintenance."
+                  },
+                  { "text": "Exceptional accuracy across testing temperatures. An upgraded heater gives precise control over a wide temperature range." },
+                  { "text": "High sensitivity. Detects as little as 10 micrograms of water, determines moisture content down to 10ppm." },
+                  { "text": "Flexible sample handling. Various vial sizes tested without exposing hygroscopic samples to ambient air." },
+                  { "text": "Color LCD touchscreen. Intuitive interface, minimal training, less room for operator error." },
+                  { "text": "Zero chemical reagents. No hazardous chemistry, no costly glassware, no time-consuming maintenance." },
+                  { "text": "Versatile across industries. Plastics, petroleum, pharmaceuticals, and chemicals all covered." },
+                  { "text": "Maximum testing temperature of 300°C. An upgraded heater delivers enhanced control and versatility." },
+                  { "text": "Stepped temperature testing. Simplifies method development with detailed, tailored analysis." },
+                  { "text": "Compatible with most crimp top vials, 2R to 60R. Various sample types tested without transferring between containers." },
+                  { "text": "User-adjustable ending criteria. Testing tuned to the specific application." },
+                  { "text": "Extensive data storage. Up to 250 test programs, the last 1,000 results, the last 100 graphs." },
+                  { "text": "Optional web server. Remote monitoring, result downloads, audit log access, program transfer between solutions." }
                 ],
                 "cards": [
                   { "title": "RH-sensor, moisture-specific", "description": "Measures water, not total weight loss" },
                   { "title": "10ppm sensitivity", "description": "Trace-level moisture detection" },
                   { "title": "Zero chemical reagents", "description": "No hazardous chemistry, no glassware" },
                   { "title": "2R to 60R vial compatibility", "description": "No sample transfer step required" }
-                ]
+                ],
+                "glanceTitle": "Vapor Pro XL at a Glance",
+                "glanceDescription": "Computrac Vapor Pro XL at a glance: how RH-sensor detection replaces Karl Fischer titration.",
+                "subheading": "Overview",
+                "intro": "Computrac Vapor Pro XL overview: what the solution is, and what it does, fast."
               },
               {
                 "key": "features",
@@ -1151,26 +1784,51 @@
                 "tabSummary": "Sensitivity, temperature range, and vial compatibility",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Computrac Vapor Pro XL technical specifications: sensitivity, temperature range, and sample handling."
+                "description": "Computrac Vapor Pro XL technical specifications: sensitivity, temperature range, and sample handling.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ]
               },
               {
                 "key": "performance",
-                "columnHeaders": { "label": "The weight-loss method's problem", "value": "What RH-sensor detection solves" },
-                "tabSummary": "Why RH-sensor technology changes what gets measured",
                 "eyebrow": "Moisture-Specific Detection, Not Weight Loss",
                 "title": "Moisture-Specific Detection, Not Weight Loss",
-                "description": "Why RH-sensor technology changes what gets measured.",
+                "tabSummary": "Why RH-sensor technology changes what gets measured",
                 "body": [
+                  "Computrac Vapor Pro XL detection method: why RH-sensor technology changes what gets measured.",
                   "Loss-on-drying and loss-on-ignition methods measure how much mass a sample loses when heated, then assume the loss is moisture. That assumption breaks down when a sample contains other volatile compounds. The instrument can't tell the difference, and the result reads high.",
                   "Vapor Pro XL sidesteps that problem entirely. RH-sensor technology detects moisture specifically, not total mass loss, which means the result reflects actual water content even in samples where other volatiles are present. Sensitivity reaches 10 micrograms of water, low enough to determine moisture content as low as 10ppm, a level weight-loss methods typically can't resolve reliably."
                 ],
-                "utilityChecklist": [
-                  { "label": "Assumes all mass loss is moisture", "value": "Detects water specifically, nothing else" },
-                  { "label": "Fails on samples with other volatiles", "value": "Accurate even when volatiles are present" },
-                  { "label": "Struggles at trace-level moisture", "value": "Detects down to 10 micrograms, 10ppm" },
-                  { "label": "Requires the whole sample to be dried", "value": "Sample stays sealed, exposure controlled" }
-                ],
-                "disclaimer": "Share whether the material being tested contains volatile compounds other than water, and whether current loss-on-drying results have seemed inflated, and moisture-specific testing gets discussed against that history."
+                "groups": [
+                  {
+                    "columns": [
+                      "The weight-loss method's problem",
+                      "What RH-sensor detection solves"
+                    ],
+                    "rows": [
+                      [
+                        "Assumes all mass loss is moisture",
+                        "Detects water specifically, nothing else"
+                      ],
+                      [
+                        "Fails on samples with other volatiles",
+                        "Accurate even when volatiles are present"
+                      ],
+                      [
+                        "Struggles at trace-level moisture",
+                        "Detects down to 10 micrograms, 10ppm"
+                      ],
+                      [
+                        "Requires the whole sample to be dried",
+                        "Sample stays sealed, exposure controlled"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share whether the material being tested contains volatile compounds other than water, and whether current loss-on-drying results have seemed inflated, and moisture-specific testing gets discussed against that history."
+                  }
+                ]
               },
               {
                 "key": "benefits",
@@ -1178,18 +1836,20 @@
                 "tabSummary": "What zero reagents actually removes from the workflow",
                 "eyebrow": "A Chemical-Free Karl Fischer Alternative",
                 "title": "A Chemical-Free Karl Fischer Alternative",
-                "description": "What zero reagents actually removes from the Karl Fischer titration workflow.",
-                "body": [
+                "description": "Computrac Vapor Pro XL vs Karl Fischer titration: what zero reagents actually removes from the workflow.",
+                "body": [],
+                "cards": [
+                  { "title": "Hazardous chemical reagents", "description": "Zero chemical reagents" },
+                  { "title": "Glassware purchase and upkeep", "description": "No titration glassware needed" },
+                  { "title": "Titrant standardization and tracking", "description": "No titrant, no standardization step" },
+                  { "title": "Reagent disposal protocols", "description": "No hazardous waste generated" },
+                  { "title": "Results that correlate with real moisture content", "description": "Results that correlate well with KF titration" }
+                ],
+                "paragraphs": [
                   "Karl Fischer titration is accurate, and it comes with real overhead. Reagents that require careful handling and disposal. Glassware that needs cleaning and replacement. Titrant that has to be standardized and tracked. None of that goes away on its own.",
                   "Vapor Pro XL removes it. Zero chemical reagents, with results Brookfield states correlate well with Karl Fischer titration. The workflow becomes load a sealed vial, run the test, read the result, without the reagent purchasing, handling protocols, or waste disposal that KF titration carries as a matter of course."
                 ],
-                "cards": [
-                  { "title": "Hazardous chemical reagents", "description": "Zero chemical reagents required." },
-                  { "title": "Glassware purchase and upkeep", "description": "No titration glassware needed." },
-                  { "title": "Titrant standardization and tracking", "description": "No titrant, no standardization step." },
-                  { "title": "Reagent disposal protocols", "description": "No hazardous waste generated." },
-                  { "title": "Results that correlate with real moisture content", "description": "Results that correlate well with KF titration." }
-                ]
+                "note": "Share the current KF titration workflow and reagent cost, and the practical savings from switching get discussed against actual usage."
               },
               {
                 "key": "config",
@@ -1205,8 +1865,12 @@
                   { "title": "Vial compatibility", "description": "2R to 60R crimp top" },
                   { "title": "Data storage", "description": "250 programs, 1,000 results, 100 graphs" },
                   { "title": "Optional", "description": "Web server for remote access and data management" },
-                  { "title": "Detailed numeric specifications (dimensions, weight, power requirements) and compliance standards", "description": "not confirmed in this source, available on request" }
-                ]
+                  {
+                    "title": "Detailed numeric specifications (dimensions, weight, power requirements) and compliance standards",
+                    "description": "not confirmed in this source, available on request"
+                  }
+                ],
+                "disclaimer": "Share the material being tested, the expected moisture range, and whether Karl Fischer titration is currently in use for this application, and the right Vapor Pro XL configuration gets confirmed fast."
               },
               {
                 "key": "docs",
@@ -1226,13 +1890,26 @@
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Get the Computrac® Vapor Pro XL in India from Inkarp",
-              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. Moisture detected directly, down to 10ppm, with zero chemical reagents and results that correlate well with Karl Fischer titration. Share the material and current moisture testing method, and the right Vapor Pro XL configuration gets confirmed fast.",
+              "description": "Moisture detected directly, down to 10ppm, with zero chemical reagents and results that correlate well with Karl Fischer titration. Share the material and current moisture testing method, and the right Vapor Pro XL configuration gets confirmed fast.",
               "label": "Request Quote",
               "href": "#booking",
               "secondaryLabel": "Talk to Product Expert",
-              "secondaryHref": "/contact"
-            }
-          }
+              "secondaryHref": "#booking",
+              "lead": "Computrac Vapor Pro XL, get it in India from Inkarp.",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts."
+            },
+            "heroParagraphs": [
+              "Karl Fischer titration works. It also means hazardous reagents, costly glassware, and time-consuming maintenance. Computrac® Vapor Pro XL delivers moisture-specific results that correlate well with KF titration, with zero chemical reagents.",
+              "RH-sensor technology is the difference. Unlike a loss-on-drying test that measures total weight loss and assumes it's moisture, Vapor Pro XL detects water directly and specifically. Sensitivity reaches 10 micrograms of water, low enough to determine moisture content as low as 10ppm.",
+              "The heater runs up to 300°C, with stepped temperature testing built in for method development. Sample vials from 2R to 60R crimp top load directly, no transfer step, no exposure to ambient air that could compromise a hygroscopic sample.",
+              "What it replaces: Karl Fischer titration, without the hazardous chemistry. What it measures: moisture only, not total weight loss. Where it fits: plastics, petroleum, pharmaceuticals, and chemicals."
+            ],
+            "statsIntro": "Computrac Vapor Pro XL specifications at a glance: sensitivity, temperature range, and sample handling."
+          },
+
+          "faqIntro": "Computrac Vapor Pro XL FAQs: sensitivity, detection method, and Karl Fischer comparison.",
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

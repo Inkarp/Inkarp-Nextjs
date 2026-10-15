@@ -40,6 +40,10 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
               {description}
             </p>
           )}
+          {/* Extra prose paragraphs after the lead-in, when the content has them. */}
+          {section?.paragraphs?.map((paragraph, index) => (
+            <p className="mt-3 text-base leading-7 text-black" key={index}>{paragraph}</p>
+          ))}
           {section?.tabSummary && (
             <p className="mt-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">
               {section.tabSummary}
@@ -47,13 +51,27 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
           )}
           {bullets.length > 0 && (
             <ul className="mt-4 space-y-3">
-              {bullets.map((point) => (
-                <li className="flex gap-3 text-base leading-7 text-black" key={point}>
+              {bullets.map((point, index) => (
+                <li className="flex gap-3 text-base leading-7 text-black" key={typeof point === 'string' ? point : index}>
                   <span aria-hidden className="mt-2.5 inline-block size-1.5 shrink-0 bg-red" />
-                  <span>{point}</span>
+                  {/* `{ title, text }` keeps a source document's bold lead-in as written. */}
+                  {point && typeof point === 'object' ? (
+                    <span>
+                      {point.title && <strong className="font-semibold text-ink">{point.title}</strong>}
+                      {point.title && point.text ? ' ' : null}
+                      {point.text}
+                    </span>
+                  ) : (
+                    <span>{point}</span>
+                  )}
                 </li>
               ))}
             </ul>
+          )}
+          {section?.note && (
+            <p className="mt-4 border border-line-light bg-parchment-alt p-4 text-sm leading-6 text-black">
+              {section.note}
+            </p>
           )}
         </div>
 

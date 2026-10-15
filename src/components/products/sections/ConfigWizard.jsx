@@ -37,7 +37,40 @@ function getResultLabel(stepDef, index) {
   return stepDef.resultLabel ?? stepDef.summaryLabel ?? getStepLabel(stepDef, index);
 }
 
-function cleanText(value = '') {
+// A step with `input: 'text' | 'number'` asks the visitor to type the answer
+// (e.g. sample dimensions) instead of picking one of `options`.
+function TypedAnswer({ type, label, initial, onSubmit }) {
+  const [value, setValue] = useState(initial ?? '');
+  const trimmed = String(value).trim();
+  return (
+    <form
+      className="space-y-3"
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (trimmed) onSubmit(trimmed);
+      }}
+    >
+      <input
+        aria-label={label}
+        className="h-12 w-full border border-line-light bg-parchment px-4 text-base text-black outline-none focus:border-red focus:ring-2 focus:ring-red/20"
+        min={type === 'number' ? 0 : undefined}
+        onChange={(event) => setValue(event.target.value)}
+        type={type === 'number' ? 'number' : 'text'}
+        value={value}
+      />
+      <button
+        className="inline-flex h-11 items-center justify-center border border-black bg-red px-6 text-sm font-semibold text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-40"
+        disabled={!trimmed}
+        type="submit"
+      >
+        Next
+      </button>
+    </form>
+  );
+}
+
+function cleanText(value = '', verbatim = false) {
+  if (verbatim) return String(value);
   return String(value)
     .replace(/\u00e2\u20ac[\u201c\u201d]/g, '-')
     .replace(/\u00c2\u00b0/g, ' deg')
@@ -45,6 +78,8 @@ function cleanText(value = '') {
 }
 
 export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
+  // `verbatim` content keeps its own symbols (°C) instead of the ASCII clean-up.
+  const verbatim = Boolean(data?.verbatim);
   const steps = data?.steps ?? [];
   const result = data?.result ?? {};
   const eyebrow = data?.eyebrow ?? 'Configuration helper';
@@ -65,10 +100,10 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     return {
       key,
       label: stepDef ? getResultLabel(stepDef, stepIndex) : titleCase(key),
-      value: cleanText(optDef?.label ?? val),
-      desc: optDef?.desc ? cleanText(optDef.desc) : undefined,
+      value: cleanText(optDef?.label ?? val, verbatim),
+      desc: optDef?.desc ? cleanText(optDef.desc, verbatim) : undefined,
     };
-  }), [selections, steps]);
+  }), [selections, steps, verbatim]);
 
   // Optional named result profiles: when the content supplies documented
   // combinations (e.g. "stability + large load + long-term + GMP" -> a full
@@ -88,9 +123,9 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     return Object.entries(matchedProfile.result ?? {}).map(([key, val]) => ({
       key,
       label: matchedProfile.resultLabels?.[key] ?? titleCase(key),
-      value: cleanText(String(val)),
+      value: cleanText(String(val), verbatim),
     }));
-  }, [matchedProfile]);
+  }, [matchedProfile, verbatim]);
   const displayRows = profileRows ?? selectedRows;
 
   const recommendedTitle = displayRows.length
@@ -126,7 +161,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
     <section id="config" className="scroll-mt-32 border-b border-line-light bg-parchment-alt px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
       <div className="relative mx-auto w-full max-w-[1180px]">
         <div className="relative overflow-hidden">
-          <SectionHeader number="09" eyebrow={eyebrow} title={heading} description={intro} />
+          <SectionHeader number="09" eyebrow={eyebrow} lead={data?.lead} title={heading} description={intro} />
 
           <div className="relative mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:flex sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-4">
             {steps.map((item, index) => {
@@ -163,8 +198,18 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
 
           <div className="relative mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-stretch">
             <div className="flex min-h-[420px] flex-col border border-line-light bg-white p-4 sm:p-6 lg:p-8">
-              <h3 className="shrink-0 text-lg font-semibold tracking-tight text-ink">{cleanText(current.question)}</h3>
+              <h3 className="shrink-0 text-lg font-semibold tracking-tight text-ink">{cleanText(current.question, verbatim)}</h3>
+              {current.hint && <p className="mt-1 shrink-0 text-sm leading-6 text-ink-soft">{current.hint}</p>}
               <div className="mt-5 min-h-0 flex-1 space-y-3 overflow-y-auto pr-1">
+                {current.input && (
+                  <TypedAnswer
+                    initial={selections[current.key]}
+                    key={current.key}
+                    label={current.question}
+                    onSubmit={select}
+                    type={current.input}
+                  />
+                )}
                 {(current.options ?? []).map((option) => {
                   const isSelected = selections[current.key] === option.val;
                   return (
@@ -179,8 +224,8 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                       onClick={() => select(option.val)}
                       type="button"
                     >
-                      <span className="block text-base font-medium">{cleanText(option.label)}</span>
-                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black">{cleanText(option.desc)}</span>}
+                      <span className="block text-base font-medium">{cleanText(option.label, verbatim)}</span>
+                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black">{cleanText(option.desc, verbatim)}</span>}
                     </button>
                   );
                 })}

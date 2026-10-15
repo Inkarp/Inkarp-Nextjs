@@ -189,6 +189,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
           <div className="mx-auto flex max-w-[1180px] flex-col gap-6 border border-line-light bg-white p-4 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <RecTag>{lf.cta.eyebrow}</RecTag>
+              {lf.cta.lead && <p className="mb-2 text-sm leading-6 text-ink-soft">{lf.cta.lead}</p>}
               <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">{lf.cta.title}</h2>
               {lf.cta.subheading && (
                 <p className="mt-2 max-w-2xl text-sm font-semibold text-ink">{lf.cta.subheading}</p>

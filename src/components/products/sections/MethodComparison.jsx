@@ -2,7 +2,7 @@
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
 
-function cleanText(value = '') {
+function cleanTextDefault(value = '') {
   return String(value)
     .replace(/\u00e2\u20ac[\u201c\u201d]/g, '-')
     .replace(/\u00c2\u00b0/g, ' deg')
@@ -13,6 +13,8 @@ function cleanText(value = '') {
 
 export default function MethodComparison({ data }) {
   const { columns = [], rows = [], eyebrow, title, description, disclaimer, featureLabel } = data ?? {};
+  // `verbatim` content keeps its own symbols (°C, ±) instead of the ASCII clean-up.
+  const cleanText = data?.verbatim ? (value = '') => String(value) : cleanTextDefault;
   if (!rows.length) return null;
 
   const highlightedIndex = columns.findIndex((column) => column.highlight);

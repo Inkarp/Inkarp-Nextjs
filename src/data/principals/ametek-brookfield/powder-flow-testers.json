@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "ametek-brookfield",
-    "principalName": "Ametek Brookfield",
-    "countryOfOrigin": "United States of America"
-  },
+  "principal": { "slug": "ametek-brookfield", "principalName": "Ametek Brookfield", "countryOfOrigin": "United States of America" },
   "categories": [
     {
       "name": "Powder Flow Testers",
@@ -11,45 +7,75 @@
       "products": [
         {
           "name": "PFT Powder Flow Tester",
+
           "slug": "pft-powder-flow-tester",
+
           "principalImage": "/assets/images/PrincipalLogos/Brookfield.webp",
+
           "imageAlt": "Ametek Brookfield PFT Powder Flow Tester - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/pft-powder-flow-tester",
+
           "breadcrumbPath": "Home > Products > Powder Flow Testers > PFT Powder Flow Tester",
+
           "h1": "PFT Powder Flow Tester",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Erratic powder discharge is expensive. Arching, rat-holing, unplanned downtime. Problems that usually get discovered on the production line, when it's too late to fix cheaply. PFT Powder Flow Tester catches them before they happen, on the bench.",
 
           "features": [
-            "25-Minute Full Flow Function Test: Fast enough for formulation-stage decisions, not just after-the-fact confirmation of a production problem.",
-            "Nine Measurements in One Test: Bulk density, wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation. Most benchtop solutions don't cover this range.",
-            "Faster QA/QC-Specific Testing: A separate, quicker test path built specifically for routine quality checks, not the full characterization battery every time.",
-            "Compact Enough for Any Workbench: No dedicated lab space needed. Fits into an existing QC or formulation bench setup.",
-            "Direct-to-Excel Data Output: Results move straight into analysis and reporting workflows, no manual re-entry step."
+            {
+              "title": "25-Minute Full Flow Function Test",
+              "description": "Fast enough for formulation-stage decisions, not just after-the-fact confirmation of a production problem."
+            },
+            {
+              "title": "Nine Measurements in One Test",
+              "description": "Bulk density, wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation. Most benchtop solutions don't cover this range."
+            },
+            {
+              "title": "Faster QA/QC-Specific Testing",
+              "description": "A separate, quicker test path built specifically for routine quality checks, not the full characterization battery every time."
+            },
+            {
+              "title": "Compact Enough for Any Workbench",
+              "description": "No dedicated lab space needed. Fits into an existing QC or formulation bench setup."
+            },
+            { "title": "Direct-to-Excel Data Output", "description": "Results move straight into analysis and reporting workflows, no manual re-entry step." }
           ],
 
           "technicalSpecs": [
             { "label": "Product Name", "value": "Ametek Brookfield PFT Powder Flow Tester" },
             { "label": "Category", "value": "Powder Flow Testers" },
             { "label": "Full Flow Function Test Time", "value": "25 minutes" },
-            { "label": "Measurement Outputs", "value": "Bulk density (fill and final), wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Compressibility (Carr) Index, Compressibility (Hausner) Ratio, time consolidation" },
+            {
+              "label": "Measurement Outputs",
+              "value": "Bulk density (fill and final), wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Compressibility (Carr) Index, Compressibility (Hausner) Ratio, time consolidation"
+            },
             { "label": "Test Options", "value": "Full flow function, or faster QA/QC-specific test" },
             { "label": "Control Software", "value": "Powder Flow Pro" },
             { "label": "Data Export", "value": "Direct to Excel" },
             { "label": "Reporting", "value": "Comprehensive, documented test reports" },
             { "label": "Physical Design", "value": "Compact, benchtop, fits any workbench" },
-            { "label": "Detailed Numeric Specifications (dimensions, sample volume, load range)", "value": "Not confirmed in this source, available on request" }
+            {
+              "label": "Detailed Numeric Specifications (dimensions, sample volume, load range)",
+              "value": "Not confirmed in this source, available on request"
+            }
           ],
 
           "applications": [
-            "Hopper and Silo Discharge Prediction: Arching dimensions, rat-hole diameter, and hopper half angle predict handling behavior before equipment is built.",
-            "Formulation Development: Full flow function characterization supports new powder formulations.",
-            "Production QA/QC: Faster QA/QC-specific test enables routine, efficient quality checks.",
-            "SOP Development: Consistent, repeatable data streamlines Standard Operating Procedure creation.",
-            "Wall Friction Assessment: Direct measurement against hopper or chute wall material.",
-            "Compressibility and Caking Prediction: Carr Index and Hausner Ratio flag powders prone to poor flow or caking.",
-            "Time-Dependent Flow Behavior: Time consolidation testing captures flow changes after storage."
+            {
+              "title": "Hopper and Silo Discharge Prediction",
+              "description": "Arching dimensions, rat-hole diameter, and hopper half angle predict handling behavior before equipment is built"
+            },
+            { "title": "Formulation Development", "description": "Full flow function characterization supports new powder formulations" },
+            { "title": "Production QA/QC", "description": "Faster QA/QC-specific test enables routine, efficient quality checks" },
+            { "title": "SOP Development", "description": "Consistent, repeatable data streamlines Standard Operating Procedure creation" },
+            { "title": "Wall Friction Assessment", "description": "Direct measurement against hopper or chute wall material" },
+            { "title": "Compressibility and Caking Prediction", "description": "Carr Index and Hausner Ratio flag powders prone to poor flow or caking" },
+            { "title": "Time-Dependent Flow Behavior", "description": "Time consolidation testing captures flow changes after storage" }
           ],
 
           "inPageNav": [
@@ -65,14 +91,15 @@
           ],
 
           "suitability": {
-            "title": "Full flow function, or faster QA/QC testing?",
-            "description": "Select the testing purpose and time available, and get the recommended test protocol.",
+            "title": "PFT Powder Flow Tester test selector: full flow function, or faster QA/QC testing?",
+            "description": "Select the testing purpose, and get the recommended test protocol.",
             "ctaLabel": "Get Configuration Support",
-            "disclaimer": "This is a quick test protocol check. Share the testing purpose and time available, and Inkarp can confirm whether the full flow function or QA/QC-specific test is the right fit.",
+            "disclaimer": "",
             "fields": [
               {
                 "key": "testingPurpose",
                 "label": "Testing purpose",
+                "hint": "New formulation characterization, or routine QA/QC check",
                 "options": [
                   { "val": "new-formulation", "label": "New formulation characterization" },
                   { "val": "routine-qaqc", "label": "Routine QA/QC check" }
@@ -81,9 +108,19 @@
               {
                 "key": "timeAvailable",
                 "label": "Time available",
+                "hint": "Full 25-minute test acceptable, or faster turnaround needed",
                 "options": [
                   { "val": "full-25min", "label": "Full 25-minute test acceptable" },
                   { "val": "faster-turnaround", "label": "Faster turnaround needed" }
+                ]
+              },
+              {
+                "key": "dataDepthRequired",
+                "label": "Data depth required",
+                "hint": "All nine measurements, or a subset for routine checks",
+                "options": [
+                  { "val": "all-nine-measurements", "label": "All nine measurements" },
+                  { "val": "a-subset-for-routine-checks", "label": "A subset for routine checks" }
                 ]
               }
             ],
@@ -92,36 +129,49 @@
                 "condition": { "testingPurpose": "new-formulation" },
                 "title": "Full Flow Function Test Fits",
                 "body": "New formulation characterization calls for the full 25-minute flow function test, covering all nine measurement outputs.",
-                "tags": ["Full Flow Function"]
+                "tags": [
+                  "Full Flow Function"
+                ]
               },
               {
                 "condition": { "testingPurpose": "routine-qaqc" },
                 "title": "QA/QC-Specific Test Fits",
                 "body": "Routine quality checks are covered by the faster QA/QC-specific test path, without running the full battery every time.",
-                "tags": ["QA/QC Test"]
+                "tags": [
+                  "QA/QC Test"
+                ]
               },
               {
                 "condition": { "timeAvailable": "faster-turnaround" },
                 "title": "Faster Test Path Available",
                 "body": "When a faster turnaround is needed, the QA/QC-specific test option skips the full characterization battery.",
-                "tags": ["Faster Turnaround"]
+                "tags": [
+                  "Faster Turnaround"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Test Protocol",
                 "body": "Share the testing purpose and time available, and the recommended full flow function or QA/QC-specific test protocol gets confirmed.",
-                "tags": ["Configuration Guidance"]
+                "tags": [
+                  "Configuration Guidance"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Test Type Selector",
+            "ctaNote": "Recommends full flow function or QA/QC-specific test. Routes to a testing-specific quotation.",
+            "verbatim": true
           },
 
           "configWizard": {
-            "title": "Will this powder arch or rat-hole?",
-            "description": "Select the equipment and handling details, and see which measurements matter most.",
+            "title": "PFT Powder Flow Tester hopper risk assessor: will this powder arch or rat-hole?",
+            "description": "Select the powder and equipment details, and see which measurements matter most.",
             "steps": [
               {
                 "key": "equipmentType",
-                "question": "What equipment type is involved?",
+                "label": "Equipment type",
+                "question": "Equipment type",
+                "hint": "Hopper, silo, chute, or bin",
                 "options": [
                   { "val": "hopper", "label": "Hopper" },
                   { "val": "silo", "label": "Silo" },
@@ -131,37 +181,74 @@
               },
               {
                 "key": "knownHandlingIssues",
-                "question": "Are there known handling issues?",
+                "label": "Known handling issues",
+                "question": "Known handling issues",
+                "hint": "Arching, rat-holing, caking, or none yet observed",
                 "options": [
                   { "val": "arching", "label": "Arching" },
                   { "val": "rat-holing", "label": "Rat-holing" },
                   { "val": "caking", "label": "Caking" },
                   { "val": "none-yet", "label": "None yet observed" }
                 ]
+              },
+              {
+                "key": "wallMaterial",
+                "label": "Wall material",
+                "question": "Wall material",
+                "hint": "Steel, plastic, or other",
+                "options": [
+                  { "val": "steel", "label": "Steel" },
+                  { "val": "plastic", "label": "Plastic" },
+                  { "val": "other", "label": "Other" }
+                ]
+              },
+              {
+                "key": "storageDurationBeforeUse",
+                "label": "Storage duration before use",
+                "question": "Storage duration before use",
+                "hint": "Short-term, or extended storage",
+                "options": [
+                  { "val": "short-term", "label": "Short-term" },
+                  { "val": "extended-storage", "label": "Extended storage" }
+                ]
               }
             ],
-            "result": {
-              "ctaNote": "Share the wall material and storage duration before use, and the measurements to prioritize (arching dimensions, rat-hole diameter, hopper half angle, or time consolidation) get confirmed against the equipment and handling history.",
-              "ctaLabel": "Talk to Product Expert"
-            }
+            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "eyebrow": "Hopper Discharge Risk Assessor",
+            "emptyState": "Recommends which of the nine measurements to prioritize",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "planners": [
             {
               "sectionId": "data-reporting-checker",
               "eyebrow": "Data and Reporting Checker",
-              "title": "How does the data need to flow into other systems?",
+              "title": "PFT Powder Flow Tester data checker: how does the data need to flow into other systems?",
               "description": "Select the reporting and integration needs, and confirm the workflow fit.",
               "fields": [
-                { "key": "choices", "label": "Choose one" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Data destination", "choices": "Excel only; Integration with another system" },
-                { "title": "SOP development need", "choices": "Building new SOPs; Verifying existing ones" },
-                { "title": "Reporting frequency", "choices": "Per batch; Per formulation; Periodic review" }
+                {
+                  "title": "Data destination",
+                  "hint": "Excel only, or integration with another system",
+                  "choices": "Excel only; Integration with another system"
+                },
+                {
+                  "title": "SOP development need",
+                  "hint": "Building new SOPs, or verifying existing ones",
+                  "choices": "Building new SOPs; Verifying existing ones"
+                },
+                {
+                  "title": "Reporting frequency",
+                  "hint": "Per batch, per formulation, or periodic review",
+                  "choices": "Per batch; Per formulation; Periodic review"
+                }
               ],
               "ctaLabel": "Get Configuration Support",
-              "disclaimer": "Confirms data export and reporting workflow fit, then routes to a configuration-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Confirms data export and reporting workflow. Routes to a configuration-specific quotation."
             }
           ],
 
@@ -170,12 +257,60 @@
             "title": "Industry Explorer",
             "description": "PFT Powder Flow Tester industries: pharmaceutical, food, chemical, and bulk solids processing.",
             "industries": [
-              { "name": "Pharmaceutical Manufacturing", "icon": "pill", "useCase": "Powder formulation and hopper discharge prediction", "consideration": "Full flow function data supports formulation-stage decisions" },
-              { "name": "Food and Beverage Processing", "icon": "coffee", "useCase": "Bulk powder handling and storage behavior", "consideration": "Time consolidation testing captures storage-related flow changes" },
-              { "name": "Chemical Manufacturing", "icon": "flask", "useCase": "Bulk solids characterization for process equipment design", "consideration": "Wall friction and hopper half angle inform equipment specification" },
-              { "name": "Bulk Solids Handling Equipment Design", "icon": "cpu", "useCase": "Hopper and silo geometry validation", "consideration": "Arching dimensions and rat-hole diameter predict discharge failure modes" },
-              { "name": "Cosmetics and Personal Care Manufacturing", "icon": "droplet", "useCase": "Powder formulation consistency", "consideration": "Compressibility indices flag caking-prone formulations early" },
-              { "name": "Production QA/QC Laboratories", "icon": "target", "useCase": "Routine batch quality verification", "consideration": "Faster QA/QC-specific test supports high-volume checking" }
+              {
+                "name": "Pharmaceutical Manufacturing",
+                "icon": "pill",
+                "note": "Use Case: Powder formulation and hopper discharge prediction",
+                "bullets": [
+                  "Why It Fits: Full flow function data supports formulation-stage decisions"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Beverage Processing",
+                "icon": "coffee",
+                "note": "Use Case: Bulk powder handling and storage behavior",
+                "bullets": [
+                  "Why It Fits: Time consolidation testing captures storage-related flow changes"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical Manufacturing",
+                "icon": "flask",
+                "note": "Use Case: Bulk solids characterization for process equipment design",
+                "bullets": [
+                  "Why It Fits: Wall friction and hopper half angle inform equipment specification"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Bulk Solids Handling Equipment Design",
+                "icon": "cpu",
+                "note": "Use Case: Hopper and silo geometry validation",
+                "bullets": [
+                  "Why It Fits: Arching dimensions and rat-hole diameter predict discharge failure modes"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetics and Personal Care Manufacturing",
+                "icon": "droplet",
+                "note": "Use Case: Powder formulation consistency",
+                "bullets": [
+                  "Why It Fits: Compressibility indices flag caking-prone formulations early"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Production QA/QC Laboratories",
+                "icon": "target",
+                "note": "Use Case: Routine batch quality verification",
+                "bullets": [
+                  "Why It Fits: Faster QA/QC-specific test supports high-volume checking"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -183,30 +318,51 @@
             "title": "Inkarp Service Near You",
             "description": "PFT Powder Flow Tester service in India: demonstration, installation, training, and AMC.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Runs the customer's own powder to show flow function and QA/QC test results." },
-              { "title": "Test Protocol Support", "description": "Confirms which of the nine measurements matter most for the application." },
-              { "title": "Installation Support", "description": "Setup, calibration, and first-run checks." },
-              { "title": "Operator Training", "description": "Powder Flow Pro software, sample prep, and routine testing." },
-              { "title": "Data Integration Support", "description": "Excel export and reporting workflow setup." },
-              { "title": "Preventive Maintenance", "description": "Load cell, cell assembly, and software performance." },
-              { "title": "Spares and Accessories", "description": "Test cells, shear tools, and replacement parts." },
-              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC." }
+              { "title": "Product Demonstration", "description": "Runs the customer's own powder to show flow function and QA/QC test results" },
+              { "title": "Test Protocol Support", "description": "Confirms which of the nine measurements matter most for the application" },
+              { "title": "Installation Support", "description": "Setup, calibration, and first-run checks" },
+              { "title": "Operator Training", "description": "Powder Flow Pro software, sample prep, and routine testing" },
+              { "title": "Data Integration Support", "description": "Excel export and reporting workflow setup" },
+              { "title": "Preventive Maintenance", "description": "Load cell, cell assembly, and software performance" },
+              { "title": "Spares and Accessories", "description": "Test cells, shear tools, and replacement parts" },
+              { "title": "Service Support", "description": "Troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
           "faqs": [
-            { "question": "What is the PFT Powder Flow Tester used for?", "answer": "It analyzes powder flow behavior for industrial processing equipment, predicting handling and hopper discharge issues before they cause production downtime." },
+            {
+              "question": "What is the PFT Powder Flow Tester used for?",
+              "answer": "It analyzes powder flow behavior for industrial processing equipment, predicting handling and hopper discharge issues before they cause production downtime."
+            },
             { "question": "How long does a full flow function test take?", "answer": "25 minutes." },
-            { "question": "What does a test measure?", "answer": "Nine outputs: bulk density (fill and final), wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation." },
-            { "question": "Is there a faster test option for routine QA/QC?", "answer": "Yes, a faster flow function test specifically designed for QA/QC checks, alongside the full 25-minute characterization test." },
+            {
+              "question": "What does a test measure?",
+              "answer": "Nine outputs: bulk density (fill and final), wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation."
+            },
+            {
+              "question": "Is there a faster test option for routine QA/QC?",
+              "answer": "Yes, a faster flow function test specifically designed for QA/QC checks, alongside the full 25-minute characterization test."
+            },
             { "question": "What software controls the solution?", "answer": "Powder Flow Pro, designed to simplify operation." },
             { "question": "Can data be exported for further analysis?", "answer": "Yes, directly to Excel." },
             { "question": "Does it fit on a standard lab bench?", "answer": "Yes, the design is compact and space-saving, built for any workbench." },
             { "question": "What is Carr Index and Hausner Ratio used for?", "answer": "Both indicate compressibility and caking risk in a powder formulation." },
-            { "question": "Can this solution predict hopper discharge problems before equipment is built?", "answer": "Yes, arching dimensions, rat-hole diameter, and hopper half angle data support hopper and silo design decisions ahead of installation." },
-            { "question": "Where can I find detailed technical specifications?", "answer": "Physical dimensions, sample volume, and load range weren't confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield." },
-            { "question": "What is the price of the PFT Powder Flow Tester in India?", "answer": "Get in touch and Inkarp will put together a quote based on the test configuration and accessories required." },
-            { "question": "Who is the authorized distributor of the PFT Powder Flow Tester in India?", "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield PFT Powder Flow Tester in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Can this solution predict hopper discharge problems before equipment is built?",
+              "answer": "Yes, arching dimensions, rat-hole diameter, and hopper half angle data support hopper and silo design decisions ahead of installation."
+            },
+            {
+              "question": "Where can I find detailed technical specifications?",
+              "answer": "Physical dimensions, sample volume, and load range weren't confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield."
+            },
+            {
+              "question": "What is the price of the PFT Powder Flow Tester in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the test configuration and accessories required."
+            },
+            {
+              "question": "Who is the authorized distributor of the PFT Powder Flow Tester in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Ametek Brookfield PFT Powder Flow Tester in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -227,9 +383,14 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right test configuration fast", "body": "Share the powder type, the hopper or handling equipment it feeds, and whether QA/QC speed or full characterization matters more, and the right PFT test configuration gets confirmed fast." },
-              { "title": "Confirm expected throughput", "body": "Share how many formulations or batches need testing per week, and expected throughput gets estimated against the 25-minute test time." },
-              { "title": "Installation and ongoing support", "body": "Inkarp handles installation, operator training, and ongoing preventive maintenance and AMC." }
+              { "title": "Product Demonstration", "body": "Runs the customer's own powder to show flow function and QA/QC test results" },
+              { "title": "Test Protocol Support", "body": "Confirms which of the nine measurements matter most for the application" },
+              { "title": "Installation Support", "body": "Setup, calibration, and first-run checks" },
+              { "title": "Operator Training", "body": "Powder Flow Pro software, sample prep, and routine testing" },
+              { "title": "Data Integration Support", "body": "Excel export and reporting workflow setup" },
+              { "title": "Preventive Maintenance", "body": "Load cell, cell assembly, and software performance" },
+              { "title": "Spares and Accessories", "body": "Test cells, shear tools, and replacement parts" },
+              { "title": "Service Support", "body": "Troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -252,75 +413,149 @@
                 "title": "Product Information",
                 "description": "PFT Powder Flow Tester product information: measurement capability, software, and testing speed.",
                 "body": [
-                  "Analyzes powder flow behavior in industrial processing equipment. Built for manufacturers handling powders daily.",
-                  "Prevents costly downtime. Erratic powder discharge caught before it hits the production line.",
-                  "Comprehensive powder analysis. Formulation, characterization, and QA/QC, all covered.",
-                  "Streamlined SOP development. Build Standard Operating Procedures fast, with consistent quality behind them.",
-                  "Compact, workbench-ready design. No dedicated lab space needed.",
-                  "Powder Flow Pro software. Intuitive, built to simplify operation.",
-                  "Full flow function test in 25 minutes. Fast, accurate data, not a multi-hour commitment.",
-                  "Nine measurement outputs. Bulk density, wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation.",
-                  "Faster QA/QC-specific test option. Efficient quality checks without running the full battery every time.",
-                  "Direct Excel export. No manual data re-entry.",
-                  "Comprehensive reporting. Documented results supporting real decisions."
+                  { "text": "Analyzes powder flow behavior in industrial processing equipment. Built for manufacturers handling powders daily." },
+                  { "text": "Prevents costly downtime. Erratic powder discharge caught before it hits the production line." },
+                  { "text": "Comprehensive powder analysis. Formulation, characterization, and QA/QC, all covered." },
+                  { "text": "Streamlined SOP development. Build Standard Operating Procedures fast, with consistent quality behind them." },
+                  { "text": "Compact, workbench-ready design. No dedicated lab space needed." },
+                  { "text": "Powder Flow Pro software. Intuitive, built to simplify operation." },
+                  { "text": "Full flow function test in 25 minutes. Fast, accurate data, not a multi-hour commitment." },
+                  {
+                    "text": "Nine measurement outputs. Bulk density, wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation."
+                  },
+                  { "text": "Faster QA/QC-specific test option. Efficient quality checks without running the full battery every time." },
+                  { "text": "Direct Excel export. No manual data re-entry." },
+                  { "text": "Comprehensive reporting. Documented results supporting real decisions." }
                 ],
                 "cards": [
                   { "title": "25-minute full flow function test", "description": "Fast enough to actually inform decisions" },
                   { "title": "9 measurement outputs", "description": "Complete flow behavior picture, one test" },
                   { "title": "Compact benchtop footprint", "description": "No dedicated lab space required" },
                   { "title": "Direct Excel export", "description": "Data ready for analysis immediately" }
-                ]
+                ],
+                "glanceTitle": "PFT at a Glance",
+                "glanceDescription": "PFT Powder Flow Tester at a glance: what it measures, how fast, and what comes out the other end.",
+                "subheading": "Overview",
+                "intro": "PFT Powder Flow Tester overview: what the solution is, and what it does, fast.",
+                "tabSummary": "What powder flow testing prevents, and how fast PFT delivers it"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "PFT Powder Flow Tester key features: what actually sets this solution apart, not a repeat of the overview."
+                "description": "PFT Powder Flow Tester key features: what actually sets this solution apart, not a repeat of the overview.",
+                "tabSummary": "What sets PFT apart for formulation and QA/QC work"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "PFT Powder Flow Tester applications: hopper design, formulation, and production QA/QC."
+                "description": "PFT Powder Flow Tester applications: hopper design, formulation, and production QA/QC.",
+                "tabSummary": "Hopper design, formulation, and production QA/QC"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "PFT Powder Flow Tester technical specifications: test time, measurement outputs, and software."
+                "description": "PFT Powder Flow Tester technical specifications: test time, measurement outputs, and software.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Test time, measurement outputs, software"
               },
               {
                 "key": "performance",
                 "eyebrow": "The Nine Measurements",
                 "title": "The Nine Measurements",
-                "description": "What each output tells you about handling behavior.",
+                "tabSummary": "What each output tells you about handling behavior",
                 "body": [
+                  "PFT Powder Flow Tester measurement outputs: what each number tells you about handling behavior.",
                   "A single flow function number doesn't tell a hopper designer everything they need. PFT's testing produces nine distinct outputs, each answering a different practical question about how a powder will actually behave in equipment.",
                   "Bulk density, measured at fill and final states, establishes the baseline the rest of the data builds from. Wall friction predicts how the powder interacts with the specific material a hopper or chute is built from, not a generic assumption. Flow index summarizes overall flowability. Arching dimensions and rat-hole diameter predict the two most common hopper discharge failures before either happens on the production line. Hopper half angle informs the actual geometry a new hopper needs. Carr Index and Hausner Ratio flag compressibility and caking risk. Time consolidation testing, run alongside the full flow function data, captures how flow behavior changes after a powder has sat in storage, a condition standard single-point testing misses entirely."
                 ],
-                "utilityChecklist": [
-                  { "label": "How dense is the powder, loose and settled?", "value": "Bulk density, fill and final" },
-                  { "label": "Will it stick to the hopper wall?", "value": "Wall friction" },
-                  { "label": "How well does it flow overall?", "value": "Flow index" },
-                  { "label": "Will it arch and stop flowing?", "value": "Arching dimensions" },
-                  { "label": "Will it rat-hole through the center?", "value": "Rat-hole diameter" },
-                  { "label": "What hopper geometry actually works?", "value": "Hopper half angle" },
-                  { "label": "Is it prone to caking or poor compressibility?", "value": "Carr Index, Hausner Ratio" },
-                  { "label": "Does flow behavior change after storage?", "value": "Time consolidation testing" }
-                ],
-                "disclaimer": "Share which of these nine questions matters most for the equipment or process in question, and the right test protocol gets built around it."
+                "groups": [
+                  {
+                    "columns": [
+                      "The practical question",
+                      "The measurement that answers it"
+                    ],
+                    "rows": [
+                      [
+                        "How dense is the powder, loose and settled?",
+                        "Bulk density, fill and final"
+                      ],
+                      [
+                        "Will it stick to the hopper wall?",
+                        "Wall friction"
+                      ],
+                      [
+                        "How well does it flow overall?",
+                        "Flow index"
+                      ],
+                      [
+                        "Will it arch and stop flowing?",
+                        "Arching dimensions"
+                      ],
+                      [
+                        "Will it rat-hole through the center?",
+                        "Rat-hole diameter"
+                      ],
+                      [
+                        "What hopper geometry actually works?",
+                        "Hopper half angle"
+                      ],
+                      [
+                        "Is it prone to caking or poor compressibility?",
+                        "Carr Index, Hausner Ratio"
+                      ],
+                      [
+                        "Does flow behavior change after storage?",
+                        "Time consolidation testing"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share which of these nine questions matters most for the equipment or process in question, and the right test protocol gets built around it."
+                  }
+                ]
               },
               {
                 "key": "benefits",
                 "eyebrow": "25 Minutes to a Full Flow Function",
                 "title": "25 Minutes to a Full Flow Function",
-                "description": "Why speed changes what powder testing can actually inform.",
+                "description": "PFT Powder Flow Tester test speed: why 25 minutes changes what powder testing can actually inform.",
                 "cards": [
-                  { "title": "Fast enough to inform formulation, not just confirm it", "description": "25-minute full flow function test." },
-                  { "title": "Routine QA/QC without a full characterization every time", "description": "Faster, QA/QC-specific test option." },
-                  { "title": "Data ready to act on immediately", "description": "Direct Excel export, no re-entry delay." },
-                  { "title": "Documented results for real decisions", "description": "Comprehensive automated reporting." }
-                ]
+                  { "title": "Fast enough to inform formulation, not just confirm it", "description": "25-minute full flow function test" },
+                  { "title": "Routine QA/QC without a full characterization every time", "description": "Faster, QA/QC-specific test option" },
+                  { "title": "Data ready to act on immediately", "description": "Direct Excel export, no re-entry delay" },
+                  { "title": "Documented results for real decisions", "description": "Comprehensive automated reporting" }
+                ],
+                "paragraphs": [
+                  "A flow function test that takes hours arrives too late to shape a formulation decision. It becomes a confirmation exercise after the powder is already committed to a process, not a design input.",
+                  "PFT completes a full flow function test in 25 minutes. That speed is what makes powder flow characterization a genuine part of formulation work, tested and iterated on, rather than a final check run once at the end. For QA/QC, a separate faster test path exists specifically so routine quality checks don't require the full 25-minute battery every time."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What powder testing needs to actually be useful", "value": "How PFT delivers it" },
+                "note": "Share how many formulations or batches need testing per week, and expected throughput gets estimated against the 25-minute test time.",
+                "tabSummary": "Why speed changes what powder testing can actually inform"
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Ametek Brookfield PFT Powder Flow Tester" },
+                  { "title": "Full flow function test time", "description": "25 minutes" },
+                  {
+                    "title": "Measurement outputs",
+                    "description": "9 (bulk density fill/final, wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, time consolidation)"
+                  },
+                  { "title": "Software", "description": "Powder Flow Pro" },
+                  { "title": "Data export", "description": "Direct to Excel" },
+                  { "title": "Test options", "description": "Full flow function, or faster QA/QC-specific test" }
+                ],
+                "disclaimer": "Share the powder type, the hopper or handling equipment it feeds, and whether QA/QC speed or full characterization matters more, and the right PFT test configuration gets confirmed fast."
               },
               {
                 "key": "docs",
@@ -333,17 +568,35 @@
                   { "title": "Powder Flow Pro Software Overview", "description": "Available on request" },
                   { "title": "Measurement Methodology Guide", "description": "Available on request" },
                   { "title": "Related Accessories Catalogue", "description": "Available on request" }
-                ]
+                ],
+                "tabSummary": "Specs, accessories"
               }
             ],
             "cta": {
               "eyebrow": "Enquire now",
               "title": "Get the PFT Powder Flow Tester in India from Inkarp",
-              "description": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts. A full flow function test in 25 minutes, nine measurements per test, and a footprint that fits any workbench. Share the powder type and the equipment it feeds, and the right PFT test configuration gets confirmed fast.",
+              "description": "A full flow function test in 25 minutes, nine measurements per test, and a footprint that fits any workbench. Share the powder type and the equipment it feeds, and the right PFT test configuration gets confirmed fast.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "lead": "PFT Powder Flow Tester, get it in India from Inkarp.",
+              "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Erratic powder discharge is expensive. Arching, rat-holing, unplanned downtime. Problems that usually get discovered on the production line, when it's too late to fix cheaply. PFT Powder Flow Tester catches them before they happen, on the bench.",
+              "A complete full flow function test runs in just 25 minutes, fast enough to actually inform formulation decisions instead of trailing them. Nine distinct measurements come out of that testing: bulk density, wall friction, flow index, arching dimensions, rat-hole diameter, hopper half angle, Carr Index, Hausner Ratio, and time consolidation.",
+              "The solution is compact enough for any workbench. No dedicated lab space required. Powder Flow Pro software runs the whole workflow, and results export directly to Excel for downstream analysis and reporting.",
+              "What it prevents: costly downtime from erratic powder discharge.",
+              "What it produces: the data needed to write consistent Standard Operating Procedures.",
+              "Where it fits: formulation, characterization, and QA/QC, one solution across all three."
+            ],
+            "statsIntro": "PFT Powder Flow Tester specifications at a glance: test speed, measurement outputs, and footprint."
+          },
+
+          "faqIntro": "PFT Powder Flow Tester FAQs: test speed, measurements, and software.",
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

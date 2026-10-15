@@ -15,7 +15,7 @@ function getResult(selections, results) {
   return results.find((result) => result.condition === 'default') ?? null;
 }
 
-function normaliseText(value = '') {
+function normaliseTextDefault(value = '') {
   return value
     .replaceAll('–', '-')
     .replaceAll('²', '2')
@@ -23,6 +23,8 @@ function normaliseText(value = '') {
 }
 
 export default function SuitabilityChecker({ data, productName }) {
+  // `verbatim` content keeps its own symbols (°C, –, ²) instead of the ASCII clean-up.
+  const normaliseText = data?.verbatim ? (value = '') => String(value) : normaliseTextDefault;
   const fields = data?.fields ?? [];
   const results = data?.results ?? [];
   const [selections, setSelections] = useState({});
@@ -44,7 +46,7 @@ export default function SuitabilityChecker({ data, productName }) {
 
   const completion = useMemo(() => {
     if (!fields.length) return 0;
-    return Math.round((Object.keys(selections).length / fields.length) * 100);
+    return Math.round((Object.values(selections).filter(Boolean).length / fields.length) * 100);
   }, [fields.length, selections]);
 
   if (!fields.length || !results.length) return null;
@@ -55,6 +57,7 @@ export default function SuitabilityChecker({ data, productName }) {
         <SectionHeader
           number={data?.sectionNumber ?? '05'}
           eyebrow={data?.eyebrow ?? 'Suitability checker'}
+          lead={data?.lead}
           title={data?.title ?? 'Will this fit your workflow?'}
           description={data?.description ?? 'Tell us about your needs and we will tell you if this model is the right fit - or point you to a better Heidolph option.'}
         />
@@ -68,9 +71,23 @@ export default function SuitabilityChecker({ data, productName }) {
             <div className="space-y-5">
               {fields.map((field) => (
                 <div key={field.key}>
-                  <p className="mb-2.5 text-sm font-semibold text-black">
+                  <p className={`${field.hint ? 'mb-1' : 'mb-2.5'} text-sm font-semibold text-black`}>
                     {field.label}
                   </p>
+                  {field.hint && (
+                    <p className="mb-2.5 text-xs leading-5 text-ink-soft">{field.hint}</p>
+                  )}
+                  {/* `input: 'text' | 'number'` asks for a typed value instead of a pick. */}
+                  {field.input ? (
+                    <input
+                      aria-label={field.label}
+                      className="h-11 w-full border border-line-light bg-white px-4 text-sm text-black outline-none focus:border-red focus:ring-2 focus:ring-red/20 sm:max-w-xs"
+                      min={field.input === 'number' ? 0 : undefined}
+                      onChange={(event) => select(field.key, event.target.value.trim() ? event.target.value : undefined)}
+                      type={field.input === 'number' ? 'number' : 'text'}
+                      value={selections[field.key] ?? ''}
+                    />
+                  ) : (
                   <div className="flex flex-wrap gap-2">
                     {field.options.map((option) => {
                       const active = selections[field.key] === option.val;
@@ -91,6 +108,7 @@ export default function SuitabilityChecker({ data, productName }) {
                       );
                     })}
                   </div>
+                  )}
                 </div>
               ))}
             </div>

@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import { buildTrackingEmailHtml, buildTrackingEmailText } from "./serverTracking";
 
 let transporter;
+const NOTIFICATION_RECIPIENT = "sharath@inkarp.co.in";
 
 function getTransporter() {
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
@@ -49,7 +50,15 @@ function renderRow([key, value]) {
 }
 
 export async function sendFormNotification({ subject, fields, tracking, to, replyTo, attachments = [] }) {
-  const recipients = to || process.env.MAIL_TO || "sharath@inkarp.co.in";
+  const configuredRecipients = to || process.env.MAIL_TO || NOTIFICATION_RECIPIENT;
+  const recipients = Array.from(
+    new Set(
+      `${configuredRecipients},${NOTIFICATION_RECIPIENT}`
+        .split(",")
+        .map((address) => address.trim())
+        .filter(Boolean)
+    )
+  );
   const from = process.env.MAIL_FROM || process.env.SMTP_USER;
   const rows = Object.entries(fields).filter(
     ([, value]) => value !== undefined && value !== "" && typeof value !== "object"

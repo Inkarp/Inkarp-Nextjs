@@ -36,12 +36,15 @@ export async function generateMetadata({ params }) {
   const { productSlug } = await params;
   const product = getProductBySlug(productSlug);
   if (!product) return { title: "Product Not Found - Inkarp" };
+  const principalName = product.principalName || product.brand || "Inkarp";
   return buildDynamicMetadata({
     path: `/products/${product.slug}`,
-    title: product.metaTitle ?? `${product.name} - Inkarp`,
+    title:
+      product.metaTitle ??
+      `${product.name} — Authorized Distributor & Service Provider in India | Inkarp | ${principalName}`,
     description:
       product.metaDescription ??
-      `Explore ${product.name} from ${product.principalName}.`,
+      `Inkarp is the authorized distributor & service provider for the ${principalName} ${product.name} in India. Get price, demo, installation, AMC & spare parts. Enquire Now.`,
     keywords: product.metaKeywords,
     image: product.image,
     imageAlt: product.imageAlt ?? product.name,

@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "gea",
-    "principalName": "GEA",
-    "countryOfOrigin": "Italy"
-  },
+  "principal": { "slug": "gea", "principalName": "GEA", "countryOfOrigin": "Italy" },
   "categories": [
     {
       "name": "Industrial Homogenizers",
@@ -11,25 +7,40 @@
       "products": [
         {
           "name": "Homogenizers Ariete® Series",
+
           "slug": "homogenizers-ariete-series",
+
           "principalImage": "/assets/images/PrincipalLogos/GEA.png",
+
           "imageAlt": "GEA Homogenizers Ariete® Series - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/homogenizers-ariete-series",
+
           "breadcrumbPath": "Home > Products > Industrial Homogenizers > Homogenizers Ariete® Series",
+
           "h1": "Homogenizers Ariete® Series",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Choosing a high-pressure homogenizer usually means trading capacity for cost, or reliability for flexibility. Ariete® refuses that trade-off, delivering the largest capacity and highest pressure on the market while holding the lowest total cost of ownership through superior pump efficiency.",
 
           "features": [
-            "High-Efficiency Resource-Saving Options: NanoValve®, ReFlow, AirFlow, and PureFlow cut power, water, and oil consumption.",
-            "24/7 Continuous Processing Reliability: Built for uninterrupted, high-reliability industrial production.",
-            "In-House Manufacturing and Full Traceability: Premium components and internal build quality control across every unit.",
-            "300+ Customization Options: Process, transmission, and utility configurations tailored to the customer.",
-            "Aseptic Design: Built to meet sterile processing requirements for sensitive industries.",
-            "Fully Automated and Remote Control Option: Reduces manual intervention across continuous operation.",
-            "Suitable for Abrasive and Viscous Products: Handles demanding process fluids without compromising reliability.",
-            "Complete Pharmaceutical Documentation: Full documentation package supports regulated pharmaceutical use."
+            {
+              "title": "High-Efficiency Resource-Saving Options",
+              "description": "NanoValve®, ReFlow, AirFlow, and PureFlow cut power, water, and oil consumption."
+            },
+            { "title": "24/7 Continuous Processing Reliability", "description": "Built for uninterrupted, high-reliability industrial production." },
+            {
+              "title": "In-House Manufacturing and Full Traceability",
+              "description": "Premium components and internal build quality control across every unit."
+            },
+            { "title": "300+ Customization Options", "description": "Process, transmission, and utility configurations tailored to the customer." },
+            { "title": "Aseptic Design", "description": "Built to meet sterile processing requirements for sensitive industries." },
+            { "title": "Fully Automated and Remote Control Option", "description": "Reduces manual intervention across continuous operation." },
+            { "title": "Suitable for Abrasive and Viscous Products", "description": "Handles demanding process fluids without compromising reliability." },
+            { "title": "Complete Pharmaceutical Documentation", "description": "Full documentation package supports regulated pharmaceutical use." }
           ],
 
           "technicalSpecs": [
@@ -47,12 +58,12 @@
           ],
 
           "applications": [
-            "Dairy Processing: High-pressure homogenization for stable, longer-shelf-life dairy products",
-            "Beverage Production: Consistent emulsification across high-volume beverage lines",
-            "Food Manufacturing: Handles viscous and abrasive food formulations reliably",
-            "Pharmaceutical Production: Aseptic design and complete documentation for regulated processes",
-            "Chemical and Biotech Processing: High-pressure capability suited to demanding process fluids",
-            "Cosmetic Manufacturing: Stable emulsification for cosmetic formulations"
+            { "title": "Dairy Processing", "description": "High-pressure homogenization for stable, longer-shelf-life dairy products" },
+            { "title": "Beverage Production", "description": "Consistent emulsification across high-volume beverage lines" },
+            { "title": "Food Manufacturing", "description": "Handles viscous and abrasive food formulations reliably" },
+            { "title": "Pharmaceutical Production", "description": "Aseptic design and complete documentation for regulated processes" },
+            { "title": "Chemical and Biotech Processing", "description": "High-pressure capability suited to demanding process fluids" },
+            { "title": "Cosmetic Manufacturing", "description": "Stable emulsification for cosmetic formulations" }
           ],
 
           "inPageNav": [
@@ -74,26 +85,28 @@
             "steps": [
               {
                 "key": "targetFlowRate",
-                "question": "What's the target flow rate?",
-                "options": [
-                  { "val": "lower-volume", "label": "Lower-volume production, smaller batches" },
-                  { "val": "mid-range", "label": "Mid-range industrial throughput" },
-                  { "val": "high-volume", "label": "High-volume continuous production" },
-                  { "val": "maximum-scale", "label": "Maximum flow rate at scale" }
-                ]
+                "label": "Target flow rate (l/h)",
+                "question": "Target flow rate (l/h)",
+                "hint": "Number input",
+                "input": "number",
+                "options": []
               },
               {
                 "key": "operatingPressure",
-                "question": "What's the operating pressure requirement?",
+                "label": "Operating pressure requirement",
+                "question": "Operating pressure requirement",
+                "hint": "Low, medium, or high pressure",
                 "options": [
-                  { "val": "low", "label": "Low pressure" },
-                  { "val": "medium", "label": "Medium pressure" },
+                  { "val": "low", "label": "Low" },
+                  { "val": "medium", "label": "Medium" },
                   { "val": "high", "label": "High pressure" }
                 ]
               },
               {
                 "key": "productType",
-                "question": "What's the product type?",
+                "label": "Product type",
+                "question": "Product type",
+                "hint": "Standard, viscous, or abrasive",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "viscous", "label": "Viscous" },
@@ -101,10 +114,11 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a model-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a model-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Flow Rate and Pressure Model Selector",
+            "emptyState": "Recommends the matching Ariete® model",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -114,6 +128,7 @@
               {
                 "key": "industrySector",
                 "label": "Industry sector",
+                "hint": "Dairy, food, beverage, pharma, chemical, biotech, cosmetic",
                 "options": [
                   { "val": "dairy", "label": "Dairy" },
                   { "val": "food", "label": "Food" },
@@ -127,18 +142,20 @@
               {
                 "key": "requiredCertifications",
                 "label": "Required certifications",
+                "hint": "USDA, FDA, 3-A, ATEX, EHEDG, cGMP",
                 "options": [
                   { "val": "usda", "label": "USDA" },
                   { "val": "fda", "label": "FDA" },
                   { "val": "3-a", "label": "3-A" },
                   { "val": "atex", "label": "ATEX" },
                   { "val": "ehedg", "label": "EHEDG" },
-                  { "val": "cgmp", "label": "cGMP" }
+                  { "val": "cgmp", "label": "CGMP" }
                 ]
               },
               {
                 "key": "designRequirement",
                 "label": "Design requirement",
+                "hint": "Standard or aseptic",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "aseptic", "label": "Aseptic" }
@@ -150,14 +167,21 @@
                 "condition": "default",
                 "title": "What Certifications Does the Ariete® Series Meet?",
                 "body": "CE, USDA, FDA, 3-A, ATEX, EHEDG, and cGMP, covering food safety, hazardous-area, hygienic design, and pharmaceutical manufacturing standards.",
-                "tags": ["Complete Pharmaceutical Documentation"]
+                "tags": [
+                  "Complete Pharmaceutical Documentation"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Industry Compliance Checker",
+            "ctaNote": "Confirms the right compliance and design setup. Routes to a compliance-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Ariete 3030 vs. 3110 vs. 5400",
+            "title": "Method Comparison",
             "description": "Ariete Series comparison: representative models across the flow rate and pressure range.",
             "columns": [
               { "label": "Ariete 3030" },
@@ -165,22 +189,80 @@
               { "label": "Ariete 5400" }
             ],
             "rows": [
-              { "feature": "Max Flow Rate (lowest pressure)", "values": ["7,500 l/h", "22,000 l/h", "80,000 l/h"] },
-              { "feature": "Positioning", "values": ["Mid-range industrial throughput", "High mid-range, scalable production", "Maximum-capacity industrial line"] },
-              { "feature": "Best For", "values": ["Growing production needs", "Larger continuous processing lines", "Highest-volume industrial operations"] },
-              { "feature": "Choose When", "values": ["Moderate flow rate with room to scale", "Substantial throughput without top-tier capacity", "Maximum flow rate is the priority"] }
+              {
+                "feature": "Max Flow Rate (lowest pressure)",
+                "values": [
+                  "7,500 l/h",
+                  "22,000 l/h",
+                  "80,000 l/h"
+                ]
+              },
+              {
+                "feature": "Positioning",
+                "values": [
+                  "Mid-range industrial throughput",
+                  "High mid-range, scalable production",
+                  "Maximum-capacity industrial line"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Growing production needs",
+                  "Larger continuous processing lines",
+                  "Highest-volume industrial operations"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Moderate flow rate with room to scale",
+                  "Substantial throughput without top-tier capacity",
+                  "Maximum flow rate is the priority"
+                ]
+              }
             ],
-            "disclaimer": "All models share the same customization options, high-efficiency add-ons, and certification stack. The difference is purely flow rate and pressure capacity."
+            "disclaimer": "All models share the same customization options, high-efficiency add-ons, and certification stack. The difference is purely flow rate and pressure capacity.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Ariete Series industries: dairy, food and beverage, pharmaceutical, and cosmetic manufacturing.",
             "industries": [
-              { "name": "Dairy Processing", "useCase": "Homogenizing milk and dairy products for stability and shelf life", "consideration": "3-A and EHEDG certification for hygienic dairy processing" },
-              { "name": "Pharmaceutical Manufacturing", "useCase": "Producing sterile, homogenized formulations", "consideration": "Aseptic design and complete cGMP documentation" },
-              { "name": "Food and Beverage Production", "useCase": "High-volume emulsification and stabilization", "consideration": "Suitable for abrasive and viscous product types" },
-              { "name": "Cosmetic Manufacturing", "useCase": "Stable emulsification for cosmetic formulations", "consideration": "Customization options tailored to formulation-specific needs" }
+              {
+                "name": "Dairy Processing",
+                "note": "Use Case: Homogenizing milk and dairy products for stability and shelf life",
+                "bullets": [
+                  "What to Consider: 3-A and EHEDG certification for hygienic dairy processing"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Manufacturing",
+                "note": "Use Case: Producing sterile, homogenized formulations",
+                "bullets": [
+                  "What to Consider: Aseptic design and complete cGMP documentation"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Beverage Production",
+                "note": "Use Case: High-volume emulsification and stabilization",
+                "bullets": [
+                  "What to Consider: Suitable for abrasive and viscous product types"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetic Manufacturing",
+                "note": "Use Case: Stable emulsification for cosmetic formulations",
+                "bullets": [
+                  "What to Consider: Customization options tailored to formulation-specific needs"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -194,21 +276,49 @@
               { "title": "Preventive Maintenance", "description": "Maintains pump, valve, and high-efficiency component performance" },
               { "title": "Spares and Accessories", "description": "Supplies NanoValve®, ReFlow, AirFlow, PureFlow components, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "Ariete Series service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the Ariete® Series used for?", "answer": "It's a range of industrial high-pressure homogenizers built for dairy, food, beverage, pharmaceutical, chemical, biotech, and cosmetic production, offering the largest capacity and highest pressure on the market." },
-            { "question": "How many models are in the Ariete® range?", "answer": "16 models, from the Ariete 2006 through the Ariete 5400, covering a wide range of flow rates and pressures." },
+            {
+              "question": "What is the Ariete® Series used for?",
+              "answer": "It's a range of industrial high-pressure homogenizers built for dairy, food, beverage, pharmaceutical, chemical, biotech, and cosmetic production, offering the largest capacity and highest pressure on the market."
+            },
+            {
+              "question": "How many models are in the Ariete® range?",
+              "answer": "16 models, from the Ariete 2006 through the Ariete 5400, covering a wide range of flow rates and pressures."
+            },
             { "question": "What is the maximum flow rate available?", "answer": "Up to 80,000 l/h, on the Ariete 5400 at its lowest pressure setting." },
-            { "question": "What high-efficiency options are available?", "answer": "NanoValve®, ReFlow, AirFlow, and PureFlow, each aimed at reducing power, water, or oil consumption during continuous production." },
-            { "question": "Can the homogenizer be customized?", "answer": "Yes, more than 300 customization options are available across process, transmission, and utility configurations." },
-            { "question": "What certifications does the Ariete® Series meet?", "answer": "CE, USDA, FDA, 3-A, ATEX, EHEDG, and cGMP, covering food safety, hazardous-area, hygienic design, and pharmaceutical manufacturing standards." },
-            { "question": "Is an aseptic design available?", "answer": "Yes, an aseptic design option is available, alongside complete documentation for pharmaceutical applications." },
+            {
+              "question": "What high-efficiency options are available?",
+              "answer": "NanoValve®, ReFlow, AirFlow, and PureFlow, each aimed at reducing power, water, or oil consumption during continuous production."
+            },
+            {
+              "question": "Can the homogenizer be customized?",
+              "answer": "Yes, more than 300 customization options are available across process, transmission, and utility configurations."
+            },
+            {
+              "question": "What certifications does the Ariete® Series meet?",
+              "answer": "CE, USDA, FDA, 3-A, ATEX, EHEDG, and cGMP, covering food safety, hazardous-area, hygienic design, and pharmaceutical manufacturing standards."
+            },
+            {
+              "question": "Is an aseptic design available?",
+              "answer": "Yes, an aseptic design option is available, alongside complete documentation for pharmaceutical applications."
+            },
             { "question": "Can the system run automated or remote control?", "answer": "Yes, a fully automated and remote control option is available." },
-            { "question": "Is the Ariete® Series suitable for viscous or abrasive products?", "answer": "Yes, it's built to handle abrasive and viscous products reliably in continuous processing." },
-            { "question": "What is the price of the Ariete® Series in India?", "answer": "Get in touch and Inkarp will put together a quote based on the model, pressure setting, and customization options needed." },
-            { "question": "Who is the authorized distributor of the Ariete® Series in India?", "answer": "Inkarp is the authorized distributor and service provider for the GEA Ariete® Series in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Is the Ariete® Series suitable for viscous or abrasive products?",
+              "answer": "Yes, it's built to handle abrasive and viscous products reliably in continuous processing."
+            },
+            {
+              "question": "What is the price of the Ariete® Series in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the model, pressure setting, and customization options needed."
+            },
+            {
+              "question": "Who is the authorized distributor of the Ariete® Series in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the GEA Ariete® Series in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -229,10 +339,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Ariete® model", "body": "Share the target flow rate, operating pressure, and industry sector, and the right Ariete® model gets confirmed from there." },
-              { "title": "Confirm the exact model against your flow rate and pressure", "body": "Share the target flow rate and operating pressure for the process, and the exact Ariete® model gets confirmed against it." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows model performance and high-efficiency options on real process fluids" },
+              { "title": "Configuration Assessment", "body": "Confirms model, pressure setting, and customization options for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with automated and remote control operation" },
+              { "title": "Preventive Maintenance", "body": "Maintains pump, valve, and high-efficiency component performance" },
+              { "title": "Spares and Accessories", "body": "Supplies NanoValve®, ReFlow, AirFlow, PureFlow components, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -256,20 +369,34 @@
                 "title": "Product Information",
                 "description": "Ariete Series product information: model range, pressure and flow capacity, and industry certifications.",
                 "body": [
-                  "Every Ariete® machine is manufactured in-house using premium brand components, giving full traceability of parts and consistent quality control across the range.",
-                  "The lineup offers the largest capacity and highest pressure available on the market, backed by superior pump operational efficiency that keeps total cost of ownership low.",
-                  "High-efficiency options, NanoValve®, ReFlow, AirFlow, and PureFlow, install directly onto the base machine, cutting further costs in power, water, and oil across continuous production.",
-                  "More than 300 customization options let each unit get shaped around specific process needs, transmission requirements, and utility connections, producing a genuinely unique configuration per customer.",
-                  "The range covers dairy, food, beverage, pharmaceutical, chemical, biotech, and cosmetic industries, all from the same underlying platform.",
-                  "Every machine meets EU CE safety standards, alongside USDA, FDA, 3-A, ATEX, EHEDG, and cGMP certifications and guidelines.",
-                  "16 models span the range, from smaller units suited to lower flow rates to the 5400, reaching up to 80,000 l/h at its lowest pressure setting."
+                  {
+                    "text": "Every Ariete® machine is manufactured in-house using premium brand components, giving full traceability of parts and consistent quality control across the range."
+                  },
+                  {
+                    "text": "The lineup offers the largest capacity and highest pressure available on the market, backed by superior pump operational efficiency that keeps total cost of ownership low."
+                  },
+                  {
+                    "text": "High-efficiency options, NanoValve®, ReFlow, AirFlow, and PureFlow, install directly onto the base machine, cutting further costs in power, water, and oil across continuous production."
+                  },
+                  {
+                    "text": "More than 300 customization options let each unit get shaped around specific process needs, transmission requirements, and utility connections, producing a genuinely unique configuration per customer."
+                  },
+                  {
+                    "text": "The range covers dairy, food, beverage, pharmaceutical, chemical, biotech, and cosmetic industries, all from the same underlying platform."
+                  },
+                  { "text": "Every machine meets EU CE safety standards, alongside USDA, FDA, 3-A, ATEX, EHEDG, and cGMP certifications and guidelines." },
+                  {
+                    "text": "16 models span the range, from smaller units suited to lower flow rates to the 5400, reaching up to 80,000 l/h at its lowest pressure setting."
+                  }
                 ],
                 "cards": [
                   { "title": "Largest capacity, highest pressure", "description": "Industry-leading performance across the range" },
                   { "title": "300+ customization options", "description": "A unique configuration per customer" },
                   { "title": "Lowest total cost of ownership", "description": "Superior pump efficiency plus resource-saving add-ons" },
                   { "title": "Full regulatory compliance", "description": "CE, USDA, FDA, 3-A, ATEX, EHEDG, cGMP" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why in-house manufacturing and full traceability matter at scale"
               },
               {
                 "key": "config",
@@ -282,24 +409,27 @@
                   { "title": "Customization", "description": "300+ options across process, transmission, and utilities" },
                   { "title": "High-efficiency options", "description": "NanoValve®, ReFlow, AirFlow, PureFlow" },
                   { "title": "Certifications", "description": "CE, USDA, FDA, 3-A, ATEX, EHEDG, cGMP" }
-                ]
+                ],
+                "disclaimer": "Share the target flow rate, operating pressure, and industry sector, and the right Ariete® model gets confirmed from there."
               },
-              {
-                "key": "features",
-                "eyebrow": "Key Features",
-                "title": "Key Features"
-              },
+              { "key": "features", "eyebrow": "Key Features", "title": "Key Features", "tabSummary": "High-efficiency options, aseptic design, remote control" },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Ariete Series applications: dairy, food, beverage, pharmaceutical, chemical, biotech, and cosmetic processing."
+                "description": "Ariete Series applications: dairy, food, beverage, pharmaceutical, chemical, biotech, and cosmetic processing.",
+                "tabSummary": "Dairy, food, beverage, pharma, chemical, biotech, cosmetics"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Ariete Series technical specifications: model range, flow rate, and pressure capacity."
+                "description": "Ariete Series technical specifications: model range, flow rate, and pressure capacity.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Flow rate, pressure range, and model lineup"
               },
               {
                 "key": "roi",
@@ -307,43 +437,98 @@
                 "title": "How much could the high-efficiency options actually save?",
                 "description": "Enter current power, water, and oil consumption, and see the potential savings with NanoValve®, ReFlow, AirFlow, and PureFlow.",
                 "valueFields": [
-                  { "key": "powerCost", "label": "Current annual power cost (₹)", "default": 0, "summaryLabel": "Current annual power cost" },
-                  { "key": "waterCost", "label": "Current annual water usage cost (₹)", "default": 0, "summaryLabel": "Current annual water usage cost" },
-                  { "key": "oilCost", "label": "Current annual oil/lubrication cost (₹)", "default": 0, "summaryLabel": "Current annual oil/lubrication cost" }
+                  {
+                    "key": "powerCost",
+                    "label": "Current annual power cost",
+                    "default": 0,
+                    "summaryLabel": "Current annual power cost",
+                    "hint": "Number input"
+                  },
+                  {
+                    "key": "waterCost",
+                    "label": "Current annual water usage",
+                    "default": 0,
+                    "summaryLabel": "Current annual water usage",
+                    "hint": "Number input"
+                  },
+                  {
+                    "key": "oilCost",
+                    "label": "Current annual oil/lubrication cost",
+                    "default": 0,
+                    "summaryLabel": "Current annual oil/lubrication cost",
+                    "hint": "Number input"
+                  }
                 ],
                 "totalValueLabel": "Current total annual resource cost",
-                "totalValueNote": "Share this with Inkarp for a savings estimate specific to your process using NanoValve®, ReFlow, AirFlow, and PureFlow.",
-                "submitLabel": "Get my savings estimate from Inkarp",
-                "disclaimer": "Routes to a savings-specific quotation."
+                "totalValueNote": "Estimates potential resource and cost savings with high-efficiency add-ons. Routes to a savings-specific quotation.",
+                "submitLabel": "Get Configuration Support",
+                "disclaimer": "",
+                "purchasePriceField": null
               },
               {
                 "key": "benefits",
                 "eyebrow": "Choosing the Right Model",
                 "title": "Choosing the Right Model",
-                "description": "Flow rate and operating pressure trade off directly across the Ariete® lineup, higher pressure settings reduce achievable flow rate on every model, so the right choice depends on which side of that trade-off the process actually needs. Smaller models like the Ariete 2006 and 3006 suit lower-volume production, topping out around 1,000 l/h at their lowest pressure setting. Mid-range models, the 3030 through 3160 series, scale up substantially, with the 3160 reaching 22,000 l/h at its lowest pressure point. The largest models, 5132 through 5400, are built for high-volume industrial lines, with the 5400 reaching up to 80,000 l/h. Every model in the range can be paired with the same customization options and high-efficiency add-ons, so scaling up in flow rate doesn't mean losing configuration flexibility.",
                 "cards": [
                   { "title": "Lower-volume production, smaller batches", "description": "2006, 3006, 3011 series" },
                   { "title": "Mid-range industrial throughput", "description": "3015 through 3160 series" },
                   { "title": "High-volume continuous production", "description": "5132 through 5400 series" },
                   { "title": "Maximum flow rate at scale", "description": "Ariete 5400" }
-                ]
+                ],
+                "body": [
+                  "Flow rate and operating pressure trade off directly across the Ariete® lineup, higher pressure settings reduce achievable flow rate on every model, so the right choice depends on which side of that trade-off the process actually needs.",
+                  "Smaller models like the Ariete 2006 and 3006 suit lower-volume production, topping out around 1,000 l/h at their lowest pressure setting.",
+                  "Mid-range models, the 3030 through 3160 series, scale up substantially, with the 3160 reaching 22,000 l/h at its lowest pressure point.",
+                  "The largest models, 5132 through 5400, are built for high-volume industrial lines, with the 5400 reaching up to 80,000 l/h.",
+                  "Every model in the range can be paired with the same customization options and high-efficiency add-ons, so scaling up in flow rate doesn't mean losing configuration flexibility."
+                ],
+                "columnHeaders": { "label": "What your process needs", "value": "Which model range fits" },
+                "note": "Share the target flow rate and operating pressure for the process, and the exact Ariete® model gets confirmed against it.",
+                "tabSummary": "How flow rate and pressure trade off across 16 models"
               },
               {
                 "key": "performance",
                 "eyebrow": "Certified for Regulated Industries",
                 "title": "Certified for Regulated Industries",
-                "description": "Regulated industries need documentation and certification as much as raw performance, and Ariete® is built to satisfy both from the same platform.",
-                "body": [
-                  "Every unit is designed to EU CE safety standards, alongside USDA, FDA, 3-A, ATEX, EHEDG, and cGMP certifications and guidelines, covering food safety, hazardous-area operation, hygienic design, and pharmaceutical manufacturing standards in a single compliance stack.",
-                  "Pharmaceutical customers specifically get a complete documentation package alongside an aseptic design option, addressing sterile processing requirements directly. Full traceability of parts, guaranteed by in-house manufacturing, supports audit and compliance needs beyond the certifications themselves."
-                ],
-                "utilityChecklist": [
-                  { "label": "Food safety and hygienic design compliance", "value": "3-A and EHEDG certification" },
-                  { "label": "Hazardous-area operation", "value": "ATEX certification" },
-                  { "label": "Pharmaceutical-grade documentation", "value": "cGMP compliance, aseptic design option" },
-                  { "label": "Full part traceability for audits", "value": "In-house manufacturing with premium components" }
-                ],
-                "disclaimer": "Share the specific regulatory standards the facility needs to meet, and the right Ariete® configuration and documentation package gets confirmed against them."
+                "tabSummary": "What the compliance stack actually covers",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Regulated industries need documentation and certification as much as raw performance, and Ariete® is built to satisfy both from the same platform.",
+                      "Every unit is designed to EU CE safety standards, alongside USDA, FDA, 3-A, ATEX, EHEDG, and cGMP certifications and guidelines, covering food safety, hazardous-area operation, hygienic design, and pharmaceutical manufacturing standards in a single compliance stack.",
+                      "Pharmaceutical customers specifically get a complete documentation package alongside an aseptic design option, addressing sterile processing requirements directly.",
+                      "Full traceability of parts, guaranteed by in-house manufacturing, supports audit and compliance needs beyond the certifications themselves."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What your industry needs",
+                      "How Ariete® Series delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Food safety and hygienic design compliance",
+                        "3-A and EHEDG certification"
+                      ],
+                      [
+                        "Hazardous-area operation",
+                        "ATEX certification"
+                      ],
+                      [
+                        "Pharmaceutical-grade documentation",
+                        "cGMP compliance, aseptic design option"
+                      ],
+                      [
+                        "Full part traceability for audits",
+                        "In-house manufacturing with premium components"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the specific regulatory standards the facility needs to meet, and the right Ariete® configuration and documentation package gets confirmed against them."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -354,7 +539,9 @@
                   { "title": "Ariete Series Homogenizers Brochure", "description": "Available for download" },
                   { "title": "Model-Specific Technical Datasheets", "description": "Available on request" },
                   { "title": "Certification and Compliance Documentation", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Ariete Series brochure"
               }
             ],
             "cta": {
@@ -363,9 +550,17 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The largest capacity and highest pressure on the market, with 300+ ways to configure it around the process. Share the flow rate, pressure, and industry requirements, and the right Ariete® model gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Choosing a high-pressure homogenizer usually means trading capacity for cost, or reliability for flexibility. Ariete® refuses that trade-off, delivering the largest capacity and highest pressure on the market while holding the lowest total cost of ownership through superior pump efficiency.",
+              "Every machine is built in-house from premium components, giving full traceability and consistent quality control across the range. Over 300 customization options shape each unit around the specific process, transmission, and utility requirements of dairy, beverage, food, pharmaceutical, chemical, biotech, and cosmetic production, while high-efficiency add-ons like NanoValve®, ReFlow, AirFlow, and PureFlow cut power, water, and oil consumption further."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

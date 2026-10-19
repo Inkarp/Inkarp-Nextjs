@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "radleys",
-    "principalName": "Radleys",
-    "countryOfOrigin": "United Kingdom"
-  },
+  "principal": { "slug": "radleys", "principalName": "Radleys", "countryOfOrigin": "United Kingdom" },
   "categories": [
     {
       "name": "AVA Lab Control Software",
@@ -25,18 +21,31 @@
       "products": [
         {
           "name": "AVA Lab Control Software",
+
           "slug": "ava-lab-control-software",
+
           "image": "/assets/images/productImages/radleys/ava-lab-control-software.webp",
+
           "imageAlt": "Radleys AVA Lab Control Software - authorized distributor & service provider in India",
+
           "principalImage": "/assets/images/PrincipalLogos/radley.svg",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/ava-lab-control-software",
+
           "breadcrumbPath": "Home > Products > AVA Lab Control Software",
+
           "h1": "AVA Lab Control Software",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "category": "AVA Lab Control Software",
+
           "metaTitle": "AVA Lab Control Software — Authorized Distributor & Service Provider in India | Inkarp | Radleys",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Radleys AVA Lab Control Software in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "AVA Lab Control Software",
             "AVA Lab Control Software India",
@@ -52,34 +61,90 @@
             "Radleys India",
             "Inkarp Instruments"
           ],
+
           "overview": "One software for any jacketed reactor. No subscription fees, ever. Automation software usually locks you into one manufacturer's ecosystem, or a recurring subscription, or both. AVA does neither.",
+
           "features": [
-            "Subscription-Free Automation: No recurring software fees, stated directly as a core part of the offering.",
-            "Effortless Integration: Connects jacketed lab reactors with pumps, circulators, stirrers, and sensors.",
-            "Broad, Named Device Compatibility: Confirmed working with Huber, Heidolph, and more, with a downloadable full driver list.",
-            "Unattended 24/7 Operation: Built-in alarms and safety loops support genuinely hands-off runs.",
-            "Automated Data Logging: Captures and tracks process data with no manual entry.",
-            "Improved Reproducibility: Reduces human error for consistent, high-quality results.",
-            "Expandable to 16 Devices: Additional Data Hubs scale either platform's device count.",
-            "User-Friendly Interface: Minimal training required to get started."
+            { "title": "Subscription-Free Automation", "description": "No recurring software fees, stated directly as a core part of the offering." },
+            { "title": "Effortless Integration", "description": "Connects jacketed lab reactors with pumps, circulators, stirrers, and sensors." },
+            {
+              "title": "Broad, Named Device Compatibility",
+              "description": "Confirmed working with Huber, Heidolph, and more, with a downloadable full driver list."
+            },
+            { "title": "Unattended 24/7 Operation", "description": "Built-in alarms and safety loops support genuinely hands-off runs." },
+            { "title": "Automated Data Logging", "description": "Captures and tracks process data with no manual entry." },
+            { "title": "Improved Reproducibility", "description": "Reduces human error for consistent, high-quality results." },
+            { "title": "Expandable to 16 Devices", "description": "Additional Data Hubs scale either platform's device count." },
+            { "title": "User-Friendly Interface", "description": "Minimal training required to get started." }
           ],
+
           "technicalSpecs": [
-            { "label": "Product Name", "value": "Radleys AVA Pad Reactor Controller (AVA Pad) / Radleys AVA PC Reaction Control Software (AVA PC)" },
-            { "label": "Category", "value": "AVA Lab Control Software" },
-            { "label": "Reactor Control", "value": "Single or dual (AVA Pad) / Single, dual, or up to 4 (AVA PC)" },
-            { "label": "Interface", "value": "10\" touchscreen, pinch zoom (AVA Pad) / Laptop, full keyboard, 16\" LCD (AVA PC)" },
-            { "label": "User Profiles", "value": "Multiple, per-user password (AVA Pad) / Single user, single password (AVA PC)" },
-            { "label": "Connectivity", "value": "RS232×4, temp sensor port×2, USB×2, Ethernet×1, HDMI×1 (AVA Pad) / Via Data Hub: RS232×4, temp sensor port×2, Ethernet×1 (AVA PC)" },
-            { "label": "Device Expansion", "value": "Up to 16, via additional Data Hubs" },
-            { "label": "Mounting", "value": "Fume hood compatible, benchtop stand or support rod (AVA Pad) / External, remote via Ethernet to Data Hub (AVA PC)" }
+            {
+              "label": "Product Name",
+              "values": [
+                "Radleys AVA Pad Reactor Controller",
+                "Radleys AVA PC Reaction Control Software"
+              ]
+            },
+            {
+              "label": "Category",
+              "values": [
+                "AVA Lab Control Software",
+                "AVA Lab Control Software"
+              ]
+            },
+            {
+              "label": "Reactor Control",
+              "values": [
+                "Single or dual",
+                "Single, dual, or up to 4"
+              ]
+            },
+            {
+              "label": "Interface",
+              "values": [
+                "10\" touchscreen, pinch zoom",
+                "Laptop, full keyboard, 16\" LCD"
+              ]
+            },
+            {
+              "label": "User Profiles",
+              "values": [
+                "Multiple, per-user password",
+                "Single user, single password"
+              ]
+            },
+            {
+              "label": "Connectivity",
+              "values": [
+                "RS232×4, temp sensor port×2, USB×2, Ethernet×1, HDMI×1",
+                "Via Data Hub: RS232×4, temp sensor port×2, Ethernet×1"
+              ]
+            },
+            {
+              "label": "Device Expansion",
+              "values": [
+                "Up to 16, via additional Data Hubs",
+                "Up to 16, via additional Data Hubs"
+              ]
+            },
+            {
+              "label": "Mounting",
+              "values": [
+                "Fume hood compatible (benchtop stand or support rod)",
+                "External, remote via Ethernet to Data Hub"
+              ]
+            }
           ],
+
           "applications": [
-            "Unattended Overnight Reactions: Alarms and safety loops support safe, hands-off operation",
-            "Multi-Reactor Coordination: AVA PC controls up to 4 reactors simultaneously",
-            "Reproducible Process Development: Automated logging removes manual transcription error",
-            "Multi-User Lab Environments: Per-user profiles and password protection on AVA Pad",
-            "Third-Party Equipment Integration: Confirmed compatibility with Huber, Heidolph, and other brands"
+            { "title": "Unattended Overnight Reactions", "description": "Alarms and safety loops support safe, hands-off operation" },
+            { "title": "Multi-Reactor Coordination", "description": "AVA PC controls up to 4 reactors simultaneously" },
+            { "title": "Reproducible Process Development", "description": "Automated logging removes manual transcription error" },
+            { "title": "Multi-User Lab Environments", "description": "Per-user profiles and password protection on AVA Pad" },
+            { "title": "Third-Party Equipment Integration", "description": "Confirmed compatibility with Huber, Heidolph, and other brands" }
           ],
+
           "tags": [
             "Radleys",
             "AVA Lab Control Software",
@@ -87,6 +152,7 @@
             "AVA PC",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What is AVA Lab Control Software used for?",
@@ -96,10 +162,7 @@
               "question": "What's the difference between AVA Pad and AVA PC?",
               "answer": "AVA Pad is a self-contained 10\" touchscreen controller with no PC needed, controlling up to 2 reactors; AVA PC runs on a laptop with a separate Data Hub, controlling up to 4 reactors and connecting remotely outside the fume hood."
             },
-            {
-              "question": "Does AVA require a subscription?",
-              "answer": "No, it's confirmed as subscription-free automation with no recurring software fees."
-            },
+            { "question": "Does AVA require a subscription?", "answer": "No, it's confirmed as subscription-free automation with no recurring software fees." },
             {
               "question": "How do I choose between Pad and PC?",
               "answer": "Choose Pad for 1-2 reactors mounted directly in the fume hood with multiple user profiles, or PC for up to 4 reactors and a controller kept external to the fume hood."
@@ -129,8 +192,9 @@
               "answer": "Inkarp is the authorized distributor and service provider for Radleys AVA Lab Control Software in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
-            "heroLead": "One software for any jacketed reactor. No subscription fees, ever. Automation software usually locks you into one manufacturer's ecosystem, or a recurring subscription, or both. AVA does neither. It connects to any jacketed lab reactor, along with circulators, stirrers, pumps, and sensors from confirmed brands including Huber and Heidolph, with no ongoing subscription cost. Choose the all-in-one AVA Pad, a single touchscreen box that needs no PC, or AVA PC software running through a separate Data Hub for up to four reactors at once. Every setup runs through the same six steps: select your platform, connect your devices, configure the system, control the reactor, control the data, and share the results. Alarms and safety loops keep unattended runs safe around the clock.",
+            "heroLead": "Automation software usually locks you into one manufacturer's ecosystem, or a recurring subscription, or both. AVA does neither. It connects to any jacketed lab reactor, along with circulators, stirrers, pumps, and sensors from confirmed brands including Huber and Heidolph, with no ongoing subscription cost. Choose the all-in-one AVA Pad, a single touchscreen box that needs no PC, or AVA PC software running through a separate Data Hub for up to four reactors at once. Every setup runs through the same six steps: select your platform, connect your devices, configure the system, control the reactor, control the data, and share the results. Alarms and safety loops keep unattended runs safe around the clock.",
             "stats": [
               { "value": "2 platforms", "label": "AVA Pad and AVA PC" },
               { "value": "Up to 4", "label": "Reactors controlled simultaneously (AVA PC)" },
@@ -145,42 +209,57 @@
               {
                 "key": "overview",
                 "eyebrow": "Product Information",
-                "title": "AVA Lab Control Software at a Glance",
-                "description": "Everything you need to choose the right AVA platform: how Pad and PC differ, which devices are confirmed compatible, how the Data Hub expansion system works, and Inkarp installation and service support.",
-                "subheading": "One software for any jacketed reactor. No subscription fees, ever.",
+                "title": "Product Information",
+                "description": "The product information of AVA Lab Control Software covers its two platforms, device compatibility, workflow, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "This isn't locked to Radleys hardware. It's built to control any jacketed lab reactor, plus third-party circulators, stirrers, pumps, and sensors.",
-                  "There's no recurring cost. Subscription-free automation is a stated, specific business model, not a trial period.",
-                  "Two platforms solve genuinely different setups. AVA Pad is a self-contained touchscreen box; AVA PC scales to four reactors through a separate Data Hub.",
-                  "Compatibility is named, not vague. Huber and Heidolph are confirmed directly, with more brands covered in the full driver list.",
-                  "Safety runs unattended, not just during working hours. Built-in alarms and safety loops support genuine 24/7 operation.",
-                  "Data logging is automatic. No manual entry, which is also what makes results reproducible and auditable.",
-                  "You can try it before deciding. The free PC demo simulates device control and lets you build schedules without committing.",
-                  "Confirmed solution: Radleys AVA Lab Control Software.",
-                  "Two platforms: AVA Pad (all-in-one) and AVA PC (with separate Data Hub).",
-                  "Reactor capacity: up to 2 (Pad) or up to 4 (PC).",
-                  "Device expansion: up to 16 via additional Data Hubs.",
-                  "Full device driver list beyond Huber and Heidolph is available on request from Inkarp.",
-                  "Product expert note: Tell our team how many reactors you need to control and whether you want a fume-hood-mounted or remote setup, and Inkarp will confirm whether Pad or PC fits."
+                  {
+                    "title": "This isn't locked to Radleys hardware.",
+                    "text": "It's built to control any jacketed lab reactor, plus third-party circulators, stirrers, pumps, and sensors."
+                  },
+                  { "title": "There's no recurring cost.", "text": "Subscription-free automation is a stated, specific business model, not a trial period." },
+                  {
+                    "title": "Two platforms solve genuinely different setups.",
+                    "text": "AVA Pad is a self-contained touchscreen box; AVA PC scales to four reactors through a separate Data Hub."
+                  },
+                  {
+                    "title": "Compatibility is named, not vague.",
+                    "text": "Huber and Heidolph are confirmed directly, with more brands covered in the full driver list."
+                  },
+                  {
+                    "title": "Safety runs unattended, not just during working hours.",
+                    "text": "Built-in alarms and safety loops support genuine 24/7 operation."
+                  },
+                  { "title": "Data logging is automatic.", "text": "No manual entry, which is also what makes results reproducible and auditable." },
+                  {
+                    "title": "You can try it before deciding.",
+                    "text": "The free PC demo simulates device control and lets you build schedules without committing."
+                  }
                 ],
                 "cards": [
                   { "title": "2 platforms", "description": "Pad (all-in-one) or PC (with Data Hub)" },
                   { "title": "Up to 4 reactors", "description": "AVA PC's maximum simultaneous control" },
                   { "title": "No subscription", "description": "Confirmed, stated business model" },
                   { "title": "Huber, Heidolph", "description": "Named compatible brands" }
-                ]
+                ],
+                "glanceTitle": "AVA Lab Control Software at a Glance",
+                "glanceDescription": "Everything you need to choose the right AVA platform: how Pad and PC differ, which devices are confirmed compatible, how the Data Hub expansion system works, and Inkarp installation and service support.",
+                "cardsIntro": "The value cards of AVA Lab Control Software summarize its platform choice, reactor capacity, and compatibility.",
+                "tabSummary": "Why one software works across any jacketed reactor"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "The key features of AVA Lab Control Software include subscription-free automation, broad device compatibility, and unattended safety monitoring."
+                "description": "The key features of AVA Lab Control Software include subscription-free automation, broad device compatibility, and unattended safety monitoring.",
+                "tabSummary": "Subscription-free model, alarms, automated logging"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "The applications of AVA Lab Control Software include unattended overnight reactions, multi-reactor coordination, and reproducible process documentation."
+                "description": "The applications of AVA Lab Control Software include unattended overnight reactions, multi-reactor coordination, and reproducible process documentation.",
+                "tabSummary": "Unattended reactions, multi-reactor coordination, reproducibility"
               },
               {
                 "key": "specs",
@@ -189,38 +268,97 @@
                 "body": [
                   "The technical specifications of AVA Lab Control Software include reactor capacity, connectivity, and device expansion figures for both platforms.",
                   "Full device driver list beyond Huber and Heidolph is available on request from Inkarp."
-                ]
+                ],
+                "description": "The technical specifications of AVA Lab Control Software include reactor capacity, connectivity, and device expansion figures for both platforms.",
+                "columns": [
+                  "Parameter",
+                  "AVA Pad",
+                  "AVA PC"
+                ],
+                "note": "Full device driver list beyond Huber and Heidolph is available on request from Inkarp.",
+                "tabSummary": "Confirmed connectivity and reactor capacity figures"
               },
               {
                 "key": "performance",
                 "eyebrow": "AVA Pad vs AVA PC: Choosing Your Platform",
                 "title": "AVA Pad vs AVA PC: Choosing Your Platform",
+                "tabSummary": "The full platform comparison",
                 "body": [
                   "The platform choice comes down to how many reactors you're running and where you want the controller sitting.",
                   "AVA Pad is a genuinely self-contained solution, a 10\" touchscreen with no PC required, mounted directly in the fume hood via a benchtop stand or support rod, controlling up to two reactors with multi-user profiles built in. AVA PC trades that self-contained simplicity for reach: it controls up to four reactors at once through a separate Data Hub, sitting external to the fume hood and connecting remotely over Ethernet, which matters if you want the controller away from reagent vapors or shared across a wider lab layout."
                 ],
-                "utilityChecklist": [
-                  { "label": "One or two reactors, fume-hood mounted", "value": "AVA Pad" },
-                  { "label": "Multiple users needing separate profiles", "value": "AVA Pad" },
-                  { "label": "Up to four reactors coordinated together", "value": "AVA PC" },
-                  { "label": "Controller kept external to the fume hood", "value": "AVA PC" }
-                ],
-                "disclaimer": "Product expert note: Tell our team how many reactors you're running and whether multiple users need separate profiles, and Inkarp will confirm Pad or PC."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your setup",
+                      "Which platform fits"
+                    ],
+                    "rows": [
+                      [
+                        "One or two reactors, fume-hood mounted",
+                        "AVA Pad"
+                      ],
+                      [
+                        "Multiple users needing separate profiles",
+                        "AVA Pad"
+                      ],
+                      [
+                        "Up to four reactors coordinated together",
+                        "AVA PC"
+                      ],
+                      [
+                        "Controller kept external to the fume hood",
+                        "AVA PC"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team how many reactors you're running and whether multiple users need separate profiles, and Inkarp will confirm Pad or PC."
+                  },
+                  {
+                    "title": "Device Compatibility and the Data Hub Expansion System",
+                    "summary": "Confirmed brands and scaling to 16 devices",
+                    "description": "Both platforms scale the same way, through additional Data Hubs, and both connect to real, named third-party equipment.",
+                    "columns": [
+                      "Point",
+                      "What to Check"
+                    ],
+                    "rows": [
+                      [
+                        "Existing circulator or stirrer brand",
+                        "Huber and Heidolph confirmed directly; full driver list covers more"
+                      ],
+                      [
+                        "Device count beyond the base connectivity",
+                        "Additional Data Hubs, up to 16 devices total"
+                      ],
+                      [
+                        "Six-step setup",
+                        "Select platform, connect devices, configure system, control reactor, control data, share results"
+                      ],
+                      [
+                        "Trying before committing",
+                        "Free downloadable demo, real or simulated data"
+                      ]
+                    ],
+                    "note": "Send our team a list of the devices you want to control, and Inkarp will confirm compatibility and any Data Hub expansion needed."
+                  }
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Device Compatibility and the Data Hub Expansion System",
-                "title": "Device Compatibility and the Data Hub Expansion System",
+                "title": "Configuration note",
                 "body": [
-                  "Both platforms scale the same way, through additional Data Hubs, and both connect to real, named third-party equipment.",
-                  "Product expert note: Send our team a list of the devices you want to control, and Inkarp will confirm compatibility and any Data Hub expansion needed."
+                  "Full device driver list beyond Huber and Heidolph is available on request from Inkarp"
                 ],
                 "cards": [
-                  { "title": "Existing circulator or stirrer brand", "description": "Huber and Heidolph confirmed directly; full driver list covers more" },
-                  { "title": "Device count beyond the base connectivity", "description": "Additional Data Hubs, up to 16 devices total" },
-                  { "title": "Six-step setup", "description": "Select platform, connect devices, configure system, control reactor, control data, share results" },
-                  { "title": "Trying before committing", "description": "Free downloadable demo, real or simulated data" }
-                ]
+                  { "title": "Confirmed solution", "description": "Radleys AVA Lab Control Software" },
+                  { "title": "Two platforms", "description": "AVA Pad (all-in-one) and AVA PC (with separate Data Hub)" },
+                  { "title": "Reactor capacity", "description": "up to 2 (Pad) or up to 4 (PC)" },
+                  { "title": "Device expansion", "description": "up to 16 via additional Data Hubs" }
+                ],
+                "disclaimer": "Tell our team how many reactors you need to control and whether you want a fume-hood-mounted or remote setup, and Inkarp will confirm whether Pad or PC fits."
               },
               {
                 "key": "docs",
@@ -228,10 +366,12 @@
                 "title": "Documentation and Resources",
                 "description": "Documentation for AVA Lab Control Software is available from Inkarp on request.",
                 "cards": [
-                  { "title": "AVA Software Brochure", "description": "Available from Inkarp on request." },
-                  { "title": "Device Driver List", "description": "Available from Inkarp on request." },
-                  { "title": "Free Demo Software (AVA PC)", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "AVA Software Brochure", "description": "Available from Inkarp on request" },
+                  { "title": "Device Driver List", "description": "Available from Inkarp on request" },
+                  { "title": "Free Demo Software (AVA PC)", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Brochure, demo software"
               }
             ],
             "cta": {
@@ -240,9 +380,19 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "One software for any jacketed reactor, no subscription fees, with confirmed compatibility across Huber, Heidolph, and more. Tell us your reactor count and existing equipment, and Inkarp will confirm whether Pad or PC fits.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "One software for any jacketed reactor. No subscription fees, ever.",
+            "heroParagraphs": [
+              "Automation software usually locks you into one manufacturer's ecosystem, or a recurring subscription, or both. AVA does neither.",
+              "It connects to any jacketed lab reactor, along with circulators, stirrers, pumps, and sensors from confirmed brands including Huber and Heidolph, with no ongoing subscription cost. Choose the all-in-one AVA Pad, a single touchscreen box that needs no PC, or AVA PC software running through a separate Data Hub for up to four reactors at once.",
+              "Every setup runs through the same six steps: select your platform, connect your devices, configure the system, control the reactor, control the data, and share the results. Alarms and safety loops keep unattended runs safe around the clock."
+            ],
+            "statsIntro": "The quick stats of AVA Lab Control Software cover its two platforms, reactor capacity, and device compatibility."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "pad-vs-pc-selector", "label": "Pad vs PC" },
@@ -253,6 +403,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "pad-vs-pc-selector",
@@ -260,30 +411,21 @@
               "title": "How many reactors, and where should the controller sit?",
               "description": "Select your reactor count and mounting preference, and see whether Pad or PC fits.",
               "fields": [
-                { "key": "choices", "label": "Select your reactor count" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Reactor count",
-                  "choices": "1, 2, or up to 4",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Mounting preference",
-                  "choices": "Fume-hood mounted, or external/remote",
-                  "cta": "Get Configuration Support"
-                },
+                { "title": "Reactor count", "hint": "1, 2, or up to 4", "choices": "1; 2; Up to 4" },
+                { "title": "Mounting preference", "hint": "Fume-hood mounted, or external/remote", "choices": "Fume-hood mounted; External/remote" },
                 {
                   "title": "User management need",
-                  "choices": "Single user, or multiple with separate profiles",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Platform readout",
-                  "choices": "Recommends AVA Pad or AVA PC",
-                  "cta": "Get Configuration Support"
+                  "hint": "Single user, or multiple with separate profiles",
+                  "choices": "Single user; Multiple with separate profiles"
                 }
-              ]
+              ],
+              "lead": "The Pad vs PC selector recommends the right AVA platform for your lab.",
+              "ctaNote": "Recommends AVA Pad or AVA PC.",
+              "disclaimer": "",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "device-compatibility-checker",
@@ -291,32 +433,19 @@
               "title": "What equipment are you connecting?",
               "description": "Select your device brands, and confirm compatibility with AVA.",
               "fields": [
-                { "key": "choices", "label": "Select your device brand" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Brand selector",
-                  "choices": "Huber, Heidolph, or other",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Device type",
-                  "choices": "Circulator, stirrer, pump, or sensor",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Compatibility readout",
-                  "choices": "Confirms direct support or flags a driver check",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Data Hub count",
-                  "choices": "Confirms how many hubs are needed for your device total",
-                  "cta": "Talk to Product Expert"
-                }
-              ]
+                { "title": "Brand selector", "hint": "Huber, Heidolph, or other", "choices": "Huber; Heidolph; Other" },
+                { "title": "Device type", "hint": "Circulator, stirrer, pump, or sensor", "choices": "Circulator; Stirrer; Pump; Sensor" }
+              ],
+              "lead": "The device compatibility checker confirms fit for your existing lab equipment.",
+              "ctaNote": "Confirms direct support or flags a driver check. Confirms how many hubs are needed for your device total.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
             "title": "Industry Explorer",
@@ -325,38 +454,54 @@
               {
                 "name": "Pharmaceutical Process Development",
                 "icon": "pill",
-                "useCase": "Reproducible, auditable reaction control",
-                "consideration": "Automated logging supports documentation requirements"
+                "note": "Use Case: Reproducible, auditable reaction control",
+                "bullets": [
+                  "What to Consider: Automated logging supports documentation requirements"
+                ],
+                "tags": []
               },
               {
                 "name": "Academic Research Laboratories",
                 "icon": "school",
-                "useCase": "Multi-user shared reactor access",
-                "consideration": "AVA Pad's per-user profiles"
+                "note": "Use Case: Multi-user shared reactor access",
+                "bullets": [
+                  "What to Consider: AVA Pad's per-user profiles"
+                ],
+                "tags": []
               },
               {
                 "name": "Multi-Reactor Process Facilities",
                 "icon": "flask",
-                "useCase": "Coordinating several reactors from one system",
-                "consideration": "AVA PC's 4-reactor capacity"
+                "note": "Use Case: Coordinating several reactors from one system",
+                "bullets": [
+                  "What to Consider: AVA PC's 4-reactor capacity"
+                ],
+                "tags": []
               },
               {
                 "name": "Contract Research Organizations",
                 "icon": "cpu",
-                "useCase": "Client work requiring documented, reproducible runs",
-                "consideration": "Automated data logging and reporting"
+                "note": "Use Case: Client work requiring documented, reproducible runs",
+                "bullets": [
+                  "What to Consider: Automated data logging and reporting"
+                ],
+                "tags": []
               },
               {
                 "name": "Facilities with Existing Huber or Heidolph Equipment",
                 "icon": "droplet",
-                "useCase": "Integrating current lab hardware",
-                "consideration": "Confirmed direct compatibility"
+                "note": "Use Case: Integrating current lab hardware",
+                "bullets": [
+                  "What to Consider: Confirmed direct compatibility"
+                ],
+                "tags": []
               }
             ]
           },
+
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
+            "eyebrow": "Method comparison",
             "title": "Method Comparison",
             "description": "Compare AVA Pad and AVA PC directly.",
             "columns": [
@@ -364,15 +509,54 @@
               { "label": "AVA PC" }
             ],
             "rows": [
-              { "feature": "Requires a PC", "values": ["No", "Yes, plus a Data Hub"] },
-              { "feature": "Max Reactors", "values": ["2", "4"] },
-              { "feature": "User Profiles", "values": ["Multiple, per-user", "Single"] },
-              { "feature": "Location", "values": ["In the fume hood", "External, remote"] },
-              { "feature": "Best For", "values": ["Simple, self-contained setups", "Larger, multi-reactor coordination"] },
-              { "feature": "Choose when", "values": ["You need 1-2 reactors and fume-hood mounting", "You need up to 4 reactors or a remote controller"] }
+              {
+                "feature": "Requires a PC",
+                "values": [
+                  "No",
+                  "Yes, plus a Data Hub"
+                ]
+              },
+              {
+                "feature": "Max Reactors",
+                "values": [
+                  "2",
+                  "4"
+                ]
+              },
+              {
+                "feature": "User Profiles",
+                "values": [
+                  "Multiple, per-user",
+                  "Single"
+                ]
+              },
+              {
+                "feature": "Location",
+                "values": [
+                  "In the fume hood",
+                  "External, remote"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Simple, self-contained setups",
+                  "Larger, multi-reactor coordination"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "You need 1-2 reactors and fume-hood mounting",
+                  "You need up to 4 reactors or a remote controller"
+                ]
+              }
             ],
-            "disclaimer": "Both platforms share the same device compatibility and 16-device expansion ceiling — the choice is about reactor count and physical location, not capability."
+            "disclaimer": "Both platforms share the same device compatibility and 16-device expansion ceiling — the choice is about reactor count and physical location, not capability.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
             "title": "Inkarp Service Near You",
@@ -387,6 +571,7 @@
               { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -404,20 +589,17 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              {
-                "title": "Product expert note — Pad vs PC fit",
-                "body": "Tell our team how many reactors you need to control and whether you want a fume-hood-mounted or remote setup, and Inkarp will confirm whether Pad or PC fits."
-              },
-              {
-                "title": "Product expert note — platform selection detail",
-                "body": "Tell our team how many reactors you're running and whether multiple users need separate profiles, and Inkarp will confirm Pad or PC."
-              },
-              {
-                "title": "Product expert note — device compatibility",
-                "body": "Send our team a list of the devices you want to control, and Inkarp will confirm compatibility and any Data Hub expansion needed."
-              }
+              { "title": "Product Demonstration", "body": "Shows both platforms controlling your own reactor and devices" },
+              { "title": "Configuration Assessment", "body": "Confirms Pad or PC, and any Data Hub expansion needed" },
+              { "title": "Installation Support", "body": "Supports setup, device connection, and first-run checks" },
+              { "title": "Operator Training", "body": "Helps the team use the six-step workflow confidently" },
+              { "title": "Preventive Maintenance", "body": "Supports software updates and Data Hub performance" },
+              { "title": "Spares and Accessories", "body": "Supplies additional Data Hubs and mounting hardware" },
+              { "title": "Service Support", "body": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
-          }
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

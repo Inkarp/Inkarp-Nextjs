@@ -405,6 +405,17 @@ function getWorkbookMetadataFields(metadata) {
   return WORKBOOK_METADATA_FIELDS.reduce((fields, key) => {
     const value = metadata?.[key];
 
+    // Spreadsheet placeholders such as "[Brand official product page — add URL]"
+    // are tracking notes, not navigable links. Keep the product JSON's verified
+    // manufacturer URL instead of exposing a broken href on the website.
+    if (
+      (key === "manufacturerUrl" || key === "canonicalUrl") &&
+      value &&
+      !/^https?:\/\//i.test(value)
+    ) {
+      return fields;
+    }
+
     if (Array.isArray(value)) {
       if (value.length) {
         fields[key] = value;

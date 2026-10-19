@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "radleys",
-    "principalName": "Radleys",
-    "countryOfOrigin": "United Kingdom"
-  },
+  "principal": { "slug": "radleys", "principalName": "Radleys", "countryOfOrigin": "United Kingdom" },
   "categories": [
     {
       "name": "Automated Reaction Stations",
@@ -25,19 +21,33 @@
       "products": [
         {
           "name": "Mya 4 Reaction Station",
+
           "slug": "mya-4-reaction-station",
+
           "image": "/assets/images/productImages/radleys/mya-4.png",
+
           "imageAlt": "Radleys Mya 4 Reaction Station - authorized distributor & service provider in India",
+
           "principalImage": "/assets/images/PrincipalLogos/radley.svg",
+
           "manufacturerUrl": "https://www.radleys.com/range/mya-4-reaction-station/",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/mya-4-reaction-station",
+
           "breadcrumbPath": "Home > Products > Automated Reaction Stations > Mya 4 Reaction Station",
+
           "h1": "Mya 4 Reaction Station",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "category": "Automated Reaction Stations",
+
           "metaTitle": "Mya 4 Reaction Station — Authorized Distributor & Service Provider in India | Inkarp | Radleys",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Radleys Mya 4 Reaction Station in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "Mya 4 Reaction Station",
             "Mya 4 Reaction Station India",
@@ -54,17 +64,29 @@
             "Radleys India",
             "Inkarp Instruments"
           ],
+
           "overview": "Four zones, each up to 200°C apart. Cooled by tap water, not a separate chiller. Running four reactions at once usually means four separate setups, each fighting for bench space and each needing its own cooling.",
+
           "features": [
-            "Four Independent Zones: Heating, cooling, and stirring controlled separately per zone.",
-            "Minimal Zone Cross-Talk: Up to 200°C difference tolerated between adjacent zones, thanks to high-performance insulation.",
-            "Peltier Cooling to -25°C: Uses tap water directly, no separate chiller required.",
-            "Mixed Magnetic and Overhead Stirring: Magnetic as standard, tool-free overhead stirring optional, mixable across adjacent zones.",
-            "Touch-Screen Control Pad: Supplied as standard, for manual control or automated profiles.",
-            "Optional PC Control Software: Integrates and controls third-party pumps, balances, and pH sensors.",
-            "Reflux or Manifold Head: Water-cooled reflux tube cooling, or condenser water distribution with non-return shut-off valves.",
-            "Space-Saving Footprint: Less bench space than four separate reaction set-ups."
+            { "title": "Four Independent Zones", "description": "Heating, cooling, and stirring controlled separately per zone." },
+            {
+              "title": "Minimal Zone Cross-Talk",
+              "description": "Up to 200°C difference tolerated between adjacent zones, thanks to high-performance insulation."
+            },
+            { "title": "Peltier Cooling to -25°C", "description": "Uses tap water directly, no separate chiller required." },
+            {
+              "title": "Mixed Magnetic and Overhead Stirring",
+              "description": "Magnetic as standard, tool-free overhead stirring optional, mixable across adjacent zones."
+            },
+            { "title": "Touch-Screen Control Pad", "description": "Supplied as standard, for manual control or automated profiles." },
+            { "title": "Optional PC Control Software", "description": "Integrates and controls third-party pumps, balances, and pH sensors." },
+            {
+              "title": "Reflux or Manifold Head",
+              "description": "Water-cooled reflux tube cooling, or condenser water distribution with non-return shut-off valves."
+            },
+            { "title": "Space-Saving Footprint", "description": "Less bench space than four separate reaction set-ups." }
           ],
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Radleys Mya 4 Reaction Station" },
             { "label": "Category", "value": "Automated Reaction Stations" },
@@ -82,17 +104,19 @@
             { "label": "Data Logging", "value": "Manual or profile mode, CSV export" },
             { "label": "Gas/Reflux Handling", "value": "Reflux Head or Manifold Head, water-cooled" }
           ],
+
           "applications": [
-            "Process Development: Independent zones support parallel condition testing",
-            "Design of Experiment (DoE): Automated profiles and data-logging support systematic screening",
-            "Scale-Up: Wide vessel range from screening to process scale on one station",
-            "Route Scouting: Multiple reactions at different conditions run simultaneously",
-            "Polymorph Screening: Precise, independent temperature control per zone",
-            "Biopharma Research: Confirmed supported application",
-            "Reaction and Lead Optimisation: Parallel screening across zones accelerates iteration",
-            "Crystallisation Studies: Precise temperature control supports controlled crystallization",
-            "Reagent, Catalyst & Solvent Screening: Independent zones test multiple conditions at once"
+            { "title": "Process Development", "description": "Independent zones support parallel condition testing" },
+            { "title": "Design of Experiment (DoE)", "description": "Automated profiles and data-logging support systematic screening" },
+            { "title": "Scale-Up", "description": "Wide vessel range from screening to process scale on one station" },
+            { "title": "Route Scouting", "description": "Multiple reactions at different conditions run simultaneously" },
+            { "title": "Polymorph Screening", "description": "Precise, independent temperature control per zone" },
+            { "title": "Biopharma Research", "description": "Confirmed supported application" },
+            { "title": "Reaction and Lead Optimisation", "description": "Parallel screening across zones accelerates iteration" },
+            { "title": "Crystallisation Studies", "description": "Precise temperature control supports controlled crystallization" },
+            { "title": "Reagent, Catalyst & Solvent Screening", "description": "Independent zones test multiple conditions at once" }
           ],
+
           "tags": [
             "Radleys",
             "Mya 4",
@@ -101,6 +125,7 @@
             "Automated Reaction Stations",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What is the Mya 4 Reaction Station used for?",
@@ -134,10 +159,7 @@
               "question": "Does the Mya 4 support 24/7 unattended operation?",
               "answer": "Yes, this is a core design intent, with automated profiles and full data-logging supporting unattended runs."
             },
-            {
-              "question": "Can the Mya 4 export reaction data?",
-              "answer": "Yes, in CSV format, from either the Control Pad or the PC Control Software."
-            },
+            { "question": "Can the Mya 4 export reaction data?", "answer": "Yes, in CSV format, from either the Control Pad or the PC Control Software." },
             {
               "question": "What is the price of the Mya 4 Reaction Station in India?",
               "answer": "The price depends on your vessel, stirring, and control configuration. Contact Inkarp for a quotation once your requirements are confirmed."
@@ -147,8 +169,9 @@
               "answer": "Inkarp is the authorized distributor and service provider for the Radleys Mya 4 Reaction Station in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
-            "heroLead": "Four zones, each up to 200°C apart. Cooled by tap water, not a separate chiller. Running four reactions at once usually means four separate setups, each fighting for bench space and each needing its own cooling. Mya 4 doesn't ask for that. Four fully independent zones sit close together, yet high-performance insulation holds up to a 200°C difference between adjacent zones, so a reflux at 150°C and a cryogenic reaction at -20°C can run side by side without interfering with each other. Cooling comes from Peltier technology and tap water, reaching -25°C with no separate chiller to plumb in. Heating runs from -30°C to +180°C at the block, built for genuine 24/7 unattended operation with full data-logging. Choose magnetic or overhead stirring per zone, mix both across adjacent positions, and run vessels from 2 mL vials up to 400 mL process vessels on the same station.",
+            "heroLead": "Running four reactions at once usually means four separate setups, each fighting for bench space and each needing its own cooling. Mya 4 doesn't ask for that. Four fully independent zones sit close together, yet high-performance insulation holds up to a 200°C difference between adjacent zones, so a reflux at 150°C and a cryogenic reaction at -20°C can run side by side without interfering with each other. Cooling comes from Peltier technology and tap water, reaching -25°C with no separate chiller to plumb in. Heating runs from -30°C to +180°C at the block, built for genuine 24/7 unattended operation with full data-logging. Choose magnetic or overhead stirring per zone, mix both across adjacent positions, and run vessels from 2 mL vials up to 400 mL process vessels on the same station.",
             "stats": [
               { "value": "4", "label": "Independent zones" },
               { "value": "-30°C to +180°C", "label": "Block temperature range" },
@@ -163,43 +186,57 @@
               {
                 "key": "overview",
                 "eyebrow": "Product Information",
-                "title": "Mya 4 Reaction Station at a Glance",
-                "description": "Everything you need to evaluate Mya 4: how zone isolation and cooling actually work, which vessels and stirring options fit your chemistry, what applications it supports, and Inkarp installation and service support.",
-                "subheading": "Four zones, each up to 200°C apart. Cooled by tap water, not a separate chiller.",
+                "title": "Product Information",
+                "description": "The product information of the Mya 4 Reaction Station covers its zone independence, vessel and stirring options, applications, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "Four zones, and they're genuinely independent. Heating, cooling, and stirring are each controlled per zone, not shared across the station.",
-                  "Adjacent zones don't interfere with each other. Up to 200°C of difference between neighbors, which is what makes multi-user, multi-project work practical on one unit.",
-                  "Cooling doesn't need a separate chiller. Peltier technology reaches -25°C using tap water directly.",
-                  "It's built to run without supervision. 24/7 unattended operation, with automated profiles and full data-logging.",
-                  "Stirring is genuinely flexible. Magnetic as standard, or tool-free overhead stirring, mixed across adjacent zones as needed.",
-                  "The vessel range covers screening through process scale. From 2 mL vials up to 400 mL process vessels, all on the same station.",
-                  "It replaces the bench space of several separate setups. A compact footprint doing the work of four independent reaction stations.",
-                  "Confirmed solution: Radleys Mya 4 Reaction Station.",
-                  "Zones: 4, fully independent.",
-                  "Block temperature: -30°C to +180°C; solution temperature: at least -20°C to +150°C.",
-                  "Vessel range: 2 mL to 400 mL.",
-                  "Control: touch-screen Control Pad standard, PC Control Software optional.",
-                  "Full third-party device compatibility list is available on request from Inkarp.",
-                  "Product expert note: Tell our team how many simultaneous reactions you're running and at what temperature spread, and Inkarp will confirm the right Mya 4 configuration."
+                  {
+                    "title": "Four zones, and they're genuinely independent.",
+                    "text": "Heating, cooling, and stirring are each controlled per zone, not shared across the station."
+                  },
+                  {
+                    "title": "Adjacent zones don't interfere with each other.",
+                    "text": "Up to 200°C of difference between neighbors, which is what makes multi-user, multi-project work practical on one unit."
+                  },
+                  { "title": "Cooling doesn't need a separate chiller.", "text": "Peltier technology reaches -25°C using tap water directly." },
+                  { "title": "It's built to run without supervision.", "text": "24/7 unattended operation, with automated profiles and full data-logging." },
+                  {
+                    "title": "Stirring is genuinely flexible.",
+                    "text": "Magnetic as standard, or tool-free overhead stirring, mixed across adjacent zones as needed."
+                  },
+                  {
+                    "title": "The vessel range covers screening through process scale.",
+                    "text": "From 2 mL vials up to 400 mL process vessels, all on the same station."
+                  },
+                  {
+                    "title": "It replaces the bench space of several separate setups.",
+                    "text": "A compact footprint doing the work of four independent reaction stations."
+                  }
                 ],
                 "cards": [
                   { "title": "4 independent zones", "description": "Individually controlled heating, cooling, stirring" },
                   { "title": "Up to 200°C", "description": "Isolation between adjacent zones" },
                   { "title": "-30°C to +180°C", "description": "Block temperature range" },
                   { "title": "No separate chiller", "description": "Peltier cooling on tap water" }
-                ]
+                ],
+                "glanceTitle": "Mya 4 Reaction Station at a Glance",
+                "glanceDescription": "Everything you need to evaluate Mya 4: how zone isolation and cooling actually work, which vessels and stirring options fit your chemistry, what applications it supports, and Inkarp installation and service support.",
+                "cardsIntro": "The value cards of the Mya 4 Reaction Station summarize its zone independence, temperature range, and cooling capability.",
+                "tabSummary": "Why four independent zones beat four separate setups"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "The key features of the Mya 4 Reaction Station include independent zone control, Peltier cooling, and flexible stirring configuration."
+                "description": "The key features of the Mya 4 Reaction Station include independent zone control, Peltier cooling, and flexible stirring configuration.",
+                "tabSummary": "Zone isolation, Peltier cooling, mixed stirring"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "The applications of the Mya 4 Reaction Station include process development, Design of Experiment work, and polymorph screening."
+                "description": "The applications of the Mya 4 Reaction Station include process development, Design of Experiment work, and polymorph screening.",
+                "tabSummary": "Process development, DoE, scale-up, polymorph screening"
               },
               {
                 "key": "specs",
@@ -208,42 +245,111 @@
                 "body": [
                   "The technical specifications of the Mya 4 Reaction Station include 4 independent zones, a -30°C to +180°C range, and 2 mL to 400 mL vessel capacity.",
                   "Full third-party device compatibility detail is available on request from Inkarp."
-                ]
+                ],
+                "description": "The technical specifications of the Mya 4 Reaction Station include 4 independent zones, a -30°C to +180°C range, and 2 mL to 400 mL vessel capacity.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Full third-party device compatibility detail is available on request from Inkarp.",
+                "tabSummary": "Confirmed temperature, vessel, and stirring figures"
               },
               {
                 "key": "performance",
                 "eyebrow": "Zone Independence and Temperature Control",
                 "title": "Zone Independence and Temperature Control",
+                "tabSummary": "What 200°C isolation and Peltier cooling actually deliver",
                 "body": [
                   "Running genuinely different reactions side by side depends on the zones not talking to each other thermally, and that's the specific engineering problem Mya 4 solves.",
                   "High-performance insulation holds up to a 200°C difference between adjacent zones, so a high-temperature reflux and a low-temperature crystallization can run next to each other without either affecting the other's result. Cooling itself comes from Peltier technology reaching -25°C directly from a tap water supply, removing the need for a separate recirculating chiller entirely. Block and solution temperature are tracked separately, since what the block reads and what's actually happening in the vessel aren't quite the same thing."
                 ],
-                "utilityChecklist": [
-                  { "label": "Multiple reactions at very different temperatures", "value": "Up to 200°C isolation between adjacent zones" },
-                  { "label": "Sub-ambient work without a separate chiller", "value": "Peltier cooling to -25°C on tap water" },
-                  { "label": "Precise solution temperature, not just block temperature", "value": "Independent block or solution control" },
-                  { "label": "Multi-user or multi-project scheduling", "value": "Each zone controlled fully independently" }
-                ],
-                "disclaimer": "Product expert note: Tell our team the temperature spread across your planned reactions, and Inkarp will confirm zone isolation fits your setup."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your work needs",
+                      "How Mya 4 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Multiple reactions at very different temperatures",
+                        "Up to 200°C isolation between adjacent zones"
+                      ],
+                      [
+                        "Sub-ambient work without a separate chiller",
+                        "Peltier cooling to -25°C on tap water"
+                      ],
+                      [
+                        "Precise solution temperature, not just block temperature",
+                        "Independent block or solution control"
+                      ],
+                      [
+                        "Multi-user or multi-project scheduling",
+                        "Each zone controlled fully independently"
+                      ]
+                    ]
+                  },
+                  { "note": "Tell our team the temperature spread across your planned reactions, and Inkarp will confirm zone isolation fits your setup." },
+                  {
+                    "title": "Vessel Selection and Stirring Configuration",
+                    "summary": "Matching vessels and stirring to your reaction",
+                    "description": "Vessel and stirring choice both scale with the reaction, from small-volume screening to full process-scale work.",
+                    "columns": [
+                      "Your reaction",
+                      "Which configuration fits"
+                    ],
+                    "rows": [
+                      [
+                        "Small-volume screening",
+                        "Vials or tubes, 2 to 20 mL"
+                      ],
+                      [
+                        "Standard flask-based synthesis",
+                        "Round bottom flasks, 25 to 250 mL"
+                      ],
+                      [
+                        "Process-scale reactions",
+                        "Process reaction vessels, 50 to 400 mL"
+                      ],
+                      [
+                        "Standard stirring needs",
+                        "Integrated magnetic stirring, 100 to 1,000 rpm"
+                      ],
+                      [
+                        "High-torque or viscous mixtures",
+                        "Mya Compact overhead stirrer, tool-free"
+                      ],
+                      [
+                        "Mixed reaction types across zones",
+                        "Magnetic and overhead stirring combined on adjacent zones"
+                      ],
+                      [
+                        "Efficient reflux",
+                        "Water-cooled Reflux Head"
+                      ],
+                      [
+                        "Inert gas distribution to condensers",
+                        "Manifold Head with non-return shut-off valves"
+                      ]
+                    ],
+                    "note": "Send our team your vessel types and stirring requirements, and Inkarp will confirm the right Mya 4 configuration."
+                  }
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Vessel Selection and Stirring Configuration",
-                "title": "Vessel Selection and Stirring Configuration",
+                "title": "Configuration note",
                 "body": [
-                  "Vessel and stirring choice both scale with the reaction, from small-volume screening to full process-scale work.",
-                  "Product expert note: Send our team your vessel types and stirring requirements, and Inkarp will confirm the right Mya 4 configuration."
+                  "Full third-party device compatibility list is available on request from Inkarp"
                 ],
                 "cards": [
-                  { "title": "Small-volume screening", "description": "Vials or tubes, 2 to 20 mL" },
-                  { "title": "Standard flask-based synthesis", "description": "Round bottom flasks, 25 to 250 mL" },
-                  { "title": "Process-scale reactions", "description": "Process reaction vessels, 50 to 400 mL" },
-                  { "title": "Standard stirring needs", "description": "Integrated magnetic stirring, 100 to 1,000 rpm" },
-                  { "title": "High-torque or viscous mixtures", "description": "Mya Compact overhead stirrer, tool-free" },
-                  { "title": "Mixed reaction types across zones", "description": "Magnetic and overhead stirring combined on adjacent zones" },
-                  { "title": "Efficient reflux", "description": "Water-cooled Reflux Head" },
-                  { "title": "Inert gas distribution to condensers", "description": "Manifold Head with non-return shut-off valves" }
-                ]
+                  { "title": "Confirmed solution", "description": "Radleys Mya 4 Reaction Station" },
+                  { "title": "Zones", "description": "4, fully independent" },
+                  { "title": "Block temperature", "description": "-30°C to +180°C; solution temperature: at least -20°C to +150°C" },
+                  { "title": "Vessel range", "description": "2 mL to 400 mL" },
+                  { "title": "Control", "description": "touch-screen Control Pad standard, PC Control Software optional" }
+                ],
+                "disclaimer": "Tell our team how many simultaneous reactions you're running and at what temperature spread, and Inkarp will confirm the right Mya 4 configuration."
               },
               {
                 "key": "docs",
@@ -251,11 +357,13 @@
                 "title": "Documentation and Resources",
                 "description": "Documentation for the Mya 4 Reaction Station is available from Inkarp on request.",
                 "cards": [
-                  { "title": "Mya 4 White Paper", "description": "Available from Inkarp on request." },
-                  { "title": "Technical Data Sheet", "description": "Available from Inkarp on request." },
-                  { "title": "Case Studies on Process Development with Mya 4", "description": "Available from Inkarp on request." },
-                  { "title": "Consistent Scaling Up, Technical Resource", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "Mya 4 White Paper", "description": "Available from Inkarp on request" },
+                  { "title": "Technical Data Sheet", "description": "Available from Inkarp on request" },
+                  { "title": "Case Studies on Process Development with Mya 4", "description": "Available from Inkarp on request" },
+                  { "title": "Consistent Scaling Up, Technical Resource", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "White paper, technical resources"
               }
             ],
             "cta": {
@@ -264,9 +372,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Four independent zones, up to 200°C apart, cooled by tap water with no separate chiller needed. Tell us your reaction requirements, and Inkarp will confirm the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "Four zones, each up to 200°C apart. Cooled by tap water, not a separate chiller.",
+            "heroParagraphs": [
+              "Running four reactions at once usually means four separate setups, each fighting for bench space and each needing its own cooling.",
+              "Mya 4 doesn't ask for that. Four fully independent zones sit close together, yet high-performance insulation holds up to a 200°C difference between adjacent zones, so a reflux at 150°C and a cryogenic reaction at -20°C can run side by side without interfering with each other.",
+              "Cooling comes from Peltier technology and tap water, reaching -25°C with no separate chiller to plumb in. Heating runs from -30°C to +180°C at the block, built for genuine 24/7 unattended operation with full data-logging.",
+              "Choose magnetic or overhead stirring per zone, mix both across adjacent positions, and run vessels from 2 mL vials up to 400 mL process vessels on the same station."
+            ],
+            "statsIntro": "The quick stats of the Mya 4 Reaction Station cover its zone independence, temperature range, and vessel capacity."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "zone-configuration-planner", "label": "Zone Planner" },
@@ -277,6 +396,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "zone-configuration-planner",
@@ -284,30 +404,16 @@
               "title": "How many reactions, at what temperatures?",
               "description": "Enter the number of simultaneous reactions and their temperature spread, and see whether Mya 4's 4-zone, 200°C isolation covers it.",
               "fields": [
-                { "key": "choices", "label": "Select your reaction setup" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Number of simultaneous reactions",
-                  "choices": "Up to 4",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Temperature per reaction",
-                  "choices": "Confirms fit within -30°C to +180°C per zone",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Isolation check",
-                  "choices": "Confirms whether the temperature spread fits within the 200°C zone-to-zone tolerance",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Next step",
-                  "choices": "Routes to Inkarp for a zone-specific configuration",
-                  "cta": "Get Configuration Support"
-                }
-              ]
+                { "title": "Number of simultaneous reactions", "hint": "Up to 4", "input": "number", "choices": "" },
+                { "title": "Temperature per reaction", "hint": "Confirms fit within -30°C to +180°C per zone", "input": "text", "choices": "" }
+              ],
+              "lead": "The zone configuration planner confirms whether Mya 4's zone independence fits your simultaneous reaction needs.",
+              "ctaNote": "Confirms whether the temperature spread fits within the 200°C zone-to-zone tolerance. Routes to Inkarp for a zone-specific configuration.",
+              "disclaimer": "",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "vessel-and-stirring-configurator",
@@ -315,32 +421,23 @@
               "title": "What are you running, and how?",
               "description": "Select your vessel type and volume, and your stirring requirement, to see the right configuration.",
               "fields": [
-                { "key": "choices", "label": "Select your vessel type" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Vessel type and volume",
-                  "choices": "Vial/tube; Round bottom flask; Process vessel",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Vial/tube, round bottom flask, or process vessel",
+                  "choices": "Vial/tube; Round bottom flask; Process vessel"
                 },
-                {
-                  "title": "Stirring requirement",
-                  "choices": "Standard magnetic; High-torque overhead",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Configuration readout",
-                  "choices": "Confirms vessel and stirrer fit",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Next step",
-                  "choices": "Routes to Inkarp for a configuration-specific quotation",
-                  "cta": "Talk to Product Expert"
-                }
-              ]
+                { "title": "Stirring requirement", "hint": "Standard magnetic or high-torque overhead", "choices": "Standard magnetic; High-torque overhead" }
+              ],
+              "lead": "The vessel and stirring configurator recommends the right vessel and stirring setup for your reaction.",
+              "ctaNote": "Confirms vessel and stirrer fit. Routes to Inkarp for a configuration-specific quotation.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
             "title": "Industry Explorer",
@@ -349,86 +446,124 @@
               {
                 "name": "Pharmaceutical Process R&D",
                 "icon": "pill",
-                "useCase": "Route scouting and process development",
-                "consideration": "Zone isolation for testing multiple conditions in parallel"
+                "note": "Use Case: Route scouting and process development",
+                "bullets": [
+                  "What to Consider: Zone isolation for testing multiple conditions in parallel"
+                ],
+                "tags": []
               },
               {
                 "name": "Biopharma Research",
                 "icon": "flask",
-                "useCase": "Reaction and lead optimisation",
-                "consideration": "Precise temperature control for sensitive chemistry"
+                "note": "Use Case: Reaction and lead optimisation",
+                "bullets": [
+                  "What to Consider: Precise temperature control for sensitive chemistry"
+                ],
+                "tags": []
               },
               {
                 "name": "Specialty Chemical Development",
                 "icon": "cpu",
-                "useCase": "Reagent, catalyst, and solvent screening",
-                "consideration": "Vessel range from screening to process scale"
+                "note": "Use Case: Reagent, catalyst, and solvent screening",
+                "bullets": [
+                  "What to Consider: Vessel range from screening to process scale"
+                ],
+                "tags": []
               },
               {
                 "name": "Contract Research Organizations",
                 "icon": "droplet",
-                "useCase": "Multi-client, multi-project scheduling",
-                "consideration": "Multi-user operation with independent zones"
+                "note": "Use Case: Multi-client, multi-project scheduling",
+                "bullets": [
+                  "What to Consider: Multi-user operation with independent zones"
+                ],
+                "tags": []
               },
               {
                 "name": "Academic and Institutional Research",
                 "icon": "school",
-                "useCase": "Design of Experiment work",
-                "consideration": "CSV data export for analysis and reporting"
+                "note": "Use Case: Design of Experiment work",
+                "bullets": [
+                  "What to Consider: CSV data export for analysis and reporting"
+                ],
+                "tags": []
               }
             ]
           },
+
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
+            "eyebrow": "Method comparison",
             "title": "Method Comparison",
             "description": "Compare the standard Touch-Screen Control Pad configuration with the optional PC Control Software configuration.",
             "columns": [
-              { "label": "Touch-Screen Control Pad (Standard)", "highlight": true },
+              { "label": "Touch-Screen Control Pad (Standard)" },
               { "label": "PC Control Software (Optional)" }
             ],
             "rows": [
               {
                 "feature": "Included",
-                "values": ["Yes, supplied as standard", "Optional add-on"]
+                "values": [
+                  "Yes, supplied as standard",
+                  "Optional add-on"
+                ]
               },
               {
                 "feature": "Third-Party Device Integration",
-                "values": ["Not available", "Pumps, balances, pH sensors"]
+                "values": [
+                  "Not available",
+                  "Pumps, balances, pH sensors"
+                ]
               },
               {
                 "feature": "Operation Mode",
-                "values": ["Manual or automated profiles", "Manual or automated profiles"]
+                "values": [
+                  "Manual or automated profiles",
+                  "Manual or automated profiles"
+                ]
               },
               {
                 "feature": "Data Export",
-                "values": ["CSV", "CSV"]
+                "values": [
+                  "CSV",
+                  "CSV"
+                ]
               },
               {
                 "feature": "Best For",
-                "values": ["Standalone Mya 4 operation", "Integrated, multi-instrument workflows"]
+                "values": [
+                  "Standalone Mya 4 operation",
+                  "Integrated, multi-instrument workflows"
+                ]
               },
               {
                 "feature": "Choose when",
-                "values": ["You're running Mya 4 on its own", "You need to coordinate pumps, balances, or sensors alongside it"]
+                "values": [
+                  "You're running Mya 4 on its own",
+                  "You need to coordinate pumps, balances, or sensors alongside it"
+                ]
               }
             ],
-            "disclaimer": "Full detail on the Mya 4 Control options and Mya 4 vessels and accessories pages will be added once those configurations are separately confirmed."
+            "disclaimer": "Full detail on the Mya 4 Control options and Mya 4 vessels and accessories pages will be added once those configurations are separately confirmed.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
             "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Mya 4 Reaction Station with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Shows zone independence and cooling performance on your own reactions." },
-              { "title": "Configuration Assessment", "description": "Confirms the right vessel, stirring, and control setup." },
-              { "title": "Installation Support", "description": "Supports setup, water supply connection, and first-run checks." },
-              { "title": "Operator Training", "description": "Helps the team use the Control Pad and profile programming confidently." },
-              { "title": "Preventive Maintenance", "description": "Maintains cooling, heating, and stirring performance." },
-              { "title": "Spares and Accessories", "description": "Supplies vessels, stirrers, reflux/manifold heads, and replacement parts." },
-              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC." }
+              { "title": "Product Demonstration", "description": "Shows zone independence and cooling performance on your own reactions" },
+              { "title": "Configuration Assessment", "description": "Confirms the right vessel, stirring, and control setup" },
+              { "title": "Installation Support", "description": "Supports setup, water supply connection, and first-run checks" },
+              { "title": "Operator Training", "description": "Helps the team use the Control Pad and profile programming confidently" },
+              { "title": "Preventive Maintenance", "description": "Maintains cooling, heating, and stirring performance" },
+              { "title": "Spares and Accessories", "description": "Supplies vessels, stirrers, reflux/manifold heads, and replacement parts" },
+              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -446,36 +581,47 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              {
-                "title": "Product expert note — configuration fit",
-                "body": "Tell our team how many simultaneous reactions you're running and at what temperature spread, and Inkarp will confirm the right Mya 4 configuration."
-              },
-              {
-                "title": "Product expert note — zone isolation",
-                "body": "Tell our team the temperature spread across your planned reactions, and Inkarp will confirm zone isolation fits your setup."
-              },
-              {
-                "title": "Product expert note — vessel and stirring",
-                "body": "Send our team your vessel types and stirring requirements, and Inkarp will confirm the right Mya 4 configuration."
-              }
+              { "title": "Product Demonstration", "body": "Shows zone independence and cooling performance on your own reactions" },
+              { "title": "Configuration Assessment", "body": "Confirms the right vessel, stirring, and control setup" },
+              { "title": "Installation Support", "body": "Supports setup, water supply connection, and first-run checks" },
+              { "title": "Operator Training", "body": "Helps the team use the Control Pad and profile programming confidently" },
+              { "title": "Preventive Maintenance", "body": "Maintains cooling, heating, and stirring performance" },
+              { "title": "Spares and Accessories", "body": "Supplies vessels, stirrers, reflux/manifold heads, and replacement parts" },
+              { "title": "Service Support", "body": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
-          }
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Mya 4 Control options",
+
           "slug": "mya-4-control-options",
+
           "image": "/assets/images/productImages/radleys/mya-4-control-options.jpg",
+
           "imageAlt": "Radleys Mya 4 Control Options - authorized distributor & service provider in India",
+
           "principalImage": "/assets/images/PrincipalLogos/radley.svg",
+
           "manufacturerUrl": "https://www.radleys.com/range/mya-4-control-options/",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/mya-4-control-options",
+
           "breadcrumbPath": "Home > Products > Automated Reaction Stations > Mya 4 Control Options",
+
           "h1": "Mya 4 Control Options",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "category": "Automated Reaction Stations",
+
           "metaTitle": "Mya 4 Control options — Authorized Distributor & Service Provider in India | Inkarp | Radleys",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Radleys Mya 4 Control options in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "Mya 4 Control options",
             "Mya 4 Control options India",
@@ -492,24 +638,30 @@
             "Radleys India",
             "Inkarp Instruments"
           ],
+
           "overview": "The Control Pad caps at 30 steps. The PC Software has no cap at all. Every Mya 4 ships with the touch-screen Control Pad, and for most protocols, that's genuinely enough: manual or automated profiles, independent zone control, real-time graphs, all included as standard.",
+
           "features": [
-            "Touch-Screen Control Pad, Standard: Included with every Mya 4, no additional purchase required.",
-            "30-Step, 16-Hour Ceiling: A real, specific limit on the standard Control Pad's experiment complexity.",
-            "Unlimited Steps via PC Software: Removes the Control Pad's ceiling entirely, for genuinely complex protocols.",
-            "Up to 16 Third-Party Devices: Controlled and logged from a single screen, PC Software only.",
-            "Interlinked Devices and Feedback Loops: Set end-point conditions and safety feedback across connected equipment.",
-            "Report Wizard: Creates detailed reports in RTF, or exports results in CSV.",
-            "Free Demo Software: Simulate device control and build schedules before purchasing.",
-            "Multi-User, Independent 4-Zone Operation: Included on the standard Control Pad, no upgrade needed."
+            { "title": "Touch-Screen Control Pad, Standard", "description": "Included with every Mya 4, no additional purchase required." },
+            { "title": "30-Step, 16-Hour Ceiling", "description": "A real, specific limit on the standard Control Pad's experiment complexity." },
+            { "title": "Unlimited Steps via PC Software", "description": "Removes the Control Pad's ceiling entirely, for genuinely complex protocols." },
+            { "title": "Up to 16 Third-Party Devices", "description": "Controlled and logged from a single screen, PC Software only." },
+            { "title": "Interlinked Devices and Feedback Loops", "description": "Set end-point conditions and safety feedback across connected equipment." },
+            { "title": "Report Wizard", "description": "Creates detailed reports in RTF, or exports results in CSV." },
+            { "title": "Free Demo Software", "description": "Simulate device control and build schedules before purchasing." },
+            { "title": "Multi-User, Independent 4-Zone Operation", "description": "Included on the standard Control Pad, no upgrade needed." }
           ],
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Radleys Mya 4 Control Options" },
             { "label": "Category", "value": "Automated Reaction Stations" },
             { "label": "Control Pad Step Limit", "value": "30 steps, up to 16 hours each" },
             { "label": "PC Software Step Limit", "value": "Unlimited" },
             { "label": "Third-Party Device Capacity", "value": "Up to 16, PC Software only" },
-            { "label": "Confirmed Device Types", "value": "Syringe pumps, pH sensors, peristaltic pumps, piston pumps, balances, vacuum pumps, gas flow controllers, pressure sensors, conductivity sensors, gas flow meters" },
+            {
+              "label": "Confirmed Device Types",
+              "value": "Syringe pumps, pH sensors, peristaltic pumps, piston pumps, balances, vacuum pumps, gas flow controllers, pressure sensors, conductivity sensors, gas flow meters"
+            },
             { "label": "Report Formats", "value": "CSV (both); RTF (PC Software only)" },
             { "label": "Software Version Referenced", "value": "2.1.2 (release notes), 2.1.1 (demo)" },
             { "label": "Operating System", "value": "Windows 7, 8, 10, 11" },
@@ -519,13 +671,15 @@
             { "label": "Graphics", "value": "Intel HD Graphics" },
             { "label": "License", "value": "Non-transferable once activated on a PC" }
           ],
+
           "applications": [
-            "Unattended Overnight Reactions: Safety feedback loops and warnings support safe, unsupervised operation",
-            "Complex Multi-Step Synthesis: PC Software removes the 30-step limit entirely",
-            "Multi-Device Process Monitoring: Up to 16 third-party devices controlled from one screen",
-            "Regulatory or QC Reporting: Report Wizard generates detailed RTF or CSV output",
-            "Standard Day-to-Day Reactions: The included Control Pad covers most protocols without an upgrade"
+            { "title": "Unattended Overnight Reactions", "description": "Safety feedback loops and warnings support safe, unsupervised operation" },
+            { "title": "Complex Multi-Step Synthesis", "description": "PC Software removes the 30-step limit entirely" },
+            { "title": "Multi-Device Process Monitoring", "description": "Up to 16 third-party devices controlled from one screen" },
+            { "title": "Regulatory or QC Reporting", "description": "Report Wizard generates detailed RTF or CSV output" },
+            { "title": "Standard Day-to-Day Reactions", "description": "The included Control Pad covers most protocols without an upgrade" }
           ],
+
           "tags": [
             "Radleys",
             "Mya 4",
@@ -534,6 +688,7 @@
             "Automated Reaction Stations",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What is the difference between the Control Pad and the PC Control Software?",
@@ -576,8 +731,9 @@
               "answer": "Inkarp is the authorized distributor and service provider for Radleys Mya 4 Control Options in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
-            "heroLead": "The Control Pad caps at 30 steps. The PC Software has no cap at all. Every Mya 4 ships with the touch-screen Control Pad, and for most protocols, that's genuinely enough: manual or automated profiles, independent zone control, real-time graphs, all included as standard. But the Control Pad has a real ceiling: 30 steps of up to 16 hours each. If your protocol needs more steps, longer stages, or control over equipment beyond the reaction station itself, the PC Control Software removes that ceiling entirely and adds control of up to 16 third-party devices from one screen. Try it before deciding. Free demo software lets you simulate device control and build schedules without committing to anything.",
+            "heroLead": "Every Mya 4 ships with the touch-screen Control Pad, and for most protocols, that's genuinely enough: manual or automated profiles, independent zone control, real-time graphs, all included as standard. But the Control Pad has a real ceiling: 30 steps of up to 16 hours each. If your protocol needs more steps, longer stages, or control over equipment beyond the reaction station itself, the PC Control Software removes that ceiling entirely and adds control of up to 16 third-party devices from one screen. Try it before deciding. Free demo software lets you simulate device control and build schedules without committing to anything.",
             "stats": [
               { "value": "Standard", "label": "Touch-Screen Control Pad, included" },
               { "value": "30 steps x 16 hrs", "label": "Control Pad's step limit" },
@@ -592,42 +748,63 @@
               {
                 "key": "overview",
                 "eyebrow": "Product Information",
-                "title": "Mya 4 Control Options at a Glance",
-                "description": "Everything you need to choose between the Control Pad and PC Software: the full feature comparison, which third-party devices are supported, what your PC needs to run the software, and Inkarp installation and service support.",
-                "subheading": "The Control Pad caps at 30 steps. The PC Software has no cap at all.",
+                "title": "Product Information",
+                "description": "The product information of the Mya 4 Control Options covers the Control Pad and PC Software comparison, device integration, system requirements, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "The Control Pad is genuinely capable on its own. Independent zone control, safety limits, CSV export, real-time graphs, and multi-user operation are all included as standard, not locked behind an upgrade.",
-                  "One real limit defines when you need more. 30 steps of up to 16 hours each is the Control Pad's ceiling; the PC Software has none.",
-                  "Third-party integration is the PC Software's core addition. Up to 16 devices, from syringe pumps to gas flow meters, controlled and logged from one screen.",
-                  "Safety scales with complexity. Interlinked devices, feedback loops, and end-point conditions are PC Software-only, built for genuinely unattended, multi-device operation.",
-                  "Reporting goes further with the upgrade. A Report Wizard exports detailed reports in RTF or CSV, beyond the Control Pad's CSV-only export.",
-                  "You can try it before buying it. Free demo software simulates device control and lets you build and test schedules first.",
-                  "The license doesn't move once activated. A real, practical detail worth confirming your PC setup against before installation.",
-                  "Confirmed line: Radleys Mya 4 Control Options.",
-                  "Touch-Screen Control Pad: standard, included with every Mya 4.",
-                  "PC Control Software: optional, controls up to 16 third-party devices, unlimited steps.",
-                  "Software version referenced: Mya 4 2.1.2 (release notes available), 2.1.1 demo available.",
-                  "Full third-party device driver list is available on request from Inkarp.",
-                  "Product expert note: Tell our team your typical protocol length and whether you need to control external devices, and Inkarp will confirm whether the Control Pad or PC Software fits."
+                  {
+                    "title": "The Control Pad is genuinely capable on its own.",
+                    "text": "Independent zone control, safety limits, CSV export, real-time graphs, and multi-user operation are all included as standard, not locked behind an upgrade."
+                  },
+                  {
+                    "title": "One real limit defines when you need more.",
+                    "text": "30 steps of up to 16 hours each is the Control Pad's ceiling; the PC Software has none."
+                  },
+                  {
+                    "title": "Third-party integration is the PC Software's core addition.",
+                    "text": "Up to 16 devices, from syringe pumps to gas flow meters, controlled and logged from one screen."
+                  },
+                  {
+                    "title": "Safety scales with complexity.",
+                    "text": "Interlinked devices, feedback loops, and end-point conditions are PC Software-only, built for genuinely unattended, multi-device operation."
+                  },
+                  {
+                    "title": "Reporting goes further with the upgrade.",
+                    "text": "A Report Wizard exports detailed reports in RTF or CSV, beyond the Control Pad's CSV-only export."
+                  },
+                  {
+                    "title": "You can try it before buying it.",
+                    "text": "Free demo software simulates device control and lets you build and test schedules first."
+                  },
+                  {
+                    "title": "The license doesn't move once activated.",
+                    "text": "A real, practical detail worth confirming your PC setup against before installation."
+                  }
                 ],
                 "cards": [
                   { "title": "Standard", "description": "Touch-Screen Control Pad, included with every Mya 4" },
                   { "title": "30 steps x 16 hrs", "description": "Control Pad's real limit" },
                   { "title": "Up to 16 devices", "description": "PC Software's third-party integration" },
                   { "title": "Free demo", "description": "Try before you commit" }
-                ]
+                ],
+                "glanceTitle": "Mya 4 Control Options at a Glance",
+                "glanceDescription": "Everything you need to choose between the Control Pad and PC Software: the full feature comparison, which third-party devices are supported, what your PC needs to run the software, and Inkarp installation and service support.",
+                "cardsIntro": "The value cards of the Mya 4 Control Options summarize the Control Pad's inclusion and the PC Software's added capability.",
+                "tabSummary": "Why most users start with the Control Pad and some need more"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "The key features of the Mya 4 Control Options include a full-featured standard Control Pad, unlimited PC Software step count, and 16-device integration."
+                "description": "The key features of the Mya 4 Control Options include a full-featured standard Control Pad, unlimited PC Software step count, and 16-device integration.",
+                "tabSummary": "The 30-step limit, 16-device integration, Report Wizard"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "The applications of the Mya 4 Control Options include unattended overnight reactions, multi-device process monitoring, and complex multi-step synthesis."
+                "description": "The applications of the Mya 4 Control Options include unattended overnight reactions, multi-device process monitoring, and complex multi-step synthesis.",
+                "tabSummary": "Unattended overnight reactions, multi-device workflows"
               },
               {
                 "key": "specs",
@@ -636,65 +813,236 @@
                 "body": [
                   "The technical specifications of the Mya 4 Control Options include the Control Pad's 30-step limit, PC Software's 16-device capacity, and confirmed PC requirements.",
                   "Full third-party device driver documentation is available on request from Inkarp."
-                ]
+                ],
+                "description": "The technical specifications of the Mya 4 Control Options include the Control Pad's 30-step limit, PC Software's 16-device capacity, and confirmed PC requirements.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Full third-party device driver documentation is available on request from Inkarp.",
+                "tabSummary": "Confirmed feature comparison and PC requirements"
               },
               {
                 "key": "performance",
                 "eyebrow": "Feature Comparison: Control Pad vs PC Software",
                 "title": "Feature Comparison: Control Pad vs PC Software",
+                "tabSummary": "The full side-by-side breakdown",
                 "body": [
                   "Most features are shared between the two options. The differences are specific and worth knowing exactly, not approximately."
                 ],
-                "utilityChecklist": [
-                  { "label": "Supplied as standard", "value": "Control Pad: Included | PC Software: Optional" },
-                  { "label": "Intuitive touch-screen control", "value": "Control Pad: Yes | PC Software: No" },
-                  { "label": "Compact, fumehood-compatible footprint", "value": "Control Pad: Yes | PC Software: No" },
-                  { "label": "Max 30 steps of 16 hours each", "value": "Control Pad: Yes (this is the limit) | PC Software: No limit" },
-                  { "label": "Multi-user, 4 independent zones", "value": "Control Pad: Yes | PC Software: No" },
-                  { "label": "Control/log temperature and stirring per zone", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Set safety limits", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Export CSV via USB", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Manual/direct mode", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Multi-step recipes, profile/schedule mode", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "On-the-fly adjustments", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Automatic data logging", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Share results and recipes", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Real-time graphs", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Comment logging", "value": "Control Pad: Yes | PC Software: Yes" },
-                  { "label": "Control/log up to 16 third-party devices", "value": "Control Pad: No | PC Software: Yes" },
-                  { "label": "Complex experiments, any number of steps", "value": "Control Pad: No | PC Software: Yes" },
-                  { "label": "Interlink devices, feedback loops, end-point conditions", "value": "Control Pad: No | PC Software: Yes" },
-                  { "label": "Report Wizard (RTF or CSV)", "value": "Control Pad: No | PC Software: Yes" },
-                  { "label": "Runs on a Windows laptop", "value": "Control Pad: No | PC Software: Yes" }
-                ],
-                "disclaimer": "Product expert note: Tell our team whether your protocols ever exceed 30 steps or 16 hours per step, and whether you need to control external devices, and Inkarp will confirm which option fits."
+                "groups": [
+                  {
+                    "columns": [
+                      "Feature",
+                      "Control Pad",
+                      "PC Software"
+                    ],
+                    "rows": [
+                      [
+                        "Supplied as standard",
+                        "Included",
+                        "Optional"
+                      ],
+                      [
+                        "Intuitive touch-screen control",
+                        "Yes",
+                        "No"
+                      ],
+                      [
+                        "Compact, fumehood-compatible footprint",
+                        "Yes",
+                        "No"
+                      ],
+                      [
+                        "Max 30 steps of 16 hours each",
+                        "Yes (this is the limit)",
+                        "No limit"
+                      ],
+                      [
+                        "Multi-user, 4 independent zones",
+                        "Yes",
+                        "No"
+                      ],
+                      [
+                        "Control/log temperature and stirring per zone",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Set safety limits",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Export CSV via USB",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Manual/direct mode",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Multi-step recipes, profile/schedule mode",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "On-the-fly adjustments",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Automatic data logging",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Share results and recipes",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Real-time graphs",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Comment logging",
+                        "Yes",
+                        "Yes"
+                      ],
+                      [
+                        "Control/log up to 16 third-party devices",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "Complex experiments, any number of steps",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "Interlink devices, feedback loops, end-point conditions",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "Report Wizard (RTF or CSV)",
+                        "No",
+                        "Yes"
+                      ],
+                      [
+                        "Runs on a Windows laptop",
+                        "No",
+                        "Yes"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team whether your protocols ever exceed 30 steps or 16 hours per step, and whether you need to control external devices, and Inkarp will confirm which option fits."
+                  },
+                  {
+                    "title": "Third-Party Device Integration and System Requirements",
+                    "summary": "Supported devices and what your PC needs",
+                    "description": "Device integration and PC compatibility are the two practical questions to confirm before choosing PC Software.",
+                    "columns": [
+                      "Confirmed Device Type",
+                      "Notes"
+                    ],
+                    "rows": [
+                      [
+                        "Syringe Pumps",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "pH Sensors",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Peristaltic Pumps",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Piston Pumps",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Balances",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Vacuum Pumps",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Gas Flow Controllers",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Pressure Sensors",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Conductivity Sensors",
+                        "Confirmed compatible"
+                      ],
+                      [
+                        "Gas Flow Meters",
+                        "Confirmed compatible"
+                      ]
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "PC Requirement",
+                      "Minimum"
+                    ],
+                    "rows": [
+                      [
+                        "Operating System",
+                        "Windows 7, 8, 10, or 11"
+                      ],
+                      [
+                        "CPU",
+                        "Dual-core 1.9 GHz"
+                      ],
+                      [
+                        "Memory",
+                        "2 GB (4 GB recommended)"
+                      ],
+                      [
+                        "Hard Disk",
+                        "30 GB, 5,400 rpm"
+                      ],
+                      [
+                        "Graphics",
+                        "Intel HD Graphics"
+                      ],
+                      [
+                        "Software",
+                        "Microsoft .NET drivers, Internet Explorer 8 or equivalent"
+                      ]
+                    ]
+                  },
+                  { "note": "Send our team your device list and PC specifications, and Inkarp will confirm compatibility before you commit." }
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Third-Party Device Integration and System Requirements",
-                "title": "Third-Party Device Integration and System Requirements",
+                "title": "Configuration note",
                 "body": [
-                  "Device integration and PC compatibility are the two practical questions to confirm before choosing PC Software.",
-                  "Product expert note: Send our team your device list and PC specifications, and Inkarp will confirm compatibility before you commit."
+                  "Full third-party device driver list is available on request from Inkarp"
                 ],
                 "cards": [
-                  { "title": "Syringe Pumps", "description": "Confirmed compatible" },
-                  { "title": "pH Sensors", "description": "Confirmed compatible" },
-                  { "title": "Peristaltic Pumps", "description": "Confirmed compatible" },
-                  { "title": "Piston Pumps", "description": "Confirmed compatible" },
-                  { "title": "Balances", "description": "Confirmed compatible" },
-                  { "title": "Vacuum Pumps", "description": "Confirmed compatible" },
-                  { "title": "Gas Flow Controllers", "description": "Confirmed compatible" },
-                  { "title": "Pressure Sensors", "description": "Confirmed compatible" },
-                  { "title": "Conductivity Sensors", "description": "Confirmed compatible" },
-                  { "title": "Gas Flow Meters", "description": "Confirmed compatible" },
-                  { "title": "Operating System", "description": "Windows 7, 8, 10, or 11" },
-                  { "title": "CPU", "description": "Dual-core 1.9 GHz" },
-                  { "title": "Memory", "description": "2 GB (4 GB recommended)" },
-                  { "title": "Hard Disk", "description": "30 GB, 5,400 rpm" },
-                  { "title": "Graphics", "description": "Intel HD Graphics" },
-                  { "title": "Software", "description": "Microsoft .NET drivers, Internet Explorer 8 or equivalent" }
-                ]
+                  { "title": "Confirmed line", "description": "Radleys Mya 4 Control Options" },
+                  { "title": "Touch-Screen Control Pad", "description": "standard, included with every Mya 4" },
+                  { "title": "PC Control Software", "description": "optional, controls up to 16 third-party devices, unlimited steps" },
+                  { "title": "Software version referenced", "description": "Mya 4 2.1.2 (release notes available), 2.1.1 demo available" }
+                ],
+                "disclaimer": "Tell our team your typical protocol length and whether you need to control external devices, and Inkarp will confirm whether the Control Pad or PC Software fits."
               },
               {
                 "key": "docs",
@@ -702,11 +1050,13 @@
                 "title": "Documentation and Resources",
                 "description": "Documentation for the Mya 4 Control Options is available from Inkarp on request.",
                 "cards": [
-                  { "title": "Mya 4 2.1.2 Release Notes", "description": "Available from Inkarp on request." },
-                  { "title": "Mya 4 2.1.1 Demo Software", "description": "Available from Inkarp on request." },
-                  { "title": "Device Driver List", "description": "Available from Inkarp on request." },
-                  { "title": "Software Upgrade Guide", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "Mya 4 2.1.2 Release Notes", "description": "Available from Inkarp on request" },
+                  { "title": "Mya 4 2.1.1 Demo Software", "description": "Available from Inkarp on request" },
+                  { "title": "Device Driver List", "description": "Available from Inkarp on request" },
+                  { "title": "Software Upgrade Guide", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Release notes, demo software, technical resources"
               }
             ],
             "cta": {
@@ -715,9 +1065,19 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The Control Pad handles most protocols as standard. When you need more than 30 steps or control over external devices, the PC Software removes those limits entirely. Tell us your protocol and device needs, and Inkarp will confirm the right option.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "The Control Pad caps at 30 steps. The PC Software has no cap at all.",
+            "heroParagraphs": [
+              "Every Mya 4 ships with the touch-screen Control Pad, and for most protocols, that's genuinely enough: manual or automated profiles, independent zone control, real-time graphs, all included as standard.",
+              "But the Control Pad has a real ceiling: 30 steps of up to 16 hours each. If your protocol needs more steps, longer stages, or control over equipment beyond the reaction station itself, the PC Control Software removes that ceiling entirely and adds control of up to 16 third-party devices from one screen.",
+              "Try it before deciding. Free demo software lets you simulate device control and build schedules without committing to anything."
+            ],
+            "statsIntro": "The quick stats of the Mya 4 Control Options cover the Control Pad's limits and the PC Software's added capability."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "control-option-selector", "label": "Option Selector" },
@@ -728,6 +1088,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "control-option-selector",
@@ -735,30 +1096,17 @@
               "title": "What does your protocol actually need?",
               "description": "Answer a few questions about step count, protocol length, and device integration, and see which control option fits.",
               "fields": [
-                { "key": "choices", "label": "Select your protocol needs" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Steps per experiment",
-                  "choices": "Under 30, or more",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Longest single step",
-                  "choices": "Under 16 hours, or more",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Third-party device need",
-                  "choices": "None, or specific devices required",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Recommendation readout",
-                  "choices": "Recommends Control Pad or PC Software",
-                  "cta": "Get Configuration Support"
-                }
-              ]
+                { "title": "Steps per experiment", "hint": "Under 30, or more", "choices": "Under 30; More" },
+                { "title": "Longest single step", "hint": "Under 16 hours, or more", "choices": "Under 16 hours; More" },
+                { "title": "Third-party device need", "hint": "None, or specific devices required", "choices": "None; Specific devices required" }
+              ],
+              "lead": "The control option selector recommends Control Pad or PC Software based on your protocol needs.",
+              "ctaNote": "Recommends Control Pad or PC Software.",
+              "disclaimer": "",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "device-integration-checker",
@@ -766,32 +1114,23 @@
               "title": "What devices do you need to control?",
               "description": "Select the devices you want to integrate, and confirm compatibility with the PC Software.",
               "fields": [
-                { "key": "choices", "label": "Select your device type" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Device type selector",
-                  "choices": "From the 10 confirmed compatible types",
-                  "cta": "Talk to Product Expert"
+                  "hint": "From the 10 confirmed compatible types",
+                  "choices": "Syringe Pumps; pH Sensors; Peristaltic Pumps; Piston Pumps; Balances; Vacuum Pumps; Gas Flow Controllers; Pressure Sensors; Conductivity Sensors; Gas Flow Meters"
                 },
-                {
-                  "title": "Compatibility readout",
-                  "choices": "Confirms direct compatibility",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Device count",
-                  "choices": "Checks fit within the 16-device capacity",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Next step",
-                  "choices": "Routes to Inkarp for a device-specific quotation",
-                  "cta": "Talk to Product Expert"
-                }
-              ]
+                { "title": "Device count", "hint": "Checks fit within the 16-device capacity", "input": "number", "choices": "" }
+              ],
+              "lead": "The device integration checker confirms compatibility for your specific third-party equipment.",
+              "ctaNote": "Confirms direct compatibility. Routes to Inkarp for a device-specific quotation.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
             "title": "Industry Explorer",
@@ -800,90 +1139,131 @@
               {
                 "name": "Pharmaceutical Process R&D",
                 "icon": "pill",
-                "useCase": "Complex, multi-step synthesis protocols",
-                "consideration": "PC Software for unlimited step count"
+                "note": "Use Case: Complex, multi-step synthesis protocols",
+                "bullets": [
+                  "What to Consider: PC Software for unlimited step count"
+                ],
+                "tags": []
               },
               {
                 "name": "Contract Research Organizations",
                 "icon": "cpu",
-                "useCase": "Client reporting requirements",
-                "consideration": "Report Wizard for detailed RTF output"
+                "note": "Use Case: Client reporting requirements",
+                "bullets": [
+                  "What to Consider: Report Wizard for detailed RTF output"
+                ],
+                "tags": []
               },
               {
                 "name": "Specialty Chemical Development",
                 "icon": "flask",
-                "useCase": "Multi-device process monitoring",
-                "consideration": "Confirm device list against the 16-device capacity"
+                "note": "Use Case: Multi-device process monitoring",
+                "bullets": [
+                  "What to Consider: Confirm device list against the 16-device capacity"
+                ],
+                "tags": []
               },
               {
                 "name": "Academic Research Laboratories",
                 "icon": "school",
-                "useCase": "Standard day-to-day protocols",
-                "consideration": "Control Pad covers most teaching and research needs"
+                "note": "Use Case: Standard day-to-day protocols",
+                "bullets": [
+                  "What to Consider: Control Pad covers most teaching and research needs"
+                ],
+                "tags": []
               },
               {
                 "name": "Quality Control Laboratories",
                 "icon": "droplet",
-                "useCase": "Data logging and audit trail requirements",
-                "consideration": "CSV/RTF export for compliance documentation"
+                "note": "Use Case: Data logging and audit trail requirements",
+                "bullets": [
+                  "What to Consider: CSV/RTF export for compliance documentation"
+                ],
+                "tags": []
               }
             ]
           },
+
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
+            "eyebrow": "Method comparison",
             "title": "Method Comparison",
             "description": "Compare the Touch-Screen Control Pad with the PC Control Software directly, using the full confirmed feature set.",
             "columns": [
-              { "label": "Touch-Screen Control Pad", "highlight": true },
+              { "label": "Touch-Screen Control Pad" },
               { "label": "PC Control Software" }
             ],
             "rows": [
               {
                 "feature": "Cost",
-                "values": ["Included, standard", "Optional upgrade"]
+                "values": [
+                  "Included, standard",
+                  "Optional upgrade"
+                ]
               },
               {
                 "feature": "Step Limit",
-                "values": ["30 steps, 16 hours each", "Unlimited"]
+                "values": [
+                  "30 steps, 16 hours each",
+                  "Unlimited"
+                ]
               },
               {
                 "feature": "Third-Party Devices",
-                "values": ["Not supported", "Up to 16"]
+                "values": [
+                  "Not supported",
+                  "Up to 16"
+                ]
               },
               {
                 "feature": "Reporting",
-                "values": ["CSV only", "RTF or CSV, via Report Wizard"]
+                "values": [
+                  "CSV only",
+                  "RTF or CSV, via Report Wizard"
+                ]
               },
               {
                 "feature": "Hardware Needed",
-                "values": ["None beyond the Mya 4", "A compatible Windows laptop"]
+                "values": [
+                  "None beyond the Mya 4",
+                  "A compatible Windows laptop"
+                ]
               },
               {
                 "feature": "Best For",
-                "values": ["Standard protocols, standalone operation", "Complex, multi-device, or long-duration protocols"]
+                "values": [
+                  "Standard protocols, standalone operation",
+                  "Complex, multi-device, or long-duration protocols"
+                ]
               },
               {
                 "feature": "Choose when",
-                "values": ["Your experiments fit within 30 steps and don't need external devices", "You need more steps, longer stages, or device integration"]
+                "values": [
+                  "Your experiments fit within 30 steps and don't need external devices",
+                  "You need more steps, longer stages, or device integration"
+                ]
               }
             ],
-            "disclaimer": "This isn't a basic-versus-advanced choice in every respect — the Control Pad already includes most core features. The PC Software specifically removes the step ceiling and adds device integration; everything else is shared."
+            "disclaimer": "This isn't a basic-versus-advanced choice in every respect — the Control Pad already includes most core features. The PC Software specifically removes the step ceiling and adds device integration; everything else is shared.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
             "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Mya 4 Control Options with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Shows Control Pad and PC Software side by side on your protocols." },
-              { "title": "Configuration Assessment", "description": "Confirms whether Control Pad or PC Software fits your workflow." },
-              { "title": "Installation Support", "description": "Supports PC Software installation and device driver setup." },
-              { "title": "Operator Training", "description": "Helps the team use profile mode, feedback loops, and reporting confidently." },
-              { "title": "Preventive Maintenance", "description": "Supports software updates and licensing management." },
-              { "title": "Spares and Accessories", "description": "Supplies device driver support and upgrade licensing." },
-              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC." }
+              { "title": "Product Demonstration", "description": "Shows Control Pad and PC Software side by side on your protocols" },
+              { "title": "Configuration Assessment", "description": "Confirms whether Control Pad or PC Software fits your workflow" },
+              { "title": "Installation Support", "description": "Supports PC Software installation and device driver setup" },
+              { "title": "Operator Training", "description": "Helps the team use profile mode, feedback loops, and reporting confidently" },
+              { "title": "Preventive Maintenance", "description": "Supports software updates and licensing management" },
+              { "title": "Spares and Accessories", "description": "Supplies device driver support and upgrade licensing" },
+              { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -901,36 +1281,47 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              {
-                "title": "Product expert note — option fit",
-                "body": "Tell our team your typical protocol length and whether you need to control external devices, and Inkarp will confirm whether the Control Pad or PC Software fits."
-              },
-              {
-                "title": "Product expert note — feature fit",
-                "body": "Tell our team whether your protocols ever exceed 30 steps or 16 hours per step, and whether you need to control external devices, and Inkarp will confirm which option fits."
-              },
-              {
-                "title": "Product expert note — device and PC compatibility",
-                "body": "Send our team your device list and PC specifications, and Inkarp will confirm compatibility before you commit."
-              }
+              { "title": "Product Demonstration", "body": "Shows Control Pad and PC Software side by side on your protocols" },
+              { "title": "Configuration Assessment", "body": "Confirms whether Control Pad or PC Software fits your workflow" },
+              { "title": "Installation Support", "body": "Supports PC Software installation and device driver setup" },
+              { "title": "Operator Training", "body": "Helps the team use profile mode, feedback loops, and reporting confidently" },
+              { "title": "Preventive Maintenance", "body": "Supports software updates and licensing management" },
+              { "title": "Spares and Accessories", "body": "Supplies device driver support and upgrade licensing" },
+              { "title": "Service Support", "body": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
-          }
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Mya 4 vessels and accessories",
+
           "slug": "mya-4-vessels-and-accessories",
+
           "image": "/assets/images/productImages/radleys/mya-4-vessels-and-accessories.jpg",
+
           "imageAlt": "Radleys Mya 4 Vessels and Accessories - authorized distributor & service provider in India",
+
           "principalImage": "/assets/images/PrincipalLogos/radley.svg",
+
           "manufacturerUrl": "https://www.radleys.com/range/mya-4-vessels-and-accessories/",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/mya-4-vessels-and-accessories",
+
           "breadcrumbPath": "Home > Products > Automated Reaction Stations > Mya 4 Vessels and Accessories",
+
           "h1": "Mya 4 Vessels and Accessories",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "category": "Automated Reaction Stations",
+
           "metaTitle": "Mya 4 vessels and accessories — Authorized Distributor & Service Provider in India | Inkarp | Radleys",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Radleys Mya 4 vessels and accessories in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "Mya 4 vessels and accessories",
             "Mya 4 vessels and accessories India",
@@ -947,17 +1338,26 @@
             "Radleys India",
             "Inkarp Instruments"
           ],
+
           "overview": "One insert per vessel size. Never a mismatched stack. Most reaction stations make you improvise: stack a couple of inserts together, hope the fit is close enough.",
+
           "features": [
-            "Dedicated Aluminium Inserts: One per vessel size, for genuine heat transfer contact, not a layered approximation.",
-            "Process Vessels Shaped Like Jacketed Reactors: Straight sides, dished base, 50 to 400 mL, with side arm and baffled options.",
-            "Carousel 12 Plus Reaction Tubes: 200 mm tubes enabling overhead stirring from as low as 5 mL.",
-            "Five Impeller Shapes: Turbine, anchor, U-shape, centrifugal, and flat, with custom options on request.",
-            "Retreat Curve Impeller: Purpose-built for scale-up, mirroring large-scale mixing conditions at bench scale.",
-            "PTFE Lids for Durability: Stronger than glass, built to support heavier probes and accessories.",
-            "Dedicated Blaze Metrics Probe Lid: 6-neck PTFE lid for the 400 mL process vessel, usable with or without the probe fitted.",
-            "Universal Vessel Holder: Accepts round bottom flasks, wide-neck flasks, process vessels, and Carousel tubes alike."
+            { "title": "Dedicated Aluminium Inserts", "description": "One per vessel size, for genuine heat transfer contact, not a layered approximation." },
+            {
+              "title": "Process Vessels Shaped Like Jacketed Reactors",
+              "description": "Straight sides, dished base, 50 to 400 mL, with side arm and baffled options."
+            },
+            { "title": "Carousel 12 Plus Reaction Tubes", "description": "200 mm tubes enabling overhead stirring from as low as 5 mL." },
+            { "title": "Five Impeller Shapes", "description": "Turbine, anchor, U-shape, centrifugal, and flat, with custom options on request." },
+            { "title": "Retreat Curve Impeller", "description": "Purpose-built for scale-up, mirroring large-scale mixing conditions at bench scale." },
+            { "title": "PTFE Lids for Durability", "description": "Stronger than glass, built to support heavier probes and accessories." },
+            {
+              "title": "Dedicated Blaze Metrics Probe Lid",
+              "description": "6-neck PTFE lid for the 400 mL process vessel, usable with or without the probe fitted."
+            },
+            { "title": "Universal Vessel Holder", "description": "Accepts round bottom flasks, wide-neck flasks, process vessels, and Carousel tubes alike." }
           ],
+
           "technicalSpecs": [
             { "label": "Product Name", "value": "Radleys Mya 4 Vessels and Accessories" },
             { "label": "Category", "value": "Automated Reaction Stations" },
@@ -972,14 +1372,16 @@
             { "label": "Stirring Speed", "value": "100 to 1,000 rpm" },
             { "label": "Reflux/Manifold Heads", "value": "Water-cooled, non-return shut-off valves on manifold" }
           ],
+
           "applications": [
-            "Scale-Up Studies: Retreat Curve Impeller mirrors large-scale mixing conditions",
-            "Small-Volume Reactions with Overhead Stirring: Carousel 12 Plus tube supports stirring down to 5 mL",
-            "Sealed or Pressurized Reactions: PTFE lids offer improved durability and safety over glass",
-            "Process Analytical Technology (PAT) Integration: Dedicated Blaze Metrics probe lid",
-            "Jacketed Reactor Simulation: Process vessel shape mimics real jacketed reactor geometry",
-            "Precise Liquid Dosing: Fixed Additions Tube Kit connects seamlessly with syringe pumps"
+            { "title": "Scale-Up Studies", "description": "Retreat Curve Impeller mirrors large-scale mixing conditions" },
+            { "title": "Small-Volume Reactions with Overhead Stirring", "description": "Carousel 12 Plus tube supports stirring down to 5 mL" },
+            { "title": "Sealed or Pressurized Reactions", "description": "PTFE lids offer improved durability and safety over glass" },
+            { "title": "Process Analytical Technology (PAT) Integration", "description": "Dedicated Blaze Metrics probe lid" },
+            { "title": "Jacketed Reactor Simulation", "description": "Process vessel shape mimics real jacketed reactor geometry" },
+            { "title": "Precise Liquid Dosing", "description": "Fixed Additions Tube Kit connects seamlessly with syringe pumps" }
           ],
+
           "tags": [
             "Radleys",
             "Mya 4",
@@ -988,6 +1390,7 @@
             "Automated Reaction Stations",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What vessel sizes are available for the Mya 4?",
@@ -1030,8 +1433,9 @@
               "answer": "Inkarp is the authorized distributor and service provider for Radleys Mya 4 Vessels and Accessories in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
-            "heroLead": "One insert per vessel size. Never a mismatched stack. Most reaction stations make you improvise: stack a couple of inserts together, hope the fit is close enough. Mya 4's aluminium inserts don't ask you to guess. Every vessel size gets its own dedicated insert, for real heat transfer contact, not an approximation. The same precision runs through the whole accessory range: process vessels shaped to mimic jacketed reactors, flasks and tubes across seven diameters, and a Retreat Curve Impeller built specifically to mirror large-scale mixing conditions at bench scale. PTFE lids, glassware, temperature probes, and even a dedicated lid for the Blaze Metrics probe round out a system built to be configured exactly, not approximately.",
+            "heroLead": "Most reaction stations make you improvise: stack a couple of inserts together, hope the fit is close enough. Mya 4's aluminium inserts don't ask you to guess. Every vessel size gets its own dedicated insert, for real heat transfer contact, not an approximation. The same precision runs through the whole accessory range: process vessels shaped to mimic jacketed reactors, flasks and tubes across seven diameters, and a Retreat Curve Impeller built specifically to mirror large-scale mixing conditions at bench scale. PTFE lids, glassware, temperature probes, and even a dedicated lid for the Blaze Metrics probe round out a system built to be configured exactly, not approximately.",
             "stats": [
               { "value": "3 vessel families", "label": "Process vessels, flasks, vials/tubes" },
               { "value": "50 to 400 mL", "label": "Process reaction vessel range" },
@@ -1046,42 +1450,63 @@
               {
                 "key": "overview",
                 "eyebrow": "Product Information",
-                "title": "Mya 4 Vessels and Accessories at a Glance",
-                "description": "Everything you need to configure Mya 4 precisely: which vessel and insert match your reaction, which stirring and lid options fit, what's available for scale-up and probe integration, and Inkarp installation and service support.",
-                "subheading": "One insert per vessel size. Never a mismatched stack.",
+                "title": "Product Information",
+                "description": "The product information of the Mya 4 Vessels and Accessories covers vessel and insert matching, stirring and lid options, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "Every vessel size gets its own insert, not a generic fit. Anodised aluminium inserts are dedicated per size, explicitly avoiding the need to layer mismatched inserts together.",
-                  "Process vessels are shaped to behave like real jacketed reactors. Straight sides and a dished base, from 50 to 400 mL, with side arm and baffled options.",
-                  "Small volumes still get proper overhead stirring. The Carousel 12 Plus reaction tube brings overhead stirring down to as low as 5 mL.",
-                  "Scale-up gets its own purpose-built impeller. The Retreat Curve Impeller specifically mirrors large-scale mixing conditions during bench-scale work.",
-                  "PTFE lids trade some material simplicity for real durability. Stronger than glass, built to support heavier probes and accessories.",
-                  "Third-party probe integration has a dedicated lid. The Blaze Metrics probe fits a specific 6-neck PTFE lid on the 400 mL process vessel, usable in standard operation even without the probe fitted.",
-                  "Everyday accessories cover the practical side too. Benchtop stands, support rods, a silicone top cover for rejuvenating worn units, and dedicated dosing kits.",
-                  "Confirmed line: Radleys Mya 4 Vessels and Accessories.",
-                  "Vessel families: Process Reaction Vessels (50-400 mL), Round Bottom Flasks (25-250 mL), Vials and Tubes.",
-                  "Vials/tubes range stated as 2-50 mL here; the main Mya 4 page states 2-20 mL — confirm the current figure with Inkarp.",
-                  "Dedicated aluminium insert per vessel size; custom inserts available for vials/tubes.",
-                  "Full accessory pricing and the complete PTFE lid type breakdown are available on request from Inkarp.",
-                  "Product expert note: Tell our team your vessel sizes, mixing requirements, and whether you need probe integration, and Inkarp will confirm the exact accessory configuration."
+                  {
+                    "title": "Every vessel size gets its own insert, not a generic fit.",
+                    "text": "Anodised aluminium inserts are dedicated per size, explicitly avoiding the need to layer mismatched inserts together."
+                  },
+                  {
+                    "title": "Process vessels are shaped to behave like real jacketed reactors.",
+                    "text": "Straight sides and a dished base, from 50 to 400 mL, with side arm and baffled options."
+                  },
+                  {
+                    "title": "Small volumes still get proper overhead stirring.",
+                    "text": "The Carousel 12 Plus reaction tube brings overhead stirring down to as low as 5 mL."
+                  },
+                  {
+                    "title": "Scale-up gets its own purpose-built impeller.",
+                    "text": "The Retreat Curve Impeller specifically mirrors large-scale mixing conditions during bench-scale work."
+                  },
+                  {
+                    "title": "PTFE lids trade some material simplicity for real durability.",
+                    "text": "Stronger than glass, built to support heavier probes and accessories."
+                  },
+                  {
+                    "title": "Third-party probe integration has a dedicated lid.",
+                    "text": "The Blaze Metrics probe fits a specific 6-neck PTFE lid on the 400 mL process vessel, usable in standard operation even without the probe fitted."
+                  },
+                  {
+                    "title": "Everyday accessories cover the practical side too.",
+                    "text": "Benchtop stands, support rods, a silicone top cover for rejuvenating worn units, and dedicated dosing kits."
+                  }
                 ],
                 "cards": [
                   { "title": "Dedicated inserts", "description": "One per vessel size, no layering" },
                   { "title": "5 impeller shapes", "description": "Plus the scale-up-specific Retreat Curve" },
                   { "title": "7 diameters", "description": "Vial and tube options" },
                   { "title": "5 mL minimum", "description": "For overhead stirring, via Carousel 12 Plus" }
-                ]
+                ],
+                "glanceTitle": "Mya 4 Vessels and Accessories at a Glance",
+                "glanceDescription": "Everything you need to configure Mya 4 precisely: which vessel and insert match your reaction, which stirring and lid options fit, what's available for scale-up and probe integration, and Inkarp installation and service support.",
+                "cardsIntro": "The value cards of the Mya 4 Vessels and Accessories summarize vessel range, insert precision, and stirring options.",
+                "tabSummary": "Why precise vessel/insert matching beats generic fit"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "The key features of the Mya 4 Vessels and Accessories include dedicated vessel inserts, a scale-up impeller, and PTFE lid options."
+                "description": "The key features of the Mya 4 Vessels and Accessories include dedicated vessel inserts, a scale-up impeller, and PTFE lid options.",
+                "tabSummary": "Impeller range, PTFE lids, Blaze Metrics probe lid"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "The applications of the Mya 4 Vessels and Accessories include scale-up mixing studies, small-volume overhead stirring, and PAT probe integration."
+                "description": "The applications of the Mya 4 Vessels and Accessories include scale-up mixing studies, small-volume overhead stirring, and PAT probe integration.",
+                "tabSummary": "Scale-up mixing, sealed reactions, small-volume overhead stirring"
               },
               {
                 "key": "specs",
@@ -1090,42 +1515,110 @@
                 "body": [
                   "The technical specifications of the Mya 4 Vessels and Accessories include a 5-vessel process range, 7 vial/tube diameters, and 5 confirmed impeller shapes.",
                   "Full accessory pricing and complete PTFE lid specifications are available on request from Inkarp."
-                ]
+                ],
+                "description": "The technical specifications of the Mya 4 Vessels and Accessories include a 5-vessel process range, 7 vial/tube diameters, and 5 confirmed impeller shapes.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Full accessory pricing and complete PTFE lid specifications are available on request from Inkarp.",
+                "tabSummary": "Confirmed vessel, insert, and diameter figures"
               },
               {
                 "key": "performance",
                 "eyebrow": "Vessel, Insert and Diameter Matching",
                 "title": "Vessel, Insert and Diameter Matching",
+                "tabSummary": "Choosing the exact vessel and insert for your reaction",
                 "body": [
                   "Matching a vessel to its insert, and a tube to its diameter, is what actually determines fit and heat transfer performance, not just capacity.",
                   "Process vessels run 50 to 400 mL, shaped with straight sides and a dished base specifically to mimic a jacketed reactor's behavior. Round bottom flasks, drawn from the Carousel 6 Plus range, run 25 to 250 mL in standard or wide-neck versions. Vials and tubes span seven confirmed diameters, and every one of them, along with every vessel size, gets its own dedicated aluminium insert rather than a layered stack."
                 ],
-                "utilityChecklist": [
-                  { "label": "Small-volume screening", "value": "Vials or tubes, matched diameter and dedicated insert" },
-                  { "label": "Standard flask-based synthesis", "value": "Round bottom flask, 25-250 mL, standard or wide neck" },
-                  { "label": "Process-scale, jacketed-reactor-style work", "value": "Process reaction vessel, 50-400 mL" },
-                  { "label": "Overhead stirring at very small volume", "value": "Carousel 12 Plus tube, down to 5 mL" },
-                  { "label": "A vessel size without a listed insert", "value": "Custom insert, available on request" }
-                ],
-                "disclaimer": "Product expert note: Send our team your exact vessel sizes and diameters, and Inkarp will confirm the dedicated insert for each."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your reaction",
+                      "Which vessel and insert to specify"
+                    ],
+                    "rows": [
+                      [
+                        "Small-volume screening",
+                        "Vials or tubes, matched diameter and dedicated insert"
+                      ],
+                      [
+                        "Standard flask-based synthesis",
+                        "Round bottom flask, 25-250 mL, standard or wide neck"
+                      ],
+                      [
+                        "Process-scale, jacketed-reactor-style work",
+                        "Process reaction vessel, 50-400 mL"
+                      ],
+                      [
+                        "Overhead stirring at very small volume",
+                        "Carousel 12 Plus tube, down to 5 mL"
+                      ],
+                      [
+                        "A vessel size without a listed insert",
+                        "Custom insert, available on request"
+                      ]
+                    ]
+                  },
+                  { "note": "Send our team your exact vessel sizes and diameters, and Inkarp will confirm the dedicated insert for each." },
+                  {
+                    "title": "Stirring, Lids and Specialty Accessories",
+                    "summary": "Impeller selection and lid configuration",
+                    "description": "Stirring and lid choice both depend on the reaction itself, not just the vessel it's happening in.",
+                    "columns": [
+                      "Your need",
+                      "Which accessory fits"
+                    ],
+                    "rows": [
+                      [
+                        "Standard magnetic stirring",
+                        "Integrated, 100 to 1,000 rpm"
+                      ],
+                      [
+                        "High-torque or viscous mixing",
+                        "Mya Compact overhead stirrer"
+                      ],
+                      [
+                        "Scale-up mixing studies",
+                        "Retreat Curve Impeller"
+                      ],
+                      [
+                        "Specific mixing geometry",
+                        "Turbine, anchor, U-shape, centrifugal, or flat impeller"
+                      ],
+                      [
+                        "Durable, probe-supporting lid",
+                        "PTFE multi-neck lid"
+                      ],
+                      [
+                        "Blaze Metrics probe integration",
+                        "Dedicated 6-neck PTFE lid, 400 mL process vessel"
+                      ],
+                      [
+                        "Precise liquid dosing",
+                        "Fixed Additions Tube Kit, syringe pump compatible"
+                      ]
+                    ],
+                    "note": "Send our team your mixing requirements and any probe integration needs, and Inkarp will confirm the right stirring and lid configuration."
+                  }
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Stirring, Lids and Specialty Accessories",
-                "title": "Stirring, Lids and Specialty Accessories",
+                "title": "Configuration note",
                 "body": [
-                  "Stirring and lid choice both depend on the reaction itself, not just the vessel it's happening in.",
-                  "Product expert note: Send our team your mixing requirements and any probe integration needs, and Inkarp will confirm the right stirring and lid configuration."
+                  "Vials/tubes range stated as 2-50 mL here; the main Mya 4 page states 2-20 mL — confirm the current figure with Inkarp",
+                  "Dedicated aluminium insert per vessel size; custom inserts available for vials/tubes",
+                  "Full accessory pricing and the complete PTFE lid type breakdown are available on request from Inkarp"
                 ],
                 "cards": [
-                  { "title": "Standard magnetic stirring", "description": "Integrated, 100 to 1,000 rpm" },
-                  { "title": "High-torque or viscous mixing", "description": "Mya Compact overhead stirrer" },
-                  { "title": "Scale-up mixing studies", "description": "Retreat Curve Impeller" },
-                  { "title": "Specific mixing geometry", "description": "Turbine, anchor, U-shape, centrifugal, or flat impeller" },
-                  { "title": "Durable, probe-supporting lid", "description": "PTFE multi-neck lid" },
-                  { "title": "Blaze Metrics probe integration", "description": "Dedicated 6-neck PTFE lid, 400 mL process vessel" },
-                  { "title": "Precise liquid dosing", "description": "Fixed Additions Tube Kit, syringe pump compatible" }
-                ]
+                  { "title": "Confirmed line", "description": "Radleys Mya 4 Vessels and Accessories" },
+                  { "title": "Vessel families", "description": "Process Reaction Vessels (50-400 mL), Round Bottom Flasks (25-250 mL), Vials and Tubes" }
+                ],
+                "disclaimer": "Tell our team your vessel sizes, mixing requirements, and whether you need probe integration, and Inkarp will confirm the exact accessory configuration."
               },
               {
                 "key": "docs",
@@ -1133,13 +1626,15 @@
                 "title": "Documentation and Resources",
                 "description": "Documentation for the Mya 4 Vessels and Accessories is available from Inkarp on request.",
                 "cards": [
-                  { "title": "Mya 4 Component Catalogue", "description": "Available from Inkarp on request." },
-                  { "title": "Mya 4 Reaction Station Brochure", "description": "Available from Inkarp on request." },
-                  { "title": "Mya 4 Technical Specifications", "description": "Available from Inkarp on request." },
-                  { "title": "Mya 4 & AVA 2.1.1 Software Release Notes", "description": "Available from Inkarp on request." },
-                  { "title": "Streamlining Chemical Synthesis DoE, Resource", "description": "Available from Inkarp on request." },
-                  { "title": "Crystallisation in Pharmaceutical Processes, Resource", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "Mya 4 Component Catalogue", "description": "Available from Inkarp on request" },
+                  { "title": "Mya 4 Reaction Station Brochure", "description": "Available from Inkarp on request" },
+                  { "title": "Mya 4 Technical Specifications", "description": "Available from Inkarp on request" },
+                  { "title": "Mya 4 & AVA 2.1.1 Software Release Notes", "description": "Available from Inkarp on request" },
+                  { "title": "Streamlining Chemical Synthesis DoE, Resource", "description": "Available from Inkarp on request" },
+                  { "title": "Crystallisation in Pharmaceutical Processes, Resource", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Component catalogue, brochures, release notes"
               }
             ],
             "cta": {
@@ -1148,9 +1643,19 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A dedicated insert for every vessel size, five impeller shapes plus a scale-up-specific option, and lids built for durability and probe integration. Tell us your vessel sizes and mixing needs, and Inkarp will confirm the exact configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "One insert per vessel size. Never a mismatched stack.",
+            "heroParagraphs": [
+              "Most reaction stations make you improvise: stack a couple of inserts together, hope the fit is close enough.",
+              "Mya 4's aluminium inserts don't ask you to guess. Every vessel size gets its own dedicated insert, for real heat transfer contact, not an approximation. The same precision runs through the whole accessory range: process vessels shaped to mimic jacketed reactors, flasks and tubes across seven diameters, and a Retreat Curve Impeller built specifically to mirror large-scale mixing conditions at bench scale.",
+              "PTFE lids, glassware, temperature probes, and even a dedicated lid for the Blaze Metrics probe round out a system built to be configured exactly, not approximately."
+            ],
+            "statsIntro": "The quick stats of the Mya 4 Vessels and Accessories cover the confirmed vessel range, insert precision, and stirring options."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "vessel-and-insert-finder", "label": "Insert Finder" },
@@ -1161,6 +1666,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "vessel-and-insert-finder",
@@ -1168,30 +1674,20 @@
               "title": "What vessel are you using?",
               "description": "Select your vessel type and size, and see the matching dedicated insert.",
               "fields": [
-                { "key": "choices", "label": "Select your vessel type" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Vessel type selector",
-                  "choices": "Process vessel; Round bottom flask; Vial; Tube",
-                  "cta": "Get Configuration Support"
+                  "hint": "Process vessel, round bottom flask, vial, or tube",
+                  "choices": "Process vessel; Round bottom flask; Vial; Tube"
                 },
-                {
-                  "title": "Size or diameter selector",
-                  "choices": "Matched to the confirmed range for that vessel type",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Insert readout",
-                  "choices": "Confirms the dedicated aluminium insert for your selection",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Custom flag",
-                  "choices": "Notes when a custom insert should be requested",
-                  "cta": "Get Configuration Support"
-                }
-              ]
+                { "title": "Size or diameter selector", "hint": "Matched to the confirmed range for that vessel type", "input": "text", "choices": "" }
+              ],
+              "lead": "The vessel and insert finder confirms the exact dedicated insert for your vessel.",
+              "ctaNote": "Confirms the dedicated aluminium insert for your selection. Notes when a custom insert should be requested.",
+              "disclaimer": "",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "impeller-and-stirring-selector",
@@ -1199,32 +1695,22 @@
               "title": "What kind of mixing does your reaction need?",
               "description": "Select your mixing requirement, including scale-up needs, and see which impeller or stirrer fits.",
               "fields": [
-                { "key": "choices", "label": "Select your mixing need" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
                 {
                   "title": "Mixing need selector",
-                  "choices": "Standard; Viscous; Scale-up mirroring; Vessel-specific geometry",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Impeller readout",
-                  "choices": "Turbine; Anchor; U-shape; Centrifugal; Flat; Retreat Curve",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Stirring type flag",
-                  "choices": "Confirms magnetic or overhead stirring fit",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Next step",
-                  "choices": "Routes to Inkarp for a stirring-specific quotation",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Standard, viscous, scale-up mirroring, or vessel-specific geometry",
+                  "choices": "Standard; Viscous; Scale-up mirroring; Vessel-specific geometry"
                 }
-              ]
+              ],
+              "lead": "The impeller and stirring selector recommends the right mixing configuration for your reaction.",
+              "ctaNote": "Recommends turbine, anchor, U-shape, centrifugal, flat, or Retreat Curve. Confirms magnetic or overhead stirring fit. Routes to Inkarp for a stirring-specific quotation.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
             "title": "Industry Explorer",
@@ -1233,86 +1719,124 @@
               {
                 "name": "Pharmaceutical Process Development",
                 "icon": "pill",
-                "useCase": "Scale-up mixing studies",
-                "consideration": "Retreat Curve Impeller for representative mixing"
+                "note": "Use Case: Scale-up mixing studies",
+                "bullets": [
+                  "What to Consider: Retreat Curve Impeller for representative mixing"
+                ],
+                "tags": []
               },
               {
                 "name": "Specialty Chemical Manufacturing",
                 "icon": "flask",
-                "useCase": "Jacketed-reactor-style process development",
-                "consideration": "Process reaction vessels, 50-400 mL"
+                "note": "Use Case: Jacketed-reactor-style process development",
+                "bullets": [
+                  "What to Consider: Process reaction vessels, 50-400 mL"
+                ],
+                "tags": []
               },
               {
                 "name": "Analytical Method Development",
                 "icon": "droplet",
-                "useCase": "PAT probe integration",
-                "consideration": "Blaze Metrics probe lid"
+                "note": "Use Case: PAT probe integration",
+                "bullets": [
+                  "What to Consider: Blaze Metrics probe lid"
+                ],
+                "tags": []
               },
               {
                 "name": "Academic Research Laboratories",
                 "icon": "school",
-                "useCase": "Small-volume screening with overhead stirring",
-                "consideration": "Carousel 12 Plus tubes, down to 5 mL"
+                "note": "Use Case: Small-volume screening with overhead stirring",
+                "bullets": [
+                  "What to Consider: Carousel 12 Plus tubes, down to 5 mL"
+                ],
+                "tags": []
               },
               {
                 "name": "Contract Research Organizations",
                 "icon": "cpu",
-                "useCase": "Varied vessel and mixing needs across projects",
-                "consideration": "Full impeller and vessel range for flexible configuration"
+                "note": "Use Case: Varied vessel and mixing needs across projects",
+                "bullets": [
+                  "What to Consider: Full impeller and vessel range for flexible configuration"
+                ],
+                "tags": []
               }
             ]
           },
+
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
+            "eyebrow": "Method comparison",
             "title": "Method Comparison",
             "description": "Compare the standard PTFE lid options with the dedicated Blaze Metrics probe lid.",
             "columns": [
-              { "label": "Standard Glass or PTFE Multi-Neck Lid", "highlight": true },
+              { "label": "Standard Glass or PTFE Multi-Neck Lid" },
               { "label": "Blaze Metrics Probe Lid" }
             ],
             "rows": [
               {
                 "feature": "Material",
-                "values": ["Glass or PTFE", "Glass-filled PTFE"]
+                "values": [
+                  "Glass or PTFE",
+                  "Glass-filled PTFE"
+                ]
               },
               {
                 "feature": "Neck Count",
-                "values": ["3 or 5", "6"]
+                "values": [
+                  "3 or 5",
+                  "6"
+                ]
               },
               {
                 "feature": "Vessel Compatibility",
-                "values": ["Process vessels, wide-neck flasks", "400 mL process vessel specifically"]
+                "values": [
+                  "Process vessels, wide-neck flasks",
+                  "400 mL process vessel specifically"
+                ]
               },
               {
                 "feature": "Probe Integration",
-                "values": ["Not built for a specific probe", "Dedicated port plug for Blaze Metrics probe"]
+                "values": [
+                  "Not built for a specific probe",
+                  "Dedicated port plug for Blaze Metrics probe"
+                ]
               },
               {
                 "feature": "Standard Operation",
-                "values": ["Yes", "Yes, with a blanking plug when the probe isn't fitted"]
+                "values": [
+                  "Yes",
+                  "Yes, with a blanking plug when the probe isn't fitted"
+                ]
               },
               {
                 "feature": "Choose when",
-                "values": ["You're using standard glassware without a PAT probe", "You're integrating a Blaze Metrics probe"]
+                "values": [
+                  "You're using standard glassware without a PAT probe",
+                  "You're integrating a Blaze Metrics probe"
+                ]
               }
             ],
-            "disclaimer": "The Blaze Metrics lid isn't a replacement for the standard lids — it's a purpose-built addition for one specific integration, while still working normally when that probe isn't in use."
+            "disclaimer": "The Blaze Metrics lid isn't a replacement for the standard lids — it's a purpose-built addition for one specific integration, while still working normally when that probe isn't in use.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
             "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Mya 4 Vessels and Accessories with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
-              { "title": "Product Demonstration", "description": "Shows vessel, insert, and impeller configurations on your own reactions." },
-              { "title": "Configuration Assessment", "description": "Confirms the right vessel, insert, and lid combination." },
-              { "title": "Installation Support", "description": "Supports fitting of lids, inserts, and probe integrations." },
-              { "title": "Operator Training", "description": "Helps the team select and swap accessories confidently." },
-              { "title": "Preventive Maintenance", "description": "Supports lid, seal, and insert replacement over time." },
-              { "title": "Spares and Accessories", "description": "Supplies the full confirmed vessel, insert, and impeller range." },
-              { "title": "Service Support", "description": "Supports troubleshooting and ongoing supply." }
+              { "title": "Product Demonstration", "description": "Shows vessel, insert, and impeller configurations on your own reactions" },
+              { "title": "Configuration Assessment", "description": "Confirms the right vessel, insert, and lid combination" },
+              { "title": "Installation Support", "description": "Supports fitting of lids, inserts, and probe integrations" },
+              { "title": "Operator Training", "description": "Helps the team select and swap accessories confidently" },
+              { "title": "Preventive Maintenance", "description": "Supports lid, seal, and insert replacement over time" },
+              { "title": "Spares and Accessories", "description": "Supplies the full confirmed vessel, insert, and impeller range" },
+              { "title": "Service Support", "description": "Supports troubleshooting and ongoing supply" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -1330,20 +1854,17 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              {
-                "title": "Product expert note — accessory configuration",
-                "body": "Tell our team your vessel sizes, mixing requirements, and whether you need probe integration, and Inkarp will confirm the exact accessory configuration."
-              },
-              {
-                "title": "Product expert note — insert matching",
-                "body": "Send our team your exact vessel sizes and diameters, and Inkarp will confirm the dedicated insert for each."
-              },
-              {
-                "title": "Product expert note — stirring and lid fit",
-                "body": "Send our team your mixing requirements and any probe integration needs, and Inkarp will confirm the right stirring and lid configuration."
-              }
+              { "title": "Product Demonstration", "body": "Shows vessel, insert, and impeller configurations on your own reactions" },
+              { "title": "Configuration Assessment", "body": "Confirms the right vessel, insert, and lid combination" },
+              { "title": "Installation Support", "body": "Supports fitting of lids, inserts, and probe integrations" },
+              { "title": "Operator Training", "body": "Helps the team select and swap accessories confidently" },
+              { "title": "Preventive Maintenance", "body": "Supports lid, seal, and insert replacement over time" },
+              { "title": "Spares and Accessories", "body": "Supplies the full confirmed vessel, insert, and impeller range" },
+              { "title": "Service Support", "body": "Supports troubleshooting and ongoing supply" }
             ]
-          }
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

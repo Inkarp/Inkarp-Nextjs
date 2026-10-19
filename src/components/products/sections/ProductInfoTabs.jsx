@@ -433,6 +433,10 @@ export default function ProductInfoTabs({ product }) {
                 </p>
               );
             })}
+            {/* Prose a source document places after its overview bullets. */}
+            {overviewSec?.paragraphs?.map((text, i) => (
+              <p key={`paragraph-${i}`} className="mb-4 text-sm leading-7 text-black">{text}</p>
+            ))}
             {overviewSec?.cards?.length > 0 && overviewSec.cardsTitle ? (
               <h4 className="mt-6 text-sm font-semibold text-ink">{overviewSec.cardsTitle}</h4>
             ) : null}

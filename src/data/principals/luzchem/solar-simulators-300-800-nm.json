@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "luzchem",
-    "principalName": "Luzchem",
-    "countryOfOrigin": "Canada"
-  },
+  "principal": { "slug": "luzchem", "principalName": "Luzchem", "countryOfOrigin": "Canada" },
   "categories": [
     {
       "name": "Solar Simulators (300–800 nm)",
@@ -11,29 +7,48 @@
       "products": [
         {
           "name": "Solar Simulators (300–800 nm)",
+
           "slug": "solar-simulators-300-800-nm",
+
           "manufacturerUrl": "https://luzchem.com/collections/solar-simulation",
+
           "metaTitle": "Solar Simulators (300–800 nm) — Authorized Distributor & Service Provider in India | Inkarp | Luzchem",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Luzchem Solar Simulators (300–800 nm) in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": "Solar Simulators (300–800 nm), Solar Simulators (300–800 nm) India, Solar Simulators (300–800 nm) price in India, Solar Simulators (300–800 nm) distributor India, Luzchem Solar Simulators (300–800 nm), Luzchem distributor India, Luzchem authorized distributor, Solar Simulators (300–800 nm) India, Solar Simulators (300–800 nm) distributor and service provider in India, solar simulator, sunlight simulator, artificial sunlight, photostability testing, solar simulation, UV vis simulator, weathering simulator, solar light source, Luzchem India, Inkarp Instruments",
+
           "principalImage": "/assets/images/PrincipalLogos/Luzchem.png",
+
           "imageAlt": "Luzchem Solar Simulators (300–800 nm) - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/solar-simulators-300-800-nm",
+
           "breadcrumbPath": "Home > Products > Solar Simulators (300–800 nm)",
+
           "h1": "Solar Simulators (300–800 nm)",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Simulating sunlight accurately means matching a real reference standard, not just producing bright broadband light. SolSim2 is built to match the ASTM G173 AM1.5 solar spectrum specifically, the spectrum most commonly referenced for solar and photostability work, across 300 to 800 nm.",
 
           "features": [
-            "ASTM G173 AM1.5 Spectrum Matching: Matches the solar spectrum most commonly referenced in photostability and solar research.",
-            "Ozone-Free Xenon Design: Removes the mandatory ventilation requirement standard ozone-generating xenon sources carry.",
-            "Calibrated Sunmeter Included: Verifies your AM1.5 match directly, rather than assuming it from the filter set alone.",
-            "Variable Output Power: Adjusts irradiance from the 300W lamp to match your protocol.",
-            "Complete AM1.5 Filter Set: All filters required for the spectral match ship as standard.",
-            "Automated Experiment Timer: Runs exposure duration without manual timing.",
-            "Door Interlock and Safety Glasses: Standard protection for high-intensity xenon operation.",
-            "Integrated Chamber Exhaust: Manages fumes and heat with tubing included, for byproducts beyond the lamp itself."
+            {
+              "title": "ASTM G173 AM1.5 Spectrum Matching",
+              "description": "Matches the solar spectrum most commonly referenced in photostability and solar research."
+            },
+            {
+              "title": "Ozone-Free Xenon Design",
+              "description": "Removes the mandatory ventilation requirement standard ozone-generating xenon sources carry."
+            },
+            { "title": "Calibrated Sunmeter Included", "description": "Verifies your AM1.5 match directly, rather than assuming it from the filter set alone." },
+            { "title": "Variable Output Power", "description": "Adjusts irradiance from the 300W lamp to match your protocol." },
+            { "title": "Complete AM1.5 Filter Set", "description": "All filters required for the spectral match ship as standard." },
+            { "title": "Automated Experiment Timer", "description": "Runs exposure duration without manual timing." },
+            { "title": "Door Interlock and Safety Glasses", "description": "Standard protection for high-intensity xenon operation." },
+            { "title": "Integrated Chamber Exhaust", "description": "Manages fumes and heat with tubing included, for byproducts beyond the lamp itself." }
           ],
 
           "technicalSpecs": [
@@ -51,11 +66,11 @@
           ],
 
           "applications": [
-            "Sunscreen and SPF Testing: AM1.5-matched UV and visible exposure",
-            "Photobiology Research: Full 300-800nm spectral coverage",
-            "Photodegradation Studies: Reproducible, calibrated solar-matched irradiation",
-            "Pharmaceutical Photostability Testing: LZCX-ICH1, certified for ICH Option 1",
-            "Custom Photochemical Research: LZCX-Xe, built around your own filter selection"
+            { "title": "Sunscreen and SPF Testing", "description": "AM1.5-matched UV and visible exposure" },
+            { "title": "Photobiology Research", "description": "Full 300-800nm spectral coverage" },
+            { "title": "Photodegradation Studies", "description": "Reproducible, calibrated solar-matched irradiation" },
+            { "title": "Pharmaceutical Photostability Testing", "description": "LZCX-ICH1, certified for ICH Option 1" },
+            { "title": "Custom Photochemical Research", "description": "LZCX-Xe, built around your own filter selection" }
           ],
 
           "inPageNav": [
@@ -76,16 +91,20 @@
             "steps": [
               {
                 "key": "application",
-                "question": "What application type do you need?",
+                "label": "Application type",
+                "question": "Application type",
+                "hint": "General AM1.5 simulation, ICH pharmaceutical stability, or custom-filter research",
                 "options": [
-                  { "val": "general", "label": "General AM1.5 simulation", "desc": "SolSim2" },
-                  { "val": "ich", "label": "ICH pharmaceutical stability", "desc": "LZCX-ICH1" },
-                  { "val": "custom", "label": "Custom-filter research", "desc": "LZCX-Xe" }
+                  { "val": "general", "label": "General AM1.5 simulation" },
+                  { "val": "ich", "label": "ICH pharmaceutical stability" },
+                  { "val": "custom", "label": "Custom-filter research" }
                 ]
               },
               {
                 "key": "standard",
-                "question": "What testing standard applies?",
+                "label": "Testing standard",
+                "question": "Testing standard",
+                "hint": "ASTM G173, ICH Option 1, or custom",
                 "options": [
                   { "val": "astm-g173", "label": "ASTM G173" },
                   { "val": "ich-option-1", "label": "ICH Option 1" },
@@ -93,10 +112,11 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Xenon Series Configuration Selector",
+            "emptyState": "Recommends SolSim2, LZCX-ICH1, or LZCX-Xe",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -106,6 +126,7 @@
               {
                 "key": "wavelengthNeed",
                 "label": "Wavelength need",
+                "hint": "Full UV through NIR, or visible/NIR only",
                 "options": [
                   { "val": "full-uv-nir", "label": "Full UV through NIR" },
                   { "val": "visible-nir-only", "label": "Visible/NIR only" }
@@ -114,10 +135,11 @@
               {
                 "key": "application",
                 "label": "Application type",
+                "hint": "Photostability, photobiology, or photovoltaic/energy research",
                 "options": [
                   { "val": "photostability", "label": "Photostability" },
                   { "val": "photobiology", "label": "Photobiology" },
-                  { "val": "photovoltaic", "label": "Photovoltaic / energy research" }
+                  { "val": "photovoltaic", "label": "Photovoltaic/energy research" }
                 ]
               }
             ],
@@ -126,9 +148,17 @@
                 "condition": "default",
                 "title": "Xenon Series Configurations and the Broader Solar Range",
                 "body": "Choose a Xenon Series configuration if your work needs UV coverage; choose LED-SOL if your application stays in the visible and near-infrared range, such as photovoltaic or energy research.",
-                "tags": ["AAA compliant", "IEC60904-9"]
+                "tags": [
+                  "AAA compliant",
+                  "IEC60904-9"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Solar Simulator Technology Planner",
+            "ctaNote": "Recommends the Xenon Series or LED-SOL. Routes to us for a technology-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
@@ -141,24 +171,102 @@
               { "label": "LED-SOL" }
             ],
             "rows": [
-              { "feature": "Technology", "values": ["Xenon", "Xenon", "Xenon", "LED"] },
-              { "feature": "Wavelength Range", "values": ["300-800nm (AM1.5 matched)", "300-800nm (ICH certified)", "200nm-NIR, custom filters", "Visible-NIR only"] },
-              { "feature": "Standard Matched", "values": ["ASTM G173", "ICH Option 1", "Custom, AM1.5/ASTM G173-23 available", "AAA, IEC60904-9"] },
-              { "feature": "Best For", "values": ["General solar simulation", "Pharmaceutical photostability", "Custom research applications", "Energy and photovoltaic research"] },
-              { "feature": "Choose when", "values": ["You need standard AM1.5 matching", "Your testing must meet ICH certification directly", "Your spectral needs go beyond standard AM1.5 filters", "Your work stays in visible/NIR and doesn't need UV"] }
+              {
+                "feature": "Technology",
+                "values": [
+                  "Xenon",
+                  "Xenon",
+                  "Xenon",
+                  "LED"
+                ]
+              },
+              {
+                "feature": "Wavelength Range",
+                "values": [
+                  "300-800nm (AM1.5 matched)",
+                  "300-800nm (ICH certified)",
+                  "200nm-NIR, custom filters",
+                  "Visible-NIR only"
+                ]
+              },
+              {
+                "feature": "Standard Matched",
+                "values": [
+                  "ASTM G173",
+                  "ICH Option 1",
+                  "Custom, AM1.5/ASTM G173-23 available",
+                  "AAA, IEC60904-9"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "General solar simulation",
+                  "Pharmaceutical photostability",
+                  "Custom research applications",
+                  "Energy and photovoltaic research"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "You need standard AM1.5 matching",
+                  "Your testing must meet ICH certification directly",
+                  "Your spectral needs go beyond standard AM1.5 filters",
+                  "Your work stays in visible/NIR and doesn't need UV"
+                ]
+              }
             ],
-            "disclaimer": "All three Xenon Series configurations share the same core platform; LED-SOL is a genuinely different LED-based technology within the same broader Solar range."
+            "disclaimer": "All three Xenon Series configurations share the same core platform; LED-SOL is a genuinely different LED-based technology within the same broader Solar range.",
+            "featureLabel": "Parameter",
+            "eyebrow": "Method comparison",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Solar Simulator industries: pharmaceutical stability testing, cosmetics, materials science, energy research.",
             "industries": [
-              { "name": "Pharmaceutical Photostability Testing", "useCase": "ICH-compliant stability studies", "consideration": "LZCX-ICH1, certified for ICH Option 1" },
-              { "name": "Cosmetics and Sunscreen Testing", "useCase": "SPF and photostability evaluation", "consideration": "AM1.5-matched UV and visible coverage" },
-              { "name": "Materials Science", "useCase": "Photodegradation and weathering studies", "consideration": "Full 300-800nm spectral coverage" },
-              { "name": "Photovoltaic and Energy Research", "useCase": "Solar cell testing under standardized light", "consideration": "LED-SOL, AAA compliant to IEC60904-9" },
-              { "name": "Academic Photochemistry Research", "useCase": "Custom spectral profile research", "consideration": "LZCX-Xe, built around your own filters" }
+              {
+                "name": "Pharmaceutical Photostability Testing",
+                "note": "Use Case: ICH-compliant stability studies",
+                "bullets": [
+                  "What to Consider: LZCX-ICH1, certified for ICH Option 1"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetics and Sunscreen Testing",
+                "note": "Use Case: SPF and photostability evaluation",
+                "bullets": [
+                  "What to Consider: AM1.5-matched UV and visible coverage"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Materials Science",
+                "note": "Use Case: Photodegradation and weathering studies",
+                "bullets": [
+                  "What to Consider: Full 300-800nm spectral coverage"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Photovoltaic and Energy Research",
+                "note": "Use Case: Solar cell testing under standardized light",
+                "bullets": [
+                  "What to Consider: LED-SOL, AAA compliant to IEC60904-9"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Photochemistry Research",
+                "note": "Use Case: Custom spectral profile research",
+                "bullets": [
+                  "What to Consider: LZCX-Xe, built around your own filters"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -177,16 +285,46 @@
           },
 
           "faqs": [
-            { "question": "What is the Solar Simulator used for?", "answer": "It's a xenon-based light source built to match the ASTM G173 AM1.5 solar spectrum, used for sunscreen testing, photobiology, photodegradation studies, and pharmaceutical photostability testing." },
-            { "question": "How do I know my simulator is actually matching the AM1.5 spectrum?", "answer": "The included calibrated Sunmeter measures and confirms the AM1.5 match directly, rather than relying on the filter set alone." },
-            { "question": "Does this system need ventilation?", "answer": "No, the ozone-free xenon design removes that requirement for the lamp itself; ventilation is only needed if your own experimental byproducts call for it." },
-            { "question": "What's the difference between SolSim2, LZCX-ICH1, and LZCX-Xe?", "answer": "SolSim2 handles general AM1.5 solar simulation, LZCX-ICH1 carries ICH Option 1 certification for pharmaceutical photostability testing, and LZCX-Xe opens the same platform to your own custom filters." },
-            { "question": "How do I choose between a xenon-based system and LED-SOL?", "answer": "Choose a Xenon Series configuration if your work needs UV coverage; choose LED-SOL if your application stays in the visible and near-infrared range, such as photovoltaic or energy research." },
-            { "question": "Is this system certified for pharmaceutical stability testing?", "answer": "The LZCX-ICH1 configuration is certified for ICH Option 1 photostability testing specifically; confirm this configuration if your protocol requires that certification." },
-            { "question": "What wavelength range does the Solar Simulator cover?", "answer": "300 to 800nm is the confirmed spectral interval for standard AM1.5 matching; the underlying xenon platform can extend further depending on configuration and filters chosen." },
-            { "question": "What power does the xenon lamp run at?", "answer": "300W with variable output power, adjustable to match your specific irradiance protocol." },
-            { "question": "What is the price of the Solar Simulator in India?", "answer": "Get in touch and Inkarp will put together a quote around your Xenon Series configuration or LED-SOL selection." },
-            { "question": "Who is the authorized distributor of the Solar Simulator in India?", "answer": "Inkarp is the authorized distributor and service provider for the Luzchem Solar Simulator range in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is the Solar Simulator used for?",
+              "answer": "It's a xenon-based light source built to match the ASTM G173 AM1.5 solar spectrum, used for sunscreen testing, photobiology, photodegradation studies, and pharmaceutical photostability testing."
+            },
+            {
+              "question": "How do I know my simulator is actually matching the AM1.5 spectrum?",
+              "answer": "The included calibrated Sunmeter measures and confirms the AM1.5 match directly, rather than relying on the filter set alone."
+            },
+            {
+              "question": "Does this system need ventilation?",
+              "answer": "No, the ozone-free xenon design removes that requirement for the lamp itself; ventilation is only needed if your own experimental byproducts call for it."
+            },
+            {
+              "question": "What's the difference between SolSim2, LZCX-ICH1, and LZCX-Xe?",
+              "answer": "SolSim2 handles general AM1.5 solar simulation, LZCX-ICH1 carries ICH Option 1 certification for pharmaceutical photostability testing, and LZCX-Xe opens the same platform to your own custom filters."
+            },
+            {
+              "question": "How do I choose between a xenon-based system and LED-SOL?",
+              "answer": "Choose a Xenon Series configuration if your work needs UV coverage; choose LED-SOL if your application stays in the visible and near-infrared range, such as photovoltaic or energy research."
+            },
+            {
+              "question": "Is this system certified for pharmaceutical stability testing?",
+              "answer": "The LZCX-ICH1 configuration is certified for ICH Option 1 photostability testing specifically; confirm this configuration if your protocol requires that certification."
+            },
+            {
+              "question": "What wavelength range does the Solar Simulator cover?",
+              "answer": "300 to 800nm is the confirmed spectral interval for standard AM1.5 matching; the underlying xenon platform can extend further depending on configuration and filters chosen."
+            },
+            {
+              "question": "What power does the xenon lamp run at?",
+              "answer": "300W with variable output power, adjustable to match your specific irradiance protocol."
+            },
+            {
+              "question": "What is the price of the Solar Simulator in India?",
+              "answer": "Get in touch and Inkarp will put together a quote around your Xenon Series configuration or LED-SOL selection."
+            },
+            {
+              "question": "Who is the authorized distributor of the Solar Simulator in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Luzchem Solar Simulator range in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -207,10 +345,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "Configuration is matched to your specific application and testing standard." },
-              { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
-              { "title": "Filter and calibration training", "body": "Get your team confident with filter changes and Sunmeter calibration checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows AM1.5 spectral matching and Sunmeter verification on-site" },
+              { "title": "Configuration Assessment", "body": "Confirms the right Xenon Series configuration or LED-SOL for your application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with filter changes and Sunmeter calibration checks" },
+              { "title": "Preventive Maintenance", "body": "Maintains lamp, filter, and interlock performance" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement lamps, filters, and calibration components" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -232,22 +373,51 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "Solar Simulator product information: xenon lamp specifications, AM1.5 matching, and configuration options.",
-                "subheading": "Why matching a named reference standard matters",
+                "subheading": "Overview",
                 "body": [
+                  {
+                    "title": "AM1.5 Solar Spectrum Matching",
+                    "text": "SolSim2 is designed to reproduce the AM1.5 solar spectrum used in photostability and solar-driven research."
+                  },
+                  {
+                    "title": "ASTM G173 Reference Standard",
+                    "text": "The output is matched to ASTM G173 across the 300–800 nm wavelength range for defined, reference-based testing."
+                  },
+                  {
+                    "title": "Ozone-Free Operation",
+                    "text": "The ozone-free xenon lamp eliminates the need for dedicated ventilation typically required with ozone-generating xenon sources."
+                  },
+                  {
+                    "title": "300 W Xenon Lamp",
+                    "text": "A 300 W xenon lamp with variable output power provides the core illumination for controlled solar simulation."
+                  },
+                  { "title": "Complete Filter Set", "text": "The system includes the required filter configuration to achieve the AM1.5 spectral match." },
+                  { "title": "Built-In Verification", "text": "A calibrated Sunmeter helps verify and monitor the solar simulator output during operation." },
+                  {
+                    "title": "Designed for Photostability & Solar Research",
+                    "text": "Suitable for applications requiring controlled, reproducible sunlight simulation rather than uncontrolled natural sunlight."
+                  },
+                  { "title": "Three Xenon Series Configurations", "text": "Choose the platform based on your application:" },
+                  { "title": "SolSim2:", "text": "ASTM G173 AM1.5 solar simulation" },
+                  { "title": "LZCX-ICH1:", "text": "ICH Option 1 pharmaceutical photostability testing" },
+                  { "title": "LZCX-Xe:", "text": "Custom-filter configuration for general photochemical research" }
+                ],
+                "cards": [
+                  { "title": "ASTM G173 match", "description": "Confirmed AM1.5 solar spectrum standard" },
+                  { "title": "Ozone-free", "description": "No mandatory ventilation for the lamp" },
+                  { "title": "Calibrated Sunmeter", "description": "Included for verifying AM1.5 match" },
+                  { "title": "3 configurations", "description": "SolSim2, LZCX-ICH1, LZCX-Xe" }
+                ],
+                "glanceTitle": "Solar Simulator at a Glance",
+                "glanceDescription": "Solar Simulator overview: spectral matching, ozone-free design, and Xenon Series configuration options.",
+                "paragraphs": [
+                  "Solar Simulator overview: xenon-based AM1.5 solar spectrum matching for photostability and solar research.",
                   "Simulating sunlight well means being able to say exactly which reference standard your output matches, and SolSim2 is built to match ASTM G173, the AM1.5 solar spectrum most commonly cited in photostability and solar-driven research, across the 300 to 800 nm range.",
                   "The design runs ozone-free, which removes the mandatory ventilation requirement that standard ozone-generating xenon lamps carry, useful in labs without dedicated exhaust infrastructure already in place. A 300W xenon lamp with variable output power sits at the core, paired with the complete filter set needed to hold that AM1.5 match and a calibrated Sunmeter for confirming it's holding.",
                   "The same Xenon Series platform underneath SolSim2 also configures two other ways. LZCX-ICH1 carries certification for ICH Option 1 pharmaceutical photostability testing specifically, and LZCX-Xe opens the system up to your own custom filters for general photochemical research."
                 ],
-                "cards": [
-                  { "title": "AM1.5 Solar Spectrum Matching", "description": "SolSim2 is designed to reproduce the AM1.5 solar spectrum used in photostability and solar-driven research." },
-                  { "title": "ASTM G173 Reference Standard", "description": "The output is matched to ASTM G173 across the 300–800 nm wavelength range for defined, reference-based testing." },
-                  { "title": "Ozone-Free Operation", "description": "The ozone-free xenon lamp eliminates the need for dedicated ventilation typically required with ozone-generating xenon sources." },
-                  { "title": "300 W Xenon Lamp", "description": "A 300 W xenon lamp with variable output power provides the core illumination for controlled solar simulation." },
-                  { "title": "Complete Filter Set", "description": "The system includes the required filter configuration to achieve the AM1.5 spectral match." },
-                  { "title": "Built-In Verification", "description": "A calibrated Sunmeter helps verify and monitor the solar simulator output during operation." },
-                  { "title": "Designed for Photostability & Solar Research", "description": "Suitable for applications requiring controlled, reproducible sunlight simulation rather than uncontrolled natural sunlight." },
-                  { "title": "Three Xenon Series Configurations", "description": "Choose the platform based on your application:", "items": ["SolSim2: ASTM G173 AM1.5 solar simulation", "LZCX-ICH1: ICH Option 1 pharmaceutical photostability testing", "LZCX-Xe: Custom-filter configuration for general photochemical research"] }
-                ]
+                "cardsIntro": "Solar Simulator at a glance: AM1.5 spectrum match, ozone-free design, three configurations.",
+                "tabSummary": "Why matching a named reference standard matters"
               },
               {
                 "key": "config",
@@ -258,55 +428,101 @@
                   { "title": "Core platform", "description": "Luzchem Xenon Series, ozone-free ceramic xenon lamp" },
                   { "title": "SolSim2 configuration", "description": "AM1.5 solar spectrum matching, ASTM G173, 300-800nm" },
                   { "title": "LZCX-ICH1 configuration", "description": "ICH Option 1 pharmaceutical photostability certification" },
-                  { "title": "LZCX-Xe configuration", "description": "Custom filter compatibility for general research" },
-                  { "title": "Standard equipment", "description": "300W lamp, variable output power, bulkhead connector, integrated shutter, automated timer, door interlock, safety glasses, integrated exhaust with tubing, calibrated Sunmeter, solar spectral data" }
-                ]
+                  { "title": "LZCX-Xe configuration", "description": "custom filter compatibility for general research" },
+                  {
+                    "title": "Standard equipment",
+                    "description": "300W lamp, variable output power, bulkhead connector, integrated shutter, automated timer, door interlock, safety glasses, integrated exhaust with tubing, calibrated Sunmeter, solar spectral data"
+                  }
+                ],
+                "body": [
+                  "Configuration is matched to your specific application and testing standard"
+                ],
+                "disclaimer": "Tell us whether you need general AM1.5 matching, ICH-certified pharmaceutical stability testing, or a custom-filter setup, and we'll get you the right Xenon Series configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "Solar Simulator key features: AM1.5 spectrum matching, ozone-free operation, calibrated verification."
+                "description": "Solar Simulator key features: AM1.5 spectrum matching, ozone-free operation, calibrated verification.",
+                "tabSummary": "Ozone-free design, calibrated Sunmeter, variable output power"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Solar Simulator applications: sunscreen testing, photobiology, photodegradation, pharmaceutical stability."
+                "description": "Solar Simulator applications: sunscreen testing, photobiology, photodegradation, pharmaceutical stability.",
+                "tabSummary": "Sunscreen testing, photobiology, photodegradation, pharma stability"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Solar Simulator technical specifications: xenon lamp power, spectral range, and standard equipment."
+                "description": "Solar Simulator technical specifications: xenon lamp power, spectral range, and standard equipment.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Lamp, spectral range, and safety feature figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "AM1.5 matching and ozone-free design",
                 "title": "AM1.5 Solar Spectrum Matching and Ozone-Free Design",
-                "description": "Matching a named standard rather than an approximate \"sunlight-like\" output is what separates a real solar simulator from a bright broadband lamp. ASTM G173 defines the AM1.5 solar spectrum, and the filter set included with every Xenon Series unit is what holds output to that spectrum across the confirmed 300-800nm interval. The ozone-free build removes a real practical burden most xenon-based systems carry. Standard ozone-generating xenon lamps require dedicated ventilation because of the ozone they produce as a byproduct; this design doesn't generate that ozone in the first place, so ventilation only becomes necessary if your own experiment's byproducts require it, not because of the light source itself.",
+                "description": "Solar Simulator spectrum matching: ASTM G173 AM1.5 standard with ozone-free xenon design.",
                 "cards": [
                   { "title": "Verifiable AM1.5 spectrum matching", "description": "ASTM G173 filter set plus a calibrated Sunmeter" },
                   { "title": "Setup without dedicated exhaust infrastructure", "description": "Ozone-free xenon design" },
                   { "title": "Adjusting irradiance for your protocol", "description": "Variable output power on the 300W lamp" },
                   { "title": "Confirming your match is holding over time", "description": "Calibrated Sunmeter verification" }
-                ]
+                ],
+                "paragraphs": [
+                  "Matching a named standard rather than an approximate \"sunlight-like\" output is what separates a real solar simulator from a bright broadband lamp. ASTM G173 defines the AM1.5 solar spectrum, and the filter set included with every Xenon Series unit is what holds output to that spectrum across the confirmed 300-800nm interval.",
+                  "The ozone-free build removes a real practical burden most xenon-based systems carry. Standard ozone-generating xenon lamps require dedicated ventilation because of the ozone they produce as a byproduct; this design doesn't generate that ozone in the first place, so ventilation only becomes necessary if your own experiment's byproducts require it, not because of the light source itself."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "Your requirement", "value": "How the Solar Simulator delivers it" },
+                "note": "Tell us your target irradiance and whether ventilation infrastructure is available in your lab, and we'll confirm the right Solar Simulator configuration.",
+                "tabSummary": "What the spectral match and ozone-free build deliver"
               },
               {
                 "key": "performance",
-                "eyebrow": "Configurations and the broader solar range",
+                "eyebrow": "Xenon Series Configurations and the Broader Solar Range",
                 "title": "Xenon Series Configurations and the Broader Solar Range",
-                "description": "One xenon platform underneath three configurations means the right choice depends entirely on what you're testing against, not the hardware itself. SolSim2 is built for general controlled sunlight simulation. LZCX-ICH1 carries ICH Option 1 certification specifically, relevant if your photostability testing needs to meet that pharmaceutical standard directly rather than approximate it. LZCX-Xe opens the same core system to your own custom filters, useful when your research needs a spectral profile the standard AM1.5 filter set doesn't provide.",
+                "tabSummary": "Choosing SolSim2, LZCX-ICH1, LZCX-Xe, or LED-SOL",
                 "body": [
+                  "Solar Simulator configurations: SolSim2, LZCX-ICH1, LZCX-Xe, and the LED-based LED-SOL.",
+                  "One xenon platform underneath three configurations means the right choice depends entirely on what you're testing against, not the hardware itself. SolSim2 is built for general controlled sunlight simulation. LZCX-ICH1 carries ICH Option 1 certification specifically, relevant if your photostability testing needs to meet that pharmaceutical standard directly rather than approximate it. LZCX-Xe opens the same core system to your own custom filters, useful when your research needs a spectral profile the standard AM1.5 filter set doesn't provide.",
                   "A separate LED-based system, LED-SOL, sits in the broader Solar range alongside the Xenon Series. It's AAA compliant and meets IEC60904-9 spectral, spatial, and temporal requirements, but covers visible and near-infrared only, not the UV range the xenon-based systems reach, making it suited specifically to energy and photovoltaic research rather than UV-dependent photostability work."
                 ],
-                "utilityChecklist": [
-                  { "label": "General AM1.5 solar simulation", "value": "SolSim2" },
-                  { "label": "Pharmaceutical photostability testing to ICH standards", "value": "LZCX-ICH1" },
-                  { "label": "Custom spectral profiles beyond standard AM1.5 filters", "value": "LZCX-Xe" },
-                  { "label": "Energy or photovoltaic research, visible/NIR only", "value": "LED-SOL" }
-                ],
-                "disclaimer": "Tell us whether your work needs UV coverage, ICH certification, or a custom filter setup, and we'll confirm whether the Xenon Series or LED-SOL fits."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your application",
+                      "Which configuration fits"
+                    ],
+                    "rows": [
+                      [
+                        "General AM1.5 solar simulation",
+                        "SolSim2"
+                      ],
+                      [
+                        "Pharmaceutical photostability testing to ICH standards",
+                        "LZCX-ICH1"
+                      ],
+                      [
+                        "Custom spectral profiles beyond standard AM1.5 filters",
+                        "LZCX-Xe"
+                      ],
+                      [
+                        "Energy or photovoltaic research, visible/NIR only",
+                        "LED-SOL"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell us whether your work needs UV coverage, ICH certification, or a custom filter setup, and we'll confirm whether the Xenon Series or LED-SOL fits."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -317,7 +533,9 @@
                   { "title": "Solar Spectral Data", "description": "Available on request" },
                   { "title": "Published Exposure Standards", "description": "Available on request" },
                   { "title": "Sunmeter Calibration Information", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Solar spectral data, exposure standards"
               }
             ],
             "cta": {
@@ -326,9 +544,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Matches the ASTM G173 AM1.5 solar spectrum with a calibrated Sunmeter to prove it, ozone-free and ready without dedicated ventilation. Tell us your application and testing standard, and Inkarp will get you the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Simulating sunlight accurately means matching a real reference standard, not just producing bright broadband light. SolSim2 is built to match the ASTM G173 AM1.5 solar spectrum specifically, the spectrum most commonly referenced for solar and photostability work, across 300 to 800 nm.",
+              "The ozone-free xenon design means ventilation isn't required unless your own experimental byproducts call for it, a genuine setup convenience over standard ozone-generating xenon sources. A 300W lamp with variable output power, the full filter set needed for AM1.5 matching, and a calibrated Sunmeter for verifying that match all come standard, alongside an automated experiment timer, integrated shutter, and door interlock.",
+              "The same Xenon Series platform also configures as LZCX-ICH1, certified for ICH Option 1 pharmaceutical photostability testing, or LZCX-Xe, a versatile system built around your own custom filters."
+            ],
+            "heroLead": "Simulating sunlight accurately means matching a real reference standard, not just producing bright broadband light. SolSim2 is built to match the ASTM G173 AM1.5 solar spectrum specifically, the spectrum most commonly referenced for solar and photostability work, across 300 to 800 nm. The ozone-free xenon design means ventilation isn't required unless your own experimental byproducts call for it, a genuine setup convenience over standard ozone-generating xenon sources. A 300W lamp with variable output power, the full filter set needed for AM1.5 matching, and a calibrated Sunmeter for verifying that match all come standard, alongside an automated experiment timer, integrated shutter, and door interlock. The same Xenon Series platform also configures as LZCX-ICH1, certified for ICH Option 1 pharmaceutical photostability testing, or LZCX-Xe, a versatile system built around your own custom filters.",
+            "statsIntro": "Solar Simulator specifications at a glance: spectral match, wavelength range, and safety features."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

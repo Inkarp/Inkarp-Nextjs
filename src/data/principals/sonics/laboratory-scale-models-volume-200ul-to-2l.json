@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "sonics-and-materials",
-    "principalName": "Sonics & Materials",
-    "countryOfOrigin": "United States of America"
-  },
+  "principal": { "slug": "sonics-and-materials", "principalName": "Sonics & Materials", "countryOfOrigin": "United States of America" },
   "categories": [
     {
       "name": "Laboratory Scale Models, Volume 200 µL to 2 L",
@@ -11,25 +7,40 @@
       "products": [
         {
           "name": "VCX-750 Ultrasonic Probe Sonicator",
+
           "slug": "vcx-750-ultrasonic-probe-sonicator",
+
           "principalImage": "/assets/images/PrincipalLogos/sonics-logo.svg",
+
           "imageAlt": "Sonics & Materials VCX-750 Ultrasonic Probe Sonicator - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/vcx-750-ultrasonic-probe-sonicator",
+
           "breadcrumbPath": "Home > Products > Laboratory Scale Models, Volume 200 µL to 2 L > VCX-750 Ultrasonic Probe Sonicator",
+
           "h1": "VCX-750 Ultrasonic Probe Sonicator",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Cell lysis, homogenization, emulsification, or nanoparticle dispersion all demand different amounts of ultrasonic energy delivered precisely, not just applied longer or shorter. VCX-750 gives you that precision directly.",
 
           "features": [
-            "Fully Programmable Control: Microprocessor-based, with intuitive, easy-to-navigate screens for setting up runs.",
-            "Energy Setpoint Dosing: Doses sonication by Joules delivered, removing run-to-run variability from timing alone.",
-            "Real-Time Wattage and Energy Display: Shows exactly how much power and energy a sample is receiving during processing.",
-            "Temperature Monitoring: Tracks sample temperature throughout the run, protecting heat-sensitive materials.",
-            "Pulse Mode: Runs intermittent sonication cycles to manage heat buildup during longer processes.",
-            "10-Hour Timer: Covers short bursts through extended processing runs in a single system.",
-            "Standard ½\" Titanium Alloy Probe: Ti6Al4V construction with a replaceable tip, included with the base configuration.",
-            "Wide Accessory Compatibility: Supports the largest assortment of horns and accessories in the VCX range."
+            { "title": "Fully Programmable Control", "description": "Microprocessor-based, with intuitive, easy-to-navigate screens for setting up runs." },
+            { "title": "Energy Setpoint Dosing", "description": "Doses sonication by Joules delivered, removing run-to-run variability from timing alone." },
+            {
+              "title": "Real-Time Wattage and Energy Display",
+              "description": "Shows exactly how much power and energy a sample is receiving during processing."
+            },
+            { "title": "Temperature Monitoring", "description": "Tracks sample temperature throughout the run, protecting heat-sensitive materials." },
+            { "title": "Pulse Mode", "description": "Runs intermittent sonication cycles to manage heat buildup during longer processes." },
+            { "title": "10-Hour Timer", "description": "Covers short bursts through extended processing runs in a single system." },
+            {
+              "title": "Standard ½\" Titanium Alloy Probe",
+              "description": "Ti6Al4V construction with a replaceable tip, included with the base configuration."
+            },
+            { "title": "Wide Accessory Compatibility", "description": "Supports the largest assortment of horns and accessories in the VCX range." }
           ],
 
           "technicalSpecs": [
@@ -48,11 +59,11 @@
           ],
 
           "applications": [
-            "Cell Lysis: High-power output with energy dosing supports consistent, reproducible lysis",
-            "Homogenization: Programmable control adapts intensity to sample viscosity and volume",
-            "Emulsification: 750 W output drives sufficient energy for stable emulsion formation",
-            "Nanoparticle Dispersion: Energy setpoint control supports consistent, repeatable particle dispersion",
-            "Extended or Multi-Sample Processing: 10-hour timer and pulse mode support longer, batch-style protocols"
+            { "title": "Cell Lysis", "description": "High-power output with energy dosing supports consistent, reproducible lysis" },
+            { "title": "Homogenization", "description": "Programmable control adapts intensity to sample viscosity and volume" },
+            { "title": "Emulsification", "description": "750 W output drives sufficient energy for stable emulsion formation" },
+            { "title": "Nanoparticle Dispersion", "description": "Energy setpoint control supports consistent, repeatable particle dispersion" },
+            { "title": "Extended or Multi-Sample Processing", "description": "10-hour timer and pulse mode support longer, batch-style protocols" }
           ],
 
           "inPageNav": [
@@ -72,7 +83,9 @@
             "steps": [
               {
                 "key": "sampleVolume",
-                "question": "What's the typical sample volume?",
+                "label": "Sample volume input",
+                "question": "Sample volume input",
+                "hint": "200 µL to 2 L",
                 "options": [
                   { "val": "microsample", "label": "Microsample or small-volume processing" },
                   { "val": "general-purpose", "label": "General-purpose sonication (standard probe range)" },
@@ -81,7 +94,9 @@
               },
               {
                 "key": "applicationType",
-                "question": "What's the application type?",
+                "label": "Application type",
+                "question": "Application type",
+                "hint": "Cell lysis, homogenization, emulsification, or nanoparticle dispersion",
                 "options": [
                   { "val": "cell-lysis", "label": "Cell lysis" },
                   { "val": "homogenization", "label": "Homogenization" },
@@ -91,17 +106,21 @@
               },
               {
                 "key": "batchFrequency",
-                "question": "Single samples or continuous batch processing?",
+                "label": "Batch frequency",
+                "question": "Batch frequency",
+                "hint": "Single samples or continuous batch processing",
                 "options": [
                   { "val": "single", "label": "Single samples" },
                   { "val": "continuous-batch", "label": "Continuous batch processing" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Probe and Volume Selector",
+            "lead": "Find the right probe and accessory combination for your sample volume.",
+            "emptyState": "Recommends the right probe, horn, or accessory",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -111,14 +130,16 @@
               {
                 "key": "heatSensitivity",
                 "label": "Heat sensitivity",
+                "hint": "Standard or heat-sensitive sample",
                 "options": [
-                  { "val": "standard", "label": "Standard sample" },
+                  { "val": "standard", "label": "Standard" },
                   { "val": "heat-sensitive", "label": "Heat-sensitive sample" }
                 ]
               },
               {
                 "key": "dosingMethod",
                 "label": "Dosing method",
+                "hint": "Time-based or energy setpoint (Joules)",
                 "options": [
                   { "val": "time-based", "label": "Time-based" },
                   { "val": "energy-setpoint", "label": "Energy setpoint (Joules)" }
@@ -127,6 +148,7 @@
               {
                 "key": "continuousVsPulsed",
                 "label": "Continuous vs pulsed",
+                "hint": "Continuous sonication or pulse mode",
                 "options": [
                   { "val": "continuous", "label": "Continuous sonication" },
                   { "val": "pulse", "label": "Pulse mode" }
@@ -138,20 +160,64 @@
                 "condition": "default",
                 "title": "What Does Energy Setpoint Control Do?",
                 "body": "Energy setpoint control doses sonication in Joules delivered rather than time elapsed, keeping results reproducible across samples that absorb energy at different rates.",
-                "tags": ["Energy Setpoint Dosing", "Pulse Mode"]
+                "tags": [
+                  "Energy Setpoint Dosing",
+                  "Pulse Mode"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Protocol Planner",
+            "lead": "Set up the right energy setpoint and pulse protocol for your sample.",
+            "ctaNote": "Recommends the right energy and pulse settings. Routes to us for application-specific guidance.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using VCX-750 include pharmaceutical research, materials science, and biotechnology.",
             "industries": [
-              { "name": "Pharmaceutical and Biotech Research", "useCase": "Cell lysis and sample preparation for downstream analysis", "consideration": "Energy setpoint control keeps lysis consistent across sample batches" },
-              { "name": "Nanomaterials Research", "useCase": "Dispersing nanoparticles into stable suspensions", "consideration": "Reproducible energy dosing supports consistent particle size distribution" },
-              { "name": "Cosmetics and Personal Care Formulation", "useCase": "Emulsifying formulations at lab scale", "consideration": "750 W output handles viscous emulsification work reliably" },
-              { "name": "Food Science Research", "useCase": "Homogenizing samples for texture and composition analysis", "consideration": "Pulse mode reduces heat buildup on temperature-sensitive food samples" },
-              { "name": "Academic and Contract Research Labs", "useCase": "Running varied sonication protocols across client projects", "consideration": "Wide accessory range covers volumes from 200 µL to 2 L on one system" }
+              {
+                "name": "Pharmaceutical and Biotech Research",
+                "note": "Use Case: Cell lysis and sample preparation for downstream analysis",
+                "bullets": [
+                  "What to Consider: Energy setpoint control keeps lysis consistent across sample batches"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Nanomaterials Research",
+                "note": "Use Case: Dispersing nanoparticles into stable suspensions",
+                "bullets": [
+                  "What to Consider: Reproducible energy dosing supports consistent particle size distribution"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetics and Personal Care Formulation",
+                "note": "Use Case: Emulsifying formulations at lab scale",
+                "bullets": [
+                  "What to Consider: 750 W output handles viscous emulsification work reliably"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food Science Research",
+                "note": "Use Case: Homogenizing samples for texture and composition analysis",
+                "bullets": [
+                  "What to Consider: Pulse mode reduces heat buildup on temperature-sensitive food samples"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic and Contract Research Labs",
+                "note": "Use Case: Running varied sonication protocols across client projects",
+                "bullets": [
+                  "What to Consider: Wide accessory range covers volumes from 200 µL to 2 L on one system"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -165,20 +231,51 @@
               { "title": "Preventive Maintenance", "description": "Maintains converter, probe, and temperature monitoring performance" },
               { "title": "Spares and Accessories", "description": "Supplies replacement tips, probes, and converter cables" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "VCX-750 service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is VCX-750 used for?", "answer": "VCX-750 is a 750 W, 20 kHz ultrasonic processor used for cell lysis, homogenization, emulsification, and nanoparticle dispersion, processing volumes from 200 µL to 2 L depending on the probe or accessory used." },
-            { "question": "What sample volumes can VCX-750 process?", "answer": "Processing volume ranges from 200 µL to 2 L, with the exact range depending on which probe or accessory is fitted for a specific application." },
-            { "question": "What does energy setpoint control do?", "answer": "Energy setpoint control doses sonication in Joules delivered rather than time elapsed, keeping results reproducible across samples that absorb energy at different rates." },
-            { "question": "Does VCX-750 monitor sample temperature?", "answer": "Yes, temperature monitoring runs during processing, helping protect heat-sensitive samples and supporting an optional dedicated temperature probe accessory." },
-            { "question": "What probe comes standard with VCX-750?", "answer": "A ½\" diameter probe made from Ti6Al4V titanium alloy, with a replaceable tip, ships with the base configuration." },
-            { "question": "Can VCX-750 run pulsed sonication cycles?", "answer": "Yes, pulse mode is available for applications that need intermittent rather than continuous sonication, useful for managing sample heating." },
-            { "question": "How long can a single sonication run last?", "answer": "The system includes a 10-hour timer, covering both short bursts and extended processing runs." },
-            { "question": "What optional accessories are available for VCX-750?", "answer": "Optional accessories include a stand with clamp, a sound enclosure, and a dedicated temperature probe." },
-            { "question": "What is the price of VCX-750 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe, accessory, and application requirements." },
-            { "question": "Who is the authorized distributor of VCX-750 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-750 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is VCX-750 used for?",
+              "answer": "VCX-750 is a 750 W, 20 kHz ultrasonic processor used for cell lysis, homogenization, emulsification, and nanoparticle dispersion, processing volumes from 200 µL to 2 L depending on the probe or accessory used."
+            },
+            {
+              "question": "What sample volumes can VCX-750 process?",
+              "answer": "Processing volume ranges from 200 µL to 2 L, with the exact range depending on which probe or accessory is fitted for a specific application."
+            },
+            {
+              "question": "What does energy setpoint control do?",
+              "answer": "Energy setpoint control doses sonication in Joules delivered rather than time elapsed, keeping results reproducible across samples that absorb energy at different rates."
+            },
+            {
+              "question": "Does VCX-750 monitor sample temperature?",
+              "answer": "Yes, temperature monitoring runs during processing, helping protect heat-sensitive samples and supporting an optional dedicated temperature probe accessory."
+            },
+            {
+              "question": "What probe comes standard with VCX-750?",
+              "answer": "A ½\" diameter probe made from Ti6Al4V titanium alloy, with a replaceable tip, ships with the base configuration."
+            },
+            {
+              "question": "Can VCX-750 run pulsed sonication cycles?",
+              "answer": "Yes, pulse mode is available for applications that need intermittent rather than continuous sonication, useful for managing sample heating."
+            },
+            {
+              "question": "How long can a single sonication run last?",
+              "answer": "The system includes a 10-hour timer, covering both short bursts and extended processing runs."
+            },
+            {
+              "question": "What optional accessories are available for VCX-750?",
+              "answer": "Optional accessories include a stand with clamp, a sound enclosure, and a dedicated temperature probe."
+            },
+            {
+              "question": "What is the price of VCX-750 in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your probe, accessory, and application requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of VCX-750 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-750 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -199,10 +296,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right probe and accessory combination", "body": "Tell us your typical sample volume and application, whether cell lysis, homogenization, emulsification, or nanoparticle dispersion, and we'll confirm the right probe and accessory combination." },
-              { "title": "Confirm the right energy setpoint protocol", "body": "Tell us your sample's heat sensitivity and target energy dose, and we'll help set up the right energy setpoint protocol for your VCX-750." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows energy setpoint dosing and pulse mode on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right probe and accessory package for your volume and application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with programmable control and probe handling" },
+              { "title": "Preventive Maintenance", "body": "Maintains converter, probe, and temperature monitoring performance" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement tips, probes, and converter cables" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -226,21 +326,37 @@
                 "title": "Product Information",
                 "description": "VCX-750 product information: power delivery, control features, and probe and accessory options.",
                 "body": [
-                  "The system runs at 750 W maximum output and 20 kHz frequency, delivering enough power to drive the largest assortment of horns and accessories in the VCX range.",
-                  "Control is fully programmable through a microprocessor-based interface, with intuitive, easy-to-navigate screens rather than a fixed dial or switch setup.",
-                  "Energy setpoint control lets you dose sonication by Joules delivered rather than time alone, which is what makes results reproducible run to run regardless of small variations in sample consistency.",
-                  "Temperature monitoring runs alongside energy dosing, so heat-sensitive samples can be tracked and protected during processing.",
-                  "A pulse mode is available for applications needing intermittent rather than continuous sonication, useful for reducing sample heating during longer runs.",
-                  "Wattage and energy are both displayed directly during operation, giving real-time visibility into exactly how much energy a sample has received.",
-                  "A 10-hour timer covers everything from short bursts to extended processing runs.",
-                  "A standard ½\" diameter probe with a replaceable titanium alloy tip ships with the base VCX-750 configuration, alongside a tool kit for probe maintenance."
+                  {
+                    "text": "The system runs at 750 W maximum output and 20 kHz frequency, delivering enough power to drive the largest assortment of horns and accessories in the VCX range."
+                  },
+                  {
+                    "text": "Control is fully programmable through a microprocessor-based interface, with intuitive, easy-to-navigate screens rather than a fixed dial or switch setup."
+                  },
+                  {
+                    "text": "Energy setpoint control lets you dose sonication by Joules delivered rather than time alone, which is what makes results reproducible run to run regardless of small variations in sample consistency."
+                  },
+                  { "text": "Temperature monitoring runs alongside energy dosing, so heat-sensitive samples can be tracked and protected during processing." },
+                  {
+                    "text": "A pulse mode is available for applications needing intermittent rather than continuous sonication, useful for reducing sample heating during longer runs."
+                  },
+                  {
+                    "text": "Wattage and energy are both displayed directly during operation, giving real-time visibility into exactly how much energy a sample has received."
+                  },
+                  { "text": "A 10-hour timer covers everything from short bursts to extended processing runs." },
+                  {
+                    "text": "A standard ½\" diameter probe with a replaceable titanium alloy tip ships with the base VCX-750 configuration, alongside a tool kit for probe maintenance."
+                  }
                 ],
                 "cards": [
                   { "title": "750 W, 20 kHz", "description": "Core power and frequency output" },
                   { "title": "200 µL to 2 L", "description": "Volume range across probes and accessories" },
                   { "title": "Energy setpoint control", "description": "Joule-based dosing for reproducible results" },
                   { "title": "Programmable, pulse-capable", "description": "Flexible control for varied protocols" }
-                ]
+                ],
+                "glanceTitle": "VCX-750 at a Glance",
+                "subheading": "Overview",
+                "intro": "VCX-750 overview: programmable control, energy-based dosing, and volume flexibility.",
+                "tabSummary": "Why energy setpoint control matters for reproducible sonication"
               },
               {
                 "key": "config",
@@ -252,55 +368,101 @@
                   { "title": "Frequency", "description": "20 kHz" },
                   { "title": "Processing volume", "description": "200 µL to 2 L, dependent on probe or accessory" },
                   { "title": "Standard probe", "description": "½\" diameter, Ti6Al4V titanium alloy, replaceable tip" }
-                ]
+                ],
+                "disclaimer": "Tell us your typical sample volume and application, whether cell lysis, homogenization, emulsification, or nanoparticle dispersion, and we'll confirm the right probe and accessory combination."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "VCX-750 key features: programmable control, energy dosing, and titanium alloy probe construction."
+                "description": "VCX-750 key features: programmable control, energy dosing, and titanium alloy probe construction.",
+                "tabSummary": "Programmable control, pulse mode, temperature monitoring"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "VCX-750 applications: cell lysis, homogenization, emulsification, and nanoparticle dispersion."
+                "description": "VCX-750 applications: cell lysis, homogenization, emulsification, and nanoparticle dispersion.",
+                "tabSummary": "Cell lysis, homogenization, emulsification, nanoparticle dispersion"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "VCX-750 technical specifications: power output, frequency, dimensions, and probe details."
+                "description": "VCX-750 technical specifications: power output, frequency, dimensions, and probe details.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Power, frequency, dimensions, and probe specifications"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Reproducible Sonication Through Energy Setpoint Control",
                 "title": "Reproducible Sonication Through Energy Setpoint Control",
-                "description": "Timing a sonication run by seconds alone assumes every sample absorbs energy at the same rate, and that assumption rarely holds across different batches, viscosities, or sample volumes. VCX-750's energy setpoint control sidesteps that problem entirely by dosing sonication in Joules delivered rather than time elapsed. Two samples that process at different rates still receive the same total energy input, keeping results comparable across a study or production run. Temperature monitoring runs in parallel, so a run that's delivering energy efficiently and heating a sample faster than expected can be caught and managed before it affects results. Wattage and energy both display in real time, so the actual dose delivered is always visible, not just the setpoint targeted.",
+                "description": "How Joule-based dosing on VCX-750 removes run-to-run variability from sonication protocols.",
                 "cards": [
                   { "title": "Consistent energy dose across variable samples", "description": "Energy setpoint control, Joule-based dosing" },
                   { "title": "Protection for heat-sensitive materials", "description": "Continuous temperature monitoring during the run" },
                   { "title": "Visibility into actual delivered energy", "description": "Real-time wattage and energy display" },
                   { "title": "Reduced heat buildup on longer runs", "description": "Pulse mode for intermittent sonication" }
-                ]
+                ],
+                "paragraphs": [
+                  "Timing a sonication run by seconds alone assumes every sample absorbs energy at the same rate, and that assumption rarely holds across different batches, viscosities, or sample volumes.",
+                  "VCX-750's energy setpoint control sidesteps that problem entirely by dosing sonication in Joules delivered rather than time elapsed. Two samples that process at different rates still receive the same total energy input, keeping results comparable across a study or production run. Temperature monitoring runs in parallel, so a run that's delivering energy efficiently and heating a sample faster than expected can be caught and managed before it affects results. Wattage and energy both display in real time, so the actual dose delivered is always visible, not just the setpoint targeted."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your protocol needs", "value": "How VCX-750 delivers it" },
+                "note": "Tell us your sample's heat sensitivity and target energy dose, and we'll help set up the right energy setpoint protocol for your VCX-750.",
+                "tabSummary": "How Joule-based dosing removes run-to-run variability"
               },
               {
                 "key": "performance",
                 "eyebrow": "Probe, Converter, and Accessory Options",
                 "title": "Probe, Converter, and Accessory Options",
-                "description": "Matching VCX-750's probe and accessory choices to your sample volume and application.",
+                "tabSummary": "Matching hardware to your sample volume",
                 "body": [
-                  "A 750 W system is only as useful as the hardware attached to it, and the range of compatible probes and accessories is what lets VCX-750 cover such a wide processing volume. The standard ½\" diameter probe, built from Ti6Al4V titanium alloy with a replaceable tip, ships with the base VCX-750 configuration and covers general-purpose sonication work directly. Beyond that standard probe, a wide assortment of horns and accessories extends the system's effective processing range from 200 µL microsamples up to 2 L batches, with the specific range depending on which probe or accessory is fitted for a given application. Optional additions, a stand with clamp for hands-free operation, a sound enclosure for noise containment, and a dedicated temperature probe, round out the system for labs running it as a fixed workstation rather than a bench-to-bench tool."
+                  "Matching VCX-750's probe and accessory choices to your sample volume and application.",
+                  "A 750 W system is only as useful as the hardware attached to it, and the range of compatible probes and accessories is what lets VCX-750 cover such a wide processing volume.",
+                  "The standard ½\" diameter probe, built from Ti6Al4V titanium alloy with a replaceable tip, ships with the base VCX-750 configuration and covers general-purpose sonication work directly. Beyond that standard probe, a wide assortment of horns and accessories extends the system's effective processing range from 200 µL microsamples up to 2 L batches, with the specific range depending on which probe or accessory is fitted for a given application. Optional additions, a stand with clamp for hands-free operation, a sound enclosure for noise containment, and a dedicated temperature probe, round out the system for labs running it as a fixed workstation rather than a bench-to-bench tool."
                 ],
-                "utilityChecklist": [
-                  { "label": "General-purpose sonication out of the box", "value": "Standard ½\" titanium alloy probe, included" },
-                  { "label": "Microsample or small-volume processing", "value": "Compatible smaller-diameter probes and accessories" },
-                  { "label": "Large-batch processing up to 2 L", "value": "Compatible larger horns and accessories" },
-                  { "label": "Hands-free, fixed-station operation", "value": "Optional stand with clamp" },
-                  { "label": "Reduced operational noise", "value": "Optional sound enclosure" },
-                  { "label": "Dedicated sample temperature tracking", "value": "Optional temperature probe" }
-                ],
-                "disclaimer": "Tell us your typical sample volume range and whether you need hands-free or enclosed operation, and we'll confirm the right probe and accessory package."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your application needs",
+                      "How VCX-750 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "General-purpose sonication out of the box",
+                        "Standard ½\" titanium alloy probe, included"
+                      ],
+                      [
+                        "Microsample or small-volume processing",
+                        "Compatible smaller-diameter probes and accessories"
+                      ],
+                      [
+                        "Large-batch processing up to 2 L",
+                        "Compatible larger horns and accessories"
+                      ],
+                      [
+                        "Hands-free, fixed-station operation",
+                        "Optional stand with clamp"
+                      ],
+                      [
+                        "Reduced operational noise",
+                        "Optional sound enclosure"
+                      ],
+                      [
+                        "Dedicated sample temperature tracking",
+                        "Optional temperature probe"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell us your typical sample volume range and whether you need hands-free or enclosed operation, and we'll confirm the right probe and accessory package."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -311,7 +473,9 @@
                   { "title": "VCX-750 Data Sheet", "description": "Available on request" },
                   { "title": "Probe and Accessory Compatibility Guide", "description": "Available on request" },
                   { "title": "Energy Setpoint Protocol Guidance", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet"
               }
             ],
             "cta": {
@@ -320,9 +484,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "750 W of programmable ultrasonic power with energy setpoint control, covering 200 µL to 2 L across a wide range of probes and accessories. Tell us your sample volume and application, and Inkarp will confirm the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Cell lysis, homogenization, emulsification, or nanoparticle dispersion all demand different amounts of ultrasonic energy delivered precisely, not just applied longer or shorter. VCX-750 gives you that precision directly.",
+              "A 750 W, 20 kHz microprocessor-based system, it's fully programmable through intuitive, easy-to-navigate screens, with energy setpoint and temperature monitoring built in for reproducible results across every run. A standard ½\" diameter titanium alloy probe with a replaceable tip ships with the system, and a wide range of horns and accessories extends processing across 200 µL to 2 L, depending on the probe or accessory selected."
+            ],
+            "statsIntro": "VCX-750 at a glance: power output, frequency, and processing volume range."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

@@ -14,15 +14,16 @@ function cleanNumber(value) {
   return Math.max(0, Math.round(nextValue));
 }
 
-function RoiInput({ label, value, onChange }) {
+function RoiInput({ label, hint, value, onChange, step = '1000' }) {
   return (
     <label className="block">
       <span className="text-sm font-medium text-black">{label}</span>
+      {hint ? <span className="mt-0.5 block text-xs leading-5 text-ink-soft">{hint}</span> : null}
       <input
         className="mt-2 h-11 w-full border border-line-light bg-parchment-alt px-4 text-lg font-semibold tracking-tight text-ink outline-none transition focus:border-red focus:bg-parchment focus:ring-4 focus:ring-red/10"
         min="0"
         onChange={(event) => onChange(cleanNumber(event.target.value))}
-        step="1000"
+        step={step}
         type="number"
         value={value}
       />
@@ -59,6 +60,12 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
   const [values, setValues] = useState(() =>
     Object.fromEntries(valueFields.map((field) => [field.key, field.default ?? 0]))
   );
+  // Optional inputs that go into the enquiry summary but not into the total
+  // (e.g. the current instrument's generation, daily operating hours).
+  const extraFields = data?.extraFields ?? [];
+  const [extras, setExtras] = useState(() =>
+    Object.fromEntries(extraFields.map((field) => [field.key, field.options?.[0] ?? 0]))
+  );
 
   useEffect(() => {
     // Legacy bridge: the standalone SolventCalculator dispatches this event.
@@ -94,6 +101,7 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
   }, [isPaybackMode, purchasePrice, values, valueFields]);
 
   const roiSummary = [
+    ...extraFields.map((field) => `${field.label}: ${extras[field.key] ?? ''}`),
     ...(isPaybackMode ? [`${purchaseField.summaryLabel ?? 'Estimated purchase price'}: INR ${purchasePrice.toLocaleString('en-IN')}`] : []),
     ...valueFields.map((field) => `${field.summaryLabel ?? field.label}: INR ${(values[field.key] ?? 0).toLocaleString('en-IN')}`),
     ...(isPaybackMode
@@ -113,6 +121,7 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
         <SectionHeader
           number={sectionNumber}
           eyebrow={data?.eyebrow}
+          lead={data?.lead}
           title={data?.title}
           description={data?.description}
         />
@@ -138,8 +147,31 @@ export default function ROICalculator({ data, sectionNumber = '07', productName 
                   value={purchasePrice}
                 />
               )}
+              {extraFields.map((field) => (field.options?.length ? (
+                <label className="block" key={field.key}>
+                  <span className="text-sm font-medium text-black">{field.label}</span>
+                  {field.hint ? <span className="mt-0.5 block text-xs leading-5 text-ink-soft">{field.hint}</span> : null}
+                  <select
+                    className="mt-2 h-11 w-full border border-line-light bg-parchment-alt px-4 text-sm font-semibold text-ink outline-none transition focus:border-red focus:ring-4 focus:ring-red/10"
+                    onChange={(event) => setExtras((current) => ({ ...current, [field.key]: event.target.value }))}
+                    value={extras[field.key]}
+                  >
+                    {field.options.map((option) => <option key={option} value={option}>{option}</option>)}
+                  </select>
+                </label>
+              ) : (
+                <RoiInput
+                  hint={field.hint}
+                  key={field.key}
+                  label={field.label}
+                  onChange={(next) => setExtras((current) => ({ ...current, [field.key]: next }))}
+                  step="1"
+                  value={extras[field.key] ?? 0}
+                />
+              )))}
               {valueFields.map((field) => (
                 <RoiInput
+                  hint={field.hint}
                   key={field.key}
                   label={field.label}
                   onChange={(next) => setValues((current) => ({ ...current, [field.key]: next }))}

@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "luzchem",
-    "principalName": "Luzchem",
-    "countryOfOrigin": "Canada"
-  },
+  "principal": { "slug": "luzchem", "principalName": "Luzchem", "countryOfOrigin": "Canada" },
   "categories": [
     {
       "name": "Laser Flash Photolysis",
@@ -11,29 +7,42 @@
       "products": [
         {
           "name": "Transient Absorption Spectrometer – Laser Flash Photolysis",
+
           "slug": "laser-flash-photolysis",
+
           "manufacturerUrl": "https://luzchem.com/products/laser-flash-photolysis",
+
           "metaTitle": "Transient Absorption Spectrometer – Laser Flash Photolysis — Authorized Distributor & Service Provider in India | Inkarp | Luzchem",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Luzchem Transient Absorption Spectrometer – Laser Flash Photolysis in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": "Laser Flash Photolysis, Transient Absorption Spectrometer, Laser Flash Photolysis India, Laser Flash Photolysis price in India, Laser Flash Photolysis distributor India, Luzchem Laser Flash Photolysis, Luzchem distributor India, Luzchem authorized distributor, Laser Flash Photolysis India, Laser Flash Photolysis distributor and service provider in India, flash chromatography, flash purification, compound purification, Luzchem India, Inkarp Instruments",
+
           "principalImage": "/assets/images/PrincipalLogos/Luzchem.png",
+
           "imageAlt": "Luzchem Transient Absorption Spectrometer – Laser Flash Photolysis - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/laser-flash-photolysis",
+
           "breadcrumbPath": "Home > Products > Laser Flash Photolysis > Transient Absorption Spectrometer – Laser Flash Photolysis",
+
           "h1": "Transient Absorption Spectrometer – Laser Flash Photolysis",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Most flash photolysis systems pulse the probe lamp in sync with the laser to get enough brightness during the measurement window, and that pulsing takes a toll. This system runs the lamp continuously instead.",
 
           "features": [
-            "Continuous Xenon Illumination: No lamp pulsing means better signal-to-noise and longer lamp life.",
-            "Ozone-Free Ceramic Xenon Source: Paired with a 125 mm monochromator for clean, tunable probe light.",
-            "Connection-Free Laser Synchronization: Fiber optic pre-trigger sensing eliminates hard-wired trigger cables.",
-            "Automatic Photomultiplier Voltage Optimization: Adjusts detector sensitivity without manual tuning.",
-            "Fluorescence Correction: Built into the software for cleaner transient absorption data.",
-            "Programmable Monochromator: Set and control wavelength directly through the system software.",
-            "Dual Measurement Modes: Absorption and diffuse reflectance, switchable when both are purchased.",
-            "Compact Footprint: A complete laser flash photolysis system that doesn't need a dedicated room."
+            { "title": "Continuous Xenon Illumination", "description": "No lamp pulsing means better signal-to-noise and longer lamp life." },
+            { "title": "Ozone-Free Ceramic Xenon Source", "description": "Paired with a 125 mm monochromator for clean, tunable probe light." },
+            { "title": "Connection-Free Laser Synchronization", "description": "Fiber optic pre-trigger sensing eliminates hard-wired trigger cables." },
+            { "title": "Automatic Photomultiplier Voltage Optimization", "description": "Adjusts detector sensitivity without manual tuning." },
+            { "title": "Fluorescence Correction", "description": "Built into the software for cleaner transient absorption data." },
+            { "title": "Programmable Monochromator", "description": "Set and control wavelength directly through the system software." },
+            { "title": "Dual Measurement Modes", "description": "Absorption and diffuse reflectance, switchable when both are purchased." },
+            { "title": "Compact Footprint", "description": "A complete laser flash photolysis system that doesn't need a dedicated room." }
           ],
 
           "technicalSpecs": [
@@ -53,11 +62,11 @@
           ],
 
           "applications": [
-            "Excited-State Kinetics: Nanosecond to second time resolution",
-            "Reaction Intermediate Characterization: Transient absorption across UV to near-IR ranges",
-            "Photocatalyst Mechanism Studies: Clean baselines from continuous lamp illumination",
-            "Photostability and Degradation Research: Reduced sample degradation from non-pulsed illumination",
-            "Diffuse Reflectance Kinetics: Available as a second measurement mode"
+            { "title": "Excited-State Kinetics", "description": "Nanosecond to second time resolution" },
+            { "title": "Reaction Intermediate Characterization", "description": "Transient absorption across UV to near-IR ranges" },
+            { "title": "Photocatalyst Mechanism Studies", "description": "Clean baselines from continuous lamp illumination" },
+            { "title": "Photostability and Degradation Research", "description": "Reduced sample degradation from non-pulsed illumination" },
+            { "title": "Diffuse Reflectance Kinetics", "description": "Available as a second measurement mode" }
           ],
 
           "inPageNav": [
@@ -78,34 +87,41 @@
             "steps": [
               {
                 "key": "wavelength",
-                "question": "What wavelength range do you need?",
+                "label": "Wavelength range",
+                "question": "Wavelength range",
+                "hint": "UV, RED, or OF",
                 "options": [
-                  { "val": "uv", "label": "UV (240-730nm)", "desc": "Chromophores absorb in the UV-visible range" },
-                  { "val": "red", "label": "RED (310-800nm)", "desc": "Species absorb further into the red" },
-                  { "val": "of", "label": "OF (330-800nm)", "desc": "The widest coverage in one configuration is needed" }
+                  { "val": "uv", "label": "UV" },
+                  { "val": "red", "label": "RED" },
+                  { "val": "of", "label": "OF" }
                 ]
               },
               {
                 "key": "temperature",
-                "question": "Do you need temperature control?",
+                "label": "Temperature control",
+                "question": "Temperature control",
+                "hint": "Standard or temperature-controlled sample compartment",
                 "options": [
-                  { "val": "standard", "label": "Standard", "desc": "No temperature control" },
-                  { "val": "controlled", "label": "Temperature-controlled", "desc": "Temperature-controlled sample compartment" }
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "controlled", "label": "Temperature-controlled sample compartment" }
                 ]
               },
               {
                 "key": "mode",
-                "question": "Which measurement mode do you need?",
+                "label": "Measurement mode",
+                "question": "Measurement mode",
+                "hint": "Absorption only, or absorption plus diffuse reflectance",
                 "options": [
-                  { "val": "absorption", "label": "Absorption only", "desc": "Standard measurement mode" },
-                  { "val": "both", "label": "Absorption plus diffuse reflectance", "desc": "Switch between both modes once purchased" }
+                  { "val": "absorption", "label": "Absorption only" },
+                  { "val": "both", "label": "Absorption plus diffuse reflectance" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Wavelength Range and Configuration Selector",
+            "lead": "Match your study to the right wavelength range and thermal configuration.",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -115,6 +131,7 @@
               {
                 "key": "timescale",
                 "label": "Target timescale",
+                "hint": "Under 10ns, nanosecond to microsecond, or millisecond and slower",
                 "options": [
                   { "val": "under10ns", "label": "Under 10ns" },
                   { "val": "ns-to-us", "label": "Nanosecond to microsecond" },
@@ -124,6 +141,7 @@
               {
                 "key": "application",
                 "label": "Application type",
+                "hint": "Excited-state kinetics, intermediate characterization, or degradation studies",
                 "options": [
                   { "val": "excited-state", "label": "Excited-state kinetics" },
                   { "val": "intermediate", "label": "Intermediate characterization" },
@@ -136,9 +154,18 @@
                 "condition": "default",
                 "title": "Full measurement time range",
                 "body": "From under 10 nanoseconds using the built-in amplifier out to millisecond-scale processes.",
-                "tags": ["Under 10 ns with built-in amplifier", "Millisecond measurements readily performed"]
+                "tags": [
+                  "Under 10 ns with built-in amplifier",
+                  "Millisecond measurements readily performed"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Time Scale and Application Planner",
+            "lead": "Confirm the system covers your target measurement timescale.",
+            "ctaNote": "Confirms coverage and flags whether the built-in amplifier applies. Routes to us for an application-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
@@ -150,23 +177,89 @@
               { "label": "OF (330-800nm)" }
             ],
             "rows": [
-              { "feature": "Lower Bound", "values": ["240nm", "310nm", "330nm"] },
-              { "feature": "Upper Bound", "values": ["730nm", "800nm", "800nm"] },
-              { "feature": "Best For", "values": ["Standard UV-visible transient studies", "Work extending into red-shifted absorbers", "Broadest single-range coverage"] },
-              { "feature": "Choose when", "values": ["Chromophores absorb in the UV-visible range", "Species absorb further into the red", "The widest coverage in one configuration is needed"] }
+              {
+                "feature": "Lower Bound",
+                "values": [
+                  "240nm",
+                  "310nm",
+                  "330nm"
+                ]
+              },
+              {
+                "feature": "Upper Bound",
+                "values": [
+                  "730nm",
+                  "800nm",
+                  "800nm"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Standard UV-visible transient studies",
+                  "Work extending into red-shifted absorbers",
+                  "Broadest single-range coverage"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Chromophores absorb in the UV-visible range",
+                  "Species absorb further into the red",
+                  "The widest coverage in one configuration is needed"
+                ]
+              }
             ],
-            "disclaimer": "All three share the same core system, digitizer, and detector, the choice is purely about which wavelength window your chemistry needs."
+            "disclaimer": "All three share the same core system, digitizer, and detector, the choice is purely about which wavelength window your chemistry needs.",
+            "featureLabel": "Parameter",
+            "eyebrow": "Method comparison",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "LFP-412 across academic photochemistry, pharmaceutical, and materials science research.",
             "industries": [
-              { "name": "Academic Photochemistry Research", "useCase": "Excited-state and mechanistic studies", "consideration": "Wavelength range matched to your chromophores" },
-              { "name": "Pharmaceutical Photostability Testing", "useCase": "Degradation pathway characterization", "consideration": "Continuous lamp reduces sample degradation during testing" },
-              { "name": "Materials Science", "useCase": "Photocatalyst and photovoltaic material kinetics", "consideration": "Diffuse reflectance mode for solid-state samples" },
-              { "name": "Environmental Photochemistry", "useCase": "Reaction intermediate detection", "consideration": "Broad timescale coverage from ns to seconds" },
-              { "name": "Contract Research Organizations", "useCase": "Varied transient absorption needs", "consideration": "Configuration flexibility across wavelength and temperature options" }
+              {
+                "name": "Academic Photochemistry Research",
+                "note": "Use Case: Excited-state and mechanistic studies",
+                "bullets": [
+                  "What to Consider: Wavelength range matched to your chromophores"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Photostability Testing",
+                "note": "Use Case: Degradation pathway characterization",
+                "bullets": [
+                  "What to Consider: Continuous lamp reduces sample degradation during testing"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Materials Science",
+                "note": "Use Case: Photocatalyst and photovoltaic material kinetics",
+                "bullets": [
+                  "What to Consider: Diffuse reflectance mode for solid-state samples"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Environmental Photochemistry",
+                "note": "Use Case: Reaction intermediate detection",
+                "bullets": [
+                  "What to Consider: Broad timescale coverage from ns to seconds"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Research Organizations",
+                "note": "Use Case: Varied transient absorption needs",
+                "bullets": [
+                  "What to Consider: Configuration flexibility across wavelength and temperature options"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -185,16 +278,43 @@
           },
 
           "faqs": [
-            { "question": "What is this system used for?", "answer": "It's a complete transient absorption spectrometer for laser flash photolysis, measuring short-lived excited states and reaction intermediates from nanoseconds to seconds." },
-            { "question": "Does this system include a laser?", "answer": "No, the laser is sourced separately. Everything else needed to run laser flash photolysis, the light source, monochromator, digitizer, detector, and software, is included." },
-            { "question": "Why does the system use a continuous lamp instead of pulsing it?", "answer": "Continuous illumination improves signal-to-noise, extends lamp life, gives cleaner signal baselines, improves detector linearity, and reduces sample degradation compared to pulsed-lamp operation." },
-            { "question": "How do I choose between the three wavelength range options?", "answer": "Match your chromophore's absorption range: UV (240-730nm) for standard UV-visible work, RED (310-800nm) for red-shifted species, or OF (330-800nm) for the broadest single-range coverage." },
-            { "question": "How do I set up connection-free laser synchronization?", "answer": "The system uses a fiber optic sensor for laser-sensing pre-trigger detection, so no hard-wired trigger cable is needed between the laser and the spectrometer." },
-            { "question": "What timescales can this system actually measure?", "answer": "From under 10 nanoseconds using the built-in amplifier out to millisecond-scale processes." },
-            { "question": "Can I run diffuse reflectance measurements?", "answer": "Yes, if purchased as an additional option alongside absorption mode, allowing switching between the two once both are installed." },
+            {
+              "question": "What is this system used for?",
+              "answer": "It's a complete transient absorption spectrometer for laser flash photolysis, measuring short-lived excited states and reaction intermediates from nanoseconds to seconds."
+            },
+            {
+              "question": "Does this system include a laser?",
+              "answer": "No, the laser is sourced separately. Everything else needed to run laser flash photolysis, the light source, monochromator, digitizer, detector, and software, is included."
+            },
+            {
+              "question": "Why does the system use a continuous lamp instead of pulsing it?",
+              "answer": "Continuous illumination improves signal-to-noise, extends lamp life, gives cleaner signal baselines, improves detector linearity, and reduces sample degradation compared to pulsed-lamp operation."
+            },
+            {
+              "question": "How do I choose between the three wavelength range options?",
+              "answer": "Match your chromophore's absorption range: UV (240-730nm) for standard UV-visible work, RED (310-800nm) for red-shifted species, or OF (330-800nm) for the broadest single-range coverage."
+            },
+            {
+              "question": "How do I set up connection-free laser synchronization?",
+              "answer": "The system uses a fiber optic sensor for laser-sensing pre-trigger detection, so no hard-wired trigger cable is needed between the laser and the spectrometer."
+            },
+            {
+              "question": "What timescales can this system actually measure?",
+              "answer": "From under 10 nanoseconds using the built-in amplifier out to millisecond-scale processes."
+            },
+            {
+              "question": "Can I run diffuse reflectance measurements?",
+              "answer": "Yes, if purchased as an additional option alongside absorption mode, allowing switching between the two once both are installed."
+            },
             { "question": "How long does it take to receive this system?", "answer": "Lead time runs 8 to 14 weeks from order." },
-            { "question": "What is the price of this system in India?", "answer": "Get in touch and Inkarp will put together a quote around your wavelength range, temperature control, and measurement mode." },
-            { "question": "Who is the authorized distributor of this system in India?", "answer": "Inkarp is the authorized distributor and service provider for the Luzchem Laser Flash Photolysis system in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is the price of this system in India?",
+              "answer": "Get in touch and Inkarp will put together a quote around your wavelength range, temperature control, and measurement mode."
+            },
+            {
+              "question": "Who is the authorized distributor of this system in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Luzchem Laser Flash Photolysis system in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -214,10 +334,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "Wavelength range, temperature control, and measurement mode are matched to your specific kinetics." },
-              { "title": "Installation and first-run support", "body": "Inkarp manages setup, laser integration, and first-run checks." },
-              { "title": "Operator training", "body": "Get your team confident with the control and analysis software." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows continuous-lamp measurement performance" },
+              { "title": "Configuration Assessment", "body": "Confirms the right wavelength range and temperature control" },
+              { "title": "Installation Support", "body": "Manages setup, laser integration, and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with the control and analysis software" },
+              { "title": "Preventive Maintenance", "body": "Maintains lamp, monochromator, and detector performance" },
+              { "title": "Spares and Accessories", "body": "Supplies lamps, cell holders, and fiber optic components" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -239,24 +362,53 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "LFP-412's continuous xenon lamp, digitizer, and wavelength configuration.",
-                "subheading": "Why continuous illumination beats lamp pulsing",
+                "subheading": "Overview",
                 "body": [
-                  "Most flash photolysis systems pulse the probe lamp in sync with the laser to get enough brightness during the measurement window, and that pulsing takes a toll. This system runs the lamp continuously instead.",
-                  "That single design choice pays off five ways at once: better signal-to-noise, a longer-lived lamp, cleaner signal baselines, more linear detector behavior, and less photodegradation of the sample from repeated flashing. Measurements span from nanoseconds out to full seconds, synchronization with laser pulses happens connection-free, and the whole system fits a genuinely compact footprint despite being complete and turnkey. The laser itself is sourced separately.",
-                  "Wavelength range is set at order, UV, red-extended, or the broadest OF range, with temperature control available for sensitive kinetics, and absorption and diffuse reflectance modes switchable once both are on the system."
+                  {
+                    "title": "Continuous Xenon Illumination",
+                    "text": "The xenon lamp stays continuously lit instead of pulsing with the laser, helping deliver a cleaner and more stable signal."
+                  },
+                  {
+                    "title": "Protects Your Sample",
+                    "text": "Continuous illumination avoids repeated high-intensity flashes that can contribute to unnecessary sample degradation."
+                  },
+                  { "title": "Longer Lamp Life", "text": "Keeping the lamp continuously lit also helps reduce the stress associated with repeated pulsing." },
+                  {
+                    "title": "Complete Measurement Package",
+                    "text": "The system includes the key components needed for operation, from the light source and detector to data acquisition and sample handling."
+                  },
+                  { "title": "Ceramic Xenon Light Source", "text": "Includes an ozone-free xenon lamp for stable illumination." },
+                  {
+                    "title": "Integrated Detection & Data Acquisition",
+                    "text": "A 125 mm monochromator, 70 MHz Tektronix digitizer, and photomultiplier with dedicated power supply work together for signal measurement."
+                  },
+                  {
+                    "title": "Fiber-Optic Measurement Setup",
+                    "text": "Fiber-optic connectors and a fiber-optic sensor support laser-sensing pre-trigger detection."
+                  },
+                  {
+                    "title": "Turnkey Configuration",
+                    "text": "The package includes the computer, cell holder, optics, detector, and measurement electronics needed to get started.\n The laser itself is sourced separately."
+                  },
+                  {
+                    "title": "Switch Between Measurement Modes",
+                    "text": "With both absorption and diffuse reflectance options, switching between measurement modes is straightforward."
+                  },
+                  {
+                    "title": "Connection-Free Laser Synchronization",
+                    "text": "The system synchronizes with the laser without a hard-wired trigger cable, simplifying the setup."
+                  }
                 ],
                 "cards": [
-                  { "title": "Continuous Xenon Illumination", "description": "The xenon lamp stays continuously lit instead of pulsing with the laser, helping deliver a cleaner and more stable signal." },
-                  { "title": "Protects Your Sample", "description": "Continuous illumination avoids repeated high-intensity flashes that can contribute to unnecessary sample degradation." },
-                  { "title": "Longer Lamp Life", "description": "Keeping the lamp continuously lit also helps reduce the stress associated with repeated pulsing." },
-                  { "title": "Complete Measurement Package", "description": "The system includes the key components needed for operation, from the light source and detector to data acquisition and sample handling." },
-                  { "title": "Ceramic Xenon Light Source", "description": "Includes an ozone-free xenon lamp for stable illumination." },
-                  { "title": "Integrated Detection & Data Acquisition", "description": "A 125 mm monochromator, 70 MHz Tektronix digitizer, and photomultiplier with dedicated power supply work together for signal measurement." },
-                  { "title": "Fiber-Optic Measurement Setup", "description": "Fiber-optic connectors and a fiber-optic sensor support laser-sensing pre-trigger detection." },
-                  { "title": "Turnkey Configuration", "description": "The package includes the computer, cell holder, optics, detector, and measurement electronics needed to get started. The laser itself is sourced separately." },
-                  { "title": "Switch Between Measurement Modes", "description": "With both absorption and diffuse reflectance options, switching between measurement modes is straightforward." },
-                  { "title": "Connection-Free Laser Synchronization", "description": "The system synchronizes with the laser without a hard-wired trigger cable, simplifying the setup." }
-                ]
+                  { "title": "Continuous lamp", "description": "No pulsing, better signal and lamp life" },
+                  { "title": "ns to seconds", "description": "Full transient timescale coverage" },
+                  { "title": "Turnkey", "description": "Complete system, laser sourced separately" },
+                  { "title": "Connection-free sync", "description": "No hard-wired laser trigger needed" }
+                ],
+                "glanceTitle": "System at a Glance",
+                "glanceDescription": "Compare LFP-412's light source, digitizer, detector, and configuration options.",
+                "cardsIntro": "The system at a glance.",
+                "tabSummary": "Why continuous illumination beats lamp pulsing"
               },
               {
                 "key": "config",
@@ -266,58 +418,104 @@
                 "cards": [
                   { "title": "Model", "description": "LFP-412" },
                   { "title": "Wavelength range", "description": "UV (240-730nm), RED (310-800nm), or OF (330-800nm)" },
-                  { "title": "Sample compartment", "description": "No temperature control, or temperature-controlled" },
-                  { "title": "Laser", "description": "Not included, sourced separately" },
+                  { "title": "Sample compartment", "description": "no temperature control, or temperature-controlled" },
                   { "title": "Lead time", "description": "8-14 weeks" }
-                ]
+                ],
+                "body": [
+                  "Laser not included, sourced separately",
+                  "Wavelength range and temperature control are matched to your specific kinetics"
+                ],
+                "disclaimer": "Tell us your target wavelength range and whether your kinetics need temperature control, and we'll get you the right LFP-412 configuration and lead time."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "LFP-412's continuous lamp design, connection-free laser sync, and dual measurement modes."
+                "description": "LFP-412's continuous lamp design, connection-free laser sync, and dual measurement modes.",
+                "tabSummary": "Turnkey operation, connection-free laser sync, automatic PMT optimization"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "LFP-412 supports excited-state kinetics and reaction intermediate research."
+                "description": "LFP-412 supports excited-state kinetics and reaction intermediate research.",
+                "tabSummary": "Excited-state kinetics, reaction intermediate studies"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "LFP-412 detector risetime, digitizer bandwidth, and wavelength range specifications."
+                "description": "LFP-412 detector risetime, digitizer bandwidth, and wavelength range specifications.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Time response, digitizer, and configuration figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Continuous lamp design",
                 "title": "Continuous Lamp Design and Measurement Modes",
-                "description": "Pulsing a probe lamp to match a laser sounds like the obvious approach, and it's exactly what most systems do. This one doesn't, and that difference shows up in the data. A continuously running xenon lamp gives a stable, always-on probe beam rather than one that has to fire in sync with a laser pulse. That stability is what improves signal-to-noise and gives cleaner baselines, and because the lamp isn't being repeatedly stressed by pulsing, it lasts longer and behaves more linearly as a detector reference. The sample benefits too, seeing less cumulative light exposure than it would under a pulsed lamp regime, which means less photodegradation over the course of a study.",
+                "description": "Pulsing a probe lamp to match a laser sounds like the obvious approach, and it's exactly what most systems do. This one doesn't, and that difference shows up in the data.",
                 "cards": [
                   { "title": "Clean, low-noise transient signals", "description": "Continuous lamp illumination" },
                   { "title": "A lamp that lasts through your study", "description": "No pulsing stress on the source" },
                   { "title": "Minimal sample photodegradation", "description": "Reduced cumulative light exposure" },
                   { "title": "Simple laser integration", "description": "Connection-free, fiber optic pre-trigger sync" }
-                ]
+                ],
+                "paragraphs": [
+                  "A continuously running xenon lamp gives a stable, always-on probe beam rather than one that has to fire in sync with a laser pulse. That stability is what improves signal-to-noise and gives cleaner baselines, and because the lamp isn't being repeatedly stressed by pulsing, it lasts longer and behaves more linearly as a detector reference. The sample benefits too, seeing less cumulative light exposure than it would under a pulsed lamp regime, which means less photodegradation over the course of a study."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your measurements need", "value": "How this design delivers it" },
+                "note": "Tell us whether you need absorption only or both absorption and diffuse reflectance, and we'll get you the right configuration for your kinetics work.",
+                "tabSummary": "What's gained from not pulsing the lamp"
               },
               {
                 "key": "performance",
-                "eyebrow": "Time response",
+                "eyebrow": "Time Response and System Configuration",
                 "title": "Time Response and System Configuration",
-                "description": "Getting the right configuration means matching wavelength range and thermal control to what you're actually studying.",
+                "tabSummary": "Wavelength range, temperature control, and timescale detail",
                 "body": [
                   "Getting the right configuration means matching wavelength range and thermal control to what you're actually studying."
                 ],
-                "utilityChecklist": [
-                  { "label": "Standard UV-visible transient work", "value": "UV range, 240-730nm" },
-                  { "label": "Extended into the red", "value": "RED range, 310-800nm" },
-                  { "label": "Broadest coverage available", "value": "OF range, 330-800nm" },
-                  { "label": "Temperature-sensitive kinetics", "value": "Temperature-controlled sample compartment" },
-                  { "label": "Fast events under 10 ns", "value": "Built-in amplifier for short-timescale detection" },
-                  { "label": "Slower processes out to milliseconds", "value": "Standard digitizer configuration handles this directly" }
-                ],
-                "disclaimer": "Send us your target wavelength range and whether your kinetics are temperature-sensitive, and we'll get you the right LFP-412 build."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your requirement",
+                      "Which configuration fits"
+                    ],
+                    "rows": [
+                      [
+                        "Standard UV-visible transient work",
+                        "UV range, 240-730nm"
+                      ],
+                      [
+                        "Extended into the red",
+                        "RED range, 310-800nm"
+                      ],
+                      [
+                        "Broadest coverage available",
+                        "OF range, 330-800nm"
+                      ],
+                      [
+                        "Temperature-sensitive kinetics",
+                        "Temperature-controlled sample compartment"
+                      ],
+                      [
+                        "Fast events under 10 ns",
+                        "Built-in amplifier for short-timescale detection"
+                      ],
+                      [
+                        "Slower processes out to milliseconds",
+                        "Standard digitizer configuration handles this directly"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Send us your target wavelength range and whether your kinetics are temperature-sensitive, and we'll get you the right LFP-412 build."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -327,7 +525,9 @@
                 "cards": [
                   { "title": "LFP-412 Configuration Guide", "description": "Available on request" },
                   { "title": "System Software Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Configuration options, lead time"
               }
             ],
             "cta": {
@@ -336,9 +536,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A continuous lamp design that protects the signal, the lamp, and the sample, covering nanoseconds to seconds in one turnkey system. Tell us your wavelength range and timescale requirements, and Inkarp will get you the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Most flash photolysis systems pulse the probe lamp in sync with the laser to get enough brightness during the measurement window, and that pulsing takes a toll. This system runs the lamp continuously instead.",
+              "That single design choice pays off five ways at once: better signal-to-noise, a longer-lived lamp, cleaner signal baselines, more linear detector behavior, and less photodegradation of the sample from repeated flashing. Measurements span from nanoseconds out to full seconds, synchronization with laser pulses happens connection-free, and the whole system fits a genuinely compact footprint despite being complete and turnkey. The laser itself is sourced separately.",
+              "Wavelength range is set at order, UV, red-extended, or the broadest OF range, with temperature control available for sensitive kinetics, and absorption and diffuse reflectance modes switchable once both are on the system."
+            ],
+            "heroLead": "Most flash photolysis systems pulse the probe lamp in sync with the laser to get enough brightness during the measurement window, and that pulsing takes a toll. This system runs the lamp continuously instead. That single design choice pays off five ways at once: better signal-to-noise, a longer-lived lamp, cleaner signal baselines, more linear detector behavior, and less photodegradation of the sample from repeated flashing. Measurements span from nanoseconds out to full seconds, synchronization with laser pulses happens connection-free, and the whole system fits a genuinely compact footprint despite being complete and turnkey. The laser itself is sourced separately. Wavelength range is set at order, UV, red-extended, or the broadest OF range, with temperature control available for sensitive kinetics, and absorption and diffuse reflectance modes switchable once both are on the system.",
+            "statsIntro": "LFP-412 time response, digitizer, and wavelength range specs at a glance."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

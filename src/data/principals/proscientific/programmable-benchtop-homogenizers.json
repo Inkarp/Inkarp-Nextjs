@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "proscientific",
-    "principalName": "ProScientific",
-    "countryOfOrigin": "United States of America"
-  },
+  "principal": { "slug": "proscientific", "principalName": "ProScientific", "countryOfOrigin": "United States of America" },
   "categories": [
     {
       "name": "Programmable Benchtop Homogenizers",
@@ -11,25 +7,37 @@
       "products": [
         {
           "name": "PRO400PC Programmable Benchtop Homogenizer",
+
           "slug": "pro400pc-programmable-benchtop-homogenizer",
+
           "principalImage": "/assets/images/PrincipalLogos/Proscientific.png",
+
           "imageAlt": "ProScientific PRO400PC Programmable Benchtop Homogenizer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/pro400pc-programmable-benchtop-homogenizer",
+
           "breadcrumbPath": "Home > Products > Programmable Benchtop Homogenizers > PRO400PC Programmable Benchtop Homogenizer",
+
           "h1": "PRO400PC Programmable Benchtop Homogenizer",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Repetitive homogenizing eats into lab time when every run needs manual oversight. PRO400PC is built to run that repetition on its own, exactly the same way, every time.",
 
           "features": [
-            "Up to 23 Cycles per Program: Each cycle independently defines speed, run time, and pause before the next.",
-            "Infinite Program Storage: Creates and stores an unlimited number of distinct homogenizing programs.",
-            "Keypad or Computer Programming: Programs directly from the unit, or from a laptop/desktop via RS232 with PROgrammable software.",
-            "Manual Override at Any Point: Resumes manual control mid-program without losing the automated setup.",
-            "Real-Time Data Graphing: Displays homogenization data on the computer screen as a run proceeds.",
-            "Full Process Documentation: Stores and recalls set vs. actual speed and time, for screen display or printout.",
-            "Meets Industry Verification Standards: Supports documented process verification requirements out of the box.",
-            "Motorized PRO TRAC Stand: Provides 14.5 inches of length with effortless, accurate motor positioning."
+            { "title": "Up to 23 Cycles per Program", "description": "Each cycle independently defines speed, run time, and pause before the next." },
+            { "title": "Infinite Program Storage", "description": "Creates and stores an unlimited number of distinct homogenizing programs." },
+            {
+              "title": "Keypad or Computer Programming",
+              "description": "Programs directly from the unit, or from a laptop/desktop via RS232 with PROgrammable software."
+            },
+            { "title": "Manual Override at Any Point", "description": "Resumes manual control mid-program without losing the automated setup." },
+            { "title": "Real-Time Data Graphing", "description": "Displays homogenization data on the computer screen as a run proceeds." },
+            { "title": "Full Process Documentation", "description": "Stores and recalls set vs. actual speed and time, for screen display or printout." },
+            { "title": "Meets Industry Verification Standards", "description": "Supports documented process verification requirements out of the box." },
+            { "title": "Motorized PRO TRAC Stand", "description": "Provides 14.5 inches of length with effortless, accurate motor positioning." }
           ],
 
           "technicalSpecs": [
@@ -48,11 +56,11 @@
           ],
 
           "applications": [
-            "Industrial Repetitive Homogenizing: Runs stored programs with minimal operator attention across repeated batches",
-            "Regulated Process Verification: Documented set vs. actual data meets industry verification requirements",
-            "Complex Multi-Step Protocols: Up to 23 cycles per program define varied speed and pause sequences",
-            "Pharmaceutical Compounding: Infinite program storage supports consistent, repeatable formulation processes",
-            "Quality-Controlled Manufacturing: Real-time data graphing and printable records support QC documentation"
+            { "title": "Industrial Repetitive Homogenizing", "description": "Runs stored programs with minimal operator attention across repeated batches" },
+            { "title": "Regulated Process Verification", "description": "Documented set vs. actual data meets industry verification requirements" },
+            { "title": "Complex Multi-Step Protocols", "description": "Up to 23 cycles per program define varied speed and pause sequences" },
+            { "title": "Pharmaceutical Compounding", "description": "Infinite program storage supports consistent, repeatable formulation processes" },
+            { "title": "Quality-Controlled Manufacturing", "description": "Real-time data graphing and printable records support QC documentation" }
           ],
 
           "inPageNav": [
@@ -68,32 +76,41 @@
 
           "configWizard": {
             "title": "How many distinct steps does your protocol need?",
-            "description": "Select your programming preference and application type, and see how PRO400PC fits. Share your exact cycle count and processing volume with Inkarp for final configuration.",
+            "description": "Enter your typical cycle count and processing volume, and see how PRO400PC fits.",
             "steps": [
               {
-                "key": "programmingPreference",
-                "question": "How do you prefer to build programs?",
-                "options": [
-                  { "val": "keypad-only", "label": "Keypad only" },
-                  { "val": "computer-interface", "label": "Computer interface, via RS232 and PROgrammable software" }
-                ]
+                "key": "cycleCountNeeded",
+                "label": "Cycle count needed",
+                "question": "Cycle count needed",
+                "hint": "Up to 23 per program",
+                "input": "number",
+                "options": []
               },
               {
-                "key": "applicationType",
-                "question": "What's the application type?",
+                "key": "processingVolumeInput",
+                "label": "Processing volume input",
+                "question": "Processing volume input",
+                "hint": "0.05 mL to 30 L",
+                "input": "text",
+                "options": []
+              },
+              {
+                "key": "programmingPreference",
+                "label": "Programming preference",
+                "question": "Programming preference",
+                "hint": "Keypad only or computer interface",
                 "options": [
-                  { "val": "industrial-repetitive-homogenizing", "label": "Industrial repetitive homogenizing" },
-                  { "val": "regulated-process-verification", "label": "Regulated process verification" },
-                  { "val": "complex-multi-step-protocols", "label": "Complex multi-step protocols" },
-                  { "val": "pharmaceutical-compounding", "label": "Pharmaceutical compounding" },
-                  { "val": "quality-controlled-manufacturing", "label": "Quality-controlled manufacturing" }
+                  { "val": "keypad-only", "label": "Keypad only" },
+                  { "val": "computer-interface", "label": "Computer interface" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share your typical cycle count and processing volume, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to Inkarp for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Program Complexity Selector",
+            "lead": "Confirm whether PRO400PC's cycle capacity fits your protocol.",
+            "emptyState": "Confirms PRO400PC fits your protocol complexity",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -103,6 +120,7 @@
               {
                 "key": "verificationRequirement",
                 "label": "Verification requirement",
+                "hint": "Yes or no",
                 "options": [
                   { "val": "yes", "label": "Yes" },
                   { "val": "no", "label": "No" }
@@ -111,6 +129,7 @@
               {
                 "key": "recordFormat",
                 "label": "Record format needed",
+                "hint": "Screen display, printout, or both",
                 "options": [
                   { "val": "screen-display", "label": "Screen display" },
                   { "val": "printout", "label": "Printout" },
@@ -120,6 +139,7 @@
               {
                 "key": "regulatoryContext",
                 "label": "Regulatory context",
+                "hint": "Pharmaceutical, industrial QC, or research",
                 "options": [
                   { "val": "pharmaceutical", "label": "Pharmaceutical" },
                   { "val": "industrial-qc", "label": "Industrial QC" },
@@ -132,32 +152,79 @@
                 "condition": { "verificationRequirement": "yes" },
                 "title": "PRO400PC Meets Your Verification Needs",
                 "body": "PRO400PC logs set vs. actual speed and time for every run, storable and recallable as screen display or printout, meeting industry requirements for verification of processing and documentation maintenance.",
-                "tags": ["Full Process Documentation"]
+                "tags": [
+                  "Full Process Documentation"
+                ]
               },
               {
                 "condition": { "verificationRequirement": "no" },
                 "title": "PRO400PC Still Delivers Full Process Control",
                 "body": "Even without a documentation requirement, PRO400PC's up-to-23-cycle programs and manual override give consistent, repeatable process control.",
-                "tags": ["23 Cycles per Program"]
+                "tags": [
+                  "23 Cycles per Program"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm Your Documentation Needs With Inkarp",
                 "body": "Share your verification and record-format requirements, and Inkarp will confirm how PRO400PC's data logging fits your process.",
-                "tags": ["Set vs. Actual Data Logging"]
+                "tags": [
+                  "Set vs. Actual Data Logging"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Documentation Requirement Checker",
+            "lead": "Confirm whether PRO400PC's data logging meets your process verification needs.",
+            "ctaNote": "Confirms whether PRO400PC's logging meets your requirements. Routes to Inkarp for application-specific guidance.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using PRO400PC include pharmaceutical manufacturing, industrial processing, and regulated QC laboratories.",
             "industries": [
-              { "name": "Pharmaceutical Compounding and Manufacturing", "useCase": "Running repeatable, documented compounding protocols", "consideration": "Set vs. actual data logging supports regulatory documentation needs" },
-              { "name": "Industrial Processing Facilities", "useCase": "Homogenizing repetitive batches with minimal operator attention", "consideration": "23-cycle programs handle complex multi-step industrial protocols" },
-              { "name": "Regulated Quality Control Laboratories", "useCase": "Verifying and documenting process consistency", "consideration": "Printable records support audit and verification requirements" },
-              { "name": "Contract Manufacturing Organizations", "useCase": "Running varied client protocols with saved, reusable programs", "consideration": "Infinite program storage keeps client-specific protocols separate and consistent" },
-              { "name": "Cosmetics and Personal Care Manufacturing", "useCase": "Producing consistent emulsions across production runs", "consideration": "Multi-cycle programming supports complex emulsification sequences" }
+              {
+                "name": "Pharmaceutical Compounding and Manufacturing",
+                "note": "Use Case: Running repeatable, documented compounding protocols",
+                "bullets": [
+                  "What to Consider: Set vs. actual data logging supports regulatory documentation needs"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Industrial Processing Facilities",
+                "note": "Use Case: Homogenizing repetitive batches with minimal operator attention",
+                "bullets": [
+                  "What to Consider: 23-cycle programs handle complex multi-step industrial protocols"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Regulated Quality Control Laboratories",
+                "note": "Use Case: Verifying and documenting process consistency",
+                "bullets": [
+                  "What to Consider: Printable records support audit and verification requirements"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Manufacturing Organizations",
+                "note": "Use Case: Running varied client protocols with saved, reusable programs",
+                "bullets": [
+                  "What to Consider: Infinite program storage keeps client-specific protocols separate and consistent"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetics and Personal Care Manufacturing",
+                "note": "Use Case: Producing consistent emulsions across production runs",
+                "bullets": [
+                  "What to Consider: Multi-cycle programming supports complex emulsification sequences"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -171,22 +238,56 @@
               { "title": "Preventive Maintenance", "description": "Maintains motor, stand, and interface performance" },
               { "title": "Spares and Accessories", "description": "Supplies generator probes, chamber assemblies, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "PRO400PC service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is PRO400PC used for?", "answer": "PRO400PC is a programmable benchtop homogenizer used for repetitive homogenizing in laboratory or industrial settings, supporting stored multi-step speed and time protocols." },
-            { "question": "How many cycles can one program hold?", "answer": "Each program can hold up to 23 unique cycles, with each cycle independently defining speed, run time, and pause before the next." },
+            {
+              "question": "What is PRO400PC used for?",
+              "answer": "PRO400PC is a programmable benchtop homogenizer used for repetitive homogenizing in laboratory or industrial settings, supporting stored multi-step speed and time protocols."
+            },
+            {
+              "question": "How many cycles can one program hold?",
+              "answer": "Each program can hold up to 23 unique cycles, with each cycle independently defining speed, run time, and pause before the next."
+            },
             { "question": "How many programs can be stored?", "answer": "An infinite number of programs can be created and stored on the unit." },
-            { "question": "How is PRO400PC programmed?", "answer": "Programming happens either from the unit's own keypad or from a laptop or desktop computer via RS232 serial communication, using the included PROgrammable software." },
-            { "question": "Can I switch to manual control during a program?", "answer": "Yes, the PC-Series homogenizer can be overridden and manual control resumed at any point." },
-            { "question": "Does PRO400PC support documented process verification?", "answer": "Yes, it meets industry requirements for verification of processing and documentation maintenance, with data logged as set vs. actual speed and time." },
-            { "question": "Can homogenization data be exported or printed?", "answer": "Yes, both programs and collected data can be stored and recalled for screen display or printout." },
-            { "question": "What processing volume can PRO400PC handle?", "answer": "It processes samples from 0.05 mL to 30 L, with higher volumes dependent on viscosity." },
-            { "question": "Does PRO400PC come with a generator probe?", "answer": "No, a generator probe or chamber assembly is required to operate the unit and is sold separately." },
-            { "question": "Is there an Extra Length version of PRO400PC?", "answer": "Yes, PRO400PCEL offers an Extra Length stand for taller containers, while PRO400PC includes the standard 14.5-inch PRO TRAC stand." },
-            { "question": "What is the price of PRO400PC in India?", "answer": "The price depends on the probe, chamber assembly, and software configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
-            { "question": "Who is the authorized distributor of PRO400PC in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO400PC in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "How is PRO400PC programmed?",
+              "answer": "Programming happens either from the unit's own keypad or from a laptop or desktop computer via RS232 serial communication, using the included PROgrammable software."
+            },
+            {
+              "question": "Can I switch to manual control during a program?",
+              "answer": "Yes, the PC-Series homogenizer can be overridden and manual control resumed at any point."
+            },
+            {
+              "question": "Does PRO400PC support documented process verification?",
+              "answer": "Yes, it meets industry requirements for verification of processing and documentation maintenance, with data logged as set vs. actual speed and time."
+            },
+            {
+              "question": "Can homogenization data be exported or printed?",
+              "answer": "Yes, both programs and collected data can be stored and recalled for screen display or printout."
+            },
+            {
+              "question": "What processing volume can PRO400PC handle?",
+              "answer": "It processes samples from 0.05 mL to 30 L, with higher volumes dependent on viscosity."
+            },
+            {
+              "question": "Does PRO400PC come with a generator probe?",
+              "answer": "No, a generator probe or chamber assembly is required to operate the unit and is sold separately."
+            },
+            {
+              "question": "Is there an Extra Length version of PRO400PC?",
+              "answer": "Yes, PRO400PCEL offers an Extra Length stand for taller containers, while PRO400PC includes the standard 14.5-inch PRO TRAC stand."
+            },
+            {
+              "question": "What is the price of PRO400PC in India?",
+              "answer": "The price depends on the probe, chamber assembly, and software configuration selected. Contact Inkarp for a quotation once your requirements are confirmed."
+            },
+            {
+              "question": "Who is the authorized distributor of PRO400PC in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO400PC in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -207,10 +308,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right PRO400PC setup", "body": "Tell our team how many distinct cycles your protocols typically need and whether documented process verification matters for your lab, and Inkarp will confirm the right PRO400PC setup." },
-              { "title": "Confirm PRO400PC fits your protocol structure", "body": "Tell our team the typical structure of your protocol, how many distinct speed or pause steps it needs, and Inkarp will confirm PRO400PC fits your process." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows multi-cycle programming and data logging on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms probe, program structure, and documentation setup for your process" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with program building via keypad and PROgrammable software" },
+              { "title": "Preventive Maintenance", "body": "Maintains motor, stand, and interface performance" },
+              { "title": "Spares and Accessories", "body": "Supplies generator probes, chamber assemblies, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -234,80 +338,137 @@
                 "title": "Product Information",
                 "description": "PRO400PC product information: programmable cycles, computer interface, and data verification.",
                 "body": [
-                  "Repetitive homogenizing runs with minimum operator attention once a program is built, whether in a laboratory or industrial setting.",
-                  "Programming happens either from the unit's own keypad or from a laptop or desktop computer via RS232 serial communication, using the included PROgrammable software.",
-                  "An infinite number of programs can be created and stored, each holding up to 23 unique cycles that individually define speed, run time, and the pause between cycles.",
-                  "Manual control can override an active program at any point, without needing to abandon the automated setup entirely.",
-                  "Data can be graphed directly on the computer screen as homogenization proceeds, tracking both set values and actual performance.",
-                  "Both programs and collected data, set time and set speed versus actual time and actual speed, can be stored and recalled for screen display or printout.",
-                  "This traceability meets industry requirements for verification of processing and documentation maintenance.",
-                  "Processing volume spans microliters to multi-liters, designed to homogenize, emulsify, blend, and mix organic and inorganic materials.",
-                  "The included PRO TRAC motorized stand provides 14.5 inches of length for a standard container, with effortless, accurate, and smooth motor positioning.",
-                  "A generator probe or chamber assembly is required to operate the unit and is sold separately."
+                  {
+                    "text": "Repetitive homogenizing runs with minimum operator attention once a program is built, whether in a laboratory or industrial setting."
+                  },
+                  {
+                    "text": "Programming happens either from the unit's own keypad or from a laptop or desktop computer via RS232 serial communication, using the included PROgrammable software."
+                  },
+                  {
+                    "text": "An infinite number of programs can be created and stored, each holding up to 23 unique cycles that individually define speed, run time, and the pause between cycles."
+                  },
+                  { "text": "Manual control can override an active program at any point, without needing to abandon the automated setup entirely." },
+                  { "text": "Data can be graphed directly on the computer screen as homogenization proceeds, tracking both set values and actual performance." },
+                  {
+                    "text": "Both programs and collected data, set time and set speed versus actual time and actual speed, can be stored and recalled for screen display or printout."
+                  },
+                  { "text": "This traceability meets industry requirements for verification of processing and documentation maintenance." },
+                  {
+                    "text": "Processing volume spans microliters to multi-liters, designed to homogenize, emulsify, blend, and mix organic and inorganic materials."
+                  },
+                  {
+                    "text": "The included PRO TRAC motorized stand provides 14.5 inches of length for a standard container, with effortless, accurate, and smooth motor positioning."
+                  },
+                  { "text": "A generator probe or chamber assembly is required to operate the unit and is sold separately." }
                 ],
                 "cards": [
                   { "title": "1305 W motor", "description": "Consistent power for repetitive processing" },
                   { "title": "23 cycles per program", "description": "Detailed, multi-step protocol control" },
                   { "title": "Infinite stored programs", "description": "Every protocol saved and reusable" },
                   { "title": "Full data logging", "description": "Set vs. actual speed and time, storable and printable" }
-                ]
+                ],
+                "glanceTitle": "PRO400PC at a Glance",
+                "glanceDescription": "What to know about PRO400PC: how multi-cycle programs are built and stored, computer interface and documentation capability, and motor and stand specifications.",
+                "subheading": "Overview",
+                "intro": "PRO400PC overview: programmability, documentation, and processing versatility.",
+                "tabSummary": "Why repetitive homogenizing benefits from stored programs"
               },
               {
                 "key": "config",
                 "eyebrow": "Configuration note",
                 "title": "Configuration note",
                 "cards": [
-                  { "title": "Solution", "description": "ProScientific PRO400PC Programmable Benchtop Homogenizer" },
-                  { "title": "Motor", "description": "1305 W" },
-                  { "title": "Processing volume", "description": "0.05 mL to 30 L" },
-                  { "title": "Program capacity", "description": "Infinite programs, up to 23 cycles each" },
-                  { "title": "Interface", "description": "Keypad or RS232 computer connection with PROgrammable software" }
-                ]
+                  {
+                    "title": "Solution",
+                    "description": "ProScientific PRO400PC Programmable Benchtop Homogenizer Motor: 1305 W Processing volume: 0.05 mL to 30 L Program capacity: Infinite programs, up to 23 cycles each Interface: Keypad or RS232 computer connection with PROgrammable software"
+                  }
+                ],
+                "disclaimer": "Tell our team how many distinct cycles your protocols typically need and whether documented process verification matters for your lab, and Inkarp will confirm the right PRO400PC setup."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "PRO400PC key features: multi-cycle programming, computer interface, and process documentation.",
+                "tabSummary": "23-cycle programs, computer interface, data logging"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "PRO400PC applications: industrial repetitive homogenizing, regulated documentation, and multi-step protocols."
+                "description": "PRO400PC applications: industrial repetitive homogenizing, regulated documentation, and multi-step protocols.",
+                "tabSummary": "Industrial repetitive homogenizing, regulated documentation needs"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "PRO400PC technical specifications: motor power, program capacity, and processing volume."
+                "description": "PRO400PC technical specifications: motor power, program capacity, and processing volume.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Motor power, processing volume, and program capacity"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Building and Running Multi-Cycle Programs",
                 "title": "Building and Running Multi-Cycle Programs",
-                "description": "Many homogenizing protocols aren't a single speed held for a single duration, they're a sequence: ramp up, hold, pause, adjust, repeat. PRO400PC is built to hold that entire sequence as one program rather than requiring manual re-entry at every step. Each program stores up to 23 unique cycles, and each cycle independently defines its own speed, run time, and the pause before the next cycle begins. Programs build either directly from the unit's keypad for standalone use, or from a laptop or desktop computer over RS232 serial communication using the included PROgrammable software, useful when a protocol is complex enough to benefit from a full computer interface. Because an infinite number of programs can be created and stored, every distinct protocol a lab runs gets its own saved sequence rather than being reconstructed from notes each time.",
+                "description": "How PRO400PC's 23-cycle programs and computer interface come together on a single run.",
                 "cards": [
                   { "title": "Multi-step sequences within a single run", "description": "Up to 23 cycles per program, each independently defined" },
                   { "title": "Standalone operation without a computer", "description": "Direct keypad programming" },
                   { "title": "Complex protocol setup and management", "description": "RS232 computer connection with PROgrammable software" },
                   { "title": "Every protocol saved for reuse", "description": "Infinite program storage" }
-                ]
+                ],
+                "paragraphs": [
+                  "Many homogenizing protocols aren't a single speed held for a single duration, they're a sequence: ramp up, hold, pause, adjust, repeat. PRO400PC is built to hold that entire sequence as one program rather than requiring manual re-entry at every step.",
+                  "Each program stores up to 23 unique cycles, and each cycle independently defines its own speed, run time, and the pause before the next cycle begins. Programs build either directly from the unit's keypad for standalone use, or from a laptop or desktop computer over RS232 serial communication using the included PROgrammable software, useful when a protocol is complex enough to benefit from a full computer interface. Because an infinite number of programs can be created and stored, every distinct protocol a lab runs gets its own saved sequence rather than being reconstructed from notes each time."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your protocol needs", "value": "How PRO400PC delivers it" },
+                "note": "Tell our team the typical structure of your protocol, how many distinct speed or pause steps it needs, and Inkarp will confirm PRO400PC fits your process.",
+                "tabSummary": "How speed, time, and pause combine per cycle"
               },
               {
                 "key": "performance",
                 "eyebrow": "Documentation and Process Verification",
                 "title": "Documentation and Process Verification",
+                "tabSummary": "Meeting industry requirements for traceable data",
                 "body": [
+                  "How PRO400PC's data logging supports industry-standard process verification.",
                   "Knowing a homogenization run happened isn't the same as being able to prove it ran exactly as specified, and that gap is exactly what PRO400PC's data logging is built to close.",
                   "As a run proceeds, data graphs directly on the computer screen in real time, showing the process as it happens rather than only after the fact. Both the program itself and the data collected, set time and set speed measured against actual time and actual speed, can be stored and recalled later, whether for screen display or as a printed record. That level of traceable documentation is what lets PRO PC homogenizer units meet industry requirements for verification of processing and ongoing documentation maintenance."
                 ],
-                "utilityChecklist": [
-                  { "label": "Real-time visibility into a run", "value": "Live data graphing on the computer screen" },
-                  { "label": "Proof a process ran as specified", "value": "Set vs. actual speed and time comparison" },
-                  { "label": "Retrievable historical records", "value": "Stored, recallable programs and data" },
-                  { "label": "Physical documentation for audits", "value": "Printable records" }
-                ],
-                "disclaimer": "Tell our team about your documentation or verification requirements, and Inkarp will confirm how PRO400PC's data logging fits your compliance process."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your compliance process needs",
+                      "How PRO400PC delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Real-time visibility into a run",
+                        "Live data graphing on the computer screen"
+                      ],
+                      [
+                        "Proof a process ran as specified",
+                        "Set vs. actual speed and time comparison"
+                      ],
+                      [
+                        "Retrievable historical records",
+                        "Stored, recallable programs and data"
+                      ],
+                      [
+                        "Physical documentation for audits",
+                        "Printable records"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team about your documentation or verification requirements, and Inkarp will confirm how PRO400PC's data logging fits your compliance process."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -318,7 +479,9 @@
                   { "title": "Technical Specification Sheet", "description": "Available on request" },
                   { "title": "PROgrammable Software Overview", "description": "Available on request" },
                   { "title": "Applications Literature", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Specifications, accessories, applications"
               }
             ],
             "cta": {
@@ -327,9 +490,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Up to 23 cycles per program, an infinite number of stored programs, and full process documentation for repeatable, verifiable homogenizing. Tell us your protocol complexity and documentation needs, and Inkarp will confirm the right PRO400PC setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Repetitive homogenizing eats into lab time when every run needs manual oversight. PRO400PC is built to run that repetition on its own, exactly the same way, every time.",
+              "A 1305 watt motor powers processing from 0.05 mL to 30 L, with programs stored either from the unit's own keypad or from a laptop or desktop over RS232 serial communication using the included PROgrammable software. Each program holds up to 23 unique cycles, defining speed, run time, and pause between cycles, and an infinite number of programs can be created and stored. Manual control remains available at any point, overriding whatever program is running."
+            ],
+            "statsIntro": "PRO400PC at a glance: motor power, programmability, and processing volume."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

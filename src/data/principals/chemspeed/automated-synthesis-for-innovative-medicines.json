@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "chemspeed",
-    "principalName": "Chemspeed",
-    "countryOfOrigin": "Switzerland"
-  },
+  "principal": { "slug": "chemspeed", "principalName": "Chemspeed", "countryOfOrigin": "Switzerland" },
   "categories": [
     {
       "name": "Automated Synthesis for Innovative Medicines",
@@ -11,29 +7,50 @@
       "products": [
         {
           "name": "Flex Isynth",
+
           "slug": "flex-isynth",
+
           "principalImage": "/assets/images/PrincipalLogos/Chemspeed.png",
+
           "imageAlt": "Flex Isynth - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/flex-isynth",
+
           "breadcrumbPath": "Home > Products > Automated Synthesis for Innovative Medicines > Flex Isynth",
+
           "h1": "Flex Isynth",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Materials discovery keeps demanding more experiments from the same team, the same bench, the same week. FLEX ISYNTH answers that directly, a flexible, modular, fully automated platform that unlocks virtually unrestricted \"off-road\" chemistry investigation across reaction space, reagent space, and materials space.",
 
           "features": [
-            "Disposable High-Precision Glass Reactor Arrays: Screwless, self-sealing design running reaction scales from μL to mL.",
-            "Full Unit Operation Range Per Array: Shaking, heating, cooling, reflux, vacuum, extraction, filtration, crystallization, and drying.",
-            "Proprietary Robotic Tool Exchange: Automates transitions between operations without manual handling.",
-            "Gravimetric Solid and Liquid Handling: Covers μg to g solids and mg to g / μL to mL liquids with chemistry-proven precision.",
-            "Scalable Parallel Throughput: 24, 48, 96, or more parallel reactions per run.",
-            "Integrated Online Analytics: Benchtop NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, and NIR/MIR/DLS in-line.",
-            "Integrated Online Benchtop XRD: Bruker D6 Phaser or Malvern Aeris, with sample handover station and full integration.",
-            "AUTOSUITE Drag-and-Drop Software: Fast experiment design with LIMS, ELN, and AI/ML closed-loop connectivity."
+            {
+              "title": "Disposable High-Precision Glass Reactor Arrays",
+              "description": "Screwless, self-sealing design running reaction scales from μL to mL."
+            },
+            {
+              "title": "Full Unit Operation Range Per Array",
+              "description": "Shaking, heating, cooling, reflux, vacuum, extraction, filtration, crystallization, and drying."
+            },
+            { "title": "Proprietary Robotic Tool Exchange", "description": "Automates transitions between operations without manual handling." },
+            {
+              "title": "Gravimetric Solid and Liquid Handling",
+              "description": "Covers μg to g solids and mg to g / μL to mL liquids with chemistry-proven precision."
+            },
+            { "title": "Scalable Parallel Throughput", "description": "24, 48, 96, or more parallel reactions per run." },
+            { "title": "Integrated Online Analytics", "description": "Benchtop NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, and NIR/MIR/DLS in-line." },
+            {
+              "title": "Integrated Online Benchtop XRD",
+              "description": "Bruker D6 Phaser or Malvern Aeris, with sample handover station and full integration."
+            },
+            { "title": "AUTOSUITE Drag-and-Drop Software", "description": "Fast experiment design with LIMS, ELN, and AI/ML closed-loop connectivity." }
           ],
 
           "technicalSpecs": [
-            { "label": "Product Name", "value": "Flex Isynth (with online XRD example configuration)" },
+            { "label": "Product Name", "value": "Chemspeed FLEX ISYNTH (with online XRD example configuration)" },
             { "label": "Category", "value": "Automated Synthesis for Innovative Medicines" },
             { "label": "Reaction Scale", "value": "μL to mL" },
             { "label": "Throughput", "value": "24 / 48 / 96+ parallel reactions per run" },
@@ -41,7 +58,10 @@
             { "label": "Liquid Handling", "value": "mg to g / μL to mL" },
             { "label": "Mixing", "value": "Shaking up to 1,000 rpm" },
             { "label": "Temperature Range", "value": "-20°C to 150°C" },
-            { "label": "Reactor Array Operations", "value": "Mixing, heating, cooling, reflux, vacuum, inertization, evaporation, L/L extraction, filtration, solid-phase extraction, crystallization, drying" },
+            {
+              "label": "Reactor Array Operations",
+              "value": "Mixing, heating, cooling, reflux, vacuum, inertization, evaporation, L/L extraction, filtration, solid-phase extraction, crystallization, drying"
+            },
             { "label": "Integrated Analytics", "value": "NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS" },
             { "label": "Integrated XRD Options", "value": "Bruker D6 Phaser, Malvern Aeris" },
             { "label": "Safety", "value": "Ventilated hood, conditioned operation" },
@@ -49,11 +69,11 @@
           ],
 
           "applications": [
-            "Materials Library Synthesis (MOFs, Perovskites): Parallel synthesis at 24-96+ scale with full workflow automation",
-            "Crystallization Optimization (Active Ingredients): Integrated online XRD confirms structure without manual sampling",
-            "Reaction Screening: Full unit operation range across disposable reactor arrays",
-            "Multistep Synthesis: Deck modularity handles prep through work-up in one sequence",
-            "Solid- and Liquid-Phase Synthesis: Gravimetric handling across both phases on the same platform"
+            { "title": "Materials Library Synthesis (MOFs, Perovskites)", "description": "Parallel synthesis at 24-96+ scale with full workflow automation" },
+            { "title": "Crystallization Optimization (Active Ingredients)", "description": "Integrated online XRD confirms structure without manual sampling" },
+            { "title": "Reaction Screening", "description": "Full unit operation range across disposable reactor arrays" },
+            { "title": "Multistep Synthesis", "description": "Deck modularity handles prep through work-up in one sequence" },
+            { "title": "Solid- and Liquid-Phase Synthesis", "description": "Gravimetric handling across both phases on the same platform" }
           ],
 
           "inPageNav": [
@@ -76,6 +96,7 @@
               {
                 "key": "thermalRange",
                 "label": "Thermal range needed",
+                "hint": "Heating (up to 150°C), cooling (to -20°C), or both",
                 "options": [
                   { "val": "heating", "label": "Heating (up to 150°C)" },
                   { "val": "cooling", "label": "Cooling (to -20°C)" },
@@ -83,8 +104,16 @@
                 ]
               },
               {
+                "key": "mixingIntensity",
+                "label": "Mixing intensity",
+                "hint": "Up to 1,000 rpm",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "processSteps",
-                "label": "Process steps needed",
+                "label": "Process steps",
+                "hint": "Reflux, vacuum, extraction, filtration, crystallization, drying",
                 "options": [
                   { "val": "reflux", "label": "Reflux" },
                   { "val": "vacuum", "label": "Vacuum" },
@@ -96,19 +125,47 @@
               }
             ],
             "results": [
-              { "condition": { "thermalRange": "both" }, "title": "Full Thermal Range Covered", "body": "Reactor arrays support heating up to 150°C and cooling to -20°C within the same automated sequence.", "tags": ["-20°C to 150°C"] },
-              { "condition": { "processSteps": "crystallization" }, "title": "Crystallization Is Within Reactor Array Scope", "body": "Crystallization runs alongside reflux, vacuum, extraction, filtration, and drying within the same disposable reactor array.", "tags": ["Full Unit Operation Range"] },
-              { "condition": "default", "title": "Confirm Reactor Array Coverage With Inkarp", "body": "Share the thermal range and process steps required, and Inkarp will confirm which operations run within the reactor array.", "tags": ["12 Reactor Array Operations"] }
-            ]
+              {
+                "condition": { "thermalRange": "both" },
+                "title": "Full Thermal Range Covered",
+                "body": "Reactor arrays support heating up to 150°C and cooling to -20°C within the same automated sequence.",
+                "tags": [
+                  "-20°C to 150°C"
+                ]
+              },
+              {
+                "condition": { "processSteps": "crystallization" },
+                "title": "Crystallization Is Within Reactor Array Scope",
+                "body": "Crystallization runs alongside reflux, vacuum, extraction, filtration, and drying within the same disposable reactor array.",
+                "tags": [
+                  "Full Unit Operation Range"
+                ]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm Reactor Array Coverage With Inkarp",
+                "body": "Share the thermal range and process steps required, and Inkarp will confirm which operations run within the reactor array.",
+                "tags": [
+                  "12 Reactor Array Operations"
+                ]
+              }
+            ],
+            "eyebrow": "Unit Operation Coverage Checker",
+            "ctaNote": "Confirms which operations run within the reactor array. Routes to a workflow-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "configWizard": {
             "title": "What throughput and reaction scale does the research need?",
-            "description": "Select the target parallel reaction count and phase type, and see the recommended configuration.",
+            "description": "Select the target parallel reaction count and scale, and see the recommended configuration.",
             "steps": [
               {
                 "key": "parallelReactions",
-                "question": "How many parallel reactions per run?",
+                "label": "Parallel reactions per run",
+                "question": "Parallel reactions per run",
+                "hint": "24, 48, 96, or higher",
                 "options": [
                   { "val": "24", "label": "24" },
                   { "val": "48", "label": "48" },
@@ -117,8 +174,18 @@
                 ]
               },
               {
+                "key": "reactionScale",
+                "label": "Reaction scale",
+                "question": "Reaction scale",
+                "hint": "μL to mL",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "phaseType",
-                "question": "What phase type is needed?",
+                "label": "Phase type",
+                "question": "Phase type",
+                "hint": "Solid-phase, liquid-phase, or both",
                 "options": [
                   { "val": "solid-phase", "label": "Solid-phase" },
                   { "val": "liquid-phase", "label": "Liquid-phase" },
@@ -126,10 +193,11 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Recommends the matching throughput and handling setup, then routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Throughput and Scale Selector",
+            "emptyState": "Recommends the matching throughput and handling setup",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "planners": [
@@ -142,39 +210,103 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "What structural analysis is needed?", "choices": "XRD (Bruker D6 Phaser); XRD (Malvern Aeris)" },
-                { "title": "What spectroscopy/chromatography is needed?", "choices": "NMR; HPLC (MS); UPLC (MS); GC (MS); UV-VIS; NIR/MIR/DLS" },
-                { "title": "What data system integration is needed?", "choices": "LIMS; ELN; AI/ML closed-loop" }
+                {
+                  "title": "Structural analysis need",
+                  "hint": "XRD (Bruker D6 Phaser / Malvern Aeris)",
+                  "choices": "XRD (Bruker D6 Phaser); XRD (Malvern Aeris)"
+                },
+                {
+                  "title": "Spectroscopy/chromatography need",
+                  "hint": "NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS",
+                  "choices": "NMR; HPLC (MS); UPLC (MS); GC (MS); UV-VIS; NIR/MIR/DLS"
+                },
+                { "title": "Data system integration", "hint": "LIMS, ELN, or AI/ML closed-loop", "choices": "LIMS; ELN; AI/ML closed-loop" }
               ],
-              "disclaimer": "Confirms the right integrated analytics package, then routes to an analytics-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Confirms the right integrated analytics package. Routes to an analytics-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "FLEX ISYNTH (Standard) vs. FLEX ISYNTH with Online XRD",
+            "title": "Method Comparison",
             "description": "FLEX ISYNTH comparison: standard synthesis platform versus with integrated online XRD.",
             "columns": [
               { "label": "FLEX ISYNTH (Standard)" },
               { "label": "FLEX ISYNTH with Online XRD" }
             ],
             "rows": [
-              { "feature": "Synthesis and Work-Up", "values": ["Fully automated", "Fully automated"] },
-              { "feature": "Structural Confirmation", "values": ["Manual, off-platform XRD", "Integrated, in-line XRD (D6 Phaser / Aeris)"] },
-              { "feature": "Best For", "values": ["Synthesis-focused workflows with separate analytical steps", "Materials and crystallization work needing immediate structural feedback"] },
-              { "feature": "Choose When", "values": ["XRD confirmation can happen as a separate step", "Synthesis-to-structure needs to run without manual transfer"] }
+              {
+                "feature": "Synthesis and Work-Up",
+                "values": [
+                  "Fully automated",
+                  "Fully automated"
+                ]
+              },
+              {
+                "feature": "Structural Confirmation",
+                "values": [
+                  "Manual, off-platform XRD",
+                  "Integrated, in-line XRD (D6 Phaser / Aeris)"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Synthesis-focused workflows with separate analytical steps",
+                  "Materials and crystallization work needing immediate structural feedback"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "XRD confirmation can happen as a separate step",
+                  "Synthesis-to-structure needs to run without manual transfer"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations share the same reactor array, throughput, and gravimetric handling capabilities. The difference is whether XRD analysis runs in-line or separately."
+            "disclaimer": "Both configurations share the same reactor array, throughput, and gravimetric handling capabilities. The difference is whether XRD analysis runs in-line or separately.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "FLEX ISYNTH industries: pharmaceutical R&D, materials science, and specialty chemicals.",
             "industries": [
-              { "name": "Pharmaceutical R&D", "useCase": "Innovative medicine synthesis and reaction screening", "consideration": "Full workflow automation from prep through storage" },
-              { "name": "Materials Science (MOFs, Perovskites)", "useCase": "Parallel materials library synthesis", "consideration": "Integrated XRD confirms structure in-line" },
-              { "name": "Crystallization and Active Ingredient Optimization", "useCase": "Structure-driven crystallization studies", "consideration": "Sample handover station keeps synthesis and analysis connected" },
-              { "name": "Specialty and Fine Chemicals", "useCase": "High-throughput reaction and process development", "consideration": "Scalable 24-96+ parallel throughput" }
+              {
+                "name": "Pharmaceutical R&D",
+                "note": "Use Case: Innovative medicine synthesis and reaction screening",
+                "bullets": [
+                  "What to Consider: Full workflow automation from prep through storage"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Materials Science (MOFs, Perovskites)",
+                "note": "Use Case: Parallel materials library synthesis",
+                "bullets": [
+                  "What to Consider: Integrated XRD confirms structure in-line"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Crystallization and Active Ingredient Optimization",
+                "note": "Use Case: Structure-driven crystallization studies",
+                "bullets": [
+                  "What to Consider: Sample handover station keeps synthesis and analysis connected"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Specialty and Fine Chemicals",
+                "note": "Use Case: High-throughput reaction and process development",
+                "bullets": [
+                  "What to Consider: Scalable 24-96+ parallel throughput"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -188,21 +320,49 @@
               { "title": "Preventive Maintenance", "description": "Maintains reactor arrays, robotic tool exchange, and analytics performance" },
               { "title": "Spares and Accessories", "description": "Supplies reactor arrays, robotic tooling, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "FLEX ISYNTH service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the Chemspeed FLEX ISYNTH used for?", "answer": "It's a fully automated, modular chemistry platform for materials library synthesis and crystallization optimization, running reaction preparation, synthesis, work-up, analysis, and storage transfer in one integrated workflow." },
-            { "question": "How much can it improve lab efficiency?", "answer": "Chemspeed states the platform enhances efficiency and productivity by a factor of up to 100." },
+            {
+              "question": "What is the Chemspeed FLEX ISYNTH used for?",
+              "answer": "It's a fully automated, modular chemistry platform for materials library synthesis and crystallization optimization, running reaction preparation, synthesis, work-up, analysis, and storage transfer in one integrated workflow."
+            },
+            {
+              "question": "How much can it improve lab efficiency?",
+              "answer": "Chemspeed states the platform enhances efficiency and productivity by a factor of up to 100."
+            },
             { "question": "What reaction scale does it support?", "answer": "μL to mL, using disposable, high-precision glass reactor arrays." },
             { "question": "How many parallel reactions can it run?", "answer": "24, 48, 96, or more parallel reactions per run, depending on configuration." },
-            { "question": "What unit operations can the reactor arrays perform?", "answer": "Mixing (shaking up to 1,000 rpm), heating (up to 150°C), cooling (to -20°C), reflux, vacuum, inertization, evaporation, liquid/liquid extraction, filtration, solid-phase extraction, crystallization, and drying." },
-            { "question": "Does it include structural analysis capability?", "answer": "Yes, integrated online benchtop XRD, such as Bruker D6 Phaser or Malvern Aeris, is available with a dedicated sample handover station and full integration." },
-            { "question": "What other analytics can be integrated?", "answer": "Benchtop online NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, and NIR/MIR/DLS measurement cells." },
-            { "question": "What gravimetric handling ranges does it support?", "answer": "Solid handling from μg to g, and liquid handling from mg to g / μL to mL." },
-            { "question": "What software runs the platform?", "answer": "AUTOSUITE for drag-and-drop experiment design, and ARKSUITE for broader lab orchestration, data, inventory, and workflow management." },
-            { "question": "What is the price of the FLEX ISYNTH in India?", "answer": "Get in touch and Inkarp will put together a quote based on the throughput, reactor array, and analytics configuration needed." },
-            { "question": "Who is the authorized distributor of the FLEX ISYNTH in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX ISYNTH in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What unit operations can the reactor arrays perform?",
+              "answer": "Mixing (shaking up to 1,000 rpm), heating (up to 150°C), cooling (to -20°C), reflux, vacuum, inertization, evaporation, liquid/liquid extraction, filtration, solid-phase extraction, crystallization, and drying."
+            },
+            {
+              "question": "Does it include structural analysis capability?",
+              "answer": "Yes, integrated online benchtop XRD, such as Bruker D6 Phaser or Malvern Aeris, is available with a dedicated sample handover station and full integration."
+            },
+            {
+              "question": "What other analytics can be integrated?",
+              "answer": "Benchtop online NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, and NIR/MIR/DLS measurement cells."
+            },
+            {
+              "question": "What gravimetric handling ranges does it support?",
+              "answer": "Solid handling from μg to g, and liquid handling from mg to g / μL to mL."
+            },
+            {
+              "question": "What software runs the platform?",
+              "answer": "AUTOSUITE for drag-and-drop experiment design, and ARKSUITE for broader lab orchestration, data, inventory, and workflow management."
+            },
+            {
+              "question": "What is the price of the FLEX ISYNTH in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the throughput, reactor array, and analytics configuration needed."
+            },
+            {
+              "question": "Who is the authorized distributor of the FLEX ISYNTH in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX ISYNTH in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -223,9 +383,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "Share the throughput, reaction scale, and analytics needs, and the right FLEX ISYNTH configuration gets confirmed from there." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows automated synthesis and integrated XRD analysis on real reactions" },
+              { "title": "Configuration Assessment", "body": "Confirms throughput, reactor array, and analytics setup for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with AUTOSUITE and ARKSUITE software" },
+              { "title": "Preventive Maintenance", "body": "Maintains reactor arrays, robotic tool exchange, and analytics performance" },
+              { "title": "Spares and Accessories", "body": "Supplies reactor arrays, robotic tooling, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -249,21 +413,41 @@
                 "title": "Product Information",
                 "description": "FLEX ISYNTH product information: modular automation, reactor array design, and integrated analytics.",
                 "body": [
-                  "Fully automated chemistry platform: Automates reaction preparation, multistep synthesis, work-up, purification, analysis and product transfer in one modular workflow.",
-                  "Explore more chemistry, faster: Designed for flexible investigation of reaction, reagent and materials space, with Chemspeed reporting efficiency gains of up to 100×.",
-                  "High-throughput parallel synthesis: Run 24, 48, 96 or more parallel reactions per run, depending on configuration.",
-                  "One reactor, multiple operations: Disposable glass reactor arrays support mixing, heating, cooling, reflux, vacuum, extraction, filtration, crystallization and drying without transferring samples between vessels.",
-                  "Wide reaction range: Supports reaction scales from µL to mL, with heating up to 150°C, cooling to −20°C and shaking up to 1,000 rpm.",
-                  "Precision material handling: Gravimetric solid handling from µg to g and liquid handling from mg to g / µL to mL.",
-                  "Integrated analytics: Connects with NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS and XRD for automated analysis within the workflow.",
-                  "Connected, intelligent experimentation: AUTOSUITE enables drag-and-drop experiment design and integration with LIMS, ELN, data analysis, Python and AI/ML workflows."
+                  {
+                    "title": "Fully automated chemistry platform",
+                    "text": "Automates reaction preparation, multistep synthesis, work-up, purification, analysis and product transfer in one modular workflow."
+                  },
+                  {
+                    "title": "Explore more chemistry, faster",
+                    "text": "Designed for flexible investigation of reaction, reagent and materials space, with Chemspeed reporting efficiency gains of up to 100×."
+                  },
+                  { "title": "High-throughput parallel synthesis", "text": "Run 24, 48, 96 or more parallel reactions per run, depending on configuration." },
+                  {
+                    "title": "One reactor, multiple operations",
+                    "text": "Disposable glass reactor arrays support mixing, heating, cooling, reflux, vacuum, extraction, filtration, crystallization and drying without transferring samples between vessels."
+                  },
+                  {
+                    "title": "Wide reaction range",
+                    "text": "Supports reaction scales from µL to mL, with heating up to 150°C, cooling to −20°C and shaking up to 1,000 rpm."
+                  },
+                  { "title": "Precision material handling", "text": "Gravimetric solid handling from µg to g and liquid handling from mg to g / µL to mL." },
+                  {
+                    "title": "Integrated analytics",
+                    "text": "Connects with NMR, HPLC (MS), UPLC (MS), GC (MS), UV-VIS, NIR/MIR/DLS and XRD for automated analysis within the workflow."
+                  },
+                  {
+                    "title": "Connected, intelligent experimentation",
+                    "text": "AUTOSUITE enables drag-and-drop experiment design and integration with LIMS, ELN, data analysis, Python and AI/ML workflows."
+                  }
                 ],
                 "cards": [
                   { "title": "Up to 100x efficiency", "description": "Chemspeed's stated productivity gain versus manual workflows" },
                   { "title": "Fully integrated workflow", "description": "Prep through analysis and storage, one automated sequence" },
                   { "title": "μg to g solid handling", "description": "Covers trace through gram-scale dosing" },
                   { "title": "Integrated online XRD", "description": "Structural analysis without manual sample transfer" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why \"off-road\" chemistry investigation needs full automation"
               },
               {
                 "key": "config",
@@ -282,19 +466,26 @@
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "Glass reactor arrays, robotic tool exchange, integrated analytics"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "FLEX ISYNTH applications: materials library synthesis, crystallization optimization, and high-throughput reaction screening."
+                "description": "FLEX ISYNTH applications: materials library synthesis, crystallization optimization, and high-throughput reaction screening.",
+                "tabSummary": "Materials library synthesis, crystallization optimization, reaction screening"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "FLEX ISYNTH technical specifications: reaction scale, throughput, handling range, and integrated analytics."
+                "description": "FLEX ISYNTH technical specifications: reaction scale, throughput, handling range, and integrated analytics.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Reaction scale, throughput, and handling ranges"
               },
               {
                 "key": "benefits",
@@ -305,19 +496,40 @@
                   { "title": "Broad reaction, reagent, and materials space exploration", "description": "Fully modular ISYNTH deck" },
                   { "title": "One workflow from prep through storage", "description": "Full automation across prep, synthesis, work-up, and transfer" },
                   { "title": "Flexibility across many unit operations in one vessel", "description": "Reactor arrays supporting the full operation range" }
-                ]
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your research needs", "value": "How FLEX ISYNTH delivers it" },
+                "tabSummary": "What deck modularity actually unlocks"
               },
               {
                 "key": "performance",
                 "eyebrow": "Synthesis to Structure, Without Leaving the Deck",
                 "title": "Synthesis to Structure, Without Leaving the Deck",
+                "tabSummary": "What integrated online XRD changes",
                 "body": [
                   "Move from synthesis to structural confirmation without breaking the workflow, with integrated online XRD and in-line NMR, chromatography and spectroscopy."
                 ],
-                "utilityChecklist": [
-                  { "label": "Structural confirmation without breaking the automated chain", "value": "Integrated online XRD with dedicated sample handover" },
-                  { "label": "Faster feedback between synthesis and analysis", "value": "In-line analytics across NMR, chromatography, and spectroscopy" },
-                  { "label": "One continuous, documented workflow", "value": "Full software/hardware integration from synthesis to analysis" }
+                "groups": [
+                  {
+                    "columns": [
+                      "What your workflow needs",
+                      "How FLEX ISYNTH delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Structural confirmation without breaking the automated chain",
+                        "Integrated online XRD with dedicated sample handover"
+                      ],
+                      [
+                        "Faster feedback between synthesis and analysis",
+                        "In-line analytics across NMR, chromatography, and spectroscopy"
+                      ],
+                      [
+                        "One continuous, documented workflow",
+                        "Full software/hardware integration from synthesis to analysis"
+                      ]
+                    ]
+                  }
                 ]
               },
               {
@@ -329,7 +541,9 @@
                   { "title": "FLEX ISYNTH with Online XRD Overview", "description": "Available on request" },
                   { "title": "AUTOSUITE Software Overview", "description": "Available on request" },
                   { "title": "ARKSUITE Software Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "AUTOSUITE, ARKSUITE software overviews"
               }
             ],
             "cta": {
@@ -338,35 +552,64 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Reaction prep through XRD analysis, fully automated, with a stated efficiency gain of up to 100x. Share the throughput, reaction scale, and analytics needs, and the right FLEX ISYNTH configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Materials discovery keeps demanding more experiments from the same team, the same bench, the same week. FLEX ISYNTH answers that directly, a flexible, modular, fully automated platform that unlocks virtually unrestricted \"off-road\" chemistry investigation across reaction space, reagent space, and materials space.",
+              "Deck modularity runs reaction preparation, multistep synthesis, work-up, purification, analysis, and product transfer to storage, all in one fully automated sequence, for both solid- and liquid-phase synthesis. Integrated online benchtop XRD, Bruker D6 Phaser or Malvern Aeris, closes the loop from synthesis straight to structural analysis, without moving a sample by hand. Chemspeed puts the efficiency gain at up to 100x."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Flex Autoplant",
+
           "slug": "flex-autoplant",
+
           "principalImage": "/assets/images/PrincipalLogos/Chemspeed.png",
+
           "imageAlt": "Flex Autoplant - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/flex-autoplant",
+
           "breadcrumbPath": "Home > Products > Automated Synthesis for Innovative Medicines > Flex Autoplant",
+
           "h1": "Flex Autoplant",
+
           "subhead": "Automated Process R&D and Preparative Synthesis",
+
           "overview": "Scale-up fails most often when lab-scale conditions don't actually translate to production reality. FLEX AUTOPLANT is built to close that gap, individually controlled tank reactors at 100, 240, or 1,000 mL total volume, each running its own conditions, that truly mimic the final industrial production process.",
 
           "features": [
-            "Individually Controlled Tank Reactors: 100, 240, or 1,000 mL volumes, each with independent temperature, stirring, and feed control.",
-            "Powerful, Configurable Mixing: Easily exchangeable stirrer designs handling viscosities up to 80 Pa·s.",
-            "Multiple Precision Feed Lines: Continuous liquid, liquefied gas, and gas feeds per reactor, plus unlimited overhead access.",
-            "High-Pressure Capability: Runs up to 100 bar with full corresponding safety installations.",
-            "Parallel Calorimetry and Viscosity Data: Captures process-critical data alongside the reaction itself.",
-            "Broad PAT Probe Integration: Connects to pH, UV-VIS, IR, Raman, PSD, and calorimetry probes in-situ.",
-            "Full Unit Operation Coverage: Extraction, filtration, evaporation, distillation, and crystallization, plus a Dean Stark trap and distillation bridge.",
-            "Optional Integrated Online NMR and XRD: 80 MHz Fourier RxnLite NMR or Bruker D6 Phaser / Malvern Aeris XRD, fully hardware and software integrated."
+            {
+              "title": "Individually Controlled Tank Reactors",
+              "description": "100, 240, or 1,000 mL volumes, each with independent temperature, stirring, and feed control."
+            },
+            { "title": "Powerful, Configurable Mixing", "description": "Easily exchangeable stirrer designs handling viscosities up to 80 Pa·s." },
+            {
+              "title": "Multiple Precision Feed Lines",
+              "description": "Continuous liquid, liquefied gas, and gas feeds per reactor, plus unlimited overhead access."
+            },
+            { "title": "High-Pressure Capability", "description": "Runs up to 100 bar with full corresponding safety installations." },
+            { "title": "Parallel Calorimetry and Viscosity Data", "description": "Captures process-critical data alongside the reaction itself." },
+            { "title": "Broad PAT Probe Integration", "description": "Connects to pH, UV-VIS, IR, Raman, PSD, and calorimetry probes in-situ." },
+            {
+              "title": "Full Unit Operation Coverage",
+              "description": "Extraction, filtration, evaporation, distillation, and crystallization, plus a Dean Stark trap and distillation bridge."
+            },
+            {
+              "title": "Optional Integrated Online NMR and XRD",
+              "description": "80 MHz Fourier RxnLite NMR or Bruker D6 Phaser / Malvern Aeris XRD, fully hardware and software integrated."
+            }
           ],
 
           "technicalSpecs": [
-            { "label": "Product Name", "value": "Flex Autoplant" },
+            { "label": "Product Name", "value": "Chemspeed FLEX AUTOPLANT" },
             { "label": "Category", "value": "Automated Synthesis for Innovative Medicines" },
             { "label": "Reactor Volumes", "value": "100, 240, 1,000 mL (individually controlled)" },
             { "label": "Syntheses Per Run", "value": "Up to 6, including prep, execution, work-up, and analysis" },
@@ -384,12 +627,12 @@
           ],
 
           "applications": [
-            "Pharmaceutical Process R&D: End-to-end scale-up mimicry from lab to production conditions",
-            "Agrochemical Development: Organic and inorganic synthesis under real process conditions",
-            "Polymer and Specialty Chemical R&D: High-viscosity mixing up to 80 Pa·s",
-            "Catalyst Development: Precise, independent reactor control for comparative studies",
-            "Cathode and Battery Storage Materials: High-pressure and controlled-atmosphere reaction capability",
-            "Photovoltaic Materials Research: Crystallization and preparative synthesis in one workflow"
+            { "title": "Pharmaceutical Process R&D", "description": "End-to-end scale-up mimicry from lab to production conditions" },
+            { "title": "Agrochemical Development", "description": "Organic and inorganic synthesis under real process conditions" },
+            { "title": "Polymer and Specialty Chemical R&D", "description": "High-viscosity mixing up to 80 Pa·s" },
+            { "title": "Catalyst Development", "description": "Precise, independent reactor control for comparative studies" },
+            { "title": "Cathode and Battery Storage Materials", "description": "High-pressure and controlled-atmosphere reaction capability" },
+            { "title": "Photovoltaic Materials Research", "description": "Crystallization and preparative synthesis in one workflow" }
           ],
 
           "inPageNav": [
@@ -412,6 +655,7 @@
               {
                 "key": "nmrNeed",
                 "label": "NMR need",
+                "hint": "Yes (80 MHz Fourier RxnLite) or no",
                 "options": [
                   { "val": "yes", "label": "Yes (80 MHz Fourier RxnLite)" },
                   { "val": "no", "label": "No" }
@@ -420,6 +664,7 @@
               {
                 "key": "xrdNeed",
                 "label": "XRD need",
+                "hint": "Yes (D6 Phaser / Aeris) or no",
                 "options": [
                   { "val": "yes", "label": "Yes (D6 Phaser / Aeris)" },
                   { "val": "no", "label": "No" }
@@ -428,8 +673,9 @@
               {
                 "key": "patProbeRequirement",
                 "label": "PAT probe requirement",
+                "hint": "pH, UV-VIS, IR, Raman, PSD, calorimetry, or combination",
                 "options": [
-                  { "val": "ph", "label": "pH" },
+                  { "val": "ph", "label": "PH" },
                   { "val": "uv-vis", "label": "UV-VIS" },
                   { "val": "ir", "label": "IR" },
                   { "val": "raman", "label": "Raman" },
@@ -440,11 +686,44 @@
               }
             ],
             "results": [
-              { "condition": { "nmrNeed": "yes" }, "title": "Integrated NMR Fits Without Cryogen Logistics", "body": "The 80 MHz Fourier RxnLite uses a permanent magnet design, with no liquid nitrogen or helium required.", "tags": ["Permanent Magnet NMR"] },
-              { "condition": { "xrdNeed": "yes" }, "title": "Integrated XRD Confirms Structure In-Line", "body": "Bruker D6 Phaser or Malvern Aeris XRD is fully hardware and software integrated into the same automated workflow.", "tags": ["Integrated XRD"] },
-              { "condition": { "patProbeRequirement": "combination" }, "title": "Multiple PAT Probes Can Run Together", "body": "pH, UV-VIS, IR, Raman, PSD, and calorimetry probes all connect in-situ alongside the reaction.", "tags": ["Broad PAT Integration"] },
-              { "condition": "default", "title": "Confirm the Right Integrated Analytics Package With Inkarp", "body": "Share the NMR, XRD, and PAT requirements, and Inkarp will confirm the right integrated analytics package.", "tags": ["Optional NMR / XRD"] }
-            ]
+              {
+                "condition": { "nmrNeed": "yes" },
+                "title": "Integrated NMR Fits Without Cryogen Logistics",
+                "body": "The 80 MHz Fourier RxnLite uses a permanent magnet design, with no liquid nitrogen or helium required.",
+                "tags": [
+                  "Permanent Magnet NMR"
+                ]
+              },
+              {
+                "condition": { "xrdNeed": "yes" },
+                "title": "Integrated XRD Confirms Structure In-Line",
+                "body": "Bruker D6 Phaser or Malvern Aeris XRD is fully hardware and software integrated into the same automated workflow.",
+                "tags": [
+                  "Integrated XRD"
+                ]
+              },
+              {
+                "condition": { "patProbeRequirement": "combination" },
+                "title": "Multiple PAT Probes Can Run Together",
+                "body": "pH, UV-VIS, IR, Raman, PSD, and calorimetry probes all connect in-situ alongside the reaction.",
+                "tags": [
+                  "Broad PAT Integration"
+                ]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Integrated Analytics Package With Inkarp",
+                "body": "Share the NMR, XRD, and PAT requirements, and Inkarp will confirm the right integrated analytics package.",
+                "tags": [
+                  "Optional NMR / XRD"
+                ]
+              }
+            ],
+            "eyebrow": "Integrated Analytics Selector",
+            "ctaNote": "Confirms the right integrated analytics package. Routes to an analytics-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "configWizard": {
@@ -453,7 +732,9 @@
             "steps": [
               {
                 "key": "reactorVolume",
-                "question": "What reactor volume is needed?",
+                "label": "Reactor volume",
+                "question": "Reactor volume",
+                "hint": "100 mL, 240 mL, or 1,000 mL",
                 "options": [
                   { "val": "100ml", "label": "100 mL" },
                   { "val": "240ml", "label": "240 mL" },
@@ -461,20 +742,27 @@
                 ]
               },
               {
+                "key": "pressureRequirement",
+                "label": "Pressure requirement",
+                "question": "Pressure requirement",
+                "hint": "Up to 100 bar",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "temperatureDifference",
-                "question": "What temperature difference is needed between adjacent reactors?",
-                "options": [
-                  { "val": "minimal", "label": "Minimal difference (under 40°C)" },
-                  { "val": "moderate", "label": "Moderate difference (40–90°C)" },
-                  { "val": "large", "label": "Large difference, near maximum (90–130°C)" },
-                  { "val": "beyond-130", "label": "Beyond 130°C — requires active cooling" }
-                ]
+                "label": "Temperature range/difference needed",
+                "question": "Temperature range/difference needed",
+                "hint": "Number input",
+                "input": "number",
+                "options": []
               }
             ],
-            "result": {
-              "ctaNote": "Recommends the reactor and safety configuration, then routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Reactor Configuration Selector",
+            "emptyState": "Recommends reactor and safety configuration",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "planners": [
@@ -482,44 +770,104 @@
               "sectionId": "mixing-and-feed-complexity-planner",
               "eyebrow": "Mixing and Feed Complexity Planner",
               "title": "How viscous is the process, and how many feeds does it need?",
-              "description": "Select the target viscosity range and feed types, and see the recommended stirrer and feed setup.",
+              "description": "Enter the target viscosity and feed types, and see the recommended stirrer and feed setup.",
               "fields": [
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "What's the target viscosity?", "choices": "Under 30 Pa·s (fast mixing, up to 900 rpm); 30–80 Pa·s (standard anchor stirrer range at 300 rpm); Up to 80 Pa·s (maximum rated capacity)" },
-                { "title": "What stirrer type is preferred?", "choices": "Anchor; Twisted blade; Gas entrainment; Other" },
-                { "title": "What feed types are needed?", "choices": "Liquid; Liquefied gas; Gas; Combination" }
+                { "title": "Target viscosity (Pa·s)", "hint": "Number input, up to 80 Pa·s", "input": "number", "choices": "" },
+                {
+                  "title": "Stirrer type",
+                  "hint": "Anchor, twisted blade, gas entrainment, or other",
+                  "choices": "Anchor; Twisted blade; Gas entrainment; Other"
+                },
+                { "title": "Feed types needed", "hint": "Liquid, liquefied gas, gas, or combination", "choices": "Liquid; Liquefied gas; Gas; Combination" }
               ],
-              "disclaimer": "Confirms the stirrer and feed line configuration, then routes to a process-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Confirms stirrer and feed line configuration. Routes to a process-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "FLEX AUTOPLANT (Standard) vs. FLEX AUTOPLANT with NMR/XRD",
+            "title": "Method Comparison",
             "description": "FLEX AUTOPLANT comparison: standard configuration versus with integrated NMR/XRD.",
             "columns": [
               { "label": "FLEX AUTOPLANT (Standard)" },
               { "label": "FLEX AUTOPLANT with NMR/XRD" }
             ],
             "rows": [
-              { "feature": "Reaction Monitoring", "values": ["PAT probes, calorimetry, viscosity data", "Same, plus in-line structural/spectroscopic confirmation"] },
-              { "feature": "Analytical Turnaround", "values": ["Separate, off-platform analysis", "In-line, same automated sequence"] },
-              { "feature": "Best For", "values": ["Process R&D with external analytical workflows", "Process R&D needing immediate structural feedback"] },
-              { "feature": "Choose When", "values": ["Analytical confirmation can run as a separate step", "Reaction and structural analysis need to stay in one workflow"] }
+              {
+                "feature": "Reaction Monitoring",
+                "values": [
+                  "PAT probes, calorimetry, viscosity data",
+                  "Same, plus in-line structural/spectroscopic confirmation"
+                ]
+              },
+              {
+                "feature": "Analytical Turnaround",
+                "values": [
+                  "Separate, off-platform analysis",
+                  "In-line, same automated sequence"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Process R&D with external analytical workflows",
+                  "Process R&D needing immediate structural feedback"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Analytical confirmation can run as a separate step",
+                  "Reaction and structural analysis need to stay in one workflow"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations share the same reactor architecture, pressure and temperature range, and mixing capability. The difference is whether NMR or XRD analysis runs in-line."
+            "disclaimer": "Both configurations share the same reactor architecture, pressure and temperature range, and mixing capability. The difference is whether NMR or XRD analysis runs in-line.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "FLEX AUTOPLANT industries: pharmaceutical process R&D, specialty chemicals, and energy materials.",
             "industries": [
-              { "name": "Pharmaceutical Process R&D", "useCase": "Scale-up and process optimization", "consideration": "Individually controlled reactors mimic real production conditions" },
-              { "name": "Specialty Chemicals and Catalysts", "useCase": "Comparative reaction studies under varied conditions", "consideration": "130°C temperature difference between adjacent reactors" },
-              { "name": "Battery and Cathode Materials", "useCase": "High-pressure, controlled-atmosphere synthesis", "consideration": "Pressure up to 100 bar with full safety installations" },
-              { "name": "Photovoltaic Materials Research", "useCase": "Preparative synthesis and crystallization", "consideration": "Optional XRD confirms structure without manual transfer" }
+              {
+                "name": "Pharmaceutical Process R&D",
+                "note": "Use Case: Scale-up and process optimization",
+                "bullets": [
+                  "What to Consider: Individually controlled reactors mimic real production conditions"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Specialty Chemicals and Catalysts",
+                "note": "Use Case: Comparative reaction studies under varied conditions",
+                "bullets": [
+                  "What to Consider: 130°C temperature difference between adjacent reactors"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Battery and Cathode Materials",
+                "note": "Use Case: High-pressure, controlled-atmosphere synthesis",
+                "bullets": [
+                  "What to Consider: Pressure up to 100 bar with full safety installations"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Photovoltaic Materials Research",
+                "note": "Use Case: Preparative synthesis and crystallization",
+                "bullets": [
+                  "What to Consider: Optional XRD confirms structure without manual transfer"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -533,21 +881,43 @@
               { "title": "Preventive Maintenance", "description": "Maintains reactors, stirrers, feed lines, and analytics performance" },
               { "title": "Spares and Accessories", "description": "Supplies stirrer designs, feed line components, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "FLEX AUTOPLANT service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the Chemspeed FLEX AUTOPLANT used for?", "answer": "It's an automated process R&D and preparative synthesis workstation built for high-output experimentation in developing and optimizing pharmaceuticals, agrochemicals, polymers, catalysts, and energy materials, with reactors that mimic real production conditions." },
+            {
+              "question": "What is the Chemspeed FLEX AUTOPLANT used for?",
+              "answer": "It's an automated process R&D and preparative synthesis workstation built for high-output experimentation in developing and optimizing pharmaceuticals, agrochemicals, polymers, catalysts, and energy materials, with reactors that mimic real production conditions."
+            },
             { "question": "How many reactor volumes are available?", "answer": "Three: 100, 240, and 1,000 mL, each individually controlled." },
             { "question": "How many syntheses can run per session?", "answer": "Up to 6, covering reaction prep, execution, work-up, and analysis." },
             { "question": "What pressure can the reactors handle?", "answer": "Up to 100 bar, with corresponding safety installations." },
-            { "question": "How different can conditions be between adjacent reactors?", "answer": "Up to a 130°C temperature difference, with active cooling available beyond that." },
+            {
+              "question": "How different can conditions be between adjacent reactors?",
+              "answer": "Up to a 130°C temperature difference, with active cooling available beyond that."
+            },
             { "question": "What viscosities can the system mix?", "answer": "Up to 80 Pa·s at 300 rpm, or 30 Pa·s at 900 rpm, using an anchor stirrer." },
-            { "question": "Can the platform monitor reactions in real time?", "answer": "Yes, through parallel calorimetry and viscosity data, plus PAT interfaces to pH, UV-VIS, IR, Raman, and PSD probes." },
-            { "question": "Does it include in-line structural analysis?", "answer": "Optionally, yes, integrated online benchtop NMR (80 MHz Fourier RxnLite) or integrated online benchtop XRD (Bruker D6 Phaser, Malvern Aeris) can be added." },
-            { "question": "Does the NMR option require liquid nitrogen or helium?", "answer": "No, it uses a permanent magnet design, with no liquid nitrogen or helium required." },
-            { "question": "What is the price of the FLEX AUTOPLANT in India?", "answer": "Get in touch and Inkarp will put together a quote based on the reactor configuration and optional analytics needed." },
-            { "question": "Who is the authorized distributor of the FLEX AUTOPLANT in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX AUTOPLANT in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Can the platform monitor reactions in real time?",
+              "answer": "Yes, through parallel calorimetry and viscosity data, plus PAT interfaces to pH, UV-VIS, IR, Raman, and PSD probes."
+            },
+            {
+              "question": "Does it include in-line structural analysis?",
+              "answer": "Optionally, yes, integrated online benchtop NMR (80 MHz Fourier RxnLite) or integrated online benchtop XRD (Bruker D6 Phaser, Malvern Aeris) can be added."
+            },
+            {
+              "question": "Does the NMR option require liquid nitrogen or helium?",
+              "answer": "No, it uses a permanent magnet design, with no liquid nitrogen or helium required."
+            },
+            {
+              "question": "What is the price of the FLEX AUTOPLANT in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the reactor configuration and optional analytics needed."
+            },
+            {
+              "question": "Who is the authorized distributor of the FLEX AUTOPLANT in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed FLEX AUTOPLANT in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -568,9 +938,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "Share the reactor volume, pressure, and analytics needs, and the right FLEX AUTOPLANT configuration gets confirmed from there." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows independent reactor control and mixing performance on real processes" },
+              { "title": "Configuration Assessment", "body": "Confirms reactor volume, pressure, and analytics setup for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with AUTOSUITE and ARKSUITE software" },
+              { "title": "Preventive Maintenance", "body": "Maintains reactors, stirrers, feed lines, and analytics performance" },
+              { "title": "Spares and Accessories", "body": "Supplies stirrer designs, feed line components, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -594,22 +968,51 @@
                 "title": "Product Information",
                 "description": "FLEX AUTOPLANT product information: independent reactor control, pressure and temperature range, and integrated analytics.",
                 "body": [
-                  "End-to-end process R&D platform: Supports synthesis, reaction development, work-up, crystallization and scale-up across pharma, agrochemical, polymer, catalyst, battery and specialty chemical workflows.",
-                  "Up to 6 parallel syntheses: Run up to 6 independent reactions in one session, with each reactor controlled separately.",
-                  "Production-relevant reactor control: Available in 100, 240 and 1,000 mL reactor volumes with independent temperature, stirring and continuous feed control.",
-                  "Flexible reaction conditions: Supports temperatures, pressures up to 100 bar, multiple liquid, gas and liquefied gas feeds, and viscosity handling up to 80 Pa·s.",
-                  "Mixing matched to the chemistry: Interchangeable stirrer designs including anchor, twisted blade and gas entrainment options.",
-                  "Integrated process monitoring: Capture calorimetry and viscosity data alongside PAT measurements including pH, UV-VIS, IR, Raman and PSD.",
-                  "Built for complex workflows: Supports extraction, filtration, evaporation, distillation, crystallization, vacuum operations, gas consumption measurement and Dean Stark water trapping.",
-                  "Connected experimentation: AUTOSUITE enables drag-and-drop experiment design and integration with LIMS, ELN, Python, AI and ML workflows.",
-                  "Optional in-line analysis: Integrated online 80 MHz NMR and XRD options extend reaction monitoring and structural analysis within the same automated workflow."
+                  {
+                    "title": "End-to-end process R&D platform",
+                    "text": "Supports synthesis, reaction development, work-up, crystallization and scale-up across pharma, agrochemical, polymer, catalyst, battery and specialty chemical workflows."
+                  },
+                  {
+                    "title": "Up to 6 parallel syntheses",
+                    "text": "Run up to 6 independent reactions in one session, with each reactor controlled separately."
+                  },
+                  {
+                    "title": "Production-relevant reactor control",
+                    "text": "Available in 100, 240 and 1,000 mL reactor volumes with independent temperature, stirring and continuous feed control."
+                  },
+                  {
+                    "title": "Flexible reaction conditions",
+                    "text": "Supports temperatures, pressures up to 100 bar, multiple liquid, gas and liquefied gas feeds, and viscosity handling up to 80 Pa·s."
+                  },
+                  {
+                    "title": "Mixing matched to the chemistry",
+                    "text": "Interchangeable stirrer designs including anchor, twisted blade and gas entrainment options."
+                  },
+                  {
+                    "title": "Integrated process monitoring",
+                    "text": "Capture calorimetry and viscosity data alongside PAT measurements including pH, UV-VIS, IR, Raman and PSD."
+                  },
+                  {
+                    "title": "Built for complex workflows",
+                    "text": "Supports extraction, filtration, evaporation, distillation, crystallization, vacuum operations, gas consumption measurement and Dean Stark water trapping."
+                  },
+                  {
+                    "title": "Connected experimentation",
+                    "text": "AUTOSUITE enables drag-and-drop experiment design and integration with LIMS, ELN, Python, AI and ML workflows."
+                  },
+                  {
+                    "title": "Optional in-line analysis",
+                    "text": "Integrated online 80 MHz NMR and XRD options extend reaction monitoring and structural analysis within the same automated workflow."
+                  }
                 ],
                 "cards": [
                   { "title": "Individually controlled reactors", "description": "Each vessel runs its own real process conditions" },
                   { "title": "Up to 100 bar pressure", "description": "Handles genuine high-pressure reaction chemistry" },
                   { "title": "130°C swing between reactors", "description": "True parallel process diversity, not shared conditions" },
                   { "title": "Optional in-line NMR / XRD", "description": "Reaction and structural analysis without manual transfer" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why individually controlled reactors matter for real scale-up"
               },
               {
                 "key": "config",
@@ -628,19 +1031,26 @@
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "Stirrer options, PAT interfaces, calorimetry, optional NMR/XRD"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "FLEX AUTOPLANT applications: pharmaceuticals, agrochemicals, polymers, catalysts, and energy materials."
+                "description": "FLEX AUTOPLANT applications: pharmaceuticals, agrochemicals, polymers, catalysts, and energy materials.",
+                "tabSummary": "Pharma, agrochemicals, polymers, catalysts, battery and PV materials"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "FLEX AUTOPLANT technical specifications: reactor volumes, pressure, temperature, and mixing capacity."
+                "description": "FLEX AUTOPLANT technical specifications: reactor volumes, pressure, temperature, and mixing capacity.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Reactor volumes, pressure, temperature, and mixing capacity"
               },
               {
                 "key": "benefits",
@@ -648,23 +1058,47 @@
                 "title": "Reactors That Behave Like Production, Not Like a Flask",
                 "description": "Run production-relevant chemistry with individually controlled reactors, independent feeds, viscosity handling up to 80 Pa·s, and pressures up to 100 bar.",
                 "cards": [
-                  { "title": "Reactors that don't compromise toward shared conditions", "description": "Individually controlled tank reactors, up to 130°C difference" },
+                  {
+                    "title": "Reactors that don't compromise toward shared conditions",
+                    "description": "Individually controlled tank reactors, up to 130°C difference"
+                  },
                   { "title": "Genuine multi-feed process complexity", "description": "Multiple continuous liquid, gas, and liquefied gas feeds per reactor" },
                   { "title": "Confidence that high-pressure chemistry translates safely", "description": "Up to 100 bar with full safety installations" },
                   { "title": "Real viscosity handling at process-relevant scale", "description": "Mixing up to 80 Pa·s with exchangeable stirrer designs" }
-                ]
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your scale-up process needs", "value": "How FLEX AUTOPLANT delivers it" },
+                "tabSummary": "What true process mimicry actually requires"
               },
               {
                 "key": "performance",
                 "eyebrow": "From Reaction to Structure, In-Line",
                 "title": "From Reaction to Structure, In-Line",
+                "tabSummary": "What optional NMR and XRD integration unlocks",
                 "body": [
                   "Bring reaction and structural analysis into one automated workflow with optional integrated NMR, XRD, calorimetry, viscosity and PAT data."
                 ],
-                "utilityChecklist": [
-                  { "label": "Fast structural confirmation without a separate analytical step", "value": "Optional integrated online NMR or XRD" },
-                  { "label": "No liquid nitrogen or helium logistics for NMR", "value": "Permanent magnet Fourier RxnLite design" },
-                  { "label": "Real-time process data beyond yield alone", "value": "Parallel calorimetry, viscosity, and PAT probe data" }
+                "groups": [
+                  {
+                    "columns": [
+                      "What your workflow needs",
+                      "How FLEX AUTOPLANT delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Fast structural confirmation without a separate analytical step",
+                        "Optional integrated online NMR or XRD"
+                      ],
+                      [
+                        "No liquid nitrogen or helium logistics for NMR",
+                        "Permanent magnet Fourier RxnLite design"
+                      ],
+                      [
+                        "Real-time process data beyond yield alone",
+                        "Parallel calorimetry, viscosity, and PAT probe data"
+                      ]
+                    ]
+                  }
                 ]
               },
               {
@@ -676,7 +1110,9 @@
                   { "title": "FLEX AUTOPLANT Overview", "description": "Available on request" },
                   { "title": "AUTOSUITE Software Overview", "description": "Available on request" },
                   { "title": "ARKSUITE Software Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "AUTOSUITE, ARKSUITE software overviews"
               }
             ],
             "cta": {
@@ -685,35 +1121,69 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Individually controlled reactors, up to 100 bar, and a 130°C swing between neighbors, all built to truly mimic production scale. Share the reactor volume, pressure, and analytics needs, and the right FLEX AUTOPLANT configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Scale-up fails most often when lab-scale conditions don't actually translate to production reality. FLEX AUTOPLANT is built to close that gap, individually controlled tank reactors at 100, 240, or 1,000 mL total volume, each running its own conditions, that truly mimic the final industrial production process.",
+              "Up to 6 syntheses run per single session, reaction prep through work-up and analysis, with independent temperature and stirring control per reactor, a 130°C temperature difference possible between adjacent vessels, and pressure up to 100 bar with full safety installations. Powerful mixing handles viscosities up to 80 Pa·s, and optional integrated online NMR or XRD close the loop from reaction straight to structural confirmation."
+            ]
+          },
+
+          "heroBadge": "Automated Process R&D and Preparative Synthesis",
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Swing Sp",
+
           "slug": "swing-sp",
+
           "principalImage": "/assets/images/PrincipalLogos/Chemspeed.png",
+
           "imageAlt": "Swing Sp - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/swing-sp",
+
           "breadcrumbPath": "Home > Products > Automated Synthesis for Innovative Medicines > Swing Sp",
+
           "h1": "Swing Sp",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Every gravimetric dispensing platform faces the same bottleneck: weighing means getting the vessel onto a balance. Move the plate, move the vial, move the reactor, weigh, move it back. Multiply that across a few hundred samples and the transfer steps cost more time than the dispensing does.",
 
           "features": [
-            "Patented Overhead Gravimetric Dispensing: The balance travels to the destination, so vials, plates, and reactors never move during dispensing.",
-            "Selectable Balance Resolution: 1 mg, 0.1 mg, or 0.01 mg, matched to the precision the application actually needs.",
-            "Wide Dispensing Range: From a few milligrams up to several grams on the same platform, without changing approach.",
-            "Broad Material Compatibility: Liquids, solids, powders, granulates, spheres, low- and high-viscosity materials, and waxes.",
-            "4-Needle Head for Liquid Handling: Volumetric liquid handling and sampling alongside the gravimetric dispensing capability.",
-            "Any Destination Format: Vials, tubes, plates, and reactors, in the rack or reactor format of the user's choice.",
-            "Combinable Robotic Tooling: The dispensing tool pairs with other tools so one system covers multiple workflows.",
-            "Read-Only Process Logging: Dispensed amount, mixing speed, temperature, time, and more captured automatically.",
-            "AUTOSUITE Drag-and-Drop Design: Design, execute, analyze, and report experiments without programming.",
-            "Prebuilt and Custom Workflows: Start from a prebuilt workflow or assemble predefined tasks into a bespoke application.",
-            "Broad Integration Interfaces: DOE, ML, AI, LIMS, ELN, and ERP connectivity out of the platform.",
-            "ARKSUITE Lab Orchestration: Coordinates multiple Chemspeed systems and manual processes within one centralized environment."
+            {
+              "title": "Patented Overhead Gravimetric Dispensing",
+              "description": "The balance travels to the destination, so vials, plates, and reactors never move during dispensing."
+            },
+            { "title": "Selectable Balance Resolution", "description": "1 mg, 0.1 mg, or 0.01 mg, matched to the precision the application actually needs." },
+            { "title": "Wide Dispensing Range", "description": "From a few milligrams up to several grams on the same platform, without changing approach." },
+            {
+              "title": "Broad Material Compatibility",
+              "description": "Liquids, solids, powders, granulates, spheres, low- and high-viscosity materials, and waxes."
+            },
+            {
+              "title": "4-Needle Head for Liquid Handling",
+              "description": "Volumetric liquid handling and sampling alongside the gravimetric dispensing capability."
+            },
+            { "title": "Any Destination Format", "description": "Vials, tubes, plates, and reactors, in the rack or reactor format of the user's choice." },
+            { "title": "Combinable Robotic Tooling", "description": "The dispensing tool pairs with other tools so one system covers multiple workflows." },
+            { "title": "Read-Only Process Logging", "description": "Dispensed amount, mixing speed, temperature, time, and more captured automatically." },
+            { "title": "AUTOSUITE Drag-and-Drop Design", "description": "Design, execute, analyze, and report experiments without programming." },
+            {
+              "title": "Prebuilt and Custom Workflows",
+              "description": "Start from a prebuilt workflow or assemble predefined tasks into a bespoke application."
+            },
+            { "title": "Broad Integration Interfaces", "description": "DOE, ML, AI, LIMS, ELN, and ERP connectivity out of the platform." },
+            {
+              "title": "ARKSUITE Lab Orchestration",
+              "description": "Coordinates multiple Chemspeed systems and manual processes within one centralized environment."
+            }
           ],
 
           "technicalSpecs": [
@@ -731,20 +1201,23 @@
             { "label": "Control Software", "value": "AUTOSUITE, drag-and-drop experiment design with data analysis interface" },
             { "label": "Orchestration Software", "value": "ARKSUITE, coordinating multiple Chemspeed systems and manual processes" },
             { "label": "Integration Interfaces", "value": "DOE, ML, AI, LIMS, ELN, ERP" },
-            { "label": "Detailed System Specifications", "value": "Available on request — deck capacity, throughput, and dimensions not published on the product page" }
+            {
+              "label": "Detailed System Specifications",
+              "value": "Available on request — deck capacity, throughput, and dimensions not published on the product page"
+            }
           ],
 
           "applications": [
-            "Analytical Sample Preparation: Gravimetric dispensing into vials and plates without moving the destination",
-            "Quality Control Testing: Read-only logging with LIMS integration for traceable, repeatable preparation",
-            "Preformulation Studies: Wide dispensing range and material compatibility across formulation components",
-            "High-Throughput Sample Prep: Moving balance removes transfer steps from every dispensing operation",
-            "Powder and Solid Dispensing: Gravimetric handling of powders, granulates, and spheres",
-            "Viscous and Wax Material Handling: Dispensing across low-viscous through highly-viscous materials and waxes",
-            "Design of Experiments (DOE) Workflows: DOE interface feeding experimental designs directly into execution",
-            "Machine Learning and AI-Driven Research: ML and AI interfaces connecting automated execution to model-driven design",
-            "Standard Solution and Standard Preparation: 0.01 mg resolution for precise standard preparation",
-            "Multi-Workflow Laboratories: Combinable tooling accommodating several workflows on one platform"
+            { "title": "Analytical Sample Preparation", "description": "Gravimetric dispensing into vials and plates without moving the destination" },
+            { "title": "Quality Control Testing", "description": "Read-only logging with LIMS integration for traceable, repeatable preparation" },
+            { "title": "Preformulation Studies", "description": "Wide dispensing range and material compatibility across formulation components" },
+            { "title": "High-Throughput Sample Prep", "description": "Moving balance removes transfer steps from every dispensing operation" },
+            { "title": "Powder and Solid Dispensing", "description": "Gravimetric handling of powders, granulates, and spheres" },
+            { "title": "Viscous and Wax Material Handling", "description": "Dispensing across low-viscous through highly-viscous materials and waxes" },
+            { "title": "Design of Experiments (DOE) Workflows", "description": "DOE interface feeding experimental designs directly into execution" },
+            { "title": "Machine Learning and AI-Driven Research", "description": "ML and AI interfaces connecting automated execution to model-driven design" },
+            { "title": "Standard Solution and Standard Preparation", "description": "0.01 mg resolution for precise standard preparation" },
+            { "title": "Multi-Workflow Laboratories", "description": "Combinable tooling accommodating several workflows on one platform" }
           ],
 
           "inPageNav": [
@@ -767,6 +1240,7 @@
               {
                 "key": "materialTypes",
                 "label": "Material types",
+                "hint": "Liquids, powders, granulates, spheres, viscous materials, waxes, or mixed",
                 "options": [
                   { "val": "liquids", "label": "Liquids" },
                   { "val": "powders", "label": "Powders" },
@@ -778,21 +1252,71 @@
                 ]
               },
               {
+                "key": "smallestAmountDispensed",
+                "label": "Smallest amount dispensed",
+                "hint": "Milligrams or grams at the low end",
+                "options": [
+                  { "val": "milligrams", "label": "Milligrams" },
+                  { "val": "grams-at-the-low-end", "label": "Grams at the low end" }
+                ]
+              },
+              {
+                "key": "largestAmountDispensed",
+                "label": "Largest amount dispensed",
+                "hint": "Upper end of the routine range",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "precisionRequired",
                 "label": "Precision required",
+                "hint": "Standard, high, or highest for the smallest amounts",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "high", "label": "High" },
-                  { "val": "highest", "label": "Highest, for the smallest amounts" }
+                  { "val": "highest", "label": "Highest for the smallest amounts" }
                 ]
               }
             ],
             "results": [
-              { "condition": { "precisionRequired": "highest" }, "title": "0.01 mg Resolution Fits This Precision", "body": "Balance resolution is selectable down to 0.01 mg, matched to the smallest routinely dispensed amounts.", "tags": ["0.01 mg Resolution"] },
-              { "condition": { "materialTypes": "waxes" }, "title": "Waxes Are Within Dispensing Range", "body": "Gravimetric dispensing covers low-viscous through highly-viscous materials and waxes on the same platform.", "tags": ["Liquids to Waxes"] },
-              { "condition": { "materialTypes": "powders" }, "title": "Powder and Solid Dispensing Is Supported", "body": "Gravimetric handling covers powders, granulates, and spheres directly.", "tags": ["Broad Material Compatibility"] },
-              { "condition": "default", "title": "Confirm the Right Balance Resolution With Inkarp", "body": "Share the material types and precision required, and Inkarp will confirm the recommended balance resolution.", "tags": ["1 mg / 0.1 mg / 0.01 mg"] }
-            ]
+              {
+                "condition": { "precisionRequired": "highest" },
+                "title": "0.01 mg Resolution Fits This Precision",
+                "body": "Balance resolution is selectable down to 0.01 mg, matched to the smallest routinely dispensed amounts.",
+                "tags": [
+                  "0.01 mg Resolution"
+                ]
+              },
+              {
+                "condition": { "materialTypes": "waxes" },
+                "title": "Waxes Are Within Dispensing Range",
+                "body": "Gravimetric dispensing covers low-viscous through highly-viscous materials and waxes on the same platform.",
+                "tags": [
+                  "Liquids to Waxes"
+                ]
+              },
+              {
+                "condition": { "materialTypes": "powders" },
+                "title": "Powder and Solid Dispensing Is Supported",
+                "body": "Gravimetric handling covers powders, granulates, and spheres directly.",
+                "tags": [
+                  "Broad Material Compatibility"
+                ]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Balance Resolution With Inkarp",
+                "body": "Share the material types and precision required, and Inkarp will confirm the recommended balance resolution.",
+                "tags": [
+                  "1 mg / 0.1 mg / 0.01 mg"
+                ]
+              }
+            ],
+            "eyebrow": "Dispensing Requirement Selector",
+            "ctaNote": "Recommends 1 mg, 0.1 mg, or 0.01 mg balance resolution. Routes to a configuration-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "configWizard": {
@@ -801,7 +1325,9 @@
             "steps": [
               {
                 "key": "systemsOfRecord",
-                "question": "What systems of record are in use?",
+                "label": "Systems of record",
+                "question": "Systems of record",
+                "hint": "LIMS, ELN, ERP, or none currently",
                 "options": [
                   { "val": "lims", "label": "LIMS" },
                   { "val": "eln", "label": "ELN" },
@@ -811,7 +1337,9 @@
               },
               {
                 "key": "experimentalDesignApproach",
-                "question": "What's the experimental design approach?",
+                "label": "Experimental design approach",
+                "question": "Experimental design approach",
+                "hint": "Manual design, DOE, or ML/AI-driven",
                 "options": [
                   { "val": "manual", "label": "Manual design" },
                   { "val": "doe", "label": "DOE" },
@@ -820,25 +1348,30 @@
               },
               {
                 "key": "complianceRequirement",
-                "question": "What's the compliance requirement?",
+                "label": "Compliance requirement",
+                "question": "Compliance requirement",
+                "hint": "Research use, or regulated with audit-ready records",
                 "options": [
                   { "val": "research-use", "label": "Research use" },
-                  { "val": "regulated", "label": "Regulated, with audit-ready records" }
+                  { "val": "regulated", "label": "Regulated with audit-ready records" }
                 ]
               },
               {
                 "key": "multiSystemCoordination",
-                "question": "Is multi-system coordination needed?",
+                "label": "Multi-system coordination",
+                "question": "Multi-system coordination",
+                "hint": "Single platform, or multiple systems and manual steps",
                 "options": [
                   { "val": "single-platform", "label": "Single platform" },
                   { "val": "multiple-systems", "label": "Multiple systems and manual steps" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Confirms the interface set required and whether ARKSUITE orchestration applies, then routes to an integration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to an integration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Data Integration Scope Checker",
+            "emptyState": "Confirms the interface set required and whether ARKSUITE orchestration applies",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "planners": [
@@ -851,51 +1384,194 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "What's the primary workflow?", "choices": "Analytical sample prep; QC testing; Preformulation; Multiple" },
-                { "title": "What destination format is needed?", "choices": "Vials; Tubes; Plates; Reactors; Mixed formats" },
-                { "title": "Is liquid handling needed alongside dispensing?", "choices": "Gravimetric only; Volumetric handling and sampling alongside" },
-                { "title": "Is additional processing needed?", "choices": "Dispensing only; Mixing, tempering, and downstream processing" }
+                {
+                  "title": "Primary workflow",
+                  "hint": "Analytical sample prep, QC testing, preformulation, or multiple",
+                  "choices": "Analytical sample prep; QC testing; Preformulation; Multiple"
+                },
+                {
+                  "title": "Destination format",
+                  "hint": "Vials, tubes, plates, reactors, or mixed formats",
+                  "choices": "Vials; Tubes; Plates; Reactors; Mixed formats"
+                },
+                {
+                  "title": "Liquid handling needed",
+                  "hint": "Gravimetric only, or volumetric handling and sampling alongside",
+                  "choices": "Gravimetric only; Volumetric handling and sampling alongside"
+                },
+                {
+                  "title": "Additional processing",
+                  "hint": "Dispensing only, or mixing, tempering, and downstream processing",
+                  "choices": "Dispensing only; Mixing; Tempering; And downstream processing"
+                }
               ],
-              "disclaimer": "Recommends the dispensing tool plus complementary tooling for the workflow set, then routes to a workflow-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Recommends the dispensing tool plus complementary tooling for the workflow set. Routes to a workflow-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Swing Sp Automated Dispensing vs. Manual Sample Preparation",
+            "title": "Method Comparison",
             "description": "Swing Sp method comparison: automated gravimetric dispensing versus manual sample preparation.",
             "columns": [
               { "label": "Swing Sp Automated Dispensing" },
               { "label": "Manual Sample Preparation" }
             ],
             "rows": [
-              { "feature": "Weighing Approach", "values": ["Gravimetric, balance moves to the destination", "Destination transferred to a fixed balance"] },
-              { "feature": "Transfer Steps per Dispense", "values": ["None — the destination stays in place", "Two, in and out of the balance, every time"] },
-              { "feature": "Precision Control", "values": ["Selectable 1 mg, 0.1 mg, or 0.01 mg resolution", "Dependent on balance available and operator technique"] },
-              { "feature": "Consistency Across Operators", "values": ["Identical execution from a defined workflow", "Varies with individual technique and fatigue"] },
-              { "feature": "Difficult Materials", "values": ["Powders, granulates, spheres, viscous materials, waxes handled", "Handling difficulty varies substantially by material"] },
-              { "feature": "Record of Conditions", "values": ["Read-only log of amount, mixing speed, temperature, time", "Manual notebook or form entry"] },
-              { "feature": "Data Integrity", "values": ["Inherent, captured automatically and unalterable", "Dependent on transcription accuracy and procedural control"] },
-              { "feature": "Connection to Lab Systems", "values": ["LIMS, ELN, ERP, DOE, ML, AI interfaces", "Manual entry or separate export"] },
-              { "feature": "Throughput", "values": ["High throughput by design", "Limited by operator hours available"] },
-              { "feature": "Best For", "values": ["Repeatable, documented, high-volume preparation", "Occasional one-off preparation, method exploration"] }
+              {
+                "feature": "Weighing Approach",
+                "values": [
+                  "Gravimetric, balance moves to the destination",
+                  "Destination transferred to a fixed balance"
+                ]
+              },
+              {
+                "feature": "Transfer Steps per Dispense",
+                "values": [
+                  "None — the destination stays in place",
+                  "Two, in and out of the balance, every time"
+                ]
+              },
+              {
+                "feature": "Precision Control",
+                "values": [
+                  "Selectable 1 mg, 0.1 mg, or 0.01 mg resolution",
+                  "Dependent on balance available and operator technique"
+                ]
+              },
+              {
+                "feature": "Consistency Across Operators",
+                "values": [
+                  "Identical execution from a defined workflow",
+                  "Varies with individual technique and fatigue"
+                ]
+              },
+              {
+                "feature": "Difficult Materials",
+                "values": [
+                  "Powders, granulates, spheres, viscous materials, waxes handled",
+                  "Handling difficulty varies substantially by material"
+                ]
+              },
+              {
+                "feature": "Record of Conditions",
+                "values": [
+                  "Read-only log of amount, mixing speed, temperature, time",
+                  "Manual notebook or form entry"
+                ]
+              },
+              {
+                "feature": "Data Integrity",
+                "values": [
+                  "Inherent, captured automatically and unalterable",
+                  "Dependent on transcription accuracy and procedural control"
+                ]
+              },
+              {
+                "feature": "Connection to Lab Systems",
+                "values": [
+                  "LIMS, ELN, ERP, DOE, ML, AI interfaces",
+                  "Manual entry or separate export"
+                ]
+              },
+              {
+                "feature": "Throughput",
+                "values": [
+                  "High throughput by design",
+                  "Limited by operator hours available"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Repeatable, documented, high-volume preparation",
+                  "Occasional one-off preparation, method exploration"
+                ]
+              }
             ],
-            "disclaimer": "The case for automation here isn't only speed. It's that consistency and documentation arrive as properties of the system rather than as things procedure has to enforce — which is precisely what a QC or regulated environment spends effort maintaining manually."
+            "disclaimer": "The case for automation here isn't only speed. It's that consistency and documentation arrive as properties of the system rather than as things procedure has to enforce — which is precisely what a QC or regulated environment spends effort maintaining manually.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Swing Sp industries: pharmaceutical R&D, quality control, formulation development, and materials research.",
             "industries": [
-              { "name": "Pharmaceutical R&D", "useCase": "Automated sample preparation supporting discovery and development", "consideration": "DOE, ML, and AI interfaces feed designs directly into execution" },
-              { "name": "Quality Control Laboratories", "useCase": "Repeatable, documented sample and standard preparation", "consideration": "Read-only logging with LIMS integration supports traceability" },
-              { "name": "Preformulation Development", "useCase": "Screening formulation components across a wide dispensing range", "consideration": "Handles liquids, powders, viscous materials, and waxes on one platform" },
-              { "name": "Analytical Services Laboratories", "useCase": "High-volume sample preparation ahead of analysis", "consideration": "Moving balance removes transfer steps from every operation" },
-              { "name": "Formulation and Product Development", "useCase": "Multi-component formulation across varied material types", "consideration": "Any destination format supported, in the lab's own labware" },
-              { "name": "Materials and Specialty Chemicals", "useCase": "Dispensing granulates, spheres, and difficult solids", "consideration": "Gravimetric handling across challenging physical forms" },
-              { "name": "High-Throughput Screening Operations", "useCase": "Large sample sets prepared consistently", "consideration": "Combinable tooling accommodating multiple workflows" },
-              { "name": "Digitally Integrated Laboratories", "useCase": "Connecting preparation to the wider data estate", "consideration": "LIMS, ELN, ERP, and ML/AI interfaces available" },
-              { "name": "Multi-System Automated Laboratories", "useCase": "Coordinating several platforms and manual steps", "consideration": "ARKSUITE orchestration across systems and manual processes" }
+              {
+                "name": "Pharmaceutical R&D",
+                "note": "Use Case: Automated sample preparation supporting discovery and development",
+                "bullets": [
+                  "What to Consider: DOE, ML, and AI interfaces feed designs directly into execution"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Quality Control Laboratories",
+                "note": "Use Case: Repeatable, documented sample and standard preparation",
+                "bullets": [
+                  "What to Consider: Read-only logging with LIMS integration supports traceability"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Preformulation Development",
+                "note": "Use Case: Screening formulation components across a wide dispensing range",
+                "bullets": [
+                  "What to Consider: Handles liquids, powders, viscous materials, and waxes on one platform"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Analytical Services Laboratories",
+                "note": "Use Case: High-volume sample preparation ahead of analysis",
+                "bullets": [
+                  "What to Consider: Moving balance removes transfer steps from every operation"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Formulation and Product Development",
+                "note": "Use Case: Multi-component formulation across varied material types",
+                "bullets": [
+                  "What to Consider: Any destination format supported, in the lab's own labware"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Materials and Specialty Chemicals",
+                "note": "Use Case: Dispensing granulates, spheres, and difficult solids",
+                "bullets": [
+                  "What to Consider: Gravimetric handling across challenging physical forms"
+                ],
+                "tags": []
+              },
+              {
+                "name": "High-Throughput Screening Operations",
+                "note": "Use Case: Large sample sets prepared consistently",
+                "bullets": [
+                  "What to Consider: Combinable tooling accommodating multiple workflows"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Digitally Integrated Laboratories",
+                "note": "Use Case: Connecting preparation to the wider data estate",
+                "bullets": [
+                  "What to Consider: LIMS, ELN, ERP, and ML/AI interfaces available"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Multi-System Automated Laboratories",
+                "note": "Use Case: Coordinating several platforms and manual steps",
+                "bullets": [
+                  "What to Consider: ARKSUITE orchestration across systems and manual processes"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -918,23 +1594,71 @@
           },
 
           "faqs": [
-            { "question": "What is Swing Sp used for?", "answer": "It's an automated sample preparation platform for analytics, QC, and preformulation, dispensing virtually any ingredient or compound into vials, tubes, plates, or reactors with high throughput and inherent data integrity." },
-            { "question": "What makes the gravimetric dispensing different?", "answer": "Chemspeed's patented overhead capability moves the balance to the destination rather than moving the destination to the balance, which increases speed and efficiency by removing transfer steps from every dispense." },
-            { "question": "What balance resolutions are available?", "answer": "1 mg, 0.1 mg, or 0.01 mg, selectable according to the precision the application requires." },
-            { "question": "What is the dispensing range?", "answer": "From a few milligrams up to several grams, covering trace-level and bulk preparation on the same platform." },
-            { "question": "Which materials can Swing Sp dispense?", "answer": "Liquids, solids, powders, granulates, spheres, low-viscous and highly-viscous materials, and waxes." },
-            { "question": "Does the destination need to move during dispensing?", "answer": "No. The destination — vial, tube, plate, or reactor — stays in place while the balance moves to it." },
-            { "question": "What destination formats are supported?", "answer": "Vials, tubes, plates, and reactors, in the rack or reactor format of the user's choice rather than a fixed proprietary layout." },
-            { "question": "Does the system handle liquid handling as well as gravimetric dispensing?", "answer": "Yes. A 4-needle head provides volumetric liquid handling and sampling alongside the gravimetric dispensing capability." },
-            { "question": "Can the system run more than one type of workflow?", "answer": "Yes. The dispensing and dosing robotic tool can be combined with other tools to accommodate multiple workflows on the same platform." },
-            { "question": "What data does the system record?", "answer": "Dispensed amount, mixing speed, temperature, time, and other parameters are stored in a read-only log file." },
-            { "question": "Why does the log being read-only matter?", "answer": "A record that cannot be edited after the fact removes the question of post-hoc modification, which is what data integrity requirements in regulated environments are designed to address." },
+            {
+              "question": "What is Swing Sp used for?",
+              "answer": "It's an automated sample preparation platform for analytics, QC, and preformulation, dispensing virtually any ingredient or compound into vials, tubes, plates, or reactors with high throughput and inherent data integrity."
+            },
+            {
+              "question": "What makes the gravimetric dispensing different?",
+              "answer": "Chemspeed's patented overhead capability moves the balance to the destination rather than moving the destination to the balance, which increases speed and efficiency by removing transfer steps from every dispense."
+            },
+            {
+              "question": "What balance resolutions are available?",
+              "answer": "1 mg, 0.1 mg, or 0.01 mg, selectable according to the precision the application requires."
+            },
+            {
+              "question": "What is the dispensing range?",
+              "answer": "From a few milligrams up to several grams, covering trace-level and bulk preparation on the same platform."
+            },
+            {
+              "question": "Which materials can Swing Sp dispense?",
+              "answer": "Liquids, solids, powders, granulates, spheres, low-viscous and highly-viscous materials, and waxes."
+            },
+            {
+              "question": "Does the destination need to move during dispensing?",
+              "answer": "No. The destination — vial, tube, plate, or reactor — stays in place while the balance moves to it."
+            },
+            {
+              "question": "What destination formats are supported?",
+              "answer": "Vials, tubes, plates, and reactors, in the rack or reactor format of the user's choice rather than a fixed proprietary layout."
+            },
+            {
+              "question": "Does the system handle liquid handling as well as gravimetric dispensing?",
+              "answer": "Yes. A 4-needle head provides volumetric liquid handling and sampling alongside the gravimetric dispensing capability."
+            },
+            {
+              "question": "Can the system run more than one type of workflow?",
+              "answer": "Yes. The dispensing and dosing robotic tool can be combined with other tools to accommodate multiple workflows on the same platform."
+            },
+            {
+              "question": "What data does the system record?",
+              "answer": "Dispensed amount, mixing speed, temperature, time, and other parameters are stored in a read-only log file."
+            },
+            {
+              "question": "Why does the log being read-only matter?",
+              "answer": "A record that cannot be edited after the fact removes the question of post-hoc modification, which is what data integrity requirements in regulated environments are designed to address."
+            },
             { "question": "Which systems can Swing Sp integrate with?", "answer": "Interfaces are available for DOE, ML, AI, LIMS, ELN, and ERP integration." },
-            { "question": "Does building a workflow require programming?", "answer": "No. AUTOSUITE uses drag-and-drop experimentation — start from a prebuilt workflow or assemble predefined tasks into a custom application." },
-            { "question": "What is ARKSUITE?", "answer": "Software that coordinates and orchestrates laboratory workflows across any number of Chemspeed systems and manual lab processes, centralizing workflows, experiments, messaging, status, and inventory management." },
-            { "question": "Can Swing Sp work alongside other Chemspeed systems?", "answer": "Yes. ARKSUITE is built to coordinate multiple Chemspeed systems within one centralized environment, alongside manual processes." },
-            { "question": "What is the price of Swing Sp in India?", "answer": "Get in touch and Inkarp will put together a quote based on the balance resolution, tooling, rack format, and integration requirements." },
-            { "question": "Who is the authorized distributor of Swing Sp in India?", "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed Swing Sp in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Does building a workflow require programming?",
+              "answer": "No. AUTOSUITE uses drag-and-drop experimentation — start from a prebuilt workflow or assemble predefined tasks into a custom application."
+            },
+            {
+              "question": "What is ARKSUITE?",
+              "answer": "Software that coordinates and orchestrates laboratory workflows across any number of Chemspeed systems and manual lab processes, centralizing workflows, experiments, messaging, status, and inventory management."
+            },
+            {
+              "question": "Can Swing Sp work alongside other Chemspeed systems?",
+              "answer": "Yes. ARKSUITE is built to coordinate multiple Chemspeed systems within one centralized environment, alongside manual processes."
+            },
+            {
+              "question": "What is the price of Swing Sp in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the balance resolution, tooling, rack format, and integration requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of Swing Sp in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Chemspeed Swing Sp in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -955,12 +1679,18 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration and tooling combination", "body": "Share the materials being dispensed, the destination format, the precision required, and what the data needs to connect to downstream, and the right Swing Sp configuration and tooling combination gets confirmed from there." },
-              { "title": "Confirm the right balance resolution", "body": "Share the smallest and largest amounts routinely dispensed and the precision the method requires, and the right balance resolution gets confirmed against them." },
-              { "title": "Confirm feasibility for difficult materials", "body": "Share the specific materials in the workflow, including anything that has resisted automation before, and feasibility gets assessed against the dispensing technology directly." },
-              { "title": "Confirm the right orchestration fit", "body": "Share how many systems and manual steps the workflow spans, and whether ARKSUITE orchestration fits alongside the AUTOSUITE deployment gets confirmed." },
-              { "title": "Installation and first-run support", "body": "Handles setup, first-run checks, and initial system verification." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Runs the lab's own materials and destination formats on the platform" },
+              { "title": "Feasibility Assessment", "body": "Confirms dispensing feasibility for difficult materials before commitment" },
+              { "title": "Configuration Assessment", "body": "Confirms balance resolution, tooling, and rack format for the workflow" },
+              { "title": "Integration Assessment", "body": "Reviews LIMS, ELN, and ERP connectivity against the existing data estate" },
+              { "title": "Site Preparation Support", "body": "Reviews bench space, utilities, and environmental requirements ahead of delivery" },
+              { "title": "Installation Support", "body": "Handles setup, first-run checks, and initial system verification" },
+              { "title": "Workflow Development Support", "body": "Assists building AUTOSUITE workflows for the lab's specific applications" },
+              { "title": "Operator Training", "body": "Builds confidence with AUTOSUITE drag-and-drop design and routine operation" },
+              { "title": "Qualification Support", "body": "Supports IQ/OQ/PQ activities in regulated environments" },
+              { "title": "Preventive Maintenance", "body": "Maintains dispensing tools, balance, needle head, and robotic system performance" },
+              { "title": "Spares and Consumables", "body": "Supplies needles, dispensing tool components, racks, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -986,21 +1716,41 @@
                 "title": "Product Information",
                 "description": "Swing Sp product information: gravimetric dispensing technology, material range, and data integrity.",
                 "body": [
-                  "Automated sample preparation: Designed for high throughput analytics, QC and preformulation workflows with built in data integrity.",
-                  "Flexible gravimetric dispensing: Handles liquids, solids, powders, granulates, spheres, low and high viscosity materials and waxes.",
-                  "Dispense directly into the destination: The balance moves to the vial, tube, plate or reactor instead of moving the destination, improving speed and efficiency.",
-                  "Wide dispensing range: Handles quantities from a few milligrams to several grams, with selectable balance resolution of 1 mg, 0.1 mg or 0.01 mg.",
-                  "Flexible formats and workflows: Works with user selected racks and reactor formats, while a 4 needle head supports volumetric liquid handling and sampling.",
-                  "Integrated processing: Dispensing, mixing and subsequent sample processing for analytics and preformulation can be performed on the same platform.",
-                  "Traceable data and software control: AUTOSUITE enables drag and drop workflow creation, while read only log files record dispensing amounts, mixing, temperature, time and other process data.",
-                  "Connected laboratory workflows: Supports integration with DOE, ML, AI, LIMS, ELN and ERP systems, while ARKSUITE coordinates workflows, experiments, inventory and status across multiple Chemspeed systems and manual processes."
+                  {
+                    "text": "• Automated sample preparation\n Designed for high throughput analytics, QC and preformulation workflows with built in data integrity."
+                  },
+                  {
+                    "text": "• Flexible gravimetric dispensing\n Handles liquids, solids, powders, granulates, spheres, low and high viscosity materials and waxes."
+                  },
+                  {
+                    "text": "• Dispense directly into the destination\n The balance moves to the vial, tube, plate or reactor instead of moving the destination, improving speed and efficiency."
+                  },
+                  {
+                    "text": "• Wide dispensing range\n Handles quantities from a few milligrams to several grams, with selectable balance resolution of 1 mg, 0.1 mg or 0.01 mg."
+                  },
+                  {
+                    "text": "• Flexible formats and workflows\n Works with user selected racks and reactor formats, while a 4 needle head supports volumetric liquid handling and sampling."
+                  },
+                  {
+                    "text": "• Integrated processing\n Dispensing, mixing and subsequent sample processing for analytics and preformulation can be performed on the same platform."
+                  },
+                  {
+                    "text": "• Traceable data and software control\n AUTOSUITE enables drag and drop workflow creation, while read only log files record dispensing amounts, mixing, temperature, time and other process data."
+                  },
+                  {
+                    "text": "• Connected laboratory workflows\n Supports integration with DOE, ML, AI, LIMS, ELN and ERP systems, while ARKSUITE coordinates workflows, experiments, inventory and status across multiple Chemspeed systems and manual processes."
+                  }
                 ],
                 "cards": [
                   { "title": "Balance moves to destination", "description": "Transfer steps removed from every dispense" },
                   { "title": "Down to 0.01 mg resolution", "description": "Precision selectable to the work, not fixed" },
                   { "title": "Liquids through waxes", "description": "One platform across genuinely difficult materials" },
                   { "title": "Read-only logging", "description": "Data integrity built in, not bolted on" }
-                ]
+                ],
+                "glanceTitle": "Swing Sp at a Glance",
+                "glanceDescription": "What to know about Swing Sp: why the moving balance changes throughput, what material range the dispensing actually covers, and how the data integrity claim is built.",
+                "subheading": "Overview",
+                "tabSummary": "Why moving the balance instead of the sample matters"
               },
               {
                 "key": "config",
@@ -1015,24 +1765,32 @@
                   { "title": "Destinations", "description": "Vials, tubes, plates, reactors, in the rack format of choice" },
                   { "title": "Software", "description": "AUTOSUITE, with ARKSUITE for lab-wide orchestration" },
                   { "title": "Integration", "description": "DOE, ML, AI, LIMS, ELN, ERP interfaces available" }
-                ]
+                ],
+                "disclaimer": "Share the materials being dispensed, the destination format, the precision required, and what the data needs to connect to downstream, and the right Swing Sp configuration and tooling combination gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "Gravimetric dispensing, 4-needle head, combinable tooling, AUTOSUITE"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Swing Sp applications: analytical sample preparation, QC testing, preformulation, and high-throughput workflows."
+                "description": "Swing Sp applications: analytical sample preparation, QC testing, preformulation, and high-throughput workflows.",
+                "tabSummary": "Analytics, QC, preformulation, high-throughput sample prep"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Swing Sp technical specifications: balance resolution, dispensing range, and material compatibility."
+                "description": "Swing Sp technical specifications: balance resolution, dispensing range, and material compatibility.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Balance resolution, dispensing range, and material compatibility"
               },
               {
                 "key": "benefits",
@@ -1045,23 +1803,121 @@
                   { "title": "Precision matched to the application", "description": "Selectable 1 mg, 0.1 mg, or 0.01 mg resolution" },
                   { "title": "Trace through bulk on one platform", "description": "Dispensing range from a few mg to several grams" },
                   { "title": "Destinations left undisturbed", "description": "Vials, plates, and reactors never move during dispensing" }
-                ]
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What accurate dosing needs", "value": "How Swing Sp delivers it" },
+                "note": "Share the smallest and largest amounts routinely dispensed and the precision the method requires, and the right balance resolution gets confirmed against them.",
+                "tabSummary": "How the patented moving balance works"
               },
               {
                 "key": "performance",
-                "eyebrow": "Data Integrity and System Integration",
-                "title": "Data Integrity and System Integration",
+                "eyebrow": "Material Range From Liquids to Waxes",
+                "title": "Material Range From Liquids to Waxes",
+                "tabSummary": "What \"virtually any ingredient\" covers in practice",
                 "body": [
-                  "Built-in data integrity with read-only process records and seamless LIMS, ELN, ERP, DOE, ML and AI integration keeps every experiment traceable and connected."
+                  "Automate challenging materials from liquids and powders to viscous compounds and waxes, using flexible dispensing across your preferred labware and workflows."
                 ],
-                "utilityChecklist": [
-                  { "label": "A record that can't be altered", "value": "Read-only log file for every run" },
-                  { "label": "Process conditions captured, not just amounts", "value": "Mixing speed, temperature, and time logged alongside dispensed mass" },
-                  { "label": "Data reaching the lab's systems of record", "value": "LIMS, ELN, and ERP integration interfaces" },
-                  { "label": "Designs feeding into execution", "value": "DOE, ML, and AI interfaces" },
-                  { "label": "Analysis without manual export", "value": "AUTOSUITE interface to data analysis" }
-                ],
-                "disclaimer": "Share which LIMS, ELN, or ERP the lab runs and what the data integrity requirements are, and the integration scope gets mapped before installation."
+                "groups": [
+                  {
+                    "columns": [
+                      "What difficult materials need",
+                      "How Swing Sp delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Powders and granulates dosed reliably",
+                        "Gravimetric dispensing across solids, powders, granulates, spheres"
+                      ],
+                      [
+                        "Viscous materials and waxes handled",
+                        "Low-viscous through highly-viscous materials and waxes supported"
+                      ],
+                      [
+                        "Liquids alongside solids in one workflow",
+                        "4-needle head for volumetric handling with gravimetric dispensing"
+                      ],
+                      [
+                        "The lab's own labware, not the vendor's",
+                        "Rack and reactor format of the user's choice"
+                      ],
+                      [
+                        "Preparation through to processing",
+                        "Subsequent analytics and preformulation processing on-platform"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the specific materials in the workflow, including anything that has resisted automation before, and feasibility gets assessed against the dispensing technology directly."
+                  },
+                  {
+                    "title": "Data Integrity and System Integration",
+                    "summary": "Read-only logging and the interface layer",
+                    "description": "Built-in data integrity with read-only process records and seamless LIMS, ELN, ERP, DOE, ML and AI integration keeps every experiment traceable and connected.",
+                    "columns": [
+                      "What regulated automation needs",
+                      "How Swing Sp delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "A record that can't be altered",
+                        "Read-only log file for every run"
+                      ],
+                      [
+                        "Process conditions captured, not just amounts",
+                        "Mixing speed, temperature, and time logged alongside dispensed mass"
+                      ],
+                      [
+                        "Data reaching the lab's systems of record",
+                        "LIMS, ELN, and ERP integration interfaces"
+                      ],
+                      [
+                        "Designs feeding into execution",
+                        "DOE, ML, and AI interfaces"
+                      ],
+                      [
+                        "Analysis without manual export",
+                        "AUTOSUITE interface to data analysis"
+                      ]
+                    ],
+                    "note": "Share which LIMS, ELN, or ERP the lab runs and what the data integrity requirements are, and the integration scope gets mapped before installation."
+                  },
+                  {
+                    "title": "Software That Scales",
+                    "summary": "AUTOSUITE and ARKSUITE across the lab",
+                    "description": "Capture every dispensing and process parameter in read-only logs, with LIMS, ELN, ERP, DOE, ML and AI integration for traceable, connected automation.",
+                    "columns": [
+                      "What the lab's software needs",
+                      "How Swing Sp delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Method changes without programming",
+                        "AUTOSUITE drag-and-drop experiment design"
+                      ],
+                      [
+                        "A fast start on common workflows",
+                        "Prebuilt workflows available as starting points"
+                      ],
+                      [
+                        "Custom applications built by scientists",
+                        "Predefined tasks assembled into bespoke sequences"
+                      ],
+                      [
+                        "Coordination across several systems",
+                        "ARKSUITE orchestration of multiple Chemspeed platforms"
+                      ],
+                      [
+                        "Manual steps inside the same workflow",
+                        "ARKSUITE covering manual lab processes alongside automated ones"
+                      ],
+                      [
+                        "Centralized visibility",
+                        "Workflows, messaging, status, and inventory in one place"
+                      ]
+                    ],
+                    "note": "Share how many systems and manual steps the workflow spans, and whether ARKSUITE orchestration fits alongside the AUTOSUITE deployment gets confirmed."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -1077,7 +1933,9 @@
                   { "title": "LIMS, ELN, and ERP Integration Details", "description": "Available on request" },
                   { "title": "Data Integrity and Logging Documentation", "description": "Available on request" },
                   { "title": "Prebuilt Workflow Library", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Specifications, workflow guides, integration details"
               }
             ],
             "cta": {
@@ -1086,9 +1944,19 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A balance that travels to the sample, dispensing from a few milligrams to several grams across liquids through waxes, with every run written to a read-only log. Share the materials, the destination format, and where the data needs to go, and the right Swing Sp configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Every gravimetric dispensing platform faces the same bottleneck: weighing means getting the vessel onto a balance. Move the plate, move the vial, move the reactor, weigh, move it back. Multiply that across a few hundred samples and the transfer steps cost more time than the dispensing does.",
+              "Chemspeed's patented overhead gravimetric capability turns it around. The balance moves to the destination, so vials, tubes, plates, and reactors stay exactly where they are while material is dispensed and weighed in place. Speed and efficiency both come from removing motion nobody needed.",
+              "What gets dispensed is the other half of the story. Liquids, solids, powders, granulates, spheres, low-viscous and highly-viscous materials, waxes — into whatever rack or reactor format the work calls for, at balance resolutions down to 0.01 mg and across a range from a few milligrams up to several grams. A 4-needle head handles volumetric liquid handling and sampling alongside it.",
+              "And every run writes itself down. Dispensed amount, mixing speed, temperature, time and more land in a read-only log file, with interfaces out to DOE, ML, AI, LIMS, ELN, and ERP. AUTOSUITE makes building the experiment a drag-and-drop exercise rather than a programming one."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

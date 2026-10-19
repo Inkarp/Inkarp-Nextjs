@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "sonics-and-materials",
-    "principalName": "Sonics & Materials",
-    "countryOfOrigin": "United States of America"
-  },
+  "principal": { "slug": "sonics-and-materials", "principalName": "Sonics & Materials", "countryOfOrigin": "United States of America" },
   "categories": [
     {
       "name": "Laboratory Scale Models, Volume 150 µL to 150 mL",
@@ -11,25 +7,37 @@
       "products": [
         {
           "name": "VCX-130 Ultrasonic Probe Sonicator",
+
           "slug": "vcx-130-ultrasonic-probe-sonicator",
+
           "principalImage": "/assets/images/PrincipalLogos/sonics-logo.svg",
+
           "imageAlt": "Sonics & Materials VCX-130 Ultrasonic Probe Sonicator - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/vcx-130-ultrasonic-probe-sonicator",
+
           "breadcrumbPath": "Home > Products > Laboratory Scale Models, Volume 150 µL to 150 mL > VCX-130 Ultrasonic Probe Sonicator",
+
           "h1": "VCX-130 Ultrasonic Probe Sonicator",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Micro-scale sonication doesn't need less precision, it needs the same control in a smaller footprint. VCX-130 is Sonics & Materials' most popular small-volume system for exactly that reason.",
 
           "features": [
-            "Digital Wattmeter and Energy Monitor: Displays power and delivered energy in real time during processing.",
-            "Automatic Tuning and Amplitude Compensation: Keeps output consistent as sample viscosity or conditions shift mid-run.",
-            "Independent ON/OFF Pulser: Adjustable from 1 to 59 seconds per cycle for precise intermittent sonication.",
-            "Ten-Hour Timer: Covers short bursts through extended micro-scale processing runs.",
-            "Elapsed Time Indicator: Tracks run duration directly on the display.",
-            "Variable Power Output Control: Adjusts intensity to match sample sensitivity and volume.",
-            "Autoclavable Titanium Alloy Probe: Ti-6Al-4V construction supports sterile sample workflows.",
-            "Remote and Footswitch Compatible: Supports hands-free operation for repetitive or sterile processing tasks."
+            { "title": "Digital Wattmeter and Energy Monitor", "description": "Displays power and delivered energy in real time during processing." },
+            {
+              "title": "Automatic Tuning and Amplitude Compensation",
+              "description": "Keeps output consistent as sample viscosity or conditions shift mid-run."
+            },
+            { "title": "Independent ON/OFF Pulser", "description": "Adjustable from 1 to 59 seconds per cycle for precise intermittent sonication." },
+            { "title": "Ten-Hour Timer", "description": "Covers short bursts through extended micro-scale processing runs." },
+            { "title": "Elapsed Time Indicator", "description": "Tracks run duration directly on the display." },
+            { "title": "Variable Power Output Control", "description": "Adjusts intensity to match sample sensitivity and volume." },
+            { "title": "Autoclavable Titanium Alloy Probe", "description": "Ti-6Al-4V construction supports sterile sample workflows." },
+            { "title": "Remote and Footswitch Compatible", "description": "Supports hands-free operation for repetitive or sterile processing tasks." }
           ],
 
           "technicalSpecs": [
@@ -51,11 +59,11 @@
           ],
 
           "applications": [
-            "Cell Lysis: Digital energy monitoring supports reproducible micro-scale lysis",
-            "Microsample Processing: 150 µL to 150 mL range suits small and precious samples",
-            "Plant Tissue Disruption: Effective on soft, fresh tissue via sonication in lysis buffer",
-            "Cell Suspension and Callus Processing: Typically sonicated in lysis buffer within short processing times",
-            "Sterile and Autoclavable Workflows: Titanium alloy probe supports repeated sterilization between uses"
+            { "title": "Cell Lysis", "description": "Digital energy monitoring supports reproducible micro-scale lysis" },
+            { "title": "Microsample Processing", "description": "150 µL to 150 mL range suits small and precious samples" },
+            { "title": "Plant Tissue Disruption", "description": "Effective on soft, fresh tissue via sonication in lysis buffer" },
+            { "title": "Cell Suspension and Callus Processing", "description": "Typically sonicated in lysis buffer within short processing times" },
+            { "title": "Sterile and Autoclavable Workflows", "description": "Titanium alloy probe supports repeated sterilization between uses" }
           ],
 
           "inPageNav": [
@@ -75,7 +83,9 @@
             "steps": [
               {
                 "key": "sampleVolume",
-                "question": "What's the typical sample volume?",
+                "label": "Sample volume input",
+                "question": "Sample volume input",
+                "hint": "150 µL to 150 mL",
                 "options": [
                   { "val": "standard", "label": "Standard 10 to 50 mL processing" },
                   { "val": "very-small", "label": "Very small or precious sample volumes (down to 150 µL)" },
@@ -84,7 +94,9 @@
               },
               {
                 "key": "applicationType",
-                "question": "What's the application type?",
+                "label": "Application type",
+                "question": "Application type",
+                "hint": "Cell lysis, tissue disruption, or general processing",
                 "options": [
                   { "val": "cell-lysis", "label": "Cell lysis" },
                   { "val": "tissue-disruption", "label": "Tissue disruption" },
@@ -93,17 +105,21 @@
               },
               {
                 "key": "sterilityRequirement",
-                "question": "Is an autoclavable probe needed?",
+                "label": "Sterility requirement",
+                "question": "Sterility requirement",
+                "hint": "Autoclavable probe needed or not",
                 "options": [
                   { "val": "yes", "label": "Autoclavable probe needed" },
                   { "val": "no", "label": "Not needed" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Volume and Probe Selector",
+            "lead": "Find the right probe for your sample volume on VCX-130.",
+            "emptyState": "Recommends the right probe or microtip",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -113,6 +129,7 @@
               {
                 "key": "heatSensitivity",
                 "label": "Sample heat sensitivity",
+                "hint": "Standard or heat-sensitive",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "heat-sensitive", "label": "Heat-sensitive" }
@@ -121,14 +138,17 @@
               {
                 "key": "pulseCycleNeed",
                 "label": "Pulse cycle need",
+                "hint": "Continuous or intermittent, 1 to 59 seconds",
                 "options": [
                   { "val": "continuous", "label": "Continuous" },
-                  { "val": "intermittent", "label": "Intermittent (1 to 59 seconds)" }
+                  { "val": "intermittent", "label": "Intermittent" },
+                  { "val": "1-to-59-seconds", "label": "1 to 59 seconds" }
                 ]
               },
               {
                 "key": "runDuration",
                 "label": "Run duration",
+                "hint": "Short burst through 10-hour extended run",
                 "options": [
                   { "val": "short-burst", "label": "Short burst" },
                   { "val": "extended", "label": "Extended run (up to 10 hours)" }
@@ -140,20 +160,64 @@
                 "condition": "default",
                 "title": "How Do the Pulser and Timer Work?",
                 "body": "The ten-hour timer covers short bursts through extended runs, while an independent ON/OFF pulser, adjustable from 1 to 59 seconds on each cycle, adds fine control over intermittent sonication.",
-                "tags": ["Independent ON/OFF Pulser", "Ten-Hour Timer"]
+                "tags": [
+                  "Independent ON/OFF Pulser",
+                  "Ten-Hour Timer"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Pulse and Timer Planner",
+            "lead": "Set up the right pulser and timer configuration for your protocol.",
+            "ctaNote": "Recommends the right pulser and timer settings. Routes to us for application-specific guidance.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using VCX-130 include molecular biology, plant science, and academic research laboratories.",
             "industries": [
-              { "name": "Molecular Biology Laboratories", "useCase": "Cell lysis for downstream DNA, RNA, or protein extraction", "consideration": "Digital energy monitoring supports reproducible lysis across sample sets" },
-              { "name": "Plant Science Research", "useCase": "Disrupting plant tissue and cell suspension cultures", "consideration": "Effective on soft tissue via lysis buffer; woody tissue may need liquid nitrogen prep" },
-              { "name": "Academic and Teaching Laboratories", "useCase": "Introducing students to ultrasonic sample processing", "consideration": "Compact, autoclavable design suits shared teaching lab equipment" },
-              { "name": "Microbiology and Diagnostics", "useCase": "Processing small, precious clinical or research samples", "consideration": "Microtip accessories extend coverage down to 150 µL" },
-              { "name": "Pharmaceutical Formulation Research", "useCase": "Small-batch formulation and dispersion testing", "consideration": "10 to 150 mL range covers typical early-stage formulation volumes" }
+              {
+                "name": "Molecular Biology Laboratories",
+                "note": "Use Case: Cell lysis for downstream DNA, RNA, or protein extraction",
+                "bullets": [
+                  "What to Consider: Digital energy monitoring supports reproducible lysis across sample sets"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Plant Science Research",
+                "note": "Use Case: Disrupting plant tissue and cell suspension cultures",
+                "bullets": [
+                  "What to Consider: Effective on soft tissue via lysis buffer; woody tissue may need liquid nitrogen prep"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic and Teaching Laboratories",
+                "note": "Use Case: Introducing students to ultrasonic sample processing",
+                "bullets": [
+                  "What to Consider: Compact, autoclavable design suits shared teaching lab equipment"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Microbiology and Diagnostics",
+                "note": "Use Case: Processing small, precious clinical or research samples",
+                "bullets": [
+                  "What to Consider: Microtip accessories extend coverage down to 150 µL"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Formulation Research",
+                "note": "Use Case: Small-batch formulation and dispersion testing",
+                "bullets": [
+                  "What to Consider: 10 to 150 mL range covers typical early-stage formulation volumes"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -167,20 +231,51 @@
               { "title": "Preventive Maintenance", "description": "Maintains converter, probe, and tuning performance" },
               { "title": "Spares and Accessories", "description": "Supplies replacement tips, probes, and converter cables" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "VCX-130 service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is VCX-130 used for?", "answer": "VCX-130 is a 130 W, 20 kHz ultrasonic processor used for cell lysis, microsample processing, and plant tissue disruption, covering volumes from 150 µL to 150 mL depending on the probe used." },
-            { "question": "What volume can the standard probe process?", "answer": "The included ¼\" titanium alloy probe handles 10 to 50 mL directly, with microtip accessories available for volumes down to 150 µL." },
-            { "question": "Is the VCX-130 probe autoclavable?", "answer": "Yes, the standard Ti-6Al-4V titanium alloy probe is autoclavable, supporting sterile sample workflows." },
-            { "question": "Does VCX-130 display delivered energy?", "answer": "Yes, a digital wattmeter and energy monitor display power and delivered energy in real time throughout a run." },
-            { "question": "Can I run intermittent pulses on VCX-130?", "answer": "Yes, an independent ON/OFF pulser is adjustable from 1 to 59 seconds per cycle for fine intermittent control." },
-            { "question": "Is VCX-130 compatible with footswitch or remote operation?", "answer": "Yes, the system supports both remote actuation and footswitch operation for hands-free processing." },
-            { "question": "How does VCX-130 compare to VCX-500 or VCX-750?", "answer": "VCX-130 offers the same core programmability as the larger VCX models, at a lower 130 W power ceiling suited specifically to small and micro-scale sample volumes." },
-            { "question": "Can VCX-130 process plant tissue samples?", "answer": "Yes, soft, fresh plant tissue can typically be disrupted by sonicating in a lysis buffer, while harder, woody tissue may need freezing and grinding in liquid nitrogen first." },
-            { "question": "What is the price of VCX-130 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe and accessory requirements." },
-            { "question": "Who is the authorized distributor of VCX-130 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-130 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is VCX-130 used for?",
+              "answer": "VCX-130 is a 130 W, 20 kHz ultrasonic processor used for cell lysis, microsample processing, and plant tissue disruption, covering volumes from 150 µL to 150 mL depending on the probe used."
+            },
+            {
+              "question": "What volume can the standard probe process?",
+              "answer": "The included ¼\" titanium alloy probe handles 10 to 50 mL directly, with microtip accessories available for volumes down to 150 µL."
+            },
+            {
+              "question": "Is the VCX-130 probe autoclavable?",
+              "answer": "Yes, the standard Ti-6Al-4V titanium alloy probe is autoclavable, supporting sterile sample workflows."
+            },
+            {
+              "question": "Does VCX-130 display delivered energy?",
+              "answer": "Yes, a digital wattmeter and energy monitor display power and delivered energy in real time throughout a run."
+            },
+            {
+              "question": "Can I run intermittent pulses on VCX-130?",
+              "answer": "Yes, an independent ON/OFF pulser is adjustable from 1 to 59 seconds per cycle for fine intermittent control."
+            },
+            {
+              "question": "Is VCX-130 compatible with footswitch or remote operation?",
+              "answer": "Yes, the system supports both remote actuation and footswitch operation for hands-free processing."
+            },
+            {
+              "question": "How does VCX-130 compare to VCX-500 or VCX-750?",
+              "answer": "VCX-130 offers the same core programmability as the larger VCX models, at a lower 130 W power ceiling suited specifically to small and micro-scale sample volumes."
+            },
+            {
+              "question": "Can VCX-130 process plant tissue samples?",
+              "answer": "Yes, soft, fresh plant tissue can typically be disrupted by sonicating in a lysis buffer, while harder, woody tissue may need freezing and grinding in liquid nitrogen first."
+            },
+            {
+              "question": "What is the price of VCX-130 in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your probe and accessory requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of VCX-130 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Sonics & Materials VCX-130 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -201,10 +296,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right VCX-130 configuration", "body": "Tell us your typical sample volume and whether you need footswitch or remote operation, and we'll confirm the right VCX-130 configuration." },
-              { "title": "Confirm the right pulser configuration", "body": "Tell us about your sample's sensitivity to heat or continuous sonication, and we'll help set up the right pulser configuration for your VCX-130." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows pulser and energy monitoring performance on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right probe or microtip for your volume and application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with pulser settings and probe handling" },
+              { "title": "Preventive Maintenance", "body": "Maintains converter, probe, and tuning performance" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement tips, probes, and converter cables" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -228,21 +326,29 @@
                 "title": "Product Information",
                 "description": "VCX-130 product information: power delivery, control features, and probe options.",
                 "body": [
-                  "The system runs at 130 W net power output and 20 kHz frequency, offering the same programmability as the larger VCX-500 and VCX-750 systems in a smaller-volume format.",
-                  "A digital wattmeter and energy monitor display power and delivered energy in real time throughout a run.",
-                  "Automatic tuning and automatic amplitude compensation keep output consistent as sample conditions change during processing.",
-                  "The ten-hour timer covers short bursts through extended runs, while an independent ON/OFF pulser, adjustable from 1 to 59 seconds on each cycle, adds fine control over intermittent sonication.",
-                  "An elapsed time indicator and variable power output control round out the standard feature set.",
-                  "The standard ¼\" (6mm) titanium alloy Ti-6Al-4V probe handles 10 to 50 mL volumes and is autoclavable for sterile workflows.",
-                  "Remote actuation and footswitch operation are both supported, useful for hands-free processing.",
-                  "The system ships complete with the probe, tool kit, and instruction manual, ready for operation out of the box."
+                  {
+                    "text": "The system runs at 130 W net power output and 20 kHz frequency, offering the same programmability as the larger VCX-500 and VCX-750 systems in a smaller-volume format."
+                  },
+                  { "text": "A digital wattmeter and energy monitor display power and delivered energy in real time throughout a run." },
+                  { "text": "Automatic tuning and automatic amplitude compensation keep output consistent as sample conditions change during processing." },
+                  {
+                    "text": "The ten-hour timer covers short bursts through extended runs, while an independent ON/OFF pulser, adjustable from 1 to 59 seconds on each cycle, adds fine control over intermittent sonication."
+                  },
+                  { "text": "An elapsed time indicator and variable power output control round out the standard feature set." },
+                  { "text": "The standard ¼\" (6mm) titanium alloy Ti-6Al-4V probe handles 10 to 50 mL volumes and is autoclavable for sterile workflows." },
+                  { "text": "Remote actuation and footswitch operation are both supported, useful for hands-free processing." },
+                  { "text": "The system ships complete with the probe, tool kit, and instruction manual, ready for operation out of the box." }
                 ],
                 "cards": [
                   { "title": "130 W, 20 kHz", "description": "Core power and frequency output" },
                   { "title": "150 µL to 150 mL", "description": "Volume range across probes and accessories" },
                   { "title": "Digital energy monitor", "description": "Real-time wattage and energy display" },
                   { "title": "Autoclavable titanium probe", "description": "Sterile workflow compatible" }
-                ]
+                ],
+                "glanceTitle": "VCX-130 at a Glance",
+                "subheading": "Overview",
+                "intro": "VCX-130 overview: shared programmability, real-time monitoring, and micro-scale volume range.",
+                "tabSummary": "Why this remains Sonics & Materials' most popular small-volume system"
               },
               {
                 "key": "config",
@@ -254,53 +360,91 @@
                   { "title": "Frequency", "description": "20 kHz" },
                   { "title": "Processing volume", "description": "150 µL to 150 mL, dependent on probe or accessory" },
                   { "title": "Standard probe", "description": "¼\" (6mm) diameter, Ti-6Al-4V titanium alloy, autoclavable, 10 to 50 mL range" }
-                ]
+                ],
+                "disclaimer": "Tell us your typical sample volume and whether you need footswitch or remote operation, and we'll confirm the right VCX-130 configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "VCX-130 key features: digital monitoring, automatic tuning, and independent pulse control."
+                "description": "VCX-130 key features: digital monitoring, automatic tuning, and independent pulse control.",
+                "tabSummary": "Digital energy monitor, automatic tuning, independent pulser"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "VCX-130 applications: cell lysis, microsample processing, and plant tissue disruption."
+                "description": "VCX-130 applications: cell lysis, microsample processing, and plant tissue disruption.",
+                "tabSummary": "Cell lysis, microsample processing, plant tissue disruption"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "VCX-130 technical specifications: power output, frequency, dimensions, and probe details."
+                "description": "VCX-130 technical specifications: power output, frequency, dimensions, and probe details.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Power, frequency, dimensions, and probe specifications"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Energy Monitoring and Precision Control",
                 "title": "Energy Monitoring and Precision Control",
-                "description": "A small-volume sonicator lives or dies on precision, since there's far less margin for error in a 150 µL sample than in a full-liter batch. The digital wattmeter and energy monitor track power and delivered energy continuously during a run, so exactly how much energy a sample received is never a guess. Automatic tuning and amplitude compensation adjust output on the fly as sample viscosity, temperature, or composition shifts mid-process, keeping delivered energy consistent even when the sample itself isn't perfectly uniform. The independent ON/OFF pulser, adjustable in 1-second increments from 1 to 59 seconds, gives fine control over intermittent cycling for samples sensitive to continuous sonication.",
+                "description": "How VCX-130's digital wattmeter and automatic tuning deliver consistent micro-scale results.",
                 "cards": [
                   { "title": "Confirming actual delivered energy", "description": "Digital wattmeter and energy monitor" },
                   { "title": "Consistent output despite sample variability", "description": "Automatic tuning and amplitude compensation" },
                   { "title": "Fine-tuned intermittent sonication", "description": "Independent ON/OFF pulser, 1 to 59 seconds" },
                   { "title": "Hands-free repeated processing", "description": "Remote actuation and footswitch compatibility" }
-                ]
+                ],
+                "paragraphs": [
+                  "A small-volume sonicator lives or dies on precision, since there's far less margin for error in a 150 µL sample than in a full-liter batch.",
+                  "The digital wattmeter and energy monitor track power and delivered energy continuously during a run, so exactly how much energy a sample received is never a guess. Automatic tuning and amplitude compensation adjust output on the fly as sample viscosity, temperature, or composition shifts mid-process, keeping delivered energy consistent even when the sample itself isn't perfectly uniform. The independent ON/OFF pulser, adjustable in 1-second increments from 1 to 59 seconds, gives fine control over intermittent cycling for samples sensitive to continuous sonication."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your protocol needs", "value": "How VCX-130 delivers it" },
+                "note": "Tell us about your sample's sensitivity to heat or continuous sonication, and we'll help set up the right pulser configuration for your VCX-130.",
+                "tabSummary": "How the digital wattmeter and automatic tuning work together"
               },
               {
                 "key": "performance",
                 "eyebrow": "Probe and Volume Range",
                 "title": "Probe and Volume Range",
-                "description": "The standard probe covers a solid working range on its own, and accessories extend that range further in either direction depending on what your samples actually need.",
+                "tabSummary": "Standard probe vs microtip accessories",
                 "body": [
+                  "Matching VCX-130's standard probe and accessory options to your sample volume.",
+                  "The standard probe covers a solid working range on its own, and accessories extend that range further in either direction depending on what your samples actually need.",
                   "The included ¼\" (6mm) titanium alloy probe handles 10 to 50 mL directly, autoclavable for workflows that require repeated sterilization between samples. For volumes below that range, down toward 150 µL, dedicated microtip and smaller-diameter probe accessories are available, suited to precious or limited-quantity samples. On the higher end, up to 150 mL, alternative probe configurations extend coverage without stepping up to a higher-power VCX model. An air-cooled converter option is also available for labs running longer or more frequent processing cycles where heat buildup in the converter itself becomes a factor."
                 ],
-                "utilityChecklist": [
-                  { "label": "Standard 10 to 50 mL processing", "value": "Included ¼\" titanium alloy probe" },
-                  { "label": "Very small or precious sample volumes", "value": "Microtip and smaller-diameter probe accessories" },
-                  { "label": "Larger volumes up to 150 mL", "value": "Alternative probe configurations within the VCX-130 range" },
-                  { "label": "Extended or frequent processing cycles", "value": "Optional air-cooled converter" }
-                ],
-                "disclaimer": "Tell us your typical sample volume range, and we'll confirm the right probe or microtip accessory for your VCX-130."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your sample needs",
+                      "How VCX-130 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Standard 10 to 50 mL processing",
+                        "Included ¼\" titanium alloy probe"
+                      ],
+                      [
+                        "Very small or precious sample volumes",
+                        "Microtip and smaller-diameter probe accessories"
+                      ],
+                      [
+                        "Larger volumes up to 150 mL",
+                        "Alternative probe configurations within the VCX-130 range"
+                      ],
+                      [
+                        "Extended or frequent processing cycles",
+                        "Optional air-cooled converter"
+                      ]
+                    ]
+                  },
+                  { "note": "Tell us your typical sample volume range, and we'll confirm the right probe or microtip accessory for your VCX-130." }
+                ]
               },
               {
                 "key": "docs",
@@ -311,7 +455,9 @@
                   { "title": "VCX-130 Data Sheet", "description": "Available on request" },
                   { "title": "Probe and Microtip Compatibility Guide", "description": "Available on request" },
                   { "title": "Instruction Manual", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet"
               }
             ],
             "cta": {
@@ -320,9 +466,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "130 W of programmable ultrasonic power with digital energy monitoring, covering 150 µL to 150 mL with autoclavable probe options. Tell us your sample volume and application, and Inkarp will confirm the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Micro-scale sonication doesn't need less precision, it needs the same control in a smaller footprint. VCX-130 is Sonics & Materials' most popular small-volume system for exactly that reason.",
+              "A 130 W, 20 kHz processor, it offers the same programmability as the larger VCX versions, with a digital wattmeter, energy monitor, automatic amplitude compensation, and a ten-hour timer paired with an independent 1 to 59 second ON/OFF pulser. A ¼\" titanium alloy probe, handling 10 to 50 mL volumes, ships standard, with accessories available to extend processing down to 150 µL."
+            ],
+            "statsIntro": "VCX-130 at a glance: power output, frequency, and processing volume range."
+          },
+
+          "faqIntro": "Frequently asked questions about VCX-130 cover power, volume range, and pricing in India.",
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

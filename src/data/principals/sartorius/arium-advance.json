@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "sartorius",
-    "principalName": "Sartorius",
-    "countryOfOrigin": "Germany"
-  },
+  "principal": { "slug": "sartorius", "principalName": "Sartorius", "countryOfOrigin": "Germany" },
   "categories": [
     {
       "name": "Arium Advance",
@@ -11,25 +7,40 @@
       "products": [
         {
           "name": "Arium Advance EDI Lab Water Purification System",
+
           "slug": "arium-advance-edi-lab-water-purification-system",
+
           "principalImage": "/assets/images/PrincipalLogos/sartorius.svg",
+
           "imageAlt": "Sartorius Arium Advance EDI Lab Water Purification System - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/arium-advance-edi-lab-water-purification-system",
+
           "breadcrumbPath": "Home > Products > Arium Advance > Arium Advance EDI Lab Water Purification System",
+
           "h1": "Arium Advance EDI Lab Water Purification System",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Cartridge-based deionizers start strong and decline. Resistivity drops as the resin exhausts, and the water feeding a media prep or an autoclave in week six isn't the water that fed it in week one — which is exactly the kind of variable that quietly undermines reproducibility.",
 
           "features": [
-            "Proprietary Patented Electrodeionization: Continuous ion removal achieving the highest retention rates with optimum purified water yield.",
-            "Consistent 5–15 MΩ·cm Resistivity: Type 2 quality delivered reliably rather than drifting between service intervals.",
-            "Up to 10 L/h Production: Enough throughput for routine media, reagent, and buffer preparation across a working day.",
-            "Broad Contaminant Removal: Reliably removes oxidants, heavy metal ions, and particulates from the potable feed.",
-            "iJust Intelligent Software: Reads initial feed water condition, cuts consumption, and calculates optimal cleaning cycles.",
-            "Closed arium® Bagtank Storage: Isolates purified water from secondary contamination after production.",
-            "Glove-Compatible Touch Display: Responds to a light touch through gloves, with clearly structured menu navigation.",
-            "Three Installation Formats: Fits as benchtop, wall-mounted, or built-in depending on available lab space."
+            {
+              "title": "Proprietary Patented Electrodeionization",
+              "description": "Continuous ion removal achieving the highest retention rates with optimum purified water yield."
+            },
+            { "title": "Consistent 5–15 MΩ·cm Resistivity", "description": "Type 2 quality delivered reliably rather than drifting between service intervals." },
+            { "title": "Up to 10 L/h Production", "description": "Enough throughput for routine media, reagent, and buffer preparation across a working day." },
+            { "title": "Broad Contaminant Removal", "description": "Reliably removes oxidants, heavy metal ions, and particulates from the potable feed." },
+            {
+              "title": "iJust Intelligent Software",
+              "description": "Reads initial feed water condition, cuts consumption, and calculates optimal cleaning cycles."
+            },
+            { "title": "Closed arium® Bagtank Storage", "description": "Isolates purified water from secondary contamination after production." },
+            { "title": "Glove-Compatible Touch Display", "description": "Responds to a light touch through gloves, with clearly structured menu navigation." },
+            { "title": "Three Installation Formats", "description": "Fits as benchtop, wall-mounted, or built-in depending on available lab space." }
           ],
 
           "technicalSpecs": [
@@ -50,13 +61,16 @@
           ],
 
           "applications": [
-            "Microbiological Media and Reagent Preparation: Consistent Type 2 quality at up to 10 L/h for routine bulk preparation",
-            "Solutions for Chemical Analysis and Synthesis: 5–15 MΩ·cm resistivity keeps the ionic background predictable",
-            "Histology: Reliable pure water supply for staining and tissue processing workflows",
-            "ELISA and RIA: Consistent water quality supporting reproducible assay results",
-            "Buffer and pH Solution Preparation: Low, stable ionic background for solutions that hold their specification",
-            "Laboratory Instrument Feed Water: Purified feed for autoclaves, glassware dishwashers, humidifiers, and water baths",
-            "Feed for Downstream Ultrapure Systems: Consistent Type 2 input extends downstream system and consumable life"
+            {
+              "title": "Microbiological Media and Reagent Preparation",
+              "description": "Consistent Type 2 quality at up to 10 L/h for routine bulk preparation"
+            },
+            { "title": "Solutions for Chemical Analysis and Synthesis", "description": "5–15 MΩ·cm resistivity keeps the ionic background predictable" },
+            { "title": "Histology", "description": "Reliable pure water supply for staining and tissue processing workflows" },
+            { "title": "ELISA and RIA", "description": "Consistent water quality supporting reproducible assay results" },
+            { "title": "Buffer and pH Solution Preparation", "description": "Low, stable ionic background for solutions that hold their specification" },
+            { "title": "Laboratory Instrument Feed Water", "description": "Purified feed for autoclaves, glassware dishwashers, humidifiers, and water baths" },
+            { "title": "Feed for Downstream Ultrapure Systems", "description": "Consistent Type 2 input extends downstream system and consumable life" }
           ],
 
           "inPageNav": [
@@ -79,15 +93,17 @@
               {
                 "key": "availableSpace",
                 "label": "Available space",
+                "hint": "Free bench run, wall space only, or cabinet/built-in cavity",
                 "options": [
                   { "val": "free-bench-run", "label": "Free bench run" },
                   { "val": "wall-space-only", "label": "Wall space only" },
-                  { "val": "cabinet-built-in", "label": "Cabinet / built-in cavity" }
+                  { "val": "cabinet-built-in", "label": "Cabinet/built-in cavity" }
                 ]
               },
               {
                 "key": "feedWaterAccess",
                 "label": "Feed water access",
+                "hint": "Distance and access to the potable water connection",
                 "options": [
                   { "val": "direct-nearby", "label": "Direct access nearby" },
                   { "val": "requires-routing", "label": "Requires routing" }
@@ -96,6 +112,7 @@
               {
                 "key": "pointOfUse",
                 "label": "Point of use",
+                "hint": "Single dispensing point, or distributed across the lab",
                 "options": [
                   { "val": "single-point", "label": "Single dispensing point" },
                   { "val": "distributed", "label": "Distributed across the lab" }
@@ -103,10 +120,36 @@
               }
             ],
             "results": [
-              { "condition": { "availableSpace": "wall-space-only" }, "title": "Wall-Mounted (H2O-EDI-2-B) Fits Your Space", "body": "Wall-mounted installation is available as H2O-EDI-2-B.", "tags": ["Wall-Mounted: H2O-EDI-2-B"] },
-              { "condition": { "availableSpace": "free-bench-run" }, "title": "Benchtop (H2O-EDI-1-T / H2O-EDI-2-T) Fits Your Space", "body": "Benchtop installation is available as H2O-EDI-1-T (5 L/h) or H2O-EDI-2-T (10 L/h).", "tags": ["Benchtop: H2O-EDI-1-T / H2O-EDI-2-T"] },
-              { "condition": "default", "title": "Confirm the Right Installation Fit With Inkarp", "body": "Share the available space and feed water access, and Inkarp will confirm which item number matches.", "tags": ["Benchtop or Wall-Mounted"] }
-            ]
+              {
+                "condition": { "availableSpace": "wall-space-only" },
+                "title": "Wall-Mounted (H2O-EDI-2-B) Fits Your Space",
+                "body": "Wall-mounted installation is available as H2O-EDI-2-B.",
+                "tags": [
+                  "Wall-Mounted: H2O-EDI-2-B"
+                ]
+              },
+              {
+                "condition": { "availableSpace": "free-bench-run" },
+                "title": "Benchtop (H2O-EDI-1-T / H2O-EDI-2-T) Fits Your Space",
+                "body": "Benchtop installation is available as H2O-EDI-1-T (5 L/h) or H2O-EDI-2-T (10 L/h).",
+                "tags": [
+                  "Benchtop: H2O-EDI-1-T / H2O-EDI-2-T"
+                ]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Installation Fit With Inkarp",
+                "body": "Share the available space and feed water access, and Inkarp will confirm which item number matches.",
+                "tags": [
+                  "Benchtop or Wall-Mounted"
+                ]
+              }
+            ],
+            "eyebrow": "Installation Format Fit Checker",
+            "ctaNote": "Recommends benchtop (H2O-EDI-1-T / H2O-EDI-2-T) or wall-mounted (H2O-EDI-2-B). Routes to an installation-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "planners": [
@@ -116,13 +159,20 @@
               "title": "How much Type 2 water does the lab go through?",
               "description": "Enter daily volume and demand pattern, and see which production rate fits.",
               "fields": [
-                { "key": "choices", "label": "Choose one" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Demand pattern", "choices": "Steady through the day; Concentrated in peaks" },
-                { "title": "Downstream ultrapure system", "choices": "Feeding one; Standalone use only" }
+                { "title": "Daily Type 2 volume", "hint": "Litres of pure water needed per day", "input": "number", "choices": "" },
+                {
+                  "title": "Demand pattern",
+                  "hint": "Steady through the day, or concentrated in peaks",
+                  "choices": "Steady through the day; Concentrated in peaks"
+                },
+                { "title": "Downstream ultrapure system", "hint": "Feeding one, or standalone use only", "choices": "Feeding one; Standalone use only" }
               ],
-              "disclaimer": "Recommends the 5 L/h or 10 L/h configuration, then routes to a volume-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Recommends the 5 L/h or 10 L/h configuration. Routes to a volume-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
             }
           ],
 
@@ -132,72 +182,179 @@
             "steps": [
               {
                 "key": "applicationsInUse",
-                "question": "What applications run on this water?",
+                "label": "Applications in use",
+                "question": "Applications in use",
+                "hint": "Media prep, chemical analysis, histology, ELISA/RIA, buffers, instrument feed",
                 "options": [
                   { "val": "media-prep", "label": "Media prep" },
                   { "val": "chemical-analysis", "label": "Chemical analysis" },
                   { "val": "histology", "label": "Histology" },
-                  { "val": "elisa-ria", "label": "ELISA / RIA" },
+                  { "val": "elisa-ria", "label": "ELISA/RIA" },
                   { "val": "buffers", "label": "Buffers" },
                   { "val": "instrument-feed", "label": "Instrument feed" }
                 ]
               },
               {
                 "key": "analyticalMethodsPresent",
-                "question": "Are any of these analytical methods also running?",
+                "label": "Analytical methods present",
+                "question": "Analytical methods present",
+                "hint": "None, or HPLC / AAS / ion chromatography also running",
                 "options": [
                   { "val": "none", "label": "None" },
-                  { "val": "hplc-aas-ic", "label": "HPLC / AAS / ion chromatography" }
+                  { "val": "hplc-aas-ic", "label": "HPLC / AAS / ion chromatography also running" }
                 ]
               },
               {
                 "key": "resistivityRequirement",
-                "question": "Is 5–15 MΩ·cm sufficient, or is ultrapure needed?",
+                "label": "Resistivity requirement",
+                "question": "Resistivity requirement",
+                "hint": "5–15 MΩ·cm sufficient, or ultrapure needed",
                 "options": [
                   { "val": "sufficient", "label": "5–15 MΩ·cm sufficient" },
                   { "val": "ultrapure-needed", "label": "Ultrapure needed" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Confirms whether Arium Advance EDI alone fits, or a Type 1 stage is also required, then routes to an application-specific quotation.",
-              "ctaLabel": "Talk to Product Expert"
-            }
+            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "eyebrow": "Water Grade Requirement Checker",
+            "emptyState": "Confirms whether Arium Advance EDI alone fits, or a Type 1 stage is also required",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Arium Advance EDI industries: pharmaceutical labs, clinical diagnostics, academic research, and histopathology.",
             "industries": [
-              { "name": "Pharmaceutical and QC Laboratories", "useCase": "Reagent, buffer, and solution preparation", "consideration": "Consistent 5–15 MΩ·cm removes water as a variable in method transfer" },
-              { "name": "Clinical and Diagnostic Laboratories", "useCase": "ELISA, RIA, and reagent preparation", "consideration": "Closed bagtank storage protects quality between production and use" },
-              { "name": "Academic Research Laboratories", "useCase": "General preparative and analytical solution work", "consideration": "Three installation formats fit crowded, shared bench environments" },
-              { "name": "Histopathology Laboratories", "useCase": "Staining and tissue processing workflows", "consideration": "Reliable pure water supports reproducible staining outcomes" },
-              { "name": "Chemical Analysis and Synthesis Labs", "useCase": "Preparation of analytical and reaction solutions", "consideration": "Oxidant and heavy metal removal protects sensitive chemistries" },
-              { "name": "Facilities Feeding Multiple Instruments", "useCase": "Autoclaves, glassware washers, humidifiers, water baths", "consideration": "Purified feed water extends downstream instrument service life" },
-              { "name": "Labs Running Downstream Ultrapure Systems", "useCase": "Supplying Type 2 feed to a Type 1 polisher", "consideration": "Consistent input gives the downstream system a longer working life" }
+              {
+                "name": "Pharmaceutical and QC Laboratories",
+                "note": "Use Case: Reagent, buffer, and solution preparation",
+                "bullets": [
+                  "What to Consider: Consistent 5–15 MΩ·cm removes water as a variable in method transfer"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Clinical and Diagnostic Laboratories",
+                "note": "Use Case: ELISA, RIA, and reagent preparation",
+                "bullets": [
+                  "What to Consider: Closed bagtank storage protects quality between production and use"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Research Laboratories",
+                "note": "Use Case: General preparative and analytical solution work",
+                "bullets": [
+                  "What to Consider: Three installation formats fit crowded, shared bench environments"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Histopathology Laboratories",
+                "note": "Use Case: Staining and tissue processing workflows",
+                "bullets": [
+                  "What to Consider: Reliable pure water supports reproducible staining outcomes"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical Analysis and Synthesis Labs",
+                "note": "Use Case: Preparation of analytical and reaction solutions",
+                "bullets": [
+                  "What to Consider: Oxidant and heavy metal removal protects sensitive chemistries"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Facilities Feeding Multiple Instruments",
+                "note": "Use Case: Autoclaves, glassware washers, humidifiers, water baths",
+                "bullets": [
+                  "What to Consider: Purified feed water extends downstream instrument service life"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Labs Running Downstream Ultrapure Systems",
+                "note": "Use Case: Supplying Type 2 feed to a Type 1 polisher",
+                "bullets": [
+                  "What to Consider: Consistent input gives the downstream system a longer working life"
+                ],
+                "tags": []
+              }
             ]
           },
 
           "comparison": {
-            "eyebrow": "Comparison",
+            "eyebrow": "Method comparison",
             "title": "Method Comparison",
             "description": "Arium Advance EDI method comparison: available configurations and their specified differences.",
             "columns": [
-              { "label": "H2O-EDI-1-T", "highlight": false },
-              { "label": "H2O-EDI-2-T", "highlight": false },
-              { "label": "H2O-EDI-2-B", "highlight": false }
+              { "label": "H2O-EDI-1-T" },
+              { "label": "H2O-EDI-2-T" },
+              { "label": "H2O-EDI-2-B" }
             ],
             "rows": [
-              { "feature": "Production Flow Rate", "values": ["5 L/h", "10 L/h", "Confirm on configuration"] },
-              { "feature": "Installation Option", "values": ["Benchtop", "Benchtop", "Wall-mounted"] },
-              { "feature": "Water Grade", "values": ["Type 2", "Type 2", "Type 2"] },
-              { "feature": "Resistivity", "values": ["5–15 MΩ·cm", "5–15 MΩ·cm", "5–15 MΩ·cm"] },
-              { "feature": "Purification Technology", "values": ["Patented EDI", "Patented EDI", "Patented EDI"] },
-              { "feature": "Best For", "values": ["Modest daily Type 2 demand", "Heavier daily Type 2 demand", "Labs with no free bench run"] },
-              { "feature": "Choose When", "values": ["Bench space is available and volume is moderate", "Bench space is available and volume is higher", "Bench space is the constraint"] }
+              {
+                "feature": "Production Flow Rate",
+                "values": [
+                  "5 L/h",
+                  "10 L/h",
+                  "Confirm on configuration"
+                ]
+              },
+              {
+                "feature": "Installation Option",
+                "values": [
+                  "Benchtop",
+                  "Benchtop",
+                  "Wall-mounted"
+                ]
+              },
+              {
+                "feature": "Water Grade",
+                "values": [
+                  "Type 2",
+                  "Type 2",
+                  "Type 2"
+                ]
+              },
+              {
+                "feature": "Resistivity",
+                "values": [
+                  "5–15 MΩ·cm",
+                  "5–15 MΩ·cm",
+                  "5–15 MΩ·cm"
+                ]
+              },
+              {
+                "feature": "Purification Technology",
+                "values": [
+                  "Patented EDI",
+                  "Patented EDI",
+                  "Patented EDI"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Modest daily Type 2 demand",
+                  "Heavier daily Type 2 demand",
+                  "Labs with no free bench run"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Bench space is available and volume is moderate",
+                  "Bench space is available and volume is higher",
+                  "Bench space is the constraint"
+                ]
+              }
             ],
-            "disclaimer": "All three run the same patented EDI technology, the same iJust software, and the same closed bagtank storage — the differences sit in production rate and how the unit mounts. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted."
+            "disclaimer": "All three run the same patented EDI technology, the same iJust software, and the same closed bagtank storage — the differences sit in production rate and how the unit mounts. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "serviceMap": {
@@ -215,19 +372,55 @@
           },
 
           "faqs": [
-            { "question": "What is Arium Advance EDI used for?", "answer": "It's a Type 2 pure water system used for microbiological media and reagent preparation, chemical analysis and synthesis solutions, histology, ELISA and RIA, buffer and pH solution preparation, and feeding laboratory instruments." },
-            { "question": "What water quality does Arium Advance EDI produce?", "answer": "Type 2 pure water with a resistivity of 5 to 15 MΩ·cm, delivered consistently at rates up to 10 L/h." },
-            { "question": "What is electrodeionization and why does it matter?", "answer": "EDI removes ions continuously using an electrical field rather than a depleting exchange capacity, which is what allows water quality to stay consistent instead of declining across a service interval." },
-            { "question": "What contaminants does the system remove?", "answer": "Oxidants, heavy metal ions, and particulates are reliably removed from the potable feed water, with the highest ion retention rates alongside optimum purified water yield." },
-            { "question": "Does Arium Advance EDI produce Type 1 ultrapure water?", "answer": "No. It produces Type 2 pure water. Where Type 1 is also needed, this system can feed a downstream ultrapure polisher, or a combined system covering both grades may be the better fit." },
-            { "question": "What is iJust?", "answer": "It's the system's intelligent software — it makes the best use of the initial feed water conditions, enhances purified water quality, reduces water usage, and calculates optimal cleaning cycles." },
-            { "question": "How is purified water stored?", "answer": "In the closed arium® bagtank system, which protects the water from secondary contamination after production." },
-            { "question": "Can the display be operated while wearing gloves?", "answer": "Yes. The touch-function display responds to a light touch through gloves, with clearly structured menu navigation." },
-            { "question": "How can the system be installed?", "answer": "Three ways — benchtop, wall-mounted, or built-in — so it fits the space actually available rather than requiring space to be cleared." },
-            { "question": "Does it extend the life of downstream systems?", "answer": "Yes. Feeding downstream ultrapure water systems with consistent Type 2 water gives them a guaranteed longer service life." },
+            {
+              "question": "What is Arium Advance EDI used for?",
+              "answer": "It's a Type 2 pure water system used for microbiological media and reagent preparation, chemical analysis and synthesis solutions, histology, ELISA and RIA, buffer and pH solution preparation, and feeding laboratory instruments."
+            },
+            {
+              "question": "What water quality does Arium Advance EDI produce?",
+              "answer": "Type 2 pure water with a resistivity of 5 to 15 MΩ·cm, delivered consistently at rates up to 10 L/h."
+            },
+            {
+              "question": "What is electrodeionization and why does it matter?",
+              "answer": "EDI removes ions continuously using an electrical field rather than a depleting exchange capacity, which is what allows water quality to stay consistent instead of declining across a service interval."
+            },
+            {
+              "question": "What contaminants does the system remove?",
+              "answer": "Oxidants, heavy metal ions, and particulates are reliably removed from the potable feed water, with the highest ion retention rates alongside optimum purified water yield."
+            },
+            {
+              "question": "Does Arium Advance EDI produce Type 1 ultrapure water?",
+              "answer": "No. It produces Type 2 pure water. Where Type 1 is also needed, this system can feed a downstream ultrapure polisher, or a combined system covering both grades may be the better fit."
+            },
+            {
+              "question": "What is iJust?",
+              "answer": "It's the system's intelligent software — it makes the best use of the initial feed water conditions, enhances purified water quality, reduces water usage, and calculates optimal cleaning cycles."
+            },
+            {
+              "question": "How is purified water stored?",
+              "answer": "In the closed arium® bagtank system, which protects the water from secondary contamination after production."
+            },
+            {
+              "question": "Can the display be operated while wearing gloves?",
+              "answer": "Yes. The touch-function display responds to a light touch through gloves, with clearly structured menu navigation."
+            },
+            {
+              "question": "How can the system be installed?",
+              "answer": "Three ways — benchtop, wall-mounted, or built-in — so it fits the space actually available rather than requiring space to be cleared."
+            },
+            {
+              "question": "Does it extend the life of downstream systems?",
+              "answer": "Yes. Feeding downstream ultrapure water systems with consistent Type 2 water gives them a guaranteed longer service life."
+            },
             { "question": "What production rates are available?", "answer": "5 L/h and 10 L/h, depending on the configuration selected." },
-            { "question": "What is the price of Arium Advance EDI in India?", "answer": "Get in touch and Inkarp will put together a quote based on the production rate and installation format required." },
-            { "question": "Who is the authorized distributor of Arium Advance EDI in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Advance EDI Lab Water Purification System in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is the price of Arium Advance EDI in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the production rate and installation format required."
+            },
+            {
+              "question": "Who is the authorized distributor of Arium Advance EDI in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Advance EDI Lab Water Purification System in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -248,10 +441,14 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Arium Advance EDI configuration", "body": "Share the daily Type 2 volume the lab consumes and whether the water feeds a downstream ultrapure system, and the right production rate and installation format gets confirmed from there." },
-              { "title": "Confirm iJust's effect on your feed water", "body": "Share the incoming feed water quality if it's been tested, and the practical effect of iJust adaptation gets mapped against those conditions before installation." },
-              { "title": "Installation and first-run support", "body": "Handles benchtop, wall-mounted, or built-in setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows Type 2 output quality and resistivity performance against lab requirements" },
+              { "title": "Configuration Assessment", "body": "Confirms production rate and installation format for the space and demand" },
+              { "title": "Feed Water Assessment", "body": "Reviews incoming potable water quality against system requirements" },
+              { "title": "Installation Support", "body": "Handles benchtop, wall-mounted, or built-in setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with the touch display, iJust menu, and bagtank handling" },
+              { "title": "Preventive Maintenance", "body": "Maintains EDI module, RO modules, and bagtank system performance" },
+              { "title": "Spares and Consumables", "body": "Supplies RO modules, bagtank bags, and replacement components" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -275,23 +472,39 @@
                 "title": "Product Information",
                 "description": "Arium Advance EDI product information: electrodeionization technology, water quality, and installation options.",
                 "body": [
-                  "Arium Advance EDI connects directly to a potable feed water source and produces Type 2 pure water at rates up to 10 L/h.",
-                  "Resistivity holds between 5 and 15 MΩ·cm, delivered consistently rather than declining across a service interval.",
-                  "Proprietary, patented electrodeionization sits at the core, achieving the highest ion retention rates while maintaining an optimum yield of purified water.",
-                  "Oxidants, heavy metal ions, and particulates are reliably removed from the incoming feed water.",
-                  "iJust software makes the best use of the initial feed water condition specifically, adapting to what's actually coming in rather than assuming a fixed input quality.",
-                  "The same software enhances purified water quality, reduces water usage compared with conventional systems, and calculates optimal cleaning cycles.",
-                  "Purified water is stored in the closed arium® bagtank system, which protects it from secondary contamination between production and point of use.",
-                  "The touch-function display responds through gloves, with structured menu navigation that removes guesswork from routine operation.",
-                  "Installation works three ways — benchtop, wall-mounted, or built-in — so the system fits the space the lab has rather than requiring space to be made.",
-                  "Feeding downstream ultrapure water systems with this Type 2 water gives them a guaranteed longer service life."
+                  { "text": "Arium Advance EDI connects directly to a potable feed water source and produces Type 2 pure water at rates up to 10 L/h." },
+                  { "text": "Resistivity holds between 5 and 15 MΩ·cm, delivered consistently rather than declining across a service interval." },
+                  {
+                    "text": "Proprietary, patented electrodeionization sits at the core, achieving the highest ion retention rates while maintaining an optimum yield of purified water."
+                  },
+                  { "text": "Oxidants, heavy metal ions, and particulates are reliably removed from the incoming feed water." },
+                  {
+                    "text": "iJust software makes the best use of the initial feed water condition specifically, adapting to what's actually coming in rather than assuming a fixed input quality."
+                  },
+                  {
+                    "text": "The same software enhances purified water quality, reduces water usage compared with conventional systems, and calculates optimal cleaning cycles."
+                  },
+                  {
+                    "text": "Purified water is stored in the closed arium® bagtank system, which protects it from secondary contamination between production and point of use."
+                  },
+                  {
+                    "text": "The touch-function display responds through gloves, with structured menu navigation that removes guesswork from routine operation."
+                  },
+                  {
+                    "text": "Installation works three ways — benchtop, wall-mounted, or built-in — so the system fits the space the lab has rather than requiring space to be made."
+                  },
+                  { "text": "Feeding downstream ultrapure water systems with this Type 2 water gives them a guaranteed longer service life." }
                 ],
                 "cards": [
                   { "title": "5–15 MΩ·cm resistivity", "description": "Type 2 quality held consistently, not declining" },
                   { "title": "Continuous EDI", "description": "Purity maintained without resin exhaustion cycles" },
                   { "title": "iJust feed adaptation", "description": "Optimization based on actual incoming water condition" },
                   { "title": "Closed bagtank storage", "description": "Water quality preserved after production" }
-                ]
+                ],
+                "glanceTitle": "Arium Advance EDI at a Glance",
+                "glanceDescription": "What to know about Arium Advance EDI: how continuous electrodeionization holds purity steady, what iJust reads from the feed water, and where the three configurations differ.",
+                "subheading": "Overview",
+                "tabSummary": "Why continuous EDI beats cartridge-based deionization"
               },
               {
                 "key": "config",
@@ -305,58 +518,99 @@
                   { "title": "Production flow rate", "description": "5 L/h or 10 L/h, by configuration" },
                   { "title": "Storage", "description": "Closed arium® bagtank system" },
                   { "title": "Installation", "description": "Benchtop, wall-mounted, or built-in" }
-                ]
+                ],
+                "disclaimer": "Share the daily Type 2 volume the lab consumes and whether the water feeds a downstream ultrapure system, and the right production rate and installation format gets confirmed from there."
               },
-              {
-                "key": "features",
-                "eyebrow": "Key Features",
-                "title": "Key Features"
-              },
+              { "key": "features", "eyebrow": "Key Features", "title": "Key Features", "tabSummary": "Patented EDI, iJust, bagtank storage, touch display" },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Arium Advance EDI applications: media and reagent preparation, chemical analysis, histology, and instrument feed water."
+                "description": "Arium Advance EDI applications: media and reagent preparation, chemical analysis, histology, and instrument feed water.",
+                "tabSummary": "Media and reagent prep, chemical analysis, histology, instrument feed"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Arium Advance EDI technical specifications: resistivity, production flow rate, and installation options."
+                "description": "Arium Advance EDI technical specifications: resistivity, production flow rate, and installation options.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Resistivity, flow rate, and installation figures"
               },
               {
                 "key": "performance",
                 "eyebrow": "Continuous EDI and Consistent Water Quality",
                 "title": "Continuous EDI and Consistent Water Quality",
-                "body": [
-                  "Electrodeionization removes ions continuously using an electrical field rather than depleting a fixed pool of exchange capacity, which is why purity holds instead of declining as a cartridge would.",
-                  "That continuity is what makes 5 to 15 MΩ·cm a working range rather than a peak figure — the water produced late in a service interval matches the water produced early in it.",
-                  "The highest ion retention rates come alongside an optimum yield of purified water, so purity isn't achieved by rejecting an unreasonable proportion of the feed.",
-                  "Oxidants, heavy metal ions, and particulates are all removed reliably, covering the contaminant classes that most commonly compromise media preparation and analytical solution work.",
-                  "Downstream ultrapure systems fed with this water get a guaranteed longer life, because their own polishing consumables aren't compensating for an inconsistent input.",
-                  "The closed bagtank protects that consistency after production — quality achieved at the membrane isn't given back to airborne contamination in an open storage vessel."
-                ],
-                "utilityChecklist": [
-                  { "label": "Water quality that doesn't drift between services", "value": "Continuous electrodeionization rather than depleting cartridges" },
-                  { "label": "A dependable resistivity figure to work against", "value": "5 to 15 MΩ·cm held consistently" },
-                  { "label": "Removal of oxidants, heavy metals, and particulates", "value": "Reliable multi-contaminant removal from potable feed" },
-                  { "label": "Longer life from downstream ultrapure systems", "value": "Consistent Type 2 feed quality" },
-                  { "label": "Quality preserved between production and use", "value": "Closed arium® bagtank storage" }
-                ],
-                "disclaimer": "Share what the water feeds — media prep, analytical solutions, instruments, or a downstream ultrapure system — and the right production rate gets confirmed against that demand."
+                "tabSummary": "What holding 5–15 MΩ·cm actually delivers",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Electrodeionization removes ions continuously using an electrical field rather than depleting a fixed pool of exchange capacity, which is why purity holds instead of declining as a cartridge would.",
+                      "That continuity is what makes 5 to 15 MΩ·cm a working range rather than a peak figure — the water produced late in a service interval matches the water produced early in it.",
+                      "The highest ion retention rates come alongside an optimum yield of purified water, so purity isn't achieved by rejecting an unreasonable proportion of the feed.",
+                      "Oxidants, heavy metal ions, and particulates are all removed reliably, covering the contaminant classes that most commonly compromise media preparation and analytical solution work.",
+                      "Downstream ultrapure systems fed with this water get a guaranteed longer life, because their own polishing consumables aren't compensating for an inconsistent input.",
+                      "The closed bagtank protects that consistency after production — quality achieved at the membrane isn't given back to airborne contamination in an open storage vessel."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What the lab needs",
+                      "How Arium Advance EDI delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Water quality that doesn't drift between services",
+                        "Continuous electrodeionization rather than depleting cartridges"
+                      ],
+                      [
+                        "A dependable resistivity figure to work against",
+                        "5 to 15 MΩ·cm held consistently"
+                      ],
+                      [
+                        "Removal of oxidants, heavy metals, and particulates",
+                        "Reliable multi-contaminant removal from potable feed"
+                      ],
+                      [
+                        "Longer life from downstream ultrapure systems",
+                        "Consistent Type 2 feed quality"
+                      ],
+                      [
+                        "Quality preserved between production and use",
+                        "Closed arium® bagtank storage"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share what the water feeds — media prep, analytical solutions, instruments, or a downstream ultrapure system — and the right production rate gets confirmed against that demand."
+                  }
+                ]
               },
               {
                 "key": "benefits",
                 "eyebrow": "iJust and Feed-Adaptive Operation",
                 "title": "iJust and Feed-Adaptive Operation",
-                "description": "Feed water quality isn't uniform. It varies by site, by season, and sometimes by day, and a system that assumes a fixed input either over-treats or under-performs.",
                 "cards": [
                   { "title": "Operation matched to actual incoming water", "description": "iJust reading initial feed water conditions" },
                   { "title": "Cleaning based on need, not a timer", "description": "Calculated optimal cleaning cycles" },
-                  { "title": "Lower recurring water consumption", "description": "iJust optimization versus conventional systems, especially where feed water is metered, restricted, or carries real cost" },
-                  { "title": "Control without de-gloving mid-workflow", "description": "Glove-compatible touch-function display" },
-                  { "title": "Quality improves alongside efficiency, not traded against it", "description": "iJust enhances purified water quality rather than trading purity for lower consumption" }
-                ]
+                  { "title": "Lower recurring water consumption", "description": "iJust optimization versus conventional systems" },
+                  { "title": "Control without de-gloving mid-workflow", "description": "Glove-compatible touch-function display" }
+                ],
+                "body": [
+                  "Feed water quality isn't uniform. It varies by site, by season, and sometimes by day, and a system that assumes a fixed input either over-treats or under-performs.",
+                  "iJust makes the best use of the initial feed water conditions specifically, adapting operation to what's actually arriving rather than to an assumed baseline.",
+                  "Cleaning cycles are calculated from that real condition instead of running to a fixed timer, so the system cleans when it needs to and not on a schedule that ignores it.",
+                  "Water usage drops compared with conventional systems, which matters directly wherever feed water is metered, restricted, or carries real cost.",
+                  "Purified water quality improves alongside that economy — iJust enhances quality rather than trading purity for lower consumption.",
+                  "The touch-function display keeps all of it accessible: a light touch works through gloves, and structured menu navigation means routine control doesn't require interpreting the system."
+                ],
+                "columnHeaders": { "label": "What the operation needs", "value": "How Arium Advance EDI delivers it" },
+                "note": "Share the incoming feed water quality if it's been tested, and the practical effect of iJust adaptation gets mapped against those conditions before installation.",
+                "tabSummary": "How the system responds to incoming water condition"
               },
               {
                 "key": "docs",
@@ -368,7 +622,9 @@
                   { "title": "Consumables and Accessories List (RO modules, bagtank, bags)", "description": "Available on request" },
                   { "title": "Installation and Feed Water Requirements Guide", "description": "Available on request" },
                   { "title": "iJust Software Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Specifications, consumables, installation guidance"
               }
             ],
             "cta": {
@@ -377,31 +633,64 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Type 2 pure water at 5 to 15 MΩ·cm, held steady by continuous electrodeionization, with iJust adapting to the feed water actually coming in. Share the daily volume and installation space, and the right Arium Advance EDI configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Cartridge-based deionizers start strong and decline. Resistivity drops as the resin exhausts, and the water feeding a media prep or an autoclave in week six isn't the water that fed it in week one — which is exactly the kind of variable that quietly undermines reproducibility.",
+              "Arium Advance EDI works differently. Patented electrodeionization runs continuously, holding Type 2 pure water at 5 to 15 MΩ·cm at production rates up to 10 L/h, connected straight to the potable feed. Oxidants, heavy metal ions, and particulates come out reliably, with the highest ion retention rates alongside optimum purified water yield.",
+              "iJust software reads the actual feed water condition and adapts to it, tuning water usage and calculating cleaning cycles rather than running fixed intervals. Purified water then sits in the closed arium® bagtank, protected from the airborne contamination an open reservoir invites."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Arium Advance RO Lab Water Purification System",
+
           "slug": "arium-advance-ro-lab-water-purification-system",
+
           "principalImage": "/assets/images/PrincipalLogos/sartorius.svg",
+
           "imageAlt": "Sartorius Arium Advance RO Lab Water Purification System - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/arium-advance-ro-lab-water-purification-system",
+
           "breadcrumbPath": "Home > Products > Arium Advance > Arium Advance RO Lab Water Purification System",
+
           "h1": "Arium Advance RO Lab Water Purification System",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Feed water, glassware rinsing, and autoclave supply don't need ultrapure quality — they need volume, consistency, and a system that doesn't demand attention. Buying a Type 1 polisher to cover that work means paying ultrapure prices for a job Type 3 does properly.",
 
           "features": [
-            "Outstanding Reverse Osmosis Technology: Delivers Type 3 water of the highest quality with the highest ion retention at rates up to 24 L/h.",
-            "Automatic RO Membrane Backflushing: Cleans the membrane using purified water, without manual intervention or a scheduled service visit.",
-            "Three Constant Flow Rates: 8, 16, or 24 L/h, selected to match actual daily volume rather than over- or under-sizing.",
-            "iJust Intelligent Software: Enhances purified water quality, reduces consumption, and calculates optimal cleaning cycles.",
-            "Closed arium® Bagtank Storage: Isolates purified water from secondary contamination after production.",
-            "Glove-Compatible Touch Display: Responds to a light touch through gloves, with clearly structured menu navigation.",
-            "Three Installation Formats: Fits as benchtop, wall-mounted, or built-in depending on available lab space.",
-            "Extends Downstream System Life: Consistent Type 3 feed gives downstream ultrapure systems a guaranteed longer working life."
+            {
+              "title": "Outstanding Reverse Osmosis Technology",
+              "description": "Delivers Type 3 water of the highest quality with the highest ion retention at rates up to 24 L/h."
+            },
+            {
+              "title": "Automatic RO Membrane Backflushing",
+              "description": "Cleans the membrane using purified water, without manual intervention or a scheduled service visit."
+            },
+            {
+              "title": "Three Constant Flow Rates",
+              "description": "8, 16, or 24 L/h, selected to match actual daily volume rather than over- or under-sizing."
+            },
+            {
+              "title": "iJust Intelligent Software",
+              "description": "Enhances purified water quality, reduces consumption, and calculates optimal cleaning cycles."
+            },
+            { "title": "Closed arium® Bagtank Storage", "description": "Isolates purified water from secondary contamination after production." },
+            { "title": "Glove-Compatible Touch Display", "description": "Responds to a light touch through gloves, with clearly structured menu navigation." },
+            { "title": "Three Installation Formats", "description": "Fits as benchtop, wall-mounted, or built-in depending on available lab space." },
+            {
+              "title": "Extends Downstream System Life",
+              "description": "Consistent Type 3 feed gives downstream ultrapure systems a guaranteed longer working life."
+            }
           ],
 
           "technicalSpecs": [
@@ -421,12 +710,12 @@
           ],
 
           "applications": [
-            "Feed Water for Ultrapure Water Systems: Consistent Type 3 input extends downstream system and consumable life",
-            "Glassware and Laboratory Vessel Rinsing: Up to 24 L/h covers high-volume rinsing without becoming the bottleneck",
-            "Autoclave Feed Water: Purified supply reduces scale build-up and protects the instrument",
-            "Glassware Dishwasher Feed: Consistent water quality supports spot-free, residue-free results",
-            "Humidifier Feed Water: Purified supply for controlled-environment equipment",
-            "General Laboratory Instrument Supply: One system covering the pure water needs of multiple instruments"
+            { "title": "Feed Water for Ultrapure Water Systems", "description": "Consistent Type 3 input extends downstream system and consumable life" },
+            { "title": "Glassware and Laboratory Vessel Rinsing", "description": "Up to 24 L/h covers high-volume rinsing without becoming the bottleneck" },
+            { "title": "Autoclave Feed Water", "description": "Purified supply reduces scale build-up and protects the instrument" },
+            { "title": "Glassware Dishwasher Feed", "description": "Consistent water quality supports spot-free, residue-free results" },
+            { "title": "Humidifier Feed Water", "description": "Purified supply for controlled-environment equipment" },
+            { "title": "General Laboratory Instrument Supply", "description": "One system covering the pure water needs of multiple instruments" }
           ],
 
           "inPageNav": [
@@ -449,15 +738,17 @@
               {
                 "key": "availableSpace",
                 "label": "Available space",
+                "hint": "Free bench run, wall space only, or cabinet/built-in cavity",
                 "options": [
                   { "val": "free-bench-run", "label": "Free bench run" },
                   { "val": "wall-space-only", "label": "Wall space only" },
-                  { "val": "cabinet-built-in", "label": "Cabinet / built-in cavity" }
+                  { "val": "cabinet-built-in", "label": "Cabinet/built-in cavity" }
                 ]
               },
               {
                 "key": "feedWaterAccess",
                 "label": "Feed water access",
+                "hint": "Distance and access to the potable water connection",
                 "options": [
                   { "val": "direct-nearby", "label": "Direct access nearby" },
                   { "val": "requires-routing", "label": "Requires routing" }
@@ -466,6 +757,7 @@
               {
                 "key": "pointOfUse",
                 "label": "Point of use",
+                "hint": "Single dispensing point, or supplying multiple instruments",
                 "options": [
                   { "val": "single-point", "label": "Single dispensing point" },
                   { "val": "multiple-instruments", "label": "Supplying multiple instruments" }
@@ -473,10 +765,36 @@
               }
             ],
             "results": [
-              { "condition": { "availableSpace": "wall-space-only" }, "title": "Wall-Mounted (H2O-RO-1-B) Fits Your Space", "body": "Wall-mounted installation is available as H2O-RO-1-B.", "tags": ["Wall-Mounted: H2O-RO-1-B"] },
-              { "condition": { "availableSpace": "free-bench-run" }, "title": "Benchtop (H2O-RO-1-T / H2O-RO-2-T) Fits Your Space", "body": "Benchtop installation is available as H2O-RO-1-T or H2O-RO-2-T, depending on the flow rate needed.", "tags": ["Benchtop: H2O-RO-1-T / H2O-RO-2-T"] },
-              { "condition": "default", "title": "Confirm the Right Installation Fit With Inkarp", "body": "Share the available space and feed water access, and Inkarp will confirm which item number matches.", "tags": ["Benchtop or Wall-Mounted"] }
-            ]
+              {
+                "condition": { "availableSpace": "wall-space-only" },
+                "title": "Wall-Mounted (H2O-RO-1-B) Fits Your Space",
+                "body": "Wall-mounted installation is available as H2O-RO-1-B.",
+                "tags": [
+                  "Wall-Mounted: H2O-RO-1-B"
+                ]
+              },
+              {
+                "condition": { "availableSpace": "free-bench-run" },
+                "title": "Benchtop (H2O-RO-1-T / H2O-RO-2-T) Fits Your Space",
+                "body": "Benchtop installation is available as H2O-RO-1-T or H2O-RO-2-T, depending on the flow rate needed.",
+                "tags": [
+                  "Benchtop: H2O-RO-1-T / H2O-RO-2-T"
+                ]
+              },
+              {
+                "condition": "default",
+                "title": "Confirm the Right Installation Fit With Inkarp",
+                "body": "Share the available space and feed water access, and Inkarp will confirm which item number matches.",
+                "tags": [
+                  "Benchtop or Wall-Mounted"
+                ]
+              }
+            ],
+            "eyebrow": "Installation Format Fit Checker",
+            "ctaNote": "Recommends benchtop (H2O-RO-1-T / H2O-RO-2-T) or wall-mounted (H2O-RO-1-B). Routes to an installation-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "planners": [
@@ -486,13 +804,16 @@
               "title": "How much Type 3 water does the lab draw, and when?",
               "description": "Enter daily volume and peak demand, and see which flow rate fits.",
               "fields": [
-                { "key": "choices", "label": "Choose one" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Demand pattern", "choices": "Steady through the day; Pronounced peak-hour demand" },
-                { "title": "Downstream ultrapure system", "choices": "Feeding one; Standalone use only" }
+                { "title": "Daily Type 3 volume", "hint": "Litres of pure water needed per day", "input": "number", "choices": "" },
+                { "title": "Peak-hour demand", "hint": "Volume drawn in the busiest hour", "input": "text", "choices": "" },
+                { "title": "Downstream ultrapure system", "hint": "Feeding one, or standalone use only", "choices": "Feeding one; Standalone use only" }
               ],
-              "disclaimer": "Recommends the 8, 16, or 24 L/h configuration, then routes to a volume-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Recommends the 8, 16, or 24 L/h configuration. Routes to a volume-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
             }
           ],
 
@@ -502,7 +823,9 @@
             "steps": [
               {
                 "key": "intendedUse",
-                "question": "What will the water be used for?",
+                "label": "Intended use",
+                "question": "Intended use",
+                "hint": "Ultrapure system feed, glassware rinsing, autoclave, dishwasher, or humidifier",
                 "options": [
                   { "val": "ultrapure-feed", "label": "Ultrapure system feed" },
                   { "val": "glassware-rinsing", "label": "Glassware rinsing" },
@@ -513,59 +836,157 @@
               },
               {
                 "key": "analyticalWorkPresent",
-                "question": "Is analytical work required on this water?",
+                "label": "Analytical work on this water",
+                "question": "Analytical work on this water",
+                "hint": "None, or media/reagent/analytical preparation also required",
                 "options": [
                   { "val": "none", "label": "None" },
-                  { "val": "media-reagent-analytical-prep", "label": "Media / reagent / analytical prep also required" }
+                  { "val": "media-reagent-analytical-prep", "label": "Media/reagent/analytical preparation also required" }
                 ]
               },
               {
                 "key": "downstreamPolishing",
-                "question": "Will this water feed a downstream polishing system?",
+                "label": "Downstream polishing",
+                "question": "Downstream polishing",
+                "hint": "Type 3 feeding a Type 1 or Type 2 system, or terminal use",
                 "options": [
-                  { "val": "feeding-type1-type2", "label": "Feeding a Type 1 or Type 2 system" },
+                  { "val": "type-3-feeding-a-type-1", "label": "Type 3 feeding a Type 1" },
+                  { "val": "type-2-system", "label": "Type 2 system" },
                   { "val": "terminal-use", "label": "Terminal use" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Confirms whether Arium Advance RO alone fits, or an EDI or ultrapure stage is also needed, then routes to an application-specific quotation.",
-              "ctaLabel": "Talk to Product Expert"
-            }
+            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "eyebrow": "Water Grade Requirement Checker",
+            "emptyState": "Confirms whether Arium Advance RO alone fits, or an EDI or ultrapure stage is also needed",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Arium Advance RO industries: pharmaceutical facilities, clinical laboratories, academic research, and testing labs.",
             "industries": [
-              { "name": "Pharmaceutical and QC Facilities", "useCase": "Feeding ultrapure systems and washing glassware at volume", "consideration": "Up to 24 L/h keeps high-throughput glassware operations moving" },
-              { "name": "Clinical and Diagnostic Laboratories", "useCase": "Instrument feed water and vessel rinsing", "consideration": "Automatic backflushing keeps maintenance load off busy technical staff" },
-              { "name": "Academic Research Laboratories", "useCase": "Shared feed and rinsing supply across multiple groups", "consideration": "Three flow rates allow sizing against genuinely shared demand" },
-              { "name": "Contract Testing Laboratories", "useCase": "Supporting varied downstream water systems", "consideration": "Consistent Type 3 feed extends downstream ultrapure system life" },
-              { "name": "Central Washing and Sterilization Facilities", "useCase": "Autoclave and glassware dishwasher feed", "consideration": "Purified feed reduces scale build-up in high-duty instruments" },
-              { "name": "Space-Constrained Laboratories", "useCase": "Installing without sacrificing bench area", "consideration": "Wall-mounted and built-in formats free the bench entirely" }
+              {
+                "name": "Pharmaceutical and QC Facilities",
+                "note": "Use Case: Feeding ultrapure systems and washing glassware at volume",
+                "bullets": [
+                  "What to Consider: Up to 24 L/h keeps high-throughput glassware operations moving"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Clinical and Diagnostic Laboratories",
+                "note": "Use Case: Instrument feed water and vessel rinsing",
+                "bullets": [
+                  "What to Consider: Automatic backflushing keeps maintenance load off busy technical staff"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Research Laboratories",
+                "note": "Use Case: Shared feed and rinsing supply across multiple groups",
+                "bullets": [
+                  "What to Consider: Three flow rates allow sizing against genuinely shared demand"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Testing Laboratories",
+                "note": "Use Case: Supporting varied downstream water systems",
+                "bullets": [
+                  "What to Consider: Consistent Type 3 feed extends downstream ultrapure system life"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Central Washing and Sterilization Facilities",
+                "note": "Use Case: Autoclave and glassware dishwasher feed",
+                "bullets": [
+                  "What to Consider: Purified feed reduces scale build-up in high-duty instruments"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Space-Constrained Laboratories",
+                "note": "Use Case: Installing without sacrificing bench area",
+                "bullets": [
+                  "What to Consider: Wall-mounted and built-in formats free the bench entirely"
+                ],
+                "tags": []
+              }
             ]
           },
 
           "comparison": {
-            "eyebrow": "Comparison",
+            "eyebrow": "Method comparison",
             "title": "Method Comparison",
             "description": "Arium Advance RO method comparison: RO Type 3 versus EDI Type 2 within the Arium Advance range.",
             "columns": [
-              { "label": "Arium Advance RO", "highlight": true },
-              { "label": "Arium Advance EDI", "highlight": false }
+              { "label": "Arium Advance RO" },
+              { "label": "Arium Advance EDI" }
             ],
             "rows": [
-              { "feature": "Water Grade", "values": ["Type 3 reverse osmosis", "Type 2 pure"] },
-              { "feature": "Purification Technology", "values": ["Reverse osmosis", "Patented electrodeionization"] },
-              { "feature": "Production Flow Rate", "values": ["8, 16, or 24 L/h", "Up to 10 L/h"] },
-              { "feature": "Resistivity", "values": ["Type 3 specification", "5–15 MΩ·cm"] },
-              { "feature": "Membrane Maintenance", "values": ["Automatic backflushing with purified water", "Continuous EDI operation"] },
-              { "feature": "Typical Duty", "values": ["Feed water, glassware rinsing, instrument supply", "Media prep, reagents, buffers, analytical solutions"] },
-              { "feature": "Best For", "values": ["Volume duty at Type 3 grade", "Preparative and analytical work needing Type 2"] },
-              { "feature": "Choose When", "values": ["The work is feed, rinsing, or instrument supply", "Solutions, media, or assays run on this water"] }
+              {
+                "feature": "Water Grade",
+                "values": [
+                  "Type 3 reverse osmosis",
+                  "Type 2 pure"
+                ]
+              },
+              {
+                "feature": "Purification Technology",
+                "values": [
+                  "Reverse osmosis",
+                  "Patented electrodeionization"
+                ]
+              },
+              {
+                "feature": "Production Flow Rate",
+                "values": [
+                  "8, 16, or 24 L/h",
+                  "Up to 10 L/h"
+                ]
+              },
+              {
+                "feature": "Resistivity",
+                "values": [
+                  "Type 3 specification",
+                  "5–15 MΩ·cm"
+                ]
+              },
+              {
+                "feature": "Membrane Maintenance",
+                "values": [
+                  "Automatic backflushing with purified water",
+                  "Continuous EDI operation"
+                ]
+              },
+              {
+                "feature": "Typical Duty",
+                "values": [
+                  "Feed water, glassware rinsing, instrument supply",
+                  "Media prep, reagents, buffers, analytical solutions"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Volume duty at Type 3 grade",
+                  "Preparative and analytical work needing Type 2"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "The work is feed, rinsing, or instrument supply",
+                  "Solutions, media, or assays run on this water"
+                ]
+              }
             ],
-            "disclaimer": "Both share iJust software, the closed arium® bagtank, the glove-compatible touch display, and the three installation formats. The difference is water grade and throughput — RO covers higher-volume Type 3 duty, EDI covers Type 2 work where resistivity matters. Where a lab needs both, RO commonly feeds the EDI or ultrapure stage downstream."
+            "disclaimer": "Both share iJust software, the closed arium® bagtank, the glove-compatible touch display, and the three installation formats. The difference is water grade and throughput — RO covers higher-volume Type 3 duty, EDI covers Type 2 work where resistivity matters. Where a lab needs both, RO commonly feeds the EDI or ultrapure stage downstream.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "serviceMap": {
@@ -583,19 +1004,55 @@
           },
 
           "faqs": [
-            { "question": "What is Arium Advance RO used for?", "answer": "It's a Type 3 reverse osmosis water system used to supply feed water to ultrapure water systems, rinse glassware and laboratory vessels, and feed instruments such as autoclaves, glassware dishwashers, and humidifiers." },
-            { "question": "What water grade does Arium Advance RO produce?", "answer": "Type 3 reverse osmosis water, with the highest ion retention in its class at rates up to 24 L/h." },
+            {
+              "question": "What is Arium Advance RO used for?",
+              "answer": "It's a Type 3 reverse osmosis water system used to supply feed water to ultrapure water systems, rinse glassware and laboratory vessels, and feed instruments such as autoclaves, glassware dishwashers, and humidifiers."
+            },
+            {
+              "question": "What water grade does Arium Advance RO produce?",
+              "answer": "Type 3 reverse osmosis water, with the highest ion retention in its class at rates up to 24 L/h."
+            },
             { "question": "What flow rates are available?", "answer": "Constant flow rates of 8, 16, and 24 L/h, selected to match actual daily demand." },
-            { "question": "What is automatic membrane backflushing?", "answer": "The system periodically reverses flow across the RO membrane using purified water, lifting accumulated fouling off the surface without any operator step or service visit." },
-            { "question": "Why does backflushing use purified water rather than feed water?", "answer": "Cleaning with purified water avoids reintroducing the salts, particulates, and organics the membrane is there to remove in the first place." },
-            { "question": "How is Arium Advance RO different from Arium Advance EDI?", "answer": "RO produces Type 3 water at 8 to 24 L/h for feed, rinsing, and instrument supply. EDI produces Type 2 water at 5 to 15 MΩ·cm up to 10 L/h for media, reagent, and analytical solution preparation." },
-            { "question": "Can Arium Advance RO feed an ultrapure water system?", "answer": "Yes. Supplying downstream ultrapure systems is a primary application, and consistent Type 3 feed gives them a guaranteed longer working life." },
-            { "question": "What is iJust?", "answer": "It's the system's intelligent software — it makes the best use of available water resources, enhances purified water quality, reduces water usage, and calculates optimal cleaning cycles." },
-            { "question": "How is purified water stored?", "answer": "In the closed arium® bagtank system, which protects the water from secondary contamination after production." },
-            { "question": "Can the display be operated while wearing gloves?", "answer": "Yes. The touch-function display responds to a light touch through gloves, with clearly structured menu navigation." },
-            { "question": "How can the system be installed?", "answer": "Three ways — benchtop, wall-mounted, or built-in — so it fits the space actually available in the lab." },
-            { "question": "What is the price of Arium Advance RO in India?", "answer": "Get in touch and Inkarp will put together a quote based on the flow rate and installation format required." },
-            { "question": "Who is the authorized distributor of Arium Advance RO in India?", "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Advance RO Lab Water Purification System in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is automatic membrane backflushing?",
+              "answer": "The system periodically reverses flow across the RO membrane using purified water, lifting accumulated fouling off the surface without any operator step or service visit."
+            },
+            {
+              "question": "Why does backflushing use purified water rather than feed water?",
+              "answer": "Cleaning with purified water avoids reintroducing the salts, particulates, and organics the membrane is there to remove in the first place."
+            },
+            {
+              "question": "How is Arium Advance RO different from Arium Advance EDI?",
+              "answer": "RO produces Type 3 water at 8 to 24 L/h for feed, rinsing, and instrument supply. EDI produces Type 2 water at 5 to 15 MΩ·cm up to 10 L/h for media, reagent, and analytical solution preparation."
+            },
+            {
+              "question": "Can Arium Advance RO feed an ultrapure water system?",
+              "answer": "Yes. Supplying downstream ultrapure systems is a primary application, and consistent Type 3 feed gives them a guaranteed longer working life."
+            },
+            {
+              "question": "What is iJust?",
+              "answer": "It's the system's intelligent software — it makes the best use of available water resources, enhances purified water quality, reduces water usage, and calculates optimal cleaning cycles."
+            },
+            {
+              "question": "How is purified water stored?",
+              "answer": "In the closed arium® bagtank system, which protects the water from secondary contamination after production."
+            },
+            {
+              "question": "Can the display be operated while wearing gloves?",
+              "answer": "Yes. The touch-function display responds to a light touch through gloves, with clearly structured menu navigation."
+            },
+            {
+              "question": "How can the system be installed?",
+              "answer": "Three ways — benchtop, wall-mounted, or built-in — so it fits the space actually available in the lab."
+            },
+            {
+              "question": "What is the price of Arium Advance RO in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the flow rate and installation format required."
+            },
+            {
+              "question": "Who is the authorized distributor of Arium Advance RO in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Sartorius Arium Advance RO Lab Water Purification System in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -616,10 +1073,14 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Arium Advance RO configuration", "body": "Share the daily Type 3 volume needed and whether the water feeds a downstream ultrapure system, glassware washer, or autoclave, and the right flow rate and installation format gets confirmed from there." },
-              { "title": "Confirm the flow rate against peak demand", "body": "Share the peak-hour demand rather than just the daily total, and the right flow rate gets confirmed against how the volume is actually drawn." },
-              { "title": "Installation and first-run support", "body": "Handles benchtop, wall-mounted, or built-in setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows Type 3 output quality and flow performance against lab requirements" },
+              { "title": "Configuration Assessment", "body": "Confirms flow rate and installation format for the space and demand" },
+              { "title": "Feed Water Assessment", "body": "Reviews incoming potable water quality against system requirements" },
+              { "title": "Installation Support", "body": "Handles benchtop, wall-mounted, or built-in setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with the touch display, iJust menu, and bagtank handling" },
+              { "title": "Preventive Maintenance", "body": "Maintains RO modules, backflushing function, and bagtank system performance" },
+              { "title": "Spares and Consumables", "body": "Supplies RO modules, bagtank components, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -643,22 +1104,42 @@
                 "title": "Product Information",
                 "description": "Arium Advance RO product information: reverse osmosis technology, flow rates, and installation options.",
                 "body": [
-                  "Arium Advance RO connects directly to a potable feed water source and produces Type 3 reverse osmosis water of the highest quality.",
-                  "Constant flow rates of 8, 16, and 24 L/h are available, so output is chosen against actual demand rather than fixed at a single rate.",
-                  "Ion retention is the highest in its class at rates up to 24 L/h, meaning volume doesn't come at the cost of retention performance.",
-                  "Automatic RO membrane backflushing runs with purified water, clearing the membrane surface without manual intervention or a service call.",
-                  "iJust software makes the best use of available water resources, enhances purified water quality, reduces water usage, and calculates optimal cleaning cycles.",
-                  "Purified water is stored in the closed arium® bagtank system, protecting it from secondary contamination between production and point of use.",
-                  "The touch-function display responds through gloves, with clearly structured menu navigation that takes guesswork out of routine control.",
-                  "Installation works three ways — benchtop, wall-mounted, or built-in — so the system fits into the space the lab already has.",
-                  "Downstream ultrapure water systems fed from this supply get a guaranteed longer service life, since consistent input is what determines how hard their consumables work."
+                  {
+                    "text": "Arium Advance RO connects directly to a potable feed water source and produces Type 3 reverse osmosis water of the highest quality."
+                  },
+                  {
+                    "text": "Constant flow rates of 8, 16, and 24 L/h are available, so output is chosen against actual demand rather than fixed at a single rate."
+                  },
+                  {
+                    "text": "Ion retention is the highest in its class at rates up to 24 L/h, meaning volume doesn't come at the cost of retention performance."
+                  },
+                  {
+                    "text": "Automatic RO membrane backflushing runs with purified water, clearing the membrane surface without manual intervention or a service call."
+                  },
+                  {
+                    "text": "iJust software makes the best use of available water resources, enhances purified water quality, reduces water usage, and calculates optimal cleaning cycles."
+                  },
+                  {
+                    "text": "Purified water is stored in the closed arium® bagtank system, protecting it from secondary contamination between production and point of use."
+                  },
+                  {
+                    "text": "The touch-function display responds through gloves, with clearly structured menu navigation that takes guesswork out of routine control."
+                  },
+                  { "text": "Installation works three ways — benchtop, wall-mounted, or built-in — so the system fits into the space the lab already has." },
+                  {
+                    "text": "Downstream ultrapure water systems fed from this supply get a guaranteed longer service life, since consistent input is what determines how hard their consumables work."
+                  }
                 ],
                 "cards": [
                   { "title": "Type 3 at up to 24 L/h", "description": "Volume duty covered at the correct grade" },
                   { "title": "Automatic backflushing", "description": "Membrane cleaning handled by the system" },
                   { "title": "Highest ion retention in class", "description": "Retention performance held across the flow range" },
                   { "title": "Closed bagtank storage", "description": "Water quality preserved after production" }
-                ]
+                ],
+                "glanceTitle": "Arium Advance RO at a Glance",
+                "glanceDescription": "What to know about Arium Advance RO: what automatic backflushing removes from the maintenance load, how the three flow rates map to demand, and where Type 3 water is the right specification.",
+                "subheading": "Overview",
+                "tabSummary": "Why Type 3 is the correct grade for feed and rinsing duty"
               },
               {
                 "key": "config",
@@ -671,57 +1152,100 @@
                   { "title": "Production flow rates", "description": "8, 16, or 24 L/h, constant" },
                   { "title": "Storage", "description": "Closed arium® bagtank system" },
                   { "title": "Installation", "description": "Benchtop, wall-mounted, or built-in" }
-                ]
+                ],
+                "disclaimer": "Share the daily Type 3 volume needed and whether the water feeds a downstream ultrapure system, glassware washer, or autoclave, and the right flow rate and installation format gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "RO technology, automatic backflushing, iJust, bagtank, touch display"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Arium Advance RO applications: ultrapure system feed water, glassware rinsing, and laboratory instrument supply."
+                "description": "Arium Advance RO applications: ultrapure system feed water, glassware rinsing, and laboratory instrument supply.",
+                "tabSummary": "Ultrapure system feed, glassware rinsing, instrument supply"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Arium Advance RO technical specifications: water grade, production flow rates, and installation options."
+                "description": "Arium Advance RO technical specifications: water grade, production flow rates, and installation options.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Flow rates, water grade, and installation figures"
               },
               {
                 "key": "performance",
                 "eyebrow": "Automatic Backflushing and Membrane Life",
                 "title": "Automatic Backflushing and Membrane Life",
-                "body": [
-                  "RO membranes foul. Rejected salts, particulates, and organics accumulate on the membrane surface, and left alone that layer reduces both flux and retention performance over time.",
-                  "Arium Advance RO backflushes the membrane automatically using purified water, reversing flow to lift that accumulation off the surface before it consolidates.",
-                  "Because the backflush uses purified water rather than raw feed, the cleaning step doesn't reintroduce the contaminants it's meant to be removing.",
-                  "Automatic means it happens on the system's schedule, not the lab's — no operator step, no reminder, no dependence on someone remembering during a busy week.",
-                  "The practical result is retention performance held closer to specification across the membrane's life, and a membrane that reaches its replacement point later rather than sooner.",
-                  "iJust sits alongside it, calculating optimal cleaning cycles from actual system condition rather than running fixed intervals that ignore what's really happening at the membrane."
-                ],
-                "utilityChecklist": [
-                  { "label": "Membrane fouling managed without operator effort", "value": "Automatic RO membrane backflushing" },
-                  { "label": "Cleaning that doesn't reintroduce contaminants", "value": "Backflushing performed with purified water" },
-                  { "label": "Cleaning frequency matched to real condition", "value": "iJust-calculated optimal cleaning cycles" },
-                  { "label": "Retention held steady across membrane life", "value": "Combined automatic backflushing and cycle optimization" }
-                ],
-                "disclaimer": "Share the incoming feed water hardness and quality if tested, and the expected membrane service interval gets mapped against those conditions before installation."
+                "tabSummary": "What self-cleaning membranes change day to day",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "RO membranes foul. Rejected salts, particulates, and organics accumulate on the membrane surface, and left alone that layer reduces both flux and retention performance over time.",
+                      "Arium Advance RO backflushes the membrane automatically using purified water, reversing flow to lift that accumulation off the surface before it consolidates.",
+                      "Because the backflush uses purified water rather than raw feed, the cleaning step doesn't reintroduce the contaminants it's meant to be removing.",
+                      "Automatic means it happens on the system's schedule, not the lab's — no operator step, no reminder, no dependence on someone remembering during a busy week.",
+                      "The practical result is retention performance held closer to specification across the membrane's life, and a membrane that reaches its replacement point later rather than sooner.",
+                      "iJust sits alongside it, calculating optimal cleaning cycles from actual system condition rather than running fixed intervals that ignore what's really happening at the membrane."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What the system needs",
+                      "How Arium Advance RO delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Membrane fouling managed without operator effort",
+                        "Automatic RO membrane backflushing"
+                      ],
+                      [
+                        "Cleaning that doesn't reintroduce contaminants",
+                        "Backflushing performed with purified water"
+                      ],
+                      [
+                        "Cleaning frequency matched to real condition",
+                        "iJust-calculated optimal cleaning cycles"
+                      ],
+                      [
+                        "Retention held steady across membrane life",
+                        "Combined automatic backflushing and cycle optimization"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the incoming feed water hardness and quality if tested, and the expected membrane service interval gets mapped against those conditions before installation."
+                  }
+                ]
               },
               {
                 "key": "benefits",
                 "eyebrow": "Constant Flow Rates and System Flexibility",
                 "title": "Constant Flow Rates and System Flexibility",
-                "description": "Under-sizing a Type 3 system turns it into a bottleneck: glassware waits, autoclaves wait, and the downstream ultrapure polisher runs short. Over-sizing pays for capacity that never gets used.",
                 "cards": [
                   { "title": "Output matched to actual daily volume", "description": "Choice of 8, 16, or 24 L/h constant flow rates" },
                   { "title": "Predictable availability through the day", "description": "Constant, not variable, flow rate" },
                   { "title": "Installation without free bench space", "description": "Wall-mounted or built-in format options" },
-                  { "title": "Lower recurring water consumption", "description": "iJust optimization versus conventional systems" },
-                  { "title": "Efficiency doesn't cost water quality", "description": "iJust reduces consumption across any selected flow rate without giving up product water quality" }
-                ]
+                  { "title": "Lower recurring water consumption", "description": "iJust optimization versus conventional systems" }
+                ],
+                "body": [
+                  "Under-sizing a Type 3 system turns it into a bottleneck: glassware waits, autoclaves wait, and the downstream ultrapure polisher runs short. Over-sizing pays for capacity that never gets used.",
+                  "Three constant flow rates — 8, 16, and 24 L/h — let the system be matched to real daily demand instead of forcing a compromise in either direction.",
+                  "Constant flow matters as much as the number itself: output stays predictable, so the volume available in an hour is the volume planned for.",
+                  "The same flexibility runs through installation. Benchtop, wall-mounted, and built-in formats all work, so a lab short on bench space isn't excluded from the system.",
+                  "iJust makes the best use of available water resources across whichever rate is selected, reducing consumption without giving up product water quality.",
+                  "The closed bagtank protects produced water regardless of rate, so a higher-throughput configuration doesn't mean more water sitting exposed to airborne contamination."
+                ],
+                "columnHeaders": { "label": "What the lab needs", "value": "How Arium Advance RO delivers it" },
+                "note": "Share the peak-hour demand rather than just the daily total, and the right flow rate gets confirmed against how the volume is actually drawn.",
+                "tabSummary": "How 8, 16, and 24 L/h map to real lab demand"
               },
               {
                 "key": "docs",
@@ -733,7 +1257,9 @@
                   { "title": "Consumables and Accessories List (RO modules, bagtank)", "description": "Available on request" },
                   { "title": "Installation and Feed Water Requirements Guide", "description": "Available on request" },
                   { "title": "iJust Software Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Specifications, consumables, installation guidance"
               }
             ],
             "cta": {
@@ -742,9 +1268,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Type 3 water at 8, 16, or 24 L/h, with membranes that backflush themselves and iJust keeping consumption in check. Share the daily volume and what the water feeds, and the right Arium Advance RO configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Feed water, glassware rinsing, and autoclave supply don't need ultrapure quality — they need volume, consistency, and a system that doesn't demand attention. Buying a Type 1 polisher to cover that work means paying ultrapure prices for a job Type 3 does properly.",
+              "Arium Advance RO connects straight to the potable feed and produces Type 3 reverse osmosis water at constant flow rates of 8, 16, or 24 L/h, with the highest ion retention in its class. Automatic RO membrane backflushing runs with purified water, so membrane fouling gets handled by the system rather than by a maintenance visit.",
+              "iJust software tunes water usage and calculates cleaning cycles from actual condition rather than a timer, and the closed arium® bagtank keeps produced water isolated from secondary contamination. Downstream ultrapure systems fed from it get a guaranteed longer life."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

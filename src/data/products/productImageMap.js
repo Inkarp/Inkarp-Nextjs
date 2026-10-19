@@ -410,9 +410,9 @@ export const productImageMap = {
   "buchi:freeze-dryer-lyovapor-l-250": "/assets/images/productImages/Buchi/L-250.webp",
   "buchi:freeze-dryer-lyovapor-l-210": "/assets/images/productImages/Buchi/L-210.webp",
   "mettler-toledo:balance-xpr3": "/assets/images/productImages/Mettler/xpr3.jpg",
-  "hitachi:differential-scanning-calorimeter-dsc-nexta-dsc-series": "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
-  "hitachi:simultaneous-thermogravimetric-analyzer-nexta-sta-series": "/assets/images/productImages/Hitachi/simultaneous-thermogravimetric-analyzer-nexta-sta-series.jpg",
-  "hitachi:thermomechanical-analyzer-tma7000-series": "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
+  "hitachi:nexta-dsc600-dsc200-differential-scanning-calorimeters": "/assets/images/productImages/Hitachi/differential-scanning-calorimeter-dsc-nexta-dsc-series.jpg",
+  "hitachi:nexta-sta200-sta200rv-sta300-simultaneous-thermal-analyzers": "/assets/images/productImages/Hitachi/simultaneous-thermogravimetric-analyzer-nexta-sta-series.jpg",
+  "hitachi:tma7100-tma7300-thermomechanical-analyzers": "/assets/images/productImages/Hitachi/thermomechanical-analyzer-tma7000-series.jpg",
   "hitachi:nexta-dma200-dynamic-mechanical-analyzer": "/assets/images/productImages/Hitachi/dma-200.png",
 };
 

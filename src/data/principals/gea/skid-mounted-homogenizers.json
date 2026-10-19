@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "gea",
-    "principalName": "GEA",
-    "countryOfOrigin": "Italy"
-  },
+  "principal": { "slug": "gea", "principalName": "GEA", "countryOfOrigin": "Italy" },
   "categories": [
     {
       "name": "Skid-Mounted Homogenizers",
@@ -11,25 +7,37 @@
       "products": [
         {
           "name": "GEA Plug & Play Pharma Skid",
+
           "slug": "homogenizers-plug-and-play-pharma-skid",
+
           "principalImage": "/assets/images/PrincipalLogos/GEA.png",
+
           "imageAlt": "GEA Plug & Play Pharma Skid - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/homogenizers-plug-and-play-pharma-skid",
+
           "breadcrumbPath": "Home > Products > Skid-Mounted Homogenizers > GEA Plug & Play Pharma Skid",
+
           "h1": "GEA Plug & Play Pharma Skid",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Integrating a homogenizer into a regulated production line usually means months of engineering, piping, and validation work before it ever runs a real batch. Pharma Skid removes that entire step, arriving as a complete, autonomous turnkey system built specifically for pharmaceutical and biotech production at industrial scale.",
 
           "features": [
-            "Fully Integrated Turnkey Design: Feed pump, homogenizer, and electrical power board arrive pre-assembled as one system.",
-            "Up to 1500 Bar Operating Pressure: Handles demanding particle size reduction across a wide range of applications.",
-            "Aseptic Operating Capability: Supports sterile processing conditions for pharmaceutical and biotech use.",
-            "cGMP and GAMP5 Validation Standards: Built to comply with pharmaceutical regulations from installation onward.",
-            "Available Across Ariete Series Sizes: Matches skid capacity directly to the production requirement.",
-            "Extensive Optional Equipment: Heat exchanger, dust release control, and process instrumentation available.",
-            "Energy-Efficient Cell Disruption: Delivers particle reduction with lower energy use than alternative systems.",
-            "Continuous or Batch Processing: Supports both processing modes for nanoemulsion and nanodispersion production."
+            {
+              "title": "Fully Integrated Turnkey Design",
+              "description": "Feed pump, homogenizer, and electrical power board arrive pre-assembled as one system."
+            },
+            { "title": "Up to 1500 Bar Operating Pressure", "description": "Handles demanding particle size reduction across a wide range of applications." },
+            { "title": "Aseptic Operating Capability", "description": "Supports sterile processing conditions for pharmaceutical and biotech use." },
+            { "title": "cGMP and GAMP5 Validation Standards", "description": "Built to comply with pharmaceutical regulations from installation onward." },
+            { "title": "Available Across Ariete Series Sizes", "description": "Matches skid capacity directly to the production requirement." },
+            { "title": "Extensive Optional Equipment", "description": "Heat exchanger, dust release control, and process instrumentation available." },
+            { "title": "Energy-Efficient Cell Disruption", "description": "Delivers particle reduction with lower energy use than alternative systems." },
+            { "title": "Continuous or Batch Processing", "description": "Supports both processing modes for nanoemulsion and nanodispersion production." }
           ],
 
           "technicalSpecs": [
@@ -41,15 +49,18 @@
             { "label": "Processing Modes", "value": "Continuous or batch (collective)" },
             { "label": "Aseptic Capability", "value": "Yes" },
             { "label": "Validation Standards", "value": "cGMP, GAMP5" },
-            { "label": "Optional Equipment", "value": "Heat exchanger, dust release control system, flow rate/temperature/conductivity/turbidity instrumentation" }
+            {
+              "label": "Optional Equipment",
+              "value": "Heat exchanger, dust release control system, flow rate/temperature/conductivity/turbidity instrumentation"
+            }
           ],
 
           "applications": [
-            "Cell Rupture and Disruption: High-efficiency particle reduction up to 1500 bar",
-            "Nanoparticle and Nanoemulsion Production: Optimal yield with meaningful energy savings",
-            "Pharmaceutical Manufacturing: cGMP and GAMP5-validated, aseptic-capable design",
-            "Biotechnology Production: Turnkey integration into regulated biotech process lines",
-            "Nutraceutical and Pharma Food Production: Same validated platform extended to adjacent regulated sectors"
+            { "title": "Cell Rupture and Disruption", "description": "High-efficiency particle reduction up to 1500 bar" },
+            { "title": "Nanoparticle and Nanoemulsion Production", "description": "Optimal yield with meaningful energy savings" },
+            { "title": "Pharmaceutical Manufacturing", "description": "cGMP and GAMP5-validated, aseptic-capable design" },
+            { "title": "Biotechnology Production", "description": "Turnkey integration into regulated biotech process lines" },
+            { "title": "Nutraceutical and Pharma Food Production", "description": "Same validated platform extended to adjacent regulated sectors" }
           ],
 
           "inPageNav": [
@@ -67,29 +78,40 @@
 
           "configWizard": {
             "title": "What production capacity and pressure does the line need?",
-            "description": "Select the requirements below, and see which Ariete-based skid configuration fits. Share the exact target flow rate and pressure with Inkarp for final sizing.",
+            "description": "Enter the target capacity and pressure, and see which Ariete-based skid size fits.",
             "steps": [
               {
-                "key": "asepticOperation",
-                "question": "Does the process need aseptic operation?",
-                "options": [
-                  { "val": "aseptic-required", "label": "Yes, aseptic operation required" },
-                  { "val": "standard-hygienic", "label": "No, standard hygienic design is sufficient" }
-                ]
+                "key": "targetFlowRate",
+                "label": "Target flow rate",
+                "question": "Target flow rate",
+                "hint": "Number input",
+                "input": "number",
+                "options": []
               },
               {
-                "key": "processingMode",
-                "question": "What processing mode does the line need?",
+                "key": "operatingPressureRequirement",
+                "label": "Operating pressure requirement",
+                "question": "Operating pressure requirement",
+                "hint": "Up to 1500 bar",
+                "input": "text",
+                "options": []
+              },
+              {
+                "key": "asepticOperation",
+                "label": "Aseptic operation required",
+                "question": "Aseptic operation required",
+                "hint": "Yes or no",
                 "options": [
-                  { "val": "continuous", "label": "Continuous processing" },
-                  { "val": "batch", "label": "Batch (collective) processing" }
+                  { "val": "aseptic-required", "label": "Yes" },
+                  { "val": "standard-hygienic", "label": "No" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share the exact target flow rate and pressure requirement, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Skid Sizing and Pressure Selector",
+            "emptyState": "Recommends the matching Pharma Skid configuration",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -99,6 +121,7 @@
               {
                 "key": "industrySector",
                 "label": "Industry sector",
+                "hint": "Pharmaceutical, biotech, nutraceutical, or pharma food",
                 "options": [
                   { "val": "pharmaceutical", "label": "Pharmaceutical" },
                   { "val": "biotech", "label": "Biotech" },
@@ -109,15 +132,17 @@
               {
                 "key": "validationStandard",
                 "label": "Validation standard",
+                "hint": "cGMP, GAMP5, or both",
                 "options": [
-                  { "val": "cgmp", "label": "cGMP" },
+                  { "val": "cgmp", "label": "CGMP" },
                   { "val": "gamp5", "label": "GAMP5" },
-                  { "val": "both", "label": "Both cGMP and GAMP5" }
+                  { "val": "both", "label": "Both" }
                 ]
               },
               {
                 "key": "sterilityRequirement",
                 "label": "Sterility requirement",
+                "hint": "Standard or aseptic",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "aseptic", "label": "Aseptic" }
@@ -129,9 +154,16 @@
                 "condition": "default",
                 "title": "What Validation Does the Pharma Skid Configuration Carry?",
                 "body": "Every Pharma Skid is built to cGMP and GAMP5 standards, with aseptic operating conditions available for sterile processing requirements across pharmaceutical, biotech, nutraceutical, and pharma food production.",
-                "tags": ["cGMP and GAMP5 Validation Standards"]
+                "tags": [
+                  "cGMP and GAMP5 Validation Standards"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Validation and Compliance Checker",
+            "ctaNote": "Confirms the right validation and design configuration. Routes to a compliance-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "planners": [
@@ -144,39 +176,99 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "What temperature control does the process need?", "choices": "Standard configuration; Heat exchanger required" },
-                { "title": "Is dust containment needed for the process?", "choices": "Yes; No" },
-                { "title": "Which process conditions need monitoring?", "choices": "Flow rate; Temperature; Conductivity; Turbidity; A combination of these" }
+                { "title": "Temperature control need", "hint": "Standard or heat exchanger required", "choices": "Standard; Heat exchanger required" },
+                { "title": "Dust containment need", "hint": "Yes or no", "choices": "Yes; No" },
+                {
+                  "title": "Process monitoring",
+                  "hint": "Flow rate, temperature, conductivity, turbidity, or combination",
+                  "choices": "Flow rate; Temperature; Conductivity; Turbidity; Combination"
+                }
               ],
-              "disclaimer": "Routes to an options-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Confirms the right optional equipment package. Routes to an options-specific quotation.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Standard Pharma Skid vs. Aseptic-Configured Pharma Skid",
+            "title": "Method Comparison",
             "description": "Pharma Skid comparison: standard skid versus aseptic-configured skid.",
             "columns": [
               { "label": "Standard Pharma Skid" },
               { "label": "Aseptic-Configured Pharma Skid" }
             ],
             "rows": [
-              { "feature": "Operating Pressure", "values": ["Up to 1500 bar", "Up to 1500 bar"] },
-              { "feature": "Sterility", "values": ["Standard hygienic design", "Full aseptic operating conditions"] },
-              { "feature": "Best For", "values": ["General pharma, biotech, and nutraceutical production", "Sterile product manufacturing requirements"] },
-              { "feature": "Choose When", "values": ["Standard regulated production is sufficient", "The process demands aseptic conditions specifically"] }
+              {
+                "feature": "Operating Pressure",
+                "values": [
+                  "Up to 1500 bar",
+                  "Up to 1500 bar"
+                ]
+              },
+              {
+                "feature": "Sterility",
+                "values": [
+                  "Standard hygienic design",
+                  "Full aseptic operating conditions"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "General pharma, biotech, and nutraceutical production",
+                  "Sterile product manufacturing requirements"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Standard regulated production is sufficient",
+                  "The process demands aseptic conditions specifically"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations share the same Ariete Series core, cGMP/GAMP5 validation, and optional equipment list. The difference is the level of sterility built into the design."
+            "disclaimer": "Both configurations share the same Ariete Series core, cGMP/GAMP5 validation, and optional equipment list. The difference is the level of sterility built into the design.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Pharma Skid industries: pharmaceutical manufacturing, biotechnology, and nutraceutical production.",
             "industries": [
-              { "name": "Pharmaceutical Manufacturing", "useCase": "Cell rupture and nanoparticle production in regulated lines", "consideration": "cGMP and GAMP5 validation, aseptic capability" },
-              { "name": "Biotechnology Production", "useCase": "Nanoemulsion and nanodispersion processing", "consideration": "Energy-efficient cell disruption compared to alternative systems" },
-              { "name": "Nutraceutical Manufacturing", "useCase": "Formulation processing under pharma-grade standards", "consideration": "Same validated platform extended to nutraceutical use" },
-              { "name": "Pharma Food Production", "useCase": "High-standard food formulation requiring pharma-level rigor", "consideration": "Turnkey integration reduces installation complexity" }
+              {
+                "name": "Pharmaceutical Manufacturing",
+                "note": "Use Case: Cell rupture and nanoparticle production in regulated lines",
+                "bullets": [
+                  "What to Consider: cGMP and GAMP5 validation, aseptic capability"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biotechnology Production",
+                "note": "Use Case: Nanoemulsion and nanodispersion processing",
+                "bullets": [
+                  "What to Consider: Energy-efficient cell disruption compared to alternative systems"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Nutraceutical Manufacturing",
+                "note": "Use Case: Formulation processing under pharma-grade standards",
+                "bullets": [
+                  "What to Consider: Same validated platform extended to nutraceutical use"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharma Food Production",
+                "note": "Use Case: High-standard food formulation requiring pharma-level rigor",
+                "bullets": [
+                  "What to Consider: Turnkey integration reduces installation complexity"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -190,21 +282,52 @@
               { "title": "Preventive Maintenance", "description": "Maintains pump, homogenizer, and instrumentation performance" },
               { "title": "Spares and Accessories", "description": "Supplies replacement parts and optional equipment components" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "Pharma Skid service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the GEA Plug & Play Pharma Skid used for?", "answer": "It's a turnkey, skid-mounted homogenizer system built for pharmaceutical and biotechnology production at industrial scale, handling cell rupture, nanoparticle, and nanoemulsion processing." },
+            {
+              "question": "What is the GEA Plug & Play Pharma Skid used for?",
+              "answer": "It's a turnkey, skid-mounted homogenizer system built for pharmaceutical and biotechnology production at industrial scale, handling cell rupture, nanoparticle, and nanoemulsion processing."
+            },
             { "question": "What is the maximum operating pressure?", "answer": "Up to 1500 bar." },
-            { "question": "What comes standard with the skid?", "answer": "A feed pump with by-pass system, the homogenizer itself, and an electrical power board." },
-            { "question": "What optional equipment is available?", "answer": "A heat exchanger, a dust release control system, and instrumentation for measuring flow rate, temperature, conductivity, and turbidity." },
-            { "question": "Is the Pharma Skid validated for regulated production?", "answer": "Yes, it complies with pharmaceutical regulations and follows cGMP and GAMP5 validation standards." },
-            { "question": "Can the skid operate under aseptic conditions?", "answer": "Yes, it's capable of working in aseptic conditions for sterile processing requirements." },
-            { "question": "What homogenizer technology powers the skid?", "answer": "The Ariete Series homogenizer, available across different sizes to match production capacity." },
-            { "question": "Can it handle continuous production, or only batch runs?", "answer": "Both, the skid supports continuous or collective (batch) processing." },
-            { "question": "Is this system only for pharmaceutical use?", "answer": "No, while built primarily for pharmaceutical and biotechnology applications, it also extends to pharma food and nutraceutical production." },
-            { "question": "What is the price of the GEA Plug & Play Pharma Skid in India?", "answer": "Get in touch and Inkarp will put together a quote based on the skid size, options, and validation requirements needed." },
-            { "question": "Who is the authorized distributor of the GEA Plug & Play Pharma Skid in India?", "answer": "Inkarp is the authorized distributor and service provider for the GEA Plug & Play Pharma Skid in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What comes standard with the skid?",
+              "answer": "A feed pump with by-pass system, the homogenizer itself, and an electrical power board."
+            },
+            {
+              "question": "What optional equipment is available?",
+              "answer": "A heat exchanger, a dust release control system, and instrumentation for measuring flow rate, temperature, conductivity, and turbidity."
+            },
+            {
+              "question": "Is the Pharma Skid validated for regulated production?",
+              "answer": "Yes, it complies with pharmaceutical regulations and follows cGMP and GAMP5 validation standards."
+            },
+            {
+              "question": "Can the skid operate under aseptic conditions?",
+              "answer": "Yes, it's capable of working in aseptic conditions for sterile processing requirements."
+            },
+            {
+              "question": "What homogenizer technology powers the skid?",
+              "answer": "The Ariete Series homogenizer, available across different sizes to match production capacity."
+            },
+            {
+              "question": "Can it handle continuous production, or only batch runs?",
+              "answer": "Both, the skid supports continuous or collective (batch) processing."
+            },
+            {
+              "question": "Is this system only for pharmaceutical use?",
+              "answer": "No, while built primarily for pharmaceutical and biotechnology applications, it also extends to pharma food and nutraceutical production."
+            },
+            {
+              "question": "What is the price of the GEA Plug & Play Pharma Skid in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the skid size, options, and validation requirements needed."
+            },
+            {
+              "question": "Who is the authorized distributor of the GEA Plug & Play Pharma Skid in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the GEA Plug & Play Pharma Skid in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -225,10 +348,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Pharma Skid configuration", "body": "Share the target production capacity, pressure requirement, and whether aseptic operation is needed, and the right Pharma Skid configuration gets confirmed from there." },
-              { "title": "Confirm the right skid configuration and options list", "body": "Share the target production line's existing infrastructure and any temperature or containment requirements, and the right skid configuration and options list gets confirmed against it." },
-              { "title": "Installation and first-run support", "body": "Supports turnkey setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows skid integration and particle reduction performance" },
+              { "title": "Configuration Assessment", "body": "Confirms skid size, options, and validation setup for the facility" },
+              { "title": "Installation Support", "body": "Supports turnkey setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with skid operation and monitoring instrumentation" },
+              { "title": "Preventive Maintenance", "body": "Maintains pump, homogenizer, and instrumentation performance" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement parts and optional equipment components" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -252,21 +378,37 @@
                 "title": "Product Information",
                 "description": "Pharma Skid product information: turnkey design, pressure capacity, and validation standards.",
                 "body": [
-                  "Pharma Skid is an autonomous, turnkey system customized to specific production requirements, processing a wide range of applications up to a maximum pressure of 1500 bar.",
-                  "Particle size reduction runs with maximum efficiency and optimal yield across cell rupture, nanoparticle, and nanoemulsion production, with meaningful energy savings built in.",
-                  "The standard configuration includes a feed pump with by-pass system, the homogenizer itself, and an electrical power board, ready to connect into an existing production line.",
-                  "A long list of options extends the base skid further: heat exchanger, dust release control system, and instrumentation for flow rate, temperature, conductivity, and turbidity measurement.",
-                  "Skids are available across different sizes of the Ariete Series homogenizer range, matching capacity to the specific production requirement.",
-                  "Aseptic operating conditions are supported, and every skid complies with pharmaceutical regulations, following cGMP and GAMP5 validation standards.",
-                  "Beyond pharmaceutical and biotechnology, the same platform extends naturally into pharma food and nutraceutical applications.",
-                  "Continuous or batch (collective) processing modes are both supported, including nanoemulsion and nanodispersion production with notable energy savings versus other cell disruption systems."
+                  {
+                    "text": "Pharma Skid is an autonomous, turnkey system customized to specific production requirements, processing a wide range of applications up to a maximum pressure of 1500 bar."
+                  },
+                  {
+                    "text": "Particle size reduction runs with maximum efficiency and optimal yield across cell rupture, nanoparticle, and nanoemulsion production, with meaningful energy savings built in."
+                  },
+                  {
+                    "text": "The standard configuration includes a feed pump with by-pass system, the homogenizer itself, and an electrical power board, ready to connect into an existing production line."
+                  },
+                  {
+                    "text": "A long list of options extends the base skid further: heat exchanger, dust release control system, and instrumentation for flow rate, temperature, conductivity, and turbidity measurement."
+                  },
+                  {
+                    "text": "Skids are available across different sizes of the Ariete Series homogenizer range, matching capacity to the specific production requirement."
+                  },
+                  {
+                    "text": "Aseptic operating conditions are supported, and every skid complies with pharmaceutical regulations, following cGMP and GAMP5 validation standards."
+                  },
+                  { "text": "Beyond pharmaceutical and biotechnology, the same platform extends naturally into pharma food and nutraceutical applications." },
+                  {
+                    "text": "Continuous or batch (collective) processing modes are both supported, including nanoemulsion and nanodispersion production with notable energy savings versus other cell disruption systems."
+                  }
                 ],
                 "cards": [
                   { "title": "Fully turnkey system", "description": "Feed pump, homogenizer, and power board pre-integrated" },
                   { "title": "Up to 1500 bar", "description": "Handles demanding particle reduction applications" },
                   { "title": "cGMP, GAMP5 validated", "description": "Built for regulated pharma and biotech production" },
                   { "title": "Energy-saving design", "description": "Lower resource use than other cell disruption systems" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why a pre-integrated skid changes pharma installation timelines"
               },
               {
                 "key": "config",
@@ -278,55 +420,105 @@
                   { "title": "Maximum pressure", "description": "1500 bar" },
                   { "title": "Standard components", "description": "Feed pump with by-pass system, homogenizer, electrical power board" },
                   { "title": "Validation standards", "description": "cGMP, GAMP5" },
-                  { "title": "Optional equipment", "description": "Heat exchanger, dust release control, flow/temperature/conductivity/turbidity instrumentation" }
-                ]
+                  {
+                    "title": "Optional equipment",
+                    "description": "Heat exchanger, dust release control, flow/temperature/conductivity/turbidity instrumentation"
+                  }
+                ],
+                "disclaimer": "Share the target production capacity, pressure requirement, and whether aseptic operation is needed, and the right Pharma Skid configuration gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "Standard components, optional instrumentation, aseptic capability"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Pharma Skid applications: cell rupture, nanoparticle production, and pharmaceutical, biotech, and nutraceutical manufacturing."
+                "description": "Pharma Skid applications: cell rupture, nanoparticle production, and pharmaceutical, biotech, and nutraceutical manufacturing.",
+                "tabSummary": "Cell rupture, nanoparticles, nanoemulsions, pharma and nutraceutical production"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Pharma Skid technical specifications: pressure capacity, standard components, and validation."
+                "description": "Pharma Skid technical specifications: pressure capacity, standard components, and validation.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Pressure capacity, standard components, and validation standards"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Turnkey From Day One",
                 "title": "Turnkey From Day One",
-                "description": "Piecing together a feed pump, homogenizer, and power supply as separate installations is where most homogenization projects lose weeks. Pharma Skid arrives already integrated as one autonomous system. The standard build, feed pump with by-pass, homogenizer, and electrical power board, covers the core requirement out of the box, while a long options list extends it for specific needs: heat exchangers for temperature-sensitive products, dust release control for containment-critical environments, and instrumentation for flow rate, temperature, conductivity, and turbidity. Because the skid is built around the proven Ariete Series homogenizer core, available across multiple sizes, capacity scales to the actual production requirement rather than forcing a one-size-fits-all installation.",
                 "cards": [
-                  { "title": "Faster installation without separate component integration", "description": "Feed pump, homogenizer, and power board pre-assembled" },
+                  {
+                    "title": "Faster installation without separate component integration",
+                    "description": "Feed pump, homogenizer, and power board pre-assembled"
+                  },
                   { "title": "Matching capacity to actual production volume", "description": "Multiple Ariete Series sizes available" },
-                  { "title": "Monitoring process conditions in real time", "description": "Optional flow, temperature, conductivity, and turbidity instrumentation" },
+                  {
+                    "title": "Monitoring process conditions in real time",
+                    "description": "Optional flow, temperature, conductivity, and turbidity instrumentation"
+                  },
                   { "title": "Handling temperature-sensitive or dust-critical processes", "description": "Optional heat exchanger and dust release control" }
-                ]
+                ],
+                "body": [
+                  "Piecing together a feed pump, homogenizer, and power supply as separate installations is where most homogenization projects lose weeks. Pharma Skid arrives already integrated as one autonomous system.",
+                  "The standard build, feed pump with by-pass, homogenizer, and electrical power board, covers the core requirement out of the box, while a long options list extends it for specific needs: heat exchangers for temperature-sensitive products, dust release control for containment-critical environments, and instrumentation for flow rate, temperature, conductivity, and turbidity.",
+                  "Because the skid is built around the proven Ariete Series homogenizer core, available across multiple sizes, capacity scales to the actual production requirement rather than forcing a one-size-fits-all installation."
+                ],
+                "columnHeaders": { "label": "What your project needs", "value": "How Pharma Skid delivers it" },
+                "note": "Share the target production line's existing infrastructure and any temperature or containment requirements, and the right skid configuration and options list gets confirmed against it.",
+                "tabSummary": "What arriving pre-integrated actually saves"
               },
               {
                 "key": "performance",
                 "eyebrow": "Built for Regulated Production",
                 "title": "Built for Regulated Production",
-                "body": [
-                  "Pharmaceutical and biotech production can't run on equipment that gets validated after installation. Pharma Skid ships already built to cGMP and GAMP5 standards, compliant with pharmaceutical regulations from the outset.",
-                  "Aseptic operating conditions are supported directly, addressing sterile processing requirements without a separate retrofit.",
-                  "That same validated design extends naturally into pharma food and nutraceutical applications, sectors that share much of the same regulatory rigor without being strictly pharmaceutical.",
-                  "The result on the finished product reflects that rigor too: high efficiency and excellent performance in particle reduction, not just regulatory compliance for its own sake."
-                ],
-                "utilityChecklist": [
-                  { "label": "Equipment validated to pharma standards from installation", "value": "Built-in cGMP and GAMP5 compliance" },
-                  { "label": "Sterile processing capability", "value": "Aseptic operating conditions supported" },
-                  { "label": "Confidence extending beyond strict pharma use", "value": "Applicable to nutraceutical and pharma food production" },
-                  { "label": "Genuine performance, not just compliance", "value": "High efficiency and excellent particle reduction results" }
-                ],
-                "disclaimer": "Share the specific regulatory standards the facility needs to meet, and the right Pharma Skid validation configuration gets confirmed against them."
+                "tabSummary": "What cGMP and GAMP5 validation covers",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Pharmaceutical and biotech production can't run on equipment that gets validated after installation. Pharma Skid ships already built to cGMP and GAMP5 standards, compliant with pharmaceutical regulations from the outset.",
+                      "Aseptic operating conditions are supported directly, addressing sterile processing requirements without a separate retrofit.",
+                      "That same validated design extends naturally into pharma food and nutraceutical applications, sectors that share much of the same regulatory rigor without being strictly pharmaceutical.",
+                      "The result on the finished product reflects that rigor too: high efficiency and excellent performance in particle reduction, not just regulatory compliance for its own sake."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What your regulated environment needs",
+                      "How Pharma Skid delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Equipment validated to pharma standards from installation",
+                        "Built-in cGMP and GAMP5 compliance"
+                      ],
+                      [
+                        "Sterile processing capability",
+                        "Aseptic operating conditions supported"
+                      ],
+                      [
+                        "Confidence extending beyond strict pharma use",
+                        "Applicable to nutraceutical and pharma food production"
+                      ],
+                      [
+                        "Genuine performance, not just compliance",
+                        "High efficiency and excellent particle reduction results"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the specific regulatory standards the facility needs to meet, and the right Pharma Skid validation configuration gets confirmed against them."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -337,7 +529,9 @@
                   { "title": "Homogenizers Plug & Play Pharma Skid Brochure", "description": "Available for download" },
                   { "title": "Validation and Compliance Documentation", "description": "Available on request" },
                   { "title": "Ariete Series Sizing Guide", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Pharma Skid brochure"
               }
             ],
             "cta": {
@@ -346,9 +540,17 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A fully integrated, cGMP and GAMP5-validated system that drops into the production line ready to run. Share the target capacity, pressure, and validation needs, and the right Pharma Skid configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Integrating a homogenizer into a regulated production line usually means months of engineering, piping, and validation work before it ever runs a real batch. Pharma Skid removes that entire step, arriving as a complete, autonomous turnkey system built specifically for pharmaceutical and biotech production at industrial scale.",
+              "Every skid handles pressures up to 1500 bar, delivering effective particle size reduction with maximum efficiency across cell rupture, nanoparticle, and nanoemulsion production, all while cutting energy use compared to other cell disruption systems. Built around the Ariete Series homogenizer core, each skid ships with a feed pump, by-pass system, and electrical power board as standard, ready to drop into an aseptic, cGMP and GAMP5-validated process line."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

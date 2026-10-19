@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "luzchem",
-    "principalName": "Luzchem",
-    "countryOfOrigin": "Canada"
-  },
+  "principal": { "slug": "luzchem", "principalName": "Luzchem", "countryOfOrigin": "Canada" },
   "categories": [
     {
       "name": "LED Illuminator",
@@ -11,29 +7,42 @@
       "products": [
         {
           "name": "LEDi (LED Illuminator)",
+
           "slug": "led-illuminator",
+
           "manufacturerUrl": "https://luzchem.com/products/ledi",
+
           "metaTitle": "LEDi (LED Illuminator) — Authorized Distributor & Service Provider in India | Inkarp | Luzchem",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the Luzchem LEDi (LED Illuminator) in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": "LEDi, LEDi India, LEDi price in India, LEDi distributor India, Luzchem LEDi, Luzchem distributor India, Luzchem authorized distributor, LED Illuminator India, LED Illuminator distributor and service provider in India, LED illuminator, photochemistry LED, LED light source, photoreactor LED, LED array, photochemical illuminator, LED lamp, light source, Luzchem India, Inkarp Instruments",
+
           "principalImage": "/assets/images/PrincipalLogos/Luzchem.png",
+
           "imageAlt": "Luzchem LEDi (LED Illuminator) - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/led-illuminator",
+
           "breadcrumbPath": "Home > Products > LED Illuminator > LEDi (LED Illuminator)",
+
           "h1": "LEDi (LED Illuminator)",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "A photochemistry reaction is only as reproducible as your light source, and most LED setups give you no real way to prove what you delivered. LEDi solves both problems at once.",
 
           "features": [
-            "Independently Controlled Color Banks: Blue, green, red, and white, each with its own adjustable intensity.",
-            "Current Indicator for Reproducibility: Monitor exactly how much power reaches your LEDs, then reproduce it exactly.",
-            "Integrated Magnetic Mixer: Keeps your sample stirring continuously through the entire exposure.",
-            "Adjustable Rail Positioning: Set your own distance between the LED head and your sample.",
-            "Air-Cooled Operation: Minimizes sample heating while illumination stays stable.",
-            "Interchangeable Sample Holders: Cuvette, tube, vial, or NMR-tube, swapped in seconds.",
-            "Broad Wavelength Ecosystem: Optional heads span UV, visible, and near-infrared.",
-            "Built-In Safety Shielding: Reduces stray light exposure alongside included safety glasses."
+            { "title": "Independently Controlled Color Banks", "description": "Blue, green, red, and white, each with its own adjustable intensity." },
+            { "title": "Current Indicator for Reproducibility", "description": "Monitor exactly how much power reaches your LEDs, then reproduce it exactly." },
+            { "title": "Integrated Magnetic Mixer", "description": "Keeps your sample stirring continuously through the entire exposure." },
+            { "title": "Adjustable Rail Positioning", "description": "Set your own distance between the LED head and your sample." },
+            { "title": "Air-Cooled Operation", "description": "Minimizes sample heating while illumination stays stable." },
+            { "title": "Interchangeable Sample Holders", "description": "Cuvette, tube, vial, or NMR-tube, swapped in seconds." },
+            { "title": "Broad Wavelength Ecosystem", "description": "Optional heads span UV, visible, and near-infrared." },
+            { "title": "Built-In Safety Shielding", "description": "Reduces stray light exposure alongside included safety glasses." }
           ],
 
           "technicalSpecs": [
@@ -52,11 +61,11 @@
           ],
 
           "applications": [
-            "Photochemistry and Photophysics: Independently tunable color banks for precise conditions",
-            "Photocatalysis and Photoredox Chemistry: Published, real-world rate acceleration",
-            "Photobiology: Broad wavelength range across optional heads",
-            "Photodegradation Studies: Reproducible illumination via current monitoring",
-            "Contact Imaging and Accelerated Aging: Interchangeable heads across UV, visible, and NIR"
+            { "title": "Photochemistry and Photophysics", "description": "Independently tunable color banks for precise conditions" },
+            { "title": "Photocatalysis and Photoredox Chemistry", "description": "Published, real-world rate acceleration" },
+            { "title": "Photobiology", "description": "Broad wavelength range across optional heads" },
+            { "title": "Photodegradation Studies", "description": "Reproducible illumination via current monitoring" },
+            { "title": "Contact Imaging and Accelerated Aging", "description": "Interchangeable heads across UV, visible, and NIR" }
           ],
 
           "inPageNav": [
@@ -77,28 +86,34 @@
             "steps": [
               {
                 "key": "wavelength",
-                "question": "What wavelength region do you need?",
+                "label": "Wavelength region",
+                "question": "Wavelength region",
+                "hint": "UV, visible (RGB/white), or near-infrared",
                 "options": [
-                  { "val": "uv", "label": "UV", "desc": "Optional heads extend coverage into UV and near-infrared for specific applications" },
-                  { "val": "visible", "label": "Visible (RGB/white)", "desc": "Standard RGB head covers blue, green, red, and white" },
-                  { "val": "nir", "label": "Near-infrared", "desc": "Optional heads extend coverage into UV and near-infrared for specific applications" }
+                  { "val": "uv", "label": "UV" },
+                  { "val": "visible", "label": "Visible (RGB/white)" },
+                  { "val": "nir", "label": "Near-infrared" }
                 ]
               },
               {
                 "key": "application",
-                "question": "What type of application is this for?",
+                "label": "Application type",
+                "question": "Application type",
+                "hint": "Photochemistry, photocatalysis, photobiology, or other",
                 "options": [
-                  { "val": "photochemistry", "label": "Photochemistry", "desc": "Independently tunable color banks for precise conditions" },
-                  { "val": "photocatalysis", "label": "Photocatalysis", "desc": "Published, real-world rate acceleration" },
-                  { "val": "photobiology", "label": "Photobiology", "desc": "Broad wavelength range across optional heads" },
+                  { "val": "photochemistry", "label": "Photochemistry" },
+                  { "val": "photocatalysis", "label": "Photocatalysis" },
+                  { "val": "photobiology", "label": "Photobiology" },
                   { "val": "other", "label": "Other" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to us for a head-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a head-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "LED Head and Wavelength Selector",
+            "lead": "Match your reaction to the right LEDi head.",
+            "emptyState": "Recommends standard RGB or a specific optional head",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -108,11 +123,21 @@
               {
                 "key": "container",
                 "label": "Container type",
+                "hint": "Cuvette, tube, vial, or NMR-tube",
                 "options": [
                   { "val": "cuvette", "label": "Cuvette" },
                   { "val": "tube", "label": "Tube" },
                   { "val": "vial", "label": "Vial" },
                   { "val": "nmr-tube", "label": "NMR-tube" }
+                ]
+              },
+              {
+                "key": "sampleVolume",
+                "label": "Sample volume",
+                "hint": "Confirms fit within the standard 10x10mm cuvette or alternate holders",
+                "options": [
+                  { "val": "confirms-fit-within-the-standard-10x10mm-cuvette", "label": "Confirms fit within the standard 10x10mm cuvette" },
+                  { "val": "alternate-holders", "label": "Alternate holders" }
                 ]
               }
             ],
@@ -121,9 +146,20 @@
                 "condition": "default",
                 "title": "Interchangeable Sample Holders",
                 "body": "Swap the holder. The standard cuvette holder installs directly, and tube, vial, or NMR-tube holders drop in when the sample format changes.",
-                "tags": ["Cuvette (standard)", "tube", "vial", "NMR-tube (optional)"]
+                "tags": [
+                  "Cuvette (standard)",
+                  "tube",
+                  "vial",
+                  "NMR-tube (optional)"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Sample Format and Holder Planner",
+            "lead": "Find the right holder for your sample container.",
+            "ctaNote": "Recommends the matching holder. Routes to us for a holder-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
@@ -134,23 +170,85 @@
               { "label": "Optional Wavelength-Specific Heads" }
             ],
             "rows": [
-              { "feature": "Colors Available", "values": ["Blue, green, red, white", "Specific single wavelengths across UV, visible, NIR"] },
-              { "feature": "Best For", "values": ["General-purpose, multi-color experiments", "Reactions requiring a precise, dedicated wavelength"] },
-              { "feature": "Control", "values": ["Four independent color banks in one head", "Single dedicated wavelength per head"] },
-              { "feature": "Choose when", "values": ["Work spans several colors or exploring conditions", "The reaction is validated at a specific wavelength"] }
+              {
+                "feature": "Colors Available",
+                "values": [
+                  "Blue, green, red, white",
+                  "Specific single wavelengths across UV, visible, NIR"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "General-purpose, multi-color experiments",
+                  "Reactions requiring a precise, dedicated wavelength"
+                ]
+              },
+              {
+                "feature": "Control",
+                "values": [
+                  "Four independent color banks in one head",
+                  "Single dedicated wavelength per head"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Work spans several colors or exploring conditions",
+                  "The reaction is validated at a specific wavelength"
+                ]
+              }
             ],
-            "disclaimer": "Both mount on the same adjustable rail and pair with the same magnetic mixer base, so switching heads never means switching systems."
+            "disclaimer": "Both mount on the same adjustable rail and pair with the same magnetic mixer base, so switching heads never means switching systems.",
+            "featureLabel": "Parameter",
+            "eyebrow": "Method comparison",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "LEDi across academic, pharmaceutical, and materials science photochemistry labs.",
             "industries": [
-              { "name": "Academic Photochemistry Research", "useCase": "Reaction mechanism and rate studies", "consideration": "Current indicator for publishable, reproducible results" },
-              { "name": "Pharmaceutical Process Chemistry", "useCase": "Photocatalytic and photoredox synthesis routes", "consideration": "Published, real-world rate acceleration" },
-              { "name": "Materials Science", "useCase": "Photodegradation and accelerated aging studies", "consideration": "Broad wavelength range across optional heads" },
-              { "name": "Biology and Biochemistry Labs", "useCase": "Photobiology applications", "consideration": "UV to visible coverage for biological photoreceptors" },
-              { "name": "Contract Research Organizations", "useCase": "Varied wavelength and format needs", "consideration": "Interchangeable heads and holders for flexible configuration" }
+              {
+                "name": "Academic Photochemistry Research",
+                "note": "Use Case: Reaction mechanism and rate studies",
+                "bullets": [
+                  "What to Consider: Current indicator for publishable, reproducible results"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Process Chemistry",
+                "note": "Use Case: Photocatalytic and photoredox synthesis routes",
+                "bullets": [
+                  "What to Consider: Published, real-world rate acceleration"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Materials Science",
+                "note": "Use Case: Photodegradation and accelerated aging studies",
+                "bullets": [
+                  "What to Consider: Broad wavelength range across optional heads"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biology and Biochemistry Labs",
+                "note": "Use Case: Photobiology applications",
+                "bullets": [
+                  "What to Consider: UV to visible coverage for biological photoreceptors"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Research Organizations",
+                "note": "Use Case: Varied wavelength and format needs",
+                "bullets": [
+                  "What to Consider: Interchangeable heads and holders for flexible configuration"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -169,16 +267,46 @@
           },
 
           "faqs": [
-            { "question": "What is LEDi used for?", "answer": "It's an LED illumination system built for photochemistry, photocatalysis, photoredox chemistry, photobiology, and related light-driven experiments on small samples." },
-            { "question": "How much faster does LEDi make a reaction?", "answer": "A published 2018 study found it drove a Sonogashira coupling 10 times faster than a conventional LED setup." },
-            { "question": "How do I reproduce an exact illumination condition?", "answer": "Note the reading on the current indicator during the first run, then match that same reading on future runs to reproduce the exact light intensity." },
-            { "question": "How do I switch between sample formats?", "answer": "Swap the holder. The standard cuvette holder installs directly, and tube, vial, or NMR-tube holders drop in when the sample format changes." },
-            { "question": "Does LEDi mix the sample during illumination?", "answer": "Yes, an integrated variable-speed magnetic mixer runs continuously below the sample holder throughout the exposure." },
-            { "question": "What wavelengths does LEDi cover?", "answer": "The standard RGB head covers blue, green, red, and white. Optional heads extend coverage into UV and near-infrared for specific applications." },
-            { "question": "How does LEDi keep the sample from overheating during illumination?", "answer": "The LEDs run air-cooled, keeping sample heating to a minimum while illumination stays stable." },
-            { "question": "What safety equipment comes with LEDi?", "answer": "A protective shield to reduce stray light exposure, plus LED safety glasses for the operator." },
-            { "question": "What is the price of LEDi in India?", "answer": "Get in touch and Inkarp will put together a quote around your head and holder configuration." },
-            { "question": "Who is the authorized distributor of LEDi in India?", "answer": "Inkarp is the authorized distributor and service provider for Luzchem LEDi in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is LEDi used for?",
+              "answer": "It's an LED illumination system built for photochemistry, photocatalysis, photoredox chemistry, photobiology, and related light-driven experiments on small samples."
+            },
+            {
+              "question": "How much faster does LEDi make a reaction?",
+              "answer": "A published 2018 study found it drove a Sonogashira coupling 10 times faster than a conventional LED setup."
+            },
+            {
+              "question": "How do I reproduce an exact illumination condition?",
+              "answer": "Note the reading on the current indicator during the first run, then match that same reading on future runs to reproduce the exact light intensity."
+            },
+            {
+              "question": "How do I switch between sample formats?",
+              "answer": "Swap the holder. The standard cuvette holder installs directly, and tube, vial, or NMR-tube holders drop in when the sample format changes."
+            },
+            {
+              "question": "Does LEDi mix the sample during illumination?",
+              "answer": "Yes, an integrated variable-speed magnetic mixer runs continuously below the sample holder throughout the exposure."
+            },
+            {
+              "question": "What wavelengths does LEDi cover?",
+              "answer": "The standard RGB head covers blue, green, red, and white. Optional heads extend coverage into UV and near-infrared for specific applications."
+            },
+            {
+              "question": "How does LEDi keep the sample from overheating during illumination?",
+              "answer": "The LEDs run air-cooled, keeping sample heating to a minimum while illumination stays stable."
+            },
+            {
+              "question": "What safety equipment comes with LEDi?",
+              "answer": "A protective shield to reduce stray light exposure, plus LED safety glasses for the operator."
+            },
+            {
+              "question": "What is the price of LEDi in India?",
+              "answer": "Get in touch and Inkarp will put together a quote around your head and holder configuration."
+            },
+            {
+              "question": "Who is the authorized distributor of LEDi in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for Luzchem LEDi in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -199,10 +327,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right head and holder", "body": "The right head and holder combination is matched to your specific reaction." },
-              { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
-              { "title": "Reproducibility training", "body": "Get your team confident using the current indicator for reproducibility." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows head switching and mixing on your own sample" },
+              { "title": "Configuration Assessment", "body": "Confirms the right head and holder combination" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident using the current indicator for reproducibility" },
+              { "title": "Preventive Maintenance", "body": "Maintains LED, mixer, and optical performance" },
+              { "title": "Spares and Accessories", "body": "Supplies holders, shields, and replacement heads" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -224,23 +355,52 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "LEDi's multi-color LED head, magnetic mixer, and sample holder configuration.",
-                "subheading": "Why reproducibility is built into the design",
+                "subheading": "Overview",
                 "body": [
-                  "A photochemistry reaction is only as reproducible as your light source, and most LED setups give you no real way to prove what you delivered. LEDi solves both problems at once.",
-                  "Seven high-power LEDs across four independently controlled color banks, blue, green, red, and white, focus down to a spot roughly half an inch across, small enough for a cuvette or tube and precise enough that specialized lenses do the concentrating for you. A current indicator tracks exactly how much power reached your sample, so you can dial in a condition once and reproduce it exactly on your next run.",
-                  "An integrated magnetic mixer keeps your sample stirring continuously through the whole exposure, air cooling keeps the LEDs from adding unwanted heat to your reaction, and the head slides along an adjustable rail so you can fine-tune distance from the sample yourself."
+                  {
+                    "title": "Built for Repeatable Photochemistry",
+                    "text": "LEDi helps deliver consistent light exposure from one experiment to the next, reducing variation between runs."
+                  },
+                  {
+                    "title": "Same Current Indicator, Every Run",
+                    "text": "Each experiment starts with the same current indicator reading, making the power reaching your sample easier to track and reproduce."
+                  },
+                  {
+                    "title": "7 High-Power LEDs. 4 Independent Banks.",
+                    "text": "The standard RGB head uses seven LEDs across independently controlled blue, green, red, and white banks."
+                  },
+                  {
+                    "title": "Control Each Wavelength Independently",
+                    "text": "Set the intensity of each LED bank separately to match your reaction requirements."
+                  },
+                  {
+                    "title": "Focused Illumination",
+                    "text": "Specialized lenses concentrate the light to roughly ½ inch, providing efficient illumination for small cuvettes and tubes."
+                  },
+                  {
+                    "title": "Continuous Magnetic Mixing",
+                    "text": "A variable-speed magnetic mixer keeps the sample moving throughout the exposure for more consistent irradiation."
+                  },
+                  {
+                    "title": "Adjustable Sample Distance",
+                    "text": "The LED head moves along an adjustable rail, allowing you to set the ideal distance between the light source and sample."
+                  },
+                  { "title": "Air-Cooled LEDs", "text": "Air cooling helps manage LED heat and reduces unwanted heating of the reaction mixture." },
+                  {
+                    "title": "Proven Photochemical Performance",
+                    "text": "A 2018 study in ACS Sustainable Chemistry & Engineering reported that LEDi enabled a Sonogashira coupling 10× faster than a conventional LED setup."
+                  }
                 ],
                 "cards": [
-                  { "title": "Built for Repeatable Photochemistry", "description": "LEDi helps deliver consistent light exposure from one experiment to the next, reducing variation between runs." },
-                  { "title": "Same Current Indicator, Every Run", "description": "Each experiment starts with the same current indicator reading, making the power reaching your sample easier to track and reproduce." },
-                  { "title": "7 High-Power LEDs. 4 Independent Banks.", "description": "The standard RGB head uses seven LEDs across independently controlled blue, green, red, and white banks." },
-                  { "title": "Control Each Wavelength Independently", "description": "Set the intensity of each LED bank separately to match your reaction requirements." },
-                  { "title": "Focused Illumination", "description": "Specialized lenses concentrate the light to roughly ½ inch, providing efficient illumination for small cuvettes and tubes." },
-                  { "title": "Continuous Magnetic Mixing", "description": "A variable-speed magnetic mixer keeps the sample moving throughout the exposure for more consistent irradiation." },
-                  { "title": "Adjustable Sample Distance", "description": "The LED head moves along an adjustable rail, allowing you to set the ideal distance between the light source and sample." },
-                  { "title": "Air-Cooled LEDs", "description": "Air cooling helps manage LED heat and reduces unwanted heating of the reaction mixture." },
-                  { "title": "Proven Photochemical Performance", "description": "A 2018 study in ACS Sustainable Chemistry & Engineering reported that LEDi enabled a Sonogashira coupling 10× faster than a conventional LED setup." }
-                ]
+                  { "title": "10x faster", "description": "Published Sonogashira coupling result" },
+                  { "title": "4 color banks", "description": "Independently controlled RGB and white" },
+                  { "title": "Continuous mixing", "description": "Integrated magnetic stirrer during exposure" },
+                  { "title": "Current indicator", "description": "Reproduce exact illumination conditions" }
+                ],
+                "glanceTitle": "LEDi at a Glance",
+                "glanceDescription": "Compare LEDi's optics, mixing, reproducibility, and application fit.",
+                "cardsIntro": "LEDi at a glance.",
+                "tabSummary": "Why reproducibility is built into the design"
               },
               {
                 "key": "config",
@@ -248,56 +408,98 @@
                 "title": "Configuration note",
                 "description": "The right head and holder combination is matched to your specific reaction.",
                 "cards": [
-                  { "title": "Standard Bundle", "description": "LEDi Base with integrated magnetic mixer, LEDi RGB Head, LEDi Shield, 10x10mm cuvette holder, LED safety glasses, rare earth magnet bar" },
-                  { "title": "Sample holders", "description": "Cuvette standard, tube, vial, and NMR-tube holders available" },
-                  { "title": "Optional LED heads", "description": "Span UV, visible, and near-infrared wavelengths" }
-                ]
+                  {
+                    "title": "Standard Bundle",
+                    "description": "LEDi Base with integrated magnetic mixer, LEDi RGB Head, LEDi Shield, 10x10mm cuvette holder, LED safety glasses, rare earth magnet bar"
+                  },
+                  { "title": "Sample holders", "description": "cuvette standard, tube, vial, and NMR-tube holders available" }
+                ],
+                "body": [
+                  "Optional LED heads span UV, visible, and near-infrared wavelengths",
+                  "The right head and holder combination is matched to your specific reaction"
+                ],
+                "disclaimer": "Tell us your target wavelength and sample format, and we'll get you the right LEDi head and holder combination."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "LEDi's independently controlled color banks, magnetic mixer, and current indicator."
+                "description": "LEDi's independently controlled color banks, magnetic mixer, and current indicator.",
+                "tabSummary": "Independent color banks, current monitoring, adjustable rail"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "LEDi supports photochemistry, photocatalysis, photoredox chemistry, and photobiology research."
+                "description": "LEDi supports photochemistry, photocatalysis, photoredox chemistry, and photobiology research.",
+                "tabSummary": "Photochemistry, photocatalysis, photoredox chemistry, and more"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "LEDi LED count, wavelength range, sample holder, and mixer specifications."
+                "description": "LEDi LED count, wavelength range, sample holder, and mixer specifications.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "LED head, optics, and sample handling figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "LED head and optical design",
                 "title": "Multi-Color LED Head and Optical Design",
-                "description": "Seven LEDs sound like a lot until the real point becomes clear: four completely independent color channels rather than one fixed white output. Blue, green, red, and white each run off their own bank, dialed to exactly the color and intensity a reaction needs without touching the others. From there, specialized optical lenses take that light and focus it down to a spot around half an inch across, tight enough to put real photon density on a small cuvette or tube rather than spreading it thin across open air.",
+                "description": "Seven LEDs sound like a lot until the real point becomes clear: four completely independent color channels rather than one fixed white output.",
                 "cards": [
                   { "title": "A specific color for a specific reaction", "description": "Four independently controlled color banks" },
                   { "title": "Concentrated light on a small sample", "description": "Lenses focus output to a 0.5 inch spot" },
                   { "title": "Coverage beyond visible light", "description": "Optional heads extending into UV and near-infrared" },
                   { "title": "Precise light source distance", "description": "Adjustable rail-mounted head" }
-                ]
+                ],
+                "paragraphs": [
+                  "Blue, green, red, and white each run off their own bank, dialed to exactly the color and intensity a reaction needs without touching the others. From there, specialized optical lenses take that light and focus it down to a spot around half an inch across, tight enough to put real photon density on a small cuvette or tube rather than spreading it thin across open air."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your experiment needs", "value": "How LEDi delivers it" },
+                "note": "Tell us your target reaction and wavelength requirement, and we'll get you the right head fit.",
+                "tabSummary": "How the 7 LEDs and focusing lenses work together"
               },
               {
                 "key": "performance",
-                "eyebrow": "Sample handling",
+                "eyebrow": "Sample Handling, Mixing, and Reproducibility",
                 "title": "Sample Handling, Mixing, and Reproducibility",
-                "description": "Getting consistent photochemistry results depends on three things staying constant: how the sample mixes, how much light actually reaches it, and how easily both can be repeated.",
+                "tabSummary": "Holders, stirring, and the current indicator",
                 "body": [
+                  "Getting consistent photochemistry results depends on three things staying constant: how the sample mixes, how much light actually reaches it, and how easily both can be repeated.",
                   "The magnetic mixer runs the whole time a sample is under illumination, not just before or after, keeping concentration even throughout the reaction. Sample format flexibility comes from swappable holders, starting with the standard cuvette holder and moving to tube, vial, or NMR-tube holders as the work calls for it. And because the current indicator shows exactly how much power is reaching the LEDs, one reading noted today reproduces the exact same condition weeks later."
                 ],
-                "utilityChecklist": [
-                  { "label": "Continuous mixing during exposure", "value": "Integrated variable-speed magnetic mixer" },
-                  { "label": "Different sample container formats", "value": "Cuvette, tube, vial, or NMR-tube holders" },
-                  { "label": "Reproducing exact illumination conditions", "value": "Current indicator tracks LED power directly" },
-                  { "label": "Minimizing heat-driven side effects", "value": "Air-cooled LED operation" }
-                ],
-                "disclaimer": "Tell us your typical sample format and volume, and we'll get you the right holder."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your requirement",
+                      "How LEDi delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Continuous mixing during exposure",
+                        "Integrated variable-speed magnetic mixer"
+                      ],
+                      [
+                        "Different sample container formats",
+                        "Cuvette, tube, vial, or NMR-tube holders"
+                      ],
+                      [
+                        "Reproducing exact illumination conditions",
+                        "Current indicator tracks LED power directly"
+                      ],
+                      [
+                        "Minimizing heat-driven side effects",
+                        "Air-cooled LED operation"
+                      ]
+                    ]
+                  },
+                  { "note": "Tell us your typical sample format and volume, and we'll get you the right holder." }
+                ]
               },
               {
                 "key": "docs",
@@ -307,7 +509,9 @@
                 "cards": [
                   { "title": "LEDi Heads Comparison Chart", "description": "Available on request" },
                   { "title": "Published Research: Sonogashira Coupling Study", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Research citation, comparison chart"
               }
             ],
             "cta": {
@@ -316,9 +520,20 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Published research found it ten times faster on a real reaction, with a current indicator that proves the results are repeatable. Tell us your wavelength and sample format, and Inkarp will get you the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "A photochemistry reaction is only as reproducible as your light source, and most LED setups give you no real way to prove what you delivered. LEDi solves both problems at once.",
+              "Seven high-power LEDs across four independently controlled color banks, blue, green, red, and white, focus down to a spot roughly half an inch across, small enough for a cuvette or tube and precise enough that specialized lenses do the concentrating for you. A current indicator tracks exactly how much power reached your sample, so you can dial in a condition once and reproduce it exactly on your next run.",
+              "An integrated magnetic mixer keeps your sample stirring continuously through the whole exposure, air cooling keeps the LEDs from adding unwanted heat to your reaction, and the head slides along an adjustable rail so you can fine-tune distance from the sample yourself."
+            ],
+            "heroLead": "A photochemistry reaction is only as reproducible as your light source, and most LED setups give you no real way to prove what you delivered. LEDi solves both problems at once. Seven high-power LEDs across four independently controlled color banks, blue, green, red, and white, focus down to a spot roughly half an inch across, small enough for a cuvette or tube and precise enough that specialized lenses do the concentrating for you. A current indicator tracks exactly how much power reached your sample, so you can dial in a condition once and reproduce it exactly on your next run. An integrated magnetic mixer keeps your sample stirring continuously through the whole exposure, air cooling keeps the LEDs from adding unwanted heat to your reaction, and the head slides along an adjustable rail so you can fine-tune distance from the sample yourself.",
+            "statsIntro": "LEDi wavelength, LED count, and reproducibility specs at a glance."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

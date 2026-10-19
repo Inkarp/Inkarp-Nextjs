@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "proscientific",
-    "principalName": "ProScientific",
-    "countryOfOrigin": "United States of America"
-  },
+  "principal": { "slug": "proscientific", "principalName": "ProScientific", "countryOfOrigin": "United States of America" },
   "categories": [
     {
       "name": "Digital Benchtop Homogenizers",
@@ -11,25 +7,34 @@
       "products": [
         {
           "name": "PRO400DS Digital Benchtop Homogenizer",
+
           "slug": "pro400ds-digital-benchtop-homogenizer",
+
           "principalImage": "/assets/images/PrincipalLogos/Proscientific.png",
+
           "imageAlt": "ProScientific PRO400DS Digital Benchtop Homogenizer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/pro400ds-digital-benchtop-homogenizer",
+
           "breadcrumbPath": "Home > Products > Digital Benchtop Homogenizers > PRO400DS Digital Benchtop Homogenizer",
+
           "h1": "PRO400DS Digital Benchtop Homogenizer",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Positioning a probe by hand gets harder the bigger the vessel gets, and getting exactly the right speed on a coarse dial is guesswork. PRO400DS fixes both.",
 
           "features": [
-            "Motorized PRO TRAC Stand: Positions the motor effortlessly, accurately, and smoothly without manual adjustment.",
-            "1,305W High-Power Motor: The most power in the ProScientific range confirmed so far.",
-            "Fine 3-Turn Speed Knob: Adjusts RPM in hundreds rather than thousands, for precise speed control.",
-            "Bright LED Display: Clear readout of current operating conditions.",
-            "Dual-Power Light Indicator: Simplifies error and problem identification during operation.",
-            "14.5-Inch Container Clearance: Room for a genuinely sized vessel under the stand.",
-            "Wide Volume Range: 0.05mL to 30L on a single unit.",
-            "Full Probe Line Compatibility: The entire ProScientific probe range mounts to this unit."
+            { "title": "Motorized PRO TRAC Stand", "description": "Positions the motor effortlessly, accurately, and smoothly without manual adjustment." },
+            { "title": "1,305W High-Power Motor", "description": "The most power in the ProScientific range confirmed so far." },
+            { "title": "Fine 3-Turn Speed Knob", "description": "Adjusts RPM in hundreds rather than thousands, for precise speed control." },
+            { "title": "Bright LED Display", "description": "Clear readout of current operating conditions." },
+            { "title": "Dual-Power Light Indicator", "description": "Simplifies error and problem identification during operation." },
+            { "title": "14.5-Inch Container Clearance", "description": "Room for a genuinely sized vessel under the stand." },
+            { "title": "Wide Volume Range", "description": "0.05mL to 30L on a single unit." },
+            { "title": "Full Probe Line Compatibility", "description": "The entire ProScientific probe range mounts to this unit." }
           ],
 
           "technicalSpecs": [
@@ -47,11 +52,11 @@
           ],
 
           "applications": [
-            "Large-Vessel Homogenization: 30L capacity with motorized stand positioning",
-            "Emulsification: 1,305W motor for consistent, high-power shear",
-            "Blending and Mixing: Confirmed across both organic and inorganic materials",
-            "Microliter-Scale Work: 0.05mL minimum volume on the same unit",
-            "Precision-Dependent Protocols: Fine RPM adjustment for exact speed matching"
+            { "title": "Large-Vessel Homogenization", "description": "30L capacity with motorized stand positioning" },
+            { "title": "Emulsification", "description": "1,305W motor for consistent, high-power shear" },
+            { "title": "Blending and Mixing", "description": "Confirmed across both organic and inorganic materials" },
+            { "title": "Microliter-Scale Work", "description": "0.05mL minimum volume on the same unit" },
+            { "title": "Precision-Dependent Protocols", "description": "Fine RPM adjustment for exact speed matching" }
           ],
 
           "inPageNav": [
@@ -68,33 +73,33 @@
 
           "configWizard": {
             "title": "What volume and viscosity are you processing?",
-            "description": "Select your sample viscosity and application type, and see which probe and accessory configuration fits. Share your exact sample volume with Inkarp for final probe sizing.",
+            "description": "Select your target sample volume and viscosity, and see which probe and accessory configuration fits.",
             "steps": [
               {
-                "key": "sampleViscosity",
-                "question": "What's the sample viscosity?",
-                "options": [
-                  { "val": "low", "label": "Low viscosity" },
-                  { "val": "moderate", "label": "Moderate viscosity" },
-                  { "val": "high", "label": "High viscosity", "desc": "May need a Deflector Head to maintain effective volume" }
-                ]
+                "key": "sampleVolumeInput",
+                "label": "Sample volume input",
+                "question": "Sample volume input",
+                "hint": "0.05mL to 30L",
+                "input": "text",
+                "options": []
               },
               {
-                "key": "applicationType",
-                "question": "What's the application type?",
+                "key": "sampleViscosity",
+                "label": "Sample viscosity",
+                "question": "Sample viscosity",
+                "hint": "Low, moderate, or high",
                 "options": [
-                  { "val": "large-vessel-homogenization", "label": "Large-vessel homogenization" },
-                  { "val": "emulsification", "label": "Emulsification" },
-                  { "val": "blending-mixing", "label": "Blending and mixing" },
-                  { "val": "microliter-scale-work", "label": "Microliter-scale work" },
-                  { "val": "precision-dependent-protocols", "label": "Precision-dependent protocols" }
+                  { "val": "low", "label": "Low" },
+                  { "val": "moderate", "label": "Moderate" },
+                  { "val": "high", "label": "High" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share your exact sample volume, and this routes to a probe-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a probe-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Volume and Probe Selector",
+            "emptyState": "Recommends the matching probe, flags a Deflector Head for viscous samples",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -103,7 +108,8 @@
             "fields": [
               {
                 "key": "containerHeight",
-                "label": "Container height",
+                "label": "Container height input",
+                "hint": "Up to and beyond 14.5in clearance",
                 "options": [
                   { "val": "up-to-14-5in", "label": "Up to 14.5 inches" },
                   { "val": "over-14-5in", "label": "Taller than 14.5 inches" }
@@ -115,52 +121,142 @@
                 "condition": { "containerHeight": "up-to-14-5in" },
                 "title": "PRO400DS Fits Your Container",
                 "body": "The standard PRO400DS stand provides 14.5 inches of clearance, enough room for your container as specified.",
-                "tags": ["Standard PRO TRAC Stand"]
+                "tags": [
+                  "Standard PRO TRAC Stand"
+                ]
               },
               {
                 "condition": { "containerHeight": "over-14-5in" },
                 "title": "PRO400DSEL Fits Your Container",
                 "body": "PRO400DSEL runs the same core PRO400DS unit with an Extra Length stand, built for containers taller than the standard 14.5-inch clearance.",
-                "tags": ["Extra Length PRO TRAC Stand"]
+                "tags": [
+                  "Extra Length PRO TRAC Stand"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm Your Stand Length With Inkarp",
                 "body": "Share your container height, and Inkarp will confirm whether the standard PRO400DS or the extra-length PRO400DSEL fits your setup.",
-                "tags": ["PRO400DS / PRO400DSEL"]
+                "tags": [
+                  "PRO400DS / PRO400DSEL"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Stand Length Selector",
+            "ctaNote": "Recommends PRO400DS or PRO400DSEL. Routes to us for a stand-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "PRO250 (Hand-Held) vs. PRO400DS (Digital Benchtop)",
+            "title": "Method Comparison",
             "description": "PRO400DS compared with the hand-held PRO250 across the ProScientific range.",
             "columns": [
               { "label": "PRO250 (Hand-Held)" },
               { "label": "PRO400DS (Digital Benchtop)" }
             ],
             "rows": [
-              { "feature": "Motor Power", "values": ["576 W", "1,305 W"] },
-              { "feature": "Sample Volume", "values": ["0.03mL-5L", "0.05mL-30L"] },
-              { "feature": "Positioning", "values": ["Hand-held or post-mounted, manual", "Motorized PRO TRAC stand"] },
-              { "feature": "Speed Control", "values": ["Variable, separate ON/OFF preserves setting", "3-turn knob, fine adjustment in hundreds of RPM"] },
-              { "feature": "Probe", "values": ["Included with base unit", "Not included, sold separately"] },
-              { "feature": "Best For", "values": ["Formulation and small-scale industrial work up to 5L", "Large-vessel processing and precision speed protocols"] },
-              { "feature": "Choose when", "values": ["You need hand-held flexibility at moderate volumes", "You need motorized positioning, larger volumes, or finer speed control"] }
+              {
+                "feature": "Motor Power",
+                "values": [
+                  "576 W",
+                  "1,305 W"
+                ]
+              },
+              {
+                "feature": "Sample Volume",
+                "values": [
+                  "0.03mL-5L",
+                  "0.05mL-30L"
+                ]
+              },
+              {
+                "feature": "Positioning",
+                "values": [
+                  "Hand-held or post-mounted, manual",
+                  "Motorized PRO TRAC stand"
+                ]
+              },
+              {
+                "feature": "Speed Control",
+                "values": [
+                  "Variable, separate ON/OFF preserves setting",
+                  "3-turn knob, fine adjustment in hundreds of RPM"
+                ]
+              },
+              {
+                "feature": "Probe",
+                "values": [
+                  "Included with base unit",
+                  "Not included, sold separately"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Formulation and small-scale industrial work up to 5L",
+                  "Large-vessel processing and precision speed protocols"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "You need hand-held flexibility at moderate volumes",
+                  "You need motorized positioning, larger volumes, or finer speed control"
+                ]
+              }
             ],
-            "disclaimer": "Both use the same rotor-stator shear mechanism; the choice comes down to vessel size, positioning needs, and how precise your speed control has to be."
+            "disclaimer": "Both use the same rotor-stator shear mechanism; the choice comes down to vessel size, positioning needs, and how precise your speed control has to be.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "PRO400DS industries: pharmaceutical production, materials processing, and large-scale research applications.",
             "industries": [
-              { "name": "Pharmaceutical Production", "useCase": "Large-batch emulsification and homogenization", "consideration": "30L capacity with motorized, repeatable positioning" },
-              { "name": "Materials Processing", "useCase": "Organic and inorganic material blending", "consideration": "Wide 0.05mL-30L range on one unit" },
-              { "name": "Large-Scale Academic Research", "useCase": "Precision-dependent protocols at benchtop scale", "consideration": "Fine RPM control for exact condition matching" },
-              { "name": "Cosmetic and Personal Care Manufacturing", "useCase": "Formulation blending and mixing at scale", "consideration": "Deflector Head accessory for viscous formulations" },
-              { "name": "Contract Manufacturing", "useCase": "Varied client vessel sizes and volumes", "consideration": "PRO400DSEL available for taller containers" }
+              {
+                "name": "Pharmaceutical Production",
+                "note": "Use Case: Large-batch emulsification and homogenization",
+                "bullets": [
+                  "What to Consider: 30L capacity with motorized, repeatable positioning"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Materials Processing",
+                "note": "Use Case: Organic and inorganic material blending",
+                "bullets": [
+                  "What to Consider: Wide 0.05mL-30L range on one unit"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Large-Scale Academic Research",
+                "note": "Use Case: Precision-dependent protocols at benchtop scale",
+                "bullets": [
+                  "What to Consider: Fine RPM control for exact condition matching"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetic and Personal Care Manufacturing",
+                "note": "Use Case: Formulation blending and mixing at scale",
+                "bullets": [
+                  "What to Consider: Deflector Head accessory for viscous formulations"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Manufacturing",
+                "note": "Use Case: Varied client vessel sizes and volumes",
+                "bullets": [
+                  "What to Consider: PRO400DSEL available for taller containers"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -174,20 +270,48 @@
               { "title": "Preventive Maintenance", "description": "Maintains motor, stand, and display performance" },
               { "title": "Spares and Accessories", "description": "Supplies generator probes, deflector heads, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "PRO400DS service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the PRO400DS used for?", "answer": "It's a digital benchtop homogenizer for homogenizing, emulsifying, blending, and mixing organic and inorganic materials, from microliter volumes up to 30L." },
-            { "question": "Does the PRO400DS come with a probe?", "answer": "No, the generator probe is sold separately and needs to be selected based on your sample type and volume." },
-            { "question": "How does the motorized stand work?", "answer": "The PRO TRAC stand positions the motor effortlessly, accurately, and smoothly, removing the need for manual probe positioning over the vessel." },
-            { "question": "How precise is the speed control?", "answer": "The 3-turn speed knob adjusts RPM in hundreds rather than thousands, giving fine control over your exact operating speed." },
-            { "question": "What do I do if my container is too tall for the standard stand?", "answer": "Check the PRO400DSEL version, which uses an Extra Length stand for taller containers." },
-            { "question": "How do I process a viscous sample near the maximum volume?", "answer": "Add a Deflector Head to your generator probe, which facilitates sample movement and helps increase the effective maximum volume." },
-            { "question": "What does the dual-power light indicator do?", "answer": "It simplifies identifying an error or problem during operation, giving faster visual feedback than a single indicator light." },
+            {
+              "question": "What is the PRO400DS used for?",
+              "answer": "It's a digital benchtop homogenizer for homogenizing, emulsifying, blending, and mixing organic and inorganic materials, from microliter volumes up to 30L."
+            },
+            {
+              "question": "Does the PRO400DS come with a probe?",
+              "answer": "No, the generator probe is sold separately and needs to be selected based on your sample type and volume."
+            },
+            {
+              "question": "How does the motorized stand work?",
+              "answer": "The PRO TRAC stand positions the motor effortlessly, accurately, and smoothly, removing the need for manual probe positioning over the vessel."
+            },
+            {
+              "question": "How precise is the speed control?",
+              "answer": "The 3-turn speed knob adjusts RPM in hundreds rather than thousands, giving fine control over your exact operating speed."
+            },
+            {
+              "question": "What do I do if my container is too tall for the standard stand?",
+              "answer": "Check the PRO400DSEL version, which uses an Extra Length stand for taller containers."
+            },
+            {
+              "question": "How do I process a viscous sample near the maximum volume?",
+              "answer": "Add a Deflector Head to your generator probe, which facilitates sample movement and helps increase the effective maximum volume."
+            },
+            {
+              "question": "What does the dual-power light indicator do?",
+              "answer": "It simplifies identifying an error or problem during operation, giving faster visual feedback than a single indicator light."
+            },
             { "question": "What container clearance does PRO400DS provide?", "answer": "14.5 inches of length for your container under the standard stand." },
-            { "question": "What is the price of the PRO400DS in India?", "answer": "Get in touch and Inkarp will put together a quote based on your probe, stand, and accessory configuration." },
-            { "question": "Who is the authorized distributor of the PRO400DS in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO400DS in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is the price of the PRO400DS in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your probe, stand, and accessory configuration."
+            },
+            {
+              "question": "Who is the authorized distributor of the PRO400DS in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO400DS in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -208,10 +332,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right probe and stand configuration", "body": "Tell us your target volume, container height, and viscosity, and we'll get you the right PRO400DS probe and stand configuration." },
-              { "title": "Confirm the right configuration for your protocol", "body": "Tell us your typical container size and whether fine speed control matters for your protocol, and we'll get you the right PRO400DS configuration." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows motorized positioning and digital speed control on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right probe, stand length, and accessory configuration" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with the PRO TRAC stand and digital controls" },
+              { "title": "Preventive Maintenance", "body": "Maintains motor, stand, and display performance" },
+              { "title": "Spares and Accessories", "body": "Supplies generator probes, deflector heads, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -234,19 +361,24 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "PRO400DS digital benchtop homogenizer product information: motorized stand, digital speed control, and volume capacity.",
-                "body": [
-                  "PRO400DS pairs a 1305W motor with digital speed control, the most power in the ProScientific range so far, aimed at labs that need real throughput without sacrificing precision.",
-                  "The PRO TRAC stand, a motorized stand developed specifically to handle motor positioning, moves the unit into place effortlessly, accurately, and smoothly rather than requiring manual adjustment for every sample.",
-                  "Speed control gets genuinely finer here too. A 3-turn speed knob adjusts RPM in hundreds rather than thousands, and a bright LED display paired with a dual-power light indicator makes both setting the speed and spotting a problem straightforward.",
-                  "Volume range runs from 0.05mL to 30L, covering everything from microliter-scale work to large vessel processing on the same unit, homogenizing, emulsifying, blending, and mixing both organic and inorganic materials.",
-                  "The entire ProScientific probe line mounts to this unit, though the probe itself isn't included and needs to be selected and ordered separately."
-                ],
+                "body": [],
                 "cards": [
                   { "title": "1,305 W", "description": "Most power in the ProScientific range so far" },
                   { "title": "0.05mL-30L", "description": "Widest confirmed volume range" },
                   { "title": "Motorized PRO TRAC stand", "description": "Effortless, accurate positioning" },
                   { "title": "Fine RPM control", "description": "Hundreds, not thousands" }
-                ]
+                ],
+                "glanceTitle": "PRO400DS at a Glance",
+                "glanceDescription": "PRO400DS overview: motorized positioning, digital control precision, and stand length options.",
+                "subheading": "Overview",
+                "intro": "PRO400DS overview: motorized, digitally controlled benchtop homogenization for larger vessels and precise speed control.",
+                "paragraphs": [
+                  "PRO400DS pairs a 1305W motor with digital speed control, the most power in the ProScientific range so far, aimed at labs that need real throughput without sacrificing precision. The PRO TRAC stand, a motorized stand developed specifically to handle motor positioning, moves the unit into place effortlessly, accurately, and smoothly rather than requiring manual adjustment for every sample.",
+                  "Speed control gets genuinely finer here too. A 3-turn speed knob adjusts RPM in hundreds rather than thousands, and a bright LED display paired with a dual-power light indicator makes both setting the speed and spotting a problem straightforward.",
+                  "Volume range runs from 0.05mL to 30L, covering everything from microliter-scale work to large vessel processing on the same unit, homogenizing, emulsifying, blending, and mixing both organic and inorganic materials. The entire ProScientific probe line mounts to this unit, though the probe itself isn't included and needs to be selected and ordered separately."
+                ],
+                "cardsIntro": "PRO400DS at a glance: motor power, volume range, motorized stand precision.",
+                "tabSummary": "Why motorized positioning and digital control change the workflow"
               },
               {
                 "key": "config",
@@ -256,58 +388,102 @@
                 "cards": [
                   { "title": "Motor", "description": "1,305 W" },
                   { "title": "Sample volume", "description": "0.05mL to 30L (higher volumes viscosity-dependent)" },
-                  { "title": "Stand", "description": "Motorized PRO TRAC, 14.5in container clearance" },
+                  { "title": "Stand", "description": "motorized PRO TRAC, 14.5in container clearance" },
                   { "title": "Speed control", "description": "3-turn knob, RPM adjustment in hundreds" },
                   { "title": "Display", "description": "LED, with dual-power light indicator" },
-                  { "title": "Probe", "description": "Not included, sold separately, compatible with the full ProScientific probe line" },
+                  { "title": "Probe", "description": "not included, sold separately, compatible with the full ProScientific probe line" },
                   { "title": "Warranty", "description": "2 years, made in USA" }
-                ]
+                ],
+                "body": [
+                  "Full probe selection and stand length options are matched to your specific vessel size"
+                ],
+                "disclaimer": "Tell us your target volume, container height, and viscosity, and we'll get you the right PRO400DS probe and stand configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "PRO400DS digital benchtop homogenizer key features: motorized stand, fine speed control, dual-power indicator.",
+                "tabSummary": "PRO TRAC stand, fine speed control, LED display"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "PRO400DS applications: homogenizing, emulsifying, blending, and mixing at benchtop scale."
+                "description": "PRO400DS applications: homogenizing, emulsifying, blending, and mixing at benchtop scale.",
+                "tabSummary": "Homogenizing, emulsifying, blending, and mixing at benchtop scale"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "PRO400DS digital benchtop homogenizer technical specifications: motor power, volume range, and stand clearance."
+                "description": "PRO400DS digital benchtop homogenizer technical specifications: motor power, volume range, and stand clearance.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Full probe range and application-specific literature are available on request.",
+                "tabSummary": "Motor, volume, and clearance figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Motorized PRO TRAC Stand and Digital Speed Control",
                 "title": "Motorized PRO TRAC Stand and Digital Speed Control",
-                "description": "Manually positioning a probe over a large vessel is a real limiting factor once containers get bigger, and PRO TRAC removes that limitation directly. The stand moves the motor into place, effortlessly, accurately, and smoothly, rather than depending on how steady a hand you have. Speed control gets the same precision treatment. Coarse dials that jump in thousands of RPM make fine-tuning a specific condition difficult; the 3-turn knob here adjusts in hundreds instead, giving genuinely precise speed setting. The LED display keeps that setting visible at a glance, and the dual-power light indicator flags a problem before it turns into a failed run.",
+                "description": "PRO400DS motorized control: PRO TRAC stand positioning and fine digital speed adjustment.",
                 "cards": [
                   { "title": "Positioning the probe over larger vessels without manual strain", "description": "Motorized PRO TRAC stand" },
                   { "title": "Fine, precise speed adjustment", "description": "3-turn knob, RPM in hundreds" },
                   { "title": "Clear visibility of current operating conditions", "description": "Bright LED display" },
                   { "title": "Fast identification of a problem mid-run", "description": "Dual-power light indicator" }
-                ]
+                ],
+                "paragraphs": [
+                  "Manually positioning a probe over a large vessel is a real limiting factor once containers get bigger, and PRO TRAC removes that limitation directly. The stand moves the motor into place, effortlessly, accurately, and smoothly, rather than depending on how steady a hand you have.",
+                  "Speed control gets the same precision treatment. Coarse dials that jump in thousands of RPM make fine-tuning a specific condition difficult; the 3-turn knob here adjusts in hundreds instead, giving genuinely precise speed setting. The LED display keeps that setting visible at a glance, and the dual-power light indicator flags a problem before it turns into a failed run."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your workflow needs", "value": "How PRO400DS delivers it" },
+                "note": "Tell us your typical container size and whether fine speed control matters for your protocol, and we'll get you the right PRO400DS configuration.",
+                "tabSummary": "What effortless positioning and fine RPM control deliver"
               },
               {
                 "key": "performance",
                 "eyebrow": "Volume Range, Probe Selection, and Choosing Your Stand Length",
                 "title": "Volume Range, Probe Selection, and Choosing Your Stand Length",
+                "tabSummary": "Matching volume, probe, and container height to the right configuration",
                 "body": [
-                  "Volume range on PRO400DS runs wide, 0.05mL up to 30L, but the actual maximum for a given sample depends on viscosity as much as the unit's rated capacity.",
-                  "Viscous samples reduce max capacity directly, and adding a Deflector Head to your generator probe helps by facilitating sample movement during homogenization, increasing the effective maximum volume you can process.",
+                  "PRO400DS volume and probe: 0.05mL-30L range, separate probe selection, and stand length options.",
+                  "Volume range on PRO400DS runs wide, 0.05mL up to 30L, but the actual maximum for a given sample depends on viscosity as much as the unit's rated capacity. Viscous samples reduce max capacity directly, and adding a Deflector Head to your generator probe helps by facilitating sample movement during homogenization, increasing the effective maximum volume you can process.",
                   "Since the probe isn't included, matching it to your vessel and sample type is a real configuration step, not an afterthought. And if your container needs more vertical clearance than the standard 14.5 inches provides, PRO400DSEL runs the same core unit with an Extra Length stand instead."
                 ],
-                "utilityChecklist": [
-                  { "label": "Standard container height", "value": "PRO400DS, 14.5in clearance" },
-                  { "label": "Taller or larger containers", "value": "PRO400DSEL, extra length stand" },
-                  { "label": "Viscous samples reducing effective capacity", "value": "Deflector Head accessory" },
-                  { "label": "Selecting the right generator probe", "value": "Full ProScientific probe line, sold separately" }
-                ],
-                "disclaimer": "Send us your container height and sample viscosity, and we'll confirm whether PRO400DS or PRO400DSEL fits, along with the right probe and deflector accessory."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your situation",
+                      "What to confirm"
+                    ],
+                    "rows": [
+                      [
+                        "Standard container height",
+                        "PRO400DS, 14.5in clearance"
+                      ],
+                      [
+                        "Taller or larger containers",
+                        "PRO400DSEL, extra length stand"
+                      ],
+                      [
+                        "Viscous samples reducing effective capacity",
+                        "Deflector Head accessory"
+                      ],
+                      [
+                        "Selecting the right generator probe",
+                        "Full ProScientific probe line, sold separately"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Send us your container height and sample viscosity, and we'll confirm whether PRO400DS or PRO400DSEL fits, along with the right probe and deflector accessory."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -318,7 +494,9 @@
                   { "title": "PRO400DS Literature and Specifications", "description": "Available on request" },
                   { "title": "Generator Probe Compatibility Guide", "description": "Available on request" },
                   { "title": "Deflector Head Accessory Specification", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Full literature and applications data"
               }
             ],
             "cta": {
@@ -327,31 +505,56 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A motorized stand that positions the probe for you, with fine speed control down to the hundreds of RPM. Tell us your volume, container size, and probe needs, and Inkarp will get you the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Positioning a probe by hand gets harder the bigger the vessel gets, and getting exactly the right speed on a coarse dial is guesswork. PRO400DS fixes both.",
+              "The PRO TRAC stand moves the motor into position for you, effortless, accurate, and smooth, with 14.5 inches of clearance for your container. A 1305W motor delivers real power, and a 3-turn speed knob adjusts RPM in fine hundreds rather than coarse thousands, read off a bright LED display with a dual-power light indicator that makes spotting an error simple.",
+              "Volume range runs from 0.05mL up to 30L, and the entire ProScientific probe line mounts to this unit. The generator probe itself is sold separately, so confirm your probe alongside the base unit."
+            ],
+            "statsIntro": "PRO400DS digital benchtop homogenizer specifications at a glance: motor power, volume range, and stand clearance."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "PRO400DSEL Digital Benchtop Homogenizer",
+
           "slug": "pro400dsel-digital-benchtop-homogenizer",
+
           "principalImage": "/assets/images/PrincipalLogos/Proscientific.png",
+
           "imageAlt": "ProScientific PRO400DSEL Digital Benchtop Homogenizer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/pro400dsel-digital-benchtop-homogenizer",
+
           "breadcrumbPath": "Home > Products > Digital Benchtop Homogenizers > PRO400DSEL Digital Benchtop Homogenizer",
+
           "h1": "PRO400DSEL Digital Benchtop Homogenizer",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "A taller container shouldn't mean rethinking your whole homogenizer setup. PRO400DSEL solves that with stand length alone, keeping everything else that works about PRO400DS exactly the same.",
 
           "features": [
-            "Extra Length PRO TRAC Motorized Stand: Provides 31 inches of total length for taller containers, nearly double the standard model.",
-            "1305 Watt High-Torque Motor: Delivers reliable power across the full 0 to 23,000 RPM range.",
-            "Precision 3-Turn Speed Knob: Adjusts RPM in increments of hundreds for granular control on sensitive emulsions.",
-            "Motorized, Repeatable Probe Positioning: Eliminates manual strain while keeping probe placement consistent across runs.",
-            "Dual-Power Light Indicator: Gives immediate visual feedback for error identification and motor protection.",
-            "Wide Processing Volume Range: Handles 0.03 mL to 30 L, from micro-scale research to pilot-plant production.",
-            "Universal PRO QUICK CONNECT Compatibility: Accepts the entire line of PRO probes and generators.",
-            "PRO SAFETY SEAL Chamber Compatibility: Contains aerosols and prevents cross-contamination when fitted."
+            {
+              "title": "Extra Length PRO TRAC Motorized Stand",
+              "description": "Provides 31 inches of total length for taller containers, nearly double the standard model."
+            },
+            { "title": "1305 Watt High-Torque Motor", "description": "Delivers reliable power across the full 0 to 23,000 RPM range." },
+            { "title": "Precision 3-Turn Speed Knob", "description": "Adjusts RPM in increments of hundreds for granular control on sensitive emulsions." },
+            {
+              "title": "Motorized, Repeatable Probe Positioning",
+              "description": "Eliminates manual strain while keeping probe placement consistent across runs."
+            },
+            { "title": "Dual-Power Light Indicator", "description": "Gives immediate visual feedback for error identification and motor protection." },
+            { "title": "Wide Processing Volume Range", "description": "Handles 0.03 mL to 30 L, from micro-scale research to pilot-plant production." },
+            { "title": "Universal PRO QUICK CONNECT Compatibility", "description": "Accepts the entire line of PRO probes and generators." },
+            { "title": "PRO SAFETY SEAL Chamber Compatibility", "description": "Contains aerosols and prevents cross-contamination when fitted." }
           ],
 
           "technicalSpecs": [
@@ -370,11 +573,14 @@
           ],
 
           "applications": [
-            "Tissue and Sample Homogenization: High-torque motor and precision speed control across a wide RPM range",
-            "Emulsification: 3-turn speed knob supports the granular control sensitive emulsions require",
-            "Large-Vessel and Carboy Processing: 31-inch Extra Length stand accommodates taller containers",
-            "Micro-to-Macro Scale Processing: 0.03 mL to 30 L range covers research through pilot-plant volumes",
-            "Aerosol-Sensitive Sample Handling: PRO SAFETY SEAL chamber assembly compatibility contains aerosols during processing"
+            { "title": "Tissue and Sample Homogenization", "description": "High-torque motor and precision speed control across a wide RPM range" },
+            { "title": "Emulsification", "description": "3-turn speed knob supports the granular control sensitive emulsions require" },
+            { "title": "Large-Vessel and Carboy Processing", "description": "31-inch Extra Length stand accommodates taller containers" },
+            { "title": "Micro-to-Macro Scale Processing", "description": "0.03 mL to 30 L range covers research through pilot-plant volumes" },
+            {
+              "title": "Aerosol-Sensitive Sample Handling",
+              "description": "PRO SAFETY SEAL chamber assembly compatibility contains aerosols during processing"
+            }
           ],
 
           "inPageNav": [
@@ -390,29 +596,43 @@
 
           "configWizard": {
             "title": "What container size and volume are you working with?",
-            "description": "Select your container height and sample viscosity, and see whether PRO400DSEL fits. Share your exact processing volume with Inkarp for final configuration.",
+            "description": "Enter your container height and typical processing volume, and see whether PRO400DSEL fits.",
             "steps": [
               {
                 "key": "containerHeight",
-                "question": "What container height are you working with?",
+                "label": "Container height input",
+                "question": "Container height input",
+                "hint": "Standard or extra-tall vessels",
                 "options": [
-                  { "val": "standard", "label": "Standard height, up to 14.5in" },
-                  { "val": "extra-tall", "label": "Extra-tall vessels or carboys" }
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "extra-tall", "label": "Extra-tall vessels" }
                 ]
               },
               {
+                "key": "processingVolumeInput",
+                "label": "Processing volume input",
+                "question": "Processing volume input",
+                "hint": "0.03 mL to 30 L",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "sampleViscosity",
-                "question": "What's the sample viscosity?",
+                "label": "Sample viscosity",
+                "question": "Sample viscosity",
+                "hint": "Standard or highly viscous",
                 "options": [
-                  { "val": "standard", "label": "Standard viscosity" },
-                  { "val": "highly-viscous", "label": "Highly viscous", "desc": "May need a Deflector Head to maintain effective volume" }
+                  { "val": "standard", "label": "Standard" },
+                  { "val": "highly-viscous", "label": "Highly viscous" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share your exact processing volume, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to Inkarp for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Stand and Volume Selector",
+            "lead": "Find the right stand height and processing volume for your setup.",
+            "emptyState": "Confirms Extra Length stand fit and probe recommendation",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -422,6 +642,7 @@
               {
                 "key": "generatorProbeType",
                 "label": "Generator probe type",
+                "hint": "Standard, dispersing, or specialized",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "dispersing", "label": "Dispersing" },
@@ -430,15 +651,18 @@
               },
               {
                 "key": "deflectorHeadNeed",
-                "label": "Deflector Head need",
+                "label": "Deflector head need",
+                "hint": "Yes or no, for improved sample movement",
                 "options": [
-                  { "val": "yes", "label": "Yes, for improved sample movement" },
-                  { "val": "no", "label": "No" }
+                  { "val": "yes", "label": "Yes" },
+                  { "val": "no", "label": "No" },
+                  { "val": "for-improved-sample-movement", "label": "For improved sample movement" }
                 ]
               },
               {
                 "key": "aerosolContainment",
                 "label": "Aerosol containment",
+                "hint": "PRO SAFETY SEAL required or not",
                 "options": [
                   { "val": "required", "label": "PRO SAFETY SEAL required" },
                   { "val": "not-required", "label": "Not required" }
@@ -450,20 +674,63 @@
                 "condition": "default",
                 "title": "What Probe and Safety Configuration Does PRO400DSEL Support?",
                 "body": "The full PRO probe and PRO QUICK CONNECT generator line mounts to PRO400DSEL, with an optional Deflector Head for viscous samples and an optional PRO SAFETY SEAL chamber assembly for aerosol containment.",
-                "tags": ["Universal Probe Compatibility"]
+                "tags": [
+                  "Universal Probe Compatibility"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Probe and Accessory Builder",
+            "lead": "Build the right probe and safety accessory combination for PRO400DSEL.",
+            "ctaNote": "Recommends the right probe and safety accessory set. Routes to Inkarp for a full-package quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using PRO400DSEL include pharmaceutical R&D, environmental testing, and food and beverage development.",
             "industries": [
-              { "name": "Pharmaceutical R&D and Formulation", "useCase": "Homogenizing and emulsifying formulations at bench to pilot scale", "consideration": "0.03 mL to 30 L range covers both early formulation and scale-up batches" },
-              { "name": "Environmental and Water Testing Laboratories", "useCase": "Preparing samples for methods like EPA 1633 PFAS testing", "consideration": "Wide RPM range supports the consistent sample prep these methods require" },
-              { "name": "Food and Beverage Product Development", "useCase": "Blending and emulsifying product formulations", "consideration": "Extra Length stand accommodates larger production-relevant containers" },
-              { "name": "Cosmetics and Personal Care Formulation", "useCase": "Developing stable emulsions for skincare and cosmetic products", "consideration": "3-turn speed knob gives the fine control emulsification depends on" },
-              { "name": "Academic and Contract Research Laboratories", "useCase": "Running varied sample types across different container sizes", "consideration": "Universal probe compatibility adapts the same unit across projects" }
+              {
+                "name": "Pharmaceutical R&D and Formulation",
+                "note": "Use Case: Homogenizing and emulsifying formulations at bench to pilot scale",
+                "bullets": [
+                  "What to Consider: 0.03 mL to 30 L range covers both early formulation and scale-up batches"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Environmental and Water Testing Laboratories",
+                "note": "Use Case: Preparing samples for methods like EPA 1633 PFAS testing",
+                "bullets": [
+                  "What to Consider: Wide RPM range supports the consistent sample prep these methods require"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Beverage Product Development",
+                "note": "Use Case: Blending and emulsifying product formulations",
+                "bullets": [
+                  "What to Consider: Extra Length stand accommodates larger production-relevant containers"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Cosmetics and Personal Care Formulation",
+                "note": "Use Case: Developing stable emulsions for skincare and cosmetic products",
+                "bullets": [
+                  "What to Consider: 3-turn speed knob gives the fine control emulsification depends on"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic and Contract Research Laboratories",
+                "note": "Use Case: Running varied sample types across different container sizes",
+                "bullets": [
+                  "What to Consider: Universal probe compatibility adapts the same unit across projects"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -477,20 +744,51 @@
               { "title": "Preventive Maintenance", "description": "Maintains motor, stand, and diagnostic system performance" },
               { "title": "Spares and Accessories", "description": "Supplies generator probes, deflector heads, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "PRO400DSEL service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is PRO400DSEL used for?", "answer": "PRO400DSEL is a digital benchtop homogenizer used to homogenize, emulsify, blend, and mix organic and inorganic materials, built with an Extra Length stand for taller containers." },
-            { "question": "How is PRO400DSEL different from PRO400DS?", "answer": "PRO400DSEL offers the same power and performance as PRO400DS, but with a 31-inch Extra Length stand compared to the standard model's 14.5 inches, for taller containers and carboys." },
-            { "question": "What is the motor power and speed range?", "answer": "PRO400DSEL runs a 1305 watt motor across a 0 to 23,000 RPM range, with digital variable speed control." },
-            { "question": "What processing volume can PRO400DSEL handle?", "answer": "It processes samples from 0.03 mL up to 30 L, with higher volumes dependent on sample viscosity." },
-            { "question": "Does PRO400DSEL include a generator probe?", "answer": "No, a generator probe is required to operate the unit and is sold separately." },
-            { "question": "Can PRO400DSEL handle viscous samples?", "answer": "Yes, though viscous samples will reduce maximum capacity. Adding a Deflector Head to the generator probe helps facilitate sample movement and increase max volume." },
-            { "question": "What safety features does PRO400DSEL offer?", "answer": "It includes a Dual-Power Light Indicator for error identification, and can be fitted with the PRO SAFETY SEAL chamber assembly to contain aerosols and prevent cross-contamination." },
-            { "question": "Is PRO400DSEL compatible with all PRO probes?", "answer": "Yes, the entire line of PRO probes mounts to this unit, and it accepts the full range of PRO QUICK CONNECT generators." },
-            { "question": "What is the price of PRO400DSEL in India?", "answer": "The price depends on the probe and accessory configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
-            { "question": "Who is the authorized distributor of PRO400DSEL in India?", "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO400DSEL in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is PRO400DSEL used for?",
+              "answer": "PRO400DSEL is a digital benchtop homogenizer used to homogenize, emulsify, blend, and mix organic and inorganic materials, built with an Extra Length stand for taller containers."
+            },
+            {
+              "question": "How is PRO400DSEL different from PRO400DS?",
+              "answer": "PRO400DSEL offers the same power and performance as PRO400DS, but with a 31-inch Extra Length stand compared to the standard model's 14.5 inches, for taller containers and carboys."
+            },
+            {
+              "question": "What is the motor power and speed range?",
+              "answer": "PRO400DSEL runs a 1305 watt motor across a 0 to 23,000 RPM range, with digital variable speed control."
+            },
+            {
+              "question": "What processing volume can PRO400DSEL handle?",
+              "answer": "It processes samples from 0.03 mL up to 30 L, with higher volumes dependent on sample viscosity."
+            },
+            {
+              "question": "Does PRO400DSEL include a generator probe?",
+              "answer": "No, a generator probe is required to operate the unit and is sold separately."
+            },
+            {
+              "question": "Can PRO400DSEL handle viscous samples?",
+              "answer": "Yes, though viscous samples will reduce maximum capacity. Adding a Deflector Head to the generator probe helps facilitate sample movement and increase max volume."
+            },
+            {
+              "question": "What safety features does PRO400DSEL offer?",
+              "answer": "It includes a Dual-Power Light Indicator for error identification, and can be fitted with the PRO SAFETY SEAL chamber assembly to contain aerosols and prevent cross-contamination."
+            },
+            {
+              "question": "Is PRO400DSEL compatible with all PRO probes?",
+              "answer": "Yes, the entire line of PRO probes mounts to this unit, and it accepts the full range of PRO QUICK CONNECT generators."
+            },
+            {
+              "question": "What is the price of PRO400DSEL in India?",
+              "answer": "The price depends on the probe and accessory configuration selected. Contact Inkarp for a quotation once your requirements are confirmed."
+            },
+            {
+              "question": "Who is the authorized distributor of PRO400DSEL in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the ProScientific PRO400DSEL in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -511,10 +809,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm whether PRO400DSEL or PRO400DS fits", "body": "Tell our team your typical container height and processing volume, and Inkarp will confirm whether PRO400DSEL's Extra Length stand fits your setup, or whether the standard PRO400DS is sufficient." },
-              { "title": "Confirm whether the Extra Length stand is necessary", "body": "Tell our team your tallest typical container height, and Inkarp will confirm whether the Extra Length stand is genuinely necessary or the standard PRO400DS covers your needs." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows motor performance and Extra Length stand positioning on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right probe, stand, and safety accessory setup for your process" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with speed knob control and probe handling" },
+              { "title": "Preventive Maintenance", "body": "Maintains motor, stand, and diagnostic system performance" },
+              { "title": "Spares and Accessories", "body": "Supplies generator probes, deflector heads, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -538,22 +839,41 @@
                 "title": "Product Information",
                 "description": "PRO400DSEL product information: motor performance, stand design, and probe compatibility.",
                 "body": [
-                  "A 1305 watt motor delivers the power behind the unit, running across a 0 to 23,000 RPM range for both gentle and high-shear processing needs.",
-                  "The Extra Length PRO TRAC stand provides 31 inches of total length for taller containers, compared to the standard PRO400DS model's 14.5 inches.",
-                  "A 3-turn speed knob adjusts RPM in increments of hundreds rather than thousands, giving granular control suited to sensitive emulsions.",
-                  "The PRO TRAC stand itself is motorized, eliminating the physical strain of manually adjusting a heavy motor head while keeping probe placement repeatable run after run.",
-                  "A Dual-Power Light Indicator gives immediate visual feedback for error or problem identification, reducing downtime and protecting the motor from overload.",
-                  "Processing volume spans 0.03 mL to 30 L, covering micro-scale research through pilot-plant production on the same unit.",
-                  "The entire line of PRO probes mounts to this unit, and it accepts the full range of PRO QUICK CONNECT generators for universal compatibility.",
-                  "It can be fitted with the PRO SAFETY SEAL chamber assembly to safely contain aerosols and prevent cross-contamination during processing.",
-                  "A generator probe is required to operate the unit and is sold separately."
+                  {
+                    "text": "A 1305 watt motor delivers the power behind the unit, running across a 0 to 23,000 RPM range for both gentle and high-shear processing needs."
+                  },
+                  {
+                    "text": "The Extra Length PRO TRAC stand provides 31 inches of total length for taller containers, compared to the standard PRO400DS model's 14.5 inches."
+                  },
+                  {
+                    "text": "A 3-turn speed knob adjusts RPM in increments of hundreds rather than thousands, giving granular control suited to sensitive emulsions."
+                  },
+                  {
+                    "text": "The PRO TRAC stand itself is motorized, eliminating the physical strain of manually adjusting a heavy motor head while keeping probe placement repeatable run after run."
+                  },
+                  {
+                    "text": "A Dual-Power Light Indicator gives immediate visual feedback for error or problem identification, reducing downtime and protecting the motor from overload."
+                  },
+                  { "text": "Processing volume spans 0.03 mL to 30 L, covering micro-scale research through pilot-plant production on the same unit." },
+                  {
+                    "text": "The entire line of PRO probes mounts to this unit, and it accepts the full range of PRO QUICK CONNECT generators for universal compatibility."
+                  },
+                  {
+                    "text": "It can be fitted with the PRO SAFETY SEAL chamber assembly to safely contain aerosols and prevent cross-contamination during processing."
+                  },
+                  { "text": "A generator probe is required to operate the unit and is sold separately." }
                 ],
                 "cards": [
                   { "title": "1305 W, 0-23,000 RPM", "description": "Full range power and speed" },
                   { "title": "0.03 mL to 30 L", "description": "Micro-scale through pilot-plant volume" },
                   { "title": "31-inch Extra Length stand", "description": "Room for taller containers and carboys" },
                   { "title": "Universal probe compatibility", "description": "Works with the full PRO probe and generator line" }
-                ]
+                ],
+                "glanceTitle": "PRO400DSEL at a Glance",
+                "glanceDescription": "What to know about PRO400DSEL: how the Extra Length stand extends processing height, precision RPM control, and safety and diagnostic features.",
+                "subheading": "Overview",
+                "intro": "PRO400DSEL overview: motor performance, stand design, and probe versatility.",
+                "tabSummary": "Why Extra Length matters without changing anything else"
               },
               {
                 "key": "config",
@@ -564,52 +884,93 @@
                   { "title": "Motor", "description": "1305 W, 0 to 23,000 RPM" },
                   { "title": "Processing volume", "description": "0.03 mL to 30 L" },
                   { "title": "Stand height", "description": "31 in, Extra Length PRO TRAC" }
-                ]
+                ],
+                "disclaimer": "Tell our team your typical container height and processing volume, and Inkarp will confirm whether PRO400DSEL's Extra Length stand fits your setup, or whether the standard PRO400DS is sufficient."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "PRO400DSEL key features: extra-length stand, precision RPM control, and safety diagnostics.",
+                "tabSummary": "Precision speed knob, motorized stand, smart diagnostics"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "PRO400DSEL applications: tissue homogenization, emulsification, and large-vessel sample processing."
+                "description": "PRO400DSEL applications: tissue homogenization, emulsification, and large-vessel sample processing.",
+                "tabSummary": "Tissue homogenization, emulsification, large-vessel processing"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "PRO400DSEL technical specifications: motor power, speed range, dimensions, and weight."
+                "description": "PRO400DSEL technical specifications: motor power, speed range, dimensions, and weight.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Motor power, speed range, dimensions, and weight"
               },
               {
                 "key": "benefits",
                 "eyebrow": "The Extra Length PRO TRAC Stand",
                 "title": "The Extra Length PRO TRAC Stand",
-                "description": "Some samples simply don't fit under a standard stand, and PRO400DSEL exists specifically for that situation. Where the standard PRO400DS offers 14.5 inches of total length, PRO400DSEL's Extra Length stand more than doubles that to 31 inches, purpose-built for taller containers and unique glassware like large-scale carboys. The stand itself stays motorized, so that added height doesn't come with added physical effort, positioning remains effortless, smooth, and accurate whether you're working at the top or bottom of that extended range. For labs whose vessel sizes vary, that extra clearance means one unit can cover both standard and larger-format processing without switching equipment.",
+                "description": "What 31 inches of vertical clearance actually enables on PRO400DSEL.",
                 "cards": [
                   { "title": "Clearance for taller containers or carboys", "description": "31-inch Extra Length stand" },
                   { "title": "Effortless positioning at any height", "description": "Motorized PRO TRAC vertical adjustment" },
                   { "title": "Consistent probe placement across runs", "description": "Motorized, repeatable positioning" },
                   { "title": "One unit covering varied vessel sizes", "description": "Extended range without switching equipment" }
-                ]
+                ],
+                "paragraphs": [
+                  "Some samples simply don't fit under a standard stand, and PRO400DSEL exists specifically for that situation.",
+                  "Where the standard PRO400DS offers 14.5 inches of total length, PRO400DSEL's Extra Length stand more than doubles that to 31 inches, purpose-built for taller containers and unique glassware like large-scale carboys. The stand itself stays motorized, so that added height doesn't come with added physical effort, positioning remains effortless, smooth, and accurate whether you're working at the top or bottom of that extended range. For labs whose vessel sizes vary, that extra clearance means one unit can cover both standard and larger-format processing without switching equipment."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your setup needs", "value": "How PRO400DSEL delivers it" },
+                "note": "Tell our team your tallest typical container height, and Inkarp will confirm whether the Extra Length stand is genuinely necessary or the standard PRO400DS covers your needs.",
+                "tabSummary": "What 31 inches of clearance actually enables"
               },
               {
                 "key": "performance",
                 "eyebrow": "Precision Control and Safety Features",
                 "title": "Precision Control and Safety Features",
+                "tabSummary": "Speed knob tuning, diagnostics, and containment",
                 "body": [
+                  "How PRO400DSEL's speed knob, diagnostics, and containment options keep processing reliable.",
                   "Homogenization results depend on hitting a consistent RPM run after run, and staying alert to problems before they affect your sample or damage the motor.",
                   "The 3-turn speed knob adjusts RPM in increments of hundreds, rather than the coarser thousands-based adjustment found on simpler units, giving the finer control that sensitive emulsions specifically need. A bright LED display keeps that setting visible clearly throughout a run. The Dual-Power Light Indicator adds a layer of diagnostic feedback, flagging errors or problems immediately so downtime and motor overload risk both stay lower. Where aerosol containment matters, the PRO SAFETY SEAL chamber assembly fits directly onto the unit to keep aerosols contained and cross-contamination risk down."
                 ],
-                "utilityChecklist": [
-                  { "label": "Fine RPM control for sensitive emulsions", "value": "3-turn speed knob, hundreds-based adjustment" },
-                  { "label": "Clear visibility into current settings", "value": "Bright LED display" },
-                  { "label": "Early warning on errors or overload", "value": "Dual-Power Light Indicator" },
-                  { "label": "Aerosol containment during processing", "value": "Optional PRO SAFETY SEAL chamber assembly" }
-                ],
-                "disclaimer": "Tell our team whether aerosol containment matters for your samples, and Inkarp will confirm the right PRO SAFETY SEAL configuration alongside your PRO400DSEL."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How PRO400DSEL delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Fine RPM control for sensitive emulsions",
+                        "3-turn speed knob, hundreds-based adjustment"
+                      ],
+                      [
+                        "Clear visibility into current settings",
+                        "Bright LED display"
+                      ],
+                      [
+                        "Early warning on errors or overload",
+                        "Dual-Power Light Indicator"
+                      ],
+                      [
+                        "Aerosol containment during processing",
+                        "Optional PRO SAFETY SEAL chamber assembly"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team whether aerosol containment matters for your samples, and Inkarp will confirm the right PRO SAFETY SEAL configuration alongside your PRO400DSEL."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -620,7 +981,9 @@
                   { "title": "Technical Specification Sheet", "description": "Available on request" },
                   { "title": "Probe and Accessory Compatibility Guide", "description": "Available on request" },
                   { "title": "Applications Literature", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Specifications, accessories, literature"
               }
             ],
             "cta": {
@@ -629,9 +992,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The same 1305 W power as PRO400DS, with 31 inches of stand length for your taller containers. Tell us your container height and processing volume, and Inkarp will confirm the right PRO400DSEL setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "A taller container shouldn't mean rethinking your whole homogenizer setup. PRO400DSEL solves that with stand length alone, keeping everything else that works about PRO400DS exactly the same.",
+              "Built around a powerful 1305 watt motor running 0 to 23,000 RPM, it processes samples from 0.03 mL up to 30 L, homogenizing, emulsifying, blending, and mixing organic and inorganic materials alike. The Extra Length PRO TRAC motorized stand gives 31 inches of vertical clearance, nearly double the standard 14.5 inches, for taller containers and carboys without losing the effortless, accurate motor positioning the PRO TRAC design is built around."
+            ],
+            "statsIntro": "PRO400DSEL at a glance: motor power, speed range, and processing volume."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

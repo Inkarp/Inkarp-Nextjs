@@ -15,8 +15,9 @@ function resolveIcon(label = '') {
   return ICON_RULES.find((rule) => rule.match(t))?.icon ?? FiActivity;
 }
 
-export default function StatsBar({ stats = [], showAll = false, title, intro }) {
-  // Four by default; content can opt in to every stat plus a short title / intro line.
+export default function StatsBar({ stats = [], showAll = false, title, intro, note }) {
+  // Four by default; content can opt in to every stat plus a short title / intro line
+  // and a note under the stats.
   const visibleStats = showAll ? stats : stats.slice(0, 4);
 
   if (!visibleStats.length) return null;
@@ -49,6 +50,7 @@ export default function StatsBar({ stats = [], showAll = false, title, intro }) 
             );
           })}
         </div>
+        {note ? <p className="mt-4 max-w-3xl text-xs leading-6 text-ink-soft">{note}</p> : null}
       </div>
     </section>
   );

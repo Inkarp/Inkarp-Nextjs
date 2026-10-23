@@ -128,7 +128,7 @@ export default function WorkflowScore({ data, productName }) {
       <div className="relative mx-auto w-full max-w-[1180px]">
         <SectionHeader
           number="10"
-          eyebrow={data?.sectionEyebrow ?? 'Interactive - workflow score'}
+          eyebrow={data?.sectionEyebrow ?? 'Workflow simplification score'}
           title={data?.title ?? `How much of your workflow can ${name} simplify?`}
           description={data?.description ?? `Tap the steps your team currently manages manually. We will show how ${name} improves visibility, safety and repeatability.`}
         />
@@ -223,12 +223,14 @@ export default function WorkflowScore({ data, productName }) {
             ) : null}
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {benefits.map(({ icon, label }) => {
+              {benefits.map(({ icon, label, meaning }) => {
                 const Icon = ICON_MAP[icon];
                 return (
                   <span className="inline-flex items-center gap-2 border border-line-light bg-parchment px-4 py-2 text-xs font-bold text-black" key={label}>
                     {Icon && <Icon className="text-red" />}
                     {label}
+                    {/* Optional line saying what the result means (from a source document). */}
+                    {meaning ? <span className="font-medium text-ink-soft">{meaning}</span> : null}
                   </span>
                 );
               })}

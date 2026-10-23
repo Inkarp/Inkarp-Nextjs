@@ -71,6 +71,11 @@ export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
               <div className="bg-parchment-alt p-4">
                 <h4 className="text-sm font-bold text-ink">{row.groupTitle}</h4>
                 {row.groupIntro ? <p className="mt-1 text-xs leading-5 text-ink-soft">{row.groupIntro}</p> : null}
+                {row.groupColumns ? (
+                  <p className="mt-2 flex flex-wrap gap-x-4 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">
+                    {row.groupColumns.map((column) => <span key={column}>{column}</span>)}
+                  </p>
+                ) : null}
               </div>
             ) : null}
             <div className="bg-white p-4">
@@ -120,6 +125,13 @@ export default function TechnicalSpecsTable({ columns, note, specs = [] }) {
                     <span className="block text-sm font-bold text-ink">{row.groupTitle}</span>
                     {row.groupIntro ? <span className="mt-1 block text-xs font-medium leading-5 text-ink-soft">{row.groupIntro}</span> : null}
                   </th>
+                </tr>
+              ) : null}
+              {/* A sub-table with its own two headings (`groupColumns`), e.g. "What you are doing / Recommended setting". */}
+              {row.groupTitle && row.groupColumns ? (
+                <tr className="border-b border-line-light bg-parchment-alt text-xs font-bold uppercase tracking-[0.18em] text-ink-soft">
+                  <th className="px-5 py-2" scope="col">{row.groupColumns[0]}</th>
+                  <th className="px-5 py-2" colSpan={valueColumns ? valueColumns.length : undefined} scope="col">{row.groupColumns[1]}</th>
                 </tr>
               ) : null}
               <tr className="group bg-white transition hover:bg-red/[0.03]">

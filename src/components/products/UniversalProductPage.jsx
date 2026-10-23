@@ -175,7 +175,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
       <ProductEngagementPopups productName={product.name} popups={product.popups} />
 
       {/* Stats bar */}
-      <StatsBar intro={lf.statsIntro} showAll={lf.showAllStats} stats={lf.stats ?? product.stats ?? []} title={lf.statsTitle} />
+      <StatsBar intro={lf.statsIntro} note={lf.statsNote} showAll={lf.showAllStats} stats={lf.stats ?? product.stats ?? []} title={lf.statsTitle} />
 
       {productSections.map(({ key, node }) => (
         <Fragment key={key}>

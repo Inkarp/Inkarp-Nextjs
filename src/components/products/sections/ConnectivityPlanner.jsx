@@ -114,6 +114,10 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
           title={data?.title ?? `How connected should your ${productName} setup be?`}
           description={data?.description}
         />
+        {/* Extra paragraphs from a source document (e.g. the prompt shown before a pick). */}
+        {data?.paragraphs?.map((paragraph, index) => (
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+        ))}
 
         <div className="relative mt-9 grid gap-6 lg:grid-cols-[294px_1fr]">
           <div className="space-y-2">

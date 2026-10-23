@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "buchi",
-    "principalName": "Buchi",
-    "countryOfOrigin": "Switzerland"
-  },
+  "principal": { "slug": "buchi", "principalName": "Buchi", "countryOfOrigin": "Switzerland" },
   "categories": [
     {
       "name": "Freeze Dryer (Lyophilizer)",
@@ -11,49 +7,145 @@
       "products": [
         {
           "name": "Freeze Dryer – Lyovapor™ L-210",
+
           "slug": "freeze-dryer-lyovapor-l-210",
+
           "principalImage": "/assets/images/PrincipalLogos/BUCHI.svg",
+
           "imageAlt": "Buchi Freeze Dryer – Lyovapor™ L-210 - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/freeze-dryer-lyovapor-l-210",
+
           "breadcrumbPath": "Home > Products > Freeze Dryer (Lyophilizer) > Freeze Dryer – Lyovapor™ L-210",
+
           "h1": "Freeze Dryer – Lyovapor™ L-210",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "A freeze dryer that takes too long to reach temperature costs you time before the process even begins. Lyovapor L-210 is built to close that gap.",
 
           "features": [
-            "EcoStream Rapid Cooling: Reaches a stable -55°C condenser temperature quickly, with a GWP index of just 3.",
-            "Complete Solvent Collection: Handles large water-based samples up to 6 L without compromising collection.",
-            "Modular Bench or Trolley Installation: Fits into different lab layouts, with several drying chamber options.",
-            "Infinite-Control Live Display: Shows process parameters in real time on a 4.6-inch touch screen.",
-            "Advanced Endpoint Determination: Tracks primary and secondary drying phases precisely through advanced process analytics.",
-            "Fully Automated Runs: Method programming and a sample protective state remove manual monitoring during a cycle.",
-            "Hot Gas Defrosting (Defrosting Models): Speeds up ice layer melting on the condenser coil between runs.",
-            "Upgradeable Platform: Moves from Basic to Pro configuration as application requirements evolve."
+            { "title": "EcoStream Rapid Cooling", "description": "Reaches a stable -55°C condenser temperature quickly, with a GWP index of just 3." },
+            { "title": "Complete Solvent Collection", "description": "Handles large water-based samples up to 6 L without compromising collection." },
+            { "title": "Modular Bench or Trolley Installation", "description": "Fits into different lab layouts, with several drying chamber options." },
+            { "title": "Infinite-Control Live Display", "description": "Shows process parameters in real time on a 4.6-inch touch screen." },
+            {
+              "title": "Advanced Endpoint Determination",
+              "description": "Tracks primary and secondary drying phases precisely through advanced process analytics."
+            },
+            { "title": "Fully Automated Runs", "description": "Method programming and a sample protective state remove manual monitoring during a cycle." },
+            { "title": "Hot Gas Defrosting (Defrosting Models)", "description": "Speeds up ice layer melting on the condenser coil between runs." },
+            { "title": "Upgradeable Platform", "description": "Moves from Basic to Pro configuration as application requirements evolve." }
           ],
 
           "technicalSpecs": [
-            { "label": "Product Name", "value": "BUCHI Lyovapor L-210 Freeze Dryer" },
-            { "label": "Category", "value": "Freeze Dryer (Lyophilizer)" },
-            { "label": "Lowest Condenser Temperature", "value": "-55°C (all configurations)" },
-            { "label": "Condensing Capacity", "value": "6 kg (all configurations)" },
-            { "label": "Defrosting by Hot Gas", "value": "No (Basic, Pro), Yes (Basic Defrosting, Pro Defrosting)" },
-            { "label": "Drying Chamber", "value": "Manifold, unheatable shelves (Basic, Basic Defrosting); Heatable shelves (Pro); Manifold, heatable shelves (Pro Defrosting)" },
-            { "label": "Vacuum Control", "value": "Advanced / No (Basic, Basic Defrosting); Advanced (Pro, Pro Defrosting)" },
-            { "label": "Endpoint Determination", "value": "Pressure (Basic, Basic Defrosting); Pressure, temperature (Pro, Pro Defrosting)" },
-            { "label": "Touch Screen Size", "value": "4.6 in (all configurations)" },
-            { "label": "Drying Shelf Temperature", "value": "Not applicable (Basic, Basic Defrosting); Up to 60 ± 1°C (Pro, Pro Defrosting)" },
-            { "label": "Stoppering", "value": "Optional (all configurations)" },
-            { "label": "Product Temperature Sensor", "value": "Not applicable (Basic, Basic Defrosting); Optional (Pro, Pro Defrosting)" }
+            {
+              "label": "Lowest Condenser Temperature",
+              "values": [
+                "-55°C",
+                "-55°C",
+                "-55°C",
+                "-55°C"
+              ]
+            },
+            {
+              "label": "Condensing Capacity",
+              "values": [
+                "6 kg",
+                "6 kg",
+                "6 kg",
+                "6 kg"
+              ]
+            },
+            {
+              "label": "Defrosting by Hot Gas",
+              "values": [
+                "No",
+                "Yes",
+                "No",
+                "Yes"
+              ]
+            },
+            {
+              "label": "Drying Chamber",
+              "values": [
+                "Manifold, unheatable shelves",
+                "Manifold, unheatable shelves",
+                "Heatable shelves",
+                "Manifold, heatable shelves"
+              ]
+            },
+            {
+              "label": "Vacuum Control",
+              "values": [
+                "Advanced / No",
+                "Advanced / No",
+                "Advanced",
+                "Advanced"
+              ]
+            },
+            {
+              "label": "Endpoint Determination",
+              "values": [
+                "Pressure",
+                "Pressure",
+                "Pressure, temperature",
+                "Pressure, temperature"
+              ]
+            },
+            {
+              "label": "Touch Screen Size",
+              "values": [
+                "4.6 in",
+                "4.6 in",
+                "4.6 in",
+                "4.6 in"
+              ]
+            },
+            {
+              "label": "Drying Shelf Temperature",
+              "values": [
+                "-",
+                "-",
+                "Up to 60 ± 1°C",
+                "Up to 60 ± 1°C"
+              ]
+            },
+            {
+              "label": "Stoppering",
+              "values": [
+                "Optional",
+                "Optional",
+                "Optional",
+                "Optional"
+              ]
+            },
+            {
+              "label": "Product Temperature Sensor",
+              "values": [
+                "-",
+                "-",
+                "Optional",
+                "Optional"
+              ]
+            }
           ],
 
           "applications": [
-            "Biotechnology Development: Dries and stabilizes small quantities of biologically active products in microtiter plates or flasks",
-            "Chemical QC and R&D: Handles gentle, lossless drying from minute quantities up to bulk sample volumes",
-            "Pharmaceutical R&D and QC: Dries peptides and proteins across amorphous and crystalline solution formulations",
-            "Food and Natural Extracts: Removes solvent without destroying natural substances like proteins, minerals, or vitamins",
-            "Environmental Analysis: Supports sample preparation and stabilization for pollution monitoring workflows",
-            "Academic Education: Handles complete temperature-sensitive drying across a range of teaching applications"
+            {
+              "title": "Biotechnology Development",
+              "description": "Dries and stabilizes small quantities of biologically active products in microtiter plates or flasks"
+            },
+            { "title": "Chemical QC and R&D", "description": "Handles gentle, lossless drying from minute quantities up to bulk sample volumes" },
+            { "title": "Pharmaceutical R&D and QC", "description": "Dries peptides and proteins across amorphous and crystalline solution formulations" },
+            {
+              "title": "Food and Natural Extracts",
+              "description": "Removes solvent without destroying natural substances like proteins, minerals, or vitamins"
+            },
+            { "title": "Environmental Analysis", "description": "Supports sample preparation and stabilization for pollution monitoring workflows" },
+            { "title": "Academic Education", "description": "Handles complete temperature-sensitive drying across a range of teaching applications" }
           ],
 
           "inPageNav": [
@@ -70,29 +162,45 @@
 
           "configWizard": {
             "title": "What does your freeze-drying process require?",
-            "description": "Select your shelf requirement and defrosting need, and see the recommended configuration. Share your exact sample volume with Inkarp for final confirmation.",
+            "description": "Select your sample type and shelf needs, and see the recommended configuration.",
             "steps": [
               {
-                "key": "shelfRequirement",
-                "question": "What shelf type does the process need?",
+                "key": "sampleVolumeInput",
+                "label": "Sample volume input",
+                "question": "Sample volume input",
+                "hint": "Small quantities through bulk, up to 6 L",
                 "options": [
-                  { "val": "unheatable", "label": "Unheatable shelves" },
+                  { "val": "small-quantities-through-bulk", "label": "Small quantities through bulk" },
+                  { "val": "up-to-6-l", "label": "Up to 6 L" }
+                ]
+              },
+              {
+                "key": "shelfRequirement",
+                "label": "Shelf requirement",
+                "question": "Shelf requirement",
+                "hint": "Unheatable or heatable shelves",
+                "options": [
+                  { "val": "unheatable", "label": "Unheatable" },
                   { "val": "heatable", "label": "Heatable shelves" }
                 ]
               },
               {
                 "key": "defrostingNeed",
-                "question": "Does the process need hot gas defrosting?",
+                "label": "Defrosting need",
+                "question": "Defrosting need",
+                "hint": "Standard or hot gas defrosting",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "hot-gas-defrosting", "label": "Hot gas defrosting" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share your exact sample volume, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to Inkarp for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Configuration Selector",
+            "lead": "Find the right Lyovapor L-210 configuration for your sample and drying needs.",
+            "emptyState": "Recommends Basic, Basic Defrosting, Pro, or Pro Defrosting",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -102,6 +210,7 @@
               {
                 "key": "containerType",
                 "label": "Container type",
+                "hint": "Flasks, ampoules, or bulky samples",
                 "options": [
                   { "val": "flasks", "label": "Flasks" },
                   { "val": "ampoules", "label": "Ampoules" },
@@ -111,14 +220,16 @@
               {
                 "key": "sampleCount",
                 "label": "Sample count",
+                "hint": "Up to 12 or up to 24 positions",
                 "options": [
-                  { "val": "up-to-12", "label": "Up to 12 positions" },
+                  { "val": "up-to-12", "label": "Up to 12" },
                   { "val": "up-to-24", "label": "Up to 24 positions" }
                 ]
               },
               {
                 "key": "installationPreference",
                 "label": "Installation preference",
+                "hint": "Bench or trolley",
                 "options": [
                   { "val": "bench", "label": "Bench" },
                   { "val": "trolley", "label": "Trolley" }
@@ -130,21 +241,33 @@
                 "condition": { "installationPreference": "trolley" },
                 "title": "Trolley Installation Fits Your Setup",
                 "body": "A trolley installation keeps Lyovapor L-210 mobile between lab areas, paired with the chamber and rack configuration matched to your container type and sample count.",
-                "tags": ["Trolley Installation"]
+                "tags": [
+                  "Trolley Installation"
+                ]
               },
               {
                 "condition": { "installationPreference": "bench" },
                 "title": "Bench Installation Fits Your Setup",
                 "body": "A bench installation keeps Lyovapor L-210 in a fixed lab position, paired with the chamber and rack configuration matched to your container type and sample count.",
-                "tags": ["Bench Installation"]
+                "tags": [
+                  "Bench Installation"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Right Chamber and Accessory Setup With Inkarp",
                 "body": "Share your container type, sample count, and installation preference, and Inkarp will confirm the right manifold racks, frontloaders, or trolley configuration.",
-                "tags": ["Manifold Racks / Frontloaders / Trolley"]
+                "tags": [
+                  "Manifold Racks / Frontloaders / Trolley"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Chamber and Accessory Builder",
+            "lead": "Build the right drying chamber and accessory setup for your Lyovapor L-210.",
+            "ctaNote": "Recommends manifold racks, frontloaders, or trolley. Routes to Inkarp for a full-system quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
@@ -158,16 +281,96 @@
               { "label": "L-210 Pro Defrosting" }
             ],
             "rows": [
-              { "feature": "Lowest Condenser Temperature", "values": ["-55°C", "-55°C", "-55°C", "-55°C"] },
-              { "feature": "Condensing Capacity", "values": ["6 kg", "6 kg", "6 kg", "6 kg"] },
-              { "feature": "Defrosting by Hot Gas", "values": ["No", "Yes", "No", "Yes"] },
-              { "feature": "Drying Chamber", "values": ["Manifold, unheatable shelves", "Manifold, unheatable shelves", "Heatable shelves", "Manifold, heatable shelves"] },
-              { "feature": "Vacuum Control", "values": ["Advanced / No", "Advanced / No", "Advanced", "Advanced"] },
-              { "feature": "Endpoint Determination", "values": ["Pressure", "Pressure", "Pressure, temperature", "Pressure, temperature"] },
-              { "feature": "Touch Screen Size", "values": ["4.6 in", "4.6 in", "4.6 in", "4.6 in"] },
-              { "feature": "Drying Shelf Temperature", "values": ["-", "-", "Up to 60 ± 1°C", "Up to 60 ± 1°C"] },
-              { "feature": "Stoppering", "values": ["Optional", "Optional", "Optional", "Optional"] },
-              { "feature": "Product Temperature Sensor", "values": ["-", "-", "Optional", "Optional"] }
+              {
+                "feature": "Lowest Condenser Temperature",
+                "values": [
+                  "-55°C",
+                  "-55°C",
+                  "-55°C",
+                  "-55°C"
+                ]
+              },
+              {
+                "feature": "Condensing Capacity",
+                "values": [
+                  "6 kg",
+                  "6 kg",
+                  "6 kg",
+                  "6 kg"
+                ]
+              },
+              {
+                "feature": "Defrosting by Hot Gas",
+                "values": [
+                  "No",
+                  "Yes",
+                  "No",
+                  "Yes"
+                ]
+              },
+              {
+                "feature": "Drying Chamber",
+                "values": [
+                  "Manifold, unheatable shelves",
+                  "Manifold, unheatable shelves",
+                  "Heatable shelves",
+                  "Manifold, heatable shelves"
+                ]
+              },
+              {
+                "feature": "Vacuum Control",
+                "values": [
+                  "Advanced / No",
+                  "Advanced / No",
+                  "Advanced",
+                  "Advanced"
+                ]
+              },
+              {
+                "feature": "Endpoint Determination",
+                "values": [
+                  "Pressure",
+                  "Pressure",
+                  "Pressure, temperature",
+                  "Pressure, temperature"
+                ]
+              },
+              {
+                "feature": "Touch Screen Size",
+                "values": [
+                  "4.6 in",
+                  "4.6 in",
+                  "4.6 in",
+                  "4.6 in"
+                ]
+              },
+              {
+                "feature": "Drying Shelf Temperature",
+                "values": [
+                  "-",
+                  "-",
+                  "Up to 60 ± 1°C",
+                  "Up to 60 ± 1°C"
+                ]
+              },
+              {
+                "feature": "Stoppering",
+                "values": [
+                  "Optional",
+                  "Optional",
+                  "Optional",
+                  "Optional"
+                ]
+              },
+              {
+                "feature": "Product Temperature Sensor",
+                "values": [
+                  "-",
+                  "-",
+                  "Optional",
+                  "Optional"
+                ]
+              }
             ]
           },
 
@@ -175,11 +378,46 @@
             "title": "Industry Explorer",
             "description": "Industries using Lyovapor L-210 include pharmaceutical R&D, biotechnology, and academic research.",
             "industries": [
-              { "name": "Pharmaceutical R&D and QC", "useCase": "Drying peptide and protein formulations across amorphous and crystalline states", "consideration": "Pro models add temperature-based endpoint determination for demanding formulations" },
-              { "name": "Biotechnology Development", "useCase": "Stabilizing biologically active products in small quantities", "consideration": "Manifold drying chambers suit microtiter plates and small flasks" },
-              { "name": "Chemical R&D Laboratories", "useCase": "Gentle, lossless drying from minute to bulk quantities", "consideration": "Modular chamber options scale with varying batch sizes" },
-              { "name": "Food and Natural Extract Research", "useCase": "Removing solvent without degrading proteins, minerals, or vitamins", "consideration": "Complete solvent collection supports large water-based sample handling" },
-              { "name": "Environmental Analysis Laboratories", "useCase": "Preparing and stabilizing samples for pollution monitoring", "consideration": "Reliable -55°C cooling supports consistent sample preservation" }
+              {
+                "name": "Pharmaceutical R&D and QC",
+                "note": "Use Case: Drying peptide and protein formulations across amorphous and crystalline states",
+                "bullets": [
+                  "What to Consider: Pro models add temperature-based endpoint determination for demanding formulations"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biotechnology Development",
+                "note": "Use Case: Stabilizing biologically active products in small quantities",
+                "bullets": [
+                  "What to Consider: Manifold drying chambers suit microtiter plates and small flasks"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical R&D Laboratories",
+                "note": "Use Case: Gentle, lossless drying from minute to bulk quantities",
+                "bullets": [
+                  "What to Consider: Modular chamber options scale with varying batch sizes"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Natural Extract Research",
+                "note": "Use Case: Removing solvent without degrading proteins, minerals, or vitamins",
+                "bullets": [
+                  "What to Consider: Complete solvent collection supports large water-based sample handling"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Environmental Analysis Laboratories",
+                "note": "Use Case: Preparing and stabilizing samples for pollution monitoring",
+                "bullets": [
+                  "What to Consider: Reliable -55°C cooling supports consistent sample preservation"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -193,20 +431,51 @@
               { "title": "Preventive Maintenance", "description": "Maintains condenser, vacuum, and heating shelf performance" },
               { "title": "Spares and Accessories", "description": "Supplies manifold valves, racks, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "Lyovapor L-210 service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is Lyovapor L-210 used for?", "answer": "Lyovapor L-210 is a freeze dryer used for lyophilization of aqueous and solvent-containing samples across biotechnology, pharmaceutical, chemical, and food research." },
-            { "question": "How cold does the condenser get?", "answer": "The lowest condenser temperature is -55°C, reached rapidly through EcoStream cooling technology." },
-            { "question": "What is the condenser capacity?", "answer": "Condenser and condensing capacity are both rated up to 6 kg, with condensing capacity at up to 6 kg per 24 hours." },
-            { "question": "What's the environmental impact of Lyovapor L-210?", "answer": "It carries a GWP index of 3, achieved through natural coolants used in the EcoStream cooling system." },
-            { "question": "What's the difference between Basic and Pro configurations?", "answer": "Pro configurations add heatable shelves up to 60 ± 1°C and temperature-based endpoint determination, while Basic configurations use unheatable shelves and pressure-based endpoint determination." },
-            { "question": "Can I upgrade from Basic to Pro later?", "answer": "Yes, Lyovapor L-210 supports upgrading from a Basic to a Pro instrument as application needs change." },
-            { "question": "Does Lyovapor L-210 support automated, unattended runs?", "answer": "Yes, method programming combined with a sample protective state enables fully automated freeze-drying runs." },
-            { "question": "What does the hot gas defrosting feature do?", "answer": "It speeds up melting of ice layers on the condenser coil, reducing downtime between runs on defrosting models." },
-            { "question": "What is the price of Lyovapor L-210 in India?", "answer": "The price depends on the configuration and chamber accessories selected. Contact Inkarp for a quotation once your requirements are confirmed." },
-            { "question": "Who is the authorized distributor of Lyovapor L-210 in India?", "answer": "Inkarp is the authorized distributor and service provider for the BUCHI Lyovapor L-210 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is Lyovapor L-210 used for?",
+              "answer": "Lyovapor L-210 is a freeze dryer used for lyophilization of aqueous and solvent-containing samples across biotechnology, pharmaceutical, chemical, and food research."
+            },
+            {
+              "question": "How cold does the condenser get?",
+              "answer": "The lowest condenser temperature is -55°C, reached rapidly through EcoStream cooling technology."
+            },
+            {
+              "question": "What is the condenser capacity?",
+              "answer": "Condenser and condensing capacity are both rated up to 6 kg, with condensing capacity at up to 6 kg per 24 hours."
+            },
+            {
+              "question": "What's the environmental impact of Lyovapor L-210?",
+              "answer": "It carries a GWP index of 3, achieved through natural coolants used in the EcoStream cooling system."
+            },
+            {
+              "question": "What's the difference between Basic and Pro configurations?",
+              "answer": "Pro configurations add heatable shelves up to 60 ± 1°C and temperature-based endpoint determination, while Basic configurations use unheatable shelves and pressure-based endpoint determination."
+            },
+            {
+              "question": "Can I upgrade from Basic to Pro later?",
+              "answer": "Yes, Lyovapor L-210 supports upgrading from a Basic to a Pro instrument as application needs change."
+            },
+            {
+              "question": "Does Lyovapor L-210 support automated, unattended runs?",
+              "answer": "Yes, method programming combined with a sample protective state enables fully automated freeze-drying runs."
+            },
+            {
+              "question": "What does the hot gas defrosting feature do?",
+              "answer": "It speeds up melting of ice layers on the condenser coil, reducing downtime between runs on defrosting models."
+            },
+            {
+              "question": "What is the price of Lyovapor L-210 in India?",
+              "answer": "The price depends on the configuration and chamber accessories selected. Contact Inkarp for a quotation once your requirements are confirmed."
+            },
+            {
+              "question": "Who is the authorized distributor of Lyovapor L-210 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the BUCHI Lyovapor L-210 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -227,10 +496,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Lyovapor L-210 configuration", "body": "Tell our team your typical sample volume, whether you need heatable shelves, and if hot gas defrosting matters for your workflow, and Inkarp will confirm the right Lyovapor L-210 configuration." },
-              { "title": "Confirm the right drying chamber configuration", "body": "Tell our team your typical sample volume and chamber preference, and Inkarp will confirm the right drying chamber configuration." },
-              { "title": "Installation and first-run support", "body": "Supports setup and pre-installation checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows EcoStream cooling and Infinite-Control monitoring on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right Basic or Pro configuration for your application" },
+              { "title": "Installation Support", "body": "Supports setup and pre-installation checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with method programming and endpoint determination" },
+              { "title": "Preventive Maintenance", "body": "Maintains condenser, vacuum, and heating shelf performance" },
+              { "title": "Spares and Accessories", "body": "Supplies manifold valves, racks, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -254,21 +526,36 @@
                 "title": "Product Information",
                 "description": "Lyovapor L-210 product information: cooling technology, modular design, and configuration options.",
                 "body": [
-                  "EcoStream technology reaches a stable -55°C condenser temperature rapidly, letting a freeze-drying process start sooner rather than waiting on cooldown.",
-                  "A GWP index of 3, achieved through natural coolants, keeps environmental impact low without compromising cooling performance.",
-                  "Complete solvent collection holds even for large water-based samples up to 6 L, with condenser and condensing capacity both rated up to 6 kg.",
-                  "The instrument installs on either a bench or a trolley, and several drying chambers accommodate everything from single flasks to bulky sample loads.",
-                  "Upgrading from a Basic to a Pro configuration is possible as application needs change, avoiding a full instrument replacement down the line.",
-                  "Infinite-Control technology gives a live graphical display of process parameters directly on a 4.6-inch touch screen.",
-                  "Advanced process analytics support precise endpoint determination during both primary and secondary drying phases.",
-                  "Method programming and a sample protective state enable fully automated freeze-drying runs, and a hot gas feature speeds up melting ice layers on the condenser coil."
+                  {
+                    "text": "EcoStream technology reaches a stable -55°C condenser temperature rapidly, letting a freeze-drying process start sooner rather than waiting on cooldown."
+                  },
+                  { "text": "A GWP index of 3, achieved through natural coolants, keeps environmental impact low without compromising cooling performance." },
+                  {
+                    "text": "Complete solvent collection holds even for large water-based samples up to 6 L, with condenser and condensing capacity both rated up to 6 kg."
+                  },
+                  {
+                    "text": "The instrument installs on either a bench or a trolley, and several drying chambers accommodate everything from single flasks to bulky sample loads."
+                  },
+                  {
+                    "text": "Upgrading from a Basic to a Pro configuration is possible as application needs change, avoiding a full instrument replacement down the line."
+                  },
+                  { "text": "Infinite-Control technology gives a live graphical display of process parameters directly on a 4.6-inch touch screen." },
+                  { "text": "Advanced process analytics support precise endpoint determination during both primary and secondary drying phases." },
+                  {
+                    "text": "Method programming and a sample protective state enable fully automated freeze-drying runs, and a hot gas feature speeds up melting ice layers on the condenser coil."
+                  }
                 ],
                 "cards": [
                   { "title": "-55°C, reached rapidly", "description": "Fast startup, stable cooling" },
                   { "title": "Up to 6 kg capacity", "description": "Handles large water-based sample loads" },
                   { "title": "GWP 3", "description": "Low environmental impact" },
                   { "title": "Basic to Pro upgrade path", "description": "Scales with changing application needs" }
-                ]
+                ],
+                "glanceTitle": "Lyovapor L-210 at a Glance",
+                "glanceDescription": "What to know about Lyovapor L-210: how EcoStream and Infinite-Control work together, the four available configurations, and Inkarp installation and service support.",
+                "subheading": "Overview",
+                "intro": "Lyovapor L-210 overview: cooling technology, modularity, and automated process control.",
+                "tabSummary": "Why fast, stable cooling changes the whole run"
               },
               {
                 "key": "config",
@@ -280,53 +567,97 @@
                   { "title": "Condenser and condensing capacity", "description": "Up to 6 kg / 24 h" },
                   { "title": "GWP index", "description": "3" },
                   { "title": "Configurations", "description": "Basic, Basic Defrosting, Pro, Pro Defrosting" }
-                ]
+                ],
+                "disclaimer": "Tell our team your typical sample volume, whether you need heatable shelves, and if hot gas defrosting matters for your workflow, and Inkarp will confirm the right Lyovapor L-210 configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "Lyovapor L-210 key features: rapid cooling, live process monitoring, and automated drying control.",
+                "tabSummary": "EcoStream cooling, Infinite-Control display, hot gas defrosting"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Lyovapor L-210 applications: biotechnology, pharmaceutical, chemical, and food research."
+                "description": "Lyovapor L-210 applications: biotechnology, pharmaceutical, chemical, and food research.",
+                "tabSummary": "Biotech, chemical, pharmaceutical, food, and environmental analysis"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Lyovapor L-210 technical specifications and configuration comparison across Basic and Pro models."
+                "description": "Lyovapor L-210 technical specifications and configuration comparison across Basic and Pro models.",
+                "columns": [
+                  "Characteristic",
+                  "L-210 Basic",
+                  "L-210 Basic Defrosting",
+                  "L-210 Pro",
+                  "L-210 Pro Defrosting"
+                ],
+                "tabSummary": "Condenser temperature, capacity, and configuration comparison"
               },
               {
                 "key": "benefits",
                 "eyebrow": "EcoStream Cooling and Modular Design",
                 "title": "EcoStream Cooling and Modular Design",
-                "description": "Cooling performance and environmental impact don't have to trade off against each other, and that's the core idea behind EcoStream. Natural coolants keep the GWP index down to 3, while the cooling system itself still reaches a stable -55°C condenser temperature rapidly, letting a drying process begin sooner rather than waiting through a long cooldown. That stability holds even at scale, with complete solvent collection maintained for water-based samples up to 6 L. On the chamber side, the instrument installs on a bench or trolley depending on lab layout, and several drying chamber options, from manifold setups to heatable shelf configurations, accommodate everything from single flasks to bulkier sample loads.",
+                "description": "How Lyovapor L-210's low-GWP cooling and flexible chamber options work together.",
                 "cards": [
                   { "title": "Fast startup without long cooldown waits", "description": "Rapid -55°C stabilization via EcoStream" },
                   { "title": "Lower environmental impact", "description": "GWP index of 3, natural coolants" },
                   { "title": "Reliable collection at larger sample volumes", "description": "Complete solvent collection up to 6 L" },
                   { "title": "Flexible chamber configuration", "description": "Manifold or heatable shelf drying chambers" },
                   { "title": "Room to scale as needs change", "description": "Upgrade path from Basic to Pro" }
-                ]
+                ],
+                "paragraphs": [
+                  "Cooling performance and environmental impact don't have to trade off against each other, and that's the core idea behind EcoStream.",
+                  "Natural coolants keep the GWP index down to 3, while the cooling system itself still reaches a stable -55°C condenser temperature rapidly, letting a drying process begin sooner rather than waiting through a long cooldown. That stability holds even at scale, with complete solvent collection maintained for water-based samples up to 6 L. On the chamber side, the instrument installs on a bench or trolley depending on lab layout, and several drying chamber options, from manifold setups to heatable shelf configurations, accommodate everything from single flasks to bulkier sample loads."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your lab needs", "value": "How Lyovapor L-210 delivers it" },
+                "note": "Tell our team your typical sample volume and chamber preference, and Inkarp will confirm the right drying chamber configuration.",
+                "tabSummary": "How low-GWP cooling and chamber flexibility work together"
               },
               {
                 "key": "performance",
                 "eyebrow": "Time-Saving Automation",
                 "title": "Time-Saving Automation",
+                "tabSummary": "Endpoint determination, method programming, and live monitoring",
                 "body": [
+                  "How Infinite-Control's live monitoring and automated features streamline a Lyovapor L-210 run.",
                   "Watching a freeze-drying run manually, guessing at when primary drying ends and secondary drying begins, wastes both time and confidence in the result. Infinite-Control removes that guesswork directly.",
                   "A live graphical display on the 4.6-inch touch screen keeps process parameters visible throughout the run, while advanced process analytics pin down precise endpoint determination across both primary and secondary drying phases. Method programming combined with a sample protective state means a run can proceed fully automated once it's started, without needing constant supervision. Where hot gas defrosting is included, melting the ice layer that builds up on the condenser coil happens faster too, cutting downtime between cycles."
                 ],
-                "utilityChecklist": [
-                  { "label": "Real-time visibility into the run", "value": "Infinite-Control live graphical display" },
-                  { "label": "Confidence in when a phase actually ends", "value": "Advanced process analytics, precise endpoint determination" },
-                  { "label": "Hands-off, automated operation", "value": "Method programming with sample protective state" },
-                  { "label": "Faster turnaround between runs", "value": "Hot gas defrosting (on defrosting models)" }
-                ],
-                "disclaimer": "Tell our team whether hands-off automation or hot gas defrosting matters more for your workflow, and Inkarp will confirm the right model."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How Lyovapor L-210 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Real-time visibility into the run",
+                        "Infinite-Control live graphical display"
+                      ],
+                      [
+                        "Confidence in when a phase actually ends",
+                        "Advanced process analytics, precise endpoint determination"
+                      ],
+                      [
+                        "Hands-off, automated operation",
+                        "Method programming with sample protective state"
+                      ],
+                      [
+                        "Faster turnaround between runs",
+                        "Hot gas defrosting (on defrosting models)"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team whether hands-off automation or hot gas defrosting matters more for your workflow, and Inkarp will confirm the right model."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -338,7 +669,9 @@
                   { "title": "Solution Brochure, Freeze Drying", "description": "Available on request" },
                   { "title": "Operation Manual, L-210 Basic / Pro", "description": "Available on request" },
                   { "title": "Pre-Installation Checklist, L-210", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Technical data sheet, operation manual"
               }
             ],
             "cta": {
@@ -347,55 +680,134 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Rapid, stable cooling to -55°C, complete solvent collection up to 6 L, and a low GWP index of 3. Tell us your sample volume and configuration needs, and Inkarp will confirm the right Lyovapor L-210 setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "A freeze dryer that takes too long to reach temperature costs you time before the process even begins. Lyovapor L-210 is built to close that gap.",
+              "Built on EcoStream and Infinite-Control technologies, it reaches a stable -55°C condenser temperature rapidly, with a condenser capacity up to 6 kg and condensing capacity up to 6 kg per 24 hours. Complete solvent collection holds even for large water-based samples up to 6 L, and a low GWP index of 3 keeps the environmental footprint down without giving up cooling performance."
+            ],
+            "statsIntro": "Lyovapor L-210 at a glance: condenser temperature, capacity, and environmental footprint."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Freeze Dryer – Lyovapor™ L-250",
+
           "slug": "freeze-dryer-lyovapor-l-250",
+
           "principalImage": "/assets/images/PrincipalLogos/BUCHI.svg",
+
           "imageAlt": "Buchi Freeze Dryer – Lyovapor™ L-250 - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/freeze-dryer-lyovapor-l-250",
+
           "breadcrumbPath": "Home > Products > Freeze Dryer (Lyophilizer) > Freeze Dryer – Lyovapor™ L-250",
+
           "h1": "Freeze Dryer – Lyovapor™ L-250",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Freeze-drying performance and sustainability usually pull in opposite directions. EcoStream is BUCHI's answer to that trade-off.",
 
           "features": [
-            "Condenser Temperature Down to -85°C: Achieved through EcoStream's innovative compressor design.",
-            "GWP Rating of Just 4: Uses natural coolants to minimize environmental impact.",
-            "Reduced Energy Consumption: Smart compressor design lowers electrical energy use.",
-            "Lower Heat and Noise Output: Reduces both heat generation and noise emissions in the lab.",
-            "Infinite-Control Process Precision: Delivers unprecedented process control through display and software.",
-            "Sample Protective State and Endpoint Determination: Supports safe, short freeze-drying runs.",
-            "Hot Gas Ice Melting: Speeds up melting of ice layers on the condenser coil.",
-            "ACT Label Certified Sustainability: Officially certifies BUCHI's sustainable production and life cycle commitment, valid in the EU, UK, and USA."
+            { "title": "Condenser Temperature Down to -85°C", "description": "Achieved through EcoStream's innovative compressor design." },
+            { "title": "GWP Rating of Just 4", "description": "Uses natural coolants to minimize environmental impact." },
+            { "title": "Reduced Energy Consumption", "description": "Smart compressor design lowers electrical energy use." },
+            { "title": "Lower Heat and Noise Output", "description": "Reduces both heat generation and noise emissions in the lab." },
+            { "title": "Infinite-Control Process Precision", "description": "Delivers unprecedented process control through display and software." },
+            { "title": "Sample Protective State and Endpoint Determination", "description": "Supports safe, short freeze-drying runs." },
+            { "title": "Hot Gas Ice Melting", "description": "Speeds up melting of ice layers on the condenser coil." },
+            {
+              "title": "ACT Label Certified Sustainability",
+              "description": "Officially certifies BUCHI's sustainable production and life cycle commitment, valid in the EU, UK, and USA."
+            }
           ],
 
           "technicalSpecs": [
-            { "label": "Product Name", "value": "BUCHI Lyovapor L-250 Freeze Dryer" },
-            { "label": "Category", "value": "Freeze Dryer (Lyophilizer)" },
-            { "label": "Lowest Condenser Temperature", "value": "-85°C (Basic and Pro)" },
-            { "label": "Condensing Capacity", "value": "4 kg (Basic and Pro)" },
-            { "label": "Defrosting by Hot Gas", "value": "No (Basic and Pro)" },
-            { "label": "Drying Chamber", "value": "Manifold, unheatable shelves (Basic); Heatable shelves (Pro)" },
-            { "label": "Advanced Vacuum Control", "value": "Yes (Basic and Pro)" },
-            { "label": "Ultimate Vacuum (No Control)", "value": "Yes (Basic); No (Pro)" },
-            { "label": "Endpoint Determination", "value": "Pressure (Basic); Pressure, temperature (Pro)" },
-            { "label": "Drying Shelf Temperature", "value": "Not applicable (Basic); Up to 60 ± 1°C (Pro)" },
-            { "label": "Stoppering", "value": "Optional (Basic and Pro)" },
-            { "label": "Product Temperature Sensor", "value": "Not applicable (Basic); Optional (Pro)" }
+            {
+              "label": "Lowest Condenser Temperature",
+              "values": [
+                "-85°C",
+                "-85°C"
+              ]
+            },
+            {
+              "label": "Condensing Capacity",
+              "values": [
+                "4 kg",
+                "4 kg"
+              ]
+            },
+            {
+              "label": "Defrosting by Hot Gas",
+              "values": [
+                "No",
+                "No"
+              ]
+            },
+            {
+              "label": "Drying Chamber",
+              "values": [
+                "Manifold, unheatable shelves",
+                "Heatable shelves"
+              ]
+            },
+            {
+              "label": "Advanced Vacuum Control",
+              "values": [
+                "Yes",
+                "Yes"
+              ]
+            },
+            {
+              "label": "Ultimate Vacuum (No Control)",
+              "values": [
+                "Yes",
+                "No"
+              ]
+            },
+            {
+              "label": "Endpoint Determination",
+              "values": [
+                "Pressure",
+                "Pressure, temperature"
+              ]
+            },
+            {
+              "label": "Drying Shelf Temperature",
+              "values": [
+                "-",
+                "Up to 60 ± 1°C"
+              ]
+            },
+            {
+              "label": "Stoppering",
+              "values": [
+                "Optional",
+                "Optional"
+              ]
+            },
+            {
+              "label": "Product Temperature Sensor",
+              "values": [
+                "-",
+                "Optional"
+              ]
+            }
           ],
 
           "applications": [
-            "Biotechnology Development: Drying and stabilizing biologically active products in small quantities",
-            "Chemical QC and R&D: Gentle, lossless drying from minute quantities to bulk volumes",
-            "Pharmaceutical R&D and QC: Drying peptides and proteins across amorphous and crystalline formulations",
-            "Food and Natural Extracts: Removing solvent without destroying proteins, minerals, or vitamins",
-            "Environmental Analysis: Sample preparation and stabilization for pollution monitoring",
-            "Academic Education: Complete temperature-sensitive drying for teaching applications"
+            { "title": "Biotechnology Development", "description": "Drying and stabilizing biologically active products in small quantities" },
+            { "title": "Chemical QC and R&D", "description": "Gentle, lossless drying from minute quantities to bulk volumes" },
+            { "title": "Pharmaceutical R&D and QC", "description": "Drying peptides and proteins across amorphous and crystalline formulations" },
+            { "title": "Food and Natural Extracts", "description": "Removing solvent without destroying proteins, minerals, or vitamins" },
+            { "title": "Environmental Analysis", "description": "Sample preparation and stabilization for pollution monitoring" },
+            { "title": "Academic Education", "description": "Complete temperature-sensitive drying for teaching applications" }
           ],
 
           "inPageNav": [
@@ -412,11 +824,13 @@
 
           "configWizard": {
             "title": "What does your freeze-drying process require?",
-            "description": "Select your sample type, shelf requirement, and vacuum control need, and see the recommended configuration.",
+            "description": "Select your sample type and shelf needs, and see the recommended configuration.",
             "steps": [
               {
                 "key": "sampleType",
-                "question": "What sample type are you processing?",
+                "label": "Sample type",
+                "question": "Sample type",
+                "hint": "Water-based or organic solvent-based",
                 "options": [
                   { "val": "water-based", "label": "Water-based" },
                   { "val": "organic-solvent-based", "label": "Organic solvent-based" }
@@ -424,25 +838,31 @@
               },
               {
                 "key": "shelfRequirement",
-                "question": "What shelf type does the process need?",
+                "label": "Shelf requirement",
+                "question": "Shelf requirement",
+                "hint": "Unheatable or heatable shelves",
                 "options": [
-                  { "val": "unheatable", "label": "Unheatable shelves" },
+                  { "val": "unheatable", "label": "Unheatable" },
                   { "val": "heatable", "label": "Heatable shelves" }
                 ]
               },
               {
                 "key": "vacuumControlNeed",
-                "question": "What vacuum control does the process need?",
+                "label": "Vacuum control need",
+                "question": "Vacuum control need",
+                "hint": "Advanced control or ultimate vacuum",
                 "options": [
                   { "val": "advanced-control", "label": "Advanced control" },
                   { "val": "ultimate-vacuum", "label": "Ultimate vacuum" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share your exact process requirements, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to Inkarp for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Configuration Selector",
+            "lead": "Find the right Lyovapor L-250 configuration for your process.",
+            "emptyState": "Recommends Basic or Pro configuration",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -452,6 +872,7 @@
               {
                 "key": "certificationRequirement",
                 "label": "Certification requirement",
+                "hint": "Yes or no",
                 "options": [
                   { "val": "yes", "label": "Yes" },
                   { "val": "no", "label": "No" }
@@ -460,6 +881,7 @@
               {
                 "key": "region",
                 "label": "Region",
+                "hint": "EU, UK, USA, or other",
                 "options": [
                   { "val": "eu", "label": "EU" },
                   { "val": "uk", "label": "UK" },
@@ -470,6 +892,7 @@
               {
                 "key": "configuration",
                 "label": "Configuration",
+                "hint": "Basic or Pro",
                 "options": [
                   { "val": "basic", "label": "Basic" },
                   { "val": "pro", "label": "Pro" }
@@ -481,21 +904,33 @@
                 "condition": { "certificationRequirement": "yes" },
                 "title": "ACT Label Certification Fits Your Requirement",
                 "body": "Both L-250 Basic and Pro configurations carry ACT label certification, valid in the EU, UK, and USA, and downloadable alongside your quotation.",
-                "tags": ["ACT Label Certified"]
+                "tags": [
+                  "ACT Label Certified"
+                ]
               },
               {
                 "condition": { "certificationRequirement": "no" },
                 "title": "Configuration Confirmed Without Certification Documentation",
                 "body": "ACT label certification is available on both L-250 Basic and Pro configurations even without a stated procurement requirement, and can be included on request.",
-                "tags": ["ACT Label Available"]
+                "tags": [
+                  "ACT Label Available"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm Your Documentation Needs With Inkarp",
                 "body": "Share your region and configuration preference, and Inkarp will confirm ACT label certification availability alongside your quotation.",
-                "tags": ["EU, UK, USA Validity"]
+                "tags": [
+                  "EU, UK, USA Validity"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Sustainability Documentation Checker",
+            "lead": "Confirm whether ACT label certification fits your procurement requirements.",
+            "ctaNote": "Confirms ACT label availability for your configuration. Routes to Inkarp for documentation and a quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
@@ -507,16 +942,76 @@
               { "label": "L-250 Pro" }
             ],
             "rows": [
-              { "feature": "Lowest Condenser Temperature", "values": ["-85°C", "-85°C"] },
-              { "feature": "Condensing Capacity", "values": ["4 kg", "4 kg"] },
-              { "feature": "Defrosting by Hot Gas", "values": ["No", "No"] },
-              { "feature": "Drying Chamber", "values": ["Manifold, unheatable shelves", "Heatable shelves"] },
-              { "feature": "Advanced Vacuum Control", "values": ["Yes", "Yes"] },
-              { "feature": "Ultimate Vacuum (No Control)", "values": ["Yes", "No"] },
-              { "feature": "Endpoint Determination", "values": ["Pressure", "Pressure, temperature"] },
-              { "feature": "Drying Shelf Temperature", "values": ["-", "Up to 60 ± 1°C"] },
-              { "feature": "Stoppering", "values": ["Optional", "Optional"] },
-              { "feature": "Product Temperature Sensor", "values": ["-", "Optional"] }
+              {
+                "feature": "Lowest Condenser Temperature",
+                "values": [
+                  "-85°C",
+                  "-85°C"
+                ]
+              },
+              {
+                "feature": "Condensing Capacity",
+                "values": [
+                  "4 kg",
+                  "4 kg"
+                ]
+              },
+              {
+                "feature": "Defrosting by Hot Gas",
+                "values": [
+                  "No",
+                  "No"
+                ]
+              },
+              {
+                "feature": "Drying Chamber",
+                "values": [
+                  "Manifold, unheatable shelves",
+                  "Heatable shelves"
+                ]
+              },
+              {
+                "feature": "Advanced Vacuum Control",
+                "values": [
+                  "Yes",
+                  "Yes"
+                ]
+              },
+              {
+                "feature": "Ultimate Vacuum (No Control)",
+                "values": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              {
+                "feature": "Endpoint Determination",
+                "values": [
+                  "Pressure",
+                  "Pressure, temperature"
+                ]
+              },
+              {
+                "feature": "Drying Shelf Temperature",
+                "values": [
+                  "-",
+                  "Up to 60 ± 1°C"
+                ]
+              },
+              {
+                "feature": "Stoppering",
+                "values": [
+                  "Optional",
+                  "Optional"
+                ]
+              },
+              {
+                "feature": "Product Temperature Sensor",
+                "values": [
+                  "-",
+                  "Optional"
+                ]
+              }
             ]
           },
 
@@ -524,11 +1019,46 @@
             "title": "Industry Explorer",
             "description": "Industries using Lyovapor L-250 include pharmaceutical R&D, biotechnology, and sustainability-focused laboratories.",
             "industries": [
-              { "name": "Pharmaceutical R&D and QC", "useCase": "Drying peptide and protein formulations requiring deep cooling", "consideration": "-85°C condenser temperature suits demanding formulation stability needs" },
-              { "name": "Biotechnology Development", "useCase": "Stabilizing biologically active products in small quantities", "consideration": "Manifold drying chambers suit microtiter plates and small flasks" },
-              { "name": "Sustainability-Focused Laboratories", "useCase": "Meeting internal or client sustainability procurement requirements", "consideration": "ACT label certification supports documented sustainable procurement" },
-              { "name": "Chemical R&D Laboratories", "useCase": "Gentle, lossless drying from minute to bulk quantities", "consideration": "Efficient collection of both water and organic-based solvents" },
-              { "name": "Environmental Analysis Laboratories", "useCase": "Preparing and stabilizing samples for pollution monitoring", "consideration": "Stable ice condenser temperature supports reliable sample preservation" }
+              {
+                "name": "Pharmaceutical R&D and QC",
+                "note": "Use Case: Drying peptide and protein formulations requiring deep cooling",
+                "bullets": [
+                  "What to Consider: -85°C condenser temperature suits demanding formulation stability needs"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biotechnology Development",
+                "note": "Use Case: Stabilizing biologically active products in small quantities",
+                "bullets": [
+                  "What to Consider: Manifold drying chambers suit microtiter plates and small flasks"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Sustainability-Focused Laboratories",
+                "note": "Use Case: Meeting internal or client sustainability procurement requirements",
+                "bullets": [
+                  "What to Consider: ACT label certification supports documented sustainable procurement"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical R&D Laboratories",
+                "note": "Use Case: Gentle, lossless drying from minute to bulk quantities",
+                "bullets": [
+                  "What to Consider: Efficient collection of both water and organic-based solvents"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Environmental Analysis Laboratories",
+                "note": "Use Case: Preparing and stabilizing samples for pollution monitoring",
+                "bullets": [
+                  "What to Consider: Stable ice condenser temperature supports reliable sample preservation"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -542,20 +1072,48 @@
               { "title": "Preventive Maintenance", "description": "Maintains condenser, compressor, and vacuum performance" },
               { "title": "Spares and Accessories", "description": "Supplies manifold valves, racks, and replacement parts" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "Lyovapor L-250 service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is Lyovapor L-250 used for?", "answer": "Lyovapor L-250 is a freeze dryer used for demanding, uninterrupted lyophilization runs across biotechnology, pharmaceutical, chemical, and food research." },
-            { "question": "How cold does the condenser get?", "answer": "The lowest condenser temperature is -85°C, achieved through EcoStream's innovative compressor design." },
+            {
+              "question": "What is Lyovapor L-250 used for?",
+              "answer": "Lyovapor L-250 is a freeze dryer used for demanding, uninterrupted lyophilization runs across biotechnology, pharmaceutical, chemical, and food research."
+            },
+            {
+              "question": "How cold does the condenser get?",
+              "answer": "The lowest condenser temperature is -85°C, achieved through EcoStream's innovative compressor design."
+            },
             { "question": "What is the GWP rating of Lyovapor L-250?", "answer": "It carries a GWP rating of just 4, achieved using natural coolants." },
-            { "question": "Is Lyovapor L-250 certified for sustainability?", "answer": "Yes, both the L-250 Basic and Pro configurations carry ACT label certification, valid in the EU, UK, and USA." },
-            { "question": "What's the difference between Basic and Pro configurations?", "answer": "Pro adds heatable shelves up to 60 ± 1°C and temperature-based endpoint determination, while Basic offers ultimate vacuum operation without advanced control." },
-            { "question": "Does Lyovapor L-250 reduce energy consumption?", "answer": "Yes, its smart compressor design reduces electrical energy consumption compared to less efficient designs." },
-            { "question": "What does the hot gas feature do?", "answer": "It speeds up the melting of ice layers on the condenser coil, reducing turnaround time between runs." },
-            { "question": "How does Lyovapor L-250 support sample safety during a run?", "answer": "Sample protective state and endpoint determination work together to keep runs safe and appropriately short." },
-            { "question": "What is the price of Lyovapor L-250 in India?", "answer": "The price depends on the configuration selected. Contact Inkarp for a quotation once your requirements are confirmed." },
-            { "question": "Who is the authorized distributor of Lyovapor L-250 in India?", "answer": "Inkarp is the authorized distributor and service provider for the BUCHI Lyovapor L-250 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Is Lyovapor L-250 certified for sustainability?",
+              "answer": "Yes, both the L-250 Basic and Pro configurations carry ACT label certification, valid in the EU, UK, and USA."
+            },
+            {
+              "question": "What's the difference between Basic and Pro configurations?",
+              "answer": "Pro adds heatable shelves up to 60 ± 1°C and temperature-based endpoint determination, while Basic offers ultimate vacuum operation without advanced control."
+            },
+            {
+              "question": "Does Lyovapor L-250 reduce energy consumption?",
+              "answer": "Yes, its smart compressor design reduces electrical energy consumption compared to less efficient designs."
+            },
+            {
+              "question": "What does the hot gas feature do?",
+              "answer": "It speeds up the melting of ice layers on the condenser coil, reducing turnaround time between runs."
+            },
+            {
+              "question": "How does Lyovapor L-250 support sample safety during a run?",
+              "answer": "Sample protective state and endpoint determination work together to keep runs safe and appropriately short."
+            },
+            {
+              "question": "What is the price of Lyovapor L-250 in India?",
+              "answer": "The price depends on the configuration selected. Contact Inkarp for a quotation once your requirements are confirmed."
+            },
+            {
+              "question": "Who is the authorized distributor of Lyovapor L-250 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the BUCHI Lyovapor L-250 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -576,10 +1134,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right Lyovapor L-250 configuration", "body": "Tell our team your target condenser temperature and whether ACT-certified sustainability documentation matters for your procurement process, and Inkarp will confirm the right Lyovapor L-250 configuration." },
-              { "title": "Confirm ACT label documentation for procurement", "body": "Tell our team if ACT label documentation is required for your procurement process, and Inkarp will provide it alongside your quotation." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows deep-cooling performance and Infinite-Control monitoring on your own samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right Basic or Pro configuration for your application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with endpoint determination and sample protective state" },
+              { "title": "Preventive Maintenance", "body": "Maintains condenser, compressor, and vacuum performance" },
+              { "title": "Spares and Accessories", "body": "Supplies manifold valves, racks, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -602,21 +1163,36 @@
                 "title": "Product Information",
                 "description": "Lyovapor L-250 product information: EcoStream technology, sustainability certification, and configuration options.",
                 "body": [
-                  "EcoStream's compressor design enables the condenser to reach temperatures as low as -85°C, one of the coldest condenser temperatures in BUCHI's Lyovapor range.",
-                  "A GWP rating of just 4, using natural coolants, keeps environmental impact low even at this deep-cooling performance level.",
-                  "Condenser capacity reaches up to 5 kg, with condensing capacity up to 4 kg per 24 hours, and a stable ice condenser temperature supports efficient collection of water and organic-based solvents alike.",
-                  "A smart compressor design reduces electrical energy consumption, and the system lowers heat output and noise emissions in the lab compared to less efficient designs.",
-                  "Infinite-Control technology delivers precise process control through the display and software, including sample protective state and endpoint determination for safe, short freeze-drying runs.",
-                  "The hot gas feature speeds up melting of ice layers on the condenser coil between runs.",
-                  "Several drying chambers accommodate high sample quantities and a wide range of containers, from single flasks to bulky samples.",
-                  "BUCHI's sustainable production and product life cycle commitment is officially certified by the ACT label for L-250 Basic and Pro configurations, valid in the EU, UK, and USA."
+                  {
+                    "text": "EcoStream's compressor design enables the condenser to reach temperatures as low as -85°C, one of the coldest condenser temperatures in BUCHI's Lyovapor range."
+                  },
+                  { "text": "A GWP rating of just 4, using natural coolants, keeps environmental impact low even at this deep-cooling performance level." },
+                  {
+                    "text": "Condenser capacity reaches up to 5 kg, with condensing capacity up to 4 kg per 24 hours, and a stable ice condenser temperature supports efficient collection of water and organic-based solvents alike."
+                  },
+                  {
+                    "text": "A smart compressor design reduces electrical energy consumption, and the system lowers heat output and noise emissions in the lab compared to less efficient designs."
+                  },
+                  {
+                    "text": "Infinite-Control technology delivers precise process control through the display and software, including sample protective state and endpoint determination for safe, short freeze-drying runs."
+                  },
+                  { "text": "The hot gas feature speeds up melting of ice layers on the condenser coil between runs." },
+                  { "text": "Several drying chambers accommodate high sample quantities and a wide range of containers, from single flasks to bulky samples." },
+                  {
+                    "text": "BUCHI's sustainable production and product life cycle commitment is officially certified by the ACT label for L-250 Basic and Pro configurations, valid in the EU, UK, and USA."
+                  }
                 ],
                 "cards": [
                   { "title": "-85°C condenser", "description": "Among the coldest in the Lyovapor range" },
                   { "title": "GWP 4", "description": "Low environmental impact at deep-cooling scale" },
                   { "title": "ACT label certified", "description": "Sustainable procurement documentation" },
                   { "title": "Reduced energy, heat, and noise", "description": "Efficient compressor design" }
-                ]
+                ],
+                "glanceTitle": "Lyovapor L-250 at a Glance",
+                "glanceDescription": "What to know about Lyovapor L-250: how EcoStream reaches -85°C efficiently, ACT label sustainability certification, and Inkarp installation and service support.",
+                "subheading": "Overview",
+                "intro": "Lyovapor L-250 overview: deep-cooling performance, sustainability, and process control.",
+                "tabSummary": "Why -85°C and low GWP aren't usually found together"
               },
               {
                 "key": "config",
@@ -629,52 +1205,94 @@
                   { "title": "Condensing capacity", "description": "Up to 4 kg / 24 h" },
                   { "title": "GWP index", "description": "4" },
                   { "title": "Configurations", "description": "Basic, Pro" }
-                ]
+                ],
+                "disclaimer": "Tell our team your target condenser temperature and whether ACT-certified sustainability documentation matters for your procurement process, and Inkarp will confirm the right Lyovapor L-250 configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "description": "Lyovapor L-250 key features: deep condenser cooling, low environmental impact, and precise process control.",
+                "tabSummary": "Low-GWP cooling, Infinite-Control precision, hot gas melting"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Lyovapor L-250 applications: biotechnology, pharmaceutical, chemical, food, and environmental research."
+                "description": "Lyovapor L-250 applications: biotechnology, pharmaceutical, chemical, food, and environmental research.",
+                "tabSummary": "Biotechnology, chemical, pharmaceutical, food, and education"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Lyovapor L-250 technical specifications and configuration comparison across Basic and Pro models."
+                "description": "Lyovapor L-250 technical specifications and configuration comparison across Basic and Pro models.",
+                "columns": [
+                  "Characteristic",
+                  "L-250 Basic",
+                  "L-250 Pro"
+                ],
+                "tabSummary": "Condenser temperature, capacity, and configuration comparison"
               },
               {
                 "key": "benefits",
                 "eyebrow": "EcoStream and Sustainable Certification",
                 "title": "EcoStream and Sustainable Certification",
-                "description": "Sustainability claims mean more when they're independently certified rather than self-reported, and that's exactly what the ACT label provides for L-250. The certification confirms BUCHI's commitment to sustainable production, product life cycle management, and innovative technology, valid in the EU, UK, and USA, and downloadable for both the L-250 Basic and Pro configurations. That certification sits on top of genuine technical performance: an innovative compressor design that reaches -85°C, a GWP rating of just 4 using natural coolants, and reduced electrical energy consumption from the smart compressor itself. The result is lower heat output and noise emissions in the lab, alongside the deep-cooling performance freeze-drying at this temperature range demands.",
+                "description": "What ACT label certification confirms about Lyovapor L-250's sustainability.",
                 "cards": [
                   { "title": "Independently certified sustainability documentation", "description": "ACT label certification, valid EU, UK, USA" },
                   { "title": "Deep-cooling performance with lower environmental impact", "description": "-85°C condenser temperature, GWP rating of 4" },
                   { "title": "Reduced operating costs over time", "description": "Lower electrical energy consumption" },
                   { "title": "A quieter, cooler lab environment", "description": "Reduced heat output and noise emissions" }
-                ]
+                ],
+                "paragraphs": [
+                  "Sustainability claims mean more when they're independently certified rather than self-reported, and that's exactly what the ACT label provides for L-250.",
+                  "The certification confirms BUCHI's commitment to sustainable production, product life cycle management, and innovative technology, valid in the EU, UK, and USA, and downloadable for both the L-250 Basic and Pro configurations. That certification sits on top of genuine technical performance: an innovative compressor design that reaches -85°C, a GWP rating of just 4 using natural coolants, and reduced electrical energy consumption from the smart compressor itself. The result is lower heat output and noise emissions in the lab, alongside the deep-cooling performance freeze-drying at this temperature range demands."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your procurement process needs", "value": "How Lyovapor L-250 delivers it" },
+                "note": "Tell our team if ACT label documentation is required for your procurement process, and Inkarp will provide it alongside your quotation.",
+                "tabSummary": "What ACT label certification actually confirms"
               },
               {
                 "key": "performance",
                 "eyebrow": "Precision Control and Sample Protection",
                 "title": "Precision Control and Sample Protection",
+                "tabSummary": "How Infinite-Control supports safe, efficient runs",
                 "body": [
+                  "How Infinite-Control supports safe, efficient freeze-drying runs on Lyovapor L-250.",
                   "A freeze-drying run that runs too long, or ends before the sample is actually dry, wastes both time and material. Infinite-Control is built to prevent both outcomes.",
                   "Precise process control runs through the display and software together, giving direct oversight of a run as it progresses. Sample protective state and endpoint determination work together to keep runs both safe and short, avoiding unnecessary extended drying time once a sample has actually reached its endpoint. Where ice buildup on the condenser coil would otherwise slow down turnaround between runs, the hot gas feature speeds that melting process up directly."
                 ],
-                "utilityChecklist": [
-                  { "label": "Confidence a sample is genuinely finished drying", "value": "Endpoint determination through Infinite-Control" },
-                  { "label": "Protecting sensitive samples during the run", "value": "Sample protective state" },
-                  { "label": "Short, efficient run times", "value": "Combined endpoint determination and protective state" },
-                  { "label": "Faster turnaround between runs", "value": "Hot gas ice layer melting" }
-                ],
-                "disclaimer": "Tell our team about your typical sample sensitivity and turnaround needs, and Inkarp will confirm the right Lyovapor L-250 configuration."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How Lyovapor L-250 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Confidence a sample is genuinely finished drying",
+                        "Endpoint determination through Infinite-Control"
+                      ],
+                      [
+                        "Protecting sensitive samples during the run",
+                        "Sample protective state"
+                      ],
+                      [
+                        "Short, efficient run times",
+                        "Combined endpoint determination and protective state"
+                      ],
+                      [
+                        "Faster turnaround between runs",
+                        "Hot gas ice layer melting"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team about your typical sample sensitivity and turnaround needs, and Inkarp will confirm the right Lyovapor L-250 configuration."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -686,7 +1304,9 @@
                   { "title": "Solution Brochure, Freeze Drying", "description": "Available on request" },
                   { "title": "Operation Manual, L-250 Basic / Pro", "description": "Available on request" },
                   { "title": "ACT Label Certification (Basic and Pro)", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Technical data sheet, ACT label"
               }
             ],
             "cta": {
@@ -695,9 +1315,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Condenser temperatures down to -85°C, a GWP rating of just 4, and ACT label certified sustainability. Tell us your cooling and documentation needs, and Inkarp will confirm the right Lyovapor L-250 configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Freeze-drying performance and sustainability usually pull in opposite directions. EcoStream is BUCHI's answer to that trade-off.",
+              "Lyovapor L-250 reaches a condenser temperature as low as -85°C, with a condenser capacity up to 5 kg and condensing capacity up to 4 kg per 24 hours. A GWP index of just 4, achieved through natural coolants, keeps environmental impact low, and the L-250 Basic and Pro configurations both carry ACT label certification for sustainable laboratory operations."
+            ],
+            "statsIntro": "Lyovapor L-250 at a glance: condenser temperature, capacity, and sustainability certification."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

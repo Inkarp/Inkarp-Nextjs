@@ -10,7 +10,9 @@ import SectionHeader from './SectionHeader';
 export default function ServiceMap({ data, calm = false }) {
   const { title, description, eyebrow, supportAreas } = data ?? {};
   const [screenSize, setScreenSize] = useState('lg');
-  const [selected, setSelected] = useState(0);
+  // A source document can name the branch to open on (`defaultBranch`) and a
+  // support line per branch (`branchSupport`, shown in that branch's card).
+  const [selected, setSelected] = useState(() => Math.max(0, branches.findIndex((branch) => branch.name === data?.defaultBranch)));
 
   useEffect(() => {
     const handleResize = () => setScreenSize(getScreenSize());
@@ -171,6 +173,15 @@ export default function ServiceMap({ data, calm = false }) {
                   {selectedBranch.name} branch
                 </h3>
               </div>
+
+              {data?.branchSupport?.[selectedBranch.name] ? (
+                <div className="mb-3 bg-parchment-alt p-3">
+                  {data.branchSupportLabel ? (
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-ink-soft">{data.branchSupportLabel}</p>
+                  ) : null}
+                  <p className={`text-xs leading-snug ${calm ? 'text-ink' : 'text-black'}`}>{data.branchSupport[selectedBranch.name]}</p>
+                </div>
+              ) : null}
 
               <div className={`mb-3 flex items-start gap-2 bg-parchment-alt p-3 ${calm ? '' : ''}`}>
                 <MdLocationPin className="mt-0.5 size-4 shrink-0 text-red" />

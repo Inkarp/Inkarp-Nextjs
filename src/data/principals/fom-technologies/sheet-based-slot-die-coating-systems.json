@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "fom-technologies",
-    "principalName": "FOM Technologies",
-    "countryOfOrigin": "Denmark"
-  },
+  "principal": { "slug": "fom-technologies", "principalName": "FOM Technologies", "countryOfOrigin": "Denmark" },
   "categories": [
     {
       "name": "Sheet-Based Slot-Die Coating Systems",
@@ -11,24 +7,36 @@
       "products": [
         {
           "name": "FOM scalarSC Sheet-Based Slot-Die Coating Systems",
+
           "slug": "fom-scalarsc-sheet-based-slot-die-coating-systems",
+
           "principalImage": "/assets/images/PrincipalLogos/FOM-Technologies.svg",
+
           "imageAlt": "FOM Technologies FOM scalarSC Sheet-Based Slot-Die Coating Systems - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/fom-scalarsc-sheet-based-slot-die-coating-systems",
+
           "breadcrumbPath": "Home > Products > Sheet-Based Slot-Die Coating Systems > FOM scalarSC Sheet-Based Slot-Die Coating Systems",
+
           "h1": "FOM scalarSC Sheet-Based Slot-Die Coating Systems",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Spin coating is the familiar starting point. It's rarely the right one once your process needs to mean something at industrial scale.",
 
           "features": [
-            "High-Flatness Aluminum Sample Holder: Positions flexible and rigid substrates up to 300 × 200 mm reliably.",
-            "Infinite-Step Height and Lateral Position Dial: Gives full manual control for systematic, quick-reaction experimental runs.",
-            "External Syringe Pump: Keeps pump hardware separate, allowing better workspace design.",
-            "Compact, Simplified Design: Installs easily inside a laminar flow hood or glove box.",
-            "Higher Operator Freedom: A simplified design that speeds up everyday experimental workflow.",
-            "Excellent Precision and Reproducibility: Delivers consistent results despite the streamlined setup.",
-            "Entry-Level Investment: A fraction of the cost and footprint of larger coating systems."
+            { "title": "High-Flatness Aluminum Sample Holder", "description": "Positions flexible and rigid substrates up to 300 × 200 mm reliably." },
+            {
+              "title": "Infinite-Step Height and Lateral Position Dial",
+              "description": "Gives full manual control for systematic, quick-reaction experimental runs."
+            },
+            { "title": "External Syringe Pump", "description": "Keeps pump hardware separate, allowing better workspace design." },
+            { "title": "Compact, Simplified Design", "description": "Installs easily inside a laminar flow hood or glove box." },
+            { "title": "Higher Operator Freedom", "description": "A simplified design that speeds up everyday experimental workflow." },
+            { "title": "Excellent Precision and Reproducibility", "description": "Delivers consistent results despite the streamlined setup." },
+            { "title": "Entry-Level Investment", "description": "A fraction of the cost and footprint of larger coating systems." }
           ],
 
           "technicalSpecs": [
@@ -43,11 +51,11 @@
           ],
 
           "applications": [
-            "Organic Electronics Research: Simplified design supports fast, everyday experimental coating runs",
-            "Perovskite Electronics Development: High-flatness holder supports reliable, reproducible film formation",
-            "Sensor Development: Both flexible and rigid substrate compatibility suits varied sensor formats",
-            "Energy Storage Research: Compact setup fits into glove box environments for sensitive materials",
-            "Multi-User Laboratory Environments: High-throughput, easy-to-use design suits shared lab settings"
+            { "title": "Organic Electronics Research", "description": "Simplified design supports fast, everyday experimental coating runs" },
+            { "title": "Perovskite Electronics Development", "description": "High-flatness holder supports reliable, reproducible film formation" },
+            { "title": "Sensor Development", "description": "Both flexible and rigid substrate compatibility suits varied sensor formats" },
+            { "title": "Energy Storage Research", "description": "Compact setup fits into glove box environments for sensitive materials" },
+            { "title": "Multi-User Laboratory Environments", "description": "High-throughput, easy-to-use design suits shared lab settings" }
           ],
 
           "inPageNav": [
@@ -67,15 +75,27 @@
             "steps": [
               {
                 "key": "substrateType",
-                "question": "What substrate type are you coating?",
+                "label": "Substrate type",
+                "question": "Substrate type",
+                "hint": "Flexible or rigid",
                 "options": [
                   { "val": "flexible", "label": "Flexible" },
                   { "val": "rigid", "label": "Rigid" }
                 ]
               },
               {
+                "key": "substrateSizeInput",
+                "label": "Substrate size input",
+                "question": "Substrate size input",
+                "hint": "Up to 300 × 200 mm",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "installationEnvironment",
-                "question": "What's your installation environment?",
+                "label": "Installation environment",
+                "question": "Installation environment",
+                "hint": "Laminar flow hood, glove box, or open bench",
                 "options": [
                   { "val": "laminar-flow-hood", "label": "Laminar flow hood" },
                   { "val": "glove-box", "label": "Glove box" },
@@ -83,10 +103,12 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Substrate Fit Checker",
+            "lead": "Confirm whether your substrate size and type fit FOM scalarSC.",
+            "emptyState": "Confirms substrate compatibility and installation fit",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -96,6 +118,7 @@
               {
                 "key": "currentLimitation",
                 "label": "Current limitation",
+                "hint": "Material waste, substrate size, batch processing difficulty",
                 "options": [
                   { "val": "material-waste", "label": "Material waste" },
                   { "val": "substrate-size", "label": "Substrate size" },
@@ -105,6 +128,7 @@
               {
                 "key": "targetApplication",
                 "label": "Target application",
+                "hint": "Organic/perovskite electronics, sensors, or energy storage",
                 "options": [
                   { "val": "organic-perovskite-electronics", "label": "Organic/perovskite electronics" },
                   { "val": "sensors", "label": "Sensors" },
@@ -114,6 +138,7 @@
               {
                 "key": "scaleUpGoal",
                 "label": "Scale-up goal",
+                "hint": "Fundamental research or product development",
                 "options": [
                   { "val": "fundamental-research", "label": "Fundamental research" },
                   { "val": "product-development", "label": "Product development" }
@@ -125,20 +150,64 @@
                 "condition": "default",
                 "title": "How Is FOM scalarSC Different from Spin Coating?",
                 "body": "FOM scalarSC replaces spin coating's substrate size restrictions and batch processing limitations with a scalable, industry-relevant slot-die coating process.",
-                "tags": ["Entry-Level Investment", "Excellent Precision and Reproducibility"]
+                "tags": [
+                  "Entry-Level Investment",
+                  "Excellent Precision and Reproducibility"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Spin Coating Upgrade Planner",
+            "lead": "See how FOM scalarSC compares to your current spin coating process.",
+            "ctaNote": "Confirms how FOM scalarSC fits your upgrade path. Routes to us for a transition-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using FOM scalarSC include organic electronics research, perovskite photovoltaics, and sensor development.",
             "industries": [
-              { "name": "Organic Electronics Research", "useCase": "Coating functional layers for organic device development", "consideration": "Simplified design suits high-throughput, multi-user research labs" },
-              { "name": "Perovskite Photovoltaic Development", "useCase": "Producing reproducible perovskite active layers", "consideration": "High-flatness holder supports consistent film formation" },
-              { "name": "Sensor Development", "useCase": "Prototyping coated sensor layers on varied substrates", "consideration": "Flexible and rigid substrate compatibility on one system" },
-              { "name": "Energy Storage Research", "useCase": "Coating functional layers for battery or supercapacitor components", "consideration": "Glove box compatibility suits air-sensitive material work" },
-              { "name": "Academic Teaching Laboratories", "useCase": "Introducing students to slot-die coating fundamentals", "consideration": "Entry-level investment and manual control keep the system approachable" }
+              {
+                "name": "Organic Electronics Research",
+                "note": "Use Case: Coating functional layers for organic device development",
+                "bullets": [
+                  "What to Consider: Simplified design suits high-throughput, multi-user research labs"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Perovskite Photovoltaic Development",
+                "note": "Use Case: Producing reproducible perovskite active layers",
+                "bullets": [
+                  "What to Consider: High-flatness holder supports consistent film formation"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Sensor Development",
+                "note": "Use Case: Prototyping coated sensor layers on varied substrates",
+                "bullets": [
+                  "What to Consider: Flexible and rigid substrate compatibility on one system"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Energy Storage Research",
+                "note": "Use Case: Coating functional layers for battery or supercapacitor components",
+                "bullets": [
+                  "What to Consider: Glove box compatibility suits air-sensitive material work"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Teaching Laboratories",
+                "note": "Use Case: Introducing students to slot-die coating fundamentals",
+                "bullets": [
+                  "What to Consider: Entry-level investment and manual control keep the system approachable"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -157,14 +226,38 @@
           },
 
           "faqs": [
-            { "question": "What is FOM scalarSC used for?", "answer": "FOM scalarSC is an entry-level sheet-based slot-die coating system used for organic and perovskite electronics, sensor development, and energy storage research on rigid and flexible substrates." },
-            { "question": "What substrate sizes does FOM scalarSC support?", "answer": "Both flexible and rigid substrates up to 300 × 200 mm position on the high-flatness aluminum sample holder." },
-            { "question": "How is substrate position controlled?", "answer": "An infinite-step height and lateral position manual dial gives full operator control for systematic or quick-reaction experimental runs." },
-            { "question": "Does FOM scalarSC include a syringe pump?", "answer": "Yes, an external syringe pump is included, allowing more flexible workspace design." },
-            { "question": "Can FOM scalarSC be installed in a glove box?", "answer": "Yes, its compact setup installs easily inside a laminar flow hood or a glove box." },
-            { "question": "How is FOM scalarSC different from spin coating?", "answer": "FOM scalarSC replaces spin coating's substrate size restrictions and batch processing limitations with a scalable, industry-relevant slot-die coating process." },
-            { "question": "What is the price of FOM scalarSC in India?", "answer": "Get in touch and Inkarp will put together a quote based on your substrate and installation requirements." },
-            { "question": "Who is the authorized distributor of FOM scalarSC in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM scalarSC in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is FOM scalarSC used for?",
+              "answer": "FOM scalarSC is an entry-level sheet-based slot-die coating system used for organic and perovskite electronics, sensor development, and energy storage research on rigid and flexible substrates."
+            },
+            {
+              "question": "What substrate sizes does FOM scalarSC support?",
+              "answer": "Both flexible and rigid substrates up to 300 × 200 mm position on the high-flatness aluminum sample holder."
+            },
+            {
+              "question": "How is substrate position controlled?",
+              "answer": "An infinite-step height and lateral position manual dial gives full operator control for systematic or quick-reaction experimental runs."
+            },
+            {
+              "question": "Does FOM scalarSC include a syringe pump?",
+              "answer": "Yes, an external syringe pump is included, allowing more flexible workspace design."
+            },
+            {
+              "question": "Can FOM scalarSC be installed in a glove box?",
+              "answer": "Yes, its compact setup installs easily inside a laminar flow hood or a glove box."
+            },
+            {
+              "question": "How is FOM scalarSC different from spin coating?",
+              "answer": "FOM scalarSC replaces spin coating's substrate size restrictions and batch processing limitations with a scalable, industry-relevant slot-die coating process."
+            },
+            {
+              "question": "What is the price of FOM scalarSC in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your substrate and installation requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of FOM scalarSC in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM scalarSC in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -185,10 +278,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm FOM scalarSC fits your workflow", "body": "Tell us your typical substrate size and material system, and we'll confirm whether FOM scalarSC fits your everyday experimental workflow." },
-              { "title": "Confirm how FOM scalarSC fits your run volume", "body": "Tell us your typical substrate size and how many runs you complete per day, and we'll confirm how FOM scalarSC fits your workflow." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows sample positioning and coating performance on your own materials" },
+              { "title": "Configuration Assessment", "body": "Confirms substrate size and installation fit for your lab" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with the positioning dial and pump operation" },
+              { "title": "Preventive Maintenance", "body": "Maintains sample holder and pump performance" },
+              { "title": "Spares and Accessories", "body": "Supplies holder components and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -209,22 +305,36 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "FOM scalarSC product information: substrate handling, positioning control, and workspace flexibility.",
-                "subheading": "FOM scalarSC at a Glance",
+                "subheading": "Overview",
                 "body": [
-                  "The system is designed for fast, easy coating of functional materials, built for multi-user, high-throughput research labs working on organic and perovskite electronics, sensors, and energy storage.",
-                  "A simplified design gives operators higher freedom and a quicker workflow than more complex systems, while still delivering excellent precision and reproducibility.",
-                  "Both flexible and rigid substrates up to 300 × 200 mm position freely on a high-flatness, aluminum-made sample holder.",
-                  "An infinite-step height and lateral position manual dial supports systematic, quick-reaction experimental runs, with the operator holding full control at all times.",
-                  "The system offers a compact setup that installs easily inside a laminar flow hood or a glove box.",
-                  "An external syringe pump allows better design of the surrounding workspace, keeping pump hardware separate from the coating footprint itself.",
-                  "FOM Technologies continues improving the simplified scalar design, recommending it both for its entry-level investment and for the higher operator freedom and quick workflow it delivers."
+                  {
+                    "text": "The system is designed for fast, easy coating of functional materials, built for multi-user, high-throughput research labs working on organic and perovskite electronics, sensors, and energy storage."
+                  },
+                  {
+                    "text": "A simplified design gives operators higher freedom and a quicker workflow than more complex systems, while still delivering excellent precision and reproducibility."
+                  },
+                  { "text": "Both flexible and rigid substrates up to 300 × 200 mm position freely on a high-flatness, aluminum-made sample holder." },
+                  {
+                    "text": "An infinite-step height and lateral position manual dial supports systematic, quick-reaction experimental runs, with the operator holding full control at all times."
+                  },
+                  { "text": "The system offers a compact setup that installs easily inside a laminar flow hood or a glove box." },
+                  {
+                    "text": "An external syringe pump allows better design of the surrounding workspace, keeping pump hardware separate from the coating footprint itself."
+                  },
+                  {
+                    "text": "FOM Technologies continues improving the simplified scalar design, recommending it both for its entry-level investment and for the higher operator freedom and quick workflow it delivers."
+                  }
                 ],
                 "cards": [
                   { "title": "Up to 300 x 200 mm", "description": "Flexible and rigid substrate compatibility" },
                   { "title": "High-flatness aluminum holder", "description": "Consistent, reliable substrate positioning" },
                   { "title": "Infinite-step manual dial", "description": "Full operator control, systematic runs" },
                   { "title": "Entry-level investment", "description": "Cost and footprint-efficient scalability" }
-                ]
+                ],
+                "glanceTitle": "FOM scalarSC at a Glance",
+                "glanceDescription": "What to know about FOM scalarSC: how the sample holder and manual positioning enable everyday experimental runs, and why it's positioned as the step up from spin coating.",
+                "intro": "FOM scalarSC overview: simplified design, substrate handling, and workspace compatibility.",
+                "tabSummary": "Why simplified design earns higher operator freedom"
               },
               {
                 "key": "config",
@@ -236,53 +346,91 @@
                   { "title": "Sample holder", "description": "High-flatness aluminum" },
                   { "title": "Positioning", "description": "Infinite-step height and lateral position manual dial" },
                   { "title": "Pump", "description": "External syringe pump" }
-                ]
+                ],
+                "disclaimer": "Tell us your typical substrate size and material system, and we'll confirm whether FOM scalarSC fits your everyday experimental workflow."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "FOM scalarSC key features: high-flatness sample holder, manual positioning control, and compact installation."
+                "description": "FOM scalarSC key features: high-flatness sample holder, manual positioning control, and compact installation.",
+                "tabSummary": "High-flatness holder, infinite-step dial, external pump"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "FOM scalarSC applications: organic and perovskite electronics, sensors, and energy storage research."
+                "description": "FOM scalarSC applications: organic and perovskite electronics, sensors, and energy storage research.",
+                "tabSummary": "Organic and perovskite electronics, sensors, energy storage"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "FOM scalarSC technical specifications: substrate size, sample holder, and installation compatibility."
+                "description": "FOM scalarSC technical specifications: substrate size, sample holder, and installation compatibility.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Substrate size, holder design, and installation compatibility"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Simple Handling and Alignment",
                 "title": "Simple Handling and Alignment",
-                "description": "Getting a substrate positioned exactly right, every time, is what separates a systematic study from a series of one-off coating attempts. The high-flatness, aluminum sample holder gives flexible and rigid substrates up to 300 × 200 mm a consistent, reliable surface to sit on, removing substrate flatness as a variable in your results. The infinite-step height and lateral position manual dial then lets you fine-tune positioning with full control, supporting quick-reaction experimental runs as well as longer, more systematic studies, all without handing that control over to automation.",
+                "description": "How FOM scalarSC's sample holder and positioning dial support systematic experimental runs.",
                 "cards": [
                   { "title": "Consistent substrate positioning across runs", "description": "High-flatness aluminum sample holder" },
                   { "title": "Fine manual control over alignment", "description": "Infinite-step height and lateral position dial" },
                   { "title": "Fast turnaround between experiments", "description": "Simplified design built for everyday runs" },
                   { "title": "Full operator control at every step", "description": "Manual dial, not automated positioning" }
-                ]
+                ],
+                "paragraphs": [
+                  "Getting a substrate positioned exactly right, every time, is what separates a systematic study from a series of one-off coating attempts.",
+                  "The high-flatness, aluminum sample holder gives flexible and rigid substrates up to 300 × 200 mm a consistent, reliable surface to sit on, removing substrate flatness as a variable in your results. The infinite-step height and lateral position manual dial then lets you fine-tune positioning with full control, supporting quick-reaction experimental runs as well as longer, more systematic studies, all without handing that control over to automation."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your research needs", "value": "How FOM scalarSC delivers it" },
+                "note": "Tell us your typical substrate size and how many runs you complete per day, and we'll confirm how FOM scalarSC fits your workflow.",
+                "tabSummary": "How the sample holder and dial work together"
               },
               {
                 "key": "performance",
                 "eyebrow": "Stepping Up From Spin Coating",
                 "title": "Stepping Up From Spin Coating",
-                "description": "Spin coating gets you a film. It doesn't tell you whether that film's formation process will translate to anything industry-relevant, and that's the gap FOM scalarSC is built to close.",
+                "tabSummary": "Why scalarSC is the natural next step",
                 "body": [
+                  "Why FOM scalarSC is positioned as the natural next step from spin coating.",
+                  "Spin coating gets you a film. It doesn't tell you whether that film's formation process will translate to anything industry-relevant, and that's the gap FOM scalarSC is built to close.",
                   "Whether your work is fundamental research or new product development, FOM scalarSC serves as the step from spin coating toward medium-scale, industry-relevant processing, on rigid or flexible substrates as your work requires. Its compact setup installs easily inside a laminar flow hood or glove box, and the external syringe pump keeps that workspace design flexible rather than constrained by integrated pump hardware."
                 ],
-                "utilityChecklist": [
-                  { "label": "Moving beyond spin coating's limitations", "value": "Slot-die coating on rigid and flexible substrates" },
-                  { "label": "Industry-relevant process development", "value": "Medium-scale, scalable coating methodology" },
-                  { "label": "Compact integration into existing setups", "value": "Fits inside a laminar flow hood or glove box" },
-                  { "label": "Flexible workspace design", "value": "External syringe pump" }
-                ],
-                "disclaimer": "Tell us what's currently limiting your spin coating results, and we'll show how FOM scalarSC addresses that gap."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your research needs",
+                      "How FOM scalarSC delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Moving beyond spin coating's limitations",
+                        "Slot-die coating on rigid and flexible substrates"
+                      ],
+                      [
+                        "Industry-relevant process development",
+                        "Medium-scale, scalable coating methodology"
+                      ],
+                      [
+                        "Compact integration into existing setups",
+                        "Fits inside a laminar flow hood or glove box"
+                      ],
+                      [
+                        "Flexible workspace design",
+                        "External syringe pump"
+                      ]
+                    ]
+                  },
+                  { "note": "Tell us what's currently limiting your spin coating results, and we'll show how FOM scalarSC addresses that gap." }
+                ]
               },
               {
                 "key": "docs",
@@ -292,7 +440,9 @@
                 "cards": [
                   { "title": "FOM scalarSC Datasheet", "description": "Available on request" },
                   { "title": "Sample Holder and Positioning Guide", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheet"
               }
             ],
             "cta": {
@@ -301,30 +451,54 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The entry point into scalable slot-die coating, with full manual control over substrate positioning. Tell us your substrate size and application, and Inkarp will confirm the right FOM scalarSC setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Spin coating is the familiar starting point. It's rarely the right one once your process needs to mean something at industrial scale.",
+              "FOM scalarSC gives easy control over coating on rigid and flexible substrates through a simplified design built for everyday experimental runs, requiring a fraction of the cost and physical footprint of larger systems. Both substrate types, up to 300 × 200 mm, position freely on a high-flatness aluminum sample holder, with an infinite-step height and lateral position dial giving you full manual control for systematic, quick-reaction studies."
+            ],
+            "statsIntro": "FOM scalarSC at a glance: substrate size, sample holder design, and positioning control."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "FOM vectorSC Sheet-Based Slot-Die Coating Systems",
+
           "slug": "fom-vectorsc-sheet-based-slot-die-coating-systems",
+
           "principalImage": "/assets/images/PrincipalLogos/FOM-Technologies.svg",
+
           "imageAlt": "FOM Technologies FOM vectorSC Sheet-Based Slot-Die Coating Systems - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/fom-vectorsc-sheet-based-slot-die-coating-systems",
+
           "breadcrumbPath": "Home > Products > Sheet-Based Slot-Die Coating Systems > FOM vectorSC Sheet-Based Slot-Die Coating Systems",
+
           "h1": "FOM vectorSC Sheet-Based Slot-Die Coating Systems",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Getting excellent substrate flatness usually means extra steps to fixate the sample. FOM vectorSC removes that step entirely.",
 
           "features": [
-            "Proprietary Microporous Substrate Holder: Delivers excellent flatness through homogeneous suction, without extra fixation steps.",
-            "Integrated Precursor Pump: Built directly into the tool rather than as a separate external unit.",
-            "Cloud-Based Remote Operation and Diagnostics: Enables genuine remote monitoring and control of the coating system.",
-            "Infinite-Step Height and Lateral Position Dial: Gives full manual control for systematic, quick-reaction experimental runs.",
-            "High-Flatness Aluminum Sample Holder: Positions substrates up to 300 × 200 mm reliably.",
-            "Compact, Glove Box-Compatible Design: Installs easily inside a laminar flow hood or glove box.",
-            "Industry-Grade Component Integration: Provides a seamless, accelerated user workflow for active material coating."
+            {
+              "title": "Proprietary Microporous Substrate Holder",
+              "description": "Delivers excellent flatness through homogeneous suction, without extra fixation steps."
+            },
+            { "title": "Integrated Precursor Pump", "description": "Built directly into the tool rather than as a separate external unit." },
+            { "title": "Cloud-Based Remote Operation and Diagnostics", "description": "Enables genuine remote monitoring and control of the coating system." },
+            {
+              "title": "Infinite-Step Height and Lateral Position Dial",
+              "description": "Gives full manual control for systematic, quick-reaction experimental runs."
+            },
+            { "title": "High-Flatness Aluminum Sample Holder", "description": "Positions substrates up to 300 × 200 mm reliably." },
+            { "title": "Compact, Glove Box-Compatible Design", "description": "Installs easily inside a laminar flow hood or glove box." },
+            { "title": "Industry-Grade Component Integration", "description": "Provides a seamless, accelerated user workflow for active material coating." }
           ],
 
           "technicalSpecs": [
@@ -340,11 +514,14 @@
           ],
 
           "applications": [
-            "Organic Electronics Research: Microporous holder ensures excellent flatness for consistent coating results",
-            "Perovskite Electronics Development: Integrated pump and cloud software support high-throughput protocol development",
-            "Sensor Development: Both flexible and rigid substrate compatibility suits varied sensor formats",
-            "Energy Storage Research: Compact setup fits glove box environments for sensitive materials",
-            "Remote or Multi-Site Research Collaboration: Cloud-based software supports diagnostics beyond a single physical location"
+            { "title": "Organic Electronics Research", "description": "Microporous holder ensures excellent flatness for consistent coating results" },
+            { "title": "Perovskite Electronics Development", "description": "Integrated pump and cloud software support high-throughput protocol development" },
+            { "title": "Sensor Development", "description": "Both flexible and rigid substrate compatibility suits varied sensor formats" },
+            { "title": "Energy Storage Research", "description": "Compact setup fits glove box environments for sensitive materials" },
+            {
+              "title": "Remote or Multi-Site Research Collaboration",
+              "description": "Cloud-based software supports diagnostics beyond a single physical location"
+            }
           ],
 
           "inPageNav": [
@@ -364,25 +541,39 @@
             "steps": [
               {
                 "key": "substrateType",
-                "question": "What substrate type are you coating?",
+                "label": "Substrate type",
+                "question": "Substrate type",
+                "hint": "Flexible or rigid",
                 "options": [
                   { "val": "flexible", "label": "Flexible" },
                   { "val": "rigid", "label": "Rigid" }
                 ]
               },
               {
+                "key": "substrateSizeInput",
+                "label": "Substrate size input",
+                "question": "Substrate size input",
+                "hint": "Up to 300 × 200 mm",
+                "input": "text",
+                "options": []
+              },
+              {
                 "key": "flatnessSensitivity",
-                "question": "What's your flatness sensitivity requirement?",
+                "label": "Flatness sensitivity",
+                "question": "Flatness sensitivity",
+                "hint": "Standard or high-precision requirement",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "high-precision", "label": "High-precision requirement" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Substrate and Flatness Checker",
+            "lead": "Confirm whether FOM vectorSC's microporous holder fits your substrate needs.",
+            "emptyState": "Confirms substrate compatibility and holder fit",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -390,16 +581,18 @@
             "description": "Select your monitoring and diagnostics needs, and see how FOM vectorSC fits.",
             "fields": [
               {
-                "key": "remoteAccessNeed",
+                "key": "multiSiteCollaboration",
                 "label": "Remote access need",
+                "hint": "Yes or no",
                 "options": [
                   { "val": "yes", "label": "Yes" },
                   { "val": "no", "label": "No" }
                 ]
               },
               {
-                "key": "multiSiteCollaboration",
+                "key": "remoteAccessNeed",
                 "label": "Multi-site collaboration",
+                "hint": "Yes or no",
                 "options": [
                   { "val": "yes", "label": "Yes" },
                   { "val": "no", "label": "No" }
@@ -408,6 +601,7 @@
               {
                 "key": "diagnosticsSupportPreference",
                 "label": "Diagnostics support preference",
+                "hint": "On-site or remote",
                 "options": [
                   { "val": "on-site", "label": "On-site" },
                   { "val": "remote", "label": "Remote" }
@@ -419,20 +613,64 @@
                 "condition": "default",
                 "title": "Can FOM vectorSC Be Operated Remotely?",
                 "body": "Yes, cloud-based software enables genuine remote operation and diagnostics.",
-                "tags": ["Cloud-Based Remote Operation and Diagnostics", "Integrated Precursor Pump"]
+                "tags": [
+                  "Cloud-Based Remote Operation and Diagnostics",
+                  "Integrated Precursor Pump"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Remote Operation Planner",
+            "lead": "Confirm whether FOM vectorSC's remote capability fits your team's workflow.",
+            "ctaNote": "Confirms how cloud-based control fits your workflow. Routes to us for a configuration-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using FOM vectorSC include organic electronics research, perovskite photovoltaics, and multi-site research collaborations.",
             "industries": [
-              { "name": "Organic Electronics Research", "useCase": "Coating functional layers requiring excellent substrate flatness", "consideration": "Microporous holder removes manual fixation steps from every run" },
-              { "name": "Perovskite Photovoltaic Development", "useCase": "Producing reproducible perovskite active layers", "consideration": "Integrated pump supports coordinated, high-throughput protocol development" },
-              { "name": "Sensor Development", "useCase": "Prototyping coated sensor layers on varied substrates", "consideration": "Flexible and rigid substrate compatibility on one system" },
-              { "name": "Energy Storage Research", "useCase": "Coating functional layers for battery or supercapacitor components", "consideration": "Glove box compatibility suits air-sensitive material work" },
-              { "name": "Multi-Site Research Collaborations", "useCase": "Coordinating coating work across distributed teams", "consideration": "Cloud-based software enables remote operation and diagnostics" }
+              {
+                "name": "Organic Electronics Research",
+                "note": "Use Case: Coating functional layers requiring excellent substrate flatness",
+                "bullets": [
+                  "What to Consider: Microporous holder removes manual fixation steps from every run"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Perovskite Photovoltaic Development",
+                "note": "Use Case: Producing reproducible perovskite active layers",
+                "bullets": [
+                  "What to Consider: Integrated pump supports coordinated, high-throughput protocol development"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Sensor Development",
+                "note": "Use Case: Prototyping coated sensor layers on varied substrates",
+                "bullets": [
+                  "What to Consider: Flexible and rigid substrate compatibility on one system"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Energy Storage Research",
+                "note": "Use Case: Coating functional layers for battery or supercapacitor components",
+                "bullets": [
+                  "What to Consider: Glove box compatibility suits air-sensitive material work"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Multi-Site Research Collaborations",
+                "note": "Use Case: Coordinating coating work across distributed teams",
+                "bullets": [
+                  "What to Consider: Cloud-based software enables remote operation and diagnostics"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -451,15 +689,39 @@
           },
 
           "faqs": [
-            { "question": "What is FOM vectorSC used for?", "answer": "FOM vectorSC is a sheet-based slot-die coating system used for organic and perovskite electronics, sensor development, and energy storage research, built for excellent substrate flatness and remote operation." },
-            { "question": "How does FOM vectorSC achieve substrate flatness?", "answer": "A proprietary microporous substrate holder provides homogeneous suction, holding the sample flat without needing extra manual fixation steps." },
-            { "question": "Does FOM vectorSC include an integrated pump?", "answer": "Yes, the pump is built directly into the tool, paired with cloud-based software for coordinated control." },
+            {
+              "question": "What is FOM vectorSC used for?",
+              "answer": "FOM vectorSC is a sheet-based slot-die coating system used for organic and perovskite electronics, sensor development, and energy storage research, built for excellent substrate flatness and remote operation."
+            },
+            {
+              "question": "How does FOM vectorSC achieve substrate flatness?",
+              "answer": "A proprietary microporous substrate holder provides homogeneous suction, holding the sample flat without needing extra manual fixation steps."
+            },
+            {
+              "question": "Does FOM vectorSC include an integrated pump?",
+              "answer": "Yes, the pump is built directly into the tool, paired with cloud-based software for coordinated control."
+            },
             { "question": "Can FOM vectorSC be operated remotely?", "answer": "Yes, cloud-based software enables genuine remote operation and diagnostics." },
-            { "question": "What substrate sizes does FOM vectorSC support?", "answer": "Both flexible and rigid substrates up to 300 × 200 mm position on the high-flatness sample holder." },
-            { "question": "How is FOM vectorSC different from FOM scalarSC?", "answer": "FOM vectorSC adds a proprietary microporous substrate holder for excellent flatness without manual fixation, along with an integrated pump and cloud-based remote operation, while scalarSC uses an external pump and standard high-flatness holder." },
-            { "question": "Can FOM vectorSC be installed in a glove box?", "answer": "Yes, its compact setup installs easily inside a laminar flow hood or a glove box." },
-            { "question": "What is the price of FOM vectorSC in India?", "answer": "Get in touch and Inkarp will put together a quote based on your substrate and remote access requirements." },
-            { "question": "Who is the authorized distributor of FOM vectorSC in India?", "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM vectorSC in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What substrate sizes does FOM vectorSC support?",
+              "answer": "Both flexible and rigid substrates up to 300 × 200 mm position on the high-flatness sample holder."
+            },
+            {
+              "question": "How is FOM vectorSC different from FOM scalarSC?",
+              "answer": "FOM vectorSC adds a proprietary microporous substrate holder for excellent flatness without manual fixation, along with an integrated pump and cloud-based remote operation, while scalarSC uses an external pump and standard high-flatness holder."
+            },
+            {
+              "question": "Can FOM vectorSC be installed in a glove box?",
+              "answer": "Yes, its compact setup installs easily inside a laminar flow hood or a glove box."
+            },
+            {
+              "question": "What is the price of FOM vectorSC in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your substrate and remote access requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of FOM vectorSC in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the FOM Technologies FOM vectorSC in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -480,10 +742,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm FOM vectorSC fits your workflow", "body": "Tell us your typical substrate size and whether remote operation matters for your lab, and we'll confirm whether FOM vectorSC fits your workflow." },
-              { "title": "Confirm how the microporous holder performs with your samples", "body": "Tell us your typical substrate material and thickness, and we'll confirm how the microporous holder performs with your samples." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows microporous holding and remote operation on your own materials" },
+              { "title": "Configuration Assessment", "body": "Confirms substrate size and remote access setup for your lab" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with cloud software and pump operation" },
+              { "title": "Preventive Maintenance", "body": "Maintains substrate holder, pump, and software performance" },
+              { "title": "Spares and Accessories", "body": "Supplies holder components and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -505,22 +770,36 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "FOM vectorSC product information: microporous substrate holding, integrated pump, and remote diagnostics.",
-                "subheading": "FOM vectorSC at a Glance",
+                "subheading": "Overview",
                 "body": [
-                  "The system is built specifically for fast, easy coating of functional materials, aimed at multi-user, high-throughput research on organic and perovskite electronics, sensors, and energy storage.",
-                  "A proprietary design delivers excellent substrate flatness through the microporous structure of the substrate holder itself, providing homogeneous suction that avoids extra steps typically needed to fixate a sample.",
-                  "The pump is integrated directly into the tool, paired with cloud-based software that enables genuine remote operation and diagnostics.",
-                  "Both flexible and rigid substrates up to 300 × 200 mm position freely on a high-flatness, aluminum-made sample holder.",
-                  "An infinite-step height and lateral position manual dial supports systematic, quick-reaction experimental runs, with full operator control throughout.",
-                  "The compact setup installs easily inside a laminar flow hood or a glove box, similar to the scalarSC platform but with the added precision of the microporous holder and integrated pump.",
-                  "Together, the microporous holder and integrated pump support a genuinely high-throughput, accelerated workflow."
+                  {
+                    "text": "The system is built specifically for fast, easy coating of functional materials, aimed at multi-user, high-throughput research on organic and perovskite electronics, sensors, and energy storage."
+                  },
+                  {
+                    "text": "A proprietary design delivers excellent substrate flatness through the microporous structure of the substrate holder itself, providing homogeneous suction that avoids extra steps typically needed to fixate a sample."
+                  },
+                  {
+                    "text": "The pump is integrated directly into the tool, paired with cloud-based software that enables genuine remote operation and diagnostics."
+                  },
+                  { "text": "Both flexible and rigid substrates up to 300 × 200 mm position freely on a high-flatness, aluminum-made sample holder." },
+                  {
+                    "text": "An infinite-step height and lateral position manual dial supports systematic, quick-reaction experimental runs, with full operator control throughout."
+                  },
+                  {
+                    "text": "The compact setup installs easily inside a laminar flow hood or a glove box, similar to the scalarSC platform but with the added precision of the microporous holder and integrated pump."
+                  },
+                  { "text": "Together, the microporous holder and integrated pump support a genuinely high-throughput, accelerated workflow." }
                 ],
                 "cards": [
                   { "title": "Microporous substrate holder", "description": "Excellent flatness via homogeneous suction" },
                   { "title": "Integrated pump", "description": "Built directly into the tool" },
                   { "title": "Cloud-based software", "description": "Genuine remote operation and diagnostics" },
                   { "title": "Up to 300 x 200 mm", "description": "Flexible and rigid substrate compatibility" }
-                ]
+                ],
+                "glanceTitle": "FOM vectorSC at a Glance",
+                "glanceDescription": "What to know about FOM vectorSC: how the microporous substrate holder achieves flatness through suction, its integrated pump and cloud software, and why it's the step up from spin coating.",
+                "intro": "FOM vectorSC overview: microporous holding, integrated pump, and remote diagnostics.",
+                "tabSummary": "Why microporous suction removes a whole fixation step"
               },
               {
                 "key": "config",
@@ -532,53 +811,91 @@
                   { "title": "Sample holder", "description": "Microporous, high-flatness aluminum, homogeneous suction" },
                   { "title": "Positioning", "description": "Infinite-step height and lateral position manual dial" },
                   { "title": "Pump", "description": "Integrated, cloud-software enabled" }
-                ]
+                ],
+                "disclaimer": "Tell us your typical substrate size and whether remote operation matters for your lab, and we'll confirm whether FOM vectorSC fits your workflow."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "FOM vectorSC key features: microporous substrate holding, integrated pump, and remote diagnostics."
+                "description": "FOM vectorSC key features: microporous substrate holding, integrated pump, and remote diagnostics.",
+                "tabSummary": "Integrated pump, cloud software, high-flatness holder"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "FOM vectorSC applications: organic and perovskite electronics, sensors, and energy storage research."
+                "description": "FOM vectorSC applications: organic and perovskite electronics, sensors, and energy storage research.",
+                "tabSummary": "Organic and perovskite electronics, sensors, energy storage"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "FOM vectorSC technical specifications: substrate size, holder design, and remote capability."
+                "description": "FOM vectorSC technical specifications: substrate size, holder design, and remote capability.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Substrate size, holder design, and remote capability"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Microporous Substrate Holding",
                 "title": "Microporous Substrate Holding",
-                "description": "Sample flatness sounds like a small detail until it distorts an entire coating run, and most sheet coaters solve it with extra manual steps to fixate the substrate in place. FOM vectorSC's proprietary substrate holder takes a different approach, using a microporous structure that provides homogeneous suction across the substrate itself. That suction holds the sample flat directly, without needing the extra fixation steps typically required elsewhere, saving time on every single run rather than just occasionally. The result is excellent substrate flatness as a built-in property of the system, not something the operator has to work to achieve each time.",
+                "description": "How FOM vectorSC's microporous holder achieves excellent flatness without extra fixation steps.",
                 "cards": [
                   { "title": "Consistent substrate flatness without extra steps", "description": "Microporous holder, homogeneous suction" },
                   { "title": "Faster setup time per experimental run", "description": "No manual fixation required" },
                   { "title": "Reliable results across flexible and rigid substrates", "description": "Suction works across both substrate types" },
                   { "title": "High-throughput, repeated experimental runs", "description": "Time saved compounds across a busy research schedule" }
-                ]
+                ],
+                "paragraphs": [
+                  "Sample flatness sounds like a small detail until it distorts an entire coating run, and most sheet coaters solve it with extra manual steps to fixate the substrate in place.",
+                  "FOM vectorSC's proprietary substrate holder takes a different approach, using a microporous structure that provides homogeneous suction across the substrate itself. That suction holds the sample flat directly, without needing the extra fixation steps typically required elsewhere, saving time on every single run rather than just occasionally. The result is excellent substrate flatness as a built-in property of the system, not something the operator has to work to achieve each time."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your research needs", "value": "How FOM vectorSC delivers it" },
+                "note": "Tell us your typical substrate material and thickness, and we'll confirm how the microporous holder performs with your samples.",
+                "tabSummary": "How homogeneous suction achieves excellent flatness"
               },
               {
                 "key": "performance",
                 "eyebrow": "Integrated Pump and Remote Operation",
                 "title": "Integrated Pump and Remote Operation",
-                "description": "Precursor delivery and remote access are usually two separate problems. FOM vectorSC solves them together by building the pump directly into the tool and pairing it with cloud-based control.",
+                "tabSummary": "What cloud-based control actually enables",
                 "body": [
+                  "What FOM vectorSC's built-in pump and cloud-based software actually enable.",
+                  "Precursor delivery and remote access are usually two separate problems. FOM vectorSC solves them together by building the pump directly into the tool and pairing it with cloud-based control.",
                   "Because the pump is integrated rather than external, precursor delivery becomes part of the same controlled system as substrate positioning and coating parameters, rather than a separate piece of hardware to manage alongside it. Cloud-based software then extends that control beyond the physical lab, enabling genuine remote operation and diagnostics, useful for teams checking in on a run from elsewhere, or for troubleshooting support without needing someone physically present at the machine."
                 ],
-                "utilityChecklist": [
-                  { "label": "Simplified precursor delivery", "value": "Pump integrated directly into the tool" },
-                  { "label": "Coordinated control across coating parameters", "value": "Pump managed within the same system as positioning" },
-                  { "label": "Monitoring a run from outside the lab", "value": "Cloud-based remote operation" },
-                  { "label": "Faster troubleshooting support", "value": "Remote diagnostics without requiring an on-site visit" }
-                ],
-                "disclaimer": "Tell us how your team currently monitors running experiments, and we'll show how FOM vectorSC's remote capability fits in."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your lab needs",
+                      "How FOM vectorSC delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Simplified precursor delivery",
+                        "Pump integrated directly into the tool"
+                      ],
+                      [
+                        "Coordinated control across coating parameters",
+                        "Pump managed within the same system as positioning"
+                      ],
+                      [
+                        "Monitoring a run from outside the lab",
+                        "Cloud-based remote operation"
+                      ],
+                      [
+                        "Faster troubleshooting support",
+                        "Remote diagnostics without requiring an on-site visit"
+                      ]
+                    ]
+                  },
+                  { "note": "Tell us how your team currently monitors running experiments, and we'll show how FOM vectorSC's remote capability fits in." }
+                ]
               },
               {
                 "key": "docs",
@@ -589,7 +906,9 @@
                   { "title": "FOM vectorSC Datasheet", "description": "Available on request" },
                   { "title": "Microporous Holder Technical Guide", "description": "Available on request" },
                   { "title": "Cloud Software and Remote Access Overview", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheet"
               }
             ],
             "cta": {
@@ -598,31 +917,49 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Excellent substrate flatness through microporous suction, with an integrated pump and cloud-based remote operation built in. Tell us your substrate size and remote access needs, and Inkarp will confirm the right FOM vectorSC setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Getting excellent substrate flatness usually means extra steps to fixate the sample. FOM vectorSC removes that step entirely.",
+              "Built from the ground up for easy control over coating on rigid and flexible substrates, FOM vectorSC integrates industry-grade components and user-friendly recipe features for a seamless, accelerated workflow. A proprietary microporous substrate holder delivers excellent flatness through homogeneous suction, while an integrated pump paired with cloud-based software enables genuine remote operation and diagnostics."
+            ],
+            "statsIntro": "FOM vectorSC at a glance: substrate size, holder design, and remote capability."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "FOM alphaSC Sheet-Based Slot-Die Coating Systems",
+
           "slug": "fom-alphasc-sheet-based-slot-die-coating-systems",
+
           "principalImage": "/assets/images/PrincipalLogos/FOM-Technologies.svg",
+
           "imageAlt": "FOM Technologies FOM alphaSC Sheet-Based Slot-Die Coating Systems - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/fom-alphasc-sheet-based-slot-die-coating-systems",
+
           "breadcrumbPath": "Home > Products > Sheet-Based Slot-Die Coating Systems > FOM alphaSC Sheet-Based Slot-Die Coating Systems",
+
           "h1": "FOM alphaSC Sheet-Based Slot-Die Coating Systems",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Every variable in a slot-die coating run, head position, pump timing, substrate fixation, is a chance for the next run to drift from the last one. FOM alphaSC is built to close that gap.",
 
           "features": [
-            "Microporous Substrate Holder: Homogeneous suction across flexible or rigid substrates, no manual fixturing required.",
-            "Automated 2-Axis Slot-Die Head: Vertical and lateral movement coordinated with software-integrated pump control.",
-            "Protocol Library: Save deposition conditions and recall them for exact process reproduction.",
-            "Systematic, Accelerated Workflow: Automation replaces manual positioning for higher-throughput experimental design.",
-            "Post-Deposition Treatment Modules: Optional drying, annealing, and compressed gas quick-drying units.",
-            "Docking Module Compatibility: Connects standalone coating to a broader small-scale pilot processing line.",
-            "Flexible and Rigid Substrate Support: One tool, both substrate classes, without reconfiguration.",
-            "Lab-to-Fab Development Path: Built to advance technology readiness level toward production scale."
+            { "title": "Microporous Substrate Holder", "description": "Homogeneous suction across flexible or rigid substrates, no manual fixturing required." },
+            { "title": "Automated 2-Axis Slot-Die Head", "description": "Vertical and lateral movement coordinated with software-integrated pump control." },
+            { "title": "Protocol Library", "description": "Save deposition conditions and recall them for exact process reproduction." },
+            { "title": "Systematic, Accelerated Workflow", "description": "Automation replaces manual positioning for higher-throughput experimental design." },
+            { "title": "Post-Deposition Treatment Modules", "description": "Optional drying, annealing, and compressed gas quick-drying units." },
+            { "title": "Docking Module Compatibility", "description": "Connects standalone coating to a broader small-scale pilot processing line." },
+            { "title": "Flexible and Rigid Substrate Support", "description": "One tool, both substrate classes, without reconfiguration." },
+            { "title": "Lab-to-Fab Development Path", "description": "Built to advance technology readiness level toward production scale." }
           ],
 
           "technicalSpecs": [
@@ -634,15 +971,18 @@
             { "label": "Pump Control", "value": "Software-integrated" },
             { "label": "Reproducibility", "value": "Protocol library, save and recall deposition conditions" },
             { "label": "Expansion Modules", "value": "Drying/annealing units, compressed gas quick-drying, docking modules" },
-            { "label": "Confirmed Applications", "value": "Solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, conductive thin films" }
+            {
+              "label": "Confirmed Applications",
+              "value": "Solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, conductive thin films"
+            }
           ],
 
           "applications": [
-            "Third-Generation Solar Cells: Reproducible thin-film deposition for device research",
-            "OLED and Electrochromic Devices: Precise, repeatable coating for layered device structures",
-            "Fuel Cells and Batteries: Consistent thin-film layers for energy storage research",
-            "Sensors and Membranes: Homogeneous coating on flexible and rigid substrates",
-            "Printed Electronics and Conductive Thin Films: Automated, systematic experimental design"
+            { "title": "Third-Generation Solar Cells", "description": "Reproducible thin-film deposition for device research" },
+            { "title": "OLED and Electrochromic Devices", "description": "Precise, repeatable coating for layered device structures" },
+            { "title": "Fuel Cells and Batteries", "description": "Consistent thin-film layers for energy storage research" },
+            { "title": "Sensors and Membranes", "description": "Homogeneous coating on flexible and rigid substrates" },
+            { "title": "Printed Electronics and Conductive Thin Films", "description": "Automated, systematic experimental design" }
           ],
 
           "inPageNav": [
@@ -663,7 +1003,9 @@
             "steps": [
               {
                 "key": "substrateType",
-                "question": "What's the substrate type?",
+                "label": "Substrate type",
+                "question": "Substrate type",
+                "hint": "Flexible or rigid",
                 "options": [
                   { "val": "flexible", "label": "Flexible" },
                   { "val": "rigid", "label": "Rigid" }
@@ -671,7 +1013,9 @@
               },
               {
                 "key": "applicationArea",
-                "question": "What's the target application area?",
+                "label": "Application area",
+                "question": "Application area",
+                "hint": "Solar cells, OLEDs, batteries, sensors, printed electronics, or other",
                 "options": [
                   { "val": "solar-cells", "label": "Solar cells" },
                   { "val": "oleds", "label": "OLEDs" },
@@ -682,10 +1026,11 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to an application-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for an application-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Substrate and Application Selector",
+            "emptyState": "Confirms substrate holder and workflow fit",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -695,6 +1040,7 @@
               {
                 "key": "currentStage",
                 "label": "Current stage",
+                "hint": "Single coating station, or planning expansion",
                 "options": [
                   { "val": "single-station", "label": "Single coating station" },
                   { "val": "planning-expansion", "label": "Planning expansion" }
@@ -703,6 +1049,7 @@
               {
                 "key": "expansionModules",
                 "label": "Expansion modules",
+                "hint": "Drying/annealing, compressed gas quick-drying, docking modules",
                 "options": [
                   { "val": "drying-annealing", "label": "Drying/annealing" },
                   { "val": "compressed-gas", "label": "Compressed gas quick-drying" },
@@ -715,37 +1062,106 @@
                 "condition": "default",
                 "title": "How Does Pilot-Line Expansion Work?",
                 "body": "Post-deposition treatment units, drying and annealing, compressed gas for quick-drying, connect through docking modules to turn the standalone tool into a small-scale pilot processing line, built specifically to carry a lab-scale result toward a higher technology readiness level without switching platforms entirely.",
-                "tags": ["Post-Deposition Treatment Modules", "Docking Module Compatibility"]
+                "tags": [
+                  "Post-Deposition Treatment Modules",
+                  "Docking Module Compatibility"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Pilot-Line Expansion Planner",
+            "ctaNote": "Recommends the right module combination. Routes to us for an expansion-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "FOM alphaSC vs. FOM alphaR2R",
+            "title": "Method Comparison",
             "description": "FOM alphaSC compared with FOM alphaR2R across sheet-based coating capability.",
             "columns": [
               { "label": "FOM alphaSC" },
               { "label": "FOM alphaR2R" }
             ],
             "rows": [
-              { "feature": "Core Format", "values": ["Sheet-based, single-station", "Sheet-to-sheet with roll-to-roll capability"] },
-              { "feature": "Substrate Compatibility", "values": ["Flexible and rigid", "Flexible and rigid"] },
-              { "feature": "Best For", "values": ["Lab-scale coating research, pilot-line expansion", "Research and production requiring optional roll-to-roll capability"] },
-              { "feature": "Choose when", "values": ["Your work stays sheet-based, with possible pilot-line growth", "You need roll-to-roll capability alongside sheet-to-sheet precision"] }
+              {
+                "feature": "Core Format",
+                "values": [
+                  "Sheet-based, single-station",
+                  "Sheet-to-sheet with roll-to-roll capability"
+                ]
+              },
+              {
+                "feature": "Substrate Compatibility",
+                "values": [
+                  "Flexible and rigid",
+                  "Flexible and rigid"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Lab-scale coating research, pilot-line expansion",
+                  "Research and production requiring optional roll-to-roll capability"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Your work stays sheet-based, with possible pilot-line growth",
+                  "You need roll-to-roll capability alongside sheet-to-sheet precision"
+                ]
+              }
             ],
-            "disclaimer": "Both share the FOM alpha platform's focus on automation and reproducibility; the choice comes down to whether roll-to-roll capability matters for your process."
+            "disclaimer": "Both share the FOM alpha platform's focus on automation and reproducibility; the choice comes down to whether roll-to-roll capability matters for your process.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "FOM alphaSC industries: solar cell research, battery development, printed electronics.",
             "industries": [
-              { "name": "Solar Cell Research", "useCase": "Third-generation photovoltaic device development", "consideration": "Reproducible layer coating for device comparison studies" },
-              { "name": "Battery and Energy Storage", "useCase": "Electrode and electrolyte thin-film research", "consideration": "Consistent coating across flexible and rigid substrates" },
-              { "name": "Printed Electronics", "useCase": "Conductive thin-film and sensor development", "consideration": "Automated, systematic experimental design" },
-              { "name": "Academic Materials Science", "useCase": "OLED, membrane, and diagnostic material research", "consideration": "Protocol library for publishable, reproducible results" },
-              { "name": "Pilot-Scale Process Development", "useCase": "Advancing from lab result to production readiness", "consideration": "Modular expansion into a pilot processing line" }
+              {
+                "name": "Solar Cell Research",
+                "note": "Use Case: Third-generation photovoltaic device development",
+                "bullets": [
+                  "What to Consider: Reproducible layer coating for device comparison studies"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Battery and Energy Storage",
+                "note": "Use Case: Electrode and electrolyte thin-film research",
+                "bullets": [
+                  "What to Consider: Consistent coating across flexible and rigid substrates"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Printed Electronics",
+                "note": "Use Case: Conductive thin-film and sensor development",
+                "bullets": [
+                  "What to Consider: Automated, systematic experimental design"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Materials Science",
+                "note": "Use Case: OLED, membrane, and diagnostic material research",
+                "bullets": [
+                  "What to Consider: Protocol library for publishable, reproducible results"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pilot-Scale Process Development",
+                "note": "Use Case: Advancing from lab result to production readiness",
+                "bullets": [
+                  "What to Consider: Modular expansion into a pilot processing line"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -759,19 +1175,47 @@
               { "title": "Preventive Maintenance", "description": "Maintains head, pump, and substrate holder performance" },
               { "title": "Spares and Accessories", "description": "Supplies substrate holders and post-deposition module components" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "FOM alphaSC service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the FOM alphaSC used for?", "answer": "It's an automated sheet-based slot-die coating system for lab-scale thin-film research and pilot-scale process development, supporting applications from solar cells to printed electronics." },
-            { "question": "How does the protocol library work?", "answer": "It saves the full set of conditions behind a deposition run, so recalling that protocol later reproduces the same result with high precision." },
-            { "question": "How does the microporous substrate holder help?", "answer": "It applies homogeneous suction across the substrate, holding flexible or rigid materials in place without manual fixturing steps between runs." },
-            { "question": "Can I expand the FOM alphaSC into a larger processing line?", "answer": "Yes, post-deposition treatment units and docking modules connect to the standalone tool to build a small-scale pilot processing line." },
-            { "question": "What substrates does the FOM alphaSC support?", "answer": "Both flexible and rigid substrates, without needing to reconfigure the tool between them." },
-            { "question": "Where can I find detailed technical specifications?", "answer": "Coating width, speed, and substrate dimension figures are available in the full FOM alphaSC technical datasheet on request." },
-            { "question": "What applications is the FOM alphaSC used for?", "answer": "Third-generation solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, and conductive thin films." },
-            { "question": "What is the price of the FOM alphaSC in India?", "answer": "Get in touch and Inkarp will put together a quote around your substrate type and module configuration." },
-            { "question": "Who is the authorized distributor of the FOM alphaSC in India?", "answer": "Inkarp is the authorized distributor and service provider for FOM Technologies' FOM alphaSC in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is the FOM alphaSC used for?",
+              "answer": "It's an automated sheet-based slot-die coating system for lab-scale thin-film research and pilot-scale process development, supporting applications from solar cells to printed electronics."
+            },
+            {
+              "question": "How does the protocol library work?",
+              "answer": "It saves the full set of conditions behind a deposition run, so recalling that protocol later reproduces the same result with high precision."
+            },
+            {
+              "question": "How does the microporous substrate holder help?",
+              "answer": "It applies homogeneous suction across the substrate, holding flexible or rigid materials in place without manual fixturing steps between runs."
+            },
+            {
+              "question": "Can I expand the FOM alphaSC into a larger processing line?",
+              "answer": "Yes, post-deposition treatment units and docking modules connect to the standalone tool to build a small-scale pilot processing line."
+            },
+            {
+              "question": "What substrates does the FOM alphaSC support?",
+              "answer": "Both flexible and rigid substrates, without needing to reconfigure the tool between them."
+            },
+            {
+              "question": "Where can I find detailed technical specifications?",
+              "answer": "Coating width, speed, and substrate dimension figures are available in the full FOM alphaSC technical datasheet on request."
+            },
+            {
+              "question": "What applications is the FOM alphaSC used for?",
+              "answer": "Third-generation solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, and conductive thin films."
+            },
+            {
+              "question": "What is the price of the FOM alphaSC in India?",
+              "answer": "Get in touch and Inkarp will put together a quote around your substrate type and module configuration."
+            },
+            {
+              "question": "Who is the authorized distributor of the FOM alphaSC in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for FOM Technologies' FOM alphaSC in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -792,10 +1236,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right FOM alphaSC configuration", "body": "Tell us your target substrate type and whether you're planning to expand toward a pilot processing line, and we'll get you the right FOM alphaSC configuration." },
-              { "title": "Confirm the right substrate holder configuration", "body": "Tell us your substrate type and typical sample size, and we'll get you the right FOM alphaSC substrate holder configuration." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows automated coating and protocol recall on your own substrate" },
+              { "title": "Configuration Assessment", "body": "Confirms the right substrate holder and module configuration" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident building and recalling protocols" },
+              { "title": "Preventive Maintenance", "body": "Maintains head, pump, and substrate holder performance" },
+              { "title": "Spares and Accessories", "body": "Supplies substrate holders and post-deposition module components" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -818,77 +1265,126 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "FOM alphaSC product information: automated slot-die coating, substrate handling, and process reproducibility.",
-                "body": [
-                  "Reproducibility in slot-die coating usually comes down to whether every variable in the process, substrate fixation, head position, pump timing, stayed identical between runs. FOM alphaSC is designed around removing the manual steps that normally introduce that drift.",
-                  "A microporous substrate holder applies homogeneous suction across the substrate surface, holding flexible or rigid materials in place without the taping, clipping, or manual fixturing that typically adds setup time before a run can even start. The slot-die head itself moves on automated vertical and lateral axes, coordinated with software-integrated pump control, turning what would otherwise be manual positioning into a repeatable, systematic process.",
-                  "Everything a given run needs, positions, timing, pump settings, saves into a protocol library, so calling that protocol back reproduces the exact same deposition conditions later, with visibility into which variables actually differ if a result doesn't match."
-                ],
+                "body": [],
                 "cards": [
                   { "title": "Protocol library", "description": "Exact deposition reproducibility on recall" },
                   { "title": "Microporous holder", "description": "Homogeneous suction, no manual fixturing" },
                   { "title": "2-axis automation", "description": "Systematic, repeatable head positioning" },
                   { "title": "Modular", "description": "Grows into a small-scale pilot line" }
-                ]
+                ],
+                "glanceTitle": "FOM alphaSC at a Glance",
+                "glanceDescription": "FOM alphaSC overview: automation, reproducibility, modular expansion, and application fit.",
+                "subheading": "Overview",
+                "intro": [
+                  "FOM alphaSC overview: automated, reproducible slot-die coating for lab-scale thin-film research.",
+                  "Reproducibility in slot-die coating usually comes down to whether every variable in the process, substrate fixation, head position, pump timing, stayed identical between runs. FOM alphaSC is designed around removing the manual steps that normally introduce that drift.",
+                  "A microporous substrate holder applies homogeneous suction across the substrate surface, holding flexible or rigid materials in place without the taping, clipping, or manual fixturing that typically adds setup time before a run can even start. The slot-die head itself moves on automated vertical and lateral axes, coordinated with software-integrated pump control, turning what would otherwise be manual positioning into a repeatable, systematic process.",
+                  "Everything a given run needs, positions, timing, pump settings, saves into a protocol library, so calling that protocol back reproduces the exact same deposition conditions later, with visibility into which variables actually differ if a result doesn't match."
+                ],
+                "cardsIntro": "FOM alphaSC at a glance: automated positioning, protocol reproducibility, modular pilot-line expansion.",
+                "tabSummary": "Why full automation drives reproducibility here"
               },
               {
                 "key": "config",
                 "eyebrow": "Configuration note",
                 "title": "Configuration note",
                 "cards": [
-                  { "title": "Core capability", "description": "Full automation, software-integrated slot-die coating for sheet substrates" },
-                  { "title": "Substrate holding", "description": "Microporous holder, homogeneous suction, flexible and rigid substrate compatible" },
-                  { "title": "Head positioning", "description": "Automated, vertical and lateral movement" },
-                  { "title": "Reproducibility", "description": "Protocol library for saving and recalling deposition conditions" },
-                  { "title": "Modular expansion", "description": "Post-deposition drying/annealing units, compressed gas quick-drying, docking modules" },
-                  { "title": "Full specifications", "description": "Coating width, speed, and substrate size figures are detailed in the FOM alphaSC datasheet" }
-                ]
+                  { "title": "Core capability", "description": "full automation, software-integrated slot-die coating for sheet substrates" },
+                  { "title": "Substrate holding", "description": "microporous holder, homogeneous suction, flexible and rigid substrate compatible" },
+                  { "title": "Head positioning", "description": "automated, vertical and lateral movement" },
+                  { "title": "Reproducibility", "description": "protocol library for saving and recalling deposition conditions" },
+                  { "title": "Modular expansion", "description": "post-deposition drying/annealing units, compressed gas quick-drying, docking modules" }
+                ],
+                "body": [
+                  "Full technical specifications, coating width, speed, and substrate size figures are detailed in the FOM alphaSC datasheet"
+                ],
+                "disclaimer": "Tell us your target substrate type and whether you're planning to expand toward a pilot processing line, and we'll get you the right FOM alphaSC configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "FOM alphaSC key features: microporous substrate holding, automated slot-die head, protocol library."
+                "description": "FOM alphaSC key features: microporous substrate holding, automated slot-die head, protocol library.",
+                "tabSummary": "Microporous holder, automated head, protocol library"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "FOM alphaSC applications: solar cells, OLEDs, batteries, sensors, and printed electronics."
+                "description": "FOM alphaSC applications: solar cells, OLEDs, batteries, sensors, and printed electronics.",
+                "tabSummary": "Solar cells, OLEDs, batteries, printed electronics, and more"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "FOM alphaSC technical specifications: automation, substrate holding, and reproducibility features."
+                "description": "FOM alphaSC technical specifications: automation, substrate holding, and reproducibility features.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Coating width, speed, substrate dimensions, and wet-film thickness range are detailed in the full FOM alphaSC datasheet.",
+                "tabSummary": "Confirmed automation and substrate handling figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Automated Substrate Handling and Slot-Die Positioning",
                 "title": "Automated Substrate Handling and Slot-Die Positioning",
-                "description": "Two things determine whether a coating run stays consistent from sample to sample: how the substrate is held, and how precisely the head is positioned over it. FOM alphaSC handles both automatically. The microporous substrate holder applies suction evenly across the surface, which is what lets it hold both flexible and rigid substrates without the manual fixturing steps that would otherwise vary slightly between operators or runs. From there, the slot-die head's automated vertical and lateral movement, coordinated with software-integrated pump control, positions and runs the coating pass the same way every time, rather than depending on manual alignment.",
+                "description": "FOM alphaSC substrate handling: microporous suction and automated slot-die head positioning.",
                 "cards": [
                   { "title": "Consistent substrate fixation across runs", "description": "Microporous holder, homogeneous suction" },
                   { "title": "Precise, repeatable head positioning", "description": "Automated vertical and lateral movement" },
                   { "title": "Coordinated pump and head timing", "description": "Software-integrated pump control" },
                   { "title": "Working across substrate types without reconfiguration", "description": "Flexible and rigid substrate compatibility" }
-                ]
+                ],
+                "paragraphs": [
+                  "Two things determine whether a coating run stays consistent from sample to sample: how the substrate is held, and how precisely the head is positioned over it. FOM alphaSC handles both automatically.",
+                  "The microporous substrate holder applies suction evenly across the surface, which is what lets it hold both flexible and rigid substrates without the manual fixturing steps that would otherwise vary slightly between operators or runs. From there, the slot-die head's automated vertical and lateral movement, coordinated with software-integrated pump control, positions and runs the coating pass the same way every time, rather than depending on manual alignment."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your process needs", "value": "How FOM alphaSC delivers it" },
+                "note": "Tell us your substrate type and typical sample size, and we'll get you the right FOM alphaSC substrate holder configuration.",
+                "tabSummary": "What the microporous holder and 2-axis head deliver"
               },
               {
                 "key": "performance",
                 "eyebrow": "Protocol Reproducibility and Modular Pilot-Line Expansion",
                 "title": "Protocol Reproducibility and Modular Pilot-Line Expansion",
-                "description": "FOM alphaSC reproducibility: protocol library and expansion toward pilot-scale processing.",
+                "tabSummary": "Saving conditions and scaling toward production",
                 "body": [
+                  "FOM alphaSC reproducibility: protocol library and expansion toward pilot-scale processing.",
                   "A protocol you can't reliably recall isn't really a protocol, it's a one-time result. The FOM alphaSC's protocol library saves the full set of conditions behind a deposition run, so calling it back later reproduces the same result with high precision, and shows exactly which variables shifted if it doesn't.",
                   "That same platform extends beyond a single coating station. Post-deposition treatment units, drying and annealing, compressed gas for quick-drying, connect through docking modules to turn the standalone tool into a small-scale pilot processing line, built specifically to carry a lab-scale result toward a higher technology readiness level without switching platforms entirely."
                 ],
-                "utilityChecklist": [
-                  { "label": "Reproducing a specific deposition run exactly", "value": "Protocol library, save and recall" },
-                  { "label": "Understanding what changed between two runs", "value": "Insight into individual process variables" },
-                  { "label": "Adding drying or annealing after coating", "value": "Post-deposition treatment modules" },
-                  { "label": "Scaling from single coating station to pilot line", "value": "Docking module compatibility" }
-                ],
-                "disclaimer": "Tell us whether you're working single-station today or planning a pilot-line expansion, and we'll get you the right FOM alphaSC module configuration."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your requirement",
+                      "How FOM alphaSC delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Reproducing a specific deposition run exactly",
+                        "Protocol library, save and recall"
+                      ],
+                      [
+                        "Understanding what changed between two runs",
+                        "Insight into individual process variables"
+                      ],
+                      [
+                        "Adding drying or annealing after coating",
+                        "Post-deposition treatment modules"
+                      ],
+                      [
+                        "Scaling from single coating station to pilot line",
+                        "Docking module compatibility"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell us whether you're working single-station today or planning a pilot-line expansion, and we'll get you the right FOM alphaSC module configuration."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -897,7 +1393,9 @@
                 "description": "FOM alphaSC documentation: full technical datasheet available on request.",
                 "cards": [
                   { "title": "FOM alphaSC Technical Datasheet", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Full technical datasheet"
               }
             ],
             "cta": {
@@ -906,31 +1404,50 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Save a protocol once, and reproduce the exact same coating conditions every time you recall it. Tell us your substrate and application, and Inkarp will get you the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Every variable in a slot-die coating run, head position, pump timing, substrate fixation, is a chance for the next run to drift from the last one. FOM alphaSC is built to close that gap.",
+              "A protocol library saves your deposition process in full, so recalling it reproduces the same run with high precision and gives you real insight into which variables actually moved between attempts. A microporous substrate holder provides homogeneous suction across flexible or rigid substrates, removing the manual fixation steps that usually eat into setup time between samples. The slot-die head itself moves on automated vertical and lateral axes, run through software-integrated pump control, for a systematic, accelerated workflow rather than manual positioning guesswork.",
+              "Add post-deposition units, drying, annealing, compressed gas for quick-drying, and docking modules, and the standalone tool grows into a small-scale pilot processing line, built to carry your research from lab-scale proof of concept toward a higher technology readiness level."
+            ],
+            "statsIntro": "FOM alphaSC slot-die coating system specifications at a glance: automation, substrate holding, and reproducibility."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "FOM alphaR2R Sheet-Based Slot-Die Coating Systems",
+
           "slug": "fom-alphar2r-sheet-based-slot-die-coating-systems",
+
           "principalImage": "/assets/images/PrincipalLogos/FOM-Technologies.svg",
+
           "imageAlt": "FOM Technologies FOM alphaR2R Sheet-Based Slot-Die Coating Systems - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/fom-alphar2r-sheet-based-slot-die-coating-systems",
+
           "breadcrumbPath": "Home > Products > Sheet-Based Slot-Die Coating Systems > FOM alphaR2R Sheet-Based Slot-Die Coating Systems",
+
           "h1": "FOM alphaR2R Sheet-Based Slot-Die Coating Systems",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Most coating platforms force a choice between sheet-based precision and roll-to-roll throughput. FOM alphaR2R is built as a sheet-to-sheet system first, with roll-to-roll capability built in for when your process actually needs it.",
 
           "features": [
-            "Sheet-to-Sheet Coating Core: Discrete substrate handling as the primary coating format.",
-            "Roll-to-Roll Capability: Available on the same platform when your process calls for it.",
-            "Flexible and Rigid Substrate Support: One system handles both without reconfiguration.",
-            "Error-Reduction Design Focus: Tailored specifically to eliminate experimental errors across substrate formats.",
-            "Lab-Scale to Production-Scale Range: Positioned for both early research and production-level processes.",
-            "Academic and Industrial Use: Built for both research institutions and industrial development teams.",
-            "Precision and Reproducibility Focus: Core design goal shared across the FOM alpha platform family.",
-            "Same Design Philosophy as FOM alphaSC: Shares the alpha family's approach to control and versatility."
+            { "title": "Sheet-to-Sheet Coating Core", "description": "Discrete substrate handling as the primary coating format." },
+            { "title": "Roll-to-Roll Capability", "description": "Available on the same platform when your process calls for it." },
+            { "title": "Flexible and Rigid Substrate Support", "description": "One system handles both without reconfiguration." },
+            { "title": "Error-Reduction Design Focus", "description": "Tailored specifically to eliminate experimental errors across substrate formats." },
+            { "title": "Lab-Scale to Production-Scale Range", "description": "Positioned for both early research and production-level processes." },
+            { "title": "Academic and Industrial Use", "description": "Built for both research institutions and industrial development teams." },
+            { "title": "Precision and Reproducibility Focus", "description": "Core design goal shared across the FOM alpha platform family." },
+            { "title": "Same Design Philosophy as FOM alphaSC", "description": "Shares the alpha family's approach to control and versatility." }
           ],
 
           "technicalSpecs": [
@@ -940,15 +1457,18 @@
             { "label": "Substrate Compatibility", "value": "Flexible and rigid substrates" },
             { "label": "Application Range", "value": "Lab-scale research through production-scale processes" },
             { "label": "Confirmed Use Settings", "value": "Academia and industry" },
-            { "label": "Confirmed Applications", "value": "Solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, conductive thin films" }
+            {
+              "label": "Confirmed Applications",
+              "value": "Solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, conductive thin films"
+            }
           ],
 
           "applications": [
-            "Third-Generation Solar Cells: Precise, repeatable coating for device research and production",
-            "OLED and Electrochromic Devices: Consistent layer deposition on flexible or rigid substrates",
-            "Fuel Cells and Batteries: Reproducible thin-film layers at lab or production scale",
-            "Sensors and Membranes: Sheet-to-sheet precision with roll-to-roll capability when scaling",
-            "Printed Electronics and Conductive Thin Films: Flexible substrate compatibility for continuous device layers"
+            { "title": "Third-Generation Solar Cells", "description": "Precise, repeatable coating for device research and production" },
+            { "title": "OLED and Electrochromic Devices", "description": "Consistent layer deposition on flexible or rigid substrates" },
+            { "title": "Fuel Cells and Batteries", "description": "Reproducible thin-film layers at lab or production scale" },
+            { "title": "Sensors and Membranes", "description": "Sheet-to-sheet precision with roll-to-roll capability when scaling" },
+            { "title": "Printed Electronics and Conductive Thin Films", "description": "Flexible substrate compatibility for continuous device layers" }
           ],
 
           "inPageNav": [
@@ -969,7 +1489,9 @@
             "steps": [
               {
                 "key": "substrateFormat",
-                "question": "What's your substrate format?",
+                "label": "Substrate format",
+                "question": "Substrate format",
+                "hint": "Primarily discrete sheets, primarily roll-based, or mixed",
                 "options": [
                   { "val": "discrete-sheets", "label": "Primarily discrete sheets" },
                   { "val": "roll-based", "label": "Primarily roll-based" },
@@ -978,17 +1500,20 @@
               },
               {
                 "key": "substrateType",
-                "question": "What's the substrate type?",
+                "label": "Substrate type",
+                "question": "Substrate type",
+                "hint": "Flexible or rigid",
                 "options": [
                   { "val": "flexible", "label": "Flexible" },
                   { "val": "rigid", "label": "Rigid" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a format-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a format-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Sheet vs Roll-to-Roll Process Planner",
+            "emptyState": "Confirms sheet-to-sheet fit, or flags roll-to-roll confirmation needed",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -998,6 +1523,7 @@
               {
                 "key": "priorityCapability",
                 "label": "Priority capability",
+                "hint": "Protocol library, microporous holder, roll-to-roll capability, or pilot-line expansion",
                 "options": [
                   { "val": "protocol-library", "label": "Protocol library" },
                   { "val": "microporous-holder", "label": "Microporous holder" },
@@ -1008,6 +1534,7 @@
               {
                 "key": "applicationArea",
                 "label": "Application area",
+                "hint": "Solar, OLED, battery, sensor, or other",
                 "options": [
                   { "val": "solar", "label": "Solar" },
                   { "val": "oled", "label": "OLED" },
@@ -1022,38 +1549,113 @@
                 "condition": "default",
                 "title": "FOM alphaSC or FOM alphaR2R — Which Fits?",
                 "body": "FOM alphaR2R shares its design philosophy with FOM alphaSC, eliminating experimental error, supporting flexible and rigid substrates, and targeting both academic and industrial users. Where FOM alphaSC's own page details specific mechanisms, a microporous substrate holder, automated head positioning, and a protocol library, FOM alphaR2R's page doesn't restate those same details directly, so they're not assumed to carry over without confirmation.",
-                "tags": ["Roll-to-Roll Capability", "Same Design Philosophy as FOM alphaSC"]
+                "tags": [
+                  "Roll-to-Roll Capability",
+                  "Same Design Philosophy as FOM alphaSC"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "FOM Alpha Family Selector",
+            "ctaNote": "Recommends FOM alphaSC or FOM alphaR2R. Routes to us for a system-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "FOM alphaR2R vs. FOM alphaSC",
+            "title": "Method Comparison",
             "description": "FOM alphaR2R compared with FOM alphaSC across sheet-based coating capability.",
             "columns": [
               { "label": "FOM alphaR2R" },
               { "label": "FOM alphaSC" }
             ],
             "rows": [
-              { "feature": "Core Format", "values": ["Sheet-to-sheet with roll-to-roll capability", "Sheet-based, single-station with modular expansion"] },
-              { "feature": "Substrate Compatibility", "values": ["Flexible and rigid", "Flexible and rigid"] },
-              { "feature": "Confirmed Unique Features", "values": ["Roll-to-roll capability", "Microporous holder, protocol library, pilot-line modules"] },
-              { "feature": "Best For", "values": ["Processes needing occasional roll-to-roll runs", "Lab-scale research with pilot-line growth potential"] },
-              { "feature": "Choose when", "values": ["Roll-to-roll capability matters for your process", "You need confirmed reproducibility tools and modular expansion"] }
+              {
+                "feature": "Core Format",
+                "values": [
+                  "Sheet-to-sheet with roll-to-roll capability",
+                  "Sheet-based, single-station with modular expansion"
+                ]
+              },
+              {
+                "feature": "Substrate Compatibility",
+                "values": [
+                  "Flexible and rigid",
+                  "Flexible and rigid"
+                ]
+              },
+              {
+                "feature": "Confirmed Unique Features",
+                "values": [
+                  "Roll-to-roll capability",
+                  "Microporous holder, protocol library, pilot-line modules"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Processes needing occasional roll-to-roll runs",
+                  "Lab-scale research with pilot-line growth potential"
+                ]
+              },
+              {
+                "feature": "Choose when",
+                "values": [
+                  "Roll-to-roll capability matters for your process",
+                  "You need confirmed reproducibility tools and modular expansion"
+                ]
+              }
             ],
-            "disclaimer": "Both share the FOM alpha platform's core design philosophy; the choice comes down to whether roll-to-roll capability or the confirmed alphaSC-specific tools matter more for your work."
+            "disclaimer": "Both share the FOM alpha platform's core design philosophy; the choice comes down to whether roll-to-roll capability or the confirmed alphaSC-specific tools matter more for your work.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "FOM alphaR2R industries: solar research, battery development, flexible electronics production.",
             "industries": [
-              { "name": "Solar Cell Research and Production", "useCase": "Device layers requiring both lab and production-scale coating", "consideration": "Sheet-to-sheet precision with room to scale toward roll-based runs" },
-              { "name": "Battery and Energy Storage", "useCase": "Electrode coating across research and early production", "consideration": "Flexible and rigid substrate compatibility" },
-              { "name": "Flexible Electronics Production", "useCase": "Continuous device layer coating", "consideration": "Roll-to-roll capability alongside sheet precision" },
-              { "name": "Academic Materials Science", "useCase": "Early-stage thin-film research", "consideration": "Sheet-to-sheet format for controlled, discrete experiments" },
-              { "name": "Industrial Process Scale-Up", "useCase": "Moving from lab result toward production", "consideration": "Confirmed lab-to-production application range" }
+              {
+                "name": "Solar Cell Research and Production",
+                "note": "Use Case: Device layers requiring both lab and production-scale coating",
+                "bullets": [
+                  "What to Consider: Sheet-to-sheet precision with room to scale toward roll-based runs"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Battery and Energy Storage",
+                "note": "Use Case: Electrode coating across research and early production",
+                "bullets": [
+                  "What to Consider: Flexible and rigid substrate compatibility"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Flexible Electronics Production",
+                "note": "Use Case: Continuous device layer coating",
+                "bullets": [
+                  "What to Consider: Roll-to-roll capability alongside sheet precision"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Materials Science",
+                "note": "Use Case: Early-stage thin-film research",
+                "bullets": [
+                  "What to Consider: Sheet-to-sheet format for controlled, discrete experiments"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Industrial Process Scale-Up",
+                "note": "Use Case: Moving from lab result toward production",
+                "bullets": [
+                  "What to Consider: Confirmed lab-to-production application range"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -1067,19 +1669,44 @@
               { "title": "Preventive Maintenance", "description": "Maintains coating head and roll-to-roll mechanism performance" },
               { "title": "Spares and Accessories", "description": "Supplies substrate handling and roll-to-roll components" },
               { "title": "Service Support", "description": "Handles troubleshooting, maintenance visits, and AMC" }
-            ]
+            ],
+            "description": "FOM alphaR2R service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the FOM alphaR2R used for?", "answer": "It's a sheet-to-sheet slot-die coating system with roll-to-roll capability, used for thin-film research and production across academia and industry." },
-            { "question": "Is the FOM alphaR2R a roll-to-roll coater?", "answer": "Its core format is sheet-to-sheet, processing discrete substrates; roll-to-roll is a built-in capability rather than the default operating mode." },
+            {
+              "question": "What is the FOM alphaR2R used for?",
+              "answer": "It's a sheet-to-sheet slot-die coating system with roll-to-roll capability, used for thin-film research and production across academia and industry."
+            },
+            {
+              "question": "Is the FOM alphaR2R a roll-to-roll coater?",
+              "answer": "Its core format is sheet-to-sheet, processing discrete substrates; roll-to-roll is a built-in capability rather than the default operating mode."
+            },
             { "question": "What substrates does the FOM alphaR2R support?", "answer": "Both flexible and rigid substrates on the same platform." },
-            { "question": "How is FOM alphaR2R different from FOM alphaSC?", "answer": "FOM alphaR2R adds roll-to-roll capability to the sheet-to-sheet format; FOM alphaSC's own page confirms specific tools like a microporous substrate holder and a protocol library that aren't restated on the alphaR2R page." },
-            { "question": "Is this system suitable for production, or only research?", "answer": "Both, the confirmed application range spans lab-scale research through production-scale processes, used in academic and industrial settings." },
-            { "question": "Where can I find detailed technical specifications?", "answer": "Coating width, speed, substrate dimensions, and roll-to-roll specifications are available in the full FOM alphaR2R technical datasheet on request." },
-            { "question": "What applications is the FOM alphaR2R used for?", "answer": "Third-generation solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, and conductive thin films." },
-            { "question": "What is the price of the FOM alphaR2R in India?", "answer": "Get in touch and Inkarp will put together a quote around your process format and substrate requirements." },
-            { "question": "Who is the authorized distributor of the FOM alphaR2R in India?", "answer": "Inkarp is the authorized distributor and service provider for FOM Technologies' FOM alphaR2R in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "How is FOM alphaR2R different from FOM alphaSC?",
+              "answer": "FOM alphaR2R adds roll-to-roll capability to the sheet-to-sheet format; FOM alphaSC's own page confirms specific tools like a microporous substrate holder and a protocol library that aren't restated on the alphaR2R page."
+            },
+            {
+              "question": "Is this system suitable for production, or only research?",
+              "answer": "Both, the confirmed application range spans lab-scale research through production-scale processes, used in academic and industrial settings."
+            },
+            {
+              "question": "Where can I find detailed technical specifications?",
+              "answer": "Coating width, speed, substrate dimensions, and roll-to-roll specifications are available in the full FOM alphaR2R technical datasheet on request."
+            },
+            {
+              "question": "What applications is the FOM alphaR2R used for?",
+              "answer": "Third-generation solar cells, OLED and electrochromic devices, fuel cells, batteries, sensors, membranes, printed electronics, medical diagnostics, and conductive thin films."
+            },
+            {
+              "question": "What is the price of the FOM alphaR2R in India?",
+              "answer": "Get in touch and Inkarp will put together a quote around your process format and substrate requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of the FOM alphaR2R in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for FOM Technologies' FOM alphaR2R in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -1100,10 +1727,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right FOM alphaR2R configuration", "body": "Tell us whether your process needs primarily sheet-based coating or genuine roll-to-roll throughput, and we'll get you the right FOM alphaR2R configuration." },
-              { "title": "Confirm FOM alphaR2R fits your process", "body": "Tell us how much of your work is sheet-based versus roll-based, and we'll confirm whether FOM alphaR2R fits your process directly." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows sheet-to-sheet coating and roll-to-roll capability on your own substrate" },
+              { "title": "Configuration Assessment", "body": "Confirms whether alphaR2R or alphaSC fits your process" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident running both sheet and roll-based modes" },
+              { "title": "Preventive Maintenance", "body": "Maintains coating head and roll-to-roll mechanism performance" },
+              { "title": "Spares and Accessories", "body": "Supplies substrate handling and roll-to-roll components" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -1125,73 +1755,122 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "FOM alphaR2R product information: sheet-to-sheet coating with roll-to-roll capability.",
-                "body": [
-                  "The name signals roll-to-roll, but the system underneath is a sheet-to-sheet coating machine with roll-to-roll capability added, not a dedicated continuous-web coater. That distinction matters if your process genuinely needs discrete sheet handling most of the time, with roll-to-roll available as an option rather than the default mode.",
-                  "Built around the same design goals as the rest of the FOM alpha family, eliminating experimental error and enhancing usability, it runs both flexible and rigid substrates on one platform, positioned for precision and reproducibility whether the work sits in early-stage academic research or production-scale industry use."
-                ],
+                "body": [],
                 "cards": [
                   { "title": "Sheet-to-sheet", "description": "Primary coating format" },
                   { "title": "R2R capable", "description": "Roll-to-roll capability built in" },
                   { "title": "Flexible + rigid", "description": "Substrate compatibility" },
                   { "title": "Lab to production", "description": "Confirmed application range" }
-                ]
+                ],
+                "glanceTitle": "FOM alphaR2R at a Glance",
+                "glanceDescription": "FOM alphaR2R overview: coating format, substrate compatibility, and application fit.",
+                "subheading": "Overview",
+                "intro": [
+                  "FOM alphaR2R overview: sheet-to-sheet slot-die coating with roll-to-roll capability for lab and production use.",
+                  "The name signals roll-to-roll, but the system underneath is a sheet-to-sheet coating machine with roll-to-roll capability added, not a dedicated continuous-web coater. That distinction matters if your process genuinely needs discrete sheet handling most of the time, with roll-to-roll available as an option rather than the default mode.",
+                  "Built around the same design goals as the rest of the FOM alpha family, eliminating experimental error and enhancing usability, it runs both flexible and rigid substrates on one platform, positioned for precision and reproducibility whether the work sits in early-stage academic research or production-scale industry use."
+                ],
+                "cardsIntro": "FOM alphaR2R at a glance: sheet-to-sheet coating, roll-to-roll capability, substrate flexibility.",
+                "tabSummary": "Why sheet-to-sheet with R2R capability is a genuine distinction"
               },
               {
                 "key": "config",
                 "eyebrow": "Configuration note",
                 "title": "Configuration note",
                 "cards": [
-                  { "title": "Core format", "description": "Sheet-to-sheet coating with roll-to-roll capability" },
-                  { "title": "Substrate compatibility", "description": "Flexible and rigid substrates" },
-                  { "title": "Application range", "description": "Positioned for both lab-scale research and production-scale processes" },
-                  { "title": "Full specifications", "description": "Coating width, speed, and substrate dimension specifications are detailed in the FOM alphaR2R datasheet" }
-                ]
+                  { "title": "Core format", "description": "sheet-to-sheet coating with roll-to-roll capability" },
+                  { "title": "Substrate compatibility", "description": "flexible and rigid substrates" }
+                ],
+                "body": [
+                  "Positioned for both lab-scale research and production-scale processes",
+                  "Full coating width, speed, and substrate dimension specifications are detailed in the FOM alphaR2R datasheet"
+                ],
+                "disclaimer": "Tell us whether your process needs primarily sheet-based coating or genuine roll-to-roll throughput, and we'll get you the right FOM alphaR2R configuration."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "FOM alphaR2R key features: sheet-to-sheet coating, roll-to-roll capability, dual substrate support."
+                "description": "FOM alphaR2R key features: sheet-to-sheet coating, roll-to-roll capability, dual substrate support.",
+                "tabSummary": "Flexible and rigid substrate support, precision, reproducibility"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "FOM alphaR2R applications: solar cells, OLEDs, batteries, sensors, and printed electronics."
+                "description": "FOM alphaR2R applications: solar cells, OLEDs, batteries, sensors, and printed electronics.",
+                "tabSummary": "Solar cells, OLEDs, batteries, printed electronics, and more"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "FOM alphaR2R technical specifications: coating format, substrate compatibility, and application range."
+                "description": "FOM alphaR2R technical specifications: coating format, substrate compatibility, and application range.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "note": "Coating width, speed, substrate dimensions, and roll-to-roll specifications are detailed in the full FOM alphaR2R datasheet.",
+                "tabSummary": "Confirmed format and substrate compatibility figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Sheet-to-Sheet Format and Roll-to-Roll Capability",
                 "title": "Sheet-to-Sheet Format and Roll-to-Roll Capability",
-                "description": "The \"R2R\" in the name refers to a capability, not the system's core operating mode. FOM alphaR2R runs as a sheet-to-sheet coating machine at its core, processing discrete substrates one at a time, with roll-to-roll capability built into the same platform for processes that need continuous-web handling. That distinction is worth confirming against your own process before ordering. If most of your work involves individual sheets with occasional roll-based runs, this format fits directly. If your process is fundamentally continuous roll-to-roll, it's worth confirming with Inkarp whether this configuration or a dedicated roll-based system fits better.",
+                "description": "FOM alphaR2R format: sheet-to-sheet coating core with added roll-to-roll capability.",
                 "cards": [
                   { "title": "Primarily discrete sheet substrates", "description": "Sheet-to-sheet core format fits directly" },
                   { "title": "Occasional roll-to-roll runs", "description": "Confirmed capability on the same platform" },
                   { "title": "Primarily continuous roll-based coating", "description": "Confirm fit against a dedicated roll-to-roll system" },
                   { "title": "Mixed flexible and rigid substrate work", "description": "Both substrate classes supported" }
-                ]
+                ],
+                "paragraphs": [
+                  "The \"R2R\" in the name refers to a capability, not the system's core operating mode. FOM alphaR2R runs as a sheet-to-sheet coating machine at its core, processing discrete substrates one at a time, with roll-to-roll capability built into the same platform for processes that need continuous-web handling.",
+                  "That distinction is worth confirming against your own process before ordering. If most of your work involves individual sheets with occasional roll-based runs, this format fits directly. If your process is fundamentally continuous roll-to-roll, it's worth confirming with Inkarp whether this configuration or a dedicated roll-based system fits better."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "Your process", "value": "What to confirm" },
+                "note": "Tell us how much of your work is sheet-based versus roll-based, and we'll confirm whether FOM alphaR2R fits your process directly.",
+                "tabSummary": "What the name actually means for your process"
               },
               {
                 "key": "performance",
                 "eyebrow": "Positioning FOM alphaR2R Against the FOM alpha Family",
                 "title": "Positioning FOM alphaR2R Against the FOM alpha Family",
-                "description": "FOM alphaR2R positioning: sheet-to-sheet with roll-to-roll capability, alongside FOM alphaSC.",
+                "tabSummary": "How it fits alongside FOM alphaSC",
                 "body": [
+                  "FOM alphaR2R positioning: sheet-to-sheet with roll-to-roll capability, alongside FOM alphaSC.",
                   "FOM alphaR2R shares its design philosophy with FOM alphaSC, eliminating experimental error, supporting flexible and rigid substrates, and targeting both academic and industrial users. Where FOM alphaSC's own page details specific mechanisms, a microporous substrate holder, automated head positioning, and a protocol library, FOM alphaR2R's page doesn't restate those same details directly, so they're not assumed to carry over without confirmation."
                 ],
-                "utilityChecklist": [
-                  { "label": "Confirmed microporous holder and protocol library", "value": "FOM alphaSC" },
-                  { "label": "Roll-to-roll capability alongside sheet-to-sheet coating", "value": "FOM alphaR2R" },
-                  { "label": "Modular expansion into a pilot processing line", "value": "FOM alphaSC, confirmed" },
-                  { "label": "Either system, unsure which fits", "value": "Confirm directly with Inkarp based on your process" }
-                ],
-                "disclaimer": "Tell us which specific capabilities matter most for your process, and we'll confirm whether FOM alphaSC or FOM alphaR2R is the right fit."
+                "groups": [
+                  {
+                    "columns": [
+                      "Your priority",
+                      "Which FOM alpha system to confirm"
+                    ],
+                    "rows": [
+                      [
+                        "Confirmed microporous holder and protocol library",
+                        "FOM alphaSC"
+                      ],
+                      [
+                        "Roll-to-roll capability alongside sheet-to-sheet coating",
+                        "FOM alphaR2R"
+                      ],
+                      [
+                        "Modular expansion into a pilot processing line",
+                        "FOM alphaSC, confirmed"
+                      ],
+                      [
+                        "Either system, unsure which fits",
+                        "Confirm directly with Inkarp based on your process"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell us which specific capabilities matter most for your process, and we'll confirm whether FOM alphaSC or FOM alphaR2R is the right fit."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -1200,7 +1879,9 @@
                 "description": "FOM alphaR2R documentation: full technical datasheet available on request.",
                 "cards": [
                   { "title": "FOM alphaR2R Technical Datasheet", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Full technical datasheet"
               }
             ],
             "cta": {
@@ -1209,9 +1890,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Sheet-to-sheet coating precision, with roll-to-roll capability built into the same platform. Tell us your substrate format and application, and Inkarp will get you the right configuration.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Most coating platforms force a choice between sheet-based precision and roll-to-roll throughput. FOM alphaR2R is built as a sheet-to-sheet system first, with roll-to-roll capability built in for when your process actually needs it.",
+              "Flexible and rigid substrates both run on the same platform, tailored to eliminate the experimental errors that come from switching between formats or operators. The result is precision and reproducibility that carries across both lab-scale research and production-scale processes, in academia or industry alike."
+            ],
+            "statsIntro": "FOM alphaR2R slot-die coating system specifications at a glance: sheet-to-sheet format and roll-to-roll capability."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

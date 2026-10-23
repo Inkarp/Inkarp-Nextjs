@@ -277,6 +277,13 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                         {row.desc && <p className="mt-1 text-xs leading-5 text-black">{row.desc}</p>}
                       </div>
                     ))}
+                    {/* Fixed rows a source document adds to the result card (e.g. recommended accessories). */}
+                    {result.extraRows?.map((row) => (
+                      <div className="border border-line-light bg-parchment-alt px-4 py-3" key={row.label}>
+                        <span className="text-xs font-bold uppercase tracking-wide text-black">{row.label}</span>
+                        <p className="mt-1 text-sm leading-6 text-black">{row.value}</p>
+                      </div>
+                    ))}
                   </div>
                   {result.ctaNote && <p className="mt-4 shrink-0 text-sm leading-6 text-black">{result.ctaNote}</p>}
                   <div className="mt-5 flex shrink-0 flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-start">

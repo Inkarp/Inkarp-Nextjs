@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "robot-coupe",
-    "principalName": "Robot Coupe",
-    "countryOfOrigin": "France"
-  },
+  "principal": { "slug": "robot-coupe", "principalName": "Robot Coupe", "countryOfOrigin": "France" },
   "categories": [
     {
       "name": "Blixer Systems (Fine Homogenization for Semi-Solid Samples)",
@@ -11,25 +7,34 @@
       "products": [
         {
           "name": "BLIXER® 2",
+
           "slug": "blixer-2",
+
           "principalImage": "/assets/images/PrincipalLogos/robot.png",
+
           "imageAlt": "Robot Coupe BLIXER® 2 - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/blixer-2",
+
           "breadcrumbPath": "Home > Products > Blixer Systems (Fine Homogenization for Semi-Solid Samples) > BLIXER® 2",
+
           "h1": "BLIXER® 2",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Texture-modified meal prep shouldn't need a full production kitchen behind it. BLIXER 2 handles small batches with the same precision as its larger siblings.",
 
           "features": [
-            "Direct-Drive Induction Motor: Runs without a belt, built specifically for intensive, repeated daily use.",
-            "Single-Speed 3450 RPM Operation: Delivers consistent processing performance batch after batch.",
-            "Pulse Function: Adds finer cutting control for jobs that need extra precision.",
-            "Fine-Serrated Twin-Blade Assembly: Handles even the smallest ingredients cleanly and thoroughly.",
-            "Leakproof, See-Through Lid: Opens mid-process for adding ingredients, while staying clear for monitoring.",
-            "Bowl Scraper Arm and Lid Wiper: Keeps every bit of food processed and the lid visibly clean throughout the run.",
-            "Magnetic Safety System and Motor Brake: Built-in protection for safe, reliable daily operation.",
-            "Fully Dismantlable, Dishwasher-Safe Parts: Cleans down quickly between batches without extra tools."
+            { "title": "Direct-Drive Induction Motor", "description": "Runs without a belt, built specifically for intensive, repeated daily use." },
+            { "title": "Single-Speed 3450 RPM Operation", "description": "Delivers consistent processing performance batch after batch." },
+            { "title": "Pulse Function", "description": "Adds finer cutting control for jobs that need extra precision." },
+            { "title": "Fine-Serrated Twin-Blade Assembly", "description": "Handles even the smallest ingredients cleanly and thoroughly." },
+            { "title": "Leakproof, See-Through Lid", "description": "Opens mid-process for adding ingredients, while staying clear for monitoring." },
+            { "title": "Bowl Scraper Arm and Lid Wiper", "description": "Keeps every bit of food processed and the lid visibly clean throughout the run." },
+            { "title": "Magnetic Safety System and Motor Brake", "description": "Built-in protection for safe, reliable daily operation." },
+            { "title": "Fully Dismantlable, Dishwasher-Safe Parts", "description": "Cleans down quickly between batches without extra tools." }
           ],
 
           "technicalSpecs": [
@@ -49,11 +54,11 @@
           ],
 
           "applications": [
-            "Texture-Modified Meal Preparation: Processes raw or cooked ingredients to soft, puréed, or liquid textures",
-            "Healthcare and Care Facility Catering: Retains full nutritional composition across every texture level",
-            "Sauces, Dressings, and Mousses: Fine-serrated blade assembly delivers smooth, consistent results",
-            "Small-Batch Grinding and Chopping: 2.9 L bowl suits single-portion or low-volume prep",
-            "Puréed and Liquid Meal Production: Five core functions, liquify, chop, grind, purée, emulsify, in one unit"
+            { "title": "Texture-Modified Meal Preparation", "description": "Processes raw or cooked ingredients to soft, puréed, or liquid textures" },
+            { "title": "Healthcare and Care Facility Catering", "description": "Retains full nutritional composition across every texture level" },
+            { "title": "Sauces, Dressings, and Mousses", "description": "Fine-serrated blade assembly delivers smooth, consistent results" },
+            { "title": "Small-Batch Grinding and Chopping", "description": "2.9 L bowl suits single-portion or low-volume prep" },
+            { "title": "Puréed and Liquid Meal Production", "description": "Five core functions, liquify, chop, grind, purée, emulsify, in one unit" }
           ],
 
           "inPageNav": [
@@ -73,7 +78,9 @@
             "steps": [
               {
                 "key": "batchVolume",
-                "question": "What's your typical batch volume?",
+                "label": "Batch volume input",
+                "question": "Batch volume input",
+                "hint": "Single-portion, small-batch, or higher volume",
                 "options": [
                   { "val": "single-portion", "label": "Single-portion" },
                   { "val": "small-batch", "label": "Small-batch" },
@@ -82,7 +89,9 @@
               },
               {
                 "key": "textureOutput",
-                "question": "What texture output do you need?",
+                "label": "Texture output need",
+                "question": "Texture output need",
+                "hint": "Soft, puréed, or fully liquid",
                 "options": [
                   { "val": "soft", "label": "Soft" },
                   { "val": "pureed", "label": "Puréed" },
@@ -91,7 +100,9 @@
               },
               {
                 "key": "functionNeeded",
-                "question": "What function do you need?",
+                "label": "Function needed",
+                "question": "Function needed",
+                "hint": "Chop, grind, purée, or emulsify",
                 "options": [
                   { "val": "chop", "label": "Chop" },
                   { "val": "grind", "label": "Grind" },
@@ -100,10 +111,12 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to us for a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Batch Size and Function Selector",
+            "lead": "Find the right Blixer model for your batch size and texture needs.",
+            "emptyState": "Recommends BLIXER 2 or a larger Blixer model",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -113,6 +126,7 @@
               {
                 "key": "facilityType",
                 "label": "Facility type",
+                "hint": "Healthcare, care facility, or commercial kitchen",
                 "options": [
                   { "val": "healthcare", "label": "Healthcare" },
                   { "val": "care-facility", "label": "Care facility" },
@@ -122,6 +136,7 @@
               {
                 "key": "textureModifiedRequirement",
                 "label": "Texture-modified meal requirement",
+                "hint": "Yes or no",
                 "options": [
                   { "val": "yes", "label": "Yes" },
                   { "val": "no", "label": "No" }
@@ -130,9 +145,10 @@
               {
                 "key": "batchesPerService",
                 "label": "Batches per service",
+                "hint": "Low, moderate, or high frequency",
                 "options": [
-                  { "val": "low", "label": "Low frequency" },
-                  { "val": "moderate", "label": "Moderate frequency" },
+                  { "val": "low", "label": "Low" },
+                  { "val": "moderate", "label": "Moderate" },
                   { "val": "high", "label": "High frequency" }
                 ]
               }
@@ -142,20 +158,63 @@
                 "condition": "default",
                 "title": "Texture-Modified Meal Preparation Explained",
                 "body": "BLIXER 2 processes raw or cooked ingredients to soft, puréed, or liquid textures while retaining the full composition and nutritional value of the original meal.",
-                "tags": ["Texture-Modified Meal Preparation", "Healthcare and Care Facility Catering"]
+                "tags": [
+                  "Texture-Modified Meal Preparation",
+                  "Healthcare and Care Facility Catering"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Facility Fit Checker",
+            "ctaNote": "Confirms fit and suggests accessories if needed. Routes to us for a configuration-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "Industries using BLIXER 2 include healthcare catering, aged care facilities, and small commercial kitchens.",
             "industries": [
-              { "name": "Healthcare and Hospital Catering", "useCase": "Preparing texture-modified meals for patients with swallowing difficulties", "consideration": "Full nutritional value retained across every texture level" },
-              { "name": "Aged Care and Residential Facilities", "useCase": "Serving consistent, modified-texture meals across daily service", "consideration": "Fast, seconds-per-batch processing keeps service on schedule" },
-              { "name": "Small Commercial Kitchens", "useCase": "Preparing sauces, purées, and small-batch dishes", "consideration": "2.9 L bowl suits low-volume, frequent-use kitchen work" },
-              { "name": "Bakers and Confectioners", "useCase": "Producing smooth mousses and fine purées for desserts", "consideration": "Twin-blade assembly delivers consistently fine texture" },
-              { "name": "Delicatessen and Specialty Catering", "useCase": "Preparing spreads, dips, and finely processed ingredients", "consideration": "Pulse function adds precision for delicate textures" }
+              {
+                "name": "Healthcare and Hospital Catering",
+                "note": "Use Case: Preparing texture-modified meals for patients with swallowing difficulties",
+                "bullets": [
+                  "What to Consider: Full nutritional value retained across every texture level"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Aged Care and Residential Facilities",
+                "note": "Use Case: Serving consistent, modified-texture meals across daily service",
+                "bullets": [
+                  "What to Consider: Fast, seconds-per-batch processing keeps service on schedule"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Small Commercial Kitchens",
+                "note": "Use Case: Preparing sauces, purées, and small-batch dishes",
+                "bullets": [
+                  "What to Consider: 2.9 L bowl suits low-volume, frequent-use kitchen work"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Bakers and Confectioners",
+                "note": "Use Case: Producing smooth mousses and fine purées for desserts",
+                "bullets": [
+                  "What to Consider: Twin-blade assembly delivers consistently fine texture"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Delicatessen and Specialty Catering",
+                "note": "Use Case: Preparing spreads, dips, and finely processed ingredients",
+                "bullets": [
+                  "What to Consider: Pulse function adds precision for delicate textures"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -174,16 +233,46 @@
           },
 
           "faqs": [
-            { "question": "What is BLIXER 2 used for?", "answer": "BLIXER 2 is a compact blender/mixer used to prepare texture-modified meals and general kitchen items, capable of liquifying, chopping, grinding, puréeing, and emulsifying raw or cooked ingredients." },
-            { "question": "What is the bowl capacity of BLIXER 2?", "answer": "The stainless steel bowl holds 2.9 L, suited to single-portion or small-batch processing." },
-            { "question": "How powerful is the BLIXER 2 motor?", "answer": "It runs on a 1 HP, single-phase, direct-drive induction motor at a single speed of 3450 RPM." },
-            { "question": "Can BLIXER 2 preserve nutritional value when changing food texture?", "answer": "Yes, it processes ingredients to soft, puréed, or liquid textures while retaining the full composition and nutritional value of the original meal." },
-            { "question": "Is BLIXER 2 easy to clean between batches?", "answer": "Yes, all food-contact components come apart and are dishwasher-safe, keeping turnaround quick between uses." },
-            { "question": "What safety features does BLIXER 2 include?", "answer": "It includes a magnetic safety system and a motor brake, along with a heavy-duty composite motor base for reliable daily use." },
-            { "question": "Can I add ingredients while BLIXER 2 is running?", "answer": "Yes, the leakproof, see-through lid can be opened mid-process to add ingredients without stopping the batch." },
-            { "question": "How is BLIXER 2 different from larger Blixer models?", "answer": "BLIXER 2 is the smallest, single-portion model in Robot-Coupe's 16-model Blixer range, suited to lower-volume prep, while larger models scale up in bowl capacity and motor power for higher-volume kitchens." },
-            { "question": "What is the price of BLIXER 2 in India?", "answer": "Get in touch and Inkarp will put together a quote based on your kitchen's volume and requirements." },
-            { "question": "Who is the authorized distributor of BLIXER 2 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Robot-Coupe BLIXER 2 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is BLIXER 2 used for?",
+              "answer": "BLIXER 2 is a compact blender/mixer used to prepare texture-modified meals and general kitchen items, capable of liquifying, chopping, grinding, puréeing, and emulsifying raw or cooked ingredients."
+            },
+            {
+              "question": "What is the bowl capacity of BLIXER 2?",
+              "answer": "The stainless steel bowl holds 2.9 L, suited to single-portion or small-batch processing."
+            },
+            {
+              "question": "How powerful is the BLIXER 2 motor?",
+              "answer": "It runs on a 1 HP, single-phase, direct-drive induction motor at a single speed of 3450 RPM."
+            },
+            {
+              "question": "Can BLIXER 2 preserve nutritional value when changing food texture?",
+              "answer": "Yes, it processes ingredients to soft, puréed, or liquid textures while retaining the full composition and nutritional value of the original meal."
+            },
+            {
+              "question": "Is BLIXER 2 easy to clean between batches?",
+              "answer": "Yes, all food-contact components come apart and are dishwasher-safe, keeping turnaround quick between uses."
+            },
+            {
+              "question": "What safety features does BLIXER 2 include?",
+              "answer": "It includes a magnetic safety system and a motor brake, along with a heavy-duty composite motor base for reliable daily use."
+            },
+            {
+              "question": "Can I add ingredients while BLIXER 2 is running?",
+              "answer": "Yes, the leakproof, see-through lid can be opened mid-process to add ingredients without stopping the batch."
+            },
+            {
+              "question": "How is BLIXER 2 different from larger Blixer models?",
+              "answer": "BLIXER 2 is the smallest, single-portion model in Robot-Coupe's 16-model Blixer range, suited to lower-volume prep, while larger models scale up in bowl capacity and motor power for higher-volume kitchens."
+            },
+            {
+              "question": "What is the price of BLIXER 2 in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on your kitchen's volume and requirements."
+            },
+            {
+              "question": "Who is the authorized distributor of BLIXER 2 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Robot-Coupe BLIXER 2 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -204,10 +293,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right model for your volume", "body": "Tell us your typical batch size and whether you're preparing texture-modified meals or general kitchen prep, and we'll confirm whether BLIXER 2 or a larger model in the range fits your volume." },
-              { "title": "Confirm the right texture range for your service", "body": "Tell us the range of texture levels your facility needs to prepare, and we'll confirm the right BLIXER model for your service volume." },
-              { "title": "Installation and first-run support", "body": "Inkarp supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows blending, chopping, and texture-modification results on-site" },
+              { "title": "Configuration Assessment", "body": "Confirms whether BLIXER 2 or a larger Blixer model fits your volume" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Gets your team confident with controls, cleaning, and blade handling" },
+              { "title": "Preventive Maintenance", "body": "Maintains motor, blade, and safety system performance" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement blades, bowls, and lids" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -229,83 +321,129 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "description": "BLIXER 2 product information: motor design, texture functions, and construction details.",
-                "subheading": "BLIXER 2 at a Glance",
+                "subheading": "Overview",
                 "body": [
-                  "A 1 HP direct-drive induction motor runs without a belt, built for intensive daily use in a commercial or healthcare kitchen.",
-                  "The motor operates at a single speed of 3450 RPM, with a pulse switch available for finer cutting precision when a job calls for it.",
-                  "Inside the 2.9 L stainless steel bowl, a fine-serrated, twin-blade \"S\" assembly handles chopping, grinding, puréeing, and emulsifying in the same unit.",
-                  "The leakproof, see-through lid can be opened mid-process, letting ingredients be added while the batch is running without stopping to check progress blind.",
-                  "A bowl scraper arm and lid wiper work together during operation, keeping ingredients fully processed and the lid clear for visibility.",
-                  "The stainless steel bowl comes with a handle for secure gripping and easy pouring once a batch is finished.",
-                  "A magnetic safety system and motor brake are built in as standard, alongside a heavy-duty composite motor base built to withstand daily commercial use.",
-                  "All food-contact components come apart for cleaning, dishwasher-safe, so turnaround between batches stays quick."
+                  { "text": "A 1 HP direct-drive induction motor runs without a belt, built for intensive daily use in a commercial or healthcare kitchen." },
+                  {
+                    "text": "The motor operates at a single speed of 3450 RPM, with a pulse switch available for finer cutting precision when a job calls for it."
+                  },
+                  {
+                    "text": "Inside the 2.9 L stainless steel bowl, a fine-serrated, twin-blade \"S\" assembly handles chopping, grinding, puréeing, and emulsifying in the same unit."
+                  },
+                  {
+                    "text": "The leakproof, see-through lid can be opened mid-process, letting ingredients be added while the batch is running without stopping to check progress blind."
+                  },
+                  {
+                    "text": "A bowl scraper arm and lid wiper work together during operation, keeping ingredients fully processed and the lid clear for visibility."
+                  },
+                  { "text": "The stainless steel bowl comes with a handle for secure gripping and easy pouring once a batch is finished." },
+                  {
+                    "text": "A magnetic safety system and motor brake are built in as standard, alongside a heavy-duty composite motor base built to withstand daily commercial use."
+                  },
+                  { "text": "All food-contact components come apart for cleaning, dishwasher-safe, so turnaround between batches stays quick." }
                 ],
                 "cards": [
                   { "title": "1 HP direct-drive motor", "description": "No belt, built for intensive use" },
                   { "title": "3450 RPM, single speed", "description": "Consistent, reliable batch performance" },
                   { "title": "2.9 L stainless steel bowl", "description": "Sized for small-batch, single-portion work" },
                   { "title": "Five processing functions", "description": "Liquify, chop, grind, purée, emulsify" }
-                ]
+                ],
+                "glanceTitle": "BLIXER 2 at a Glance",
+                "tabSummary": "Why a single small unit covers five distinct functions"
               },
               {
                 "key": "config",
                 "eyebrow": "Configuration note",
                 "title": "Configuration note",
                 "cards": [
-                  { "title": "Solution", "description": "Robot-Coupe BLIXER 2" },
-                  { "title": "Motor", "description": "1 HP, single-phase, direct-drive induction" },
-                  { "title": "Speed", "description": "3450 RPM, single speed, with pulse function" },
-                  { "title": "Bowl", "description": "2.9 L stainless steel, with handle" },
-                  { "title": "Blade", "description": "Fine-serrated, twin-blade \"S\" assembly" },
-                  { "title": "Dimensions", "description": "15.25\" H x 11\" L x 8.25\" W" },
-                  { "title": "Weight", "description": "Approximately 25 lbs" }
-                ]
+                  {
+                    "title": "Solution",
+                    "description": "Robot-Coupe BLIXER 2 Motor: 1 HP, single-phase, direct-drive induction Speed: 3450 RPM, single speed, with pulse function Bowl: 2.9 L stainless steel, with handle Blade: Fine-serrated, twin-blade \"S\" assembly Dimensions: 15.25\" H x 11\" L x 8.25\" W Weight: Approximately 25 lbs"
+                  }
+                ],
+                "disclaimer": "Tell us your typical batch size and whether you're preparing texture-modified meals or general kitchen prep, and we'll confirm whether BLIXER 2 or a larger model in the range fits your volume."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "BLIXER 2 key features: direct-drive motor, safety systems, and easy-clean design."
+                "description": "BLIXER 2 key features: direct-drive motor, safety systems, and easy-clean design.",
+                "tabSummary": "Direct-drive motor, twin-blade assembly, safety systems"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "BLIXER 2 applications: texture-modified meals, sauces, purées, and small-batch kitchen prep."
+                "description": "BLIXER 2 applications: texture-modified meals, sauces, purées, and small-batch kitchen prep.",
+                "tabSummary": "Texture-modified meal prep, sauces, purées, small-batch work"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "BLIXER 2 technical specifications: motor power, blade speed, bowl capacity, and dimensions."
+                "description": "BLIXER 2 technical specifications: motor power, blade speed, bowl capacity, and dimensions.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Motor, speed, bowl, and dimension figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Texture-Modified Meal Preparation",
                 "title": "Texture-Modified Meal Preparation",
-                "description": "Preparing meals to a modified texture usually means a trade-off between safety and nutrition, unless the equipment is built to avoid that trade-off entirely. BLIXER 2 processes raw or cooked ingredients, sweet or savoury, entrées through desserts, into whichever texture level a resident or patient needs, soft, puréed, or fully liquid, without losing the composition or nutritional value of the original meal. That means a modified-texture dessert still delivers the same nutrition as the standard version, not a diluted substitute. The whole process happens in seconds per batch, keeping meal service on schedule even when multiple texture levels need preparing across a single sitting.",
+                "description": "How BLIXER 2 preserves nutritional value while adjusting food texture.",
                 "cards": [
                   { "title": "Multiple texture levels from the same recipe", "description": "Adjustable processing from soft to fully liquid" },
                   { "title": "Preserved nutritional value across textures", "description": "Full composition retained during processing" },
                   { "title": "Fast turnaround across meal service", "description": "Batch processing completed in seconds" },
                   { "title": "Consistent results across raw and cooked ingredients", "description": "Same blade and motor performance for either" }
-                ]
+                ],
+                "paragraphs": [
+                  "Preparing meals to a modified texture usually means a trade-off between safety and nutrition, unless the equipment is built to avoid that trade-off entirely.",
+                  "BLIXER 2 processes raw or cooked ingredients, sweet or savoury, entrées through desserts, into whichever texture level a resident or patient needs, soft, puréed, or fully liquid, without losing the composition or nutritional value of the original meal. That means a modified-texture dessert still delivers the same nutrition as the standard version, not a diluted substitute. The whole process happens in seconds per batch, keeping meal service on schedule even when multiple texture levels need preparing across a single sitting."
+                ],
+                "body": [],
+                "columnHeaders": { "label": "What your kitchen needs", "value": "How BLIXER 2 delivers it" },
+                "note": "Tell us the range of texture levels your facility needs to prepare, and we'll confirm the right BLIXER model for your service volume.",
+                "tabSummary": "How full nutritional value is retained across textures"
               },
               {
                 "key": "performance",
                 "eyebrow": "Cleaning and Safety Design",
                 "title": "Cleaning and Safety Design",
-                "description": "A unit that runs multiple times a day needs to be as easy to clean and safe to operate as it is capable of processing food well.",
+                "tabSummary": "What keeps daily operation simple and safe",
                 "body": [
+                  "A unit that runs multiple times a day needs to be as easy to clean and safe to operate as it is capable of processing food well.",
                   "Every food-contact component, bowl, blade assembly, lid, and scraper, comes apart for cleaning and goes straight into a dishwasher, so turnaround between batches doesn't become a bottleneck. On the safety side, a magnetic safety system paired with a motor brake keeps the unit protected during operation, while the heavy-duty composite motor base is built to withstand the wear of repeated daily use in a busy kitchen or care facility."
                 ],
-                "utilityChecklist": [
-                  { "label": "Fast cleanup between batches", "value": "Fully dismantlable, dishwasher-safe components" },
-                  { "label": "Reliable daily safety", "value": "Magnetic safety system and motor brake" },
-                  { "label": "Equipment built for repeated use", "value": "Heavy-duty composite motor base" },
-                  { "label": "Clear visibility during processing", "value": "See-through, leakproof lid" }
-                ],
-                "disclaimer": "Tell us your daily batch volume and cleaning routine, and we'll confirm BLIXER 2 fits your kitchen's pace."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your operation needs",
+                      "How BLIXER 2 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Fast cleanup between batches",
+                        "Fully dismantlable, dishwasher-safe components"
+                      ],
+                      [
+                        "Reliable daily safety",
+                        "Magnetic safety system and motor brake"
+                      ],
+                      [
+                        "Equipment built for repeated use",
+                        "Heavy-duty composite motor base"
+                      ],
+                      [
+                        "Clear visibility during processing",
+                        "See-through, leakproof lid"
+                      ]
+                    ]
+                  },
+                  { "note": "Tell us your daily batch volume and cleaning routine, and we'll confirm BLIXER 2 fits your kitchen's pace." }
+                ]
               },
               {
                 "key": "docs",
@@ -316,7 +454,9 @@
                   { "title": "BLIXER 2 Spec Sheet", "description": "Available on request" },
                   { "title": "Blixer Range Selection Guide", "description": "Available on request" },
                   { "title": "Warranty Information", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Product datasheet"
               }
             ],
             "cta": {
@@ -325,9 +465,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "A compact, 2.9 L blender/mixer that turns raw or cooked ingredients into soft, puréed, or liquid textures in seconds, without losing nutritional value. Tell us your batch size and service needs, and Inkarp will confirm the right Blixer model.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Texture-modified meal prep shouldn't need a full production kitchen behind it. BLIXER 2 handles small batches with the same precision as its larger siblings.",
+              "A 1 HP direct-drive induction motor runs the twin-blade, fine-serrated \"S\" blade assembly at 3450 RPM inside a 2.9 L stainless steel bowl, turning raw or cooked ingredients into soft, puréed, or liquid textures in seconds. The leakproof, see-through lid opens mid-process for adding ingredients on the fly, and a bowl scraper arm with lid wiper keeps every bit of food actually processed and used."
+            ],
+            "statsIntro": "BLIXER 2 at a glance: motor power, blade speed, and bowl capacity."
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

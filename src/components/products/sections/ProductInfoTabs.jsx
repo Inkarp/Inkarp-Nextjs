@@ -394,9 +394,10 @@ export default function ProductInfoTabs({ product }) {
             <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
               {overviewSec?.subheading ?? 'Reliable rotary evaporation, focused on the essentials'}
             </h3>
-            {overviewSec?.intro && (
-              <p className="mb-5 text-sm leading-7 text-black">{overviewSec.intro}</p>
-            )}
+            {/* `intro` is one paragraph, or several when a source document has more than one before its bullets. */}
+            {(Array.isArray(overviewSec?.intro) ? overviewSec.intro : overviewSec?.intro ? [overviewSec.intro] : []).map((text, i) => (
+              <p key={`intro-${i}`} className="mb-5 text-sm leading-7 text-black">{text}</p>
+            ))}
             {overviewSec?.body?.map((p, i) => {
               // `{ title, text }` items keep a source document's bold lead-in
               // exactly, with no separator character added between the two.
@@ -468,7 +469,8 @@ export default function ProductInfoTabs({ product }) {
               <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
             ))}
             <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-              {(product.features ?? []).slice(0, 12).map((f, i) => {
+              {/* Twelve by default; a section can opt in to more (`featureLimit`) when its source document lists more. */}
+              {(product.features ?? []).slice(0, keyFeaturesSec?.featureLimit ?? 12).map((f, i) => {
                 const isObject = f && typeof f === 'object';
                 const colonIdx = isObject ? -1 : f.indexOf(':');
                 const title       = isObject ? (f.title ?? '') : (colonIdx > -1 ? f.slice(0, colonIdx).trim() : f.trim());
@@ -708,6 +710,23 @@ export default function ProductInfoTabs({ product }) {
   // empty header and an empty card.
   if (visibleTabs.length === 0) return null;
 
+  // A source document's "at a Glance" lines are this block's heading and description:
+  // they replace the "Product Information" heading and its one-line summary, so the
+  // block doesn't show two headings and two descriptions. Only lines the content
+  // supplies are used; a missing one is never filled in.
+  const glanceTitle = overviewSec?.glanceTitle;
+  const glanceDescription = overviewSec?.glanceDescription;
+  let headerTitle = overviewSec?.title ?? 'Product at a glance';
+  let headerDescription = overviewSec?.description ?? '';
+  if (glanceTitle) {
+    headerTitle = glanceTitle;
+    headerDescription = glanceDescription || headerDescription;
+  } else if (glanceDescription) {
+    // Free-form docs keep the glance heading in `description` ("L-EOS™ at a Glance").
+    headerTitle = overviewSec?.description || headerTitle;
+    headerDescription = glanceDescription;
+  }
+
   return (
     <section id="overview" className="scroll-mt-32 border-b border-line-light bg-parchment px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
       <div className="mx-auto w-full max-w-[1180px]">
@@ -715,20 +734,20 @@ export default function ProductInfoTabs({ product }) {
         <SectionHeader
           number="01"
           eyebrow={overviewSec?.eyebrow ?? 'Product information'}
-          title={overviewSec?.title ?? 'Product at a glance'}
-          description={overviewSec?.description ?? ''}
+          title={headerTitle}
+          description={headerDescription}
         />
 
-        {/* Optional lead-in for the tab list (a source document's "at a Glance" block). */}
-        {(overviewSec?.glanceTitle || overviewSec?.glanceDescription) && (
-          <div className="-mt-3 mb-6 max-w-3xl">
-            {overviewSec.glanceTitle && (
-              <h3 className="text-base font-semibold tracking-tight text-ink">{overviewSec.glanceTitle}</h3>
-            )}
-            {overviewSec.glanceDescription && (
-              <p className="mt-1 text-sm leading-6 text-ink-soft">{overviewSec.glanceDescription}</p>
-            )}
-          </div>
+        {/* Optional short facts list (`glanceFacts`: label / value) from the same block. */}
+        {overviewSec?.glanceFacts?.length > 0 && (
+          <dl className="mb-6 grid border-l border-t border-line-light sm:grid-cols-2 lg:grid-cols-3">
+            {overviewSec.glanceFacts.map((fact) => (
+              <div key={fact.label} className="border-b border-r border-line-light bg-white px-4 py-3">
+                <dt className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft">{fact.label}</dt>
+                <dd className="mt-1 text-sm leading-6 text-ink">{fact.value}</dd>
+              </div>
+            ))}
+          </dl>
         )}
 
         {/* Pill tabs */}

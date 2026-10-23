@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "dara-lyo",
-    "principalName": "Dara-Lyo",
-    "countryOfOrigin": "Spain"
-  },
+  "principal": { "slug": "dara-lyo", "principalName": "Dara-Lyo", "countryOfOrigin": "Spain" },
   "categories": [
     {
       "name": "Pilot Freeze Dryers",
@@ -11,25 +7,37 @@
       "products": [
         {
           "name": "TriEpic Pilot Freeze Dryers",
+
           "slug": "triepic-pilot-freeze-dryers",
+
           "principalImage": "/assets/images/PrincipalLogos/dara-lyo.svg",
+
           "imageAlt": "Dara-Lyo TriEpic Pilot Freeze Dryers - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/triepic-pilot-freeze-dryers",
+
           "breadcrumbPath": "Home > Products > Pilot Freeze Dryers > TriEpic Pilot Freeze Dryers",
+
           "h1": "TriEpic Pilot Freeze Dryers",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Shared lab freeze dryers rarely get a break. One researcher is finishing a long cycle, another is waiting to start, and a condenser reaching capacity can bring the whole workflow to a halt.",
 
           "features": [
-            "INFINITY Double-Condenser Option: Alternates condensers automatically at capacity, keeping cycles running without a manual restart.",
-            "Up to 30 kg Ice Condenser Capacity: Built for demanding, multi-format, or high-volume lab freeze-drying.",
-            "Configurable Condenser Temperature: -55°C or -85°C standard, extendable to -105°C for sensitive formulations.",
-            "Optional Electrically Heated Shelves: Adds temperature-controlled primary drying where the process calls for it.",
-            "Vacuum Control: Optimizes cycle time rather than locking every run to a fixed vacuum profile.",
-            "Chemical Solvent Condenser: Handles solvent-containing formulations without contaminating the main condenser.",
-            "Ultra-Low GWP Natural Refrigerants: Reduces environmental impact without compromising cooling performance.",
-            "FDA 21 CFR Part 11-Ready SCADA Software: Captures process data in a format built for regulated environments."
+            {
+              "title": "INFINITY Double-Condenser Option",
+              "description": "Alternates condensers automatically at capacity, keeping cycles running without a manual restart."
+            },
+            { "title": "Up to 30 kg Ice Condenser Capacity", "description": "Built for demanding, multi-format, or high-volume lab freeze-drying." },
+            { "title": "Configurable Condenser Temperature", "description": "-55°C or -85°C standard, extendable to -105°C for sensitive formulations." },
+            { "title": "Optional Electrically Heated Shelves", "description": "Adds temperature-controlled primary drying where the process calls for it." },
+            { "title": "Vacuum Control", "description": "Optimizes cycle time rather than locking every run to a fixed vacuum profile." },
+            { "title": "Chemical Solvent Condenser", "description": "Handles solvent-containing formulations without contaminating the main condenser." },
+            { "title": "Ultra-Low GWP Natural Refrigerants", "description": "Reduces environmental impact without compromising cooling performance." },
+            { "title": "FDA 21 CFR Part 11-Ready SCADA Software", "description": "Captures process data in a format built for regulated environments." }
           ],
 
           "technicalSpecs": [
@@ -44,15 +52,18 @@
             { "label": "Electrical Power", "value": "2,500 W (1 compressor) / 3,500 W (2 compressors)" },
             { "label": "Weight", "value": "250 kg or 300 kg" },
             { "label": "Vacuum Control", "value": "Optional" },
-            { "label": "Optional Equipment", "value": "Extended condenser temp range, chemical solvent condenser, capacitive vacuum probe, natural refrigerants, FDA 21 CFR Part 11 SCADA software" }
+            {
+              "label": "Optional Equipment",
+              "value": "Extended condenser temp range, chemical solvent condenser, capacitive vacuum probe, natural refrigerants, FDA 21 CFR Part 11 SCADA software"
+            }
           ],
 
           "applications": [
-            "Multi-Researcher Shared Labs: Automatic condenser alternation removes queuing delays between users",
-            "Pharmaceutical Pilot-Scale Studies: FDA 21 CFR Part 11-ready SCADA option supports regulated documentation",
-            "Extended or High-Volume Batch Drying: Up to 30 kg capacity handles demanding run sizes",
-            "Solvent-Containing Formulations: Chemical solvent condenser option protects the main system",
-            "Temperature-Sensitive Products: Condenser range down to -105°C and optional heated shelves"
+            { "title": "Multi-Researcher Shared Labs", "description": "Automatic condenser alternation removes queuing delays between users" },
+            { "title": "Pharmaceutical Pilot-Scale Studies", "description": "FDA 21 CFR Part 11-ready SCADA option supports regulated documentation" },
+            { "title": "Extended or High-Volume Batch Drying", "description": "Up to 30 kg capacity handles demanding run sizes" },
+            { "title": "Solvent-Containing Formulations", "description": "Chemical solvent condenser option protects the main system" },
+            { "title": "Temperature-Sensitive Products", "description": "Condenser range down to -105°C and optional heated shelves" }
           ],
 
           "inPageNav": [
@@ -73,15 +84,20 @@
             "steps": [
               {
                 "key": "userLoad",
-                "question": "How many concurrent users or projects share the unit?",
+                "label": "Number of concurrent users/projects",
+                "question": "Number of concurrent users/projects",
+                "hint": "Single researcher or shared, multi-user lab",
                 "options": [
                   { "val": "single", "label": "Single researcher" },
-                  { "val": "shared", "label": "Shared, multi-user lab" }
+                  { "val": "shared", "label": "Shared" },
+                  { "val": "multi-user-lab", "label": "Multi-user lab" }
                 ]
               },
               {
                 "key": "batchSize",
-                "question": "What's your typical batch size?",
+                "label": "Typical batch size",
+                "question": "Typical batch size",
+                "hint": "Standard or high-volume",
                 "options": [
                   { "val": "standard", "label": "Standard" },
                   { "val": "high-volume", "label": "High-volume" }
@@ -89,7 +105,9 @@
               },
               {
                 "key": "condenserTemp",
-                "question": "What condenser temperature do you need?",
+                "label": "Condenser temperature need",
+                "question": "Condenser temperature need",
+                "hint": "-55°C, -85°C, or -105°C",
                 "options": [
                   { "val": "-55c", "label": "-55°C" },
                   { "val": "-85c", "label": "-85°C" },
@@ -97,10 +115,11 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Condenser Configuration Selector",
+            "emptyState": "Recommends single or INFINITY double condenser",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -110,6 +129,7 @@
               {
                 "key": "regulatoryRequirement",
                 "label": "Regulatory requirement",
+                "hint": "None, internal QC, or FDA 21 CFR Part 11",
                 "options": [
                   { "val": "none", "label": "None" },
                   { "val": "internal-qc", "label": "Internal QC" },
@@ -119,6 +139,7 @@
               {
                 "key": "sampleType",
                 "label": "Sample type",
+                "hint": "Standard aqueous or solvent-containing",
                 "options": [
                   { "val": "standard-aqueous", "label": "Standard aqueous" },
                   { "val": "solvent-containing", "label": "Solvent-containing" }
@@ -127,6 +148,7 @@
               {
                 "key": "dataTrackingNeed",
                 "label": "Data tracking need",
+                "hint": "Basic cycle logs or full SCADA acquisition",
                 "options": [
                   { "val": "basic-logs", "label": "Basic cycle logs" },
                   { "val": "full-scada", "label": "Full SCADA acquisition" }
@@ -138,36 +160,98 @@
                 "condition": "default",
                 "title": "Does TriEpic Support Regulated Pharmaceutical Documentation?",
                 "body": "Yes, optional SCADA software captures process data aligned with FDA 21 CFR Part 11 requirements.",
-                "tags": ["FDA 21 CFR Part 11-Ready SCADA Software", "Chemical Solvent Condenser"]
+                "tags": [
+                  "FDA 21 CFR Part 11-Ready SCADA Software",
+                  "Chemical Solvent Condenser"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Compliance and Data Needs Selector",
+            "ctaNote": "Confirms software and condenser add-ons for compliance. Routes to a compliance-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Standard Condenser vs. INFINITY Double Condenser",
+            "title": "Method Comparison",
             "description": "TriEpic pilot freeze dryer method comparison: standard single condenser versus INFINITY double condenser.",
             "columns": [
               { "label": "Standard Condenser" },
               { "label": "INFINITY Double Condenser" }
             ],
             "rows": [
-              { "feature": "Capacity per Cycle", "values": ["Up to 30 kg", "Up to 30 kg per condenser, alternating"] },
-              { "feature": "Cycle Interruption at Capacity", "values": ["Requires manual reset", "Automatic alternation, no interruption"] },
-              { "feature": "Best For", "values": ["Single-user or lower-frequency labs", "Multi-user, high-frequency shared labs"] },
-              { "feature": "Choose When", "values": ["Runs are scheduled and infrequent", "The unit needs to stay continuously available"] }
+              {
+                "feature": "Capacity per Cycle",
+                "values": [
+                  "Up to 30 kg",
+                  "Up to 30 kg per condenser, alternating"
+                ]
+              },
+              {
+                "feature": "Cycle Interruption at Capacity",
+                "values": [
+                  "Requires manual reset",
+                  "Automatic alternation, no interruption"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Single-user or lower-frequency labs",
+                  "Multi-user, high-frequency shared labs"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Runs are scheduled and infrequent",
+                  "The unit needs to stay continuously available"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations share the same core chamber, compressor options, and optional equipment — the difference is purely how condenser capacity is managed once it's reached."
+            "disclaimer": "Both configurations share the same core chamber, compressor options, and optional equipment — the difference is purely how condenser capacity is managed once it's reached.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "TriEpic pilot freeze dryer industries: pharmaceutical development, biotechnology, and shared academic research labs.",
             "industries": [
-              { "name": "Pharmaceutical Pilot Development", "useCase": "Multi-batch formulation stability testing", "consideration": "FDA 21 CFR Part 11 SCADA option for regulated documentation" },
-              { "name": "Biotechnology Research", "useCase": "Drying biologically active compounds across shared equipment", "consideration": "INFINITY cycling reduces scheduling conflicts between projects" },
-              { "name": "Academic Multi-User Labs", "useCase": "Several researchers running different cycles on one machine", "consideration": "Automatic condenser alternation removes queuing delays" },
-              { "name": "Solvent-Based Formulation Work", "useCase": "Drying samples containing chemical solvents", "consideration": "Optional chemical solvent condenser isolates the risk" }
+              {
+                "name": "Pharmaceutical Pilot Development",
+                "note": "Use Case: Multi-batch formulation stability testing",
+                "bullets": [
+                  "What to Consider: FDA 21 CFR Part 11 SCADA option for regulated documentation"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biotechnology Research",
+                "note": "Use Case: Drying biologically active compounds across shared equipment",
+                "bullets": [
+                  "What to Consider: INFINITY cycling reduces scheduling conflicts between projects"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Academic Multi-User Labs",
+                "note": "Use Case: Several researchers running different cycles on one machine",
+                "bullets": [
+                  "What to Consider: Automatic condenser alternation removes queuing delays"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Solvent-Based Formulation Work",
+                "note": "Use Case: Drying samples containing chemical solvents",
+                "bullets": [
+                  "What to Consider: Optional chemical solvent condenser isolates the risk"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -185,15 +269,36 @@
           },
 
           "faqs": [
-            { "question": "What is the TriEpic Pilot Freeze Dryer used for?", "answer": "It's a pilot-scale freeze dryer built for demanding, multi-format labs, especially shared environments where several researchers run different cycles on the same machine." },
-            { "question": "How does the INFINITY double condenser work?", "answer": "Once the active condenser reaches maximum ice capacity, the second condenser takes over automatically, keeping the freeze-drying cycle running without a manual reset." },
+            {
+              "question": "What is the TriEpic Pilot Freeze Dryer used for?",
+              "answer": "It's a pilot-scale freeze dryer built for demanding, multi-format labs, especially shared environments where several researchers run different cycles on the same machine."
+            },
+            {
+              "question": "How does the INFINITY double condenser work?",
+              "answer": "Once the active condenser reaches maximum ice capacity, the second condenser takes over automatically, keeping the freeze-drying cycle running without a manual reset."
+            },
             { "question": "What is the maximum condenser capacity?", "answer": "Up to 30 kg of ice capacity, with 16 kg processed every 24 hours." },
             { "question": "What condenser temperatures are available?", "answer": "-55°C and -85°C come standard, with -105°C available as an upgrade." },
-            { "question": "Can TriEpic handle solvent-containing samples?", "answer": "Yes, with the optional chemical solvent condenser, which isolates solvent handling from the main system." },
-            { "question": "Does TriEpic support regulated pharmaceutical documentation?", "answer": "Yes, optional SCADA software captures process data aligned with FDA 21 CFR Part 11 requirements." },
-            { "question": "How much power does TriEpic need?", "answer": "2,500 W for the single-compressor configuration, or 3,500 W for the dual-compressor configuration." },
-            { "question": "What is the price of the TriEpic Pilot Freeze Dryer in India?", "answer": "Get in touch and Inkarp will put together a quote based on the condenser, compressor, and software configuration needed." },
-            { "question": "Who is the authorized distributor of TriEpic in India?", "answer": "Inkarp is the authorized distributor and service provider for the Dara-Lyo TriEpic in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Can TriEpic handle solvent-containing samples?",
+              "answer": "Yes, with the optional chemical solvent condenser, which isolates solvent handling from the main system."
+            },
+            {
+              "question": "Does TriEpic support regulated pharmaceutical documentation?",
+              "answer": "Yes, optional SCADA software captures process data aligned with FDA 21 CFR Part 11 requirements."
+            },
+            {
+              "question": "How much power does TriEpic need?",
+              "answer": "2,500 W for the single-compressor configuration, or 3,500 W for the dual-compressor configuration."
+            },
+            {
+              "question": "What is the price of the TriEpic Pilot Freeze Dryer in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the condenser, compressor, and software configuration needed."
+            },
+            {
+              "question": "Who is the authorized distributor of TriEpic in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Dara-Lyo TriEpic in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -214,16 +319,19 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right condenser configuration", "body": "Share your typical batch size and how many researchers share the unit, and the right TriEpic configuration, single or INFINITY double condenser — gets confirmed from there." },
-              { "title": "Confirm whether standard or INFINITY fits your schedule", "body": "Share how many concurrent projects run through the unit weekly, and whether the standard or INFINITY configuration fits gets confirmed directly." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows condenser alternation and cycle performance on real samples" },
+              { "title": "Configuration Assessment", "body": "Confirms condenser, compressor, and software setup for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with SCADA software and condenser management" },
+              { "title": "Preventive Maintenance", "body": "Maintains compressor, condenser, and vacuum system performance" },
+              { "title": "Spares and Accessories", "body": "Supplies probes, condenser components, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
           "longForm": {
             "heroHook": "One condenser reaches its limit. The second one takes over automatically.",
-            "heroLead": "One Freeze Dryer. Multiple Researchers. Zero Waiting on the Condenser. Shared lab freeze dryers rarely get a break. One researcher is finishing a long cycle, another is waiting to start, and a condenser reaching capacity can bring the whole workflow to a halt. TriEpic's INFINITY double-condenser option keeps things moving. When one condenser reaches maximum capacity, the second takes over automatically — allowing the freeze-drying cycle to continue without a manual reset or a lost run. With up to 30 kg condenser capacity and 16 kg/24 h active condensing capacity, INFINITY is built for busy, shared laboratories handling multiple projects, formats and cycles.",
+            "heroLead": "One Freeze Dryer. Multiple Researchers. Zero Waiting on the Condenser. Shared lab freeze dryers rarely get a break. One researcher is finishing a long cycle, another is waiting to start, and a condenser reaching capacity can bring the whole workflow to a halt. TriEpic’s INFINITY double-condenser option keeps things moving. When one condenser reaches maximum capacity, the second takes over automatically — allowing the freeze-drying cycle to continue without a manual reset or a lost run. With up to 30 kg condenser capacity and 16 kg/24 h active condensing capacity, INFINITY is built for busy, shared laboratories handling multiple projects, formats and cycles.",
             "stats": [
               { "value": "Up to 30 kg", "label": "Ice condenser capacity" },
               { "value": "16 kg / 24h", "label": "Condensing capacity" },
@@ -240,21 +348,33 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "body": [
-                  "Ice condenser capacity reaches up to 30 kg, with 16 kg processed every 24 hours, sized for demanding multi-format or high-volume freeze-drying work.",
-                  "The INFINITY double-condenser option alternates automatically once the active condenser reaches capacity, sustaining continuous cycles instead of forcing a stop-and-reset between runs.",
-                  "Condenser temperature runs at -55°C or -85°C as standard, with -105°C available as an upgrade for products that need it.",
-                  "Electrically heated shelves are available as an add-on for temperature-controlled primary drying.",
-                  "A single-compressor and dual-compressor version both exist, at 2,500 W and 3,500 W respectively, letting the electrical footprint match the configuration chosen.",
-                  "Vacuum control is available as an option, useful for labs optimizing cycle time rather than running fixed protocols.",
-                  "A chemical solvent condenser, capacitive vacuum probe, and ultra-low GWP natural refrigerants are all available to match specific process or sustainability requirements.",
-                  "SCADA software supporting FDA 21 CFR Part 11 data acquisition is available for labs that need documented, audit-ready cycle records."
+                  {
+                    "text": "Ice condenser capacity reaches up to 30 kg, with 16 kg processed every 24 hours, sized for demanding multi-format or high-volume freeze-drying work."
+                  },
+                  {
+                    "text": "The INFINITY double-condenser option alternates automatically once the active condenser reaches capacity, sustaining continuous cycles instead of forcing a stop-and-reset between runs."
+                  },
+                  { "text": "Condenser temperature runs at -55°C or -85°C as standard, with -105°C available as an upgrade for products that need it." },
+                  { "text": "Electrically heated shelves are available as an add-on for temperature-controlled primary drying." },
+                  {
+                    "text": "A single-compressor and dual-compressor version both exist, at 2,500 W and 3,500 W respectively, letting the electrical footprint match the configuration chosen."
+                  },
+                  { "text": "Vacuum control is available as an option, useful for labs optimizing cycle time rather than running fixed protocols." },
+                  {
+                    "text": "A chemical solvent condenser, capacitive vacuum probe, and ultra-low GWP natural refrigerants are all available to match specific process or sustainability requirements."
+                  },
+                  {
+                    "text": "SCADA software supporting FDA 21 CFR Part 11 data acquisition is available for labs that need documented, audit-ready cycle records."
+                  }
                 ],
                 "cards": [
                   { "title": "Up to 30 kg capacity", "description": "Handles demanding, high-volume batches" },
                   { "title": "INFINITY double condenser", "description": "Automatic alternation, no cycle interruption" },
                   { "title": "-55°C to -105°C range", "description": "Matches condenser temp to the product" },
                   { "title": "FDA 21 CFR Part 11-ready", "description": "Documented, audit-ready cycle data" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why uninterrupted cycling matters for shared labs"
               },
               {
                 "key": "config",
@@ -266,51 +386,93 @@
                   { "title": "Power", "description": "2,500 W (1 compressor) or 3,500 W (2 compressors)" },
                   { "title": "Weight", "description": "250 kg or 300 kg depending on configuration" },
                   { "title": "Key option", "description": "INFINITY double condenser for uninterrupted cycling" }
-                ]
+                ],
+                "disclaimer": "Share your typical batch size and how many researchers share the unit, and the right TriEpic configuration, single or INFINITY double condenser — gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "INFINITY double condenser, optional shelves, vacuum control"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "TriEpic pilot freeze dryer applications: shared research labs, pharmaceutical pilot studies, and extended-batch lyophilization."
+                "description": "TriEpic pilot freeze dryer applications: shared research labs, pharmaceutical pilot studies, and extended-batch lyophilization.",
+                "tabSummary": "Multi-researcher labs, pharma pilot studies, extended-batch drying"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "TriEpic pilot freeze dryer technical specifications: condenser capacity, dimensions, power, and compressor configuration."
+                "description": "TriEpic pilot freeze dryer technical specifications: condenser capacity, dimensions, power, and compressor configuration.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Condenser capacity, dimensions, power, and compressor figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Uninterrupted Cycling for Shared Labs",
                 "title": "Uninterrupted Cycling for Shared Labs",
-                "description": "A single condenser reaching its capacity mid-run forces a choice: stop and reset, or lose the batch. INFINITY's second condenser takes over automatically the moment the first reaches its limit, so the cycle keeps running without operator intervention. For labs where several researchers rotate through the same machine on different schedules, that removes the scheduling friction of \"wait until the condenser clears.\" The result functions less like a single-run freeze dryer and more like a continuously available shared resource.",
                 "cards": [
                   { "title": "No downtime between high-volume runs", "description": "INFINITY automatic condenser alternation" },
                   { "title": "Predictable scheduling across multiple users", "description": "Continuous cycling without manual resets" },
                   { "title": "Confidence a long run won't be interrupted", "description": "30 kg capacity per condenser, doubled with INFINITY" }
-                ]
+                ],
+                "body": [
+                  "A single condenser reaching its capacity mid-run forces a choice: stop and reset, or lose the batch.",
+                  "INFINITY's second condenser takes over automatically the moment the first reaches its limit, so the cycle keeps running without operator intervention.",
+                  "For labs where several researchers rotate through the same machine on different schedules, that removes the scheduling friction of \"wait until the condenser clears.\"",
+                  "The result functions less like a single-run freeze dryer and more like a continuously available shared resource."
+                ],
+                "columnHeaders": { "label": "What your lab needs", "value": "How TriEpic delivers it" },
+                "note": "Share how many concurrent projects run through the unit weekly, and whether the standard or INFINITY configuration fits gets confirmed directly.",
+                "tabSummary": "How automatic condenser alternation works"
               },
               {
                 "key": "performance",
                 "eyebrow": "Configuring for Compliance and Scale",
                 "title": "Configuring for Compliance and Scale",
-                "description": "Regulated environments need more than a working freeze dryer — they need a documented one. The optional SCADA software captures process data aligned with FDA 21 CFR Part 11, turning routine cycles into audit-ready records.",
-                "body": [
-                  "Solvent-containing samples need protection the standard condenser isn't built for; the chemical solvent condenser option isolates that risk. A capacitive vacuum probe and vacuum control option add finer process optimization for labs pushing beyond standard fixed-cycle protocols. Ultra-low GWP natural refrigerants let sustainability-focused labs reduce environmental impact without trading away cooling performance."
-                ],
-                "utilityChecklist": [
-                  { "label": "Audit-ready cycle documentation", "value": "FDA 21 CFR Part 11-ready SCADA software" },
-                  { "label": "Safe handling of solvent-based samples", "value": "Chemical solvent condenser" },
-                  { "label": "Finer control over cycle timing", "value": "Vacuum control, capacitive vacuum probe" },
-                  { "label": "Lower environmental footprint", "value": "Ultra-low GWP natural refrigerants" }
-                ],
-                "disclaimer": "Share your regulatory requirements and sample type, and the right combination of optional equipment gets confirmed against them."
+                "tabSummary": "Optional equipment and what each solves",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Regulated environments need more than a working freeze dryer — they need a documented one. The optional SCADA software captures process data aligned with FDA 21 CFR Part 11, turning routine cycles into audit-ready records.",
+                      "Solvent-containing samples need protection the standard condenser isn't built for; the chemical solvent condenser option isolates that risk.",
+                      "A capacitive vacuum probe and vacuum control option add finer process optimization for labs pushing beyond standard fixed-cycle protocols.",
+                      "Ultra-low GWP natural refrigerants let sustainability-focused labs reduce environmental impact without trading away cooling performance."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How TriEpic delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Audit-ready cycle documentation",
+                        "FDA 21 CFR Part 11-ready SCADA software"
+                      ],
+                      [
+                        "Safe handling of solvent-based samples",
+                        "Chemical solvent condenser"
+                      ],
+                      [
+                        "Finer control over cycle timing",
+                        "Vacuum control, capacitive vacuum probe"
+                      ],
+                      [
+                        "Lower environmental footprint",
+                        "Ultra-low GWP natural refrigerants"
+                      ]
+                    ]
+                  },
+                  { "note": "Share your regulatory requirements and sample type, and the right combination of optional equipment gets confirmed against them." }
+                ]
               },
               {
                 "key": "docs",
@@ -320,7 +482,9 @@
                   { "title": "TriEpic Technical Data Sheet", "description": "Available on request" },
                   { "title": "SCADA / FDA 21 CFR Part 11 Compliance Guide", "description": "Available on request" },
                   { "title": "Optional Equipment Configuration Guide", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheet"
               }
             ],
             "cta": {
@@ -329,30 +493,72 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Up to 30 kg of condenser capacity, with automatic alternation that keeps shared labs running without interruption. Share the batch size and user load, and the right TriEpic configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "One Freeze Dryer. Multiple Researchers. Zero Waiting on the Condenser.",
+              "Shared lab freeze dryers rarely get a break. One researcher is finishing a long cycle, another is waiting to start, and a condenser reaching capacity can bring the whole workflow to a halt.",
+              "TriEpic’s INFINITY double-condenser option keeps things moving. When one condenser reaches maximum capacity, the second takes over automatically — allowing the freeze-drying cycle to continue without a manual reset or a lost run.",
+              "With up to 30 kg condenser capacity and 16 kg/24 h active condensing capacity, INFINITY is built for busy, shared laboratories handling multiple projects, formats and cycles."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions",
+
+          "planners": [
+            {
+              "sectionId": "downtime-and-throughput-calculator",
+              "eyebrow": "Downtime and Throughput Calculator",
+              "title": "How much does a stalled cycle actually cost your lab?",
+              "description": "Enter your run frequency and average delay per interruption, and see how uninterrupted cycling changes throughput.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                { "title": "Runs per week", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Average delay per condenser reset", "hint": "Time input", "input": "text", "choices": "" },
+                { "title": "Number of users sharing the unit", "hint": "Number input", "input": "number", "choices": "" }
+              ],
+              "ctaNote": "Estimates weekly time saved with INFINITY cycling. Routes to a throughput-specific quotation.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
-          }
+          ]
         },
         {
           "name": "LyoLab Mini Pilot Freeze Dryers",
+
           "slug": "lyolab-mini-pilot-freeze-dryers",
+
           "principalImage": "/assets/images/PrincipalLogos/dara-lyo.svg",
+
           "imageAlt": "Dara-Lyo LyoLab Mini Pilot Freeze Dryers - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/lyolab-mini-pilot-freeze-dryers",
+
           "breadcrumbPath": "Home > Products > Pilot Freeze Dryers > LyoLab Mini Pilot Freeze Dryers",
+
           "h1": "LyoLab Mini Pilot Freeze Dryers",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Small batches shouldn't mean small thinking. LyoLab Mini runs the exact production characteristics of Dara-Lyo's full pilot-scale LyoLab, just in a compact footprint built for companies developing recipes today that need to scale to full production tomorrow.",
 
           "features": [
-            "Production-Grade Control Software: Runs the same control platform as the full-scale LyoLab, keeping development and production consistent.",
-            "Fluid Recirculation Tray System: Heats and cools trays directly for tight, repeatable thermal accuracy.",
-            "Two Shelf Configurations: 1+1 at 0.06 m² or 2+1 at 0.12 m², both with 200 x 300 mm shelves.",
-            "Stainless Steel AISI 316L Contact Parts: Meets pharmaceutical and food-grade material standards.",
-            "Wide Shelf Temperature Range: -50°C to +70°C, covering deep-freeze through elevated drying in one machine.",
-            "Compact, Mobile Footprint: Fits benchtop or small-lab spaces without sacrificing production-grade performance.",
-            "Extensive Optional Equipment Range: Configures from basic R&D use up to clean-room and regulated production support."
+            {
+              "title": "Production-Grade Control Software",
+              "description": "Runs the same control platform as the full-scale LyoLab, keeping development and production consistent."
+            },
+            { "title": "Fluid Recirculation Tray System", "description": "Heats and cools trays directly for tight, repeatable thermal accuracy." },
+            { "title": "Two Shelf Configurations", "description": "1+1 at 0.06 m² or 2+1 at 0.12 m², both with 200 x 300 mm shelves." },
+            { "title": "Stainless Steel AISI 316L Contact Parts", "description": "Meets pharmaceutical and food-grade material standards." },
+            { "title": "Wide Shelf Temperature Range", "description": "-50°C to +70°C, covering deep-freeze through elevated drying in one machine." },
+            { "title": "Compact, Mobile Footprint", "description": "Fits benchtop or small-lab spaces without sacrificing production-grade performance." },
+            { "title": "Extensive Optional Equipment Range", "description": "Configures from basic R&D use up to clean-room and regulated production support." }
           ],
 
           "technicalSpecs": [
@@ -371,15 +577,18 @@
             { "label": "Heating Power", "value": "500 W" },
             { "label": "Overall Dimensions (W x D x H)", "value": "640 x 626 x 1,655 mm" },
             { "label": "Weight", "value": "300 kg" },
-            { "label": "Optional Equipment", "value": "Extended condenser temp, isolation valve, pneumatic stoppering, bottle manifold, clean-room paneled front, eutectic and nucleation control, redundancy, CIP/VHP sanitization, organic solvent condenser, wireless probes, vial sampling, capacitive pressure sensor, Ethernet connectivity" }
+            {
+              "label": "Optional Equipment",
+              "value": "Extended condenser temp, isolation valve, pneumatic stoppering, bottle manifold, clean-room paneled front, eutectic and nucleation control, redundancy, CIP/VHP sanitization, organic solvent condenser, wireless probes, vial sampling, capacitive pressure sensor, Ethernet connectivity"
+            }
           ],
 
           "applications": [
-            "Small-Batch Recipe Development: Compact footprint with full pilot-grade production characteristics",
-            "Pharmaceutical R&D: Stainless steel AISI 316L parts and precise thermal control",
-            "Scale-Up Validation: Same production characteristics as full-scale LyoLab",
-            "Vial and Bottle Formulation Work: Optional stoppering and manifold equipment",
-            "Regulated or Clean-Room Environments: Paneled front and CIP/sanitization options"
+            { "title": "Small-Batch Recipe Development", "description": "Compact footprint with full pilot-grade production characteristics" },
+            { "title": "Pharmaceutical R&D", "description": "Stainless steel AISI 316L parts and precise thermal control" },
+            { "title": "Scale-Up Validation", "description": "Same production characteristics as full-scale LyoLab" },
+            { "title": "Vial and Bottle Formulation Work", "description": "Optional stoppering and manifold equipment" },
+            { "title": "Regulated or Clean-Room Environments", "description": "Paneled front and CIP/sanitization options" }
           ],
 
           "inPageNav": [
@@ -400,7 +609,9 @@
             "steps": [
               {
                 "key": "batchSize",
-                "question": "What's your batch size?",
+                "label": "Batch size",
+                "question": "Batch size",
+                "hint": "Small (1+1 shelves) or larger (2+1 shelves)",
                 "options": [
                   { "val": "small", "label": "Small (1+1 shelves)" },
                   { "val": "larger", "label": "Larger (2+1 shelves)" }
@@ -408,7 +619,9 @@
               },
               {
                 "key": "containerFormat",
-                "question": "What container format are you using?",
+                "label": "Container format",
+                "question": "Container format",
+                "hint": "Vials, bottles, or trays",
                 "options": [
                   { "val": "vials", "label": "Vials" },
                   { "val": "bottles", "label": "Bottles" },
@@ -417,17 +630,20 @@
               },
               {
                 "key": "clearanceRequirement",
-                "question": "What's your clearance requirement?",
+                "label": "Clearance requirement",
+                "question": "Clearance requirement",
+                "hint": "Standard or tall containers",
                 "options": [
-                  { "val": "standard", "label": "Standard containers" },
+                  { "val": "standard", "label": "Standard" },
                   { "val": "tall", "label": "Tall containers" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Shelf Configuration Selector",
+            "emptyState": "Recommends 1+1 or 2+1 shelf setup",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -437,6 +653,7 @@
               {
                 "key": "environmentType",
                 "label": "Environment type",
+                "hint": "Standard lab or clean-room integration",
                 "options": [
                   { "val": "standard-lab", "label": "Standard lab" },
                   { "val": "clean-room", "label": "Clean-room integration" }
@@ -445,6 +662,7 @@
               {
                 "key": "sanitizationNeed",
                 "label": "Sanitization need",
+                "hint": "Manual cleaning or CIP/VHP",
                 "options": [
                   { "val": "manual", "label": "Manual cleaning" },
                   { "val": "cip-vhp", "label": "CIP/VHP" }
@@ -453,6 +671,7 @@
               {
                 "key": "documentationRequirement",
                 "label": "Documentation requirement",
+                "hint": "Basic logs or remote/connected monitoring",
                 "options": [
                   { "val": "basic-logs", "label": "Basic logs" },
                   { "val": "remote-connected", "label": "Remote/connected monitoring" }
@@ -464,36 +683,98 @@
                 "condition": "default",
                 "title": "Can LyoLab Mini Be Integrated Into a Clean Room?",
                 "body": "Yes, an optional paneled front supports clean-room integration, alongside CIP and VHP sanitization options.",
-                "tags": ["Extensive Optional Equipment Range", "Production-Grade Control Software"]
+                "tags": [
+                  "Extensive Optional Equipment Range",
+                  "Production-Grade Control Software"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Clean Environment and Compliance Checker",
+            "ctaNote": "Confirms the right optional equipment for the environment. Routes to a compliance-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "1+1 vs. 2+1 Shelf Configuration",
+            "title": "Method Comparison",
             "description": "LyoLab Mini pilot freeze dryer method comparison: 1+1 versus 2+1 shelf configuration.",
             "columns": [
               { "label": "1+1 Shelf Configuration" },
               { "label": "2+1 Shelf Configuration" }
             ],
             "rows": [
-              { "feature": "Shelves Useful Area", "values": ["0.06 m²", "0.12 m²"] },
-              { "feature": "Shelves Clearance", "values": ["120 mm", "70 mm"] },
-              { "feature": "Best For", "values": ["Smaller batches, taller containers", "Larger batches, standard containers"] },
-              { "feature": "Choose When", "values": ["Container height matters more than volume", "Batch volume matters more than clearance"] }
+              {
+                "feature": "Shelves Useful Area",
+                "values": [
+                  "0.06 m²",
+                  "0.12 m²"
+                ]
+              },
+              {
+                "feature": "Shelves Clearance",
+                "values": [
+                  "120 mm",
+                  "70 mm"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Smaller batches, taller containers",
+                  "Larger batches, standard containers"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Container height matters more than volume",
+                  "Batch volume matters more than clearance"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations run on the same condenser, control software, and fluid recirculation system. The difference is purely shelf layout."
+            "disclaimer": "Both configurations run on the same condenser, control software, and fluid recirculation system. The difference is purely shelf layout.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "LyoLab Mini pilot freeze dryer industries: pharmaceutical R&D, biotechnology, and food and nutrition development.",
             "industries": [
-              { "name": "Pharmaceutical R&D", "useCase": "Small-batch formulation and recipe development", "consideration": "Same control software as full-scale LyoLab for clean scale-up" },
-              { "name": "Biotechnology Research", "useCase": "Drying sensitive biological compounds in small volumes", "consideration": "Eutectic and nucleation control for freezing precision" },
-              { "name": "Food and Nutrition Development", "useCase": "Testing formulations before production scale-up", "consideration": "Wide shelf temperature range for varied recipes" },
-              { "name": "Contract Development Labs", "useCase": "Running multiple client formulations", "consideration": "Two shelf configurations for different container formats" }
+              {
+                "name": "Pharmaceutical R&D",
+                "note": "Use Case: Small-batch formulation and recipe development",
+                "bullets": [
+                  "What to Consider: Same control software as full-scale LyoLab for clean scale-up"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biotechnology Research",
+                "note": "Use Case: Drying sensitive biological compounds in small volumes",
+                "bullets": [
+                  "What to Consider: Eutectic and nucleation control for freezing precision"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Nutrition Development",
+                "note": "Use Case: Testing formulations before production scale-up",
+                "bullets": [
+                  "What to Consider: Wide shelf temperature range for varied recipes"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Development Labs",
+                "note": "Use Case: Running multiple client formulations",
+                "bullets": [
+                  "What to Consider: Two shelf configurations for different container formats"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -511,15 +792,39 @@
           },
 
           "faqs": [
-            { "question": "What is the LyoLab Mini used for?", "answer": "It's a compact pilot freeze dryer for small-batch recipe development, built to the same production characteristics as Dara-Lyo's full-scale LyoLab so cycles scale up cleanly." },
-            { "question": "How is LyoLab Mini different from the full LyoLab?", "answer": "It shares identical production characteristics and control software, just in reduced dimensions suited to smaller batches and tighter lab space." },
-            { "question": "What shelf configurations are available?", "answer": "1+1 shelves at 0.06 m² useful area, or 2+1 shelves at 0.12 m², both using 200 x 300 mm shelf sizing." },
+            {
+              "question": "What is the LyoLab Mini used for?",
+              "answer": "It's a compact pilot freeze dryer for small-batch recipe development, built to the same production characteristics as Dara-Lyo's full-scale LyoLab so cycles scale up cleanly."
+            },
+            {
+              "question": "How is LyoLab Mini different from the full LyoLab?",
+              "answer": "It shares identical production characteristics and control software, just in reduced dimensions suited to smaller batches and tighter lab space."
+            },
+            {
+              "question": "What shelf configurations are available?",
+              "answer": "1+1 shelves at 0.06 m² useful area, or 2+1 shelves at 0.12 m², both using 200 x 300 mm shelf sizing."
+            },
             { "question": "What condenser capacity does LyoLab Mini offer?", "answer": "Up to 6 kg, with 5 kg processed every 24 hours." },
-            { "question": "What temperature range do the shelves support?", "answer": "From -50°C up to +70°C, covering deep-freeze and elevated-temperature drying in the same unit." },
-            { "question": "Can LyoLab Mini be integrated into a clean room?", "answer": "Yes, an optional paneled front supports clean-room integration, alongside CIP and VHP sanitization options." },
-            { "question": "Does LyoLab Mini support remote monitoring?", "answer": "Yes, Ethernet connectivity enables remote connection, and wireless temperature probes add real-time process visibility." },
-            { "question": "What is the price of LyoLab Mini in India?", "answer": "Get in touch and Inkarp will put together a quote based on the shelf configuration and optional equipment needed." },
-            { "question": "Who is the authorized distributor of LyoLab Mini in India?", "answer": "Inkarp is the authorized distributor and service provider for the Dara-Lyo LyoLab Mini in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What temperature range do the shelves support?",
+              "answer": "From -50°C up to +70°C, covering deep-freeze and elevated-temperature drying in the same unit."
+            },
+            {
+              "question": "Can LyoLab Mini be integrated into a clean room?",
+              "answer": "Yes, an optional paneled front supports clean-room integration, alongside CIP and VHP sanitization options."
+            },
+            {
+              "question": "Does LyoLab Mini support remote monitoring?",
+              "answer": "Yes, Ethernet connectivity enables remote connection, and wireless temperature probes add real-time process visibility."
+            },
+            {
+              "question": "What is the price of LyoLab Mini in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the shelf configuration and optional equipment needed."
+            },
+            {
+              "question": "Who is the authorized distributor of LyoLab Mini in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Dara-Lyo LyoLab Mini in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -540,10 +845,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right shelf configuration", "body": "Share the batch sizes planned for early development and the equipment intended for scale-up, and the right shelf configuration gets confirmed from there." },
-              { "title": "Confirm how settings transfer to your scale-up equipment", "body": "Share which full-scale Dara-Lyo equipment the recipe is headed toward, and the right shelf and control configuration gets confirmed against it." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows shelf configuration and thermal accuracy on real samples" },
+              { "title": "Configuration Assessment", "body": "Confirms shelf, condenser, and equipment setup for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with the control software and optional features" },
+              { "title": "Preventive Maintenance", "body": "Maintains condenser, vacuum pump, and recirculation system performance" },
+              { "title": "Spares and Accessories", "body": "Supplies shelves, probes, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -566,20 +874,32 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "body": [
-                  "LyoLab Mini shares the same production characteristics as Dara-Lyo's full pilot-scale LyoLab, just at reduced dimensions, so a recipe developed here transfers cleanly to larger equipment later.",
-                  "Two shelf configurations are available: 1+1 shelves at 0.06 m² useful area, or 2+1 shelves at 0.12 m², both using 200 x 300 mm shelf sizing.",
-                  "A fluid recirculation system handles tray heating and cooling directly, delivering the accuracy needed for precise recipe development.",
-                  "Product contact parts are stainless steel AISI 316L throughout, matching pharmaceutical and food-grade material standards.",
-                  "Condenser capacity reaches 6 kg, with 5 kg processed every 24 hours, and condenser temperature runs to -85°C standard, extendable to -105°C.",
-                  "Shelf temperature spans -50°C to +70°C, covering both deep-freeze and elevated-temperature drying steps in one unit.",
-                  "A wide variety of control options and optional equipment lets the unit configure for anything from basic R&D to fully regulated, clean-room-integrated production support."
+                  {
+                    "text": "LyoLab Mini shares the same production characteristics as Dara-Lyo's full pilot-scale LyoLab, just at reduced dimensions, so a recipe developed here transfers cleanly to larger equipment later."
+                  },
+                  {
+                    "text": "Two shelf configurations are available: 1+1 shelves at 0.06 m² useful area, or 2+1 shelves at 0.12 m², both using 200 x 300 mm shelf sizing."
+                  },
+                  {
+                    "text": "A fluid recirculation system handles tray heating and cooling directly, delivering the accuracy needed for precise recipe development."
+                  },
+                  { "text": "Product contact parts are stainless steel AISI 316L throughout, matching pharmaceutical and food-grade material standards." },
+                  {
+                    "text": "Condenser capacity reaches 6 kg, with 5 kg processed every 24 hours, and condenser temperature runs to -85°C standard, extendable to -105°C."
+                  },
+                  { "text": "Shelf temperature spans -50°C to +70°C, covering both deep-freeze and elevated-temperature drying steps in one unit." },
+                  {
+                    "text": "A wide variety of control options and optional equipment lets the unit configure for anything from basic R&D to fully regulated, clean-room-integrated production support."
+                  }
                 ],
                 "cards": [
                   { "title": "Same DNA as LyoLab", "description": "Recipes transfer directly to full pilot scale" },
                   { "title": "Fluid recirculation heating/cooling", "description": "Precise, production-grade thermal control" },
                   { "title": "AISI 316L contact parts", "description": "Pharma and food-grade material quality" },
                   { "title": "-50°C to +70°C shelf range", "description": "Covers freeze and elevated-temp steps in one unit" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why LyoLab Mini exists for scale-up-ready recipe work"
               },
               {
                 "key": "config",
@@ -591,51 +911,95 @@
                   { "title": "Condenser temperature", "description": "-85°C standard, -105°C optional" },
                   { "title": "Shelf temperature range", "description": "-50°C to +70°C" },
                   { "title": "Product contact parts", "description": "Stainless steel AISI 316L" }
-                ]
+                ],
+                "disclaimer": "Share the batch sizes planned for early development and the equipment intended for scale-up, and the right shelf configuration gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "Fluid recirculation, shelf configurations, product contact quality"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "LyoLab Mini pilot freeze dryer applications: small-batch recipe development, pharmaceutical R&D, and scale-up validation."
+                "description": "LyoLab Mini pilot freeze dryer applications: small-batch recipe development, pharmaceutical R&D, and scale-up validation.",
+                "tabSummary": "Small-batch recipe development, pharma R&D, scale-up validation"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "LyoLab Mini pilot freeze dryer technical specifications: condenser, shelf, and dimension figures."
+                "description": "LyoLab Mini pilot freeze dryer technical specifications: condenser, shelf, and dimension figures.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Condenser, shelf, and dimension figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Built to Scale, Not Just to Shrink",
                 "title": "Built to Scale, Not Just to Shrink",
-                "description": "Shrinking a freeze dryer usually means losing precision along with the size. LyoLab Mini keeps the exact production characteristics of the full LyoLab, just packed into a smaller frame. That matters most at the recipe development stage: a cycle validated on LyoLab Mini behaves the same way when it moves to a full-scale LyoLab, because the underlying control software and thermal system are shared, not approximated. Fluid recirculation drives that consistency directly, heating and cooling trays with the same accuracy a production-scale system relies on.",
                 "cards": [
                   { "title": "Recipes that transfer cleanly to production scale", "description": "Shared production characteristics with full-scale LyoLab" },
                   { "title": "Precise thermal control on small batches", "description": "Fluid recirculation heating and cooling" },
                   { "title": "Confidence before committing to larger equipment", "description": "Same control software across both scales" }
-                ]
+                ],
+                "body": [
+                  "Shrinking a freeze dryer usually means losing precision along with the size. LyoLab Mini keeps the exact production characteristics of the full LyoLab, just packed into a smaller frame.",
+                  "That matters most at the recipe development stage: a cycle validated on LyoLab Mini behaves the same way when it moves to a full-scale LyoLab, because the underlying control software and thermal system are shared, not approximated.",
+                  "Fluid recirculation drives that consistency directly, heating and cooling trays with the same accuracy a production-scale system relies on."
+                ],
+                "columnHeaders": { "label": "What your development process needs", "value": "How LyoLab Mini delivers it" },
+                "note": "Share which full-scale Dara-Lyo equipment the recipe is headed toward, and the right shelf and control configuration gets confirmed against it.",
+                "tabSummary": "Why matching LyoLab's characteristics matters"
               },
               {
                 "key": "performance",
                 "eyebrow": "Configuring for Regulated and Clean Environments",
                 "title": "Configuring for Regulated and Clean Environments",
-                "description": "Recipe development often needs to happen under the same conditions the final product will face. Clean-room integration, sterile handling, and documented cycles are all available as configuration options rather than separate equipment purchases.",
-                "body": [
-                  "A paneled front supports direct clean-room integration, while CIP and VHP sanitization options handle in-place cleaning without disassembly. Pneumatic vials stoppering and a bottle manifold support different container formats within the same unit. Eutectic point and nucleation control give finer command over the freezing step itself, useful for formulations sensitive to how ice forms. Ethernet connectivity enables remote monitoring, and wireless temperature probes plus a capacitive pressure sensor add finer real-time process visibility."
-                ],
-                "utilityChecklist": [
-                  { "label": "Clean-room-compatible integration", "value": "Paneled front option" },
-                  { "label": "In-place cleaning without disassembly", "value": "CIP and VHP sanitization" },
-                  { "label": "Precise control over ice formation", "value": "Eutectic point and nucleation control" },
-                  { "label": "Remote process monitoring", "value": "Ethernet connectivity" }
-                ],
-                "disclaimer": "Share the regulatory or clean-room requirements for the space, and the right combination of optional equipment gets confirmed against them."
+                "tabSummary": "Optional equipment and what each solves",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Recipe development often needs to happen under the same conditions the final product will face. Clean-room integration, sterile handling, and documented cycles are all available as configuration options rather than separate equipment purchases.",
+                      "A paneled front supports direct clean-room integration, while CIP and VHP sanitization options handle in-place cleaning without disassembly.",
+                      "Pneumatic vials stoppering and a bottle manifold support different container formats within the same unit.",
+                      "Eutectic point and nucleation control give finer command over the freezing step itself, useful for formulations sensitive to how ice forms.",
+                      "Ethernet connectivity enables remote monitoring, and wireless temperature probes plus a capacitive pressure sensor add finer real-time process visibility."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How LyoLab Mini delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Clean-room-compatible integration",
+                        "Paneled front option"
+                      ],
+                      [
+                        "In-place cleaning without disassembly",
+                        "CIP and VHP sanitization"
+                      ],
+                      [
+                        "Precise control over ice formation",
+                        "Eutectic point and nucleation control"
+                      ],
+                      [
+                        "Remote process monitoring",
+                        "Ethernet connectivity"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the regulatory or clean-room requirements for the space, and the right combination of optional equipment gets confirmed against them."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -645,7 +1009,9 @@
                   { "title": "LyoLab Mini Technical Data Sheet", "description": "Available on request" },
                   { "title": "Scale-Up Compatibility Guide", "description": "Available on request" },
                   { "title": "Optional Equipment Configuration Guide", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheet"
               }
             ],
             "cta": {
@@ -654,30 +1020,71 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Full pilot-scale production characteristics, packed into a compact frame built for small batches that are going somewhere bigger. Share the batch size and target scale-up equipment, and the right LyoLab Mini configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Small batches shouldn't mean small thinking. LyoLab Mini runs the exact production characteristics of Dara-Lyo's full pilot-scale LyoLab, just in a compact footprint built for companies developing recipes today that need to scale to full production tomorrow.",
+              "A fluid recirculation system heats and cools the trays directly, giving tight thermal control in a unit small enough to fit where a full pilot line can't. Stainless steel AISI 316L product contact parts and a condenser reaching -85°C keep it built to the same standard as the machines it scales into."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions",
+
+          "planners": [
+            {
+              "sectionId": "scale-up-path-planner",
+              "eyebrow": "Scale-Up Path Planner",
+              "title": "Where is this recipe headed after development?",
+              "description": "Select the target production equipment, and see how LyoLab Mini's settings carry forward.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                {
+                  "title": "Target scale-up equipment",
+                  "hint": "LyoLab pilot line or larger production system",
+                  "choices": "LyoLab pilot line; Larger production system"
+                },
+                { "title": "Current development stage", "hint": "Early formulation or pre-validation", "choices": "Early formulation; Pre-validation" },
+                { "title": "Batch frequency", "hint": "Occasional or continuous development runs", "choices": "Occasional; Continuous development runs" }
+              ],
+              "ctaNote": "Confirms how directly settings transfer to production scale. Routes to a scale-up-specific quotation.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
-          }
+          ]
         },
         {
           "name": "LyoLab Pilot Freeze Dryers",
+
           "slug": "dara-lyo-lyolab-pilot-freeze-dryers",
+
           "principalImage": "/assets/images/PrincipalLogos/dara-lyo.svg",
+
           "imageAlt": "Dara-Lyo LyoLab Pilot Freeze Dryers - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/dara-lyo-lyolab-pilot-freeze-dryers",
+
           "breadcrumbPath": "Home > Products > Pilot Freeze Dryers > LyoLab Pilot Freeze Dryers",
+
           "h1": "LyoLab Pilot Freeze Dryers",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Control and precision were the whole design brief behind LyoLab. It runs the same base software as full production equipment, so a recipe built here isn't a rough draft, it's the actual protocol that carries forward.",
 
           "features": [
-            "Production-Grade Base Software: Runs the identical software platform used on Dara-Lyo's full production equipment.",
-            "Two Shelf Configurations: 3+1 at 0.49 m² or 6+1 at 0.98 m², both with 370 x 445 mm shelves.",
-            "Upgradeable Condenser Capacity: Standard 10 kg, expandable to 20 kg (15 kg/24h) as batch demands grow.",
-            "Stainless Steel AISI 316L Contact Parts: Meets the material standard pharmaceutical production equipment requires.",
-            "Wide Shelf Temperature Range: -60°C to +80°C, covering deep-freeze through elevated drying in one machine.",
-            "Data Acquisition Configuration Options: Adds documented, traceable cycle data for regulated development work.",
-            "Dual-Purpose Design: Develops recipes and runs real small-batch, high-value production side by side."
+            { "title": "Production-Grade Base Software", "description": "Runs the identical software platform used on Dara-Lyo's full production equipment." },
+            { "title": "Two Shelf Configurations", "description": "3+1 at 0.49 m² or 6+1 at 0.98 m², both with 370 x 445 mm shelves." },
+            { "title": "Upgradeable Condenser Capacity", "description": "Standard 10 kg, expandable to 20 kg (15 kg/24h) as batch demands grow." },
+            { "title": "Stainless Steel AISI 316L Contact Parts", "description": "Meets the material standard pharmaceutical production equipment requires." },
+            { "title": "Wide Shelf Temperature Range", "description": "-60°C to +80°C, covering deep-freeze through elevated drying in one machine." },
+            { "title": "Data Acquisition Configuration Options", "description": "Adds documented, traceable cycle data for regulated development work." },
+            { "title": "Dual-Purpose Design", "description": "Develops recipes and runs real small-batch, high-value production side by side." }
           ],
 
           "technicalSpecs": [
@@ -696,15 +1103,18 @@
             { "label": "Heating Power", "value": "1,500 W" },
             { "label": "Overall Dimensions (W x D x H)", "value": "1,250 x 850 x 1,970 mm" },
             { "label": "Weight", "value": "950 kg or 1,050 kg" },
-            { "label": "Optional Equipment", "value": "Extended condenser temp, capacity upgrade, isolation valve, pneumatic stoppering, bottle manifold, clean-room paneled front, eutectic and nucleation control, redundancy, CIP/VHP sanitization, organic solvent condenser, wireless probes, vial sampling, capacitive pressure sensor, Ethernet connectivity" }
+            {
+              "label": "Optional Equipment",
+              "value": "Extended condenser temp, capacity upgrade, isolation valve, pneumatic stoppering, bottle manifold, clean-room paneled front, eutectic and nucleation control, redundancy, CIP/VHP sanitization, organic solvent condenser, wireless probes, vial sampling, capacitive pressure sensor, Ethernet connectivity"
+            }
           ],
 
           "applications": [
-            "Freeze-Drying Recipe Development: Shares base software with production equipment for a direct scale-up path",
-            "Small-Batch Production: Handles non-aseptic, high-added-value batches in the same unit",
-            "Pharmaceutical Formulation R&D: Stainless steel AISI 316L parts and precise thermal control",
-            "Data-Documented Development Cycles: Optional data acquisition configuration",
-            "Vial and Bottle Formulation Work: Optional pneumatic stoppering and bottle manifold"
+            { "title": "Freeze-Drying Recipe Development", "description": "Shares base software with production equipment for a direct scale-up path" },
+            { "title": "Small-Batch Production", "description": "Handles non-aseptic, high-added-value batches in the same unit" },
+            { "title": "Pharmaceutical Formulation R&D", "description": "Stainless steel AISI 316L parts and precise thermal control" },
+            { "title": "Data-Documented Development Cycles", "description": "Optional data acquisition configuration" },
+            { "title": "Vial and Bottle Formulation Work", "description": "Optional pneumatic stoppering and bottle manifold" }
           ],
 
           "inPageNav": [
@@ -725,7 +1135,9 @@
             "steps": [
               {
                 "key": "batchSize",
-                "question": "What's your batch size?",
+                "label": "Batch size",
+                "question": "Batch size",
+                "hint": "Smaller (3+1 shelves) or larger (6+1 shelves)",
                 "options": [
                   { "val": "smaller", "label": "Smaller (3+1 shelves)" },
                   { "val": "larger", "label": "Larger (6+1 shelves)" }
@@ -733,7 +1145,9 @@
               },
               {
                 "key": "condenserCapacityNeed",
-                "question": "What condenser capacity do you need?",
+                "label": "Condenser capacity need",
+                "question": "Condenser capacity need",
+                "hint": "Standard 10 kg or upgraded 20 kg",
                 "options": [
                   { "val": "standard", "label": "Standard 10 kg" },
                   { "val": "upgraded", "label": "Upgraded 20 kg" }
@@ -741,7 +1155,9 @@
               },
               {
                 "key": "containerFormat",
-                "question": "What container format are you using?",
+                "label": "Container format",
+                "question": "Container format",
+                "hint": "Vials, bottles, or trays",
                 "options": [
                   { "val": "vials", "label": "Vials" },
                   { "val": "bottles", "label": "Bottles" },
@@ -749,10 +1165,11 @@
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Shelf and Condenser Configuration Selector",
+            "emptyState": "Recommends shelf and condenser setup",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -762,6 +1179,7 @@
               {
                 "key": "documentationRequirement",
                 "label": "Documentation requirement",
+                "hint": "Basic logs or full data acquisition",
                 "options": [
                   { "val": "basic-logs", "label": "Basic logs" },
                   { "val": "full-data-acquisition", "label": "Full data acquisition" }
@@ -770,6 +1188,7 @@
               {
                 "key": "environmentType",
                 "label": "Environment type",
+                "hint": "Standard lab or clean-room integration",
                 "options": [
                   { "val": "standard-lab", "label": "Standard lab" },
                   { "val": "clean-room", "label": "Clean-room integration" }
@@ -778,6 +1197,7 @@
               {
                 "key": "sanitizationNeed",
                 "label": "Sanitization need",
+                "hint": "Manual cleaning or CIP/VHP",
                 "options": [
                   { "val": "manual", "label": "Manual cleaning" },
                   { "val": "cip-vhp", "label": "CIP/VHP" }
@@ -789,37 +1209,105 @@
                 "condition": "default",
                 "title": "Does LyoLab Support Data Acquisition?",
                 "body": "Yes, additional configuration options add documented data acquisition for traceable development cycles.",
-                "tags": ["Data Acquisition Configuration Options", "Dual-Purpose Design"]
+                "tags": [
+                  "Data Acquisition Configuration Options",
+                  "Dual-Purpose Design"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Data Acquisition and Compliance Checker",
+            "ctaNote": "Confirms the right optional equipment for the requirement. Routes to a compliance-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Get Configuration Support"
           },
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "3+1 vs. 6+1 Shelf Configuration",
+            "title": "Method Comparison",
             "description": "LyoLab pilot freeze dryer method comparison: 3+1 versus 6+1 shelf configuration.",
             "columns": [
               { "label": "3+1 Shelf Configuration" },
               { "label": "6+1 Shelf Configuration" }
             ],
             "rows": [
-              { "feature": "Shelves Useful Area", "values": ["0.49 m²", "0.98 m²"] },
-              { "feature": "Shelves Clearance", "values": ["90 mm", "65 mm"] },
-              { "feature": "Weight", "values": ["950 kg", "1,050 kg"] },
-              { "feature": "Best For", "values": ["Smaller batches, taller containers", "Larger batches, standard containers"] },
-              { "feature": "Choose When", "values": ["Container height matters more than volume", "Batch volume matters more than clearance"] }
+              {
+                "feature": "Shelves Useful Area",
+                "values": [
+                  "0.49 m²",
+                  "0.98 m²"
+                ]
+              },
+              {
+                "feature": "Shelves Clearance",
+                "values": [
+                  "90 mm",
+                  "65 mm"
+                ]
+              },
+              {
+                "feature": "Weight",
+                "values": [
+                  "950 kg",
+                  "1,050 kg"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Smaller batches, taller containers",
+                  "Larger batches, standard containers"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Container height matters more than volume",
+                  "Batch volume matters more than clearance"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations share the same base software, condenser system, and optional equipment. The difference is purely shelf layout."
+            "disclaimer": "Both configurations share the same base software, condenser system, and optional equipment. The difference is purely shelf layout.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "LyoLab pilot freeze dryer industries: pharmaceutical R&D, biotechnology, and specialty food production.",
             "industries": [
-              { "name": "Pharmaceutical R&D and Scale-Up", "useCase": "Recipe development ahead of full production", "consideration": "Same base software as production equipment for direct transfer" },
-              { "name": "High-Value Small-Batch Production", "useCase": "Non-aseptic batches of premium formulations", "consideration": "Dual-purpose design covers development and real production" },
-              { "name": "Biotechnology Research", "useCase": "Drying sensitive biological compounds with tight control", "consideration": "Eutectic and nucleation control for freezing precision" },
-              { "name": "Contract Development Labs", "useCase": "Running multiple client formulations with documentation needs", "consideration": "Data acquisition configuration for traceable cycles" }
+              {
+                "name": "Pharmaceutical R&D and Scale-Up",
+                "note": "Use Case: Recipe development ahead of full production",
+                "bullets": [
+                  "What to Consider: Same base software as production equipment for direct transfer"
+                ],
+                "tags": []
+              },
+              {
+                "name": "High-Value Small-Batch Production",
+                "note": "Use Case: Non-aseptic batches of premium formulations",
+                "bullets": [
+                  "What to Consider: Dual-purpose design covers development and real production"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Biotechnology Research",
+                "note": "Use Case: Drying sensitive biological compounds with tight control",
+                "bullets": [
+                  "What to Consider: Eutectic and nucleation control for freezing precision"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Contract Development Labs",
+                "note": "Use Case: Running multiple client formulations with documentation needs",
+                "bullets": [
+                  "What to Consider: Data acquisition configuration for traceable cycles"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -837,15 +1325,42 @@
           },
 
           "faqs": [
-            { "question": "What is the LyoLab used for?", "answer": "It's a pilot freeze dryer built for developing freeze-drying recipes ahead of production scale-up, and for producing small, non-aseptic batches of high-value product directly." },
-            { "question": "How does LyoLab support production scale-up?", "answer": "It runs the same base software as Dara-Lyo's production equipment, so a recipe developed on LyoLab transfers directly to full-scale manufacturing." },
-            { "question": "What shelf configurations are available?", "answer": "3+1 shelves at 0.49 m² useful area, or 6+1 shelves at 0.98 m², both using 370 x 445 mm shelf sizing." },
-            { "question": "What condenser capacity does LyoLab offer?", "answer": "10 kg standard, with an optional upgrade to 20 kg (15 kg/24h) for heavier loads." },
-            { "question": "What temperature range do the shelves support?", "answer": "From -60°C up to +80°C, covering deep-freeze and elevated-temperature drying in the same unit." },
-            { "question": "Does LyoLab support data acquisition?", "answer": "Yes, additional configuration options add documented data acquisition for traceable development cycles." },
-            { "question": "Can LyoLab be used for real production, not just development?", "answer": "Yes, it's designed to run small, non-aseptic batches of high-added-value products directly, alongside its recipe development role." },
-            { "question": "What is the price of LyoLab in India?", "answer": "Get in touch and Inkarp will put together a quote based on the shelf, condenser, and optional equipment configuration needed." },
-            { "question": "Who is the authorized distributor of LyoLab in India?", "answer": "Inkarp is the authorized distributor and service provider for the Dara-Lyo LyoLab in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What is the LyoLab used for?",
+              "answer": "It's a pilot freeze dryer built for developing freeze-drying recipes ahead of production scale-up, and for producing small, non-aseptic batches of high-value product directly."
+            },
+            {
+              "question": "How does LyoLab support production scale-up?",
+              "answer": "It runs the same base software as Dara-Lyo's production equipment, so a recipe developed on LyoLab transfers directly to full-scale manufacturing."
+            },
+            {
+              "question": "What shelf configurations are available?",
+              "answer": "3+1 shelves at 0.49 m² useful area, or 6+1 shelves at 0.98 m², both using 370 x 445 mm shelf sizing."
+            },
+            {
+              "question": "What condenser capacity does LyoLab offer?",
+              "answer": "10 kg standard, with an optional upgrade to 20 kg (15 kg/24h) for heavier loads."
+            },
+            {
+              "question": "What temperature range do the shelves support?",
+              "answer": "From -60°C up to +80°C, covering deep-freeze and elevated-temperature drying in the same unit."
+            },
+            {
+              "question": "Does LyoLab support data acquisition?",
+              "answer": "Yes, additional configuration options add documented data acquisition for traceable development cycles."
+            },
+            {
+              "question": "Can LyoLab be used for real production, not just development?",
+              "answer": "Yes, it's designed to run small, non-aseptic batches of high-added-value products directly, alongside its recipe development role."
+            },
+            {
+              "question": "What is the price of LyoLab in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the shelf, condenser, and optional equipment configuration needed."
+            },
+            {
+              "question": "Who is the authorized distributor of LyoLab in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Dara-Lyo LyoLab in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -865,10 +1380,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right shelf and condenser configuration", "body": "Share whether the priority is recipe development, small-batch production, or both, and the right shelf and condenser configuration gets confirmed from there." },
-              { "title": "Confirm how settings transfer to your production equipment", "body": "Share the production equipment the recipe is ultimately headed toward, and the right LyoLab configuration gets confirmed against it." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-run checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows shelf configuration and thermal accuracy on real samples" },
+              { "title": "Configuration Assessment", "body": "Confirms shelf, condenser, and equipment setup for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-run checks" },
+              { "title": "Operator Training", "body": "Builds confidence with the base software and data acquisition options" },
+              { "title": "Preventive Maintenance", "body": "Maintains condenser, vacuum pump, and shelf system performance" },
+              { "title": "Spares and Accessories", "body": "Supplies shelves, probes, and replacement parts" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -891,20 +1409,32 @@
                 "eyebrow": "Product overview",
                 "title": "Product Information",
                 "body": [
-                  "LyoLab runs the same base software as Dara-Lyo's production freeze dryers, so a cycle developed here transfers directly, not approximately, to full-scale manufacturing.",
-                  "Two shelf configurations are available: 3+1 shelves at 0.49 m² useful area, or 6+1 shelves at 0.98 m², both using 370 x 445 mm shelf sizing.",
-                  "Standard condenser capacity is 10 kg, processing 8 kg every 24 hours, with an optional upgrade to 20 kg capacity at 15 kg/24h for heavier development or production loads.",
-                  "Condenser temperature runs to -85°C standard, extendable to -105°C, and shelf temperature spans a wide -60°C to +80°C range in one unit.",
-                  "Product contact parts are stainless steel AISI 316L throughout, matching the material standard production equipment requires.",
-                  "Additional configuration options support systems with data acquisition, useful for labs that need documented, traceable development cycles.",
-                  "Beyond recipe development, LyoLab handles genuine production runs of small, non-aseptic, high-added-value batches directly."
+                  {
+                    "text": "LyoLab runs the same base software as Dara-Lyo's production freeze dryers, so a cycle developed here transfers directly, not approximately, to full-scale manufacturing."
+                  },
+                  {
+                    "text": "Two shelf configurations are available: 3+1 shelves at 0.49 m² useful area, or 6+1 shelves at 0.98 m², both using 370 x 445 mm shelf sizing."
+                  },
+                  {
+                    "text": "Standard condenser capacity is 10 kg, processing 8 kg every 24 hours, with an optional upgrade to 20 kg capacity at 15 kg/24h for heavier development or production loads."
+                  },
+                  {
+                    "text": "Condenser temperature runs to -85°C standard, extendable to -105°C, and shelf temperature spans a wide -60°C to +80°C range in one unit."
+                  },
+                  { "text": "Product contact parts are stainless steel AISI 316L throughout, matching the material standard production equipment requires." },
+                  {
+                    "text": "Additional configuration options support systems with data acquisition, useful for labs that need documented, traceable development cycles."
+                  },
+                  { "text": "Beyond recipe development, LyoLab handles genuine production runs of small, non-aseptic, high-added-value batches directly." }
                 ],
                 "cards": [
                   { "title": "Same software as production units", "description": "Recipes transfer unchanged to full scale" },
                   { "title": "Up to 20 kg condenser capacity", "description": "Room to grow without a new machine" },
                   { "title": "AISI 316L contact parts", "description": "Pharma-grade material quality" },
                   { "title": "-60°C to +80°C shelf range", "description": "Covers freeze and elevated-temp steps in one unit" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why LyoLab doubles as a recipe developer and small-batch producer"
               },
               {
                 "key": "config",
@@ -916,51 +1446,96 @@
                   { "title": "Condenser temperature", "description": "-85°C standard, -105°C optional" },
                   { "title": "Shelf temperature range", "description": "-60°C to +80°C" },
                   { "title": "Product contact parts", "description": "Stainless steel AISI 316L" }
-                ]
+                ],
+                "disclaimer": "Share whether the priority is recipe development, small-batch production, or both, and the right shelf and condenser configuration gets confirmed from there."
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Key Features"
+                "title": "Key Features",
+                "tabSummary": "Production-grade software, shelf configurations, data acquisition options"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "LyoLab pilot freeze dryer applications: recipe development, production scale-up, and small high-value batch manufacturing."
+                "description": "LyoLab pilot freeze dryer applications: recipe development, production scale-up, and small high-value batch manufacturing.",
+                "tabSummary": "Recipe development, scale-up, small high-value batch production"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "LyoLab pilot freeze dryer technical specifications: condenser, shelf, and dimension figures."
+                "description": "LyoLab pilot freeze dryer technical specifications: condenser, shelf, and dimension figures.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Condenser, shelf, and dimension figures"
               },
               {
                 "key": "benefits",
                 "eyebrow": "One Software, Two Scales",
                 "title": "One Software, Two Scales",
-                "description": "A recipe is only as useful as its ability to survive the jump to production. LyoLab closes that gap by running the same base software full production equipment uses, not a scaled-down approximation of it. That means a cycle validated on LyoLab behaves the same way when it moves to a full production line, because the control logic isn't being translated between two different systems. The same unit also runs real production batches directly, small, non-aseptic, high-value runs that don't need a separate machine just because they're not full-scale yet.",
                 "cards": [
                   { "title": "Recipes that transfer cleanly to production", "description": "Identical base software to production equipment" },
                   { "title": "A single machine for development and small production", "description": "Dual-purpose design, both roles in one unit" },
                   { "title": "Precise, wide-range thermal control", "description": "-60°C to +80°C shelf temperature range" }
-                ]
+                ],
+                "body": [
+                  "A recipe is only as useful as its ability to survive the jump to production. LyoLab closes that gap by running the same base software full production equipment uses, not a scaled-down approximation of it.",
+                  "That means a cycle validated on LyoLab behaves the same way when it moves to a full production line, because the control logic isn't being translated between two different systems.",
+                  "The same unit also runs real production batches directly, small, non-aseptic, high-value runs that don't need a separate machine just because they're not full-scale yet."
+                ],
+                "columnHeaders": { "label": "What your development process needs", "value": "How LyoLab delivers it" },
+                "note": "Share the production equipment the recipe is ultimately headed toward, and the right LyoLab configuration gets confirmed against it.",
+                "tabSummary": "Why matching production software from day one matters"
               },
               {
                 "key": "performance",
                 "eyebrow": "Configuring for Data and Compliance",
                 "title": "Configuring for Data and Compliance",
-                "description": "Development cycles that need to be defended later need to be documented now. Additional configuration options bring data acquisition into the standard workflow rather than bolting it on afterward.",
-                "body": [
-                  "A paneled front supports clean-room integration, and CIP with VHP sanitization options handle in-place cleaning without disassembly. Pneumatic vials stoppering and a bottle manifold support different container formats within the same unit. Eutectic point and nucleation control give finer command over the freezing step, useful for formulations sensitive to how ice forms. Ethernet connectivity enables remote monitoring, and wireless temperature probes plus a capacitive pressure sensor add real-time process visibility. An organic solvent condenser protects the main system when formulations involve solvents."
-                ],
-                "utilityChecklist": [
-                  { "label": "Documented, traceable development cycles", "value": "Data acquisition configuration options" },
-                  { "label": "Clean-room-compatible integration", "value": "Paneled front option" },
-                  { "label": "Precise control over ice formation", "value": "Eutectic point and nucleation control" },
-                  { "label": "Remote process monitoring", "value": "Ethernet connectivity" }
-                ],
-                "disclaimer": "Share the regulatory and documentation requirements for the project, and the right combination of optional equipment gets confirmed against them."
+                "tabSummary": "Optional equipment and what each solves",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Development cycles that need to be defended later need to be documented now. Additional configuration options bring data acquisition into the standard workflow rather than bolting it on afterward.",
+                      "A paneled front supports clean-room integration, and CIP with VHP sanitization options handle in-place cleaning without disassembly.",
+                      "Pneumatic vials stoppering and a bottle manifold support different container formats within the same unit.",
+                      "Eutectic point and nucleation control give finer command over the freezing step, useful for formulations sensitive to how ice forms.",
+                      "Ethernet connectivity enables remote monitoring, and wireless temperature probes plus a capacitive pressure sensor add real-time process visibility.",
+                      "An organic solvent condenser protects the main system when formulations involve solvents."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How LyoLab delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Documented, traceable development cycles",
+                        "Data acquisition configuration options"
+                      ],
+                      [
+                        "Clean-room-compatible integration",
+                        "Paneled front option"
+                      ],
+                      [
+                        "Precise control over ice formation",
+                        "Eutectic point and nucleation control"
+                      ],
+                      [
+                        "Remote process monitoring",
+                        "Ethernet connectivity"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the regulatory and documentation requirements for the project, and the right combination of optional equipment gets confirmed against them."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -970,7 +1545,9 @@
                   { "title": "LyoLab Technical Data Sheet", "description": "Available on request" },
                   { "title": "Production Scale-Up Compatibility Guide", "description": "Available on request" },
                   { "title": "Optional Equipment Configuration Guide", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheet"
               }
             ],
             "cta": {
@@ -979,9 +1556,41 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The same software that runs full production, in a unit sized for recipe development and small high-value batches. Share the batch goals and scale-up plans, and the right LyoLab configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Control and precision were the whole design brief behind LyoLab. It runs the same base software as full production equipment, so a recipe built here isn't a rough draft, it's the actual protocol that carries forward.",
+              "LyoLab is built for two jobs at once: developing freeze-drying recipes ahead of production scale-up, and running real, small non-aseptic batches of high-value product in the meantime. Condenser capacity reaches up to 20 kg with the optional upgrade, shelf temperature spans -60°C to +80°C, and stainless steel AISI 316L contact parts keep it built to pharma-grade standards throughout."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions",
+
+          "planners": [
+            {
+              "sectionId": "development-to-production-path-planner",
+              "eyebrow": "Development-to-Production Path Planner",
+              "title": "Is this for recipe development, production, or both?",
+              "description": "Select the intended use, and see how LyoLab's software carries the work forward.",
+              "fields": [
+                { "key": "choices", "label": "Choices" }
+              ],
+              "options": [
+                {
+                  "title": "Primary use",
+                  "hint": "Recipe development, small-batch production, or both",
+                  "choices": "Recipe development; Small-batch production; Both"
+                },
+                { "title": "Target production equipment", "hint": "Confirmed or still being decided", "choices": "Confirmed; Still being decided" },
+                { "title": "Batch value", "hint": "Standard or high-added-value product", "choices": "Standard; High-added-value product" }
+              ],
+              "ctaNote": "Confirms how directly settings transfer to full production. Routes to a scale-up-specific quotation.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
-          }
+          ]
         }
       ]
     }

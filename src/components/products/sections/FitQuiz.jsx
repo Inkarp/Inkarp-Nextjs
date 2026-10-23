@@ -84,7 +84,7 @@ export default function FitQuiz({ data, productName }) {
       <div className="relative mx-auto max-w-[1180px]">
         <SectionHeader
           number="12"
-          eyebrow="Interactive - 60-second quiz"
+          eyebrow="60-second quiz"
           title={title?.replace('right for your lab', 'right for you') ?? 'Is the Hei-VAP Core right for you?'}
           description="Five quick questions for a fit score and a recommendation. (A faster, lighter version of the suitability checker above.)"
         />

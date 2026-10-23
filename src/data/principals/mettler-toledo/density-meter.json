@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "mettler-toledo",
-    "principalName": "Mettler Toledo",
-    "countryOfOrigin": "Switzerland"
-  },
+  "principal": { "slug": "mettler-toledo", "principalName": "Mettler Toledo", "countryOfOrigin": "Switzerland" },
   "categories": [
     {
       "name": "Density Meter",
@@ -11,22 +7,32 @@
       "products": [
         {
           "name": "Handheld Density Meter Densito",
+
           "slug": "handheld-density-meter-densito",
+
           "principalImage": "/assets/images/PrincipalLogos/Metller.svg",
+
           "imageAlt": "Mettler Toledo Handheld Density Meter Densito - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "manufacturerUrl": "https://www.mt.com/shop/us/en/product/30330857/handheld-density-meter-densito",
+
           "canonicalUrl": "https://inkarp.co.in/products/handheld-density-meter-densito",
+
           "breadcrumbPath": "Home > Products > Density Meter > Handheld Density Meter Densito",
+
           "h1": "Handheld Density Meter Densito",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Densito is a lightweight, handheld digital density meter built for one-handed operation, at the bench or out on the production floor. Results are automatically temperature-compensated and can be delivered in specific gravity, Brix, API units, and other common formats, so the reading matches whatever unit the process actually works in.",
 
           "features": [
-            "One-Handed Operation: Lightweight enough for genuine field use.",
-            "Automatic Temperature Compensation: Consistent readings without manual correction.",
-            "Multi-Unit Output: Specific gravity, Brix, API, and other formats.",
-            "Lab-to-Field Portability: Built to go where a benchtop meter can't."
+            { "title": "One-Handed Operation", "description": "Lightweight enough for genuine field use." },
+            { "title": "Automatic Temperature Compensation", "description": "Consistent readings without manual correction." },
+            { "title": "Multi-Unit Output", "description": "Specific gravity, Brix, API, and other formats." },
+            { "title": "Lab-to-Field Portability", "description": "Built to go where a benchtop meter can't." }
           ],
 
           "technicalSpecs": [
@@ -60,29 +66,83 @@
           ],
 
           "comparison": {
-            "eyebrow": "Choosing within Mettler Toledo's density meter range",
-            "title": "Densito",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Densito currently has no same-category benchtop-vs-handheld comparison built yet.",
             "columns": [
-              { "label": "Densito", "highlight": true }
+              { "label": "Densito" }
             ],
             "rows": [
-              { "feature": "Instrument Type", "values": ["Handheld Density Meter"] },
-              { "feature": "Operation", "values": ["One-handed"] },
-              { "feature": "Output Units", "values": ["Specific gravity, Brix, API, others"] },
-              { "feature": "Best For", "values": ["Portable, on-the-go density and concentration checks"] }
+              {
+                "feature": "Instrument Type",
+                "values": [
+                  "Handheld Density Meter"
+                ]
+              },
+              {
+                "feature": "Operation",
+                "values": [
+                  "One-handed"
+                ]
+              },
+              {
+                "feature": "Output Units",
+                "values": [
+                  "Specific gravity, Brix, API, others"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Portable, on-the-go density and concentration checks"
+                ]
+              }
             ],
-            "disclaimer": "This table will be completed once Mettler Toledo's benchtop density meter, the Excellence D4, is sourced. The source page's own Related Products list names it directly as Densito's sibling."
+            "disclaimer": "This table will be completed once Mettler Toledo's benchtop density meter, the Excellence D4, is sourced. The source page's own Related Products list names it directly as Densito's sibling.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "The settings where Densito's portability earns its place.",
             "industries": [
-              { "name": "Food and Beverage Production", "icon": "droplet", "useCase": "In-process Brix and specific gravity checks", "consideration": "Handheld format takes the reading to the production line" },
-              { "name": "Chemical and Petrochemical Processing", "icon": "flask", "useCase": "Spot-check density testing in API units", "consideration": "Multi-unit output matches process reporting standards" },
-              { "name": "Quality Control on the Production Floor", "icon": "cpu", "useCase": "Fast, one-handed density verification", "consideration": "Portable enough for use away from a lab bench" },
-              { "name": "Field and Site-Based Testing", "icon": "droplet", "useCase": "Density checks outside a fixed lab environment", "consideration": "Built for use in the lab or on-the-go" }
+              {
+                "name": "Food and Beverage Production",
+                "icon": "droplet",
+                "note": "Use Case: In-process Brix and specific gravity checks",
+                "bullets": [
+                  "Why It Fits: Handheld format takes the reading to the production line"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Chemical and Petrochemical Processing",
+                "icon": "flask",
+                "note": "Use Case: Spot-check density testing in API units",
+                "bullets": [
+                  "Why It Fits: Multi-unit output matches process reporting standards"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Quality Control on the Production Floor",
+                "icon": "cpu",
+                "note": "Use Case: Fast, one-handed density verification",
+                "bullets": [
+                  "Why It Fits: Portable enough for use away from a lab bench"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Field and Site-Based Testing",
+                "icon": "droplet",
+                "note": "Use Case: Density checks outside a fixed lab environment",
+                "bullets": [
+                  "Why It Fits: Built for use in the lab or on-the-go"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -100,14 +160,32 @@
           },
 
           "faqs": [
-            { "question": "What is the Densito used for?", "answer": "Portable density and concentration measurement, at the bench or out in production, wherever the sample needs to be tested." },
-            { "question": "Is it genuinely one-handed to operate?", "answer": "Yes, Densito is built lightweight specifically for one-handed use in the lab or on-the-go." },
+            {
+              "question": "What is the Densito used for?",
+              "answer": "Portable density and concentration measurement, at the bench or out in production, wherever the sample needs to be tested."
+            },
+            {
+              "question": "Is it genuinely one-handed to operate?",
+              "answer": "Yes, Densito is built lightweight specifically for one-handed use in the lab or on-the-go."
+            },
             { "question": "Does it compensate for temperature automatically?", "answer": "Yes, results are automatically temperature-compensated." },
             { "question": "What output units are available?", "answer": "Specific gravity, Brix, API units, and other common formats." },
-            { "question": "What is the full technical specification?", "answer": "The complete data sheet, including measurement range, accuracy, battery life, and connectivity, is available from Inkarp on request." },
-            { "question": "How is Densito different from a benchtop density meter like the Excellence D4?", "answer": "Densito trades a fixed benchtop setup for genuine portability, one-handed operation suited to spot checks and on-the-go testing, while a benchtop instrument like the Excellence D4 stays fixed in the lab; the full comparison will be confirmed once Excellence D4 is sourced." },
-            { "question": "What is the price of the Densito in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration and accessories required." },
-            { "question": "Who is the authorized distributor of the Densito in India?", "answer": "Inkarp is the authorized distributor and service provider for the Mettler Toledo Densito in India." }
+            {
+              "question": "What is the full technical specification?",
+              "answer": "The complete data sheet, including measurement range, accuracy, battery life, and connectivity, is available from Inkarp on request."
+            },
+            {
+              "question": "How is Densito different from a benchtop density meter like the Excellence D4?",
+              "answer": "Densito trades a fixed benchtop setup for genuine portability, one-handed operation suited to spot checks and on-the-go testing, while a benchtop instrument like the Excellence D4 stays fixed in the lab; the full comparison will be confirmed once Excellence D4 is sourced."
+            },
+            {
+              "question": "What is the price of the Densito in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the configuration and accessories required."
+            },
+            {
+              "question": "Who is the authorized distributor of the Densito in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Mettler Toledo Densito in India."
+            }
           ],
 
           "booking": {
@@ -128,7 +206,12 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "The full spec sheet for Densito (measurement range, accuracy, battery life, and connectivity) is available from Inkarp on request — share where the meter will actually be used, at the bench or out in production, and the complete configuration gets confirmed." }
+              { "title": "Product Demonstration", "body": "Runs the lab's or line's own sample types through a reading on the unit" },
+              { "title": "Calibration Support", "body": "Confirms verification and calibration schedule" },
+              { "title": "Operator Training", "body": "Builds confidence with one-handed operation and output unit selection" },
+              { "title": "Preventive Maintenance", "body": "Maintains sensor and measurement performance" },
+              { "title": "Spares and Accessories", "body": "Supplies cases, cleaning accessories, and calibration standards" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -146,57 +229,106 @@
                 "key": "overview",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
-                "description": "A density meter built to leave the bench, not stay on it.",
-                "subheading": "Densito at a Glance",
+                "description": "Where to look for what's confirmed on Densito so far, and where Inkarp can fill in the rest.",
+                "subheading": "Overview",
                 "body": [
-                  "Lightweight, handheld design for genuine one-handed operation.",
-                  "Built for use in the lab or on-the-go, at the point where the sample actually is.",
-                  "Results are automatically temperature-compensated.",
-                  "Output available in specific gravity, Brix, API units, and other common formats.",
-                  "Positioned as a portable companion to Mettler Toledo's benchtop density meters, including the Excellence D4.",
-                  "Full technical specification (measurement range, accuracy, battery life, connectivity) not yet confirmed from source — available from Inkarp on request."
+                  { "text": "Lightweight, handheld design for genuine one-handed operation." },
+                  { "text": "Built for use in the lab or on-the-go, at the point where the sample actually is." },
+                  { "text": "Results are automatically temperature-compensated." },
+                  { "text": "Output available in specific gravity, Brix, API units, and other common formats." },
+                  { "text": "Positioned as a portable companion to Mettler Toledo's benchtop density meters, including the Excellence D4." },
+                  {
+                    "text": "Full technical specification (measurement range, accuracy, battery life, connectivity) not yet confirmed from source — available from Inkarp on request."
+                  }
                 ],
                 "cards": [
                   { "title": "One-handed operation", "description": "Genuinely portable, not just smaller" },
                   { "title": "Temperature compensation", "description": "Consistent results without manual correction" },
                   { "title": "Multiple output units", "description": "Matches the unit the process actually uses" },
                   { "title": "Lab or on-the-go", "description": "Built to work away from a benchtop setup" }
-                ]
+                ],
+                "glanceTitle": "Densito at a Glance",
+                "glanceDescription": "A portable, one-handed density meter built for measurement away from the benchtop.",
+                "intro": "A density meter built to leave the bench, not stay on it.",
+                "tabSummary": "What Densito measures, and where it's built to work"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "What makes Densito a genuinely portable density meter, not a smaller benchtop one."
+                "description": "What makes Densito a genuinely portable density meter, not a smaller benchtop one.",
+                "tabSummary": "What separates a handheld density meter from a benchtop instrument"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Where Densito's portability earns its place over a benchtop density meter."
+                "description": "Where Densito's portability earns its place over a benchtop density meter.",
+                "tabSummary": "On-the-go density and concentration checks"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "The confirmed specification set for Densito so far; the full data sheet is available from Inkarp on request."
+                "description": "The confirmed specification set for Densito so far; the full data sheet is available from Inkarp on request.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "What's confirmed; full specification available from Inkarp"
               },
               {
                 "key": "performance",
                 "eyebrow": "Temperature Compensation and Output Units Explained",
                 "title": "Temperature Compensation and Output Units Explained",
-                "description": "What automatic compensation and multi-format output actually solve for a portable density meter.",
+                "tabSummary": "What automatic compensation and multi-unit output actually solve",
                 "body": [
+                  "What automatic compensation and multi-format output actually solve for a portable density meter.",
                   "Density readings change with temperature, so a measurement taken on a warm sample in production and one taken later on a cooled sample in the lab can genuinely disagree, even if nothing about the sample itself has changed. That's a real problem for a handheld meter meant to be used wherever the sample happens to be, not just in a temperature-controlled lab.",
                   "Densito compensates for temperature automatically, so the reading reflects the sample's actual density rather than the temperature it happened to be measured at. Pairing that with output in specific gravity, Brix, API units, or other formats means the result comes out in whatever unit the process already works in, rather than requiring a manual conversion afterward."
                 ],
-                "utilityChecklist": [
-                  { "label": "Disagreement between readings taken at different temperatures", "value": "A result corrected to reflect actual density" },
-                  { "label": "A result in the wrong unit for how the process is run", "value": "Output in the unit the process already uses" },
-                  { "label": "Manual conversion between density units", "value": "Multiple output formats built in" },
-                  { "label": "Inconsistent readings across different testing locations", "value": "Consistency regardless of where or when the sample is tested" }
+                "groups": [
+                  {
+                    "columns": [
+                      "What an uncompensated, single-unit reading risks",
+                      "What Densito's compensation and multi-unit output remove"
+                    ],
+                    "rows": [
+                      [
+                        "Disagreement between readings taken at different temperatures",
+                        "A result corrected to reflect actual density"
+                      ],
+                      [
+                        "A result in the wrong unit for how the process is run",
+                        "Output in the unit the process already uses"
+                      ],
+                      [
+                        "Manual conversion between density units",
+                        "Multiple output formats built in"
+                      ],
+                      [
+                        "Inconsistent readings across different testing locations",
+                        "Consistency regardless of where or when the sample is tested"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share which output unit the process actually reports in, and how variable sample temperatures tend to be at the point of testing, and the right Densito configuration gets confirmed."
+                  }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Mettler Toledo Handheld Density Meter Densito" },
+                  { "title": "Format", "description": "Handheld, one-handed operation" },
+                  { "title": "Result handling", "description": "Automatic temperature compensation" },
+                  { "title": "Output units", "description": "Specific gravity, Brix, API, others" },
+                  { "title": "Material No.", "description": "30330857" }
                 ],
-                "disclaimer": "Share which output unit the process actually reports in, and how variable sample temperatures tend to be at the point of testing, and the right Densito configuration gets confirmed."
+                "disclaimer": "The full spec sheet for Densito (measurement range, accuracy, battery life, and connectivity) is available from Inkarp on request — share where the meter will actually be used, at the bench or out in production, and the complete configuration gets confirmed."
               },
               {
                 "key": "docs",
@@ -207,7 +339,9 @@
                   { "title": "Datasheet: Handheld Density Meter Densito", "description": "Available on request" },
                   { "title": "User Manual: Densito", "description": "Available on request" },
                   { "title": "Declaration of Conformity", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheets, manuals, and accessories"
               }
             ],
             "cta": {
@@ -216,30 +350,52 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "One-handed operation, automatic temperature compensation, and output in the unit the process already uses. Share where and how the meter will be used, and the right Densito configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "lead": "Why Densito takes density measurement wherever the sample is.",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Densito is a lightweight, handheld digital density meter built for one-handed operation, at the bench or out on the production floor. Results are automatically temperature-compensated and can be delivered in specific gravity, Brix, API units, and other common formats, so the reading matches whatever unit the process actually works in.",
+              "Its compact, portable design is built to go where a benchtop density meter can't, making it a practical fit for spot checks and in-process testing away from the lab."
+            ],
+            "statsIntro": "What's confirmed so far for Densito's portable density measurement."
+          },
+
+          "faqIntro": "The questions buyers actually ask before choosing Densito.",
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Density meter Excellence D4",
+
           "slug": "density-meter-excellence-d4",
+
           "principalImage": "/assets/images/PrincipalLogos/Metller.svg",
+
           "imageAlt": "Mettler Toledo Density meter Excellence D4 - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "manufacturerUrl": "https://www.mt.com/sg/en/home/products/Laboratory_Analytics_Browse/density-meter/densitometer/D4.html",
+
           "canonicalUrl": "https://inkarp.co.in/products/density-meter-excellence-d4",
+
           "breadcrumbPath": "Home > Products > Density Meter > Density meter Excellence D4",
+
           "h1": "Density meter Excellence D4",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Excellence D4 measures density to ±0.0001 g/cm³ accuracy with 0.00005 g/cm³ repeatability, across a 0 to 3 g/cm³ measurement range and a 0°C to 95°C temperature control range. A 7\" color touchscreen shows a live video view of the measuring cell, and BubbleCheck™ automatic bubble detection flags a common source of measurement error before it affects the result.",
 
           "features": [
-            "BubbleCheck™ Automatic Detection: Catches trapped bubbles before they skew a result.",
-            "Real-Time Video View: See the measuring cell live on the touchscreen.",
-            "Automatic Viscosity Correction: Removes a manual correction step from testing.",
-            "Up to 30 User-Defined Tables: Concentration scales built around the lab's own samples.",
-            "Autosampler Automation: Runs up to 303 samples without manual intervention.",
-            "LabX-Ready Compliance: 21 CFR Part 11 and EU Annex 11 support, with full audit trail."
+            { "title": "BubbleCheck™ Automatic Detection", "description": "Catches trapped bubbles before they skew a result." },
+            { "title": "Real-Time Video View", "description": "See the measuring cell live on the touchscreen." },
+            { "title": "Automatic Viscosity Correction", "description": "Removes a manual correction step from testing." },
+            { "title": "Up to 30 User-Defined Tables", "description": "Concentration scales built around the lab's own samples." },
+            { "title": "Autosampler Automation", "description": "Runs up to 303 samples without manual intervention." },
+            { "title": "LabX-Ready Compliance", "description": "21 CFR Part 11 and EU Annex 11 support, with full audit trail." }
           ],
 
           "technicalSpecs": [
@@ -294,35 +450,125 @@
           ],
 
           "comparison": {
-            "eyebrow": "Choosing within Mettler Toledo's density meter range",
-            "title": "Excellence D4 vs. Densito",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare Excellence D4 against the other Mettler Toledo Density Meter sourced so far.",
             "columns": [
-              { "label": "Excellence D4", "highlight": true },
+              { "label": "Excellence D4" },
               { "label": "Densito" }
             ],
             "rows": [
-              { "feature": "Product Type", "values": ["Benchtop Density Meter", "Handheld Density Meter"] },
-              { "feature": "Accuracy", "values": ["±0.0001 g/cm³", "Available on request"] },
-              { "feature": "Measurement Range", "values": ["0 – 3 g/cm³", "Available on request"] },
-              { "feature": "Operation", "values": ["Automated, autosampler-capable", "One-handed, portable"] },
-              { "feature": "Output Units", "values": ["Density, specific gravity, alcohol, acid, API, sugar, urea, custom tables", "Specific gravity, Brix, API, others"] },
-              { "feature": "Compliance", "values": ["LabX-ready, 21 CFR Part 11 / EU Annex 11", "Available on request"] },
-              { "feature": "Best For", "values": ["High-precision, high-throughput, regulated benchtop testing", "Portable, on-the-go density and concentration checks"] },
-              { "feature": "Choose When", "values": ["Precision, automation, and compliance are the priority", "Portability and one-handed field use matter more than lab-grade automation"] }
+              {
+                "feature": "Product Type",
+                "values": [
+                  "Benchtop Density Meter",
+                  "Handheld Density Meter"
+                ]
+              },
+              {
+                "feature": "Accuracy",
+                "values": [
+                  "±0.0001 g/cm³",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Measurement Range",
+                "values": [
+                  "0 – 3 g/cm³",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Operation",
+                "values": [
+                  "Automated, autosampler-capable",
+                  "One-handed, portable"
+                ]
+              },
+              {
+                "feature": "Output Units",
+                "values": [
+                  "Density, specific gravity, alcohol, acid, API, sugar, urea, custom tables",
+                  "Specific gravity, Brix, API, others"
+                ]
+              },
+              {
+                "feature": "Compliance",
+                "values": [
+                  "LabX-ready, 21 CFR Part 11 / EU Annex 11",
+                  "Available on request"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "High-precision, high-throughput, regulated benchtop testing",
+                  "Portable, on-the-go density and concentration checks"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Precision, automation, and compliance are the priority",
+                  "Portability and one-handed field use matter more than lab-grade automation"
+                ]
+              }
             ],
-            "disclaimer": "Excellence D4 and Densito serve two different jobs entirely: D4 is the fixed, high-precision, automatable benchtop instrument, while Densito trades that precision and automation for genuine portability. The source page names Densito directly as D4's sibling in this category."
+            "disclaimer": "Excellence D4 and Densito serve two different jobs entirely: D4 is the fixed, high-precision, automatable benchtop instrument, while Densito trades that precision and automation for genuine portability. The source page names Densito directly as D4's sibling in this category.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "The labs where Excellence D4's precision and automation earn their place.",
             "industries": [
-              { "name": "Pharmaceutical QC and R&D", "icon": "pill", "useCase": "Regulated, high-precision density testing", "consideration": "LabX-based 21 CFR Part 11 / EU Annex 11 compliance" },
-              { "name": "Beverage and Alcohol Production", "icon": "droplet", "useCase": "Alcohol content and specific gravity testing", "consideration": "Built-in alcohol and Brix/sugar measurement tables" },
-              { "name": "Petrochemical and Fuel Testing", "icon": "flask", "useCase": "API gravity and density testing to industry norms", "consideration": "Compliant with ASTM D4052, API Std 2540, and related standards" },
-              { "name": "High-Throughput QC Laboratories", "icon": "cpu", "useCase": "Testing large sample volumes efficiently", "consideration": "Autosampler automation for up to 303 samples" },
-              { "name": "Multiparameter Analytical Labs", "icon": "school", "useCase": "Combined density, refractive index, color, and pH testing", "consideration": "Built for multiparameter automation workflows" }
+              {
+                "name": "Pharmaceutical QC and R&D",
+                "icon": "pill",
+                "note": "Use Case: Regulated, high-precision density testing",
+                "bullets": [
+                  "Why It Fits: LabX-based 21 CFR Part 11 / EU Annex 11 compliance"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Beverage and Alcohol Production",
+                "icon": "droplet",
+                "note": "Use Case: Alcohol content and specific gravity testing",
+                "bullets": [
+                  "Why It Fits: Built-in alcohol and Brix/sugar measurement tables"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Petrochemical and Fuel Testing",
+                "icon": "flask",
+                "note": "Use Case: API gravity and density testing to industry norms",
+                "bullets": [
+                  "Why It Fits: Compliant with ASTM D4052, API Std 2540, and related standards"
+                ],
+                "tags": []
+              },
+              {
+                "name": "High-Throughput QC Laboratories",
+                "icon": "cpu",
+                "note": "Use Case: Testing large sample volumes efficiently",
+                "bullets": [
+                  "Why It Fits: Autosampler automation for up to 303 samples"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Multiparameter Analytical Labs",
+                "icon": "school",
+                "note": "Use Case: Combined density, refractive index, color, and pH testing",
+                "bullets": [
+                  "Why It Fits: Built for multiparameter automation workflows"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -341,16 +587,37 @@
           },
 
           "faqs": [
-            { "question": "What is the Excellence D4 used for?", "answer": "High-precision benchtop density and concentration measurement, across pharma, beverage, petrochemical, and general laboratory applications requiring regulated, automated testing." },
+            {
+              "question": "What is the Excellence D4 used for?",
+              "answer": "High-precision benchtop density and concentration measurement, across pharma, beverage, petrochemical, and general laboratory applications requiring regulated, automated testing."
+            },
             { "question": "What is the accuracy and repeatability?", "answer": "±0.0001 g/cm³ accuracy, with 0.00005 g/cm³ repeatability." },
             { "question": "What is the measurement range?", "answer": "0 to 3 g/cm³, with temperature control from 0°C to 95°C." },
-            { "question": "What is BubbleCheck™?", "answer": "An automatic bubble detection feature that catches trapped air in the measuring cell before it affects the result." },
-            { "question": "Does it support automated, high-throughput testing?", "answer": "Yes, with autosampler automation supporting up to 303 samples, depending on the autosampler configuration." },
-            { "question": "Is it 21 CFR Part 11 compliant?", "answer": "Yes, with LabX software, Excellence D4 supports 21 CFR Part 11 and EU Annex 11 compliance with a full audit trail." },
+            {
+              "question": "What is BubbleCheck™?",
+              "answer": "An automatic bubble detection feature that catches trapped air in the measuring cell before it affects the result."
+            },
+            {
+              "question": "Does it support automated, high-throughput testing?",
+              "answer": "Yes, with autosampler automation supporting up to 303 samples, depending on the autosampler configuration."
+            },
+            {
+              "question": "Is it 21 CFR Part 11 compliant?",
+              "answer": "Yes, with LabX software, Excellence D4 supports 21 CFR Part 11 and EU Annex 11 compliance with a full audit trail."
+            },
             { "question": "What is the minimum sample volume?", "answer": "1.5 mL." },
-            { "question": "What is the difference between Excellence D4 and Densito?", "answer": "Excellence D4 is a fixed, high-precision benchtop instrument with autosampler automation and regulatory compliance, while Densito is a portable, one-handed handheld meter built for on-the-go testing without that level of precision or automation." },
-            { "question": "What is the price of the Excellence D4 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration and accessories required." },
-            { "question": "Who is the authorized distributor of the Excellence D4 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Mettler Toledo Excellence D4 in India." }
+            {
+              "question": "What is the difference between Excellence D4 and Densito?",
+              "answer": "Excellence D4 is a fixed, high-precision benchtop instrument with autosampler automation and regulatory compliance, while Densito is a portable, one-handed handheld meter built for on-the-go testing without that level of precision or automation."
+            },
+            {
+              "question": "What is the price of the Excellence D4 in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the configuration and accessories required."
+            },
+            {
+              "question": "Who is the authorized distributor of the Excellence D4 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Mettler Toledo Excellence D4 in India."
+            }
           ],
 
           "booking": {
@@ -371,7 +638,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right configuration", "body": "Share which measurement scales the lab needs (density, alcohol, Brix, API, or custom tables), and whether autosampler or multiparameter automation is part of the workflow, and the right Excellence D4 configuration and accessories get confirmed." }
+              { "title": "Product Demonstration", "body": "Runs the lab's own sample types through a measurement on the unit" },
+              { "title": "Calibration Support", "body": "Supplies certified density/refractive index standards for verification" },
+              { "title": "Installation Support", "body": "Confirms bench siting, network connectivity, and power requirements" },
+              { "title": "Operator Training", "body": "Builds confidence with touchscreen operation, autosampler setup, and LabX workflow" },
+              { "title": "Preventive Maintenance", "body": "Maintains the measuring cell, pressure sensor, and temperature control performance" },
+              { "title": "Spares and Accessories", "body": "Supplies autosamplers, sample changers, drying pumps, and connecting kits" },
+              { "title": "Service Support", "body": "Handles troubleshooting, maintenance visits, and AMC" }
             ]
           },
 
@@ -393,59 +666,110 @@
                 "key": "overview",
                 "eyebrow": "Product overview",
                 "title": "Product Information",
-                "description": "A benchtop instrument built to remove the manual steps that introduce error into density measurement, not just measure it precisely.",
-                "subheading": "Excellence D4 at a Glance",
+                "description": "Where to look first for what makes Excellence D4 a high-precision benchtop instrument, not a portable one.",
+                "subheading": "Overview",
                 "body": [
-                  "Accuracy of ±0.0001 g/cm³, with 0.00005 g/cm³ repeatability.",
-                  "Measurement range of 0 to 3 g/cm³, temperature-controlled from 0°C to 95°C.",
-                  "Real-time video view of the measuring cell, shown live on a 7\" touchscreen.",
-                  "BubbleCheck™ automatic bubble detection, plus a clean check function.",
-                  "Automatic viscosity correction and automatic sample detection.",
-                  "Measurement scales for density, specific gravity, alcohol, acid, API, sugar, urea, and up to 30 user-defined concentration tables.",
-                  "Supports autosampler automation for up to 303 samples, and multiparameter measurement (refractive index, color, pH, and more).",
-                  "LIMS connectivity and LabX-based 21 CFR Part 11 / EU Annex 11 compliance."
+                  { "text": "Accuracy of ±0.0001 g/cm³, with 0.00005 g/cm³ repeatability." },
+                  { "text": "Measurement range of 0 to 3 g/cm³, temperature-controlled from 0°C to 95°C." },
+                  { "text": "Real-time video view of the measuring cell, shown live on a 7\" touchscreen." },
+                  { "text": "BubbleCheck™ automatic bubble detection, plus a clean check function." },
+                  { "text": "Automatic viscosity correction and automatic sample detection." },
+                  {
+                    "text": "Measurement scales for density, specific gravity, alcohol, acid, API, sugar, urea, and up to 30 user-defined concentration tables."
+                  },
+                  { "text": "Supports autosampler automation for up to 303 samples, and multiparameter measurement (refractive index, color, pH, and more)." },
+                  { "text": "LIMS connectivity and LabX-based 21 CFR Part 11 / EU Annex 11 compliance." }
                 ],
                 "cards": [
                   { "title": "±0.0001 g/cm³ accuracy", "description": "High-precision benchtop-grade density measurement" },
                   { "title": "BubbleCheck™", "description": "Catches a common source of measurement error automatically" },
                   { "title": "Video view of the cell", "description": "Visual confirmation of what's actually being measured" },
                   { "title": "Up to 303-sample automation", "description": "Real high-throughput capability with an autosampler" }
-                ]
+                ],
+                "glanceTitle": "Excellence D4 at a Glance",
+                "glanceDescription": "A high-precision, modular benchtop density meter, built for automated, regulated laboratory testing.",
+                "intro": "A benchtop instrument built to remove the manual steps that introduce error into density measurement, not just measure it precisely.",
+                "tabSummary": "What Excellence D4 measures, and how automation removes manual error"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "What separates Excellence D4 from a portable density meter like Densito."
+                "description": "What separates Excellence D4 from a portable density meter like Densito.",
+                "tabSummary": "BubbleCheck™, video view, and automatic viscosity correction"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "Where Excellence D4's precision and automation earn their place over a handheld meter."
+                "description": "Where Excellence D4's precision and automation earn their place over a handheld meter.",
+                "tabSummary": "High-precision density and concentration testing across regulated industries"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "Every number on the Excellence D4 spec sheet, laid out in full."
+                "description": "Every number on the Excellence D4 spec sheet, laid out in full.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Full accuracy, capacity, and connectivity specification"
               },
               {
                 "key": "performance",
                 "eyebrow": "Automation and Compliance Explained",
                 "title": "Automation and Compliance Explained",
-                "description": "What autosampling and LabX connectivity actually remove from routine density testing.",
+                "tabSummary": "What autosampling and LabX connectivity actually remove from routine testing",
                 "body": [
+                  "What autosampling and LabX connectivity actually remove from routine density testing.",
                   "Manual density testing depends on the operator to load each sample, correct for viscosity, and record the result correctly, and a lab running many samples a day repeats that dependency every single time. A bubble trapped in the measuring cell or an uncorrected viscous sample can quietly skew a result without ever being obvious to the operator.",
                   "Excellence D4 automates both problems: BubbleCheck™ catches trapped air before it affects the reading, automatic viscosity correction removes the manual adjustment, and the optional autosampler runs up to 303 samples without an operator loading each one by hand. LabX connectivity then carries that same automation into the compliance side, capturing results with a full audit trail rather than depending on manual transcription."
                 ],
-                "utilityChecklist": [
-                  { "label": "A trapped bubble skewing a result unnoticed", "value": "BubbleCheck™ catching it automatically" },
-                  { "label": "Manual viscosity correction, sample by sample", "value": "Automatic correction built into the measurement" },
-                  { "label": "An operator loading every sample by hand", "value": "Autosampler automation for up to 303 samples" },
-                  { "label": "A manual record with no built-in audit trail", "value": "LabX-connected, 21 CFR Part 11-ready compliance" }
+                "groups": [
+                  {
+                    "columns": [
+                      "What manual, unautomated testing risks",
+                      "What Excellence D4's automation removes"
+                    ],
+                    "rows": [
+                      [
+                        "A trapped bubble skewing a result unnoticed",
+                        "BubbleCheck™ catching it automatically"
+                      ],
+                      [
+                        "Manual viscosity correction, sample by sample",
+                        "Automatic correction built into the measurement"
+                      ],
+                      [
+                        "An operator loading every sample by hand",
+                        "Autosampler automation for up to 303 samples"
+                      ],
+                      [
+                        "A manual record with no built-in audit trail",
+                        "LabX-connected, 21 CFR Part 11-ready compliance"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Share the lab's daily sample volume and whether autosampler automation would genuinely change the workflow, and the right Excellence D4 configuration gets confirmed."
+                  }
+                ]
+              },
+              {
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
+                "cards": [
+                  { "title": "Solution", "description": "Mettler Toledo Density meter Excellence D4" },
+                  { "title": "Accuracy", "description": "±0.0001 g/cm³" },
+                  { "title": "Repeatability", "description": "0.00005 g/cm³" },
+                  { "title": "Measurement range", "description": "0 – 3 g/cm³" },
+                  { "title": "Temperature control range", "description": "0°C – 95°C" },
+                  { "title": "Minimum sample volume", "description": "1.5 mL" },
+                  { "title": "Material No.", "description": "30474900" }
                 ],
-                "disclaimer": "Share the lab's daily sample volume and whether autosampler automation would genuinely change the workflow, and the right Excellence D4 configuration gets confirmed."
+                "disclaimer": "Share which measurement scales the lab needs (density, alcohol, Brix, API, or custom tables), and whether autosampler or multiparameter automation is part of the workflow, and the right Excellence D4 configuration and accessories get confirmed."
               },
               {
                 "key": "docs",
@@ -459,7 +783,9 @@
                   { "title": "Density Measurement Guide", "description": "Available on request" },
                   { "title": "Conversion Tables for Density and Refractive Index", "description": "Available on request" },
                   { "title": "Reference Manual: Density Meter Excellence D4, D5, D6", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheets, manuals, and accessories"
               }
             ],
             "cta": {
@@ -468,9 +794,21 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "±0.0001 g/cm³ accuracy, BubbleCheck™ automatic detection, and up to 303-sample autosampler automation, built for regulated, high-precision testing. Share the lab's measurement scales and throughput needs, and the right Excellence D4 configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "lead": "Why Excellence D4 removes manual error from precision density testing.",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Excellence D4 measures density to ±0.0001 g/cm³ accuracy with 0.00005 g/cm³ repeatability, across a 0 to 3 g/cm³ measurement range and a 0°C to 95°C temperature control range. A 7\" color touchscreen shows a live video view of the measuring cell, and BubbleCheck™ automatic bubble detection flags a common source of measurement error before it affects the result.",
+              "Automatic viscosity correction and automatic sample detection remove two manual steps from routine testing, and connectivity spans USB, Ethernet, CAN, HDMI, and RS232, with LIMS and LabX integration for regulated, auditable data. Up to 30 user-defined concentration tables sit alongside built-in density, alcohol, Brix/sugar, and acid/base tables, and the D4 supports full autosampler automation for up to 303 samples."
+            ],
+            "statsIntro": "The core numbers behind Excellence D4's benchtop density precision."
+          },
+
+          "faqIntro": "The questions buyers actually ask before choosing Excellence D4.",
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

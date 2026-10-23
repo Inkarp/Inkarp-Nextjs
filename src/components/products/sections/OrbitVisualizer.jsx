@@ -115,6 +115,7 @@ export default function OrbitVisualizer({ data, productName = 'this mixer' }) {
       <div className="mx-auto max-w-[1180px]">
         <SectionHeader
           eyebrow={data.eyebrow ?? 'How it works'}
+          lead={data.lead}
           title={data.title ?? `How the ${productName} works`}
           description={data.description}
         />

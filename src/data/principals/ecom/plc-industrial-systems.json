@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "ecom",
-    "principalName": "ECOM",
-    "countryOfOrigin": "Czech Republic"
-  },
+  "principal": { "slug": "ecom", "principalName": "ECOM", "countryOfOrigin": "Czech Republic" },
   "categories": [
     {
       "name": "PLC Industrial Systems",
@@ -25,12 +21,19 @@
       "products": [
         {
           "name": "Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems",
+
           "slug": "separsys-hp-400-800-fp-300-ds-plc-industrial-systems",
+
           "imageAlt": "ECOM Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems - authorized distributor & service provider in India",
+
           "principalImage": "/assets/images/PrincipalLogos/ECom.png",
+
           "category": "PLC Industrial Systems",
+
           "metaTitle": "Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems — Authorized Distributor & Service Provider in India | Inkarp | ECOM",
+
           "metaDescription": "Inkarp is the authorized distributor & service provider for the ECOM Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems in India. Get price, demo, installation, AMC & spare parts. Enquire Now.",
+
           "metaKeywords": [
             "Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems",
             "Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems India",
@@ -47,31 +50,156 @@
             "ECOM India",
             "Inkarp Instruments"
           ],
+
           "overview": "Industrial preparative chromatographs aren't off-the-shelf equipment. Each one is tailored to the user's specific separation, pressure, and throughput requirements. Separsys HP systems are industrial units for high-efficiency, high-pressure isocratic preparative chromatography, built for production-scale purification. The three configurations shown here, HP 400, 800 FP, and 300 DS, represent examples of systems already delivered to customers, each built around a different column size, pressure range, and pump configuration. Every system is fully controlled through modified ECOMAC software, and Inkarp's specialists work directly with you to develop the right specification for your process.",
+
           "features": [
-            "High-Pressure Column Design: Column pressure ratings from 50 to 100 bar depending on configuration, built for demanding industrial separations.",
-            "Modified ECOMAC Software Control: Sets separation parameters and monitors detector signal and column pressure from a single PC across all three systems.",
-            "Consistent Detection Architecture: PLCC 15 Ex detector cell paired with a FLASH 06S DAD 600 EX detector across the range.",
-            "Multi-Pump Mobile Phase Management: Hydracell membrane pumps handle mobile phase delivery, sample injection, and, where needed, piston actuation.",
-            "Centralized Pump Control: Remote switchboard with ABB frequency converters manages flow changes across pump motors.",
-            "Dedicated Hydraulic Piston System (300 DS): Separpress D100 EE 1300 delivers 100 tons of force across a full 1300mm piston stroke.",
-            "Automatic Bypass Detection (800 FP and 300 DS): Separpass 03 connects the detector cell to the column output from a 10-meter distance.",
-            "ATEX and Pressure Certification on Request: All industrial systems can be delivered with ATEX certification for hazardous environments and pressure certification for columns and the full system."
+            {
+              "title": "High-Pressure Column Design",
+              "description": "Column pressure ratings from 50 to 100 bar depending on configuration, built for demanding industrial separations."
+            },
+            {
+              "title": "Modified ECOMAC Software Control",
+              "description": "Sets separation parameters and monitors detector signal and column pressure from a single PC across all three systems."
+            },
+            {
+              "title": "Consistent Detection Architecture",
+              "description": "PLCC 15 Ex detector cell paired with a FLASH 06S DAD 600 EX detector across the range."
+            },
+            {
+              "title": "Multi-Pump Mobile Phase Management",
+              "description": "Hydracell membrane pumps handle mobile phase delivery, sample injection, and, where needed, piston actuation."
+            },
+            { "title": "Centralized Pump Control", "description": "Remote switchboard with ABB frequency converters manages flow changes across pump motors." },
+            {
+              "title": "Dedicated Hydraulic Piston System (300 DS)",
+              "description": "Separpress D100 EE 1300 delivers 100 tons of force across a full 1300mm piston stroke."
+            },
+            {
+              "title": "Automatic Bypass Detection (800 FP and 300 DS)",
+              "description": "Separpass 03 connects the detector cell to the column output from a 10-meter distance."
+            },
+            {
+              "title": "ATEX and Pressure Certification on Request",
+              "description": "All industrial systems can be delivered with ATEX certification for hazardous environments and pressure certification for columns and the full system."
+            }
           ],
+
           "technicalSpecs": [
-            { "label": "Product Name", "value": "ECOM Separsys HP 400, 800 FP, and 300 DS PLC Industrial Systems" },
-            { "label": "Category", "value": "PLC Industrial Systems" },
-            { "label": "Control", "value": "Modified ECOMAC software across all configurations" },
-            { "label": "Detection", "value": "PLCC 15 Ex cell with FLASH 06S DAD 600 EX detector, standard across the range" },
-            { "label": "Certification", "value": "ATEX and pressure certification available on request" }
+            {
+              "label": "Column Model",
+              "values": [
+                "Separchrom PC01 400",
+                "Separchrom PC05 800",
+                "Separchrom PC01 1300"
+              ]
+            },
+            {
+              "label": "Column Inside Diameter",
+              "values": [
+                "399mm",
+                "799mm",
+                "299mm"
+              ]
+            },
+            {
+              "label": "Column Length",
+              "values": [
+                "1000mm",
+                "1000mm",
+                "1300mm"
+              ]
+            },
+            {
+              "label": "Packing Material",
+              "values": [
+                "15 µm spherical silica, sedimentation packing",
+                "15 µm spherical silica, sedimentation packing, floating piston",
+                "10 µm spherical silica, dynamic slurry method"
+              ]
+            },
+            {
+              "label": "Maximum Pressure",
+              "values": [
+                "80 bar",
+                "50 bar",
+                "100 bar"
+              ]
+            },
+            {
+              "label": "Hydraulic System",
+              "values": [
+                "Not applicable",
+                "Not applicable",
+                "Separpress D100 EE 1300, 100 tons, 1300mm stroke, up to 200 bar oil pressure"
+              ]
+            },
+            {
+              "label": "Detector",
+              "values": [
+                "PLCC 15 Ex, FLASH 06S DAD 600 EX",
+                "PLCC 15 Ex via Separpass 03 (10m bypass), FLASH 06S DAD 600 EX",
+                "PLCC 15 Ex via Separpass 03 (10m bypass), FLASH 06S DAD 600 EX"
+              ]
+            },
+            {
+              "label": "Mobile Phase Valves",
+              "values": [
+                "Manual high-pressure ball valves",
+                "Air-controlled high-pressure ball valves",
+                "Manual high-pressure ball valves"
+              ]
+            },
+            {
+              "label": "Flow Reversal",
+              "values": [
+                "Yes, mobile phase delivery block",
+                "Not stated",
+                "Yes, dedicated flow reversion block"
+              ]
+            },
+            {
+              "label": "Pump System",
+              "values": [
+                "3x Hydracell P3, up to 8 L/min, 70 bar each",
+                "Hydracell G10 and multiple G3 pumps, up to 27 L/min (G10) and 8 L/min (G3), 70 bar",
+                "2x Hydracell G04, up to 8 L/min, 120 bar each"
+              ]
+            },
+            {
+              "label": "Motor Control",
+              "values": [
+                "3x ABB frequency converters",
+                "3x ABB ACS 550-01-06A9-4 frequency converters",
+                "3x ABB frequency converters"
+              ]
+            },
+            {
+              "label": "Electronic Control Unit",
+              "values": [
+                "Separel 01",
+                "Separel 01",
+                "Separel 04"
+              ]
+            },
+            {
+              "label": "Software",
+              "values": [
+                "Modified ECOMAC",
+                "Modified ECOMAC",
+                "Modified ECOMAC"
+              ]
+            }
           ],
+
           "applications": [
-            "Production-Scale Isocratic Purification: High-pressure column designs built for continuous industrial output",
-            "Large-Diameter Column Separation: 800 FP's 799mm ID column suits high-volume separations",
-            "High-Pressure Fine Silica Separation: 300 DS's 10 µm silica and 100 bar rating suit demanding resolution needs",
-            "Hazardous-Area Manufacturing Sites: ATEX certification available across all three systems on request",
-            "Regulated Industrial Environments: Pressure certification available for columns and the complete system"
+            { "title": "Production-Scale Isocratic Purification", "description": "High-pressure column designs built for continuous industrial output" },
+            { "title": "Large-Diameter Column Separation", "description": "800 FP's 799mm ID column suits high-volume separations" },
+            { "title": "High-Pressure Fine Silica Separation", "description": "300 DS's 10 µm silica and 100 bar rating suit demanding resolution needs" },
+            { "title": "Hazardous-Area Manufacturing Sites", "description": "ATEX certification available across all three systems on request" },
+            { "title": "Regulated Industrial Environments", "description": "Pressure certification available for columns and the complete system" }
           ],
+
           "tags": [
             "Separsys",
             "PLC Industrial Systems",
@@ -81,6 +209,7 @@
             "ECOM",
             "Inkarp"
           ],
+
           "faqs": [
             {
               "question": "What are the Separsys HP 400, 800 FP, and 300 DS systems used for?",
@@ -116,9 +245,10 @@
             },
             {
               "question": "Who is the authorized distributor of the Separsys HP systems in India?",
-              "answer": "Inkarp is the authorized distributor and service provider for the ECOM Separsys HP 400, 800 FP, 300 DS PLC Industrial Systems in India. Inkarp provides demonstration, installation, training, AMC, spare parts, and technical support."
+              "answer": "Inkarp is the authorized distributor and service provider for the ECOM Separsys HP 400, 800 FP, and 300 DS PLC Industrial Systems in India. Inkarp provides demonstration, installation, training, AMC, spare parts, and technical support."
             }
           ],
+
           "longForm": {
             "heroLead": "Industrial preparative chromatographs aren't off-the-shelf equipment. Each one is tailored to the user's specific separation, pressure, and throughput requirements. Separsys HP systems are industrial units for high-efficiency, high-pressure isocratic preparative chromatography, built for production-scale purification. The three configurations shown here, HP 400, 800 FP, and 300 DS, represent examples of systems already delivered to customers, each built around a different column size, pressure range, and pump configuration. Every system is fully controlled through modified ECOMAC software, and Inkarp's specialists work directly with you to develop the right specification for your process.",
             "stats": [
@@ -134,44 +264,59 @@
               {
                 "key": "overview",
                 "eyebrow": "Product Information",
-                "title": "Separsys HP Systems at a Glance",
-                "description": "Everything you need to evaluate the Separsys HP range: how HP 400, 800 FP, and 300 DS differ in column and pump design, shared control architecture, and Inkarp installation and service support.",
-                "subheading": "Industrial-scale preparative chromatography, built to your production needs.",
+                "title": "Product Information",
+                "description": "The product information of the Separsys HP systems covers column configuration, pump architecture, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "All three systems are built for isocratic, high pressure, high performance preparative chromatography at industrial scale.",
-                  "Each is fully controlled through modified ECOMAC software, which sets separation parameters and monitors both detector signal and column pressure from a single PC.",
-                  "HP 400 runs a 399mm ID, 1000mm long column packed with 15 µm spherical silica using a sedimentation packing procedure, at up to 80 bar.",
-                  "800 FP steps up in column diameter to 799mm, at up to 50 bar, and adds a special floating piston along with an automatic bypass detection system, Separpass 03, positioned 10 meters from the column.",
-                  "300 DS uses a narrower 299mm ID but a longer 1300mm column with full-length piston stroke, packed with finer 10 µm silica by a dynamic slurry method, running at up to 100 bar, the highest pressure rating of the three.",
-                  "300 DS is the only configuration built with its own dedicated hydraulic system, a Separpress D100 EE 1300 rated for 100 tons of force and 1300mm of stroke, alongside a flow reversion block that lets flow direction in the column be changed.",
-                  "Every system uses multiple Hydracell membrane pumps working together to handle mobile phase delivery, sample injection, and, on 800 FP and 300 DS, additional roles like piston actuation.",
-                  "Pump motors across all three systems are powered through a remote switchboard using ABB frequency converters, allowing flow changes to be managed centrally.",
-                  "Because these are examples of already-delivered units rather than fixed catalog products, Inkarp recommends working directly with ECOM's specialists to develop the right specification for your process.",
-                  "Solution: ECOM Separsys HP 400, 800 FP, and 300 DS PLC Industrial Systems.",
-                  "Control: Modified ECOMAC software across all configurations.",
-                  "Detection: PLCC 15 Ex cell with FLASH 06S DAD 600 EX detector, standard across the range.",
-                  "Certification: ATEX and pressure certification available on request.",
-                  "Full system specification is developed jointly with ECOM specialists based on your process requirements.",
-                  "Product expert note: Tell our team your target throughput, pressure requirements, and column size, and Inkarp will connect you with the right specification process for your Separsys system."
+                  { "text": "All three systems are built for isocratic, high pressure, high performance preparative chromatography at industrial scale." },
+                  {
+                    "text": "Each is fully controlled through modified ECOMAC software, which sets separation parameters and monitors both detector signal and column pressure from a single PC."
+                  },
+                  {
+                    "text": "HP 400 runs a 399mm ID, 1000mm long column packed with 15 µm spherical silica using a sedimentation packing procedure, at up to 80 bar."
+                  },
+                  {
+                    "text": "800 FP steps up in column diameter to 799mm, at up to 50 bar, and adds a special floating piston along with an automatic bypass detection system, Separpass 03, positioned 10 meters from the column."
+                  },
+                  {
+                    "text": "300 DS uses a narrower 299mm ID but a longer 1300mm column with full-length piston stroke, packed with finer 10 µm silica by a dynamic slurry method, running at up to 100 bar, the highest pressure rating of the three."
+                  },
+                  {
+                    "text": "300 DS is the only configuration built with its own dedicated hydraulic system, a Separpress D100 EE 1300 rated for 100 tons of force and 1300mm of stroke, alongside a flow reversion block that lets flow direction in the column be changed."
+                  },
+                  {
+                    "text": "Every system uses multiple Hydracell membrane pumps working together to handle mobile phase delivery, sample injection, and, on 800 FP and 300 DS, additional roles like piston actuation."
+                  },
+                  {
+                    "text": "Pump motors across all three systems are powered through a remote switchboard using ABB frequency converters, allowing flow changes to be managed centrally."
+                  },
+                  {
+                    "text": "Because these are examples of already-delivered units rather than fixed catalog products, Inkarp recommends working directly with ECOM's specialists to develop the right specification for your process."
+                  }
                 ],
                 "cards": [
                   { "title": "Up to 799mm ID", "description": "Largest column diameter in the range (800 FP)" },
                   { "title": "Up to 100 bar", "description": "Highest pressure rating in the range (300 DS)" },
                   { "title": "ECOMAC software", "description": "Unified control and monitoring across all systems" },
                   { "title": "Custom-specified", "description": "Built around your process, not off-the-shelf" }
-                ]
+                ],
+                "glanceTitle": "Separsys HP Systems at a Glance",
+                "glanceDescription": "Everything you need to evaluate the Separsys HP range: how HP 400, 800 FP, and 300 DS differ in column and pump design, shared control architecture, and Inkarp installation and service support.",
+                "tabSummary": "Why each Separsys system is built around its own column and pump setup"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
                 "title": "Key Features",
-                "description": "The key features of the Separsys HP systems include shared ECOMAC control, detection, and certification options."
+                "description": "The key features of the Separsys HP systems include high-pressure column design, ECOMAC software control, and hazardous-area certification.",
+                "tabSummary": "Shared ECOMAC control, detection, and certification options"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "The applications of the Separsys HP systems include production-scale purification, high-pressure isocratic separation, and hazardous-environment operation."
+                "description": "The applications of the Separsys HP systems include production-scale purification, high-pressure isocratic separation, and hazardous-environment operation.",
+                "tabSummary": "Production-scale isocratic preparative purification"
               },
               {
                 "key": "specs",
@@ -180,38 +325,97 @@
                 "body": [
                   "The technical specifications of the Separsys HP systems compare column size, pressure rating, and pump configuration across HP 400, 800 FP, and 300 DS.",
                   "Full system specification, dimensions, and pricing are developed jointly with ECOM specialists and available on request from Inkarp."
-                ]
+                ],
+                "description": "The technical specifications of the Separsys HP systems compare column size, pressure rating, and pump configuration across HP 400, 800 FP, and 300 DS.",
+                "columns": [
+                  "Parameter",
+                  "Separsys HP 400",
+                  "Separsys 800 FP",
+                  "Separsys 300 DS"
+                ],
+                "note": "Full system specification, dimensions, and pricing are developed jointly with ECOM specialists and available on request from Inkarp.",
+                "tabSummary": "Full comparison across HP 400, 800 FP, and 300 DS"
               },
               {
                 "key": "performance",
                 "eyebrow": "System Architecture and Pump Configuration",
                 "title": "System Architecture and Pump Configuration",
+                "tabSummary": "How mobile phase, sample, and pressure are managed in each system",
                 "body": [
                   "Each Separsys system routes mobile phase, sample, and pressure control a little differently, shaped by its column size and target application.",
                   "On HP 400, three Hydracell P3 pumps split the work cleanly: two run in parallel to supply the mobile phase, while the third delivers the sample mixture to be separated, all monitored through electronic pressure sensors on the delivery block. 800 FP scales that up, pairing a higher-capacity Hydracell G10 pump for mobile phase supply with multiple G3 pumps handling sample injection and, notably, moving the column's floating piston, all routed through air-controlled ball valves rather than manual ones. 300 DS takes a different approach entirely, using two Hydracell G04 pumps rated for higher pressure (120 bar each) to handle mobile phase and sample together, while a separate, purpose-built Separpress hydraulic system handles the piston stroke across the column's full 1300mm length, an approach that also enables its dedicated flow reversion block."
                 ],
-                "utilityChecklist": [
-                  { "label": "Balanced mobile phase and sample delivery", "value": "HP 400's parallel P3 pump configuration" },
-                  { "label": "High-volume mobile phase with floating piston control", "value": "800 FP's G10 and G3 pump combination" },
-                  { "label": "High-pressure operation with full-length piston control", "value": "300 DS's G04 pumps paired with a dedicated Separpress hydraulic system" },
-                  { "label": "Centralized flow management across pumps", "value": "ABB frequency converters on a remote switchboard, standard across all three" }
-                ],
-                "disclaimer": "Product expert note: Tell our team about your mobile phase and sample delivery requirements, and Inkarp will work with ECOM specialists to confirm the right pump and column architecture for your process."
+                "groups": [
+                  {
+                    "columns": [
+                      "What your process needs",
+                      "How the Separsys range delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "Balanced mobile phase and sample delivery",
+                        "HP 400's parallel P3 pump configuration"
+                      ],
+                      [
+                        "High-volume mobile phase with floating piston control",
+                        "800 FP's G10 and G3 pump combination"
+                      ],
+                      [
+                        "High-pressure operation with full-length piston control",
+                        "300 DS's G04 pumps paired with a dedicated Separpress hydraulic system"
+                      ],
+                      [
+                        "Centralized flow management across pumps",
+                        "ABB frequency converters on a remote switchboard, standard across all three"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Tell our team about your mobile phase and sample delivery requirements, and Inkarp will work with ECOM specialists to confirm the right pump and column architecture for your process."
+                  },
+                  {
+                    "title": "Certification and Custom Specification",
+                    "summary": "ATEX, pressure certification, and the tailoring process",
+                    "description": "Industrial chromatography systems rarely fit a fixed catalog listing, and Separsys systems are built with that reality in mind.",
+                    "body": [
+                      "The three configurations shown here, HP 400, 800 FP, and 300 DS, are examples of units already delivered to customers, not a fixed product menu. Because each installation is shaped by column size, pressure, throughput, and site conditions, ECOM recommends working directly with their specialists to develop the right specification before finalizing a system. Where site conditions call for it, all industrial systems can be delivered with ATEX certification for hazardous environments, and pressure certification for both the columns and the complete system, both available on request."
+                    ],
+                    "columns": [
+                      "What your facility needs",
+                      "How Separsys delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "A system built around your actual process",
+                        "Specification developed jointly with ECOM specialists"
+                      ],
+                      [
+                        "Operation in a hazardous-rated environment",
+                        "ATEX certification available on request"
+                      ],
+                      [
+                        "Regulatory or safety documentation for pressure equipment",
+                        "Pressure certification for columns and the full system on request"
+                      ]
+                    ],
+                    "note": "Tell our team about your site conditions and any certification requirements, and Inkarp will coordinate with ECOM specialists on your system specification."
+                  }
+                ]
               },
               {
-                "key": "certs",
-                "eyebrow": "Certification and Custom Specification",
-                "title": "Certification and Custom Specification",
-                "description": "Industrial chromatography systems rarely fit a fixed catalog listing, and Separsys systems are built with that reality in mind.",
-                "body": [
-                  "The three configurations shown here, HP 400, 800 FP, and 300 DS, are examples of units already delivered to customers, not a fixed product menu. Because each installation is shaped by column size, pressure, throughput, and site conditions, ECOM recommends working directly with their specialists to develop the right specification before finalizing a system. Where site conditions call for it, all industrial systems can be delivered with ATEX certification for hazardous environments, and pressure certification for both the columns and the complete system, both available on request.",
-                  "Product expert note: Tell our team about your site conditions and any certification requirements, and Inkarp will coordinate with ECOM specialists on your system specification."
-                ],
+                "key": "config",
+                "eyebrow": "Configuration note",
+                "title": "Configuration note",
                 "cards": [
-                  { "title": "A system built around your actual process", "description": "Specification developed jointly with ECOM specialists" },
-                  { "title": "Operation in a hazardous-rated environment", "description": "ATEX certification available on request" },
-                  { "title": "Regulatory or safety documentation for pressure equipment", "description": "Pressure certification for columns and the full system on request" }
-                ]
+                  { "title": "Solution", "description": "ECOM Separsys HP 400, 800 FP, and 300 DS PLC Industrial Systems" },
+                  { "title": "Control", "description": "Modified ECOMAC software across all configurations" },
+                  { "title": "Detection", "description": "PLCC 15 Ex cell with FLASH 06S DAD 600 EX detector, standard across the range" },
+                  { "title": "Certification", "description": "ATEX and pressure certification available on request" }
+                ],
+                "body": [
+                  "Full system specification is developed jointly with ECOM specialists based on your process requirements"
+                ],
+                "disclaimer": "Tell our team your target throughput, pressure requirements, and column size, and Inkarp will connect you with the right specification process for your Separsys system."
               },
               {
                 "key": "docs",
@@ -219,10 +423,12 @@
                 "title": "Documentation and Resources",
                 "description": "Documentation for the Separsys HP systems is available from Inkarp on request.",
                 "cards": [
-                  { "title": "System Schematic Drawings (HP 400, 800 FP, 300 DS)", "description": "Available from Inkarp on request." },
-                  { "title": "Full Technical Specification Sheets", "description": "Available from Inkarp on request." },
-                  { "title": "ATEX and Pressure Certification Details", "description": "Available from Inkarp on request." }
-                ]
+                  { "title": "System Schematic Drawings (HP 400, 800 FP, 300 DS)", "description": "Available from Inkarp on request" },
+                  { "title": "Full Technical Specification Sheets", "description": "Available from Inkarp on request" },
+                  { "title": "ATEX and Pressure Certification Details", "description": "Available from Inkarp on request" }
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Schematic drawings and specification support"
               }
             ],
             "cta": {
@@ -231,9 +437,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Industrial-scale isocratic preparative chromatography, tailored to your process. Tell us your column, pressure, and throughput requirements, and Inkarp will coordinate specification development with ECOM specialists.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroHook": "Industrial-scale preparative chromatography, built to your production needs.",
+            "heroParagraphs": [
+              "Industrial preparative chromatographs aren't off-the-shelf equipment. Each one is tailored to the user's specific separation, pressure, and throughput requirements.",
+              "Separsys HP systems are industrial units for high-efficiency, high-pressure isocratic preparative chromatography, built for production-scale purification. The three configurations shown here, HP 400, 800 FP, and 300 DS, represent examples of systems already delivered to customers, each built around a different column size, pressure range, and pump configuration. Every system is fully controlled through modified ECOMAC software, and Inkarp's specialists work directly with you to develop the right specification for your process."
+            ],
+            "statsIntro": "The quick stats of the Separsys HP systems cover column size, pressure range, and control architecture across the three configurations."
           },
+
           "inPageNav": [
             { "id": "overview", "label": "Overview" },
             { "id": "column-pressure-matcher", "label": "Column & Pressure Matcher" },
@@ -244,6 +459,7 @@
             { "id": "faq", "label": "FAQs" },
             { "id": "booking", "label": "Request Quote" }
           ],
+
           "planners": [
             {
               "sectionId": "column-pressure-matcher",
@@ -251,35 +467,16 @@
               "title": "What column size and pressure does your process require?",
               "description": "Enter your target column diameter and operating pressure, and see which configuration is the closest starting point.",
               "fields": [
-                { "key": "choices", "label": "Select your column diameter, pressure, and packing preference" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Column diameter input",
-                  "choices": "Target inside diameter in mm",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Operating pressure input",
-                  "choices": "Target maximum pressure in bar",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Packing preference",
-                  "choices": "10 µm or 15 µm silica",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Configuration readout",
-                  "choices": "Suggests HP 400, 800 FP, or 300 DS as the closest starting reference",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Next step",
-                  "choices": "Routes to Inkarp for specification development with ECOM specialists",
-                  "cta": "Get Configuration Support"
-                }
-              ]
+                { "title": "Column diameter input", "hint": "Target inside diameter in mm", "input": "text", "choices": "" },
+                { "title": "Operating pressure input", "hint": "Target maximum pressure in bar", "input": "text", "choices": "" },
+                { "title": "Packing preference", "hint": "10 µm or 15 µm silica", "choices": "10 µm; 15 µm silica" }
+              ],
+              "ctaNote": "Suggests HP 400, 800 FP, or 300 DS as the closest starting reference. Routes to Inkarp for specification development with ECOM specialists.",
+              "disclaimer": "",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "certification-requirements-checker",
@@ -287,37 +484,20 @@
               "title": "Does your facility require special certification?",
               "description": "Select your site conditions, and see which certifications apply.",
               "fields": [
-                { "key": "choices", "label": "Select your hazardous area classification, pressure certification need, and regulatory framework" }
+                { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Hazardous area classification",
-                  "choices": "Yes or no",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Pressure equipment certification requirement",
-                  "choices": "Yes or no",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Regulatory framework",
-                  "choices": "Select applicable regional standard",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Certification readout",
-                  "choices": "Confirms ATEX and pressure certification availability",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Next step",
-                  "choices": "Routes to Inkarp for certification and specification support",
-                  "cta": "Talk to Product Expert"
-                }
-              ]
+                { "title": "Hazardous area classification", "hint": "Yes or no", "choices": "Yes; No" },
+                { "title": "Pressure equipment certification requirement", "hint": "Yes or no", "choices": "Yes; No" },
+                { "title": "Regulatory framework", "hint": "Select applicable regional standard", "input": "text", "choices": "" }
+              ],
+              "lead": "The certification requirements checker confirms whether ATEX or pressure certification applies to your site.",
+              "ctaNote": "Confirms ATEX and pressure certification availability. Routes to Inkarp for certification and specification support.",
+              "disclaimer": "",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
+
           "comparison": {
             "sectionId": "comparison",
             "eyebrow": "Technical Specifications",
@@ -329,22 +509,114 @@
               { "label": "Separsys 300 DS" }
             ],
             "rows": [
-              { "feature": "Column Model", "values": ["Separchrom PC01 400", "Separchrom PC05 800", "Separchrom PC01 1300"] },
-              { "feature": "Column Inside Diameter", "values": ["399mm", "799mm", "299mm"] },
-              { "feature": "Column Length", "values": ["1000mm", "1000mm", "1300mm"] },
-              { "feature": "Packing Material", "values": ["15 µm spherical silica, sedimentation packing", "15 µm spherical silica, sedimentation packing, floating piston", "10 µm spherical silica, dynamic slurry method"] },
-              { "feature": "Maximum Pressure", "values": ["80 bar", "50 bar", "100 bar"] },
-              { "feature": "Hydraulic System", "values": ["Not applicable", "Not applicable", "Separpress D100 EE 1300, 100 tons, 1300mm stroke, up to 200 bar oil pressure"] },
-              { "feature": "Detector", "values": ["PLCC 15 Ex, FLASH 06S DAD 600 EX", "PLCC 15 Ex via Separpass 03 (10m bypass), FLASH 06S DAD 600 EX", "PLCC 15 Ex via Separpass 03 (10m bypass), FLASH 06S DAD 600 EX"] },
-              { "feature": "Mobile Phase Valves", "values": ["Manual high-pressure ball valves", "Air-controlled high-pressure ball valves", "Manual high-pressure ball valves"] },
-              { "feature": "Flow Reversal", "values": ["Yes, mobile phase delivery block", "Not stated", "Yes, dedicated flow reversion block"] },
-              { "feature": "Pump System", "values": ["3x Hydracell P3, up to 8 L/min, 70 bar each", "Hydracell G10 and multiple G3 pumps, up to 27 L/min (G10) and 8 L/min (G3), 70 bar", "2x Hydracell G04, up to 8 L/min, 120 bar each"] },
-              { "feature": "Motor Control", "values": ["3x ABB frequency converters", "3x ABB ACS 550-01-06A9-4 frequency converters", "3x ABB frequency converters"] },
-              { "feature": "Electronic Control Unit", "values": ["Separel 01", "Separel 01", "Separel 04"] },
-              { "feature": "Software", "values": ["Modified ECOMAC", "Modified ECOMAC", "Modified ECOMAC"] }
+              {
+                "feature": "Column Model",
+                "values": [
+                  "Separchrom PC01 400",
+                  "Separchrom PC05 800",
+                  "Separchrom PC01 1300"
+                ]
+              },
+              {
+                "feature": "Column Inside Diameter",
+                "values": [
+                  "399mm",
+                  "799mm",
+                  "299mm"
+                ]
+              },
+              {
+                "feature": "Column Length",
+                "values": [
+                  "1000mm",
+                  "1000mm",
+                  "1300mm"
+                ]
+              },
+              {
+                "feature": "Packing Material",
+                "values": [
+                  "15 µm spherical silica, sedimentation packing",
+                  "15 µm spherical silica, sedimentation packing, floating piston",
+                  "10 µm spherical silica, dynamic slurry method"
+                ]
+              },
+              {
+                "feature": "Maximum Pressure",
+                "values": [
+                  "80 bar",
+                  "50 bar",
+                  "100 bar"
+                ]
+              },
+              {
+                "feature": "Hydraulic System",
+                "values": [
+                  "Not applicable",
+                  "Not applicable",
+                  "Separpress D100 EE 1300, 100 tons, 1300mm stroke, up to 200 bar oil pressure"
+                ]
+              },
+              {
+                "feature": "Detector",
+                "values": [
+                  "PLCC 15 Ex, FLASH 06S DAD 600 EX",
+                  "PLCC 15 Ex via Separpass 03 (10m bypass), FLASH 06S DAD 600 EX",
+                  "PLCC 15 Ex via Separpass 03 (10m bypass), FLASH 06S DAD 600 EX"
+                ]
+              },
+              {
+                "feature": "Mobile Phase Valves",
+                "values": [
+                  "Manual high-pressure ball valves",
+                  "Air-controlled high-pressure ball valves",
+                  "Manual high-pressure ball valves"
+                ]
+              },
+              {
+                "feature": "Flow Reversal",
+                "values": [
+                  "Yes, mobile phase delivery block",
+                  "Not stated",
+                  "Yes, dedicated flow reversion block"
+                ]
+              },
+              {
+                "feature": "Pump System",
+                "values": [
+                  "3x Hydracell P3, up to 8 L/min, 70 bar each",
+                  "Hydracell G10 and multiple G3 pumps, up to 27 L/min (G10) and 8 L/min (G3), 70 bar",
+                  "2x Hydracell G04, up to 8 L/min, 120 bar each"
+                ]
+              },
+              {
+                "feature": "Motor Control",
+                "values": [
+                  "3x ABB frequency converters",
+                  "3x ABB ACS 550-01-06A9-4 frequency converters",
+                  "3x ABB frequency converters"
+                ]
+              },
+              {
+                "feature": "Electronic Control Unit",
+                "values": [
+                  "Separel 01",
+                  "Separel 01",
+                  "Separel 04"
+                ]
+              },
+              {
+                "feature": "Software",
+                "values": [
+                  "Modified ECOMAC",
+                  "Modified ECOMAC",
+                  "Modified ECOMAC"
+                ]
+              }
             ],
             "disclaimer": "Full system specification, dimensions, and pricing are developed jointly with ECOM specialists and available on request from Inkarp."
           },
+
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
             "title": "Industry Explorer",
@@ -353,35 +625,51 @@
               {
                 "name": "Pharmaceutical Manufacturing",
                 "icon": "pill",
-                "useCase": "Production-scale purification of active ingredients and intermediates",
-                "consideration": "Pressure certification supports regulatory documentation for pharma manufacturing sites"
+                "note": "Use Case: Production-scale purification of active ingredients and intermediates",
+                "bullets": [
+                  "What to Consider: Pressure certification supports regulatory documentation for pharma manufacturing sites"
+                ],
+                "tags": []
               },
               {
                 "name": "Fine Chemical Production",
                 "icon": "flask",
-                "useCase": "High-volume isocratic separation of specialty chemical products",
-                "consideration": "800 FP's larger column diameter suits high-throughput production runs"
+                "note": "Use Case: High-volume isocratic separation of specialty chemical products",
+                "bullets": [
+                  "What to Consider: 800 FP's larger column diameter suits high-throughput production runs"
+                ],
+                "tags": []
               },
               {
                 "name": "Biotechnology Purification",
                 "icon": "droplet",
-                "useCase": "Large-scale purification of biologically derived compounds",
-                "consideration": "ECOMAC software provides consistent, monitored process control at scale"
+                "note": "Use Case: Large-scale purification of biologically derived compounds",
+                "bullets": [
+                  "What to Consider: ECOMAC software provides consistent, monitored process control at scale"
+                ],
+                "tags": []
               },
               {
                 "name": "Petrochemical and Solvent-Handling Facilities",
                 "icon": "shield",
-                "useCase": "Operating purification equipment in classified hazardous areas",
-                "consideration": "ATEX certification available across all three configurations"
+                "note": "Use Case: Operating purification equipment in classified hazardous areas",
+                "bullets": [
+                  "What to Consider: ATEX certification available across all three configurations"
+                ],
+                "tags": []
               },
               {
                 "name": "Contract Manufacturing Organizations",
                 "icon": "cpu",
-                "useCase": "Running varied client purification processes at industrial scale",
-                "consideration": "Custom specification process adapts each system to different client requirements"
+                "note": "Use Case: Running varied client purification processes at industrial scale",
+                "bullets": [
+                  "What to Consider: Custom specification process adapts each system to different client requirements"
+                ],
+                "tags": []
               }
             ]
           },
+
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
             "title": "Inkarp Service Near You",
@@ -396,6 +684,7 @@
               { "title": "Service Support", "description": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
           },
+
           "booking": {
             "sectionId": "booking",
             "eyebrow": "Request Quote",
@@ -412,20 +701,17 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              {
-                "title": "Product expert note — configuration",
-                "body": "Tell our team your target throughput, pressure requirements, and column size, and Inkarp will connect you with the right specification process for your Separsys system."
-              },
-              {
-                "title": "Product expert note — pump and column architecture",
-                "body": "Tell our team about your mobile phase and sample delivery requirements, and Inkarp will work with ECOM specialists to confirm the right pump and column architecture for your process."
-              },
-              {
-                "title": "Product expert note — certification",
-                "body": "Tell our team about your site conditions and any certification requirements, and Inkarp will coordinate with ECOM specialists on your system specification."
-              }
+              { "title": "Product Demonstration", "body": "Coordinates specification discussions with ECOM specialists based on your process" },
+              { "title": "Configuration Assessment", "body": "Assesses column, pressure, and pump architecture for your requirements" },
+              { "title": "Installation Support", "body": "Supports site preparation, setup, and first-run checks" },
+              { "title": "Operator Training", "body": "Helps the team use ECOMAC software and monitor system pressure confidently" },
+              { "title": "Preventive Maintenance", "body": "Maintains pumps, valves, and detector performance across the system" },
+              { "title": "Spares and Accessories", "body": "Supplies pumps, valves, and replacement parts" },
+              { "title": "Service Support", "body": "Supports troubleshooting, maintenance visits, and AMC" }
             ]
-          }
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

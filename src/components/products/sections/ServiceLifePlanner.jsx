@@ -102,6 +102,7 @@ export default function ServiceLifePlanner({ data, productName }) {
         <SectionHeader
           number={data.number ?? '13'}
           eyebrow={data.eyebrow}
+          lead={data.lead}
           title={data.title}
           description={data.description}
         />

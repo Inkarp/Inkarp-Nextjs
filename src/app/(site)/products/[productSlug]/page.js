@@ -22,6 +22,7 @@ import RecordProductView from "@/components/products/RecordProductView";
 import FinderProductPrompt from "@/components/solution-finder/FinderProductPrompt";
 import { inferFinderObjective } from "@/lib/finderPlacement";
 import CatalogueDownloadButton from "@/components/products/CatalogueDownloadButton";
+import { getProductCatalogue } from "@/data/productCatalogues";
 
 const DEFAULT_AUTHORIZED_REGION = "India";
 
@@ -55,6 +56,7 @@ export default async function ProductPage({ params }) {
   const { productSlug } = await params;
   const product = getProductBySlug(productSlug);
   if (!product) notFound();
+  const productCatalogue = getProductCatalogue(product);
 
   const categorySiblings = getAllProducts()
     .filter((p) => p.category === product.category && p.slug !== product.slug);
@@ -245,7 +247,12 @@ export default async function ProductPage({ params }) {
                 <ProductImageZoom alt={product.imageAlt ?? product.name} src={product.image} />
               </div>
             )}
-            <ProductImageActions href={ctaHref} product={product} secondary={product.heroSecondaryCta} />
+            <ProductImageActions
+              catalogue={productCatalogue}
+              href={ctaHref}
+              product={product}
+              secondary={product.heroSecondaryCta}
+            />
           </div>
         </div>
       </section>
@@ -306,14 +313,16 @@ export default async function ProductPage({ params }) {
 const DUO_REQUEST_QUOTE_CLASS =
   "inline-flex h-14 w-full items-center justify-center gap-1.5 border border-rose-200 bg-rose-50 px-2 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100";
 
-function ProductImageActions({ href, product, secondary }) {
+function ProductImageActions({ catalogue, href, product, secondary }) {
   return (
     <div className="mt-3 space-y-2">
       <div className="grid grid-cols-2 gap-2">
         <RequestQuoteButton className={DUO_REQUEST_QUOTE_CLASS} href={href} product={product} />
         <AddToQuoteButton product={product} variant="duo" />
       </div>
-      <CatalogueDownloadButton productName={product.name} productSlug={product.slug} />
+      {catalogue ? (
+        <CatalogueDownloadButton productName={product.name} productSlug={product.slug} />
+      ) : null}
       {secondary?.label && (
         <Link
           href={secondary.href ?? "/contact"}

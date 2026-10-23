@@ -57,12 +57,30 @@
           ],
           "overview": "Runs up to three rotary evaporators at once. Pulls down to 7 mbar. A rotary evaporator is only as good as the vacuum behind it. The Hei-VAC Valve Control pulls down to 7 mbar without gas ballast, or 12 mbar with it, and one pump can supply suction to up to three rotary evaporators at the same time. Control runs through valve-operated or manual vacuum controllers, switched on and off through a switchbox.",
           "features": [
-            "Multi-Evaporator Suction: Supplies vacuum to up to three rotary evaporators running at once, from one pump.",
-            "Gas Ballast Function: Admits a controlled amount of air to protect the pump from condensing solvent vapour, at the cost of a slightly shallower ultimate vacuum.",
-            "Valve or Manual Control: Vacuum runs through valve-operated or manual vacuum controllers, depending on your setup.",
-            "Switchbox Operation: Switches the pump on and off externally, rather than from a built-in control panel.",
-            "Thermal Motor Protection: A thermal cutout with manual reset protects the motor from overload.",
-            "Wide Voltage Compatibility: Runs on 100 to 115 V or 230 V supply, at 50 or 60 Hz, within +/-10%."
+            {
+              "title": "Multi-Evaporator Suction",
+              "description": "Supplies vacuum to up to three rotary evaporators running at once, from one pump."
+            },
+            {
+              "title": "Gas Ballast Function",
+              "description": "Admits a controlled amount of air to protect the pump from condensing solvent vapour, at the cost of a slightly shallower ultimate vacuum."
+            },
+            {
+              "title": "Valve or Manual Control",
+              "description": "Vacuum runs through valve-operated or manual vacuum controllers, depending on your setup."
+            },
+            {
+              "title": "Switchbox Operation",
+              "description": "Switches the pump on and off externally, rather than from a built-in control panel."
+            },
+            {
+              "title": "Thermal Motor Protection",
+              "description": "A thermal cutout with manual reset protects the motor from overload."
+            },
+            {
+              "title": "Wide Voltage Compatibility",
+              "description": "Runs on 100–115 V or 230 V supply, at 50 or 60 Hz, within ±10%."
+            }
           ],
           "technicalSpecs": [
             {
@@ -135,23 +153,38 @@
             },
             {
               "label": "Storage Temperature Range",
-              "value": "-10°C to +60°C"
+              "value": "−10°C to +60°C"
             },
             {
               "label": "Permissible Relative Humidity",
               "value": "30% to 85%, no condensation"
             },
             {
-              "label": "Supply Voltage Range, +/-10%",
-              "value": "100-115 V, 50/60 Hz; 120 V, 60 Hz; 230 V, 50/60 Hz"
+              "label": "Supply Voltage Range, ±10%",
+              "value": "100–115 V, 50/60 Hz; 120 V, 60 Hz; 230 V, 50/60 Hz"
             }
           ],
           "applications": [
-            "Rotary Evaporation: Pulls down to 7 mbar for effective solvent removal.",
-            "Solvent Recovery: Gas ballast protects the pump during vapour-heavy runs.",
-            "Multi-Station Laboratories: Supplies up to three rotary evaporators at once.",
-            "Hei-VAP Expert and Ultimate Control Systems: Compatible with a vacuum valve for integrated control.",
-            "Shared Vacuum Infrastructure: One pump serves multiple evaporation setups on a bench."
+            {
+              "title": "Rotary Evaporation",
+              "description": "Pulls down to 7 mbar for effective solvent removal"
+            },
+            {
+              "title": "Solvent Recovery",
+              "description": "Gas ballast protects the pump during vapour-heavy runs"
+            },
+            {
+              "title": "Multi-Station Laboratories",
+              "description": "Supplies up to three rotary evaporators at once"
+            },
+            {
+              "title": "Hei-VAP Expert and Ultimate Control Systems",
+              "description": "Compatible with a vacuum valve for integrated control"
+            },
+            {
+              "title": "Shared Vacuum Infrastructure",
+              "description": "One pump serves multiple evaporation setups on a bench"
+            }
           ],
           "tags": [
             "Hei-VAC",
@@ -194,7 +227,7 @@
             },
             {
               "question": "What voltage does the Hei-VAC Valve Control run on?",
-              "answer": "It accepts 100 to 115 V or 230 V supply, at 50 or 60 Hz, within +/-10%."
+              "answer": "It accepts 100–115 V or 230 V supply, at 50 or 60 Hz, within ±10%."
             },
             {
               "question": "What is the difference between the Valve Control and the RPM-regulated Vario models?",
@@ -215,7 +248,7 @@
           ],
           "longForm": {
             "heroHook": "Runs up to three rotary evaporators at once. Pulls down to 7 mbar.",
-            "heroLead": "A rotary evaporator is only as good as the vacuum behind it. The Hei-VAC Valve Control pulls down to 7 mbar without gas ballast, or 12 mbar with it. One pump can supply suction to up to three rotary evaporators at the same time. Control runs through valve-operated or manual vacuum controllers, switched on and off through a switchbox. Pairing this pump with a Hei-VAP Expert Control or Ultimate Control evaporator needs a vacuum valve, and the secondary condenser is ordered separately.",
+            "heroLead": "A rotary evaporator is only as good as the vacuum behind it. The Hei-VAC Valve Control pulls down to 7 mbar without gas ballast, or 12 mbar with it. One pump can supply suction to up to three rotary evaporators at the same time. Control runs through valve-operated or manual vacuum controllers. Switch the pump on and off through a switchbox. Pairing this pump with a Hei-VAP Expert Control or Ultimate Control evaporator needs a vacuum valve. The secondary condenser is not included, and is ordered separately.",
             "stats": [
               {
                 "value": "7 mbar",
@@ -262,147 +295,200 @@
               {
                 "key": "overview",
                 "eyebrow": "Product information",
-                "title": "Hei-VAC Valve Control at a glance",
-                "description": "Everything you need to evaluate the Valve Control: how deep a vacuum it pulls, what gas ballast changes, how many evaporators it can serve, the full technical data, and Inkarp installation and service support.",
-                "subheading": "Shared vacuum for up to three rotary evaporators",
+                "title": "Product Information",
+                "description": "The product information of the Hei-VAC Valve Control Vacuum Pump covers its vacuum depth, multi-evaporator capacity, control method, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "The Hei-VAC Valve Control provides the vacuum performance needed for reliable solvent evaporation while supporting multiple rotary evaporators from a single pump.",
-                  "It achieves an ultimate vacuum of 7 mbar without gas ballast for efficient solvent recovery, and operates at 12 mbar with gas ballast, helping protect the pump when handling condensable vapours.",
-                  "The pump supplies vacuum to up to three rotary evaporators simultaneously, making it suited to shared laboratory workflows, and is compatible with valve-operated and manual vacuum controllers for flexible operation. It is controlled through an external switchbox, keeping operation simple and convenient.",
-                  "When used with Hei-VAP Expert Control or Ultimate Control rotary evaporators, a vacuum valve is required and supplied separately. A secondary condenser is also available separately to complete the vacuum system.",
-                  "Confirmed model: Hei-VAC Valve Control, P/N 591-00130-00. Secondary condenser and vacuum valve, where required, are sold separately."
+                  {
+                    "text": "Achieves an ultimate vacuum of 7 mbar without gas ballast for efficient solvent recovery."
+                  },
+                  {
+                    "text": "Operates at 12 mbar with gas ballast, helping protect the pump when handling condensable vapours."
+                  },
+                  {
+                    "text": "Supplies vacuum to up to three rotary evaporators simultaneously, making it ideal for shared laboratory workflows."
+                  },
+                  {
+                    "text": "Compatible with valve-operated and manual vacuum controllers for flexible operation."
+                  },
+                  {
+                    "text": "Controlled through an external switchbox, keeping operation simple and convenient."
+                  },
+                  {
+                    "text": "When used with Hei-VAP Expert Control or Ultimate Control rotary evaporators, a vacuum valve is required and supplied separately."
+                  },
+                  {
+                    "text": "A secondary condenser is also available separately to complete the vacuum system."
+                  }
                 ],
                 "cards": [
                   {
                     "title": "7 mbar",
-                    "description": "Ultimate vacuum without gas ballast."
+                    "description": "Ultimate vacuum without gas ballast"
                   },
                   {
                     "title": "12 mbar",
-                    "description": "Ultimate vacuum with gas ballast engaged."
+                    "description": "Ultimate vacuum with gas ballast engaged"
                   },
                   {
                     "title": "Up to 3 evaporators",
-                    "description": "Simultaneous suction capacity."
+                    "description": "Simultaneous suction capacity"
                   },
                   {
                     "title": "2.0 / 2.3 m³/h",
-                    "description": "Maximum pumping speed."
+                    "description": "Maximum pumping speed"
                   }
-                ]
+                ],
+                "glanceTitle": "Hei-VAC Valve Control Vacuum Pump at a Glance",
+                "glanceDescription": "Everything you need to evaluate the Valve Control: how deep a vacuum it pulls, what gas ballast changes, how many evaporators it can serve, the full technical data, and Inkarp installation and service support.",
+                "intro": "The Hei-VAC Valve Control provides the vacuum performance needed for reliable solvent evaporation while supporting multiple rotary evaporators from a single pump.",
+                "cardsIntro": "The value cards of the Hei-VAC Valve Control Vacuum Pump summarize its vacuum depth, pumping speed, and multi-station capacity.",
+                "tabSummary": "What the Valve Control is built for, and how gas ballast works"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Multi-evaporator suction, gas ballast, and valve control",
-                "description": "The key features of the Hei-VAC Valve Control include multi-evaporator suction, gas ballast protection, valve control, and switchbox operation."
+                "title": "Key Features",
+                "description": "The key features of the Hei-VAC Valve Control Vacuum Pump include multi-evaporator suction, gas ballast protection, valve control, and switchbox operation.",
+                "tabSummary": "Multi-evaporator suction, valve control, switchbox operation"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
-                "title": "Where the Hei-VAC Valve Control fits",
-                "description": "Use the Hei-VAC Valve Control for rotary evaporation, solvent recovery, multi-station laboratory setups, Hei-VAP Expert and Ultimate Control systems, and shared vacuum infrastructure."
+                "title": "Applications",
+                "description": "The applications of the Hei-VAC Valve Control Vacuum Pump include rotary evaporation, solvent recovery, and multi-station laboratory setups.",
+                "tabSummary": "Rotary evaporation, multi-station labs, solvent recovery"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
-                "title": "Technical specifications",
-                "description": "The technical specifications include a 7 mbar ultimate vacuum, 2.0 to 2.3 m³/h pumping speed, three-evaporator suction capacity, and IP40 protection."
+                "title": "Technical Specifications",
+                "description": "The technical specifications of the Hei-VAC Valve Control Vacuum Pump include a 7 mbar ultimate vacuum, 2.0 to 2.3 m³/h pumping speed, and three-evaporator suction capacity.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Vacuum depth, pumping speed, power, dimensions"
               },
               {
                 "key": "performance",
                 "eyebrow": "Vacuum Depth and Pumping Speed",
-                "title": "Vacuum depth and pumping speed",
+                "title": "Vacuum Depth and Pumping Speed",
+                "tabSummary": "What 7 mbar and 12 mbar actually mean for your process",
                 "body": [
                   "Two numbers decide how well this pump serves your evaporation: how deep a vacuum it reaches, and how fast it gets there.",
-                  "Without gas ballast, the pump reaches 7 mbar, the deeper of the two figures and the one to use for straightforward solvent removal where vapour condensation inside the pump isn't a concern.",
-                  "Switch gas ballast on, and the ultimate vacuum settles at 12 mbar instead, shallower, but the controlled air bleed keeps solvent vapour from condensing inside the pump chamber, which protects it during runs with high vapour loads."
+                  "Without gas ballast, the pump reaches 7 mbar, the deeper of the two figures and the one to use for straightforward solvent removal where vapour condensation inside the pump isn't a concern. Switch gas ballast on, and the ultimate vacuum settles at 12 mbar instead — shallower, but the controlled air bleed keeps solvent vapour from condensing inside the pump chamber, which protects it during runs with high vapour loads."
                 ],
-                "metrics": [
+                "groups": [
                   {
-                    "value": "7 mbar",
-                    "label": "Ultimate vacuum, without gas ballast"
+                    "columns": [
+                      "What you're doing",
+                      "Gas ballast setting"
+                    ],
+                    "rows": [
+                      [
+                        "Standard solvent evaporation, low vapour load",
+                        "Off, for the deeper 7 mbar vacuum"
+                      ],
+                      [
+                        "High vapour load or condensable solvents",
+                        "On, for pump protection at 12 mbar"
+                      ],
+                      [
+                        "Running near the pump's limits for extended periods",
+                        "On, to avoid internal condensation damage"
+                      ],
+                      [
+                        "Maximum vacuum depth is the priority",
+                        "Off"
+                      ]
+                    ]
                   },
                   {
-                    "value": "12 mbar",
-                    "label": "Ultimate vacuum, with gas ballast"
+                    "note": "Tell our team your solvent and typical vapour load, and Inkarp will confirm whether you should run with gas ballast on or off as standard."
                   },
                   {
-                    "value": "2.0 / 2.3 m³/h",
-                    "label": "Maximum pumping speed"
-                  },
-                  {
-                    "value": "Up to 3",
-                    "label": "Evaporators supplied at once"
+                    "title": "System Compatibility and Accessories",
+                    "summary": "What you still need to complete the setup",
+                    "description": "The pump alone doesn't complete a rotary evaporation setup. Depending on your evaporator and process, you'll need additional components.",
+                    "columns": [
+                      "Component",
+                      "Status",
+                      "Selection Direction"
+                    ],
+                    "rows": [
+                      [
+                        "Vacuum Pump",
+                        "Included, P/N 591-00130-00",
+                        "Hei-VAC Valve Control"
+                      ],
+                      [
+                        "Secondary Condenser",
+                        "Not included",
+                        "Required for full solvent recovery; confirmed by Inkarp"
+                      ],
+                      [
+                        "Vacuum Valve",
+                        "Not included, required for some setups",
+                        "Needed if pairing with a Hei-VAP Expert Control or Ultimate Control evaporator"
+                      ],
+                      [
+                        "Switchbox",
+                        "Confirm",
+                        "For on/off control depending on your installation"
+                      ],
+                      [
+                        "Connecting Hose",
+                        "Not included",
+                        "DN 8 mm hose nozzle at both inlet and outlet"
+                      ]
+                    ],
+                    "note": "Send our team your rotary evaporator model and how many units you're running, and Inkarp will confirm the complete accessory list."
                   }
-                ],
-                "utilityChecklist": [
-                  {
-                    "label": "Standard solvent evaporation, low vapour load",
-                    "value": "Gas ballast off, for the deeper 7 mbar vacuum"
-                  },
-                  {
-                    "label": "High vapour load or condensable solvents",
-                    "value": "Gas ballast on, for pump protection at 12 mbar"
-                  },
-                  {
-                    "label": "Running near the pump's limits for extended periods",
-                    "value": "Gas ballast on, to avoid internal condensation damage"
-                  },
-                  {
-                    "label": "Maximum vacuum depth is the priority",
-                    "value": "Gas ballast off"
-                  }
-                ],
-                "disclaimer": "Tell Inkarp your solvent and typical vapour load so they can confirm whether you should run with gas ballast on or off as standard."
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "System Compatibility and Accessories",
-                "title": "System compatibility and accessories",
+                "title": "Configuration note",
                 "description": "The pump alone doesn't complete a rotary evaporation setup. Depending on your evaporator and process, you'll need additional components.",
                 "cards": [
                   {
-                    "title": "Vacuum pump",
-                    "description": "Included, P/N 591-00130-00. Hei-VAC Valve Control."
+                    "title": "Model",
+                    "description": "Hei-VAC Valve Control (P/N: 591-00130-00)"
                   },
                   {
-                    "title": "Secondary condenser",
-                    "description": "Not included. Required for full solvent recovery; confirmed by Inkarp."
-                  },
-                  {
-                    "title": "Vacuum valve",
-                    "description": "Not included, required for some setups. Needed if pairing with a Hei-VAP Expert Control or Ultimate Control evaporator."
-                  },
-                  {
-                    "title": "Switchbox",
-                    "description": "Confirmed by Inkarp for on/off control depending on your installation."
-                  },
-                  {
-                    "title": "Connecting hose",
-                    "description": "Not included. DN 8 mm hose nozzle at both inlet and outlet."
+                    "title": "Ultimate vacuum",
+                    "description": "7 mbar (without gas ballast), 12 mbar (with gas ballast)"
                   }
-                ]
+                ],
+                "body": [
+                  "Supports up to three rotary evaporators simultaneously.",
+                  "Secondary condenser and vacuum valve (where required) are sold separately."
+                ],
+                "disclaimer": "Tell our team how many evaporators you need to run and whether you're pairing this with a Hei-VAP Expert or Ultimate Control model, and Inkarp will confirm the complete setup."
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation and Resources",
-                "title": "Documentation and resources",
+                "title": "Documentation and Resources",
                 "description": "Documentation for the Hei-VAC Valve Control Vacuum Pump is available from Inkarp on request.",
                 "cards": [
                   {
                     "title": "Technical Data Sheet, Hei-VAC Valve Control",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   },
                   {
                     "title": "NRTL Certificate, Hei-VAC Valve Control / Valve Industrial",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   },
                   {
                     "title": "Vacuum Pumps Selection Matrix",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet, certificates"
               },
               {
                 "key": "benefits",
@@ -431,8 +517,17 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The Hei-VAC Valve Control pulls down to 7 mbar and supplies up to three rotary evaporators at once. Tell us your evaporator setup and process, and Inkarp will confirm the complete configuration, including the vacuum valve and secondary condenser your system needs.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "A rotary evaporator is only as good as the vacuum behind it. The Hei-VAC Valve Control pulls down to 7 mbar without gas ballast, or 12 mbar with it.",
+              "One pump can supply suction to up to three rotary evaporators at the same time.",
+              "Control runs through valve-operated or manual vacuum controllers. Switch the pump on and off through a switchbox.",
+              "Pairing this pump with a Hei-VAP Expert Control or Ultimate Control evaporator needs a vacuum valve. The secondary condenser is not included, and is ordered separately."
+            ],
+            "statsIntro": "The quick stats of the Hei-VAC Valve Control Vacuum Pump cover its vacuum depth, pumping speed, and multi-evaporator capacity."
           },
           "inPageNav": [
             {
@@ -475,73 +570,65 @@
           "planners": [
             {
               "sectionId": "gas-ballast-comparison-visualiser",
-              "eyebrow": "Gas ballast comparison visualiser",
+              "eyebrow": "Gas Ballast Comparison Visualiser",
               "title": "See what gas ballast actually trades off",
-              "description": "Toggle gas ballast on and off conceptually and see the ultimate vacuum change, alongside what's happening inside the pump chamber.",
+              "description": "Toggle gas ballast on and off and watch the ultimate vacuum change, alongside what's happening inside the pump chamber.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your setting"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Gas ballast toggle",
-                  "choices": "Off, for 7 mbar; On, for 12 mbar",
-                  "cta": "Get Configuration Support"
+                  "hint": "Switches between 7 mbar (off) and 12 mbar (on)",
+                  "choices": "7 mbar (off); 12 mbar (on)"
                 },
                 {
                   "title": "Vapour load selector",
-                  "choices": "Low vapour load; Moderate vapour load; High vapour load",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Vacuum depth readout",
-                  "choices": "7 mbar ultimate vacuum; 12 mbar ultimate vacuum",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Protection indicator",
-                  "choices": "Condensation risk with ballast off; Condensation risk with ballast on",
-                  "cta": "Get Configuration Support"
+                  "hint": "Shows condensation risk at different vapour loads",
+                  "choices": "Low vapour load; Moderate vapour load; High vapour load"
                 }
               ],
-              "disclaimer": "This visualiser is a configuration helper. Confirm gas ballast setting against your actual solvent and vapour load with Inkarp."
+              "disclaimer": "",
+              "lead": "The gas ballast comparison visualiser shows the trade-off between ultimate vacuum depth and pump protection.",
+              "ctaNote": "Displays the resulting ultimate vacuum. Shows condensation risk with ballast on versus off.",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "multi-evaporator-capacity-planner",
-              "eyebrow": "Multi-evaporator capacity planner",
+              "eyebrow": "Multi-Evaporator Capacity Planner",
               "title": "How many evaporators can you run at once?",
-              "description": "Set the number of evaporators you want to connect, up to three, conceptually, and see how the pump's capacity is shared across them.",
+              "description": "Set the number of evaporators you want to connect, up to three, and see how the pump's capacity is shared across them.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your setup"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Number of evaporators, 1 to 3",
-                  "choices": "1 evaporator; 2 evaporators; 3 evaporators",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Sets how many units share the pump's suction",
+                  "input": "number",
+                  "choices": ""
                 },
                 {
                   "title": "Process type per unit",
-                  "choices": "Light vacuum demand; Moderate vacuum demand; Heavy vacuum demand",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Capacity readout",
-                  "choices": "Within rated capacity; Near rated capacity; Exceeds rated capacity",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Adjusts expected vacuum demand per evaporator",
+                  "choices": "Light vacuum demand; Moderate vacuum demand; Heavy vacuum demand"
                 },
                 {
                   "title": "Recommendation",
-                  "choices": "Single pump sufficient; Consider a second pump; Consider a different model",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Flags if your setup needs a second pump or a different model",
+                  "choices": "Flags if your setup needs a second pump; A different model"
                 }
               ],
-              "disclaimer": "This planner is a configuration helper. Exact shared capacity depends on evaporator process, vacuum demand per unit, and tubing setup, confirmed by Inkarp."
+              "disclaimer": "",
+              "lead": "The multi-evaporator capacity planner shows how connecting multiple rotary evaporators affects available suction from one pump.",
+              "ctaNote": "Shows whether the configuration stays within the pump's rated capacity.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
           "configWizard": {
@@ -657,148 +744,53 @@
           },
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
-            "title": "Where the Hei-VAC Valve Control is used",
-            "description": "Select your field to see the use case and what to consider before configuration.",
+            "title": "Industry Explorer",
+            "description": "Industries using the Hei-VAC Valve Control Vacuum Pump include pharmaceutical research, chemical synthesis, and academic and contract laboratories.",
             "industries": [
               {
                 "name": "Pharmaceutical Research",
                 "icon": "pill",
-                "useCase": "Solvent removal in synthesis workflows",
-                "consideration": "Gas ballast for condensable solvent vapours",
+                "note": "Use Case: Solvent removal in synthesis workflows",
                 "bullets": [
-                  "Solvent removal",
-                  "Synthesis workflows",
-                  "Gas ballast protection"
+                  "What to Consider: Gas ballast for condensable solvent vapours"
                 ],
-                "tags": [
-                  "Solvent removal",
-                  "Synthesis",
-                  "Gas ballast"
-                ],
-                "highlights": [
-                  {
-                    "value": "7 mbar",
-                    "label": "Ultimate vacuum without gas ballast",
-                    "fill": 92
-                  },
-                  {
-                    "value": "12 mbar",
-                    "label": "Ultimate vacuum with gas ballast",
-                    "fill": 84
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Chemical Synthesis",
                 "icon": "flask",
-                "useCase": "Rotary evaporation across multiple reactions",
-                "consideration": "Multi-evaporator suction for shared bench use",
+                "note": "Use Case: Rotary evaporation across multiple reactions",
                 "bullets": [
-                  "Rotary evaporation",
-                  "Multiple parallel reactions",
-                  "Shared bench suction"
+                  "What to Consider: Multi-evaporator suction for shared bench use"
                 ],
-                "tags": [
-                  "Multi-evaporator",
-                  "Shared bench",
-                  "Rotary evaporation"
-                ],
-                "highlights": [
-                  {
-                    "value": "Up to 3",
-                    "label": "Rotary evaporators supplied at once",
-                    "fill": 90
-                  },
-                  {
-                    "value": "2.0 / 2.3 m³/h",
-                    "label": "Maximum pumping speed",
-                    "fill": 85
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Academic Laboratories",
                 "icon": "flask",
-                "useCase": "Shared vacuum infrastructure across student benches",
-                "consideration": "Switchbox control for straightforward operation",
+                "note": "Use Case: Shared vacuum infrastructure across student benches",
                 "bullets": [
-                  "Shared infrastructure",
-                  "Student bench use",
-                  "Simple switchbox control"
+                  "What to Consider: Switchbox control for straightforward operation"
                 ],
-                "tags": [
-                  "Shared infrastructure",
-                  "Academic",
-                  "Switchbox"
-                ],
-                "highlights": [
-                  {
-                    "value": "Switchbox",
-                    "label": "External on/off control",
-                    "fill": 86
-                  },
-                  {
-                    "value": "IP40",
-                    "label": "Protection class",
-                    "fill": 80
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Contract Research",
                 "icon": "cpu",
-                "useCase": "High-throughput solvent recovery",
-                "consideration": "Ultimate vacuum depth against typical solvent loads",
+                "note": "Use Case: High-throughput solvent recovery",
                 "bullets": [
-                  "High-throughput recovery",
-                  "Solvent load matching",
-                  "Vacuum depth planning"
+                  "What to Consider: Ultimate vacuum depth against typical solvent loads"
                 ],
-                "tags": [
-                  "High-throughput",
-                  "Solvent recovery",
-                  "Contract research"
-                ],
-                "highlights": [
-                  {
-                    "value": "7 mbar",
-                    "label": "Deepest ultimate vacuum",
-                    "fill": 92
-                  },
-                  {
-                    "value": "12 kg",
-                    "label": "Compact pump weight",
-                    "fill": 78
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Analytical Laboratories",
                 "icon": "droplet",
-                "useCase": "Sample concentration and preparation",
-                "consideration": "Vacuum valve compatibility with existing Hei-VAP systems",
+                "note": "Use Case: Sample concentration and preparation",
                 "bullets": [
-                  "Sample concentration",
-                  "Sample preparation",
-                  "Hei-VAP system compatibility"
+                  "What to Consider: Vacuum valve compatibility with existing Hei-VAP systems"
                 ],
-                "tags": [
-                  "Sample prep",
-                  "Hei-VAP compatibility",
-                  "Vacuum valve"
-                ],
-                "highlights": [
-                  {
-                    "value": "Vacuum valve",
-                    "label": "Required for Expert/Ultimate Control pairing",
-                    "fill": 82
-                  },
-                  {
-                    "value": "DN 8 mm",
-                    "label": "Inlet and outlet hose nozzle",
-                    "fill": 76
-                  }
-                ]
+                "tags": []
               }
             ],
             "disclaimer": "Application notes are configuration guidance only. Confirm evaporator model, vapour load, and accessory needs with Inkarp."
@@ -857,13 +849,12 @@
           },
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
-            "title": "Compare the Hei-VAC Valve Control within the range",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare the Hei-VAC Valve Control with the Valve Tec and the RPM-regulated Vario range.",
             "columns": [
               {
-                "label": "Hei-VAC Valve Control",
-                "highlight": true
+                "label": "Hei-VAC Valve Control"
               },
               {
                 "label": "Hei-VAC Valve Tec"
@@ -914,44 +905,46 @@
                 ]
               }
             ],
-            "disclaimer": "The Hei-VAC range splits by control method: valve and manual control here, against RPM regulation on the Vario models. Choose based on how precisely your process needs the vacuum held, not just the depth reached."
+            "disclaimer": "The Hei-VAC range splits by control method: valve and manual control here, against RPM regulation on the Vario models. Choose based on how precisely your process needs the vacuum held, not just the depth reached.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
-            "title": "Inkarp support for Hei-VAC Valve Control across India",
+            "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Hei-VAC Valve Control Vacuum Pump with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
               {
                 "title": "Product Demonstration",
-                "description": "Shows vacuum depth and gas ballast operation for your process."
+                "description": "Shows vacuum depth and gas ballast operation for your process"
               },
               {
                 "title": "System Configuration",
-                "description": "Confirms the vacuum valve, condenser, and accessories your setup needs."
+                "description": "Confirms the vacuum valve, condenser, and accessories your setup needs"
               },
               {
                 "title": "Multi-Evaporator Planning",
-                "description": "Confirms capacity for running multiple evaporators from one pump."
+                "description": "Confirms capacity for running multiple evaporators from one pump"
               },
               {
                 "title": "Installation Support",
-                "description": "Supports setup and first-run checks."
+                "description": "Supports setup and first-run checks"
               },
               {
                 "title": "Operator Training",
-                "description": "Helps the team set gas ballast and control method correctly."
+                "description": "Helps the team set gas ballast and control method correctly"
               },
               {
                 "title": "Preventive Maintenance",
-                "description": "Maintains vacuum performance through daily use."
+                "description": "Maintains vacuum performance through daily use"
               },
               {
                 "title": "Spares and Accessories",
-                "description": "Supplies condensers, valves, and replacement parts."
+                "description": "Supplies condensers, valves, and replacement parts"
               },
               {
                 "title": "Service Support",
-                "description": "Supports troubleshooting, maintenance visits, and AMC."
+                "description": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -1015,20 +1008,36 @@
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
               {
-                "title": "Confirm the complete setup",
-                "body": "The secondary condenser and vacuum valve, where required, are sold separately, so the final configuration depends on your evaporator and process."
+                "title": "Product Demonstration",
+                "body": "Shows vacuum depth and gas ballast operation for your process"
               },
               {
-                "title": "Match the gas ballast setting",
-                "body": "Review your solvent and vapour load to confirm whether to run with gas ballast on or off as standard."
+                "title": "System Configuration",
+                "body": "Confirms the vacuum valve, condenser, and accessories your setup needs"
               },
               {
-                "title": "Plan multi-evaporator capacity",
-                "body": "Confirm how many evaporators can share this pump before it needs a second unit."
+                "title": "Multi-Evaporator Planning",
+                "body": "Confirms capacity for running multiple evaporators from one pump"
               },
               {
-                "title": "Support after purchase",
-                "body": "Inkarp provides installation, operator training, AMC, spares, and service support across India."
+                "title": "Installation Support",
+                "body": "Supports setup and first-run checks"
+              },
+              {
+                "title": "Operator Training",
+                "body": "Helps the team set gas ballast and control method correctly"
+              },
+              {
+                "title": "Preventive Maintenance",
+                "body": "Maintains vacuum performance through daily use"
+              },
+              {
+                "title": "Spares and Accessories",
+                "body": "Supplies condensers, valves, and replacement parts"
+              },
+              {
+                "title": "Service Support",
+                "body": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -1047,7 +1056,8 @@
               "ctaLabel": "Configure with Inkarp",
               "href": "#config"
             }
-          ]
+          ],
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Hei-VAC Valve Tec Vacuum Pump",
@@ -1081,12 +1091,30 @@
           ],
           "overview": "Built for low and medium boiling solvents. Nothing more than you need. Not every evaporation process requires a deep vacuum. The Hei-VAC Valve Tec delivers an ultimate vacuum of 12 mbar without gas ballast, or 20 mbar with it, in a compact 338 x 183 x 143 mm, 7.9 kg footprint sized for single-station rotary evaporator setups.",
           "features": [
-            "Solvent-Matched Vacuum Depth: Reaches 12 mbar, right-sized for low and medium boiling point solvents rather than overshooting what the process needs.",
-            "Compact Footprint: At 7.9 kg and 338 x 183 x 143 mm, fits a single-station bench without the space a larger pump demands.",
-            "Gas Ballast Function: Admits a controlled amount of air to protect the pump from condensing solvent vapour, shifting the ultimate vacuum to 20 mbar.",
-            "Valve or Manual Control: Vacuum runs through valve-operated or manual vacuum controllers.",
-            "Thermal Motor Protection: A thermal cutout with manual reset protects the motor, with an added 2.5 AT fuse on the 120 V version.",
-            "Wide Voltage Compatibility: Runs on 100 to 115 V, 120 V, or 220 to 230 V supply, at 50 or 60 Hz, within +/-10%."
+            {
+              "title": "Solvent-Matched Vacuum Depth",
+              "description": "Reaches 12 mbar, right-sized for low and medium boiling point solvents rather than overshooting what the process needs."
+            },
+            {
+              "title": "Compact Footprint",
+              "description": "At 7.9 kg and 338 x 183 x 143 mm, fits a single-station bench without the space a larger pump demands."
+            },
+            {
+              "title": "Gas Ballast Function",
+              "description": "Admits a controlled amount of air to protect the pump from condensing solvent vapour, shifting the ultimate vacuum to 20 mbar."
+            },
+            {
+              "title": "Valve or Manual Control",
+              "description": "Vacuum runs through valve-operated or manual vacuum controllers."
+            },
+            {
+              "title": "Thermal Motor Protection",
+              "description": "A thermal cutout with manual reset protects the motor, with an added 2.5 AT fuse on the 120 V version."
+            },
+            {
+              "title": "Wide Voltage Compatibility",
+              "description": "Runs on 100–115 V, 120 V, or 220–230 V supply, at 50 or 60 Hz, within ±10%."
+            }
           ],
           "technicalSpecs": [
             {
@@ -1135,7 +1163,7 @@
             },
             {
               "label": "Outlet",
-              "value": "Hose nozzle, DN 8-10 mm"
+              "value": "Hose nozzle, DN 8–10 mm"
             },
             {
               "label": "Dimensions, W x H x D",
@@ -1159,23 +1187,38 @@
             },
             {
               "label": "Storage Temperature Range",
-              "value": "-10°C to +60°C"
+              "value": "−10°C to +60°C"
             },
             {
               "label": "Permissible Relative Humidity",
               "value": "30% to 85%, no condensation"
             },
             {
-              "label": "Supply Voltage Range, +/-10%",
-              "value": "100-115 V, 50/60 Hz; 120 V, 60 Hz; 220-230 V, 50/60 Hz"
+              "label": "Supply Voltage Range, ±10%",
+              "value": "100–115 V, 50/60 Hz; 120 V, 60 Hz; 220–230 V, 50/60 Hz"
             }
           ],
           "applications": [
-            "Low Boiling Point Solvent Recovery: 12 mbar reaches deep enough without overshooting the process.",
-            "Medium Boiling Point Solvent Work: Gas ballast option protects the pump during vapour-heavy runs.",
-            "Single-Station Rotary Evaporation: Sized and controlled for one evaporator, not a shared multi-station setup.",
-            "Space-Constrained Benches: The compact footprint fits where a larger pump wouldn't.",
-            "Hei-VAP Expert and Ultimate Control Systems: Compatible with a vacuum valve for integrated control."
+            {
+              "title": "Low Boiling Point Solvent Recovery",
+              "description": "12 mbar reaches deep enough without overshooting the process"
+            },
+            {
+              "title": "Medium Boiling Point Solvent Work",
+              "description": "Gas ballast option protects the pump during vapour-heavy runs"
+            },
+            {
+              "title": "Single-Station Rotary Evaporation",
+              "description": "Sized and controlled for one evaporator, not a shared multi-station setup"
+            },
+            {
+              "title": "Space-Constrained Benches",
+              "description": "The compact footprint fits where a larger pump wouldn't"
+            },
+            {
+              "title": "Hei-VAP Expert and Ultimate Control Systems",
+              "description": "Compatible with a vacuum valve for integrated control"
+            }
           ],
           "tags": [
             "Hei-VAC",
@@ -1218,7 +1261,7 @@
             },
             {
               "question": "What voltage does the Hei-VAC Valve Tec run on?",
-              "answer": "It accepts 100 to 115 V, 120 V, or 220 to 230 V supply, at 50 or 60 Hz, within +/-10%. The 120 V version includes an additional 2.5 AT fuse."
+              "answer": "It accepts 100–115 V, 120 V, or 220–230 V supply, at 50 or 60 Hz, within ±10%. The 120 V version includes an additional 2.5 AT fuse."
             },
             {
               "question": "What is the difference between the Valve Tec and the Valve Control?",
@@ -1239,7 +1282,7 @@
           ],
           "longForm": {
             "heroHook": "Built for Low & Medium Boiling Solvents. Nothing More Than You Need.",
-            "heroLead": "Not every evaporation process requires a deep vacuum. For low and medium boiling point solvents, the Hei-VAC Valve Tec delivers the vacuum performance you need in a compact, space-saving design. Achieve an ultimate vacuum of 12 mbar without gas ballast or 20 mbar with gas ballast, balancing performance with pump protection when handling condensable vapours. Weighing just 7.9 kg with a compact 338 x 183 x 143 mm footprint, it's ideal for single-station rotary evaporator setups where bench space matters. It is compatible with valve-operated and manual vacuum controllers, and can be paired with Hei-VAP Expert Control and Ultimate Control rotary evaporators using an optional vacuum valve; a secondary condenser is available separately.",
+            "heroLead": "Not every evaporation process requires a deep vacuum. For low and medium boiling point solvents, the Hei-VAC Valve Tec delivers the vacuum performance you need in a compact, space-saving design. Achieve an ultimate vacuum of 12 mbar without gas ballast or 20 mbar with gas ballast, balancing performance with pump protection when handling condensable vapours. Weighing just 7.9 kg with a compact 338 × 183 × 143 mm footprint, it's ideal for single-station rotary evaporator setups where bench space matters. Compatible with valve-operated and manual vacuum controllers, the pump can also be paired with Hei-VAP Expert Control and Ultimate Control rotary evaporators using an optional vacuum valve. A secondary condenser is available separately to complete your vacuum system.",
             "stats": [
               {
                 "value": "12 mbar",
@@ -1286,143 +1329,195 @@
               {
                 "key": "overview",
                 "eyebrow": "Product information",
-                "title": "Hei-VAC Valve Tec at a glance",
-                "description": "Everything you need to evaluate the Valve Tec: which solvents it's built for, what its compact footprint means for your bench, how gas ballast changes its vacuum, the full technical data, and Inkarp installation and service support.",
-                "subheading": "Right-sized vacuum for low and medium boiling point solvents",
+                "title": "Product Information",
+                "description": "The product information of the Hei-VAC Valve Tec Vacuum Pump covers its solvent matching, compact footprint, control method, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "The Hei-VAC Valve Tec is designed for laboratories working with low and medium boiling point solvents, delivering the right level of vacuum without unnecessary complexity.",
-                  "It achieves an ultimate vacuum of 12 mbar without gas ballast, or 20 mbar with gas ballast, providing the vacuum level needed while helping reduce the risk of bumping and foaming caused by excessive vacuum.",
-                  "A compact 338 x 183 x 143 mm footprint and 7.9 kg weight make it suited to single rotary evaporator workstations, and it is compatible with valve-operated and manual vacuum controllers for straightforward vacuum control.",
-                  "When paired with Hei-VAP Expert Control or Ultimate Control rotary evaporators, an optional vacuum valve is required. A secondary condenser is available separately to complete the vacuum system.",
-                  "Confirmed model: Hei-VAC Valve Tec, P/N 591-00160-00. Recommended for low and medium boiling point solvents. Secondary condenser and vacuum valve, where required, are sold separately."
+                  {
+                    "text": "Designed for efficient evaporation of low and medium boiling point solvents."
+                  },
+                  {
+                    "text": "Achieves an ultimate vacuum of 12 mbar without gas ballast or 20 mbar with gas ballast."
+                  },
+                  {
+                    "text": "Provides the vacuum level needed while helping reduce the risk of bumping and foaming caused by excessive vacuum."
+                  },
+                  {
+                    "text": "Compact 338 × 183 × 143 mm footprint and 7.9 kg weight make it ideal for single rotary evaporator workstations."
+                  },
+                  {
+                    "text": "Compatible with valve-operated and manual vacuum controllers for straightforward vacuum control."
+                  },
+                  {
+                    "text": "When paired with Hei-VAP Expert Control or Ultimate Control rotary evaporators, an optional vacuum valve is required."
+                  },
+                  {
+                    "text": "A secondary condenser is available separately to complete the vacuum system."
+                  }
                 ],
                 "cards": [
                   {
                     "title": "12 mbar",
-                    "description": "Ultimate vacuum without gas ballast."
+                    "description": "Ultimate vacuum without gas ballast"
                   },
                   {
                     "title": "20 mbar",
-                    "description": "Ultimate vacuum with gas ballast engaged."
+                    "description": "Ultimate vacuum with gas ballast engaged"
                   },
                   {
                     "title": "Low/medium boiling points",
-                    "description": "The solvent range this pump is matched to."
+                    "description": "The solvent range this pump is matched to"
                   },
                   {
                     "title": "338 x 183 x 143 mm",
-                    "description": "Compact single-station footprint."
+                    "description": "Compact single-station footprint"
                   }
-                ]
+                ],
+                "glanceTitle": "Hei-VAC Valve Tec Vacuum Pump at a Glance",
+                "glanceDescription": "Everything you need to evaluate the Valve Tec: which solvents it's built for, what its compact footprint means for your bench, how gas ballast changes its vacuum, the full technical data, and Inkarp installation and service support.",
+                "intro": "The Hei-VAC Valve Tec is designed for laboratories working with low and medium boiling point solvents, delivering the right level of vacuum without unnecessary complexity.",
+                "cardsIntro": "The value cards of the Hei-VAC Valve Tec Vacuum Pump summarize its vacuum depth, solvent fit, and footprint.",
+                "tabSummary": "What the Valve Tec is built for, and why a shallower vacuum is the right fit"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Solvent-matched vacuum, compact footprint, and gas ballast",
-                "description": "The key features of the Hei-VAC Valve Tec include solvent-matched vacuum depth, a compact footprint, gas ballast protection, and valve control."
+                "title": "Key Features",
+                "description": "The key features of the Hei-VAC Valve Tec Vacuum Pump include solvent-matched vacuum depth, a compact footprint, gas ballast protection, and valve control.",
+                "tabSummary": "Solvent matching, compact footprint, valve control"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
-                "title": "Where the Hei-VAC Valve Tec fits",
-                "description": "Use the Hei-VAC Valve Tec for low and medium boiling point solvent recovery, single-station evaporation, and space-constrained bench setups."
+                "title": "Applications",
+                "description": "The applications of the Hei-VAC Valve Tec Vacuum Pump include low and medium boiling point solvent recovery, single-station evaporation, and space-constrained bench setups.",
+                "tabSummary": "Low and medium boiling point solvent recovery, single-station labs"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
-                "title": "Technical specifications",
-                "description": "The technical specifications include a 12 mbar ultimate vacuum, 0.75 to 0.9 m³/h pumping speed, a compact footprint, and IP40 protection."
+                "title": "Technical Specifications",
+                "description": "The technical specifications of the Hei-VAC Valve Tec Vacuum Pump include a 12 mbar ultimate vacuum, 0.75 to 0.9 m³/h pumping speed, and a compact footprint.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Vacuum depth, pumping speed, power, dimensions"
               },
               {
                 "key": "performance",
                 "eyebrow": "Vacuum Depth and Solvent Matching",
-                "title": "Vacuum depth and solvent matching",
+                "title": "Vacuum Depth and Solvent Matching",
+                "tabSummary": "Which solvents suit 12 mbar, and when to use gas ballast",
                 "body": [
                   "The right vacuum pump isn't the one that pulls hardest. It's the one matched to what your solvent actually needs.",
-                  "Low and medium boiling point solvents evaporate at higher pressures than the deepest vacuums a pump can reach, so the Valve Tec's 12 mbar (without gas ballast) is calibrated to that reality rather than chasing a depth the process doesn't use.",
-                  "Engage gas ballast and the ultimate vacuum settles at 20 mbar instead, trading a little depth for protecting the pump against condensing vapour during runs with a heavier vapour load."
+                  "Low and medium boiling point solvents evaporate at higher pressures than the deepest vacuums a pump can reach, so the Valve Tec's 12 mbar (without gas ballast) is calibrated to that reality rather than chasing a depth the process doesn't use. Engage gas ballast and the ultimate vacuum settles at 20 mbar instead, trading a little depth for protecting the pump against condensing vapour during runs with a heavier vapour load."
                 ],
-                "metrics": [
+                "groups": [
                   {
-                    "value": "12 mbar",
-                    "label": "Ultimate vacuum, without gas ballast"
+                    "columns": [
+                      "Your solvent",
+                      "Recommended setting"
+                    ],
+                    "rows": [
+                      [
+                        "Low boiling point, straightforward recovery",
+                        "Gas ballast off, for the deeper 12 mbar vacuum"
+                      ],
+                      [
+                        "Medium boiling point, moderate vapour load",
+                        "Gas ballast on, for pump protection at 20 mbar"
+                      ],
+                      [
+                        "High vapour load or condensable solvents",
+                        "Gas ballast on, or consider the Valve Control for deeper capacity"
+                      ],
+                      [
+                        "A solvent needing vacuum below 12 mbar",
+                        "The Hei-VAC Valve Control reaches 7 mbar instead"
+                      ]
+                    ]
                   },
                   {
-                    "value": "20 mbar",
-                    "label": "Ultimate vacuum, with gas ballast"
+                    "note": "Tell our team your solvent and its boiling point, and Inkarp will confirm whether the Valve Tec's range covers it or whether a deeper-vacuum model fits better."
                   },
                   {
-                    "value": "0.75 / 0.9 m³/h",
-                    "label": "Maximum pumping speed"
-                  },
-                  {
-                    "value": "7.9 kg",
-                    "label": "Compact pump weight"
+                    "title": "Single-Station Setup and Accessories",
+                    "summary": "What you still need to complete the setup",
+                    "description": "The pump alone doesn't complete a rotary evaporation setup. A working station needs a few components alongside it.",
+                    "columns": [
+                      "Component",
+                      "Status",
+                      "Selection Direction"
+                    ],
+                    "rows": [
+                      [
+                        "Vacuum Pump",
+                        "Included, P/N 591-00160-00",
+                        "Hei-VAC Valve Tec"
+                      ],
+                      [
+                        "Secondary Condenser",
+                        "Not included",
+                        "Required for full solvent recovery; confirmed by Inkarp"
+                      ],
+                      [
+                        "Vacuum Valve",
+                        "Not included, required for some setups",
+                        "Needed if pairing with a Hei-VAP Expert Control or Ultimate Control evaporator"
+                      ],
+                      [
+                        "Connecting Hose",
+                        "Not included",
+                        "DN 8 mm inlet, DN 8–10 mm outlet hose nozzles"
+                      ]
+                    ],
+                    "note": "Send our team your rotary evaporator model and solvent, and Inkarp will confirm the complete accessory list."
                   }
-                ],
-                "utilityChecklist": [
-                  {
-                    "label": "Low boiling point, straightforward recovery",
-                    "value": "Gas ballast off, for the deeper 12 mbar vacuum"
-                  },
-                  {
-                    "label": "Medium boiling point, moderate vapour load",
-                    "value": "Gas ballast on, for pump protection at 20 mbar"
-                  },
-                  {
-                    "label": "High vapour load or condensable solvents",
-                    "value": "Gas ballast on, or consider the Valve Control for deeper capacity"
-                  },
-                  {
-                    "label": "A solvent needing vacuum below 12 mbar",
-                    "value": "The Hei-VAC Valve Control reaches 7 mbar instead"
-                  }
-                ],
-                "disclaimer": "Tell Inkarp your solvent and its boiling point so they can confirm whether the Valve Tec's range covers it or whether a deeper-vacuum model fits better."
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Single-Station Setup and Accessories",
-                "title": "Single-station setup and accessories",
+                "title": "Configuration note",
                 "description": "The pump alone doesn't complete a rotary evaporation setup. A working station needs a few components alongside it.",
                 "cards": [
                   {
-                    "title": "Vacuum pump",
-                    "description": "Included, P/N 591-00160-00. Hei-VAC Valve Tec."
+                    "title": "Model",
+                    "description": "Hei-VAC Valve Tec (P/N: 591-00160-00)"
                   },
                   {
-                    "title": "Secondary condenser",
-                    "description": "Not included. Required for full solvent recovery; confirmed by Inkarp."
-                  },
-                  {
-                    "title": "Vacuum valve",
-                    "description": "Not included, required for some setups. Needed if pairing with a Hei-VAP Expert Control or Ultimate Control evaporator."
-                  },
-                  {
-                    "title": "Connecting hose",
-                    "description": "Not included. DN 8 mm inlet, DN 8-10 mm outlet hose nozzles."
+                    "title": "Ultimate vacuum",
+                    "description": "12 mbar (without gas ballast), 20 mbar (with gas ballast)."
                   }
-                ]
+                ],
+                "body": [
+                  "Recommended for low and medium boiling point solvents.",
+                  "Secondary condenser and vacuum valve (where required) are sold separately."
+                ],
+                "disclaimer": "Tell our team your solvent and its boiling point, and Inkarp will confirm whether the Valve Tec is the right fit or whether your process needs deeper vacuum."
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation and Resources",
-                "title": "Documentation and resources",
+                "title": "Documentation and Resources",
                 "description": "Documentation for the Hei-VAC Valve Tec Vacuum Pump is available from Inkarp on request.",
                 "cards": [
                   {
                     "title": "Technical Data Sheet, Hei-VAC Valve Tec",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   },
                   {
                     "title": "NRTL Certificate, Hei-VAC Valve Tec",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   },
                   {
                     "title": "Vacuum Pumps Selection Matrix",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet, certificates"
               },
               {
                 "key": "benefits",
@@ -1451,8 +1546,17 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The Hei-VAC Valve Tec is sized for low and medium boiling point solvents, in a compact footprint built for a single evaporator station. Tell us your solvent and setup, and Inkarp will confirm the complete configuration, including the vacuum valve and secondary condenser your system needs.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Not every evaporation process requires a deep vacuum. For low and medium boiling point solvents, the Hei-VAC Valve Tec delivers the vacuum performance you need in a compact, space-saving design.",
+              "Achieve an ultimate vacuum of 12 mbar without gas ballast or 20 mbar with gas ballast, balancing performance with pump protection when handling condensable vapours.",
+              "Weighing just 7.9 kg with a compact 338 × 183 × 143 mm footprint, it's ideal for single-station rotary evaporator setups where bench space matters.",
+              "Compatible with valve-operated and manual vacuum controllers, the pump can also be paired with Hei-VAP Expert Control and Ultimate Control rotary evaporators using an optional vacuum valve. A secondary condenser is available separately to complete your vacuum system."
+            ],
+            "statsIntro": "The quick stats of the Hei-VAC Valve Tec Vacuum Pump cover its vacuum depth, pumping speed, and footprint."
           },
           "inPageNav": [
             {
@@ -1495,68 +1599,54 @@
           "planners": [
             {
               "sectionId": "solvent-boiling-point-matcher",
-              "eyebrow": "Solvent boiling point matcher",
+              "eyebrow": "Solvent Boiling Point Matcher",
               "title": "Does this pump match your solvent?",
-              "description": "Select your solvent's boiling point range conceptually and see whether 12 mbar covers it, or whether gas ballast or a deeper-vacuum model fits better.",
+              "description": "Select your solvent's boiling point range and see whether 12 mbar covers it, or whether gas ballast or a deeper-vacuum model fits better.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your solvent range"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Boiling point range selector",
-                  "choices": "Low boiling point; Medium boiling point; High boiling point",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Gas ballast toggle",
-                  "choices": "Off, 12 mbar; On, 20 mbar",
-                  "cta": "Get Configuration Support"
+                  "hint": "Low, medium, or high, matched against the pump's range",
+                  "choices": "Low; Medium; High; Matched against the pump's range"
                 },
                 {
                   "title": "Fit indicator",
-                  "choices": "Valve Tec fits well; Valve Tec fits with gas ballast; Consider a deeper-vacuum model",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Alternative suggestion",
-                  "choices": "Stay with Valve Tec; Consider the Hei-VAC Valve Control",
-                  "cta": "Get Configuration Support"
+                  "hint": "Confirms whether the Valve Tec suits your solvent",
+                  "choices": "Valve Tec fits well; Valve Tec fits with gas ballast; Consider a deeper-vacuum model"
                 }
               ],
-              "disclaimer": "This matcher is a configuration helper. Confirm your solvent and boiling point against the pump's rated range with Inkarp."
+              "disclaimer": "",
+              "lead": "The solvent boiling point matcher shows whether the Valve Tec's vacuum range suits your solvent, and when gas ballast helps.",
+              "ctaNote": "Shows the resulting vacuum, 12 mbar off or 20 mbar on. Points to the Valve Control if deeper vacuum is needed.",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "bench-footprint-comparison",
-              "eyebrow": "Bench footprint comparison",
+              "eyebrow": "Bench Footprint Comparison",
               "title": "How much bench space does this actually need?",
-              "description": "Compare the Valve Tec's footprint against a larger vacuum pump conceptually to see how much space it saves on a single-station setup.",
+              "description": "Compare the Valve Tec's footprint against a larger vacuum pump to see how much space it saves on a single-station setup.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your comparison"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
-                  "title": "Footprint overlay",
-                  "choices": "Valve Tec, 338 x 183 x 143 mm",
-                  "cta": "Talk to Product Expert"
-                },
-                {
                   "title": "Comparison toggle",
-                  "choices": "Show Valve Tec only; Overlay a larger multi-station pump",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Bench space readout",
-                  "choices": "Space saved on a single-station setup",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Overlays a larger multi-station pump's footprint for reference",
+                  "choices": "Show Valve Tec only; Overlay a larger multi-station pump"
                 }
               ],
-              "disclaimer": "Footprint comparisons are illustrative. Confirm exact bench layout and clearance requirements with Inkarp."
+              "disclaimer": "",
+              "lead": "The bench footprint comparison shows how the Valve Tec's compact size compares with a larger multi-station vacuum pump.",
+              "ctaNote": "Shows the Valve Tec's 338 x 183 x 143 mm footprint to scale. Shows the space saved on a single-station setup.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
           "configWizard": {
@@ -1662,148 +1752,53 @@
           },
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
-            "title": "Where the Hei-VAC Valve Tec is used",
-            "description": "Select your field to see the use case and what to consider before configuration.",
+            "title": "Industry Explorer",
+            "description": "Industries using the Hei-VAC Valve Tec Vacuum Pump include academic laboratories, quality control, and single-station research setups.",
             "industries": [
               {
                 "name": "Academic Laboratories",
                 "icon": "flask",
-                "useCase": "Single-station rotary evaporation for routine solvent recovery",
-                "consideration": "Compact footprint for shared bench space",
+                "note": "Use Case: Single-station rotary evaporation for routine solvent recovery",
                 "bullets": [
-                  "Single-station evaporation",
-                  "Routine solvent recovery",
-                  "Compact footprint"
+                  "What to Consider: Compact footprint for shared bench space"
                 ],
-                "tags": [
-                  "Compact footprint",
-                  "Single-station",
-                  "Academic"
-                ],
-                "highlights": [
-                  {
-                    "value": "338 x 183 x 143 mm",
-                    "label": "Compact footprint",
-                    "fill": 88
-                  },
-                  {
-                    "value": "7.9 kg",
-                    "label": "Pump weight",
-                    "fill": 82
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Quality Control",
                 "icon": "cpu",
-                "useCase": "Sample preparation involving low boiling point solvents",
-                "consideration": "12 mbar depth matched to common QC solvents",
+                "note": "Use Case: Sample preparation involving low boiling point solvents",
                 "bullets": [
-                  "Sample preparation",
-                  "Low boiling point solvents",
-                  "Depth matched to QC needs"
+                  "What to Consider: 12 mbar depth matched to common QC solvents"
                 ],
-                "tags": [
-                  "QC",
-                  "Low boiling point",
-                  "Sample prep"
-                ],
-                "highlights": [
-                  {
-                    "value": "12 mbar",
-                    "label": "Ultimate vacuum without gas ballast",
-                    "fill": 90
-                  },
-                  {
-                    "value": "0.75 / 0.9 m³/h",
-                    "label": "Maximum pumping speed",
-                    "fill": 78
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Analytical Laboratories",
                 "icon": "droplet",
-                "useCase": "Solvent removal ahead of analysis",
-                "consideration": "Gas ballast for moderate vapour loads",
+                "note": "Use Case: Solvent removal ahead of analysis",
                 "bullets": [
-                  "Solvent removal",
-                  "Pre-analysis preparation",
-                  "Gas ballast protection"
+                  "What to Consider: Gas ballast for moderate vapour loads"
                 ],
-                "tags": [
-                  "Solvent removal",
-                  "Analytical",
-                  "Gas ballast"
-                ],
-                "highlights": [
-                  {
-                    "value": "20 mbar",
-                    "label": "Ultimate vacuum with gas ballast",
-                    "fill": 84
-                  },
-                  {
-                    "value": "IP40",
-                    "label": "Protection class",
-                    "fill": 76
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Contract Research",
                 "icon": "flask",
-                "useCase": "Single-station setups with limited bench space",
-                "consideration": "Compact footprint without sacrificing vacuum control",
+                "note": "Use Case: Single-station setups with limited bench space",
                 "bullets": [
-                  "Single-station setups",
-                  "Limited bench space",
-                  "Reliable vacuum control"
+                  "What to Consider: Compact footprint without sacrificing vacuum control"
                 ],
-                "tags": [
-                  "Compact",
-                  "Contract research",
-                  "Space-constrained"
-                ],
-                "highlights": [
-                  {
-                    "value": "338 x 183 x 143 mm",
-                    "label": "Compact single-station footprint",
-                    "fill": 86
-                  },
-                  {
-                    "value": "Valve or manual",
-                    "label": "Vacuum control method",
-                    "fill": 80
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Teaching Laboratories",
                 "icon": "flask",
-                "useCase": "Straightforward rotary evaporation training",
-                "consideration": "Simple valve or manual control",
+                "note": "Use Case: Straightforward rotary evaporation training",
                 "bullets": [
-                  "Rotary evaporation training",
-                  "Simple operation",
-                  "Straightforward control"
+                  "What to Consider: Simple valve or manual control"
                 ],
-                "tags": [
-                  "Teaching",
-                  "Simple control",
-                  "Training"
-                ],
-                "highlights": [
-                  {
-                    "value": "Valve or manual",
-                    "label": "Control method",
-                    "fill": 82
-                  },
-                  {
-                    "value": "0.08 kW",
-                    "label": "Power",
-                    "fill": 74
-                  }
-                ]
+                "tags": []
               }
             ],
             "disclaimer": "Application notes are configuration guidance only. Confirm solvent boiling point, vapour load, and accessory needs with Inkarp."
@@ -1862,13 +1857,12 @@
           },
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
-            "title": "Compare the Hei-VAC Valve Tec within the range",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare the Hei-VAC Valve Tec with the higher-capacity Valve Control and the RPM-regulated Vario range.",
             "columns": [
               {
-                "label": "Hei-VAC Valve Tec",
-                "highlight": true
+                "label": "Hei-VAC Valve Tec"
               },
               {
                 "label": "Hei-VAC Valve Control"
@@ -1935,44 +1929,46 @@
                 ]
               }
             ],
-            "disclaimer": "The Valve Tec and Valve Control share a control method but serve different capacity needs. Choose by what your solvent actually requires, not by which pump has the bigger numbers."
+            "disclaimer": "The Valve Tec and Valve Control share a control method but serve different capacity needs. Choose by what your solvent actually requires, not by which pump has the bigger numbers.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
-            "title": "Inkarp support for Hei-VAC Valve Tec across India",
+            "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Hei-VAC Valve Tec Vacuum Pump with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
               {
                 "title": "Product Demonstration",
-                "description": "Shows vacuum depth and gas ballast operation for your solvent."
+                "description": "Shows vacuum depth and gas ballast operation for your solvent"
               },
               {
                 "title": "Solvent Fit Assessment",
-                "description": "Confirms the Valve Tec's range suits your process."
+                "description": "Confirms the Valve Tec's range suits your process"
               },
               {
                 "title": "System Configuration",
-                "description": "Confirms the vacuum valve, condenser, and accessories your setup needs."
+                "description": "Confirms the vacuum valve, condenser, and accessories your setup needs"
               },
               {
                 "title": "Installation Support",
-                "description": "Supports setup and first-run checks."
+                "description": "Supports setup and first-run checks"
               },
               {
                 "title": "Operator Training",
-                "description": "Helps the team set gas ballast and control method correctly."
+                "description": "Helps the team set gas ballast and control method correctly"
               },
               {
                 "title": "Preventive Maintenance",
-                "description": "Maintains vacuum performance through daily use."
+                "description": "Maintains vacuum performance through daily use"
               },
               {
                 "title": "Spares and Accessories",
-                "description": "Supplies condensers, valves, and replacement parts."
+                "description": "Supplies condensers, valves, and replacement parts"
               },
               {
                 "title": "Service Support",
-                "description": "Supports troubleshooting, maintenance visits, and AMC."
+                "description": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -2030,20 +2026,36 @@
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
               {
-                "title": "Confirm the right fit",
-                "body": "Check your solvent's boiling point against the Valve Tec's 12 mbar range before ordering."
+                "title": "Product Demonstration",
+                "body": "Shows vacuum depth and gas ballast operation for your solvent"
               },
               {
-                "title": "Match the gas ballast setting",
-                "body": "Review your solvent and vapour load to confirm whether to run with gas ballast on or off as standard."
+                "title": "Solvent Fit Assessment",
+                "body": "Confirms the Valve Tec's range suits your process"
               },
               {
-                "title": "Complete the setup",
-                "body": "The secondary condenser and vacuum valve, where required, are sold separately, so the final configuration depends on your evaporator and process."
+                "title": "System Configuration",
+                "body": "Confirms the vacuum valve, condenser, and accessories your setup needs"
               },
               {
-                "title": "Support after purchase",
-                "body": "Inkarp provides installation, operator training, AMC, spares, and service support across India."
+                "title": "Installation Support",
+                "body": "Supports setup and first-run checks"
+              },
+              {
+                "title": "Operator Training",
+                "body": "Helps the team set gas ballast and control method correctly"
+              },
+              {
+                "title": "Preventive Maintenance",
+                "body": "Maintains vacuum performance through daily use"
+              },
+              {
+                "title": "Spares and Accessories",
+                "body": "Supplies condensers, valves, and replacement parts"
+              },
+              {
+                "title": "Service Support",
+                "body": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -2062,7 +2074,8 @@
               "ctaLabel": "Configure with Inkarp",
               "href": "#config"
             }
-          ]
+          ],
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Hei-VAC Vario Station RPM-Regulated Vacuum Pump",
@@ -2096,13 +2109,34 @@
           ],
           "overview": "The pump adjusts the vacuum. You focus on the process. Forget manual valve adjustments. The Hei-VAC Vario Station automatically changes its motor speed from 0 to 2,400 rpm to maintain the vacuum level your process requires, reducing bumping and foaming for smoother, more controlled evaporation, with the vacuum controller built in and no separate valve controller needed.",
           "features": [
-            "Continuous RPM Regulation: The motor runs anywhere from 0 to 2,400 rpm, adjusting speed in real time to hold a precise vacuum rather than throttling with a valve.",
-            "Bumping and Foaming Prevention: Smooth speed adjustment avoids the sudden pressure changes that cause a solution to bump or foam.",
-            "Built-In Vacuum Controller: A fully controllable, stand-alone unit, no separate valve controller to buy or wire in.",
-            "Automatic Process Following: Set your parameters once and the pump maintains them on its own, freeing you for other work.",
-            "Deep Ultimate Vacuum: Reaches 5 mbar without gas ballast, the deepest in the Hei-VAC range.",
-            "Gas Ballast Function: Shifts ultimate vacuum to 7 mbar, protecting the pump from condensing solvent vapour.",
-            "Compact, Light Build: At 6 kg, the lightest pump in the Hei-VAC range covered so far."
+            {
+              "title": "Continuous RPM Regulation",
+              "description": "The motor runs anywhere from 0 to 2,400 rpm, adjusting speed in real time to hold a precise vacuum rather than throttling with a valve."
+            },
+            {
+              "title": "Bumping and Foaming Prevention",
+              "description": "Smooth speed adjustment avoids the sudden pressure changes that cause a solution to bump or foam."
+            },
+            {
+              "title": "Built-In Vacuum Controller",
+              "description": "A fully controllable, stand-alone unit — no separate valve controller to buy or wire in."
+            },
+            {
+              "title": "Automatic Process Following",
+              "description": "Set your parameters once and the pump maintains them on its own, freeing you for other work."
+            },
+            {
+              "title": "Deep Ultimate Vacuum",
+              "description": "Reaches 5 mbar without gas ballast, the deepest in the Hei-VAC range."
+            },
+            {
+              "title": "Gas Ballast Function",
+              "description": "Shifts ultimate vacuum to 7 mbar, protecting the pump from condensing solvent vapour."
+            },
+            {
+              "title": "Compact, Light Build",
+              "description": "At 6 kg, the lightest pump in the Hei-VAC range covered so far."
+            }
           ],
           "technicalSpecs": [
             {
@@ -2175,23 +2209,38 @@
             },
             {
               "label": "Storage Temperature Range",
-              "value": "-10°C to +60°C"
+              "value": "−10°C to +60°C"
             },
             {
               "label": "Permissible Relative Humidity",
               "value": "30% to 85%, no condensation"
             },
             {
-              "label": "Supply Voltage Range, +/-10%",
-              "value": "100-120 V, 50/60 Hz; 200-240 V, 50/60 Hz"
+              "label": "Supply Voltage Range, ±10%",
+              "value": "100–120 V, 50/60 Hz; 200–240 V, 50/60 Hz"
             }
           ],
           "applications": [
-            "Hei-VAP Core Evaporation: Built and recommended specifically for this evaporator line.",
-            "Bump-Sensitive Solutions: Continuous RPM regulation avoids the pressure steps that cause bumping.",
-            "Foam-Prone Samples: Smooth vacuum control reduces the risk of foaming during evaporation.",
-            "Unattended Process Runs: Automatic parameter following frees the operator for other tasks.",
-            "Deep Vacuum Solvent Recovery: 5 mbar reaches deeper than the valve-controlled Hei-VAC models."
+            {
+              "title": "Hei-VAP Core Evaporation",
+              "description": "Built and recommended specifically for this evaporator line"
+            },
+            {
+              "title": "Bump-Sensitive Solutions",
+              "description": "Continuous RPM regulation avoids the pressure steps that cause bumping"
+            },
+            {
+              "title": "Foam-Prone Samples",
+              "description": "Smooth vacuum control reduces the risk of foaming during evaporation"
+            },
+            {
+              "title": "Unattended Process Runs",
+              "description": "Automatic parameter following frees the operator for other tasks"
+            },
+            {
+              "title": "Deep Vacuum Solvent Recovery",
+              "description": "5 mbar reaches deeper than the valve-controlled Hei-VAC models"
+            }
           ],
           "tags": [
             "Hei-VAC",
@@ -2251,7 +2300,7 @@
           ],
           "longForm": {
             "heroHook": "The Pump Adjusts the Vacuum. You Focus on the Process.",
-            "heroLead": "Forget manual valve adjustments. The Hei-VAC Vario Station automatically changes its motor speed from 0 to 2,400 rpm to maintain the vacuum level your process requires. By continuously matching the vacuum to your application, it helps reduce bumping, minimise foaming, and deliver smoother, more controlled evaporation. The vacuum controller is built in, and it is designed to pair seamlessly with Hei-VAP Core rotary evaporators.",
+            "heroLead": "Forget manual valve adjustments. The Hei-VAC Vario Station automatically changes its motor speed from 0 to 2,400 rpm to maintain the vacuum level your process requires. By continuously matching the vacuum to your application, it helps reduce bumping, minimise foaming, and deliver smoother, more controlled evaporation. The vacuum controller is built in, so there's no need for a separate valve controller. Simply set your process parameters, and the pump automatically maintains the required vacuum throughout the run. With an ultimate vacuum of 5 mbar without gas ballast or 7 mbar with gas ballast, the Hei-VAC Vario Station is designed to pair seamlessly with Hei-VAP Core rotary evaporators.",
             "stats": [
               {
                 "value": "5 mbar",
@@ -2298,139 +2347,188 @@
               {
                 "key": "overview",
                 "eyebrow": "Product information",
-                "title": "Hei-VAC Vario Station at a glance",
-                "description": "Everything you need to evaluate the Vario Station: how RPM regulation prevents bumping and foaming, which evaporators it pairs with, what gas ballast changes, the full technical data, and Inkarp installation and service support.",
-                "subheading": "Vacuum that regulates itself, built for Hei-VAP Core",
+                "title": "Product Information",
+                "description": "The product information of the Hei-VAC Vario Station RPM-Regulated Vacuum Pump covers its RPM regulation, Hei-VAP Core compatibility, gas ballast function, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "The Hei-VAC Vario Station automatically adjusts its motor speed to maintain the required vacuum, helping deliver stable and controlled evaporation throughout the process.",
-                  "Variable motor speed automatically adjusts from 0 to 2,400 rpm to maintain the set vacuum level, and continuous vacuum regulation helps reduce foaming and bumping during rotary evaporation.",
-                  "It features a built-in vacuum controller, eliminating the need for a separate controller. Simply set the required process parameters, and the pump automatically maintains the desired vacuum throughout the run.",
-                  "The Vario Station achieves an ultimate vacuum of 5 mbar without gas ballast, or 7 mbar with gas ballast for handling condensable vapours, and is specifically designed to pair with Hei-VAP Core rotary evaporators for integrated evaporation workflows.",
-                  "Confirmed model: Hei-VAC Vario Station, P/N 591-00142-00. Recommended for use with Hei-VAP Core rotary evaporators. Secondary condenser sold separately."
+                  {
+                    "text": "Variable motor speed automatically adjusts from 0–2,400 rpm to maintain the set vacuum level."
+                  },
+                  {
+                    "text": "Continuous vacuum regulation helps reduce foaming and bumping during rotary evaporation."
+                  },
+                  {
+                    "text": "Features a built-in vacuum controller, eliminating the need for a separate controller."
+                  },
+                  {
+                    "text": "Simply set the required process parameters, and the pump automatically maintains the desired vacuum throughout the run."
+                  },
+                  {
+                    "text": "Achieves an ultimate vacuum of 5 mbar without gas ballast or 7 mbar with gas ballast for handling condensable vapours."
+                  },
+                  {
+                    "text": "Specifically designed to pair with Hei-VAP Core rotary evaporators for integrated evaporation workflows."
+                  }
                 ],
                 "cards": [
                   {
                     "title": "5 mbar",
-                    "description": "Ultimate vacuum without gas ballast."
+                    "description": "Ultimate vacuum without gas ballast"
                   },
                   {
                     "title": "0 to 2,400 min⁻¹",
-                    "description": "Continuous RPM regulation range."
+                    "description": "Continuous RPM regulation range"
                   },
                   {
                     "title": "Built-in controller",
-                    "description": "No separate valve controller needed."
+                    "description": "No separate valve controller needed"
                   },
                   {
                     "title": "For Hei-VAP Core",
-                    "description": "Recommended evaporator pairing."
+                    "description": "Recommended evaporator pairing"
                   }
-                ]
+                ],
+                "glanceTitle": "Hei-VAC Vario Station RPM-Regulated Vacuum Pump at a Glance",
+                "glanceDescription": "Everything you need to evaluate the Vario Station: how RPM regulation prevents bumping and foaming, which evaporators it pairs with, what gas ballast changes, the full technical data, and Inkarp installation and service support.",
+                "intro": "The Hei-VAC Vario Station automatically adjusts its motor speed to maintain the required vacuum, helping deliver stable and controlled evaporation throughout the process.",
+                "cardsIntro": "The value cards of the Hei-VAC Vario Station RPM-Regulated Vacuum Pump summarize its vacuum depth, RPM range, and control method.",
+                "tabSummary": "Why RPM regulation gives smoother, more precise vacuum control"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Continuous RPM regulation, a built-in controller, and automatic operation",
-                "description": "The key features of the Hei-VAC Vario Station include continuous RPM regulation, a built-in controller, and automatic vacuum supply."
+                "title": "Key Features",
+                "description": "The key features of the Hei-VAC Vario Station RPM-Regulated Vacuum Pump include continuous RPM regulation, a built-in controller, and automatic vacuum supply.",
+                "tabSummary": "Continuous RPM regulation, built-in controller, automatic operation"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
-                "title": "Where the Hei-VAC Vario Station fits",
-                "description": "Use the Hei-VAC Vario Station for Hei-VAP Core rotary evaporation, bump-sensitive solutions, foam-prone samples, unattended process runs, and deep vacuum solvent recovery."
+                "title": "Applications",
+                "description": "The applications of the Hei-VAC Vario Station RPM-Regulated Vacuum Pump include Hei-VAP Core rotary evaporation, bump-sensitive solutions, and unattended process runs.",
+                "tabSummary": "Hei-VAP Core evaporation, bump-sensitive solutions, unattended runs"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
-                "title": "Technical specifications",
-                "description": "The technical specifications include a 5 mbar ultimate vacuum, 0 to 2,400 rpm continuous RPM regulation, a built-in controller, and IP20 protection."
+                "title": "Technical Specifications",
+                "description": "The technical specifications of the Hei-VAC Vario Station RPM-Regulated Vacuum Pump include a 5 mbar ultimate vacuum, 0 to 2,400 rpm RPM regulation, and a built-in controller.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Vacuum depth, RPM range, power, dimensions"
               },
               {
                 "key": "performance",
                 "eyebrow": "RPM Regulation and Vacuum Precision",
-                "title": "RPM regulation and vacuum precision",
+                "title": "RPM Regulation and Vacuum Precision",
+                "tabSummary": "How continuous speed control avoids bumping and foaming",
                 "body": [
                   "A valve-controlled pump runs at one speed and bleeds air to hold vacuum. The Vario Station's pump speed is the control itself.",
-                  "Because the motor can run anywhere in a continuous 0 to 2,400 rpm range, the vacuum it delivers changes smoothly, not in valve-driven steps. That's a direct answer to bumping and foaming, both of which are usually a response to the vacuum moving too fast rather than the vacuum being too deep.",
-                  "Gas ballast sits alongside this as a second, independent control: engage it, and the ultimate vacuum shifts from 5 mbar to 7 mbar in exchange for protecting the pump from condensing vapour."
+                  "Because the motor can run anywhere in a continuous 0 to 2,400 rpm range, the vacuum it delivers changes smoothly, not in valve-driven steps. That's a direct answer to bumping and foaming, both of which are usually a response to the vacuum moving too fast rather than the vacuum being too deep. Gas ballast sits alongside this as a second, independent control: engage it, and the ultimate vacuum shifts from 5 mbar to 7 mbar in exchange for protecting the pump from condensing vapour."
                 ],
-                "metrics": [
+                "groups": [
                   {
-                    "value": "5 mbar",
-                    "label": "Ultimate vacuum, without gas ballast"
+                    "columns": [
+                      "What you're seeing",
+                      "What's happening"
+                    ],
+                    "rows": [
+                      [
+                        "A solution that bumps under valve control",
+                        "Continuous RPM regulation removes the pressure steps causing it"
+                      ],
+                      [
+                        "Foaming during evaporation",
+                        "Smoother vacuum approach reduces the trigger"
+                      ],
+                      [
+                        "A process that needs deep vacuum",
+                        "5 mbar without gas ballast, the deepest in the Hei-VAC range"
+                      ],
+                      [
+                        "High vapour load or condensable solvents",
+                        "Gas ballast on, for 7 mbar with pump protection"
+                      ]
+                    ]
                   },
                   {
-                    "value": "7 mbar",
-                    "label": "Ultimate vacuum, with gas ballast"
+                    "note": "Tell our team about your solution's bumping or foaming behaviour, and Inkarp will confirm the Vario Station's RPM regulation addresses it."
                   },
                   {
-                    "value": "0 to 2,400 min⁻¹",
-                    "label": "Continuous RPM range"
-                  },
-                  {
-                    "value": "1.7 m³/h",
-                    "label": "Maximum pumping speed"
+                    "title": "Hei-VAP Core Setup and Accessories",
+                    "summary": "What's built in, and what you still need",
+                    "description": "The Vario Station includes its own vacuum controller, which simplifies the setup compared with the valve-controlled Hei-VAC models. It still isn't a complete evaporation system on its own.",
+                    "columns": [
+                      "Component",
+                      "Status",
+                      "Selection Direction"
+                    ],
+                    "rows": [
+                      [
+                        "Vacuum Pump with Built-In Controller",
+                        "Included, P/N 591-00142-00",
+                        "Hei-VAC Vario Station"
+                      ],
+                      [
+                        "Secondary Condenser",
+                        "Not included",
+                        "Required for full solvent recovery; confirmed by Inkarp"
+                      ],
+                      [
+                        "Hei-VAP Core Rotary Evaporator",
+                        "Confirm compatibility",
+                        "This pump is built and recommended for the Core line"
+                      ],
+                      [
+                        "Connecting Hose",
+                        "Not included",
+                        "DN 8/10 mm inlet, DN 8 mm outlet hose nozzles"
+                      ]
+                    ],
+                    "note": "Send our team your Hei-VAP model and process details, and Inkarp will confirm the complete setup."
                   }
-                ],
-                "utilityChecklist": [
-                  {
-                    "label": "A solution that bumps under valve control",
-                    "value": "Continuous RPM regulation removes the pressure steps causing it"
-                  },
-                  {
-                    "label": "Foaming during evaporation",
-                    "value": "Smoother vacuum approach reduces the trigger"
-                  },
-                  {
-                    "label": "A process that needs deep vacuum",
-                    "value": "5 mbar without gas ballast, the deepest in the Hei-VAC range"
-                  },
-                  {
-                    "label": "High vapour load or condensable solvents",
-                    "value": "Gas ballast on, for 7 mbar with pump protection"
-                  }
-                ],
-                "disclaimer": "Tell Inkarp about your solution's bumping or foaming behaviour so they can confirm the Vario Station's RPM regulation addresses it."
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Hei-VAP Core Setup and Accessories",
-                "title": "Hei-VAP Core setup and accessories",
+                "title": "Configuration note",
                 "description": "The Vario Station includes its own vacuum controller, which simplifies the setup compared with the valve-controlled Hei-VAC models. It still isn't a complete evaporation system on its own.",
                 "cards": [
                   {
-                    "title": "Vacuum pump with built-in controller",
-                    "description": "Included, P/N 591-00142-00. Hei-VAC Vario Station."
+                    "title": "Model",
+                    "description": "Hei-VAC Vario Station (P/N: 591-00142-00)"
                   },
                   {
-                    "title": "Secondary condenser",
-                    "description": "Not included. Required for full solvent recovery; confirmed by Inkarp."
-                  },
-                  {
-                    "title": "Hei-VAP Core rotary evaporator",
-                    "description": "Confirm compatibility. This pump is built and recommended for the Core line."
-                  },
-                  {
-                    "title": "Connecting hose",
-                    "description": "Not included. DN 8/10 mm inlet, DN 8 mm outlet hose nozzles."
+                    "title": "Ultimate vacuum",
+                    "description": "5 mbar (without gas ballast), 7 mbar (with gas ballast)."
                   }
-                ]
+                ],
+                "body": [
+                  "Recommended for use with Hei-VAP Core rotary evaporators.",
+                  "Secondary condenser sold separately."
+                ],
+                "disclaimer": "Tell our team which Hei-VAP model you're running and your typical solution, and Inkarp will confirm the Vario Station is the right fit."
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation and Resources",
-                "title": "Documentation and resources",
+                "title": "Documentation and Resources",
                 "description": "Documentation for the Hei-VAC Vario Station RPM-Regulated Vacuum Pump is available from Inkarp on request.",
                 "cards": [
                   {
                     "title": "Technical Data Sheet, Hei-VAC Vario Station",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   },
                   {
                     "title": "Vacuum Pumps Selection Matrix",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet"
               },
               {
                 "key": "benefits",
@@ -2459,8 +2557,17 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The Hei-VAC Vario Station regulates its own speed to hold vacuum precisely, preventing bumping and foaming, with the controller built in and ready for your Hei-VAP Core evaporator. Tell us your process and evaporator model, and Inkarp will confirm the complete setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Forget manual valve adjustments. The Hei-VAC Vario Station automatically changes its motor speed from 0 to 2,400 rpm to maintain the vacuum level your process requires.",
+              "By continuously matching the vacuum to your application, it helps reduce bumping, minimise foaming, and deliver smoother, more controlled evaporation.",
+              "The vacuum controller is built in, so there's no need for a separate valve controller. Simply set your process parameters, and the pump automatically maintains the required vacuum throughout the run.",
+              "With an ultimate vacuum of 5 mbar without gas ballast or 7 mbar with gas ballast, the Hei-VAC Vario Station is designed to pair seamlessly with Hei-VAP Core rotary evaporators."
+            ],
+            "statsIntro": "The quick stats of the Hei-VAC Vario Station RPM-Regulated Vacuum Pump cover its vacuum depth, RPM regulation, and control method."
           },
           "inPageNav": [
             {
@@ -2503,68 +2610,64 @@
           "planners": [
             {
               "sectionId": "rpm-regulation-visualiser",
-              "eyebrow": "RPM regulation visualiser",
+              "eyebrow": "RPM Regulation Visualiser",
               "title": "See the difference between valve control and RPM regulation",
-              "description": "Compare, conceptually, how a valve-controlled pump adjusts vacuum in steps, while the Vario Station's motor speed adjusts continuously to hold the same target.",
+              "description": "Watch how a valve-controlled pump adjusts vacuum in steps, while the Vario Station's motor speed adjusts continuously to hold the same target.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your comparison"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Control method toggle",
-                  "choices": "Valve-throttled behaviour; RPM-regulated behaviour",
-                  "cta": "Get Configuration Support"
+                  "hint": "Switches between valve-throttled and RPM-regulated behaviour",
+                  "choices": "Valve-throttled; RPM-regulated behaviour"
                 },
                 {
                   "title": "Target vacuum slider",
-                  "choices": "Shallow target vacuum; Mid-range target vacuum; Deep target vacuum",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Vacuum trace readout",
-                  "choices": "Smooth curve, RPM regulation; Stepped curve, valve control",
-                  "cta": "Get Configuration Support"
+                  "hint": "Sets the vacuum level to hold",
+                  "choices": "Shallow target vacuum; Mid-range target vacuum; Deep target vacuum"
                 },
                 {
                   "title": "Bump risk indicator",
-                  "choices": "Lower risk, RPM regulation; Higher risk, stepped valve control",
-                  "cta": "Get Configuration Support"
+                  "hint": "Flags higher bumping risk on the stepped, valve-controlled trace",
+                  "choices": "Flags higher bumping risk on the stepped; Valve-controlled trace"
                 }
               ],
-              "disclaimer": "This visualiser illustrates the concept only. Actual bumping and foaming behaviour depends on the specific solution and process parameters."
+              "disclaimer": "",
+              "lead": "The RPM regulation visualiser shows how continuous speed control holds vacuum steady, compared with a fixed-speed, valve-throttled pump.",
+              "ctaNote": "Shows a smooth curve for RPM regulation versus a stepped curve for valve control.",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "hei-vap-evaporator-compatibility-check",
-              "eyebrow": "Hei-VAP evaporator compatibility check",
+              "eyebrow": "Hei-VAP Evaporator Compatibility Check",
               "title": "Which vacuum pump matches your Hei-VAP model?",
-              "description": "Select your Hei-VAP evaporator conceptually, and see whether the Vario Station is the recommended pairing or whether a valve-controlled model suits it better.",
+              "description": "Select your Hei-VAP evaporator, and see whether the Vario Station is the recommended pairing or whether a valve-controlled model suits it better.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your evaporator"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Evaporator model selector",
-                  "choices": "Hei-VAP Core; Hei-VAP Expert Control; Hei-VAP Ultimate Control; Other",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Compatibility readout",
-                  "choices": "Direct pairing with Vario Station; Vacuum valve needed instead",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Choose Hei-VAP Core, Expert Control, Ultimate Control, or other",
+                  "choices": "Choose Hei-VAP Core; Expert Control; Ultimate Control; Other"
                 },
                 {
                   "title": "Recommendation",
-                  "choices": "Hei-VAC Vario Station; Hei-VAC Valve Control; Hei-VAC Valve Tec",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Points to the Vario Station, Valve Control, or Valve Tec as appropriate",
+                  "choices": "Points to the Vario Station; Valve Control; Valve Tec as appropriate"
                 }
               ],
-              "disclaimer": "This check is a configuration helper. Confirm exact pump and evaporator compatibility with Inkarp before ordering."
+              "disclaimer": "",
+              "lead": "The Hei-VAP evaporator compatibility check confirms whether the Vario Station pairs directly with your rotary evaporator, or whether a different model fits better.",
+              "ctaNote": "Confirms direct pairing, or flags where a vacuum valve is needed instead.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
           "configWizard": {
@@ -2665,148 +2768,53 @@
           },
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
-            "title": "Where the Hei-VAC Vario Station is used",
-            "description": "Select your field to see the use case and what to consider before configuration.",
+            "title": "Industry Explorer",
+            "description": "Industries using the Hei-VAC Vario Station RPM-Regulated Vacuum Pump include pharmaceutical formulation, natural product extraction, and process laboratories running bump-sensitive solutions.",
             "industries": [
               {
                 "name": "Pharmaceutical Formulation",
                 "icon": "pill",
-                "useCase": "Evaporation of solutions prone to bumping",
-                "consideration": "Continuous RPM regulation for smooth vacuum control",
+                "note": "Use Case: Evaporation of solutions prone to bumping",
                 "bullets": [
-                  "Bump-prone solution evaporation",
-                  "Smooth vacuum approach",
-                  "Formulation process control"
+                  "What to Consider: Continuous RPM regulation for smooth vacuum control"
                 ],
-                "tags": [
-                  "Bump prevention",
-                  "RPM regulation",
-                  "Formulation"
-                ],
-                "highlights": [
-                  {
-                    "value": "0 to 2,400 min⁻¹",
-                    "label": "Continuous RPM regulation range",
-                    "fill": 90
-                  },
-                  {
-                    "value": "5 mbar",
-                    "label": "Ultimate vacuum without gas ballast",
-                    "fill": 88
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Natural Product Extraction",
                 "icon": "flask",
-                "useCase": "Foam-prone extracts and solvent mixtures",
-                "consideration": "Gas ballast for high vapour load protection",
+                "note": "Use Case: Foam-prone extracts and solvent mixtures",
                 "bullets": [
-                  "Foam-prone extracts",
-                  "Solvent mixture handling",
-                  "Gas ballast protection"
+                  "What to Consider: Gas ballast for high vapour load protection"
                 ],
-                "tags": [
-                  "Extraction",
-                  "Foam prevention",
-                  "Gas ballast"
-                ],
-                "highlights": [
-                  {
-                    "value": "7 mbar",
-                    "label": "Ultimate vacuum with gas ballast",
-                    "fill": 84
-                  },
-                  {
-                    "value": "6 kg",
-                    "label": "Lightweight build",
-                    "fill": 78
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Process Development",
                 "icon": "cpu",
-                "useCase": "Unattended evaporation runs",
-                "consideration": "Automatic parameter following",
+                "note": "Use Case: Unattended evaporation runs",
                 "bullets": [
-                  "Unattended runs",
-                  "Automatic parameter following",
-                  "Process development"
+                  "What to Consider: Automatic parameter following"
                 ],
-                "tags": [
-                  "Unattended operation",
-                  "Automatic control",
-                  "Process development"
-                ],
-                "highlights": [
-                  {
-                    "value": "Built-in",
-                    "label": "Vacuum controller",
-                    "fill": 92
-                  },
-                  {
-                    "value": "Automatic",
-                    "label": "Parameter following",
-                    "fill": 86
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Contract Laboratories",
                 "icon": "flask",
-                "useCase": "Hei-VAP Core evaporator installations",
-                "consideration": "Built-in controller simplifies setup",
+                "note": "Use Case: Hei-VAP Core evaporator installations",
                 "bullets": [
-                  "Hei-VAP Core installations",
-                  "Simplified setup",
-                  "Built-in controller"
+                  "What to Consider: Built-in controller simplifies setup"
                 ],
-                "tags": [
-                  "Hei-VAP Core",
-                  "Contract labs",
-                  "Simple setup"
-                ],
-                "highlights": [
-                  {
-                    "value": "For Hei-VAP Core",
-                    "label": "Recommended evaporator pairing",
-                    "fill": 90
-                  },
-                  {
-                    "value": "Built-in controller",
-                    "label": "No separate controller needed",
-                    "fill": 88
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Academic Research",
                 "icon": "flask",
-                "useCase": "Precise, reproducible vacuum control",
-                "consideration": "5 mbar deep vacuum for demanding solvent recovery",
+                "note": "Use Case: Precise, reproducible vacuum control",
                 "bullets": [
-                  "Precise vacuum control",
-                  "Reproducible results",
-                  "Demanding solvent recovery"
+                  "What to Consider: 5 mbar deep vacuum for demanding solvent recovery"
                 ],
-                "tags": [
-                  "Precision",
-                  "Reproducibility",
-                  "Deep vacuum"
-                ],
-                "highlights": [
-                  {
-                    "value": "5 mbar",
-                    "label": "Deepest ultimate vacuum in the Hei-VAC range",
-                    "fill": 92
-                  },
-                  {
-                    "value": "1.7 m³/h",
-                    "label": "Maximum pumping speed",
-                    "fill": 80
-                  }
-                ]
+                "tags": []
               }
             ],
             "disclaimer": "Application notes are configuration guidance only. Confirm evaporator model, solution behaviour, and vapour load with Inkarp."
@@ -2865,13 +2873,12 @@
           },
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
-            "title": "Compare the Hei-VAC Vario Station within the range",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare the Hei-VAC Vario Station with the valve-controlled Valve Control and Valve Tec.",
             "columns": [
               {
-                "label": "Hei-VAC Vario Station",
-                "highlight": true
+                "label": "Hei-VAC Vario Station"
               },
               {
                 "label": "Hei-VAC Valve Control"
@@ -2938,44 +2945,46 @@
                 ]
               }
             ],
-            "disclaimer": "RPM regulation and valve control are two different philosophies for holding a vacuum, not two tiers of the same idea. Choose based on whether you want the pump to self-regulate or want manual/valve control instead."
+            "disclaimer": "RPM regulation and valve control are two different philosophies for holding a vacuum, not two tiers of the same idea. Choose based on whether you want the pump to self-regulate or want manual/valve control instead.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
-            "title": "Inkarp support for Hei-VAC Vario Station across India",
+            "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Hei-VAC Vario Station RPM-Regulated Vacuum Pump with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
               {
                 "title": "Product Demonstration",
-                "description": "Shows RPM regulation and bump prevention on your own solution."
+                "description": "Shows RPM regulation and bump prevention on your own solution"
               },
               {
                 "title": "Hei-VAP Compatibility Check",
-                "description": "Confirms the pump pairs correctly with your rotary evaporator."
+                "description": "Confirms the pump pairs correctly with your rotary evaporator"
               },
               {
                 "title": "System Configuration",
-                "description": "Confirms the secondary condenser and accessories your setup needs."
+                "description": "Confirms the secondary condenser and accessories your setup needs"
               },
               {
                 "title": "Installation Support",
-                "description": "Supports setup and first-run checks."
+                "description": "Supports setup and first-run checks"
               },
               {
                 "title": "Operator Training",
-                "description": "Helps the team set process parameters for automatic operation."
+                "description": "Helps the team set process parameters for automatic operation"
               },
               {
                 "title": "Preventive Maintenance",
-                "description": "Maintains vacuum performance through daily use."
+                "description": "Maintains vacuum performance through daily use"
               },
               {
                 "title": "Spares and Accessories",
-                "description": "Supplies condensers and replacement parts."
+                "description": "Supplies condensers and replacement parts"
               },
               {
                 "title": "Service Support",
-                "description": "Supports troubleshooting, maintenance visits, and AMC."
+                "description": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -3033,20 +3042,36 @@
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
               {
-                "title": "Confirm evaporator compatibility",
-                "body": "Check whether the Vario Station's direct Hei-VAP Core pairing fits, or whether a valve-controlled model suits your evaporator better."
+                "title": "Product Demonstration",
+                "body": "Shows RPM regulation and bump prevention on your own solution"
               },
               {
-                "title": "Match the gas ballast setting",
-                "body": "Review your solvent and vapour load to confirm whether to run with gas ballast on or off as standard."
+                "title": "Hei-VAP Compatibility Check",
+                "body": "Confirms the pump pairs correctly with your rotary evaporator"
               },
               {
-                "title": "Plan for bump-sensitive solutions",
-                "body": "Share your solution's known bumping or foaming behaviour so Inkarp can confirm RPM regulation addresses it."
+                "title": "System Configuration",
+                "body": "Confirms the secondary condenser and accessories your setup needs"
               },
               {
-                "title": "Support after purchase",
-                "body": "Inkarp provides installation, operator training, AMC, spares, and service support across India."
+                "title": "Installation Support",
+                "body": "Supports setup and first-run checks"
+              },
+              {
+                "title": "Operator Training",
+                "body": "Helps the team set process parameters for automatic operation"
+              },
+              {
+                "title": "Preventive Maintenance",
+                "body": "Maintains vacuum performance through daily use"
+              },
+              {
+                "title": "Spares and Accessories",
+                "body": "Supplies condensers and replacement parts"
+              },
+              {
+                "title": "Service Support",
+                "body": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -3064,7 +3089,8 @@
               "ctaLabel": "Configure with Inkarp",
               "href": "#config"
             }
-          ]
+          ],
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Hei-VAC Vario Control RPM-Regulated Vacuum Pump",
@@ -3098,12 +3124,30 @@
           ],
           "overview": "Deep vacuum that holds, even with gas ballast open. Built for DMF, DMSO, and solvents like them. High boiling point solvents are hard to distill safely without decomposing what you're trying to purify. The Hei-VAC Vario Control reaches 2 mbar without gas ballast, and still reaches 4 mbar with gas ballast open, deep enough to distill solvents like DMF or DMSO at low bath temperatures. It's built for Hei-VAP Expert Control and Ultimate Control evaporators, and connects to a coolant line through a DN 6-8 mm hose.",
           "features": [
-            "Excellent Vacuum, Even with Gas Ballast Open: Reaches 4 mbar with gas ballast engaged, close behind the 2 mbar it reaches without it, most pumps lose far more.",
-            "Built for High Boiling Point Solvents: Distills solvents like DMF and DMSO at low bath temperatures, made possible by the depth of vacuum this pump holds.",
-            "Coolant Connection: A DN 6-8 mm hose nozzle supports the pump under heavier condensable vapour loads.",
-            "RPM Regulation: Continuous speed control, the same mechanism as the Vario Station, for smooth rather than valve-throttled vacuum control.",
-            "Compact, Light Build: At 5.4 kg, the lightest pump in the Hei-VAC range.",
-            "Built-In Vacuum Controller: A stand-alone unit, no separate valve controller required."
+            {
+              "title": "Excellent Vacuum, Even with Gas Ballast Open",
+              "description": "Reaches 4 mbar with gas ballast engaged, close behind the 2 mbar it reaches without it — most pumps lose far more."
+            },
+            {
+              "title": "Built for High Boiling Point Solvents",
+              "description": "Distills solvents like DMF and DMSO at low bath temperatures, made possible by the depth of vacuum this pump holds."
+            },
+            {
+              "title": "Coolant Connection",
+              "description": "A DN 6–8 mm hose nozzle supports the pump under heavier condensable vapour loads."
+            },
+            {
+              "title": "RPM Regulation",
+              "description": "Continuous speed control, the same mechanism as the Vario Station, for smooth rather than valve-throttled vacuum control."
+            },
+            {
+              "title": "Compact, Light Build",
+              "description": "At 5.4 kg, the lightest pump in the Hei-VAC range."
+            },
+            {
+              "title": "Built-In Vacuum Controller",
+              "description": "A stand-alone unit, no separate valve controller required."
+            }
           ],
           "technicalSpecs": [
             {
@@ -3148,7 +3192,7 @@
             },
             {
               "label": "Coolant Connection",
-              "value": "Hose nozzle, DN 6-8 mm"
+              "value": "Hose nozzle, DN 6–8 mm"
             },
             {
               "label": "Inlet",
@@ -3180,23 +3224,38 @@
             },
             {
               "label": "Storage Temperature Range",
-              "value": "-10°C to +60°C"
+              "value": "−10°C to +60°C"
             },
             {
               "label": "Permissible Relative Humidity",
               "value": "30% to 85%, no condensation"
             },
             {
-              "label": "Supply Voltage Range, +/-10%",
-              "value": "100-120 V, 50/60 Hz; 200-240 V, 50/60 Hz"
+              "label": "Supply Voltage Range, ±10%",
+              "value": "100–120 V, 50/60 Hz; 200–240 V, 50/60 Hz"
             }
           ],
           "applications": [
-            "High Boiling Point Solvent Distillation: 2 mbar vacuum lowers effective boiling point for solvents like DMF and DMSO.",
-            "Condensable Vapour Handling: Gas ballast protects the pump without giving up much vacuum depth.",
-            "Low Bath Temperature Distillation: Deep vacuum allows gentle bath temperatures, protecting sensitive compounds.",
-            "Hei-VAP Expert Control Evaporation: Built and recommended for this evaporator line.",
-            "Hei-VAP Ultimate Control Evaporation: Built and recommended for this evaporator line."
+            {
+              "title": "High Boiling Point Solvent Distillation",
+              "description": "2 mbar vacuum lowers effective boiling point for solvents like DMF and DMSO"
+            },
+            {
+              "title": "Condensable Vapour Handling",
+              "description": "Gas ballast protects the pump without giving up much vacuum depth"
+            },
+            {
+              "title": "Low Bath Temperature Distillation",
+              "description": "Deep vacuum allows gentle bath temperatures, protecting sensitive compounds"
+            },
+            {
+              "title": "Hei-VAP Expert Control Evaporation",
+              "description": "Built and recommended for this evaporator line"
+            },
+            {
+              "title": "Hei-VAP Ultimate Control Evaporation",
+              "description": "Built and recommended for this evaporator line"
+            }
           ],
           "tags": [
             "Hei-VAC",
@@ -3227,7 +3286,7 @@
             },
             {
               "question": "Does the Vario Control need a coolant connection?",
-              "answer": "Yes. It connects to a coolant supply through a DN 6-8 mm hose nozzle, which supports the pump under heavier condensable vapour loads."
+              "answer": "Yes. It connects to a coolant supply through a DN 6–8 mm hose nozzle, which supports the pump under heavier condensable vapour loads."
             },
             {
               "question": "Which rotary evaporators does this pump pair with?",
@@ -3260,7 +3319,7 @@
           ],
           "longForm": {
             "heroHook": "Deep vacuum that holds, even with gas ballast open. Built for DMF, DMSO, and solvents like them.",
-            "heroLead": "High boiling point solvents are hard to distill safely. Heat the bath too much, and you risk decomposing what you're trying to purify. The Hei-VAC Vario Control solves this with vacuum depth. It reaches 2 mbar without gas ballast, and opening the gas ballast valve barely moves it, still reaching 4 mbar. That's deep enough to distill solvents like DMF or DMSO at low bath temperatures, without decomposing them. It's built for Hei-VAP Expert Control and Ultimate Control evaporators, and connects to a coolant line through a DN 6-8 mm hose.",
+            "heroLead": "High boiling point solvents are hard to distill safely. Heat the bath too much, and you risk decomposing what you're trying to purify. The Hei-VAC Vario Control solves this with vacuum depth. It reaches 2 mbar without gas ballast. Open the gas ballast valve to protect the pump from condensable vapour, and the vacuum barely moves. It still reaches 4 mbar. That's deep enough to distill solvents like DMF or DMSO at low bath temperatures, without decomposing them. It's built for Hei-VAP Expert Control and Ultimate Control evaporators, and connects to a coolant line through a DN 6–8 mm hose.",
             "stats": [
               {
                 "value": "2 mbar",
@@ -3283,7 +3342,7 @@
                 "label": "Recommended evaporator pairing"
               },
               {
-                "value": "DN 6-8 mm",
+                "value": "DN 6–8 mm",
                 "label": "Coolant connection"
               },
               {
@@ -3307,143 +3366,204 @@
               {
                 "key": "overview",
                 "eyebrow": "Product information",
-                "title": "Hei-VAC Vario Control at a glance",
-                "description": "Everything you need to evaluate the Vario Control: how it holds vacuum depth with gas ballast open, what solvents it's built for, the coolant connection it needs, the full technical data, and Inkarp installation and service support.",
-                "subheading": "Deep vacuum for DMF, DMSO, and similarly demanding solvents",
+                "title": "Product Information",
+                "description": "The product information of the Hei-VAC Vario Control RPM-Regulated Vacuum Pump covers its deep vacuum performance, coolant setup, evaporator pairing, and Inkarp service support.",
+                "subheading": "Overview",
                 "body": [
-                  "The Hei-VAC Vario Control is designed for applications that require deep vacuum and precise control, making it well suited for evaporating high boiling point solvents.",
-                  "It achieves an ultimate vacuum of 2 mbar without gas ballast and 4 mbar with gas ballast, for efficient solvent evaporation while protecting the pump from condensable vapours. This makes it ideal for high boiling point solvents such as DMF and DMSO, helping reduce boiling temperatures during evaporation.",
-                  "It uses RPM-regulated motor control to continuously maintain the required vacuum without manual valve adjustment, providing stable vacuum control that helps minimise foaming and bumping throughout the evaporation process.",
-                  "Recommended for use with Hei-VAP Expert Control and Hei-VAP Ultimate Control rotary evaporators, it has a compact, lightweight design at 5.4 kg for easy integration into laboratory workstations, and includes a DN 6-8 mm coolant connection to support operation with high condensable vapour loads.",
-                  "Confirmed model: Hei-VAC Vario Control, P/N 591-00141-00. Recommended for Hei-VAP Expert Control and Ultimate Control rotary evaporators. Secondary condenser sold separately."
+                  {
+                    "text": "Achieves an ultimate vacuum of 2 mbar without gas ballast and 4 mbar with gas ballast for efficient solvent evaporation while protecting the pump from condensable vapours."
+                  },
+                  {
+                    "text": "Ideal for high boiling point solvents such as DMF and DMSO, helping reduce boiling temperatures during evaporation."
+                  },
+                  {
+                    "text": "Uses RPM-regulated motor control to continuously maintain the required vacuum without manual valve adjustment."
+                  },
+                  {
+                    "text": "Provides stable vacuum control to help minimise foaming and bumping throughout the evaporation process."
+                  },
+                  {
+                    "text": "Recommended for use with Hei-VAP Expert Control and Hei-VAP Ultimate Control rotary evaporators."
+                  },
+                  {
+                    "text": "Compact, lightweight design at 5.4 kg for easy integration into laboratory workstations."
+                  },
+                  {
+                    "text": "Includes a DN 6–8 mm coolant connection to support operation with high condensable vapour loads."
+                  }
                 ],
                 "cards": [
                   {
                     "title": "2 mbar",
-                    "description": "Ultimate vacuum without gas ballast, deepest in the range."
+                    "description": "Ultimate vacuum without gas ballast, deepest in the range"
                   },
                   {
                     "title": "4 mbar",
-                    "description": "Ultimate vacuum with gas ballast, still excellent."
+                    "description": "Ultimate vacuum with gas ballast, still excellent"
                   },
                   {
                     "title": "DMF, DMSO, and similar",
-                    "description": "Solvents this pump is built to distill."
+                    "description": "Solvents this pump is built to distill"
                   },
                   {
                     "title": "For Hei-VAP Expert/Ultimate Control",
-                    "description": "Recommended evaporator pairing."
+                    "description": "Recommended evaporator pairing"
                   }
-                ]
+                ],
+                "glanceTitle": "Hei-VAC Vario Control RPM-Regulated Vacuum Pump at a Glance",
+                "glanceDescription": "Everything you need to evaluate the Vario Control: how it holds vacuum depth with gas ballast open, what solvents it's built for, the coolant connection it needs, the full technical data, and Inkarp installation and service support.",
+                "intro": "The Hei-VAC Vario Control is designed for applications that require deep vacuum and precise control, making it well suited for evaporating high boiling point solvents.",
+                "cardsIntro": "The value cards of the Hei-VAC Vario Control RPM-Regulated Vacuum Pump summarize its vacuum depth, gas ballast performance, and solvent fit.",
+                "tabSummary": "Why gas ballast barely costs this pump any vacuum depth"
               },
               {
                 "key": "features",
                 "eyebrow": "Key Features",
-                "title": "Deep vacuum that barely moves with gas ballast open",
-                "description": "The key features of the Hei-VAC Vario Control include gas ballast that barely costs vacuum depth, a coolant connection, and RPM regulation."
+                "title": "Key Features",
+                "description": "The key features of the Hei-VAC Vario Control RPM-Regulated Vacuum Pump include gas ballast that barely costs vacuum depth, a coolant connection, and RPM regulation.",
+                "tabSummary": "Deep vacuum, coolant connection, RPM regulation"
               },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
-                "title": "Where the Hei-VAC Vario Control fits",
-                "description": "Use the Hei-VAC Vario Control for high boiling point solvent distillation, condensable vapour handling, low bath temperature distillation, and Hei-VAP Expert or Ultimate Control evaporation."
+                "title": "Applications",
+                "description": "The applications of the Hei-VAC Vario Control RPM-Regulated Vacuum Pump include high boiling point solvent distillation, condensable vapour handling, and Hei-VAP Expert or Ultimate Control evaporation.",
+                "tabSummary": "High boiling point solvent distillation, condensable vapour handling"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
-                "title": "Technical specifications",
-                "description": "The technical specifications include a 2 mbar ultimate vacuum, a DN 6-8 mm coolant connection, continuous RPM regulation, and IP20 protection."
+                "title": "Technical Specifications",
+                "description": "The technical specifications of the Hei-VAC Vario Control RPM-Regulated Vacuum Pump include a 2 mbar ultimate vacuum, coolant connection, and RPM regulation.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Vacuum depth, pumping speed, coolant connection, power"
               },
               {
                 "key": "performance",
                 "eyebrow": "Vacuum Depth for High-Boiling Solvents",
-                "title": "Vacuum depth for high-boiling solvents",
+                "title": "Vacuum Depth for High-Boiling Solvents",
+                "tabSummary": "What 2 mbar and 4 mbar mean for DMF and DMSO work",
                 "body": [
+                  "(Section swapped. Replaces \"Performance and Utility Planning\".)",
                   "Distilling a high boiling point solvent safely comes down to one trade: how deep a vacuum you can hold against how much protection you need from the vapour it gives off.",
-                  "Without gas ballast, the Vario Control reaches 2 mbar, deep enough to bring the effective boiling point of solvents like DMF or DMSO well below their atmospheric value. With gas ballast open, the pump gives up remarkably little of that depth, settling at 4 mbar rather than the steep drop other pumps in the range show.",
-                  "That's what makes it possible to run condensable, high-boiling solvents with gas ballast protection on, without sacrificing the low bath temperature the whole process depends on."
+                  "Without gas ballast, the Vario Control reaches 2 mbar, deep enough to bring the effective boiling point of solvents like DMF or DMSO well below their atmospheric value. With gas ballast open, the pump gives up remarkably little of that depth, settling at 4 mbar rather than the steep drop other pumps in the range show. That's what makes it possible to run condensable, high-boiling solvents with gas ballast protection on, without sacrificing the low bath temperature the whole process depends on."
                 ],
-                "metrics": [
+                "groups": [
                   {
-                    "value": "2 mbar",
-                    "label": "Ultimate vacuum, without gas ballast"
+                    "columns": [
+                      "Your solvent",
+                      "Recommended setting"
+                    ],
+                    "rows": [
+                      [
+                        "High boiling point, low condensation risk",
+                        "Gas ballast off, for the full 2 mbar"
+                      ],
+                      [
+                        "DMF, DMSO, or similarly condensable vapours",
+                        "Gas ballast on, still reaching 4 mbar"
+                      ],
+                      [
+                        "Distillation requiring the lowest possible bath temperature",
+                        "Gas ballast off where vapour load allows it"
+                      ],
+                      [
+                        "Extended runs with heavy vapour load",
+                        "Gas ballast on, for sustained pump protection"
+                      ]
+                    ]
                   },
                   {
-                    "value": "4 mbar",
-                    "label": "Ultimate vacuum, with gas ballast"
+                    "note": "Tell our team which solvent you're distilling and your target bath temperature, and Inkarp will confirm the Vario Control reaches what your process needs."
                   },
                   {
-                    "value": "2,400 min⁻¹",
-                    "label": "Maximum no-load speed"
-                  },
-                  {
-                    "value": "5.4 kg",
-                    "label": "Lightest pump in the range"
+                    "title": "Coolant Setup and Hei-VAP Compatibility",
+                    "summary": "What you need alongside the pump",
+                    "description": "(Section swapped. Replaces \"Configurations and Options\".)",
+                    "body": [
+                      "The Vario Control includes its own vacuum controller, but a complete setup still needs a coolant connection and the right evaporator pairing."
+                    ],
+                    "columns": [
+                      "Component",
+                      "Status",
+                      "Selection Direction"
+                    ],
+                    "rows": [
+                      [
+                        "Vacuum Pump with Built-In Controller",
+                        "Included, P/N 591-00141-00",
+                        "Hei-VAC Vario Control"
+                      ],
+                      [
+                        "Coolant Supply",
+                        "Not included",
+                        "DN 6–8 mm hose connection required"
+                      ],
+                      [
+                        "Secondary Condenser",
+                        "Not included",
+                        "Required for full solvent recovery; confirmed by Inkarp"
+                      ],
+                      [
+                        "Hei-VAP Expert Control or Ultimate Control",
+                        "Confirm compatibility",
+                        "This pump is built and recommended for these models"
+                      ],
+                      [
+                        "Connecting Hose",
+                        "Not included",
+                        "DN 8 mm inlet and outlet hose nozzles"
+                      ]
+                    ],
+                    "note": "Send our team your Hei-VAP model, solvent, and coolant supply details, and Inkarp will confirm the complete setup."
                   }
-                ],
-                "utilityChecklist": [
-                  {
-                    "label": "High boiling point, low condensation risk",
-                    "value": "Gas ballast off, for the full 2 mbar"
-                  },
-                  {
-                    "label": "DMF, DMSO, or similarly condensable vapours",
-                    "value": "Gas ballast on, still reaching 4 mbar"
-                  },
-                  {
-                    "label": "Distillation requiring the lowest possible bath temperature",
-                    "value": "Gas ballast off where vapour load allows it"
-                  },
-                  {
-                    "label": "Extended runs with heavy vapour load",
-                    "value": "Gas ballast on, for sustained pump protection"
-                  }
-                ],
-                "disclaimer": "Tell Inkarp which solvent you're distilling and your target bath temperature so they can confirm the Vario Control reaches what your process needs."
+                ]
               },
               {
                 "key": "config",
                 "eyebrow": "Coolant Setup and Hei-VAP Compatibility",
-                "title": "Coolant setup and Hei-VAP compatibility",
+                "title": "Configuration note",
                 "description": "The Vario Control includes its own vacuum controller, but a complete setup still needs a coolant connection and the right evaporator pairing.",
                 "cards": [
                   {
-                    "title": "Vacuum pump with built-in controller",
-                    "description": "Included, P/N 591-00141-00. Hei-VAC Vario Control."
+                    "title": "Model",
+                    "description": "Hei-VAC Vario Control (P/N: 591-00141-00)"
                   },
                   {
-                    "title": "Coolant supply",
-                    "description": "Not included. DN 6-8 mm hose connection required."
+                    "title": "Ultimate vacuum",
+                    "description": "2 mbar (without gas ballast), 4 mbar (with gas ballast)."
                   },
                   {
-                    "title": "Secondary condenser",
-                    "description": "Not included. Required for full solvent recovery; confirmed by Inkarp."
-                  },
-                  {
-                    "title": "Hei-VAP Expert Control or Ultimate Control",
-                    "description": "Confirm compatibility. This pump is built and recommended for these models."
-                  },
-                  {
-                    "title": "Connecting hose",
-                    "description": "Not included. DN 8 mm inlet and outlet hose nozzles."
+                    "title": "Coolant connection required",
+                    "description": "DN 6–8 mm hose nozzle."
                   }
-                ]
+                ],
+                "body": [
+                  "Recommended for Hei-VAP Expert Control and Ultimate Control rotary evaporators.",
+                  "Secondary condenser sold separately."
+                ],
+                "disclaimer": "Tell our team which solvents you distill and your Hei-VAP model, and Inkarp will confirm the Vario Control fits and what the coolant setup needs."
               },
               {
                 "key": "docs",
                 "eyebrow": "Documentation and Resources",
-                "title": "Documentation and resources",
+                "title": "Documentation and Resources",
                 "description": "Documentation for the Hei-VAC Vario Control RPM-Regulated Vacuum Pump is available from Inkarp on request.",
                 "cards": [
                   {
                     "title": "Technical Data Sheet, Hei-VAC Vario Control",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   },
                   {
                     "title": "Vacuum Pumps Selection Matrix",
-                    "description": "Available from Inkarp on request."
+                    "description": "Available from Inkarp on request"
                   }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Data sheet"
               },
               {
                 "key": "benefits",
@@ -3472,8 +3592,18 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "The Hei-VAC Vario Control reaches 2 mbar, and holds nearly all of that depth even with gas ballast open, making it the pump for distilling DMF, DMSO, and similarly demanding solvents at low bath temperatures. Tell us your solvent and Hei-VAP model, and Inkarp will confirm the complete setup.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "High boiling point solvents are hard to distill safely. Heat the bath too much, and you risk decomposing what you're trying to purify.",
+              "The Hei-VAC Vario Control solves this with vacuum depth. It reaches 2 mbar without gas ballast.",
+              "Open the gas ballast valve to protect the pump from condensable vapour, and the vacuum barely moves. It still reaches 4 mbar.",
+              "That's deep enough to distill solvents like DMF or DMSO at low bath temperatures, without decomposing them.",
+              "It's built for Hei-VAP Expert Control and Ultimate Control evaporators, and connects to a coolant line through a DN 6–8 mm hose."
+            ],
+            "statsIntro": "The quick stats of the Hei-VAC Vario Control RPM-Regulated Vacuum Pump cover its vacuum depth, gas ballast performance, and evaporator pairing."
           },
           "inPageNav": [
             {
@@ -3516,73 +3646,65 @@
           "planners": [
             {
               "sectionId": "high-boiling-solvent-vacuum-planner",
-              "eyebrow": "High-boiling solvent vacuum planner",
+              "eyebrow": "High-Boiling Solvent Vacuum Planner",
               "title": "See how far the bath temperature drops",
-              "description": "Select a solvent conceptually, or its atmospheric boiling point, and toggle gas ballast to see the effective boiling point at 2 mbar or 4 mbar.",
+              "description": "Select a solvent, or enter its atmospheric boiling point, and toggle gas ballast to see the effective boiling point at 2 mbar or 4 mbar.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your solvent"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Solvent selector",
-                  "choices": "DMF; DMSO; Custom boiling point",
-                  "cta": "Get Configuration Support"
+                  "hint": "Choose DMF, DMSO, or enter a custom boiling point",
+                  "choices": "Choose DMF; DMSO; Enter a custom boiling point"
                 },
                 {
                   "title": "Gas ballast toggle",
-                  "choices": "Off, 2 mbar; On, 4 mbar",
-                  "cta": "Get Configuration Support"
-                },
-                {
-                  "title": "Effective boiling point readout",
-                  "choices": "Estimated distillation temperature at the selected vacuum",
-                  "cta": "Get Configuration Support"
+                  "hint": "Switches between 2 mbar (off) and 4 mbar (on)",
+                  "choices": "2 mbar (off); 4 mbar (on)"
                 },
                 {
                   "title": "Bath temperature guidance",
-                  "choices": "Gentler bath setting suggestion based on the vacuum reached",
-                  "cta": "Get Configuration Support"
+                  "hint": "Suggests a gentler bath setting based on the vacuum reached",
+                  "input": "text",
+                  "choices": ""
                 }
               ],
-              "disclaimer": "This planner is a configuration helper. Confirm exact effective boiling point and safe bath temperature for your solvent with Inkarp."
+              "disclaimer": "",
+              "lead": "The high-boiling solvent vacuum planner shows how deep vacuum lowers the effective boiling point for solvents like DMF and DMSO, with and without gas ballast.",
+              "ctaNote": "Shows the estimated distillation temperature at the selected vacuum.",
+              "ctaLabel": "Get Configuration Support"
             },
             {
               "sectionId": "coolant-and-setup-requirements-checker",
-              "eyebrow": "Coolant and setup requirements checker",
+              "eyebrow": "Coolant and Setup Requirements Checker",
               "title": "Is your setup ready for the Vario Control?",
-              "description": "Confirm your Hei-VAP model, coolant supply, and condenser plan conceptually to see what's already covered and what still needs specifying.",
+              "description": "Confirm your Hei-VAP model, coolant supply, and condenser plan to see what's already covered and what still needs specifying.",
               "fields": [
                 {
                   "key": "choices",
-                  "label": "Select your setup status"
+                  "label": "Choices"
                 }
               ],
               "options": [
                 {
                   "title": "Hei-VAP model selector",
-                  "choices": "Expert Control; Ultimate Control; Other pairing",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Coolant supply confirmation",
-                  "choices": "DN 6-8 mm coolant line available; Not yet available",
-                  "cta": "Talk to Product Expert"
-                },
-                {
-                  "title": "Secondary condenser check",
-                  "choices": "Already planned; Not yet planned",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Confirms Expert Control, Ultimate Control, or checks other pairings",
+                  "choices": "Confirms Expert Control; Ultimate Control; Checks other pairings"
                 },
                 {
                   "title": "Setup readiness summary",
-                  "choices": "Confirmed items; Items Inkarp still needs to finalise",
-                  "cta": "Talk to Product Expert"
+                  "hint": "Lists what's confirmed and what Inkarp still needs to finalise",
+                  "choices": "Confirmed items; Items Inkarp still needs to finalise"
                 }
               ],
-              "disclaimer": "This checker is a configuration helper. Final coolant, condenser, and evaporator compatibility must be confirmed by Inkarp."
+              "disclaimer": "",
+              "lead": "The coolant and setup requirements checker confirms what's needed alongside the Vario Control before installation.",
+              "ctaNote": "Flags whether a DN 6–8 mm coolant line is available. Confirms whether this is already planned separately.",
+              "ctaLabel": "Talk to Product Expert"
             }
           ],
           "configWizard": {
@@ -3688,148 +3810,53 @@
           },
           "applicationsExplorer": {
             "eyebrow": "Industry Explorer",
-            "title": "Where the Hei-VAC Vario Control is used",
-            "description": "Select your field to see the use case and what to consider before configuration.",
+            "title": "Industry Explorer",
+            "description": "Industries using the Hei-VAC Vario Control RPM-Regulated Vacuum Pump include pharmaceutical synthesis, organic chemistry research, and process chemistry handling high-boiling solvents.",
             "industries": [
               {
                 "name": "Pharmaceutical Synthesis",
                 "icon": "pill",
-                "useCase": "Recovering DMF or DMSO from reaction mixtures",
-                "consideration": "Deep vacuum for low-temperature distillation",
+                "note": "Use Case: Recovering DMF or DMSO from reaction mixtures",
                 "bullets": [
-                  "DMF/DMSO recovery",
-                  "Reaction mixture workup",
-                  "Low-temperature distillation"
+                  "What to Consider: Deep vacuum for low-temperature distillation"
                 ],
-                "tags": [
-                  "DMF",
-                  "DMSO",
-                  "Solvent recovery"
-                ],
-                "highlights": [
-                  {
-                    "value": "2 mbar",
-                    "label": "Ultimate vacuum without gas ballast",
-                    "fill": 94
-                  },
-                  {
-                    "value": "4 mbar",
-                    "label": "Ultimate vacuum with gas ballast",
-                    "fill": 88
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Organic Chemistry Research",
                 "icon": "flask",
-                "useCase": "Purification involving high boiling point solvents",
-                "consideration": "Gas ballast protection without losing vacuum depth",
+                "note": "Use Case: Purification involving high boiling point solvents",
                 "bullets": [
-                  "High boiling point purification",
-                  "Gas ballast protection",
-                  "Minimal vacuum loss"
+                  "What to Consider: Gas ballast protection without losing vacuum depth"
                 ],
-                "tags": [
-                  "Purification",
-                  "High boiling point",
-                  "Gas ballast"
-                ],
-                "highlights": [
-                  {
-                    "value": "5.4 kg",
-                    "label": "Lightest pump in the range",
-                    "fill": 80
-                  },
-                  {
-                    "value": "2,400 min⁻¹",
-                    "label": "Maximum no-load speed",
-                    "fill": 82
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Process Chemistry",
                 "icon": "cpu",
-                "useCase": "Solvent recovery from condensable vapour streams",
-                "consideration": "Coolant supply planning alongside the pump",
+                "note": "Use Case: Solvent recovery from condensable vapour streams",
                 "bullets": [
-                  "Condensable vapour streams",
-                  "Solvent recovery",
-                  "Coolant supply planning"
+                  "What to Consider: Coolant supply planning alongside the pump"
                 ],
-                "tags": [
-                  "Condensable vapour",
-                  "Coolant setup",
-                  "Process chemistry"
-                ],
-                "highlights": [
-                  {
-                    "value": "DN 6-8 mm",
-                    "label": "Coolant connection",
-                    "fill": 86
-                  },
-                  {
-                    "value": "RPM-regulated",
-                    "label": "Continuous speed control",
-                    "fill": 84
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Contract Research Organisations",
                 "icon": "flask",
-                "useCase": "Handling a range of demanding solvent systems",
-                "consideration": "Hei-VAP Expert or Ultimate Control pairing",
+                "note": "Use Case: Handling a range of demanding solvent systems",
                 "bullets": [
-                  "Demanding solvent systems",
-                  "Multiple project types",
-                  "Hei-VAP Control pairing"
+                  "What to Consider: Hei-VAP Expert or Ultimate Control pairing"
                 ],
-                "tags": [
-                  "Contract research",
-                  "Demanding solvents",
-                  "Hei-VAP Control"
-                ],
-                "highlights": [
-                  {
-                    "value": "For Hei-VAP Expert/Ultimate Control",
-                    "label": "Recommended evaporator pairing",
-                    "fill": 88
-                  },
-                  {
-                    "value": "Built-in controller",
-                    "label": "No separate valve controller required",
-                    "fill": 84
-                  }
-                ]
+                "tags": []
               },
               {
                 "name": "Academic Research Labs",
                 "icon": "flask",
-                "useCase": "Advanced distillation of specialty solvents",
-                "consideration": "Bath temperature reduction at deep vacuum",
+                "note": "Use Case: Advanced distillation of specialty solvents",
                 "bullets": [
-                  "Specialty solvent distillation",
-                  "Bath temperature reduction",
-                  "Advanced research use"
+                  "What to Consider: Bath temperature reduction at deep vacuum"
                 ],
-                "tags": [
-                  "Specialty solvents",
-                  "Deep vacuum",
-                  "Academic research"
-                ],
-                "highlights": [
-                  {
-                    "value": "2 mbar",
-                    "label": "Deepest ultimate vacuum in the Hei-VAC range",
-                    "fill": 94
-                  },
-                  {
-                    "value": "1.7 m³/h",
-                    "label": "Maximum pumping speed",
-                    "fill": 78
-                  }
-                ]
+                "tags": []
               }
             ],
             "disclaimer": "Application notes are configuration guidance only. Confirm solvent, target bath temperature, and evaporator compatibility with Inkarp."
@@ -3888,13 +3915,12 @@
           },
           "comparison": {
             "sectionId": "comparison",
-            "eyebrow": "Method Comparison",
-            "title": "Compare the Hei-VAC Vario Control within the range",
+            "eyebrow": "Method comparison",
+            "title": "Method Comparison",
             "description": "Compare the Hei-VAC Vario Control with the Vario Station and the valve-controlled Hei-VAC models.",
             "columns": [
               {
-                "label": "Hei-VAC Vario Control",
-                "highlight": true
+                "label": "Hei-VAC Vario Control"
               },
               {
                 "label": "Hei-VAC Vario Station"
@@ -3931,7 +3957,7 @@
               {
                 "feature": "Coolant Connection",
                 "values": [
-                  "Yes, DN 6-8 mm",
+                  "Yes, DN 6–8 mm",
                   "Not specified",
                   "Not specified"
                 ]
@@ -3969,48 +3995,50 @@
                 ]
               }
             ],
-            "disclaimer": "The Vario Control is the deepest-vacuum, most specialised pump in the range, built specifically for solvents that are both high-boiling and easily condensable."
+            "disclaimer": "The Vario Control is the deepest-vacuum, most specialised pump in the range, built specifically for solvents that are both high-boiling and easily condensable.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
-            "title": "Inkarp support for Hei-VAC Vario Control across India",
+            "title": "Inkarp Service Near You",
             "description": "Inkarp supports the Hei-VAC Vario Control RPM-Regulated Vacuum Pump with demonstration, installation, operator training, spares, AMC, and service support.",
             "supportAreas": [
               {
                 "title": "Product Demonstration",
-                "description": "Shows vacuum depth and gas ballast performance on your solvent."
+                "description": "Shows vacuum depth and gas ballast performance on your solvent"
               },
               {
                 "title": "Solvent Fit Assessment",
-                "description": "Confirms the Vario Control suits your distillation requirements."
+                "description": "Confirms the Vario Control suits your distillation requirements"
               },
               {
                 "title": "Coolant Setup Support",
-                "description": "Assists with coolant line planning and connection."
+                "description": "Assists with coolant line planning and connection"
               },
               {
                 "title": "Hei-VAP Compatibility Check",
-                "description": "Confirms the pump pairs correctly with your rotary evaporator."
+                "description": "Confirms the pump pairs correctly with your rotary evaporator"
               },
               {
                 "title": "Installation Support",
-                "description": "Supports setup and first-run checks."
+                "description": "Supports setup and first-run checks"
               },
               {
                 "title": "Operator Training",
-                "description": "Helps the team set gas ballast and process parameters correctly."
+                "description": "Helps the team set gas ballast and process parameters correctly"
               },
               {
                 "title": "Preventive Maintenance",
-                "description": "Maintains vacuum performance through daily use."
+                "description": "Maintains vacuum performance through daily use"
               },
               {
                 "title": "Spares and Accessories",
-                "description": "Supplies condensers and replacement parts."
+                "description": "Supplies condensers and replacement parts"
               },
               {
                 "title": "Service Support",
-                "description": "Supports troubleshooting, maintenance visits, and AMC."
+                "description": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -4074,20 +4102,40 @@
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
               {
-                "title": "Confirm the solvent fit",
-                "body": "Check your solvent and target bath temperature against the 2 mbar / 4 mbar range before ordering."
+                "title": "Product Demonstration",
+                "body": "Shows vacuum depth and gas ballast performance on your solvent"
               },
               {
-                "title": "Plan the coolant connection",
-                "body": "Confirm your DN 6-8 mm coolant supply is ready, or get help planning it."
+                "title": "Solvent Fit Assessment",
+                "body": "Confirms the Vario Control suits your distillation requirements"
               },
               {
-                "title": "Confirm evaporator compatibility",
-                "body": "Verify the pairing with your Hei-VAP Expert Control or Ultimate Control model."
+                "title": "Coolant Setup Support",
+                "body": "Assists with coolant line planning and connection"
               },
               {
-                "title": "Support after purchase",
-                "body": "Inkarp provides installation, operator training, AMC, spares, and service support across India."
+                "title": "Hei-VAP Compatibility Check",
+                "body": "Confirms the pump pairs correctly with your rotary evaporator"
+              },
+              {
+                "title": "Installation Support",
+                "body": "Supports setup and first-run checks"
+              },
+              {
+                "title": "Operator Training",
+                "body": "Helps the team set gas ballast and process parameters correctly"
+              },
+              {
+                "title": "Preventive Maintenance",
+                "body": "Maintains vacuum performance through daily use"
+              },
+              {
+                "title": "Spares and Accessories",
+                "body": "Supplies condensers and replacement parts"
+              },
+              {
+                "title": "Service Support",
+                "body": "Supports troubleshooting, maintenance visits, and AMC"
               }
             ]
           },
@@ -4106,7 +4154,8 @@
               "ctaLabel": "Configure with Inkarp",
               "href": "#config"
             }
-          ]
+          ],
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

@@ -114,6 +114,10 @@ export default function SolventGuide({ data, simulatorData, sectionNumber = '06'
           title={data?.title}
           description={data?.description}
         />
+        {/* Extra paragraphs from a source document (e.g. the default prompt and the shared principle). */}
+        {data?.paragraphs?.map((paragraph, index) => (
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+        ))}
 
         <div className="relative mt-9 grid gap-6 lg:grid-cols-[294px_1fr]">
           <label className="relative block lg:hidden">

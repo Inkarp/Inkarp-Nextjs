@@ -137,6 +137,7 @@ function ToolShell({ children, data, productName, summary, triggerLabel }) {
         <SectionHeader
           number="12"
           eyebrow={data?.eyebrow}
+          lead={data?.lead}
           title={data?.title}
           description={data?.description}
         />

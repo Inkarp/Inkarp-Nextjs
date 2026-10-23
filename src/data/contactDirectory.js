@@ -50,7 +50,7 @@ export const contactDirectory = [
     title: "HR",
     summary: "Job applications and other HR queries.",
     email: "hrd@inkarp.co.in",
-    phone: "8886277717",
+    phone: "7032049431",
     link: { href: "/careers", label: "See open roles" },
   },
 ];

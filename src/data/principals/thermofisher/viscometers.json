@@ -1,9 +1,5 @@
 {
-  "principal": {
-    "slug": "thermofisher-scientific",
-    "principalName": "ThermoFisher Scientific",
-    "countryOfOrigin": "Germany"
-  },
+  "principal": { "slug": "thermofisher-scientific", "principalName": "ThermoFisher Scientific", "countryOfOrigin": "Germany" },
   "categories": [
     {
       "name": "Viscometers",
@@ -11,24 +7,39 @@
       "products": [
         {
           "name": "Falling Ball Viscometers",
+
           "slug": "falling-ball-viscometers",
+
           "principalImage": "/assets/images/PrincipalLogos/thermofisher.png",
+
           "imageAlt": "ThermoFisher Scientific HAAKE Falling Ball Viscometer C - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/falling-ball-viscometers",
+
           "breadcrumbPath": "Home > Products > Viscometers > HAAKE™ Falling Ball Viscometer C",
+
           "h1": "Falling Ball Viscometers",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Some measurements don't need electronics to be trustworthy. HAAKE Falling Ball Viscometer C measures viscosity with precision among the highest of any viscometer type, using nothing more than a falling ball, a calibrated tube, and a stopwatch, no power connection required anywhere in the process.",
 
           "features": [
-            "No Power Connection Required: Measures viscosity using only a falling ball, calibrated tube, and stopwatch.",
-            "Reference-Grade Accuracy: Among the highest measuring accuracy of any viscometer type.",
-            "Set of 6 Calibrated Balls: Numbered 1-6, spanning borosilicate glass and nickel iron alloy for different viscosity ranges.",
-            "Wide Temperature Range: -20°C to +150°C, especially precise when paired with a circulator.",
-            "Official Reference Instrument Status: Meets DIN 53015 and ISO 12058, accepted for validating other viscometers.",
-            "Complete Included Kit: Falling ball tube with holder, instrument case, precision thermometer, cleaning tools, and calibration sheet.",
-            "Under 0.5% Reproducibility: Tight, dependable precision without any electronic components."
+            { "title": "No Power Connection Required", "description": "Measures viscosity using only a falling ball, calibrated tube, and stopwatch." },
+            { "title": "Reference-Grade Accuracy", "description": "Among the highest measuring accuracy of any viscometer type." },
+            {
+              "title": "Set of 6 Calibrated Balls",
+              "description": "Numbered 1-6, spanning borosilicate glass and nickel iron alloy for different viscosity ranges."
+            },
+            { "title": "Wide Temperature Range", "description": "-20°C to +150°C, especially precise when paired with a circulator." },
+            { "title": "Official Reference Instrument Status", "description": "Meets DIN 53015 and ISO 12058, accepted for validating other viscometers." },
+            {
+              "title": "Complete Included Kit",
+              "description": "Falling ball tube with holder, instrument case, precision thermometer, cleaning tools, and calibration sheet."
+            },
+            { "title": "Under 0.5% Reproducibility", "description": "Tight, dependable precision without any electronic components." }
           ],
 
           "technicalSpecs": [
@@ -42,17 +53,20 @@
             { "label": "Material, Tube and Balls 1, 2, G", "value": "Borosilicate glass" },
             { "label": "Material, Balls 3, 4, 5, 6", "value": "Nickel iron alloy" },
             { "label": "Certifications", "value": "DIN 53015, ISO 12058" },
-            { "label": "Included", "value": "Falling ball tube with holder, set of 6 balls, instrument case, thermometer (-1°C to +26°C, 0.1°C steps), cleaning tools, calibration sheet, instruction manual" },
+            {
+              "label": "Included",
+              "value": "Falling ball tube with holder, set of 6 balls, instrument case, thermometer (-1°C to +26°C, 0.1°C steps), cleaning tools, calibration sheet, instruction manual"
+            },
             { "label": "Required (Not Included)", "value": "Stopwatch" },
             { "label": "Unit Size", "value": "Each" }
           ],
 
           "applications": [
-            "Chemical Industry: Measures polymer solutions and solvent viscosity accurately",
-            "Pharmaceutical Industry: Reference-grade measurement of raw materials and glycerine",
-            "Food Industry: Precise viscosity measurement of sugar solutions",
-            "Mineral Oil Industry: Accurate oil viscosity testing across a wide range",
-            "Instrument Calibration and Validation: Serves as an official reference instrument for other viscometers"
+            { "title": "Chemical Industry", "description": "Measures polymer solutions and solvent viscosity accurately" },
+            { "title": "Pharmaceutical Industry", "description": "Reference-grade measurement of raw materials and glycerine" },
+            { "title": "Food Industry", "description": "Precise viscosity measurement of sugar solutions" },
+            { "title": "Mineral Oil Industry", "description": "Accurate oil viscosity testing across a wide range" },
+            { "title": "Instrument Calibration and Validation", "description": "Serves as an official reference instrument for other viscometers" }
           ],
 
           "inPageNav": [
@@ -70,29 +84,40 @@
 
           "configWizard": {
             "title": "Which ball matches the sample's expected viscosity?",
-            "description": "Select the sample type and temperature sensitivity, and see which ball fits. Share your exact expected viscosity and temperature range with Inkarp for final confirmation.",
+            "description": "Enter the expected viscosity range, and see which of the six included balls fits.",
             "steps": [
               {
+                "key": "expectedViscosityCst",
+                "label": "Expected viscosity (cSt)",
+                "question": "Expected viscosity (cSt)",
+                "hint": "Number input",
+                "input": "number",
+                "options": []
+              },
+              {
                 "key": "sampleType",
-                "question": "What sample type is being measured?",
+                "label": "Sample type",
+                "question": "Sample type",
+                "hint": "Liquid or gas",
                 "options": [
                   { "val": "liquid", "label": "Liquid" },
                   { "val": "gas", "label": "Gas" }
                 ]
               },
               {
-                "key": "temperatureSensitivity",
-                "question": "How temperature-dependent is the sample?",
-                "options": [
-                  { "val": "standard", "label": "Standard" },
-                  { "val": "highly-temperature-dependent", "label": "Highly temperature-dependent" }
-                ]
+                "key": "sampleTemperatureRange",
+                "label": "Sample temperature range",
+                "question": "Sample temperature range",
+                "hint": "Number input",
+                "input": "number",
+                "options": []
               }
             ],
-            "result": {
-              "ctaNote": "Share your exact expected viscosity and temperature range, and this routes to a usage-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a usage-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Ball Selection Guide",
+            "emptyState": "Recommends the matching ball number from the set of 6",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -102,6 +127,7 @@
               {
                 "key": "industry",
                 "label": "Industry",
+                "hint": "Chemical, pharmaceutical, food, or mineral oil",
                 "options": [
                   { "val": "chemical", "label": "Chemical" },
                   { "val": "pharmaceutical", "label": "Pharmaceutical" },
@@ -112,6 +138,7 @@
               {
                 "key": "sampleExample",
                 "label": "Sample example",
+                "hint": "Polymer solution, glycerine, sugar solution, oil, or other",
                 "options": [
                   { "val": "polymer-solution", "label": "Polymer solution" },
                   { "val": "glycerine", "label": "Glycerine" },
@@ -123,9 +150,10 @@
               {
                 "key": "referenceStandardNeed",
                 "label": "Reference standard need",
+                "hint": "Routine measurement or official reference/calibration use",
                 "options": [
                   { "val": "routine-measurement", "label": "Routine measurement" },
-                  { "val": "official-reference-calibration", "label": "Official reference / calibration use" }
+                  { "val": "official-reference-calibration", "label": "Official reference/calibration use" }
                 ]
               }
             ],
@@ -134,21 +162,32 @@
                 "condition": { "referenceStandardNeed": "official-reference-calibration" },
                 "title": "Meets Your Reference Standard Requirement",
                 "body": "HAAKE Falling Ball Viscometer C meets DIN 53015 and ISO 12058 standards and is accepted as an official reference instrument, the kind other viscometers get calibrated against.",
-                "tags": ["DIN 53015 / ISO 12058 Compliant"]
+                "tags": [
+                  "DIN 53015 / ISO 12058 Compliant"
+                ]
               },
               {
                 "condition": { "referenceStandardNeed": "routine-measurement" },
                 "title": "Fits Your Routine Measurement Needs",
                 "body": "For routine viscosity measurement, the instrument delivers reproducibility under 0.5% across a 0.5 to 1,000,000 cSt range, without needing a power connection.",
-                "tags": ["Under 0.5% Reproducibility"]
+                "tags": [
+                  "Under 0.5% Reproducibility"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Right Fit With Inkarp",
                 "body": "Share your industry and sample type, and Inkarp will confirm how HAAKE Falling Ball Viscometer C applies to your work.",
-                "tags": ["Chemical, Pharmaceutical, Food, Mineral Oil"]
+                "tags": [
+                  "Chemical, Pharmaceutical, Food, Mineral Oil"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Industry Application Matcher",
+            "ctaNote": "Confirms fit and relevant standards compliance. Routes to an application-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "planners": [
@@ -161,38 +200,106 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "How temperature-dependent is the sample?", "choices": "Standard; Highly temperature-dependent" },
-                { "title": "Is a circulator currently available?", "choices": "Yes; No" }
+                {
+                  "title": "Sample temperature sensitivity",
+                  "hint": "Standard or highly temperature-dependent",
+                  "choices": "Standard; Highly temperature-dependent"
+                },
+                { "title": "Target temperature range", "hint": "Number input, within -20°C to +150°C", "input": "number", "choices": "" },
+                { "title": "Circulator currently available", "hint": "Yes or no", "choices": "Yes; No" }
               ],
-              "disclaimer": "Routes to a setup-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Confirms whether a circulator pairing is advised for the application. Routes to a setup-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "Falling Ball Viscometer C vs. Rotational Viscometer",
+            "title": "Method Comparison",
             "description": "HAAKE Falling Ball Viscometer C comparison: falling ball versus rotational viscometry.",
             "columns": [
               { "label": "Falling Ball Viscometer C" },
               { "label": "Rotational Viscometer" }
             ],
             "rows": [
-              { "feature": "Power Requirement", "values": ["None, fully manual", "Requires power"] },
-              { "feature": "Measurement Principle", "values": ["Timed ball descent through sample", "Rotational torque measurement"] },
-              { "feature": "Reference Standard Status", "values": ["DIN 53015 / ISO 12058, official reference instrument", "Varies by model"] },
-              { "feature": "Best For", "values": ["Transparent Newtonian liquids and gases, reference-grade work", "Broader range of fluid types, including non-Newtonian"] },
-              { "feature": "Choose When", "values": ["Reference-grade accuracy and simplicity matter most", "Sample type or workflow needs powered, automated measurement"] }
-            ]
+              {
+                "feature": "Power Requirement",
+                "values": [
+                  "None, fully manual",
+                  "Requires power"
+                ]
+              },
+              {
+                "feature": "Measurement Principle",
+                "values": [
+                  "Timed ball descent through sample",
+                  "Rotational torque measurement"
+                ]
+              },
+              {
+                "feature": "Reference Standard Status",
+                "values": [
+                  "DIN 53015 / ISO 12058, official reference instrument",
+                  "Varies by model"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Transparent Newtonian liquids and gases, reference-grade work",
+                  "Broader range of fluid types, including non-Newtonian"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Reference-grade accuracy and simplicity matter most",
+                  "Sample type or workflow needs powered, automated measurement"
+                ]
+              }
+            ],
+            "featureLabel": "Parameter",
+            "verbatim": true,
+            "disclaimer": ""
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "HAAKE Falling Ball Viscometer C industries: chemical, pharmaceutical, food, and mineral oil sectors.",
             "industries": [
-              { "name": "Chemical Manufacturing", "useCase": "Testing polymer solutions and solvent viscosity", "consideration": "Wide 0.5 to 1,000,000 cSt range covers most process fluids" },
-              { "name": "Pharmaceutical Production", "useCase": "Quality control on raw materials and glycerine", "consideration": "Reference-grade accuracy supports regulatory documentation" },
-              { "name": "Food and Beverage Production", "useCase": "Viscosity testing of sugar solutions and syrups", "consideration": "Reproducibility under 0.5% for consistent QC results" },
-              { "name": "Mineral Oil and Lubricant Testing", "useCase": "Oil viscosity measurement across a wide temperature range", "consideration": "-20°C to +150°C range supports varied oil testing conditions" }
+              {
+                "name": "Chemical Manufacturing",
+                "note": "Use Case: Testing polymer solutions and solvent viscosity",
+                "bullets": [
+                  "What to Consider: Wide 0.5 to 1,000,000 cSt range covers most process fluids"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Pharmaceutical Production",
+                "note": "Use Case: Quality control on raw materials and glycerine",
+                "bullets": [
+                  "What to Consider: Reference-grade accuracy supports regulatory documentation"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Beverage Production",
+                "note": "Use Case: Viscosity testing of sugar solutions and syrups",
+                "bullets": [
+                  "What to Consider: Reproducibility under 0.5% for consistent QC results"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Mineral Oil and Lubricant Testing",
+                "note": "Use Case: Oil viscosity measurement across a wide temperature range",
+                "bullets": [
+                  "What to Consider: -20°C to +150°C range supports varied oil testing conditions"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -206,21 +313,46 @@
               { "title": "Preventive Maintenance", "description": "Maintains tube, balls, and thermometer accuracy" },
               { "title": "Spares and Accessories", "description": "Supplies replacement balls, tubes, and thermometers" },
               { "title": "Service Support", "description": "Handles troubleshooting, calibration checks, and AMC" }
-            ]
+            ],
+            "description": "HAAKE Falling Ball Viscometer C service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the HAAKE Falling Ball Viscometer C used for?", "answer": "It's a manual, power-free instrument for precise viscosity measurement of transparent Newtonian liquids and gases, used across chemical, pharmaceutical, food, and mineral oil industries." },
-            { "question": "Does this instrument need a power connection?", "answer": "No, it operates entirely manually, using a falling ball, calibrated tube, and stopwatch." },
+            {
+              "question": "What is the HAAKE Falling Ball Viscometer C used for?",
+              "answer": "It's a manual, power-free instrument for precise viscosity measurement of transparent Newtonian liquids and gases, used across chemical, pharmaceutical, food, and mineral oil industries."
+            },
+            {
+              "question": "Does this instrument need a power connection?",
+              "answer": "No, it operates entirely manually, using a falling ball, calibrated tube, and stopwatch."
+            },
             { "question": "What viscosity range can it measure?", "answer": "0.5 to 1,000,000 cSt, across a temperature range of -20°C to +150°C." },
-            { "question": "Is this instrument recognized as a reference standard?", "answer": "Yes, it meets DIN 53015 and ISO 12058 standards and is accepted as an official reference instrument." },
-            { "question": "What's included in the kit?", "answer": "A falling ball tube with holder, a set of six numbered balls, an instrument case, a precision thermometer, cleaning tools, a calibration sheet, and an instruction manual." },
+            {
+              "question": "Is this instrument recognized as a reference standard?",
+              "answer": "Yes, it meets DIN 53015 and ISO 12058 standards and is accepted as an official reference instrument."
+            },
+            {
+              "question": "What's included in the kit?",
+              "answer": "A falling ball tube with holder, a set of six numbered balls, an instrument case, a precision thermometer, cleaning tools, a calibration sheet, and an instruction manual."
+            },
             { "question": "Does it come with a stopwatch?", "answer": "No, a stopwatch is required to operate the instrument but is not included." },
-            { "question": "What materials are the balls and tube made from?", "answer": "Balls 1, 2, and G, along with the falling tube, are borosilicate glass; balls 3, 4, 5, and 6 are nickel iron alloy." },
+            {
+              "question": "What materials are the balls and tube made from?",
+              "answer": "Balls 1, 2, and G, along with the falling tube, are borosilicate glass; balls 3, 4, 5, and 6 are nickel iron alloy."
+            },
             { "question": "How reproducible are the measurements?", "answer": "Reproducibility stays under 0.5%." },
-            { "question": "Does temperature control affect accuracy?", "answer": "Yes, accuracy is highest when paired with the precise temperature control of a circulator." },
-            { "question": "What is the price of the HAAKE Falling Ball Viscometer C in India?", "answer": "Get in touch and Inkarp will put together a quote based on the configuration and any circulator pairing needed." },
-            { "question": "Who is the authorized distributor of the HAAKE Falling Ball Viscometer C in India?", "answer": "Inkarp is the authorized distributor and service provider for the Thermo Scientific HAAKE Falling Ball Viscometer C in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "Does temperature control affect accuracy?",
+              "answer": "Yes, accuracy is highest when paired with the precise temperature control of a circulator."
+            },
+            {
+              "question": "What is the price of the HAAKE Falling Ball Viscometer C in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the configuration and any circulator pairing needed."
+            },
+            {
+              "question": "Who is the authorized distributor of the HAAKE Falling Ball Viscometer C in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Thermo Scientific HAAKE Falling Ball Viscometer C in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -241,10 +373,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right ball set and configuration", "body": "Share the target sample type and expected viscosity range, and the right ball set and configuration gets confirmed from there." },
-              { "title": "Confirm the right ball set for your use case", "body": "Share whether the instrument will be used for routine measurement, calibration reference work, or both, and the right ball set gets confirmed against your typical sample viscosity." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-use checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows falling ball measurement technique on real samples" },
+              { "title": "Configuration Assessment", "body": "Confirms the right ball set and circulator pairing for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-use checks" },
+              { "title": "Operator Training", "body": "Builds confidence with measurement technique and calibration" },
+              { "title": "Preventive Maintenance", "body": "Maintains tube, balls, and thermometer accuracy" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement balls, tubes, and thermometers" },
+              { "title": "Service Support", "body": "Handles troubleshooting, calibration checks, and AMC" }
             ]
           },
 
@@ -268,21 +403,33 @@
                 "title": "Product Information",
                 "description": "HAAKE Falling Ball Viscometer C product information: measurement principle, standards compliance, and included components.",
                 "body": [
-                  "Measuring accuracy ranks among the highest available in any type of viscometer, particularly when paired with the precise temperature control of a circulator.",
-                  "The instrument measures the viscosity of transparent Newtonian liquids and gases directly, using the falling ball principle rather than powered rotational or electronic sensing.",
-                  "It meets the requirements of German DIN 53015 and ISO 12058 standards, and is accepted as an official reference instrument, used to validate other viscometers rather than needing validation itself.",
-                  "Viscosity range covers 0.5 to 1,000,000 cSt, across a temperature range of -20°C to +150°C.",
-                  "Reproducibility stays under 0.5%, a tight tolerance for a fully manual instrument.",
-                  "The falling tube and balls 1, 2, and G are borosilicate glass; balls 3, 4, 5, and 6 are nickel iron alloy, giving a range of ball densities to match different sample viscosities.",
-                  "A stopwatch is required to operate the instrument; it is not included.",
-                  "Applications span the chemical industry (polymer solutions, solvents), pharmaceutical industry (raw materials, glycerine), food industry (sugar solutions), and mineral oil industry (oils)."
+                  {
+                    "text": "Measuring accuracy ranks among the highest available in any type of viscometer, particularly when paired with the precise temperature control of a circulator."
+                  },
+                  {
+                    "text": "The instrument measures the viscosity of transparent Newtonian liquids and gases directly, using the falling ball principle rather than powered rotational or electronic sensing."
+                  },
+                  {
+                    "text": "It meets the requirements of German DIN 53015 and ISO 12058 standards, and is accepted as an official reference instrument, used to validate other viscometers rather than needing validation itself."
+                  },
+                  { "text": "Viscosity range covers 0.5 to 1,000,000 cSt, across a temperature range of -20°C to +150°C." },
+                  { "text": "Reproducibility stays under 0.5%, a tight tolerance for a fully manual instrument." },
+                  {
+                    "text": "The falling tube and balls 1, 2, and G are borosilicate glass; balls 3, 4, 5, and 6 are nickel iron alloy, giving a range of ball densities to match different sample viscosities."
+                  },
+                  { "text": "A stopwatch is required to operate the instrument; it is not included." },
+                  {
+                    "text": "Applications span the chemical industry (polymer solutions, solvents), pharmaceutical industry (raw materials, glycerine), food industry (sugar solutions), and mineral oil industry (oils)."
+                  }
                 ],
                 "cards": [
                   { "title": "No power connection needed", "description": "Fully manual, reference-grade measurement" },
                   { "title": "DIN 53015 / ISO 12058 compliant", "description": "Accepted as an official reference instrument" },
                   { "title": "0.5 to 1,000,000 cSt range", "description": "Covers thin liquids through highly viscous samples" },
                   { "title": "Under 0.5% reproducibility", "description": "Tight precision from a fully manual instrument" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why no power connection matters for reference-grade accuracy"
               },
               {
                 "key": "config",
@@ -295,52 +442,88 @@
                   { "title": "Reproducibility", "description": "Under 0.5%" },
                   { "title": "Standards", "description": "DIN 53015, ISO 12058" },
                   { "title": "Requires", "description": "Stopwatch (not included)" }
-                ]
+                ],
+                "disclaimer": "Share the target sample type and expected viscosity range, and the right ball set and configuration gets confirmed from there."
               },
-              {
-                "key": "features",
-                "eyebrow": "Key Features",
-                "title": "Key Features"
-              },
+              { "key": "features", "eyebrow": "Key Features", "title": "Key Features", "tabSummary": "Ball set, temperature range, reproducibility" },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "HAAKE Falling Ball Viscometer C applications: chemical, pharmaceutical, food, and mineral oil industry viscosity measurement."
+                "description": "HAAKE Falling Ball Viscometer C applications: chemical, pharmaceutical, food, and mineral oil industry viscosity measurement.",
+                "tabSummary": "Chemical, pharmaceutical, food, and mineral oil industries"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "HAAKE Falling Ball Viscometer C technical specifications: viscosity range, temperature range, and materials."
+                "description": "HAAKE Falling Ball Viscometer C technical specifications: viscosity range, temperature range, and materials.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Viscosity range, temperature range, and materials"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Reference-Grade Accuracy Without Power",
                 "title": "Reference-Grade Accuracy Without Power",
-                "description": "Some measurements gain credibility precisely because they don't depend on electronics that could drift, fail, or need recalibration against a hidden internal standard. Falling Ball Viscometer C is one of those instruments. Compliance with DIN 53015 and ISO 12058 isn't a marketing claim, it means the instrument is accepted as an official reference, the kind other viscometers get checked against rather than the other way around. Reproducibility under 0.5% holds that reference-grade standard even with no power connection involved, particularly when the sample's temperature is controlled precisely with a circulator.",
                 "cards": [
                   { "title": "A trusted reference standard for calibration work", "description": "DIN 53015 / ISO 12058 compliance, official reference status" },
                   { "title": "Reliable measurement without electronic drift", "description": "Fully manual, power-free operation" },
                   { "title": "Tight reproducibility across repeated measurements", "description": "Under 0.5% reproducibility" }
-                ]
+                ],
+                "body": [
+                  "Some measurements gain credibility precisely because they don't depend on electronics that could drift, fail, or need recalibration against a hidden internal standard. Falling Ball Viscometer C is one of those instruments.",
+                  "Compliance with DIN 53015 and ISO 12058 isn't a marketing claim, it means the instrument is accepted as an official reference, the kind other viscometers get checked against rather than the other way around.",
+                  "Reproducibility under 0.5% holds that reference-grade standard even with no power connection involved, particularly when the sample's temperature is controlled precisely with a circulator."
+                ],
+                "columnHeaders": { "label": "What your lab needs", "value": "How Falling Ball Viscometer C delivers it" },
+                "note": "Share whether the instrument will be used for routine measurement, calibration reference work, or both, and the right ball set gets confirmed against your typical sample viscosity.",
+                "tabSummary": "What DIN and ISO compliance actually means"
               },
               {
                 "key": "performance",
                 "eyebrow": "What's in the Box",
                 "title": "What's in the Box",
-                "body": [
-                  "A complete falling ball tube with holder, a set of six numbered balls spanning both borosilicate glass and nickel iron alloy, and an instrument case ship together as a full working kit.",
-                  "A precision thermometer reading -1°C to +26°C in 0.1°C steps supports accurate temperature tracking during measurement.",
-                  "Cleaning tools, a calibration sheet, and an instruction manual round out the kit, everything needed except one item: a stopwatch, which the instrument relies on directly and doesn't include."
-                ],
-                "utilityChecklist": [
-                  { "label": "Falling ball tube with holder", "value": "Core measurement apparatus" },
-                  { "label": "Set of 6 balls (No. 1-6)", "value": "Matches ball density to sample viscosity" },
-                  { "label": "Precision thermometer", "value": "Tracks sample temperature during measurement" },
-                  { "label": "Cleaning tools, calibration sheet, manual", "value": "Maintenance, verification, and operation guidance" }
-                ],
-                "disclaimer": "Confirm whether a compatible circulator is already available in the lab, since pairing one with this instrument sharpens temperature-dependent accuracy further."
+                "tabSummary": "Components included and what's required separately",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "A complete falling ball tube with holder, a set of six numbered balls spanning both borosilicate glass and nickel iron alloy, and an instrument case ship together as a full working kit.",
+                      "A precision thermometer reading -1°C to +26°C in 0.1°C steps supports accurate temperature tracking during measurement.",
+                      "Cleaning tools, a calibration sheet, and an instruction manual round out the kit, everything needed except one item: a stopwatch, which the instrument relies on directly and doesn't include."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What ships with the kit",
+                      "What it's for"
+                    ],
+                    "rows": [
+                      [
+                        "Falling ball tube with holder",
+                        "Core measurement apparatus"
+                      ],
+                      [
+                        "Set of 6 balls (No. 1-6)",
+                        "Matches ball density to sample viscosity"
+                      ],
+                      [
+                        "Precision thermometer",
+                        "Tracks sample temperature during measurement"
+                      ],
+                      [
+                        "Cleaning tools, calibration sheet, manual",
+                        "Maintenance, verification, and operation guidance"
+                      ]
+                    ]
+                  },
+                  {
+                    "note": "Confirm whether a compatible circulator is already available in the lab, since pairing one with this instrument sharpens temperature-dependent accuracy further."
+                  }
+                ]
               },
               {
                 "key": "docs",
@@ -351,7 +534,9 @@
                   { "title": "Flyer: HAAKE Falling Ball Viscometer", "description": "Available on request" },
                   { "title": "Flyer: HAAKE Kugelfallviskosimeter", "description": "Available on request" },
                   { "title": "Product Certificates (by lot number)", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Flyers, certificates"
               }
             ],
             "cta": {
@@ -360,31 +545,48 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Reference-grade viscosity measurement with no power connection needed, backed by DIN 53015 and ISO 12058 compliance. Share the sample type and expected viscosity range, and the right configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Some measurements don't need electronics to be trustworthy. HAAKE Falling Ball Viscometer C measures viscosity with precision among the highest of any viscometer type, using nothing more than a falling ball, a calibrated tube, and a stopwatch, no power connection required anywhere in the process.",
+              "Viscosity range spans 0.5 to 1,000,000 cSt across a temperature range of -20°C to +150°C, with reproducibility under 0.5%. It meets German DIN 53015 and ISO 12058 standards and is accepted as an official reference instrument, the kind other viscometers get calibrated against."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         },
         {
           "name": "Rotational Viscometers",
+
           "slug": "rotational-viscometers",
+
           "principalImage": "/assets/images/PrincipalLogos/thermofisher.png",
+
           "imageAlt": "ThermoFisher Scientific HAAKE Viscotester 3 Rotational Viscometer - authorized distributor & service provider in India",
+
           "distributorNote": "Authorized Distributor & Service Provider in India",
+
           "canonicalUrl": "https://inkarp.co.in/products/rotational-viscometers",
+
           "breadcrumbPath": "Home > Products > Viscometers > HAAKE™ Viscotester™ 3 Rotational Viscometer",
+
           "h1": "Rotational Viscometers",
+
           "subhead": "Authorized Distributor & Service Provider in India",
+
           "overview": "Getting a fast, reliable viscosity reading shouldn't require a lab setup. HAAKE Viscotester 3 works handheld or mounted on a lab stand, built for quick, dependable QC measurements wherever the process actually happens, from goods receiving through production sampling to final QC.",
 
           "features": [
-            "Smart Electronic Alignment: Built-in level visualizes correct positioning directly on the display.",
-            "Quick-Coupling Measuring Geometries: Fast, tool-free rotor changes between samples.",
-            "Color-Coded Rotor Selection: Geometry range indicator ensures the correct rotor matches the sample every time.",
-            "Adaptable Display Brightness: Stays readable in any lighting environment, indoors or on the plant floor.",
-            "Memory Assist Functionality: Automatically stores the reference point for instant comparison.",
-            "Battery or Power Supply Operation: Runs anywhere, not tied to a fixed power outlet.",
-            "Selectable Viscosity Units: Switches between mPa·s and dPa·s as needed.",
-            "Compatible With Previous Models: Results carry over directly from the discontinued Viscotester 2 Plus."
+            { "title": "Smart Electronic Alignment", "description": "Built-in level visualizes correct positioning directly on the display." },
+            { "title": "Quick-Coupling Measuring Geometries", "description": "Fast, tool-free rotor changes between samples." },
+            { "title": "Color-Coded Rotor Selection", "description": "Geometry range indicator ensures the correct rotor matches the sample every time." },
+            { "title": "Adaptable Display Brightness", "description": "Stays readable in any lighting environment, indoors or on the plant floor." },
+            { "title": "Memory Assist Functionality", "description": "Automatically stores the reference point for instant comparison." },
+            { "title": "Battery or Power Supply Operation", "description": "Runs anywhere, not tied to a fixed power outlet." },
+            { "title": "Selectable Viscosity Units", "description": "Switches between mPa·s and dPa·s as needed." },
+            { "title": "Compatible With Previous Models", "description": "Results carry over directly from the discontinued Viscotester 2 Plus." }
           ],
 
           "technicalSpecs": [
@@ -396,17 +598,20 @@
             { "label": "Measuring Accuracy", "value": "± 5% FSD (R1, R2, R3), ± 7.5% FSD (R5), ± 10% FSD (R4)" },
             { "label": "Power Supply", "value": "Battery or power supply" },
             { "label": "Viscosity Units", "value": "mPa·s or dPa·s, selectable" },
-            { "label": "Included", "value": "Carrying case, instrument holder for lab stand, one measuring cup (No. 3), three rotors (No. 1, 2, 3), four rechargeable batteries, one power supply adapter" },
+            {
+              "label": "Included",
+              "value": "Carrying case, instrument holder for lab stand, one measuring cup (No. 3), three rotors (No. 1, 2, 3), four rechargeable batteries, one power supply adapter"
+            },
             { "label": "Compatibility", "value": "Upgrade-compatible with HAAKE Viscotester 2 Plus, results match" },
             { "label": "Unit Size", "value": "Each" }
           ],
 
           "applications": [
-            "Printing Inks, Paints, and Coatings: Fast, on-the-spot viscosity checks during production",
-            "Personal Care Products: Testing shampoos, creams, and lotions for consistency",
-            "Oils, Greases, and Pastes: Handheld or stand-mounted measurement across viscous ranges",
-            "Sauces, Thickeners, and Food Products: QC testing during production and before goods delivery",
-            "Goods Receiving and Delivery Acceptance: Fast QC checks at the point of intake"
+            { "title": "Printing Inks, Paints, and Coatings", "description": "Fast, on-the-spot viscosity checks during production" },
+            { "title": "Personal Care Products", "description": "Testing shampoos, creams, and lotions for consistency" },
+            { "title": "Oils, Greases, and Pastes", "description": "Handheld or stand-mounted measurement across viscous ranges" },
+            { "title": "Sauces, Thickeners, and Food Products", "description": "QC testing during production and before goods delivery" },
+            { "title": "Goods Receiving and Delivery Acceptance", "description": "Fast QC checks at the point of intake" }
           ],
 
           "inPageNav": [
@@ -424,11 +629,21 @@
 
           "configWizard": {
             "title": "Which catalog number and rotor set fit the sample?",
-            "description": "Select your sample type and testing location, and see which configuration fits. Share your exact expected viscosity range with Inkarp for final confirmation.",
+            "description": "Enter the expected viscosity range, and see which configuration fits.",
             "steps": [
               {
+                "key": "expectedViscosityMpas",
+                "label": "Expected viscosity (mPas)",
+                "question": "Expected viscosity (mPas)",
+                "hint": "Number input",
+                "input": "number",
+                "options": []
+              },
+              {
                 "key": "sampleType",
-                "question": "What sample type are you testing?",
+                "label": "Sample type",
+                "question": "Sample type",
+                "hint": "Coating, personal care, oil/grease, or food product",
                 "options": [
                   { "val": "coating", "label": "Coating" },
                   { "val": "personal-care", "label": "Personal care" },
@@ -438,17 +653,20 @@
               },
               {
                 "key": "testingLocation",
-                "question": "Where will testing typically happen?",
+                "label": "Testing location",
+                "question": "Testing location",
+                "hint": "Handheld/field or lab stand",
                 "options": [
                   { "val": "handheld-field", "label": "Handheld/field" },
                   { "val": "lab-stand", "label": "Lab stand" }
                 ]
               }
             ],
-            "result": {
-              "ctaNote": "Share your exact expected viscosity range, and this routes to a configuration-specific quotation.",
-              "ctaLabel": "Get Configuration Support"
-            }
+            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "eyebrow": "Viscosity Range and Rotor Selector",
+            "emptyState": "Recommends catalog number 399-0112 or 399-0111 and rotor set",
+            "disclaimer": "",
+            "verbatim": true
           },
 
           "suitability": {
@@ -458,6 +676,7 @@
               {
                 "key": "industry",
                 "label": "Industry",
+                "hint": "Coatings/inks, personal care, oils/greases, or food",
                 "options": [
                   { "val": "coatings-inks", "label": "Coatings/inks" },
                   { "val": "personal-care", "label": "Personal care" },
@@ -468,6 +687,7 @@
               {
                 "key": "testingStage",
                 "label": "Testing stage",
+                "hint": "Goods receiving, in-process, or final QC",
                 "options": [
                   { "val": "goods-receiving", "label": "Goods receiving" },
                   { "val": "in-process", "label": "In-process" },
@@ -477,6 +697,7 @@
               {
                 "key": "portabilityNeed",
                 "label": "Portability need",
+                "hint": "Fixed lab station or field/handheld use",
                 "options": [
                   { "val": "fixed-lab-station", "label": "Fixed lab station" },
                   { "val": "field-handheld", "label": "Field/handheld use" }
@@ -488,21 +709,32 @@
                 "condition": { "portabilityNeed": "field-handheld" },
                 "title": "Handheld Operation Fits Your Testing Location",
                 "body": "HAAKE Viscotester 3 works handheld, running on battery power, so testing happens right where the process is, from goods receiving to the production line.",
-                "tags": ["Handheld or Stand-Mounted"]
+                "tags": [
+                  "Handheld or Stand-Mounted"
+                ]
               },
               {
                 "condition": { "portabilityNeed": "fixed-lab-station" },
                 "title": "Stand-Mounted Setup Fits Your Lab Station",
                 "body": "Mounted on a lab stand, HAAKE Viscotester 3 delivers the same smart alignment and color-coded rotor selection for a fixed QC testing station.",
-                "tags": ["Lab Stand Compatible"]
+                "tags": [
+                  "Lab Stand Compatible"
+                ]
               },
               {
                 "condition": "default",
                 "title": "Confirm the Right Setup With Inkarp",
                 "body": "Share your industry and testing stage, and Inkarp will confirm how HAAKE Viscotester 3 fits your QC process.",
-                "tags": ["Coatings, Personal Care, Oils, Food"]
+                "tags": [
+                  "Coatings, Personal Care, Oils, Food"
+                ]
               }
-            ]
+            ],
+            "eyebrow": "Industry Application Matcher",
+            "ctaNote": "Confirms fit and recommended setup. Routes to an application-specific quotation.",
+            "disclaimer": "",
+            "verbatim": true,
+            "ctaLabel": "Talk to Product Expert"
           },
 
           "planners": [
@@ -515,37 +747,96 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "What HAAKE model is currently in use?", "choices": "Viscotester 1 Plus; Viscotester 2 Plus; Other / new purchase" },
-                { "title": "Is historical trend comparison required?", "choices": "Yes; No" }
+                {
+                  "title": "Current model",
+                  "hint": "Viscotester 1 Plus, Viscotester 2 Plus, or other/new purchase",
+                  "choices": "Viscotester 1 Plus; Viscotester 2 Plus; Other/new purchase"
+                },
+                {
+                  "title": "Data continuity need",
+                  "hint": "Historical trend comparison required or not",
+                  "choices": "Historical trend comparison required; Not required"
+                },
+                { "title": "Rotor sets currently owned", "hint": "Number/type input", "input": "text", "choices": "" }
               ],
-              "disclaimer": "Routes to an upgrade-specific quotation."
+              "disclaimer": "",
+              "ctaNote": "Confirms result compatibility and rotor compatibility. Routes to an upgrade-specific quotation.",
+              "ctaLabel": "Get Configuration Support"
             }
           ],
 
           "comparison": {
             "eyebrow": "Method comparison",
-            "title": "399-0112 vs. 399-0111",
+            "title": "Method Comparison",
             "description": "HAAKE Viscotester 3 comparison: catalog 399-0112 versus catalog 399-0111.",
             "columns": [
               { "label": "399-0112" },
               { "label": "399-0111" }
             ],
             "rows": [
-              { "feature": "Viscosity Range", "values": ["30 to 400,000 mPas", "1.5 to 1,300 mPas"] },
-              { "feature": "Best For", "values": ["Thicker, higher-viscosity samples", "Thinner, lower-viscosity samples"] },
-              { "feature": "Choose When", "values": ["Testing pastes, greases, or thick coatings", "Testing thin liquids, oils, or low-viscosity fluids"] }
+              {
+                "feature": "Viscosity Range",
+                "values": [
+                  "30 to 400,000 mPas",
+                  "1.5 to 1,300 mPas"
+                ]
+              },
+              {
+                "feature": "Best For",
+                "values": [
+                  "Thicker, higher-viscosity samples",
+                  "Thinner, lower-viscosity samples"
+                ]
+              },
+              {
+                "feature": "Choose When",
+                "values": [
+                  "Testing pastes, greases, or thick coatings",
+                  "Testing thin liquids, oils, or low-viscosity fluids"
+                ]
+              }
             ],
-            "disclaimer": "Both configurations share the same handheld/stand-mounted design, alignment system, and memory assist features. The difference is purely the measurable viscosity range."
+            "disclaimer": "Both configurations share the same handheld/stand-mounted design, alignment system, and memory assist features. The difference is purely the measurable viscosity range.",
+            "featureLabel": "Parameter",
+            "verbatim": true
           },
 
           "applicationsExplorer": {
             "title": "Industry Explorer",
             "description": "HAAKE Viscotester 3 industries: coatings and printing, personal care manufacturing, industrial lubricants, and food production.",
             "industries": [
-              { "name": "Printing Inks, Paints, and Coatings", "useCase": "On-the-spot viscosity QC during production runs", "consideration": "Quick-coupling rotors support fast batch-to-batch testing" },
-              { "name": "Personal Care Manufacturing", "useCase": "Consistency testing for creams, lotions, and shampoos", "consideration": "Color-coded rotors reduce testing errors across varied formulations" },
-              { "name": "Industrial Oils and Lubricants", "useCase": "Viscosity checks on oils, greases, and pastes", "consideration": "Wide temperature range up to 150°C supports varied process conditions" },
-              { "name": "Food and Beverage Production", "useCase": "QC testing on sauces and thickeners", "consideration": "Handheld operation supports fast in-line testing" }
+              {
+                "name": "Printing Inks, Paints, and Coatings",
+                "note": "Use Case: On-the-spot viscosity QC during production runs",
+                "bullets": [
+                  "What to Consider: Quick-coupling rotors support fast batch-to-batch testing"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Personal Care Manufacturing",
+                "note": "Use Case: Consistency testing for creams, lotions, and shampoos",
+                "bullets": [
+                  "What to Consider: Color-coded rotors reduce testing errors across varied formulations"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Industrial Oils and Lubricants",
+                "note": "Use Case: Viscosity checks on oils, greases, and pastes",
+                "bullets": [
+                  "What to Consider: Wide temperature range up to 150°C supports varied process conditions"
+                ],
+                "tags": []
+              },
+              {
+                "name": "Food and Beverage Production",
+                "note": "Use Case: QC testing on sauces and thickeners",
+                "bullets": [
+                  "What to Consider: Handheld operation supports fast in-line testing"
+                ],
+                "tags": []
+              }
             ]
           },
 
@@ -559,21 +850,46 @@
               { "title": "Preventive Maintenance", "description": "Maintains rotor, battery, and display performance" },
               { "title": "Spares and Accessories", "description": "Supplies replacement rotors, batteries, and measuring cups" },
               { "title": "Service Support", "description": "Handles troubleshooting, calibration checks, and AMC" }
-            ]
+            ],
+            "description": "HAAKE Viscotester 3 service in India: demonstration, installation, training, and AMC."
           },
 
           "faqs": [
-            { "question": "What is the HAAKE Viscotester 3 used for?", "answer": "It's a portable rotational viscometer for fast, reliable QC viscosity testing, used handheld or on a lab stand across coatings, personal care, oils, and food products." },
-            { "question": "What viscosity ranges does it measure?", "answer": "30 to 400,000 mPas on catalog number 399-0112, or 1.5 to 1,300 mPas on catalog number 399-0111." },
+            {
+              "question": "What is the HAAKE Viscotester 3 used for?",
+              "answer": "It's a portable rotational viscometer for fast, reliable QC viscosity testing, used handheld or on a lab stand across coatings, personal care, oils, and food products."
+            },
+            {
+              "question": "What viscosity ranges does it measure?",
+              "answer": "30 to 400,000 mPas on catalog number 399-0112, or 1.5 to 1,300 mPas on catalog number 399-0111."
+            },
             { "question": "Can it be used handheld, or does it need a stand?", "answer": "Both, it works as a handheld viscometer or mounted on a lab stand." },
-            { "question": "How does the instrument ensure the correct rotor is used?", "answer": "Color-coded measuring geometries paired with a range indicator ensure the correct rotor selection every time." },
+            {
+              "question": "How does the instrument ensure the correct rotor is used?",
+              "answer": "Color-coded measuring geometries paired with a range indicator ensure the correct rotor selection every time."
+            },
             { "question": "Does it run on battery power?", "answer": "Yes, it operates on battery or power supply, making it usable anywhere in the process." },
-            { "question": "What does the memory assist feature do?", "answer": "It automatically remembers the reference point measurement, so a new reading can be compared against it instantly." },
-            { "question": "Is this a replacement for an older HAAKE model?", "answer": "Yes, it replaces the discontinued HAAKE Viscotester 1 Plus and 2 Plus, with results compatible when upgrading from a 2 Plus." },
+            {
+              "question": "What does the memory assist feature do?",
+              "answer": "It automatically remembers the reference point measurement, so a new reading can be compared against it instantly."
+            },
+            {
+              "question": "Is this a replacement for an older HAAKE model?",
+              "answer": "Yes, it replaces the discontinued HAAKE Viscotester 1 Plus and 2 Plus, with results compatible when upgrading from a 2 Plus."
+            },
             { "question": "What temperature range does it support?", "answer": "Up to 150°C." },
-            { "question": "What comes included in the kit?", "answer": "A carrying case, instrument holder for lab stand use, one measuring cup, three rotors (No. 1, 2, and 3), four rechargeable batteries, and one power supply adapter." },
-            { "question": "What is the price of the HAAKE Viscotester 3 in India?", "answer": "Get in touch and Inkarp will put together a quote based on the catalog number and rotor configuration needed." },
-            { "question": "Who is the authorized distributor of the HAAKE Viscotester 3 in India?", "answer": "Inkarp is the authorized distributor and service provider for the Thermo Scientific HAAKE Viscotester 3 in India, providing demonstration, installation, training, AMC, spare parts, and technical support." }
+            {
+              "question": "What comes included in the kit?",
+              "answer": "A carrying case, instrument holder for lab stand use, one measuring cup, three rotors (No. 1, 2, and 3), four rechargeable batteries, and one power supply adapter."
+            },
+            {
+              "question": "What is the price of the HAAKE Viscotester 3 in India?",
+              "answer": "Get in touch and Inkarp will put together a quote based on the catalog number and rotor configuration needed."
+            },
+            {
+              "question": "Who is the authorized distributor of the HAAKE Viscotester 3 in India?",
+              "answer": "Inkarp is the authorized distributor and service provider for the Thermo Scientific HAAKE Viscotester 3 in India, providing demonstration, installation, training, AMC, spare parts, and technical support."
+            }
           ],
 
           "booking": {
@@ -594,10 +910,13 @@
             ],
             "whyHeading": "Why talk to Inkarp?",
             "whyItems": [
-              { "title": "Confirm the right catalog number and rotor set", "body": "Share the typical viscosity range and sample type across the process, and the right catalog number and rotor set gets confirmed from there." },
-              { "title": "Confirm the right configuration for your testing location", "body": "Share where in the process testing typically happens, receiving dock, production line, or QC lab, and the right configuration and rotor set gets confirmed against it." },
-              { "title": "Installation and first-run support", "body": "Supports setup and first-use checks." },
-              { "title": "Ongoing service and support", "body": "Preventive maintenance, spares, and AMC support are available across India." }
+              { "title": "Product Demonstration", "body": "Shows handheld and stand-mounted measurement on real samples" },
+              { "title": "Configuration Assessment", "body": "Confirms catalog number and rotor set for the application" },
+              { "title": "Installation Support", "body": "Supports setup and first-use checks" },
+              { "title": "Operator Training", "body": "Builds confidence with rotor selection and memory assist function" },
+              { "title": "Preventive Maintenance", "body": "Maintains rotor, battery, and display performance" },
+              { "title": "Spares and Accessories", "body": "Supplies replacement rotors, batteries, and measuring cups" },
+              { "title": "Service Support", "body": "Handles troubleshooting, calibration checks, and AMC" }
             ]
           },
 
@@ -621,21 +940,39 @@
                 "title": "Product Information",
                 "description": "HAAKE Viscotester 3 product information: portable design, rotor selection, and QC measurement workflow.",
                 "body": [
-                  "HAAKE Viscotester 3 works either handheld or mounted on a lab stand, giving flexibility to measure wherever the process actually is, not just at a fixed bench location.",
-                  "Viscosity range covers 30 to 400,000 mPas on catalog number 399-0112, or 1.5 to 1,300 mPas on catalog number 399-0111, matching the instrument to the sample type.",
-                  "Smart alignment is built directly into the design and visualized through an electronic level, removing guesswork from correct instrument positioning.",
-                  "Quick coupling of measuring geometries makes swapping rotors fast, and color coding on each geometry, paired with a range indicator, ensures the correct rotor gets selected every time.",
-                  "An adaptable display brightness keeps readings visible in any lighting environment, from a bright production floor to a dim storage area.",
-                  "The instrument remembers the reference point measurement automatically, so comparing a current reading against that baseline takes no extra setup.",
-                  "It runs on battery or power supply, and the entire kit, base unit, holder, measuring cup, rotors, batteries, and adapter, ships in a ready-to-go carrying case.",
-                  "HAAKE Viscotester 3 replaces the discontinued HAAKE Viscotester 1 Plus and 2 Plus, with results compatible for labs upgrading from a Viscotester 2 Plus."
+                  {
+                    "text": "HAAKE Viscotester 3 works either handheld or mounted on a lab stand, giving flexibility to measure wherever the process actually is, not just at a fixed bench location."
+                  },
+                  {
+                    "text": "Viscosity range covers 30 to 400,000 mPas on catalog number 399-0112, or 1.5 to 1,300 mPas on catalog number 399-0111, matching the instrument to the sample type."
+                  },
+                  {
+                    "text": "Smart alignment is built directly into the design and visualized through an electronic level, removing guesswork from correct instrument positioning."
+                  },
+                  {
+                    "text": "Quick coupling of measuring geometries makes swapping rotors fast, and color coding on each geometry, paired with a range indicator, ensures the correct rotor gets selected every time."
+                  },
+                  {
+                    "text": "An adaptable display brightness keeps readings visible in any lighting environment, from a bright production floor to a dim storage area."
+                  },
+                  {
+                    "text": "The instrument remembers the reference point measurement automatically, so comparing a current reading against that baseline takes no extra setup."
+                  },
+                  {
+                    "text": "It runs on battery or power supply, and the entire kit, base unit, holder, measuring cup, rotors, batteries, and adapter, ships in a ready-to-go carrying case."
+                  },
+                  {
+                    "text": "HAAKE Viscotester 3 replaces the discontinued HAAKE Viscotester 1 Plus and 2 Plus, with results compatible for labs upgrading from a Viscotester 2 Plus."
+                  }
                 ],
                 "cards": [
                   { "title": "Handheld or stand-mounted", "description": "Measures wherever the process is" },
                   { "title": "Color-coded rotor selection", "description": "Correct geometry, every time" },
                   { "title": "Memory assist", "description": "Instant comparison to a saved reference point" },
                   { "title": "Battery or power supply", "description": "Fully portable across the plant" }
-                ]
+                ],
+                "subheading": "Overview",
+                "tabSummary": "Why handheld or stand-mounted flexibility matters for QC"
               },
               {
                 "key": "config",
@@ -648,52 +985,84 @@
                   { "title": "Temperature range", "description": "Up to 150°C" },
                   { "title": "Power", "description": "Battery or power supply" },
                   { "title": "Units", "description": "mPa·s or dPa·s, selectable" }
-                ]
+                ],
+                "disclaimer": "Share the typical viscosity range and sample type across the process, and the right catalog number and rotor set gets confirmed from there."
               },
-              {
-                "key": "features",
-                "eyebrow": "Key Features",
-                "title": "Key Features"
-              },
+              { "key": "features", "eyebrow": "Key Features", "title": "Key Features", "tabSummary": "Smart alignment, color-coded rotors, memory assist" },
               {
                 "key": "applications",
                 "eyebrow": "Applications",
                 "title": "Applications",
-                "description": "HAAKE Viscotester 3 applications: coatings, personal care, industrial oils, and food product viscosity testing."
+                "description": "HAAKE Viscotester 3 applications: coatings, personal care, industrial oils, and food product viscosity testing.",
+                "tabSummary": "Coatings, personal care, oils and greases, food products"
               },
               {
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "HAAKE Viscotester 3 technical specifications: viscosity range, accuracy, and rotational speed."
+                "description": "HAAKE Viscotester 3 technical specifications: viscosity range, accuracy, and rotational speed.",
+                "columns": [
+                  "Parameter",
+                  "Specification"
+                ],
+                "tabSummary": "Viscosity range, accuracy, and rotational speed"
               },
               {
                 "key": "benefits",
                 "eyebrow": "Built for Speed and Simplicity",
                 "title": "Built for Speed and Simplicity",
-                "description": "QC testing that takes too long or requires too much setup gets skipped under time pressure. HAAKE Viscotester 3 is designed specifically to remove that friction. Smart alignment, visualized through an electronic level, means correct positioning is confirmed at a glance rather than guessed at. Quick coupling of measuring geometries, combined with color coding and a range indicator, means the right rotor gets selected and attached fast, without checking a manual mid-test. An adaptable display keeps readings legible whether the test happens under bright warehouse lighting or in a dim storage room.",
                 "cards": [
                   { "title": "Fast, confident setup before every test", "description": "Electronic level, smart alignment" },
                   { "title": "No rotor mix-ups during busy testing periods", "description": "Color-coded geometries, quick coupling" },
                   { "title": "Readable results in any testing environment", "description": "Adaptable display brightness" },
                   { "title": "Instant comparison against a known baseline", "description": "Automatic reference point memory" }
-                ]
+                ],
+                "body": [
+                  "QC testing that takes too long or requires too much setup gets skipped under time pressure. HAAKE Viscotester 3 is designed specifically to remove that friction.",
+                  "Smart alignment, visualized through an electronic level, means correct positioning is confirmed at a glance rather than guessed at.",
+                  "Quick coupling of measuring geometries, combined with color coding and a range indicator, means the right rotor gets selected and attached fast, without checking a manual mid-test.",
+                  "An adaptable display keeps readings legible whether the test happens under bright warehouse lighting or in a dim storage room."
+                ],
+                "columnHeaders": { "label": "What your QC process needs", "value": "How HAAKE Viscotester 3 delivers it" },
+                "note": "Share where in the process testing typically happens, receiving dock, production line, or QC lab, and the right configuration and rotor set gets confirmed against it.",
+                "tabSummary": "What smart alignment and quick coupling actually solve"
               },
               {
                 "key": "performance",
                 "eyebrow": "Compatible With What You Already Have",
                 "title": "Compatible With What You Already Have",
-                "body": [
-                  "Replacing a discontinued instrument shouldn't mean discarding years of historical measurement data. HAAKE Viscotester 3 is the direct replacement for the discontinued Viscotester 1 Plus and 2 Plus.",
-                  "For labs upgrading specifically from a Viscotester 2 Plus, results are compatible, meaning historical QC data stays comparable against new readings taken on the 3.",
-                  "That continuity matters most in regulated or trend-tracked QC environments, where a sudden break in comparable data undermines confidence in the whole record."
-                ],
-                "utilityChecklist": [
-                  { "label": "A direct replacement for a discontinued instrument", "value": "Replaces Viscotester 1 Plus and 2 Plus directly" },
-                  { "label": "Continuity with historical QC data", "value": "Compatible results when upgrading from the 2 Plus" },
-                  { "label": "No disruption to established QC trend tracking", "value": "Same measurement basis carried forward" }
-                ],
-                "disclaimer": "Share which HAAKE model is currently in use, and the transition path to Viscotester 3 gets confirmed directly."
+                "tabSummary": "Upgrading from earlier HAAKE models",
+                "body": [],
+                "groups": [
+                  {
+                    "items": [
+                      "Replacing a discontinued instrument shouldn't mean discarding years of historical measurement data. HAAKE Viscotester 3 is the direct replacement for the discontinued Viscotester 1 Plus and 2 Plus.",
+                      "For labs upgrading specifically from a Viscotester 2 Plus, results are compatible, meaning historical QC data stays comparable against new readings taken on the 3.",
+                      "That continuity matters most in regulated or trend-tracked QC environments, where a sudden break in comparable data undermines confidence in the whole record."
+                    ]
+                  },
+                  {
+                    "columns": [
+                      "What your lab needs",
+                      "How HAAKE Viscotester 3 delivers it"
+                    ],
+                    "rows": [
+                      [
+                        "A direct replacement for a discontinued instrument",
+                        "Replaces Viscotester 1 Plus and 2 Plus directly"
+                      ],
+                      [
+                        "Continuity with historical QC data",
+                        "Compatible results when upgrading from the 2 Plus"
+                      ],
+                      [
+                        "No disruption to established QC trend tracking",
+                        "Same measurement basis carried forward"
+                      ]
+                    ]
+                  },
+                  { "note": "Share which HAAKE model is currently in use, and the transition path to Viscotester 3 gets confirmed directly." }
+                ]
               },
               {
                 "key": "docs",
@@ -705,7 +1074,9 @@
                   { "title": "Application Notes", "description": "Available on request" },
                   { "title": "Product Video", "description": "Available on request" },
                   { "title": "Product Certificates (by lot number)", "description": "Available on request" }
-                ]
+                ],
+                "ctaLabel": "Send My Requirement",
+                "tabSummary": "Datasheets, application notes, video"
               }
             ],
             "cta": {
@@ -714,9 +1085,17 @@
               "subheading": "Authorized distributor and service provider. Demonstration, installation, AMC, and genuine spare parts.",
               "description": "Fast, reliable viscosity QC, handheld or on a stand, anywhere in the process. Share the sample type and expected viscosity range, and the right configuration gets confirmed.",
               "label": "Request Quote",
-              "href": "#booking"
-            }
-          }
+              "href": "#booking",
+              "secondaryLabel": "Talk to Product Expert",
+              "secondaryHref": "#booking"
+            },
+            "heroParagraphs": [
+              "Getting a fast, reliable viscosity reading shouldn't require a lab setup. HAAKE Viscotester 3 works handheld or mounted on a lab stand, built for quick, dependable QC measurements wherever the process actually happens, from goods receiving through production sampling to final QC.",
+              "Smart alignment shows on an electronic level, color-coded geometries and a range indicator guarantee the correct rotor every time, and an adaptable-brightness display stays readable in any environment. It measures 30 to 400,000 mPas, runs on battery or power supply, and remembers the reference point so comparing a new reading against it takes seconds."
+            ]
+          },
+
+          "faqTitle": "Frequently Asked Questions"
         }
       ]
     }

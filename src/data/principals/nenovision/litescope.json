@@ -90,7 +90,7 @@
                 "key": "semManufacturerModel",
                 "label": "SEM manufacturer/model",
                 "question": "SEM manufacturer/model",
-                "hint": "Dropdown of common SEM systems",
+                "hint": "Common SEM systems",
                 "input": "text",
                 "options": []
               },
@@ -117,9 +117,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an integration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "SEM Compatibility Checker",
-            "emptyState": "Confirms mounting fit and adaptation plate needed",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -172,7 +172,7 @@
               }
             ],
             "eyebrow": "Material Property Explorer",
-            "ctaNote": "Recommends the relevant measurement modes. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -534,11 +534,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Samples analyzed per week", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Samples analyzed per week", "hint": "", "input": "number", "choices": "" },
                 { "title": "Current relocation/re-imaging time per sample", "hint": "Time input", "input": "text", "choices": "" },
-                { "title": "Number of instruments currently used for correlation", "hint": "Number input", "input": "number", "choices": "" }
+                { "title": "Number of instruments currently used for correlation", "hint": "", "input": "number", "choices": "" }
               ],
-              "ctaNote": "Estimates weekly time recovered with in-situ CPEM imaging. Routes to a workflow-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }

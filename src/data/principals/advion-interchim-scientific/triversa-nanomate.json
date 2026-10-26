@@ -180,10 +180,7 @@
                     "title": "This does more than one job.",
                     "text": "LC/MS, chip infusion, fraction collection, and direct surface analysis, combined in one platform."
                   },
-                  {
-                    "title": "High-throughput infusion is explicitly its differentiator.",
-                    "text": "The source describes it as the only automated platform offering this for both small and large analytes."
-                  },
+                  { "title": "High-throughput infusion is explicitly its differentiator." },
                   {
                     "title": "Excess LC eluate becomes a resource, not waste.",
                     "text": "Physical fraction storage lets you go back and re-analyze anything interesting the online run flagged."
@@ -370,7 +367,7 @@
                 { "title": "Sample volume input", "hint": "In microliters", "input": "text", "choices": "" }
               ],
               "lead": "The sample volume and spray duration planner estimates achievable spray time for your available sample.",
-              "ctaNote": "Estimates spray time proportional to the confirmed ratio. Suggests which of the three ID sizes may fit. Routes to Inkarp for a volume-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -391,7 +388,7 @@
                 { "title": "Analyte scale", "hint": "Small or large molecule", "choices": "Small; Large molecule" }
               ],
               "lead": "The application type selector confirms fit for your specific analytical work.",
-              "ctaNote": "Confirms infusion or LC/MS fraction re-analysis fit. Routes to Inkarp for an application-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -436,9 +433,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both workflows run through the same ESI Chip technology — the choice is about whether your sample goes straight to infusion or through LC/MS first, with fractions saved for later.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both workflows run through the same ESI Chip technology — the choice is about whether your sample goes straight to infusion or through LC/MS first, with fractions saved for later."
+            ]
           },
 
           "applicationsExplorer": {

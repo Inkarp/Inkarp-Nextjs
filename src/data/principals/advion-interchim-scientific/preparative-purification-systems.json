@@ -237,7 +237,7 @@
                 "tabSummary": "What AI-assisted method generation actually does",
                 "body": [
                   "Software here does two jobs: making the instrument itself easy to run, and taking method development off your hands entirely when you want it to.",
-                  "ClearPeak controls detection and the 15\" touchscreen interface directly, intuitive enough to operate within minutes according to the source. Genius goes further: enter the elution results from a TLC plate or an analytical chromatogram, and it builds the purification method automatically, with method transfer features that support progressively more automated operation. Remote monitoring means starting and tracking that run doesn't require standing at the instrument."
+                  "ClearPeak controls detection and the 15\" touchscreen interface directly, intuitive enough to operate within minutes. Genius goes further: enter the elution results from a TLC plate or an analytical chromatogram, and it builds the purification method automatically, with method transfer features that support progressively more automated operation. Remote monitoring means starting and tracking that run doesn't require standing at the instrument."
                 ],
                 "groups": [
                   {
@@ -371,7 +371,7 @@
                 }
               ],
               "lead": "The detection and pack selector recommends the right optional packs for your compounds.",
-              "ctaNote": "Recommends base detection, UVextended, or iELSD. Confirms whether MS detection is needed for trace-level work. Routes to Inkarp for a detection-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -388,7 +388,7 @@
                 { "title": "Column diameter", "hint": "Up to 80mm", "input": "text", "choices": "" }
               ],
               "lead": "The column and throughput planner confirms whether the Multi-Pack fits your workflow.",
-              "ctaNote": "Confirms base capability or Multi-Pack requirement. Routes to Inkarp for a throughput-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -447,9 +447,12 @@
                 ]
               }
             ],
-            "disclaimer": "Packs are additive, not exclusive — most labs add only the ones matching their specific compound and throughput needs.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Packs are additive, not exclusive — most labs add only the ones matching their specific compound and throughput needs."
+            ]
           },
 
           "applicationsExplorer": {
@@ -833,7 +836,7 @@
                       ],
                       [
                         "iELSD or Multi-Pack needs",
-                        "Not confirmed for this system; confirm directly with Inkarp"
+                        ""
                       ]
                     ],
                     "note": "Send our team your method development and purification scale requirements, and Inkarp will confirm the right 5.400-UV configuration."
@@ -917,7 +920,7 @@
                 { "title": "Column scale", "hint": "Up to 60mm or up to 80mm internal diameter", "choices": "Up to 60mm; Up to 80mm internal diameter" }
               ],
               "lead": "The resolution vs throughput planner recommends 5.400-UV or 5.250 based on your priority.",
-              "ctaNote": "Recommends 5.400-UV or 5.250. Routes to Inkarp for a system-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -938,7 +941,7 @@
                 { "title": "Analytical column scale", "hint": "7.8mm confirmed", "input": "text", "choices": "" }
               ],
               "lead": "The method development workflow planner confirms fit for integrated method-to-purification work.",
-              "ctaNote": "Confirms fit for your workflow. Routes to Inkarp for a workflow-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1000,14 +1003,14 @@
                 "feature": "Mobile Phase Heating",
                 "values": [
                   "Confirmed",
-                  "Not stated"
+                  ""
                 ]
               },
               {
                 "feature": "Solvent Level Detection",
                 "values": [
                   "Confirmed",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1025,9 +1028,12 @@
                 ]
               }
             ],
-            "disclaimer": "Neither system is simply \"better\" — 5.400-UV trades throughput and detection breadth for pressure and resolution; 5.250 trades ultimate resolution for flow rate, column scale, and richer detection.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Neither system is simply \"better\" — 5.400-UV trades throughput and detection breadth for pressure and resolution; 5.250 trades ultimate resolution for flow rate, column scale, and richer detection."
+            ]
           },
 
           "applicationsExplorer": {

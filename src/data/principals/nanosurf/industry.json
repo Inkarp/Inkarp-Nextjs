@@ -183,9 +183,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an engineering scoping conversation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Sample and Stage Scoping Tool",
-            "emptyState": "Maps the requirement against the documented XYZ and XYZΦ implementations and flags bespoke scope",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -268,7 +268,7 @@
               }
             ],
             "eyebrow": "Environment and Compliance Checker",
-            "ctaNote": "Confirms cleanroom, safety, and system optimization requirements for the design. Routes to an engineering scoping conversation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Talk to Product Expert"
           },
@@ -305,7 +305,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms scripting scope and whether Nanosurf software engineering is recommended. Routes to an automation scoping conversation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -372,16 +372,16 @@
                 "feature": "Cleanroom Compliance",
                 "values": [
                   "ISO 6, certified materials and assembly",
-                  "Not specified",
-                  "Not specified"
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "PLC Safety System",
                 "values": [
                   "Available with safe torque off",
-                  "Not specified",
-                  "Not specified"
+                  "",
+                  ""
                 ]
               },
               {
@@ -396,8 +396,8 @@
                 "feature": "Pre-Delivery Simulation",
                 "values": [
                   "System modelling against environmental factors",
-                  "Not specified",
-                  "Not specified"
+                  "",
+                  ""
                 ]
               },
               {
@@ -433,8 +433,11 @@
                 ]
               }
             ],
-            "disclaimer": "The distinction is engagement model as much as capability. Flex-Mount and NaniteAFM are products configured to an application. Industrial Solutions is an engineering project — Nanosurf's team designing stage, mount, geometry, compliance, and automation to a requirement that no standard configuration meets. If Flex-Mount on a catalogue stage covers the need, that's the simpler route; the bespoke path exists for when it doesn't.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "The distinction is engagement model as much as capability. Flex-Mount and NaniteAFM are products configured to an application. Industrial Solutions is an engineering project — Nanosurf's team designing stage, mount, geometry, compliance, and automation to a requirement that no standard configuration meets. If Flex-Mount on a catalogue stage covers the need, that's the simpler route; the bespoke path exists for when it doesn't."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1134,9 +1137,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Sample Envelope Checker",
-            "emptyState": "Confirms fit within 300 × 300 mm and 45 kg, or flags customization requirement",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -1196,7 +1199,7 @@
               {
                 "condition": { "specialistTechnique": "smm" },
                 "title": "Confirm SMM Availability With Inkarp",
-                "body": "SMM isn't listed in Nanosurf's published mode set for Alphacen 300, though it appears on the Flex-Mount and Industrial Solutions pages. Inkarp will confirm availability at configuration.",
+                "body": "Inkarp will confirm availability at configuration.",
                 "tags": [
                   "SMM Needs Confirmation"
                 ]
@@ -1219,7 +1222,7 @@
               }
             ],
             "eyebrow": "Mode and Automation Selector",
-            "ctaNote": "Confirms mode availability, flags SMM as requiring confirmation, and recommends automation scope. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Get Configuration Support"
           },
@@ -1252,7 +1255,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the standard system, standard plus customization, or a full Industrial Solution engagement. Routes to a route-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1327,7 +1330,7 @@
                 "feature": "Acoustic Enclosure",
                 "values": [
                   "Included as standard",
-                  "Not specified",
+                  "",
                   "Per design"
                 ]
               },
@@ -1344,22 +1347,22 @@
                 "values": [
                   "Available",
                   "Available",
-                  "Not specified"
+                  ""
                 ]
               },
               {
                 "feature": "Cleanroom Compliance",
                 "values": [
-                  "Not specified",
-                  "Not specified",
+                  "",
+                  "",
                   "ISO 6 available"
                 ]
               },
               {
                 "feature": "PLC Safety System",
                 "values": [
-                  "Not specified",
-                  "Not specified",
+                  "",
+                  "",
                   "Available"
                 ]
               },
@@ -1396,8 +1399,11 @@
                 ]
               }
             ],
-            "disclaimer": "The three form a genuine progression. Alphacen 300 Flex is the fastest route to large-sample AFM — a complete system with an acoustic enclosure and the CX controller, deliverable as a standard product. Flex-Mount is the component for building a specific configuration. Industrial Solutions is the engineering project for requirements that exceed both. Note that Alphacen 300's published mode list omits SMM while the other two include it, so confirm if scanning microwave microscopy is needed.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "The three form a genuine progression. Alphacen 300 Flex is the fastest route to large-sample AFM — a complete system with an acoustic enclosure and the CX controller, deliverable as a standard product. Flex-Mount is the component for building a specific configuration. Industrial Solutions is the engineering project for requirements that exceed both. Note that Alphacen 300's published mode list omits SMM while the other two include it, so confirm if scanning microwave microscopy is needed."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1538,10 +1544,7 @@
               "question": "Which AFM modes are available?",
               "answer": "Static, lateral, dynamic, and phase imaging; C-AFM, SSRM, PFM, EFM, KPFM, and MFM for electrical properties; force spectroscopy, modulation, and mapping for mechanical; plus lithography and nanomanipulation, EC-AFM, and SThM."
             },
-            {
-              "question": "Is Scanning Microwave Microscopy available?",
-              "answer": "SMM isn't listed in Nanosurf's published mode set for this system, though it appears on the Flex-Mount and Industrial Solutions pages. Confirm availability at configuration if SMM is required."
-            },
+            { "question": "Is Scanning Microwave Microscopy available?", "answer": "Confirm availability at configuration if SMM is required." },
             {
               "question": "Can samples larger than 300 mm be measured?",
               "answer": "Yes, through customization — the Alphacen 300 Flex serves as the basis for custom-engineered solutions accommodating samples beyond 300 mm."

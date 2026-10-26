@@ -462,11 +462,6 @@
               ],
               "options": [
                 {
-                  "title": "Fluorescence intensity slider",
-                  "hint": "Simulates a material's fluorescence background, low to severe",
-                  "choices": "Simulates a material's fluorescence background; Low to severe"
-                },
-                {
                   "title": "SSE toggle",
                   "hint": "Switches the temperature-shifted excitation on and off",
                   "choices": "SSE off, signal buried; SSE on, signal recovered"
@@ -474,7 +469,7 @@
               ],
               "disclaimer": "",
               "lead": "The fluorescence interference simulator shows what happens to a Raman spectrum with and without SSE engaged.",
-              "ctaNote": "Shows the resulting spectrum, buried or recovered. Confirms whether a usable Raman signal is available for verification.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -494,7 +489,7 @@
               ],
               "disclaimer": "",
               "lead": "The measurement tip and application matcher confirms which tip fits your container and application.",
-              "ctaNote": "Shows the specific tip for that container, standard or optional. Notes that the correct tip is verified automatically once set up. Routes to Inkarp for a tip and accessory quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -599,9 +594,12 @@
                 ]
               }
             ],
-            "disclaimer": "BRAVO's real advantage over a conventional handheld Raman system isn't raw sensitivity alone, it's the range of materials that become measurable at all once fluorescence and safety constraints are removed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "BRAVO's real advantage over a conventional handheld Raman system isn't raw sensitivity alone, it's the range of materials that become measurable at all once fluorescence and safety constraints are removed."
+            ]
           },
 
           "serviceMap": {

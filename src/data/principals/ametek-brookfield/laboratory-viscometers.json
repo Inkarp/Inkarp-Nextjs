@@ -145,7 +145,7 @@
             ],
             "disclaimer": "",
             "lead": "Find the right CAP2000+ series for your temperature testing needs.",
-            "ctaNote": "Recommends L Series or H Series CAP2000+. Routes to Inkarp for a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -186,9 +186,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to Inkarp for a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "lead": "Confirm whether Capcalc software fits your testing workflow.",
-            "emptyState": "Confirms whether Capcalc automation fits your lab",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -684,7 +684,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Recommends spindle set, speed range, and software package. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -738,8 +738,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a migration-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Confirms file compatibility via DV Create and accessory carryover",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -769,7 +769,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Recommends DV360, DV Create, or both. Routes to a software-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -828,7 +828,7 @@
                 "feature": "Guided Setup",
                 "values": [
                   "Viscosity Wizard",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -853,9 +853,12 @@
                 ]
               }
             ],
-            "disclaimer": "DV2Plus is positioned by Brookfield as the direct successor to the DV2T, carrying forward legacy method file compatibility through DV Create so an upgrade doesn't mean revalidating existing test methods from scratch. Detailed DV2T specifications weren't available in this source pull — confirm exact figures when comparing directly for a fleet upgrade decision.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "DV2Plus is positioned by Brookfield as the direct successor to the DV2T, carrying forward legacy method file compatibility through DV Create so an upgrade doesn't mean revalidating existing test methods from scratch."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1417,7 +1420,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Confirms suitability against the 0.5–2.0 mL requirement and recommends cone spindle. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -1461,8 +1464,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a workflow-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Estimates test sequence time, benefiting from rapid small-volume temperature control",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1488,7 +1491,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms the compliance and connectivity package required. Routes to a compliance-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -1553,7 +1556,7 @@
               {
                 "feature": "Gel Timer Functionality",
                 "values": [
-                  "Not stated",
+                  "",
                   "Built in, standard"
                 ]
               },
@@ -1572,9 +1575,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both share the same touchscreen interface and comparable precision specifications, but they solve different problems. DVNext Cone/Plate exists specifically for when sample volume is the limiting factor; DV2Plus is the general-purpose choice when it isn't, with a wider speed range and built-in Gel Timer functionality DVNext Cone/Plate doesn't list.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share the same touchscreen interface and comparable precision specifications, but they solve different problems. DVNext Cone/Plate exists specifically for when sample volume is the limiting factor; DV2Plus is the general-purpose choice when it isn't, with a wider speed range and built-in Gel Timer functionality DVNext Cone/Plate doesn't list."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2239,7 +2245,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Recommends Standard or 21 CFR Part 11 Compliant. Routes to a version-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -2291,8 +2297,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Confirms Gel-Timer applicability and reporting configuration",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2322,7 +2328,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Recommends the version and optional accessories required. Routes to a configuration-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -2355,7 +2361,7 @@
               {
                 "feature": "Sample Volume",
                 "values": [
-                  "Not stated as small-volume specific",
+                  "",
                   "0.5–2.0 mL",
                   "Standard/larger volume"
                 ]
@@ -2364,7 +2370,7 @@
                 "feature": "Gel-Timer Functionality",
                 "values": [
                   "Built in, Standard version",
-                  "Not stated",
+                  "",
                   "Built in, standard"
                 ]
               },
@@ -2387,7 +2393,7 @@
               {
                 "feature": "Speed Control",
                 "values": [
-                  "Not stated as the primary differentiator",
+                  "",
                   "Auto-range per spindle/speed",
                   "740 speeds"
                 ]
@@ -2409,9 +2415,12 @@
                 ]
               }
             ],
-            "disclaimer": "DVNext Rheometer's distinguishing choice is structural rather than a spec difference: rather than making 21 CFR Part 11 an add-on toggle, Brookfield sells it as a distinct Compliant version with its own standard feature set. That's a meaningful difference for procurement — a regulated lab buys the Compliant version outright rather than assembling compliance from optional add-ons on a Standard unit.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "DVNext Rheometer's distinguishing choice is structural rather than a spec difference: rather than making 21 CFR Part 11 an add-on toggle, Brookfield sells it as a distinct Compliant version with its own standard feature set. That's a meaningful difference for procurement — a regulated lab buys the Compliant version outright rather than assembling compliance from optional add-ons on a Standard unit."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2816,10 +2825,7 @@
               "title": "Full Speed Range at a Lower Price Point",
               "description": "740 speeds, matching DV2Plus exactly. What's smaller here is the screen and the software, not the measurement capability."
             },
-            {
-              "title": "Seven-Language Interface",
-              "description": "Not stated on the DV2Plus source at all — genuinely relevant for multi-site or export-facing operations choosing between the two."
-            },
+            { "title": "Seven-Language Interface", "description": "" },
             {
               "title": "Time-to-Condition Testing, Surfaced Directly",
               "description": "Time to Torque, Time to Temperature, Time to Stop — accessed directly rather than buried inside a step-program menu."
@@ -2958,7 +2964,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Recommends DVPlus or DV2Plus. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -3009,8 +3015,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a protocol-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Confirms the time-measurement function and any RTD probe requirement",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -3040,7 +3046,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms language, calibration, and accessory configuration. Routes to a deployment-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -3098,14 +3104,14 @@
               {
                 "feature": "Guided Setup",
                 "values": [
-                  "Not stated",
+                  "",
                   "Viscosity Wizard"
                 ]
               },
               {
                 "feature": "Gel Timer Functionality",
                 "values": [
-                  "Not stated",
+                  "",
                   "Built in, standard"
                 ]
               },
@@ -3127,7 +3133,7 @@
                 "feature": "Language Support",
                 "values": [
                   "7 languages",
-                  "Not specified"
+                  ""
                 ]
               },
               {
@@ -3152,9 +3158,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both instruments share the identical core measurement specification — ±1.0% accuracy, ±0.2% repeatability, 740 speeds — so the choice between them isn't about precision at all. It's about how much guided software and built-in functionality the workflow actually needs, versus a lower-cost instrument that measures just as accurately without them.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both instruments share the identical core measurement specification — ±1.0% accuracy, ±0.2% repeatability, 740 speeds — so the choice between them isn't about precision at all. It's about how much guided software and built-in functionality the workflow actually needs, versus a lower-cost instrument that measures just as accurately without them."
+            ]
           },
 
           "applicationsExplorer": {
@@ -3528,10 +3537,7 @@
               "title": "Gel-Timer as a Core Capability, Not an Add-On",
               "description": "Time-to-gel measurement sits on the same platform as viscosity and yield stress testing, using the same calibration and reporting path rather than a separate device."
             },
-            {
-              "title": "Ethernet Included on the Standard Version",
-              "description": "Unlike the base DVNext Rheometer, where Ethernet is Compliant-only, this variant's source lists it as standard — worth confirming, but a genuine differentiator as stated."
-            },
+            { "title": "Ethernet Included on the Standard Version", "description": "" },
             {
               "title": "Purpose-Built for Curing System Testing",
               "description": "Positioned specifically for resins, epoxies, and gelation-driven materials, where a general rheometer would treat gel time as a secondary function."
@@ -3578,7 +3584,7 @@
             {
               "label": "Ethernet Connectivity",
               "values": [
-                "Included, per this source",
+                "",
                 "Included"
               ]
             },
@@ -3627,15 +3633,15 @@
             {
               "label": "Accuracy",
               "values": [
-                "Not stated on this source page",
-                "Not stated on this source page"
+                "",
+                ""
               ]
             },
             {
               "label": "Repeatability",
               "values": [
-                "Not stated on this source page",
-                "Not stated on this source page"
+                "",
+                ""
               ]
             }
           ],
@@ -3742,7 +3748,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Recommends Standard or 21 CFR Part 11 Compliant. Routes to a version-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -3795,8 +3801,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Confirms test configuration and Ethernet monitoring setup",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -3822,7 +3828,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Recommends the version and optional accessories required. Routes to a configuration-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -3873,14 +3879,14 @@
               {
                 "feature": "Accuracy",
                 "values": [
-                  "Not stated in this source",
+                  "",
                   "±1.0% of range"
                 ]
               },
               {
                 "feature": "Repeatability",
                 "values": [
-                  "Not stated in this source",
+                  "",
                   "±0.2%"
                 ]
               },
@@ -3892,7 +3898,7 @@
                 ]
               }
             ],
-            "disclaimer": "The feature sets between this instrument and the base DVNext Rheometer are substantially the same, with two differences worth confirming before ordering: this page lists Ethernet as a Standard-version feature where the base page restricts it to Compliant, and this page's source doesn't restate the ±1.0%/±0.2% accuracy figures the base page specifies. Given how closely the two overlap, confirm directly with Brookfield or Inkarp whether these represent genuinely distinct SKUs or the same physical instrument described on two separate pages.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -3974,19 +3980,15 @@
             },
             {
               "question": "How is it different from the base DVNext Rheometer?",
-              "answer": "The feature sets are largely the same — both include built-in Gel-Timer functionality. This page lists Ethernet connectivity as a Standard-version feature, where the base DVNext Rheometer page restricts it to the Compliant version. Confirm with Inkarp whether this represents a genuinely distinct configuration."
+              "answer": "The feature sets are largely the same — both include built-in Gel-Timer functionality."
             },
             {
               "question": "What is Gel-Timer functionality?",
               "answer": "Accurate measurement of gelation time, positioned as the instrument's core differentiating capability for applications requiring precise time-to-gel data."
             },
             {
-              "question": "Does the Standard version include Ethernet connectivity?",
-              "answer": "Yes, per this source page — worth confirming directly given the base DVNext Rheometer page lists Ethernet as Compliant-only."
-            },
-            {
               "question": "What is the accuracy and repeatability?",
-              "answer": "Not explicitly stated on this source page. The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability — confirm whether this applies to the Gel Timer variant."
+              "answer": "The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability."
             },
             { "question": "Is magnetic coupling standard or optional?", "answer": "Optional on the Standard version, standard-fit on the Compliant version." },
             {
@@ -4120,7 +4122,7 @@
                   "Standard Version",
                   "21 CFR Part 11 Compliant Version"
                 ],
-                "note": "Accuracy and repeatability were not stated in this source pull. The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability — confirm whether the same figures apply to this variant before quoting."
+                "note": "The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability."
               },
               {
                 "key": "performance",
@@ -4198,10 +4200,7 @@
                     "title": "Compliant version",
                     "description": "hand-held barcode scanner with accessory detection, magnetic coupling standard, LIMS connectivity, non-editable PDF reporting, 21 CFR Part 11/GAMP compliance"
                   },
-                  {
-                    "title": "Accuracy and repeatability",
-                    "description": "not explicitly stated on this source page — confirm against the base DVNext Rheometer's ±1.0%/±0.2% specification before quoting"
-                  }
+                  { "title": "Accuracy and repeatability", "description": "" }
                 ],
                 "disclaimer": "Share whether gel time measurement is the primary requirement or one of several tests run on the instrument, and whether the workflow is R&D or regulated release, and the right version and accessories get confirmed from there."
               },
@@ -4214,7 +4213,7 @@
                 "ctaLabel": "Send My Requirement",
                 "cards": [
                   { "title": "Specification Sheet (Standard and Compliant)", "description": "Available on request" },
-                  { "title": "Accuracy and Repeatability Confirmation", "description": "Available on request — not stated in this source" },
+                  { "title": "Accuracy and Repeatability Confirmation", "description": "Available on request" },
                   { "title": "21 CFR Part 11 / GAMP Compliance Details", "description": "Available on request" },
                   { "title": "LIMS and Ethernet Connectivity Guide", "description": "Available on request" },
                   { "title": "Related Accessories Catalogue", "description": "Available on request" }
@@ -4390,7 +4389,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Confirms fit within 40–141 KU / 32–1099 g / 27–5274 cP, or flags the paste spindle requirement. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -4416,7 +4415,7 @@
                 "hint": "NIST traceable required, or not specified",
                 "options": [
                   { "val": "nist-required", "label": "NIST traceable required" },
-                  { "val": "not-specified", "label": "Not specified" }
+                  { "val": "not-specified", "label": "" }
                 ]
               },
               {
@@ -4430,8 +4429,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a compliance-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Confirms ASTM D562 compatibility and NIST standard availability",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -4456,7 +4455,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms base and spindle fit. Routes to a configuration-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -4506,8 +4505,8 @@
                 "feature": "Industry Standard Compliance",
                 "values": [
                   "ASTM D562",
-                  "Not stated as its primary compliance target",
-                  "Not stated as its primary compliance target"
+                  "",
+                  ""
                 ]
               },
               {
@@ -4535,9 +4534,12 @@
                 ]
               }
             ],
-            "disclaimer": "KU-3 is built for one application specifically — paint, coating, and ink consistency measured against ASTM D562 — rather than general-purpose rotational viscometry. Where a formulation specification is written in Krebs units, KU-3 reports directly against it; DV2Plus and DVPlus don't report in KU at all.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "KU-3 is built for one application specifically — paint, coating, and ink consistency measured against ASTM D562 — rather than general-purpose rotational viscometry. Where a formulation specification is written in Krebs units, KU-3 reports directly against it; DV2Plus and DVPlus don't report in KU at all."
+            ]
           },
 
           "applicationsExplorer": {
@@ -4970,7 +4972,7 @@
               }
             ],
             "disclaimer": "",
-            "ctaNote": "Recommends the standard or LVT configuration. Routes to a model-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -5010,8 +5012,8 @@
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Confirms fit against the Brookfield accessory range",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -5040,7 +5042,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms power compatibility and calibration standard availability. Routes to an installation-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -5089,7 +5091,7 @@
               {
                 "feature": "Connectivity",
                 "values": [
-                  "Not stated",
+                  "",
                   "USB, Bluetooth, DV360, DV Create",
                   "USB, Bluetooth, DVPlus Connect"
                 ]
@@ -5099,7 +5101,7 @@
                 "values": [
                   "Since 1934",
                   "Successor to the DV2T",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -5119,9 +5121,12 @@
                 ]
               }
             ],
-            "disclaimer": "Dial Reading Viscometer sits apart from Brookfield's digital instruments on readout method rather than precision — the stated accuracy and repeatability figures are comparable to the DVNext line, but the interface and speed selection are entirely mechanical rather than digital.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Dial Reading Viscometer sits apart from Brookfield's digital instruments on readout method rather than precision — the stated accuracy and repeatability figures are comparable to the DVNext line, but the interface and speed selection are entirely mechanical rather than digital."
+            ]
           },
 
           "applicationsExplorer": {

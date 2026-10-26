@@ -112,9 +112,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a package-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Package and Lamp Geometry Selector",
-            "emptyState": "Recommends LZC-4V, LZC-1, LZC-ORG, or LZC-4X",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -157,7 +157,7 @@
               }
             ],
             "eyebrow": "Wavelength and Application Planner",
-            "ctaNote": "Confirms the right lamp set for your package. Routes to us for an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -205,10 +205,13 @@
                 ]
               }
             ],
-            "disclaimer": "All three run on the same core chamber, carousel, and turntable, the difference is purely lamp placement and which wavelength sets ship standard.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three run on the same core chamber, carousel, and turntable, the difference is purely lamp placement and which wavelength sets ship standard."
+            ]
           },
 
           "applicationsExplorer": {

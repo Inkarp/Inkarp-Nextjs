@@ -182,7 +182,7 @@
               }
             ],
             "eyebrow": "Analyte Coverage Checker",
-            "ctaNote": "Confirms fit against the m/z 16,000 range and StepWave XS transmission. Routes to an analyte-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -233,9 +233,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Targeted or Untargeted Mode Planner",
-            "emptyState": "Maps the requirement to the 5-orders linear or 4× in-spectrum dynamic range capability",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -272,7 +272,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms waters_connect scope and the attribute monitoring transition path. Routes to a workflow-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -336,9 +336,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both modes run on the same instrument — that is the design intent. A lab characterizing a biotherapeutic during development and later monitoring defined attributes in QC uses the same system for both, with the waters_connect ecosystem carrying the workflow between them rather than requiring separate platforms.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both modes run on the same instrument — that is the design intent. A lab characterizing a biotherapeutic during development and later monitoring defined attributes in QC uses the same system for both, with the waters_connect ecosystem carrying the workflow between them rather than requiring separate platforms."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1001,7 +1004,7 @@
               }
             ],
             "eyebrow": "Xevo TQ Line Selector",
-            "ctaNote": "Recommends Xevo TQ-S cronos, TQ-S micro, TQ-XS, or TQ Absolute XR. Routes to a system-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1048,9 +1051,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a method-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "MRM Panel Capacity Planner",
-            "emptyState": "Estimates achievable dwell time and points per peak at 555 MRM/sec",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1080,7 +1083,7 @@
                 { "title": "Data review burden", "hint": "Standard, or review time is a bottleneck", "choices": "Standard; Review time is a bottleneck" }
               ],
               "disclaimer": "",
-              "ctaNote": "Flags waters_connect restrictions on Arc, UPC2, M-Class, ASAP, and ESCi, and confirms the viable combination. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1205,9 +1208,12 @@
                 ]
               }
             ],
-            "disclaimer": "Two things stand out in Waters' own table. First, cronos and TQ-S micro share an identical footprint and MRM speed — the difference between them is sensitivity and source range, not size. Second, both entry systems run faster MRM than TQ-XS and TQ Absolute XR, so a large multi-residue panel with adequate clean-up may genuinely be better served at the accessible end of the line. Note that ACQUITY Arc compatibility is unique to cronos in this table, and that only cronos lacks APGC compatibility.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Two things stand out in Waters' own table. First, cronos and TQ-S micro share an identical footprint and MRM speed — the difference between them is sensitivity and source range, not size. Second, both entry systems run faster MRM than TQ-XS and TQ Absolute XR, so a large multi-residue panel with adequate clean-up may genuinely be better served at the accessible end of the line. Note that ACQUITY Arc compatibility is unique to cronos in this table, and that only cronos lacks APGC compatibility."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1663,8 +1669,7 @@
                   "Electrical power consumption is up to 35% lower than equivalent competitor products, which shows up in the utility bill every month the instrument runs.",
                   "Heat output is up to 35% less, which matters twice: it lowers the cooling load the lab HVAC has to carry, and it reduces the thermal burden on neighbouring instruments.",
                   "Waters frames the design goal as maximizing performance per square inch, which is the right measure when bench area is finite.",
-                  "Affordability extends past the instrument itself through Waters' support structures — APS expert training, FlexCHOICE system service, and FlexUP trade-ins and technological upgrades.",
-                  "Note that these footprint and efficiency claims are stated against \"most other instruments in its class\" and \"equivalent competitor products\" without naming the comparators, so they're best treated as directional rather than benchmarked."
+                  "Affordability extends past the instrument itself through Waters' support structures — APS expert training, FlexCHOICE system service, and FlexUP trade-ins and technological upgrades."
                 ],
                 "columnHeaders": { "label": "What the lab needs", "value": "How Xevo TQ-S cronos delivers it" },
                 "note": "Share the available bench width and the lab's power and cooling constraints, and installation feasibility gets confirmed before commitment.",
@@ -1939,7 +1944,7 @@
               }
             ],
             "eyebrow": "Xevo TQ Line Selector",
-            "ctaNote": "Recommends Xevo TQ-S cronos, TQ-S micro, TQ-XS, or TQ Absolute XR. Routes to a system-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2011,9 +2016,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Software and Compatibility Checker",
-            "emptyState": "Flags waters_connect restrictions on UPC2, M-Class, ASAP, ESCi, ionKey, and nanoflow, and confirms the viable combination",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2042,7 +2047,7 @@
                 { "title": "Sample availability", "hint": "Standard volumes, or sample-limited", "choices": "Standard volumes; Sample-limited" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the source set and flags APGC, ionKey, or nanoflow upgrade paths. Routes to a source-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -2144,8 +2149,8 @@
                 "values": [
                   "5–9%",
                   "3–8%",
-                  "Not published on the product page",
-                  "Not published on the product page"
+                  "",
+                  ""
                 ]
               },
               {
@@ -2176,9 +2181,12 @@
                 ]
               }
             ],
-            "disclaimer": "The instructive comparison is with cronos. Identical footprint, identical mass range, identical MRM speed, identical acquisition modes and detector — the differences are one sensitivity step, three additional ion sources (APGC, ionKey, nanoflow), and APGC chromatographic compatibility. Against that, cronos uniquely supports ACQUITY Arc and returned marginally tighter RSD in the mycotoxin study. Both entry systems run faster MRM than TQ-XS and TQ Absolute XR, so a large panel with adequate clean-up may genuinely suit this end of the line better.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The instructive comparison is with cronos. Identical footprint, identical mass range, identical MRM speed, identical acquisition modes and detector — the differences are one sensitivity step, three additional ion sources (APGC, ionKey, nanoflow), and APGC chromatographic compatibility. Against that, cronos uniquely supports ACQUITY Arc and returned marginally tighter RSD in the mycotoxin study. Both entry systems run faster MRM than TQ-XS and TQ Absolute XR, so a large panel with adequate clean-up may genuinely suit this end of the line better."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2882,7 +2890,7 @@
             ],
             "eyebrow": "Sensitivity Tier Selector",
             "lead": "Compare Xevo TQ-XS against other systems in the Xevo TQ family.",
-            "ctaNote": "Recommends Xevo TQ-S cronos, TQ-S micro, TQ-XS, or TQ Absolute XR. Routes to Inkarp for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2924,10 +2932,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to Inkarp for a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Software and Compliance Planner",
             "lead": "Confirm the right software and compliance setup for your regulated environment.",
-            "emptyState": "Confirms the right software and interface configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },

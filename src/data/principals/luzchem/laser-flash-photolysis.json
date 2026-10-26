@@ -117,7 +117,7 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Wavelength Range and Configuration Selector",
             "lead": "Match your study to the right wavelength range and thermal configuration.",
             "disclaimer": "",
@@ -162,7 +162,7 @@
             ],
             "eyebrow": "Time Scale and Application Planner",
             "lead": "Confirm the system covers your target measurement timescale.",
-            "ctaNote": "Confirms coverage and flags whether the built-in amplifier applies. Routes to us for an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -210,10 +210,13 @@
                 ]
               }
             ],
-            "disclaimer": "All three share the same core system, digitizer, and detector, the choice is purely about which wavelength window your chemistry needs.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three share the same core system, digitizer, and detector, the choice is purely about which wavelength window your chemistry needs."
+            ]
           },
 
           "applicationsExplorer": {

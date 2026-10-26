@@ -181,7 +181,7 @@
             ],
             "eyebrow": "Material and Chemistry Selector",
             "lead": "Confirm whether PEEK or steel is the right slot-die material for your formulation.",
-            "ctaNote": "Recommends PEEK Series or Steel Series. Routes to Inkarp for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -220,10 +220,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to Inkarp for a full-setup quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Width and Viscosity Matcher",
             "lead": "Find the right FOM PEEK slot-die head width for your coating width and formulation.",
-            "emptyState": "Confirms FOM SD 25 fit or recommends a wider PEEK head (SD 50, SD 100, SD 200)",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -726,7 +726,7 @@
             ],
             "eyebrow": "Material and Chemistry Selector",
             "lead": "Confirm whether PEEK or steel is the right slot-die material for your formulation.",
-            "ctaNote": "Recommends PEEK Series or Steel Series. Routes to Inkarp for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -765,10 +765,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to Inkarp for a full-setup quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Width and Viscosity Matcher",
             "lead": "Find the right FOM PEEK slot-die head width for your coating width and formulation.",
-            "emptyState": "Confirms FOM SD 50 fit or recommends SD 25, SD 100, or SD 200",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1274,7 +1274,7 @@
             ],
             "eyebrow": "Material and Chemistry Selector",
             "lead": "Confirm whether PEEK or steel is the right slot-die material for your formulation.",
-            "ctaNote": "Recommends PEEK Series or Steel Series. Routes to Inkarp for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1313,10 +1313,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to Inkarp for a full-setup quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Width and Viscosity Matcher",
             "lead": "Find the right FOM PEEK slot-die head width for your coating width and formulation.",
-            "emptyState": "Confirms FOM SD 100 fit or recommends SD 25, SD 50, or SD 200",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1849,7 +1849,7 @@
               }
             ],
             "eyebrow": "Coating Width and Head Size Selector",
-            "ctaNote": "Recommends FOM SD 25, SD 50, SD 100, or SD 200. Routes to a head-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1879,7 +1879,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends custom shim design and meniscus guide requirement. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1932,9 +1932,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a formulation-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Formulation Compatibility Checker",
-            "emptyState": "Confirms fit within the 1 cPs to >100,000 cPs range and PEEK chemical resistance",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2119,9 +2119,12 @@
                 ]
               }
             ],
-            "disclaimer": "All four share PEEK construction and the design approach — custom shims and meniscus guides, effortless disassembly, FOM alignment design. Width is the primary differentiator, and the choice usually comes down to the widest coating required against how much precursor material each run can afford to consume. Detailed specifications for the SD 25, SD 50, and SD 100 heads are on their own pages; confirm the specific figures when comparing directly.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All four share PEEK construction and the design approach — custom shims and meniscus guides, effortless disassembly, FOM alignment design. Width is the primary differentiator, and the choice usually comes down to the widest coating required against how much precursor material each run can afford to consume. Detailed specifications for the SD 25, SD 50, and SD 100 heads are on their own pages; confirm the specific figures when comparing directly."
+            ]
           },
 
           "serviceMap": {

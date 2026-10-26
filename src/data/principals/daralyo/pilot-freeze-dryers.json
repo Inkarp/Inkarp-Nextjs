@@ -115,9 +115,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Condenser Configuration Selector",
-            "emptyState": "Recommends single or INFINITY double condenser",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -167,7 +167,7 @@
               }
             ],
             "eyebrow": "Compliance and Data Needs Selector",
-            "ctaNote": "Confirms software and condenser add-ons for compliance. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -211,9 +211,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same core chamber, compressor options, and optional equipment — the difference is purely how condenser capacity is managed once it's reached.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same core chamber, compressor options, and optional equipment — the difference is purely how condenser capacity is managed once it's reached."
+            ]
           },
 
           "applicationsExplorer": {
@@ -517,11 +520,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Runs per week", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Runs per week", "hint": "", "input": "number", "choices": "" },
                 { "title": "Average delay per condenser reset", "hint": "Time input", "input": "text", "choices": "" },
-                { "title": "Number of users sharing the unit", "hint": "Number input", "input": "number", "choices": "" }
+                { "title": "Number of users sharing the unit", "hint": "", "input": "number", "choices": "" }
               ],
-              "ctaNote": "Estimates weekly time saved with INFINITY cycling. Routes to a throughput-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -639,9 +642,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Shelf Configuration Selector",
-            "emptyState": "Recommends 1+1 or 2+1 shelf setup",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -690,7 +693,7 @@
               }
             ],
             "eyebrow": "Clean Environment and Compliance Checker",
-            "ctaNote": "Confirms the right optional equipment for the environment. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -734,9 +737,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations run on the same condenser, control software, and fluid recirculation system. The difference is purely shelf layout.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations run on the same condenser, control software, and fluid recirculation system. The difference is purely shelf layout."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1050,7 +1056,7 @@
                 { "title": "Current development stage", "hint": "Early formulation or pre-validation", "choices": "Early formulation; Pre-validation" },
                 { "title": "Batch frequency", "hint": "Occasional or continuous development runs", "choices": "Occasional; Continuous development runs" }
               ],
-              "ctaNote": "Confirms how directly settings transfer to production scale. Routes to a scale-up-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1165,9 +1171,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Shelf and Condenser Configuration Selector",
-            "emptyState": "Recommends shelf and condenser setup",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1216,7 +1222,7 @@
               }
             ],
             "eyebrow": "Data Acquisition and Compliance Checker",
-            "ctaNote": "Confirms the right optional equipment for the requirement. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1267,9 +1273,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same base software, condenser system, and optional equipment. The difference is purely shelf layout.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same base software, condenser system, and optional equipment. The difference is purely shelf layout."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1586,7 +1595,7 @@
                 { "title": "Target production equipment", "hint": "Confirmed or still being decided", "choices": "Confirmed; Still being decided" },
                 { "title": "Batch value", "hint": "Standard or high-added-value product", "choices": "Standard; High-added-value product" }
               ],
-              "ctaNote": "Confirms how directly settings transfer to full production. Routes to a scale-up-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }

@@ -84,7 +84,7 @@
                 "key": "targetFlowRate",
                 "label": "Target flow rate",
                 "question": "Target flow rate",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -107,9 +107,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Skid Sizing and Pressure Selector",
-            "emptyState": "Recommends the matching Pharma Skid configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -160,7 +160,7 @@
               }
             ],
             "eyebrow": "Validation and Compliance Checker",
-            "ctaNote": "Confirms the right validation and design configuration. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -185,7 +185,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms the right optional equipment package. Routes to an options-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -228,9 +228,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same Ariete Series core, cGMP/GAMP5 validation, and optional equipment list. The difference is the level of sterility built into the design.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same Ariete Series core, cGMP/GAMP5 validation, and optional equipment list. The difference is the level of sterility built into the design."
+            ]
           },
 
           "applicationsExplorer": {

@@ -95,7 +95,7 @@
                 "key": "ramAvailable",
                 "label": "RAM available",
                 "question": "RAM available",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -111,16 +111,16 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a setup-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "System Requirements Checker",
-            "emptyState": "Confirms whether the system meets minimum or recommended specs",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
 
           "suitability": {
             "ctaLabel": "Talk to Product Expert",
-            "ctaNote": "Confirms validation and reporting setup. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "title": "Does the lab need regulatory-ready documentation?",
             "description": "Select the lab's compliance requirement, and see how IQ/OQ validation fits.",
             "fields": [
@@ -172,7 +172,7 @@
             {
               "sectionId": "troubleshooting-scenario-guide",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Shows the relevant Sparq troubleshooting path. Routes to direct support if escalation is needed.",
+              "ctaNote": "",
               "eyebrow": "Troubleshooting Scenario Guide",
               "title": "What's the issue, and how does Sparq help?",
               "description": "Select the type of problem encountered, and see how Sparq resolves it.",
@@ -244,9 +244,12 @@
                 ]
               }
             ],
-            "disclaimer": "Labs still running ezControl are encouraged to reach out about upgrading to an Affilabs.core-compatible instrument.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Labs still running ezControl are encouraged to reach out about upgrading to an Affilabs.core-compatible instrument."
+            ]
           },
 
           "applicationsExplorer": {

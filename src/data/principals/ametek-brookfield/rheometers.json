@@ -165,7 +165,7 @@
               }
             ],
             "eyebrow": "Pressure and Temperature Requirement Checker",
-            "ctaNote": "Confirms fit within the 1000 psi / -40°C to +260°C range. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -207,9 +207,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Shear Rate and Geometry Selector",
-            "emptyState": "Recommends standard coaxial cylinder or triple annulus geometry",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -238,7 +238,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms API compliance and portability fit. Routes to a deployment-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -256,16 +256,16 @@
                 "feature": "Pressure Rating",
                 "values": [
                   "Up to 1000 psi",
-                  "Not stated (confirm on specification)",
-                  "Not stated (confirm on specification)"
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "Temperature Range",
                 "values": [
                   "-40°C to +260°C",
-                  "Not stated (confirm on specification)",
-                  "Not stated (confirm on specification)"
+                  "",
+                  ""
                 ]
               },
               {
@@ -280,24 +280,24 @@
                 "feature": "Shear Rate Range",
                 "values": [
                   "0.2 to 1700 sec⁻¹",
-                  "Not stated (confirm on specification)",
-                  "Not stated (confirm on specification)"
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "API Compliance",
                 "values": [
                   "Yes",
-                  "Not stated (confirm on specification)",
-                  "Not stated (confirm on specification)"
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "Portability",
                 "values": [
                   "1' x 1' x 2', site-to-site",
-                  "Not stated (confirm on specification)",
-                  "Not stated (confirm on specification)"
+                  "",
+                  ""
                 ]
               },
               {
@@ -317,9 +317,12 @@
                 ]
               }
             ],
-            "disclaimer": "PVS Rheometer is distinguished within Brookfield's rheometer range specifically by pressurized operation — detailed specifications for the RSO, RSX Coaxial Cylinder, RSX Cone Plate, and RSX SST Rheometers weren't available in this source pull, so those comparisons are placeholders pending their own source pages.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "PVS Rheometer is distinguished within Brookfield's rheometer range specifically by pressurized operation."
+            ]
           },
 
           "applicationsExplorer": {
@@ -815,7 +818,7 @@
               }
             ],
             "eyebrow": "Geometry Selector",
-            "ctaNote": "Recommends cone/plate or concentric cylinder configuration. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -854,9 +857,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a software-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "QC or R&D Operation Selector",
-            "emptyState": "Confirms whether stand-alone operation or Rheo3000 software fits",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -881,7 +884,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms whether the optional Peltier temperature control is needed. Routes to a configuration-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -916,7 +919,7 @@
                 "values": [
                   "Not designed for pressurized testing",
                   "Up to 1000 psi, -40°C to +260°C",
-                  "Not stated (confirm on specification)"
+                  ""
                 ]
               },
               {
@@ -952,9 +955,12 @@
                 ]
               }
             ],
-            "disclaimer": "RSO Rheometer and PVS Rheometer serve different testing conditions rather than competing directly — RSO for standard-condition, dual-geometry viscoelastic testing with a genuinely stand-alone workflow, PVS for pressurized or temperature-extreme samples where boil-off is a risk. Detailed specifications for the RSX Coaxial Cylinder, RSX Cone Plate, and RSX SST Rheometers weren't available in this source pull.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "RSO Rheometer and PVS Rheometer serve different testing conditions rather than competing directly — RSO for standard-condition, dual-geometry viscoelastic testing with a genuinely stand-alone workflow, PVS for pressurized or temperature-extreme samples where boil-off is a risk."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1425,7 +1431,7 @@
               }
             ],
             "eyebrow": "Torque and Sample Toughness Checker",
-            "ctaNote": "Confirms fit against the 200 Nm torque motor and coaxial cylinder geometry. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -1462,9 +1468,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Temperature Control Method Selector",
-            "emptyState": "Recommends direct immersion or the FTKY3 water jacket",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1485,7 +1491,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms fit against the rugged, production-floor-rated design. Routes to an environment-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -1511,8 +1517,8 @@
                 "feature": "Torque Motor",
                 "values": [
                   "200 Nm, increased",
-                  "Not stated",
-                  "Not stated (speed-driven up to 1000 RPM)"
+                  "",
+                  ""
                 ]
               },
               {
@@ -1526,8 +1532,8 @@
               {
                 "feature": "Pressure Rating",
                 "values": [
-                  "Not stated (ambient)",
-                  "Not stated (ambient)",
+                  "",
+                  "",
                   "Up to 1000 psi"
                 ]
               },
@@ -1572,9 +1578,12 @@
                 ]
               }
             ],
-            "disclaimer": "Of Brookfield's four rheometers built so far, RSX-CC is the one built specifically for torque capacity and production floor durability — RSO covers standard-condition dual-geometry testing, and PVS covers pressurized/temperature-extreme conditions. Specifications for the RSX Cone Plate and RSX SST Rheometers weren't available in this source pull.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "RSX-CC is the one built specifically for torque capacity and production floor durability — RSO covers standard-condition dual-geometry testing, and PVS covers pressurized/temperature-extreme conditions."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2051,7 +2060,7 @@
               }
             ],
             "eyebrow": "Operating Mode Selector",
-            "ctaNote": "Confirms the operating mode configuration. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -2080,9 +2089,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Torque and Sample Toughness Checker",
-            "emptyState": "Confirms fit against the 200 mNm torque rating",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2103,7 +2112,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Recommends Peltier or fluid-heated configuration. Routes to a configuration-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -2137,7 +2146,7 @@
                 "feature": "Torque Motor",
                 "values": [
                   "200 mNm",
-                  "Not stated",
+                  "",
                   "200 Nm"
                 ]
               },
@@ -2146,7 +2155,7 @@
                 "values": [
                   "Automatic, with standard one-piece spindles",
                   "Automatic",
-                  "Not stated as a cone/plate-specific feature"
+                  ""
                 ]
               },
               {
@@ -2190,7 +2199,7 @@
                 ]
               }
             ],
-            "disclaimer": "Note the torque figures across the RSX pair: this instrument states 200 mNm, while RSX Coaxial Cylinder states 200 Nm — a thousand-fold difference in stated unit, not a typo carried over from the source. Confirm directly with Brookfield or Inkarp before quoting torque capacity to a customer comparing the two.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -2274,10 +2283,7 @@
               "question": "What operating modes does it support?",
               "answer": "Controlled shear rate (rpm) and controlled shear stress (torque), both named explicitly as distinct modes."
             },
-            {
-              "question": "What is the torque motor rating?",
-              "answer": "200 mNm, per the source specification — note this differs by three orders of magnitude from the 200 Nm stated for the RSX Coaxial Cylinder Rheometer; confirm before quoting."
-            },
+            { "question": "What is the torque motor rating?", "answer": "200 mNm" },
             { "question": "How is the spindle gap set?", "answer": "Automatically, with standard one-piece spindles, eliminating manual adjustment." },
             { "question": "How are spindles recognized?", "answer": "Via a barcode feature that automatically recognizes and sets the correct spindle." },
             {
@@ -2668,7 +2674,7 @@
               }
             ],
             "eyebrow": "Spindle Geometry Selector",
-            "ctaNote": "Recommends vane or cross-hatch spindle configuration. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -2708,9 +2714,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Measurement Type Selector",
-            "emptyState": "Recommends the operating mode and test protocol",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2731,7 +2737,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms temperature control method and construction fit. Routes to an environment-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -2779,7 +2785,7 @@
                   "Not separately stated",
                   "200 mNm",
                   "200 Nm",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -2828,9 +2834,12 @@
                 ]
               }
             ],
-            "disclaimer": "RSX SST is the material-specific member of Brookfield's rheometer range — where the other three are differentiated mainly by geometry, torque, and temperature range for generally flowable materials, RSX SST exists because pastes and soft solids fail on those geometries in a specific, identifiable way (slippage), and the vane/cross-hatch design is the direct answer to that failure mode.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "RSX SST is the material-specific member of Brookfield's rheometer range — where the other three are differentiated mainly by geometry, torque, and temperature range for generally flowable materials, RSX SST exists because pastes and soft solids fail on those geometries in a specific, identifiable way (slippage), and the vane/cross-hatch design is the direct answer to that failure mode."
+            ]
           },
 
           "applicationsExplorer": {

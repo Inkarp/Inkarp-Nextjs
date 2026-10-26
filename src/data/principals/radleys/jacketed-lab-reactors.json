@@ -426,7 +426,7 @@
                 { "title": "Budget consideration", "hint": "Limited or flexible", "choices": "Limited; Flexible" }
               ],
               "lead": "The Pro vs Starter selector recommends the right configuration tier for your lab.",
-              "ctaNote": "Recommends Pro or Starter. Confirms Starter can move to Pro later.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -443,7 +443,7 @@
                 { "title": "Target temperature input", "hint": "-70°C to +230°C", "input": "text", "choices": "" }
               ],
               "lead": "The scale and temperature planner confirms fit for your target vessel volume and temperature range.",
-              "ctaNote": "Confirms coverage within Reactor-Ready Flex's range. Routes to Inkarp for a scale-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -555,9 +555,12 @@
                 ]
               }
             ],
-            "disclaimer": "Starter isn't a dead end — any of its features can be upgraded to Pro when your needs or budget change.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Starter isn't a dead end — any of its features can be upgraded to Pro when your needs or budget change."
+            ]
           },
 
           "serviceMap": {
@@ -1101,7 +1104,7 @@
                 { "title": "Target volume input", "hint": "Up to 1.1 L or up to 2.2 L working volume", "choices": "Up to 1.1 L; Up to 2.2 L working volume" }
               ],
               "lead": "The vessel size and kit selector recommends the right filter vessel for your batch volume.",
-              "ctaNote": "Recommends the 1 L or 2 L filter vessel. Shows the confirmed Cat. No. for vessel-only or full kit. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1117,7 +1120,7 @@
                 { "title": "Temperature range input", "hint": "-30°C through +180°C", "input": "text", "choices": "" }
               ],
               "lead": "The filter material selector recommends PTFE or PEEK based on your process conditions.",
-              "ctaNote": "Recommends PTFE (up to 120°C) or PEEK (up to 180°C). Confirms both materials offer strong chemical resistance. Routes to Inkarp for a material-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1229,9 +1232,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both sizes share identical flange dimensions and sealing components — the choice comes down entirely to batch volume.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both sizes share identical flange dimensions and sealing components — the choice comes down entirely to batch volume."
+            ]
           },
 
           "serviceMap": {
@@ -1651,10 +1657,10 @@
                   "hint": "Matched across both vessels, or independent per vessel",
                   "choices": "Matched across both vessels; Independent per vessel"
                 },
-                { "title": "Single-vessel use case", "hint": "Confirms whether the blanking plug option applies", "input": "text", "choices": "" }
+                { "title": "Single-vessel use case", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The circulator configuration selector recommends the right manifold kit for your temperature requirements.",
-              "ctaNote": "Recommends RR121305 (single) or RR121310 (double). Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1675,7 +1681,7 @@
                 { "title": "Transfer mechanism", "hint": "Vacuum or pump, where applicable", "choices": "Vacuum; Pump; Where applicable" }
               ],
               "lead": "The two-vessel use case planner confirms which application mode fits your reaction.",
-              "ctaNote": "Confirms circulator setup and vessel matching. Routes to Inkarp for an application-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1787,9 +1793,12 @@
                 ]
               }
             ],
-            "disclaimer": "Duo isn't Flex with an extra vessel bolted on — the manifold choice and AVA's fluid transfer capability make it a genuinely different working pattern, not just double capacity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Duo isn't Flex with an extra vessel bolted on — the manifold choice and AVA's fluid transfer capability make it a genuinely different working pattern, not just double capacity."
+            ]
           },
 
           "serviceMap": {
@@ -2223,7 +2232,7 @@
                 }
               ],
               "lead": "The vessel size and lid selector confirms the right vessel and lid for your batch volume and probe needs.",
-              "ctaNote": "Confirms the specific vessel size. Notes when the lower support plate is required (30/35/50 L).",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2245,7 +2254,7 @@
                 }
               ],
               "lead": "The stirrer and framework configurator confirms compatibility and framework options for your setup.",
-              "ctaNote": "Routes to Inkarp for a framework-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2343,8 +2352,8 @@
                 "feature": "Plant-Scale Geometry",
                 "values": [
                   "1.25:1 ratio (most sizes)",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  ""
                 ]
               },
               {
@@ -2364,9 +2373,12 @@
                 ]
               }
             ],
-            "disclaimer": "These three cover genuinely different scales and working patterns, not a simple size ladder — Pilot's vessel range doesn't overlap with Flex or Duo at all.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These three cover genuinely different scales and working patterns, not a simple size ladder — Pilot's vessel range doesn't overlap with Flex or Duo at all."
+            ]
           },
 
           "serviceMap": {
@@ -2792,10 +2804,10 @@
                   "hint": "Unusual geometry, hazardous atmosphere, optical access, biological process, or multi-vessel system",
                   "choices": "Unusual geometry; Hazardous atmosphere; Optical access; Biological process; Multi-vessel system"
                 },
-                { "title": "Volume input", "hint": "Confirms fit within 100 mL to 30 L", "input": "text", "choices": "" }
+                { "title": "Volume input", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The custom requirement scoping tool confirms whether your need falls within Custom Jacketed Reaction Systems' scope.",
-              "ctaNote": "Confirms whether this requirement is covered by custom design. Routes to Inkarp for a direct scoping conversation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2808,20 +2820,10 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Volume and vessel count",
-                  "hint": "Checks against Flex/Duo (100 mL-5 L) or Pilot (5-50 L) ranges",
-                  "choices": "Checks against Flex/Duo (100 mL-5 L); Pilot (5-50 L) ranges"
-                },
-                { "title": "Geometry requirement", "hint": "Checks against standard vessel shapes", "input": "text", "choices": "" },
-                {
-                  "title": "Special feature need",
-                  "hint": "Flags when optical windows, split jackets, or non-standard geometry require custom",
-                  "choices": "Flags when optical windows; Split jackets; Non-standard geometry require custom"
-                }
+                { "title": "Geometry requirement", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The standard vs custom decision helper confirms whether a standard Reactor-Ready product covers your need before you go custom.",
-              "ctaNote": "Confirms standard product fit, or routes to custom scoping.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2940,9 +2942,12 @@
                 ]
               }
             ],
-            "disclaimer": "Custom isn't a premium tier above the standard range — it's the path for requirements the standard range was never designed to cover. Most processes are genuinely well served by Flex, Duo, Pilot, or Filter first.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Custom isn't a premium tier above the standard range — it's the path for requirements the standard range was never designed to cover. Most processes are genuinely well served by Flex, Duo, Pilot, or Filter first."
+            ]
           },
 
           "serviceMap": {
@@ -3405,7 +3410,7 @@
                 { "title": "Typical volume", "hint": "50 to 500 mL", "input": "text", "choices": "" }
               ],
               "lead": "The round-bottom flask migration guide shows what Mini actually adds over your current setup.",
-              "ctaNote": "Shows what jacketed control adds over the current method. Routes to Inkarp for a migration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -3422,7 +3427,7 @@
                 { "title": "Budget consideration", "hint": "Limited or flexible", "choices": "Limited; Flexible" }
               ],
               "lead": "The Pro vs Starter selector recommends the right configuration tier for Mini.",
-              "ctaNote": "Recommends Pro or Starter. Confirms Starter can move to Pro via the Draindown Manifold Kit.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -3534,9 +3539,12 @@
                 ]
               }
             ],
-            "disclaimer": "Mini isn't a cut-down Flex — it carries the same full temperature range and control, just matched to a smaller working volume where a round-bottom flask would otherwise be the default.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Mini isn't a cut-down Flex — it carries the same full temperature range and control, just matched to a smaller working volume where a round-bottom flask would otherwise be the default."
+            ]
           },
 
           "serviceMap": {

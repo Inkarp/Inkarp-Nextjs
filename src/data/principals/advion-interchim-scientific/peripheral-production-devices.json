@@ -179,10 +179,6 @@
                   {
                     "title": "This shares its software with the rest of the puriFlash line.",
                     "text": "ClearPeak, the same platform confirmed on both 5.250 and 5.400-UV."
-                  },
-                  {
-                    "title": "CarouXel is a real reference I'm flagging, not assuming details about.",
-                    "text": "Mentioned once, tied to the tenfold claim, not detailed further in this source."
                   }
                 ],
                 "cards": [
@@ -362,7 +358,7 @@
                 { "title": "Volume input", "hint": "500 µL to 50 mL", "input": "text", "choices": "" }
               ],
               "lead": "The injection volume and cleaning planner confirms fit for your sample volumes.",
-              "ctaNote": "Confirms compatibility. Confirms automatic cleaning applies between your injections. Routes to Inkarp for a volume-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -383,7 +379,7 @@
                 }
               ],
               "lead": "The throughput multiplier estimator shows the potential productivity gain from adding AS-1.",
-              "ctaNote": "Shows potential gain, referencing the confirmed tenfold figure where applicable. Routes to Inkarp for a throughput-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -442,9 +438,12 @@
                 ]
               }
             ],
-            "disclaimer": "The tenfold gain is specifically tied to multi-column or CarouXel coupling — single-column users still gain the unattended workflow benefit, just not necessarily that specific multiplier.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The tenfold gain is specifically tied to multi-column or CarouXel coupling — single-column users still gain the unattended workflow benefit, just not necessarily that specific multiplier."
+            ]
           },
 
           "applicationsExplorer": {
@@ -889,7 +888,7 @@
                 { "title": "Typical run duration", "hint": "Time per evaporation batch", "input": "text", "choices": "" }
               ],
               "lead": "The nitrogen and time savings estimator shows the potential efficiency gain from switching to XS-Vap.",
-              "ctaNote": "Estimates time and nitrogen reduction against current usage. Routes to Inkarp for a setup-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -906,7 +905,7 @@
                 { "title": "Volume per sample", "hint": "1 mL to 250 mL", "input": "text", "choices": "" }
               ],
               "lead": "The sample volume and position planner confirms fit for your typical batch.",
-              "ctaNote": "Confirms coverage within XS-Vap's capacity. Routes to Inkarp for a batch-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -958,9 +957,12 @@
                 ]
               }
             ],
-            "disclaimer": "The needle-height adjustment isn't a minor feature — it's the direct mechanism behind both confirmed efficiency claims.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The needle-height adjustment isn't a minor feature — it's the direct mechanism behind both confirmed efficiency claims."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1217,10 +1219,7 @@
                     "title": "This is the smaller-scale sibling, by both position count and volume range.",
                     "text": "6 positions and up to 60 mL, versus XS-Vap's 90 positions and up to 250 mL."
                   },
-                  {
-                    "title": "Time and nitrogen savings aren't quantified here the way they are on XS-Vap's page.",
-                    "text": "The mechanism is the same; the specific percentages aren't restated, so none are assumed."
-                  },
+                  { "title": "Time and nitrogen savings aren't quantified here the way they are on XS-Vap's page.", "text": "The mechanism is the same." },
                   {
                     "title": "It's built to sit close at hand.",
                     "text": "Compact enough to fit underneath a ventilation system without disrupting your bench layout."
@@ -1305,7 +1304,7 @@
                   {
                     "title": "Heating and Nitrogen Efficiency",
                     "summary": "The aluminum block, heating rate, and nitrogen supply",
-                    "description": "Heating and nitrogen use both run through independently controlled systems here, worth understanding as their own specs rather than assumed to match XS-Vap's.",
+                    "description": "",
                     "columns": [
                       "Point",
                       "What to Check"
@@ -1403,7 +1402,7 @@
                 { "title": "Vial sizes input", "hint": "Multiple sizes, 2 to 60 mL", "choices": "Multiple sizes; 2 to 60 mL" }
               ],
               "lead": "The mixed vessel configuration planner confirms the right adapter setup for your batch.",
-              "ctaNote": "Confirms independent adapter assignment per position. Confirms fit within the 6-position capacity. Routes to Inkarp for an adapter-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1419,7 +1418,7 @@
                 { "title": "Target temperature input", "hint": "Up to 100°C", "input": "text", "choices": "" }
               ],
               "lead": "The heating rate and target temperature planner estimates time to reach your set point.",
-              "ctaNote": "Calculates against the confirmed 4°C/min heating rate. Confirms the 1-2 bar independent supply requirement. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1467,7 +1466,7 @@
                 "feature": "Heating Rate",
                 "values": [
                   "4°C/min confirmed",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1481,13 +1480,13 @@
                 "feature": "Mixed Vessel Sizes",
                 "values": [
                   "Confirmed",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
                 "feature": "Quantified Time/Nitrogen Savings",
                 "values": [
-                  "Not stated",
+                  "",
                   "Up to 30% time, 50% nitrogen"
                 ]
               },
@@ -1506,9 +1505,12 @@
                 ]
               }
             ],
-            "disclaimer": "These aren't tiers of the same product — puriVap-6 trades scale for mixed-vessel flexibility and a hotter, faster-heating aluminum block; XS-Vap trades that flexibility for far higher throughput and quantified efficiency gains.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These aren't tiers of the same product — puriVap-6 trades scale for mixed-vessel flexibility and a hotter, faster-heating aluminum block; XS-Vap trades that flexibility for far higher throughput and quantified efficiency gains."
+            ]
           },
 
           "applicationsExplorer": {

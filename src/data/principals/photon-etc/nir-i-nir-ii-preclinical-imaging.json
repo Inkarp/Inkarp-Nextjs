@@ -196,7 +196,7 @@
               }
             ],
             "eyebrow": "Application Fit Selector",
-            "ctaNote": "Confirms application alignment and recommends field of view and channel configuration. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -250,9 +250,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a multiplexing-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Multiplexing Channel Planner",
-            "emptyState": "Recommends the emission channel and illumination configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -289,7 +289,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms field of view and stage setup for the workflow. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -360,9 +360,12 @@
                 ]
               }
             ],
-            "disclaimer": "The comparison isn't close on depth or contrast — it's the reason NIR-II imaging exists as a category. Where a study's targets sit near the surface and scattering isn't a limiting factor, a NIR-I system remains adequate. Where the structure of interest is buried under bone, tissue, or pigment, that's precisely the gap IR VIVO™ was built to close.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The comparison isn't close on depth or contrast — it's the reason NIR-II imaging exists as a category. Where a study's targets sit near the surface and scattering isn't a limiting factor, a NIR-I system remains adequate. Where the structure of interest is buried under bone, tissue, or pigment, that's precisely the gap IR VIVO™ was built to close."
+            ]
           },
 
           "applicationsExplorer": {

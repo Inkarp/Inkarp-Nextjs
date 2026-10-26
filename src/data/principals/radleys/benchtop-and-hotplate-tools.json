@@ -394,7 +394,7 @@
                 }
               ],
               "lead": "The compatible system checker confirms hotplate fit for your existing or planned equipment.",
-              "ctaNote": "Confirms 135 mm plate fit and shared spec overlap. Shows which of the hotplate's temperature/speed range your product actually uses. Routes to Inkarp for a system-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -412,10 +412,10 @@
                   "hint": "Block temperature or direct solution temperature",
                   "choices": "Block temperature; Direct solution temperature"
                 },
-                { "title": "Precision requirement", "hint": "Confirms whether the ±0.2K sensor accuracy is needed", "input": "text", "choices": "" }
+                { "title": "Precision requirement", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The temperature control mode selector confirms the right sensor setup for your precision needs.",
-              "ctaNote": "Shows the Pt1000 insertion point for your chosen mode. Routes to Inkarp for a sensor-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -520,9 +520,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Pt1000 sensor is optional, not required — most standard applications run well on the hotplate's own digital control alone.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Pt1000 sensor is optional, not required — most standard applications run well on the hotplate's own digital control alone."
+            ]
           },
 
           "serviceMap": {
@@ -742,7 +745,6 @@
                     "text": "Diethyl ether is a confirmed, named exception where Findenser isn't recommended."
                   },
                   {
-                    "title": "The cost case is real and quantified, if regionally sourced.",
                     "text": "UK reference figures show a single water condenser running 4 hours a day costing over £500 a year, with Findenser paying for itself in under 6 months against that basis."
                   },
                   {
@@ -936,7 +938,7 @@
                 { "title": "Solvent volume input", "hint": "Up to 1 L", "input": "text", "choices": "" }
               ],
               "lead": "The Standard or Mini Findenser selector recommends the right size for your flask and solvent volume.",
-              "ctaNote": "Recommends Standard or Mini. Flags if diethyl ether is selected.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -953,7 +955,7 @@
                 { "title": "Daily hours input", "hint": "Hours the condenser runs", "input": "number", "choices": "" }
               ],
               "lead": "The water cost calculator estimates the potential savings from switching to Findenser.",
-              "ctaNote": "Estimates daily, monthly, and annual water use. Routes to Inkarp for a savings-specific discussion.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1065,9 +1067,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both sizes share the same core sealed-jacket design and solvent retention performance — the choice is purely about matching flask scale.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both sizes share the same core sealed-jacket design and solvent retention performance — the choice is purely about matching flask scale."
+            ]
           },
 
           "serviceMap": {
@@ -1491,7 +1496,7 @@
                 { "title": "Flask configuration", "hint": "Single flask, multi-well, or Florentine", "choices": "Single flask; Multi-well; Florentine" }
               ],
               "lead": "The block finish and configuration selector recommends the right Heat-On setup for your chemistry.",
-              "ctaNote": "Recommends fluoropolymer or anodised. Notes when a PTFE Safety Cover applies.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1512,7 +1517,7 @@
                 }
               ],
               "lead": "The hotplate compatibility checker confirms fit for your existing hotplate.",
-              "ctaNote": "Confirms direct fit or the required adapter. Routes to Inkarp for a compatibility-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1624,9 +1629,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both finishes share the same well design and heating performance — the choice is purely about chemical resistance and budget.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both finishes share the same well design and heating performance — the choice is purely about chemical resistance and budget."
+            ]
           },
 
           "serviceMap": {
@@ -2035,7 +2043,7 @@
                 { "title": "Flask volume input", "hint": "Up to 2 L", "input": "text", "choices": "" }
               ],
               "lead": "The bowl size selector confirms the right Cool-It size for your flask.",
-              "ctaNote": "Recommends Small (400mL) or Large (2L). Confirms 145mm or 135mm adapter requirement. Routes to Inkarp for a size-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2052,7 +2060,7 @@
                 { "title": "Reaction duration", "hint": "Typical hold time needed", "input": "text", "choices": "" }
               ],
               "lead": "The cold bath duration planner estimates how much longer Cool-It holds temperature versus your current setup.",
-              "ctaNote": "Shows the 5x or 2x retention improvement, and whether the lid helps close any remaining gap. Routes to Inkarp for a duration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2164,9 +2172,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both sizes share identical performance and construction — the choice is purely about matching your flask volume.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both sizes share identical performance and construction — the choice is purely about matching your flask volume."
+            ]
           },
 
           "serviceMap": {
@@ -2575,7 +2586,7 @@
                 { "title": "Target volumes", "hint": "Up to 500 mL", "input": "text", "choices": "" }
               ],
               "lead": "The block configuration selector recommends MonoBlock or PolyBlock for your vessel setup.",
-              "ctaNote": "Recommends MonoBlock or PolyBlock. Notes when a smaller flask needs an insert.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2597,7 +2608,7 @@
                 }
               ],
               "lead": "The manifold and clamp planner confirms the right distribution and support setup.",
-              "ctaNote": "Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2702,9 +2713,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both share the same material, temperature rating, and reducing insert compatibility — the choice is purely about how uniform your vessel sizes actually are.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share the same material, temperature rating, and reducing insert compatibility — the choice is purely about how uniform your vessel sizes actually are."
+            ]
           },
 
           "serviceMap": {

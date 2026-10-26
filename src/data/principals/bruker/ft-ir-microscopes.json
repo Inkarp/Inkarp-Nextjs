@@ -431,7 +431,7 @@
               ],
               "disclaimer": "",
               "lead": "The FT-IR vs QCL imaging speed calculator shows how long your specific imaging task takes under each mode.",
-              "ctaNote": "Shows estimated imaging time at 0.1 or 6.4 mm² per second. Reminds that QCL speed comes with narrower spectral information per image.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -451,7 +451,7 @@
               ],
               "disclaimer": "",
               "lead": "The detector and objective selector recommends a hardware configuration based on your application.",
-              "ctaNote": "Confirms whether LN2-cooled or TE-cooled MCT applies. Recommends an objective from 3.5x to 40x. Summarizes the recommended detector and objective set.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -558,9 +558,12 @@
                 ]
               }
             ],
-            "disclaimer": "Bruker positions these two deliberately as opposites in philosophy, not as a basic-versus-advanced tier. Hyperion is for researchers who want the control; LUMOS II is for those who'd rather not manage it.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Bruker positions these two deliberately as opposites in philosophy, not as a basic-versus-advanced tier. Hyperion is for researchers who want the control; LUMOS II is for those who'd rather not manage it."
+            ]
           },
 
           "serviceMap": {
@@ -1033,7 +1036,7 @@
               ],
               "disclaimer": "",
               "lead": "The imaging speed and mode selector shows which LUMOS II imaging mode fits your task, with real speed figures.",
-              "ctaNote": "Recommends single-point FT-IR, FPA imaging, or ILIM. Shows the real mm²/s and resolution figure for the recommended mode. Flags when Hyperion's higher ILIM speed or full manual control may suit better.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1045,21 +1048,12 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Sample height input",
-                  "hint": "Checks against the 40 mm maximum",
-                  "choices": "Within 40 mm maximum; Exceeds 40 mm, confirm with Inkarp"
-                },
-                { "title": "Sample shape selector", "hint": "Flat, rough, round, or filter-shaped", "choices": "Flat; Rough; Round; Filter-shaped" },
-                {
-                  "title": "Access requirement",
-                  "hint": "Confirms fit within the 270°, three-sided access",
-                  "choices": "Confirms fit within the 270°; Three-sided access"
-                }
+                { "title": "Sample height input", "hint": "", "choices": "Within 40 mm maximum; Exceeds 40 mm, confirm with Inkarp" },
+                { "title": "Sample shape selector", "hint": "Flat, rough, round, or filter-shaped", "choices": "Flat; Rough; Round; Filter-shaped" }
               ],
               "disclaimer": "",
               "lead": "The ATR and sample compatibility checker confirms whether your sample fits LUMOS II's stage and ATR design.",
-              "ctaNote": "Flags where 3D FocusFusion or circular FPA measurement applies.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1187,9 +1181,12 @@
                 ]
               }
             ],
-            "disclaimer": "The two aren't a basic-versus-advanced pair. LUMOS II is faster at full-field FPA imaging and needs no cryogen; Hyperion is faster at single-wavelength ILIM imaging and gives complete manual control. Which one fits depends on how much control your work actually needs.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The two aren't a basic-versus-advanced pair. LUMOS II is faster at full-field FPA imaging and needs no cryogen; Hyperion is faster at single-wavelength ILIM imaging and gives complete manual control. Which one fits depends on how much control your work actually needs."
+            ]
           },
 
           "serviceMap": {

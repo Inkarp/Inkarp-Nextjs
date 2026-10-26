@@ -104,9 +104,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Configuration and Application Selector",
-            "emptyState": "Recommends VCX-1500-220, VCX-1500A-220, or VCX-1500HV-220",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -146,7 +146,7 @@
               }
             ],
             "eyebrow": "Facility Readiness Checker",
-            "ctaNote": "Confirms fit or flags what needs upgrading. Routes to us for an installation-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -185,7 +185,7 @@
               {
                 "feature": "Cooling",
                 "values": [
-                  "Not stated as required",
+                  "",
                   "Compressed air, required"
                 ]
               },
@@ -211,9 +211,12 @@
                 ]
               }
             ],
-            "disclaimer": "These sit at opposite ends of the same manufacturer's range, entry-level bench work versus full production-scale processing.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These sit at opposite ends of the same manufacturer's range, entry-level bench work versus full production-scale processing."
+            ]
           },
 
           "applicationsExplorer": {
@@ -627,9 +630,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a probe-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Probe and Volume Selector",
-            "emptyState": "Recommends the standard 38mm or optional 25mm probe. Flags whether VCX-1500 might fit better for smaller volumes",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -670,7 +673,7 @@
               }
             ],
             "eyebrow": "Configuration and Flow Cell Selector",
-            "ctaNote": "Recommends VCX-2000-220, VCX-2000A-220, or VCX-2000FP-220. Routes to us for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -702,7 +705,7 @@
               {
                 "feature": "Optional Probe",
                 "values": [
-                  "Not stated",
+                  "",
                   "25mm, for 1-10L flexibility"
                 ]
               },
@@ -756,9 +759,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both share the same 220V/20A electrical requirement and SKU structure (standard, probe-free, flow cell package), with VCX-2000 sitting a tier above on power and flow cell speed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share the same 220V/20A electrical requirement and SKU structure (standard, probe-free, flow cell package), with VCX-2000 sitting a tier above on power and flow cell speed."
+            ]
           },
 
           "applicationsExplorer": {

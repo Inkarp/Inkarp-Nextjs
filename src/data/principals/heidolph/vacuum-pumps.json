@@ -587,13 +587,13 @@
                 },
                 {
                   "title": "Vapour load selector",
-                  "hint": "Shows condensation risk at different vapour loads",
+                  "hint": "",
                   "choices": "Low vapour load; Moderate vapour load; High vapour load"
                 }
               ],
               "disclaimer": "",
               "lead": "The gas ballast comparison visualiser shows the trade-off between ultimate vacuum depth and pump protection.",
-              "ctaNote": "Displays the resulting ultimate vacuum. Shows condensation risk with ballast on versus off.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -618,16 +618,11 @@
                   "title": "Process type per unit",
                   "hint": "Adjusts expected vacuum demand per evaporator",
                   "choices": "Light vacuum demand; Moderate vacuum demand; Heavy vacuum demand"
-                },
-                {
-                  "title": "Recommendation",
-                  "hint": "Flags if your setup needs a second pump or a different model",
-                  "choices": "Flags if your setup needs a second pump; A different model"
                 }
               ],
               "disclaimer": "",
               "lead": "The multi-evaporator capacity planner shows how connecting multiple rotary evaporators affects available suction from one pump.",
-              "ctaNote": "Shows whether the configuration stays within the pump's rated capacity.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -905,9 +900,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Hei-VAC range splits by control method: valve and manual control here, against RPM regulation on the Vario models. Choose based on how precisely your process needs the vacuum held, not just the depth reached.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Hei-VAC range splits by control method: valve and manual control here, against RPM regulation on the Vario models. Choose based on how precisely your process needs the vacuum held, not just the depth reached."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -1616,13 +1614,13 @@
                 },
                 {
                   "title": "Fit indicator",
-                  "hint": "Confirms whether the Valve Tec suits your solvent",
+                  "hint": "",
                   "choices": "Valve Tec fits well; Valve Tec fits with gas ballast; Consider a deeper-vacuum model"
                 }
               ],
               "disclaimer": "",
               "lead": "The solvent boiling point matcher shows whether the Valve Tec's vacuum range suits your solvent, and when gas ballast helps.",
-              "ctaNote": "Shows the resulting vacuum, 12 mbar off or 20 mbar on. Points to the Valve Control if deeper vacuum is needed.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1645,7 +1643,7 @@
               ],
               "disclaimer": "",
               "lead": "The bench footprint comparison shows how the Valve Tec's compact size compares with a larger multi-station vacuum pump.",
-              "ctaNote": "Shows the Valve Tec's 338 x 183 x 143 mm footprint to scale. Shows the space saved on a single-station setup.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1907,7 +1905,7 @@
               {
                 "feature": "Multi-Evaporator Capacity",
                 "values": [
-                  "Not specified, single-station",
+                  "",
                   "Up to 3",
                   "Confirmed by Inkarp"
                 ]
@@ -1929,9 +1927,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Valve Tec and Valve Control share a control method but serve different capacity needs. Choose by what your solvent actually requires, not by which pump has the bigger numbers.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Valve Tec and Valve Control share a control method but serve different capacity needs. Choose by what your solvent actually requires, not by which pump has the bigger numbers."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -2135,7 +2136,7 @@
             },
             {
               "title": "Compact, Light Build",
-              "description": "At 6 kg, the lightest pump in the Hei-VAC range covered so far."
+              "description": ""
             }
           ],
           "technicalSpecs": [
@@ -2629,16 +2630,11 @@
                   "title": "Target vacuum slider",
                   "hint": "Sets the vacuum level to hold",
                   "choices": "Shallow target vacuum; Mid-range target vacuum; Deep target vacuum"
-                },
-                {
-                  "title": "Bump risk indicator",
-                  "hint": "Flags higher bumping risk on the stepped, valve-controlled trace",
-                  "choices": "Flags higher bumping risk on the stepped; Valve-controlled trace"
                 }
               ],
               "disclaimer": "",
               "lead": "The RPM regulation visualiser shows how continuous speed control holds vacuum steady, compared with a fixed-speed, valve-throttled pump.",
-              "ctaNote": "Shows a smooth curve for RPM regulation versus a stepped curve for valve control.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -2666,7 +2662,7 @@
               ],
               "disclaimer": "",
               "lead": "The Hei-VAP evaporator compatibility check confirms whether the Vario Station pairs directly with your rotary evaporator, or whether a different model fits better.",
-              "ctaNote": "Confirms direct pairing, or flags where a vacuum valve is needed instead.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -2945,9 +2941,12 @@
                 ]
               }
             ],
-            "disclaimer": "RPM regulation and valve control are two different philosophies for holding a vacuum, not two tiers of the same idea. Choose based on whether you want the pump to self-regulate or want manual/valve control instead.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "RPM regulation and valve control are two different philosophies for holding a vacuum, not two tiers of the same idea. Choose based on whether you want the pump to self-regulate or want manual/valve control instead."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -3668,14 +3667,14 @@
                 },
                 {
                   "title": "Bath temperature guidance",
-                  "hint": "Suggests a gentler bath setting based on the vacuum reached",
+                  "hint": "",
                   "input": "text",
                   "choices": ""
                 }
               ],
               "disclaimer": "",
               "lead": "The high-boiling solvent vacuum planner shows how deep vacuum lowers the effective boiling point for solvents like DMF and DMSO, with and without gas ballast.",
-              "ctaNote": "Shows the estimated distillation temperature at the selected vacuum.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -3691,19 +3690,14 @@
               ],
               "options": [
                 {
-                  "title": "Hei-VAP model selector",
-                  "hint": "Confirms Expert Control, Ultimate Control, or checks other pairings",
-                  "choices": "Confirms Expert Control; Ultimate Control; Checks other pairings"
-                },
-                {
                   "title": "Setup readiness summary",
-                  "hint": "Lists what's confirmed and what Inkarp still needs to finalise",
+                  "hint": "",
                   "choices": "Confirmed items; Items Inkarp still needs to finalise"
                 }
               ],
               "disclaimer": "",
               "lead": "The coolant and setup requirements checker confirms what's needed alongside the Vario Control before installation.",
-              "ctaNote": "Flags whether a DN 6–8 mm coolant line is available. Confirms whether this is already planned separately.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -3958,8 +3952,8 @@
                 "feature": "Coolant Connection",
                 "values": [
                   "Yes, DN 6–8 mm",
-                  "Not specified",
-                  "Not specified"
+                  "",
+                  ""
                 ]
               },
               {
@@ -3995,9 +3989,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Vario Control is the deepest-vacuum, most specialised pump in the range, built specifically for solvents that are both high-boiling and easily condensable.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Vario Control is the deepest-vacuum, most specialised pump in the range, built specifically for solvents that are both high-boiling and easily condensable."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",

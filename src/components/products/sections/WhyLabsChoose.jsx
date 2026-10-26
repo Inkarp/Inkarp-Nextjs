@@ -27,7 +27,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
   return (
     <section id="benefits" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-[1180px]">
-        <div className="relative mb-8 max-w-3xl">
+        <div className="relative mb-8">
           <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink">
             <span className="inline-block size-2 bg-red" />
             Why labs choose it

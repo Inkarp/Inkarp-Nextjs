@@ -392,7 +392,7 @@
               ],
               "disclaimer": "",
               "lead": "The cooling capacity matcher recommends 400W or 1000W based on your connected equipment.",
-              "ctaNote": "Recommends 400W or 1000W. Routes to Inkarp for a capacity-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -417,7 +417,7 @@
               ],
               "disclaimer": "",
               "lead": "The bench space and mobile cart planner confirms whether the mobile cart accessory fits your layout.",
-              "ctaNote": "Recommends standard benchtop or mobile cart placement. Routes to Inkarp for accessory confirmation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -515,7 +515,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the DuraChill Portable Chiller will be added once its own configuration is confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -995,7 +995,7 @@
               ],
               "disclaimer": "",
               "lead": "The pump type and capacity selector recommends a configuration based on your fluid handling and cooling needs.",
-              "ctaNote": "Recommends Turbine or Positive Displacement. Recommends 850W, 1.4kW, 1.74kW, or 2.9kW.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1008,16 +1008,11 @@
               ],
               "options": [
                 { "title": "Day-of-month slider", "hint": "Advances through a 30-day operating cycle", "input": "text", "choices": "" },
-                {
-                  "title": "UV and liquid level status",
-                  "hint": "Displays continuous automatic protection throughout the cycle",
-                  "input": "text",
-                  "choices": ""
-                }
+                { "title": "UV and liquid level status", "hint": "", "input": "text", "choices": "" }
               ],
               "disclaimer": "",
               "lead": "The self-maintenance timeline shows what runs automatically over a month of operation, compared with a conventional chiller.",
-              "ctaNote": "Shows the automatic monthly filter change. Marks the manual interventions a standard chiller would need at the same points.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1097,21 +1092,21 @@
                 "feature": "Heating Capability",
                 "values": [
                   "Up to 70°C, built in",
-                  "Not stated"
+                  ""
                 ]
               },
               {
                 "feature": "Self-Maintaining Systems",
                 "values": [
                   "DynamicFilter, UV light, liquid level sensor",
-                  "Not stated"
+                  ""
                 ]
               },
               {
                 "feature": "Pump Options",
                 "values": [
                   "Turbine or Positive Displacement",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1129,9 +1124,12 @@
                 ]
               }
             ],
-            "disclaimer": "The DuraChill Portable line sits above the Benchtop line in capacity and capability, not as a simple upgrade but with genuinely different features, automated maintenance and dual heat/cool capability, that the Benchtop line doesn't offer.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The DuraChill Portable line sits above the Benchtop line in capacity and capability, not as a simple upgrade but with genuinely different features, automated maintenance and dual heat/cool capability, that the Benchtop line doesn't offer."
+            ]
           },
 
           "serviceMap": {

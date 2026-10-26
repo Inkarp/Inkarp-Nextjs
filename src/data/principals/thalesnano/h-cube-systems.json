@@ -490,7 +490,7 @@
               }
             ],
             "lead": "The reaction type matcher confirms whether your target reaction is supported and what kind of chemistry it involves.",
-            "ctaNote": "Shows whether it's a hydrogen gas reaction or another confirmed type. Routes to Inkarp for CatCart and parameter confirmation.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
           },
@@ -595,7 +595,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the H-Cube Pro will be added once its own configuration is confirmed. Note also: ThalesNano's H-Cube Advance, a separate sibling system supporting 13 gases beyond hydrogen, is referenced on this source page but is a different product from the Pro and isn't built yet either.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -660,7 +660,7 @@
                 }
               ],
               "lead": "The flow hydrogenation process walkthrough steps through the real six-stage reaction mechanism.",
-              "ctaNote": "Shows pressure, temperature, and flow rate at the relevant stage. Shows the catalyst staying in the cartridge during the reaction stage. Shows the catalyst-free product reaching the collection vial.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1114,7 +1114,7 @@
               }
             ],
             "lead": "The gas selection and MFC configurator confirms whether your target reaction needs in-situ hydrogen or an external gas.",
-            "ctaNote": "Confirms in-situ generation or external gas inlet. Shows the 99.9% purity figure where in-situ hydrogen applies. Routes to Inkarp for gas supply and configuration confirmation.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
           },
@@ -1240,9 +1240,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Advance isn't a bigger Mini Plus, it's a genuinely different capability tier, built for gas flexibility and fleet automation the Mini Plus was never designed to cover.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Advance isn't a bigger Mini Plus, it's a genuinely different capability tier, built for gas flexibility and fleet automation the Mini Plus was never designed to cover."
+            ]
           },
 
           "serviceMap": {
@@ -1302,15 +1305,10 @@
                   "title": "Workflow selector",
                   "hint": "Single reaction, multi-step synthesis, or high-throughput screening",
                   "choices": "Single reaction; Multi-step synthesis; High-throughput screening"
-                },
-                {
-                  "title": "Temperature/pressure need",
-                  "hint": "Confirms whether the Reactor Module or Phoenix Flow Reactor applies",
-                  "choices": "Confirms whether the Reactor Module; Phoenix Flow Reactor applies"
                 }
               ],
               "lead": "The fleet and automation planner recommends which modules fit your workflow.",
-              "ctaNote": "Confirms whether the THS Controller and Autosampler fit. Recommends the specific modules for the selected workflow.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }

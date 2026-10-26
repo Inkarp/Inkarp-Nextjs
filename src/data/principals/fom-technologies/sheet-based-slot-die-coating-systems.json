@@ -103,10 +103,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Substrate Fit Checker",
             "lead": "Confirm whether your substrate size and type fit FOM scalarSC.",
-            "emptyState": "Confirms substrate compatibility and installation fit",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -158,7 +158,7 @@
             ],
             "eyebrow": "Spin Coating Upgrade Planner",
             "lead": "See how FOM scalarSC compares to your current spin coating process.",
-            "ctaNote": "Confirms how FOM scalarSC fits your upgrade path. Routes to us for a transition-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -568,10 +568,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Substrate and Flatness Checker",
             "lead": "Confirm whether FOM vectorSC's microporous holder fits your substrate needs.",
-            "emptyState": "Confirms substrate compatibility and holder fit",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -621,7 +621,7 @@
             ],
             "eyebrow": "Remote Operation Planner",
             "lead": "Confirm whether FOM vectorSC's remote capability fits your team's workflow.",
-            "ctaNote": "Confirms how cloud-based control fits your workflow. Routes to us for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1026,9 +1026,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for an application-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Substrate and Application Selector",
-            "emptyState": "Confirms substrate holder and workflow fit",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1069,7 +1069,7 @@
               }
             ],
             "eyebrow": "Pilot-Line Expansion Planner",
-            "ctaNote": "Recommends the right module combination. Routes to us for an expansion-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1113,9 +1113,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both share the FOM alpha platform's focus on automation and reproducibility; the choice comes down to whether roll-to-roll capability matters for your process.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share the FOM alpha platform's focus on automation and reproducibility; the choice comes down to whether roll-to-roll capability matters for your process."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1509,9 +1512,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a format-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Sheet vs Roll-to-Roll Process Planner",
-            "emptyState": "Confirms sheet-to-sheet fit, or flags roll-to-roll confirmation needed",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1548,7 +1551,7 @@
               {
                 "condition": "default",
                 "title": "FOM alphaSC or FOM alphaR2R — Which Fits?",
-                "body": "FOM alphaR2R shares its design philosophy with FOM alphaSC, eliminating experimental error, supporting flexible and rigid substrates, and targeting both academic and industrial users. Where FOM alphaSC's own page details specific mechanisms, a microporous substrate holder, automated head positioning, and a protocol library, FOM alphaR2R's page doesn't restate those same details directly, so they're not assumed to carry over without confirmation.",
+                "body": "FOM alphaR2R shares its design philosophy with FOM alphaSC, eliminating experimental error, supporting flexible and rigid substrates, and targeting both academic and industrial users.",
                 "tags": [
                   "Roll-to-Roll Capability",
                   "Same Design Philosophy as FOM alphaSC"
@@ -1556,7 +1559,7 @@
               }
             ],
             "eyebrow": "FOM Alpha Family Selector",
-            "ctaNote": "Recommends FOM alphaSC or FOM alphaR2R. Routes to us for a system-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1607,9 +1610,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both share the FOM alpha platform's core design philosophy; the choice comes down to whether roll-to-roll capability or the confirmed alphaSC-specific tools matter more for your work.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share the FOM alpha platform's core design philosophy; the choice comes down to whether roll-to-roll capability or the confirmed alphaSC-specific tools matter more for your work."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1685,7 +1691,7 @@
             { "question": "What substrates does the FOM alphaR2R support?", "answer": "Both flexible and rigid substrates on the same platform." },
             {
               "question": "How is FOM alphaR2R different from FOM alphaSC?",
-              "answer": "FOM alphaR2R adds roll-to-roll capability to the sheet-to-sheet format; FOM alphaSC's own page confirms specific tools like a microporous substrate holder and a protocol library that aren't restated on the alphaR2R page."
+              "answer": "FOM alphaR2R adds roll-to-roll capability to the sheet-to-sheet format."
             },
             {
               "question": "Is this system suitable for production, or only research?",
@@ -1840,7 +1846,7 @@
                 "tabSummary": "How it fits alongside FOM alphaSC",
                 "body": [
                   "FOM alphaR2R positioning: sheet-to-sheet with roll-to-roll capability, alongside FOM alphaSC.",
-                  "FOM alphaR2R shares its design philosophy with FOM alphaSC, eliminating experimental error, supporting flexible and rigid substrates, and targeting both academic and industrial users. Where FOM alphaSC's own page details specific mechanisms, a microporous substrate holder, automated head positioning, and a protocol library, FOM alphaR2R's page doesn't restate those same details directly, so they're not assumed to carry over without confirmation."
+                  "FOM alphaR2R shares its design philosophy with FOM alphaSC, eliminating experimental error, supporting flexible and rigid substrates, and targeting both academic and industrial users."
                 ],
                 "groups": [
                   {

@@ -103,7 +103,7 @@ export default function MethodComparison({ data }) {
 
         {/* Optional paragraphs before the table and notes after it, from a source document. */}
         {data?.paragraphs?.map((paragraph, index) => (
-          <p className="-mt-4 mb-6 max-w-3xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+          <p className="-mt-4 mb-6 text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
         ))}
         <ComparisonTable cleanText={cleanText} columns={columns} featureLabel={featureLabel} rows={rows} />
 
@@ -116,7 +116,7 @@ export default function MethodComparison({ data }) {
         ))}
 
         {data?.notes?.map((note, index) => (
-          <p className="mt-4 max-w-3xl text-sm leading-7 text-black" key={index}>{note}</p>
+          <p className="mt-4 text-sm leading-7 text-black" key={index}>{note}</p>
         ))}
         <SectionDisclaimer>
           {disclaimer ?? 'This is a generalised comparison with a typical basic manual setup for illustration - not a comparison with any specific competitor product. Capabilities depend on the exact equipment compared.'}

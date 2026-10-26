@@ -262,7 +262,7 @@
             ],
             "disclaimer": "",
             "lead": "The in-plant to transport container matcher shows the transport-certified equivalent of the container you already use.",
-            "ctaNote": "Shows the corresponding transport-certified order number. Notes when your size has no direct transport-certified equivalent.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
           },
@@ -281,7 +281,7 @@
               ],
               "disclaimer": "",
               "lead": "The transport mode compliance checker confirms which certification applies to your shipment.",
-              "ctaNote": "Shows ADR, RID, IMDG Code, ICAO-TI, or GGVSEB as applicable. Confirms coverage where a shipment uses more than one mode. Routes to Inkarp for shipment-specific documentation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -332,7 +332,7 @@
                 "tags": []
               }
             ],
-            "disclaimer": "Application highlights are indicative summaries based on the confirmed configuration. Confirm specifics for your facility and safety requirements with Inkarp."
+            "disclaimer": "Application highlights are indicative summaries. Confirm specifics for your facility and safety requirements with Inkarp."
           },
 
           "comparison": {
@@ -387,9 +387,12 @@
                 ]
               }
             ],
-            "disclaimer": "These aren't competing products. Together, the Transportation Container line and the in-plant Can, Canister, and Barrel lines cover the complete lifecycle of a flammable liquid, from storage and dispensing on-site to certified movement off-site.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These aren't competing products. Together, the Transportation Container line and the in-plant Can, Canister, and Barrel lines cover the complete lifecycle of a flammable liquid, from storage and dispensing on-site to certified movement off-site."
+            ]
           },
 
           "serviceMap": {
@@ -553,7 +556,7 @@
                   "The technical specifications of the Transportation Containers with UN-Approval include five-standard UN approval, 0.6 to 1.2 mm construction, and a confirmed 1 to 25-liter range.",
                   "Five separate regulatory frameworks apply, depending on how the container actually travels, and this design is approved under all of them at once.",
                   "ADR covers road transport across Europe; RID covers rail; the IMDG Code governs sea freight; ICAO-TI applies to air transport; and GGVSEB is the German national law governing dangerous goods carriage. A shipment that changes transport mode partway through, truck to ship, for example, doesn't need a different container for each leg.",
-                  "Product expert note: Tell our team your shipping route and transport modes, and Inkarp will confirm the certification your shipment actually needs."
+                  "Tell our team your shipping route and transport modes, and Inkarp will confirm the certification your shipment actually needs."
                 ],
                 "description": "The technical specifications of the Transportation Containers with UN-Approval include five-standard UN approval, 0.6 to 1.2 mm construction, and a confirmed 1 to 25-liter range.",
                 "columns": [

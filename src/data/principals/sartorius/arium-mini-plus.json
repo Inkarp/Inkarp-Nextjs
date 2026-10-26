@@ -92,7 +92,7 @@
                 "key": "dailyWaterDemandL",
                 "label": "Daily water demand (L)",
                 "question": "Daily water demand (L)",
-                "hint": "Number input, up to 10",
+                "hint": "Up to 10",
                 "input": "number",
                 "options": []
               },
@@ -119,9 +119,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Daily Water Demand and Filter Selector",
-            "emptyState": "Recommends the right filter and UV configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -187,7 +187,7 @@
               }
             ],
             "eyebrow": "Contamination Risk Assessment",
-            "ctaNote": "Shows how the closed Bagtank system reduces contamination risk. Routes to a workflow-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -203,12 +203,12 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Available bench width", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Available bench width", "hint": "", "input": "number", "choices": "" },
                 { "title": "Water connection type", "hint": "Direct tap connection or other", "choices": "Direct tap connection; Other" },
                 { "title": "UV lamp preference", "hint": "With or without", "choices": "With; Without" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms installation compatibility. Routes to an installation-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -244,9 +244,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same Bagtank storage, display, and dispensing system. The difference is purely the presence of the integrated UV lamp.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same Bagtank storage, display, and dispensing system. The difference is purely the presence of the integrated UV lamp."
+            ]
           },
 
           "applicationsExplorer": {

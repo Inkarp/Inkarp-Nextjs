@@ -112,9 +112,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Xenon Series Configuration Selector",
-            "emptyState": "Recommends SolSim2, LZCX-ICH1, or LZCX-Xe",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -155,7 +155,7 @@
               }
             ],
             "eyebrow": "Solar Simulator Technology Planner",
-            "ctaNote": "Recommends the Xenon Series or LED-SOL. Routes to us for a technology-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -217,10 +217,13 @@
                 ]
               }
             ],
-            "disclaimer": "All three Xenon Series configurations share the same core platform; LED-SOL is a genuinely different LED-based technology within the same broader Solar range.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three Xenon Series configurations share the same core platform; LED-SOL is a genuinely different LED-based technology within the same broader Solar range."
+            ]
           },
 
           "applicationsExplorer": {

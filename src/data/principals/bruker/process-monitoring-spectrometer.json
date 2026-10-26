@@ -425,11 +425,11 @@
                   "hint": "Reactor, pipeline, conveyor belt, or multiple points",
                   "choices": "Reactor; Pipeline; Conveyor belt; Multiple points"
                 },
-                { "title": "Number of measurement points", "hint": "Checks against the 6-head simultaneous capacity", "input": "number", "choices": "" }
+                { "title": "Number of measurement points", "hint": "", "input": "number", "choices": "" }
               ],
               "disclaimer": "",
               "lead": "The contact vs contactless measurement selector recommends a probe type and MATRIX-F II variant for your process point.",
-              "ctaNote": "Confirms whether a fiber optic probe or a contactless head applies. Recommends classical, emission, or duplex.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -450,7 +450,7 @@
               ],
               "disclaimer": "",
               "lead": "The installation and hazard area planner confirms the right housing and variant for your site.",
-              "ctaNote": "Recommends NEMA 5/IP65 free-standing or rack-mount configuration. Confirms when the ATEX-rated exproof variant is required.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -561,7 +561,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for MATRIX-MF and BEAM will be added once their own configurations are confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -1024,7 +1024,7 @@
               ],
               "disclaimer": "",
               "lead": "The ATR probe selector recommends a specific probe based on your reaction vessel and hazard classification.",
-              "ctaNote": "Recommends IN350-T, IN351, IN355, or IN356-EX. Flags where silicone or another crystal option applies instead.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1036,11 +1036,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Number of reactions input", "hint": "Checks against the 6-reaction multiplexer capacity", "input": "number", "choices": "" }
+                { "title": "Number of reactions input", "hint": "", "input": "number", "choices": "" }
               ],
               "disclaimer": "",
               "lead": "The multi-reaction monitoring planner confirms whether your simultaneous monitoring needs fit within one MATRIX-MF instrument.",
-              "ctaNote": "Confirms probe requirements across multiple monitoring points. Confirms fit within one instrument, or flags the need for additional units. Routes to Inkarp for a multi-point configuration quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1151,9 +1151,12 @@
                 ]
               }
             ],
-            "disclaimer": "MATRIX-MF and MATRIX-F II aren't competing options — they cover different spectral regions and different measurement philosophies. Some processes use both.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "MATRIX-MF and MATRIX-F II aren't competing options — they cover different spectral regions and different measurement philosophies. Some processes use both."
+            ]
           },
 
           "serviceMap": {
@@ -1614,7 +1617,7 @@
               ],
               "disclaimer": "",
               "lead": "The mounting option selector recommends the right hardware for your installation point.",
-              "ctaNote": "Confirms whether Tri-Clamp flanges apply. Recommends Tri-Clamp, brackets, or the laboratory stand. Routes to Inkarp for a mounting-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1634,7 +1637,7 @@
               ],
               "disclaimer": "",
               "lead": "The uptime and redundancy calculator shows what dual source mode actually protects against on a running line.",
-              "ctaNote": "Shows measurement stopping until a service visit. Shows automatic switchover to the backup source. Displays the over-250-scans-per-minute rate continuing uninterrupted.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1732,16 +1735,16 @@
                 "feature": "Redundancy",
                 "values": [
                   "Dual source mode, automatic failover",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "Scan Speed",
                 "values": [
                   "Over 250 scans per minute",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  ""
                 ]
               },
               {
@@ -1761,9 +1764,12 @@
                 ]
               }
             ],
-            "disclaimer": "The three cover different jobs, not different tiers of the same one. BEAM mounts directly on solid-handling process points, MATRIX-F II covers flexible contact or contactless monitoring, and MATRIX-MF puts a probe directly into the reaction itself.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The three cover different jobs, not different tiers of the same one. BEAM mounts directly on solid-handling process points, MATRIX-F II covers flexible contact or contactless monitoring, and MATRIX-MF puts a probe directly into the reaction itself."
+            ]
           },
 
           "serviceMap": {

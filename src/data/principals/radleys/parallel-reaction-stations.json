@@ -398,7 +398,7 @@
                 { "title": "Target volume input", "hint": "1 to 20 mL", "input": "text", "choices": "" }
               ],
               "lead": "The tube volume and configuration selector confirms the right tube type for your reaction.",
-              "ctaNote": "Recommends standard (5-20 mL) or reduced-volume (1-5 mL) tubes. Confirms cap and gas distribution setup needed. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -419,7 +419,7 @@
                 }
               ],
               "lead": "The temperature and cooling planner confirms the right configuration for your target temperature range.",
-              "ctaNote": "Confirms whether the optional HDPE reservoir is needed. Routes to Inkarp for a temperature-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -517,9 +517,12 @@
                 ]
               }
             ],
-            "disclaimer": "The cooling reservoir is a real, confirmed accessory, not a built-in capability — worth specifying explicitly if sub-ambient work is part of your screening.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The cooling reservoir is a real, confirmed accessory, not a built-in capability — worth specifying explicitly if sub-ambient work is part of your screening."
+            ]
           },
 
           "serviceMap": {
@@ -928,15 +931,10 @@
               ],
               "options": [
                 { "title": "Target temperature input", "hint": "Ambient down to -78°C", "input": "text", "choices": "" },
-                {
-                  "title": "Duration input",
-                  "hint": "Confirms whether the insulated core holds the target over your reaction time",
-                  "input": "text",
-                  "choices": ""
-                }
+                { "title": "Duration input", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The cooling mixture selector recommends the right freezing mixture for your target temperature.",
-              "ctaNote": "Recommends dry ice/acetone or a suitable alternative. Routes to Inkarp for a cooling-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -954,10 +952,10 @@
                   "hint": "Single-phase cooling, or heating followed by cooling (or vice versa)",
                   "choices": "Single-phase cooling; Heating followed by cooling (or vice versa)"
                 },
-                { "title": "Existing equipment", "hint": "Confirms whether you already own a standard Carousel 12 Plus base", "input": "text", "choices": "" }
+                { "title": "Existing equipment", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The heating-to-cooling transfer planner confirms your setup for switching between phases.",
-              "ctaNote": "Confirms the reflux head transfer process for your sequence. Routes to Inkarp for a full-system or reservoir-only quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1076,9 +1074,12 @@
                 ]
               }
             ],
-            "disclaimer": "These aren't competing options — most labs running both hot and cold parallel chemistry use both bases with the same shared reflux head, tubes, and hotplate.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These aren't competing options — most labs running both hot and cold parallel chemistry use both bases with the same shared reflux head, tubes, and hotplate."
+            ]
           },
 
           "serviceMap": {
@@ -1510,7 +1511,7 @@
                 }
               ],
               "lead": "The column chemistry selector recommends the right column for your work-up technique.",
-              "ctaNote": "Recommends 20 µm filtration, phase separation, silica, SCX, aminopropyl, or SAX acetate. Confirms 70 mL standard or flags an adapter requirement. Routes to Inkarp for a column-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1527,7 +1528,7 @@
                 { "title": "Flow speed requirement", "hint": "Gravity, or faster with SpeediFlow", "choices": "Gravity; Faster with SpeediFlow" }
               ],
               "lead": "The flow method and rack configuration planner confirms your setup for single-step or sequential work-up.",
-              "ctaNote": "Confirms 2-rack or 3-rack configuration. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1639,9 +1640,12 @@
                 ]
               }
             ],
-            "disclaimer": "Gravity handles most work, and SpeediFlow is there specifically for when it doesn't — not a required upgrade.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Gravity handles most work, and SpeediFlow is there specifically for when it doesn't — not a required upgrade."
+            ]
           },
 
           "serviceMap": {
@@ -1758,7 +1762,7 @@
             { "label": "Flask Sizes", "value": "5, 10, 25, 50, 100, 170, 250 mL" },
             { "label": "Sidearm Options", "value": "1 or 2 sidearms" },
             { "label": "Heating Range", "value": "Ambient to 180°C" },
-            { "label": "Temperature Accuracy", "value": "±1°C (heating performance) / ±0.5°C (temperature control section) — both stated in source" },
+            { "label": "Temperature Accuracy", "value": "±1°C (heating performance) / ±0.5°C (temperature control section)" },
             { "label": "Boiling Performance", "value": "6 flasks of water, under 25 minutes" },
             { "label": "Optional Sensor", "value": "Pt1000, block or solution control" },
             { "label": "Reflux Head", "value": "Water-cooled aluminium, removable inserts, spring clip" },
@@ -1817,7 +1821,7 @@
             },
             {
               "question": "What is the temperature accuracy?",
-              "answer": "The source states ±1°C for heating performance and ±0.5°C under temperature control; Inkarp can confirm which applies to your specific configuration."
+              "answer": "±1°C for heating performance and ±0.5°C under temperature control; Inkarp can confirm which applies to your specific configuration."
             },
             {
               "question": "What is the price of the Carousel 6 Plus Reaction Station in India?",
@@ -1836,7 +1840,7 @@
               { "value": "5 to 250 mL", "label": "Flask size range" },
               { "value": "Ambient to 180°C", "label": "Heating range" },
               { "value": "Under 25 minutes", "label": "Time to boil six flasks of water" },
-              { "value": "±1°C / ±0.5°C", "label": "Temperature accuracy (both stated, see discrepancy note)" },
+              { "value": "±1°C / ±0.5°C", "label": "Temperature accuracy" },
               { "value": "Modular", "label": "Integrates with Tornado, Breeze, Storm" },
               { "value": "Dean-Stark option", "label": "250 mL azeotropic flask" },
               { "value": "Rare earth elliptical", "label": "Stir bar type" }
@@ -1870,10 +1874,7 @@
                     "title": "This isn't a closed platform.",
                     "text": "Tornado, Breeze, and Storm all integrate with it, extending stirring or temperature control well beyond the base configuration."
                   },
-                  {
-                    "title": "Two accuracy figures appear in the source, and I'm not picking one for you.",
-                    "text": "±1°C is stated for heating performance; ±0.5°C is stated separately under temperature control."
-                  }
+                  { "text": "±1°C is stated for heating performance; ±0.5°C is stated separately under temperature control." }
                 ],
                 "cards": [
                   { "title": "5 to 250 mL", "description": "Full flask size range" },
@@ -2060,7 +2061,7 @@
                 { "title": "Sidearm requirement", "hint": "None, 1, or 2 sidearms", "choices": "None; 1; 2 sidearms" }
               ],
               "lead": "The flask size and reducing insert selector confirms the right flask and insert for your reaction volume.",
-              "ctaNote": "Confirms the matching flask size. Notes when a reducing insert is needed for a smaller flask in a larger well.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2080,7 +2081,7 @@
                 }
               ],
               "lead": "The modular add-on planner recommends the right extension module for your need.",
-              "ctaNote": "Recommends Tornado, Breeze, Storm, or Cooled Carousel 6. Confirms integration with the base Carousel 6 Plus. Routes to Inkarp for a module-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2206,9 +2207,12 @@
                 ]
               }
             ],
-            "disclaimer": "These aren't a size tier — flasks and tubes suit genuinely different workflows, and the choice comes down to which vessel your chemistry actually needs.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These aren't a size tier — flasks and tubes suit genuinely different workflows, and the choice comes down to which vessel your chemistry actually needs."
+            ]
           },
 
           "serviceMap": {
@@ -2623,10 +2627,10 @@
               ],
               "options": [
                 { "title": "Viscosity input", "hint": "Up to 10,000 mPa·s", "input": "text", "choices": "" },
-                { "title": "Existing stirrer torque", "hint": "Confirms whether your current stirrer needs the 2:1 ratio", "input": "text", "choices": "" }
+                { "title": "Existing stirrer torque", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The viscosity and stirrer speed selector confirms the right drive ratio for your sample.",
-              "ctaNote": "Recommends 1:1 or 2:1. Shows the achievable speed at that ratio.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2649,10 +2653,10 @@
                   "hint": "Standard or wide-neck flask for easier sample recovery",
                   "choices": "Standard; Wide-neck flask for easier sample recovery"
                 },
-                { "title": "Vortex concern", "hint": "Confirms whether baffled flasks apply", "input": "text", "choices": "" }
+                { "title": "Vortex concern", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The stirrer type and flask configuration selector recommends the right setup for your sample.",
-              "ctaNote": "Recommends stirrer shape and flask combination.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2732,7 +2736,7 @@
                 "feature": "Max Viscosity",
                 "values": [
                   "10,000 mPa·s",
-                  "Not stated for magnetic stirring"
+                  ""
                 ]
               },
               {
@@ -2764,9 +2768,12 @@
                 ]
               }
             ],
-            "disclaimer": "Tornado doesn't replace Carousel 6 Plus's magnetic stirring, it extends the same base unit for the samples magnetic stirring genuinely can't handle well.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Tornado doesn't replace Carousel 6 Plus's magnetic stirring, it extends the same base unit for the samples magnetic stirring genuinely can't handle well."
+            ]
           },
 
           "serviceMap": {
@@ -3184,7 +3191,7 @@
                 }
               ],
               "lead": "The automation integration checker confirms compatibility with your existing liquid handling setup.",
-              "ctaNote": "Confirms MTP-standard compatibility. Shows how the reaction block integrates into your existing process. Routes to Inkarp for an integration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -3201,7 +3208,7 @@
                 { "title": "Temperature input", "hint": "Ambient to 150°C", "input": "text", "choices": "" }
               ],
               "lead": "The volume and temperature planner confirms fit for your target reaction.",
-              "ctaNote": "Confirms coverage within GreenHouse Plus's range. Highlights V-Mag's stirring benefit at your target volume.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -3327,9 +3334,12 @@
                 ]
               }
             ],
-            "disclaimer": "These solve different scales of the same core problem — GreenHouse Plus trades reaction volume for position count and automation compatibility.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These solve different scales of the same core problem — GreenHouse Plus trades reaction volume for position count and automation compatibility."
+            ]
           },
 
           "serviceMap": {
@@ -3749,7 +3759,7 @@
                 { "title": "Position count", "hint": "8 or 24", "choices": "8; 24" }
               ],
               "lead": "The sample format and pin plate selector confirms the right configuration for your samples.",
-              "ctaNote": "Confirms the right interchangeable pin plate.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -3769,7 +3779,7 @@
                 }
               ],
               "lead": "The upgrade vs standalone path planner confirms the right installation path for your setup.",
-              "ctaNote": "Recommends the Blowdown Adaptor or the dedicated Blowdown Base. Confirms compatibility with your existing Carousel Stirring Hotplate. Routes to Inkarp for a path-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -3867,9 +3877,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both paths use the same interchangeable 8/24 pin plates and glass condenser trapping — the choice is purely about what hardware you already have.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both paths use the same interchangeable 8/24 pin plates and glass condenser trapping — the choice is purely about what hardware you already have."
+            ]
           },
 
           "serviceMap": {
@@ -4284,7 +4297,7 @@
                 }
               ],
               "lead": "The sequential purification planner confirms the right column pairing for your two-step work-up.",
-              "ctaNote": "Confirms upper and lower level column pairing. Notes when the upper plate should be removed instead.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -4300,7 +4313,7 @@
                 { "title": "Downstream need", "hint": "Analytical testing, or further synthesis", "choices": "Analytical testing; Further synthesis" }
               ],
               "lead": "The fraction collection format selector confirms the right collection setup for your downstream workflow.",
-              "ctaNote": "Recommends standard 24-well MTP or GreenHouse reaction block. Confirms fit with your existing GreenHouse equipment. Routes to Inkarp for a format-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -4426,9 +4439,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both solve parallel work-up, but at genuinely different scales and mechanisms — the column format and footprint aren't interchangeable between the two.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both solve parallel work-up, but at genuinely different scales and mechanisms — the column format and footprint aren't interchangeable between the two."
+            ]
           },
 
           "serviceMap": {
@@ -4845,7 +4861,7 @@
                 }
               ],
               "lead": "The full system builder confirms what you need to complete a Storm-based Parallel Process Reactor.",
-              "ctaNote": "Shows which of the four components are still needed. Confirms M24 compatibility for your chosen circulator. Routes to Inkarp for a full-system quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -4861,7 +4877,7 @@
                 { "title": "Brand selector", "hint": "Huber, Julabo, Lauda, or other", "choices": "Huber; Julabo; Lauda; Other" }
               ],
               "lead": "The circulator compatibility checker confirms fit for your specific circulator.",
-              "ctaNote": "Confirms M24 compatibility, or notes an adapter requirement. Shows achievable temperature range for your circulator. Routes to Inkarp for a circulator-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -4980,9 +4996,12 @@
                 ]
               }
             ],
-            "disclaimer": "This comparison is now confirmed identically on both products' own pages — the tradeoff is real and consistent: Storm trades response speed for range and stability; Breeze trades range and stability for response speed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "This comparison is now confirmed identically on both products' own pages — the tradeoff is real and consistent: Storm trades response speed for range and stability; Breeze trades range and stability for response speed."
+            ]
           },
 
           "serviceMap": {
@@ -5397,15 +5416,10 @@
                   "title": "Duration",
                   "hint": "Short, responsive changes, or extended stable holding",
                   "choices": "Short; Responsive changes; Extended stable holding"
-                },
-                {
-                  "title": "Temperature range needed",
-                  "hint": "Checks against Breeze's -30/+165°C or Storm's -65/+200°C",
-                  "choices": "Checks against Breeze's -30/+165°C; Storm's -65/+200°C"
                 }
               ],
               "lead": "The Breeze vs Storm selector recommends the right work station for your application.",
-              "ctaNote": "Recommends Breeze or Storm.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -5423,10 +5437,10 @@
                   "hint": "Carousel 6 Plus, Tornado, Heat-On, or other block",
                   "choices": "Carousel 6 Plus; Tornado; Heat-On; Other block"
                 },
-                { "title": "Circulator brand", "hint": "Confirms M16 connection compatibility", "input": "text", "choices": "" }
+                { "title": "Circulator brand", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The compatible system and circulator checker confirms fit with your existing equipment.",
-              "ctaNote": "Confirms fit with your selected system. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -5489,7 +5503,7 @@
             "sectionId": "comparison",
             "eyebrow": "Method comparison",
             "title": "Method Comparison",
-            "description": "Compare Breeze with Storm directly, using the source's own confirmed comparison.",
+            "description": "",
             "columns": [
               { "label": "Breeze" },
               { "label": "Storm" }
@@ -5538,9 +5552,12 @@
                 ]
               }
             ],
-            "disclaimer": "Neither is simply better — Breeze trades range and long-term stability for response speed; Storm trades response speed for range and stability.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Neither is simply better — Breeze trades range and long-term stability for response speed; Storm trades response speed for range and stability."
+            ]
           },
 
           "serviceMap": {

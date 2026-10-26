@@ -151,7 +151,7 @@
               }
             ],
             "eyebrow": "Unit Operation Coverage Checker",
-            "ctaNote": "Confirms which operations run within the reactor array. Routes to a workflow-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -193,9 +193,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Throughput and Scale Selector",
-            "emptyState": "Recommends the matching throughput and handling setup",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -223,7 +223,7 @@
                 { "title": "Data system integration", "hint": "LIMS, ELN, or AI/ML closed-loop", "choices": "LIMS; ELN; AI/ML closed-loop" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms the right integrated analytics package. Routes to an analytics-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -266,9 +266,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same reactor array, throughput, and gravimetric handling capabilities. The difference is whether XRD analysis runs in-line or separately.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same reactor array, throughput, and gravimetric handling capabilities. The difference is whether XRD analysis runs in-line or separately."
+            ]
           },
 
           "applicationsExplorer": {
@@ -720,7 +723,7 @@
               }
             ],
             "eyebrow": "Integrated Analytics Selector",
-            "ctaNote": "Confirms the right integrated analytics package. Routes to an analytics-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -753,14 +756,14 @@
                 "key": "temperatureDifference",
                 "label": "Temperature range/difference needed",
                 "question": "Temperature range/difference needed",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Reactor Configuration Selector",
-            "emptyState": "Recommends reactor and safety configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -775,7 +778,7 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Target viscosity (Pa·s)", "hint": "Number input, up to 80 Pa·s", "input": "number", "choices": "" },
+                { "title": "Target viscosity (Pa·s)", "hint": "Up to 80 Pa·s", "input": "number", "choices": "" },
                 {
                   "title": "Stirrer type",
                   "hint": "Anchor, twisted blade, gas entrainment, or other",
@@ -784,7 +787,7 @@
                 { "title": "Feed types needed", "hint": "Liquid, liquefied gas, gas, or combination", "choices": "Liquid; Liquefied gas; Gas; Combination" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms stirrer and feed line configuration. Routes to a process-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -827,9 +830,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same reactor architecture, pressure and temperature range, and mixing capability. The difference is whether NMR or XRD analysis runs in-line.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same reactor architecture, pressure and temperature range, and mixing capability. The difference is whether NMR or XRD analysis runs in-line."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1313,7 +1319,7 @@
               }
             ],
             "eyebrow": "Dispensing Requirement Selector",
-            "ctaNote": "Recommends 1 mg, 0.1 mg, or 0.01 mg balance resolution. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1367,9 +1373,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an integration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Data Integration Scope Checker",
-            "emptyState": "Confirms the interface set required and whether ARKSUITE orchestration applies",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1406,7 +1412,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the dispensing tool plus complementary tooling for the workflow set. Routes to a workflow-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1491,9 +1497,12 @@
                 ]
               }
             ],
-            "disclaimer": "The case for automation here isn't only speed. It's that consistency and documentation arrive as properties of the system rather than as things procedure has to enforce — which is precisely what a QC or regulated environment spends effort maintaining manually.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The case for automation here isn't only speed. It's that consistency and documentation arrive as properties of the system rather than as things procedure has to enforce — which is precisely what a QC or regulated environment spends effort maintaining manually."
+            ]
           },
 
           "applicationsExplorer": {

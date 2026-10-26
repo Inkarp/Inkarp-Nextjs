@@ -396,7 +396,7 @@
                 }
               ],
               "lead": "The robotic integration readiness checker confirms which automation features apply to your lab setup.",
-              "ctaNote": "Highlights the automated lid, indexed rotor, or RS232 control as applicable. Confirms full-machine control availability via RS232. Routes to Inkarp for integration-specific confirmation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -416,7 +416,7 @@
                 }
               ],
               "lead": "The application and operating range matcher confirms fit for your specific research application.",
-              "ctaNote": "Shows relevant rotor speed, temperature, and vacuum figures. Notes HCl compatibility or Inert Gas Purge relevance. Routes to Inkarp for application-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -533,7 +533,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the standard EZ-2 4.0 Series, miVac 2, and HT Series 3i will be added once their own configurations are confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -952,7 +952,7 @@
                 }
               ],
               "lead": "The model selector recommends the right miVac 2 model for your workflow.",
-              "ctaNote": "Recommends DNA, Duo, or Quattro. Notes when the SpeedTrap condenser's -50°C capability is relevant. Routes to Inkarp for model-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -973,7 +973,7 @@
                 { "title": "Batch size input", "hint": "Typical number of samples per run", "input": "number", "choices": "" }
               ],
               "lead": "The sample format and capacity matcher confirms compatibility and capacity fit.",
-              "ctaNote": "Confirms whether Duo or Quattro capacity fits your batch size. Routes to Inkarp for a capacity-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1066,7 +1066,7 @@
                 "feature": "Freeze-Drying",
                 "values": [
                   "SpeedTrap condenser, -50°C, optional",
-                  "Not stated",
+                  "",
                   "Available on request",
                   "Available on request"
                 ]
@@ -1074,7 +1074,7 @@
               {
                 "feature": "Robotic Automation",
                 "values": [
-                  "Not stated",
+                  "",
                   "RS232 command set, indexed rotor",
                   "Available on request",
                   "Available on request"
@@ -1099,9 +1099,12 @@
                 ]
               }
             ],
-            "disclaimer": "miVac 2 and the EZ-2 4.0 Bionic solve different problems within the same category — miVac 2 offers purpose-built model variety and freeze-drying; Bionic is built specifically around robotic integration. They're not a tier ladder.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "miVac 2 and the EZ-2 4.0 Bionic solve different problems within the same category — miVac 2 offers purpose-built model variety and freeze-drying; Bionic is built specifically around robotic integration. They're not a tier ladder."
+            ]
           },
 
           "serviceMap": {
@@ -1528,7 +1531,7 @@
                 { "title": "Boiling point input", "hint": "Up to 220°C", "input": "text", "choices": "" }
               ],
               "lead": "The boiling point and model selector recommends the right EZ-2 4.0 model for your solvent.",
-              "ctaNote": "Recommends Standard, Plus, or Elite. Notes when Elite's aqueous lyophilization capability applies. Routes to Inkarp for model-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1548,7 +1551,7 @@
                 }
               ],
               "lead": "The sample holder and format matcher confirms compatibility for your sample format.",
-              "ctaNote": "Confirms holder availability for your format. Notes when eXalt technology applies to your workflow. Routes to Inkarp for holder-specific confirmation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1631,15 +1634,15 @@
                 "values": [
                   "Up to 220°C (Elite)",
                   "Inherits Elite's 220°C",
-                  "Not stated"
+                  ""
                 ]
               },
               {
                 "feature": "Robotic Automation",
                 "values": [
-                  "Not stated",
+                  "",
                   "RS232 command set, indexed rotor",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1654,8 +1657,8 @@
                 "feature": "Max Solvent Capacity",
                 "values": [
                   "750 mL",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  ""
                 ]
               },
               {
@@ -1675,9 +1678,12 @@
                 ]
               }
             ],
-            "disclaimer": "Three genuinely different selection logics: EZ-2 4.0 Series by boiling point, Bionic by automation need, miVac 2 by workflow type. HT Series 3i remains unbuilt.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Three genuinely different selection logics: EZ-2 4.0 Series by boiling point, Bionic by automation need, miVac 2 by workflow type. HT Series 3i remains unbuilt."
+            ]
           },
 
           "serviceMap": {
@@ -2093,7 +2099,7 @@
                 { "title": "Batch size input", "hint": "Typical number of parallel samples", "input": "number", "choices": "" }
               ],
               "lead": "The throughput planner recommends HT-6 or HT-12 based on your batch size.",
-              "ctaNote": "Recommends HT-6 (6 positions) or HT-12 (12 positions). Notes when FastStack microtiter plate holders apply. Routes to Inkarp for throughput-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -2109,7 +2115,7 @@
                 { "title": "Solvent volume input", "hint": "Up to 4.5 L", "input": "text", "choices": "" }
               ],
               "lead": "The capacity and footprint calculator confirms fit for your solvent volume and fume hood space.",
-              "ctaNote": "Confirms fit within the max solvent capacity. Shows the space saved by the integrated condenser design. Routes to Inkarp for a footprint-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2194,8 +2200,8 @@
                 "values": [
                   "4.5 L",
                   "750 mL",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  ""
                 ]
               },
               {
@@ -2211,18 +2217,18 @@
                 "feature": "Vacuum Pump",
                 "values": [
                   "Dry pump, confirmed",
-                  "Not stated",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "Robotic Automation",
                 "values": [
-                  "Not stated",
-                  "Not stated",
+                  "",
+                  "",
                   "RS232 command set, indexed rotor",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -2262,9 +2268,12 @@
                 ]
               }
             ],
-            "disclaimer": "Four genuinely different selection logics across one category: by throughput and capacity, by boiling point, by automation need, and by workflow type. None of these is a \"better\" or \"worse\" version of another — they solve different problems.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Four genuinely different selection logics across one category: by throughput and capacity, by boiling point, by automation need, and by workflow type. None of these is a \"better\" or \"worse\" version of another — they solve different problems."
+            ]
           },
 
           "serviceMap": {

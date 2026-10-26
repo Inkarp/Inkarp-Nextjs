@@ -84,7 +84,7 @@
                 "key": "type3Demand",
                 "label": "Type 1 water demand",
                 "question": "Type 1 water demand",
-                "hint": "Number input, up to 2 L/min",
+                "hint": "Up to 2 L/min",
                 "input": "number",
                 "options": []
               },
@@ -109,9 +109,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Water Grade and Flow Rate Selector",
-            "emptyState": "Recommends the matching item number and RO configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -123,7 +123,7 @@
               {
                 "key": "currentDailyWaterConsumption",
                 "label": "Current daily water consumption",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -166,7 +166,7 @@
               }
             ],
             "eyebrow": "Water Usage Savings Estimator",
-            "ctaNote": "Estimates water usage reduction and cleaning cycle optimization. Routes to a savings-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -187,7 +187,7 @@
                 { "title": "Application type", "hint": "HPLC/GC-MS, TOC analysis, or general lab use", "choices": "HPLC/GC-MS; TOC analysis; General lab use" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms whether the UV lamp and TOC monitor should be added. Routes to a compliance-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -237,9 +237,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same Type 1 output rate, iJust software, and Bagtank storage system. The difference is Type 3 flow rate and installation type, with UV lamp and TOC monitor available as add-ons on either.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same Type 1 output rate, iJust software, and Bagtank storage system. The difference is Type 3 flow rate and installation type, with UV lamp and TOC monitor available as add-ons on either."
+            ]
           },
 
           "applicationsExplorer": {
@@ -665,9 +668,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an installation-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Installation Format Fit Checker",
-            "emptyState": "Recommends benchtop, wall-mounted, or built-in installation",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -735,7 +738,7 @@
               }
             ],
             "eyebrow": "TOC and UV Requirement Checker",
-            "ctaNote": "Confirms whether the 185 | 254 nm UV lamp and TOC monitor are required. Routes to a method-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -760,7 +763,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the 5 L/h or 10 L/h Type 2 production configuration. Routes to a volume-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -832,9 +835,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three run the same RO, EDI, and ion-exchange purification train and the same closed bagtank storage — the differences sit in production rate and which monitoring options are specified. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three run the same RO, EDI, and ion-exchange purification train and the same closed bagtank storage — the differences sit in production rate and which monitoring options are specified. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted."
+            ]
           },
 
           "applicationsExplorer": {

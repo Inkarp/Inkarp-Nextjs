@@ -103,9 +103,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Program Selector",
-            "emptyState": "Recommends OD600, McFarland, or both",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -155,7 +155,7 @@
               }
             ],
             "eyebrow": "Regulatory and Documentation Checker",
-            "ctaNote": "Confirms whether the IQ/OQ Package is needed. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -171,7 +171,7 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Culture type", "hint": "Number input / dropdown", "input": "text", "choices": "" },
+                { "title": "Culture type", "hint": "", "input": "text", "choices": "" },
                 {
                   "title": "Target growth phase",
                   "hint": "Log phase, stationary phase, or custom target",
@@ -184,7 +184,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Shows how dedicated OD600 tracking improves timing accuracy. Routes to a workflow-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -227,9 +227,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both programs run on the same instrument and share the built-in Sample list function for data management.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both programs run on the same instrument and share the built-in Sample list function for data management."
+            ]
           },
 
           "applicationsExplorer": {

@@ -439,11 +439,7 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                {
-                  "title": "Time/session length slider",
-                  "hint": "Simulates a measurement session running over minutes to hours",
-                  "choices": "Minutes; Hours; Extended, multi-hour session"
-                },
+                { "title": "Time/session length slider", "hint": "", "choices": "Minutes; Hours; Extended, multi-hour session" },
                 {
                   "title": "Environmental factor toggle",
                   "hint": "Adds heat, vibration, or component wear as drift sources",
@@ -457,7 +453,7 @@
               ],
               "disclaimer": "",
               "lead": "The calibration drift visualiser shows how wavenumber accuracy drifts on a conventional Raman microscope, compared with SENTERRA II's continuous SureCal correction.",
-              "ctaNote": "Shows the resulting wavenumber accuracy over the session.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -477,7 +473,7 @@
               ],
               "disclaimer": "",
               "lead": "The AI identification and imaging workflow matcher shows which OPUS software tool fits your specific task.",
-              "ctaNote": "Recommends A.I.D., Adaptive K-means Clustering, Particle Identification, or Co-Local Measurement. Notes where results are stated to return in seconds. Routes to Inkarp for a software-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -584,7 +580,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the RAMANwalk will be added once its own configuration is confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -1051,7 +1047,7 @@
               ],
               "disclaimer": "",
               "lead": "The random walk vs raster scan race recreates Bruker's own published comparison, showing how far each method gets over the same time.",
-              "ctaNote": "Shows RAMANwalk reaching a conclusive answer around 5 minutes. Shows the conventional method's percentage complete at the same time. States when each method actually finds the target signal.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1068,11 +1064,11 @@
                   "hint": "Broad overview through fine sub-micron detail",
                   "choices": "Broad overview; Standard detail; Fine sub-micron detail"
                 },
-                { "title": "Sample size input", "hint": "Confirms fit within the 30 × 30 × 35 mm stage", "input": "text", "choices": "" }
+                { "title": "Sample size input", "hint": "", "input": "text", "choices": "" }
               ],
               "disclaimer": "",
               "lead": "The objective and resolution configurator helps match the right lens and grating to your sample.",
-              "ctaNote": "Recommends a lens from 5x to 100x. Suggests a grating for the spectral resolution required.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1186,9 +1182,12 @@
                 ]
               }
             ],
-            "disclaimer": "RAMANwalk and SENTERRA II solve different problems: one gets to an answer faster by searching intelligently, the other holds precision automatically over time. Many labs use both for different stages of the same investigation.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "RAMANwalk and SENTERRA II solve different problems: one gets to an answer faster by searching intelligently, the other holds precision automatically over time. Many labs use both for different stages of the same investigation."
+            ]
           },
 
           "serviceMap": {

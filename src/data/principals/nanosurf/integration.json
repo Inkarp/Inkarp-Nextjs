@@ -231,7 +231,7 @@
               }
             ],
             "eyebrow": "Microscope Compatibility Checker",
-            "ctaNote": "Recommends the adapter part number from the eight available. Routes to a compatibility-confirmed quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Get Configuration Support"
           },
@@ -287,9 +287,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Resolution Gap Assessor",
-            "emptyState": "Confirms whether the features fall within AFM range and which modes apply",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -321,7 +321,7 @@
                 { "title": "Automation requirement", "hint": "Manual operation, or scripted routines", "choices": "Manual operation; Scripted routines" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends operating modes and confirms whether requirements exceed LensAFM's scope. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -433,8 +433,11 @@
                 ]
               }
             ],
-            "disclaimer": "The trade is explicit and reasonable. LensAFM offers three electrical modes against seven on the standalone research systems, and no SMM, SThM, EC-AFM, or FluidFM. What it offers instead is native optical integration no standalone system can match, and repositioning accuracy engineered specifically for returning to the same feature. If the optical microscope is already the centre of the workflow, that trade favours LensAFM.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "The trade is explicit and reasonable. LensAFM offers three electrical modes against seven on the standalone research systems, and no SMM, SThM, EC-AFM, or FluidFM. What it offers instead is native optical integration no standalone system can match, and repositioning accuracy engineered specifically for returning to the same feature. If the optical microscope is already the centre of the workflow, that trade favours LensAFM."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1128,9 +1131,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an integration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Integration Feasibility Checker",
-            "emptyState": "Confirms fit against the under 48 × 87 × 61 mm envelope and flags custom stage need",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -1214,7 +1217,7 @@
               }
             ],
             "eyebrow": "Workpiece Compatibility Assessor",
-            "ctaNote": "Confirms measurement approach without sectioning and flags stage requirements. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Talk to Product Expert"
           },
@@ -1247,7 +1250,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms scripting approach and whether Nanosurf engineering support is recommended. Routes to an automation-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1298,8 +1301,8 @@
                 "feature": "Concave Surfaces",
                 "values": [
                   "Suited for concave surfaces",
-                  "Not stated",
-                  "Not stated"
+                  "",
+                  ""
                 ]
               },
               {
@@ -1313,7 +1316,7 @@
               {
                 "feature": "Lateral Force Mode",
                 "values": [
-                  "Not listed",
+                  "",
                   "Available",
                   "Available"
                 ]
@@ -1367,8 +1370,11 @@
                 ]
               }
             ],
-            "disclaimer": "The trade is clear-eyed. Nanite carries the narrowest mode set in the Nanosurf range — three standard imaging modes without lateral force, three electrical modes, no SMM, SThM, EC-AFM, or FluidFM. What it uniquely offers is a form factor small enough to embed almost anywhere and the freedom to measure workpieces that cannot be sectioned or moved. Where the constraint is the sample or the system rather than the technique, that trade is the right one.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "The trade is clear-eyed. Nanite carries the narrowest mode set in the Nanosurf range — three standard imaging modes without lateral force, three electrical modes, no SMM, SThM, EC-AFM, or FluidFM. What it uniquely offers is a form factor small enough to embed almost anywhere and the freedom to measure workpieces that cannot be sectioned or moved. Where the constraint is the sample or the system rather than the technique, that trade is the right one."
+            ]
           },
 
           "applicationsExplorer": {

@@ -50,9 +50,7 @@
             { "label": "Image Enhancement", "value": "Best Image function, one-click HDR, noise filtering, sharpening comparison" },
             { "label": "Overview Navigation", "value": "Built-in overview camera, single-snapshot stage coverage" },
             { "label": "Reporting", "value": "Image annotation, direct export to Word templates" },
-            { "label": "Correlative Workflow", "value": "Shuttle & Find, automated marker recognition and relocation to electron microscopy" },
-            { "label": "Return Policy", "value": "Not confirmed on this source (Metrology division, distinct from the 60-day Research Microscopy policy)" },
-            { "label": "Full Objective Specifications, Resolution, Working Distance", "value": "Not confirmed in this source, available on request" }
+            { "label": "Correlative Workflow", "value": "Shuttle & Find, automated marker recognition and relocation to electron microscopy" }
           ],
 
           "applications": [
@@ -152,7 +150,7 @@
               }
             ],
             "eyebrow": "Objective and Magnification Selector",
-            "ctaNote": "Recommends the objective set and illumination configuration. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -194,9 +192,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a workflow-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Workflow Automation Planner",
-            "emptyState": "Confirms macro recording setup and Shuttle & Find requirement",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -221,7 +219,7 @@
                 "feature": "Magnification Range",
                 "values": [
                   "10x to 2020x",
-                  "Not confirmed in this source"
+                  ""
                 ]
               },
               {
@@ -249,7 +247,7 @@
                 "feature": "Correlative Workflow",
                 "values": [
                   "Shuttle & Find, to electron microscopy",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
@@ -267,9 +265,12 @@
                 ]
               }
             ],
-            "disclaimer": "Smart Zoom 5 and Axio Zoom.V16 sit in genuinely different Zeiss divisions, Industrial Quality Solutions and Research Microscopy Solutions respectively, and serve correspondingly different purposes. Smart Zoom 5 is built for industrial QA/QC and failure analysis with encoded, automated optics; Axio Zoom.V16 is positioned for biological fluorescence imaging of large object fields, referenced across the SteREO Discovery family pages but not independently sourced yet.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Smart Zoom 5 and Axio Zoom.V16 sit in genuinely different Zeiss divisions, Industrial Quality Solutions and Research Microscopy Solutions respectively, and serve correspondingly different purposes. Smart Zoom 5 is built for industrial QA/QC and failure analysis with encoded, automated optics."
+            ]
           },
 
           "applicationsExplorer": {
@@ -398,10 +399,7 @@
               "question": "How is Smart Zoom 5 different from Zeiss's research microscopes?",
               "answer": "Smart Zoom 5 belongs to Zeiss's Industrial Quality Solutions division, built specifically for QA/QC, failure analysis, and industrial inspection with encoded, automated optics. The Research Microscopy Solutions range (Primostar, Axiovert, Stemi, SteREO Discovery) is built for biological and life science research instead."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Full objective specifications, resolution, and working distance were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Smart Zoom 5 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the objective set, illumination, and Shuttle & Find configuration selected."
@@ -715,12 +713,7 @@
             { "label": "Transmitted Light", "value": "Brightfield, darkfield, oblique, increased-contrast brightfield (Best Mode)" },
             { "label": "Control System", "value": "SyCop 3 touchscreen" },
             { "label": "Settings Save/Recall", "value": "One-button, for repeatable experiment configuration" },
-            { "label": "System Family", "value": "Shared modular interfaces with SteREO Discovery V8, V12, V20" },
-            { "label": "Return Policy", "value": "Not confirmed in this source" },
-            {
-              "label": "Full Objective Range, Working Distance, Field of View at Other Magnifications",
-              "value": "Not confirmed in this source, available on request"
-            }
+            { "label": "System Family", "value": "Shared modular interfaces with SteREO Discovery V8, V12, V20" }
           ],
 
           "applications": [
@@ -818,7 +811,7 @@
               }
             ],
             "eyebrow": "Aperture and Field Size Planner",
-            "ctaNote": "Confirms whether the Plan-NEOFLUAR Z 2.3x / NA 0.5 configuration is needed. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -861,9 +854,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a workflow-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Zoom Mode Selector",
-            "emptyState": "Recommends the default zoom mode and Best Mode configuration approach",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -890,15 +883,15 @@
                 "feature": "Numerical Aperture",
                 "values": [
                   "NA 0.25 (up to NA 0.5 with Plan-NEOFLUAR Z 2.3x)",
-                  "Not confirmed on that source",
-                  "Not confirmed"
+                  "",
+                  ""
                 ]
               },
               {
                 "feature": "Fluorescence",
                 "values": [
                   "Yes, core capability, whole-organism imaging",
-                  "Not confirmed as core (PentaFluar S available on V8)",
+                  "",
                   "Not a fluorescence-focused system"
                 ]
               },
@@ -914,7 +907,7 @@
                 "feature": "Zoom Modes",
                 "values": [
                   "3 (Brightness, Eyepiece, Camera)",
-                  "Not confirmed",
+                  "",
                   "Not applicable"
                 ]
               },
@@ -951,9 +944,12 @@
                 ]
               }
             ],
-            "disclaimer": "Axio Zoom V16 and SteREO Discovery V20 share the same eZoom foundation but serve different research needs, V20 for maximum stereo magnification and measurement reproducibility, V16 for fluorescence-driven biology where a large, bright object field matters more than raw zoom ratio. Smart Zoom 5 sits in an entirely different division, built for industrial QC rather than biological research.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Axio Zoom V16 and SteREO Discovery V20 share the same eZoom foundation but serve different research needs, V20 for maximum stereo magnification and measurement reproducibility, V16 for fluorescence-driven biology where a large, bright object field matters more than raw zoom ratio. Smart Zoom 5 sits in an entirely different division, built for industrial QC rather than biological research."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1071,14 +1067,8 @@
               "question": "How is it different from SteREO Discovery V20?",
               "answer": "Both use eZoom, but V16 is built specifically around fluorescence brightness and large object fields for whole-organism imaging, while V20 is built for maximum stereo magnification (up to 345x) and highly reproducible zoom positioning."
             },
-            {
-              "question": "Is there a return policy?",
-              "answer": "Not confirmed on this source page. Inkarp can confirm current return and trial policy directly."
-            },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Full objective range, working distance, and field of view at other magnifications were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Is there a return policy?", "answer": "Inkarp can confirm current return and trial policy directly." },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Axio Zoom V16 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the objective, zoom mode, and illumination configuration selected."
@@ -1292,7 +1282,7 @@
                   { "title": "Transmitted light", "description": "Brightfield, darkfield, oblique, plus increased-contrast brightfield via Best Mode" },
                   { "title": "Control", "description": "SyCop 3 touchscreen" },
                   { "title": "System family", "description": "Shared modular interfaces with SteREO Discovery V8, V12, V20" },
-                  { "title": "Return policy", "description": "Not confirmed in this source" }
+                  { "title": "Return policy", "description": "" }
                 ],
                 "disclaimer": "Share the specimen size and whether whole-organism fluorescence imaging is the primary need, and the right Axio Zoom V16 objective and zoom mode configuration gets confirmed."
               },

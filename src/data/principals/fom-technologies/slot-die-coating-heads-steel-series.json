@@ -138,7 +138,7 @@
               {
                 "key": "coatingWidthTarget",
                 "label": "Coating width target",
-                "hint": "Number input",
+                "hint": "",
                 "options": [
                   { "val": "up-to-25mm", "label": "Up to 25 mm" },
                   { "val": "wider", "label": "Wider than 25 mm" }
@@ -172,7 +172,7 @@
               }
             ],
             "eyebrow": "Machine Compatibility Checker",
-            "ctaNote": "Confirms fit and double-sided coating support. Routes to a machine-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -197,7 +197,7 @@
                 { "title": "Stripe patterning need", "hint": "Continuous or patterned", "choices": "Continuous; Patterned" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends shim thickness and guide setup. Routes to an application-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -210,7 +210,7 @@
                 "key": "coatingWidthTarget",
                 "label": "Target coating width (mm)",
                 "question": "Target coating width (mm)",
-                "hint": "Number input, 1-25 mm",
+                "hint": "1-25 mm",
                 "input": "number",
                 "options": []
               },
@@ -218,7 +218,7 @@
                 "key": "precursorViscosityCp",
                 "label": "Precursor viscosity (cP)",
                 "question": "Precursor viscosity (cP)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -233,9 +233,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Viscosity and Width Selector",
-            "emptyState": "Confirms SD 25 compatibility or recommends a wider head",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -310,9 +310,12 @@
                 ]
               }
             ],
-            "disclaimer": "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity."
+            ]
           },
 
           "serviceMap": {
@@ -703,7 +706,7 @@
               {
                 "key": "coatingWidthTarget",
                 "label": "Coating width target",
-                "hint": "Number input",
+                "hint": "",
                 "options": [
                   { "val": "up-to-100mm", "label": "Up to 100 mm" },
                   { "val": "wider", "label": "Wider than 100 mm" }
@@ -737,7 +740,7 @@
               }
             ],
             "eyebrow": "Machine Compatibility Checker",
-            "ctaNote": "Confirms fit and double-sided coating support. Routes to a machine-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -762,7 +765,7 @@
                 { "title": "Stripe patterning need", "hint": "Continuous or patterned", "choices": "Continuous; Patterned" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends shim thickness and guide setup. Routes to an application-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -775,7 +778,7 @@
                 "key": "coatingWidthTarget",
                 "label": "Target coating width (mm)",
                 "question": "Target coating width (mm)",
-                "hint": "Number input, 1-100 mm",
+                "hint": "1-100 mm",
                 "input": "number",
                 "options": []
               },
@@ -783,7 +786,7 @@
                 "key": "precursorViscosityCp",
                 "label": "Precursor viscosity (cP)",
                 "question": "Precursor viscosity (cP)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -798,9 +801,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Viscosity and Width Selector",
-            "emptyState": "Confirms SD 100 compatibility or recommends a narrower/wider head",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -879,9 +882,12 @@
                 ]
               }
             ],
-            "disclaimer": "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity."
+            ]
           },
 
           "serviceMap": {
@@ -1258,7 +1264,7 @@
               {
                 "key": "coatingWidthTarget",
                 "label": "Target coating width (mm)",
-                "hint": "Number input, 10-200 mm",
+                "hint": "10-200 mm",
                 "options": [
                   { "val": "up-to-200mm", "label": "Up to 200 mm" },
                   { "val": "wider", "label": "Wider than 200 mm" }
@@ -1267,14 +1273,14 @@
               {
                 "key": "precursorViscosityCp",
                 "label": "Precursor viscosity (cP)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
               {
                 "key": "fomMachine",
                 "label": "FOM coating machine",
-                "hint": "Dropdown, flags if FOM nanoRC is selected",
+                "hint": "",
                 "options": [
                   { "val": "arcRC", "label": "arcRC" },
                   { "val": "omicronR2R", "label": "omicronR2R" },
@@ -1312,7 +1318,7 @@
               }
             ],
             "eyebrow": "Viscosity, Width, and Compatibility Selector",
-            "ctaNote": "Confirms SD 200 compatibility or flags the nanoRC exclusion. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1333,7 +1339,7 @@
                 { "title": "Current tube fitting standard", "hint": "1/8\" NPT or other", "choices": "1/8\" NPT; Other" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms port and connection compatibility. Routes to a setup-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1376,9 +1382,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Corrosion Resistance and Chemistry Checker",
-            "emptyState": "Confirms material suitability for the chemistry",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1473,9 +1479,12 @@
                 ]
               }
             ],
-            "disclaimer": "All Steel Series heads share the same precision flow control and shim flexibility. The difference is coating width capacity, material grade, and machine compatibility.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All Steel Series heads share the same precision flow control and shim flexibility. The difference is coating width capacity, material grade, and machine compatibility."
+            ]
           },
 
           "serviceMap": {
@@ -1840,7 +1849,7 @@
               {
                 "key": "coatingWidthTarget",
                 "label": "Target coating width (mm)",
-                "hint": "Number input, 10-300 mm",
+                "hint": "10-300 mm",
                 "options": [
                   { "val": "up-to-300mm", "label": "Up to 300 mm" },
                   { "val": "wider", "label": "Wider than 300 mm" }
@@ -1849,7 +1858,7 @@
               {
                 "key": "precursorViscosityCp",
                 "label": "Precursor viscosity (cP)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -1885,7 +1894,7 @@
               }
             ],
             "eyebrow": "Viscosity, Width, and Machine Compatibility Selector",
-            "ctaNote": "Confirms SD 300 compatibility with the selected machine. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1910,7 +1919,7 @@
                 { "title": "Stripe patterning need", "hint": "Continuous or patterned", "choices": "Continuous; Patterned" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends custom shim thickness and guide setup. Routes to an application-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1923,7 +1932,7 @@
                 "key": "targetCoatingWidthAndArea",
                 "label": "Target coating width and area",
                 "question": "Target coating width and area",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -1948,9 +1957,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a cost-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Large-Area Cost Comparison Tool",
-            "emptyState": "Estimates cost efficiency versus current large-area setup",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2046,9 +2055,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both heads share the same 1.4404 passivated stainless steel and ≤ 5 μm flatness tolerance. The difference is coating width, machine compatibility, and handling features.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both heads share the same 1.4404 passivated stainless steel and ≤ 5 μm flatness tolerance. The difference is coating width, machine compatibility, and handling features."
+            ]
           },
 
           "serviceMap": {
@@ -2473,7 +2485,7 @@
             ],
             "eyebrow": "Width and Viscosity Selector",
             "lead": "Find the right FOM slot-die head width for your coating width and formulation.",
-            "ctaNote": "Confirms FOM SD 500 fit or recommends a narrower head (SD 25, SD 50, SD 100, SD 200). Routes to Inkarp for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2499,7 +2511,7 @@
               ],
               "disclaimer": "",
               "lead": "Build the right shim, meniscus guide, and machine setup for your application.",
-              "ctaNote": "Recommends the right shim, guide, and machine configuration. Routes to Inkarp for a full-setup quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -2960,7 +2972,7 @@
               {
                 "key": "coatingWidthTarget",
                 "label": "Coating width target",
-                "hint": "Number input",
+                "hint": "",
                 "options": [
                   { "val": "up-to-50mm", "label": "Up to 50 mm" },
                   { "val": "wider", "label": "Wider than 50 mm" }
@@ -2994,7 +3006,7 @@
               }
             ],
             "eyebrow": "Machine Compatibility Checker",
-            "ctaNote": "Confirms fit and double-sided coating support. Routes to a machine-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -3019,7 +3031,7 @@
                 { "title": "Stripe patterning need", "hint": "Continuous or patterned", "choices": "Continuous; Patterned" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends shim thickness and guide setup. Routes to an application-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -3032,7 +3044,7 @@
                 "key": "coatingWidthTarget",
                 "label": "Target coating width (mm)",
                 "question": "Target coating width (mm)",
-                "hint": "Number input, 1-50 mm",
+                "hint": "1-50 mm",
                 "input": "number",
                 "options": []
               },
@@ -3040,7 +3052,7 @@
                 "key": "precursorViscosityCp",
                 "label": "Precursor viscosity (cP)",
                 "question": "Precursor viscosity (cP)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -3055,9 +3067,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Viscosity and Width Selector",
-            "emptyState": "Confirms SD 50 compatibility or recommends a narrower/wider head",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -3136,9 +3148,12 @@
                 ]
               }
             ],
-            "disclaimer": "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All Steel Series heads share the same precision flow control, shim flexibility, and universal FOM machine compatibility. The difference is purely coating width capacity."
+            ]
           },
 
           "serviceMap": {

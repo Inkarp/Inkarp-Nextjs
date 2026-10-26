@@ -120,8 +120,8 @@
               {
                 "feature": "Blood Bag Compatible",
                 "values": [
-                  "Not stated",
-                  "Not stated",
+                  "",
+                  "",
                   "Yes"
                 ]
               },
@@ -150,9 +150,12 @@
                 ]
               }
             ],
-            "disclaimer": "Model 8730 sits in a different category entirely from Model 6000 and 7000, matching their capacity ceiling in places while trading their research-grade top speed for clinical-specific rotor design and blood bag handling. Specifications for the related Model 9942 and Model 9920 remain unavailable pending their own source pages, and the comparison table will be extended once those are reviewed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Model 8730 sits in a different category entirely from Model 6000 and 7000, matching their capacity ceiling in places while trading their research-grade top speed for clinical-specific rotor design and blood bag handling."
+            ]
           },
 
           "applicationsExplorer": {
@@ -580,9 +583,12 @@
                 ]
               }
             ],
-            "disclaimer": "Model 8730 offers flexibility across tubes, bottles, and blood bags on one unit. Model 9945 trades that flexibility for dedicated batch scale, 12 bags per run against Model 8730's more general capacity, and a rotor built for nothing else.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Model 8730 offers flexibility across tubes, bottles, and blood bags on one unit. Model 9945 trades that flexibility for dedicated batch scale, 12 bags per run against Model 8730's more general capacity, and a rotor built for nothing else."
+            ]
           },
 
           "applicationsExplorer": {
@@ -812,10 +818,7 @@
                   { "title": "Dimensions", "description": "81 × 91 × 108 cm (W×D×H)" },
                   { "title": "Weight", "description": "450 kg" },
                   { "title": "Power", "description": "Single phase, 220V/230V ±10% 40A, 50/60 Hz" },
-                  {
-                    "title": "Note",
-                    "description": "The source page's own breadcrumb navigation lists this model as \"Model 9942,\" while the page title, brochure link, sheet listing, and URL all reference \"Model 9945.\" This naming inconsistency sits within Kubota's own page and is worth confirming directly before publishing."
-                  }
+                  { "title": "Note", "description": "" }
                 ],
                 "disclaimer": "Share the typical batch size and blood bag volumes processed daily, and confirm 12-bag capacity fits the blood bank's actual throughput."
               },
@@ -1005,9 +1008,12 @@
                 ]
               }
             ],
-            "disclaimer": "Model 9925 sits above both Model 8730 and Model 9945 on raw performance, while retaining the sample-format flexibility Model 9945's dedicated blood-bag rotor doesn't offer.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Model 9925 sits above both Model 8730 and Model 9945 on raw performance, while retaining the sample-format flexibility Model 9945's dedicated blood-bag rotor doesn't offer."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1176,7 +1182,7 @@
                   { "title": "375 kg", "description": "A dedicated large-capacity clinical unit" }
                 ],
                 "glanceTitle": "Model 9925 at a Glance",
-                "glanceDescription": "The highest-capacity blood and clinical processing centrifuge in Kubota's range built so far.",
+                "glanceDescription": "",
                 "subheading": "Overview",
                 "intro": "Discover how the Kubota Model 9925 handles tubes, bottles, and blood bags at the largest capacity in Kubota's clinical range.",
                 "tabSummary": "What 6,000 mL capacity and 6 rotor options deliver"
@@ -1277,10 +1283,7 @@
                   { "title": "Dimensions", "description": "73 × 83 × 109 cm (W×D×H)" },
                   { "title": "Weight", "description": "375 kg" },
                   { "title": "Power", "description": "Single phase, 220V/230V ±10% 30A, 50/60 Hz" },
-                  {
-                    "title": "Note",
-                    "description": "The source page's breadcrumb navigation lists this model as \"Model 9920,\" while the page title, brochure link, and URL all reference \"Model 9925.\" The same discrepancy pattern appeared on the Model 9945 page (breadcrumb \"9942\" vs. actual product name). Worth confirming the correct model number directly with Kubota before publishing."
-                  }
+                  { "title": "Note", "description": "" }
                 ],
                 "disclaimer": "Share whether the daily workflow involves blood bags, large bottles, or standard tubes, and which of the 6 rotor options fits the batch size and format mix in use."
               },

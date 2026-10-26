@@ -115,10 +115,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a wavelength-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Wavelength Selector",
             "lead": "Match your reaction to the right WPI wavelength.",
-            "emptyState": "Recommends the matching wavelength and whether PWM applies",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -149,7 +149,7 @@
             ],
             "eyebrow": "Vessel Format and Shield Planner",
             "lead": "Find the right shield for the sample format.",
-            "ctaNote": "Recommends the plate shield, vial shield, or both. Routes to us for a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -192,10 +192,13 @@
                 ]
               }
             ],
-            "disclaimer": "Both share the same 24-LED array and optics, so adding the PWM module never changes the core illumination architecture.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share the same 24-LED array and optics, so adding the PWM module never changes the core illumination architecture."
+            ]
           },
 
           "applicationsExplorer": {

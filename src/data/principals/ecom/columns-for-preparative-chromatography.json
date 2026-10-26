@@ -374,8 +374,8 @@
               ],
               "options": [
                 { "title": "Diameter input", "hint": "25 to 400 mm", "input": "text", "choices": "" },
-                { "title": "Pressure requirement", "hint": "Confirms fit against the diameter-specific rating", "input": "text", "choices": "" },
-                { "title": "Length selector", "hint": "Shows confirmed lengths for that diameter", "input": "text", "choices": "" }
+                { "title": "Pressure requirement", "hint": "", "input": "text", "choices": "" },
+                { "title": "Length selector", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The column size and pressure selector confirms the right PC01 configuration for your scale.",
               "ctaNote": "Notes when custom parameters apply.",
@@ -396,7 +396,7 @@
                 { "title": "Operation mode", "hint": "Manual oil pump or automated electric motor", "choices": "Manual oil pump; Automated electric motor" }
               ],
               "lead": "The packing method and sealing selector recommends the right configuration for your sorbent and operation.",
-              "ctaNote": "Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -441,9 +441,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both operate the same axial compression mechanism — the choice is about how often you're packing and how much manual control you want.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both operate the same axial compression mechanism — the choice is about how often you're packing and how much manual control you want."
+            ]
           },
 
           "applicationsExplorer": {
@@ -876,8 +879,8 @@
               ],
               "options": [
                 { "title": "Diameter input", "hint": "50 to 600 mm", "input": "text", "choices": "" },
-                { "title": "Pressure requirement", "hint": "Confirms fit against the diameter-specific rating", "input": "text", "choices": "" },
-                { "title": "Length selector", "hint": "Shows confirmed lengths for that diameter", "input": "text", "choices": "" }
+                { "title": "Pressure requirement", "hint": "", "input": "text", "choices": "" },
+                { "title": "Length selector", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The column size and pressure selector confirms the right PC02 configuration for your scale.",
               "ctaNote": "Notes when custom parameters apply.",
@@ -896,7 +899,7 @@
                 { "title": "Sorbent type", "hint": "Silica or polymer", "choices": "Silica; Polymer" }
               ],
               "lead": "The sorbent and swelling compensation selector confirms whether the software-controlled option applies to your material.",
-              "ctaNote": "Confirms whether the sorbent swells or unswells with mobile phase changes. Recommends the software-controlled swelling compensation option. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -962,9 +965,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both use the same axial compression principle. The choice comes down to the pressure your separation actually needs and whether your sorbent swells.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both use the same axial compression principle. The choice comes down to the pressure your separation actually needs and whether your sorbent swells."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1211,7 +1217,6 @@
                   "Piston actuation comes in two forms. Type A moves the input piston with flange bolts. Type B uses a central stainless steel threaded rod instead, which sits outside the mobile phase and doesn't compromise the non-metal contact claim.",
                   "Frits are polypropylene here, not stainless steel mesh, at 10 micron pore size, coarser than PC01's 3 microns or PC02's 5 microns. That coarser frit matches the lower pressure ceiling a plastic column is built to handle.",
                   "Pressure runs lower than either metal line. 16 bar down to 5 bar across the confirmed range, well below PC02's 15 to 50 bar and far below PC01's 80 to 200 bar.",
-                  "One discrepancy in the source data is worth noting directly. The column labeled PC04-25/250 lists an inner diameter of 50 mm, not 25 mm, in its own configuration data.",
                   "Two related variants exist within the confirmed range. PC01 (high-pressure) and PC02 (medium-pressure), both cross-referenced directly by ECOM's own page."
                 ],
                 "cardsIntro": "The value cards of the Separchrom PC04 summarize its material, pressure range, and application fit.",
@@ -1387,8 +1392,8 @@
               ],
               "options": [
                 { "title": "Diameter input", "hint": "50 to 300 mm", "input": "text", "choices": "" },
-                { "title": "Pressure requirement", "hint": "Confirms fit against the diameter-specific rating", "input": "text", "choices": "" },
-                { "title": "Length selector", "hint": "Shows confirmed lengths for that diameter", "input": "text", "choices": "" }
+                { "title": "Pressure requirement", "hint": "", "input": "text", "choices": "" },
+                { "title": "Length selector", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The column size and pressure selector confirms the right PC04 configuration for your scale.",
               "ctaNote": "Notes when custom parameters apply.",
@@ -1411,7 +1416,7 @@
                 }
               ],
               "lead": "The piston actuation selector confirms the right drive type for your setup.",
-              "ctaNote": "Confirms non-metal contact requirement is met either way. Recommends the matching PC04 build. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1477,9 +1482,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three share the same axial compression principle. The choice comes down to pressure needs, sorbent type, and whether metal contact is acceptable.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three share the same axial compression principle. The choice comes down to pressure needs, sorbent type, and whether metal contact is acceptable."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1723,7 +1731,6 @@
                     "text": "Pressure rating follows the same inverse relationship with diameter as every other ECOM line, running from 100 bar at the smallest size down to 10 bar at the largest"
                   },
                   { "text": "The frit is stainless steel mesh at 5 micron pore size, matching PC02's frit spec exactly" },
-                  { "text": "This page cross-references only PC08 directly, a narrower related-products pattern than PC01, PC02, and PC04's pages show" },
                   { "text": "Custom parameters extend across the full 25 to 600 mm diameter and 50 to 1200 mm length range" }
                 ],
                 "cards": [
@@ -1912,8 +1919,8 @@
               ],
               "options": [
                 { "title": "Diameter input", "hint": "25 to 600 mm", "input": "text", "choices": "" },
-                { "title": "Pressure requirement", "hint": "Confirms fit against the diameter-specific rating", "input": "text", "choices": "" },
-                { "title": "Length selector", "hint": "Shows confirmed lengths for that diameter", "input": "text", "choices": "" }
+                { "title": "Pressure requirement", "hint": "", "input": "text", "choices": "" },
+                { "title": "Length selector", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The column size and pressure selector confirms the right PC06 configuration for your scale.",
               "ctaNote": "Notes when custom parameters apply.",
@@ -1933,7 +1940,7 @@
                 { "title": "Corrosion resistance need", "hint": "Standard or elevated", "choices": "Standard; Elevated" }
               ],
               "lead": "The material grade selector confirms the right steel grade for your mobile phase.",
-              "ctaNote": "Recommends AISI 316 or AISI 316L on request. Routes to Inkarp for a material-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2015,9 +2022,12 @@
                 ]
               }
             ],
-            "disclaimer": "Four genuinely different approaches to the same underlying problem, not a single ladder of sizes. The right choice depends on pressure needs, mechanism preference, and sample sensitivity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Four genuinely different approaches to the same underlying problem, not a single ladder of sizes. The right choice depends on pressure needs, mechanism preference, and sample sensitivity."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2269,10 +2279,7 @@
                   { "text": "Only two materials contact the mobile phase, AISI 316L stainless steel and UHMWPE" },
                   { "text": "The confirmed flow rate, 400 to 1400 mL per minute, is the first flow rate figure given for any ECOM column line" },
                   { "text": "Poremet 2 frits at 3 micron porosity match PC01's finest confirmed resolution tier" },
-                  { "text": "The column detaches from its frame without disassembling the stand, a genuine convenience for changeovers" },
-                  {
-                    "text": "The source states a 120 bar maximum in general text, but the configuration table lists 150 bar for the 150 mm columns specifically, both presented as given"
-                  }
+                  { "text": "The column detaches from its frame without disassembling the stand, a genuine convenience for changeovers" }
                 ],
                 "cards": [
                   { "title": "Whole-column pressing", "description": "Hydraulics integrated into the stand" },
@@ -2455,13 +2462,7 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Diameter input", "hint": "150 or 200 mm", "choices": "150; 200 mm" },
-                {
-                  "title": "Pressure requirement",
-                  "hint": "Confirms fit against 150 bar (150mm) or 120 bar (200mm)",
-                  "choices": "Confirms fit against 150 bar (150mm); 120 bar (200mm)"
-                },
-                { "title": "Length selector", "hint": "Shows confirmed lengths, 400-700mm", "choices": "Shows confirmed lengths; 400-700mm" }
+                { "title": "Diameter input", "hint": "150 or 200 mm", "choices": "150; 200 mm" }
               ],
               "lead": "The column size and pressure selector confirms the right PC08 configuration for your scale.",
               "ctaNote": "Notes when custom parameters apply.",
@@ -2478,10 +2479,10 @@
               ],
               "options": [
                 { "title": "Sorbent type", "hint": "Small rigid particle sorbent class", "input": "text", "choices": "" },
-                { "title": "Separation mode", "hint": "Confirms flow rate positioning within the range", "input": "text", "choices": "" }
+                { "title": "Separation mode", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The flow rate and sorbent planner estimates where your separation falls in PC08's confirmed range.",
-              "ctaNote": "Estimates target flow rate. Routes to Inkarp for a flow-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -2533,10 +2534,10 @@
               {
                 "feature": "Flow Rate",
                 "values": [
-                  "Not stated",
-                  "Not stated",
-                  "Not stated",
-                  "Not stated",
+                  "",
+                  "",
+                  "",
+                  "",
                   "400-1400 mL/min"
                 ]
               },
@@ -2571,9 +2572,12 @@
                 ]
               }
             ],
-            "disclaimer": "Five genuinely different tools for five genuinely different jobs, not a single ladder of sizes. PC08 is the only line with a confirmed flow rate and the only one that presses the whole column rather than an internal piston.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Five genuinely different tools for five genuinely different jobs, not a single ladder of sizes. PC08 is the only line with a confirmed flow rate and the only one that presses the whole column rather than an internal piston."
+            ]
           },
 
           "applicationsExplorer": {
@@ -3093,7 +3097,7 @@
                 { "title": "Environment type", "hint": "Standard or hazardous-rated", "choices": "Standard; Hazardous-rated" }
               ],
               "lead": "The cylinder and pump configuration selector recommends the right Separpress setup for your column.",
-              "ctaNote": "Recommends the right cylinder, pump, and gauge combination. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -3110,7 +3114,7 @@
                 { "title": "Required stroke", "hint": "Piston travel in millimeters", "input": "text", "choices": "" },
                 { "title": "Oil pressure preference", "hint": "Standard or higher-pressure system", "choices": "Standard; Higher-pressure system" }
               ],
-              "ctaNote": "Matches to the closest fitting model from the lineup. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -3256,7 +3260,10 @@
                 ]
               }
             ],
-            "disclaimer": "Product expert note: Send our team your column diameter and required piston travel, and Inkarp will match you to the right system from this lineup."
+            "disclaimer": "",
+            "notes": [
+              "Send our team your column diameter and required piston travel, and Inkarp will match you to the right system from this lineup."
+            ]
           },
 
           "applicationsExplorer": {

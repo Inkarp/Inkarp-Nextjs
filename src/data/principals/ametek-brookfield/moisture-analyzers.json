@@ -67,10 +67,7 @@
             { "label": "Stored Test Results", "value": "1,000" },
             { "label": "Stored Test Graphs", "value": "100" },
             { "label": "Optional Connectivity", "value": "Web server — remote LCD view, calibration reports, audit logs, program/result upload-download" },
-            {
-              "label": "Drying Temperature Range, Sample Capacity, Dimensions, Compliance, Accessories",
-              "value": "Not confirmed in this source — available on request"
-            }
+            { "label": "Drying Temperature Range, Sample Capacity, Dimensions, Compliance, Accessories", "value": "Available on request" }
           ],
 
           "applications": [
@@ -129,8 +126,8 @@
               { "key": "samplesPerDay", "label": "Samples tested per day", "default": 12, "min": 1, "hint": "Daily volume" }
             ],
             "submitLabel": "Get Configuration Support",
-            "ctaNote": "Calculates against the 100x (oven) or 25% (rapid LOD) speed figures. Routes to a configuration-specific quotation.",
-            "disclaimer": "Time recovered is calculated from the figures entered against Brookfield's stated speed comparisons. The 100x figure is against the oven method specifically; the 25% figure is Brookfield's comparison against other rapid LOD instruments — worth confirming which competitor instrument that benchmark was run against."
+            "ctaNote": "",
+            "disclaimer": "Time recovered is calculated from the figures entered against Brookfield's stated speed comparisons. The 100x figure is against the oven method specifically; the 25% figure is Brookfield's comparison against other rapid LOD instruments."
           },
 
           "configWizard": {
@@ -171,8 +168,8 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
-            "emptyState": "Recommends single-stage or multistage configuration",
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -181,7 +178,7 @@
             {
               "sectionId": "remote-access-data-checker",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Confirms whether the optional web server feature fits. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "eyebrow": "Remote Access and Data Management Checker",
               "title": "Does the data need to leave the instrument?",
               "description": "Select the access and reporting needs, and see whether the web server option applies.",
@@ -264,9 +261,12 @@
                 ]
               }
             ],
-            "disclaimer": "The 100x figure is against the oven method specifically. The 25% figure is Brookfield's comparison against other rapid LOD instruments — worth confirming which specific competitor instrument that benchmark was run against before quoting it to a customer directly.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The 100x figure is against the oven method specifically. The 25% figure is Brookfield's comparison against other rapid LOD instruments."
+            ]
           },
 
           "applicationsExplorer": {
@@ -371,10 +371,7 @@
               "question": "What does the display show during testing?",
               "answer": "Real-time moisture curve and rate-of-moisture-loss graphs, on a large color display."
             },
-            {
-              "question": "Where can I find full technical specifications?",
-              "answer": "Drying temperature range, sample capacity, dimensions, and compliance standards weren't confirmed in this source pull — Inkarp can request the full specification sheet from Brookfield."
-            },
+            { "question": "Where can I find full technical specifications?", "answer": "Inkarp can request the full specification sheet from Brookfield." },
             {
               "question": "What is the price of the Computrac MAX 4000XL in India?",
               "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements."
@@ -483,10 +480,10 @@
               },
               {
                 "key": "specs",
-                "tabSummary": "Balance resolution, build, storage — confirmed in this source",
+                "tabSummary": "Balance resolution, build, storage",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "What's confirmed. What isn't — flagged, not filled in.",
+                "description": "",
                 "columns": [
                   "Parameter",
                   "Specification"
@@ -566,7 +563,7 @@
                   { "title": "Data storage", "description": "250 programs, 1,000 results, 100 graphs" },
                   { "title": "Optional", "description": "Web server for remote access and data management" },
                   {
-                    "title": "Not confirmed in this source",
+                    "title": "",
                     "description": "drying temperature range, sample capacity, dimensions, compliance standards, accessories — available on request"
                   }
                 ],
@@ -578,11 +575,11 @@
                 "tabSummary": "Specs, compliance, accessories — on request",
                 "eyebrow": "Documentation",
                 "title": "Documentation and Resources",
-                "description": "Available on request — several tabs on the source page didn't return content in this pull.",
+                "description": "Available on request.",
                 "cards": [
                   { "title": "MAX 4000XL Full Specification Sheet", "description": "Available on request" },
-                  { "title": "Compliance and Standards Details", "description": "Available on request — not confirmed in this source" },
-                  { "title": "Accessories and Parts Catalogue", "description": "Available on request — not confirmed in this source" },
+                  { "title": "Compliance and Standards Details", "description": "Available on request" },
+                  { "title": "Accessories and Parts Catalogue", "description": "Available on request" },
                   { "title": "Web Server Feature Overview", "description": "Available on request" }
                 ]
               }
@@ -661,8 +658,7 @@
             { "label": "Display", "value": "Large color, real-time moisture curve and rate-of-loss graphs" },
             { "label": "Interface", "value": "Menu-driven" },
             { "label": "Self-Cleaning Cycle", "value": "45 minutes at 550°C" },
-            { "label": "Optional Connectivity", "value": "Web server, remote LCD view, calibration reports, audit logs, program transfer" },
-            { "label": "Sample Capacity, Dimensions, Compliance, Accessories", "value": "Not confirmed in this source, available on request" }
+            { "label": "Optional Connectivity", "value": "Web server, remote LCD view, calibration reports, audit logs, program transfer" }
           ],
 
           "applications": [
@@ -690,7 +686,7 @@
 
           "suitability": {
             "ctaLabel": "Get Configuration Support",
-            "ctaNote": "Confirms whether LOD alone or combined LOD/LOI testing fits. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "eyebrow": "LOD/LOI Requirement Checker",
             "title": "Computrac MAX 5000XL test requirement checker: does the application need loss-on-ignition testing?",
             "description": "Select the material and required measurements, and see the recommended test method.",
@@ -776,7 +772,7 @@
               { "key": "costPerRun", "label": "Cost per run today (INR, consumables and labour)", "default": 500, "min": 0 }
             ],
             "submitLabel": "Talk to Product Expert",
-            "ctaNote": "Estimates cost and workflow consolidation potential against MAX 5000XL. Routes to a cost-comparison quotation.",
+            "ctaNote": "",
             "disclaimer": "MAX 5000XL captures moisture, solids and ash from one sample in a single linked sequence, so each sample needs one run rather than separate LOD and LOI runs. Run counts and cost come from the figures entered — nothing here assumes a price for your current instrument.",
             "choices": [
               {
@@ -807,7 +803,7 @@
             {
               "sectionId": "remote-access-maintenance-checker",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Confirms whether the optional web server feature fits. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "eyebrow": "Remote Access and Maintenance Checker",
               "title": "Computrac MAX 5000XL remote access checker: does the data need to leave the solution?",
               "description": "Select the access and maintenance needs, and see whether the web server option applies.",
@@ -841,7 +837,7 @@
                 "feature": "Maximum Temperature",
                 "values": [
                   "600°C",
-                  "Not confirmed at LOI-capable range",
+                  "",
                   "Typically higher, reference-grade"
                 ]
               },
@@ -857,7 +853,7 @@
                 "feature": "Ash Content Measurement",
                 "values": [
                   "Yes",
-                  "Not stated",
+                  "",
                   "Yes"
                 ]
               },
@@ -881,7 +877,7 @@
                 "feature": "Self-Cleaning",
                 "values": [
                   "Yes, 45 min at 550°C",
-                  "Not stated",
+                  "",
                   "Method-dependent"
                 ]
               },
@@ -910,9 +906,12 @@
                 ]
               }
             ],
-            "disclaimer": "MAX 5000XL and MAX 4000XL solve different problems within the same product family: 4000XL is built for speed on moisture-only testing, 5000XL adds the temperature range for ash determination and positions itself against TGA equipment specifically. Choosing between the two comes down to whether ash content is part of the testing requirement.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "MAX 5000XL and MAX 4000XL solve different problems within the same product family: 4000XL is built for speed on moisture-only testing, 5000XL adds the temperature range for ash determination and positions itself against TGA equipment specifically. Choosing between the two comes down to whether ash content is part of the testing requirement."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1025,10 +1024,7 @@
               "question": "How is MAX 5000XL different from MAX 4000XL?",
               "answer": "MAX 5000XL reaches 600°C and adds loss-on-ignition testing for ash content, positioned as a TGA alternative. MAX 4000XL is built for fast moisture-only testing via loss-on-drying."
             },
-            {
-              "question": "Where can I find full technical specifications?",
-              "answer": "Sample capacity, dimensions, and compliance standards were not confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield."
-            },
+            { "question": "Where can I find full technical specifications?", "answer": "Inkarp can request the full specification sheet from Brookfield." },
             {
               "question": "What is the price of the Computrac MAX 5000XL in India?",
               "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements."
@@ -1220,10 +1216,7 @@
                   { "title": "Construction", "description": "Cast aluminum enclosure" },
                   { "title": "Self-cleaning cycle", "description": "45 minutes at 550°C" },
                   { "title": "Optional", "description": "Web server for remote access and data management" },
-                  {
-                    "title": "Detailed numeric specifications (sample capacity, dimensions), compliance standards, and accessories",
-                    "description": "not confirmed in this source, available on request"
-                  }
+                  { "title": "Detailed numeric specifications (sample capacity, dimensions), compliance standards, and accessories", "description": "" }
                 ],
                 "disclaimer": "Share the material being tested, whether ash content matters alongside moisture, and whether a TGA is currently in use for this application, and the right MAX 5000XL configuration gets confirmed fast."
               },
@@ -1236,8 +1229,8 @@
                 "description": "Computrac MAX 5000XL documentation: specification sheet, compliance details, and accessories, available on request.",
                 "cards": [
                   { "title": "MAX 5000XL Full Specification Sheet", "description": "Available on request" },
-                  { "title": "Compliance and Standards Details", "description": "Not confirmed in this source, available on request" },
-                  { "title": "Accessories and Parts Catalogue", "description": "Not confirmed in this source, available on request" },
+                  { "title": "Compliance and Standards Details", "description": "" },
+                  { "title": "Accessories and Parts Catalogue", "description": "" },
                   { "title": "Web Server Feature Overview", "description": "Available on request" }
                 ]
               }
@@ -1325,8 +1318,7 @@
             { "label": "Stored Test Programs", "value": "250" },
             { "label": "Stored Test Results", "value": "1,000" },
             { "label": "Stored Test Graphs", "value": "100" },
-            { "label": "Optional Connectivity", "value": "Web server, remote monitoring, result downloads, audit log viewing, program transfer" },
-            { "label": "Dimensions, Weight, Power Requirements, Compliance Standards", "value": "Not confirmed in this source, available on request" }
+            { "label": "Optional Connectivity", "value": "Web server, remote monitoring, result downloads, audit log viewing, program transfer" }
           ],
 
           "applications": [
@@ -1357,7 +1349,7 @@
 
           "suitability": {
             "ctaLabel": "Get Configuration Support",
-            "ctaNote": "Confirms fit against the 10 microgram / 10ppm sensitivity. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "eyebrow": "Sensitivity Requirement Checker",
             "title": "Computrac Vapor Pro XL sensitivity checker: does the application need trace-level moisture detection?",
             "description": "Select the expected moisture range, and confirm fit against the 10ppm sensitivity.",
@@ -1441,7 +1433,7 @@
               { "key": "samplesPerWeek", "label": "Samples tested per week", "default": 40, "min": 1, "hint": "Testing volume" }
             ],
             "submitLabel": "Talk to Product Expert",
-            "ctaNote": "Estimates reagent cost and workflow savings against Vapor Pro XL. Routes to a cost-comparison quotation.",
+            "ctaNote": "",
             "disclaimer": "Vapor Pro XL uses no chemical reagents, so the reagent line goes to zero entirely. Figures come from the monthly spend entered; reagent handling, storage and disposal effort are removed too but are not costed here. Brookfield states results correlate well with Karl Fischer titration.",
             "choices": [
               {
@@ -1461,7 +1453,7 @@
             {
               "sectionId": "vial-compatibility-checker",
               "ctaLabel": "Get Configuration Support",
-              "ctaNote": "Confirms vial compatibility and sealed-handling fit. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "eyebrow": "Vial Compatibility and Sample Handling Checker",
               "title": "Computrac Vapor Pro XL vial checker: does the sample vial size fit?",
               "description": "Select the vial type and sample sensitivity, and confirm fit.",
@@ -1556,9 +1548,12 @@
                 ]
               }
             ],
-            "disclaimer": "Vapor Pro XL and the MAX analyzers solve genuinely different problems. MAX 4000XL and MAX 5000XL measure total weight loss, fast and effective when moisture is the only volatile present. Vapor Pro XL measures moisture specifically, which matters when other volatiles would otherwise inflate a weight-loss result, or when the goal is replacing Karl Fischer titration without giving up correlated accuracy.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Vapor Pro XL and the MAX analyzers solve genuinely different problems. MAX 4000XL and MAX 5000XL measure total weight loss, fast and effective when moisture is the only volatile present. Vapor Pro XL measures moisture specifically, which matters when other volatiles would otherwise inflate a weight-loss result, or when the goal is replacing Karl Fischer titration without giving up correlated accuracy."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1671,10 +1666,7 @@
               "question": "How is Vapor Pro XL different from MAX 4000XL and MAX 5000XL?",
               "answer": "MAX 4000XL and MAX 5000XL measure moisture via weight loss (LOD/LOI). Vapor Pro XL measures moisture specifically via RH-sensor technology, correlating with Karl Fischer titration rather than weight-loss methods."
             },
-            {
-              "question": "Where can I find full technical specifications?",
-              "answer": "Dimensions, weight, power requirements, and compliance standards were not confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield."
-            },
+            { "question": "Where can I find full technical specifications?", "answer": "Inkarp can request the full specification sheet from Brookfield." },
             {
               "question": "What is the price of the Computrac Vapor Pro XL in India?",
               "answer": "Get in touch and Inkarp will quote based on configuration and optional web server requirements."
@@ -1865,10 +1857,7 @@
                   { "title": "Vial compatibility", "description": "2R to 60R crimp top" },
                   { "title": "Data storage", "description": "250 programs, 1,000 results, 100 graphs" },
                   { "title": "Optional", "description": "Web server for remote access and data management" },
-                  {
-                    "title": "Detailed numeric specifications (dimensions, weight, power requirements) and compliance standards",
-                    "description": "not confirmed in this source, available on request"
-                  }
+                  { "title": "Detailed numeric specifications (dimensions, weight, power requirements) and compliance standards", "description": "" }
                 ],
                 "disclaimer": "Share the material being tested, the expected moisture range, and whether Karl Fischer titration is currently in use for this application, and the right Vapor Pro XL configuration gets confirmed fast."
               },
@@ -1881,7 +1870,7 @@
                 "description": "Computrac Vapor Pro XL documentation: specification sheet, compliance details, and resources, available on request.",
                 "cards": [
                   { "title": "Vapor Pro XL Full Specification Sheet", "description": "Available on request" },
-                  { "title": "Compliance and Standards Details", "description": "Not confirmed in this source, available on request" },
+                  { "title": "Compliance and Standards Details", "description": "" },
                   { "title": "KF Correlation Data", "description": "Available on request" },
                   { "title": "Web Server Feature Overview", "description": "Available on request" }
                 ]

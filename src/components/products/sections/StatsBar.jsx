@@ -26,7 +26,7 @@ export default function StatsBar({ stats = [], showAll = false, title, intro, no
     <section className="border-y border-line-light bg-parchment-alt px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <div className="mx-auto w-full max-w-[1180px]">
         {title || intro ? (
-          <div className="mb-4 max-w-3xl">
+          <div className="mb-4">
             {title ? <p className="text-xs font-semibold uppercase tracking-widest text-red">{title}</p> : null}
             {intro ? <p className="mt-1 text-sm leading-6 text-ink-soft">{intro}</p> : null}
           </div>
@@ -50,7 +50,7 @@ export default function StatsBar({ stats = [], showAll = false, title, intro, no
             );
           })}
         </div>
-        {note ? <p className="mt-4 max-w-3xl text-xs leading-6 text-ink-soft">{note}</p> : null}
+        {note ? <p className="mt-4 text-xs leading-6 text-ink-soft">{note}</p> : null}
       </div>
     </section>
   );

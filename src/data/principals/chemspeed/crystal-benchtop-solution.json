@@ -139,7 +139,7 @@
               }
             ],
             "eyebrow": "Compliance and DoE Workflow Checker",
-            "ctaNote": "Confirms software and access configuration. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -171,14 +171,14 @@
                 "key": "numberOfSolidsPerRun",
                 "label": "Number of solids per run",
                 "question": "Number of solids per run",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Dispensing Range and Vessel Selector",
-            "emptyState": "Confirms configuration fit for the dosing task",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -193,12 +193,12 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Compounds dispensed per run", "hint": "Number input, up to 48 with Storage Extension", "input": "number", "choices": "" },
+                { "title": "Compounds dispensed per run", "hint": "Up to 48 with Storage Extension", "input": "number", "choices": "" },
                 { "title": "Run frequency", "hint": "Daily, weekly, or as-needed", "choices": "Daily; Weekly; As-needed" },
-                { "title": "Current manual reload frequency", "hint": "Number input", "input": "number", "choices": "" }
+                { "title": "Current manual reload frequency", "hint": "", "input": "number", "choices": "" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms whether the Storage Extension is advised. Routes to a throughput-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -241,9 +241,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same dispensing range, direct-to-vessel dosing, and 21 CFR Part 11 compliant software. The difference is unattended capacity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same dispensing range, direct-to-vessel dosing, and 21 CFR Part 11 compliant software. The difference is unattended capacity."
+            ]
           },
 
           "applicationsExplorer": {

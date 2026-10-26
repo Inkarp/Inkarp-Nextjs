@@ -131,10 +131,7 @@
               "question": "Can the H-Genie Lite perform reactions like deuteration?",
               "answer": "No. It generates hydrogen gas; it doesn't run chemical reactions itself. Reactions like deuteration are performed by systems such as the H-Cube, which this generator could potentially supply."
             },
-            {
-              "question": "Can generated hydrogen be stored?",
-              "answer": "The system is built for on-demand generation and use; storage isn't described in the confirmed materials, and this is worth confirming directly with Inkarp for your specific setup."
-            },
+            { "question": "Can generated hydrogen be stored?", "answer": "The system is built for on-demand generation and use." },
             {
               "question": "Is the H-Genie Lite compatible with ThalesNano's fleet systems?",
               "answer": "Yes, via the Automatic Water Filler accessory, which connects to the Phoenix – H-Genie platform or the broader Instrument Fleet through the same THS System Controller used with H-Cube Advance."
@@ -413,7 +410,7 @@
               }
             ],
             "lead": "The pressure setup guide walks through the stated one-minute workflow for your target pressure.",
-            "ctaNote": "Shows the confirmed set-and-start workflow. Confirms leak detection runs throughout.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
           },
@@ -511,7 +508,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the H-Genie II will be added once its own configuration is confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -572,7 +569,7 @@
                 { "title": "Run duration input", "hint": "Hours per day or per run", "choices": "Hours per day; Per run" }
               ],
               "lead": "The water consumption and refill planner estimates runtime and flags when the Automatic Water Filler becomes worthwhile.",
-              "ctaNote": "Calculates against the 200 mL/hr rate. Shows how often the 3 L reservoir needs manual refilling. Notes when unattended or extended runs justify the accessory.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -698,10 +695,7 @@
               "question": "Can the H-Genie II perform reactions like deuteration?",
               "answer": "No. It generates hydrogen gas; it doesn't run chemical reactions itself. Reactions like deuteration are performed by a connected reactor system, which this generator can supply."
             },
-            {
-              "question": "Can generated hydrogen be stored?",
-              "answer": "The system is built for on-demand generation and use; storage isn't described in the confirmed materials, and this is worth confirming directly with Inkarp."
-            },
+            { "question": "Can generated hydrogen be stored?", "answer": "The system is built for on-demand generation and use." },
             {
               "question": "What is the Phoenix platform, and does it work with H-Genie II?",
               "answer": "Yes. Paired with the Phoenix Flow Reactor, the combined platform reaches 450°C and 200 bar, combining high-pressure hydrogen generation with high-temperature reactor capability."
@@ -752,10 +746,7 @@
                     "title": "It fits into whatever reactor setup you already run.",
                     "text": "CatCarts, MidiCarts, coiled reactors, metal-metal sealed columns, or a straightforward balloon."
                   },
-                  {
-                    "title": "Paired with Phoenix, it becomes something bigger.",
-                    "text": "The Phoenix–H-Genie platform reaches 450°C and 200 bar, combining high-pressure hydrogen generation with high-temperature reactor capability for the first time, per the source's own claim."
-                  },
+                  { "title": "Paired with Phoenix, it becomes something bigger." },
                   {
                     "title": "Runtime extends to a full week unattended.",
                     "text": "With the Automatic Water Filler accessory, the same one confirmed compatible with H-Genie Lite."
@@ -1028,7 +1019,7 @@
               }
             ],
             "lead": "The reactor and setup compatibility checker confirms whether your existing setup works with H-Genie II.",
-            "ctaNote": "Confirms fit with your selected setup. Notes when Phoenix compatibility applies for high-temperature work. Routes to Inkarp for setup-specific confirmation.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
           },
@@ -1115,14 +1106,14 @@
                 "feature": "Hydrogen Production Rate",
                 "values": [
                   "0.1 to 1 NL/min",
-                  "Not stated"
+                  ""
                 ]
               },
               {
                 "feature": "Consumption Monitoring",
                 "values": [
                   "Data export functionality",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1154,9 +1145,12 @@
                 ]
               }
             ],
-            "disclaimer": "H-Genie II isn't a bigger Lite — it's the original award-winning platform, with real capability the streamlined Lite doesn't carry: double the pressure, a full purity grade tighter, and consumption data you can actually export.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "H-Genie II isn't a bigger Lite — it's the original award-winning platform, with real capability the streamlined Lite doesn't carry: double the pressure, a full purity grade tighter, and consumption data you can actually export."
+            ]
           },
 
           "serviceMap": {
@@ -1215,7 +1209,7 @@
                 { "title": "Run frequency input", "hint": "Hours per day or per run", "choices": "Hours per day; Per run" }
               ],
               "lead": "The runtime and data monitoring planner shows water consumption and highlights the consumption data export capability.",
-              "ctaNote": "Calculates against the 250 mL/hr rate and 3 L reservoir. Shows what consumption data is tracked and exportable. Confirms the up-to-1-week runtime with the Automatic Water Filler.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }

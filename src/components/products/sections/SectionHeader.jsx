@@ -3,7 +3,7 @@
 // `lead` is an optional one-line introduction shown between the eyebrow and the title.
 export default function SectionHeader({ eyebrow, lead, title, description, dark = false }) {
   return (
-    <div className="relative mb-8 max-w-3xl">
+    <div className="relative mb-8">
       {eyebrow && (
         <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-red">
           <span className="inline-block h-2 w-2 bg-red" />

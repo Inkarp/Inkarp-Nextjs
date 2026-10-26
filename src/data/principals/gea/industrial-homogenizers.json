@@ -48,7 +48,7 @@
             { "label": "Category", "value": "Industrial Homogenizers" },
             { "label": "Model Range", "value": "16 models, Ariete 2006 through Ariete 5400" },
             { "label": "Maximum Flow Rate", "value": "Up to 80,000 l/h (Ariete 5400, lowest pressure setting)" },
-            { "label": "Pressure Range", "value": "Up to 1500 bar across the lineup (inferred from performance chart column headers)" },
+            { "label": "Pressure Range", "value": "Up to 1500 bar across the lineup" },
             { "label": "Customization Options", "value": "300+" },
             { "label": "High-Efficiency Add-Ons", "value": "NanoValve®, ReFlow, AirFlow, PureFlow" },
             { "label": "Design", "value": "Aseptic design available" },
@@ -87,7 +87,7 @@
                 "key": "targetFlowRate",
                 "label": "Target flow rate (l/h)",
                 "question": "Target flow rate (l/h)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -114,9 +114,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a model-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Flow Rate and Pressure Model Selector",
-            "emptyState": "Recommends the matching Ariete® model",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -173,7 +173,7 @@
               }
             ],
             "eyebrow": "Industry Compliance Checker",
-            "ctaNote": "Confirms the right compliance and design setup. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -222,9 +222,12 @@
                 ]
               }
             ],
-            "disclaimer": "All models share the same customization options, high-efficiency add-ons, and certification stack. The difference is purely flow rate and pressure capacity.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All models share the same customization options, high-efficiency add-ons, and certification stack. The difference is purely flow rate and pressure capacity."
+            ]
           },
 
           "applicationsExplorer": {
@@ -437,30 +440,18 @@
                 "title": "How much could the high-efficiency options actually save?",
                 "description": "Enter current power, water, and oil consumption, and see the potential savings with NanoValve®, ReFlow, AirFlow, and PureFlow.",
                 "valueFields": [
-                  {
-                    "key": "powerCost",
-                    "label": "Current annual power cost",
-                    "default": 0,
-                    "summaryLabel": "Current annual power cost",
-                    "hint": "Number input"
-                  },
-                  {
-                    "key": "waterCost",
-                    "label": "Current annual water usage",
-                    "default": 0,
-                    "summaryLabel": "Current annual water usage",
-                    "hint": "Number input"
-                  },
+                  { "key": "powerCost", "label": "Current annual power cost", "default": 0, "summaryLabel": "Current annual power cost", "hint": "" },
+                  { "key": "waterCost", "label": "Current annual water usage", "default": 0, "summaryLabel": "Current annual water usage", "hint": "" },
                   {
                     "key": "oilCost",
                     "label": "Current annual oil/lubrication cost",
                     "default": 0,
                     "summaryLabel": "Current annual oil/lubrication cost",
-                    "hint": "Number input"
+                    "hint": ""
                   }
                 ],
                 "totalValueLabel": "Current total annual resource cost",
-                "totalValueNote": "Estimates potential resource and cost savings with high-efficiency add-ons. Routes to a savings-specific quotation.",
+                "totalValueNote": "",
                 "submitLabel": "Get Configuration Support",
                 "disclaimer": "",
                 "purchasePriceField": null

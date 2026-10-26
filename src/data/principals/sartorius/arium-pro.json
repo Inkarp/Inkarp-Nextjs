@@ -162,9 +162,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Configuration Selector",
-            "emptyState": "Recommends Basic, UF, UV, or VF",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -230,7 +230,7 @@
               }
             ],
             "eyebrow": "Installation Fit Checker",
-            "ctaNote": "Confirms which item numbers match the installation. Routes to an installation-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -251,7 +251,7 @@
                 { "title": "Base configuration", "hint": "UV or VF", "choices": "UV; VF" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms whether the TOC monitor add-on is advised. Routes to a compliance-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -322,9 +322,12 @@
                 ]
               }
             ],
-            "disclaimer": "All four configurations share the same core platform, exceeding ASTM Type 1 standards, glove-compatible touch display, and dispensing options. The difference is which purification modules are included.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All four configurations share the same core platform, exceeding ASTM Type 1 standards, glove-compatible touch display, and dispensing options. The difference is which purification modules are included."
+            ]
           },
 
           "applicationsExplorer": {

@@ -190,7 +190,7 @@
               }
             ],
             "eyebrow": "Flow Rate and Column Selector",
-            "ctaNote": "Recommends the flow setting and confirms detection compatibility across the column range. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -243,9 +243,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Sample-Limited Workflow Planner",
-            "emptyState": "Estimates sensitivity and sample-consumption benefit from moving to non-split low flow",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -282,7 +282,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends Standard, HDX Technology, or 2D Technology. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -402,9 +402,12 @@
                 ]
               }
             ],
-            "disclaimer": "M-Class is not a smaller version of the analytical systems — it addresses a different constraint. Where I-Class and H-Class optimize resolution and flexibility at analytical flow rates, M-Class exists because some samples don't provide enough material for analytical scale to work at all. Note the narrower pH range (2 to 10) and the absence of column tracking as real trade-offs against the analytical-scale systems.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "M-Class is not a smaller version of the analytical systems — it addresses a different constraint. Where I-Class and H-Class optimize resolution and flexibility at analytical flow rates, M-Class exists because some samples don't provide enough material for analytical scale to work at all. Note the narrower pH range (2 to 10) and the absence of column tracking as real trade-offs against the analytical-scale systems."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1099,7 +1102,7 @@
               }
             ],
             "eyebrow": "LC-MS Inlet Configuration Selector",
-            "ctaNote": "Recommends injector type and carryover management settings. Routes to an LC-MS-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1147,9 +1150,9 @@
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a separation-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Dispersion Impact Estimator",
-            "emptyState": "Estimates resolution recoverable at 4 µL band spread, benchmarked to the tetracaine comparison",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1191,7 +1194,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends I-Class PLUS, H-Class PLUS Quaternary, or H-Class PLUS Binary. Routes to a system-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1282,8 +1285,8 @@
                 "feature": "Empower SQT Qualification",
                 "values": [
                   "Yes",
-                  "Not stated on the product page",
-                  "Not stated on the product page"
+                  "",
+                  ""
                 ]
               },
               {
@@ -1303,9 +1306,12 @@
                 ]
               }
             ],
-            "disclaimer": "These are specialists, not tiers. I-Class PLUS trades column capacity and multi-solvent blending for the lowest dispersion and carryover in the series — the right choice when the mass spectrometer or the separation is the binding constraint. H-Class PLUS trades some of that performance for six-column screening and nine-solvent blending, which is what method development needs. ACQUITY Premier addresses a different problem entirely: metal-sensitive analytes adsorbing to a stainless steel flow path, which neither H-Class nor I-Class resolves.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These are specialists, not tiers. I-Class PLUS trades column capacity and multi-solvent blending for the lowest dispersion and carryover in the series — the right choice when the mass spectrometer or the separation is the binding constraint. H-Class PLUS trades some of that performance for six-column screening and nine-solvent blending, which is what method development needs. ACQUITY Premier addresses a different problem entirely: metal-sensitive analytes adsorbing to a stainless steel flow path, which neither H-Class nor I-Class resolves."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2018,7 +2024,7 @@
               }
             ],
             "eyebrow": "Quaternary or Binary Selector",
-            "ctaNote": "Recommends the Quaternary or Binary Solvent Manager. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2066,7 +2072,7 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a method-scaling quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Method Scaling Savings Calculator",
             "emptyState": "Projects run time and solvent reduction, benchmarked against the 4× / 10× diclazuril result",
             "disclaimer": "",
@@ -2089,7 +2095,7 @@
                 { "title": "Gradient profiles to test", "hint": "Single profile, or multiple shapes", "choices": "Single profile; Multiple shapes" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms column manager, solvent-select valve, and Auto•Blend Plus requirements. Routes to a method-development quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -2193,9 +2199,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three run on the same 15,000 psi UPLC platform with eCord column tracking and wide software support. The H-Class PLUS pair use a stainless steel flow path; where analytes are metal-sensitive — phosphopeptides, oligonucleotides, organic acids — that path requires passivation, which is precisely what ACQUITY Premier's inert MaxPeak HPS surface removes. Waters publishes a direct comparison of passivation versus MaxPeak HPS for oligonucleotide HILIC analysis, worth reviewing if the analyte class is affected.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three run on the same 15,000 psi UPLC platform with eCord column tracking and wide software support. The H-Class PLUS pair use a stainless steel flow path; where analytes are metal-sensitive — phosphopeptides, oligonucleotides, organic acids — that path requires passivation, which is precisely what ACQUITY Premier's inert MaxPeak HPS surface removes. Waters publishes a direct comparison of passivation versus MaxPeak HPS for oligonucleotide HILIC analysis, worth reviewing if the analyte class is affected."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2888,7 +2897,7 @@
               }
             ],
             "eyebrow": "Metal-Sensitivity Assessment",
-            "ctaNote": "Confirms whether the analytes are likely metal-sensitive and what MaxPeak HPS addresses. Routes to an analyte-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2935,9 +2944,9 @@
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a workflow-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Passivation Time Recovery Calculator",
-            "emptyState": "Estimates instrument hours and solvent volume recoverable",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2975,7 +2984,7 @@
                 { "title": "Software environment", "hint": "Empower, MassLynx, or waters_connect", "choices": "Empower; MassLynx; Waters_connect" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends pump, injector, detector, and sample handling configuration. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -3053,9 +3062,12 @@
                 ]
               }
             ],
-            "disclaimer": "For analytes with no metal-surface interaction, conventional LC performs the separation perfectly well. The case for MaxPeak HPS is specific: it addresses a failure mode that affects phosphopeptides, oligonucleotides, organic acids, phosphates, and chelators, where the missing signal is otherwise easy to mistake for a sample or method problem.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "For analytes with no metal-surface interaction, conventional LC performs the separation perfectly well. The case for MaxPeak HPS is specific: it addresses a failure mode that affects phosphopeptides, oligonucleotides, organic acids, phosphates, and chelators, where the missing signal is otherwise easy to mistake for a sample or method problem."
+            ]
           },
 
           "applicationsExplorer": {

@@ -686,7 +686,7 @@
               ],
               "disclaimer": "",
               "lead": "The flow rate calculator shows what the Hei-FLOW Ultimate 600 actually delivers at a given speed and tubing bore, rather than leaving you to read it off a range.",
-              "ctaNote": "Shows the resulting flow across the 2.0 to 4,056 mL/min range.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -714,7 +714,7 @@
               ],
               "disclaimer": "",
               "lead": "The dosing accuracy visualiser shows how volume dosing, interval pauses, and the retraction function combine to deliver an accurate dose.",
-              "ctaNote": "Shows the tube tip with and without the retraction function engaged. Compares dosed volume against target with retraction on and off.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1013,9 +1013,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Ultimate tier is defined by what it adds over the Core and Expert tiers: stored process parameters, interval dosing, the retraction function, and dual RS232 and analogue control. Choosing between the 600 and 120 rpm variants is a question of your top-end flow requirement, not a difference in dosing accuracy.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Ultimate tier is defined by what it adds over the Core and Expert tiers: stored process parameters, interval dosing, the retraction function, and dual RS232 and analogue control. Choosing between the 600 and 120 rpm variants is a question of your top-end flow requirement, not a difference in dosing accuracy."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -1799,7 +1802,7 @@
               ],
               "disclaimer": "",
               "lead": "The turbo drain simulator shows what the turbo button actually does to flow rate and drain time compared with running at your normal working speed.",
-              "ctaNote": "Shows drain time at working speed versus turbo speed.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1827,7 +1830,7 @@
               ],
               "disclaimer": "",
               "lead": "The analogue signal mapper shows how a 0–10 V or 4–20 mA control signal translates into pump speed and direction.",
-              "ctaNote": "Shows the resulting pump speed in rpm. Shows how the same interface commands direction and running state.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -2121,7 +2124,7 @@
                 "feature": "Turbo Button",
                 "values": [
                   "Yes",
-                  "Not listed",
+                  "",
                   "Confirmed by Inkarp"
                 ]
               },
@@ -2142,9 +2145,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Expert and Ultimate tiers share the same drive, speed range, and flow ceiling. The difference is what sits on top of it: the Ultimate adds programmable dosing, retraction, and RS232 connectivity; the Expert trades that layer for a turbo button and a simpler analogue-only interface.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Expert and Ultimate tiers share the same drive, speed range, and flow ceiling. The difference is what sits on top of it: the Ultimate adds programmable dosing, retraction, and RS232 connectivity; the Expert trades that layer for a turbo button and a simpler analogue-only interface."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -2933,7 +2939,7 @@
               ],
               "disclaimer": "",
               "lead": "The channel configuration flow calculator shows how flow rate changes between a single-channel and a multi-channel head at the same speed setting.",
-              "ctaNote": "Shows the resulting mL/min for the chosen configuration.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -2955,18 +2961,18 @@
                 },
                 {
                   "title": "Target flow rate",
-                  "hint": "Checks against each configuration's range",
+                  "hint": "",
                   "choices": "Larger single flow; Smaller per-channel flow"
                 },
                 {
                   "title": "Likelihood of switching jobs later",
-                  "hint": "Flags whether keeping both head types makes sense",
+                  "hint": "",
                   "choices": "Unlikely to switch; May switch configurations over time"
                 }
               ],
               "disclaimer": "",
               "lead": "The pump head selector helps identify which head configuration fits your application before you order.",
-              "ctaNote": "Suggests single-channel, multi-channel, or both.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -3268,9 +3274,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Core 120 Multi is the range's flexibility play — one drive, two head configurations — while the Expert and Ultimate 600 stay single-channel and differentiate on control and automation instead.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Core 120 Multi is the range's flexibility play — one drive, two head configurations — while the Expert and Ultimate 600 stay single-channel and differentiate on control and automation instead."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -4082,7 +4091,7 @@
               ],
               "disclaimer": "",
               "lead": "The analogue control mapper shows how a 0–10 V or 4–20 mA control signal sets pump speed and direction, regardless of which head is fitted.",
-              "ctaNote": "Shows the resulting pump speed in rpm. Shows how the interface commands direction and running state.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -4389,9 +4398,12 @@
                 ]
               }
             ],
-            "disclaimer": "This pump sits at the crossing point of the range: the channel flexibility of the Core 120 Multi, with the turbo button and analogue control of the Expert tier.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "This pump sits at the crossing point of the range: the channel flexibility of the Core 120 Multi, with the turbo button and analogue control of the Expert tier."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",
@@ -5194,7 +5206,7 @@
               ],
               "disclaimer": "",
               "lead": "The channel and dosing precision calculator shows how flow rate and dosing volume behave across single and multi-channel configurations at this pump's ±1% precision.",
-              "ctaNote": "Shows the expected dose-to-dose variation at ±1%.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -5211,13 +5223,13 @@
               "options": [
                 {
                   "title": "Hood barrier indicator",
-                  "hint": "Illustrates the enclosure the foot switch lets you work around",
+                  "hint": "",
                   "choices": "Enclosure open; Enclosure closed, foot switch in use"
                 }
               ],
               "disclaimer": "",
               "lead": "The closed-hood operation simulator shows how the retraction function and foot switch work together for hazardous or sensitive media handled inside an exhaust hood.",
-              "ctaNote": "Shows starting and stopping the pump without reaching into the hood. Shows the tube tip with and without the retraction function engaged. Compares dosed volume against target with retraction on and off.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -5532,9 +5544,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Ultimate 120 Multi is the precision flagship of the range: the tightest tolerance, full channel flexibility, and the only model built for closed-hood operation.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Ultimate 120 Multi is the precision flagship of the range: the tightest tolerance, full channel flexibility, and the only model built for closed-hood operation."
+            ]
           },
           "serviceMap": {
             "eyebrow": "Inkarp Service Near You",

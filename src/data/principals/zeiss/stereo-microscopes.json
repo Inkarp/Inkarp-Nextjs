@@ -48,8 +48,7 @@
             { "label": "Industry Set Illumination", "value": "Segmentable LED ringlight (shadow-free/oblique segment), ESD-safe antistatic coating" },
             { "label": "Camera Compatibility", "value": "Optional, attaches to phototube" },
             { "label": "Successor To", "value": "Zeiss Stemi 305" },
-            { "label": "Return Policy", "value": "60 days, risk-free" },
-            { "label": "Magnification Range, Objective Set, Zoom Ratio", "value": "Not confirmed in this source, available on request" }
+            { "label": "Return Policy", "value": "60 days, risk-free" }
           ],
 
           "applications": [
@@ -133,7 +132,8 @@
                   "Configuration Guidance"
                 ]
               }
-            ]
+            ],
+            "disclaimer": ""
           },
 
           "configWizard": {
@@ -174,9 +174,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Illumination Fit Checker",
-            "emptyState": "Confirms the right illumination system across the three sets",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -240,9 +240,12 @@
                 ]
               }
             ],
-            "disclaimer": "Detailed specifications for Stemi 508 weren't available in this source pull. Given Stemi 355's positioning as Zeiss's entry-level Greenough stereo microscope, Stemi 508 likely represents the step up in optical performance or magnification range within the same stereo and zoom microscope line.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Given Stemi 355's positioning as Zeiss's entry-level Greenough stereo microscope, Stemi 508 likely represents the step up in optical performance or magnification range within the same stereo and zoom microscope line."
+            ]
           },
 
           "applicationsExplorer": {
@@ -359,10 +362,7 @@
               "question": "Is there a return policy?",
               "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Magnification range, objective set, and zoom ratio were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Stemi 355 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the configuration selected."
@@ -609,7 +609,7 @@
                   "choices": "Moved between rooms regularly; Fixed installation"
                 }
               ],
-              "ctaNote": "Recommends Education, Labs, or Industry configuration. Routes to a set-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }
@@ -765,7 +765,7 @@
               }
             ],
             "eyebrow": "Magnification and Working Distance Planner",
-            "ctaNote": "Recommends the front optics and eyepiece combination. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -818,9 +818,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Stand and Illumination Selector",
-            "emptyState": "Recommends stand type and illumination configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -845,35 +845,35 @@
                 "feature": "Zoom Ratio",
                 "values": [
                   "8:1",
-                  "Not stated as zoom-based"
+                  ""
                 ]
               },
               {
                 "feature": "Magnification Range",
                 "values": [
                   "2x to 250x, interchangeable optics",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
                 "feature": "Working Distance",
                 "values": [
                   "Up to 287 mm",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
                 "feature": "Field of View",
                 "values": [
                   "Up to 122 mm",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
                 "feature": "Viewing Angle",
                 "values": [
                   "35°",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
@@ -919,9 +919,12 @@
                 ]
               }
             ],
-            "disclaimer": "Stemi 355 and Stemi 508 aren't overlapping options, they sit at different points in the same range. Stemi 355 covers routine, no-prep 3D viewing across education, biology, and industry. Stemi 508 adds the apochromatic zoom optics, wider working distance, and stand flexibility that detailed research, documentation-grade imaging, or demanding industrial QC actually requires.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Stemi 355 and Stemi 508 aren't overlapping options, they sit at different points in the same range. Stemi 355 covers routine, no-prep 3D viewing across education, biology, and industry. Stemi 508 adds the apochromatic zoom optics, wider working distance, and stand flexibility that detailed research, documentation-grade imaging, or demanding industrial QC actually requires."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1002,7 +1005,7 @@
               { "title": "Product Demonstration", "description": "Shows zoom range and color accuracy on your own specimens" },
               { "title": "Optics and Stand Selection Support", "description": "Confirms magnification, working distance, and stand configuration" },
               { "title": "Installation Support", "description": "Setup, calibration, and first-use checks" },
-              { "title": "Camera Integration Support", "description": "C-mount and Axiocam setup on the doc version" },
+              { "title": "Camera Integration Support", "description": "" },
               { "title": "Operator Training", "description": "Zoom operation, click-stop use, and illumination switching" },
               { "title": "Preventive Maintenance", "description": "Optics, stand mechanics, and illumination performance" },
               { "title": "Spares and Accessories", "description": "Front optics, eyepieces, stages, and replacement parts" },
@@ -1084,7 +1087,7 @@
               { "title": "Product Demonstration", "body": "Shows zoom range and color accuracy on your own specimens" },
               { "title": "Optics and Stand Selection Support", "body": "Confirms magnification, working distance, and stand configuration" },
               { "title": "Installation Support", "body": "Setup, calibration, and first-use checks" },
-              { "title": "Camera Integration Support", "body": "C-mount and Axiocam setup on the doc version" },
+              { "title": "Camera Integration Support", "body": "" },
               { "title": "Operator Training", "body": "Zoom operation, click-stop use, and illumination switching" },
               { "title": "Preventive Maintenance", "body": "Optics, stand mechanics, and illumination performance" },
               { "title": "Spares and Accessories", "body": "Front optics, eyepieces, stages, and replacement parts" },

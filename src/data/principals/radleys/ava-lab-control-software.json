@@ -423,7 +423,7 @@
                 }
               ],
               "lead": "The Pad vs PC selector recommends the right AVA platform for your lab.",
-              "ctaNote": "Recommends AVA Pad or AVA PC.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -440,7 +440,7 @@
                 { "title": "Device type", "hint": "Circulator, stirrer, pump, or sensor", "choices": "Circulator; Stirrer; Pump; Sensor" }
               ],
               "lead": "The device compatibility checker confirms fit for your existing lab equipment.",
-              "ctaNote": "Confirms direct support or flags a driver check. Confirms how many hubs are needed for your device total.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -552,9 +552,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both platforms share the same device compatibility and 16-device expansion ceiling — the choice is about reactor count and physical location, not capability.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both platforms share the same device compatibility and 16-device expansion ceiling — the choice is about reactor count and physical location, not capability."
+            ]
           },
 
           "serviceMap": {

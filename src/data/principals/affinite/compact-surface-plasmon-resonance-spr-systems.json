@@ -114,16 +114,16 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a mode-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Static vs. Flow Mode Selector",
-            "emptyState": "Recommends static, flow, or hybrid operation",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
 
           "suitability": {
             "ctaLabel": "Get Configuration Support",
-            "ctaNote": "Recommends the matching sensor chip. Routes to a sensor-specific quotation.",
+            "ctaNote": "",
             "title": "Which sensor surface fits the immobilization approach?",
             "description": "Select the target molecule and coupling method, and see the recommended sensor chip.",
             "fields": [
@@ -180,7 +180,7 @@
             {
               "sectionId": "kinetic-range-estimator",
               "ctaLabel": "Talk to Product Expert",
-              "ctaNote": "Confirms whether the interaction falls within P4PRO's measurable kinetic range. Routes to an assay-specific quotation.",
+              "ctaNote": "",
               "eyebrow": "Kinetic Range Estimator",
               "title": "Where does the expected interaction fall on the kinetic scale?",
               "description": "Enter the expected binding speed and affinity, and see if it falls within the measurable range.",
@@ -262,9 +262,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both instruments run the same disposable sensors and Affilabs.core software. The difference is whether flow-based kinetics is part of the workflow.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both instruments run the same disposable sensors and Affilabs.core software. The difference is whether flow-based kinetics is part of the workflow."
+            ]
           },
 
           "applicationsExplorer": {
@@ -648,13 +651,13 @@
             "description": "Enter the number of samples and cycle time, and see the daily screening throughput.",
             "cycleMinutes": 10,
             "fields": [
-              { "key": "samples", "label": "Samples to screen", "default": 24, "min": 1, "hint": "Number input" },
-              { "key": "cyclesPerSample", "label": "Cycles per sample", "default": 2, "min": 1, "hint": "Number input" },
-              { "key": "hoursPerDay", "label": "Working hours available per day", "default": 7, "min": 1, "max": 24, "hint": "Number input" }
+              { "key": "samples", "label": "Samples to screen", "default": 24, "min": 1, "hint": "" },
+              { "key": "cyclesPerSample", "label": "Cycles per sample", "default": 2, "min": 1, "hint": "" },
+              { "key": "hoursPerDay", "label": "Working hours available per day", "default": 7, "min": 1, "max": 24, "hint": "" }
             ],
             "submitLabel": "Get Configuration Support",
-            "disclaimer": "Estimates conditions screened per day at under 10 minutes per cycle. Routes to a workflow-specific quotation; actual throughput depends on incubation and wash times for the assay.",
-            "ctaNote": "Estimates conditions screened per day at under 10 minutes per cycle. Routes to a workflow-specific quotation."
+            "disclaimer": "Actual throughput depends on incubation and wash times for the assay.",
+            "ctaNote": ""
           },
 
           "configWizard": {
@@ -694,16 +697,16 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a setting-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Lab Setting Fit Checker",
-            "emptyState": "Confirms setup and training needs for the environment",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
 
           "suitability": {
             "ctaLabel": "Talk to Product Expert",
-            "ctaNote": "Recommends the matching sensor chip. Routes to a sensor-specific quotation.",
+            "ctaNote": "",
             "title": "Which sensor surface fits the immobilization approach?",
             "description": "Select the target molecule and coupling method, and see the recommended sensor chip.",
             "fields": [
@@ -822,9 +825,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both instruments run the same disposable sensors and Affilabs.core software. The difference is whether flow-based kinetics is part of the workflow.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both instruments run the same disposable sensors and Affilabs.core software. The difference is whether flow-based kinetics is part of the workflow."
+            ]
           },
 
           "applicationsExplorer": {

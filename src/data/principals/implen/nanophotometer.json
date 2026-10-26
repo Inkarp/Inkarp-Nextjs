@@ -99,7 +99,7 @@
                 "key": "expectedConcentration",
                 "label": "Expected concentration",
                 "question": "Expected concentration",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -114,9 +114,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Sample Type and Range Checker",
-            "emptyState": "Confirms whether the sample reads directly or needs dilution",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -169,7 +169,7 @@
               }
             ],
             "eyebrow": "Remote Access and Compliance Planner",
-            "ctaNote": "Confirms remote access and compliance setup. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -218,9 +218,12 @@
                 ]
               }
             ],
-            "disclaimer": "All models share the same dilution-free, microvolume reading principle. The difference is channel count and throughput.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All models share the same dilution-free, microvolume reading principle. The difference is channel count and throughput."
+            ]
           },
 
           "applicationsExplorer": {
@@ -545,10 +548,10 @@
               ],
               "options": [
                 { "title": "Samples per run", "hint": "Up to 12", "input": "text", "choices": "" },
-                { "title": "Runs needed per day", "hint": "Number input", "input": "number", "choices": "" },
-                { "title": "Working hours available", "hint": "Number input", "input": "number", "choices": "" }
+                { "title": "Runs needed per day", "hint": "", "input": "number", "choices": "" },
+                { "title": "Working hours available", "hint": "", "input": "number", "choices": "" }
               ],
-              "ctaNote": "Estimates total samples processed per day. Routes to a workflow-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }
@@ -645,7 +648,7 @@
                 "key": "expectedConcentration",
                 "label": "Expected concentration",
                 "question": "Expected concentration",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -660,9 +663,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Mode and Range Selector",
-            "emptyState": "Recommends microvolume or cuvette measurement",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -715,7 +718,7 @@
               }
             ],
             "eyebrow": "Remote Access and Compliance Planner",
-            "ctaNote": "Confirms remote access and compliance setup. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -764,9 +767,12 @@
                 ]
               }
             ],
-            "disclaimer": "All models share the same dilution-free, microvolume reading principle. The difference is measurement mode and throughput.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All models share the same dilution-free, microvolume reading principle. The difference is measurement mode and throughput."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1090,10 +1096,10 @@
               ],
               "options": [
                 { "title": "Current calibration frequency", "hint": "Weekly, monthly, or quarterly", "choices": "Weekly; Monthly; Quarterly" },
-                { "title": "Current annual service cost", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Current annual service cost", "hint": "", "input": "number", "choices": "" },
                 { "title": "Instrument downtime per calibration", "hint": "Time input", "input": "text", "choices": "" }
               ],
-              "ctaNote": "Estimates time and cost saved with a calibration-free design. Routes to a cost-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }
@@ -1188,7 +1194,7 @@
               "label": "Compliance",
               "values": [
                 "GMP, GLP, GxP ready, 21 CFR Part 11, IQOQ option",
-                "Not specified"
+                ""
               ]
             },
             {
@@ -1251,7 +1257,7 @@
                 "key": "typicalDsdnaConcentration",
                 "label": "Typical dsDNA concentration",
                 "question": "Typical dsDNA concentration",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -1276,9 +1282,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a model-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "N60 vs. N50 Model Selector",
-            "emptyState": "Recommends N60 or N50",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1329,7 +1335,7 @@
               }
             ],
             "eyebrow": "Remote Access and Compliance Planner",
-            "ctaNote": "Confirms remote access and compliance setup. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1346,7 +1352,7 @@
               ],
               "options": [
                 { "title": "Sample type", "hint": "dsDNA, protein (BSA-equivalent), or other", "choices": "DsDNA; Protein (BSA-equivalent); Other" },
-                { "title": "Expected concentration", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Expected concentration", "hint": "", "input": "number", "choices": "" },
                 {
                   "title": "Measurement need",
                   "hint": "Quantification only, or QC ratio (260/280, 260/230)",
@@ -1354,7 +1360,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms which model covers the sample directly. Routes to an application-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1397,7 +1403,7 @@
                 "feature": "Compliance",
                 "values": [
                   "21 CFR Part 11, IQOQ option",
-                  "Not specified",
+                  "",
                   "21 CFR Part 11, IQOQ option"
                 ]
               },
@@ -1418,9 +1424,12 @@
                 ]
               }
             ],
-            "disclaimer": "All models share the same 0.3 µl minimum sample volume and dilution-free reading principle. The difference is detection range, throughput, and available features.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All models share the same 0.3 µl minimum sample volume and dilution-free reading principle. The difference is detection range, throughput, and available features."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1832,14 +1841,14 @@
                 "key": "zHeight",
                 "label": "Z-height",
                 "question": "Z-height",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Cuvette Compatibility Checker",
-            "emptyState": "Confirms whether current cuvettes work directly with C40",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1892,7 +1901,7 @@
               }
             ],
             "eyebrow": "Remote Access and Compliance Planner",
-            "ctaNote": "Confirms remote access and compliance setup. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1917,7 +1926,7 @@
                 { "title": "Cuvette material required", "hint": "Quartz, glass, or plastic", "choices": "Quartz; Glass; Plastic" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms setup for temperature-controlled measurement. Routes to an application-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1952,8 +1961,8 @@
                 "feature": "Temperature Control",
                 "values": [
                   "Included",
-                  "Not specified",
-                  "Not specified"
+                  "",
+                  ""
                 ]
               },
               {
@@ -1973,9 +1982,12 @@
                 ]
               }
             ],
-            "disclaimer": "All models share the same dilution-free, high-precision reading principle. The difference is measurement format and cuvette flexibility.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All models share the same dilution-free, high-precision reading principle. The difference is measurement format and cuvette flexibility."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2526,9 +2538,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Upgrade Package Selector",
-            "emptyState": "Recommends which upgrade packages to add",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2550,7 +2562,7 @@
               {
                 "key": "expectedConcentration",
                 "label": "Expected concentration",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -2575,7 +2587,7 @@
               }
             ],
             "eyebrow": "Sample Type and Range Checker",
-            "ctaNote": "Confirms whether the standard unit or Performance Package is needed. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -2600,7 +2612,7 @@
                 { "title": "Network requirement", "hint": "Standalone, Wi-Fi, or LAN", "choices": "Standalone; Wi-Fi; LAN" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms whether the Connectivity Package fits the workflow. Routes to a connectivity-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -2650,9 +2662,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same core optics, touchscreen, and recalibration-free design. The difference is purely detection range and scan span.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same core optics, touchscreen, and recalibration-free design. The difference is purely detection range and scan span."
+            ]
           },
 
           "applicationsExplorer": {

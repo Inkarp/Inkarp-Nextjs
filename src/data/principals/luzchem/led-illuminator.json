@@ -108,10 +108,10 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a head-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "LED Head and Wavelength Selector",
             "lead": "Match your reaction to the right LEDi head.",
-            "emptyState": "Recommends standard RGB or a specific optional head",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -130,15 +130,6 @@
                   { "val": "vial", "label": "Vial" },
                   { "val": "nmr-tube", "label": "NMR-tube" }
                 ]
-              },
-              {
-                "key": "sampleVolume",
-                "label": "Sample volume",
-                "hint": "Confirms fit within the standard 10x10mm cuvette or alternate holders",
-                "options": [
-                  { "val": "confirms-fit-within-the-standard-10x10mm-cuvette", "label": "Confirms fit within the standard 10x10mm cuvette" },
-                  { "val": "alternate-holders", "label": "Alternate holders" }
-                ]
               }
             ],
             "results": [
@@ -156,7 +147,7 @@
             ],
             "eyebrow": "Sample Format and Holder Planner",
             "lead": "Find the right holder for your sample container.",
-            "ctaNote": "Recommends the matching holder. Routes to us for a holder-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -199,10 +190,13 @@
                 ]
               }
             ],
-            "disclaimer": "Both mount on the same adjustable rail and pair with the same magnetic mixer base, so switching heads never means switching systems.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both mount on the same adjustable rail and pair with the same magnetic mixer base, so switching heads never means switching systems."
+            ]
           },
 
           "applicationsExplorer": {

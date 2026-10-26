@@ -171,10 +171,7 @@
                     "title": "Multi-user labs are the explicit target, not an afterthought.",
                     "text": "The simplification specifically supports shared-instrument environments."
                   },
-                  {
-                    "title": "This source stays high-level, and I've kept the page that way too.",
-                    "text": "No plate size, solvent, or recovery volume specifics are stated, so none are invented here."
-                  }
+                  { "text": "No plate size, solvent, or recovery volume specifics are stated, so none are invented here." }
                 ],
                 "cards": [
                   { "title": "Under 1 minute", "description": "Per-spot identification speed" },
@@ -273,7 +270,7 @@
                       ],
                       [
                         "Typical acquisition steps",
-                        "A few mouse clicks per spot, per the source"
+                        "A few mouse clicks per spot"
                       ],
                       [
                         "New purchase planning",
@@ -357,7 +354,7 @@
                 { "title": "Spots per week input", "hint": "Typical volume", "input": "text", "choices": "" }
               ],
               "lead": "The TLC/CMS workflow estimator shows the time impact of adding Plate Express to your workflow.",
-              "ctaNote": "Calculates against the under-1-minute confirmed figure. Notes time saved versus manual extraction and prep. Routes to Inkarp for a workflow-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -371,10 +368,10 @@
               ],
               "options": [
                 { "title": "User count", "hint": "Single user, or multiple sharing the instrument", "choices": "Single user; Multiple sharing the instrument" },
-                { "title": "Existing expression CMS", "hint": "Confirms whether you already own the required base instrument", "input": "text", "choices": "" }
+                { "title": "Existing expression CMS", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The multi-user lab fit checker confirms whether Plate Express suits your lab's setup.",
-              "ctaNote": "Confirms multi-user suitability. Routes to Inkarp for a lab-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -479,9 +476,12 @@
                 ]
               }
             ],
-            "disclaimer": "Plate Express doesn't replace manual sample prep for every workflow — it removes the need for it specifically when a TLC spot is the starting point.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Plate Express doesn't replace manual sample prep for every workflow — it removes the need for it specifically when a TLC spot is the starting point."
+            ]
           },
 
           "serviceMap": {

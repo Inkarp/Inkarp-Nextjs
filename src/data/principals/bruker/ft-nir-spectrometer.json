@@ -399,7 +399,7 @@
                 { "title": "Sample type selector", "hint": "Solid, semi-solid, powder, or liquid", "choices": "Solid; Semi-solid; Powder; Liquid" },
                 {
                   "title": "Temperature control need",
-                  "hint": "Confirms whether Transmission's heater/cooler applies",
+                  "hint": "",
                   "choices": "No temperature control needed; Transmission heater/cooler required, +20°C to +80°C"
                 }
               ],
@@ -425,7 +425,7 @@
               ],
               "disclaimer": "",
               "lead": "The industry application matcher shows which confirmed application packages and configurations fit your industry.",
-              "ctaNote": "Notes where ready-to-use application packages are available. Points to Reflection, Transmission, or both, based on typical samples in that industry. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -530,7 +530,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the MPA III will be added once its own configuration is confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -1014,7 +1014,7 @@
               ],
               "disclaimer": "",
               "lead": "The sampling module selector confirms which MPA III sampling module fits your sample and situation.",
-              "ctaNote": "Recommends Sample Compartment, Integrating Sphere, Fiber Optic Probes, or External Transmission Unit. Routes to Inkarp for configuration confirmation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1034,7 +1034,7 @@
               ],
               "disclaimer": "",
               "lead": "The software package matcher shows which OPUS software module fits your workflow.",
-              "ctaNote": "Recommends OPUS/LAB, OPUS/IDENT, OPUS/CONFO, OPUS/QUANT2, or ONET. Notes where the OPUS Validation Program applies. Routes to Inkarp for a software-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1146,9 +1146,12 @@
                 ]
               }
             ],
-            "disclaimer": "The MPA III trades TANGO II's simplicity for flexibility: more sampling options, deeper software, and the tools to build your own methods rather than rely on a fixed configuration.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The MPA III trades TANGO II's simplicity for flexibility: more sampling options, deeper software, and the tools to build your own methods rather than rely on a fixed configuration."
+            ]
           },
 
           "serviceMap": {

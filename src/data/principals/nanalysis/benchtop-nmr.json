@@ -184,10 +184,6 @@
                   {
                     "title": "This connects to a genuine product family.",
                     "text": "100e, 60Pro, and 60e siblings confirmed, spanning both field strength and multinuclear-vs-single-nuclei tiers."
-                  },
-                  {
-                    "title": "Some source content wasn't available to build from.",
-                    "text": "Detailed technical specifications, pulse programs, and full accessory/software lists are confirmed to exist but weren't included here."
                   }
                 ],
                 "cards": [
@@ -379,7 +375,7 @@
                 { "title": "Nuclei requirement", "hint": "Single nucleus or multinuclear", "choices": "Single nucleus; Multinuclear" }
               ],
               "lead": "The application fit checker confirms whether Nanalysis-100 suits your primary use case.",
-              "ctaNote": "Confirms suitability, or flags a sibling model (100e, 60Pro, 60e) to consider. Routes to Inkarp for an application-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -400,7 +396,7 @@
                 { "title": "Sample count", "hint": "Typical batch size", "input": "number", "choices": "" }
               ],
               "lead": "The autosampler and flow kit planner recommends the right accessory for your throughput need.",
-              "ctaNote": "Recommends AUTOsample-100, Flow Kit, or standard manual operation. Routes to Inkarp for an accessory-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -450,9 +446,12 @@
                 ]
               }
             ],
-            "disclaimer": "These aren't mutually exclusive upgrades — many labs add one or both accessories to the same base instrument as their workflow needs grow.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These aren't mutually exclusive upgrades — many labs add one or both accessories to the same base instrument as their workflow needs grow."
+            ]
           },
 
           "applicationsExplorer": {

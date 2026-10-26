@@ -416,7 +416,7 @@
               ],
               "disclaimer": "",
               "lead": "The resolution and pressure configurator recommends a configuration based on your gas mixture and operating conditions.",
-              "ctaNote": "Recommends standard (2 cm⁻¹) or high-resolution (1 cm⁻¹). Recommends standard (2 bar) or high-pressure (15 bar) configuration.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -436,7 +436,7 @@
               ],
               "disclaimer": "",
               "lead": "The calibration-free quantification visualiser shows how OMEGA 5 quantifies a compound without a calibration curve.",
-              "ctaNote": "Shows the real-time values OPUS GA tracks during analysis. Illustrates the calibration step removed from the workflow. Reflects the over-350-compound library available without calibration.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -534,9 +534,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same 5-meter gas cell, TE-MCT detector, and calibration-free OPUS GA quantification, the choice is about how demanding your specific gas mixture and process conditions are.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same 5-meter gas cell, TE-MCT detector, and calibration-free OPUS GA quantification, the choice is about how demanding your specific gas mixture and process conditions are."
+            ]
           },
 
           "serviceMap": {

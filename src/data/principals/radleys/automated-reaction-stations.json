@@ -408,10 +408,10 @@
               ],
               "options": [
                 { "title": "Number of simultaneous reactions", "hint": "Up to 4", "input": "number", "choices": "" },
-                { "title": "Temperature per reaction", "hint": "Confirms fit within -30°C to +180°C per zone", "input": "text", "choices": "" }
+                { "title": "Temperature per reaction", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The zone configuration planner confirms whether Mya 4's zone independence fits your simultaneous reaction needs.",
-              "ctaNote": "Confirms whether the temperature spread fits within the 200°C zone-to-zone tolerance. Routes to Inkarp for a zone-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -432,7 +432,7 @@
                 { "title": "Stirring requirement", "hint": "Standard magnetic or high-torque overhead", "choices": "Standard magnetic; High-torque overhead" }
               ],
               "lead": "The vessel and stirring configurator recommends the right vessel and stirring setup for your reaction.",
-              "ctaNote": "Confirms vessel and stirrer fit. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -544,7 +544,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full detail on the Mya 4 Control options and Mya 4 vessels and accessories pages will be added once those configurations are separately confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -1104,7 +1104,7 @@
                 { "title": "Third-party device need", "hint": "None, or specific devices required", "choices": "None; Specific devices required" }
               ],
               "lead": "The control option selector recommends Control Pad or PC Software based on your protocol needs.",
-              "ctaNote": "Recommends Control Pad or PC Software.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1122,10 +1122,10 @@
                   "hint": "From the 10 confirmed compatible types",
                   "choices": "Syringe Pumps; pH Sensors; Peristaltic Pumps; Piston Pumps; Balances; Vacuum Pumps; Gas Flow Controllers; Pressure Sensors; Conductivity Sensors; Gas Flow Meters"
                 },
-                { "title": "Device count", "hint": "Checks fit within the 16-device capacity", "input": "number", "choices": "" }
+                { "title": "Device count", "hint": "", "input": "number", "choices": "" }
               ],
               "lead": "The device integration checker confirms compatibility for your specific third-party equipment.",
-              "ctaNote": "Confirms direct compatibility. Routes to Inkarp for a device-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1244,9 +1244,12 @@
                 ]
               }
             ],
-            "disclaimer": "This isn't a basic-versus-advanced choice in every respect — the Control Pad already includes most core features. The PC Software specifically removes the step ceiling and adds device integration; everything else is shared.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "This isn't a basic-versus-advanced choice in every respect — the Control Pad already includes most core features. The PC Software specifically removes the step ceiling and adds device integration; everything else is shared."
+            ]
           },
 
           "serviceMap": {
@@ -1363,7 +1366,7 @@
             { "label": "Category", "value": "Automated Reaction Stations" },
             { "label": "Process Reaction Vessel Sizes", "value": "50, 100, 150, 250, 400 mL" },
             { "label": "Round Bottom Flask Sizes", "value": "25, 50, 100, 250 mL" },
-            { "label": "Vial/Tube Range", "value": "2 to 50 mL (see discrepancy note vs. main Mya 4 page)" },
+            { "label": "Vial/Tube Range", "value": "2 to 50 mL" },
             { "label": "Vial/Tube Diameters", "value": "12, 16, 17, 17 (tapered), 24, 28 mm, and 1 inch" },
             { "label": "Insert Material", "value": "Anodised aluminium, dedicated per vessel size" },
             { "label": "Impeller Types", "value": "Turbine, anchor, U-shape, centrifugal, flat, Retreat Curve" },
@@ -1685,7 +1688,7 @@
                 { "title": "Size or diameter selector", "hint": "Matched to the confirmed range for that vessel type", "input": "text", "choices": "" }
               ],
               "lead": "The vessel and insert finder confirms the exact dedicated insert for your vessel.",
-              "ctaNote": "Confirms the dedicated aluminium insert for your selection. Notes when a custom insert should be requested.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -1705,7 +1708,7 @@
                 }
               ],
               "lead": "The impeller and stirring selector recommends the right mixing configuration for your reaction.",
-              "ctaNote": "Recommends turbine, anchor, U-shape, centrifugal, flat, or Retreat Curve. Confirms magnetic or overhead stirring fit. Routes to Inkarp for a stirring-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1817,9 +1820,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Blaze Metrics lid isn't a replacement for the standard lids — it's a purpose-built addition for one specific integration, while still working normally when that probe isn't in use.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Blaze Metrics lid isn't a replacement for the standard lids — it's a purpose-built addition for one specific integration, while still working normally when that probe isn't in use."
+            ]
           },
 
           "serviceMap": {

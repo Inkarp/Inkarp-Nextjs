@@ -118,9 +118,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Channel Configuration Planner",
-            "emptyState": "Recommends channel and reference layout",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -172,7 +172,7 @@
               }
             ],
             "eyebrow": "Sensor Chip Selector",
-            "ctaNote": "Recommends the matching sensor chip type. Routes to a chip-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -221,9 +221,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput."
+            ]
           },
 
           "applicationsExplorer": {
@@ -536,11 +539,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Sensor chips used per year", "hint": "Number input, 75 to 200+", "input": "number", "choices": "" },
-                { "title": "Current annual service contract cost", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Sensor chips used per year", "hint": "75 to 200+", "input": "number", "choices": "" },
+                { "title": "Current annual service contract cost", "hint": "", "input": "number", "choices": "" },
                 { "title": "Sample type", "hint": "Purified or crude (affects chip/tubing needs)", "choices": "Purified; Crude (affects chip/tubing needs)" }
               ],
-              "ctaNote": "Estimates five-year total cost of ownership difference. Routes to a savings-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }
@@ -665,9 +668,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a coupling-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Technique Coupling Selector",
-            "emptyState": "Recommends the matching specialized flow cell",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -719,7 +722,7 @@
               }
             ],
             "eyebrow": "Sensor Chip Selector",
-            "ctaNote": "Recommends the matching sensor chip type. Routes to a chip-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -768,9 +771,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1100,11 +1106,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Sensor chips used per year", "hint": "Number input, 75 to 200+", "input": "number", "choices": "" },
-                { "title": "Current annual service contract cost", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Sensor chips used per year", "hint": "75 to 200+", "input": "number", "choices": "" },
+                { "title": "Current annual service contract cost", "hint": "", "input": "number", "choices": "" },
                 { "title": "Sample type", "hint": "Purified or crude (affects chip/tubing needs)", "choices": "Purified; Crude (affects chip/tubing needs)" }
               ],
-              "ctaNote": "Estimates five-year total cost of ownership difference. Routes to a savings-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }
@@ -1223,9 +1229,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Channel Configuration Planner",
-            "emptyState": "Recommends channel and reference layout",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1277,7 +1283,7 @@
               }
             ],
             "eyebrow": "Sensor Chip Selector",
-            "ctaNote": "Recommends the matching sensor chip type. Routes to a chip-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1326,9 +1332,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three share the same open-system design, sensor chip range, and low-drift performance. The difference is purely channel count and throughput."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1652,11 +1661,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Sensor chips used per year", "hint": "Number input, 75 to 200+", "input": "number", "choices": "" },
-                { "title": "Current annual service contract cost", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Sensor chips used per year", "hint": "75 to 200+", "input": "number", "choices": "" },
+                { "title": "Current annual service contract cost", "hint": "", "input": "number", "choices": "" },
                 { "title": "Sample type", "hint": "Purified or crude (affects chip/tubing needs)", "choices": "Purified; Crude (affects chip/tubing needs)" }
               ],
-              "ctaNote": "Estimates five-year total cost of ownership difference. Routes to a savings-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }

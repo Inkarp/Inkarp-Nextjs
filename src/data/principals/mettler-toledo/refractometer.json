@@ -45,7 +45,7 @@
             { "label": "Brix Measurement Range", "value": "0 – 100% w/w" },
             { "label": "Brix Accuracy", "value": "±0.05% w/w" },
             { "label": "Measurement Scales", "value": "Refractive Index, Sugar (Brix and more), Acid/Base, Chemical, Freezing Point, Salt, Others" },
-            { "label": "Temperature Control Range", "value": "5°C – 100°C (hero copy states 0°C – 100°C; confirm directly)" },
+            { "label": "Temperature Control Range", "value": "5°C – 100°C" },
             { "label": "Temperature Control Accuracy", "value": "±0.1°C" },
             { "label": "User-Defined Concentration Tables", "value": "Up to 30, table or formula entry" },
             { "label": "Minimum Sample Volume", "value": "0.5 mL" },
@@ -156,9 +156,12 @@
                 ]
               }
             ],
-            "disclaimer": "Excellence R4 and MyBrix serve different measurement contexts within Mettler Toledo's refractometer range, laboratory-grade precision on the bench, and portable convenience in the field. Detailed MyBrix specifications will complete this table once that source is reviewed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Excellence R4 and MyBrix serve different measurement contexts within Mettler Toledo's refractometer range, laboratory-grade precision on the bench, and portable convenience in the field."
+            ]
           },
 
           "applicationsExplorer": {
@@ -424,10 +427,7 @@
                   { "title": "Solution", "description": "Mettler Toledo Excellence R4 Refractometer" },
                   { "title": "Refractive index range", "description": "1.3200 – 1.7000, ±0.0001 accuracy, ±5e-005 repeatability" },
                   { "title": "Brix range", "description": "0 – 100% w/w, ±0.05% w/w accuracy" },
-                  {
-                    "title": "Temperature control",
-                    "description": "5°C – 100°C (hero copy states 0°C – 100°C; confirm the correct figure directly), ±0.1°C accuracy"
-                  },
+                  { "title": "Temperature control", "description": "5°C – 100°C, ±0.1°C accuracy" },
                   { "title": "Concentration tables", "description": "Up to 30, user-defined, table or formula entry" },
                   { "title": "Sample volume", "description": "0.5 mL minimum" },
                   { "title": "Display", "description": "7\" color touchscreen" },
@@ -663,9 +663,12 @@
                 ]
               }
             ],
-            "disclaimer": "MyBrix and Excellence R4 aren't competing options, they cover opposite ends of Mettler Toledo's refractometer range. MyBrix trades the R4's tighter accuracy and lab connectivity for genuine portability, battery power, and a weatherproof build suited to field conditions the R4 was never designed for.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "MyBrix and Excellence R4 aren't competing options, they cover opposite ends of Mettler Toledo's refractometer range. MyBrix trades the R4's tighter accuracy and lab connectivity for genuine portability, battery power, and a weatherproof build suited to field conditions the R4 was never designed for."
+            ]
           },
 
           "applicationsExplorer": {

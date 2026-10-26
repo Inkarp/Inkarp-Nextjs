@@ -513,7 +513,7 @@
               }
             ],
             "lead": "The module and application builder recommends which modules your target application needs.",
-            "ctaNote": "Confirms whether it's covered without additional modules. Recommends H-Genie, Gas Module, or other confirmed modules. Routes to Inkarp for a complete configuration quotation.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
           },
@@ -611,7 +611,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the combined Phoenix – H-Genie Platform will be added once its own configuration is confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -673,7 +673,7 @@
                 { "title": "Scale selector", "hint": "Small, standard, or larger volume", "choices": "Small; Standard; Larger volume" }
               ],
               "lead": "The heated element selector recommends the right loop, cartridge, or cartridge size for your chemistry.",
-              "ctaNote": "Recommends loop material/volume or cartridge type/size. Notes when a custom-sized element is worth requesting.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }
@@ -1150,7 +1150,7 @@
               }
             ],
             "lead": "The third-party integration checker confirms compatibility with your existing lab equipment.",
-            "ctaNote": "Confirms direct compatibility or flags a custom integration request. Routes to Inkarp for integration-specific confirmation.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
           },
@@ -1255,9 +1255,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Platform is the pre-integrated, hydrogenation-ready system; the standalone Phoenix II is the base reactor you build up with modules over time, including H-Genie if and when hydrogenation becomes part of the workflow.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Platform is the pre-integrated, hydrogenation-ready system; the standalone Phoenix II is the base reactor you build up with modules over time, including H-Genie if and when hydrogenation becomes part of the workflow."
+            ]
           },
 
           "serviceMap": {
@@ -1313,15 +1316,10 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Target scale input", "hint": "Milligrams through kilograms", "input": "text", "choices": "" },
-                {
-                  "title": "Cartridge recommendation",
-                  "hint": "Suggests self-fillable cartridge or CatCart sizing",
-                  "choices": "Suggests self-fillable cartridge; CatCart sizing"
-                }
+                { "title": "Target scale input", "hint": "Milligrams through kilograms", "input": "text", "choices": "" }
               ],
               "lead": "The scale-up planner confirms platform fit for your target synthesis quantity.",
-              "ctaNote": "Confirms screening, intermediate, or production-scale fit. Routes to Inkarp for a scale-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             }

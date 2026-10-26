@@ -97,7 +97,7 @@
               "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "stability": { "temp": "0.5", "humidity": "1" },
               "title": "Run a Simulated Test Cycle",
-              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
+              "description": "Example results are given for common targets.",
               "tempRange": [0, 90],
               "humidityRange": [35, 85],
               "heatAnchors": [[20, 0], [25, 4], [40, 18], [60, 53], [85, 76], [90, 80]],
@@ -168,7 +168,7 @@
               "sectionId": "load-fit",
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
-              "description": "This section helps users check whether their sample load fits the chamber before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH3-E-200", "shortName": "200", "maxLoadPerShelfKg": 20, "maxShelves": 9, "maxLoadKg": 50, "interiorHeightMm": 600 },
                 { "name": "TH3-E-400", "shortName": "400", "maxLoadPerShelfKg": 25, "maxShelves": 10, "maxLoadKg": 60, "interiorHeightMm": 800 }
@@ -227,7 +227,7 @@
               "sectionId": "water-savings",
               "eyebrow": "Interactive - How Much Uptime & Water Could You Save?",
               "title": "How Much Uptime & Water Could You Save?",
-              "description": "This section helps users estimate the manual effort and water saved over a long test with recirculation or a direct water supply.",
+              "description": "",
               "tiers": [
                 {
                   "maxDays": 7,
@@ -300,7 +300,7 @@
           "suitability": {
             "eyebrow": "Interactive - Test Condition Setup Guide",
             "title": "What are you testing?",
-            "description": "This section helps users choose the right starting setup based on their test type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a condition-specific setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final model, speed and accessories for your application.",
             "fields": [
@@ -365,7 +365,7 @@
           "configWizard": {
             "eyebrow": "Interactive - Configuration Wizard",
             "title": "Which TH3-E setup should I start from?",
-            "description": "Answer a few quick questions and get a recommended starting configuration. The page shows the setup below based on the answers.",
+            "description": "Answer a few quick questions and get a recommended starting configuration.",
             "emptyState": "Answer the questions to see your recommendation",
             "disclaimer": "This helper gives a starting point only. Inkarp confirms the final model and accessories for your application.",
             "steps": [
@@ -490,8 +490,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Workflow Readiness Score",
             "title": "How much of your testing workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH3-E: tighter control, higher uptime, dual over-temperature safety, and optional 21 CFR Part 11 data integrity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map my testing workflow with an Inkarp expert",
             "steps": [
               {
@@ -939,7 +939,7 @@
               "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "title": "Run a Simulated Test Cycle",
               "promptTitle": "How would your test cycle run?",
-              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
+              "description": "Example results are given for common targets.",
               "tempRange": [0, 100],
               "humidityRange": [30, 95],
               "stability": { "temp": "0.3", "humidity": "1" },
@@ -1012,7 +1012,7 @@
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
               "promptTitle": "Will the TH3-PE fit your samples?",
-              "description": "This section helps users check whether their sample load fits the chamber before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH3-PE-025", "shortName": "025", "maxLoadPerShelfKg": 25, "maxShelves": 7, "maxLoadKg": 65, "interiorHeightMm": 350 },
                 { "name": "TH3-PE-065", "shortName": "065", "maxLoadPerShelfKg": 25, "maxShelves": 10, "maxLoadKg": 65, "interiorHeightMm": 495 },
@@ -1080,7 +1080,7 @@
               "eyebrow": "Interactive - How Much Uptime & Water Could You Save?",
               "title": "How Much Uptime & Water Could You Save?",
               "promptTitle": "How much time and water could you save?",
-              "description": "This section helps users estimate the manual effort and water saved over a long test with recirculation or a direct water supply.",
+              "description": "",
               "tiers": [
                 {
                   "maxDays": 7,
@@ -1151,7 +1151,7 @@
           "suitability": {
             "eyebrow": "Interactive - Test Condition Setup Guide",
             "title": "What are you testing?",
-            "description": "This section helps users choose the right starting setup based on their test type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Condition-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final setpoint, chamber size, shelving, water supply and software for your protocol.",
             "fields": [
@@ -1338,8 +1338,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Workflow Readiness Score",
             "title": "How much of your testing workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH3-PE: precise control, higher uptime, dual over-temperature safety and optional 21 CFR Part 11 data integrity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Testing Workflow With an Inkarp Expert",
             "steps": [
               {
@@ -1780,7 +1780,7 @@
               "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "title": "Run a Simulated Test Cycle",
               "promptTitle": "How would your test cycle run?",
-              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
+              "description": "Example results are given for common targets.",
               "tempRange": [-20, 100],
               "humidityRange": [20, 95],
               "stability": { "temp": "0.3", "humidity": "1" },
@@ -1857,7 +1857,7 @@
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
               "promptTitle": "Will the TH3-ME fit your samples?",
-              "description": "This section helps users check whether their sample load fits the chamber before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH3-ME-025", "shortName": "025", "maxLoadPerShelfKg": 25, "maxShelves": 7, "maxLoadKg": 65, "interiorHeightMm": 350 },
                 { "name": "TH3-ME-065", "shortName": "065", "maxLoadPerShelfKg": 25, "maxShelves": 10, "maxLoadKg": 65, "interiorHeightMm": 495 },
@@ -1925,7 +1925,7 @@
               "eyebrow": "Interactive - How Much Uptime & Water Could You Save?",
               "title": "How Much Uptime & Water Could You Save?",
               "promptTitle": "How much time and water could you save?",
-              "description": "This section helps users estimate the manual effort and water saved over a long test with recirculation or a direct water supply.",
+              "description": "",
               "tiers": [
                 {
                   "maxDays": 7,
@@ -1996,7 +1996,7 @@
           "suitability": {
             "eyebrow": "Interactive - Test Condition Setup Guide",
             "title": "What are you testing?",
-            "description": "This section helps users choose the right starting setup based on their test type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Condition-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final setpoint, chamber size, shelving, water supply and software for your protocol.",
             "fields": [
@@ -2183,8 +2183,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Workflow Readiness Score",
             "title": "How much of your testing workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH3-ME: precise control, higher uptime, dual over-temperature safety and optional 21 CFR Part 11 data integrity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Testing Workflow With an Inkarp Expert",
             "steps": [
               {
@@ -2626,7 +2626,7 @@
               "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "title": "Run a Simulated Test Cycle",
               "promptTitle": "How would your test cycle run?",
-              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
+              "description": "Example results are given for common targets.",
               "tempRange": [-40, 100],
               "humidityRange": [20, 95],
               "stability": { "temp": "0.3", "humidity": "1" },
@@ -2704,7 +2704,7 @@
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
               "promptTitle": "Will the TH3-KE fit your samples?",
-              "description": "This section helps users check whether their sample load fits the chamber before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH3-KE-025", "shortName": "025", "maxLoadPerShelfKg": 25, "maxShelves": 7, "maxLoadKg": 65, "interiorHeightMm": 350 },
                 { "name": "TH3-KE-065", "shortName": "065", "maxLoadPerShelfKg": 25, "maxShelves": 10, "maxLoadKg": 65, "interiorHeightMm": 495 },
@@ -2772,7 +2772,7 @@
               "eyebrow": "Interactive - How Much Uptime & Water Could You Save?",
               "title": "How Much Uptime & Water Could You Save?",
               "promptTitle": "How much time and water could you save?",
-              "description": "This section helps users estimate the manual effort and water saved over a long test with recirculation or a direct water supply.",
+              "description": "",
               "tiers": [
                 {
                   "maxDays": 7,
@@ -2843,7 +2843,7 @@
           "suitability": {
             "eyebrow": "Interactive - Test Condition Setup Guide",
             "title": "What are you testing?",
-            "description": "This section helps users choose the right starting setup based on their test type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Condition-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final setpoint, chamber size, shelving, water supply and software for your protocol.",
             "fields": [
@@ -3030,8 +3030,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Workflow Readiness Score",
             "title": "How much of your testing workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH3-KE: precise control, higher uptime, dual over-temperature safety and optional 21 CFR Part 11 data integrity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Testing Workflow With an Inkarp Expert",
             "steps": [
               {
@@ -3478,7 +3478,7 @@
               "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "title": "Run a Simulated Test Cycle",
               "promptTitle": "How would your test cycle run?",
-              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
+              "description": "Example results are given for common targets.",
               "tempRange": [-40, 100],
               "humidityRange": [25, 95],
               "min50Hz": -35,
@@ -3572,7 +3572,7 @@
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
               "promptTitle": "Will the TH-G fit your samples?",
-              "description": "This section helps users check whether their sample load fits the chamber before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH-G-800", "shortName": "800", "maxLoadPerShelfKg": 40, "maxShelves": 14, "maxLoadKg": 100, "interiorHeightMm": 1000 },
                 { "name": "TH-G-1000", "shortName": "1000", "maxLoadPerShelfKg": 40, "maxShelves": 14, "maxLoadKg": 100, "interiorHeightMm": 1000 },
@@ -3640,7 +3640,7 @@
               "eyebrow": "Interactive - How Much Uptime & Water Could You Save?",
               "title": "How Much Uptime & Water Could You Save?",
               "promptTitle": "How much time and water could you save?",
-              "description": "This section helps users estimate the manual effort and water saved over a long test with the water recycling system or a direct water supply.",
+              "description": "",
               "tiers": [
                 {
                   "maxDays": 7,
@@ -3711,7 +3711,7 @@
           "suitability": {
             "eyebrow": "Interactive - Test Condition Setup Guide",
             "title": "What are you testing?",
-            "description": "This section helps users choose the right starting setup based on their test type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Condition-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final setpoint, chamber size, shelving, water supply and recording for your protocol.",
             "fields": [
@@ -3898,8 +3898,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Workflow Readiness Score",
             "title": "How much of your testing workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH-G: deep low-temperature reach, precise control, higher uptime and large sample capacity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Testing Workflow With an Inkarp Expert",
             "steps": [
               {
@@ -4330,7 +4330,7 @@
               "eyebrow": "Interactive - Run a Simulated Test Cycle",
               "title": "Run a Simulated Test Cycle",
               "promptTitle": "How would your test cycle run?",
-              "description": "This section helps users preview a test cycle by entering a target temperature, humidity and hold time. Example results are given for common targets.",
+              "description": "Example results are given for common targets.",
               "tempRange": [-70, 100],
               "humidityRange": [25, 95],
               "humidityTempRange": [15, 90],
@@ -4424,7 +4424,7 @@
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
               "promptTitle": "Will the TH-KH fit your samples?",
-              "description": "This section helps users check whether their sample load fits the chamber before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH-KH-180", "shortName": "180", "maxLoadPerShelfKg": 20, "maxShelves": 9, "maxLoadKg": 50, "interiorHeightMm": 600 },
                 { "name": "TH-KH-300", "shortName": "300", "maxLoadPerShelfKg": 25, "maxShelves": 10, "maxLoadKg": 65, "interiorHeightMm": 800 },
@@ -4492,7 +4492,7 @@
               "eyebrow": "Interactive - How Much Uptime & Water Could You Save?",
               "title": "How Much Uptime & Water Could You Save?",
               "promptTitle": "How much time and water could you save?",
-              "description": "This section helps users estimate the manual effort and water saved over a long test with the water recycling system or a direct water supply.",
+              "description": "",
               "tiers": [
                 {
                   "maxDays": 7,
@@ -4563,7 +4563,7 @@
           "suitability": {
             "eyebrow": "Interactive - Test Condition Setup Guide",
             "title": "What are you testing?",
-            "description": "This section helps users choose the right starting setup based on their test type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Condition-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final setpoint, chamber size, shelving, water supply and recording for your protocol.",
             "fields": [
@@ -4750,8 +4750,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Workflow Readiness Score",
             "title": "How much of your testing workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH-KH: deep low-temperature reach, precise control, higher uptime and large sample capacity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Testing Workflow With an Inkarp Expert",
             "steps": [
               {
@@ -5170,7 +5170,7 @@
               "eyebrow": "Interactive - Photostability Exposure Calculator",
               "title": "Photostability Exposure Calculator",
               "promptTitle": "How long to reach your ICH Q1B light dose?",
-              "description": "This section helps users estimate exposure time to reach ICH Q1B targets, based on the -400 model's rated output.",
+              "description": "",
               "visible": {
                 "name": "VIS",
                 "ratedOutput": 12000,
@@ -5227,7 +5227,7 @@
               "eyebrow": "Interactive - Will This Fit Your Samples?",
               "title": "Will This Fit Your Samples?",
               "promptTitle": "Will the TH4-ICH fit your samples?",
-              "description": "This section helps users check whether their sample load fits before choosing a model.",
+              "description": "",
               "modelLimits": [
                 { "name": "TH4-ICH-400", "shortName": "400", "maxLoadPerShelfKg": 20, "maxShelves": 2, "maxLoadKg": 65 },
                 { "name": "TH4-ICH-400A", "shortName": "400A", "maxLoadPerShelfKg": 20, "maxShelves": 8, "maxLoadKg": 65 }
@@ -5284,7 +5284,7 @@
           "suitability": {
             "eyebrow": "Interactive - ICH Test Condition Setup Guide",
             "title": "Which ICH study are you running?",
-            "description": "This section helps users choose the right setup based on the ICH study type. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Study-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final model, shelving, lighting and software for your study protocol.",
             "fields": [
@@ -5417,8 +5417,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - GMP Readiness Score",
             "title": "How ready is your stability workflow for audit?",
-            "description": "Tap the steps your team currently manages manually or without documentation. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the TH4-ICH: ICH-compliant conditions, documented light exposure, precise 16-zone control and optional 21 CFR Part 11 data integrity. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually or without documentation.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Stability Workflow With an Inkarp Expert",
             "steps": [
               { "label": "Holding temperature and humidity", "manual": "Adjusted and checked by the operator", "core": "0 to 70°C and 20 to 75 %RH held by 16-zone PID" },
@@ -5837,7 +5837,7 @@
               "eyebrow": "Interactive - Light & CO2 Planner",
               "title": "Light & CO2 Planner",
               "promptTitle": "How much light and CO2 do your plants need?",
-              "description": "This section helps users plan illumination and CO2 based on their crop and model.",
+              "description": "",
               "crops": [
                 {
                   "val": "low-light",
@@ -5939,7 +5939,7 @@
               "eyebrow": "Interactive - Will This Fit Your Plants?",
               "title": "Will This Fit Your Plants?",
               "promptTitle": "Will the GC Series fit your plants?",
-              "description": "This section helps users check chamber size and shelf height for their plants before choosing a model.",
+              "description": "",
               "models": [
                 { "name": "GC-300TL", "humidity": false, "interiorMm": { "w": 510, "d": 540, "h": 1100 }, "maxShelves": 14, "shelvesLabel": "3 standard, up to 14" },
                 { "name": "GC-300TLH", "humidity": true, "interiorMm": { "w": 510, "d": 540, "h": 1100 }, "maxShelves": 14, "shelvesLabel": "3 standard, up to 14" },
@@ -6003,7 +6003,7 @@
           "suitability": {
             "eyebrow": "Interactive - Growth Condition Setup Guide",
             "title": "What are you growing?",
-            "description": "This section helps users choose the right starting setup based on what they are growing. Select one option to see the matching setup.",
+            "description": "Select one option to see the matching setup.",
             "ctaLabel": "Ask Inkarp for a Growth-Specific Setup",
             "disclaimer": "This guide gives a starting setup only. Inkarp confirms the final setpoint, model, lighting, humidity and CO2 for your protocol.",
             "fields": [
@@ -6142,8 +6142,8 @@
           "workflowScore": {
             "sectionEyebrow": "Interactive - Growth Workflow Readiness Score",
             "title": "How much of your growth workflow can be improved?",
-            "description": "Tap the steps your team currently manages manually. The page counts them and shows a readiness result.",
-            "disclaimer": "Every result also reflects the four fixed benefits of the GC Series: uniform illumination, precise ±0.1°C control, programmable growth cycles and optional CO2 enrichment. Inkarp confirms the final configuration.",
+            "description": "Tap the steps your team currently manages manually.",
+            "disclaimer": "Inkarp confirms the final configuration.",
             "ctaLabel": "Map My Growth Workflow With an Inkarp Expert",
             "steps": [
               { "label": "Setting and holding temperature", "manual": "Adjusted and checked by hand", "core": "5 to 50°C held to ±0.1°C by microprocessor PID" },

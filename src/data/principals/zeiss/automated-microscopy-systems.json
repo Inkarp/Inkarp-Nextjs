@@ -193,7 +193,7 @@
               }
             ],
             "eyebrow": "Configuration Selector",
-            "ctaNote": "Recommends Standard, Spatial Biology, Clinical, or Geology configuration. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -236,9 +236,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a workflow-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Throughput and Contrast Planner",
-            "emptyState": "Confirms objective count, camera, and software configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -302,9 +302,12 @@
                 ]
               }
             ],
-            "disclaimer": "Detailed Celldiscoverer 7 specifications weren't available in this source pull, this table will be completed once that source is available. Based on Zeiss's positioning, Axioscan 7 and Celldiscoverer 7 likely serve different automated workflows entirely, slide digitization versus live-cell imaging automation, rather than competing directly.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Based on Zeiss's positioning, Axioscan 7 and Celldiscoverer 7 likely serve different automated workflows entirely, slide digitization versus live-cell imaging automation, rather than competing directly."
+            ]
           },
 
           "applicationsExplorer": {
@@ -440,10 +443,7 @@
               "question": "How does the Clinical configuration connect to hospital systems?",
               "answer": "Via ZEISS Solutions Lab and a Dicom converter, integrating into existing IMS and PACS infrastructure. Zeiss notes this integration path itself is not an in vitro diagnostic device."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Detailed dimensions, weight, and full objective and camera part numbers were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Axioscan 7 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the configuration, objectives, and software selected."
@@ -781,8 +781,7 @@
               "value": "LSM 910 with Airyscan 2, up to 1.9x resolution improvement, spectral imaging, photomanipulation (FRAP, FRET)"
             },
             { "label": "Robotic Loader (optional)", "value": "Peak Analysis & Automation (PAA) partnership, all SBS multi-well plate formats" },
-            { "label": "Analysis Software", "value": "arivis Pro, arivis Cloud (neural network training), arivis Hub (parallel cloud processing)" },
-            { "label": "Full Objective Range, Physical Dimensions", "value": "Not confirmed in this source, available on request" }
+            { "label": "Analysis Software", "value": "arivis Pro, arivis Cloud (neural network training), arivis Hub (parallel cloud processing)" }
           ],
 
           "applications": [
@@ -900,7 +899,7 @@
               }
             ],
             "eyebrow": "Imaging Mode and Platform Tier Selector",
-            "ctaNote": "Recommends Widefield or Widefield + LSM 910 (Confocal) configuration. Routes to a platform-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -951,9 +950,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a workflow-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Throughput and Automation Planner",
-            "emptyState": "Confirms robotic loader and analysis software requirements",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1026,7 +1025,7 @@
               {
                 "feature": "Clinical Certification",
                 "values": [
-                  "Not confirmed on this source",
+                  "",
                   "IVDR (Clinical configuration)"
                 ]
               },
@@ -1045,9 +1044,12 @@
                 ]
               }
             ],
-            "disclaimer": "Celldiscoverer 7 and Axioscan 7 don't compete, they solve genuinely different automation problems within Zeiss's Automated Microscopy Systems category. Celldiscoverer 7 automates the imaging of living, dynamic samples over time, with immersion, incubation, and focus systems built specifically for that. Axioscan 7 automates the digitization of static, prepared slides at high volume, with no equivalent need for immersion or incubation.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Celldiscoverer 7 and Axioscan 7 don't compete, they solve genuinely different automation problems within Zeiss's Automated Microscopy Systems category. Celldiscoverer 7 automates the imaging of living, dynamic samples over time, with immersion, incubation, and focus systems built specifically for that. Axioscan 7 automates the digitization of static, prepared slides at high volume, with no equivalent need for immersion or incubation."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1190,10 +1192,7 @@
               "question": "How is Celldiscoverer 7 different from Axioscan 7?",
               "answer": "Celldiscoverer 7 automates live-cell and high-content imaging, with immersion, incubation, and focus systems built for living, dynamic samples. Axioscan 7 automates digitization of fixed, prepared slides at high volume, with no equivalent need for immersion or incubation."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Full objective range and physical dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Celldiscoverer 7 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the platform tier, confocal upgrade, and automation options selected."

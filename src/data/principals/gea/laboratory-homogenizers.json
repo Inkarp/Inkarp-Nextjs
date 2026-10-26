@@ -141,7 +141,7 @@
                 "key": "targetFlowRate",
                 "label": "Target flow rate",
                 "question": "Target flow rate",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -157,9 +157,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a model-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Pressure and Flow Rate Model Selector",
-            "emptyState": "Recommends XStream Lab Homogenizer 1000 or 2000",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -209,7 +209,7 @@
               }
             ],
             "eyebrow": "Validation and Compliance Checker",
-            "ctaNote": "Confirms certification and documentation fit. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -234,7 +234,7 @@
                 { "title": "Industrial homogenizer in mind", "hint": "GEA Ariete Series or other", "choices": "GEA Ariete Series; Other" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms how directly XStream results transfer to production scale. Routes to a scale-up-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -277,9 +277,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both models share the same NiSoX-Valve technology, touchscreen control, and certification stack. The difference is purely the pressure-flow trade-off.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both models share the same NiSoX-Valve technology, touchscreen control, and certification stack. The difference is purely the pressure-flow trade-off."
+            ]
           },
 
           "applicationsExplorer": {
@@ -711,7 +714,7 @@
                 "key": "targetFlowRate",
                 "label": "Target flow rate",
                 "question": "Target flow rate",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -728,9 +731,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a model-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Pressure and Flow Rate Model Selector",
-            "emptyState": "Recommends PandaPLUS 1000 or 2000",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -751,14 +754,14 @@
               {
                 "key": "targetPressureRange",
                 "label": "Target pressure",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
               {
                 "key": "targetFlowRange",
                 "label": "Target flow rate",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               }
@@ -774,7 +777,7 @@
               }
             ],
             "eyebrow": "Table-Top Model Comparison Tool",
-            "ctaNote": "Recommends PandaPLUS or TwinPANDA. Routes to a family-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -790,12 +793,12 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Available sample volume", "hint": "Number input, minimum 100 ml", "input": "number", "choices": "" },
+                { "title": "Available sample volume", "hint": "Minimum 100 ml", "input": "number", "choices": "" },
                 { "title": "Target production scale", "hint": "Pilot plant or full industrial line", "choices": "Pilot plant; Full industrial line" },
                 { "title": "Target industrial homogenizer", "hint": "GEA Ariete Series or other", "choices": "GEA Ariete Series; Other" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms how directly PandaPLUS results transfer to production scale. Routes to a scale-up-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -848,9 +851,12 @@
                 ]
               }
             ],
-            "disclaimer": "All four models share the same 100 ml minimum sample volume, essential-component design, and guaranteed scalability to industrial output. The difference is purely the pressure-flow trade-off.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All four models share the same 100 ml minimum sample volume, essential-component design, and guaranteed scalability to industrial output. The difference is purely the pressure-flow trade-off."
+            ]
           },
 
           "applicationsExplorer": {

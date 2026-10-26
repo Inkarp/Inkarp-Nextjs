@@ -378,10 +378,10 @@
               ],
               "options": [
                 { "title": "Volume needed", "hint": "2 to 28 liters", "input": "text", "choices": "" },
-                { "title": "Drain requirement", "hint": "Confirms whether the selected capacity includes one", "input": "text", "choices": "" }
+                { "title": "Drain requirement", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The capacity and drain selector confirms which reservoir size fits your volume, and whether it includes a drain.",
-              "ctaNote": "Recommends 2, 5, 10, 20, or 28 liters. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -397,7 +397,7 @@
                 { "title": "Media toggle", "hint": "Switches between water fill and waterless bath beads", "choices": "Water fill; Waterless bath beads" }
               ],
               "lead": "The water vs waterless bead comparison shows when each media type fits your workflow.",
-              "ctaNote": "Shows typical scenarios each media type suits. Notes cleaning and evaporation considerations for each. Routes to Inkarp for accessory and media recommendations.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -902,7 +902,7 @@
                 { "title": "Testing frequency", "hint": "Occasional or high-volume routine testing", "choices": "Occasional; High-volume routine testing" }
               ],
               "lead": "The AD vs MX controller selector helps confirm which controller fits your testing workflow.",
-              "ctaNote": "Recommends Advanced Digital or MX. Routes to Inkarp for configuration confirmation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -915,10 +915,10 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Viscometer type selector", "hint": "Confirms compatibility with common capillary viscometer types", "input": "text", "choices": "" }
+                { "title": "Viscometer type selector", "hint": "", "input": "text", "choices": "" }
               ],
               "lead": "The viscometer and setup compatibility guide confirms your viscometer and cooling setup will work with this bath.",
-              "ctaNote": "Checks tap water supply availability for the included coil. Confirms setup fit or flags what Inkarp needs to verify. Routes to Inkarp for a testing-setup-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -1029,9 +1029,12 @@
                 ]
               }
             ],
-            "disclaimer": "These aren't a general-versus-specialized upgrade path. The Viscosity Bath is purpose-built for one testing standard; the General Purpose line covers everyday heating needs the Viscosity Bath isn't designed for.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These aren't a general-versus-specialized upgrade path. The Viscosity Bath is purpose-built for one testing standard; the General Purpose line covers everyday heating needs the Viscosity Bath isn't designed for."
+            ]
           },
 
           "serviceMap": {

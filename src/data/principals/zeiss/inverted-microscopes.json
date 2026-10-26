@@ -111,7 +111,7 @@
               "values": [
                 "Yes, 15 minutes",
                 "Yes, 15 minutes",
-                "Not confirmed as present"
+                ""
               ]
             }
           ],
@@ -208,7 +208,7 @@
               }
             ],
             "eyebrow": "Version Selector",
-            "ctaNote": "Recommends Primovert, iLED fluorescence, or digital. Routes to a version-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -251,9 +251,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Flow Cabinet Fit Checker",
-            "emptyState": "Confirms fit and ergotube configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -299,7 +299,7 @@
                 "feature": "Fits Laminar Flow Cabinet",
                 "values": [
                   "Yes, by design",
-                  "Not confirmed on this source"
+                  ""
                 ]
               },
               {
@@ -317,9 +317,12 @@
                 ]
               }
             ],
-            "disclaimer": "Primovert is Zeiss's dedicated cell culture entry point, built specifically around the flow cabinet and routine passage work. Axiovert 5 sits a step up for labs needing the full range of standard contrast techniques rather than the focused phase-contrast-and-fluorescence workflow Primovert is built around.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Primovert is Zeiss's dedicated cell culture entry point, built specifically around the flow cabinet and routine passage work. Axiovert 5 sits a step up for labs needing the full range of standard contrast techniques rather than the focused phase-contrast-and-fluorescence workflow Primovert is built around."
+            ]
           },
 
           "applicationsExplorer": {
@@ -422,10 +425,7 @@
               "question": "Does Primovert support fluorescence imaging?",
               "answer": "Yes, on the version with iLED fluorescence, using a 470 nm LED and filter set for GFP-labeled cells. The base Primovert and Primovert digital versions do not include fluorescence."
             },
-            {
-              "question": "Which cell-culture vessels can I use?",
-              "answer": "Specific vessel compatibility was not detailed on the source page reviewed. Inkarp can confirm compatible vessel types and stage inserts directly."
-            },
+            { "question": "Which cell-culture vessels can I use?", "answer": "Inkarp can confirm compatible vessel types and stage inserts directly." },
             {
               "question": "What camera outputs are available on Primovert digital?",
               "answer": "An integrated 5 MP CMOS camera, feeding directly into ZEISS Labscope for image capture, AI-based analysis, and sharing."
@@ -458,10 +458,7 @@
               "question": "Is there a return policy?",
               "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Magnification range, objective set, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Primovert in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the version selected."
@@ -598,7 +595,7 @@
                   "Primovert with iLED fluorescence",
                   "Primovert digital"
                 ],
-                "note": "Product Name: Zeiss Primovert Inverted Microscope, available as Primovert, Primovert with iLED fluorescence, or Primovert digital Category: Inverted Microscopes Ergonomics: Adjustable ergotube, standing or seated use Return Policy: 60 days, risk-free Magnification range, objective set, and stand dimensions: Not confirmed in this source, available on request",
+                "note": "Product Name: Zeiss Primovert Inverted Microscope, available as Primovert, Primovert with iLED fluorescence, or Primovert digital Category: Inverted Microscopes Ergonomics: Adjustable ergotube, standing or seated use Return Policy: 60 days, risk-free",
                 "tabSummary": "The full feature comparison, straight from Zeiss's own table"
               },
               {
@@ -778,11 +775,7 @@
             { "label": "User Support", "value": "Built for multi-user environments" },
             { "label": "Video Recording", "value": "Supported, via Snap button" },
             { "label": "Trial Availability", "value": "Personal trial license for AI modules" },
-            { "label": "Return Policy", "value": "60 days, risk-free" },
-            {
-              "label": "Camera Resolution, Magnification Range, Objective Set, Stand Dimensions",
-              "value": "Not confirmed in this source, available on request"
-            }
+            { "label": "Return Policy", "value": "60 days, risk-free" }
           ],
 
           "applications": [
@@ -874,7 +867,7 @@
               }
             ],
             "eyebrow": "AI Workflow Fit Checker",
-            "ctaNote": "Estimates time and consistency gains from AI Cell Count and AI Cell Confluency. Routes to a workflow-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -916,9 +909,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Fluorescence Channel Planner",
-            "emptyState": "Confirms fluorescence and video configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -946,15 +939,15 @@
                 "values": [
                   "AI Cell Count, AI Cell Confluency, no training required",
                   "AI Cell Count, AI Cell Confluency, via Labscope",
-                  "Not confirmed as AI-equipped on this source"
+                  ""
                 ]
               },
               {
                 "feature": "Camera Resolution",
                 "values": [
-                  "Not confirmed in this source",
+                  "",
                   "5 MP CMOS",
-                  "Not confirmed in this source"
+                  ""
                 ]
               },
               {
@@ -969,8 +962,8 @@
                 "feature": "Video Recording",
                 "values": [
                   "Yes",
-                  "Not confirmed",
-                  "Not confirmed"
+                  "",
+                  ""
                 ]
               },
               {
@@ -978,7 +971,7 @@
                 "values": [
                   "Built for multi-user environments specifically",
                   "Supports sharing to tablets/computers",
-                  "Not confirmed on this source"
+                  ""
                 ]
               },
               {
@@ -998,9 +991,12 @@
                 ]
               }
             ],
-            "disclaimer": "Axiovert 5 digital and Primovert digital share the same AI foundation, cell counting and confluency modules through Labscope, but they're built for different scales of work. Primovert digital is compact and flow-cabinet focused; Axiovert 5 digital adds genuine multichannel fluorescence depth and positions itself as a full all-in-one imaging system rather than a routine culture-check microscope.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Axiovert 5 digital and Primovert digital share the same AI foundation, cell counting and confluency modules through Labscope, but they're built for different scales of work. Primovert digital is compact and flow-cabinet focused; Axiovert 5 digital adds genuine multichannel fluorescence depth and positions itself as a full all-in-one imaging system rather than a routine culture-check microscope."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1132,10 +1128,7 @@
               "question": "Is there a return policy?",
               "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Camera resolution, magnification range, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Axiovert 5 digital in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the fluorescence and camera configuration selected."
@@ -1256,7 +1249,7 @@
                   "Parameter",
                   "Specification"
                 ],
-                "tabSummary": "What's confirmed by Zeiss, and where the gaps are"
+                "tabSummary": ""
               },
               {
                 "key": "performance",
@@ -1330,10 +1323,7 @@
                   { "title": "Design", "description": "Closed-box, cells remain observable throughout" },
                   { "title": "User base", "description": "Built for multi-user environments, no training required for AI use" },
                   { "title": "Return policy", "description": "60 days, risk-free, with trial license available for the AI modules" },
-                  {
-                    "title": "Camera resolution, magnification range, objective set, stand dimensions",
-                    "description": "not confirmed in this source, available on request"
-                  }
+                  { "title": "Camera resolution, magnification range, objective set, stand dimensions", "description": "" }
                 ],
                 "disclaimer": "Share how many users will operate the system daily, whether manual cell counting is currently a time cost, and whether multichannel fluorescence is part of the routine, and the right Axiovert 5 digital configuration gets confirmed."
               },
@@ -1434,8 +1424,7 @@
             { "label": "Illumination Management", "value": "Light Manager, uniform brightness across all magnifications" },
             { "label": "Optional AI Modules", "value": "AI Cell Count, AI Cell Confluency (Labscope)" },
             { "label": "Objectives Demonstrated", "value": "LD A-Plan 40x/0.55 Ph 1 (phase contrast example)" },
-            { "label": "Return Policy", "value": "60 days, risk-free, AI module trial license available" },
-            { "label": "Magnification Range, Full Objective Set, Stand Dimensions", "value": "Not confirmed in this source, available on request" }
+            { "label": "Return Policy", "value": "60 days, risk-free, AI module trial license available" }
           ],
 
           "applications": [
@@ -1534,7 +1523,7 @@
               }
             ],
             "eyebrow": "Contrast Technique Selector",
-            "ctaNote": "Confirms the contrast and light source configuration required. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1578,9 +1567,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Configuration Path Planner",
-            "emptyState": "Recommends standalone (OSD + USB), Labscope, or ZEN configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1599,7 +1588,7 @@
                 "feature": "Contrast Techniques",
                 "values": [
                   "DIC, iHMC, phase contrast, brightfield, fluorescence",
-                  "Standard contrast plus fluorescence (specific techniques not itemized in that source)",
+                  "Standard contrast plus fluorescence",
                   "Brightfield, phase contrast"
                 ]
               },
@@ -1615,7 +1604,7 @@
                 "feature": "Camera",
                 "values": [
                   "Any ZEISS microscope camera (external)",
-                  "Not confirmed, integrated",
+                  "",
                   "5 MP CMOS, integrated"
                 ]
               },
@@ -1647,7 +1636,7 @@
                 "feature": "Cell Factory Clearance",
                 "values": [
                   "Yes, explicitly stated",
-                  "Not confirmed",
+                  "",
                   "Not applicable, compact flow-cabinet design"
                 ]
               },
@@ -1668,9 +1657,12 @@
                 ]
               }
             ],
-            "disclaimer": "The standard Axiovert 5 is the most contrast-flexible option in the range, running DIC, iHMC, phase contrast, brightfield, and fluorescence on one stand with a choice of camera. Axiovert 5 digital trades some of that flexibility for a built-in camera, one more fluorescence channel, and zero setup decisions. Primovert digital trades contrast breadth for genuine compactness inside a laminar flow cabinet.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The standard Axiovert 5 is the most contrast-flexible option in the range, running DIC, iHMC, phase contrast, brightfield, and fluorescence on one stand with a choice of camera. Axiovert 5 digital trades some of that flexibility for a built-in camera, one more fluorescence channel, and zero setup decisions. Primovert digital trades contrast breadth for genuine compactness inside a laminar flow cabinet."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1809,10 +1801,7 @@
               "question": "Is there a return policy?",
               "answer": "Yes, a 60-day risk-free purchase. If it isn't the right fit, it can be returned with no questions asked."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Magnification range, full objective set, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Axiovert 5 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the contrast technique, camera, and software configuration selected."
@@ -2117,9 +2106,7 @@
             { "label": "Automated Capabilities", "value": "Z-stacks, time-lapse imaging, whole-slide scanning, multiwell plate imaging" },
             { "label": "Compliance", "value": "Adaptable to GxP guidelines" },
             { "label": "System Design", "value": "Modular hardware, upgradeable software, extensive interfaces" },
-            { "label": "Footprint", "value": "Small, standard lab bench compatible" },
-            { "label": "Camera Compatibility", "value": "Not itemized in this source, available on request" },
-            { "label": "Full Objective Set, Stand Dimensions, Weight", "value": "Not confirmed in this source, available on request" }
+            { "label": "Footprint", "value": "Small, standard lab bench compatible" }
           ],
 
           "applications": [
@@ -2243,7 +2230,7 @@
               }
             ],
             "eyebrow": "Contrast and Automation Selector",
-            "ctaNote": "Confirms the contrast, motorization, and ZEN configuration required. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2286,9 +2273,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an expansion-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Research Roadmap Planner",
-            "emptyState": "Recommends the modular expansion path and GxP-readiness scope",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -2313,14 +2300,14 @@
                 "feature": "Field of View",
                 "values": [
                   "23 mm",
-                  "Not confirmed in that source"
+                  ""
                 ]
               },
               {
                 "feature": "Objective Range",
                 "values": [
                   "1.25x to 100x",
-                  "Not confirmed in that source"
+                  ""
                 ]
               },
               {
@@ -2362,7 +2349,7 @@
                 "feature": "GxP Compliance",
                 "values": [
                   "Adaptable",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
@@ -2387,9 +2374,12 @@
                 ]
               }
             ],
-            "disclaimer": "Axiovert 5 and Axiovert 7 sit at genuinely different points in the inverted range, not just different price points on the same capability. Axiovert 5 covers broad contrast flexibility with manual operation, ideal for routine work across varied techniques. Axiovert 7 adds motorization, polarization contrast, and the automation infrastructure (whole-slide scanning, multiwell screening, GxP adaptability) that a multidimensional or regulated research programme actually needs.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Axiovert 5 and Axiovert 7 sit at genuinely different points in the inverted range, not just different price points on the same capability. Axiovert 5 covers broad contrast flexibility with manual operation, ideal for routine work across varied techniques. Axiovert 7 adds motorization, polarization contrast, and the automation infrastructure (whole-slide scanning, multiwell screening, GxP adaptability) that a multidimensional or regulated research programme actually needs."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2517,10 +2507,7 @@
               "question": "Can Axiovert 7 be used for whole slide imaging?",
               "answer": "Yes, the system performs panoramic scanning and whole-slide imaging of stained or immunofluorescence-labeled tissue sections for quantitative spatial analysis."
             },
-            {
-              "question": "What types of cameras are compatible with Axiovert 7?",
-              "answer": "Specific camera compatibility was not itemized on the source page reviewed. Inkarp can confirm compatible camera options directly."
-            },
+            { "question": "What types of cameras are compatible with Axiovert 7?", "answer": "Inkarp can confirm compatible camera options directly." },
             { "question": "What is the field of view?", "answer": "23 mm." },
             { "question": "What magnification range does it cover?", "answer": "1.25x to 100x across its objective range." },
             { "question": "Is the focus and stage motorized?", "answer": "Yes, both are motorized, enabling reproducible, automated imaging." },
@@ -2528,10 +2515,7 @@
               "question": "How is Axiovert 7 different from Axiovert 5?",
               "answer": "Axiovert 7 adds motorized focus and stage, polarization contrast, whole-slide scanning, multiwell plate automation, and GxP-adaptable workflows. Axiovert 5 covers broad contrast flexibility (DIC, iHMC, phase contrast, brightfield, fluorescence) with manual operation, suited to routine work without the same level of automated, high-throughput capability."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Camera compatibility details, full objective set, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Axiovert 7 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the contrast methods, motorization, and ZEN configuration selected."
@@ -2662,7 +2646,7 @@
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "What Zeiss confirms about Axiovert 7, the most complete spec sheet in the inverted range so far.",
+                "description": "",
                 "columns": [
                   "Parameter",
                   "Specification"
@@ -2841,8 +2825,7 @@
             { "label": "Spectral Imaging", "value": "Duolink (simultaneous 2-channel), virtual filter technology" },
             { "label": "Adjustable Optics", "value": "Autocorr objectives, software slider control via ZEN" },
             { "label": "Camera Compatibility", "value": "Full ZEISS Axiocam portfolio" },
-            { "label": "Contrast Method Confirmed", "value": "PlasDIC (named directly in the live-cell application example)" },
-            { "label": "Full Contrast Method List, Magnification Range, Stand Dimensions", "value": "Not confirmed in this source, available on request" }
+            { "label": "Contrast Method Confirmed", "value": "PlasDIC (named directly in the live-cell application example)" }
           ],
 
           "applications": [
@@ -2948,7 +2931,7 @@
               }
             ],
             "eyebrow": "Automation Priority Selector",
-            "ctaNote": "Recommends AI Sample Finder, Autoimmersion Module, Definite Focus 3, or Duolink. Routes to a technology-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -2993,9 +2976,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Imaging Modality Planner",
-            "emptyState": "Recommends Apotome 3, Duolink, or a super-resolution-ready configuration",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -3027,14 +3010,14 @@
                 "feature": "Optical Sectioning",
                 "values": [
                   "Apotome 3 compatible",
-                  "Not confirmed on that source"
+                  ""
                 ]
               },
               {
                 "feature": "Immersion Automation",
                 "values": [
                   "Autoimmersion Module (Axio Observer 7)",
-                  "Not confirmed"
+                  ""
                 ]
               },
               {
@@ -3087,9 +3070,12 @@
                 ]
               }
             ],
-            "disclaimer": "Axio Observer and Axiovert 7 sit at the top of Zeiss's inverted range, but they answer different questions. Axiovert 7 is the more fully specified system, six contrast methods, motorization, and automation confirmed directly. Axio Observer is the open platform, built around AI-driven ease of use and a genuinely extensive accessory ecosystem, for labs whose research direction isn't fully fixed yet, or who need capabilities like super-resolution and correlative EM imaging that Axiovert 7's page doesn't address.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Axio Observer and Axiovert 7 sit at the top of Zeiss's inverted range, but they answer different questions. Axiovert 7 is the more fully specified system, six contrast methods, motorization, and automation confirmed directly. Axio Observer is the open platform, built around AI-driven ease of use and a genuinely extensive accessory ecosystem, for labs whose research direction isn't fully fixed yet, or who need capabilities like super-resolution and correlative EM imaging that Axiovert 7's page doesn't address."
+            ]
           },
 
           "applicationsExplorer": {
@@ -3236,10 +3222,7 @@
               "question": "Which cameras is it compatible with?",
               "answer": "The full ZEISS Axiocam portfolio, selected by sensitivity, resolution, and speed to match the application."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "A full contrast method list, magnification range, and stand dimensions were not published on the source page reviewed. Inkarp can request the full specification sheet from Zeiss."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
             {
               "question": "What is the price of the Axio Observer in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the accessories and modalities selected for the specific research application."
@@ -3411,7 +3394,7 @@
                   "Parameter",
                   "Specification"
                 ],
-                "tabSummary": "What's confirmed by Zeiss, and where the gaps genuinely are"
+                "tabSummary": ""
               },
               {
                 "key": "performance",
@@ -3490,10 +3473,7 @@
                   { "title": "Spectral imaging", "description": "Duolink (simultaneous two-channel), virtual filter technology" },
                   { "title": "Optics", "description": "Autocorr objectives (software-adjustable, ZEN slider control)" },
                   { "title": "Field number", "description": "23 mm (referenced in live-cell application example)" },
-                  {
-                    "title": "Detailed magnification range, full contrast method list, camera specifications, stand dimensions",
-                    "description": "not confirmed in this source, available on request"
-                  }
+                  { "title": "Detailed magnification range, full contrast method list, camera specifications, stand dimensions", "description": "" }
                 ],
                 "disclaimer": "Share the imaging modalities the research actually needs (widefield, optical sectioning, super-resolution, long-term live-cell), and the right Axio Observer configuration and accessory set gets confirmed from there."
               },

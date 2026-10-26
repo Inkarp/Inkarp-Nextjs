@@ -90,7 +90,7 @@
                 "key": "expectedViscosityCst",
                 "label": "Expected viscosity (cSt)",
                 "question": "Expected viscosity (cSt)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -108,14 +108,14 @@
                 "key": "sampleTemperatureRange",
                 "label": "Sample temperature range",
                 "question": "Sample temperature range",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a usage-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Ball Selection Guide",
-            "emptyState": "Recommends the matching ball number from the set of 6",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -184,7 +184,7 @@
               }
             ],
             "eyebrow": "Industry Application Matcher",
-            "ctaNote": "Confirms fit and relevant standards compliance. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -205,11 +205,11 @@
                   "hint": "Standard or highly temperature-dependent",
                   "choices": "Standard; Highly temperature-dependent"
                 },
-                { "title": "Target temperature range", "hint": "Number input, within -20°C to +150°C", "input": "number", "choices": "" },
+                { "title": "Target temperature range", "hint": "Within -20°C to +150°C", "input": "number", "choices": "" },
                 { "title": "Circulator currently available", "hint": "Yes or no", "choices": "Yes; No" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms whether a circulator pairing is advised for the application. Routes to a setup-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -635,7 +635,7 @@
                 "key": "expectedViscosityMpas",
                 "label": "Expected viscosity (mPas)",
                 "question": "Expected viscosity (mPas)",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -662,9 +662,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Viscosity Range and Rotor Selector",
-            "emptyState": "Recommends catalog number 399-0112 or 399-0111 and rotor set",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -731,7 +731,7 @@
               }
             ],
             "eyebrow": "Industry Application Matcher",
-            "ctaNote": "Confirms fit and recommended setup. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -760,7 +760,7 @@
                 { "title": "Rotor sets currently owned", "hint": "Number/type input", "input": "text", "choices": "" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms result compatibility and rotor compatibility. Routes to an upgrade-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -796,9 +796,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations share the same handheld/stand-mounted design, alignment system, and memory assist features. The difference is purely the measurable viscosity range.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations share the same handheld/stand-mounted design, alignment system, and memory assist features. The difference is purely the measurable viscosity range."
+            ]
           },
 
           "applicationsExplorer": {

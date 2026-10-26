@@ -482,7 +482,7 @@
               }
             ],
             "lead": "The reaction and wavelength compatibility checker confirms whether your target reaction is supported.",
-            "ctaNote": "Confirms your reaction is a stated supported use case. Notes whether the basic 4-wavelength configuration likely applies, or custom wavelength discussion is needed. Routes to Inkarp for wavelength-specific confirmation.",
+            "ctaNote": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
           },
@@ -587,9 +587,12 @@
                 ]
               }
             ],
-            "disclaimer": "This isn't an incremental update — simultaneous high-intensity wavelength capability alone is four times what the original PhotoCube offered.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "This isn't an incremental update — simultaneous high-intensity wavelength capability alone is four times what the original PhotoCube offered."
+            ]
           },
 
           "serviceMap": {
@@ -648,7 +651,7 @@
                 { "title": "Reaction stage selector", "hint": "Small-scale screening through continuous production", "input": "text", "choices": "" }
               ],
               "lead": "The batch vs flow configuration selector recommends the right operating mode for your work.",
-              "ctaNote": "Recommends batch (vials) or flow (loop). Shows the relevant confirmed figure for the recommended mode. Routes to Inkarp for configuration-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }

@@ -460,7 +460,7 @@
                   "hint": "7 to 45 liters, matched to reservoir capacity options",
                   "choices": "7 to 45 liters; Matched to reservoir capacity options"
                 },
-                { "title": "Temperature range needed", "hint": "Confirms fit within the −40°C to +200°C span", "input": "text", "choices": "" },
+                { "title": "Temperature range needed", "hint": "", "input": "text", "choices": "" },
                 {
                   "title": "Control sophistication",
                   "hint": "Basic digital through advanced programmable",
@@ -469,7 +469,7 @@
               ],
               "disclaimer": "",
               "lead": "The controller and capacity configurator recommends a configuration based on your application.",
-              "ctaNote": "Recommends controller type, capacity, and pump type.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -486,7 +486,7 @@
               ],
               "disclaimer": "",
               "lead": "The temperature stability and heat load explorer shows how cooling capacity and stability behave across the working range.",
-              "ctaNote": "Shows where your requirement sits in the 190 W to 1,400 W range. Confirms ±0.005°C holds at the selected point.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -584,7 +584,7 @@
                 ]
               }
             ],
-            "disclaimer": "Full comparison detail for the Heated Circulating Baths line will be added once its own configuration is confirmed.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -847,10 +847,7 @@
                     "title": "Six real tiers, not six marketing labels.",
                     "text": "PX, AP, AD, DX, SD, and MX each carry their own confirmed temperature ceiling, wattage, and stability figure, not just a different badge on the same hardware."
                   },
-                  {
-                    "title": "Precision goes as tight as ±0.004°C.",
-                    "text": "That's the PX controller specifically, the tightest stability figure across either PolyScience circulating bath line built so far."
-                  },
+                  { "title": "Precision goes as tight as ±0.004°C." },
                   {
                     "title": "Some tiers trade range for cost.",
                     "text": "MX tops out at 135°C with ±0.07°C stability and doesn't offer a 28-liter option at all, a genuinely different product for genuinely simpler applications."
@@ -1061,16 +1058,11 @@
                   "hint": "Up to 135°C through up to 200°C",
                   "choices": "Up to 135°C; Up to 170°C; Up to 175°C; Up to 200°C"
                 },
-                {
-                  "title": "Part number direction",
-                  "hint": "Confirms 50 Hz part number pattern for the recommended tier and capacity",
-                  "input": "text",
-                  "choices": ""
-                }
+                { "title": "Part number direction", "hint": "", "input": "text", "choices": "" }
               ],
               "disclaimer": "",
               "lead": "The controller tier selector recommends a controller type based on your precision and temperature requirements.",
-              "ctaNote": "Recommends PX, AP, AD, DX, SD, or MX.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1091,7 +1083,7 @@
               ],
               "disclaimer": "",
               "lead": "The capacity and part number finder confirms the exact 50 Hz part number for your configuration.",
-              "ctaNote": "Shows the confirmed 50 Hz part number for that combination. Routes to Inkarp for a quotation on the confirmed part number.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1210,9 +1202,12 @@
                 ]
               }
             ],
-            "disclaimer": "The two lines aren't a basic-versus-advanced pair. The Heated line actually reaches tighter stability at its top tier, precisely because it doesn't have to engineer around a refrigeration system.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The two lines aren't a basic-versus-advanced pair. The Heated line actually reaches tighter stability at its top tier, precisely because it doesn't have to engineer around a refrigeration system."
+            ]
           },
 
           "serviceMap": {

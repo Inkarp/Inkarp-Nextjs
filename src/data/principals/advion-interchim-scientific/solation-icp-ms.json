@@ -179,14 +179,8 @@
                     "title": "Application coverage is broad and named.",
                     "text": "Metals in blood, environmental analysis, clinical/biomedical work, food and agriculture, and pharmaceutical quality control are all confirmed."
                   },
-                  {
-                    "title": "Some applications share pages with expression CMS.",
-                    "text": "Environmental Analysis, Clinical work, and Food-related applications link to the same underlying Advion content confirmed on the CMS page, just labeled slightly differently here."
-                  },
-                  {
-                    "title": "This source stays at the overview level.",
-                    "text": "No detection limit, plasma power, or throughput figure is stated, so none is invented here either."
-                  },
+                  { "title": "Some applications share pages with expression CMS." },
+                  { "text": "No detection limit, plasma power, or throughput figure is stated, so none is invented here either." },
                   {
                     "title": "The positioning is \"everywhere,\" not \"specialist only.\"",
                     "text": "Environmental, pharmaceutical, food safety, and clinical labs are all named as ideal fits."
@@ -378,7 +372,7 @@
                 }
               ],
               "lead": "The sample matrix checker confirms compatibility for your specific sample type.",
-              "ctaNote": "Confirms confirmed matrix support. Routes to Inkarp for a matrix-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Get Configuration Support"
             },
@@ -398,7 +392,7 @@
                 }
               ],
               "lead": "The application area selector confirms the right use case for your lab.",
-              "ctaNote": "Confirms the matching named application. Routes to Inkarp for an application-specific configuration.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }
@@ -443,9 +437,12 @@
                 ]
               }
             ],
-            "disclaimer": "The same instrument and software cover both — the distinction is about your sample type and application, not a different product configuration.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The same instrument and software cover both — the distinction is about your sample type and application, not a different product configuration."
+            ]
           },
 
           "applicationsExplorer": {

@@ -58,11 +58,7 @@
             { "label": "Control Software", "value": "Powder Flow Pro" },
             { "label": "Data Export", "value": "Direct to Excel" },
             { "label": "Reporting", "value": "Comprehensive, documented test reports" },
-            { "label": "Physical Design", "value": "Compact, benchtop, fits any workbench" },
-            {
-              "label": "Detailed Numeric Specifications (dimensions, sample volume, load range)",
-              "value": "Not confirmed in this source, available on request"
-            }
+            { "label": "Physical Design", "value": "Compact, benchtop, fits any workbench" }
           ],
 
           "applications": [
@@ -159,7 +155,7 @@
               }
             ],
             "eyebrow": "Test Type Selector",
-            "ctaNote": "Recommends full flow function or QA/QC-specific test. Routes to a testing-specific quotation.",
+            "ctaNote": "",
             "verbatim": true
           },
 
@@ -213,9 +209,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Hopper Discharge Risk Assessor",
-            "emptyState": "Recommends which of the nine measurements to prioritize",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -248,7 +244,7 @@
               ],
               "ctaLabel": "Get Configuration Support",
               "disclaimer": "",
-              "ctaNote": "Confirms data export and reporting workflow. Routes to a configuration-specific quotation."
+              "ctaNote": ""
             }
           ],
 
@@ -351,10 +347,7 @@
               "question": "Can this solution predict hopper discharge problems before equipment is built?",
               "answer": "Yes, arching dimensions, rat-hole diameter, and hopper half angle data support hopper and silo design decisions ahead of installation."
             },
-            {
-              "question": "Where can I find detailed technical specifications?",
-              "answer": "Physical dimensions, sample volume, and load range weren't confirmed in this source pull. Inkarp can request the full specification sheet from Brookfield."
-            },
+            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Brookfield." },
             {
               "question": "What is the price of the PFT Powder Flow Tester in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the test configuration and accessories required."

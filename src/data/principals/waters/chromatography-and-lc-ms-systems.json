@@ -186,7 +186,7 @@
               }
             ],
             "eyebrow": "Method Transfer Readiness Checker",
-            "ctaNote": "Confirms transfer approach and whether Gradient SmartStart applies. Routes to a transfer-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -232,9 +232,9 @@
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a column and method-scaling quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Method Scaling Calculator",
-            "emptyState": "Estimates resolution gain, run time reduction, and pressure requirement",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -267,7 +267,7 @@
                 { "title": "Batch size", "hint": "Samples per sequence", "input": "number", "choices": "" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends detector from the nine options and sample holder combination. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -302,7 +302,7 @@
                 "feature": "pH Range",
                 "values": [
                   "1–12.5",
-                  "Not stated",
+                  "",
                   "1 to 13"
                 ]
               },
@@ -334,7 +334,7 @@
                 "feature": "Column Tracking",
                 "values": [
                   "eCord Technology",
-                  "Not stated",
+                  "",
                   "RFID via eConnect"
                 ]
               },
@@ -342,7 +342,7 @@
                 "feature": "Method Transfer Tools",
                 "values": [
                   "Gradient SmartStart",
-                  "Not stated",
+                  "",
                   "Intelligent Method Translator App"
                 ]
               },
@@ -379,9 +379,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three are GMP-ready and Empower-controlled. Arc sits between them: more pressure headroom than Alliance HPLC for method scaling, broader detection and multi-column capability than Alliance iS, and method transfer tooling built around receiving validated methods unchanged.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three are GMP-ready and Empower-controlled. Arc sits between them: more pressure headroom than Alliance HPLC for method scaling, broader detection and multi-column capability than Alliance iS, and method transfer tooling built around receiving validated methods unchanged."
+            ]
           },
 
           "applicationsExplorer": {
@@ -978,9 +981,9 @@
                 "options": []
               }
             ],
-            "result": { "ctaNote": "Routes to a QC-workflow-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Error Reduction Impact Estimator",
-            "emptyState": "Maps which errors pre-run verification and guided workflows address",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1054,7 +1057,7 @@
               }
             ],
             "eyebrow": "Method Migration Planner",
-            "ctaNote": "Confirms iMTA applicability and flags Method Matching considerations. Routes to a method-migration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -1084,7 +1087,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the three-holder combination for the sample manager. Routes to a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1116,7 +1119,7 @@
                 "feature": "pH Range",
                 "values": [
                   "1 to 13",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1144,14 +1147,14 @@
                 "feature": "Column Tracking",
                 "values": [
                   "RFID via eConnect columns",
-                  "Not stated"
+                  ""
                 ]
               },
               {
                 "feature": "Error Prevention",
                 "values": [
                   "Pre-run verification and guided workflows",
-                  "Not stated"
+                  ""
                 ]
               },
               {
@@ -1176,9 +1179,12 @@
                 ]
               }
             ],
-            "disclaimer": "These are not a simple upgrade path in one direction. Alliance iS adds pressure headroom, error prevention, column tracking, and guided operation. Alliance HPLC retains a wider detection range, multi-column capability, and broader software compatibility. Which fits depends on whether the constraint is error rate or analytical breadth.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "These are not a simple upgrade path in one direction. Alliance iS adds pressure headroom, error prevention, column tracking, and guided operation. Alliance HPLC retains a wider detection range, multi-column capability, and broader software compatibility. Which fits depends on whether the constraint is error rate or analytical breadth."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1849,7 +1855,7 @@
               }
             ],
             "eyebrow": "Detector Configuration Selector",
-            "ctaNote": "Recommends TUV, PDA, FLR, CAD, RI, ELS, electrochemical, conductivity, or QDa mass detection. Routes to a detection-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -1896,9 +1902,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a column and method-transfer quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Method Modernization Planner",
-            "emptyState": "Estimates run time and resolution improvement from CORTECS 2.7 µm transfer",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -1927,7 +1933,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms Empower SQT scope and recommended AMC structure. Routes to a compliance-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -1991,9 +1997,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both configurations run the same solvent delivery system, the same fixed delay volume, the same Empower-based qualification, and the same demonstrated system-to-system consistency. The difference is how much analytical range the configuration has to cover.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both configurations run the same solvent delivery system, the same fixed delay volume, the same Empower-based qualification, and the same demonstrated system-to-system consistency. The difference is how much analytical range the configuration has to cover."
+            ]
           },
 
           "applicationsExplorer": {

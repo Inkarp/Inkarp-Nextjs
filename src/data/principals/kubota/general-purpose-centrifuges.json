@@ -148,7 +148,7 @@
               }
             ],
             "eyebrow": "Speed and Force Requirement Checker",
-            "ctaNote": "Confirms the target falls within the 15,300 rpm / 22,250 xg range. Routes to a protocol-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -166,11 +166,6 @@
               "options": [
                 { "title": "Available voltage", "hint": "110V or 220/230V single phase", "choices": "110V; 220/230V single phase" },
                 {
-                  "title": "Available amperage",
-                  "hint": "Confirms against 15A (110V) or 10A (220/230V) requirement",
-                  "choices": "Confirms against 15A (110V); 10A (220/230V) requirement"
-                },
-                {
                   "title": "Bench space available",
                   "hint": "Against 70 × 63 × 36 cm footprint",
                   "choices": "At least 70 x 63 x 36 cm (W x D x H); Less than that footprint"
@@ -178,7 +173,7 @@
                 { "title": "Floor loading", "hint": "Against 85 kg unit weight", "input": "text", "choices": "" }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms installation compatibility. Routes to an installation-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -229,9 +224,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Sample Format and Rotor Selector",
-            "emptyState": "Recommends the rotor combination from Kubota's typical accessory list",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -250,7 +245,7 @@
                 "feature": "Refrigeration",
                 "values": [
                   "Yes, -10°C to +40°C",
-                  "Not specified (non-refrigerated series)",
+                  "",
                   "Yes"
                 ]
               },
@@ -295,7 +290,7 @@
                 ]
               }
             ],
-            "disclaimer": "Detailed specifications for the S300T, S500T, S700T, and S300TR were not available in this pull — confirm exact figures when comparing directly against the M500TR.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "verbatim": true
           },
@@ -717,7 +712,7 @@
                   "Yes, tube sizes",
                   "Yes, tube sizes",
                   "Yes, round + plate buckets",
-                  "Not specified"
+                  ""
                 ]
               },
               {
@@ -2078,7 +2073,7 @@
                 "values": [
                   "Yes",
                   "Yes",
-                  "Not specified"
+                  ""
                 ]
               },
               {
@@ -2094,7 +2089,7 @@
                 "values": [
                   "Not applicable",
                   "F-gas free",
-                  "Not specified"
+                  ""
                 ]
               },
               {
@@ -2877,10 +2872,7 @@
                   { "title": "Weight", "description": "118 kg" },
                   { "title": "Power", "description": "Single phase, 220V/230V ±10% 10A, 50/60 Hz" },
                   { "title": "Refrigerant", "description": "F-gas free" },
-                  {
-                    "title": "Note",
-                    "description": "The angle rotor capacity figure in the source material is listed against AT-508C, a different rotor from AT-2724M, which is named for the speed and RCF figures. Confirm the exact angle rotor capacity directly before quoting."
-                  }
+                  { "title": "Note", "description": "" }
                 ],
                 "disclaimer": "Share the sample volumes, whether high-speed angle rotor work is part of the routine, and the site's voltage supply, and the right S700TR rotor configuration gets confirmed."
               },
@@ -3047,7 +3039,7 @@
                 "values": [
                   "Self-Check, Imbalance Early Detector",
                   "Self-Check, Imbalance Early Detector",
-                  "Not specified"
+                  ""
                 ]
               },
               {
@@ -3067,9 +3059,12 @@
                 ]
               }
             ],
-            "disclaimer": "S500FR sits directly between S500T and Model 5500 on capacity and speed, nearly double S500T's RCF and capacity, while carrying two fewer rotor options than Model 5500's full 12.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "S500FR sits directly between S500T and Model 5500 on capacity and speed, nearly double S500T's RCF and capacity, while carrying two fewer rotor options than Model 5500's full 12."
+            ]
           },
 
           "applicationsExplorer": {
@@ -3336,10 +3331,7 @@
                   { "title": "Safety functions", "description": "Self-Check Function, Imbalance Early Detector" },
                   { "title": "Mixed-loading", "description": "Available" },
                   { "title": "Dimensions", "description": "54 × 64 × 84 cm (W×D×H)" },
-                  {
-                    "title": "Weight",
-                    "description": "39 kg (unusually light for a floor-standing configuration; Kubota's other floor units, S700T, S700TR, Model 8730, and Model 9945, weigh 118 kg, 118 kg, 217 kg, and 450 kg respectively. Worth confirming this weight figure directly with Kubota.)"
-                  },
+                  { "title": "Weight", "description": "39 kg" },
                   { "title": "Power", "description": "Single phase, 110V ±10% 15A or 220-230V ±10% 10A, 50/60 Hz" }
                 ],
                 "disclaimer": "Share the sample formats routinely run, including whether micro-plate work is part of the workflow, and the right rotor selection from the 10 available gets confirmed."
@@ -3426,7 +3418,7 @@
               "label": "Maximum Capacity",
               "values": [
                 "4 × 750 mL",
-                "8 × 50 mL (figure attributed to AT-508C in source material; confirm directly against AT-2724M)"
+                "8 × 50 mL"
               ]
             },
             { "label": "Product Name", "value": "Kubota Floor Standing Refrigerated Centrifuge, Model S700FR" },
@@ -3826,10 +3818,7 @@
                   { "title": "Dimensions", "description": "54 × 63 × 84 cm (W×D×H)" },
                   { "title": "Weight", "description": "118 kg" },
                   { "title": "Power", "description": "Single phase, 110V/115V ±10% 15A or 220V/230V ±10% 10A, 50/60 Hz" },
-                  {
-                    "title": "Note",
-                    "description": "The angle rotor capacity figure in the source material (8 × 50 mL) is attributed to AT-508C, a different rotor number from AT-2724M, which is named for the speed and RCF figures directly above it. Confirm the exact angle rotor capacity directly before quoting."
-                  }
+                  { "title": "Note", "description": "" }
                 ],
                 "disclaimer": "Share the sample volumes, whether high-speed angle rotor work is part of the routine, and the site's voltage supply, and the right S700FR rotor configuration gets confirmed."
               },
@@ -4024,9 +4013,12 @@
                 ]
               }
             ],
-            "disclaimer": "The Kubota general-purpose range spans from S300T's basic entry point through to Model 5500 and M500TR at the top, one built for rotor variety, the other for the marginal edge in raw speed and RCF within a lighter unit.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The Kubota general-purpose range spans from S300T's basic entry point through to Model 5500 and M500TR at the top, one built for rotor variety, the other for the marginal edge in raw speed and RCF within a lighter unit."
+            ]
           },
 
           "applicationsExplorer": {

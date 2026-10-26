@@ -190,7 +190,7 @@
               }
             ],
             "eyebrow": "Application and Mode Selector",
-            "ctaNote": "Recommends the operating modes and accessories required. Routes to an application-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Get Configuration Support"
           },
@@ -245,9 +245,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Cantilever and Accessory Selector",
-            "emptyState": "Recommends cantilever holder and accessory combination",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -279,7 +279,7 @@
                 { "title": "Environment", "hint": "Open bench, temperature-controlled, or glovebox", "choices": "Open bench; Temperature-controlled; Glovebox" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends stand-alone or IMO-integrated configuration. Routes to a setup-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -364,8 +364,11 @@
                 ]
               }
             ],
-            "disclaimer": "Both run on the same instrument. WaveMode exists because off-resonance operation gives direct force control that resonance-based modes cannot, and CleanDrive is what makes that operation fast enough to be practical rather than a slow specialist technique.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "Both run on the same instrument. WaveMode exists because off-resonance operation gives direct force control that resonance-based modes cannot, and CleanDrive is what makes that operation fast enough to be practical rather than a slow specialist technique."
+            ]
           },
 
           "applicationsExplorer": {
@@ -1104,7 +1107,7 @@
               }
             ],
             "eyebrow": "Setup Configuration Selector",
-            "ctaNote": "Recommends stand-alone, IMO-integrated, or glovebox setup. Routes to a setup-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Get Configuration Support"
           },
@@ -1161,9 +1164,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Mode and Accessory Selector",
-            "emptyState": "Recommends operating modes, cantilever holders, and options",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -1199,7 +1202,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the starting configuration and the CX controller and DriveAFM upgrade sequence. Routes to an upgrade-path-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1265,7 +1268,7 @@
               {
                 "feature": "PicoBalance",
                 "values": [
-                  "Not listed",
+                  "",
                   "Available, with viscoelastic analysis"
                 ]
               },
@@ -1319,8 +1322,11 @@
                 ]
               }
             ],
-            "disclaimer": "The two share tip-scanning architecture, the same electrical mode set, FluidFM, and all three setup configurations. What DriveAFM adds is CleanDrive photothermal excitation and the WaveMode imaging it enables, the 28-bit controller as standard, full motorization, small cantilever support, and PicoBalance. Because accessories transfer between them, starting on FlexAFM and upgrading later is a supported route rather than a compromise that has to be unwound.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "The two share tip-scanning architecture, the same electrical mode set, FluidFM, and all three setup configurations. What DriveAFM adds is CleanDrive photothermal excitation and the WaveMode imaging it enables, the 28-bit controller as standard, full motorization, small cantilever support, and PicoBalance. Because accessories transfer between them, starting on FlexAFM and upgrading later is a supported route rather than a compromise that has to be unwound."
+            ]
           },
 
           "applicationsExplorer": {
@@ -2076,7 +2082,7 @@
               }
             ],
             "eyebrow": "Mode and Option Selector",
-            "ctaNote": "Recommends modes, accessories, and advanced options from the 30+ available. Routes to a configuration-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "ctaLabel": "Get Configuration Support"
           },
@@ -2139,9 +2145,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a system-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Nanosurf System Selector",
-            "emptyState": "Recommends CoreAFM, FlexAFM, or DriveAFM",
+            "emptyState": "",
             "disclaimer": ""
           },
 
@@ -2173,7 +2179,7 @@
                 }
               ],
               "disclaimer": "",
-              "ctaNote": "Confirms fit and recommends DIMO and FluidFM requirements. Routes to a bio-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -2280,8 +2286,8 @@
                 "feature": "Magnetic Field Generator",
                 "values": [
                   "In-plane variable field option",
-                  "Not listed",
-                  "Not listed"
+                  "",
+                  ""
                 ]
               },
               {
@@ -2309,8 +2315,11 @@
                 ]
               }
             ],
-            "disclaimer": "All three share the same seven electrical modes and FluidFM availability — the electrical characterization capability does not drop at the entry level. What CoreAFM trades against the others is configurability and large-sample handling, and what it uniquely offers is complete integration including vibration isolation, plus the in-plane magnetic field generator option and the lowest-cost route to FluidFM.",
-            "featureLabel": "Parameter"
+            "disclaimer": "",
+            "featureLabel": "Parameter",
+            "notes": [
+              "All three share the same seven electrical modes and FluidFM availability — the electrical characterization capability does not drop at the entry level. What CoreAFM trades against the others is configurability and large-sample handling, and what it uniquely offers is complete integration including vibration isolation, plus the in-plane magnetic field generator option and the lowest-cost route to FluidFM."
+            ]
           },
 
           "applicationsExplorer": {

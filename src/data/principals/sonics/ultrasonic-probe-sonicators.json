@@ -86,16 +86,16 @@
                 "key": "probeNeed",
                 "label": "Probe requirement",
                 "question": "Probe requirement",
-                "hint": "Confirms fit within the 0.5-15mL standard range",
+                "hint": "",
                 "options": [
                   { "val": "need-probe", "label": "Starting fresh, need a complete system" },
                   { "val": "have-probe", "label": "Already have a compatible probe, or building a custom setup" }
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Probe and Volume Selector",
-            "emptyState": "Recommends VC-50-110 or VC-50A-110",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -134,7 +134,7 @@
               }
             ],
             "eyebrow": "Sonics Range Fit Checker",
-            "ctaNote": "Confirms VC-50 fit or flags the VCX-130 range. Routes to us for a model-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -178,9 +178,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both run on the same 50W platform, the difference is purely whether a probe ships with the system.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both run on the same 50W platform, the difference is purely whether a probe ships with the system."
+            ]
           },
 
           "applicationsExplorer": {

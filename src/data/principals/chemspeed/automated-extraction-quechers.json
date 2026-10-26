@@ -144,7 +144,7 @@
               }
             ],
             "eyebrow": "Reproducibility and Compliance Checker",
-            "ctaNote": "Confirms fit for standardized, traceable sample prep. Routes to a compliance-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -158,7 +158,7 @@
                 "key": "samplesPerDay",
                 "label": "Samples per day",
                 "question": "Samples per day",
-                "hint": "Number input",
+                "hint": "",
                 "input": "number",
                 "options": []
               },
@@ -184,9 +184,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to a throughput-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Throughput Planner",
-            "emptyState": "Recommends single-run or dual-run (day-and-night) setup",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -229,9 +229,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both run modes share the same gravimetric dispensing, centrifuge, and orbital shaker functions. The difference is purely how many cycles run per day.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both run modes share the same gravimetric dispensing, centrifuge, and orbital shaker functions. The difference is purely how many cycles run per day."
+            ]
           },
 
           "applicationsExplorer": {
@@ -528,11 +531,11 @@
                 { "key": "choices", "label": "Choices" }
               ],
               "options": [
-                { "title": "Current manual prep hours per week", "hint": "Number input", "input": "number", "choices": "" },
-                { "title": "Staff currently dedicated to QuEChERS prep", "hint": "Number input", "input": "number", "choices": "" },
+                { "title": "Current manual prep hours per week", "hint": "", "input": "number", "choices": "" },
+                { "title": "Staff currently dedicated to QuEChERS prep", "hint": "", "input": "number", "choices": "" },
                 { "title": "Sample volume growth expected", "hint": "Percentage input", "input": "text", "choices": "" }
               ],
-              "ctaNote": "Estimates freed staff time and throughput headroom. Routes to a workflow-specific quotation.",
+              "ctaNote": "",
               "disclaimer": "",
               "ctaLabel": "Talk to Product Expert"
             }

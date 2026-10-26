@@ -105,9 +105,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to us for a configuration-specific quotation", "ctaLabel": "Get Configuration Support" },
+            "result": { "ctaNote": "", "ctaLabel": "Get Configuration Support" },
             "eyebrow": "Temperature Mode Planner",
-            "emptyState": "Confirms achievable temperature for your selected mode",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -147,7 +147,7 @@
               }
             ],
             "eyebrow": "Program Sequence Planner",
-            "ctaNote": "Confirms fit within the programmable automation. Routes to us for a protocol-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Talk to Product Expert"
@@ -190,10 +190,13 @@
                 ]
               }
             ],
-            "disclaimer": "Both modes run through the same chamber and automation system, so switching between them is a program setting, not a hardware change.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both modes run through the same chamber and automation system, so switching between them is a program setting, not a hardware change."
+            ]
           },
 
           "applicationsExplorer": {

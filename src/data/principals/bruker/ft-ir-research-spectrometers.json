@@ -444,7 +444,7 @@
               ],
               "disclaimer": "",
               "lead": "The spectral range and detector configurator shows what detector and interferometer setup your research actually needs.",
-              "ctaNote": "Shows whether standard RockSolid or upgraded INTEGRAL plus MultiTect applies. Routes to Inkarp for configuration confirmation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -464,7 +464,7 @@
               ],
               "disclaimer": "",
               "lead": "The research extension matcher points you to the specific Bruker extension built for your research question.",
-              "ctaNote": "Shows the specific confirmed extension for that research question. Notes any compliance relevance, such as 21 CFR Part 11 for pharma work. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -592,9 +592,12 @@
                 ]
               }
             ],
-            "disclaimer": "The INVENIO is built for research that doesn't stay the same, where the ALPHA II is built for routine work that does.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The INVENIO is built for research that doesn't stay the same, where the ALPHA II is built for routine work that does."
+            ]
           },
 
           "serviceMap": {
@@ -1111,7 +1114,7 @@
               ],
               "disclaimer": "",
               "lead": "The resolution and vacuum configuration selector helps confirm whether the standard VERTEX 80 or the vacuum VERTEX 80v fits your research.",
-              "ctaNote": "Shows whether standard (better than 0.2 cm⁻¹) or PEAK (better than 0.06 cm⁻¹) applies. Confirms whether the evacuated VERTEX 80v is needed. Routes to Inkarp for configuration confirmation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1131,7 +1134,7 @@
               ],
               "disclaimer": "",
               "lead": "The external accessory and port planner confirms how your required accessories and light sources map onto the five exit and two input ports.",
-              "ctaNote": "Shows which exit or input port each selection uses. Confirms whether your full accessory list can run at once. Routes to Inkarp for a full configuration quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1259,9 +1262,12 @@
                 ]
               }
             ],
-            "disclaimer": "The VERTEX 80/80v pushes resolution and sensitivity further than the INVENIO, at the cost of being more specialized; the INVENIO trades some peak performance for broader, more flexible day-to-day research use.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "The VERTEX 80/80v pushes resolution and sensitivity further than the INVENIO, at the cost of being more specialized; the INVENIO trades some peak performance for broader, more flexible day-to-day research use."
+            ]
           },
 
           "serviceMap": {
@@ -1724,7 +1730,7 @@
               ],
               "disclaimer": "",
               "lead": "The coupling mode selector recommends External, Internal, or PERSEUS coupling based on your priorities.",
-              "ctaNote": "Shows External, Internal, or PERSEUS as the best fit. Routes to Inkarp for configuration confirmation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             },
             {
@@ -1744,7 +1750,7 @@
               ],
               "disclaimer": "",
               "lead": "The evolved gas application matcher points you to a real, documented Bruker application note closest to your study.",
-              "ctaNote": "Shows the specific confirmed Bruker application note for that study type. Notes which coupling mode was typically used for that kind of study. Routes to Inkarp for a configuration-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Talk to Product Expert"
             }
           ],
@@ -1864,9 +1870,12 @@
                 ]
               }
             ],
-            "disclaimer": "TG-FTIR isn't a competing platform to INVENIO or VERTEX 80/80v — it's a coupling that extends either of them, or the ALPHA II via PERSEUS, into evolved gas analysis.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "TG-FTIR isn't a competing platform to INVENIO or VERTEX 80/80v — it's a coupling that extends either of them, or the ALPHA II via PERSEUS, into evolved gas analysis."
+            ]
           },
 
           "serviceMap": {

@@ -146,7 +146,7 @@
               }
             ],
             "eyebrow": "Installation Format Fit Checker",
-            "ctaNote": "Recommends benchtop (H2O-EDI-1-T / H2O-EDI-2-T) or wall-mounted (H2O-EDI-2-B). Routes to an installation-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -171,7 +171,7 @@
                 { "title": "Downstream ultrapure system", "hint": "Feeding one, or standalone use only", "choices": "Feeding one; Standalone use only" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the 5 L/h or 10 L/h configuration. Routes to a volume-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -215,9 +215,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Water Grade Requirement Checker",
-            "emptyState": "Confirms whether Arium Advance EDI alone fits, or a Type 1 stage is also required",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -352,9 +352,12 @@
                 ]
               }
             ],
-            "disclaimer": "All three run the same patented EDI technology, the same iJust software, and the same closed bagtank storage — the differences sit in production rate and how the unit mounts. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "All three run the same patented EDI technology, the same iJust software, and the same closed bagtank storage — the differences sit in production rate and how the unit mounts. Where the table reads \"confirm on configuration,\" the published listing doesn't state the value; Inkarp will confirm it against the exact item number quoted."
+            ]
           },
 
           "serviceMap": {
@@ -791,7 +794,7 @@
               }
             ],
             "eyebrow": "Installation Format Fit Checker",
-            "ctaNote": "Recommends benchtop (H2O-RO-1-T / H2O-RO-2-T) or wall-mounted (H2O-RO-1-B). Routes to an installation-specific quotation.",
+            "ctaNote": "",
             "disclaimer": "",
             "verbatim": true,
             "ctaLabel": "Get Configuration Support"
@@ -812,7 +815,7 @@
                 { "title": "Downstream ultrapure system", "hint": "Feeding one, or standalone use only", "choices": "Feeding one; Standalone use only" }
               ],
               "disclaimer": "",
-              "ctaNote": "Recommends the 8, 16, or 24 L/h configuration. Routes to a volume-specific quotation.",
+              "ctaNote": "",
               "ctaLabel": "Get Configuration Support"
             }
           ],
@@ -856,9 +859,9 @@
                 ]
               }
             ],
-            "result": { "ctaNote": "Routes to an application-specific quotation", "ctaLabel": "Talk to Product Expert" },
+            "result": { "ctaNote": "", "ctaLabel": "Talk to Product Expert" },
             "eyebrow": "Water Grade Requirement Checker",
-            "emptyState": "Confirms whether Arium Advance RO alone fits, or an EDI or ultrapure stage is also needed",
+            "emptyState": "",
             "disclaimer": "",
             "verbatim": true
           },
@@ -984,9 +987,12 @@
                 ]
               }
             ],
-            "disclaimer": "Both share iJust software, the closed arium® bagtank, the glove-compatible touch display, and the three installation formats. The difference is water grade and throughput — RO covers higher-volume Type 3 duty, EDI covers Type 2 work where resistivity matters. Where a lab needs both, RO commonly feeds the EDI or ultrapure stage downstream.",
+            "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Both share iJust software, the closed arium® bagtank, the glove-compatible touch display, and the three installation formats. The difference is water grade and throughput — RO covers higher-volume Type 3 duty, EDI covers Type 2 work where resistivity matters. Where a lab needs both, RO commonly feeds the EDI or ultrapure stage downstream."
+            ]
           },
 
           "serviceMap": {

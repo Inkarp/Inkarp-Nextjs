@@ -43,7 +43,7 @@ export default function ServiceMap({ data, calm = false }) {
         />
         {/* Extra paragraphs from a source document, after the section intro. */}
         {data?.paragraphs?.map((paragraph, index) => (
-          <p className="-mt-4 mb-6 max-w-3xl text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
+          <p className="-mt-4 mb-6 text-sm leading-7 text-ink-soft" key={index}>{paragraph}</p>
         ))}
 
         {supportAreas?.length > 0 && (

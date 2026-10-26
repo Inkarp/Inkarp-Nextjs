@@ -8,6 +8,7 @@ import {
   FiSliders,
   FiThermometer,
 } from 'react-icons/fi';
+import LeadText from './LeadText';
 
 const CARD_ICONS = [FiSliders, FiShield, FiDroplet, FiThermometer, FiSettings, FiFlag];
 
@@ -42,7 +43,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
           )}
           {/* Extra prose paragraphs after the lead-in, when the content has them. */}
           {section?.paragraphs?.map((paragraph, index) => (
-            <p className="mt-3 text-base leading-7 text-black" key={index}>{paragraph}</p>
+            <p className="mt-3 text-base leading-7 text-black" key={index}><LeadText text={paragraph} /></p>
           ))}
           {section?.tabSummary && (
             <p className="mt-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">
@@ -62,7 +63,7 @@ export default function WhyLabsChoose({ cards = [], section, productName }) {
                       {point.text}
                     </span>
                   ) : (
-                    <span>{point}</span>
+                    <span><LeadText text={point} /></span>
                   )}
                 </li>
               ))}

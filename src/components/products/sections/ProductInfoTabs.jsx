@@ -10,6 +10,7 @@ import {
   FiRotateCw, FiPackage, FiVolume2,
 } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
+import LeadText from './LeadText';
 import TechnicalSpecsTable from '../TechnicalSpecsTable';
 
 /* ── Tab config ─────────────────────────────────────── */
@@ -152,7 +153,7 @@ function IconCard({ title, description, items, icon: IconProp, badge }) {
           {items.map((item, i) => (
             <li key={i} className="flex gap-2 text-xs leading-5 text-black">
               <span className="mt-1.5 h-1 w-1 shrink-0 bg-ink-soft" />
-              {item}
+              <span><LeadText text={item} /></span>
             </li>
           ))}
         </ul>
@@ -171,7 +172,7 @@ function PlainCard({ title, description, items }) {
           {items.map((item, i) => (
             <li key={i} className="flex gap-2 text-xs text-black">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-ink-soft" />
-              {item}
+              <span><LeadText text={item} /></span>
             </li>
           ))}
         </ul>
@@ -212,10 +213,10 @@ function ContentGroups({ groups }) {
             <p className="mb-3 border-l-2 border-red pl-3 text-sm leading-6 text-ink-soft">{group.summary}</p>
           )}
           {group.description && (
-            <p className="mb-3 text-sm leading-7 text-black">{group.description}</p>
+            <p className="mb-3 text-sm leading-7 text-black"><LeadText text={group.description} /></p>
           )}
           {group.body?.map((paragraph, paragraphIndex) => (
-            <p className="mb-3 text-sm leading-7 text-black" key={paragraphIndex}>{paragraph}</p>
+            <p className="mb-3 text-sm leading-7 text-black" key={paragraphIndex}><LeadText text={paragraph} /></p>
           ))}
           {/* A group holding both a list and a table shows the list first. */}
           {group.rows?.length > 0 && group.items?.length > 0 && (
@@ -229,7 +230,7 @@ function ContentGroups({ groups }) {
                       {item.title && item.text ? ' ' : null}
                       {item.text}
                     </span>
-                  ) : item}
+                  ) : <span><LeadText text={item} /></span>}
                 </li>
               ))}
             </ul>
@@ -267,7 +268,7 @@ function ContentGroups({ groups }) {
                       {item.title && item.text ? ' ' : null}
                       {item.text}
                     </span>
-                  ) : item}
+                  ) : <span><LeadText text={item} /></span>}
                 </li>
               ))}
             </ul>
@@ -436,7 +437,7 @@ export default function ProductInfoTabs({ product }) {
             })}
             {/* Prose a source document places after its overview bullets. */}
             {overviewSec?.paragraphs?.map((text, i) => (
-              <p key={`paragraph-${i}`} className="mb-4 text-sm leading-7 text-black">{text}</p>
+              <p key={`paragraph-${i}`} className="mb-4 text-sm leading-7 text-black"><LeadText text={text} /></p>
             ))}
             {overviewSec?.cards?.length > 0 && overviewSec.cardsTitle ? (
               <h4 className="mt-6 text-sm font-semibold text-ink">{overviewSec.cardsTitle}</h4>
@@ -466,7 +467,7 @@ export default function ProductInfoTabs({ product }) {
               {keyFeaturesSec?.title ?? 'Built around safe, visible and repeatable evaporation'}
             </h3>
             {introText(keyFeaturesSec).map((p, i) => (
-              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{keyFeaturesSec?.body?.length ? <LeadText text={p} /> : p}</p>
             ))}
             <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
               {/* Twelve by default; a section can opt in to more (`featureLimit`) when its source document lists more. */}
@@ -498,7 +499,7 @@ export default function ProductInfoTabs({ product }) {
               {applicationsSec?.title ?? "Where it's used"}
             </h3>
             {introText(applicationsSec).map((p, i) => (
-              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{applicationsSec?.body?.length ? <LeadText text={p} /> : p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(product.applications ?? []).map((app, i) => {
@@ -526,7 +527,7 @@ export default function ProductInfoTabs({ product }) {
               {specsSec?.title ?? 'Technical specifications'}
             </h3>
             {introText(specsSec).map((p, i) => (
-              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{specsSec?.body?.length ? <LeadText text={p} /> : p}</p>
             ))}
             <TechnicalSpecsTable
               columns={specsSec?.columns}
@@ -544,7 +545,7 @@ export default function ProductInfoTabs({ product }) {
               {perfSec?.title ?? 'Evaporation performance'}
             </h3>
             {perfSec?.body?.map((p, i) => (
-              <p key={i} className="mb-4 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-4 text-sm leading-7 text-black"><LeadText text={p} /></p>
             ))}
             <KPIRow kpis={perfSec?.metrics ?? lf.stats ?? []} />
             {perfSec?.utilityChecklist?.length > 0 && (
@@ -595,7 +596,7 @@ export default function ProductInfoTabs({ product }) {
               {complianceSec?.title ?? 'Quality, safety & certification'}
             </h3>
             {introText(complianceSec).map((p, i) => (
-              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{complianceSec?.body?.length ? <LeadText text={p} /> : p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {(complianceSec?.cards ?? []).map((c) => (
@@ -621,7 +622,7 @@ export default function ProductInfoTabs({ product }) {
               {configSec?.title ?? `Configure the ${product.name} around your workflow`}
             </h3>
             {introText(configSec).map((p, i) => (
-              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{configSec?.body?.length ? <LeadText text={p} /> : p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2">
               {configCards.map((c) => (
@@ -663,7 +664,7 @@ export default function ProductInfoTabs({ product }) {
               {docsSec?.title ?? 'Documentation & Resources'}
             </h3>
             {(introText(docsSec).length ? introText(docsSec) : ['Product and compliance documents for internal evaluation, purchase and safety review. Request any from Inkarp.']).map((p, i) => (
-              <p key={i} className="mb-5 text-sm leading-7 text-black">{p}</p>
+              <p key={i} className="mb-5 text-sm leading-7 text-black">{docsSec?.body?.length ? <LeadText text={p} /> : p}</p>
             ))}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {docsCards.map((c) => {

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FiArrowRight, FiCheckCircle, FiClipboard, FiCpu, FiInfo, FiWifi } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadText from './LeadText';
 import LeadCaptureForm from './LeadCaptureForm';
 import PeristalticPumpInteractive, { isPeristalticPumpTool } from './PeristalticPumpInteractive';
 
@@ -313,7 +314,7 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                       </div>
                       <div>
                         <p className="text-xs font-semibold uppercase tracking-wide text-black">{row.label}</p>
-                        <p className="mt-1 text-sm leading-6 text-black">{row.value}</p>
+                        <p className="mt-1 text-sm leading-6 text-black"><LeadText text={row.value} /></p>
                       </div>
                     </div>
                   );

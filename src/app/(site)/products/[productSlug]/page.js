@@ -11,6 +11,7 @@ import { getAllProducts, getProductBySlug } from "@/data/products/principals";
 import { getCountryFlagCodes } from "@/data/products/countryFlags";
 import { buildDynamicMetadata } from "@/data/pageSeo";
 import UniversalProductPage from "@/components/products/UniversalProductPage";
+import LeadText from "@/components/products/sections/LeadText";
 // import CustomerReviews from "@/components/products/sections/CustomerReviews";
 import TechnicalSpecsTable from "@/components/products/TechnicalSpecsTable";
 import ProductImageGallery from "@/components/products/ProductImageGallery";
@@ -115,7 +116,7 @@ export default async function ProductPage({ params }) {
       )}
 
       <nav aria-label="Breadcrumb" className="border-y border-line-light bg-parchment-alt px-4 py-3 text-sm text-ink-soft sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-[1180px] items-center gap-2">
+        <div className="flex items-center gap-2">
           <Link aria-label="Home" className="inline-flex size-8 items-center justify-center border border-line-light bg-white text-red transition hover:border-red" href="/">
             <FaHome aria-hidden="true" />
           </Link>
@@ -127,7 +128,7 @@ export default async function ProductPage({ params }) {
       </nav>
 
       <section className="bg-white px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-8">
-        <div className="mx-auto grid w-full max-w-[1180px] gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
+        <div className="grid w-full gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
@@ -215,12 +216,12 @@ export default async function ProductPage({ params }) {
                   }`}
                   key={index}
                 >
-                  {paragraph}
+                  <LeadText text={paragraph} />
                 </p>
               ))
             ) : (
               <p className="mt-5 text-sm leading-6 text-ink-soft sm:text-base">
-                {heroLead}
+                <LeadText text={heroLead} />
               </p>
             )}
           </div>

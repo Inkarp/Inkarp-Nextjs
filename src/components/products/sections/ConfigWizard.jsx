@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { FiCheck, FiRefreshCw, FiSettings } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadText from './LeadText';
 import LeadCaptureForm from './LeadCaptureForm';
 
 const STEP_LABEL_HINTS = [
@@ -225,7 +226,7 @@ export default function ConfigWizard({ data, productName = 'Hei-VAP Core' }) {
                       type="button"
                     >
                       <span className="block text-base font-medium">{cleanText(option.label, verbatim)}</span>
-                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black">{cleanText(option.desc, verbatim)}</span>}
+                      {option.desc && <span className="mt-1 block text-sm leading-6 text-black"><LeadText text={cleanText(option.desc, verbatim)} /></span>}
                     </button>
                   );
                 })}

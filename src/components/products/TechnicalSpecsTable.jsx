@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { FiCheckCircle, FiCpu, FiFileText } from "react-icons/fi";
+import LeadText from "./sections/LeadText";
 
 function renderSpecValue(value) {
   if (Array.isArray(value)) {
@@ -8,14 +9,14 @@ function renderSpecValue(value) {
         {value.map((item) => (
           <li className="flex gap-2" key={item}>
             <span className="mt-2 size-1 shrink-0 bg-red" />
-            <span>{item}</span>
+            <span><LeadText text={item} /></span>
           </li>
         ))}
       </ul>
     );
   }
 
-  return value;
+  return <LeadText text={value} />;
 }
 
 /**

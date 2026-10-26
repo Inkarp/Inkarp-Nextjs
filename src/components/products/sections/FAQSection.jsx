@@ -1,6 +1,7 @@
 'use client';
 import { useMemo, useState } from 'react';
 import SectionHeader from './SectionHeader';
+import LeadText from './LeadText';
 
 const CATEGORIES = [
   { key: 'all', label: 'All' },
@@ -103,7 +104,7 @@ export default function FAQSection({ faqs = [], productName, intro, title }) {
                 </button>
                 {isOpen && (
                   <div className="px-5 pb-4 text-sm leading-7 text-black">
-                    <p>{faq.answer}</p>
+                    <p><LeadText text={faq.answer} /></p>
                  
                   </div>
                 )}

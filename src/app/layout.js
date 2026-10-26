@@ -8,7 +8,7 @@ import "./globals.css";
 // fonts.gstatic.com during the build, so any build host without reliable access
 // to Google Fonts fails with "Error while requesting resource" / module-not-found.
 // These are the official Roboto v51 variable woff2 subsets committed to the repo,
-// so the build has no network dependency. MaxOT is already self-hosted the same way.
+// so the build has no network dependency.
 const roboto = localFont({
   variable: "--font-roboto",
   display: "swap",

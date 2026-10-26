@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "MaxOT";
-  src: url("/fonts/MaxOT.otf") format("opentype");
-  font-display: swap;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -29,7 +23,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto);
   --font-roboto: var(--font-roboto);
-  --font-maxot: "MaxOT";
+  --font-maxot: var(--font-roboto);
 
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);

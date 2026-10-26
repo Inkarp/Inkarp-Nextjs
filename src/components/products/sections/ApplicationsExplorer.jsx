@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { FiActivity, FiBookOpen, FiCheck, FiCoffee, FiCpu, FiDroplet, FiThermometer } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadText from './LeadText';
 
 const ICON_MAP = {
   pill: FiActivity,
@@ -101,14 +102,14 @@ export default function ApplicationsExplorer({ data, productName }) {
           <div>
             <h3 className="text-2xl font-semibold tracking-tight text-ink">{industry.name}</h3>
             <p className="mt-5 max-w-2xl text-base leading-8 text-black">
-              {getDescription(industry, productName)}
+              <LeadText text={getDescription(industry, productName)} />
             </p>
 
             <div className="mt-7 space-y-4">
               {profile.bullets.map((item) => (
                 <div className="flex items-start gap-3 text-sm leading-6 text-black sm:items-center sm:gap-4 sm:text-base" key={item}>
                   <FiCheck className="shrink-0 text-emerald-600" />
-                  <span>{item}</span>
+                  <span><LeadText text={item} /></span>
                 </div>
               ))}
             </div>

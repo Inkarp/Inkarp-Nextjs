@@ -200,7 +200,7 @@ export default function CompareBasketFloat() {
       <button
         aria-expanded={open}
         aria-label={count ? `${label} selected to compare` : `Compare ${siblings?.category ?? "products"}`}
-        className="group relative inline-flex min-h-[56px] items-center gap-2 border border-ink bg-white pl-2.5 pr-3 shadow-xl shadow-zinc-900/15 transition hover:-translate-y-0.5 hover:shadow-2xl motion-safe:animate-[float-widget-pop_0.35s_ease-out] sm:gap-3 sm:pr-4"
+        className="group relative inline-flex min-h-[56px] items-center gap-2 border border-ink bg-white px-2.5 shadow-xl shadow-zinc-900/15 transition hover:-translate-y-0.5 hover:shadow-2xl motion-safe:animate-[float-widget-pop_0.35s_ease-out]"
         onClick={() => setIsOpen((current) => !current)}
         type="button"
       >
@@ -224,7 +224,6 @@ export default function CompareBasketFloat() {
             <FiBarChart2 className="text-sm" />
           </span>
         )}
-        <span className="hidden text-sm font-semibold text-ink sm:inline">Compare</span>
         {count ? (
           <span
             className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-ink px-1.5 text-xs font-bold text-white motion-safe:animate-[float-badge-pop_0.4s_ease-out]"

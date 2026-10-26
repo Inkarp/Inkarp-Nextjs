@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { FiCheck, FiDroplet } from 'react-icons/fi';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import LeadText from './LeadText';
 import LeadCaptureForm from './LeadCaptureForm';
 
 function getResult(selections, results) {
@@ -133,7 +134,7 @@ export default function SuitabilityChecker({ data, productName }) {
                   {normaliseText(result.title)}
                 </h3>
                 <p className="mt-3 max-w-xl text-sm leading-7 text-black">
-                  {normaliseText(result.body)}
+                  <LeadText text={normaliseText(result.body)} />
                 </p>
                 {result.tags?.length ? (
                   <div className="mt-4 flex flex-wrap gap-2">

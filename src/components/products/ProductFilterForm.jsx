@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
+import { SHOWN_PARAM } from "@/components/products/ProductResultsGrid";
 
 function getProductsUrl(
   pathname,
@@ -15,6 +16,8 @@ function getProductsUrl(
 ) {
   const params = new URLSearchParams(searchParams.toString());
   const trimmedQuery = query.trim();
+  // A new search or filter starts again from the first page of results.
+  params.delete(SHOWN_PARAM);
 
   if (trimmedQuery) {
     params.set("q", trimmedQuery);

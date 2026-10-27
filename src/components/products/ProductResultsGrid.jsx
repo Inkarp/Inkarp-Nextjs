@@ -3,6 +3,7 @@
 import Image from "next/image";
 import AddToQuoteButton from "./AddToQuoteButton";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
@@ -11,6 +12,9 @@ import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge
 const INITIAL_VISIBLE_PRODUCTS = 24;
 const LOAD_MORE_COUNT = 24;
 const MAX_VISIBLE_PILLS = 3;
+// How many products "Load more" has revealed, kept in the address bar so that
+// coming Back from a product page shows the same list instead of the first 24.
+export const SHOWN_PARAM = "show";
 
 function uniqueValues(values) {
   return [...new Set(values.filter(Boolean))];
@@ -157,7 +161,30 @@ export default function ProductResultsGrid({
   initialVisibleCount = INITIAL_VISIBLE_PRODUCTS,
   query = "",
 }) {
-  const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
+  const shownParam = useSearchParams().get(SHOWN_PARAM);
+  const countFor = (param) => {
+    const shown = Number.parseInt(param ?? "", 10);
+    return Number.isFinite(shown)
+      ? Math.max(initialVisibleCount, Math.min(shown, products.length))
+      : initialVisibleCount;
+  };
+  const [visibleCount, setVisibleCount] = useState(() => countFor(shownParam));
+  // Follow the URL when it changes without remounting the grid, e.g. the
+  // header's "Products" link clicked while already on this list.
+  const [syncedParam, setSyncedParam] = useState(shownParam);
+  if (shownParam !== syncedParam) {
+    setSyncedParam(shownParam);
+    setVisibleCount(countFor(shownParam));
+  }
+
+  function loadMore() {
+    const nextCount = Math.min(visibleCount + LOAD_MORE_COUNT, products.length);
+    setVisibleCount(nextCount);
+    // replaceState updates the URL without a navigation or a new history entry.
+    const params = new URLSearchParams(window.location.search);
+    params.set(SHOWN_PARAM, String(nextCount));
+    window.history.replaceState(null, "", `${window.location.pathname}?${params}`);
+  }
 
   const visibleProducts = useMemo(
     () => products.slice(0, visibleCount),
@@ -209,9 +236,7 @@ export default function ProductResultsGrid({
         <div className="mt-8 flex justify-center">
           <button
             className="border border-rose-200 bg-rose-50 px-6 py-3 text-sm font-semibold text-rose-700 transition hover:bg-rose-100"
-            onClick={() =>
-              setVisibleCount((count) => Math.min(count + LOAD_MORE_COUNT, products.length))
-            }
+            onClick={loadMore}
             type="button"
           >
             Load more products

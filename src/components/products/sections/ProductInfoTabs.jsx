@@ -318,7 +318,7 @@ export default function ProductInfoTabs({ product }) {
   // instead (`overview`, `performance`, `docs`). Synthesize an equivalent
   // section shape from those so the tabs show real content, not placeholders.
   const flatOverviewSec = product.overview && typeof product.overview === 'object'
-    ? { subheading: product.subhead, body: product.overview.body ?? [], cards: [] }
+    ? { body: product.overview.body ?? [], cards: [] }
     : undefined;
   const flatPerfSec = product.performance && typeof product.performance === 'object'
     ? product.performance
@@ -392,9 +392,9 @@ export default function ProductInfoTabs({ product }) {
       case 'overview':
         return (
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">
-              {overviewSec?.subheading ?? 'Reliable rotary evaporation, focused on the essentials'}
-            </h3>
+            {overviewSec?.subheading ? (
+              <h3 className="text-lg font-semibold tracking-tight text-ink mb-4">{overviewSec.subheading}</h3>
+            ) : null}
             {/* `intro` is one paragraph, or several when a source document has more than one before its bullets. */}
             {(Array.isArray(overviewSec?.intro) ? overviewSec.intro : overviewSec?.intro ? [overviewSec.intro] : []).map((text, i) => (
               <p key={`intro-${i}`} className="mb-5 text-sm leading-7 text-black">{text}</p>

@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
@@ -31,6 +31,10 @@
 .env.production
 .env*.local
 !.env.example
+
+# Office lock files and spreadsheet inspection output
+~$*
+*.inspect.ndjson
 
 # debug
 npm-debug.log*

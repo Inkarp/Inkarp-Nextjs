@@ -857,7 +857,7 @@
             "featureLabel": "Parameter",
             "verbatim": true,
             "notes": [
-              "DV2Plus is positioned by Brookfield as the direct successor to the DV2T, carrying forward legacy method file compatibility through DV Create so an upgrade doesn't mean revalidating existing test methods from scratch."
+              "DV2Plus is the direct successor to the DV2T and carries forward legacy method file compatibility through DV Create, so upgrading does not mean revalidating existing test methods from scratch."
             ]
           },
 
@@ -3537,7 +3537,7 @@
               "title": "Gel-Timer as a Core Capability, Not an Add-On",
               "description": "Time-to-gel measurement sits on the same platform as viscosity and yield stress testing, using the same calibration and reporting path rather than a separate device."
             },
-            { "title": "Ethernet Included on the Standard Version", "description": "" },
+            { "title": "Ethernet Included on the Standard Version", "description": "Ethernet connectivity is standard on this variant." },
             {
               "title": "Purpose-Built for Curing System Testing",
               "description": "Positioned specifically for resins, epoxies, and gelation-driven materials, where a general rheometer would treat gel time as a secondary function."
@@ -3584,7 +3584,7 @@
             {
               "label": "Ethernet Connectivity",
               "values": [
-                "",
+                "Included",
                 "Included"
               ]
             },
@@ -3879,14 +3879,14 @@
               {
                 "feature": "Accuracy",
                 "values": [
-                  "",
+                  "Available on request",
                   "±1.0% of range"
                 ]
               },
               {
                 "feature": "Repeatability",
                 "values": [
-                  "",
+                  "Available on request",
                   "±0.2%"
                 ]
               },
@@ -3900,7 +3900,10 @@
             ],
             "disclaimer": "",
             "featureLabel": "Parameter",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "This instrument shares most of its feature set with the base DVNext Rheometer, including built-in Gel-Timer functionality. Inkarp will confirm which version suits your workflow."
+            ]
           },
 
           "applicationsExplorer": {
@@ -3980,16 +3983,17 @@
             },
             {
               "question": "How is it different from the base DVNext Rheometer?",
-              "answer": "The feature sets are largely the same — both include built-in Gel-Timer functionality."
+              "answer": "The feature sets are largely the same, and both include built-in Gel-Timer functionality. This version lists Ethernet connectivity as a Standard-version feature."
             },
             {
               "question": "What is Gel-Timer functionality?",
               "answer": "Accurate measurement of gelation time, positioned as the instrument's core differentiating capability for applications requiring precise time-to-gel data."
             },
             {
-              "question": "What is the accuracy and repeatability?",
-              "answer": "The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability."
+              "question": "Does the Standard version include Ethernet connectivity?",
+              "answer": "Yes. Ethernet connectivity is included on the Standard version."
             },
+            { "question": "What is the accuracy and repeatability?", "answer": "Accuracy and repeatability figures are available from Inkarp on request." },
             { "question": "Is magnetic coupling standard or optional?", "answer": "Optional on the Standard version, standard-fit on the Compliant version." },
             {
               "question": "Does the Compliant version include barcode scanning?",
@@ -4122,7 +4126,7 @@
                   "Standard Version",
                   "21 CFR Part 11 Compliant Version"
                 ],
-                "note": "The base DVNext Rheometer specifies ±1.0% of range accuracy and ±0.2% repeatability."
+                "note": ""
               },
               {
                 "key": "performance",
@@ -4213,7 +4217,7 @@
                 "ctaLabel": "Send My Requirement",
                 "cards": [
                   { "title": "Specification Sheet (Standard and Compliant)", "description": "Available on request" },
-                  { "title": "Accuracy and Repeatability Confirmation", "description": "Available on request" },
+                  { "title": "Accuracy and Repeatability Confirmation", "description": "Available from Inkarp on request." },
                   { "title": "21 CFR Part 11 / GAMP Compliance Details", "description": "Available on request" },
                   { "title": "LIMS and Ethernet Connectivity Guide", "description": "Available on request" },
                   { "title": "Related Accessories Catalogue", "description": "Available on request" }

@@ -306,7 +306,7 @@
             "featureLabel": "Parameter",
             "verbatim": true,
             "notes": [
-              "Based on Zeiss's positioning, Axioscan 7 and Celldiscoverer 7 likely serve different automated workflows entirely, slide digitization versus live-cell imaging automation, rather than competing directly."
+              "Axioscan 7 and Celldiscoverer 7 solve different automation problems. Axioscan 7 automates high-volume digitization of static, prepared slides; Celldiscoverer 7 automates imaging of living samples over time, with immersion, incubation and focus systems built for that."
             ]
           },
 
@@ -443,7 +443,10 @@
               "question": "How does the Clinical configuration connect to hospital systems?",
               "answer": "Via ZEISS Solutions Lab and a Dicom converter, integrating into existing IMS and PACS infrastructure. Zeiss notes this integration path itself is not an in vitro diagnostic device."
             },
-            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
+            {
+              "question": "Where can I find detailed technical specifications?",
+              "answer": "Full technical specifications, including dimensions, weight and objective and camera part numbers, are available from Inkarp on request."
+            },
             {
               "question": "What is the price of the Axioscan 7 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the configuration, objectives, and software selected."
@@ -808,10 +811,7 @@
               "title": "Guided Acquisition and Subset Imaging",
               "description": "Automatic identification and imaging of a subset from a group of fixed Drosophila embryos"
             },
-            {
-              "title": "Drug Discovery and High-Content Analysis",
-              "description": "Named directly among Zeiss's related application areas for biotech and pharma"
-            },
+            { "title": "Drug Discovery and High-Content Analysis", "description": "A key application area for biotech and pharma" },
             {
               "title": "Model Organism Imaging",
               "description": "Zebrafish, cricket embryos, and starlet sea anemone, spanning a genuinely wide range of specimen types"
@@ -1025,7 +1025,7 @@
               {
                 "feature": "Clinical Certification",
                 "values": [
-                  "",
+                  "Available on request",
                   "IVDR (Clinical configuration)"
                 ]
               },
@@ -1192,7 +1192,10 @@
               "question": "How is Celldiscoverer 7 different from Axioscan 7?",
               "answer": "Celldiscoverer 7 automates live-cell and high-content imaging, with immersion, incubation, and focus systems built for living, dynamic samples. Axioscan 7 automates digitization of fixed, prepared slides at high volume, with no equivalent need for immersion or incubation."
             },
-            { "question": "Where can I find detailed technical specifications?", "answer": "Inkarp can request the full specification sheet from Zeiss." },
+            {
+              "question": "Where can I find detailed technical specifications?",
+              "answer": "Full technical specifications, including the full objective range and physical dimensions, are available from Inkarp on request."
+            },
             {
               "question": "What is the price of the Celldiscoverer 7 in India?",
               "answer": "Get in touch and Inkarp will put together a quote based on the platform tier, confocal upgrade, and automation options selected."

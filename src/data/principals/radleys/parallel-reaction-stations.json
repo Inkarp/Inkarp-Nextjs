@@ -521,7 +521,7 @@
             "featureLabel": "Parameter",
             "verbatim": true,
             "notes": [
-              "The cooling reservoir is a real, confirmed accessory, not a built-in capability — worth specifying explicitly if sub-ambient work is part of your screening."
+              "The cooling reservoir is an accessory, not a built-in capability, so specify it if sub-ambient work is part of your screening."
             ]
           },
 
@@ -1821,7 +1821,7 @@
             },
             {
               "question": "What is the temperature accuracy?",
-              "answer": "±1°C for heating performance and ±0.5°C under temperature control; Inkarp can confirm which applies to your specific configuration."
+              "answer": "Heating performance accuracy is ±1°C, and accuracy under temperature control is ±0.5°C. Inkarp can confirm which applies to your configuration."
             },
             {
               "question": "What is the price of the Carousel 6 Plus Reaction Station in India?",
@@ -1840,7 +1840,7 @@
               { "value": "5 to 250 mL", "label": "Flask size range" },
               { "value": "Ambient to 180°C", "label": "Heating range" },
               { "value": "Under 25 minutes", "label": "Time to boil six flasks of water" },
-              { "value": "±1°C / ±0.5°C", "label": "Temperature accuracy" },
+              { "value": "±1°C / ±0.5°C", "label": "Temperature accuracy: ±1°C heating, ±0.5°C under control" },
               { "value": "Modular", "label": "Integrates with Tornado, Breeze, Storm" },
               { "value": "Dean-Stark option", "label": "250 mL azeotropic flask" },
               { "value": "Rare earth elliptical", "label": "Stir bar type" }
@@ -4720,7 +4720,7 @@
                 "tabSummary": "What the internal fluid path and named brands actually deliver",
                 "body": [
                   "Holding a temperature steady across hours, not just reaching it once, is what Storm's internal design is actually built around.",
-                  "The internal fluid path focuses the circulator's thermofluid directly toward the top plate surface, which is what keeps temperature variation minimal across the whole plate rather than concentrated near the inlet. That design pairs with genuinely open circulator compatibility — Huber, Julabo, and Lauda are all named directly, connected via M24 fittings, so you're not locked into one manufacturer's ecosystem to get the full -65°C to +200°C range."
+                  "The internal fluid path directs the circulator's thermofluid toward the top plate surface, which keeps temperature variation minimal across the whole plate rather than concentrated near the inlet. It works with Huber, Julabo and Lauda circulators via M24 fittings, so you are not tied to one manufacturer to reach the full -65°C to +200°C range."
                 ],
                 "groups": [
                   {
@@ -5000,7 +5000,7 @@
             "featureLabel": "Parameter",
             "verbatim": true,
             "notes": [
-              "This comparison is now confirmed identically on both products' own pages — the tradeoff is real and consistent: Storm trades response speed for range and stability; Breeze trades range and stability for response speed."
+              "Storm trades response speed for range and stability; Breeze trades range and stability for response speed."
             ]
           },
 
@@ -5503,7 +5503,7 @@
             "sectionId": "comparison",
             "eyebrow": "Method comparison",
             "title": "Method Comparison",
-            "description": "",
+            "description": "Compare Breeze with Storm directly.",
             "columns": [
               { "label": "Breeze" },
               { "label": "Storm" }

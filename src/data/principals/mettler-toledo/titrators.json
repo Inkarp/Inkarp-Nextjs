@@ -207,7 +207,9 @@
                 "name": "Wine and Winery Testing",
                 "icon": "flask",
                 "note": "Use Case: Acidity testing in wine",
-                "bullets": [],
+                "bullets": [
+                  "Why It Fits: A named application for this titrator"
+                ],
                 "tags": []
               },
               {
@@ -295,7 +297,10 @@
             "description": "",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Compare Easy pH with Easy Pro, Easy KF V, Excellence T5 and EVA V1."
+            ]
           },
 
           "serviceMap": {
@@ -400,14 +405,17 @@
                 "body": [
                   { "text": "Combines acid/base, precipitation, and redox potentiometric titration in one instrument." },
                   { "text": "Positioned for the most common parameters tested in food, beverage, and chemical products." },
-                  { "text": "Part of Mettler Toledo's EasyPlus titrator line, sitting above the single-method Easy pH." }
+                  { "text": "Part of Mettler Toledo's EasyPlus titrator line, sitting above the single-method Easy pH." },
+                  {
+                    "text": "The full technical specification, including sensors, burette, methods storage and connectivity, is available from Inkarp on request."
+                  }
                 ],
                 "cards": [
                   { "title": "Three titration types", "description": "Acid/base, precipitation, and redox in one instrument" },
                   { "title": "Broader coverage than Easy pH", "description": "Steps up from a single-method titrator without a full jump to Excellence tier" },
                   { "title": "Food, beverage, chemical focus", "description": "Positioned for the most common industry parameters" }
                 ],
-                "description": "",
+                "description": "Where to find Easy Pro's specifications, and how Inkarp supports it.",
                 "glanceTitle": "Easy Pro at a Glance",
                 "glanceDescription": "A flexible potentiometric titrator covering three titration types in one instrument, positioned above the single-method EasyPlus Easy pH.",
                 "subheading": "Overview",
@@ -432,12 +440,12 @@
                 "key": "specs",
                 "eyebrow": "Technical Specifications",
                 "title": "Technical Specifications",
-                "description": "The full data sheet is available from Inkarp on request.",
+                "description": "Easy Pro specifications. The full data sheet is available from Inkarp on request.",
                 "columns": [
                   "Parameter",
                   "Specification"
                 ],
-                "tabSummary": "Full specification available from Inkarp"
+                "tabSummary": ""
               },
               {
                 "key": "performance",
@@ -524,7 +532,8 @@
               "href": "#booking",
               "secondaryLabel": "Talk to Product Expert",
               "secondaryHref": "#booking"
-            }
+            },
+            "statsIntro": "Easy Pro multi-type titration at a glance."
           },
 
           "features": [
@@ -645,12 +654,12 @@
               }
             ],
             "disclaimer": "",
-            "description": "",
+            "description": "Compare Easy Pro with the other models in this range.",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
             "verbatim": true,
             "notes": [
-              "Easy Pro sits above Easy pH on method coverage, three titration types instead of one, within the same EasyPlus product line."
+              "Easy Pro sits above Easy pH on method coverage, with three titration types instead of one, within the same EasyPlus line."
             ]
           },
 
@@ -1029,10 +1038,13 @@
               }
             ],
             "disclaimer": "",
-            "description": "",
+            "description": "Compare Easy KF V with the other models in this range.",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
-            "verbatim": true
+            "verbatim": true,
+            "notes": [
+              "Easy KF V is the Karl Fischer instrument in the EasyPlus line, built for water determination where Easy pH and Easy Pro are built around acid/base chemistry."
+            ]
           },
 
           "serviceMap": {
@@ -1142,7 +1154,7 @@
                   { "text": "Hot Plug & Play burettes and sensors, no reconfiguration needed when swapping." }
                 ],
                 "cards": [
-                  { "title": "18 measurement types", "description": "" },
+                  { "title": "18 measurement types", "description": "The broadest method coverage in the Titrators range" },
                   { "title": "Expandable to 4 burettes", "description": "Grows from one titration to multi-burette, multi-method testing" },
                   { "title": "Up to 303 samples/analysis", "description": "Real high-throughput capability with InMotion automation" },
                   { "title": "LabX-ready compliance", "description": "21 CFR Part 11 and EudraLex Annex 11 support built in" }
@@ -1470,12 +1482,12 @@
               }
             ],
             "disclaimer": "",
-            "description": "",
+            "description": "Compare Excellence T5 with the other models in this range.",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
             "verbatim": true,
             "notes": [
-              "Excellence T5 sits well above every EasyPlus model on method breadth, expandability, and automation, positioned for labs whose testing needs will genuinely outgrow a fixed EasyPlus instrument."
+              "Excellence T5 sits above every EasyPlus model on method breadth, expandability and automation, for labs whose testing needs will outgrow a fixed EasyPlus instrument."
             ]
           },
 
@@ -1911,12 +1923,12 @@
               }
             ],
             "disclaimer": "",
-            "description": "",
+            "description": "Compare EVA V1 with the other models in this range.",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
             "verbatim": true,
             "notes": [
-              "This closes the five-model Titrators category. EVA V1 and Easy KF V both do volumetric Karl Fischer only, but EVA V1 states a genuinely tested dispensing resolution and LOQ that Easy KF V's spec sheet doesn't include, positioning it as the precision-focused dedicated KF option, distinct from T5's broad multi-method platform."
+              "EVA V1 and Easy KF V both do volumetric Karl Fischer only, but EVA V1 states a tested dispensing resolution and LOQ that the Easy KF V specification does not include. That makes it the precision-focused dedicated KF option, distinct from T5's broad multi-method platform."
             ]
           },
 
@@ -2331,12 +2343,12 @@
               }
             ],
             "disclaimer": "",
-            "description": "",
+            "description": "Compare EVA C1 with the other models in this range.",
             "featureLabel": "Parameter",
             "eyebrow": "Method comparison",
             "verbatim": true,
             "notes": [
-              "EVA C1 and EVA V1 are complementary, not competing: EVA C1 covers the trace end of water content down to 2 µg, while EVA V1 covers the higher, more routine end from 100 ppm upward. Between them and T5 (which supports both coulometric and volumetric alongside potentiometric), the Titrators category now covers the full water-content range at every scale."
+              "EVA C1 and EVA V1 are complementary, not competing: EVA C1 covers trace water content down to 2 µg, while EVA V1 covers the higher, routine range from 100 ppm upward. Together with T5, which supports coulometric and volumetric alongside potentiometric titration, the Titrators range covers water content at every scale."
             ]
           },
 

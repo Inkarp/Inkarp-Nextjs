@@ -1199,7 +1199,7 @@
               {
                 "condition": { "specialistTechnique": "smm" },
                 "title": "Confirm SMM Availability With Inkarp",
-                "body": "Inkarp will confirm availability at configuration.",
+                "body": "Scanning microwave microscopy is not part of the standard Alphacen 300 mode set. Inkarp will confirm availability for your configuration.",
                 "tags": [
                   "SMM Needs Confirmation"
                 ]
@@ -1544,7 +1544,10 @@
               "question": "Which AFM modes are available?",
               "answer": "Static, lateral, dynamic, and phase imaging; C-AFM, SSRM, PFM, EFM, KPFM, and MFM for electrical properties; force spectroscopy, modulation, and mapping for mechanical; plus lithography and nanomanipulation, EC-AFM, and SThM."
             },
-            { "question": "Is Scanning Microwave Microscopy available?", "answer": "Confirm availability at configuration if SMM is required." },
+            {
+              "question": "Is Scanning Microwave Microscopy available?",
+              "answer": "Scanning microwave microscopy is not part of the standard Alphacen 300 mode set. Inkarp will confirm availability for your configuration."
+            },
             {
               "question": "Can samples larger than 300 mm be measured?",
               "answer": "Yes, through customization — the Alphacen 300 Flex serves as the basis for custom-engineered solutions accommodating samples beyond 300 mm."

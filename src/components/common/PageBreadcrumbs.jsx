@@ -21,9 +21,16 @@ const DEFAULT_CLASSNAME =
 
 // `className` lets a caller embed the breadcrumb trail inside its own row
 // (e.g. centered between a logo and a button) instead of the default
-// full-width, self-contained bar.
-export default function PageBreadcrumbs({ path, trail, className = DEFAULT_CLASSNAME }) {
+// full-width, self-contained bar. `tone="neutral"` drops the brand red for
+// pages that keep to greys (the blog).
+const TONES = {
+  brand: { link: "transition hover:text-red", current: "text-red" },
+  neutral: { link: "transition hover:text-slate-950", current: "text-slate-900" },
+};
+
+export default function PageBreadcrumbs({ path, trail, className = DEFAULT_CLASSNAME, tone = "brand" }) {
   const steps = trail ?? (path && path !== "/" && pageSeo[path] ? [{ label: pageSeo[path].label, href: path }] : []);
+  const colors = TONES[tone] ?? TONES.brand;
 
   if (steps.length === 0) {
     return null;
@@ -34,7 +41,7 @@ export default function PageBreadcrumbs({ path, trail, className = DEFAULT_CLASS
       aria-label="Breadcrumb"
       className={className}
     >
-      <Link className="transition hover:text-red" href="/">
+      <Link className={colors.link} href="/">
         Home
       </Link>
       {steps.map((step, index) => (
@@ -43,9 +50,9 @@ export default function PageBreadcrumbs({ path, trail, className = DEFAULT_CLASS
             /
           </span>
           {index === steps.length - 1 ? (
-            <span className="text-red">{step.label}</span>
+            <span className={colors.current}>{step.label}</span>
           ) : (
-            <Link className="transition hover:text-red" href={step.href}>
+            <Link className={colors.link} href={step.href}>
               {step.label}
             </Link>
           )}

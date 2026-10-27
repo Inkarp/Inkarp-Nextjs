@@ -608,6 +608,13 @@ html:has([data-bottom-banner]) [data-webinar-notice] {
 :root[data-festive] .submit-trace[data-state="sending"]::before {
   background: conic-gradient(from var(--submit-trace-angle), #b8860b, #ffcf70, #f67a45, transparent 45%);
 }
+/* Opt-in grey light for pages that keep to greys (the blog comment form). */
+.submit-trace.submit-trace-neutral[data-state="sending"]::before {
+  background: conic-gradient(from var(--submit-trace-angle), #0f172a, #64748b, #cbd5e1, transparent 45%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .submit-trace.submit-trace-neutral[data-state="sending"]::before { background: linear-gradient(90deg, #0f172a, #64748b, #cbd5e1); }
+}
 @media (prefers-reduced-motion: reduce) {
   /* a still, fully drawn edge instead of the running light; no shimmer */
   .submit-trace[data-state="sending"]::before { animation: none; background: linear-gradient(90deg, #be0010, #f67a45, #d5bda2); }

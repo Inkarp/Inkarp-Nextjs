@@ -144,6 +144,7 @@ import mettlerToledoMoistureAnalyzersCatalog from "./mettler-toledo/moisture-ana
 import mettlerToledoTitratorsCatalog from "./mettler-toledo/titrators.json";
 import mettlerToledoPhMetersCatalog from "./mettler-toledo/ph-meters.json";
 import mettlerToledoWeighingBalancesCatalog from "./mettler-toledo/weighing-balances.json";
+import rotachromCentrifugalPartitionChromatographyCatalog from "./rotachrom/centrifugal-partition-chromatography.json";
 import workbookProductMetadata from "./workbook-product-metadata.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
@@ -305,6 +306,7 @@ const principalCatalogs = [
   mettlerToledoTitratorsCatalog,
   mettlerToledoPhMetersCatalog,
   mettlerToledoWeighingBalancesCatalog,
+  rotachromCentrifugalPartitionChromatographyCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

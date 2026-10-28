@@ -138,7 +138,7 @@ export default function WebinarsPage() {
               Webinars
             </p>
             <h1 className="mt-1 text-2xl font-semibold leading-tight text-ink sm:text-3xl">
-              October webinar agenda
+              November webinar agenda
             </h1>
             <p className="mt-1 text-sm text-ink-soft">
               {visibleWebinars.length} {activeTab ==="upcoming" ?"upcoming sessions" :"past sessions"}

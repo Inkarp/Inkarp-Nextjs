@@ -1037,6 +1037,389 @@ export const webinars = [
 </div>
 `,
   },
+  {
+    id: 29,
+    title: "Expanding Access to Oligonucleotide LC-MS Analysis: Walk-Up Mass Confirmation, and Inline Mass Deconvolution in a Compliant-Ready Environment",
+    description: "Walk-up LC-MS mass confirmation and inline mass deconvolution for synthetic oligonucleotides",
+    date1: "November 04 | 09:30 PM IST",
+    date: "2026-11-04",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/mr/7002688/7E34CC580AEC8613BD5AF6874046069F",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Expanding Access to Oligonucleotide LC-MS Analysis: Walk-Up Mass Confirmation, and Inline Mass Deconvolution in a Compliant-Ready Environment
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Confirming the molecular mass of synthetic oligonucleotides is essential during discovery and development, yet access to high-resolution LC-MS analysis can be limited by reliance on specialist operators and centralized laboratories.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this Waters webinar to explore walk-up mass confirmation using the Waters Connect&trade; Ready Access Software with the BioAccord&trade; LC-MS System, and LC-UV-MS workflows with inline mass deconvolution in Empower&trade; Software using the ACQUITY&trade; QDa&trade; II mass detector.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand how walk-up LC-MS can expand access to intact-mass confirmation for synthetic oligonucleotides</li>
+      <li>See how Ready Access and BioAccord can simplify sample submission, acquisition, and results review</li>
+      <li>Identify opportunities to reduce turnaround time and reliance on centralized MS experts for routine analyses</li>
+      <li>Learn how the ACQUITY QDa II mass detector and Empower inline deconvolution can support oligonucleotide mass confirmation and compliant workflows</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>4 November 2026</strong></li>
+      <li><strong>09:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 30,
+    title: "Machine Learning and Artificial Intelligence towards Autonomous AFM",
+    description: "Nanosurf webinar series on the future of AI and AFM and state-of-the-art AFM control",
+    date1: "November 05 | 06:30 PM IST",
+    date: "2026-11-05",
+    img: NANOSURF_LOGO,
+    sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Machine Learning and Artificial Intelligence towards Autonomous AFM
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Machine Learning and Artificial Intelligence towards Autonomous AFM is a webinar series by Nanosurf, featuring 9 internationally recognized speakers.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join the 5 November session of the series. Nanosurf also shares how DriveAFM can be used to unlock autonomous AFM, along with the five levels of autonomy of AFM systems.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>The future of AI and AFM</li>
+      <li>State-of-the-art AFM control</li>
+      <li>Insights from world leaders of autonomous AFM</li>
+      <li>An introduction to the topic by Nanosurf experts</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>5 November 2026</strong></li>
+      <li><strong>06:30 PM - 07:30 PM IST</strong></li>
+      <li><strong>Online Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 31,
+    title: "CDMS in Action: Driving Better AAV Processes and Deeper Viral Vector Insights",
+    description: "How Xevo CDMS drives AAV process optimization and deeper viral vector insights",
+    date1: "November 05 | 08:30 PM IST",
+    date: "2026-11-05",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5473313/ED94AF4567AA4438F96E30193B800CEE?partnerref=Eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    CDMS in Action: Driving Better AAV Processes and Deeper Viral Vector Insights
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join experts from Lexeo Therapeutics and Waters to discover how Xevo&trade; CDMS is empowering gene therapy teams to optimize AAV manufacturing processes, uncover hidden vector heterogeneity, and gain deeper insights into emerging viral vectors, including Lentivirus, Adenovirus, and VLPs.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Resolve empty, partial, full, and higher-order capsid populations for deeper insight into AAV vector quality</li>
+      <li>See how CDMS drives AAV process optimization across manufacturing, purification, and scale-up, while complementing orthogonal techniques such as AUC and Mass Photometry</li>
+      <li>Discover how CDMS expands to characterize emerging viral vectors such as adenovirus, lentivirus, and VLPs</li>
+      <li>Learn how advanced vector characterization enables more confident development decisions</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>5 November 2026</strong></li>
+      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 32,
+    title: "Enhancing Plasmid DNA Quality Through Robust Topology Measurement",
+    description: "Multi-laboratory data comparing plasmid DNA topology techniques with USP reference materials",
+    date1: "November 09 | 08:00 PM IST",
+    date: "2026-11-09",
+    img: WATERS_LOGO,
+    sourceLink: "https://biopharmawebinars.com/webinars/enhancing-plasmid-dna-quality-through-robust-topology-measurement/",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Enhancing Plasmid DNA Quality Through Robust Topology Measurement
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Plasmid DNA is a fundamental starting material for cell and gene therapy products, where quality attributes such as topology directly impact production. Topology assessment remains challenging due to method-dependent bias, limited harmonization, and a lack of well-characterized reference materials.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar, sponsored by Waters Corporation, to see data from a multi-laboratory study using United States Pharmacopeia (USP) plasmid DNA analytical reference materials, highlighting differences between three topology techniques.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Understand how DNA topology measures the distribution of supercoiled, open circular, linear, and other isoforms</li>
+      <li>Compare topology assessment by agarose gel electrophoresis (AGE), capillary electrophoresis with laser-induced fluorescence (CE-LIF), and anion exchange chromatography (AEX)</li>
+      <li>See multi-laboratory data highlighting differences between the three techniques</li>
+      <li>Learn how USP plasmid DNA reference materials (4.1 kb - 8.8 kb) support method development, qualification, and cross-platform comparability</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>9 November 2026</strong></li>
+      <li><strong>08:00 PM IST</strong></li>
+      <li><strong>Live Webinar, followed by a live Q&amp;A session</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 33,
+    title: "Implementing Multi-Angle Light Scattering for Biomolecular Characterization: Practical Strategies from Standalone to LC-Coupled Workflows",
+    description: "Practical strategies for standalone and LC-coupled MALS in biomolecular characterization",
+    date1: "November 11 | 09:30 PM IST",
+    date: "2026-11-11",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5527489/7D873677E20BFFFCFF4B74619A77CD26?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Implementing Multi-Angle Light Scattering for Biomolecular Characterization: Practical Strategies from Standalone to LC-Coupled Workflows
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    As biotherapeutic modalities continue to increase in size, complexity, and structural heterogeneity, robust analytical workflows are needed for reliable, fit-for-purpose molecular characterization. Multi-angle light scattering (MALS) provides an absolute, calibration-independent approach for assessing molar mass, size, aggregation, oligomeric state, and sample heterogeneity.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar on the practical implementation of light scattering-based methods in discovery and development, with emphasis on experimental design, sample handling, method selection, and data interpretation.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>How in-process, real-time MALS monitors biophysical attributes of vaccine modalities such as VLPs or protein-polysaccharide conjugates, inline or online with downstream processes</li>
+      <li>How offline LC-MALS provides absolute characterization of these species and their biophysical attributes</li>
+      <li>Case studies on proteins and bioconjugates supporting candidate selection, aggregation assessment, stability characterization, and comparability</li>
+      <li>Key criteria for selecting RT- versus LC-coupled MALS workflows, including strengths, limitations, and troubleshooting strategies</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>11 November 2026</strong></li>
+      <li><strong>09:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 34,
+    title: "Hands-off Precision: Automating Particle Analysis with Takeda",
+    description: "Takeda and Waters on automating sample preparation and particle analysis in one workflow",
+    date1: "November 12 | 09:00 PM IST",
+    date: "2026-11-12",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5539969/29044444F780CB23775E4D37892ED40A?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Hands-off Precision: Automating Particle Analysis with Takeda
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Waters developed an automated particle analysis workflow that combines sample preparation and characterization into a single solution, and Takeda evaluated it in their laboratory.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar as Takeda and Waters share their experience developing and implementing this workflow, including key considerations, lessons learned, best practices, and practical insights for adopting laboratory automation.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>See how the Andrew+&trade; Robot, Extraction+&trade; Device, and OneLab&trade; Software automate the Aura&trade; Particle Analysis Systems for sample preparation, from mixing and loading to fluorescence staining</li>
+      <li>Understand how standardized preparation reduces hands-on time and operator-driven variability</li>
+      <li>Learn how Aura backgrounded membrane imaging (BMI) analyzes up to 96 low-volume samples for particle count, size, morphology, and identification</li>
+      <li>Identify where automated particle analysis fits across biologics, gene therapy, cell therapy, and formulation development</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>12 November 2026</strong></li>
+      <li><strong>09:00 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 35,
+    title: "Improving Resolution of GLP-1 Receptor Agonist and Insulin Impurities with Reversed-Phase LC",
+    description: "High-resolution reversed-phase LC separations of GLP-1 RA and insulin-related impurities",
+    date1: "November 17 | 09:30 PM IST",
+    date: "2026-11-17",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/r/5541799/B0E147D27637C9790FF790CF734841D1?partnerref=eventspage",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Improving Resolution of GLP-1 Receptor Agonist and Insulin Impurities with Reversed-Phase LC
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    As the development of GLP-1 generics and novel agonists continues to grow, complex impurity analyses can impact development timelines, especially when conventional columns lack the resolution needed to clearly separate critical impurities.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this webinar to learn about new analytical tools for reproducible, high-resolution separations of GLP-1 receptor agonists (GLP-1 RAs) and insulin-related impurities without relying on suppressive mobile phase additives.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>How to gain greater resolution for your GLP-1 RA and insulin impurity analysis separations</li>
+      <li>How to achieve up to 3x faster separations</li>
+      <li>How adjusting mobile phase conditions can alter selectivity and optimize separations</li>
+      <li>How improved resolution can simplify method development and give you greater confidence in your results</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>17 November 2026</strong></li>
+      <li><strong>09:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 36,
+    title: "LC-MS Oligo Mapping for Advanced RNA Characterization",
+    description: "LC-MS oligo mapping with RapiZyme RNases for mRNA and sgRNA characterization",
+    date1: "November 18 | 08:30 PM IST",
+    date: "2026-11-18",
+    img: WATERS_LOGO,
+    sourceLink: "https://event.on24.com/wcc/mr/7002688/7E34CC580AEC8613BD5AF6874046069F",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    LC-MS Oligo Mapping for Advanced RNA Characterization
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    The rapid growth of RNA-based therapeutics, including mRNA vaccines and CRISPR guide RNAs (sgRNAs), has increased the demand for robust analytical methods capable of confirming sequence identity, assessing purity, and characterizing critical modifications. A key challenge in RNA sequencing workflows is generating informative digestion products that provide sufficient sequence coverage while maintaining confident assignment.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join this Waters webinar to explore LC-MS oligo mapping for mRNA and sgRNA characterization, including RapiZyme MC1 and RapiZyme Cusativin RNases, two complementary enzymes designed for LC-MS analysis of RNA therapeutics.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>Compare LC-MS-based sequencing strategies for therapeutic oligonucleotides and sgRNA</li>
+      <li>Understand how complementary RapiZyme RNase specificities generate overlapping RNA fragments</li>
+      <li>Learn how tunable digestion can improve sequence coverage and confidence in modification mapping</li>
+      <li>Connect digestion, LC-MS separation, and bioinformatics into a streamlined oligo-mapping workflow</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>18 November 2026</strong></li>
+      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>Live Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
+  {
+    id: 37,
+    title: "Machine Learning and Artificial Intelligence towards Autonomous AFM",
+    description: "Nanosurf webinar series session with insights from world leaders of autonomous AFM",
+    date1: "November 19 | 07:30 PM IST",
+    date: "2026-11-19",
+    img: NANOSURF_LOGO,
+    sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
+    details: `
+<div class="space-y-4">
+  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+    Machine Learning and Artificial Intelligence towards Autonomous AFM
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Machine Learning and Artificial Intelligence towards Autonomous AFM is a webinar series by Nanosurf, featuring 9 internationally recognized speakers.
+  </p>
+
+  <p class="text-sm sm:text-base text-zinc-800">
+    Join the 19 November session of the series and get in touch with the world leaders of autonomous AFM. Nanosurf also shares how DriveAFM can be used to unlock autonomous AFM, along with the five levels of autonomy of AFM systems.
+  </p>
+
+  <div class="bg-red-50 border border-[#E63946]/20 rounded-xl p-4 shadow-sm">
+    <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">What you'll explore:</p>
+    <ul class="space-y-2 text-sm sm:text-base text-zinc-800">
+      <li>The future of AI and AFM</li>
+      <li>State-of-the-art AFM control</li>
+      <li>Insights from world leaders of autonomous AFM</li>
+      <li>An introduction to the topic by Nanosurf experts</li>
+    </ul>
+  </div>
+
+  <div class="bg-zinc-50 border border-zinc-200 rounded-xl p-4">
+    <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
+    <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
+      <li><strong>19 November 2026</strong></li>
+      <li><strong>07:30 PM - 08:30 PM IST</strong></li>
+      <li><strong>Online Webinar</strong></li>
+    </ul>
+  </div>
+</div>
+`,
+  },
 ];
 
 function getDateStrings(webinarOrDate) {

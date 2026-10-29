@@ -2,32 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
-import {
-  FiArrowRight,
-  FiBookOpen,
-  FiMessageCircle,
-  FiX,
-} from "react-icons/fi";
+import { useEffect, useId, useMemo, useState } from "react";
+import { FiArrowRight, FiX } from "react-icons/fi";
+import styles from "./PromoPopup.module.css";
+
+// The pill slides up as the flask disc alone, then opens out to the prompt.
+const EXPAND_DELAY_MS = 450;
 
 function getPopupConfig(pathname) {
   if (pathname === "/products") {
     return {
       id: "products-quote",
       threshold: 14,
-      icon: <FiMessageCircle aria-hidden="true" />,
-      eyebrow: "Need pricing?",
-      title: "Do you want to request a quote?",
-      description:
-        "Share your requirement and our team will help with product fit, configuration, and current pricing.",
-      primary: {
-        label: "Request Quote",
-        href: "/contact?interest=quote",
-      },
-      secondary: {
-        label: "Continue Browsing",
-        action: "close",
-      },
+      href: "/contact?interest=quote",
     };
   }
 
@@ -35,47 +22,57 @@ function getPopupConfig(pathname) {
     return {
       id: "product-detail-interest",
       threshold: 15,
-      icon: <FiBookOpen aria-hidden="true" />,
-      eyebrow: "Worth a closer look",
-      title: "Want the useful details before you decide?",
-      description:
-        "Read more about applications, configuration choices, and support options, or ask Inkarp for a quote.",
-      primary: {
-        label: "Read More",
-        href: `${pathname}#product-details`,
-      },
-      secondary: {
-        label: "Request Quote",
-        href: `/contact?interest=quote&product=${encodeURIComponent(pathname.split("/").pop() ?? "")}`,
-      },
+      href: `/contact?interest=quote&product=${encodeURIComponent(pathname.split("/").pop() ?? "")}`,
     };
   }
 
   return null;
 }
 
-function getActiveConfig(config, scrollPercent) {
-  if (config?.initial && config?.switched) {
-    return scrollPercent >= config.switchThreshold
-      ? config.switched
-      : config.initial;
-  }
+function FlaskMark() {
+  const clipId = useId();
 
-  return config;
+  return (
+    <svg aria-hidden="true" className="size-5" fill="none" viewBox="0 0 24 24">
+      <defs>
+        <clipPath id={clipId}>
+          <path d="M10 8.2 5.2 17.4A2 2 0 0 0 7 20.4h10a2 2 0 0 0 1.8-3L14 8.2Z" />
+        </clipPath>
+      </defs>
+      <g clipPath={`url(#${clipId})`}>
+        <rect className={styles.liquid} fill="#fff" fillOpacity="0.9" height="8" width="16" x="4" y="13.2" />
+      </g>
+      <circle className={styles.bubble} cx="11" cy="15.6" fill="#fff" r="0.9" />
+      <circle className={styles.bubble} cx="13.4" cy="16.8" fill="#fff" r="0.7" />
+      <path
+        d="M9 3h6M10 3v5.2L5.2 17.4A2 2 0 0 0 7 20.4h10a2 2 0 0 0 1.8-3L14 8.2V3"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.6"
+      />
+    </svg>
+  );
 }
 
 export default function PromoPopup() {
   const pathname = usePathname();
   const config = useMemo(() => getPopupConfig(pathname), [pathname]);
-  const [scrollPercent, setScrollPercent] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
-  const activeConfig = getActiveConfig(config, scrollPercent);
+  // Detailed product pages carry their own enquiry form (#booking): the pill
+  // leads there instead of the Contact page and steps aside once it is reached.
+  const [hasBooking, setHasBooking] = useState(false);
+  const [atBooking, setAtBooking] = useState(false);
+  const isShown = isVisible && !atBooking;
 
   useEffect(() => {
-    setScrollPercent(0);
     setIsVisible(false);
+    setIsExpanded(false);
     setIsDismissed(false);
+    setHasBooking(false);
+    setAtBooking(false);
 
     if (!config) {
       return;
@@ -94,13 +91,14 @@ export default function PromoPopup() {
         document.documentElement.scrollHeight - window.innerHeight;
       const progress =
         scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 100;
-      const nextScrollPercent = Math.min(100, Math.max(0, progress));
 
-      setScrollPercent(nextScrollPercent);
-
-      if (nextScrollPercent >= config.threshold) {
+      if (progress >= config.threshold) {
         setIsVisible(true);
       }
+
+      const booking = document.getElementById("booking");
+      setHasBooking(Boolean(booking));
+      setAtBooking(Boolean(booking && booking.getBoundingClientRect().top < window.innerHeight - 120));
     }
 
     updateVisibility();
@@ -113,7 +111,13 @@ export default function PromoPopup() {
     };
   }, [config]);
 
-  if (!config || !activeConfig || isDismissed) {
+  useEffect(() => {
+    if (!isVisible) return undefined;
+    const timer = window.setTimeout(() => setIsExpanded(true), EXPAND_DELAY_MS);
+    return () => window.clearTimeout(timer);
+  }, [isVisible]);
+
+  if (!config || isDismissed) {
     return null;
   }
 
@@ -125,77 +129,52 @@ export default function PromoPopup() {
     setIsDismissed(true);
   }
 
-  function renderButton(button, variant) {
-    if (!button?.label || (!button.href && !button.action)) {
-      return null;
+  function handleClick(event) {
+    if (hasBooking) {
+      event.preventDefault();
+      document.getElementById("booking")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-
-    const className =
-      variant === "primary"
-        ? "inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 sm:flex-none"
-        : "inline-flex h-10 flex-1 items-center justify-center rounded-full border border-line-light bg-parchment px-5 text-sm font-semibold text-ink-soft transition hover:border-red/35 hover:text-red sm:flex-none";
-
-    if (button.action === "close") {
-      return (
-        <button className={className} onClick={closePopup} type="button">
-          {button.label}
-        </button>
-      );
-    }
-
-    return (
-      <Link className={className} href={button.href} onClick={closePopup}>
-        {button.label}
-        {variant === "primary" ? <FiArrowRight aria-hidden="true" /> : null}
-      </Link>
-    );
+    closePopup();
   }
 
   return (
+    // Shares the bottom-centre spot with the Solution Finder pill and the
+    // webinar strip; both step aside while this is up (globals.css).
     <div
       data-floating-widget
-      data-popup-open={isVisible ? "" : undefined}
-      data-bottom-banner={isVisible ? "" : undefined}
-      className={`fixed inset-x-3 bottom-4 z-[60] mx-auto w-[min(44rem,calc(100vw-1.5rem))] transition duration-500 ease-out sm:bottom-6 ${
-        isVisible
-          ? "translate-y-0 opacity-100"
-          : "pointer-events-none translate-y-[140%] opacity-0"
+      data-popup-open={isShown ? "" : undefined}
+      data-bottom-banner={isShown ? "" : undefined}
+      className={`${styles.dock} pointer-events-none fixed inset-x-0 bottom-4 z-[60] flex justify-center transition duration-500 ease-out print:hidden sm:bottom-6 ${
+        isShown ? "translate-y-0 opacity-100" : "translate-y-[160%] opacity-0"
       }`}
+      inert={!isShown}
     >
-      <div className="overflow-hidden rounded-2xl border border-red/15 bg-parchment shadow-2xl shadow-zinc-950/20">
-        <div className="h-1 bg-red" />
-        <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:p-5">
-          <div className="flex items-start gap-3 sm:flex-1">
-            <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-red/10 text-xl text-red">
-              {activeConfig.icon}
-            </span>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-red">
-                {activeConfig.eyebrow}
-              </p>
-              <h2 className="font-maxot mt-1 text-lg leading-tight text-zinc-950 sm:text-xl">
-                {activeConfig.title}
-              </h2>
-              <p className="mt-1 text-sm leading-5 text-ink-soft">
-                {activeConfig.description}
-              </p>
-            </div>
-          </div>
+      <div className="relative">
+        <Link
+          className={`${styles.pill} ${isExpanded ? styles.expanded : ""} pointer-events-auto relative flex items-center gap-3 overflow-hidden rounded-full border border-line-light bg-white p-1.5 shadow-[0_14px_36px_rgba(15,23,42,0.18)] hover:shadow-[0_16px_40px_rgba(190,0,16,0.22)]`}
+          href={hasBooking ? "#booking" : config.href}
+          onClick={handleClick}
+        >
+          <span className={`${styles.disc} relative inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-red text-red`}>
+            <FlaskMark />
+          </span>
+          <span className={`${styles.text} flex flex-col whitespace-nowrap leading-tight`}>
+            <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-red">Need pricing?</span>
+            <span className="mt-0.5 text-sm font-semibold text-ink">Request a quote</span>
+          </span>
+          <span className={`${styles.arrow} ml-1 inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-ink text-white`}>
+            <FiArrowRight aria-hidden="true" />
+          </span>
+        </Link>
 
-          <div className="flex gap-2 sm:shrink-0">
-            {renderButton(activeConfig.primary, "primary")}
-            {renderButton(activeConfig.secondary, "secondary")}
-          </div>
-
-          <button
-            aria-label="Close popup"
-            className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full text-ink-soft transition hover:bg-parchment-alt hover:text-ink-soft"
-            onClick={closePopup}
-            type="button"
-          >
-            <FiX aria-hidden="true" />
-          </button>
-        </div>
+        <button
+          aria-label="Close quote prompt"
+          className={`${styles.close} pointer-events-auto absolute -right-1.5 -top-1.5 inline-flex size-6 items-center justify-center rounded-full border border-line-light bg-white text-xs text-ink-soft shadow-sm hover:text-red`}
+          onClick={closePopup}
+          type="button"
+        >
+          <FiX aria-hidden="true" />
+        </button>
       </div>
     </div>
   );

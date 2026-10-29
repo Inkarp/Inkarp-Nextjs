@@ -100,6 +100,12 @@ function buildDefaultPopups(productName) {
 
 const COOLDOWN_MS = 20000;
 
+// Switched off on 29 Oct 2026 after the popup review (only the exit popup
+// stays). The popups and their triggers are kept: delete a key here to bring
+// that popup back. The calculator follow-up repeated the solvent calculator's
+// own "Email this estimate to Inkarp" button.
+const TURNED_OFF = new Set(['welcome', 'nudge', 'calcIntent', 'assist', 'poll', 'idle']);
+
 /* ════════════════════════════════════════════════════════
    HELPERS
    ════════════════════════════════════════════════════════ */
@@ -147,7 +153,7 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
   /* ── tryShowPop ─────────────────────────────────────
      opts.force = true → bypass cooldown (used for welcome) */
   const show = useCallback((id, opts = {}) => {
-    if (!POPUPS[id] || shown.current.has(id)) return;
+    if (!POPUPS[id] || TURNED_OFF.has(id) || shown.current.has(id)) return;
     if (!opts.force && Date.now() < cooldownUntil.current) return;
 
     const storageKey = `inkarp-popup:${productName ?? 'product'}:${id}`;
@@ -163,7 +169,7 @@ export default function ProductEngagementPopups({ productName, popups: popupOver
 
   /* nudge uses its own per-tab tracking instead of global shown */
   const showNudge = useCallback((tab) => {
-    if (nudgeShownTabs.current.has(tab) || Date.now() < cooldownUntil.current) return;
+    if (TURNED_OFF.has('nudge') || nudgeShownTabs.current.has(tab) || Date.now() < cooldownUntil.current) return;
 
     const storageKey = `inkarp-popup:${productName ?? 'product'}:nudge-${tab}`;
     if (typeof window !== 'undefined' && window.sessionStorage.getItem(storageKey)) {

@@ -739,18 +739,6 @@ export default function ProductInfoTabs({ product }) {
           description={headerDescription}
         />
 
-        {/* Optional short facts list (`glanceFacts`: label / value) from the same block. */}
-        {overviewSec?.glanceFacts?.length > 0 && (
-          <dl className="mb-6 grid border-l border-t border-line-light sm:grid-cols-2 lg:grid-cols-3">
-            {overviewSec.glanceFacts.map((fact) => (
-              <div key={fact.label} className="border-b border-r border-line-light bg-white px-4 py-3">
-                <dt className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft">{fact.label}</dt>
-                <dd className="mt-1 text-sm leading-6 text-ink">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        )}
-
         {/* Pill tabs */}
         <div aria-label="Product information" className="mb-6 flex flex-wrap gap-2" role="tablist">
           {visibleTabs.map(({ key, label, Icon }) => (

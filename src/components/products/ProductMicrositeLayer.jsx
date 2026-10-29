@@ -3,6 +3,11 @@
 import { useEffect, useMemo, useState } from"react";
 import { FiX } from"react-icons/fi";
 
+// The "Book a demo" bar is switched off (29 Oct 2026 popup review): the
+// "Request a quote" pill (PromoPopup) is the one bottom prompt on product
+// pages and leads to the same booking form. Set to true to bring the bar back.
+const SHOW_DEMO_BAR = false;
+
 function scrollToSection(id) {
   document.getElementById(id)?.scrollIntoView({ behavior:"smooth", block:"start" });
 }
@@ -46,7 +51,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
     return null;
   }
 
-  const shouldShowSticky = showStickyCta && !stickyDismissed;
+  const shouldShowSticky = SHOW_DEMO_BAR && showStickyCta && !stickyDismissed;
 
   return (
     <>
@@ -72,6 +77,7 @@ export default function ProductMicrositeLayer({ links = [], productName }) {
 
       <div
         data-floating-widget
+        data-bottom-cta={shouldShowSticky ? "" : undefined}
         className={`fixed inset-x-2 bottom-2 z-40 mx-auto max-w-3xl border border-line-light bg-parchment/95 p-3 backdrop-blur transition sm:inset-x-3 sm:bottom-4 ${
           shouldShowSticky
             ?"translate-y-0 opacity-100"

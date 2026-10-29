@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { FiArrowRight, FiClock, FiX } from "react-icons/fi";
 import { getUpcomingWebinarDate, webinars } from "@/data/webinars";
 
 const SHOW_DELAY_MS = 8000;
+// Closes itself after this long; the countdown pauses while the strip is
+// hovered or has keyboard focus, and restarts when the visitor leaves it.
+const AUTO_CLOSE_MS = 5000;
+const LEAVE_MS = 300;
 const STORAGE_PREFIX = "inkarp-webinar-notice:";
 
 function getNextWebinar() {
@@ -18,6 +22,8 @@ function getNextWebinar() {
 export default function DelayedWebinarNotice() {
   const webinar = useMemo(() => getNextWebinar(), []);
   const [visible, setVisible] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (!webinar) return undefined;
@@ -30,12 +36,26 @@ export default function DelayedWebinarNotice() {
     return () => window.clearTimeout(timer);
   }, [webinar]);
 
-  if (!webinar || !visible) return null;
-
-  const dismiss = () => {
+  // Closing by hand or by the timer both count as seen for this session.
+  const dismiss = useCallback(() => {
+    if (!webinar) return;
     window.sessionStorage.setItem(`${STORAGE_PREFIX}${webinar.id}`, "dismissed");
-    setVisible(false);
-  };
+    setLeaving(true);
+  }, [webinar]);
+
+  useEffect(() => {
+    if (!visible || leaving || paused) return undefined;
+    const timer = window.setTimeout(dismiss, AUTO_CLOSE_MS);
+    return () => window.clearTimeout(timer);
+  }, [visible, leaving, paused, dismiss]);
+
+  useEffect(() => {
+    if (!leaving) return undefined;
+    const timer = window.setTimeout(() => setVisible(false), LEAVE_MS);
+    return () => window.clearTimeout(timer);
+  }, [leaving]);
+
+  if (!webinar || !visible) return null;
 
   return (
     // Sits in the Solution Finder button's spot (bottom centre, between the
@@ -46,7 +66,15 @@ export default function DelayedWebinarNotice() {
       aria-label="Upcoming webinar"
       data-popup-open=""
       data-webinar-notice=""
-      className="fixed inset-x-0 bottom-4 z-40 mx-auto w-[calc(100vw-10.5rem)] animate-[hvc-fade_500ms_ease] print:hidden sm:w-[calc(100vw-27rem)] lg:w-[min(760px,calc(100vw-27rem))]"
+      className={`fixed inset-x-0 bottom-4 z-40 mx-auto w-[calc(100vw-10.5rem)] animate-[hvc-fade_500ms_ease] transition duration-300 ease-out print:hidden sm:w-[calc(100vw-27rem)] lg:w-[min(760px,calc(100vw-27rem))] ${
+        leaving ? "pointer-events-none translate-y-2 opacity-0" : ""
+      }`}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
+      }}
+      onFocus={() => setPaused(true)}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border border-cyan-200/25 bg-[#071d25]/95 px-3 py-2 text-white shadow-[0_14px_40px_rgba(7,29,37,.32)] backdrop-blur-xl lg:flex-nowrap lg:gap-3 lg:rounded-full lg:px-4">
         <span className="relative flex size-2 shrink-0">

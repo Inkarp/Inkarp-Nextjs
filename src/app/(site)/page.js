@@ -1,10 +1,11 @@
-import Companies from "@/components/home/Companies";
+// import Companies from "@/components/home/Companies";
 import HomeAboutHero from "@/components/home/HomeAboutHero";
 import HomeCampaignSlider from "@/components/home/HomeCampaignSlider";
 import HomeAchievements from "@/components/home/HomeAchievements";
 import HomeClientReviews from "@/components/home/HomeClientReviews";
 import HomeEventsInsights from "@/components/home/HomeEventsInsights";
 import HomeWorkflowWheel from "@/components/home/HomeWorkflowWheel";
+import LabIntro from "@/components/home/LabIntro";
 import OrganizationJsonLd from "@/components/home/OrganizationJsonLd";
 import Principles from "@/components/home/Principles";
 import { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
@@ -21,17 +22,20 @@ export default function Home() {
   const today = todayInIndia();
 
   return (
-    <main>
-      <BreadcrumbJsonLd path="/" />
-      <OrganizationJsonLd />
-      <HomeCampaignSlider initialSlides={getStripCampaigns(today)} initialToday={today} />
-      <HomeAboutHero />
-      <HomeWorkflowWheel />
-      <HomeAchievements />
-      <Companies />
-      <Principles />
-      <HomeEventsInsights />
-      <HomeClientReviews />
-    </main>
+    <>
+      <LabIntro />
+      <main>
+        <BreadcrumbJsonLd path="/" />
+        <OrganizationJsonLd />
+        <HomeCampaignSlider initialSlides={getStripCampaigns(today)} initialToday={today} />
+        <HomeAboutHero />
+        <HomeWorkflowWheel />
+        <HomeAchievements />
+        {/* <Companies /> */}
+        <Principles />
+        <HomeEventsInsights />
+        <HomeClientReviews />
+      </main>
+    </>
   );
 }

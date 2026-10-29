@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import ScrollAnimations from "@/components/common/ScrollAnimations";
 import TrackingCapture from "@/components/common/TrackingCapture";
+import { LAB_INTRO_SEEN_SCRIPT } from "@/components/home/labIntroSession";
 import { SITE_AUTHOR, SITE_PUBLISHER, SITE_URL } from "@/data/pageSeo";
 import "./globals.css";
 
@@ -58,6 +59,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${roboto.variable} h-full antialiased`}>
+      <head>
+        {/* Hides the homepage intro before first paint once it has played this session. */}
+        <script dangerouslySetInnerHTML={{ __html: LAB_INTRO_SEEN_SCRIPT }} />
+      </head>
       <body
         className="min-h-full flex flex-col bg-parchment text-ink"
         suppressHydrationWarning

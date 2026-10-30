@@ -48,6 +48,10 @@ pnpm-debug.log*
 __pycache__/
 *.pyc
 
+# scratch output from one-off scripts and reports (scripts/scan_editorial_product_content.mjs writes to tmp/)
+/tmp/
+/outputs/
+
 
 
 # vercel

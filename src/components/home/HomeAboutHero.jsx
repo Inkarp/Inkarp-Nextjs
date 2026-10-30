@@ -13,6 +13,8 @@ const AUTO_ROTATE_MS = 3000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
 const ANNIVERSARY_VIDEO = "/assets/41-anniversary-animation.mp4";
 const DEXTER_LAB_VIDEO = "/assets/home/dexter-lab-workflow.mp4";
+const ANALYTICA_EXPO_VIDEO = "/assets/home/analytica-expo-thank-you.mp4";
+const CATALYST_TEAM_IMAGE = "/assets/home/catalyst-team-inkarp.webp";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 // The dedicated stall photo — same asset the home events row uses for this
 // event's card — rather than the wider Event1.jpeg shared with the campaign strip.
@@ -20,8 +22,6 @@ const ANALYTICA_STALL_IMAGE = "/assets/events/analytica-2026.webp";
 // Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
 // just the icon + wordmark, so it can sit inline in place of the event name.
 const ANALYTICA_LOGO = "/assets/events/analytica-logo.png";
-
-const HERO_MEDIA_ROTATE_MS = 10000;
 
 function ScientificNetworkVisual() {
   const nodes = [
@@ -135,44 +135,64 @@ function ScientificNetworkVisual() {
 
 function HeroMediaCarousel() {
   const [activeMedia, setActiveMedia] = useState(0);
+  const showNextMedia = () => setActiveMedia((current) => (current + 1) % 4);
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveMedia((current) => (current + 1) % 2);
-    }, HERO_MEDIA_ROTATE_MS);
-    return () => window.clearInterval(timer);
-  }, []);
+    if (activeMedia !== 2) return undefined;
+    const timer = window.setTimeout(() => setActiveMedia(3), 6000);
+    return () => window.clearTimeout(timer);
+  }, [activeMedia]);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div key={activeMedia} className="absolute inset-0 animate-[hvc-fade_600ms_ease]">
         {activeMedia === 0 ? (
           <video
-            aria-label="Inkarp 41st anniversary animation"
-            autoPlay
-            className="h-full w-full object-cover"
-            loop
-            muted
-            playsInline
-            preload="auto"
-            src={ANNIVERSARY_VIDEO}
-          />
-        ) : (
-          <video
             aria-label="Dexter working in a scientific laboratory"
             autoPlay
-            className="h-full w-full object-cover"
-            loop
+            className="h-full w-full object-contain"
             muted
+            onEnded={showNextMedia}
             playsInline
             preload="metadata"
             src={DEXTER_LAB_VIDEO}
+          />
+        ) : activeMedia === 1 ? (
+          <video
+            aria-label="Inkarp at Analytica Expo"
+            autoPlay
+            className="h-full w-full object-contain"
+            muted
+            onEnded={showNextMedia}
+            playsInline
+            preload="metadata"
+            src={ANALYTICA_EXPO_VIDEO}
+          />
+        ) : activeMedia === 2 ? (
+          <Image
+            alt="Inkarp Catalyst team"
+            className="object-contain"
+            fill
+            priority
+            sizes="(min-width: 1024px) 640px, 100vw"
+            src={CATALYST_TEAM_IMAGE}
+          />
+        ) : (
+          <video
+            aria-label="Inkarp 41st anniversary animation"
+            autoPlay
+            className="h-full w-full object-contain"
+            muted
+            onEnded={showNextMedia}
+            playsInline
+            preload="metadata"
+            src={ANNIVERSARY_VIDEO}
           />
         )}
       </div>
 
       <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-2 rounded-full bg-black/25 px-2.5 py-1.5 backdrop-blur-sm">
-        {["41st anniversary animation", "Dexter laboratory workflow video"].map((label, index) => (
+        {["Dexter laboratory workflow video", "Analytica Expo video", "Inkarp Catalyst team photo", "41st anniversary animation"].map((label, index) => (
           <button
             aria-label={`Show ${label}`}
             className={`h-1.5 rounded-full transition-all ${activeMedia === index ? "w-6 bg-white" : "w-1.5 bg-white/45 hover:bg-white/75"}`}
@@ -242,8 +262,8 @@ function SlideWorkflow() {
 function SlideAbout() {
   return (
     <div className="bg-white px-4 pb-8 pt-5 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="grid grid-cols-1 items-start gap-8 sm:gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="grid grid-cols-1 items-start gap-8 sm:gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="flex flex-col">
             {/* Phones: the badge floats right of the tag and heading, and the
                 heading's lower lines run full width beneath it. From sm the
@@ -272,18 +292,10 @@ function SlideAbout() {
               guidance, installation support, and service across India.
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-3.5 sm:mt-8 lg:mt-auto lg:pb-1">
-              <Link
-                href="/products"
-                className="border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
-              >
-                Browse Solutions
-              </Link>
-            </div>
           </div>
 
-          <div className="relative border border-line-light bg-parchment-alt p-4.5 lg:flex lg:flex-col before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-            <div className="relative aspect-[4/3] w-full overflow-hidden border border-line-light bg-white lg:aspect-auto lg:flex-1">
+          <div className="relative w-full border border-line-light bg-parchment-alt p-3 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-[''] sm:p-4">
+            <div className="relative aspect-video w-full overflow-hidden border border-line-light bg-black">
               <HeroMediaCarousel />
             </div>
           </div>

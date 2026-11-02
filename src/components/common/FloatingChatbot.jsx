@@ -495,6 +495,7 @@ export default function FloatingChatbot() {
           isOpen ? "pointer-events-none translate-y-3 scale-75 opacity-0" : "opacity-100"
         }`}
         data-launching={isLaunching ? "" : undefined}
+        data-lead-action
         disabled={isLaunching}
         onClick={openChatbot}
         ref={launcherRef}

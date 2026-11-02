@@ -77,7 +77,7 @@ export default function HomeWorkflowWheel() {
   }
 
   return (
-    <section className="overflow-x-hidden bg-parchment-alt px-4 py-[78px] sm:px-6 lg:px-8" id="workflow-wheel" data-reveal>
+    <section className="lab-pattern overflow-x-hidden bg-parchment-alt px-4 py-[78px] sm:px-6 lg:px-8" id="workflow-wheel" data-reveal>
       <div className="mx-auto max-w-[1180px]">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
           <div>

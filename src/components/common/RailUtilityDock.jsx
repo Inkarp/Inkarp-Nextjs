@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FiBell, FiClock, FiFileText, FiX } from "react-icons/fi";
+import { LuPipette } from "react-icons/lu";
 import useRecentlyViewed from "@/components/products/useRecentlyViewed";
 import { getPulseUpdates } from "@/data/updates";
 import { getLastSeenPulse, markPulseSeen } from "@/lib/pulseSeen";
@@ -219,6 +220,7 @@ export default function RailUtilityDock({ placement = "rail" }) {
             <ul className="divide-y divide-line-light">
               {recentlyViewed.length === 0 ? (
                 <li className="px-3.5 py-6 text-center text-xs text-ink-soft">
+                  <LuPipette aria-hidden="true" className="mx-auto mb-2 text-xl text-red/40" />
                   No products viewed yet. Products you open will appear here.
                 </li>
               ) : null}

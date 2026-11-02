@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import SectionHeader from './SectionHeader';
 import SectionDisclaimer from './SectionDisclaimer';
+import WorkflowDiagram from './WorkflowDiagram';
 import {
   FiActivity, FiBarChart2, FiCamera, FiCloudDrizzle, FiCrosshair, FiDroplet,
   FiFileText, FiFilter, FiLayers, FiLock, FiLogIn, FiLogOut, FiMinimize2,
@@ -132,7 +133,9 @@ function RateStrip({ metrics }) {
 }
 
 /* Main component */
-export default function EvaporationWorkflow({ section = {}, metrics }) {
+// `diagram`: an optional WorkflowDiagram kind, drawn beside the title with the
+// active step's part lit up.
+export default function EvaporationWorkflow({ section = {}, metrics, diagram = null }) {
   const steps = section.steps ?? [];
   const disclaimer = section.disclaimer;
   const rateMetrics = metrics ?? section.metrics;
@@ -154,14 +157,28 @@ export default function EvaporationWorkflow({ section = {}, metrics }) {
     <section id="workflow" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
 
-        {/* number="02" is fixed for now; derive from section position once a
-            master sections array drives page assembly. */}
-        <SectionHeader
-          number="02"
-          eyebrow={section.eyebrow}
-          title={section.title}
-          description={section.description}
-        />
+        {/* The title, with the instrument diagram beside it on wide screens
+            (above the cards on phones) when the product has one. */}
+        <div className={diagram ? 'lg:flex lg:items-center lg:gap-10' : undefined}>
+          <div className={diagram ? 'min-w-0 lg:flex-1' : undefined}>
+            {/* number="02" is fixed for now; derive from section position once a
+                master sections array drives page assembly. */}
+            <SectionHeader
+              number="02"
+              eyebrow={section.eyebrow}
+              title={section.title}
+              description={section.description}
+            />
+          </div>
+          {diagram ? (
+            <WorkflowDiagram
+              className="mx-auto mb-8 w-full max-w-[300px] lg:mx-0 lg:w-[340px] lg:max-w-none lg:shrink-0"
+              kind={diagram}
+              stepNumber={active + 1}
+              stepTitle={steps[active]?.title}
+            />
+          ) : null}
+        </div>
 
         {/* Cards with connectors. Below `lg` this scrolls horizontally — the extra
             `pl-8` (on top of the section's own padding) gives the first card a clear

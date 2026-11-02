@@ -270,9 +270,15 @@ function SlideAbout() {
                 badge leads the row. */}
             <div className="mb-4 flow-root sm:mb-6 sm:flex sm:items-start sm:gap-6">
               <div className="relative float-right mb-1 ml-3 flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:float-none sm:mb-0 sm:ml-0 sm:h-[104px] sm:w-[104px]">
-                <div className="absolute inset-2 rounded-full border border-dashed border-red/40" />
-                <span className="text-[19px] font-semibold tracking-wide">1985</span>
-                <span className="mt-0.5 text-[8.5px] uppercase tracking-[0.16em]">Est. &amp; Trusted</span>
+                {/* The dashed ring turns slowly; its dot rides on the outer circle. */}
+                <div aria-hidden="true" className="absolute inset-2 rounded-full border border-dashed border-red/40 motion-safe:animate-[hvc-spin_24s_linear_infinite]">
+                  <span className="absolute -top-[13px] left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-red ring-2 ring-white" />
+                </div>
+                {/* Sized to sit inside the dashed ring: two lines on phones. */}
+                <span className="relative text-[17px] font-semibold leading-none tracking-wide sm:text-[19px]">1985</span>
+                <span className="relative mt-1.5 text-[7.5px] uppercase leading-tight tracking-[0.1em] sm:text-[8.5px] sm:tracking-[0.06em]">
+                  Est. &amp;<br className="sm:hidden" /> Trusted
+                </span>
               </div>
               <div className="sm:min-w-0 sm:flex-1">
                 <RecTag>About Inkarp</RecTag>

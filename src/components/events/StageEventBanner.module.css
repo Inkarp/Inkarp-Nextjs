@@ -1,0 +1,150 @@
+/* StageEventBanner: see StageEventBanner.jsx. Plays once when the page opens:
+   the light comes up, the text slides in from the left line by line, the
+   title is uncovered by a sweeping red block, and the stall drops onto the
+   stage, bounces and settles, lighting the floor as it lands. Then it floats
+   and a light sweeps across it now and then. */
+
+/* ── Light comes up ────────────────────────────────── */
+.lightOn {
+  animation: stage-light 900ms ease-out both;
+}
+
+/* ── Text: in from the left, line by line ─────────── */
+/* Each line sets --i (its place in the order) inline. */
+.enter {
+  animation: stage-enter 750ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: calc(250ms + var(--i, 0) * 90ms);
+}
+
+/* Light grey (silver) gradient lettering for the name and the countdown. */
+.silver {
+  background: linear-gradient(180deg, #ffffff 0%, #e4e7eb 45%, #a7aeb8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* The title: a red block sweeps in from the left, then off to the right,
+   leaving the title behind it. */
+.reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.reveal::after {
+  content: "";
+  position: absolute;
+  inset: 4% -2%;
+  background: #be0010;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: stage-block 1000ms cubic-bezier(0.7, 0, 0.3, 1) 300ms both;
+}
+
+.revealText {
+  animation: stage-reveal-text 1000ms linear 300ms both;
+}
+
+/* ── The stall drops in ────────────────────────────── */
+.drop {
+  animation: stage-drop 1150ms both;
+  animation-delay: 450ms;
+}
+
+/* Then floats gently, once it has landed. */
+.float {
+  animation: stage-float 7s ease-in-out 1700ms infinite;
+}
+
+/* The floor lights up as it lands, with a ring of light running out. */
+.landGlow {
+  animation: stage-glow 900ms ease-out 1250ms both;
+}
+
+.landRing {
+  animation: stage-ring 900ms ease-out 1250ms both;
+}
+
+/* A light sweeping across the stand now and then (a 250%-wide gradient,
+   so 100% → 0% carries its highlight from left to right). */
+.sheen {
+  background: linear-gradient(100deg, transparent 35%, rgb(255 255 255 / 0.22) 50%, transparent 65%) no-repeat;
+  background-size: 250% 100%;
+  animation: stage-sheen 7s ease-in-out 2200ms infinite both;
+}
+
+/* ── Keyframes ─────────────────────────────────────── */
+@keyframes stage-light {
+  0% { opacity: 0; }
+  40% { opacity: 0.6; }
+  55% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+@keyframes stage-enter {
+  from { opacity: 0; transform: translateX(-48px); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes stage-block {
+  0% { transform: scaleX(0); transform-origin: left; }
+  45% { transform: scaleX(1); transform-origin: left; }
+  55% { transform: scaleX(1); transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+
+@keyframes stage-reveal-text {
+  0%, 49% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* Falls (speeding up), overshoots the stage a little, bounces and settles. */
+@keyframes stage-drop {
+  0% { opacity: 0; transform: translateY(-120%); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+  12% { opacity: 1; }
+  62% { transform: translateY(2.5%) scale(1.01, 0.98); animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1); }
+  76% { transform: translateY(-3%) scale(0.995, 1.01); animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45); }
+  88% { transform: translateY(0.8%); animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1); }
+  100% { opacity: 1; transform: none; }
+}
+
+@keyframes stage-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes stage-glow {
+  from { opacity: 0; transform: scaleX(0.4); }
+  40% { opacity: 1; transform: scaleX(1.1); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes stage-ring {
+  from { opacity: 0.9; transform: scale(0.5); }
+  to { opacity: 0; transform: scale(1.35); }
+}
+
+@keyframes stage-sheen {
+  0% { background-position: 100% 0; }
+  55%, 100% { background-position: 0% 0; }
+}
+
+/* Reduced motion: everything simply in place, no float or sweep. */
+@media (prefers-reduced-motion: reduce) {
+  .lightOn,
+  .enter,
+  .reveal::after,
+  .revealText,
+  .drop,
+  .float,
+  .landGlow,
+  .landRing,
+  .sheen {
+    animation: none;
+  }
+
+  .reveal::after,
+  .landRing {
+    opacity: 0;
+  }
+}

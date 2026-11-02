@@ -5,6 +5,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { FiArrowRight, FiCheck, FiChevronRight, FiGlobe, FiMail, FiShield } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
+import { LuFlaskRound } from "react-icons/lu";
+import EmptyStateIcon from "@/components/common/EmptyStateIcon";
 import * as CountryFlagIcons from "country-flag-icons/react/3x2";
 import RecTag from "@/components/home/RecTag";
 import { getAllProducts, getProductBySlug } from "@/data/products/principals";
@@ -24,6 +26,8 @@ import FinderProductPrompt from "@/components/solution-finder/FinderProductPromp
 import { inferFinderObjective } from "@/lib/finderPlacement";
 import CatalogueDownloadButton from "@/components/products/CatalogueDownloadButton";
 import { getProductCatalogue } from "@/data/productCatalogues";
+import { getHeroDrawingKind, getWorkflowDiagramKind } from "@/data/products/heroDrawings";
+import HeroDrawing from "@/components/products/HeroDrawing";
 
 const DEFAULT_AUTHORIZED_REGION = "India";
 
@@ -93,6 +97,7 @@ export default async function ProductPage({ params }) {
     : null;
   const heroHook = product.longForm?.heroHook ?? heroHookMatch?.[1]?.trim();
   const showHeroHook = Boolean(heroHook && heroLead && !heroLead.startsWith(heroHook));
+  const heroDrawingKind = getHeroDrawingKind(product.slug);
 
   const faqJsonLd = product.faqs?.length > 0 ? {
     "@context": "https://schema.org",
@@ -127,8 +132,12 @@ export default async function ProductPage({ params }) {
         </div>
       </nav>
 
-      <section className="bg-white px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-8">
-        <div className="grid w-full gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
+      {/* `relative` without a z-index on the section and grid: the drawing paints
+          under the grid, and the hero's own pop-ups (catalogue form) keep
+          their z-index against the whole page. */}
+      <section className="relative bg-white px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-8">
+        {heroDrawingKind ? <HeroDrawing kind={heroDrawingKind} /> : null}
+        <div className="relative grid w-full gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
               {product.principalImage ? (
@@ -241,7 +250,8 @@ export default async function ProductPage({ params }) {
                     priority
                   />
                 ) : (
-                  <div className="flex aspect-square w-full items-center justify-center text-sm text-ink-soft">
+                  <div className="flex aspect-square w-full flex-col items-center justify-center gap-3 text-sm text-ink-soft">
+                    <EmptyStateIcon icon={LuFlaskRound} className="" />
                     Product image coming soon
                   </div>
                 )}
@@ -259,7 +269,7 @@ export default async function ProductPage({ params }) {
       </section>
 
       <div id="product-details">
-        {isRichPage ? <UniversalProductPage product={product} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
+        {isRichPage ? <UniversalProductPage hasCatalogue={Boolean(productCatalogue)} product={product} workflowDiagram={getWorkflowDiagramKind(product.slug)} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
       </div>
 
       <FinderProductPrompt
@@ -270,7 +280,7 @@ export default async function ProductPage({ params }) {
       {/* <CustomerReviews reviews={product.reviews} /> */}
 
       {relatedProducts.length > 0 && (
-        <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
+        <section className="lab-pattern bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[1180px]">
             <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
               <div>

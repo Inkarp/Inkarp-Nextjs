@@ -1,5 +1,6 @@
 import Link from"next/link";
-import { TbError404 } from"react-icons/tb";
+import { LuFlaskConicalOff } from"react-icons/lu";
+import EmptyStateIcon from"@/components/common/EmptyStateIcon";
 
 export const metadata = {
   title: "Page not found - Inkarp Instruments",
@@ -10,7 +11,7 @@ export default function NotFound() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-parchment px-6 text-ink">
       <div className="max-w-md border border-line-light bg-white p-8 text-center">
-        <TbError404 className="mx-auto mb-4 text-6xl text-red" />
+        <EmptyStateIcon icon={LuFlaskConicalOff} />
         <h1 className="text-2xl font-semibold text-ink">Page not found</h1>
         <p className="mt-3 text-sm leading-6 text-ink-soft">
           The page you are looking for does not exist or may have been moved.

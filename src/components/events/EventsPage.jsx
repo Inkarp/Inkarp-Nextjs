@@ -3,8 +3,11 @@
 import { useEffect, useState } from"react";
 import Image from"next/image";
 import { FiArrowUpRight, FiCalendar, FiCheckCircle, FiMapPin } from"react-icons/fi";
+import { LuMicroscope } from"react-icons/lu";
+import EmptyStateIcon from"@/components/common/EmptyStateIcon";
 import RecTag from"@/components/home/RecTag";
-import { events, eventYears, featuredEvent, isPastEvent } from"@/data/events";
+import StageEventBanner from"@/components/events/StageEventBanner";
+import { bannerEvent, events, eventYears, featuredEvent, isPastEvent } from"@/data/events";
 
 // Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
 // just the icon + wordmark, so it can sit inline in place of the event name.
@@ -338,7 +341,8 @@ export default function EventsPage() {
 
   return (
     <main>
-      <FeaturedEventBanner />
+      {/* The next show on its own stage; the recap banner when there is none. */}
+      {bannerEvent ? <StageEventBanner event={bannerEvent} /> : <FeaturedEventBanner />}
 
       <div
         className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 border border-line-light bg-parchment-alt py-8 sm:flex-row"
@@ -401,6 +405,7 @@ export default function EventsPage() {
       <div className="grid grid-cols-1 items-stretch gap-3 px-2 py-4 sm:grid-cols-2 sm:gap-4 sm:px-4 md:px-6 lg:grid-cols-2 lg:px-10 xl:grid-cols-3">
         {filteredEvents.length === 0 ? (
           <div className="col-span-full py-8 text-center text-ink-soft">
+            <EmptyStateIcon icon={LuMicroscope} />
             <p className="text-sm sm:text-base">No events found for selected filters.</p>
           </div>
         ) : (

@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FiAlertTriangle, FiArrowRight, FiBarChart2, FiPlus, FiX } from "react-icons/fi";
+import { LuTestTubes } from "react-icons/lu";
+import EmptyStateIcon from "@/components/common/EmptyStateIcon";
 import RecTag from "@/components/home/RecTag";
 import RequestQuoteButton from "./RequestQuoteButton";
 import AddToQuoteButton from "./AddToQuoteButton";
@@ -295,9 +297,7 @@ function SpecRow({ row, columns, highlightDiffs, canAddMore }) {
 function EmptyState() {
   return (
     <div className="mx-auto max-w-2xl border border-dashed border-line-light bg-parchment p-10 text-center">
-      <div className="mx-auto mb-4 flex size-14 items-center justify-center bg-ink/5 text-ink">
-        <FiBarChart2 className="text-2xl" />
-      </div>
+      <EmptyStateIcon icon={LuTestTubes} />
       <h1 className="text-lg font-semibold tracking-tight text-ink">Nothing to compare yet</h1>
       <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-ink-soft">
         Add two or more products to your comparison from the &quot;Compare with similar products&quot; option on

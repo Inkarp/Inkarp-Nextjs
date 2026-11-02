@@ -224,6 +224,16 @@ export const events = [
     formLink: "https://asialabex.com/bng2026registration/",
     collageImage: `${COLLAGE}/AsiaLabex.webp`,
   },
+  {
+    id: 25,
+    category: "Exhibition",
+    title: "analytica Lab India 2026 – Hyderabad",
+    description:
+      "Date: 10th - 12th September 2026\nLocation: Stall No. H5-C02, HITEX Exhibition Centre, Hyderabad",
+    image: `${IMG}/EventNew9.webp`,
+    date: "2026-09-12",
+    collageImage: `${COLLAGE}/AnalyticaHyderabad2026.webp`,
+  },
 ];
 
 // Featured event shown in the page banner, replacing the old flat EventBanner
@@ -251,6 +261,37 @@ export const featuredEvent = {
     "Connections with our support team",
   ],
   image: `${IMG}/Event1.jpeg`,
+  registrationUrl: null,
+};
+
+/**
+ * The next show, in the Events page banner ("stage" layout around the stall
+ * render). Separate from `featuredEvent`, which still drives the homepage's
+ * analytica stall card. Set to null to fall back to the `featuredEvent` banner.
+ *
+ * PMEC India 2026 is the IEML half of CPHI & PMEC India: from 2026 the sister
+ * show CPHI India runs at Yashobhoomi, Delhi (official FAQ, cphi.com/india).
+ * Visitor registration was not yet open when this was added (2 Nov 2026), so
+ * there is no Register button; add the URL to `registrationUrl` when it opens.
+ */
+export const bannerEvent = {
+  eyebrow: "Upcoming exhibition",
+  name: "PMEC India",
+  edition: "2026",
+  partOf: "CPHI & PMEC India",
+  dateLabel: "24 – 26 November 2026",
+  venue: "India Exposition Mart Limited (IEML), Greater Noida, Delhi NCR",
+  hall: "Hall 5",
+  stallNumber: "5F12",
+  // Countdown target: doors-open on day one (opening hours not yet published).
+  startsAt: "2026-11-24T10:00:00+05:30",
+  endsAt: "2026-11-26T18:00:00+05:30",
+  summary:
+    "Meet the Inkarp team in Hall 5 and see laboratory and analytical instruments from our global principals at work.",
+  // Short, so they sit in one row under the stall.
+  highlights: ["Live instrument demos", "Method discussions", "Service and support"],
+  stallImage: `${IMG}/pmec-2026-stall.webp`,
+  stallImageAlt: "Inkarp stall 5F12 at PMEC India 2026, with laboratory instruments on display",
   registrationUrl: null,
 };
 

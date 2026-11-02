@@ -33,7 +33,7 @@ import ProductEngagementPopups from './ProductEngagementPopups';
 import RecTag from '@/components/home/RecTag';
 
 
-export default function UniversalProductPage({ product, workflowSection: providedWorkflow }) {
+export default function UniversalProductPage({ product, workflowSection: providedWorkflow, workflowDiagram = null, hasCatalogue = false }) {
   if (!product) return null;
 
   const lf = product.longForm ?? {};
@@ -62,7 +62,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
     },
     workflowSection?.steps?.length > 0 && {
       key: 'workflow',
-      node: <EvaporationWorkflow section={workflowSection} metrics={performanceSection?.metrics} />,
+      node: <EvaporationWorkflow diagram={workflowDiagram} section={workflowSection} metrics={performanceSection?.metrics} />,
     },
     product.orbitVisualizer && {
       key: 'orbit-visualizer',
@@ -172,7 +172,7 @@ export default function UniversalProductPage({ product, workflowSection: provide
         links={product.inPageNav ?? []}
         productName={product.name}
       />
-      <ProductEngagementPopups productName={product.name} popups={product.popups} />
+      <ProductEngagementPopups hasCatalogue={hasCatalogue} productName={product.name} popups={product.popups} />
 
       {/* Stats bar */}
       <StatsBar intro={lf.statsIntro} note={lf.statsNote} showAll={lf.showAllStats} stats={lf.stats ?? product.stats ?? []} title={lf.statsTitle} />

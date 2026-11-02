@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiChevronDown } from 'react-icons/fi';
+import { LuFlaskRound } from 'react-icons/lu';
 import AddToQuoteButton from './AddToQuoteButton';
 
 /**
@@ -99,7 +100,8 @@ function ProductCard({ product }) {
             width={180}
           />
         ) : (
-          <span className="flex h-24 items-center text-[11px] text-ink-soft">
+          <span className="flex h-24 flex-col items-center justify-center gap-1.5 text-[11px] text-ink-soft">
+            <LuFlaskRound aria-hidden="true" className="text-xl text-red/40" />
             Image coming soon
           </span>
         )}

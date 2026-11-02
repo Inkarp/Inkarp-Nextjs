@@ -19,7 +19,7 @@ export default function HomeClientReviews() {
   const reviewLoop = [...googleReviews, ...googleReviews];
 
   return (
-    <section className="bg-parchment-alt py-[78px]" id="client-reviews" data-reveal>
+    <section className="lab-pattern bg-parchment-alt py-[78px]" id="client-reviews" data-reveal>
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <RecTag>Rated By Our Customers</RecTag>
         <h2 className="max-w-2xl text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">

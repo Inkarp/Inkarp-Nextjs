@@ -16,6 +16,7 @@ export default function RequestQuoteButton({ className, href, product }) {
   return (
     <Link
       className={className ?? DEFAULT_CLASS}
+      data-lead-action
       href={href}
       onClick={() => pushEvent("request_quote_clicked", { product_name: product?.name, product_slug: product?.slug })}
     >

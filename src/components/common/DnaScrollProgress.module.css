@@ -1,0 +1,124 @@
+/* DnaScrollProgress: see DnaScrollProgress.jsx. Each nucleotide follows
+   x = R·sin(θ), depth = cos(θ) through one turn; the bond between the pair
+   is their distance apart, sin(θ), mirrored when the pair has swapped sides. */
+
+.helix {
+  --dna-turn: 3.2s;
+  --dna-r: 10px;
+  display: block;
+  position: relative;
+  width: 30px;
+  /* Room above and below for the front nucleotides, which are drawn larger. */
+  height: 72px;
+  transition: filter 400ms ease;
+}
+
+.row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+.bond,
+.base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation-duration: var(--dna-turn);
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  transition: background 300ms ease;
+}
+
+/* Spinning while the page scrolls (and always once complete). */
+.helix[data-spinning] .bond,
+.helix[data-spinning] .base {
+  animation-play-state: running;
+}
+
+.helix[data-complete] {
+  --dna-turn: 6s;
+  filter: drop-shadow(0 0 3px rgb(190 0 16 / 0.35));
+}
+
+.base {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 9999px;
+  animation-name: dna-orbit;
+}
+
+.bond {
+  z-index: 1;
+  width: calc(var(--dna-r) * 2);
+  height: 1.6px;
+  margin: -0.8px 0 0 calc(var(--dna-r) * -1);
+  border-radius: 9999px;
+  animation-name: dna-bond;
+}
+
+/* ── Colours ─────────────────────────────────────────
+   Not yet read: greys. Read: the two backbones in brand red and deep red,
+   the bonds split into the two bases' colours (A–T red/rose, G–C slate/sky),
+   left base first; the mirrored bond flips them as the pair turns. */
+.strandA { background: radial-gradient(circle at 35% 35%, #f4f4f5, #c8c8cd); }
+.strandB { background: radial-gradient(circle at 35% 35%, #f4f4f5, #d9d9de); }
+.bond { background: #e7e7ea; }
+
+.row[data-lit] .strandA { background: radial-gradient(circle at 35% 35%, #ff6b77, #be0010 70%); }
+.row[data-lit] .strandB { background: radial-gradient(circle at 35% 35%, #e98a92, #8f000c 75%); }
+.row[data-lit][data-pair='at'] .bond { background: linear-gradient(90deg, #f29aa2 50%, #be0010 50%); }
+.row[data-lit][data-pair='gc'] .bond { background: linear-gradient(90deg, #8fb3cc 50%, #2d3742 50%); }
+
+/* ── One turn ────────────────────────────────────────
+   θ 0° front-centre, 90° right, 180° back-centre, 270° left. Easing per
+   quarter turn approximates the sine. */
+@keyframes dna-orbit {
+  0% {
+    transform: translateX(0) scale(1.3);
+    opacity: 1;
+    z-index: 3;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    transform: translateX(var(--dna-r)) scale(1);
+    opacity: 0.85;
+    z-index: 2;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateX(0) scale(0.65);
+    opacity: 0.45;
+    z-index: 0;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: translateX(calc(var(--dna-r) * -1)) scale(1);
+    opacity: 0.85;
+    z-index: 2;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0) scale(1.3);
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+@keyframes dna-bond {
+  0% { transform: scaleX(0); animation-timing-function: ease-out; }
+  25% { transform: scaleX(1); animation-timing-function: ease-in; }
+  50% { transform: scaleX(0); animation-timing-function: ease-out; }
+  75% { transform: scaleX(-1); animation-timing-function: ease-in; }
+  100% { transform: scaleX(0); }
+}
+
+/* Reduced motion: a still helix that still fills. */
+@media (prefers-reduced-motion: reduce) {
+  .helix[data-spinning] .bond,
+  .helix[data-spinning] .base {
+    animation-play-state: paused;
+  }
+}

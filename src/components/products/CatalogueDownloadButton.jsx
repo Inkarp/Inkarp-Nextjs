@@ -7,6 +7,10 @@ import { workflowIndustries } from "@/data/homeShowcase";
 import { INDIA_STATES } from "@/data/indiaStates";
 import { collectTracking } from "@/lib/browserTracking";
 
+// Dispatch on window to open this form from elsewhere on the product page
+// (the exit popup's "Download the catalogue" button).
+export const OPEN_CATALOGUE_EVENT = "open-catalogue-form";
+
 const FIELDS = [
   { key: "firstName", label: "Name", autoComplete: "name" },
   { key: "designation", label: "Designation", autoComplete: "organization-title" },
@@ -33,6 +37,12 @@ export default function CatalogueDownloadButton({ productName, productSlug }) {
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("info");
   const firstInput = useRef(null);
+
+  useEffect(() => {
+    const openForm = () => setOpen(true);
+    window.addEventListener(OPEN_CATALOGUE_EVENT, openForm);
+    return () => window.removeEventListener(OPEN_CATALOGUE_EVENT, openForm);
+  }, []);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -139,6 +149,7 @@ export default function CatalogueDownloadButton({ productName, productSlug }) {
     <>
       <button
         className="inline-flex h-14 w-full items-center justify-center gap-2 whitespace-nowrap border border-red bg-red px-4 text-base font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#99000d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red sm:px-6"
+        data-lead-action
         onClick={() => setOpen(true)}
         type="button"
       >

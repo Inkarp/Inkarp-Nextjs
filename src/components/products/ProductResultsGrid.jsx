@@ -5,6 +5,8 @@ import AddToQuoteButton from "./AddToQuoteButton";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
+import { LuMicroscope } from "react-icons/lu";
+import EmptyStateIcon from "@/components/common/EmptyStateIcon";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
 import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
@@ -195,6 +197,7 @@ export default function ProductResultsGrid({
   if (!products.length) {
     return (
       <div className="mt-4 border border-dashed border-line-light bg-white p-5 text-center sm:p-8">
+        <EmptyStateIcon icon={LuMicroscope} />
         <h2 className="text-2xl font-semibold tracking-tight text-ink">No products found</h2>
         <p className="mt-2 text-sm text-ink-soft">
           Try another product, principal, country, industry, application, or tag.

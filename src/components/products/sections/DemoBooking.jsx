@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import SectionHeader from './SectionHeader';
+import FormBeaker, { fillPercent } from './FormBeaker';
 import { collectTracking } from '@/lib/browserTracking';
 import SubmitButton from '@/components/common/SubmitButton';
 import { normaliseGstin, validateProductEnquiry } from '@/lib/formValidation';
@@ -32,11 +33,32 @@ const FIELDS = [
 
 const INDUSTRY_OPTIONS = workflowIndustries.map((item) => item.industry);
 
-const INPUT_BASE =
-  'w-full border bg-parchment-alt px-3 py-2.5 text-sm text-black transition focus:outline-none focus:ring-2';
+// The fields a visitor fills in; each correct one raises the beaker a step.
+const FILLABLE = FIELDS.filter((field) => !field.readOnly);
+
+// The "beaker" form (FormBeaker) is switched off pending the manager's choice
+// of a replacement (2 Nov 2026); true brings it back as it was.
+const SHOW_FORM_BEAKER = false;
+
+/** The form's plain box, used while the beaker is switched off. */
+function PlainFormBox({ children }) {
+  return <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">{children}</div>;
+}
+const FormBox = SHOW_FORM_BEAKER ? FormBeaker : PlainFormBox;
+
+// How long the beaker takes to drain before "Quote request sent!" shows.
+const DRAIN_MS = 1500;
+
+// In the beaker every box has a solid fill so it stays crisp over the liquid;
+// otherwise the boxes keep their usual light-grey look.
+const INPUT_BASE = `w-full border ${SHOW_FORM_BEAKER ? 'bg-white' : 'bg-parchment-alt'} px-3 py-2.5 text-sm text-black transition focus:outline-none focus:ring-2`;
 const INPUT_OK = 'border-line-light focus:border-rose-400 focus:ring-rose-200';
-const INPUT_BAD = 'border-red bg-red/5 focus:border-red focus:ring-red/20';
-const INPUT_LOCKED = 'border-line-light bg-line-light/40 text-ink-soft cursor-not-allowed';
+const INPUT_BAD = SHOW_FORM_BEAKER
+  ? 'border-red bg-rose-50 focus:border-red focus:ring-red/20'
+  : 'border-red bg-red/5 focus:border-red focus:ring-red/20';
+const INPUT_LOCKED = SHOW_FORM_BEAKER
+  ? 'border-line-light bg-parchment-alt text-ink-soft cursor-not-allowed'
+  : 'border-line-light bg-line-light/40 text-ink-soft cursor-not-allowed';
 
 export default function DemoBooking({ data, productName }) {
   const { submitLabel, successMessage, eyebrow, title, description, whyItems } = data ?? {};
@@ -49,7 +71,13 @@ export default function DemoBooking({ data, productName }) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [draining, setDraining] = useState(false);
+  // Each newly completed field drops a bead into the beaker (see FormBeaker).
+  const [drop, setDrop] = useState({ id: 0 });
   const errorRef = useRef(null);
+  const drainTimer = useRef(null);
+
+  useEffect(() => () => window.clearTimeout(drainTimer.current), []);
 
   // Keep the prefilled product in step with the page the form sits on.
   useEffect(() => {
@@ -57,10 +85,26 @@ export default function DemoBooking({ data, productName }) {
   }, [productName]);
 
   const liveErrors = useMemo(() => validateProductEnquiry(form), [form]);
+  const isDone = (values, fieldErrors, key) => Boolean(String(values[key] ?? '').trim()) && !fieldErrors[key];
+  const filledCount = FILLABLE.filter((field) => isDone(form, liveErrors, field.key)).length;
+  const beakerState = loading ? 'sending' : draining ? 'draining' : submitted ? 'sent' : 'idle';
+  const beakerNote = draining
+    ? 'Request sent'
+    : filledCount === FILLABLE.length
+      ? 'All fields filled, ready to send'
+      : `${filledCount} of ${FILLABLE.length} fields filled`;
 
   const set = (key, raw) => {
     const value = key === 'gstNumber' ? normaliseGstin(raw) : raw;
     setError('');
+    // The moment a field becomes complete (e.g. a whole valid email), it
+    // drops into the beaker, landing where the new level will be.
+    const next = { ...form, [key]: value };
+    const nextErrors = validateProductEnquiry(next);
+    if (!isDone(form, liveErrors, key) && isDone(next, nextErrors, key)) {
+      const nextFilled = FILLABLE.filter((field) => isDone(next, nextErrors, field.key)).length;
+      setDrop((current) => ({ id: current.id + 1, fieldId: `booking-${key}`, level: nextFilled / FILLABLE.length }));
+    }
     setForm((current) => ({ ...current, [key]: value }));
     if (errors[key]) setErrors((current) => ({ ...current, [key]: undefined }));
   };
@@ -100,7 +144,16 @@ export default function DemoBooking({ data, productName }) {
         return;
       }
 
-      setSubmitted(true);
+      // The beaker drains to 0% first, then the success message replaces the form.
+      if (!SHOW_FORM_BEAKER || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        setSubmitted(true);
+      } else {
+        setDraining(true);
+        drainTimer.current = window.setTimeout(() => {
+          setDraining(false);
+          setSubmitted(true);
+        }, DRAIN_MS);
+      }
       window.dispatchEvent(new CustomEvent('product-demo-submitted'));
     } catch {
       setError('Something went wrong. Please check your connection and try again.');
@@ -129,7 +182,8 @@ export default function DemoBooking({ data, productName }) {
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
-          <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">
+          {/* With the beaker on, the form's box is a beaker that fills as the fields are completed. */}
+          <FormBox drop={drop} filled={filledCount} state={beakerState} total={FILLABLE.length}>
             {submitted ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center py-8 text-center">
                 <div className="mx-auto mb-4 flex size-16 items-center justify-center bg-emerald-100">
@@ -150,9 +204,10 @@ export default function DemoBooking({ data, productName }) {
               </div>
             ) : (
               <form noValidate onSubmit={handleSubmit}>
-                <p className="mb-4 text-xs text-ink-soft">
-                  All fields are required.
-                </p>
+                <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-xs">
+                  <p className="text-ink-soft">All fields are required.</p>
+                  {SHOW_FORM_BEAKER ? <p className="font-semibold text-ink tabular-nums">{beakerNote}</p> : null}
+                </div>
 
                 <div className="mb-4 grid gap-4 sm:grid-cols-2">
                   {FIELDS.map((field) => {
@@ -227,15 +282,33 @@ export default function DemoBooking({ data, productName }) {
                   ) : null}
                 </div>
 
+                {/* Phones: the liquid rises out of view while the top fields are
+                    filled, so the reading sticks to the bottom of the screen
+                    until the form ends. */}
+                {SHOW_FORM_BEAKER ? (
+                  <div className="pointer-events-none sticky bottom-4 z-20 mb-3 flex justify-center sm:hidden">
+                    <span className="rounded-full border border-red/30 bg-white px-4 py-1.5 text-sm font-semibold text-ink shadow-[0_6px_18px_rgba(22,22,22,0.12)] tabular-nums">
+                      <span className="text-red">{draining ? 0 : fillPercent(filledCount, FILLABLE.length)}%</span>
+                      <span className="text-ink-soft"> · {beakerNote}</span>
+                    </span>
+                  </div>
+                ) : null}
+
+                {/* Without the beaker, the button itself shows the progress: it fills
+                    red as fields are completed and counts them until all are done. */}
                 <SubmitButton
                   className="w-full border border-rose-200 bg-rose-50 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
+                  disabled={draining}
+                  progress={SHOW_FORM_BEAKER ? undefined : filledCount / FILLABLE.length}
+                  progressLabel={`${filledCount} of ${FILLABLE.length} done · ${submitLabel ?? 'Request Quote - we will call you back'}`}
                   sending={loading}
+                  succeeded={draining}
                 >
                   {submitLabel ?? 'Request Quote - we will call you back'}
                 </SubmitButton>
               </form>
             )}
-          </div>
+          </FormBox>
 
           <div className="min-w-0 border border-line-light bg-parchment p-4 sm:p-6">
             <h3 className="mb-4 text-lg font-semibold tracking-tight text-ink">{whyHeading}</h3>

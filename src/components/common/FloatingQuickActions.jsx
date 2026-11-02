@@ -2,15 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { FiArrowUp, FiPhone } from "react-icons/fi";
+import { FiPhone } from "react-icons/fi";
+import DnaScrollProgress from "./DnaScrollProgress";
 
 const whatsappNumber = "918125580808";
 const phoneNumber = "+918125580808";
 
 export default function FloatingQuickActions() {
   const [scrollPercent, setScrollPercent] = useState(0);
+  const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
+    let restTimer;
+
     function updateScrollPercent() {
       const scrollableHeight =
         document.documentElement.scrollHeight - window.innerHeight;
@@ -20,13 +24,22 @@ export default function FloatingQuickActions() {
       setScrollPercent(Math.min(100, Math.max(0, Math.round(progress))));
     }
 
+    // The DNA turns while the page moves and rests shortly after it stops.
+    function onScroll() {
+      updateScrollPercent();
+      setScrolling(true);
+      window.clearTimeout(restTimer);
+      restTimer = window.setTimeout(() => setScrolling(false), 600);
+    }
+
     updateScrollPercent();
-    window.addEventListener("scroll", updateScrollPercent, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", updateScrollPercent);
 
     return () => {
-      window.removeEventListener("scroll", updateScrollPercent);
+      window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", updateScrollPercent);
+      window.clearTimeout(restTimer);
     };
   }, []);
 
@@ -64,22 +77,7 @@ export default function FloatingQuickActions() {
         </span>
       </a>
 
-      <button
-        aria-label={`Scroll to top, page scrolled ${scrollPercent}%`}
-        className="relative inline-flex size-14 items-center justify-center rounded-full shadow-lg shadow-zinc-900/15"
-        onClick={scrollToTop}
-        style={{
-          background: `conic-gradient(#BE0010 ${scrollPercent * 3.6}deg, #e4e4e7 0deg)`,
-        }}
-        type="button"
-      >
-        <span className="flex size-11 flex-col items-center justify-center rounded-full bg-parchment text-zinc-950 transition hover:text-red">
-          <FiArrowUp className="text-base" />
-          <span className="text-[10px] font-bold leading-none">
-            {scrollPercent}%
-          </span>
-        </span>
-      </button>
+      <DnaScrollProgress onClick={scrollToTop} percent={scrollPercent} spinning={scrolling} />
     </div>
   );
 }

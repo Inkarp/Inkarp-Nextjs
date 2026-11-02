@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { FiTrash2 } from "react-icons/fi"; // FiFileText re-enable with the View Quote button below
+import { LuBeaker, LuFlaskRound } from "react-icons/lu";
+import EmptyStateIcon from "@/components/common/EmptyStateIcon";
 import QuoteDocument from "./QuoteDocument";
 import useQuoteBasket from "./useQuoteBasket";
 import { clearBasket, itemKey, pushBasketEvent, removeFromBasket } from "@/lib/quoteBasket";
@@ -164,6 +166,7 @@ export default function QuoteRequest() {
   if (!basket.length) {
     return (
       <div className="mx-auto max-w-2xl border border-dashed border-line-light bg-parchment p-10 text-center">
+        <EmptyStateIcon icon={LuBeaker} />
         <h2 className="text-lg font-semibold tracking-tight text-ink">Your quote list is empty</h2>
         <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-ink-soft">
           Add products from the catalogue and request pricing for all of them together, filling
@@ -210,7 +213,7 @@ export default function QuoteRequest() {
                       width={56}
                     />
                   ) : (
-                    <span className="text-[10px] text-ink-soft">No image</span>
+                    <LuFlaskRound aria-label="No image" className="text-xl text-red/40" role="img" />
                   )}
                 </div>
                 <div className="min-w-0 flex-1">

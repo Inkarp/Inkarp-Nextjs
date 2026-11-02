@@ -1,0 +1,216 @@
+/* FormBeaker: see FormBeaker.jsx for the states. */
+
+/* ── Glass ─────────────────────────────────────────── */
+/* Rim strokes keep their width although the mouth stretches to the box. */
+.mouth {
+  fill: #fff;
+}
+
+.rimBack,
+.rimInner,
+.rimFront {
+  fill: none;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* The far edge of the mouth, seen through the opening: fainter and thinner. */
+.rimBack {
+  stroke: #2d3742;
+  stroke-opacity: 0.45;
+  stroke-width: 1.6;
+}
+
+/* The near edge, with the inside of the glass's thickness just behind it. */
+.rimFront {
+  stroke: #2d3742;
+  stroke-width: 3;
+}
+
+.rimInner {
+  stroke: #c3cdd7;
+  stroke-width: 1;
+}
+
+/* Spout and lip: the wall's outer edge and the edge of its thickness. */
+.edge {
+  stroke: #2d3742;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.edgeLine {
+  stroke: #c3cdd7;
+  stroke-linecap: round;
+  stroke-width: 1;
+}
+
+/* A curved glass wall looks darker towards its edges. */
+.tint {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(45 55 66 / 0.08),
+    rgb(45 55 66 / 0) 6%,
+    rgb(45 55 66 / 0) 94%,
+    rgb(45 55 66 / 0.08)
+  );
+}
+
+/* ── Liquid ────────────────────────────────────────── */
+/* Kept light so the labels between the fields stay easy to read; deeper
+   towards the bottom and at the sides, as liquid in a round glass is. The
+   level rises with a small overshoot, which reads as a slosh. */
+.liquid {
+  position: absolute;
+  inset-inline: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(190 0 16 / 0.09), rgb(190 0 16 / 0) 15%, rgb(190 0 16 / 0) 85%, rgb(190 0 16 / 0.09)),
+    linear-gradient(to bottom, rgb(190 0 16 / 0.08), rgb(190 0 16 / 0.17));
+  /* Waits for a field's bead to land (FormBeaker's BEAD_MS) before rising. */
+  transition:
+    height 900ms cubic-bezier(0.34, 1.56, 0.64, 1) 400ms,
+    bottom 900ms ease-out 400ms;
+}
+
+/* The top of the liquid seen from slightly above: a lit oval, its rim the
+   meniscus where the liquid meets the glass (stronger on the near side). */
+.surface {
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgb(255 255 255 / 0.6), rgb(255 255 255 / 0.12) 72%),
+    rgb(190 0 16 / 0.08);
+  box-shadow:
+    inset 0 -1.5px 0 rgb(190 0 16 / 0.32),
+    inset 0 1px 0 rgb(190 0 16 / 0.14);
+  transform: translateY(-50%);
+  animation: beaker-slosh 1200ms ease-out 400ms;
+}
+
+/* Light drifting across the surface. */
+.glint {
+  position: absolute;
+  top: 18%;
+  left: 6%;
+  width: 24%;
+  height: 46%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgb(255 255 255 / 0.85), rgb(255 255 255 / 0) 70%);
+  animation: beaker-glint 7s ease-in-out infinite alternate;
+}
+
+.ripples {
+  position: absolute;
+  inset: 0;
+}
+
+/* One ring per drop, drawn by FormBeaker's useFieldDrops. */
+.ripple {
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 14px;
+  border: 1.5px solid rgb(190 0 16 / 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* A bead of liquid falling from a completed field. */
+.bead {
+  position: absolute;
+  width: 8px;
+  height: 11px;
+  border-radius: 50% 50% 50% 50% / 62% 62% 40% 40%;
+  background: radial-gradient(circle at 35% 30%, #ff9aa3, #be0010 72%);
+  box-shadow: 0 1px 3px rgb(190 0 16 / 0.35);
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid rgb(190 0 16 / 0.3);
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 0.9);
+  opacity: 0;
+  animation-name: beaker-bubble;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+/* The reading rides the surface, in step with the liquid. */
+.reading {
+  transition: bottom 900ms cubic-bezier(0.34, 1.56, 0.64, 1) 400ms;
+}
+
+/* ── Sending: the liquid comes to the boil ─────────── */
+.glass[data-state='sending'] .bubble,
+.glass[data-state='draining'] .bubble {
+  animation-duration: 0.9s !important;
+}
+
+.glass[data-state='sending'] .glint,
+.glass[data-state='draining'] .glint {
+  animation-duration: 1.4s;
+}
+
+/* ── Draining after a successful send ──────────────── */
+.glass[data-state='draining'] .liquid {
+  transition:
+    height 1300ms cubic-bezier(0.55, 0, 0.45, 1),
+    bottom 1300ms cubic-bezier(0.55, 0, 0.45, 1);
+}
+
+.glass[data-state='draining'] .reading {
+  transition: bottom 1300ms cubic-bezier(0.55, 0, 0.45, 1);
+}
+
+/* ── Keyframes ─────────────────────────────────────── */
+/* The surface tips one way, then the other, settling level. */
+@keyframes beaker-slosh {
+  0% { transform: translateY(-50%) rotate(2.2deg) scaleY(1.5); }
+  30% { transform: translateY(-50%) rotate(-1.4deg) scaleY(0.8); }
+  60% { transform: translateY(-50%) rotate(0.7deg) scaleY(1.15); }
+  100% { transform: translateY(-50%) rotate(0deg) scaleY(1); }
+}
+
+@keyframes beaker-glint {
+  from { left: 6%; }
+  to { left: 68%; }
+}
+
+@keyframes beaker-bubble {
+  0% { bottom: 0; opacity: 0; }
+  12% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { bottom: calc(100% - 8px); opacity: 0; }
+}
+
+/* Reduced motion: the level still changes, without slosh, glint or bubbles
+   (drops are skipped in FormBeaker.jsx). */
+@media (prefers-reduced-motion: reduce) {
+  .surface,
+  .glint {
+    animation: none;
+  }
+
+  .bubble {
+    display: none;
+  }
+
+  .liquid,
+  .reading,
+  .glass[data-state='draining'] .liquid,
+  .glass[data-state='draining'] .reading {
+    transition: height 200ms linear, bottom 200ms linear;
+  }
+}

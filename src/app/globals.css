@@ -162,6 +162,20 @@ article[data-scroll-reveal="true"] {
   to   { width: 100%; }
 }
 
+/* Faint lab-glassware wallpaper for a few grey bands (homepage workflow wheel
+   and client reviews, product "Related Products"). The tile comes from
+   scripts/build-lab-pattern.mjs; its faintness is baked into the SVG. The
+   relative path lets the bundler fingerprint and cache it. Not on phones:
+   those bands are mostly text there, so the icons would sit right behind the
+   words. */
+@media (min-width: 640px) {
+  .lab-pattern {
+    background-image: url("../../public/patterns/lab-glassware.svg");
+    background-size: 360px 360px;
+    background-position: center top;
+  }
+}
+
 /* Indeterminate loading bar: the fill sweeps across the track, so it reads as
    "still working" for waits of unknown length (e.g. embedded PDF previews). */
 @keyframes hvc-progress-sweep {
@@ -594,6 +608,42 @@ html:has([data-bottom-banner]) [data-webinar-notice] {
   .submit-trace[data-keep-done][data-state="done"]::before { animation: none; opacity: 1; }
   .submit-trace[data-keep-done][data-state="done"] .st-idle { animation: none; opacity: 0; }
   .submit-trace[data-keep-done][data-state="done"] .st-done { animation: none; opacity: 1; }
+}
+
+/* Opt-in progress fill (SubmitButton `progress`): brand red grows from the left
+   as the form is completed; the label is white over the red and keeps the
+   form's own colour (--submit-ink, default rose-700) over the rest. The fill
+   sits under the label and the sending light, inside the button's own
+   stacking context (isolation above). Used by the product page quote form. */
+@property --submit-fill { syntax: "<percentage>"; inherits: true; initial-value: 0%; }
+.submit-trace[data-progress] {
+  transition: --submit-fill 600ms cubic-bezier(.2, .8, .2, 1), border-color .3s ease;
+}
+.submit-trace[data-progress]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #be0010;
+  clip-path: inset(0 calc(100% - var(--submit-fill)) 0 0);
+  pointer-events: none;
+}
+/* Labels span the full button, so the white/ink split lines up with the
+   fill. Only the visible idle label is split: clipping a background to text
+   would also reveal the hidden sending/done labels. */
+.submit-trace[data-progress] .submit-trace-label,
+.submit-trace[data-progress] .submit-trace-label > span {
+  width: 100%;
+}
+.submit-trace[data-progress]:not([data-complete]) .st-idle {
+  background: linear-gradient(90deg, #fff var(--submit-fill), var(--submit-ink, #be123c) var(--submit-fill));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.submit-trace[data-complete] { color: #fff; border-color: #be0010; }
+@media (prefers-reduced-motion: reduce) {
+  .submit-trace[data-progress] { transition: none; }
 }
 
 @keyframes submit-trace-spin { to { --submit-trace-angle: 360deg; } }

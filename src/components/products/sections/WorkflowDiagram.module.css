@@ -10,7 +10,8 @@
   stroke-linejoin: round;
 }
 
-/* Every part in a light grey; the part doing the active step in brand red. */
+/* Every part in a light grey (the instrument's body is the "frame" part, never
+   lit); the part doing the active step in brand red. */
 .diagram [data-part] {
   stroke: #b4bcc4;
   stroke-width: 1.4;
@@ -88,7 +89,73 @@
   fill: #be0010;
   stroke: none;
   opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  /* --fall: how far it drops (drawing units). */
   animation: wf-drip 1.8s ease-in infinite;
+}
+
+/* Set down from above, again and again (--lower: where it starts). */
+.lower {
+  animation: wf-lower 2.4s ease-in-out infinite;
+}
+
+/* A key being pressed. */
+.press {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wf-press 1.6s ease-in-out infinite;
+}
+
+/* A live reading. */
+.blink {
+  animation: wf-blink 1.2s ease-in-out infinite;
+}
+
+/* Paper feeding out of a printer. */
+.feed {
+  animation: wf-feed 2.2s ease-out infinite;
+}
+
+/* Liquid or a signal flowing along a line. */
+.flow {
+  stroke-dasharray: 3 4;
+  animation: wf-flow 0.9s linear infinite;
+}
+
+/* A curve being drawn on a screen (the path needs pathLength="100"). */
+.draw {
+  stroke-dasharray: 100;
+  animation: wf-draw 2.6s ease-in-out infinite;
+}
+
+/* An oscillating measuring cell. */
+.vibrate {
+  animation: wf-vibrate 0.16s linear infinite alternate;
+}
+
+/* A lamp glowing. */
+.glow {
+  animation: wf-glow 0.9s ease-in-out infinite alternate;
+}
+
+/* A level bubble settling to the centre of its ring. */
+.bubble {
+  animation: wf-bubble 2.4s ease-out infinite;
+}
+
+/* A stir bar spinning, seen from the side. */
+.spinBar {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wf-spinbar 0.7s linear infinite;
+}
+
+/* Waves of signal leaving an electrode. */
+.signal {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: wf-signal 1.4s ease-out infinite;
 }
 
 .later { animation-delay: 0.9s; }
@@ -124,6 +191,29 @@
 @keyframes wf-drip {
   0% { opacity: 0; transform: translateY(0) scale(0.6); }
   15% { opacity: 1; transform: translateY(0) scale(1); }
-  80% { opacity: 1; transform: translateY(42px) scale(0.9, 1.2); }
-  100% { opacity: 0; transform: translateY(46px) scale(1.4, 0.6); }
+  80% { opacity: 1; transform: translateY(var(--fall, 42px)) scale(0.9, 1.2); }
+  100% { opacity: 0; transform: translateY(calc(var(--fall, 42px) + 4px)) scale(1.4, 0.6); }
+}
+@keyframes wf-lower {
+  0% { opacity: 0; transform: translateY(var(--lower, -10px)); }
+  20% { opacity: 1; }
+  55%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes wf-press { 0%, 60%, 100% { transform: scale(1); } 72% { transform: scale(0.72); } }
+@keyframes wf-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+@keyframes wf-feed {
+  0% { opacity: 0; transform: translateY(8px); }
+  30% { opacity: 1; }
+  70%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes wf-flow { to { stroke-dashoffset: -7; } }
+@keyframes wf-draw { 0% { stroke-dashoffset: 100; } 60%, 100% { stroke-dashoffset: 0; } }
+@keyframes wf-vibrate { from { transform: translateX(-0.8px); } to { transform: translateX(0.8px); } }
+@keyframes wf-glow { from { opacity: 0.35; } to { opacity: 1; } }
+@keyframes wf-bubble { 0% { transform: translateX(5px); } 60%, 100% { transform: translateX(0); } }
+@keyframes wf-spinbar { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.15); } }
+@keyframes wf-signal {
+  0% { opacity: 0; transform: scale(0.6); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.3); }
 }

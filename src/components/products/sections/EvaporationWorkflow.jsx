@@ -111,6 +111,58 @@ function StepCard({ step, index, isActive, isPast, onClick, totalDuration }) {
   );
 }
 
+/* One step as a compact row, for the list beside the diagram on wide screens:
+   the active step opens to its full text with the progress bar; the others
+   keep to one line. */
+function StepRow({ step, index, isActive, isPast, onClick, totalDuration }) {
+  return (
+    <li>
+      <button
+        aria-pressed={isActive}
+        className={`group relative flex w-full items-start gap-4 border px-4 py-3 text-left transition-all duration-300 ${
+          isActive
+            ? 'border-red bg-white shadow-[0_14px_36px_rgba(190,0,16,0.12)]'
+            : 'border-transparent hover:border-line-light hover:bg-white'
+        }`}
+        onClick={onClick}
+        type="button"
+      >
+        {isActive && (
+          <span aria-hidden="true" className="absolute -left-px -right-px -top-px h-[3px] overflow-hidden bg-red/15">
+            <span
+              key={`row-progress-${index}`}
+              className="block h-full bg-red"
+              style={{ animation: `hvc-progress-fill ${totalDuration}ms linear forwards` }}
+            />
+          </span>
+        )}
+
+        <span
+          className={`relative inline-flex h-9 w-9 shrink-0 items-center justify-center transition-colors duration-300 ${
+            isActive ? 'bg-red text-white' : isPast ? 'bg-red/10 text-red' : 'bg-parchment-alt text-ink-soft'
+          }`}
+        >
+          {stepIcon(step.title) ?? <span className="text-sm font-bold">{index + 1}</span>}
+        </span>
+
+        <span className="min-w-0 flex-1">
+          <span className="flex items-baseline justify-between gap-3">
+            <span className={`text-sm font-semibold tracking-tight transition-colors ${isActive ? 'text-ink' : 'text-ink-soft'}`}>
+              {step.title}
+            </span>
+            <span className={`text-xs font-bold tabular-nums ${isActive ? 'text-red' : 'text-ink-soft'}`}>
+              {isActive ? 'Active' : String(index + 1).padStart(2, '0')}
+            </span>
+          </span>
+          <span className={`mt-1 text-xs leading-5 ${isActive ? 'block text-black' : 'line-clamp-1 text-ink-soft'}`}>
+            {step.description}
+          </span>
+        </span>
+      </button>
+    </li>
+  );
+}
+
 /* Evaporation-rate reference strip */
 // Reuses the same metrics feeding the Performance tab/table, so the
 // workflow section never carries its own copy of the numbers.
@@ -157,10 +209,12 @@ export default function EvaporationWorkflow({ section = {}, metrics, diagram = n
     <section id="workflow" className="scroll-mt-16 border-b border-line-light bg-parchment px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-[1180px]">
 
-        {/* The title, with the instrument diagram beside it on wide screens
-            (above the cards on phones) when the product has one. */}
-        <div className={diagram ? 'lg:flex lg:items-center lg:gap-10' : undefined}>
-          <div className={diagram ? 'min-w-0 lg:flex-1' : undefined}>
+        {/* With an instrument diagram, wide screens get a two-column "how it
+            works": the title and the steps as a compact list on the left, the
+            diagram beside them on the right. Phones keep the title, then the
+            diagram, then the swipeable cards. */}
+        <div className={diagram ? 'lg:grid lg:grid-cols-[minmax(0,1fr)_440px] lg:items-center lg:gap-x-14' : undefined}>
+          <div className={diagram ? 'lg:col-start-1 lg:row-start-1' : undefined}>
             {/* number="02" is fixed for now; derive from section position once a
                 master sections array drives page assembly. */}
             <SectionHeader
@@ -170,21 +224,43 @@ export default function EvaporationWorkflow({ section = {}, metrics, diagram = n
               description={section.description}
             />
           </div>
+
           {diagram ? (
             <WorkflowDiagram
-              className="mx-auto mb-8 w-full max-w-[300px] lg:mx-0 lg:w-[340px] lg:max-w-none lg:shrink-0"
+              className="mx-auto mb-8 w-full max-w-[300px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mb-0 lg:max-w-none"
               kind={diagram}
               stepNumber={active + 1}
               stepTitle={steps[active]?.title}
             />
+          ) : null}
+
+          {diagram ? (
+            <div className="relative hidden lg:col-start-1 lg:row-start-2 lg:block">
+              {/* The line joining the step icons. */}
+              <span aria-hidden="true" className="absolute bottom-6 left-[34px] top-6 w-px bg-line-light" />
+              <ol className="relative space-y-1.5">
+                {steps.map((step, i) => (
+                  <StepRow
+                    index={i}
+                    isActive={active === i}
+                    isPast={i < active}
+                    key={`row-${i}`}
+                    onClick={() => setActive(i)}
+                    step={step}
+                    totalDuration={STEP_DURATION}
+                  />
+                ))}
+              </ol>
+            </div>
           ) : null}
         </div>
 
         {/* Cards with connectors. Below `lg` this scrolls horizontally — the extra
             `pl-8` (on top of the section's own padding) gives the first card a clear
             left gutter, and the right-edge fade signals there's more to scroll
-            instead of clipping mid-card. */}
-        <div className="relative">
+            instead of clipping mid-card. With a diagram, wide screens use the
+            list above instead. */}
+        <div className={`relative ${diagram ? 'lg:hidden' : ''}`}>
           <div className="flex items-stretch gap-2 overflow-x-auto scroll-smooth scrollbar-none snap-x snap-mandatory scroll-pl-8 pb-2 pl-8 pr-6 pt-6 lg:snap-none lg:scroll-pl-0 lg:gap-0 lg:overflow-visible lg:pl-0 lg:pr-0 lg:pt-0">
             {steps.map((step, i) => (
               <div key={`step-${i}`} className="flex min-w-[160px] flex-1 snap-start items-stretch">

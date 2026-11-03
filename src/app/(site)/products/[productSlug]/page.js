@@ -269,7 +269,7 @@ export default async function ProductPage({ params }) {
       </section>
 
       <div id="product-details">
-        {isRichPage ? <UniversalProductPage hasCatalogue={Boolean(productCatalogue)} product={product} workflowDiagram={getWorkflowDiagramKind(product.slug)} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
+        {isRichPage ? <UniversalProductPage hasCatalogue={Boolean(productCatalogue)} product={product} workflowDiagram={getWorkflowDiagramKind(product)} workflowSection={productWorkflows[product.slug]} /> : <LegacyProductContent product={product} />}
       </div>
 
       <FinderProductPrompt

@@ -7,6 +7,7 @@ import { LuMicroscope } from"react-icons/lu";
 import EmptyStateIcon from"@/components/common/EmptyStateIcon";
 import RecTag from"@/components/home/RecTag";
 import StageEventBanner from"@/components/events/StageEventBanner";
+import StallShowcase from"@/components/events/StallShowcase";
 import { bannerEvent, events, eventYears, featuredEvent, isPastEvent } from"@/data/events";
 
 // Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
@@ -343,6 +344,8 @@ export default function EventsPage() {
     <main>
       {/* The next show on its own stage; the recap banner when there is none. */}
       {bannerEvent ? <StageEventBanner event={bannerEvent} /> : <FeaturedEventBanner />}
+      {/* What is on show at that stall; the stall travels down into it. */}
+      {bannerEvent ? <StallShowcase event={bannerEvent} /> : null}
 
       <div
         className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 border border-line-light bg-parchment-alt py-8 sm:flex-row"

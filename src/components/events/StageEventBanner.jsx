@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FiArrowUpRight, FiCalendar, FiCheckCircle, FiMapPin } from "react-icons/fi";
+import { FiArrowUpRight, FiCheckCircle } from "react-icons/fi";
+import EventTicket from "./EventTicket";
 import styles from "./StageEventBanner.module.css";
 
 /**
@@ -13,7 +14,10 @@ import styles from "./StageEventBanner.module.css";
  * the light comes up, the text slides in from the left line by line (the title
  * uncovered by a sweeping red block, in silver lettering) and the stall drops
  * onto the stage and settles; then it floats with a light sweeping across it
- * (animations: StageEventBanner.module.css). The text stays real text.
+ * (animations: StageEventBanner.module.css). The text stays real text. The
+ * dates, venue and stall sit on a pass (EventTicket), the show's logo above
+ * the title once its file is set, and on wide screens the stall travels down
+ * into the section below as the page scrolls (StallShowcase).
  * Data: `bannerEvent` in src/data/events.js.
  */
 
@@ -154,6 +158,19 @@ export default function StageEventBanner({ event }) {
 
       <div className="relative mx-auto grid max-w-[1180px] items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-6 lg:px-8 lg:pb-16 lg:pt-14">
         <div className="min-w-0">
+          {/* The show's own logo, once its file is in place (bannerEvent.logo). */}
+          {event.logo ? (
+            <Image
+              alt={`${event.name} logo`}
+              className={`${styles.enter} mb-5 h-9 w-auto sm:h-10`}
+              height={event.logo.height}
+              priority
+              src={event.logo.src}
+              style={{ "--i": 0 }}
+              width={event.logo.width}
+            />
+          ) : null}
+
           {/* Each line slides in from the left in turn (--i is its place). */}
           <p className={`${styles.enter} flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ff6b75]`} style={{ "--i": 0 }}>
             <span aria-hidden="true" className="size-1.5 rounded-full bg-[#ff6b75] motion-safe:animate-pulse" />
@@ -174,25 +191,11 @@ export default function StageEventBanner({ event }) {
             </p>
           ) : null}
 
-          <div className={`${styles.enter} mt-6 grid gap-2.5 text-sm text-white/85`} style={{ "--i": 3 }}>
-            <span className="inline-flex items-start gap-2.5">
-              <FiCalendar aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-red" />
-              {event.dateLabel}
-            </span>
-            <span className="inline-flex items-start gap-2.5">
-              <FiMapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-red" />
-              {event.venue}
-            </span>
+          {/* Dates, venue, hall and stall as a pass with a tear-off stub. The
+              slide-in sits on a wrapper so the pass's own hover lift works. */}
+          <div className={`${styles.enter} mt-6`} style={{ "--i": 3 }}>
+            <EventTicket event={event} />
           </div>
-
-          {/* The stall plate, styled like the sign on the stand. */}
-          <p className={`${styles.enter} mt-6 inline-flex items-stretch border border-white/15 bg-white/[0.04] text-sm`} style={{ "--i": 4 }}>
-            <span className="flex items-center px-3 font-mono text-[10px] uppercase tracking-[0.18em] text-white/55">
-              Visit us at
-            </span>
-            <span className="flex items-center border-l border-white/15 px-4 py-2.5 font-semibold">{event.hall}</span>
-            <span className="flex items-center bg-red px-4 py-2.5 font-bold tracking-wide">Stall {event.stallNumber}</span>
-          </p>
 
           <p className={`${styles.enter} mt-6 max-w-[500px] text-base leading-relaxed text-white/70`} style={{ "--i": 5 }}>
             {event.summary}
@@ -231,28 +234,32 @@ export default function StageEventBanner({ event }) {
             aria-hidden="true"
             className={`${styles.landRing} pointer-events-none absolute inset-x-[12%] bottom-[16%] h-[13%] rounded-[50%] border-2 border-[#7fa8d1]/70`}
           />
-          <div className={styles.drop}>
-            <div className={`${styles.float} relative`}>
-              <Image
-                alt={event.stallImageAlt ?? `${event.name} ${event.edition} stall`}
-                className="h-auto w-full drop-shadow-[0_28px_36px_rgba(0,0,0,0.55)]"
-                height={1050}
-                priority
-                sizes="(min-width: 1024px) 640px, 100vw"
-                src={event.stallImage}
-                width={1400}
-              />
-              {/* A light sweeping across the stand, masked to the stall's own shape. */}
-              <span
-                aria-hidden="true"
-                className={`${styles.sheen} pointer-events-none absolute inset-0`}
-                style={{
-                  WebkitMaskImage: `url("${event.stallImage}")`,
-                  maskImage: `url("${event.stallImage}")`,
-                  WebkitMaskSize: "100% 100%",
-                  maskSize: "100% 100%",
-                }}
-              />
+          {/* data-stall-origin: where StallShowcase picks the stall up from as
+              the page scrolls (this wrapper itself never moves). */}
+          <div data-stall-origin="">
+            <div className={styles.drop}>
+              <div className={`${styles.float} relative`}>
+                <Image
+                  alt={event.stallImageAlt ?? `${event.name} ${event.edition} stall`}
+                  className="h-auto w-full drop-shadow-[0_28px_36px_rgba(0,0,0,0.55)]"
+                  height={1050}
+                  priority
+                  sizes="(min-width: 1024px) 640px, 100vw"
+                  src={event.stallImage}
+                  width={1400}
+                />
+                {/* A light sweeping across the stand, masked to the stall's own shape. */}
+                <span
+                  aria-hidden="true"
+                  className={`${styles.sheen} pointer-events-none absolute inset-0`}
+                  style={{
+                    WebkitMaskImage: `url("${event.stallImage}")`,
+                    maskImage: `url("${event.stallImage}")`,
+                    WebkitMaskSize: "100% 100%",
+                    maskSize: "100% 100%",
+                  }}
+                />
+              </div>
             </div>
           </div>
 

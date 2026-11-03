@@ -293,6 +293,38 @@ export const bannerEvent = {
   stallImage: `${IMG}/pmec-2026-stall.webp`,
   stallImageAlt: "Inkarp stall 5F12 at PMEC India 2026, with laboratory instruments on display",
   registrationUrl: null,
+  // PMEC India's own logo above the title: the file the user supplied, turned
+  // white (same shapes) to read on the dark banner. null = none.
+  logo: { src: `${IMG}/pmec-india-logo-white.png`, width: 212, height: 46 },
+  // What is on show at the stall, split either side of it in the section
+  // under the banner. Provisional: the instruments identifiable in the stall
+  // render, until the final display list is confirmed.
+  displayProducts: [
+    {
+      brand: "Heidolph",
+      name: "Hei-VAP Ultimate Control Rotary Evaporator",
+      image: "/assets/images/productImages/heidolph/hei-vap-ultimate-control-rotary-evaporator.webp",
+      href: "/products/hei-vap-ultimate-control-rotary-evaporator",
+    },
+    {
+      brand: "Sartorius",
+      name: "Arium® Mini Plus Lab Water Purification System",
+      image: "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
+      href: "/products/arium-mini-plus-lab-water-purification-system",
+    },
+    {
+      brand: "GEA",
+      name: "GEA PandaPLUS Table-Top Homogenizer",
+      image: "/assets/images/productImages/Gea/Panda-PLUS.webp",
+      href: "/products/gea-pandaplus-table-top-homogenizer",
+    },
+    {
+      brand: "Radleys",
+      name: "Mya 4 Reaction Station",
+      image: "/assets/images/productImages/radleys/mya-4.png",
+      href: "/products/mya-4-reaction-station",
+    },
+  ],
 };
 
 /**

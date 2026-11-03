@@ -16,12 +16,18 @@ const WORKFLOW_DRAWINGS = {
     "Solation ICP-MS": "mass-spec",
     "TriVersa NanoMate": "nanospray-robot",
   },
+  "Affinite Instruments": {
+    "Compact Surface Plasmon Resonance (SPR) Systems": "spr",
+  },
   "Ametek Brookfield": {
     "Laboratory Viscometers": "rotational-viscometer",
     "Moisture Analyzers": "moisture-analyzer",
     "Powder Flow Testers": "powder-flow-tester",
     Rheometers: "rotational-viscometer",
     "Texture Analyzers": "texture-analyzer",
+  },
+  Bandelin: {
+    "Ultrasonic Baths": "ultrasonic-bath",
   },
   Bruker: {
     "FT-IR Gas Analyzer": "process-spectrometer",
@@ -33,8 +39,19 @@ const WORKFLOW_DRAWINGS = {
     "Raman Microscopes": "spectral-microscope",
     "Raman Spectrometer": "ft-spectrometer",
   },
+  Buchi: {
+    "Freeze Dryer (Lyophilizer)": "freeze-dryer",
+  },
   "BWB Technologies": {
     "Flame Photometers": "flame-photometer",
+  },
+  Chemspeed: {
+    "Automated Extraction (QuEChERS)": "automation-platform",
+    "Automated Synthesis for Innovative Medicines": "automation-platform",
+    "Crystal Benchtop Solution": "automation-platform",
+  },
+  "Dara-Lyo": {
+    "Pilot Freeze Dryers": "freeze-dryer",
   },
   ECOM: {
     "PLC Industrial Systems": "flash-system",
@@ -42,6 +59,10 @@ const WORKFLOW_DRAWINGS = {
   "FOM Technologies": {
     "Roll-to-Roll Slot-Die Coating Systems": "roll-coater",
     "Sheet-Based Slot-Die Coating Systems": "sheet-coater",
+  },
+  GEA: {
+    "Industrial Homogenizers": "pressure-homogenizer",
+    "Laboratory Homogenizers": "pressure-homogenizer",
   },
   Heidolph: {
     "Rotary Evaporators": "rotary-evaporator",
@@ -52,14 +73,32 @@ const WORKFLOW_DRAWINGS = {
     "Shakers & Mixers": "orbital-shaker",
     "Vacuum Pumps": "vacuum-pump",
   },
+  "Hohsen Corp": {
+    "Equipment For Battery": "coin-cell-crimper",
+  },
   Implen: {
     NanoPhotometer: "uv-vis",
     "OD 600": "uv-vis",
+  },
+  "Inkarp USB": {
+    "Ultrasonic Cleaners & Baths": "ultrasonic-bath",
   },
   Kubota: {
     "General Purpose Centrifuges": "centrifuge",
     "Laboratory Centrifuges": "centrifuge",
     "Large Laboratory Centrifuges": "centrifuge",
+  },
+  "Labstation i": {
+    "Solvent Purification Systems": "solvent-purifier",
+  },
+  Luzchem: {
+    "Laser Flash Photolysis": "flash-photolysis",
+    "LED Illuminator": "photoreactor",
+    "Solar Simulators (300–800 nm)": "photoreactor",
+    "Well Plate Illuminator": "photoreactor",
+  },
+  Maccor: {
+    "Battery And Cell Test Equipment": "battery-cycler",
   },
   "Mettler Toledo": {
     "Weighing Balances": "balance",
@@ -68,6 +107,11 @@ const WORKFLOW_DRAWINGS = {
     "Density Meter": "density-meter",
     "Moisture Analyzers": "moisture-analyzer",
     "UV/VIS Spectrophotometers": "uv-vis",
+  },
+  Nanalysis: {
+    "Automation / Sample Handling (NMR)": "nmr-autosampler",
+    "Benchtop NMR": "benchtop-nmr",
+    "NMR Spectroscopy / Analysis": "benchtop-nmr",
   },
   Nanosurf: {
     Industry: "afm",
@@ -86,6 +130,11 @@ const WORKFLOW_DRAWINGS = {
     "Plate Readers": "hyperspectral-imager",
     "SWIR Cameras": "hyperspectral-imager",
   },
+  PolyScience: {
+    Chillers: "circulator",
+    "Circulating Baths": "circulator",
+    "Water Baths": "water-bath",
+  },
   ProScientific: {
     "Automated Homogenizer": "homogenizer",
     "Digital Benchtop Homogenizers": "homogenizer",
@@ -99,11 +148,40 @@ const WORKFLOW_DRAWINGS = {
     "Jacketed Lab Reactors": "jacketed-reactor",
     "Parallel Reaction Stations": "parallel-reactor",
   },
+  "Reichert Technologies": {
+    "High-Sensitivity Surface Plasmon Resonance (SPR) Systems": "spr",
+  },
+  "Robot Coupe": {
+    "Blixer Systems (Fine Homogenization for Semi-Solid Samples)": "blixer",
+  },
+  Sartorius: {
+    "Arium Advance": "water-purifier",
+    "Arium Comfort": "water-purifier",
+    "Arium Mini Plus": "water-purifier",
+    "Arium Pro": "water-purifier",
+  },
+  "SBT Instruments": {
+    "Bacteria Enumeration Systems": "bacteria-counter",
+  },
+  "Sonics & Materials": {
+    "Laboratory Scale Models, Volume 150 µL to 150 mL": "probe-sonicator",
+    "Laboratory Scale Models, Volume 200 µL to 1 L": "probe-sonicator",
+    "Laboratory Scale Models, Volume 200 µL to 2 L": "probe-sonicator",
+    "Ultrasonic Probe Sonicators": "probe-sonicator",
+    "Ultrasonic Probe Sonicators (Production Scale)": "probe-sonicator",
+  },
+  "Sp Genevac": {
+    "Benchtop Evaporators": "centrifugal-evaporator",
+    "Centrifugal Evaporators": "centrifugal-evaporator",
+  },
   ThalesNano: {
     "H Cube Systems": "flow-reactor",
     "Hydrogen Gas Generators": "hydrogen-generator",
     "Phoenix Flow Systems": "flow-reactor",
     "PhotoCube™": "flow-reactor",
+  },
+  "ThermoFisher Scientific": {
+    Viscometers: "falling-ball-viscometer",
   },
   Waters: {
     "Chromatography and LC-MS Systems": "lc-system",
@@ -155,6 +233,10 @@ const WORKFLOW_DRAWING_BY_SLUG = {
   "tornado-overhead-stirring-system": "overhead-stirrer",
   "heat-on-block-system": "heat-block",
   "findenser-super-air-condenser": "air-condenser",
+  // ThermoFisher's rotational viscometer (the category draws the falling-ball one).
+  "rotational-viscometers": "rotational-viscometer",
+  // Hohsen's slurry mixer, among its coin-cell crimpers.
+  "mixing-machine": "slurry-mixer",
 };
 
 // The same drawing faint in the page background (HeroDrawing.jsx), switched

@@ -4,13 +4,24 @@
 // src/data/products/heroDrawings.js.
 import afm from './afm';
 import airCondenser from './airCondenser';
+import automationPlatform from './automationPlatform';
+import bacteriaCounter from './bacteriaCounter';
 import balance from './balance';
+import batteryCycler from './batteryCycler';
+import benchtopNmr from './benchtopNmr';
+import blixer from './blixer';
 import blowdownEvaporator from './blowdownEvaporator';
+import centrifugalEvaporator from './centrifugalEvaporator';
 import centrifuge from './centrifuge';
+import circulator from './circulator';
+import coinCellCrimper from './coinCellCrimper';
 import densityMeter from './densityMeter';
+import fallingBallViscometer from './fallingBallViscometer';
 import flamePhotometer from './flamePhotometer';
+import flashPhotolysis from './flashPhotolysis';
 import flashSystem from './flashSystem';
 import flowReactor from './flowReactor';
+import freezeDryer from './freezeDryer';
 import ftSpectrometer from './ftSpectrometer';
 import heatBlock from './heatBlock';
 import homogenizer from './homogenizer';
@@ -26,13 +37,17 @@ import microscopeStereo from './microscopeStereo';
 import microscopeUpright from './microscopeUpright';
 import moistureAnalyzer from './moistureAnalyzer';
 import nanosprayRobot from './nanosprayRobot';
+import nmrAutosampler from './nmrAutosampler';
 import orbitalShaker from './orbitalShaker';
 import overheadStirrer from './overheadStirrer';
 import parallelReactor from './parallelReactor';
 import peristalticPump from './peristalticPump';
 import phMeter from './phMeter';
+import photoreactor from './photoreactor';
 import plateShaker from './plateShaker';
 import powderFlowTester from './powderFlowTester';
+import pressureHomogenizer from './pressureHomogenizer';
+import probeSonicator from './probeSonicator';
 import processSpectrometer from './processSpectrometer';
 import reactionWorkstation from './reactionWorkstation';
 import rockingShaker from './rockingShaker';
@@ -41,12 +56,18 @@ import rotaryEvaporator from './rotaryEvaporator';
 import rotationalViscometer from './rotationalViscometer';
 import sheetCoater from './sheetCoater';
 import slideScanner from './slideScanner';
+import slurryMixer from './slurryMixer';
+import solventPurifier from './solventPurifier';
 import spectralMicroscope from './spectralMicroscope';
+import spr from './spr';
 import textureAnalyzer from './textureAnalyzer';
 import titrator from './titrator';
+import ultrasonicBath from './ultrasonicBath';
 import uvVis from './uvVis';
 import vacuumPump from './vacuumPump';
 import vortexMixer from './vortexMixer';
+import waterBath from './waterBath';
+import waterPurifier from './waterPurifier';
 import waveShaker from './waveShaker';
 
 export const DIAGRAMS = {
@@ -96,4 +117,25 @@ export const DIAGRAMS = {
   'hyperspectral-imager': hyperspectralImager,
   'flow-reactor': flowReactor,
   'hydrogen-generator': hydrogenGenerator,
+  'water-purifier': waterPurifier,
+  'battery-cycler': batteryCycler,
+  circulator,
+  'water-bath': waterBath,
+  'probe-sonicator': probeSonicator,
+  'benchtop-nmr': benchtopNmr,
+  'nmr-autosampler': nmrAutosampler,
+  'automation-platform': automationPlatform,
+  'centrifugal-evaporator': centrifugalEvaporator,
+  photoreactor,
+  'flash-photolysis': flashPhotolysis,
+  'freeze-dryer': freezeDryer,
+  spr,
+  'ultrasonic-bath': ultrasonicBath,
+  'coin-cell-crimper': coinCellCrimper,
+  'slurry-mixer': slurryMixer,
+  'pressure-homogenizer': pressureHomogenizer,
+  'falling-ball-viscometer': fallingBallViscometer,
+  'bacteria-counter': bacteriaCounter,
+  blixer,
+  'solvent-purifier': solventPurifier,
 };

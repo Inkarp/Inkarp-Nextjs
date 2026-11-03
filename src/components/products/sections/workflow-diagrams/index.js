@@ -16,6 +16,7 @@ import centrifuge from './centrifuge';
 import circulator from './circulator';
 import coinCellCrimper from './coinCellCrimper';
 import densityMeter from './densityMeter';
+import digitalMicroscope from './digitalMicroscope';
 import fallingBallViscometer from './fallingBallViscometer';
 import flamePhotometer from './flamePhotometer';
 import flashPhotolysis from './flashPhotolysis';
@@ -23,11 +24,13 @@ import flashSystem from './flashSystem';
 import flowReactor from './flowReactor';
 import freezeDryer from './freezeDryer';
 import ftSpectrometer from './ftSpectrometer';
+import handheldRaman from './handheldRaman';
 import heatBlock from './heatBlock';
 import homogenizer from './homogenizer';
 import hotplateStirrer from './hotplateStirrer';
 import hydrogenGenerator from './hydrogenGenerator';
 import hyperspectralImager from './hyperspectralImager';
+import industrialRotavap from './industrialRotavap';
 import jacketedReactor from './jacketedReactor';
 import lcSystem from './lcSystem';
 import magneticStirrer from './magneticStirrer';
@@ -36,6 +39,7 @@ import microscopeInverted from './microscopeInverted';
 import microscopeStereo from './microscopeStereo';
 import microscopeUpright from './microscopeUpright';
 import moistureAnalyzer from './moistureAnalyzer';
+import multiTubeVortexer from './multiTubeVortexer';
 import nanosprayRobot from './nanosprayRobot';
 import nmrAutosampler from './nmrAutosampler';
 import orbitalShaker from './orbitalShaker';
@@ -65,6 +69,7 @@ import titrator from './titrator';
 import ultrasonicBath from './ultrasonicBath';
 import uvVis from './uvVis';
 import vacuumPump from './vacuumPump';
+import vapourMoistureAnalyzer from './vapourMoistureAnalyzer';
 import vortexMixer from './vortexMixer';
 import waterBath from './waterBath';
 import waterPurifier from './waterPurifier';
@@ -138,4 +143,9 @@ export const DIAGRAMS = {
   'bacteria-counter': bacteriaCounter,
   blixer,
   'solvent-purifier': solventPurifier,
+  'industrial-rotavap': industrialRotavap,
+  'vapour-moisture-analyzer': vapourMoistureAnalyzer,
+  'digital-microscope': digitalMicroscope,
+  'multi-tube-vortexer': multiTubeVortexer,
+  'handheld-raman': handheldRaman,
 };

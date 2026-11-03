@@ -201,12 +201,13 @@ const WORKFLOW_DRAWINGS = {
 // Single products that differ from the rest of their category: a kind, or
 // null to keep the drawing off (their steps don't match it).
 const WORKFLOW_DRAWING_BY_SLUG = {
-  // Feed and Discharge steps: the lab rotavap drawing has no feed line or valve.
-  "large-scale-hei-volume-distimatic-pro": null,
+  // Continuous-feed rotavap: the lab drawing plus a feed line and a
+  // discharge valve.
+  "large-scale-hei-volume-distimatic-pro": "industrial-rotavap",
   // Sealed-vial vapour analyzer, not a pan and halogen lamp.
-  "computrac-vapor-pro-xl-moisture-analyzer": null,
-  // Fully digital (no eyepieces): its Observe step would light eyepieces.
-  "smart-zoom-5-microscope": null,
+  "computrac-vapor-pro-xl-moisture-analyzer": "vapour-moisture-analyzer",
+  // Fully digital (no eyepieces): observed on its screen.
+  "smart-zoom-5-microscope": "digital-microscope",
   // Heidolph stirrers without heating.
   "hei-mix-s-magnetic-stirrer": "magnetic-stirrer",
   "hei-plate-mix-20-l-magnetic-stirrer": "magnetic-stirrer",
@@ -221,10 +222,10 @@ const WORKFLOW_DRAWING_BY_SLUG = {
   "titramax-101-vibrating-shaker": "plate-shaker",
   "reax-control-vortex-mixer": "vortex-mixer",
   "reax-top-vortex-mixer": "vortex-mixer",
-  // Multi-tube vortexer: the vortex drawing shows a single tube on a cup.
-  "multi-reax-vortex-mixer": null,
-  // Handheld Raman: the drawing is a benchtop spectrometer.
-  "bravo-handheld-raman-spectrometer": null,
+  // Multi-tube vortexer: a rack of tubes, not a single tube on a cup.
+  "multi-reax-vortex-mixer": "multi-tube-vortexer",
+  // Handheld Raman, not a benchtop spectrometer.
+  "bravo-handheld-raman-spectrometer": "handheld-raman",
   // Radleys products that differ from the rest of their category.
   "breeze-heating-cooling-work-station": "reaction-workstation",
   "greenhouse-work-up-station": "reaction-workstation",

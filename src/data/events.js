@@ -275,10 +275,9 @@ export const featuredEvent = {
  * there is no Register button; add the URL to `registrationUrl` when it opens.
  */
 export const bannerEvent = {
-  eyebrow: "Upcoming exhibition",
+  eyebrow: "Meet us at",
   name: "PMEC India",
   edition: "2026",
-  partOf: "CPHI & PMEC India",
   dateLabel: "24 – 26 November 2026",
   venue: "India Exposition Mart Limited (IEML), Greater Noida, Delhi NCR",
   hall: "Hall 5",
@@ -287,7 +286,7 @@ export const bannerEvent = {
   startsAt: "2026-11-24T10:00:00+05:30",
   endsAt: "2026-11-26T18:00:00+05:30",
   summary:
-    "Meet the Inkarp team in Hall 5 and see laboratory and analytical instruments from our global principals at work.",
+    "Meet our team in Hall 5 and see laboratory and analytical instruments from our global principals at work.",
   // Short, so they sit in one row under the stall.
   highlights: ["Live instrument demos", "Method discussions", "Service and support"],
   stallImage: `${IMG}/pmec-2026-stall.webp`,
@@ -296,34 +295,35 @@ export const bannerEvent = {
   // PMEC India's own logo above the title: the file the user supplied, turned
   // white (same shapes) to read on the dark banner. null = none.
   logo: { src: `${IMG}/pmec-india-logo-white.png`, width: 212, height: 46 },
-  // What is on show at the stall, split either side of it in the section
-  // under the banner. Provisional: the instruments identifiable in the stall
-  // render, until the final display list is confirmed.
+  // The heading and intro of the section under the banner (StallShowcase).
+  showcaseTitle: "What's on Our Showcase?",
+  showcaseIntro: "From smart laboratory solutions to advanced analytical technologies, here's what's coming to our stall!",
+  // What is on show at the stall (the display list the user supplied, names
+  // only), as image cards in two stacks either side of the stall in the
+  // section under the banner. `href` only where the product has a page here;
+  // `logo` marks a brand logo standing in for a product photo; no `image`
+  // shows a lab icon.
   displayProducts: [
-    {
-      brand: "Heidolph",
-      name: "Hei-VAP Ultimate Control Rotary Evaporator",
-      image: "/assets/images/productImages/heidolph/hei-vap-ultimate-control-rotary-evaporator.webp",
-      href: "/products/hei-vap-ultimate-control-rotary-evaporator",
-    },
-    {
-      brand: "Sartorius",
-      name: "Arium® Mini Plus Lab Water Purification System",
-      image: "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png",
-      href: "/products/arium-mini-plus-lab-water-purification-system",
-    },
-    {
-      brand: "GEA",
-      name: "GEA PandaPLUS Table-Top Homogenizer",
-      image: "/assets/images/productImages/Gea/Panda-PLUS.webp",
-      href: "/products/gea-pandaplus-table-top-homogenizer",
-    },
-    {
-      brand: "Radleys",
-      name: "Mya 4 Reaction Station",
-      image: "/assets/images/productImages/radleys/mya-4.png",
-      href: "/products/mya-4-reaction-station",
-    },
+    { brand: "Heidolph", name: "Hei-VAP Expert Control", image: "/assets/images/productImages/heidolph/hei-vap-expert-control-rotary-evaporator.webp", href: "/products/hei-vap-expert-control-rotary-evaporator" },
+    { brand: "Heidolph", name: "Magnetic Stirrer", image: "/assets/images/productImages/heidolph/Hei-PLATE-MixnHeat-Core.webp", href: "/products/hei-plate-mix-n-heat-core-magnetic-stirrer" },
+    { brand: "Radleys", name: "Mya 4", image: "/assets/images/productImages/radleys/mya-4.png", href: "/products/mya-4-reaction-station" },
+    { brand: "Radleys", name: "Reactor-Ready Mini", image: "/assets/images/productImages/radleys/E4-Reactor-Ready-Mini.webp", href: "/products/reactor-ready-mini-lab-reactor" },
+    { brand: "GEA", name: "Panda Smart" },
+    { brand: "Bruker", name: "ALPHA II", image: "/assets/images/productImages/Bruker/banner-alpha.png", href: "/products/alpha-ii-compact-ft-ir-spectrometer" },
+    { brand: "Sartorius", name: "Arium Mini Plus", image: "/assets/images/productImages/Sotorius/arium-mini-plus-lab-water-purification-system.png", href: "/products/arium-mini-plus-lab-water-purification-system" },
+    { brand: "Being", name: "Chiller BR-05A", image: "/assets/images/PrincipalLogos/Being.svg", logo: true },
+    { brand: "Being", name: "Vacuum Oven DZF-6032", image: "/assets/images/events/pmec-2026-being-vacuum-oven.webp" },
+    { brand: "Inkarp USB", name: "Ultrasonic Bath", image: "/assets/images/productImages/inkarp/ultrasonic-bath.png", href: "/products/ultrasonic-bath" },
+    { brand: "Being", name: "20 L Rotary Evaporator RV-20A", image: "/assets/images/PrincipalLogos/Being.svg", logo: true },
+    { brand: "Being", name: "V65 Pump", image: "/assets/images/PrincipalLogos/Being.svg", logo: true },
+    { brand: "Implen", name: "NanoPhotometer N80", image: "/assets/images/productImages/Implen/nanophotometer-np80.jpg", href: "/products/nanophotometer-np80" },
+    { brand: "Anvajo", name: "Fluidlab R300" },
+    { brand: "Ametek Brookfield", name: "CTX Texture Analyzer", image: "/assets/images/productImages/Brookfield/ctx-text-analyzer.webp", href: "/products/ctx-texture-analyzer" },
+    { brand: "Ametek Brookfield", name: "DVNext Rheometer", image: "/assets/images/productImages/Brookfield/dvnext-rheometer.webp", href: "/products/dvnext-rheometer" },
+    { brand: "Ametek Brookfield", name: "DV2Plus Viscometer", image: "/assets/images/productImages/Brookfield/dv2plus-viscometer.webp", href: "/products/dv2plus-viscometer" },
+    { brand: "Advion Interchim Scientific", name: "puriFlash XS 530", image: "/assets/images/productImages/Advion/puriflash-xs-platform.jpg", href: "/products/puriflash-xs-530" },
+    { name: "Prep Tower 1000 ml" },
+    { brand: "ECOM", name: "DAC Column PC01 50/500", image: "/assets/images/productImages/Ecom/separchrom-pc01.webp", href: "/products/separchrom-dac-pc01-hplc-columns-with-axial-compression" },
   ],
 };
 

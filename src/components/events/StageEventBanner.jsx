@@ -15,8 +15,8 @@ import styles from "./StageEventBanner.module.css";
  * uncovered by a sweeping red block, in silver lettering) and the stall drops
  * onto the stage and settles; then it floats with a light sweeping across it
  * (animations: StageEventBanner.module.css). The text stays real text. The
- * dates, venue and stall sit on a pass (EventTicket), the show's logo above
- * the title once its file is set, and on wide screens the stall travels down
+ * dates, venue and stall sit on a pass (EventTicket), the show's logo stands
+ * in for its name in the title, and on wide screens the stall travels down
  * into the section below as the page scrolls (StallShowcase).
  * Data: `bannerEvent` in src/data/events.js.
  */
@@ -156,32 +156,36 @@ export default function StageEventBanner({ event }) {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-[2px] bg-red shadow-[0_0_20px_3px_rgba(190,0,16,0.75)]"
       />
 
-      <div className="relative mx-auto grid max-w-[1180px] items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-6 lg:px-8 lg:pb-16 lg:pt-14">
+      {/* The stall sits at the top of its column (not centred against the
+          taller text), so the whole stand is in view on the first screen. */}
+      <div className="relative mx-auto grid max-w-[1180px] items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-6 lg:px-8 lg:pb-14 lg:pt-10">
         <div className="min-w-0">
-          {/* The show's own logo, once its file is in place (bannerEvent.logo). */}
-          {event.logo ? (
-            <Image
-              alt={`${event.name} logo`}
-              className={`${styles.enter} mb-5 h-9 w-auto sm:h-10`}
-              height={event.logo.height}
-              priority
-              src={event.logo.src}
-              style={{ "--i": 0 }}
-              width={event.logo.width}
-            />
-          ) : null}
-
           {/* Each line slides in from the left in turn (--i is its place). */}
-          <p className={`${styles.enter} flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ff6b75]`} style={{ "--i": 0 }}>
-            <span aria-hidden="true" className="size-1.5 rounded-full bg-[#ff6b75] motion-safe:animate-pulse" />
+          {/* The lead-in ("Meet us at"), picked out as a glowing red tag. */}
+          <p className={`${styles.enter} inline-flex items-center gap-2 rounded-full bg-red px-3.5 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-[0_0_20px_rgba(190,0,16,0.55)]`} style={{ "--i": 0 }}>
+            <span aria-hidden="true" className="size-1.5 rounded-full bg-white motion-safe:animate-pulse" />
             {event.eyebrow}
           </p>
 
-          {/* Uncovered by a red block sweeping across; the name in silver. */}
+          {/* Uncovered by a red block sweeping across: the show's own logo in
+              place of its name (bannerEvent.logo; the name in silver if
+              there is none), then the year. */}
           <h1 className="mt-4 text-[40px] font-semibold leading-[1.02] tracking-tight sm:text-6xl">
             <span className={styles.reveal}>
-              <span className={styles.revealText}>
-                <span className={styles.silver}>{event.name}</span> <em className="italic text-red">{event.edition}</em>
+              <span className={`${styles.revealText} inline-flex items-end gap-3 sm:gap-4`}>
+                {event.logo ? (
+                  <Image
+                    alt={event.name}
+                    className="h-11 w-auto sm:h-[52px]"
+                    height={event.logo.height}
+                    priority
+                    src={event.logo.src}
+                    width={event.logo.width}
+                  />
+                ) : (
+                  <span className={styles.silver}>{event.name}</span>
+                )}{" "}
+                <em className="italic leading-[0.8] text-red">{event.edition}</em>
               </span>
             </span>
           </h1>
@@ -235,8 +239,9 @@ export default function StageEventBanner({ event }) {
             className={`${styles.landRing} pointer-events-none absolute inset-x-[12%] bottom-[16%] h-[13%] rounded-[50%] border-2 border-[#7fa8d1]/70`}
           />
           {/* data-stall-origin: where StallShowcase picks the stall up from as
-              the page scrolls (this wrapper itself never moves). */}
-          <div data-stall-origin="">
+              the page scrolls (this wrapper itself never moves). On short
+              screens it is kept small enough to fit under the header. */}
+          <div className="mx-auto lg:max-w-[calc((100vh_-_250px)*4/3)]" data-stall-origin="">
             <div className={styles.drop}>
               <div className={`${styles.float} relative`}>
                 <Image

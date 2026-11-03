@@ -2,8 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { FiArrowUpRight } from "react-icons/fi";
+import ShowcaseDeck from "./ShowcaseDeck";
 import styles from "./StallShowcase.module.css";
 
 /**
@@ -11,81 +10,18 @@ import styles from "./StallShowcase.module.css";
  * banner. On wide screens the stall from the banner comes down the screen as
  * the page scrolls, step for step with the scroll; when this section reaches
  * the top it holds still (sticky, over a runway of extra scroll) while the
- * stall settles into its centre and the product cards, gathered behind it,
- * split out to either side. Phones, tablets and reduced motion get the stall
- * in place and the cards listed under it.
+ * stall settles into its centre and the two decks of product cards
+ * (ShowcaseDeck), gathered behind it, split out to either side. Phones,
+ * tablets and reduced motion get the stall in place and one deck under it.
  * The banner marks its stall with `data-stall-origin` (StageEventBanner).
  * Data: `bannerEvent.displayProducts` in src/data/events.js.
  */
 
-// Left-hand and right-hand stacks: each card's angle and sideways offset.
-const LEFT_SET = [
-  { tilt: "-3deg", shift: "14px" },
-  { tilt: "2deg", shift: "-8px" },
-  { tilt: "-1.5deg", shift: "10px" },
-];
-const RIGHT_SET = [
-  { tilt: "3deg", shift: "-14px" },
-  { tilt: "-2deg", shift: "8px" },
-  { tilt: "1.5deg", shift: "-10px" },
-];
-
 const clamp = (value) => Math.min(1, Math.max(0, value));
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 const lerp = (from, to, t) => from + (to - from) * t;
-// The cards stay behind the stall until this share of the way down.
+// The decks stay behind the stall until this share of the way down.
 const CARDS_FROM = 0.62;
-
-function DisplayCard({ product, number }) {
-  const body = (
-    <>
-      <span className={styles.cardImage}>
-        <Image alt="" className="object-contain p-2" fill loading="eager" sizes="104px" src={product.image} />
-      </span>
-      <span className="flex min-w-0 flex-col justify-center py-3 pr-8">
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#457ca3]">{product.brand}</span>
-        <span className="mt-1 text-[14.5px] font-semibold leading-snug">{product.name}</span>
-        {product.href ? (
-          <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-red">
-            View product
-            <FiArrowUpRight aria-hidden="true" className="size-3.5" />
-          </span>
-        ) : null}
-      </span>
-      <span aria-hidden="true" className={styles.cardNo}>
-        {String(number).padStart(2, "0")}
-      </span>
-    </>
-  );
-
-  return product.href ? (
-    <Link className={styles.card} href={product.href}>
-      {body}
-    </Link>
-  ) : (
-    <div className={styles.card}>{body}</div>
-  );
-}
-
-function Stack({ products, set, start, cardRefs }) {
-  return (
-    <ul className={styles.stack}>
-      {products.map((product, i) => (
-        <li key={product.name} style={{ "--tilt": set[i % set.length].tilt, "--shift": set[i % set.length].shift }}>
-          {/* The script moves this wrapper (the li keeps the card's place). */}
-          <div
-            className={styles.flyer}
-            ref={(node) => {
-              cardRefs.current[start + i] = node;
-            }}
-          >
-            <DisplayCard number={start + i + 1} product={product} />
-          </div>
-        </li>
-      ))}
-    </ul>
-  );
-}
 
 export default function StallShowcase({ event }) {
   const products = event.displayProducts ?? [];
@@ -307,11 +243,11 @@ export default function StallShowcase({ event }) {
                 {event.hall} · Stall {event.stallNumber}
               </p>
               <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl" id="stall-showcase-title">
-                On display at {event.name} {event.edition}
+                {event.showcaseTitle ?? `On display at ${event.name} ${event.edition}`}
               </h2>
-              <p className="mt-3 text-base leading-relaxed text-white/70">
-                See these instruments working at our stand, and talk to our team about your application.
-              </p>
+              {event.showcaseIntro ? (
+                <p className="mt-3 text-base leading-relaxed text-white/70">{event.showcaseIntro}</p>
+              ) : null}
             </div>
 
             {/* The landing spot, between the two stacks on wide screens. */}
@@ -334,11 +270,31 @@ export default function StallShowcase({ event }) {
               </div>
             </div>
 
-            <div className="lg:col-start-1 lg:row-start-2">
-              <Stack cardRefs={cardRefs} products={products.slice(0, half)} set={LEFT_SET} start={0} />
+            {/* A deck either side of the stall on wide screens; the script
+                moves each deck's wrapper (its parent keeps the place). */}
+            <div className="hidden lg:col-start-1 lg:row-start-2 lg:block">
+              <div
+                className={styles.flyer}
+                ref={(node) => {
+                  cardRefs.current[0] = node;
+                }}
+              >
+                <ShowcaseDeck label="Products on show, first half" products={products.slice(0, half)} side="left" />
+              </div>
             </div>
-            <div className="lg:col-start-3 lg:row-start-2">
-              <Stack cardRefs={cardRefs} products={products.slice(half)} set={RIGHT_SET} start={half} />
+            <div className="hidden lg:col-start-3 lg:row-start-2 lg:block">
+              <div
+                className={styles.flyer}
+                ref={(node) => {
+                  cardRefs.current[1] = node;
+                }}
+              >
+                <ShowcaseDeck label="Products on show, second half" products={products.slice(half)} side="right" />
+              </div>
+            </div>
+            {/* Phones and tablets: one deck of them all, under the stall. */}
+            <div className="lg:hidden">
+              <ShowcaseDeck label="Products on show" products={products} />
             </div>
           </div>
         </div>

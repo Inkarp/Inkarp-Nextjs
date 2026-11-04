@@ -18,15 +18,15 @@ import styles from "./FlaskJourney.module.css";
 
 // The stops down the page, top to bottom: what the sample is in there
 // (VESSELS in JourneyFlask), its width (px) and how full it is (0–1). The
-// sample fills a little more at every stop, up to the volumetric flask's
-// mark at the end; the middle three stand for their sections.
+// sample fills a little more at every stop, to the brim at the end; the last
+// four stand for their sections.
 export const FLASK_STOPS = [
   { kind: "erlenmeyer", size: 64, level: 0.2 }, // About Inkarp (hero), under the 1985 badge
   { kind: "beaker", size: 48, level: 0.36 }, // the workflow wheel's centre
   { kind: "wrench", size: 56, level: 0.52 }, // Service support
   { kind: "pin", size: 52, level: 0.66 }, // standing on the principals globe
   { kind: "calendar", size: 56, level: 0.8 }, // Events & insights
-  { kind: "volumetric", size: 64, level: 1 }, // Client reviews: made up to the mark, glowing
+  { kind: "speech", size: 64, level: 1 }, // Client reviews: a full speech bubble, glowing
 ];
 
 export default function FlaskDock({ stop, name = "", className = "block" }) {

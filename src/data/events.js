@@ -1,3 +1,5 @@
+import { eventRegistration } from "./eventRegistration";
+
 const IMG = "/assets/images/events";
 const COLLAGE = "/assets/images/events/collages";
 
@@ -272,7 +274,8 @@ export const featuredEvent = {
  * PMEC India 2026 is the IEML half of CPHI & PMEC India: from 2026 the sister
  * show CPHI India runs at Yashobhoomi, Delhi (official FAQ, cphi.com/india).
  * Visitor registration was not yet open when this was added (2 Nov 2026), so
- * there is no Register button; add the URL to `registrationUrl` when it opens.
+ * there is no Register button; its link (and the floating "Register now"
+ * pill on the events pages) comes from ./eventRegistration.js: add it there.
  */
 export const bannerEvent = {
   eyebrow: "Meet us at",
@@ -284,14 +287,14 @@ export const bannerEvent = {
   stallNumber: "5F12",
   // Countdown target: doors-open on day one (opening hours not yet published).
   startsAt: "2026-11-24T10:00:00+05:30",
-  endsAt: "2026-11-26T18:00:00+05:30",
+  endsAt: eventRegistration.endsAt,
   // A line under the pass (StageEventBanner); none for now.
   summary: null,
   // Short, so they sit in one row under the stall.
   highlights: ["Live instrument demos", "Method discussions", "Service and support"],
   stallImage: `${IMG}/pmec-2026-stall.webp`,
   stallImageAlt: "Inkarp stall 5F12 at PMEC India 2026, with laboratory instruments on display",
-  registrationUrl: null,
+  registrationUrl: eventRegistration.url,
   // PMEC India's own logo above the title: the file the user supplied, turned
   // white (same shapes) to read on the dark banner. null = none.
   logo: { src: `${IMG}/pmec-india-logo-white.png`, width: 212, height: 46 },

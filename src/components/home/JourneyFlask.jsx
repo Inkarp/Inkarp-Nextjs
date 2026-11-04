@@ -5,8 +5,8 @@ import styles from "./FlaskJourney.module.css";
  * glass icons drawn alike in a 120 × 130 box, each standing on the same base
  * line (y 126) so they share the same stand: the Erlenmeyer flask of the
  * opening animation (LabIntro), a beaker, a wrench (service), a map pin
- * (location), a calendar (events) and a volumetric flask (FLASK_STOPS in
- * FlaskDock).
+ * (location), a calendar (events) and a speech bubble (testimonials)
+ * (FLASK_STOPS in FlaskDock).
  * How full a vessel is comes from the CSS number `--flask-fill` (0 empty, 1
  * up to its `range`) and the tilt of its surface from `--flask-slosh`, both
  * set by whoever holds it (FlaskDock or the travelling flask). `uid` keeps
@@ -14,9 +14,9 @@ import styles from "./FlaskJourney.module.css";
  */
 
 // For each: its inside (`body`, which also clips the liquid; `evenodd` when
-// it has a hole), the drawn outline, its fine lines (graduations, dates, the
-// calibration ring), the highlight down the glass, any solid glass (`solid`:
-// a stopper), a `transform` for the drawing (not the liquid, which stays
+// it has a hole), the drawn outline, its fine lines (graduations, dates), the
+// highlight down the glass, any bold white marks (`quote`), any solid glass
+// (`solid`), a `transform` for the drawing (not the liquid, which stays
 // level), where the liquid's surface sits when empty (`bottom`) and how far
 // it rises when full (`range`), and where its bubbles rise (x).
 export const VESSELS = {
@@ -71,16 +71,17 @@ export const VESSELS = {
     range: 72,
     bubbles: [36, 82, 58, 30, 90, 46, 70],
   },
-  volumetric: {
-    body: "M54 12V72.7A27 27 0 1 0 66 72.7V12Z",
-    outline: "M50 12H70M54 12V72.7A27 27 0 1 0 66 72.7V12",
-    // The stopper, and the calibration ring it is filled to.
-    solid: "M52 12V6Q52 3 55 3H65Q68 3 68 6V12Z",
-    marks: "M51 34H69",
-    glint: "M42 88Q38 99 42 110",
+  // Testimonials: a speech bubble, its tail standing on the stand, with
+  // quotation marks that show white once the sample has filled it.
+  speech: {
+    body: "M28 20H92Q108 20 108 36V82Q108 98 92 98H54L28 126L34 98H28Q12 98 12 82V36Q12 20 28 20Z",
+    outline: "M28 20H92Q108 20 108 36V82Q108 98 92 98H54L28 126L34 98H28Q12 98 12 82V36Q12 20 28 20Z",
+    marks: "",
+    glint: "M20 40V72",
+    quote: "M46 44Q50 62 37 74M76 44Q80 62 67 74",
     bottom: 126,
-    range: 92,
-    bubbles: [52, 68, 60, 44, 76, 56, 64],
+    range: 106,
+    bubbles: [30, 86, 58, 22, 96, 44, 72],
   },
 };
 
@@ -166,6 +167,7 @@ export default function JourneyFlask({ uid, kind = "erlenmeyer" }) {
       <g transform={vessel.transform}>
         {vessel.marks ? <path className={styles.marks} d={vessel.marks} /> : null}
         <path className={styles.glint} d={vessel.glint} />
+        {vessel.quote ? <path className={styles.quote} d={vessel.quote} /> : null}
         {vessel.solid ? <path className={styles.outline} d={vessel.solid} /> : null}
         <path className={styles.outline} d={vessel.outline} />
       </g>

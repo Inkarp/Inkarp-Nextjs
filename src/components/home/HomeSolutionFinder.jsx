@@ -1,16 +1,24 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname, useRouter } from "next/navigation";
-import { FiArrowRight, FiBriefcase, FiMail, FiMapPin, FiTarget, FiX } from "react-icons/fi";
+import { FiArrowRight, FiArrowUpRight, FiBriefcase, FiCalendar, FiMail, FiMapPin, FiTarget, FiX } from "react-icons/fi";
 import { HiSparkles } from "react-icons/hi2";
 import FinderOptionCombobox from "@/components/solution-finder/FinderOptionCombobox";
+import { eventRegistration, registrationOpen } from "@/data/eventRegistration";
 import { pushEvent } from "@/lib/analytics";
 import { finderPlacement, finderPrefillForPath } from "@/lib/finderPlacement";
 
 const PAYLOAD_KEY = "inkarp:solution-finder-payload";
 const EMAIL_PATTERN = /^\S+@\S+\.\S+$/;
 const GRADIENT = "bg-[linear-gradient(110deg,#7c3aed,#c026d3_55%,#ec4899)]";
+const EVENTS_PAGE = /^\/events(-preview)?(\/|$)/;
+// Whether registration is open is a matter of the visitor's clock, so the
+// server leaves the events pages' pill out ("pending") and the browser
+// decides; nothing to subscribe to (the show's end only matters on a load).
+const noSubscription = () => () => {};
+const registerChoice = () => (registrationOpen() ? "register" : "finder");
+const registerChoiceOnServer = () => "pending";
 const UNIVERSE_BACKGROUND = "bg-[radial-gradient(circle_at_12%_20%,rgba(168,85,247,.34),transparent_26%),radial-gradient(circle_at_88%_75%,rgba(236,72,153,.26),transparent_28%),linear-gradient(110deg,#100822_0%,#24114a_48%,#0d1938_100%)]";
 const FIELD_SHELL = "flex h-12 items-center rounded-full bg-white/15 px-4 shadow-[inset_0_1px_0_rgba(255,255,255,.18),0_6px_18px_rgba(8,4,24,.16)] ring-1 ring-white/15 backdrop-blur-md transition focus-within:bg-white/22 focus-within:ring-2 focus-within:ring-fuchsia-300/70";
 const INPUT_CLASS = "min-w-0 flex-1 bg-transparent text-sm font-semibold text-white caret-fuchsia-200 outline-none placeholder:font-medium placeholder:text-white/60";
@@ -62,6 +70,11 @@ export default function HomeSolutionFinder() {
   // products, so it stays on every page it belongs to.
   const showStripe = placement === "stripe";
   const showLauncher = placement !== "none";
+  // On the events pages, while registration for the show is open, the pill
+  // invites visitors to register instead; after the show it is the finder's
+  // again (eventRegistration).
+  const pill = useSyncExternalStore(noSubscription, registerChoice, registerChoiceOnServer);
+  const onEventsPage = EVENTS_PAGE.test(pathname) && Boolean(eventRegistration.url);
 
   const stripeRef = useRef(null);
   const institutionRef = useRef(null);
@@ -375,7 +388,23 @@ export default function HomeSolutionFinder() {
     </div>
   ) : null;
 
-  const launcher = showLauncher && !dialog ? (
+  const registerPill = onEventsPage && pill === "register" ? (
+    <a
+      className="fixed bottom-4 left-1/2 z-40 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-[linear-gradient(110deg,#99000d,#be0010_45%,#e3262f)] px-5 py-3 text-sm font-bold text-white shadow-[0_18px_50px_rgba(190,0,16,0.38)] ring-1 ring-white/20 transition hover:-translate-y-0.5 print:hidden"
+      data-floating-widget
+      href={eventRegistration.url}
+      onClick={() => pushEvent("event_register_click", { page: pathname, event: eventRegistration.name })}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <FiCalendar className="animate-pulse" />
+      <span className="lg:hidden">Register now</span>
+      <span className="hidden lg:inline">Register now for {eventRegistration.name}</span>
+      <FiArrowUpRight />
+    </a>
+  ) : null;
+
+  const launcher = showLauncher && !dialog && !(onEventsPage && pill !== "finder") ? (
     <button
       className={`fixed bottom-4 left-1/2 z-40 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full px-5 py-3 text-sm font-bold text-white shadow-[0_18px_50px_rgba(126,34,206,0.42)] ring-1 ring-white/20 print:hidden ${GRADIENT} ${placement === "launcher" || !stripeInView ? "" : "lg:hidden"}`}
       data-finder-launcher
@@ -411,7 +440,7 @@ export default function HomeSolutionFinder() {
   return (
     <>
       {stripe}
-      {launcher}
+      {registerPill ?? launcher}
       {finderDialog}
     </>
   );

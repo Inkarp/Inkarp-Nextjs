@@ -61,6 +61,14 @@
   opacity: 0.85;
 }
 
+/* Quotation marks (the speech bubble's): bold and white, so they show once
+   the red sample is behind them. */
+.quote {
+  stroke: #fff;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
 .outline {
   stroke: #1c1c1e;
   stroke-width: 3.2;

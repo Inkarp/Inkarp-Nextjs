@@ -1,0 +1,239 @@
+/* EventsTimeline: see EventsTimeline.jsx. The line runs down a gutter on the
+   left (--gutter wide, the line at --line); each year's marker stays in view
+   while its events pass; each event hangs off the line by a node. */
+
+.timeline {
+  --gutter: 46px;
+  --line: 18px;
+  position: relative;
+  margin-top: 48px;
+  padding-left: var(--gutter);
+}
+
+@media (min-width: 768px) {
+  .timeline {
+    --gutter: 124px;
+    --line: 62px;
+  }
+}
+
+/* The line: red where the newest events are, fading down the years. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 40px;
+  left: var(--line);
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, #be0010 0%, rgb(190 0 16 / 0.45) 35%, rgb(0 30 54 / 0.14) 100%);
+}
+
+.year {
+  position: relative;
+  padding-bottom: 44px;
+  scroll-margin-top: 120px;
+}
+
+/* The year, on the line, held in view (under the site header) while the
+   year's events scroll past. */
+.yearMarker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--line) - var(--gutter));
+  width: 0;
+}
+
+.yearPill {
+  position: sticky;
+  top: calc(var(--header-offset, 80px) + 16px);
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: #001e36;
+  box-shadow: 0 0 0 5px #fff;
+  color: #fff;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transform: translateX(-50%);
+}
+
+.item {
+  position: relative;
+}
+
+/* The node on the line and a short arm across to the card. */
+.node {
+  position: absolute;
+  top: 30px;
+  left: calc(var(--line) - var(--gutter));
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border: 2px solid rgb(190 0 16 / 0.45);
+  border-radius: 50%;
+  background: #fff;
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.node::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  width: calc(var(--gutter) - var(--line) - 12px);
+  height: 2px;
+  background: rgb(190 0 16 / 0.22);
+}
+
+.item:hover .node,
+.item:focus-within .node {
+  border-color: #be0010;
+  background: #be0010;
+  box-shadow: 0 0 0 5px rgb(190 0 16 / 0.12);
+}
+
+/* The card: the poster, then the details. The whole card opens the event
+   (a button laid over it); its own buttons sit above that. */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid rgb(0 30 54 / 0.08);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgb(0 30 54 / 0.06);
+  transition:
+    transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease,
+    opacity 650ms ease var(--d, 0ms),
+    translate 650ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms);
+}
+
+@media (min-width: 640px) {
+  .card {
+    grid-template-columns: 148px minmax(0, 1fr);
+    gap: 22px;
+    padding: 14px;
+  }
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: rgb(190 0 16 / 0.32);
+  box-shadow: 0 18px 40px rgb(0 30 54 / 0.12);
+  transform: translateY(-3px);
+}
+
+.cardButton {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.cardButton:focus-visible {
+  outline: 2px solid #be0010;
+  outline-offset: 2px;
+}
+
+.poster {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f2f4f7;
+}
+
+/* Sliding in from the line as they come into view. */
+.timeline[data-ready] .card:not([data-in]) {
+  opacity: 0;
+  translate: -28px 0;
+}
+
+/* Wide screens: the line down the middle, the cards taking turns either
+   side of it, each pair overlapping a little so they read as a zigzag. */
+@media (min-width: 1024px) {
+  .timeline {
+    --gutter: 0px;
+    --line: 50%;
+    --gap: 46px;
+  }
+
+  .year > ol {
+    padding-top: 52px;
+  }
+
+  .yearMarker {
+    left: 50%;
+  }
+
+  .item {
+    width: calc(50% - var(--gap));
+  }
+
+  .item:nth-child(even) {
+    margin-left: auto;
+  }
+
+  .item + .item {
+    margin-top: -64px;
+  }
+
+  .node {
+    left: auto;
+  }
+
+  .item:nth-child(odd) .node {
+    right: calc(-1 * var(--gap));
+  }
+
+  .item:nth-child(even) .node {
+    left: calc(-1 * var(--gap));
+  }
+
+  .node::after {
+    width: calc(var(--gap) - 12px);
+  }
+
+  .item:nth-child(odd) .node::after {
+    right: 10px;
+    left: auto;
+  }
+
+  .item:nth-child(odd) .node {
+    margin-right: -6px;
+    margin-left: 0;
+  }
+
+  .timeline[data-ready] .item:nth-child(even) .card:not([data-in]) {
+    translate: 28px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .timeline[data-ready] .card:not([data-in]) {
+    opacity: 1;
+    translate: none;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: none;
+  }
+}

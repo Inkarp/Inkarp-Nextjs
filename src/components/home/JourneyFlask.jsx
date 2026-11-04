@@ -1,22 +1,24 @@
 import styles from "./FlaskJourney.module.css";
 
 /**
- * The glassware that carries the sample down the homepage
- * (FlaskJourney): six vessels drawn alike in a 120 × 130 box, each standing
- * on the same base line (y 126) so they share the same stand. The first is
- * the Erlenmeyer flask of the opening animation (LabIntro).
+ * What carries the sample down the homepage (FlaskJourney): glassware and
+ * glass icons drawn alike in a 120 × 130 box, each standing on the same base
+ * line (y 126) so they share the same stand: the Erlenmeyer flask of the
+ * opening animation (LabIntro), a beaker, a wrench (service), a map pin
+ * (location), a calendar (events) and a volumetric flask (FLASK_STOPS in
+ * FlaskDock).
  * How full a vessel is comes from the CSS number `--flask-fill` (0 empty, 1
  * up to its `range`) and the tilt of its surface from `--flask-slosh`, both
  * set by whoever holds it (FlaskDock or the travelling flask). `uid` keeps
  * the gradient and clip ids of each copy apart.
  */
 
-// For each vessel: its inside (`body`, which also clips the liquid), the
-// drawn outline, its fine lines (graduations, a ground-glass joint, the
-// calibration ring), the highlight down the glass, any solid glass
-// (`solid`: a foot, a stopper), where the liquid's surface sits when empty
-// (`bottom`) and how far it rises when full (`range`), and where its bubbles
-// rise (x across the inside).
+// For each: its inside (`body`, which also clips the liquid; `evenodd` when
+// it has a hole), the drawn outline, its fine lines (graduations, dates, the
+// calibration ring), the highlight down the glass, any solid glass (`solid`:
+// a stopper), a `transform` for the drawing (not the liquid, which stays
+// level), where the liquid's surface sits when empty (`bottom`) and how far
+// it rises when full (`range`), and where its bubbles rise (x).
 export const VESSELS = {
   erlenmeyer: {
     body: "M47 12V50L15 110Q10 124 25 126H95Q110 124 105 110L73 50V12Z",
@@ -36,34 +38,38 @@ export const VESSELS = {
     range: 86,
     bubbles: [50, 72, 61, 40, 80, 55, 67],
   },
-  testTube: {
-    body: "M46 12V112A14 14 0 0 0 74 112V12Z",
-    outline: "M42 12H78M46 12V112A14 14 0 0 0 74 112V12",
+  // Service: a wrench, drawn upright and tipped over like the usual icon
+  // (the liquid stays level inside it).
+  wrench: {
+    body: "M52 56.5V116A8 8 0 0 0 68 116V56.5A22 22 0 0 0 67 15.1V30A7 7 0 0 1 53 30V15.1A22 22 0 0 0 52 56.5Z",
+    outline: "M52 56.5V116A8 8 0 0 0 68 116V56.5A22 22 0 0 0 67 15.1V30A7 7 0 0 1 53 30V15.1A22 22 0 0 0 52 56.5Z",
     marks: "",
-    glint: "M52 26V104",
+    glint: "M56.5 64V106",
+    transform: "translate(0 12) rotate(40 60 70)",
     bottom: 126,
-    range: 104,
-    bubbles: [56, 65, 60, 52, 68, 57, 63],
+    range: 91,
+    bubbles: [42, 50, 46, 38, 54, 44, 48],
   },
-  roundBottom: {
-    body: "M52 12V63A32 32 0 1 0 68 63V12Z",
-    outline: "M48 12H72M52 12V63A32 32 0 1 0 68 63V12",
-    // The ground-glass joint at the top of the neck.
-    marks: "M52 19H68M52 25H68",
-    glint: "M39 80Q34 92 37 105",
+  // Location: a map pin, its hole left clear, standing on its point.
+  pin: {
+    body: "M60 126C52 112 26 88 26 56A34 34 0 0 1 94 56C94 88 68 112 60 126ZM73 56A13 13 0 1 0 47 56A13 13 0 1 0 73 56Z",
+    outline: "M60 126C52 112 26 88 26 56A34 34 0 0 1 94 56C94 88 68 112 60 126ZM73 56A13 13 0 1 0 47 56A13 13 0 1 0 73 56Z",
+    marks: "",
+    glint: "M35 50Q37 35 49 28",
+    evenodd: true,
     bottom: 126,
-    range: 60,
-    bubbles: [50, 70, 60, 42, 78, 55, 65],
+    range: 102,
+    bubbles: [44, 74, 58, 36, 82, 50, 66],
   },
-  cylinder: {
-    body: "M46 14V119H74V14Z",
-    outline: "M41 11Q45 12 46 16V119M74 119V13H78",
-    solid: "M32 126H88L83 119H37Z",
-    marks: "M50 28h9M50 40h5M50 52h9M50 64h5M50 76h9M50 88h5M50 100h9M50 112h5",
-    glint: "M69 24V110",
-    bottom: 119,
-    range: 101,
-    bubbles: [56, 66, 61, 52, 70, 58, 64],
+  // Events: a calendar page, with its rings, header and dates.
+  calendar: {
+    body: "M28 30H92Q102 30 102 40V116Q102 126 92 126H28Q18 126 18 116V40Q18 30 28 30Z",
+    outline: "M28 30H92Q102 30 102 40V116Q102 126 92 126H28Q18 126 18 116V40Q18 30 28 30ZM18 52H102M40 18V40M80 18V40",
+    marks: "M32 70h10M55 70h10M78 70h10M32 88h10M55 88h10M78 88h10M32 106h10M55 106h10",
+    glint: "M25 62V112",
+    bottom: 126,
+    range: 72,
+    bubbles: [36, 82, 58, 30, 90, 46, 70],
   },
   volumetric: {
     body: "M54 12V72.7A27 27 0 1 0 66 72.7V12Z",
@@ -107,6 +113,7 @@ function Bubble({ bubble, x, bottom }) {
 export default function JourneyFlask({ uid, kind = "erlenmeyer" }) {
   const vessel = VESSELS[kind] ?? VESSELS.erlenmeyer;
   const { bottom } = vessel;
+  const rule = vessel.evenodd ? "evenodd" : undefined;
   const inside = `${uid}-inside`;
   const liquid = `${uid}-liquid`;
   const glass = `${uid}-glass`;
@@ -118,7 +125,7 @@ export default function JourneyFlask({ uid, kind = "erlenmeyer" }) {
     <svg aria-hidden="true" className={styles.flask} fill="none" focusable="false" viewBox="0 2 120 130">
       <defs>
         <clipPath id={inside}>
-          <path d={vessel.body} />
+          <path clipRule={rule} d={vessel.body} transform={vessel.transform} />
         </clipPath>
         <linearGradient id={liquid} x1="0" x2="0" y1="0" y2="1">
           <stop offset="0" stopColor="#e3262f" />
@@ -132,8 +139,10 @@ export default function JourneyFlask({ uid, kind = "erlenmeyer" }) {
         </linearGradient>
       </defs>
 
-      <path d={vessel.body} fill={`url(#${glass})`} />
-      {vessel.solid ? <path d={vessel.solid} fill={`url(#${glass})`} /> : null}
+      <g transform={vessel.transform}>
+        <path d={vessel.body} fill={`url(#${glass})`} fillRule={rule} />
+        {vessel.solid ? <path d={vessel.solid} fill={`url(#${glass})`} /> : null}
+      </g>
       <g clipPath={`url(#${inside})`}>
         {/* The liquid: lifted by the fill, tipped by the slosh about its own
             surface. Wide and deep enough to cover the inside whichever way
@@ -154,10 +163,12 @@ export default function JourneyFlask({ uid, kind = "erlenmeyer" }) {
           </g>
         </g>
       </g>
-      {vessel.marks ? <path className={styles.marks} d={vessel.marks} /> : null}
-      <path className={styles.glint} d={vessel.glint} />
-      {vessel.solid ? <path className={styles.outline} d={vessel.solid} /> : null}
-      <path className={styles.outline} d={vessel.outline} />
+      <g transform={vessel.transform}>
+        {vessel.marks ? <path className={styles.marks} d={vessel.marks} /> : null}
+        <path className={styles.glint} d={vessel.glint} />
+        {vessel.solid ? <path className={styles.outline} d={vessel.solid} /> : null}
+        <path className={styles.outline} d={vessel.outline} />
+      </g>
     </svg>
   );
 }

@@ -304,27 +304,9 @@
   will-change: transform, opacity;
 }
 
-/* ── The hero's scroll cue ─────────────────────────── */
-.cueArrow {
-  animation: flask-cue 1.8s ease-in-out infinite;
-}
-
-@keyframes flask-cue {
-  0%,
-  100% {
-    transform: translateY(-1px);
-    opacity: 0.55;
-  }
-  50% {
-    transform: translateY(3px);
-    opacity: 1;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .wave,
   .bubble,
-  .cueArrow,
   .dockFlask[data-flask-enter],
   .padRing::after {
     animation: none !important;

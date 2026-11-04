@@ -8,6 +8,9 @@ import EmptyStateIcon from"@/components/common/EmptyStateIcon";
 import RecTag from"@/components/home/RecTag";
 import StageEventBanner from"@/components/events/StageEventBanner";
 import StallShowcase from"@/components/events/StallShowcase";
+import EventsTimeline from"@/components/events/EventsTimeline";
+import EventsWall from"@/components/events/EventsWall";
+import EventsYearRows from"@/components/events/EventsYearRows";
 import { bannerEvent, events, eventYears, featuredEvent, isPastEvent } from"@/data/events";
 
 // Cropped from the official analytica banner artwork (public/analyticaLogo.jpg) —
@@ -316,7 +319,10 @@ function LabCard({ title, image, collageImage, date, formLink }) {
   );
 }
 
-export default function EventsPage() {
+// `list`: how the events below the show are laid out: "grid" (the posters
+// with month and year filters), "timeline", "wall" or "rows" (EventsTimeline,
+// EventsWall, EventsYearRows; previewed on /events-preview/*).
+export default function EventsPage({ list = "grid" }) {
   const [filterMonth, setFilterMonth] = useState("");
   const [filterYear, setFilterYear] = useState("");
   const [upcomingOnly, setUpcomingOnly] = useState(false);
@@ -347,74 +353,82 @@ export default function EventsPage() {
       {/* What is on show at that stall; the stall travels down into it. */}
       {bannerEvent ? <StallShowcase event={bannerEvent} /> : null}
 
-      <div
-        className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 border border-line-light bg-parchment-alt py-8 sm:flex-row"
-        id="events-list"
-      >
-        <div className="flex w-full flex-col items-center gap-3 px-3 sm:w-auto sm:flex-row sm:gap-5">
-          <label className="min-w-[80px] text-lg font-semibold text-ink">Month</label>
-          <select
-            className="w-full border border-line-light bg-parchment px-4 py-2 text-sm outline-none transition focus:border-red focus:ring-2 focus:ring-red/40 sm:w-44"
-            onChange={(event) => setFilterMonth(event.target.value)}
-            value={filterMonth}
+      {list === "timeline" ? <EventsTimeline /> : null}
+      {list === "wall" ? <EventsWall /> : null}
+      {list === "rows" ? <EventsYearRows /> : null}
+
+      {list === "grid" ? (
+        <>
+          <div
+            className="mx-auto mt-6 flex w-[95%] flex-col flex-wrap items-center justify-around gap-6 border border-line-light bg-parchment-alt py-8 sm:flex-row"
+            id="events-list"
           >
-            <option value="">All Months</option>
-            {Array.from({ length: 12 }, (_, i) => (
-              <option key={i} value={i + 1}>
-                {new Date(0, i).toLocaleString("default", { month:"long" })}
-              </option>
-            ))}
-          </select>
-        </div>
+            <div className="flex w-full flex-col items-center gap-3 px-3 sm:w-auto sm:flex-row sm:gap-5">
+              <label className="min-w-[80px] text-lg font-semibold text-ink">Month</label>
+              <select
+                className="w-full border border-line-light bg-parchment px-4 py-2 text-sm outline-none transition focus:border-red focus:ring-2 focus:ring-red/40 sm:w-44"
+                onChange={(event) => setFilterMonth(event.target.value)}
+                value={filterMonth}
+              >
+                <option value="">All Months</option>
+                {Array.from({ length: 12 }, (_, i) => (
+                  <option key={i} value={i + 1}>
+                    {new Date(0, i).toLocaleString("default", { month:"long" })}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <div className="flex w-full flex-col items-center gap-3 px-3 sm:w-auto sm:flex-row sm:gap-5">
-          <label className="min-w-[80px] text-lg font-semibold text-ink">Year</label>
-          <select
-            className="w-full border border-line-light bg-parchment px-4 py-2 text-sm outline-none transition focus:border-red focus:ring-2 focus:ring-red/40 sm:w-36"
-            onChange={(event) => setFilterYear(event.target.value)}
-            value={filterYear}
-          >
-            <option value="">All Years</option>
-            {eventYears.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </div>
+            <div className="flex w-full flex-col items-center gap-3 px-3 sm:w-auto sm:flex-row sm:gap-5">
+              <label className="min-w-[80px] text-lg font-semibold text-ink">Year</label>
+              <select
+                className="w-full border border-line-light bg-parchment px-4 py-2 text-sm outline-none transition focus:border-red focus:ring-2 focus:ring-red/40 sm:w-36"
+                onChange={(event) => setFilterYear(event.target.value)}
+                value={filterYear}
+              >
+                <option value="">All Years</option>
+                {eventYears.map((year) => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <div className="flex w-full select-none items-center gap-3 px-5 sm:w-auto">
-          <input
-            checked={upcomingOnly}
-            className="size-5 border border-line-light accent-red outline-none transition focus:ring-2 focus:ring-red/40"
-            id="upcoming"
-            onChange={() => setUpcomingOnly((current) => !current)}
-            type="checkbox"
-          />
-          <label className="cursor-pointer text-lg font-semibold text-ink" htmlFor="upcoming">
-            Upcoming Only
-          </label>
-        </div>
+            <div className="flex w-full select-none items-center gap-3 px-5 sm:w-auto">
+              <input
+                checked={upcomingOnly}
+                className="size-5 border border-line-light accent-red outline-none transition focus:ring-2 focus:ring-red/40"
+                id="upcoming"
+                onChange={() => setUpcomingOnly((current) => !current)}
+                type="checkbox"
+              />
+              <label className="cursor-pointer text-lg font-semibold text-ink" htmlFor="upcoming">
+                Upcoming Only
+              </label>
+            </div>
 
-        <button
-          className="w-full bg-rose-50 px-5 py-2 font-semibold text-rose-700 transition-transform active:scale-95 sm:w-auto"
-          onClick={resetFilters}
-          type="button"
-        >
-          Reset Filters
-        </button>
-      </div>
-
-      <div className="grid grid-cols-1 items-stretch gap-3 px-2 py-4 sm:grid-cols-2 sm:gap-4 sm:px-4 md:px-6 lg:grid-cols-2 lg:px-10 xl:grid-cols-3">
-        {filteredEvents.length === 0 ? (
-          <div className="col-span-full py-8 text-center text-ink-soft">
-            <EmptyStateIcon icon={LuMicroscope} />
-            <p className="text-sm sm:text-base">No events found for selected filters.</p>
+            <button
+              className="w-full bg-rose-50 px-5 py-2 font-semibold text-rose-700 transition-transform active:scale-95 sm:w-auto"
+              onClick={resetFilters}
+              type="button"
+            >
+              Reset Filters
+            </button>
           </div>
-        ) : (
-          filteredEvents.map((event) => <LabCard key={event.id} {...event} />)
-        )}
-      </div>
+
+          <div className="grid grid-cols-1 items-stretch gap-3 px-2 py-4 sm:grid-cols-2 sm:gap-4 sm:px-4 md:px-6 lg:grid-cols-2 lg:px-10 xl:grid-cols-3">
+            {filteredEvents.length === 0 ? (
+              <div className="col-span-full py-8 text-center text-ink-soft">
+                <EmptyStateIcon icon={LuMicroscope} />
+                <p className="text-sm sm:text-base">No events found for selected filters.</p>
+              </div>
+            ) : (
+              filteredEvents.map((event) => <LabCard key={event.id} {...event} />)
+            )}
+          </div>
+        </>
+      ) : null}
     </main>
   );
 }

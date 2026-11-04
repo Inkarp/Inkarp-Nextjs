@@ -3,12 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FiActivity, FiArrowDown, FiArrowRight, FiCalendar, FiCheck, FiCpu, FiDroplet, FiMapPin, FiSearch } from "react-icons/fi";
+import { FiActivity, FiArrowRight, FiCalendar, FiCheck, FiCpu, FiDroplet, FiMapPin, FiSearch } from "react-icons/fi";
 import { FaDna, FaFlask } from "react-icons/fa6";
 import { HiSparkles } from "react-icons/hi2";
 import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
-import flaskStyles from "./FlaskJourney.module.css";
 import { featuredEvent } from "@/data/events";
 
 const AUTO_ROTATE_MS = 3000;
@@ -262,7 +261,8 @@ function SlideWorkflow() {
 */
 
 // `flask`: the homepage's first landing spot for its travelling sample
-// (FlaskJourney), with a scroll cue beside it.
+// (FlaskJourney): on wide screens in the space under the 1985 badge, on
+// narrower ones under the intro.
 function SlideAbout({ flask = false }) {
   return (
     <div className="bg-white px-4 pb-8 pt-5 sm:px-6 lg:px-8">
@@ -273,7 +273,7 @@ function SlideAbout({ flask = false }) {
                 heading's lower lines run full width beneath it. From sm the
                 badge leads the row. */}
             <div className="mb-4 flow-root sm:mb-6 sm:flex sm:items-start sm:gap-6">
-              <div className="relative float-right mb-1 ml-3 flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:float-none sm:mb-0 sm:ml-0 sm:h-[104px] sm:w-[104px]" data-line-origin="">
+              <div className="relative float-right mb-1 ml-3 flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border-[1.5px] border-red text-center text-red sm:float-none sm:mb-0 sm:ml-0 sm:h-[104px] sm:w-[104px]">
                 {/* The dashed ring turns slowly; its dot rides on the outer circle. */}
                 <div aria-hidden="true" className="absolute inset-2 rounded-full border border-dashed border-red/40 motion-safe:animate-[hvc-spin_24s_linear_infinite]">
                   <span className="absolute -top-[13px] left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-red ring-2 ring-white" />
@@ -283,6 +283,13 @@ function SlideAbout({ flask = false }) {
                 <span className="relative mt-1.5 text-[7.5px] uppercase leading-tight tracking-[0.1em] sm:text-[8.5px] sm:tracking-[0.06em]">
                   Est. &amp;<br className="sm:hidden" /> Trusted
                 </span>
+                {/* Wide screens: the first stop, under the badge, beside the
+                    heading's lower lines (there it always runs to 3+ lines). */}
+                {flask ? (
+                  <span aria-hidden="true" className="absolute left-1/2 top-[calc(100%+10px)] hidden -translate-x-1/2 lg:block">
+                    <FlaskDock name="-badge" stop={0} />
+                  </span>
+                ) : null}
               </div>
               <div className="sm:min-w-0 sm:flex-1">
                 <RecTag>About Inkarp</RecTag>
@@ -303,15 +310,7 @@ function SlideAbout({ flask = false }) {
             </p>
 
             {flask ? (
-              <div aria-hidden="true" className="mt-6 flex items-end gap-4 sm:mt-3">
-                <FlaskDock stop={0} />
-                <span className="mb-2 inline-flex items-center gap-2.5 font-mono text-[10.5px] font-semibold uppercase tracking-[0.2em] text-ink-soft">
-                  <span className="h-px w-7 bg-red/60" />
-                  <span className="hidden lg:inline">Scroll to follow the sample</span>
-                  <span className="lg:hidden">Scroll to explore</span>
-                  <FiArrowDown className={`${flaskStyles.cueArrow} size-3.5 text-red`} />
-                </span>
-              </div>
+              <FlaskDock className="mt-6 block sm:mt-3 lg:hidden" stop={0} />
             ) : null}
 
           </div>

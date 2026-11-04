@@ -6,7 +6,7 @@ import styles from "./FlaskJourney.module.css";
 
 /**
  * The sample that travels down the homepage. Each section there has
- * a landing spot (FlaskDock) with its own piece of glassware. On wide screens
+ * a landing spot (FlaskDock) with its own glassware or glass icon. On wide screens
  * one traveller, fixed to the screen, carries the sample from spot to spot
  * step for step with the scroll: it rests in a spot while that spot passes
  * the middle of the screen, lifts off, glides down to the next spot as it
@@ -341,7 +341,10 @@ export default function FlaskJourney() {
     const begin = () => {
       const running = introPlaying() || !canTravel()
         ? []
-        : (document.querySelector("[data-flask-enter]")?.getAnimations?.() ?? []).filter((a) => a.playState !== "finished");
+        : Array.from(document.querySelectorAll("[data-flask-enter]"))
+            .filter((el) => el.offsetWidth)
+            .flatMap((el) => el.getAnimations?.() ?? [])
+            .filter((a) => a.playState !== "finished");
       if (running.length && window.scrollY > vh * 0.5) running.forEach((animation) => animation.finish());
       if (!running.length || window.scrollY > vh * 0.5) {
         decide();
@@ -369,6 +372,12 @@ export default function FlaskJourney() {
       stale = true;
       request();
     };
+    // The site header grows back as the page returns to the top, and its
+    // spacer (and the principals section, sized to the header) with it
+    // (--header-spacer, --header-offset on <html>): the page moves without
+    // changing its height, so the observer above sees nothing. Measure again.
+    const restyled = new MutationObserver(remeasure);
+    restyled.observe(root, { attributeFilter: ["style"], attributes: true });
     const modeChange = () => {
       stale = true;
       decide();
@@ -386,6 +395,7 @@ export default function FlaskJourney() {
       delete root.dataset.flaskWait;
       watcher.disconnect();
       resized.disconnect();
+      restyled.disconnect();
       if (hurry) window.removeEventListener("scroll", hurry);
       window.removeEventListener("scroll", request);
       window.removeEventListener("resize", remeasure);

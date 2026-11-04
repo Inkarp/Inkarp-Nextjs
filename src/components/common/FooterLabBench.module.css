@@ -1,0 +1,109 @@
+/* FooterLabBench: see FooterLabBench.jsx (the light: BenchCycle.jsx). The
+   instruments stand on one bench line; each item's display comes from its
+   own classes (some show only on wider screens). */
+
+.bench {
+  position: relative;
+  padding: 26px 16px 0;
+}
+
+.shelf {
+  position: relative;
+  display: flex;
+  max-width: 80rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+/* The bench top, and its faint shadow, under the instruments' feet. */
+.shelf::before,
+.shelf::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.shelf::after {
+  bottom: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(22 22 22 / 0.18);
+}
+
+.shelf::before {
+  bottom: 18px;
+  height: 10px;
+  background: linear-gradient(rgb(22 22 22 / 0.06), transparent);
+}
+
+.item {
+  flex-direction: column;
+  align-items: center;
+  width: 84px;
+}
+
+/* The drawing, sat so its feet (about 15% up its box) meet the bench. Its
+   resting parts (those without a class: the lit one has the drawings' "on"
+   class) a shade darker than on the product pages, to show on the footer's
+   parchment. */
+.drawing {
+  display: block;
+  width: 100%;
+  margin-bottom: -12px;
+}
+
+.drawing :global([data-part]:not([class])) {
+  stroke: #8d97a2;
+  opacity: 1;
+}
+
+.caption {
+  display: block;
+  height: 28px;
+  padding-top: 11px;
+  color: var(--ink-soft);
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  opacity: 0.75;
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    color 300ms ease,
+    opacity 300ms ease;
+  white-space: nowrap;
+}
+
+.item[data-active] .caption {
+  color: #be0010;
+  opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .item {
+    width: 110px;
+  }
+
+  .drawing {
+    margin-bottom: -16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item {
+    width: 132px;
+  }
+
+  .drawing {
+    margin-bottom: -19px;
+  }
+}
+
+/* Out of view, the drawings' own animations rest. */
+.bench[data-away] :global(*) {
+  animation-play-state: paused !important;
+}

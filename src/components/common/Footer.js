@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FiArrowUpRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
+import FooterLabBench from "@/components/common/FooterLabBench";
 import { SOCIAL_BRANDS, socialBrandStyle } from "@/components/common/socialBrands";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -247,6 +248,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* A lab bench of instruments at work along the bottom. */}
+      <FooterLabBench />
 
       <div className="relative border-t border-line-light bg-parchment px-4 py-5 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">

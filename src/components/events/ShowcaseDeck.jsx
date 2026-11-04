@@ -22,6 +22,12 @@ const FLICK_MS = 340;
 // Each card behind the top one: its angle (the left deck mirrors these).
 const TILTS = [0, 3, -2.5, 4];
 
+// A brand logo gets more room around it; a product photo a soft shadow.
+function imageClass(product) {
+  if (product.logo) return "object-contain p-10";
+  return "object-contain p-3 drop-shadow-[0_8px_12px_rgba(0,0,0,0.14)]";
+}
+
 function DeckCard({ product, isTop }) {
   const body = (
     <>
@@ -29,7 +35,7 @@ function DeckCard({ product, isTop }) {
         {product.image ? (
           <Image
             alt=""
-            className={product.logo ? "object-contain p-10" : "object-contain p-3"}
+            className={imageClass(product)}
             draggable={false}
             fill
             loading="eager"
@@ -37,18 +43,20 @@ function DeckCard({ product, isTop }) {
             src={product.image}
           />
         ) : (
-          <LuFlaskConical aria-hidden="true" className="size-12 text-[#457ca3]" />
+          <LuFlaskConical aria-hidden="true" className="size-12 text-[#9aa3ad]" />
         )}
       </span>
       <span className={styles.deckBody}>
         {product.brand ? (
-          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#457ca3]">{product.brand}</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-white/75">{product.brand}</span>
         ) : null}
         <span className="mt-1 line-clamp-2 text-[15px] font-bold leading-snug">{product.name}</span>
         {product.href ? (
-          <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-red">
+          <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-white">
             View product
-            <FiArrowUpRight aria-hidden="true" className="size-3.5" />
+            <span className="grid size-4 place-items-center rounded-full bg-red">
+              <FiArrowUpRight aria-hidden="true" className="size-3" />
+            </span>
           </span>
         ) : null}
       </span>
@@ -147,7 +155,7 @@ export default function ShowcaseDeck({ products, side = "right", label = "Produc
         <button aria-label="Previous product" className={styles.deckButton} onClick={() => go(-1)} type="button">
           <FiArrowLeft aria-hidden="true" className="size-4" />
         </button>
-        <p aria-live="polite" className="min-w-[64px] text-center font-mono text-xs tabular-nums text-white/70">
+        <p aria-live="polite" className="min-w-[64px] text-center font-mono text-xs tabular-nums text-[#001e36]/60">
           <span className="sr-only">{products[index]?.name}, </span>
           {String(index + 1).padStart(2, "0")} / {String(count).padStart(2, "0")}
         </p>

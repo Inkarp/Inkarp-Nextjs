@@ -3,8 +3,9 @@ import styles from "./EventTicket.module.css";
 
 /**
  * The show's details laid out as a pass ("Visit us at"): dates and venue in
- * bold on the main part, the hall and stall number on a red tear-off stub. A design device, not an
- * entry pass (no number or code). Data: `bannerEvent` in src/data/events.js.
+ * bold on the main part, the hall and the stall number large on a red
+ * tear-off stub. A design device, not an entry pass (no number or code).
+ * Data: `bannerEvent` in src/data/events.js.
  */
 
 // PMEC's soft rounded shapes (as in StageEventBanner), faint on the pass.
@@ -13,6 +14,9 @@ const SHAPES = `url("data:image/svg+xml,${encodeURIComponent(
 )}")`;
 
 export default function EventTicket({ event, className = "", style }) {
+  // "Hall 5" → "5" under its own small "Hall" label.
+  const hallNumber = event.hall.replace(/^hall\s*/i, "") || event.hall;
+
   return (
     <div className={`${styles.wrap} ${className} w-full max-w-[470px]`} style={style}>
       <div className={styles.ticket}>
@@ -41,10 +45,13 @@ export default function EventTicket({ event, className = "", style }) {
           </dl>
         </div>
 
+        {/* Hall and stall picked out: each a small label over a large value. */}
         <div className={styles.stub}>
-          <span className="font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-white">{event.hall}</span>
-          <span className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white/75">Stall</span>
-          <span className="font-mono text-[30px] font-bold leading-none tracking-tight sm:text-[32px]">{event.stallNumber}</span>
+          <span className={styles.stubLabel}>Hall</span>
+          <span className={`${styles.stubValue} text-[28px] sm:text-[30px]`}>{hallNumber}</span>
+          <span aria-hidden="true" className={styles.stubRule} />
+          <span className={styles.stubLabel}>Stall</span>
+          <span className={`${styles.stubValue} text-[28px] sm:text-[31px]`}>{event.stallNumber}</span>
         </div>
       </div>
     </div>

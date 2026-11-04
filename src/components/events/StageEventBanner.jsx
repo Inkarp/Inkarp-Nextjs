@@ -201,9 +201,11 @@ export default function StageEventBanner({ event }) {
             <EventTicket event={event} />
           </div>
 
-          <p className={`${styles.enter} mt-6 max-w-[500px] text-base leading-relaxed text-white/70`} style={{ "--i": 5 }}>
-            {event.summary}
-          </p>
+          {event.summary ? (
+            <p className={`${styles.enter} mt-6 max-w-[500px] text-base leading-relaxed text-white/70`} style={{ "--i": 5 }}>
+              {event.summary}
+            </p>
+          ) : null}
 
           <StageCountdown event={event} order={6} />
 

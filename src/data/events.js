@@ -285,8 +285,8 @@ export const bannerEvent = {
   // Countdown target: doors-open on day one (opening hours not yet published).
   startsAt: "2026-11-24T10:00:00+05:30",
   endsAt: "2026-11-26T18:00:00+05:30",
-  summary:
-    "Meet our team in Hall 5 and see laboratory and analytical instruments from our global principals at work.",
+  // A line under the pass (StageEventBanner); none for now.
+  summary: null,
   // Short, so they sit in one row under the stall.
   highlights: ["Live instrument demos", "Method discussions", "Service and support"],
   stallImage: `${IMG}/pmec-2026-stall.webp`,

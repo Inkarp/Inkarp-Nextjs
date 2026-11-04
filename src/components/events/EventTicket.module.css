@@ -52,16 +52,40 @@
   pointer-events: none;
 }
 
-/* The red stub with the stall number. */
+/* The red stub: the hall and the stall number, large and glowing faintly. */
 .stub {
   display: grid;
   place-content: center;
   justify-items: center;
-  gap: 2px;
   padding: 12px 8px;
   background: linear-gradient(160deg, #d0101f 0%, #be0010 55%, #99000d 100%);
   color: #fff;
   text-align: center;
+}
+
+.stubLabel {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.stubValue {
+  margin-top: 2px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+}
+
+.stubRule {
+  width: 34px;
+  height: 1px;
+  margin: 9px 0 8px;
+  background: rgba(255, 255, 255, 0.45);
 }
 
 /* A light sweeping across the pass, once it has slid in. */

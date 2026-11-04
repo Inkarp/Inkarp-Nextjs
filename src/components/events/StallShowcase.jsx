@@ -6,7 +6,7 @@ import ShowcaseDeck from "./ShowcaseDeck";
 import styles from "./StallShowcase.module.css";
 
 /**
- * What is on show at the stall, in the show's colours, under the events
+ * What is on show at the stall, on a soft white gradient under the events
  * banner. On wide screens the stall from the banner comes down the screen as
  * the page scrolls, step for step with the scroll; when this section reaches
  * the top it holds still (sticky, over a runway of extra scroll) while the
@@ -214,39 +214,38 @@ export default function StallShowcase({ event }) {
   return (
     <section
       aria-labelledby="stall-showcase-title"
-      className="relative isolate overflow-clip bg-[linear-gradient(180deg,#001e36_0%,#0b3150_55%,#102f4b_100%)] text-white"
+      className="relative isolate overflow-clip bg-[linear-gradient(180deg,#ffffff_0%,#f6f9fc_50%,#e8eff7_100%)] text-[#001e36]"
       data-scroll-skip=""
       ref={sectionRef}
     >
-      {/* PMEC's light strands, faint, sweeping round the right this time. */}
+      {/* PMEC's light strands, faint, in its sky blue, sweeping round the right. */}
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -right-[14%] top-1/2 -z-10 h-[140%] w-[65%] -translate-y-1/2 opacity-[0.12]"
+        className="pointer-events-none absolute -right-[14%] top-1/2 -z-10 h-[140%] w-[65%] -translate-y-1/2 opacity-[0.16]"
         fill="none"
         preserveAspectRatio="none"
         viewBox="0 0 400 400"
       >
         {[0, 1, 2, 3, 4].map((n) => (
-          <ellipse cx="200" cy="200" key={n} rx={190 - n * 10} ry={120 - n * 16} stroke="#c9d6f2" strokeWidth="1.2" transform={`rotate(${16 - n * 6} 200 200)`} />
+          <ellipse cx="200" cy="200" key={n} rx={190 - n * 10} ry={120 - n * 16} stroke="#457ca3" strokeWidth="1.2" transform={`rotate(${16 - n * 6} 200 200)`} />
         ))}
       </svg>
 
       {/* overflow-clip (not hidden) on the section, so this can stick. */}
       <div className={styles.pin} ref={pinRef}>
         <div className="mx-auto w-full max-w-[1180px] px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-20">
-          {/* On wide screens the heading sits top left, clear of the stall's
-              path down the middle; the stall and the two stacks share the row
-              below it. */}
+          {/* The heading and its line run the full width above; the stall
+              and the two decks share the row below it. */}
           <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)_minmax(0,1fr)] lg:gap-x-6 lg:gap-y-2">
-            <div className="mx-auto max-w-[620px] text-center lg:col-start-1 lg:row-start-1 lg:mx-0 lg:text-left">
-              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ff6b75]">
+            <div className="mx-auto max-w-[620px] text-center lg:col-span-3 lg:col-start-1 lg:row-start-1 lg:mx-0 lg:max-w-none lg:text-left">
+              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-red">
                 {event.hall} · Stall {event.stallNumber}
               </p>
               <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight sm:text-4xl" id="stall-showcase-title">
                 {event.showcaseTitle ?? `On display at ${event.name} ${event.edition}`}
               </h2>
               {event.showcaseIntro ? (
-                <p className="mt-3 text-base leading-relaxed text-white/70">{event.showcaseIntro}</p>
+                <p className="mt-3 text-base leading-relaxed text-[#3c556b] sm:text-lg">{event.showcaseIntro}</p>
               ) : null}
             </div>
 
@@ -258,7 +257,7 @@ export default function StallShowcase({ event }) {
                 <div className="absolute inset-0" ref={landingImageRef}>
                   <Image
                     alt={event.stallImageAlt ?? `${event.name} ${event.edition} stall`}
-                    className="object-contain drop-shadow-[0_28px_36px_rgba(0,0,0,0.55)]"
+                    className="object-contain drop-shadow-[0_24px_30px_rgba(0,30,54,0.3)]"
                     fill
                     // Loaded with the page, not lazily as the stall travels in
                     // (decoding mid-scroll stalled a frame).

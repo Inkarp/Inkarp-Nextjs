@@ -2,6 +2,7 @@
 
 import { FaStar } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
 import { googleReviews, googleReviewsSummary } from "@/data/homeSections";
 
@@ -15,7 +16,9 @@ function StarRating({ rating }) {
   );
 }
 
-export default function HomeClientReviews() {
+// `flask`: the last landing spot for the homepage's travelling
+// sample (FlaskJourney), between the rating and the Google link, on wide screens.
+export default function HomeClientReviews({ flask = false }) {
   const reviewLoop = [...googleReviews, ...googleReviews];
 
   return (
@@ -48,6 +51,8 @@ export default function HomeClientReviews() {
               </p>
             </div>
           </div>
+
+          {flask ? <FlaskDock className="hidden lg:block" stop={5} /> : null}
 
           <a
             className="inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"

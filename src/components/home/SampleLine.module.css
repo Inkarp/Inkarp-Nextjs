@@ -1,0 +1,169 @@
+/* The homepage's sample line (SampleLine.jsx). The layer covers the page's
+   content box; the line runs half-way across its left margin (negative x).
+   The script places the track, the nodes and the branches, and moves the
+   fill and the drop at the tip. */
+
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.layer[data-ready] {
+  opacity: 1;
+}
+
+/* Still to come: a faint dotted line. */
+.track,
+.fill {
+  position: absolute;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 2px;
+}
+
+.track {
+  background: repeating-linear-gradient(to bottom, rgb(190 0 16 / 0.24) 0 4px, transparent 4px 10px);
+}
+
+/* Read so far: the sample, a deepening red with a soft glow. */
+.fill {
+  background: linear-gradient(to bottom, #ef3340, #be0010 45%, #8f000c);
+  box-shadow: 0 0 8px rgb(190 0 16 / 0.35);
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  will-change: transform;
+}
+
+/* The tip: a drop, with a soft light breathing around it. */
+.head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(190 0 16 / 0.28), transparent);
+  animation: sample-glow 2.4s ease-in-out infinite;
+}
+
+.drop {
+  position: absolute;
+  top: -17px;
+  left: -7px;
+  width: 14px;
+  height: 18px;
+  filter: drop-shadow(0 2px 5px rgb(190 0 16 / 0.45));
+  transform-origin: 50% 100%;
+}
+
+.drop svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* A node on the line at each section; it fills and ripples as the line
+   reaches it. The last one glows. */
+.node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border: 2px solid rgb(190 0 16 / 0.32);
+  border-radius: 50%;
+  background: #fff;
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease,
+    box-shadow 400ms ease;
+}
+
+.node::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border: 1.5px solid rgb(190 0 16 / 0.6);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.node[data-reached] {
+  border-color: #be0010;
+  background: #be0010;
+  box-shadow: 0 0 0 4px rgb(190 0 16 / 0.12);
+}
+
+.node[data-reached]::after {
+  animation: sample-ripple 900ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.last[data-reached] {
+  box-shadow:
+    0 0 0 6px rgb(190 0 16 / 0.14),
+    0 0 18px rgb(190 0 16 / 0.45);
+}
+
+/* From the node across to the section's tag. */
+.branch {
+  position: absolute;
+  height: 2px;
+  margin-top: -1px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #be0010, rgb(190 0 16 / 0.55));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 600ms cubic-bezier(0.2, 0.7, 0.3, 1) 60ms;
+}
+
+.branch[data-reached] {
+  transform: scaleX(1);
+}
+
+@keyframes sample-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes sample-ripple {
+  from {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .head::before,
+  .node[data-reached]::after {
+    animation: none;
+  }
+
+  .branch,
+  .node {
+    transition: none;
+  }
+}

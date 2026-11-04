@@ -28,7 +28,7 @@ export default function DnaScrollProgress({ percent, onClick, spinning = false }
   return (
     <button
       aria-label={`Back to top, page ${percent}% read`}
-      className={`group relative inline-flex h-[122px] w-12 flex-col items-center justify-between rounded-full border bg-parchment py-2.5 shadow-lg shadow-zinc-900/15 transition ${
+      className={`group relative inline-flex h-[112px] w-12 flex-col items-center justify-between rounded-full border bg-parchment py-2.5 shadow-lg shadow-zinc-900/15 transition ${
         complete ? "border-red/40" : "border-line-light"
       }`}
       onClick={onClick}
@@ -58,8 +58,6 @@ export default function DnaScrollProgress({ percent, onClick, spinning = false }
           );
         })}
       </span>
-
-      <span className="text-[10px] font-bold leading-none text-zinc-950 tabular-nums">{percent}%</span>
     </button>
   );
 }

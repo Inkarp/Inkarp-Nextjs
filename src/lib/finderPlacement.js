@@ -13,6 +13,7 @@ import { finderObjectives } from "@/data/solutionFinder";
  */
 export function finderPlacement(pathname = "/") {
   if (pathname === "/" || pathname === "/products" || pathname === "/application-resources") return "stripe";
+  if (/^\/home-preview(\/|$)/.test(pathname)) return "stripe";
   if (/^\/(workflows|blog)(\/|$)/.test(pathname)) return "stripe";
   if (/^\/(quote|contact|service|thank-you|careers|privacy-policy|terms-and-conditions)(\/|$)/.test(pathname)) return "none";
   if (/^\/products\/./.test(pathname)) return "none";

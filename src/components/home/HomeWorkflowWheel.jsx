@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
 import StepIcon from "./StepIcon";
 import WorkflowIcon from "./WorkflowIcon";
@@ -19,7 +20,9 @@ function polarPoint(cx, cy, r, angleDeg) {
   return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
 }
 
-export default function HomeWorkflowWheel() {
+// `flask`: on wide screens the hub holds a landing spot for the homepage's
+// travelling sample (FlaskJourney) in place of the industry icon.
+export default function HomeWorkflowWheel({ flask = false }) {
   const industries = workflowIndustries;
   const [activeIndex, setActiveIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
@@ -164,8 +167,9 @@ export default function HomeWorkflowWheel() {
                 </div>
 
                 <div className="absolute left-1/2 top-1/2 flex h-[196px] w-[196px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-line-light bg-white p-4 text-center">
+                  {flask ? <FlaskDock className="mb-1.5 hidden lg:block" stop={1} /> : null}
                   <span
-                    className={`mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-parchment-alt text-red transition-opacity duration-300 ${
+                    className={`${flask ? "lg:hidden " : ""}mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-parchment-alt text-red transition-opacity duration-300 ${
                       hubSwapping ? "opacity-0" : "opacity-100"
                     }`}
                   >

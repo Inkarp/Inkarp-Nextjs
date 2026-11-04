@@ -74,7 +74,8 @@ function Molecule({ className }) {
 // from the flask onto the page. Once per browser session, only when the visit
 // starts on the homepage, never with reduced motion, and skippable at any time.
 // Everything is CSS-timed (LabIntro.module.css), so it ends even without JS.
-export default function LabIntro() {
+// `path`: the page it opens (the homepage, or its preview).
+export default function LabIntro({ path = "/" }) {
   const rootRef = useRef(null);
   const [phase, setPhase] = useState("playing");
 
@@ -91,8 +92,8 @@ export default function LabIntro() {
     }
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const landing = performance.getEntriesByType?.("navigation")?.[0];
-    // A client-side navigation back to "/" is not "opening the website".
-    const landedOnHome = !landing || new URL(landing.name).pathname === "/";
+    // A client-side navigation back to the page is not "opening the website".
+    const landedOnHome = !landing || new URL(landing.name).pathname === path;
 
     if (seen || reducedMotion || !landedOnHome) {
       if (rootRef.current) rootRef.current.style.display = "none";
@@ -118,7 +119,7 @@ export default function LabIntro() {
       window.removeEventListener("keydown", onKeyDown);
       window.clearTimeout(fallback);
     };
-  }, [skip]);
+  }, [path, skip]);
 
   useEffect(() => {
     if (phase === "done") delete document.body.dataset.labIntro;

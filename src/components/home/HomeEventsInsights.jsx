@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FiImage } from "react-icons/fi";
+import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
 import { events, formatEventDate, getEventStatus, upcomingStallEvent } from "@/data/events";
 import { formatPostDate, getRecentPosts } from "@/data/blogs";
@@ -119,21 +120,26 @@ function BlogCard({ post }) {
   );
 }
 
-export default function HomeEventsInsights() {
+// `flask`: a landing spot beside the heading for the homepage's
+// travelling sample (FlaskJourney), on wide screens.
+export default function HomeEventsInsights({ flask = false }) {
   const featuredEvents = pickFeaturedEvents();
   const recentPosts = getRecentPosts(undefined, 3);
 
   return (
     <section className="bg-white py-[78px]" id="events-insights" data-reveal>
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
-        <div className="mb-10">
-          <RecTag>What&apos;s Happening</RecTag>
-          <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-            Events &amp; insights
-          </h2>
-          <p className="mt-3 max-w-xl text-sm text-ink-soft">
-            Highlights from our recent events and the latest thinking from our team.
-          </p>
+        <div className={flask ? "mb-10 flex items-end justify-between gap-6" : "mb-10"}>
+          <div>
+            <RecTag>What&apos;s Happening</RecTag>
+            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+              Events &amp; insights
+            </h2>
+            <p className="mt-3 max-w-xl text-sm text-ink-soft">
+              Highlights from our recent events and the latest thinking from our team.
+            </p>
+          </div>
+          {flask ? <FlaskDock className="mb-1 mr-[12%] hidden lg:block" stop={4} /> : null}
         </div>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.6fr_1fr]">

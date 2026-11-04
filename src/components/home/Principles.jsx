@@ -6,12 +6,12 @@ import { productPrincipals } from "@/data/products/principals";
  * catalogue inside the client component pulled all 371 products' data into the
  * browser with it, so the list is trimmed here on the server instead.
  */
-export default function Principles() {
+export default function Principles({ flask = false }) {
   const principals = productPrincipals.map((principal) => ({
     principalName: principal.principalName,
     countryOfOrigin: principal.countryOfOrigin,
     slug: principal.slug,
   }));
 
-  return <PrincipalsGlobe principals={principals} />;
+  return <PrincipalsGlobe flask={flask} principals={principals} />;
 }

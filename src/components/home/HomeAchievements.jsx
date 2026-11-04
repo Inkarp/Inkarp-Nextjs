@@ -1,4 +1,5 @@
 import { FiAward, FiPackage, FiShield, FiTool } from "react-icons/fi";
+import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
 
 const serviceCards = [
@@ -24,7 +25,9 @@ const serviceCards = [
   },
 ];
 
-export default function HomeAchievements() {
+// `flask`: a landing spot between the heading and the intro for the
+// homepage's travelling sample (FlaskJourney), on wide screens.
+export default function HomeAchievements({ flask = false }) {
   return (
     <section className="bg-white py-16" id="service-support" data-reveal>
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
@@ -35,6 +38,7 @@ export default function HomeAchievements() {
               Support that stays with the solution.
             </h2>
           </div>
+          {flask ? <FlaskDock className="mb-1 hidden lg:block" stop={2} /> : null}
           <p className="max-w-[420px] text-sm text-ink-soft">
             After installation, the real work begins. Inkarp supports laboratories with
             principal-trained engineers, application specialists, preventive maintenance,

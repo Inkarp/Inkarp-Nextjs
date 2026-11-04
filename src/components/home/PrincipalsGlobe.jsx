@@ -10,6 +10,7 @@ import { select as d3Select } from "d3-selection";
 import { transition as d3Transition } from "d3-transition";
 import { FiArrowUpRight, FiChevronDown, FiGlobe, FiMapPin, FiMove } from "react-icons/fi";
 import { feature as topoFeature } from "topojson-client";
+import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
 import { countryGeo } from "@/data/countryGeo";
 import { getPrincipalLogo } from "@/data/products/principalLogos";
@@ -115,7 +116,9 @@ function StaticPrincipalLogo({ name, logo, href }) {
 
 const BEING_WEBSITE = "https://beinglab.co.in/";
 
-export default function PrincipalsGlobe({ principals = [] }) {
+// `flask`: on wide screens, a landing spot on top of the globe for the
+// homepage's travelling sample (FlaskJourney).
+export default function PrincipalsGlobe({ principals = [], flask = false }) {
   const { countries, allPrincipals } = useCountryGroups(principals);
   const [selected, setSelected] = useState(null);
   const [globeStatus, setGlobeStatus] = useState("loading");
@@ -410,6 +413,12 @@ export default function PrincipalsGlobe({ principals = [] }) {
                   <FiGlobe aria-hidden="true" className="h-16 w-16 animate-pulse text-black/10" />
                 )}
               </div>
+            ) : null}
+            {/* Standing on the globe's top (its edge is 9px into this box). */}
+            {flask ? (
+              <span className="pointer-events-none absolute bottom-[calc(100%-13px)] left-1/2 hidden -translate-x-1/2 lg:block">
+                <FlaskDock stop={3} />
+              </span>
             ) : null}
           </div>
           <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-ink-soft/70"><FiMove aria-hidden="true" /> Drag to explore</p>

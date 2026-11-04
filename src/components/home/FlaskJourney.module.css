@@ -1,0 +1,336 @@
+/* The homepage's travelling sample (FlaskJourney.jsx), its landing
+   spots (FlaskDock.jsx) and the glassware itself (JourneyFlask.jsx).
+   The journey's state is on <html>: data-flask-journey="travel" while the
+   travelling flask is in charge, data-flask-wait while the opening animation
+   (LabIntro) still covers the page. */
+
+/* How full the glassware is, 0–1. Registered, so it can be animated. */
+@property --flask-fill {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+/* ── The flask ─────────────────────────────────────── */
+.flask {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* The liquid's surface rides up from the vessel's bottom by its range (both
+   per vessel, the origin inline) and tips about its own middle. */
+.liquid {
+  transform-box: view-box;
+  transform: translateY(calc(var(--flask-fill) * var(--flask-range) * -1)) rotate(var(--flask-slosh, 0deg));
+}
+
+/* A lighter band along the surface, its little waves sliding slowly. */
+.wave {
+  fill: #ff5a64;
+  opacity: 0.9;
+  animation: flask-wave 2.4s linear infinite;
+}
+
+.bubble {
+  fill: #fff;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-name: flask-bubble;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.7, 1);
+}
+
+.busyBubbles {
+  opacity: 0;
+  transition: opacity 450ms ease;
+}
+
+.marks {
+  stroke: #9aa4ae;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.glint {
+  stroke: #fff;
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+.outline {
+  stroke: #1c1c1e;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@keyframes flask-wave {
+  to {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes flask-bubble {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  20%,
+  78% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-19px) scale(1);
+  }
+}
+
+/* ── A landing spot ────────────────────────────────── */
+.dock {
+  position: relative;
+  aspect-ratio: 120 / 130;
+  pointer-events: none;
+}
+
+.dockFlask {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 95%;
+}
+
+/* The first spot's glassware falls in from the top of the screen as the
+   page opens, bounces on its stand (which ripples) and fills. The travelling
+   sample's own fall (FlaskJourney DROP) keeps the same timing. */
+.dockFlask[data-flask-enter] {
+  animation:
+    flask-drop 1150ms linear 300ms both,
+    flask-fill 1300ms cubic-bezier(0.3, 0.7, 0.3, 1) 1050ms both;
+}
+
+.dock[data-flask-first] .padRing::after {
+  animation: flask-ripple 1s cubic-bezier(0.2, 0.7, 0.3, 1) 960ms;
+}
+
+/* Under the opening animation it waits, then falls in when that ends. */
+:global(:root[data-flask-wait]) .dockFlask[data-flask-enter],
+:global(:root[data-flask-wait]) .dock[data-flask-first] .padRing::after {
+  animation: none;
+}
+
+:global(:root[data-flask-wait]) .dockFlask[data-flask-enter] {
+  opacity: 0;
+}
+
+/* While the travelling flask is in charge, the spots show only their stands
+   (and their flasks stop animating unseen). */
+:global(:root[data-flask-journey="travel"]) .dockFlask {
+  visibility: hidden;
+}
+
+:global(:root[data-flask-journey="travel"]) .dockFlask :is(.wave, .bubble) {
+  animation-play-state: paused;
+}
+
+/* The stand: an oval under the flask's base, its shadow and a thin ring. */
+.pad {
+  position: absolute;
+  right: -16%;
+  bottom: -9%;
+  left: -16%;
+  aspect-ratio: 4.2;
+}
+
+.padShadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(22 22 22 / 0.2), rgb(22 22 22 / 0.07) 55%, transparent);
+  transition: opacity 300ms ease;
+}
+
+.padRing {
+  position: absolute;
+  inset: 12% 6%;
+  border: 1px solid rgb(190 0 16 / 0.16);
+  border-radius: 50%;
+  transition: border-color 300ms ease;
+}
+
+/* A ripple from the stand as the flask lands. */
+.padRing::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid rgb(190 0 16 / 0.55);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* An empty stand, waiting: no shadow, a dashed ring. */
+:global(:root[data-flask-journey="travel"]) .dock:not([data-flask-here]) .padShadow {
+  opacity: 0;
+}
+
+:global(:root[data-flask-journey="travel"]) .dock:not([data-flask-here]) .padRing {
+  border-style: dashed;
+  border-color: rgb(190 0 16 / 0.4);
+}
+
+:global(:root[data-flask-journey="travel"]) .dock:not([data-flask-first])[data-flask-here] .padRing::after {
+  animation: flask-ripple 1s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+/* The last spot: the full flask glows. */
+.halo {
+  position: absolute;
+  inset: -40% -70% -30%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(190 0 16 / 0.17), rgb(190 0 16 / 0.05) 60%, transparent);
+  transition: opacity 700ms ease;
+}
+
+:global(:root[data-flask-journey="travel"]) .dock:not([data-flask-here]) .halo {
+  opacity: 0;
+}
+
+/* Falling from the top of the screen (speeding up, turning upright), squashing
+   on impact, one small bounce, settled. */
+@keyframes flask-drop {
+  0% {
+    transform: translateY(-75vh) rotate(-14deg);
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  58% {
+    transform: translateY(0) scale(1.07, 0.9);
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.4, 1);
+  }
+  74% {
+    transform: translateY(-12px) scale(0.97, 1.04);
+    animation-timing-function: cubic-bezier(0.5, 0, 0.8, 0.5);
+  }
+  88% {
+    transform: translateY(0) scale(1.03, 0.97);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes flask-fill {
+  from {
+    --flask-fill: 0;
+  }
+}
+
+@keyframes flask-ripple {
+  from {
+    opacity: 0.9;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}
+
+/* ── The travelling flask ──────────────────────────── */
+/* Fixed to the screen, under the site header (z 50). The script sets its
+   width (the widest spot's) and moves and scales it. */
+.traveller {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  display: none;
+  aspect-ratio: 120 / 130;
+  pointer-events: none;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+:global(:root[data-flask-journey="travel"]) .traveller {
+  display: block;
+}
+
+.traveller[data-busy] .busyBubbles {
+  opacity: 1;
+}
+
+/* Its lean and lift (about its base), and the opening fall. */
+.tilt,
+.drop {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 95%;
+}
+
+/* One piece of glassware per stop, stacked; the script shows the one in
+   hand and turns it into the next one's mid-way. */
+.vessel {
+  position: absolute;
+  inset: 0;
+  display: none;
+  transform-origin: 50% 60%;
+}
+
+.tilt {
+  will-change: transform;
+}
+
+/* The ring that bursts from the glassware as it turns into the next. */
+.burst {
+  position: absolute;
+  inset: 8% -8% 18%;
+  border: 2px dotted rgb(190 0 16 / 0.55);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Its shadow in flight, falling away below it. */
+.flight {
+  position: absolute;
+  right: -12%;
+  bottom: -9%;
+  left: -12%;
+  aspect-ratio: 4.2;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(22 22 22 / 0.22), transparent);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* ── The hero's scroll cue ─────────────────────────── */
+.cueArrow {
+  animation: flask-cue 1.8s ease-in-out infinite;
+}
+
+@keyframes flask-cue {
+  0%,
+  100% {
+    transform: translateY(-1px);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wave,
+  .bubble,
+  .cueArrow,
+  .dockFlask[data-flask-enter],
+  .padRing::after {
+    animation: none !important;
+  }
+
+  .bubble {
+    opacity: 0;
+  }
+}

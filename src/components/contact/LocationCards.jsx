@@ -1,25 +1,15 @@
 'use client';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MdEmail, MdLocalPhone, MdLocationPin } from 'react-icons/md';
-import { branches, getScreenSize, phoneHref } from '@/data/branches';
+import { branches, phoneHref } from '@/data/branches';
+import BranchPinMap from '@/components/maps/BranchPinMap';
 import RecTag from '@/components/home/RecTag';
 
 // `as` lets the host page promote this to the page's h1 — on /contact this is
 // the first and most important heading, and the page had no h1 at all.
 export default function LocationCards({ data, as: Heading = 'h2' }) {
   const { title, description, eyebrow } = data ?? {};
-  const [screenSize, setScreenSize] = useState('lg');
   const [selected, setSelected] = useState(0);
-
-  useEffect(() => {
-    const handleResize = () => setScreenSize(getScreenSize());
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const selectedBranch = branches[selected];
 
@@ -43,60 +33,9 @@ export default function LocationCards({ data, as: Heading = 'h2' }) {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
-          {/* India map with all branch pins */}
-          <div className="relative aspect-square w-full overflow-hidden border border-line-light bg-white">
-            <div className="absolute inset-0 p-4 sm:p-6">
-              <div className="relative h-full w-full">
-                <Image
-                  alt="India service coverage map"
-                  className="h-full w-full object-contain opacity-95"
-                  fill
-                  priority
-                  src="/assets/contact/IndiaMap.svg"
-                />
-
-                {branches.map((branch, i) => {
-                  const [top, left] = branch.position[screenSize];
-                  const isSelected = selected === i;
-
-                  return (
-                    <div
-                      key={branch.name}
-                      className="absolute -translate-x-1/2 -translate-y-1/2"
-                      style={{ left, top }}
-                    >
-                      <button
-                        aria-label={`Show ${branch.name} branch details`}
-                        aria-pressed={isSelected}
-                        onClick={() => setSelected(i)}
-                        type="button"
-                        className="group flex flex-col items-center outline-none"
-                      >
-                        <div className="relative z-[100] size-8">
-                          {isSelected && (
-                            <span className="absolute left-1/2 top-1/2 z-0 size-6 -translate-x-1/2 -translate-y-1/2 animate-ping bg-red/60 motion-reduce:hidden" />
-                          )}
-                          <MdLocationPin
-                            className={`relative z-10 text-red transition-all duration-200 group-hover:scale-110 ${
-                              isSelected ? 'size-10' : 'size-8 opacity-80'
-                            }`}
-                          />
-                        </div>
-                        <span
-                          className={`mt-1 block whitespace-nowrap border px-2.5 py-0.5 text-[10px] font-semibold transition-colors duration-200 group-focus-visible:ring-2 group-focus-visible:ring-red/40 ${
-                            isSelected
-                              ? 'border-red bg-red text-parchment'
-                              : 'border-line-light bg-white text-ink group-hover:border-red/40'
-                          }`}
-                        >
-                          {branch.name}
-                        </span>
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+          {/* India map with a pin on every branch (tips on each city's lat/lon). */}
+          <div className="border border-line-light bg-white p-4 sm:p-6">
+            <BranchPinMap className="mx-auto w-full max-w-[560px]" onSelect={setSelected} priority selected={selected} />
           </div>
 
           {/* Branch picker + detail */}

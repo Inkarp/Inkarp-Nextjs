@@ -331,28 +331,52 @@ export const bannerEvent = {
 };
 
 /**
- * The stand Inkarp is exhibiting at next. Kept here rather than inside a
- * component so the home events row and the campaign stripe read one source —
- * update the date and venue in a single place.
+ * The stand Inkarp is exhibiting at next: the events page banner's show
+ * (`bannerEvent`, PMEC India 2026; the recap `featuredEvent` if there is
+ * none). Kept here rather than inside a component so the homepage's events
+ * row reads the same source as the events page — update the show in one
+ * place. Its status comes from `startsAt` / `endsAt` (stallStatus).
  */
-export const upcomingStallEvent = {
-  id: "analytica-lab-india-2026",
-  title: `${featuredEvent.name} ${featuredEvent.edition}`,
-  shortTitle: featuredEvent.name,
-  description: featuredEvent.summary,
-  venue: featuredEvent.venue,
-  dateLabel: featuredEvent.dateLabel,
-  image: featuredEvent.image,
-  registrationUrl: featuredEvent.registrationUrl,
-  stallNumber: featuredEvent.stallNumber,
-  // Full doors-open timestamp, for countdowns precise to the second — `date`
-  // below is the day-only cut for simpler "days until" displays.
-  startsAt: featuredEvent.startsAt,
-  // Doors open on day one — that is what a countdown should point at.
-  date: featuredEvent.startsAt.slice(0, 10),
-  closesOn: featuredEvent.endsAt.slice(0, 10),
-  status: "past",
-};
+export const upcomingStallEvent = bannerEvent
+  ? {
+      id: `${bannerEvent.name}-${bannerEvent.edition}`.toLowerCase().replace(/\W+/g, "-"),
+      title: `${bannerEvent.name} ${bannerEvent.edition}`,
+      shortTitle: bannerEvent.name,
+      description: `${bannerEvent.hall} · Stall ${bannerEvent.stallNumber}, ${bannerEvent.venue}`,
+      venue: bannerEvent.venue,
+      dateLabel: bannerEvent.dateLabel,
+      image: bannerEvent.stallImage,
+      registrationUrl: bannerEvent.registrationUrl,
+      stallNumber: bannerEvent.stallNumber,
+      // Full doors-open timestamp, for countdowns precise to the second — `date`
+      // below is the day-only cut for simpler "days until" displays.
+      startsAt: bannerEvent.startsAt,
+      endsAt: bannerEvent.endsAt,
+      // Doors open on day one — that is what a countdown should point at.
+      date: bannerEvent.startsAt.slice(0, 10),
+      closesOn: bannerEvent.endsAt.slice(0, 10),
+    }
+  : {
+      id: `${featuredEvent.name}-${featuredEvent.edition}`.toLowerCase().replace(/\W+/g, "-"),
+      title: `${featuredEvent.name} ${featuredEvent.edition}`,
+      shortTitle: featuredEvent.name,
+      description: featuredEvent.summary,
+      venue: featuredEvent.venue,
+      dateLabel: featuredEvent.dateLabel,
+      image: featuredEvent.image,
+      registrationUrl: featuredEvent.registrationUrl,
+      stallNumber: featuredEvent.stallNumber,
+      startsAt: featuredEvent.startsAt,
+      endsAt: featuredEvent.endsAt,
+      date: featuredEvent.startsAt.slice(0, 10),
+      closesOn: featuredEvent.endsAt.slice(0, 10),
+    };
+
+// "upcoming" before a show opens, "ongoing" while it is on, "past" after.
+export function stallStatus(event, now = Date.now()) {
+  if (now < Date.parse(event.startsAt)) return "upcoming";
+  return now <= Date.parse(event.endsAt) ? "ongoing" : "past";
+}
 
 export const eventYears = [...new Set(events.map((event) => new Date(event.date).getFullYear()))].sort(
   (a, b) => a - b

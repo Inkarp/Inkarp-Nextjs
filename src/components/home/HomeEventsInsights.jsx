@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FiImage } from "react-icons/fi";
 import FlaskDock from "./FlaskDock";
 import RecTag from "./RecTag";
-import { events, formatEventDate, getEventStatus, upcomingStallEvent } from "@/data/events";
+import { events, featuredEvent, formatEventDate, getEventStatus, stallStatus, upcomingStallEvent } from "@/data/events";
 import { formatPostDate, getRecentPosts } from "@/data/blogs";
 
 function SafeImage({ src, alt, sizes, className }) {
@@ -45,15 +45,33 @@ const statusLabels = {
 };
 
 const FEATURED_EVENT_COUNT = 2;
-// Home uses the dedicated stall photo (not the Event1.jpeg banner image shared
-// with the campaign stripe) for the analytica card.
-const HOME_ANALYTICA_STALL_EVENT = {
-  ...upcomingStallEvent,
-  image: "/assets/events/analytica-2026.webp",
-};
+// The stalls lead the row: the show Inkarp exhibits at next (PMEC India 2026,
+// its stall render on the events banner's deep blue) and the one before
+// (analytica Lab India 2026, with its stall photo). Their status follows each
+// show's own opening and close.
+const STALL_EVENTS = [
+  {
+    ...upcomingStallEvent,
+    panelClassName: "bg-[radial-gradient(120%_90%_at_50%_100%,#1d4968_0%,#0b3150_45%,#001e36_100%)]",
+    imageClassName: "object-contain drop-shadow-[0_16px_20px_rgba(0,0,0,0.45)]",
+  },
+  ...(upcomingStallEvent.title === `${featuredEvent.name} ${featuredEvent.edition}`
+    ? []
+    : [
+        {
+          id: "analytica-lab-india-2026-stall",
+          title: `${featuredEvent.name} ${featuredEvent.edition}`,
+          description: featuredEvent.summary,
+          dateLabel: featuredEvent.dateLabel,
+          image: "/assets/events/analytica-2026.webp",
+          startsAt: featuredEvent.startsAt,
+          endsAt: featuredEvent.endsAt,
+        },
+      ]),
+];
 
-// Soonest upcoming/ongoing first, then the most recently completed, topped up to
-// FEATURED_EVENT_COUNT — so the row still fills when nothing is upcoming.
+// The stalls first, then the soonest upcoming/ongoing, then the most recently
+// completed, topped up to FEATURED_EVENT_COUNT — so the row always fills.
 function pickFeaturedEvents() {
   const withStatus = events.map((event) => ({ ...event, status: getEventStatus(event) }));
 
@@ -65,10 +83,10 @@ function pickFeaturedEvents() {
     .filter((event) => event.status === "past")
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  return [
-    HOME_ANALYTICA_STALL_EVENT,
-    ...[...upcoming, ...completed].filter((event) => event.id !== HOME_ANALYTICA_STALL_EVENT.id),
-  ].slice(0, FEATURED_EVENT_COUNT);
+  return [...STALL_EVENTS.map((event) => ({ ...event, status: stallStatus(event) })), ...upcoming, ...completed].slice(
+    0,
+    FEATURED_EVENT_COUNT,
+  );
 }
 
 function EventCard({ event, highlight }) {
@@ -79,8 +97,8 @@ function EventCard({ event, highlight }) {
         highlight ? "border-red" : "border-line-light"
       }`}
     >
-      <div className="relative aspect-[4/3] overflow-hidden border-b border-line-light bg-parchment-alt">
-        <SafeImage src={event.image} alt={event.title ?? "Inkarp event"} sizes="280px" className="object-cover" />
+      <div className={`relative aspect-[4/3] overflow-hidden border-b border-line-light ${event.panelClassName ?? "bg-parchment-alt"}`}>
+        <SafeImage src={event.image} alt={event.title ?? "Inkarp event"} sizes="280px" className={event.imageClassName ?? "object-cover"} />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-5">
         <span
@@ -88,7 +106,7 @@ function EventCard({ event, highlight }) {
         >
           {statusLabels[event.status]}
         </span>
-        <p className="text-xs text-ink-soft">{formatEventDate(event)}</p>
+        <p className="text-xs text-ink-soft">{event.dateLabel ?? formatEventDate(event)}</p>
         <h4 className="text-base font-semibold text-ink">{event.title ?? "Inkarp at this event"}</h4>
         {event.description ? (
           <p className="line-clamp-2 flex-1 text-sm text-ink-soft">{event.description}</p>

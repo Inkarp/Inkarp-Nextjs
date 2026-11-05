@@ -44,11 +44,19 @@ function TypedAnswer({ type, label, initial, onSubmit }) {
   );
 }
 
+// `choices` is a "a; b; c" string, or an array when a choice itself holds a semicolon.
 function parseChoices(raw) {
-  return String(raw ?? '')
-    .split(';')
-    .map((choice) => choice.trim())
+  const list = Array.isArray(raw) ? raw : String(raw ?? '').split(';');
+  return list
+    .map((choice) => String(choice).trim())
     .filter(Boolean);
+}
+
+// A question may publish the result of each answer (`results`, keyed by the
+// choice text), as a source document's "Option | Result" table does. Results
+// show only in the summary, after the questions, like the other planners.
+function resultFor(option, answer) {
+  return answer ? option?.results?.[answer] : undefined;
 }
 
 export default function ConnectivityPlanner({ data, productName = 'this system' }) {
@@ -97,7 +105,10 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
   };
 
   const summaryConfiguration = options
-    .map((opt, index) => `${index + 1}. ${opt.title}\n   -> ${answers[index] ?? 'Not answered'}`)
+    .map((opt, index) => {
+      const result = resultFor(opt, answers[index]);
+      return `${index + 1}. ${opt.title}\n   -> ${answers[index] ?? 'Not answered'}${result ? `\n   = ${result}` : ''}`;
+    })
     .join('\n\n');
 
   const scenarioSummary = [
@@ -197,6 +208,9 @@ function GenericConnectivityPlanner({ data, productName = 'this system' }) {
                     <p className={`text-sm ${answers[index] ? 'font-semibold text-red' : 'text-ink-soft'}`}>
                       {answers[index] ?? 'Not answered'}
                     </p>
+                    {resultFor(opt, answers[index]) ? (
+                      <p className="text-sm leading-6 text-black sm:col-span-2">{resultFor(opt, answers[index])}</p>
+                    ) : null}
                   </div>
                 ))}
               </div>

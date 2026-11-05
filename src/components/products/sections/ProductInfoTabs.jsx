@@ -534,6 +534,8 @@ export default function ProductInfoTabs({ product }) {
               note={specsSec?.note ?? "Per published technical data for this model. Confirm details against the latest datasheet from Inkarp before ordering."}
               specs={product.technicalSpecs ?? []}
             />
+            {/* A second spec table in the source document (other columns), and lines after it. */}
+            {specsSec?.groups?.length > 0 && <ContentGroups groups={specsSec.groups} />}
           </div>
         );
 

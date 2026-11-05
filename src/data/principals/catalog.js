@@ -94,6 +94,7 @@ import sartoriusAriumComfortCatalog from "./sartorius/arium-comfort.json";
 import sartoriusAriumMiniPlusCatalog from "./sartorius/arium-mini-plus.json";
 import sartoriusAriumProCatalog from "./sartorius/arium-pro.json";
 import sartoriusAriumAdvanceCatalog from "./sartorius/arium-advance.json";
+import sartoriusLabWaterAccessoriesCatalog from "./sartorius/lab-water-accessories.json";
 import inkarpUsbUltrasonicCleanersBathsCatalog from "./inkarp-usb/ultrasonic-cleaners-baths.json";
 import photonEtcPlateReadersCatalog from "./photon-etc/plate-readers.json";
 import photonEtcAreaScanImagingCatalog from "./photon-etc/area-scan-imaging.json";
@@ -112,6 +113,7 @@ import ametekBrookfieldRheometersCatalog from "./ametek-brookfield/rheometers.js
 import ametekBrookfieldSoftwareDataAnalysisCatalog from "./ametek-brookfield/software-data-analysis.json";
 import ametekBrookfieldTextureAnalyzersCatalog from "./ametek-brookfield/texture-analyzers.json";
 import buchiFreezeDryerLyophilizerCatalog from "./buchi/freeze-dryer-lyophilizer.json";
+import buchiKjeldahlNitrogenDeterminationCatalog from "./buchi/kjeldahl-nitrogen-determination.json";
 import nanosurfResearchCatalog from "./nanosurf/research.json";
 import nanosurfAdvancedResearchCatalog from "./nanosurf/advanced-research.json";
 import nanosurfIndustryCatalog from "./nanosurf/industry.json";
@@ -145,6 +147,7 @@ import mettlerToledoTitratorsCatalog from "./mettler-toledo/titrators.json";
 import mettlerToledoPhMetersCatalog from "./mettler-toledo/ph-meters.json";
 import mettlerToledoWeighingBalancesCatalog from "./mettler-toledo/weighing-balances.json";
 import rotachromCentrifugalPartitionChromatographyCatalog from "./rotachrom/centrifugal-partition-chromatography.json";
+import lumicksDynamicSingleMoleculeCatalog from "./lumicks/dynamic-single-molecule.json";
 import workbookProductMetadata from "./workbook-product-metadata.json";
 import workbookProductsCatalog from "./workbook-products.json";
 import {
@@ -256,6 +259,7 @@ const principalCatalogs = [
   sartoriusAriumMiniPlusCatalog,
   sartoriusAriumProCatalog,
   sartoriusAriumAdvanceCatalog,
+  sartoriusLabWaterAccessoriesCatalog,
   inkarpUsbUltrasonicCleanersBathsCatalog,
   photonEtcPlateReadersCatalog,
   photonEtcAreaScanImagingCatalog,
@@ -274,6 +278,7 @@ const principalCatalogs = [
   ametekBrookfieldSoftwareDataAnalysisCatalog,
   ametekBrookfieldTextureAnalyzersCatalog,
   buchiFreezeDryerLyophilizerCatalog,
+  buchiKjeldahlNitrogenDeterminationCatalog,
   nanosurfResearchCatalog,
   nanosurfAdvancedResearchCatalog,
   nanosurfIndustryCatalog,
@@ -307,6 +312,7 @@ const principalCatalogs = [
   mettlerToledoPhMetersCatalog,
   mettlerToledoWeighingBalancesCatalog,
   rotachromCentrifugalPartitionChromatographyCatalog,
+  lumicksDynamicSingleMoleculeCatalog,
   ...toCatalogList(workbookProductsCatalog),
 ];
 

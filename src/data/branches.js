@@ -1,26 +1,6 @@
-// Pin placement on /assets/contact/IndiaMap.svg.
-//
-// The SVG outline was parsed to find its true drawn bounds inside the
-// 1847x2000 viewBox, and those four edges are India's geographic extremes.
-// Every pin is therefore derived from its real lat/lon rather than eyeballed —
-// nothing here needs hand-tuning per city or per breakpoint.
-//
-// >> If every pin looks uniformly off, nudge these two numbers only. <<
-// Positive x moves all pins right, positive y moves them down. Both are in
-// percent of the map frame.
-export const PIN_OFFSET = { x: 1.5, y: 0 };
-
-const MAP = { x0: 2.15, x1: 96.53, y0: 1.78, y1: 98.55 };   // outline bounds, % of viewBox
-const GEO_BOUNDS = { lon0: 68.11, lon1: 97.41, lat0: 37.1, lat1: 8.07 };
-
-function pin({ lat, lon }) {
-  const { x0, x1, y0, y1 } = MAP;
-  const { lon0, lon1, lat0, lat1 } = GEO_BOUNDS;
-  const left = x0 + ((lon - lon0) / (lon1 - lon0)) * (x1 - x0) + PIN_OFFSET.x;
-  const top = y0 + ((lat0 - lat) / (lat0 - lat1)) * (y1 - y0) + PIN_OFFSET.y;
-  return [top.toFixed(2) + '%', left.toFixed(2) + '%'];
-}
-
+// Inkarp branches. `coords` is each city's lat/lon: maps place pins with
+// mapPercent(branch.coords) from @/data/indiaMap, which projects it exactly as
+// the India map is drawn, so nothing here needs tuning per city or screen.
 export const branches = [
   {
     name: "Bengaluru",
@@ -119,30 +99,6 @@ export const branches = [
     coords: { lat: 17.39, lon: 78.49 },
   },
 ];
-
-// Every branch gets its position computed from coords + PIN_OFFSET. The sm/md/lg
-// shape is kept because ServiceMap still reads position[screenSize]; all three
-// are identical now that the map frame matches the SVG aspect ratio.
-branches.forEach((branch) => {
-  const p = pin(branch.coords);
-  branch.position = { sm: p, md: p, lg: p };
-});
-
-export function getScreenSize() {
-  if (typeof window === "undefined") {
-    return "lg";
-  }
-
-  if (window.innerWidth < 640) {
-    return "sm";
-  }
-
-  if (window.innerWidth < 1024) {
-    return "md";
-  }
-
-  return "lg";
-}
 
 export function phoneHref(phone) {
   return phone.replace(/[^0-9+]/g, "");

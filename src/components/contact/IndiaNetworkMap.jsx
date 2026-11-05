@@ -1,9 +1,10 @@
 'use client';
-import Image from 'next/image';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { MdEmail, MdLocalPhone, MdLocationPin } from 'react-icons/md';
 import { FiChevronDown, FiCrosshair, FiNavigation } from 'react-icons/fi';
-import { branches, getScreenSize, parseBranchPhones, phoneHref } from '@/data/branches';
+import { branches, parseBranchPhones, phoneHref } from '@/data/branches';
+import { mapPercent } from '@/data/indiaMap';
+import IndiaMapFrame from '@/components/maps/IndiaMapFrame';
 import { INDIA_STATES, nearestBranchForState, nearestBranchTo } from '@/data/indiaStates';
 import { gmailComposeHref, siteConfig } from '@/data/siteConfig';
 import { pushEvent } from '@/lib/analytics';
@@ -96,20 +97,12 @@ function BranchDetails({ branch }) {
 
 // `as` lets the host page promote this to the page's h1.
 export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
-  const [screenSize, setScreenSize] = useState('lg');
   const [region, setRegion] = useState('All');
   const [hovered, setHovered] = useState(null);
   // Head office starts open, so its contacts show without a click.
   const [expanded, setExpanded] = useState(HEAD_OFFICE_INDEX);
   const [finderState, setFinderState] = useState('');
   const [finderMessage, setFinderMessage] = useState('');
-
-  useEffect(() => {
-    const handleResize = () => setScreenSize(getScreenSize());
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const regionCounts = useMemo(() => {
     const counts = {};
@@ -252,23 +245,10 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           {/* Map card. Phones get the branch list first and a smaller map. */}
           <div className="relative order-2 mx-auto w-full max-w-sm rounded-2xl border border-line-light bg-white p-4 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:p-6 lg:order-1 lg:max-w-none">
-            {/* Must match IndiaMap.svg's own 1847x2000 viewBox. With a square
-                frame the contained map only filled the middle 92.35% of the
-                width, so pin percentages — which are relative to this box —
-                drifted sideways, worst at the edges. Matching the ratio makes
-                the map fill the frame exactly, so pin % == map %. */}
-            <div className="relative aspect-[1847/2000] w-full rounded-xl bg-parchment/60">
-              <div className="absolute inset-0 overflow-hidden rounded-xl">
-                <Image
-                  alt="India network coverage map"
-                  className="h-full w-full object-contain opacity-90"
-                  fill
-                  src="/assets/contact/IndiaMap.svg"
-                />
-              </div>
-
+            {/* The map is drawn with the same projection that places the dots,
+                so each dot sits on its city's lat/lon. */}
+            <IndiaMapFrame alt="India network coverage map" imageClassName="opacity-90">
               {branches.map((branch, i) => {
-                const [top, left] = branch.position[screenSize];
                 const dimmed = isDimmed(branch);
                 const active = hovered === i || expanded === i;
 
@@ -285,7 +265,7 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                     className={`group absolute -translate-x-1/2 -translate-y-1/2 outline-none transition-opacity duration-300 ${
                       dimmed ? 'opacity-20' : 'opacity-100'
                     }`}
-                    style={{ left, top, zIndex: active ? 30 : 10 }}
+                    style={{ ...mapPercent(branch.coords), zIndex: active ? 30 : 10 }}
                   >
                     <span className="relative flex size-6 items-center justify-center">
                       <span
@@ -314,7 +294,7 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
                   </button>
                 );
               })}
-            </div>
+            </IndiaMapFrame>
           </div>
 
           {/* Branch list — no max height or inner scroll: all 12 branches are

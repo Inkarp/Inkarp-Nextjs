@@ -67,7 +67,7 @@ const centrifuge = {
   parts: [
     { part: 'recover', test: /recover|unload|remove|collect/ },
     { part: 'balance', test: /balanc/ },
-    { part: 'set', test: /set|speed|time|program/ },
+    { part: 'set', test: /set|speed|time|program|cool/ },
     { part: 'spin', test: /spin|run|centrifug/ },
     { part: 'load', test: /load|tube|sample/ },
   ],

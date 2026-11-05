@@ -238,6 +238,14 @@ const WORKFLOW_DRAWING_BY_SLUG = {
   "rotational-viscometers": "rotational-viscometer",
   // Hohsen's slurry mixer, among its coin-cell crimpers.
   "mixing-machine": "slurry-mixer",
+  // The Titramax Package's shaker is the Titramax 1000 (plate shaker).
+  "titramax-package-orbital-platform-shaker": "plate-shaker",
+  // Steps the drawing has no part for (laser excitation, illumination,
+  // locating, saving; the PRO400PCEL's stand, program and record): plain cards.
+  lima: null,
+  rima: null,
+  lightir: null,
+  "pro400pcel-programmable-benchtop-homogenizer": null,
 };
 
 // The same drawing faint in the page background (HeroDrawing.jsx), switched

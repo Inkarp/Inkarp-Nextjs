@@ -64,7 +64,7 @@ const peristalticPump = {
     { part: 'load', test: /load|tub/ },
     { part: 'prime', test: /prime|fill/ },
     { part: 'set', test: /set|flow rate|speed/ },
-    { part: 'pump', test: /pump|run/ },
+    { part: 'pump', test: /pump|run|transfer|empty|revers/ },
     { part: 'dispense', test: /dispens|deliver|collect/ },
   ],
   tags: {

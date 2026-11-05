@@ -61,8 +61,8 @@ function Drawing({ on }) {
 const afm = {
   Drawing,
   parts: [
-    { part: 'mount', test: /mount|sample|place|load/ },
-    { part: 'approach', test: /approach|engage|tip/ },
+    { part: 'mount', test: /mount|sample|place|load|position/ },
+    { part: 'approach', test: /approach|engage|tip|cantilever/ },
     { part: 'scan', test: /scan|raster/ },
     { part: 'image', test: /image|map/ },
     { part: 'analyse', test: /analy|measur/ },

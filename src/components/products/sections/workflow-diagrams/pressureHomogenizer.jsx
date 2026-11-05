@@ -64,9 +64,9 @@ const pressureHomogenizer = {
   parts: [
     { part: 'feed', test: /feed|load/ },
     { part: 'pressurise', test: /pressur|pump/ },
-    { part: 'shear', test: /shear|valve|homogen/ },
+    { part: 'shear', test: /shear|valve|homogen|stage/ },
     { part: 'cool', test: /cool|exchang/ },
-    { part: 'collect', test: /collect|discharg|recover/ },
+    { part: 'collect', test: /collect|discharg|recover|outlet/ },
   ],
   tags: {
     feed: { at: [80, 36], align: 'center' },

@@ -1,0 +1,262 @@
+/* The /products hero previews (wall, orbit) and their shared parts.
+   Every movement stops for visitors who ask for reduced motion. */
+
+/* ── By Product / By Workflow: one toggle, the red highlight slides ── */
+.toggle {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--color-line-light);
+  background: #fff;
+  padding: 4px;
+}
+
+.togglePill {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  background: var(--color-red);
+  transition: transform 380ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.toggleLink {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  transition: color 300ms ease;
+}
+
+.toggleActive {
+  color: #fff;
+}
+
+.toggle:has(.toggleLink:nth-of-type(2):hover) .togglePill {
+  transform: translateX(100%);
+}
+
+.toggle:has(.toggleLink:nth-of-type(2):hover) .toggleActive {
+  color: var(--color-ink);
+}
+
+.toggle:has(.toggleLink:nth-of-type(2):hover) .toggleLink:nth-of-type(2) {
+  color: #fff;
+}
+
+/* ── How to find: the active step fills its top rule ── */
+.stepBar {
+  position: absolute;
+  inset: -1px -1px auto;
+  height: 2px;
+  background: var(--color-red);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.stepActive .stepBar {
+  animation: step-fill 2600ms linear forwards;
+}
+
+@keyframes step-fill {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ── Wall: columns of product photos drifting up and down ── */
+.wall {
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+}
+
+.wallTrack {
+  animation: wall-up var(--wall-duration, 48s) linear infinite;
+}
+
+.wallTrackDown {
+  animation-name: wall-down;
+}
+
+.wall:hover .wallTrack,
+.strip:hover .stripTrack {
+  animation-play-state: paused;
+}
+
+@keyframes wall-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes wall-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Phones: one strip sliding sideways. */
+.strip {
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.stripTrack {
+  animation: strip-left 70s linear infinite;
+}
+
+@keyframes strip-left {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tile {
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--color-red) 45%, transparent);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.tile:hover .tileName {
+  color: var(--color-red);
+}
+
+/* ── Orbit: three rings of brand logos turning, logos kept upright ── */
+.stage {
+  container-type: inline-size;
+}
+
+/* Each ring covers the whole stage, so it lets the mouse through to the
+   rings and logos under it; only the logos take it. */
+.ring {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: orbit var(--orbit-duration, 120s) linear infinite;
+  animation-direction: var(--orbit-direction, normal);
+}
+
+.ringLine {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px dashed rgba(15, 23, 42, 0.14);
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+}
+
+.slot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+
+.upright {
+  animation: orbit var(--orbit-duration, 120s) linear infinite;
+  animation-direction: var(--orbit-counter, reverse);
+}
+
+.stage:has(.brand:hover) .ring,
+.stage:has(.brand:hover) .upright,
+.stage:has(.brand:focus-visible) .ring,
+.stage:has(.brand:focus-visible) .upright {
+  animation-play-state: paused;
+}
+
+.brand {
+  pointer-events: auto;
+  width: 11cqw;
+  height: 11cqw;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  transform: translate(-50%, -50%) scale(1.25);
+  border-color: var(--color-red);
+  box-shadow: 0 10px 26px rgba(190, 0, 16, 0.18);
+  z-index: 5;
+}
+
+.brandTip {
+  opacity: 0;
+  transform: translate(-50%, 4px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.brand:hover .brandTip,
+.brand:focus-visible .brandTip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hubPulse {
+  animation: hub-pulse 3.2s ease-out infinite;
+}
+
+@keyframes hub-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-red) 30%, transparent);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 18px transparent;
+  }
+}
+
+/* ── Shared entrance: text rises in, one line after another ── */
+.rise {
+  animation: rise 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--rise-delay, 0ms);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wallTrack,
+  .stripTrack,
+  .ring,
+  .upright,
+  .hubPulse,
+  .rise,
+  .stepActive .stepBar {
+    animation: none;
+  }
+
+  .stepActive .stepBar {
+    transform: scaleX(1);
+  }
+
+  .strip {
+    overflow-x: auto;
+  }
+}

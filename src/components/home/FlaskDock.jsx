@@ -13,7 +13,8 @@ import styles from "./FlaskJourney.module.css";
  *
  * `name`: tells apart two spots for the same stop (the hero has one for wide
  * screens and one for narrow), so their drawings' ids differ. `className`
- * must set the display (e.g. "block" or "hidden lg:block").
+ * must set the display (e.g. "block" or "hidden lg:block"). `stops`: the
+ * page's list (FLASK_STOPS on the homepage, SERVICE_FLASK_STOPS on /service).
  */
 
 // The stops down the page, top to bottom: what the sample is in there
@@ -23,16 +24,26 @@ import styles from "./FlaskJourney.module.css";
 export const FLASK_STOPS = [
   { kind: "erlenmeyer", size: 64, level: 0.2 }, // About Inkarp (hero), under the 1985 badge
   { kind: "beaker", size: 48, level: 0.36 }, // the workflow wheel's centre
-  { kind: "wrench", size: 56, level: 0.52 }, // Service support
-  { kind: "pin", size: 52, level: 0.66 }, // standing on the principals globe
-  { kind: "calendar", size: 56, level: 0.8 }, // Events & insights
-  { kind: "speech", size: 64, level: 1 }, // Client reviews: a full speech bubble, glowing
+  { kind: "wrench", size: 56, level: 0.52 }, // Service support, left of the heading
+  { kind: "pin", size: 52, level: 0.66 }, // Our principals, left of the heading
+  { kind: "calendar", size: 56, level: 0.8 }, // Events & insights, left of the heading
+  { kind: "speech", size: 64, level: 1 }, // Client reviews, left of the heading: a full speech bubble, glowing
 ];
 
-export default function FlaskDock({ stop, name = "", className = "block" }) {
-  const { kind, size, level } = FLASK_STOPS[stop];
+// The Service page's stops, each left of its section heading.
+export const SERVICE_FLASK_STOPS = [
+  { kind: "wrench", size: 56, level: 0.2 }, // hero: Service Support
+  { kind: "shield", size: 52, level: 0.36 }, // Partnership Mindset
+  { kind: "gear", size: 56, level: 0.52 }, // Services We Provide
+  { kind: "pin", size: 52, level: 0.66 }, // Our Impact (installations across India)
+  { kind: "beaker", size: 48, level: 0.8 }, // Best Practices (product handling)
+  { kind: "clipboard", size: 56, level: 1 }, // Service Request: a full clipboard, glowing
+];
+
+export default function FlaskDock({ stop, stops = FLASK_STOPS, name = "", className = "block" }) {
+  const { kind, size, level } = stops[stop];
   const first = stop === 0;
-  const last = stop === FLASK_STOPS.length - 1;
+  const last = stop === stops.length - 1;
 
   return (
     <span

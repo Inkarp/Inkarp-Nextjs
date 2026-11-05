@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import RecTag from "@/components/home/RecTag";
+import FlaskDock, { SERVICE_FLASK_STOPS } from "@/components/home/FlaskDock";
 import { collectTracking } from "@/lib/browserTracking";
 import SubmitButton from "@/components/common/SubmitButton";
 import { SERVICE_DESK } from "@/data/contactDirectory";
@@ -36,7 +37,9 @@ function getInitialForm() {
   };
 }
 
-export default function ServiceContactForm() {
+// `flask`: on wide screens, a landing spot left of the heading for the
+// travelling sample (FlaskJourney) down the Service page.
+export default function ServiceContactForm({ flask = false } = {}) {
   const [form, setForm] = useState(getInitialForm);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,11 +105,14 @@ export default function ServiceContactForm() {
     <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8" id="service-request" data-reveal>
       <div className="mx-auto max-w-[1180px]">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <RecTag>Service Request</RecTag>
-            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-              Tell us what your instrument needs.
-            </h2>
+          <div className={flask ? "lg:flex lg:items-center lg:gap-6" : undefined}>
+            {flask ? <FlaskDock className="hidden shrink-0 lg:block" stop={5} stops={SERVICE_FLASK_STOPS} /> : null}
+            <div>
+              <RecTag>Service Request</RecTag>
+              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+                Tell us what your instrument needs.
+              </h2>
+            </div>
           </div>
           <p className="max-w-[430px] text-sm leading-6 text-ink-soft">
             Fill out the form and our service team will get back to you shortly.

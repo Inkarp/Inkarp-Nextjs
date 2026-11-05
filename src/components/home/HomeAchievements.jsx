@@ -25,20 +25,22 @@ const serviceCards = [
   },
 ];
 
-// `flask`: a landing spot between the heading and the intro for the
-// homepage's travelling sample (FlaskJourney), on wide screens.
+// `flask`: a landing spot left of the heading for the homepage's travelling
+// sample (FlaskJourney), on wide screens.
 export default function HomeAchievements({ flask = false }) {
   return (
     <section className="bg-white py-16" id="service-support" data-reveal>
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <RecTag>Service Support</RecTag>
-            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-              Support that stays with the solution.
-            </h2>
+          <div className={flask ? "lg:flex lg:items-center lg:gap-6" : undefined}>
+            {flask ? <FlaskDock className="hidden shrink-0 lg:block" stop={2} /> : null}
+            <div>
+              <RecTag>Service Support</RecTag>
+              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+                Support that stays with the solution.
+              </h2>
+            </div>
           </div>
-          {flask ? <FlaskDock className="mb-1 hidden lg:block" stop={2} /> : null}
           <p className="max-w-[420px] text-sm text-ink-soft">
             After installation, the real work begins. Inkarp supports laboratories with
             principal-trained engineers, application specialists, preventive maintenance,

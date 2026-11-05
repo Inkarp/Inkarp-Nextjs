@@ -525,15 +525,8 @@ html:has([data-bottom-banner]) [data-webinar-notice] {
 @keyframes solution-loader-breathe { 50% { box-shadow: 0 0 75px rgba(217,70,239,.8); transform: scale(1.08); } }
 @keyframes solution-stage-pulse { 0% { box-shadow: 0 0 0 0 rgba(232,121,249,.45); } 70%, 100% { box-shadow: 0 0 0 10px rgba(232,121,249,0); } }
 
-/* Service page hero: on desktop it fills the first screen below the header and
-   breadcrumb (2.5rem), with its two columns centred vertically in that space. */
-@media (min-width: 64rem) {
-  .service-hero {
-    display: flex;
-    align-items: center;
-    min-height: calc(100svh - var(--header-spacer, 136px) - 2.5rem);
-  }
-}
+/* The Service page hero no longer fills the first screen: its padding (page.js) sets its height. */
+
 
 .profile-download-glow { animation: profile-glow-pulse 2.6s ease-in-out infinite; }
 /* stop pulsing on hover so the button's own hover shadow shows */

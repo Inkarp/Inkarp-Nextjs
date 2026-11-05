@@ -6,7 +6,8 @@ import styles from "./FlaskJourney.module.css";
  * line (y 126) so they share the same stand: the Erlenmeyer flask of the
  * opening animation (LabIntro), a beaker, a wrench (service), a map pin
  * (location), a calendar (events) and a speech bubble (testimonials)
- * (FLASK_STOPS in FlaskDock).
+ * (FLASK_STOPS in FlaskDock); the Service page adds a shield, a gear and a
+ * clipboard (SERVICE_FLASK_STOPS).
  * How full a vessel is comes from the CSS number `--flask-fill` (0 empty, 1
  * up to its `range`) and the tilt of its surface from `--flask-slosh`, both
  * set by whoever holds it (FlaskDock or the travelling flask). `uid` keeps
@@ -82,6 +83,42 @@ export const VESSELS = {
     bottom: 126,
     range: 106,
     bubbles: [30, 86, 58, 22, 96, 44, 72],
+  },
+  // Service page, partnership: a shield standing on its point, with a tick
+  // that shows white once the sample is behind it.
+  shield: {
+    body: "M60 14L100 28V64Q100 100 60 126Q20 100 20 64V28Z",
+    outline: "M60 14L100 28V64Q100 100 60 126Q20 100 20 64V28Z",
+    marks: "",
+    glint: "M28 38V66",
+    quote: "M41 68L54 81L80 53",
+    bottom: 126,
+    range: 112,
+    bubbles: [44, 76, 60, 36, 84, 52, 68],
+  },
+  // Service page, the services offered: a gear standing on a tooth, its
+  // hub left clear.
+  gear: {
+    body: "M70.4 114.6L67 125.5A50 50 0 0 1 53 125.5L49.6 114.6A40 40 0 0 1 40 110.6L29.9 115.9A50 50 0 0 1 20.1 106.1L25.4 96A40 40 0 0 1 21.4 86.4L10.5 83A50 50 0 0 1 10.5 69L21.4 65.6A40 40 0 0 1 25.4 56L20.1 45.9A50 50 0 0 1 29.9 36.1L40 41.4A40 40 0 0 1 49.6 37.4L53 26.5A50 50 0 0 1 67 26.5L70.4 37.4A40 40 0 0 1 80 41.4L90.1 36.1A50 50 0 0 1 99.9 45.9L94.6 56A40 40 0 0 1 98.6 65.6L109.5 69A50 50 0 0 1 109.5 83L98.6 86.4A40 40 0 0 1 94.6 96L99.9 106.1A50 50 0 0 1 90.1 115.9L80 110.6A40 40 0 0 1 70.4 114.6ZM75 76A15 15 0 1 0 45 76A15 15 0 1 0 75 76Z",
+    outline: "M70.4 114.6L67 125.5A50 50 0 0 1 53 125.5L49.6 114.6A40 40 0 0 1 40 110.6L29.9 115.9A50 50 0 0 1 20.1 106.1L25.4 96A40 40 0 0 1 21.4 86.4L10.5 83A50 50 0 0 1 10.5 69L21.4 65.6A40 40 0 0 1 25.4 56L20.1 45.9A50 50 0 0 1 29.9 36.1L40 41.4A40 40 0 0 1 49.6 37.4L53 26.5A50 50 0 0 1 67 26.5L70.4 37.4A40 40 0 0 1 80 41.4L90.1 36.1A50 50 0 0 1 99.9 45.9L94.6 56A40 40 0 0 1 98.6 65.6L109.5 69A50 50 0 0 1 109.5 83L98.6 86.4A40 40 0 0 1 94.6 96L99.9 106.1A50 50 0 0 1 90.1 115.9L80 110.6A40 40 0 0 1 70.4 114.6ZM75 76A15 15 0 1 0 45 76A15 15 0 1 0 75 76Z",
+    marks: "",
+    glint: "M26 66Q28 52 37 44",
+    evenodd: true,
+    bottom: 126,
+    range: 100,
+    bubbles: [32, 88, 60, 26, 94, 40, 80],
+  },
+  // Service page, the request form: a clipboard with its clip and lines;
+  // full, the sample stops below the clip.
+  clipboard: {
+    body: "M24 26H96Q100 26 100 30V122Q100 126 96 126H24Q20 126 20 122V30Q20 26 24 26Z",
+    outline: "M24 26H96Q100 26 100 30V122Q100 126 96 126H24Q20 126 20 122V30Q20 26 24 26Z",
+    solid: "M44 14H76Q80 14 80 18V32H40V18Q40 14 44 14Z",
+    marks: "M34 56H86M34 74H86M34 92H86M34 110H64",
+    glint: "M27 44V112",
+    bottom: 126,
+    range: 92,
+    bubbles: [36, 84, 60, 30, 90, 48, 72],
   },
 };
 

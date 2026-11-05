@@ -17,20 +17,25 @@ function StarRating({ rating }) {
 }
 
 // `flask`: the last landing spot for the homepage's travelling
-// sample (FlaskJourney), between the rating and the Google link, on wide screens.
+// sample (FlaskJourney), left of the heading, on wide screens.
 export default function HomeClientReviews({ flask = false }) {
   const reviewLoop = [...googleReviews, ...googleReviews];
 
   return (
     <section className="lab-pattern bg-parchment-alt py-[78px]" id="client-reviews" data-reveal>
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
-        <RecTag>Rated By Our Customers</RecTag>
-        <h2 className="max-w-2xl text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-          What labs say about working with us
-        </h2>
-        <p className="mt-3 max-w-xl text-sm text-ink-soft">
-          Real reviews from the researchers and labs we support across India.
-        </p>
+        <div className={flask ? "lg:flex lg:items-center lg:gap-6" : undefined}>
+          {flask ? <FlaskDock className="hidden shrink-0 lg:block" stop={5} /> : null}
+          <div>
+            <RecTag>Rated By Our Customers</RecTag>
+            <h2 className="max-w-2xl text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+              What labs say about working with us
+            </h2>
+            <p className="mt-3 max-w-xl text-sm text-ink-soft">
+              Real reviews from the researchers and labs we support across India.
+            </p>
+          </div>
+        </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-6">
           <div className="flex items-center gap-5 rounded-xl border border-line-light bg-white px-6 py-5">
@@ -52,7 +57,6 @@ export default function HomeClientReviews({ flask = false }) {
             </div>
           </div>
 
-          {flask ? <FlaskDock className="hidden lg:block" stop={5} /> : null}
 
           <a
             className="inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"

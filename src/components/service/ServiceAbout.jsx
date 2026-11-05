@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaBuilding } from "react-icons/fa";
 import { FiTool } from "react-icons/fi";
 import RecTag from "@/components/home/RecTag";
+import FlaskDock, { SERVICE_FLASK_STOPS } from "@/components/home/FlaskDock";
 
 function useCountUp(end, start = 0, duration = 1500, inView) {
   const [value, setValue] = useState(start);
@@ -91,16 +92,21 @@ function StatCard({ icon: Icon, number, plus, label, info }) {
   );
 }
 
-export default function ServiceAbout() {
+// `flask`: on wide screens, a landing spot left of the heading for the
+// travelling sample (FlaskJourney) down the Service page.
+export default function ServiceAbout({ flask = false } = {}) {
   return (
     <section className="bg-parchment-alt px-4 py-16 sm:px-6 lg:px-8" data-reveal>
       <div className="mx-auto max-w-[1180px]">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <RecTag>Our Impact</RecTag>
-            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-              Proven service behind consistent results.
-            </h2>
+          <div className={flask ? "lg:flex lg:items-center lg:gap-6" : undefined}>
+            {flask ? <FlaskDock className="hidden shrink-0 lg:block" stop={3} stops={SERVICE_FLASK_STOPS} /> : null}
+            <div>
+              <RecTag>Our Impact</RecTag>
+              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+                Proven service behind consistent results.
+              </h2>
+            </div>
           </div>
           <p className="max-w-[430px] text-sm leading-6 text-ink-soft">
             Our service network is built for laboratories that need dependable uptime,

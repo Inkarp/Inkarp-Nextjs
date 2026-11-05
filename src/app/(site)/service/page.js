@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
-import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+import FlaskDock, { SERVICE_FLASK_STOPS } from "@/components/home/FlaskDock";
+import FlaskJourney from "@/components/home/FlaskJourney";
 import ProductHandlingGuide from "@/components/service/ProductHandlingGuide";
 import RecTag from "@/components/home/RecTag";
 import ServiceAbout from "@/components/service/ServiceAbout";
@@ -24,15 +25,22 @@ export default function ServicePage() {
       <BreadcrumbJsonLd path="/service" />
       <PageBreadcrumbs path="/service" />
 
-      <section className="service-hero bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:py-6">
+      <section className="service-hero bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-12 lg:pt-6">
         <div className="mx-auto w-full max-w-[1180px]">
           <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
             <div>
-              <RecTag>Service Support</RecTag>
-              <h1 className="max-w-[15ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:max-w-none lg:text-[40px] xl:text-[44px]">
-                Service that keeps your lab
-                <em className="italic text-red lg:block"> running with confidence.</em>
-              </h1>
+              {/* On wide screens the travelling sample (FlaskJourney) starts here,
+                  left of the heading, as at every section below. */}
+              <div className="lg:flex lg:items-center lg:gap-6">
+                <FlaskDock className="hidden shrink-0 lg:block" stop={0} stops={SERVICE_FLASK_STOPS} />
+                <div>
+                  <RecTag>Service Support</RecTag>
+                  <h1 className="max-w-[15ch] text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:max-w-none lg:text-[40px] xl:text-[44px]">
+                    Service that keeps your lab
+                    <em className="italic text-red lg:block"> running with confidence.</em>
+                  </h1>
+                </div>
+              </div>
 
               <p className="my-5 max-w-[560px] text-base leading-relaxed text-ink-soft sm:text-lg lg:my-4 lg:text-base">
                 At Inkarp Instruments, service is the backbone of our partnership with
@@ -41,7 +49,7 @@ export default function ServicePage() {
                 instrument journey from installation to long-term maintenance.
               </p>
 
-              <div className="mb-9 grid max-w-[560px] gap-3 sm:grid-cols-3 lg:mb-6">
+              <div className="grid max-w-[560px] gap-3 sm:grid-cols-3">
                 {servicePromises.map((promise) => (
                   <div key={promise} className="flex items-start gap-2 border border-line-light bg-parchment-alt p-3">
                     <FiCheckCircle className="mt-0.5 size-4 shrink-0 text-red" />
@@ -50,21 +58,6 @@ export default function ServicePage() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-3.5">
-                <Link
-                  href="#service-request"
-                  className="inline-flex items-center gap-2 border border-rose-200 bg-rose-50 px-6 py-3.5 text-sm font-semibold text-rose-700 transition hover:-translate-y-0.5 hover:bg-rose-100"
-                >
-                  Request Service
-                  <FiArrowRight className="size-4" />
-                </Link>
-                <Link
-                  href="#service-types"
-                  className="border border-line-light bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:-translate-y-0.5 hover:border-red hover:text-red"
-                >
-                  View Services
-                </Link>
-              </div>
             </div>
 
             <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
@@ -95,12 +88,15 @@ export default function ServicePage() {
       </section>
 
       <section className="bg-parchment-alt px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-[1180px] gap-8 lg:grid-cols-[0.78fr_1.22fr]">
-          <div>
-            <RecTag>Partnership Mindset</RecTag>
-            <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-              Every lab is unique. The support plan should be too.
-            </h2>
+        <div className="mx-auto grid max-w-[1180px] gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="lg:flex lg:items-center lg:gap-6">
+            <FlaskDock className="hidden shrink-0 lg:block" stop={1} stops={SERVICE_FLASK_STOPS} />
+            <div>
+              <RecTag>Partnership Mindset</RecTag>
+              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+                Every lab is unique. The support plan should be too.
+              </h2>
+            </div>
           </div>
           <div className="grid gap-5 text-sm leading-6 text-ink-soft sm:grid-cols-2">
             <p>
@@ -116,10 +112,14 @@ export default function ServicePage() {
         </div>
       </section>
 
-      <ServiceTabs />
-      <ServiceAbout />
-      <ProductHandlingGuide />
-      <ServiceContactForm />
+      <ServiceTabs flask />
+      <ServiceAbout flask />
+      <ProductHandlingGuide flask />
+      <ServiceContactForm flask />
+
+      {/* Wide screens: a sample travels down the left of the page from section
+          to section, turning into each one's glass icon (as on the homepage). */}
+      <FlaskJourney />
     </main>
   );
 }

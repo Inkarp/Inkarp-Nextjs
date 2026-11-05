@@ -116,7 +116,7 @@ function StaticPrincipalLogo({ name, logo, href }) {
 
 const BEING_WEBSITE = "https://beinglab.co.in/";
 
-// `flask`: on wide screens, a landing spot on top of the globe for the
+// `flask`: on wide screens, a landing spot left of the heading for the
 // homepage's travelling sample (FlaskJourney).
 export default function PrincipalsGlobe({ principals = [], flask = false }) {
   const { countries, allPrincipals } = useCountryGroups(principals);
@@ -380,15 +380,19 @@ export default function PrincipalsGlobe({ principals = [], flask = false }) {
         <div className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(15,23,42,.5)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,.5)_1px,transparent_1px)] [background-size:42px_42px] [mask-image:linear-gradient(to_bottom,black,transparent_82%)]" />
       </div>
 
-      <div className="relative mx-auto mb-8 w-full max-w-[1240px] shrink-0 lg:mb-6">
-        <RecTag>Our Principals</RecTag>
-        <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-          A global network of scientific leaders
-        </h2>
-        <p className="mt-3 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">
-          We represent {totalBrandCount} principals across {countries.length} countries. Spin the
-          globe or pick a country to see who we bring to Indian labs.
-        </p>
+      <div className={`relative mx-auto mb-8 w-full max-w-[1240px] shrink-0 lg:mb-6 ${flask ? "lg:flex lg:items-center lg:gap-6" : ""}`}>
+        {/* The travelling sample's stop: left of the heading, as in every section. */}
+        {flask ? <FlaskDock className="hidden shrink-0 lg:block" stop={3} /> : null}
+        <div>
+          <RecTag>Our Principals</RecTag>
+          <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
+            A global network of scientific leaders
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-ink-soft sm:text-base">
+            We represent {totalBrandCount} principals across {countries.length} countries. Spin the
+            globe or pick a country to see who we bring to Indian labs.
+          </p>
+        </div>
       </div>
 
       <div className="relative mx-auto grid w-full max-w-[1240px] grid-cols-1 gap-5 lg:min-h-0 lg:flex-1 lg:grid-cols-[300px_230px_1fr] lg:items-stretch">
@@ -413,12 +417,6 @@ export default function PrincipalsGlobe({ principals = [], flask = false }) {
                   <FiGlobe aria-hidden="true" className="h-16 w-16 animate-pulse text-black/10" />
                 )}
               </div>
-            ) : null}
-            {/* Standing on the globe's top (its edge is 9px into this box). */}
-            {flask ? (
-              <span className="pointer-events-none absolute bottom-[calc(100%-13px)] left-1/2 hidden -translate-x-1/2 lg:block">
-                <FlaskDock stop={3} />
-              </span>
             ) : null}
           </div>
           <p className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-ink-soft/70"><FiMove aria-hidden="true" /> Drag to explore</p>

@@ -138,7 +138,7 @@ function BlogCard({ post }) {
   );
 }
 
-// `flask`: a landing spot beside the heading for the homepage's
+// `flask`: a landing spot left of the heading for the homepage's
 // travelling sample (FlaskJourney), on wide screens.
 export default function HomeEventsInsights({ flask = false }) {
   const featuredEvents = pickFeaturedEvents();
@@ -147,7 +147,8 @@ export default function HomeEventsInsights({ flask = false }) {
   return (
     <section className="bg-white py-[78px]" id="events-insights" data-reveal>
       <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
-        <div className={flask ? "mb-10 flex items-end justify-between gap-6" : "mb-10"}>
+        <div className={flask ? "mb-10 lg:flex lg:items-center lg:gap-6" : "mb-10"}>
+          {flask ? <FlaskDock className="hidden shrink-0 lg:block" stop={4} /> : null}
           <div>
             <RecTag>What&apos;s Happening</RecTag>
             <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
@@ -157,7 +158,6 @@ export default function HomeEventsInsights({ flask = false }) {
               Highlights from our recent events and the latest thinking from our team.
             </p>
           </div>
-          {flask ? <FlaskDock className="mb-1 mr-[12%] hidden lg:block" stop={4} /> : null}
         </div>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.6fr_1fr]">

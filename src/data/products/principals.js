@@ -10,7 +10,7 @@ import {
     getJsonCatalogProductBySlug,
     getJsonCatalogProducts,
 } from "@/data/principals/catalog";
-import { productMatchesSearch } from "@/lib/productSearch";
+import { productMatchesSearch, sortBySearchRank } from "@/lib/productSearch";
 import { getAuthorizedRegion } from "@/data/products/authorizedRegions";
 
 let allProductsCache;
@@ -664,7 +664,7 @@ export function searchProducts(filters = {}) {
     const selectedIndustries = toArray(filters.industries);
     const selectedApplications = toArray(filters.applications ?? filters.application);
 
-    return getAllProducts().filter((product) => {
+    const matches = getAllProducts().filter((product) => {
         return (
             productMatchesSearch(product, query) &&
             (!selectedPrincipals.length ||
@@ -680,4 +680,6 @@ export function searchProducts(filters = {}) {
             (!filters.details || product.hasDetails)
         );
     });
+
+    return sortBySearchRank(matches, query);
 }

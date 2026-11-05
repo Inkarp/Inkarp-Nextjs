@@ -21,12 +21,11 @@ export default function EventTicket({ event, className = "", style }) {
     <div className={`${styles.wrap} ${className} w-full max-w-[470px]`} style={style}>
       <div className={styles.ticket}>
         <div className={styles.main} style={{ "--ticket-shapes": SHAPES }}>
-          <p className="text-lg font-bold leading-tight tracking-tight">Visit us at</p>
-          {/* The details picked out: bold values beside red icon chips. */}
-          <dl className="mt-3 grid gap-3">
+          {/* Event details with PMEC navy and blue accents. */}
+          <dl className="grid gap-3">
             <div className="flex items-start gap-3">
-              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-red/10">
-                <FiCalendar aria-hidden="true" className="size-4 text-red" />
+              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#457ca3]/10">
+                <FiCalendar aria-hidden="true" className="size-4 text-[#457ca3]" />
               </span>
               <div>
                 <dt className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-[#457ca3]">Dates</dt>
@@ -34,8 +33,8 @@ export default function EventTicket({ event, className = "", style }) {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-red/10">
-                <FiMapPin aria-hidden="true" className="size-4 text-red" />
+              <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#457ca3]/10">
+                <FiMapPin aria-hidden="true" className="size-4 text-[#457ca3]" />
               </span>
               <div>
                 <dt className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-[#457ca3]">Venue</dt>

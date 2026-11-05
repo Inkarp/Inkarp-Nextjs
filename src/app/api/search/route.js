@@ -1,5 +1,5 @@
 import { getAllProducts } from "@/data/products/principals";
-import { productMatchesSearch } from "@/lib/productSearch";
+import { productMatchesSearch, sortBySearchRank } from "@/lib/productSearch";
 
 // The catalogue lives here rather than in the browser. Matching runs against the
 // full product records — specs, FAQs, synonyms and all — so results are exactly
@@ -32,8 +32,9 @@ export function GET(request) {
     return Response.json({ success: true, query, total: 0, results: [] });
   }
 
-  const matches = getAllProducts().filter((product) =>
-    productMatchesSearch(product, query)
+  const matches = sortBySearchRank(
+    getAllProducts().filter((product) => productMatchesSearch(product, query)),
+    query
   );
 
   return Response.json({

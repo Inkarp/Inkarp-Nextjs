@@ -5,7 +5,7 @@
 /* The shadow sits on a wrapper: on the ticket itself it would be cut away by
    the notches' mask. */
 .wrap {
-  filter: drop-shadow(0 18px 28px rgba(0, 8, 20, 0.45));
+  filter: drop-shadow(0 14px 24px rgba(0, 30, 54, 0.16));
   transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -21,7 +21,8 @@
   grid-template-columns: minmax(0, 1fr) var(--stub);
   overflow: hidden;
   border-radius: 10px;
-  background: linear-gradient(135deg, #f6f9fc 0%, #e2ebf5 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #edf5fa 100%);
+  border: 1px solid rgba(69, 124, 163, 0.2);
   color: #001e36;
   /* Two half-round notches at the tear line, top and bottom. */
   -webkit-mask:
@@ -36,7 +37,7 @@
 .main {
   position: relative;
   padding: 16px 18px 16px 20px;
-  border-right: 2px dashed rgba(0, 30, 54, 0.22);
+  border-right: 2px dashed rgba(0, 30, 54, 0.25);
 }
 
 /* PMEC's soft rounded shapes, very faint, in the corner of the pass. */
@@ -52,13 +53,13 @@
   pointer-events: none;
 }
 
-/* The red stub: the hall and the stall number, large and glowing faintly. */
+/* PMEC navy stub: the hall and stall number, clear and high contrast. */
 .stub {
   display: grid;
   place-content: center;
   justify-items: center;
   padding: 12px 8px;
-  background: linear-gradient(160deg, #d0101f 0%, #be0010 55%, #99000d 100%);
+  background: linear-gradient(160deg, #457ca3 0%, #0b3150 55%, #001e36 100%);
   color: #fff;
   text-align: center;
 }

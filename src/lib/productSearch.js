@@ -120,3 +120,27 @@ export function productMatchesSearch(product, query) {
     );
   });
 }
+
+// How directly a product's own name answers the query: its exact name or slug
+// first, then a name that starts with it, then a name holding it as a word.
+// Matching alone is unranked, so a short name like "RIMA" sat behind every
+// product whose text mentions "primary" and fell off the first page.
+export function productSearchRank(product, query) {
+  const q = normalizeSearchValue(query);
+  if (!q) return 0;
+  const name = normalizeSearchValue(product.name);
+  if (name === q || normalizeSearchValue(product.slug) === q) return 4;
+  if (name.startsWith(`${q} `)) return 3;
+  if (` ${name} `.includes(` ${q} `)) return 2;
+  if (normalizeCompactSearchValue(product.name).includes(normalizeCompactSearchValue(q))) return 1;
+  return 0;
+}
+
+/** Products in search order: best name matches first, otherwise unchanged. */
+export function sortBySearchRank(products, query) {
+  if (!normalizeSearchValue(query)) return products;
+  return products
+    .map((product, index) => [product, productSearchRank(product, query), index])
+    .sort((a, b) => b[1] - a[1] || a[2] - b[2])
+    .map(([product]) => product);
+}

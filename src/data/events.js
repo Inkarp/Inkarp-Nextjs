@@ -273,9 +273,9 @@ export const featuredEvent = {
  *
  * PMEC India 2026 is the IEML half of CPHI & PMEC India: from 2026 the sister
  * show CPHI India runs at Yashobhoomi, Delhi (official FAQ, cphi.com/india).
- * Visitor registration was not yet open when this was added (2 Nov 2026), so
- * there is no Register button; its link (and the floating "Register now"
- * pill on the events pages) comes from ./eventRegistration.js: add it there.
+ * The banner's "Register to visit" button and the floating "Register now"
+ * pill on the events pages take the organiser's registration link and the
+ * show's closing time from ./eventRegistration.js (added 6 Nov 2026).
  */
 export const bannerEvent = {
   eyebrow: "Meet us at",
@@ -285,7 +285,7 @@ export const bannerEvent = {
   venue: "India Exposition Mart Limited (IEML), Greater Noida, Delhi NCR",
   hall: "Hall 5",
   stallNumber: "5F12",
-  // Countdown target: doors-open on day one (opening hours not yet published).
+  // Countdown target: doors open on day one at 10:00 (opening times on cphi.com/india).
   startsAt: "2026-11-24T10:00:00+05:30",
   endsAt: eventRegistration.endsAt,
   // A line under the pass (StageEventBanner); none for now.
@@ -295,9 +295,10 @@ export const bannerEvent = {
   stallImage: `${IMG}/pmec-2026-stall.webp`,
   stallImageAlt: "Inkarp stall 5F12 at PMEC India 2026, with laboratory instruments on display",
   registrationUrl: eventRegistration.url,
-  // PMEC India's own logo above the title: the file the user supplied, turned
-  // white (same shapes) to read on the dark banner. null = none.
-  logo: { src: `${IMG}/pmec-india-logo-white.png`, width: 212, height: 46 },
+  // PMEC India's own logo in place of its name in the title: the full-colour
+  // file the user supplied (6 Nov 2026), its grey background made transparent
+  // so it sits straight on the white banner. null = none.
+  logo: { src: `${IMG}/pmec-india-logo.png`, width: 271, height: 116 },
   // The heading and intro of the section under the banner (StallShowcase).
   showcaseTitle: "What's on Our Showcase?",
   showcaseIntro: "From smart laboratory solutions to advanced analytical technologies, here's what's coming to our stall!",

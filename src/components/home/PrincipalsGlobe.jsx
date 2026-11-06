@@ -396,8 +396,8 @@ export default function PrincipalsGlobe({ principals = [], flask = false }) {
       </div>
 
       <div className="relative mx-auto grid w-full max-w-[1240px] grid-cols-1 gap-5 lg:min-h-0 lg:flex-1 lg:grid-cols-[300px_230px_1fr] lg:items-stretch">
-        <div className="relative flex flex-col items-center justify-center gap-5 overflow-hidden rounded-[28px] border border-white/80 bg-gradient-to-br from-white/80 to-white/35 p-5 shadow-[0_24px_70px_rgba(15,23,42,0.09)] ring-1 ring-black/[0.025] backdrop-blur-xl">
-          <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-red/50 to-transparent" />
+        {/* No card behind the globe: it sits on the section's own background. */}
+        <div className="relative flex flex-col items-center justify-center gap-5 p-5">
           <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white bg-white/80 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-ink-soft shadow-sm">
             <span className="relative flex size-2"><span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-60" /><span className="relative inline-flex size-2 rounded-full bg-emerald-500" /></span>
             Global network

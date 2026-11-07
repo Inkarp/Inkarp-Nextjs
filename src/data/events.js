@@ -236,6 +236,19 @@ export const events = [
     date: "2026-09-12",
     collageImage: `${COLLAGE}/AnalyticaHyderabad2026.webp`,
   },
+  {
+    // Invitation poster laid out like the analytica 2026 one above (EventNew9),
+    // made 7 Nov 2026 from the banner's stall render (pmec-2026-stall.webp),
+    // the PMEC India logo and the details in `bannerEvent` below. Add a
+    // `collageImage` of the stand after the show.
+    id: 26,
+    category: "Exhibition",
+    title: "PMEC India 2026 – Greater Noida",
+    description:
+      "Date: 24th - 26th November 2026\nLocation: Hall 5, Stall No. 5F12, India Exposition Mart Limited (IEML), Greater Noida, Delhi NCR",
+    image: `${IMG}/EventNew10.webp`,
+    date: "2026-11-26",
+  },
 ];
 
 // Featured event shown in the page banner, replacing the old flat EventBanner

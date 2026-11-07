@@ -129,39 +129,7 @@
   55%, 100% { background-position: 0% 0; }
 }
 
-/* "Meet us at": a red map pin that drops in and keeps pulsing, a swash drawn
-   under the words, then an arrow drawn down to the show's logo. */
-.meetPin {
-  position: relative;
-  display: grid;
-  flex: none;
-  place-items: center;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 9999px;
-  background: var(--color-red);
-  color: #fff;
-  box-shadow: 0 10px 22px rgba(190, 0, 16, 0.28);
-  animation: meet-pin 900ms cubic-bezier(0.3, 1.4, 0.5, 1) 350ms both;
-}
-
-.meetPin::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2px solid var(--color-red);
-  border-radius: inherit;
-  opacity: 0;
-  animation: meet-ping 2.4s ease-out 1.3s infinite;
-}
-
-@media (min-width: 640px) {
-  .meetPin {
-    width: 3.1rem;
-    height: 3.1rem;
-  }
-}
-
+/* "Meet us at": a red swash drawn under the words. */
 .meetSwash {
   position: absolute;
   left: 0;
@@ -171,51 +139,46 @@
   overflow: visible;
 }
 
-.meetSwash path,
-.meetArrow path {
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  animation: meet-draw 700ms ease-out 900ms forwards;
-}
-
 .meetSwash path {
   stroke: var(--color-red);
   stroke-width: 5;
   vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-linecap: round;
+  animation: meet-draw 700ms ease-out 900ms forwards;
 }
 
-.meetArrow {
+/* The title: the show's logo, then the year as tall as the logo's lettering.
+   In the logo image (271 x 116) the letters "PMEC" fill 47 of the 116 rows
+   (0.405 of its height) and stand on a baseline 0.25 of its height above the
+   bottom ("India" sits underneath). Roboto's figures, overshoot included,
+   are 0.745em tall, so a font size of 0.405 / 0.745 = 0.544 of the logo's
+   height matches them; with line-height 1 the baseline is 0.158em above
+   the bottom of the year's box, so lifting it by 0.25 - 0.158 x 0.544 =
+   0.164 of the logo's height puts both on one line. */
+.logoTitle {
+  --logo-h: 4.25rem;
+}
+
+@media (min-width: 640px) {
+  .logoTitle {
+    --logo-h: 6.25rem;
+  }
+}
+
+.logo {
   flex: none;
-  align-self: flex-end;
-  width: 2.2rem;
-  height: 2.4rem;
-  margin-bottom: -1.9rem;
-  color: #457ca3;
+  width: auto;
+  height: var(--logo-h);
 }
 
-.meetArrow path {
-  stroke: currentColor;
-  stroke-width: 2.6;
-  animation-delay: 1500ms;
-  animation-duration: 550ms;
-}
-
-.meetArrow path + path {
-  animation-delay: 2000ms;
-  animation-duration: 250ms;
-}
-
-@keyframes meet-pin {
-  0% { opacity: 0; transform: translateY(-140%) scale(0.6); }
-  60% { opacity: 1; transform: translateY(8%) scale(1.06); }
-  100% { opacity: 1; transform: none; }
-}
-
-@keyframes meet-ping {
-  0% { opacity: 0.6; transform: scale(1); }
-  80%, 100% { opacity: 0; transform: scale(1.9); }
+.year {
+  font-size: calc(var(--logo-h) * 0.544);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: calc(var(--logo-h) * 0.164);
 }
 
 @keyframes meet-draw {
@@ -233,15 +196,11 @@
   .landGlow,
   .landRing,
   .sheen,
-  .meetPin,
-  .meetPin::before,
-  .meetSwash path,
-  .meetArrow path {
+  .meetSwash path {
     animation: none;
   }
 
-  .meetSwash path,
-  .meetArrow path {
+  .meetSwash path {
     stroke-dashoffset: 0;
   }
 

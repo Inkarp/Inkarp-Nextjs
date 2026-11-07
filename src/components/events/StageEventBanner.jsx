@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FiArrowUpRight, FiCheckCircle, FiMapPin } from "react-icons/fi";
-import { pushEvent } from "@/lib/analytics";
+import { FiCheckCircle } from "react-icons/fi";
 import EventTicket from "./EventTicket";
 import styles from "./StageEventBanner.module.css";
 
@@ -31,12 +30,6 @@ const ROUNDED = `url("data:image/svg+xml,${encodeURIComponent(
 const TRUSS = `url("data:image/svg+xml,${encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16"><path d="M0 1H24M0 15H24M0 15L12 1L24 15" fill="none" stroke="#fff" stroke-width="1"/></svg>'
 )}")`;
-
-// The Register button is shown until the show closes (event.endsAt). The
-// server always includes it (nearly every visit comes before the show); the
-// browser, which knows the time, takes it away once the show is over.
-const noSubscription = () => () => {};
-const shownOnServer = () => true;
 
 const UNITS = [
   { key: "days", label: "Days" },
@@ -128,11 +121,6 @@ export default function StageEventBanner({ event }) {
   const words = String(event.eyebrow ?? "").trim().split(/\s+/);
   const lastWord = words.length > 1 ? words.pop() : "";
   const lead = words.join(" ");
-  const registrationOpen = useSyncExternalStore(
-    noSubscription,
-    () => !event.endsAt || Date.now() < Date.parse(event.endsAt),
-    shownOnServer
-  );
 
   return (
     <section
@@ -177,14 +165,9 @@ export default function StageEventBanner({ event }) {
       <div className="relative mx-auto grid max-w-[1180px] items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-6 lg:px-8 lg:pb-14 lg:pt-10">
         <div className="min-w-0">
           {/* Each line slides in from the left in turn (--i is its place). */}
-          {/* The lead-in ("Meet us at"), big and bold: a red map pin that
-              drops in and pulses, the words in heavy type with the last one in
-              red, a red swash drawn under them and an arrow drawn down to the
-              show's logo. */}
-          <p className={`${styles.enter} relative inline-flex items-center gap-3 sm:gap-4`} style={{ "--i": 0 }}>
-            <span aria-hidden="true" className={styles.meetPin}>
-              <FiMapPin className="size-[46%]" />
-            </span>
+          {/* The lead-in ("Meet us at"), big and bold: the words in heavy
+              type with the last one in red, and a red swash drawn under them. */}
+          <p className={`${styles.enter} relative inline-flex items-center`} style={{ "--i": 0 }}>
             <span className="relative text-[30px] font-extrabold leading-none tracking-tight text-[#001e36] sm:text-[40px]">
               {lead}
               {lastWord ? (
@@ -197,22 +180,19 @@ export default function StageEventBanner({ event }) {
                 <path d="M3 10C45 3 120 2 197 7" pathLength="1" />
               </svg>
             </span>
-            <svg aria-hidden="true" className={styles.meetArrow} fill="none" viewBox="0 0 44 48">
-              <path d="M6 5C28 4 40 17 35 39" pathLength="1" />
-              <path d="M27 32l8 8 7-10" pathLength="1" />
-            </svg>
           </p>
 
           {/* Uncovered by a red block sweeping across: the show's own logo in
               place of its name (bannerEvent.logo; the name in silver if
-              there is none), then the year. */}
+              there is none), then the year in upright Roboto, as tall as the
+              logo's lettering and on the same baseline (.logoTitle, .year). */}
           <h1 className="mt-5 text-[40px] font-semibold leading-[1.02] tracking-tight sm:text-6xl">
             <span className={styles.reveal}>
-              <span className={`${styles.revealText} inline-flex items-end gap-3 sm:gap-4`}>
+              <span className={`${styles.revealText} ${event.logo ? styles.logoTitle : ""} inline-flex items-end gap-3 sm:gap-4`}>
                 {event.logo ? (
                   <Image
                     alt={event.name}
-                    className="h-14 w-auto sm:h-[76px]"
+                    className={styles.logo}
                     height={event.logo.height}
                     priority
                     src={event.logo.src}
@@ -221,7 +201,7 @@ export default function StageEventBanner({ event }) {
                 ) : (
                   <span className={styles.silver}>{event.name}</span>
                 )}{" "}
-                <em className="italic leading-[0.8] text-red">{event.edition}</em>
+                <span className={`${event.logo ? styles.year : ""} text-red`}>{event.edition}</span>
               </span>
             </span>
           </h1>
@@ -244,20 +224,6 @@ export default function StageEventBanner({ event }) {
           ) : null}
 
           <StageCountdown event={event} order={6} />
-
-          {event.registrationUrl && registrationOpen ? (
-            <a
-              className={`${styles.enter} mt-7 inline-flex items-center gap-2 bg-[#001e36] px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0b3150]`}
-              href={event.registrationUrl}
-              onClick={() => pushEvent("event_register_click", { page: "/events", event: event.name, source: "banner" })}
-              style={{ "--i": 8 }}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Register to visit
-              <FiArrowUpRight aria-hidden="true" className="size-4" />
-            </a>
-          ) : null}
         </div>
 
         {/* The stall, under a spotlight, on a lit floor (first on phones, so

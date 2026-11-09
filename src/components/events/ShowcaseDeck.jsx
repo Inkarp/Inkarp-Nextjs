@@ -63,6 +63,22 @@ function DeckCard({ product, isTop }) {
     </>
   );
 
+  // A page on another site (Being's own product pages) opens in a new tab.
+  if (product.href && /^https?:\/\//.test(product.href)) {
+    return (
+      <a
+        className={styles.deckCard}
+        draggable={false}
+        href={product.href}
+        rel="noopener noreferrer"
+        tabIndex={isTop ? undefined : -1}
+        target="_blank"
+      >
+        {body}
+      </a>
+    );
+  }
+
   return product.href ? (
     <Link className={styles.deckCard} draggable={false} href={product.href} tabIndex={isTop ? undefined : -1}>
       {body}

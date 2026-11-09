@@ -14,7 +14,7 @@ export default async function ProductsPage({ searchParams }) {
       <BreadcrumbJsonLd path="/products" />
       <PageBreadcrumbs path="/products" />
       {/* The original hero, back on 9 Nov 2026 in place of the turning
-          brand-logo rings (OrbitHero, still at /products-preview/orbit). */}
+          brand-logo rings (removed with the hero previews the same day). */}
       <ClassicCatalogHero brandCount={data.brandOptions.length} totalProducts={data.totalProducts} />
       <ProductsCatalogBody {...data} />
     </main>

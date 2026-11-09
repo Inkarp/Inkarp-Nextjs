@@ -1,6 +1,4 @@
 import { getAllPrincipals, getAllProducts, searchProducts } from "@/data/products/principals";
-import { principalFallbackImages } from "@/data/products/productImageMap";
-import { getPrincipalLogo } from "@/data/products/principalLogos";
 import { workflowIndustries } from "@/data/homeShowcase";
 import {
   getWorkflowProducts,
@@ -9,7 +7,7 @@ import {
 } from "@/lib/workflowContent";
 import { getProductIndustryCats } from "@/lib/industryMapping";
 
-// Everything the /products page (and its hero previews) builds from the
+// Everything the /products page builds from the
 // catalogue and the URL's filters: the result cards and the filter options.
 
 function getParam(searchParams, key) {
@@ -192,74 +190,5 @@ export function getProductsCatalogData(params) {
     selectedBrands,
     selectedIndustries,
     totalProducts,
-  };
-}
-
-/**
- * What the hero previews show, all taken from the catalogue: product photos
- * (only products with their own photo, spread across brands), the largest
- * categories, and every brand with its logo, product count and country.
- */
-export function getCatalogHeroData(allProducts, brandOptions) {
-  const ownPhoto = (product) =>
-    product.image &&
-    !product.image.includes("PrincipalLogos") &&
-    product.image !== principalFallbackImages[product.principalSlug];
-  const byBrand = new Map();
-  allProducts.filter(ownPhoto).forEach((product) => {
-    if (!byBrand.has(product.principalSlug)) byBrand.set(product.principalSlug, []);
-    byBrand.get(product.principalSlug).push(product);
-  });
-  // Round-robin across brands so the wall shows the range, not one brand.
-  const queues = [...byBrand.values()];
-  const photos = [];
-  for (let round = 0; photos.length < 36 && queues.some((queue) => queue.length > round); round += 1) {
-    queues.forEach((queue) => {
-      if (photos.length < 36 && queue[round]) photos.push(queue[round]);
-    });
-  }
-
-  const categoryCounts = allProducts.reduce((counts, product) => {
-    if (product.category) counts.set(product.category, (counts.get(product.category) ?? 0) + 1);
-    return counts;
-  }, new Map());
-  const categories = [...categoryCounts.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    .map(([label, count]) => ({ label, count }));
-
-  const countryByBrand = new Map();
-  const logoByBrand = new Map();
-  allProducts.forEach((product) => {
-    if (product.countryOfOrigin && !countryByBrand.has(product.principalSlug)) {
-      countryByBrand.set(product.principalSlug, product.countryOfOrigin);
-    }
-    // A brand missing from the shared logo list (Inkarp USB) still has the
-    // logo its own product pages show.
-    if (product.principalImage && !logoByBrand.has(product.principalSlug)) {
-      logoByBrand.set(product.principalSlug, product.principalImage);
-    }
-  });
-
-  return {
-    photos: photos.map((product) => ({
-      href: product.href,
-      image: product.image,
-      name: product.name,
-      principalName: product.principalName,
-    })),
-    categories,
-    brands: brandOptions
-      .map((brand) => ({
-        ...brand,
-        logo: getPrincipalLogo(brand.value) || logoByBrand.get(brand.value) || "",
-        country: countryByBrand.get(brand.value) ?? "",
-      }))
-      .filter((brand) => brand.logo)
-      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)),
-    totals: {
-      products: allProducts.length,
-      brands: brandOptions.length,
-      categories: categoryCounts.size,
-    },
   };
 }

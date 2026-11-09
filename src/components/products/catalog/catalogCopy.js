@@ -1,6 +1,6 @@
 import { FiBox, FiGitBranch } from "react-icons/fi";
 
-// The /products hero's own copy, shared by the live hero and the previews.
+// The /products hero's own copy (ClassicCatalogHero and its HowToFindSteps).
 export const VIEW_TABS = [
   { href: "/products", label: "By Product", active: true, Icon: FiBox },
   { href: "/workflows", label: "By Workflow", active: false, Icon: FiGitBranch },

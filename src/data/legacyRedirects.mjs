@@ -270,7 +270,7 @@ export const legacyRedirects = [
   { source: "/verticals/extrusion-and-homogenization/industrial-homogenizers/homogenizers-ariete-series", destination: "/products/homogenizers-ariete-series" },
   { source: "/verticals/extrusion-and-homogenization/industrial-homogenizers/homogenizers-one-series", destination: "/products?q=homogenizers+one+series" },
   { source: "/verticals/extrusion-and-homogenization/laboratory-homogenizers/gea-xstream-lab-homogenizer", destination: "/products/gea-xstream-lab-homogenizer" },
-  { source: "/verticals/extrusion-and-homogenization/laboratory-homogenizers/homogenizers-pilot-plant", destination: "/products?q=homogenizers+pilot+plant" },
+  { source: "/verticals/extrusion-and-homogenization/laboratory-homogenizers/homogenizers-pilot-plant", destination: "/products/pilot-plant-homogenizer" },
   { source: "/verticals/extrusion-and-homogenization/laboratory-homogenizers/homogenizers-table-top", destination: "/products?q=homogenizers+table+top" },
   { source: "/verticals/extrusion-and-homogenization/skid-mounted-homogenizers/homogenizers-plug-play-pharma-skid", destination: "/products?q=homogenizers+plug+play+pharma+skid" },
   { source: "/verticals/rheology-and-thermal-analysis/thermal-analysis/nexta-dsc-series", destination: "/products/nexta-dsc600-dsc200-differential-scanning-calorimeters" },
@@ -559,6 +559,11 @@ export const legacyRedirects = [
   { source: "/verticals/synthesis-and-flow-chemistry/vaccum-pumps/hei-vac-valve-tec", destination: "/products/hei-vac-valve-tec-vacuum-pump" },
   { source: "/verticals/synthesis-and-flow-chemistry/vaccum-pumps/hei-vac-vario-station", destination: "/products/hei-vac-vario-station-rpm-regulated-vacuum-pump" },
   { source: "/verticals/synthesis-and-flow-chemistry/vaccum-pumps/hei-vac-vario-control", destination: "/products/hei-vac-vario-control-rpm-regulated-vacuum-pump" },
+
+  // Product pages replaced on this site: GEA Panther 3006 and Pony 2006 became
+  // one Pilot Plant Homogenizers page (9 Nov 2026).
+  { source: "/products/gea-panther-lab-homogenizer-3006", destination: "/products/pilot-plant-homogenizer" },
+  { source: "/products/gea-pony-lab-homogenizer-2006", destination: "/products/pilot-plant-homogenizer" },
 
   // Any other old /verticals address
   { source: "/verticals/:path+", destination: "/products" },

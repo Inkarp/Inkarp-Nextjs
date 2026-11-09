@@ -330,7 +330,7 @@ export const productImageMap = {
   "gea:homogenizers-ariete-series": "/assets/images/productImages/Gea/homogenizers-ariete-series.jpg",
   "gea:homogenizers-one-series": "/assets/images/productImages/Gea/homogenizers-one-series.jpg",
   "gea:gea-xstream-lab-homogenizer": "/assets/images/productImages/Gea/gea-xstream-lab-homogenizer.jpg",
-  "gea:gea-pandaplus-table-top-homogenizer": "/assets/images/productImages/Gea/Panda-PLUS.webp",
+  "gea:gea-pandaplus-table-top-homogenizer": "/assets/images/productImages/Gea/Panda-PLUS-transparent.png",
   "gea:homogenizers-pilot-plant": "/assets/images/productImages/Gea/homogenizers-pilot-plant.jpg",
   "gea:homogenizers-table-top": "/assets/images/productImages/Gea/homogenizers-table-top.jpg",
   "gea:homogenizers-plug-and-play-pharma-skid": "/assets/images/productImages/Gea/homogenizers-plug-and-play-pharma-skid.jpg",

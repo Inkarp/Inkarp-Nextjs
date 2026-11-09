@@ -15,40 +15,40 @@ export const pageSeo = {
   "/": {
     label: "Home",
     title:
-      "Inkarp Instruments — Laboratory Equipment Distributor & Service Provider in India",
+      "Inkarp Instruments — Lab Equipment Distributor & Service in India",
     description:
-      "Inkarp Instruments is a leading authorized distributor and service provider of laboratory and analytical instruments in India since 1985. Explore 480+ products from 45+ global brands.",
+      "Inkarp Instruments: authorised distributor & service provider of laboratory and analytical instruments in India since 1985. 475+ products from 45+ global brands.",
     keywords:
-      "lab equipment distributor india, laboratory instruments supplier, analytical instruments india, inkarp instruments, scientific equipment distributor",
+      "laboratory equipment distributor india, lab instruments supplier india, analytical instruments india, scientific equipment distributor, inkarp instruments",
   },
   "/products": {
     label: "Products",
     title:
-      "Laboratory Instruments & Equipment — Authorized Distributor in India | Inkarp",
+      "Lab Instruments & Equipment Catalogue — India | Inkarp",
     description:
-      "Browse 480+ laboratory and analytical instruments from 45+ global brands. Inkarp is the authorized distributor and service provider across India. Request a quote or demo.",
+      "Browse 475+ laboratory and analytical instruments from 45+ global brands. Inkarp is the authorised distributor and service provider across India. Get a quote or demo.",
     keywords:
-      "laboratory instruments india, lab equipment products, analytical instruments catalog, scientific equipment india, inkarp products",
+      "laboratory instruments india, lab equipment catalogue, analytical instruments catalogue, scientific equipment india, inkarp products",
   },
   "/magazine": {
     label: "Magazine",
-    title: "Inkarp Magazine — Lab Insights, Trends & Product News",
+    title: "CATALYSTCue — Inkarp Magazine for Lab Insights & Trends",
     description:
-      "Read the Inkarp magazine for laboratory technology insights, application stories, product launches and industry trends in scientific instrumentation.",
+      "CATALYSTCue, the Inkarp magazine: laboratory technology insights, application stories, product launches and trends in scientific instrumentation in India.",
     keywords:
-      "lab technology magazine, scientific instrument news, laboratory trends india, inkarp magazine",
+      "CATALYSTCue, inkarp magazine, lab technology magazine, scientific instrument news, laboratory trends india",
   },
   "/application-resources": {
     label: "Application Resources",
-    title: "Application Notes & Resources — Lab Instrument Guides | Inkarp",
+    title: "Application Notes & Lab Resources | Inkarp India",
     description:
-      "Access application notes, technical guides and resources for laboratory instruments across pharma, chemical, food and research applications.",
+      "Download application notes, technical guides and resources for laboratory instruments across pharma, chemical, food, battery and research applications.",
     keywords:
       "application notes, lab instrument guides, technical resources, analytical applications, inkarp resources",
   },
   "/blog": {
     label: "Blog",
-    title: "Inkarp Blog — Laboratory Equipment Guides & Buying Advice",
+    title: "Lab Equipment Blog — Guides & Buying Advice | Inkarp",
     description:
       "Expert blogs on choosing, using and maintaining laboratory instruments. Buying guides, comparisons and how-tos from Inkarp's product specialists.",
     keywords:
@@ -56,67 +56,67 @@ export const pageSeo = {
   },
   "/events": {
     label: "Events",
-    title: "News & Events | Inkarp Instruments Pvt Ltd",
+    title: "Events & Exhibitions — Meet Inkarp Instruments",
     description:
-      "Discover the latest from Inkarp Instruments. Visit our News & Events page for insights into industry trends, Scientific Expo, Scientific Equipment Exhibitions, New Product launches, Scientific Research Conferences and advancements in Scientific Technology.",
+      "Meet Inkarp Instruments at upcoming laboratory and scientific exhibitions, conferences and roadshows across India. See live demos of our latest instruments.",
     keywords:
-      "Scientific Expo, Scientific events, Scientific news, News and events, New Product Launch, Scientific Achievements, Scientific Product Launch, Scientific Industry Trends, Science Lab Events and Exhibitions, Latest Scientific Equipment News, Scientific Research Conferences, Scientific Equipment Exhibitions, Scientific Industry News and Updates, Upcoming Lab Equipment Events.",
+      "lab equipment events india, scientific exhibitions india, inkarp events, instrument trade shows",
   },
   "/webinars": {
     label: "Webinars",
-    title: "Webinars — Laboratory Instrument Training & Demos | Inkarp",
+    title: "Webinars on Lab Instruments & Applications | Inkarp",
     description:
-      "Join Inkarp webinars for product demonstrations, application training and expert sessions on laboratory and analytical instruments.",
+      "Join live and on-demand webinars by Inkarp and global brand experts on laboratory instruments, applications and best practices. Register free.",
     keywords:
-      "lab instrument webinars, product demo webinar, analytical training, inkarp webinars",
+      "laboratory webinars india, lab instrument webinar, scientific webinar, on-demand lab training, inkarp webinars",
   },
   "/contact": {
     label: "Contact",
-    title: "Contact Inkarp Instruments — Lab Equipment Distributor in India",
+    title: "Contact Inkarp Instruments — Sales, Demo & Service",
     description:
-      "Contact Inkarp Instruments for sales, service, demos and support on laboratory instruments. Authorized distributor and service provider across India.",
+      "Contact Inkarp Instruments for quotes, demos, installation and service of laboratory instruments. Offices across India. Call, email or send an enquiry.",
     keywords:
-      "contact inkarp, lab equipment distributor contact, instrument supplier india contact, inkarp hyderabad",
+      "contact inkarp instruments, inkarp phone number, inkarp office, lab equipment quote, lab equipment demo request",
   },
   "/our-story": {
     label: "Our Story",
-    title: "Our Story — Inkarp Instruments | Trusted Since 1985",
+    title: "Our Story — Inkarp Instruments Since 1985",
     description:
-      "Learn about Inkarp Instruments — our history since 1985, our mission, and our partnerships with 45+ global laboratory instrument manufacturers across India.",
+      "Since 1985, Inkarp Instruments has partnered with global brands to bring world-class laboratory and analytical instruments, service and support to labs across India.",
     keywords:
-      "about inkarp, inkarp instruments history, lab equipment company india, our story",
+      "about inkarp instruments, inkarp history, inkarp company profile, lab equipment company india",
   },
   "/awards": {
     label: "Awards & Recognitions",
     title: "Awards & Recognitions — Inkarp Instruments",
     description:
-      "Discover the awards and recognitions earned by Inkarp Instruments as a leading laboratory equipment distributor and service provider in India.",
+      "Awards and recognitions earned by Inkarp Instruments from global principals and industry bodies for excellence in sales, service and support in India.",
     keywords:
-      "inkarp awards, lab equipment distributor awards, recognitions, inkarp achievements",
+      "inkarp awards, inkarp recognitions, best distributor award, lab equipment distributor awards",
   },
   "/service": {
     label: "Service & Support",
-    title: "Service & Support — Laboratory Instrument AMC, Calibration | Inkarp",
+    title: "Lab Instrument Service, AMC & Calibration | Inkarp",
     description:
-      "Inkarp provides installation, AMC, calibration, repair and spare parts for laboratory instruments across India. Expert service for 45+ global brands.",
+      "Factory-trained engineers for installation, AMC, calibration, repairs and spare parts for laboratory instruments across India. Raise a service request.",
     keywords:
-      "lab instrument service india, amc calibration, instrument repair, laboratory equipment service, inkarp service",
+      "lab instrument service india, laboratory equipment amc, instrument calibration service, lab equipment repair, spare parts",
   },
   "/careers": {
     label: "Careers",
-    title: "Careers at Inkarp Instruments — Lab Equipment Jobs in India",
+    title: "Careers at Inkarp Instruments — Join Our Team",
     description:
-      "Explore careers at Inkarp Instruments. Join a leading laboratory equipment distributor in India — sales, service, application and support roles.",
+      "Build your career in scientific instrumentation with Inkarp Instruments. Explore openings in sales, service, applications and marketing across India.",
     keywords:
-      "inkarp careers, lab equipment jobs india, scientific instrument jobs, careers hyderabad, inkarp recruitment",
+      "inkarp careers, inkarp jobs, lab equipment sales jobs, service engineer jobs, application scientist jobs india",
   },
   "/workflows": {
     label: "Workflows",
-    title: "Lab Workflows by Industry — Inkarp Instruments",
+    title: "Lab Workflow Solutions by Application | Inkarp India",
     description:
-      "Explore Inkarp's lab workflows industry by industry — from pharma to clinical diagnostics — and the instruments that support every step.",
+      "Explore complete lab workflows – sample prep, synthesis, purification, analysis – with matched instruments from Inkarp's global brands. Talk to an application expert.",
     keywords:
-      "lab workflow, laboratory workflow by industry, inkarp workflows, industry lab process",
+      "lab workflow solutions, laboratory workflow, sample preparation workflow, purification workflow, analytical workflow india",
   },
 };
 

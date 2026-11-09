@@ -21,12 +21,9 @@ export default function IndiaMapFrame({ alt = 'Map of India', children, classNam
         />
         {children}
       </div>
-      {/* The boundary data's licence (CC BY 4.0) asks for this credit. */}
-      <p className="mt-2 text-right text-[10px] leading-4 text-ink-soft">
-        <a className="hover:text-red" href={INDIA_MAP.credit.href} rel="noopener noreferrer" target="_blank">
-          {INDIA_MAP.credit.label}
-        </a>
-      </p>
+      {/* The "Map data: DataMeet India (CC BY 4.0)" line under the map was
+          removed at the user's request (9 Nov 2026); the credit itself stays in
+          INDIA_MAP.credit (src/data/indiaMap.js) for wherever it is shown. */}
     </div>
   );
 }

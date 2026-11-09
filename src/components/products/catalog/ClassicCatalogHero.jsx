@@ -1,6 +1,7 @@
 import Link from "next/link";
 import RecTag from "@/components/home/RecTag";
-import { HOW_TO_FIND_STEPS, VIEW_TABS } from "./catalogCopy";
+import HowToFindSteps from "./HowToFindSteps";
+import { VIEW_TABS } from "./catalogCopy";
 
 /** The /products hero as it is today: heading, view buttons and the how-to-find steps. */
 export default function ClassicCatalogHero({ brandCount, totalProducts }) {
@@ -39,19 +40,8 @@ export default function ClassicCatalogHero({ brandCount, totalProducts }) {
               </div>
 
               <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-                <div className="grid gap-3">
-                  {HOW_TO_FIND_STEPS.map((step) => (
-                    <div key={step.num} className="flex items-start gap-4 border border-line-light bg-white p-4">
-                      <span className="text-lg font-semibold leading-none text-red">
-                        {step.num}
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-ink">{step.title}</p>
-                        <p className="mt-1 text-sm leading-snug text-ink-soft">{step.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                {/* Lit one after another, like the product pages' workflow section. */}
+                <HowToFindSteps />
                 <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
                   <span>{totalProducts} products indexed</span>
                   <span>{brandCount} principal brands</span>

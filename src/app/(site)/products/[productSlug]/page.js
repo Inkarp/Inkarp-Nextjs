@@ -140,14 +140,20 @@ export default async function ProductPage({ params }) {
         <div className="relative grid w-full gap-10 lg:grid-cols-[7fr_3fr] lg:items-center">
           <div>
             <div className="mb-5 flex flex-wrap items-center gap-2">
+              {/* The same height as the category and origin chips beside it (34 px):
+                  the logo fills the height and its width follows its shape, so a
+                  square logo (Mettler Toledo, BWB, Implen) no longer stands taller
+                  than the row; very wide logos are capped in width instead. */}
               {product.principalImage ? (
-                <div className="inline-flex items-center border border-line-light bg-white px-3 py-2">
+                <div className="inline-flex h-[34px] items-center border border-line-light bg-white px-3 py-1">
                   <Image
                     alt={product.principalName}
-                    className="object-contain"
-                    height={20}
+                    className="h-full w-auto max-w-[110px] object-contain"
+                    // Twice the drawn size: sharp on high-density screens, and CSS
+                    // scales both sides (no "only one side modified" warning).
+                    height={48}
                     src={product.principalImage}
-                    width={80}
+                    width={160}
                   />
                 </div>
               ) : null}

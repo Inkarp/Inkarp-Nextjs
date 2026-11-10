@@ -476,7 +476,7 @@ export const legacyRedirects = [
   { source: "/verticals/lifesciences/surface-plasmon-resonance/p4pro-and-affipump", destination: "/products/p4pro-and-affipump-surface-plasmon-resonance" },
   { source: "/verticals/lifesciences/surface-plasmon-resonance/p4spr", destination: "/products/p4spr-surface-plasmon-resonance" },
   { source: "/verticals/lifesciences/surface-plasmon-resonance/p4proplus", destination: "/products?q=surface+plasmon+resonance" },
-  { source: "/verticals/lifesciences/surface-plasmon-resonance/ez-control-software", destination: "/products?q=ez+control+software" },
+  { source: "/verticals/lifesciences/surface-plasmon-resonance/ez-control-software", destination: "/products/affilabs-core-software" },
   { source: "/verticals/general-laboratory-instrument/ice-flaker", destination: "/products" },
   { source: "/verticals/general-laboratory-instrument/ice-flaker/ice-flaker", destination: "/products" },
   { source: "/verticals/general-laboratory-instrument/glassware-washer", destination: "/products?q=glassware+washer" },
@@ -564,6 +564,9 @@ export const legacyRedirects = [
   // one Pilot Plant Homogenizers page (9 Nov 2026).
   { source: "/products/gea-panther-lab-homogenizer-3006", destination: "/products/pilot-plant-homogenizer" },
   { source: "/products/gea-pony-lab-homogenizer-2006", destination: "/products/pilot-plant-homogenizer" },
+  // The SEO sheet's address for Affinite's ezControl Software; Affilabs.core
+  // replaced ezControl and is the page for that sheet row (10 Nov 2026).
+  { source: "/products/ezcontrol-software", destination: "/products/affilabs-core-software" },
 
   // Any other old /verticals address
   { source: "/verticals/:path+", destination: "/products" },

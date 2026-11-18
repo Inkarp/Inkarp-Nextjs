@@ -1338,7 +1338,7 @@ export const webinars = [
     id: 36,
     title: "LC-MS Oligo Mapping for Advanced RNA Characterization",
     description: "LC-MS oligo mapping with RapiZyme RNases for mRNA and sgRNA characterization",
-    date1: "November 18 | 08:30 PM IST",
+    date1: "November 18 | 09:30 PM IST",
     date: "2026-11-18",
     img: WATERS_LOGO,
     sourceLink: "https://event.on24.com/wcc/mr/7002688/7E34CC580AEC8613BD5AF6874046069F",
@@ -1370,7 +1370,7 @@ export const webinars = [
     <p class="font-semibold text-zinc-900 text-sm sm:text-base mb-2">Event Details:</p>
     <ul class="space-y-1 text-sm sm:text-base text-zinc-800">
       <li><strong>18 November 2026</strong></li>
-      <li><strong>08:30 PM IST</strong></li>
+      <li><strong>09:30 PM IST</strong></li>
       <li><strong>Live Webinar</strong></li>
     </ul>
   </div>

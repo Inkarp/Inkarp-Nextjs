@@ -179,6 +179,24 @@ export const catalystCards = [
     altText:
       "CATALYSTCue Volume 3 Issue 1, August 2026: Precision Without Compromise",
   },
+  {
+    id: 14,
+    Volume: "Volume-3",
+    subTitle: "Issue 02",
+    image: "/assets/catalyst/images/Issue2V3.webp",
+    Date: "October 2026",
+    slug: "characterisation-across-materials-and-molecules",
+    title: "CATALYSTCue Magazine - Volume 3 - Issue 2",
+    themeTitle: "CHARACTERISATION ACROSS MATERIALS AND MOLECULES",
+    metaTitle:
+      "CATALYST Cue Vol 3 Issue 2: Characterisation Science | Inkarp",
+    metaDescription:
+      "Explore CATALYST Cue Vol 3, Issue 2 by Inkarp: PFAS analysis, polymer thermal analysis, FTIR, NMR, HPLC-ICP-MS, lab automation & pH measurement insights.",
+    keywords:
+      "CATALYST Cue magazine, Inkarp CATALYST Cue, CATALYST Cue Volume 3 Issue 2, characterisation across materials and molecules, analytical instrumentation magazine India, scientific instruments India, PFAS analysis, PFAS testing India, structured illumination fluorescence microscopy, ZEISS ApoTome, polymer characterisation, thermal analysis, rapid polymer identification FTIR, Bruker ALPHA II, UV/VIS NanoPhotometer, spirits authenticity testing, glycoprotein detection, LICORbio Odyssey infrared imaging, semiconductor failure analysis, Fluorine-19 NMR, benchtop NMR pesticide analysis, arsenic speciation water, HPLC-ICP-MS, Shodex IC columns, Xevo G3 QTof, cell culture media analysis, compact mass spectrometer, Advion expression CMS, eluent preparation automation, pH measurement guide, Mettler Toledo pH, FDA drug approvals 2026, characterisation with limited sample, how to analyse PFAS in water, polymer identification using FTIR, benchtop NMR for pesticide residue analysis, automating eluent preparation for HPLC, tips for characterisation with limited sample.",
+    altText:
+      "CATALYSTCue Volume 3 Issue 2, October 2026: Characterisation Across Materials and Molecules",
+  },
 ];
 
 export function getCatalystCardBySlug(slug) {

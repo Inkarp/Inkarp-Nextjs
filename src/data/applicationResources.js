@@ -1,11 +1,16 @@
 const BASE = "/assets/application-resources";
 
-function resource(volume, issue, filename) {
-  const title = filename
-    .replace(/\.pdf$/i, "")
-    .replace(/-/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+// `exactTitle` (optional) is the article's title as printed in the PDF, for
+// titles a file name can't hold (UV/VIS, Fluorine-19, ™). Without it the title
+// is read from the file name.
+function resource(volume, issue, filename, exactTitle) {
+  const title =
+    exactTitle ??
+    filename
+      .replace(/\.pdf$/i, "")
+      .replace(/-/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
 
   const url = `${BASE}/${volume}/${issue}/${filename}`;
 
@@ -110,6 +115,22 @@ export const applicationResources = [
   resource("Volume-2", "Issue-05", "Rheological-characterization-of-chocolate-for-processing-and-quality-control-with-the-Brookfield-AMETEK-Viscometer.pdf"),
   resource("Volume-2", "Issue-05", "Surface-roughness-determination-by-Nanosurf-AFM.pdf"),
   resource("Volume-2", "Issue-05", "The-use-of-organic-solvents-in-BUCHI-laboratory-freeze-dryers.pdf"),
+
+  // Volume 3 / Issue 02 (CATALYSTCue, October 2026)
+  resource("Volume-3", "Issue-02", "Authenticity-Testing-of-Spirits-in-the-Implen-UV-VIS-NanoPhotometer.pdf", "Authenticity testing of spirits in the Implen UV/VIS NanoPhotometer®"),
+  resource("Volume-3", "Issue-02", "Automating-Eluent-Preparation-with-the-Chemspeed-FLEX-EP.pdf", "Preparing for the Run: Automating eluent preparation for modern analytical workflows"),
+  resource("Volume-3", "Issue-02", "Engineering-the-Journey-Between-Drug-and-Disease.pdf", "Engineering the Journey Between Drug and Disease"),
+  resource("Volume-3", "Issue-02", "Fluorine-19-NMR-for-Pesticide-Analysis-with-Nanalysis-Benchtop-NMR-Spectrometers.pdf", "Fluorine-19 NMR for Pesticide Analysis with Nanalysis Benchtop NMR Spectrometers"),
+  resource("Volume-3", "Issue-02", "Glycoprotein-Detection-with-the-LICORbio-Odyssey-Infrared-Imaging-System.pdf", "Glycoprotein Detection with the LICORbio™ Odyssey® Infrared Imaging System"),
+  resource("Volume-3", "Issue-02", "NenoVision-LiteScope-for-Correlative-Semiconductor-Failure-and-Defect-Analysis.pdf", "NenoVision’s LiteScope™ for Correlative Semiconductor Failure and Defect Analysis"),
+  resource("Volume-3", "Issue-02", "Polymer-Characterization-Through-Thermal-Analysis-with-Hitachi.pdf", "Polymer Characterization Through Thermal Analysis"),
+  resource("Volume-3", "Issue-02", "Rapid-Polymer-Identification-Using-the-Bruker-ALPHA-II-FTIR-Spectrometer.pdf", "Rapid Polymer Identification Using the Bruker ALPHA II FTIR Spectrometer"),
+  resource("Volume-3", "Issue-02", "Sensitive-Arsenic-Speciation-in-Water-Using-Advion-HPLC-ICP-MS.pdf", "Sensitive Arsenic Speciation in Water Using Advion HPLC-ICP-MS"),
+  resource("Volume-3", "Issue-02", "Simultaneous-Analysis-of-Monovalent-and-Divalent-Cations-Using-the-Shodex-IC-YS-50-Columns.pdf", "Simultaneous Analysis of Monovalent and Divalent Cations at a higher sensitivity using the Shodex™ IC YS-50 columns"),
+  resource("Volume-3", "Issue-02", "Structured-Illumination-in-Fluorescence-Microscopy-with-the-ZEISS-ApoTome.pdf", "Structured Illumination in Fluorescence Microscopy: ApoTome Imaging System"),
+  resource("Volume-3", "Issue-02", "The-Art-of-pH-Measurement-with-Mettler-Toledo.pdf", "The Art of pH Measurement"),
+  resource("Volume-3", "Issue-02", "Transfer-of-Cell-Culture-Media-Method-to-the-Waters-Xevo-G3-QTof-Mass-Spectrometer.pdf", "Transfer of Cell Culture Media Method to Xevo™ G3 QTof Mass Spectrometer and Refinement of Parameters for Labile Amino Acids"),
+  resource("Volume-3", "Issue-02", "Understanding-PFAS-Complexity-with-Advion-Interchim-Scientific.pdf", "Understanding PFAS Complexity with Advion Interchim Scientific"),
 ];
 
 export const volumeOptions = [...new Set(applicationResources.map((r) => r.volume))];

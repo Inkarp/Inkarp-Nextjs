@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import CompanyLogoMedia from "@/components/common/CompanyLogoMedia";
@@ -45,13 +46,12 @@ function CornerBrackets() {
 export default function Footer() {
   const { company, contact, navigation, socials, mapEmbedUrl, mapPlaceUrl, googleBusinessUrl } =
     siteConfig;
-  const quickLinks = navigation.flatMap((item) => [
-    {
-      label: item.label,
-      href: item.href,
-    },
-    ...(item.children ?? []),
-  ]);
+  // The header's dropdown headings (About Us, CATALYSTCue, News and Events)
+  // have no page of their own (empty href), so only real links are listed;
+  // listing the headings too made dead links and a repeated CATALYSTCue.
+  const quickLinks = navigation
+    .flatMap((item) => [item, ...(item.children ?? [])])
+    .filter((link) => link.href);
 
   return (
     <footer className="relative overflow-hidden border-t border-line-light bg-parchment-alt text-ink">
@@ -145,16 +145,25 @@ export default function Footer() {
             <FooterLabel>Quick Links</FooterLabel>
             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-0.5 sm:grid-cols-3 lg:grid-cols-2">
               {quickLinks.map((link) => (
-                <li key={`${link.label}-${link.href}`}>
+                // The divider sits on the row item, which stretches to its row, so the
+                // lines stay level when a neighbouring label wraps to two lines.
+                <li className="border-b border-line-light" key={`${link.label}-${link.href}`}>
                   <Link
-                    className="group flex items-center gap-1.5 border-b border-line-light py-2 text-sm text-ink-soft transition hover:text-red"
+                    className="group flex items-center gap-1.5 py-2 text-sm text-ink-soft transition hover:text-red"
                     href={link.href}
                   >
                     <span
                       aria-hidden="true"
                       className="h-px w-0 bg-red transition-all duration-300 group-hover:w-3"
                     />
-                    {link.label}
+                    {link.logo ? (
+                      // Text-height logo (the SVG is about 4:1); the alt keeps the name.
+                      <span className="relative block h-5 w-20">
+                        <Image alt={link.label} className="object-contain object-left" fill sizes="80px" src={link.logo} />
+                      </span>
+                    ) : (
+                      link.label
+                    )}
                   </Link>
                 </li>
               ))}

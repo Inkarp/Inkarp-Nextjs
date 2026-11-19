@@ -247,13 +247,16 @@
 }
 
 /* ── The travelling flask ──────────────────────────── */
-/* Fixed to the screen, under the site header (z 50). The script sets its
-   width (the widest spot's) and moves and scales it. */
+/* Fixed to the screen. It's decoration, so it stays under the site's own UI:
+   the header (z 50) and everything at z 40, such as the Solution Finder stripe
+   and its suggestion lists and the floating pills, but over the campaign
+   slider (z 30) and the sections. The script sets its width (the widest
+   spot's) and moves and scales it. */
 .traveller {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 40;
+  z-index: 35;
   display: none;
   aspect-ratio: 120 / 130;
   pointer-events: none;

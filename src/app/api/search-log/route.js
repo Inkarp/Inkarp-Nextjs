@@ -1,4 +1,5 @@
 import { getDb } from "@/lib/mongodb";
+import { normalizeTracking } from "@/lib/serverTracking";
 
 // Logs product-search queries so real search demand can inform catalog/SEO
 // priorities. Called before the results fetch fires, so the query is on
@@ -20,7 +21,12 @@ export async function POST(request) {
     query,
     brands: Array.isArray(body.brands) ? body.brands.filter((b) => typeof b === "string") : [],
     resultsCount: typeof body.resultsCount === "number" ? body.resultsCount : null,
+    // Same visitor/campaign tracking the forms store, as on the Being site.
+    tracking: normalizeTracking(body, request),
     timestamp: new Date(),
+    // The 180-day expiry index below is on createdAt; without this field
+    // MongoDB never expired any search.
+    createdAt: new Date(),
   };
 
   try {

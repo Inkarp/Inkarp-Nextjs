@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { collectTracking } from "@/lib/browserTracking";
 import {
   FiArrowLeft, FiArrowRight, FiBriefcase, FiCheck,
   FiCpu, FiMail, FiMapPin, FiSearch, FiSliders, FiTarget, FiX,
@@ -238,7 +239,7 @@ export default function SolutionFinderWizard({ initialAnswers = {} }) {
     try {
       const response = await fetch("/api/solution-finder", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ answers, contactEmail: email.trim().toLowerCase(), sourcePage: window.location.pathname }),
+        body: JSON.stringify({ answers, contactEmail: email.trim().toLowerCase(), sourcePage: window.location.pathname, ...collectTracking() }),
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Could not generate recommendations.");

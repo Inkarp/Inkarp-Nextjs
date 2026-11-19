@@ -8,9 +8,34 @@ import DnaScrollProgress from "./DnaScrollProgress";
 const whatsappNumber = "918125580808";
 const phoneNumber = "+918125580808";
 
+// WhatsApp and Call slide in this long after the visit starts. Once shown they
+// stay for the rest of the visit, page reloads included.
+const CONTACTS_DELAY_MS = 10_000;
+const CONTACTS_SHOWN_KEY = "inkarp-contacts-shown";
+
 export default function FloatingQuickActions() {
   const [scrollPercent, setScrollPercent] = useState(0);
   const [scrolling, setScrolling] = useState(false);
+  const [contactsShown, setContactsShown] = useState(false);
+
+  useEffect(() => {
+    let shownBefore = false;
+    try {
+      shownBefore = window.sessionStorage.getItem(CONTACTS_SHOWN_KEY) === "1";
+    } catch {}
+
+    const timer = window.setTimeout(
+      () => {
+        setContactsShown(true);
+        try {
+          window.sessionStorage.setItem(CONTACTS_SHOWN_KEY, "1");
+        } catch {}
+      },
+      shownBefore ? 0 : CONTACTS_DELAY_MS
+    );
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     let restTimer;
@@ -48,34 +73,45 @@ export default function FloatingQuickActions() {
   }
 
   return (
-    <div className="fixed right-0 top-2/3 z-50 flex -translate-y-1/2 flex-col items-end gap-3" data-floating-widget>
-      <a
-        aria-label="Chat with Inkarp on WhatsApp"
-        className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-[#25D366] text-parchment shadow-lg shadow-zinc-900/15 transition hover:bg-[#1fb85a]"
-        href={`https://wa.me/${whatsappNumber}`}
-        rel="noreferrer"
-        target="_blank"
+    // Phones: the whole stack at 80%, shrinking towards the right edge, so it
+    // covers less of the page and keeps its proportions.
+    <div className="fixed right-0 top-2/3 z-50 flex origin-right -translate-y-1/2 flex-col items-end gap-3 max-sm:scale-[0.8]" data-floating-widget>
+      {/* Hidden buttons keep their space, so the DNA below doesn't jump when
+          they arrive; `inert` keeps them out of reach until then. */}
+      <div
+        className={`flex flex-col items-end gap-3 transition duration-500 ease-out motion-reduce:transition-none ${
+          contactsShown ? "translate-x-0 opacity-100" : "pointer-events-none translate-x-full opacity-0"
+        }`}
+        inert={!contactsShown}
       >
-        <span className="inline-flex size-12 items-center justify-center text-2xl">
-          <FaWhatsapp />
-        </span>
-        <span className="max-w-0 whitespace-nowrap pr-0 text-sm font-semibold transition-all duration-300 group-hover:max-w-36 group-hover:pr-4">
-          WhatsApp
-        </span>
-      </a>
+        <a
+          aria-label="Chat with Inkarp on WhatsApp"
+          className="group inline-flex h-12 items-center overflow-hidden rounded-full bg-[#25D366] text-parchment shadow-lg shadow-zinc-900/15 transition hover:bg-[#1fb85a]"
+          href={`https://wa.me/${whatsappNumber}`}
+          rel="noreferrer"
+          target="_blank"
+        >
+          <span className="inline-flex size-12 items-center justify-center text-2xl">
+            <FaWhatsapp />
+          </span>
+          <span className="max-w-0 whitespace-nowrap pr-0 text-sm font-semibold transition-all duration-300 group-hover:max-w-36 group-hover:pr-4">
+            WhatsApp
+          </span>
+        </a>
 
-      <a
-        aria-label="Call Inkarp"
-        className="group inline-flex h-12 items-center overflow-hidden rounded-full border border-rose-200 bg-rose-50 text-rose-700 shadow-lg shadow-zinc-900/15 transition hover:bg-rose-100"
-        href={`tel:${phoneNumber}`}
-      >
-        <span className="inline-flex size-12 items-center justify-center text-xl">
-          <FiPhone />
-        </span>
-        <span className="max-w-0 whitespace-nowrap pr-0 text-sm font-semibold transition-all duration-300 group-hover:max-w-28 group-hover:pr-4">
-          Call
-        </span>
-      </a>
+        <a
+          aria-label="Call Inkarp"
+          className="group inline-flex h-12 items-center overflow-hidden rounded-full border border-rose-200 bg-rose-50 text-rose-700 shadow-lg shadow-zinc-900/15 transition hover:bg-rose-100"
+          href={`tel:${phoneNumber}`}
+        >
+          <span className="inline-flex size-12 items-center justify-center text-xl">
+            <FiPhone />
+          </span>
+          <span className="max-w-0 whitespace-nowrap pr-0 text-sm font-semibold transition-all duration-300 group-hover:max-w-28 group-hover:pr-4">
+            Call
+          </span>
+        </a>
+      </div>
 
       <DnaScrollProgress onClick={scrollToTop} percent={scrollPercent} spinning={scrolling} />
     </div>

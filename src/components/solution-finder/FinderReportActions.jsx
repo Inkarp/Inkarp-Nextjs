@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FiDownload, FiEdit3, FiMail, FiShare2 } from "react-icons/fi";
 import { pushEvent } from "@/lib/analytics";
+import { collectTracking } from "@/lib/browserTracking";
 import SubmitButton from "@/components/common/SubmitButton";
 
 const ACTION_CLASS = "inline-flex h-11 items-center gap-2 border border-white/20 px-4 text-sm font-semibold text-white transition hover:bg-white hover:text-ink";
@@ -31,7 +32,7 @@ export default function FinderReportActions({ sessionId }) {
     const response = await fetch(`/api/solution-finder/${sessionId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "email-report", email }),
+      body: JSON.stringify({ action: "email-report", email, ...collectTracking() }),
     }).catch(() => null);
     const data = await response?.json().catch(() => ({}));
     setSending(false);

@@ -1,17 +1,18 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { FiArrowUp } from "react-icons/fi";
 import styles from "./DnaScrollProgress.module.css";
 
 /**
- * Back-to-top button whose page progress is a DNA double helix. Each row is a
- * base pair: two nucleotides orbiting the helix axis, joined by a bond, with
- * front nucleotides larger and brighter than those behind. Successive rows are
- * a tenth of a turn apart, so together they twist like a real helix.
- * - Rows light up from the bottom as the page is read, base pairs in their
- *   own colours (A–T and G–C).
- * - The helix spins while the page is scrolling and rests when it stops.
- * - Complete (100%): it keeps turning slowly and glows.
+ * Back-to-top button whose page progress is a DNA double helix on a dark
+ * capsule. Each row is a base pair: two nucleotides orbiting the helix axis,
+ * joined by a bond, with front nucleotides larger and brighter than those
+ * behind. Successive rows are a tenth of a turn apart, so together they twist
+ * like a real helix.
+ * - The helix starts red and turns white from the bottom as the page is read.
+ * - It turns slowly all the time, and faster while the page is scrolling.
+ * - Complete (100%): all white, with a soft red glow.
  */
 
 const ROWS = 12;
@@ -20,33 +21,42 @@ const ROWS = 12;
 const TURN_ROWS = 10;
 // A–T and G–C pairs in a mixed order, bottom row first.
 const PAIRS = ["at", "gc", "gc", "at", "gc", "at", "at", "gc", "at", "gc", "gc", "at"];
+// While scrolling the helix turns this many times faster than at rest.
+const SCROLL_SPEED = 2.5;
 
 export default function DnaScrollProgress({ percent, onClick, spinning = false }) {
   const complete = percent >= 100;
-  const litRows = Math.floor((percent / 100) * ROWS + 0.0001);
+  const readRows = Math.floor((percent / 100) * ROWS + 0.0001);
+  const helixRef = useRef(null);
+
+  // Speed changes go through the running animations' playback rate, which
+  // carries on from where each nucleotide is; changing the CSS duration
+  // instead would make the whole helix jump.
+  useEffect(() => {
+    const helix = helixRef.current;
+    if (!helix?.getAnimations) return;
+    for (const animation of helix.getAnimations({ subtree: true })) {
+      animation.updatePlaybackRate(spinning ? SCROLL_SPEED : 1);
+    }
+  }, [spinning]);
 
   return (
     <button
       aria-label={`Back to top, page ${percent}% read`}
-      className={`group relative inline-flex h-[112px] w-12 flex-col items-center justify-between rounded-full border bg-parchment py-2.5 shadow-lg shadow-zinc-900/15 transition ${
-        complete ? "border-red/40" : "border-line-light"
+      className={`group relative inline-flex h-[112px] w-12 flex-col items-center justify-between rounded-full border bg-ink py-2.5 shadow-lg shadow-zinc-900/30 transition ${
+        complete ? "border-red/70" : "border-white/10"
       }`}
       onClick={onClick}
       type="button"
     >
-      <FiArrowUp aria-hidden="true" className="text-sm text-ink-soft transition group-hover:-translate-y-0.5 group-hover:text-red" />
+      <FiArrowUp aria-hidden="true" className="text-sm text-white/75 transition group-hover:-translate-y-0.5 group-hover:text-white" />
 
-      <span
-        aria-hidden="true"
-        className={styles.helix}
-        data-complete={complete || undefined}
-        data-spinning={spinning || complete || undefined}
-      >
+      <span aria-hidden="true" className={styles.helix} data-complete={complete || undefined} ref={helixRef}>
         {PAIRS.map((pair, row) => {
           const delay = `calc(var(--dna-turn) * ${-row / TURN_ROWS})`;
-          const lit = row < litRows;
+          const read = row < readRows;
           return (
-            <span className={styles.row} data-lit={lit || undefined} data-pair={pair} key={row} style={{ bottom: `${2 + row * 5.6}px` }}>
+            <span className={styles.row} data-pair={pair} data-read={read || undefined} key={row} style={{ bottom: `${2 + row * 5.6}px` }}>
               <span className={styles.bond} style={{ animationDelay: delay }} />
               <span className={`${styles.base} ${styles.strandA}`} style={{ animationDelay: delay }} />
               {/* The partner sits half a turn round the axis. */}

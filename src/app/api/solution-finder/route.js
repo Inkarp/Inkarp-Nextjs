@@ -4,6 +4,7 @@ import { ensureInstitutionSeeds } from "@/lib/institutionStore";
 import { isFinderOption } from "@/lib/finderOptionStore";
 import { cacheFinderSession } from "@/lib/finderSessionFallback";
 import { sendFormNotification } from "@/lib/mailer";
+import { normalizeTracking } from "@/lib/serverTracking";
 import {
   createFinderSessionId,
   FINDER_VERSION,
@@ -32,7 +33,7 @@ async function resolveInstitution(db, selected) {
 
 // Best-effort: a lead should never be lost over a flaky SMTP connection, so
 // this is always called from inside its own try/catch at the call site.
-async function notifyFinderLead(session) {
+async function notifyFinderLead(session, tracking) {
   await sendFormNotification({
     subject: `New Solution Finder lead: ${session.institution.name}`,
     fields: {
@@ -53,6 +54,7 @@ async function notifyFinderLead(session) {
       resultUrl: session.resultUrl,
     },
     replyTo: session.contactEmail,
+    tracking,
   });
 }
 
@@ -68,6 +70,10 @@ export async function POST(request) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail)) {
     return Response.json({ success: false, message: "Enter a valid email address." }, { status: 400 });
   }
+  // The same 16-field visitor/campaign tracking every form stores. It goes on
+  // the private lead and event records and the sales email, never on the
+  // session, which the shareable results page sends to the browser.
+  const tracking = normalizeTracking(body, request);
   const sourcePlacement = FINDER_PLACEMENTS.has(body?.placement) ? body.placement : null;
   const answers = sanitizeFinderAnswers(body?.answers);
   // The compact home finder intentionally does not ask visitors to repeat an
@@ -152,6 +158,7 @@ export async function POST(request) {
           industry: answers.industry,
           latestSessionId: sessionId,
           sourcePage: session.sourcePage,
+          tracking,
           updatedAt: now,
         },
         $setOnInsert: { createdAt: now },
@@ -166,11 +173,12 @@ export async function POST(request) {
       objective: answers.objective,
       sourcePage: session.sourcePage,
       sourcePlacement,
+      tracking,
       createdAt: now,
     });
 
     try {
-      await notifyFinderLead(session);
+      await notifyFinderLead(session, tracking);
     } catch (error) {
       console.error("[solution-finder] failed to send lead notification email:", error.message);
     }
@@ -218,7 +226,7 @@ export async function POST(request) {
     cacheFinderSession(session);
 
     try {
-      await notifyFinderLead(session);
+      await notifyFinderLead(session, tracking);
     } catch (notifyError) {
       console.error("[solution-finder] failed to send lead notification email:", notifyError.message);
     }

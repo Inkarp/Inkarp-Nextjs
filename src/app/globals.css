@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Never read side builds (.next-check, .next-verify, …) for class names: their
+   binary caches hold garbled copies of real classes, which break this file. */
+@source not "../../.next-*";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

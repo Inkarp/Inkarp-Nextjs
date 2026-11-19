@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FiArrowUp, FiCornerUpLeft, FiPhone } from "react-icons/fi";
 import { siteConfig } from "@/data/siteConfig";
 import { pushEvent } from "@/lib/analytics";
+import { collectTracking } from "@/lib/browserTracking";
 
 const CONTACT_PHONE = siteConfig.contact.phone;
 const CONTACT_PHONE_DIGITS = CONTACT_PHONE.replace(/\D/g, "");
@@ -158,7 +159,8 @@ export default function DexterChat({ onFallback }) {
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history }),
+        // The same visitor/campaign tracking every form sends, saved with the chat log.
+        body: JSON.stringify({ messages: history, ...collectTracking() }),
       });
 
       if (response.status === 503) {

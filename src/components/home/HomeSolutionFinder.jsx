@@ -7,6 +7,7 @@ import { HiSparkles } from "react-icons/hi2";
 import FinderOptionCombobox from "@/components/solution-finder/FinderOptionCombobox";
 import { eventRegistration, registrationOpen } from "@/data/eventRegistration";
 import { pushEvent } from "@/lib/analytics";
+import { collectTracking } from "@/lib/browserTracking";
 import { finderPlacement, finderPrefillForPath } from "@/lib/finderPlacement";
 
 const PAYLOAD_KEY = "inkarp:solution-finder-payload";
@@ -227,6 +228,9 @@ export default function HomeSolutionFinder() {
         contactEmail: email.trim().toLowerCase(),
         placement: source,
         sourcePage: window.location.pathname,
+        // Taken now, on the page where the visitor submitted; the analysis
+        // page posts this payload as it is.
+        ...collectTracking(),
       }));
     } catch (error) {
       setGenerateError(error.message || "Could not open the analysis page.");

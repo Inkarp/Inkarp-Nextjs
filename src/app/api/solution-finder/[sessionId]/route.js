@@ -1,5 +1,6 @@
 import { getDb } from "@/lib/mongodb";
 import { sendFormNotification, sendUserAcknowledgement } from "@/lib/mailer";
+import { normalizeTracking } from "@/lib/serverTracking";
 import { recommendFinderProducts, sanitizeFinderAnswers, validateFinderAnswers, finderLabels } from "@/lib/solutionFinder";
 import { getCachedFinderSession } from "@/lib/finderSessionFallback";
 import { SITE_URL } from "@/data/pageSeo";
@@ -21,7 +22,7 @@ function validSessionId(value) {
  * link, and tells sales. Sessions from before email was required get the
  * address as their contact email.
  */
-async function emailReport({ db, existing, request, sessionId, email }) {
+async function emailReport({ db, existing, request, sessionId, email, tracking }) {
   if ((existing.reportEmailsSent ?? 0) >= MAX_REPORT_EMAILS) {
     return Response.json(
       { success: false, message: `This report has already been emailed a few times. Write to ${siteConfig.contact.email} and we will help.` },
@@ -47,6 +48,7 @@ async function emailReport({ db, existing, request, sessionId, email }) {
         industry: existing.answers?.industry,
         latestSessionId: sessionId,
         sourcePage: existing.sourcePage,
+        tracking,
         updatedAt: now,
       },
       $setOnInsert: { createdAt: now },
@@ -81,6 +83,7 @@ async function emailReport({ db, existing, request, sessionId, email }) {
     sessionId,
     event: "report_emailed",
     institutionId: existing.institution?.id,
+    tracking,
     createdAt: now,
   });
 
@@ -97,6 +100,7 @@ async function emailReport({ db, existing, request, sessionId, email }) {
         resultUrl: reportUrl,
       },
       replyTo: email,
+      tracking,
     });
   } catch (error) {
     // The visitor already has their report; a missed sales alert is not their problem.
@@ -141,7 +145,9 @@ export async function PATCH(request, { params }) {
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         return Response.json({ success: false, message: "Enter a valid email address." }, { status: 400 });
       }
-      return await emailReport({ db, email, existing, request, sessionId });
+      // Tracking of whoever asked for the email (a shared report link can be
+      // used by someone else); stored on the lead/event records only.
+      return await emailReport({ db, email, existing, request, sessionId, tracking: normalizeTracking(body, request) });
     }
 
     if (body?.action === "update-answers") {

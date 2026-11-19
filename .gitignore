@@ -65,3 +65,6 @@ __pycache__/
 next-env.d.ts
 .next-verify
 .next-after
+# Side builds (NEXT_DIST_DIR) for verification. Ignored so Tailwind never
+# scans their binary caches for class names, which breaks globals.css.
+.next-check

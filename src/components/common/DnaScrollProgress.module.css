@@ -3,7 +3,8 @@
    is their distance apart, sin(θ), mirrored when the pair has swapped sides. */
 
 .helix {
-  --dna-turn: 3.2s;
+  /* One turn at rest; the component speeds it up while the page scrolls. */
+  --dna-turn: 8s;
   --dna-r: 10px;
   display: block;
   position: relative;
@@ -27,19 +28,11 @@
   left: 50%;
   animation-duration: var(--dna-turn);
   animation-iteration-count: infinite;
-  animation-play-state: paused;
   transition: background 300ms ease;
 }
 
-/* Spinning while the page scrolls (and always once complete). */
-.helix[data-spinning] .bond,
-.helix[data-spinning] .base {
-  animation-play-state: running;
-}
-
 .helix[data-complete] {
-  --dna-turn: 6s;
-  filter: drop-shadow(0 0 3px rgb(190 0 16 / 0.35));
+  filter: drop-shadow(0 0 4px rgb(255 59 74 / 0.75));
 }
 
 .base {
@@ -59,18 +52,20 @@
   animation-name: dna-bond;
 }
 
-/* ── Colours ─────────────────────────────────────────
-   Not yet read: greys. Read: the two backbones in brand red and deep red,
-   the bonds split into the two bases' colours (A–T red/rose, G–C slate/sky),
-   left base first; the mirrored bond flips them as the pair turns. */
-.strandA { background: radial-gradient(circle at 35% 35%, #f4f4f5, #c8c8cd); }
-.strandB { background: radial-gradient(circle at 35% 35%, #f4f4f5, #d9d9de); }
-.bond { background: #e7e7ea; }
+/* ── Colours (on the dark capsule) ───────────────────
+   Not yet read: the backbones in bright red and brand red, the bonds split
+   into the two bases' colours (A–T rose/red, G–C pink/deep red), left base
+   first; the mirrored bond flips them as the pair turns. Read: white and
+   pale grey, so the white part of the helix is how far the page is read. */
+.strandA { background: radial-gradient(circle at 35% 35%, #ff8a94, #e0182a 70%); }
+.strandB { background: radial-gradient(circle at 35% 35%, #f59aa2, #be0010 75%); }
+.row[data-pair='at'] .bond { background: linear-gradient(90deg, #ffb3b9 50%, #e0182a 50%); }
+.row[data-pair='gc'] .bond { background: linear-gradient(90deg, #ff6b77 50%, #9a000d 50%); }
 
-.row[data-lit] .strandA { background: radial-gradient(circle at 35% 35%, #ff6b77, #be0010 70%); }
-.row[data-lit] .strandB { background: radial-gradient(circle at 35% 35%, #e98a92, #8f000c 75%); }
-.row[data-lit][data-pair='at'] .bond { background: linear-gradient(90deg, #f29aa2 50%, #be0010 50%); }
-.row[data-lit][data-pair='gc'] .bond { background: linear-gradient(90deg, #8fb3cc 50%, #2d3742 50%); }
+.row[data-read] .strandA { background: radial-gradient(circle at 35% 35%, #ffffff, #d4d4d8 75%); }
+.row[data-read] .strandB { background: radial-gradient(circle at 35% 35%, #ffffff, #a1a1aa 75%); }
+.row[data-read][data-pair='at'] .bond { background: linear-gradient(90deg, #ffffff 50%, #a1a1aa 50%); }
+.row[data-read][data-pair='gc'] .bond { background: linear-gradient(90deg, #e4e4e7 50%, #71717a 50%); }
 
 /* ── One turn ────────────────────────────────────────
    θ 0° front-centre, 90° right, 180° back-centre, 270° left. Easing per
@@ -117,8 +112,8 @@
 
 /* Reduced motion: a still helix that still fills. */
 @media (prefers-reduced-motion: reduce) {
-  .helix[data-spinning] .bond,
-  .helix[data-spinning] .base {
+  .bond,
+  .base {
     animation-play-state: paused;
   }
 }

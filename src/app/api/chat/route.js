@@ -4,6 +4,7 @@ import { CHAT_TOOLS, runTool } from "@/lib/chat/tools";
 import { answerLocally } from "@/lib/chat/localAssistant";
 import { runGroqTurn } from "@/lib/chat/groqEngine";
 import { getDb } from "@/lib/mongodb";
+import { normalizeTracking } from "@/lib/serverTracking";
 
 // MongoDB and the streaming loop both need the Node runtime.
 export const runtime = "nodejs";
@@ -105,6 +106,9 @@ export async function POST(request) {
   if (!history.length || history[history.length - 1].role !== "user") {
     return Response.json({ error: "bad_request", message: "No message to answer." }, { status: 400 });
   }
+  // Same 16-field visitor/campaign tracking the forms store (IP from the
+  // request, never the client), saved with every logged answer.
+  const tracking = normalizeTracking(body, request);
 
   const encoder = new TextEncoder();
   const startedAt = Date.now();
@@ -145,6 +149,7 @@ data: ${JSON.stringify(data)}
         controller.close();
         logConversation({
           ip,
+          tracking,
           startedAt: new Date(startedAt),
           durationMs: Date.now() - startedAt,
           question,
@@ -214,6 +219,7 @@ data: ${JSON.stringify(data)}
           controller.close();
           logConversation({
             ip,
+            tracking,
             startedAt: new Date(startedAt),
             durationMs: Date.now() - startedAt,
             question,
@@ -334,6 +340,7 @@ data: ${JSON.stringify(data)}
         controller.close();
         logConversation({
           ip,
+          tracking,
           startedAt: new Date(startedAt),
           durationMs: Date.now() - startedAt,
           question: history[history.length - 1].content,

@@ -23,23 +23,23 @@ const UTM_PARAM_KEYS = [
   "fbclid",
 ];
 
+// Same patterns as the Being site, so both sites name sources alike.
 const SEARCH_ENGINES = [
-  ["google", "Google"],
-  ["bing", "Bing"],
-  ["yahoo", "Yahoo"],
-  ["duckduckgo", "DuckDuckGo"],
-  ["yandex", "Yandex"],
+  [/google\./, "Google"],
+  [/bing\./, "Bing"],
+  [/yahoo\./, "Yahoo"],
+  [/duckduckgo\./, "DuckDuckGo"],
+  [/yandex\./, "Yandex"],
 ];
 
 const SOCIAL_NETWORKS = [
-  ["facebook", "Facebook"],
-  ["instagram", "Instagram"],
-  ["linkedin", "LinkedIn"],
-  ["twitter", "Twitter / X"],
-  ["x.com", "Twitter / X"],
-  ["youtube", "YouTube"],
-  ["whatsapp", "WhatsApp"],
-  ["telegram", "Telegram"],
+  [/facebook\.|fb\.com/, "Facebook"],
+  [/instagram\./, "Instagram"],
+  [/linkedin\./, "LinkedIn"],
+  [/twitter\.|x\.com/, "Twitter / X"],
+  [/youtube\./, "YouTube"],
+  [/whatsapp\./, "WhatsApp"],
+  [/t\.me|telegram\./, "Telegram"],
 ];
 
 function detectDeviceType() {
@@ -50,10 +50,10 @@ function detectDeviceType() {
 }
 
 function classifyReferrerHost(hostname) {
-  const host = hostname.replace(/^www\./, "").toLowerCase();
-  const engine = SEARCH_ENGINES.find(([needle]) => host.includes(needle));
+  const host = hostname.toLowerCase();
+  const engine = SEARCH_ENGINES.find(([pattern]) => pattern.test(host));
   if (engine) return engine[1];
-  const social = SOCIAL_NETWORKS.find(([needle]) => host.includes(needle));
+  const social = SOCIAL_NETWORKS.find(([pattern]) => pattern.test(host));
   if (social) return social[1];
   return `Referral: ${hostname}`;
 }
@@ -95,13 +95,23 @@ function isStorageMeaningful(stored) {
   );
 }
 
+// Google Ads and Meta add a click ID (gclid / fbclid) to every paid click,
+// even when the ad carries no UTM tags, so a click ID alone proves the visit
+// was paid: it is reported as "Google Ads" / "Facebook Ads", never as plain
+// organic "Google" / "Facebook". As on the Being site, the UTM fields are then
+// filled with the conventional values (google / cpc, facebook / paid_social),
+// and Google's numeric campaign ID is used, clearly labelled, when no
+// utm_campaign is given (a campaign NAME can't be guessed from it).
 function buildFreshAttribution(params, referrer) {
-  const utmSource = params.get("utm_source") || "";
-  let trafficSource = utmSource;
+  const gclid = params.get("gclid") || "";
+  const fbclid = params.get("fbclid") || "";
+  const gadCampaignId = params.get("gad_campaignid") || "";
+  const utmSource = params.get("utm_source") || (gclid ? "google" : fbclid ? "facebook" : "");
+  let trafficSource = params.get("utm_source") || "";
 
   if (!trafficSource) {
-    if (params.get("gclid")) trafficSource = "google";
-    else if (params.get("fbclid")) trafficSource = "facebook";
+    if (gclid) trafficSource = "Google Ads";
+    else if (fbclid) trafficSource = "Facebook Ads";
     else if (isExternalReferrer(referrer)) trafficSource = classifyReferrerHost(new URL(referrer).hostname);
     else trafficSource = "Direct / None";
   }
@@ -110,12 +120,12 @@ function buildFreshAttribution(params, referrer) {
     trafficSource,
     referrer: referrer || "Direct / None",
     utmSource,
-    utmMedium: params.get("utm_medium") || "",
-    utmCampaign: params.get("utm_campaign") || "",
+    utmMedium: params.get("utm_medium") || (gclid ? "cpc" : fbclid ? "paid_social" : ""),
+    utmCampaign: params.get("utm_campaign") || (gadCampaignId ? `Google Ads Campaign ID ${gadCampaignId}` : ""),
     utmTerm: params.get("utm_term") || "",
     utmContent: params.get("utm_content") || "",
-    gclid: params.get("gclid") || "",
-    fbclid: params.get("fbclid") || "",
+    gclid,
+    fbclid,
     landingTimestamp: new Date().toISOString(),
   };
 }

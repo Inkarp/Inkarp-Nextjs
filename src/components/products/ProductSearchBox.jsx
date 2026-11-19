@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { FiArrowUpRight, FiSearch, FiX } from "react-icons/fi";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
+import { collectTracking } from "@/lib/browserTracking";
 
 // Same tracking endpoint the /products search uses. Every submitted global
 // search is recorded before results are shown, whichever entry point it came from.
@@ -12,7 +13,7 @@ function logSearch({ query, resultsCount }) {
   return fetch("/api/search-log", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query, brands: [], resultsCount }),
+    body: JSON.stringify({ query, brands: [], resultsCount, ...collectTracking() }),
     keepalive: true,
   }).catch(() => {});
 }

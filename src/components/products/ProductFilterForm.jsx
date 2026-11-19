@@ -5,6 +5,7 @@ import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { FiChevronDown, FiSearch, FiX } from "react-icons/fi";
 import { SHOWN_PARAM } from "@/components/products/ProductResultsGrid";
+import { collectTracking } from "@/lib/browserTracking";
 
 function getProductsUrl(
   pathname,
@@ -55,7 +56,7 @@ function logSearch({ query, brands, resultsCount }) {
   return fetch("/api/search-log", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query, brands, resultsCount }),
+    body: JSON.stringify({ query, brands, resultsCount, ...collectTracking() }),
     keepalive: true,
   }).catch(() => {});
 }

@@ -102,7 +102,7 @@ export const catalystCards = [
     id: 9,
     Volume: "Volume-2",
     subTitle: "Issue 03",
-    image: "/assets/catalyst/images/Issue2V3.webp",
+    image: "/assets/catalyst/images/Issue3V2.webp",  // Volume 2 Issue 03's own cover (Issue2V3 is Volume 3 Issue 02)
     Date: "December 2025",
     slug: "Mastering-The-Analytical-Lab",
     title: "CATALYSTCue Magazine - Volume 2 - Issue 3",

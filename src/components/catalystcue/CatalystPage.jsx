@@ -1,52 +1,21 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import CatalystArchive from "@/components/catalystcue/CatalystArchiveVariants";
-import CatalystLatestIssue from "@/components/catalystcue/CatalystLatestIssue";
+import { useEffect, useState } from "react";
 import CatalystModal from "@/components/catalystcue/CatalystModal";
-import RecTag from "@/components/home/RecTag";
-import { catalystCards } from "@/data/catalystCue";
-
-const MONTH_ORDER = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-function issueSortValue(card) {
-  const [month = "", year = ""] = (card.Date || "").trim().split(/\s+/);
-  const monthIndex = MONTH_ORDER.indexOf(month);
-  const parsedYear = Number.parseInt(year, 10);
-
-  if (monthIndex >= 0 && Number.isFinite(parsedYear)) {
-    return parsedYear * 12 + monthIndex;
-  }
-
-  return Number(card.id) || 0;
-}
-
-function sortIssuesNewestFirst(cards) {
-  return [...cards].sort(
-    (a, b) => issueSortValue(b) - issueSortValue(a) || Number(b.id) - Number(a.id),
-  );
-}
+import MagazineShelf from "@/components/catalystcue/MagazineShelf";
 
 // The physical-copy form used to open by itself 5 seconds after the page
 // loaded. It is paused with the other pop-ups under review and now opens from
-// the "Request a physical copy" button under the latest issue. Set to true to
+// the "Request a physical copy" button in the archive's header. Set to true to
 // bring the timed opening back.
 const AUTO_OPEN_PHYSICAL_COPY = false;
 
-export default function CatalystPage() {
+/**
+ * The body of /magazine: the archive as a full-width shelf, then `children`
+ * (the cue dials, one per volume), all in one <main>,
+ * plus the physical-copy form.
+ */
+export default function CatalystPage({ issues, children }) {
   const [showCatalystModal, setShowCatalystModal] = useState(false);
 
   useEffect(() => {
@@ -56,32 +25,11 @@ export default function CatalystPage() {
     return () => window.clearTimeout(timer);
   }, []);
 
-  const latestIssue = useMemo(() => {
-    return sortIssuesNewestFirst(catalystCards)[0];
-  }, []);
-
   return (
     <main className="relative bg-parchment">
-      {/* The hero video lives in the page shell (magazine/page.js) so it can
-          share one h-screen flex column with the page header. */}
-      <section className="bg-parchment-alt py-12 sm:py-16" id="catalyst-archive">
-        {/* 90% of the viewport, matching the header and video above. */}
-        <div className="mx-auto grid w-[90%] gap-8 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-start">
-          <div className="lg:sticky lg:top-6">
-            <CatalystLatestIssue issue={latestIssue} onRequestCopy={() => setShowCatalystModal(true)} variant="aside" />
-          </div>
+      <MagazineShelf issues={issues} onRequestCopy={() => setShowCatalystModal(true)} />
 
-          <div className="min-w-0 border border-line-light bg-white px-4 py-8 sm:px-6">
-            <div className="mb-8">
-              <RecTag>CATALYSTCue Archive</RecTag>
-              <h2 className="text-[26px] font-semibold tracking-tight text-ink sm:text-4xl">
-                Browse All Issues
-              </h2>
-            </div>
-            <CatalystArchive catalystCards={catalystCards} />
-          </div>
-        </div>
-      </section>
+      {children}
 
       {showCatalystModal ? (
         <div className="z-[10000]">

@@ -1,0 +1,490 @@
+/* The CATALYSTCue archive as a library shelf (MagazineShelf.jsx). Light, full
+   width, at least one screen tall. Magazine navy #1c2b53 and red #eb2127. */
+
+.section {
+  --navy: #1c2b53;
+  --red: #eb2127;
+  --wall: #f5f5f5;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(48px, 8vh, 88px) 0 clamp(56px, 9vh, 96px);
+  background: var(--wall);
+  color: #161616;
+}
+
+.wrap {
+  width: min(1480px, 94%);
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px 32px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.kicker::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+}
+
+.title {
+  margin: 10px 0 0;
+  font-size: clamp(34px, 4.6vw, 64px);
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.sub {
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: #5f6368;
+}
+
+.copy {
+  padding: 12px 18px;
+  border: 1px solid var(--navy);
+  background: #fff;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.copy:hover,
+.copy:focus-visible {
+  background: var(--navy);
+  color: #fff;
+}
+
+/* ── Search and filters ─────────────────────────── */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 30px;
+  padding: 14px 0;
+  border-block: 1px solid #e2dfdd;
+}
+
+.search {
+  display: flex;
+  flex: 1 1 280px;
+  align-items: center;
+  gap: 10px;
+  max-width: 420px;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d6d3d1;
+  background: #fff;
+  color: #5f6368;
+}
+
+.search:focus-within {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgb(235 33 39 / 0.12);
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 15px;
+  color: #161616;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 8px 12px;
+  border: 1px solid #d6d3d1;
+  border-radius: 999px;
+  background: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #3f4246;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.chip[aria-pressed="true"] {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+}
+
+.count {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--red);
+  cursor: pointer;
+}
+
+/* ── Shelves ─────────────────────────────────────── */
+.shelves {
+  display: grid;
+  gap: clamp(36px, 6vh, 64px);
+  margin-top: 28px;
+}
+
+.shelf {
+  display: grid;
+  grid-template-columns: clamp(130px, 13vw, 200px) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 44px);
+  align-items: end;
+}
+
+/* The spine label: the volume number set large in outline, like the spine of
+   a bound volume. */
+.spine {
+  display: grid;
+  align-content: end;
+  gap: 2px;
+  padding-bottom: 54px;
+}
+
+.spineWord {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.spineNumber {
+  font-family: var(--font-archivo), var(--font-roboto), sans-serif;
+  font-stretch: 88%;
+  font-weight: 800;
+  font-size: clamp(76px, 9vw, 140px);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.spineDates {
+  margin-top: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.rack {
+  position: relative;
+  min-width: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  --gap: clamp(10px, 1.4vw, 22px);
+  gap: var(--gap);
+  margin: 0;
+  padding: 0 calc(var(--gap) / 2);
+  list-style: none;
+  align-items: start;
+}
+
+.slot {
+  position: relative;
+  min-width: 0;
+}
+
+.book {
+  display: grid;
+  gap: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* A standing cover: square corners, a spine edge on the left, a shadow that
+   falls on the shelf. */
+.cover {
+  position: relative;
+  display: block;
+  aspect-ratio: 10 / 13;
+  overflow: hidden;
+  background: var(--navy);
+  box-shadow:
+    inset 3px 0 0 rgb(255 255 255 / 0.18),
+    inset 7px 0 10px -6px rgb(0 0 0 / 0.35),
+    0 14px 20px -12px rgb(28 43 83 / 0.55);
+  transform-origin: 50% 100%;
+  transition: transform 380ms cubic-bezier(0.2, 0.9, 0.3, 1.2), box-shadow 380ms ease;
+}
+
+.book:hover .cover,
+.book:focus-visible .cover {
+  transform: translateY(-16px) rotate(-2.5deg) scale(1.03);
+  box-shadow:
+    inset 3px 0 0 rgb(255 255 255 / 0.18),
+    0 30px 40px -16px rgb(28 43 83 / 0.5);
+}
+
+.book:focus-visible {
+  outline: none;
+}
+
+.book:focus-visible .cover {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* The issue tag hangs from the shelf rail on a short string. */
+.tag {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  margin-top: 18px;
+  padding: 9px 10px 10px;
+  border: 1px solid #dcd9d7;
+  background: #fff;
+  transform-origin: 50% -14px;
+  transition: transform 380ms cubic-bezier(0.2, 0.9, 0.3, 1.2), border-color 200ms ease;
+}
+
+.tag::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -16px;
+  width: 1px;
+  height: 15px;
+  background: #bdb8b5;
+}
+
+.tag::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 3px);
+  top: -4px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #bdb8b5;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.book:hover .tag,
+.book:focus-visible .tag {
+  transform: rotate(4deg);
+  border-color: var(--red);
+}
+
+.tagLine {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.tagTheme {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* The shelf: each slot carries its own piece of the rail under its cover,
+   reaching half the gap either side, so the pieces join into one shelf. */
+.ledge {
+  display: block;
+  height: 14px;
+  margin-inline: calc(var(--gap) / -2);
+  background: linear-gradient(180deg, #fbfbfb 0%, #e3e1df 55%, #cfccc9 100%);
+  border-top: 1px solid #fff;
+  box-shadow: 0 10px 18px -8px rgb(28 43 83 / 0.35);
+  transform-origin: 0 50%;
+}
+
+.empty .ghost {
+  display: block;
+  aspect-ratio: 10 / 13;
+  border: 1px dashed #cfcac7;
+  background: repeating-linear-gradient(135deg, transparent 0 10px, rgb(28 43 83 / 0.03) 10px 11px);
+}
+
+.none {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  padding: 40px 0;
+  font-size: 15px;
+  color: #3f4246;
+}
+
+.none p {
+  margin: 0;
+}
+
+/* ── Filling a shelf as it scrolls into view ─────── */
+.shelf[data-in] .ledge {
+  animation: rail 380ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+.shelf[data-in] .slot:not(.empty) .cover {
+  animation: drop 720ms cubic-bezier(0.3, 1.4, 0.5, 1) backwards;
+  animation-delay: calc(220ms + var(--i) * 90ms);
+}
+
+.shelf[data-in] .slot:not(.empty) .tag {
+  animation: swing 900ms cubic-bezier(0.3, 1.5, 0.5, 1) backwards;
+  animation-delay: calc(520ms + var(--i) * 90ms);
+}
+
+.shelf[data-in] .spineNumber {
+  animation: spine 800ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@keyframes rail {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-60px) rotate(-6deg);
+  }
+}
+
+@keyframes swing {
+  from {
+    opacity: 0;
+    transform: rotate(-18deg);
+  }
+}
+
+@keyframes spine {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+}
+
+/* ── Tablets: four places a shelf; phones: the shelf scrolls sideways ── */
+@media (max-width: 1100px) {
+  .row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .empty {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .shelf {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .spine {
+    grid-auto-flow: column;
+    grid-template-columns: auto auto 1fr;
+    align-items: end;
+    gap: 10px;
+    padding-bottom: 0;
+  }
+
+  .spineNumber {
+    font-size: 56px;
+    -webkit-text-stroke-width: 1.5px;
+  }
+
+  .spineDates {
+    justify-self: end;
+    margin: 0;
+  }
+
+  .rack {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+  }
+
+  .row {
+    --gap: 14px;
+    display: flex;
+    width: max-content;
+    padding: 18px 16px 0;
+  }
+
+  .slot {
+    width: 40vw;
+    scroll-snap-align: start;
+  }
+
+  .head {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover,
+  .tag {
+    transition: none;
+  }
+
+  .shelf[data-in] .ledge,
+  .shelf[data-in] .cover,
+  .shelf[data-in] .tag,
+  .shelf[data-in] .spineNumber {
+    animation: none;
+  }
+}

@@ -27,6 +27,23 @@ const roboto = localFont({
   ],
 });
 
+// Headings: Archivo, self-hosted for the same reason. The official Google Fonts
+// variable woff2 (v25, Latin subset, includes ™ ® and curly quotes) with both
+// axes: weight 100–900 and width 62–125%, so headings can use a true
+// semi-condensed cut. Licence: public/fonts/archivo/OFL.txt (SIL OFL 1.1).
+const archivo = localFont({
+  variable: "--font-archivo",
+  display: "swap",
+  src: [
+    {
+      path: "../../public/fonts/archivo/archivo-latin.woff2",
+      style: "normal",
+      weight: "100 900",
+    },
+  ],
+  declarations: [{ prop: "font-stretch", value: "62% 125%" }],
+});
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Best Laboratory Equipment Supplier in India - Inkarp Instruments Pvt Ltd",
@@ -58,7 +75,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${roboto.variable} h-full antialiased`}>
+    <html lang="en" className={`${roboto.variable} ${archivo.variable} h-full antialiased`}>
       <head>
         {/* Hides the homepage intro before first paint once it has played this session. */}
         <script dangerouslySetInnerHTML={{ __html: LAB_INTRO_SEEN_SCRIPT }} />

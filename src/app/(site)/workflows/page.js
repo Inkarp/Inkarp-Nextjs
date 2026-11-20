@@ -47,7 +47,7 @@ export default function WorkflowsIndexPage() {
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-red">
                 Laboratory Workflows for Research and Industry
               </p>
-              <h1 className="font-maxot mt-3 text-4xl leading-[1.05] text-ink sm:text-5xl lg:text-[64px]">
+              <h1 className="mt-3 text-4xl leading-[1.05] text-ink sm:text-5xl lg:text-[64px]">
                 Workflows &amp; Solutions
               </h1>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">

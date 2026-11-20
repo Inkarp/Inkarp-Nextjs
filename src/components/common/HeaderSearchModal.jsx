@@ -75,7 +75,7 @@ export default function HeaderSearchModal({ isOpen, onClose }) {
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-red">
               Inkarp finder
             </p>
-            <h2 className="font-maxot mt-2 text-4xl font-bold text-ink sm:text-6xl">
+            <h2 className="mt-2 text-4xl font-bold text-ink sm:text-6xl">
               Search products
             </h2>
           </div>

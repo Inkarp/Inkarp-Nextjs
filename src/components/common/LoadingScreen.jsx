@@ -3,7 +3,7 @@ export default function LoadingScreen({ children }) {
     <div className="flex flex-col items-center justify-center gap-5">
       {children}
 
-      <p className="font-maxot text-sm font-bold uppercase tracking-[0.28em] text-zinc-950">
+      <p className="text-sm font-bold uppercase tracking-[0.28em] text-zinc-950">
         Loading
         <span
           className="inline-block overflow-hidden align-bottom"

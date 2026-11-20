@@ -27,7 +27,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto);
   --font-roboto: var(--font-roboto);
-  --font-maxot: var(--font-roboto);
+  --font-display: var(--font-archivo), var(--font-roboto);
 
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
@@ -48,6 +48,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto), sans-serif;
   transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Headings: Archivo, semi-condensed (88% width), weight 700: the site's own
+   heading face, chosen on 20 Nov 2026. Body text stays Roboto. Unlayered on
+   purpose, so it wins over the font-semibold / font-bold utilities set on
+   individual headings. Mono labels marked up as headings (the footer's
+   "Quick Links") keep their mono style. */
+h1:not(.font-mono),
+h2:not(.font-mono) {
+  font-family: var(--font-archivo), var(--font-roboto), sans-serif;
+  font-stretch: 88%;
+  font-weight: 700;
 }
 [data-scroll-reveal="true"] {
   opacity: 0;

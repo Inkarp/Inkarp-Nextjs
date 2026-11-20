@@ -14,7 +14,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5459610/70604EDC67CB81E558599D29940A80DA?partnerref=Events",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Streamlining Endotoxin Testing: Automated Sample Preparation and Audit-Ready Workflows for QC Laboratories
   </p>
 
@@ -52,7 +52,7 @@ export const webinars = [
     sourceLink: "https://chemspeed.com/webinar",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Automation and Autonomous Experimentation in Organic Synthesis Using Chemspeed and Information Science
   </p>
 
@@ -90,7 +90,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5457056/EBB869ECE7BF57D205A5D298F33B2EC8?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     GLP-1 Analogs: Enhancing Impurity Profiling with LC-UV/MS Workflows
   </p>
 
@@ -128,7 +128,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5459666/18EDACDE56FD3610B9E18790E78E46D9?partnerref=eventshub",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Excipients in Biopharma - Polysorbate Analysis
   </p>
 
@@ -166,7 +166,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5469500/756FBF0FCD147896483C3DEDBE245676?partnerref=EventsPage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Strengthening SPE Workflows for Today's Laboratory
   </p>
 
@@ -205,7 +205,7 @@ export const webinars = [
     sourceLink: "https://www.mt.com/in/en/home/events/live-webinars/laboratory-weighing/moisture-analysis-days.html",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Basics of Moisture Determination
   </p>
 
@@ -245,7 +245,7 @@ export const webinars = [
     sourceLink: "https://www.mt.com/in/en/home/events/live-webinars/laboratory-weighing/moisture-analysis-days.html",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     FAQs for Moisture Analyzers and Tips for Tricky Samples
   </p>
 
@@ -285,7 +285,7 @@ export const webinars = [
     sourceLink: "https://www.mt.com/in/en/home/events/live-webinars/laboratory-weighing/moisture-analysis-days.html",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Boost Production Efficiency with Moisture Analyzers: Fast, Accurate Measurement & Seamless Integration
   </p>
 
@@ -325,7 +325,7 @@ export const webinars = [
     sourceLink: "https://www.mt.com/in/en/home/events/live-webinars/laboratory-weighing/moisture-analysis-days.html",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Beyond the Measurement: Mastering Connectivity, Data Management, and Data Integrity for Moisture Analyzers
   </p>
 
@@ -364,7 +364,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5452504/0AF2258FE836520D565CD21531D16E3A?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     The Next Frontier in Nitrosamines Testing: Detection and Risk Assessment in Packaging and IV Infusion Bags
   </p>
 
@@ -403,7 +403,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5429392/CC74350B38427C6C05FA7D2DF4556B97?partnerref=eventshub",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Applications of Multi-Angle Light Scattering for Biotherapeutic Characterization
   </p>
 
@@ -441,7 +441,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5469539/9B77692245ED8CA6AD4B0C05052CE595?partnerref=EventsPage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Vial Selection, Qualification, and the Evidence Behind the Decision
   </p>
 
@@ -480,7 +480,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5455657/D59D3D4A27F2B627F7BBA3139505218D?partnerref=waters_hub",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Importance of Accreditation and CoA
   </p>
 
@@ -518,7 +518,7 @@ export const webinars = [
     sourceLink: "https://www.chemspeed.com/webinar/automated-sample-preparation-for-mycotoxin-analysis",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Automated Sample Preparation for Mycotoxin Analysis
   </p>
 
@@ -561,7 +561,7 @@ export const webinars = [
     sourceLink: "https://www.mt.com/in/en/home/events/live-webinars/laboratory-weighing/pharmacopoeial-changes.html",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Pharmacopoeial Changes, Are Your Weighing Processes Ready?
   </p>
 
@@ -605,7 +605,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/mr/6973845/ABC71E79AECBE3E81A174B663E3A51A2?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     DMPK Masterclass Episode 1 - Better DMPK Workflows
   </p>
 
@@ -649,7 +649,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/mr/6973845/ABC71E79AECBE3E81A174B663E3A51A2?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     DMPK Masterclass Episode 2 - From Data to Decisions
   </p>
 
@@ -693,7 +693,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/mr/6973845/ABC71E79AECBE3E81A174B663E3A51A2?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     DMPK Masterclass Episode 3 - From Insight to Impact
   </p>
 
@@ -737,7 +737,7 @@ export const webinars = [
     sourceLink: "https://www.selectscience.net/webinar/qc-ready-mals-in-empower-cds",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Reducing Biologic QC Risk with MALS
   </p>
 
@@ -781,7 +781,7 @@ export const webinars = [
     sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Machine Learning and Artificial Intelligence towards autonomous AFM
   </p>
 
@@ -825,7 +825,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5459578/2DA9FCE35E406A0A17055CAB930360A5?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     LC-MS for High-Throughput Metabolomics
   </p>
 
@@ -869,7 +869,7 @@ export const webinars = [
     sourceLink: "https://www.selectscience.net/webinar/lnp-analysis-charged-aerosol-detection",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Charged Aerosol Detection for LNPs
   </p>
 
@@ -913,7 +913,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5436709/8F959AFF04584B5957F192DAB2581B04?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Empower Software AMA: Periodic Audit Trail Review
   </p>
 
@@ -958,7 +958,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5474570/5E8B491E24F89B80480C6D0C9E3FDE30?partnerref=waters_hub",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Root Cause Analysis That Drives Results
   </p>
 
@@ -1003,7 +1003,7 @@ export const webinars = [
     sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Machine Learning and Artificial Intelligence towards autonomous AFM
   </p>
 
@@ -1047,7 +1047,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/mr/7002688/7E34CC580AEC8613BD5AF6874046069F",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Expanding Access to Oligonucleotide LC-MS Analysis: Walk-Up Mass Confirmation, and Inline Mass Deconvolution in a Compliant-Ready Environment
   </p>
 
@@ -1090,7 +1090,7 @@ export const webinars = [
     sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Machine Learning and Artificial Intelligence towards Autonomous AFM
   </p>
 
@@ -1133,7 +1133,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5473313/ED94AF4567AA4438F96E30193B800CEE?partnerref=Eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     CDMS in Action: Driving Better AAV Processes and Deeper Viral Vector Insights
   </p>
 
@@ -1172,7 +1172,7 @@ export const webinars = [
     sourceLink: "https://biopharmawebinars.com/webinars/enhancing-plasmid-dna-quality-through-robust-topology-measurement/",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Enhancing Plasmid DNA Quality Through Robust Topology Measurement
   </p>
 
@@ -1215,7 +1215,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5527489/7D873677E20BFFFCFF4B74619A77CD26?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Implementing Multi-Angle Light Scattering for Biomolecular Characterization: Practical Strategies from Standalone to LC-Coupled Workflows
   </p>
 
@@ -1258,7 +1258,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5539969/29044444F780CB23775E4D37892ED40A?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Hands-off Precision: Automating Particle Analysis with Takeda
   </p>
 
@@ -1301,7 +1301,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/r/5541799/B0E147D27637C9790FF790CF734841D1?partnerref=eventspage",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Improving Resolution of GLP-1 Receptor Agonist and Insulin Impurities with Reversed-Phase LC
   </p>
 
@@ -1344,7 +1344,7 @@ export const webinars = [
     sourceLink: "https://event.on24.com/wcc/mr/7002688/7E34CC580AEC8613BD5AF6874046069F",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     LC-MS Oligo Mapping for Advanced RNA Characterization
   </p>
 
@@ -1387,7 +1387,7 @@ export const webinars = [
     sourceLink: "https://www.nanosurf.com/ai-afm-webinar",
     details: `
 <div class="space-y-4">
-  <p class="font-semibold font-maxot text-[#E63946] text-sm sm:text-base mb-2">
+  <p class="font-semibold text-[#E63946] text-sm sm:text-base mb-2">
     Machine Learning and Artificial Intelligence towards Autonomous AFM
   </p>
 

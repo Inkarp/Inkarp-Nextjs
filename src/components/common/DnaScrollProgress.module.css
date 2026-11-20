@@ -53,19 +53,20 @@
 }
 
 /* ── Colours (on the dark capsule) ───────────────────
-   Not yet read: the backbones in bright red and brand red, the bonds split
-   into the two bases' colours (A–T rose/red, G–C pink/deep red), left base
-   first; the mirrored bond flips them as the pair turns. Read: white and
-   pale grey, so the white part of the helix is how far the page is read. */
-.strandA { background: radial-gradient(circle at 35% 35%, #ff8a94, #e0182a 70%); }
-.strandB { background: radial-gradient(circle at 35% 35%, #f59aa2, #be0010 75%); }
-.row[data-pair='at'] .bond { background: linear-gradient(90deg, #ffb3b9 50%, #e0182a 50%); }
-.row[data-pair='gc'] .bond { background: linear-gradient(90deg, #ff6b77 50%, #9a000d 50%); }
+   Not yet read: white and pale grey. Read: the backbones in bright red and
+   brand red, the bonds split into the two bases' colours (A–T rose/red,
+   G–C pink/deep red), left base first; the mirrored bond flips them as the
+   pair turns. So the red part of the helix is how far the page is read, and
+   the whole helix is red at the end of the page. */
+.strandA { background: radial-gradient(circle at 35% 35%, #ffffff, #d4d4d8 75%); }
+.strandB { background: radial-gradient(circle at 35% 35%, #ffffff, #a1a1aa 75%); }
+.row[data-pair='at'] .bond { background: linear-gradient(90deg, #ffffff 50%, #a1a1aa 50%); }
+.row[data-pair='gc'] .bond { background: linear-gradient(90deg, #e4e4e7 50%, #71717a 50%); }
 
-.row[data-read] .strandA { background: radial-gradient(circle at 35% 35%, #ffffff, #d4d4d8 75%); }
-.row[data-read] .strandB { background: radial-gradient(circle at 35% 35%, #ffffff, #a1a1aa 75%); }
-.row[data-read][data-pair='at'] .bond { background: linear-gradient(90deg, #ffffff 50%, #a1a1aa 50%); }
-.row[data-read][data-pair='gc'] .bond { background: linear-gradient(90deg, #e4e4e7 50%, #71717a 50%); }
+.row[data-read] .strandA { background: radial-gradient(circle at 35% 35%, #ff8a94, #e0182a 70%); }
+.row[data-read] .strandB { background: radial-gradient(circle at 35% 35%, #f59aa2, #be0010 75%); }
+.row[data-read][data-pair='at'] .bond { background: linear-gradient(90deg, #ffb3b9 50%, #e0182a 50%); }
+.row[data-read][data-pair='gc'] .bond { background: linear-gradient(90deg, #ff6b77 50%, #9a000d 50%); }
 
 /* ── One turn ────────────────────────────────────────
    θ 0° front-centre, 90° right, 180° back-centre, 270° left. Easing per

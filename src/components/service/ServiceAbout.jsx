@@ -6,49 +6,56 @@ import { FiTool } from "react-icons/fi";
 import RecTag from "@/components/home/RecTag";
 import FlaskDock, { SERVICE_FLASK_STOPS } from "@/components/home/FlaskDock";
 
-function useCountUp(end, start = 0, duration = 1500, inView) {
-  const [value, setValue] = useState(start);
+/**
+ * The real number is what the page HTML carries, so search engines, link
+ * previews and visitors without JavaScript never read "0". The count-up is
+ * only a flourish: a counter still below the fold is set to 0 while out of
+ * sight, then counts up once, the first time it scrolls into view. One
+ * already on screen at load, or with reduced motion, just shows the number.
+ */
+function useCountUpOnce(ref, end, duration = 1600) {
+  const [value, setValue] = useState(end);
 
   useEffect(() => {
-    if (!inView) {
-      setValue(start);
-      return;
-    }
+    const node = ref.current;
+    if (!node || typeof IntersectionObserver === "undefined") return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
 
     let frame;
-    let startTime;
-
-    function animateCount(ts) {
-      if (!startTime) startTime = ts;
-      const progress = Math.min((ts - startTime) / duration, 1);
-      setValue(Math.floor(start + (end - start) * progress));
-      if (progress < 1) frame = requestAnimationFrame(animateCount);
-      else setValue(end);
-    }
-
-    frame = requestAnimationFrame(animateCount);
-    return () => cancelAnimationFrame(frame);
-  }, [end, start, duration, inView]);
-
-  return value;
-}
-
-function useInView(ref) {
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current) return;
-
+    let armed = false;
     const observer = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          if (!armed) {
+            armed = true;
+            setValue(0);
+          }
+          return;
+        }
+
+        observer.disconnect();
+        if (!armed) return;
+
+        let startTime;
+        const tick = (ts) => {
+          startTime ??= ts;
+          const progress = Math.min((ts - startTime) / duration, 1);
+          setValue(Math.round(end * progress));
+          if (progress < 1) frame = requestAnimationFrame(tick);
+        };
+        frame = requestAnimationFrame(tick);
+      },
       { threshold: 0.5 }
     );
 
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [ref]);
+    observer.observe(node);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+    };
+  }, [ref, end, duration]);
 
-  return inView;
+  return value;
 }
 
 const statisticsData = [
@@ -70,8 +77,7 @@ const statisticsData = [
 
 function StatCard({ icon: Icon, number, plus, label, info }) {
   const ref = useRef(null);
-  const inView = useInView(ref);
-  const value = useCountUp(number, 0, 1600, inView);
+  const value = useCountUpOnce(ref, number);
 
   return (
     <div className="border border-line-light bg-white p-6">

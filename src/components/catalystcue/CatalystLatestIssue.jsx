@@ -7,7 +7,8 @@ function formatVolumeLabel(volume = "") {
   return volume.replace("-", "");
 }
 
-export default function CatalystLatestIssue({ issue, variant = "wide" }) {
+// `onRequestCopy` (aside variant): shows a button that opens the physical-copy form.
+export default function CatalystLatestIssue({ issue, variant = "wide", onRequestCopy }) {
   if (!issue) {
     return null;
   }
@@ -41,12 +42,23 @@ export default function CatalystLatestIssue({ issue, variant = "wide" }) {
             {displayTitle}
           </h1>
           <p className="mt-3 text-sm text-ink-soft">{issue.Date}</p>
-          <Link
-            className="mt-5 inline-flex h-11 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-bold text-rose-700 transition hover:bg-rose-100"
-            href={`/magazine/${encodeURIComponent(issue.slug)}`}
-          >
-            Read Latest Issue
-          </Link>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <Link
+              className="inline-flex h-11 items-center justify-center border border-rose-200 bg-rose-50 px-5 text-sm font-bold text-rose-700 transition hover:bg-rose-100"
+              href={`/magazine/${encodeURIComponent(issue.slug)}`}
+            >
+              Read Latest Issue
+            </Link>
+            {onRequestCopy ? (
+              <button
+                className="inline-flex h-11 items-center justify-center border border-line-light bg-parchment px-5 text-sm font-bold text-ink transition hover:border-red hover:text-red"
+                onClick={onRequestCopy}
+                type="button"
+              >
+                Request a physical copy
+              </button>
+            ) : null}
+          </div>
         </div>
       </article>
     );

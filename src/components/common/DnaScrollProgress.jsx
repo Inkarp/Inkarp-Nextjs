@@ -10,9 +10,9 @@ import styles from "./DnaScrollProgress.module.css";
  * joined by a bond, with front nucleotides larger and brighter than those
  * behind. Successive rows are a tenth of a turn apart, so together they twist
  * like a real helix.
- * - The helix starts red and turns white from the bottom as the page is read.
+ * - The helix starts white and turns red from the bottom as the page is read.
  * - It turns slowly all the time, and faster while the page is scrolling.
- * - Complete (100%): all white, with a soft red glow.
+ * - Complete (100%): all red, with a soft red glow.
  */
 
 const ROWS = 12;

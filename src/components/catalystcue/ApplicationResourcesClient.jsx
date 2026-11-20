@@ -1,102 +1,25 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from"react";
+import { useEffect, useMemo, useState } from"react";
+import Image from"next/image";
 import { FiDownload, FiFileText, FiMail, FiSearch } from"react-icons/fi";
 import { FaWhatsapp } from"react-icons/fa";
 import { applicationResources, getIssueOptions, volumeOptions } from"@/data/applicationResources";
 import { SITE_URL } from"@/data/pageSeo";
 
-// How long to wait before treating a preview as failed. Embedded PDFs can be
-// slow, but an indefinite spinner is worse than an honest fallback.
-const PREVIEW_TIMEOUT_MS = 20000;
-
-// Renders the PDF preview, but only once the card is near the viewport. There
-// are 68 resources totalling ~61MB — mounting every iframe up front made the
-// page download the entire library at once. `loading="lazy"` alone is not
-// enough: the browser still creates the frame and often fetches it eagerly.
-function PdfPreview({ resource }) {
-  const containerRef = useRef(null);
-  const [shouldLoad, setShouldLoad] = useState(false);
-  const [state, setState] = useState("idle"); // idle | loading | ready | failed
-
-  useEffect(() => {
-    const node = containerRef.current;
-    if (!node) return undefined;
-
-    if (typeof IntersectionObserver === "undefined") {
-      setShouldLoad(true);
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "600px" }
-    );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!shouldLoad) return undefined;
-
-    setState("loading");
-    const timer = window.setTimeout(() => {
-      setState((current) => (current === "loading" ? "failed" : current));
-    }, PREVIEW_TIMEOUT_MS);
-
-    return () => window.clearTimeout(timer);
-  }, [shouldLoad]);
-
-  const isReady = state === "ready";
-
+// First page of the note, as an image made once from the PDF (the .webp next
+// to each file). Loading the PDF itself in a frame downloaded 1–5 MB per card
+// and showed nothing on Android phones, which can't display a PDF in a page.
+function NotePreview({ resource }) {
   return (
-    <div
-      className="relative aspect-[205/270] w-full overflow-hidden border-b border-line-light bg-parchment-alt"
-      ref={containerRef}
-    >
-      {!isReady ? (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-parchment-alt px-4 text-center">
-          <FiFileText className="h-8 w-8 text-red" />
-
-          {state === "failed" ? (
-            <span className="text-xs font-medium text-ink-soft">
-              Preview unavailable — use Download to open the PDF.
-            </span>
-          ) : (
-            <>
-              {/* Track is line-light so it is visible against the panel, and the
-                  fill sweeps rather than pulsing, so the wait reads as progress. */}
-              <div className="h-1.5 w-28 overflow-hidden rounded-full bg-line-light">
-                <div className="h-full w-1/3 rounded-full bg-red animate-[hvc-progress-sweep_1.2s_ease-in-out_infinite]" />
-              </div>
-              <span className="text-xs font-medium text-ink-soft">
-                Loading preview…
-              </span>
-            </>
-          )}
-        </div>
-      ) : null}
-
-      {shouldLoad && state !== "failed" ? (
-        <iframe
-          className={`pointer-events-none h-full w-[calc(100%+16px)] max-w-none border-0 bg-parchment transition-opacity duration-300 ${
-            isReady ? "opacity-100" : "opacity-0"
-          }`}
-          loading="lazy"
-          onError={() => setState("failed")}
-          onLoad={() => setState("ready")}
-          scrolling="no"
-          src={resource.previewUrl}
-          tabIndex={-1}
-          title={`${resource.title} preview`}
-        />
-      ) : null}
+    <div className="relative aspect-[205/270] w-full overflow-hidden border-b border-line-light bg-parchment-alt">
+      <Image
+        alt={`First page of ${resource.title}`}
+        className="object-cover object-top"
+        fill
+        sizes="(min-width: 1024px) 360px, (min-width: 640px) 46vw, 92vw"
+        src={resource.thumbUrl}
+      />
     </div>
   );
 }
@@ -142,7 +65,7 @@ function ResourceCard({ resource }) {
   return (
     <article className="flex h-full flex-col overflow-hidden border border-line-light bg-parchment transition hover:border-red/40 hover:border-red/35">
       {/* PDF preview */}
-      <PdfPreview resource={resource} />
+      <NotePreview resource={resource} />
 
       {/* Card body */}
       <div className="flex flex-1 flex-col p-5">

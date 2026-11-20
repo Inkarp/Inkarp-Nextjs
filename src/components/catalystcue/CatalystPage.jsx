@@ -40,10 +40,17 @@ function sortIssuesNewestFirst(cards) {
   );
 }
 
+// The physical-copy form used to open by itself 5 seconds after the page
+// loaded. It is paused with the other pop-ups under review and now opens from
+// the "Request a physical copy" button under the latest issue. Set to true to
+// bring the timed opening back.
+const AUTO_OPEN_PHYSICAL_COPY = false;
+
 export default function CatalystPage() {
   const [showCatalystModal, setShowCatalystModal] = useState(false);
 
   useEffect(() => {
+    if (!AUTO_OPEN_PHYSICAL_COPY) return undefined;
     const timer = window.setTimeout(() => setShowCatalystModal(true), 5000);
 
     return () => window.clearTimeout(timer);
@@ -61,7 +68,7 @@ export default function CatalystPage() {
         {/* 90% of the viewport, matching the header and video above. */}
         <div className="mx-auto grid w-[90%] gap-8 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-start">
           <div className="lg:sticky lg:top-6">
-            <CatalystLatestIssue issue={latestIssue} variant="aside" />
+            <CatalystLatestIssue issue={latestIssue} onRequestCopy={() => setShowCatalystModal(true)} variant="aside" />
           </div>
 
           <div className="min-w-0 border border-line-light bg-white px-4 py-8 sm:px-6">

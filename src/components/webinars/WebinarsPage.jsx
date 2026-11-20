@@ -3,7 +3,7 @@
 import { useState } from"react";
 import Image from"next/image";
 import { FiCalendar, FiClock, FiX } from"react-icons/fi";
-import { getDaysLeft, getWebinarSortDate, webinars } from"@/data/webinars";
+import { getDaysLeft, getWebinarSortDate, isWebinarToday, isWebinarUpcoming, webinars } from"@/data/webinars";
 import RegisterForm from"./RegisterForm";
 
 const tabs = [
@@ -88,9 +88,9 @@ export default function WebinarsPage() {
 
   const webinarsForTab = webinars
     .filter((webinar) =>
-      activeTab ==="upcoming"
-        ? getDaysLeft(webinar) > 0
-        : getDaysLeft(webinar) === 0
+      // Upcoming until the session starts, so a webinar stays listed (and
+      // open for registration) on its own day.
+      activeTab ==="upcoming" ? isWebinarUpcoming(webinar) : !isWebinarUpcoming(webinar)
     );
   const principalCounts = PRINCIPAL_FILTERS.reduce((counts, principal) => {
     counts[principal.key] =
@@ -208,6 +208,8 @@ export default function WebinarsPage() {
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {visibleWebinars.map((webinar) => {
               const daysLeft = getDaysLeft(webinar);
+              const upcoming = isWebinarUpcoming(webinar);
+              const today = isWebinarToday(webinar);
               const sortDate = getWebinarSortDate(webinar);
               const accent = getWebinarAccent(webinar);
 
@@ -246,12 +248,12 @@ export default function WebinarsPage() {
                         width={96}
                       />
                     </div>
-                    {daysLeft > 0 ? (
+                    {today || daysLeft > 0 ? (
                       <span
                         className="shrink-0 border bg-white px-2 py-1 text-[11px] font-semibold"
                         style={{ borderColor: accent.border, color: accent.text }}
                       >
-                        {`${daysLeft}d left`}
+                        {today ?"Today" : `${daysLeft}d left`}
                       </span>
                     ) : null}
                   </div>
@@ -276,7 +278,7 @@ export default function WebinarsPage() {
                     >
                       Details
                     </button>
-                    {daysLeft > 0 ? (
+                    {upcoming ? (
                       <button
                         className="flex-1 border px-3 py-2 text-sm font-medium transition hover:brightness-[0.98]"
                         onClick={() => {
@@ -336,7 +338,7 @@ export default function WebinarsPage() {
               className="mb-3 text-base text-ink"
               dangerouslySetInnerHTML={{ __html: selectedWebinar.details }}
             />
-            {getDaysLeft(selectedWebinar) > 0 ? (
+            {isWebinarUpcoming(selectedWebinar) ? (
               <div className="sticky bottom-0 -mx-6 -mb-6 mt-6 border-t border-line-light bg-parchment/95 px-6 py-4 text-center backdrop-blur">
                 <button
                   className="inline-flex items-center justify-center gap-2 border bg-white px-6 py-2 text-sm text-ink-soft transition hover:bg-parchment-alt"

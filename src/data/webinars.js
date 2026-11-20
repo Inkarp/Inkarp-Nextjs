@@ -1470,6 +1470,61 @@ export function getDaysLeft(webinarOrDate, todayValue = new Date()) {
   return Math.ceil(diff / (1000 * 60 * 60 * 24));
 }
 
-export function getUpcomingWebinarsCount() {
-  return webinars.filter((webinar) => getDaysLeft(webinar) > 0).length;
+// ── Upcoming vs past ─────────────────────────────────────────────────────
+// A webinar stays "upcoming" until its session starts, not until the day
+// begins: counting whole days made a session drop to Past on its own day.
+// Start times come from the `date1` label ("November 19 | 07:30 PM IST", or
+// two sessions joined by " / "), and are read as IST whatever the visitor's
+// or server's time zone. A session with no time on its label counts until
+// the end of its day (IST).
+const MONTH_INDEX = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
+const IST_OFFSET_MS = 5.5 * 60 * 60 * 1000;
+
+function labelTimes(webinar) {
+  return String(webinar?.date1 ?? "")
+    .split("/")
+    .map((part) => part.match(/([A-Za-z]{3})[A-Za-z]*\s+(\d{1,2})\s*\|\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i))
+    .filter(Boolean)
+    .map(([, month, day, hour, minute, half]) => ({
+      month: MONTH_INDEX[month.toLowerCase()],
+      day: Number(day),
+      hour: (Number(hour) % 12) + (half.toUpperCase() === "PM" ? 12 : 0),
+      minute: Number(minute),
+    }));
+}
+
+const twoDigits = (value) => String(value).padStart(2, "0");
+
+/** Start of every session of a webinar, as exact instants. */
+export function getWebinarSessionStarts(webinarOrDate) {
+  const dates = getDateStrings(webinarOrDate);
+  const times = typeof webinarOrDate === "string" ? [] : labelTimes(webinarOrDate);
+
+  return dates
+    .map((dateString) => {
+      const [, month, day] = dateString.split("-").map(Number);
+      const time =
+        times.find((item) => item.month === month - 1 && item.day === day) ??
+        (dates.length === 1 ? times[0] : undefined);
+      const clock = time ? `${twoDigits(time.hour)}:${twoDigits(time.minute)}` : "23:59";
+      return new Date(`${dateString}T${clock}:00+05:30`);
+    })
+    .filter((date) => !Number.isNaN(date.getTime()));
+}
+
+/** True until the last session of the webinar has started. */
+export function isWebinarUpcoming(webinarOrDate, now = new Date()) {
+  return getWebinarSessionStarts(webinarOrDate).some((start) => start > now);
+}
+
+/** True when a session that hasn't started yet is on today's date (IST). */
+export function isWebinarToday(webinarOrDate, now = new Date()) {
+  const todayIst = new Date(now.getTime() + IST_OFFSET_MS).toISOString().slice(0, 10);
+  return getWebinarSessionStarts(webinarOrDate).some(
+    (start) => start > now && new Date(start.getTime() + IST_OFFSET_MS).toISOString().slice(0, 10) === todayIst
+  );
+}
+
+export function getUpcomingWebinarsCount(now = new Date()) {
+  return webinars.filter((webinar) => isWebinarUpcoming(webinar, now)).length;
 }

@@ -21,7 +21,8 @@ function resource(volume, issue, filename, exactTitle) {
     issue,
     group: `${volume.replace("-", " ")} / ${issue.replace("-", " ")}`,
     url,
-    previewUrl: `${url}#page=1&zoom=page-fit&toolbar=0&navpanes=0&scrollbar=0&view=Fit`,
+    // First page as an image, saved next to the PDF with the same name.
+    thumbUrl: url.replace(/\.pdf$/i, ".webp"),
   };
 }
 

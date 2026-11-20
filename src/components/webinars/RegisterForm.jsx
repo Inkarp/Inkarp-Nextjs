@@ -17,13 +17,7 @@ import {
 } from"react-icons/fi";
 import { collectTracking } from"@/lib/browserTracking";
 import SubmitButton from"@/components/common/SubmitButton";
-import { getDaysLeft } from"@/data/webinars";
-
-const startOfToday = () => {
-  const d = new Date();
-  d.setHours(0, 0, 0, 0);
-  return d;
-};
+import { isWebinarUpcoming } from"@/data/webinars";
 
 function InputField({ name, label, value, onChange, required = false, type = "text", icon: Icon, autoComplete, placeholder }) {
   return (
@@ -51,7 +45,8 @@ function InputField({ name, label, value, onChange, required = false, type = "te
 
 export default function RegisterForm({ isOpen, onClose, preselected = null }) {
   const router = useRouter();
-  const today = useMemo(() => startOfToday(), []);
+  // When the form opened: a webinar is preselected only if it hasn't started yet.
+  const openedAt = useMemo(() => new Date(), []);
   const backdropRef = useRef(null);
   const dialogRef = useRef(null);
 
@@ -59,8 +54,8 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
     if (!preselected) {
       return"";
     }
-    return getDaysLeft(preselected, today) > 0 ? preselected.title :"";
-  }, [preselected, today]);
+    return isWebinarUpcoming(preselected, openedAt) ? preselected.title :"";
+  }, [preselected, openedAt]);
 
   const getInitialFormData = () => ({
     webinarTitle: selectedTitle,

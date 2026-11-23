@@ -7,7 +7,7 @@ import { useScrollFrame } from "./motion";
 import styles from "./StoryPreview.module.css";
 
 /**
- * B · one leader's words, pinned while they are read: every word starts pale
+ * One leader's words, pinned while they are read: every word starts pale
  * and turns to ink as the page scrolls, and the name arrives at the end. The
  * portrait is the leader's side of the wide photo. With reduced motion the
  * quote is simply shown.

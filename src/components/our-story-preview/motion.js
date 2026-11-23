@@ -9,37 +9,43 @@ const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayout
 
 /**
  * Reveal once: every [data-reveal] inside the root rises in the first time it
- * comes on screen. The server HTML shows everything; on mount, whatever is
- * already on screen is marked shown before the root is armed, so nothing
- * blinks. The observer's top margin reaches far above the screen, so content
- * jumped past (a link to the middle of the page) is still shown.
+ * comes on screen. The server HTML shows everything. On mount, what is already
+ * on screen is marked shown (data-in); only what is below is hidden, by
+ * marking it data-wait, and each is shown as it arrives. Content that appears
+ * later (a section remounted by a hot reload or re-render) is never marked, so
+ * it can never be left hidden. The observer's top margin reaches far above the
+ * screen, so content jumped past is still shown.
  */
 export function useRevealRoot(rootRef) {
   useIsoLayoutEffect(() => {
     const root = rootRef.current;
     if (!root || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
 
-    const items = [...root.querySelectorAll("[data-reveal]")];
-    const line = window.innerHeight * 0.92;
-    items.forEach((item) => {
-      if (item.getBoundingClientRect().top < line) item.dataset.in = "";
-    });
-    root.dataset.armed = "";
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
+          delete entry.target.dataset.wait;
           entry.target.dataset.in = "";
           observer.unobserve(entry.target);
         });
       },
       { rootMargin: "100000px 0px -8% 0px" }
     );
-    items.forEach((item) => {
-      if (!("in" in item.dataset)) observer.observe(item);
+    const line = window.innerHeight * 0.92;
+    root.querySelectorAll("[data-reveal]").forEach((item) => {
+      if (item.getBoundingClientRect().top < line) {
+        item.dataset.in = "";
+        return;
+      }
+      item.dataset.wait = "";
+      observer.observe(item);
     });
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      // Never leave anything hidden once nothing is watching it.
+      root.querySelectorAll("[data-wait]").forEach((item) => delete item.dataset.wait);
+    };
   }, [rootRef]);
 }
 

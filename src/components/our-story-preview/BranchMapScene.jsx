@@ -34,7 +34,7 @@ const LEAD = 0.08;
 const TAIL = 0.1;
 
 /**
- * C · the network, pinned while it draws: the Hyderabad head office appears
+ * The network, pinned while it draws: the Hyderabad head office appears
  * first, then a line runs out to each branch in turn and its pin drops in.
  * The panel counts the branches and names the one just reached.
  */

@@ -1,13 +1,9 @@
 import Image from "next/image";
-import ClientRows from "./ClientRows";
 import Eyebrow from "./Eyebrow";
 import { CLIENTS } from "./storyContent";
 
-/**
- * The client logos. wall (B): every logo on a grid, popping in one after
- * another. scroll (C): three rows that slide as the page scrolls.
- */
-export default function ClientLogos({ variant = "wall" }) {
+/** The client logos on a grid, popping in one after another. */
+export default function ClientLogos() {
   const { logos } = CLIENTS;
   const heading = (
     <div className="mx-auto max-w-[1180px] px-4 sm:px-6 lg:px-8">
@@ -17,15 +13,6 @@ export default function ClientLogos({ variant = "wall" }) {
       </h2>
     </div>
   );
-
-  if (variant === "scroll") {
-    return (
-      <section className="overflow-hidden py-20 lg:py-28">
-        {heading}
-        <ClientRows logos={logos} />
-      </section>
-    );
-  }
 
   return (
     <section className="py-20 lg:py-28">

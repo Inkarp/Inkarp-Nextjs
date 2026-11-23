@@ -13,16 +13,8 @@ const DIRECTIONS = [
     name: "In their words",
     image: "/assets/our-story/team/BaluFullImage.jpg",
     position: "object-left",
-    summary: "People first. The chairman's and managing director's words light up as you read, mission, vision and values stack like cards, and the chapters slide sideways.",
-    motion: ["Words light as you scroll", "Building photo widens", "Cards stack on scroll", "Chapters move sideways", "Logo wall pops in"],
-  },
-  {
-    key: "network",
-    letter: "C",
-    name: "Across India",
-    image: "/assets/our-story/InkarpBuilding.jpg",
-    summary: "The network. Lines run from the Hyderabad head office to all twelve branches as you scroll, the years read off a ruler, and the chapters open one after another.",
-    motion: ["Branches appear on the map", "Year ruler slides", "Chapters open in turn", "Readouts scan in", "Logo rows slide"],
+    summary: "The page being finalised. The head office photo zooms out in its frame, lines run from Hyderabad to all twelve branches, mission, vision and values stack like cards, the chapters open one after another, and the leadership section comes in two versions to choose from.",
+    motion: ["Photo zooms out", "Branches appear on the map", "Cards stack on scroll", "Chapters open in turn", "Two leadership versions", "Logo wall pops in"],
   },
 ];
 
@@ -34,11 +26,11 @@ export default function OurStoryPreviews() {
           <span aria-hidden="true" className="h-px w-6 bg-current" />
           Our Story preview
         </p>
-        <h1 className="mt-4 text-4xl leading-tight text-ink sm:text-5xl">Two ways to tell the Inkarp story</h1>
+        <h1 className="mt-4 text-4xl leading-tight text-ink sm:text-5xl">The Inkarp story, in their words</h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">
-          Same content as the live page, word for word, plus the names from the history collage, the awards and the branches. Each one moves differently as you scroll; sections can be mixed between them.
+          Same content as the live page, word for word, plus the names from the history collage and the branches. Every section moves as you scroll.
         </p>
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
+        <ul className="mt-12 grid max-w-[620px] gap-6">
           {DIRECTIONS.map((item) => (
             <li key={item.key}>
               <Link className="group flex h-full flex-col border border-line-light bg-white transition hover:border-red" href={`/our-story-preview/${item.key}`}>
@@ -69,7 +61,7 @@ export default function OurStoryPreviews() {
           <Link className="font-semibold text-red hover:underline" href="/our-story">
             /our-story
           </Link>{" "}
-          until you pick one.
+          until this one is approved.
         </p>
       </div>
     </main>

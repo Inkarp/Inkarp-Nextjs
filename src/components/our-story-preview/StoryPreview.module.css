@@ -1,9 +1,11 @@
-/* Our Story previews. Everything is visible in the server HTML; reveal states
-   apply only after the root is armed (useRevealRoot), and every scroll effect
-   reads CSS variables written per frame. Inkarp red #be0010, ink #1a1a1a. */
+/* Our Story previews. Everything is visible in the server HTML. useRevealRoot
+   hides only the elements it is watching (data-wait) and shows each one as it
+   comes on screen, so anything it is not watching (content added or remounted
+   later) simply stays visible. Every scroll effect reads CSS variables written
+   per frame. Inkarp red #be0010, ink #1a1a1a. */
 
 /* ── Reveal once ── */
-.root[data-armed] [data-reveal] {
+.root [data-reveal] {
   transition:
     opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 900ms cubic-bezier(0.16, 1, 0.3, 1),
@@ -11,30 +13,30 @@
   transition-delay: calc(var(--i, 0) * 90ms);
 }
 
-.root[data-armed] [data-reveal]:not([data-in]) {
+.root [data-reveal][data-wait] {
   opacity: 0;
   transform: translateY(34px);
 }
 
-.root[data-armed] [data-reveal="fade"]:not([data-in]) {
+.root [data-reveal="fade"][data-wait] {
   transform: none;
 }
 
-.root[data-armed] [data-reveal="left"]:not([data-in]) {
+.root [data-reveal="left"][data-wait] {
   transform: translateX(-44px);
 }
 
-.root[data-armed] [data-reveal="scale"]:not([data-in]) {
+.root [data-reveal="scale"][data-wait] {
   transform: scale(0.92);
 }
 
-.root[data-armed] [data-reveal="wipe"]:not([data-in]) {
+.root [data-reveal="wipe"][data-wait] {
   opacity: 1;
   transform: none;
   clip-path: inset(0 0 100% 0);
 }
 
-.root[data-armed] [data-reveal="wipe"] {
+.root [data-reveal="wipe"] {
   clip-path: inset(0 0 0 0);
 }
 
@@ -54,7 +56,7 @@
   transition-delay: calc(var(--i, 0) * 90ms + 120ms);
 }
 
-.root[data-armed] .rule:not([data-in])::before {
+.root .rule[data-wait]::before {
   transform: scaleX(0);
 }
 
@@ -131,31 +133,7 @@
   }
 }
 
-/* ── B · hero words arrive one after another ── */
-.word {
-  display: inline-block;
-  animation: wordIn 900ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
-  animation-delay: calc(150ms + var(--i, 0) * 70ms);
-}
-
-@keyframes wordIn {
-  from {
-    opacity: 0;
-    filter: blur(8px);
-    transform: translateY(0.3em);
-  }
-}
-
-/* ── B · the head office photo widens to the full frame ── */
-.widen {
-  clip-path: inset(0 calc((1 - var(--w, 1)) * 11%) round calc((1 - var(--w, 1)) * 28px));
-}
-
-.widenImg {
-  transform: translateY(calc((var(--w, 1) - 1) * 6%)) scale(1.12);
-}
-
-/* ── B · a quote lights word by word as the page scrolls ── */
+/* ── A quote lights word by word as the page scrolls ── */
 .litWord {
   opacity: clamp(0.13, calc((var(--p, 1) * 1.25 - var(--w, 0)) * 14), 1);
 }
@@ -171,22 +149,12 @@
   transform: scaleX(var(--p, 1));
 }
 
-/* ── B · stacked cards ── */
+/* ── Stacked cards ── */
 .stackCard {
   box-shadow: 0 -18px 40px -30px rgb(0 0 0 / 0.35);
 }
 
-/* ── B · chapters slide sideways ── */
-.track {
-  will-change: transform;
-}
-
-.trackBar {
-  transform-origin: 0 50%;
-  transform: scaleX(var(--p, 0));
-}
-
-/* ── C · heading lines are scanned in left to right ── */
+/* ── Heading lines are scanned in left to right ── */
 .scan {
   display: block;
   animation: scanIn 1100ms cubic-bezier(0.7, 0, 0.2, 1) backwards;
@@ -199,7 +167,7 @@
   }
 }
 
-/* ── C · the photo zooms out inside its drafting frame ── */
+/* ── The photo zooms out inside its drafting frame ── */
 .zoomImg {
   transform: scale(calc(1.28 - var(--z, 1) * 0.28));
   will-change: transform;
@@ -235,7 +203,7 @@
   }
 }
 
-/* ── C · map: the head office pulses ── */
+/* ── Map: the head office pulses ── */
 .pulse {
   transform-box: fill-box;
   transform-origin: center;
@@ -266,7 +234,7 @@
   opacity: 0.35;
 }
 
-/* ── C · chapters open one after another ── */
+/* ── Chapters open one after another ── */
 .panel {
   transition: flex-grow 800ms cubic-bezier(0.7, 0, 0.2, 1);
 }
@@ -291,31 +259,7 @@
   opacity: 0;
 }
 
-/* ── C · readout cards: a scan line sweeps down as they arrive ── */
-.readout {
-  position: relative;
-  overflow: hidden;
-}
-
-.readout::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent, rgb(190 0 16 / 0.12) 45%, rgb(190 0 16 / 0.5) 50%, transparent 51%);
-  transform: translateY(-100%);
-  pointer-events: none;
-}
-
-.root[data-armed] .readout[data-in]::after {
-  animation: sweep 1300ms cubic-bezier(0.6, 0, 0.3, 1) calc(var(--i, 0) * 160ms + 200ms);
-}
-
-@keyframes sweep {
-  to {
-    transform: translateY(100%);
-  }
-}
-
+/* ── Status lights on the hero figures ── */
 .led {
   animation: led 1.6s ease-in-out infinite;
 }
@@ -326,7 +270,7 @@
   }
 }
 
-/* ── C · portraits drift inside their frames ── */
+/* ── Portraits drift inside their frames ── */
 .drift {
   transform: translateY(calc((var(--d, 0.5) - 0.5) * -12%));
   will-change: transform;
@@ -336,7 +280,6 @@
   .digits > span,
   .rise,
   .swap,
-  .word,
   .scan,
   .dimH,
   .dimV,

@@ -3,17 +3,17 @@ import { FaLinkedin } from "react-icons/fa";
 import Eyebrow from "./Eyebrow";
 import { DIRECTORS } from "./storyContent";
 
-function LinkedIn({ person, compact = false }) {
+function LinkedIn({ person }) {
   return (
     <a
       aria-label={`${person.name} on LinkedIn`}
-      className={`inline-flex w-fit items-center gap-2 border border-line-light text-xs font-semibold text-ink-soft transition hover:border-red hover:text-red ${compact ? "size-9 justify-center" : "px-3 py-1.5"}`}
+      className="inline-flex w-fit items-center gap-2 border border-line-light px-3 py-1.5 text-xs font-semibold text-ink-soft transition hover:border-red hover:text-red"
       href={person.link}
       rel="noopener noreferrer"
       target="_blank"
     >
       <FaLinkedin aria-hidden="true" className="size-4 text-red" />
-      {compact ? null : "Connect on LinkedIn"}
+      Connect on LinkedIn
     </a>
   );
 }
@@ -32,43 +32,9 @@ function Heading({ center = false }) {
   );
 }
 
-/**
- * The four directors. portraits (B): tall portraits in a row. rows (C): a
- * register, one row per director sliding in from the left.
- */
-export default function Directors({ variant = "portraits" }) {
+/** The four directors: tall portraits in a row, each with their message. */
+export default function Directors() {
   const { people } = DIRECTORS;
-
-  if (variant === "rows") {
-    return (
-      <section className="mx-auto max-w-[1180px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <Heading />
-        <ol className="mt-12 border-b border-line-light">
-          {people.map((person, index) => (
-            <li
-              className="grid grid-cols-[96px_minmax(0,1fr)] gap-x-5 gap-y-4 border-t border-line-light py-7 lg:grid-cols-[44px_120px_230px_minmax(0,1fr)_auto] lg:items-start lg:gap-7"
-              data-reveal="left"
-              key={person.name}
-              style={{ "--i": index }}
-            >
-              <span className="hidden font-mono text-sm text-red lg:block">{String(index + 1).padStart(2, "0")}</span>
-              <div className="relative size-24 overflow-hidden bg-parchment-alt lg:size-[120px]">
-                <Image alt={person.name} className="object-cover object-top" fill sizes="120px" src={person.img} />
-              </div>
-              <div className="self-center lg:self-start">
-                <h3 className="text-xl font-semibold text-ink">{person.name}</h3>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-red">{person.title}</p>
-              </div>
-              <p className="col-span-2 text-[15px] leading-relaxed text-ink-soft lg:col-span-1">{person.message}</p>
-              <div className="col-span-2 lg:col-span-1">
-                <LinkedIn compact person={person} />
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-    );
-  }
 
   return (
     <section className="mx-auto max-w-[1180px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

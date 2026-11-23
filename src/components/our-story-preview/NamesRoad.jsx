@@ -3,7 +3,7 @@ import Eyebrow from "./Eyebrow";
 import { COLLAGE, NAMES } from "./storyContent";
 import styles from "./StoryPreview.module.css";
 
-/** B · the names on the history collage's road, a line drawing across them as it arrives, beside the collage. */
+/** The names on the history collage's road, a line drawing across them as it arrives, beside the collage. */
 export default function NamesRoad() {
   return (
     <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

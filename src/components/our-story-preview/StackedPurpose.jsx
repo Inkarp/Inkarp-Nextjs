@@ -4,7 +4,7 @@ import styles from "./StoryPreview.module.css";
 
 const SURFACES = ["bg-white", "bg-parchment-alt", "bg-[#fbeaec]"];
 
-/** B · mission, vision and values as cards that pin and stack over one another as the page scrolls. */
+/** Mission, vision and values as cards that pin and stack over one another as the page scrolls. */
 export default function StackedPurpose() {
   return (
     <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

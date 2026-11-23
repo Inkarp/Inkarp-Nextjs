@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const DIRECTIONS = [
   { key: "voices", label: "B · In their words" },
-  { key: "network", label: "C · Across India" },
 ];
 
 /** Switches between the Our Story previews. */

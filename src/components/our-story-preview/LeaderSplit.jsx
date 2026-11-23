@@ -43,7 +43,7 @@ function Leader({ person, index }) {
   );
 }
 
-/** C · the chairman and managing director side by side, offset, each portrait drifting inside its frame. */
+/** The chairman and managing director side by side, offset, each portrait drifting inside its frame. */
 export default function LeaderSplit() {
   return (
     <section className="mx-auto max-w-[1180px] px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

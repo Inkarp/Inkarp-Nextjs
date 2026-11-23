@@ -11,7 +11,7 @@ const WIDE = "(min-width: 1024px)";
 const pad = (value) => String(value).padStart(2, "0");
 
 /**
- * C · the four chapters as panels side by side. Pinned on wide screens, the
+ * The four chapters as panels side by side. Pinned on wide screens, the
  * panel being read opens wide and the others fold to a spine with their
  * name, in turn as the page scrolls; a spine can also be clicked. Phones get
  * the chapters one under another.

@@ -18,7 +18,7 @@ function zoomProgress(element) {
 }
 
 /**
- * C · hero: the heading is scanned in line by line, the three figures read
+ * Hero: the heading is scanned in line by line, the three figures read
  * out like instrument displays, and the head office photo sits on a drawing
  * sheet, zooming out to its frame as you scroll, with dimension lines drawn
  * along its edges.

@@ -167,40 +167,10 @@
   }
 }
 
-/* ── The photo zooms out inside its drafting frame ── */
+/* ── The hero photo eases out of a slight zoom ── */
 .zoomImg {
   transform: scale(calc(1.28 - var(--z, 1) * 0.28));
   will-change: transform;
-}
-
-.dimH,
-.dimV {
-  position: absolute;
-  background: #be0010;
-}
-
-.dimH {
-  height: 1px;
-  transform-origin: 0 50%;
-  animation: dimDraw 1400ms cubic-bezier(0.7, 0, 0.2, 1) 500ms backwards;
-}
-
-.dimV {
-  width: 1px;
-  transform-origin: 50% 0;
-  animation: dimDrawV 1400ms cubic-bezier(0.7, 0, 0.2, 1) 700ms backwards;
-}
-
-@keyframes dimDraw {
-  from {
-    transform: scaleX(0);
-  }
-}
-
-@keyframes dimDrawV {
-  from {
-    transform: scaleY(0);
-  }
 }
 
 /* ── Map: the head office pulses ── */
@@ -281,8 +251,6 @@
   .rise,
   .swap,
   .scan,
-  .dimH,
-  .dimV,
   .pulse,
   .led {
     animation: none;

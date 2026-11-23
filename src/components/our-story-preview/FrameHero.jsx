@@ -5,46 +5,47 @@ import { useRef } from "react";
 import Digits from "./Digits";
 import Eyebrow from "./Eyebrow";
 import { BRANCHES, FACTS, HERO } from "./storyContent";
-import { clamp01, useScrollFrame } from "./motion";
+import { passProgress, useScrollFrame } from "./motion";
 import styles from "./StoryPreview.module.css";
 
 const LINES = ["Four decades of scientific partnerships,", "built on service and trust."];
 const FACT_CODES = ["SINCE", "PRINCIPALS", "BRANCHES"];
 
-// 0 with the photo's top at the bottom of the screen, 1 once it has climbed to the top.
-function zoomProgress(element) {
-  const rect = element.getBoundingClientRect();
-  return clamp01((window.innerHeight - rect.top) / window.innerHeight);
-}
-
 /**
- * Hero: the heading is scanned in line by line, the three figures read
- * out like instrument displays, and the head office photo sits on a drawing
- * sheet, zooming out to its frame as you scroll, with dimension lines drawn
- * along its edges.
+ * Hero: the head office building fills the top of the page behind the
+ * heading, under a soft white fade (from the left on wide screens, downward
+ * on phones) so the text stays readable. The heading is scanned in line by
+ * line, the three figures read out like instrument displays, and the photo
+ * eases out of a slight zoom as the page scrolls.
  */
 export default function FrameHero({ address }) {
-  const photoRef = useRef(null);
-  useScrollFrame(photoRef, (progress, element) => element.style.setProperty("--z", progress.toFixed(4)), zoomProgress);
+  const sectionRef = useRef(null);
+  useScrollFrame(sectionRef, (progress, element) => element.style.setProperty("--z", Math.min(1, Math.max(0, progress + 0.3)).toFixed(4)), passProgress);
   const hq = BRANCHES.find((branch) => branch.headOffice);
 
   return (
-    <section className="px-4 pb-16 pt-12 sm:px-6 lg:px-8 lg:pb-24 lg:pt-16">
-      <div className="mx-auto max-w-[1180px]">
-        <Eyebrow className={styles.rise}>{HERO.eyebrow}</Eyebrow>
-        <h1 className="mt-6 text-[38px] leading-[1.04] text-ink sm:text-[56px] lg:text-[64px]">
-          {LINES.map((line, index) => (
-            <span className={`${styles.scan} ${index ? "text-red" : ""}`} key={line} style={{ "--i": index }}>
-              {line}{" "}
-            </span>
-          ))}
-        </h1>
+    <section className="relative isolate overflow-hidden" ref={sectionRef}>
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-[56vh] min-h-[320px] overflow-hidden lg:inset-y-0 lg:h-auto">
+        <Image alt="" className={`${styles.zoomImg} object-cover object-[55%_45%]`} fetchPriority="high" fill loading="eager" sizes="100vw" src={HERO.image} />
+        {/* Phones: clear at the top, fading to white into the text. Wide screens: white on the left behind the text, clear on the right. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-white/70 to-white lg:bg-gradient-to-r lg:from-white lg:from-[28%] lg:via-white/80 lg:via-[48%] lg:to-white/0" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-white/0" />
+      </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end lg:gap-14">
-          <p className={`${styles.rise} max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg`} style={{ "--i": 3 }}>
+      <div className="mx-auto flex max-w-[1180px] flex-col justify-center px-4 pb-16 pt-[34vh] sm:px-6 lg:min-h-[640px] lg:px-8 lg:pb-24 lg:pt-20">
+        <div className="lg:max-w-[640px]">
+          <Eyebrow className={styles.rise}>{HERO.eyebrow}</Eyebrow>
+          <h1 className="mt-6 text-[38px] leading-[1.04] text-ink sm:text-[56px] lg:text-[60px]">
+            {LINES.map((line, index) => (
+              <span className={`${styles.scan} ${index ? "text-red" : ""}`} key={line} style={{ "--i": index }}>
+                {line}{" "}
+              </span>
+            ))}
+          </h1>
+          <p className={`${styles.rise} mt-7 max-w-xl text-base leading-relaxed text-ink sm:text-lg`} style={{ "--i": 3 }}>
             {HERO.lede}
           </p>
-          <dl className="grid grid-cols-3 border border-ink bg-ink text-white">
+          <dl className="mt-9 grid max-w-[560px] grid-cols-3 border border-ink bg-ink text-white shadow-[0_24px_50px_-30px_rgba(0,0,0,0.6)]">
             {FACTS.map((fact, index) => (
               <div className={`flex flex-col-reverse px-4 py-4 sm:px-5 ${index ? "border-l border-white/15" : ""}`} key={fact.label}>
                 <dt className="mt-2 text-[10.5px] font-semibold uppercase leading-snug tracking-[0.08em] text-white/60 sm:text-[11px]">{fact.label}</dt>
@@ -61,27 +62,12 @@ export default function FrameHero({ address }) {
             ))}
           </dl>
         </div>
-
-        <figure className="relative mt-14 pl-6 pt-6 sm:pl-10 sm:pt-10">
-          {/* Dimension lines along the top and left edges of the drawing. */}
-          <span aria-hidden="true" className={`${styles.dimH} left-6 right-0 top-2 sm:left-10 sm:top-4`} />
-          <span aria-hidden="true" className={`${styles.dimV} bottom-0 left-2 top-6 sm:left-4 sm:top-10`} />
-          <span aria-hidden="true" className="absolute left-1/2 top-0 -translate-x-1/2 bg-white px-2 font-mono text-[10px] tracking-[0.14em] text-red sm:top-1">
-            HEAD OFFICE
-          </span>
-          <div className={styles.ticks}>
-            <div className="relative aspect-[4/3] overflow-hidden bg-parchment-alt sm:aspect-[16/8]" ref={photoRef}>
-              <Image alt={HERO.imageAlt} className={`${styles.zoomImg} object-cover object-[50%_60%]`} fetchPriority="high" fill loading="eager" sizes="(min-width: 1280px) 1140px, 90vw" src={HERO.image} />
-              <span className="absolute bottom-0 left-0 bg-white px-3 py-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-ink">{address}</span>
-              {hq ? (
-                <span className="absolute right-0 top-0 bg-white px-3 py-2 font-mono text-[10.5px] tracking-[0.12em] text-ink">
-                  {hq.coords.lat.toFixed(2)}° N · {hq.coords.lon.toFixed(2)}° E
-                </span>
-              ) : null}
-            </div>
-          </div>
-        </figure>
       </div>
+
+      <p className="absolute right-3 top-3 bg-white/90 px-3 py-2 font-mono text-[10px] uppercase tracking-[0.14em] text-ink shadow-sm backdrop-blur sm:text-[10.5px] lg:bottom-8 lg:right-8 lg:top-auto">
+        <span className="text-red">Head office</span> · {address}
+        {hq ? <span className="hidden sm:inline"> · {hq.coords.lat.toFixed(2)}° N {hq.coords.lon.toFixed(2)}° E</span> : null}
+      </p>
     </section>
   );
 }

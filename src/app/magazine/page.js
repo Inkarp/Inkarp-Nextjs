@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
 import CatalystPage from"@/components/catalystcue/CatalystPage";
-import MagazineCueDial from"@/components/catalystcue/MagazineCueDial";
 import MagazineVideoStage from"@/components/catalystcue/MagazineVideoStage";
 import { getMagazineIssues } from"@/components/catalystcue/magazineIssues";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from"@/components/common/PageBreadcrumbs";
@@ -37,13 +36,10 @@ export default function CatalystCue() {
       </div>
 
       {/* The magazine film settling into a frame as the latest issue swings
-          in; then the archive shelf; then one dial per volume, its covers
-          turning round the logo's red C. */}
+          in, then the archive shelf. */}
       <MagazineVideoStage latest={issues[0]} />
 
-      <CatalystPage issues={issues}>
-        <MagazineCueDial issues={issues} />
-      </CatalystPage>
+      <CatalystPage issues={issues} />
     </>
   );
 }

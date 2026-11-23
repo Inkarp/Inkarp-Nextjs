@@ -11,11 +11,10 @@ import MagazineShelf from "@/components/catalystcue/MagazineShelf";
 const AUTO_OPEN_PHYSICAL_COPY = false;
 
 /**
- * The body of /magazine: the archive as a full-width shelf, then `children`
- * (the cue dials, one per volume), all in one <main>,
+ * The body of /magazine: the archive as a full-width shelf in one <main>,
  * plus the physical-copy form.
  */
-export default function CatalystPage({ issues, children }) {
+export default function CatalystPage({ issues }) {
   const [showCatalystModal, setShowCatalystModal] = useState(false);
 
   useEffect(() => {
@@ -29,7 +28,6 @@ export default function CatalystPage({ issues, children }) {
     <main className="relative bg-parchment">
       <MagazineShelf issues={issues} onRequestCopy={() => setShowCatalystModal(true)} />
 
-      {children}
 
       {showCatalystModal ? (
         <div className="z-[10000]">

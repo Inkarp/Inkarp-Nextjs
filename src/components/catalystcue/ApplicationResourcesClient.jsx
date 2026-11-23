@@ -194,7 +194,7 @@ export default function ApplicationResourcesClient() {
               <option value="">All Volumes</option>
               {volumeOptions.map((v) => (
                 <option key={v} value={v}>
-                  {v.replace("-","")}
+                  {v.replace("-", " ")}
                 </option>
               ))}
             </select>
@@ -208,7 +208,7 @@ export default function ApplicationResourcesClient() {
               <option value="">All Issues</option>
               {issueOptions.map((i) => (
                 <option key={i} value={i}>
-                  {i.replace("-","")}
+                  {i.replace("-", " ")}
                 </option>
               ))}
             </select>

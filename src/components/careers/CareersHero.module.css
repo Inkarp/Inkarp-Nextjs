@@ -1,0 +1,363 @@
+/* Careers hero: "We are hiring" on the left, the team's own words on the right
+   in a dark panel picked from a rack of test tubes. The active tube fills
+   while its quote is shown; when it is full the next colleague speaks. */
+
+/* ── First paint ── */
+.rise {
+  animation: rise 760ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 110ms);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+/* ── Panel ── */
+.panel {
+  position: relative;
+  background-color: #161616;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+}
+
+/* Drafting corner ticks, the site's frame mark. */
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.panel::before {
+  left: -7px;
+  top: -7px;
+  border-left: 2px solid #be0010;
+  border-top: 2px solid #be0010;
+}
+
+.panel::after {
+  right: -7px;
+  bottom: -7px;
+  border-right: 2px solid #be0010;
+  border-bottom: 2px solid #be0010;
+}
+
+/* ── Quotes: all stacked in one cell, so the panel is as tall as the longest
+   quote and never jumps when the quote changes. ── */
+.stack {
+  display: grid;
+}
+
+.quote {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition:
+    opacity 420ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 520ms;
+}
+
+.quote[data-active] {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition:
+    opacity 520ms ease 120ms,
+    transform 620ms cubic-bezier(0.16, 1, 0.3, 1) 120ms,
+    visibility 0s;
+}
+
+/* ── Test-tube rack ── */
+.rack {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 0 6px;
+}
+
+/* The perforated plate the tubes hang through, and the base they stand on. */
+.plate,
+.base {
+  position: absolute;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.plate {
+  z-index: 2;
+  top: 13px;
+  height: 7px;
+  background: #262626;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.base {
+  top: 59px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.tubeButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 26px;
+  padding: 0 2px 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.glass {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 58px;
+  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rim of the tube. */
+.glass::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -3px;
+  right: -3px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.55);
+  transition: background-color 200ms ease;
+}
+
+.tube {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.42);
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+  transition: border-color 200ms ease;
+}
+
+/* Light catching the glass. */
+.tube::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 10px;
+  left: 3px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.liquid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 78%;
+  background: #ff3b4a;
+  border-top: 1px solid #ff8a93;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+}
+
+.tubeButton[data-state="read"] .liquid {
+  transform: scaleY(1);
+  background: rgba(255, 59, 74, 0.32);
+  border-top-color: rgba(255, 138, 147, 0.45);
+}
+
+.tubeButton[data-state="active"] .tube {
+  border-color: #ffffff;
+}
+
+.tubeButton[data-state="active"] .glass::before {
+  background: #ffffff;
+}
+
+.filling {
+  animation: fill var(--dwell, 6500ms) linear forwards;
+}
+
+.panel[data-paused] .filling {
+  animation-play-state: paused;
+}
+
+@keyframes fill {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.label {
+  font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 200ms ease;
+}
+
+.tubeButton[data-state="active"] .label {
+  color: #ffffff;
+}
+
+@media (hover: hover) {
+  .tubeButton:hover .glass {
+    transform: translateY(-3px);
+  }
+
+  .tubeButton:hover .tube {
+    border-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .tubeButton:hover .label {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.tubeButton:focus-visible .glass {
+  outline: 2px solid #ff3b4a;
+  outline-offset: 4px;
+}
+
+/* ── Laptops and desktops: the whole hero fits the first screen ──
+   Header + breadcrumb take about 176px, so a 1366x625 or 1536x690 window
+   leaves 450-510px for this section. Spacing and type scale with the window
+   height (vh) between a compact floor and the roomy sizes used on tall
+   screens. Unlayered, so these win over the Tailwind classes on the same
+   elements. */
+@media (min-width: 1024px) {
+  .frame {
+    padding-top: clamp(14px, 3vh, 56px);
+    padding-bottom: clamp(18px, 4vh, 64px);
+  }
+
+  .lead {
+    gap: clamp(18px, 3.4vh, 40px);
+  }
+
+  .title {
+    font-size: clamp(36px, min(6.2vh, 4vw), 56px);
+  }
+
+  .lede {
+    margin-top: clamp(10px, 2vh, 20px);
+    font-size: clamp(16px, 2.5vh, 18px);
+  }
+
+  .ctas {
+    margin-top: clamp(14px, 3vh, 32px);
+  }
+
+  .facts > div {
+    padding-top: clamp(10px, 1.8vh, 16px);
+    padding-bottom: clamp(10px, 1.8vh, 16px);
+  }
+
+  .panel {
+    padding: clamp(22px, 4.4vh, 40px);
+  }
+
+  .stack {
+    padding-top: clamp(12px, 3vh, 48px);
+    padding-bottom: clamp(14px, 3.4vh, 48px);
+  }
+
+  .mark {
+    height: clamp(30px, 5.2vh, 48px);
+    font-size: clamp(70px, 11.5vh, 104px);
+  }
+
+  .quoteText {
+    margin-top: clamp(8px, 1.6vh, 16px);
+    font-size: clamp(20px, min(3.7vh, 2.2vw), 30px);
+  }
+
+  .caption {
+    margin-top: clamp(14px, 3vh, 32px);
+  }
+}
+
+/* Phones: ten tubes have to fit in about 270px. */
+@media (max-width: 639px) {
+  .rack {
+    gap: 2px;
+    padding: 0 2px;
+  }
+
+  .tubeButton {
+    min-width: 22px;
+    gap: 10px;
+    padding: 0 1px 2px;
+  }
+
+  .glass {
+    width: 14px;
+    height: 50px;
+  }
+
+  .tube {
+    border-radius: 0 0 7px 7px;
+  }
+
+  .tube::after {
+    left: 2px;
+  }
+
+  .plate {
+    top: 11px;
+    height: 6px;
+  }
+
+  .base {
+    top: 51px;
+  }
+
+  .label {
+    font-size: 9px;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+
+  .quote,
+  .quote[data-active] {
+    transform: none;
+    transition: none;
+  }
+
+  /* No timer: the active tube simply shows full and nothing advances. */
+  .filling {
+    animation: none;
+    transform: scaleY(1);
+  }
+
+  .glass {
+    transition: none;
+  }
+}

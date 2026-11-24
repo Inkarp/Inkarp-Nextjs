@@ -1,18 +1,20 @@
 import Image from "next/image";
 import Directors from "@/components/about/Directors";
 import EmpathyTeam from "@/components/about/EmpathyTeam";
-import InkarpBio from "@/components/about/InkarpBio";
-import MissionVision from "@/components/about/MissionVision";
 import TrustedClients from "@/components/about/TrustedClients";
 import RecTag from "@/components/home/RecTag";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
+import ChapterAccordion from "@/components/our-story-preview/ChapterAccordion";
+import NamesRoad from "@/components/our-story-preview/NamesRoad";
+import StackedPurpose from "@/components/our-story-preview/StackedPurpose";
+import StoryRoot from "@/components/our-story-preview/StoryRoot";
 import { buildPageMetadata } from "@/data/pageSeo";
 
 export const metadata = buildPageMetadata("/our-story");
 
 export default function OurStory() {
   return (
-    <main className="overflow-hidden bg-parchment text-ink">
+    <main className="overflow-x-clip bg-parchment text-ink">
       <BreadcrumbJsonLd path="/our-story" />
       <PageBreadcrumbs path="/our-story" />
 
@@ -54,8 +56,17 @@ export default function OurStory() {
         </div>
       </section>
 
-      <MissionVision />
-      <InkarpBio />
+      {/* Purpose & Principles, Inkarp Bio and Our Journey, as on the Our Story
+          preview. They run their own scroll reveals, so the site-wide section
+          animation skips them; <main> clips instead of hiding overflow so the
+          stacking cards and the pinned chapters can stick. */}
+      <div data-scroll-skip>
+        <StoryRoot>
+          <StackedPurpose />
+          <ChapterAccordion />
+          <NamesRoad />
+        </StoryRoot>
+      </div>
       <TrustedClients />
 
       {/* Parallax is desktop-only: iOS Safari ignores background-attachment:fixed

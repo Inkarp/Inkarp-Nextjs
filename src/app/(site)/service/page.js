@@ -27,7 +27,7 @@ export default function ServicePage() {
 
       <section className="service-hero bg-white px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-12 lg:pt-6">
         <div className="mx-auto w-full max-w-[1180px]">
-          <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
+          <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-12">
             <div>
               {/* On wide screens the travelling sample (FlaskJourney) starts here,
                   left of the heading, as at every section below. */}
@@ -60,16 +60,15 @@ export default function ServicePage() {
 
             </div>
 
-            <div className="relative border border-line-light bg-parchment-alt p-4.5 before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
-              {/* Box matches the banner's own 3:1 shape (5333 x 1775) so the whole
-                  "1000+ Installations" message shows instead of being cropped. */}
-              <div
-                className="relative w-full overflow-hidden border border-line-light bg-white"
-                style={{ aspectRatio: "5333 / 1775" }}
-              >
+            <div className="relative border border-line-light bg-parchment-alt p-4.5 lg:flex lg:flex-col before:absolute before:left-[-1px] before:top-[-1px] before:h-4 before:w-4 before:border-l-[1.5px] before:border-t-[1.5px] before:border-red before:content-[''] after:absolute after:bottom-[-1px] after:right-[-1px] after:h-4 after:w-4 after:border-b-[1.5px] after:border-r-[1.5px] after:border-red after:content-['']">
+              {/* Phones: the banner's own 3:1 shape (5333 x 1775), so all of it shows.
+                  Wide screens: the panel stretches to the height of the text beside
+                  it and the photo fills it, anchored left so the "1000+
+                  Installations" message stays whole and only the photos crop. */}
+              <div className="relative aspect-[5333/1775] w-full overflow-hidden border border-line-light bg-white lg:aspect-auto lg:min-h-[240px] lg:flex-1">
                 <Image
                   alt="Inkarp service engineer support"
-                  className="object-cover object-center"
+                  className="object-cover object-left"
                   fill
                   priority
                   sizes="(min-width: 1024px) 520px, 90vw"
@@ -77,7 +76,6 @@ export default function ServicePage() {
                 />
               </div>
               <div className="mt-4 flex flex-wrap justify-between gap-4 text-[11px] uppercase tracking-wide text-ink-soft">
-                <span>Fig. 01 - Inkarp Service Network</span>
                 <span>Installation / AMC / Spares</span>
               </div>
             </div>

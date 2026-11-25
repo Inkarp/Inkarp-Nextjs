@@ -7,6 +7,8 @@ import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { LuMicroscope } from "react-icons/lu";
 import EmptyStateIcon from "@/components/common/EmptyStateIcon";
+import AskDexterButton from "@/components/dexter/AskDexterButton";
+import { DEXTER_PLACES } from "@/data/dexter";
 import PrincipalLogo from "@/components/products/PrincipalLogo";
 import SearchNoResultsForm from "@/components/products/SearchNoResultsForm";
 import AnalyticaShowcaseBadge from "@/components/products/AnalyticaShowcaseBadge";
@@ -208,6 +210,14 @@ export default function ProductResultsGrid({
         >
           {emptyLinkLabel}
         </Link>
+        {DEXTER_PLACES.noResults ? (
+          <AskDexterButton
+            className="ml-2 mt-4"
+            place="products-no-results"
+            question={query ? `I'm looking for ${query}. Which instruments do you have for it?` : "Help me find the right instrument for my lab."}
+            variant="outline"
+          />
+        ) : null}
         <SearchNoResultsForm
           className="mx-auto mt-6 max-w-3xl"
           query={query}

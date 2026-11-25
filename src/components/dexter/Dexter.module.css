@@ -1,0 +1,239 @@
+/* Dexter's moods. Today there is one image, so each mood is carried by a
+   motion and, for some, a small prop (thinking dots, a question mark, a drop,
+   a spark, confetti). New faces from the artwork kit slot into the same
+   moods. Everything holds still under reduced motion. Inkarp red #be0010. */
+
+.dexter {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dexter img {
+  transform-origin: 50% 100%;
+}
+
+.dexter[data-mood="hello"] img {
+  animation: bob 3.2s ease-in-out infinite;
+}
+
+.dexter[data-mood="listening"] img {
+  rotate: -3deg;
+  animation: bob 2.6s ease-in-out infinite;
+}
+
+.dexter[data-mood="wow"] img {
+  animation: hop 620ms cubic-bezier(0.2, 0.9, 0.3, 1.3) 1, bob 3s ease-in-out 620ms infinite;
+}
+
+.dexter[data-mood="thinking"] img {
+  animation: sway 2.4s ease-in-out infinite;
+}
+
+.dexter[data-mood="worried"] img {
+  animation: shake 520ms ease-in-out 2;
+}
+
+.dexter[data-mood="low"] img {
+  translate: 0 8%;
+  rotate: -2deg;
+  filter: saturate(0.7) brightness(0.96);
+  transition: translate 0.5s ease, rotate 0.5s ease, filter 0.5s ease;
+}
+
+.dexter[data-mood="puzzled"] img {
+  rotate: 6deg;
+  transition: rotate 0.4s ease;
+}
+
+.dexter[data-mood="celebrate"] img {
+  animation: jump 700ms cubic-bezier(0.2, 0.9, 0.3, 1.2) 2;
+}
+
+@keyframes bob {
+  50% {
+    translate: 0 -4%;
+  }
+}
+
+@keyframes hop {
+  40% {
+    translate: 0 -12%;
+    scale: 1.03;
+  }
+}
+
+@keyframes shake {
+  25% {
+    translate: -5% 0;
+  }
+
+  75% {
+    translate: 5% 0;
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    rotate: -2deg;
+  }
+
+  50% {
+    rotate: 2deg;
+  }
+}
+
+@keyframes jump {
+  45% {
+    translate: 0 -14%;
+  }
+}
+
+/* ── Props ── */
+.prop {
+  position: absolute;
+  pointer-events: none;
+}
+
+.dots {
+  top: 4%;
+  right: 6%;
+  display: flex;
+  gap: 4px;
+}
+
+.dots b {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #be0010;
+  animation: dot 1.2s ease-in-out infinite;
+}
+
+.dots b:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots b:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.question,
+.spark,
+.drop {
+  top: 0;
+  right: 4%;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font: 700 16px/1 system-ui, sans-serif;
+  color: #fff;
+  background: #be0010;
+  box-shadow: 0 6px 14px -6px rgb(190 0 16 / 0.7);
+  animation: popIn 420ms cubic-bezier(0.2, 0.9, 0.3, 1.4) both;
+}
+
+.drop {
+  width: 14px;
+  height: 20px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: #4fa3e0;
+  box-shadow: none;
+  /* Just right of his head (the worried face's head ends at 67% across). */
+  top: 4%;
+  right: auto;
+  left: 69%;
+  animation: popIn 420ms ease both, fall 1.6s ease-in 0.5s infinite;
+}
+
+@keyframes popIn {
+  from {
+    scale: 0.2;
+    opacity: 0;
+  }
+}
+
+@keyframes fall {
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    translate: 0 30px;
+    opacity: 0;
+  }
+}
+
+.confetti {
+  inset: 0;
+}
+
+.confetti i {
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background: #be0010;
+  opacity: 0;
+  animation: burst 1.1s ease-out forwards;
+}
+
+.confetti i:nth-child(3n) {
+  background: #1a1a1a;
+}
+
+.confetti i:nth-child(4n) {
+  background: #f2b705;
+}
+
+@keyframes burst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) rotate(220deg);
+  }
+}
+
+/* The ring round an avatar. */
+.avatar {
+  border-radius: 9999px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 0 2px #be0010;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dexter img,
+  .dots b,
+  .question,
+  .spark,
+  .drop,
+  .confetti i {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .confetti {
+    display: none;
+  }
+}

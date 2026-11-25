@@ -29,3 +29,19 @@ export function mapPercent(coords) {
   const [x, y] = projectToMap(coords);
   return { left: `${((x / INDIA_MAP.width) * 100).toFixed(3)}%`, top: `${((y / INDIA_MAP.height) * 100).toFixed(3)}%` };
 }
+
+const round1 = (value) => Math.round(value * 10) / 10;
+
+// A city in map units, rounded so the server and the browser draw the same path.
+export function mapPoint(coords) {
+  const [x, y] = projectToMap(coords);
+  return { x: round1(x), y: round1(y) };
+}
+
+// The head office network's line from one city to another: a gentle arc that
+// bows to one side, as an SVG path in map units.
+export function networkArc(from, to, bend = 0.22) {
+  const cx = round1((from.x + to.x) / 2 - (to.y - from.y) * bend);
+  const cy = round1((from.y + to.y) / 2 + (to.x - from.x) * bend);
+  return `M${from.x} ${from.y} Q${cx} ${cy} ${to.x} ${to.y}`;
+}

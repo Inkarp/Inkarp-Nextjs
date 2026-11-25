@@ -7,6 +7,7 @@ import FlaskDock, { SERVICE_FLASK_STOPS } from "@/components/home/FlaskDock";
 import { collectTracking } from "@/lib/browserTracking";
 import SubmitButton from "@/components/common/SubmitButton";
 import { SERVICE_DESK } from "@/data/contactDirectory";
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 const inputClass =
   "w-full border border-line-light bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/70 focus:border-red focus:ring-2 focus:ring-red/20";
@@ -257,6 +258,7 @@ export default function ServiceContactForm({ flask = false } = {}) {
                 />
               </Field>
 
+              <DexterFormBuddy error={status.type === "error" ? status.message : ""} sending={isSubmitting} sent={status.type === "success"} />
               <SubmitButton
                 className="mt-2 inline-flex min-h-12 items-center justify-center gap-2 bg-red px-7 text-sm font-semibold text-white shadow-lg shadow-red/15 transition hover:bg-[#a3000e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red disabled:cursor-not-allowed disabled:opacity-70"
                 doneLabel="Request sent"

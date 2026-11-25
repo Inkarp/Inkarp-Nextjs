@@ -192,6 +192,8 @@ export default function FloatingChatbot() {
   const [workflowLead, setWorkflowLead] = useState(WORKFLOW_LEAD_INITIAL);
   const [workflowLeadErrors, setWorkflowLeadErrors] = useState({});
   const [workflowLeadId, setWorkflowLeadId] = useState("");
+  // A question handed over by an "Ask Dexter" button elsewhere on the page.
+  const [askRequest, setAskRequest] = useState(null);
 
   const launcherRef = useRef(null);
   const launcherTimerRef = useRef(null);
@@ -267,6 +269,25 @@ export default function FloatingChatbot() {
       document.body.style.overflow = previousOverflow;
     };
   }, [isOpen]);
+
+  // "Ask Dexter" buttons anywhere on the site (AskDexterButton) send a
+  // "dexter:ask" event: open the chat and ask their question for them.
+  useEffect(() => {
+    const onAsk = (event) => {
+      const question = String(event.detail?.question ?? "").trim();
+      if (!question) return;
+      event.detail.handled = true;
+      pushEvent("dexter_ask", { place: String(event.detail?.place ?? "") });
+      setHelperPromptPath("");
+      rememberGreetingDismissed();
+      setHasOpenedOnce(true);
+      setStep("chat");
+      setAskRequest({ question, id: Date.now() });
+      setIsOpen(true);
+    };
+    window.addEventListener("dexter:ask", onAsk);
+    return () => window.removeEventListener("dexter:ask", onAsk);
+  }, []);
 
   // Scroll the panel body back to the top whenever the visible step changes.
   useEffect(() => {
@@ -693,7 +714,7 @@ export default function FloatingChatbot() {
 
             {step === "chat" ? (
               <div className="animate-[hvc-fade_300ms_ease] motion-reduce:animate-none">
-                <DexterChat onFallback={() => setStep("type")} />
+                <DexterChat askRequest={askRequest} onAskUsed={() => setAskRequest(null)} onFallback={() => setStep("type")} />
               </div>
             ) : null}
 

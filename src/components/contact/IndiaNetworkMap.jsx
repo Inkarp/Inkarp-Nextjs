@@ -1,9 +1,9 @@
 'use client';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { MdEmail, MdLocalPhone, MdLocationPin } from 'react-icons/md';
 import { FiChevronDown, FiCrosshair, FiNavigation } from 'react-icons/fi';
 import { branches, parseBranchPhones, phoneHref } from '@/data/branches';
-import { mapPercent } from '@/data/indiaMap';
+import { INDIA_MAP, mapPercent, mapPoint, networkArc } from '@/data/indiaMap';
 import IndiaMapFrame from '@/components/maps/IndiaMapFrame';
 import { INDIA_STATES, nearestBranchForState, nearestBranchTo } from '@/data/indiaStates';
 import { gmailComposeHref, siteConfig } from '@/data/siteConfig';
@@ -30,6 +30,21 @@ const REGIONS = ['All', 'North', 'South', 'East', 'West'];
 // Registered head office — badged and listed first.
 const HEAD_OFFICE = 'Hyderabad';
 const HEAD_OFFICE_INDEX = branches.findIndex((b) => b.name === HEAD_OFFICE);
+
+// The network: a line from the head office to every branch, in map units (the
+// same arcs as the Our Story map). Nearest branches draw first.
+const HQ_POINT = mapPoint(branches[HEAD_OFFICE_INDEX].coords);
+const NETWORK = branches
+  .map((branch, index) => ({ branch, index, point: mapPoint(branch.coords) }))
+  .filter(({ index }) => index !== HEAD_OFFICE_INDEX)
+  .map(({ branch, index, point }) => ({
+    index,
+    name: branch.name,
+    d: networkArc(HQ_POINT, point),
+    distance: Math.hypot(point.x - HQ_POINT.x, point.y - HQ_POINT.y),
+  }))
+  .sort((a, b) => a.distance - b.distance)
+  .map((line, order) => ({ ...line, order }));
 
 const actionClass =
   'inline-flex min-w-0 max-w-full items-center gap-1.5 border border-line-light bg-parchment-alt px-3 py-2 text-xs font-semibold text-ink transition-colors hover:border-red/40 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red/40';
@@ -103,6 +118,24 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   const [expanded, setExpanded] = useState(HEAD_OFFICE_INDEX);
   const [finderState, setFinderState] = useState('');
   const [finderMessage, setFinderMessage] = useState('');
+  // The network lines draw once, the first time the map comes into view.
+  const mapCardRef = useRef(null);
+  const [linesDrawn, setLinesDrawn] = useState(false);
+
+  useEffect(() => {
+    const card = mapCardRef.current;
+    if (!card || typeof IntersectionObserver === 'undefined') return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setLinesDrawn(true);
+        observer.disconnect();
+      },
+      { threshold: 0.35 }
+    );
+    observer.observe(card);
+    return () => observer.disconnect();
+  }, []);
 
   const regionCounts = useMemo(() => {
     const counts = {};
@@ -127,6 +160,13 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
   );
 
   const isDimmed = (branch) => region !== 'All' && REGION_BY_CITY[branch.name] !== region;
+
+  // The branch being looked at (hovered, or open), unless it is the head
+  // office itself or outside the chosen region: its line lights up and the
+  // others fade.
+  const looking = hovered ?? expanded;
+  const litLine =
+    looking !== null && looking !== HEAD_OFFICE_INDEX && !isDimmed(branches[looking]) ? looking : null;
 
   const focusBranch = (i) => {
     setExpanded((e) => (e === i ? null : i));
@@ -244,10 +284,41 @@ export default function IndiaNetworkMap({ as: Heading = 'h2' }) {
 
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           {/* Map card. Phones get the branch list first and a smaller map. */}
-          <div className="relative order-2 mx-auto w-full max-w-sm rounded-2xl border border-line-light bg-white p-4 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:p-6 lg:order-1 lg:max-w-none">
+          <div ref={mapCardRef} className="relative order-2 mx-auto w-full max-w-sm rounded-2xl border border-line-light bg-white p-4 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:p-6 lg:order-1 lg:max-w-none">
             {/* The map is drawn with the same projection that places the dots,
                 so each dot sits on its city's lat/lon. */}
             <IndiaMapFrame alt="India network coverage map" imageClassName="opacity-90">
+              {/* Lines from the head office to every branch, under the pins. A
+                  region shows only its own lines. */}
+              <svg
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 h-full w-full overflow-visible"
+                viewBox={`0 0 ${INDIA_MAP.width} ${INDIA_MAP.height}`}
+              >
+                {NETWORK.map((line) => {
+                  const hidden = isDimmed(branches[line.index]);
+                  const lit = litLine === line.index;
+                  const quiet = litLine !== null && !lit;
+                  return (
+                    <path
+                      className="motion-reduce:!transition-none"
+                      d={line.d}
+                      fill="none"
+                      key={line.name}
+                      pathLength="1"
+                      stroke="#be0010"
+                      strokeDasharray="1"
+                      strokeLinecap="round"
+                      style={{
+                        strokeDashoffset: linesDrawn ? 0 : 1,
+                        strokeOpacity: hidden ? 0 : lit ? 1 : quiet ? 0.2 : 0.75,
+                        strokeWidth: lit ? 3.6 : 2.4,
+                        transition: `stroke-dashoffset 900ms cubic-bezier(0.16, 1, 0.3, 1) ${line.order * 110}ms, stroke-opacity 300ms ease, stroke-width 300ms ease`,
+                      }}
+                    />
+                  );
+                })}
+              </svg>
               {branches.map((branch, i) => {
                 const dimmed = isDimmed(branch);
                 const active = hovered === i || expanded === i;

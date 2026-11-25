@@ -17,6 +17,7 @@ import { gmailComposeHref } from "@/data/siteConfig";
 import { pushEvent } from "@/lib/analytics";
 import { collectTracking } from "@/lib/browserTracking";
 import { isValidEmail, isValidIndianPhone } from "@/lib/formValidation";
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 const inputClass =
   "min-h-12 w-full border border-line-light bg-parchment-alt px-4 text-sm font-medium text-ink outline-none transition-colors duration-200 placeholder:text-ink-soft/60 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/15 aria-[invalid=true]:border-red aria-[invalid=true]:bg-white";
@@ -422,6 +423,11 @@ export default function ContactForm({ department, onDepartmentChange }) {
           />
         </Field>
 
+        <DexterFormBuddy
+          error={status.type === "error" ? status.message : Object.values(errors).some(Boolean) ? "Please check the highlighted fields." : ""}
+          sending={isSubmitting}
+          sent={status.type === "success"}
+        />
         <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center">
           <SubmitButton
             className="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 bg-red px-7 text-sm font-semibold text-white shadow-lg shadow-red/15 transition hover:bg-[#a3000e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"

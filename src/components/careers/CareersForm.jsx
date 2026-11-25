@@ -19,6 +19,7 @@ import { LuFileText, LuFileUp } from "react-icons/lu";
 import { collectTracking } from"@/lib/browserTracking";
 import SubmitButton from"@/components/common/SubmitButton";
 import styles from "./CareersForm.module.css";
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 const initialFormData = {
   name:"",
@@ -64,7 +65,7 @@ function isItemDone(key, formData, selectedFile) {
 }
 
 const INPUT_CLASS =
-  "h-12 w-full border border-line-light bg-parchment-alt/40 pl-11 pr-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 hover:border-ink/25 focus:border-red focus:bg-white focus:ring-4 focus:ring-red/10";
+  "h-11 w-full border border-line-light bg-parchment-alt/40 pl-11 pr-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 hover:border-ink/25 focus:border-red focus:bg-white focus:ring-4 focus:ring-red/10";
 
 const allowedTypes = ["application/pdf","application/msword","application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 ];
@@ -226,9 +227,9 @@ export default function CareersForm() {
     const { label, placeholder, type, icon: Icon } = FIELD_BY_NAME[name];
     const done = isItemDone(name, formData, selectedFile);
     return (
-      <div className={`group ${wide ? "sm:col-span-2" : ""}`} key={name}>
+      <div className={`group ${wide ? "sm:col-span-2 xl:col-span-1" : ""}`} key={name}>
         <label
-          className="mb-2 flex items-center justify-between gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft"
+          className="mb-1.5 flex items-center justify-between gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft"
           htmlFor={name}
         >
           <span>
@@ -258,24 +259,24 @@ export default function CareersForm() {
 
   return (
     <section
-      className="relative mx-auto max-w-[1180px] scroll-mt-20 px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
+      className="relative mx-auto max-w-[1180px] scroll-mt-20 px-4 py-12 sm:px-6 lg:scroll-mt-11 lg:px-8"
       id="careers-form"
     >
-      <div className={`${styles.frame} grid border border-line-light bg-white lg:grid-cols-[minmax(0,5fr)_minmax(0,8fr)]`}>
+      <div className={`${styles.frame} grid border border-line-light bg-white lg:grid-cols-[minmax(0,4fr)_minmax(0,9fr)]`}>
         {/* ── Side panel: heading + a checklist that ticks as the form fills ── */}
-        <aside className={`${styles.aside} flex flex-col p-6 text-white sm:p-8 lg:p-10`}>
+        <aside className={`${styles.aside} flex flex-col p-6 text-white sm:p-8`}>
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.14em] text-white/75">
             <span aria-hidden="true" className="h-px w-[22px] bg-[#ff3b4a]" />
             Careers at Inkarp
           </span>
-          <h2 className="mt-4 text-[28px] leading-[1.05] tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-4 text-[28px] leading-[1.05] tracking-tight text-white sm:text-4xl lg:text-[32px]">
             Apply to Join Our Team
           </h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-white/70 sm:text-base">
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 sm:text-base lg:text-sm">
             Tell us a bit about yourself and attach your resume — our team reviews every application personally.
           </p>
 
-          <div className="mt-8 lg:mt-12">
+          <div className="mt-7">
             <div className="flex items-baseline justify-between gap-4">
               <p className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-white/60">Your application</p>
               <p className="font-mono text-sm tabular-nums text-white">
@@ -287,7 +288,7 @@ export default function CareersForm() {
               <div className={`${styles.meter} h-full bg-[#ff3b4a]`} style={{ width: `${Math.round(progress * 100)}%` }} />
             </div>
             {/* Phones show just the count and bar: the list would repeat the fields right below it. */}
-            <ul aria-label="Application checklist" className="mt-5 hidden grid-cols-2 gap-x-4 gap-y-3 sm:grid lg:grid-cols-1">
+            <ul aria-label="Application checklist" className="mt-4 hidden grid-cols-2 gap-x-4 gap-y-3 sm:grid lg:gap-y-2.5">
               {CHECKLIST.map((item) => {
                 const done = isItemDone(item.key, formData, selectedFile);
                 return (
@@ -311,7 +312,7 @@ export default function CareersForm() {
           </div>
 
           <a
-            className="group mt-auto hidden items-center gap-2 border-t border-white/15 pt-5 text-sm font-semibold text-white/80 transition hover:text-white lg:flex"
+            className="group mt-auto hidden items-center gap-2 border-t border-white/15 pt-4 text-sm font-semibold text-white/80 transition hover:text-white lg:flex"
             href="#open-roles"
           >
             <FiArrowUp
@@ -323,7 +324,7 @@ export default function CareersForm() {
         </aside>
 
         {/* ── The form, in numbered steps ── */}
-        <form className="space-y-9 p-6 sm:p-8 lg:p-10" onSubmit={handleSubmit}>
+        <form className="space-y-7 p-6 sm:p-8 lg:space-y-6" onSubmit={handleSubmit}>
           {status.message ? (
             <div
               className={`flex items-center gap-2 px-4 py-3 text-sm font-medium ${
@@ -345,104 +346,110 @@ export default function CareersForm() {
           {GROUPS.map((group) => (
             <fieldset key={group.step}>
               <StepLegend step={group.step} title={group.title} />
-              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {group.fields.map((name, index) => renderField(name, index === 0))}
               </div>
             </fieldset>
           ))}
 
-          <fieldset>
-            <StepLegend step="03" title="Resume" />
-            {selectedFile ? (
-              <div className="flex items-center gap-4 border border-l-4 border-line-light border-l-red bg-white px-4 py-3.5">
-                <span className="flex size-11 shrink-0 items-center justify-center bg-red/5 text-red">
-                  <LuFileText aria-hidden="true" className="size-5" />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-semibold text-ink">{selectedFile.name}</p>
-                  <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft">
-                    {formatFileSize(selectedFile.size)} · ready to send
-                  </p>
+          {/* Resume and message side by side on wide screens, so the whole form fits one screen. */}
+          <div className="grid gap-7 lg:gap-6 xl:grid-cols-2 xl:gap-4">
+            <fieldset className="min-w-0">
+              <StepLegend step="03" title="Resume" />
+              {selectedFile ? (
+                <div className="flex items-center gap-4 border border-l-4 border-line-light border-l-red bg-white px-4 py-3.5">
+                  <span className="flex size-11 shrink-0 items-center justify-center bg-red/5 text-red">
+                    <LuFileText aria-hidden="true" className="size-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-semibold text-ink">{selectedFile.name}</p>
+                    <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft">
+                      {formatFileSize(selectedFile.size)} · ready to send
+                    </p>
+                  </div>
+                  <button
+                    aria-label="Remove file"
+                    className="flex size-9 shrink-0 items-center justify-center border border-line-light text-ink-soft transition hover:border-red hover:text-red"
+                    onClick={removeFile}
+                    type="button"
+                  >
+                    <FiX className="size-4" />
+                  </button>
                 </div>
-                <button
-                  aria-label="Remove file"
-                  className="flex size-9 shrink-0 items-center justify-center border border-line-light text-ink-soft transition hover:border-red hover:text-red"
-                  onClick={removeFile}
-                  type="button"
+              ) : (
+                <label
+                  className={`flex cursor-pointer items-center gap-4 border-2 border-dashed px-4 py-4 transition sm:gap-5 sm:px-6 xl:gap-4 xl:px-4 xl:py-[17px] ${
+                    isDragging
+                      ?"border-red bg-red/5"
+                      :"border-line-light bg-parchment-alt/50 hover:border-red/50 hover:bg-white"
+                  }`}
+                  onDragLeave={() => setIsDragging(false)}
+                  onDragOver={(event) => {
+                    event.preventDefault();
+                    setIsDragging(true);
+                  }}
+                  onDrop={handleDrop}
                 >
-                  <FiX className="size-4" />
-                </button>
-              </div>
-            ) : (
-              <label
-                className={`flex cursor-pointer items-center gap-4 border-2 border-dashed px-4 py-5 transition sm:gap-5 sm:px-6 sm:py-6 ${
-                  isDragging
-                    ?"border-red bg-red/5"
-                    :"border-line-light bg-parchment-alt/50 hover:border-red/50 hover:bg-white"
-                }`}
-                onDragLeave={() => setIsDragging(false)}
-                onDragOver={(event) => {
-                  event.preventDefault();
-                  setIsDragging(true);
-                }}
-                onDrop={handleDrop}
-              >
-                <span className="flex size-12 shrink-0 items-center justify-center bg-red text-white sm:size-14">
-                  <LuFileUp aria-hidden="true" className="size-6" />
-                </span>
-                <span className="block">
-                  <span className="block text-sm font-semibold text-ink sm:text-base">
-                    {isDragging ? "Drop it here" : (
-                      <>
-                        Drop your resume here, or{" "}
-                        <span className="text-red underline decoration-red/40 underline-offset-4">browse</span>
-                      </>
-                    )}
+                  <span className="flex size-12 shrink-0 items-center justify-center bg-red text-white">
+                    <LuFileUp aria-hidden="true" className="size-6" />
                   </span>
-                  <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft">
-                    PDF or Word · up to 4MB
+                  <span className="block">
+                    <span className="block text-sm font-semibold text-ink sm:text-base xl:text-sm">
+                      {isDragging ? "Drop it here" : (
+                        <>
+                          Drop your resume here, or{" "}
+                          <span className="text-red underline decoration-red/40 underline-offset-4">browse</span>
+                        </>
+                      )}
+                    </span>
+                    <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft">
+                      PDF or Word · up to 4MB
+                    </span>
                   </span>
-                </span>
-                {/* No `required` here: the input is display:none, and browsers
-                    refuse to submit a form containing an invalid control they
-                    cannot focus — it blocked submit silently with
-                    "An invalid form control with name='' is not focusable".
-                    The resume is validated in handleSubmit instead. */}
-                <input
-                  accept=".pdf,.doc,.docx"
-                  className="hidden"
-                  name="resume"
-                  onChange={handleFileChange}
-                  ref={fileInputRef}
-                  type="file"
-                />
+                  {/* No `required` here: the input is display:none, and browsers
+                      refuse to submit a form containing an invalid control they
+                      cannot focus — it blocked submit silently with
+                      "An invalid form control with name='' is not focusable".
+                      The resume is validated in handleSubmit instead. */}
+                  <input
+                    accept=".pdf,.doc,.docx"
+                    className="hidden"
+                    name="resume"
+                    onChange={handleFileChange}
+                    ref={fileInputRef}
+                    type="file"
+                  />
+                </label>
+              )}
+            </fieldset>
+
+            <fieldset className="min-w-0">
+              <StepLegend optional step="04" title="Anything else" />
+              <label className="sr-only" htmlFor="message">
+                Additional Message
               </label>
-            )}
-          </fieldset>
+              <textarea
+                className="block w-full border border-line-light bg-parchment-alt/40 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 hover:border-ink/25 focus:border-red focus:bg-white focus:ring-4 focus:ring-red/10"
+                id="message"
+                name="message"
+                onChange={handleChange}
+                placeholder="Any additional information"
+                rows="3"
+                value={formData.message}
+              />
+            </fieldset>
+          </div>
 
-          <fieldset>
-            <StepLegend optional step="04" title="Anything else" />
-            <label className="sr-only" htmlFor="message">
-              Additional Message
-            </label>
-            <textarea
-              className="w-full border border-line-light bg-parchment-alt/40 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft/60 hover:border-ink/25 focus:border-red focus:bg-white focus:ring-4 focus:ring-red/10"
-              id="message"
-              name="message"
-              onChange={handleChange}
-              placeholder="Any additional information"
-              rows="4"
-              value={formData.message}
-            />
-          </fieldset>
-
-          <div className="flex flex-col-reverse gap-4 border-t border-line-light pt-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-xs text-ink-soft">
-              Fields marked <span className="text-red">*</span> are required.
-            </p>
+          <div className="flex flex-col gap-4 border-t border-line-light pt-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+            <div className="min-w-0 sm:flex-1">
+              <DexterFormBuddy error={status.type === "error" ? status.message : ""} sending={isSubmitting} sent={status.type === "success"} />
+              <p className="mt-2 text-xs text-ink-soft">
+                Fields marked <span className="text-red">*</span> are required.
+              </p>
+            </div>
             {/* Fills red as the checklist is completed (the site's progress button). */}
             <SubmitButton
-              className="w-full border border-rose-200 bg-rose-50 px-8 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[320px]"
+              className="w-full border border-rose-200 bg-rose-50 px-8 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[320px] sm:shrink-0"
               doneLabel="Application sent"
               progress={progress}
               progressLabel={`${doneCount} of ${CHECKLIST.length} done · Submit application`}
@@ -461,7 +468,7 @@ export default function CareersForm() {
 
 function StepLegend({ optional = false, step, title }) {
   return (
-    <legend className="mb-5 w-full">
+    <legend className="mb-3 w-full">
       <span className="flex items-center gap-3">
         <span className="font-mono text-xs tabular-nums text-red">{step}</span>
         <span className="text-sm font-semibold uppercase tracking-[0.12em] text-ink">{title}</span>

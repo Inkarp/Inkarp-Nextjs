@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from"react";
 import { MdClose } from"react-icons/md";
 import { collectTracking } from"@/lib/browserTracking";
 import SubmitButton from"@/components/common/SubmitButton";
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 const initialFormData = {
   name:"",
@@ -165,6 +166,12 @@ export default function CatalystModal({ onClose }) {
               value={formData.mobileNumber}
             />
 
+            <DexterFormBuddy
+              className="sm:col-span-2"
+              error={status === "error" ? "That didn't go through. Please try again." : ""}
+              sending={isSubmitting}
+              sent={status === "success"}
+            />
             <SubmitButton
               className="w-full bg-rose-50 py-2.5 text-rose-700 hover:bg-rose-100 disabled:opacity-60"
               doneLabel="Request sent"

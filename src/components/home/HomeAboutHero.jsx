@@ -13,7 +13,8 @@ import { featuredEvent } from "@/data/events";
 const AUTO_ROTATE_MS = 3000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
 const ANNIVERSARY_VIDEO = "/assets/41-anniversary-animation.mp4";
-const DEXTER_LAB_VIDEO = "/assets/home/dexter-lab-workflow.mp4";
+// Dexter at the bench with the TANGO II FT-NIR (replaced the first Dexter lab video, 2026-11-25).
+const DEXTER_LAB_VIDEO = "/assets/home/dexter-lab-tango.mp4";
 const ANALYTICA_EXPO_VIDEO = "/assets/home/analytica-expo-thank-you.mp4";
 const CATALYST_TEAM_IMAGE = "/assets/home/catalyst-team-inkarp.webp";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";

@@ -84,7 +84,7 @@ function ContactActions({ label = "Talk to a person:" }) {
   );
 }
 
-export default function DexterChat({ onFallback }) {
+export default function DexterChat({ onFallback, askRequest, onAskUsed }) {
   const [messages, setMessages] = useState([]);
   const [draft, setDraft] = useState("");
   const [typedPrompt, setTypedPrompt] = useState("");
@@ -232,6 +232,19 @@ export default function DexterChat({ onFallback }) {
       inputRef.current?.focus();
     }
   };
+
+  // A question handed over by an "Ask Dexter" button: ask it once, then
+  // tell the chatbot it has been used so reopening the chat won't repeat it.
+  useEffect(() => {
+    if (!askRequest) return undefined;
+    const timer = window.setTimeout(() => {
+      ask(askRequest.question);
+      onAskUsed?.();
+    }, 0);
+    return () => window.clearTimeout(timer);
+    // ask() reads the latest messages through this render; only a new request should re-run it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [askRequest]);
 
   return (
     <div className="flex h-full flex-col">

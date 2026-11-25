@@ -61,6 +61,19 @@ export default function SubmitButton({
           {doneLabel}
         </span>
       </span>
+      {/* While filling, the label is drawn twice over the whole button (white over
+          the red, the form's colour over the rest), cut at the same point as the
+          fill; the label above only keeps the button's size and is read aloud. */}
+      {hasProgress && !complete ? (
+        <>
+          <span aria-hidden="true" className="st-copy st-copy-ink">
+            {idleLabel}
+          </span>
+          <span aria-hidden="true" className="st-copy st-copy-white">
+            {idleLabel}
+          </span>
+        </>
+      ) : null}
     </button>
   );
 }

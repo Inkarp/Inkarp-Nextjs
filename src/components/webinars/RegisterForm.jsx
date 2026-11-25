@@ -18,6 +18,7 @@ import {
 import { collectTracking } from"@/lib/browserTracking";
 import SubmitButton from"@/components/common/SubmitButton";
 import { isWebinarUpcoming } from"@/data/webinars";
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 function InputField({ name, label, value, onChange, required = false, type = "text", icon: Icon, autoComplete, placeholder }) {
   return (
@@ -252,6 +253,7 @@ export default function RegisterForm({ isOpen, onClose, preselected = null }) {
                   {status.message}
                 </div>
               ) : null}
+              <DexterFormBuddy error={status.type === "error" ? status.message : ""} sending={isSubmitting} sent={status.type === "success"} />
               <SubmitButton
                 className="inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-xl bg-red px-5 py-2.5 text-base font-semibold text-white shadow-lg shadow-red/15 transition hover:bg-[#a3000e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red disabled:cursor-not-allowed disabled:opacity-70"
                 disabled={status.type === "success"}

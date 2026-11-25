@@ -13,6 +13,7 @@ import { collectTracking } from "@/lib/browserTracking";
 import SubmitButton from "@/components/common/SubmitButton";
 import { validateQuoteRequest } from "@/lib/formValidation";
 import { workflowIndustries } from "@/data/homeShowcase";
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 // Same buyer details as a single-product enquiry, minus the product name (the
 // list supplies it) and minus GSTIN, which would shut out institutes that have none.
@@ -319,6 +320,7 @@ export default function QuoteRequest() {
             ) : null}
           </div>
 
+          <DexterFormBuddy className="mb-3" complete={Object.values(liveErrors).every((value) => !value)} error={error} sending={loading} sent={submitted} />
           <SubmitButton
             className="w-full border border-rose-200 bg-rose-50 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 disabled:cursor-not-allowed disabled:opacity-60"
             sending={loading}

@@ -65,7 +65,12 @@ export default async function ProductPage({ params }) {
 
   const categorySiblings = getAllProducts()
     .filter((p) => p.category === product.category && p.slug !== product.slug);
-  const relatedProducts = categorySiblings.slice(0, 4);
+  // A page may name its own related products (opt-in `relatedSlugs`, from the
+  // product document's Related Products list); otherwise its category siblings.
+  const namedRelated = (product.relatedSlugs ?? [])
+    .map((slug) => getProductBySlug(slug))
+    .filter((p) => p && p.slug !== product.slug);
+  const relatedProducts = namedRelated.length > 0 ? namedRelated.slice(0, 4) : categorySiblings.slice(0, 4);
   // Only what the compare shortlist stores - not whole product objects - reaches the client.
   const toCompareItem = (p) => ({
     slug: p.slug,

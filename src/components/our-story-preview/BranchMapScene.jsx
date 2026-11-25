@@ -2,32 +2,21 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { INDIA_MAP, projectToMap } from "@/data/indiaMap";
+import { INDIA_MAP, mapPoint, networkArc } from "@/data/indiaMap";
 import Eyebrow from "./Eyebrow";
 import { BRANCHES } from "./storyContent";
 import { clamp01, useScrollFrame } from "./motion";
 import styles from "./StoryPreview.module.css";
 
 const pad = (value) => String(value).padStart(2, "0");
-const round = (value) => Math.round(value * 10) / 10;
 
 // Which side of its pin each name sits on, so neighbours never overlap (as on the contact page map).
 const LABEL_LEFT = new Set(["Ahmedabad", "Mumbai", "Chandigarh", "Bengaluru", "Thiruvananthapuram", "Hyderabad"]);
 
-// Pins and lines in map units, worked out once. Each line bows to one side.
-const POINTS = BRANCHES.map((branch) => {
-  const [x, y] = projectToMap(branch.coords);
-  return { ...branch, x: round(x), y: round(y) };
-});
+// Pins and lines in map units, worked out once (the same arcs as the contact page map).
+const POINTS = BRANCHES.map((branch) => ({ ...branch, ...mapPoint(branch.coords) }));
 const HQ = POINTS[0];
-const LINES = POINTS.slice(1).map((point) => {
-  const dx = point.x - HQ.x;
-  const dy = point.y - HQ.y;
-  const length = Math.hypot(dx, dy);
-  const cx = round((HQ.x + point.x) / 2 - (dy / length) * length * 0.22);
-  const cy = round((HQ.y + point.y) / 2 + (dx / length) * length * 0.22);
-  return { name: point.name, d: `M${HQ.x} ${HQ.y} Q${cx} ${cy} ${point.x} ${point.y}` };
-});
+const LINES = POINTS.slice(1).map((point) => ({ name: point.name, d: networkArc(HQ, point) }));
 
 // Scroll share before the first line starts (the head office arrives) and after the last one lands.
 const LEAD = 0.08;

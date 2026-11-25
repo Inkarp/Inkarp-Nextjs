@@ -1,4 +1,6 @@
 import Link from"next/link";
+import DexterFigure from "@/components/dexter/DexterFigure";
+import { DEXTER_PLACES } from "@/data/dexter";
 import { getCanonicalUrl } from"@/data/pageSeo";
 
 export const metadata = {
@@ -34,6 +36,26 @@ const thankYouContent = {
 export default async function ThankYou({ searchParams }) {
   const params = await searchParams;
   const content = thankYouContent[params?.type] ?? thankYouContent.default;
+
+  if (DEXTER_PLACES.thankYou) {
+    return (
+      <main className="flex min-h-[60vh] items-center justify-center px-4 py-14 sm:py-20">
+        <section className="grid w-full max-w-[920px] items-center gap-8 md:grid-cols-[auto_minmax(0,1fr)] md:gap-12">
+          <div className="flex justify-center rounded-sm bg-parchment-alt px-8 pt-8 md:px-10">
+            <DexterFigure decorative height={290} mood="celebrate" priority />
+          </div>
+          <div>
+            <span className="border border-red/30 bg-parchment px-4 py-1 text-xs font-semibold uppercase text-ink">{content.label}</span>
+            <h1 className="mt-5 text-3xl text-red sm:text-4xl">{content.title}</h1>
+            <p className="mt-3 max-w-lg text-[15.5px] leading-7 text-ink-soft">{content.message}</p>
+            <Link className="mt-6 inline-flex bg-red px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#a3000e]" href={content.href}>
+              {content.cta}
+            </Link>
+          </div>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main className="flex min-h-[60vh] items-center justify-center px-4 py-16">

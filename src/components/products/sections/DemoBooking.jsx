@@ -6,6 +6,7 @@ import { collectTracking } from '@/lib/browserTracking';
 import SubmitButton from '@/components/common/SubmitButton';
 import { normaliseGstin, validateProductEnquiry } from '@/lib/formValidation';
 import { workflowIndustries } from '@/data/homeShowcase';
+import DexterFormBuddy from "@/components/dexter/DexterFormBuddy";
 
 const DEFAULT_WHY_ITEMS = [
   { title: 'See it with your solvents', body: 'Discuss real distillation conditions, evaporation rate and recovery expectations for your samples.' },
@@ -294,6 +295,7 @@ export default function DemoBooking({ data, productName }) {
                   </div>
                 ) : null}
 
+                <DexterFormBuddy className="mb-3" complete={filledCount === FILLABLE.length} error={error} sending={loading} sent={submitted} />
                 {/* Without the beaker, the button itself shows the progress: it fills
                     red as fields are completed and counts them until all are done. */}
                 <SubmitButton

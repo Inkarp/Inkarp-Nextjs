@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Directors from "@/components/about/Directors";
 import EmpathyTeam from "@/components/about/EmpathyTeam";
+import TeamDarkroom from "@/components/about/TeamDarkroom";
 import TrustedClients from "@/components/about/TrustedClients";
 import RecTag from "@/components/home/RecTag";
 import PageBreadcrumbs, { BreadcrumbJsonLd } from "@/components/common/PageBreadcrumbs";
@@ -83,6 +84,12 @@ export default function OurStory() {
           <Directors />
         </div>
       </section>
+
+      {/* The whole team, last: a pinned "darkroom" reveal with its own scroll
+          motion, so the site-wide section animation skips it. */}
+      <div data-scroll-skip>
+        <TeamDarkroom />
+      </div>
     </main>
   );
 }

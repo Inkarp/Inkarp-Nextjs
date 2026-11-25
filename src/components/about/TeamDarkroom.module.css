@@ -1,0 +1,126 @@
+/* Our Story's closing photo, shown like a print in a darkroom. The page's
+   scroll sets --p (0–1) while the section is pinned; everything below is
+   worked out from it:
+   --open  the strip around the line of people opens to the full frame
+   --show  the image comes up out of the blank paper
+   --dev   black-and-white turns to colour and the red safelight fades
+   --after the closing line arrives
+   Without scrolling (reduced motion, or before the script runs) --p is 1,
+   which is the finished photo. */
+
+.room {
+  --p: 1;
+  --open: clamp(0, (var(--p) - 0.04) / 0.46, 1);
+  --show: clamp(0, var(--p) / 0.32, 1);
+  --dev: clamp(0, (var(--p) - 0.22) / 0.5, 1);
+  --after: clamp(0, (var(--p) - 0.72) / 0.18, 1);
+  position: relative;
+  background: #0f0c0c;
+  color: #fff;
+}
+
+/* No position here: the component makes it sticky (pinned) or relative (reduced
+   motion). A fixed top space the height of the scrolled header, not the live
+   --header-offset: the header hides and shows while this is pinned, and the
+   print must not jump when it does. */
+.stage {
+  padding-top: 80px;
+}
+
+/* The safelight: a low red glow behind the print, gone once it is in colour. */
+.stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(55% 45% at 50% 58%, rgb(190 0 16 / 0.32), transparent 72%);
+  opacity: calc(1 - var(--dev));
+  pointer-events: none;
+}
+
+.frame {
+  position: relative;
+  /* As wide as fits under the heading on this screen's height, never wider than the column. */
+  width: min(100%, calc((100svh - 250px) * 16 / 9));
+  aspect-ratio: 16 / 9;
+  margin-inline: auto;
+}
+
+/* The site's red corner ticks, at the full size the print will reach. */
+.frame::before,
+.frame::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.frame::before {
+  left: -8px;
+  top: -8px;
+  border-left: 2px solid #be0010;
+  border-top: 2px solid #be0010;
+}
+
+.frame::after {
+  right: -8px;
+  bottom: -8px;
+  border-right: 2px solid #be0010;
+  border-bottom: 2px solid #be0010;
+}
+
+/* The people stand between 52% and 82% down the photo: the strip starts there. */
+.print {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #f4efe6;
+  clip-path: inset(calc((1 - var(--open)) * 50%) 0 calc((1 - var(--open)) * 16%) 0);
+}
+
+.photo {
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: grayscale(calc(1 - var(--dev))) contrast(calc(0.5 + 0.5 * var(--show))) brightness(calc(1.85 - 0.85 * var(--show)));
+}
+
+/* Red edges of the opening strip, travelling out with it and fading as it completes. */
+.edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 1px;
+  background: #ff3b4a;
+  box-shadow: 0 0 12px rgb(255 59 74 / 0.8);
+  opacity: calc(1 - var(--open));
+  pointer-events: none;
+}
+
+.edgeTop {
+  top: calc((1 - var(--open)) * 50%);
+}
+
+.edgeBottom {
+  bottom: calc((1 - var(--open)) * 16%);
+}
+
+.after {
+  opacity: var(--after);
+  translate: 0 calc((1 - var(--after)) * 10px);
+}
+
+/* Phones: a taller frame that pans slowly along the line of people. */
+@media (max-width: 639px) {
+  /* Out to the edges of the dark section (over the column's 16px side padding). */
+  .frame {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .photo {
+    object-position: calc(var(--p) * 100%) 50%;
+  }
+}

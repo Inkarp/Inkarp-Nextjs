@@ -13,10 +13,16 @@ import { featuredEvent } from "@/data/events";
 const AUTO_ROTATE_MS = 3000;
 const BUILDING_IMAGE = "/assets/our-story/InkarpBuilding.jpg";
 const ANNIVERSARY_VIDEO = "/assets/41-anniversary-animation.mp4";
-// Dexter at the bench with the TANGO II FT-NIR (replaced the first Dexter lab video, 2026-11-25).
-const DEXTER_LAB_VIDEO = "/assets/home/dexter-lab-tango.mp4";
+// Dexter introduces Inkarp: since 1985, global instruments, installed, trained
+// and supported across India (replaced the TANGO lab clip, 2026-11-25). 1080p
+// for wider screens, a lighter 720p copy for phones; both muted, fast-start.
+const DEXTER_INTRO_VIDEO = "/assets/home/dexter-intro.mp4";
+const DEXTER_INTRO_VIDEO_720 = "/assets/home/dexter-intro-720.mp4";
+// Second: one sample's journey round the workflow wheel, with Inkarp's support
+// ring around it (2026-11-25). Same 1080p / 720p pair.
+const WORKFLOW_WHEEL_VIDEO = "/assets/home/inkarp-workflow-wheel.mp4";
+const WORKFLOW_WHEEL_VIDEO_720 = "/assets/home/inkarp-workflow-wheel-720.mp4";
 const ANALYTICA_EXPO_VIDEO = "/assets/home/analytica-expo-thank-you.mp4";
-const CATALYST_TEAM_IMAGE = "/assets/home/catalyst-team-inkarp.webp";
 const LAB_IMAGE = "/assets/home/inkarp-lab-hero-generated.png";
 // The dedicated stall photo — same asset the home events row uses for this
 // event's card — rather than the wider Event1.jpeg shared with the campaign strip.
@@ -137,29 +143,40 @@ function ScientificNetworkVisual() {
 
 function HeroMediaCarousel() {
   const [activeMedia, setActiveMedia] = useState(0);
+  // The team photo that sat between these moved to the end of the Our Story page (2026-11-26).
   const showNextMedia = () => setActiveMedia((current) => (current + 1) % 4);
-
-  useEffect(() => {
-    if (activeMedia !== 2) return undefined;
-    const timer = window.setTimeout(() => setActiveMedia(3), 6000);
-    return () => window.clearTimeout(timer);
-  }, [activeMedia]);
 
   return (
     <div className="absolute inset-0 overflow-hidden">
       <div key={activeMedia} className="absolute inset-0 animate-[hvc-fade_600ms_ease]">
         {activeMedia === 0 ? (
           <video
-            aria-label="Dexter working in a scientific laboratory"
+            aria-label="Dexter introduces Inkarp: since 1985, global scientific instruments, installed, trained and supported across India"
             autoPlay
             className="h-full w-full object-contain"
             muted
             onEnded={showNextMedia}
             playsInline
             preload="metadata"
-            src={DEXTER_LAB_VIDEO}
-          />
+          >
+            {/* Browsers that ignore `media` take the first source (1080p). */}
+            <source media="(min-width: 768px)" src={DEXTER_INTRO_VIDEO} type="video/mp4" />
+            <source src={DEXTER_INTRO_VIDEO_720} type="video/mp4" />
+          </video>
         ) : activeMedia === 1 ? (
+          <video
+            aria-label="Inkarp's workflow wheel: prepare, discover, separate, control, measure and analyse, with installation, training, AMC and application support around it"
+            autoPlay
+            className="h-full w-full object-contain"
+            muted
+            onEnded={showNextMedia}
+            playsInline
+            preload="metadata"
+          >
+            <source media="(min-width: 768px)" src={WORKFLOW_WHEEL_VIDEO} type="video/mp4" />
+            <source src={WORKFLOW_WHEEL_VIDEO_720} type="video/mp4" />
+          </video>
+        ) : activeMedia === 2 ? (
           <video
             aria-label="Inkarp at Analytica Expo"
             autoPlay
@@ -169,15 +186,6 @@ function HeroMediaCarousel() {
             playsInline
             preload="metadata"
             src={ANALYTICA_EXPO_VIDEO}
-          />
-        ) : activeMedia === 2 ? (
-          <Image
-            alt="Inkarp Catalyst team"
-            className="object-contain"
-            fill
-            priority
-            sizes="(min-width: 1024px) 640px, 100vw"
-            src={CATALYST_TEAM_IMAGE}
           />
         ) : (
           <video
@@ -194,7 +202,7 @@ function HeroMediaCarousel() {
       </div>
 
       <div className="absolute bottom-3 left-1/2 z-20 flex -translate-x-1/2 gap-2 rounded-full bg-black/25 px-2.5 py-1.5 backdrop-blur-sm">
-        {["Dexter laboratory workflow video", "Analytica Expo video", "Inkarp Catalyst team photo", "41st anniversary animation"].map((label, index) => (
+        {["Dexter introduction video", "Workflow wheel video", "Analytica Expo video", "41st anniversary animation"].map((label, index) => (
           <button
             aria-label={`Show ${label}`}
             className={`h-1.5 rounded-full transition-all ${activeMedia === index ? "w-6 bg-white" : "w-1.5 bg-white/45 hover:bg-white/75"}`}
